@@ -1,0 +1,909 @@
+{
+  "text": "And twenty two seventy eight is another words that word? In page two thirty two. Two thirty two. It says, and strive in the cause of God as you should strive for him. He is the one who selected you and imposed no hardships on you in observing the religion. This is the religion of your father, Abraham. He is the one who named you Muslim. Thus, the messenger will be a witness among you, and you will be witnesses among the people. Now this is to all the believers too. So observe the prayers and to God charity and hold fast to God. He is your lord, the best lord, and the best supporter. The messenger will will be a witness to me, he said. He's not bringing any new regulations.",
+  "segments": [
+    {
+      "start": 95.15,
+      "end": 95.65,
+      "speaker": "SPEAKER_00",
+      "text": "And",
+      "words": [
+        {
+          "word": "and",
+          "start": 95.15,
+          "end": 95.65,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 96.03,
+      "end": 98.445,
+      "speaker": "SPEAKER_00",
+      "text": "twenty two seventy eight is another words that",
+      "words": [
+        {
+          "word": "twenty",
+          "start": 96.03,
+          "end": 96.27,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "two",
+          "start": 96.27,
+          "end": 96.51,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "seventy",
+          "start": 96.51,
+          "end": 96.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "eight",
+          "start": 96.99,
+          "end": 97.229996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 97.229996,
+          "end": 97.39,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "another",
+          "start": 97.39,
+          "end": 97.71,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "words",
+          "start": 97.71,
+          "end": 98.11,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "that",
+          "start": 98.11,
+          "end": 98.445,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 102.365,
+      "end": 105.345,
+      "speaker": "SPEAKER_00",
+      "text": "word? In page two thirty two. Two thirty two.",
+      "words": [
+        {
+          "word": "word",
+          "start": 102.365,
+          "end": 102.525,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "in",
+          "start": 102.525,
+          "end": 102.845,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "page",
+          "start": 102.845,
+          "end": 103.245,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "two",
+          "start": 103.245,
+          "end": 103.565,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "thirty",
+          "start": 103.565,
+          "end": 103.805,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "two",
+          "start": 103.805,
+          "end": 104.305,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "two",
+          "start": 104.445,
+          "end": 104.604996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "thirty",
+          "start": 104.604996,
+          "end": 104.845,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "two",
+          "start": 104.845,
+          "end": 105.345,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 105.805,
+      "end": 106.385,
+      "speaker": "SPEAKER_00",
+      "text": "It says,",
+      "words": [
+        {
+          "word": "it",
+          "start": 105.805,
+          "end": 105.885,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "says",
+          "start": 105.885,
+          "end": 106.385,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 107.645,
+      "end": 113.52,
+      "speaker": "SPEAKER_00",
+      "text": "and strive in the cause of God as you should strive for him. He is the one who selected",
+      "words": [
+        {
+          "word": "and",
+          "start": 107.645,
+          "end": 107.725,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "strive",
+          "start": 107.725,
+          "end": 108.205,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "in",
+          "start": 108.205,
+          "end": 108.285,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 108.285,
+          "end": 108.445,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "cause",
+          "start": 108.445,
+          "end": 108.765,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 108.765,
+          "end": 109.005,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "god",
+          "start": 109.005,
+          "end": 109.485,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "as",
+          "start": 109.485,
+          "end": 109.805,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 109.805,
+          "end": 110.305,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "should",
+          "start": 110.365,
+          "end": 110.765,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "strive",
+          "start": 110.765,
+          "end": 111.165,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 111.165,
+          "end": 111.405,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "him",
+          "start": 111.405,
+          "end": 111.905,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "he",
+          "start": 112.125,
+          "end": 112.285,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 112.285,
+          "end": 112.445,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 112.445,
+          "end": 112.604996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "one",
+          "start": 112.604996,
+          "end": 112.845,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "who",
+          "start": 112.845,
+          "end": 113.085,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "selected",
+          "start": 113.085,
+          "end": 113.52,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 114.0,
+      "end": 117.7,
+      "speaker": "SPEAKER_00",
+      "text": "you and imposed no hardships on you in observing the religion.",
+      "words": [
+        {
+          "word": "you",
+          "start": 114.0,
+          "end": 114.32,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 114.32,
+          "end": 114.56,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "imposed",
+          "start": 114.56,
+          "end": 115.03999,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "no",
+          "start": 115.03999,
+          "end": 115.28,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "hardships",
+          "start": 115.28,
+          "end": 115.78,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "on",
+          "start": 115.84,
+          "end": 116.079994,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 116.079994,
+          "end": 116.32,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "in",
+          "start": 116.32,
+          "end": 116.56,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "observing",
+          "start": 116.56,
+          "end": 116.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 116.96,
+          "end": 117.2,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "religion",
+          "start": 117.2,
+          "end": 117.7,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 118.24,
+      "end": 122.659996,
+      "speaker": "SPEAKER_00",
+      "text": "This is the religion of your father, Abraham. He is the one who named you Muslim.",
+      "words": [
+        {
+          "word": "this",
+          "start": 118.24,
+          "end": 118.479996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 118.479996,
+          "end": 118.64,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 118.64,
+          "end": 118.799995,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "religion",
+          "start": 118.799995,
+          "end": 119.2,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 119.2,
+          "end": 119.35999,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "your",
+          "start": 119.35999,
+          "end": 119.6,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "father",
+          "start": 119.6,
+          "end": 120.0,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "abraham",
+          "start": 120.0,
+          "end": 120.5,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "he",
+          "start": 120.799995,
+          "end": 120.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 120.96,
+          "end": 121.119995,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 121.119995,
+          "end": 121.28,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "one",
+          "start": 121.28,
+          "end": 121.439995,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "who",
+          "start": 121.439995,
+          "end": 121.67999,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "named",
+          "start": 121.67999,
+          "end": 122.0,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 122.0,
+          "end": 122.159996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "muslim",
+          "start": 122.159996,
+          "end": 122.659996,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 123.2,
+      "end": 126.659996,
+      "speaker": "SPEAKER_00",
+      "text": "Thus, the messenger will be a witness among you,",
+      "words": [
+        {
+          "word": "thus",
+          "start": 123.2,
+          "end": 123.7,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 123.92,
+          "end": 124.159996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "messenger",
+          "start": 124.159996,
+          "end": 124.659996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "will",
+          "start": 124.88,
+          "end": 125.03999,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "be",
+          "start": 125.03999,
+          "end": 125.2,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 125.2,
+          "end": 125.36,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "witness",
+          "start": 125.36,
+          "end": 125.84,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "among",
+          "start": 125.84,
+          "end": 126.159996,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 126.159996,
+          "end": 126.659996,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 127.145004,
+      "end": 128.445,
+      "speaker": "SPEAKER_00",
+      "text": "and you will be witnesses",
+      "words": [
+        {
+          "word": "and",
+          "start": 127.145004,
+          "end": 127.305,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 127.305,
+          "end": 127.465004,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "will",
+          "start": 127.465004,
+          "end": 127.545006,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "be",
+          "start": 127.545006,
+          "end": 127.945,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "witnesses",
+          "start": 127.945,
+          "end": 128.445,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 128.905,
+      "end": 132.125,
+      "speaker": "SPEAKER_00",
+      "text": "among the people. Now this is to all the believers too.",
+      "words": [
+        {
+          "word": "among",
+          "start": 128.905,
+          "end": 129.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 129.145,
+          "end": 129.38501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "people",
+          "start": 129.38501,
+          "end": 129.785,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "now",
+          "start": 129.785,
+          "end": 129.945,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "this",
+          "start": 129.945,
+          "end": 130.265,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 130.265,
+          "end": 130.345,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 130.345,
+          "end": 130.505,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "all",
+          "start": 130.505,
+          "end": 130.825,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 130.825,
+          "end": 130.905,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "believers",
+          "start": 130.905,
+          "end": 131.405,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "too",
+          "start": 131.625,
+          "end": 132.125,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 133.065,
+      "end": 140.045,
+      "speaker": "SPEAKER_00",
+      "text": "So observe the prayers and to God charity and hold fast to God. He is your lord, the best lord, and the best supporter.",
+      "words": [
+        {
+          "word": "so",
+          "start": 133.065,
+          "end": 133.38501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "observe",
+          "start": 133.38501,
+          "end": 133.88501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 133.945,
+          "end": 134.445,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "prayers",
+          "start": 134.505,
+          "end": 134.825,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 134.825,
+          "end": 134.985,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 134.985,
+          "end": 135.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "god",
+          "start": 135.145,
+          "end": 135.38501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "charity",
+          "start": 135.38501,
+          "end": 135.88501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 135.945,
+          "end": 136.105,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "hold",
+          "start": 136.105,
+          "end": 136.345,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "fast",
+          "start": 136.345,
+          "end": 136.745,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 136.745,
+          "end": 136.905,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "god",
+          "start": 136.905,
+          "end": 137.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "he",
+          "start": 137.145,
+          "end": 137.38501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 137.38501,
+          "end": 137.465,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "your",
+          "start": 137.465,
+          "end": 137.785,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "lord",
+          "start": 137.785,
+          "end": 138.265,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 138.265,
+          "end": 138.425,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "best",
+          "start": 138.425,
+          "end": 138.66501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "lord",
+          "start": 138.66501,
+          "end": 138.985,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 138.985,
+          "end": 139.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 139.145,
+          "end": 139.30501,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "best",
+          "start": 139.30501,
+          "end": 139.545,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "supporter",
+          "start": 139.545,
+          "end": 140.045,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 141.30501,
+      "end": 141.965,
+      "speaker": "SPEAKER_00",
+      "text": "The messenger",
+      "words": [
+        {
+          "word": "the",
+          "start": 141.30501,
+          "end": 141.465,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "messenger",
+          "start": 141.465,
+          "end": 141.965,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 142.345,
+      "end": 144.9,
+      "speaker": "SPEAKER_00",
+      "text": "will will be a witness to me, he said.",
+      "words": [
+        {
+          "word": "will",
+          "start": 142.345,
+          "end": 142.56,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "will",
+          "start": 142.56,
+          "end": 142.64,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "be",
+          "start": 142.64,
+          "end": 142.72,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 142.72,
+          "end": 143.04,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "witness",
+          "start": 143.04,
+          "end": 143.36,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 143.36,
+          "end": 143.52,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "me",
+          "start": 143.52,
+          "end": 144.02,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "he",
+          "start": 144.23999,
+          "end": 144.4,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "said",
+          "start": 144.4,
+          "end": 144.9,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 146.56,
+      "end": 148.5,
+      "speaker": "SPEAKER_00",
+      "text": "He's not bringing any new regulations.",
+      "words": [
+        {
+          "word": "he's",
+          "start": 146.56,
+          "end": 146.8,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "not",
+          "start": 146.8,
+          "end": 147.04,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "bringing",
+          "start": 147.04,
+          "end": 147.52,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "any",
+          "start": 147.52,
+          "end": 147.76,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "new",
+          "start": 147.76,
+          "end": 148.0,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "regulations",
+          "start": 148.0,
+          "end": 148.5,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    }
+  ]
+}

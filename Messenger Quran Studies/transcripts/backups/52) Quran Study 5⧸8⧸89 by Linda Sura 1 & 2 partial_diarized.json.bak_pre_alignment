@@ -1,0 +1,249 @@
+{
+  "text": "Come on, guys. Frank. I think so. It's also the it's very, very easy for the children to pick up. Very easy. The rhythm of it sounds very, very Yes.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.98,
+      "speaker": "SPEAKER_00",
+      "text": "Come on, guys.",
+      "words": [
+        {
+          "word": "come",
+          "start": 0.0,
+          "end": 0.22999999,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "on",
+          "start": 0.22999999,
+          "end": 0.48,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "guys",
+          "start": 0.48,
+          "end": 0.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 4.08,
+      "end": 4.58,
+      "speaker": "SPEAKER_00",
+      "text": "Frank.",
+      "words": [
+        {
+          "word": "frank",
+          "start": 4.08,
+          "end": 4.58,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 27.109999,
+      "end": 27.849998,
+      "speaker": "SPEAKER_00",
+      "text": "I think",
+      "words": [
+        {
+          "word": "i",
+          "start": 27.109999,
+          "end": 27.349998,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "think",
+          "start": 27.349998,
+          "end": 27.849998,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 31.029999,
+      "end": 31.529999,
+      "speaker": "SPEAKER_00",
+      "text": "so.",
+      "words": [
+        {
+          "word": "so",
+          "start": 31.029999,
+          "end": 31.529999,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 270.565,
+      "end": 272.10498,
+      "speaker": "SPEAKER_00",
+      "text": "It's also the it's",
+      "words": [
+        {
+          "word": "it's",
+          "start": 270.565,
+          "end": 270.805,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "also",
+          "start": 270.805,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 271.28497,
+          "end": 271.44498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "it's",
+          "start": 271.60498,
+          "end": 272.10498,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 272.565,
+      "end": 276.82498,
+      "speaker": "SPEAKER_00",
+      "text": "very, very easy for the children to pick up. Very easy.",
+      "words": [
+        {
+          "word": "very",
+          "start": 272.565,
+          "end": 273.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "very",
+          "start": 273.04498,
+          "end": 273.44498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "easy",
+          "start": 273.44498,
+          "end": 273.76498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 273.76498,
+          "end": 273.925,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 273.925,
+          "end": 274.16498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "children",
+          "start": 274.16498,
+          "end": 274.66498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 274.72498,
+          "end": 274.965,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "pick",
+          "start": 274.965,
+          "end": 275.205,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "up",
+          "start": 275.205,
+          "end": 275.705,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "very",
+          "start": 276.00497,
+          "end": 276.32498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "easy",
+          "start": 276.32498,
+          "end": 276.82498,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 278.245,
+      "end": 280.745,
+      "speaker": "SPEAKER_00",
+      "text": "The rhythm of it sounds very, very",
+      "words": [
+        {
+          "word": "the",
+          "start": 278.245,
+          "end": 278.485,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "rhythm",
+          "start": 278.485,
+          "end": 278.805,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 278.805,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "it",
+          "start": 279.04498,
+          "end": 279.44498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "sounds",
+          "start": 279.44498,
+          "end": 279.94498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "very",
+          "start": 280.00497,
+          "end": 280.245,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "very",
+          "start": 280.245,
+          "end": 280.745,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 604.89,
+      "end": 605.39,
+      "speaker": "SPEAKER_00",
+      "text": "Yes.",
+      "words": [
+        {
+          "word": "yes",
+          "start": 604.89,
+          "end": 605.39,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    }
+  ]
+}

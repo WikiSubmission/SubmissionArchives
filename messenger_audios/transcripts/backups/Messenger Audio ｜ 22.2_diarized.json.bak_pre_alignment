@@ -1,0 +1,365 @@
+{
+  "text": "Yeah. That's more academic. It's not Yeah. So and you can only have judged them manually. History will judge people by their writings about what they've done. Right. So I'm not gonna be some pastor Judge Peter. And and from what I am you know, I hear what Gaddafi is wrong. Some people say he can't",
+  "segments": [
+    {
+      "start": 636.315,
+      "end": 638.655,
+      "speaker": "SPEAKER_00",
+      "text": "Yeah. That's more academic. It's not Yeah.",
+      "words": [
+        {
+          "word": "yeah",
+          "start": 636.315,
+          "end": 636.475,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "that's",
+          "start": 636.475,
+          "end": 636.715,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "more",
+          "start": 636.715,
+          "end": 637.035,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "academic",
+          "start": 637.035,
+          "end": 637.515,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "it's",
+          "start": 637.515,
+          "end": 637.755,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "not",
+          "start": 637.755,
+          "end": 637.915,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "yeah",
+          "start": 638.155,
+          "end": 638.655,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 639.115,
+      "end": 639.615,
+      "speaker": "SPEAKER_00",
+      "text": "So",
+      "words": [
+        {
+          "word": "so",
+          "start": 639.115,
+          "end": 639.615,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 663.665,
+      "end": 675.33,
+      "speaker": "SPEAKER_00",
+      "text": "and you can only have judged them manually. History will judge people by their writings about what they've done. Right. So I'm not gonna be some pastor Judge Peter. And and from what I am you know, I hear what Gaddafi is wrong. Some people say he can't",
+      "words": [
+        {
+          "word": "and",
+          "start": 663.665,
+          "end": 663.825,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 663.825,
+          "end": 663.90497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "can",
+          "start": 663.90497,
+          "end": 664.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "only",
+          "start": 664.145,
+          "end": 664.385,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "have",
+          "start": 664.385,
+          "end": 664.545,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "judged",
+          "start": 664.545,
+          "end": 664.945,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "them",
+          "start": 664.945,
+          "end": 665.105,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "manually",
+          "start": 665.105,
+          "end": 665.505,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "history",
+          "start": 665.505,
+          "end": 665.90497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "will",
+          "start": 665.90497,
+          "end": 666.065,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "judge",
+          "start": 666.065,
+          "end": 666.225,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "people",
+          "start": 666.225,
+          "end": 666.705,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "by",
+          "start": 666.705,
+          "end": 666.945,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "their",
+          "start": 666.945,
+          "end": 667.02496,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "writings",
+          "start": 667.02496,
+          "end": 667.345,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "about",
+          "start": 667.345,
+          "end": 667.665,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "what",
+          "start": 667.665,
+          "end": 667.825,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "they've",
+          "start": 667.825,
+          "end": 667.985,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "done",
+          "start": 667.985,
+          "end": 668.46497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "right",
+          "start": 668.46497,
+          "end": 668.96497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "so",
+          "start": 669.185,
+          "end": 669.505,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "i'm",
+          "start": 669.505,
+          "end": 669.745,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "not",
+          "start": 669.745,
+          "end": 669.90497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "gonna",
+          "start": 669.90497,
+          "end": 670.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "be",
+          "start": 670.145,
+          "end": 670.305,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "some",
+          "start": 670.305,
+          "end": 670.46497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "pastor",
+          "start": 670.46497,
+          "end": 670.865,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "judge",
+          "start": 670.865,
+          "end": 671.105,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "peter",
+          "start": 671.105,
+          "end": 671.425,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 671.425,
+          "end": 671.665,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 671.665,
+          "end": 671.825,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "from",
+          "start": 671.825,
+          "end": 672.065,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "what",
+          "start": 672.065,
+          "end": 672.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "i",
+          "start": 672.145,
+          "end": 672.305,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "am",
+          "start": 672.305,
+          "end": 672.46497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 672.545,
+          "end": 672.625,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "know",
+          "start": 672.625,
+          "end": 673.02496,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "i",
+          "start": 673.02496,
+          "end": 673.185,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "hear",
+          "start": 673.185,
+          "end": 673.425,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "what",
+          "start": 673.425,
+          "end": 673.58496,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "gaddafi",
+          "start": 673.58496,
+          "end": 674.065,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 674.065,
+          "end": 674.145,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "wrong",
+          "start": 674.145,
+          "end": 674.385,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "some",
+          "start": 674.385,
+          "end": 674.545,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "people",
+          "start": 674.545,
+          "end": 674.785,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "say",
+          "start": 674.785,
+          "end": 674.945,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "he",
+          "start": 674.945,
+          "end": 675.02496,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "can't",
+          "start": 675.02496,
+          "end": 675.33,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Transcript Verification Tool</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #2d2d2d;
+            border-radius: 8px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .media-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        video,
+        audio {
+            width: 100%;
+            background: black;
+            border-radius: 8px;
+        }
+
+        .transcript-container {
+            flex: 1;
+            background-color: #252526;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-y: auto;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .segment {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #2d2d2d;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .segment:hover {
+            background-color: #3e3e42;
+        }
+
+        .segment.active {
+            background-color: #264f78;
+            border-left: 4px solid #4fc1ff;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 0;
+            border-radius: 2px;
+            transition: background-color 0.1s;
+            margin-right: 4px;
+        }
+
+        .word:hover {
+            background-color: #3e3e42;
+            text-decoration: underline;
+        }
+
+        .word.active {
+            background-color: #264f78;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .speaker-label {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            width: auto;
+        }
+
+        /* Named Speaker Colors */
+        .speaker-dr-khalifa,
+        .speaker-dr\.khalifa {
+            color: #4ec9b0;
+            background-color: rgba(78, 201, 176, 0.15);
+            font-weight: 600;
+        }
+
+        .speaker-catherine,
+        .speaker-beth,
+        .speaker-douglas,
+        .speaker-edip,
+        .speaker-ali,
+        .speaker-frank,
+        .speaker-a-man,
+        .speaker-a-woman,
+        .speaker-audience {
+            color: #e0e0e0;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Generic Speaker Colors (fallback) */
+        .speaker-00,
+        .speaker-speaker_00 {
+            color: #4ec9b0;
+            font-weight: 600;
+        }
+
+        .speaker-01,
+        .speaker-speaker_01,
+        .speaker-02,
+        .speaker-speaker_02,
+        .speaker-03,
+        .speaker-speaker_03 {
+            color: #e0e0e0;
+        }
+
+        .speaker-unknown {
+            color: #808080;
+        }
+
+        .timestamp {
+            font-size: 0.75em;
+            color: #888;
+            margin-right: 8px;
+        }
+
+        input[type="file"] {
+            margin-right: 10px;
+        }
+
+        .info {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #1e1e1e;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Universal Transcript Verification Tool</h1>
+
+    <div class="controls">
+        <label>1. Select Media (MP3/MP4): <input type="file" id="mediaInput" accept=".mp3,.mp4"></label>
+        <label>2. Select Transcript (JSON): <input type="file" id="jsonInput" accept=".json"></label>
+        <div class="info" id="info"></div>
+    </div>
+
+    <div class="container">
+        <div class="media-container">
+            <video id="videoPlayer" controls style="display:none;"></video>
+            <audio id="audioPlayer" controls style="display:none;"></audio>
+        </div>
+        <div class="transcript-container" id="transcript">
+            <p style="color: #888;">Select a media file and JSON transcript to begin...</p>
+        </div>
+    </div>
+
+    <script>
+        const mediaInput = document.getElementById('mediaInput');
+        const jsonInput = document.getElementById('jsonInput');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const transcriptDiv = document.getElementById('transcript');
+        const infoDiv = document.getElementById('info');
+
+        let player = null;
+        let words = [];
+        let segments = [];
+        let hasWordTiming = false;
+
+        mediaInput.addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                const isVideo = file.name.toLowerCase().endsWith('.mp4');
+
+                if (isVideo) {
+                    videoPlayer.src = url;
+                    videoPlayer.style.display = 'block';
+                    audioPlayer.style.display = 'none';
+                    player = videoPlayer;
+                } else {
+                    audioPlayer.src = url;
+                    audioPlayer.style.display = 'block';
+                    videoPlayer.style.display = 'none';
+                    player = audioPlayer;
+                }
+            }
+        });
+
+        jsonInput.addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        renderTranscript(data);
+                    } catch (err) {
+                        alert("Error parsing JSON: " + err);
+                    }
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function getSpeakerClass(speaker) {
+            if (!speaker) return 'speaker-unknown';
+
+            // Normalize speaker name for CSS class
+            const normalized = speaker.toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^a-z0-9-]/g, '');
+
+            return 'speaker-' + normalized;
+        }
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function renderTranscript(data) {
+            transcriptDiv.innerHTML = '';
+            words = [];
+            segments = [];
+            hasWordTiming = false;
+
+            // Extract segments
+            if (data.segments) {
+                segments = data.segments;
+
+                // Check if we have word-level timing
+                segments.forEach(seg => {
+                    if (seg.words && seg.words.length > 0 && seg.words[0].start !== undefined) {
+                        words = words.concat(seg.words);
+                        hasWordTiming = true;
+                    }
+                });
+            }
+
+            if (hasWordTiming) {
+                renderWordLevel();
+                infoDiv.textContent = `✓ Loaded ${words.length} words with precise timing`;
+            } else if (segments.length > 0) {
+                renderSegmentLevel();
+                infoDiv.textContent = `✓ Loaded ${segments.length} segments (segment-level timing only)`;
+            } else {
+                transcriptDiv.innerHTML = '<p style="color: red;">No transcript data found in this JSON.</p>';
+                infoDiv.textContent = '✗ No valid transcript data';
+            }
+        }
+
+        function renderWordLevel() {
+            let lastSpeaker = null;
+
+            words.forEach((w, index) => {
+                let currentSpeaker = w.speaker || "Unknown";
+
+                // Insert speaker label on change
+                if (currentSpeaker !== lastSpeaker) {
+                    const label = document.createElement('div');
+                    label.className = 'speaker-label ' + getSpeakerClass(currentSpeaker);
+                    label.textContent = currentSpeaker;
+                    transcriptDiv.appendChild(label);
+                    lastSpeaker = currentSpeaker;
+                }
+
+                const span = document.createElement('span');
+                span.textContent = w.word + " ";
+                span.className = 'word ' + getSpeakerClass(currentSpeaker);
+                span.id = 'w-' + index;
+                span.onclick = () => {
+                    if (player) {
+                        player.currentTime = w.start;
+                        player.play();
+                    }
+                };
+                transcriptDiv.appendChild(span);
+            });
+        }
+
+        function renderSegmentLevel() {
+            segments.forEach((seg, index) => {
+                const segDiv = document.createElement('div');
+                segDiv.className = 'segment ' + getSpeakerClass(seg.speaker);
+                segDiv.id = 's-' + index;
+
+                const timestamp = document.createElement('span');
+                timestamp.className = 'timestamp';
+                timestamp.textContent = `[${formatTime(seg.start)}]`;
+
+                const speaker = document.createElement('strong');
+                speaker.textContent = (seg.speaker || 'Unknown') + ': ';
+                speaker.className = getSpeakerClass(seg.speaker);
+
+                const text = document.createElement('span');
+                text.textContent = seg.text;
+
+                segDiv.appendChild(timestamp);
+                segDiv.appendChild(speaker);
+                segDiv.appendChild(text);
+
+                segDiv.onclick = () => {
+                    if (player) {
+                        player.currentTime = seg.start;
+                        player.play();
+                    }
+                };
+
+                transcriptDiv.appendChild(segDiv);
+            });
+        }
+
+        // Update active highlighting during playback
+        if (player) {
+            player.addEventListener('timeupdate', updateActiveHighlight);
+        }
+
+        videoPlayer.addEventListener('timeupdate', updateActiveHighlight);
+        audioPlayer.addEventListener('timeupdate', updateActiveHighlight);
+
+        function updateActiveHighlight() {
+            if (!player) return;
+            const t = player.currentTime;
+
+            if (hasWordTiming) {
+                const activeIndex = words.findIndex(w => t >= w.start && t < w.end);
+                const currentActive = document.querySelector('.word.active');
+                if (currentActive) currentActive.classList.remove('active');
+
+                if (activeIndex !== -1) {
+                    const el = document.getElementById('w-' + activeIndex);
+                    if (el) {
+                        el.classList.add('active');
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            } else {
+                const activeIndex = segments.findIndex(s => t >= s.start && t < s.end);
+                const currentActive = document.querySelector('.segment.active');
+                if (currentActive) currentActive.classList.remove('active');
+
+                if (activeIndex !== -1) {
+                    const el = document.getElementById('s-' + activeIndex);
+                    if (el) {
+                        el.classList.add('active');
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

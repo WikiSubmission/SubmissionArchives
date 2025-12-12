@@ -1,0 +1,175 @@
+{
+  "text": "I want to live with how did you if if Nathan makes me into debt, do Nathan forgets his power or the things",
+  "segments": [
+    {
+      "start": 2484.475,
+      "end": 2487.135,
+      "speaker": "SPEAKER_00",
+      "text": "I want to live with how did you if",
+      "words": [
+        {
+          "word": "i",
+          "start": 2484.475,
+          "end": 2484.715,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "want",
+          "start": 2484.715,
+          "end": 2484.955,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 2484.955,
+          "end": 2485.035,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "live",
+          "start": 2485.035,
+          "end": 2485.195,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "with",
+          "start": 2485.195,
+          "end": 2485.595,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "how",
+          "start": 2485.835,
+          "end": 2485.995,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "did",
+          "start": 2485.995,
+          "end": 2486.235,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 2486.235,
+          "end": 2486.395,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "if",
+          "start": 2486.635,
+          "end": 2487.135,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2488.075,
+      "end": 2490.0151,
+      "speaker": "SPEAKER_00",
+      "text": "if Nathan makes me into debt,",
+      "words": [
+        {
+          "word": "if",
+          "start": 2488.075,
+          "end": 2488.155,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "nathan",
+          "start": 2488.155,
+          "end": 2488.555,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "makes",
+          "start": 2488.555,
+          "end": 2488.875,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "me",
+          "start": 2488.875,
+          "end": 2489.115,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "into",
+          "start": 2489.115,
+          "end": 2489.5151,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "debt",
+          "start": 2489.5151,
+          "end": 2490.0151,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2491.355,
+      "end": 2493.455,
+      "speaker": "SPEAKER_00",
+      "text": "do Nathan forgets his power",
+      "words": [
+        {
+          "word": "do",
+          "start": 2491.355,
+          "end": 2491.435,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "nathan",
+          "start": 2491.435,
+          "end": 2491.915,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "forgets",
+          "start": 2491.915,
+          "end": 2492.415,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "his",
+          "start": 2492.635,
+          "end": 2492.955,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "power",
+          "start": 2492.955,
+          "end": 2493.455,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2494.235,
+      "end": 2495.055,
+      "speaker": "SPEAKER_00",
+      "text": "or the things",
+      "words": [
+        {
+          "word": "or",
+          "start": 2494.235,
+          "end": 2494.395,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 2494.395,
+          "end": 2494.555,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "things",
+          "start": 2494.555,
+          "end": 2495.055,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    }
+  ]
+}

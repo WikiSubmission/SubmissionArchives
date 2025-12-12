@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Context Menu */
+        #contextMenu {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #contextMenu button {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        #contextMenu button:hover {
+            background: #f0f0f0;
+        }
+
+        .controls {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #saveBtn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #saveBtn:disabled {
+            background: #ccc;
+        }
+
+        .success-msg {
+            color: green;
+            display: none;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div style="display:flex; align-items:center; gap:20px;">
+            <a href="index.html" style="text-decoration:none; color:#007bff; font-weight:bold;">&larr; Back</a>
+            <h1 id="docTitle">Editor</h1>
+        </div>
+        <div class="controls">
+            <button id="saveBtn">Save & Mark Verified</button>
+            <span id="saveStatus" class="success-msg">Saved!</span>
+        </div>
+    </header>
+
+    <div class="editor-layout">
+        <div class="sidebar">
+            <h3>Speakers</h3>
+            <ul id="speakerList" style="list-style:none; padding:0;"></ul>
+            <div style="margin-top:20px; font-size:12px; color:#666;">
+                <p><strong>Instructions:</strong></p>
+                <ul>
+                    <li>Valid keys: Space (Play/Pause)</li>
+                    <li>Click words to seek</li>
+                    <li>Click Speaker Name to Mass Rename</li>
+                    <li>Edit text directly</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div id="transcriptView" class="transcript-container">
+                <!-- Transcript Segments Go Here -->
+            </div>
+
+            <div class="player-bar" id="playerContainer">
+                <!-- Audio/Video Player Injected Here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Rename -->
+    <dialog id="renameDialog">
+        <form method="dialog">
+            <h3>Rename Speaker</h3>
+            <p>Replace <strong id="oldNameDisplay">SPEAKER_01</strong> with:</p>
+            <input type="text" id="newNameInput" style="width:100%; padding:5px; margin-bottom:10px;">
+            <div style="display:flex; justify-content:flex-end; gap:10px;">
+                <button value="cancel">Cancel</button>
+                <button id="confirmRenameBtn" value="confirm"
+                    style="background:#007bff; color:white; border:none; padding:5px 10px;">Rename All</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const mediaPath = params.get('path');
+        const transcriptPath = params.get('tpath');
+        const fileId = params.get('id');
+
+        let transcriptData = null; // { segments: [...] }
+        let player = null;
+
+        // --- Initialization ---
+
+        async function init() {
+            document.title = "Editor - " + mediaPath.split(/[\\/]/).pop();
+            document.getElementById('docTitle').innerText = mediaPath.split(/[\\/]/).pop();
+
+            // 1. Load Media
+            setupPlayer(mediaPath);
+
+            // 2. Load Transcript
+            await loadTranscript(transcriptPath);
+
+            // 3. Render
+            renderTranscript();
+            renderSidebar();
+        }
+
+        function setupPlayer(path) {
+            const container = document.getElementById('playerContainer');
+            const ext = path.split('.').pop().toLowerCase();
+
+            let el;
+            if (['mp4', 'm4v', 'mov'].includes(ext)) {
+                el = document.createElement('video');
+                el.style.height = "100px"; // Small video strip
+            } else {
+                el = document.createElement('audio');
+            }
+
+            el.controls = true;
+            el.src = `/api/file?path=${encodeURIComponent(path)}`;
+            el.style.width = "100%";
+
+            // Sync Logic
+            el.addEventListener('timeupdate', () => highlightWord(el.currentTime));
+
+            container.appendChild(el);
+            player = el;
+        }
+
+        async function loadTranscript(path) {
+            try {
+                const res = await fetch(`/api/file?path=${encodeURIComponent(path)}`);
+                if (!res.ok) throw new Error("Failed to load transcript");
+                const json = await res.json();
+
+                // Normalize structure: some are {text: "...", segments: [...]}, others just keys
+                if (json.segments) {
+                    transcriptData = json;
+                } else {
+                    // Handle different formats if necessary, assuming 'segments' exists for now based on previous file views
+                    transcriptData = { segments: [] };
+                    alert("Unknown transcript format!");
+                }
+            } catch (e) {
+                console.error(e);
+                alert("Error loading transcript: " + e.message);
+            }
+        }
+
+        // --- Rendering ---
+
+        function renderSidebar() {
+            const list = document.getElementById('speakerList');
+            list.innerHTML = '';
+            const speakers = new Set();
+            transcriptData.segments.forEach(s => {
+                if (s.speaker) speakers.add(s.speaker);
+            });
+
+            speakers.forEach(spk => {
+                const li = document.createElement('li');
+                li.style.marginBottom = "8px";
+                li.innerHTML = `<span style="cursor:pointer; color:#007bff;" onclick="openRename('${spk}')">✎ ${spk}</span>`;
+                list.appendChild(li);
+            });
+        }
+
+        function renderTranscript() {
+            const container = document.getElementById('transcriptView');
+            container.innerHTML = '';
+
+            transcriptData.segments.forEach((seg, sIdx) => {
+                const segDiv = document.createElement('div');
+                segDiv.className = 'segment';
+                segDiv.id = `seg-${sIdx}`;
+
+                // Speaker Label
+                const spkDiv = document.createElement('div');
+                spkDiv.className = 'speaker-label';
+                spkDiv.innerText = seg.speaker || 'Unknown';
+                spkDiv.onclick = () => openRename(seg.speaker);
+
+                // Text Content
+                const textDiv = document.createElement('div');
+                textDiv.className = 'segment-text';
+                textDiv.contentEditable = true;
+
+                // Render words spans
+                // Note: We render simplified HTML for editing, but keep mapping for sync
+                // Re-constructing from 'words' array if available gives better sync
+
+                if (seg.words && seg.words.length > 0) {
+                    seg.words.forEach((w, wIdx) => {
+                        const span = document.createElement('span');
+                        span.className = 'word';
+                        span.innerText = w.word; // Includes space usually
+                        span.dataset.start = w.start;
+                        span.dataset.end = w.end;
+                        span.onclick = (e) => {
+                            e.stopPropagation(); // Prevent editable focus messing up selection
+                            player.currentTime = w.start;
+                            player.play();
+                        };
+                        textDiv.appendChild(span);
+                        textDiv.appendChild(document.createTextNode(" ")); // Fix spacing
+                    });
+                } else {
+                    textDiv.innerText = seg.text;
+                }
+
+                // Sync on Edit
+                textDiv.addEventListener('input', () => {
+                    // Simplistic: Update segment text, lose word alignment for edited parts
+                    // Ideally we'd re-align, but for now we just save the text blob
+                    seg.text = textDiv.innerText;
+                    // We keep 'words' as is unless we want to clear them? 
+                    // Keeping them allows playback sync to still kinda work for untouched words
+                });
+
+                segDiv.appendChild(spkDiv);
+                segDiv.appendChild(textDiv);
+                container.appendChild(segDiv);
+            });
+        }
+
+        // --- Logic ---
+
+        function highlightWord(time) {
+            // Basic optimization: don't scan everything every frame
+            // Just find the active segment
+            const activeSegs = transcriptData.segments.filter(s => time >= s.start && time <= s.end);
+
+            document.querySelectorAll('.word.active').forEach(e => e.classList.remove('active'));
+
+            activeSegs.forEach(seg => {
+                if (seg.words) {
+                    const activeWord = seg.words.find(w => time >= w.start && time <= w.end);
+                    if (activeWord) {
+                        // Find DOM element - trickier since we rebuilt
+                        // We can use data attributes
+                        // Simple query selector might be slow.
+                        // Let's assume strict mapping?
+                        // Actually, searching by data-start is safest
+                        const el = document.querySelector(`.word[data-start="${activeWord.start}"]`);
+                        if (el) {
+                            el.classList.add('active');
+                            el.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+                        }
+                    }
+                }
+            });
+        }
+
+        // --- Rename ---
+        const renameDialog = document.getElementById('renameDialog');
+        const newNameInput = document.getElementById('newNameInput');
+        const oldNameDisplay = document.getElementById('oldNameDisplay');
+        let targetSpeaker = "";
+
+        window.openRename = function (oldName) {
+            targetSpeaker = oldName;
+            oldNameDisplay.innerText = oldName;
+            newNameInput.value = oldName;
+            renameDialog.showModal();
+        }
+
+        document.getElementById('confirmRenameBtn').addEventListener('click', (e) => {
+            const newName = newNameInput.value.trim();
+            if (newName && newName !== targetSpeaker) {
+                // Mass Rename
+                let count = 0;
+                transcriptData.segments.forEach(s => {
+                    if (s.speaker === targetSpeaker) {
+                        s.speaker = newName;
+                        count++;
+                    }
+                    if (s.words) {
+                        s.words.forEach(w => {
+                            if (w.speaker === targetSpeaker) w.speaker = newName;
+                        });
+                    }
+                });
+
+                renderTranscript();
+                renderSidebar();
+                // alert(`Renamed ${count} segments.`);
+            }
+        });
+
+        // --- Saving ---
+
+        document.getElementById('saveBtn').addEventListener('click', async () => {
+            const btn = document.getElementById('saveBtn');
+            const statusMsg = document.getElementById('saveStatus');
+            btn.disabled = true;
+            btn.innerText = "Saving...";
+
+            try {
+                // 1. Save File
+                const saveRes = await fetch('/api/save', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        path: transcriptPath,
+                        content: transcriptData
+                    })
+                });
+                if (!saveRes.ok) throw new Error("Failed to save file");
+
+                // 2. Update Index Status
+                // Only update if it was unverified/missing
+                const statusRes = await fetch('/api/update_status', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        id: fileId,
+                        status: "Verified"
+                    })
+                });
+
+                statusMsg.style.display = "inline";
+                setTimeout(() => statusMsg.style.display = "none", 2000);
+
+            } catch (e) {
+                alert("Error saving: " + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "Save & Mark Verified";
+            }
+        });
+
+        init();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+# Media Files (Ignore Large Files)
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.mov
+*.mkv
+*.zip
+*.rar
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+venv/
+.env
+
+# System
+Thumbs.db
+Desktop.ini
+
+# RKM Specific
+debug_*.txt
+debug_*.jpg
+debug_*.png
+temp_subs/
+scripts/archive/
+transcripts_youtube_raw/
+transcripts_api_raw/
+transcripts/backup_pre_std/

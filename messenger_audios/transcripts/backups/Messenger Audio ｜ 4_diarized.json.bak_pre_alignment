@@ -1,0 +1,2175 @@
+{
+  "text": "Yes. Mhmm. So you have something before it? Yeah. I had some but it was weak. Tetabeth an a tharibalebet silugnan. Drill three. The list of singulars with their broken plurals is read for you to repeat. One a, Afmal pattern. Adadon Adadon. Bebon Abwebon. Wachton Awkaton. One b, Amal pattern. Bunukon, nason nosuson. Three. Simal pattern. Rajulon regelon, Four. Five. Six, pattern. Seven, pattern. Eight, ishmea pattern. Nine. 10. Pattern. 11 a, pattern. 11 b, pattern. 12 a. Masmahon Masaniho. Ma'edon Mawaidu. 12 b. 12 c. 12 d. 13 a. 13 b. Drill four. Give the plurals of the following words. There's, there's, Kalem, Aklam, Beled, Beled, Madina, Mudun, Jumla, Jumal, Sharya, Shavarya, Palib, Puneb, Mechtab, Mekatib, Jerida, Jerad, Shubek, Shababik, Rais, Drill five. Give the singular forms of the following. Zawar, Zaire, Qisar, Kasir, Modon, Medina, Asdikah, Sabik, Dacathira, Duktur, Kursi, Jumal, Jumla, Shawaria sharia roaseh Rais, Shababikh, Shubek, Ajahnib, Ajnabee, Aziz, Abner, Drill six. Make the underlined word plural and make any other necessary changes. Example, the man looked for work in New York. New York. Becomes the men looked for work in New York. Bahadur Rajilu An Hamelin f in New York. Now proceed. Wahid. The Hebna Lizziaratil Madinah. The Hebnal is the Aratil Madinah. Kerbal kotabu and jamel ill valid.",
+  "segments": [
+    {
+      "start": 111.94,
+      "end": 112.44,
+      "speaker": "SPEAKER_00",
+      "text": "Yes.",
+      "words": [
+        {
+          "word": "yes",
+          "start": 111.94,
+          "end": 112.44,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 125.14,
+      "end": 127.845,
+      "speaker": "SPEAKER_00",
+      "text": "Mhmm. So you have something before it? Yeah. I had some but",
+      "words": [
+        {
+          "word": "mhmm",
+          "start": 125.14,
+          "end": 125.22,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "so",
+          "start": 125.22,
+          "end": 125.38,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 125.38,
+          "end": 125.54,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "have",
+          "start": 125.54,
+          "end": 125.7,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "something",
+          "start": 125.7,
+          "end": 126.02,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "before",
+          "start": 126.02,
+          "end": 126.34,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "it",
+          "start": 126.34,
+          "end": 126.58,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "yeah",
+          "start": 126.58,
+          "end": 126.74,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "i",
+          "start": 126.74,
+          "end": 126.945,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "had",
+          "start": 126.945,
+          "end": 127.185,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "some",
+          "start": 127.185,
+          "end": 127.345,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "but",
+          "start": 127.345,
+          "end": 127.845,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 130.855,
+      "end": 131.855,
+      "speaker": "SPEAKER_00",
+      "text": "it was weak.",
+      "words": [
+        {
+          "word": "it",
+          "start": 130.855,
+          "end": 131.105,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "was",
+          "start": 131.105,
+          "end": 131.355,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "weak",
+          "start": 131.355,
+          "end": 131.855,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1345.5851,
+      "end": 1347.4451,
+      "speaker": "SPEAKER_00",
+      "text": "Tetabeth an a tharibalebet",
+      "words": [
+        {
+          "word": "tetabeth",
+          "start": 1345.5851,
+          "end": 1346.0851,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "an",
+          "start": 1346.385,
+          "end": 1346.785,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 1346.785,
+          "end": 1346.9451,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "tharibalebet",
+          "start": 1346.9451,
+          "end": 1347.4451,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1348.2251,
+      "end": 1348.7251,
+      "speaker": "SPEAKER_00",
+      "text": "silugnan.",
+      "words": [
+        {
+          "word": "silugnan",
+          "start": 1348.2251,
+          "end": 1348.7251,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1440.6499,
+      "end": 1441.5499,
+      "speaker": "SPEAKER_01",
+      "text": "Drill three.",
+      "words": [
+        {
+          "word": "drill",
+          "start": 1440.6499,
+          "end": 1441.0499,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "three",
+          "start": 1441.0499,
+          "end": 1441.5499,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1442.09,
+      "end": 1446.35,
+      "speaker": "SPEAKER_01",
+      "text": "The list of singulars with their broken plurals is read for you to repeat.",
+      "words": [
+        {
+          "word": "the",
+          "start": 1442.09,
+          "end": 1442.25,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "list",
+          "start": 1442.25,
+          "end": 1442.49,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "of",
+          "start": 1442.49,
+          "end": 1442.73,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "singulars",
+          "start": 1442.73,
+          "end": 1443.23,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "with",
+          "start": 1443.37,
+          "end": 1443.5299,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "their",
+          "start": 1443.5299,
+          "end": 1443.7699,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "broken",
+          "start": 1443.7699,
+          "end": 1444.1699,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "plurals",
+          "start": 1444.1699,
+          "end": 1444.57,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "is",
+          "start": 1444.57,
+          "end": 1444.8099,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "read",
+          "start": 1444.8099,
+          "end": 1445.21,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "for",
+          "start": 1445.21,
+          "end": 1445.45,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "you",
+          "start": 1445.45,
+          "end": 1445.69,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "to",
+          "start": 1445.69,
+          "end": 1445.85,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "repeat",
+          "start": 1445.85,
+          "end": 1446.35,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1448.09,
+      "end": 1448.9099,
+      "speaker": "SPEAKER_01",
+      "text": "One a,",
+      "words": [
+        {
+          "word": "one",
+          "start": 1448.09,
+          "end": 1448.4099,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "a",
+          "start": 1448.4099,
+          "end": 1448.9099,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1449.5299,
+      "end": 1450.6699,
+      "speaker": "SPEAKER_01",
+      "text": "Afmal pattern.",
+      "words": [
+        {
+          "word": "afmal",
+          "start": 1449.5299,
+          "end": 1450.0299,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "pattern",
+          "start": 1450.1699,
+          "end": 1450.6699,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1471.4099,
+      "end": 1471.9099,
+      "speaker": "SPEAKER_00",
+      "text": "Adadon",
+      "words": [
+        {
+          "word": "adadon",
+          "start": 1471.4099,
+          "end": 1471.9099,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1472.45,
+      "end": 1472.95,
+      "speaker": "SPEAKER_00",
+      "text": "Adadon.",
+      "words": [
+        {
+          "word": "adadon",
+          "start": 1472.45,
+          "end": 1472.95,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1476.5299,
+      "end": 1477.0299,
+      "speaker": "SPEAKER_00",
+      "text": "Bebon",
+      "words": [
+        {
+          "word": "bebon",
+          "start": 1476.5299,
+          "end": 1477.0299,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1477.49,
+      "end": 1477.99,
+      "speaker": "SPEAKER_00",
+      "text": "Abwebon.",
+      "words": [
+        {
+          "word": "abwebon",
+          "start": 1477.49,
+          "end": 1477.99,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1481.8099,
+      "end": 1482.3099,
+      "speaker": "SPEAKER_00",
+      "text": "Wachton",
+      "words": [
+        {
+          "word": "wachton",
+          "start": 1481.8099,
+          "end": 1482.3099,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1482.85,
+      "end": 1483.35,
+      "speaker": "SPEAKER_00",
+      "text": "Awkaton.",
+      "words": [
+        {
+          "word": "awkaton",
+          "start": 1482.85,
+          "end": 1483.35,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1511.0599,
+      "end": 1511.88,
+      "speaker": "SPEAKER_01",
+      "text": "One b,",
+      "words": [
+        {
+          "word": "one",
+          "start": 1511.0599,
+          "end": 1511.38,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "b",
+          "start": 1511.38,
+          "end": 1511.88,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1512.42,
+      "end": 1513.64,
+      "speaker": "SPEAKER_01",
+      "text": "Amal pattern.",
+      "words": [
+        {
+          "word": "amal",
+          "start": 1512.42,
+          "end": 1512.92,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "pattern",
+          "start": 1513.14,
+          "end": 1513.64,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1532.07,
+      "end": 1532.57,
+      "speaker": "SPEAKER_00",
+      "text": "Bunukon,",
+      "words": [
+        {
+          "word": "bunukon",
+          "start": 1532.07,
+          "end": 1532.57,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1536.23,
+      "end": 1536.73,
+      "speaker": "SPEAKER_00",
+      "text": "nason",
+      "words": [
+        {
+          "word": "nason",
+          "start": 1536.23,
+          "end": 1536.73,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1537.19,
+      "end": 1537.69,
+      "speaker": "SPEAKER_00",
+      "text": "nosuson.",
+      "words": [
+        {
+          "word": "nosuson",
+          "start": 1537.19,
+          "end": 1537.69,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1539.2699,
+      "end": 1539.7699,
+      "speaker": "SPEAKER_01",
+      "text": "Three.",
+      "words": [
+        {
+          "word": "three",
+          "start": 1539.2699,
+          "end": 1539.7699,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1540.3099,
+      "end": 1540.8099,
+      "speaker": "SPEAKER_01",
+      "text": "Simal",
+      "words": [
+        {
+          "word": "simal",
+          "start": 1540.3099,
+          "end": 1540.8099,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1541.11,
+      "end": 1541.61,
+      "speaker": "SPEAKER_01",
+      "text": "pattern.",
+      "words": [
+        {
+          "word": "pattern",
+          "start": 1541.11,
+          "end": 1541.61,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1542.71,
+      "end": 1543.21,
+      "speaker": "SPEAKER_00",
+      "text": "Rajulon",
+      "words": [
+        {
+          "word": "rajulon",
+          "start": 1542.71,
+          "end": 1543.21,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1543.75,
+      "end": 1544.25,
+      "speaker": "SPEAKER_00",
+      "text": "regelon,",
+      "words": [
+        {
+          "word": "regelon",
+          "start": 1543.75,
+          "end": 1544.25,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1570.765,
+      "end": 1571.265,
+      "speaker": "SPEAKER_01",
+      "text": "Four.",
+      "words": [
+        {
+          "word": "four",
+          "start": 1570.765,
+          "end": 1571.265,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1576.445,
+      "end": 1576.945,
+      "speaker": "SPEAKER_01",
+      "text": "Five.",
+      "words": [
+        {
+          "word": "five",
+          "start": 1576.445,
+          "end": 1576.945,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1583.6699,
+      "end": 1584.1699,
+      "speaker": "SPEAKER_00",
+      "text": "Six,",
+      "words": [
+        {
+          "word": "six",
+          "start": 1583.6699,
+          "end": 1584.1699,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1594.39,
+      "end": 1594.89,
+      "speaker": "SPEAKER_01",
+      "text": "pattern.",
+      "words": [
+        {
+          "word": "pattern",
+          "start": 1594.39,
+          "end": 1594.89,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1601.2949,
+      "end": 1601.7949,
+      "speaker": "SPEAKER_01",
+      "text": "Seven,",
+      "words": [
+        {
+          "word": "seven",
+          "start": 1601.2949,
+          "end": 1601.7949,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1603.215,
+      "end": 1603.715,
+      "speaker": "SPEAKER_01",
+      "text": "pattern.",
+      "words": [
+        {
+          "word": "pattern",
+          "start": 1603.215,
+          "end": 1603.715,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1616.0599,
+      "end": 1616.5599,
+      "speaker": "SPEAKER_01",
+      "text": "Eight,",
+      "words": [
+        {
+          "word": "eight",
+          "start": 1616.0599,
+          "end": 1616.5599,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1618.61,
+      "end": 1619.36,
+      "speaker": "SPEAKER_01",
+      "text": "ishmea pattern.",
+      "words": [
+        {
+          "word": "ishmea",
+          "start": 1618.61,
+          "end": 1618.86,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "pattern",
+          "start": 1618.86,
+          "end": 1619.36,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1620.0599,
+      "end": 1620.5599,
+      "speaker": "SPEAKER_00",
+      "text": "Nine.",
+      "words": [
+        {
+          "word": "nine",
+          "start": 1620.0599,
+          "end": 1620.5599,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1630.515,
+      "end": 1631.015,
+      "speaker": "SPEAKER_00",
+      "text": "10.",
+      "words": [
+        {
+          "word": "10",
+          "start": 1630.515,
+          "end": 1631.015,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1635.395,
+      "end": 1635.895,
+      "speaker": "SPEAKER_01",
+      "text": "Pattern.",
+      "words": [
+        {
+          "word": "pattern",
+          "start": 1635.395,
+          "end": 1635.895,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1644.01,
+      "end": 1645.0701,
+      "speaker": "SPEAKER_01",
+      "text": "11 a,",
+      "words": [
+        {
+          "word": "11",
+          "start": 1644.01,
+          "end": 1644.51,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "a",
+          "start": 1644.5701,
+          "end": 1645.0701,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1646.5701,
+      "end": 1647.0701,
+      "speaker": "SPEAKER_01",
+      "text": "pattern.",
+      "words": [
+        {
+          "word": "pattern",
+          "start": 1646.5701,
+          "end": 1647.0701,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1657.585,
+      "end": 1658.725,
+      "speaker": "SPEAKER_01",
+      "text": "11 b,",
+      "words": [
+        {
+          "word": "11",
+          "start": 1657.585,
+          "end": 1658.085,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "b",
+          "start": 1658.225,
+          "end": 1658.725,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1660.3049,
+      "end": 1660.8049,
+      "speaker": "SPEAKER_01",
+      "text": "pattern.",
+      "words": [
+        {
+          "word": "pattern",
+          "start": 1660.3049,
+          "end": 1660.8049,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1666.065,
+      "end": 1667.0449,
+      "speaker": "SPEAKER_01",
+      "text": "12 a.",
+      "words": [
+        {
+          "word": "12",
+          "start": 1666.065,
+          "end": 1666.5449,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "a",
+          "start": 1666.5449,
+          "end": 1667.0449,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1687.365,
+      "end": 1687.865,
+      "speaker": "SPEAKER_00",
+      "text": "Masmahon",
+      "words": [
+        {
+          "word": "masmahon",
+          "start": 1687.365,
+          "end": 1687.865,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1688.405,
+      "end": 1688.905,
+      "speaker": "SPEAKER_00",
+      "text": "Masaniho.",
+      "words": [
+        {
+          "word": "masaniho",
+          "start": 1688.405,
+          "end": 1688.905,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1692.965,
+      "end": 1693.465,
+      "speaker": "SPEAKER_00",
+      "text": "Ma'edon",
+      "words": [
+        {
+          "word": "ma'edon",
+          "start": 1692.965,
+          "end": 1693.465,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1694.245,
+      "end": 1694.745,
+      "speaker": "SPEAKER_00",
+      "text": "Mawaidu.",
+      "words": [
+        {
+          "word": "mawaidu",
+          "start": 1694.245,
+          "end": 1694.745,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1710.78,
+      "end": 1711.92,
+      "speaker": "SPEAKER_01",
+      "text": "12 b.",
+      "words": [
+        {
+          "word": "12",
+          "start": 1710.78,
+          "end": 1711.28,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "b",
+          "start": 1711.42,
+          "end": 1711.92,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1716.345,
+      "end": 1717.245,
+      "speaker": "SPEAKER_01",
+      "text": "12 c.",
+      "words": [
+        {
+          "word": "12",
+          "start": 1716.345,
+          "end": 1716.745,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "c",
+          "start": 1716.745,
+          "end": 1717.245,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1724.505,
+      "end": 1725.485,
+      "speaker": "SPEAKER_01",
+      "text": "12 d.",
+      "words": [
+        {
+          "word": "12",
+          "start": 1724.505,
+          "end": 1724.985,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "d",
+          "start": 1724.985,
+          "end": 1725.485,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1729.86,
+      "end": 1730.36,
+      "speaker": "SPEAKER_01",
+      "text": "13",
+      "words": [
+        {
+          "word": "13",
+          "start": 1729.86,
+          "end": 1730.36,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1730.66,
+      "end": 1731.16,
+      "speaker": "SPEAKER_01",
+      "text": "a.",
+      "words": [
+        {
+          "word": "a",
+          "start": 1730.66,
+          "end": 1731.16,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1739.505,
+      "end": 1740.5651,
+      "speaker": "SPEAKER_01",
+      "text": "13 b.",
+      "words": [
+        {
+          "word": "13",
+          "start": 1739.505,
+          "end": 1740.005,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "b",
+          "start": 1740.0651,
+          "end": 1740.5651,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1751.74,
+      "end": 1752.64,
+      "speaker": "SPEAKER_01",
+      "text": "Drill four.",
+      "words": [
+        {
+          "word": "drill",
+          "start": 1751.74,
+          "end": 1752.14,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "four",
+          "start": 1752.14,
+          "end": 1752.64,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1753.1,
+      "end": 1755.44,
+      "speaker": "SPEAKER_01",
+      "text": "Give the plurals of the following words.",
+      "words": [
+        {
+          "word": "give",
+          "start": 1753.1,
+          "end": 1753.4199,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 1753.4199,
+          "end": 1753.6599,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "plurals",
+          "start": 1753.6599,
+          "end": 1754.14,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "of",
+          "start": 1754.14,
+          "end": 1754.2999,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 1754.2999,
+          "end": 1754.46,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "following",
+          "start": 1754.46,
+          "end": 1754.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "words",
+          "start": 1754.94,
+          "end": 1755.44,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1760.2999,
+      "end": 1760.7999,
+      "speaker": "SPEAKER_00",
+      "text": "There's,",
+      "words": [
+        {
+          "word": "there's",
+          "start": 1760.2999,
+          "end": 1760.7999,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1763.4199,
+      "end": 1763.9199,
+      "speaker": "SPEAKER_00",
+      "text": "there's,",
+      "words": [
+        {
+          "word": "there's",
+          "start": 1763.4199,
+          "end": 1763.9199,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1766.925,
+      "end": 1767.425,
+      "speaker": "SPEAKER_00",
+      "text": "Kalem,",
+      "words": [
+        {
+          "word": "kalem",
+          "start": 1766.925,
+          "end": 1767.425,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1770.445,
+      "end": 1770.945,
+      "speaker": "SPEAKER_00",
+      "text": "Aklam,",
+      "words": [
+        {
+          "word": "aklam",
+          "start": 1770.445,
+          "end": 1770.945,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1773.965,
+      "end": 1774.465,
+      "speaker": "SPEAKER_00",
+      "text": "Beled,",
+      "words": [
+        {
+          "word": "beled",
+          "start": 1773.965,
+          "end": 1774.465,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1777.485,
+      "end": 1777.985,
+      "speaker": "SPEAKER_00",
+      "text": "Beled,",
+      "words": [
+        {
+          "word": "beled",
+          "start": 1777.485,
+          "end": 1777.985,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1778.65,
+      "end": 1779.15,
+      "speaker": "SPEAKER_00",
+      "text": "Madina,",
+      "words": [
+        {
+          "word": "madina",
+          "start": 1778.65,
+          "end": 1779.15,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1784.25,
+      "end": 1784.75,
+      "speaker": "SPEAKER_00",
+      "text": "Mudun,",
+      "words": [
+        {
+          "word": "mudun",
+          "start": 1784.25,
+          "end": 1784.75,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1788.01,
+      "end": 1788.51,
+      "speaker": "SPEAKER_00",
+      "text": "Jumla,",
+      "words": [
+        {
+          "word": "jumla",
+          "start": 1788.01,
+          "end": 1788.51,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1791.29,
+      "end": 1791.79,
+      "speaker": "SPEAKER_00",
+      "text": "Jumal,",
+      "words": [
+        {
+          "word": "jumal",
+          "start": 1791.29,
+          "end": 1791.79,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1795.505,
+      "end": 1796.005,
+      "speaker": "SPEAKER_00",
+      "text": "Sharya,",
+      "words": [
+        {
+          "word": "sharya",
+          "start": 1795.505,
+          "end": 1796.005,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1799.1849,
+      "end": 1799.6849,
+      "speaker": "SPEAKER_00",
+      "text": "Shavarya,",
+      "words": [
+        {
+          "word": "shavarya",
+          "start": 1799.1849,
+          "end": 1799.6849,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1803.345,
+      "end": 1803.845,
+      "speaker": "SPEAKER_00",
+      "text": "Palib,",
+      "words": [
+        {
+          "word": "palib",
+          "start": 1803.345,
+          "end": 1803.845,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1807.105,
+      "end": 1807.605,
+      "speaker": "SPEAKER_00",
+      "text": "Puneb,",
+      "words": [
+        {
+          "word": "puneb",
+          "start": 1807.105,
+          "end": 1807.605,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1815.08,
+      "end": 1815.82,
+      "speaker": "SPEAKER_00",
+      "text": "Mechtab, Mekatib,",
+      "words": [
+        {
+          "word": "mechtab",
+          "start": 1815.08,
+          "end": 1815.32,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "mekatib",
+          "start": 1815.32,
+          "end": 1815.82,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1820.0399,
+      "end": 1820.5399,
+      "speaker": "SPEAKER_00",
+      "text": "Jerida,",
+      "words": [
+        {
+          "word": "jerida",
+          "start": 1820.0399,
+          "end": 1820.5399,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1823.64,
+      "end": 1824.14,
+      "speaker": "SPEAKER_00",
+      "text": "Jerad,",
+      "words": [
+        {
+          "word": "jerad",
+          "start": 1823.64,
+          "end": 1824.14,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1828.435,
+      "end": 1828.935,
+      "speaker": "SPEAKER_00",
+      "text": "Shubek,",
+      "words": [
+        {
+          "word": "shubek",
+          "start": 1828.435,
+          "end": 1828.935,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1832.115,
+      "end": 1832.615,
+      "speaker": "SPEAKER_00",
+      "text": "Shababik,",
+      "words": [
+        {
+          "word": "shababik",
+          "start": 1832.115,
+          "end": 1832.615,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1835.635,
+      "end": 1836.135,
+      "speaker": "SPEAKER_00",
+      "text": "Rais,",
+      "words": [
+        {
+          "word": "rais",
+          "start": 1835.635,
+          "end": 1836.135,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1849.95,
+      "end": 1850.85,
+      "speaker": "SPEAKER_01",
+      "text": "Drill five.",
+      "words": [
+        {
+          "word": "drill",
+          "start": 1849.95,
+          "end": 1850.35,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "five",
+          "start": 1850.35,
+          "end": 1850.85,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1851.47,
+      "end": 1853.8099,
+      "speaker": "SPEAKER_01",
+      "text": "Give the singular forms of the following.",
+      "words": [
+        {
+          "word": "give",
+          "start": 1851.47,
+          "end": 1851.71,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 1851.71,
+          "end": 1851.87,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "singular",
+          "start": 1851.87,
+          "end": 1852.37,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "forms",
+          "start": 1852.51,
+          "end": 1852.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "of",
+          "start": 1852.99,
+          "end": 1853.1499,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 1853.1499,
+          "end": 1853.3099,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "following",
+          "start": 1853.3099,
+          "end": 1853.8099,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1873.16,
+      "end": 1873.66,
+      "speaker": "SPEAKER_00",
+      "text": "Zawar,",
+      "words": [
+        {
+          "word": "zawar",
+          "start": 1873.16,
+          "end": 1873.66,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1877.16,
+      "end": 1877.66,
+      "speaker": "SPEAKER_00",
+      "text": "Zaire,",
+      "words": [
+        {
+          "word": "zaire",
+          "start": 1877.16,
+          "end": 1877.66,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1881.4,
+      "end": 1881.9,
+      "speaker": "SPEAKER_00",
+      "text": "Qisar,",
+      "words": [
+        {
+          "word": "qisar",
+          "start": 1881.4,
+          "end": 1881.9,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1885.345,
+      "end": 1885.845,
+      "speaker": "SPEAKER_00",
+      "text": "Kasir,",
+      "words": [
+        {
+          "word": "kasir",
+          "start": 1885.345,
+          "end": 1885.845,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1889.265,
+      "end": 1889.765,
+      "speaker": "SPEAKER_00",
+      "text": "Modon,",
+      "words": [
+        {
+          "word": "modon",
+          "start": 1889.265,
+          "end": 1889.765,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1892.625,
+      "end": 1893.125,
+      "speaker": "SPEAKER_00",
+      "text": "Medina,",
+      "words": [
+        {
+          "word": "medina",
+          "start": 1892.625,
+          "end": 1893.125,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1896.96,
+      "end": 1897.46,
+      "speaker": "SPEAKER_00",
+      "text": "Asdikah,",
+      "words": [
+        {
+          "word": "asdikah",
+          "start": 1896.96,
+          "end": 1897.46,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1900.8,
+      "end": 1901.3,
+      "speaker": "SPEAKER_00",
+      "text": "Sabik,",
+      "words": [
+        {
+          "word": "sabik",
+          "start": 1900.8,
+          "end": 1901.3,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1904.0801,
+      "end": 1904.5801,
+      "speaker": "SPEAKER_00",
+      "text": "Dacathira,",
+      "words": [
+        {
+          "word": "dacathira",
+          "start": 1904.0801,
+          "end": 1904.5801,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1908.56,
+      "end": 1909.06,
+      "speaker": "SPEAKER_00",
+      "text": "Duktur,",
+      "words": [
+        {
+          "word": "duktur",
+          "start": 1908.56,
+          "end": 1909.06,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1924.6799,
+      "end": 1925.1799,
+      "speaker": "SPEAKER_00",
+      "text": "Kursi,",
+      "words": [
+        {
+          "word": "kursi",
+          "start": 1924.6799,
+          "end": 1925.1799,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1929.1599,
+      "end": 1929.6599,
+      "speaker": "SPEAKER_00",
+      "text": "Jumal,",
+      "words": [
+        {
+          "word": "jumal",
+          "start": 1929.1599,
+          "end": 1929.6599,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1933.48,
+      "end": 1933.98,
+      "speaker": "SPEAKER_00",
+      "text": "Jumla,",
+      "words": [
+        {
+          "word": "jumla",
+          "start": 1933.48,
+          "end": 1933.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1937.095,
+      "end": 1937.595,
+      "speaker": "SPEAKER_00",
+      "text": "Shawaria",
+      "words": [
+        {
+          "word": "shawaria",
+          "start": 1937.095,
+          "end": 1937.595,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1941.4149,
+      "end": 1941.9149,
+      "speaker": "SPEAKER_00",
+      "text": "sharia",
+      "words": [
+        {
+          "word": "sharia",
+          "start": 1941.4149,
+          "end": 1941.9149,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1944.775,
+      "end": 1945.275,
+      "speaker": "SPEAKER_00",
+      "text": "roaseh",
+      "words": [
+        {
+          "word": "roaseh",
+          "start": 1944.775,
+          "end": 1945.275,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1948.95,
+      "end": 1949.45,
+      "speaker": "SPEAKER_00",
+      "text": "Rais,",
+      "words": [
+        {
+          "word": "rais",
+          "start": 1948.95,
+          "end": 1949.45,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1956.23,
+      "end": 1956.89,
+      "speaker": "SPEAKER_00",
+      "text": "Shababikh, Shubek,",
+      "words": [
+        {
+          "word": "shababikh",
+          "start": 1956.23,
+          "end": 1956.39,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "shubek",
+          "start": 1956.39,
+          "end": 1956.89,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1960.23,
+      "end": 1960.73,
+      "speaker": "SPEAKER_00",
+      "text": "Ajahnib,",
+      "words": [
+        {
+          "word": "ajahnib",
+          "start": 1960.23,
+          "end": 1960.73,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1963.735,
+      "end": 1964.235,
+      "speaker": "SPEAKER_00",
+      "text": "Ajnabee,",
+      "words": [
+        {
+          "word": "ajnabee",
+          "start": 1963.735,
+          "end": 1964.235,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1975.415,
+      "end": 1976.635,
+      "speaker": "SPEAKER_00",
+      "text": "Aziz, Abner,",
+      "words": [
+        {
+          "word": "aziz",
+          "start": 1975.415,
+          "end": 1975.915,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "abner",
+          "start": 1976.135,
+          "end": 1976.635,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 1994.675,
+      "end": 1995.575,
+      "speaker": "SPEAKER_01",
+      "text": "Drill six.",
+      "words": [
+        {
+          "word": "drill",
+          "start": 1994.675,
+          "end": 1995.075,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "six",
+          "start": 1995.075,
+          "end": 1995.575,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 1996.1951,
+      "end": 2000.615,
+      "speaker": "SPEAKER_01",
+      "text": "Make the underlined word plural and make any other necessary changes.",
+      "words": [
+        {
+          "word": "make",
+          "start": 1996.1951,
+          "end": 1996.515,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 1996.515,
+          "end": 1996.755,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "underlined",
+          "start": 1996.755,
+          "end": 1997.255,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "word",
+          "start": 1997.3151,
+          "end": 1997.795,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "plural",
+          "start": 1997.795,
+          "end": 1998.295,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "and",
+          "start": 1998.355,
+          "end": 1998.595,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "make",
+          "start": 1998.595,
+          "end": 1998.835,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "any",
+          "start": 1998.835,
+          "end": 1999.155,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "other",
+          "start": 1999.155,
+          "end": 1999.555,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "necessary",
+          "start": 1999.555,
+          "end": 2000.055,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "changes",
+          "start": 2000.115,
+          "end": 2000.615,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 2001.555,
+      "end": 2002.055,
+      "speaker": "SPEAKER_01",
+      "text": "Example,",
+      "words": [
+        {
+          "word": "example",
+          "start": 2001.555,
+          "end": 2002.055,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 2003.235,
+      "end": 2005.495,
+      "speaker": "SPEAKER_01",
+      "text": "the man looked for work in New York.",
+      "words": [
+        {
+          "word": "the",
+          "start": 2003.235,
+          "end": 2003.475,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "man",
+          "start": 2003.475,
+          "end": 2003.795,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "looked",
+          "start": 2003.795,
+          "end": 2004.035,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "for",
+          "start": 2004.035,
+          "end": 2004.355,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "work",
+          "start": 2004.355,
+          "end": 2004.595,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "in",
+          "start": 2004.595,
+          "end": 2004.835,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "new",
+          "start": 2004.835,
+          "end": 2004.995,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "york",
+          "start": 2004.995,
+          "end": 2005.495,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 2008.275,
+      "end": 2009.01,
+      "speaker": "SPEAKER_01",
+      "text": "New York.",
+      "words": [
+        {
+          "word": "new",
+          "start": 2008.275,
+          "end": 2008.515,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "york",
+          "start": 2008.515,
+          "end": 2009.01,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 2009.49,
+      "end": 2009.99,
+      "speaker": "SPEAKER_01",
+      "text": "Becomes",
+      "words": [
+        {
+          "word": "becomes",
+          "start": 2009.49,
+          "end": 2009.99,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 2010.45,
+      "end": 2013.11,
+      "speaker": "SPEAKER_01",
+      "text": "the men looked for work in New York.",
+      "words": [
+        {
+          "word": "the",
+          "start": 2010.45,
+          "end": 2010.77,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "men",
+          "start": 2010.77,
+          "end": 2011.27,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "looked",
+          "start": 2011.33,
+          "end": 2011.5701,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "for",
+          "start": 2011.5701,
+          "end": 2011.81,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "work",
+          "start": 2011.81,
+          "end": 2012.13,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "in",
+          "start": 2012.13,
+          "end": 2012.37,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "new",
+          "start": 2012.37,
+          "end": 2012.61,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "york",
+          "start": 2012.61,
+          "end": 2013.11,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 2013.49,
+      "end": 2016.55,
+      "speaker": "SPEAKER_00",
+      "text": "Bahadur Rajilu An Hamelin f in New York.",
+      "words": [
+        {
+          "word": "bahadur",
+          "start": 2013.49,
+          "end": 2013.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "rajilu",
+          "start": 2014.05,
+          "end": 2014.55,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "an",
+          "start": 2014.6901,
+          "end": 2015.01,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "hamelin",
+          "start": 2015.01,
+          "end": 2015.49,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "f",
+          "start": 2015.49,
+          "end": 2015.73,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "in",
+          "start": 2015.73,
+          "end": 2015.81,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "new",
+          "start": 2015.81,
+          "end": 2016.05,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "york",
+          "start": 2016.05,
+          "end": 2016.55,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2017.09,
+      "end": 2017.99,
+      "speaker": "SPEAKER_00",
+      "text": "Now proceed.",
+      "words": [
+        {
+          "word": "now",
+          "start": 2017.09,
+          "end": 2017.49,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "proceed",
+          "start": 2017.49,
+          "end": 2017.99,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2019.25,
+      "end": 2019.75,
+      "speaker": "SPEAKER_00",
+      "text": "Wahid.",
+      "words": [
+        {
+          "word": "wahid",
+          "start": 2019.25,
+          "end": 2019.75,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2021.41,
+      "end": 2022.63,
+      "speaker": "SPEAKER_00",
+      "text": "The Hebna Lizziaratil",
+      "words": [
+        {
+          "word": "the",
+          "start": 2021.41,
+          "end": 2021.65,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "hebna",
+          "start": 2021.65,
+          "end": 2022.13,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "lizziaratil",
+          "start": 2022.13,
+          "end": 2022.63,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2023.09,
+      "end": 2023.59,
+      "speaker": "SPEAKER_00",
+      "text": "Madinah.",
+      "words": [
+        {
+          "word": "madinah",
+          "start": 2023.09,
+          "end": 2023.59,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2029.065,
+      "end": 2031.405,
+      "speaker": "SPEAKER_00",
+      "text": "The Hebnal is the Aratil Madinah.",
+      "words": [
+        {
+          "word": "the",
+          "start": 2029.065,
+          "end": 2029.385,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "hebnal",
+          "start": 2029.385,
+          "end": 2029.885,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 2030.025,
+          "end": 2030.265,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 2030.265,
+          "end": 2030.345,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "aratil",
+          "start": 2030.345,
+          "end": 2030.845,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "madinah",
+          "start": 2030.905,
+          "end": 2031.405,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 2090.365,
+      "end": 2093.185,
+      "speaker": "SPEAKER_00",
+      "text": "Kerbal kotabu and jamel ill valid.",
+      "words": [
+        {
+          "word": "kerbal",
+          "start": 2090.365,
+          "end": 2090.865,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "kotabu",
+          "start": 2091.085,
+          "end": 2091.585,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 2091.805,
+          "end": 2092.045,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "jamel",
+          "start": 2092.045,
+          "end": 2092.525,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "ill",
+          "start": 2092.525,
+          "end": 2092.685,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "valid",
+          "start": 2092.685,
+          "end": 2093.185,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    }
+  ]
+}

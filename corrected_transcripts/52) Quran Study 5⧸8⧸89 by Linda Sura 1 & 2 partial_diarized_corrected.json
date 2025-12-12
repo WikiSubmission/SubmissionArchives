@@ -1,0 +1,792 @@
+{
+  "segments": [
+    {
+      "text": "Roll call. Mr. Miller. Here. Mr. Behram. Here. Ms. Heckman. Here. Mr. Ford. Mr. Ford is excused. Mr. Wallace. Here. Mr. Davis. Here. Hear item 2. Invocation pledge of allegiance. The invocation of this evening will be given by Imam Rashad Khalifa of the Islamic mosque of Tucson. Will you please remain standing for the pledge of allegiance to the flag? In the name of God, the Most Gracious, the Most Merciful. Praise be to God, Lord of the universe. The Most Gracious, the Most Merciful. Master of the Day of Recompense. Only You we worship. Only You we ask for help. Guide us in the right path. The path of those who deserve Your blessings. Not of those who incurred Your displeasure Nor of those who go astray. Amen.",
+      "start": 271.28497,
+      "end": 279.04498,
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "Roll",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "call.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Mr.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Miller.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Here.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Mr.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Behram.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Here.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Ms.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Heckman.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Here.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Mr.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Ford.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Mr.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Ford",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "excused.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Mr.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Wallace.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Here.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Mr.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Davis.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Here.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Hear",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "item",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "2.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Invocation",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "pledge",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "allegiance.",
+          "start": 271.28497,
+          "end": 271.28497,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "The",
+          "start": 271.28497,
+          "end": 271.44498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "invocation",
+          "start": 271.44498,
+          "end": 271.55043454545455,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 271.55043454545455,
+          "end": 271.6558890909091,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "this",
+          "start": 271.65588909090906,
+          "end": 271.7613436363636,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "evening",
+          "start": 271.7613436363636,
+          "end": 271.8667981818182,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "will",
+          "start": 271.8667981818182,
+          "end": 271.97225272727275,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "be",
+          "start": 271.9722527272727,
+          "end": 272.07770727272725,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "given",
+          "start": 272.07770727272725,
+          "end": 272.1831618181818,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "by",
+          "start": 272.1831618181818,
+          "end": 272.2886163636364,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Imam",
+          "start": 272.2886163636363,
+          "end": 272.3940709090909,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Rashad",
+          "start": 272.3940709090909,
+          "end": 272.49952545454545,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Khalifa",
+          "start": 272.49952545454545,
+          "end": 272.60498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 272.60497999999995,
+          "end": 272.7104345454545,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 272.7104345454545,
+          "end": 272.8158890909091,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Islamic",
+          "start": 272.8158890909091,
+          "end": 272.92134363636364,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "mosque",
+          "start": 272.92134363636364,
+          "end": 273.0267981818182,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 273.02679818181815,
+          "end": 273.1322527272727,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Tucson.",
+          "start": 273.1322527272727,
+          "end": 273.2377072727273,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Will",
+          "start": 273.2377072727273,
+          "end": 273.34316181818184,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 273.3431618181818,
+          "end": 273.44861636363635,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "please",
+          "start": 273.44861636363635,
+          "end": 273.5540709090909,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "remain",
+          "start": 273.5540709090909,
+          "end": 273.6595254545455,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "standing",
+          "start": 273.6595254545454,
+          "end": 273.76498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 273.76498,
+          "end": 273.925,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 273.925,
+          "end": 274.16498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "pledge",
+          "start": 274.16498,
+          "end": 278.805,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 278.805,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "allegiance",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "flag?",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "In",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "name",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "God,",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Most",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Gracious,",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Most",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Merciful.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Praise",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "be",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "God,",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Lord",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "universe.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "The",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Most",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Gracious,",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Most",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Merciful.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Master",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Day",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Recompense.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Only",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "You",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "worship.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Only",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "You",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "ask",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "help.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Guide",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "us",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "in",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "right",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "path.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "The",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "path",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "those",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "who",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "deserve",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Your",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "blessings.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Not",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "those",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "who",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "incurred",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Your",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "displeasure",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Nor",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "those",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "who",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "go",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "astray.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Amen.",
+          "start": 279.04498,
+          "end": 279.04498,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Transcript Verifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Universal Transcript Verifier</h1>
+    <div id="stats">Loading...</div>
+</header>
+
+<div class="container">
+    <div class="filters" id="categoryFilters">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="Messenger Audios">Audios</button>
+        <button class="filter-btn" data-cat="Messenger Quran Studies">Quran Studies</button>
+        <button class="filter-btn" data-cat="Messenger Sermons">Sermons</button>
+        <button class="filter-btn" data-cat="Messenger Video Programs">Videos</button>
+    </div>
+
+    <table class="file-list">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="fileTableBody">
+            <!-- Populated by JS -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    let allData = [];
+    let currentCategory = 'all';
+
+    async function loadData() {
+        const res = await fetch('/api/list');
+        allData = await res.json();
+        render();
+        updateStats();
+    }
+
+    function updateStats() {
+        const total = allData.length;
+        const verified = allData.filter(x => x.status === 'Verified').length;
+        document.getElementById('stats').textContent = `${verified} / ${total} Verified`;
+    }
+
+    function render() {
+        const tbody = document.getElementById('fileTableBody');
+        tbody.innerHTML = '';
+
+        const data = allData.filter(item => 
+            currentCategory === 'all' || item.category === currentCategory
+        );
+
+        data.forEach(item => {
+            const tr = document.createElement('tr');
+            
+            let statusClass = 'status-unverified';
+            if(item.status === 'Verified') statusClass = 'status-verified';
+            if(item.status === 'Missing Transcript') statusClass = 'status-missing';
+
+            // Check if we can verify
+            const canVerify = item.transcript_path !== null;
+            const actionHtml = canVerify 
+                ? `<a href="editor.html?path=${encodeURIComponent(item.media_path)}&tpath=${encodeURIComponent(item.transcript_path)}&id=${item.id}" class="action-btn">Verify</a>`
+                : `<span style="color:#aaa">No Transcript</span>`;
+
+            tr.innerHTML = `
+                <td>${item.title}</td>
+                <td>${item.category}</td>
+                <td><span class="status-badge ${statusClass}">${item.status}</span></td>
+                <td>${actionHtml}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // Event Listeners
+    document.getElementById('categoryFilters').addEventListener('click', (e) => {
+        if(e.target.classList.contains('filter-btn')) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            currentCategory = e.target.dataset.cat;
+            render();
+        }
+    });
+
+    loadData();
+</script>
+
+</body>
+</html>
