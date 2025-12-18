@@ -1,0 +1,885 @@
+SUCCESS: Validation Ch 1: Extracted 7 vs Expected 7
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 3: Extracted 159 vs Expected 201
+WARNING: Validation Ch 4: Extracted 166 vs Expected 177
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121
+WARNING: Validation Ch 6: Extracted 141 vs Expected 166
+WARNING: Validation Ch 7: Extracted 181 vs Expected 207
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110
+WARNING: Validation Ch 11: Extracted 113 vs Expected 124
+WARNING: Validation Ch 12: Extracted 11 vs Expected 112
+WARNING: Validation Ch 13: Extracted 20 vs Expected 44
+WARNING: Validation Ch 14: Extracted 33 vs Expected 53
+WARNING: Validation Ch 15: Extracted 53 vs Expected 100
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129
+WARNING: Validation Ch 17: Extracted 61 vs Expected 112
+WARNING: Validation Ch 18: Extracted 88 vs Expected 111
+WARNING: Validation Ch 19: Extracted 91 vs Expected 99
+WARNING: Validation Ch 20: Extracted 135 vs Expected 136
+WARNING: Validation Ch 21: Extracted 104 vs Expected 113
+WARNING: Validation Ch 22: Extracted 76 vs Expected 79
+WARNING: Validation Ch 23: Extracted 115 vs Expected 119
+WARNING: Validation Ch 24: Extracted 60 vs Expected 65
+WARNING: Validation Ch 25: Extracted 66 vs Expected 78
+WARNING: Validation Ch 26: Extracted 206 vs Expected 228
+WARNING: Validation Ch 27: Extracted 91 vs Expected 94
+WARNING: Validation Ch 28: Extracted 86 vs Expected 89
+WARNING: Validation Ch 29: Extracted 65 vs Expected 70
+WARNING: Validation Ch 30: Extracted 39 vs Expected 61
+WARNING: Validation Ch 31: Extracted 26 vs Expected 35
+WARNING: Validation Ch 32: Extracted 23 vs Expected 31
+SUCCESS: Validation Ch 1: Extracted 7 vs Expected 7
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 3: Extracted 159 vs Expected 201
+WARNING: Validation Ch 4: Extracted 166 vs Expected 177
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121
+WARNING: Validation Ch 6: Extracted 141 vs Expected 166
+WARNING: Validation Ch 7: Extracted 182 vs Expected 207
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110
+WARNING: Validation Ch 11: Extracted 113 vs Expected 124
+WARNING: Validation Ch 12: Extracted 11 vs Expected 112
+WARNING: Validation Ch 13: Extracted 20 vs Expected 44
+WARNING: Validation Ch 14: Extracted 34 vs Expected 53
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 1: Extracted 8 vs Expected 7
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 3: Extracted 160 vs Expected 201
+WARNING: Validation Ch 4: Extracted 165 vs Expected 177
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121
+WARNING: Validation Ch 6: Extracted 140 vs Expected 166
+WARNING: Validation Ch 7: Extracted 182 vs Expected 207
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110
+WARNING: Validation Ch 11: Extracted 112 vs Expected 124
+WARNING: Validation Ch 12: Extracted 11 vs Expected 112
+WARNING: Validation Ch 13: Extracted 19 vs Expected 44
+WARNING: Validation Ch 14: Extracted 34 vs Expected 53
+WARNING: Validation Ch 15: Extracted 53 vs Expected 100
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129
+WARNING: Validation Ch 17: Extracted 61 vs Expected 112
+WARNING: Validation Ch 18: Extracted 88 vs Expected 111
+WARNING: Validation Ch 19: Extracted 91 vs Expected 99
+WARNING: Validation Ch 20: Extracted 135 vs Expected 136
+WARNING: Validation Ch 21: Extracted 103 vs Expected 113
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129
+WARNING: Validation Ch 1: Extracted 8 vs Expected 7
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 3: Extracted 160 vs Expected 201
+WARNING: Validation Ch 4: Extracted 165 vs Expected 177
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121
+WARNING: Validation Ch 6: Extracted 140 vs Expected 166
+WARNING: Validation Ch 7: Extracted 182 vs Expected 207
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110
+WARNING: Validation Ch 11: Extracted 112 vs Expected 124
+WARNING: Validation Ch 12: Extracted 11 vs Expected 112
+WARNING: Validation Ch 13: Extracted 19 vs Expected 44
+WARNING: Validation Ch 14: Extracted 34 vs Expected 53
+WARNING: Validation Ch 15: Extracted 53 vs Expected 100
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129
+WARNING: Validation Ch 17: Extracted 61 vs Expected 112
+WARNING: Validation Ch 18: Extracted 88 vs Expected 111
+WARNING: Validation Ch 19: Extracted 91 vs Expected 99
+WARNING: Validation Ch 20: Extracted 135 vs Expected 136
+WARNING: Validation Ch 21: Extracted 103 vs Expected 113
+WARNING: Validation Ch 22: Extracted 76 vs Expected 79
+WARNING: Validation Ch 23: Extracted 116 vs Expected 119
+WARNING: Validation Ch 24: Extracted 61 vs Expected 65
+WARNING: Validation Ch 25: Extracted 66 vs Expected 78
+WARNING: Validation Ch 26: Extracted 19 vs Expected 228
+WARNING: Validation Ch 27: Extracted 91 vs Expected 94
+WARNING: Validation Ch 28: Extracted 85 vs Expected 89
+WARNING: Validation Ch 29: Extracted 65 vs Expected 70
+WARNING: Validation Ch 30: Extracted 39 vs Expected 61
+WARNING: Validation Ch 31: Extracted 26 vs Expected 35
+WARNING: Validation Ch 32: Extracted 23 vs Expected 31
+WARNING: Validation Ch 33: Extracted 71 vs Expected 74
+SUCCESS: Validation Ch 34: Extracted 55 vs Expected 55
+WARNING: Validation Ch 35: Extracted 42 vs Expected 46
+WARNING: Validation Ch 36: Extracted 1 vs Expected 84
+WARNING: Validation Ch 37: Extracted 176 vs Expected 183
+WARNING: Validation Ch 38: Extracted 66 vs Expected 89
+SUCCESS: Validation Ch 39: Extracted 76 vs Expected 76
+WARNING: Validation Ch 40: Extracted 74 vs Expected 86
+WARNING: Validation Ch 41: Extracted 48 vs Expected 55
+WARNING: Validation Ch 42: Extracted 36 vs Expected 54
+WARNING: Validation Ch 43: Extracted 89 vs Expected 90
+WARNING: Validation Ch 44: Extracted 1 vs Expected 60
+WARNING: Validation Ch 45: Extracted 33 vs Expected 38
+WARNING: Validation Ch 46: Extracted 32 vs Expected 36
+WARNING: Validation Ch 47: Extracted 17 vs Expected 39
+WARNING: Validation Ch 48: Extracted 29 vs Expected 30
+WARNING: Validation Ch 49: Extracted 11 vs Expected 19
+WARNING: Validation Ch 50: Extracted 43 vs Expected 46
+WARNING: Validation Ch 51: Extracted 57 vs Expected 61
+WARNING: Validation Ch 52: Extracted 44 vs Expected 50
+WARNING: Validation Ch 53: Extracted 1 vs Expected 63
+WARNING: Validation Ch 54: Extracted 54 vs Expected 56
+WARNING: Validation Ch 55: Extracted 76 vs Expected 79
+WARNING: Validation Ch 56: Extracted 79 vs Expected 97
+WARNING: Validation Ch 57: Extracted 28 vs Expected 30
+SUCCESS: Validation Ch 58: Extracted 23 vs Expected 23
+WARNING: Validation Ch 59: Extracted 23 vs Expected 25
+WARNING: Validation Ch 60: Extracted 1 vs Expected 14
+WARNING: Validation Ch 61: Extracted 12 vs Expected 15
+WARNING: Validation Ch 62: Extracted 9 vs Expected 12
+WARNING: Validation Ch 63: Extracted 11 vs Expected 12
+WARNING: Validation Ch 64: Extracted 16 vs Expected 19
+SUCCESS: Validation Ch 65: Extracted 13 vs Expected 13
+WARNING: Validation Ch 66: Extracted 12 vs Expected 13
+WARNING: Validation Ch 67: Extracted 27 vs Expected 31
+SUCCESS: Validation Ch 68: Extracted 53 vs Expected 53
+SUCCESS: Validation Ch 69: Extracted 53 vs Expected 53
+WARNING: Validation Ch 70: Extracted 1 vs Expected 45
+SUCCESS: Validation Ch 71: Extracted 29 vs Expected 29
+SUCCESS: Validation Ch 72: Extracted 29 vs Expected 29
+WARNING: Validation Ch 73: Extracted 20 vs Expected 21
+WARNING: Validation Ch 74: Extracted 1 vs Expected 57
+WARNING: Validation Ch 75: Extracted 39 vs Expected 41
+SUCCESS: Validation Ch 76: Extracted 32 vs Expected 32
+SUCCESS: Validation Ch 77: Extracted 51 vs Expected 51
+SUCCESS: Validation Ch 78: Extracted 41 vs Expected 41
+WARNING: Validation Ch 79: Extracted 35 vs Expected 47
+SUCCESS: Validation Ch 80: Extracted 43 vs Expected 43
+SUCCESS: Validation Ch 81: Extracted 30 vs Expected 30
+WARNING: Validation Ch 82: Extracted 17 vs Expected 20
+WARNING: Validation Ch 83: Extracted 1 vs Expected 37
+SUCCESS: Validation Ch 84: Extracted 26 vs Expected 26
+SUCCESS: Validation Ch 85: Extracted 23 vs Expected 23
+SUCCESS: Validation Ch 86: Extracted 18 vs Expected 18
+WARNING: Validation Ch 87: Extracted 16 vs Expected 20
+SUCCESS: Validation Ch 88: Extracted 27 vs Expected 27
+WARNING: Validation Ch 89: Extracted 21 vs Expected 31
+WARNING: Validation Ch 90: Extracted 18 vs Expected 21
+WARNING: Validation Ch 91: Extracted 10 vs Expected 16
+SUCCESS: Validation Ch 92: Extracted 22 vs Expected 22
+WARNING: Validation Ch 93: Extracted 11 vs Expected 12
+SUCCESS: Validation Ch 94: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 95: Extracted 9 vs Expected 9
+WARNING: Validation Ch 96: Extracted 1 vs Expected 20
+WARNING: Validation Ch 97: Extracted 1 vs Expected 6
+WARNING: Validation Ch 98: Extracted 8 vs Expected 9
+SUCCESS: Validation Ch 99: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 100: Extracted 12 vs Expected 12
+SUCCESS: Validation Ch 101: Extracted 12 vs Expected 12
+WARNING: Validation Ch 102: Extracted 1 vs Expected 9
+WARNING: Validation Ch 103: Extracted 1 vs Expected 4
+SUCCESS: Validation Ch 104: Extracted 10 vs Expected 10
+SUCCESS: Validation Ch 105: Extracted 6 vs Expected 6
+SUCCESS: Validation Ch 106: Extracted 5 vs Expected 5
+SUCCESS: Validation Ch 107: Extracted 8 vs Expected 8
+WARNING: Validation Ch 108: Extracted 0 vs Expected 4
+WARNING: Validation Ch 109: Extracted 3 vs Expected 7
+WARNING: Validation Ch 110: Extracted 1 vs Expected 4
+SUCCESS: Validation Ch 111: Extracted 6 vs Expected 6
+SUCCESS: Validation Ch 112: Extracted 5 vs Expected 5
+WARNING: Validation Ch 113: Extracted 1 vs Expected 6
+WARNING: Validation Ch 114: Extracted 69 vs Expected 7
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287
+CRASH Ch 1: name 'validation_msg' is not defined
+CRASH Ch 2: name 'validation_msg' is not defined
+CRASH Ch 3: name 'validation_msg' is not defined
+CRASH Ch 4: name 'validation_msg' is not defined
+CRASH Ch 5: name 'validation_msg' is not defined
+CRASH Ch 6: name 'validation_msg' is not defined
+CRASH Ch 7: name 'validation_msg' is not defined
+CRASH Ch 8: name 'validation_msg' is not defined
+CRASH Ch 9: name 'validation_msg' is not defined
+CRASH Ch 10: name 'validation_msg' is not defined
+CRASH Ch 11: name 'validation_msg' is not defined
+CRASH Ch 12: name 'validation_msg' is not defined
+CRASH Ch 13: name 'validation_msg' is not defined
+CRASH Ch 14: name 'validation_msg' is not defined
+CRASH Ch 15: name 'validation_msg' is not defined
+CRASH Ch 16: name 'validation_msg' is not defined
+CRASH Ch 17: name 'validation_msg' is not defined
+CRASH Ch 18: name 'validation_msg' is not defined
+CRASH Ch 19: name 'validation_msg' is not defined
+CRASH Ch 20: name 'validation_msg' is not defined
+CRASH Ch 21: name 'validation_msg' is not defined
+CRASH Ch 22: name 'validation_msg' is not defined
+CRASH Ch 23: name 'validation_msg' is not defined
+CRASH Ch 24: name 'validation_msg' is not defined
+CRASH Ch 25: name 'validation_msg' is not defined
+CRASH Ch 26: name 'validation_msg' is not defined
+CRASH Ch 27: name 'validation_msg' is not defined
+CRASH Ch 28: name 'validation_msg' is not defined
+CRASH Ch 29: name 'validation_msg' is not defined
+CRASH Ch 30: name 'validation_msg' is not defined
+CRASH Ch 31: name 'validation_msg' is not defined
+CRASH Ch 32: name 'validation_msg' is not defined
+CRASH Ch 33: name 'validation_msg' is not defined
+CRASH Ch 34: name 'validation_msg' is not defined
+CRASH Ch 35: name 'validation_msg' is not defined
+CRASH Ch 36: name 'validation_msg' is not defined
+CRASH Ch 37: name 'validation_msg' is not defined
+CRASH Ch 38: name 'validation_msg' is not defined
+CRASH Ch 39: name 'validation_msg' is not defined
+CRASH Ch 40: name 'validation_msg' is not defined
+CRASH Ch 41: name 'validation_msg' is not defined
+CRASH Ch 42: name 'validation_msg' is not defined
+CRASH Ch 43: name 'validation_msg' is not defined
+CRASH Ch 44: name 'validation_msg' is not defined
+CRASH Ch 45: name 'validation_msg' is not defined
+CRASH Ch 46: name 'validation_msg' is not defined
+CRASH Ch 47: name 'validation_msg' is not defined
+CRASH Ch 48: name 'validation_msg' is not defined
+CRASH Ch 49: name 'validation_msg' is not defined
+CRASH Ch 50: name 'validation_msg' is not defined
+CRASH Ch 51: name 'validation_msg' is not defined
+CRASH Ch 52: name 'validation_msg' is not defined
+CRASH Ch 53: name 'validation_msg' is not defined
+CRASH Ch 54: name 'validation_msg' is not defined
+CRASH Ch 55: name 'validation_msg' is not defined
+CRASH Ch 56: name 'validation_msg' is not defined
+CRASH Ch 57: name 'validation_msg' is not defined
+CRASH Ch 58: name 'validation_msg' is not defined
+CRASH Ch 59: name 'validation_msg' is not defined
+CRASH Ch 60: name 'validation_msg' is not defined
+CRASH Ch 61: name 'validation_msg' is not defined
+CRASH Ch 62: name 'validation_msg' is not defined
+CRASH Ch 63: name 'validation_msg' is not defined
+CRASH Ch 64: name 'validation_msg' is not defined
+CRASH Ch 65: name 'validation_msg' is not defined
+CRASH Ch 66: name 'validation_msg' is not defined
+CRASH Ch 67: name 'validation_msg' is not defined
+CRASH Ch 68: name 'validation_msg' is not defined
+CRASH Ch 69: name 'validation_msg' is not defined
+CRASH Ch 70: name 'validation_msg' is not defined
+CRASH Ch 71: name 'validation_msg' is not defined
+CRASH Ch 72: name 'validation_msg' is not defined
+CRASH Ch 73: name 'validation_msg' is not defined
+CRASH Ch 74: name 'validation_msg' is not defined
+CRASH Ch 75: name 'validation_msg' is not defined
+CRASH Ch 76: name 'validation_msg' is not defined
+SUCCESS: Validation Ch 1: Extracted 7 vs Expected 7
+CRASH Ch 77: name 'validation_msg' is not defined
+CRASH Ch 78: name 'validation_msg' is not defined
+CRASH Ch 79: name 'validation_msg' is not defined
+CRASH Ch 80: name 'validation_msg' is not defined
+CRASH Ch 81: name 'validation_msg' is not defined
+CRASH Ch 82: name 'validation_msg' is not defined
+CRASH Ch 83: name 'validation_msg' is not defined
+CRASH Ch 84: name 'validation_msg' is not defined
+CRASH Ch 85: name 'validation_msg' is not defined
+CRASH Ch 86: name 'validation_msg' is not defined
+CRASH Ch 87: name 'validation_msg' is not defined
+CRASH Ch 88: name 'validation_msg' is not defined
+CRASH Ch 89: name 'validation_msg' is not defined
+CRASH Ch 90: name 'validation_msg' is not defined
+CRASH Ch 91: name 'validation_msg' is not defined
+CRASH Ch 92: name 'validation_msg' is not defined
+CRASH Ch 93: name 'validation_msg' is not defined
+CRASH Ch 94: name 'validation_msg' is not defined
+CRASH Ch 95: name 'validation_msg' is not defined
+CRASH Ch 96: name 'validation_msg' is not defined
+CRASH Ch 97: name 'validation_msg' is not defined
+CRASH Ch 98: name 'validation_msg' is not defined
+CRASH Ch 99: name 'validation_msg' is not defined
+CRASH Ch 100: name 'validation_msg' is not defined
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+CRASH Ch 101: name 'validation_msg' is not defined
+CRASH Ch 102: name 'validation_msg' is not defined
+CRASH Ch 103: name 'validation_msg' is not defined
+CRASH Ch 104: name 'validation_msg' is not defined
+CRASH Ch 105: name 'validation_msg' is not defined
+CRASH Ch 106: name 'validation_msg' is not defined
+CRASH Ch 107: name 'validation_msg' is not defined
+CRASH Ch 108: name 'validation_msg' is not defined
+CRASH Ch 109: name 'validation_msg' is not defined
+CRASH Ch 110: name 'validation_msg' is not defined
+CRASH Ch 111: name 'validation_msg' is not defined
+CRASH Ch 112: name 'validation_msg' is not defined
+CRASH Ch 113: name 'validation_msg' is not defined
+WARNING: Validation Ch 3: Extracted 161 vs Expected 201 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 4: Extracted 165 vs Expected 177 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 6: Extracted 141 vs Expected 166 (Missing verses backfilled from Reference)
+CRASH Ch 114: name 'validation_msg' is not defined
+WARNING: Validation Ch 7: Extracted 182 vs Expected 207 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 11: Extracted 113 vs Expected 124 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 12: Extracted 11 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 13: Extracted 20 vs Expected 44 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 14: Extracted 34 vs Expected 53 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 15: Extracted 53 vs Expected 100 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 17: Extracted 61 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 18: Extracted 88 vs Expected 111 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 19: Extracted 91 vs Expected 99 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 20: Extracted 135 vs Expected 136 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 21: Extracted 104 vs Expected 113 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 22: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 23: Extracted 116 vs Expected 119 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 24: Extracted 61 vs Expected 65 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 25: Extracted 66 vs Expected 78 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 26: Extracted 19 vs Expected 228 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 27: Extracted 91 vs Expected 94 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 28: Extracted 86 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 29: Extracted 66 vs Expected 70 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 30: Extracted 40 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 31: Extracted 26 vs Expected 35 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 32: Extracted 23 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 33: Extracted 72 vs Expected 74 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 34: Extracted 55 vs Expected 55
+WARNING: Validation Ch 35: Extracted 42 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 36: Extracted 1 vs Expected 84 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 37: Extracted 176 vs Expected 183 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 38: Extracted 66 vs Expected 89 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 39: Extracted 76 vs Expected 76
+WARNING: Validation Ch 40: Extracted 74 vs Expected 86 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 41: Extracted 48 vs Expected 55 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 42: Extracted 36 vs Expected 54 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 43: Extracted 89 vs Expected 90 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 44: Extracted 1 vs Expected 60 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 45: Extracted 33 vs Expected 38 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 46: Extracted 32 vs Expected 36 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 47: Extracted 17 vs Expected 39 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 48: Extracted 30 vs Expected 30
+WARNING: Validation Ch 49: Extracted 11 vs Expected 19 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 50: Extracted 43 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 51: Extracted 57 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 52: Extracted 44 vs Expected 50 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 53: Extracted 1 vs Expected 63 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 54: Extracted 55 vs Expected 56 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 55: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 56: Extracted 79 vs Expected 97 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 57: Extracted 28 vs Expected 30 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 58: Extracted 23 vs Expected 23
+WARNING: Validation Ch 59: Extracted 24 vs Expected 25 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 60: Extracted 1 vs Expected 14 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 61: Extracted 12 vs Expected 15 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 62: Extracted 9 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 63: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 64: Extracted 16 vs Expected 19 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 65: Extracted 13 vs Expected 13
+WARNING: Validation Ch 66: Extracted 12 vs Expected 13 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 67: Extracted 27 vs Expected 31 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 68: Extracted 53 vs Expected 53
+SUCCESS: Validation Ch 69: Extracted 53 vs Expected 53
+WARNING: Validation Ch 70: Extracted 1 vs Expected 45 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 71: Extracted 29 vs Expected 29
+SUCCESS: Validation Ch 72: Extracted 29 vs Expected 29
+WARNING: Validation Ch 73: Extracted 20 vs Expected 21 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 74: Extracted 1 vs Expected 57 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 75: Extracted 39 vs Expected 41 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 76: Extracted 32 vs Expected 32
+SUCCESS: Validation Ch 77: Extracted 51 vs Expected 51
+SUCCESS: Validation Ch 78: Extracted 41 vs Expected 41
+WARNING: Validation Ch 79: Extracted 35 vs Expected 47 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 80: Extracted 43 vs Expected 43
+SUCCESS: Validation Ch 81: Extracted 30 vs Expected 30
+WARNING: Validation Ch 82: Extracted 17 vs Expected 20 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 83: Extracted 1 vs Expected 37 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 84: Extracted 26 vs Expected 26
+WARNING: Validation Ch 85: Extracted 24 vs Expected 23 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 86: Extracted 19 vs Expected 18 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 87: Extracted 16 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 88: Extracted 27 vs Expected 27
+WARNING: Validation Ch 89: Extracted 21 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 90: Extracted 18 vs Expected 21 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 91: Extracted 10 vs Expected 16 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 92: Extracted 22 vs Expected 22
+WARNING: Validation Ch 93: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 94: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 95: Extracted 9 vs Expected 9
+WARNING: Validation Ch 96: Extracted 1 vs Expected 20 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 97: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 98: Extracted 10 vs Expected 9 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 99: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 100: Extracted 12 vs Expected 12
+SUCCESS: Validation Ch 101: Extracted 12 vs Expected 12
+WARNING: Validation Ch 102: Extracted 1 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 103: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 104: Extracted 10 vs Expected 10
+SUCCESS: Validation Ch 105: Extracted 6 vs Expected 6
+SUCCESS: Validation Ch 106: Extracted 5 vs Expected 5
+SUCCESS: Validation Ch 107: Extracted 8 vs Expected 8
+WARNING: Validation Ch 108: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 109: Extracted 3 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 110: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 111: Extracted 6 vs Expected 6
+SUCCESS: Validation Ch 112: Extracted 5 vs Expected 5
+WARNING: Validation Ch 113: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 114: Extracted 69 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 114: Extracted 1 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 1: Extracted 7 vs Expected 7
+WARNING: Validation Ch 26: Extracted 19 vs Expected 228 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 21: Extracted 104 vs Expected 113 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 11: Extracted 113 vs Expected 124 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 6: Extracted 141 vs Expected 166 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 27: Extracted 91 vs Expected 94 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 22: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 12: Extracted 11 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 17: Extracted 61 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 28: Extracted 86 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 23: Extracted 116 vs Expected 119 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 13: Extracted 20 vs Expected 44 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 7: Extracted 182 vs Expected 207 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 18: Extracted 88 vs Expected 111 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 29: Extracted 66 vs Expected 70 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 24: Extracted 61 vs Expected 65 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 14: Extracted 34 vs Expected 53 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 30: Extracted 40 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 19: Extracted 91 vs Expected 99 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 25: Extracted 66 vs Expected 78 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 15: Extracted 53 vs Expected 100 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 31: Extracted 26 vs Expected 35 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 36: Extracted 1 vs Expected 84 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 3: Extracted 161 vs Expected 201 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 20: Extracted 135 vs Expected 136 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 41: Extracted 48 vs Expected 55 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 32: Extracted 23 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 46: Extracted 32 vs Expected 36 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 37: Extracted 176 vs Expected 183 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 42: Extracted 36 vs Expected 54 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 33: Extracted 72 vs Expected 74 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 47: Extracted 17 vs Expected 39 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 38: Extracted 66 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 43: Extracted 89 vs Expected 90 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 4: Extracted 165 vs Expected 177 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 34: Extracted 55 vs Expected 55
+SUCCESS: Validation Ch 48: Extracted 30 vs Expected 30
+WARNING: Validation Ch 51: Extracted 57 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 44: Extracted 1 vs Expected 60 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 39: Extracted 76 vs Expected 76
+WARNING: Validation Ch 49: Extracted 11 vs Expected 19 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 35: Extracted 42 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 52: Extracted 44 vs Expected 50 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 45: Extracted 33 vs Expected 38 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 50: Extracted 43 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 40: Extracted 74 vs Expected 86 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 56: Extracted 79 vs Expected 97 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 53: Extracted 1 vs Expected 63 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 61: Extracted 12 vs Expected 15 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 66: Extracted 12 vs Expected 13 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 71: Extracted 29 vs Expected 29
+WARNING: Validation Ch 62: Extracted 9 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 54: Extracted 55 vs Expected 56 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 57: Extracted 28 vs Expected 30 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 76: Extracted 32 vs Expected 32
+WARNING: Validation Ch 67: Extracted 27 vs Expected 31 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 72: Extracted 29 vs Expected 29
+WARNING: Validation Ch 63: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 77: Extracted 51 vs Expected 51
+SUCCESS: Validation Ch 58: Extracted 23 vs Expected 23
+WARNING: Validation Ch 55: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 73: Extracted 20 vs Expected 21 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 68: Extracted 53 vs Expected 53
+WARNING: Validation Ch 64: Extracted 16 vs Expected 19 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 78: Extracted 41 vs Expected 41
+SUCCESS: Validation Ch 81: Extracted 30 vs Expected 30
+WARNING: Validation Ch 59: Extracted 24 vs Expected 25 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 69: Extracted 53 vs Expected 53
+WARNING: Validation Ch 74: Extracted 1 vs Expected 57 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 79: Extracted 35 vs Expected 47 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 65: Extracted 13 vs Expected 13
+WARNING: Validation Ch 82: Extracted 17 vs Expected 20 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 60: Extracted 1 vs Expected 14 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 70: Extracted 1 vs Expected 45 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 86: Extracted 19 vs Expected 18 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 75: Extracted 39 vs Expected 41 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 80: Extracted 43 vs Expected 43
+WARNING: Validation Ch 83: Extracted 1 vs Expected 37 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 91: Extracted 10 vs Expected 16 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 96: Extracted 1 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 101: Extracted 12 vs Expected 12
+SUCCESS: Validation Ch 106: Extracted 5 vs Expected 5
+WARNING: Validation Ch 87: Extracted 16 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 84: Extracted 26 vs Expected 26
+SUCCESS: Validation Ch 92: Extracted 22 vs Expected 22
+WARNING: Validation Ch 102: Extracted 1 vs Expected 9 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 107: Extracted 8 vs Expected 8
+WARNING: Validation Ch 97: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 88: Extracted 27 vs Expected 27
+WARNING: Validation Ch 85: Extracted 24 vs Expected 23 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 93: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 103: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 108: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 98: Extracted 10 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 89: Extracted 21 vs Expected 31 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 111: Extracted 6 vs Expected 6
+SUCCESS: Validation Ch 94: Extracted 9 vs Expected 9
+WARNING: Validation Ch 109: Extracted 3 vs Expected 7 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 104: Extracted 10 vs Expected 10
+SUCCESS: Validation Ch 99: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 112: Extracted 5 vs Expected 5
+WARNING: Validation Ch 90: Extracted 18 vs Expected 21 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 95: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 105: Extracted 6 vs Expected 6
+WARNING: Validation Ch 110: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 100: Extracted 12 vs Expected 12
+WARNING: Validation Ch 113: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 114: Extracted 1 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 1: Extracted 7 vs Expected 7
+WARNING: Validation Ch 21: Extracted 104 vs Expected 113 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 26: Extracted 206 vs Expected 228 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 11: Extracted 113 vs Expected 124 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 6: Extracted 141 vs Expected 166 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 22: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 27: Extracted 91 vs Expected 94 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 12: Extracted 112 vs Expected 112
+WARNING: Validation Ch 17: Extracted 61 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 23: Extracted 116 vs Expected 119 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 28: Extracted 86 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 13: Extracted 20 vs Expected 44 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 18: Extracted 88 vs Expected 111 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 7: Extracted 182 vs Expected 207 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 29: Extracted 66 vs Expected 70 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 24: Extracted 61 vs Expected 65 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 14: Extracted 34 vs Expected 53 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 19: Extracted 91 vs Expected 99 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 30: Extracted 40 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 25: Extracted 66 vs Expected 78 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 15: Extracted 53 vs Expected 100 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 31: Extracted 26 vs Expected 35 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 3: Extracted 161 vs Expected 201 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 20: Extracted 135 vs Expected 136 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 36: Extracted 1 vs Expected 84 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 41: Extracted 48 vs Expected 55 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 32: Extracted 23 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 46: Extracted 32 vs Expected 36 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 37: Extracted 176 vs Expected 183 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 42: Extracted 36 vs Expected 54 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 47: Extracted 17 vs Expected 39 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 33: Extracted 72 vs Expected 74 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 38: Extracted 66 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 43: Extracted 89 vs Expected 90 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 4: Extracted 165 vs Expected 177 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 48: Extracted 30 vs Expected 30
+SUCCESS: Validation Ch 34: Extracted 55 vs Expected 55
+WARNING: Validation Ch 44: Extracted 1 vs Expected 60 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 51: Extracted 57 vs Expected 61 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 39: Extracted 76 vs Expected 76
+WARNING: Validation Ch 49: Extracted 11 vs Expected 19 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 45: Extracted 33 vs Expected 38 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 35: Extracted 42 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 52: Extracted 44 vs Expected 50 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 50: Extracted 43 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 40: Extracted 74 vs Expected 86 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 61: Extracted 12 vs Expected 15 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 53: Extracted 1 vs Expected 63 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 56: Extracted 79 vs Expected 97 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 66: Extracted 12 vs Expected 13 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 71: Extracted 29 vs Expected 29
+SUCCESS: Validation Ch 76: Extracted 32 vs Expected 32
+WARNING: Validation Ch 62: Extracted 9 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 54: Extracted 55 vs Expected 56 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 57: Extracted 28 vs Expected 30 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 67: Extracted 27 vs Expected 31 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 72: Extracted 29 vs Expected 29
+SUCCESS: Validation Ch 77: Extracted 51 vs Expected 51
+WARNING: Validation Ch 63: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 55: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 58: Extracted 23 vs Expected 23
+SUCCESS: Validation Ch 68: Extracted 53 vs Expected 53
+WARNING: Validation Ch 73: Extracted 20 vs Expected 21 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 78: Extracted 41 vs Expected 41
+WARNING: Validation Ch 64: Extracted 16 vs Expected 19 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 81: Extracted 30 vs Expected 30
+SUCCESS: Validation Ch 69: Extracted 53 vs Expected 53
+WARNING: Validation Ch 59: Extracted 24 vs Expected 25 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 79: Extracted 35 vs Expected 47 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 74: Extracted 1 vs Expected 57 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 65: Extracted 13 vs Expected 13
+WARNING: Validation Ch 82: Extracted 17 vs Expected 20 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 70: Extracted 1 vs Expected 45 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 80: Extracted 43 vs Expected 43
+WARNING: Validation Ch 86: Extracted 19 vs Expected 18 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 60: Extracted 1 vs Expected 14 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 75: Extracted 39 vs Expected 41 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 83: Extracted 1 vs Expected 37 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 91: Extracted 10 vs Expected 16 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 87: Extracted 16 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 101: Extracted 12 vs Expected 12
+SUCCESS: Validation Ch 106: Extracted 5 vs Expected 5
+WARNING: Validation Ch 96: Extracted 1 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 84: Extracted 26 vs Expected 26
+SUCCESS: Validation Ch 92: Extracted 22 vs Expected 22
+SUCCESS: Validation Ch 107: Extracted 8 vs Expected 8
+WARNING: Validation Ch 102: Extracted 1 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 97: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 88: Extracted 27 vs Expected 27
+WARNING: Validation Ch 85: Extracted 24 vs Expected 23 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 93: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 108: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 103: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 98: Extracted 10 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 89: Extracted 21 vs Expected 31 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 111: Extracted 6 vs Expected 6
+WARNING: Validation Ch 109: Extracted 3 vs Expected 7 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 94: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 104: Extracted 10 vs Expected 10
+SUCCESS: Validation Ch 99: Extracted 9 vs Expected 9
+WARNING: Validation Ch 90: Extracted 18 vs Expected 21 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 112: Extracted 5 vs Expected 5
+WARNING: Validation Ch 110: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 105: Extracted 6 vs Expected 6
+SUCCESS: Validation Ch 95: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 100: Extracted 12 vs Expected 12
+WARNING: Validation Ch 113: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 114: Extracted 1 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 1: Extracted 7 vs Expected 7
+WARNING: Validation Ch 21: Extracted 104 vs Expected 113 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 26: Extracted 206 vs Expected 228 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 11: Extracted 113 vs Expected 124 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 16: Extracted 1 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 6: Extracted 141 vs Expected 166 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 22: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 27: Extracted 91 vs Expected 94 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 12: Extracted 112 vs Expected 112
+WARNING: Validation Ch 17: Extracted 61 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 23: Extracted 116 vs Expected 119 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 28: Extracted 86 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 13: Extracted 20 vs Expected 44 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 246 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 18: Extracted 88 vs Expected 111 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 7: Extracted 182 vs Expected 207 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 29: Extracted 66 vs Expected 70 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 24: Extracted 61 vs Expected 65 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 14: Extracted 34 vs Expected 53 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 19: Extracted 91 vs Expected 99 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 30: Extracted 40 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 8: Extracted 66 vs Expected 76 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 25: Extracted 66 vs Expected 78 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 15: Extracted 53 vs Expected 100 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 31: Extracted 26 vs Expected 35 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 3: Extracted 161 vs Expected 201 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 36: Extracted 1 vs Expected 84 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 20: Extracted 135 vs Expected 136 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 41: Extracted 48 vs Expected 55 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 32: Extracted 23 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 9: Extracted 92 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 46: Extracted 32 vs Expected 36 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 37: Extracted 176 vs Expected 183 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 42: Extracted 36 vs Expected 54 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 47: Extracted 17 vs Expected 39 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 33: Extracted 72 vs Expected 74 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 38: Extracted 66 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 10: Extracted 87 vs Expected 110 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 43: Extracted 89 vs Expected 90 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 4: Extracted 165 vs Expected 177 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 48: Extracted 30 vs Expected 30
+SUCCESS: Validation Ch 34: Extracted 55 vs Expected 55
+WARNING: Validation Ch 44: Extracted 1 vs Expected 60 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 51: Extracted 57 vs Expected 61 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 39: Extracted 76 vs Expected 76
+WARNING: Validation Ch 49: Extracted 11 vs Expected 19 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 52: Extracted 44 vs Expected 50 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 45: Extracted 33 vs Expected 38 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 35: Extracted 42 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 50: Extracted 43 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 40: Extracted 74 vs Expected 86 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 5: Extracted 101 vs Expected 121 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 61: Extracted 12 vs Expected 15 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 53: Extracted 1 vs Expected 63 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 56: Extracted 79 vs Expected 97 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 66: Extracted 12 vs Expected 13 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 71: Extracted 29 vs Expected 29
+SUCCESS: Validation Ch 76: Extracted 32 vs Expected 32
+WARNING: Validation Ch 62: Extracted 9 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 54: Extracted 55 vs Expected 56 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 57: Extracted 28 vs Expected 30 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 67: Extracted 27 vs Expected 31 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 77: Extracted 51 vs Expected 51
+SUCCESS: Validation Ch 72: Extracted 29 vs Expected 29
+WARNING: Validation Ch 63: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 55: Extracted 76 vs Expected 79 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 58: Extracted 23 vs Expected 23
+SUCCESS: Validation Ch 68: Extracted 53 vs Expected 53
+SUCCESS: Validation Ch 78: Extracted 41 vs Expected 41
+WARNING: Validation Ch 73: Extracted 20 vs Expected 21 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 64: Extracted 16 vs Expected 19 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 81: Extracted 30 vs Expected 30
+SUCCESS: Validation Ch 69: Extracted 53 vs Expected 53
+WARNING: Validation Ch 79: Extracted 35 vs Expected 47 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 59: Extracted 24 vs Expected 25 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 74: Extracted 1 vs Expected 57 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 65: Extracted 13 vs Expected 13
+WARNING: Validation Ch 82: Extracted 17 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 80: Extracted 43 vs Expected 43
+WARNING: Validation Ch 70: Extracted 1 vs Expected 45 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 75: Extracted 39 vs Expected 41 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 60: Extracted 1 vs Expected 14 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 86: Extracted 19 vs Expected 18 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 83: Extracted 1 vs Expected 37 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 91: Extracted 10 vs Expected 16 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 96: Extracted 1 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 101: Extracted 12 vs Expected 12
+SUCCESS: Validation Ch 106: Extracted 5 vs Expected 5
+WARNING: Validation Ch 87: Extracted 16 vs Expected 20 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 84: Extracted 26 vs Expected 26
+SUCCESS: Validation Ch 92: Extracted 22 vs Expected 22
+WARNING: Validation Ch 97: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 107: Extracted 8 vs Expected 8
+WARNING: Validation Ch 102: Extracted 1 vs Expected 9 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 88: Extracted 27 vs Expected 27
+WARNING: Validation Ch 85: Extracted 24 vs Expected 23 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 93: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 108: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 98: Extracted 10 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 103: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 89: Extracted 21 vs Expected 31 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 111: Extracted 6 vs Expected 6
+SUCCESS: Validation Ch 94: Extracted 9 vs Expected 9
+WARNING: Validation Ch 109: Extracted 3 vs Expected 7 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 99: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 104: Extracted 10 vs Expected 10
+WARNING: Validation Ch 90: Extracted 18 vs Expected 21 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 112: Extracted 5 vs Expected 5
+WARNING: Validation Ch 110: Extracted 1 vs Expected 4 (Missing verses backfilled from Reference)
+SUCCESS: Validation Ch 95: Extracted 9 vs Expected 9
+SUCCESS: Validation Ch 100: Extracted 12 vs Expected 12
+SUCCESS: Validation Ch 105: Extracted 6 vs Expected 6
+WARNING: Validation Ch 113: Extracted 1 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 114: Extracted 1 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 27 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 27 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 27 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 26 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 1: Extracted 4 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 21: Extracted 0 vs Expected 113 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 26: Extracted 155 vs Expected 228 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 16: Extracted 0 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 11: Extracted 33 vs Expected 124 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 6: Extracted 0 vs Expected 166 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 27: Extracted 24 vs Expected 94 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 22: Extracted 0 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 12: Extracted 30 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 17: Extracted 17 vs Expected 112 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 23: Extracted 52 vs Expected 119 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 28: Extracted 0 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 13: Extracted 1 vs Expected 44 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 2: Extracted 26 vs Expected 287 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 18: Extracted 29 vs Expected 111 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 7: Extracted 0 vs Expected 207 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 29: Extracted 0 vs Expected 70 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 24: Extracted 10 vs Expected 65 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 14: Extracted 16 vs Expected 53 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 19: Extracted 30 vs Expected 99 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 30: Extracted 5 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 8: Extracted 0 vs Expected 76 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 25: Extracted 0 vs Expected 78 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 15: Extracted 34 vs Expected 100 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 31: Extracted 4 vs Expected 35 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 3: Extracted 35 vs Expected 201 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 36: Extracted 0 vs Expected 84 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 20: Extracted 57 vs Expected 136 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 41: Extracted 4 vs Expected 55 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 32: Extracted 0 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 9: Extracted 1 vs Expected 129 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 46: Extracted 2 vs Expected 36 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 37: Extracted 155 vs Expected 183 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 42: Extracted 0 vs Expected 54 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 33: Extracted 11 vs Expected 74 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 47: Extracted 1 vs Expected 39 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 38: Extracted 35 vs Expected 89 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 10: Extracted 0 vs Expected 110 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 43: Extracted 34 vs Expected 90 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 4: Extracted 0 vs Expected 177 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 48: Extracted 4 vs Expected 30 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 34: Extracted 0 vs Expected 55 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 51: Extracted 35 vs Expected 61 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 44: Extracted 0 vs Expected 60 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 39: Extracted 14 vs Expected 76 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 49: Extracted 2 vs Expected 19 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 35: Extracted 0 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 52: Extracted 34 vs Expected 50 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 45: Extracted 4 vs Expected 38 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 5: Extracted 0 vs Expected 121 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 40: Extracted 24 vs Expected 86 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 50: Extracted 19 vs Expected 46 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 61: Extracted 0 vs Expected 15 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 53: Extracted 0 vs Expected 63 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 56: Extracted 71 vs Expected 97 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 66: Extracted 0 vs Expected 13 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 71: Extracted 25 vs Expected 29 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 76: Extracted 17 vs Expected 32 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 62: Extracted 2 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 54: Extracted 33 vs Expected 56 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 57: Extracted 0 vs Expected 30 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 72: Extracted 18 vs Expected 29 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 77: Extracted 48 vs Expected 51 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 67: Extracted 0 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 63: Extracted 1 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 55: Extracted 61 vs Expected 79 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 58: Extracted 0 vs Expected 23 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 73: Extracted 10 vs Expected 21 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 78: Extracted 36 vs Expected 41 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 68: Extracted 34 vs Expected 53 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 64: Extracted 0 vs Expected 19 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 81: Extracted 26 vs Expected 30 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 59: Extracted 0 vs Expected 25 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 79: Extracted 30 vs Expected 47 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 69: Extracted 45 vs Expected 53 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 74: Extracted 0 vs Expected 57 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 65: Extracted 2 vs Expected 13 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 82: Extracted 15 vs Expected 20 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 80: Extracted 39 vs Expected 43 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 60: Extracted 0 vs Expected 14 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 70: Extracted 0 vs Expected 45 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 75: Extracted 31 vs Expected 41 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 86: Extracted 16 vs Expected 18 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 83: Extracted 0 vs Expected 37 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 91: Extracted 7 vs Expected 16 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 106: Extracted 4 vs Expected 5 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 101: Extracted 9 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 96: Extracted 0 vs Expected 20 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 87: Extracted 14 vs Expected 20 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 84: Extracted 23 vs Expected 26 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 92: Extracted 21 vs Expected 22 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 107: Extracted 6 vs Expected 8 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 102: Extracted 0 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 97: Extracted 0 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 88: Extracted 26 vs Expected 27 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 85: Extracted 18 vs Expected 23 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 93: Extracted 9 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 108: Extracted 0 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 103: Extracted 0 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 98: Extracted 3 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 111: Extracted 3 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 89: Extracted 15 vs Expected 31 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 94: Extracted 5 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 109: Extracted 2 vs Expected 7 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 104: Extracted 9 vs Expected 10 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 99: Extracted 7 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 112: Extracted 4 vs Expected 5 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 90: Extracted 16 vs Expected 21 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 110: Extracted 0 vs Expected 4 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 95: Extracted 7 vs Expected 9 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 105: Extracted 4 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 100: Extracted 11 vs Expected 12 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 113: Extracted 0 vs Expected 6 (Missing verses backfilled from Reference)
+WARNING: Validation Ch 114: Extracted 0 vs Expected 7 (Missing verses backfilled from Reference)

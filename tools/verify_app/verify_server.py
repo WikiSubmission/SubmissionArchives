@@ -5,20 +5,20 @@ import shutil
 from flask import Flask, jsonify, request, send_from_directory, abort, render_template_string
 
 app = Flask(__name__)
+app.config['JSON_SORT_KEYS'] = False  # Prevent Flask from sorting keys alphabetically
 
-# Base Directory (Desktop/RKM)
 # Base Directory (Desktop/RKM/tools/verify_app)
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 # Content Directory (Desktop/RKM)
 # Go up 2 levels: tools/verify_app -> tools -> RKM
 CONTENT_DIR = os.path.dirname(os.path.dirname(APP_DIR))
 
-# Targeted Folders
+# Targeted Folders (Order matters now)
 FOLDERS = {
     "Quran Studies": "Messenger Quran Studies",
+    "Audios": "messenger_audios",
     "Sermons": "Messenger Sermons",
-    "Video Programs": "Messenger Video Programs",
-    "Audios": "messenger_audios"
+    "Video Programs": "Messenger Video Programs"
 }
 
 def find_transcript(media_path):

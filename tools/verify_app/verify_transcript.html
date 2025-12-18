@@ -202,41 +202,93 @@
         let segments = [];
         let hasWordTiming = false;
 
-        mediaInput.addEventListener('change', function (e) {
-            const file = e.target.files[0];
-            if (file) {
-                const url = URL.createObjectURL(file);
-                const isVideo = file.name.toLowerCase().endsWith('.mp4');
+        // URL Param Handling
+        window.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            const mediaPath = params.get('path');
+            const transcriptPath = params.get('tpath');
+
+            if (mediaPath && transcriptPath) {
+                // Auto-load mode
+                infoDiv.textContent = "Auto-loading from URL...";
+
+                // 1. Setup Player
+                const isVideo = mediaPath.toLowerCase().endsWith('.mp4');
+                const mediaUrl = `/api/file?path=${encodeURIComponent(mediaPath)}`; // Using the server's API
+
+                // Fallback for simple http server (no /api/file, just relative path)
+                // Use relative path if /api/file fails? 
+                // Actually, the server running is "python -m http.server" (simple) or "universal_verifier/server.py"?
+                // The user is running BOTH. Port 8000 is simple. Port 9090 is likely verifier server?
+                // Wait, if 8000 is simple http server, it can't serve C:/ absolute paths unless root is C:/
+                // Root is Desktop/RKM. Paths in index.json are C:/Users/...
+                // index.html does `getRelativePath`. So mediaPath passed here is RELATIVE.
+
+                // Perfect. If mediaPath is relative, we can just use it directly.
 
                 if (isVideo) {
-                    videoPlayer.src = url;
+                    videoPlayer.src = mediaPath;
                     videoPlayer.style.display = 'block';
                     audioPlayer.style.display = 'none';
                     player = videoPlayer;
                 } else {
-                    audioPlayer.src = url;
+                    audioPlayer.src = mediaPath;
                     audioPlayer.style.display = 'block';
                     videoPlayer.style.display = 'none';
                     player = audioPlayer;
                 }
+
+                // 2. Fetch Transcript
+                try {
+                    const res = await fetch(transcriptPath);
+                    if (!res.ok) throw new Error("Failed to fetch transcript");
+                    const data = await res.json();
+                    renderTranscript(data);
+                } catch (e) {
+                    infoDiv.textContent = "Error loading transcript: " + e.message;
+                }
             }
         });
 
-        jsonInput.addEventListener('change', function (e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    try {
-                        const data = JSON.parse(e.target.result);
-                        renderTranscript(data);
-                    } catch (err) {
-                        alert("Error parsing JSON: " + err);
+        if (mediaInput) {
+            mediaInput.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const url = URL.createObjectURL(file);
+                    const isVideo = file.name.toLowerCase().endsWith('.mp4');
+
+                    if (isVideo) {
+                        videoPlayer.src = url;
+                        videoPlayer.style.display = 'block';
+                        audioPlayer.style.display = 'none';
+                        player = videoPlayer;
+                    } else {
+                        audioPlayer.src = url;
+                        audioPlayer.style.display = 'block';
+                        videoPlayer.style.display = 'none';
+                        player = audioPlayer;
                     }
-                };
-                reader.readAsText(file);
-            }
-        });
+                }
+            });
+        }
+
+        if (jsonInput) {
+            jsonInput.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        try {
+                            const data = JSON.parse(e.target.result);
+                            renderTranscript(data);
+                        } catch (err) {
+                            alert("Error parsing JSON: " + err);
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            });
+        }
 
         function getSpeakerClass(speaker) {
             if (!speaker) return 'speaker-unknown';

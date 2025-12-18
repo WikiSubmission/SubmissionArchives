@@ -364,8 +364,22 @@
 
                 treeDiv.innerHTML = '';
 
-                for (const [category, files] of Object.entries(tree)) {
-                    if (files.length === 0) continue;
+                // Explicit Order to guarantee "Quran Studies" is first
+                const ORDERED_CATEGORIES = [
+                    "Quran Studies",
+                    "Audios",
+                    "Sermons",
+                    "Video Programs"
+                ];
+
+                // Add any others that might exist but aren't in the list
+                Object.keys(tree).forEach(k => {
+                    if (!ORDERED_CATEGORIES.includes(k)) ORDERED_CATEGORIES.push(k);
+                });
+
+                ORDERED_CATEGORIES.forEach(category => {
+                    const files = tree[category];
+                    if (!files || files.length === 0) return;
 
                     const catHeader = document.createElement('div');
                     catHeader.className = 'category-header';
@@ -393,7 +407,7 @@
                     });
 
                     treeDiv.appendChild(groupDiv);
-                }
+                });
 
             } catch (err) {
                 treeDiv.innerHTML = `<div style="color:red; padding:10px;">Error loading files: ${err}</div>`;
@@ -457,24 +471,102 @@
             editor.innerHTML = '';
             words = [];
 
-            // Normalize structure: Deepgram Nova-2 often returns "channels" -> "alternatives" -> "words"
-            // Also sometimes "results" -> "utterances" (which is better for segments)
-            // We'll flatten everything into a word list but insert speakers when changed.
+            // 0. Smart Segment Generation (Sentence Level)
+            // Goal: "Yellow Bubbles" should be sentences, not paragraphs. 
+            // We generate segments from 'words' if:
+            // a) No segments exist, OR
+            // 0. Normalize Deepgram Paragraphs -> Segments
+            // If we have paragraphs but no segments, convert them so we get bubbles
+            if ((!currentData.segments || currentData.segments.length === 0) &&
+                currentData.results &&
+                currentData.results.channels &&
+                currentData.results.channels[0].alternatives &&
+                currentData.results.channels[0].alternatives[0].paragraphs &&
+                currentData.results.channels[0].alternatives[0].paragraphs.paragraphs) {
 
-            let rawWords = [];
+                const rawParagraphs = currentData.results.channels[0].alternatives[0].paragraphs.paragraphs;
 
-            // 1. Always prefer segment-based rendering if segments are available (User Preference for 'Yellow Bubbles')
-            if (currentData.segments && currentData.segments.length > 0) {
-                renderSegments();
-                return;
+                currentData.segments = rawParagraphs.map(p => ({
+                    start: p.start,
+                    end: p.end,
+                    speaker: p.speaker,
+                    text: p.sentences.map(s => s.text).join(' ')
+                }));
+                console.log(`Normalized paragraphs to ${currentData.segments.length} PARAGRAPH segments`);
             }
 
-            // 2. Helper to extract words from different JSON structures
-            if (currentData.results && currentData.results.channels) {
-                // Standard Deepgram
+            // First, find the words array
+            let rawWords = [];
+            if (currentData.results && currentData.results.channels && currentData.results.channels[0].alternatives && currentData.results.channels[0].alternatives[0].words) {
                 rawWords = currentData.results.channels[0].alternatives[0].words;
             } else if (currentData.words) {
                 rawWords = currentData.words;
+            }
+
+            const shouldResegment = () => {
+                if (!currentData.segments || currentData.segments.length === 0) return true;
+                // Heuristic: If avg segment length is huge, it's likely a paragraph view
+                const avgLen = currentData.segments.reduce((acc, s) => acc + (s.text ? s.text.length : 0), 0) / currentData.segments.length;
+                return avgLen > 250;
+            };
+
+            if (rawWords.length > 0 && shouldResegment()) {
+                console.log("Resegmenting transcript into sentences...");
+                const newSegments = [];
+                let currentSeg = { start: rawWords[0].start, end: rawWords[0].end, speaker: String(rawWords[0].speaker), words: [] };
+
+                rawWords.forEach((w, i) => {
+                    const safeSpeaker = String(w.speaker);
+
+                    // 1. Speaker Change -> Force Split
+                    if (String(currentSeg.speaker) !== safeSpeaker) {
+                        if (currentSeg.words.length > 0) {
+                            currentSeg.end = currentSeg.words[currentSeg.words.length - 1].end;
+                            currentSeg.text = currentSeg.words.map(x => x.punctuated_word || x.word).join(' ');
+                            newSegments.push(currentSeg);
+                        }
+                        currentSeg = { start: w.start, end: w.end, speaker: safeSpeaker, words: [] };
+                    }
+
+                    currentSeg.words.push(w);
+
+                    // 2. Sentence End -> Split
+                    const pWord = w.punctuated_word || w.word;
+                    // Split on . ? ! but avoid "Mr." "Dr." etc. loosely if needed (simple check for now)
+                    if (pWord && (pWord.endsWith('.') || pWord.endsWith('?') || pWord.endsWith('!'))) {
+                        currentSeg.end = w.end;
+                        currentSeg.text = currentSeg.words.map(x => x.punctuated_word || x.word).join(' ');
+                        newSegments.push(currentSeg);
+
+                        // Start new segment if there are more words
+                        if (i < rawWords.length - 1) {
+                            const nextW = rawWords[i + 1];
+                            currentSeg = {
+                                start: nextW.start,
+                                end: nextW.end,
+                                speaker: String(nextW.speaker),
+                                words: []
+                            };
+                        } else {
+                            currentSeg = null;
+                        }
+                    }
+                });
+
+                // Flush remaining
+                if (currentSeg && currentSeg.words.length > 0) {
+                    currentSeg.end = currentSeg.words[currentSeg.words.length - 1].end;
+                    currentSeg.text = currentSeg.words.map(x => x.punctuated_word || x.word).join(' ');
+                    newSegments.push(currentSeg);
+                }
+
+                currentData.segments = newSegments;
+            }
+
+            // Always prefer segment-based rendering if segments are available (User Preference for 'Yellow Bubbles')
+            if (currentData.segments && currentData.segments.length > 0) {
+                renderSegments();
+                return;
             }
 
             if (!rawWords || rawWords.length === 0) {
@@ -486,7 +578,8 @@
 
             rawWords.forEach((w, index) => {
                 // Check for speaker change
-                let currentSpeaker = w.speaker || "SPEAKER_UNKNOWN";
+                // Ensure speaker is a string (Deepgram can return ints)
+                let currentSpeaker = String(w.speaker || "SPEAKER_UNKNOWN");
 
                 // If speaker changed, insert break/label
                 if (currentSpeaker !== lastSpeaker) {
@@ -564,14 +657,16 @@
                 segDiv.dataset.index = index;
 
                 // Add dr-khalifa class for yellow background
-                const lowerSpeaker = (seg.speaker || '').toLowerCase();
+                const safeSpeaker = String(seg.speaker || "SPEAKER_UNKNOWN");
+                const lowerSpeaker = safeSpeaker.toLowerCase();
+
                 if (lowerSpeaker.includes("rashad") || lowerSpeaker.includes("khalifa")) {
                     segDiv.classList.add('dr-khalifa');
                 }
 
                 const speaker = document.createElement('div');
                 speaker.className = 'speaker-label';
-                speaker.textContent = seg.speaker || 'Unknown';
+                speaker.textContent = safeSpeaker;
                 speaker.style.display = 'inline-block';
                 speaker.style.marginBottom = '5px';
 
@@ -582,7 +677,7 @@
 
                 speaker.onclick = (e) => {
                     e.stopPropagation();
-                    openRenameModal(seg.speaker);
+                    openRenameModal(safeSpeaker);
                 };
 
                 const text = document.createElement('div');
@@ -595,15 +690,29 @@
                     document.getElementById('saveStatus').textContent = "Unsaved changes...";
                 };
 
-                segDiv.onclick = () => {
+                // Click on Bubble -> Seek and Play
+                const seekToSegment = () => {
                     const p = document.getElementById('player');
-                    if (p) {
-                        // Apply reverse offset: if offset is -5, we need to seek to seg.start - 5
+                    if (p && seg.start != null) {
                         const offset = parseFloat(document.getElementById('timeOffset')?.value || 0);
-                        p.currentTime = seg.start - offset;
-                        p.play();
+                        p.currentTime = Math.max(0, parseFloat(seg.start) - offset);
+                        p.play().catch(e => console.error("Play failed:", e));
                     }
                 };
+
+                segDiv.onclick = seekToSegment;
+
+                // Ensure clicking text also triggers seek (unless highlighting text)
+                // We use mousedown/mouseup to distinguish selection from click
+                let isSelecting = false;
+                text.addEventListener('mousedown', () => isSelecting = false);
+                text.addEventListener('mousemove', () => isSelecting = true);
+                text.addEventListener('mouseup', (e) => {
+                    if (!isSelecting && document.getSelection().toString().length === 0) {
+                        // It was a click, not a text selection
+                        seekToSegment();
+                    }
+                });
 
                 segDiv.appendChild(speaker);
                 segDiv.appendChild(text);
