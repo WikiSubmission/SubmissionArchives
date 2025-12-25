@@ -2065,8 +2065,8 @@
     "segment_index": 206,
     "start_time": 1138.3292739726,
     "end_time": 1138.60373972603,
-    "content": "Yes.",
-    "speaker": "Moses a hero. Dr. Khalifa",
+    "content": "Moses a hero. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -2825,8 +2825,8 @@
     "segment_index": 282,
     "start_time": 1414.09864356436,
     "end_time": 1414.66086138614,
-    "content": "Mã Shã Allãh.",
-    "speaker": "Yes. Alhamdu Lillah. Dr. Khalifa",
+    "content": "Yes. Alhamdu Lillah. Mã Shã Allãh.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'allãh':3 'mã':1 'shã':2"
   },
   {
@@ -2945,8 +2945,8 @@
     "segment_index": 294,
     "start_time": 1480.91709090909,
     "end_time": 1481.52218181818,
-    "content": "(unintelligible)",
-    "speaker": "I will want to see you. Behrouz",
+    "content": "I will want to see you. (unintelligible)",
+    "speaker": "Behrouz",
     "search_vector": "'unintellig':1"
   },
   {
@@ -3065,8 +3065,8 @@
     "segment_index": 306,
     "start_time": 1518.3930625,
     "end_time": 1518.6290875,
-    "content": "Right.",
-    "speaker": "They wanted more miracles and more miracles. Dr. Khalifa",
+    "content": "They wanted more miracles and more miracles. Right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':1"
   },
   {
@@ -3725,8 +3725,8 @@
     "segment_index": 372,
     "start_time": 1825.29761702128,
     "end_time": 1826.60578723404,
-    "content": "Yes. Very. Exactly.",
-    "speaker": "They may die but they are in a better place. Dr. Khalifa",
+    "content": "They may die but they are in a better place. Yes. Very. Exactly.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'exact':3 'yes':1"
   },
   {
@@ -4435,8 +4435,8 @@
     "segment_index": 443,
     "start_time": 2068.61782191781,
     "end_time": 2070.03142465753,
-    "content": "(unintelligible) relatives in Medina.",
-    "speaker": "Hijja was in December. A woman",
+    "content": "Hijja was in December. (unintelligible) relatives in Medina.",
+    "speaker": "A woman",
     "search_vector": "'medina':4 'relat':2 'unintellig':1"
   },
   {
@@ -4485,8 +4485,8 @@
     "segment_index": 448,
     "start_time": 2085.91609090909,
     "end_time": 2086.23036363636,
-    "content": "Yes.",
-    "speaker": "December. Dr. Khalifa",
+    "content": "December. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -4515,8 +4515,8 @@
     "segment_index": 451,
     "start_time": 2096.50806849315,
     "end_time": 2096.90431506849,
-    "content": "November.",
-    "speaker": "November. Yes. A woman",
+    "content": "November. Yes. November.",
+    "speaker": "A woman",
     "search_vector": "'novemb':1"
   },
   {
@@ -5355,8 +5355,8 @@
     "segment_index": 535,
     "start_time": 2368.494208,
     "end_time": 2369.529216,
-    "content": "Yes. Exactly.",
-    "speaker": "Anything. Dr. Khalifa",
+    "content": "Anything. Yes. Exactly.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'exact':2 'yes':1"
   },
   {
@@ -8495,8 +8495,8 @@
     "segment_index": 849,
     "start_time": 3651.23902521008,
     "end_time": 3654.48923529412,
-    "content": "Yeah. Muhammad and Ali and Hussein cannot respond to anybody. They're dead.",
-    "speaker": "Day of Resurrection. Dr. Khalifa",
+    "content": "Day of Resurrection. Yeah. Muhammad and Ali and Hussein cannot respond to anybody. They're dead.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'ali':4 'anybodi':10 'cannot':7 'dead':13 'hussein':6 'muhammad':2 're':12 'respond':8 'yeah':1"
   },
   {

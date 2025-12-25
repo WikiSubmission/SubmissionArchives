@@ -1535,8 +1535,8 @@
     "segment_index": 153,
     "start_time": 338.244097560976,
     "end_time": 338.920963414634,
-    "content": "They insist on going.",
-    "speaker": "God does not like it. Ismail Barakat",
+    "content": "God does not like it. They insist on going.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'go':4 'insist':2"
   },
   {
@@ -1555,8 +1555,8 @@
     "segment_index": 155,
     "start_time": 341.60419047619,
     "end_time": 343.001857142857,
-    "content": "There you go, that's the answer to your question.",
-    "speaker": "They insist. Dr. Khalifa",
+    "content": "They insist. There you go, that's the answer to your question.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'answer':7 'go':3 'question':10"
   },
   {
@@ -1835,8 +1835,8 @@
     "segment_index": 183,
     "start_time": 425.01401754386,
     "end_time": 426.108719298246,
-    "content": "Yes. Did you jump the fence?",
-    "speaker": "Nizam of Hyderabad. Dr. Khalifa",
+    "content": "Nizam of Hyderabad. Yes. Did you jump the fence?",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'fenc':6 'jump':4 'yes':1"
   },
   {
@@ -1925,8 +1925,8 @@
     "segment_index": 192,
     "start_time": 459.287338983051,
     "end_time": 459.563186440678,
-    "content": "Yeah.",
-    "speaker": "They jumped so many fences to go to Hell. Shakira",
+    "content": "They jumped so many fences to go to Hell. Yeah.",
+    "speaker": "Shakira",
     "search_vector": "'yeah':1"
   },
   {
@@ -2785,8 +2785,8 @@
     "segment_index": 278,
     "start_time": 655.506863013699,
     "end_time": 656.671931506849,
-    "content": "Smack, smack is also hitting? Okay.",
-    "speaker": "Smack is also a hit. Dr. Khalifa",
+    "content": "Smack is also a hit. Smack, smack is also hitting? Okay.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'also':4 'hit':5 'okay':6 'smack':1,2"
   },
   {
@@ -3065,8 +3065,8 @@
     "segment_index": 306,
     "start_time": 709.784636363636,
     "end_time": 710.589727272727,
-    "content": "Oh, I see, I see, I see.",
-    "speaker": "Mars rise. Ismail Barakat",
+    "content": "Mars rise. Oh, I see, I see, I see.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'oh':1 'see':3,5,7"
   },
   {
@@ -3405,8 +3405,8 @@
     "segment_index": 340,
     "start_time": 791.903714285714,
     "end_time": 792.489632653061,
-    "content": "On Tuesday.",
-    "speaker": "Tuesday. Yes. A woman",
+    "content": "Tuesday. Yes. On Tuesday.",
+    "speaker": "A woman",
     "search_vector": "'tuesday':2"
   },
   {
@@ -3545,8 +3545,8 @@
     "segment_index": 354,
     "start_time": 854.335428571429,
     "end_time": 854.906857142857,
-    "content": "(unintelligible)",
-    "speaker": "I was really amazed. A woman",
+    "content": "I was really amazed. (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':1"
   },
   {
@@ -3925,8 +3925,8 @@
     "segment_index": 392,
     "start_time": 954.821406779661,
     "end_time": 955.288084745763,
-    "content": "Yes. Gravity.",
-    "speaker": "I had hard time. I was very little. Dr. Khalifa",
+    "content": "I had hard time. I was very little. Yes. Gravity.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'graviti':2 'yes':1"
   },
   {
@@ -3995,8 +3995,8 @@
     "segment_index": 399,
     "start_time": 966.145342857143,
     "end_time": 966.883171428571,
-    "content": "(unintelligible)",
-    "speaker": "I was a little kid. I understand it. Dr. Khalifa",
+    "content": "I was a little kid. I understand it. (unintelligible)",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'unintellig':1"
   },
   {
@@ -4075,8 +4075,8 @@
     "segment_index": 407,
     "start_time": 986.075154929577,
     "end_time": 986.759098591549,
-    "content": "(unintelligible)",
-    "speaker": "Two major things. Behrouz",
+    "content": "Two major things. (unintelligible)",
+    "speaker": "Behrouz",
     "search_vector": "'unintellig':1"
   },
   {
@@ -5255,8 +5255,8 @@
     "segment_index": 525,
     "start_time": 1311.45584158416,
     "end_time": 1311.96515841584,
-    "content": "Mã Shã Allãh.",
-    "speaker": "He says He made us from clay. Dr. Khalifa",
+    "content": "He says He made us from clay. Mã Shã Allãh.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'allãh':3 'mã':1 'shã':2"
   },
   {
@@ -8565,8 +8565,8 @@
     "segment_index": 856,
     "start_time": 2094.51816949153,
     "end_time": 2094.94003389831,
-    "content": "The doctor",
-    "speaker": "Rooter on cholesterol. Behrouz",
+    "content": "Rooter on cholesterol. The doctor",
+    "speaker": "Behrouz",
     "search_vector": "'doctor':2"
   },
   {
@@ -8605,8 +8605,8 @@
     "segment_index": 860,
     "start_time": 2103.42838235294,
     "end_time": 2103.68382352941,
-    "content": "Yeah.",
-    "speaker": "Rooter to clean the veins. Behrouz",
+    "content": "Rooter to clean the veins. Yeah.",
+    "speaker": "Behrouz",
     "search_vector": "'yeah':1"
   },
   {
@@ -8635,8 +8635,8 @@
     "segment_index": 863,
     "start_time": 2113.42088235294,
     "end_time": 2113.58747058824,
-    "content": "Yes.",
-    "speaker": "March. Ismail Barakat",
+    "content": "March. Yes.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'yes':1"
   },
   {
@@ -8675,8 +8675,8 @@
     "segment_index": 867,
     "start_time": 2117.07178640777,
     "end_time": 2118.52938834951,
-    "content": "Next will be (unintelligible)",
-    "speaker": "Ramadan in Vancouver around Christmas time is fantastic. Dr. Khalifa",
+    "content": "Ramadan in Vancouver around Christmas time is fantastic. Next will be (unintelligible)",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'next':1 'unintellig':4"
   },
   {
@@ -8845,8 +8845,8 @@
     "segment_index": 884,
     "start_time": 2176.46507317073,
     "end_time": 2177.77062195122,
-    "content": "Oh, no, no I don't do that.",
-    "speaker": "Fajr and then go to bed. A woman",
+    "content": "Fajr and then go to bed. Oh, no, no I don't do that.",
+    "speaker": "A woman",
     "search_vector": "'oh':1"
   },
   {
@@ -9525,8 +9525,8 @@
     "segment_index": 952,
     "start_time": 2308.6266,
     "end_time": 2309.1862,
-    "content": "IN SHAA ALLAH.",
-    "speaker": "Satan hates you. You know that. Shakira",
+    "content": "Satan hates you. You know that. IN SHAA ALLAH.",
+    "speaker": "Shakira",
     "search_vector": "'allah':3 'shaa':2"
   },
   {

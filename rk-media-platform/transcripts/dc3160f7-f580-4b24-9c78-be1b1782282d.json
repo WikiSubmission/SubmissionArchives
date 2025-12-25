@@ -2945,8 +2945,8 @@
     "segment_index": 294,
     "start_time": 1400.3978125,
     "end_time": 1400.63239583333,
-    "content": "Yes.",
-    "speaker": "I took it in stride. Dr. Khalifa",
+    "content": "I took it in stride. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -3915,8 +3915,8 @@
     "segment_index": 391,
     "start_time": 1727.209,
     "end_time": 1727.92754545455,
-    "content": "I don't know.",
-    "speaker": "Those who come from Punjab. Dr. Khalifa",
+    "content": "Those who come from Punjab. I don't know.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'know':4"
   },
   {
@@ -4585,8 +4585,8 @@
     "segment_index": 458,
     "start_time": 2028.93146551724,
     "end_time": 2029.38793103448,
-    "content": "There's no way.",
-    "speaker": "I was saying. Dr. Khalifa",
+    "content": "I was saying. There's no way.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'way':4"
   },
   {
@@ -7475,8 +7475,8 @@
     "segment_index": 747,
     "start_time": 3129.84675308642,
     "end_time": 3130.11732098765,
-    "content": "Yes.",
-    "speaker": "God to give them support. Dr. Khalifa",
+    "content": "God to give them support. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -8955,8 +8955,8 @@
     "segment_index": 895,
     "start_time": 3676.69237931034,
     "end_time": 3677.24410344828,
-    "content": "(unintelligible)",
-    "speaker": "I would say still... Dr. Khalifa",
+    "content": "I would say still... (unintelligible)",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'unintellig':1"
   },
   {
@@ -9475,8 +9475,8 @@
     "segment_index": 947,
     "start_time": 3836.23859574468,
     "end_time": 3837.01178723404,
-    "content": "I will try. I will try.",
-    "speaker": "Quran than any other. Dr. Khalifa",
+    "content": "Quran than any other. I will try. I will try.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'tri':3,6"
   },
   {

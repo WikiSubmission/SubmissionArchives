@@ -5915,8 +5915,8 @@
     "segment_index": 591,
     "start_time": 2963.48228070175,
     "end_time": 2963.62263157895,
-    "content": "Yes.",
-    "speaker": "Perestroika. Dr. Khalifa",
+    "content": "Perestroika. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -7775,8 +7775,8 @@
     "segment_index": 777,
     "start_time": 3828.00477777778,
     "end_time": 3828.46577777778,
-    "content": "Oh, yeah.",
-    "speaker": "He knew that. Dr. Khalifa",
+    "content": "He knew that. Oh, yeah.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'oh':1 'yeah':2"
   },
   {
@@ -8295,8 +8295,8 @@
     "segment_index": 829,
     "start_time": 4070.70413793103,
     "end_time": 4071.87733793103,
-    "content": "Yeah, (unintelligible). Yeah.",
-    "speaker": "Jesus and Mary and the saints. A woman",
+    "content": "Jesus and Mary and the saints. Yeah, (unintelligible). Yeah.",
+    "speaker": "A woman",
     "search_vector": "'unintellig':2 'yeah':1,3"
   },
   {
@@ -9275,8 +9275,8 @@
     "segment_index": 927,
     "start_time": 4444.08604,
     "end_time": 4444.56092,
-    "content": "God said. Yes.",
-    "speaker": "I can give you an example of this. Dr. Khalifa",
+    "content": "I can give you an example of this. God said. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'god':1 'said':2 'yes':3"
   },
   {

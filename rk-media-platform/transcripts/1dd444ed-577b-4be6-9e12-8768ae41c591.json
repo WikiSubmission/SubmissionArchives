@@ -1615,8 +1615,8 @@
     "segment_index": 161,
     "start_time": 596.141255319149,
     "end_time": 596.258872340426,
-    "content": "Yes.",
-    "speaker": "Alhamdu Lillah. Dr. Khalifa",
+    "content": "Alhamdu Lillah. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -2235,8 +2235,8 @@
     "segment_index": 223,
     "start_time": 763.397277777778,
     "end_time": 763.619698412698,
-    "content": "Yeah.",
-    "speaker": "God is nice to them in this life. A woman",
+    "content": "God is nice to them in this life. Yeah.",
+    "speaker": "A woman",
     "search_vector": "'yeah':1"
   },
   {
@@ -3695,8 +3695,8 @@
     "segment_index": 369,
     "start_time": 1279.76907692308,
     "end_time": 1280.09065384615,
-    "content": "Yes.",
-    "speaker": "It might be so many miracles. Dr. Khalifa",
+    "content": "It might be so many miracles. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -4415,8 +4415,8 @@
     "segment_index": 441,
     "start_time": 1543.82781818182,
     "end_time": 1544.35690909091,
-    "content": "Makruh (مکروه).",
-    "speaker": "Listen to this. A woman",
+    "content": "Listen to this. Makruh (مکروه).",
+    "speaker": "A woman",
     "search_vector": "'makruh':1 'مکروه':2"
   },
   {
@@ -5125,8 +5125,8 @@
     "segment_index": 512,
     "start_time": 1731.81815384615,
     "end_time": 1732.58418461538,
-    "content": "(unintelligible)",
-    "speaker": "Niyat. He does the Niyat. A man",
+    "content": "Niyat. He does the Niyat. (unintelligible)",
+    "speaker": "A man",
     "search_vector": "'unintellig':1"
   },
   {
@@ -5715,8 +5715,8 @@
     "segment_index": 571,
     "start_time": 1867.89628037383,
     "end_time": 1868.4013271028,
-    "content": "Exactly.",
-    "speaker": "English and no Arabic. Not even English. A woman",
+    "content": "English and no Arabic. Not even English. Exactly.",
+    "speaker": "A woman",
     "search_vector": "'exact':1"
   },
   {
@@ -5855,8 +5855,8 @@
     "segment_index": 585,
     "start_time": 1921.41989285714,
     "end_time": 1922.64571428571,
-    "content": "Number of Farz is (unintelligible)",
-    "speaker": "Farz is gone. A woman",
+    "content": "Farz is gone. Number of Farz is (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'farz':3 'number':1 'unintellig':5"
   },
   {
@@ -6465,8 +6465,8 @@
     "segment_index": 646,
     "start_time": 2068.57736893204,
     "end_time": 2069.64376699029,
-    "content": "(109:1) قُلْ يَـٰٓأَيُّهَا ٱلْكَـٰفِرُونَ",
-    "speaker": "I liked that. A woman",
+    "content": "I liked that. (109:1) قُلْ يَـٰٓأَيُّهَا ٱلْكَـٰفِرُونَ",
+    "speaker": "A woman",
     "search_vector": "'1':2 '109':1 'قُلْ':3 'يَـٰٓأَيُّهَا':4 'ٱلْكَـٰفِرُونَ':5"
   },
   {
@@ -6615,8 +6615,8 @@
     "segment_index": 661,
     "start_time": 2115.88469662921,
     "end_time": 2116.33759550562,
-    "content": "All of them.",
-    "speaker": "All the messengers. Dr. Khalifa",
+    "content": "All the messengers. All of them.",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {
@@ -7295,8 +7295,8 @@
     "segment_index": 729,
     "start_time": 2275.26949438202,
     "end_time": 2275.70670786517,
-    "content": "(unintelligible)",
-    "speaker": "Other than God. A woman",
+    "content": "Other than God. (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':1"
   },
   {

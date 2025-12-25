@@ -2,39 +2,48 @@
 'use server';
 
 import { supabase } from '@/lib/supabaseClient';
+import newsletterData from '../../../public/data/newsletters/search_index.json';
 
 export async function searchTranscripts(query: string, typeFilters: string[]) {
     try {
         console.log(`[Server Action] Searching for "${query}" in types: ${typeFilters.join(', ')}`);
 
-        // 1. Search Segments
-        const { data: segments, error } = await supabase
-            .from('transcript_segments')
-            .select(`
-                id,
-                content,
-                start_time,
-                media!inner (
-                    id,
-                    title,
-                    type,
-                    created_at,
-                    local_filename,
-                    duration_seconds
-                )
-            `)
-            .ilike('content', `%${query}%`)
-            .in('media.type', typeFilters)
-            .limit(100);
+        // 1. Search Segments (Supabase)
+        let dbResults: any[] = [];
 
-        if (error) {
-            console.error("[Server Action] Supabase Error:", error);
-            throw new Error(error.message);
+        // Only query Supabase if we are looking for non-perspective types
+        const dbTypes = typeFilters.filter(t => t !== 'perspective');
+
+        if (dbTypes.length > 0) {
+            const { data: segments, error } = await supabase
+                .from('transcript_segments')
+                .select(`
+                    id,
+                    content,
+                    start_time,
+                    media!inner (
+                        id,
+                        title,
+                        type,
+                        created_at,
+                        local_filename,
+                        duration_seconds
+                    )
+                `)
+                .ilike('content', `%${query}%`)
+                .in('media.type', dbTypes)
+                .limit(100);
+
+            if (error) {
+                console.error("[Server Action] Supabase Error:", error);
+                throw new Error(error.message);
+            }
+            dbResults = segments || [];
         }
 
-        // 2. Group by Media (Logic moved to server for efficiency)
+        // 2. Group Supabase Results
         const grouped = new Map();
-        segments?.forEach(seg => {
+        dbResults.forEach(seg => {
             const mId = seg.media.id;
             if (!grouped.has(mId)) {
                 grouped.set(mId, {
@@ -49,9 +58,59 @@ export async function searchTranscripts(query: string, typeFilters: string[]) {
             });
         });
 
-        const results = Array.from(grouped.values());
-        console.log(`[Server Action] Found ${segments?.length || 0} segments in ${results.length} media items.`);
-        return { success: true, data: results };
+        let finalResults = Array.from(grouped.values());
+
+        // 3. Search Newsletters (Local JSON)
+        if (typeFilters.includes('perspective')) {
+            const lowerQuery = query.toLowerCase();
+            const newsletterMatches = newsletterData
+                .filter((item: any) => item.content.toLowerCase().includes(lowerQuery))
+                .map((item: any) => {
+                    // Find matches in content
+                    const content = item.content;
+                    const matches = [];
+                    let lastIndex = 0;
+
+                    // Simple regex to find all occurrences (case-insensitive)
+                    // We'll just grab a snippet around the first few matches
+                    const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                    let match;
+                    let count = 0;
+
+                    while ((match = regex.exec(content)) !== null && count < 5) {
+                        // Extract a snippet ~100 chars around match
+                        const start = Math.max(0, match.index - 60);
+                        const end = Math.min(content.length, match.index + query.length + 60);
+                        let snippet = content.substring(start, end);
+                        if (start > 0) snippet = '...' + snippet;
+                        if (end < content.length) snippet = snippet + '...';
+
+                        matches.push({
+                            id: `nl-${item.id}-${count}`,
+                            content: snippet,
+                            start_time: 0 // Newsletters don't have timestamps
+                        });
+                        count++;
+                    }
+
+                    return {
+                        media: {
+                            id: item.filename, // Use filename for ID to link correctly
+                            title: item.title,
+                            type: 'perspective',
+                            displayDate: item.displayDate,
+                            author: 'Rashad Khalifa', // Default/Assumed
+                            filename: item.filename
+                        },
+                        matches
+                    };
+                });
+
+            finalResults = [...finalResults, ...newsletterMatches];
+        }
+
+        console.log(`[Server Action] Found ${finalResults.length} items total.`);
+        return { success: true, data: finalResults };
 
     } catch (err: any) {
         console.error("[Server Action] Search Exception:", err);

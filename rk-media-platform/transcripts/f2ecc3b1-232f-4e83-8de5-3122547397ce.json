@@ -2285,8 +2285,8 @@
     "segment_index": 228,
     "start_time": 1040.27144117647,
     "end_time": 1040.71561764706,
-    "content": "So, if you want...",
-    "speaker": "The reason I ask is because when you first told me that... Dr. Khalifa",
+    "content": "The reason I ask is because when you first told me that... So, if you want...",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'want':4"
   },
   {
@@ -3055,8 +3055,8 @@
     "segment_index": 305,
     "start_time": 1318.40923076923,
     "end_time": 1318.60546153846,
-    "content": "Yes.",
-    "speaker": "Ali said that the Quran that we have today is not the same that Muhammad wrote down. Parivash",
+    "content": "Ali said that the Quran that we have today is not the same that Muhammad wrote down. Yes.",
+    "speaker": "Parivash",
     "search_vector": "'yes':1"
   },
   {
@@ -5695,8 +5695,8 @@
     "segment_index": 569,
     "start_time": 2354.37971875,
     "end_time": 2354.55567708333,
-    "content": "Yes.",
-    "speaker": "And here is something standing right in your face. Dr. Khalifa",
+    "content": "And here is something standing right in your face. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -5765,8 +5765,8 @@
     "segment_index": 576,
     "start_time": 2373.09523469388,
     "end_time": 2373.40556122449,
-    "content": "Yes.",
-    "speaker": "Mercy upon us of having actually brought us out of this to this point. Dr. Khalifa",
+    "content": "Mercy upon us of having actually brought us out of this to this point. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -6555,8 +6555,8 @@
     "segment_index": 655,
     "start_time": 2628.75634693878,
     "end_time": 2628.99553061225,
-    "content": "Take it.",
-    "speaker": "The one who takes it with the one who gives it... Dr. Khalifa",
+    "content": "The one who takes it with the one who gives it... Take it.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'take':1"
   },
   {
@@ -6905,8 +6905,8 @@
     "segment_index": 690,
     "start_time": 2757.33919148936,
     "end_time": 2757.50940425532,
-    "content": "Yes.",
-    "speaker": "Some people do. Dr. Khalifa",
+    "content": "Some people do. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -7185,8 +7185,8 @@
     "segment_index": 718,
     "start_time": 2876.5973220339,
     "end_time": 2876.89020338983,
-    "content": "Sure.",
-    "speaker": "A lot of people are mutilated. They are taking the advantage. Dr. Khalifa",
+    "content": "A lot of people are mutilated. They are taking the advantage. Sure.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'sure':1"
   },
   {
@@ -8315,8 +8315,8 @@
     "segment_index": 831,
     "start_time": 3264.60437362637,
     "end_time": 3264.89303296703,
-    "content": "Right.",
-    "speaker": "Everybody... Dr. Khalifa",
+    "content": "Everybody... Right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':1"
   },
   {

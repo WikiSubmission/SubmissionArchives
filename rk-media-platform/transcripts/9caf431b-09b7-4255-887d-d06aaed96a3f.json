@@ -1265,8 +1265,8 @@
     "segment_index": 126,
     "start_time": 507.3276,
     "end_time": 507.526,
-    "content": "Yes.",
-    "speaker": "This is actually what they say. A man",
+    "content": "This is actually what they say. Yes.",
+    "speaker": "A man",
     "search_vector": "'yes':1"
   },
   {
@@ -3685,8 +3685,8 @@
     "segment_index": 368,
     "start_time": 1633.81666666667,
     "end_time": 1633.98571428571,
-    "content": "Yes.",
-    "speaker": "His name. Dr. Khalifa",
+    "content": "His name. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -3805,8 +3805,8 @@
     "segment_index": 380,
     "start_time": 1662.28152173913,
     "end_time": 1662.54569565217,
-    "content": "Right.",
-    "speaker": "They say that Allah is a name. Dr. Khalifa",
+    "content": "They say that Allah is a name. Right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':1"
   },
   {

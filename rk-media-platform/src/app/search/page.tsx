@@ -16,7 +16,8 @@ export default function SearchPage() {
         sermon: true,
         'quran-study': true,
         'video-program': true,
-        audio: true
+        audio: true,
+        perspective: true
     });
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -64,6 +65,7 @@ export default function SearchPage() {
                 typeFilters.push('audio');
                 typeFilters.push('messenger-audio');
             }
+            if (filters.perspective) typeFilters.push('perspective');
 
             const response = await searchTranscripts(query, typeFilters);
 
@@ -164,6 +166,10 @@ export default function SearchPage() {
                             <Headphones className="w-3.5 h-3.5 mr-2" />
                             AUDIOS
                         </FilterButton>
+                        <FilterButton active={filters.perspective} onClick={() => toggleFilter('perspective')} theme={theme}>
+                            <FileText className="w-3.5 h-3.5 mr-2" />
+                            PERSPECTIVES
+                        </FilterButton>
                     </div>
 
                     {errorMsg && (
@@ -194,11 +200,16 @@ export default function SearchPage() {
                         {results.map(({ media, matches }) => {
                             const Icon = media.type === 'sermon' ? Video :
                                 media.type === 'quran-study' ? BookOpen :
-                                    (media.type.includes('audio') || media.type === 'messenger-audio') ? Headphones : FileText;
+                                    media.type === 'perspective' ? FileText :
+                                        (media.type.includes('audio') || media.type === 'messenger-audio') ? Headphones : FileText;
+
+                            const mediaLink = media.type === 'perspective'
+                                ? `/submitter-perspectives/${media.filename}`
+                                : `/watch/${media.id}`;
 
                             return (
                                 <div key={media.id} className={`${theme.card} rounded-sm border ${theme.border} overflow-hidden shadow-sm hover:shadow-md transition-all group`}>
-                                    <Link href={`/watch/${media.id}`} className={`block p-5 border-b ${theme.border} hover:bg-opacity-50 transition-colors`}>
+                                    <Link href={mediaLink} className={`block p-5 border-b ${theme.border} hover:bg-opacity-50 transition-colors`}>
                                         <div className="flex items-start justify-between">
                                             <div>
                                                 <div className="flex items-center gap-2 mb-2">
@@ -231,13 +242,13 @@ export default function SearchPage() {
                                         {matches.slice(0, 5).map((match: any) => (
                                             <Link
                                                 key={match.id}
-                                                href={`/watch/${media.id}?t=${Math.floor(match.start_time)}`}
+                                                href={media.type === 'perspective' ? mediaLink : `${mediaLink}?t=${Math.floor(match.start_time)}`}
                                                 className={`block p-4 ${theme.button} transition-colors group/match`}
                                             >
                                                 <div className="flex gap-4">
                                                     <div className="shrink-0 w-16 text-right mt-1">
                                                         <span className={`text-[10px] font-mono ${theme.textVeryMuted} border ${theme.border} px-1.5 py-0.5 rounded-sm group-hover/match:${theme.text} transition-colors`}>
-                                                            {formatTime(match.start_time)}
+                                                            {media.type === 'perspective' ? 'TEXT' : formatTime(match.start_time)}
                                                         </span>
                                                     </div>
                                                     <p className={`text-sm ${theme.textMuted} leading-relaxed font-serif`}

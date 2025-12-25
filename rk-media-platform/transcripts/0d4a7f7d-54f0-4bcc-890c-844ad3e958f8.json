@@ -5465,8 +5465,8 @@
     "segment_index": 546,
     "start_time": 2330.8252,
     "end_time": 2331.0544,
-    "content": "Yes.",
-    "speaker": "I noticed the weather was good. A woman",
+    "content": "I noticed the weather was good. Yes.",
+    "speaker": "A woman",
     "search_vector": "'yes':1"
   },
   {
@@ -8085,8 +8085,8 @@
     "segment_index": 808,
     "start_time": 3290.71971428571,
     "end_time": 3291.12771428571,
-    "content": "IN SHAA ALLAH.",
-    "speaker": "Heaven. IN SHAA ALLAH. Dr. Khalifa",
+    "content": "Heaven. IN SHAA ALLAH. IN SHAA ALLAH.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'allah':3 'shaa':2"
   },
   {

@@ -4285,8 +4285,8 @@
     "segment_index": 428,
     "start_time": 2039.89851219512,
     "end_time": 2040.0182195122,
-    "content": "Ok.",
-    "speaker": "I understand that. Dr. Khalifa",
+    "content": "I understand that. Ok.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'ok':1"
   },
   {
@@ -6005,8 +6005,8 @@
     "segment_index": 600,
     "start_time": 2864.49404,
     "end_time": 2864.72444,
-    "content": "Well.",
-    "speaker": "San Francisco. Ismail Barakat",
+    "content": "San Francisco. Well.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'well':1"
   },
   {
@@ -6485,8 +6485,8 @@
     "segment_index": 648,
     "start_time": 3114.38433333333,
     "end_time": 3114.551,
-    "content": "Yes.",
-    "speaker": "Paradise. Dr. Khalifa",
+    "content": "Paradise. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -7215,8 +7215,8 @@
     "segment_index": 721,
     "start_time": 3420.14824137931,
     "end_time": 3420.92331034483,
-    "content": "Yeah. Right. Right.",
-    "speaker": "Blowing in the horn would be at the Day of Resurrection. Ismail Barakat",
+    "content": "Blowing in the horn would be at the Day of Resurrection. Yeah. Right. Right.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'right':2,3 'yeah':1"
   },
   {

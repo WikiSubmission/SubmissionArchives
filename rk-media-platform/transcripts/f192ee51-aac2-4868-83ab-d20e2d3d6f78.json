@@ -85,8 +85,8 @@
     "segment_index": 8,
     "start_time": 13.4238099173554,
     "end_time": 14.1510826446281,
-    "content": "there's a little tiny, tiny hole right here.",
-    "speaker": "I pushed the button. A woman",
+    "content": "I pushed the button. there's a little tiny, tiny hole right here.",
+    "speaker": "A woman",
     "search_vector": "'hole':7 'littl':4 'right':8 'tini':5,6"
   },
   {
@@ -135,8 +135,8 @@
     "segment_index": 13,
     "start_time": 22.5944,
     "end_time": 22.9456,
-    "content": "(unintelligible)",
-    "speaker": "I broadcasted it. Dr. Khalifa",
+    "content": "I broadcasted it. (unintelligible)",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'unintellig':1"
   },
   {
@@ -575,8 +575,8 @@
     "segment_index": 57,
     "start_time": 118.529523809524,
     "end_time": 119.045428571429,
-    "content": "Fitrat",
-    "speaker": "Fitrat. Exactly. A woman",
+    "content": "Fitrat. Exactly. Fitrat",
+    "speaker": "A woman",
     "search_vector": "'fitrat':1"
   },
   {
@@ -1355,8 +1355,8 @@
     "segment_index": 135,
     "start_time": 337.510780141844,
     "end_time": 337.938333333333,
-    "content": "Yes. It's true.",
-    "speaker": "I love that. Dr. Khalifa",
+    "content": "I love that. Yes. It's true.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'true':4 'yes':1"
   },
   {
@@ -1755,8 +1755,8 @@
     "segment_index": 175,
     "start_time": 448.564036363636,
     "end_time": 448.564036363636,
-    "content": "",
-    "speaker": "They will always... A woman",
+    "content": "They will always... ",
+    "speaker": "A woman",
     "search_vector": ""
   },
   {
@@ -2865,8 +2865,8 @@
     "segment_index": 286,
     "start_time": 760.870035714286,
     "end_time": 762.577785714286,
-    "content": "I believe you're right. You know what, I think (unintelligible)",
-    "speaker": "I really feel that. A woman",
+    "content": "I really feel that. I believe you're right. You know what, I think (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'believ':2 'know':7 're':4 'right':5 'think':10 'unintellig':11"
   },
   {
@@ -3055,8 +3055,8 @@
     "segment_index": 305,
     "start_time": 790.610086419753,
     "end_time": 791.480604938272,
-    "content": "He told them everything.",
-    "speaker": "God told them everything. God told them... A woman",
+    "content": "God told them everything. God told them... He told them everything.",
+    "speaker": "A woman",
     "search_vector": "'everyth':4 'told':2"
   },
   {
@@ -4585,8 +4585,8 @@
     "segment_index": 458,
     "start_time": 1228.04,
     "end_time": 1228.79325,
-    "content": "Yeah, but for the tape.",
-    "speaker": "I know. I want for the tape. Dr. Khalifa",
+    "content": "I know. I want for the tape. Yeah, but for the tape.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'tape':5 'yeah':1"
   },
   {
@@ -6345,8 +6345,8 @@
     "segment_index": 634,
     "start_time": 1817.49593589744,
     "end_time": 1817.94644871795,
-    "content": "Yeah. On the Mahshar",
-    "speaker": "The Day of Hashr. Mahshar. Dr. Khalifa",
+    "content": "The Day of Hashr. Mahshar. Yeah. On the Mahshar",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'mahshar':4 'yeah':1"
   },
   {
@@ -9025,8 +9025,8 @@
     "segment_index": 902,
     "start_time": 2685.63482978723,
     "end_time": 2686.16774468085,
-    "content": "me that statement.",
-    "speaker": "Arabic better than my father. A woman",
+    "content": "Arabic better than my father. me that statement.",
+    "speaker": "A woman",
     "search_vector": "'statement':3"
   },
   {
@@ -9595,8 +9595,8 @@
     "segment_index": 959,
     "start_time": 2852.10496774194,
     "end_time": 2852.67835483871,
-    "content": "You misunderstood.",
-    "speaker": "I was confused. Dr. Khalifa",
+    "content": "I was confused. You misunderstood.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'misunderstood':2"
   },
   {

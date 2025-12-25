@@ -3755,8 +3755,8 @@
     "segment_index": 375,
     "start_time": 1826.89381333333,
     "end_time": 1827.57605333333,
-    "content": "That's actually Paulism.",
-    "speaker": "God is the... Dr. Khalifa",
+    "content": "God is the... That's actually Paulism.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'actual':3 'paulism':4"
   },
   {
@@ -4145,8 +4145,8 @@
     "segment_index": 414,
     "start_time": 1949.98184615385,
     "end_time": 1950.57446153846,
-    "content": "(unintelligible)",
-    "speaker": "Give me an example of conflict. Hamid",
+    "content": "Give me an example of conflict. (unintelligible)",
+    "speaker": "Hamid",
     "search_vector": "'unintellig':1"
   },
   {
@@ -5935,8 +5935,8 @@
     "segment_index": 593,
     "start_time": 2684.77485483871,
     "end_time": 2685.07912903226,
-    "content": "Why didn't?",
-    "speaker": "There were... A woman",
+    "content": "There were... Why didn't?",
+    "speaker": "A woman",
     "search_vector": "'didn':2"
   },
   {
@@ -6025,8 +6025,8 @@
     "segment_index": 602,
     "start_time": 2704.08200854701,
     "end_time": 2704.87052136752,
-    "content": "But (unintelligible) why",
-    "speaker": "Islam came through Abraham. A woman",
+    "content": "Islam came through Abraham. But (unintelligible) why",
+    "speaker": "A woman",
     "search_vector": "'unintellig':2"
   },
   {
@@ -8915,8 +8915,8 @@
     "segment_index": 891,
     "start_time": 3967.13708219178,
     "end_time": 3967.81836986301,
-    "content": "If that's so, then",
-    "speaker": "He does not guide... Hamid",
+    "content": "He does not guide... If that's so, then",
+    "speaker": "Hamid",
     "search_vector": ""
   },
   {

@@ -475,8 +475,8 @@
     "segment_index": 47,
     "start_time": 284.892364485981,
     "end_time": 285.841299065421,
-    "content": "All those kids who are starving.",
-    "speaker": "Mercy. Ismail Barakat",
+    "content": "Mercy. All those kids who are starving.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'kid':3 'starv':6"
   },
   {
@@ -1765,8 +1765,8 @@
     "segment_index": 177,
     "start_time": 772.602909774436,
     "end_time": 773.054037593985,
-    "content": "Egypt, no.",
-    "speaker": "This was one of the lines. Ismail Barakat",
+    "content": "This was one of the lines. Egypt, no.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'egypt':1"
   },
   {
@@ -1875,8 +1875,8 @@
     "segment_index": 188,
     "start_time": 824.59221978022,
     "end_time": 825.515021978022,
-    "content": "Allah Subhanahu Wa Ta'ala",
-    "speaker": "Busch. Ismail Barakat",
+    "content": "Busch. Allah Subhanahu Wa Ta'ala",
+    "speaker": "Ismail Barakat",
     "search_vector": "'ala':5 'allah':1 'subhanahu':2 'ta':4 'wa':3"
   },
   {
@@ -2075,8 +2075,8 @@
     "segment_index": 208,
     "start_time": 902.3843125,
     "end_time": 902.69575,
-    "content": "Yes.",
-    "speaker": "He created it for this discovery. Dr. Khalifa",
+    "content": "He created it for this discovery. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -2865,8 +2865,8 @@
     "segment_index": 289,
     "start_time": 1166.56123809524,
     "end_time": 1166.73,
-    "content": "Yes.",
-    "speaker": "Because they heard Moses... Dr. Khalifa",
+    "content": "Because they heard Moses... Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -3025,8 +3025,8 @@
     "segment_index": 305,
     "start_time": 1205.81244565217,
     "end_time": 1207.05152173913,
-    "content": "(72:1) قُلْ أُوحِىَ إِلَىَّ أَنَّهُ",
-    "speaker": "I was involved in. Ismail Barakat",
+    "content": "I was involved in. (72:1) قُلْ أُوحِىَ إِلَىَّ أَنَّهُ",
+    "speaker": "Ismail Barakat",
     "search_vector": "'1':2 '72':1 'أَنَّهُ':6 'أُوحِىَ':4 'إِلَىَّ':5 'قُلْ':3"
   },
   {
@@ -3305,8 +3305,8 @@
     "segment_index": 333,
     "start_time": 1321.79835483871,
     "end_time": 1322.75816129032,
-    "content": "I want you to understand...",
-    "speaker": "Hell is exile from God. Dr. Khalifa",
+    "content": "Hell is exile from God. I want you to understand...",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'understand':5 'want':2"
   },
   {
@@ -5125,8 +5125,8 @@
     "segment_index": 516,
     "start_time": 2006.57225490196,
     "end_time": 2007.09092156863,
-    "content": "I just said that.",
-    "speaker": "When you say my heart burnt and was set on fire. A woman",
+    "content": "When you say my heart burnt and was set on fire. I just said that.",
+    "speaker": "A woman",
     "search_vector": "'said':3"
   },
   {
@@ -5335,8 +5335,8 @@
     "segment_index": 537,
     "start_time": 2051.92712345679,
     "end_time": 2052.55290123457,
-    "content": "Yes. Yes.",
-    "speaker": "I remember an appendix in the Gold Quran that says that our minds are not able to comprehend except by the level of our consciousness. Dr. Khalifa",
+    "content": "I remember an appendix in the Gold Quran that says that our minds are not able to comprehend except by the level of our consciousness. Yes. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1,2"
   },
   {
@@ -6535,8 +6535,8 @@
     "segment_index": 657,
     "start_time": 2490.28119587629,
     "end_time": 2490.72516494845,
-    "content": "Yes. Yes.",
-    "speaker": "Him. It does not represent any... Dr. Khalifa",
+    "content": "Him. It does not represent any... Yes. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1,2"
   },
   {
@@ -7905,8 +7905,8 @@
     "segment_index": 795,
     "start_time": 2970.48339393939,
     "end_time": 2970.69442424242,
-    "content": "Yes.",
-    "speaker": "North Pole and a South Pole. Dr. Khalifa",
+    "content": "North Pole and a South Pole. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -8645,8 +8645,8 @@
     "segment_index": 870,
     "start_time": 3206.63982608696,
     "end_time": 3206.89965217391,
-    "content": "Yes.",
-    "speaker": "He sends the lightning. Dr. Khalifa",
+    "content": "He sends the lightning. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -9875,8 +9875,8 @@
     "segment_index": 993,
     "start_time": 3669.71677142857,
     "end_time": 3672.42168571429,
-    "content": "Yeah, they stripped Him of His divinity. They made Him human.",
-    "speaker": "Him as a human. Ismail Barakat",
+    "content": "Him as a human. Yeah, they stripped Him of His divinity. They made Him human.",
+    "speaker": "Ismail Barakat",
     "search_vector": "'divin':7 'human':11 'made':9 'strip':3 'yeah':1"
   },
   {

@@ -2925,8 +2925,8 @@
     "segment_index": 292,
     "start_time": 1442.1368974359,
     "end_time": 1442.25525641026,
-    "content": "Yes.",
-    "speaker": "God alone. Dr. Khalifa",
+    "content": "God alone. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -4625,8 +4625,8 @@
     "segment_index": 462,
     "start_time": 2059.49822807018,
     "end_time": 2059.68103508772,
-    "content": "Yes.",
-    "speaker": "And that is the heart. Dr. Khalifa",
+    "content": "And that is the heart. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -5785,8 +5785,8 @@
     "segment_index": 578,
     "start_time": 2529.05008860759,
     "end_time": 2529.31674683544,
-    "content": "I know",
-    "speaker": "He was listening to you at the convention. Dr. Khalifa",
+    "content": "He was listening to you at the convention. I know",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'know':2"
   },
   {
@@ -6105,8 +6105,8 @@
     "segment_index": 610,
     "start_time": 2713.66882352941,
     "end_time": 2714.28696470588,
-    "content": "No, no, you...",
-    "speaker": "You were not there. A man",
+    "content": "You were not there. No, no, you...",
+    "speaker": "A man",
     "search_vector": ""
   },
   {
@@ -7455,8 +7455,8 @@
     "segment_index": 745,
     "start_time": 3371.67095,
     "end_time": 3371.8314,
-    "content": "No.",
-    "speaker": "St. Jude. Dr. Khalifa",
+    "content": "St. Jude. No.",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {

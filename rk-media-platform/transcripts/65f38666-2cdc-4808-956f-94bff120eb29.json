@@ -7995,8 +7995,8 @@
     "segment_index": 799,
     "start_time": 3418.81918571429,
     "end_time": 3419.04125714286,
-    "content": "Yeah.",
-    "speaker": "That was a shock and... Dr. Khalifa",
+    "content": "That was a shock and... Yeah.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yeah':1"
   },
   {
@@ -8105,8 +8105,8 @@
     "segment_index": 810,
     "start_time": 3445.01420168067,
     "end_time": 3445.98445378151,
-    "content": "(unintelligible) Right.",
-    "speaker": "God is teaching us. A woman",
+    "content": "God is teaching us. (unintelligible) Right.",
+    "speaker": "A woman",
     "search_vector": "'right':2 'unintellig':1"
   },
   {

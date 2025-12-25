@@ -3635,8 +3635,8 @@
     "segment_index": 363,
     "start_time": 1907.54900909091,
     "end_time": 1909.49865454545,
-    "content": "Exactly. By the way, she's reading her letters.",
-    "speaker": "Word of God I said... Dr. Khalifa",
+    "content": "Word of God I said... Exactly. By the way, she's reading her letters.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'exact':1 'letter':9 'read':7 'way':4"
   },
   {
@@ -4415,8 +4415,8 @@
     "segment_index": 441,
     "start_time": 2243.63466666667,
     "end_time": 2243.83458333333,
-    "content": "Yes.",
-    "speaker": "Yes. by then. Dr. Khalifa",
+    "content": "Yes. by then. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -5515,8 +5515,8 @@
     "segment_index": 551,
     "start_time": 2828.10175471698,
     "end_time": 2828.28266037736,
-    "content": "Yes.",
-    "speaker": "Very educated people are doing it. Never read it with the meaning. Dr. Khalifa",
+    "content": "Very educated people are doing it. Never read it with the meaning. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -5935,8 +5935,8 @@
     "segment_index": 593,
     "start_time": 2953.77912345679,
     "end_time": 2954.12944444444,
-    "content": "Exactly.",
-    "speaker": "Hadith and the book of Hadith. Dr. Khalifa",
+    "content": "Hadith and the book of Hadith. Exactly.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'exact':1"
   },
   {

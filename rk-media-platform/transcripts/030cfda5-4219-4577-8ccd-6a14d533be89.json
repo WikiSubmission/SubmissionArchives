@@ -1105,8 +1105,8 @@
     "segment_index": 110,
     "start_time": 436.864703703704,
     "end_time": 437.081,
-    "content": "Yeah.",
-    "speaker": "Perestroika. Dr. Khalifa",
+    "content": "Perestroika. Yeah.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yeah':1"
   },
   {
@@ -1885,8 +1885,8 @@
     "segment_index": 188,
     "start_time": 771.813118421053,
     "end_time": 772.006223684211,
-    "content": "Yes.",
-    "speaker": "Satan to make it better. Dr. Khalifa",
+    "content": "Satan to make it better. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -4015,8 +4015,8 @@
     "segment_index": 401,
     "start_time": 1613.50620930233,
     "end_time": 1613.72341860465,
-    "content": "Yeah.",
-    "speaker": "Quran is revealed. Dr. Khalifa",
+    "content": "Quran is revealed. Yeah.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yeah':1"
   },
   {

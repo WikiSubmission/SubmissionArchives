@@ -725,8 +725,8 @@
     "segment_index": 72,
     "start_time": 428.256103896104,
     "end_time": 428.502662337662,
-    "content": "Yeah.",
-    "speaker": "Mecca with Abraham and Muhammad. Dr. Sabahi",
+    "content": "Mecca with Abraham and Muhammad. Yeah.",
+    "speaker": "Dr. Sabahi",
     "search_vector": "'yeah':1"
   },
   {
@@ -8115,8 +8115,8 @@
     "segment_index": 811,
     "start_time": 4345.90568571429,
     "end_time": 4346.31677142857,
-    "content": "Me again?",
-    "speaker": "Dan and... Dr. Sabahi",
+    "content": "Dan and... Me again?",
+    "speaker": "Dr. Sabahi",
     "search_vector": ""
   },
   {
@@ -8375,8 +8375,8 @@
     "segment_index": 837,
     "start_time": 4428.53293442623,
     "end_time": 4429.5821147541,
-    "content": "(unintelligible) more often, but",
-    "speaker": "I just... Dr. Khalifa",
+    "content": "I just... (unintelligible) more often, but",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'often':3 'unintellig':1"
   },
   {

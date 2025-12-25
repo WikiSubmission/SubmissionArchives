@@ -4445,8 +4445,8 @@
     "segment_index": 444,
     "start_time": 3567.39334285714,
     "end_time": 3568.51014285714,
-    "content": "No, it is not.",
-    "speaker": "Allah gives us permission to marry with captives of the war. Dr. Khalifa",
+    "content": "Allah gives us permission to marry with captives of the war. No, it is not.",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {
@@ -6815,8 +6815,8 @@
     "segment_index": 681,
     "start_time": 5238.45881132075,
     "end_time": 5238.45881132075,
-    "content": "",
-    "speaker": "Quranic Arabic and they wrote it in the modern... Edip",
+    "content": "Quranic Arabic and they wrote it in the modern... ",
+    "speaker": "Edip",
     "search_vector": ""
   },
   {
@@ -6825,8 +6825,8 @@
     "segment_index": 682,
     "start_time": 5238.45881132075,
     "end_time": 5239.35286792453,
-    "content": "Also in Turkey?",
-    "speaker": "In Turkey also. Dr. Khalifa",
+    "content": "In Turkey also. Also in Turkey?",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'also':1 'turkey':3"
   },
   {
@@ -6895,8 +6895,8 @@
     "segment_index": 689,
     "start_time": 5277.924,
     "end_time": 5284.976,
-    "content": "Yes.",
-    "speaker": "Arabic. Translating into Persian is convenient  because they use it a lot. Dr. Khalifa",
+    "content": "Arabic. Translating into Persian is convenient  because they use it a lot. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -7375,8 +7375,8 @@
     "segment_index": 737,
     "start_time": 5544.98767256637,
     "end_time": 5545.4202300885,
-    "content": "Oh, yeah.",
-    "speaker": "But he knew that all  along it was a spiritual thing. Dr. Khalifa",
+    "content": "But he knew that all  along it was a spiritual thing. Oh, yeah.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'oh':1 'yeah':2"
   },
   {

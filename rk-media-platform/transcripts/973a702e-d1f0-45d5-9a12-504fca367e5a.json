@@ -5765,8 +5765,8 @@
     "segment_index": 576,
     "start_time": 3198.10861904762,
     "end_time": 3198.28766666667,
-    "content": "Yes.",
-    "speaker": "Islam a bad name. A woman",
+    "content": "Islam a bad name. Yes.",
+    "speaker": "A woman",
     "search_vector": "'yes':1"
   },
   {
@@ -6365,8 +6365,8 @@
     "segment_index": 636,
     "start_time": 3494.42639805825,
     "end_time": 3495.36809708738,
-    "content": "Yeah, that's right.",
-    "speaker": "They never call themselves hypocrite. A man",
+    "content": "They never call themselves hypocrite. Yeah, that's right.",
+    "speaker": "A man",
     "search_vector": "'right':4 'yeah':1"
   },
   {

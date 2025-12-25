@@ -3565,8 +3565,8 @@
     "segment_index": 356,
     "start_time": 1966.23992708333,
     "end_time": 1967.95815625,
-    "content": "Well, that's arrogance. This is what arrogance is.",
-    "speaker": "I am able... Dr. Khalifa",
+    "content": "I am able... Well, that's arrogance. This is what arrogance is.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'arrog':4,8 'well':1"
   },
   {
@@ -3905,8 +3905,8 @@
     "segment_index": 390,
     "start_time": 2060.5678,
     "end_time": 2063.3542,
-    "content": "You're wrong. You're wrong. (unintelligible) What Mahmoud says? Mahmoud.",
-    "speaker": "He is not going to interfere. Dr. Khalifa",
+    "content": "He is not going to interfere. You're wrong. You're wrong. (unintelligible) What Mahmoud says? Mahmoud.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'mahmoud':9,11 're':2,5 'say':10 'unintellig':7 'wrong':3,6"
   },
   {
@@ -5465,8 +5465,8 @@
     "segment_index": 546,
     "start_time": 2768.27492063492,
     "end_time": 2768.43174603175,
-    "content": "Yep.",
-    "speaker": "The believers always win. Dr. Khalifa",
+    "content": "The believers always win. Yep.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yep':1"
   },
   {
@@ -6355,8 +6355,8 @@
     "segment_index": 635,
     "start_time": 3052.59171428571,
     "end_time": 3053.49846428571,
-    "content": "He controls all that.",
-    "speaker": "God is fair and just. Robert",
+    "content": "God is fair and just. He controls all that.",
+    "speaker": "Robert",
     "search_vector": "'control':2"
   },
   {

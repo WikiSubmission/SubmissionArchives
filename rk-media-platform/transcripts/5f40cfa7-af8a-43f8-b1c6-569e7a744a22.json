@@ -1175,8 +1175,8 @@
     "segment_index": 117,
     "start_time": 642.111594936709,
     "end_time": 643.047012658228,
-    "content": "Accusation.",
-    "speaker": "Accusation. Dr. Khalifa",
+    "content": "Accusation. Accusation.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'accus':1"
   },
   {
@@ -1225,8 +1225,8 @@
     "segment_index": 122,
     "start_time": 669.824833333333,
     "end_time": 670.0215,
-    "content": "Yes.",
-    "speaker": "I want to generalize this. This is for everybody. Edip",
+    "content": "I want to generalize this. This is for everybody. Yes.",
+    "speaker": "Edip",
     "search_vector": "'yes':1"
   },
   {
@@ -4955,8 +4955,8 @@
     "segment_index": 495,
     "start_time": 2896.60706349206,
     "end_time": 2896.79207936508,
-    "content": "Yes.",
-    "speaker": "He can read. He can spot it. Dr. Khalifa",
+    "content": "He can read. He can spot it. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {

@@ -6445,8 +6445,8 @@
     "segment_index": 644,
     "start_time": 3325.61849,
     "end_time": 3326.99033,
-    "content": "From the blood, yes. Even those.",
-    "speaker": "AIDS or drugs or whatever. Dr. Khalifa",
+    "content": "AIDS or drugs or whatever. From the blood, yes. Even those.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'blood':3 'even':5 'yes':4"
   },
   {
@@ -6465,8 +6465,8 @@
     "segment_index": 646,
     "start_time": 3332.04485714286,
     "end_time": 3332.75614285714,
-    "content": "Right. Right.",
-    "speaker": "AIDS or whatever. Dr. Khalifa",
+    "content": "AIDS or whatever. Right. Right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':1,2"
   },
   {
@@ -6725,8 +6725,8 @@
     "segment_index": 672,
     "start_time": 3452.92281,
     "end_time": 3453.8508,
-    "content": "Well, they asked them. Yes.",
-    "speaker": "Bilharzia. They never even bothered checking. Dr. Khalifa",
+    "content": "Bilharzia. They never even bothered checking. Well, they asked them. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'ask':3 'well':1 'yes':5"
   },
   {
@@ -7135,8 +7135,8 @@
     "segment_index": 713,
     "start_time": 3576.58186206897,
     "end_time": 3577.92348275862,
-    "content": "That's right. That's right.",
-    "speaker": "God is gonna protect us from all evil and all harm. Dr. Khalifa",
+    "content": "God is gonna protect us from all evil and all harm. That's right. That's right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':3,6"
   },
   {

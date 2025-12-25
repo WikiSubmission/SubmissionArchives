@@ -1855,8 +1855,8 @@
     "segment_index": 185,
     "start_time": 815.757720930233,
     "end_time": 815.935581395349,
-    "content": "Yes.",
-    "speaker": "But we have come to know because you have come in our time. Dr. Khalifa",
+    "content": "But we have come to know because you have come in our time. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -2135,8 +2135,8 @@
     "segment_index": 213,
     "start_time": 916.75372,
     "end_time": 916.96556,
-    "content": "Yes.",
-    "speaker": "I started to understand. Dr. Khalifa",
+    "content": "I started to understand. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -2685,8 +2685,8 @@
     "segment_index": 268,
     "start_time": 1171.1712173913,
     "end_time": 1171.37514782609,
-    "content": "Yes.",
-    "speaker": "I knew that I was not supposed to pick up anything. Dr. Khalifa",
+    "content": "I knew that I was not supposed to pick up anything. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -2955,8 +2955,8 @@
     "segment_index": 295,
     "start_time": 1268.6725106383,
     "end_time": 1268.83393617021,
-    "content": "No.",
-    "speaker": "But sometimes... Dr. Khalifa",
+    "content": "But sometimes... No.",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {
@@ -3395,8 +3395,8 @@
     "segment_index": 339,
     "start_time": 1447.75021505376,
     "end_time": 1448.54377419355,
-    "content": "Yes. Exactly.",
-    "speaker": "You convinced her and him. Now you are beginning to hear it. Dr. Khalifa",
+    "content": "You convinced her and him. Now you are beginning to hear it. Yes. Exactly.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'exact':2 'yes':1"
   },
   {
@@ -5905,8 +5905,8 @@
     "segment_index": 590,
     "start_time": 2629.50771428571,
     "end_time": 2629.66885714286,
-    "content": "Yes.",
-    "speaker": "Carpenter. Dr. Khalifa",
+    "content": "Carpenter. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -7395,8 +7395,8 @@
     "segment_index": 739,
     "start_time": 3316.656,
     "end_time": 3316.75277419355,
-    "content": "Ok.",
-    "speaker": "Quran partially. Parivash",
+    "content": "Quran partially. Ok.",
+    "speaker": "Parivash",
     "search_vector": "'ok':1"
   },
   {
@@ -8485,8 +8485,8 @@
     "segment_index": 848,
     "start_time": 3807.39810169492,
     "end_time": 3807.5556440678,
-    "content": "Yeah.",
-    "speaker": "The jinn is telling you to sleep. A man",
+    "content": "The jinn is telling you to sleep. Yeah.",
+    "speaker": "A man",
     "search_vector": "'yeah':1"
   },
   {

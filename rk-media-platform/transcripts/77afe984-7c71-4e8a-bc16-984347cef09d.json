@@ -2625,8 +2625,8 @@
     "segment_index": 262,
     "start_time": 1545.98221276596,
     "end_time": 1547.67838297872,
-    "content": "This is not right. You cannot, ego, yes.",
-    "speaker": "God describes intelligence different. Dr. Sabahi",
+    "content": "God describes intelligence different. This is not right. You cannot, ego, yes.",
+    "speaker": "Dr. Sabahi",
     "search_vector": "'cannot':6 'ego':7 'right':4 'yes':8"
   },
   {
@@ -5605,8 +5605,8 @@
     "segment_index": 560,
     "start_time": 2806.11007446809,
     "end_time": 2806.89310638298,
-    "content": "No, wait, wait, wait.",
-    "speaker": "God is... Dr. Khalifa",
+    "content": "God is... No, wait, wait, wait.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'wait':2,3,4"
   },
   {
@@ -6295,8 +6295,8 @@
     "segment_index": 629,
     "start_time": 3049.83491935484,
     "end_time": 3050.65216129032,
-    "content": "No, no, the second one.",
-    "speaker": "I never said that. Edip",
+    "content": "I never said that. No, no, the second one.",
+    "speaker": "Edip",
     "search_vector": "'one':5 'second':4"
   },
   {
@@ -6355,8 +6355,8 @@
     "segment_index": 635,
     "start_time": 3061.18924050633,
     "end_time": 3062.02202531646,
-    "content": "without angels.",
-    "speaker": "He can do. Dr. Khalifa",
+    "content": "He can do. without angels.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'angel':2 'without':1"
   },
   {
@@ -6915,8 +6915,8 @@
     "segment_index": 691,
     "start_time": 3302.52085714286,
     "end_time": 3304.61914285714,
-    "content": "Ok. We have a linguist, we have a linguist here.",
-    "speaker": "He will use them. Dr. Khalifa",
+    "content": "He will use them. Ok. We have a linguist, we have a linguist here.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'linguist':5,9 'ok':1"
   },
   {
@@ -7325,8 +7325,8 @@
     "segment_index": 732,
     "start_time": 3412.74052307692,
     "end_time": 3413.59861538462,
-    "content": "Sure He can.",
-    "speaker": "His system specifies angels to do this. A woman",
+    "content": "His system specifies angels to do this. Sure He can.",
+    "speaker": "A woman",
     "search_vector": "'sure':1"
   },
   {
@@ -7915,8 +7915,8 @@
     "segment_index": 791,
     "start_time": 3559.16806896552,
     "end_time": 3560.25220689655,
-    "content": "That question. That brother...",
-    "speaker": "Dr. Sabahi wants to say something. Edip",
+    "content": "Dr. Sabahi wants to say something. That question. That brother...",
+    "speaker": "Edip",
     "search_vector": "'brother':4 'question':2"
   },
   {
@@ -7985,8 +7985,8 @@
     "segment_index": 798,
     "start_time": 3579.45503125,
     "end_time": 3581.35034375,
-    "content": "I know you. You are... He said, he said, you said.",
-    "speaker": "Edip. Nobody will say that. Nobody will say that. Edip",
+    "content": "Edip. Nobody will say that. Nobody will say that. I know you. You are... He said, he said, you said.",
+    "speaker": "Edip",
     "search_vector": "'know':2 'said':7,9,11"
   },
   {
@@ -8075,8 +8075,8 @@
     "segment_index": 807,
     "start_time": 3593.10881690141,
     "end_time": 3594.00294366197,
-    "content": "Did he say it or not?",
-    "speaker": "I ask you all the Arabic. Edip",
+    "content": "I ask you all the Arabic. Did he say it or not?",
+    "speaker": "Edip",
     "search_vector": "'say':3"
   },
   {
@@ -9235,8 +9235,8 @@
     "segment_index": 923,
     "start_time": 4069.66851655629,
     "end_time": 4070.9762781457,
-    "content": "First of all, Behrouz, I am ready.",
-    "speaker": "Behrouz an apology because you committed a breaking of the commandment right here. Edip",
+    "content": "Behrouz an apology because you committed a breaking of the commandment right here. First of all, Behrouz, I am ready.",
+    "speaker": "Edip",
     "search_vector": "'behrouz':4 'first':1 'readi':7"
   },
   {

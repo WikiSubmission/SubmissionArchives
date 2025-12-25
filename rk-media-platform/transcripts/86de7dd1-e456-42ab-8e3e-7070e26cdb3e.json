@@ -2165,8 +2165,8 @@
     "segment_index": 216,
     "start_time": 1454.80533333333,
     "end_time": 1455.24066666667,
-    "content": "Who?",
-    "speaker": "They talk to the... Dr. Khalifa",
+    "content": "They talk to the... Who?",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {
@@ -6505,8 +6505,8 @@
     "segment_index": 650,
     "start_time": 3858.5598,
     "end_time": 3859.358,
-    "content": "(unintelligible) verse 20.",
-    "speaker": "Wherever you are. Catherine",
+    "content": "Wherever you are. (unintelligible) verse 20.",
+    "speaker": "Catherine",
     "search_vector": "'20':3 'unintellig':1 'vers':2"
   },
   {

@@ -425,8 +425,8 @@
     "segment_index": 42,
     "start_time": 118.61816,
     "end_time": 118.80668,
-    "content": "Right.",
-    "speaker": "Ayatollah. What Ayatollah does. Dr. Khalifa",
+    "content": "Ayatollah. What Ayatollah does. Right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':1"
   },
   {
@@ -1765,8 +1765,8 @@
     "segment_index": 176,
     "start_time": 648.117453703704,
     "end_time": 648.862888888889,
-    "content": "So, (unintelligible) I think...",
-    "speaker": "Quran. Ismail Barakat",
+    "content": "Quran. So, (unintelligible) I think...",
+    "speaker": "Ismail Barakat",
     "search_vector": "'think':4 'unintellig':2"
   },
   {
@@ -2545,8 +2545,8 @@
     "segment_index": 254,
     "start_time": 865.034280487805,
     "end_time": 865.495378048781,
-    "content": "Merneptah.",
-    "speaker": "Pharaoh as Ramses. Dr. Khalifa",
+    "content": "Pharaoh as Ramses. Merneptah.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'merneptah':1"
   },
   {
@@ -2815,8 +2815,8 @@
     "segment_index": 281,
     "start_time": 920.862776470588,
     "end_time": 921.018870588235,
-    "content": "Yes.",
-    "speaker": "There must be something going on. Dr. Khalifa",
+    "content": "There must be something going on. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -7985,8 +7985,8 @@
     "segment_index": 798,
     "start_time": 3317.64438461538,
     "end_time": 3318.60592307692,
-    "content": "But it's (unintelligible)",
-    "speaker": "I see. Ismail Barakat",
+    "content": "I see. But it's (unintelligible)",
+    "speaker": "Ismail Barakat",
     "search_vector": "'unintellig':4"
   },
   {

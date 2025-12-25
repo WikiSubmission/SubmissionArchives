@@ -1165,8 +1165,8 @@
     "segment_index": 116,
     "start_time": 527.783203883495,
     "end_time": 528.046893203884,
-    "content": "Yeah.",
-    "speaker": "Quran actually tells you to love your enemy. A man",
+    "content": "Quran actually tells you to love your enemy. Yeah.",
+    "speaker": "A man",
     "search_vector": "'yeah':1"
   },
   {
@@ -1285,8 +1285,8 @@
     "segment_index": 128,
     "start_time": 566.953868686869,
     "end_time": 567.198797979798,
-    "content": "Yes.",
-    "speaker": "I am a believer. Dr. Khalifa",
+    "content": "I am a believer. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -1735,8 +1735,8 @@
     "segment_index": 173,
     "start_time": 712.454,
     "end_time": 712.686290909091,
-    "content": "Yes.",
-    "speaker": "Muhammad beside God. They declare... Dr. Khalifa",
+    "content": "Muhammad beside God. They declare... Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -3075,8 +3075,8 @@
     "segment_index": 307,
     "start_time": 1245.45997101449,
     "end_time": 1245.7228115942,
-    "content": "Yes.",
-    "speaker": "God gives an interesting example of shadow. Dr. Khalifa",
+    "content": "God gives an interesting example of shadow. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -4025,8 +4025,8 @@
     "segment_index": 402,
     "start_time": 1654.36335294118,
     "end_time": 1655.15641176471,
-    "content": "Qatte'a (قَطِّعَ).",
-    "speaker": "Rashad said. Dr. Khalifa",
+    "content": "Rashad said. Qatte'a (قَطِّعَ).",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'qatt':1 'قَطِّعَ':3"
   },
   {
@@ -4115,8 +4115,8 @@
     "segment_index": 411,
     "start_time": 1680.94542253521,
     "end_time": 1681.90009859155,
-    "content": "That's right.",
-    "speaker": "It is to make it stronger. Dr. Khalifa",
+    "content": "It is to make it stronger. That's right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':3"
   },
   {
@@ -4305,8 +4305,8 @@
     "segment_index": 430,
     "start_time": 1750.99768674699,
     "end_time": 1750.99768674699,
-    "content": "",
-    "speaker": "Friday... Dr. Khalifa",
+    "content": "Friday... ",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {
@@ -4315,8 +4315,8 @@
     "segment_index": 431,
     "start_time": 1750.99768674699,
     "end_time": 1751.66075903614,
-    "content": "Then, you do 4?",
-    "speaker": "You cannot Pray. A woman",
+    "content": "You cannot Pray. Then, you do 4?",
+    "speaker": "A woman",
     "search_vector": "'4':4"
   },
   {
@@ -5685,8 +5685,8 @@
     "segment_index": 568,
     "start_time": 2289.48439240506,
     "end_time": 2290.12759493671,
-    "content": "Apamea is Apamea.",
-    "speaker": "Apamea. Apamea. Listen. A woman",
+    "content": "Apamea. Apamea. Listen. Apamea is Apamea.",
+    "speaker": "A woman",
     "search_vector": "'apamea':1,3"
   },
   {
@@ -5875,8 +5875,8 @@
     "segment_index": 587,
     "start_time": 2341.65528571429,
     "end_time": 2341.84271428571,
-    "content": "Why?",
-    "speaker": "I want to be rich. Dr. Khalifa",
+    "content": "I want to be rich. Why?",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {
@@ -5935,8 +5935,8 @@
     "segment_index": 593,
     "start_time": 2354.02811940298,
     "end_time": 2354.83113432836,
-    "content": "Alright, we agree.",
-    "speaker": "But it is not just so... Dr. Khalifa",
+    "content": "But it is not just so... Alright, we agree.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'agre':3 'alright':1"
   },
   {
@@ -6515,8 +6515,8 @@
     "segment_index": 651,
     "start_time": 2543.75428431373,
     "end_time": 2546.15237254902,
-    "content": "You've reached, you've reached the top as far as belief is concerned.",
-    "speaker": "God says... Dr. Khalifa",
+    "content": "God says... You've reached, you've reached the top as far as belief is concerned.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'belief':12 'concern':14 'far':10 'reach':3,6 'top':8 've':2,5"
   },
   {
@@ -6775,8 +6775,8 @@
     "segment_index": 677,
     "start_time": 2694.85266666667,
     "end_time": 2695.11311111111,
-    "content": "Yes.",
-    "speaker": "Prayer at that time. Dr. Khalifa",
+    "content": "Prayer at that time. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -6835,8 +6835,8 @@
     "segment_index": 683,
     "start_time": 2710.04392727273,
     "end_time": 2711.04669090909,
-    "content": "Yes. Exactly. That also.",
-    "speaker": "You can concentrate on the Prayer. Dr. Khalifa",
+    "content": "You can concentrate on the Prayer. Yes. Exactly. That also.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'also':4 'exact':2 'yes':1"
   },
   {
@@ -7045,8 +7045,8 @@
     "segment_index": 704,
     "start_time": 2776.99413793103,
     "end_time": 2777.21227586207,
-    "content": "No.",
-    "speaker": "I think you are going to spend all of your money in the right way. Dr. Khalifa",
+    "content": "I think you are going to spend all of your money in the right way. No.",
+    "speaker": "Dr. Khalifa",
     "search_vector": ""
   },
   {
@@ -7335,8 +7335,8 @@
     "segment_index": 733,
     "start_time": 2866.13409090909,
     "end_time": 2866.2637012987,
-    "content": "Yes.",
-    "speaker": "Twice as rich. Dr. Khalifa",
+    "content": "Twice as rich. Yes.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
@@ -7785,8 +7785,8 @@
     "segment_index": 778,
     "start_time": 3100.39896694215,
     "end_time": 3100.76704958678,
-    "content": "Right.",
-    "speaker": "God does say that closest to Me is the most righteous. Dr. Khalifa",
+    "content": "God does say that closest to Me is the most righteous. Right.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'right':1"
   },
   {
@@ -8505,8 +8505,8 @@
     "segment_index": 850,
     "start_time": 3357.95972268908,
     "end_time": 3358.14241176471,
-    "content": "Yeah.",
-    "speaker": "An allegory. Yes. Parivash",
+    "content": "An allegory. Yes. Yeah.",
+    "speaker": "Parivash",
     "search_vector": "'yeah':1"
   },
   {
@@ -9555,8 +9555,8 @@
     "segment_index": 955,
     "start_time": 3853.41276190476,
     "end_time": 3854.26742857143,
-    "content": "Explain it for Erik, for me.",
-    "speaker": "Yes. Yes. Dr. Khalifa",
+    "content": "Yes. Yes. Explain it for Erik, for me.",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'erik':4 'explain':1"
   },
   {

@@ -9795,8 +9795,8 @@
     "segment_index": 979,
     "start_time": 4247.12232911392,
     "end_time": 4247.70379746835,
-    "content": "Where? Everywhere.",
-    "speaker": "Muhammad is aware. A man",
+    "content": "Muhammad is aware. Where? Everywhere.",
+    "speaker": "A man",
     "search_vector": "'everywher':2"
   },
   {
@@ -9945,8 +9945,8 @@
     "segment_index": 994,
     "start_time": 4280.39828571429,
     "end_time": 4280.6086031746,
-    "content": "Yes or No?",
-    "speaker": "I am answering your question. Dr. Khalifa",
+    "content": "I am answering your question. Yes or No?",
+    "speaker": "Dr. Khalifa",
     "search_vector": "'yes':1"
   },
   {
