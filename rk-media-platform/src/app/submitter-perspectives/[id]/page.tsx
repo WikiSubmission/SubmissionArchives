@@ -65,7 +65,7 @@ function StructuredContent({ doc }: { doc: any }) {
                         className="max-w-full h-auto rounded-lg shadow-sm"
                     />
                     {section.image.caption && (
-                        <p className="text-center text-sm text-gray-500 mt-2 italic">
+                        <p className="text-center text-sm text-muted-foreground mt-2 italic">
                             {section.image.caption}
                         </p>
                     )}
@@ -73,18 +73,18 @@ function StructuredContent({ doc }: { doc: any }) {
             )}
 
             {section.quotes && (
-                <div className="space-y-6 my-8 pl-6 border-l-4 border-amber-600 bg-gradient-to-r from-amber-50 to-transparent dark:from-amber-900/20 p-6 rounded-r-lg shadow-sm">
+                <div className="space-y-6 my-8 pl-6 border-l-4 border-primary newsletter-quote-block p-6 rounded-r-lg shadow-sm">
                     {section.quotes.map((quote: any, i: number) => (
                         <div key={i}>
                             <p className="italic text-xl mb-3 font-medium text-foreground leading-relaxed">"{quote.text}"</p>
-                            {quote.reference && <cite className="block text-sm text-amber-600 dark:text-amber-400 not-italic font-semibold">— {quote.reference}</cite>}
+                            {quote.reference && <cite className="block text-sm text-muted-foreground not-italic font-semibold">— {quote.reference}</cite>}
                         </div>
                     ))}
                 </div>
             )}
 
             {section.quote_block && (
-                <div className="my-8 px-8 py-6 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 border-l-4 border-slate-800 dark:border-slate-600 rounded-r-lg shadow-sm">
+                <div className="my-8 px-8 py-6 newsletter-quote-block border-l-4 border-foreground rounded-r-lg shadow-sm">
                     {Array.isArray(section.quote_block.text) ? (
                         section.quote_block.text.map((t: string, i: number) => (
                             <p key={i} style={{ fontFamily: 'var(--font-roboto-slab)' }} className="italic text-xl leading-relaxed text-foreground mb-4">{t}</p>
@@ -94,12 +94,12 @@ function StructuredContent({ doc }: { doc: any }) {
                     )}
 
                     {section.quote_block.reference && (
-                        <div className="text-left font-bold text-slate-700 text-sm mt-4">
+                        <div className="text-left font-bold text-foreground dark:text-muted-foreground text-sm mt-4">
                             {section.quote_block.reference}
                         </div>
                     )}
                     {section.quote_block.references && (
-                        <div className="text-left font-bold text-slate-700 text-sm mt-4">
+                        <div className="text-left font-bold text-foreground dark:text-muted-foreground text-sm mt-4">
                             {section.quote_block.references.join(', ')}
                         </div>
                     )}
@@ -107,12 +107,12 @@ function StructuredContent({ doc }: { doc: any }) {
             )}
 
             {section.center_block && (
-                <div className="my-8 bg-gray-50 dark:bg-zinc-900 p-8 rounded-lg text-center border border-gray-100 dark:border-zinc-800 shadow-sm">
+                <div className="my-8 newsletter-center-block p-8 rounded-lg text-center border shadow-sm">
                     {section.center_block.content?.map((text: string, i: number) => (
-                        <p key={i} className="mb-4 font-medium text-lg">{text}</p>
+                        <p key={i} className="mb-4 font-medium text-lg text-foreground">{text}</p>
                     ))}
                     {section.center_block.references && (
-                        <div className="text-sm text-gray-500 mt-4 font-bold tracking-wider">
+                        <div className="text-sm text-muted-foreground mt-4 font-bold tracking-wider">
                             {section.center_block.references.join(' • ')}
                         </div>
                     )}
@@ -120,12 +120,12 @@ function StructuredContent({ doc }: { doc: any }) {
             )}
 
             {section.right_block && (
-                <div className="my-8 mr-auto max-w-lg bg-blue-50 dark:bg-blue-950/50 p-6 rounded-xl border border-blue-100 dark:border-blue-900 text-left">
+                <div className="my-8 mr-auto max-w-lg newsletter-center-block p-6 rounded-xl border text-left">
                     {section.right_block.content?.map((text: string, i: number) => (
-                        <p key={i} className="mb-4 text-blue-900 dark:text-blue-100">{text}</p>
+                        <p key={i} className="mb-4">{text}</p>
                     ))}
                     {section.right_block.references && (
-                        <div className="text-sm text-blue-700 dark:text-blue-300 mt-2 font-bold">
+                        <div className="text-sm text-muted-foreground mt-2 font-bold">
                             {section.right_block.references.join(' ')}
                         </div>
                     )}
@@ -133,49 +133,71 @@ function StructuredContent({ doc }: { doc: any }) {
             )}
 
             {section.long_reflection && (
-                <div className="my-10 bg-gradient-to-br from-indigo-50 to-white dark:from-indigo-950/40 dark:to-zinc-900 p-8 rounded-xl shadow-inner border border-indigo-100 dark:border-indigo-900/50">
+                <div className="my-10 newsletter-reflection-block p-8 rounded-xl shadow-inner border">
                     {section.long_reflection.map((text: string, i: number) => (
-                        <p key={i} className={`mb-4 text-lg text-indigo-900 dark:text-indigo-100 ${i === 0 ? "font-bold text-xl mb-6" : ""}`}>{text}</p>
+                        <p key={i} className={`mb-4 text-lg ${i === 0 ? "font-bold text-xl mb-6" : ""}`}>{text}</p>
                     ))}
                 </div>
             )}
 
             {section.table && (
-                <div className="my-10 overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
-                    <table className="w-full text-sm text-left">
-                        <thead className="text-xs text-gray-700 dark:text-gray-300 uppercase bg-gray-50 dark:bg-gray-800 border-b dark:border-gray-700">
-                            <tr>
-                                <th colSpan={3} className="px-6 py-3 text-center text-base font-bold tracking-wider">{section.table.title}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {section.table.rows.map((row: string[], i: number) => (
-                                <tr key={i} className={`border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 ${i === 0 ? 'bg-gray-50 dark:bg-gray-800 font-bold' : 'bg-white dark:bg-gray-900'}`}>
-                                    {row.map((cell, j) => (
-                                        <td key={j} className="px-6 py-4 text-gray-900 dark:text-gray-100 text-center align-top">
-                                            {cell}
-                                        </td>
-                                    ))}
+                <div className="my-10">
+                    <div className="overflow-x-auto rounded-lg border newsletter-table">
+                        <table className="w-full text-sm text-left newsletter-table">
+                            <thead className="text-xs uppercase border-b">
+                                <tr>
+                                    <th colSpan={section.table.headers?.length || 3} className="px-6 py-3 text-center text-base font-bold tracking-wider">{section.table.title}</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                                {section.table.headers && (
+                                    <tr>
+                                        {section.table.headers.map((header: string, i: number) => (
+                                            <th key={i} className="px-6 py-3 text-center font-bold">{header}</th>
+                                        ))}
+                                    </tr>
+                                )}
+                            </thead>
+                            <tbody>
+                                {section.table.rows.map((row: string[], i: number) => (
+                                    <tr key={i} className="border-b">
+                                        {row.map((cell, j) => (
+                                            <td key={j} className="px-6 py-4 text-center align-top">
+                                                {cell}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    {section.table.footer && (
+                        <div className="mt-4 text-center space-y-1">
+                            {Array.isArray(section.table.footer) ? (
+                                section.table.footer.map((line: string, i: number) => (
+                                    <div key={i} className="text-sm">
+                                        {line}
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="text-sm">{section.table.footer}</div>
+                            )}
+                        </div>
+                    )}
                 </div>
             )}
 
             {section.editorial_note && (
-                <div className="my-6 text-center italic text-gray-500 font-serif text-lg">
+                <div className="my-6 text-center italic text-muted-foreground font-serif text-lg">
                     — {section.editorial_note.text || section.editorial_note} —
                 </div>
             )}
 
             {section.coming_next && (
                 <div className="my-8 p-6 border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg text-center">
-                    <h4 className="font-bold text-gray-500 dark:text-gray-400 mb-4 uppercase tracking-widest text-sm">Coming Next Issue</h4>
-                    <div className="flex flex-wrap justify-center gap-4 font-bold text-gray-800 dark:text-gray-200">
+                    <h4 className="font-bold text-muted-foreground mb-4 uppercase tracking-widest text-sm">Coming Next Issue</h4>
+                    <div className="flex flex-wrap justify-center gap-4 font-bold text-foreground">
                         {section.coming_next.map((item: string, i: number) => (
                             <span key={i} className="flex items-center gap-2">
-                                {i > 0 && <span className="text-gray-300 dark:text-gray-700">•</span>}
+                                {i > 0 && <span className="text-border">•</span>}
                                 {item}
                             </span>
                         ))}
@@ -184,13 +206,13 @@ function StructuredContent({ doc }: { doc: any }) {
             )}
 
             {section.section_divider && (
-                <div className="text-center text-gray-300 my-12 text-xl tracking-[0.5em] select-none opacity-50">
+                <div className="text-center text-border my-12 text-xl tracking-[0.5em] select-none opacity-50">
                     • • •
                 </div>
             )}
 
             {section.footer_sections && (
-                <div className="grid md:grid-cols-2 gap-8 mt-12 bg-gray-50 dark:bg-zinc-900 p-8 rounded-xl">
+                <div className="grid md:grid-cols-2 gap-8 mt-12 newsletter-center-block p-8 rounded-xl">
                     {section.footer_sections.map((fs: any, i: number) => (
                         <div key={i}>
                             <h3 className="font-bold uppercase text-foreground mb-4 border-b border-border pb-2">{fs.title}</h3>
@@ -212,17 +234,17 @@ function StructuredContent({ doc }: { doc: any }) {
             )}
 
             {section.footer && Array.isArray(section.footer) && (
-                <div className="mt-12 space-y-4 text-center border-t border-gray-100 pt-8">
+                <div className="mt-12 space-y-4 text-center border-t border-border pt-8">
                     {section.footer.map((block: string, i: number) => (
-                        <p key={i} className="font-bold text-gray-600 text-sm uppercase tracking-wide">{block}</p>
+                        <p key={i} className="font-bold text-muted-foreground text-sm uppercase tracking-wide">{block}</p>
                     ))}
                 </div>
             )}
 
             {section.footer_blocks && (
-                <div className="mt-12 space-y-4 text-center border-t border-gray-100 pt-8">
+                <div className="mt-12 space-y-4 text-center border-t border-border pt-8">
                     {section.footer_blocks.map((block: string, i: number) => (
-                        <p key={i} className="font-bold text-gray-600 text-sm uppercase tracking-wide">{block}</p>
+                        <p key={i} className="font-bold text-muted-foreground text-sm uppercase tracking-wide">{block}</p>
                     ))}
                 </div>
             )}
@@ -292,9 +314,9 @@ function StructuredContent({ doc }: { doc: any }) {
                             <div key={pIdx} className="page-group mb-20">
                                 {/* Optional Page Header */}
                                 {page.header && pIdx > 0 && (
-                                    <div className="text-center mb-8 border-b border-gray-100 pb-4">
-                                        <div className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">{page.page}</div>
-                                        <div className="font-bold text-gray-800">{page.header.publisher}</div>
+                                    <div className="text-center mb-8 border-b border-border pb-4">
+                                        <div className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-1">{page.page}</div>
+                                        <div className="font-bold text-foreground">{page.header.publisher}</div>
                                     </div>
                                 )}
 
@@ -303,9 +325,9 @@ function StructuredContent({ doc }: { doc: any }) {
                                 {/* Page Divider */}
                                 {pIdx < doc.pages.length - 1 && (
                                     <div className="flex items-center gap-4 my-16 opacity-30">
-                                        <div className="h-px bg-gray-400 flex-1"></div>
-                                        <div style={{ fontFamily: 'var(--font-roboto-slab)' }} className="text-sm italic text-gray-500">Page Break</div>
-                                        <div className="h-px bg-gray-400 flex-1"></div>
+                                        <div className="h-px bg-border flex-1"></div>
+                                        <div style={{ fontFamily: 'var(--font-roboto-slab)' }} className="text-sm italic text-muted-foreground">Page Break</div>
+                                        <div className="h-px bg-border flex-1"></div>
                                     </div>
                                 )}
                             </div>
@@ -333,7 +355,7 @@ function StructuredContent({ doc }: { doc: any }) {
                         )}
                         <div className="font-bold text-xl mb-2">MASJID TUCSON</div>
                         <div className="font-arabic text-2xl mb-2">مسجد توسن</div>
-                        <div className="text-gray-600">739 E. 8th St., Tucson, AZ 85719</div>
+                        <div className="text-muted-foreground">739 E. 8th St., Tucson, AZ 85719</div>
                     </footer>
                 )}
             </article>
@@ -452,7 +474,7 @@ export default async function NewsletterReader({ params }: Props) {
                             text-align: center; 
                             margin-bottom: 1em;
                             padding-bottom: 0.5em;
-                            border-bottom: 1px solid #e5e7eb;
+                            border-bottom: 1px solid var(--border);
                         }
                         
                         .newsletter-content h2 { 
@@ -480,7 +502,7 @@ export default async function NewsletterReader({ params }: Props) {
                         
                         /* Links */
                         .newsletter-content a { 
-                            color: #d97706; 
+                            color: var(--primary); 
                             text-decoration: underline; 
                             text-decoration-thickness: 1px;
                             text-underline-offset: 3px;

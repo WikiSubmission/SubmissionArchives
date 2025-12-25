@@ -29,3 +29,6 @@ scripts/archive/
 transcripts_youtube_raw/
 transcripts_api_raw/
 transcripts/backup_pre_std/
+
+# Large media assets directory
+media-assets/

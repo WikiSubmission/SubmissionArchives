@@ -255,7 +255,7 @@ export default function HomePageClient({ initialMedia }: { initialMedia: any[] }
                         <Link href="/notes">
                             <button className={`px-6 py-3 rounded-sm ${theme.text === 'text-zinc-100' ? 'bg-zinc-800 text-zinc-100 ring-1 ring-zinc-700 hover:bg-zinc-700' : 'bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-50'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all shadow-sm hover:shadow-md flex items-center gap-3`}>
                                 <FileText className="w-4 h-4" />
-                                NOTES
+                                QUICK NOTES
                             </button>
                         </Link>
                     </div>

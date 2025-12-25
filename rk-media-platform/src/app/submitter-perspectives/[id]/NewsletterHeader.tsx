@@ -26,7 +26,7 @@ export default function NewsletterHeader({
         <header className="sticky top-0 w-full bg-background/95 backdrop-blur shadow-sm border-b border-border z-50 print:hidden transition-colors duration-200">
             <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <Link href="/submitter-perspectives">
+                    <Link href="/">
                         <button className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground">
                             <ChevronLeft className="w-5 h-5" />
                         </button>

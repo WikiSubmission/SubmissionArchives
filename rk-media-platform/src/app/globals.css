@@ -52,3 +52,44 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Newsletter Special Blocks - Using CSS Variables for Dark Mode */
+.newsletter-center-block {
+  background-color: var(--muted);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-quote-block {
+  background: linear-gradient(135deg, var(--muted) 0%, transparent 100%);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-reflection-block {
+  background: linear-gradient(135deg, var(--muted) 0%, transparent 100%);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-table {
+  border-color: var(--border);
+}
+
+.newsletter-table th,
+.newsletter-table td {
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-table thead {
+  background-color: var(--muted);
+}
+
+.newsletter-table tbody tr:nth-child(even) {
+  background-color: var(--muted);
+}
+
+.newsletter-table tbody tr:nth-child(odd) {
+  background-color: var(--background);
+}
