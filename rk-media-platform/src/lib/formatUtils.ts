@@ -7,7 +7,9 @@ export interface FormattedMedia {
     sortValue: number; // Timestamp for date-based, or number for numeric
 }
 
-export function formatMedia(item: { title: string; date?: string; type: string; created_at?: string }): FormattedMedia {
+import { STUDY_TITLES } from './studyTitles';
+
+export function formatMedia(item: { title: string; date?: string; type: string; created_at?: string; id?: string }): FormattedMedia {
     const rawTitle = item.title;
     let displayTitle = rawTitle;
     let displayDate = item.date || '';
@@ -18,39 +20,88 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
     // --- Quran Study ---
     // Sort: Numerical (Chronological Numerical Order)
     if (item.type === 'quran-study') {
-        // 1. Extract Number
-        const numberMatch = rawTitle.match(/^(\d+)\)/);
-        const numberPrefix = numberMatch ? numberMatch[1] : '';
-        if (numberPrefix) {
-            sortValue = parseFloat(numberPrefix);
-        }
-
-        // 2. Extract Surah
-        const suraMatch = rawTitle.match(/Sura\s+([\d_]+(?:,\s*[\d_]+)*)/i);
-        const suraRef = suraMatch ? `Surah ${suraMatch[1].replace(/_/g, ':')}` : '';
-
-        // 3. Extract Topics
-        let cleanText = rawTitle
-            .replace(/^(\d+\))/, '')
-            .replace(/Quran\s+Study/i, '')
-            .replace(/\d{1,2}[/⧸-]\d{1,2}[/⧸-]\d{2,4}/, '') // Handle both slash types
-            .replace(/Sura\s+[\d_,]+/i, '')
-            .replace(/by\s+[\w\s]+(?:,|$)/i, '')
-            .replace(/Rashad\s+Khalifa/i, '')
-            .replace(/-/, '')
+        const normalizedTitle = item.title
+            .toLowerCase()
+            .replace(/\.(mp3|m4a)$/, '') // Strip extension
+            .replace(/&amp;/g, '&')
+            .replace(/⧸/g, '/')
+            .replace(/\u00A0/g, ' ')
+            .replace(/['’‘]/g, "'")
+            .replace(/["“”]/g, '"')
+            .replace(/[-–—]/g, '-')
+            .replace(/\s+/g, ' ')
             .trim();
 
-        const rawTopics = cleanText.split(',').map(t => t.trim()).filter(t => t.length > 2);
-        topics = rawTopics
-            .filter(t => !t.toLowerCase().startsWith('edip wanted') && !t.includes('...'))
-            .slice(0, 3)
-            .map(t => toTitleCase(t));
+        // Try lookup by Normalized Title
+        if (STUDY_TITLES[normalizedTitle]) {
+            displayTitle = STUDY_TITLES[normalizedTitle];
+        }
+        // Fallback: Try exact match (unlikely if key is normalized)
+        else if (STUDY_TITLES[item.title]) {
+            displayTitle = STUDY_TITLES[item.title];
+        }
+        // Try lookup by ID (fallback)
+        else if (item.id && STUDY_TITLES[item.id]) {
+            displayTitle = "[ID] " + STUDY_TITLES[item.id];
+        }
 
-        // Construct Display Title
-        displayTitle = `${numberPrefix ? numberPrefix + ') ' : ''}Quran Study`;
-        if (suraRef) displayTitle += `: ${suraRef}`;
-        if (topics.length > 0) {
-            displayTitle += ` - ${topics.join(', ')}`;
+        // ALWAYS try to extract sort number from the Original Raw Title (e.g. "1) Quran Study...")
+        const sortMatch = item.title.match(/^(\d+)[).]/);
+        if (sortMatch) {
+            sortValue = parseInt(sortMatch[1]);
+        } else {
+            // Fallback to hashtag in display title if available (legacy)
+            const hashMatch = displayTitle.match(/#(\d+)/);
+            if (hashMatch) {
+                sortValue = parseFloat(hashMatch[1]);
+            }
+            // Fallback to dynamic parsing
+            // The instruction implies setting a debug title here, but the following logic
+            // dynamically constructs displayTitle. To ensure the debug prefix is visible,
+            // we'll apply it after the dynamic construction.
+            // For now, we'll add the instruction's suggested line, knowing it will be overwritten
+            // unless the dynamic construction is skipped or modified.
+            // Given the instruction, we'll add it as specified, and then ensure the final
+            // dynamically constructed title also gets a prefix.
+            displayTitle = "[FAIL] " + item.title.substring(0, 20) + "...";
+
+
+            // 1. Extract Number
+            const numberMatch = rawTitle.match(/^(\d+)\)/);
+            const numberPrefix = numberMatch ? numberMatch[1] : '';
+            if (numberPrefix) {
+                sortValue = parseFloat(numberPrefix);
+            }
+
+            // 2. Extract Surah
+            const suraMatch = rawTitle.match(/Sura\s+([\d_]+(?:,\s*[\d_]+)*)/i);
+            const suraRef = suraMatch ? `Surah ${suraMatch[1].replace(/_/g, ':')}` : '';
+
+            // 3. Extract Topics
+            let cleanText = rawTitle
+                .replace(/^(\d+\))/, '')
+                .replace(/Quran\s+Study/i, '')
+                .replace(/\d{1,2}[/⧸-]\d{1,2}[/⧸-]\d{2,4}/, '') // Handle both slash types
+                .replace(/Sura\s+[\d_,]+/i, '')
+                .replace(/by\s+[\w\s]+(?:,|$)/i, '')
+                .replace(/Rashad\s+Khalifa/i, '')
+                .replace(/-/, '')
+                .trim();
+
+            const rawTopics = cleanText.split(',').map(t => t.trim()).filter(t => t.length > 2);
+            topics = rawTopics
+                .filter(t => !t.toLowerCase().startsWith('edip wanted') && !t.includes('...'))
+                .slice(0, 3)
+                .map(t => toTitleCase(t));
+
+            // Construct Display Title
+            displayTitle = `${numberPrefix ? numberPrefix + ') ' : ''}Quran Study`;
+            if (suraRef) displayTitle += `: ${suraRef}`;
+            if (topics.length > 0) {
+                displayTitle += ` - ${topics.join(', ')}`;
+            }
+
+            displayTitle = "[FAIL] " + displayTitle;
         }
 
         // Extract Date
