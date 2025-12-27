@@ -17,7 +17,8 @@ export default function SearchPage() {
         'quran-study': true,
         'video-program': true,
         audio: true,
-        perspective: true
+        perspective: true,
+        appendix: true
     });
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -66,6 +67,7 @@ export default function SearchPage() {
                 typeFilters.push('messenger-audio');
             }
             if (filters.perspective) typeFilters.push('perspective');
+            if (filters.appendix) typeFilters.push('appendix');
 
             const response = await searchTranscripts(query, typeFilters);
 
@@ -170,6 +172,10 @@ export default function SearchPage() {
                             <FileText className="w-3.5 h-3.5 mr-2" />
                             PERSPECTIVES
                         </FilterButton>
+                        <FilterButton active={filters.appendix} onClick={() => toggleFilter('appendix')} theme={theme}>
+                            <BookOpen className="w-3.5 h-3.5 mr-2" />
+                            APPENDICES
+                        </FilterButton>
                     </div>
 
                     {errorMsg && (
@@ -205,7 +211,9 @@ export default function SearchPage() {
 
                             const mediaLink = media.type === 'perspective'
                                 ? `/submitter-perspectives/${media.filename}`
-                                : `/watch/${media.id}`;
+                                : media.type === 'appendix'
+                                    ? `/appendices/${media.filename}`
+                                    : `/watch/${media.id}`;
 
                             return (
                                 <div key={media.id} className={`${theme.card} rounded-sm border ${theme.border} overflow-hidden shadow-sm hover:shadow-md transition-all group`}>

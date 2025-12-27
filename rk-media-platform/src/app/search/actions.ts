@@ -3,6 +3,7 @@
 
 import { supabase } from '@/lib/supabaseClient';
 import newsletterData from '../../../public/data/newsletters/search_index.json';
+import appendicesData from '../../../public/data/appendices/search_index.json';
 
 export async function searchTranscripts(query: string, typeFilters: string[]) {
     try {
@@ -107,6 +108,48 @@ export async function searchTranscripts(query: string, typeFilters: string[]) {
                 });
 
             finalResults = [...finalResults, ...newsletterMatches];
+        }
+
+        // 4. Search Appendices (Local JSON)
+        if (typeFilters.includes('appendix')) {
+            const lowerQuery = query.toLowerCase();
+            const appendixMatches = appendicesData
+                .filter((item: any) => item.content.toLowerCase().includes(lowerQuery))
+                .map((item: any) => {
+                    const content = item.content;
+                    const matches = [];
+                    const regex = new RegExp(query.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'), 'gi');
+                    let match;
+                    let count = 0;
+
+                    while ((match = regex.exec(content)) !== null && count < 5) {
+                        const start = Math.max(0, match.index - 60);
+                        const end = Math.min(content.length, match.index + query.length + 60);
+                        let snippet = content.substring(start, end);
+                        if (start > 0) snippet = '...' + snippet;
+                        if (end < content.length) snippet = snippet + '...';
+
+                        matches.push({
+                            id: `ap-${item.id}-${count}`,
+                            content: snippet,
+                            start_time: 0
+                        });
+                        count++;
+                    }
+
+                    return {
+                        media: {
+                            id: item.filename,
+                            title: item.title,
+                            type: 'appendix',
+                            author: 'Rashad Khalifa',
+                            filename: item.filename
+                        },
+                        matches
+                    };
+                });
+
+            finalResults = [...finalResults, ...appendixMatches];
         }
 
         console.log(`[Server Action] Found ${finalResults.length} items total.`);

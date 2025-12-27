@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Media files (stored in R2)
+../data/disorganized_sermons/*.mp4
+../data/disorganized_sermons/*_diarized.json
+../data/rk_video_programs/*.mp4
+../data/rk_video_programs/*_diarized.json
+../data/disorganized_sermons/*_temp.m4a
+../data/rk_video_programs/*_temp.m4a
+
+# Rclone config
+rclone-config-template.conf
