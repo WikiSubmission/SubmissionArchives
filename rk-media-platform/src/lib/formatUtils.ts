@@ -101,7 +101,7 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
                 displayTitle += ` - ${topics.join(', ')}`;
             }
 
-            displayTitle = "[FAIL] " + displayTitle;
+
         }
 
         // Extract Date

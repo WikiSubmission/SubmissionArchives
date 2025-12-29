@@ -314,12 +314,12 @@ export default function HomePageClient({ initialMedia }: { initialMedia: any[] }
                     </div>
 
                     <div className="flex justify-center flex-wrap gap-4">
-                        <Link href="/quran-compare">
+                        <a href="https://wikisubmission.org/quran" target="_blank" rel="noopener noreferrer">
                             <button className={`px-6 py-3 rounded-sm ${theme.text === 'text-zinc-100' ? 'bg-zinc-800 text-zinc-100 ring-1 ring-zinc-700 hover:bg-zinc-700' : 'bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-50'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all shadow-sm hover:shadow-md flex items-center gap-3`}>
                                 <BookOpen className="w-4 h-4" />
-                                COMPARE EDITIONS
+                                QURAN READER
                             </button>
-                        </Link>
+                        </a>
                         <Link href="/search">
                             <button className={`px-6 py-3 rounded-sm ${theme.text === 'text-zinc-100' ? 'bg-zinc-100 text-zinc-900 hover:bg-white' : 'bg-zinc-900 text-white hover:bg-black'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all shadow-sm hover:shadow-md flex items-center gap-3 group`}>
                                 <Search className="w-4 h-4" />
@@ -465,7 +465,7 @@ export default function HomePageClient({ initialMedia }: { initialMedia: any[] }
                     ) : viewMode === 'grid' ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {paginatedMedia.map((item) => (
-                                <Link href={`/watch/${item.id}`} key={item.id} className="block h-full">
+                                <Link href={`/watch/${encodeURIComponent(item.id)}`} key={item.id} className="block h-full">
                                     <MediaCardTech item={item} theme={theme} />
                                 </Link>
                             ))}
@@ -473,7 +473,7 @@ export default function HomePageClient({ initialMedia }: { initialMedia: any[] }
                     ) : (
                     <div className="space-y-3">
                         {paginatedMedia.map((item) => (
-                            <Link href={`/watch/${item.id}`} key={item.id} className="block">
+                            <Link href={`/watch/${encodeURIComponent(item.id)}`} key={item.id} className="block">
                                 <MediaListTech item={item} theme={theme} />
                             </Link>
                         ))}

@@ -175,19 +175,30 @@ export default function Player({ media, segments }: { media: any, segments: any[
     );
 
     // Construct Video Source URL
+    // Construct Video Source URL
     const folderMap: Record<string, string> = {
-        'sermon': 'Messenger Sermons',
-        'quran-study': 'Messenger Quran Studies',
+        'sermon': 'disorganized_sermons',
+        'quran-study': 'messenger_quran_studies',
         'audio': 'messenger_audios',
-        'video-program': 'Video Programs'
+        'video-program': 'rk_video_programs'
     };
-    const fileServerUrl = 'http://localhost:9090';
+
+    // Use R2 Domain if available, otherwise fallback (or fail, since localhost won't have the files anymore)
+    const r2Domain = process.env.NEXT_PUBLIC_R2_DOMAIN;
+    const fileServerUrl = r2Domain ? `https://${r2Domain}/media` : 'http://localhost:9090';
+
     let filename = media.local_filename || '';
     const isVideo = media.type === 'sermon' || media.type === 'video-program';
     const extension = isVideo ? '.mp4' : '.mp3';
     if (filename.endsWith('.json')) filename = filename.replace(/_diarized\.json|\.json$/, extension);
+
     const folder = folderMap[media.type] || '';
-    const videoSrc = filename ? `${fileServerUrl}/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}?v=2` : undefined;
+
+    // If R2, we don't need port 9090 or 'media' repeated if included in url above
+    // My upload script puts files in `media/folderName/filename`.
+    // So URL should be `https://DOMAIN/media/FOLDER/FILENAME`
+    // Add cache buster to prevent CORS caching issues
+    const videoSrc = filename ? `${fileServerUrl}/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}?t=${new Date().getTime()}` : undefined;
 
     // Determine Layout Mode
     const isAudioMode = !isVideo;
@@ -375,8 +386,11 @@ export default function Player({ media, segments }: { media: any, segments: any[
                                 {mediaError && (
                                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 z-20">
                                         <div className="text-white text-lg font-bold mb-2">Media Unavailable</div>
-                                        <div className="text-gray-400 text-sm max-w-sm text-center px-4">
-                                            Could not load resource from port 9090. Make sure the media server is running.
+                                        <div className="text-gray-400 text-sm max-w-sm text-center px-4 break-words">
+                                            Could not load media.
+                                            <div className="mt-2 text-xs font-mono text-gray-500 select-all">
+                                                {videoSrc}
+                                            </div>
                                         </div>
                                     </div>
                                 )}

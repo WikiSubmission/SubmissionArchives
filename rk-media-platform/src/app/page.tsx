@@ -1,16 +1,13 @@
-import { supabase } from '@/lib/supabaseClient';
+import { listMediaFiles } from '@/lib/r2Bucket';
 import HomePageClient from './HomePageClient';
 
 import { STUDY_TITLES } from '@/lib/studyTitles';
 
-export const revalidate = 0; // Disable static caching for real-time updates
+export const revalidate = 3600; // Cache for 1 hour since R2 listing is heavy
 
 export default async function Home() {
-    // Fetch media ordered by date
-    const { data: media } = await supabase
-        .from('media')
-        .select('*')
-        .order('created_at', { ascending: false });
+    // Fetch media from R2 Bucket directly
+    const media = await listMediaFiles();
 
 
     // Pass data to Client Component
