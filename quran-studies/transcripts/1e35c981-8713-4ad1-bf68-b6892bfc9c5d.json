@@ -1,0 +1,3372 @@
+[
+  {
+    "id": 42265,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 0,
+    "start_time": 2.232,
+    "end_time": 3.1,
+    "content": "Come on, guys.",
+    "speaker": "Kathryn",
+    "search_vector": "'come':1 'guy':3"
+  },
+  {
+    "id": 42266,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 1,
+    "start_time": 4.1,
+    "end_time": 4.6,
+    "content": "Frank.",
+    "speaker": "Kathryn",
+    "search_vector": "'frank':1"
+  },
+  {
+    "id": 42267,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 2,
+    "start_time": 6.722,
+    "end_time": 8.832,
+    "content": "(unintelligible) always (unintelligible)",
+    "speaker": "Frank",
+    "search_vector": "'alway':2 'unintellig':1,3"
+  },
+  {
+    "id": 42268,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 3,
+    "start_time": 9.411,
+    "end_time": 20.975,
+    "content": "The translation (unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'translat':2 'unintellig':3"
+  },
+  {
+    "id": 42269,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 4,
+    "start_time": 21.251,
+    "end_time": 22.836,
+    "content": "(unintelligible) Comments?",
+    "speaker": "Kathryn",
+    "search_vector": "'comment':2 'unintellig':1"
+  },
+  {
+    "id": 42270,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 5,
+    "start_time": 24,
+    "end_time": 25.614,
+    "content": "Include Al-Fãtehah.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'al':3 'al-fãtehah':2 'fãtehah':4 'includ':1"
+  },
+  {
+    "id": 42271,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 6,
+    "start_time": 26.6,
+    "end_time": 27.918,
+    "content": "Yeah, I think so.",
+    "speaker": "Kathryn",
+    "search_vector": "'think':3 'yeah':1"
+  },
+  {
+    "id": 42272,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 7,
+    "start_time": 28.579,
+    "end_time": 30.579,
+    "content": "Well, I just knew a few comments about Al-Fãtehah.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'al':10 'al-fãtehah':9 'comment':7 'fãtehah':11 'knew':4 'well':1"
+  },
+  {
+    "id": 42273,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 8,
+    "start_time": 30.579,
+    "end_time": 33.256,
+    "content": "I think this is a very, very important tool.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'import':8 'think':2 'tool':9"
+  },
+  {
+    "id": 42274,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 9,
+    "start_time": 34.854,
+    "end_time": 38.98,
+    "content": "This is the key that opens up the contact",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':9 'key':4 'open':6"
+  },
+  {
+    "id": 42275,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 10,
+    "start_time": 38.98,
+    "end_time": 41.253,
+    "content": "to our Creator, every day.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'creator':3 'day':5 'everi':4"
+  },
+  {
+    "id": 42276,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 11,
+    "start_time": 42.28,
+    "end_time": 46.417,
+    "content": "The Arabic sounds are numerically structured,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':2 'numer':5 'sound':3 'structur':6"
+  },
+  {
+    "id": 42277,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 12,
+    "start_time": 46.417,
+    "end_time": 48.22,
+    "content": "like, like a telephone number.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'like':1,2 'number':5 'telephon':4"
+  },
+  {
+    "id": 42278,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 13,
+    "start_time": 49.422,
+    "end_time": 51.277,
+    "content": "You want to call this mosque,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'call':4 'mosqu':6 'want':2"
+  },
+  {
+    "id": 42279,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 14,
+    "start_time": 51.277,
+    "end_time": 54.42,
+    "content": "you dial 791-3989.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'-3989':4 '791':3 'dial':2"
+  },
+  {
+    "id": 42280,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 15,
+    "start_time": 55.607,
+    "end_time": 59.215,
+    "content": "You dial 790-2..., instead of .91....",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'-2':4 '790':3 '91':7 'dial':2 'instead':5"
+  },
+  {
+    "id": 42281,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 16,
+    "start_time": 59.215,
+    "end_time": 60.676,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42282,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 17,
+    "start_time": 61.138,
+    "end_time": 71.02,
+    "content": "So, these are numerically structured sounds that are given to us by God Himself to establish contact with Him.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':17 'establish':16 'given':9 'god':13 'numer':4 'sound':6 'structur':5 'us':11"
+  },
+  {
+    "id": 42283,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 18,
+    "start_time": 71.406,
+    "end_time": 73.965,
+    "content": "There can never be something better than numerical sounds.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'better':6 'never':3 'numer':8 'someth':5 'sound':9"
+  },
+  {
+    "id": 42284,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 19,
+    "start_time": 76.221,
+    "end_time": 82.02,
+    "content": "And it is also a universal key that every believer in the world, regardless of their language,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'also':4 'believ':10 'everi':9 'key':7 'languag':17 'regardless':14 'univers':6 'world':13"
+  },
+  {
+    "id": 42285,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 20,
+    "start_time": 82.02,
+    "end_time": 83.772,
+    "content": "this just happens to be Arabic.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':6 'happen':3"
+  },
+  {
+    "id": 42286,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 21,
+    "start_time": 85.248,
+    "end_time": 89.02,
+    "content": "But it could have been anything that is non-language.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'anyth':6 'could':3 'languag':11 'non':10 'non-languag':9"
+  },
+  {
+    "id": 42287,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 22,
+    "start_time": 89.02,
+    "end_time": 90,
+    "content": "It could have been non-language.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'could':2 'languag':7 'non':6 'non-languag':5"
+  },
+  {
+    "id": 42288,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 23,
+    "start_time": 90.91,
+    "end_time": 92.91,
+    "content": "God gave it to us in Arabic.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':7 'gave':2 'god':1 'us':5"
+  },
+  {
+    "id": 42289,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 24,
+    "start_time": 92.91,
+    "end_time": 94.358,
+    "content": "And He told us in Sura 41 that",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'41':7 'sura':6 'told':3 'us':4"
+  },
+  {
+    "id": 42290,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 25,
+    "start_time": 94.358,
+    "end_time": 97.193,
+    "content": "if it came in Japanese, the people would say, \"why is it Japanese?\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'came':3 'japanes':5,13 'peopl':7 'say':9 'would':8"
+  },
+  {
+    "id": 42291,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 26,
+    "start_time": 97.193,
+    "end_time": 101.669,
+    "content": "It's just a unifying, unifying, universal key.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'key':8 'unifi':5,6 'univers':7"
+  },
+  {
+    "id": 42292,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 27,
+    "start_time": 103,
+    "end_time": 110,
+    "content": "Because every day in Mecca, for example, every day, there are people from all nationalities of the world,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'day':3,9 'everi':2,8 'exampl':7 'mecca':5 'nation':15 'peopl':12 'world':18"
+  },
+  {
+    "id": 42293,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 28,
+    "start_time": 110,
+    "end_time": 118.606,
+    "content": "if there is one Imam, leader of Prayer, who is uttering the sounds of Al-Fãtehah, this is the key,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'al':16 'al-fãtehah':15 'fãtehah':17 'imam':5 'key':21 'leader':6 'one':4 'prayer':8 'sound':13 'utter':11"
+  },
+  {
+    "id": 42294,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 29,
+    "start_time": 118.606,
+    "end_time": 122.134,
+    "content": "and everyone (unintelligible) utters another, the same sounds.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'anoth':5 'everyon':2 'sound':8 'unintellig':3 'utter':4"
+  },
+  {
+    "id": 42295,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 30,
+    "start_time": 123.02,
+    "end_time": 127.331,
+    "content": "It's a universal, unifying key. It must be in Arabic, nothing else.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':11 'els':13 'key':6 'must':8 'noth':12 'unifi':5 'univers':4"
+  },
+  {
+    "id": 42296,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 31,
+    "start_time": 128.02,
+    "end_time": 133.02,
+    "content": "If it is just any other sounds, even other Arabic sounds,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':10 'even':8 'sound':7,11"
+  },
+  {
+    "id": 42297,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 32,
+    "start_time": 133.02,
+    "end_time": 135.744,
+    "content": "you will not, you will be dialing the wrong number.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'dial':7 'number':10 'wrong':9"
+  },
+  {
+    "id": 42298,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 33,
+    "start_time": 136.02,
+    "end_time": 137.717,
+    "content": "You will not establish contact.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':5 'establish':4"
+  },
+  {
+    "id": 42299,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 34,
+    "start_time": 138.929,
+    "end_time": 142.378,
+    "content": "Contact is absolutely essential for your spiritual growth.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'absolut':3 'contact':1 'essenti':4 'growth':8 'spiritu':7"
+  },
+  {
+    "id": 42300,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 35,
+    "start_time": 142.378,
+    "end_time": 144.744,
+    "content": "It is better for you, the real person.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'better':3 'person':8 'real':7"
+  },
+  {
+    "id": 42301,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 36,
+    "start_time": 145.765,
+    "end_time": 148.599,
+    "content": "This is the means for your soul every day,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'day':9 'everi':8 'mean':4 'soul':7"
+  },
+  {
+    "id": 42302,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 37,
+    "start_time": 148.599,
+    "end_time": 155.02,
+    "content": "to give your body food, breakfast, lunch, and dinner every day.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'bodi':4 'breakfast':6 'day':11 'dinner':9 'everi':10 'food':5 'give':2 'lunch':7"
+  },
+  {
+    "id": 42303,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 38,
+    "start_time": 155.571,
+    "end_time": 160.02,
+    "content": "But this here, the key, is what you give to you, the eternal you,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'etern':13 'give':9 'key':5"
+  },
+  {
+    "id": 42304,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 39,
+    "start_time": 160.02,
+    "end_time": 164.02,
+    "content": "who will last and will face God on the Day of Judgment.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'day':10 'face':6 'god':7 'judgment':12 'last':3"
+  },
+  {
+    "id": 42305,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 40,
+    "start_time": 164.02,
+    "end_time": 166.717,
+    "content": "You'll be either strong enough to withstand the presence of God,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'either':4 'enough':6 'god':12 'll':2 'presenc':10 'strong':5 'withstand':8"
+  },
+  {
+    "id": 42306,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 41,
+    "start_time": 166.717,
+    "end_time": 169.551,
+    "content": "or too weak to withstand the presence of God.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':9 'presenc':7 'weak':3 'withstand':5"
+  },
+  {
+    "id": 42307,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 42,
+    "start_time": 170.02,
+    "end_time": 176.351,
+    "content": "If you are too weak and undeveloped, you will have to run, run far away from God, to Hell, on your own volition.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'away':15 'far':14 'god':17 'hell':19 'run':12,13 'undevelop':7 'volit':23 'weak':5"
+  },
+  {
+    "id": 42308,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 43,
+    "start_time": 177.571,
+    "end_time": 179.248,
+    "content": "God doesn't put anybody in Hell.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'anybodi':5 'doesn':2 'god':1 'hell':7 'put':4"
+  },
+  {
+    "id": 42309,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 44,
+    "start_time": 180.268,
+    "end_time": 182.689,
+    "content": "So, this is the key, this is how important it is.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'import':9 'key':5"
+  },
+  {
+    "id": 42310,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 45,
+    "start_time": 183.626,
+    "end_time": 190.02,
+    "content": "Now, there are people who can, can make it to Heaven, from the lowest ranks of the Lower Heaven,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'heaven':11,19 'lower':18 'lowest':14 'make':8 'peopl':4 'rank':15"
+  },
+  {
+    "id": 42311,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 46,
+    "start_time": 190.02,
+    "end_time": 193.02,
+    "content": "which are fantastic (unintelligible), anyways,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'anyway':5 'fantast':3 'unintellig':4"
+  },
+  {
+    "id": 42312,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 47,
+    "start_time": 193.02,
+    "end_time": 195.02,
+    "content": "without ever uttering this.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'ever':2 'utter':3 'without':1"
+  },
+  {
+    "id": 42313,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 48,
+    "start_time": 195.185,
+    "end_time": 197.524,
+    "content": "But it is like surviving on junk food.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'food':8 'junk':7 'like':4 'surviv':5"
+  },
+  {
+    "id": 42314,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 49,
+    "start_time": 201.02,
+    "end_time": 206.02,
+    "content": "The key is your, your fastest and most efficient way of developing our souls.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'develop':12 'effici':9 'fastest':6 'key':2 'soul':14 'way':10"
+  },
+  {
+    "id": 42315,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 50,
+    "start_time": 209.555,
+    "end_time": 214.331,
+    "content": "This was right 75 today, in our five daily Prayers.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'75':4 'daili':9 'five':8 'prayer':10 'right':3 'today':5"
+  },
+  {
+    "id": 42316,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 51,
+    "start_time": 214.496,
+    "end_time": 221.551,
+    "content": "And that was for people who do not, who do not understand Arabic.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':13 'peopl':5 'understand':12"
+  },
+  {
+    "id": 42317,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 52,
+    "start_time": 222.02,
+    "end_time": 226.02,
+    "content": "And within a month, it'll be like (unintelligible). It's very easy.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'easi':13 'like':8 'll':6 'month':4 'unintellig':9 'within':2"
+  },
+  {
+    "id": 42318,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 53,
+    "start_time": 226.02,
+    "end_time": 229.02,
+    "content": "It's very short and it is very easy.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'easi':9 'short':4"
+  },
+  {
+    "id": 42319,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 54,
+    "start_time": 232.603,
+    "end_time": 235.02,
+    "content": "Two things also that we want to...",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'also':3 'thing':2 'two':1 'want':6"
+  },
+  {
+    "id": 42320,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 55,
+    "start_time": 235.461,
+    "end_time": 238.461,
+    "content": "The, the Arabic that you see on this page one, at the bottom,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':3 'bottom':13 'one':10 'page':9 'see':6"
+  },
+  {
+    "id": 42321,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 56,
+    "start_time": 238.461,
+    "end_time": 241.477,
+    "content": "it says \"Revealed after Sura 74.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'74':6 'reveal':3 'say':2 'sura':5"
+  },
+  {
+    "id": 42322,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 57,
+    "start_time": 243.02,
+    "end_time": 244.489,
+    "content": "Now to read the Arabic, it says,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'arab':5 'read':3 'say':7"
+  },
+  {
+    "id": 42323,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 58,
+    "start_time": 244.489,
+    "end_time": 245.855,
+    "content": "انزلت بعد المدثر",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'المدثر':3 'انزلت':1 'بعد':2"
+  },
+  {
+    "id": 42324,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 59,
+    "start_time": 245.855,
+    "end_time": 247.862,
+    "content": "Sura that (unintelligible) number 74.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'74':5 'number':4 'sura':1 'unintellig':3"
+  },
+  {
+    "id": 42325,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 60,
+    "start_time": 248.689,
+    "end_time": 252.11,
+    "content": "It was, it came, it came immediately after revelation of the number (unintelligible).",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'came':4,6 'immedi':7 'number':12 'revel':9 'unintellig':13"
+  },
+  {
+    "id": 42326,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 61,
+    "start_time": 253.02,
+    "end_time": 256.02,
+    "content": "19 letters, Bism Allah Arrahman Arraheem (بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ),",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'19':1 'allah':4 'arraheem':6 'arrahman':5 'bism':3 'letter':2 'بِسْمِ':7 'ٱلرَّحِيمِ':10 'ٱلرَّحْمَٰنِ':9 'ٱللَّهِ':8"
+  },
+  {
+    "id": 42327,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 62,
+    "start_time": 256.02,
+    "end_time": 258.02,
+    "content": "in the sequence of the revelation,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'revel':6 'sequenc':3"
+  },
+  {
+    "id": 42328,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 63,
+    "start_time": 258.02,
+    "end_time": 261.02,
+    "content": "it came immediately after, the number 19 after 74.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'19':7 '74':9 'came':2 'immedi':3 'number':6"
+  },
+  {
+    "id": 42329,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 64,
+    "start_time": 261.681,
+    "end_time": 262.799,
+    "content": "This is the case.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'case':4"
+  },
+  {
+    "id": 42330,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 65,
+    "start_time": 267.197,
+    "end_time": 268.146,
+    "content": "This...",
+    "speaker": "Dr. Khalifa",
+    "search_vector": ""
+  },
+  {
+    "id": 42331,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 66,
+    "start_time": 270.433,
+    "end_time": 275.461,
+    "content": "It's also the Al-Fãtehah, it's very, very easy for the children to pick up.",
+    "speaker": "Kathryn",
+    "search_vector": "'al':6 'al-fãtehah':5 'also':3 'children':15 'easi':12 'fãtehah':7 'pick':17"
+  },
+  {
+    "id": 42332,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 67,
+    "start_time": 275.461,
+    "end_time": 276.04,
+    "content": "Right.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'right':1"
+  },
+  {
+    "id": 42333,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 68,
+    "start_time": 276.04,
+    "end_time": 277.02,
+    "content": "Very easy.",
+    "speaker": "Kathryn",
+    "search_vector": "'easi':2"
+  },
+  {
+    "id": 42334,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 69,
+    "start_time": 277.02,
+    "end_time": 281.02,
+    "content": "The rhythm of it, the sounds, it's very, very easy.",
+    "speaker": "Kathryn",
+    "search_vector": "'easi':11 'rhythm':2 'sound':6"
+  },
+  {
+    "id": 42335,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 70,
+    "start_time": 281.792,
+    "end_time": 284.331,
+    "content": "God sees to it that it is easy for us.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'easi':8 'god':1 'see':2 'us':10"
+  },
+  {
+    "id": 42336,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 71,
+    "start_time": 285.737,
+    "end_time": 288.02,
+    "content": "God told us in Sura 2 verse 37",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'2':6 '37':8 'god':1 'sura':5 'told':2 'us':3 'vers':7"
+  },
+  {
+    "id": 42337,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 72,
+    "start_time": 288.02,
+    "end_time": 292.02,
+    "content": "which we may or may not get to it today, maybe next time,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'get':7 'may':3,5 'mayb':11 'next':12 'time':13 'today':10"
+  },
+  {
+    "id": 42338,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 73,
+    "start_time": 292.02,
+    "end_time": 294.599,
+    "content": "that He gave Adam,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'adam':4 'gave':3"
+  },
+  {
+    "id": 42339,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 74,
+    "start_time": 294.599,
+    "end_time": 297.433,
+    "content": "specific words (unintelligible) God was giving...",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'give':6 'god':4 'specif':1 'unintellig':3 'word':2"
+  },
+  {
+    "id": 42340,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 75,
+    "start_time": 297.433,
+    "end_time": 300,
+    "content": "Oh, I wanna say also that",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'also':5 'oh':1 'say':4 'wanna':3"
+  },
+  {
+    "id": 42341,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 76,
+    "start_time": 300,
+    "end_time": 303.618,
+    "content": "because the Contact Prayers are so important,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':3 'import':7 'prayer':4"
+  },
+  {
+    "id": 42342,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 77,
+    "start_time": 303.618,
+    "end_time": 307.02,
+    "content": "Satan really concentrates on distracting you from Prayers.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'concentr':3 'distract':5 'prayer':8 'realli':2 'satan':1"
+  },
+  {
+    "id": 42343,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 78,
+    "start_time": 307.792,
+    "end_time": 313.02,
+    "content": "I can say that 100% of us cannot concentrate in Prayer. We didn't...",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'100':5 'cannot':8 'concentr':9 'didn':13 'prayer':11 'say':3 'us':7"
+  },
+  {
+    "id": 42344,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 79,
+    "start_time": 313.461,
+    "end_time": 315.957,
+    "content": "This is, this is impossibility,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'imposs':5"
+  },
+  {
+    "id": 42345,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 80,
+    "start_time": 315.957,
+    "end_time": 319.426,
+    "content": "for Satan puts all his might",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'might':6 'put':3 'satan':2"
+  },
+  {
+    "id": 42346,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 81,
+    "start_time": 319.426,
+    "end_time": 322.02,
+    "content": "to distracting you from your Contact Prayer.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':6 'distract':2 'prayer':7"
+  },
+  {
+    "id": 42347,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 82,
+    "start_time": 322.351,
+    "end_time": 323.351,
+    "content": "And I want to",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'want':3"
+  },
+  {
+    "id": 42348,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 83,
+    "start_time": 323.351,
+    "end_time": 325.02,
+    "content": "give you good news",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'give':1 'good':3 'news':4"
+  },
+  {
+    "id": 42349,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 84,
+    "start_time": 325.02,
+    "end_time": 328.213,
+    "content": "that it is not important whether you concentrate or (unintelligible).",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'concentr':8 'import':5 'unintellig':10 'whether':6"
+  },
+  {
+    "id": 42350,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 85,
+    "start_time": 328.681,
+    "end_time": 330.02,
+    "content": "Satan knows that.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'know':2 'satan':1"
+  },
+  {
+    "id": 42351,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 86,
+    "start_time": 330.02,
+    "end_time": 336,
+    "content": "But he will use that to tell you \"this is no good. You didn't do the contact. That was no good. You wasted your time.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':18 'didn':14 'good':12,22 'tell':7 'time':26 'use':4 'wast':24"
+  },
+  {
+    "id": 42352,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 87,
+    "start_time": 336.496,
+    "end_time": 337.717,
+    "content": "He will do to tell you that.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'tell':5"
+  },
+  {
+    "id": 42353,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 88,
+    "start_time": 337.855,
+    "end_time": 338.607,
+    "content": "If he did, ....",
+    "speaker": "Dr. Khalifa",
+    "search_vector": ""
+  },
+  {
+    "id": 42354,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 89,
+    "start_time": 339.02,
+    "end_time": 341.213,
+    "content": "Because it's all mechanical.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'mechan':5"
+  },
+  {
+    "id": 42355,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 90,
+    "start_time": 341.213,
+    "end_time": 343.784,
+    "content": "Some people would disagree with this, but the whole thing is mechanical.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'disagre':4 'mechan':12 'peopl':2 'thing':10 'whole':9 'would':3"
+  },
+  {
+    "id": 42356,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 91,
+    "start_time": 344.02,
+    "end_time": 345.67,
+    "content": "It's like dialing the telephone number.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'dial':4 'like':3 'number':7 'telephon':6"
+  },
+  {
+    "id": 42357,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 92,
+    "start_time": 347.02,
+    "end_time": 349.296,
+    "content": "You can, you can do it with your eyes closed, sometimes.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'close':10 'eye':9 'sometim':11"
+  },
+  {
+    "id": 42358,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 93,
+    "start_time": 349.296,
+    "end_time": 352.24,
+    "content": "As long as you're dialing the right, you make the right sounds,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'dial':6 'long':2 'make':10 're':5 'right':8,12 'sound':13"
+  },
+  {
+    "id": 42359,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 94,
+    "start_time": 352.24,
+    "end_time": 355.02,
+    "content": "it's the right movements, prostrations, movements,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'movement':5,7 'prostrat':6 'right':4"
+  },
+  {
+    "id": 42360,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 95,
+    "start_time": 355.02,
+    "end_time": 358.158,
+    "content": "bowing, you are establishing contact.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'bow':1 'contact':5 'establish':4"
+  },
+  {
+    "id": 42361,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 96,
+    "start_time": 358.626,
+    "end_time": 360.193,
+    "content": "Satan wants to fool us.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'fool':4 'satan':1 'us':5 'want':2"
+  },
+  {
+    "id": 42362,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 97,
+    "start_time": 361.296,
+    "end_time": 363.213,
+    "content": "(unintelligible) distracted as much as you want.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'distract':2 'much':4 'unintellig':1 'want':7"
+  },
+  {
+    "id": 42363,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 98,
+    "start_time": 363.213,
+    "end_time": 366,
+    "content": "Of course, you want as much as possible to concentrate.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'concentr':10 'cours':2 'much':6 'possibl':8 'want':4"
+  },
+  {
+    "id": 42364,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 99,
+    "start_time": 367.02,
+    "end_time": 368.221,
+    "content": "But we can't.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": ""
+  },
+  {
+    "id": 42365,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 100,
+    "start_time": 369.02,
+    "end_time": 370.587,
+    "content": "It is, it's impossible.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'imposs':5"
+  },
+  {
+    "id": 42366,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 101,
+    "start_time": 372.02,
+    "end_time": 373.02,
+    "content": "Don't worry about it.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'worri':3"
+  },
+  {
+    "id": 42367,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 102,
+    "start_time": 373.213,
+    "end_time": 374.303,
+    "content": "It's just Satan.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'satan':4"
+  },
+  {
+    "id": 42368,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 103,
+    "start_time": 374.945,
+    "end_time": 378.193,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42369,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 104,
+    "start_time": 379.02,
+    "end_time": 380.02,
+    "content": "Rashad.",
+    "speaker": "Kathryn",
+    "search_vector": "'rashad':1"
+  },
+  {
+    "id": 42370,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 105,
+    "start_time": 380.02,
+    "end_time": 381.02,
+    "content": "Yes.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'yes':1"
+  },
+  {
+    "id": 42371,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 106,
+    "start_time": 386.56,
+    "end_time": 387.423625,
+    "content": "We should... Yeah.",
+    "speaker": "Kathryn",
+    "search_vector": "'yeah':3"
+  },
+  {
+    "id": 77345,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 107,
+    "start_time": 387.423625,
+    "end_time": 388.191291666667,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42372,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 108,
+    "start_time": 388.863,
+    "end_time": 394.24,
+    "content": "I mean, should we still though, we should still try to concentrate as much as we can, right?",
+    "speaker": "Kathryn",
+    "search_vector": "'concentr':12 'mean':2 'much':14 'right':18 'still':5,9 'though':6 'tri':10"
+  },
+  {
+    "id": 42373,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 109,
+    "start_time": 394.24,
+    "end_time": 395.185,
+    "content": "Yeah, I just said that.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'said':4 'yeah':1"
+  },
+  {
+    "id": 42374,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 110,
+    "start_time": 395.185,
+    "end_time": 396.737,
+    "content": "Oh, I'm sorry. I didn't understand.",
+    "speaker": "Kathryn",
+    "search_vector": "'didn':6 'm':3 'oh':1 'sorri':4 'understand':8"
+  },
+  {
+    "id": 42375,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 111,
+    "start_time": 396.737,
+    "end_time": 398.02,
+    "content": "Try to do your best to concentrate.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'best':5 'concentr':7 'tri':1"
+  },
+  {
+    "id": 42376,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 112,
+    "start_time": 398.02,
+    "end_time": 400.02,
+    "content": "But don't let Satan discourage you.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'discourag':6 'let':4 'satan':5"
+  },
+  {
+    "id": 42377,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 113,
+    "start_time": 401.425,
+    "end_time": 403.599,
+    "content": "I mean, every one of us, we have solid proof",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'everi':3 'mean':2 'one':4 'proof':10 'solid':9 'us':6"
+  },
+  {
+    "id": 42378,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 114,
+    "start_time": 403.599,
+    "end_time": 406.398,
+    "content": "that we've been sitting watching the TV and our brain is blank.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'blank':13 'brain':11 'sit':5 'tv':8 've':3 'watch':6"
+  },
+  {
+    "id": 42379,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 115,
+    "start_time": 406.398,
+    "end_time": 408.02,
+    "content": "We were brain dead.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'brain':3 'dead':4"
+  },
+  {
+    "id": 42380,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 116,
+    "start_time": 408.571,
+    "end_time": 410.268,
+    "content": "You're watching the TV and your brain is dead.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'brain':8 'dead':10 're':2 'tv':5 'watch':3"
+  },
+  {
+    "id": 42381,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 117,
+    "start_time": 410.268,
+    "end_time": 414,
+    "content": "Suddenly, you get up for the Prayer, remember everything in the world since the day we were born.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'born':18 'day':15 'everyth':9 'get':3 'prayer':7 'rememb':8 'sinc':13 'sudden':1 'world':12"
+  },
+  {
+    "id": 42382,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 118,
+    "start_time": 417.02,
+    "end_time": 417.634,
+    "content": "\"What time is it?\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'time':2"
+  },
+  {
+    "id": 42383,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 119,
+    "start_time": 417.634,
+    "end_time": 418.717,
+    "content": "Our brain came to life.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'brain':2 'came':3 'life':5"
+  },
+  {
+    "id": 42384,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 120,
+    "start_time": 418.717,
+    "end_time": 420.717,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42385,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 121,
+    "start_time": 421.689,
+    "end_time": 424.02,
+    "content": "We would really remember the strangest things in the Prayer.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'prayer':10 'realli':3 'rememb':4 'strangest':6 'thing':7 'would':2"
+  },
+  {
+    "id": 42386,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 122,
+    "start_time": 424.02,
+    "end_time": 424.662,
+    "content": "Why?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": ""
+  },
+  {
+    "id": 42387,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 123,
+    "start_time": 424.662,
+    "end_time": 425.579,
+    "content": "Who's doing this?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": ""
+  },
+  {
+    "id": 42388,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 124,
+    "start_time": 426.02,
+    "end_time": 427.02,
+    "content": "It's Satan.",
+    "speaker": "A man",
+    "search_vector": "'satan':3"
+  },
+  {
+    "id": 42389,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 125,
+    "start_time": 427.24,
+    "end_time": 428.02,
+    "content": "No.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": ""
+  },
+  {
+    "id": 42390,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 126,
+    "start_time": 428.02,
+    "end_time": 428.855,
+    "content": "Don't let it bother you.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'bother':5 'let':3"
+  },
+  {
+    "id": 42391,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 127,
+    "start_time": 428.855,
+    "end_time": 431.012,
+    "content": "Just, just keep doing your Contact Prayers.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':6 'keep':3 'prayer':7"
+  },
+  {
+    "id": 42392,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 128,
+    "start_time": 432.166,
+    "end_time": 433.166,
+    "content": "This is what God says.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':4 'say':5"
+  },
+  {
+    "id": 42393,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 129,
+    "start_time": 433.166,
+    "end_time": 434.497,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42394,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 130,
+    "start_time": 434.855,
+    "end_time": 436.882,
+    "content": "Even if you forget how many Rak'ats is?",
+    "speaker": "A woman",
+    "search_vector": "'at':8 'even':1 'forget':4 'mani':6 'rak':7"
+  },
+  {
+    "id": 42395,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 131,
+    "start_time": 439.528,
+    "end_time": 441.528,
+    "content": "What did she say?",
+    "speaker": "A woman",
+    "search_vector": "'say':4"
+  },
+  {
+    "id": 42396,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 132,
+    "start_time": 443.02,
+    "end_time": 444.469,
+    "content": "He's going like \"give me a break.\"",
+    "speaker": "A man",
+    "search_vector": "'break':8 'give':5 'go':3 'like':4"
+  },
+  {
+    "id": 42397,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 133,
+    "start_time": 444.469,
+    "end_time": 445.331,
+    "content": "What did she say?",
+    "speaker": "A woman",
+    "search_vector": "'say':4"
+  },
+  {
+    "id": 42398,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 134,
+    "start_time": 445.469,
+    "end_time": 447.469,
+    "content": "Even if you forgot how many Rak'ats you got.",
+    "speaker": "A man",
+    "search_vector": "'at':8 'even':1 'forgot':4 'got':10 'mani':6 'rak':7"
+  },
+  {
+    "id": 42399,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 135,
+    "start_time": 448.02,
+    "end_time": 449.02,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42400,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 136,
+    "start_time": 449.02,
+    "end_time": 449.551,
+    "content": "Oh, yeah.",
+    "speaker": "A woman",
+    "search_vector": "'oh':1 'yeah':2"
+  },
+  {
+    "id": 42401,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 137,
+    "start_time": 451.02,
+    "end_time": 452.351,
+    "content": "(unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42402,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 138,
+    "start_time": 453.02,
+    "end_time": 453.383487179487,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 76781,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 139,
+    "start_time": 453.383487179487,
+    "end_time": 454.473948717949,
+    "content": "It's, don't let, don't let Satan discourage you.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'discourag':10 'let':5,8 'satan':9"
+  },
+  {
+    "id": 42403,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 140,
+    "start_time": 454.792,
+    "end_time": 455.792,
+    "content": "Come on.",
+    "speaker": "A man",
+    "search_vector": "'come':1"
+  },
+  {
+    "id": 42404,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 141,
+    "start_time": 457.02,
+    "end_time": 463.24,
+    "content": "But if you are doing the Prayer and you are in your fourth unit of the Noon Prayer, for example,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'exampl':20 'fourth':13 'noon':17 'prayer':7,18 'unit':14"
+  },
+  {
+    "id": 42405,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 142,
+    "start_time": 463.24,
+    "end_time": 465.008,
+    "content": "and you forgot how many Rak'at you did,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'forgot':3 'mani':5 'rak':6"
+  },
+  {
+    "id": 42406,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 143,
+    "start_time": 465.008,
+    "end_time": 466.555,
+    "content": "you have to assume the lowest number.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'assum':4 'lowest':6 'number':7"
+  },
+  {
+    "id": 42407,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 144,
+    "start_time": 466.555,
+    "end_time": 468.488,
+    "content": "You say \"oh, it must, it must be the third.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'must':5,7 'oh':3 'say':2 'third':10"
+  },
+  {
+    "id": 42408,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 145,
+    "start_time": 469.004,
+    "end_time": 473.638,
+    "content": "So, you go ahead and do 5 units, but as far as you're concerned, you did 4 units.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'4':18 '5':7 'ahead':4 'concern':15 'far':11 'go':3 're':14 'unit':8,19"
+  },
+  {
+    "id": 42409,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 146,
+    "start_time": 474.299,
+    "end_time": 475.968,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42410,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 147,
+    "start_time": 475.968,
+    "end_time": 476.537,
+    "content": "Douglas.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'dougla':1"
+  },
+  {
+    "id": 42411,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 148,
+    "start_time": 477.281,
+    "end_time": 481.591,
+    "content": "You know, sometimes you're in situations where you just don't, you can't make your Salat,",
+    "speaker": "Douglas",
+    "search_vector": "'know':2 'make':16 're':5 'salat':18 'situat':7 'sometim':3"
+  },
+  {
+    "id": 42412,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 149,
+    "start_time": 481.591,
+    "end_time": 484.17,
+    "content": "God knows this. (unintelligible).",
+    "speaker": "Douglas",
+    "search_vector": "'god':1 'know':2 'unintellig':4"
+  },
+  {
+    "id": 42413,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 150,
+    "start_time": 484.17,
+    "end_time": 486.17,
+    "content": "And I've, I've tried to make Salat",
+    "speaker": "Douglas",
+    "search_vector": "'make':8 'salat':9 'tri':6 've':3,5"
+  },
+  {
+    "id": 42414,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 151,
+    "start_time": 486.17,
+    "end_time": 489.004,
+    "content": "God... you know, there's somebody...",
+    "speaker": "Douglas",
+    "search_vector": "'god':1 'know':3 'somebodi':6"
+  },
+  {
+    "id": 42415,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 152,
+    "start_time": 489.004,
+    "end_time": 489.721,
+    "content": "(unintelligible)",
+    "speaker": "Douglas",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42416,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 153,
+    "start_time": 489.721,
+    "end_time": 490.755563380282,
+    "content": "There's no situation where cannot make",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'cannot':6 'make':7 'situat':4"
+  },
+  {
+    "id": 76782,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 154,
+    "start_time": 490.755563380282,
+    "end_time": 491.191169014084,
+    "content": "(unintelligible)",
+    "speaker": "Salat. Douglas",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42417,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 155,
+    "start_time": 492,
+    "end_time": 494.397,
+    "content": "So, you know, you've gotta watch the cars, the lights.",
+    "speaker": "Douglas",
+    "search_vector": "'car':9 'gotta':6 'know':3 'light':11 've':5 'watch':7"
+  },
+  {
+    "id": 42418,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 156,
+    "start_time": 495.634,
+    "end_time": 497.579,
+    "content": "You're going through a (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'go':3 're':2 'unintellig':6"
+  },
+  {
+    "id": 42419,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 157,
+    "start_time": 497.579,
+    "end_time": 499.193,
+    "content": "This is actually stated in the Quran.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'actual':3 'quran':7 'state':4"
+  },
+  {
+    "id": 42420,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 158,
+    "start_time": 499.193,
+    "end_time": 502.599,
+    "content": "[2:239]  Under unusual circumstances, you may pray while walking or riding. ...",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'2':1 '239':2 'circumst':5 'may':7 'pray':8 'ride':12 'unusu':4 'walk':10"
+  },
+  {
+    "id": 42421,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 159,
+    "start_time": 504.941,
+    "end_time": 505.689,
+    "content": "Iman.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'iman':1"
+  },
+  {
+    "id": 42422,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 160,
+    "start_time": 506.02,
+    "end_time": 507.421,
+    "content": "I mean, it's the same problem.",
+    "speaker": "Iman",
+    "search_vector": "'mean':2 'problem':7"
+  },
+  {
+    "id": 42423,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 161,
+    "start_time": 509.02,
+    "end_time": 512.536,
+    "content": "I, I ran to a, some problems.",
+    "speaker": "Iman",
+    "search_vector": "'problem':7 'ran':3"
+  },
+  {
+    "id": 42424,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 162,
+    "start_time": 513.02,
+    "end_time": 514.028,
+    "content": "You were drunk?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'drunk':3"
+  },
+  {
+    "id": 42425,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 163,
+    "start_time": 518.02,
+    "end_time": 519.303,
+    "content": "Well, I ran in...",
+    "speaker": "Iman",
+    "search_vector": "'ran':3 'well':1"
+  },
+  {
+    "id": 42426,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 164,
+    "start_time": 519.469,
+    "end_time": 519.649961538462,
+    "content": "Well,",
+    "speaker": "Iman",
+    "search_vector": "'well':1"
+  },
+  {
+    "id": 76783,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 165,
+    "start_time": 519.649961538462,
+    "end_time": 520.771923076923,
+    "content": "We should have (unintelligible)",
+    "speaker": "I ran A woman",
+    "search_vector": "'unintellig':4"
+  },
+  {
+    "id": 42427,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 166,
+    "start_time": 521.351,
+    "end_time": 525.02,
+    "content": "(unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42428,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 167,
+    "start_time": 525.296,
+    "end_time": 525.902,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42429,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 168,
+    "start_time": 525.902,
+    "end_time": 534.378,
+    "content": "Anyway, he said, he said, I was wrong for doing Salat while I was driving because I didn't have any water.",
+    "speaker": "Iman",
+    "search_vector": "'anyway':1 'didn':18 'drive':15 'said':3,5 'salat':11 'water':22 'wrong':8"
+  },
+  {
+    "id": 42430,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 169,
+    "start_time": 535.095,
+    "end_time": 537.626,
+    "content": "And, wait, wait a minute, this is the worst part.",
+    "speaker": "Iman",
+    "search_vector": "'minut':5 'part':10 'wait':2,3 'worst':9"
+  },
+  {
+    "id": 42431,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 170,
+    "start_time": 537.626,
+    "end_time": 542.607,
+    "content": "Even if you pull off the road, there isn't any clean dirt or any clean rocks.",
+    "speaker": "Iman",
+    "search_vector": "'clean':12,16 'dirt':13 'even':1 'isn':9 'pull':4 'road':7 'rock':17"
+  },
+  {
+    "id": 42432,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 171,
+    "start_time": 543.02,
+    "end_time": 545.02,
+    "content": "So, (unintelligible). You know what I mean?",
+    "speaker": "Iman",
+    "search_vector": "'know':4 'mean':7 'unintellig':2"
+  },
+  {
+    "id": 42433,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 172,
+    "start_time": 546.756,
+    "end_time": 550.268,
+    "content": "So, if we, if we (unintelligible) clean dirt.",
+    "speaker": "Iman",
+    "search_vector": "'clean':7 'dirt':8 'unintellig':6"
+  },
+  {
+    "id": 42434,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 173,
+    "start_time": 550.571,
+    "end_time": 553.461,
+    "content": "(unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42435,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 174,
+    "start_time": 553.902,
+    "end_time": 555.378,
+    "content": "\"No, no, that's terrible.\"",
+    "speaker": "Iman",
+    "search_vector": "'terribl':5"
+  },
+  {
+    "id": 42436,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 175,
+    "start_time": 555.378,
+    "end_time": 556.689,
+    "content": "He just (unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'unintellig':3"
+  },
+  {
+    "id": 42437,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 176,
+    "start_time": 556.689,
+    "end_time": 559.02,
+    "content": "He got so loud, I had to continue, then.",
+    "speaker": "Iman",
+    "search_vector": "'continu':8 'got':2 'loud':4"
+  },
+  {
+    "id": 42438,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 177,
+    "start_time": 560.315,
+    "end_time": 565.02,
+    "content": "So, I told him, I said \"well, whatever you do is up to you. Whatever I do, (unintelligible). You gotta accept that.\"",
+    "speaker": "Iman",
+    "search_vector": "'accept':21 'gotta':20 'said':6 'told':3 'unintellig':18 'well':7 'whatev':8,15"
+  },
+  {
+    "id": 42439,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 178,
+    "start_time": 565.02,
+    "end_time": 566.02,
+    "content": "That's right.",
+    "speaker": "Iman",
+    "search_vector": "'right':3"
+  },
+  {
+    "id": 42440,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 179,
+    "start_time": 566.02,
+    "end_time": 567.02,
+    "content": "You've gotta accept this.",
+    "speaker": "Iman",
+    "search_vector": "'accept':4 'gotta':3 've':2"
+  },
+  {
+    "id": 42441,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 180,
+    "start_time": 568.02,
+    "end_time": 570.378,
+    "content": "God made it very easy for us to do the Contact Prayers.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'contact':11 'easi':5 'god':1 'made':2 'prayer':12 'us':7"
+  },
+  {
+    "id": 42442,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 181,
+    "start_time": 570.378,
+    "end_time": 572.02,
+    "content": "There's absolutely no excuse.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'absolut':3 'excus':5"
+  },
+  {
+    "id": 42443,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 182,
+    "start_time": 572.627,
+    "end_time": 574.000933333333,
+    "content": "If we're doing the 5 Contact Prayers,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'5':6 'contact':7 'prayer':8 're':3"
+  },
+  {
+    "id": 76784,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 183,
+    "start_time": 574.000933333333,
+    "end_time": 574.595066666667,
+    "content": "(unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42444,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 184,
+    "start_time": 574.855,
+    "end_time": 576.359,
+    "content": "God will make it very easy.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'easi':6 'god':1 'make':3"
+  },
+  {
+    "id": 42445,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 185,
+    "start_time": 576.8,
+    "end_time": 578.02,
+    "content": "God will, God will accept ....",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'accept':5 'god':1,3"
+  },
+  {
+    "id": 42446,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 186,
+    "start_time": 580.205,
+    "end_time": 582.02,
+    "content": "... (unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42447,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 187,
+    "start_time": 582.02,
+    "end_time": 585.24,
+    "content": "if you set it down on a different car, or there is a different car.",
+    "speaker": "Iman",
+    "search_vector": "'car':9,15 'differ':8,14 'set':3"
+  },
+  {
+    "id": 42448,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 188,
+    "start_time": 585.24,
+    "end_time": 586.02,
+    "content": "If you set...",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'set':3"
+  },
+  {
+    "id": 42449,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 189,
+    "start_time": 586.02,
+    "end_time": 587.02,
+    "content": "If you set it down.",
+    "speaker": "Iman",
+    "search_vector": "'set':3"
+  },
+  {
+    "id": 42450,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 190,
+    "start_time": 587.02,
+    "end_time": 587.874,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42451,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 191,
+    "start_time": 587.874,
+    "end_time": 589.232,
+    "content": "OK, (unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'ok':1 'unintellig':2"
+  },
+  {
+    "id": 42452,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 192,
+    "start_time": 589.232,
+    "end_time": 593.847,
+    "content": "whatever it is, if we stop and you're outside Praying,",
+    "speaker": "Iman",
+    "search_vector": "'outsid':10 'pray':11 're':9 'stop':6 'whatev':1"
+  },
+  {
+    "id": 42453,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 193,
+    "start_time": 593.847,
+    "end_time": 598.556,
+    "content": "you tell this cop, (unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'cop':4 'tell':2 'unintellig':5"
+  },
+  {
+    "id": 42454,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 194,
+    "start_time": 598.556,
+    "end_time": 601.02,
+    "content": "(unintelligible) I'm Praying. I'm Praying over this.",
+    "speaker": "Iman",
+    "search_vector": "'m':3,6 'pray':4,7 'unintellig':1"
+  },
+  {
+    "id": 42455,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 195,
+    "start_time": 601.406,
+    "end_time": 604.445,
+    "content": "You know. And I mean, they'll do it. They just, they like (unintelligible).",
+    "speaker": "Iman",
+    "search_vector": "'know':2 'like':13 'll':7 'mean':5 'unintellig':14"
+  },
+  {
+    "id": 42456,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 196,
+    "start_time": 604.638,
+    "end_time": 605.138,
+    "content": "Yes.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'yes':1"
+  },
+  {
+    "id": 42457,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 197,
+    "start_time": 606,
+    "end_time": 608,
+    "content": "Douglas is saying (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'dougla':1 'say':3 'unintellig':4"
+  },
+  {
+    "id": 42458,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 198,
+    "start_time": 608,
+    "end_time": 608.5,
+    "content": "(unintelligible)",
+    "speaker": "Iman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42459,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 199,
+    "start_time": 608.5,
+    "end_time": 609.976,
+    "content": "Are there any questions from you?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'question':4"
+  },
+  {
+    "id": 42460,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 200,
+    "start_time": 617.296,
+    "end_time": 618.524,
+    "content": "I'm just wondering",
+    "speaker": "A man",
+    "search_vector": "'m':2 'wonder':4"
+  },
+  {
+    "id": 42461,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 201,
+    "start_time": 620.02,
+    "end_time": 622.02,
+    "content": "In my tradition (unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'tradit':3 'unintellig':4"
+  },
+  {
+    "id": 42462,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 202,
+    "start_time": 623.626,
+    "end_time": 625.626,
+    "content": "where is (unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'unintellig':3"
+  },
+  {
+    "id": 42463,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 203,
+    "start_time": 625.626,
+    "end_time": 627.24,
+    "content": "Because of sign while Praying",
+    "speaker": "A man",
+    "search_vector": "'pray':5 'sign':3"
+  },
+  {
+    "id": 42464,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 204,
+    "start_time": 630.158,
+    "end_time": 635.634,
+    "content": "I've experienced occasionally (unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'experienc':3 'occasion':4 'unintellig':5 've':2"
+  },
+  {
+    "id": 42465,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 205,
+    "start_time": 635.634,
+    "end_time": 639.02,
+    "content": "Some of the, some of the thoughts that come into my mind",
+    "speaker": "A man",
+    "search_vector": "'come':9 'mind':12 'thought':7"
+  },
+  {
+    "id": 42466,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 206,
+    "start_time": 639.02,
+    "end_time": 643.02,
+    "content": "are perhaps solutions to the things that I have been trying to",
+    "speaker": "A man",
+    "search_vector": "'perhap':2 'solut':3 'thing':6 'tri':11"
+  },
+  {
+    "id": 42467,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 207,
+    "start_time": 643.02,
+    "end_time": 645.516,
+    "content": "rack my brain over and not getting through.",
+    "speaker": "A man",
+    "search_vector": "'brain':3 'get':7 'rack':1"
+  },
+  {
+    "id": 42468,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 208,
+    "start_time": 647.378,
+    "end_time": 653.04,
+    "content": "And I think that was a very helpful thought,",
+    "speaker": "A man",
+    "search_vector": "'help':8 'think':3 'thought':9"
+  },
+  {
+    "id": 42469,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 209,
+    "start_time": 653.04,
+    "end_time": 655.04,
+    "content": "a thought that came to my mind.",
+    "speaker": "A man",
+    "search_vector": "'came':4 'mind':7 'thought':2"
+  },
+  {
+    "id": 42470,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 210,
+    "start_time": 655.894,
+    "end_time": 659.398,
+    "content": "Maybe, I attributed it to the fact that my mind was",
+    "speaker": "A man",
+    "search_vector": "'attribut':3 'fact':7 'mayb':1 'mind':10"
+  },
+  {
+    "id": 42471,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 211,
+    "start_time": 659.398,
+    "end_time": 663.351,
+    "content": "more at peace, more calm than distracted.",
+    "speaker": "A man",
+    "search_vector": "'calm':5 'distract':7 'peac':3"
+  },
+  {
+    "id": 42472,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 212,
+    "start_time": 663.351,
+    "end_time": 667.481,
+    "content": "Is it possible that we get good ideas,",
+    "speaker": "A man",
+    "search_vector": "'get':6 'good':7 'idea':8 'possibl':3"
+  },
+  {
+    "id": 42473,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 213,
+    "start_time": 667.481,
+    "end_time": 669.02,
+    "content": "very useful ideas,",
+    "speaker": "A man",
+    "search_vector": "'idea':3 'use':2"
+  },
+  {
+    "id": 42474,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 214,
+    "start_time": 669.02,
+    "end_time": 672.583,
+    "content": "from (unintelligible), from, from the devil?",
+    "speaker": "A man",
+    "search_vector": "'devil':6 'unintellig':2"
+  },
+  {
+    "id": 42475,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 215,
+    "start_time": 673.134,
+    "end_time": 673.866,
+    "content": "From the devil?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'devil':3"
+  },
+  {
+    "id": 42476,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 216,
+    "start_time": 673.866,
+    "end_time": 674.752,
+    "content": "Or from devil.",
+    "speaker": "A man",
+    "search_vector": "'devil':3"
+  },
+  {
+    "id": 42477,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 217,
+    "start_time": 675.689,
+    "end_time": 677.401,
+    "content": "Look there is anything else from Sheytan.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'anyth':4 'els':5 'look':1 'sheytan':7"
+  },
+  {
+    "id": 42478,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 218,
+    "start_time": 677.787,
+    "end_time": 678.437,
+    "content": "Rashad.",
+    "speaker": "A woman",
+    "search_vector": "'rashad':1"
+  },
+  {
+    "id": 42479,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 219,
+    "start_time": 678.437,
+    "end_time": 678.949,
+    "content": "Yes.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'yes':1"
+  },
+  {
+    "id": 42480,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 220,
+    "start_time": 678.949,
+    "end_time": 680.949,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42481,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 221,
+    "start_time": 680.949,
+    "end_time": 681.949,
+    "content": "I have an answer",
+    "speaker": "A woman",
+    "search_vector": "'answer':4"
+  },
+  {
+    "id": 42482,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 222,
+    "start_time": 681.949,
+    "end_time": 685.02,
+    "content": "thinking that he could be (unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'could':4 'think':1 'unintellig':6"
+  },
+  {
+    "id": 42483,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 223,
+    "start_time": 685.02,
+    "end_time": 686.378,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42484,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 224,
+    "start_time": 686.76,
+    "end_time": 688.402,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42485,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 225,
+    "start_time": 690.126,
+    "end_time": 693.642,
+    "content": "Satan's (unintelligible) traps.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'satan':1 'trap':4 'unintellig':3"
+  },
+  {
+    "id": 42486,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 226,
+    "start_time": 694.028,
+    "end_time": 696.552,
+    "content": "(unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42487,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 227,
+    "start_time": 696.965,
+    "end_time": 698.076829787234,
+    "content": "Maybe, (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'mayb':1 'unintellig':2"
+  },
+  {
+    "id": 76785,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 228,
+    "start_time": 698.076829787234,
+    "end_time": 698.850276595745,
+    "content": "(unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42488,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 229,
+    "start_time": 700.45,
+    "end_time": 701.32,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42489,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 230,
+    "start_time": 702.662,
+    "end_time": 703.827,
+    "content": "But what about God?",
+    "speaker": "A woman",
+    "search_vector": "'god':4"
+  },
+  {
+    "id": 42490,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 231,
+    "start_time": 706.571,
+    "end_time": 707.193,
+    "content": "Pardon?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'pardon':1"
+  },
+  {
+    "id": 42491,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 232,
+    "start_time": 707.331,
+    "end_time": 709.567,
+    "content": "What about... Couldn't it just be God giving you the ideas?",
+    "speaker": "A woman",
+    "search_vector": "'couldn':3 'give':9 'god':8 'idea':12"
+  },
+  {
+    "id": 42492,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 233,
+    "start_time": 709.567,
+    "end_time": 713.02,
+    "content": "This is how God as far as (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'far':6 'god':4 'unintellig':8"
+  },
+  {
+    "id": 42493,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 234,
+    "start_time": 713.02,
+    "end_time": 713.52,
+    "content": "Okay",
+    "speaker": "A woman",
+    "search_vector": "'okay':1"
+  },
+  {
+    "id": 42494,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 235,
+    "start_time": 714.02,
+    "end_time": 716.178,
+    "content": "Because that's happened to me and I'm (unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'happen':4 'm':9 'unintellig':10"
+  },
+  {
+    "id": 42495,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 236,
+    "start_time": 716.178,
+    "end_time": 718.76,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42496,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 237,
+    "start_time": 719.146,
+    "end_time": 724.544,
+    "content": "That's the (unintelligible)",
+    "speaker": "Edip",
+    "search_vector": "'unintellig':4"
+  },
+  {
+    "id": 42497,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 238,
+    "start_time": 724.544,
+    "end_time": 726.607,
+    "content": "(unintelligible) of Quran",
+    "speaker": "Edip",
+    "search_vector": "'quran':3 'unintellig':1"
+  },
+  {
+    "id": 42498,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 239,
+    "start_time": 728.02,
+    "end_time": 734.02,
+    "content": "For example, if (unintelligible) the same (unintelligible), you may (unintelligible)",
+    "speaker": "Edip",
+    "search_vector": "'exampl':2 'may':9 'unintellig':4,7,10"
+  },
+  {
+    "id": 42499,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 240,
+    "start_time": 734.02,
+    "end_time": 735.02,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42500,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 241,
+    "start_time": 735.02,
+    "end_time": 735.772,
+    "content": "Excuse me?",
+    "speaker": "Edip",
+    "search_vector": "'excus':1"
+  },
+  {
+    "id": 42501,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 242,
+    "start_time": 735.772,
+    "end_time": 736.441,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42502,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 243,
+    "start_time": 736.441,
+    "end_time": 737.221,
+    "content": "(unintelligible)",
+    "speaker": "Edip",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42503,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 244,
+    "start_time": 737.221,
+    "end_time": 738.847,
+    "content": "Rashad, he just got married.",
+    "speaker": "A woman",
+    "search_vector": "'got':4 'marri':5 'rashad':1"
+  },
+  {
+    "id": 42504,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 245,
+    "start_time": 741,
+    "end_time": 742.504,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42505,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 246,
+    "start_time": 742.504,
+    "end_time": 744.02,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42506,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 247,
+    "start_time": 744.02,
+    "end_time": 747.551,
+    "content": "Yes. But everything in the Quran is Al-Fãtehah. So, (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'al':9 'al-fãtehah':8 'everyth':3 'fãtehah':10 'quran':6 'unintellig':12 'yes':1"
+  },
+  {
+    "id": 42507,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 248,
+    "start_time": 747.551,
+    "end_time": 752.469,
+    "content": "No, I don't think it is, but as a summary, that the (unintelligible)",
+    "speaker": "Edip",
+    "search_vector": "'summari':11 'think':5 'unintellig':14"
+  },
+  {
+    "id": 42508,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 249,
+    "start_time": 752.993,
+    "end_time": 754.993,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42509,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 250,
+    "start_time": 756.233,
+    "end_time": 758.013,
+    "content": "(unintelligible)",
+    "speaker": "Edip",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42510,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 251,
+    "start_time": 758.812,
+    "end_time": 760.151,
+    "content": "(unintelligible)",
+    "speaker": "Edip",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42511,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 252,
+    "start_time": 760.151,
+    "end_time": 763.667,
+    "content": "Where is, where is (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':5"
+  },
+  {
+    "id": 42512,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 253,
+    "start_time": 764.466,
+    "end_time": 765.45,
+    "content": "(unintelligible)",
+    "speaker": "Edip",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42513,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 254,
+    "start_time": 765.45,
+    "end_time": 767.662,
+    "content": "You have to forget that nonsense you learned in Turkey",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'forget':4 'learn':8 'nonsens':6 'turkey':10"
+  },
+  {
+    "id": 42514,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 255,
+    "start_time": 768.627,
+    "end_time": 770.02,
+    "content": "and the last, I learned in Egypt.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'egypt':7 'last':3 'learn':5"
+  },
+  {
+    "id": 42515,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 256,
+    "start_time": 770.213,
+    "end_time": 772.02,
+    "content": "This is one of the things they tell you,",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'one':3 'tell':8 'thing':6"
+  },
+  {
+    "id": 42516,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 257,
+    "start_time": 772.02,
+    "end_time": 774.516,
+    "content": "like, the traditional Muslims.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'like':1 'muslim':4 'tradit':3"
+  },
+  {
+    "id": 42517,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 258,
+    "start_time": 774.653,
+    "end_time": 776.653,
+    "content": "(unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42518,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 259,
+    "start_time": 779.02,
+    "end_time": 780.662,
+    "content": "\"If you read (112:1) قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'1':5 '112':4 'read':3 'أَحَدٌ':9 'قُلْ':6 'هُوَ':7 'ٱللَّهُ':8"
+  },
+  {
+    "id": 42519,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 260,
+    "start_time": 780.662,
+    "end_time": 783.02,
+    "content": "\"3 times, it's like you're reading the whole Quran.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'3':1 'like':5 'quran':11 're':7 'read':8 'time':2 'whole':10"
+  },
+  {
+    "id": 42520,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 261,
+    "start_time": 783.461,
+    "end_time": 787.473,
+    "content": "There's a lot of Hadith Sheytan has spread. \"The whole Quran is in Al-Fãtehah.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'al':16 'al-fãtehah':15 'fãtehah':17 'hadith':6 'lot':4 'quran':12 'sheytan':7 'spread':9 'whole':11"
+  },
+  {
+    "id": 42521,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 262,
+    "start_time": 790.993,
+    "end_time": 795.524,
+    "content": "Where is (unintelligible). Why didn't it say (unintelligible) on the Day of Judgement.",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'day':12 'didn':5 'judgement':14 'say':8 'unintellig':3,9"
+  },
+  {
+    "id": 42522,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 263,
+    "start_time": 795.524,
+    "end_time": 797.524,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42523,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 264,
+    "start_time": 797.524,
+    "end_time": 799.524,
+    "content": "Why (unintelligible)",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'unintellig':2"
+  },
+  {
+    "id": 42524,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 265,
+    "start_time": 800.516,
+    "end_time": 803.496,
+    "content": "Because this world, because on the Day of Judgement, God said",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'day':7 'god':10 'judgement':9 'said':11 'world':3"
+  },
+  {
+    "id": 42525,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 266,
+    "start_time": 803.496,
+    "end_time": 806.02,
+    "content": "But this is (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':4"
+  },
+  {
+    "id": 42526,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 267,
+    "start_time": 807.095,
+    "end_time": 809.095,
+    "content": "This is a very good point Dr. Sabahi stated.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'dr':7 'good':5 'point':6 'sabahi':8 'state':9"
+  },
+  {
+    "id": 42527,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 268,
+    "start_time": 809.481,
+    "end_time": 811.745,
+    "content": "Why God says (unintelligible) on the Day of Judgement?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'day':7 'god':2 'judgement':9 'say':3 'unintellig':4"
+  },
+  {
+    "id": 42528,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 269,
+    "start_time": 811.745,
+    "end_time": 814.315,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42529,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 270,
+    "start_time": 815.079,
+    "end_time": 817.095,
+    "content": "The answer is \"no\", because God gave",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'answer':2 'gave':7 'god':6"
+  },
+  {
+    "id": 42530,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 271,
+    "start_time": 817.095,
+    "end_time": 820.02,
+    "content": "God says, I'm placing a (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':1 'm':4 'place':5 'say':2 'unintellig':7"
+  },
+  {
+    "id": 42531,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 272,
+    "start_time": 820.681,
+    "end_time": 823.331,
+    "content": "He's really giving me full (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'full':6 'give':4 'realli':3 'unintellig':7"
+  },
+  {
+    "id": 42532,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 273,
+    "start_time": 824.792,
+    "end_time": 828.571,
+    "content": "And God is saying, (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':2 'say':4 'unintellig':5"
+  },
+  {
+    "id": 42533,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 274,
+    "start_time": 828.984,
+    "end_time": 831.606,
+    "content": "So, this is a very important, very important point.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'import':6,8 'point':9"
+  },
+  {
+    "id": 42534,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 275,
+    "start_time": 832.571,
+    "end_time": 835.02,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42535,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 276,
+    "start_time": 836.178,
+    "end_time": 840.544,
+    "content": "God is, God is, I mean everything, even Satan's work",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'even':8 'everyth':7 'god':1,3 'mean':6 'satan':9 'work':11"
+  },
+  {
+    "id": 42536,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 277,
+    "start_time": 840.544,
+    "end_time": 843.173,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42537,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 278,
+    "start_time": 843.173,
+    "end_time": 845.02,
+    "content": "I mean, this was (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'mean':2 'unintellig':5"
+  },
+  {
+    "id": 42538,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 279,
+    "start_time": 845.02,
+    "end_time": 847.303,
+    "content": "even that was, is, is God's will.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'even':1 'god':6"
+  },
+  {
+    "id": 42539,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 280,
+    "start_time": 847.772,
+    "end_time": 849.772,
+    "content": "(unintelligible) freedom of choice.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'choic':4 'freedom':2 'unintellig':1"
+  },
+  {
+    "id": 42540,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 281,
+    "start_time": 850.571,
+    "end_time": 852,
+    "content": "God's will that we will.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':1"
+  },
+  {
+    "id": 42541,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 282,
+    "start_time": 853.709,
+    "end_time": 857.02,
+    "content": "(unintelligible) of will (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1,4"
+  },
+  {
+    "id": 42542,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 283,
+    "start_time": 858.205,
+    "end_time": 862.02,
+    "content": "Right now, we can choose to do a good work or a bad work",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'bad':13 'choos':5 'good':9 'right':1 'work':10,14"
+  },
+  {
+    "id": 42543,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 284,
+    "start_time": 862.02,
+    "end_time": 864.496,
+    "content": "at any time, but this is God's will.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':7 'time':3"
+  },
+  {
+    "id": 42544,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 285,
+    "start_time": 864.496,
+    "end_time": 867.02,
+    "content": "God's, God wills that we will, remember that",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':1,3 'rememb':8 'will':4"
+  },
+  {
+    "id": 42545,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 286,
+    "start_time": 867.02,
+    "end_time": 870.02,
+    "content": "God wills that Satan is, is (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':1 'satan':4 'unintellig':7 'will':2"
+  },
+  {
+    "id": 42546,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 287,
+    "start_time": 870.02,
+    "end_time": 871.441,
+    "content": "Remember he wanted to be a god and",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':7 'rememb':1 'want':3"
+  },
+  {
+    "id": 42547,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 288,
+    "start_time": 871.441,
+    "end_time": 873.11,
+    "content": "God said, Ok, I'm gonna make you a god.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'god':1,10 'gonna':6 'm':5 'make':7 'ok':3 'said':2"
+  },
+  {
+    "id": 42548,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 289,
+    "start_time": 874.02,
+    "end_time": 876.02,
+    "content": "But this will end on the Day of Judgment.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'day':7 'end':4 'judgment':9"
+  },
+  {
+    "id": 42549,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 290,
+    "start_time": 876.268,
+    "end_time": 880.839,
+    "content": "Satan's way of immense dominion will end on the Day of Judgment.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'day':11 'dominion':6 'end':8 'immens':5 'judgment':13 'satan':1 'way':3"
+  },
+  {
+    "id": 42550,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 291,
+    "start_time": 881.406,
+    "end_time": 885.571,
+    "content": "Also, I want you to look at another verse together.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'also':1 'anoth':8 'look':6 'togeth':10 'vers':9 'want':3"
+  },
+  {
+    "id": 42551,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 292,
+    "start_time": 885.571,
+    "end_time": 887.276,
+    "content": "Even in (unintelligible) we have",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'even':1 'unintellig':3"
+  },
+  {
+    "id": 42552,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 293,
+    "start_time": 888.516,
+    "end_time": 891.02,
+    "content": "In Sura 4, (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'4':3 'sura':2 'unintellig':4"
+  },
+  {
+    "id": 42553,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 294,
+    "start_time": 891.02,
+    "end_time": 893.02,
+    "content": "this is a (unintellgible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellg':4"
+  },
+  {
+    "id": 42554,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 295,
+    "start_time": 893.02,
+    "end_time": 895.02,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42555,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 296,
+    "start_time": 902.638,
+    "end_time": 904.02,
+    "content": "Holy...",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'holi':1"
+  },
+  {
+    "id": 42556,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 297,
+    "start_time": 904.02,
+    "end_time": 906.689,
+    "content": "Verse 16, believe it or not",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'16':2 'believ':3 'vers':1"
+  },
+  {
+    "id": 42557,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 298,
+    "start_time": 910.083,
+    "end_time": 912.083,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42558,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 299,
+    "start_time": 916.02,
+    "end_time": 918.351,
+    "content": "You see, this is the picture of (unintelligible).",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'pictur':6 'see':2 'unintellig':8"
+  },
+  {
+    "id": 42559,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 300,
+    "start_time": 918.351,
+    "end_time": 923.02,
+    "content": "It's showing (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'show':3 'unintellig':4"
+  },
+  {
+    "id": 42560,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 301,
+    "start_time": 923.02,
+    "end_time": 925.02,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42561,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 302,
+    "start_time": 925.02,
+    "end_time": 926,
+    "content": "40:16",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'16':2 '40':1"
+  },
+  {
+    "id": 42562,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 303,
+    "start_time": 926,
+    "end_time": 926.634,
+    "content": "Yes.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'yes':1"
+  },
+  {
+    "id": 42563,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 304,
+    "start_time": 927.847,
+    "end_time": 929.599,
+    "content": "Bism Allah Arrahman Arraheem",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'allah':2 'arraheem':4 'arrahman':3 'bism':1"
+  },
+  {
+    "id": 42564,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 305,
+    "start_time": 930.205,
+    "end_time": 940.82,
+    "content": "[40:16]  That is the day when everyone will be completely exposed; none of them will hide anything from GOD. To whom belongs all kingship on that day? ...",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'16':2 '40':1 'anyth':18 'belong':23 'complet':11 'day':6,28 'everyon':8 'expos':12 'god':20 'hide':17 'kingship':25 'none':13"
+  },
+  {
+    "id": 42565,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 306,
+    "start_time": 941.399,
+    "end_time": 941.899,
+    "content": "Oh,",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'oh':1"
+  },
+  {
+    "id": 42566,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 307,
+    "start_time": 941.899,
+    "end_time": 946.159,
+    "content": "[40:16]  ... To whom belongs all kingship on that day? To GOD, the One, the Supreme.",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'16':2 '40':1 'belong':5 'day':10 'god':12 'kingship':7 'one':14 'suprem':16"
+  },
+  {
+    "id": 42567,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 308,
+    "start_time": 946.706,
+    "end_time": 950.277,
+    "content": "To your Lord belongs all kingship on that Day.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'belong':4 'day':9 'kingship':6 'lord':3"
+  },
+  {
+    "id": 42568,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 309,
+    "start_time": 951.49,
+    "end_time": 954.4,
+    "content": "God wills to give Satan some (unintelligible) now.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'give':4 'god':1 'satan':5 'unintellig':7 'will':2"
+  },
+  {
+    "id": 42569,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 310,
+    "start_time": 955.53,
+    "end_time": 957.53,
+    "content": "This, all this (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':4"
+  },
+  {
+    "id": 42570,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 311,
+    "start_time": 960.176,
+    "end_time": 964.188,
+    "content": "Did you have a question on the (unintelligible), Dr. Sabahi?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'dr':9 'question':5 'sabahi':10 'unintellig':8"
+  },
+  {
+    "id": 42571,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 312,
+    "start_time": 964.767,
+    "end_time": 972.996,
+    "content": "I just, could that be also related to intercession that (unintelligible)",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'also':6 'could':3 'intercess':9 'relat':7 'unintellig':11"
+  },
+  {
+    "id": 42572,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 313,
+    "start_time": 972.996,
+    "end_time": 979.213,
+    "content": "clearly indicates as God is the One who on that Day is the Judge and...",
+    "speaker": "Dr. Sabahi",
+    "search_vector": "'clear':1 'day':11 'god':4 'indic':2 'judg':14 'one':7"
+  },
+  {
+    "id": 42573,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 314,
+    "start_time": 979.213,
+    "end_time": 984,
+    "content": "(unintelligible) for intercession, this is (unintelligible) now and then, always.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'alway':10 'intercess':3 'unintellig':1,6"
+  },
+  {
+    "id": 42574,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 315,
+    "start_time": 984,
+    "end_time": 986.358,
+    "content": "There's no intercession (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'intercess':4 'unintellig':5"
+  },
+  {
+    "id": 42575,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 316,
+    "start_time": 991.677,
+    "end_time": 998.886,
+    "content": "(unintelligible) at what Rashad said about the sequence of revelation, I understand that this was (unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'rashad':4 'revel':10 'said':5 'sequenc':8 'understand':12 'unintellig':1,16"
+  },
+  {
+    "id": 42576,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 317,
+    "start_time": 998.886,
+    "end_time": 1005.875,
+    "content": "was the first Sura, the first fifth Sura revealed. Now, this was revealed after Sura 7.., was 74, Sura 1.",
+    "speaker": "A man",
+    "search_vector": "'1':20 '7':16 '74':18 'fifth':7 'first':3,6 'reveal':9,13 'sura':4,8,15,19"
+  },
+  {
+    "id": 42577,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 318,
+    "start_time": 1006.398,
+    "end_time": 1011.127,
+    "content": "was early as Sura 74 (unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'74':5 'earli':2 'sura':4 'unintellig':6"
+  },
+  {
+    "id": 42578,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 319,
+    "start_time": 1011.899,
+    "end_time": 1015.194,
+    "content": "And then, the next revelation is 19 letters of this Sura.",
+    "speaker": "A man",
+    "search_vector": "'19':7 'letter':8 'next':4 'revel':5 'sura':11"
+  },
+  {
+    "id": 42579,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 320,
+    "start_time": 1016.159,
+    "end_time": 1017.222,
+    "content": "And it is...",
+    "speaker": "A man",
+    "search_vector": ""
+  },
+  {
+    "id": 42580,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 321,
+    "start_time": 1017.553,
+    "end_time": 1018.147,
+    "content": "Very strong.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'strong':2"
+  },
+  {
+    "id": 42581,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 322,
+    "start_time": 1018.147,
+    "end_time": 1019.127,
+    "content": "(unintelligible)",
+    "speaker": "A man",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42582,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 323,
+    "start_time": 1019.127,
+    "end_time": 1021.127,
+    "content": "And this was (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':4"
+  },
+  {
+    "id": 42583,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 324,
+    "start_time": 1021.568,
+    "end_time": 1026.269,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42584,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 325,
+    "start_time": 1029.99,
+    "end_time": 1031.521,
+    "content": "First revelation was \"read.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'first':1 'read':4 'revel':2"
+  },
+  {
+    "id": 42585,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 326,
+    "start_time": 1031.521,
+    "end_time": 1033.108,
+    "content": "Second revelation was \"write.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'revel':2 'second':1 'write':4"
+  },
+  {
+    "id": 42586,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 327,
+    "start_time": 1033.549,
+    "end_time": 1035.549,
+    "content": "Third revelation was get up and work.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'get':4 'revel':2 'third':1 'work':7"
+  },
+  {
+    "id": 42587,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 328,
+    "start_time": 1036.1,
+    "end_time": 1037.862,
+    "content": "Fourth revelation was the number 19.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'19':6 'fourth':1 'number':5 'revel':2"
+  },
+  {
+    "id": 42588,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 329,
+    "start_time": 1037.862,
+    "end_time": 1039.393,
+    "content": "Fifth revelation was \"the key.\"",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'fifth':1 'key':5 'revel':2"
+  },
+  {
+    "id": 42589,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 330,
+    "start_time": 1039.889,
+    "end_time": 1041.889,
+    "content": "Read and write was first revelation.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'first':5 'read':1 'revel':6 'write':3"
+  },
+  {
+    "id": 42590,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 331,
+    "start_time": 1045.665,
+    "end_time": 1047.665,
+    "content": "Ok. Back to our teacher.",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'back':2 'ok':1 'teacher':5"
+  },
+  {
+    "id": 42591,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 332,
+    "start_time": 1047.665,
+    "end_time": 1049.665,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42592,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 333,
+    "start_time": 1049.665,
+    "end_time": 1050.204,
+    "content": "Pardon?",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'pardon':1"
+  },
+  {
+    "id": 42593,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 334,
+    "start_time": 1051.444,
+    "end_time": 1058.984,
+    "content": "(unintelligible)",
+    "speaker": "A woman",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42594,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 335,
+    "start_time": 1058.984,
+    "end_time": 1062.472,
+    "content": "(unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'unintellig':1"
+  },
+  {
+    "id": 42595,
+    "media_id": "1e35c981-8713-4ad1-bf68-b6892bfc9c5d",
+    "segment_index": 336,
+    "start_time": 1063.216,
+    "end_time": 1075.358,
+    "content": "Don't you see there is the (unintelligible)",
+    "speaker": "Dr. Khalifa",
+    "search_vector": "'see':4 'unintellig':8"
+  }
+]
