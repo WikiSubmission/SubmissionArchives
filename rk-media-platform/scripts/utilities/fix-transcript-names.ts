@@ -72,7 +72,7 @@ const TRANSCRIPT_RENAMES: Record<string, string> = {
 };
 
 async function getAllFiles(): Promise<string[]> {
-    let allKeys: string[] = [];
+    const allKeys: string[] = [];
     let continuationToken;
 
     do {

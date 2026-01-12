@@ -47,7 +47,7 @@ async function main() {
     }
 
     let totalUploaded = 0;
-    let totalSkipped = 0;
+    const totalSkipped = 0;
     let totalFailed = 0;
 
     for (const dir of TARGET_DIRS) {

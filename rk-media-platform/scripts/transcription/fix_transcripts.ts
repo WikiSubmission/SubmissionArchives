@@ -64,7 +64,7 @@ async function main() {
 
     console.log(`Regex built with ${sortedSpeakers.length} names.`);
 
-    let totalUpdated = 0;
+    const totalUpdated = 0;
 
     for (const mediaId of mediaIds) {
         console.log(`Processing Media ID: ${mediaId}...`);
@@ -94,7 +94,7 @@ async function processMedia(mediaId: string, regex: RegExp) {
         return;
     }
 
-    let newSegmentsBatch: any[] = [];
+    const newSegmentsBatch: any[] = [];
     let nextIndex = 0;
     let changesCount = 0;
 

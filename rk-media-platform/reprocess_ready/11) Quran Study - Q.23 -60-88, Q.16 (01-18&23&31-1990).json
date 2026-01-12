@@ -1,0 +1,6882 @@
+[
+  {
+    "id": 0,
+    "start_time": 0.93,
+    "end_time": 2.022,
+    "speaker": "A man",
+    "content": "Wow!",
+    "segment_index": 0
+  },
+  {
+    "id": 1,
+    "start_time": 2.022,
+    "end_time": 3.56,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah. (unintelligible). Right.",
+    "segment_index": 1
+  },
+  {
+    "id": "2_part_0",
+    "start_time": 3.56,
+    "end_time": 4.746,
+    "speaker": "A man",
+    "content": "Look at this whole place! ",
+    "segment_index": 2
+  },
+  {
+    "id": "2_part_1",
+    "start_time": 4.746,
+    "end_time": 5.932,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) millions.",
+    "segment_index": 3
+  },
+  {
+    "id": 3,
+    "start_time": 5.932,
+    "end_time": 8.271,
+    "speaker": "A man",
+    "content": "What (unintelligible) is wrong? (unintelligible)",
+    "segment_index": 4
+  },
+  {
+    "id": 4,
+    "start_time": 10.0,
+    "end_time": 10.663,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 5
+  },
+  {
+    "id": 5,
+    "start_time": 10.663,
+    "end_time": 11.958,
+    "speaker": "Dr. Khalifa",
+    "content": "It's too late for Russia.",
+    "segment_index": 6
+  },
+  {
+    "id": 6,
+    "start_time": 11.958,
+    "end_time": 13.712,
+    "speaker": "A man",
+    "content": "(Unintelligible).",
+    "segment_index": 7
+  },
+  {
+    "id": 7,
+    "start_time": 13.712,
+    "end_time": 14.299,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh yeah.",
+    "segment_index": 8
+  },
+  {
+    "id": 8,
+    "start_time": 14.299,
+    "end_time": 15.922,
+    "speaker": "Dr. Khalifa",
+    "content": "This is why they have the picture like that.",
+    "segment_index": 9
+  },
+  {
+    "id": 9,
+    "start_time": 15.922,
+    "end_time": 16.744,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 10
+  },
+  {
+    "id": 10,
+    "start_time": 17.038,
+    "end_time": 19.502,
+    "speaker": "Dr. Khalifa",
+    "content": "Look at that! Yes. Millions of people!",
+    "segment_index": 11
+  },
+  {
+    "id": 11,
+    "start_time": 20.579,
+    "end_time": 23.34,
+    "speaker": "A man",
+    "content": "(unintelligible) Butterflies. (unintelligible).",
+    "segment_index": 12
+  },
+  {
+    "id": 12,
+    "start_time": 25.249,
+    "end_time": 26.13,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 13
+  },
+  {
+    "id": 13,
+    "start_time": 26.766,
+    "end_time": 30.507,
+    "speaker": "Dr. Khalifa",
+    "content": "This is... I mean, Gorbachev, Gorbachev cannot fill all these.",
+    "segment_index": 14
+  },
+  {
+    "id": 14,
+    "start_time": 30.507,
+    "end_time": 32.507,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 15
+  },
+  {
+    "id": 15,
+    "start_time": 32.507,
+    "end_time": 33.73,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 16
+  },
+  {
+    "id": 16,
+    "start_time": 33.73,
+    "end_time": 34.778,
+    "speaker": "Dr. Khalifa",
+    "content": "21st century.",
+    "segment_index": 17
+  },
+  {
+    "id": 17,
+    "start_time": 34.778,
+    "end_time": 36.052,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 18
+  },
+  {
+    "id": 18,
+    "start_time": 36.492,
+    "end_time": 38.396,
+    "speaker": "Dr. Khalifa",
+    "content": "People in Russia are revolting.",
+    "segment_index": 19
+  },
+  {
+    "id": "19_part_0",
+    "start_time": 39.375,
+    "end_time": 41.0325,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) It's the most (unintelligible) ",
+    "segment_index": 20
+  },
+  {
+    "id": "19_part_1",
+    "start_time": 41.0325,
+    "end_time": 41.585,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 21
+  },
+  {
+    "id": 20,
+    "start_time": 41.928,
+    "end_time": 44.466,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 22
+  },
+  {
+    "id": 21,
+    "start_time": 44.717,
+    "end_time": 48.766,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, and you know, when they have a great number of people like this, they always encourage each other.",
+    "segment_index": 23
+  },
+  {
+    "id": 22,
+    "start_time": 48.766,
+    "end_time": 50.0,
+    "speaker": "A man",
+    "content": "Oh yes. (unintelligible)",
+    "segment_index": 24
+  },
+  {
+    "id": 23,
+    "start_time": 50.0,
+    "end_time": 51.2,
+    "speaker": "Dr. Khalifa",
+    "content": "They'll become (unintelligible)",
+    "segment_index": 25
+  },
+  {
+    "id": 24,
+    "start_time": 51.2,
+    "end_time": 52.674,
+    "speaker": "A man",
+    "content": "Yeah. No fear.",
+    "segment_index": 26
+  },
+  {
+    "id": 25,
+    "start_time": 53.114,
+    "end_time": 53.695,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 27
+  },
+  {
+    "id": 26,
+    "start_time": 55.8,
+    "end_time": 56.723,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 28
+  },
+  {
+    "id": 27,
+    "start_time": 57.323,
+    "end_time": 61.514,
+    "speaker": "Dr. Khalifa",
+    "content": "In fact, they were in Moscow, then they're gonna occupy Moscow.",
+    "segment_index": 29
+  },
+  {
+    "id": 28,
+    "start_time": 61.514,
+    "end_time": 62.859,
+    "speaker": "A man",
+    "content": "Where do we start?",
+    "segment_index": 30
+  },
+  {
+    "id": 29,
+    "start_time": 62.859,
+    "end_time": 63.978,
+    "speaker": "Dr. Khalifa",
+    "content": "346.",
+    "segment_index": 31
+  },
+  {
+    "id": 30,
+    "start_time": 66.425,
+    "end_time": 68.425,
+    "speaker": "Dr. Khalifa",
+    "content": "It is (unintelligible)",
+    "segment_index": 32
+  },
+  {
+    "id": 31,
+    "start_time": 71.459,
+    "end_time": 73.70400000000001,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 33
+  },
+  {
+    "id": 32,
+    "start_time": 78.618,
+    "end_time": 80.52799999999999,
+    "speaker": "Dr. Khalifa",
+    "content": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
+    "segment_index": 34
+  },
+  {
+    "id": 33,
+    "start_time": 80.52799999999999,
+    "end_time": 82.23400000000001,
+    "speaker": "Dr. Khalifa",
+    "content": "Bism Allah Arrahman Arraheem",
+    "segment_index": 35
+  },
+  {
+    "id": 34,
+    "start_time": 83.416,
+    "end_time": 85.19,
+    "speaker": "Dr. Khalifa",
+    "content": "Descriptions of The Believers",
+    "segment_index": 36
+  },
+  {
+    "id": 35,
+    "start_time": 85.63,
+    "end_time": 91.251,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:60] And they give their charities, while their minds know full well. For they will be summoned before their Lord,",
+    "segment_index": 37
+  },
+  {
+    "id": 36,
+    "start_time": 91.789,
+    "end_time": 96.553,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:61] These are the ones who hasten to work righteousness; they're always far ahead.",
+    "segment_index": 38
+  },
+  {
+    "id": 37,
+    "start_time": 96.84700000000001,
+    "end_time": 98.336,
+    "speaker": "Dr. Khalifa",
+    "content": "The Disbelievers Unappreciative",
+    "segment_index": 39
+  },
+  {
+    "id": 38,
+    "start_time": 99.168,
+    "end_time": 106.102,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:62] We never burden any soul beyond its means, and we keep a record that presents the truth. No one will suffer injustice.",
+    "segment_index": 40
+  },
+  {
+    "id": 39,
+    "start_time": 106.837,
+    "end_time": 114.237,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:63] Because their minds are oblivious to this, they commit works that do not conform with this; such are their works.",
+    "segment_index": 41
+  },
+  {
+    "id": 40,
+    "start_time": 114.971,
+    "end_time": 119.082,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:64] Then, when we afflict their leaders with retribution, they complain.",
+    "segment_index": 42
+  },
+  {
+    "id": 41,
+    "start_time": 121.187,
+    "end_time": 124.647,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:65] Do not complain; today, you cannot receive any help.",
+    "segment_index": 43
+  },
+  {
+    "id": 42,
+    "start_time": 125.283,
+    "end_time": 130.0,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:66] My revelations were recited to you, but you turned back on your heels.",
+    "segment_index": 44
+  },
+  {
+    "id": 43,
+    "start_time": 131.058,
+    "end_time": 134.843,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:67] You were too arrogant to accept them. You disregarded them.",
+    "segment_index": 45
+  },
+  {
+    "id": 44,
+    "start_time": 135.43,
+    "end_time": 141.834,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:68] Have they not reflected on this scripture? Have they attained something never attained by their ancestors?",
+    "segment_index": 46
+  },
+  {
+    "id": 45,
+    "start_time": 142.575,
+    "end_time": 147.324,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:69] Have they failed to recognize their messenger? Is this why they are disregarding him?",
+    "segment_index": 47
+  },
+  {
+    "id": 46,
+    "start_time": 147.96,
+    "end_time": 155.105,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:70] Have they decided that he is crazy? Indeed, he has brought the truth to them, but most of them hate the truth.",
+    "segment_index": 48
+  },
+  {
+    "id": 47,
+    "start_time": 159.314,
+    "end_time": 172.667,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:71] Indeed, if the truth was to follow their opinions, there would be chaos in the heavens and the earth and everything in them. We have given them their reminder, but they are disregarding their reminder.",
+    "segment_index": 49
+  },
+  {
+    "id": 48,
+    "start_time": 172.667,
+    "end_time": 175.067,
+    "speaker": "Dr. Khalifa",
+    "content": "Reminder here is the mathematical code.",
+    "segment_index": 50
+  },
+  {
+    "id": 49,
+    "start_time": 177.315,
+    "end_time": 187.638,
+    "speaker": "Dr. Khalifa",
+    "content": "Because the word Zikr, the word Zikr. This is 438.",
+    "segment_index": 51
+  },
+  {
+    "id": 50,
+    "start_time": 190.623,
+    "end_time": 192.623,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah. It's 453.",
+    "segment_index": 52
+  },
+  {
+    "id": 51,
+    "start_time": 197.073,
+    "end_time": 206.874,
+    "speaker": "Dr. Khalifa",
+    "content": "He told them but they under (unintelligible) the messenger. He told them that Quran does contain a gift, the mathematical code,",
+    "segment_index": 53
+  },
+  {
+    "id": 52,
+    "start_time": 206.874,
+    "end_time": 211.81,
+    "speaker": "Dr. Khalifa",
+    "content": "a distinct code in the Quran. The same word's used here.",
+    "segment_index": 54
+  },
+  {
+    "id": 53,
+    "start_time": 221.362,
+    "end_time": 228.35399999999998,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:72] Are you asking them for any wage? Your Lord's wage is far better. He is the best Provider.",
+    "segment_index": 55
+  },
+  {
+    "id": 54,
+    "start_time": 229.186,
+    "end_time": 232.55599999999998,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:73] Most assuredly, you are inviting them to a straight path.",
+    "segment_index": 56
+  },
+  {
+    "id": 55,
+    "start_time": 233.29,
+    "end_time": 237.15,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:74] It is those who disbelieve in the Hereafter and deviate from the path.",
+    "segment_index": 57
+  },
+  {
+    "id": 56,
+    "start_time": 238.227,
+    "end_time": 243.31,
+    "speaker": "Dr. Khalifa",
+    "content": "This is consistent with the criteria in the Quran about those who disbelieve in the Hereafter.",
+    "segment_index": 58
+  },
+  {
+    "id": 57,
+    "start_time": 243.31,
+    "end_time": 247.393,
+    "speaker": "Dr. Khalifa",
+    "content": "They follow other than the Quran. They don't like the Quran alone. They follow Hadith and Sunnah.",
+    "segment_index": 59
+  },
+  {
+    "id": 58,
+    "start_time": 247.393,
+    "end_time": 251.264,
+    "speaker": "Dr. Khalifa",
+    "content": "When God Alone is mentioned, their hearts shrink with aversion.",
+    "segment_index": 60
+  },
+  {
+    "id": 59,
+    "start_time": 251.264,
+    "end_time": 252.628,
+    "speaker": "Dr. Khalifa",
+    "content": "All (unintelligible).",
+    "segment_index": 61
+  },
+  {
+    "id": 60,
+    "start_time": 253.662,
+    "end_time": 257.081,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:74] It is those who disbelieve in the Hereafter and deviate from the path.",
+    "segment_index": 62
+  },
+  {
+    "id": 61,
+    "start_time": 258.207,
+    "end_time": 265.427,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:75] Had we showered them with mercy, and relieved their adversities, they would have plunged deeper into their transgression.",
+    "segment_index": 63
+  },
+  {
+    "id": 62,
+    "start_time": 266.406,
+    "end_time": 271.459,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:76] Even when we afflicted them with retribution, they never turned to their Lord. They never implored.",
+    "segment_index": 64
+  },
+  {
+    "id": 63,
+    "start_time": 272.193,
+    "end_time": 275.718,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:77] When we showered them with well-deserved retribution, they were shocked.",
+    "segment_index": 65
+  },
+  {
+    "id": 64,
+    "start_time": 277.48,
+    "end_time": 283.62,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:78] He is the One who granted you the hearing, the eyesight, and the brains. Rarely are you appreciative.",
+    "segment_index": 66
+  },
+  {
+    "id": 65,
+    "start_time": 284.452,
+    "end_time": 289.53499999999997,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:79] He is the One who established you on earth, and before Him you will be summoned.",
+    "segment_index": 67
+  },
+  {
+    "id": 66,
+    "start_time": 290.269,
+    "end_time": 297.534,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:80] He is the One who controls life and death, and He is the One who alternates the night and day. Do you not understand?",
+    "segment_index": 68
+  },
+  {
+    "id": 67,
+    "start_time": 298.905,
+    "end_time": 301.443,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:81] They said what their ancestors said.",
+    "segment_index": 69
+  },
+  {
+    "id": 68,
+    "start_time": 302.128,
+    "end_time": 306.281,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:82] They said, \"After we die and turn into dust and bones, we get resurrected?",
+    "segment_index": 70
+  },
+  {
+    "id": 69,
+    "start_time": 309.707,
+    "end_time": 315.524,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:83] \"Such promises were given to us and to our parents in the past. These are no more than tales from the past.\"",
+    "segment_index": 71
+  },
+  {
+    "id": 70,
+    "start_time": 318.954,
+    "end_time": 324.95799999999997,
+    "speaker": "Dr. Khalifa",
+    "content": "It's funny because, I mean, those ignorant generations, they demanded that their ancestors",
+    "segment_index": 72
+  },
+  {
+    "id": 71,
+    "start_time": 324.95799999999997,
+    "end_time": 329.503,
+    "speaker": "Dr. Khalifa",
+    "content": "be brought back to life as a demonstration of resurrection.",
+    "segment_index": 73
+  },
+  {
+    "id": 72,
+    "start_time": 330.0,
+    "end_time": 335.185,
+    "speaker": "Dr. Khalifa",
+    "content": "This is what even today is happening, I mean, Susan Rey (unintelligible)",
+    "segment_index": 74
+  },
+  {
+    "id": 73,
+    "start_time": 335.185,
+    "end_time": 341.848,
+    "speaker": "Dr. Khalifa",
+    "content": "\"someday, people will come back to life, Hussein and Ali and Fatima.\" She wants to see them come back to life.",
+    "segment_index": 75
+  },
+  {
+    "id": 74,
+    "start_time": 342.093,
+    "end_time": 343.52,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 76
+  },
+  {
+    "id": 75,
+    "start_time": 343.52,
+    "end_time": 344.345,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum.",
+    "segment_index": 77
+  },
+  {
+    "id": 76,
+    "start_time": 344.834,
+    "end_time": 347.533,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 78
+  },
+  {
+    "id": 77,
+    "start_time": 347.533,
+    "end_time": 359.603,
+    "speaker": "Dr. Khalifa",
+    "content": "She looks, in fact, maybe in this Sura, ironically, the verse in this Sura which she uses to prove to her",
+    "segment_index": 79
+  },
+  {
+    "id": 78,
+    "start_time": 359.603,
+    "end_time": 366.607,
+    "speaker": "Dr. Khalifa",
+    "content": "that Ali, Hussein, Hasan, and Fatima, and others will come back to life in this out of the dead.",
+    "segment_index": 80
+  },
+  {
+    "id": "79_part_0",
+    "start_time": 368.124,
+    "end_time": 370.65615,
+    "speaker": "A man",
+    "content": "(unintelligible) ",
+    "segment_index": 81
+  },
+  {
+    "id": "79_part_1",
+    "start_time": 370.65615,
+    "end_time": 371.103,
+    "speaker": "Dr. Khalifa",
+    "content": "No.",
+    "segment_index": 82
+  },
+  {
+    "id": 80,
+    "start_time": 373.844,
+    "end_time": 376.138,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 83
+  },
+  {
+    "id": 81,
+    "start_time": 384.872,
+    "end_time": 387.83,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) So, it's, it happens in every generation.",
+    "segment_index": 84
+  },
+  {
+    "id": 82,
+    "start_time": 389.396,
+    "end_time": 395.073,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 85
+  },
+  {
+    "id": 83,
+    "start_time": 395.073,
+    "end_time": 397.306,
+    "speaker": "A woman",
+    "content": "talking about the retribution showering.",
+    "segment_index": 86
+  },
+  {
+    "id": 84,
+    "start_time": 397.991,
+    "end_time": 399.159,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum.",
+    "segment_index": 87
+  },
+  {
+    "id": "85_part_0",
+    "start_time": 399.159,
+    "end_time": 402.3684,
+    "speaker": "A woman",
+    "content": "Because the English showering is from above. ",
+    "segment_index": 88
+  },
+  {
+    "id": "85_part_1",
+    "start_time": 402.3684,
+    "end_time": 402.725,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 89
+  },
+  {
+    "id": 86,
+    "start_time": 402.725,
+    "end_time": 404.725,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum. (unintelligible)",
+    "segment_index": 90
+  },
+  {
+    "id": 87,
+    "start_time": 406.213,
+    "end_time": 409.486,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:77] When we showered them with well-deserved retribution, they were shocked.",
+    "segment_index": 91
+  },
+  {
+    "id": 88,
+    "start_time": 409.731,
+    "end_time": 410.801,
+    "speaker": "Dr. Khalifa",
+    "content": "77.",
+    "segment_index": 92
+  },
+  {
+    "id": 89,
+    "start_time": 416.484,
+    "end_time": 419.223,
+    "speaker": "Dr. Khalifa",
+    "content": "They had quite a few problems like in 76.",
+    "segment_index": 93
+  },
+  {
+    "id": 90,
+    "start_time": 419.712,
+    "end_time": 424.502,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:76] Even when we afflicted them with retribution, they never turned to their Lord. They never implored.",
+    "segment_index": 94
+  },
+  {
+    "id": 91,
+    "start_time": 424.894,
+    "end_time": 429.243,
+    "speaker": "Dr. Khalifa",
+    "content": "Beirut, Lebanon is being used as an example in the midst of the Arabs. (unintelligible)",
+    "segment_index": 95
+  },
+  {
+    "id": 92,
+    "start_time": 429.537,
+    "end_time": 433.901,
+    "speaker": "Dr. Khalifa",
+    "content": "Beirut is the Ka'bah of the Arabs. They go there for fun and,",
+    "segment_index": 96
+  },
+  {
+    "id": 93,
+    "start_time": 433.901,
+    "end_time": 439.082,
+    "speaker": "Dr. Khalifa",
+    "content": "you know, a symbol of civilization, the closest thing to Europe Civilization.",
+    "segment_index": 97
+  },
+  {
+    "id": 94,
+    "start_time": 440.257,
+    "end_time": 442.255,
+    "speaker": "Dr. Khalifa",
+    "content": "Even from Iran, they used to go to Lebanon",
+    "segment_index": 98
+  },
+  {
+    "id": 95,
+    "start_time": 442.255,
+    "end_time": 442.755,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 99
+  },
+  {
+    "id": 96,
+    "start_time": 442.755,
+    "end_time": 443.287,
+    "speaker": "Dr. Khalifa",
+    "content": "in the time of...",
+    "segment_index": 100
+  },
+  {
+    "id": 97,
+    "start_time": 443.287,
+    "end_time": 443.819,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 101
+  },
+  {
+    "id": 98,
+    "start_time": 445.387,
+    "end_time": 447.211,
+    "speaker": "Dr. Khalifa",
+    "content": "So, it was the center for all the Arab countries.",
+    "segment_index": 102
+  },
+  {
+    "id": 99,
+    "start_time": 447.211,
+    "end_time": 450.0,
+    "speaker": "Dr. Khalifa",
+    "content": "And God said (unintelligible)",
+    "segment_index": 103
+  },
+  {
+    "id": 100,
+    "start_time": 450.979,
+    "end_time": 452.939,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible).",
+    "segment_index": 104
+  },
+  {
+    "id": 101,
+    "start_time": 452.939,
+    "end_time": 453.439,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 105
+  },
+  {
+    "id": 102,
+    "start_time": 453.439,
+    "end_time": 455.094,
+    "speaker": "Dr. Khalifa",
+    "content": "over a long period of time.",
+    "segment_index": 106
+  },
+  {
+    "id": 103,
+    "start_time": 456.079,
+    "end_time": 457.953,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) Sodom and Gomorrah.",
+    "segment_index": 107
+  },
+  {
+    "id": 104,
+    "start_time": 459.953,
+    "end_time": 462.149,
+    "speaker": "Dr. Khalifa",
+    "content": "And they never lived. They never lived.",
+    "segment_index": 108
+  },
+  {
+    "id": 105,
+    "start_time": 462.638,
+    "end_time": 464.883,
+    "speaker": "Dr. Khalifa",
+    "content": "Because Beirut was the center of evil,",
+    "segment_index": 109
+  },
+  {
+    "id": 106,
+    "start_time": 464.883,
+    "end_time": 467.3,
+    "speaker": "Dr. Khalifa",
+    "content": "like Las Vegas (unintelligible)",
+    "segment_index": 110
+  },
+  {
+    "id": 107,
+    "start_time": 467.3,
+    "end_time": 473.21500000000003,
+    "speaker": "Dr. Khalifa",
+    "content": "Casinos, gambling, and drinking, and prostitution, drugs and shows.",
+    "segment_index": 111
+  },
+  {
+    "id": 108,
+    "start_time": 473.21500000000003,
+    "end_time": 475.251,
+    "speaker": "Dr. Khalifa",
+    "content": "The same shows as Las Vegas, drugs",
+    "segment_index": 112
+  },
+  {
+    "id": "109_part_0",
+    "start_time": 475.251,
+    "end_time": 477.67205660377357,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) in the whole world. ",
+    "segment_index": 113
+  },
+  {
+    "id": "109_part_1",
+    "start_time": 477.67205660377357,
+    "end_time": 478.719,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 114
+  },
+  {
+    "id": 110,
+    "start_time": 478.964,
+    "end_time": 480.0,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum.",
+    "segment_index": 115
+  },
+  {
+    "id": 111,
+    "start_time": 481.339,
+    "end_time": 485.25,
+    "speaker": "A man",
+    "content": "Actually, Tehran was (unintelligible) night life.",
+    "segment_index": 116
+  },
+  {
+    "id": 112,
+    "start_time": 485.25,
+    "end_time": 485.929,
+    "speaker": "Dr. Khalifa",
+    "content": "Night life?",
+    "segment_index": 117
+  },
+  {
+    "id": 113,
+    "start_time": 485.929,
+    "end_time": 486.614,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 118
+  },
+  {
+    "id": 114,
+    "start_time": 487.201,
+    "end_time": 488.271,
+    "speaker": "Dr. Khalifa",
+    "content": "During the Shah.",
+    "segment_index": 119
+  },
+  {
+    "id": 115,
+    "start_time": 488.271,
+    "end_time": 489.005,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 120
+  },
+  {
+    "id": 116,
+    "start_time": 489.005,
+    "end_time": 489.641,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum.",
+    "segment_index": 121
+  },
+  {
+    "id": 117,
+    "start_time": 489.641,
+    "end_time": 492.718,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 122
+  },
+  {
+    "id": 118,
+    "start_time": 493.55,
+    "end_time": 504.065,
+    "speaker": "A man",
+    "content": "Yeah. Actually, (unintelligible)",
+    "segment_index": 123
+  },
+  {
+    "id": 119,
+    "start_time": 504.874,
+    "end_time": 506.123,
+    "speaker": "Dr. Khalifa",
+    "content": "God loves Iran.",
+    "segment_index": 124
+  },
+  {
+    "id": 120,
+    "start_time": 506.563,
+    "end_time": 510.0,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 125
+  },
+  {
+    "id": "121_part_0",
+    "start_time": 512.447,
+    "end_time": 514.2025769230769,
+    "speaker": "A man",
+    "content": "(unintelligible) ",
+    "segment_index": 126
+  },
+  {
+    "id": "121_part_1",
+    "start_time": 514.2025769230769,
+    "end_time": 515.132,
+    "speaker": "Dr. Khalifa",
+    "content": "If God...",
+    "segment_index": 127
+  },
+  {
+    "id": 122,
+    "start_time": 517.11,
+    "end_time": 523.283,
+    "speaker": "Dr. Khalifa",
+    "content": "God changes (unintelligible) from disbelievers to believers (unintelligible).",
+    "segment_index": 128
+  },
+  {
+    "id": 123,
+    "start_time": 523.675,
+    "end_time": 524.862,
+    "speaker": "Dr. Khalifa",
+    "content": "So, we can see both.",
+    "segment_index": 129
+  },
+  {
+    "id": 124,
+    "start_time": 527.064,
+    "end_time": 529.064,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 130
+  },
+  {
+    "id": 125,
+    "start_time": 534.3,
+    "end_time": 535.419,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 131
+  },
+  {
+    "id": 126,
+    "start_time": 535.419,
+    "end_time": 536.295,
+    "speaker": "Dr. Khalifa",
+    "content": "84,",
+    "segment_index": 132
+  },
+  {
+    "id": 127,
+    "start_time": 536.295,
+    "end_time": 538.295,
+    "speaker": "Dr. Khalifa",
+    "content": "Most Believers are Going to Hell*",
+    "segment_index": 133
+  },
+  {
+    "id": 128,
+    "start_time": 540.791,
+    "end_time": 542.523,
+    "speaker": "Dr. Khalifa",
+    "content": "Khomeini believed in God.",
+    "segment_index": 134
+  },
+  {
+    "id": 129,
+    "start_time": 543.551,
+    "end_time": 544.523,
+    "speaker": "Dr. Khalifa",
+    "content": "He did.",
+    "segment_index": 135
+  },
+  {
+    "id": 130,
+    "start_time": 545.851,
+    "end_time": 550.238,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:84] Say, \"To whom belongs the earth and everyone on it, if you know?\"",
+    "segment_index": 136
+  },
+  {
+    "id": 131,
+    "start_time": 551.021,
+    "end_time": 555.8,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:85] They will say, \"To GOD.\" Say, \"Why then do you not take heed?\"",
+    "segment_index": 137
+  },
+  {
+    "id": 132,
+    "start_time": 556.184,
+    "end_time": 565.836,
+    "speaker": "Dr. Khalifa",
+    "content": "See, it's no big deal to God if creatures believe in Him, He doesn't care. But the, the idea is God's Absolute Authority.",
+    "segment_index": 138
+  },
+  {
+    "id": 133,
+    "start_time": 565.836,
+    "end_time": 573.072,
+    "speaker": "Dr. Khalifa",
+    "content": "In fact, and it's not ego either or arrogance. It's the fact. No one can be a god except God.",
+    "segment_index": 139
+  },
+  {
+    "id": 134,
+    "start_time": 574.8340000000001,
+    "end_time": 584.077,
+    "speaker": "Dr. Khalifa",
+    "content": "No one is qualified to be a god except God. It's just the (unintelligible) truth, fact.",
+    "segment_index": 140
+  },
+  {
+    "id": 135,
+    "start_time": 586.377,
+    "end_time": 590.852,
+    "speaker": "Dr. Khalifa",
+    "content": "And I think this demonstration is Satan's (unintelligible)",
+    "segment_index": 141
+  },
+  {
+    "id": 136,
+    "start_time": 590.852,
+    "end_time": 591.922,
+    "speaker": "Dr. Khalifa",
+    "content": "different things",
+    "segment_index": 142
+  },
+  {
+    "id": 137,
+    "start_time": 592.558,
+    "end_time": 597.201,
+    "speaker": "Dr. Khalifa",
+    "content": "and the earth (unintelligible)",
+    "segment_index": 143
+  },
+  {
+    "id": 138,
+    "start_time": 598.878,
+    "end_time": 601.269,
+    "speaker": "Dr. Khalifa",
+    "content": "Such is Satan's dominion.",
+    "segment_index": 144
+  },
+  {
+    "id": 139,
+    "start_time": 603.863,
+    "end_time": 606.95,
+    "speaker": "Dr. Khalifa",
+    "content": "At the same time compare with God's Kingdom Who,",
+    "segment_index": 145
+  },
+  {
+    "id": 140,
+    "start_time": 606.95,
+    "end_time": 608.95,
+    "speaker": "Dr. Khalifa",
+    "content": "Who (Unintelligible)",
+    "segment_index": 146
+  },
+  {
+    "id": 141,
+    "start_time": 608.95,
+    "end_time": 620.0,
+    "speaker": "Dr. Khalifa",
+    "content": "and Who gives provisions: bananas and pineapples and mangoes and lobster and fish and beef and lamb and etc, etc.",
+    "segment_index": 147
+  },
+  {
+    "id": 142,
+    "start_time": 621.37,
+    "end_time": 623.37,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 148
+  },
+  {
+    "id": 143,
+    "start_time": 623.9639999999999,
+    "end_time": 627.99,
+    "speaker": "Dr. Khalifa",
+    "content": "You're right. This is after the (unintelligible).",
+    "segment_index": 149
+  },
+  {
+    "id": 144,
+    "start_time": 629.409,
+    "end_time": 634.091,
+    "speaker": "Dr. Khalifa",
+    "content": "So, there is, there is the (unintelligible).",
+    "segment_index": 150
+  },
+  {
+    "id": 145,
+    "start_time": 634.531,
+    "end_time": 639.468,
+    "speaker": "Behrouz",
+    "content": "Every country feels like they have their, their cover.",
+    "segment_index": 151
+  },
+  {
+    "id": 146,
+    "start_time": 639.468,
+    "end_time": 640.293,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum.",
+    "segment_index": 152
+  },
+  {
+    "id": "147_part_0",
+    "start_time": 640.293,
+    "end_time": 640.9277872340425,
+    "speaker": "Behrouz",
+    "content": "(unintelligible) ",
+    "segment_index": 153
+  },
+  {
+    "id": "147_part_1",
+    "start_time": 640.9277872340425,
+    "end_time": 642.048,
+    "speaker": "Dr. Khalifa",
+    "content": "The cover is (unintelligible).",
+    "segment_index": 154
+  },
+  {
+    "id": 148,
+    "start_time": 642.048,
+    "end_time": 643.265,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 155
+  },
+  {
+    "id": 149,
+    "start_time": 643.265,
+    "end_time": 643.781,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 156
+  },
+  {
+    "id": 150,
+    "start_time": 643.781,
+    "end_time": 644.466,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 157
+  },
+  {
+    "id": 151,
+    "start_time": 644.76,
+    "end_time": 645.292,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly.",
+    "segment_index": 158
+  },
+  {
+    "id": 152,
+    "start_time": 645.292,
+    "end_time": 646.46,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 159
+  },
+  {
+    "id": 153,
+    "start_time": 646.46,
+    "end_time": 648.46,
+    "speaker": "Dr. Khalifa",
+    "content": "You're right. (unintelligible)",
+    "segment_index": 160
+  },
+  {
+    "id": 154,
+    "start_time": 648.57,
+    "end_time": 650.0,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Hey, what's happening to us?!\"",
+    "segment_index": 161
+  },
+  {
+    "id": "155_part_0",
+    "start_time": 650.0,
+    "end_time": 653.339,
+    "speaker": "Behrouz",
+    "content": "(unintelligible). ",
+    "segment_index": 162
+  },
+  {
+    "id": "155_part_1",
+    "start_time": 653.339,
+    "end_time": 656.307,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 163
+  },
+  {
+    "id": 156,
+    "start_time": 656.588,
+    "end_time": 658.588,
+    "speaker": "Dr. Khalifa",
+    "content": "Also, (unintelligible).",
+    "segment_index": 164
+  },
+  {
+    "id": 157,
+    "start_time": 658.931,
+    "end_time": 660.87,
+    "speaker": "Dr. Khalifa",
+    "content": "This is God's work, nobody else's.",
+    "segment_index": 165
+  },
+  {
+    "id": 158,
+    "start_time": 660.87,
+    "end_time": 665.513,
+    "speaker": "Dr. Khalifa",
+    "content": "Because there is no reason whatsoever why Czechoslovakia and Romanians didn't do the same thing.",
+    "segment_index": 166
+  },
+  {
+    "id": 159,
+    "start_time": 667.342,
+    "end_time": 672.879,
+    "speaker": "Dr. Khalifa",
+    "content": "In fact, Ceaușescu insisted on keeping Romania the same way for, for 40 years now.",
+    "segment_index": 167
+  },
+  {
+    "id": 160,
+    "start_time": 674.439,
+    "end_time": 676.813,
+    "speaker": "Dr. Khalifa",
+    "content": "The angels are probably still beating him up.",
+    "segment_index": 168
+  },
+  {
+    "id": 161,
+    "start_time": 678.134,
+    "end_time": 678.813,
+    "speaker": "A man",
+    "content": "No.",
+    "segment_index": 169
+  },
+  {
+    "id": 162,
+    "start_time": 678.917,
+    "end_time": 679.646,
+    "speaker": "Dr. Khalifa",
+    "content": "The long...",
+    "segment_index": 170
+  },
+  {
+    "id": 163,
+    "start_time": 680.0,
+    "end_time": 680.679,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 171
+  },
+  {
+    "id": 164,
+    "start_time": 680.679,
+    "end_time": 682.679,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 172
+  },
+  {
+    "id": 165,
+    "start_time": 683.953,
+    "end_time": 685.529,
+    "speaker": "A man",
+    "content": "(Unintelligible).",
+    "segment_index": 173
+  },
+  {
+    "id": "166_part_0",
+    "start_time": 685.529,
+    "end_time": 686.1145454545455,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah. ",
+    "segment_index": 174
+  },
+  {
+    "id": "166_part_1",
+    "start_time": 686.1145454545455,
+    "end_time": 687.676,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 175
+  },
+  {
+    "id": 167,
+    "start_time": 687.676,
+    "end_time": 688.759,
+    "speaker": "A man",
+    "content": "(Unintelligible).",
+    "segment_index": 176
+  },
+  {
+    "id": 168,
+    "start_time": 689.591,
+    "end_time": 692.914,
+    "speaker": "Dr. Khalifa",
+    "content": "No, (Unintelligible).",
+    "segment_index": 177
+  },
+  {
+    "id": 169,
+    "start_time": 692.914,
+    "end_time": 700.0,
+    "speaker": "A man",
+    "content": "(Unintelligible).",
+    "segment_index": 178
+  },
+  {
+    "id": 170,
+    "start_time": 700.548,
+    "end_time": 701.765,
+    "speaker": "Dr. Khalifa",
+    "content": "86,",
+    "segment_index": 179
+  },
+  {
+    "id": 171,
+    "start_time": 702.157,
+    "end_time": 706.212,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:86]  Say, \"Who is the Lord of the seven universes; the Lord of the great dominion?\"",
+    "segment_index": 180
+  },
+  {
+    "id": 172,
+    "start_time": 706.212,
+    "end_time": 707.184,
+    "speaker": "Dr. Khalifa",
+    "content": "And these people",
+    "segment_index": 181
+  },
+  {
+    "id": 173,
+    "start_time": 707.184,
+    "end_time": 710.212,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:87]  ...will say, \"GOD.\" Say, \"Why then do you not turn righteous?\"",
+    "segment_index": 182
+  },
+  {
+    "id": 174,
+    "start_time": 711.882,
+    "end_time": 714.349,
+    "speaker": "Dr. Khalifa",
+    "content": "Because of the idols. 88,",
+    "segment_index": 183
+  },
+  {
+    "id": 175,
+    "start_time": 714.349,
+    "end_time": 721.243,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:88]  Say, \"who possesses kingship over all things, and He provides support, but needs no support, if you know?\"",
+    "segment_index": 184
+  },
+  {
+    "id": 176,
+    "start_time": 721.781,
+    "end_time": 724.564,
+    "speaker": "Dr. Khalifa",
+    "content": "[23:89]  They will say, \"GOD.\" Say, \"Where did you go wrong?\"",
+    "segment_index": 185
+  },
+  {
+    "id": 177,
+    "start_time": 726.252,
+    "end_time": 727.596,
+    "speaker": "Dr. Khalifa",
+    "content": "But look at the footnote",
+    "segment_index": 186
+  },
+  {
+    "id": 178,
+    "start_time": 727.596,
+    "end_time": 733.028,
+    "speaker": "Dr. Khalifa",
+    "content": "*23:84-89 Belief in God is valid only if one recognizes God's qualities,",
+    "segment_index": 187
+  },
+  {
+    "id": 179,
+    "start_time": 733.028,
+    "end_time": 741.104,
+    "speaker": "Dr. Khalifa",
+    "content": "such as the fact that God controls everything (8:17). Believers who do not know God are not really believers.",
+    "segment_index": 188
+  },
+  {
+    "id": 180,
+    "start_time": 741.104,
+    "end_time": 745.568,
+    "speaker": "Dr. Khalifa",
+    "content": "Most believers nullify their belief by idolizing prophets and saints (6:106).",
+    "segment_index": 189
+  },
+  {
+    "id": 181,
+    "start_time": 747.672,
+    "end_time": 749.0360000000001,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 190
+  },
+  {
+    "id": 182,
+    "start_time": 749.045,
+    "end_time": 753.938,
+    "speaker": "Dr. Khalifa",
+    "content": "Let's read Al-Fãtehah for Soad. Her test is today. She needs to sit here.",
+    "segment_index": 191
+  },
+  {
+    "id": 183,
+    "start_time": 755.308,
+    "end_time": 758.673,
+    "speaker": "Dr. Khalifa",
+    "content": "(Unintelligible). God will send His help. So, (unintelligible) IN SHAA ALLAH",
+    "segment_index": 192
+  },
+  {
+    "id": 184,
+    "start_time": 758.673,
+    "end_time": 759.771,
+    "speaker": "Dr. Khalifa",
+    "content": "Al-Fãtehah",
+    "segment_index": 193
+  },
+  {
+    "id": 185,
+    "start_time": 760.271,
+    "end_time": 777.85,
+    "speaker": "Dr. Khalifa",
+    "content": "Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7)",
+    "segment_index": 194
+  },
+  {
+    "id": 186,
+    "start_time": 778.633,
+    "end_time": 779.755,
+    "speaker": "Dr. Khalifa",
+    "content": "What did you say?",
+    "segment_index": 195
+  },
+  {
+    "id": 187,
+    "start_time": 781.811,
+    "end_time": 784.315,
+    "speaker": "Dr. Khalifa",
+    "content": "What did you say? I mean, (Unintelligible).",
+    "segment_index": 196
+  },
+  {
+    "id": 188,
+    "start_time": 784.315,
+    "end_time": 787.311,
+    "speaker": "Dr. Khalifa",
+    "content": "(Unintelligible) you listen you'll be speaking in Arabic words?",
+    "segment_index": 197
+  },
+  {
+    "id": 189,
+    "start_time": 787.703,
+    "end_time": 790.317,
+    "speaker": "Dr. Khalifa",
+    "content": "So, we're in Tucson, in Arizona desert.",
+    "segment_index": 198
+  },
+  {
+    "id": 190,
+    "start_time": 790.317,
+    "end_time": 791.485,
+    "speaker": "A woman",
+    "content": "6:30 in the morning.",
+    "segment_index": 199
+  },
+  {
+    "id": 191,
+    "start_time": 793.485,
+    "end_time": 795.289,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) 6:30 in the morning.",
+    "segment_index": 200
+  },
+  {
+    "id": 192,
+    "start_time": 799.616,
+    "end_time": 802.008,
+    "speaker": "A woman",
+    "content": "I was like \"what? What did I do?\"",
+    "segment_index": 201
+  },
+  {
+    "id": 193,
+    "start_time": 802.791,
+    "end_time": 803.568,
+    "speaker": "Dr. Khalifa",
+    "content": "Right.",
+    "segment_index": 202
+  },
+  {
+    "id": 194,
+    "start_time": 803.568,
+    "end_time": 804.523,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 203
+  },
+  {
+    "id": 195,
+    "start_time": 804.523,
+    "end_time": 810.0,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, I was listening to her and \"Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim...\"",
+    "segment_index": 204
+  },
+  {
+    "id": 196,
+    "start_time": 812.496,
+    "end_time": 814.653,
+    "speaker": "Dr. Khalifa",
+    "content": "We've recorded this (unintelligible).",
+    "segment_index": 205
+  },
+  {
+    "id": 197,
+    "start_time": 816.905,
+    "end_time": 819.707,
+    "speaker": "A woman",
+    "content": "I sent my sister a copy.",
+    "segment_index": 206
+  },
+  {
+    "id": "198_part_0",
+    "start_time": 820.0,
+    "end_time": 821.2286956521739,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, good for you. ",
+    "segment_index": 207
+  },
+  {
+    "id": "198_part_1",
+    "start_time": 821.2286956521739,
+    "end_time": 821.413,
+    "speaker": "A woman",
+    "content": "And",
+    "segment_index": 208
+  },
+  {
+    "id": "199_part_0",
+    "start_time": 821.413,
+    "end_time": 821.638,
+    "speaker": "A woman",
+    "content": "my... ",
+    "segment_index": 209
+  },
+  {
+    "id": "199_part_1",
+    "start_time": 821.638,
+    "end_time": 822.238,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 210
+  },
+  {
+    "id": 200,
+    "start_time": 822.238,
+    "end_time": 824.238,
+    "speaker": "A woman",
+    "content": "I don't know. I haven't talked to her since the...",
+    "segment_index": 211
+  },
+  {
+    "id": "201_part_0",
+    "start_time": 824.238,
+    "end_time": 826.8833333333333,
+    "speaker": "Dr. Khalifa",
+    "content": "You're putting in the shelf for a couple of years. Pull it out. ",
+    "segment_index": 212
+  },
+  {
+    "id": "201_part_1",
+    "start_time": 826.8833333333333,
+    "end_time": 827.09,
+    "speaker": "A woman",
+    "content": "Yeah.",
+    "segment_index": 213
+  },
+  {
+    "id": 202,
+    "start_time": 827.09,
+    "end_time": 829.775,
+    "speaker": "A woman",
+    "content": "And my parents are at the same address, though.",
+    "segment_index": 214
+  },
+  {
+    "id": "203_part_0",
+    "start_time": 830.0,
+    "end_time": 831.3907027027027,
+    "speaker": "A woman",
+    "content": "IN SHAA ALLAH, those hear, too. ",
+    "segment_index": 215
+  },
+  {
+    "id": "203_part_1",
+    "start_time": 831.3907027027027,
+    "end_time": 831.608,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah.",
+    "segment_index": 216
+  },
+  {
+    "id": 204,
+    "start_time": 832.369,
+    "end_time": 835.005,
+    "speaker": "Dr. Khalifa",
+    "content": "Maybe, in 3 or 4 years, you're going hear \"wow!\"",
+    "segment_index": 217
+  },
+  {
+    "id": 205,
+    "start_time": 837.941,
+    "end_time": 839.677,
+    "speaker": "A woman",
+    "content": "And then, they'll call you on the phone.",
+    "segment_index": 218
+  },
+  {
+    "id": 206,
+    "start_time": 841.677,
+    "end_time": 842.845,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 219
+  },
+  {
+    "id": 207,
+    "start_time": 843.334,
+    "end_time": 845.334,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 220
+  },
+  {
+    "id": 208,
+    "start_time": 846.528,
+    "end_time": 848.488,
+    "speaker": "A woman",
+    "content": "I wanna send one to my brother, too.",
+    "segment_index": 221
+  },
+  {
+    "id": 209,
+    "start_time": 849.124,
+    "end_time": 850.0,
+    "speaker": "Dr. Khalifa",
+    "content": "IN SHAA ALLAH.",
+    "segment_index": 222
+  },
+  {
+    "id": 210,
+    "start_time": 850.0,
+    "end_time": 851.124,
+    "speaker": "A woman",
+    "content": "IN SHAA ALLAH.",
+    "segment_index": 223
+  },
+  {
+    "id": 211,
+    "start_time": 851.124,
+    "end_time": 852.772,
+    "speaker": "Dr. Khalifa",
+    "content": "Ok, workers, come and eat.",
+    "segment_index": 224
+  },
+  {
+    "id": 212,
+    "start_time": 856.296,
+    "end_time": 857.225,
+    "speaker": "Dr. Khalifa",
+    "content": "Now, it is.",
+    "segment_index": 225
+  },
+  {
+    "id": 213,
+    "start_time": 860.0,
+    "end_time": 860.63,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 226
+  },
+  {
+    "id": 214,
+    "start_time": 862.559,
+    "end_time": 866.259,
+    "speaker": "Dr. Khalifa",
+    "content": "I saw a horrified look on Behrouz's face. How did you know it was not working?",
+    "segment_index": 227
+  },
+  {
+    "id": 215,
+    "start_time": 866.259,
+    "end_time": 867.643,
+    "speaker": "Behrouz",
+    "content": "Because I was washing.",
+    "segment_index": 228
+  },
+  {
+    "id": 216,
+    "start_time": 868.378,
+    "end_time": 870.72,
+    "speaker": "Dr. Khalifa",
+    "content": "That's Francisco's used as our pillow.",
+    "segment_index": 229
+  },
+  {
+    "id": 217,
+    "start_time": 874.195,
+    "end_time": 877.076,
+    "speaker": "Dr. Khalifa",
+    "content": "That's head of the sleeping section.",
+    "segment_index": 230
+  },
+  {
+    "id": 218,
+    "start_time": 883.858,
+    "end_time": 889.5889999999999,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:66]  ... From the midst of digested food and blood, you get pure milk, delicious for the drinkers.",
+    "segment_index": 231
+  },
+  {
+    "id": 219,
+    "start_time": 889.5889999999999,
+    "end_time": 895.468,
+    "speaker": "Dr. Khalifa",
+    "content": "If anyone says he doesn't like milk, I'll give him rough time.",
+    "segment_index": 232
+  },
+  {
+    "id": 220,
+    "start_time": 898.257,
+    "end_time": 899.768,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 233
+  },
+  {
+    "id": 221,
+    "start_time": 900.998,
+    "end_time": 902.514,
+    "speaker": "Dr. Khalifa",
+    "content": "You didn't say it, right?",
+    "segment_index": 234
+  },
+  {
+    "id": 222,
+    "start_time": 903.334,
+    "end_time": 905.868,
+    "speaker": "Dr. Khalifa",
+    "content": "You drink milk? We want you to grow tall.",
+    "segment_index": 235
+  },
+  {
+    "id": 223,
+    "start_time": 905.868,
+    "end_time": 906.791,
+    "speaker": "A man",
+    "content": "And...",
+    "segment_index": 236
+  },
+  {
+    "id": 224,
+    "start_time": 909.001,
+    "end_time": 910.597,
+    "speaker": "Dr. Khalifa",
+    "content": "We don't want you to be stunted.",
+    "segment_index": 237
+  },
+  {
+    "id": 225,
+    "start_time": 910.597,
+    "end_time": 915.344,
+    "speaker": "A man",
+    "content": "(Unintelligible).",
+    "segment_index": 238
+  },
+  {
+    "id": 226,
+    "start_time": 915.344,
+    "end_time": 917.732,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, see. Exactly. Wow.",
+    "segment_index": 239
+  },
+  {
+    "id": 227,
+    "start_time": 918.582,
+    "end_time": 922.732,
+    "speaker": "Dr. Khalifa",
+    "content": "This is profound. You actually curved it (unintelligible).",
+    "segment_index": 240
+  },
+  {
+    "id": 228,
+    "start_time": 922.732,
+    "end_time": 925.613,
+    "speaker": "A man",
+    "content": "Now, I stick the chocolate milk (unintelligible)",
+    "segment_index": 241
+  },
+  {
+    "id": 229,
+    "start_time": 925.613,
+    "end_time": 928.849,
+    "speaker": "Dr. Khalifa",
+    "content": "Chocolate milk. As long as the milk is there.",
+    "segment_index": 242
+  },
+  {
+    "id": 230,
+    "start_time": 928.849,
+    "end_time": 930.0,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 243
+  },
+  {
+    "id": 231,
+    "start_time": 930.0,
+    "end_time": 931.37,
+    "speaker": "Dr. Khalifa",
+    "content": "Chocolate is only a flavor.",
+    "segment_index": 244
+  },
+  {
+    "id": 232,
+    "start_time": 935.158,
+    "end_time": 937.621,
+    "speaker": "Dr. Khalifa",
+    "content": "From the midst of a machine. And push button.",
+    "segment_index": 245
+  },
+  {
+    "id": 233,
+    "start_time": 939.187,
+    "end_time": 942.955,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 246
+  },
+  {
+    "id": 234,
+    "start_time": 942.955,
+    "end_time": 946.081,
+    "speaker": "A man",
+    "content": "Actually, It's a good chocolate milk.",
+    "segment_index": 247
+  },
+  {
+    "id": "235_part_0",
+    "start_time": 946.619,
+    "end_time": 947.3661904761905,
+    "speaker": "A man",
+    "content": "(unintelligible) ",
+    "segment_index": 248
+  },
+  {
+    "id": "235_part_1",
+    "start_time": 947.3661904761905,
+    "end_time": 947.542,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 249
+  },
+  {
+    "id": 236,
+    "start_time": 947.542,
+    "end_time": 948.374,
+    "speaker": "A man",
+    "content": "Appetizer.",
+    "segment_index": 250
+  },
+  {
+    "id": 237,
+    "start_time": 948.619,
+    "end_time": 949.353,
+    "speaker": "Dr. Khalifa",
+    "content": "No.",
+    "segment_index": 251
+  },
+  {
+    "id": 238,
+    "start_time": 949.353,
+    "end_time": 951.598,
+    "speaker": "A man",
+    "content": "The cows (unintelligible)",
+    "segment_index": 252
+  },
+  {
+    "id": 239,
+    "start_time": 951.598,
+    "end_time": 956.632,
+    "speaker": "Dr. Khalifa",
+    "content": "Cause most city boys think that, and girls think that milk comes from refrigerator.",
+    "segment_index": 253
+  },
+  {
+    "id": 240,
+    "start_time": 958.555,
+    "end_time": 960.31,
+    "speaker": "Dr. Khalifa",
+    "content": "They have no idea what cows are.",
+    "segment_index": 254
+  },
+  {
+    "id": 241,
+    "start_time": 963.148,
+    "end_time": 964.244,
+    "speaker": "Dr. Khalifa",
+    "content": "67,",
+    "segment_index": 255
+  },
+  {
+    "id": 242,
+    "start_time": 964.244,
+    "end_time": 966.244,
+    "speaker": "Dr. Khalifa",
+    "content": "More Proofs about God",
+    "segment_index": 256
+  },
+  {
+    "id": 243,
+    "start_time": 966.587,
+    "end_time": 977.592,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:67]  And from the fruits of date palms and grapes you produce bad things like intoxicants, and good things as well. This is the sign for people who understand.",
+    "segment_index": 257
+  },
+  {
+    "id": 244,
+    "start_time": 978.375,
+    "end_time": 979.592,
+    "speaker": "Dr. Khalifa",
+    "content": "The Bee",
+    "segment_index": 258
+  },
+  {
+    "id": 245,
+    "start_time": 979.592,
+    "end_time": 987.856,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:68]  And your Lord inspired the bee: build homes in mountains and trees, and in (the hives) they build for you.",
+    "segment_index": 259
+  },
+  {
+    "id": 246,
+    "start_time": 989.705,
+    "end_time": 992.064,
+    "speaker": "Dr. Khalifa",
+    "content": "Now, the bee kingdom; this is the name of the Sura.",
+    "segment_index": 260
+  },
+  {
+    "id": 247,
+    "start_time": 992.896,
+    "end_time": 994.896,
+    "speaker": "Dr. Khalifa",
+    "content": "The bee kingdom is quite elaborate.",
+    "segment_index": 261
+  },
+  {
+    "id": 248,
+    "start_time": 996.277,
+    "end_time": 1000.774,
+    "speaker": "Dr. Khalifa",
+    "content": "It has a queen that is absolutely, is the absolute authority in the bee hive.",
+    "segment_index": 262
+  },
+  {
+    "id": 249,
+    "start_time": 1000.774,
+    "end_time": 1007.423,
+    "speaker": "Dr. Khalifa",
+    "content": "Only one Larva, the queen, she rules the whole hive. She is the mother of the whole hive.",
+    "segment_index": 263
+  },
+  {
+    "id": 250,
+    "start_time": 1010.0,
+    "end_time": 1015.972,
+    "speaker": "Dr. Khalifa",
+    "content": "And then, there are the workers. They are, they are her, her entourage, always serving her",
+    "segment_index": 264
+  },
+  {
+    "id": 251,
+    "start_time": 1015.972,
+    "end_time": 1019.202,
+    "speaker": "Dr. Khalifa",
+    "content": "cleaning around her, guarding her.",
+    "segment_index": 265
+  },
+  {
+    "id": 252,
+    "start_time": 1020.328,
+    "end_time": 1028.011,
+    "speaker": "Dr. Khalifa",
+    "content": "You can, you can recognize the, the queen, you can see her with a, with a lot of activity around her, you know.",
+    "segment_index": 266
+  },
+  {
+    "id": 253,
+    "start_time": 1028.011,
+    "end_time": 1034.073,
+    "speaker": "Dr. Khalifa",
+    "content": "She is very important. She goes around laying eggs. She goes around laying eggs. And then, there are the workers",
+    "segment_index": 267
+  },
+  {
+    "id": 254,
+    "start_time": 1034.073,
+    "end_time": 1040.575,
+    "speaker": "Dr. Khalifa",
+    "content": "who supposedly provide food for those, for the new babies. They go out. They are, they are scouts.",
+    "segment_index": 268
+  },
+  {
+    "id": 255,
+    "start_time": 1041.456,
+    "end_time": 1044.83,
+    "speaker": "Dr. Khalifa",
+    "content": "And they go look for food. They don't do anything else. They just scout.",
+    "segment_index": 269
+  },
+  {
+    "id": 256,
+    "start_time": 1045.319,
+    "end_time": 1048.885,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, they come back and they tell the rest of the workers where the food is.",
+    "segment_index": 270
+  },
+  {
+    "id": 257,
+    "start_time": 1049.717,
+    "end_time": 1057.149,
+    "speaker": "Dr. Khalifa",
+    "content": "\"You go northwest, 62 degrees For 3.3 miles.\" This is what they tell them.",
+    "segment_index": 271
+  },
+  {
+    "id": 258,
+    "start_time": 1057.999,
+    "end_time": 1065.26,
+    "speaker": "Dr. Khalifa",
+    "content": "So, the workers, sure enough, they, they rush 62 degrees, northwest, 3.3 miles.",
+    "segment_index": 272
+  },
+  {
+    "id": 259,
+    "start_time": 1065.26,
+    "end_time": 1067.739,
+    "speaker": "Dr. Khalifa",
+    "content": "Sometimes make mistake 3.2 miles, they find nothing.",
+    "segment_index": 273
+  },
+  {
+    "id": 260,
+    "start_time": 1068.669,
+    "end_time": 1073.899,
+    "speaker": "Dr. Khalifa",
+    "content": "Say \"hey, they said 3.3 miles.\" So, they go 0.1 more mile and sure enough, there's a cotton field.",
+    "segment_index": 274
+  },
+  {
+    "id": 261,
+    "start_time": 1076.298,
+    "end_time": 1082.479,
+    "speaker": "Dr. Khalifa",
+    "content": "They get their food, the nectar and the pollen. Two things that they get, nectar and pollen.",
+    "segment_index": 275
+  },
+  {
+    "id": 262,
+    "start_time": 1084.153,
+    "end_time": 1092.02,
+    "speaker": "Dr. Khalifa",
+    "content": "The nectar, they absorb in their stomach. Not their stomach, it's a place for... Maybe, it is the stomach.",
+    "segment_index": 276
+  },
+  {
+    "id": 263,
+    "start_time": 1093.019,
+    "end_time": 1096.616,
+    "speaker": "Dr. Khalifa",
+    "content": "I think it is the stomach. They take the nectar in the stomach.",
+    "segment_index": 277
+  },
+  {
+    "id": 264,
+    "start_time": 1097.546,
+    "end_time": 1103.412,
+    "speaker": "Dr. Khalifa",
+    "content": "And the, the pollen, this is really something. They have pockets in their legs. Are you aware of this?",
+    "segment_index": 278
+  },
+  {
+    "id": 265,
+    "start_time": 1104.67,
+    "end_time": 1110.514,
+    "speaker": "Dr. Khalifa",
+    "content": "Most of you. They have pockets that are empty in their legs. And they have hairs like my hairs.",
+    "segment_index": 279
+  },
+  {
+    "id": 266,
+    "start_time": 1111.008,
+    "end_time": 1115.683,
+    "speaker": "Dr. Khalifa",
+    "content": "So, they, they get the pollen in the hairs and then they go like this to fill the pockets.",
+    "segment_index": 280
+  },
+  {
+    "id": 267,
+    "start_time": 1116.711,
+    "end_time": 1119.25,
+    "speaker": "Dr. Khalifa",
+    "content": "If you watch the bees, you can see them filling their pockets.",
+    "segment_index": 281
+  },
+  {
+    "id": 268,
+    "start_time": 1119.642,
+    "end_time": 1125.753,
+    "speaker": "Dr. Khalifa",
+    "content": "And when the pocket gets really full, like this, you can see something with their legs, real big.",
+    "segment_index": 282
+  },
+  {
+    "id": 269,
+    "start_time": 1126.102,
+    "end_time": 1134.241,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, they go back to the hive and they empty all this. They empty the nectar and the pollen, enter the enzymes in it, make the honey.",
+    "segment_index": 283
+  },
+  {
+    "id": 270,
+    "start_time": 1135.9,
+    "end_time": 1142.434,
+    "speaker": "Dr. Khalifa",
+    "content": "How about that for a design? Now, one bee will produce a tiny amount of honey, right?",
+    "segment_index": 284
+  },
+  {
+    "id": 271,
+    "start_time": 1142.874,
+    "end_time": 1152.334,
+    "speaker": "Dr. Khalifa",
+    "content": "But ten million bees, again, like the carbon chain with this paper or this one. Billions of tons of paper, from the air.",
+    "segment_index": 285
+  },
+  {
+    "id": 272,
+    "start_time": 1155.76,
+    "end_time": 1160.354,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 286
+  },
+  {
+    "id": 273,
+    "start_time": 1160.653,
+    "end_time": 1162.038,
+    "speaker": "A man",
+    "content": "The queen dies.",
+    "segment_index": 287
+  },
+  {
+    "id": 274,
+    "start_time": 1163.115,
+    "end_time": 1164.073,
+    "speaker": "Dr. Khalifa",
+    "content": "The queen dies?",
+    "segment_index": 288
+  },
+  {
+    "id": 275,
+    "start_time": 1164.073,
+    "end_time": 1164.573,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 289
+  },
+  {
+    "id": 276,
+    "start_time": 1164.573,
+    "end_time": 1165.643,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, the hive dies.",
+    "segment_index": 290
+  },
+  {
+    "id": 277,
+    "start_time": 1165.888,
+    "end_time": 1167.793,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 291
+  },
+  {
+    "id": 278,
+    "start_time": 1167.793,
+    "end_time": 1168.863,
+    "speaker": "Dr. Khalifa",
+    "content": "They make false queens.",
+    "segment_index": 292
+  },
+  {
+    "id": 279,
+    "start_time": 1168.863,
+    "end_time": 1173.701,
+    "speaker": "A man",
+    "content": "The eggs, they have special oil jelly. And then, they make a queen.",
+    "segment_index": 293
+  },
+  {
+    "id": 280,
+    "start_time": 1173.953,
+    "end_time": 1175.464,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh, you mean the, the workers.",
+    "segment_index": 294
+  },
+  {
+    "id": "281_part_0",
+    "start_time": 1175.464,
+    "end_time": 1178.9088823529412,
+    "speaker": "A man",
+    "content": "Yeah, the workers immediately go to work even though there is a (unintelligible) ",
+    "segment_index": 295
+  },
+  {
+    "id": "281_part_1",
+    "start_time": 1178.9088823529412,
+    "end_time": 1179.079,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 296
+  },
+  {
+    "id": 282,
+    "start_time": 1179.079,
+    "end_time": 1179.715,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 297
+  },
+  {
+    "id": 283,
+    "start_time": 1179.715,
+    "end_time": 1180.358,
+    "speaker": "A man",
+    "content": "the hive.",
+    "segment_index": 298
+  },
+  {
+    "id": 284,
+    "start_time": 1180.358,
+    "end_time": 1184.164,
+    "speaker": "Dr. Khalifa",
+    "content": "There are also false queens if, I mean, if, if the hive is not attended.",
+    "segment_index": 299
+  },
+  {
+    "id": 285,
+    "start_time": 1185.387,
+    "end_time": 1186.219,
+    "speaker": "A man",
+    "content": "Sometimes they...",
+    "segment_index": 300
+  },
+  {
+    "id": 286,
+    "start_time": 1186.219,
+    "end_time": 1190.921,
+    "speaker": "Dr. Khalifa",
+    "content": "Sometimes inadvertently a new queen, of course not inadvertently, but this is to produce more hives,",
+    "segment_index": 301
+  },
+  {
+    "id": 287,
+    "start_time": 1190.921,
+    "end_time": 1192.529,
+    "speaker": "Dr. Khalifa",
+    "content": "another queen will show up.",
+    "segment_index": 302
+  },
+  {
+    "id": 288,
+    "start_time": 1192.774,
+    "end_time": 1194.529,
+    "speaker": "A man",
+    "content": "I mean, it had to (unintelligible)",
+    "segment_index": 303
+  },
+  {
+    "id": 289,
+    "start_time": 1194.591,
+    "end_time": 1200.402,
+    "speaker": "Dr. Khalifa",
+    "content": "No, one of them will run away and they'll go on a tree, you can see they are flying around the queen,",
+    "segment_index": 304
+  },
+  {
+    "id": 290,
+    "start_time": 1200.402,
+    "end_time": 1202.849,
+    "speaker": "Dr. Khalifa",
+    "content": "all of them. And they don't sting.",
+    "segment_index": 305
+  },
+  {
+    "id": 291,
+    "start_time": 1202.849,
+    "end_time": 1204.478,
+    "speaker": "Dr. Khalifa",
+    "content": "You can take them and put around the place.",
+    "segment_index": 306
+  },
+  {
+    "id": 292,
+    "start_time": 1204.977,
+    "end_time": 1207.423,
+    "speaker": "Dr. Khalifa",
+    "content": "See pictures of people with the beard of bees?",
+    "segment_index": 307
+  },
+  {
+    "id": 293,
+    "start_time": 1209.625,
+    "end_time": 1211.775,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah. They are swarming.",
+    "segment_index": 308
+  },
+  {
+    "id": 294,
+    "start_time": 1211.775,
+    "end_time": 1213.775,
+    "speaker": "A man",
+    "content": "Yeah, without a queen.",
+    "segment_index": 309
+  },
+  {
+    "id": 295,
+    "start_time": 1213.929,
+    "end_time": 1217.346,
+    "speaker": "Dr. Khalifa",
+    "content": "So, they can take it, get an empty hive, put them there, and they have a new hive.",
+    "segment_index": 310
+  },
+  {
+    "id": 296,
+    "start_time": 1221.512,
+    "end_time": 1228.71,
+    "speaker": "Dr. Khalifa",
+    "content": "And they know their hive, the place. They can go around the whole five-mile radius and they come back to their hive. They recognize it.",
+    "segment_index": 311
+  },
+  {
+    "id": 297,
+    "start_time": 1229.15,
+    "end_time": 1235.505,
+    "speaker": "Dr. Khalifa",
+    "content": "It's quite a...I took a course in bees and bee language.",
+    "segment_index": 312
+  },
+  {
+    "id": 298,
+    "start_time": 1237.414,
+    "end_time": 1241.778,
+    "speaker": "Behrouz",
+    "content": "They are normally, they put these boxes all together (unintelligible).",
+    "segment_index": 313
+  },
+  {
+    "id": 299,
+    "start_time": 1241.778,
+    "end_time": 1242.652,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum.",
+    "segment_index": 314
+  },
+  {
+    "id": 300,
+    "start_time": 1242.652,
+    "end_time": 1244.652,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 315
+  },
+  {
+    "id": 301,
+    "start_time": 1244.714,
+    "end_time": 1251.869,
+    "speaker": "Dr. Khalifa",
+    "content": "I know, but they know their own, their own hive. 69.",
+    "segment_index": 316
+  },
+  {
+    "id": 302,
+    "start_time": 1252.358,
+    "end_time": 1258.664,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:69]  Then eat from all the fruits, following the design of your Lord, precisely. From their bellies....",
+    "segment_index": 317
+  },
+  {
+    "id": 303,
+    "start_time": 1258.664,
+    "end_time": 1266.972,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh, there are also the males. They just sit around. They do nothing. Just mate with the queen when the time comes.",
+    "segment_index": 318
+  },
+  {
+    "id": 304,
+    "start_time": 1267.412,
+    "end_time": 1268.172,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 319
+  },
+  {
+    "id": 305,
+    "start_time": 1268.172,
+    "end_time": 1274.1,
+    "speaker": "Dr. Khalifa",
+    "content": "Only one of them .....Cause only one of them gets the job. The rest are killed. Kicked out.",
+    "segment_index": 320
+  },
+  {
+    "id": 306,
+    "start_time": 1274.1,
+    "end_time": 1276.1,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 321
+  },
+  {
+    "id": 307,
+    "start_time": 1276.383,
+    "end_time": 1277.933,
+    "speaker": "Dr. Khalifa",
+    "content": "\"We don't need you anymore.\"",
+    "segment_index": 322
+  },
+  {
+    "id": 308,
+    "start_time": 1278.52,
+    "end_time": 1281.9,
+    "speaker": "Dr. Khalifa",
+    "content": "You can see them all dead around the hive outside after the mating.",
+    "segment_index": 323
+  },
+  {
+    "id": 309,
+    "start_time": 1282.879,
+    "end_time": 1286.459,
+    "speaker": "Dr. Khalifa",
+    "content": "This is the one time that the queen leaves the, the hive.",
+    "segment_index": 324
+  },
+  {
+    "id": 310,
+    "start_time": 1287.242,
+    "end_time": 1288.242,
+    "speaker": "Dr. Khalifa",
+    "content": "And then, it's a race.",
+    "segment_index": 325
+  },
+  {
+    "id": 311,
+    "start_time": 1288.78,
+    "end_time": 1297.17,
+    "speaker": "Dr. Khalifa",
+    "content": "Because she's very strong. So, the strongest drone, or male, is the one who can catch up with her.",
+    "segment_index": 326
+  },
+  {
+    "id": 312,
+    "start_time": 1297.986,
+    "end_time": 1299.386,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, the rest are killed.",
+    "segment_index": 327
+  },
+  {
+    "id": 313,
+    "start_time": 1300.267,
+    "end_time": 1300.952,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 328
+  },
+  {
+    "id": 314,
+    "start_time": 1300.952,
+    "end_time": 1302.0720000000001,
+    "speaker": "Dr. Khalifa",
+    "content": "Including the king.",
+    "segment_index": 329
+  },
+  {
+    "id": 315,
+    "start_time": 1302.0720000000001,
+    "end_time": 1303.31,
+    "speaker": "Behrouz",
+    "content": "Including the king?",
+    "segment_index": 330
+  },
+  {
+    "id": 316,
+    "start_time": 1303.31,
+    "end_time": 1303.891,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 331
+  },
+  {
+    "id": 317,
+    "start_time": 1305.163,
+    "end_time": 1306.282,
+    "speaker": "Behrouz",
+    "content": "It's not worth it.",
+    "segment_index": 332
+  },
+  {
+    "id": 318,
+    "start_time": 1308.057,
+    "end_time": 1309.186,
+    "speaker": "Dr. Khalifa",
+    "content": "It's not worth it, no?",
+    "segment_index": 333
+  },
+  {
+    "id": "319_part_0",
+    "start_time": 1312.025,
+    "end_time": 1312.3092000000001,
+    "speaker": "Dr. Khalifa",
+    "content": "69. ",
+    "segment_index": 334
+  },
+  {
+    "id": "319_part_1",
+    "start_time": 1312.3092000000001,
+    "end_time": 1313.446,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 335
+  },
+  {
+    "id": 320,
+    "start_time": 1316.235,
+    "end_time": 1327.14,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:69]  Then eat from all the fruits, following the design of your Lord, precisely. From their bellies comes a drink of different colors, wherein there is healing for the people.",
+    "segment_index": 336
+  },
+  {
+    "id": 321,
+    "start_time": 1328.01,
+    "end_time": 1333.998,
+    "speaker": "Dr. Khalifa",
+    "content": "It was only discovered five or six years ago that honey will heal allergy.",
+    "segment_index": 337
+  },
+  {
+    "id": 322,
+    "start_time": 1335.809,
+    "end_time": 1338.606,
+    "speaker": "Dr. Khalifa",
+    "content": "If you're allergic to local pollen, you have to eat local honey.",
+    "segment_index": 338
+  },
+  {
+    "id": 323,
+    "start_time": 1340.0,
+    "end_time": 1343.279,
+    "speaker": "Dr. Khalifa",
+    "content": "If something happens, it heals the allergy.",
+    "segment_index": 339
+  },
+  {
+    "id": 324,
+    "start_time": 1345.603,
+    "end_time": 1347.731,
+    "speaker": "Dr. Khalifa",
+    "content": "I mean, this was scientifically established.",
+    "segment_index": 340
+  },
+  {
+    "id": 325,
+    "start_time": 1349.053,
+    "end_time": 1351.67,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:69] ....This is a proof for people who reflect.",
+    "segment_index": 341
+  },
+  {
+    "id": 326,
+    "start_time": 1352.403,
+    "end_time": 1356.635,
+    "speaker": "A man",
+    "content": "Wow. It says milk and, what I mean, some milk and honey,",
+    "segment_index": 342
+  },
+  {
+    "id": 327,
+    "start_time": 1356.635,
+    "end_time": 1360.0,
+    "speaker": "A man",
+    "content": "milk and honey (unintelligible), they're both very good for mixing together, though.",
+    "segment_index": 343
+  },
+  {
+    "id": 328,
+    "start_time": 1360.0,
+    "end_time": 1362.587,
+    "speaker": "A man",
+    "content": "Cause I used to do that. It's a laxative.",
+    "segment_index": 344
+  },
+  {
+    "id": 329,
+    "start_time": 1363.264,
+    "end_time": 1364.264,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah?",
+    "segment_index": 345
+  },
+  {
+    "id": 330,
+    "start_time": 1369.109,
+    "end_time": 1371.064,
+    "speaker": "Dr. Khalifa",
+    "content": "I, I think they have their own correlation there.",
+    "segment_index": 346
+  },
+  {
+    "id": 331,
+    "start_time": 1371.064,
+    "end_time": 1373.021,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 347
+  },
+  {
+    "id": 332,
+    "start_time": 1373.021,
+    "end_time": 1378.067,
+    "speaker": "Dr. Khalifa",
+    "content": "No, I think when you drank that milk and honey, you went to McDonald's and had a bad hamburger. (unintelligible)",
+    "segment_index": 348
+  },
+  {
+    "id": 333,
+    "start_time": 1378.801,
+    "end_time": 1379.581,
+    "speaker": "Dr. Khalifa",
+    "content": "Diarrhea.",
+    "segment_index": 349
+  },
+  {
+    "id": 334,
+    "start_time": 1379.581,
+    "end_time": 1380.847,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 350
+  },
+  {
+    "id": 335,
+    "start_time": 1382.56,
+    "end_time": 1383.563,
+    "speaker": "Dr. Khalifa",
+    "content": "That's what you think.",
+    "segment_index": 351
+  },
+  {
+    "id": 336,
+    "start_time": 1384.689,
+    "end_time": 1389.64,
+    "speaker": "Behrouz",
+    "content": "So, I guess this, it's different with other people. Some people,",
+    "segment_index": 352
+  },
+  {
+    "id": 337,
+    "start_time": 1389.64,
+    "end_time": 1394.583,
+    "speaker": "Behrouz",
+    "content": "they get that way when they drink hot milk, or warm milk or oatmeal.",
+    "segment_index": 353
+  },
+  {
+    "id": 338,
+    "start_time": 1395.023,
+    "end_time": 1397.203,
+    "speaker": "Behrouz",
+    "content": "(Unintelligible).",
+    "segment_index": 354
+  },
+  {
+    "id": 339,
+    "start_time": 1397.654,
+    "end_time": 1400.538,
+    "speaker": "Behrouz",
+    "content": "It has different effects on different people.",
+    "segment_index": 355
+  },
+  {
+    "id": 340,
+    "start_time": 1401.224,
+    "end_time": 1405.858,
+    "speaker": "Dr. Khalifa",
+    "content": "No, you see, he probably had one bad experience, so he generalized. He can't do that.",
+    "segment_index": 356
+  },
+  {
+    "id": 341,
+    "start_time": 1405.858,
+    "end_time": 1407.858,
+    "speaker": "Behrouz",
+    "content": "(unintelligible) drink honey and milk.",
+    "segment_index": 357
+  },
+  {
+    "id": 342,
+    "start_time": 1408.445,
+    "end_time": 1409.053,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 358
+  },
+  {
+    "id": 343,
+    "start_time": 1409.053,
+    "end_time": 1412.269,
+    "speaker": "Behrouz",
+    "content": "You know, I'm always happy, but not that happy.",
+    "segment_index": 359
+  },
+  {
+    "id": 344,
+    "start_time": 1415.45,
+    "end_time": 1420.258,
+    "speaker": "Dr. Khalifa",
+    "content": "We drink honey and milk almost every morning. Quite often. I know.",
+    "segment_index": 360
+  },
+  {
+    "id": 345,
+    "start_time": 1420.258,
+    "end_time": 1421.636,
+    "speaker": "A man",
+    "content": "They drink (unintelligible)",
+    "segment_index": 361
+  },
+  {
+    "id": 346,
+    "start_time": 1421.636,
+    "end_time": 1423.244,
+    "speaker": "Dr. Khalifa",
+    "content": "No, probably not.",
+    "segment_index": 362
+  },
+  {
+    "id": 347,
+    "start_time": 1424.039,
+    "end_time": 1425.677,
+    "speaker": "Dr. Khalifa",
+    "content": "Mr. Somalia, what did you say?",
+    "segment_index": 363
+  },
+  {
+    "id": 348,
+    "start_time": 1425.677,
+    "end_time": 1426.459,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 364
+  },
+  {
+    "id": 349,
+    "start_time": 1427.585,
+    "end_time": 1429.471,
+    "speaker": "A man",
+    "content": "You don't need honey for (unintelligible)",
+    "segment_index": 365
+  },
+  {
+    "id": 350,
+    "start_time": 1429.471,
+    "end_time": 1430.348,
+    "speaker": "Dr. Khalifa",
+    "content": "You don't need what?",
+    "segment_index": 366
+  },
+  {
+    "id": 351,
+    "start_time": 1430.348,
+    "end_time": 1430.88,
+    "speaker": "A man",
+    "content": "For laxative.",
+    "segment_index": 367
+  },
+  {
+    "id": 352,
+    "start_time": 1430.88,
+    "end_time": 1431.461,
+    "speaker": "Dr. Khalifa",
+    "content": "Really?",
+    "segment_index": 368
+  },
+  {
+    "id": 353,
+    "start_time": 1431.461,
+    "end_time": 1432.189,
+    "speaker": "A man",
+    "content": "No.",
+    "segment_index": 369
+  },
+  {
+    "id": 354,
+    "start_time": 1432.189,
+    "end_time": 1432.848,
+    "speaker": "Dr. Khalifa",
+    "content": "Huh.",
+    "segment_index": 370
+  },
+  {
+    "id": 355,
+    "start_time": 1433.484,
+    "end_time": 1435.875,
+    "speaker": "Dr. Khalifa",
+    "content": "You know of what the percentage of fat in it.",
+    "segment_index": 371
+  },
+  {
+    "id": 356,
+    "start_time": 1435.875,
+    "end_time": 1438.56,
+    "speaker": "A man",
+    "content": "It's a lot of fat. Not bad.",
+    "segment_index": 372
+  },
+  {
+    "id": 357,
+    "start_time": 1438.903,
+    "end_time": 1442.126,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 373
+  },
+  {
+    "id": 358,
+    "start_time": 1443.412,
+    "end_time": 1445.066,
+    "speaker": "Dr. Khalifa",
+    "content": "Is it thick or light?",
+    "segment_index": 374
+  },
+  {
+    "id": 359,
+    "start_time": 1445.066,
+    "end_time": 1445.989,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 375
+  },
+  {
+    "id": 360,
+    "start_time": 1445.989,
+    "end_time": 1446.861,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh.",
+    "segment_index": 376
+  },
+  {
+    "id": 361,
+    "start_time": 1447.301,
+    "end_time": 1449.499,
+    "speaker": "Dr. Khalifa",
+    "content": "It's like skimmed milk, huh?",
+    "segment_index": 377
+  },
+  {
+    "id": 362,
+    "start_time": 1449.499,
+    "end_time": 1464.761,
+    "speaker": "A man",
+    "content": "(unintelligible).",
+    "segment_index": 378
+  },
+  {
+    "id": 363,
+    "start_time": 1464.761,
+    "end_time": 1465.88,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 379
+  },
+  {
+    "id": 364,
+    "start_time": 1467.25,
+    "end_time": 1469.25,
+    "speaker": "A man",
+    "content": "(unintelligible).",
+    "segment_index": 380
+  },
+  {
+    "id": 365,
+    "start_time": 1469.26,
+    "end_time": 1470.232,
+    "speaker": "Dr. Khalifa",
+    "content": "Number 70.",
+    "segment_index": 381
+  },
+  {
+    "id": 366,
+    "start_time": 1470.232,
+    "end_time": 1482.9,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:70]  And GOD created you, and He terminates your lives. He lets some of you live to the oldest age, only to find out that there is a limit to the knowledge they can acquire. GOD is Omniscient, Omnipotent.",
+    "segment_index": 382
+  },
+  {
+    "id": 367,
+    "start_time": 1484.075,
+    "end_time": 1497.942,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:71]  And GOD has provided for some of you more than others. Those who are given plenty would never give their properties to their subordinates to the extent of making them partners. Would they give up GOD's blessings?",
+    "segment_index": 383
+  },
+  {
+    "id": 368,
+    "start_time": 1498.279,
+    "end_time": 1500.986,
+    "speaker": "Dr. Khalifa",
+    "content": "71 in the new translation.",
+    "segment_index": 384
+  },
+  {
+    "id": 369,
+    "start_time": 1500.986,
+    "end_time": 1502.986,
+    "speaker": "Dr. Khalifa",
+    "content": "Sorry Jahan, this is an old translation.",
+    "segment_index": 385
+  },
+  {
+    "id": 370,
+    "start_time": 1504.202,
+    "end_time": 1507.779,
+    "speaker": "Dr. Khalifa",
+    "content": "In the new translation, I put a subtitle there.",
+    "segment_index": 386
+  },
+  {
+    "id": 371,
+    "start_time": 1508.121,
+    "end_time": 1516.227,
+    "speaker": "Dr. Khalifa",
+    "content": "Because God, here, is giving us an example. Why should we set up idols beside Him? He said, we will not do that. You will not",
+    "segment_index": 387
+  },
+  {
+    "id": 372,
+    "start_time": 1516.227,
+    "end_time": 1522.762,
+    "speaker": "Dr. Khalifa",
+    "content": "give your servant half of your property or make him a partner to the point that you have to pay allegiance to your servant",
+    "segment_index": 388
+  },
+  {
+    "id": 373,
+    "start_time": 1522.762,
+    "end_time": 1526.084,
+    "speaker": "Dr. Khalifa",
+    "content": "as much as he or she pays allegiance to you.",
+    "segment_index": 389
+  },
+  {
+    "id": 374,
+    "start_time": 1526.328,
+    "end_time": 1532.194,
+    "speaker": "Dr. Khalifa",
+    "content": "So, why should God give His benefit to His servants, Muhammad or Jesus?",
+    "segment_index": 390
+  },
+  {
+    "id": 375,
+    "start_time": 1533.692,
+    "end_time": 1534.692,
+    "speaker": "Dr. Khalifa",
+    "content": "72.",
+    "segment_index": 391
+  },
+  {
+    "id": 376,
+    "start_time": 1535.181,
+    "end_time": 1550.737,
+    "speaker": "Dr. Khalifa",
+    "content": "[16:72]  And GOD made for you spouses from among yourselves, and produced for you from your spouses children and grandchildren, and provided you with good provisions. Should they believe in falsehood, and turn unappreciative of GOD's blessings?",
+    "segment_index": 392
+  },
+  {
+    "id": 377,
+    "start_time": 1551.573,
+    "end_time": 1553.376,
+    "speaker": "Dr. Khalifa",
+    "content": "See, all these are profound.",
+    "segment_index": 393
+  },
+  {
+    "id": 378,
+    "start_time": 1553.376,
+    "end_time": 1560.315,
+    "speaker": "Dr. Khalifa",
+    "content": "You know, you can take one of these and look, just reflect on the greatness of and to give you proof of God.",
+    "segment_index": 394
+  },
+  {
+    "id": 379,
+    "start_time": 1560.983,
+    "end_time": 1567.607,
+    "speaker": "Dr. Khalifa",
+    "content": "The spouses, the children, all this is just profound signs.",
+    "segment_index": 395
+  },
+  {
+    "id": 380,
+    "start_time": 1574.512,
+    "end_time": 1578.434,
+    "speaker": "Dr. Khalifa",
+    "content": "You have to reflect on how the embryos are made, half cells.",
+    "segment_index": 396
+  },
+  {
+    "id": 381,
+    "start_time": 1579.132,
+    "end_time": 1585.678,
+    "speaker": "Dr. Khalifa",
+    "content": "While the reproductive cells are exactly half of the regular number of chromosomes.",
+    "segment_index": 397
+  },
+  {
+    "id": 382,
+    "start_time": 1588.077,
+    "end_time": 1595.235,
+    "speaker": "Dr. Khalifa",
+    "content": "So, if you take a cell from anywhere, it has 46 chromosomes. But if you look at the reproductive cells, it has 23.",
+    "segment_index": 398
+  },
+  {
+    "id": 383,
+    "start_time": 1601.059,
+    "end_time": 1607.902,
+    "speaker": "Dr. Khalifa",
+    "content": "Two reproductive cells get together to make a new human being, a new creature, whatever the creature is.",
+    "segment_index": 399
+  },
+  {
+    "id": 384,
+    "start_time": 1608.881,
+    "end_time": 1610.625,
+    "speaker": "Dr. Khalifa",
+    "content": "I mean, it's, who designed that?",
+    "segment_index": 400
+  },
+  {
+    "id": 385,
+    "start_time": 1612.827,
+    "end_time": 1619.111,
+    "speaker": "Dr. Khalifa",
+    "content": "Why do the cells are cut in half in the reproductive system and, and they stay that way?",
+    "segment_index": 401
+  },
+  {
+    "id": 386,
+    "start_time": 1621.754,
+    "end_time": 1623.02,
+    "speaker": "Dr. Khalifa",
+    "content": "Subhan Allah.",
+    "segment_index": 402
+  },
+  {
+    "id": 387,
+    "start_time": 1625.377,
+    "end_time": 1628.051,
+    "speaker": "Dr. Khalifa",
+    "content": "Okay, there is our one page. Go back to sleep, John.",
+    "segment_index": 403
+  },
+  {
+    "id": 388,
+    "start_time": 1629.128,
+    "end_time": 1632.424,
+    "speaker": "Dr. Khalifa",
+    "content": "Are you coming earlier like (unintelligible)?",
+    "segment_index": 404
+  },
+  {
+    "id": "389_part_0",
+    "start_time": 1632.424,
+    "end_time": 1633.3382941176471,
+    "speaker": "Dr. Khalifa",
+    "content": "I think he did. Yeah. ",
+    "segment_index": 405
+  },
+  {
+    "id": "389_part_1",
+    "start_time": 1633.3382941176471,
+    "end_time": 1633.837,
+    "speaker": "A man",
+    "content": "He did. Yes.",
+    "segment_index": 406
+  },
+  {
+    "id": 390,
+    "start_time": 1633.837,
+    "end_time": 1634.565,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 407
+  },
+  {
+    "id": 391,
+    "start_time": 1648.769,
+    "end_time": 1649.73,
+    "speaker": "Dr. Khalifa",
+    "content": "226.",
+    "segment_index": 408
+  },
+  {
+    "id": 392,
+    "start_time": 1659.224,
+    "end_time": 1661.0720000000001,
+    "speaker": "Dr. Khalifa",
+    "content": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
+    "segment_index": 409
+  },
+  {
+    "id": 393,
+    "start_time": 1661.0720000000001,
+    "end_time": 1663.561,
+    "speaker": "Dr. Khalifa",
+    "content": "Bism Allah Arrahman Arraheem",
+    "segment_index": 410
+  },
+  {
+    "id": 394,
+    "start_time": 1671.608,
+    "end_time": 1676.624,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:38]  While Noah was building the ark whenever some of his people passed by him, ...",
+    "segment_index": 411
+  },
+  {
+    "id": 395,
+    "start_time": 1677.847,
+    "end_time": 1679.847,
+    "speaker": "Dr. Khalifa",
+    "content": "just like Bill Cosby said.",
+    "segment_index": 412
+  },
+  {
+    "id": 396,
+    "start_time": 1679.847,
+    "end_time": 1688.796,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:38]  ... they laughed at him. He said, \"You may be laughing at us, but we are laughing at you, just as you are laughing.",
+    "segment_index": 413
+  },
+  {
+    "id": 397,
+    "start_time": 1689.348,
+    "end_time": 1691.535,
+    "speaker": "Dr. Khalifa",
+    "content": "\"How long can you stay in water? Ha ha ha.\"",
+    "segment_index": 414
+  },
+  {
+    "id": 398,
+    "start_time": 1697.524,
+    "end_time": 1701.59,
+    "speaker": "Dr. Khalifa",
+    "content": "That was a Quranic tale. 39.",
+    "segment_index": 415
+  },
+  {
+    "id": 399,
+    "start_time": 1701.59,
+    "end_time": 1706.869,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:39]  \"You will soon find out who will suffer a shameful retribution, and incur an everlasting punishment.\"",
+    "segment_index": 416
+  },
+  {
+    "id": 400,
+    "start_time": 1707.261,
+    "end_time": 1717.531,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:40]  When our judgment came, and the atmosphere boiled over, we said, \"Carry on it a pair of each kind, ...",
+    "segment_index": 417
+  },
+  {
+    "id": 401,
+    "start_time": 1717.531,
+    "end_time": 1719.531,
+    "speaker": "Dr. Khalifa",
+    "content": "a male hippo and a female hippo",
+    "segment_index": 418
+  },
+  {
+    "id": 402,
+    "start_time": 1719.531,
+    "end_time": 1728.493,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:40]  ... together with your family, except those who are condemned. Carry with you those who have believed,\" and there were only a few ...",
+    "segment_index": 419
+  },
+  {
+    "id": 403,
+    "start_time": 1728.493,
+    "end_time": 1729.593,
+    "speaker": "Dr. Khalifa",
+    "content": "‘Alaykum Al-Salam.",
+    "segment_index": 420
+  },
+  {
+    "id": 404,
+    "start_time": 1730.719,
+    "end_time": 1739.431,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:41]  He said, \"Come on board. In the name of GOD shall be its sailing, and its mooring. My Lord is Forgiver, Most Merciful.\"",
+    "segment_index": 421
+  },
+  {
+    "id": 405,
+    "start_time": 1740.0,
+    "end_time": 1750.667,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:42]  As it sailed with them in waves like hills, Noah called his son, who was isolated: \"O my son, join us; do not be with the disbelievers.\"",
+    "segment_index": 422
+  },
+  {
+    "id": 406,
+    "start_time": 1751.01,
+    "end_time": 1768.891,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:43]  He said, \"I will take refuge on top of a hill, to protect me from the water.\" Noah said, \"Nothing can protect anyone today from GOD's judgment; only those worthy of His mercy (will be saved).\" The waves separated them, and he was among those who drowned.",
+    "segment_index": 423
+  },
+  {
+    "id": 407,
+    "start_time": 1769.527,
+    "end_time": 1787.089,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:44]  It was proclaimed: \"O earth, swallow your water,\" and \"O sky, cease.\" The water then subsided; the judgment was carried out. The ark finally rested on the hills of Judea.* It was then proclaimed: \"The transgressors have perished.\"",
+    "segment_index": 424
+  },
+  {
+    "id": "408_part_0",
+    "start_time": 1787.627,
+    "end_time": 1789.2353409090908,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:45]  Noah implored his ",
+    "segment_index": 425
+  },
+  {
+    "id": "408_part_1",
+    "start_time": 1789.2353409090908,
+    "end_time": 1795.49,
+    "speaker": "Lord",
+    "content": "\"My Lord, my son is a member of my family. Your promise is truthful. And You are the wisest of the wise.\"",
+    "segment_index": 426
+  },
+  {
+    "id": 409,
+    "start_time": 1796.713,
+    "end_time": 1807.277,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:46]  GOD said, \"O Noah, he is not of your family. It is unrighteous to ask Me for something you do not know.* I enlighten you, lest you be ignorant.\"",
+    "segment_index": 427
+  },
+  {
+    "id": 410,
+    "start_time": 1810.783,
+    "end_time": 1814.45,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:46] ... It is unrighteous to ask Me for something you do not know.* ...",
+    "segment_index": 428
+  },
+  {
+    "id": 411,
+    "start_time": 1815.233,
+    "end_time": 1817.233,
+    "speaker": "Dr. Khalifa",
+    "content": "It's a significant statement.",
+    "segment_index": 429
+  },
+  {
+    "id": 412,
+    "start_time": 1817.82,
+    "end_time": 1821.935,
+    "speaker": "Dr. Khalifa",
+    "content": "We shouldn't say things that we do not know. (unintelligible) of God.",
+    "segment_index": 430
+  },
+  {
+    "id": 413,
+    "start_time": 1824.325,
+    "end_time": 1833.871,
+    "speaker": "Dr. Khalifa",
+    "content": "When, when God said that (unintelligible) is not infinite physically, we cannot... Satan will push us in that direction.",
+    "segment_index": 431
+  },
+  {
+    "id": 414,
+    "start_time": 1834.507,
+    "end_time": 1838.06,
+    "speaker": "Dr. Khalifa",
+    "content": "We cannot claim for God what He did not state.",
+    "segment_index": 432
+  },
+  {
+    "id": 415,
+    "start_time": 1841.339,
+    "end_time": 1843.459,
+    "speaker": "Dr. Khalifa",
+    "content": "We're talking about the issue of \"be and it is\", again.",
+    "segment_index": 433
+  },
+  {
+    "id": 416,
+    "start_time": 1844.927,
+    "end_time": 1850.0,
+    "speaker": "Dr. Khalifa",
+    "content": "And God says, He said to Adam and to Jesus \"be\" in the world.",
+    "segment_index": 434
+  },
+  {
+    "id": 417,
+    "start_time": 1850.93,
+    "end_time": 1853.699,
+    "speaker": "Dr. Khalifa",
+    "content": "So, when God, yet, when it comes to Adam, God says, I blew",
+    "segment_index": 435
+  },
+  {
+    "id": 418,
+    "start_time": 1853.699,
+    "end_time": 1854.923,
+    "speaker": "Dr. Khalifa",
+    "content": "[15:29]  ... into him from My spirit, ...",
+    "segment_index": 436
+  },
+  {
+    "id": 419,
+    "start_time": 1854.923,
+    "end_time": 1861.654,
+    "speaker": "Dr. Khalifa",
+    "content": "And when He picked Jesus, He sent Adam....Gabriel to Mary. He said",
+    "segment_index": 437
+  },
+  {
+    "id": 420,
+    "start_time": 1861.654,
+    "end_time": 1863.561,
+    "speaker": "Dr. Khalifa",
+    "content": "[21:91]  ... we blew into her from our spirit, ...",
+    "segment_index": 438
+  },
+  {
+    "id": 421,
+    "start_time": 1865.03,
+    "end_time": 1865.855,
+    "speaker": "Behrouz",
+    "content": "But you don't ask...",
+    "segment_index": 439
+  },
+  {
+    "id": 422,
+    "start_time": 1865.855,
+    "end_time": 1867.135,
+    "speaker": "Dr. Khalifa",
+    "content": "But this is \"be\" and \"it is.\"",
+    "segment_index": 440
+  },
+  {
+    "id": 423,
+    "start_time": 1883.284,
+    "end_time": 1887.646,
+    "speaker": "Mahmood Abib",
+    "content": "(unintelligible) certain (unintelligible)",
+    "segment_index": 441
+  },
+  {
+    "id": 424,
+    "start_time": 1892.001,
+    "end_time": 1893.052,
+    "speaker": "Mahmood Abib",
+    "content": "Be and it is",
+    "segment_index": 442
+  },
+  {
+    "id": 425,
+    "start_time": 1895.401,
+    "end_time": 1897.042,
+    "speaker": "Mahmood Abib",
+    "content": "Sent for whom, Mary?",
+    "segment_index": 443
+  },
+  {
+    "id": "426_part_0",
+    "start_time": 1897.042,
+    "end_time": 1898.1717727272728,
+    "speaker": "Mahmood Abib",
+    "content": "God sent angel ",
+    "segment_index": 444
+  },
+  {
+    "id": "426_part_1",
+    "start_time": 1898.1717727272728,
+    "end_time": 1898.699,
+    "speaker": "Dr. Khalifa",
+    "content": "Gabriel",
+    "segment_index": 445
+  },
+  {
+    "id": 427,
+    "start_time": 1898.699,
+    "end_time": 1899.72,
+    "speaker": "Mahmood Abib",
+    "content": "Gabriel to Mary.",
+    "segment_index": 446
+  },
+  {
+    "id": 428,
+    "start_time": 1905.9,
+    "end_time": 1908.781,
+    "speaker": "Dr. Khalifa",
+    "content": "And this is the story of Noah",
+    "segment_index": 447
+  },
+  {
+    "id": 429,
+    "start_time": 1908.781,
+    "end_time": 1913.48,
+    "speaker": "Dr. Khalifa",
+    "content": "just like what is happening now in Eastern Europe and the Soviet Union. God made a decision.",
+    "segment_index": 448
+  },
+  {
+    "id": 430,
+    "start_time": 1913.48,
+    "end_time": 1915.058,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, (unintelligible).",
+    "segment_index": 449
+  },
+  {
+    "id": 431,
+    "start_time": 1916.131,
+    "end_time": 1923.782,
+    "speaker": "Dr. Khalifa",
+    "content": "Just like people, even a small company, where board and director sit on the board and he says \"let's do this. Let's do that.\"",
+    "segment_index": 450
+  },
+  {
+    "id": 432,
+    "start_time": 1924.908,
+    "end_time": 1926.632,
+    "speaker": "Dr. Khalifa",
+    "content": "God runs the world.",
+    "segment_index": 451
+  },
+  {
+    "id": 433,
+    "start_time": 1926.632,
+    "end_time": 1929.8,
+    "speaker": "Dr. Khalifa",
+    "content": "There's a government running the whole world, the whole universe.",
+    "segment_index": 452
+  },
+  {
+    "id": 434,
+    "start_time": 1930.964,
+    "end_time": 1933.246,
+    "speaker": "Dr. Khalifa",
+    "content": "God runs every detail in it.",
+    "segment_index": 453
+  },
+  {
+    "id": 435,
+    "start_time": 1942.155,
+    "end_time": 1943.155,
+    "speaker": "Dr. Khalifa",
+    "content": "47.",
+    "segment_index": 454
+  },
+  {
+    "id": 436,
+    "start_time": 1943.155,
+    "end_time": 1956.032,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:47]  Noah said, \"My Lord, I seek refuge in You, lest I implore You again for something I do not know. Unless You forgive me, and have mercy on me, I will be with the losers.\"",
+    "segment_index": 455
+  },
+  {
+    "id": 437,
+    "start_time": 1960.681,
+    "end_time": 1975.724,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:48]  It was proclaimed: \"O Noah, disembark, with peace and blessings upon you, and upon nations who will descend from your companions. As for the other nations descending from you, we will bless them for awhile, then commit them to painful retribution.\"",
+    "segment_index": 456
+  },
+  {
+    "id": 438,
+    "start_time": 1977.045,
+    "end_time": 1990.399,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:49]  This is news from the past that we reveal to you. You had no knowledge about them—neither you, nor your people—before this. Therefore, be patient. The ultimate victory belongs to the righteous.",
+    "segment_index": 457
+  },
+  {
+    "id": 439,
+    "start_time": 1990.861,
+    "end_time": 1991.958,
+    "speaker": "Dr. Khalifa",
+    "content": "So, what does this mean?",
+    "segment_index": 458
+  },
+  {
+    "id": 440,
+    "start_time": 1991.958,
+    "end_time": 1995.26,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:49]  ... be patient. The ultimate victory belongs to the righteous.",
+    "segment_index": 459
+  },
+  {
+    "id": 441,
+    "start_time": 1996.337,
+    "end_time": 1998.144,
+    "speaker": "Dr. Khalifa",
+    "content": "For a nice thing, this is God's system.",
+    "segment_index": 460
+  },
+  {
+    "id": 442,
+    "start_time": 1999.661,
+    "end_time": 2003.289,
+    "speaker": "Dr. Khalifa",
+    "content": "So, just don't be in a hurry to have the disbelievers wiped out.",
+    "segment_index": 461
+  },
+  {
+    "id": 443,
+    "start_time": 2003.974,
+    "end_time": 2007.116,
+    "speaker": "Dr. Khalifa",
+    "content": "Be patient. Cause God has given them a chance to receive the message.",
+    "segment_index": 462
+  },
+  {
+    "id": 444,
+    "start_time": 2007.401,
+    "end_time": 2010.0,
+    "speaker": "Dr. Khalifa",
+    "content": "Look at it. Make a decision.",
+    "segment_index": 463
+  },
+  {
+    "id": 445,
+    "start_time": 2011.943,
+    "end_time": 2016.8,
+    "speaker": "Dr. Khalifa",
+    "content": "The longer, the longer we are given a chance, the worse the retribution is.",
+    "segment_index": 464
+  },
+  {
+    "id": 446,
+    "start_time": 2017.78,
+    "end_time": 2021.961,
+    "speaker": "Dr. Khalifa",
+    "content": "But this is God's inevitable system. The disbelievers will have to be wiped out.",
+    "segment_index": 465
+  },
+  {
+    "id": 447,
+    "start_time": 2023.919,
+    "end_time": 2024.946,
+    "speaker": "Dr. Khalifa",
+    "content": "Hûd",
+    "segment_index": 466
+  },
+  {
+    "id": 448,
+    "start_time": 2025.729,
+    "end_time": 2026.544,
+    "speaker": "Dr. Khalifa",
+    "content": "Number 50.",
+    "segment_index": 467
+  },
+  {
+    "id": 449,
+    "start_time": 2026.544,
+    "end_time": 2034.123,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:50]  To 'Ãd we sent their brother Hûd. He said, \"O my people, worship GOD; you have no other god besides Him. You are inventing.",
+    "segment_index": 468
+  },
+  {
+    "id": 450,
+    "start_time": 2034.515,
+    "end_time": 2043.171,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:51]  \"O my people, I do not ask you for any wage. My wage comes only from the One who initiated me. Do you not understand?",
+    "segment_index": 469
+  },
+  {
+    "id": 451,
+    "start_time": 2043.514,
+    "end_time": 2056.215,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:52]  \"O my people, seek forgiveness from your Lord, then repent to Him. He will then shower you with provisions from the sky, and augment your strength. Do not turn back like the guilty ones.\"",
+    "segment_index": 470
+  },
+  {
+    "id": 452,
+    "start_time": 2057.047,
+    "end_time": 2067.08,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:53]  They said, \"O Hûd, you did not show us any proof, and we are not abandoning our gods on account of what you say. In you, we are not believers.\"",
+    "segment_index": 471
+  },
+  {
+    "id": 453,
+    "start_time": 2072.072,
+    "end_time": 2073.403,
+    "speaker": "Dr. Khalifa",
+    "content": "54,",
+    "segment_index": 472
+  },
+  {
+    "id": 454,
+    "start_time": 2074.48,
+    "end_time": 2084.212,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:54]  \"We say that some of our gods have afflicted you with a curse.\" He said, \"I bear witness before GOD, and you bear witness that I disown the idols you have set up—",
+    "segment_index": 473
+  },
+  {
+    "id": 455,
+    "start_time": 2084.212,
+    "end_time": 2089.001,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:55]  \"—besides Him. So, give me your collective response, without delay.",
+    "segment_index": 474
+  },
+  {
+    "id": 456,
+    "start_time": 2089.295,
+    "end_time": 2097.143,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:56]  \"I have put my trust in GOD, my Lord and your Lord. There is not a creature that He does not control. My Lord is on the right path.",
+    "segment_index": 475
+  },
+  {
+    "id": 457,
+    "start_time": 2099.296,
+    "end_time": 2112.888,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:57]  \"If you turn away, then I have delivered to you what I was sent with. My Lord will substitute other people in your place; and you cannot harm Him in the least. My Lord is in control of all things.\"",
+    "segment_index": 476
+  },
+  {
+    "id": 458,
+    "start_time": 2113.338,
+    "end_time": 2115.097,
+    "speaker": "Dr. Khalifa",
+    "content": "See these two verses. One of them says,",
+    "segment_index": 477
+  },
+  {
+    "id": 459,
+    "start_time": 2115.097,
+    "end_time": 2118.174,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:56]  ... There is not a creature that He does not control. ...",
+    "segment_index": 478
+  },
+  {
+    "id": 460,
+    "start_time": 2119.452,
+    "end_time": 2122.431,
+    "speaker": "Dr. Khalifa",
+    "content": "And the Arabic is even stronger than that, much stronger.",
+    "segment_index": 479
+  },
+  {
+    "id": 461,
+    "start_time": 2123.801,
+    "end_time": 2124.301,
+    "speaker": "Dr. Khalifa",
+    "content": "It says,",
+    "segment_index": 480
+  },
+  {
+    "id": 462,
+    "start_time": 2124.301,
+    "end_time": 2127.671,
+    "speaker": "Dr. Khalifa",
+    "content": "(11:56) مَّا مِن دَآبَّةٍ إِلَّا هُوَ ءَاخِذٌۢ بِنَاصِيَتِهَآ",
+    "segment_index": 481
+  },
+  {
+    "id": 463,
+    "start_time": 2127.671,
+    "end_time": 2128.545,
+    "speaker": "Dr. Khalifa",
+    "content": "(11:56) مَّا مِن دَآبَّةٍ",
+    "segment_index": 482
+  },
+  {
+    "id": 464,
+    "start_time": 2128.545,
+    "end_time": 2133.432,
+    "speaker": "Dr. Khalifa",
+    "content": "Each fly or ant, mosquito, or lion",
+    "segment_index": 483
+  },
+  {
+    "id": 465,
+    "start_time": 2134.124,
+    "end_time": 2137.359,
+    "speaker": "Dr. Khalifa",
+    "content": "God is fully controlling every single creature on earth.",
+    "segment_index": 484
+  },
+  {
+    "id": 466,
+    "start_time": 2139.038,
+    "end_time": 2140.869,
+    "speaker": "Dr. Khalifa",
+    "content": "That's why Satan cannot be a god.",
+    "segment_index": 485
+  },
+  {
+    "id": 467,
+    "start_time": 2142.827,
+    "end_time": 2148.366,
+    "speaker": "Dr. Khalifa",
+    "content": "He couldn't even control (unintelligible).",
+    "segment_index": 486
+  },
+  {
+    "id": 468,
+    "start_time": 2150.519,
+    "end_time": 2152.02,
+    "speaker": "Dr. Khalifa",
+    "content": "Huge (unintelligible)",
+    "segment_index": 487
+  },
+  {
+    "id": 469,
+    "start_time": 2153.239,
+    "end_time": 2154.578,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) every creature.",
+    "segment_index": 488
+  },
+  {
+    "id": 470,
+    "start_time": 2154.578,
+    "end_time": 2157.167,
+    "speaker": "Dr. Khalifa",
+    "content": "Every creature is controlled by God.",
+    "segment_index": 489
+  },
+  {
+    "id": 471,
+    "start_time": 2157.167,
+    "end_time": 2160.763,
+    "speaker": "Dr. Khalifa",
+    "content": "How much the heart pumps, how much blood goes in veins.",
+    "segment_index": 490
+  },
+  {
+    "id": 472,
+    "start_time": 2162.085,
+    "end_time": 2163.433,
+    "speaker": "Dr. Khalifa",
+    "content": "How big a headache.",
+    "segment_index": 491
+  },
+  {
+    "id": 473,
+    "start_time": 2163.923,
+    "end_time": 2166.039,
+    "speaker": "Dr. Khalifa",
+    "content": "Of course, God doesn't bring the headaches, but,",
+    "segment_index": 492
+  },
+  {
+    "id": 474,
+    "start_time": 2166.822,
+    "end_time": 2168.377,
+    "speaker": "Dr. Khalifa",
+    "content": "even that is decided.",
+    "segment_index": 493
+  },
+  {
+    "id": 475,
+    "start_time": 2168.377,
+    "end_time": 2170.726,
+    "speaker": "Dr. Khalifa",
+    "content": "God tells Satan \"you can go only this far.\"",
+    "segment_index": 494
+  },
+  {
+    "id": 476,
+    "start_time": 2173.173,
+    "end_time": 2175.341,
+    "speaker": "Dr. Khalifa",
+    "content": "\"You can't step into Migraine.\" say.",
+    "segment_index": 495
+  },
+  {
+    "id": 477,
+    "start_time": 2177.156,
+    "end_time": 2178.738,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Only a little headache.\" Ok.",
+    "segment_index": 496
+  },
+  {
+    "id": 478,
+    "start_time": 2179.472,
+    "end_time": 2181.115,
+    "speaker": "Dr. Khalifa",
+    "content": "Satan has to abide by that.",
+    "segment_index": 497
+  },
+  {
+    "id": 479,
+    "start_time": 2181.653,
+    "end_time": 2183.392,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:56]  ... There is not a creature that ...",
+    "segment_index": 498
+  },
+  {
+    "id": 480,
+    "start_time": 2183.392,
+    "end_time": 2184.658,
+    "speaker": "Dr. Khalifa",
+    "content": "is not controlled by God.",
+    "segment_index": 499
+  },
+  {
+    "id": 481,
+    "start_time": 2185.457,
+    "end_time": 2191.237,
+    "speaker": "Dr. Khalifa",
+    "content": "And, 57, 56, 57 says,",
+    "segment_index": 500
+  },
+  {
+    "id": 482,
+    "start_time": 2192.412,
+    "end_time": 2194.412,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:57] ... My Lord is in control of all things.\"",
+    "segment_index": 501
+  },
+  {
+    "id": 483,
+    "start_time": 2197.051,
+    "end_time": 2198.912,
+    "speaker": "Dr. Khalifa",
+    "content": "So, think of the carpet as a creature.",
+    "segment_index": 502
+  },
+  {
+    "id": 484,
+    "start_time": 2199.45,
+    "end_time": 2201.697,
+    "speaker": "Dr. Khalifa",
+    "content": "He is in control of every atom.",
+    "segment_index": 503
+  },
+  {
+    "id": 485,
+    "start_time": 2202.779,
+    "end_time": 2203.712,
+    "speaker": "Dr. Khalifa",
+    "content": "Subhan Allah.",
+    "segment_index": 504
+  },
+  {
+    "id": 486,
+    "start_time": 2204.446,
+    "end_time": 2205.264,
+    "speaker": "Dr. Khalifa",
+    "content": "58,",
+    "segment_index": 505
+  },
+  {
+    "id": 487,
+    "start_time": 2205.264,
+    "end_time": 2213.528,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:58]  When our judgment came, we saved Hûd and those who believed with him, by mercy from us. We saved them from a terrible retribution.",
+    "segment_index": 506
+  },
+  {
+    "id": 488,
+    "start_time": 2213.806,
+    "end_time": 2218.77,
+    "speaker": "Dr. Khalifa",
+    "content": "This, again, is God's system. The believers are saved, whether they are one or one million.",
+    "segment_index": 507
+  },
+  {
+    "id": 489,
+    "start_time": 2219.204,
+    "end_time": 2221.644,
+    "speaker": "Dr. Khalifa",
+    "content": "God always saves the believers first.",
+    "segment_index": 508
+  },
+  {
+    "id": 490,
+    "start_time": 2222.28,
+    "end_time": 2224.074,
+    "speaker": "Dr. Khalifa",
+    "content": "And then smashes the disbelievers.",
+    "segment_index": 509
+  },
+  {
+    "id": 491,
+    "start_time": 2228.282,
+    "end_time": 2235.442,
+    "speaker": "Dr. Khalifa",
+    "content": "So, even if God is to punish the disbelievers by a nuclear explosion, somehow the believers will be protected.",
+    "segment_index": 510
+  },
+  {
+    "id": 492,
+    "start_time": 2239.33,
+    "end_time": 2243.385,
+    "speaker": "Dr. Khalifa",
+    "content": "I think AIDS is a good example because it hits certain people.",
+    "segment_index": 511
+  },
+  {
+    "id": 493,
+    "start_time": 2248.523,
+    "end_time": 2249.614,
+    "speaker": "Dr. Khalifa",
+    "content": "59,",
+    "segment_index": 512
+  },
+  {
+    "id": 494,
+    "start_time": 2249.614,
+    "end_time": 2258.385,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:59]  Such was 'Ãd—they disregarded the revelations of their Lord, disobeyed His messengers, and followed the ways of every stubborn transgressor.",
+    "segment_index": 513
+  },
+  {
+    "id": 495,
+    "start_time": 2258.679,
+    "end_time": 2270.0,
+    "speaker": "Dr. Khalifa",
+    "content": "[11:60]  Consequently, they incurred condemnation in this world, and on the Day of Resurrection. Indeed, 'Ãd rejected their Lord. Indeed, 'Ãd, the people of Hûd, have perished.",
+    "segment_index": 514
+  },
+  {
+    "id": 496,
+    "start_time": 2270.901,
+    "end_time": 2275.522,
+    "speaker": "Dr. Khalifa",
+    "content": "Congratulations, you lucky believers. God bless you. It's page 228.",
+    "segment_index": 515
+  },
+  {
+    "id": 497,
+    "start_time": 2275.81,
+    "end_time": 2278.65,
+    "speaker": "Mahmood Abib",
+    "content": "How long they say Noah's rain was then?",
+    "segment_index": 516
+  },
+  {
+    "id": 498,
+    "start_time": 2280.636,
+    "end_time": 2282.0,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 517
+  },
+  {
+    "id": 499,
+    "start_time": 2282.027,
+    "end_time": 2283.37,
+    "speaker": "Dr. Khalifa",
+    "content": "Probably 24 hours.",
+    "segment_index": 518
+  },
+  {
+    "id": 500,
+    "start_time": 2283.713,
+    "end_time": 2284.983,
+    "speaker": "Mahmood Abib",
+    "content": "How long did they ...?",
+    "segment_index": 519
+  },
+  {
+    "id": 501,
+    "start_time": 2284.983,
+    "end_time": 2285.857,
+    "speaker": "Dr. Khalifa",
+    "content": "40 days.",
+    "segment_index": 520
+  },
+  {
+    "id": 502,
+    "start_time": 2285.857,
+    "end_time": 2286.536,
+    "speaker": "Mahmood Abib",
+    "content": "40 days?",
+    "segment_index": 521
+  },
+  {
+    "id": 503,
+    "start_time": 2286.536,
+    "end_time": 2288.582,
+    "speaker": "Dr. Khalifa",
+    "content": "40 days and 40 nights, but",
+    "segment_index": 522
+  },
+  {
+    "id": 504,
+    "start_time": 2288.582,
+    "end_time": 2291.438,
+    "speaker": "Dr. Khalifa",
+    "content": "I don't know what the big deal is. 40 days and 40 nights.",
+    "segment_index": 523
+  },
+  {
+    "id": 505,
+    "start_time": 2291.732,
+    "end_time": 2293.657,
+    "speaker": "Dr. Khalifa",
+    "content": "They always say \"3 days and 3 nights.\"",
+    "segment_index": 524
+  },
+  {
+    "id": 506,
+    "start_time": 2294.019,
+    "end_time": 2295.798,
+    "speaker": "Dr. Khalifa",
+    "content": "\"40 days and 40 nights.\"",
+    "segment_index": 525
+  },
+  {
+    "id": 507,
+    "start_time": 2296.679,
+    "end_time": 2297.798,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 526
+  },
+  {
+    "id": 508,
+    "start_time": 2298.687,
+    "end_time": 2299.687,
+    "speaker": "Dr. Khalifa",
+    "content": "Congratulations.",
+    "segment_index": 527
+  },
+  {
+    "id": 509,
+    "start_time": 2300.274,
+    "end_time": 2301.54,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 528
+  },
+  {
+    "id": 510,
+    "start_time": 2301.54,
+    "end_time": 2302.414,
+    "speaker": "Mahmood Abib",
+    "content": "(unintelligible)",
+    "segment_index": 529
+  },
+  {
+    "id": 511,
+    "start_time": 2303.651,
+    "end_time": 2305.05,
+    "speaker": "Mahmood Abib",
+    "content": "This afternoon was good.",
+    "segment_index": 530
+  },
+  {
+    "id": 512,
+    "start_time": 2305.05,
+    "end_time": 2305.784,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 531
+  },
+  {
+    "id": 513,
+    "start_time": 2305.784,
+    "end_time": 2306.861,
+    "speaker": "Mahmood Abib",
+    "content": "(unintelligible)",
+    "segment_index": 532
+  },
+  {
+    "id": 514,
+    "start_time": 2306.861,
+    "end_time": 2307.786,
+    "speaker": "Dr. Khalifa",
+    "content": "Healthy sleep.",
+    "segment_index": 533
+  },
+  {
+    "id": 515,
+    "start_time": 2307.786,
+    "end_time": 2308.66,
+    "speaker": "Mahmood Abib",
+    "content": "(unintelligible)",
+    "segment_index": 534
+  },
+  {
+    "id": 516,
+    "start_time": 2311.701,
+    "end_time": 2314.63,
+    "speaker": "A man",
+    "content": "Salãmun ‘Alaykum. I'm glad you even came.",
+    "segment_index": 535
+  },
+  {
+    "id": 517,
+    "start_time": 2315.021,
+    "end_time": 2316.575,
+    "speaker": "Dr. Khalifa",
+    "content": "212.",
+    "segment_index": 536
+  },
+  {
+    "id": 518,
+    "start_time": 2317.896,
+    "end_time": 2318.856,
+    "speaker": "Dr. Khalifa",
+    "content": "212.",
+    "segment_index": 537
+  },
+  {
+    "id": 519,
+    "start_time": 2326.344,
+    "end_time": 2327.938,
+    "speaker": "Dr. Khalifa",
+    "content": "So, how was Palm Desert?",
+    "segment_index": 538
+  },
+  {
+    "id": 520,
+    "start_time": 2327.938,
+    "end_time": 2330.136,
+    "speaker": "A woman",
+    "content": "Alhamdu Lillah. It was beautiful.",
+    "segment_index": 539
+  },
+  {
+    "id": "521_part_0",
+    "start_time": 2330.596,
+    "end_time": 2333.1814878048776,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes, I noticed the weather was good. ",
+    "segment_index": 540
+  },
+  {
+    "id": "521_part_1",
+    "start_time": 2333.1814878048776,
+    "end_time": 2333.461,
+    "speaker": "A woman",
+    "content": "Yes.",
+    "segment_index": 541
+  },
+  {
+    "id": 522,
+    "start_time": 2334.097,
+    "end_time": 2335.469,
+    "speaker": "Dr. Khalifa",
+    "content": "IN SHAA ALLAH.",
+    "segment_index": 542
+  },
+  {
+    "id": 523,
+    "start_time": 2337.818,
+    "end_time": 2339.128,
+    "speaker": "A man",
+    "content": "212.",
+    "segment_index": 543
+  },
+  {
+    "id": 524,
+    "start_time": 2340.44,
+    "end_time": 2341.853,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes, 212.",
+    "segment_index": 544
+  },
+  {
+    "id": 525,
+    "start_time": 2353.843,
+    "end_time": 2355.962,
+    "speaker": "A woman",
+    "content": "I am not sure about this (unintelligible).",
+    "segment_index": 545
+  },
+  {
+    "id": 526,
+    "start_time": 2356.892,
+    "end_time": 2359.186,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 546
+  },
+  {
+    "id": 527,
+    "start_time": 2359.186,
+    "end_time": 2361.773,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 547
+  },
+  {
+    "id": 528,
+    "start_time": 2366.092,
+    "end_time": 2367.994,
+    "speaker": "Dr. Khalifa",
+    "content": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
+    "segment_index": 548
+  },
+  {
+    "id": 529,
+    "start_time": 2367.994,
+    "end_time": 2369.994,
+    "speaker": "Dr. Khalifa",
+    "content": "Bism Allah Arrahman Arraheem",
+    "segment_index": 549
+  },
+  {
+    "id": 530,
+    "start_time": 2370.0,
+    "end_time": 2371.885,
+    "speaker": "Dr. Khalifa",
+    "content": "Heaven and Hell are Eternal",
+    "segment_index": 550
+  },
+  {
+    "id": 531,
+    "start_time": 2372.277,
+    "end_time": 2387.455,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:26]  As for the righteous, they have deserved a reward, multiplied manifold. Never will they suffer any deprivation or shame. They will be the dwellers of Paradise; they abide therein forever.",
+    "segment_index": 551
+  },
+  {
+    "id": 532,
+    "start_time": 2387.798,
+    "end_time": 2411.234,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:27]  As for those who earned sins, their requital is equivalent to their sin. Humiliation is their lot, and nothing other than GOD can protect them. Their faces will seem like masses of dark night has surrounded them. They will be the dwellers of Hell; they abide therein forever.",
+    "segment_index": 552
+  },
+  {
+    "id": 533,
+    "start_time": 2413.464,
+    "end_time": 2417.738,
+    "speaker": "Dr. Khalifa",
+    "content": "Actually, this is, this may not be an, an allegory,",
+    "segment_index": 553
+  },
+  {
+    "id": 534,
+    "start_time": 2417.738,
+    "end_time": 2419.255,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:27] ... masses of dark night ...",
+    "segment_index": 554
+  },
+  {
+    "id": 535,
+    "start_time": 2419.255,
+    "end_time": 2420.291,
+    "speaker": "Dr. Khalifa",
+    "content": "surrounding them.",
+    "segment_index": 555
+  },
+  {
+    "id": 536,
+    "start_time": 2420.731,
+    "end_time": 2424.613,
+    "speaker": "Dr. Khalifa",
+    "content": "Because I think the most important feature of here is darkness.",
+    "segment_index": 556
+  },
+  {
+    "id": 537,
+    "start_time": 2425.789,
+    "end_time": 2427.655,
+    "speaker": "Dr. Khalifa",
+    "content": "It's gonna be far away from...",
+    "segment_index": 557
+  },
+  {
+    "id": 538,
+    "start_time": 2428.046,
+    "end_time": 2431.855,
+    "speaker": "Dr. Khalifa",
+    "content": "I don't think the 8th universe will be adorned with stars or sun or moon, or nothing.",
+    "segment_index": 558
+  },
+  {
+    "id": 539,
+    "start_time": 2437.338,
+    "end_time": 2438.875,
+    "speaker": "Dr. Khalifa",
+    "content": "Cause it's gonna be dark there.",
+    "segment_index": 559
+  },
+  {
+    "id": 540,
+    "start_time": 2439.264,
+    "end_time": 2442.599,
+    "speaker": "Dr. Khalifa",
+    "content": "When we go visit our relatives and friends, we will provide some light.",
+    "segment_index": 560
+  },
+  {
+    "id": 541,
+    "start_time": 2444.367,
+    "end_time": 2446.011,
+    "speaker": "Dr. Khalifa",
+    "content": "Idols Disown Their Worshipers",
+    "segment_index": 561
+  },
+  {
+    "id": 542,
+    "start_time": 2446.011,
+    "end_time": 2446.739,
+    "speaker": "Dr. Khalifa",
+    "content": "28,",
+    "segment_index": 562
+  },
+  {
+    "id": 543,
+    "start_time": 2446.739,
+    "end_time": 2466.062,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:28]  On the day when we summon them all, we will say to those who worshiped idols, \"We have summoned you, together with your idols.\" We will have them confront each other, and their idols will say to them, \"It was not us that you worshipped.",
+    "segment_index": 563
+  },
+  {
+    "id": 544,
+    "start_time": 2467.686,
+    "end_time": 2471.497,
+    "speaker": "Dr. Khalifa",
+    "content": "I'm gonna stop here because I put it together with other verses in the Quran.",
+    "segment_index": 564
+  },
+  {
+    "id": 545,
+    "start_time": 2471.497,
+    "end_time": 2473.182,
+    "speaker": "Dr. Khalifa",
+    "content": "They were worshiping nothing.",
+    "segment_index": 565
+  },
+  {
+    "id": 546,
+    "start_time": 2473.966,
+    "end_time": 2477.046,
+    "speaker": "Dr. Khalifa",
+    "content": "Because they go to the tombs of saints and prophets.",
+    "segment_index": 566
+  },
+  {
+    "id": 547,
+    "start_time": 2478.019,
+    "end_time": 2481.151,
+    "speaker": "Dr. Khalifa",
+    "content": "And they ask them for health and wealth and children and so on.",
+    "segment_index": 567
+  },
+  {
+    "id": 548,
+    "start_time": 2481.699,
+    "end_time": 2485.097,
+    "speaker": "Dr. Khalifa",
+    "content": "But they are really imploring nothing. There's nothing in them.",
+    "segment_index": 568
+  },
+  {
+    "id": 549,
+    "start_time": 2488.934,
+    "end_time": 2497.568,
+    "speaker": "Dr. Khalifa",
+    "content": "Whatever is left is the bodies of those saints. It becomes like part of the tomb, part of the earth.",
+    "segment_index": 569
+  },
+  {
+    "id": 550,
+    "start_time": 2498.128,
+    "end_time": 2499.618,
+    "speaker": "Dr. Khalifa",
+    "content": "So, they're imploring nothing.",
+    "segment_index": 570
+  },
+  {
+    "id": 551,
+    "start_time": 2500.254,
+    "end_time": 2501.254,
+    "speaker": "Dr. Khalifa",
+    "content": "29.",
+    "segment_index": 571
+  },
+  {
+    "id": 552,
+    "start_time": 2502.086,
+    "end_time": 2507.98,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:29]  \"GOD suffices as a witness between us and you. We were completely oblivious of your worshiping us.\"",
+    "segment_index": 572
+  },
+  {
+    "id": 553,
+    "start_time": 2508.469,
+    "end_time": 2509.733,
+    "speaker": "Dr. Khalifa",
+    "content": "Number 30.",
+    "segment_index": 573
+  },
+  {
+    "id": 554,
+    "start_time": 2510.0,
+    "end_time": 2521.053,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:30]  That is when each soul will examine everything it had done. They will be returned to GOD, their rightful Lord and Master, while the idols they had fabricated will disown them.",
+    "segment_index": 574
+  },
+  {
+    "id": 555,
+    "start_time": 2521.934,
+    "end_time": 2541.899,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:31]  Say, \"Who provides for you from the heaven and the earth? Who controls all the hearing and the eyesight? Who produces the living from the dead, and the dead from the living? Who is in control of all things?\" They would say, \"GOD.\" Say, \"Why then do you not observe righteousness?\"",
+    "segment_index": 575
+  },
+  {
+    "id": 556,
+    "start_time": 2543.567,
+    "end_time": 2544.937,
+    "speaker": "Dr. Khalifa",
+    "content": "First question in 31 is",
+    "segment_index": 576
+  },
+  {
+    "id": 557,
+    "start_time": 2544.937,
+    "end_time": 2547.09,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:31]  ... \"Who provides for you from the heaven and the earth? ...",
+    "segment_index": 577
+  },
+  {
+    "id": 558,
+    "start_time": 2547.09,
+    "end_time": 2548.894,
+    "speaker": "Dr. Khalifa",
+    "content": "God is the only provider.",
+    "segment_index": 578
+  },
+  {
+    "id": 559,
+    "start_time": 2548.894,
+    "end_time": 2551.579,
+    "speaker": "Dr. Khalifa",
+    "content": "Of course, most people are not aware of this.",
+    "segment_index": 579
+  },
+  {
+    "id": 560,
+    "start_time": 2554.515,
+    "end_time": 2556.805,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:31]  ... Who controls all the hearing and the eyesight? ...",
+    "segment_index": 580
+  },
+  {
+    "id": 561,
+    "start_time": 2557.197,
+    "end_time": 2559.442,
+    "speaker": "Dr. Khalifa",
+    "content": "These are nice things that we enjoy.",
+    "segment_index": 581
+  },
+  {
+    "id": 562,
+    "start_time": 2562.868,
+    "end_time": 2564.868,
+    "speaker": "Dr. Khalifa",
+    "content": "The hearing and the eyesight.",
+    "segment_index": 582
+  },
+  {
+    "id": 563,
+    "start_time": 2565.455,
+    "end_time": 2566.966,
+    "speaker": "Dr. Khalifa",
+    "content": "God controls them.",
+    "segment_index": 583
+  },
+  {
+    "id": 564,
+    "start_time": 2568.581,
+    "end_time": 2574.378,
+    "speaker": "Dr. Khalifa",
+    "content": "Last night, Stephanie and I went for our 27th anniversary.",
+    "segment_index": 584
+  },
+  {
+    "id": 565,
+    "start_time": 2574.916,
+    "end_time": 2577.787,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, next to us was sitting an old gentleman.",
+    "segment_index": 585
+  },
+  {
+    "id": 566,
+    "start_time": 2578.57,
+    "end_time": 2580.815,
+    "speaker": "Dr. Khalifa",
+    "content": "Obviously a lady was taking care of him.",
+    "segment_index": 586
+  },
+  {
+    "id": 567,
+    "start_time": 2580.815,
+    "end_time": 2584.773,
+    "speaker": "Dr. Khalifa",
+    "content": "And he was with, maybe, a hearing aid.",
+    "segment_index": 587
+  },
+  {
+    "id": 568,
+    "start_time": 2585.311,
+    "end_time": 2590.569,
+    "speaker": "Dr. Khalifa",
+    "content": "And his, his helper was yelling at him all the time. That's right.",
+    "segment_index": 588
+  },
+  {
+    "id": 569,
+    "start_time": 2591.156,
+    "end_time": 2595.421,
+    "speaker": "Dr. Khalifa",
+    "content": "He's very nice. Very nice sentences but in a very loud voice.",
+    "segment_index": 589
+  },
+  {
+    "id": 570,
+    "start_time": 2598.21,
+    "end_time": 2600.638,
+    "speaker": "Dr. Khalifa",
+    "content": "It's amazing what happened, when he got help.",
+    "segment_index": 590
+  },
+  {
+    "id": 571,
+    "start_time": 2600.638,
+    "end_time": 2604.722,
+    "speaker": "Dr. Khalifa",
+    "content": "God gave, God gave us the eyesight and God gave us...",
+    "segment_index": 591
+  },
+  {
+    "id": 572,
+    "start_time": 2605.152,
+    "end_time": 2609.138,
+    "speaker": "Dr. Khalifa",
+    "content": "We take these things, we take for granted. We're walking around. You always hear and see.",
+    "segment_index": 592
+  },
+  {
+    "id": 573,
+    "start_time": 2609.6,
+    "end_time": 2613.781,
+    "speaker": "Dr. Khalifa",
+    "content": "And this guy, he was very old. Obviously, he must have been in his 80s or 90s.",
+    "segment_index": 593
+  },
+  {
+    "id": 574,
+    "start_time": 2615.417,
+    "end_time": 2619.109,
+    "speaker": "Dr. Khalifa",
+    "content": "And he lost most of his hearing.",
+    "segment_index": 594
+  },
+  {
+    "id": 575,
+    "start_time": 2619.696,
+    "end_time": 2621.381,
+    "speaker": "Dr. Khalifa",
+    "content": "God controls that.",
+    "segment_index": 595
+  },
+  {
+    "id": 576,
+    "start_time": 2622.164,
+    "end_time": 2628.743,
+    "speaker": "A woman",
+    "content": "God mercy, God is very merciful, too. Because my parents are both... My mom's about 80 and my dad 85.",
+    "segment_index": 596
+  },
+  {
+    "id": 577,
+    "start_time": 2628.743,
+    "end_time": 2634.099,
+    "speaker": "A woman",
+    "content": "And my dad has lost a lot of his hearing. And my mom is losing her eyesight.",
+    "segment_index": 597
+  },
+  {
+    "id": "578_part_0",
+    "start_time": 2634.099,
+    "end_time": 2637.1512432432432,
+    "speaker": "A woman",
+    "content": "So, between the two of them they can take care of each other. ",
+    "segment_index": 598
+  },
+  {
+    "id": "578_part_1",
+    "start_time": 2637.1512432432432,
+    "end_time": 2637.742,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah. Right.",
+    "segment_index": 599
+  },
+  {
+    "id": 579,
+    "start_time": 2638.085,
+    "end_time": 2640.867,
+    "speaker": "Dr. Khalifa",
+    "content": "For 80, it is, it's when everything goes weak.",
+    "segment_index": 600
+  },
+  {
+    "id": "580_part_0",
+    "start_time": 2640.867,
+    "end_time": 2644.8180588235296,
+    "speaker": "A woman",
+    "content": "Oh, (unintelligible) merciful and wonderful help, Mã Shã Allãh. ",
+    "segment_index": 601
+  },
+  {
+    "id": "580_part_1",
+    "start_time": 2644.8180588235296,
+    "end_time": 2645.065,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 602
+  },
+  {
+    "id": 581,
+    "start_time": 2645.31,
+    "end_time": 2646.793,
+    "speaker": "Dr. Khalifa",
+    "content": "Good parents are assisted.",
+    "segment_index": 603
+  },
+  {
+    "id": 582,
+    "start_time": 2646.793,
+    "end_time": 2648.066,
+    "speaker": "A woman",
+    "content": "That's right.",
+    "segment_index": 604
+  },
+  {
+    "id": 583,
+    "start_time": 2648.066,
+    "end_time": 2651.751,
+    "speaker": "Dr. Khalifa",
+    "content": "And also parents here in (unintelligible).",
+    "segment_index": 605
+  },
+  {
+    "id": 584,
+    "start_time": 2652.338,
+    "end_time": 2655.316,
+    "speaker": "A woman",
+    "content": "(unintelligible).",
+    "segment_index": 606
+  },
+  {
+    "id": 585,
+    "start_time": 2657.616,
+    "end_time": 2659.763,
+    "speaker": "A woman",
+    "content": "(unintelligible).",
+    "segment_index": 607
+  },
+  {
+    "id": 586,
+    "start_time": 2659.763,
+    "end_time": 2661.469,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, but she's (unintelligible) the picnic.",
+    "segment_index": 608
+  },
+  {
+    "id": "587_part_0",
+    "start_time": 2661.469,
+    "end_time": 2662.597205128205,
+    "speaker": "Dr. Khalifa",
+    "content": "So, (unintelligible). ",
+    "segment_index": 609
+  },
+  {
+    "id": "587_part_1",
+    "start_time": 2662.597205128205,
+    "end_time": 2663.469,
+    "speaker": "A woman",
+    "content": "(unintelligible).",
+    "segment_index": 610
+  },
+  {
+    "id": 588,
+    "start_time": 2663.469,
+    "end_time": 2666.591,
+    "speaker": "A woman",
+    "content": "Because she saw me from (unintelligible).",
+    "segment_index": 611
+  },
+  {
+    "id": 589,
+    "start_time": 2666.591,
+    "end_time": 2667.27,
+    "speaker": "Dr. Khalifa",
+    "content": "Right.",
+    "segment_index": 612
+  },
+  {
+    "id": 590,
+    "start_time": 2669.429,
+    "end_time": 2670.934,
+    "speaker": "Dr. Khalifa",
+    "content": "That's why God gave us two eyes.",
+    "segment_index": 613
+  },
+  {
+    "id": 591,
+    "start_time": 2675.094,
+    "end_time": 2679.106,
+    "speaker": "Dr. Khalifa",
+    "content": "And they are in their 80s. So, your father is 80 and your mother almost 80.",
+    "segment_index": 614
+  },
+  {
+    "id": 592,
+    "start_time": 2684.049,
+    "end_time": 2686.473,
+    "speaker": "Dr. Khalifa",
+    "content": "And they're not even believers. I mean, not the way we are.",
+    "segment_index": 615
+  },
+  {
+    "id": 593,
+    "start_time": 2686.473,
+    "end_time": 2687.788,
+    "speaker": "A woman",
+    "content": "Yeah. Not like us.",
+    "segment_index": 616
+  },
+  {
+    "id": 594,
+    "start_time": 2687.788,
+    "end_time": 2689.641,
+    "speaker": "Dr. Khalifa",
+    "content": "They don't know about the Quran, you know.",
+    "segment_index": 617
+  },
+  {
+    "id": 595,
+    "start_time": 2689.641,
+    "end_time": 2692.493,
+    "speaker": "Dr. Khalifa",
+    "content": "They don't know the details of the miracle of 19.",
+    "segment_index": 618
+  },
+  {
+    "id": 596,
+    "start_time": 2694.13,
+    "end_time": 2697.455,
+    "speaker": "Dr. Khalifa",
+    "content": "Probably because of you that they are in much better shape than most people.",
+    "segment_index": 619
+  },
+  {
+    "id": 597,
+    "start_time": 2702.74,
+    "end_time": 2705.7,
+    "speaker": "Dr. Khalifa",
+    "content": "Just for your sake, God will make them good.",
+    "segment_index": 620
+  },
+  {
+    "id": 598,
+    "start_time": 2705.7,
+    "end_time": 2709.674,
+    "speaker": "A woman",
+    "content": "(unintelligible).",
+    "segment_index": 621
+  },
+  {
+    "id": 599,
+    "start_time": 2710.261,
+    "end_time": 2711.679,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, (unintelligible).",
+    "segment_index": 622
+  },
+  {
+    "id": 600,
+    "start_time": 2712.56,
+    "end_time": 2715.915,
+    "speaker": "Dr. Khalifa",
+    "content": "See, four cats, right? Double, two cats at least.",
+    "segment_index": 623
+  },
+  {
+    "id": 601,
+    "start_time": 2716.942,
+    "end_time": 2718.061,
+    "speaker": "Dr. Khalifa",
+    "content": "You've seen double.",
+    "segment_index": 624
+  },
+  {
+    "id": 602,
+    "start_time": 2718.697,
+    "end_time": 2719.561,
+    "speaker": "A woman",
+    "content": "Yes.",
+    "segment_index": 625
+  },
+  {
+    "id": 603,
+    "start_time": 2719.561,
+    "end_time": 2720.953,
+    "speaker": "Dr. Khalifa",
+    "content": "Or after the operation.",
+    "segment_index": 626
+  },
+  {
+    "id": 604,
+    "start_time": 2721.393,
+    "end_time": 2722.633,
+    "speaker": "A woman",
+    "content": "Well, afterwards (unintelligible)",
+    "segment_index": 627
+  },
+  {
+    "id": 605,
+    "start_time": 2722.633,
+    "end_time": 2724.389,
+    "speaker": "Dr. Khalifa",
+    "content": "You've seen four or two after the operation?",
+    "segment_index": 628
+  },
+  {
+    "id": 606,
+    "start_time": 2724.389,
+    "end_time": 2725.606,
+    "speaker": "A woman",
+    "content": "It depends on what I look at.",
+    "segment_index": 629
+  },
+  {
+    "id": 607,
+    "start_time": 2727.417,
+    "end_time": 2727.998,
+    "speaker": "A woman",
+    "content": "But",
+    "segment_index": 630
+  },
+  {
+    "id": 608,
+    "start_time": 2727.998,
+    "end_time": 2729.064,
+    "speaker": "Dr. Khalifa",
+    "content": "Before the operation.",
+    "segment_index": 631
+  },
+  {
+    "id": 609,
+    "start_time": 2729.504,
+    "end_time": 2734.133,
+    "speaker": "A woman",
+    "content": "At sometimes I was before the operation, to be honest. This side was going to the side (unintelligible)",
+    "segment_index": 632
+  },
+  {
+    "id": 610,
+    "start_time": 2734.574,
+    "end_time": 2738.217,
+    "speaker": "Dr. Khalifa",
+    "content": "So, you were seeing, you were Mahmood when you were looking at me?",
+    "segment_index": 633
+  },
+  {
+    "id": 611,
+    "start_time": 2740.614,
+    "end_time": 2743.13,
+    "speaker": "A woman",
+    "content": "No, but you knew what she was looking at.",
+    "segment_index": 634
+  },
+  {
+    "id": 612,
+    "start_time": 2745.871,
+    "end_time": 2746.794,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 635
+  },
+  {
+    "id": 613,
+    "start_time": 2750.521,
+    "end_time": 2752.695,
+    "speaker": "Dr. Khalifa",
+    "content": "That was funny. We had a professor...",
+    "segment_index": 636
+  },
+  {
+    "id": 614,
+    "start_time": 2754.848,
+    "end_time": 2762.447,
+    "speaker": "Dr. Khalifa",
+    "content": "In fact, he is the same professor who (unintelligible).",
+    "segment_index": 637
+  },
+  {
+    "id": 615,
+    "start_time": 2763.23,
+    "end_time": 2768.998,
+    "speaker": "Dr. Khalifa",
+    "content": "And his eyes were going like this, so you can't tell who he is looking at. And we took advantage of this.",
+    "segment_index": 638
+  },
+  {
+    "id": 616,
+    "start_time": 2768.998,
+    "end_time": 2774.375,
+    "speaker": "Dr. Khalifa",
+    "content": "Because when we used to, for oral examination, he'd have two people. Okay?",
+    "segment_index": 639
+  },
+  {
+    "id": 617,
+    "start_time": 2774.375,
+    "end_time": 2775.967,
+    "speaker": "Dr. Khalifa",
+    "content": "He's asking us oral questions.",
+    "segment_index": 640
+  },
+  {
+    "id": 618,
+    "start_time": 2776.652,
+    "end_time": 2780.0,
+    "speaker": "Dr. Khalifa",
+    "content": "So, (unintelligible).",
+    "segment_index": 641
+  },
+  {
+    "id": 619,
+    "start_time": 2780.0,
+    "end_time": 2784.349,
+    "speaker": "Dr. Khalifa",
+    "content": "And whoever knows, we made an agreement, whoever knows the question, the question, answer it.",
+    "segment_index": 642
+  },
+  {
+    "id": "620_part_0",
+    "start_time": 2784.936,
+    "end_time": 2786.382653846154,
+    "speaker": "A woman",
+    "content": "And say you (unintelligible) ",
+    "segment_index": 643
+  },
+  {
+    "id": "620_part_1",
+    "start_time": 2786.382653846154,
+    "end_time": 2787.53,
+    "speaker": "Dr. Khalifa",
+    "content": "Because he didn't know.",
+    "segment_index": 644
+  },
+  {
+    "id": 621,
+    "start_time": 2793.125,
+    "end_time": 2798.447,
+    "speaker": "Dr. Khalifa",
+    "content": "We made an agreement with ourselves. When he asks a question, whoever knows the question, answer it.",
+    "segment_index": 645
+  },
+  {
+    "id": 622,
+    "start_time": 2800.649,
+    "end_time": 2802.894,
+    "speaker": "Dr. Khalifa",
+    "content": "And we'll just say that \"you were looking at him?\"",
+    "segment_index": 646
+  },
+  {
+    "id": 623,
+    "start_time": 2805.879,
+    "end_time": 2808.805,
+    "speaker": "Dr. Khalifa",
+    "content": "\"I was asking you.\" \"But you were looking at him. Oh, okay.\"",
+    "segment_index": 647
+  },
+  {
+    "id": 624,
+    "start_time": 2809.784,
+    "end_time": 2811.784,
+    "speaker": "Dr. Khalifa",
+    "content": "Poor guy. I think we probably gave him a complex.",
+    "segment_index": 648
+  },
+  {
+    "id": 625,
+    "start_time": 2812.176,
+    "end_time": 2814.155,
+    "speaker": "A woman",
+    "content": "It wasn't always obvious when he looked.",
+    "segment_index": 649
+  },
+  {
+    "id": "626_part_0",
+    "start_time": 2814.644,
+    "end_time": 2816.102418604651,
+    "speaker": "A woman",
+    "content": "This is because I'm saying, like this. ",
+    "segment_index": 650
+  },
+  {
+    "id": "626_part_1",
+    "start_time": 2816.102418604651,
+    "end_time": 2816.252,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 651
+  },
+  {
+    "id": 627,
+    "start_time": 2816.252,
+    "end_time": 2822.706,
+    "speaker": "A woman",
+    "content": "It was getting worse. And it was putting a lot strain on, and I couldn't do it. I liked to read, and I had trouble reading, but it...",
+    "segment_index": 652
+  },
+  {
+    "id": 628,
+    "start_time": 2822.706,
+    "end_time": 2825.762,
+    "speaker": "Mahmood Abib",
+    "content": "And what if two people said and answered the same thing.",
+    "segment_index": 653
+  },
+  {
+    "id": 629,
+    "start_time": 2825.762,
+    "end_time": 2827.762,
+    "speaker": "Dr. Khalifa",
+    "content": "That was my next statement.",
+    "segment_index": 654
+  },
+  {
+    "id": 630,
+    "start_time": 2828.372,
+    "end_time": 2834.608,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, and, then, there comes a situation where he asks a question none of us will know. And the two of us will just sit there and not answer.",
+    "segment_index": 655
+  },
+  {
+    "id": 631,
+    "start_time": 2834.608,
+    "end_time": 2838.006,
+    "speaker": "Dr. Khalifa",
+    "content": "\"I'm asking you.\" \"Oh, you're talking to me?\"",
+    "segment_index": 656
+  },
+  {
+    "id": 632,
+    "start_time": 2839.516,
+    "end_time": 2841.886,
+    "speaker": "Dr. Khalifa",
+    "content": "We'll create a scene until he forgets the question.",
+    "segment_index": 657
+  },
+  {
+    "id": 633,
+    "start_time": 2846.144,
+    "end_time": 2848.144,
+    "speaker": "A woman",
+    "content": "I had to read (unintelligible)",
+    "segment_index": 658
+  },
+  {
+    "id": 634,
+    "start_time": 2849.325,
+    "end_time": 2850.766,
+    "speaker": "Dr. Khalifa",
+    "content": "That's the true story. Huh?",
+    "segment_index": 659
+  },
+  {
+    "id": "635_part_0",
+    "start_time": 2850.766,
+    "end_time": 2852.131853658537,
+    "speaker": "A woman",
+    "content": "(unintelligible) like this. ",
+    "segment_index": 660
+  },
+  {
+    "id": "635_part_1",
+    "start_time": 2852.131853658537,
+    "end_time": 2852.766,
+    "speaker": "A woman",
+    "content": "IN SHAA ALLAH",
+    "segment_index": 661
+  },
+  {
+    "id": 636,
+    "start_time": 2853.115,
+    "end_time": 2854.115,
+    "speaker": "Dr. Khalifa",
+    "content": "Alhamdu Lillah.",
+    "segment_index": 662
+  },
+  {
+    "id": 637,
+    "start_time": 2854.8,
+    "end_time": 2855.8,
+    "speaker": "Dr. Khalifa",
+    "content": "Thank God.",
+    "segment_index": 663
+  },
+  {
+    "id": 638,
+    "start_time": 2855.8,
+    "end_time": 2858.331,
+    "speaker": "Dr. Khalifa",
+    "content": "God controls the hearing and the eyesight.",
+    "segment_index": 664
+  },
+  {
+    "id": 639,
+    "start_time": 2859.31,
+    "end_time": 2861.494,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:31] ... Who produces the living from the dead ...",
+    "segment_index": 665
+  },
+  {
+    "id": 640,
+    "start_time": 2865.996,
+    "end_time": 2873.607,
+    "speaker": "Dr. Khalifa",
+    "content": "Of course, there is also the literal, I mean, the literal production, production of the living from the dead, but also there is the...",
+    "segment_index": 666
+  },
+  {
+    "id": 641,
+    "start_time": 2875.026,
+    "end_time": 2877.026,
+    "speaker": "Dr. Khalifa",
+    "content": "Like when a chick comes out of the egg.",
+    "segment_index": 667
+  },
+  {
+    "id": 642,
+    "start_time": 2878.69,
+    "end_time": 2883.247,
+    "speaker": "Dr. Khalifa",
+    "content": "When the embryo is in, is dormant, you can consider it dead.",
+    "segment_index": 668
+  },
+  {
+    "id": 643,
+    "start_time": 2883.247,
+    "end_time": 2886.645,
+    "speaker": "Dr. Khalifa",
+    "content": "You caught somebody innocently eating an omelet, you know.",
+    "segment_index": 669
+  },
+  {
+    "id": 644,
+    "start_time": 2887.109,
+    "end_time": 2889.529,
+    "speaker": "Dr. Khalifa",
+    "content": "So, it is, it gets digested.",
+    "segment_index": 670
+  },
+  {
+    "id": 645,
+    "start_time": 2889.529,
+    "end_time": 2891.921,
+    "speaker": "Dr. Khalifa",
+    "content": "So, it is dead for all practical purposes.",
+    "segment_index": 671
+  },
+  {
+    "id": 646,
+    "start_time": 2891.921,
+    "end_time": 2897.227,
+    "speaker": "Dr. Khalifa",
+    "content": "But if you leave it alone, you can have a chicken come out of the egg.",
+    "segment_index": 672
+  },
+  {
+    "id": 647,
+    "start_time": 2898.287,
+    "end_time": 2899.724,
+    "speaker": "Dr. Khalifa",
+    "content": "That's the living from the dead.",
+    "segment_index": 673
+  },
+  {
+    "id": 648,
+    "start_time": 2899.724,
+    "end_time": 2900.458,
+    "speaker": "Behrouz",
+    "content": "Is the...",
+    "segment_index": 674
+  },
+  {
+    "id": 649,
+    "start_time": 2900.458,
+    "end_time": 2904.475,
+    "speaker": "Dr. Khalifa",
+    "content": "And the dead from the living is because after a while, you eat the chicken.",
+    "segment_index": 675
+  },
+  {
+    "id": 650,
+    "start_time": 2904.998,
+    "end_time": 2905.998,
+    "speaker": "Dr. Khalifa",
+    "content": "The chicken is dead.",
+    "segment_index": 676
+  },
+  {
+    "id": 651,
+    "start_time": 2906.998,
+    "end_time": 2907.998,
+    "speaker": "Dr. Khalifa",
+    "content": "Go ahead.",
+    "segment_index": 677
+  },
+  {
+    "id": 652,
+    "start_time": 2907.998,
+    "end_time": 2910.368,
+    "speaker": "Behrouz",
+    "content": "Is the embryo an 'ALAQ (عَلَق)?",
+    "segment_index": 678
+  },
+  {
+    "id": 653,
+    "start_time": 2911.64,
+    "end_time": 2913.18,
+    "speaker": "Dr. Khalifa",
+    "content": "'ALAQ (عَلَق) is a stage of embryo.",
+    "segment_index": 679
+  },
+  {
+    "id": 654,
+    "start_time": 2913.523,
+    "end_time": 2914.501,
+    "speaker": "Behrouz",
+    "content": "Stage of embryo.",
+    "segment_index": 680
+  },
+  {
+    "id": 655,
+    "start_time": 2914.501,
+    "end_time": 2917.536,
+    "speaker": "Behrouz",
+    "content": "And NOTFA (نُّطْفَة) is tiny water?",
+    "segment_index": 681
+  },
+  {
+    "id": 656,
+    "start_time": 2917.536,
+    "end_time": 2918.802,
+    "speaker": "Dr. Khalifa",
+    "content": "Also, a stage of embryo.",
+    "segment_index": 682
+  },
+  {
+    "id": "657_part_0",
+    "start_time": 2919.542,
+    "end_time": 2921.6505714285713,
+    "speaker": "Behrouz",
+    "content": "Which one is tiny water? ",
+    "segment_index": 683
+  },
+  {
+    "id": "657_part_1",
+    "start_time": 2921.6505714285713,
+    "end_time": 2922.494,
+    "speaker": "Dr. Khalifa",
+    "content": "Bite-size.",
+    "segment_index": 684
+  },
+  {
+    "id": "658_part_0",
+    "start_time": 2923.326,
+    "end_time": 2924.4281052631577,
+    "speaker": "Dr. Khalifa",
+    "content": "Tiny water? ",
+    "segment_index": 685
+  },
+  {
+    "id": "658_part_1",
+    "start_time": 2924.4281052631577,
+    "end_time": 2925.071,
+    "speaker": "Behrouz",
+    "content": "Uh Huh.",
+    "segment_index": 686
+  },
+  {
+    "id": 659,
+    "start_time": 2925.071,
+    "end_time": 2926.903,
+    "speaker": "Dr. Khalifa",
+    "content": "This is even before the...",
+    "segment_index": 687
+  },
+  {
+    "id": 660,
+    "start_time": 2926.903,
+    "end_time": 2928.903,
+    "speaker": "Behrouz",
+    "content": "NOTFA (نُّطْفَة) was before the embryo.",
+    "segment_index": 688
+  },
+  {
+    "id": 661,
+    "start_time": 2929.725,
+    "end_time": 2931.361,
+    "speaker": "Dr. Khalifa",
+    "content": "No, not first, first.",
+    "segment_index": 689
+  },
+  {
+    "id": 662,
+    "start_time": 2931.899,
+    "end_time": 2932.78,
+    "speaker": "Behrouz",
+    "content": "Tiny water.",
+    "segment_index": 690
+  },
+  {
+    "id": "663_part_0",
+    "start_time": 2932.78,
+    "end_time": 2934.605066666667,
+    "speaker": "Dr. Khalifa",
+    "content": "A drop, a drop of the semen. ",
+    "segment_index": 691
+  },
+  {
+    "id": "663_part_1",
+    "start_time": 2934.605066666667,
+    "end_time": 2935.612,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 692
+  },
+  {
+    "id": 664,
+    "start_time": 2935.612,
+    "end_time": 2936.982,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 693
+  },
+  {
+    "id": 665,
+    "start_time": 2936.982,
+    "end_time": 2940.191,
+    "speaker": "Behrouz",
+    "content": "And then 'ALAQ (عَلَق) is the embryo?",
+    "segment_index": 694
+  },
+  {
+    "id": 666,
+    "start_time": 2940.94,
+    "end_time": 2942.136,
+    "speaker": "Dr. Khalifa",
+    "content": "First stage of embryo.",
+    "segment_index": 695
+  },
+  {
+    "id": 667,
+    "start_time": 2942.136,
+    "end_time": 2943.017,
+    "speaker": "Behrouz",
+    "content": "Got it. And...",
+    "segment_index": 696
+  },
+  {
+    "id": 668,
+    "start_time": 2943.017,
+    "end_time": 2948.666,
+    "speaker": "Dr. Khalifa",
+    "content": "When the, you fertilize the egg, it gets to the side of the fallopian tube.",
+    "segment_index": 697
+  },
+  {
+    "id": 669,
+    "start_time": 2948.666,
+    "end_time": 2949.443,
+    "speaker": "Behrouz",
+    "content": "Yes.",
+    "segment_index": 698
+  },
+  {
+    "id": "670_part_0",
+    "start_time": 2951.037,
+    "end_time": 2953.1673333333333,
+    "speaker": "Behrouz",
+    "content": "And then, what was the other one in Arabic? ",
+    "segment_index": 699
+  },
+  {
+    "id": "670_part_1",
+    "start_time": 2953.1673333333333,
+    "end_time": 2953.942,
+    "speaker": "Dr. Khalifa",
+    "content": "NOTFA (نُّطْفَة)",
+    "segment_index": 700
+  },
+  {
+    "id": 671,
+    "start_time": 2953.942,
+    "end_time": 2954.627,
+    "speaker": "Behrouz",
+    "content": "NOTFA (نُّطْفَة)",
+    "segment_index": 701
+  },
+  {
+    "id": 672,
+    "start_time": 2954.627,
+    "end_time": 2955.678,
+    "speaker": "Dr. Khalifa",
+    "content": "MOZGHA (مُّضْغَةٍۢ), MOZGHA (مُّضْغَةٍۢ)",
+    "segment_index": 702
+  },
+  {
+    "id": "673_part_0",
+    "start_time": 2955.678,
+    "end_time": 2957.148588235294,
+    "speaker": "Behrouz",
+    "content": "MOZGHA (مُّضْغَةٍۢ) Yes. ",
+    "segment_index": 703
+  },
+  {
+    "id": "673_part_1",
+    "start_time": 2957.148588235294,
+    "end_time": 2957.678,
+    "speaker": "Dr. Khalifa",
+    "content": "Bite-size",
+    "segment_index": 704
+  },
+  {
+    "id": 674,
+    "start_time": 2958.657,
+    "end_time": 2959.678,
+    "speaker": "Behrouz",
+    "content": "(unintelligible)",
+    "segment_index": 705
+  },
+  {
+    "id": 675,
+    "start_time": 2959.788,
+    "end_time": 2961.627,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah. Bite-size fetus.",
+    "segment_index": 706
+  },
+  {
+    "id": 676,
+    "start_time": 2963.584,
+    "end_time": 2967.738,
+    "speaker": "Dr. Khalifa",
+    "content": "Some, some people's bites are bigger than others, but still it's a range.",
+    "segment_index": 707
+  },
+  {
+    "id": 677,
+    "start_time": 2967.738,
+    "end_time": 2969.004,
+    "speaker": "Mahmood Abib",
+    "content": "(unintelligible)",
+    "segment_index": 708
+  },
+  {
+    "id": 678,
+    "start_time": 2969.347,
+    "end_time": 2970.0,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah.",
+    "segment_index": 709
+  },
+  {
+    "id": 679,
+    "start_time": 2973.561,
+    "end_time": 2974.876,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:31] ... They would say, \"GOD.\" ...",
+    "segment_index": 710
+  },
+  {
+    "id": 680,
+    "start_time": 2974.876,
+    "end_time": 2976.876,
+    "speaker": "Dr. Khalifa",
+    "content": "But they are disbelievers. That's right.",
+    "segment_index": 711
+  },
+  {
+    "id": 681,
+    "start_time": 2976.876,
+    "end_time": 2979.757,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:31]  ... \"Say, \"Why then do you not observe righteousness?\"",
+    "segment_index": 712
+  },
+  {
+    "id": 682,
+    "start_time": 2980.406,
+    "end_time": 2981.477,
+    "speaker": "Dr. Khalifa",
+    "content": "32,",
+    "segment_index": 713
+  },
+  {
+    "id": 683,
+    "start_time": 2983.477,
+    "end_time": 2991.398,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:32]  Such is GOD, your rightful Lord. What is there after the truth, except falsehood? How could you disregard all this?",
+    "segment_index": 714
+  },
+  {
+    "id": 684,
+    "start_time": 2994.139,
+    "end_time": 3000.744,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:33]  Thus does the decree of your Lord determine the fate of those who decide it to be with them. They cannot believe.",
+    "segment_index": 715
+  },
+  {
+    "id": 685,
+    "start_time": 3001.222,
+    "end_time": 3006.969,
+    "speaker": "Dr. Khalifa",
+    "content": "Otherwise if they decide (unintelligible) to God, and God blocks them out. They can't believe.",
+    "segment_index": 716
+  },
+  {
+    "id": 686,
+    "start_time": 3007.867,
+    "end_time": 3010.922,
+    "speaker": "Dr. Khalifa",
+    "content": "They cannot see all this obvious sign.",
+    "segment_index": 717
+  },
+  {
+    "id": 687,
+    "start_time": 3013.565,
+    "end_time": 3015.027,
+    "speaker": "Dr. Khalifa",
+    "content": "Reflect on Your Idols",
+    "segment_index": 718
+  },
+  {
+    "id": 688,
+    "start_time": 3015.321,
+    "end_time": 3017.376,
+    "speaker": "Dr. Khalifa",
+    "content": "To the disbelievers, 34,",
+    "segment_index": 719
+  },
+  {
+    "id": 689,
+    "start_time": 3017.376,
+    "end_time": 3026.13,
+    "speaker": "Dr. Khalifa",
+    "content": "[10:34]  Say, \"Can any of your idols initiate creation, then repeat it?\" Say, \"GOD initiates the creation, then repeats it.\"",
+    "segment_index": 720
+  },
+  {
+    "id": 690,
+    "start_time": 3031.806,
+    "end_time": 3036.721,
+    "speaker": "Dr. Khalifa",
+    "content": "You know, they have big, huge companies, engineers and decision development departments.",
+    "segment_index": 721
+  },
+  {
+    "id": 691,
+    "start_time": 3036.966,
+    "end_time": 3040.972,
+    "speaker": "Dr. Khalifa",
+    "content": "And they end up making stuff that looks like this stuff.",
+    "segment_index": 722
+  },
+  {
+    "id": 692,
+    "start_time": 3042.147,
+    "end_time": 3047.406,
+    "speaker": "Dr. Khalifa",
+    "content": "They are, they are very proud. They (unintelligible), make a big deal out of it.",
+    "segment_index": 723
+  },
+  {
+    "id": 693,
+    "start_time": 3048.776,
+    "end_time": 3050.825,
+    "speaker": "Dr. Khalifa",
+    "content": "It doesn't have eyes that can see.",
+    "segment_index": 724
+  },
+  {
+    "id": 694,
+    "start_time": 3052.049,
+    "end_time": 3053.07,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 725
+  },
+  {
+    "id": 695,
+    "start_time": 3053.07,
+    "end_time": 3056.63,
+    "speaker": "Dr. Khalifa",
+    "content": "Sometimes they forget the whiskers, which are important.",
+    "segment_index": 726
+  },
+  {
+    "id": 696,
+    "start_time": 3056.924,
+    "end_time": 3058.957,
+    "speaker": "Dr. Khalifa",
+    "content": "And these whiskers are very important. Did you know that?",
+    "segment_index": 727
+  },
+  {
+    "id": 697,
+    "start_time": 3058.957,
+    "end_time": 3060.0,
+    "speaker": "A woman",
+    "content": "(unintelligible).",
+    "segment_index": 728
+  },
+  {
+    "id": 698,
+    "start_time": 3060.294,
+    "end_time": 3062.881,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) cats and many things",
+    "segment_index": 729
+  },
+  {
+    "id": 699,
+    "start_time": 3063.46,
+    "end_time": 3064.726,
+    "speaker": "Dr. Khalifa",
+    "content": "And RADAR",
+    "segment_index": 730
+  },
+  {
+    "id": 700,
+    "start_time": 3064.726,
+    "end_time": 3065.992,
+    "speaker": "A woman",
+    "content": "(unintelligible).",
+    "segment_index": 731
+  },
+  {
+    "id": 701,
+    "start_time": 3068.005,
+    "end_time": 3070.0,
+    "speaker": "A man",
+    "content": "I don't think it's time for that today.",
+    "segment_index": 732
+  },
+  {
+    "id": 702,
+    "start_time": 3072.171,
+    "end_time": 3075.128,
+    "speaker": "A man",
+    "content": "I wouldn't want to. (unintelligible)",
+    "segment_index": 733
+  },
+  {
+    "id": 703,
+    "start_time": 3076.988,
+    "end_time": 3081.022,
+    "speaker": "Dr. Khalifa",
+    "content": "The stuffed animals they make and the dolls, they don't have the tongue.",
+    "segment_index": 734
+  },
+  {
+    "id": 704,
+    "start_time": 3082.51,
+    "end_time": 3085.417,
+    "speaker": "A woman",
+    "content": "They don't recognize their owner and come and sit on their lap.",
+    "segment_index": 735
+  },
+  {
+    "id": 705,
+    "start_time": 3085.417,
+    "end_time": 3085.998,
+    "speaker": "Dr. Khalifa",
+    "content": "That's right.",
+    "segment_index": 736
+  },
+  {
+    "id": "706_part_0",
+    "start_time": 3085.998,
+    "end_time": 3086.7256,
+    "speaker": "A woman",
+    "content": "(unintelligible) ",
+    "segment_index": 737
+  },
+  {
+    "id": "706_part_1",
+    "start_time": 3086.7256,
+    "end_time": 3087.068,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly.",
+    "segment_index": 738
+  },
+  {
+    "id": "707_part_0",
+    "start_time": 3087.068,
+    "end_time": 3087.723448275862,
+    "speaker": "A woman",
+    "content": "Let's find out. ",
+    "segment_index": 739
+  },
+  {
+    "id": "707_part_1",
+    "start_time": 3087.723448275862,
+    "end_time": 3088.256,
+    "speaker": "Dr. Khalifa",
+    "content": "Mã Shã Allãh.",
+    "segment_index": 740
+  },
+  {
+    "id": 708,
+    "start_time": 3088.256,
+    "end_time": 3097.723,
+    "speaker": "Behrouz",
+    "content": "What about the (unintelligible) genetic problems, I mean, (unintelligible).",
+    "segment_index": 741
+  },
+  {
+    "id": 709,
+    "start_time": 3097.723,
+    "end_time": 3099.801,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, well, they haven't done anything yet.",
+    "segment_index": 742
+  },
+  {
+    "id": 710,
+    "start_time": 3099.801,
+    "end_time": 3103.89,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, they have been playing around with cells and",
+    "segment_index": 743
+  },
+  {
+    "id": 711,
+    "start_time": 3103.89,
+    "end_time": 3108.582,
+    "speaker": "Dr. Khalifa",
+    "content": "putting, taking out of them and adding things to them, components, cell components.",
+    "segment_index": 744
+  },
+  {
+    "id": 712,
+    "start_time": 3109.567,
+    "end_time": 3114.644,
+    "speaker": "Behrouz",
+    "content": "We also saw on TV that they make facial parts.",
+    "segment_index": 745
+  },
+  {
+    "id": 713,
+    "start_time": 3114.644,
+    "end_time": 3115.329,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum.",
+    "segment_index": 746
+  },
+  {
+    "id": 714,
+    "start_time": 3115.623,
+    "end_time": 3128.906,
+    "speaker": "Behrouz",
+    "content": "But (unintelligible)",
+    "segment_index": 747
+  },
+  {
+    "id": 715,
+    "start_time": 3129.64,
+    "end_time": 3130.735,
+    "speaker": "A woman",
+    "content": "White.",
+    "segment_index": 748
+  },
+  {
+    "id": "716_part_0",
+    "start_time": 3132.105,
+    "end_time": 3132.785909090909,
+    "speaker": "Behrouz",
+    "content": "White? ",
+    "segment_index": 749
+  },
+  {
+    "id": "716_part_1",
+    "start_time": 3132.785909090909,
+    "end_time": 3133.175,
+    "speaker": "A woman",
+    "content": "Yes.",
+    "segment_index": 750
+  },
+  {
+    "id": 717,
+    "start_time": 3133.175,
+    "end_time": 3134.594,
+    "speaker": "Behrouz",
+    "content": "I don't know.",
+    "segment_index": 751
+  },
+  {
+    "id": 718,
+    "start_time": 3135.279,
+    "end_time": 3136.545,
+    "speaker": "Dr. Khalifa",
+    "content": "They made a plant?",
+    "segment_index": 752
+  },
+  {
+    "id": 719,
+    "start_time": 3136.545,
+    "end_time": 3137.719,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 753
+  },
+  {
+    "id": 720,
+    "start_time": 3137.719,
+    "end_time": 3140.0,
+    "speaker": "A man",
+    "content": "And they first made potato and something else.",
+    "segment_index": 754
+  },
+  {
+    "id": 721,
+    "start_time": 3141.762,
+    "end_time": 3143.762,
+    "speaker": "A man",
+    "content": "And that was (unintelligible)",
+    "segment_index": 755
+  },
+  {
+    "id": 722,
+    "start_time": 3143.762,
+    "end_time": 3144.811,
+    "speaker": "Dr. Khalifa",
+    "content": "6 or 7 years ago.",
+    "segment_index": 756
+  },
+  {
+    "id": 723,
+    "start_time": 3144.811,
+    "end_time": 3145.398,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 757
+  },
+  {
+    "id": 724,
+    "start_time": 3145.398,
+    "end_time": 3146.573,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah.",
+    "segment_index": 758
+  },
+  {
+    "id": 725,
+    "start_time": 3146.573,
+    "end_time": 3148.426,
+    "speaker": "A man",
+    "content": "Probably FDA had refused to.",
+    "segment_index": 759
+  },
+  {
+    "id": 726,
+    "start_time": 3148.426,
+    "end_time": 3152.635,
+    "speaker": "Dr. Khalifa",
+    "content": "Uhum. Yeah. That's not FDA. They, they cannot breed it.",
+    "segment_index": 760
+  },
+  {
+    "id": 727,
+    "start_time": 3152.635,
+    "end_time": 3154.945,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, come out. They're not reproduce.",
+    "segment_index": 761
+  },
+  {
+    "id": 728,
+    "start_time": 3154.945,
+    "end_time": 3155.679,
+    "speaker": "A man",
+    "content": "That's right.",
+    "segment_index": 762
+  },
+  {
+    "id": 729,
+    "start_time": 3155.679,
+    "end_time": 3160.0,
+    "speaker": "A man",
+    "content": "They, they also made strawberry with (unintelligible)",
+    "segment_index": 763
+  },
+  {
+    "id": "730_part_0",
+    "start_time": 3160.957,
+    "end_time": 3161.238714285714,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh. ",
+    "segment_index": 764
+  },
+  {
+    "id": "730_part_1",
+    "start_time": 3161.238714285714,
+    "end_time": 3161.943,
+    "speaker": "A man",
+    "content": "Yesterday.",
+    "segment_index": 765
+  },
+  {
+    "id": 731,
+    "start_time": 3162.188,
+    "end_time": 3165.803,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah. Now, that's breeding. But genetic engineering,",
+    "segment_index": 766
+  },
+  {
+    "id": 732,
+    "start_time": 3165.803,
+    "end_time": 3169.663,
+    "speaker": "Dr. Khalifa",
+    "content": "they actually go in the cell and add chromosomes and things.",
+    "segment_index": 767
+  },
+  {
+    "id": 733,
+    "start_time": 3169.663,
+    "end_time": 3170.488,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 768
+  },
+  {
+    "id": "734_part_0",
+    "start_time": 3180.974,
+    "end_time": 3184.5173733333336,
+    "speaker": "Dr. Khalifa",
+    "content": "But still, they're using God's material. And then, they make the cell. ",
+    "segment_index": 769
+  },
+  {
+    "id": "734_part_1",
+    "start_time": 3184.5173733333336,
+    "end_time": 3184.717,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 770
+  },
+  {
+    "id": 735,
+    "start_time": 3185.517,
+    "end_time": 3188.083,
+    "speaker": "Dr. Khalifa",
+    "content": "They use pre-existing things that God created.",
+    "segment_index": 771
+  },
+  {
+    "id": 736,
+    "start_time": 3188.083,
+    "end_time": 3188.679,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 772
+  },
+  {
+    "id": 737,
+    "start_time": 3190.294,
+    "end_time": 3196.236,
+    "speaker": "Dr. Khalifa",
+    "content": "They are learning. They're learning about God's engineering. Subhan Allah. See, what a system.",
+    "segment_index": 773
+  },
+  {
+    "id": 738,
+    "start_time": 3196.53,
+    "end_time": 3197.362,
+    "speaker": "A woman",
+    "content": "Yes.",
+    "segment_index": 774
+  },
+  {
+    "id": 739,
+    "start_time": 3197.851,
+    "end_time": 3202.438,
+    "speaker": "Dr. Khalifa",
+    "content": "See, the cell has this, what, Ribosomes and Chromosomes.",
+    "segment_index": 775
+  },
+  {
+    "id": 740,
+    "start_time": 3202.821,
+    "end_time": 3208.128,
+    "speaker": "Dr. Khalifa",
+    "content": "Every chromosome has, of course, millions of tiny molecules called genes.",
+    "segment_index": 776
+  },
+  {
+    "id": 741,
+    "start_time": 3208.911,
+    "end_time": 3216.958,
+    "speaker": "Dr. Khalifa",
+    "content": "And every gene controls something in us, if fact, the size of your nose, the size of your ear. That could be a big gene.",
+    "segment_index": 777
+  },
+  {
+    "id": 742,
+    "start_time": 3218.524,
+    "end_time": 3219.203,
+    "speaker": "Dr. Khalifa",
+    "content": "And...",
+    "segment_index": 778
+  },
+  {
+    "id": 743,
+    "start_time": 3221.167,
+    "end_time": 3225.714,
+    "speaker": "Dr. Khalifa",
+    "content": "Actually, your nose is very, very good looking. Since you like to joke about it, I'll joke about it.",
+    "segment_index": 779
+  },
+  {
+    "id": 744,
+    "start_time": 3226.84,
+    "end_time": 3232.315,
+    "speaker": "Dr. Khalifa",
+    "content": "The color of your hair, you know. What kind of hair you have, straight and, or curly.",
+    "segment_index": 780
+  },
+  {
+    "id": 745,
+    "start_time": 3233.147,
+    "end_time": 3240.547,
+    "speaker": "Dr. Khalifa",
+    "content": "All these genes decide everything, your, your height, your weight, your, number of your toes.",
+    "segment_index": 781
+  },
+  {
+    "id": 746,
+    "start_time": 3241.085,
+    "end_time": 3242.7,
+    "speaker": "Dr. Khalifa",
+    "content": "The people with six toes,",
+    "segment_index": 782
+  },
+  {
+    "id": 747,
+    "start_time": 3243.238,
+    "end_time": 3244.308,
+    "speaker": "A woman",
+    "content": "That was still",
+    "segment_index": 783
+  },
+  {
+    "id": 748,
+    "start_time": 3244.308,
+    "end_time": 3245.294,
+    "speaker": "Dr. Khalifa",
+    "content": "That would be a gene.",
+    "segment_index": 784
+  },
+  {
+    "id": 749,
+    "start_time": 3245.294,
+    "end_time": 3250.0,
+    "speaker": "A woman",
+    "content": "There was just an article in the New Scientist about a boy who had four different",
+    "segment_index": 785
+  },
+  {
+    "id": 750,
+    "start_time": 3250.0,
+    "end_time": 3254.083,
+    "speaker": "A woman",
+    "content": "very strange diseases that are genetically transmitted.",
+    "segment_index": 786
+  },
+  {
+    "id": 751,
+    "start_time": 3254.083,
+    "end_time": 3259.466,
+    "speaker": "A woman",
+    "content": "And he lived long enough, they took, they took parts of his cells and they separated them out and they did all this matching",
+    "segment_index": 787
+  },
+  {
+    "id": "752_part_0",
+    "start_time": 3259.466,
+    "end_time": 3260.2718,
+    "speaker": "A woman",
+    "content": "with normal cells ",
+    "segment_index": 788
+  },
+  {
+    "id": "752_part_1",
+    "start_time": 3260.2718,
+    "end_time": 3260.809,
+    "speaker": "Dr. Khalifa",
+    "content": "to find out.",
+    "segment_index": 789
+  },
+  {
+    "id": 753,
+    "start_time": 3260.809,
+    "end_time": 3263.103,
+    "speaker": "A woman",
+    "content": "to find out what gene it was that was missing.",
+    "segment_index": 790
+  },
+  {
+    "id": 754,
+    "start_time": 3263.103,
+    "end_time": 3266.654,
+    "speaker": "A woman",
+    "content": "And that's why they think that he had, he had changed, muscular dystrophy was one of them.",
+    "segment_index": 791
+  },
+  {
+    "id": 755,
+    "start_time": 3266.654,
+    "end_time": 3271.178,
+    "speaker": "A woman",
+    "content": "And they think they've isolated the gene that causes that so that they can now do genetic",
+    "segment_index": 792
+  },
+  {
+    "id": 756,
+    "start_time": 3271.178,
+    "end_time": 3275.995,
+    "speaker": "A woman",
+    "content": "tests on, on a fetus and find out if, if it's predisposed to that.",
+    "segment_index": 793
+  },
+  {
+    "id": 757,
+    "start_time": 3275.995,
+    "end_time": 3281.84,
+    "speaker": "A woman",
+    "content": "And it was just so beautiful because the article said \"he lived long enough for this.\" And I thought that was his purpose.",
+    "segment_index": 794
+  },
+  {
+    "id": "758_part_0",
+    "start_time": 3281.84,
+    "end_time": 3282.2010714285716,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly. ",
+    "segment_index": 795
+  },
+  {
+    "id": "758_part_1",
+    "start_time": 3282.2010714285716,
+    "end_time": 3283.525,
+    "speaker": "A woman",
+    "content": "You know, that's why he was here.",
+    "segment_index": 796
+  },
+  {
+    "id": "759_part_0",
+    "start_time": 3283.525,
+    "end_time": 3283.906931034483,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly. ",
+    "segment_index": 797
+  },
+  {
+    "id": "759_part_1",
+    "start_time": 3283.906931034483,
+    "end_time": 3287.217,
+    "speaker": "A woman",
+    "content": "He was to give them this information. And then, and then, he's gone to Heaven.",
+    "segment_index": 798
+  },
+  {
+    "id": "760_part_0",
+    "start_time": 3287.217,
+    "end_time": 3288.4905714285715,
+    "speaker": "A woman",
+    "content": "He died at like 17. ",
+    "segment_index": 799
+  },
+  {
+    "id": "760_part_1",
+    "start_time": 3288.4905714285715,
+    "end_time": 3289.0,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly.",
+    "segment_index": 800
+  },
+  {
+    "id": 761,
+    "start_time": 3289.0,
+    "end_time": 3290.37,
+    "speaker": "A woman",
+    "content": "So, Mã Shã Allãh.",
+    "segment_index": 801
+  },
+  {
+    "id": "762_part_0",
+    "start_time": 3290.37,
+    "end_time": 3291.69192,
+    "speaker": "A woman",
+    "content": "He's gone to Heaven. IN SHAA ALLAH. ",
+    "segment_index": 802
+  },
+  {
+    "id": "762_part_1",
+    "start_time": 3291.69192,
+    "end_time": 3292.206,
+    "speaker": "Dr. Khalifa",
+    "content": "IN SHAA ALLAH.",
+    "segment_index": 803
+  },
+  {
+    "id": 763,
+    "start_time": 3292.206,
+    "end_time": 3294.621,
+    "speaker": "A woman",
+    "content": "And some advances have probably been made.",
+    "segment_index": 804
+  },
+  {
+    "id": 764,
+    "start_time": 3294.621,
+    "end_time": 3295.345,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly.",
+    "segment_index": 805
+  },
+  {
+    "id": 765,
+    "start_time": 3296.03,
+    "end_time": 3301.385,
+    "speaker": "Dr. Khalifa",
+    "content": "But this is, you know, look at God's design. We're creatures walking on earth because of these.",
+    "segment_index": 806
+  },
+  {
+    "id": 766,
+    "start_time": 3302.462,
+    "end_time": 3305.811,
+    "speaker": "Dr. Khalifa",
+    "content": "They are very tiny. There are things that are all sub-microscopic.",
+    "segment_index": 807
+  },
+  {
+    "id": 767,
+    "start_time": 3305.811,
+    "end_time": 3306.399,
+    "speaker": "A woman",
+    "content": "Yes.",
+    "segment_index": 808
+  },
+  {
+    "id": 768,
+    "start_time": 3307.28,
+    "end_time": 3308.438,
+    "speaker": "Dr. Khalifa",
+    "content": "I don't see them.",
+    "segment_index": 809
+  },
+  {
+    "id": "769_part_0",
+    "start_time": 3309.074,
+    "end_time": 3309.718294117647,
+    "speaker": "A man",
+    "content": "(unintelligible). ",
+    "segment_index": 810
+  },
+  {
+    "id": "769_part_1",
+    "start_time": 3309.718294117647,
+    "end_time": 3310.291,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 811
+  },
+  {
+    "id": 770,
+    "start_time": 3310.291,
+    "end_time": 3311.412,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly.",
+    "segment_index": 812
+  },
+  {
+    "id": 771,
+    "start_time": 3311.901,
+    "end_time": 3316.865,
+    "speaker": "Mahmood Abib",
+    "content": "They're trying to find the master gene that tells the genes to be what they are,",
+    "segment_index": 813
+  },
+  {
+    "id": 772,
+    "start_time": 3316.865,
+    "end_time": 3323.27,
+    "speaker": "Mahmood Abib",
+    "content": "and find the cells that make up the ears different from any other organ. The two of them vary (unintelligible).",
+    "segment_index": 814
+  },
+  {
+    "id": 773,
+    "start_time": 3323.564,
+    "end_time": 3326.053,
+    "speaker": "Dr. Khalifa",
+    "content": "It'd be funny if you had ears that are tall.",
+    "segment_index": 815
+  },
+  {
+    "id": 774,
+    "start_time": 3326.053,
+    "end_time": 3327.375,
+    "speaker": "A woman",
+    "content": "What?",
+    "segment_index": 816
+  },
+  {
+    "id": 775,
+    "start_time": 3329.375,
+    "end_time": 3331.375,
+    "speaker": "Dr. Khalifa",
+    "content": "I said....",
+    "segment_index": 817
+  },
+  {
+    "id": 776,
+    "start_time": 3332.696,
+    "end_time": 3338.335,
+    "speaker": "Mahmood Abib",
+    "content": "So, someone is telling all the master gene is controlling them and giving them instructions.",
+    "segment_index": 818
+  },
+  {
+    "id": 777,
+    "start_time": 3338.335,
+    "end_time": 3339.699,
+    "speaker": "Dr. Khalifa",
+    "content": "That's a whole different issue.",
+    "segment_index": 819
+  },
+  {
+    "id": 778,
+    "start_time": 3339.699,
+    "end_time": 3340.867,
+    "speaker": "Mahmood Abib",
+    "content": "Yes, really. It's amazing.",
+    "segment_index": 820
+  },
+  {
+    "id": 779,
+    "start_time": 3340.867,
+    "end_time": 3345.216,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes, this is after deciding that the characteristics of the human being in the genes.",
+    "segment_index": 821
+  },
+  {
+    "id": 780,
+    "start_time": 3345.216,
+    "end_time": 3346.439,
+    "speaker": "Mahmood Abib",
+    "content": "Yes. Yeah.",
+    "segment_index": 822
+  },
+  {
+    "id": 781,
+    "start_time": 3346.439,
+    "end_time": 3350.278,
+    "speaker": "Dr. Khalifa",
+    "content": "These who are in the reproductive cell of the man or the woman.",
+    "segment_index": 823
+  },
+  {
+    "id": 782,
+    "start_time": 3351.012,
+    "end_time": 3356.617,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, they have the characteristics. They get together like a new creature with new characteristics.",
+    "segment_index": 824
+  },
+  {
+    "id": 783,
+    "start_time": 3357.449,
+    "end_time": 3360.688,
+    "speaker": "Dr. Khalifa",
+    "content": "\"He looks like his mom.\" \"No, he looks like his dad.\"",
+    "segment_index": 825
+  },
+  {
+    "id": 784,
+    "start_time": 3361.814,
+    "end_time": 3363.814,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 826
+  },
+  {
+    "id": 785,
+    "start_time": 3363.814,
+    "end_time": 3364.404,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 827
+  },
+  {
+    "id": "786_part_0",
+    "start_time": 3364.404,
+    "end_time": 3365.7057142857143,
+    "speaker": "A woman",
+    "content": "(unintelligible) ",
+    "segment_index": 828
+  },
+  {
+    "id": "786_part_1",
+    "start_time": 3365.7057142857143,
+    "end_time": 3366.012,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 829
+  },
+  {
+    "id": 787,
+    "start_time": 3366.012,
+    "end_time": 3366.557,
+    "speaker": "Dr. Khalifa",
+    "content": "It is.",
+    "segment_index": 830
+  },
+  {
+    "id": "788_part_0",
+    "start_time": 3367.438,
+    "end_time": 3372.211111111111,
+    "speaker": "Dr. Khalifa",
+    "content": "It's called a genetic code. That's why they have a whole course that they put in Grad school. ",
+    "segment_index": 831
+  },
+  {
+    "id": "788_part_1",
+    "start_time": 3372.211111111111,
+    "end_time": 3372.465,
+    "speaker": "A woman",
+    "content": "Yeah.",
+    "segment_index": 832
+  },
+  {
+    "id": 789,
+    "start_time": 3372.465,
+    "end_time": 3374.269,
+    "speaker": "A man",
+    "content": "Is it the same as DNA?",
+    "segment_index": 833
+  },
+  {
+    "id": 790,
+    "start_time": 3374.269,
+    "end_time": 3375.688,
+    "speaker": "Dr. Khalifa",
+    "content": "It is the same, yes.",
+    "segment_index": 834
+  },
+  {
+    "id": 791,
+    "start_time": 3376.128,
+    "end_time": 3378.028,
+    "speaker": "A man",
+    "content": "What is the DNA?",
+    "segment_index": 835
+  },
+  {
+    "id": 792,
+    "start_time": 3378.371,
+    "end_time": 3379.05,
+    "speaker": "Dr. Khalifa",
+    "content": "DNA?",
+    "segment_index": 836
+  },
+  {
+    "id": 793,
+    "start_time": 3379.05,
+    "end_time": 3379.79,
+    "speaker": "A man",
+    "content": "DNA.",
+    "segment_index": 837
+  },
+  {
+    "id": 794,
+    "start_time": 3379.79,
+    "end_time": 3380.965,
+    "speaker": "A man",
+    "content": "Oh, (unintelligible)",
+    "segment_index": 838
+  },
+  {
+    "id": 795,
+    "start_time": 3380.965,
+    "end_time": 3386.096,
+    "speaker": "Dr. Khalifa",
+    "content": "Deoxyribonucleic acid. Deoxyribonucleic acid.",
+    "segment_index": 839
+  },
+  {
+    "id": 796,
+    "start_time": 3386.537,
+    "end_time": 3391.864,
+    "speaker": "Dr. Khalifa",
+    "content": "This is, this is my famous joke, another famous joke. You've probably heard a hundred times.",
+    "segment_index": 840
+  },
+  {
+    "id": 797,
+    "start_time": 3391.864,
+    "end_time": 3397.535,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, it's about the two schools of thought in teaching because there's so much knowledge around,",
+    "segment_index": 841
+  },
+  {
+    "id": 798,
+    "start_time": 3397.535,
+    "end_time": 3402.033,
+    "speaker": "Dr. Khalifa",
+    "content": "Some people say \"it starts from the basics and goes gradually to the complex issues.\"",
+    "segment_index": 842
+  },
+  {
+    "id": 799,
+    "start_time": 3402.033,
+    "end_time": 3407.654,
+    "speaker": "Dr. Khalifa",
+    "content": "And some people say \"let's teach the complex issues and students will grab the basics as they go.\"",
+    "segment_index": 843
+  },
+  {
+    "id": 800,
+    "start_time": 3407.948,
+    "end_time": 3409.948,
+    "speaker": "Dr. Khalifa",
+    "content": "They are two valid schools of thought, actually.",
+    "segment_index": 844
+  },
+  {
+    "id": 801,
+    "start_time": 3410.682,
+    "end_time": 3420.807,
+    "speaker": "Dr. Khalifa",
+    "content": "So, Watson, who discovered the DNA, the helical structure, he got a Nobel Prize. He was sitting in the plane one time. This is a true story.",
+    "segment_index": 845
+  },
+  {
+    "id": 802,
+    "start_time": 3421.15,
+    "end_time": 3424.227,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, modified. I'm making it a joke.",
+    "segment_index": 846
+  },
+  {
+    "id": 803,
+    "start_time": 3424.619,
+    "end_time": 3430.583,
+    "speaker": "Dr. Khalifa",
+    "content": "He was sitting next to a guy, and this guy was studying DNA and here's the man who discovered DNA's",
+    "segment_index": 847
+  },
+  {
+    "id": 804,
+    "start_time": 3430.583,
+    "end_time": 3434.492,
+    "speaker": "Dr. Khalifa",
+    "content": "structure and everything about DNA, the most expert in the whole world about DNA.",
+    "segment_index": 848
+  },
+  {
+    "id": 805,
+    "start_time": 3435.526,
+    "end_time": 3441.224,
+    "speaker": "Dr. Khalifa",
+    "content": "And this student happened to be one of the people who followed the second, who was",
+    "segment_index": 849
+  },
+  {
+    "id": 806,
+    "start_time": 3441.224,
+    "end_time": 3446.209,
+    "speaker": "Dr. Khalifa",
+    "content": "grew up in the second school of thought that teaches the complex and forget the basics. \"They'll catch it up.\"",
+    "segment_index": 850
+  },
+  {
+    "id": 807,
+    "start_time": 3446.852,
+    "end_time": 3453.321,
+    "speaker": "Dr. Khalifa",
+    "content": "So, Watson volunteered. He couldn't resist. He said \"well, if you... I know something about this if you need any help or anything.\"",
+    "segment_index": 851
+  },
+  {
+    "id": 808,
+    "start_time": 3453.615,
+    "end_time": 3457.181,
+    "speaker": "Dr. Khalifa",
+    "content": "He said \"well, I know everything about deoxyribonucleic, but what is acid?\"",
+    "segment_index": 852
+  },
+  {
+    "id": 809,
+    "start_time": 3462.075,
+    "end_time": 3463.722,
+    "speaker": "Dr. Khalifa",
+    "content": "Congratulations.",
+    "segment_index": 853
+  },
+  {
+    "id": 810,
+    "start_time": 3467.539,
+    "end_time": 3469.043,
+    "speaker": "Dr. Khalifa",
+    "content": "It's a very basic thing.",
+    "segment_index": 854
+  },
+  {
+    "id": 811,
+    "start_time": 3469.043,
+    "end_time": 3472.022,
+    "speaker": "A woman",
+    "content": "Very basic. \"the only word in there that I know...\"",
+    "segment_index": 855
+  },
+  {
+    "id": 812,
+    "start_time": 3473.245,
+    "end_time": 3474.846,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Oh, you followed another school of thought.\"",
+    "segment_index": 856
+  },
+  {
+    "id": 813,
+    "start_time": 3474.846,
+    "end_time": 3478.091,
+    "speaker": "A woman",
+    "content": "\"Yes, yes, I saw the basics and never got any farther.\"",
+    "segment_index": 857
+  },
+  {
+    "id": 814,
+    "start_time": 3480.832,
+    "end_time": 3482.362,
+    "speaker": "Dr. Khalifa",
+    "content": "Ok. Mã Shã Allãh",
+    "segment_index": 858
+  },
+  {
+    "id": 815,
+    "start_time": 3482.362,
+    "end_time": 3483.628,
+    "speaker": "Dr. Khalifa",
+    "content": "Okay, workers.",
+    "segment_index": 859
+  }
+]

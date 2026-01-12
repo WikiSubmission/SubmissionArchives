@@ -8980,19 +8980,29 @@
     "search_vector": "'definit':3 'effici':5 'especi':6 'unintellig':8"
   },
   {
-    "id": 46002,
+    "id": "46002_part_0",
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
     "segment_index": 898,
     "start_time": 4318.104,
-    "end_time": 4320.104,
-    "content": "Yes. Martha: (unintelligible)",
+    "end_time": 4318.580190476191,
+    "content": "Yes. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'martha':2 'unintellig':3 'yes':1"
+  },
+  {
+    "id": "46002_part_1",
+    "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
+    "segment_index": 899,
+    "start_time": 4318.580190476191,
+    "end_time": 4320.104,
+    "content": "(unintelligible)",
+    "speaker": "Martha",
     "search_vector": "'martha':2 'unintellig':3 'yes':1"
   },
   {
     "id": 46003,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 899,
+    "segment_index": 900,
     "start_time": 4320.841,
     "end_time": 4325.33,
     "content": "Well, it takes a minute, but it answers your question perfectly. The answer is \"yes.\"",
@@ -9002,7 +9012,7 @@
   {
     "id": 46004,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 900,
+    "segment_index": 901,
     "start_time": 4325.33,
     "end_time": 4327.831,
     "content": "The prophet Muhammad was given specific instructions.",
@@ -9012,7 +9022,7 @@
   {
     "id": 46005,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 901,
+    "segment_index": 902,
     "start_time": 4328.129,
     "end_time": 4333.525,
     "content": "Every time Gabriel released Quran from Muhammad's soul to Muhammad's memory,",
@@ -9022,7 +9032,7 @@
   {
     "id": 46006,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 902,
+    "segment_index": 903,
     "start_time": 4333.525,
     "end_time": 4337.306,
     "content": "he gave him instructions as to where these three or four verses belong.",
@@ -9032,7 +9042,7 @@
   {
     "id": 46007,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 903,
+    "segment_index": 904,
     "start_time": 4337.306,
     "end_time": 4338.591,
     "content": "(unintelligible)",
@@ -9042,7 +9052,7 @@
   {
     "id": 46008,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 904,
+    "segment_index": 905,
     "start_time": 4338.591,
     "end_time": 4343.542,
     "content": "He wrote down, he wrote, he wrote down those verses and he put the instructions next to them.",
@@ -9052,7 +9062,7 @@
   {
     "id": 46009,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 905,
+    "segment_index": 906,
     "start_time": 4343.985,
     "end_time": 4349.493,
     "content": "So, when he died, he left the complete Quran, but not in the order that God wanted for the world.",
@@ -9062,7 +9072,7 @@
   {
     "id": 46010,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 906,
+    "segment_index": 907,
     "start_time": 4350,
     "end_time": 4353.059,
     "content": "He left the Quran with instructions on the side as to what,",
@@ -9072,7 +9082,7 @@
   {
     "id": 46011,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 907,
+    "segment_index": 908,
     "start_time": 4353.059,
     "end_time": 4356.562,
     "content": "which Sura goes after what Sura and which verse goes after which verse.",
@@ -9082,7 +9092,7 @@
   {
     "id": 46012,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 908,
+    "segment_index": 909,
     "start_time": 4356.562,
     "end_time": 4362.169,
     "content": "(unintelligible)",
@@ -9092,7 +9102,7 @@
   {
     "id": 46013,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 909,
+    "segment_index": 910,
     "start_time": 4362.169,
     "end_time": 4368.122,
     "content": "Exactly. They followed the instructions. They, they put the Quran together, but then Satan tricked them into adding two verses.",
@@ -9102,7 +9112,7 @@
   {
     "id": 46014,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 910,
+    "segment_index": 911,
     "start_time": 4368.453,
     "end_time": 4371.734,
     "content": "And that was during Uthman's time.",
@@ -9112,7 +9122,7 @@
   {
     "id": 46015,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 911,
+    "segment_index": 912,
     "start_time": 4372.012,
     "end_time": 4376.518,
     "content": "And this triggered the war between Ali and his family and the Umayyads and...",
@@ -9122,7 +9132,7 @@
   {
     "id": 46016,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 912,
+    "segment_index": 913,
     "start_time": 4376.518,
     "end_time": 4384.307,
     "content": "Well, if that's the thing that you're referring to is in the... I read that part. The part about Ali and his family.",
@@ -9132,7 +9142,7 @@
   {
     "id": 46017,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 913,
+    "segment_index": 914,
     "start_time": 4384.307,
     "end_time": 4391.148,
     "content": "Right. There were 50 years of bitter war, but unfortunately the Umayyads won.",
@@ -9142,7 +9152,7 @@
   {
     "id": 46018,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 914,
+    "segment_index": 915,
     "start_time": 4391.148,
     "end_time": 4396.877,
     "content": "So, we got their version. We didn't get the version of the believers.",
@@ -9152,7 +9162,7 @@
   {
     "id": 46019,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 915,
+    "segment_index": 916,
     "start_time": 4397.433,
     "end_time": 4401.214,
     "content": "Did (unintelligible) have a (unintelligible)?",
@@ -9162,7 +9172,7 @@
   {
     "id": 46020,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 916,
+    "segment_index": 917,
     "start_time": 4401.214,
     "end_time": 4401.826,
     "content": "No.",
@@ -9172,7 +9182,7 @@
   {
     "id": 46021,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 917,
+    "segment_index": 918,
     "start_time": 4403.941,
     "end_time": 4407.284,
     "content": "(Unintelligible).",
@@ -9182,7 +9192,7 @@
   {
     "id": 46022,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 918,
+    "segment_index": 919,
     "start_time": 4407.284,
     "end_time": 4408.449,
     "content": "He was an angel.",
@@ -9192,7 +9202,7 @@
   {
     "id": 46023,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 919,
+    "segment_index": 920,
     "start_time": 4408.449,
     "end_time": 4411.896,
     "content": "(Unintelligible).",
@@ -9202,7 +9212,7 @@
   {
     "id": 46024,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 920,
+    "segment_index": 921,
     "start_time": 4414.478,
     "end_time": 4416.035,
     "content": "No, he didn't see him as an angel.",
@@ -9212,7 +9222,7 @@
   {
     "id": 46025,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 921,
+    "segment_index": 922,
     "start_time": 4416.035,
     "end_time": 4417.704,
     "content": "So, did he just dream it?",
@@ -9222,7 +9232,7 @@
   {
     "id": 46026,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 922,
+    "segment_index": 923,
     "start_time": 4417.704,
     "end_time": 4425.886,
     "content": "No, no, no, he didn't dream this. It's, Gabriel comes and takes and becomes part of Muhammad's body and releases the...",
@@ -9232,7 +9242,7 @@
   {
     "id": 46027,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 923,
+    "segment_index": 924,
     "start_time": 4425.886,
     "end_time": 4430.724,
     "content": "cause Muhammad... Gabriel did a connection between Muhammad's soul and Muhammad's physical body.",
@@ -9242,7 +9252,7 @@
   {
     "id": 46028,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 924,
+    "segment_index": 925,
     "start_time": 4432.282,
     "end_time": 4433.783,
     "content": "He didn't need to see him.",
@@ -9252,7 +9262,7 @@
   {
     "id": 46029,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 925,
+    "segment_index": 926,
     "start_time": 4434.451,
     "end_time": 4437.4,
     "content": "(unintelligible)",
@@ -9262,7 +9272,7 @@
   {
     "id": 46030,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 926,
+    "segment_index": 927,
     "start_time": 4437.4,
     "end_time": 4441.506,
     "content": "No, not like that. When, when, in possession, you lose your...",
@@ -9272,7 +9282,7 @@
   {
     "id": 46031,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 927,
+    "segment_index": 928,
     "start_time": 4441.506,
     "end_time": 4444.622,
     "content": "In the possession, you lose your identity completely.",
@@ -9282,7 +9292,7 @@
   {
     "id": 46032,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 928,
+    "segment_index": 929,
     "start_time": 4444.997,
     "end_time": 4451.729,
     "content": "If you... if we are possessed by an angel or a demon or whatever, Naghmeh disappears and the other entity takes over completely.",
@@ -9292,7 +9302,7 @@
   {
     "id": 46033,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 929,
+    "segment_index": 930,
     "start_time": 4451.729,
     "end_time": 4456.011,
     "content": "And you have no consciousness at all. But Muhammad was fully conscious.",
@@ -9302,7 +9312,7 @@
   {
     "id": 46034,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 930,
+    "segment_index": 931,
     "start_time": 4456.899,
     "end_time": 4462.629,
     "content": "He just, he just had these words come to him and he would write down the verses. It comes to his memory.",
@@ -9312,7 +9322,7 @@
   {
     "id": 46035,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 931,
+    "segment_index": 932,
     "start_time": 4462.629,
     "end_time": 4464.186,
     "content": "Just like you're remembering something.",
@@ -9322,7 +9332,7 @@
   {
     "id": 46036,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 932,
+    "segment_index": 933,
     "start_time": 4464.186,
     "end_time": 4470.862,
     "content": "You remember that you took a final exam three days ago and the questions were this, this, and this. And you can write them down.",
@@ -9332,7 +9342,7 @@
   {
     "id": 46037,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 933,
+    "segment_index": 934,
     "start_time": 4471.08,
     "end_time": 4474.195,
     "content": "So, this is how he",
@@ -9342,7 +9352,7 @@
   {
     "id": 46038,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 934,
+    "segment_index": 935,
     "start_time": 4474.195,
     "end_time": 4474.63805882353,
     "content": "received them.",
@@ -9352,7 +9362,7 @@
   {
     "id": 74710,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 935,
+    "segment_index": 936,
     "start_time": 4474.63805882353,
     "end_time": 4475.49252941176,
     "content": "(unintelligible) all along?",
@@ -9362,7 +9372,7 @@
   {
     "id": 46039,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 936,
+    "segment_index": 937,
     "start_time": 4475.809,
     "end_time": 4476.809,
     "content": "Oh, yeah.",
@@ -9372,7 +9382,7 @@
   {
     "id": 46040,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 937,
+    "segment_index": 938,
     "start_time": 4479.146,
     "end_time": 4484.539,
     "content": "Okay, well, whatever your dearest wish is, turn to God and ask him for it.",
@@ -9382,7 +9392,7 @@
   {
     "id": 46041,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 938,
+    "segment_index": 939,
     "start_time": 4484.539,
     "end_time": 4487.318,
     "content": "The best wish being to stay on the right path.",
@@ -9392,7 +9402,7 @@
   {
     "id": 46042,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 939,
+    "segment_index": 940,
     "start_time": 4487.318,
     "end_time": 4488.817,
     "content": "Al-Fãtehah",
@@ -9402,7 +9412,7 @@
   {
     "id": 46043,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 940,
+    "segment_index": 941,
     "start_time": 4488.817,
     "end_time": 4506.455,
     "content": "Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7)",
@@ -9412,7 +9422,7 @@
   {
     "id": 46044,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 941,
+    "segment_index": 942,
     "start_time": 4506.455,
     "end_time": 4509.29,
     "content": "By all means, look at that miracle on the wall",
@@ -9422,7 +9432,7 @@
   {
     "id": 46045,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 942,
+    "segment_index": 943,
     "start_time": 4509.29,
     "end_time": 4514.685,
     "content": "and thank God because there is no doubt that we are the luckiest people on the face of the earth.",
@@ -9432,7 +9442,7 @@
   {
     "id": 46046,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 943,
+    "segment_index": 944,
     "start_time": 4515.522,
     "end_time": 4516.632,
     "content": "Alhamdu lillah.",
@@ -9442,7 +9452,7 @@
   {
     "id": 46047,
     "media_id": "54fb822f-6375-4bfc-ab57-27735973846b",
-    "segment_index": 944,
+    "segment_index": 945,
     "start_time": 4516.632,
     "end_time": 4518.632,
     "content": "Congratulations.",

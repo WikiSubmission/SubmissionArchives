@@ -39,7 +39,7 @@ async function main() {
 
     // If we have candidates, pick the best one or fetch all.
     // For now, let's pick the one that is literally "Quran Study 1" if it exists.
-    let best = candidates.find(c => c.title.toLowerCase().includes('quran study 1')) || sorted[0];
+    const best = candidates.find(c => c.title.toLowerCase().includes('quran study 1')) || sorted[0];
 
     if (best) {
         console.log(`Fetching segments for: ${best.title} (${best.id})`);

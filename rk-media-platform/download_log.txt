@@ -1,0 +1,255 @@
+Fetching playlist info...
+Found 50 videos. Resuming from #30...
+
+[30] Processing: 30 Friday Sermon by dr Rashad Khalifa Who is GOD Understanding Our Universe 1988 08 04
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_30_30 Friday Sermon by dr Rashad Khalifa Who is GOD Understanding Our Universe 1988 08 04.f134.mp4
+
+Download complete: temp_30_30 Friday Sermon by dr Rashad Khalifa Who is GOD Understanding Our Universe 1988 08 04.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_30_30 Friday Sermon by dr Rashad Khalifa Who is GOD Understanding Our Universe 1988 08 04.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_30_30 Friday Sermon by dr Rashad Khalifa Who is GOD Understanding Our Universe 1988 08 04.mp4
+Sleeping for 30 seconds...
+
+[31] Processing: 31 Friday Sermon by dr Rashad Khalifa Who is Your GOD Majority of Believers Are Going to Hell 1988 1
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_31_31 Friday Sermon by dr Rashad Khalifa Who is Your GOD Majority of Believers Are Going to Hell 1988 1.f134.mp4
+
+Download complete: temp_31_31 Friday Sermon by dr Rashad Khalifa Who is Your GOD Majority of Believers Are Going to Hell 1988 1.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_31_31 Friday Sermon by dr Rashad Khalifa Who is Your GOD Majority of Believers Are Going to Hell 1988 1.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_31_31 Friday Sermon by dr Rashad Khalifa Who is Your GOD Majority of Believers Are Going to Hell 1988 1.mp4
+Sleeping for 30 seconds...
+
+[32] Processing: 32 Friday Sermon by dr Rashad Khalifa Classification of Creatures Loving GOD Hell is not Enough 1988
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_32_32 Friday Sermon by dr Rashad Khalifa Classification of Creatures Loving GOD Hell is not Enough 1988.f134.mp4
+
+Download complete: temp_32_32 Friday Sermon by dr Rashad Khalifa Classification of Creatures Loving GOD Hell is not Enough 1988.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_32_32 Friday Sermon by dr Rashad Khalifa Classification of Creatures Loving GOD Hell is not Enough 1988.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_32_32 Friday Sermon by dr Rashad Khalifa Classification of Creatures Loving GOD Hell is not Enough 1988.mp4
+Sleeping for 30 seconds...
+
+[33] Processing: 33 Friday Sermon by dr Rashad Khalifa What About Previous Generations Messenger of the Covenant 1988
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_33_33 Friday Sermon by dr Rashad Khalifa What About Previous Generations Messenger of the Covenant 1988.f134.mp4
+
+Download complete: temp_33_33 Friday Sermon by dr Rashad Khalifa What About Previous Generations Messenger of the Covenant 1988.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_33_33 Friday Sermon by dr Rashad Khalifa What About Previous Generations Messenger of the Covenant 1988.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_33_33 Friday Sermon by dr Rashad Khalifa What About Previous Generations Messenger of the Covenant 1988.mp4
+Sleeping for 30 seconds...
+
+[34] Processing: 34 United Submitters International Conference Explaining the Fullfillment of the Covenant 1988
+Target: R2://rkmediaassets/media/VIDEO PROGRAMS/
+
+Download complete: temp_34_34 United Submitters International Conference Explaining the Fullfillment of the Covenant 1988.f134.mp4
+
+Download complete: temp_34_34 United Submitters International Conference Explaining the Fullfillment of the Covenant 1988.f140.m4a
+Uploading VIDEO to media/VIDEO PROGRAMS/temp_34_34 United Submitters International Conference Explaining the Fullfillment of the Covenant 1988.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_34_34 United Submitters International Conference Explaining the Fullfillment of the Covenant 1988.mp4
+Sleeping for 30 seconds...
+
+[35] Processing: 35 Friday Sermon by dr Rashad Khalifa Remember GOD Constantly Submitter vs Objector 1989 01 13
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_35_35 Friday Sermon by dr Rashad Khalifa Remember GOD Constantly Submitter vs Objector 1989 01 13.f134.mp4
+
+Download complete: temp_35_35 Friday Sermon by dr Rashad Khalifa Remember GOD Constantly Submitter vs Objector 1989 01 13.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_35_35 Friday Sermon by dr Rashad Khalifa Remember GOD Constantly Submitter vs Objector 1989 01 13.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_35_35 Friday Sermon by dr Rashad Khalifa Remember GOD Constantly Submitter vs Objector 1989 01 13.mp4
+Sleeping for 30 seconds...
+
+[36] Processing: 36 Friday Sermon by dr Rashad Khalifa Revelation of Quran to Revelation of Miracle Importance of Daw
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_36_36 Friday Sermon by dr Rashad Khalifa Revelation of Quran to Revelation of Miracle Importance of Daw.f134.mp4
+
+Download complete: temp_36_36 Friday Sermon by dr Rashad Khalifa Revelation of Quran to Revelation of Miracle Importance of Daw.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_36_36 Friday Sermon by dr Rashad Khalifa Revelation of Quran to Revelation of Miracle Importance of Daw.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_36_36 Friday Sermon by dr Rashad Khalifa Revelation of Quran to Revelation of Miracle Importance of Daw.mp4
+Sleeping for 30 seconds...
+
+[37] Processing: 37 Friday Sermon by dr Rashad Khalifa Original Sin Only GOD Guides Majority of Believers Are Going t
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_37_37 Friday Sermon by dr Rashad Khalifa Original Sin Only GOD Guides Majority of Believers Are Going t.f134.mp4
+
+Download complete: temp_37_37 Friday Sermon by dr Rashad Khalifa Original Sin Only GOD Guides Majority of Believers Are Going t.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_37_37 Friday Sermon by dr Rashad Khalifa Original Sin Only GOD Guides Majority of Believers Are Going t.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_37_37 Friday Sermon by dr Rashad Khalifa Original Sin Only GOD Guides Majority of Believers Are Going t.mp4
+Sleeping for 30 seconds...
+
+[38] Processing: 38 Friday Sermon by dr Rashad Khalifa Purpose of Messengers the Advent of the Pure Quran 1989 03 17
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_38_38 Friday Sermon by dr Rashad Khalifa Purpose of Messengers the Advent of the Pure Quran 1989 03 17.f134.mp4
+
+Download complete: temp_38_38 Friday Sermon by dr Rashad Khalifa Purpose of Messengers the Advent of the Pure Quran 1989 03 17.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_38_38 Friday Sermon by dr Rashad Khalifa Purpose of Messengers the Advent of the Pure Quran 1989 03 17.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_38_38 Friday Sermon by dr Rashad Khalifa Purpose of Messengers the Advent of the Pure Quran 1989 03 17.mp4
+Sleeping for 30 seconds...
+
+[39] Processing: 39 Friday Sermon by dr Rashad Khalifa Why Announce Messengership 1989 08 11
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_39_39 Friday Sermon by dr Rashad Khalifa Why Announce Messengership 1989 08 11.f134.mp4
+
+Download complete: temp_39_39 Friday Sermon by dr Rashad Khalifa Why Announce Messengership 1989 08 11.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_39_39 Friday Sermon by dr Rashad Khalifa Why Announce Messengership 1989 08 11.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_39_39 Friday Sermon by dr Rashad Khalifa Why Announce Messengership 1989 08 11.mp4
+Sleeping for 30 seconds...
+
+[40] Processing: 40 Friday Sermon by dr Rashad Khalifa Proving Every Verse Word Letter with Irrefutable Evidence 1989
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_40_40 Friday Sermon by dr Rashad Khalifa Proving Every Verse Word Letter with Irrefutable Evidence 1989.f134.mp4
+
+Download complete: temp_40_40 Friday Sermon by dr Rashad Khalifa Proving Every Verse Word Letter with Irrefutable Evidence 1989.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_40_40 Friday Sermon by dr Rashad Khalifa Proving Every Verse Word Letter with Irrefutable Evidence 1989.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_40_40 Friday Sermon by dr Rashad Khalifa Proving Every Verse Word Letter with Irrefutable Evidence 1989.mp4
+Sleeping for 30 seconds...
+
+[41] Processing: 41 Friday Sermon by dr Rashad Khalifa the Heavenly Feud the Importance of Killing the Ego 1989 09 29
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_41_41 Friday Sermon by dr Rashad Khalifa the Heavenly Feud the Importance of Killing the Ego 1989 09 29.f134.mp4
+
+Download complete: temp_41_41 Friday Sermon by dr Rashad Khalifa the Heavenly Feud the Importance of Killing the Ego 1989 09 29.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_41_41 Friday Sermon by dr Rashad Khalifa the Heavenly Feud the Importance of Killing the Ego 1989 09 29.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_41_41 Friday Sermon by dr Rashad Khalifa the Heavenly Feud the Importance of Killing the Ego 1989 09 29.mp4
+Sleeping for 30 seconds...
+
+[42] Processing: 42 Friday Sermon by dr Rashad Khalifa Proving Salat al Juma the Righteous Go Straight to Heaven 1989
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_42_42 Friday Sermon by dr Rashad Khalifa Proving Salat al Juma the Righteous Go Straight to Heaven 1989.f134.mp4
+
+Download complete: temp_42_42 Friday Sermon by dr Rashad Khalifa Proving Salat al Juma the Righteous Go Straight to Heaven 1989.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_42_42 Friday Sermon by dr Rashad Khalifa Proving Salat al Juma the Righteous Go Straight to Heaven 1989.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_42_42 Friday Sermon by dr Rashad Khalifa Proving Salat al Juma the Righteous Go Straight to Heaven 1989.mp4
+Sleeping for 30 seconds...
+
+[43] Processing: 43 Friday Sermon by dr Rashad Khalifa Miracle of Miracles al fateha Proving the Five Salat 1989 12 0
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_43_43 Friday Sermon by dr Rashad Khalifa Miracle of Miracles al fateha Proving the Five Salat 1989 12 0.f134.mp4
+
+Download complete: temp_43_43 Friday Sermon by dr Rashad Khalifa Miracle of Miracles al fateha Proving the Five Salat 1989 12 0.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_43_43 Friday Sermon by dr Rashad Khalifa Miracle of Miracles al fateha Proving the Five Salat 1989 12 0.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_43_43 Friday Sermon by dr Rashad Khalifa Miracle of Miracles al fateha Proving the Five Salat 1989 12 0.mp4
+Sleeping for 30 seconds...
+
+[44] Processing: 44 United Submitters International Conference Friday Sermon by dr Rashad Khalifa 1989
+Target: R2://rkmediaassets/media/FRIDAY SERMONS/
+
+Download complete: temp_44_44 United Submitters International Conference Friday Sermon by dr Rashad Khalifa 1989.f134.mp4
+
+Download complete: temp_44_44 United Submitters International Conference Friday Sermon by dr Rashad Khalifa 1989.f140.m4a
+Uploading VIDEO to media/FRIDAY SERMONS/temp_44_44 United Submitters International Conference Friday Sermon by dr Rashad Khalifa 1989.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_44_44 United Submitters International Conference Friday Sermon by dr Rashad Khalifa 1989.mp4
+Sleeping for 30 seconds...
+
+[45] Processing: 45 United Submitters International Conference Final Speech by dr Rashad Khalifa 1989
+Target: R2://rkmediaassets/media/VIDEO PROGRAMS/
+
+Download complete: temp_45_45 United Submitters International Conference Final Speech by dr Rashad Khalifa 1989.f134.mp4
+
+Download complete: temp_45_45 United Submitters International Conference Final Speech by dr Rashad Khalifa 1989.f140.m4a
+Uploading VIDEO to media/VIDEO PROGRAMS/temp_45_45 United Submitters International Conference Final Speech by dr Rashad Khalifa 1989.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_45_45 United Submitters International Conference Final Speech by dr Rashad Khalifa 1989.mp4
+Sleeping for 30 seconds...
+
+[46] Processing: 46 City Council al fateha Recitation by Rashad Khalifa
+Target: R2://rkmediaassets/media/VIDEO PROGRAMS/
+
+Download complete: temp_46_46 City Council al fateha Recitation by Rashad Khalifa.f134.mp4
+
+Download complete: temp_46_46 City Council al fateha Recitation by Rashad Khalifa.f140.m4a
+Uploading VIDEO to media/VIDEO PROGRAMS/temp_46_46 City Council al fateha Recitation by Rashad Khalifa.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_46_46 City Council al fateha Recitation by Rashad Khalifa.mp4
+Sleeping for 30 seconds...
+
+[47] Processing: 47 Excerpts From a Radio Debate With dr Rashad Khalifa
+Target: R2://rkmediaassets/media/VIDEO PROGRAMS/
+
+Download complete: temp_47_47 Excerpts From a Radio Debate With dr Rashad Khalifa.f134.mp4
+
+Download complete: temp_47_47 Excerpts From a Radio Debate With dr Rashad Khalifa.f140.m4a
+Uploading VIDEO to media/VIDEO PROGRAMS/temp_47_47 Excerpts From a Radio Debate With dr Rashad Khalifa.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_47_47 Excerpts From a Radio Debate With dr Rashad Khalifa.mp4
+Sleeping for 30 seconds...
+
+[48] Processing: 48 World News Bulletin
+Target: R2://rkmediaassets/media/VIDEO PROGRAMS/
+
+Download complete: temp_48_48 World News Bulletin.f134.mp4
+
+Download complete: temp_48_48 World News Bulletin.f140.m4a
+Uploading VIDEO to media/VIDEO PROGRAMS/temp_48_48 World News Bulletin.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_48_48 World News Bulletin.mp4
+Sleeping for 30 seconds...
+
+[49] Processing: 49 The Creators Signature
+Target: R2://rkmediaassets/media/VIDEO PROGRAMS/
+
+Download complete: temp_49_49 The Creators Signature.f134.mp4
+
+Download complete: temp_49_49 The Creators Signature.f140.m4a
+Uploading VIDEO to media/VIDEO PROGRAMS/temp_49_49 The Creators Signature.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_49_49 The Creators Signature.mp4
+Sleeping for 30 seconds...
+
+[50] Processing: Arabic Language Lessons   By Dr  Rashad Khalifa Ph D
+Target: R2://rkmediaassets/media/VIDEO PROGRAMS/
+
+Download complete: temp_50_Arabic Language Lessons   By Dr  Rashad Khalifa Ph D.f134.mp4
+
+Download complete: temp_50_Arabic Language Lessons   By Dr  Rashad Khalifa Ph D.f140.m4a
+Uploading VIDEO to media/VIDEO PROGRAMS/temp_50_Arabic Language Lessons   By Dr  Rashad Khalifa Ph D.mp4...
+WARNING: No subtitle file found/downloaded.
+Upload success.
+Deleting local file: temp_50_Arabic Language Lessons   By Dr  Rashad Khalifa Ph D.mp4
+
+All Done!

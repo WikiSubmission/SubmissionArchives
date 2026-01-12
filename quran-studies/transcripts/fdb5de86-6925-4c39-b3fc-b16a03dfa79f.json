@@ -9050,19 +9050,29 @@
     "search_vector": "'alreadi':8 'die':9 'never':2 'right':10 'said':3"
   },
   {
-    "id": 34217,
+    "id": "34217_part_0",
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
     "segment_index": 905,
     "start_time": 4371.023,
-    "end_time": 4372.721,
-    "content": "Because he was not there. Feroz: Right.",
+    "end_time": 4372.402625,
+    "content": "Because he was not there. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'feroz':6 'right':7"
+  },
+  {
+    "id": "34217_part_1",
+    "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
+    "segment_index": 906,
+    "start_time": 4372.402625,
+    "end_time": 4372.721,
+    "content": "Right.",
+    "speaker": "Feroz",
     "search_vector": "'feroz':6 'right':7"
   },
   {
     "id": 34218,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 906,
+    "segment_index": 907,
     "start_time": 4372.721,
     "end_time": 4374.842,
     "content": "His body was alive, but he was not there.",
@@ -9072,7 +9082,7 @@
   {
     "id": 34219,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 907,
+    "segment_index": 908,
     "start_time": 4375.386,
     "end_time": 4377.869,
     "content": "That was a body that did not respond to anything.",
@@ -9082,7 +9092,7 @@
   {
     "id": 34220,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 908,
+    "segment_index": 909,
     "start_time": 4380.285,
     "end_time": 4380.835,
     "content": "Pardon?",
@@ -9092,7 +9102,7 @@
   {
     "id": 34221,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 909,
+    "segment_index": 910,
     "start_time": 4380.835,
     "end_time": 4382.11,
     "content": "Yes, he didn't (unintelligible)",
@@ -9102,7 +9112,7 @@
   {
     "id": 34222,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 910,
+    "segment_index": 911,
     "start_time": 4382.11,
     "end_time": 4383.808,
     "content": "No, no.",
@@ -9112,7 +9122,7 @@
   {
     "id": 34223,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 911,
+    "segment_index": 912,
     "start_time": 4383.808,
     "end_time": 4388.493,
     "content": "But how come, how come that these people can believe that he is God?",
@@ -9122,7 +9132,7 @@
   {
     "id": 34224,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 912,
+    "segment_index": 913,
     "start_time": 4388.493,
     "end_time": 4389.889,
     "content": "What's it next to daddy?",
@@ -9132,7 +9142,7 @@
   {
     "id": 34225,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 913,
+    "segment_index": 914,
     "start_time": 4390.251,
     "end_time": 4392.07,
     "content": "How come that they can believe?",
@@ -9142,7 +9152,7 @@
   {
     "id": 34226,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 914,
+    "segment_index": 915,
     "start_time": 4392.07,
     "end_time": 4392.741,
     "content": "Who?",
@@ -9152,7 +9162,7 @@
   {
     "id": 34227,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 915,
+    "segment_index": 916,
     "start_time": 4392.741,
     "end_time": 4396.13,
     "content": "That, that, that Jesus is actually God.",
@@ -9162,7 +9172,7 @@
   {
     "id": 34228,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 916,
+    "segment_index": 917,
     "start_time": 4396.13,
     "end_time": 4397.405,
     "content": "You're right. That's the...",
@@ -9172,7 +9182,7 @@
   {
     "id": 34229,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 917,
+    "segment_index": 918,
     "start_time": 4397.405,
     "end_time": 4398.556,
     "content": "It's so contradictory.",
@@ -9182,7 +9192,7 @@
   {
     "id": 76542,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 918,
+    "segment_index": 919,
     "start_time": 4398.556,
     "end_time": 4398.97454545455,
     "content": "Exactly.",
@@ -9192,7 +9202,7 @@
   {
     "id": 34230,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 919,
+    "segment_index": 920,
     "start_time": 4399.707,
     "end_time": 4402.915,
     "content": "Well, see, Satan wants to point at us and say \"look how stupid they are.\"",
@@ -9202,7 +9212,7 @@
   {
     "id": 34231,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 920,
+    "segment_index": 921,
     "start_time": 4404.414,
     "end_time": 4414.415,
     "content": "I think Satan is hoping that so many humans will out-Satan Satan, that God will, will have mercy on Satan.",
@@ -9212,7 +9222,7 @@
   {
     "id": 34232,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 921,
+    "segment_index": 922,
     "start_time": 4416.503,
     "end_time": 4418.892,
     "content": "Yes, quite a few people out-Satan Satan.",
@@ -9222,7 +9232,7 @@
   {
     "id": 34233,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 922,
+    "segment_index": 923,
     "start_time": 4424.631,
     "end_time": 4426.718,
     "content": "I can, I have a few examples.",
@@ -9232,7 +9242,7 @@
   {
     "id": 34234,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 923,
+    "segment_index": 924,
     "start_time": 4429.014,
     "end_time": 4433.276,
     "content": "In other words, Satan told them something and they went too far in doing it.",
@@ -9242,7 +9252,7 @@
   {
     "id": 34235,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 924,
+    "segment_index": 925,
     "start_time": 4433.276,
     "end_time": 4436.967,
     "content": "So, Satan said \"oh, oh, oh, I didn't tell you to do all this.\"",
@@ -9252,7 +9262,7 @@
   {
     "id": 34236,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 925,
+    "segment_index": 926,
     "start_time": 4439.746,
     "end_time": 4442.954,
     "content": "But according to the Quran that I know what you don't know.",
@@ -9262,7 +9272,7 @@
   {
     "id": 34237,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 926,
+    "segment_index": 927,
     "start_time": 4443.679,
     "end_time": 4444.08604,
     "content": "For example,",
@@ -9272,7 +9282,7 @@
   {
     "id": 76543,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 927,
+    "segment_index": 928,
     "start_time": 4444.08604,
     "end_time": 4444.56092,
     "content": "I can give you an example of this. God said. Yes.",
@@ -9282,7 +9292,7 @@
   {
     "id": 34238,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 928,
+    "segment_index": 929,
     "start_time": 4446.223,
     "end_time": 4447.015,
     "content": "Pardon?",
@@ -9292,7 +9302,7 @@
   {
     "id": 34239,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 929,
+    "segment_index": 930,
     "start_time": 4447.015,
     "end_time": 4447.96045454545,
     "content": "I can give you an example.",
@@ -9302,7 +9312,7 @@
   {
     "id": 77268,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 930,
+    "segment_index": 931,
     "start_time": 4447.96045454545,
     "end_time": 4448.50590909091,
     "content": "Yeah, go ahead.",
@@ -9312,7 +9322,7 @@
   {
     "id": 34240,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 931,
+    "segment_index": 932,
     "start_time": 4449.317,
     "end_time": 4451.81981818182,
     "content": "Satan doesn't deny God's existence.",
@@ -9322,7 +9332,7 @@
   {
     "id": 76544,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 932,
+    "segment_index": 933,
     "start_time": 4451.81981818182,
     "end_time": 4452.24887272727,
     "content": "Right.",
@@ -9332,7 +9342,7 @@
   {
     "id": 34241,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 933,
+    "segment_index": 934,
     "start_time": 4453.25,
     "end_time": 4455.75447058824,
     "content": "But communists, they go further.",
@@ -9342,7 +9352,7 @@
   {
     "id": 76545,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 934,
+    "segment_index": 935,
     "start_time": 4455.75447058824,
     "end_time": 4457.47629411765,
     "content": "Exactly. That's right.",
@@ -9352,7 +9362,7 @@
   {
     "id": 34242,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 935,
+    "segment_index": 936,
     "start_time": 4463.465,
     "end_time": 4464.076,
     "content": "Nai'ma.",
@@ -9362,7 +9372,7 @@
   {
     "id": 34243,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 936,
+    "segment_index": 937,
     "start_time": 4464.076,
     "end_time": 4473.989,
     "content": "Na'ima: Is there a way to know when (unintelligible)",
@@ -9372,7 +9382,7 @@
   {
     "id": 34244,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 937,
+    "segment_index": 938,
     "start_time": 4473.989,
     "end_time": 4478.043,
     "content": "Na'ima: Because I deal with anger sometimes. I'm gonna ...",
@@ -9382,7 +9392,7 @@
   {
     "id": 34245,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 938,
+    "segment_index": 939,
     "start_time": 4478.043,
     "end_time": 4484.634,
     "content": "Yes, if you have two things. Na'ima: (unintelligible)",
@@ -9390,19 +9400,29 @@
     "search_vector": "'ima':8 'na':7 'thing':6 'two':5 'unintellig':9 'yes':1"
   },
   {
-    "id": 34246,
+    "id": "34246_part_0",
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 939,
+    "segment_index": 940,
     "start_time": 4484.634,
-    "end_time": 4487.48,
-    "content": "There are two things that come from Satan: fear and worry.",
+    "end_time": 4486.64294117647,
+    "content": "There are two things that come from ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'come':6 'fear':9 'satan':8 'thing':4 'two':3 'worri':11"
+  },
+  {
+    "id": "34246_part_1",
+    "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
+    "segment_index": 941,
+    "start_time": 4486.64294117647,
+    "end_time": 4487.48,
+    "content": "fear and worry.",
+    "speaker": "Satan",
     "search_vector": "'come':6 'fear':9 'satan':8 'thing':4 'two':3 'worri':11"
   },
   {
     "id": 34247,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 940,
+    "segment_index": 942,
     "start_time": 4487.48,
     "end_time": 4488.344,
     "content": "Na'ima: Fear and?",
@@ -9412,7 +9432,7 @@
   {
     "id": 34248,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 941,
+    "segment_index": 943,
     "start_time": 4488.344,
     "end_time": 4492.156,
     "content": "Fear and grief. Excuse me. Worry, worry or fear and grief.",
@@ -9422,7 +9442,7 @@
   {
     "id": 34249,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 942,
+    "segment_index": 944,
     "start_time": 4492.156,
     "end_time": 4493.606,
     "content": "Na'ima: What about anger?",
@@ -9432,7 +9452,7 @@
   {
     "id": 34250,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 943,
+    "segment_index": 945,
     "start_time": 4493.606,
     "end_time": 4498.687,
     "content": "Well, anger comes, but God says \"the believers suppress their anger.\"",
@@ -9442,7 +9462,7 @@
   {
     "id": 34251,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 944,
+    "segment_index": 946,
     "start_time": 4499.291,
     "end_time": 4501.291,
     "content": "So, anger happens, but you control it.",
@@ -9452,7 +9472,7 @@
   {
     "id": 34252,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 945,
+    "segment_index": 947,
     "start_time": 4505.698,
     "end_time": 4509.658,
     "content": "But remember throughout the Quran, you know this very well, that God says, la khawfuna",
@@ -9462,7 +9482,7 @@
   {
     "id": 34253,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 946,
+    "segment_index": 948,
     "start_time": 4509.658,
     "end_time": 4511.114,
     "content": "(10:62) لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
@@ -9472,7 +9492,7 @@
   {
     "id": 34254,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 947,
+    "segment_index": 949,
     "start_time": 4511.114,
     "end_time": 4513.899,
     "content": "No fear, no grief. Two things.",
@@ -9482,7 +9502,7 @@
   {
     "id": 34255,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 948,
+    "segment_index": 950,
     "start_time": 4513.899,
     "end_time": 4515.355,
     "content": "(unintelligible)",
@@ -9492,7 +9512,7 @@
   {
     "id": 34256,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 949,
+    "segment_index": 951,
     "start_time": 4515.355,
     "end_time": 4518.201,
     "content": "Yeah, this is the suppress of, the believers suppress anger.",
@@ -9502,7 +9522,7 @@
   {
     "id": 34257,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 950,
+    "segment_index": 952,
     "start_time": 4518.201,
     "end_time": 4518.97182352941,
     "content": "(unintelligible)",
@@ -9512,7 +9532,7 @@
   {
     "id": 76546,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 951,
+    "segment_index": 953,
     "start_time": 4518.97182352941,
     "end_time": 4519.16452941177,
     "content": "Yes.",
@@ -9522,7 +9542,7 @@
   {
     "id": 34258,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 952,
+    "segment_index": 954,
     "start_time": 4521.839,
     "end_time": 4524.564,
     "content": "So, anger happens, but you control it.",
@@ -9532,7 +9552,7 @@
   {
     "id": 34259,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 953,
+    "segment_index": 955,
     "start_time": 4525.651,
     "end_time": 4527.651,
     "content": "It's part of training our wild horse.",
@@ -9542,7 +9562,7 @@
   {
     "id": 34260,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 954,
+    "segment_index": 956,
     "start_time": 4530.611,
     "end_time": 4534,
     "content": "Anger is part of the wild horse that we are training.",
@@ -9552,7 +9572,7 @@
   {
     "id": 34261,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 955,
+    "segment_index": 957,
     "start_time": 4538.41,
     "end_time": 4546.632,
     "content": "But really this is a very good criterion to remind us whether we are believers or not that we have fear, worry, or grief.",
@@ -9562,7 +9582,7 @@
   {
     "id": 34262,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 956,
+    "segment_index": 958,
     "start_time": 4555.391,
     "end_time": 4557.391,
     "content": "And God spreads this out in the Quran.",
@@ -9572,7 +9592,7 @@
   {
     "id": 34263,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 957,
+    "segment_index": 959,
     "start_time": 4557.391,
     "end_time": 4563.922,
     "content": "God says that fear is Satan's tool with which he does it to his constituents.",
@@ -9582,7 +9602,7 @@
   {
     "id": 34264,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 958,
+    "segment_index": 960,
     "start_time": 4567.005,
     "end_time": 4570.361,
     "content": "This is why your insurance agents are probably very close to Satan.",
@@ -9592,7 +9612,7 @@
   {
     "id": 34265,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 959,
+    "segment_index": 961,
     "start_time": 4571.086,
     "end_time": 4573.898,
     "content": "\"What happens if you die tomorrow? What will happen to your family?\"",
@@ -9602,7 +9622,7 @@
   {
     "id": 34266,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 960,
+    "segment_index": 962,
     "start_time": 4576.2,
     "end_time": 4579.227,
     "content": "Huh? Yes. Accidental death insurance.",
@@ -9612,7 +9632,7 @@
   {
     "id": 34267,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 961,
+    "segment_index": 963,
     "start_time": 4579.227,
     "end_time": 4581.227,
     "content": "(unintelligible), they rip them off.",
@@ -9622,7 +9642,7 @@
   {
     "id": 34268,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 962,
+    "segment_index": 964,
     "start_time": 4584.242,
     "end_time": 4586.027,
     "content": "Insurance is all based on fear.",
@@ -9632,7 +9652,7 @@
   {
     "id": 34269,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 963,
+    "segment_index": 965,
     "start_time": 4589.712,
     "end_time": 4596.545,
     "content": "I think that (unintelligible) has fear (unintelligible) Sheytan (unintelligible)",
@@ -9642,7 +9662,7 @@
   {
     "id": 34270,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 964,
+    "segment_index": 966,
     "start_time": 4596.545,
     "end_time": 4597.699,
     "content": "You don't have fear.",
@@ -9652,7 +9672,7 @@
   {
     "id": 34271,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 965,
+    "segment_index": 967,
     "start_time": 4597.699,
     "end_time": 4598.974,
     "content": "You don't have fear.",
@@ -9662,7 +9682,7 @@
   {
     "id": 34272,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 966,
+    "segment_index": 968,
     "start_time": 4598.974,
     "end_time": 4604.164390625,
     "content": "Satan will try to put worry in your heart, but what I'm saying is that",
@@ -9672,7 +9692,7 @@
   {
     "id": 76547,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 967,
+    "segment_index": 969,
     "start_time": 4604.164390625,
     "end_time": 4605.350765625,
     "content": "worry and grief.",
@@ -9682,7 +9702,7 @@
   {
     "id": 34273,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 968,
+    "segment_index": 970,
     "start_time": 4608.465,
     "end_time": 4609.371,
     "content": "Rashad",
@@ -9692,7 +9712,7 @@
   {
     "id": 34274,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 969,
+    "segment_index": 971,
     "start_time": 4609.371,
     "end_time": 4614.633,
     "content": "When you grieve over anything, you're objecting to God, what God did, that God is doing everything.",
@@ -9702,7 +9722,7 @@
   {
     "id": 34275,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 970,
+    "segment_index": 972,
     "start_time": 4615.72,
     "end_time": 4619.11,
     "content": "Rashad, the scare from cockroach is included?",
@@ -9712,7 +9732,7 @@
   {
     "id": 34276,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 971,
+    "segment_index": 973,
     "start_time": 4619.11,
     "end_time": 4620.566,
     "content": "Yes, absolutely.",
@@ -9722,7 +9742,7 @@
   {
     "id": 34277,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 972,
+    "segment_index": 974,
     "start_time": 4621.774,
     "end_time": 4625.768,
     "content": "Fear of cockroaches. Edip is definitely afraid of cockroaches.",
@@ -9732,7 +9752,7 @@
   {
     "id": 34278,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 973,
+    "segment_index": 975,
     "start_time": 4629.151,
     "end_time": 4630.789,
     "content": "Cockroaches, so (unintelligible)",
@@ -9742,7 +9762,7 @@
   {
     "id": 34279,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 974,
+    "segment_index": 976,
     "start_time": 4631.205,
     "end_time": 4637.011,
     "content": "If believer, I shouldn't be, I shouldn't go to a employee that you shouldn't smoke.",
@@ -9752,7 +9772,7 @@
   {
     "id": 34280,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 975,
+    "segment_index": 977,
     "start_time": 4638.159,
     "end_time": 4640.461,
     "content": "I will avoid it. I'll avoid that.",
@@ -9762,7 +9782,7 @@
   {
     "id": 34281,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 976,
+    "segment_index": 978,
     "start_time": 4641.85,
     "end_time": 4651.341,
     "content": "If I open a store, a variety of store, like a 7-Eleven, like, I shouldn't sell any beer. It shouldn't be like that.",
@@ -9772,7 +9792,7 @@
   {
     "id": 34282,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 977,
+    "segment_index": 979,
     "start_time": 4651.341,
     "end_time": 4652.68836,
     "content": "Right. I'll avoid it.",
@@ -9782,7 +9802,7 @@
   {
     "id": 76548,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 978,
+    "segment_index": 980,
     "start_time": 4652.68836,
     "end_time": 4653.71492,
     "content": "(unintelligible)",
@@ -9792,7 +9812,7 @@
   {
     "id": 34283,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 979,
+    "segment_index": 981,
     "start_time": 4658.355,
     "end_time": 4659.026,
     "content": "Yes?",
@@ -9802,7 +9822,7 @@
   {
     "id": 34284,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 980,
+    "segment_index": 982,
     "start_time": 4659.026,
     "end_time": 4662.45333333333,
     "content": "Would phobias like (unintelligible)?",
@@ -9812,7 +9832,7 @@
   {
     "id": 76549,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 981,
+    "segment_index": 983,
     "start_time": 4662.45333333333,
     "end_time": 4662.83414814815,
     "content": "Yep.",
@@ -9822,7 +9842,7 @@
   {
     "id": 34285,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 982,
+    "segment_index": 984,
     "start_time": 4667.96,
     "end_time": 4669.262,
     "content": "Believers have no phobias.",
@@ -9832,7 +9852,7 @@
   {
     "id": 34286,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 983,
+    "segment_index": 985,
     "start_time": 4673.189,
     "end_time": 4678.38,
     "content": "The believers know that not a scratch will touch you if you are in God's protection.",
@@ -9842,7 +9862,7 @@
   {
     "id": 34287,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 984,
+    "segment_index": 986,
     "start_time": 4679.588,
     "end_time": 4680.984,
     "content": "Not a scratch.",
@@ -9852,7 +9872,7 @@
   {
     "id": 34288,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 985,
+    "segment_index": 987,
     "start_time": 4681.89,
     "end_time": 4683.89,
     "content": "So, there'll be no phobia. You won't be afraid.",
@@ -9862,7 +9882,7 @@
   {
     "id": 34289,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 986,
+    "segment_index": 988,
     "start_time": 4686.306,
     "end_time": 4688.3821627907,
     "content": "We conquer these phobias.",
@@ -9872,7 +9892,7 @@
   {
     "id": 77269,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 987,
+    "segment_index": 989,
     "start_time": 4688.3821627907,
     "end_time": 4688.71434883721,
     "content": "Yes.",
@@ -9882,7 +9902,7 @@
   {
     "id": 34290,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 988,
+    "segment_index": 990,
     "start_time": 4690.602,
     "end_time": 4691.937,
     "content": "You conquer your phobias.",
@@ -9892,7 +9912,7 @@
   {
     "id": 34291,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 989,
+    "segment_index": 991,
     "start_time": 4694.655,
     "end_time": 4698.467,
     "content": "But what if it is unconscious? (unintelligible)",
@@ -9902,7 +9922,7 @@
   {
     "id": 34292,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 990,
+    "segment_index": 992,
     "start_time": 4698.467,
     "end_time": 4704.696,
     "content": "Yeah, well, conscious or unconscious, your conscious being will convince your unconscious being",
@@ -9912,7 +9932,7 @@
   {
     "id": 34293,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 991,
+    "segment_index": 993,
     "start_time": 4704.696,
     "end_time": 4708.267,
     "content": "that there is no reason to be afraid since no scratch will happen to you.",
@@ -9922,7 +9942,7 @@
   {
     "id": 34294,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 992,
+    "segment_index": 994,
     "start_time": 4709.354,
     "end_time": 4715.643,
     "content": "God puts in the strongest terms in the Quran that there are guards around you. You are being guarded. In Arabic,",
@@ -9932,7 +9952,7 @@
   {
     "id": 34295,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 993,
+    "segment_index": 995,
     "start_time": 4715.643,
     "end_time": 4717.281,
     "content": "(82:10) وَإِنَّ عَلَيْكُمْ لَحَـٰفِظِينَ",
@@ -9942,7 +9962,7 @@
   {
     "id": 34296,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 994,
+    "segment_index": 996,
     "start_time": 4717.281,
     "end_time": 4718.496,
     "content": "These are two assurances.",
@@ -9952,7 +9972,7 @@
   {
     "id": 34297,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 995,
+    "segment_index": 997,
     "start_time": 4718.496,
     "end_time": 4719.771,
     "content": "Wa Inna (وَإِنَّ), La (لَ)",
@@ -9962,7 +9982,7 @@
   {
     "id": 34298,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 996,
+    "segment_index": 998,
     "start_time": 4719.771,
     "end_time": 4721.409,
     "content": "(82:10) وَإِنَّ عَلَيْكُمْ لَحَـٰفِظِينَ",
@@ -9972,7 +9992,7 @@
   {
     "id": 34299,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 997,
+    "segment_index": 999,
     "start_time": 4721.409,
     "end_time": 4724.315,
     "content": "You are guarded very well by God's guards.",
@@ -9982,7 +10002,7 @@
   {
     "id": 34300,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 998,
+    "segment_index": 1000,
     "start_time": 4724.315,
     "end_time": 4730.604,
     "content": "So that they see to it that not a scratch comes to you against God's will.",
@@ -9992,7 +10012,7 @@
   {
     "id": 34301,
     "media_id": "fdb5de86-6925-4c39-b3fc-b16a03dfa79f",
-    "segment_index": 999,
+    "segment_index": 1001,
     "start_time": 4731.45,
     "end_time": 4735.444,
     "content": "But (unintelligible).",

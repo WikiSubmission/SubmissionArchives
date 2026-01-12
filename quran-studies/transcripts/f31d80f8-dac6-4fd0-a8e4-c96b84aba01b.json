@@ -7840,19 +7840,29 @@
     "search_vector": "'situat':6 'special':5"
   },
   {
-    "id": 14580,
+    "id": "14580_part_0",
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
     "segment_index": 784,
     "start_time": 3703.888,
-    "end_time": 3706.916,
-    "content": "I stole the show from Naghmeh. Naghmeh: Right.",
+    "end_time": 3706.424972972973,
+    "content": "I stole the show from Naghmeh. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'naghmeh':6,7 'right':8 'show':4 'stole':2"
+  },
+  {
+    "id": "14580_part_1",
+    "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
+    "segment_index": 785,
+    "start_time": 3706.424972972973,
+    "end_time": 3706.916,
+    "content": "Right.",
+    "speaker": "Naghmeh",
     "search_vector": "'naghmeh':6,7 'right':8 'show':4 'stole':2"
   },
   {
     "id": 14581,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 785,
+    "segment_index": 786,
     "start_time": 3706.916,
     "end_time": 3710.488,
     "content": "I thought it was very important. I wanted you to know who you are.",
@@ -7862,7 +7872,7 @@
   {
     "id": 14582,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 786,
+    "segment_index": 787,
     "start_time": 3716.173,
     "end_time": 3730.933,
     "content": "(unintelligible)",
@@ -7872,7 +7882,7 @@
   {
     "id": 14583,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 787,
+    "segment_index": 788,
     "start_time": 3730.933,
     "end_time": 3735,
     "content": "Does it mean that there is also stratification within this...",
@@ -7882,7 +7892,7 @@
   {
     "id": 14584,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 788,
+    "segment_index": 789,
     "start_time": 3735,
     "end_time": 3736.819,
     "content": "Yes, within each (unintelligible), yes.",
@@ -7892,7 +7902,7 @@
   {
     "id": 14585,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 789,
+    "segment_index": 790,
     "start_time": 3736.819,
     "end_time": 3738.517,
     "content": "(unintelligible) sorry.",
@@ -7902,7 +7912,7 @@
   {
     "id": 14586,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 790,
+    "segment_index": 791,
     "start_time": 3738.517,
     "end_time": 3747.472,
     "content": "But you can call this Hell. And there'll be (unintelligible) there in the deepest... The hypocrites will be in the deepest pit of Hell.",
@@ -7912,7 +7922,7 @@
   {
     "id": 14587,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 791,
+    "segment_index": 792,
     "start_time": 3747.472,
     "end_time": 3752.798,
     "content": "Hypocrites are people who think they are believers. They say they're believers. They believe they are believers. But they are not.",
@@ -7922,7 +7932,7 @@
   {
     "id": 14588,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 792,
+    "segment_index": 793,
     "start_time": 3755.58,
     "end_time": 3757.036,
     "content": "Those are the hypocrites.",
@@ -7932,7 +7942,7 @@
   {
     "id": 14589,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 793,
+    "segment_index": 794,
     "start_time": 3760.423,
     "end_time": 3762,
     "content": "But the whole place is Hell. This is what...",
@@ -7942,7 +7952,7 @@
   {
     "id": 14590,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 794,
+    "segment_index": 795,
     "start_time": 3762,
     "end_time": 3768.536,
     "content": "And God says \"those who barely miss Hell and make it into the lowest layer of the Purgatory\"",
@@ -7952,7 +7962,7 @@
   {
     "id": 14591,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 795,
+    "segment_index": 796,
     "start_time": 3768.536,
     "end_time": 3770.778,
     "content": "God calls this \"a fantastic triumph.\"",
@@ -7962,7 +7972,7 @@
   {
     "id": 14592,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 796,
+    "segment_index": 797,
     "start_time": 3771.265,
     "end_time": 3780.732,
     "content": "Because if you miss this, this thing called Hell, within which there are different layers.",
@@ -7972,7 +7982,7 @@
   {
     "id": 14593,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 797,
+    "segment_index": 798,
     "start_time": 3781.316,
     "end_time": 3784.554,
     "content": "The same with the Lower Heaven and the same with the High Heaven.",
@@ -7982,7 +7992,7 @@
   {
     "id": 14594,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 798,
+    "segment_index": 799,
     "start_time": 3784.554,
     "end_time": 3789.787,
     "content": "Because the people in the Purgatory, they cannot go much higher, but they are fantastically happy.",
@@ -7992,7 +8002,7 @@
   {
     "id": 14595,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 799,
+    "segment_index": 800,
     "start_time": 3790.089,
     "end_time": 3791.363,
     "content": "They are in Heaven.",
@@ -8002,7 +8012,7 @@
   {
     "id": 14596,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 800,
+    "segment_index": 801,
     "start_time": 3794.689,
     "end_time": 3798.685,
     "content": "And within Heaven, like I said, there will be a line beyond which you cannot go.",
@@ -8012,7 +8022,7 @@
   {
     "id": 14597,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 801,
+    "segment_index": 802,
     "start_time": 3799.379,
     "end_time": 3801.226,
     "content": "These are natural borders.",
@@ -8022,7 +8032,7 @@
   {
     "id": 14598,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 802,
+    "segment_index": 803,
     "start_time": 3802.556,
     "end_time": 3805.161,
     "content": "Your growth and development will decide that.",
@@ -8032,7 +8042,7 @@
   {
     "id": 14599,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 803,
+    "segment_index": 804,
     "start_time": 3808.366,
     "end_time": 3813.148,
     "content": "You know, every time you get abused and ridiculed, you grow immensely.",
@@ -8042,7 +8052,7 @@
   {
     "id": 14600,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 804,
+    "segment_index": 805,
     "start_time": 3814.176,
     "end_time": 3817.688,
     "content": "That's why Mahmoud came out smiling out of that episode.",
@@ -8052,7 +8062,7 @@
   {
     "id": 14601,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 805,
+    "segment_index": 806,
     "start_time": 3820.893,
     "end_time": 3825,
     "content": "So that Muhtesem... Gatut comes across those ones in a while.",
@@ -8062,7 +8072,7 @@
   {
     "id": 14602,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 806,
+    "segment_index": 807,
     "start_time": 3826.461,
     "end_time": 3828.22357142857,
     "content": "I have one right in law school.",
@@ -8072,7 +8082,7 @@
   {
     "id": 76964,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 807,
+    "segment_index": 808,
     "start_time": 3828.22357142857,
     "end_time": 3828.451,
     "content": "Yes.",
@@ -8082,7 +8092,7 @@
   {
     "id": 14603,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 808,
+    "segment_index": 809,
     "start_time": 3829.247,
     "end_time": 3835.178,
     "content": "He's not going to law school, but he works in a library. One time he went like this. It was like almost he hit me.",
@@ -8092,7 +8102,7 @@
   {
     "id": 14604,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 809,
+    "segment_index": 810,
     "start_time": 3835.178,
     "end_time": 3836.573,
     "content": "(unintelligible)",
@@ -8102,7 +8112,7 @@
   {
     "id": 14605,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 810,
+    "segment_index": 811,
     "start_time": 3836.573,
     "end_time": 3838.271,
     "content": "He was...and he...",
@@ -8112,7 +8122,7 @@
   {
     "id": 14606,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 811,
+    "segment_index": 812,
     "start_time": 3838.271,
     "end_time": 3840,
     "content": "Does he worship God alone, right?",
@@ -8122,7 +8132,7 @@
   {
     "id": 14607,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 812,
+    "segment_index": 813,
     "start_time": 3840.363,
     "end_time": 3847.261,
     "content": "And he was like, he was like \"Dr. Khalifa says that it's OK for you to repent. Muslims don't have the right to repent.\"",
@@ -8132,7 +8142,7 @@
   {
     "id": 14608,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 813,
+    "segment_index": 814,
     "start_time": 3847.261,
     "end_time": 3849.261,
     "content": "I was like \"Excuse me?!\"",
@@ -8142,7 +8152,7 @@
   {
     "id": 14609,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 814,
+    "segment_index": 815,
     "start_time": 3849.745,
     "end_time": 3857.006,
     "content": "That's exactly what he said. He said \"God doesn't tell us we have the right to repent. And he tells us that you can repent a hundred times.\"",
@@ -8152,7 +8162,7 @@
   {
     "id": 14610,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 815,
+    "segment_index": 816,
     "start_time": 3857.006,
     "end_time": 3860.09012307692,
     "content": "And I'm like \"of course, you can. Without repenting, we'll all go to Hell. Are you kidding?\"",
@@ -8162,7 +8172,7 @@
   {
     "id": 75152,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 816,
+    "segment_index": 817,
     "start_time": 3860.09012307692,
     "end_time": 3860.89467692308,
     "content": "But that's in the Quran.",
@@ -8172,7 +8182,7 @@
   {
     "id": 14611,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 817,
+    "segment_index": 818,
     "start_time": 3862.453,
     "end_time": 3864.453,
     "content": "I guess he never read the Quran.",
@@ -8182,7 +8192,7 @@
   {
     "id": 14612,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 818,
+    "segment_index": 819,
     "start_time": 3864.937,
     "end_time": 3866.574,
     "content": "Oh, so many other things.",
@@ -8192,7 +8202,7 @@
   {
     "id": 14613,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 819,
+    "segment_index": 820,
     "start_time": 3866.574,
     "end_time": 3871.296,
     "content": "And he's like \"you need a Muslim husband who will teach you how it is.\"",
@@ -8202,7 +8212,7 @@
   {
     "id": 14614,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 820,
+    "segment_index": 821,
     "start_time": 3871.296,
     "end_time": 3873.296,
     "content": "And I said \"I'll teach him how it is.\"",
@@ -8212,7 +8222,7 @@
   {
     "id": 14615,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 821,
+    "segment_index": 822,
     "start_time": 3873.659,
     "end_time": 3875.417,
     "content": "So, yes, I beat him, too.",
@@ -8222,7 +8232,7 @@
   {
     "id": 14616,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 822,
+    "segment_index": 823,
     "start_time": 3877.417,
     "end_time": 3878.812,
     "content": "That's what he needs.",
@@ -8232,7 +8242,7 @@
   {
     "id": 14617,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 823,
+    "segment_index": 824,
     "start_time": 3880.384,
     "end_time": 3881.416,
     "content": "I said \"I'll teach him.\"",
@@ -8242,7 +8252,7 @@
   {
     "id": 14618,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 824,
+    "segment_index": 825,
     "start_time": 3882.626,
     "end_time": 3883.9,
     "content": "That's our love.",
@@ -8252,7 +8262,7 @@
   {
     "id": 14619,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 825,
+    "segment_index": 826,
     "start_time": 3885.473,
     "end_time": 3886.384,
     "content": "Yeah.",
@@ -8262,7 +8272,7 @@
   {
     "id": 14620,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 826,
+    "segment_index": 827,
     "start_time": 3886.436,
     "end_time": 3891.883,
     "content": "Let me tell you the kind of ridicule and the kind of stupidity they have. I have it obtained here.",
@@ -8272,7 +8282,7 @@
   {
     "id": 14621,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 827,
+    "segment_index": 828,
     "start_time": 3892.79,
     "end_time": 3899.023,
     "content": "This fellow came from Denver, Colorado.",
@@ -8282,7 +8292,7 @@
   {
     "id": 14622,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 828,
+    "segment_index": 829,
     "start_time": 3899.758,
     "end_time": 3904.6,
     "content": "And he wants to talk to me. So, I said 'if you have any place for us to talk, we'll talk to you.\"",
@@ -8292,7 +8302,7 @@
   {
     "id": 14623,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 829,
+    "segment_index": 830,
     "start_time": 3905.568,
     "end_time": 3911.922,
     "content": "And I said.... anyway, the conversation ended by me challenging him to say \"La Elaha Ella Allah.\"",
@@ -8302,7 +8312,7 @@
   {
     "id": 14624,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 830,
+    "segment_index": 831,
     "start_time": 3912.527,
     "end_time": 3914.527,
     "content": "I'm really convinced they cannot do it.",
@@ -8312,7 +8322,7 @@
   {
     "id": 14625,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 831,
+    "segment_index": 832,
     "start_time": 3915,
     "end_time": 3917.484,
     "content": "I mean, I really know this now. Ihsan was listening.",
@@ -8322,7 +8332,7 @@
   {
     "id": 14626,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 832,
+    "segment_index": 833,
     "start_time": 3917.786,
     "end_time": 3921.237,
     "content": "I told him \"you are forbidden by God from saying La Elaha Ella Allah.\"",
@@ -8332,7 +8342,7 @@
   {
     "id": 14627,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 833,
+    "segment_index": 834,
     "start_time": 3923.535,
     "end_time": 3926.442,
     "content": "He said \"are you crazy or something? Of course, I can say La Elaha Ella Allah.\"",
@@ -8342,7 +8352,7 @@
   {
     "id": 14628,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 834,
+    "segment_index": 835,
     "start_time": 3926.442,
     "end_time": 3928.442,
     "content": "I said \"go ahead. Say it.\"",
@@ -8352,7 +8362,7 @@
   {
     "id": 14629,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 835,
+    "segment_index": 836,
     "start_time": 3928.442,
     "end_time": 3930.442,
     "content": "I said \"say it.\" Remember?",
@@ -8362,7 +8372,7 @@
   {
     "id": 14630,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 836,
+    "segment_index": 837,
     "start_time": 3932.075,
     "end_time": 3934.801,
     "content": "And he will say \"La Elaha Ella Allah, Muhammad Rasulallah.\"",
@@ -8372,7 +8382,7 @@
   {
     "id": 14631,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 837,
+    "segment_index": 838,
     "start_time": 3936.313,
     "end_time": 3938.555,
     "content": "I said \"see? You cannot say it. Can you?\"",
@@ -8382,7 +8392,7 @@
   {
     "id": 14632,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 838,
+    "segment_index": 839,
     "start_time": 3938.555,
     "end_time": 3939.829,
     "content": "He said \"of course, I can say it.\"",
@@ -8392,7 +8402,7 @@
   {
     "id": 14633,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 839,
+    "segment_index": 840,
     "start_time": 3939.829,
     "end_time": 3941.406,
     "content": "I said \"go ahead. Say it.\"",
@@ -8402,7 +8412,7 @@
   {
     "id": 14634,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 840,
+    "segment_index": 841,
     "start_time": 3941.769,
     "end_time": 3944.374,
     "content": "He said \"La Elaha Ella Allah, Muhammad Rasulallah.\"",
@@ -8412,7 +8422,7 @@
   {
     "id": 14635,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 841,
+    "segment_index": 842,
     "start_time": 3945.281,
     "end_time": 3951.151,
     "content": "I said \"see? You just proved to me that you cannot say La Elaha Ella Allah, can you? Because you are forbidden by God.\"",
@@ -8422,7 +8432,7 @@
   {
     "id": 14636,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 842,
+    "segment_index": 843,
     "start_time": 3951.151,
     "end_time": 3955.51,
     "content": "I mean, here I'm challenging this guy to say \"La Elaha Ella Allah,\" and he cannot say it.",
@@ -8432,7 +8442,7 @@
   {
     "id": 14637,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 843,
+    "segment_index": 844,
     "start_time": 3955.51,
     "end_time": 3957.296,
     "content": "I have it all recorded from the thing.",
@@ -8442,7 +8452,7 @@
   {
     "id": 14638,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 844,
+    "segment_index": 845,
     "start_time": 3958.373,
     "end_time": 3970.077,
     "content": "Now, so, this is, this is a fellow I kept challenging, and again, I guess he got so mad, so half hour later,",
@@ -8452,7 +8462,7 @@
   {
     "id": 14639,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 845,
+    "segment_index": 846,
     "start_time": 3970.077,
     "end_time": 3973.678,
     "content": "he called and he said \"I'm gonna bring the gun and kill you tonight.\"",
@@ -8462,7 +8472,7 @@
   {
     "id": 14640,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 846,
+    "segment_index": 847,
     "start_time": 3974.524,
     "end_time": 3976.371,
     "content": "Yeah, I have it. I have it on tape.",
@@ -8472,7 +8482,7 @@
   {
     "id": 14641,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 847,
+    "segment_index": 848,
     "start_time": 3977.399,
     "end_time": 3986.442,
     "content": "So, now he's so stupid because he talks at the machine, we're recording it, along with his phone number and everything.",
@@ -8482,7 +8492,7 @@
   {
     "id": 14642,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 848,
+    "segment_index": 849,
     "start_time": 3986.442,
     "end_time": 3989.349,
     "content": "So, of course, we called the police. The police went and paid him a visit.",
@@ -8492,7 +8502,7 @@
   {
     "id": 14643,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 849,
+    "segment_index": 850,
     "start_time": 3990,
     "end_time": 3994.721,
     "content": "But that's how, that's how stupid, how angry he gets.",
@@ -8502,7 +8512,7 @@
   {
     "id": 14644,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 850,
+    "segment_index": 851,
     "start_time": 3995.084,
     "end_time": 3998.052,
     "content": "Would you threaten somebody and record it on the machine?",
@@ -8512,7 +8522,7 @@
   {
     "id": 14645,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 851,
+    "segment_index": 852,
     "start_time": 4002.411,
     "end_time": 4005,
     "content": "His address was divisible by 19.",
@@ -8522,7 +8532,7 @@
   {
     "id": 14646,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 852,
+    "segment_index": 853,
     "start_time": 4005.968,
     "end_time": 4017.1,
     "content": "But this is the kind of abuse, the kind of ridiculing that every time you go through this, you grow immensely. This is a very special treat to you.",
@@ -8532,7 +8542,7 @@
   {
     "id": 14647,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 853,
+    "segment_index": 854,
     "start_time": 4020.789,
     "end_time": 4025.268,
     "content": "If Naghmeh and Apamea did not have the courage, they would have quit long time ago.",
@@ -8542,7 +8552,7 @@
   {
     "id": 14648,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 854,
+    "segment_index": 855,
     "start_time": 4026.688,
     "end_time": 4033.856,
     "content": "I mean, from cousins to brothers to uncles, relatives, aunts, everywhere, friends.",
@@ -8552,7 +8562,7 @@
   {
     "id": 14649,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 855,
+    "segment_index": 856,
     "start_time": 4034.34,
     "end_time": 4038.727,
     "content": "They're ridiculing them. Look at them, steady, persevering.",
@@ -8562,7 +8572,7 @@
   {
     "id": 14650,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 856,
+    "segment_index": 857,
     "start_time": 4039.876,
     "end_time": 4041.211,
     "content": "(unintelligible)",
@@ -8572,7 +8582,7 @@
   {
     "id": 14651,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 857,
+    "segment_index": 858,
     "start_time": 4041.267,
     "end_time": 4044.565,
     "content": "God takes the believers out of darkness into the light.",
@@ -8582,7 +8592,7 @@
   {
     "id": 14652,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 858,
+    "segment_index": 859,
     "start_time": 4044.928,
     "end_time": 4048.952,
     "content": "And how can you go back to darkness after you've lived in the light?",
@@ -8592,7 +8602,7 @@
   {
     "id": 14653,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 859,
+    "segment_index": 860,
     "start_time": 4055.241,
     "end_time": 4057.785,
     "content": "They cannot say \"La Elaha Ella Allah.\" (unintelligible).",
@@ -8602,7 +8612,7 @@
   {
     "id": 14654,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 860,
+    "segment_index": 861,
     "start_time": 4057.785,
     "end_time": 4060.45,
     "content": "I know they are forbidden by God from saying it.",
@@ -8612,7 +8622,7 @@
   {
     "id": 14655,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 861,
+    "segment_index": 862,
     "start_time": 4062.45,
     "end_time": 4065.418,
     "content": "They are hypnotized by Satan or whatever the (unintelligible) is.",
@@ -8622,7 +8632,7 @@
   {
     "id": 14656,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 862,
+    "segment_index": 863,
     "start_time": 4068.321,
     "end_time": 4074.978,
     "content": "So, within the High Heaven, there are ranks. And within the Lower Heaven, there are ranks. And within Hell, there are ranks.",
@@ -8632,7 +8642,7 @@
   {
     "id": 14657,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 863,
+    "segment_index": 864,
     "start_time": 4075.22,
     "end_time": 4077.22,
     "content": "But these are the general divisions.",
@@ -8642,7 +8652,7 @@
   {
     "id": 14658,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 864,
+    "segment_index": 865,
     "start_time": 4078.006,
     "end_time": 4085.449,
     "content": "As we saw in Sura 55, there are big differences between the High Heaven and the Lower Heaven.",
@@ -8652,7 +8662,7 @@
   {
     "id": 14659,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 865,
+    "segment_index": 866,
     "start_time": 4086.413,
     "end_time": 4089.227,
     "content": "But what we have seen are the general characteristics.",
@@ -8662,7 +8672,7 @@
   {
     "id": 14660,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 866,
+    "segment_index": 867,
     "start_time": 4096.126,
     "end_time": 4097.186,
     "content": "Congratulations.",
@@ -8672,7 +8682,7 @@
   {
     "id": 14661,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 867,
+    "segment_index": 868,
     "start_time": 4097.186,
     "end_time": 4098.41961538462,
     "content": "Can I ask a question?",
@@ -8682,7 +8692,7 @@
   {
     "id": 75153,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 868,
+    "segment_index": 869,
     "start_time": 4098.41961538462,
     "end_time": 4098.65458974359,
     "content": "Yes.",
@@ -8692,7 +8702,7 @@
   {
     "id": 14662,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 869,
+    "segment_index": 870,
     "start_time": 4100.324,
     "end_time": 4108.8995,
     "content": "Is it (unintelligible) Quran that (unintelligible)?",
@@ -8702,7 +8712,7 @@
   {
     "id": 75154,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 870,
+    "segment_index": 871,
     "start_time": 4108.8995,
     "end_time": 4109.40394117647,
     "content": "No.",
@@ -8712,7 +8722,7 @@
   {
     "id": 14663,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 871,
+    "segment_index": 872,
     "start_time": 4111.758,
     "end_time": 4115.298,
     "content": "No, there will be, there will be more believers than ever now.",
@@ -8722,7 +8732,7 @@
   {
     "id": 14664,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 872,
+    "segment_index": 873,
     "start_time": 4115.298,
     "end_time": 4121.076,
     "content": "By the way, some people that were kind of suspicious of my population.",
@@ -8732,7 +8742,7 @@
   {
     "id": 14665,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 873,
+    "segment_index": 874,
     "start_time": 4122.072,
     "end_time": 4126.519,
     "content": "And God never let me down.",
@@ -8742,7 +8752,7 @@
   {
     "id": 14666,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 874,
+    "segment_index": 875,
     "start_time": 4126.519,
     "end_time": 4130.603,
     "content": "(unintelligible) Magazine, the last issue, had an article of the population.",
@@ -8752,7 +8762,7 @@
   {
     "id": 14667,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 875,
+    "segment_index": 876,
     "start_time": 4130.603,
     "end_time": 4132.482,
     "content": "They had a population curve there.",
@@ -8762,7 +8772,7 @@
   {
     "id": 14668,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 876,
+    "segment_index": 877,
     "start_time": 4132.482,
     "end_time": 4135.087,
     "content": "It is in full agreement with my history.",
@@ -8772,7 +8782,7 @@
   {
     "id": 14669,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 877,
+    "segment_index": 878,
     "start_time": 4136.357,
     "end_time": 4137.41060465116,
     "content": "So, this is good.",
@@ -8782,7 +8792,7 @@
   {
     "id": 75155,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 878,
+    "segment_index": 879,
     "start_time": 4137.41060465116,
     "end_time": 4138.40223255814,
     "content": "(unintelligible)",
@@ -8792,7 +8802,7 @@
   {
     "id": 14670,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 879,
+    "segment_index": 880,
     "start_time": 4139.022,
     "end_time": 4139.26972727273,
     "content": "Yeah.",
@@ -8802,7 +8812,7 @@
   {
     "id": 76965,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 880,
+    "segment_index": 881,
     "start_time": 4139.26972727273,
     "end_time": 4141.79654545455,
     "content": "...the growing generations including us with a bar?",
@@ -8812,7 +8822,7 @@
   {
     "id": 14671,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 881,
+    "segment_index": 882,
     "start_time": 4142.292,
     "end_time": 4143.264,
     "content": "Right.",
@@ -8822,7 +8832,7 @@
   {
     "id": 14672,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 882,
+    "segment_index": 883,
     "start_time": 4143.566,
     "end_time": 4151.251,
     "content": "Because I showed that the people from now to the end of the world will be 15 times as many as the people from the beginning of Adam until now.",
@@ -8832,7 +8842,7 @@
   {
     "id": 14673,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 883,
+    "segment_index": 884,
     "start_time": 4152.34,
     "end_time": 4159.36,
     "content": "In other words, the vast majority of the human race are getting the message that our generation is beginning right now.",
@@ -8842,7 +8852,7 @@
   {
     "id": 14674,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 884,
+    "segment_index": 885,
     "start_time": 4159.36,
     "end_time": 4164.263,
     "content": "Or starting a message of worshipping God alone, upholding God's Word alone.",
@@ -8852,7 +8862,7 @@
   {
     "id": 14675,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 885,
+    "segment_index": 886,
     "start_time": 4164.505,
     "end_time": 4169.287,
     "content": "And this is the message that God wills for the vast majority of the human race.",
@@ -8862,7 +8872,7 @@
   {
     "id": 14676,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 886,
+    "segment_index": 887,
     "start_time": 4171.273,
     "end_time": 4173.12,
     "content": "70 billion people.",
@@ -8872,7 +8882,7 @@
   {
     "id": 14677,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 887,
+    "segment_index": 888,
     "start_time": 4174.329,
     "end_time": 4176.659,
     "content": "See, until now we had 6 billion people.",
@@ -8882,7 +8892,7 @@
   {
     "id": 14678,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 888,
+    "segment_index": 889,
     "start_time": 4177.507,
     "end_time": 4183.103,
     "content": "From now to the end of the world, it is projected that we'll have 70 billion people.",
@@ -8892,7 +8902,7 @@
   {
     "id": 14679,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 889,
+    "segment_index": 890,
     "start_time": 4183.465,
     "end_time": 4188.686,
     "content": "But to answer Dr. Sabahi's question, the verse in the Quran says,",
@@ -8902,7 +8912,7 @@
   {
     "id": 14680,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 890,
+    "segment_index": 891,
     "start_time": 4188.686,
     "end_time": 4195.536,
     "content": "it doesn't say that everyone will be a believer, but it says \"I will show them My signs until they realize that this is the truth.\"",
@@ -8912,7 +8922,7 @@
   {
     "id": 14681,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 891,
+    "segment_index": 892,
     "start_time": 4196.746,
     "end_time": 4203.975,
     "content": "So, the prophecy is that God will spread His signs until everybody becomes a...",
@@ -8922,7 +8932,7 @@
   {
     "id": 14682,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 892,
+    "segment_index": 893,
     "start_time": 4203.975,
     "end_time": 4209.027,
     "content": "Not everybody, maybe everybody, but at least almost everybody will be a believer.",
@@ -8932,7 +8942,7 @@
   {
     "id": 14683,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 893,
+    "segment_index": 894,
     "start_time": 4210.176,
     "end_time": 4218.284,
     "content": "The miracles that we are seeing now, and they have all discovered the people connected with us.",
@@ -8942,7 +8952,7 @@
   {
     "id": 14684,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 894,
+    "segment_index": 895,
     "start_time": 4218.647,
     "end_time": 4220.949,
     "content": "The people who believe exactly as we do.",
@@ -8952,7 +8962,7 @@
   {
     "id": 14685,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 895,
+    "segment_index": 896,
     "start_time": 4222.949,
     "end_time": 4228.033,
     "content": "And this is an exclusive, specifically a very strong sign.",
@@ -8962,7 +8972,7 @@
   {
     "id": 14686,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 896,
+    "segment_index": 897,
     "start_time": 4228.033,
     "end_time": 4231.061,
     "content": "And these miracles will be known by everyone.",
@@ -8972,7 +8982,7 @@
   {
     "id": 14687,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 897,
+    "segment_index": 898,
     "start_time": 4232.694,
     "end_time": 4238.504,
     "content": "I'm telling you, in 50 years, there'll be millions, millions of people worshipping God alone and following the Quran alone.",
@@ -8982,7 +8992,7 @@
   {
     "id": 14688,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 898,
+    "segment_index": 899,
     "start_time": 4239.23,
     "end_time": 4241.895,
     "content": "Millions, in just 50 years, maybe less.",
@@ -8992,7 +9002,7 @@
   {
     "id": 14689,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 899,
+    "segment_index": 900,
     "start_time": 4242.805,
     "end_time": 4247.313,
     "content": "You know, what I was gonna say also, it's not only that we're gonna have more people",
@@ -9002,7 +9012,7 @@
   {
     "id": 14690,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 900,
+    "segment_index": 901,
     "start_time": 4247.313,
     "end_time": 4253.695,
     "content": "later who are gonna be seeing these miracles, but also there's another mercy I think from God in that",
@@ -9012,7 +9022,7 @@
   {
     "id": 14691,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 901,
+    "segment_index": 902,
     "start_time": 4253.695,
     "end_time": 4258.142,
     "content": "the old generation, there might not have been as many people as we're gonna have.",
@@ -9022,7 +9032,7 @@
   {
     "id": 14692,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 902,
+    "segment_index": 903,
     "start_time": 4258.437,
     "end_time": 4264.698,
     "content": "But the life span then was, what, 35 or 40 years old. Women died in labor.",
@@ -9032,7 +9042,7 @@
   {
     "id": 14693,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 903,
+    "segment_index": 904,
     "start_time": 4264.698,
     "end_time": 4267.76953043478,
     "content": "There was the wars between Spain and, you know, the",
@@ -9042,7 +9052,7 @@
   {
     "id": 75156,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 904,
+    "segment_index": 905,
     "start_time": 4267.76953043478,
     "end_time": 4268.01043478261,
     "content": "Europe and stuff. They were all young people. Yes.",
@@ -9052,7 +9062,7 @@
   {
     "id": 14694,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 905,
+    "segment_index": 906,
     "start_time": 4271.624,
     "end_time": 4276.51397810219,
     "content": "And so, you know, it seems like there was mercy there too, because they were all young and they died young.",
@@ -9062,7 +9072,7 @@
   {
     "id": 75157,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 906,
+    "segment_index": 907,
     "start_time": 4276.51397810219,
     "end_time": 4277.24518978102,
     "content": "(unintelligible)",
@@ -9072,7 +9082,7 @@
   {
     "id": 14695,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 907,
+    "segment_index": 908,
     "start_time": 4277.885,
     "end_time": 4278.45642857143,
     "content": "Yeah. Right.",
@@ -9082,7 +9092,7 @@
   {
     "id": 76966,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 908,
+    "segment_index": 909,
     "start_time": 4278.45642857143,
     "end_time": 4279.21833333333,
     "content": "(unintelligible)",
@@ -9092,7 +9102,7 @@
   {
     "id": 14696,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 909,
+    "segment_index": 910,
     "start_time": 4283.03,
     "end_time": 4284.062,
     "content": "Go ahead.",
@@ -9102,7 +9112,7 @@
   {
     "id": 14697,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 910,
+    "segment_index": 911,
     "start_time": 4284.848,
     "end_time": 4288.239,
     "content": "Okay, The Lower Heaven, 27.",
@@ -9112,7 +9122,7 @@
   {
     "id": 14698,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 911,
+    "segment_index": 912,
     "start_time": 4288.239,
     "end_time": 4292.658,
     "content": "[56:27]  As for the inhabitants of the right side, they will be on the right side.",
@@ -9122,7 +9132,7 @@
   {
     "id": 14699,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 912,
+    "segment_index": 913,
     "start_time": 4294.291,
     "end_time": 4296.291,
     "content": "[56:28]  They will enjoy lush orchards.",
@@ -9132,7 +9142,7 @@
   {
     "id": 14700,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 913,
+    "segment_index": 914,
     "start_time": 4296.896,
     "end_time": 4302.404,
     "content": "[56:29]  And fresh fruits. [56:30]  And abundant shade. [56:31]  And water to be poured.",
@@ -9142,7 +9152,7 @@
   {
     "id": 14701,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 914,
+    "segment_index": 915,
     "start_time": 4302.404,
     "end_time": 4306.702,
     "content": "[56:32]  And many fruits. [56:33]  Always in season. [56:34]  And exalted furnishings.",
@@ -9152,7 +9162,7 @@
   {
     "id": 14702,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 915,
+    "segment_index": 916,
     "start_time": 4306.702,
     "end_time": 4312.27,
     "content": "[56:35]  We raise spouses for them. [56:36]  Never previously touched. [56:37]  Magnificent companions.",
@@ -9162,7 +9172,7 @@
   {
     "id": 14703,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 916,
+    "segment_index": 917,
     "start_time": 4312.27,
     "end_time": 4320.74,
     "content": "[56:38]  Exclusively reserved for inhabitants of the right side. [56:39]  Multitudes from the early generation. [56:40]  And multitudes from the later generations.",
@@ -9172,7 +9182,7 @@
   {
     "id": 14704,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 917,
+    "segment_index": 918,
     "start_time": 4321.636,
     "end_time": 4323.604,
     "content": "Okay, number 27.",
@@ -9182,7 +9192,7 @@
   {
     "id": 14705,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 918,
+    "segment_index": 919,
     "start_time": 4324.148,
     "end_time": 4329.805,
     "content": "This we see, the difference between this is from the far ahead to the right side.",
@@ -9192,7 +9202,7 @@
   {
     "id": 14706,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 919,
+    "segment_index": 920,
     "start_time": 4329.805,
     "end_time": 4338.122,
     "content": "And, you know, we've said it over and over again. Well, we know that the people who died before the age of 40",
@@ -9202,7 +9212,7 @@
   {
     "id": 14707,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 920,
+    "segment_index": 921,
     "start_time": 4338.122,
     "end_time": 4347.346,
     "content": "go in the Lower Heaven. And we know that the basic rules in the Quran to make the Lower Heaven is",
@@ -9212,7 +9222,7 @@
   {
     "id": 14708,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 921,
+    "segment_index": 922,
     "start_time": 4347.346,
     "end_time": 4351.189,
     "content": "to believe in God alone, to work righteousness, and to believe in the Hereafter.",
@@ -9222,7 +9232,7 @@
   {
     "id": 14709,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 922,
+    "segment_index": 923,
     "start_time": 4351.491,
     "end_time": 4353.035,
     "content": "And those people will make it.",
@@ -9232,7 +9242,7 @@
   {
     "id": 14710,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 923,
+    "segment_index": 924,
     "start_time": 4353.337,
     "end_time": 4358.724,
     "content": "Then, then the right side just sounds so right, sounds so right.",
@@ -9242,7 +9252,7 @@
   {
     "id": 14711,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 924,
+    "segment_index": 925,
     "start_time": 4359.026,
     "end_time": 4365,
     "content": "Because first of all, like we know from, you know, the (unintelligible) that we always play is that God knows everything.",
@@ -9252,7 +9262,7 @@
   {
     "id": 14712,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 925,
+    "segment_index": 926,
     "start_time": 4365,
     "end_time": 4370.931,
     "content": "God knows the one who is really, really, really mean and bad and He will keep them until they're old.",
@@ -9262,7 +9272,7 @@
   {
     "id": 14713,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 926,
+    "segment_index": 927,
     "start_time": 4371.233,
     "end_time": 4378.192,
     "content": "But, but the ones who died before they are 40, obviously God knew that there was something right about them.",
@@ -9272,7 +9282,7 @@
   {
     "id": 14714,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 927,
+    "segment_index": 928,
     "start_time": 4378.978,
     "end_time": 4388.598,
     "content": "And just because, you know, their life was shorter than ours doesn't mean that it was any kind of bad, you know, thing from God's position.",
@@ -9282,7 +9292,7 @@
   {
     "id": 14715,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 928,
+    "segment_index": 929,
     "start_time": 4388.9,
     "end_time": 4393.891,
     "content": "But that maybe they were gonna prove a test for their family or whatever.",
@@ -9292,7 +9302,7 @@
   {
     "id": 14716,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 929,
+    "segment_index": 930,
     "start_time": 4393.891,
     "end_time": 4397.31,
     "content": "But that the thing is that God knew they were on the right side.",
@@ -9302,7 +9312,7 @@
   {
     "id": 14717,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 930,
+    "segment_index": 931,
     "start_time": 4397.31,
     "end_time": 4402.906,
     "content": "And God tells us that the age of 40, you know, before the age of 40, they go to the Lower Heaven.",
@@ -9312,7 +9322,7 @@
   {
     "id": 14718,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 931,
+    "segment_index": 932,
     "start_time": 4402.906,
     "end_time": 4411.828,
     "content": "And, and it just makes sense that those are the people who died before that age. And plus, it's a test for their families.",
@@ -9322,7 +9332,7 @@
   {
     "id": 14719,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 932,
+    "segment_index": 933,
     "start_time": 4413.099,
     "end_time": 4417.486,
     "content": "But they are still, they're so protected.",
@@ -9332,7 +9342,7 @@
   {
     "id": 14720,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 933,
+    "segment_index": 934,
     "start_time": 4418.029,
     "end_time": 4421.871,
     "content": "And so if you're on the right side here, you'll be on the right side there.",
@@ -9342,7 +9352,7 @@
   {
     "id": 14721,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 934,
+    "segment_index": 935,
     "start_time": 4421.871,
     "end_time": 4425.29,
     "content": "You won't be up at the top of the people who really tried hard.",
@@ -9352,7 +9362,7 @@
   {
     "id": 14722,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 935,
+    "segment_index": 936,
     "start_time": 4425.955,
     "end_time": 4431.551,
     "content": "But you'll be there. And also I think a lot of times, you know, there are a lot of people who believe in God alone.",
@@ -9362,7 +9372,7 @@
   {
     "id": 14723,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 936,
+    "segment_index": 937,
     "start_time": 4431.551,
     "end_time": 4434.244,
     "content": "They believe in the Hereafter and they work righteousness.",
@@ -9372,7 +9382,7 @@
   {
     "id": 14724,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 937,
+    "segment_index": 938,
     "start_time": 4434.244,
     "end_time": 4438.691,
     "content": "But it's just way too difficult to ask them to do anything else.",
@@ -9382,7 +9392,7 @@
   {
     "id": 14725,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 938,
+    "segment_index": 939,
     "start_time": 4439.296,
     "end_time": 4444.138,
     "content": "They might give to charity but, you know, on their own, a lot of people maybe do.",
@@ -9392,7 +9402,7 @@
   {
     "id": 14726,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 939,
+    "segment_index": 940,
     "start_time": 4444.138,
     "end_time": 4447.469,
     "content": "But they probably don't even give money or anything, but old clothes type of things.",
@@ -9402,7 +9412,7 @@
   {
     "id": 14727,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 940,
+    "segment_index": 941,
     "start_time": 4449.943,
     "end_time": 4450.18924657534,
     "content": "But...",
@@ -9412,7 +9422,7 @@
   {
     "id": 76967,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 941,
+    "segment_index": 942,
     "start_time": 4450.18924657534,
     "end_time": 4452.36442465753,
     "content": "God says He will reward them for their righteousness.",
@@ -9422,7 +9432,7 @@
   {
     "id": 14728,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 942,
+    "segment_index": 943,
     "start_time": 4452.939,
     "end_time": 4453.939,
     "content": "Right.",
@@ -9432,7 +9442,7 @@
   {
     "id": 14729,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 943,
+    "segment_index": 944,
     "start_time": 4453.939,
     "end_time": 4458.567,
     "content": "You know, so it's some kind of charity. But they will not do the Prayer. It's too hard.",
@@ -9442,7 +9452,7 @@
   {
     "id": 14730,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 944,
+    "segment_index": 945,
     "start_time": 4458.567,
     "end_time": 4462.926,
     "content": "They say \"I can see myself doing one but five\", you know. And...",
@@ -9452,7 +9462,7 @@
   {
     "id": 14731,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 945,
+    "segment_index": 946,
     "start_time": 4463.41,
     "end_time": 4469.583,
     "content": "And, and I'm like \"you're not doing any, you know, God doesn't need you to be doing this. It's for us.\"",
@@ -9462,7 +9472,7 @@
   {
     "id": 14732,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 946,
+    "segment_index": 947,
     "start_time": 4469.583,
     "end_time": 4474.425,
     "content": "You know, \"and you're not doing any favors for God for doing your prayer, but that it's a favor for us.\"",
@@ -9472,7 +9482,7 @@
   {
     "id": 14733,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 947,
+    "segment_index": 948,
     "start_time": 4474.425,
     "end_time": 4482.533,
     "content": "And over all that, to think 25 minutes maybe out of your whole day, 24 hours, is really nothing.",
@@ -9482,7 +9492,7 @@
   {
     "id": 14734,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 948,
+    "segment_index": 949,
     "start_time": 4482.533,
     "end_time": 4487.343,
     "content": "And I hate to think of it as that but sometimes it just brings you down just saying that.",
@@ -9492,7 +9502,7 @@
   {
     "id": 14735,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 949,
+    "segment_index": 950,
     "start_time": 4487.343,
     "end_time": 4488.678,
     "content": "But anyways...",
@@ -9502,7 +9512,7 @@
   {
     "id": 14736,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 950,
+    "segment_index": 951,
     "start_time": 4488.678,
     "end_time": 4492.006,
     "content": "(unintelligible).",
@@ -9512,7 +9522,7 @@
   {
     "id": 75158,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 951,
+    "segment_index": 952,
     "start_time": 4492.006,
     "end_time": 4493.37635294118,
     "content": "I know.",
@@ -9522,7 +9532,7 @@
   {
     "id": 14737,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 952,
+    "segment_index": 953,
     "start_time": 4496.474,
     "end_time": 4498.623,
     "content": "So, but I guess they're just right on...",
@@ -9532,7 +9542,7 @@
   {
     "id": 14738,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 953,
+    "segment_index": 954,
     "start_time": 4498.623,
     "end_time": 4505.037,
     "content": "The Prayers, the Prayers are meals. When they say \"one Prayer maybe but not five\", this means, it's like saying, I just have breakfast.",
@@ -9542,7 +9552,7 @@
   {
     "id": 14739,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 954,
+    "segment_index": 955,
     "start_time": 4505.823,
     "end_time": 4506.07878125,
     "content": "Yeah.",
@@ -9552,7 +9562,7 @@
   {
     "id": 76968,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 955,
+    "segment_index": 956,
     "start_time": 4506.07878125,
     "end_time": 4506.7438125,
     "content": "Nothing else.",
@@ -9562,7 +9572,7 @@
   {
     "id": 14740,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 956,
+    "segment_index": 957,
     "start_time": 4507.945,
     "end_time": 4513.541,
     "content": "(unintelligible) But whatever righteous thing, work you do, you get rewards.",
@@ -9572,7 +9582,7 @@
   {
     "id": 14741,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 957,
+    "segment_index": 958,
     "start_time": 4516.633,
     "end_time": 4519.266,
     "content": "Again, we're gonna hear some allegorical things.",
@@ -9582,7 +9592,7 @@
   {
     "id": 14742,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 958,
+    "segment_index": 959,
     "start_time": 4519.629,
     "end_time": 4522.988,
     "content": "There's gonna be some difference from the Highest Heaven.",
@@ -9592,7 +9602,7 @@
   {
     "id": 14743,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 959,
+    "segment_index": 960,
     "start_time": 4523.705,
     "end_time": 4530.329,
     "content": "There's gonna be shade and there's gonna be fresh fruits, but it doesn't say what they choose.",
@@ -9602,7 +9612,7 @@
   {
     "id": 14744,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 960,
+    "segment_index": 961,
     "start_time": 4530.329,
     "end_time": 4533.446,
     "content": "It doesn't say what they desire but there will be fresh fruits.",
@@ -9612,7 +9622,7 @@
   {
     "id": 14745,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 961,
+    "segment_index": 962,
     "start_time": 4534.776,
     "end_time": 4536.595,
     "content": "And it says,",
@@ -9622,7 +9632,7 @@
   {
     "id": 14746,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 962,
+    "segment_index": 963,
     "start_time": 4536.595,
     "end_time": 4537.93,
     "content": "[56:31]  And water to be poured.",
@@ -9632,7 +9642,7 @@
   {
     "id": 14747,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 963,
+    "segment_index": 964,
     "start_time": 4537.93,
     "end_time": 4541.805,
     "content": "which means poured, I guess, from them because it doesn't say that they will have servants.",
@@ -9642,7 +9652,7 @@
   {
     "id": 14748,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 964,
+    "segment_index": 965,
     "start_time": 4541.805,
     "end_time": 4544.47,
     "content": "So, that means a little bit more work for those people.",
@@ -9652,7 +9662,7 @@
   {
     "id": 14749,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 965,
+    "segment_index": 966,
     "start_time": 4545.256,
     "end_time": 4547.619,
     "content": "But they will be taken care of, basically.",
@@ -9662,7 +9672,7 @@
   {
     "id": 14750,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 966,
+    "segment_index": 967,
     "start_time": 4550.038,
     "end_time": 4552.038,
     "content": "I don't understand why it says here",
@@ -9672,7 +9682,7 @@
   {
     "id": 14751,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 967,
+    "segment_index": 968,
     "start_time": 4552.038,
     "end_time": 4554.885,
     "content": "[56:35]  We raise spouses for them.",
@@ -9682,7 +9692,7 @@
   {
     "id": 14752,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 968,
+    "segment_index": 969,
     "start_time": 4554.885,
     "end_time": 4559.364,
     "content": "But in the other one, it says that they will automatically have, like, you know, magnificent spouses.",
@@ -9692,7 +9702,7 @@
   {
     "id": 14753,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 969,
+    "segment_index": 970,
     "start_time": 4559.364,
     "end_time": 4561.848,
     "content": "What's the difference between raising spouses for the right...?",
@@ -9702,7 +9712,7 @@
   {
     "id": 14754,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 970,
+    "segment_index": 971,
     "start_time": 4561.848,
     "end_time": 4569.775,
     "content": "It's like, if you can go to the market and get a meal of corn, or you can put a seed in there and watch it grow until it's a tree of corn.",
@@ -9712,7 +9722,7 @@
   {
     "id": 14755,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 971,
+    "segment_index": 972,
     "start_time": 4570.377,
     "end_time": 4571.982,
     "content": "Oh, that is great.",
@@ -9722,7 +9732,7 @@
   {
     "id": 14756,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 972,
+    "segment_index": 973,
     "start_time": 4572.757,
     "end_time": 4573.938,
     "content": "I mean, it makes sense.",
@@ -9732,7 +9742,7 @@
   {
     "id": 14757,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 973,
+    "segment_index": 974,
     "start_time": 4574.18,
     "end_time": 4576.027,
     "content": "Yes, that's a little bit different.",
@@ -9742,7 +9752,7 @@
   {
     "id": 14758,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 974,
+    "segment_index": 975,
     "start_time": 4576.692,
     "end_time": 4577.994,
     "content": "That is great.",
@@ -9752,7 +9762,7 @@
   {
     "id": 14759,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 975,
+    "segment_index": 976,
     "start_time": 4589.666,
     "end_time": 4595.811,
     "content": "And here we have multitudes from the early generations and multitudes from the later generations,",
@@ -9762,7 +9772,7 @@
   {
     "id": 14760,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 976,
+    "segment_index": 977,
     "start_time": 4595.811,
     "end_time": 4602.54,
     "content": "which goes along with what you were just saying, that in the later generations that come after the people who went through all the",
@@ -9772,7 +9782,7 @@
   {
     "id": 14761,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 977,
+    "segment_index": 978,
     "start_time": 4602.54,
     "end_time": 4612.232,
     "content": "trouble and the hassles, the people laughing at them and mocking them, there will be a lot of people who will be, God willing, following the scripture.",
@@ -9782,7 +9792,7 @@
   {
     "id": 14762,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 978,
+    "segment_index": 979,
     "start_time": 4612.232,
     "end_time": 4619.675,
     "content": "The footnote says \"because all the humans who die as children will be assigned to the Lower Heaven, the proportion from each generation is about the same.",
@@ -9792,7 +9802,7 @@
   {
     "id": 14763,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 979,
+    "segment_index": 980,
     "start_time": 4619.675,
     "end_time": 4622.28,
     "content": "That also makes sense, of course.",
@@ -9802,7 +9812,7 @@
   {
     "id": 14764,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 980,
+    "segment_index": 981,
     "start_time": 4623.181,
     "end_time": 4632.769,
     "content": "So, we just know that, you know, multitudes from the early generations, that could be the people, you know, who,",
@@ -9812,7 +9822,7 @@
   {
     "id": 14765,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 981,
+    "segment_index": 982,
     "start_time": 4632.769,
     "end_time": 4633.31394117647,
     "content": "the younger, yeah,",
@@ -9822,7 +9832,7 @@
   {
     "id": 75159,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 982,
+    "segment_index": 983,
     "start_time": 4633.31394117647,
     "end_time": 4633.88915686275,
     "content": "Children, Children.",
@@ -9832,7 +9842,7 @@
   {
     "id": 14766,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 983,
+    "segment_index": 984,
     "start_time": 4634.313,
     "end_time": 4644.357,
     "content": "the ones who died before the age of 40, because in the earlier generations, they died at a young age, and then the multitudes from the later generations could be the ones, all the people who follow us.",
@@ -9842,7 +9852,7 @@
   {
     "id": 14767,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 984,
+    "segment_index": 985,
     "start_time": 4644.833,
     "end_time": 4655.57,
     "content": "But because this happens all the time, no matter what is happening, it could be Abraham's generation, or Muhammad's generation, all the generations, but still, children die in accidents,",
@@ -9852,7 +9862,7 @@
   {
     "id": 14768,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 985,
+    "segment_index": 986,
     "start_time": 4655.57,
     "end_time": 4658.263,
     "content": "people die before 40. So, this is happening continuously.",
@@ -9862,7 +9872,7 @@
   {
     "id": 14769,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 986,
+    "segment_index": 987,
     "start_time": 4659.956,
     "end_time": 4663.59381818182,
     "content": "(unintelligible)",
@@ -9872,7 +9882,7 @@
   {
     "id": 75160,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 987,
+    "segment_index": 988,
     "start_time": 4663.59381818182,
     "end_time": 4664.27590909091,
     "content": "No.",
@@ -9882,7 +9892,7 @@
   {
     "id": 14770,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 988,
+    "segment_index": 989,
     "start_time": 4667.459,
     "end_time": 4670.00437142857,
     "content": "(unintelligible)",
@@ -9892,7 +9902,7 @@
   {
     "id": 75161,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 989,
+    "segment_index": 990,
     "start_time": 4670.00437142857,
     "end_time": 4670.7998,
     "content": "Yeah.",
@@ -9902,7 +9912,7 @@
   {
     "id": 14771,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 990,
+    "segment_index": 991,
     "start_time": 4673.027,
     "end_time": 4674.39,
     "content": "So, 40 is there.",
@@ -9912,7 +9922,7 @@
   {
     "id": 14772,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 991,
+    "segment_index": 992,
     "start_time": 4678.58,
     "end_time": 4681.818,
     "content": "Yeah. Any questions about the Lower Heaven?",
@@ -9922,7 +9932,7 @@
   {
     "id": 14773,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 992,
+    "segment_index": 993,
     "start_time": 4683.818,
     "end_time": 4684.79,
     "content": "How?",
@@ -9932,7 +9942,7 @@
   {
     "id": 14774,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 993,
+    "segment_index": 994,
     "start_time": 4687.511,
     "end_time": 4688.664,
     "content": "41.",
@@ -9942,7 +9952,7 @@
   {
     "id": 14775,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 994,
+    "segment_index": 995,
     "start_time": 4689.087,
     "end_time": 4690.784,
     "content": "Hell goes right after 41!",
@@ -9952,7 +9962,7 @@
   {
     "id": 14776,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 995,
+    "segment_index": 996,
     "start_time": 4691.389,
     "end_time": 4692.542,
     "content": "Wait, what?",
@@ -9962,7 +9972,7 @@
   {
     "id": 14777,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 996,
+    "segment_index": 997,
     "start_time": 4695,
     "end_time": 4696.516,
     "content": "It's 41!",
@@ -9972,7 +9982,7 @@
   {
     "id": 14778,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 997,
+    "segment_index": 998,
     "start_time": 4696.516,
     "end_time": 4696.8257027027,
     "content": "My God.",
@@ -9982,7 +9992,7 @@
   {
     "id": 76969,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 998,
+    "segment_index": 999,
     "start_time": 4696.8257027027,
     "end_time": 4697.53359459459,
     "content": "Yes. Oh, my God.",
@@ -9992,7 +10002,7 @@
   {
     "id": 14779,
     "media_id": "f31d80f8-dac6-4fd0-a8e4-c96b84aba01b",
-    "segment_index": 999,
+    "segment_index": 1000,
     "start_time": 4698.153,
     "end_time": 4698.943,
     "content": "Yeah.",

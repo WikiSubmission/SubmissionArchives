@@ -1,0 +1,10 @@
+{
+  "totalDocuments": 64,
+  "totalWords": 2105,
+  "totalTrigrams": 2249,
+  "indexSize": "0.22MB",
+  "contentSize": "0.06MB",
+  "buildDate": "2026-01-09T06:24:19.002Z",
+  "averageWordsPerDocument": 33,
+  "compressionRatio": "2.8%"
+}

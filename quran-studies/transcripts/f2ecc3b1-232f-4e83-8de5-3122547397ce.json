@@ -6560,19 +6560,29 @@
     "search_vector": "'take':1"
   },
   {
-    "id": 28569,
+    "id": "28569_part_0",
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
     "segment_index": 656,
     "start_time": 2630.909,
-    "end_time": 2633.21823913043,
-    "content": "You can take usury. Parivash: two of...take, not that people who give.",
+    "end_time": 2631.67874637681,
+    "content": "You can take usury. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'give':13 'parivash':5 'peopl':11 'take':3,8 'two':6 'usuri':4"
+  },
+  {
+    "id": "28569_part_1",
+    "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
+    "segment_index": 657,
+    "start_time": 2631.67874637681,
+    "end_time": 2633.21823913043,
+    "content": "two of...take, not that people who give.",
+    "speaker": "Parivash",
     "search_vector": "'give':13 'parivash':5 'peopl':11 'take':3,8 'two':6 'usuri':4"
   },
   {
     "id": 76114,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 657,
+    "segment_index": 658,
     "start_time": 2633.21823913043,
     "end_time": 2633.48215217391,
     "content": "Give it.",
@@ -6582,7 +6592,7 @@
   {
     "id": 28570,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 658,
+    "segment_index": 659,
     "start_time": 2633.944,
     "end_time": 2635.944,
     "content": "If you have to give it, it's not a sin.",
@@ -6592,7 +6602,7 @@
   {
     "id": 28571,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 659,
+    "segment_index": 660,
     "start_time": 2636.254,
     "end_time": 2637.634,
     "content": "You have to give it to the victim.",
@@ -6602,7 +6612,7 @@
   {
     "id": 28572,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 660,
+    "segment_index": 661,
     "start_time": 2637.944,
     "end_time": 2639.67875,
     "content": "The victim has a sin if...?",
@@ -6612,7 +6622,7 @@
   {
     "id": 76115,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 661,
+    "segment_index": 662,
     "start_time": 2639.67875,
     "end_time": 2639.8715,
     "content": "No.",
@@ -6622,7 +6632,7 @@
   {
     "id": 28573,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 662,
+    "segment_index": 663,
     "start_time": 2640.771,
     "end_time": 2640.95281818182,
     "content": "No.",
@@ -6632,7 +6642,7 @@
   {
     "id": 77185,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 663,
+    "segment_index": 664,
     "start_time": 2640.95281818182,
     "end_time": 2641.92251515152,
     "content": "They are victim.",
@@ -6642,7 +6652,7 @@
   {
     "id": 28574,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 664,
+    "segment_index": 665,
     "start_time": 2643.03,
     "end_time": 2645.495,
     "content": "Parivash (Speaking Farsi): The only person (unintelligible).",
@@ -6652,7 +6662,7 @@
   {
     "id": 28575,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 665,
+    "segment_index": 666,
     "start_time": 2646.219,
     "end_time": 2649.27716176471,
     "content": "In usury, the definition of usury is there is a victim.",
@@ -6662,7 +6672,7 @@
   {
     "id": 76116,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 666,
+    "segment_index": 667,
     "start_time": 2649.27716176471,
     "end_time": 2649.55517647059,
     "content": "Yeah.",
@@ -6672,7 +6682,7 @@
   {
     "id": 28576,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 667,
+    "segment_index": 668,
     "start_time": 2650,
     "end_time": 2654.068,
     "content": "Wherever there's a victim, there is a sin. Ok. This is the general law.",
@@ -6682,7 +6692,7 @@
   {
     "id": 28577,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 668,
+    "segment_index": 669,
     "start_time": 2655.05,
     "end_time": 2658.343,
     "content": "If you think of all the sins, there is a, there is a victim.",
@@ -6692,7 +6702,7 @@
   {
     "id": 28578,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 669,
+    "segment_index": 670,
     "start_time": 2659.377,
     "end_time": 2663.083,
     "content": "If there's no victim, generally, if there's no victim, there is no sin.",
@@ -6702,7 +6712,7 @@
   {
     "id": 28579,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 670,
+    "segment_index": 671,
     "start_time": 2663.6,
     "end_time": 2667.409,
     "content": "So in usury, there is a victim. Somebody's taken advantage of.",
@@ -6712,7 +6722,7 @@
   {
     "id": 28580,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 671,
+    "segment_index": 672,
     "start_time": 2667.409,
     "end_time": 2672.511,
     "content": "They arrest you and they say \"you can't leave this place unless you pay 1000 dollar bond.\"",
@@ -6722,7 +6732,7 @@
   {
     "id": 28581,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 672,
+    "segment_index": 673,
     "start_time": 2673.235,
     "end_time": 2678.958,
     "content": "So, I go to you and say \"I'll give you 1000 dollars but you pay me back 1500 or 2000.\"",
@@ -6732,7 +6742,7 @@
   {
     "id": 28582,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 673,
+    "segment_index": 674,
     "start_time": 2679.217,
     "end_time": 2685.302,
     "content": "You say \"yes, yes, please, get me out of here.\" So, I'm taking advantage of your misfortune.",
@@ -6742,7 +6752,7 @@
   {
     "id": 28583,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 674,
+    "segment_index": 675,
     "start_time": 2686.491,
     "end_time": 2693.196,
     "content": "And you're forced to, because you don't wanna go and be a captive. So, there's a victim.",
@@ -6752,7 +6762,7 @@
   {
     "id": 28584,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 675,
+    "segment_index": 676,
     "start_time": 2693.868,
     "end_time": 2701.4,
     "content": "But when you go put your money in the bank and they give you interest, the bank is happy, you're happy. And that is not usury.",
@@ -6762,7 +6772,7 @@
   {
     "id": 28585,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 676,
+    "segment_index": 677,
     "start_time": 2703.83,
     "end_time": 2708.157,
     "content": "You take your money and they invest it and make more money and they give you a part of it. That's what they're doing.",
@@ -6772,7 +6782,7 @@
   {
     "id": 28586,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 677,
+    "segment_index": 678,
     "start_time": 2709.243,
     "end_time": 2711.72710169492,
     "content": "So, all these CDs (Certificate of Deposit) and all these things, what happens?",
@@ -6782,7 +6792,7 @@
   {
     "id": 76117,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 678,
+    "segment_index": 679,
     "start_time": 2711.72710169492,
     "end_time": 2712.55513559322,
     "content": "They're perfectly alright.",
@@ -6792,7 +6802,7 @@
   {
     "id": 28587,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 679,
+    "segment_index": 680,
     "start_time": 2714.759,
     "end_time": 2720.999,
     "content": "There are some people who cannot... I realized this one. They're so old people, who they don't have the energy",
@@ -6802,7 +6812,7 @@
   {
     "id": 28588,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 680,
+    "segment_index": 681,
     "start_time": 2720.999,
     "end_time": 2727.394,
     "content": "or the knowledge to go and invest their money in the market. So, what they're doing, they give it to, put it in a CD.",
@@ -6812,7 +6822,7 @@
   {
     "id": 28589,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 681,
+    "segment_index": 682,
     "start_time": 2727.394,
     "end_time": 2733.065,
     "content": "And the Servants Association or the bank, they go and invest the money, they have the energy, the employees, the knowledge,",
@@ -6822,7 +6832,7 @@
   {
     "id": 28590,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 682,
+    "segment_index": 683,
     "start_time": 2733.065,
     "end_time": 2739.667,
     "content": "and they go invest the money and make 20 dollars and give the guy 10 dollars and keep 10 for themselves.",
@@ -6832,7 +6842,7 @@
   {
     "id": 28591,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 683,
+    "segment_index": 684,
     "start_time": 2739.667,
     "end_time": 2744.408,
     "content": "But the banks are causing (unintelligible).",
@@ -6842,7 +6852,7 @@
   {
     "id": 28592,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 684,
+    "segment_index": 685,
     "start_time": 2745.184,
     "end_time": 2745.995,
     "content": "How?",
@@ -6852,7 +6862,7 @@
   {
     "id": 28593,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 685,
+    "segment_index": 686,
     "start_time": 2745.995,
     "end_time": 2748.305,
     "content": "How? Citibank",
@@ -6862,7 +6872,7 @@
   {
     "id": 28594,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 686,
+    "segment_index": 687,
     "start_time": 2748.305,
     "end_time": 2748.805,
     "content": "Yeah.",
@@ -6872,7 +6882,7 @@
   {
     "id": 28595,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 687,
+    "segment_index": 688,
     "start_time": 2748.805,
     "end_time": 2751.994,
     "content": "charges 20 percent interest on the Visa and all other cards.",
@@ -6882,7 +6892,7 @@
   {
     "id": 28596,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 688,
+    "segment_index": 689,
     "start_time": 2751.994,
     "end_time": 2756.786,
     "content": "No, but you don't have to use your Visa card. Do you have to use your Visa card?",
@@ -6892,7 +6902,7 @@
   {
     "id": 28597,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 689,
+    "segment_index": 690,
     "start_time": 2756.786,
     "end_time": 2757.33919148936,
     "content": "Do I have to?",
@@ -6902,7 +6912,7 @@
   {
     "id": 76118,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 690,
+    "segment_index": 691,
     "start_time": 2757.33919148936,
     "end_time": 2757.50940425532,
     "content": "Some people do. Yes.",
@@ -6912,7 +6922,7 @@
   {
     "id": 28598,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 691,
+    "segment_index": 692,
     "start_time": 2759.096,
     "end_time": 2760,
     "content": "No, they don't.",
@@ -6922,7 +6932,7 @@
   {
     "id": 28599,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 692,
+    "segment_index": 693,
     "start_time": 2760,
     "end_time": 2761.173,
     "content": "(unintelligible)",
@@ -6932,7 +6942,7 @@
   {
     "id": 28600,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 693,
+    "segment_index": 694,
     "start_time": 2761.173,
     "end_time": 2766.792,
     "content": "I mean, you don't have to do anything. You don't have to eat, if you want to, but there are a lot of people who use these cards and get in a lot of trouble.",
@@ -6942,7 +6952,7 @@
   {
     "id": 28601,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 694,
+    "segment_index": 695,
     "start_time": 2767.125,
     "end_time": 2770.35,
     "content": "No, they abuse those cards. That's a (unintelligible).",
@@ -6952,7 +6962,7 @@
   {
     "id": 28602,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 695,
+    "segment_index": 696,
     "start_time": 2771.642,
     "end_time": 2774.031,
     "content": "I tell them \"tear them up.\"",
@@ -6962,7 +6972,7 @@
   {
     "id": 28603,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 696,
+    "segment_index": 697,
     "start_time": 2777.754,
     "end_time": 2784.373,
     "content": "On the same line, we were discussing about the, like, the situation in Iran, that",
@@ -6972,7 +6982,7 @@
   {
     "id": 28604,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 697,
+    "segment_index": 698,
     "start_time": 2784.373,
     "end_time": 2790.59,
     "content": "right now, because a lot of people are desperate to get out or maybe do something or maybe they're sick and trying to go to the hospital.",
@@ -6982,7 +6992,7 @@
   {
     "id": 28605,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 698,
+    "segment_index": 699,
     "start_time": 2790.59,
     "end_time": 2792.897,
     "content": "Because they need, they need dollars.",
@@ -6992,7 +7002,7 @@
   {
     "id": 28606,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 699,
+    "segment_index": 700,
     "start_time": 2793.467,
     "end_time": 2801.395,
     "content": "And a lot of people, I think, take advantage. They have millions of dollars here, so they spend 100 dollars there to get hundreds of thousands of their money.",
@@ -7002,7 +7012,7 @@
   {
     "id": 28607,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 700,
+    "segment_index": 701,
     "start_time": 2801.741,
     "end_time": 2808.475,
     "content": "I thought that if you're doing it for profit, if you have to go there and need to exchange",
@@ -7012,7 +7022,7 @@
   {
     "id": 28608,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 701,
+    "segment_index": 702,
     "start_time": 2808.475,
     "end_time": 2812.44,
     "content": "and then you give 100 dollars to get 10,000 dollars, it might be okay.",
@@ -7022,7 +7032,7 @@
   {
     "id": 28609,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 702,
+    "segment_index": 703,
     "start_time": 2812.44,
     "end_time": 2817.956,
     "content": "But if you're doing it to make a profit of their misfortune, I thought it probably would be sinful.",
@@ -7032,7 +7042,7 @@
   {
     "id": 28610,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 703,
+    "segment_index": 704,
     "start_time": 2817.956,
     "end_time": 2818.457,
     "content": "Yes.",
@@ -7042,7 +7052,7 @@
   {
     "id": 28611,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 704,
+    "segment_index": 705,
     "start_time": 2819.75,
     "end_time": 2823.249,
     "content": "Anytime you're taking advantage of a situation in an unfair manner.",
@@ -7052,7 +7062,7 @@
   {
     "id": 28612,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 705,
+    "segment_index": 706,
     "start_time": 2824.386,
     "end_time": 2828.609,
     "content": "And the Quran talks about earning illicitly, a lot.",
@@ -7062,7 +7072,7 @@
   {
     "id": 28613,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 706,
+    "segment_index": 707,
     "start_time": 2829.54,
     "end_time": 2832.781,
     "content": "Surely, there are people here who have dollars, they would, they wait.",
@@ -7072,7 +7082,7 @@
   {
     "id": 28614,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 707,
+    "segment_index": 708,
     "start_time": 2833.608,
     "end_time": 2838.038,
     "content": "Normally, in Rial, it's about 7 Toman is 1 dollar.",
@@ -7082,7 +7092,7 @@
   {
     "id": 28615,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 708,
+    "segment_index": 709,
     "start_time": 2838.038,
     "end_time": 2840.607,
     "content": "Now, it's something like 100 or 150.",
@@ -7092,7 +7102,7 @@
   {
     "id": 28616,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 709,
+    "segment_index": 710,
     "start_time": 2840.607,
     "end_time": 2845.399,
     "content": "So, those people who have dollars here, they just spend it there because they know eventually it's will change.",
@@ -7102,7 +7112,7 @@
   {
     "id": 28617,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 710,
+    "segment_index": 711,
     "start_time": 2845.399,
     "end_time": 2853.345,
     "content": "So, that's... I think, but if, like, Azar wants to go to Iran, she needs the Iranian money, so it's okay to exchange it",
@@ -7112,7 +7122,7 @@
   {
     "id": 28618,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 711,
+    "segment_index": 712,
     "start_time": 2853.345,
     "end_time": 2857.672,
     "content": "to whatever the market bears and gets the money going there.",
@@ -7122,7 +7132,7 @@
   {
     "id": 28619,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 712,
+    "segment_index": 713,
     "start_time": 2858.189,
     "end_time": 2863.756,
     "content": "But this is actually the value of the Iranian Dinar, is it or Rial?",
@@ -7132,7 +7142,7 @@
   {
     "id": 28620,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 713,
+    "segment_index": 714,
     "start_time": 2863.756,
     "end_time": 2863.924,
     "content": "Rial",
@@ -7142,7 +7152,7 @@
   {
     "id": 77186,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 714,
+    "segment_index": 715,
     "start_time": 2863.924,
     "end_time": 2864.134,
     "content": "Rial.",
@@ -7152,7 +7162,7 @@
   {
     "id": 28621,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 715,
+    "segment_index": 716,
     "start_time": 2864.981,
     "end_time": 2870,
     "content": "In Egypt, the same thing. It's... So, there's inflation in those countries and their monies are not worth anything.",
@@ -7162,7 +7172,7 @@
   {
     "id": 28622,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 716,
+    "segment_index": 717,
     "start_time": 2871.293,
     "end_time": 2874.43,
     "content": "That probably is a fair rate of exchange.",
@@ -7172,7 +7182,7 @@
   {
     "id": 28623,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 717,
+    "segment_index": 718,
     "start_time": 2874.43,
     "end_time": 2876.5973220339,
     "content": "But, basically, people are mutilated.",
@@ -7182,7 +7192,7 @@
   {
     "id": 76119,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 718,
+    "segment_index": 719,
     "start_time": 2876.5973220339,
     "end_time": 2876.89020338983,
     "content": "A lot of people are mutilated. They are taking the advantage. Sure.",
@@ -7192,7 +7202,7 @@
   {
     "id": 28624,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 719,
+    "segment_index": 720,
     "start_time": 2881.342,
     "end_time": 2886.289,
     "content": "Like (unintelligible)",
@@ -7202,7 +7212,7 @@
   {
     "id": 28625,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 720,
+    "segment_index": 721,
     "start_time": 2886.651,
     "end_time": 2892.174,
     "content": "A very famous scholar, with lots and lots of books, who died about 200 years ago.",
@@ -7212,7 +7222,7 @@
   {
     "id": 28626,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 721,
+    "segment_index": 722,
     "start_time": 2892.898,
     "end_time": 2894.639,
     "content": "So, I said \"how did that happen?\"",
@@ -7222,7 +7232,7 @@
   {
     "id": 28627,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 722,
+    "segment_index": 723,
     "start_time": 2895.208,
     "end_time": 2906.101,
     "content": "He said \"My wife was very ill one time, and I was sitting next to her one time, and then all of a sudden, she was speaking perfect Arabic.",
@@ -7232,7 +7242,7 @@
   {
     "id": 28628,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 723,
+    "segment_index": 724,
     "start_time": 2906.101,
     "end_time": 2908.98,
     "content": "So, I said \"What is this? Who are you?\"",
@@ -7242,7 +7252,7 @@
   {
     "id": 28629,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 724,
+    "segment_index": 725,
     "start_time": 2908.98,
     "end_time": 2910.98,
     "content": "And she said \"I'm Jamal al-Din al-Afghani.\"",
@@ -7252,7 +7262,7 @@
   {
     "id": 28630,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 725,
+    "segment_index": 726,
     "start_time": 2913.203,
     "end_time": 2914.531,
     "content": "He said \"oh, yeah?\"",
@@ -7262,7 +7272,7 @@
   {
     "id": 28631,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 726,
+    "segment_index": 727,
     "start_time": 2914.531,
     "end_time": 2916.841,
     "content": "So, he asked questions on religion.",
@@ -7272,7 +7282,7 @@
   {
     "id": 28632,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 727,
+    "segment_index": 728,
     "start_time": 2916.841,
     "end_time": 2918.841,
     "content": "He said \"okay, what is the meaning of Alif-Laam Meem?\"",
@@ -7282,7 +7292,7 @@
   {
     "id": 28633,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 728,
+    "segment_index": 729,
     "start_time": 2920,
     "end_time": 2927.636,
     "content": "And sure enough, this jinn of Jamal al-Din al-Afghani told him his views of Alif Laam Meem, which are written in books anyway.",
@@ -7292,7 +7302,7 @@
   {
     "id": 28634,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 729,
+    "segment_index": 730,
     "start_time": 2928.98,
     "end_time": 2934.289,
     "content": "So in fact, he was giving a Khutba on this when I asked him about why did you say this.",
@@ -7302,7 +7312,7 @@
   {
     "id": 28635,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 730,
+    "segment_index": 731,
     "start_time": 2936.512,
     "end_time": 2943.682,
     "content": "So, he believed that Jamal al-Din al-Afghani, his soul was coming through his wife.",
@@ -7312,7 +7322,7 @@
   {
     "id": 28636,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 731,
+    "segment_index": 732,
     "start_time": 2943.682,
     "end_time": 2948.215,
     "content": "And I told him \"Of course, the Quran says 'the soul is gone', and so this must be the jinn of Jamal al-Din al-Afghani.\"",
@@ -7322,7 +7332,7 @@
   {
     "id": 28637,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 732,
+    "segment_index": 733,
     "start_time": 2948.215,
     "end_time": 2952.49,
     "content": "So, he ask \"are you Jamal al-Din al-Afghani or his jinn, his companion?\"",
@@ -7332,7 +7342,7 @@
   {
     "id": 28638,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 733,
+    "segment_index": 734,
     "start_time": 2952.904,
     "end_time": 2954.46569014085,
     "content": "And they usually tell the truth. They don't lie.",
@@ -7342,7 +7352,7 @@
   {
     "id": 76120,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 734,
+    "segment_index": 735,
     "start_time": 2954.46569014085,
     "end_time": 2954.88864788732,
     "content": "That's right.",
@@ -7352,7 +7362,7 @@
   {
     "id": 28639,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 735,
+    "segment_index": 736,
     "start_time": 2956.196,
     "end_time": 2960.471,
     "content": "And sure enough, he asked and they said \"yeah, I'm his companion.\"",
@@ -7362,7 +7372,7 @@
   {
     "id": 28640,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 736,
+    "segment_index": 737,
     "start_time": 2960.936,
     "end_time": 2962.004,
     "content": "So, when we die...",
@@ -7372,7 +7382,7 @@
   {
     "id": 28641,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 737,
+    "segment_index": 738,
     "start_time": 2962.004,
     "end_time": 2965.599,
     "content": "So, he was teaching him these Khutbas regularly.",
@@ -7382,7 +7392,7 @@
   {
     "id": 28642,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 738,
+    "segment_index": 739,
     "start_time": 2966.375,
     "end_time": 2973.39,
     "content": "So, like the artists that Mehri is talking about, I believe it because of this scholar",
@@ -7392,7 +7402,7 @@
   {
     "id": 28643,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 739,
+    "segment_index": 740,
     "start_time": 2973.39,
     "end_time": 2981.413,
     "content": "who, whose jinn came to the wife of, and here in Tempe, out of all places, Tempe, Arizona.",
@@ -7402,7 +7412,7 @@
   {
     "id": 28644,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 740,
+    "segment_index": 741,
     "start_time": 2981.672,
     "end_time": 2984.344,
     "content": "It's a, it's a little suburb of Phoenix.",
@@ -7412,7 +7422,7 @@
   {
     "id": 28645,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 741,
+    "segment_index": 742,
     "start_time": 2985.585,
     "end_time": 2991.256,
     "content": "And was teaching him exactly the same views as Jamal al-Din al-Afghani, because your jinn is identical to you.",
@@ -7422,7 +7432,7 @@
   {
     "id": 28646,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 742,
+    "segment_index": 743,
     "start_time": 2992.549,
     "end_time": 2995.376,
     "content": "The other Azhar Khan is just a good accountant as you are.",
@@ -7432,7 +7442,7 @@
   {
     "id": 28647,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 743,
+    "segment_index": 744,
     "start_time": 2995.841,
     "end_time": 2997.065,
     "content": "With the same knowledge and all that.",
@@ -7442,7 +7452,7 @@
   {
     "id": 28648,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 744,
+    "segment_index": 745,
     "start_time": 2997.065,
     "end_time": 2999.065,
     "content": "Exactly, identical. Yeah.",
@@ -7452,7 +7462,7 @@
   {
     "id": 28649,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 745,
+    "segment_index": 746,
     "start_time": 2999.427,
     "end_time": 3005.46,
     "content": "He knows your parents, your schoolmates, your, your accounting techniques, managerial skills.",
@@ -7460,19 +7470,29 @@
     "search_vector": "'account':9 'know':2 'manageri':11 'parent':4 'schoolmat':6 'skill':12 'techniqu':10"
   },
   {
-    "id": 28650,
+    "id": "28650_part_0",
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 746,
+    "segment_index": 747,
     "start_time": 3007.735,
-    "end_time": 3009.373,
-    "content": "Yeah. Azhar Khan: He's not a CPI.",
+    "end_time": 3008.203,
+    "content": "Yeah. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'azhar':2 'cpi':8 'khan':3 'yeah':1"
+  },
+  {
+    "id": "28650_part_1",
+    "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
+    "segment_index": 748,
+    "start_time": 3008.203,
+    "end_time": 3009.373,
+    "content": "He's not a CPI.",
+    "speaker": "Azhar Khan",
     "search_vector": "'azhar':2 'cpi':8 'khan':3 'yeah':1"
   },
   {
     "id": 28651,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 747,
+    "segment_index": 749,
     "start_time": 3009.373,
     "end_time": 3010.339,
     "content": "Yes.",
@@ -7482,7 +7502,7 @@
   {
     "id": 28652,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 748,
+    "segment_index": 750,
     "start_time": 3011.528,
     "end_time": 3013.09262162162,
     "content": "And Sahrukh's jinn is probably a great singer.",
@@ -7492,7 +7512,7 @@
   {
     "id": 76121,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 749,
+    "segment_index": 751,
     "start_time": 3013.09262162162,
     "end_time": 3013.77289189189,
     "content": "You can blame him...",
@@ -7502,7 +7522,7 @@
   {
     "id": 28653,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 750,
+    "segment_index": 752,
     "start_time": 3015.699,
     "end_time": 3017.544,
     "content": "You can blame him when he did something wrong.",
@@ -7512,7 +7532,7 @@
   {
     "id": 28654,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 751,
+    "segment_index": 753,
     "start_time": 3017.544,
     "end_time": 3019.544,
     "content": "But when we die, what happens to our jinn?",
@@ -7522,7 +7542,7 @@
   {
     "id": 28655,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 752,
+    "segment_index": 754,
     "start_time": 3019.544,
     "end_time": 3021.803,
     "content": "They don't have anything to our new system.",
@@ -7532,7 +7552,7 @@
   {
     "id": 28656,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 753,
+    "segment_index": 755,
     "start_time": 3022.423,
     "end_time": 3022.58777777778,
     "content": "Yeah.",
@@ -7542,7 +7562,7 @@
   {
     "id": 77187,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 754,
+    "segment_index": 756,
     "start_time": 3022.58777777778,
     "end_time": 3023.44462222222,
     "content": "Oh, that's what you think.",
@@ -7552,7 +7572,7 @@
   {
     "id": 28657,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 755,
+    "segment_index": 757,
     "start_time": 3025.906,
     "end_time": 3027.13,
     "content": "It's just, you know.",
@@ -7562,7 +7582,7 @@
   {
     "id": 28658,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 756,
+    "segment_index": 758,
     "start_time": 3027.13,
     "end_time": 3033.266,
     "content": "Are you kidding? They can travel throughout this universe at speeds much greater than the speed of light.",
@@ -7572,7 +7592,7 @@
   {
     "id": 28659,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 757,
+    "segment_index": 759,
     "start_time": 3034.3,
     "end_time": 3037.489,
     "content": "I mean, they'll be silly to stay and stick around this little planet Earth.",
@@ -7582,7 +7602,7 @@
   {
     "id": 28660,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 758,
+    "segment_index": 760,
     "start_time": 3037.971,
     "end_time": 3038.471,
     "content": "Huh?",
@@ -7592,7 +7612,7 @@
   {
     "id": 28661,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 759,
+    "segment_index": 761,
     "start_time": 3038.471,
     "end_time": 3040.471,
     "content": "They don't have anybody to deceive, I mean.",
@@ -7602,7 +7622,7 @@
   {
     "id": 28662,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 760,
+    "segment_index": 762,
     "start_time": 3040.885,
     "end_time": 3043.919,
     "content": "They have themselves, and they deceive a lot of humans, also.",
@@ -7612,7 +7632,7 @@
   {
     "id": 28663,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 761,
+    "segment_index": 763,
     "start_time": 3043.919,
     "end_time": 3044.471,
     "content": "Oh.",
@@ -7622,7 +7642,7 @@
   {
     "id": 28664,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 762,
+    "segment_index": 764,
     "start_time": 3045.04,
     "end_time": 3047.402,
     "content": "Can they interfere with somebody else's jinn?",
@@ -7632,7 +7652,7 @@
   {
     "id": 28665,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 763,
+    "segment_index": 765,
     "start_time": 3047.867,
     "end_time": 3048.678,
     "content": "Yeah.",
@@ -7642,7 +7662,7 @@
   {
     "id": 28666,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 764,
+    "segment_index": 766,
     "start_time": 3050.436,
     "end_time": 3052.85,
     "content": "Yeah. They make a pact, you know.",
@@ -7652,7 +7672,7 @@
   {
     "id": 28667,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 765,
+    "segment_index": 767,
     "start_time": 3053.884,
     "end_time": 3057.642,
     "content": "Because your jinn is trapped like you are, in your body.",
@@ -7662,7 +7682,7 @@
   {
     "id": 28668,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 766,
+    "segment_index": 768,
     "start_time": 3062.45,
     "end_time": 3066.88,
     "content": "It is, oh, everything about the jinns is very clear in the Quran. It's very clear.",
@@ -7672,7 +7692,7 @@
   {
     "id": 28669,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 767,
+    "segment_index": 769,
     "start_time": 3069.569,
     "end_time": 3076.584,
     "content": "Actually, Quran is the only religious book that talks about other creatures besides God.",
@@ -7682,7 +7702,7 @@
   {
     "id": 28670,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 768,
+    "segment_index": 770,
     "start_time": 3076.584,
     "end_time": 3078.067,
     "content": "No, no, the Bible talks about them.",
@@ -7692,7 +7712,7 @@
   {
     "id": 28671,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 769,
+    "segment_index": 771,
     "start_time": 3078.067,
     "end_time": 3078.981,
     "content": "Angels.",
@@ -7702,7 +7722,7 @@
   {
     "id": 28672,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 770,
+    "segment_index": 772,
     "start_time": 3078.981,
     "end_time": 3080.567,
     "content": "No, no, no, as well as demons.",
@@ -7712,7 +7732,7 @@
   {
     "id": 28673,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 771,
+    "segment_index": 773,
     "start_time": 3081.498,
     "end_time": 3083.084,
     "content": "That's in the Gospels.",
@@ -7722,7 +7742,7 @@
   {
     "id": 28674,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 772,
+    "segment_index": 774,
     "start_time": 3083.394,
     "end_time": 3086.324,
     "content": "(unintelligible), you wanna go in a corner Pray?",
@@ -7732,7 +7752,7 @@
   {
     "id": 28675,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 773,
+    "segment_index": 775,
     "start_time": 3086.324,
     "end_time": 3088.37331034483,
     "content": "I mean, this record sometimes, just",
@@ -7742,7 +7762,7 @@
   {
     "id": 76122,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 774,
+    "segment_index": 776,
     "start_time": 3088.37331034483,
     "end_time": 3088.90027586207,
     "content": "Yeah. Ok.",
@@ -7752,7 +7772,7 @@
   {
     "id": 28676,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 775,
+    "segment_index": 777,
     "start_time": 3089.72,
     "end_time": 3090.45947826087,
     "content": "(unintelligible)",
@@ -7762,7 +7782,7 @@
   {
     "id": 76123,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 776,
+    "segment_index": 778,
     "start_time": 3090.45947826087,
     "end_time": 3092.26195652174,
     "content": "Let's, let's put it in practical terms.",
@@ -7772,7 +7792,7 @@
   {
     "id": 28677,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 777,
+    "segment_index": 779,
     "start_time": 3092.909,
     "end_time": 3093.47031764706,
     "content": "(unintelligible)",
@@ -7782,7 +7802,7 @@
   {
     "id": 76124,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 778,
+    "segment_index": 780,
     "start_time": 3093.47031764706,
     "end_time": 3095.39984705882,
     "content": "Ok. Let's put it in practical terms. Where will you go?",
@@ -7792,7 +7812,7 @@
   {
     "id": 28678,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 779,
+    "segment_index": 781,
     "start_time": 3096.977,
     "end_time": 3101.252,
     "content": "I don't know. There's a lot of villages and towns throughout the world.",
@@ -7802,7 +7822,7 @@
   {
     "id": 28679,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 780,
+    "segment_index": 782,
     "start_time": 3101.252,
     "end_time": 3102.162,
     "content": "Okay, just pick out a place.",
@@ -7812,7 +7832,7 @@
   {
     "id": 76125,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 781,
+    "segment_index": 783,
     "start_time": 3102.162,
     "end_time": 3102.682,
     "content": "(unintelligible)",
@@ -7822,7 +7842,7 @@
   {
     "id": 28680,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 782,
+    "segment_index": 784,
     "start_time": 3102.942,
     "end_time": 3105.407,
     "content": "Iran, there's 10 people living in a city and...",
@@ -7832,7 +7852,7 @@
   {
     "id": 28681,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 783,
+    "segment_index": 785,
     "start_time": 3105.407,
     "end_time": 3107.252,
     "content": "Alright, let's go. You went to a village in Iran.",
@@ -7842,7 +7862,7 @@
   {
     "id": 28682,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 784,
+    "segment_index": 786,
     "start_time": 3107.252,
     "end_time": 3108.632,
     "content": "Take a room, and then...",
@@ -7852,7 +7872,7 @@
   {
     "id": 28683,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 785,
+    "segment_index": 787,
     "start_time": 3108.632,
     "end_time": 3109.61329090909,
     "content": "Okay, and you sat in this room.",
@@ -7862,7 +7882,7 @@
   {
     "id": 76126,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 786,
+    "segment_index": 788,
     "start_time": 3109.61329090909,
     "end_time": 3110.11976363636,
     "content": "(unintelligible)",
@@ -7872,7 +7892,7 @@
   {
     "id": 28684,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 787,
+    "segment_index": 789,
     "start_time": 3111.045,
     "end_time": 3111.24076271186,
     "content": "Fine.",
@@ -7882,7 +7902,7 @@
   {
     "id": 77188,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 788,
+    "segment_index": 790,
     "start_time": 3111.24076271186,
     "end_time": 3113.04177966102,
     "content": "1000 dollars and live for the rest of my life.",
@@ -7892,7 +7912,7 @@
   {
     "id": 28685,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 789,
+    "segment_index": 791,
     "start_time": 3113.355,
     "end_time": 3115.923,
     "content": "Very good. Okay, let's put it practically, okay?",
@@ -7902,7 +7922,7 @@
   {
     "id": 28686,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 790,
+    "segment_index": 792,
     "start_time": 3115.923,
     "end_time": 3121.49,
     "content": "Let's, let's pick out a village in Iran that has 100 people, and you found the room, right?",
@@ -7912,7 +7932,7 @@
   {
     "id": 28687,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 791,
+    "segment_index": 793,
     "start_time": 3121.904,
     "end_time": 3127.058,
     "content": "You went in that room, and you sat there at Fajr, and you read the Quran, and you Prayed the Morning.",
@@ -7922,7 +7942,7 @@
   {
     "id": 28688,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 792,
+    "segment_index": 794,
     "start_time": 3127.885,
     "end_time": 3130.454,
     "content": "Okay? Then, comes breakfast.",
@@ -7932,7 +7952,7 @@
   {
     "id": 28689,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 793,
+    "segment_index": 795,
     "start_time": 3131.126,
     "end_time": 3132.402,
     "content": "How will you eat breakfast?",
@@ -7942,7 +7962,7 @@
   {
     "id": 28690,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 794,
+    "segment_index": 796,
     "start_time": 3132.402,
     "end_time": 3136.212,
     "content": "You go out, buy a little bread and butter, and sit down and...",
@@ -7952,7 +7972,7 @@
   {
     "id": 28691,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 795,
+    "segment_index": 797,
     "start_time": 3136.212,
     "end_time": 3142.71,
     "content": "Okay, you go out and buy some bread and butter, eat them, come back to the room, read the Quran and worship God, Pray the Noon, and then, comes lunch.",
@@ -7962,7 +7982,7 @@
   {
     "id": 28692,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 796,
+    "segment_index": 798,
     "start_time": 3142.71,
     "end_time": 3143.676,
     "content": "Same thing.",
@@ -7972,7 +7992,7 @@
   {
     "id": 28693,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 797,
+    "segment_index": 799,
     "start_time": 3144.038,
     "end_time": 3152.191,
     "content": "Okay, then, you run out of money. Then, and then next, two months later, you don't have any money, and you're sitting there worshiping in that room.",
@@ -7982,7 +8002,7 @@
   {
     "id": 28694,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 798,
+    "segment_index": 800,
     "start_time": 3152.501,
     "end_time": 3153.105,
     "content": "Well, it's...",
@@ -7992,7 +8012,7 @@
   {
     "id": 28695,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 799,
+    "segment_index": 801,
     "start_time": 3153.105,
     "end_time": 3154.846,
     "content": "And you become hungry.",
@@ -8002,7 +8022,7 @@
   {
     "id": 28696,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 800,
+    "segment_index": 802,
     "start_time": 3154.846,
     "end_time": 3160.44888961039,
     "content": "Even if you don't have money, you can go dig a hole for somebody, just get a couple of dollars, and then go buy your bread.",
@@ -8012,7 +8032,7 @@
   {
     "id": 76127,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 801,
+    "segment_index": 803,
     "start_time": 3160.44888961039,
     "end_time": 3161.22327272727,
     "content": "Oh, there you go.",
@@ -8022,7 +8042,7 @@
   {
     "id": 28697,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 802,
+    "segment_index": 804,
     "start_time": 3161.861,
     "end_time": 3163.551,
     "content": "There you go. Now, you're doing something.",
@@ -8032,7 +8052,7 @@
   {
     "id": 28698,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 803,
+    "segment_index": 805,
     "start_time": 3167.067,
     "end_time": 3168.136,
     "content": "Hold it now.",
@@ -8042,7 +8062,7 @@
   {
     "id": 28699,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 804,
+    "segment_index": 806,
     "start_time": 3168.136,
     "end_time": 3170,
     "content": "Just basically to survive and...",
@@ -8052,7 +8072,7 @@
   {
     "id": 28700,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 805,
+    "segment_index": 807,
     "start_time": 3170,
     "end_time": 3172.879,
     "content": "Yes, yes, absolutely, absolutely. Fine, fine.",
@@ -8062,7 +8082,7 @@
   {
     "id": 28701,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 806,
+    "segment_index": 808,
     "start_time": 3172.879,
     "end_time": 3173.53309230769,
     "content": "Doing the minimum.",
@@ -8072,7 +8092,7 @@
   {
     "id": 77189,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 807,
+    "segment_index": 809,
     "start_time": 3173.53309230769,
     "end_time": 3174.73226153846,
     "content": "Okay, so now you're out of money.",
@@ -8082,7 +8102,7 @@
   {
     "id": 28702,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 808,
+    "segment_index": 810,
     "start_time": 3175.241,
     "end_time": 3181.636,
     "content": "Right, now you're out of money, and you are praying, and reading Quran, and sitting in your room, and you become hungry.",
@@ -8092,7 +8112,7 @@
   {
     "id": 28703,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 809,
+    "segment_index": 811,
     "start_time": 3182.463,
     "end_time": 3185.859,
     "content": "You decide to go and look for, to dig a ditch.",
@@ -8102,7 +8122,7 @@
   {
     "id": 28704,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 810,
+    "segment_index": 812,
     "start_time": 3186.583,
     "end_time": 3189.307,
     "content": "So, you go to somebody and say \"do you have a job for me?\"",
@@ -8112,7 +8132,7 @@
   {
     "id": 28705,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 811,
+    "segment_index": 813,
     "start_time": 3190,
     "end_time": 3192.259,
     "content": "He says \"yeah, go dig this ditch here.\"",
@@ -8122,7 +8142,7 @@
   {
     "id": 28706,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 812,
+    "segment_index": 814,
     "start_time": 3192.621,
     "end_time": 3196.689,
     "content": "You dig the ditch, it gives you 10 Rials.",
@@ -8132,7 +8152,7 @@
   {
     "id": 28707,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 813,
+    "segment_index": 815,
     "start_time": 3198.395,
     "end_time": 3201.791,
     "content": "Then, you go buy some food, and you go back to your room.",
@@ -8142,7 +8162,7 @@
   {
     "id": 28708,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 814,
+    "segment_index": 816,
     "start_time": 3201.791,
     "end_time": 3204.05,
     "content": "Okay, you did some work. You dug the ditch.",
@@ -8152,7 +8172,7 @@
   {
     "id": 28709,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 815,
+    "segment_index": 817,
     "start_time": 3204.36,
     "end_time": 3205.636,
     "content": "How many hours? Three hours?",
@@ -8162,7 +8182,7 @@
   {
     "id": 28710,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 816,
+    "segment_index": 818,
     "start_time": 3205.636,
     "end_time": 3206.395,
     "content": "One hour.",
@@ -8172,7 +8192,7 @@
   {
     "id": 28711,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 817,
+    "segment_index": 819,
     "start_time": 3206.395,
     "end_time": 3208.912,
     "content": "Okay, and you got 10 Rials.",
@@ -8182,7 +8202,7 @@
   {
     "id": 28712,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 818,
+    "segment_index": 820,
     "start_time": 3209.429,
     "end_time": 3211.584,
     "content": "The 10 Rials are barely enough for a meal.",
@@ -8192,7 +8212,7 @@
   {
     "id": 28713,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 819,
+    "segment_index": 821,
     "start_time": 3211.584,
     "end_time": 3216.221,
     "content": "You spent your 10 Rials, got a meal, went back to your room, read Quran, and then, you're hungry.",
@@ -8202,7 +8222,7 @@
   {
     "id": 28714,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 820,
+    "segment_index": 822,
     "start_time": 3216.221,
     "end_time": 3217.807,
     "content": "Dinner. Then, what do you do?",
@@ -8212,7 +8232,7 @@
   {
     "id": 28715,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 821,
+    "segment_index": 823,
     "start_time": 3218.841,
     "end_time": 3219.497,
     "content": "What?",
@@ -8222,7 +8242,7 @@
   {
     "id": 28716,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 822,
+    "segment_index": 824,
     "start_time": 3219.497,
     "end_time": 3225.116,
     "content": "But if you're only, only performing acts of worship, doesn't God promise that you will survive, you don't have to worry?",
@@ -8232,7 +8252,7 @@
   {
     "id": 28717,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 823,
+    "segment_index": 825,
     "start_time": 3225.685,
     "end_time": 3228.15,
     "content": "Yeah, but you see, God created a system.",
@@ -8242,7 +8262,7 @@
   {
     "id": 28718,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 824,
+    "segment_index": 826,
     "start_time": 3228.409,
     "end_time": 3231.391,
     "content": "Because that guy out there needs a ditch to be dug.",
@@ -8252,7 +8272,7 @@
   {
     "id": 28719,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 825,
+    "segment_index": 827,
     "start_time": 3234.856,
     "end_time": 3237.425,
     "content": "God created a system for the world to go on.",
@@ -8262,7 +8282,7 @@
   {
     "id": 28720,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 826,
+    "segment_index": 828,
     "start_time": 3238.511,
     "end_time": 3244.337,
     "content": "So, who's gonna dig that ditch? And God wrote in the Quran, He says \"He created you in different grades.\"",
@@ -8272,7 +8292,7 @@
   {
     "id": 28721,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 827,
+    "segment_index": 829,
     "start_time": 3244.337,
     "end_time": 3251.559,
     "content": "In other words, if everybody is a millionaire, 10 million dollars, everybody has a million dollars. Everybody on earth has ten million dollars.",
@@ -8282,7 +8302,7 @@
   {
     "id": 28722,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 828,
+    "segment_index": 830,
     "start_time": 3251.869,
     "end_time": 3255.937,
     "content": "And your faucet breaks, your toilet breaks down. Who's gonna fix it?",
@@ -8292,7 +8312,7 @@
   {
     "id": 28723,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 829,
+    "segment_index": 831,
     "start_time": 3257.643,
     "end_time": 3260.47,
     "content": "You're going to a guy with ten million dollars and say \"come and fix my toilet\"?",
@@ -8302,7 +8322,7 @@
   {
     "id": 28724,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 830,
+    "segment_index": 832,
     "start_time": 3261.814,
     "end_time": 3264.60437362637,
     "content": "It is happening in Saudi Arabia. I think you can't fix it.",
@@ -8312,7 +8332,7 @@
   {
     "id": 76128,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 831,
+    "segment_index": 833,
     "start_time": 3264.60437362637,
     "end_time": 3264.89303296703,
     "content": "Everybody... Right.",
@@ -8322,7 +8342,7 @@
   {
     "id": 28725,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 832,
+    "segment_index": 834,
     "start_time": 3266.192,
     "end_time": 3267.623,
     "content": "So, they import Egyptians.",
@@ -8332,7 +8352,7 @@
   {
     "id": 28726,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 833,
+    "segment_index": 835,
     "start_time": 3271.087,
     "end_time": 3273.811,
     "content": "No, what I'm saying, you understand what I'm saying. If you...",
@@ -8342,7 +8362,7 @@
   {
     "id": 28727,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 834,
+    "segment_index": 836,
     "start_time": 3273.811,
     "end_time": 3275.294,
     "content": "I understand what you're saying perfectly.",
@@ -8352,7 +8372,7 @@
   {
     "id": 28728,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 835,
+    "segment_index": 837,
     "start_time": 3275.294,
     "end_time": 3280.861,
     "content": "Yes, if you say, if you, let's say you, you have enough to retire, you don't need any work.",
@@ -8362,7 +8382,7 @@
   {
     "id": 28729,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 836,
+    "segment_index": 838,
     "start_time": 3280.861,
     "end_time": 3281.361,
     "content": "Yeah.",
@@ -8372,7 +8392,7 @@
   {
     "id": 28730,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 837,
+    "segment_index": 839,
     "start_time": 3281.361,
     "end_time": 3287.652,
     "content": "But as far as God is concerned, is it okay to just go retire somewhere, devote your life to praying?",
@@ -8382,7 +8402,7 @@
   {
     "id": 28731,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 838,
+    "segment_index": 840,
     "start_time": 3287.652,
     "end_time": 3288.928,
     "content": "What do you think I'm doing?",
@@ -8392,7 +8412,7 @@
   {
     "id": 28732,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 839,
+    "segment_index": 841,
     "start_time": 3291.823,
     "end_time": 3297.71037142857,
     "content": "What? No, you're not doing it. You could do it with a lot more peace and quiet and more devotion to whatever you're doing.",
@@ -8402,7 +8422,7 @@
   {
     "id": 76129,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 840,
+    "segment_index": 842,
     "start_time": 3297.71037142857,
     "end_time": 3297.9034,
     "content": "Yes.",
@@ -8412,7 +8432,7 @@
   {
     "id": 28733,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 841,
+    "segment_index": 843,
     "start_time": 3298.579,
     "end_time": 3302.544,
     "content": "Well, I try until lovely people like yourself come and visit me.",
@@ -8422,7 +8442,7 @@
   {
     "id": 28734,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 842,
+    "segment_index": 844,
     "start_time": 3305.75,
     "end_time": 3307.13,
     "content": "But believe me, this is worship.",
@@ -8432,7 +8452,7 @@
   {
     "id": 28735,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 843,
+    "segment_index": 845,
     "start_time": 3308.474,
     "end_time": 3310.54246067416,
     "content": "I'd love to be by the, with a computer by myself.",
@@ -8442,7 +8462,7 @@
   {
     "id": 76130,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 844,
+    "segment_index": 846,
     "start_time": 3310.54246067416,
     "end_time": 3311.89329213483,
     "content": "Congratulations on your worship.",
@@ -8452,7 +8472,7 @@
   {
     "id": 28736,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 845,
+    "segment_index": 847,
     "start_time": 3312.231,
     "end_time": 3315.007,
     "content": "But now when I have a preference, I prefer to be with you guys.",
@@ -8462,7 +8482,7 @@
   {
     "id": 28737,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 846,
+    "segment_index": 848,
     "start_time": 3316.713,
     "end_time": 3317.937,
     "content": "So, but this is worship.",
@@ -8472,7 +8492,7 @@
   {
     "id": 28738,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 847,
+    "segment_index": 849,
     "start_time": 3317.937,
     "end_time": 3321.23,
     "content": "I mean, what we're doing here is worshiping God.",
@@ -8482,7 +8502,7 @@
   {
     "id": 28739,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 848,
+    "segment_index": 850,
     "start_time": 3321.592,
     "end_time": 3322.65866666667,
     "content": "Because you're not getting paid.",
@@ -8492,7 +8512,7 @@
   {
     "id": 76131,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 849,
+    "segment_index": 851,
     "start_time": 3322.65866666667,
     "end_time": 3323.32533333333,
     "content": "So, it's not just...",
@@ -8502,7 +8522,7 @@
   {
     "id": 28740,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 850,
+    "segment_index": 852,
     "start_time": 3324.006,
     "end_time": 3325.37554411765,
     "content": "It's not just Sujud (unintelligible).",
@@ -8512,7 +8532,7 @@
   {
     "id": 76132,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 851,
+    "segment_index": 853,
     "start_time": 3325.37554411765,
     "end_time": 3326.00479411765,
     "content": "You're, you're...",
@@ -8522,7 +8542,7 @@
   {
     "id": 28741,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 852,
+    "segment_index": 854,
     "start_time": 3326.523,
     "end_time": 3328.937,
     "content": "No, no, no, worship, by no means, no.",
@@ -8532,7 +8552,7 @@
   {
     "id": 28742,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 853,
+    "segment_index": 855,
     "start_time": 3328.937,
     "end_time": 3334.20431818182,
     "content": "That's what I wanna hear. You can worship by paying charity, worship by helping other people, worship is...",
@@ -8542,7 +8562,7 @@
   {
     "id": 76133,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 854,
+    "segment_index": 856,
     "start_time": 3334.20431818182,
     "end_time": 3334.74581818182,
     "content": "Right. Yes.",
@@ -8552,7 +8572,7 @@
   {
     "id": 28743,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 855,
+    "segment_index": 857,
     "start_time": 3335.435,
     "end_time": 3336.26675438596,
     "content": "This is what I wanted.",
@@ -8562,7 +8582,7 @@
   {
     "id": 77190,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 856,
+    "segment_index": 858,
     "start_time": 3336.26675438596,
     "end_time": 3337.06070175439,
     "content": "Yes. Absolutely, yes.",
@@ -8572,7 +8592,7 @@
   {
     "id": 28744,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 857,
+    "segment_index": 859,
     "start_time": 3337.59,
     "end_time": 3340.572,
     "content": "What we're doing now is we're worshiping God.",
@@ -8582,7 +8602,7 @@
   {
     "id": 28745,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 858,
+    "segment_index": 860,
     "start_time": 3342.572,
     "end_time": 3346.588,
     "content": "You know, Shahrukh is not getting paid. You're not getting paid. Nobody here is getting paid.",
@@ -8592,7 +8612,7 @@
   {
     "id": 28746,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 859,
+    "segment_index": 861,
     "start_time": 3346.588,
     "end_time": 3348.019,
     "content": "(unintelligible)",
@@ -8602,7 +8622,7 @@
   {
     "id": 28747,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 860,
+    "segment_index": 862,
     "start_time": 3349.777,
     "end_time": 3356.223,
     "content": "We're just sitting here. In fact, you're spending money. These ladies are taking you to the shopping centers, you know, every other hour.",
@@ -8612,7 +8632,7 @@
   {
     "id": 28748,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 861,
+    "segment_index": 863,
     "start_time": 3357.205,
     "end_time": 3362.307,
     "content": "(unintelligible)",
@@ -8622,7 +8642,7 @@
   {
     "id": 28749,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 862,
+    "segment_index": 864,
     "start_time": 3364.013,
     "end_time": 3366.323,
     "content": "No, the truth is we are getting paid, you know.",
@@ -8632,7 +8652,7 @@
   {
     "id": 28750,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 863,
+    "segment_index": 865,
     "start_time": 3366.323,
     "end_time": 3371.115,
     "content": "God is paying us health, wealth, and peace of mind, and a lot of happiness. So,...",
@@ -8642,7 +8662,7 @@
   {
     "id": 28751,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 864,
+    "segment_index": 866,
     "start_time": 3371.115,
     "end_time": 3372.856,
     "content": "Alhamdu Lillah. Alhamdu Lillah.",
@@ -8652,7 +8672,7 @@
   {
     "id": 28752,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 865,
+    "segment_index": 867,
     "start_time": 3373.787,
     "end_time": 3379.251,
     "content": "But you see, these theoretical principles of \"go sit somewhere and worship\", it doesn't work.",
@@ -8662,7 +8682,7 @@
   {
     "id": 28753,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 866,
+    "segment_index": 868,
     "start_time": 3379.51,
     "end_time": 3384.819,
     "content": "As you see, if you put it in practical terms, you yourself went out digging a ditch for somebody.",
@@ -8672,7 +8692,7 @@
   {
     "id": 28754,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 867,
+    "segment_index": 869,
     "start_time": 3387.921,
     "end_time": 3389.921,
     "content": "Okay, back to Azhar.",
@@ -8682,7 +8702,7 @@
   {
     "id": 28755,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 868,
+    "segment_index": 870,
     "start_time": 3389.921,
     "end_time": 3395.023,
     "content": "... important because now the question is, if the Quran's in existence",
@@ -8692,7 +8712,7 @@
   {
     "id": 28756,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 869,
+    "segment_index": 871,
     "start_time": 3395.023,
     "end_time": 3399.143,
     "content": "were identical to the Quran that the prophet wrote with his hand, why will he need to destroy it?",
@@ -8702,7 +8722,7 @@
   {
     "id": 28757,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 870,
+    "segment_index": 872,
     "start_time": 3400,
     "end_time": 3402,
     "content": "Yeah, so obviously, it was different.",
@@ -8712,7 +8732,7 @@
   {
     "id": 28758,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 871,
+    "segment_index": 873,
     "start_time": 3402.827,
     "end_time": 3409.067,
     "content": "And since he burned the Quran that was written by the prophet, then the Quran that we have,",
@@ -8722,7 +8742,7 @@
   {
     "id": 28759,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 872,
+    "segment_index": 874,
     "start_time": 3409.067,
     "end_time": 3411.481,
     "content": "that came to us, are the wrong ones.",
@@ -8732,7 +8752,7 @@
   {
     "id": 28760,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 873,
+    "segment_index": 875,
     "start_time": 3411.895,
     "end_time": 3413.481,
     "content": "We have these two verses.",
@@ -8742,7 +8762,7 @@
   {
     "id": 28761,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 874,
+    "segment_index": 876,
     "start_time": 3415.187,
     "end_time": 3416.411,
     "content": "I have a question.",
@@ -8752,7 +8772,7 @@
   {
     "id": 28762,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 875,
+    "segment_index": 877,
     "start_time": 3416.825,
     "end_time": 3425.029,
     "content": "When they, when they added the two verses, did they put it on the same one that the prophet wrote, or did they just rewrite?",
@@ -8762,7 +8782,7 @@
   {
     "id": 28763,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 876,
+    "segment_index": 878,
     "start_time": 3425.029,
     "end_time": 3427.78944303797,
     "content": "No, no, no, they were making copies from the prophet's.",
@@ -8772,7 +8792,7 @@
   {
     "id": 76134,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 877,
+    "segment_index": 879,
     "start_time": 3427.78944303797,
     "end_time": 3428.19096202532,
     "content": "Oh, yeah",
@@ -8782,7 +8802,7 @@
   {
     "id": 28764,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 878,
+    "segment_index": 880,
     "start_time": 3432.303,
     "end_time": 3436.061,
     "content": "The question a genuine person might ask is:",
@@ -8792,7 +8812,7 @@
   {
     "id": 28765,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 879,
+    "segment_index": 881,
     "start_time": 3436.061,
     "end_time": 3443.748,
     "content": "“If the original Quran of Muhammad was identical to the Quran in circulation, why did Marwan Ibn Al-Hakam destroy it?!”",
@@ -8802,7 +8822,7 @@
   {
     "id": 28766,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 880,
+    "segment_index": 882,
     "start_time": 3445.506,
     "end_time": 3450.608,
     "content": "Upon examining the oldest Islamic references, we realize that the false injections,",
@@ -8812,7 +8832,7 @@
   {
     "id": 28767,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 881,
+    "segment_index": 883,
     "start_time": 3450.608,
     "end_time": 3453.694,
     "content": "9:128-129, were always suspect.",
@@ -8822,7 +8842,7 @@
   {
     "id": 28768,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 882,
+    "segment_index": 884,
     "start_time": 3454.78,
     "end_time": 3462.261,
     "content": "For example, we read in Bukhary’s Hadith, and Al-Suyuty’s Itqaan,",
@@ -8832,7 +8852,7 @@
   {
     "id": 28769,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 883,
+    "segment_index": 885,
     "start_time": 3462.261,
     "end_time": 3471.086,
     "content": "that every single verse in Quran was verified by a multiplicity of witnesses “except Verses 128 and 129 of Sura 9;",
@@ -8842,7 +8862,7 @@
   {
     "id": 28770,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 884,
+    "segment_index": 886,
     "start_time": 3471.086,
     "end_time": 3476.912,
     "content": "\"they were found with only Khuzeimah Ibn Thaabet Al-Ansaary.”",
@@ -8852,7 +8872,7 @@
   {
     "id": 28771,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 885,
+    "segment_index": 887,
     "start_time": 3478.101,
     "end_time": 3487.339,
     "content": "When some people questioned this improper exception, someone came up with a Hadith stating that “the testimony of Khuzeimah equals the testimony of two men!!!”",
@@ -8862,7 +8882,7 @@
   {
     "id": 28772,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 886,
+    "segment_index": 888,
     "start_time": 3488.425,
     "end_time": 3488.61730769231,
     "content": "Sure!",
@@ -8872,7 +8892,7 @@
   {
     "id": 76135,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 887,
+    "segment_index": 889,
     "start_time": 3488.61730769231,
     "end_time": 3489.925,
     "content": "Those verses had only one witness.",
@@ -8882,7 +8902,7 @@
   {
     "id": 28773,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 888,
+    "segment_index": 890,
     "start_time": 3490.425,
     "end_time": 3490.925,
     "content": "Right!",
@@ -8892,7 +8912,7 @@
   {
     "id": 28774,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 889,
+    "segment_index": 891,
     "start_time": 3491.597,
     "end_time": 3493.597,
     "content": "And that is against the Quranic...",
@@ -8902,7 +8922,7 @@
   {
     "id": 28775,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 890,
+    "segment_index": 892,
     "start_time": 3493.597,
     "end_time": 3501.284,
     "content": "Again, the principle that Abu Bakr and Omar established for writing the Quran down, which was at least two witnesses.",
@@ -8912,7 +8932,7 @@
   {
     "id": 28776,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 891,
+    "segment_index": 893,
     "start_time": 3501.284,
     "end_time": 3501.49368421053,
     "content": "I see.",
@@ -8922,7 +8942,7 @@
   {
     "id": 77191,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 892,
+    "segment_index": 894,
     "start_time": 3501.49368421053,
     "end_time": 3502.12273684211,
     "content": "According to them.",
@@ -8932,7 +8952,7 @@
   {
     "id": 28777,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 893,
+    "segment_index": 895,
     "start_time": 3502.612,
     "end_time": 3504.147,
     "content": "I mean, it's all nonsense.",
@@ -8942,7 +8962,7 @@
   {
     "id": 28778,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 894,
+    "segment_index": 896,
     "start_time": 3504.406,
     "end_time": 3506.096,
     "content": "But this is according to them.",
@@ -8952,7 +8972,7 @@
   {
     "id": 28779,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 895,
+    "segment_index": 897,
     "start_time": 3506.096,
     "end_time": 3507.372,
     "content": "(unintelligible)",
@@ -8962,7 +8982,7 @@
   {
     "id": 28780,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 896,
+    "segment_index": 898,
     "start_time": 3507.372,
     "end_time": 3510.871,
     "content": "Yeah, the fact is that the Quran was there that the prophet wrote himself.",
@@ -8972,7 +8992,7 @@
   {
     "id": 28781,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 897,
+    "segment_index": 899,
     "start_time": 3511.543,
     "end_time": 3515.663,
     "content": "So, there was no need to collect it from anybody or look for it or have witnesses. Nothing.",
@@ -8982,7 +9002,7 @@
   {
     "id": 28782,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 898,
+    "segment_index": 900,
     "start_time": 3516.232,
     "end_time": 3519.731,
     "content": "The Quran was there and it was with the prophet's wife, Hafsa.",
@@ -8992,7 +9012,7 @@
   {
     "id": 28783,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 899,
+    "segment_index": 901,
     "start_time": 3521.334,
     "end_time": 3523.799,
     "content": "So, but I'm going along with what they said.",
@@ -9002,7 +9022,7 @@
   {
     "id": 28784,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 900,
+    "segment_index": 902,
     "start_time": 3524.626,
     "end_time": 3525.954,
     "content": "God made them say that.",
@@ -9012,7 +9032,7 @@
   {
     "id": 28785,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 901,
+    "segment_index": 903,
     "start_time": 3526.471,
     "end_time": 3534.779,
     "content": "Rashad, I was telling one of my group that the reason that these two verses are false.",
@@ -9022,7 +9042,7 @@
   {
     "id": 28786,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 902,
+    "segment_index": 904,
     "start_time": 3535.038,
     "end_time": 3539.158,
     "content": "And when we came, I came to this point, the Hadith of Bukhari.",
@@ -9032,7 +9052,7 @@
   {
     "id": 28787,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 903,
+    "segment_index": 905,
     "start_time": 3539.158,
     "end_time": 3545.63397315436,
     "content": "And they attacked me and said \"you say you don't have to use the Hadith. But you don't believe the Hadith. Why you put it there?\"",
@@ -9042,7 +9062,7 @@
   {
     "id": 76136,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 904,
+    "segment_index": 906,
     "start_time": 3545.63397315436,
     "end_time": 3545.93518120805,
     "content": "Right.",
@@ -9052,7 +9072,7 @@
   {
     "id": 28788,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 905,
+    "segment_index": 907,
     "start_time": 3546.638,
     "end_time": 3547.811,
     "content": "Because they believe it.",
@@ -9062,7 +9082,7 @@
   {
     "id": 28789,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 906,
+    "segment_index": 908,
     "start_time": 3548.225,
     "end_time": 3549.03764705882,
     "content": "Because they believe in it.",
@@ -9072,7 +9092,7 @@
   {
     "id": 77192,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 907,
+    "segment_index": 909,
     "start_time": 3549.03764705882,
     "end_time": 3549.45901960784,
     "content": "It's for them.",
@@ -9082,7 +9102,7 @@
   {
     "id": 28790,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 908,
+    "segment_index": 910,
     "start_time": 3549.76,
     "end_time": 3550.73674418605,
     "content": "Oh, this is for them.",
@@ -9092,7 +9112,7 @@
   {
     "id": 76137,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 909,
+    "segment_index": 911,
     "start_time": 3550.73674418605,
     "end_time": 3550.92279069767,
     "content": "Yes.",
@@ -9102,7 +9122,7 @@
   {
     "id": 28791,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 910,
+    "segment_index": 912,
     "start_time": 3552.949,
     "end_time": 3554.01342307692,
     "content": "It's using their own material.",
@@ -9112,7 +9132,7 @@
   {
     "id": 76138,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 911,
+    "segment_index": 913,
     "start_time": 3554.01342307692,
     "end_time": 3554.40371153846,
     "content": "Yeah. Yeah.",
@@ -9122,7 +9142,7 @@
   {
     "id": 28792,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 912,
+    "segment_index": 914,
     "start_time": 3554.794,
     "end_time": 3559.793,
     "content": "I didn't know, but I said \"we have a lot of proof. It's not this.\"",
@@ -9132,7 +9152,7 @@
   {
     "id": 28793,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 913,
+    "segment_index": 915,
     "start_time": 3559.793,
     "end_time": 3561.50566666667,
     "content": "This is the proof of these two verses.",
@@ -9142,7 +9162,7 @@
   {
     "id": 77193,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 914,
+    "segment_index": 916,
     "start_time": 3561.50566666667,
     "end_time": 3561.73101754386,
     "content": "Yeah.",
@@ -9150,19 +9170,29 @@
     "search_vector": "'yeah':1"
   },
   {
-    "id": 28794,
+    "id": "28794_part_0",
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 915,
+    "segment_index": 917,
     "start_time": 3562.362,
-    "end_time": 3563.431,
-    "content": "This is... Parivash: This is only...",
+    "end_time": 3562.8142692307692,
+    "content": "This is... ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'parivash':3"
+  },
+  {
+    "id": "28794_part_1",
+    "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
+    "segment_index": 918,
+    "start_time": 3562.8142692307692,
+    "end_time": 3563.431,
+    "content": "This is only...",
+    "speaker": "Parivash",
     "search_vector": "'parivash':3"
   },
   {
     "id": 28795,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 916,
+    "segment_index": 919,
     "start_time": 3563.431,
     "end_time": 3566.982,
     "content": "Because when a Christian comes, you don't get the Veda out and tell him",
@@ -9172,7 +9202,7 @@
   {
     "id": 28796,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 917,
+    "segment_index": 920,
     "start_time": 3566.982,
     "end_time": 3569.447,
     "content": "\"The Veda says this and that\" because they don't give a damn about the Veda.",
@@ -9182,7 +9212,7 @@
   {
     "id": 28797,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 918,
+    "segment_index": 921,
     "start_time": 3569.706,
     "end_time": 3570.672,
     "content": "But you get the Bible.",
@@ -9192,7 +9222,7 @@
   {
     "id": 28798,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 919,
+    "segment_index": 922,
     "start_time": 3571.137,
     "end_time": 3573.447,
     "content": "We have to say \"if you believe Hadith, this is Hadith.\"",
@@ -9202,7 +9232,7 @@
   {
     "id": 28799,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 920,
+    "segment_index": 923,
     "start_time": 3574.481,
     "end_time": 3574.672875,
     "content": "Yeah.",
@@ -9212,7 +9242,7 @@
   {
     "id": 77194,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 921,
+    "segment_index": 924,
     "start_time": 3574.672875,
     "end_time": 3574.672875,
     "content": "",
@@ -9222,7 +9252,7 @@
   {
     "id": 76139,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 922,
+    "segment_index": 925,
     "start_time": 3575.17175,
     "end_time": 3575.363625,
     "content": "Yeah.",
@@ -9232,7 +9262,7 @@
   {
     "id": 28800,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 923,
+    "segment_index": 926,
     "start_time": 3576.016,
     "end_time": 3581.79,
     "content": "No. We talk about history. We say \"Dwight D. Eisenhower was the president of the United States in 1952.\"",
@@ -9242,7 +9272,7 @@
   {
     "id": 28801,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 924,
+    "segment_index": 927,
     "start_time": 3582.721,
     "end_time": 3586.582,
     "content": "This doesn't mean... This is a fact of history.",
@@ -9252,7 +9282,7 @@
   {
     "id": 28802,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 925,
+    "segment_index": 928,
     "start_time": 3586.582,
     "end_time": 3587.03914285714,
     "content": "(unintelligible)",
@@ -9262,7 +9292,7 @@
   {
     "id": 76140,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 926,
+    "segment_index": 929,
     "start_time": 3587.03914285714,
     "end_time": 3588.182,
     "content": "You know, we don't use it for religious.",
@@ -9272,7 +9302,7 @@
   {
     "id": 28803,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 927,
+    "segment_index": 930,
     "start_time": 3588.582,
     "end_time": 3589.082,
     "content": "Sorry.",
@@ -9282,7 +9312,7 @@
   {
     "id": 28804,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 928,
+    "segment_index": 931,
     "start_time": 3589.392,
     "end_time": 3589.64290909091,
     "content": "Yes.",
@@ -9292,7 +9322,7 @@
   {
     "id": 77195,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 929,
+    "segment_index": 932,
     "start_time": 3589.64290909091,
     "end_time": 3589.89381818182,
     "content": "Yes.",
@@ -9302,7 +9332,7 @@
   {
     "id": 28805,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 930,
+    "segment_index": 933,
     "start_time": 3590.772,
     "end_time": 3592.772,
     "content": "Our proof is basically the mathematics.",
@@ -9312,7 +9342,7 @@
   {
     "id": 28806,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 931,
+    "segment_index": 934,
     "start_time": 3592.772,
     "end_time": 3593.277,
     "content": "Yes.",
@@ -9322,7 +9352,7 @@
   {
     "id": 28807,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 932,
+    "segment_index": 935,
     "start_time": 3594.104,
     "end_time": 3597.914,
     "content": "But this is using their own argument. This is why I'm saying it's all nonsense.",
@@ -9332,7 +9362,7 @@
   {
     "id": 28808,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 933,
+    "segment_index": 936,
     "start_time": 3598.741,
     "end_time": 3603.947,
     "content": "This is all nonsense. They made this up. So, I'm using their own historical differences.",
@@ -9342,7 +9372,7 @@
   {
     "id": 28809,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 934,
+    "segment_index": 937,
     "start_time": 3610.823,
     "end_time": 3617.218,
     "content": "Strangely, the false injections 9:128-129 are labeled in the traditional Qurans as “Meccan.”",
@@ -9352,7 +9382,7 @@
   {
     "id": 28810,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 935,
+    "segment_index": 938,
     "start_time": 3619.648,
     "end_time": 3625.681,
     "content": "The problem is how could these ‘Meccan’ verses be found with Khuzeimah, a ‘Medinan’ Muslim?!",
@@ -9362,7 +9392,7 @@
   {
     "id": 28811,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 936,
+    "segment_index": 939,
     "start_time": 3626.922,
     "end_time": 3635.695,
     "content": "Despite these discrepancies, plus many more glaring contradictions associated with the two False Verses, no one ever dared to question their authenticity.",
@@ -9372,7 +9402,7 @@
   {
     "id": 28812,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 937,
+    "segment_index": 940,
     "start_time": 3636.522,
     "end_time": 3638.522,
     "content": "And was that for political reasons or...?",
@@ -9382,7 +9412,7 @@
   {
     "id": 28813,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 938,
+    "segment_index": 941,
     "start_time": 3640,
     "end_time": 3643.293,
     "content": "Well, look at the storm that is against me now.",
@@ -9392,7 +9422,7 @@
   {
     "id": 28814,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 939,
+    "segment_index": 942,
     "start_time": 3643.293,
     "end_time": 3648.791,
     "content": "I can show you pages upon pages, full pages of attacking me because of these two verses.",
@@ -9402,7 +9432,7 @@
   {
     "id": 28815,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 940,
+    "segment_index": 943,
     "start_time": 3649.421,
     "end_time": 3651.714,
     "content": "So, they just didn't have the courage.",
@@ -9412,7 +9442,7 @@
   {
     "id": 28816,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 941,
+    "segment_index": 944,
     "start_time": 3652.283,
     "end_time": 3653.903,
     "content": "And they didn't have the proof.",
@@ -9422,7 +9452,7 @@
   {
     "id": 28817,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 942,
+    "segment_index": 945,
     "start_time": 3655.247,
     "end_time": 3657.70894936709,
     "content": "It's not that I'm courageous, but we have the proof right now.",
@@ -9432,7 +9462,7 @@
   {
     "id": 76141,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 943,
+    "segment_index": 946,
     "start_time": 3657.70894936709,
     "end_time": 3657.86778481013,
     "content": "Yes.",
@@ -9442,7 +9472,7 @@
   {
     "id": 28818,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 944,
+    "segment_index": 947,
     "start_time": 3658.384,
     "end_time": 3660.539,
     "content": "And this comes in the next paragraphs.",
@@ -9452,7 +9482,7 @@
   {
     "id": 28819,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 945,
+    "segment_index": 948,
     "start_time": 3661.78,
     "end_time": 3663.366,
     "content": "The discovery of the Quran’s mathematical ...",
@@ -9462,7 +9492,7 @@
   {
     "id": 28820,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 946,
+    "segment_index": 949,
     "start_time": 3663.366,
     "end_time": 3666.607,
     "content": "And, well, let me go to an extreme.",
@@ -9472,7 +9502,7 @@
   {
     "id": 28821,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 947,
+    "segment_index": 950,
     "start_time": 3670.381,
     "end_time": 3675.483,
     "content": "Let's go rob this bank or something, and I'll give you, I'll give you half of the loot.",
@@ -9482,7 +9512,7 @@
   {
     "id": 28822,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 948,
+    "segment_index": 951,
     "start_time": 3677.483,
     "end_time": 3684.291,
     "content": "Or let's go to this nightclub, and if you don't tell my wife, I will not tell your wife.",
@@ -9492,7 +9522,7 @@
   {
     "id": 28823,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 949,
+    "segment_index": 952,
     "start_time": 3684.756,
     "end_time": 3687.221,
     "content": "So, it's kind of a bribing.",
@@ -9502,7 +9532,7 @@
   {
     "id": 28824,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 950,
+    "segment_index": 953,
     "start_time": 3687.583,
     "end_time": 3690.307,
     "content": "I have a question. (unintelligible)",
@@ -9512,7 +9542,7 @@
   {
     "id": 28825,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 951,
+    "segment_index": 954,
     "start_time": 3690.824,
     "end_time": 3693.393,
     "content": "I don't know how to explain it. Do you understand what I'm saying?",
@@ -9522,7 +9552,7 @@
   {
     "id": 28826,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 952,
+    "segment_index": 955,
     "start_time": 3693.703,
     "end_time": 3697.875,
     "content": "Bribing, in other words, wrapping the falsehood in something that's good.",
@@ -9532,7 +9562,7 @@
   {
     "id": 28827,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 953,
+    "segment_index": 956,
     "start_time": 3698.806,
     "end_time": 3700,
     "content": "So, that's not a good example.",
@@ -9542,7 +9572,7 @@
   {
     "id": 28828,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 954,
+    "segment_index": 957,
     "start_time": 3700,
     "end_time": 3708.359,
     "content": "No, I wanna say something else. Maybe, this is worshipping God, but the reality is this is not from Quran.",
@@ -9552,7 +9582,7 @@
   {
     "id": 28829,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 955,
+    "segment_index": 958,
     "start_time": 3708.359,
     "end_time": 3710.359,
     "content": "This is something extra. However,...",
@@ -9562,7 +9592,7 @@
   {
     "id": 28830,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 956,
+    "segment_index": 959,
     "start_time": 3710.359,
     "end_time": 3712.024,
     "content": "Exactly, yeah. But, but...",
@@ -9572,7 +9602,7 @@
   {
     "id": 28831,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 957,
+    "segment_index": 960,
     "start_time": 3712.024,
     "end_time": 3714.903,
     "content": "(unintelligible) but it's not real. It's falsehood.",
@@ -9582,7 +9612,7 @@
   {
     "id": 28832,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 958,
+    "segment_index": 961,
     "start_time": 3714.903,
     "end_time": 3717.834,
     "content": "God doesn't want it, as you will see here.",
@@ -9592,7 +9622,7 @@
   {
     "id": 28833,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 959,
+    "segment_index": 962,
     "start_time": 3717.834,
     "end_time": 3721.333,
     "content": "I say something good about God, and they put that in the Quran.",
@@ -9602,7 +9632,7 @@
   {
     "id": 28834,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 960,
+    "segment_index": 963,
     "start_time": 3721.798,
     "end_time": 3722.299,
     "content": "Right.",
@@ -9612,7 +9642,7 @@
   {
     "id": 28835,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 961,
+    "segment_index": 964,
     "start_time": 3722.299,
     "end_time": 3722.903,
     "content": "A woman (Speaking Farsi): Evil eye.",
@@ -9622,7 +9652,7 @@
   {
     "id": 28836,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 962,
+    "segment_index": 965,
     "start_time": 3722.903,
     "end_time": 3728.03232608696,
     "content": "Or maybe, when I wanna tell you something, a lie about, for example, Azar,",
@@ -9632,7 +9662,7 @@
   {
     "id": 76142,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 963,
+    "segment_index": 966,
     "start_time": 3728.03232608696,
     "end_time": 3728.30958695652,
     "content": "Yes.",
@@ -9642,7 +9672,7 @@
   {
     "id": 28837,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 964,
+    "segment_index": 967,
     "start_time": 3729.28,
     "end_time": 3732.82767741936,
     "content": "I say something true that you believe and say \"yeah, I know this.\"",
@@ -9652,7 +9682,7 @@
   {
     "id": 76143,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 965,
+    "segment_index": 968,
     "start_time": 3732.82767741936,
     "end_time": 3733.52646236559,
     "content": "Yes. Exactly.",
@@ -9662,7 +9692,7 @@
   {
     "id": 28838,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 966,
+    "segment_index": 969,
     "start_time": 3734.279,
     "end_time": 3735.758,
     "content": "And the second one is true.",
@@ -9672,7 +9702,7 @@
   {
     "id": 77196,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 967,
+    "segment_index": 970,
     "start_time": 3735.758,
     "end_time": 3735.97711111111,
     "content": "Yes.",
@@ -9682,7 +9712,7 @@
   {
     "id": 28839,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 968,
+    "segment_index": 971,
     "start_time": 3736.744,
     "end_time": 3738.53672727273,
     "content": "And then, you put the lie in between. There it is. Mã Shã Allãh.",
@@ -9692,7 +9722,7 @@
   {
     "id": 76144,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 969,
+    "segment_index": 972,
     "start_time": 3738.53672727273,
     "end_time": 3738.900875,
     "content": "Yes, between.",
@@ -9702,7 +9732,7 @@
   {
     "id": 28840,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 970,
+    "segment_index": 973,
     "start_time": 3739.68,
     "end_time": 3740.68,
     "content": "God bless you.",
@@ -9712,7 +9742,7 @@
   {
     "id": 28841,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 971,
+    "segment_index": 974,
     "start_time": 3741.766,
     "end_time": 3742.939,
     "content": "I was looking for that.",
@@ -9722,7 +9752,7 @@
   {
     "id": 28842,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 972,
+    "segment_index": 975,
     "start_time": 3743.715,
     "end_time": 3748.3,
     "content": "How (unintelligible)",
@@ -9732,7 +9762,7 @@
   {
     "id": 28843,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 973,
+    "segment_index": 976,
     "start_time": 3748.3,
     "end_time": 3749.524,
     "content": "How did you say it?",
@@ -9742,7 +9772,7 @@
   {
     "id": 28844,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 974,
+    "segment_index": 977,
     "start_time": 3749.524,
     "end_time": 3751.524,
     "content": "Pardon? What's your question?",
@@ -9752,7 +9782,7 @@
   {
     "id": 28845,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 975,
+    "segment_index": 978,
     "start_time": 3751.524,
     "end_time": 3754.61,
     "content": "That you put a...",
@@ -9762,7 +9792,7 @@
   {
     "id": 28846,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 976,
+    "segment_index": 979,
     "start_time": 3756.058,
     "end_time": 3757.179,
     "content": "Wrapping the truth in a...",
@@ -9772,7 +9802,7 @@
   {
     "id": 28847,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 977,
+    "segment_index": 980,
     "start_time": 3757.179,
     "end_time": 3757.731,
     "content": "Wrapping.",
@@ -9782,7 +9812,7 @@
   {
     "id": 28848,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 978,
+    "segment_index": 981,
     "start_time": 3757.731,
     "end_time": 3759.586,
     "content": "Wrapping the truth in a falsehood.",
@@ -9792,7 +9822,7 @@
   {
     "id": 28849,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 979,
+    "segment_index": 982,
     "start_time": 3759.586,
     "end_time": 3763.499,
     "content": "Yeah, wrapping (unintelligible)",
@@ -9802,7 +9832,7 @@
   {
     "id": 28850,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 980,
+    "segment_index": 983,
     "start_time": 3763.499,
     "end_time": 3766.688,
     "content": "In fact, this is... the Quran has a commandment against it that says,",
@@ -9812,7 +9842,7 @@
   {
     "id": 28851,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 981,
+    "segment_index": 984,
     "start_time": 3766.688,
     "end_time": 3768.688,
     "content": "(2:42) وَلَا تَلْبِسُوا۟ ٱلْحَقَّ بِٱلْبَـٰطِلِ",
@@ -9822,7 +9852,7 @@
   {
     "id": 28852,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 982,
+    "segment_index": 985,
     "start_time": 3768.998,
     "end_time": 3771.877,
     "content": "[2:42]  Do not confound the truth with falsehood, ...",
@@ -9832,7 +9862,7 @@
   {
     "id": 28853,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 983,
+    "segment_index": 986,
     "start_time": 3772.756,
     "end_time": 3776.669,
     "content": "تَلْبِسُوا۟ ٱلْحَقَّ بِٱلْبَـٰطِلِ means you dress, do not dress the lie with the truth.",
@@ -9842,7 +9872,7 @@
   {
     "id": 28854,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 984,
+    "segment_index": 987,
     "start_time": 3776.669,
     "end_time": 3778.1,
     "content": "Exactly. Allahu Akbar.",
@@ -9852,7 +9882,7 @@
   {
     "id": 28855,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 985,
+    "segment_index": 988,
     "start_time": 3778.617,
     "end_time": 3779.583,
     "content": "Yeah.",
@@ -9862,7 +9892,7 @@
   {
     "id": 28856,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 986,
+    "segment_index": 989,
     "start_time": 3780,
     "end_time": 3781.121,
     "content": "تَلْبِسُوا۟ is Libas (لباس).",
@@ -9872,7 +9902,7 @@
   {
     "id": 28857,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 987,
+    "segment_index": 990,
     "start_time": 3781.121,
     "end_time": 3781.93629411765,
     "content": "Do you have it in Farsi?",
@@ -9882,7 +9912,7 @@
   {
     "id": 76145,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 988,
+    "segment_index": 991,
     "start_time": 3781.93629411765,
     "end_time": 3783.09129411765,
     "content": "Even if we have to, is that wrong?",
@@ -9892,7 +9922,7 @@
   {
     "id": 28858,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 989,
+    "segment_index": 992,
     "start_time": 3783.431,
     "end_time": 3784.397,
     "content": "Yeah.",
@@ -9902,7 +9932,7 @@
   {
     "id": 28859,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 990,
+    "segment_index": 993,
     "start_time": 3786.775,
     "end_time": 3788.31,
     "content": "Do you have Libas (لباس) in Farsi?",
@@ -9910,19 +9940,29 @@
     "search_vector": "'farsi':7 'liba':4 'لباس':5"
   },
   {
-    "id": 28860,
+    "id": "28860_part_0",
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 991,
+    "segment_index": 994,
     "start_time": 3788.31,
-    "end_time": 3788.966,
-    "content": "Yes. Parivash: Yes.",
+    "end_time": 3788.6744444444444,
+    "content": "Yes. ",
     "speaker": "A woman",
+    "search_vector": "'parivash':2 'yes':1,3"
+  },
+  {
+    "id": "28860_part_1",
+    "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
+    "segment_index": 995,
+    "start_time": 3788.6744444444444,
+    "end_time": 3788.966,
+    "content": "Yes.",
+    "speaker": "Parivash",
     "search_vector": "'parivash':2 'yes':1,3"
   },
   {
     "id": 28861,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 992,
+    "segment_index": 996,
     "start_time": 3788.966,
     "end_time": 3789.57,
     "content": "Ok.",
@@ -9932,7 +9972,7 @@
   {
     "id": 28862,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 993,
+    "segment_index": 997,
     "start_time": 3789.57,
     "end_time": 3791.363,
     "content": "(2:42) لَا تَلْبِسُوا۟ ٱلْحَقَّ بِٱلْبَـٰطِلِ",
@@ -9942,7 +9982,7 @@
   {
     "id": 28863,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 994,
+    "segment_index": 998,
     "start_time": 3792.035,
     "end_time": 3802.669,
     "content": "So, a messenger has come to you who is fantastic, is false, and then is a Batil (بَـٰطِلِ), and \"God, there is no god except He is truth.\"",
@@ -9952,7 +9992,7 @@
   {
     "id": 28864,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 995,
+    "segment_index": 999,
     "start_time": 3802.669,
     "end_time": 3803.49898,
     "content": "So, they wrap this with that.",
@@ -9962,7 +10002,7 @@
   {
     "id": 76146,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 996,
+    "segment_index": 1000,
     "start_time": 3803.49898,
     "end_time": 3803.78518,
     "content": "Wrap this.",
@@ -9972,7 +10012,7 @@
   {
     "id": 28865,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 997,
+    "segment_index": 1001,
     "start_time": 3804.1,
     "end_time": 3804.807,
     "content": "Alhamdu Lillah.",
@@ -9982,7 +10022,7 @@
   {
     "id": 28866,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 998,
+    "segment_index": 1002,
     "start_time": 3804.807,
     "end_time": 3806.807,
     "content": "So, this (unintelligible)",
@@ -9992,7 +10032,7 @@
   {
     "id": 28867,
     "media_id": "f2ecc3b1-232f-4e83-8de5-3122547397ce",
-    "segment_index": 999,
+    "segment_index": 1003,
     "start_time": 3806.807,
     "end_time": 3807.58752631579,
     "content": "Yeah, this is, yeah.",

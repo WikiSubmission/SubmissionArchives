@@ -20,7 +20,7 @@ async function main() {
     const validPages = pdfDoc.getPages();
     console.log(`Processing ${validPages.length} pages...`);
 
-    let imgCount = 0;
+    const imgCount = 0;
 
     // Note: pdf-lib doesn't have a high-level "extract images" API.
     // We have to iterate the page's resources.

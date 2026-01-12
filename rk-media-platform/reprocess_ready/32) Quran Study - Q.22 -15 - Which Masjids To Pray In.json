@@ -1,0 +1,1882 @@
+[
+  {
+    "id": 0,
+    "start_time": 2.231,
+    "end_time": 2.746,
+    "speaker": "Dr. Khalifa",
+    "content": "Sovereigns.",
+    "segment_index": 0
+  },
+  {
+    "id": 1,
+    "start_time": 3.046,
+    "end_time": 3.546,
+    "speaker": "A woman",
+    "content": "Sovereigns.",
+    "segment_index": 1
+  },
+  {
+    "id": 2,
+    "start_time": 3.546,
+    "end_time": 4.495,
+    "speaker": "Dr. Khalifa",
+    "content": "Means kings and queens.",
+    "segment_index": 2
+  },
+  {
+    "id": 3,
+    "start_time": 5.0,
+    "end_time": 5.5,
+    "speaker": "A woman",
+    "content": "Right.",
+    "segment_index": 3
+  },
+  {
+    "id": 4,
+    "start_time": 5.5,
+    "end_time": 7.088,
+    "speaker": "Dr. Khalifa",
+    "content": "Just one word for it, instead of two words.",
+    "segment_index": 4
+  },
+  {
+    "id": 5,
+    "start_time": 7.388,
+    "end_time": 7.888,
+    "speaker": "A woman",
+    "content": "Right.",
+    "segment_index": 5
+  },
+  {
+    "id": 6,
+    "start_time": 8.422,
+    "end_time": 29.124,
+    "speaker": "A woman",
+    "content": "[24:55]  ... as He did for those before them, and will establish for them the religion He has chosen for them, and will substitute peace and security for them in place of fear. All this because they worship Me alone without setting up any idols beside Me. Those ...",
+    "segment_index": 6
+  },
+  {
+    "id": 7,
+    "start_time": 29.124,
+    "end_time": 29.893,
+    "speaker": "Dr. Khalifa",
+    "content": "Does this answer your question?",
+    "segment_index": 7
+  },
+  {
+    "id": "8_part_0",
+    "start_time": 32.089,
+    "end_time": 32.393166666666666,
+    "speaker": "Dr. Khalifa",
+    "content": "Hmm? ",
+    "segment_index": 8
+  },
+  {
+    "id": "8_part_1",
+    "start_time": 32.393166666666666,
+    "end_time": 32.819,
+    "speaker": "A woman",
+    "content": "Pardon?",
+    "segment_index": 9
+  },
+  {
+    "id": "9_part_0",
+    "start_time": 32.957,
+    "end_time": 34.38722222222223,
+    "speaker": "Dr. Khalifa",
+    "content": "Does this answer your question? ",
+    "segment_index": 10
+  },
+  {
+    "id": "9_part_1",
+    "start_time": 34.38722222222223,
+    "end_time": 34.566,
+    "speaker": "A woman",
+    "content": "Yes.",
+    "segment_index": 11
+  },
+  {
+    "id": 10,
+    "start_time": 35.999,
+    "end_time": 38.895,
+    "speaker": "Dr. Khalifa",
+    "content": "[24:55]  ... substitute peace and security for them in place of fear. ...",
+    "segment_index": 12
+  },
+  {
+    "id": 11,
+    "start_time": 40.41,
+    "end_time": 41.603,
+    "speaker": "Dr. Khalifa",
+    "content": "Everything will be alright.",
+    "segment_index": 13
+  },
+  {
+    "id": 12,
+    "start_time": 41.888,
+    "end_time": 47.574,
+    "speaker": "A woman",
+    "content": "What about Sura 22 verse 15, which says \"Happiness Now, and Forever\"?",
+    "segment_index": 14
+  },
+  {
+    "id": 13,
+    "start_time": 48.083,
+    "end_time": 51.366,
+    "speaker": "A woman",
+    "content": "We let go everything and just depend on God alone.",
+    "segment_index": 15
+  },
+  {
+    "id": 14,
+    "start_time": 51.715,
+    "end_time": 54.677,
+    "speaker": "A woman",
+    "content": "And it doesn't matter what happens, it doesn't bother you.",
+    "segment_index": 16
+  },
+  {
+    "id": 15,
+    "start_time": 54.677,
+    "end_time": 55.177,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 17
+  },
+  {
+    "id": 16,
+    "start_time": 55.177,
+    "end_time": 57.177,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 18
+  },
+  {
+    "id": 17,
+    "start_time": 58.395,
+    "end_time": 61.033,
+    "speaker": "Dr. Khalifa",
+    "content": "Unless you wanna follow some other translation, then you hang yourself.",
+    "segment_index": 19
+  },
+  {
+    "id": 18,
+    "start_time": 61.033,
+    "end_time": 61.533,
+    "speaker": "A woman",
+    "content": "Yep.",
+    "segment_index": 20
+  },
+  {
+    "id": 19,
+    "start_time": 71.922,
+    "end_time": 72.576,
+    "speaker": "Dr. Khalifa",
+    "content": "It's true.",
+    "segment_index": 21
+  },
+  {
+    "id": 20,
+    "start_time": 73.94,
+    "end_time": 74.73,
+    "speaker": "Dr. Khalifa",
+    "content": "They hang themselves.",
+    "segment_index": 22
+  },
+  {
+    "id": 21,
+    "start_time": 78.866,
+    "end_time": 84.069,
+    "speaker": "Dr. Khalifa",
+    "content": "22:15 is the verse where translated unanimously in all the other translations as",
+    "segment_index": 23
+  },
+  {
+    "id": 22,
+    "start_time": 84.069,
+    "end_time": 87.701,
+    "speaker": "Dr. Khalifa",
+    "content": "\"if you don't believe that God can help you in this world and forever, hang yourself.\"",
+    "segment_index": 24
+  },
+  {
+    "id": 23,
+    "start_time": 90.298,
+    "end_time": 90.798,
+    "speaker": "Dr. Khalifa",
+    "content": "Really?",
+    "segment_index": 25
+  },
+  {
+    "id": 24,
+    "start_time": 90.947,
+    "end_time": 91.947,
+    "speaker": "A woman",
+    "content": "Yes. Yes.",
+    "segment_index": 26
+  },
+  {
+    "id": 25,
+    "start_time": 92.03999999999999,
+    "end_time": 92.601,
+    "speaker": "A woman",
+    "content": "What?!",
+    "segment_index": 27
+  },
+  {
+    "id": 26,
+    "start_time": 93.27000000000001,
+    "end_time": 94.292,
+    "speaker": "Dr. Khalifa",
+    "content": "I thought you knew that.",
+    "segment_index": 28
+  },
+  {
+    "id": 27,
+    "start_time": 96.57900000000001,
+    "end_time": 98.299,
+    "speaker": "Dr. Khalifa",
+    "content": "Ok, so you have to read it for us then.",
+    "segment_index": 29
+  },
+  {
+    "id": 28,
+    "start_time": 98.923,
+    "end_time": 100.41499999999999,
+    "speaker": "A woman",
+    "content": "What?! How?!",
+    "segment_index": 30
+  },
+  {
+    "id": 29,
+    "start_time": 100.41499999999999,
+    "end_time": 101.73599999999999,
+    "speaker": "A woman",
+    "content": "Thank God, I never saw that.",
+    "segment_index": 31
+  },
+  {
+    "id": 30,
+    "start_time": 102.50200000000001,
+    "end_time": 103.10900000000001,
+    "speaker": "Dr. Khalifa",
+    "content": "Really?",
+    "segment_index": 32
+  },
+  {
+    "id": 31,
+    "start_time": 103.694,
+    "end_time": 104.194,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh.",
+    "segment_index": 33
+  },
+  {
+    "id": 32,
+    "start_time": 104.194,
+    "end_time": 105.316,
+    "speaker": "A woman",
+    "content": "I never really hung (unintelligible)",
+    "segment_index": 34
+  },
+  {
+    "id": 33,
+    "start_time": 107.316,
+    "end_time": 112.087,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 35
+  },
+  {
+    "id": 34,
+    "start_time": 112.087,
+    "end_time": 117.505,
+    "speaker": "Edip",
+    "content": "There are several different interpretations on this. All of them funny from each other.",
+    "segment_index": 36
+  },
+  {
+    "id": 35,
+    "start_time": 117.505,
+    "end_time": 118.212,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 37
+  },
+  {
+    "id": 36,
+    "start_time": 118.212,
+    "end_time": 125.0,
+    "speaker": "Edip",
+    "content": "The other one says \"let him go to sky and open a hole from the sky and look at this (unintelligible)",
+    "segment_index": 38
+  },
+  {
+    "id": 37,
+    "start_time": 125.37,
+    "end_time": 126.654,
+    "speaker": "Dr. Khalifa",
+    "content": "It must be Ibn Kathir.",
+    "segment_index": 39
+  },
+  {
+    "id": 38,
+    "start_time": 126.885,
+    "end_time": 128.192,
+    "speaker": "Edip",
+    "content": "No, this is Maududi",
+    "segment_index": 40
+  },
+  {
+    "id": "39_part_0",
+    "start_time": 128.192,
+    "end_time": 129.03,
+    "speaker": "Dr. Khalifa",
+    "content": "Maududi, yes. ",
+    "segment_index": 41
+  },
+  {
+    "id": "39_part_1",
+    "start_time": 129.03,
+    "end_time": 129.868,
+    "speaker": "Edip",
+    "content": "from Pakistan.",
+    "segment_index": 42
+  },
+  {
+    "id": 40,
+    "start_time": 129.868,
+    "end_time": 132.63,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, This is a contemporary mufassir (interpreter).",
+    "segment_index": 43
+  },
+  {
+    "id": 41,
+    "start_time": 132.88400000000001,
+    "end_time": 133.614,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 44
+  },
+  {
+    "id": 42,
+    "start_time": 134.099,
+    "end_time": 135.429,
+    "speaker": "Dr. Khalifa",
+    "content": "He's more sophisticated.",
+    "segment_index": 45
+  },
+  {
+    "id": "43_part_0",
+    "start_time": 136.029,
+    "end_time": 136.83979166666666,
+    "speaker": "A woman",
+    "content": "Hilarious. ",
+    "segment_index": 46
+  },
+  {
+    "id": "43_part_1",
+    "start_time": 136.83979166666666,
+    "end_time": 137.798,
+    "speaker": "Edip",
+    "content": "He is modern.",
+    "segment_index": 47
+  },
+  {
+    "id": 44,
+    "start_time": 138.075,
+    "end_time": 141.137,
+    "speaker": "A woman",
+    "content": "But this is really good to show people how it's really been mistranslated.",
+    "segment_index": 48
+  },
+  {
+    "id": "45_part_0",
+    "start_time": 141.137,
+    "end_time": 141.9525,
+    "speaker": "A woman",
+    "content": "It's hilarious. ",
+    "segment_index": 49
+  },
+  {
+    "id": "45_part_1",
+    "start_time": 141.9525,
+    "end_time": 142.76799999999997,
+    "speaker": "Edip",
+    "content": "It is wonderful.",
+    "segment_index": 50
+  },
+  {
+    "id": 46,
+    "start_time": 142.768,
+    "end_time": 164.353,
+    "speaker": "A woman",
+    "content": "\"If any thinks that God will not help him, his apostle, in this world and the Hereafter, let him stretch out a rope to the ceiling and cut himself off. Then, let him see whether his plan will remove that which enrages him.\"",
+    "segment_index": 51
+  },
+  {
+    "id": 47,
+    "start_time": 164.353,
+    "end_time": 165.475,
+    "speaker": "A woman",
+    "content": "After, after he's dead?!",
+    "segment_index": 52
+  },
+  {
+    "id": 48,
+    "start_time": 165.475,
+    "end_time": 169.253,
+    "speaker": "Dr. Khalifa",
+    "content": "Ok, now, let us say you're a very careful person who wants to follow the Quran to the letter.",
+    "segment_index": 53
+  },
+  {
+    "id": 49,
+    "start_time": 169.877,
+    "end_time": 170.768,
+    "speaker": "A woman",
+    "content": "I'm dead.",
+    "segment_index": 54
+  },
+  {
+    "id": 50,
+    "start_time": 172.154,
+    "end_time": 172.861,
+    "speaker": "A woman",
+    "content": "I'm dead.",
+    "segment_index": 55
+  },
+  {
+    "id": 51,
+    "start_time": 174.224,
+    "end_time": 175.531,
+    "speaker": "A woman",
+    "content": "Wait. I'm finished.",
+    "segment_index": 56
+  },
+  {
+    "id": 52,
+    "start_time": 175.716,
+    "end_time": 180.88,
+    "speaker": "Dr. Khalifa",
+    "content": "Just read it carefully and see what he's trying to tell you and do it. Because it's important. This is God's message to you.",
+    "segment_index": 57
+  },
+  {
+    "id": 53,
+    "start_time": 181.989,
+    "end_time": 184.335,
+    "speaker": "A woman",
+    "content": "I'll be dead. I would have committed suicide.",
+    "segment_index": 58
+  },
+  {
+    "id": "54_part_0",
+    "start_time": 185.25900000000001,
+    "end_time": 185.99638095238097,
+    "speaker": "Dr. Khalifa",
+    "content": "That's right. Yes. ",
+    "segment_index": 59
+  },
+  {
+    "id": "54_part_1",
+    "start_time": 185.99638095238097,
+    "end_time": 186.889,
+    "speaker": "A woman",
+    "content": "Isn't that right? Yeah.",
+    "segment_index": 60
+  },
+  {
+    "id": 55,
+    "start_time": 187.975,
+    "end_time": 188.975,
+    "speaker": "A woman",
+    "content": "Good God.",
+    "segment_index": 61
+  },
+  {
+    "id": "56_part_0",
+    "start_time": 189.46,
+    "end_time": 193.51345161290322,
+    "speaker": "Edip",
+    "content": "Rashad, what did I do? You know, I criticized them there. ",
+    "segment_index": 62
+  },
+  {
+    "id": "56_part_1",
+    "start_time": 193.51345161290322,
+    "end_time": 193.793,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 63
+  },
+  {
+    "id": "57_part_0",
+    "start_time": 194.648,
+    "end_time": 198.01431914893618,
+    "speaker": "Edip",
+    "content": "There, in Turkey, all Turkish translators, they translated this way. ",
+    "segment_index": 64
+  },
+  {
+    "id": "57_part_1",
+    "start_time": 198.01431914893618,
+    "end_time": 199.234,
+    "speaker": "Dr. Khalifa",
+    "content": "They said \"how dare you!\"",
+    "segment_index": 65
+  },
+  {
+    "id": 58,
+    "start_time": 199.373,
+    "end_time": 213.198,
+    "speaker": "Edip",
+    "content": "After my critic, I told them, to these translators, I said \"if you think that you are right, now I challenge you, help yourself and don't think either you are right or not.\"",
+    "segment_index": 66
+  },
+  {
+    "id": "59_part_0",
+    "start_time": 213.36,
+    "end_time": 215.5007857142857,
+    "speaker": "A woman",
+    "content": "Now, can I read yours? Can I read yours? ",
+    "segment_index": 67
+  },
+  {
+    "id": "59_part_1",
+    "start_time": 215.5007857142857,
+    "end_time": 216.284,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes, of course.",
+    "segment_index": 68
+  },
+  {
+    "id": 60,
+    "start_time": 217.139,
+    "end_time": 235.167,
+    "speaker": "A woman",
+    "content": "[22:15]  If anyone thinks that GOD cannot support him in this life and in the Hereafter, then let him turn completely to (his Creator in) heaven, and sever (the dependency on anyone else). He will then see that this plan eliminates anything that bothers him.",
+    "segment_index": 69
+  },
+  {
+    "id": 61,
+    "start_time": 235.329,
+    "end_time": 238.23,
+    "speaker": "A woman",
+    "content": "I mean, that is so clear. And it's real.",
+    "segment_index": 70
+  },
+  {
+    "id": 62,
+    "start_time": 238.23,
+    "end_time": 240.08,
+    "speaker": "Dr. Khalifa",
+    "content": "That's the message of the Quran.",
+    "segment_index": 71
+  },
+  {
+    "id": "63_part_0",
+    "start_time": 240.773,
+    "end_time": 245.98424731182794,
+    "speaker": "Edip",
+    "content": "In the context, read from the words above and all the context is this. ",
+    "segment_index": 72
+  },
+  {
+    "id": "63_part_1",
+    "start_time": 245.98424731182794,
+    "end_time": 247.599,
+    "speaker": "A woman",
+    "content": "Yes, it is in context.",
+    "segment_index": 73
+  },
+  {
+    "id": 64,
+    "start_time": 248.153,
+    "end_time": 249.46,
+    "speaker": "A woman",
+    "content": "This is out of context.",
+    "segment_index": 74
+  },
+  {
+    "id": 65,
+    "start_time": 251.017,
+    "end_time": 252.463,
+    "speaker": "A woman",
+    "content": "And it makes no sense at all.",
+    "segment_index": 75
+  },
+  {
+    "id": 66,
+    "start_time": 252.463,
+    "end_time": 254.186,
+    "speaker": "A woman",
+    "content": "Not at all.",
+    "segment_index": 76
+  },
+  {
+    "id": 67,
+    "start_time": 254.186,
+    "end_time": 257.479,
+    "speaker": "A man",
+    "content": "Because they brought their idol, Muhammad, in there.",
+    "segment_index": 77
+  },
+  {
+    "id": "68_part_0",
+    "start_time": 257.479,
+    "end_time": 257.7032,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes. ",
+    "segment_index": 78
+  },
+  {
+    "id": "68_part_1",
+    "start_time": 257.7032,
+    "end_time": 259.45196,
+    "speaker": "A woman",
+    "content": "Yes, yeah, they put Muhammad in there. ",
+    "segment_index": 79
+  },
+  {
+    "id": "68_part_2",
+    "start_time": 259.45196,
+    "end_time": 260.842,
+    "speaker": "Edip",
+    "content": "There's no mention of Muhammad.",
+    "segment_index": 80
+  },
+  {
+    "id": 69,
+    "start_time": 260.842,
+    "end_time": 263.027,
+    "speaker": "Dr. Khalifa",
+    "content": "There's no... It has nothing to do with Muhammad.",
+    "segment_index": 81
+  },
+  {
+    "id": 70,
+    "start_time": 263.027,
+    "end_time": 264.657,
+    "speaker": "A woman",
+    "content": "It has nothing to do with Muhammad at all.",
+    "segment_index": 82
+  },
+  {
+    "id": 71,
+    "start_time": 264.657,
+    "end_time": 265.918,
+    "speaker": "A woman",
+    "content": "But they put him in there, too.",
+    "segment_index": 83
+  },
+  {
+    "id": 72,
+    "start_time": 266.149,
+    "end_time": 275.626,
+    "speaker": "A woman",
+    "content": "Because even the Ayat before is talking about God admitting the believers and leading them into a righteous life.",
+    "segment_index": 84
+  },
+  {
+    "id": 73,
+    "start_time": 275.92,
+    "end_time": 277.451,
+    "speaker": "A woman",
+    "content": "It has nothing to do with Muhammad.",
+    "segment_index": 85
+  },
+  {
+    "id": 74,
+    "start_time": 282.347,
+    "end_time": 283.516,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 86
+  },
+  {
+    "id": 75,
+    "start_time": 295.29,
+    "end_time": 296.412,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 87
+  },
+  {
+    "id": 76,
+    "start_time": 306.263,
+    "end_time": 310.295,
+    "speaker": "Dr. Khalifa",
+    "content": "Okay, well, we'll go back to work and we'll see you, IN SHAA ALLAH, for Salat Al-'Asr.",
+    "segment_index": 88
+  },
+  {
+    "id": 77,
+    "start_time": 310.503,
+    "end_time": 311.903,
+    "speaker": "A man",
+    "content": "IN SHAA ALLAH.",
+    "segment_index": 89
+  },
+  {
+    "id": 78,
+    "start_time": 312.876,
+    "end_time": 316.74,
+    "speaker": "A woman",
+    "content": "Is your pillow (unintelligible)?",
+    "segment_index": 90
+  },
+  {
+    "id": 79,
+    "start_time": 317.364,
+    "end_time": 318.048,
+    "speaker": "Dr. Khalifa",
+    "content": "I think.",
+    "segment_index": 91
+  },
+  {
+    "id": 80,
+    "start_time": 319.849,
+    "end_time": 322.704,
+    "speaker": "Dr. Khalifa",
+    "content": "I was vice president of the Sunni mosque.",
+    "segment_index": 92
+  },
+  {
+    "id": 81,
+    "start_time": 323.721,
+    "end_time": 328.446,
+    "speaker": "Dr. Khalifa",
+    "content": "Then one day, I told them not to follow Hadith and Sunnah, so here I found their sign, it's saying \"for sale.\"",
+    "segment_index": 93
+  },
+  {
+    "id": 82,
+    "start_time": 328.446,
+    "end_time": 331.924,
+    "speaker": "Dr. Khalifa",
+    "content": "So, and I asked. And I bought it.",
+    "segment_index": 94
+  },
+  {
+    "id": 83,
+    "start_time": 334.164,
+    "end_time": 338.52,
+    "speaker": "Behrouz",
+    "content": "What (unintelligbile) more here.",
+    "segment_index": 95
+  },
+  {
+    "id": 84,
+    "start_time": 338.52,
+    "end_time": 341.813,
+    "speaker": "Behrouz",
+    "content": "Because I think the mosque needs a little job.",
+    "segment_index": 96
+  },
+  {
+    "id": 85,
+    "start_time": 343.475,
+    "end_time": 349.213,
+    "speaker": "Behrouz",
+    "content": "For example, install the extra bathroom or kitchen bathroom or something like that.",
+    "segment_index": 97
+  },
+  {
+    "id": 86,
+    "start_time": 349.836,
+    "end_time": 351.06,
+    "speaker": "Dr. Khalifa",
+    "content": "We're doing it.",
+    "segment_index": 98
+  },
+  {
+    "id": 87,
+    "start_time": 352.654,
+    "end_time": 354.654,
+    "speaker": "Dr. Khalifa",
+    "content": "We expanded it. Their mosque was only up to here.",
+    "segment_index": 99
+  },
+  {
+    "id": 88,
+    "start_time": 354.654,
+    "end_time": 355.43,
+    "speaker": "Behrouz",
+    "content": "Yeah.",
+    "segment_index": 100
+  },
+  {
+    "id": 89,
+    "start_time": 355.43,
+    "end_time": 358.793,
+    "speaker": "Dr. Khalifa",
+    "content": "And then we added this part. So, we keep expanding.",
+    "segment_index": 101
+  },
+  {
+    "id": 90,
+    "start_time": 360.248,
+    "end_time": 363.518,
+    "speaker": "Dr. Khalifa",
+    "content": "And I think we need a new expansion soon, IN SHAA ALLAH.",
+    "segment_index": 102
+  },
+  {
+    "id": 91,
+    "start_time": 364.396,
+    "end_time": 365.0,
+    "speaker": "A woman",
+    "content": "It's getting there.",
+    "segment_index": 103
+  },
+  {
+    "id": 92,
+    "start_time": 365.0,
+    "end_time": 367.0,
+    "speaker": "Dr. Khalifa",
+    "content": "Last Friday, we didn't find a place to sit down.",
+    "segment_index": 104
+  },
+  {
+    "id": 93,
+    "start_time": 367.323,
+    "end_time": 368.838,
+    "speaker": "A woman",
+    "content": "You're going to see people walking.",
+    "segment_index": 105
+  },
+  {
+    "id": 94,
+    "start_time": 371.017,
+    "end_time": 375.119,
+    "speaker": "Dr. Khalifa",
+    "content": "I'm pretty sure, IN SHAA ALLAH, we'll take the whole block. This whole block and we'll build a mosque.",
+    "segment_index": 106
+  },
+  {
+    "id": 95,
+    "start_time": 375.95,
+    "end_time": 377.95,
+    "speaker": "Audience",
+    "content": "IN SHAA ALLAH.",
+    "segment_index": 107
+  },
+  {
+    "id": 96,
+    "start_time": 382.8,
+    "end_time": 388.311,
+    "speaker": "Edip",
+    "content": "Rashad, we go and invade the other mosques. There's a new one.",
+    "segment_index": 108
+  },
+  {
+    "id": 97,
+    "start_time": 388.473,
+    "end_time": 392.274,
+    "speaker": "Dr. Khalifa",
+    "content": "No, I checked it out and their direction of Qibla is wrong. So, I said \"we'll not take it.\"",
+    "segment_index": 109
+  },
+  {
+    "id": 98,
+    "start_time": 393.637,
+    "end_time": 394.736,
+    "speaker": "Edip",
+    "content": "Do you think it's wrong?",
+    "segment_index": 110
+  },
+  {
+    "id": 99,
+    "start_time": 394.736,
+    "end_time": 397.475,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes. Their Qibla is, they're looking northeast.",
+    "segment_index": 111
+  },
+  {
+    "id": "100_part_0",
+    "start_time": 398.052,
+    "end_time": 398.67733333333337,
+    "speaker": "Behrouz",
+    "content": "Really? ",
+    "segment_index": 112
+  },
+  {
+    "id": "100_part_1",
+    "start_time": 398.67733333333337,
+    "end_time": 398.99,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 113
+  },
+  {
+    "id": 101,
+    "start_time": 399.683,
+    "end_time": 401.683,
+    "speaker": "Dr. Khalifa",
+    "content": "They designed the whole thing looking at northeast.",
+    "segment_index": 114
+  },
+  {
+    "id": "102_part_0",
+    "start_time": 402.214,
+    "end_time": 402.96647058823527,
+    "speaker": "A woman",
+    "content": "It's a zero. ",
+    "segment_index": 115
+  },
+  {
+    "id": "102_part_1",
+    "start_time": 402.96647058823527,
+    "end_time": 403.198,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 116
+  },
+  {
+    "id": 103,
+    "start_time": 403.65999999999997,
+    "end_time": 405.0,
+    "speaker": "A man",
+    "content": "It's a magnetic north.",
+    "segment_index": 117
+  },
+  {
+    "id": 104,
+    "start_time": 405.0,
+    "end_time": 410.557,
+    "speaker": "Dr. Khalifa",
+    "content": "Either that or we can just, you know, if we can move it, we'll do it.",
+    "segment_index": 118
+  },
+  {
+    "id": "105_part_0",
+    "start_time": 412.22,
+    "end_time": 414.6056666666667,
+    "speaker": "A woman",
+    "content": "(unintelligible) ",
+    "segment_index": 119
+  },
+  {
+    "id": "105_part_1",
+    "start_time": 414.6056666666667,
+    "end_time": 415.16700000000003,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 120
+  },
+  {
+    "id": 106,
+    "start_time": 417.5,
+    "end_time": 426.244,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 121
+  },
+  {
+    "id": 107,
+    "start_time": 426.983,
+    "end_time": 429.422,
+    "speaker": "Dr. Khalifa",
+    "content": "Where? In here, in Tucson?",
+    "segment_index": 122
+  },
+  {
+    "id": 108,
+    "start_time": 429.422,
+    "end_time": 429.922,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 123
+  },
+  {
+    "id": 109,
+    "start_time": 429.922,
+    "end_time": 431.691,
+    "speaker": "Dr. Khalifa",
+    "content": "No, it's not expensive here.",
+    "segment_index": 124
+  },
+  {
+    "id": 110,
+    "start_time": 431.691,
+    "end_time": 432.79,
+    "speaker": "Edip",
+    "content": "IN SHAA ALLAH.",
+    "segment_index": 125
+  },
+  {
+    "id": 111,
+    "start_time": 433.76,
+    "end_time": 435.76,
+    "speaker": "Dr. Khalifa",
+    "content": "Besides, nothing is expensive for God.",
+    "segment_index": 126
+  },
+  {
+    "id": 112,
+    "start_time": 439.825,
+    "end_time": 443.141,
+    "speaker": "Dr. Khalifa",
+    "content": "Like Carl Sagan says \"God has billions and billions...\"",
+    "segment_index": 127
+  },
+  {
+    "id": 113,
+    "start_time": 448.106,
+    "end_time": 450.106,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes, he mimics Carl Sagan.",
+    "segment_index": 128
+  },
+  {
+    "id": 114,
+    "start_time": 453.593,
+    "end_time": 454.392,
+    "speaker": "Dr. Khalifa",
+    "content": "Billions.",
+    "segment_index": 129
+  },
+  {
+    "id": 115,
+    "start_time": 458.573,
+    "end_time": 460.804,
+    "speaker": "A woman",
+    "content": "Which mosque is the one on the Freeway?",
+    "segment_index": 130
+  },
+  {
+    "id": 116,
+    "start_time": 460.804,
+    "end_time": 462.804,
+    "speaker": "Dr. Khalifa",
+    "content": "Ahmadiyya. Ahmadiyya mosque.",
+    "segment_index": 131
+  },
+  {
+    "id": 117,
+    "start_time": 464.421,
+    "end_time": 465.98199999999997,
+    "speaker": "A woman",
+    "content": "How many mosques are there in Tucson?",
+    "segment_index": 132
+  },
+  {
+    "id": 118,
+    "start_time": 466.698,
+    "end_time": 467.89,
+    "speaker": "Dr. Khalifa",
+    "content": "How many? 3",
+    "segment_index": 133
+  },
+  {
+    "id": 119,
+    "start_time": 468.837,
+    "end_time": 470.26,
+    "speaker": "Dr. Khalifa",
+    "content": "It's Ahmadiyya. How many mosques?",
+    "segment_index": 134
+  },
+  {
+    "id": 120,
+    "start_time": 470.26,
+    "end_time": 471.013,
+    "speaker": "A woman",
+    "content": "1",
+    "segment_index": 135
+  },
+  {
+    "id": 121,
+    "start_time": 471.267,
+    "end_time": 473.521,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah, 3 mosques. I thought \"how many Ahmadiyya's are?\"",
+    "segment_index": 136
+  },
+  {
+    "id": "122_part_0",
+    "start_time": 473.821,
+    "end_time": 474.7635641025641,
+    "speaker": "A man",
+    "content": "How many are those? ",
+    "segment_index": 137
+  },
+  {
+    "id": "122_part_1",
+    "start_time": 474.7635641025641,
+    "end_time": 475.659,
+    "speaker": "Dr. Khalifa",
+    "content": "Also, 3 Ahmadiyyas.",
+    "segment_index": 138
+  },
+  {
+    "id": 123,
+    "start_time": 478.338,
+    "end_time": 484.04,
+    "speaker": "Dr. Khalifa",
+    "content": "2 of them enforce it. Actually, this is a surgeon. An anesthetist, not a surgeon,",
+    "segment_index": 139
+  },
+  {
+    "id": 124,
+    "start_time": 484.04,
+    "end_time": 491.01800000000003,
+    "speaker": "Dr. Khalifa",
+    "content": "who was making a lot of money and meets Ahmadiyya and it's good for his IRS taxes.",
+    "segment_index": 140
+  },
+  {
+    "id": 125,
+    "start_time": 491.734,
+    "end_time": 495.446,
+    "speaker": "Dr. Khalifa",
+    "content": "So, he built a mosque and imported two guys to take care of it from Pakistan.",
+    "segment_index": 141
+  },
+  {
+    "id": 126,
+    "start_time": 496.693,
+    "end_time": 497.838,
+    "speaker": "Dr. Khalifa",
+    "content": "So, there are 3 of them here.",
+    "segment_index": 142
+  },
+  {
+    "id": "127_part_0",
+    "start_time": 499.358,
+    "end_time": 514.3158238341969,
+    "speaker": "Parivash",
+    "content": "Rashad, last night somebody asked me \"if I'm in the street and I have to do my Prayer. And the mosque that does not belong to any god. And can I go there and pray?\" I said \"No, you cannot.\" ",
+    "segment_index": 143
+  },
+  {
+    "id": "127_part_1",
+    "start_time": 514.3158238341969,
+    "end_time": 514.552,
+    "speaker": "Dr. Khalifa",
+    "content": "No.",
+    "segment_index": 144
+  },
+  {
+    "id": 128,
+    "start_time": 514.734,
+    "end_time": 518.575,
+    "speaker": "Dr. Khalifa",
+    "content": "Because there is a direct commandment saying \"don't\" in a very strong way.",
+    "segment_index": 145
+  },
+  {
+    "id": 129,
+    "start_time": 518.575,
+    "end_time": 519.905,
+    "speaker": "Dr. Khalifa",
+    "content": "(9:108) لَا تَقُمْ فِيهِ أَبَدًۭا",
+    "segment_index": 146
+  },
+  {
+    "id": "130_part_0",
+    "start_time": 520.413,
+    "end_time": 525.8508,
+    "speaker": "Edip",
+    "content": "This mosque must be the last place that you go there. You cannot find any place there to go there. ",
+    "segment_index": 147
+  },
+  {
+    "id": "130_part_1",
+    "start_time": 525.8508,
+    "end_time": 526.455,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes. Right.",
+    "segment_index": 148
+  },
+  {
+    "id": 131,
+    "start_time": 526.57,
+    "end_time": 528.893,
+    "speaker": "A woman",
+    "content": "He said he had to go to the bathroom.",
+    "segment_index": 149
+  },
+  {
+    "id": 132,
+    "start_time": 529.702,
+    "end_time": 530.202,
+    "speaker": "Dr. Khalifa",
+    "content": "Huh?",
+    "segment_index": 150
+  },
+  {
+    "id": 133,
+    "start_time": 531.972,
+    "end_time": 532.472,
+    "speaker": "Dr. Khalifa",
+    "content": "No.",
+    "segment_index": 151
+  },
+  {
+    "id": 134,
+    "start_time": 532.472,
+    "end_time": 536.737,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 152
+  },
+  {
+    "id": "135_part_0",
+    "start_time": 536.737,
+    "end_time": 540.3329677419355,
+    "speaker": "Edip",
+    "content": "Because if you go there and worship, you accept the way that they worship. ",
+    "segment_index": 153
+  },
+  {
+    "id": "135_part_1",
+    "start_time": 540.3329677419355,
+    "end_time": 541.196,
+    "speaker": "Dr. Khalifa",
+    "content": "what they're doing",
+    "segment_index": 154
+  },
+  {
+    "id": "136_part_0",
+    "start_time": 541.196,
+    "end_time": 542.3071111111111,
+    "speaker": "A woman",
+    "content": "Yeah, Exactly. ",
+    "segment_index": 155
+  },
+  {
+    "id": "136_part_1",
+    "start_time": 542.3071111111111,
+    "end_time": 542.7515555555556,
+    "speaker": "Dr. Khalifa",
+    "content": "Right ",
+    "segment_index": 156
+  },
+  {
+    "id": "136_part_2",
+    "start_time": 542.7515555555556,
+    "end_time": 543.196,
+    "speaker": "A woman",
+    "content": "9:108.",
+    "segment_index": 157
+  },
+  {
+    "id": 137,
+    "start_time": 544.086,
+    "end_time": 546.652,
+    "speaker": "Dr. Khalifa",
+    "content": "It's actually a house of Satan. Will you go in a house of Satan to pray?",
+    "segment_index": 158
+  },
+  {
+    "id": 138,
+    "start_time": 547.238,
+    "end_time": 547.776,
+    "speaker": "A woman",
+    "content": "No.",
+    "segment_index": 159
+  },
+  {
+    "id": 139,
+    "start_time": 549.046,
+    "end_time": 553.441,
+    "speaker": "Dr. Khalifa",
+    "content": "Because in Sura 9, really the commandment is very strong. I used to be not sure.",
+    "segment_index": 160
+  },
+  {
+    "id": 140,
+    "start_time": 554.487,
+    "end_time": 557.057,
+    "speaker": "Dr. Khalifa",
+    "content": "And then when I read this verse over and over, it says,",
+    "segment_index": 161
+  },
+  {
+    "id": 141,
+    "start_time": 557.057,
+    "end_time": 558.457,
+    "speaker": "Dr. Khalifa",
+    "content": "(9:108) لَا تَقُمْ فِيهِ أَبَدًۭا",
+    "segment_index": 162
+  },
+  {
+    "id": 142,
+    "start_time": 558.688,
+    "end_time": 559.51,
+    "speaker": "Dr. Khalifa",
+    "content": "Do not ever...",
+    "segment_index": 163
+  },
+  {
+    "id": "143_part_0",
+    "start_time": 559.51,
+    "end_time": 562.2771011235955,
+    "speaker": "A woman",
+    "content": "Yeah, I see it. [9:108]  You shall never pray in such a mosque. ",
+    "segment_index": 164
+  },
+  {
+    "id": "143_part_1",
+    "start_time": 562.2771011235955,
+    "end_time": 563.358,
+    "speaker": "Dr. Khalifa",
+    "content": "Do not never ever pray...",
+    "segment_index": 165
+  },
+  {
+    "id": "144_part_0",
+    "start_time": 563.477,
+    "end_time": 569.0396952380952,
+    "speaker": "Parivash",
+    "content": "I thought, and you know, they didn't believe, some of them. Mã Shã Allãh. I just opened this verses. ",
+    "segment_index": 166
+  },
+  {
+    "id": "144_part_1",
+    "start_time": 569.0396952380952,
+    "end_time": 569.26,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 167
+  },
+  {
+    "id": "145_part_0",
+    "start_time": 569.26,
+    "end_time": 571.669380952381,
+    "speaker": "Parivash",
+    "content": "It's very clear. Nobody can doubt it. ",
+    "segment_index": 168
+  },
+  {
+    "id": "145_part_1",
+    "start_time": 571.669380952381,
+    "end_time": 571.923,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 169
+  },
+  {
+    "id": 146,
+    "start_time": 573.438,
+    "end_time": 582.55,
+    "speaker": "Vicky",
+    "content": "And about their kids that we were talking, I have a sign, IN SHAA ALLAH, like, God is my witness and I'm not lying.",
+    "segment_index": 170
+  },
+  {
+    "id": 147,
+    "start_time": 583.169,
+    "end_time": 589.797,
+    "speaker": "Vicky",
+    "content": "The first time I met Dr. Khalifa, Makan was maybe three or four months.",
+    "segment_index": 171
+  },
+  {
+    "id": 148,
+    "start_time": 590.282,
+    "end_time": 593.016,
+    "speaker": "Vicky",
+    "content": "And at that age, the kid doesn't talk.",
+    "segment_index": 172
+  },
+  {
+    "id": 149,
+    "start_time": 593.016,
+    "end_time": 596.711,
+    "speaker": "Vicky",
+    "content": "And he said three or four times, Allah, Allah.",
+    "segment_index": 173
+  },
+  {
+    "id": 150,
+    "start_time": 597.82,
+    "end_time": 599.523,
+    "speaker": "Vicky",
+    "content": "And then I forgot all about that.",
+    "segment_index": 174
+  },
+  {
+    "id": 151,
+    "start_time": 599.523,
+    "end_time": 603.908,
+    "speaker": "Vicky",
+    "content": "Last time that Dr. Khalifa came to our place, and he had lunch with us.",
+    "segment_index": 175
+  },
+  {
+    "id": 152,
+    "start_time": 603.908,
+    "end_time": 608.209,
+    "speaker": "Vicky",
+    "content": "And then, the first group left to Parivash's place.",
+    "segment_index": 176
+  },
+  {
+    "id": 153,
+    "start_time": 608.602,
+    "end_time": 612.898,
+    "speaker": "Vicky",
+    "content": "And I went with my kids and Muhammad to Parivash's house.",
+    "segment_index": 177
+  },
+  {
+    "id": 154,
+    "start_time": 612.898,
+    "end_time": 617.89,
+    "speaker": "Vicky",
+    "content": "In the way, we were so excited that Muhammad started saying \"Allah, Allah.\"",
+    "segment_index": 178
+  },
+  {
+    "id": 155,
+    "start_time": 617.89,
+    "end_time": 620.576,
+    "speaker": "Vicky",
+    "content": "Like he was trying Zikr while he was driving.",
+    "segment_index": 179
+  },
+  {
+    "id": 156,
+    "start_time": 621.038,
+    "end_time": 622.955,
+    "speaker": "Vicky",
+    "content": "And God is my witness, I'm not lying.",
+    "segment_index": 180
+  },
+  {
+    "id": 157,
+    "start_time": 623.81,
+    "end_time": 624.699,
+    "speaker": "Vicky",
+    "content": "He tried.",
+    "segment_index": 181
+  },
+  {
+    "id": 158,
+    "start_time": 625.0,
+    "end_time": 627.35,
+    "speaker": "Vicky",
+    "content": "And he tried in my arms.",
+    "segment_index": 182
+  },
+  {
+    "id": 159,
+    "start_time": 627.35,
+    "end_time": 628.083,
+    "speaker": "Vicky",
+    "content": "He knows it.",
+    "segment_index": 183
+  },
+  {
+    "id": "160_part_0",
+    "start_time": 628.521,
+    "end_time": 630.2330833333333,
+    "speaker": "Vicky",
+    "content": "He pushed and said \"Allah, Allah.\" ",
+    "segment_index": 184
+  },
+  {
+    "id": "160_part_1",
+    "start_time": 630.2330833333333,
+    "end_time": 630.869,
+    "speaker": "Dr. Khalifa",
+    "content": "Mã Shã Allãh.",
+    "segment_index": 185
+  },
+  {
+    "id": 161,
+    "start_time": 631.031,
+    "end_time": 632.493,
+    "speaker": "Vicky",
+    "content": "And then, I didn't say anything.",
+    "segment_index": 186
+  },
+  {
+    "id": 162,
+    "start_time": 632.955,
+    "end_time": 637.743,
+    "speaker": "Vicky",
+    "content": "I was afraid I tell Muhammad that, then Muhammad say \"Oh, Vicky, you know, don't say it.\"",
+    "segment_index": 187
+  },
+  {
+    "id": 163,
+    "start_time": 638.305,
+    "end_time": 638.912,
+    "speaker": "Vicky",
+    "content": "I was just thinking.",
+    "segment_index": 188
+  },
+  {
+    "id": 164,
+    "start_time": 638.912,
+    "end_time": 641.929,
+    "speaker": "Vicky",
+    "content": "And then, he turned at me and said \"did you hear?\"",
+    "segment_index": 189
+  },
+  {
+    "id": 165,
+    "start_time": 642.1659999999999,
+    "end_time": 643.659,
+    "speaker": "Vicky",
+    "content": "You know, he's trying very hard.",
+    "segment_index": 190
+  },
+  {
+    "id": 166,
+    "start_time": 643.659,
+    "end_time": 644.852,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 191
+  },
+  {
+    "id": 167,
+    "start_time": 644.852,
+    "end_time": 645.352,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 192
+  },
+  {
+    "id": "168_part_0",
+    "start_time": 645.56,
+    "end_time": 646.7009999999999,
+    "speaker": "A woman",
+    "content": "And he tries with... ",
+    "segment_index": 193
+  },
+  {
+    "id": "168_part_1",
+    "start_time": 646.7009999999999,
+    "end_time": 647.353,
+    "speaker": "Dr. Khalifa",
+    "content": "Translation.",
+    "segment_index": 194
+  },
+  {
+    "id": 169,
+    "start_time": 648.115,
+    "end_time": 649.099,
+    "speaker": "A woman",
+    "content": "Subhan Allah.",
+    "segment_index": 195
+  },
+  {
+    "id": 170,
+    "start_time": 649.33,
+    "end_time": 650.429,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes. Mã Shã Allãh.",
+    "segment_index": 196
+  },
+  {
+    "id": 171,
+    "start_time": 650.74,
+    "end_time": 653.988,
+    "speaker": "Vicky",
+    "content": "I think that's why, like, the kids should be like...",
+    "segment_index": 197
+  },
+  {
+    "id": 172,
+    "start_time": 654.312,
+    "end_time": 657.591,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh, they start very early. I was asking Mahdi. I was not joking.",
+    "segment_index": 198
+  },
+  {
+    "id": 173,
+    "start_time": 657.952,
+    "end_time": 658.452,
+    "speaker": "Dr. Khalifa",
+    "content": "One week.",
+    "segment_index": 199
+  },
+  {
+    "id": 174,
+    "start_time": 659.306,
+    "end_time": 662.924,
+    "speaker": "Dr. Khalifa",
+    "content": "Then it turns out, in their mother's womb, they're listening to the Quran.",
+    "segment_index": 200
+  },
+  {
+    "id": 175,
+    "start_time": 662.924,
+    "end_time": 663.964,
+    "speaker": "Dr. Khalifa",
+    "content": "They're Baroni kids.",
+    "segment_index": 201
+  },
+  {
+    "id": 176,
+    "start_time": 663.964,
+    "end_time": 665.134,
+    "speaker": "A woman",
+    "content": "Yes. Mã Shã Allãh.",
+    "segment_index": 202
+  },
+  {
+    "id": 177,
+    "start_time": 665.134,
+    "end_time": 665.634,
+    "speaker": "A woman",
+    "content": "Yes.",
+    "segment_index": 203
+  },
+  {
+    "id": 178,
+    "start_time": 665.634,
+    "end_time": 668.698,
+    "speaker": "Dr. Khalifa",
+    "content": "They wanted Parivash's recording.",
+    "segment_index": 204
+  },
+  {
+    "id": "179_part_0",
+    "start_time": 670.315,
+    "end_time": 671.0435714285715,
+    "speaker": "A woman",
+    "content": "Ilahi (my God) ",
+    "segment_index": 205
+  },
+  {
+    "id": "179_part_1",
+    "start_time": 671.0435714285715,
+    "end_time": 672.015,
+    "speaker": "Dr. Khalifa",
+    "content": "Ilahi (my God). Yes.",
+    "segment_index": 206
+  },
+  {
+    "id": 180,
+    "start_time": 672.015,
+    "end_time": 673.37,
+    "speaker": "A woman",
+    "content": "Ilahi (my God) all the time.",
+    "segment_index": 207
+  },
+  {
+    "id": 181,
+    "start_time": 673.37,
+    "end_time": 674.424,
+    "speaker": "Dr. Khalifa",
+    "content": "Mã Shã Allãh.",
+    "segment_index": 208
+  },
+  {
+    "id": 182,
+    "start_time": 678.584,
+    "end_time": 684.35,
+    "speaker": "A woman",
+    "content": "Jahan was saying when he was saying Zikr, reciting in his sleep \"Allah, Allah.\"",
+    "segment_index": 209
+  },
+  {
+    "id": "183_part_0",
+    "start_time": 684.35,
+    "end_time": 685.3154166666667,
+    "speaker": "Dr. Khalifa",
+    "content": "In his sleep? ",
+    "segment_index": 210
+  },
+  {
+    "id": "183_part_1",
+    "start_time": 685.3154166666667,
+    "end_time": 685.6602083333333,
+    "speaker": "A woman",
+    "content": "Yes. ",
+    "segment_index": 211
+  },
+  {
+    "id": "183_part_2",
+    "start_time": 685.6602083333333,
+    "end_time": 686.005,
+    "speaker": "Dr. Khalifa",
+    "content": "Yeah.",
+    "segment_index": 212
+  },
+  {
+    "id": 184,
+    "start_time": 686.952,
+    "end_time": 692.187,
+    "speaker": "Dr. Khalifa",
+    "content": "This is amazing. Francisco sleeps here and then I go to wake him up for Fajr.",
+    "segment_index": 213
+  },
+  {
+    "id": 185,
+    "start_time": 692.398,
+    "end_time": 694.261,
+    "speaker": "Dr. Khalifa",
+    "content": "Here is a Chinese-Mexican guy.",
+    "segment_index": 214
+  },
+  {
+    "id": 186,
+    "start_time": 694.261,
+    "end_time": 694.761,
+    "speaker": "Dr. Khalifa",
+    "content": "Okay?",
+    "segment_index": 215
+  },
+  {
+    "id": 187,
+    "start_time": 695.0,
+    "end_time": 698.941,
+    "speaker": "Dr. Khalifa",
+    "content": "Wake him up and he said \"La Elaha Ella Allah. Wahdahu La Shareeka Lah. What's going on here?\"",
+    "segment_index": 216
+  },
+  {
+    "id": 188,
+    "start_time": 702.189,
+    "end_time": 703.497,
+    "speaker": "Dr. Khalifa",
+    "content": "It's Francisco, yes.",
+    "segment_index": 217
+  },
+  {
+    "id": 189,
+    "start_time": 704.2139999999999,
+    "end_time": 705.984,
+    "speaker": "Dr. Khalifa",
+    "content": "I wake him up \"it's Fajr prayer.\"",
+    "segment_index": 218
+  },
+  {
+    "id": 190,
+    "start_time": 705.984,
+    "end_time": 709.044,
+    "speaker": "Dr. Khalifa",
+    "content": "But it's really fantastic (unintelligible).",
+    "segment_index": 219
+  },
+  {
+    "id": "191_part_0",
+    "start_time": 711.7,
+    "end_time": 715.1782608695653,
+    "speaker": "Dr. Khalifa",
+    "content": "Because you don't think when you're getting up from your sleep. ",
+    "segment_index": 220
+  },
+  {
+    "id": "191_part_1",
+    "start_time": 715.1782608695653,
+    "end_time": 715.45,
+    "speaker": "A woman",
+    "content": "Yeah.",
+    "segment_index": 221
+  },
+  {
+    "id": "192_part_0",
+    "start_time": 715.5889999999999,
+    "end_time": 717.2995454545454,
+    "speaker": "Dr. Khalifa",
+    "content": "Your brain is still asleep. ",
+    "segment_index": 222
+  },
+  {
+    "id": "192_part_1",
+    "start_time": 717.2995454545454,
+    "end_time": 717.605,
+    "speaker": "A woman",
+    "content": "Yeah.",
+    "segment_index": 223
+  },
+  {
+    "id": 193,
+    "start_time": 717.928,
+    "end_time": 723.713,
+    "speaker": "Dr. Khalifa",
+    "content": "In fact, when they interrogate prisoners, they want to hear the truth, they wake him up and ask him immediately a question.",
+    "segment_index": 224
+  },
+  {
+    "id": 194,
+    "start_time": 725.138,
+    "end_time": 726.054,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Where is your army camping?\"",
+    "segment_index": 225
+  },
+  {
+    "id": 195,
+    "start_time": 726.608,
+    "end_time": 728.309,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Three blocks from here. Wait, what did I say?!\"",
+    "segment_index": 226
+  },
+  {
+    "id": 196,
+    "start_time": 730.31,
+    "end_time": 731.018,
+    "speaker": "A man",
+    "content": "No control.",
+    "segment_index": 227
+  },
+  {
+    "id": 197,
+    "start_time": 731.018,
+    "end_time": 731.518,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 228
+  },
+  {
+    "id": 198,
+    "start_time": 731.518,
+    "end_time": 732.796,
+    "speaker": "Parivash",
+    "content": "Rashad,...",
+    "segment_index": 229
+  },
+  {
+    "id": 199,
+    "start_time": 732.796,
+    "end_time": 733.735,
+    "speaker": "Dr. Khalifa",
+    "content": "You cannot manipulate their brain.",
+    "segment_index": 230
+  },
+  {
+    "id": 200,
+    "start_time": 733.735,
+    "end_time": 739.307,
+    "speaker": "Parivash",
+    "content": "One day my brother was in the army, and he came home and he was really, he wanted me to",
+    "segment_index": 231
+  },
+  {
+    "id": 201,
+    "start_time": 739.307,
+    "end_time": 744.709,
+    "speaker": "Parivash",
+    "content": "go to one of my friends, a neighbor, to bring him to another city because it was very difficult.",
+    "segment_index": 232
+  },
+  {
+    "id": 202,
+    "start_time": 745.24,
+    "end_time": 752.86,
+    "speaker": "Parivash",
+    "content": "And he was asleep at the room, and I went to my neighbor, and he said \"okay, bring him to talk with me maybe I...\"",
+    "segment_index": 233
+  },
+  {
+    "id": 203,
+    "start_time": 754.16,
+    "end_time": 755.922,
+    "speaker": "Parivash",
+    "content": "And I went and I said...",
+    "segment_index": 234
+  }
+]

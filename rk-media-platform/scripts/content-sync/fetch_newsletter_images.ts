@@ -69,7 +69,7 @@ async function main() {
         // So depth is pretty constant.
 
         while ((match = imgRegex.exec(content)) !== null) {
-            let src = match[1];
+            const src = match[1];
             if (!src) continue;
 
             // Resolve URL

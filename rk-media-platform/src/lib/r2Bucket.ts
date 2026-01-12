@@ -14,10 +14,10 @@ export type MediaItem = {
 };
 
 const PREFIX_MAP = {
-    'media/disorganized_sermons/': 'sermon',
-    'media/messenger_quran_studies/': 'quran-study',
+    'media/FRIDAY SERMONS/': 'sermon',
+    'media/quran-study-v2/': 'quran-study',
     'media/messenger_audios/': 'audio', // or 'messenger-audio'
-    'media/rk_video_programs/': 'video-program'
+    'media/VIDEO PROGRAMS/': 'video-program'
 } as const;
 
 export async function listMediaFiles(): Promise<MediaItem[]> {
@@ -39,7 +39,23 @@ export async function listMediaFiles(): Promise<MediaItem[]> {
                 if (response.Contents) {
                     for (const item of response.Contents) {
                         if (!item.Key || item.Key.endsWith('/')) continue; // Skip folders
-                        if (item.Key.endsWith('.json')) continue; // Skip transcripts
+                        if (item.Key.endsWith('.json') || item.Key.endsWith('.vtt')) continue;
+                        // User Request: Exclude "Temp 52" file as it is a duplicate/temp file
+                        // Using regex to catch variants (Temp 52, Temp_52, etc) and ensuring case-insensitivity
+                        if (item.Key.match(/Temp\s*52/i)) {
+                            console.log('Skipping Temp 52 file:', item.Key);
+                            continue;
+                        }
+                        // User Request: Exclude "temp_15" file as it is a misnamed/temp file
+                        if (item.Key.match(/temp[_\s]*15/i)) {
+                            console.log('Skipping temp_15 file:', item.Key);
+                            continue;
+                        }
+
+
+                        if (type === 'quran-study') {
+                            console.log('DEBUG: Found potential Quran Study item:', item.Key);
+                        }
 
                         // Parse Title from Filename
                         // Key: media/rk_video_programs/1988 Conference.mp4
@@ -47,7 +63,7 @@ export async function listMediaFiles(): Promise<MediaItem[]> {
                         const title = filename
                             .replace(/\.(mp4|mp3)$/i, "")
                             .replace(/_/g, " ")
-                            .replace(/^\d+\)\s*/, "") // Remove leading numbers like "1) "
+                            //.replace(/^[0-9]+[)-]\s*/, "") // STOP STRIPPING NUMBERS! formatUtils needs them for sorting/lookup.
                             .trim();
 
                         allMedia.push({

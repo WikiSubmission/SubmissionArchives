@@ -15,26 +15,29 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     useEffect(() => {
         setMounted(true);
-        // Check localStorage or system preference on mount
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
+        // Load preference from local storage
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
             setDarkMode(true);
-        } else if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else if (saved === 'light') {
+            setDarkMode(false);
+            document.documentElement.classList.remove('dark');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             setDarkMode(true);
+            document.documentElement.classList.add('dark');
         }
     }, []);
 
     const toggleDarkMode = () => {
-        setDarkMode((prev) => {
-            const newMode = !prev;
-            localStorage.setItem('theme', newMode ? 'dark' : 'light');
-            if (newMode) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-            return newMode;
-        });
+        const newMode = !darkMode;
+        setDarkMode(newMode);
+        localStorage.setItem('theme', newMode ? 'dark' : 'light');
+        if (newMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
     };
 
     // Prevent hydration mismatch by not rendering until mounted

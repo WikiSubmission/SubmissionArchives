@@ -6420,19 +6420,29 @@
     "search_vector": "'anoth':8 'blood':10 'children':1 'need':9 'reason':6 'transfus':11"
   },
   {
-    "id": 13741,
+    "id": "13741_part_0",
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
     "segment_index": 642,
     "start_time": 3321.916,
-    "end_time": 3324.461,
-    "content": "Right. Babak: And they get blood transfusions, not from their parents,",
+    "end_time": 3322.198777777778,
+    "content": "Right. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'babak':2 'blood':6 'get':5 'parent':11 'right':1 'transfus':7"
+  },
+  {
+    "id": "13741_part_1",
+    "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
+    "segment_index": 643,
+    "start_time": 3322.198777777778,
+    "end_time": 3324.461,
+    "content": "And they get blood transfusions, not from their parents,",
+    "speaker": "Babak",
     "search_vector": "'babak':2 'blood':6 'get':5 'parent':11 'right':1 'transfus':7"
   },
   {
     "id": 13742,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 643,
+    "segment_index": 644,
     "start_time": 3324.461,
     "end_time": 3325.61849,
     "content": "not that their parents have",
@@ -6442,7 +6452,7 @@
   {
     "id": 75131,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 644,
+    "segment_index": 645,
     "start_time": 3325.61849,
     "end_time": 3326.99033,
     "content": "AIDS or drugs or whatever. From the blood, yes. Even those.",
@@ -6452,7 +6462,7 @@
   {
     "id": 13743,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 645,
+    "segment_index": 646,
     "start_time": 3329.145,
     "end_time": 3332.04485714286,
     "content": "But they get AIDS because of some other jerk, who had",
@@ -6462,7 +6472,7 @@
   {
     "id": 75132,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 646,
+    "segment_index": 647,
     "start_time": 3332.04485714286,
     "end_time": 3332.75614285714,
     "content": "AIDS or whatever. Right. Right.",
@@ -6472,7 +6482,7 @@
   {
     "id": 13744,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 647,
+    "segment_index": 648,
     "start_time": 3335.211,
     "end_time": 3337.203,
     "content": "And I just think of...",
@@ -6482,7 +6492,7 @@
   {
     "id": 13745,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 648,
+    "segment_index": 649,
     "start_time": 3337.203,
     "end_time": 3344.35,
     "content": "Okay, we are, we are in an era now where believing house will not need a blood transfusion, to start with.",
@@ -6492,7 +6502,7 @@
   {
     "id": 13746,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 649,
+    "segment_index": 650,
     "start_time": 3346.036,
     "end_time": 3347.54,
     "content": "We don't (unintelligible).",
@@ -6502,7 +6512,7 @@
   {
     "id": 13747,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 650,
+    "segment_index": 651,
     "start_time": 3347.54,
     "end_time": 3352.357,
     "content": "We are in an era where when you believe in God and follow His commandments,",
@@ -6512,7 +6522,7 @@
   {
     "id": 13748,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 651,
+    "segment_index": 652,
     "start_time": 3352.357,
     "end_time": 3356.241,
     "content": "you will not need a blood transfusion to start with, neither you, nor your family.",
@@ -6522,7 +6532,7 @@
   {
     "id": 13749,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 652,
+    "segment_index": 653,
     "start_time": 3362.636,
     "end_time": 3367.412,
     "content": "Maybe difficult to fathom, but this is God's promise throughout the Quran.",
@@ -6532,7 +6542,7 @@
   {
     "id": 13750,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 653,
+    "segment_index": 654,
     "start_time": 3370.882,
     "end_time": 3374.221,
     "content": "I'm sorry I don't mean (unintelligible).",
@@ -6542,7 +6552,7 @@
   {
     "id": 13751,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 654,
+    "segment_index": 655,
     "start_time": 3374.221,
     "end_time": 3380,
     "content": "But if you go outside in the street and there's an accident, you lose some blood and...",
@@ -6552,7 +6562,7 @@
   {
     "id": 13752,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 655,
+    "segment_index": 656,
     "start_time": 3380.258,
     "end_time": 3383.191,
     "content": "Well, that, I'm saying this will not happen, to start with.",
@@ -6562,7 +6572,7 @@
   {
     "id": 13753,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 656,
+    "segment_index": 657,
     "start_time": 3390.236,
     "end_time": 3393.219,
     "content": "God says He'll protect you from anything like that.",
@@ -6572,7 +6582,7 @@
   {
     "id": 13754,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 657,
+    "segment_index": 658,
     "start_time": 3394.246,
     "end_time": 3400,
     "content": "If it has to happen, God will protect you, will give you clean blood.",
@@ -6582,7 +6592,7 @@
   {
     "id": 13755,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 658,
+    "segment_index": 659,
     "start_time": 3400.897,
     "end_time": 3404.128,
     "content": "But I'm saying that it will not happen, to start with.",
@@ -6592,7 +6602,7 @@
   {
     "id": 13756,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 659,
+    "segment_index": 660,
     "start_time": 3407.698,
     "end_time": 3413.308,
     "content": "Okay, let me... Because this is difficult to understand, and I'm not bragging or anything, but I thank God first. I wanna tell you,",
@@ -6602,7 +6612,7 @@
   {
     "id": 13757,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 660,
+    "segment_index": 661,
     "start_time": 3413.308,
     "end_time": 3415.011,
     "content": "I'm speaking from experience.",
@@ -6612,7 +6622,7 @@
   {
     "id": 13758,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 661,
+    "segment_index": 662,
     "start_time": 3415.011,
     "end_time": 3419.63,
     "content": "And I mention this. It'll be boring to a lot of these people here, because they heard it before.",
@@ -6622,7 +6632,7 @@
   {
     "id": 13759,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 662,
+    "segment_index": 663,
     "start_time": 3420.44,
     "end_time": 3426.645,
     "content": "But when I was a child, I used to go swim in the canals in the countryside, the village.",
@@ -6632,7 +6642,7 @@
   {
     "id": 13760,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 663,
+    "segment_index": 664,
     "start_time": 3427.389,
     "end_time": 3432.016,
     "content": "And there's a disease in Egypt that if you swim in the canal, you have to catch that disease called Bilharzia.",
@@ -6642,7 +6652,7 @@
   {
     "id": 13761,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 664,
+    "segment_index": 665,
     "start_time": 3432.214,
     "end_time": 3434.412,
     "content": "It's still epidemic in Egypt.",
@@ -6652,7 +6662,7 @@
   {
     "id": 13762,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 665,
+    "segment_index": 666,
     "start_time": 3435.304,
     "end_time": 3439.66896212121,
     "content": "And every year, they'll take the children and check them for Bilharzia, through a urine sample.",
@@ -6662,7 +6672,7 @@
   {
     "id": 75133,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 666,
+    "segment_index": 667,
     "start_time": 3439.66896212121,
     "end_time": 3440.90953030303,
     "content": "They don't even check them.",
@@ -6672,7 +6682,7 @@
   {
     "id": 13763,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 667,
+    "segment_index": 668,
     "start_time": 3442.063,
     "end_time": 3446.988,
     "content": "Then I used to watch it for so many years, people who lived in the countryside where they would go swimming",
@@ -6682,7 +6692,7 @@
   {
     "id": 13764,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 668,
+    "segment_index": 669,
     "start_time": 3446.988,
     "end_time": 3448.393,
     "content": "They'd never even check (unintelligible).",
@@ -6692,7 +6702,7 @@
   {
     "id": 13765,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 669,
+    "segment_index": 670,
     "start_time": 3448.393,
     "end_time": 3451.44605405405,
     "content": "At the end of the summer, they lined them up, did a check against (unintelligible).",
@@ -6702,7 +6712,7 @@
   {
     "id": 75134,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 670,
+    "segment_index": 671,
     "start_time": 3451.44605405405,
     "end_time": 3451.66675675676,
     "content": "Right.",
@@ -6712,7 +6722,7 @@
   {
     "id": 13766,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 671,
+    "segment_index": 672,
     "start_time": 3452.476,
     "end_time": 3452.92281,
     "content": "the same with",
@@ -6722,7 +6732,7 @@
   {
     "id": 75135,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 672,
+    "segment_index": 673,
     "start_time": 3452.92281,
     "end_time": 3453.8508,
     "content": "Bilharzia. They never even bothered checking. Well, they asked them. Yes.",
@@ -6732,7 +6742,7 @@
   {
     "id": 13767,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 673,
+    "segment_index": 674,
     "start_time": 3455.913,
     "end_time": 3456.574,
     "content": "Dr. Khalifa Right.",
@@ -6742,7 +6752,7 @@
   {
     "id": 13768,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 674,
+    "segment_index": 675,
     "start_time": 3456.574,
     "end_time": 3458.822,
     "content": "They just did it. They lined them all up and gave them a shot.",
@@ -6752,7 +6762,7 @@
   {
     "id": 13769,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 675,
+    "segment_index": 676,
     "start_time": 3458.822,
     "end_time": 3461.665,
     "content": "These are the ones they knew they swam in the canal, right?",
@@ -6762,7 +6772,7 @@
   {
     "id": 13770,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 676,
+    "segment_index": 677,
     "start_time": 3461.665,
     "end_time": 3463.219,
     "content": "Well, I was living in a city.",
@@ -6772,7 +6782,7 @@
   {
     "id": 13771,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 677,
+    "segment_index": 678,
     "start_time": 3463.764,
     "end_time": 3466.805,
     "content": "So, they checked all the children, at least in my time.",
@@ -6782,7 +6792,7 @@
   {
     "id": 13772,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 678,
+    "segment_index": 679,
     "start_time": 3467.499,
     "end_time": 3469.499,
     "content": "They took a urine sample and check them for Bilharzia.",
@@ -6792,7 +6802,7 @@
   {
     "id": 13773,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 679,
+    "segment_index": 680,
     "start_time": 3470.54,
     "end_time": 3473.234,
     "content": "And every time, I come out negative.",
@@ -6802,7 +6812,7 @@
   {
     "id": 13774,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 680,
+    "segment_index": 681,
     "start_time": 3473.531,
     "end_time": 3475.878,
     "content": "And they'll ask me \"did you go to the village this summer?\" \"Yes.\"",
@@ -6812,7 +6822,7 @@
   {
     "id": 13775,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 681,
+    "segment_index": 682,
     "start_time": 3475.878,
     "end_time": 3477.134,
     "content": "\"Did you swim in the canal?\" \"Yes.\"",
@@ -6822,7 +6832,7 @@
   {
     "id": 13776,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 682,
+    "segment_index": 683,
     "start_time": 3477.58,
     "end_time": 3484.637,
     "content": "Okay, now they sent a nurse with me, to make sure that I'm giving them a urine sample, not a faucet,",
@@ -6832,7 +6842,7 @@
   {
     "id": 13777,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 683,
+    "segment_index": 684,
     "start_time": 3484.637,
     "end_time": 3486.29,
     "content": "not a sample from the faucet.",
@@ -6842,7 +6852,7 @@
   {
     "id": 13778,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 684,
+    "segment_index": 685,
     "start_time": 3486.29,
     "end_time": 3489.182,
     "content": "They'll go with me, and they will take the sample, and it'll be negative.",
@@ -6852,7 +6862,7 @@
   {
     "id": 13779,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 685,
+    "segment_index": 686,
     "start_time": 3489.579,
     "end_time": 3494.702,
     "content": "And I'll go home, and my father would ask me \"did they check you for Bilharzia?\" I say \"Yes.\"",
@@ -6862,7 +6872,7 @@
   {
     "id": 13780,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 686,
+    "segment_index": 687,
     "start_time": 3495.247,
     "end_time": 3496.95,
     "content": "He said \"what did they find?\" I said \"nothing.\"",
@@ -6872,7 +6882,7 @@
   {
     "id": 13781,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 687,
+    "segment_index": 688,
     "start_time": 3496.95,
     "end_time": 3498.107,
     "content": "And my father shake his head.",
@@ -6882,7 +6892,7 @@
   {
     "id": 13782,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 688,
+    "segment_index": 689,
     "start_time": 3498.603,
     "end_time": 3499.76,
     "content": "It's God's protection.",
@@ -6892,7 +6902,7 @@
   {
     "id": 13783,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 689,
+    "segment_index": 690,
     "start_time": 3499.76,
     "end_time": 3501.76,
     "content": "So, I learned that from an early stage.",
@@ -6902,7 +6912,7 @@
   {
     "id": 13784,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 690,
+    "segment_index": 691,
     "start_time": 3502.702,
     "end_time": 3508.42,
     "content": "So, you can live in the virus, live in the germs, and God will protect you.",
@@ -6912,7 +6922,7 @@
   {
     "id": 13785,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 691,
+    "segment_index": 692,
     "start_time": 3508.668,
     "end_time": 3511.858,
     "content": "So, I guess God knew that I'd be passing this information on to you.",
@@ -6922,7 +6932,7 @@
   {
     "id": 13786,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 692,
+    "segment_index": 693,
     "start_time": 3512.354,
     "end_time": 3516.932,
     "content": "And before I do anything, I thank God for His protection. Then, I'm talking to you from experience.",
@@ -6932,7 +6942,7 @@
   {
     "id": 13787,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 693,
+    "segment_index": 694,
     "start_time": 3518.37,
     "end_time": 3522.204,
     "content": "It will not happen. When you're a believer, it will not happen. You will not catch AIDS.",
@@ -6942,7 +6952,7 @@
   {
     "id": 13788,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 694,
+    "segment_index": 695,
     "start_time": 3522.501,
     "end_time": 3525.294,
     "content": "You will not need transfusion. You will not have an accident.",
@@ -6952,7 +6962,7 @@
   {
     "id": 13789,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 695,
+    "segment_index": 696,
     "start_time": 3525.591,
     "end_time": 3528.136,
     "content": "You don't even get traffic tickets, depending how good you are.",
@@ -6962,7 +6972,7 @@
   {
     "id": 13790,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 696,
+    "segment_index": 697,
     "start_time": 3528.582,
     "end_time": 3532.862,
     "content": "You will get these as pinches whenever you do something wrong.",
@@ -6972,7 +6982,7 @@
   {
     "id": 13791,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 697,
+    "segment_index": 698,
     "start_time": 3533.457,
     "end_time": 3542.051,
     "content": "But for as long as you're sincerely searching for God, God will give you time, will protect you, until you make a decision.",
@@ -6982,7 +6992,7 @@
   {
     "id": 13792,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 698,
+    "segment_index": 699,
     "start_time": 3543.489,
     "end_time": 3548.116,
     "content": "Your decision would be to remain in God's protection, or step out of God's protection.",
@@ -6992,7 +7002,7 @@
   {
     "id": 13793,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 699,
+    "segment_index": 700,
     "start_time": 3550.446,
     "end_time": 3553.785,
     "content": "So, it's your decision. God left it in our hands.",
@@ -7002,7 +7012,7 @@
   {
     "id": 13794,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 700,
+    "segment_index": 701,
     "start_time": 3553.785,
     "end_time": 3556.082,
     "content": "What I'm saying is that everybody dies at some time.",
@@ -7012,7 +7022,7 @@
   {
     "id": 13795,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 701,
+    "segment_index": 702,
     "start_time": 3556.082,
     "end_time": 3556.942,
     "content": "That's right.",
@@ -7022,7 +7032,7 @@
   {
     "id": 13796,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 702,
+    "segment_index": 703,
     "start_time": 3556.942,
     "end_time": 3558.15939130435,
     "content": "Every one of us is gonna die",
@@ -7032,7 +7042,7 @@
   {
     "id": 76961,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 703,
+    "segment_index": 704,
     "start_time": 3558.15939130435,
     "end_time": 3558.33330434783,
     "content": "Yes.",
@@ -7042,7 +7052,7 @@
   {
     "id": 13797,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 704,
+    "segment_index": 705,
     "start_time": 3558.942,
     "end_time": 3561.88248351648,
     "content": "for one reason or another, accident, (unintelligible), whatever.",
@@ -7052,7 +7062,7 @@
   {
     "id": 75136,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 705,
+    "segment_index": 706,
     "start_time": 3561.88248351648,
     "end_time": 3562.47976923077,
     "content": "That's right.",
@@ -7062,7 +7072,7 @@
   {
     "id": 13798,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 706,
+    "segment_index": 707,
     "start_time": 3563.123,
     "end_time": 3564.131,
     "content": "Yeah, but...",
@@ -7072,7 +7082,7 @@
   {
     "id": 13799,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 707,
+    "segment_index": 708,
     "start_time": 3564.627,
     "end_time": 3565.80895,
     "content": "And it's gonna happen.",
@@ -7082,7 +7092,7 @@
   {
     "id": 75137,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 708,
+    "segment_index": 709,
     "start_time": 3565.80895,
     "end_time": 3566.02385,
     "content": "Yes.",
@@ -7092,7 +7102,7 @@
   {
     "id": 13800,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 709,
+    "segment_index": 710,
     "start_time": 3566.974,
     "end_time": 3568.171,
     "content": "Well, death is not a disaster.",
@@ -7102,7 +7112,7 @@
   {
     "id": 75138,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 710,
+    "segment_index": 711,
     "start_time": 3568.171,
     "end_time": 3569.4478,
     "content": "...disease that was an easier...",
@@ -7112,7 +7122,7 @@
   {
     "id": 13801,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 711,
+    "segment_index": 712,
     "start_time": 3569.767,
     "end_time": 3572.064,
     "content": "No, Death is a fact of life for each one of us.",
@@ -7122,7 +7132,7 @@
   {
     "id": 13802,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 712,
+    "segment_index": 713,
     "start_time": 3573.998,
     "end_time": 3576.58186206897,
     "content": "The impression that I'm getting is that staying with",
@@ -7132,7 +7142,7 @@
   {
     "id": 75139,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 713,
+    "segment_index": 714,
     "start_time": 3576.58186206897,
     "end_time": 3577.92348275862,
     "content": "God is gonna protect us from all evil and all harm. That's right. That's right.",
@@ -7142,7 +7152,7 @@
   {
     "id": 13803,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 714,
+    "segment_index": 715,
     "start_time": 3581.699,
     "end_time": 3585.038,
     "content": "And as long as you believe that harmful is gonna come to us...",
@@ -7152,7 +7162,7 @@
   {
     "id": 13804,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 715,
+    "segment_index": 716,
     "start_time": 3585.038,
     "end_time": 3589.63287368421,
     "content": "But at the end, maybe at the age of 90, or 500, or whatever, we're gonna die.",
@@ -7162,7 +7172,7 @@
   {
     "id": 75140,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 716,
+    "segment_index": 717,
     "start_time": 3589.63287368421,
     "end_time": 3589.87156842105,
     "content": "Yes.",
@@ -7172,7 +7182,7 @@
   {
     "id": 13805,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 717,
+    "segment_index": 718,
     "start_time": 3590.707,
     "end_time": 3591.72238461538,
     "content": "And we're gonna die of something.",
@@ -7182,7 +7192,7 @@
   {
     "id": 75141,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 718,
+    "segment_index": 719,
     "start_time": 3591.72238461538,
     "end_time": 3592.27623076923,
     "content": "Yes. That's right.",
@@ -7192,7 +7202,7 @@
   {
     "id": 13806,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 719,
+    "segment_index": 720,
     "start_time": 3592.707,
     "end_time": 3593.4097027027,
     "content": "We're not going to stop...",
@@ -7202,7 +7212,7 @@
   {
     "id": 75142,
     "media_id": "4c3efa2a-3e9b-4a5b-b463-cbd204c1fd38",
-    "segment_index": 720,
+    "segment_index": 721,
     "start_time": 3593.4097027027,
     "end_time": 3594.32862162162,
     "content": "No, no, but there are different...",

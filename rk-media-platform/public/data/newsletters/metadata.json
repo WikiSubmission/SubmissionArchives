@@ -6,7 +6,8 @@
     "fullDate": "1990-03-01",
     "monthSort": 3,
     "year": 1990,
-    "filename": "1990_mar"
+    "filename": "1990_mar",
+    "pdfLink": "/data/newsletters/1990_03_March.pdf"
   },
   {
     "id": "1990_feb",
@@ -15,7 +16,8 @@
     "fullDate": "1990-02-01",
     "monthSort": 2,
     "year": 1990,
-    "filename": "1990_feb"
+    "filename": "1990_feb",
+    "pdfLink": "/data/newsletters/1990_02_February.pdf"
   },
   {
     "id": "1990_jan",
@@ -24,7 +26,8 @@
     "fullDate": "1990-01-01",
     "monthSort": 1,
     "year": 1990,
-    "filename": "1990_jan"
+    "filename": "1990_jan",
+    "pdfLink": "/data/newsletters/1990_01_January.pdf"
   },
   {
     "id": "1990_jan_2",
@@ -33,7 +36,8 @@
     "fullDate": "1990-01-01",
     "monthSort": 1.5,
     "year": 1990,
-    "filename": "1990_jan_2"
+    "filename": "1990_jan_2",
+    "pdfLink": "/data/newsletters/1990_01_January_bonus_issue.pdf"
   },
   {
     "id": "1989_nov",
@@ -42,7 +46,8 @@
     "fullDate": "1989-11-01",
     "monthSort": 11,
     "year": 1989,
-    "filename": "1989_nov"
+    "filename": "1989_nov",
+    "pdfLink": "/data/newsletters/1989_11_November.pdf"
   },
   {
     "id": "1989_dec",
@@ -51,7 +56,8 @@
     "fullDate": "1989-12-01",
     "monthSort": 12,
     "year": 1989,
-    "filename": "1989_dec"
+    "filename": "1989_dec",
+    "pdfLink": "/data/newsletters/1989_12_December.pdf"
   },
   {
     "id": "1989_oct",
@@ -60,7 +66,8 @@
     "fullDate": "1989-10-01",
     "monthSort": 10,
     "year": 1989,
-    "filename": "1989_oct"
+    "filename": "1989_oct",
+    "pdfLink": "/data/newsletters/1989_10_October.pdf"
   },
   {
     "id": "1989_sep",
@@ -69,7 +76,8 @@
     "fullDate": "1989-09-01",
     "monthSort": 9,
     "year": 1989,
-    "filename": "1989_sep"
+    "filename": "1989_sep",
+    "pdfLink": "https://www.masjidtucson.org/publications/books/sp/1989/sep/sep1989.pdf"
   },
   {
     "id": "1989_aug",
@@ -78,7 +86,8 @@
     "fullDate": "1989-08-01",
     "monthSort": 8,
     "year": 1989,
-    "filename": "1989_aug"
+    "filename": "1989_aug",
+    "pdfLink": "/data/newsletters/1989_08_August.pdf"
   },
   {
     "id": "1989_jul",
@@ -87,7 +96,8 @@
     "fullDate": "1989-07-01",
     "monthSort": 7,
     "year": 1989,
-    "filename": "1989_jul"
+    "filename": "1989_jul",
+    "pdfLink": "/data/newsletters/1989_07_July.pdf"
   },
   {
     "id": "1989_jun",
@@ -96,7 +106,8 @@
     "fullDate": "1989-06-01",
     "monthSort": 6,
     "year": 1989,
-    "filename": "1989_jun"
+    "filename": "1989_jun",
+    "pdfLink": "/data/newsletters/1989_06_June.pdf"
   },
   {
     "id": "1989_may",
@@ -105,7 +116,8 @@
     "fullDate": "1989-05-01",
     "monthSort": 5,
     "year": 1989,
-    "filename": "1989_may"
+    "filename": "1989_may",
+    "pdfLink": "/data/newsletters/1989_05_May.pdf"
   },
   {
     "id": "1989_apr",
@@ -114,7 +126,8 @@
     "fullDate": "1989-04-01",
     "monthSort": 4,
     "year": 1989,
-    "filename": "1989_apr"
+    "filename": "1989_apr",
+    "pdfLink": "/data/newsletters/1989_04_April.pdf"
   },
   {
     "id": "1989_mar",
@@ -123,7 +136,8 @@
     "fullDate": "1989-03-01",
     "monthSort": 3,
     "year": 1989,
-    "filename": "1989_mar"
+    "filename": "1989_mar",
+    "pdfLink": "/data/newsletters/1989_03_March.pdf"
   },
   {
     "id": "1989_feb",
@@ -132,7 +146,8 @@
     "fullDate": "1989-02-01",
     "monthSort": 2,
     "year": 1989,
-    "filename": "1989_feb"
+    "filename": "1989_feb",
+    "pdfLink": "/data/newsletters/1989_02_February.pdf"
   },
   {
     "id": "1989_jan",
@@ -141,7 +156,8 @@
     "fullDate": "1989-01-01",
     "monthSort": 1,
     "year": 1989,
-    "filename": "1989_jan"
+    "filename": "1989_jan",
+    "pdfLink": "/data/newsletters/1989_01_January.pdf"
   },
   {
     "id": "1988_dec",
@@ -150,7 +166,8 @@
     "fullDate": "1988-12-01",
     "monthSort": 12,
     "year": 1988,
-    "filename": "1988_dec"
+    "filename": "1988_dec",
+    "pdfLink": "/data/newsletters/1988_12_December.pdf"
   },
   {
     "id": "1988_nov",
@@ -159,7 +176,8 @@
     "fullDate": "1988-11-01",
     "monthSort": 11,
     "year": 1988,
-    "filename": "1988_nov"
+    "filename": "1988_nov",
+    "pdfLink": "/data/newsletters/1988_11_November.pdf"
   },
   {
     "id": "1988_oct",
@@ -168,7 +186,8 @@
     "fullDate": "1988-10-01",
     "monthSort": 10,
     "year": 1988,
-    "filename": "1988_oct"
+    "filename": "1988_oct",
+    "pdfLink": "/data/newsletters/1988_10_October.pdf"
   },
   {
     "id": "1988_sep",
@@ -177,7 +196,8 @@
     "fullDate": "1988-09-01",
     "monthSort": 9,
     "year": 1988,
-    "filename": "1988_sep"
+    "filename": "1988_sep",
+    "pdfLink": "/data/newsletters/1988_09_September.pdf"
   },
   {
     "id": "1988_aug",
@@ -186,7 +206,8 @@
     "fullDate": "1988-08-01",
     "monthSort": 8,
     "year": 1988,
-    "filename": "1988_aug"
+    "filename": "1988_aug",
+    "pdfLink": "/data/newsletters/1988_08_August.pdf"
   },
   {
     "id": "1988_jul",
@@ -195,7 +216,8 @@
     "fullDate": "1988-07-01",
     "monthSort": 7,
     "year": 1988,
-    "filename": "1988_jul"
+    "filename": "1988_jul",
+    "pdfLink": "/data/newsletters/1988_07_July.pdf"
   },
   {
     "id": "1988_jun",
@@ -204,7 +226,8 @@
     "fullDate": "1988-06-01",
     "monthSort": 6,
     "year": 1988,
-    "filename": "1988_jun"
+    "filename": "1988_jun",
+    "pdfLink": "/data/newsletters/1988_06_June.pdf"
   },
   {
     "id": "1988_may",
@@ -213,7 +236,8 @@
     "fullDate": "1988-05-01",
     "monthSort": 5,
     "year": 1988,
-    "filename": "1988_may"
+    "filename": "1988_may",
+    "pdfLink": "/data/newsletters/1988_05_May.pdf"
   },
   {
     "id": "1988_may_bonus",
@@ -222,7 +246,8 @@
     "fullDate": "1988-05-01",
     "monthSort": 5.5,
     "year": 1988,
-    "filename": "1988_may_bonus"
+    "filename": "1988_may_bonus",
+    "pdfLink": "/data/newsletters/1988_05_May_Bulletin.pdf"
   },
   {
     "id": "1988_apr",
@@ -231,7 +256,8 @@
     "fullDate": "1988-04-01",
     "monthSort": 4,
     "year": 1988,
-    "filename": "1988_apr"
+    "filename": "1988_apr",
+    "pdfLink": "/data/newsletters/1988_04_April.pdf"
   },
   {
     "id": "1988_mar",
@@ -240,7 +266,8 @@
     "fullDate": "1988-03-01",
     "monthSort": 3,
     "year": 1988,
-    "filename": "1988_mar"
+    "filename": "1988_mar",
+    "pdfLink": "/data/newsletters/1988_03_March.pdf"
   },
   {
     "id": "1988_feb",
@@ -249,7 +276,8 @@
     "fullDate": "1988-02-01",
     "monthSort": 2,
     "year": 1988,
-    "filename": "1988_feb"
+    "filename": "1988_feb",
+    "pdfLink": "/data/newsletters/1988_02_February.pdf"
   },
   {
     "id": "1988_jan",
@@ -258,7 +286,8 @@
     "fullDate": "1988-01-01",
     "monthSort": 1,
     "year": 1988,
-    "filename": "1988_jan"
+    "filename": "1988_jan",
+    "pdfLink": "/data/newsletters/1988_01_January.pdf"
   },
   {
     "id": "1987_dec",
@@ -267,7 +296,8 @@
     "fullDate": "1987-12-01",
     "monthSort": 12,
     "year": 1987,
-    "filename": "1987_dec"
+    "filename": "1987_dec",
+    "pdfLink": "/data/newsletters/1987_12_December.pdf"
   },
   {
     "id": "1987_nov",
@@ -276,7 +306,8 @@
     "fullDate": "1987-11-01",
     "monthSort": 11,
     "year": 1987,
-    "filename": "1987_nov"
+    "filename": "1987_nov",
+    "pdfLink": "/data/newsletters/1987_11_November.pdf"
   },
   {
     "id": "1987_oct",
@@ -285,7 +316,8 @@
     "fullDate": "1987-10-01",
     "monthSort": 10,
     "year": 1987,
-    "filename": "1987_oct"
+    "filename": "1987_oct",
+    "pdfLink": "/data/newsletters/1987_10_October.pdf"
   },
   {
     "id": "1987_sep",
@@ -294,7 +326,8 @@
     "fullDate": "1987-09-01",
     "monthSort": 9,
     "year": 1987,
-    "filename": "1987_sep"
+    "filename": "1987_sep",
+    "pdfLink": "/data/newsletters/1987_09_September.pdf"
   },
   {
     "id": "1987_aug",
@@ -303,7 +336,8 @@
     "fullDate": "1987-08-01",
     "monthSort": 8,
     "year": 1987,
-    "filename": "1987_aug"
+    "filename": "1987_aug",
+    "pdfLink": "/data/newsletters/1987_08_August.pdf"
   },
   {
     "id": "1987_jul",
@@ -312,7 +346,8 @@
     "fullDate": "1987-07-01",
     "monthSort": 7,
     "year": 1987,
-    "filename": "1987_jul"
+    "filename": "1987_jul",
+    "pdfLink": "/data/newsletters/1987_07_July.pdf"
   },
   {
     "id": "1987_jun",
@@ -321,7 +356,8 @@
     "fullDate": "1987-06-01",
     "monthSort": 6,
     "year": 1987,
-    "filename": "1987_jun"
+    "filename": "1987_jun",
+    "pdfLink": "/data/newsletters/1987_06_June.pdf"
   },
   {
     "id": "1987_may",
@@ -330,7 +366,8 @@
     "fullDate": "1987-05-01",
     "monthSort": 5,
     "year": 1987,
-    "filename": "1987_may"
+    "filename": "1987_may",
+    "pdfLink": "/data/newsletters/1987_05_May.pdf"
   },
   {
     "id": "1987_apr",
@@ -339,7 +376,8 @@
     "fullDate": "1987-04-01",
     "monthSort": 4,
     "year": 1987,
-    "filename": "1987_apr"
+    "filename": "1987_apr",
+    "pdfLink": "/data/newsletters/1987_04_April.pdf"
   },
   {
     "id": "1987_mar",
@@ -348,7 +386,8 @@
     "fullDate": "1987-03-01",
     "monthSort": 3,
     "year": 1987,
-    "filename": "1987_mar"
+    "filename": "1987_mar",
+    "pdfLink": "/data/newsletters/1987_03_March.pdf"
   },
   {
     "id": "1987_feb",
@@ -357,7 +396,8 @@
     "fullDate": "1987-02-01",
     "monthSort": 2,
     "year": 1987,
-    "filename": "1987_feb"
+    "filename": "1987_feb",
+    "pdfLink": "/data/newsletters/1987_02_February.pdf"
   },
   {
     "id": "1987_jan",
@@ -366,7 +406,8 @@
     "fullDate": "1987-01-01",
     "monthSort": 1,
     "year": 1987,
-    "filename": "1987_jan"
+    "filename": "1987_jan",
+    "pdfLink": "/data/newsletters/1987_01_January.pdf"
   },
   {
     "id": "1986_dec",
@@ -375,7 +416,8 @@
     "fullDate": "1986-12-01",
     "monthSort": 12,
     "year": 1986,
-    "filename": "1986_dec"
+    "filename": "1986_dec",
+    "pdfLink": "/data/newsletters/1986_12_December.pdf"
   },
   {
     "id": "1986_nov",
@@ -384,7 +426,8 @@
     "fullDate": "1986-11-01",
     "monthSort": 11,
     "year": 1986,
-    "filename": "1986_nov"
+    "filename": "1986_nov",
+    "pdfLink": "/data/newsletters/1986_11_November.pdf"
   },
   {
     "id": "1986_oct",
@@ -393,7 +436,8 @@
     "fullDate": "1986-10-01",
     "monthSort": 10,
     "year": 1986,
-    "filename": "1986_oct"
+    "filename": "1986_oct",
+    "pdfLink": "/data/newsletters/1986_10_October.pdf"
   },
   {
     "id": "1986_sep",
@@ -402,7 +446,8 @@
     "fullDate": "1986-09-01",
     "monthSort": 9,
     "year": 1986,
-    "filename": "1986_sep"
+    "filename": "1986_sep",
+    "pdfLink": "/data/newsletters/1986_09_September.pdf"
   },
   {
     "id": "1986_aug",
@@ -411,7 +456,8 @@
     "fullDate": "1986-08-01",
     "monthSort": 8,
     "year": 1986,
-    "filename": "1986_aug"
+    "filename": "1986_aug",
+    "pdfLink": "/data/newsletters/1986_08_August.pdf"
   },
   {
     "id": "1986_jul",
@@ -420,7 +466,8 @@
     "fullDate": "1986-07-01",
     "monthSort": 7,
     "year": 1986,
-    "filename": "1986_jul"
+    "filename": "1986_jul",
+    "pdfLink": "/data/newsletters/1986_07_July.pdf"
   },
   {
     "id": "1986_jun",
@@ -429,7 +476,8 @@
     "fullDate": "1986-06-01",
     "monthSort": 6,
     "year": 1986,
-    "filename": "1986_jun"
+    "filename": "1986_jun",
+    "pdfLink": "/data/newsletters/1986_06_June.pdf"
   },
   {
     "id": "1986_may",
@@ -438,7 +486,8 @@
     "fullDate": "1986-05-01",
     "monthSort": 5,
     "year": 1986,
-    "filename": "1986_may"
+    "filename": "1986_may",
+    "pdfLink": "/data/newsletters/1986_05_May.pdf"
   },
   {
     "id": "1986_apr",
@@ -447,7 +496,8 @@
     "fullDate": "1986-04-01",
     "monthSort": 4,
     "year": 1986,
-    "filename": "1986_apr"
+    "filename": "1986_apr",
+    "pdfLink": "/data/newsletters/1986_04_April.pdf"
   },
   {
     "id": "1986_mar",
@@ -456,7 +506,8 @@
     "fullDate": "1986-03-01",
     "monthSort": 3,
     "year": 1986,
-    "filename": "1986_mar"
+    "filename": "1986_mar",
+    "pdfLink": "/data/newsletters/1986_03_March.pdf"
   },
   {
     "id": "1986_feb",
@@ -465,7 +516,8 @@
     "fullDate": "1986-02-01",
     "monthSort": 2,
     "year": 1986,
-    "filename": "1986_feb"
+    "filename": "1986_feb",
+    "pdfLink": "/data/newsletters/1986_02_February.pdf"
   },
   {
     "id": "1986_jan",
@@ -474,7 +526,8 @@
     "fullDate": "1986-01-01",
     "monthSort": 1,
     "year": 1986,
-    "filename": "1986_jan"
+    "filename": "1986_jan",
+    "pdfLink": "/data/newsletters/1986_01_January.pdf"
   },
   {
     "id": "1985_dec",
@@ -483,7 +536,8 @@
     "fullDate": "1985-12-01",
     "monthSort": 12,
     "year": 1985,
-    "filename": "1985_dec"
+    "filename": "1985_dec",
+    "pdfLink": "/data/newsletters/1985_12_December.pdf"
   },
   {
     "id": "1985_nov",
@@ -492,7 +546,8 @@
     "fullDate": "1985-11-01",
     "monthSort": 11,
     "year": 1985,
-    "filename": "1985_nov"
+    "filename": "1985_nov",
+    "pdfLink": "/data/newsletters/1985_11_November.pdf"
   },
   {
     "id": "1985_oct",
@@ -501,7 +556,8 @@
     "fullDate": "1985-10-01",
     "monthSort": 10,
     "year": 1985,
-    "filename": "1985_oct"
+    "filename": "1985_oct",
+    "pdfLink": "/data/newsletters/1985_10_October.pdf"
   },
   {
     "id": "1985_sep",
@@ -510,7 +566,8 @@
     "fullDate": "1985-09-01",
     "monthSort": 9,
     "year": 1985,
-    "filename": "1985_sep"
+    "filename": "1985_sep",
+    "pdfLink": "/data/newsletters/1985_09_September.pdf"
   },
   {
     "id": "1985_aug",
@@ -519,7 +576,8 @@
     "fullDate": "1985-08-01",
     "monthSort": 8,
     "year": 1985,
-    "filename": "1985_aug"
+    "filename": "1985_aug",
+    "pdfLink": "/data/newsletters/1985_08_August.pdf"
   },
   {
     "id": "1985_jul",
@@ -528,7 +586,8 @@
     "fullDate": "1985-07-01",
     "monthSort": 7,
     "year": 1985,
-    "filename": "1985_jul"
+    "filename": "1985_jul",
+    "pdfLink": "/data/newsletters/1985_07_July.pdf"
   },
   {
     "id": "1985_jun",
@@ -537,7 +596,8 @@
     "fullDate": "1985-06-01",
     "monthSort": 6,
     "year": 1985,
-    "filename": "1985_jun"
+    "filename": "1985_jun",
+    "pdfLink": "/data/newsletters/1985_06_June.pdf"
   },
   {
     "id": "1985_may",
@@ -546,7 +606,8 @@
     "fullDate": "1985-05-01",
     "monthSort": 5,
     "year": 1985,
-    "filename": "1985_may"
+    "filename": "1985_may",
+    "pdfLink": "/data/newsletters/1985_05_May.pdf"
   },
   {
     "id": "1985_apr",
@@ -555,7 +616,8 @@
     "fullDate": "1985-04-01",
     "monthSort": 4,
     "year": 1985,
-    "filename": "1985_apr"
+    "filename": "1985_apr",
+    "pdfLink": "/data/newsletters/1985_04_April.pdf"
   },
   {
     "id": "1985_mar",
@@ -564,7 +626,8 @@
     "fullDate": "1985-03-01",
     "monthSort": 3,
     "year": 1985,
-    "filename": "1985_mar"
+    "filename": "1985_mar",
+    "pdfLink": "/data/newsletters/1985_03_March.pdf"
   },
   {
     "id": "1985_feb",
@@ -573,6 +636,7 @@
     "fullDate": "1985-02-01",
     "monthSort": 2,
     "year": 1985,
-    "filename": "1985_feb"
+    "filename": "1985_feb",
+    "pdfLink": "/data/newsletters/1985_02_February.pdf"
   }
 ]

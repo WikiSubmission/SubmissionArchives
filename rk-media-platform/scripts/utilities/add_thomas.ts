@@ -38,8 +38,8 @@ async function main() {
 
     // Let's try splitting by regex `\s(\d+)\s` and validating sequence.
 
-    let currentSaying = 1;
-    let scanIndex = 0;
+    const currentSaying = 1;
+    const scanIndex = 0;
 
     // Finds " 1 " or start string "1 "
     // Lambdin translation usually: "1. And he said..."

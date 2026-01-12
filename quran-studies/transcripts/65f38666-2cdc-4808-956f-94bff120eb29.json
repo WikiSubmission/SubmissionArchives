@@ -9280,19 +9280,29 @@
     "search_vector": "'acknowledg':18 'exact':3 'mean':14 'muhammad':10,19 'rasulullah':11,21 'said':2 'say':9"
   },
   {
-    "id": 4766,
+    "id": "4766_part_0",
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
     "segment_index": 928,
     "start_time": 3904.944,
-    "end_time": 3905.944,
-    "content": "She got him. Parivash: I had,",
+    "end_time": 3905.628210526316,
+    "content": "She got him. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'got':2 'parivash':4"
+  },
+  {
+    "id": "4766_part_1",
+    "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
+    "segment_index": 929,
+    "start_time": 3905.628210526316,
+    "end_time": 3905.944,
+    "content": "I had,",
+    "speaker": "Parivash",
     "search_vector": "'got':2 'parivash':4"
   },
   {
     "id": 4767,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 929,
+    "segment_index": 930,
     "start_time": 3905.944,
     "end_time": 3907.603,
     "content": "I had, I had a dream",
@@ -9302,7 +9312,7 @@
   {
     "id": 4768,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 930,
+    "segment_index": 931,
     "start_time": 3907.603,
     "end_time": 3908.103,
     "content": "Yes.",
@@ -9312,7 +9322,7 @@
   {
     "id": 4769,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 931,
+    "segment_index": 932,
     "start_time": 3908.103,
     "end_time": 3913.677,
     "content": "2-3 weeks ago, and I, in the dream, I was teaching, I was to Iran,",
@@ -9322,7 +9332,7 @@
   {
     "id": 4770,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 932,
+    "segment_index": 933,
     "start_time": 3913.677,
     "end_time": 3917.154,
     "content": "and teach some Mulla (religious scholar), very famous Mulla there.",
@@ -9332,7 +9342,7 @@
   {
     "id": 4771,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 933,
+    "segment_index": 934,
     "start_time": 3917.154,
     "end_time": 3924.438,
     "content": "And I, in, in my dream, I was teaching him something that in my...",
@@ -9342,7 +9352,7 @@
   {
     "id": 4772,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 934,
+    "segment_index": 935,
     "start_time": 3924.438,
     "end_time": 3927.026,
     "content": "God wants to teach me something because in...",
@@ -9352,7 +9362,7 @@
   {
     "id": 4773,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 935,
+    "segment_index": 936,
     "start_time": 3927.026,
     "end_time": 3931.131,
     "content": "when I wake up, I say \"oh, I, I have never idea of this.\"",
@@ -9362,7 +9372,7 @@
   {
     "id": 4774,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 936,
+    "segment_index": 937,
     "start_time": 3931.501,
     "end_time": 3939.694,
     "content": "And I ask him \"ok, when you say 'Ash hadu an Muhammadan Rasulullah' ok, tell me what does it mean, the Shahada?\"",
@@ -9372,7 +9382,7 @@
   {
     "id": 4775,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 937,
+    "segment_index": 938,
     "start_time": 3939.694,
     "end_time": 3942.514,
     "content": "And he told me \"ok, everything that you see.\"",
@@ -9382,7 +9392,7 @@
   {
     "id": 4776,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 938,
+    "segment_index": 939,
     "start_time": 3942.822,
     "end_time": 3951.306,
     "content": "And I say \"ok, we say Shahada, every time that we use the Shahada, even in the court or something, you have to see something...I was\"",
@@ -9392,7 +9402,7 @@
   {
     "id": 4777,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 939,
+    "segment_index": 940,
     "start_time": 3951.306,
     "end_time": 3955.471,
     "content": "And the Sura 7:172,",
@@ -9402,7 +9412,7 @@
   {
     "id": 4778,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 940,
+    "segment_index": 941,
     "start_time": 3955.471,
     "end_time": 3955.83882608696,
     "content": "we saw the",
@@ -9412,7 +9422,7 @@
   {
     "id": 74926,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 941,
+    "segment_index": 942,
     "start_time": 3955.83882608696,
     "end_time": 3956.46413043478,
     "content": "We witnessed God.",
@@ -9422,7 +9432,7 @@
   {
     "id": 4779,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 942,
+    "segment_index": 943,
     "start_time": 3957.163,
     "end_time": 3959.353,
     "content": "That's why we can say, Ash-hadu Alla Elaha Ella Allah.",
@@ -9432,7 +9442,7 @@
   {
     "id": 4780,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 943,
+    "segment_index": 944,
     "start_time": 3959.353,
     "end_time": 3961.25307291667,
     "content": "But have you ever seen Muhammad with your eyes?",
@@ -9442,7 +9452,7 @@
   {
     "id": 74927,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 944,
+    "segment_index": 945,
     "start_time": 3961.25307291667,
     "end_time": 3962.66802083333,
     "content": "Did you see Muhammad? Mã Shã Allãh.",
@@ -9452,7 +9462,7 @@
   {
     "id": 4781,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 945,
+    "segment_index": 946,
     "start_time": 3963.85,
     "end_time": 3965.85,
     "content": "Mã Shã Allãh. It's fantastic.",
@@ -9462,7 +9472,7 @@
   {
     "id": 4782,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 946,
+    "segment_index": 947,
     "start_time": 3965.85,
     "end_time": 3967.343,
     "content": "Cause \"Ash-hadu\" is witnessing.",
@@ -9472,7 +9482,7 @@
   {
     "id": 4783,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 947,
+    "segment_index": 948,
     "start_time": 3967.343,
     "end_time": 3970.392,
     "content": "(unintelligible).",
@@ -9482,7 +9492,7 @@
   {
     "id": 4784,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 948,
+    "segment_index": 949,
     "start_time": 3970.392,
     "end_time": 3979.359,
     "content": "And when I was telling somebody, and he said \"no, because you can say of the Quran, is this Shahada enough?",
@@ -9492,7 +9502,7 @@
   {
     "id": 4785,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 949,
+    "segment_index": 950,
     "start_time": 3979.359,
     "end_time": 3981.591,
     "content": "\"Because Quran is the shahada.\" I said \"no.\"",
@@ -9502,7 +9512,7 @@
   {
     "id": 4786,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 950,
+    "segment_index": 951,
     "start_time": 3981.591,
     "end_time": 3988.041,
     "content": "It's just imagine, if you go to the court, and you have to see something and say, yes, I saw it.",
@@ -9512,7 +9522,7 @@
   {
     "id": 4787,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 951,
+    "segment_index": 952,
     "start_time": 3988.041,
     "end_time": 3993.398,
     "content": "But if you have the evidence, still you cannot say \"I am witness that this happened.\"",
@@ -9522,7 +9532,7 @@
   {
     "id": 4788,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 952,
+    "segment_index": 953,
     "start_time": 3993.398,
     "end_time": 4002.497,
     "content": "You can say \"I have a lot of evidence,\" but evidence, witness, that is, you cannot say \"I am witness.\"",
@@ -9532,7 +9542,7 @@
   {
     "id": 4789,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 953,
+    "segment_index": 954,
     "start_time": 4002.497,
     "end_time": 4005.544,
     "content": "Mã Shã Allãh. This is beautiful. This is a breakthrough.",
@@ -9542,7 +9552,7 @@
   {
     "id": 4790,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 954,
+    "segment_index": 955,
     "start_time": 4005.544,
     "end_time": 4010.877,
     "content": "When you say \"Ash-hadu Alla Elaha Ella Allah\", I bear witness, or I bore witness,",
@@ -9552,7 +9562,7 @@
   {
     "id": 4791,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 955,
+    "segment_index": 956,
     "start_time": 4010.877,
     "end_time": 4016.145,
     "content": "I am an eyewitness to the fact that there is no god except God, and we have it in 7:172 here.",
@@ -9562,7 +9572,7 @@
   {
     "id": 4792,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 956,
+    "segment_index": 957,
     "start_time": 4016.145,
     "end_time": 4021.434,
     "content": "Because God said, I gathered all the humans, and they all bore witness that I am their Lord and Master.",
@@ -9572,7 +9582,7 @@
   {
     "id": 4793,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 957,
+    "segment_index": 958,
     "start_time": 4021.434,
     "end_time": 4022.05,
     "content": "Mã Shã Allãh.",
@@ -9582,7 +9592,7 @@
   {
     "id": 4794,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 958,
+    "segment_index": 959,
     "start_time": 4022.05,
     "end_time": 4024.79,
     "content": "Have you bore witness that Muhammad is Rasulullah?",
@@ -9592,7 +9602,7 @@
   {
     "id": 4795,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 959,
+    "segment_index": 960,
     "start_time": 4024.79,
     "end_time": 4026.50677966102,
     "content": "Mã Shã Allãh. In a dream, mind you.",
@@ -9602,7 +9612,7 @@
   {
     "id": 74928,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 960,
+    "segment_index": 961,
     "start_time": 4026.50677966102,
     "end_time": 4027.29159322034,
     "content": "(unintelligible)",
@@ -9612,7 +9622,7 @@
   {
     "id": 4796,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 961,
+    "segment_index": 962,
     "start_time": 4027.684,
     "end_time": 4031.442,
     "content": "When in that Sura that I'm thinking that's why God called them liars.",
@@ -9622,7 +9632,7 @@
   {
     "id": 4797,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 962,
+    "segment_index": 963,
     "start_time": 4031.442,
     "end_time": 4033.442,
     "content": "Yes. Yes, exactly.",
@@ -9632,7 +9642,7 @@
   {
     "id": 4798,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 963,
+    "segment_index": 964,
     "start_time": 4033.442,
     "end_time": 4034.646,
     "content": "God called them liars.",
@@ -9642,7 +9652,7 @@
   {
     "id": 4799,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 964,
+    "segment_index": 965,
     "start_time": 4034.646,
     "end_time": 4035.146,
     "content": "It says,",
@@ -9652,7 +9662,7 @@
   {
     "id": 4800,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 965,
+    "segment_index": 966,
     "start_time": 4035.146,
     "end_time": 4036.53,
     "content": "(63:1) نَشْهَدُ إِنَّكَ لَرَسُولُ ٱللَّهِ",
@@ -9662,7 +9672,7 @@
   {
     "id": 4801,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 966,
+    "segment_index": 967,
     "start_time": 4036.53,
     "end_time": 4039.147,
     "content": "We bear witness that you are God's Messenger, because they...",
@@ -9672,7 +9682,7 @@
   {
     "id": 4802,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 967,
+    "segment_index": 968,
     "start_time": 4039.147,
     "end_time": 4040.038,
     "content": "(unintelligible)",
@@ -9682,7 +9692,7 @@
   {
     "id": 4803,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 968,
+    "segment_index": 969,
     "start_time": 4040.038,
     "end_time": 4041.735,
     "content": "Yeah, this is...",
@@ -9692,7 +9702,7 @@
   {
     "id": 4804,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 969,
+    "segment_index": 970,
     "start_time": 4041.735,
     "end_time": 4048.678,
     "content": "Yeah, even you, after I, I, I tell someone in a dream, I said \"no, still you can say, because of the evidence.\"",
@@ -9702,7 +9712,7 @@
   {
     "id": 4805,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 970,
+    "segment_index": 971,
     "start_time": 4048.678,
     "end_time": 4051.63848387097,
     "content": "Okay, you can say that we have evidence that he is",
@@ -9712,7 +9722,7 @@
   {
     "id": 74929,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 971,
+    "segment_index": 972,
     "start_time": 4051.63848387097,
     "end_time": 4051.87532258065,
     "content": "Yes.",
@@ -9722,7 +9732,7 @@
   {
     "id": 4806,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 972,
+    "segment_index": 973,
     "start_time": 4052.349,
     "end_time": 4054.0745,
     "content": "It is a, the (unintelligible) but not you.",
@@ -9732,7 +9742,7 @@
   {
     "id": 74930,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 973,
+    "segment_index": 974,
     "start_time": 4054.0745,
     "end_time": 4054.23883333333,
     "content": "Yes.",
@@ -9742,7 +9752,7 @@
   {
     "id": 4807,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 974,
+    "segment_index": 975,
     "start_time": 4054.814,
     "end_time": 4055.973,
     "content": "There is a very short (unintelligible).",
@@ -9752,7 +9762,7 @@
   {
     "id": 4808,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 975,
+    "segment_index": 976,
     "start_time": 4055.973,
     "end_time": 4056.836,
     "content": "Yes.",
@@ -9762,7 +9772,7 @@
   {
     "id": 4809,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 976,
+    "segment_index": 977,
     "start_time": 4056.836,
     "end_time": 4061.232,
     "content": "Because we were eyewitnesses that God is La Elaha Ella Allah, He is the only God.",
@@ -9772,7 +9782,7 @@
   {
     "id": 4810,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 977,
+    "segment_index": 978,
     "start_time": 4061.484,
     "end_time": 4064.262,
     "content": "But we were never eyewitnesses to the fact that Muhammad is Rasulullah.",
@@ -9782,7 +9792,7 @@
   {
     "id": 4811,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 978,
+    "segment_index": 979,
     "start_time": 4064.262,
     "end_time": 4066.423,
     "content": "Now that they say this, they are lying.",
@@ -9792,7 +9802,7 @@
   {
     "id": 4812,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 979,
+    "segment_index": 980,
     "start_time": 4066.423,
     "end_time": 4068.423,
     "content": "Yes, exactly.",
@@ -9802,7 +9812,7 @@
   {
     "id": 4813,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 980,
+    "segment_index": 981,
     "start_time": 4068.633,
     "end_time": 4073.319,
     "content": "Because they did not bear witness that Muhammad is Rasulullah. Did you, did you catch this?",
@@ -9812,7 +9822,7 @@
   {
     "id": 4814,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 981,
+    "segment_index": 982,
     "start_time": 4073.319,
     "end_time": 4075.798,
     "content": "I know. In addition, I'm thinking on this.",
@@ -9822,7 +9832,7 @@
   {
     "id": 4815,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 982,
+    "segment_index": 983,
     "start_time": 4076.907,
     "end_time": 4078.206,
     "content": "Just accept the...",
@@ -9832,7 +9842,7 @@
   {
     "id": 4816,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 983,
+    "segment_index": 984,
     "start_time": 4080.301,
     "end_time": 4082.033,
     "content": "(unintelligible).",
@@ -9842,7 +9852,7 @@
   {
     "id": 4817,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 984,
+    "segment_index": 985,
     "start_time": 4083.149,
     "end_time": 4087.64533333333,
     "content": "How can a person be eyewitness that he is messenger from the evidence?",
@@ -9852,7 +9862,7 @@
   {
     "id": 74931,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 985,
+    "segment_index": 986,
     "start_time": 4087.64533333333,
     "end_time": 4088.03073333333,
     "content": "Right.",
@@ -9862,7 +9872,7 @@
   {
     "id": 4818,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 986,
+    "segment_index": 987,
     "start_time": 4088.93,
     "end_time": 4089.62088888889,
     "content": "No, no, how?",
@@ -9872,7 +9882,7 @@
   {
     "id": 74932,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 987,
+    "segment_index": 988,
     "start_time": 4089.62088888889,
     "end_time": 4091.23296296296,
     "content": "Right. I was gonna say that.",
@@ -9882,7 +9892,7 @@
   {
     "id": 4819,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 988,
+    "segment_index": 989,
     "start_time": 4092.039,
     "end_time": 4099.06,
     "content": "No, no, I am criticizing the subject, and during the time of prophet Muhammad when he is live also,",
@@ -9892,7 +9902,7 @@
   {
     "id": 4820,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 989,
+    "segment_index": 990,
     "start_time": 4099.06,
     "end_time": 4102.107,
     "content": "how can it be possible to see that he is messenger?",
@@ -9902,7 +9912,7 @@
   {
     "id": 4821,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 990,
+    "segment_index": 991,
     "start_time": 4102.107,
     "end_time": 4102.723,
     "content": "Exactly.",
@@ -9912,7 +9922,7 @@
   {
     "id": 4822,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 991,
+    "segment_index": 992,
     "start_time": 4102.723,
     "end_time": 4104.713,
     "content": "You don't see that he received",
@@ -9922,7 +9932,7 @@
   {
     "id": 4823,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 992,
+    "segment_index": 993,
     "start_time": 4104.713,
     "end_time": 4104.93508108108,
     "content": "the",
@@ -9932,7 +9942,7 @@
   {
     "id": 74933,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 993,
+    "segment_index": 994,
     "start_time": 4104.93508108108,
     "end_time": 4105.74937837838,
     "content": "Revelation.",
@@ -9942,7 +9952,7 @@
   {
     "id": 4824,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 994,
+    "segment_index": 995,
     "start_time": 4107.452,
     "end_time": 4109.021,
     "content": "also from clues.",
@@ -9952,7 +9962,7 @@
   {
     "id": 4825,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 995,
+    "segment_index": 996,
     "start_time": 4109.514,
     "end_time": 4110.405,
     "content": "Yes.",
@@ -9962,7 +9972,7 @@
   {
     "id": 4826,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 996,
+    "segment_index": 997,
     "start_time": 4111.727,
     "end_time": 4115.45,
     "content": "This is what I'm saying that even at the time of the prophet Muhammad, this is what Azar brought up.",
@@ -9972,7 +9982,7 @@
   {
     "id": 4827,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 997,
+    "segment_index": 998,
     "start_time": 4115.45,
     "end_time": 4119.265,
     "content": "Even at the time of the prophet Muhammad, they, they cannot witness the fact that he is Rasulullah.",
@@ -9982,7 +9992,7 @@
   {
     "id": 4828,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 998,
+    "segment_index": 999,
     "start_time": 4119.771,
     "end_time": 4121.411,
     "content": "Just he's saying he's Rasulullah.",
@@ -9992,7 +10002,7 @@
   {
     "id": 4829,
     "media_id": "65f38666-2cdc-4808-956f-94bff120eb29",
-    "segment_index": 999,
+    "segment_index": 1000,
     "start_time": 4121.899,
     "end_time": 4126.301,
     "content": "And then, you think about it, examine the evidence, whatever, and make a decision.",

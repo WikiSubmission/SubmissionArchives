@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Search, ArrowLeft, Calendar, FileText, ChevronRight, Video, BookOpen, Headphones, Sun, Moon, Clock, User } from 'lucide-react';
 import { formatMedia } from '@/lib/formatUtils';
@@ -94,6 +94,20 @@ export default function SearchPage() {
     const toggleFilter = (key: keyof typeof filters) => {
         setFilters(prev => ({ ...prev, [key]: !prev[key] }));
     };
+
+    // Debounced search effect
+    useEffect(() => {
+        if (!query.trim()) {
+            setResults([]);
+            return;
+        }
+
+        const timer = setTimeout(() => {
+            handleSearch();
+        }, 300);
+
+        return () => clearTimeout(timer);
+    }, [query, filters]);
 
     return (
         <div className={`min-h-screen ${theme.bg} ${theme.text} transition-colors duration-200 font-sans`}>
@@ -209,41 +223,45 @@ export default function SearchPage() {
                                     media.type === 'perspective' ? FileText :
                                         (media.type.includes('audio') || media.type === 'messenger-audio') ? Headphones : FileText;
 
+                            // For perspectives, link to PDF if available, otherwise fallback to JSON viewer
                             const mediaLink = media.type === 'perspective'
-                                ? `/submitter-perspectives/${media.filename}`
+                                ? (media.pdfLink || `/submitter-perspectives/${media.filename}`)
                                 : media.type === 'appendix'
                                     ? `/appendices/${media.filename}`
                                     : `/watch/${media.id}`;
 
+                            // For perspectives with PDF links, open in new tab
+                            const linkTarget = (media.type === 'perspective' && media.pdfLink) ? '_blank' : undefined;
+                            const linkRel = (media.type === 'perspective' && media.pdfLink) ? 'noopener noreferrer' : undefined;
+
                             return (
-                                <div key={media.id} className={`${theme.card} rounded-sm border ${theme.border} overflow-hidden shadow-sm hover:shadow-md transition-all group`}>
-                                    <Link href={mediaLink} className={`block p-5 border-b ${theme.border} hover:bg-opacity-50 transition-colors`}>
-                                        <div className="flex items-start justify-between">
-                                            <div>
-                                                <div className="flex items-center gap-2 mb-2">
-                                                    <span className={`px-2 py-0.5 rounded-sm border ${theme.border} text-[10px] font-mono uppercase tracking-wider ${theme.textVeryMuted} flex items-center gap-1.5`}>
-                                                        <Icon className="w-3 h-3" />
+                                <div key={media.id} className={`${theme.card} rounded-lg border ${theme.border} overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 group`}>
+                                    <Link href={mediaLink} target={linkTarget} rel={linkRel} className={`block p-6 border-b ${theme.border} hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors`}>
+                                        <div className="flex items-start justify-between gap-4">
+                                            <div className="flex-1">
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <span className={`px-2.5 py-1 rounded-md border ${theme.border} text-[10px] font-mono uppercase tracking-wider ${theme.textVeryMuted} flex items-center gap-1.5 bg-zinc-100 dark:bg-zinc-800`}>
+                                                        <Icon className="w-3.5 h-3.5" />
                                                         {media.type === 'messenger-audio' ? 'AUDIO' : media.type.replace('-', ' ')}
                                                     </span>
                                                     {media.displayDate && (
-                                                        <span className={`text-[10px] font-mono uppercase tracking-wider ${theme.textVeryMuted} flex items-center gap-1`}>
-                                                            <Calendar className="w-3 h-3" /> {media.displayDate}
+                                                        <span className={`text-[11px] font-mono uppercase tracking-wider ${theme.textVeryMuted} flex items-center gap-1.5`}>
+                                                            <Calendar className="w-3.5 h-3.5" />
+                                                            {media.displayDate}
                                                         </span>
                                                     )}
                                                 </div>
                                                 <h3
-                                                    style={{ fontFamily: 'var(--font-roboto-slab)' }}
-                                                    className={`text-lg ${theme.text} mb-1 group-hover:opacity-70 transition-opacity`}
+                                                    className={`text-xl font-serif ${theme.text} mb-2 leading-tight group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors`}
                                                 >
                                                     {media.displayTitle}
                                                 </h3>
-                                                <div className={`text-xs ${theme.textVeryMuted} font-mono flex items-center gap-4`}>
-                                                    <span className="flex items-center gap-1">
-                                                        <User className="w-3 h-3" /> {media.author}
-                                                    </span>
+                                                <div className={`text-xs ${theme.textVeryMuted} font-mono flex items-center gap-2`}>
+                                                    <User className="w-3.5 h-3.5" />
+                                                    <span>{media.author}</span>
                                                 </div>
                                             </div>
-                                            <ChevronRight className={`w-4 h-4 ${theme.textVeryMuted} group-hover:translate-x-1 transition-transform`} />
+                                            <ChevronRight className={`w-5 h-5 ${theme.textVeryMuted} group-hover:text-amber-500 group-hover:translate-x-1 transition-all flex-shrink-0`} />
                                         </div>
                                     </Link>
                                     <div className={`divide-y ${theme.border}`}>
@@ -315,5 +333,5 @@ function formatTime(seconds: number) {
 function highlightMatch(text: string, query: string, theme: any) {
     if (!query) return text;
     const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    return text.replace(regex, `<span class="${theme.highlight} px-0.5 rounded-sm font-medium">$1</span>`);
+    return text.replace(regex, `<span class="font-bold text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/30 rounded px-0.5">$1</span>`);
 }

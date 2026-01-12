@@ -3980,19 +3980,29 @@
     "search_vector": "'16':4"
   },
   {
-    "id": 19423,
+    "id": "19423_part_0",
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
     "segment_index": 398,
     "start_time": 1310.128,
-    "end_time": 1312.217,
-    "content": "We need to do research on that. Lydia: I'm just kidding. I'm just kidding.",
+    "end_time": 1311.1257313432836,
+    "content": "We need to do research on that. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'kid':12,16 'lydia':8 'm':10,14 'need':2 'research':5"
+  },
+  {
+    "id": "19423_part_1",
+    "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
+    "segment_index": 399,
+    "start_time": 1311.1257313432836,
+    "end_time": 1312.217,
+    "content": "I'm just kidding. I'm just kidding.",
+    "speaker": "Lydia",
     "search_vector": "'kid':12,16 'lydia':8 'm':10,14 'need':2 'research':5"
   },
   {
     "id": 19424,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 399,
+    "segment_index": 400,
     "start_time": 1312.77,
     "end_time": 1314.77,
     "content": "Actually, it's a very interesting question.",
@@ -4002,7 +4012,7 @@
   {
     "id": 19425,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 400,
+    "segment_index": 401,
     "start_time": 1315.157,
     "end_time": 1315.657,
     "content": "Huh?",
@@ -4012,7 +4022,7 @@
   {
     "id": 19426,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 401,
+    "segment_index": 402,
     "start_time": 1315.657,
     "end_time": 1318.797,
     "content": "If you miss Maghrib, it will be",
@@ -4022,7 +4032,7 @@
   {
     "id": 19427,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 402,
+    "segment_index": 403,
     "start_time": 1318.797,
     "end_time": 1318.90322222222,
     "content": "14",
@@ -4032,7 +4042,7 @@
   {
     "id": 75458,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 403,
+    "segment_index": 404,
     "start_time": 1318.90322222222,
     "end_time": 1319.00944444444,
     "content": "14",
@@ -4042,7 +4052,7 @@
   {
     "id": 19428,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 404,
+    "segment_index": 405,
     "start_time": 1319.753,
     "end_time": 1322.06,
     "content": "If you missed any other one, it will be",
@@ -4052,7 +4062,7 @@
   {
     "id": 19429,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 405,
+    "segment_index": 406,
     "start_time": 1322.06,
     "end_time": 1322.708,
     "content": "Yes.",
@@ -4062,7 +4072,7 @@
   {
     "id": 19430,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 406,
+    "segment_index": 407,
     "start_time": 1322.708,
     "end_time": 1326.674,
     "content": "therefore, should be 13. And if you miss, Fajr, it will be 15.",
@@ -4072,7 +4082,7 @@
   {
     "id": 19431,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 407,
+    "segment_index": 408,
     "start_time": 1326.674,
     "end_time": 1327.828,
     "content": "Yes.",
@@ -4082,7 +4092,7 @@
   {
     "id": 19432,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 408,
+    "segment_index": 409,
     "start_time": 1328.381,
     "end_time": 1331.024,
     "content": "So, it's not 16, not 16, never 16.",
@@ -4092,7 +4102,7 @@
   {
     "id": 19433,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 409,
+    "segment_index": 410,
     "start_time": 1331.024,
     "end_time": 1331.638,
     "content": "Yeah, I know.",
@@ -4102,7 +4112,7 @@
   {
     "id": 19434,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 410,
+    "segment_index": 411,
     "start_time": 1331.638,
     "end_time": 1332.655,
     "content": "13.",
@@ -4112,7 +4122,7 @@
   {
     "id": 19435,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 411,
+    "segment_index": 412,
     "start_time": 1332.655,
     "end_time": 1333.393,
     "content": "12.",
@@ -4122,7 +4132,7 @@
   {
     "id": 19436,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 412,
+    "segment_index": 413,
     "start_time": 1333.393,
     "end_time": 1334.069,
     "content": "13.",
@@ -4132,7 +4142,7 @@
   {
     "id": 19437,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 413,
+    "segment_index": 414,
     "start_time": 1334.069,
     "end_time": 1337.912,
     "content": "Like, Edip joined us but he forgot one Rak'at, so it became 16.",
@@ -4142,7 +4152,7 @@
   {
     "id": 19438,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 414,
+    "segment_index": 415,
     "start_time": 1337.912,
     "end_time": 1338.683,
     "content": "Oh.",
@@ -4152,7 +4162,7 @@
   {
     "id": 19439,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 415,
+    "segment_index": 416,
     "start_time": 1339.297,
     "end_time": 1339.5833030303,
     "content": "In fact,",
@@ -4162,7 +4172,7 @@
   {
     "id": 75459,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 416,
+    "segment_index": 417,
     "start_time": 1339.5833030303,
     "end_time": 1340.54957575758,
     "content": "Yeah, that, that time, too.",
@@ -4172,7 +4182,7 @@
   {
     "id": 19440,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 417,
+    "segment_index": 418,
     "start_time": 1341.659,
     "end_time": 1342.511,
     "content": "Were you here?",
@@ -4182,7 +4192,7 @@
   {
     "id": 19441,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 418,
+    "segment_index": 419,
     "start_time": 1342.511,
     "end_time": 1343.282,
     "content": "No.",
@@ -4192,7 +4202,7 @@
   {
     "id": 19442,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 419,
+    "segment_index": 420,
     "start_time": 1343.282,
     "end_time": 1344.238,
     "content": "Oh.",
@@ -4202,7 +4212,7 @@
   {
     "id": 19443,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 420,
+    "segment_index": 421,
     "start_time": 1345.651,
     "end_time": 1346.484,
     "content": "Who was here?",
@@ -4212,7 +4222,7 @@
   {
     "id": 19444,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 421,
+    "segment_index": 422,
     "start_time": 1346.484,
     "end_time": 1347.501,
     "content": "I was.",
@@ -4222,7 +4232,7 @@
   {
     "id": 19445,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 422,
+    "segment_index": 423,
     "start_time": 1349.638,
     "end_time": 1352.223,
     "content": "Well, Edip joined us after one Rak'at but he forgot that...",
@@ -4232,7 +4242,7 @@
   {
     "id": 19446,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 423,
+    "segment_index": 424,
     "start_time": 1352.223,
     "end_time": 1353.793,
     "content": "That he came, oh...",
@@ -4242,7 +4252,7 @@
   {
     "id": 19447,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 424,
+    "segment_index": 425,
     "start_time": 1353.793,
     "end_time": 1359.111,
     "content": "So, if, if we all forgot, it would be over 16. So, 16 is possible.",
@@ -4252,7 +4262,7 @@
   {
     "id": 19448,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 425,
+    "segment_index": 426,
     "start_time": 1360.456,
     "end_time": 1364.157,
     "content": "16 is possible. It sure is. It is.",
@@ -4262,7 +4272,7 @@
   {
     "id": 19449,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 426,
+    "segment_index": 427,
     "start_time": 1365.877,
     "end_time": 1376.26,
     "content": "It's really amazing. It's such simple, simple mathematically, I mean, this is now covering every aspect of the Prayer,",
@@ -4272,7 +4282,7 @@
   {
     "id": 19450,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 427,
+    "segment_index": 428,
     "start_time": 1376.26,
     "end_time": 1379.622,
     "content": "the number of Ruku's, the number of Sujuds, the number of Tashahuds.",
@@ -4282,7 +4292,7 @@
   {
     "id": 19451,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 428,
+    "segment_index": 429,
     "start_time": 1384.291,
     "end_time": 1385.179,
     "content": "number 9,",
@@ -4292,7 +4302,7 @@
   {
     "id": 19452,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 429,
+    "segment_index": 430,
     "start_time": 1385.179,
     "end_time": 1388.469,
     "content": "[23:9]  And they observe their Contact Prayers (Salat) regularly.",
@@ -4302,7 +4312,7 @@
   {
     "id": 19453,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 430,
+    "segment_index": 431,
     "start_time": 1388.469,
     "end_time": 1389.732,
     "content": "number 10,",
@@ -4312,7 +4322,7 @@
   {
     "id": 19454,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 431,
+    "segment_index": 432,
     "start_time": 1389.732,
     "end_time": 1391.732,
     "content": "[23:10]  Such are the inheritors.",
@@ -4322,7 +4332,7 @@
   {
     "id": 19455,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 432,
+    "segment_index": 433,
     "start_time": 1392.367,
     "end_time": 1395.585,
     "content": "[23:11]  They will inherit Paradise, wherein they abide forever.",
@@ -4332,7 +4342,7 @@
   {
     "id": 19456,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 433,
+    "segment_index": 434,
     "start_time": 1396.998,
     "end_time": 1400.428,
     "content": "And then, there is a report of accurate embryology.",
@@ -4342,7 +4352,7 @@
   {
     "id": 19457,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 434,
+    "segment_index": 435,
     "start_time": 1401.913,
     "end_time": 1406.375,
     "content": "12, this is what Behrouz was asking about yesterday.",
@@ -4352,7 +4362,7 @@
   {
     "id": 19458,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 435,
+    "segment_index": 436,
     "start_time": 1406.928,
     "end_time": 1410.464,
     "content": "[23:12]  We created the human being from a special kind of mud.",
@@ -4362,7 +4372,7 @@
   {
     "id": 19459,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 436,
+    "segment_index": 437,
     "start_time": 1411.078,
     "end_time": 1413.408,
     "content": "This is the initial creation.",
@@ -4372,7 +4382,7 @@
   {
     "id": 19460,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 437,
+    "segment_index": 438,
     "start_time": 1415.558,
     "end_time": 1423.836,
     "content": "[23:13]  Subsequently, we reproduced him from a tiny drop, that is placed into a well protected repository.",
@@ -4382,7 +4392,7 @@
   {
     "id": 19461,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 438,
+    "segment_index": 439,
     "start_time": 1425,
     "end_time": 1433.942,
     "content": "[23:14]  Then we developed the drop into a hanging (embryo), then developed the hanging (embryo) into a bite-size (fetus), ...",
@@ -4392,7 +4402,7 @@
   {
     "id": 19462,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 439,
+    "segment_index": 440,
     "start_time": 1433.942,
     "end_time": 1436.157,
     "content": "Maybe \"a bite-size\" is not (unintelligible)",
@@ -4402,7 +4412,7 @@
   {
     "id": 19463,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 440,
+    "segment_index": 441,
     "start_time": 1437.693,
     "end_time": 1440.893,
     "content": "Somebody... was it you?",
@@ -4412,7 +4422,7 @@
   {
     "id": 19464,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 441,
+    "segment_index": 442,
     "start_time": 1440.893,
     "end_time": 1441.0906969697,
     "content": "Yes.",
@@ -4422,7 +4432,7 @@
   {
     "id": 77054,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 442,
+    "segment_index": 443,
     "start_time": 1441.0906969697,
     "end_time": 1441.83206060606,
     "content": "The bite? Yeah.",
@@ -4432,7 +4442,7 @@
   {
     "id": 19465,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 443,
+    "segment_index": 444,
     "start_time": 1444.948,
     "end_time": 1446.853,
     "content": "I think that would be a good translation for that.",
@@ -4442,7 +4452,7 @@
   {
     "id": 19466,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 444,
+    "segment_index": 445,
     "start_time": 1449.406,
     "end_time": 1450.853,
     "content": "Computer has a bite.",
@@ -4452,7 +4462,7 @@
   {
     "id": 19467,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 445,
+    "segment_index": 446,
     "start_time": 1450.853,
     "end_time": 1460.496,
     "content": "The fanatic Muslims say it looks like something you, you bit, complete with teeth marks.",
@@ -4462,7 +4472,7 @@
   {
     "id": 19468,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 446,
+    "segment_index": 447,
     "start_time": 1461.356,
     "end_time": 1462.669,
     "content": "No, it's not tiny.",
@@ -4472,7 +4482,7 @@
   {
     "id": 19469,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 447,
+    "segment_index": 448,
     "start_time": 1462.669,
     "end_time": 1464.669,
     "content": "It's talking about its size, yes.",
@@ -4482,7 +4492,7 @@
   {
     "id": 19470,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 448,
+    "segment_index": 449,
     "start_time": 1464.669,
     "end_time": 1466.116,
     "content": "Tiny fetus.",
@@ -4492,7 +4502,7 @@
   {
     "id": 19471,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 449,
+    "segment_index": 450,
     "start_time": 1467.468,
     "end_time": 1468.792,
     "content": "Not really.",
@@ -4502,7 +4512,7 @@
   {
     "id": 19472,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 450,
+    "segment_index": 451,
     "start_time": 1468.874,
     "end_time": 1470.383,
     "content": "Smaller. Yeah.",
@@ -4512,7 +4522,7 @@
   {
     "id": 19473,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 451,
+    "segment_index": 452,
     "start_time": 1470.383,
     "end_time": 1470.61555813953,
     "content": "Tiny.",
@@ -4522,7 +4532,7 @@
   {
     "id": 77055,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 452,
+    "segment_index": 453,
     "start_time": 1470.61555813953,
     "end_time": 1471.7318372093,
     "content": "Small fetus, tiny fetus.",
@@ -4532,7 +4542,7 @@
   {
     "id": 19474,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 453,
+    "segment_index": 454,
     "start_time": 1474.157,
     "end_time": 1481.065,
     "content": "What stage is that? The, see, the first 14 days, the egg and still...",
@@ -4542,7 +4552,7 @@
   {
     "id": 19475,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 454,
+    "segment_index": 455,
     "start_time": 1481.065,
     "end_time": 1483.38256862745,
     "content": "Ok. This is like 2 months.",
@@ -4552,7 +4562,7 @@
   {
     "id": 75460,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 455,
+    "segment_index": 456,
     "start_time": 1483.38256862745,
     "end_time": 1484.27394117647,
     "content": "its shape.",
@@ -4562,7 +4572,7 @@
   {
     "id": 19476,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 456,
+    "segment_index": 457,
     "start_time": 1485.611,
     "end_time": 1489.208,
     "content": "2 months. 2 months is when the",
@@ -4572,7 +4582,7 @@
   {
     "id": 19477,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 457,
+    "segment_index": 458,
     "start_time": 1489.208,
     "end_time": 1495.491,
     "content": "curve lines and the shape, but we cannot tell which animal it is.",
@@ -4582,7 +4592,7 @@
   {
     "id": 19478,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 458,
+    "segment_index": 459,
     "start_time": 1495.491,
     "end_time": 1497.18481034483,
     "content": "All animals are the same at that stage.",
@@ -4592,7 +4602,7 @@
   {
     "id": 77056,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 459,
+    "segment_index": 460,
     "start_time": 1497.18481034483,
     "end_time": 1497.40196551724,
     "content": "Yeah.",
@@ -4602,7 +4612,7 @@
   {
     "id": 19479,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 460,
+    "segment_index": 461,
     "start_time": 1498.01,
     "end_time": 1498.10841935484,
     "content": "All",
@@ -4612,7 +4622,7 @@
   {
     "id": 77057,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 461,
+    "segment_index": 462,
     "start_time": 1498.10841935484,
     "end_time": 1498.56770967742,
     "content": "Is that right?",
@@ -4622,7 +4632,7 @@
   {
     "id": 19480,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 462,
+    "segment_index": 463,
     "start_time": 1499.027,
     "end_time": 1500.351,
     "content": "All animals are (unintelligible).",
@@ -4632,7 +4642,7 @@
   {
     "id": 19481,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 463,
+    "segment_index": 464,
     "start_time": 1500.351,
     "end_time": 1501.429,
     "content": "Uhum.",
@@ -4642,7 +4652,7 @@
   {
     "id": 19482,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 464,
+    "segment_index": 465,
     "start_time": 1505.985,
     "end_time": 1518.349,
     "content": "[23:14]  ... into a bite-size (fetus), then created the bite-size (fetus) into bones, then covered the bones with flesh. Then, produced a new creature. Most blessed is GOD, the best Creator.",
@@ -4652,7 +4662,7 @@
   {
     "id": 19483,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 465,
+    "segment_index": 466,
     "start_time": 1522.741,
     "end_time": 1530,
     "content": "It's one of the amazing things that we witnessed everyday, of course (unintelligible), remember?",
@@ -4662,7 +4672,7 @@
   {
     "id": 19484,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 466,
+    "segment_index": 467,
     "start_time": 1531.167,
     "end_time": 1534.887,
     "content": "Of course, like (unintelligible) yesterday.",
@@ -4672,7 +4682,7 @@
   {
     "id": 19485,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 467,
+    "segment_index": 468,
     "start_time": 1536.386,
     "end_time": 1548.734,
     "content": "I love your reaction to my question. Such supportive sister. Like yesterday, seems like yesterday.",
@@ -4682,7 +4692,7 @@
   {
     "id": 19486,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 468,
+    "segment_index": 469,
     "start_time": 1553.833,
     "end_time": 1555.984,
     "content": "When we,",
@@ -4692,7 +4702,7 @@
   {
     "id": 19487,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 469,
+    "segment_index": 470,
     "start_time": 1555.984,
     "end_time": 1564.485,
     "content": "When we are born, that's when assigned a soul. A soul was came from the world of souls, comes to you.",
@@ -4702,7 +4712,7 @@
   {
     "id": 19488,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 470,
+    "segment_index": 471,
     "start_time": 1564.485,
     "end_time": 1568.491,
     "content": "Then, how come we don't remember at that stage (unintelligible)?",
@@ -4712,7 +4722,7 @@
   {
     "id": 19489,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 471,
+    "segment_index": 472,
     "start_time": 1568.86,
     "end_time": 1574.14,
     "content": "Because that's not the only time you don't remember. Remember when you were a year and a half and your mom spanked you?",
@@ -4722,7 +4732,7 @@
   {
     "id": 19490,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 472,
+    "segment_index": 473,
     "start_time": 1575.307,
     "end_time": 1580.205,
     "content": "No, no, that's what I mean. The first 2 years, probably 3 years.",
@@ -4732,7 +4742,7 @@
   {
     "id": 19491,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 473,
+    "segment_index": 474,
     "start_time": 1580.205,
     "end_time": 1582.881,
     "content": "Yeah. Because there's a capacity of memory in your brain.",
@@ -4742,7 +4752,7 @@
   {
     "id": 19492,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 474,
+    "segment_index": 475,
     "start_time": 1583.277,
     "end_time": 1588.901,
     "content": "You're thinking of a human (unintelligible) we have to deal with it as a human, your brain's (unintelligible)",
@@ -4752,7 +4762,7 @@
   {
     "id": 19493,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 475,
+    "segment_index": 476,
     "start_time": 1590.806,
     "end_time": 1595.195,
     "content": "You need to add memory cards, if you want to remember everything.",
@@ -4762,7 +4772,7 @@
   {
     "id": 19494,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 476,
+    "segment_index": 477,
     "start_time": 1597.96,
     "end_time": 1598.702,
     "content": "Some hardware.",
@@ -4772,7 +4782,7 @@
   {
     "id": 77058,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 477,
+    "segment_index": 478,
     "start_time": 1598.702,
     "end_time": 1600.186,
     "content": "So, the soul, the soul needs",
@@ -4782,7 +4792,7 @@
   {
     "id": 19495,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 478,
+    "segment_index": 479,
     "start_time": 1600.981,
     "end_time": 1602.64141428571,
     "content": "some other tools. Yes, yes, like the brain.",
@@ -4792,7 +4802,7 @@
   {
     "id": 75461,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 479,
+    "segment_index": 480,
     "start_time": 1602.64141428571,
     "end_time": 1603.1434,
     "content": "The physical.",
@@ -4802,7 +4812,7 @@
   {
     "id": 19496,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 480,
+    "segment_index": 481,
     "start_time": 1603.684,
     "end_time": 1608.257,
     "content": "Yes. But the soul uses this physical body to grow,",
@@ -4812,7 +4822,7 @@
   {
     "id": 19497,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 481,
+    "segment_index": 482,
     "start_time": 1608.257,
     "end_time": 1615.752,
     "content": "this wild horse. As you, as you do more important things, other things are pushed away out of your memory.",
@@ -4822,7 +4832,7 @@
   {
     "id": 19498,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 482,
+    "segment_index": 483,
     "start_time": 1615.752,
     "end_time": 1617.668,
     "content": "But actually, they never go away.",
@@ -4832,7 +4842,7 @@
   {
     "id": 19499,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 483,
+    "segment_index": 484,
     "start_time": 1617.668,
     "end_time": 1618.33407936508,
     "content": "You know of the subconscious?",
@@ -4842,7 +4852,7 @@
   {
     "id": 75462,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 484,
+    "segment_index": 485,
     "start_time": 1618.33407936508,
     "end_time": 1618.77047619048,
     "content": "They never go away.",
@@ -4852,7 +4862,7 @@
   {
     "id": 19500,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 485,
+    "segment_index": 486,
     "start_time": 1619.115,
     "end_time": 1619.615,
     "content": "Yes.",
@@ -4862,7 +4872,7 @@
   {
     "id": 19501,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 486,
+    "segment_index": 487,
     "start_time": 1619.615,
     "end_time": 1620.617,
     "content": "what they call.",
@@ -4872,7 +4882,7 @@
   {
     "id": 19502,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 487,
+    "segment_index": 488,
     "start_time": 1621.416,
     "end_time": 1629.783,
     "content": "It goes into a storage, like the tapes that Lisa plays back and forth. It's that storage, memory.",
@@ -4882,7 +4892,7 @@
   {
     "id": 19503,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 488,
+    "segment_index": 489,
     "start_time": 1635.54,
     "end_time": 1641.81,
     "content": "But you know, really we were just one cell. Each one of us was one cell and differentiated,",
@@ -4892,7 +4902,7 @@
   {
     "id": 19504,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 489,
+    "segment_index": 490,
     "start_time": 1641.81,
     "end_time": 1654.28,
     "content": "divided and differentiated into a difference, kidneys and livers, hearts, lungs. One cell, nose, eyes.",
@@ -4902,7 +4912,7 @@
   {
     "id": 19505,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 490,
+    "segment_index": 491,
     "start_time": 1654.28,
     "end_time": 1656.07,
     "content": "Look at the eye, how the eyes move.",
@@ -4912,7 +4922,7 @@
   {
     "id": 19506,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 491,
+    "segment_index": 492,
     "start_time": 1660.835,
     "end_time": 1661.791,
     "content": "Such sleepy eyes.",
@@ -4922,7 +4932,7 @@
   {
     "id": 19507,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 492,
+    "segment_index": 493,
     "start_time": 1663.791,
     "end_time": 1665,
     "content": "Some bright eyes.",
@@ -4932,7 +4942,7 @@
   {
     "id": 19508,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 493,
+    "segment_index": 494,
     "start_time": 1665.422,
     "end_time": 1670.407,
     "content": "It's a ball with pressure with liquid inside that is precise. The pressure is precise.",
@@ -4942,7 +4952,7 @@
   {
     "id": 19509,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 494,
+    "segment_index": 495,
     "start_time": 1671.636,
     "end_time": 1674.694,
     "content": "If it's a little bit more, the eyes will bug out,",
@@ -4952,7 +4962,7 @@
   {
     "id": 19510,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 495,
+    "segment_index": 496,
     "start_time": 1679.363,
     "end_time": 1680.626,
     "content": "like Barbara Bush.",
@@ -4962,7 +4972,7 @@
   {
     "id": 19511,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 496,
+    "segment_index": 497,
     "start_time": 1682.162,
     "end_time": 1687.411,
     "content": "I mean, it's, I mean, slightly, if it's slightly less, it's a problem.",
@@ -4972,7 +4982,7 @@
   {
     "id": 19512,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 497,
+    "segment_index": 498,
     "start_time": 1687.411,
     "end_time": 1689.011,
     "content": "She has, what, Graves' disease?",
@@ -4982,7 +4992,7 @@
   {
     "id": 19513,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 498,
+    "segment_index": 499,
     "start_time": 1689.011,
     "end_time": 1689.721,
     "content": "Yeah.",
@@ -4992,7 +5002,7 @@
   {
     "id": 19514,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 499,
+    "segment_index": 500,
     "start_time": 1691.291,
     "end_time": 1693.721,
     "content": "That's, that's her thyroid.",
@@ -5002,7 +5012,7 @@
   {
     "id": 19515,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 500,
+    "segment_index": 501,
     "start_time": 1695.339,
     "end_time": 1697.45269642857,
     "content": "It's caused by the thyroid at that point.",
@@ -5012,7 +5022,7 @@
   {
     "id": 75463,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 501,
+    "segment_index": 502,
     "start_time": 1697.45269642857,
     "end_time": 1697.71046428571,
     "content": "Yeah.",
@@ -5022,7 +5032,7 @@
   {
     "id": 19516,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 502,
+    "segment_index": 503,
     "start_time": 1699.578,
     "end_time": 1704.493,
     "content": "Just talked about that memory storage, even to the beginning of life?",
@@ -5032,7 +5042,7 @@
   {
     "id": 19517,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 503,
+    "segment_index": 504,
     "start_time": 1704.493,
     "end_time": 1705.449,
     "content": "Uhum.",
@@ -5042,7 +5052,7 @@
   {
     "id": 19518,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 504,
+    "segment_index": 505,
     "start_time": 1705.449,
     "end_time": 1707.449,
     "content": "Because I do remember though.",
@@ -5052,7 +5062,7 @@
   {
     "id": 19519,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 505,
+    "segment_index": 506,
     "start_time": 1708.793,
     "end_time": 1709.324,
     "content": "It's all there.",
@@ -5062,7 +5072,7 @@
   {
     "id": 19520,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 506,
+    "segment_index": 507,
     "start_time": 1709.324,
     "end_time": 1713.646,
     "content": "On the Day of Resurrection, you can, you can fast forward and rewind, but I...",
@@ -5072,7 +5082,7 @@
   {
     "id": 19521,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 507,
+    "segment_index": 508,
     "start_time": 1714.015,
     "end_time": 1719.361,
     "content": "Yes, as you get more things, and other things are pushed down into subconscious, the storage.",
@@ -5082,7 +5092,7 @@
   {
     "id": 19522,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 508,
+    "segment_index": 509,
     "start_time": 1719.975,
     "end_time": 1726.384,
     "content": "Everything is there. Actually, it's out there in the atmosphere, and every voice, every picture.",
@@ -5092,7 +5102,7 @@
   {
     "id": 19523,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 509,
+    "segment_index": 510,
     "start_time": 1727.981,
     "end_time": 1730.334,
     "content": "And the angels have the recordings.",
@@ -5102,7 +5112,7 @@
   {
     "id": 19524,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 510,
+    "segment_index": 511,
     "start_time": 1730.764,
     "end_time": 1731.658,
     "content": "Uhum.",
@@ -5112,7 +5122,7 @@
   {
     "id": 19525,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 511,
+    "segment_index": 512,
     "start_time": 1731.965,
     "end_time": 1734.764,
     "content": "So, the angels (unintelligible)",
@@ -5122,7 +5132,7 @@
   {
     "id": 19526,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 512,
+    "segment_index": 513,
     "start_time": 1736.327,
     "end_time": 1742.075,
     "content": "And I would've thought the angels were being strung to, to my body, but then",
@@ -5132,7 +5142,7 @@
   {
     "id": 19527,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 513,
+    "segment_index": 514,
     "start_time": 1742.075,
     "end_time": 1751.079,
     "content": "I realized and all because my heart pumps, when all those things happen, by the will of God, so the angels must be involved in it.",
@@ -5142,7 +5152,7 @@
   {
     "id": 19528,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 514,
+    "segment_index": 515,
     "start_time": 1751.079,
     "end_time": 1753.372,
     "content": "(unintelligible)",
@@ -5152,7 +5162,7 @@
   {
     "id": 19529,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 515,
+    "segment_index": 516,
     "start_time": 1753.372,
     "end_time": 1759.956,
     "content": "No, it's a mechanism. I couldn't turn the car engine on, if there is no engine to ride. There's a mechanism.",
@@ -5162,7 +5172,7 @@
   {
     "id": 19530,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 516,
+    "segment_index": 517,
     "start_time": 1760.693,
     "end_time": 1761.71,
     "content": "I think we might...",
@@ -5172,7 +5182,7 @@
   {
     "id": 19531,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 517,
+    "segment_index": 518,
     "start_time": 1761.71,
     "end_time": 1763.28,
     "content": "There's a gas, there's a fuel pump.",
@@ -5182,7 +5192,7 @@
   {
     "id": 19532,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 518,
+    "segment_index": 519,
     "start_time": 1764.816,
     "end_time": 1767.307,
     "content": "If your car starts, there's an angel there.",
@@ -5192,7 +5202,7 @@
   {
     "id": 19533,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 519,
+    "segment_index": 520,
     "start_time": 1769.171,
     "end_time": 1776.466,
     "content": "Yes. As a matter of fact, when our cars break down, when the mechanism fails, then God provides another mechanism, which is your angel.",
@@ -5202,7 +5212,7 @@
   {
     "id": 19534,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 520,
+    "segment_index": 521,
     "start_time": 1776.466,
     "end_time": 1777.449,
     "content": "Uhum.",
@@ -5212,7 +5222,7 @@
   {
     "id": 19535,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 521,
+    "segment_index": 522,
     "start_time": 1777.449,
     "end_time": 1785.256,
     "content": "But there is a mechanism, when the, when the starter works, and the fuel pump pumps fuel into the",
@@ -5222,7 +5232,7 @@
   {
     "id": 19536,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 522,
+    "segment_index": 523,
     "start_time": 1785.256,
     "end_time": 1793.982,
     "content": "the pistons, and then they spark, and fire. It's always a, there's something. So, this is the way our body works.",
@@ -5232,7 +5242,7 @@
   {
     "id": 19537,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 523,
+    "segment_index": 524,
     "start_time": 1797.115,
     "end_time": 1798.47264705882,
     "content": "I guess (unintelligible)",
@@ -5242,7 +5252,7 @@
   {
     "id": 75464,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 524,
+    "segment_index": 525,
     "start_time": 1798.47264705882,
     "end_time": 1799.20803921569,
     "content": "Subhan Allah.",
@@ -5252,7 +5262,7 @@
   {
     "id": 19538,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 525,
+    "segment_index": 526,
     "start_time": 1801.293,
     "end_time": 1806.864,
     "content": "I, I was trying to make the connection between the recording angels and the video tape.",
@@ -5262,7 +5272,7 @@
   {
     "id": 19539,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 526,
+    "segment_index": 527,
     "start_time": 1809.69,
     "end_time": 1813.141,
     "content": "This is simplifying it, a dramatization.",
@@ -5272,7 +5282,7 @@
   {
     "id": 19540,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 527,
+    "segment_index": 528,
     "start_time": 1813.141,
     "end_time": 1814.158,
     "content": "Yes.",
@@ -5282,7 +5292,7 @@
   {
     "id": 19541,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 528,
+    "segment_index": 529,
     "start_time": 1814.527,
     "end_time": 1815.483,
     "content": "Yes.",
@@ -5292,7 +5302,7 @@
   {
     "id": 19542,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 529,
+    "segment_index": 530,
     "start_time": 1817.441,
     "end_time": 1822.451,
     "content": "This, like, the heart is an incredible pump. We have the heart pump by itself.",
@@ -5302,7 +5312,7 @@
   {
     "id": 19543,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 530,
+    "segment_index": 531,
     "start_time": 1825.093,
     "end_time": 1828.421,
     "content": "I think still, you know, recently...",
@@ -5312,7 +5322,7 @@
   {
     "id": 19544,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 531,
+    "segment_index": 532,
     "start_time": 1830.421,
     "end_time": 1835.186,
     "content": "you know, when (unintelligible)",
@@ -5322,7 +5332,7 @@
   {
     "id": 19545,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 532,
+    "segment_index": 533,
     "start_time": 1835.677,
     "end_time": 1837.186,
     "content": "Don't feel bad about it.",
@@ -5332,7 +5342,7 @@
   {
     "id": 19546,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 533,
+    "segment_index": 534,
     "start_time": 1837.759,
     "end_time": 1840.373,
     "content": "This is, this is their function. They are happy about it.",
@@ -5342,7 +5352,7 @@
   {
     "id": 19547,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 534,
+    "segment_index": 535,
     "start_time": 1841.753,
     "end_time": 1848.59,
     "content": "Because if you take the heart by itself, you can have it work properly. In fact, the heart transplant doctors could do that.",
@@ -5352,7 +5362,7 @@
   {
     "id": 19548,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 535,
+    "segment_index": 536,
     "start_time": 1848.59,
     "end_time": 1857.631,
     "content": "Exactly. Exactly right. Back in Huston, I was working in hospital. The guy I was peered with was Iranian and...",
@@ -5362,7 +5372,7 @@
   {
     "id": 19549,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 536,
+    "segment_index": 537,
     "start_time": 1861.627,
     "end_time": 1865.82,
     "content": "...10, 15 college students came here.",
@@ -5372,7 +5382,7 @@
   {
     "id": 19550,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 537,
+    "segment_index": 538,
     "start_time": 1866.619,
     "end_time": 1871.603,
     "content": "And Edip spoke to them from, from Pima College.",
@@ -5382,7 +5392,7 @@
   {
     "id": 19551,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 538,
+    "segment_index": 539,
     "start_time": 1873.603,
     "end_time": 1876.641,
     "content": "And he explained to them the miracle,",
@@ -5392,7 +5402,7 @@
   {
     "id": 19552,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 539,
+    "segment_index": 540,
     "start_time": 1876.641,
     "end_time": 1885.912,
     "content": "that there's a message from God to the world and gave them all  the details they wanted about an hour and a half.",
@@ -5402,7 +5412,7 @@
   {
     "id": 19553,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 540,
+    "segment_index": 541,
     "start_time": 1885.912,
     "end_time": 1895.58,
     "content": "He wanted them to ask questions and he told them \"we have  a Quranic study tonight. So, would you, if you have",
@@ -5412,7 +5422,7 @@
   {
     "id": 19554,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 541,
+    "segment_index": 542,
     "start_time": 1895.58,
     "end_time": 1901.402,
     "content": "\"any questions, you can come and discuss the matter  further\", but they never showed up, not but one. Not one of them",
@@ -5422,7 +5432,7 @@
   {
     "id": 19555,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 542,
+    "segment_index": 543,
     "start_time": 1901.402,
     "end_time": 1910.176,
     "content": "showed up. We have high school kids. And he presents the miracle to them, give them details, but there is no response.",
@@ -5432,7 +5442,7 @@
   {
     "id": 19556,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 543,
+    "segment_index": 544,
     "start_time": 1910.975,
     "end_time": 1916.25,
     "content": "And we're just wondering what is wrong with the  people. Here, here's a message from God, proven to  ",
@@ -5442,7 +5452,7 @@
   {
     "id": 19557,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 544,
+    "segment_index": 545,
     "start_time": 1916.25,
     "end_time": 1924.843,
     "content": "be from God, it tells us who we are, why we are here,  where we're going and how to attain perfect happiness",
@@ -5452,7 +5462,7 @@
   {
     "id": 19558,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 545,
+    "segment_index": 546,
     "start_time": 1924.843,
     "end_time": 1932.382,
     "content": "now and forever, but they're just like... they're  under hypnosis. Nothing moves them.",
@@ -5462,7 +5472,7 @@
   {
     "id": 19559,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 546,
+    "segment_index": 547,
     "start_time": 1933.426,
     "end_time": 1943.296,
     "content": "And we're just wandering. It's, it's a kind of amazing phenomenon. So, we are working on, on simplifying this and",
@@ -5472,7 +5482,7 @@
   {
     "id": 19560,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 547,
+    "segment_index": 548,
     "start_time": 1943.296,
     "end_time": 1951.721,
     "content": "working on ways and means of perfecting the message and  how to present it to the people to motivate them,",
@@ -5482,7 +5492,7 @@
   {
     "id": 19561,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 548,
+    "segment_index": 549,
     "start_time": 1951.721,
     "end_time": 1959.733,
     "content": "make them realize that there is a message from God,  the first physical evidence in history, and",
@@ -5492,7 +5502,7 @@
   {
     "id": 19562,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 549,
+    "segment_index": 550,
     "start_time": 1959.733,
     "end_time": 1962.489,
     "content": "all the benefits that follow from this.",
@@ -5502,7 +5512,7 @@
   {
     "id": 19563,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 550,
+    "segment_index": 551,
     "start_time": 1964.209,
     "end_time": 1969.738,
     "content": "So, I'm going to  share with you these simple but powerful facts.",
@@ -5512,7 +5522,7 @@
   {
     "id": 19564,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 551,
+    "segment_index": 552,
     "start_time": 1969.738,
     "end_time": 1976.94,
     "content": "They're very simple to understand, simple to present and simple  to appreciate. And hopefully this, we will perfect the  ",
@@ -5522,7 +5532,7 @@
   {
     "id": 19565,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 552,
+    "segment_index": 553,
     "start_time": 1976.94,
     "end_time": 1984.423,
     "content": "message somehow. So, what I'm going to talk with  you today is just the word \"God\" in the Quran.",
@@ -5532,7 +5542,7 @@
   {
     "id": 19566,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 553,
+    "segment_index": 554,
     "start_time": 1986.02,
     "end_time": 1993.341,
     "content": "It's a very simple, very simple matter. There's a scripture  from God. The most important word in it",
@@ -5542,7 +5552,7 @@
   {
     "id": 19567,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 554,
+    "segment_index": 555,
     "start_time": 1993.341,
     "end_time": 2001.516,
     "content": "is the word \"God.\" I'm gonna look just at that which is only one millionth of the, of the total miracle.",
@@ -5552,7 +5562,7 @@
   {
     "id": 19568,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 555,
+    "segment_index": 556,
     "start_time": 2002.376,
     "end_time": 2006.769,
     "content": "the occurrence of the word \"God\"",
@@ -5562,7 +5572,7 @@
   {
     "id": 19569,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 556,
+    "segment_index": 557,
     "start_time": 2011.069,
     "end_time": 2014.421,
     "content": "in the whole book. All of you know this. 2698.",
@@ -5572,7 +5582,7 @@
   {
     "id": 19570,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 557,
+    "segment_index": 558,
     "start_time": 2016.23,
     "end_time": 2020.55,
     "content": "19 x 142.",
@@ -5582,7 +5592,7 @@
   {
     "id": 19571,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 558,
+    "segment_index": 559,
     "start_time": 2021.902,
     "end_time": 2030.748,
     "content": "Ok. Then, you take every verse in the Quran  wherever you see the word \"God\",",
@@ -5592,7 +5602,7 @@
   {
     "id": 19572,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 559,
+    "segment_index": 560,
     "start_time": 2030.748,
     "end_time": 2035.844,
     "content": "and it is very simple as you see, and add the numbers of these verses,",
@@ -5602,7 +5612,7 @@
   {
     "id": 19573,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 560,
+    "segment_index": 561,
     "start_time": 2044.239,
     "end_time": 2047.21,
     "content": "ok, all the verses in the Quran that have the word  ",
@@ -5612,7 +5622,7 @@
   {
     "id": 19574,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 561,
+    "segment_index": 562,
     "start_time": 2047.21,
     "end_time": 2057.771,
     "content": "\"God\" in them, just add the, their numbers. They give you  118123.",
@@ -5622,7 +5632,7 @@
   {
     "id": 19575,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 562,
+    "segment_index": 563,
     "start_time": 2057.771,
     "end_time": 2061.952,
     "content": "19 x 6127.",
@@ -5632,7 +5642,7 @@
   {
     "id": 19576,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 563,
+    "segment_index": 564,
     "start_time": 2063.952,
     "end_time": 2070,
     "content": "You know, this alone really, this alone tells us  that this book is from God. It is not human-made.",
@@ -5642,7 +5652,7 @@
   {
     "id": 19577,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 564,
+    "segment_index": 565,
     "start_time": 2070,
     "end_time": 2071.369,
     "content": "Who designed this?",
@@ -5652,7 +5662,7 @@
   {
     "id": 19578,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 565,
+    "segment_index": 566,
     "start_time": 2072.536,
     "end_time": 2081.26,
     "content": "And I have gone through length  to show you how we, college graduates, are, are unable",
@@ -5662,7 +5672,7 @@
   {
     "id": 19579,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 566,
+    "segment_index": 567,
     "start_time": 2081.26,
     "end_time": 2087.429,
     "content": "to keep track of these. I mean, the message is  already here, it's already written down. It's in front of us,",
@@ -5672,7 +5682,7 @@
   {
     "id": 19580,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 567,
+    "segment_index": 568,
     "start_time": 2087.429,
     "end_time": 2094.328,
     "content": "but we're having a heck of a time keeping  track of the, the words and the sentences.",
@@ -5682,7 +5692,7 @@
   {
     "id": 19581,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 568,
+    "segment_index": 569,
     "start_time": 2095.557,
     "end_time": 2103.097,
     "content": "And we keep screening mistakes. It's very simple.  Sometimes we just reverse 3 2, make it 23,",
@@ -5692,7 +5702,7 @@
   {
     "id": 19582,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 569,
+    "segment_index": 570,
     "start_time": 2103.097,
     "end_time": 2110.581,
     "content": "when we count or when we add. But  this alone proves that the book is from God.",
@@ -5702,7 +5712,7 @@
   {
     "id": 19583,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 570,
+    "segment_index": 571,
     "start_time": 2115.69,
     "end_time": 2117.089,
     "content": "OK. Next.",
@@ -5712,7 +5722,7 @@
   {
     "id": 19584,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 571,
+    "segment_index": 572,
     "start_time": 2120.529,
     "end_time": 2123.205,
     "content": "This is a new discovery by Mahmood Abib.",
@@ -5722,7 +5732,7 @@
   {
     "id": 19585,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 572,
+    "segment_index": 573,
     "start_time": 2125.97,
     "end_time": 2131.226,
     "content": "Now that we see there's 19 as a common denominator,",
@@ -5732,7 +5742,7 @@
   {
     "id": 19586,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 573,
+    "segment_index": 574,
     "start_time": 2131.226,
     "end_time": 2138.24,
     "content": "he looked at all the verses in the  Quran that are number 19 or multiples of 19,",
@@ -5742,7 +5752,7 @@
   {
     "id": 19587,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 574,
+    "segment_index": 575,
     "start_time": 2138.24,
     "end_time": 2142.157,
     "content": "and counted the word \"God\" in them. Very simple process.",
@@ -5752,7 +5762,7 @@
   {
     "id": 19588,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 575,
+    "segment_index": 576,
     "start_time": 2143.509,
     "end_time": 2147.598,
     "content": "These are the 19 multiples verses.",
@@ -5762,7 +5772,7 @@
   {
     "id": 19589,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 576,
+    "segment_index": 577,
     "start_time": 2151.898,
     "end_time": 2155.12,
     "content": "So, he looks at Sura Al-Baqarah, number 2,",
@@ -5772,7 +5782,7 @@
   {
     "id": 19590,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 577,
+    "segment_index": 578,
     "start_time": 2155.12,
     "end_time": 2159.75,
     "content": "looks at verse number 19 and, and counts the number of the word \"God\" in it.",
@@ -5782,7 +5792,7 @@
   {
     "id": 19591,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 578,
+    "segment_index": 579,
     "start_time": 2159.75,
     "end_time": 2165.487,
     "content": "Then, goes to verse number 38, number 57 and so on. And  he did this in the whole Quran.",
@@ -5792,7 +5802,7 @@
   {
     "id": 19592,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 579,
+    "segment_index": 580,
     "start_time": 2165.487,
     "end_time": 2170.149,
     "content": "The word \"God\" in those verses 133.",
@@ -5802,7 +5812,7 @@
   {
     "id": 19593,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 580,
+    "segment_index": 581,
     "start_time": 2179.917,
     "end_time": 2183.419,
     "content": "Nobody in the  whole world knows except the believers, know this.",
@@ -5812,7 +5822,7 @@
   {
     "id": 19594,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 581,
+    "segment_index": 582,
     "start_time": 2183.419,
     "end_time": 2189.11,
     "content": "This is a new discovery. It's been already faxed  to India, Canada and some other places.",
@@ -5822,7 +5832,7 @@
   {
     "id": 19595,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 582,
+    "segment_index": 583,
     "start_time": 2190,
     "end_time": 2197.54,
     "content": "As soon as these things come up, we have a fax machine now, and it's... everything is faxed around the world.",
@@ -5832,7 +5842,7 @@
   {
     "id": 19596,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 583,
+    "segment_index": 584,
     "start_time": 2197.54,
     "end_time": 2201.497,
     "content": "But anyway so, now, we carry this miracle one  step further.",
@@ -5842,7 +5852,7 @@
   {
     "id": 19597,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 584,
+    "segment_index": 585,
     "start_time": 2204.446,
     "end_time": 2208.044,
     "content": "And it shows the more intricacy of the miracle.",
@@ -5852,7 +5862,7 @@
   {
     "id": 19598,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 585,
+    "segment_index": 586,
     "start_time": 2208.781,
     "end_time": 2215.42,
     "content": "It should convince anybody that we  have a book from God. But the word \"God\" is very  ",
@@ -5862,7 +5872,7 @@
   {
     "id": 19599,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 586,
+    "segment_index": 587,
     "start_time": 2215.42,
     "end_time": 2218.151,
     "content": "important. So, it doesn't stop here.",
@@ -5872,7 +5882,7 @@
   {
     "id": 19600,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 587,
+    "segment_index": 588,
     "start_time": 2220,
     "end_time": 2225.83,
     "content": "The next item, the sum of all the occurrences of the word \"God\"",
@@ -5882,7 +5892,7 @@
   {
     "id": 19601,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 588,
+    "segment_index": 589,
     "start_time": 2225.83,
     "end_time": 2230.296,
     "content": "in the verses whose numbers are not multiples of 19, it follows.",
@@ -5892,7 +5902,7 @@
   {
     "id": 19602,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 589,
+    "segment_index": 590,
     "start_time": 2234.57,
     "end_time": 2238.352,
     "content": "19, not-multiple verses.",
@@ -5902,7 +5912,7 @@
   {
     "id": 19603,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 590,
+    "segment_index": 591,
     "start_time": 2241.047,
     "end_time": 2247.462,
     "content": "And it only follows from that. It's 117990.",
@@ -5912,7 +5922,7 @@
   {
     "id": 19604,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 591,
+    "segment_index": 592,
     "start_time": 2247.462,
     "end_time": 2249.155,
     "content": "It's a mathematical property.",
@@ -5922,7 +5932,7 @@
   {
     "id": 19605,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 592,
+    "segment_index": 593,
     "start_time": 2249.155,
     "end_time": 2251.831,
     "content": "Yes. \"This is a mathematical property\" says Edip.",
@@ -5932,7 +5942,7 @@
   {
     "id": 19606,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 593,
+    "segment_index": 594,
     "start_time": 2256.002,
     "end_time": 2261.38,
     "content": "Even though it is a mathematical property,  I was, I was oblivious to it for a while, then I said  ",
@@ -5942,7 +5952,7 @@
   {
     "id": 19607,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 594,
+    "segment_index": 595,
     "start_time": 2261.38,
     "end_time": 2267.26,
     "content": "\"yeah, since the verses that are multiples of 19  have a multiple of 19 number words of \"God\"",
@@ -5952,7 +5962,7 @@
   {
     "id": 19608,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 595,
+    "segment_index": 596,
     "start_time": 2267.26,
     "end_time": 2274.79,
     "content": "\"then it follows, you just subtract this from this and you have that.\" But it still is an important fact for us",
@@ -5962,7 +5972,7 @@
   {
     "id": 19609,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 596,
+    "segment_index": 597,
     "start_time": 2274.79,
     "end_time": 2280.87,
     "content": "to remember even though it is a mathematical  property. It doesn't stop here.",
@@ -5972,7 +5982,7 @@
   {
     "id": 19610,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 597,
+    "segment_index": 598,
     "start_time": 2281.668,
     "end_time": 2288.481,
     "content": "The Suras whose number of verses is divisible by 19, this also is a new discovery by Mahmood Abib,",
@@ -5982,7 +5992,7 @@
   {
     "id": 19611,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 598,
+    "segment_index": 599,
     "start_time": 2288.481,
     "end_time": 2295.557,
     "content": "the Suras whose number of verses is divisible by 19, that  is any Sura that has 19 verses or 38 verses,",
@@ -5992,7 +6002,7 @@
   {
     "id": 19612,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 599,
+    "segment_index": 600,
     "start_time": 2295.557,
     "end_time": 2303.661,
     "content": "there are only these 2 kinds. There are Suras number 47  which it has 38 verses, Sura 82 which has 19 verses,",
@@ -6002,7 +6012,7 @@
   {
     "id": 19613,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 600,
+    "segment_index": 601,
     "start_time": 2303.661,
     "end_time": 2310.71,
     "content": "Sura 87, 19 verses and Sura 96 consists  of 19 verses. The word \"God\" occurs in these",
@@ -6012,7 +6022,7 @@
   {
     "id": 19614,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 601,
+    "segment_index": 602,
     "start_time": 2310.71,
     "end_time": 2316.152,
     "content": "Suras 27 times, one time, one time and one time,  respectively.",
@@ -6022,7 +6032,7 @@
   {
     "id": 19615,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 602,
+    "segment_index": 603,
     "start_time": 2317.443,
     "end_time": 2325.296,
     "content": "By adding these Sura numbers plus the occurrence of the word \"God\", the total is 342. So, Suras'",
@@ -6032,7 +6042,7 @@
   {
     "id": 19616,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 603,
+    "segment_index": 604,
     "start_time": 2328.183,
     "end_time": 2330.183,
     "content": "first occurrences",
@@ -6042,7 +6052,7 @@
   {
     "id": 19617,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 604,
+    "segment_index": 605,
     "start_time": 2335.897,
     "end_time": 2338.511,
     "content": "342, 19 x 18.",
@@ -6052,7 +6062,7 @@
   {
     "id": 19618,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 605,
+    "segment_index": 606,
     "start_time": 2343.85,
     "end_time": 2347.97,
     "content": "These are all the Suras in the Quran that  consist of a number of verses that is divisible",
@@ -6062,7 +6072,7 @@
   {
     "id": 19619,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 606,
+    "segment_index": 607,
     "start_time": 2347.97,
     "end_time": 2351.878,
     "content": "by 19, and again we are counting the word \"God\" in them.",
@@ -6072,7 +6082,7 @@
   {
     "id": 19620,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 607,
+    "segment_index": 608,
     "start_time": 2354.397,
     "end_time": 2355.844,
     "content": "The next item",
@@ -6082,7 +6092,7 @@
   {
     "id": 19621,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 608,
+    "segment_index": 609,
     "start_time": 2360.206,
     "end_time": 2362.206,
     "content": "Take care to erase number 1 here.",
@@ -6092,7 +6102,7 @@
   {
     "id": 19622,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 609,
+    "segment_index": 610,
     "start_time": 2366.613,
     "end_time": 2368.71,
     "content": "This is just the word \"God.\"",
@@ -6102,7 +6112,7 @@
   {
     "id": 19623,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 610,
+    "segment_index": 611,
     "start_time": 2371.782,
     "end_time": 2373.128,
     "content": "Number 6.",
@@ -6112,7 +6122,7 @@
   {
     "id": 19624,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 611,
+    "segment_index": 612,
     "start_time": 2375.128,
     "end_time": 2381.06,
     "content": "Ok. The first set of Quranic  initials is, as you know, A.L.M. in chapter 2,",
@@ -6122,7 +6132,7 @@
   {
     "id": 19625,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 612,
+    "segment_index": 613,
     "start_time": 2381.06,
     "end_time": 2385.381,
     "content": "we get to A.L.M. The last initial is  in chapter 68.",
@@ -6132,7 +6142,7 @@
   {
     "id": 19626,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 613,
+    "segment_index": 614,
     "start_time": 2386.61,
     "end_time": 2394.996,
     "content": "It's a, it's a natural division in the Quran. Let's call this the  initialed section from Sura 2 to Sura 68,  ",
@@ -6142,7 +6152,7 @@
   {
     "id": 19627,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 614,
+    "segment_index": 615,
     "start_time": 2394.996,
     "end_time": 2401.563,
     "content": "and count the word \"God\" in it. Sure enough, it's a multiple of 19. Initialed section,",
@@ -6152,7 +6162,7 @@
   {
     "id": 19628,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 615,
+    "segment_index": 616,
     "start_time": 2401.563,
     "end_time": 2408.547,
     "content": "from the first initialed Sura to the last initialed Sura. The  number of the word \"God\" is",
@@ -6162,7 +6172,7 @@
   {
     "id": 19629,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 616,
+    "segment_index": 617,
     "start_time": 2411.865,
     "end_time": 2414.602,
     "content": "2641.",
@@ -6172,7 +6182,7 @@
   {
     "id": 19630,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 617,
+    "segment_index": 618,
     "start_time": 2419.64,
     "end_time": 2421.026,
     "content": "139.",
@@ -6182,7 +6192,7 @@
   {
     "id": 19631,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 618,
+    "segment_index": 619,
     "start_time": 2421.333,
     "end_time": 2422.746,
     "content": "139.",
@@ -6192,7 +6202,7 @@
   {
     "id": 19632,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 619,
+    "segment_index": 620,
     "start_time": 2425.503,
     "end_time": 2431.813,
     "content": "Now, these are physical facts. It is nobody's  opinion. Nobody can say",
@@ -6202,7 +6212,7 @@
   {
     "id": 19633,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 620,
+    "segment_index": 621,
     "start_time": 2431.813,
     "end_time": 2439.886,
     "content": "\"in my opinion, the number, the number of occurrences of the word \"God\" in the initiated section of the Quran is 2641.\"",
@@ -6212,7 +6222,7 @@
   {
     "id": 19634,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 621,
+    "segment_index": 622,
     "start_time": 2440.623,
     "end_time": 2445,
     "content": "Nobody can say that. It's a physical  fact just like the sun rises from the east.  ",
@@ -6222,7 +6232,7 @@
   {
     "id": 19635,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 622,
+    "segment_index": 623,
     "start_time": 2445.459,
     "end_time": 2447.258,
     "content": "Nobody can argue about it.",
@@ -6232,7 +6242,7 @@
   {
     "id": 19636,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 623,
+    "segment_index": 624,
     "start_time": 2448.794,
     "end_time": 2449.872,
     "content": "Maybe, the Arabs do.",
@@ -6242,7 +6252,7 @@
   {
     "id": 19637,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 624,
+    "segment_index": 625,
     "start_time": 2450.241,
     "end_time": 2451.75,
     "content": "Yeah, they do, they do always.",
@@ -6252,7 +6262,7 @@
   {
     "id": 19638,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 625,
+    "segment_index": 626,
     "start_time": 2458.139,
     "end_time": 2460.59,
     "content": "It follows since the total in the whole Quran is",
@@ -6262,7 +6272,7 @@
   {
     "id": 19639,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 626,
+    "segment_index": 627,
     "start_time": 2460.59,
     "end_time": 2465.281,
     "content": "a multiple of 19, it follows that outside  the initialed section,",
@@ -6272,7 +6282,7 @@
   {
     "id": 19640,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 627,
+    "segment_index": 628,
     "start_time": 2465.281,
     "end_time": 2473.831,
     "content": "the number of occurrences of the word \"God\" is 57, 19 x 3. Not only that, you take those 57 occurrences",
@@ -6282,7 +6292,7 @@
   {
     "id": 19641,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 628,
+    "segment_index": 629,
     "start_time": 2473.831,
     "end_time": 2480.533,
     "content": "outside the initialed section, add the Suras and verses, the total, yes, it's a multiple of 19.",
@@ -6292,7 +6302,7 @@
   {
     "id": 19642,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 629,
+    "segment_index": 630,
     "start_time": 2487.782,
     "end_time": 2494.597,
     "content": "And now, we have interlocking the word \"God\" with  the last two sentences in Sura 9.",
@@ -6302,7 +6312,7 @@
   {
     "id": 19643,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 630,
+    "segment_index": 631,
     "start_time": 2494.597,
     "end_time": 2496.519,
     "content": "As you know, they are fake.",
@@ -6312,7 +6322,7 @@
   {
     "id": 19644,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 631,
+    "segment_index": 632,
     "start_time": 2499.652,
     "end_time": 2505.98,
     "content": "The idol worshipers were trying, were trying to honor the, the prophet Muhammad in the",
@@ -6322,7 +6332,7 @@
   {
     "id": 19645,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 632,
+    "segment_index": 633,
     "start_time": 2505.98,
     "end_time": 2512.622,
     "content": "same way as the Christians try to honor Jesus. They made up those two verses.",
@@ -6332,7 +6342,7 @@
   {
     "id": 19646,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 633,
+    "segment_index": 634,
     "start_time": 2514.622,
     "end_time": 2519.81,
     "content": "So, Sura 9 is either",
@@ -6342,7 +6352,7 @@
   {
     "id": 19647,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 634,
+    "segment_index": 635,
     "start_time": 2519.81,
     "end_time": 2530.071,
     "content": "129 verses, as we inherited from  the fabricators. Or now, we know it is 127.",
@@ -6352,7 +6362,7 @@
   {
     "id": 19648,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 635,
+    "segment_index": 636,
     "start_time": 2530.87,
     "end_time": 2543.569,
     "content": "Which one is it? The word \"God\" gives us a clue. Because if  you take all the Suras whose number of verses ends with the digit 9,",
@@ -6362,7 +6372,7 @@
   {
     "id": 19649,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 636,
+    "segment_index": 637,
     "start_time": 2546.764,
     "end_time": 2553.26,
     "content": "just look at the whole Quran  and take all the Suras where, where the number",
@@ -6372,7 +6382,7 @@
   {
     "id": 19650,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 637,
+    "segment_index": 638,
     "start_time": 2553.26,
     "end_time": 2560.8,
     "content": "of verses end with this digit, 9, and count the word \"God\" in them, without Sura 9.",
@@ -6382,7 +6392,7 @@
   {
     "id": 19651,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 638,
+    "segment_index": 639,
     "start_time": 2560.8,
     "end_time": 2569.76,
     "content": "Let us assume that the, the, the right number is 127. Well, you can include it if you want, but if you include Sura 9 in the,",
@@ -6392,7 +6402,7 @@
   {
     "id": 19652,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 639,
+    "segment_index": 640,
     "start_time": 2569.76,
     "end_time": 2576.12,
     "content": "in this group, the number of the word \"God\" is not  divisible which tells us this is the wrong number",
@@ -6402,7 +6412,7 @@
   {
     "id": 19653,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 640,
+    "segment_index": 641,
     "start_time": 2576.12,
     "end_time": 2583.204,
     "content": "of verses. If you put 127, it is, it is divisible.",
@@ -6412,7 +6422,7 @@
   {
     "id": 19654,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 641,
+    "segment_index": 642,
     "start_time": 2583.204,
     "end_time": 2586.802,
     "content": "Let me, let me... it's stronger than that.",
@@ -6422,7 +6432,7 @@
   {
     "id": 19655,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 642,
+    "segment_index": 643,
     "start_time": 2588.276,
     "end_time": 2601.513,
     "content": "The Suras that end with the digit 9 are Suras number 10, 15, 29, 43, 44, 48, 52, 57, 81, 82, 87, 96 and 104.",
@@ -6432,7 +6442,7 @@
   {
     "id": 19656,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 643,
+    "segment_index": 644,
     "start_time": 2601.513,
     "end_time": 2614.82,
     "content": "They consist of 109 verses, 99 verses 69, 89, 59, 29, 49, 29,  29, 19, 19, 19 and 9. So, you can see that all of them",
@@ -6442,7 +6452,7 @@
   {
     "id": 19657,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 644,
+    "segment_index": 645,
     "start_time": 2614.82,
     "end_time": 2621.755,
     "content": "have a number of verses that ends with the digit  9. When you count the word \"God\" in these, you have 190.",
@@ -6452,7 +6462,7 @@
   {
     "id": 19658,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 645,
+    "segment_index": 646,
     "start_time": 2625.748,
     "end_time": 2627.533,
     "content": "19 x 10.",
@@ -6462,7 +6472,7 @@
   {
     "id": 19659,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 646,
+    "segment_index": 647,
     "start_time": 2628.516,
     "end_time": 2632.939,
     "content": "Now, look in the Quran and take all the Suras in the Quran",
@@ -6472,7 +6482,7 @@
   {
     "id": 19660,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 647,
+    "segment_index": 648,
     "start_time": 2632.939,
     "end_time": 2640.773,
     "content": "whose number of digits, verses ends with the digit 7,  including Sura 9, and these are Suras number",
@@ -6482,7 +6492,7 @@
   {
     "id": 19661,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 648,
+    "segment_index": 649,
     "start_time": 2643.783,
     "end_time": 2657.87,
     "content": "Sura number 1 is 7 verses, as you know. 1, 9, which is 127, 25, 26, 45, 86, and 107. Their number of verses are 7, 127, 77,",
@@ -6492,7 +6502,7 @@
   {
     "id": 19662,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 649,
+    "segment_index": 650,
     "start_time": 2657.87,
     "end_time": 2674.246,
     "content": "227, 37, 17, and 107. You count the word \"God\" in  them and you will get 209. This is 19 x 10.",
@@ -6502,7 +6512,7 @@
   {
     "id": 19663,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 650,
+    "segment_index": 651,
     "start_time": 2675.843,
     "end_time": 2686.746,
     "content": "This is 19 x 11. So, the word \"God\" just  like the mathematical code guards, protects",
@@ -6512,7 +6522,7 @@
   {
     "id": 19664,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 651,
+    "segment_index": 652,
     "start_time": 2686.746,
     "end_time": 2694.2,
     "content": "the Quran from any distortion. The word \"God\"  by itself does that because it tells you that",
@@ -6522,7 +6532,7 @@
   {
     "id": 19665,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 652,
+    "segment_index": 653,
     "start_time": 2694.2,
     "end_time": 2700.74,
     "content": "Sura 9 consists of 127 verses, not  129. Because if you take what we inherited",
@@ -6532,7 +6542,7 @@
   {
     "id": 19666,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 653,
+    "segment_index": 654,
     "start_time": 2700.74,
     "end_time": 2705.931,
     "content": "from the fabricators, this, this phenomenon will  disappear.",
@@ -6542,7 +6552,7 @@
   {
     "id": 19667,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 654,
+    "segment_index": 655,
     "start_time": 2705.931,
     "end_time": 2706.887,
     "content": "Both of them?",
@@ -6552,7 +6562,7 @@
   {
     "id": 19668,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 655,
+    "segment_index": 656,
     "start_time": 2707.194,
     "end_time": 2709.194,
     "content": "Yes, both of them will disappear.",
@@ -6562,7 +6572,7 @@
   {
     "id": 19669,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 656,
+    "segment_index": 657,
     "start_time": 2713.241,
     "end_time": 2717.834,
     "content": "The number of occurrences of the word \"God\" from the  beginning of the Quran to the end of Sura 9,",
@@ -6572,7 +6582,7 @@
   {
     "id": 19670,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 657,
+    "segment_index": 658,
     "start_time": 2722.38,
     "end_time": 2731.663,
     "content": "from the first verse in Sura 1 to the last  verse of Sura 9 which is 127,",
@@ -6582,7 +6592,7 @@
   {
     "id": 19671,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 658,
+    "segment_index": 659,
     "start_time": 2731.663,
     "end_time": 2739.743,
     "content": "the, the occurrences of the word \"God\" is 1273. This is very unusual",
@@ -6592,7 +6602,7 @@
   {
     "id": 19672,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 659,
+    "segment_index": 660,
     "start_time": 2743.921,
     "end_time": 2746.686,
     "content": "because this is not true of every Sura in the Quran.",
@@ -6602,7 +6612,7 @@
   {
     "id": 19673,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 660,
+    "segment_index": 661,
     "start_time": 2747.792,
     "end_time": 2757.773,
     "content": "But God saw to it that at the end of Sura, verse 127 of Sura 9, the total occurrences of word \"God\" is a multiple of 19.",
@@ -6612,7 +6622,7 @@
   {
     "id": 19674,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 661,
+    "segment_index": 662,
     "start_time": 2757.773,
     "end_time": 2760.359,
     "content": "And not only that, but it is also 127.",
@@ -6622,7 +6632,7 @@
   {
     "id": 19675,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 662,
+    "segment_index": 663,
     "start_time": 2761.526,
     "end_time": 2763.526,
     "content": "Yes. 1273.",
@@ -6632,7 +6642,7 @@
   {
     "id": 19676,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 663,
+    "segment_index": 664,
     "start_time": 2765.526,
     "end_time": 2767.731,
     "content": "So, if",
@@ -6642,7 +6652,7 @@
   {
     "id": 19677,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 664,
+    "segment_index": 665,
     "start_time": 2767.731,
     "end_time": 2774.514,
     "content": "we took, we take the 129 verses that we inherited  from the falsifiers, you'll have 1274,",
@@ -6652,7 +6662,7 @@
   {
     "id": 19678,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 665,
+    "segment_index": 666,
     "start_time": 2774.514,
     "end_time": 2776.545,
     "content": "not a multiple of 19.",
@@ -6662,7 +6672,7 @@
   {
     "id": 19679,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 666,
+    "segment_index": 667,
     "start_time": 2779.159,
     "end_time": 2780.545,
     "content": "1275",
@@ -6672,7 +6682,7 @@
   {
     "id": 19680,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 667,
+    "segment_index": 668,
     "start_time": 2780.6,
     "end_time": 2781.986,
     "content": "Finally... Hmm?",
@@ -6682,7 +6692,7 @@
   {
     "id": 19681,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 668,
+    "segment_index": 669,
     "start_time": 2781.986,
     "end_time": 2783.986,
     "content": "(unintelligible)",
@@ -6692,7 +6702,7 @@
   {
     "id": 19682,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 669,
+    "segment_index": 670,
     "start_time": 2784.539,
     "end_time": 2789.058,
     "content": "There's only one, one word \"God\" in the last 2 verses, right?",
@@ -6702,7 +6712,7 @@
   {
     "id": 19683,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 670,
+    "segment_index": 671,
     "start_time": 2789.058,
     "end_time": 2789.29896774194,
     "content": "Yeah.",
@@ -6712,7 +6722,7 @@
   {
     "id": 77059,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 671,
+    "segment_index": 672,
     "start_time": 2789.29896774194,
     "end_time": 2790.1664516129,
     "content": "There is only one.",
@@ -6722,7 +6732,7 @@
   {
     "id": 19684,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 672,
+    "segment_index": 673,
     "start_time": 2790.552,
     "end_time": 2791.301,
     "content": "Yeah.",
@@ -6732,7 +6742,7 @@
   {
     "id": 19685,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 673,
+    "segment_index": 674,
     "start_time": 2794.496,
     "end_time": 2803.254,
     "content": "The last item here, add the number of  Sura 9, oh yeah, let's add the number of Sura 9, by this,",
@@ -6742,7 +6752,7 @@
   {
     "id": 19686,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 674,
+    "segment_index": 675,
     "start_time": 2808.38,
     "end_time": 2820.997,
     "content": "plus the number, the correct number of verses 127 plus the number of occurrences of the word \"God\" 168.",
@@ -6752,7 +6762,7 @@
   {
     "id": 19687,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 675,
+    "segment_index": 676,
     "start_time": 2822.902,
     "end_time": 2824.732,
     "content": "The total is 304.",
@@ -6762,7 +6772,7 @@
   {
     "id": 19688,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 676,
+    "segment_index": 677,
     "start_time": 2824.732,
     "end_time": 2825.81,
     "content": "Mã Shã Allãh.",
@@ -6772,7 +6782,7 @@
   {
     "id": 19689,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 677,
+    "segment_index": 678,
     "start_time": 2826.056,
     "end_time": 2830.391,
     "content": "19 x 16. This is just  the word \"God.\"",
@@ -6782,7 +6792,7 @@
   {
     "id": 19690,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 678,
+    "segment_index": 679,
     "start_time": 2833.025,
     "end_time": 2838.621,
     "content": "And there are, of course, many other crucial words like the word \"Rasool\",",
@@ -6792,7 +6802,7 @@
   {
     "id": 19691,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 679,
+    "segment_index": 680,
     "start_time": 2838.621,
     "end_time": 2843.413,
     "content": "the word \"Quran\", the word \"one.\" It just goes on and on.",
@@ -6802,7 +6812,7 @@
   {
     "id": 19692,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 680,
+    "segment_index": 681,
     "start_time": 2843.413,
     "end_time": 2847.822,
     "content": "But this is just the word \"God.\" And when I simplify... Abdullah?",
@@ -6812,7 +6822,7 @@
   {
     "id": 19693,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 681,
+    "segment_index": 682,
     "start_time": 2847.822,
     "end_time": 2849.453,
     "content": "I have one more thing.",
@@ -6822,7 +6832,7 @@
   {
     "id": 19694,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 682,
+    "segment_index": 683,
     "start_time": 2849.453,
     "end_time": 2851.023,
     "content": "Did you just discover that?",
@@ -6832,7 +6842,7 @@
   {
     "id": 19695,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 683,
+    "segment_index": 684,
     "start_time": 2851.023,
     "end_time": 2851.917,
     "content": "Yeah.",
@@ -6842,7 +6852,7 @@
   {
     "id": 19696,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 684,
+    "segment_index": 685,
     "start_time": 2851.917,
     "end_time": 2852.983,
     "content": "New discovery.",
@@ -6852,7 +6862,7 @@
   {
     "id": 19697,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 685,
+    "segment_index": 686,
     "start_time": 2853.843,
     "end_time": 2860.791,
     "content": "Where else will you have miracles (unintelligible) on you? Ok. Abdullah, what is it? Mã Shã Allãh",
@@ -6862,7 +6872,7 @@
   {
     "id": 19698,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 686,
+    "segment_index": 687,
     "start_time": 2861.836,
     "end_time": 2865.645,
     "content": "There are 85 chapters that has word, the word \"God\" in it.",
@@ -6872,7 +6882,7 @@
   {
     "id": 19699,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 687,
+    "segment_index": 688,
     "start_time": 2865.645,
     "end_time": 2866.293,
     "content": "Yes.",
@@ -6882,7 +6892,7 @@
   {
     "id": 19700,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 688,
+    "segment_index": 689,
     "start_time": 2866.907,
     "end_time": 2872.04,
     "content": "And if you take chapter number, no, no, no, don't add that.",
@@ -6892,7 +6902,7 @@
   {
     "id": 19701,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 689,
+    "segment_index": 690,
     "start_time": 2872.04,
     "end_time": 2872.688,
     "content": "Ok.",
@@ -6902,7 +6912,7 @@
   {
     "id": 19702,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 690,
+    "segment_index": 691,
     "start_time": 2874.122,
     "end_time": 2884.454,
     "content": "Chapter number and the last verse that \"God\" occurs, for each chapters, add them up. Divisible.",
@@ -6912,7 +6922,7 @@
   {
     "id": 19703,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 691,
+    "segment_index": 692,
     "start_time": 2884.454,
     "end_time": 2887.841,
     "content": "Is that the same one we have in appendix or a different?",
@@ -6922,7 +6932,7 @@
   {
     "id": 19704,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 692,
+    "segment_index": 693,
     "start_time": 2888.394,
     "end_time": 2888.61658695652,
     "content": "Ok.",
@@ -6932,7 +6942,7 @@
   {
     "id": 77373,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 693,
+    "segment_index": 694,
     "start_time": 2888.61658695652,
     "end_time": 2890.99084782609,
     "content": "For example, chapter, chapter 1,",
@@ -6942,7 +6952,7 @@
   {
     "id": 19705,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 694,
+    "segment_index": 695,
     "start_time": 2891.807,
     "end_time": 2891.96713559322,
     "content": "Yes.",
@@ -6952,7 +6962,7 @@
   {
     "id": 77374,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 695,
+    "segment_index": 696,
     "start_time": 2891.96713559322,
     "end_time": 2893.72862711864,
     "content": "the last word that \"God\" occurs is number 2.",
@@ -6962,7 +6972,7 @@
   {
     "id": 19706,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 696,
+    "segment_index": 697,
     "start_time": 2894.169,
     "end_time": 2895,
     "content": "2. Yes.",
@@ -6972,7 +6982,7 @@
   {
     "id": 19707,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 697,
+    "segment_index": 698,
     "start_time": 2895,
     "end_time": 2900.195,
     "content": "So, 1 plus 2 is 3. If you take chapter 9, the last verse",
@@ -6982,7 +6992,7 @@
   {
     "id": 19708,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 698,
+    "segment_index": 699,
     "start_time": 2900.195,
     "end_time": 2900.53159259259,
     "content": "127.",
@@ -6992,7 +7002,7 @@
   {
     "id": 75465,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 699,
+    "segment_index": 700,
     "start_time": 2900.53159259259,
     "end_time": 2901.54137037037,
     "content": "127 not 129.",
@@ -7002,7 +7012,7 @@
   {
     "id": 19709,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 700,
+    "segment_index": 701,
     "start_time": 2902.467,
     "end_time": 2903.22,
     "content": "Right.",
@@ -7012,7 +7022,7 @@
   {
     "id": 19710,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 701,
+    "segment_index": 702,
     "start_time": 2903.22,
     "end_time": 2907.555,
     "content": "You have 9 plus 127. And that's for all 85 chapters.",
@@ -7022,7 +7032,7 @@
   {
     "id": 19711,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 702,
+    "segment_index": 703,
     "start_time": 2907.555,
     "end_time": 2908.749,
     "content": "Yes.",
@@ -7032,7 +7042,7 @@
   {
     "id": 19712,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 703,
+    "segment_index": 704,
     "start_time": 2908.749,
     "end_time": 2911.737,
     "content": "I think the result is 9101.",
@@ -7042,7 +7052,7 @@
   {
     "id": 19713,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 704,
+    "segment_index": 705,
     "start_time": 2911.737,
     "end_time": 2913.368,
     "content": "This, they took the...",
@@ -7052,7 +7062,7 @@
   {
     "id": 19714,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 705,
+    "segment_index": 706,
     "start_time": 2913.368,
     "end_time": 2916.044,
     "content": "I'm not sure but it's divisible by 19.",
@@ -7062,7 +7072,7 @@
   {
     "id": 19715,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 706,
+    "segment_index": 707,
     "start_time": 2916.044,
     "end_time": 2918.044,
     "content": "Yes. 9101 is divisible.",
@@ -7072,7 +7082,7 @@
   {
     "id": 19716,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 707,
+    "segment_index": 708,
     "start_time": 2919.724,
     "end_time": 2924.141,
     "content": "OK. I'm gonna repeat just in case you, you missed the, you missed it.",
@@ -7082,7 +7092,7 @@
   {
     "id": 19717,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 708,
+    "segment_index": 709,
     "start_time": 2924.141,
     "end_time": 2927.923,
     "content": "The word \"God\" occurs... this is very, this is a good one, beautiful.",
@@ -7092,7 +7102,7 @@
   {
     "id": 19718,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 709,
+    "segment_index": 710,
     "start_time": 2929.67,
     "end_time": 2932.244,
     "content": "The word \"God\" occurs in 85 Suras in the Quran.",
@@ -7102,7 +7112,7 @@
   {
     "id": 19719,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 710,
+    "segment_index": 711,
     "start_time": 2933.473,
     "end_time": 2936.36,
     "content": "You take the number of the Sura and add it to",
@@ -7112,7 +7122,7 @@
   {
     "id": 19720,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 711,
+    "segment_index": 712,
     "start_time": 2936.36,
     "end_time": 2942.059,
     "content": "the number of the last verse where you see the  word \"God\" in that Sura. For example, in Sura Al-Fãtehah",
@@ -7122,7 +7132,7 @@
   {
     "id": 19721,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 712,
+    "segment_index": 713,
     "start_time": 2942.059,
     "end_time": 2943.471,
     "content": "Bism Allah Arrahman Arraheem (1:1)",
@@ -7132,7 +7142,7 @@
   {
     "id": 19722,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 713,
+    "segment_index": 714,
     "start_time": 2943.471,
     "end_time": 2945.102,
     "content": "Bism Allah Arrahman Arraheem (1:1)",
@@ -7142,7 +7152,7 @@
   {
     "id": 19723,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 714,
+    "segment_index": 715,
     "start_time": 2945.102,
     "end_time": 2946.85,
     "content": "Al hamdu Lillahi Rabbil ‘Alameen (1:2)",
@@ -7152,7 +7162,7 @@
   {
     "id": 19724,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 715,
+    "segment_index": 716,
     "start_time": 2946.85,
     "end_time": 2952.7,
     "content": "is number 2. So, 1 plus 2 is 3 for  Sura 1. You do this in every Sura of the 85",
@@ -7162,7 +7172,7 @@
   {
     "id": 19725,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 716,
+    "segment_index": 717,
     "start_time": 2952.7,
     "end_time": 2958.07,
     "content": "Suras where the word \"God\" is, occurs. The number of the Sura plus the last verse where",
@@ -7172,7 +7182,7 @@
   {
     "id": 19726,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 717,
+    "segment_index": 718,
     "start_time": 2958.07,
     "end_time": 2965.51,
     "content": "you see the word \"God.\" And this, of course, has to  do with the Sura 9. When it comes to Sura 9, you add",
@@ -7182,7 +7192,7 @@
   {
     "id": 19727,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 718,
+    "segment_index": 719,
     "start_time": 2965.51,
     "end_time": 2974.736,
     "content": "127 and not 129. And you do this in all 85 Suras, adds up. The total is 9101 which is a multiple of 19.",
@@ -7192,7 +7202,7 @@
   {
     "id": 19728,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 719,
+    "segment_index": 720,
     "start_time": 2976.763,
     "end_time": 2978.763,
     "content": "Tooboo Ela Allah. Repent.",
@@ -7202,7 +7212,7 @@
   {
     "id": 19729,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 720,
+    "segment_index": 721,
     "start_time": 2990.402,
     "end_time": 2997.846,
     "content": "Alhamdu Lillah. We praise God. Wa Ash-hadu Alla Elaha Ella Allah Wahdahu La Shareeka Lah.",
@@ -7212,7 +7222,7 @@
   {
     "id": 19730,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 721,
+    "segment_index": 722,
     "start_time": 3003.27,
     "end_time": 3008.641,
     "content": "Last week, Muhtesem gave us an excellent Khutba.",
@@ -7222,7 +7232,7 @@
   {
     "id": 19731,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 722,
+    "segment_index": 723,
     "start_time": 3012.204,
     "end_time": 3015,
     "content": "Let me, let me come back to this. But I just always forget  ",
@@ -7232,7 +7242,7 @@
   {
     "id": 19732,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 723,
+    "segment_index": 724,
     "start_time": 3015.03,
     "end_time": 3022.88,
     "content": "this new discovery that came to us in the mail from  Turkey and it has to do with verse 3:81.",
@@ -7242,7 +7252,7 @@
   {
     "id": 19733,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 724,
+    "segment_index": 725,
     "start_time": 3024.845,
     "end_time": 3034.237,
     "content": "This, this happens quite often in the Quran where you have a  statement in the Quran and the, the opponents will come up",
@@ -7252,7 +7262,7 @@
   {
     "id": 19734,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 725,
+    "segment_index": 726,
     "start_time": 3034.237,
     "end_time": 3043.29,
     "content": "with something contradictory to it. But then,  God puts the answer to their claims somewhere else",
@@ -7262,7 +7272,7 @@
   {
     "id": 19735,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 726,
+    "segment_index": 727,
     "start_time": 3043.29,
     "end_time": 3049.621,
     "content": "in the Quran. For example, verse 3:81 talks  about the Messenger of the Covenant.",
@@ -7272,7 +7282,7 @@
   {
     "id": 19736,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 727,
+    "segment_index": 728,
     "start_time": 3050.297,
     "end_time": 3056.73,
     "content": "It says that after all the prophets, and this is any translation  will tell you about it. After all the prophets have  ",
@@ -7282,7 +7292,7 @@
   {
     "id": 19737,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 728,
+    "segment_index": 729,
     "start_time": 3056.73,
     "end_time": 3061.83,
     "content": "come to this world and delivered their scriptures  and the messages, a messenger will come to",
@@ -7292,7 +7302,7 @@
   {
     "id": 19738,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 729,
+    "segment_index": 730,
     "start_time": 3061.83,
     "end_time": 3071.2,
     "content": "unify, purify, consolidate these messages into  one. This is verse 3:81. When you show this to the",
@@ -7302,7 +7312,7 @@
   {
     "id": 19739,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 730,
+    "segment_index": 731,
     "start_time": 3071.2,
     "end_time": 3077.837,
     "content": "idol worshipers, they say \"that one is Muhammad. That messenger of the Covenant is Muhammad.\"",
@@ -7312,7 +7322,7 @@
   {
     "id": 19740,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 731,
+    "segment_index": 732,
     "start_time": 3077.837,
     "end_time": 3084.96,
     "content": "Even though the verse is very clear that it is not  Muhammad because it begins by saying \"God made",
@@ -7322,7 +7332,7 @@
   {
     "id": 19741,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 732,
+    "segment_index": 733,
     "start_time": 3084.96,
     "end_time": 3092.177,
     "content": "a covenant with the prophets.\" We all recognize the  prophet Muhammad as a prophet, even they do.",
@@ -7332,7 +7342,7 @@
   {
     "id": 19742,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 733,
+    "segment_index": 734,
     "start_time": 3092.177,
     "end_time": 3094.008,
     "content": "He was the last prophet.",
@@ -7342,7 +7352,7 @@
   {
     "id": 19743,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 734,
+    "segment_index": 735,
     "start_time": 3095.482,
     "end_time": 3099.66,
     "content": "Therefore, he must be included  in that statement because God did not say,",
@@ -7352,7 +7362,7 @@
   {
     "id": 19744,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 735,
+    "segment_index": 736,
     "start_time": 3099.66,
     "end_time": 3105.42,
     "content": "He made a covenant with the previous prophets or  the prophets before you. God said \"He made a",
@@ -7362,7 +7372,7 @@
   {
     "id": 19745,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 736,
+    "segment_index": 737,
     "start_time": 3105.42,
     "end_time": 3111.432,
     "content": "covenant with the prophets.\" So, the answer to this  claim is in 33:7",
@@ -7372,7 +7382,7 @@
   {
     "id": 19746,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 737,
+    "segment_index": 738,
     "start_time": 3111.432,
     "end_time": 3113.432,
     "content": "(33:7) وَمِنكَ and you",
@@ -7382,7 +7392,7 @@
   {
     "id": 19747,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 738,
+    "segment_index": 739,
     "start_time": 3113.432,
     "end_time": 3117.207,
     "content": "where God says \"I made the covenant with the prophets",
@@ -7392,7 +7402,7 @@
   {
     "id": 19748,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 739,
+    "segment_index": 740,
     "start_time": 3117.207,
     "end_time": 3118.34833333333,
     "content": "[33:7]  ... including you (O Muhammad) ...",
@@ -7402,7 +7412,7 @@
   {
     "id": 75466,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 740,
+    "segment_index": 741,
     "start_time": 3118.34833333333,
     "end_time": 3118.45703174603,
     "content": "Yes.",
@@ -7412,7 +7422,7 @@
   {
     "id": 19749,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 741,
+    "segment_index": 742,
     "start_time": 3118.919,
     "end_time": 3120,
     "content": "Yeah, sure.",
@@ -7422,7 +7432,7 @@
   {
     "id": 19750,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 742,
+    "segment_index": 743,
     "start_time": 3120,
     "end_time": 3123.158,
     "content": "So, this is at the very, at the other end of the Quran.",
@@ -7432,7 +7442,7 @@
   {
     "id": 19751,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 743,
+    "segment_index": 744,
     "start_time": 3124.08,
     "end_time": 3127.143,
     "content": "So, it shuts them up. Now, the discovery that Edip's",
@@ -7442,7 +7452,7 @@
   {
     "id": 19752,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 744,
+    "segment_index": 745,
     "start_time": 3127.143,
     "end_time": 3128.25411111111,
     "content": "No, it doesn't, Rashad. It doesn't.",
@@ -7452,7 +7462,7 @@
   {
     "id": 75467,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 745,
+    "segment_index": 746,
     "start_time": 3128.25411111111,
     "end_time": 3128.69855555556,
     "content": "friend made...",
@@ -7462,7 +7472,7 @@
   {
     "id": 19753,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 746,
+    "segment_index": 747,
     "start_time": 3129.143,
     "end_time": 3134.146,
     "content": "Oh, I'm sorry. Yeah. It doesn't shut them up, but shuts up that particular item.",
@@ -7472,7 +7482,7 @@
   {
     "id": 19754,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 747,
+    "segment_index": 748,
     "start_time": 3136.911,
     "end_time": 3142.739,
     "content": "Edip's friend in Turkey counted the verses from 3:81 to the answer to their",
@@ -7482,7 +7492,7 @@
   {
     "id": 19755,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 748,
+    "segment_index": 749,
     "start_time": 3142.739,
     "end_time": 3146.5,
     "content": "claim 33:7 and found that the number of verses is a multiple of 19.",
@@ -7492,7 +7502,7 @@
   {
     "id": 19756,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 749,
+    "segment_index": 750,
     "start_time": 3146.5,
     "end_time": 3147.763,
     "content": "(unintelligible)",
@@ -7502,7 +7512,7 @@
   {
     "id": 19757,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 750,
+    "segment_index": 751,
     "start_time": 3147.763,
     "end_time": 3148.711,
     "content": "3192. Hmm?",
@@ -7512,7 +7522,7 @@
   {
     "id": 19758,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 751,
+    "segment_index": 752,
     "start_time": 3148.711,
     "end_time": 3149.633,
     "content": "with Basmalahs?",
@@ -7522,7 +7532,7 @@
   {
     "id": 19759,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 752,
+    "segment_index": 753,
     "start_time": 3149.633,
     "end_time": 3151.675,
     "content": "Yes. The Basmalah are verses.",
@@ -7532,7 +7542,7 @@
   {
     "id": 19760,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 753,
+    "segment_index": 754,
     "start_time": 3153.675,
     "end_time": 3160.46,
     "content": "The Basmalahs are unnumbered verses, as we know, from this miracle on the wall where we did not",
@@ -7542,7 +7552,7 @@
   {
     "id": 19761,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 754,
+    "segment_index": 755,
     "start_time": 3160.46,
     "end_time": 3166.4,
     "content": "count them and the whole number is a multiple of 19. And when our brother, Ali Fazeli,",
@@ -7552,7 +7562,7 @@
   {
     "id": 19762,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 755,
+    "segment_index": 756,
     "start_time": 3166.4,
     "end_time": 3171.62,
     "content": "suggested that we put 0 for every Basmalah  in the Quran, we thought this whole thing will  ",
@@ -7562,7 +7572,7 @@
   {
     "id": 19763,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 756,
+    "segment_index": 757,
     "start_time": 3171.62,
     "end_time": 3176.487,
     "content": "collapse. We shouldn't have thought that. But we put  the zeros there and sure enough it still",
@@ -7572,7 +7582,7 @@
   {
     "id": 19764,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 757,
+    "segment_index": 758,
     "start_time": 3176.487,
     "end_time": 3177.163,
     "content": "Subhan Allah.",
@@ -7582,7 +7592,7 @@
   {
     "id": 19765,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 758,
+    "segment_index": 759,
     "start_time": 3177.163,
     "end_time": 3178.613,
     "content": "was a multiple of 19.",
@@ -7592,7 +7602,7 @@
   {
     "id": 19766,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 759,
+    "segment_index": 760,
     "start_time": 3178.613,
     "end_time": 3179.569,
     "content": "Subhan Allah.",
@@ -7602,7 +7612,7 @@
   {
     "id": 19767,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 760,
+    "segment_index": 761,
     "start_time": 3180.34,
     "end_time": 3181.111,
     "content": "Subhan Allah.",
@@ -7612,7 +7622,7 @@
   {
     "id": 19768,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 761,
+    "segment_index": 762,
     "start_time": 3181.569,
     "end_time": 3185.474,
     "content": "We are the luckiest people on earth. There is no question about it.",
@@ -7622,7 +7632,7 @@
   {
     "id": 19769,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 762,
+    "segment_index": 763,
     "start_time": 3188.811,
     "end_time": 3191.16851578947,
     "content": "Anyway, with, with your help, all of us together... pardon?",
@@ -7632,7 +7642,7 @@
   {
     "id": 75468,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 763,
+    "segment_index": 764,
     "start_time": 3191.16851578947,
     "end_time": 3192.20742105263,
     "content": "Only we know we are lucky.",
@@ -7642,7 +7652,7 @@
   {
     "id": 19770,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 764,
+    "segment_index": 765,
     "start_time": 3192.607,
     "end_time": 3194.607,
     "content": "Shakira. Shakira. Only we know we are lucky.",
@@ -7652,7 +7662,7 @@
   {
     "id": 19771,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 765,
+    "segment_index": 766,
     "start_time": 3195,
     "end_time": 3196.161,
     "content": "We know we're lucky?",
@@ -7662,7 +7672,7 @@
   {
     "id": 19772,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 766,
+    "segment_index": 767,
     "start_time": 3196.161,
     "end_time": 3197.33330612245,
     "content": "Only we know that we are lucky.",
@@ -7672,7 +7682,7 @@
   {
     "id": 77060,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 767,
+    "segment_index": 768,
     "start_time": 3197.33330612245,
     "end_time": 3197.48457142857,
     "content": "Yes.",
@@ -7682,7 +7692,7 @@
   {
     "id": 19773,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 768,
+    "segment_index": 769,
     "start_time": 3198.014,
     "end_time": 3198.83441935484,
     "content": "It's all, that's what counts.",
@@ -7692,7 +7702,7 @@
   {
     "id": 75469,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 769,
+    "segment_index": 770,
     "start_time": 3198.83441935484,
     "end_time": 3199.37193548387,
     "content": "That's what counts.",
@@ -7702,7 +7712,7 @@
   {
     "id": 19774,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 770,
+    "segment_index": 771,
     "start_time": 3199.768,
     "end_time": 3200.777,
     "content": "That's what counts.",
@@ -7712,7 +7722,7 @@
   {
     "id": 19775,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 771,
+    "segment_index": 772,
     "start_time": 3202.068,
     "end_time": 3208.47,
     "content": "Anyone who believes will discover that too  because they will, they will join the lucky, luckiest.",
@@ -7722,7 +7732,7 @@
   {
     "id": 19776,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 772,
+    "segment_index": 773,
     "start_time": 3208.47,
     "end_time": 3213.56,
     "content": "I mean, to be born at this particular time in this  particular place and all the circumstances",
@@ -7732,7 +7742,7 @@
   {
     "id": 19777,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 773,
+    "segment_index": 774,
     "start_time": 3213.56,
     "end_time": 3219.05,
     "content": "that brought us together. When you reflect on your  circumstances, you can see how God directed  ",
@@ -7742,7 +7752,7 @@
   {
     "id": 19778,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 774,
+    "segment_index": 775,
     "start_time": 3219.05,
     "end_time": 3223.587,
     "content": "you to this particular situation. Obviously, because  you deserve that.",
@@ -7752,7 +7762,7 @@
   {
     "id": 19779,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 775,
+    "segment_index": 776,
     "start_time": 3225.614,
     "end_time": 3227.307,
     "content": "OK. Muhtesem gave us an excellent",
@@ -7762,7 +7772,7 @@
   {
     "id": 19780,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 776,
+    "segment_index": 777,
     "start_time": 3227.307,
     "end_time": 3233.45,
     "content": "Khutba, last week. And he talked about the  responsibility which goes with the extreme",
@@ -7772,7 +7782,7 @@
   {
     "id": 19781,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 777,
+    "segment_index": 778,
     "start_time": 3233.45,
     "end_time": 3240.584,
     "content": "great fortune that God bestowed upon us. His blessing and grace comes with responsibility.",
@@ -7782,7 +7792,7 @@
   {
     "id": 19782,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 778,
+    "segment_index": 779,
     "start_time": 3241.751,
     "end_time": 3252.627,
     "content": "What is our responsibility towards us, our souls, the real persons? Because God spells it out to us, He tells us exactly what to do.",
@@ -7792,7 +7802,7 @@
   {
     "id": 19783,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 779,
+    "segment_index": 780,
     "start_time": 3254.655,
     "end_time": 3260.63,
     "content": "So, I want to add to what Muhtesem said is that we now recognize that",
@@ -7802,7 +7812,7 @@
   {
     "id": 19784,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 780,
+    "segment_index": 781,
     "start_time": 3260.63,
     "end_time": 3266.961,
     "content": "the human being consists of the soul, that's the real person, and the body.",
@@ -7812,7 +7822,7 @@
   {
     "id": 19785,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 781,
+    "segment_index": 782,
     "start_time": 3271.077,
     "end_time": 3277.291,
     "content": "The soul, when, when a baby is born, the soul is assigned to that, to that body.",
@@ -7822,7 +7832,7 @@
   {
     "id": 19786,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 782,
+    "segment_index": 783,
     "start_time": 3279.81,
     "end_time": 3285.947,
     "content": "And the first thing that as soon as Shakira pulls the baby out, the baby cries. Then, she gives him  a spank.",
@@ -7832,7 +7842,7 @@
   {
     "id": 19787,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 783,
+    "segment_index": 784,
     "start_time": 3285.947,
     "end_time": 3288.254,
     "content": "Do you spank the babies when, when you deliver them?",
@@ -7842,7 +7852,7 @@
   {
     "id": 19788,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 784,
+    "segment_index": 785,
     "start_time": 3289.449,
     "end_time": 3289.612875,
     "content": "No?",
@@ -7852,7 +7862,7 @@
   {
     "id": 75470,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 785,
+    "segment_index": 786,
     "start_time": 3289.612875,
     "end_time": 3289.77675,
     "content": "No.",
@@ -7862,7 +7872,7 @@
   {
     "id": 19789,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 786,
+    "segment_index": 787,
     "start_time": 3290.323,
     "end_time": 3291.03782222222,
     "content": "Do they cry anyway?",
@@ -7872,7 +7882,7 @@
   {
     "id": 75471,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 787,
+    "segment_index": 788,
     "start_time": 3291.03782222222,
     "end_time": 3291.63977777778,
     "content": "(unintelligible)",
@@ -7882,7 +7892,7 @@
   {
     "id": 19790,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 788,
+    "segment_index": 789,
     "start_time": 3292.016,
     "end_time": 3293.034,
     "content": "They always cry.",
@@ -7892,7 +7902,7 @@
   {
     "id": 19791,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 789,
+    "segment_index": 790,
     "start_time": 3294.017,
     "end_time": 3295.28,
     "content": "Sometimes (unintelligible)",
@@ -7902,7 +7912,7 @@
   {
     "id": 19792,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 790,
+    "segment_index": 791,
     "start_time": 3295.28,
     "end_time": 3296.358,
     "content": "Sometimes they don't cry?",
@@ -7912,7 +7922,7 @@
   {
     "id": 19793,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 791,
+    "segment_index": 792,
     "start_time": 3296.358,
     "end_time": 3297.805,
     "content": "No. They cry.",
@@ -7922,7 +7932,7 @@
   {
     "id": 19794,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 792,
+    "segment_index": 793,
     "start_time": 3297.805,
     "end_time": 3298.699,
     "content": "They all cry.",
@@ -7932,7 +7942,7 @@
   {
     "id": 19795,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 793,
+    "segment_index": 794,
     "start_time": 3298.699,
     "end_time": 3300.699,
     "content": "They all cry, so their lungs open.",
@@ -7942,7 +7952,7 @@
   {
     "id": 19796,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 794,
+    "segment_index": 795,
     "start_time": 3301.873,
     "end_time": 3308.34,
     "content": "I see. It helps them breathe or something. I think they cry because they get trapped. But, really I'm curious. All of them",
@@ -7952,7 +7962,7 @@
   {
     "id": 19797,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 795,
+    "segment_index": 796,
     "start_time": 3308.34,
     "end_time": 3314.58,
     "content": "100 percent of them cry. Or do you get sometimes a baby that's still under anesthesia or something?",
@@ -7962,7 +7972,7 @@
   {
     "id": 19798,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 796,
+    "segment_index": 797,
     "start_time": 3314.58,
     "end_time": 3317.529,
     "content": "No, if there is a problem, they don't cry.",
@@ -7972,7 +7982,7 @@
   {
     "id": 19799,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 797,
+    "segment_index": 798,
     "start_time": 3317.529,
     "end_time": 3317.64438461538,
     "content": "Oh,",
@@ -7982,7 +7992,7 @@
   {
     "id": 75472,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 798,
+    "segment_index": 799,
     "start_time": 3317.64438461538,
     "end_time": 3318.60592307692,
     "content": "I see. But it's (unintelligible)",
@@ -7992,7 +8002,7 @@
   {
     "id": 19800,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 799,
+    "segment_index": 800,
     "start_time": 3320.328,
     "end_time": 3321.284,
     "content": "But also, Al-Roshd...",
@@ -8002,7 +8012,7 @@
   {
     "id": 19801,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 800,
+    "segment_index": 801,
     "start_time": 3321.284,
     "end_time": 3324.328,
     "content": "So, when the baby comes, if the baby doesn't cry \"uh-uh.\"",
@@ -8012,7 +8022,7 @@
   {
     "id": 19802,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 801,
+    "segment_index": 802,
     "start_time": 3324.84,
     "end_time": 3328.638,
     "content": "But there's another thing. Wouldn't you cry if you came to this place?",
@@ -8022,7 +8032,7 @@
   {
     "id": 19803,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 802,
+    "segment_index": 803,
     "start_time": 3329.375,
     "end_time": 3330.331,
     "content": "Yes, that's the whole idea.",
@@ -8032,7 +8042,7 @@
   {
     "id": 19804,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 803,
+    "segment_index": 804,
     "start_time": 3330.331,
     "end_time": 3331.901,
     "content": "That's why they're crying.",
@@ -8042,7 +8052,7 @@
   {
     "id": 19805,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 804,
+    "segment_index": 805,
     "start_time": 3332.945,
     "end_time": 3335.191,
     "content": "That's, that's the whole point in (unintelligible).",
@@ -8052,7 +8062,7 @@
   {
     "id": 19806,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 805,
+    "segment_index": 806,
     "start_time": 3335.191,
     "end_time": 3335.901,
     "content": "Yes.",
@@ -8062,7 +8072,7 @@
   {
     "id": 19807,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 806,
+    "segment_index": 807,
     "start_time": 3337.915,
     "end_time": 3339.38,
     "content": "So, what do we do...",
@@ -8072,7 +8082,7 @@
   {
     "id": 19808,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 807,
+    "segment_index": 808,
     "start_time": 3343.312,
     "end_time": 3347.647,
     "content": "what do we do for the body? Ok. Let's  say what are our responsibilities to the body?",
@@ -8082,7 +8092,7 @@
   {
     "id": 19809,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 808,
+    "segment_index": 809,
     "start_time": 3349.701,
     "end_time": 3351.091,
     "content": "We go to school.",
@@ -8092,7 +8102,7 @@
   {
     "id": 19810,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 809,
+    "segment_index": 810,
     "start_time": 3354.47,
     "end_time": 3362.675,
     "content": "We study and take exams. Just ask, Farhad, how he likes that. Today, it is big, big prelim test.",
@@ -8102,7 +8112,7 @@
   {
     "id": 19811,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 810,
+    "segment_index": 811,
     "start_time": 3364.115,
     "end_time": 3369.915,
     "content": "And how many years we go to school? So  many years, then go to college.",
@@ -8112,7 +8122,7 @@
   {
     "id": 19812,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 811,
+    "segment_index": 812,
     "start_time": 3369.915,
     "end_time": 3371.915,
     "content": "(unintelligible)",
@@ -8122,7 +8132,7 @@
   {
     "id": 19813,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 812,
+    "segment_index": 813,
     "start_time": 3372.557,
     "end_time": 3374.576,
     "content": "Isn't college fun, Beth?",
@@ -8132,7 +8142,7 @@
   {
     "id": 19814,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 813,
+    "segment_index": 814,
     "start_time": 3376.576,
     "end_time": 3377.777,
     "content": "For a while.",
@@ -8142,7 +8152,7 @@
   {
     "id": 19815,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 814,
+    "segment_index": 815,
     "start_time": 3380.05,
     "end_time": 3383.156,
     "content": "All the tests and the studying,  how hard it is.",
@@ -8152,7 +8162,7 @@
   {
     "id": 19816,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 815,
+    "segment_index": 816,
     "start_time": 3385.552,
     "end_time": 3388.228,
     "content": "Then, you go to grad school \"oh no.\"",
@@ -8162,7 +8172,7 @@
   {
     "id": 19817,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 816,
+    "segment_index": 817,
     "start_time": 3389.136,
     "end_time": 3392.211,
     "content": "I used to get mad at people who tell me \"school is fun.\"",
@@ -8172,7 +8182,7 @@
   {
     "id": 19818,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 817,
+    "segment_index": 818,
     "start_time": 3393.87,
     "end_time": 3396.88,
     "content": "You know, how... I said \"you wanna take my place?\"",
@@ -8182,7 +8192,7 @@
   {
     "id": 19819,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 818,
+    "segment_index": 819,
     "start_time": 3399.522,
     "end_time": 3402.57,
     "content": "Ok. Then, after that, we work.",
@@ -8192,7 +8202,7 @@
   {
     "id": 19820,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 819,
+    "segment_index": 820,
     "start_time": 3405.58,
     "end_time": 3412.277,
     "content": "Every morning, we set the alarm. We go to work. We drive in the traffic.",
@@ -8202,7 +8212,7 @@
   {
     "id": 19821,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 820,
+    "segment_index": 821,
     "start_time": 3412.277,
     "end_time": 3415.106,
     "content": "And in Tucson, it's not as bad as other places.",
@@ -8212,7 +8222,7 @@
   {
     "id": 19822,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 821,
+    "segment_index": 822,
     "start_time": 3416.15,
     "end_time": 3420.792,
     "content": "We drive in the traffic and we go to face the boss.",
@@ -8222,7 +8232,7 @@
   {
     "id": 19823,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 822,
+    "segment_index": 823,
     "start_time": 3424.724,
     "end_time": 3427.461,
     "content": "Everyone hates the boss. I don't know why.",
@@ -8232,7 +8242,7 @@
   {
     "id": 19824,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 823,
+    "segment_index": 824,
     "start_time": 3428.561,
     "end_time": 3430.542,
     "content": "And work until five o'clock.",
@@ -8242,7 +8252,7 @@
   {
     "id": 19825,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 824,
+    "segment_index": 825,
     "start_time": 3430.542,
     "end_time": 3431.866,
     "content": "We don't hate you.",
@@ -8252,7 +8262,7 @@
   {
     "id": 19826,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 825,
+    "segment_index": 826,
     "start_time": 3432.419,
     "end_time": 3433.497,
     "content": "I'm not the boss.",
@@ -8262,7 +8272,7 @@
   {
     "id": 19827,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 826,
+    "segment_index": 827,
     "start_time": 3435,
     "end_time": 3437,
     "content": "This is a whole different system here.",
@@ -8272,7 +8282,7 @@
   {
     "id": 19828,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 827,
+    "segment_index": 828,
     "start_time": 3437.546,
     "end_time": 3444.379,
     "content": "In Heaven, there's no jealousy. There's competition and  everybody is helping his competitors to go ahead.",
@@ -8282,7 +8292,7 @@
   {
     "id": 19829,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 828,
+    "segment_index": 829,
     "start_time": 3444.379,
     "end_time": 3450,
     "content": "This is, this is in God's system. God removes all  jealousy and hatred from His people.",
@@ -8292,7 +8302,7 @@
   {
     "id": 19830,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 829,
+    "segment_index": 830,
     "start_time": 3450,
     "end_time": 3457.816,
     "content": "But this is what we do for the body. And why all this? Why do we do all this for 20 or 30 years",
@@ -8302,7 +8312,7 @@
   {
     "id": 19831,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 830,
+    "segment_index": 831,
     "start_time": 3457.816,
     "end_time": 3463.864,
     "content": "for 40 years? You start working when you're 30 and you retire when you're 65, okay. 35 years.",
@@ -8312,7 +8322,7 @@
   {
     "id": 19832,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 831,
+    "segment_index": 832,
     "start_time": 3464.356,
     "end_time": 3471.916,
     "content": "We do all this because we want to support ourselves, have a  nice home, a nice spouse, nice children, nice clothes,",
@@ -8322,7 +8332,7 @@
   {
     "id": 19833,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 832,
+    "segment_index": 833,
     "start_time": 3471.916,
     "end_time": 3481.278,
     "content": "nice food for the body for 35 years. Okay. What  do we do for this?",
@@ -8332,7 +8342,7 @@
   {
     "id": 19834,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 833,
+    "segment_index": 834,
     "start_time": 3482.138,
     "end_time": 3486.043,
     "content": "You know, after, after this 35 years, what happens to the body?",
@@ -8342,7 +8352,7 @@
   {
     "id": 19835,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 834,
+    "segment_index": 835,
     "start_time": 3486.807,
     "end_time": 3487.569,
     "content": "Cancer.",
@@ -8352,7 +8362,7 @@
   {
     "id": 19836,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 835,
+    "segment_index": 836,
     "start_time": 3490.641,
     "end_time": 3496.17,
     "content": "Now, it is the soil. It vanishes. Here, the soul doesn't",
@@ -8362,7 +8372,7 @@
   {
     "id": 19837,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 836,
+    "segment_index": 837,
     "start_time": 3496.17,
     "end_time": 3504.51,
     "content": "vanish. You can think of the soul at the time of  birth as a baby. What do we do for the soul? This",
@@ -8372,7 +8382,7 @@
   {
     "id": 19838,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 837,
+    "segment_index": 838,
     "start_time": 3504.51,
     "end_time": 3513.09,
     "content": "is the responsibility that Muhtesem mentioned  last week. God tells us that we must do the Five",
@@ -8382,7 +8392,7 @@
   {
     "id": 19839,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 838,
+    "segment_index": 839,
     "start_time": 3513.09,
     "end_time": 3519.78,
     "content": "Prayers. We must feed the soul. Ask the average person  on the street \"What did you give your body today",
@@ -8392,7 +8402,7 @@
   {
     "id": 19840,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 839,
+    "segment_index": 840,
     "start_time": 3519.78,
     "end_time": 3527.94,
     "content": "for meals? What did you give you, the soul, today for meals?\" They'll have to think long and hard. Tell them, ask them",
@@ -8402,7 +8412,7 @@
   {
     "id": 19841,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 840,
+    "segment_index": 841,
     "start_time": 3527.94,
     "end_time": 3532.464,
     "content": "not today, say \"for the last year, how many meals did you give to yourself?\"",
@@ -8412,7 +8422,7 @@
   {
     "id": 19842,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 841,
+    "segment_index": 842,
     "start_time": 3535.201,
     "end_time": 3536.58,
     "content": "They feed the body. They do",
@@ -8422,7 +8432,7 @@
   {
     "id": 19843,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 842,
+    "segment_index": 843,
     "start_time": 3536.58,
     "end_time": 3542.448,
     "content": "all this work for the body. But for the soul, they do nothing. Do you have a question?",
@@ -8432,7 +8442,7 @@
   {
     "id": 19844,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 843,
+    "segment_index": 844,
     "start_time": 3542.448,
     "end_time": 3543.001,
     "content": "Yeah.",
@@ -8442,7 +8452,7 @@
   {
     "id": 19845,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 844,
+    "segment_index": 845,
     "start_time": 3543.001,
     "end_time": 3543.501,
     "content": "Oh.",
@@ -8452,7 +8462,7 @@
   {
     "id": 19846,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 845,
+    "segment_index": 846,
     "start_time": 3543.501,
     "end_time": 3548.07,
     "content": "You know, I was thinking about this when I was coming in the plane because this was going on in my mind,",
@@ -8462,7 +8472,7 @@
   {
     "id": 19847,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 846,
+    "segment_index": 847,
     "start_time": 3548.07,
     "end_time": 3556.8,
     "content": "that we have a system where we give credits. I mean like, if you do Zakat, you have, you get 50% and then for Salat you have",
@@ -8472,7 +8482,7 @@
   {
     "id": 19848,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 847,
+    "segment_index": 848,
     "start_time": 3556.8,
     "end_time": 3559.938,
     "content": "25% and for Hajj you have, you know.",
@@ -8482,7 +8492,7 @@
   {
     "id": 19849,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 848,
+    "segment_index": 849,
     "start_time": 3559.938,
     "end_time": 3560.84961538462,
     "content": "Yes, you accumulate credits.",
@@ -8492,7 +8502,7 @@
   {
     "id": 75473,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 849,
+    "segment_index": 850,
     "start_time": 3560.84961538462,
     "end_time": 3561.30542307692,
     "content": "Is that right?",
@@ -8500,19 +8510,29 @@
     "search_vector": "'right':3"
   },
   {
-    "id": 19850,
+    "id": "19850_part_0",
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 850,
+    "segment_index": 851,
     "start_time": 3561.631,
-    "end_time": 3564.3,
-    "content": "You accumulate credits as you go right and left. Shakira: (unintelligible)",
+    "end_time": 3563.6430153846154,
+    "content": "You accumulate credits as you go right and left. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'accumul':2 'credit':3 'go':6 'left':9 'right':7 'shakira':10 'unintellig':11"
+  },
+  {
+    "id": "19850_part_1",
+    "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
+    "segment_index": 852,
+    "start_time": 3563.6430153846154,
+    "end_time": 3564.3,
+    "content": "(unintelligible)",
+    "speaker": "Shakira",
     "search_vector": "'accumul':2 'credit':3 'go':6 'left':9 'right':7 'shakira':10 'unintellig':11"
   },
   {
     "id": 19851,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 851,
+    "segment_index": 853,
     "start_time": 3564.3,
     "end_time": 3570.18,
     "content": "Every time you say \"Subhan Allah.\" You see, this  is... in fact, this brings me to the next one. Thank",
@@ -8522,7 +8542,7 @@
   {
     "id": 19852,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 852,
+    "segment_index": 854,
     "start_time": 3570.18,
     "end_time": 3576.607,
     "content": "you for reminding me and this involves Muhtesem, also.  Yesterday, I made a terrible terrible  ",
@@ -8532,7 +8552,7 @@
   {
     "id": 19853,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 853,
+    "segment_index": 855,
     "start_time": 3576.607,
     "end_time": 3581.291,
     "content": "mistake. Anyway, you get the idea here that this is  an eternal entity.",
@@ -8542,7 +8562,7 @@
   {
     "id": 19854,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 854,
+    "segment_index": 856,
     "start_time": 3582.704,
     "end_time": 3584.704,
     "content": "This is the real soul and in,",
@@ -8552,7 +8572,7 @@
   {
     "id": 19855,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 855,
+    "segment_index": 857,
     "start_time": 3584.704,
     "end_time": 3592.86,
     "content": "in proportion to this work, we should do, work for  the soul. Except God is just and He doesn't give",
@@ -8562,7 +8582,7 @@
   {
     "id": 19856,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 856,
+    "segment_index": 858,
     "start_time": 3592.86,
     "end_time": 3598.66,
     "content": "us even one hundredth of this work that we do  for the body to survive 35 years.",
@@ -8572,7 +8592,7 @@
   {
     "id": 19857,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 857,
+    "segment_index": 859,
     "start_time": 3600,
     "end_time": 3609.54,
     "content": "This eternal entity doesn't take much to develop and God makes  it very easy as long as you, you observe God.",
@@ -8582,7 +8602,7 @@
   {
     "id": 19858,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 858,
+    "segment_index": 860,
     "start_time": 3609.54,
     "end_time": 3615.74,
     "content": "And this is, bring me to the mistake that I did with Muhtesem yesterday. Muhtesem was not feeling good.",
@@ -8592,7 +8612,7 @@
   {
     "id": 19859,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 859,
+    "segment_index": 861,
     "start_time": 3615.74,
     "end_time": 3623.37,
     "content": "So, anyway, I repented. I fell prostrate and I asked for forgiveness. But I went and got him",
@@ -8602,7 +8622,7 @@
   {
     "id": 19860,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 860,
+    "segment_index": 862,
     "start_time": 3623.37,
     "end_time": 3631.667,
     "content": "two pill and I told him... listen to this. I  said \"these two pills will remove your flu, will heal you.\"",
@@ -8612,7 +8632,7 @@
   {
     "id": 19861,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 861,
+    "segment_index": 863,
     "start_time": 3634.685,
     "end_time": 3640.28,
     "content": "Yousef, Joseph, the prophet, said the same thing and he, he stayed in the prison for a few years.",
@@ -8622,7 +8642,7 @@
   {
     "id": 19862,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 862,
+    "segment_index": 864,
     "start_time": 3640.28,
     "end_time": 3641.323,
     "content": "7 years.",
@@ -8632,7 +8652,7 @@
   {
     "id": 19863,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 863,
+    "segment_index": 865,
     "start_time": 3642.245,
     "end_time": 3650.88,
     "content": "Well, we don't know how many. I mean, this is a remark I want to... you are very special people.",
@@ -8642,7 +8662,7 @@
   {
     "id": 19864,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 864,
+    "segment_index": 866,
     "start_time": 3651.46,
     "end_time": 3655.214,
     "content": "And you have a lot of responsibility. And you must watch what you're saying.",
@@ -8652,7 +8672,7 @@
   {
     "id": 19865,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 865,
+    "segment_index": 867,
     "start_time": 3657.214,
     "end_time": 3659.214,
     "content": "And I bet you anything... I mean, how",
@@ -8662,7 +8682,7 @@
   {
     "id": 19866,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 866,
+    "segment_index": 868,
     "start_time": 3659.33,
     "end_time": 3665.001,
     "content": "many, how many years do you think we should go  to prison for the mistakes when, when we think about it?  ",
@@ -8672,7 +8692,7 @@
   {
     "id": 19867,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 867,
+    "segment_index": 869,
     "start_time": 3666.844,
     "end_time": 3672.98,
     "content": "So, immediately, I, I caught myself. I, I, actually, I scared him to death because I came back and said Muhtesem",
@@ -8682,7 +8702,7 @@
   {
     "id": 19868,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 868,
+    "segment_index": 870,
     "start_time": 3672.98,
     "end_time": 3681.123,
     "content": "\"where are the pills? Where?\" And he looked and \"I swallowed  them already.\" I said \"I made a terrible mistake.\"",
@@ -8692,7 +8712,7 @@
   {
     "id": 19869,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 869,
+    "segment_index": 871,
     "start_time": 3686.345,
     "end_time": 3687.564,
     "content": "I gave you the wrong pills.",
@@ -8702,7 +8722,7 @@
   {
     "id": 19870,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 870,
+    "segment_index": 872,
     "start_time": 3687.574,
     "end_time": 3695.15,
     "content": "\"We deserved it cause you didn't tell me this is wrong.\" Alright. You know, we didn't say \"by God's",
@@ -8712,7 +8732,7 @@
   {
     "id": 19871,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 871,
+    "segment_index": 873,
     "start_time": 3695.15,
     "end_time": 3701,
     "content": "grace and, and His help these pills will... .\" How many, how many of us make this mistake?",
@@ -8722,7 +8742,7 @@
   {
     "id": 19872,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 872,
+    "segment_index": 874,
     "start_time": 3701,
     "end_time": 3703.21,
     "content": "How often? Don't answer me.",
@@ -8732,7 +8752,7 @@
   {
     "id": 19873,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 873,
+    "segment_index": 875,
     "start_time": 3707.695,
     "end_time": 3715.45,
     "content": "Tonight, IN SHAA ALLAH, we are on page 64 starting at verse 110.",
@@ -8742,7 +8762,7 @@
   {
     "id": 19874,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 874,
+    "segment_index": 876,
     "start_time": 3718.583,
     "end_time": 3720.952,
     "content": "And our teacher is Dr. Mahmood Sabahi.",
@@ -8752,7 +8772,7 @@
   {
     "id": 19875,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 875,
+    "segment_index": 877,
     "start_time": 3721.874,
     "end_time": 3722.891,
     "content": "Again?",
@@ -8762,7 +8782,7 @@
   {
     "id": 19876,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 876,
+    "segment_index": 878,
     "start_time": 3726.876,
     "end_time": 3729.446,
     "content": "Be sure we keep the kid, the children quiet.",
@@ -8772,7 +8792,7 @@
   {
     "id": 19877,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 877,
+    "segment_index": 879,
     "start_time": 3731.842,
     "end_time": 3734.211,
     "content": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
@@ -8782,7 +8802,7 @@
   {
     "id": 19878,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 878,
+    "segment_index": 880,
     "start_time": 3734.211,
     "end_time": 3736.211,
     "content": "Bism Allah Arrahman Arraheem",
@@ -8792,7 +8812,7 @@
   {
     "id": 19879,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 879,
+    "segment_index": 881,
     "start_time": 3738.204,
     "end_time": 3741.85,
     "content": "As usual we ask God to help us to understand",
@@ -8802,7 +8822,7 @@
   {
     "id": 19880,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 880,
+    "segment_index": 882,
     "start_time": 3741.85,
     "end_time": 3747.304,
     "content": "His words better and remove all  the barriers from our hearts.",
@@ -8812,7 +8832,7 @@
   {
     "id": 19881,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 881,
+    "segment_index": 883,
     "start_time": 3749.3,
     "end_time": 3753.875,
     "content": "verse 110, I start from verse 110 page 64.",
@@ -8822,7 +8842,7 @@
   {
     "id": 19882,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 882,
+    "segment_index": 884,
     "start_time": 3755.227,
     "end_time": 3755.72585769231,
     "content": "[3:110]",
@@ -8832,7 +8852,7 @@
   {
     "id": 75474,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 883,
+    "segment_index": 885,
     "start_time": 3755.72585769231,
     "end_time": 3769.55134230769,
     "content": "you advocate righteousness and forbid evil, and you believe in GOD. If the followers of the scripture believed, it would be better for them. Some of them do believe, but the majority are wicked.",
@@ -8842,7 +8862,7 @@
   {
     "id": 19883,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 884,
+    "segment_index": 886,
     "start_time": 3774.923,
     "end_time": 3775.941,
     "content": "111",
@@ -8852,7 +8872,7 @@
   {
     "id": 19884,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 885,
+    "segment_index": 887,
     "start_time": 3775.941,
     "end_time": 3784.565,
     "content": "[3:111]  They can never harm you, except for insults. If they fight you, they will turn around and flee. They can never be victorious.",
@@ -8862,7 +8882,7 @@
   {
     "id": 19885,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 886,
+    "segment_index": 888,
     "start_time": 3786.408,
     "end_time": 3788.075,
     "content": "112",
@@ -8872,7 +8892,7 @@
   {
     "id": 19886,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 887,
+    "segment_index": 889,
     "start_time": 3788.075,
     "end_time": 3811.524,
     "content": "[3:112]  humiliation is their lot wherever they go, unless they abide by GOD's covenant, and the people's covenant. They incurred wrath from GOD, consequently, they were committed to disgrace. This is because they rejected GOD's revelations, and used to kill the prophets unjustly. This is because they disobeyed and transgressed.",
@@ -8882,7 +8902,7 @@
   {
     "id": 19887,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 888,
+    "segment_index": 890,
     "start_time": 3811.524,
     "end_time": 3813.13,
     "content": "113",
@@ -8892,7 +8912,7 @@
   {
     "id": 19888,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 889,
+    "segment_index": 891,
     "start_time": 3814.521,
     "end_time": 3826.865,
     "content": "[3:113]  They are not all the same; among the followers of the scripture, there are those who are righteous. They recite GOD's revelations through the night, and they fall prostrate.",
@@ -8902,7 +8922,7 @@
   {
     "id": 19889,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 890,
+    "segment_index": 892,
     "start_time": 3827.725,
     "end_time": 3829.24,
     "content": "114",
@@ -8912,7 +8932,7 @@
   {
     "id": 19890,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 891,
+    "segment_index": 893,
     "start_time": 3829.24,
     "end_time": 3839.004,
     "content": "[3:114]  They believe in GOD and the Last Day, they advocate righteousness and forbid evil, and they hasten to do righteous works. These are with the righteous.",
@@ -8922,7 +8942,7 @@
   {
     "id": 19891,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 892,
+    "segment_index": 894,
     "start_time": 3839.004,
     "end_time": 3840.663,
     "content": "115",
@@ -8932,7 +8952,7 @@
   {
     "id": 19892,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 893,
+    "segment_index": 895,
     "start_time": 3840.663,
     "end_time": 3849.821,
     "content": "[3:115]  Any good they do will not go unrewarded. GOD is fully aware of who the righteous are.",
@@ -8942,7 +8962,7 @@
   {
     "id": 19893,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 894,
+    "segment_index": 896,
     "start_time": 3850.804,
     "end_time": 3860.087,
     "content": "[3:116]  Surely, those who disbelieved can never be helped by their money or their children against GOD. They have incurred Hell, wherein they abide forever.",
@@ -8952,7 +8972,7 @@
   {
     "id": 19894,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 895,
+    "segment_index": 897,
     "start_time": 3861.131,
     "end_time": 3862.661,
     "content": "117",
@@ -8962,7 +8982,7 @@
   {
     "id": 19895,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 896,
+    "segment_index": 898,
     "start_time": 3862.661,
     "end_time": 3878.354,
     "content": "[3:117]  The example of their spending in this world is like a violent wind that hits the harvest of the people who wronged their souls, and wipes it out. GOD never wronged them; it is they who wronged themselves.",
@@ -8972,7 +8992,7 @@
   {
     "id": 19896,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 897,
+    "segment_index": 899,
     "start_time": 3878.354,
     "end_time": 3884.051,
     "content": "I stop at 117 and go back to 110.",
@@ -8982,7 +9002,7 @@
   {
     "id": 19897,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 898,
+    "segment_index": 900,
     "start_time": 3889.028,
     "end_time": 3897.903,
     "content": "I believe as far as I could look through the verses  that we have studied up to this point from the",
@@ -8992,7 +9012,7 @@
   {
     "id": 19898,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 899,
+    "segment_index": 901,
     "start_time": 3897.903,
     "end_time": 3908.111,
     "content": "beginning of the Quran that this is the first  verse that God is talking about the community.",
@@ -9002,7 +9022,7 @@
   {
     "id": 19899,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 900,
+    "segment_index": 902,
     "start_time": 3909.033,
     "end_time": 3911.143,
     "content": "God is saying that",
@@ -9012,7 +9032,7 @@
   {
     "id": 19900,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 901,
+    "segment_index": 903,
     "start_time": 3911.143,
     "end_time": 3911.60144927536,
     "content": "[3:110]",
@@ -9022,7 +9042,7 @@
   {
     "id": 75475,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 902,
+    "segment_index": 904,
     "start_time": 3911.60144927536,
     "end_time": 3911.79792753623,
     "content": "...",
@@ -9032,7 +9052,7 @@
   {
     "id": 19901,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 903,
+    "segment_index": 905,
     "start_time": 3917.259,
     "end_time": 3918.706,
     "content": "and",
@@ -9042,7 +9062,7 @@
   {
     "id": 19902,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 904,
+    "segment_index": 906,
     "start_time": 3919.689,
     "end_time": 3922.119,
     "content": "[3:110]  ... you advocate righteousness and forbid evil, ...",
@@ -9052,7 +9072,7 @@
   {
     "id": 19903,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 905,
+    "segment_index": 907,
     "start_time": 3923.615,
     "end_time": 3930.2,
     "content": "If we review what  we have seen through, through the Al-Baqarah, this",
@@ -9062,7 +9082,7 @@
   {
     "id": 19904,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 906,
+    "segment_index": 908,
     "start_time": 3930.2,
     "end_time": 3942.427,
     "content": "second Sura and third up to this point, what  we have been told, what we have been taught is that  ",
@@ -9072,7 +9092,7 @@
   {
     "id": 19905,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 907,
+    "segment_index": 909,
     "start_time": 3942.427,
     "end_time": 3949.656,
     "content": "what we have to do as individuals basically, what to have to do, what we have to do to be righteous,",
@@ -9082,7 +9102,7 @@
   {
     "id": 19906,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 908,
+    "segment_index": 910,
     "start_time": 3949.656,
     "end_time": 3957.899,
     "content": "how do we have to behave in, in the society and  how to take care of ourselves as far as we are  ",
@@ -9092,7 +9112,7 @@
   {
     "id": 19907,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 909,
+    "segment_index": 911,
     "start_time": 3957.899,
     "end_time": 3964.977,
     "content": "concerned and our own interests are concerned. Now, we  are seeing God telling us about a community.",
@@ -9102,7 +9122,7 @@
   {
     "id": 19908,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 910,
+    "segment_index": 912,
     "start_time": 3964.977,
     "end_time": 3976.031,
     "content": "I go to the verse 84 of this same Sura  not too far. It's page 61. The title of it is",
@@ -9112,7 +9132,7 @@
   {
     "id": 19909,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 911,
+    "segment_index": 913,
     "start_time": 3976.031,
     "end_time": 3979.42,
     "content": "Make No Distinction Among God's Messengers.",
@@ -9122,7 +9142,7 @@
   {
     "id": 19910,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 912,
+    "segment_index": 914,
     "start_time": 3979.42,
     "end_time": 3983.782,
     "content": "I see a  relationship between this community that God",
@@ -9132,7 +9152,7 @@
   {
     "id": 19911,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 913,
+    "segment_index": 915,
     "start_time": 3983.782,
     "end_time": 3991.4,
     "content": "is saying that we raised among you people. These  people who are in this community, they are saying",
@@ -9142,7 +9162,7 @@
   {
     "id": 19912,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 914,
+    "segment_index": 916,
     "start_time": 3991.4,
     "end_time": 4010.676,
     "content": "[3:84]  \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from their Lord. We make no distinction among any of them. To Him alone we are Muslims.\"",
@@ -9152,7 +9172,7 @@
   {
     "id": 19913,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 915,
+    "segment_index": 917,
     "start_time": 4012.15,
     "end_time": 4024.639,
     "content": "In this community, if you look at this verse 84, it almost covers everyone that you can see around you in this world at,",
@@ -9162,7 +9182,7 @@
   {
     "id": 19914,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 916,
+    "segment_index": 918,
     "start_time": 4024.639,
     "end_time": 4036.68,
     "content": "at the current time. If someone can believe and can  uphold this verse and see the world and see the",
@@ -9172,7 +9192,7 @@
   {
     "id": 19915,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 917,
+    "segment_index": 919,
     "start_time": 4036.68,
     "end_time": 4047.427,
     "content": "people as all people who only believe in God and  what was sent down to the people from Him, then",
@@ -9182,7 +9202,7 @@
   {
     "id": 19916,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 918,
+    "segment_index": 920,
     "start_time": 4047.427,
     "end_time": 4054.47,
     "content": "you won't see any, any problem in the world. So, this  is one characteristic of those people who are",
@@ -9192,7 +9212,7 @@
   {
     "id": 19917,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 919,
+    "segment_index": 921,
     "start_time": 4054.47,
     "end_time": 4063.216,
     "content": "in that community. Then, I go to two verses, 103 and  104, the same just page 63.",
@@ -9202,7 +9222,7 @@
   {
     "id": 19918,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 920,
+    "segment_index": 922,
     "start_time": 4066.288,
     "end_time": 4068.518,
     "content": "a trait of the believers",
@@ -9212,7 +9232,7 @@
   {
     "id": 19919,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 921,
+    "segment_index": 923,
     "start_time": 4068.518,
     "end_time": 4073.445,
     "content": "[3:103]  You shall hold fast to the rope of GOD, all of you, and do not be divided. ...",
@@ -9222,7 +9242,7 @@
   {
     "id": 19920,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 922,
+    "segment_index": 924,
     "start_time": 4073.445,
     "end_time": 4080.396,
     "content": "So again, another characteristic of these people, this community, the people in this community",
@@ -9232,7 +9252,7 @@
   {
     "id": 19921,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 923,
+    "segment_index": 925,
     "start_time": 4080.396,
     "end_time": 4087.679,
     "content": "is that they are, all of them hold fast to the rope of God because He is the One that everybody is holding to.",
@@ -9242,7 +9262,7 @@
   {
     "id": 19922,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 924,
+    "segment_index": 926,
     "start_time": 4087.986,
     "end_time": 4089.986,
     "content": "[3:103]  ... and do not be divided. ...",
@@ -9252,7 +9272,7 @@
   {
     "id": 19923,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 925,
+    "segment_index": 927,
     "start_time": 4089.986,
     "end_time": 4095.6,
     "content": "This is a very important thing, you know,  don't be divided. How, why people get divided?",
@@ -9262,7 +9282,7 @@
   {
     "id": 19924,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 926,
+    "segment_index": 928,
     "start_time": 4095.6,
     "end_time": 4102.739,
     "content": "What is the reason for the world being such a nasty  place to live in? What is all the division? What is it for?",
@@ -9272,7 +9292,7 @@
   {
     "id": 19925,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 927,
+    "segment_index": 929,
     "start_time": 4103.722,
     "end_time": 4110.57,
     "content": "You see, in the book, in this book, in Quran, you don't see any trace of race, color, nationality",
@@ -9282,7 +9302,7 @@
   {
     "id": 19926,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 928,
+    "segment_index": 930,
     "start_time": 4110.57,
     "end_time": 4117.95,
     "content": "whatsoever or whatever we can think of. So, even  religion, everybody, all the people who are part of",
@@ -9292,7 +9312,7 @@
   {
     "id": 19927,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 929,
+    "segment_index": 931,
     "start_time": 4117.95,
     "end_time": 4125.42,
     "content": "that best community, they are all the same because  they hang on to the rope of God and they follow",
@@ -9302,7 +9322,7 @@
   {
     "id": 19928,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 930,
+    "segment_index": 932,
     "start_time": 4125.42,
     "end_time": 4131.75,
     "content": "what He tells them to follow. So, in this community,  there is room for everyone regardless of what",
@@ -9312,7 +9332,7 @@
   {
     "id": 19929,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 931,
+    "segment_index": 933,
     "start_time": 4131.75,
     "end_time": 4140.81,
     "content": "shape they are, what color they are, what race they  are. There is nothing except believing in God and",
@@ -9322,7 +9342,7 @@
   {
     "id": 19930,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 932,
+    "segment_index": 934,
     "start_time": 4140.81,
     "end_time": 4145.345,
     "content": "being righteous. I continue on 103. God says ",
@@ -9332,7 +9352,7 @@
   {
     "id": 19931,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 933,
+    "segment_index": 935,
     "start_time": 4145.345,
     "end_time": 4147.905,
     "content": "[3:103]  ... you used to be enemies and He ...",
@@ -9342,7 +9362,7 @@
   {
     "id": 19932,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 934,
+    "segment_index": 936,
     "start_time": 4147.905,
     "end_time": 4148.553,
     "content": "the GOD",
@@ -9352,7 +9372,7 @@
   {
     "id": 19933,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 935,
+    "segment_index": 937,
     "start_time": 4148.553,
     "end_time": 4157.243,
     "content": "[3:103]  ... reconciled your hearts. By His grace, you became brethren. You were at the brink of a pit of fire, and He saved you ...",
@@ -9362,7 +9382,7 @@
   {
     "id": 19934,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 936,
+    "segment_index": 938,
     "start_time": 4157.243,
     "end_time": 4164.342,
     "content": "Look, you look around in the world everywhere you see, there is fire, there is bloodshed, there is killing,",
@@ -9372,7 +9392,7 @@
   {
     "id": 19935,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 937,
+    "segment_index": 939,
     "start_time": 4164.342,
     "end_time": 4166.57,
     "content": "there is unrest, there is disease.",
@@ -9382,7 +9402,7 @@
   {
     "id": 19936,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 938,
+    "segment_index": 940,
     "start_time": 4167.369,
     "end_time": 4171.826,
     "content": "[3:103] ... GOD thus explains His revelations for you, that you may be guided.",
@@ -9392,7 +9412,7 @@
   {
     "id": 19937,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 939,
+    "segment_index": 941,
     "start_time": 4171.826,
     "end_time": 4177.674,
     "content": "I think 104 is a good one, too, related to same, to  the same issue.",
@@ -9402,7 +9422,7 @@
   {
     "id": 19938,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 940,
+    "segment_index": 942,
     "start_time": 4177.674,
     "end_time": 4179.041,
     "content": "[3:104]  Let there be a community ...",
@@ -9412,7 +9432,7 @@
   {
     "id": 19939,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 941,
+    "segment_index": 943,
     "start_time": 4179.041,
     "end_time": 4179.942,
     "content": "Here God says",
@@ -9422,7 +9442,7 @@
   {
     "id": 19940,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 942,
+    "segment_index": 944,
     "start_time": 4179.942,
     "end_time": 4188.884,
     "content": "[3:104]  Let there be a community of you who invite to goodness, advocate righteousness, and forbid evil. These are the successful ones.",
@@ -9432,7 +9452,7 @@
   {
     "id": 19941,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 943,
+    "segment_index": 945,
     "start_time": 4188.884,
     "end_time": 4193.2,
     "content": "In this one, in this verse, God is telling that He puts down, lays down",
@@ -9442,7 +9462,7 @@
   {
     "id": 19942,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 944,
+    "segment_index": 946,
     "start_time": 4193.2,
     "end_time": 4201.45,
     "content": "the conditions. If there wants to be a good community  of you, you have to invite to goodness, advocate",
@@ -9452,7 +9472,7 @@
   {
     "id": 19943,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 945,
+    "segment_index": 947,
     "start_time": 4201.45,
     "end_time": 4206.096,
     "content": "righteousness and forbid evil. And then, God is saying that",
@@ -9462,7 +9482,7 @@
   {
     "id": 19944,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 946,
+    "segment_index": 948,
     "start_time": 4206.096,
     "end_time": 4210.15,
     "content": "[3:110]  You are the best community ever raised ...",
@@ -9472,7 +9492,7 @@
   {
     "id": 19945,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 947,
+    "segment_index": 949,
     "start_time": 4210.15,
     "end_time": 4218.321,
     "content": "This is something current. This is at the present time  and the future. He's talking to some people. He's telling them",
@@ -9482,7 +9502,7 @@
   {
     "id": 19946,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 948,
+    "segment_index": 950,
     "start_time": 4218.321,
     "end_time": 4220.287,
     "content": "[3:110]  You are the best ...",
@@ -9492,7 +9512,7 @@
   {
     "id": 19947,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 949,
+    "segment_index": 951,
     "start_time": 4220.287,
     "end_time": 4225.42,
     "content": "If one, if we think  we are, then we have to analyze ourselves every",
@@ -9502,7 +9522,7 @@
   {
     "id": 19948,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 950,
+    "segment_index": 952,
     "start_time": 4225.42,
     "end_time": 4232.514,
     "content": "day and see whether we are upholding what I read  to you from those verses that which is related to  ",
@@ -9512,7 +9532,7 @@
   {
     "id": 19949,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 951,
+    "segment_index": 953,
     "start_time": 4232.514,
     "end_time": 4241.11,
     "content": "the conditions. You cannot say that \"okay, I go to  this mosque, I do my Prayers and I'm one of the  ",
@@ -9522,7 +9542,7 @@
   {
     "id": 19950,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 952,
+    "segment_index": 954,
     "start_time": 4241.11,
     "end_time": 4247.74,
     "content": "\"ones who is the happiest, who is the best.\" We have  to self-analyze ourselves all the time and to be",
@@ -9532,7 +9552,7 @@
   {
     "id": 19951,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 953,
+    "segment_index": 955,
     "start_time": 4247.74,
     "end_time": 4254.863,
     "content": "able to be part of that community to advocate  righteousness and forbid evil. These two words,",
@@ -9542,7 +9562,7 @@
   {
     "id": 19952,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 954,
+    "segment_index": 956,
     "start_time": 4254.863,
     "end_time": 4263.317,
     "content": "advocating righteousness and forbidding evil, it  is part of the responsibility of the believers,",
@@ -9552,7 +9572,7 @@
   {
     "id": 19953,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 955,
+    "segment_index": 957,
     "start_time": 4263.317,
     "end_time": 4268.74,
     "content": "the people who believe in God. Because up to this  point, whatever you saw was something related to",
@@ -9562,7 +9582,7 @@
   {
     "id": 19954,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 956,
+    "segment_index": 958,
     "start_time": 4268.74,
     "end_time": 4277.44,
     "content": "your personal duties by Praying, like fasting, like Hajj, like Zakat, whatever. But now, you are part of a",
@@ -9572,7 +9592,7 @@
   {
     "id": 19955,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 957,
+    "segment_index": 959,
     "start_time": 4277.44,
     "end_time": 4284.263,
     "content": "community. This is your social responsibilities to  advocate righteousness. How do you, how do you do it?",
@@ -9582,7 +9602,7 @@
   {
     "id": 19956,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 958,
+    "segment_index": 960,
     "start_time": 4284.263,
     "end_time": 4289.494,
     "content": "God doesn't tell you how to do it. So, you have  to find a way to do it the best way possible.  ",
@@ -9592,7 +9612,7 @@
   {
     "id": 19957,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 959,
+    "segment_index": 961,
     "start_time": 4289.494,
     "end_time": 4295.35,
     "content": "You, if you are part of that community that God is  saying that you are the best ever raised among  ",
@@ -9602,7 +9622,7 @@
   {
     "id": 19958,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 960,
+    "segment_index": 962,
     "start_time": 4295.35,
     "end_time": 4303.06,
     "content": "the people, then the responsibilities that go with  it is huge. And how you approach it, how you do it,",
@@ -9612,7 +9632,7 @@
   {
     "id": 19959,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 961,
+    "segment_index": 963,
     "start_time": 4303.06,
     "end_time": 4310.229,
     "content": "it's something that it depends on personal views  and how you approach it. But if you keep God",
@@ -9622,7 +9642,7 @@
   {
     "id": 19960,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 962,
+    "segment_index": 964,
     "start_time": 4310.229,
     "end_time": 4320.7,
     "content": "only as your final goal and you could get rid  of all the egotistical issues, if you can break",
@@ -9632,7 +9652,7 @@
   {
     "id": 19961,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 963,
+    "segment_index": 965,
     "start_time": 4320.7,
     "end_time": 4334.32,
     "content": "down that part of you who is not clean or it's  not purified, then you can do a good job. So, ",
@@ -9642,7 +9662,7 @@
   {
     "id": 19962,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 964,
+    "segment_index": 966,
     "start_time": 4334.32,
     "end_time": 4340.488,
     "content": "you have to work on yourself and then you can do the  rest of it much easier.",
@@ -9652,7 +9672,7 @@
   {
     "id": 19963,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 965,
+    "segment_index": 967,
     "start_time": 4342.884,
     "end_time": 4344.884,
     "content": "And if the followers of the",
@@ -9662,7 +9682,7 @@
   {
     "id": 19964,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 966,
+    "segment_index": 968,
     "start_time": 4344.884,
     "end_time": 4356.327,
     "content": "scripture believe, it will be better for them. So,  if you face other people from other religions,",
@@ -9672,7 +9692,7 @@
   {
     "id": 19965,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 967,
+    "segment_index": 969,
     "start_time": 4356.327,
     "end_time": 4366.75,
     "content": "if they follow, if they follow or they accept what you  tell them, that's good for them. If not, so be it. Some of",
@@ -9682,7 +9702,7 @@
   {
     "id": 19966,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 968,
+    "segment_index": 970,
     "start_time": 4366.75,
     "end_time": 4377.16,
     "content": "them do believe but the majority are wicked. I go to  111. God is promising you that the people that this",
@@ -9692,7 +9712,7 @@
   {
     "id": 19967,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 969,
+    "segment_index": 971,
     "start_time": 4377.16,
     "end_time": 4388.2,
     "content": "community who He is, who He is raising and is the best  community, He promises them that they can never",
@@ -9702,7 +9722,7 @@
   {
     "id": 19968,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 970,
+    "segment_index": 972,
     "start_time": 4388.2,
     "end_time": 4398.04,
     "content": "be harmed. You know, nobody can harm you. They can  insult you, they can probably, possibly make some",
@@ -9712,7 +9732,7 @@
   {
     "id": 19969,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 971,
+    "segment_index": 973,
     "start_time": 4398.04,
     "end_time": 4404.697,
     "content": "hardship for you which would be passing, it's not  gonna last, but God says that",
@@ -9722,7 +9742,7 @@
   {
     "id": 19970,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 972,
+    "segment_index": 974,
     "start_time": 4404.697,
     "end_time": 4411.783,
     "content": "[3:111]  They can never harm you, ... If they fight you, they will turn around and flee. They can never be victorious.",
@@ -9732,7 +9752,7 @@
   {
     "id": 19971,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 973,
+    "segment_index": 975,
     "start_time": 4411.783,
     "end_time": 4421.094,
     "content": "This is a promise that the victory is for the people who  are worshipping God alone and are righteous and they forbid evil.",
@@ -9742,7 +9762,7 @@
   {
     "id": 19972,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 974,
+    "segment_index": 976,
     "start_time": 4421.893,
     "end_time": 4428.627,
     "content": "[3:112]  Humiliation is their lot wherever they go, unless they do abide by GOD's covenant, and the people's covenant.",
@@ -9752,7 +9772,7 @@
   {
     "id": 19973,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 975,
+    "segment_index": 977,
     "start_time": 4428.627,
     "end_time": 4433.51,
     "content": "If you see 112, I guess it's  for the first time. Forgive me if I'm not,",
@@ -9762,7 +9782,7 @@
   {
     "id": 19974,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 976,
+    "segment_index": 978,
     "start_time": 4433.51,
     "end_time": 4443.26,
     "content": "I'm not right, but I think back to my memory, I think it's the first time that God mentions the people's  ",
@@ -9772,7 +9792,7 @@
   {
     "id": 19975,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 977,
+    "segment_index": 979,
     "start_time": 4443.26,
     "end_time": 4449.239,
     "content": "covenant in addition to God's covenant. It's just  right after that. So,",
@@ -9782,7 +9802,7 @@
   {
     "id": 19976,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 978,
+    "segment_index": 980,
     "start_time": 4449.239,
     "end_time": 4456.314,
     "content": "[3:112]  Humiliation is their lot wherever they go, unless they abide by GOD's covenant, and the people's covenant. ...",
@@ -9792,7 +9812,7 @@
   {
     "id": 19977,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 979,
+    "segment_index": 981,
     "start_time": 4456.314,
     "end_time": 4465.116,
     "content": "So, if you are part of that community, if you are a member of that  best community ever raised among the people, then",
@@ -9802,7 +9822,7 @@
   {
     "id": 19978,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 980,
+    "segment_index": 982,
     "start_time": 4465.116,
     "end_time": 4472.876,
     "content": "you have to abide by God's covenant, first God  alone, worshiping Him alone, and people's covenant.",
@@ -9812,7 +9832,7 @@
   {
     "id": 19979,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 981,
+    "segment_index": 983,
     "start_time": 4472.876,
     "end_time": 4478.821,
     "content": "What does that mean? The understanding that I  have and definitely it's open for discussion",
@@ -9822,7 +9842,7 @@
   {
     "id": 19980,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 982,
+    "segment_index": 984,
     "start_time": 4478.821,
     "end_time": 4487.6,
     "content": "is the fact that if your faith... if you are part of  that community, if you belong to that community, if  ",
@@ -9832,7 +9852,7 @@
   {
     "id": 19981,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 983,
+    "segment_index": 985,
     "start_time": 4487.6,
     "end_time": 4494.59,
     "content": "you have all those characteristics, then you  make a covenant. You, you have to be faithful. We",
@@ -9842,7 +9862,7 @@
   {
     "id": 19982,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 984,
+    "segment_index": 986,
     "start_time": 4494.59,
     "end_time": 4501.406,
     "content": "have to be like brothers and sisters and it's the  family. It is a community, as I said, regardless of  ",
@@ -9852,7 +9872,7 @@
   {
     "id": 19983,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 985,
+    "segment_index": 987,
     "start_time": 4501.406,
     "end_time": 4508.928,
     "content": "all the issues that cause, in this world, all the division and all the hatred and the wars and the fights and the battles.",
@@ -9862,7 +9882,7 @@
   {
     "id": 19984,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 986,
+    "segment_index": 988,
     "start_time": 4509.85,
     "end_time": 4523.742,
     "content": "[3:112]  They incurred wrath from GOD, consequently, they were committed to disgrace. This is because they rejected GOD's revelations, and used to kill the prophets unjustly. This is because they disobeyed and transgressed.",
@@ -9872,7 +9892,7 @@
   {
     "id": 19985,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 987,
+    "segment_index": 989,
     "start_time": 4523.742,
     "end_time": 4532.46,
     "content": "At this part of  the verse, God is telling us those who violate any,",
@@ -9882,7 +9902,7 @@
   {
     "id": 19986,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 988,
+    "segment_index": 990,
     "start_time": 4532.46,
     "end_time": 4539.15,
     "content": "violate any of those two covenants, this is what is  happening to them. If you wanna see a little bit",
@@ -9892,7 +9912,7 @@
   {
     "id": 19987,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 989,
+    "segment_index": 991,
     "start_time": 4539.15,
     "end_time": 4549.884,
     "content": "more from what we have studied up to this point,  I go to Sura 2 verses 60 and 61 which is page 9.",
@@ -9902,7 +9922,7 @@
   {
     "id": 19988,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 990,
+    "segment_index": 992,
     "start_time": 4551.481,
     "end_time": 4554.894,
     "content": "This is about Moses and the children of Israel.",
@@ -9912,7 +9932,7 @@
   {
     "id": 19989,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 991,
+    "segment_index": 993,
     "start_time": 4555.508,
     "end_time": 4573.415,
     "content": "[2:60]  Recall that Moses sought water for his people. And we said, \"Strike the rock with your staff.\" Whereupon, twelve springs gushed out therefrom. Thus each tribe knew their own water. Eat and drink from GOD's provisions, and do not roam the earth corruptingly.",
@@ -9922,7 +9942,7 @@
   {
     "id": 19990,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 992,
+    "segment_index": 994,
     "start_time": 4573.661,
     "end_time": 4588.817,
     "content": "[2:61]  Recall that you said, \"O Moses, we can no longer tolerate one kind of food. Call upon your Lord to produce for us such earthly crops as beans, cucumbers, garlic, lentils, and onions.\" ...",
@@ -9932,7 +9952,7 @@
   {
     "id": 19991,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 993,
+    "segment_index": 995,
     "start_time": 4588.817,
     "end_time": 4600.103,
     "content": "[2:61]  ... He said, \"Do you wish to substitute that which is inferior for that which is good? Maybe, you should go back to Egypt, where you can find what you asked for.\" ...",
@@ -9942,7 +9962,7 @@
   {
     "id": 19992,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 994,
+    "segment_index": 996,
     "start_time": 4600.103,
     "end_time": 4605.297,
     "content": "[2:61]  ... They were condemned to humiliation, and disgrace, and they incurred God's wrath. ...",
@@ -9952,7 +9972,7 @@
   {
     "id": 19993,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 995,
+    "segment_index": 997,
     "start_time": 4605.297,
     "end_time": 4613.12,
     "content": "[2:61]  ... That is because they used to disbelieve in GOD's revelations, and killed the prophets unjustly. That is because they disobeyed and transgressed.",
@@ -9962,7 +9982,7 @@
   {
     "id": 19994,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 996,
+    "segment_index": 998,
     "start_time": 4613.55,
     "end_time": 4619.711,
     "content": "So, what this seems and God is  telling us about what has happened in the past",
@@ -9972,7 +9992,7 @@
   {
     "id": 19995,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 997,
+    "segment_index": 999,
     "start_time": 4619.711,
     "end_time": 4630.02,
     "content": "is that if you become fortunate enough to become part  of that community and then you cannot uphold your",
@@ -9982,7 +10002,7 @@
   {
     "id": 19996,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 998,
+    "segment_index": 1000,
     "start_time": 4630.02,
     "end_time": 4642.404,
     "content": "covenant, then you are gonna be humiliated. God is gonna reject you and humiliate you.",
@@ -9992,7 +10012,7 @@
   {
     "id": 19997,
     "media_id": "477b5794-fda8-44e0-afd8-cc39867e5260",
-    "segment_index": 999,
+    "segment_index": 1001,
     "start_time": 4644.627,
     "end_time": 4656.79,
     "content": "And if you go and take a look around, especially  it doesn't matter in different religions. Muslims",

@@ -2330,19 +2330,29 @@
     "search_vector": "'abraham':1,11 'founder':14 'noah':4 'said':9 'unintellig':2,8"
   },
   {
-    "id": 32327,
+    "id": "32327_part_0",
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
     "segment_index": 233,
     "start_time": 1429.098,
-    "end_time": 1430.674,
-    "content": "Islam. Naghmeh: (unintelligible)",
+    "end_time": 1429.577652173913,
+    "content": "Islam. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'islam':1 'naghmeh':2 'unintellig':3"
+  },
+  {
+    "id": "32327_part_1",
+    "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
+    "segment_index": 234,
+    "start_time": 1429.577652173913,
+    "end_time": 1430.674,
+    "content": "(unintelligible)",
+    "speaker": "Naghmeh",
     "search_vector": "'islam':1 'naghmeh':2 'unintellig':3"
   },
   {
     "id": 32328,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 234,
+    "segment_index": 235,
     "start_time": 1430.674,
     "end_time": 1431.543,
     "content": "Islam.",
@@ -2352,7 +2362,7 @@
   {
     "id": 32329,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 235,
+    "segment_index": 236,
     "start_time": 1432.062,
     "end_time": 1433.873,
     "content": "Abraham is the founder of Islam.",
@@ -2362,7 +2372,7 @@
   {
     "id": 32330,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 236,
+    "segment_index": 237,
     "start_time": 1434.816,
     "end_time": 1435.94253968254,
     "content": "Not God alone? I mean,",
@@ -2372,7 +2382,7 @@
   {
     "id": 76483,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 237,
+    "segment_index": 238,
     "start_time": 1435.94253968254,
     "end_time": 1436.50580952381,
     "content": "God alone is... No, no, no.",
@@ -2382,7 +2392,7 @@
   {
     "id": 32331,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 238,
+    "segment_index": 239,
     "start_time": 1438.702,
     "end_time": 1449.752,
     "content": "The concept of Submission, total submission to God, was Abraham's... Of course, was inspiration from God, but he's the one who coined the phrase.",
@@ -2392,7 +2402,7 @@
   {
     "id": 32332,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 239,
+    "segment_index": 240,
     "start_time": 1453.9,
     "end_time": 1455.98638356164,
     "content": "That came up in your talk (unintelligible).",
@@ -2402,7 +2412,7 @@
   {
     "id": 76484,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 240,
+    "segment_index": 241,
     "start_time": 1455.98638356164,
     "end_time": 1456.76271232877,
     "content": "Yeah, Catherine.",
@@ -2412,7 +2422,7 @@
   {
     "id": 32333,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 241,
+    "segment_index": 242,
     "start_time": 1457.442,
     "end_time": 1460.432,
     "content": "(unintelligible)",
@@ -2422,7 +2432,7 @@
   {
     "id": 32334,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 242,
+    "segment_index": 243,
     "start_time": 1460.432,
     "end_time": 1462.998,
     "content": "He made a covenant with God. Yes.",
@@ -2432,7 +2442,7 @@
   {
     "id": 32335,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 243,
+    "segment_index": 244,
     "start_time": 1462.998,
     "end_time": 1466.035,
     "content": "The first (unintelligible)",
@@ -2442,7 +2452,7 @@
   {
     "id": 32336,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 244,
+    "segment_index": 245,
     "start_time": 1466.035,
     "end_time": 1468.099,
     "content": "The first covenant on earth, yes.",
@@ -2452,7 +2462,7 @@
   {
     "id": 32337,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 245,
+    "segment_index": 246,
     "start_time": 1470.603,
     "end_time": 1473.65,
     "content": "And that is mentioned in chapter 2, Abraham's covenant.",
@@ -2462,7 +2472,7 @@
   {
     "id": 32338,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 246,
+    "segment_index": 247,
     "start_time": 1474.027,
     "end_time": 1477.724,
     "content": "Now, we have a lousy index at the end of this book,",
@@ -2472,7 +2482,7 @@
   {
     "id": 32339,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 247,
+    "segment_index": 248,
     "start_time": 1477.724,
     "end_time": 1487.973,
     "content": "because we did it in a half hour, but you may look at Abraham there and see the first mentioning of Abraham, and you will find the covenant there. It is mentioned.",
@@ -2482,7 +2492,7 @@
   {
     "id": 32340,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 248,
+    "segment_index": 249,
     "start_time": 1490.754,
     "end_time": 1493.131,
     "content": "Any other questions? Okay, number 11,",
@@ -2492,7 +2502,7 @@
   {
     "id": 32341,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 249,
+    "segment_index": 250,
     "start_time": 1494.404,
     "end_time": 1497.441,
     "content": "[54:11]  Whereupon we opened the gates of the sky, pouring water.",
@@ -2502,7 +2512,7 @@
   {
     "id": 32342,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 250,
+    "segment_index": 251,
     "start_time": 1497.63,
     "end_time": 1504.674,
     "content": "By the way, the Arabic literature here of 11 and 12 are just super, super extraordinary beautiful.",
@@ -2512,7 +2522,7 @@
   {
     "id": 32343,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 251,
+    "segment_index": 252,
     "start_time": 1506.217,
     "end_time": 1513.59,
     "content": "I mean, no... I don't, we could not put it in English. So, I don't know if this really reflects the Arabic.",
@@ -2522,7 +2532,7 @@
   {
     "id": 32344,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 252,
+    "segment_index": 253,
     "start_time": 1516.957,
     "end_time": 1520,
     "content": "[54:11]  We opened the gates of the sky, pouring water.",
@@ -2532,7 +2542,7 @@
   {
     "id": 32345,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 253,
+    "segment_index": 254,
     "start_time": 1520.189,
     "end_time": 1526.95,
     "content": "[54:12]  Springs gushed out from the earth. The waters met according to predetermined judgement.",
@@ -2542,7 +2552,7 @@
   {
     "id": 32346,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 254,
+    "segment_index": 255,
     "start_time": 1526.95,
     "end_time": 1533.187,
     "content": "This is pretty lousy English, but the Arabic is fantastic. I just don't know how to describe it to you.",
@@ -2552,7 +2562,7 @@
   {
     "id": 32347,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 255,
+    "segment_index": 256,
     "start_time": 1534.827,
     "end_time": 1538.76,
     "content": "It is untranslatable, but it is the highest standard of Arabic literature.",
@@ -2562,7 +2572,7 @@
   {
     "id": 32348,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 256,
+    "segment_index": 257,
     "start_time": 1543.05,
     "end_time": 1549.366,
     "content": "[54:13]  We carried him on a craft of wood and ropes.",
@@ -2572,7 +2582,7 @@
   {
     "id": 32349,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 257,
+    "segment_index": 258,
     "start_time": 1549.366,
     "end_time": 1550.895,
     "content": "Make it ropes instead of nails.",
@@ -2582,7 +2592,7 @@
   {
     "id": 32350,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 258,
+    "segment_index": 259,
     "start_time": 1551.696,
     "end_time": 1558.551,
     "content": "They didn't have nails then. They haven't, they didn't invent nails until David, if you remember.",
@@ -2592,7 +2602,7 @@
   {
     "id": 32351,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 259,
+    "segment_index": 260,
     "start_time": 1560.551,
     "end_time": 1561.891,
     "content": "Number 14,",
@@ -2602,7 +2612,7 @@
   {
     "id": 32352,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 260,
+    "segment_index": 261,
     "start_time": 1561.891,
     "end_time": 1567.096,
     "content": "[54:14]  It ran under our watchful eyes as a reward for the rejected messenger.",
@@ -2612,7 +2622,7 @@
   {
     "id": 32353,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 261,
+    "segment_index": 262,
     "start_time": 1567.85,
     "end_time": 1572.065,
     "content": "[54:15]  We set it up as a lesson. Is there anyone who wishes to learn?",
@@ -2622,7 +2632,7 @@
   {
     "id": 32354,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 262,
+    "segment_index": 263,
     "start_time": 1573.856,
     "end_time": 1574.678,
     "content": "Number 16,",
@@ -2632,7 +2642,7 @@
   {
     "id": 32355,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 263,
+    "segment_index": 264,
     "start_time": 1574.678,
     "end_time": 1577.149,
     "content": "[54:16]  How terrible was My retribution and warnings!",
@@ -2642,7 +2652,7 @@
   {
     "id": 32356,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 264,
+    "segment_index": 265,
     "start_time": 1578.375,
     "end_time": 1579.385,
     "content": "Number 17,",
@@ -2652,7 +2662,7 @@
   {
     "id": 32357,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 265,
+    "segment_index": 266,
     "start_time": 1579.385,
     "end_time": 1584.098,
     "content": "[54:17]  We have made the Quran easy to remember. Is there anyone who wishes to learn?",
@@ -2662,7 +2672,7 @@
   {
     "id": 32358,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 266,
+    "segment_index": 267,
     "start_time": 1587.209,
     "end_time": 1591.707,
     "content": "And this phrase will be repeated a few times in this Sura.",
@@ -2672,7 +2682,7 @@
   {
     "id": 32359,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 267,
+    "segment_index": 268,
     "start_time": 1592.697,
     "end_time": 1601.014,
     "content": "Number 18, We move to some other people who disbelieved and in the end were destroyed because they incur that. They bring it on themselves.",
@@ -2682,7 +2692,7 @@
   {
     "id": 32360,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 268,
+    "segment_index": 269,
     "start_time": 1602.334,
     "end_time": 1606.597,
     "content": "[54:18]  'Ãd disbelieved. How terrible was My retribution and warnings.",
@@ -2692,7 +2702,7 @@
   {
     "id": 32361,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 269,
+    "segment_index": 270,
     "start_time": 1607.445,
     "end_time": 1611.802,
     "content": "[54:19]  We sent upon them violent winds, on a day of continuous misery.",
@@ -2702,7 +2712,7 @@
   {
     "id": 32362,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 270,
+    "segment_index": 271,
     "start_time": 1613.593,
     "end_time": 1617.761,
     "content": "[54:20]  It tossed the people as if they were decaying palm trees.",
@@ -2712,7 +2722,7 @@
   {
     "id": 32363,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 271,
+    "segment_index": 272,
     "start_time": 1619.376,
     "end_time": 1627.685,
     "content": "Over there, you don't have tumbling weeds. Tumble weeds? Is that the name? They have tumble decaying palm trees. Palm trunks.",
@@ -2722,7 +2732,7 @@
   {
     "id": 32364,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 272,
+    "segment_index": 273,
     "start_time": 1630.985,
     "end_time": 1634.258,
     "content": "[54:21]  How terrible was My retribution and warnings!",
@@ -2732,7 +2742,7 @@
   {
     "id": 32365,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 273,
+    "segment_index": 274,
     "start_time": 1634.258,
     "end_time": 1640,
     "content": "[54:22]  We have made the Quran easy to remember. Is there anyone who wishes to learn?",
@@ -2742,7 +2752,7 @@
   {
     "id": 32366,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 274,
+    "segment_index": 275,
     "start_time": 1640,
     "end_time": 1641.434,
     "content": "So, what do we learn from this?",
@@ -2752,7 +2762,7 @@
   {
     "id": 32367,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 275,
+    "segment_index": 276,
     "start_time": 1643.037,
     "end_time": 1647.818,
     "content": "We learn from this that when the human being persists in ignoring God's",
@@ -2762,7 +2772,7 @@
   {
     "id": 32368,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 276,
+    "segment_index": 277,
     "start_time": 1647.818,
     "end_time": 1652.363,
     "content": "warnings and teachings which are for our benefit, God doesn't need them at all.",
@@ -2772,7 +2782,7 @@
   {
     "id": 32369,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 277,
+    "segment_index": 278,
     "start_time": 1652.363,
     "end_time": 1664.403,
     "content": "God doesn't need us. God doesn't need anybody. When we ignore those, we incur retribution, inevitably.",
@@ -2782,7 +2792,7 @@
   {
     "id": 32370,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 278,
+    "segment_index": 279,
     "start_time": 1666.807,
     "end_time": 1670.221,
     "content": "There is no such thing in God's kingdom. If you follow God's commandments,",
@@ -2792,7 +2802,7 @@
   {
     "id": 32371,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 279,
+    "segment_index": 280,
     "start_time": 1670.221,
     "end_time": 1675.709,
     "content": "you're guaranteed perfect health, perfect wealth, perfect peace of mind. You're guaranteed.",
@@ -2802,7 +2812,7 @@
   {
     "id": 32372,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 280,
+    "segment_index": 281,
     "start_time": 1677.17,
     "end_time": 1678.557,
     "content": "No misery whatsoever.",
@@ -2812,7 +2822,7 @@
   {
     "id": 32373,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 281,
+    "segment_index": 282,
     "start_time": 1680.867,
     "end_time": 1684.988,
     "content": "This is repeated throughout the Quran and supported by the mathematical code.",
@@ -2822,7 +2832,7 @@
   {
     "id": 32374,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 282,
+    "segment_index": 283,
     "start_time": 1686.988,
     "end_time": 1688.988,
     "content": "But it takes a believer to believe that.",
@@ -2832,7 +2842,7 @@
   {
     "id": 32375,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 283,
+    "segment_index": 284,
     "start_time": 1691.439,
     "end_time": 1697.493,
     "content": "So, when these people continue to ignore God's warnings, they incur the retribution at the end.",
@@ -2842,7 +2852,7 @@
   {
     "id": 32376,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 284,
+    "segment_index": 285,
     "start_time": 1701.83,
     "end_time": 1703.311,
     "content": "There is a mechanism for it.",
@@ -2852,7 +2862,7 @@
   {
     "id": 32377,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 285,
+    "segment_index": 286,
     "start_time": 1707.176,
     "end_time": 1713.23,
     "content": "[54:22]  We have made the Quran easy to remember. Is there anyone who wishes to learn?",
@@ -2862,7 +2872,7 @@
   {
     "id": 32378,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 286,
+    "segment_index": 287,
     "start_time": 1713.664,
     "end_time": 1720.86,
     "content": "The fortunate ones will learn from the Quran and will have perfect happiness here and forever.",
@@ -2872,7 +2882,7 @@
   {
     "id": 32379,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 287,
+    "segment_index": 288,
     "start_time": 1723.359,
     "end_time": 1727.76,
     "content": "And all this is backed by real life experiences.",
@@ -2882,7 +2892,7 @@
   {
     "id": 32380,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 288,
+    "segment_index": 289,
     "start_time": 1734.831,
     "end_time": 1738.764,
     "content": "[54:23]  Thamûd ...",
@@ -2892,7 +2902,7 @@
   {
     "id": 32381,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 289,
+    "segment_index": 290,
     "start_time": 1738.764,
     "end_time": 1740,
     "content": "another group of disbelievers",
@@ -2902,7 +2912,7 @@
   {
     "id": 32382,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 290,
+    "segment_index": 291,
     "start_time": 1740,
     "end_time": 1741.481,
     "content": "[54:23]  ... rejected the warnings.",
@@ -2912,7 +2922,7 @@
   {
     "id": 32383,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 291,
+    "segment_index": 292,
     "start_time": 1742.235,
     "end_time": 1747.534,
     "content": "[54:24]  They said, \"Shall we follow a man like us? We will then be wrong and stupid.",
@@ -2922,7 +2932,7 @@
   {
     "id": 32384,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 292,
+    "segment_index": 293,
     "start_time": 1749.534,
     "end_time": 1757.474,
     "content": "[54:25]  \"Was he chosen out of all of us to receive the message? He is a flagrant liar.\"",
@@ -2932,7 +2942,7 @@
   {
     "id": 32385,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 293,
+    "segment_index": 294,
     "start_time": 1758.04,
     "end_time": 1762.397,
     "content": "[54:26]  They will find out tomorrow who the flagrant liar is.",
@@ -2942,7 +2952,7 @@
   {
     "id": 32386,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 294,
+    "segment_index": 295,
     "start_time": 1763.245,
     "end_time": 1768.875,
     "content": "[54:27]  We sent the camel as a test for them. Just watch them and be patient.",
@@ -2952,7 +2962,7 @@
   {
     "id": 32387,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 295,
+    "segment_index": 296,
     "start_time": 1769.535,
     "end_time": 1771.959,
     "content": "[54:28]  Tell them ...",
@@ -2962,7 +2972,7 @@
   {
     "id": 32388,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 296,
+    "segment_index": 297,
     "start_time": 1771.959,
     "end_time": 1774.666,
     "content": "This was directed to their messenger, Saleh.",
@@ -2972,7 +2982,7 @@
   {
     "id": 32389,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 297,
+    "segment_index": 298,
     "start_time": 1775.609,
     "end_time": 1781.285,
     "content": "[54:28]  Tell them that the water shall be shared between them at specific times.",
@@ -2982,7 +2992,7 @@
   {
     "id": 32390,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 298,
+    "segment_index": 299,
     "start_time": 1781.992,
     "end_time": 1788.329,
     "content": "[54:29]  They consulted their leader after receiving the message. He slaughtered the camel.",
@@ -2992,7 +3002,7 @@
   {
     "id": 32391,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 299,
+    "segment_index": 300,
     "start_time": 1789.177,
     "end_time": 1791.554,
     "content": "[54:30]  How terrible was My retribution and warnings!",
@@ -3002,7 +3012,7 @@
   {
     "id": 32392,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 300,
+    "segment_index": 301,
     "start_time": 1792.355,
     "end_time": 1797.608,
     "content": "[54:31]  We sent upon them one strike, whereupon they became like harvested hay.",
@@ -3012,7 +3022,7 @@
   {
     "id": 32393,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 301,
+    "segment_index": 302,
     "start_time": 1798.739,
     "end_time": 1802.86,
     "content": "[54:32]  We have made the Quran easy to remember. Is there anyone who wishes to learn?",
@@ -3022,7 +3032,7 @@
   {
     "id": 32394,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 302,
+    "segment_index": 303,
     "start_time": 1803.379,
     "end_time": 1808.113,
     "content": "As you know, God's signs suited every age.",
@@ -3032,7 +3042,7 @@
   {
     "id": 32395,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 303,
+    "segment_index": 304,
     "start_time": 1810,
     "end_time": 1818.694,
     "content": "In that age, a camel that knew when to eat and when to drink and what day was a miracle for those people. They were dealing with camels a lot.",
@@ -3042,7 +3052,7 @@
   {
     "id": 32396,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 304,
+    "segment_index": 305,
     "start_time": 1819.495,
     "end_time": 1825.549,
     "content": "At the time of Moses, magic was a big deal. At the time of Jesus, healing the sick was a big deal.",
@@ -3052,7 +3062,7 @@
   {
     "id": 32397,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 305,
+    "segment_index": 306,
     "start_time": 1841.859,
     "end_time": 1846.499,
     "content": "(unintelligible) damage or something.",
@@ -3062,7 +3072,7 @@
   {
     "id": 32398,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 306,
+    "segment_index": 307,
     "start_time": 1846.499,
     "end_time": 1851.186,
     "content": "But if you're in public property, you can sit wherever (unintelligible) you want.",
@@ -3072,7 +3082,7 @@
   {
     "id": 32399,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 307,
+    "segment_index": 308,
     "start_time": 1851.186,
     "end_time": 1851.55641666667,
     "content": "Yeah.",
@@ -3082,7 +3092,7 @@
   {
     "id": 77254,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 308,
+    "segment_index": 309,
     "start_time": 1851.55641666667,
     "end_time": 1854.14933333333,
     "content": "(unintelligible) whatever you want.",
@@ -3092,7 +3102,7 @@
   {
     "id": 32400,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 309,
+    "segment_index": 310,
     "start_time": 1854.742,
     "end_time": 1858.486,
     "content": "You're (unintelligible). You can sit wherever you want.",
@@ -3102,7 +3112,7 @@
   {
     "id": 32401,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 310,
+    "segment_index": 311,
     "start_time": 1859.382,
     "end_time": 1866.331,
     "content": "I mean, that guy that wears 666 on his forehead, is gonna change his kids I'm serious.",
@@ -3112,7 +3122,7 @@
   {
     "id": 32402,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 311,
+    "segment_index": 312,
     "start_time": 1866.331,
     "end_time": 1867.27217647059,
     "content": "(unintelligible)",
@@ -3122,7 +3132,7 @@
   {
     "id": 76485,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 312,
+    "segment_index": 313,
     "start_time": 1867.27217647059,
     "end_time": 1867.86041176471,
     "content": "That's it.",
@@ -3132,7 +3142,7 @@
   {
     "id": 32403,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 313,
+    "segment_index": 314,
     "start_time": 1868.573,
     "end_time": 1872.882,
     "content": "And that what makes it... that's, but it's founded upon the freedom of speech.",
@@ -3142,7 +3152,7 @@
   {
     "id": 32404,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 314,
+    "segment_index": 315,
     "start_time": 1874.013,
     "end_time": 1881.791,
     "content": "(unintelligible) like the fundamental (unintelligible). That's probably how (unintelligible).",
@@ -3152,7 +3162,7 @@
   {
     "id": 32405,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 315,
+    "segment_index": 316,
     "start_time": 1881.791,
     "end_time": 1884.498,
     "content": "Yeah. Let's look at 41, Ok? Let's resume.",
@@ -3162,7 +3172,7 @@
   {
     "id": 32406,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 316,
+    "segment_index": 317,
     "start_time": 1885.912,
     "end_time": 1887.582,
     "content": "We'll take another break. 41 says,",
@@ -3172,7 +3182,7 @@
   {
     "id": 32407,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 317,
+    "segment_index": 318,
     "start_time": 1887.582,
     "end_time": 1889.582,
     "content": "[54:41]  Pharaoh's people received the warnings.",
@@ -3182,7 +3192,7 @@
   {
     "id": 32408,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 318,
+    "segment_index": 319,
     "start_time": 1890.76,
     "end_time": 1898.982,
     "content": "[54:42]  They rejected all our signs. And consequently, we punished them as an Almighty, Omnipotent can punish.",
@@ -3192,7 +3202,7 @@
   {
     "id": 32409,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 319,
+    "segment_index": 320,
     "start_time": 1899.595,
     "end_time": 1906.262,
     "content": "Because read another parts of the Quran about the plagues that the Egyptians suffered and they still didn't learn.",
@@ -3202,7 +3212,7 @@
   {
     "id": 32410,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 320,
+    "segment_index": 321,
     "start_time": 1906.796,
     "end_time": 1913.396,
     "content": "Every plague that came, they said to Moses \"if you relieve this one, we'll believe.\" And as soon as told \"relieved\", they reverted.",
@@ -3212,7 +3222,7 @@
   {
     "id": 32411,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 321,
+    "segment_index": 322,
     "start_time": 1916.79,
     "end_time": 1917.706,
     "content": "43,",
@@ -3222,7 +3232,7 @@
   {
     "id": 32412,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 322,
+    "segment_index": 323,
     "start_time": 1920,
     "end_time": 1925.441,
     "content": "[54:43]  Are your disbelievers any better than those? Did you receive a pardon in the scriptures?",
@@ -3232,7 +3242,7 @@
   {
     "id": 32413,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 323,
+    "segment_index": 324,
     "start_time": 1926,
     "end_time": 1932.042,
     "content": "So, God is saying \"Are the disbelievers of today anything special? Why should they, why should they get away with it?\"",
@@ -3242,7 +3252,7 @@
   {
     "id": 32414,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 324,
+    "segment_index": 325,
     "start_time": 1932.466,
     "end_time": 1934.466,
     "content": "Send the kids all inside.",
@@ -3252,7 +3262,7 @@
   {
     "id": 32415,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 325,
+    "segment_index": 326,
     "start_time": 1939.631,
     "end_time": 1946.727,
     "content": "43 is very important because it says that the same fate",
@@ -3262,7 +3272,7 @@
   {
     "id": 32416,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 326,
+    "segment_index": 327,
     "start_time": 1946.727,
     "end_time": 1952.514,
     "content": "that those disbelievers suffered, remember we had 1400 years without any messengers.",
@@ -3272,7 +3282,7 @@
   {
     "id": 32417,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 327,
+    "segment_index": 328,
     "start_time": 1954.022,
     "end_time": 1955.503,
     "content": "So, this is a crucial time.",
@@ -3282,7 +3292,7 @@
   {
     "id": 32418,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 328,
+    "segment_index": 329,
     "start_time": 1960,
     "end_time": 1967.044,
     "content": "There's a rule in Quran that says \"we do not send retribution unless we send a messenger.\"",
@@ -3292,7 +3302,7 @@
   {
     "id": 32419,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 329,
+    "segment_index": 330,
     "start_time": 1968.128,
     "end_time": 1969.327,
     "content": "Sura 17",
@@ -3302,7 +3312,7 @@
   {
     "id": 32420,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 330,
+    "segment_index": 331,
     "start_time": 1969.798,
     "end_time": 1972.552,
     "content": "(17:15) وَمَا كُنَّا مُعَذِّبِينَ حَتَّىٰ نَبْعَثَ رَسُولًۭا",
@@ -3312,7 +3322,7 @@
   {
     "id": 32421,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 331,
+    "segment_index": 332,
     "start_time": 1973.327,
     "end_time": 1980.654,
     "content": "So, all the signs are here for a terrible, terrible retribution coming to the, the Muslim world.",
@@ -3322,7 +3332,7 @@
   {
     "id": 32422,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 332,
+    "segment_index": 333,
     "start_time": 1985.698,
     "end_time": 1986.708,
     "content": "44,",
@@ -3332,7 +3342,7 @@
   {
     "id": 32423,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 333,
+    "segment_index": 334,
     "start_time": 1988.216,
     "end_time": 1990.216,
     "content": "[54:44]  Do they say, \"We are victorious?\"",
@@ -3342,7 +3352,7 @@
   {
     "id": 32424,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 334,
+    "segment_index": 335,
     "start_time": 1990.216,
     "end_time": 1993.772,
     "content": "[54:45]  Indeed, they will be defeated; they will flee.",
@@ -3352,7 +3362,7 @@
   {
     "id": 32425,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 335,
+    "segment_index": 336,
     "start_time": 1994.809,
     "end_time": 2000,
     "content": "[54:46]  The Hour awaits them. The Hour will be far worse and more devastating.",
@@ -3362,7 +3372,7 @@
   {
     "id": 32426,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 336,
+    "segment_index": 337,
     "start_time": 2000.99,
     "end_time": 2004.31,
     "content": "[54:47]  The guilty ones are in total loss and stupidity.",
@@ -3372,7 +3382,7 @@
   {
     "id": 32427,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 337,
+    "segment_index": 338,
     "start_time": 2004.31,
     "end_time": 2005.556,
     "content": "Number 47.",
@@ -3382,7 +3392,7 @@
   {
     "id": 32428,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 338,
+    "segment_index": 339,
     "start_time": 2006.687,
     "end_time": 2014.391,
     "content": "[54:48]  They day will come when they are dragged into the hellfire, forcibly. They have deserved the agony of retribution.",
@@ -3392,7 +3402,7 @@
   {
     "id": 32429,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 339,
+    "segment_index": 340,
     "start_time": 2014.391,
     "end_time": 2017.569,
     "content": "They have incurred the agony of retribution.",
@@ -3402,7 +3412,7 @@
   {
     "id": 32430,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 340,
+    "segment_index": 341,
     "start_time": 2017.805,
     "end_time": 2020.606,
     "content": "[54:49]  We have created everything in exact measure.",
@@ -3412,7 +3422,7 @@
   {
     "id": 32431,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 341,
+    "segment_index": 342,
     "start_time": 2023.529,
     "end_time": 2027.085,
     "content": "Now, let me go back to this 49 and stop there for a while.",
@@ -3422,7 +3432,7 @@
   {
     "id": 32432,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 342,
+    "segment_index": 343,
     "start_time": 2027.556,
     "end_time": 2028.189,
     "content": "God says,",
@@ -3432,7 +3442,7 @@
   {
     "id": 32433,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 343,
+    "segment_index": 344,
     "start_time": 2028.189,
     "end_time": 2030.755,
     "content": "[54:49]  We have created everything in exact measure.",
@@ -3442,7 +3452,7 @@
   {
     "id": 32434,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 344,
+    "segment_index": 345,
     "start_time": 2031.038,
     "end_time": 2033.415,
     "content": "And this includes the letters of the Quran.",
@@ -3452,7 +3462,7 @@
   {
     "id": 32435,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 345,
+    "segment_index": 346,
     "start_time": 2037.752,
     "end_time": 2040.459,
     "content": "Because the word here, the key word is \"everything.\"",
@@ -3462,7 +3472,7 @@
   {
     "id": 32436,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 346,
+    "segment_index": 347,
     "start_time": 2042.722,
     "end_time": 2053.49,
     "content": "Everything was calculated. Everything is mathematically controlled, composed including you and me, your body, 209 bones, 19 x 11,",
@@ -3472,7 +3482,7 @@
   {
     "id": 32437,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 347,
+    "segment_index": 348,
     "start_time": 2053.49,
     "end_time": 2061.14,
     "content": "the full term fetus, 266 days in the womb, 19 x 14,",
@@ -3482,7 +3492,7 @@
   {
     "id": 32438,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 348,
+    "segment_index": 349,
     "start_time": 2061.14,
     "end_time": 2069.374,
     "content": "the sun, the moon, the earth lining up in the same position every 19 years. All these are scientific, established scientific facts with the same common denominator.",
@@ -3492,7 +3502,7 @@
   {
     "id": 32439,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 349,
+    "segment_index": 350,
     "start_time": 2072.344,
     "end_time": 2075.098,
     "content": "[54:49]  We have created everything in exact measure.",
@@ -3502,7 +3512,7 @@
   {
     "id": 32440,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 350,
+    "segment_index": 351,
     "start_time": 2076.654,
     "end_time": 2079.125,
     "content": "I hope I can find a better translation for this verse.",
@@ -3512,7 +3522,7 @@
   {
     "id": 32441,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 351,
+    "segment_index": 352,
     "start_time": 2080.633,
     "end_time": 2081.738,
     "content": "Those who speak Arabic",
@@ -3522,7 +3532,7 @@
   {
     "id": 32442,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 352,
+    "segment_index": 353,
     "start_time": 2081.738,
     "end_time": 2084.076,
     "content": "(54:49) إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍۢ",
@@ -3532,7 +3542,7 @@
   {
     "id": 32443,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 353,
+    "segment_index": 354,
     "start_time": 2084.076,
     "end_time": 2085.746,
     "content": "كُلَّ شَىْءٍ Everything.",
@@ -3542,7 +3552,7 @@
   {
     "id": 32444,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 354,
+    "segment_index": 355,
     "start_time": 2088.082,
     "end_time": 2090.082,
     "content": "According to exact calculations.",
@@ -3552,7 +3562,7 @@
   {
     "id": 32445,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 355,
+    "segment_index": 356,
     "start_time": 2093.193,
     "end_time": 2097.644,
     "content": "We know now that the letters of the Quran, every single letter is mathematically composed.",
@@ -3562,7 +3572,7 @@
   {
     "id": 32446,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 356,
+    "segment_index": 357,
     "start_time": 2101.462,
     "end_time": 2112.654,
     "content": "Every single letter. And we have a few illustrations in the Quran with some profound unique spellings like \"Mecca\", see this is profound special word.",
@@ -3572,7 +3582,7 @@
   {
     "id": 32447,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 357,
+    "segment_index": 358,
     "start_time": 2114.654,
     "end_time": 2118.445,
     "content": "When it is written with \"Becca\", you know why it is \"Becca\" with a \"B\" instead of \"M\".",
@@ -3582,7 +3592,7 @@
   {
     "id": 32448,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 358,
+    "segment_index": 359,
     "start_time": 2125.139,
     "end_time": 2129.307,
     "content": "So, the key word here is \"everything.\" See, your fingers are measured.",
@@ -3592,7 +3602,7 @@
   {
     "id": 32449,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 359,
+    "segment_index": 360,
     "start_time": 2130.91,
     "end_time": 2138.095,
     "content": "So, the middle finger is longer than the rest of them because when you, when you fold your fingers, they become the same, the same line.",
@@ -3602,7 +3612,7 @@
   {
     "id": 32450,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 360,
+    "segment_index": 361,
     "start_time": 2138.472,
     "end_time": 2140.943,
     "content": "They become equal. They're designed this way.",
@@ -3612,7 +3622,7 @@
   {
     "id": 32451,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 361,
+    "segment_index": 362,
     "start_time": 2142.499,
     "end_time": 2143.603,
     "content": "So, you can have a good fist.",
@@ -3622,7 +3632,7 @@
   {
     "id": 32452,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 362,
+    "segment_index": 363,
     "start_time": 2145.583,
     "end_time": 2148.573,
     "content": "If they're even here and then you fold your fingers,...",
@@ -3632,7 +3642,7 @@
   {
     "id": 32453,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 363,
+    "segment_index": 364,
     "start_time": 2151.543,
     "end_time": 2152.412,
     "content": "It's true.",
@@ -3642,7 +3652,7 @@
   {
     "id": 32454,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 364,
+    "segment_index": 365,
     "start_time": 2153.826,
     "end_time": 2155.826,
     "content": "Yes, you have a hole in there, you cannot hold anything.",
@@ -3652,7 +3662,7 @@
   {
     "id": 32455,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 365,
+    "segment_index": 366,
     "start_time": 2157.617,
     "end_time": 2159.24,
     "content": "M&amp;Ms will fall through, you know.",
@@ -3662,7 +3672,7 @@
   {
     "id": 32456,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 366,
+    "segment_index": 367,
     "start_time": 2160.843,
     "end_time": 2162.136,
     "content": "They'll melt in your hand.",
@@ -3672,7 +3682,7 @@
   {
     "id": 32457,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 367,
+    "segment_index": 368,
     "start_time": 2166.567,
     "end_time": 2171.961,
     "content": "Yeah, I mean, if your fingers were even at the top and you fold them, you cannot hold anything, it'll be like this.",
@@ -3682,7 +3692,7 @@
   {
     "id": 32458,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 368,
+    "segment_index": 369,
     "start_time": 2172.244,
     "end_time": 2174.244,
     "content": "(unintelligible)",
@@ -3692,7 +3702,7 @@
   {
     "id": 32459,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 369,
+    "segment_index": 370,
     "start_time": 2175.187,
     "end_time": 2176.527,
     "content": "They'll have to redesign.",
@@ -3702,7 +3712,7 @@
   {
     "id": 32460,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 370,
+    "segment_index": 371,
     "start_time": 2176.904,
     "end_time": 2178.527,
     "content": "They'll have to redesign M&amp;M.",
@@ -3712,7 +3722,7 @@
   {
     "id": 32461,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 371,
+    "segment_index": 372,
     "start_time": 2182.722,
     "end_time": 2185.099,
     "content": "How about if you have just four fingers and no thumb?",
@@ -3722,7 +3732,7 @@
   {
     "id": 32462,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 372,
+    "segment_index": 373,
     "start_time": 2185.804,
     "end_time": 2189.654,
     "content": "There are many things you cannot hold. See, how you hold the radio here. You take it for granted, right?",
@@ -3732,7 +3742,7 @@
   {
     "id": 32463,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 373,
+    "segment_index": 374,
     "start_time": 2190.55,
     "end_time": 2195.106,
     "content": "But if you have only the four fingers, it's gonna be kind of difficult to (unintelligible).",
@@ -3742,7 +3752,7 @@
   {
     "id": 32464,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 374,
+    "segment_index": 375,
     "start_time": 2195.672,
     "end_time": 2196.588,
     "content": "Hey, wait a minute.",
@@ -3752,7 +3762,7 @@
   {
     "id": 32465,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 375,
+    "segment_index": 376,
     "start_time": 2197.436,
     "end_time": 2198.123,
     "content": "See?",
@@ -3762,7 +3772,7 @@
   {
     "id": 32466,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 376,
+    "segment_index": 377,
     "start_time": 2198.5,
     "end_time": 2200,
     "content": "You have to hold it like that.",
@@ -3772,7 +3782,7 @@
   {
     "id": 32467,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 377,
+    "segment_index": 378,
     "start_time": 2202.836,
     "end_time": 2205.609,
     "content": "This thumb is very important to hold things.",
@@ -3782,7 +3792,7 @@
   {
     "id": 32468,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 378,
+    "segment_index": 379,
     "start_time": 2206.316,
     "end_time": 2209.777,
     "content": "Everything was created by exact measure.",
@@ -3792,7 +3802,7 @@
   {
     "id": 32469,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 379,
+    "segment_index": 380,
     "start_time": 2212.02,
     "end_time": 2213.493,
     "content": "Now, don't ask me about your toes.",
@@ -3802,7 +3812,7 @@
   {
     "id": 32470,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 380,
+    "segment_index": 381,
     "start_time": 2214.766,
     "end_time": 2215.635,
     "content": "I don't know.",
@@ -3812,7 +3822,7 @@
   {
     "id": 32471,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 381,
+    "segment_index": 382,
     "start_time": 2222.14,
     "end_time": 2223.339,
     "content": "Let's look at 50.",
@@ -3822,7 +3832,7 @@
   {
     "id": 32472,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 382,
+    "segment_index": 383,
     "start_time": 2226.262,
     "end_time": 2230.336,
     "content": "[54:50]  Whatever we will is done within the blink of an eye.",
@@ -3832,7 +3842,7 @@
   {
     "id": 32473,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 383,
+    "segment_index": 384,
     "start_time": 2232.033,
     "end_time": 2238.464,
     "content": "This is why when God tells you that if you follow His commandments, you're gonna have a perfect life,",
@@ -3842,7 +3852,7 @@
   {
     "id": 32474,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 384,
+    "segment_index": 385,
     "start_time": 2238.464,
     "end_time": 2240.983,
     "content": "you know that you're gonna have a perfect life.",
@@ -3852,7 +3862,7 @@
   {
     "id": 32475,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 385,
+    "segment_index": 386,
     "start_time": 2244.754,
     "end_time": 2252.363,
     "content": "That if, if you happen to contract cancer or AIDS or anything, God, in the blink of an eye can go and remove it.",
@@ -3862,7 +3872,7 @@
   {
     "id": 32476,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 386,
+    "segment_index": 387,
     "start_time": 2255.003,
     "end_time": 2257.427,
     "content": "Some of the angels are the best surgeons in the world.",
@@ -3872,7 +3882,7 @@
   {
     "id": 32477,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 387,
+    "segment_index": 388,
     "start_time": 2258.275,
     "end_time": 2262.679,
     "content": "Without surgery, without anesthetics, they will remove them.",
@@ -3882,7 +3892,7 @@
   {
     "id": 32478,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 388,
+    "segment_index": 389,
     "start_time": 2264.989,
     "end_time": 2269.723,
     "content": "I'm speaking from life experiences, Martha. Don't, don't, don't wonder about that.",
@@ -3892,7 +3902,7 @@
   {
     "id": 32479,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 389,
+    "segment_index": 390,
     "start_time": 2269.723,
     "end_time": 2270.733,
     "content": "I didn't.",
@@ -3902,7 +3912,7 @@
   {
     "id": 32480,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 390,
+    "segment_index": 391,
     "start_time": 2271.44,
     "end_time": 2273.016,
     "content": "I think (unintelligible)",
@@ -3912,7 +3922,7 @@
   {
     "id": 32481,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 391,
+    "segment_index": 392,
     "start_time": 2276.174,
     "end_time": 2278.174,
     "content": "(unintelligible)",
@@ -3922,7 +3932,7 @@
   {
     "id": 32482,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 392,
+    "segment_index": 393,
     "start_time": 2278.174,
     "end_time": 2278.76,
     "content": "Really?",
@@ -3932,7 +3942,7 @@
   {
     "id": 32483,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 393,
+    "segment_index": 394,
     "start_time": 2280.519,
     "end_time": 2281.722,
     "content": "Alright. Alright.",
@@ -3942,7 +3952,7 @@
   {
     "id": 32484,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 394,
+    "segment_index": 395,
     "start_time": 2282.146,
     "end_time": 2283.58,
     "content": "I misread your eyes.",
@@ -3952,7 +3962,7 @@
   {
     "id": 32485,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 395,
+    "segment_index": 396,
     "start_time": 2288.341,
     "end_time": 2289.445,
     "content": "51,",
@@ -3962,7 +3972,7 @@
   {
     "id": 32486,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 396,
+    "segment_index": 397,
     "start_time": 2290,
     "end_time": 2292.189,
     "content": "[54:51]  We have destroyed your counterparts. ...",
@@ -3972,7 +3982,7 @@
   {
     "id": 32487,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 397,
+    "segment_index": 398,
     "start_time": 2292.189,
     "end_time": 2294.189,
     "content": "Listen to this to the disbelievers.",
@@ -3982,7 +3992,7 @@
   {
     "id": 32488,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 398,
+    "segment_index": 399,
     "start_time": 2294.189,
     "end_time": 2296.755,
     "content": "[54:51]  ... Is there anyone who wishes to learn?",
@@ -3992,7 +4002,7 @@
   {
     "id": 32489,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 399,
+    "segment_index": 400,
     "start_time": 2298.075,
     "end_time": 2302.526,
     "content": "[54:52]  Everything they did is recorded in the scriptures.",
@@ -4002,7 +4012,7 @@
   {
     "id": 32490,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 400,
+    "segment_index": 401,
     "start_time": 2303.752,
     "end_time": 2306.506,
     "content": "[54:53]  Everything, small or large, is written down.",
@@ -4012,7 +4022,7 @@
   {
     "id": 32491,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 401,
+    "segment_index": 402,
     "start_time": 2307.637,
     "end_time": 2310.391,
     "content": "[54:54]  The righteous have deserved gardens and streams.",
@@ -4022,7 +4032,7 @@
   {
     "id": 32492,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 402,
+    "segment_index": 403,
     "start_time": 2311.334,
     "end_time": 2317.011,
     "content": "[54:55]  They occupy an honorable position at the Omnipotent King.",
@@ -4032,7 +4042,7 @@
   {
     "id": 32493,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 403,
+    "segment_index": 404,
     "start_time": 2317.526,
     "end_time": 2319.772,
     "content": "You see, the Sura had to end with good news.",
@@ -4042,7 +4052,7 @@
   {
     "id": 32494,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 404,
+    "segment_index": 405,
     "start_time": 2321.61,
     "end_time": 2331.548,
     "content": "People who think that the Quran is full of Hell and fire and brimstone should know that the Quran equally mentions the Hell and Heaven.",
@@ -4052,7 +4062,7 @@
   {
     "id": 32495,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 405,
+    "segment_index": 406,
     "start_time": 2334.188,
     "end_time": 2339.227,
     "content": "They happen to see the place where they're going, that's why. They don't see anything else.",
@@ -4062,7 +4072,7 @@
   {
     "id": 32496,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 406,
+    "segment_index": 407,
     "start_time": 2343.186,
     "end_time": 2344.375,
     "content": "Are there any questions?",
@@ -4072,7 +4082,7 @@
   {
     "id": 32497,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 407,
+    "segment_index": 408,
     "start_time": 2345.318,
     "end_time": 2350.16117894737,
     "content": "Dr. Khalifa, the last, there was a question about amino acids.",
@@ -4082,7 +4092,7 @@
   {
     "id": 76486,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 408,
+    "segment_index": 409,
     "start_time": 2350.16117894737,
     "end_time": 2351.95784210526,
     "content": "Yeah, (unintelligible).",
@@ -4092,7 +4102,7 @@
   {
     "id": 32498,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 409,
+    "segment_index": 410,
     "start_time": 2352.739,
     "end_time": 2354.268,
     "content": "What about amino acids?",
@@ -4102,7 +4112,7 @@
   {
     "id": 32499,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 410,
+    "segment_index": 411,
     "start_time": 2354.975,
     "end_time": 2360.51,
     "content": "Like, you were talking about the bones in the body (unintelligible).",
@@ -4112,7 +4122,7 @@
   {
     "id": 32500,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 411,
+    "segment_index": 412,
     "start_time": 2361.547,
     "end_time": 2365.999,
     "content": "Just, there's something information that you gave us about amino acids",
@@ -4122,7 +4132,7 @@
   {
     "id": 32501,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 412,
+    "segment_index": 413,
     "start_time": 2365.999,
     "end_time": 2366.65927777778,
     "content": "You wrote down?",
@@ -4132,7 +4142,7 @@
   {
     "id": 76487,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 413,
+    "segment_index": 414,
     "start_time": 2366.65927777778,
     "end_time": 2367.93581481481,
     "content": "I have it, I have it in my...",
@@ -4142,7 +4152,7 @@
   {
     "id": 32502,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 414,
+    "segment_index": 415,
     "start_time": 2368.376,
     "end_time": 2373.911,
     "content": "There's something important in our bodies, every, every creature. it's called messenger RNA.",
@@ -4152,7 +4162,7 @@
   {
     "id": 32503,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 415,
+    "segment_index": 416,
     "start_time": 2374.524,
     "end_time": 2383.925,
     "content": "Messenger RNA, its function is to go pick out an amino acid and link it with another one to create protein.",
@@ -4162,7 +4172,7 @@
   {
     "id": 32504,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 416,
+    "segment_index": 417,
     "start_time": 2385.198,
     "end_time": 2395.447,
     "content": "The messenger amino acid has a tail of 19 amino acids. This is what they discovered recently. So, it's God's stamp on it.",
@@ -4172,7 +4182,7 @@
   {
     "id": 32505,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 417,
+    "segment_index": 418,
     "start_time": 2400.617,
     "end_time": 2410.471,
     "content": "19 amino acids connected with it. So, apparently, messenger amino acid, messenger RNA has a tail of 19 amino acids,",
@@ -4182,7 +4192,7 @@
   {
     "id": 32506,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 418,
+    "segment_index": 419,
     "start_time": 2410.471,
     "end_time": 2415.535,
     "content": "Then, it goes and links with one and carries it to another, to the site of protein synthesis.",
@@ -4192,7 +4202,7 @@
   {
     "id": 32507,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 419,
+    "segment_index": 420,
     "start_time": 2417.228,
     "end_time": 2419.076,
     "content": "This is why they call it messenger RNA.",
@@ -4202,7 +4212,7 @@
   {
     "id": 32508,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 420,
+    "segment_index": 421,
     "start_time": 2420,
     "end_time": 2423.413,
     "content": "It has 19 amino acids in for...",
@@ -4212,7 +4222,7 @@
   {
     "id": 32509,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 421,
+    "segment_index": 422,
     "start_time": 2423.413,
     "end_time": 2432.381,
     "content": "RNA does not have any amino acids in. RNA are nucleic acids, adenosine, guanine, and all four bases.",
@@ -4222,7 +4232,7 @@
   {
     "id": 32510,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 422,
+    "segment_index": 423,
     "start_time": 2432.381,
     "end_time": 2438.808,
     "content": "So, these four bases are in there in different proportions and different systems, depending on what creature you're talking about.",
@@ -4232,7 +4242,7 @@
   {
     "id": 32511,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 423,
+    "segment_index": 424,
     "start_time": 2439.326,
     "end_time": 2446.873,
     "content": "But the messenger RNA links itself with amino acids because it carries it from one place to the site of protein synthesis.",
@@ -4242,7 +4252,7 @@
   {
     "id": 32512,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 424,
+    "segment_index": 425,
     "start_time": 2447.816,
     "end_time": 2455.491,
     "content": "So, apparently, they found out that the messenger RNA carries 19 amino acids with it, back and forth,",
@@ -4252,7 +4262,7 @@
   {
     "id": 32513,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 425,
+    "segment_index": 426,
     "start_time": 2455.491,
     "end_time": 2461.733,
     "content": "as it goes and links with one amino acid and brings it to the site of synthesis. This is why they call it messenger RNA.",
@@ -4262,7 +4272,7 @@
   {
     "id": 32514,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 426,
+    "segment_index": 427,
     "start_time": 2462.252,
     "end_time": 2465.1,
     "content": "(unintelligible)",
@@ -4272,7 +4282,7 @@
   {
     "id": 32515,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 427,
+    "segment_index": 428,
     "start_time": 2465.1,
     "end_time": 2473.793,
     "content": "No, these are 19... No, these are not 19 different amino acids. These are 19 amino acids. Not, not 19 different amino acids.",
@@ -4282,7 +4292,7 @@
   {
     "id": 32516,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 428,
+    "segment_index": 429,
     "start_time": 2475.16,
     "end_time": 2476.924,
     "content": "There are 23 amino acids.",
@@ -4292,7 +4302,7 @@
   {
     "id": 32517,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 429,
+    "segment_index": 430,
     "start_time": 2478.924,
     "end_time": 2489.173,
     "content": "But the messenger RNA may have 3 tryptophans and 4 adenines and 6 other amino acids and so on.",
@@ -4302,7 +4312,7 @@
   {
     "id": 32518,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 430,
+    "segment_index": 431,
     "start_time": 2489.173,
     "end_time": 2491.597,
     "content": "So, they are not 19 of the same amino acids.",
@@ -4312,7 +4322,7 @@
   {
     "id": 32519,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 431,
+    "segment_index": 432,
     "start_time": 2491.927,
     "end_time": 2503.543,
     "content": "Also, you're not right because, okay, they say that there are 20 basic different amino acids, right?",
@@ -4322,7 +4332,7 @@
   {
     "id": 32520,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 432,
+    "segment_index": 433,
     "start_time": 2503.543,
     "end_time": 2508.701,
     "content": "But actually, there are 19 because the 20th one is not amino acid, it's (unintelligible) acid.",
@@ -4332,7 +4342,7 @@
   {
     "id": 32521,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 433,
+    "segment_index": 434,
     "start_time": 2509.408,
     "end_time": 2514.048,
     "content": "Therefore, there are 20 amino acids and one (unintelligible) acid.",
@@ -4342,7 +4352,7 @@
   {
     "id": 32522,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 434,
+    "segment_index": 435,
     "start_time": 2514.849,
     "end_time": 2516.425,
     "content": "19 amino acids.",
@@ -4352,7 +4362,7 @@
   {
     "id": 32523,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 435,
+    "segment_index": 436,
     "start_time": 2516.425,
     "end_time": 2520.358,
     "content": "(unintelligible)",
@@ -4362,7 +4372,7 @@
   {
     "id": 32524,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 436,
+    "segment_index": 437,
     "start_time": 2520.358,
     "end_time": 2525.563,
     "content": "Well, you know, there's a ring that forms between the B and the carbon.",
@@ -4372,7 +4382,7 @@
   {
     "id": 32525,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 437,
+    "segment_index": 438,
     "start_time": 2525.563,
     "end_time": 2528.789,
     "content": "(unintelligible)",
@@ -4382,7 +4392,7 @@
   {
     "id": 32526,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 438,
+    "segment_index": 439,
     "start_time": 2528.789,
     "end_time": 2530.365,
     "content": "I think there's a bubble (unintelligible).",
@@ -4392,7 +4402,7 @@
   {
     "id": 32527,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 439,
+    "segment_index": 440,
     "start_time": 2530.931,
     "end_time": 2533.214,
     "content": "It's called (unintelligible) acid. It's not called amino acid.",
@@ -4402,7 +4412,7 @@
   {
     "id": 32528,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 440,
+    "segment_index": 441,
     "start_time": 2533.214,
     "end_time": 2535.497,
     "content": "We don't have any other amino acid.",
@@ -4412,7 +4422,7 @@
   {
     "id": 32529,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 441,
+    "segment_index": 442,
     "start_time": 2535.497,
     "end_time": 2537.497,
     "content": "No, (unintelligible)",
@@ -4422,7 +4432,7 @@
   {
     "id": 32530,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 442,
+    "segment_index": 443,
     "start_time": 2538.895,
     "end_time": 2543.902,
     "content": "He's an organic chemist, so, it's okay. We have to use Mahmoud.",
@@ -4432,7 +4442,7 @@
   {
     "id": 32531,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 443,
+    "segment_index": 444,
     "start_time": 2546.07,
     "end_time": 2548.07,
     "content": "(unintelligible)",
@@ -4442,7 +4452,7 @@
   {
     "id": 32532,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 444,
+    "segment_index": 445,
     "start_time": 2548.07,
     "end_time": 2551.201,
     "content": "Maybe, you provide (unintelligible)",
@@ -4452,7 +4462,7 @@
   {
     "id": 32533,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 445,
+    "segment_index": 446,
     "start_time": 2551.201,
     "end_time": 2552.672,
     "content": "He may be pronouncing...",
@@ -4462,7 +4472,7 @@
   {
     "id": 32534,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 446,
+    "segment_index": 447,
     "start_time": 2552.672,
     "end_time": 2559.394,
     "content": "(unintelligible) acids (unintelligible). But the base is, there are 21 (unintelligible)",
@@ -4472,7 +4482,7 @@
   {
     "id": 32535,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 447,
+    "segment_index": 448,
     "start_time": 2559.394,
     "end_time": 2559.814875,
     "content": "Right.",
@@ -4482,7 +4492,7 @@
   {
     "id": 77255,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 448,
+    "segment_index": 449,
     "start_time": 2559.814875,
     "end_time": 2561.84910416667,
     "content": "(unintelligible) amino acids.",
@@ -4492,7 +4502,7 @@
   {
     "id": 32536,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 449,
+    "segment_index": 450,
     "start_time": 2562.761,
     "end_time": 2567.448,
     "content": "And they have functional (unintelligible)",
@@ -4502,7 +4512,7 @@
   {
     "id": 32537,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 450,
+    "segment_index": 451,
     "start_time": 2567.448,
     "end_time": 2572.936,
     "content": "So, amino acids (unintelligible)",
@@ -4512,7 +4522,7 @@
   {
     "id": 32538,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 451,
+    "segment_index": 452,
     "start_time": 2572.936,
     "end_time": 2578.317,
     "content": "When we say (unintelligible), it would be like we're saying that an apple, and an orange...",
@@ -4522,7 +4532,7 @@
   {
     "id": 32539,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 452,
+    "segment_index": 453,
     "start_time": 2578.317,
     "end_time": 2586.028,
     "content": "Yeah, apparently, they discovered that one of them, Mahmoud, has a double bond somewhere that, that does not conform to the amino group.",
@@ -4532,7 +4542,7 @@
   {
     "id": 32540,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 453,
+    "segment_index": 454,
     "start_time": 2586.028,
     "end_time": 2588.07720779221,
     "content": "The carbon, nitrogen, oxygen.",
@@ -4542,7 +4552,7 @@
   {
     "id": 76488,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 454,
+    "segment_index": 455,
     "start_time": 2588.07720779221,
     "end_time": 2590.55038961039,
     "content": "No, 20 of them are (unintelligible)",
@@ -4552,7 +4562,7 @@
   {
     "id": 32541,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 455,
+    "segment_index": 456,
     "start_time": 2591.469,
     "end_time": 2593.21864634146,
     "content": "Right, but this is why they call it (unintelligible).",
@@ -4562,7 +4572,7 @@
   {
     "id": 76489,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 456,
+    "segment_index": 457,
     "start_time": 2593.21864634146,
     "end_time": 2593.74684146341,
     "content": "(unintelligible)",
@@ -4572,7 +4582,7 @@
   {
     "id": 32542,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 457,
+    "segment_index": 458,
     "start_time": 2594.176,
     "end_time": 2599.052,
     "content": "(unintelligible)",
@@ -4582,7 +4592,7 @@
   {
     "id": 32543,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 458,
+    "segment_index": 459,
     "start_time": 2599.052,
     "end_time": 2601.288,
     "content": "But the argument for (unintelligible)",
@@ -4592,7 +4602,7 @@
   {
     "id": 32544,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 459,
+    "segment_index": 460,
     "start_time": 2601.288,
     "end_time": 2610.82,
     "content": "When you make a statement like this, if somebody doesn't know, that's fine. But if I go to a doctor, a biochemist, a scientist,",
@@ -4602,7 +4612,7 @@
   {
     "id": 32545,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 460,
+    "segment_index": 461,
     "start_time": 2610.82,
     "end_time": 2615.261,
     "content": "and tell him that (unintelligible) 19, and one's not a 19, it doesn't matter (unintelligible)",
@@ -4612,7 +4622,7 @@
   {
     "id": 32546,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 461,
+    "segment_index": 462,
     "start_time": 2615.261,
     "end_time": 2618.684,
     "content": "No, no, this was an article in Science or Scientific American, I forget.",
@@ -4622,7 +4632,7 @@
   {
     "id": 32547,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 462,
+    "segment_index": 463,
     "start_time": 2618.684,
     "end_time": 2627.991,
     "content": "No, what you're saying is different. That's fine, but your argument was praised, and it was mentioned that there are 19 (unintelligible) amino acids. It's just wrong.",
@@ -4632,7 +4642,7 @@
   {
     "id": 32548,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 463,
+    "segment_index": 464,
     "start_time": 2627.991,
     "end_time": 2629.991,
     "content": "No, 23.",
@@ -4642,7 +4652,7 @@
   {
     "id": 32549,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 464,
+    "segment_index": 465,
     "start_time": 2630.368,
     "end_time": 2637.223,
     "content": "So, you know, what, what you said, and I have to admit because I haven't seen the article, it was worthwhile. But...",
@@ -4652,7 +4662,7 @@
   {
     "id": 32550,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 465,
+    "segment_index": 466,
     "start_time": 2637.223,
     "end_time": 2638.22580555556,
     "content": "Well, we shouldn't just...",
@@ -4662,7 +4672,7 @@
   {
     "id": 76490,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 466,
+    "segment_index": 467,
     "start_time": 2638.22580555556,
     "end_time": 2639.49859722222,
     "content": "Basically, that was the argument.",
@@ -4672,7 +4682,7 @@
   {
     "id": 32551,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 467,
+    "segment_index": 468,
     "start_time": 2640,
     "end_time": 2644.687,
     "content": "And then, going back and trying to figure out the claims, that's (unintelligible).",
@@ -4682,7 +4692,7 @@
   {
     "id": 32552,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 468,
+    "segment_index": 469,
     "start_time": 2644.687,
     "end_time": 2645.05763829787,
     "content": "It was worse.",
@@ -4692,7 +4702,7 @@
   {
     "id": 77256,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 469,
+    "segment_index": 470,
     "start_time": 2645.05763829787,
     "end_time": 2645.62785106383,
     "content": "You know, in this...",
@@ -4702,7 +4712,7 @@
   {
     "id": 32553,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 470,
+    "segment_index": 471,
     "start_time": 2646.027,
     "end_time": 2653.401,
     "content": "In this Quran, we have enough miracle, mathematical miracle to drown the whole world. So, you don't need to go to amino acids or anything else.",
@@ -4712,7 +4722,7 @@
   {
     "id": 32554,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 471,
+    "segment_index": 472,
     "start_time": 2653.401,
     "end_time": 2660,
     "content": "No, I guess, you know, chemistry, or biology, or biochemistry generally,",
@@ -4722,7 +4732,7 @@
   {
     "id": 32555,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 472,
+    "segment_index": 473,
     "start_time": 2660,
     "end_time": 2666.232,
     "content": "it is, it is, so fascinating that you can believe there is, it is God created, or can say other (unintelligible).",
@@ -4732,7 +4742,7 @@
   {
     "id": 32556,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 473,
+    "segment_index": 474,
     "start_time": 2666.232,
     "end_time": 2671.796,
     "content": "If you are a believer, you can see evidence that is working on a system that functions well,",
@@ -4742,7 +4752,7 @@
   {
     "id": 32557,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 474,
+    "segment_index": 475,
     "start_time": 2671.796,
     "end_time": 2679.805,
     "content": "that there's something bigger than you can imagine. Basically, you do research (unintelligible)",
@@ -4752,7 +4762,7 @@
   {
     "id": 32558,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 475,
+    "segment_index": 476,
     "start_time": 2679.805,
     "end_time": 2685.50840298507,
     "content": "and it is so fascinating and so believable that, you know, you don't need any reason like this to convince someone",
@@ -4762,7 +4772,7 @@
   {
     "id": 76491,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 476,
+    "segment_index": 477,
     "start_time": 2685.50840298507,
     "end_time": 2685.80858208955,
     "content": "Right.",
@@ -4772,7 +4782,7 @@
   {
     "id": 32559,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 477,
+    "segment_index": 478,
     "start_time": 2686.509,
     "end_time": 2692.27,
     "content": "that this is God created, because if somebody wants to believe, he can see it there.",
@@ -4782,7 +4792,7 @@
   {
     "id": 32560,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 478,
+    "segment_index": 479,
     "start_time": 2692.27,
     "end_time": 2695.78,
     "content": "I was having an argument with (unintelligible), a discussion,",
@@ -4792,7 +4802,7 @@
   {
     "id": 32561,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 479,
+    "segment_index": 480,
     "start_time": 2696.28,
     "end_time": 2704.417,
     "content": "He was saying that he doesn't believe in God. I said \"There's no way that by science, by chemistry, I can prove that there is God.\"",
@@ -4802,7 +4812,7 @@
   {
     "id": 32562,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 480,
+    "segment_index": 481,
     "start_time": 2704.417,
     "end_time": 2713.582,
     "content": "He wasn't saying... I mean, you can believe in it for other reasons. (unintelligible) the system is working, that there are reactions that are happening.",
@@ -4812,7 +4822,7 @@
   {
     "id": 32563,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 481,
+    "segment_index": 482,
     "start_time": 2713.582,
     "end_time": 2721.852,
     "content": "But, at the end, I asked him, was he atheist, he said \"no, I'm agnostic.\" (unintelligible) heard of the word \"agnostic.\"",
@@ -4822,7 +4832,7 @@
   {
     "id": 32564,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 482,
+    "segment_index": 483,
     "start_time": 2721.852,
     "end_time": 2731.016,
     "content": "But, generally, if you try to use scientific reasoning for proving there is a god, or this is, this is true, then you...",
@@ -4832,7 +4842,7 @@
   {
     "id": 32565,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 483,
+    "segment_index": 484,
     "start_time": 2731.44,
     "end_time": 2737.879,
     "content": "... so many other strong evidences to prove that this is the Word of God, that this is the message of God.",
@@ -4842,7 +4852,7 @@
   {
     "id": 32566,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 484,
+    "segment_index": 485,
     "start_time": 2737.879,
     "end_time": 2741.60576595745,
     "content": "That we shouldn't rely on those things that we don't have enough proof of.",
@@ -4852,7 +4862,7 @@
   {
     "id": 76492,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 485,
+    "segment_index": 486,
     "start_time": 2741.60576595745,
     "end_time": 2741.90793617021,
     "content": "Right.",
@@ -4862,7 +4872,7 @@
   {
     "id": 32567,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 486,
+    "segment_index": 487,
     "start_time": 2742.613,
     "end_time": 2744.51166666667,
     "content": "We don't have enough sound basis, yet.",
@@ -4872,7 +4882,7 @@
   {
     "id": 76493,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 487,
+    "segment_index": 488,
     "start_time": 2744.51166666667,
     "end_time": 2744.81145614035,
     "content": "Right.",
@@ -4882,7 +4892,7 @@
   {
     "id": 32568,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 488,
+    "segment_index": 489,
     "start_time": 2745.461,
     "end_time": 2749.347,
     "content": "But here, there's no question about the mathematical code. 1 plus 1 is 2, you know.",
@@ -4892,7 +4902,7 @@
   {
     "id": 32569,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 489,
+    "segment_index": 490,
     "start_time": 2751.017,
     "end_time": 2760.465,
     "content": "It's, it is indisputable. Well, at least they can dispute it. It's incontrovertible. Because it's pure mathematics.",
@@ -4902,7 +4912,7 @@
   {
     "id": 32570,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 490,
+    "segment_index": 491,
     "start_time": 2761.172,
     "end_time": 2762.49815384615,
     "content": "(unintelligible)",
@@ -4912,7 +4922,7 @@
   {
     "id": 76494,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 491,
+    "segment_index": 492,
     "start_time": 2762.49815384615,
     "end_time": 2764.4045,
     "content": "Going to what you said.",
@@ -4922,7 +4932,7 @@
   {
     "id": 32571,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 492,
+    "segment_index": 493,
     "start_time": 2765.482,
     "end_time": 2773.034,
     "content": "I, I've already (unintelligible) to book, which was written recently, which is,",
@@ -4932,7 +4942,7 @@
   {
     "id": 32572,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 493,
+    "segment_index": 494,
     "start_time": 2773.034,
     "end_time": 2779.795,
     "content": "in fact, it's the newest print (unintelligible), and it goes back to 1954, and what happened.",
@@ -4942,7 +4952,7 @@
   {
     "id": 32573,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 494,
+    "segment_index": 495,
     "start_time": 2779.795,
     "end_time": 2788.677,
     "content": "What you use in an argument, saying that (unintelligible) I can't go to Iran and preach that God is, Worship God alone. This is Quran and this is God.",
@@ -4952,7 +4962,7 @@
   {
     "id": 32574,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 495,
+    "segment_index": 496,
     "start_time": 2788.677,
     "end_time": 2796.899,
     "content": "Dictatorship (unintelligible) in prison (unintelligible) mistakes. You know, what happened to Mosaddegh at his time that he was trying to establish a",
@@ -4962,7 +4972,7 @@
   {
     "id": 32575,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 496,
+    "segment_index": 497,
     "start_time": 2796.899,
     "end_time": 2802.151,
     "content": "a democratic government, and CIA (unintelligible) , and then put back the Shah (unintelligible).",
@@ -4972,7 +4982,7 @@
   {
     "id": 32576,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 497,
+    "segment_index": 498,
     "start_time": 2802.151,
     "end_time": 2808.252,
     "content": "And then, created dictatorship, and so on, and then we ended up having this. The same thing is in Chile.",
@@ -4982,7 +4992,7 @@
   {
     "id": 32577,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 498,
+    "segment_index": 499,
     "start_time": 2808.252,
     "end_time": 2822.451,
     "content": "(unintelligible) so he said for the sake of argument \"You tell me that this is the work of God, and whatever these people are doing is right?\" I do buy that, because a lot of people are suffering because of the policies of the United States.",
@@ -4992,7 +5002,7 @@
   {
     "id": 32578,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 499,
+    "segment_index": 500,
     "start_time": 2822.451,
     "end_time": 2830.663,
     "content": "That doesn't make the United States government, the government of God or, (unintelligible) that the dollar sign is a sign of God.",
@@ -5002,7 +5012,7 @@
   {
     "id": 32579,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 500,
+    "segment_index": 501,
     "start_time": 2830.663,
     "end_time": 2838.45,
     "content": "(unintelligible) That makes it right. No, they do a lot of things wrong, which, again, that's something else.",
@@ -5012,7 +5022,7 @@
   {
     "id": 32580,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 501,
+    "segment_index": 502,
     "start_time": 2838.45,
     "end_time": 2844.824,
     "content": "With that argument, I think, it can go a long way. We can sit down and discuss a lot of things,",
@@ -5022,7 +5032,7 @@
   {
     "id": 32581,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 502,
+    "segment_index": 503,
     "start_time": 2844.824,
     "end_time": 2851.114,
     "content": "but these are facts that show that this is what has happened, and",
@@ -5032,7 +5042,7 @@
   {
     "id": 32582,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 503,
+    "segment_index": 504,
     "start_time": 2851.114,
     "end_time": 2857.451,
     "content": "we cannot use this argument to say that if I can go back over and say these things, then it is",
@@ -5042,7 +5052,7 @@
   {
     "id": 32583,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 504,
+    "segment_index": 505,
     "start_time": 2857.451,
     "end_time": 2861.478,
     "content": "because this country is better than that country, of course.",
@@ -5052,7 +5062,7 @@
   {
     "id": 32584,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 505,
+    "segment_index": 506,
     "start_time": 2861.902,
     "end_time": 2865.835,
     "content": "Well, I tell you, this is the closest country to God, no matter how you look at it.",
@@ -5062,7 +5072,7 @@
   {
     "id": 32585,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 506,
+    "segment_index": 507,
     "start_time": 2865.835,
     "end_time": 2871.841,
     "content": "This reminds me of the argument in the Yemen parliament. Yemen is in such bad shape,",
@@ -5072,7 +5082,7 @@
   {
     "id": 32586,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 507,
+    "segment_index": 508,
     "start_time": 2871.841,
     "end_time": 2877.706,
     "content": "it's the only country that if Noah is resurrected today, he will recognize it, because it didn't change.",
@@ -5082,7 +5092,7 @@
   {
     "id": 32587,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 508,
+    "segment_index": 509,
     "start_time": 2878.46,
     "end_time": 2884.09,
     "content": "They had an argument in the parliament. \"What do we do to solve our economic crises and problems and so on?\"",
@@ -5092,7 +5102,7 @@
   {
     "id": 32588,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 509,
+    "segment_index": 510,
     "start_time": 2884.561,
     "end_time": 2892.312,
     "content": "And finally, one intelligent senator from Yemen came up with a great idea. He said \"let's declare war on the United States.\"",
@@ -5102,7 +5112,7 @@
   {
     "id": 32589,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 510,
+    "segment_index": 511,
     "start_time": 2894.448,
     "end_time": 2902,
     "content": "And he convinced them, because if they declare war on the United States, the United States will go and invade them and take all kinds of care packages and will help them a lot.",
@@ -5112,7 +5122,7 @@
   {
     "id": 32590,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 511,
+    "segment_index": 512,
     "start_time": 2902,
     "end_time": 2904.236,
     "content": "Like that's what they're doing with Vietnam now.",
@@ -5122,7 +5132,7 @@
   {
     "id": 32591,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 512,
+    "segment_index": 513,
     "start_time": 2904.875,
     "end_time": 2908.09,
     "content": "So, this is the most kind and benign country in the world. They...",
@@ -5132,7 +5142,7 @@
   {
     "id": 32592,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 513,
+    "segment_index": 514,
     "start_time": 2908.938,
     "end_time": 2916.83,
     "content": "The Marshall Plan speaks for, and Europe was fantastic. Europe was dead after the war, and the Marshall Plan revived it.",
@@ -5142,7 +5152,7 @@
   {
     "id": 32593,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 514,
+    "segment_index": 515,
     "start_time": 2916.83,
     "end_time": 2923.591,
     "content": "You cannot blame the United States for Khomeini or Mubarak or any of those idiotic tyrants.",
@@ -5152,7 +5162,7 @@
   {
     "id": 32594,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 515,
+    "segment_index": 516,
     "start_time": 2923.591,
     "end_time": 2929.457,
     "content": "Rashad, CIA does state while it consistently (unintelligible) that the Americans don't like (unintelligible).",
@@ -5162,7 +5172,7 @@
   {
     "id": 32595,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 516,
+    "segment_index": 517,
     "start_time": 2929.457,
     "end_time": 2935.558,
     "content": "CIA does all those things, and it's not that (unintelligible) I know from the (unintelligible)  I've read the paper here.",
@@ -5172,7 +5182,7 @@
   {
     "id": 32596,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 517,
+    "segment_index": 518,
     "start_time": 2935.558,
     "end_time": 2944.016,
     "content": "And it's been proven and so on, but CIA is an institution in itself (unintelligible) an independent country, and CIA is only a small part of it.",
@@ -5182,7 +5192,7 @@
   {
     "id": 32597,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 518,
+    "segment_index": 519,
     "start_time": 2944.252,
     "end_time": 2949.787,
     "content": "No, I don't like to talk about politics, but it's either you have the CIA or the KGB. So, the choice is",
@@ -5192,7 +5202,7 @@
   {
     "id": 32598,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 519,
+    "segment_index": 520,
     "start_time": 2949.787,
     "end_time": 2955.077,
     "content": "a country that gives you a lot of money, invades you to give you a lot of money and help you a lot and",
@@ -5202,7 +5212,7 @@
   {
     "id": 32599,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 520,
+    "segment_index": 521,
     "start_time": 2955.077,
     "end_time": 2962.535,
     "content": "give you education and the freedom to worship God, or a country that's oppressive and gives you communism and atheism and lack of freedom.",
@@ -5212,7 +5222,7 @@
   {
     "id": 32600,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 521,
+    "segment_index": 522,
     "start_time": 2964.94,
     "end_time": 2966.364,
     "content": "Look at Czechoslovakia.",
@@ -5222,7 +5232,7 @@
   {
     "id": 32601,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 522,
+    "segment_index": 523,
     "start_time": 2967.401,
     "end_time": 2972.455,
     "content": "So, the CIA has to... If they don't do it, the KGB will do it.",
@@ -5232,7 +5242,7 @@
   {
     "id": 32602,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 523,
+    "segment_index": 524,
     "start_time": 2972.455,
     "end_time": 2973.041,
     "content": "Ali.",
@@ -5242,7 +5252,7 @@
   {
     "id": 32603,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 524,
+    "segment_index": 525,
     "start_time": 2973.371,
     "end_time": 2993.047,
     "content": "Yeah. I was gonna say about the (unintelligible)",
@@ -5252,7 +5262,7 @@
   {
     "id": 32604,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 525,
+    "segment_index": 526,
     "start_time": 2993.047,
     "end_time": 2997.639,
     "content": "You're gonna die if you don't do a damn about it. I mean, this is a perfect country.",
@@ -5262,7 +5272,7 @@
   {
     "id": 32605,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 526,
+    "segment_index": 527,
     "start_time": 2997.639,
     "end_time": 3010,
     "content": "1000 people die everyday (unintelligible). I mean, I have a friend who one of his friends is a gang member in L.A. And I'm not kidding this, I'm not just making this up.",
@@ -5272,7 +5282,7 @@
   {
     "id": 32606,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 527,
+    "segment_index": 528,
     "start_time": 3010,
     "end_time": 3011.34864516129,
     "content": "No, no, it's true but you see...",
@@ -5282,7 +5292,7 @@
   {
     "id": 76495,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 528,
+    "segment_index": 529,
     "start_time": 3011.34864516129,
     "end_time": 3012.36012903226,
     "content": "And he said, and he said",
@@ -5292,7 +5302,7 @@
   {
     "id": 32607,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 529,
+    "segment_index": 530,
     "start_time": 3012.613,
     "end_time": 3023.004,
     "content": "\"What you guys live with sounds as perfect. Do you guys think you get (unintelligible) problem? Because people will die thousands of times of gang wars every day.\"",
@@ -5302,7 +5312,7 @@
   {
     "id": 32608,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 530,
+    "segment_index": 531,
     "start_time": 3023.004,
     "end_time": 3025.512,
     "content": "You know what the basis of gang wars are, is?",
@@ -5312,7 +5322,7 @@
   {
     "id": 32609,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 531,
+    "segment_index": 532,
     "start_time": 3026.738,
     "end_time": 3026.90002702703,
     "content": "What?",
@@ -5322,7 +5332,7 @@
   {
     "id": 76496,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 532,
+    "segment_index": 533,
     "start_time": 3026.90002702703,
     "end_time": 3027.48332432432,
     "content": "It's drugs. Drugs.",
@@ -5332,7 +5342,7 @@
   {
     "id": 32610,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 533,
+    "segment_index": 534,
     "start_time": 3027.937,
     "end_time": 3028.41932258065,
     "content": "Drugs, yeah.",
@@ -5342,7 +5352,7 @@
   {
     "id": 76497,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 534,
+    "segment_index": 535,
     "start_time": 3028.41932258065,
     "end_time": 3028.62029032258,
     "content": "Yeah.",
@@ -5352,7 +5362,7 @@
   {
     "id": 32611,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 535,
+    "segment_index": 536,
     "start_time": 3029.183,
     "end_time": 3030.759,
     "content": "So, they're breaking the law.",
@@ -5362,7 +5372,7 @@
   {
     "id": 32612,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 536,
+    "segment_index": 537,
     "start_time": 3030.759,
     "end_time": 3033.56,
     "content": "There have been gang wars in other countries rather than the US.",
@@ -5372,7 +5382,7 @@
   {
     "id": 32613,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 537,
+    "segment_index": 538,
     "start_time": 3033.56,
     "end_time": 3037.257,
     "content": "I mean, (unintelligible) as USA is also (unintelligible).",
@@ -5382,7 +5392,7 @@
   {
     "id": 32614,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 538,
+    "segment_index": 539,
     "start_time": 3037.257,
     "end_time": 3043.075,
     "content": "I mean, I've gone to places where there's dope, like you've never seen it before.",
@@ -5392,7 +5402,7 @@
   {
     "id": 32615,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 539,
+    "segment_index": 540,
     "start_time": 3043.594,
     "end_time": 3044.416,
     "content": "Right.",
@@ -5402,7 +5412,7 @@
   {
     "id": 32616,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 540,
+    "segment_index": 541,
     "start_time": 3044.416,
     "end_time": 3047.689,
     "content": "And there, there it is. I don't smoke it, but it is there.",
@@ -5412,7 +5422,7 @@
   {
     "id": 32617,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 541,
+    "segment_index": 542,
     "start_time": 3047.689,
     "end_time": 3049.689,
     "content": "Right. That's freedom, you see.",
@@ -5422,7 +5432,7 @@
   {
     "id": 32618,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 542,
+    "segment_index": 543,
     "start_time": 3050,
     "end_time": 3057.081,
     "content": "God says... God wants the people to be free to obey Him or disobey Him. Follow the commandments or break them.",
@@ -5432,7 +5442,7 @@
   {
     "id": 32619,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 543,
+    "segment_index": 544,
     "start_time": 3057.505,
     "end_time": 3060.542,
     "content": "Worship Him or not. Believe in Him or disbelieve in Him.",
@@ -5442,7 +5452,7 @@
   {
     "id": 32620,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 544,
+    "segment_index": 545,
     "start_time": 3061.061,
     "end_time": 3067.115,
     "content": "Drink or not. If you go in a country that says \"nobody can drink alcohol\",",
@@ -5452,7 +5462,7 @@
   {
     "id": 32621,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 545,
+    "segment_index": 546,
     "start_time": 3067.115,
     "end_time": 3071.802,
     "content": "now, are the people abstaining from alcohol because they're following God's commandment or the law of the land?",
@@ -5462,7 +5472,7 @@
   {
     "id": 32622,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 546,
+    "segment_index": 547,
     "start_time": 3074.112,
     "end_time": 3076.583,
     "content": "God wants the people to be free to drink if they want to.",
@@ -5472,7 +5482,7 @@
   {
     "id": 32623,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 547,
+    "segment_index": 548,
     "start_time": 3077.149,
     "end_time": 3078.253,
     "content": "(unintelligible)",
@@ -5482,7 +5492,7 @@
   {
     "id": 32624,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 548,
+    "segment_index": 549,
     "start_time": 3078.253,
     "end_time": 3079.734,
     "content": "Take drugs if they want to.",
@@ -5492,7 +5502,7 @@
   {
     "id": 32625,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 549,
+    "segment_index": 550,
     "start_time": 3079.734,
     "end_time": 3082.441,
     "content": "You're in favor of (unintelligible)",
@@ -5502,7 +5512,7 @@
   {
     "id": 32626,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 550,
+    "segment_index": 551,
     "start_time": 3082.441,
     "end_time": 3083.215,
     "content": "Who?",
@@ -5512,7 +5522,7 @@
   {
     "id": 32627,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 551,
+    "segment_index": 552,
     "start_time": 3083.215,
     "end_time": 3088.232,
     "content": "(unintelligible)",
@@ -5522,7 +5532,7 @@
   {
     "id": 32628,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 552,
+    "segment_index": 553,
     "start_time": 3088.232,
     "end_time": 3095.04,
     "content": "The Supreme Court decided that it is unconstitutional for a state to make it illegal to have abortion.",
@@ -5532,7 +5542,7 @@
   {
     "id": 32629,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 553,
+    "segment_index": 554,
     "start_time": 3095.417,
     "end_time": 3102.272,
     "content": "Now, they wanna reverse it so that states will again be allowed to say \"it's illegal to have abortion.\"",
@@ -5542,7 +5552,7 @@
   {
     "id": 32630,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 554,
+    "segment_index": 555,
     "start_time": 3102.272,
     "end_time": 3109.269,
     "content": "What the Supreme Court had done, basically, was say \"that's unconstitutional. It's against the women's choice.\"",
@@ -5552,7 +5562,7 @@
   {
     "id": 32631,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 555,
+    "segment_index": 556,
     "start_time": 3109.269,
     "end_time": 3114.144,
     "content": "Well, this is stupid. This is... The law has nothing to do with the people. The people will have abortions or not anyway. It depends on the individual.",
@@ -5562,7 +5572,7 @@
   {
     "id": 32632,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 556,
+    "segment_index": 557,
     "start_time": 3114.144,
     "end_time": 3114.89,
     "content": "But, so that...",
@@ -5572,7 +5582,7 @@
   {
     "id": 32633,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 557,
+    "segment_index": 558,
     "start_time": 3114.89,
     "end_time": 3117.54,
     "content": "Individual will make a decision to abort or not.",
@@ -5582,7 +5592,7 @@
   {
     "id": 32634,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 558,
+    "segment_index": 559,
     "start_time": 3117.54,
     "end_time": 3121.237,
     "content": "Just from what you're saying, then that would be (unintelligible).",
@@ -5592,7 +5602,7 @@
   {
     "id": 32635,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 559,
+    "segment_index": 560,
     "start_time": 3121.237,
     "end_time": 3125.301,
     "content": "The Quran is in favor of absolute freedom. No interference from the government whatsoever.",
@@ -5602,7 +5612,7 @@
   {
     "id": 32636,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 560,
+    "segment_index": 561,
     "start_time": 3127.778,
     "end_time": 3135.33,
     "content": "It's extreme libertarianism. The Quran is for, for maximum freedom for the human being.",
@@ -5612,7 +5622,7 @@
   {
     "id": 32637,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 561,
+    "segment_index": 562,
     "start_time": 3136.461,
     "end_time": 3138.697,
     "content": "Otherwise, you cannot hold the human being responsible.",
@@ -5622,7 +5632,7 @@
   {
     "id": 32638,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 562,
+    "segment_index": 563,
     "start_time": 3140.697,
     "end_time": 3148.212,
     "content": "(unintelligible) is this (unintelligible) your children will be afraid of, afraid of poverty.",
@@ -5632,7 +5642,7 @@
   {
     "id": 32639,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 563,
+    "segment_index": 564,
     "start_time": 3148.212,
     "end_time": 3151.532,
     "content": "Francisco, that's the least of their problems. Abortion.",
@@ -5642,7 +5652,7 @@
   {
     "id": 32640,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 564,
+    "segment_index": 565,
     "start_time": 3151.532,
     "end_time": 3152.49161904762,
     "content": "(unintelligible)",
@@ -5652,7 +5662,7 @@
   {
     "id": 76498,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 565,
+    "segment_index": 566,
     "start_time": 3152.49161904762,
     "end_time": 3153.45123809524,
     "content": "(unintelligible)",
@@ -5662,7 +5672,7 @@
   {
     "id": 32641,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 566,
+    "segment_index": 567,
     "start_time": 3154.051,
     "end_time": 3155.485,
     "content": "Huh? Yeah.",
@@ -5672,7 +5682,7 @@
   {
     "id": 32642,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 567,
+    "segment_index": 568,
     "start_time": 3155.485,
     "end_time": 3159.49592307692,
     "content": "If a woman makes a decision not to have an abortion, if you're right, then that's good.",
@@ -5682,7 +5692,7 @@
   {
     "id": 76499,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 568,
+    "segment_index": 569,
     "start_time": 3159.49592307692,
     "end_time": 3160.23356410256,
     "content": "(unintelligible)",
@@ -5692,7 +5702,7 @@
   {
     "id": 32643,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 569,
+    "segment_index": 570,
     "start_time": 3160.879,
     "end_time": 3161.22795238095,
     "content": "(unintelligible)",
@@ -5702,7 +5712,7 @@
   {
     "id": 76500,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 570,
+    "segment_index": 571,
     "start_time": 3161.22795238095,
     "end_time": 3161.57690476191,
     "content": "(unintelligible)",
@@ -5712,7 +5722,7 @@
   {
     "id": 32644,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 571,
+    "segment_index": 572,
     "start_time": 3161.795,
     "end_time": 3166.388,
     "content": "But if she doesn't have an abortion, because one: it's not available to her, because (unintelligible) in her country,",
@@ -5722,7 +5732,7 @@
   {
     "id": 32645,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 572,
+    "segment_index": 573,
     "start_time": 3166.388,
     "end_time": 3168.90255172414,
     "content": "then, she doesn't have a choice, a right (unintelligible)",
@@ -5732,7 +5742,7 @@
   {
     "id": 76501,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 573,
+    "segment_index": 574,
     "start_time": 3168.90255172414,
     "end_time": 3169.6083908046,
     "content": "(unintelligible)",
@@ -5742,7 +5752,7 @@
   {
     "id": 32646,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 574,
+    "segment_index": 575,
     "start_time": 3170.226,
     "end_time": 3172.226,
     "content": "A choice that has been made for her.",
@@ -5752,7 +5762,7 @@
   {
     "id": 32647,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 575,
+    "segment_index": 576,
     "start_time": 3172.226,
     "end_time": 3172.812,
     "content": "Oh, yeah.",
@@ -5762,7 +5772,7 @@
   {
     "id": 32648,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 576,
+    "segment_index": 577,
     "start_time": 3172.812,
     "end_time": 3178.866,
     "content": "In a sense, you almost don't have the opportunity to make it by choice. (unintelligible) for you.",
@@ -5772,7 +5782,7 @@
   {
     "id": 32649,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 577,
+    "segment_index": 578,
     "start_time": 3178.866,
     "end_time": 3179.499,
     "content": "Ok, wait.",
@@ -5782,7 +5792,7 @@
   {
     "id": 32650,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 578,
+    "segment_index": 579,
     "start_time": 3179.499,
     "end_time": 3185.6,
     "content": "(unintelligible) abortion is (unintelligible)",
@@ -5792,7 +5802,7 @@
   {
     "id": 32651,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 579,
+    "segment_index": 580,
     "start_time": 3185.6,
     "end_time": 3188.496,
     "content": "We have to quit before we're invaded by the children.",
@@ -5802,7 +5812,7 @@
   {
     "id": 32652,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 580,
+    "segment_index": 581,
     "start_time": 3188.496,
     "end_time": 3191.43398076923,
     "content": "There's no (unintelligible) something is wrong. There's no (unintelligible)",
@@ -5812,7 +5822,7 @@
   {
     "id": 76502,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 581,
+    "segment_index": 582,
     "start_time": 3191.43398076923,
     "end_time": 3192.02157692308,
     "content": "They're coming.",
@@ -5822,7 +5832,7 @@
   {
     "id": 32653,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 582,
+    "segment_index": 583,
     "start_time": 3192.57,
     "end_time": 3193.297,
     "content": "They're coming.",
@@ -5832,7 +5842,7 @@
   {
     "id": 32654,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 583,
+    "segment_index": 584,
     "start_time": 3196.974,
     "end_time": 3198.078,
     "content": "Children are coming.",
@@ -5842,7 +5852,7 @@
   {
     "id": 32655,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 584,
+    "segment_index": 585,
     "start_time": 3198.832,
     "end_time": 3200.313,
     "content": "Gatut is not feeling good.",
@@ -5852,7 +5862,7 @@
   {
     "id": 32656,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 585,
+    "segment_index": 586,
     "start_time": 3200.737,
     "end_time": 3205.047,
     "content": "Gatut, Gatut has some kind of illness or something.",
@@ -5862,7 +5872,7 @@
   {
     "id": 32657,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 586,
+    "segment_index": 587,
     "start_time": 3206.037,
     "end_time": 3211.336,
     "content": "He's not feeling good, so let us turn to God and God spoils us. God always answers our prayers.",
@@ -5872,7 +5882,7 @@
   {
     "id": 32658,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 587,
+    "segment_index": 588,
     "start_time": 3211.949,
     "end_time": 3219.04,
     "content": "We're gonna turn to God and ask Him to heal Gatut. We'll read Al-Fãtehah. And the brother who came at Juma'a today, he has some kind of a test or something.",
@@ -5882,7 +5892,7 @@
   {
     "id": 32659,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 588,
+    "segment_index": 589,
     "start_time": 3219.37,
     "end_time": 3230.75,
     "content": "He needs God's help. And also, as we pray Al-Fãtehah, as we read Al-Fãtehah, you ask for, for whatever your, your own wish is. God loves it when you pray to Him. Al-Fãtehah.",
@@ -5892,7 +5902,7 @@
   {
     "id": 32660,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 589,
+    "segment_index": 590,
     "start_time": 3231.221,
     "end_time": 3248.767,
     "content": "Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7)",
@@ -5902,7 +5912,7 @@
   {
     "id": 32661,
     "media_id": "a503f710-f2be-47a9-9399-a55f4a80b79f",
-    "segment_index": 590,
+    "segment_index": 591,
     "start_time": 3249.003,
     "end_time": 3250.72,
     "content": "Congratulations.",

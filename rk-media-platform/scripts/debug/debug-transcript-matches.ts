@@ -18,7 +18,7 @@ const BUCKET = process.env.R2_BUCKET_NAME!;
 async function main() {
     console.log("Fetching all keys...");
 
-    let allKeys: string[] = [];
+    const allKeys: string[] = [];
     let continuationToken;
     do {
         const cmd = new ListObjectsV2Command({

@@ -1,0 +1,6586 @@
+[
+  {
+    "id": 0,
+    "start_time": 7.859,
+    "end_time": 9.859,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 0
+  },
+  {
+    "id": 1,
+    "start_time": 9.859,
+    "end_time": 13.962,
+    "speaker": "Dr. Khalifa",
+    "content": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ We seek refuge in God from Sheytan.",
+    "segment_index": 1
+  },
+  {
+    "id": 2,
+    "start_time": 16.097,
+    "end_time": 20.003,
+    "speaker": "Dr. Khalifa",
+    "content": "Bism Allah Arrahman Arraheem In the name of God, Most Gracious, Most Merciful",
+    "segment_index": 2
+  },
+  {
+    "id": 3,
+    "start_time": 20.72,
+    "end_time": 28.737,
+    "speaker": "Dr. Khalifa",
+    "content": "Our teacher today is Mahmoud Sabahi and we'll be working, starting at Sura 74.",
+    "segment_index": 3
+  },
+  {
+    "id": 4,
+    "start_time": 31.682,
+    "end_time": 33.682,
+    "speaker": "Dr. Khalifa",
+    "content": "Dr. Sabahi (unintelligible)",
+    "segment_index": 4
+  },
+  {
+    "id": 5,
+    "start_time": 35.898,
+    "end_time": 47.643,
+    "speaker": "Dr. Sabahi",
+    "content": "Bism Allah Arrahman Arraheem Before starting the Sura, I think, the traditional teachers",
+    "segment_index": 5
+  },
+  {
+    "id": 6,
+    "start_time": 47.643,
+    "end_time": 54.963,
+    "speaker": "Dr. Sabahi",
+    "content": "and students, I'm gonna have a pop quiz next week on what I teach today so that",
+    "segment_index": 6
+  },
+  {
+    "id": 7,
+    "start_time": 54.963,
+    "end_time": 65.65,
+    "speaker": "Dr. Sabahi",
+    "content": "the ones who sleep and we'll find out about who is listening and who is not. I think maybe",
+    "segment_index": 7
+  },
+  {
+    "id": 8,
+    "start_time": 65.65,
+    "end_time": 72.337,
+    "speaker": "Dr. Sabahi",
+    "content": "tonight is about the anniversary of the time that I came to the mosque last year, or it is",
+    "segment_index": 8
+  },
+  {
+    "id": 9,
+    "start_time": 72.337,
+    "end_time": 79.269,
+    "speaker": "Dr. Sabahi",
+    "content": "close because I know it from the NBA playoffs. When I came the first night here, there was",
+    "segment_index": 9
+  },
+  {
+    "id": 10,
+    "start_time": 79.269,
+    "end_time": 83.632,
+    "speaker": "Dr. Sabahi",
+    "content": "a gentleman here who had a small TV. He moved to Detroit, I guess, and he had the Lakers,",
+    "segment_index": 10
+  },
+  {
+    "id": 11,
+    "start_time": 83.632,
+    "end_time": 88.169,
+    "speaker": "Dr. Sabahi",
+    "content": "and I guess Detroit on TV. So, it's about a year, more or less.",
+    "segment_index": 11
+  },
+  {
+    "id": 12,
+    "start_time": 88.458,
+    "end_time": 91.44,
+    "speaker": "Dr. Khalifa",
+    "content": "God has His ways of reminding us of important days.",
+    "segment_index": 12
+  },
+  {
+    "id": 13,
+    "start_time": 93.483,
+    "end_time": 104.589,
+    "speaker": "Dr. Khalifa",
+    "content": "So, and this is a very tough Sura that is given to me, but given the fact that God is the teacher of the Quran,",
+    "segment_index": 13
+  },
+  {
+    "id": 14,
+    "start_time": 104.589,
+    "end_time": 114.0,
+    "speaker": "Dr. Khalifa",
+    "content": "I asked Him to help me tonight, hopefully to be able to do a good job of what I understand from this surah, basically.",
+    "segment_index": 14
+  },
+  {
+    "id": 15,
+    "start_time": 114.289,
+    "end_time": 120.684,
+    "speaker": "Dr. Khalifa",
+    "content": "And then, I'll give you my views and whatever you think about it,",
+    "segment_index": 15
+  },
+  {
+    "id": 16,
+    "start_time": 120.684,
+    "end_time": 122.993,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, it can be discussed.",
+    "segment_index": 16
+  },
+  {
+    "id": 17,
+    "start_time": 123.455,
+    "end_time": 127.361,
+    "speaker": "Dr. Khalifa",
+    "content": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ Bism Allah Arrahman Arraheem",
+    "segment_index": 17
+  },
+  {
+    "id": 18,
+    "start_time": 130.211,
+    "end_time": 136.11599999999999,
+    "speaker": "Dr. Khalifa",
+    "content": "One more thing that I have to add. I have, I'm gonna, I have divided the Sura in different parts.",
+    "segment_index": 18
+  },
+  {
+    "id": 19,
+    "start_time": 136.11599999999999,
+    "end_time": 144.311,
+    "speaker": "Dr. Khalifa",
+    "content": "I have gone through the whole thing. I've tried to see what the overall point of the",
+    "segment_index": 19
+  },
+  {
+    "id": 20,
+    "start_time": 144.311,
+    "end_time": 151.781,
+    "speaker": "Dr. Khalifa",
+    "content": "Sura is, and whether I can divide it in different parts that could help us understand it better.",
+    "segment_index": 20
+  },
+  {
+    "id": 21,
+    "start_time": 152.936,
+    "end_time": 162.246,
+    "speaker": "Dr. Khalifa",
+    "content": "The first 7 verses of the Sura, starting from 1 until 7, it seems to be like",
+    "segment_index": 21
+  },
+  {
+    "id": 22,
+    "start_time": 162.246,
+    "end_time": 172.459,
+    "speaker": "Dr. Khalifa",
+    "content": "the instructions that God is giving to, a lot of people, I think, to Muhammad, and we know",
+    "segment_index": 22
+  },
+  {
+    "id": 23,
+    "start_time": 172.459,
+    "end_time": 180.0,
+    "speaker": "Dr. Khalifa",
+    "content": "that it is not only to Muhammad, it's to everyone, and especially to what we know about the code",
+    "segment_index": 23
+  },
+  {
+    "id": 24,
+    "start_time": 180.0,
+    "end_time": 183.518,
+    "speaker": "Dr. Khalifa",
+    "content": "right now. So, I start with the first verse.",
+    "segment_index": 24
+  },
+  {
+    "id": 25,
+    "start_time": 184.096,
+    "end_time": 189.677,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:1]  O you hidden secret.* [74:2]  Come out and warn. [74:3]  Extol your Lord. [74:4]  Cleanse your cover.*",
+    "segment_index": 25
+  },
+  {
+    "id": 26,
+    "start_time": 189.677,
+    "end_time": 195.256,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:5]  Forsake what is wrong. [74:6]  Be content with your lot. [74:7]  Steadfastly commemorate your Lord.",
+    "segment_index": 26
+  },
+  {
+    "id": 27,
+    "start_time": 195.602,
+    "end_time": 204.679,
+    "speaker": "Dr. Khalifa",
+    "content": "These 7 Ayas, as you see, God is instructing or ordering the secret.",
+    "segment_index": 27
+  },
+  {
+    "id": 28,
+    "start_time": 210.916,
+    "end_time": 218.446,
+    "speaker": "Dr. Khalifa",
+    "content": "I looked into a lot of translations, Farsi translations. All of them almost unanimously",
+    "segment_index": 28
+  },
+  {
+    "id": 29,
+    "start_time": 218.446,
+    "end_time": 227.31900000000002,
+    "speaker": "Dr. Khalifa",
+    "content": "translate this as \"O you, the person who you have covered yourself with some clothing or something\",",
+    "segment_index": 29
+  },
+  {
+    "id": 30,
+    "start_time": 227.31900000000002,
+    "end_time": 232.402,
+    "speaker": "Dr. Khalifa",
+    "content": "which they have taken it literally as someone who is under something covered,",
+    "segment_index": 30
+  },
+  {
+    "id": 31,
+    "start_time": 232.402,
+    "end_time": 238.82999999999998,
+    "speaker": "Dr. Khalifa",
+    "content": "which they think is Muhammad, and this is towards him, telling him that \"O you, Muhammad,",
+    "segment_index": 31
+  },
+  {
+    "id": 32,
+    "start_time": 238.82999999999998,
+    "end_time": 246.819,
+    "speaker": "Dr. Khalifa",
+    "content": "\"you hidden secret, come out and warn, start your mission and bring your message across.\"",
+    "segment_index": 32
+  },
+  {
+    "id": 33,
+    "start_time": 246.819,
+    "end_time": 252.548,
+    "speaker": "Dr. Khalifa",
+    "content": "Especially, this, this may be the third Sura that was revealed to Muhammad. That's what",
+    "segment_index": 33
+  },
+  {
+    "id": 34,
+    "start_time": 252.548,
+    "end_time": 260.26,
+    "speaker": "Dr. Khalifa",
+    "content": "makes it for a lot of people to believe that this is directly for Muhammad. But now that",
+    "segment_index": 34
+  },
+  {
+    "id": 35,
+    "start_time": 260.26,
+    "end_time": 267.043,
+    "speaker": "Dr. Khalifa",
+    "content": "we know that Quran is for all times, that doesn't apply to Muhammad. It can apply to",
+    "segment_index": 35
+  },
+  {
+    "id": 36,
+    "start_time": 267.043,
+    "end_time": 280.718,
+    "speaker": "Dr. Khalifa",
+    "content": "anyone. And it can apply to what we believe is the messenger. Then, God is telling that secret,",
+    "segment_index": 36
+  },
+  {
+    "id": 37,
+    "start_time": 280.718,
+    "end_time": 285.0,
+    "speaker": "Dr. Khalifa",
+    "content": "the person, whoever it is, that",
+    "segment_index": 37
+  },
+  {
+    "id": 38,
+    "start_time": 285.0,
+    "end_time": 288.103,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:3]  Glorify your Lord. [74:4]  Cleanse your cover.*",
+    "segment_index": 38
+  },
+  {
+    "id": 39,
+    "start_time": 288.103,
+    "end_time": 294.139,
+    "speaker": "Dr. Khalifa",
+    "content": "which I had a lot of trouble understanding what does that cleansing mean. It could be a lot of people",
+    "segment_index": 39
+  },
+  {
+    "id": 40,
+    "start_time": 294.139,
+    "end_time": 299.53,
+    "speaker": "Dr. Khalifa",
+    "content": "in Farsi translations, they have taken it as cleaning your clothes, because you wanna",
+    "segment_index": 40
+  },
+  {
+    "id": 41,
+    "start_time": 299.53,
+    "end_time": 304.832,
+    "speaker": "Dr. Khalifa",
+    "content": "pray, you wanna go to talk to God, so you have to clean your clothes from whatever",
+    "segment_index": 41
+  },
+  {
+    "id": 42,
+    "start_time": 304.832,
+    "end_time": 314.291,
+    "speaker": "Dr. Khalifa",
+    "content": "is on it, so that it's clean and nice. But basically, it could mean that it is",
+    "segment_index": 42
+  },
+  {
+    "id": 43,
+    "start_time": 314.291,
+    "end_time": 322.53,
+    "speaker": "Dr. Khalifa",
+    "content": "about the secret that cleanses the message, cleanses the Quran or the religion from whatever it has",
+    "segment_index": 43
+  },
+  {
+    "id": 44,
+    "start_time": 322.53,
+    "end_time": 330.0,
+    "speaker": "Dr. Khalifa",
+    "content": "been attached to it during these 1400 years. Then, God is asking him to forsake what is",
+    "segment_index": 44
+  },
+  {
+    "id": 45,
+    "start_time": 330.0,
+    "end_time": 339.019,
+    "speaker": "Dr. Khalifa",
+    "content": "wrong, stay away from the wrong, be content with your lot. This is very crucial. Be happy",
+    "segment_index": 45
+  },
+  {
+    "id": 46,
+    "start_time": 339.019,
+    "end_time": 346.741,
+    "speaker": "Dr. Khalifa",
+    "content": "with what your God has given you, and always commemorate your Lord. With these 7 Suras, then God is",
+    "segment_index": 46
+  },
+  {
+    "id": 47,
+    "start_time": 346.741,
+    "end_time": 352.314,
+    "speaker": "Dr. Khalifa",
+    "content": "putting another instruction, that I think is from 8 to 11. God is saying",
+    "segment_index": 47
+  },
+  {
+    "id": 48,
+    "start_time": 352.314,
+    "end_time": 357.466,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:8]  Then, when the horn is blown. [74:9]  That will be a difficult day. [74:10]  For the disbelievers, not easy.",
+    "segment_index": 48
+  },
+  {
+    "id": 49,
+    "start_time": 357.466,
+    "end_time": 360.679,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:11]  Let Me deal with what I created as an individual.",
+    "segment_index": 49
+  },
+  {
+    "id": 50,
+    "start_time": 362.49,
+    "end_time": 371.825,
+    "speaker": "Dr. Khalifa",
+    "content": "God is here in this Ayas 8 to 11, is telling",
+    "segment_index": 50
+  },
+  {
+    "id": 51,
+    "start_time": 371.825,
+    "end_time": 377.613,
+    "speaker": "Dr. Khalifa",
+    "content": "the messenger that \"when the horn is blown\", which is obviously referring to the Day of",
+    "segment_index": 51
+  },
+  {
+    "id": 52,
+    "start_time": 377.613,
+    "end_time": 382.139,
+    "speaker": "Dr. Khalifa",
+    "content": "Judgment, which is gonna be a difficult day for the disbelievers and a good day",
+    "segment_index": 52
+  },
+  {
+    "id": 53,
+    "start_time": 382.139,
+    "end_time": 389.699,
+    "speaker": "Dr. Khalifa",
+    "content": "for the believers. He says \"that's not gonna be an easy day for those, and let Me deal",
+    "segment_index": 53
+  },
+  {
+    "id": 54,
+    "start_time": 389.699,
+    "end_time": 393.85,
+    "speaker": "Dr. Khalifa",
+    "content": "with those.\" And this is a very interesting Aya to me at least.",
+    "segment_index": 54
+  },
+  {
+    "id": 55,
+    "start_time": 394.601,
+    "end_time": 397.005,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:11]  Let Me deal with what I created as an individual.",
+    "segment_index": 55
+  },
+  {
+    "id": 56,
+    "start_time": 397.987,
+    "end_time": 404.136,
+    "speaker": "Dr. Khalifa",
+    "content": "Sometimes we take it upon ourselves to deal with those who are disbelievers,",
+    "segment_index": 56
+  },
+  {
+    "id": 57,
+    "start_time": 404.136,
+    "end_time": 410.43,
+    "speaker": "Dr. Khalifa",
+    "content": "or who happen not to agree with what we say. And we try to deal with them or make judgments.",
+    "segment_index": 57
+  },
+  {
+    "id": 58,
+    "start_time": 410.719,
+    "end_time": 419.751,
+    "speaker": "Dr. Khalifa",
+    "content": "And I think this is a very good verse that here God is telling us, that \"let Me deal with those.",
+    "segment_index": 58
+  },
+  {
+    "id": 59,
+    "start_time": 419.751,
+    "end_time": 423.905,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Don't worry about those. I'm gonna deal with them. You worry about what you're supposed to.\"",
+    "segment_index": 59
+  },
+  {
+    "id": 60,
+    "start_time": 425.117,
+    "end_time": 434.546,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, from these instructions, the first part, if you look at it, it's all in present",
+    "segment_index": 60
+  },
+  {
+    "id": 61,
+    "start_time": 434.546,
+    "end_time": 441.19,
+    "speaker": "Dr. Khalifa",
+    "content": "tense. It's like the instructions telling him what to do and what not to do. And then, from",
+    "segment_index": 61
+  },
+  {
+    "id": 62,
+    "start_time": 441.19,
+    "end_time": 444.025,
+    "speaker": "Dr. Khalifa",
+    "content": "12 on, it starts with,",
+    "segment_index": 62
+  },
+  {
+    "id": 63,
+    "start_time": 444.025,
+    "end_time": 446.025,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:12]  I provided him with lots of money.",
+    "segment_index": 63
+  },
+  {
+    "id": 64,
+    "start_time": 446.624,
+    "end_time": 455.514,
+    "speaker": "Dr. Khalifa",
+    "content": "I provided these, which is referring I believe to the disbeliever, those individuals that God is saying that I'll deal with them.",
+    "segment_index": 64
+  },
+  {
+    "id": 65,
+    "start_time": 456.092,
+    "end_time": 461.516,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:12]  I provided him with lots of money. [74:13]  And children to behold. [74:14]  I made everything easy for him.",
+    "segment_index": 65
+  },
+  {
+    "id": 66,
+    "start_time": 461.516,
+    "end_time": 466.587,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:15]  Yet, he is greedy for more. [74:16]  He stubbornly refused to accept these proofs.",
+    "segment_index": 66
+  },
+  {
+    "id": 67,
+    "start_time": 466.587,
+    "end_time": 475.08,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:17]  I will increasingly punish him. [74:18]  For he reflected, then decided. [74:19]  Miserable is what he decided.",
+    "segment_index": 67
+  },
+  {
+    "id": 68,
+    "start_time": 475.6,
+    "end_time": 480.67,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:20]  Miserable indeed is what he decided. [74:21]  He looked. [74:22]  He frowned and whined.",
+    "segment_index": 68
+  },
+  {
+    "id": 69,
+    "start_time": 480.67,
+    "end_time": 486.502,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:23]  Then he turned away arrogantly. [74:24]  He said, \"This is but clever magic! [74:25]  \"This is human made.\"",
+    "segment_index": 69
+  },
+  {
+    "id": 70,
+    "start_time": 487.137,
+    "end_time": 499.28,
+    "speaker": "Dr. Khalifa",
+    "content": "I'll stop at 25, because I think between 12 and 25, we have a very interesting description of a disbeliever.",
+    "segment_index": 70
+  },
+  {
+    "id": 71,
+    "start_time": 499.28,
+    "end_time": 510.19,
+    "speaker": "Dr. Khalifa",
+    "content": "God is teaching us and telling us that He has provided those with lots of money,",
+    "segment_index": 71
+  },
+  {
+    "id": 72,
+    "start_time": 510.19,
+    "end_time": 518.763,
+    "speaker": "Dr. Khalifa",
+    "content": "something that people tend to take as a measure of happiness, as a measure of success.",
+    "segment_index": 72
+  },
+  {
+    "id": 73,
+    "start_time": 519.225,
+    "end_time": 528.068,
+    "speaker": "Dr. Khalifa",
+    "content": "And since God knows that, which is something that human beings are used to, He says that",
+    "segment_index": 73
+  },
+  {
+    "id": 74,
+    "start_time": 528.068,
+    "end_time": 530.552,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:12]  I provided him with lots of money.",
+    "segment_index": 74
+  },
+  {
+    "id": 75,
+    "start_time": 530.956,
+    "end_time": 540.581,
+    "speaker": "Dr. Khalifa",
+    "content": "And then, children. Children are second to money here, as something that",
+    "segment_index": 75
+  },
+  {
+    "id": 76,
+    "start_time": 540.581,
+    "end_time": 550.063,
+    "speaker": "Dr. Khalifa",
+    "content": "everyone knows that how human beings love to have children. And so, this is another blessing",
+    "segment_index": 76
+  },
+  {
+    "id": 77,
+    "start_time": 550.063,
+    "end_time": 555.848,
+    "speaker": "Dr. Khalifa",
+    "content": "from God, that in addition to money that God provides for everyone, He provides children.",
+    "segment_index": 77
+  },
+  {
+    "id": 78,
+    "start_time": 556.31,
+    "end_time": 556.907,
+    "speaker": "Dr. Khalifa",
+    "content": "And then He says,",
+    "segment_index": 78
+  },
+  {
+    "id": 79,
+    "start_time": 556.907,
+    "end_time": 560.004,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:14]  I made everything easy for him.",
+    "segment_index": 79
+  },
+  {
+    "id": 80,
+    "start_time": 560.004,
+    "end_time": 567.36,
+    "speaker": "Dr. Khalifa",
+    "content": "just to test him, I guess, to make sure",
+    "segment_index": 80
+  },
+  {
+    "id": 81,
+    "start_time": 567.36,
+    "end_time": 571.614,
+    "speaker": "Dr. Khalifa",
+    "content": "that everything is provided for him. He says,",
+    "segment_index": 81
+  },
+  {
+    "id": 82,
+    "start_time": 571.614,
+    "end_time": 572.942,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:14]  I made everything easy for him.",
+    "segment_index": 82
+  },
+  {
+    "id": 83,
+    "start_time": 572.942,
+    "end_time": 579.252,
+    "speaker": "Dr. Khalifa",
+    "content": "so that he can reach whatever he likes to. But he's greedy for more. Human beings are greedy.",
+    "segment_index": 83
+  },
+  {
+    "id": 84,
+    "start_time": 580.177,
+    "end_time": 589.341,
+    "speaker": "Dr. Khalifa",
+    "content": "You never are content with what you get, what God provides you, unless you learn to believe in God and",
+    "segment_index": 84
+  },
+  {
+    "id": 85,
+    "start_time": 589.341,
+    "end_time": 598.783,
+    "speaker": "Dr. Khalifa",
+    "content": "to be happy with what you have. This is something that especially for younger generations, like",
+    "segment_index": 85
+  },
+  {
+    "id": 86,
+    "start_time": 598.783,
+    "end_time": 604.128,
+    "speaker": "Dr. Khalifa",
+    "content": "my own children, we always have this discussion that, you know, \"why don't we have more?",
+    "segment_index": 86
+  },
+  {
+    "id": 87,
+    "start_time": 604.128,
+    "end_time": 610.192,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Where is it? Where is it?\" So, it never ends. The more you have, the more you want.",
+    "segment_index": 87
+  },
+  {
+    "id": 88,
+    "start_time": 610.827,
+    "end_time": 617.14,
+    "speaker": "Dr. Khalifa",
+    "content": "You can see it everywhere, especially in this country, which is so rich. You see it more and more.",
+    "segment_index": 88
+  },
+  {
+    "id": 89,
+    "start_time": 617.14,
+    "end_time": 623.622,
+    "speaker": "Dr. Khalifa",
+    "content": "People want more and more and more. You read it, you see it on TV, newspapers, every aspect of",
+    "segment_index": 89
+  },
+  {
+    "id": 90,
+    "start_time": 623.622,
+    "end_time": 632.18,
+    "speaker": "Dr. Khalifa",
+    "content": "of life. It is not only in money, it's in fame, it's in science, it's everywhere.",
+    "segment_index": 90
+  },
+  {
+    "id": 91,
+    "start_time": 632.18,
+    "end_time": 636.385,
+    "speaker": "Dr. Khalifa",
+    "content": "You know, there are people who are greedy. It doesn't matter what it is. They're greedy for more.",
+    "segment_index": 91
+  },
+  {
+    "id": 92,
+    "start_time": 636.385,
+    "end_time": 643.19,
+    "speaker": "Dr. Khalifa",
+    "content": "They're not happy with what they are. There's a difference between being greedy for more and trying to",
+    "segment_index": 92
+  },
+  {
+    "id": 93,
+    "start_time": 643.19,
+    "end_time": 649.075,
+    "speaker": "Dr. Khalifa",
+    "content": "reach your potential. So, you shouldn't mix those things up. You have to work hard.",
+    "segment_index": 93
+  },
+  {
+    "id": 94,
+    "start_time": 649.075,
+    "end_time": 655.875,
+    "speaker": "Dr. Khalifa",
+    "content": "God loves the people who work hard, and you can't reach higher grounds. But you always have to",
+    "segment_index": 94
+  },
+  {
+    "id": 95,
+    "start_time": 655.875,
+    "end_time": 660.771,
+    "speaker": "Dr. Khalifa",
+    "content": "commemorate and remember what God tells you, which we have it at the second part of",
+    "segment_index": 95
+  },
+  {
+    "id": 96,
+    "start_time": 660.771,
+    "end_time": 662.75,
+    "speaker": "Dr. Khalifa",
+    "content": "the Sura, at the later part of the Sura.",
+    "segment_index": 96
+  },
+  {
+    "id": 97,
+    "start_time": 663.27,
+    "end_time": 665.848,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:16]  He stubbornly refused to accept these proofs.",
+    "segment_index": 97
+  },
+  {
+    "id": 98,
+    "start_time": 667.37,
+    "end_time": 672.843,
+    "speaker": "Dr. Khalifa",
+    "content": "God is referring to the proofs that we are gonna go to it later on, that",
+    "segment_index": 98
+  },
+  {
+    "id": 99,
+    "start_time": 672.843,
+    "end_time": 677.249,
+    "speaker": "Dr. Khalifa",
+    "content": "he stubbornly refuses to accept those. And we know, we have seen people who do this.",
+    "segment_index": 99
+  },
+  {
+    "id": 100,
+    "start_time": 677.249,
+    "end_time": 679.155,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:17]  I will increasingly punish him.",
+    "segment_index": 100
+  },
+  {
+    "id": 101,
+    "start_time": 679.155,
+    "end_time": 683.479,
+    "speaker": "Dr. Khalifa",
+    "content": "Now, God is telling us that what He's gonna do with those disbelievers.",
+    "segment_index": 101
+  },
+  {
+    "id": 102,
+    "start_time": 683.479,
+    "end_time": 690.0,
+    "speaker": "Dr. Khalifa",
+    "content": "\"I will punish him\", and the reason is that \"he reflected, then he decided.\"",
+    "segment_index": 102
+  },
+  {
+    "id": 103,
+    "start_time": 690.52,
+    "end_time": 694.022,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:19]  Miserable is what he decided. [74:20]  Miserable indeed is ...",
+    "segment_index": 103
+  },
+  {
+    "id": 104,
+    "start_time": 694.283,
+    "end_time": 701.233,
+    "speaker": "Dr. Khalifa",
+    "content": "he just... God is again stressing of the fact that this decision",
+    "segment_index": 104
+  },
+  {
+    "id": 105,
+    "start_time": 701.233,
+    "end_time": 712.003,
+    "speaker": "Dr. Khalifa",
+    "content": "of not heeding the warnings and learning and believing in God alone is a miserable decision.",
+    "segment_index": 105
+  },
+  {
+    "id": 106,
+    "start_time": 712.465,
+    "end_time": 716.446,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:21]  He looked. [74:22]  He frowned and whined. [74:23]  Then he turned away arrogantly.",
+    "segment_index": 106
+  },
+  {
+    "id": 107,
+    "start_time": 716.446,
+    "end_time": 719.139,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:24]  He said, \"This is but clever magic! [74:25]  \"This is human made.\"",
+    "segment_index": 107
+  },
+  {
+    "id": 108,
+    "start_time": 719.565,
+    "end_time": 724.989,
+    "speaker": "Dr. Khalifa",
+    "content": "When I was reading these verses and in everyday life",
+    "segment_index": 108
+  },
+  {
+    "id": 109,
+    "start_time": 724.989,
+    "end_time": 732.88,
+    "speaker": "Dr. Khalifa",
+    "content": "that we go through, I see it's real. It is everyday. It's not something that only",
+    "segment_index": 109
+  },
+  {
+    "id": 110,
+    "start_time": 732.88,
+    "end_time": 738.394,
+    "speaker": "Dr. Khalifa",
+    "content": "may have happened to Muhammad or God was telling to Muhammad. This is something that happens everyday.",
+    "segment_index": 110
+  },
+  {
+    "id": 111,
+    "start_time": 738.394,
+    "end_time": 746.016,
+    "speaker": "Dr. Khalifa",
+    "content": "Especially since, with my background, coming from a religious family, a Muslim family,",
+    "segment_index": 111
+  },
+  {
+    "id": 112,
+    "start_time": 746.016,
+    "end_time": 752.39,
+    "speaker": "Dr. Khalifa",
+    "content": "living in Iran, and coming to U.S., getting education, going back during the revolution,",
+    "segment_index": 112
+  },
+  {
+    "id": 113,
+    "start_time": 752.39,
+    "end_time": 758.65,
+    "speaker": "Dr. Khalifa",
+    "content": "and thinking that this is what we wanted, Islamic country. This is what everyone wanted.",
+    "segment_index": 113
+  },
+  {
+    "id": 114,
+    "start_time": 759.112,
+    "end_time": 765.733,
+    "speaker": "Dr. Khalifa",
+    "content": "We were looking, we were striving to have Islam as part of our country, as part of the government.",
+    "segment_index": 114
+  },
+  {
+    "id": 115,
+    "start_time": 766.311,
+    "end_time": 772.447,
+    "speaker": "Dr. Khalifa",
+    "content": "And it has been a tradition. I'm gonna just get away from this for a minute,",
+    "segment_index": 115
+  },
+  {
+    "id": 116,
+    "start_time": 772.447,
+    "end_time": 777.434,
+    "speaker": "Dr. Khalifa",
+    "content": "which I think is something, I have thought a lot about it, and I think it is",
+    "segment_index": 116
+  },
+  {
+    "id": 117,
+    "start_time": 777.434,
+    "end_time": 783.99,
+    "speaker": "Dr. Khalifa",
+    "content": "something that would define if I shared with you. We went back home in 1979,",
+    "segment_index": 117
+  },
+  {
+    "id": 118,
+    "start_time": 783.99,
+    "end_time": 792.076,
+    "speaker": "Dr. Khalifa",
+    "content": "which was right after the revolution. I loved to go back because this was something that we loved to see,",
+    "segment_index": 118
+  },
+  {
+    "id": 119,
+    "start_time": 792.076,
+    "end_time": 797.111,
+    "speaker": "Dr. Khalifa",
+    "content": "an Islamic government, everything according to what we had the knowledge of Islam, this,",
+    "segment_index": 119
+  },
+  {
+    "id": 120,
+    "start_time": 797.111,
+    "end_time": 807.779,
+    "speaker": "Dr. Khalifa",
+    "content": "the religion of equality, justice for everyone. And so, everyone was happy, and 96% of the people",
+    "segment_index": 120
+  },
+  {
+    "id": 121,
+    "start_time": 807.779,
+    "end_time": 814.224,
+    "speaker": "Dr. Khalifa",
+    "content": "voted for Islamic Republic. That was a true vote that happened at that time.",
+    "segment_index": 121
+  },
+  {
+    "id": 122,
+    "start_time": 814.224,
+    "end_time": 820.787,
+    "speaker": "Dr. Khalifa",
+    "content": "And my job was to teach in the university, and the university was the source, the center of all the action,",
+    "segment_index": 122
+  },
+  {
+    "id": 123,
+    "start_time": 820.787,
+    "end_time": 827.115,
+    "speaker": "Dr. Khalifa",
+    "content": "the intellectuals, the educated people. And because of the Islamic",
+    "segment_index": 123
+  },
+  {
+    "id": 124,
+    "start_time": 827.115,
+    "end_time": 831.753,
+    "speaker": "Dr. Khalifa",
+    "content": "background that all of us have in Iran, in addition to people who were leftist",
+    "segment_index": 124
+  },
+  {
+    "id": 125,
+    "start_time": 831.753,
+    "end_time": 839.19,
+    "speaker": "Dr. Khalifa",
+    "content": "towards Marxism, there were a lot of groups who had Islamic backgrounds and wanted to have",
+    "segment_index": 125
+  },
+  {
+    "id": 126,
+    "start_time": 839.19,
+    "end_time": 845.857,
+    "speaker": "Dr. Khalifa",
+    "content": "an Islamic government, but they didn't know what it is. What is... How God wants to run this country,",
+    "segment_index": 126
+  },
+  {
+    "id": 127,
+    "start_time": 845.857,
+    "end_time": 853.588,
+    "speaker": "Dr. Khalifa",
+    "content": "if it is what He really wants. But every group, there were maybe in a time, I remember, there were",
+    "segment_index": 127
+  },
+  {
+    "id": 128,
+    "start_time": 853.588,
+    "end_time": 861.05,
+    "speaker": "Dr. Khalifa",
+    "content": "maybe 10 different Islamic groups. Everyone with a different interpretation, not of Quran,",
+    "segment_index": 128
+  },
+  {
+    "id": 129,
+    "start_time": 861.05,
+    "end_time": 867.279,
+    "speaker": "Dr. Khalifa",
+    "content": "of something that they thought is from Quran. Because now I look back and I see that how far",
+    "segment_index": 129
+  },
+  {
+    "id": 130,
+    "start_time": 867.279,
+    "end_time": 873.56,
+    "speaker": "Dr. Khalifa",
+    "content": "we have been, how far I have been, how far those people have been from the truth. Because",
+    "segment_index": 130
+  },
+  {
+    "id": 131,
+    "start_time": 873.56,
+    "end_time": 879.947,
+    "speaker": "Dr. Khalifa",
+    "content": "now that I go through this, I still don't know much about Quran, but when I read more,",
+    "segment_index": 131
+  },
+  {
+    "id": 132,
+    "start_time": 879.947,
+    "end_time": 889.162,
+    "speaker": "Dr. Khalifa",
+    "content": "when I come to studies, I see that this is a different story. And over there, which I think is a good example of",
+    "segment_index": 132
+  },
+  {
+    "id": 133,
+    "start_time": 889.162,
+    "end_time": 895.529,
+    "speaker": "Dr. Khalifa",
+    "content": "what is happening in all of the Islamic world, is that people take their own",
+    "segment_index": 133
+  },
+  {
+    "id": 134,
+    "start_time": 895.529,
+    "end_time": 904.279,
+    "speaker": "Dr. Khalifa",
+    "content": "understanding, which is not complete. They don't have the access to Arabic.",
+    "segment_index": 134
+  },
+  {
+    "id": 135,
+    "start_time": 904.279,
+    "end_time": 914.639,
+    "speaker": "Dr. Khalifa",
+    "content": "They have access to lousy translations. And one interesting thing that I read recently was that somebody",
+    "segment_index": 135
+  },
+  {
+    "id": 136,
+    "start_time": 914.639,
+    "end_time": 925.246,
+    "speaker": "Dr. Khalifa",
+    "content": "mentioned that people try to interpret Quran or translate Quran based on the Hadith.",
+    "segment_index": 136
+  },
+  {
+    "id": 137,
+    "start_time": 925.246,
+    "end_time": 933.091,
+    "speaker": "Dr. Khalifa",
+    "content": "They mean they adjust the Quran translation or understanding to the Hadith, not vice versa. And this is",
+    "segment_index": 137
+  },
+  {
+    "id": 138,
+    "start_time": 933.091,
+    "end_time": 942.779,
+    "speaker": "Dr. Khalifa",
+    "content": "a very true thing that happens. But anyway, during these times, always wanting more from",
+    "segment_index": 138
+  },
+  {
+    "id": 139,
+    "start_time": 942.779,
+    "end_time": 947.63,
+    "speaker": "Dr. Khalifa",
+    "content": "Islam, wanting to know more from Quran has been something that, especially the younger",
+    "segment_index": 139
+  },
+  {
+    "id": 140,
+    "start_time": 947.63,
+    "end_time": 953.1,
+    "speaker": "Dr. Khalifa",
+    "content": "generations after Dr. Shariati wanted to know. But unfortunately, there is no way that you",
+    "segment_index": 140
+  },
+  {
+    "id": 141,
+    "start_time": 953.1,
+    "end_time": 957.606,
+    "speaker": "Dr. Khalifa",
+    "content": "can reach these things. You can reach the point to see what is really in here.",
+    "segment_index": 141
+  },
+  {
+    "id": 142,
+    "start_time": 958.472,
+    "end_time": 967.949,
+    "speaker": "Dr. Khalifa",
+    "content": "What happened is that people started to think twice after what happened, after two or three years after revolution.",
+    "segment_index": 142
+  },
+  {
+    "id": 143,
+    "start_time": 967.949,
+    "end_time": 972.745,
+    "speaker": "Dr. Khalifa",
+    "content": "Everybody started to blame Islam and Quran and whatever is related to it.",
+    "segment_index": 143
+  },
+  {
+    "id": 144,
+    "start_time": 973.611,
+    "end_time": 980.41,
+    "speaker": "Dr. Khalifa",
+    "content": "They didn't think that this is because these religious establishments, whose leaders are there,",
+    "segment_index": 144
+  },
+  {
+    "id": 145,
+    "start_time": 980.41,
+    "end_time": 986.526,
+    "speaker": "Dr. Khalifa",
+    "content": "ruling the country, were representative of Islam. And people who just knew Islam because",
+    "segment_index": 145
+  },
+  {
+    "id": 146,
+    "start_time": 986.526,
+    "end_time": 994.886,
+    "speaker": "Dr. Khalifa",
+    "content": "they were born as Muslims, they saw this as a true representation of what is really all",
+    "segment_index": 146
+  },
+  {
+    "id": 147,
+    "start_time": 994.886,
+    "end_time": 1003.41,
+    "speaker": "Dr. Khalifa",
+    "content": "about. When you say Islam, you stone a woman. If you see Islam, you execute someone without",
+    "segment_index": 147
+  },
+  {
+    "id": 148,
+    "start_time": 1003.41,
+    "end_time": 1009.3,
+    "speaker": "Dr. Khalifa",
+    "content": "any trial. If it's Islam, they can search you without any warrant, anything.",
+    "segment_index": 148
+  },
+  {
+    "id": 149,
+    "start_time": 1009.3,
+    "end_time": 1015.49,
+    "speaker": "Dr. Khalifa",
+    "content": "They can take you, kill you, and so on and so forth. So, what happened was that after five years, which",
+    "segment_index": 149
+  },
+  {
+    "id": 150,
+    "start_time": 1015.49,
+    "end_time": 1020.0,
+    "speaker": "Dr. Khalifa",
+    "content": "I was eligible to come for my sabbatical, four years after I came to U.S. for a",
+    "segment_index": 150
+  },
+  {
+    "id": 151,
+    "start_time": 1020.0,
+    "end_time": 1025.784,
+    "speaker": "Dr. Khalifa",
+    "content": "presentation of a paper to a conference. Then as a matter of fact, I came to Tucson to visit a friend.",
+    "segment_index": 151
+  },
+  {
+    "id": 152,
+    "start_time": 1025.784,
+    "end_time": 1029.617,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, I went back home and I told Mary that I have to go for sabbatical leave.",
+    "segment_index": 152
+  },
+  {
+    "id": 153,
+    "start_time": 1029.617,
+    "end_time": 1035.929,
+    "speaker": "Dr. Khalifa",
+    "content": "I'm sick and tired of... I want to learn more science, so I have to go. So, I started",
+    "segment_index": 153
+  },
+  {
+    "id": 154,
+    "start_time": 1035.929,
+    "end_time": 1040.584,
+    "speaker": "Dr. Khalifa",
+    "content": "to look for... Sabbatical leave is something that everybody who works in university",
+    "segment_index": 154
+  },
+  {
+    "id": 155,
+    "start_time": 1040.584,
+    "end_time": 1047.726,
+    "speaker": "Dr. Khalifa",
+    "content": "after so many years is eligible to go for extension of their education or",
+    "segment_index": 155
+  },
+  {
+    "id": 156,
+    "start_time": 1047.726,
+    "end_time": 1054.813,
+    "speaker": "Dr. Khalifa",
+    "content": "catching up with the science to update their knowledge. After revolution, they have completely",
+    "segment_index": 156
+  },
+  {
+    "id": 157,
+    "start_time": 1054.813,
+    "end_time": 1059.446,
+    "speaker": "Dr. Khalifa",
+    "content": "demolished it. But when I went back home, I said, Mary, we have to go. Whatever happens,",
+    "segment_index": 157
+  },
+  {
+    "id": 158,
+    "start_time": 1059.446,
+    "end_time": 1068.16,
+    "speaker": "Dr. Khalifa",
+    "content": "we want to go, we should go. And God knows now that I know after a few months, they passed the rule that now people can go.",
+    "segment_index": 158
+  },
+  {
+    "id": 159,
+    "start_time": 1068.16,
+    "end_time": 1075.686,
+    "speaker": "Dr. Khalifa",
+    "content": "And since I was one of the older, at least at the time, had more experience at the university,",
+    "segment_index": 159
+  },
+  {
+    "id": 160,
+    "start_time": 1075.686,
+    "end_time": 1081.185,
+    "speaker": "Dr. Khalifa",
+    "content": "I applied and was accepted. And it was a big, long journey to come to U.S. And we almost stopped",
+    "segment_index": 160
+  },
+  {
+    "id": 161,
+    "start_time": 1081.185,
+    "end_time": 1087.526,
+    "speaker": "Dr. Khalifa",
+    "content": "in Vancouver, but things worked out, and thanks God we ended up in Tucson. But when we came here,",
+    "segment_index": 161
+  },
+  {
+    "id": 162,
+    "start_time": 1087.526,
+    "end_time": 1093.835,
+    "speaker": "Dr. Khalifa",
+    "content": "one thing that I didn't wanna hear about was Islam, Quran, and everything.",
+    "segment_index": 162
+  },
+  {
+    "id": 163,
+    "start_time": 1095.0,
+    "end_time": 1101.558,
+    "speaker": "Dr. Khalifa",
+    "content": "The reason was that I saw the brainwashings that were going on in schools. I leave my children in school, and",
+    "segment_index": 163
+  },
+  {
+    "id": 164,
+    "start_time": 1101.558,
+    "end_time": 1107.452,
+    "speaker": "Dr. Khalifa",
+    "content": "it was a dilemma. What could I teach them? What is being taught in the schools?",
+    "segment_index": 164
+  },
+  {
+    "id": 165,
+    "start_time": 1107.452,
+    "end_time": 1111.523,
+    "speaker": "Dr. Khalifa",
+    "content": "And what contradictions and what problems and what dangers are involved?",
+    "segment_index": 165
+  },
+  {
+    "id": 166,
+    "start_time": 1111.872,
+    "end_time": 1118.955,
+    "speaker": "Dr. Khalifa",
+    "content": "So, anyway, we came here, and I remember one day one of these Jehovah's Witnesses came to the door",
+    "segment_index": 166
+  },
+  {
+    "id": 167,
+    "start_time": 1118.955,
+    "end_time": 1124.604,
+    "speaker": "Dr. Khalifa",
+    "content": "and talked to her. She couldn't refuse. She's so nice, she talked to them. And after",
+    "segment_index": 167
+  },
+  {
+    "id": 168,
+    "start_time": 1124.604,
+    "end_time": 1129.075,
+    "speaker": "Dr. Khalifa",
+    "content": "they kept calling, she said \"Mahmoud, talk to them, tell them 'you don't wanna hear it.'\"",
+    "segment_index": 168
+  },
+  {
+    "id": 169,
+    "start_time": 1129.075,
+    "end_time": 1136.918,
+    "speaker": "Dr. Khalifa",
+    "content": "And I said \"you invited them, why should I?\" One Sunday morning, they showed up at the door, two very nice ladies.",
+    "segment_index": 169
+  },
+  {
+    "id": 170,
+    "start_time": 1136.918,
+    "end_time": 1141.368,
+    "speaker": "Dr. Khalifa",
+    "content": "I opened the door, I had the chain on, I said \"no, we don't wanna talk to you.\"",
+    "segment_index": 170
+  },
+  {
+    "id": 171,
+    "start_time": 1141.368,
+    "end_time": 1145.458,
+    "speaker": "Dr. Khalifa",
+    "content": "The lady insisted. I felt bad. I said \"okay, let's make an arrangement for another week.\"",
+    "segment_index": 171
+  },
+  {
+    "id": 172,
+    "start_time": 1145.703,
+    "end_time": 1151.195,
+    "speaker": "Dr. Khalifa",
+    "content": "So anyway, one day they came in. I sat down with them, I said \"okay, I listen to you. Give all of your things.\"",
+    "segment_index": 172
+  },
+  {
+    "id": 173,
+    "start_time": 1152.465,
+    "end_time": 1157.437,
+    "speaker": "Dr. Khalifa",
+    "content": "She started, you know, giving all the ceremonies, whatever",
+    "segment_index": 173
+  },
+  {
+    "id": 174,
+    "start_time": 1157.437,
+    "end_time": 1161.941,
+    "speaker": "Dr. Khalifa",
+    "content": "she wanted to talk about. And I said \"see, I'm coming from a religious country.",
+    "segment_index": 174
+  },
+  {
+    "id": 175,
+    "start_time": 1161.941,
+    "end_time": 1171.0,
+    "speaker": "Dr. Khalifa",
+    "content": "\"I've lived five years under Khomeini. I have decided that I'm gonna be away from any religion for the rest of my life.",
+    "segment_index": 175
+  },
+  {
+    "id": 176,
+    "start_time": 1171.0,
+    "end_time": 1177.04,
+    "speaker": "Dr. Khalifa",
+    "content": "\"What you're saying is exactly what Khomeini said, and they're similar. I don't wanna hear it, please don't bother us.\"",
+    "segment_index": 176
+  },
+  {
+    "id": 177,
+    "start_time": 1177.04,
+    "end_time": 1180.38,
+    "speaker": "Dr. Khalifa",
+    "content": "The lady was shocked, so they left. They never came back.",
+    "segment_index": 177
+  },
+  {
+    "id": 178,
+    "start_time": 1182.748,
+    "end_time": 1190.234,
+    "speaker": "Dr. Khalifa",
+    "content": "It took about three years, I guess, that all of a sudden we realized that something is missing.",
+    "segment_index": 178
+  },
+  {
+    "id": 179,
+    "start_time": 1192.544,
+    "end_time": 1199.568,
+    "speaker": "Dr. Khalifa",
+    "content": "The missing part was that I saw my children growing, and I had the privilege to be raised in a religious family.",
+    "segment_index": 179
+  },
+  {
+    "id": 180,
+    "start_time": 1199.568,
+    "end_time": 1206.823,
+    "speaker": "Dr. Khalifa",
+    "content": "To learn this, either from school, either my parents see them, and practice religion. But you know,...",
+    "segment_index": 180
+  },
+  {
+    "id": 181,
+    "start_time": 1208.823,
+    "end_time": 1219.082,
+    "speaker": "Dr. Khalifa",
+    "content": "And we looked around and I said \"God, something wrong is happening.\" And I knew that there was no way that I could go anywhere else.",
+    "segment_index": 181
+  },
+  {
+    "id": 182,
+    "start_time": 1219.082,
+    "end_time": 1225.991,
+    "speaker": "Dr. Khalifa",
+    "content": "And I didn't know about this mosque at all. Somehow Mary found out about it, and she said, she came sooner than me, as a matter of fact.",
+    "segment_index": 182
+  },
+  {
+    "id": 183,
+    "start_time": 1226.858,
+    "end_time": 1238.792,
+    "speaker": "Dr. Khalifa",
+    "content": "And then one night, she said \"okay, let's go, you know, try it, you know, it's not gonna hurt.\" And I came, I came a few nights, and I listened.",
+    "segment_index": 183
+  },
+  {
+    "id": 184,
+    "start_time": 1239.254,
+    "end_time": 1247.434,
+    "speaker": "Dr. Khalifa",
+    "content": "One thing that impressed me the most was the fact that the message was strong.",
+    "segment_index": 184
+  },
+  {
+    "id": 185,
+    "start_time": 1248.069,
+    "end_time": 1256.48,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Worship God alone. Forget about everything else.\" And one night, I remember, I asked, because I had heard from",
+    "segment_index": 185
+  },
+  {
+    "id": 186,
+    "start_time": 1256.48,
+    "end_time": 1263.851,
+    "speaker": "Dr. Khalifa",
+    "content": "other friends that, you know, this is... The person, which was Dr. Khalifa, is saying he's a messenger of God.",
+    "segment_index": 186
+  },
+  {
+    "id": 187,
+    "start_time": 1264.255,
+    "end_time": 1270.009,
+    "speaker": "Dr. Khalifa",
+    "content": "How can it be? We have the Khatam Al-Nabiyyin (خَاتَمَ ٱلنَّبِيِّـۧنَ), it is impossible that somebody else could be.",
+    "segment_index": 187
+  },
+  {
+    "id": 188,
+    "start_time": 1270.471,
+    "end_time": 1275.359,
+    "speaker": "Dr. Khalifa",
+    "content": "And I asked him, I remember, in one of these studies, I said \"why you say you are the messenger of God?\"",
+    "segment_index": 188
+  },
+  {
+    "id": 189,
+    "start_time": 1275.359,
+    "end_time": 1282.383,
+    "speaker": "Dr. Khalifa",
+    "content": "And I don't know whether he remembers what he answered me or not, but his answer was great for me, and he said",
+    "segment_index": 189
+  },
+  {
+    "id": 190,
+    "start_time": 1282.383,
+    "end_time": 1287.271,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Messenger doesn't mean\" something in this, I'm not quote-unquote exactly saying what you said.",
+    "segment_index": 190
+  },
+  {
+    "id": 191,
+    "start_time": 1287.271,
+    "end_time": 1296.432,
+    "speaker": "Dr. Khalifa",
+    "content": "But he said \"Messenger is not important. What is important is the message. If you like the message, take it, if you don't like it, so leave it.\"",
+    "segment_index": 191
+  },
+  {
+    "id": 192,
+    "start_time": 1296.432,
+    "end_time": 1301.768,
+    "speaker": "Dr. Khalifa",
+    "content": "Which the message was something that I liked, and I have been here since then.",
+    "segment_index": 192
+  },
+  {
+    "id": 193,
+    "start_time": 1302.176,
+    "end_time": 1309.505,
+    "speaker": "Dr. Khalifa",
+    "content": "So, nowadays, my friends here, a lot of them are very puzzled, I see.",
+    "segment_index": 193
+  },
+  {
+    "id": 194,
+    "start_time": 1310.082,
+    "end_time": 1318.499,
+    "speaker": "Dr. Khalifa",
+    "content": "One of them, who I was talking recently to, he doesn't practice either. You know, he says he doesn't believe in anything.",
+    "segment_index": 194
+  },
+  {
+    "id": 195,
+    "start_time": 1319.308,
+    "end_time": 1322.393,
+    "speaker": "Dr. Khalifa",
+    "content": "But one thing, very interestingly that he asked me, he said,",
+    "segment_index": 195
+  },
+  {
+    "id": 196,
+    "start_time": 1322.393,
+    "end_time": 1327.176,
+    "speaker": "Dr. Khalifa",
+    "content": "\"Why among all those mosques, you go to this mosque?\" And I said",
+    "segment_index": 196
+  },
+  {
+    "id": 197,
+    "start_time": 1327.176,
+    "end_time": 1333.599,
+    "speaker": "Dr. Khalifa",
+    "content": "\"What does it have to do with you? Because you say you don't believe in God.\" He didn't say he doesn't believe in God. I pushed him",
+    "segment_index": 197
+  },
+  {
+    "id": 198,
+    "start_time": 1333.599,
+    "end_time": 1336.643,
+    "speaker": "Dr. Khalifa",
+    "content": "and I said \"okay. You say you don't believe in God.\" He said \"no, no, I believe in God.\"",
+    "segment_index": 198
+  },
+  {
+    "id": 199,
+    "start_time": 1336.643,
+    "end_time": 1341.88,
+    "speaker": "Dr. Khalifa",
+    "content": "He was scared to say that. But he said \"Muhammad wrote Quran.",
+    "segment_index": 199
+  },
+  {
+    "id": 200,
+    "start_time": 1341.88,
+    "end_time": 1348.622,
+    "speaker": "Dr. Khalifa",
+    "content": "\"He just wrote it himself. He did everything, and these are all a bunch of\", his word, \"nonsense.\"",
+    "segment_index": 200
+  },
+  {
+    "id": 201,
+    "start_time": 1348.622,
+    "end_time": 1353.714,
+    "speaker": "Dr. Khalifa",
+    "content": "I said \"that's your thing, but why do you worry about what I go, and where I go?\"",
+    "segment_index": 201
+  },
+  {
+    "id": 202,
+    "start_time": 1353.714,
+    "end_time": 1360.374,
+    "speaker": "Dr. Khalifa",
+    "content": "And he asked me \"why don't you go to the other? And I said \"I hate this, you know, I have seen those,",
+    "segment_index": 202
+  },
+  {
+    "id": 203,
+    "start_time": 1360.374,
+    "end_time": 1370.286,
+    "speaker": "Dr. Khalifa",
+    "content": "\"and I can't take that kind of... I have practiced, I have seen those, and I know what the consequence of that kind of understanding of Quran is.\"",
+    "segment_index": 203
+  },
+  {
+    "id": 204,
+    "start_time": 1370.652,
+    "end_time": 1378.699,
+    "speaker": "Dr. Khalifa",
+    "content": "But we're going back to these verses that I have here here, 22, 23,",
+    "segment_index": 204
+  },
+  {
+    "id": 205,
+    "start_time": 1378.699,
+    "end_time": 1386.705,
+    "speaker": "Dr. Khalifa",
+    "content": "and 24, and 25, that's exactly what I hear. You know, this is, we used to hear it back home, you know,",
+    "segment_index": 205
+  },
+  {
+    "id": 206,
+    "start_time": 1386.705,
+    "end_time": 1391.708,
+    "speaker": "Dr. Khalifa",
+    "content": "but usually we wouldn't get into discussion about these things, because religion was there, we were there,",
+    "segment_index": 206
+  },
+  {
+    "id": 207,
+    "start_time": 1391.708,
+    "end_time": 1397.982,
+    "speaker": "Dr. Khalifa",
+    "content": "and everyone was happy with their life. But now it is something that people pay attention to.",
+    "segment_index": 207
+  },
+  {
+    "id": 208,
+    "start_time": 1398.271,
+    "end_time": 1402.523,
+    "speaker": "Dr. Khalifa",
+    "content": "They are surprised, why you go there, why you do this,",
+    "segment_index": 208
+  },
+  {
+    "id": 209,
+    "start_time": 1402.523,
+    "end_time": 1408.672,
+    "speaker": "Dr. Khalifa",
+    "content": "why, what is, this is all, exactly what God is saying, that they say \"this is clever magic.\"",
+    "segment_index": 209
+  },
+  {
+    "id": 210,
+    "start_time": 1408.672,
+    "end_time": 1410.268,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:25]  \"This is human made.\"",
+    "segment_index": 210
+  },
+  {
+    "id": 211,
+    "start_time": 1410.846,
+    "end_time": 1414.417,
+    "speaker": "Dr. Khalifa",
+    "content": "And then, God is saying that",
+    "segment_index": 211
+  },
+  {
+    "id": 212,
+    "start_time": 1414.417,
+    "end_time": 1419.536,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:26]  I will commit him to retribution. [74:27]  What retribution! [74:28]  Thorough and comprehensive.",
+    "segment_index": 212
+  },
+  {
+    "id": 213,
+    "start_time": 1419.536,
+    "end_time": 1423.788,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:29]  Obvious to all the people. [74:30]  Over it is nineteen.*",
+    "segment_index": 213
+  },
+  {
+    "id": 214,
+    "start_time": 1424.12,
+    "end_time": 1432.067,
+    "speaker": "Dr. Khalifa",
+    "content": "I'm gonna stop here, catch up my breath. And see for, because if I go like this, I'm gonna finish in five minutes. And",
+    "segment_index": 214
+  },
+  {
+    "id": 215,
+    "start_time": 1432.991,
+    "end_time": 1440.994,
+    "speaker": "Dr. Khalifa",
+    "content": "I haven't prepared the next Sura at all, so this is tough. So, I'll stop here. And",
+    "segment_index": 215
+  },
+  {
+    "id": 216,
+    "start_time": 1442.332,
+    "end_time": 1447.9,
+    "speaker": "Dr. Sabahi",
+    "content": "as they say, open the floor for discussion or comments or... Don't ask me questions, though.",
+    "segment_index": 216
+  },
+  {
+    "id": 217,
+    "start_time": 1453.271,
+    "end_time": 1455.271,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 217
+  },
+  {
+    "id": 218,
+    "start_time": 1456.794,
+    "end_time": 1458.795,
+    "speaker": "Dr. Sabahi",
+    "content": "I gave him a few questions to ask me.",
+    "segment_index": 218
+  },
+  {
+    "id": 219,
+    "start_time": 1460.412,
+    "end_time": 1462.412,
+    "speaker": "Dr. Sabahi",
+    "content": "This is why when we teach, that's what we do.",
+    "segment_index": 219
+  },
+  {
+    "id": 220,
+    "start_time": 1467.032,
+    "end_time": 1468.281,
+    "speaker": "Dr. Khalifa",
+    "content": "Any questions?",
+    "segment_index": 220
+  },
+  {
+    "id": 221,
+    "start_time": 1468.901,
+    "end_time": 1472.66,
+    "speaker": "Dr. Khalifa",
+    "content": "Okay, let me open the discussion to have a... start something.",
+    "segment_index": 221
+  },
+  {
+    "id": 222,
+    "start_time": 1474.739,
+    "end_time": 1479.685,
+    "speaker": "Dr. Khalifa",
+    "content": "Dr. Sabahi mentioned about, when God says",
+    "segment_index": 222
+  },
+  {
+    "id": 223,
+    "start_time": 1479.685,
+    "end_time": 1485.878,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:12]  I provided him with lots of money. [74:13]  And children to behold. [74:14]  I made everything easy for him. [74:15]  Yet, he is greedy for more.",
+    "segment_index": 223
+  },
+  {
+    "id": 224,
+    "start_time": 1486.619,
+    "end_time": 1495.951,
+    "speaker": "Dr. Khalifa",
+    "content": "There's a very famous saying in this country, that you never have enough money, you never have enough. And it's very true.",
+    "segment_index": 224
+  },
+  {
+    "id": 225,
+    "start_time": 1496.817,
+    "end_time": 1500.838,
+    "speaker": "Dr. Khalifa",
+    "content": "You come close to some of the richest people in the world, and they don't have enough.",
+    "segment_index": 225
+  },
+  {
+    "id": 226,
+    "start_time": 1501.741,
+    "end_time": 1506.085,
+    "speaker": "Dr. Khalifa",
+    "content": "I was listening to Sammy Davis Jr. the other day on TV. He wrote a book called \"Why Me?\"",
+    "segment_index": 226
+  },
+  {
+    "id": 227,
+    "start_time": 1506.404,
+    "end_time": 1514.419,
+    "speaker": "Dr. Khalifa",
+    "content": "And he's making rounds on all the shows and radios and so on. And I found out that six years ago they put a lien on his house.",
+    "segment_index": 227
+  },
+  {
+    "id": 228,
+    "start_time": 1515.26,
+    "end_time": 1517.886,
+    "speaker": "Dr. Khalifa",
+    "content": "Here's a man who makes a million dollars a week.",
+    "segment_index": 228
+  },
+  {
+    "id": 229,
+    "start_time": 1519.214,
+    "end_time": 1523.393,
+    "speaker": "Dr. Khalifa",
+    "content": "They put a lien on his house because he lost everything in gambling. He works in Las Vegas.",
+    "segment_index": 229
+  },
+  {
+    "id": 230,
+    "start_time": 1524.49,
+    "end_time": 1530.253,
+    "speaker": "Dr. Khalifa",
+    "content": "And the IRS put a lien on his house, and he was very poor. He was very drunk, and he was very miserable.",
+    "segment_index": 230
+  },
+  {
+    "id": 231,
+    "start_time": 1531.288,
+    "end_time": 1535.15,
+    "speaker": "Dr. Khalifa",
+    "content": "So, here's a person that we think is very rich, glamorous.",
+    "segment_index": 231
+  },
+  {
+    "id": 232,
+    "start_time": 1537.359,
+    "end_time": 1543.959,
+    "speaker": "Dr. Khalifa",
+    "content": "Henry Ford is an example of very rich people who will pound the table very hard, and he wants more money, more profit for Ford.",
+    "segment_index": 232
+  },
+  {
+    "id": 233,
+    "start_time": 1544.361,
+    "end_time": 1552.341,
+    "speaker": "Dr. Khalifa",
+    "content": "He wants more. So, the definition of rich and poor will turn everything upside down,",
+    "segment_index": 233
+  },
+  {
+    "id": 234,
+    "start_time": 1552.341,
+    "end_time": 1555.649,
+    "speaker": "Dr. Khalifa",
+    "content": "because Henry Ford was very poor, because he wanted more.",
+    "segment_index": 234
+  },
+  {
+    "id": 235,
+    "start_time": 1555.649,
+    "end_time": 1561.75,
+    "speaker": "Dr. Khalifa",
+    "content": "The definition of poor is needy, one who needs more. If you need more, you're poor.",
+    "segment_index": 235
+  },
+  {
+    "id": 236,
+    "start_time": 1562.147,
+    "end_time": 1565.072,
+    "speaker": "Dr. Khalifa",
+    "content": "It doesn't matter how many millions you have in the bank, the bank account.",
+    "segment_index": 236
+  },
+  {
+    "id": 237,
+    "start_time": 1565.592,
+    "end_time": 1570.845,
+    "speaker": "Dr. Khalifa",
+    "content": "If you need more, you're needy, you're poor. And the rich person is a content person.",
+    "segment_index": 237
+  },
+  {
+    "id": 238,
+    "start_time": 1571.249,
+    "end_time": 1577.463,
+    "speaker": "Dr. Khalifa",
+    "content": "No matter how little you have in the bank, if you're content and happy and have all your needs satisfied, you're rich.",
+    "segment_index": 238
+  },
+  {
+    "id": 239,
+    "start_time": 1577.752,
+    "end_time": 1580.331,
+    "speaker": "Dr. Khalifa",
+    "content": "So, this is really the definition of rich and poor.",
+    "segment_index": 239
+  },
+  {
+    "id": 240,
+    "start_time": 1582.641,
+    "end_time": 1590.938,
+    "speaker": "Dr. Khalifa",
+    "content": "Because they never ever have enough. It's a very famous saying. It's a standard thing that they say. \"You never have enough money.\"",
+    "segment_index": 240
+  },
+  {
+    "id": 241,
+    "start_time": 1591.845,
+    "end_time": 1598.231,
+    "speaker": "Dr. Khalifa",
+    "content": "If you're a person, if you're in God's kingdom, you really have access to God's treasury.",
+    "segment_index": 241
+  },
+  {
+    "id": 242,
+    "start_time": 1598.809,
+    "end_time": 1603.523,
+    "speaker": "Dr. Khalifa",
+    "content": "Anything you need will come to you at the time you need it.",
+    "segment_index": 242
+  },
+  {
+    "id": 243,
+    "start_time": 1603.523,
+    "end_time": 1611.067,
+    "speaker": "Dr. Khalifa",
+    "content": "And it will come to you in the portions or the amounts that is good for you, that will keep you in God's path,",
+    "segment_index": 243
+  },
+  {
+    "id": 244,
+    "start_time": 1611.067,
+    "end_time": 1615.262,
+    "speaker": "Dr. Khalifa",
+    "content": "in God's kingdom. It will keep you happy and it will keep you satisfied.",
+    "segment_index": 244
+  },
+  {
+    "id": 245,
+    "start_time": 1615.724,
+    "end_time": 1621.767,
+    "speaker": "Dr. Khalifa",
+    "content": "You may become a millionaire or you may not. But in either case, you will be content. You will be rich.",
+    "segment_index": 245
+  },
+  {
+    "id": 246,
+    "start_time": 1622.691,
+    "end_time": 1628.098,
+    "speaker": "Dr. Khalifa",
+    "content": "And we see this in Sura 54. God says \"He's the one who makes you rich or poor.\"",
+    "segment_index": 246
+  },
+  {
+    "id": 247,
+    "start_time": 1629.27,
+    "end_time": 1637.516,
+    "speaker": "Dr. Khalifa",
+    "content": "And in Sura 63, if you remember, God said... I'm gonna say it in Arabic. Of course, I'm gonna say it and then translate.",
+    "segment_index": 247
+  },
+  {
+    "id": 248,
+    "start_time": 1637.92,
+    "end_time": 1638.42,
+    "speaker": "Dr. Khalifa",
+    "content": "He says,",
+    "segment_index": 248
+  },
+  {
+    "id": 249,
+    "start_time": 1638.42,
+    "end_time": 1643.885,
+    "speaker": "Dr. Khalifa",
+    "content": "(63:8) وَلِلَّهِ ٱلْعِزَّةُ وَلِرَسُولِهِۦ وَلِلْمُؤْمِنِينَ وَلَـٰكِنَّ ٱلْمُنَـٰفِقِينَ لَا يَعْلَمُونَ",
+    "segment_index": 249
+  },
+  {
+    "id": 250,
+    "start_time": 1644.232,
+    "end_time": 1656.396,
+    "speaker": "Dr. Khalifa",
+    "content": "He says \"all dignity or all power or all richness, all contentment belongs to God, to His messenger, to the believers. But the hypocrites do not know.\"",
+    "segment_index": 250
+  },
+  {
+    "id": 251,
+    "start_time": 1657.262,
+    "end_time": 1663.305,
+    "speaker": "Dr. Khalifa",
+    "content": "So, if they look at your bank account, they may not decide you're rich, but you're really the richest person in the world.",
+    "segment_index": 251
+  },
+  {
+    "id": 252,
+    "start_time": 1663.94,
+    "end_time": 1669.925,
+    "speaker": "Dr. Khalifa",
+    "content": "You have all your needs satisfied. You're eating as much as you can. And you're dressing as much as you can.",
+    "segment_index": 252
+  },
+  {
+    "id": 253,
+    "start_time": 1670.552,
+    "end_time": 1683.332,
+    "speaker": "Dr. Khalifa",
+    "content": "And you're perfectly happy. And what you eat, you enjoy. So this is what, this is very significant.",
+    "segment_index": 253
+  },
+  {
+    "id": 254,
+    "start_time": 1683.332,
+    "end_time": 1686.429,
+    "speaker": "Dr. Khalifa",
+    "content": "When God says \"I gave him lots of money, but he's greedy for more.\"",
+    "segment_index": 254
+  },
+  {
+    "id": 255,
+    "start_time": 1687.7,
+    "end_time": 1691.259,
+    "speaker": "Dr. Khalifa",
+    "content": "Because if they are disbelievers, they are poor. No matter how much money they have.",
+    "segment_index": 255
+  },
+  {
+    "id": 256,
+    "start_time": 1692.102,
+    "end_time": 1697.09,
+    "speaker": "Dr. Khalifa",
+    "content": "And you always remember how miserable and how abused he was, in spite of his billions.",
+    "segment_index": 256
+  },
+  {
+    "id": 257,
+    "start_time": 1698.765,
+    "end_time": 1700.765,
+    "speaker": "Dr. Khalifa",
+    "content": "So, this is the true richness.",
+    "segment_index": 257
+  },
+  {
+    "id": 258,
+    "start_time": 1701.862,
+    "end_time": 1702.765,
+    "speaker": "Dr. Khalifa",
+    "content": "In number 16, you see,",
+    "segment_index": 258
+  },
+  {
+    "id": 259,
+    "start_time": 1702.765,
+    "end_time": 1705.631,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:16]  He stubbornly refused to accept these proofs.",
+    "segment_index": 259
+  },
+  {
+    "id": 260,
+    "start_time": 1706.844,
+    "end_time": 1715.37,
+    "speaker": "Dr. Khalifa",
+    "content": "It's also (unintelligible) in the number 19. And as we saw some proofs today for the miracle of the Quran.",
+    "segment_index": 260
+  },
+  {
+    "id": 261,
+    "start_time": 1715.37,
+    "end_time": 1724.032,
+    "speaker": "Dr. Khalifa",
+    "content": "And the word \"stubborn\" had to be fulfilled. People who are not accepting the miracle of the Quran",
+    "segment_index": 261
+  },
+  {
+    "id": 262,
+    "start_time": 1724.032,
+    "end_time": 1730.432,
+    "speaker": "Dr. Khalifa",
+    "content": "are stubborn. Stubbornness, stubbornly refusing to accept these overwhelming proofs.",
+    "segment_index": 262
+  },
+  {
+    "id": 263,
+    "start_time": 1731.692,
+    "end_time": 1739.44,
+    "speaker": "Dr. Khalifa",
+    "content": "And they are overwhelming. So, the Quran is just describing that. They're so stubborn.",
+    "segment_index": 263
+  },
+  {
+    "id": 264,
+    "start_time": 1739.44,
+    "end_time": 1743.635,
+    "speaker": "Dr. Khalifa",
+    "content": "As you know, we started out with just a few pieces of proof. They were still overwhelming.",
+    "segment_index": 264
+  },
+  {
+    "id": 265,
+    "start_time": 1744.125,
+    "end_time": 1748.768,
+    "speaker": "Dr. Khalifa",
+    "content": "In the Quran, the opening statement is 19 letters. The number of Suras is 19 times 6.",
+    "segment_index": 265
+  },
+  {
+    "id": 266,
+    "start_time": 1749.171,
+    "end_time": 1760.594,
+    "speaker": "Dr. Khalifa",
+    "content": "The missing Basmalah is from Tawbah, 19 Suras later. It's just very simple. Surah Qaf has 19 times 3, Surah Nun has 19 times 7.",
+    "segment_index": 266
+  },
+  {
+    "id": 267,
+    "start_time": 1760.594,
+    "end_time": 1761.769,
+    "speaker": "Dr. Khalifa",
+    "content": "These are simple things.",
+    "segment_index": 267
+  },
+  {
+    "id": 268,
+    "start_time": 1761.769,
+    "end_time": 1766.203,
+    "speaker": "Dr. Khalifa",
+    "content": "Then, it kept growing and growing, and they kept stubbornly refusing and refusing.",
+    "segment_index": 268
+  },
+  {
+    "id": 269,
+    "start_time": 1767.007,
+    "end_time": 1773.413,
+    "speaker": "Dr. Khalifa",
+    "content": "Until they became ridiculous. (unintelligible). So, they will be scandalized on the Day of Judgement.",
+    "segment_index": 269
+  },
+  {
+    "id": 270,
+    "start_time": 1773.413,
+    "end_time": 1775.413,
+    "speaker": "Dr. Khalifa",
+    "content": "\"How did you refuse all this?\"",
+    "segment_index": 270
+  },
+  {
+    "id": 271,
+    "start_time": 1776.51,
+    "end_time": 1781.282,
+    "speaker": "Dr. Khalifa",
+    "content": "So, are there any other ideas you wanna share on this?",
+    "segment_index": 271
+  },
+  {
+    "id": 272,
+    "start_time": 1782.726,
+    "end_time": 1792.523,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 272
+  },
+  {
+    "id": 273,
+    "start_time": 1793.237,
+    "end_time": 1797.605,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, I look at this as the whole Sura is talking to the number 19. Then to cover means to clear all the doubts,",
+    "segment_index": 273
+  },
+  {
+    "id": 274,
+    "start_time": 1800.0,
+    "end_time": 1800.614,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:4]  Cleanse your cover.",
+    "segment_index": 274
+  },
+  {
+    "id": 275,
+    "start_time": 1800.614,
+    "end_time": 1812.143,
+    "speaker": "Dr. Khalifa",
+    "content": "means clean all the doubts, remove all the incorrect things. It could refer to the two verses, remove the two verses.",
+    "segment_index": 275
+  },
+  {
+    "id": "276_part_0",
+    "start_time": 1814.143,
+    "end_time": 1815.7620476190477,
+    "speaker": "Edip",
+    "content": "(unintelligible) ",
+    "segment_index": 276
+  },
+  {
+    "id": "276_part_1",
+    "start_time": 1815.7620476190477,
+    "end_time": 1816.143,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 277
+  },
+  {
+    "id": "277_part_0",
+    "start_time": 1817.552,
+    "end_time": 1825.4250322580647,
+    "speaker": "Edip",
+    "content": "In the beginning of this Sura, chapter, (unintelligible). ",
+    "segment_index": 278
+  },
+  {
+    "id": "277_part_1",
+    "start_time": 1825.4250322580647,
+    "end_time": 1825.968,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 279
+  },
+  {
+    "id": 278,
+    "start_time": 1826.304,
+    "end_time": 1838.073,
+    "speaker": "Edip",
+    "content": "There's no mention of the portion of the Quran (unintelligible)",
+    "segment_index": 280
+  },
+  {
+    "id": "279_part_0",
+    "start_time": 1838.073,
+    "end_time": 1841.4678392857143,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) ",
+    "segment_index": 281
+  },
+  {
+    "id": "279_part_1",
+    "start_time": 1841.4678392857143,
+    "end_time": 1849.2559999999999,
+    "speaker": "Edip",
+    "content": "Yes, with your power. (unintelligible).",
+    "segment_index": 282
+  },
+  {
+    "id": 280,
+    "start_time": 1850.085,
+    "end_time": 1857.398,
+    "speaker": "Dr. Khalifa",
+    "content": "As you know the number 19 was instrumental in removing the 2 verses, which was pollution in the Quran.",
+    "segment_index": 283
+  },
+  {
+    "id": 281,
+    "start_time": 1858.149,
+    "end_time": 1863.268,
+    "speaker": "Dr. Khalifa",
+    "content": "And this is to cleanse the Quran from these two human made statements.",
+    "segment_index": 284
+  },
+  {
+    "id": 282,
+    "start_time": 1863.788,
+    "end_time": 1867.809,
+    "speaker": "Dr. Khalifa",
+    "content": "And the number 19 was the factor in removing them.",
+    "segment_index": 285
+  },
+  {
+    "id": 283,
+    "start_time": 1868.387,
+    "end_time": 1872.062,
+    "speaker": "Dr. Khalifa",
+    "content": "Because a lot of people were suspicious of that. Even in the books of Hadith.",
+    "segment_index": 286
+  },
+  {
+    "id": 284,
+    "start_time": 1872.418,
+    "end_time": 1877.736,
+    "speaker": "Dr. Khalifa",
+    "content": "But we did not have the tools or the means or the strength or the proof to remove them, which is a big thing.",
+    "segment_index": 287
+  },
+  {
+    "id": 285,
+    "start_time": 1878.14,
+    "end_time": 1883.539,
+    "speaker": "Dr. Khalifa",
+    "content": "Until we saw the proofs of number 19. The miracle removed them.",
+    "segment_index": 288
+  },
+  {
+    "id": "286_part_0",
+    "start_time": 1883.539,
+    "end_time": 1884.1078,
+    "speaker": "Dr. Khalifa",
+    "content": "Just because... ",
+    "segment_index": 289
+  },
+  {
+    "id": "286_part_1",
+    "start_time": 1884.1078,
+    "end_time": 1884.961,
+    "speaker": "Edip",
+    "content": "(unintelligible) Rashad.",
+    "segment_index": 290
+  },
+  {
+    "id": "287_part_0",
+    "start_time": 1884.961,
+    "end_time": 1893.696043478261,
+    "speaker": "Edip",
+    "content": "(unintelligible) ",
+    "segment_index": 291
+  },
+  {
+    "id": "287_part_1",
+    "start_time": 1893.696043478261,
+    "end_time": 1896.779,
+    "speaker": "Dr. Khalifa",
+    "content": "Right.",
+    "segment_index": 292
+  },
+  {
+    "id": 288,
+    "start_time": 1897.457,
+    "end_time": 1901.016,
+    "speaker": "Dr. Khalifa",
+    "content": "That's fine, but I don't count it as only the (unintelligible) number 19.",
+    "segment_index": 293
+  },
+  {
+    "id": 289,
+    "start_time": 1903.962,
+    "end_time": 1910.582,
+    "speaker": "Dr. Sabahi",
+    "content": "I got so excited that I forgot my notes. Because I forgot some notes. Referring to that same verse.",
+    "segment_index": 294
+  },
+  {
+    "id": 290,
+    "start_time": 1910.582,
+    "end_time": 1911.773,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:4]  Cleanse your cover.",
+    "segment_index": 295
+  },
+  {
+    "id": 291,
+    "start_time": 1912.293,
+    "end_time": 1919.317,
+    "speaker": "Dr. Sabahi",
+    "content": "Since a lot of Farsi translations have that as \"clothing\", which is Libas in Arabic,",
+    "segment_index": 296
+  },
+  {
+    "id": 292,
+    "start_time": 1919.317,
+    "end_time": 1924.818,
+    "speaker": "Dr. Sabahi",
+    "content": "I tried to see whether there is anywhere in Quran that God refers to \"cover\" as \"Libas.\"",
+    "segment_index": 297
+  },
+  {
+    "id": 293,
+    "start_time": 1925.587,
+    "end_time": 1931.713,
+    "speaker": "Dr. Sabahi",
+    "content": "You know, I just found one. I think it's 78:10. God says, the Arabic is",
+    "segment_index": 298
+  },
+  {
+    "id": 294,
+    "start_time": 1931.713,
+    "end_time": 1933.713,
+    "speaker": "Dr. Sabahi",
+    "content": "(78:10) وَجَعَلْنَا ٱلَّيْلَ لِبَاسًۭا",
+    "segment_index": 299
+  },
+  {
+    "id": 295,
+    "start_time": 1933.713,
+    "end_time": 1936.753,
+    "speaker": "Dr. Sabahi",
+    "content": "which you have translated it \"cover\" again.",
+    "segment_index": 300
+  },
+  {
+    "id": 296,
+    "start_time": 1937.026,
+    "end_time": 1943.553,
+    "speaker": "Dr. Sabahi",
+    "content": "We may deny the cover. But the Arabic word is \"Libas\" which is what you put on, clothing.",
+    "segment_index": 301
+  },
+  {
+    "id": 297,
+    "start_time": 1943.784,
+    "end_time": 1950.289,
+    "speaker": "Dr. Sabahi",
+    "content": "But here, it is Thiyabika (ثِيَابَكَ) which I don't know what the Arabic really means, whether it means cover.",
+    "segment_index": 302
+  },
+  {
+    "id": 298,
+    "start_time": 1950.521,
+    "end_time": 1958.629,
+    "speaker": "Dr. Sabahi",
+    "content": "Then, that again, then I realized that if God wanted to talk about the clothing,",
+    "segment_index": 303
+  },
+  {
+    "id": 299,
+    "start_time": 1958.629,
+    "end_time": 1964.363,
+    "speaker": "Dr. Sabahi",
+    "content": "to clean up your clothes, then He would have used Libas (لِبَاس) rather than Thiyabika (ثِيَابَكَ) for that.",
+    "segment_index": 304
+  },
+  {
+    "id": "300_part_0",
+    "start_time": 1964.363,
+    "end_time": 1966.4926296296296,
+    "speaker": "Dr. Khalifa",
+    "content": "Actually, Thiyab (ثِيَاب) also means garment. ",
+    "segment_index": 305
+  },
+  {
+    "id": "300_part_1",
+    "start_time": 1966.4926296296296,
+    "end_time": 1966.863,
+    "speaker": "Dr. Sabahi",
+    "content": "Does it?",
+    "segment_index": 306
+  },
+  {
+    "id": 301,
+    "start_time": 1966.863,
+    "end_time": 1970.249,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes, it means garment. But it is allegorical.",
+    "segment_index": 307
+  },
+  {
+    "id": 302,
+    "start_time": 1980.492,
+    "end_time": 1988.569,
+    "speaker": "A man",
+    "content": "There is also a further... I think a further miracle involved, the Quran's use of the multi-meaning words.",
+    "segment_index": 308
+  },
+  {
+    "id": 303,
+    "start_time": 1991.284,
+    "end_time": 1995.5,
+    "speaker": "A man",
+    "content": "To encourage disbelievers to have different interpretations of the same verse, for example.",
+    "segment_index": 309
+  },
+  {
+    "id": "304_part_0",
+    "start_time": 1996.365,
+    "end_time": 1997.511375,
+    "speaker": "Dr. Khalifa",
+    "content": "The Quran says that. ",
+    "segment_index": 310
+  },
+  {
+    "id": "304_part_1",
+    "start_time": 1997.511375,
+    "end_time": 2002.479,
+    "speaker": "A man",
+    "content": "The Quran says that. It says that is the mechanism by which God misguides the disbelievers.",
+    "segment_index": 311
+  },
+  {
+    "id": 305,
+    "start_time": 2003.23,
+    "end_time": 2005.717,
+    "speaker": "A man",
+    "content": "So, let them blunder in their...",
+    "segment_index": 312
+  },
+  {
+    "id": "306_part_0",
+    "start_time": 2009.066,
+    "end_time": 2014.7530909090908,
+    "speaker": "Dr. Khalifa",
+    "content": "There is also a dilemma here that this Sura, the hidden secret, was hidden for 14 centuries. ",
+    "segment_index": 313
+  },
+  {
+    "id": "306_part_1",
+    "start_time": 2014.7530909090908,
+    "end_time": 2015.12,
+    "speaker": "A man",
+    "content": "Right.",
+    "segment_index": 314
+  },
+  {
+    "id": "307_part_0",
+    "start_time": 2015.351,
+    "end_time": 2020.2362173913043,
+    "speaker": "Dr. Khalifa",
+    "content": "So, what will the people do before they discover it? ",
+    "segment_index": 315
+  },
+  {
+    "id": "307_part_1",
+    "start_time": 2020.2362173913043,
+    "end_time": 2023.831,
+    "speaker": "A man",
+    "content": "Exactly. I mean this is also the... The",
+    "segment_index": 316
+  },
+  {
+    "id": 308,
+    "start_time": 2023.831,
+    "end_time": 2026.235,
+    "speaker": "Dr. Khalifa",
+    "content": "(79:30) وَٱلْأَرْضَ بَعْدَ ذَٰلِكَ دَحَىٰهَآ",
+    "segment_index": 317
+  },
+  {
+    "id": 309,
+    "start_time": 2026.892,
+    "end_time": 2035.99,
+    "speaker": "A man",
+    "content": "The word Dahaha (دَحَىٰهَآ) also is a multi-meaning word. Because God is so Merciful that He even has respect for the idiots,",
+    "segment_index": 318
+  },
+  {
+    "id": 310,
+    "start_time": 2035.99,
+    "end_time": 2039.761,
+    "speaker": "A man",
+    "content": "that do not know that earth is round. And they think it's flat.",
+    "segment_index": 319
+  },
+  {
+    "id": 311,
+    "start_time": 2040.0,
+    "end_time": 2041.596,
+    "speaker": "Edip",
+    "content": "But it's not multi-meaning.",
+    "segment_index": 320
+  },
+  {
+    "id": "312_part_0",
+    "start_time": 2042.462,
+    "end_time": 2042.885076923077,
+    "speaker": "A man",
+    "content": "It also... ",
+    "segment_index": 321
+  },
+  {
+    "id": "312_part_1",
+    "start_time": 2042.885076923077,
+    "end_time": 2044.462,
+    "speaker": "Dr. Khalifa",
+    "content": "Dahaha (دَحَىٰهَآ) is not multi-meaning.",
+    "segment_index": 322
+  },
+  {
+    "id": 313,
+    "start_time": 2044.462,
+    "end_time": 2046.462,
+    "speaker": "Edip",
+    "content": "Not. One meaning. Dahaha (دَحَىٰهَآ)...",
+    "segment_index": 323
+  },
+  {
+    "id": "314_part_0",
+    "start_time": 2046.462,
+    "end_time": 2048.237760869565,
+    "speaker": "A man",
+    "content": "Doesn't Daha (دَحَىٰ) means... ",
+    "segment_index": 324
+  },
+  {
+    "id": "314_part_1",
+    "start_time": 2048.237760869565,
+    "end_time": 2049.097,
+    "speaker": "Edip",
+    "content": "No, no, no, no.",
+    "segment_index": 325
+  },
+  {
+    "id": 315,
+    "start_time": 2049.097,
+    "end_time": 2050.057,
+    "speaker": "A man",
+    "content": "In...",
+    "segment_index": 326
+  },
+  {
+    "id": 316,
+    "start_time": 2050.385,
+    "end_time": 2053.063,
+    "speaker": "Dr. Khalifa",
+    "content": "I was gonna say, it doesn't have multi-meaning. This is one meaning.",
+    "segment_index": 327
+  },
+  {
+    "id": 317,
+    "start_time": 2053.063,
+    "end_time": 2055.756,
+    "speaker": "Edip",
+    "content": "Only there's one meaning. They didn't, earth...",
+    "segment_index": 328
+  },
+  {
+    "id": 318,
+    "start_time": 2055.756,
+    "end_time": 2056.947,
+    "speaker": "Dr. Khalifa",
+    "content": "Go ahead.",
+    "segment_index": 329
+  },
+  {
+    "id": 319,
+    "start_time": 2057.279,
+    "end_time": 2063.591,
+    "speaker": "Edip",
+    "content": "They couldn't understand this because it is so obvious. Daha (دَحَىٰ) in Arabic means egg.",
+    "segment_index": 330
+  },
+  {
+    "id": 320,
+    "start_time": 2064.054,
+    "end_time": 2071.832,
+    "speaker": "Edip",
+    "content": "Dahaha (دَحَىٰهَآ) meaning that egg. It is very obvious. It has no any other meaning. But they couldn't understand this.",
+    "segment_index": 331
+  },
+  {
+    "id": 321,
+    "start_time": 2071.832,
+    "end_time": 2077.418,
+    "speaker": "Edip",
+    "content": "They had difficulty with understanding this. They started to interpret this.",
+    "segment_index": 332
+  },
+  {
+    "id": 322,
+    "start_time": 2077.418,
+    "end_time": 2084.657,
+    "speaker": "Edip",
+    "content": "They said \"Dahaha (دَحَىٰهَآ) means Madha.\" Madha means the place of egg where you put.",
+    "segment_index": 333
+  },
+  {
+    "id": 323,
+    "start_time": 2085.0,
+    "end_time": 2092.644,
+    "speaker": "Edip",
+    "content": "They said \"from Daha (دَحَىٰ), Allah wants from us to understand Madha, the place of egg.\"",
+    "segment_index": 334
+  },
+  {
+    "id": 324,
+    "start_time": 2092.935,
+    "end_time": 2098.673,
+    "speaker": "Edip",
+    "content": "(unintelligible) the place of egg. But Allah doesn't say Madha. They're interpreting by forcing.",
+    "segment_index": 335
+  },
+  {
+    "id": "325_part_0",
+    "start_time": 2098.904,
+    "end_time": 2102.6022278481014,
+    "speaker": "A man",
+    "content": "But isn't that true that Daha (دَحَىٰ) also means bat? ",
+    "segment_index": 336
+  },
+  {
+    "id": "325_part_1",
+    "start_time": 2102.6022278481014,
+    "end_time": 2103.409113924051,
+    "speaker": "Edip",
+    "content": "No, no, no. ",
+    "segment_index": 337
+  },
+  {
+    "id": "325_part_2",
+    "start_time": 2103.409113924051,
+    "end_time": 2104.2160000000003,
+    "speaker": "A man",
+    "content": "They said...",
+    "segment_index": 338
+  },
+  {
+    "id": "326_part_0",
+    "start_time": 2104.216,
+    "end_time": 2104.74,
+    "speaker": "Edip",
+    "content": "No, no, no. ",
+    "segment_index": 339
+  },
+  {
+    "id": "326_part_1",
+    "start_time": 2104.74,
+    "end_time": 2106.967,
+    "speaker": "Dr. Khalifa",
+    "content": "See, they interpreted this only because they cannot",
+    "segment_index": 340
+  },
+  {
+    "id": "327_part_0",
+    "start_time": 2106.967,
+    "end_time": 2108.296966666667,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) ",
+    "segment_index": 341
+  },
+  {
+    "id": "327_part_1",
+    "start_time": 2108.296966666667,
+    "end_time": 2109.314,
+    "speaker": "A man",
+    "content": "I see. I see.",
+    "segment_index": 342
+  },
+  {
+    "id": 328,
+    "start_time": 2109.314,
+    "end_time": 2110.604,
+    "speaker": "Dr. Khalifa",
+    "content": "The earth is egg-shaped, you know.",
+    "segment_index": 343
+  },
+  {
+    "id": "329_part_0",
+    "start_time": 2110.857,
+    "end_time": 2115.8603793103453,
+    "speaker": "Edip",
+    "content": "There is a multi-meaning sentence here. The verse 29. ",
+    "segment_index": 344
+  },
+  {
+    "id": "329_part_1",
+    "start_time": 2115.8603793103453,
+    "end_time": 2116.231,
+    "speaker": "A man",
+    "content": "Yes.",
+    "segment_index": 345
+  },
+  {
+    "id": 330,
+    "start_time": 2116.52,
+    "end_time": 2118.809,
+    "speaker": "Edip",
+    "content": "[74:29]  Obvious to all the people.",
+    "segment_index": 346
+  },
+  {
+    "id": 331,
+    "start_time": 2119.119,
+    "end_time": 2124.2,
+    "speaker": "Edip",
+    "content": "Also has another meaning. But this meaning is very far from the Quranic text.",
+    "segment_index": 347
+  },
+  {
+    "id": 332,
+    "start_time": 2124.2,
+    "end_time": 2126.316,
+    "speaker": "Edip",
+    "content": "(74:29) لَوَّاحَةٌۭ لِّلْبَشَرِ",
+    "segment_index": 348
+  },
+  {
+    "id": 333,
+    "start_time": 2126.316,
+    "end_time": 2134.207,
+    "speaker": "Edip",
+    "content": "has two words in this verse. Lawaha (لَوَّاحَةٌۭ), it means, is \"obvious.\"",
+    "segment_index": 349
+  },
+  {
+    "id": 334,
+    "start_time": 2134.207,
+    "end_time": 2139.903,
+    "speaker": "Edip",
+    "content": "Lawha (لَوَّحَةٌۭ), Lawaha (لَوَّاحَةٌۭ). And other meaning is \"burn\", \"to burn.\"",
+    "segment_index": 350
+  },
+  {
+    "id": 335,
+    "start_time": 2140.827,
+    "end_time": 2146.119,
+    "speaker": "Edip",
+    "content": "Lilbashar (لِّلْبَشَرِ) in Quran, full Quran, Bashar  (بَشَرِ) means humankind.",
+    "segment_index": 351
+  },
+  {
+    "id": 336,
+    "start_time": 2146.611,
+    "end_time": 2154.452,
+    "speaker": "Edip",
+    "content": "And another meaning is not used in Quran. But in Arabic, you can find. Bashar means \"skin.\"",
+    "segment_index": 352
+  },
+  {
+    "id": 337,
+    "start_time": 2154.972,
+    "end_time": 2158.356,
+    "speaker": "Edip",
+    "content": "They interpreted the second meaning.",
+    "segment_index": 353
+  },
+  {
+    "id": 338,
+    "start_time": 2158.356,
+    "end_time": 2160.76,
+    "speaker": "Edip",
+    "content": "Lawaha Lilbashar (لَوَّاحَةٌۭ لِّلْبَشَرِ) is burning the skin.",
+    "segment_index": 354
+  },
+  {
+    "id": 339,
+    "start_time": 2161.358,
+    "end_time": 2166.95,
+    "speaker": "Edip",
+    "content": "The skin of the human being. Because of the air. And they could understand it this way. It's very interesting.",
+    "segment_index": 355
+  },
+  {
+    "id": 340,
+    "start_time": 2167.239,
+    "end_time": 2176.67,
+    "speaker": "Edip",
+    "content": "But the first meaning which is more dominant. Lawaha Lilbashar (لَوَّاحَةٌۭ لِّلْبَشَرِ), Because the word Bashar (بَشَرِ) is mentioned the second time in the verse 31.",
+    "segment_index": 356
+  },
+  {
+    "id": 341,
+    "start_time": 2177.132,
+    "end_time": 2185.507,
+    "speaker": "Edip",
+    "content": "And the last part of verse 31, you see Lilbashar (لِّلْبَشَرِ), Zikra Lilbashar (ذِكْرَىٰ لِلْبَشَرِ). It is a reminder for the people.",
+    "segment_index": 357
+  },
+  {
+    "id": 342,
+    "start_time": 2185.884,
+    "end_time": 2192.373,
+    "speaker": "Edip",
+    "content": "But if you look to all interpretations, all of them,",
+    "segment_index": 358
+  },
+  {
+    "id": 343,
+    "start_time": 2192.373,
+    "end_time": 2200.495,
+    "speaker": "Edip",
+    "content": "we'll see interpreted as Lawaha Lilbashar (لَوَّاحَةٌۭ لِّلْبَشَرِ), burning, it burns the skins of human body.",
+    "segment_index": 359
+  },
+  {
+    "id": 344,
+    "start_time": 2201.671,
+    "end_time": 2203.424,
+    "speaker": "Edip",
+    "content": "This is multiple meanings.",
+    "segment_index": 360
+  },
+  {
+    "id": "345_part_0",
+    "start_time": 2204.059,
+    "end_time": 2209.395876033058,
+    "speaker": "Dr. Khalifa",
+    "content": "But the Quran always gives you. If there is a questionable word, God will give you a (unintelligible) ",
+    "segment_index": 361
+  },
+  {
+    "id": "345_part_1",
+    "start_time": 2209.395876033058,
+    "end_time": 2210.39,
+    "speaker": "A man",
+    "content": "Exactly. Mechanism.",
+    "segment_index": 362
+  },
+  {
+    "id": 346,
+    "start_time": 2210.727,
+    "end_time": 2219.807,
+    "speaker": "Dr. Khalifa",
+    "content": "In the next verse or the verse before that, immediately before that. It's like when the Quran talks about the Salat Prayer being in existence before the Quran.",
+    "segment_index": 363
+  },
+  {
+    "id": 347,
+    "start_time": 2220.327,
+    "end_time": 2226.425,
+    "speaker": "Dr. Khalifa",
+    "content": "They tell you the Salat at that time was clapping and whistling, just to ridicule the disbelievers.",
+    "segment_index": 364
+  },
+  {
+    "id": 348,
+    "start_time": 2226.714,
+    "end_time": 2230.614,
+    "speaker": "Dr. Khalifa",
+    "content": "But God gives them a word too actually, in the verse before that,",
+    "segment_index": 365
+  },
+  {
+    "id": 349,
+    "start_time": 2230.614,
+    "end_time": 2238.16,
+    "speaker": "Dr. Khalifa",
+    "content": "using the same word which was repelling. You know, by crowding the mosque, they were repelling the unbelievers by",
+    "segment_index": 366
+  },
+  {
+    "id": 350,
+    "start_time": 2238.16,
+    "end_time": 2242.633,
+    "speaker": "Dr. Khalifa",
+    "content": "doing something to keep them away. It has nothing to do with clapping",
+    "segment_index": 367
+  },
+  {
+    "id": 351,
+    "start_time": 2242.633,
+    "end_time": 2248.539,
+    "speaker": "Dr. Khalifa",
+    "content": "or whistling. They invent this meaning just like that, easily. Like the Hanameen clap.",
+    "segment_index": 368
+  },
+  {
+    "id": 352,
+    "start_time": 2248.539,
+    "end_time": 2250.539,
+    "speaker": "Dr. Khalifa",
+    "content": "Like the (unintelligible) clap.",
+    "segment_index": 369
+  },
+  {
+    "id": 353,
+    "start_time": 2250.539,
+    "end_time": 2252.539,
+    "speaker": "A man",
+    "content": "(unintelligible)",
+    "segment_index": 370
+  },
+  {
+    "id": 354,
+    "start_time": 2252.539,
+    "end_time": 2259.159,
+    "speaker": "Dr. Khalifa",
+    "content": "You know, like the Ummy. And the prophet (unintelligible) that the prophet is Ummy. They write the word, \"a gentile\" that made it to \"illiterate.\"",
+    "segment_index": 371
+  },
+  {
+    "id": 355,
+    "start_time": 2259.536,
+    "end_time": 2261.641,
+    "speaker": "Dr. Khalifa",
+    "content": "And it actually became a word in the language.",
+    "segment_index": 372
+  },
+  {
+    "id": 356,
+    "start_time": 2261.641,
+    "end_time": 2263.988,
+    "speaker": "A man",
+    "content": "I know it's false. Ummy means somebody who is illiterate.",
+    "segment_index": 373
+  },
+  {
+    "id": 357,
+    "start_time": 2264.623,
+    "end_time": 2267.87,
+    "speaker": "Dr. Khalifa",
+    "content": "It doesn't mean that. You were saying something.",
+    "segment_index": 374
+  },
+  {
+    "id": 358,
+    "start_time": 2267.87,
+    "end_time": 2271.881,
+    "speaker": "A man",
+    "content": "No, I was saying that I was referring to Al-Mujtahid (unintelligible).",
+    "segment_index": 375
+  },
+  {
+    "id": "359_part_0",
+    "start_time": 2273.094,
+    "end_time": 2275.4775294117644,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh, you mean one of the Mufassirs. Yes. ",
+    "segment_index": 376
+  },
+  {
+    "id": "359_part_1",
+    "start_time": 2275.4775294117644,
+    "end_time": 2275.775470588235,
+    "speaker": "A man",
+    "content": "Yes. ",
+    "segment_index": 377
+  },
+  {
+    "id": "359_part_2",
+    "start_time": 2275.775470588235,
+    "end_time": 2276.1329999999994,
+    "speaker": "Dr. Khalifa",
+    "content": "Right.",
+    "segment_index": 378
+  },
+  {
+    "id": "360_part_0",
+    "start_time": 2276.133,
+    "end_time": 2276.92303125,
+    "speaker": "Dr. Khalifa",
+    "content": "They do say that. ",
+    "segment_index": 379
+  },
+  {
+    "id": "360_part_1",
+    "start_time": 2276.92303125,
+    "end_time": 2278.942,
+    "speaker": "A man",
+    "content": "It's in the, it's in a encyclopedia basically.",
+    "segment_index": 380
+  },
+  {
+    "id": 361,
+    "start_time": 2279.346,
+    "end_time": 2282.559,
+    "speaker": "Edip",
+    "content": "After changing the meaning, they started to use it.",
+    "segment_index": 381
+  },
+  {
+    "id": 362,
+    "start_time": 2282.559,
+    "end_time": 2284.559,
+    "speaker": "A man",
+    "content": "Exactly. Exactly, that's...",
+    "segment_index": 382
+  },
+  {
+    "id": 363,
+    "start_time": 2284.559,
+    "end_time": 2290.721,
+    "speaker": "Edip",
+    "content": "But if you look at a bigger translation, you will see",
+    "segment_index": 383
+  },
+  {
+    "id": 364,
+    "start_time": 2290.721,
+    "end_time": 2298.1,
+    "speaker": "Edip",
+    "content": "They don't know these words. They say \"Daha (دَحَىٰ) means egg. I just... Daha (دَحَىٰ) means (unintelligible). It is understood as Madha.\"",
+    "segment_index": 384
+  },
+  {
+    "id": 365,
+    "start_time": 2298.578,
+    "end_time": 2305.189,
+    "speaker": "Dr. Khalifa",
+    "content": "They force their traditions on the Quran. One of the major things is, for example, for the women to cover their chest.",
+    "segment_index": 385
+  },
+  {
+    "id": 366,
+    "start_time": 2306.055,
+    "end_time": 2310.0,
+    "speaker": "Dr. Khalifa",
+    "content": "They make the word. They say \"it comes up from the head down to the chest.\"",
+    "segment_index": 386
+  },
+  {
+    "id": 367,
+    "start_time": 2310.0,
+    "end_time": 2317.14,
+    "speaker": "Dr. Khalifa",
+    "content": "You know, they're telling God what to do, in other words, telling the Quran what the correct understanding is.",
+    "segment_index": 387
+  },
+  {
+    "id": 368,
+    "start_time": 2317.14,
+    "end_time": 2319.544,
+    "speaker": "Dr. Khalifa",
+    "content": "So, they force their traditions on the Quran.",
+    "segment_index": 388
+  },
+  {
+    "id": 369,
+    "start_time": 2322.143,
+    "end_time": 2328.359,
+    "speaker": "Edip",
+    "content": "I want to give you another example of multi-meaning words. A very interesting example is",
+    "segment_index": 389
+  },
+  {
+    "id": 370,
+    "start_time": 2328.359,
+    "end_time": 2330.359,
+    "speaker": "Edip",
+    "content": "(96:2) خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ",
+    "segment_index": 390
+  },
+  {
+    "id": 371,
+    "start_time": 2330.59,
+    "end_time": 2332.763,
+    "speaker": "Edip",
+    "content": "He created human beings from Alaq (عَلَقٍ).",
+    "segment_index": 391
+  },
+  {
+    "id": 372,
+    "start_time": 2333.225,
+    "end_time": 2339.383,
+    "speaker": "Edip",
+    "content": "What is Alaq (عَلَقٍ)? Well, if you look all the translations, and also new translations, because",
+    "segment_index": 392
+  },
+  {
+    "id": 373,
+    "start_time": 2339.383,
+    "end_time": 2348.429,
+    "speaker": "Edip",
+    "content": "many of them are based on old translations, you see it's from the clot, from a blood, from clot, yes.",
+    "segment_index": 393
+  },
+  {
+    "id": 374,
+    "start_time": 2349.876,
+    "end_time": 2358.867,
+    "speaker": "Edip",
+    "content": "But in embryo (unintelligible), scientifically it is not true, not correct. In our evolution,",
+    "segment_index": 394
+  },
+  {
+    "id": "375_part_0",
+    "start_time": 2358.867,
+    "end_time": 2365.5690512820515,
+    "speaker": "Edip",
+    "content": "from (unintelligible) of birth date, there is no this phase, no clot. ",
+    "segment_index": 395
+  },
+  {
+    "id": "375_part_1",
+    "start_time": 2365.5690512820515,
+    "end_time": 2366.335,
+    "speaker": "Dr. Khalifa",
+    "content": "No clot.",
+    "segment_index": 396
+  },
+  {
+    "id": 376,
+    "start_time": 2366.566,
+    "end_time": 2376.94,
+    "speaker": "Edip",
+    "content": "If you look at Arabic, in Arabic, it has 3 meanings. Not 2 meanings, there are 3 meanings. One is clot. Alaq (عَلَقٍ).",
+    "segment_index": 397
+  },
+  {
+    "id": 377,
+    "start_time": 2376.94,
+    "end_time": 2378.94,
+    "speaker": "Edip",
+    "content": "clot خَلَقَ ٱلْإِنسَـٰنَ مِنْ",
+    "segment_index": 398
+  },
+  {
+    "id": 378,
+    "start_time": 2378.94,
+    "end_time": 2381.749,
+    "speaker": "Edip",
+    "content": "And the second one, the hanging part.",
+    "segment_index": 399
+  },
+  {
+    "id": "379_part_0",
+    "start_time": 2382.233,
+    "end_time": 2388.2446250000003,
+    "speaker": "Edip",
+    "content": "A piece, a part that's hanging on something, Mo'alaq (مُعَلَّق). Do you use it in Farsi Mo'alaq (مُعَلَّق)? Alaq (عَلَقٍ). ",
+    "segment_index": 400
+  },
+  {
+    "id": "379_part_1",
+    "start_time": 2388.2446250000003,
+    "end_time": 2388.88,
+    "speaker": "Dr. Sabahi",
+    "content": "Ok. Suspense.",
+    "segment_index": 401
+  },
+  {
+    "id": "380_part_0",
+    "start_time": 2388.88,
+    "end_time": 2394.77568,
+    "speaker": "Edip",
+    "content": "And the third meaning is a small animal that how do you say it? ",
+    "segment_index": 402
+  },
+  {
+    "id": "380_part_1",
+    "start_time": 2394.77568,
+    "end_time": 2395.789,
+    "speaker": "Dr. Khalifa",
+    "content": "It's Leech.",
+    "segment_index": 403
+  },
+  {
+    "id": 381,
+    "start_time": 2395.789,
+    "end_time": 2401.485,
+    "speaker": "Edip",
+    "content": "Leech. Yes, you put on your...  yes, it is. And",
+    "segment_index": 404
+  },
+  {
+    "id": 382,
+    "start_time": 2401.485,
+    "end_time": 2408.971,
+    "speaker": "Edip",
+    "content": "now we understand, we see that this is the second phase of evolution and this must be,",
+    "segment_index": 405
+  },
+  {
+    "id": 383,
+    "start_time": 2408.971,
+    "end_time": 2412.184,
+    "speaker": "Edip",
+    "content": "should be translated in the second or third meaning.",
+    "segment_index": 406
+  },
+  {
+    "id": 384,
+    "start_time": 2412.184,
+    "end_time": 2415.974,
+    "speaker": "Edip",
+    "content": "Allah created us from like a, what...",
+    "segment_index": 407
+  },
+  {
+    "id": "385_part_0",
+    "start_time": 2415.974,
+    "end_time": 2417.0084827586206,
+    "speaker": "Dr. Khalifa",
+    "content": "Hanging animal ",
+    "segment_index": 408
+  },
+  {
+    "id": "385_part_1",
+    "start_time": 2417.0084827586206,
+    "end_time": 2417.974,
+    "speaker": "Edip",
+    "content": "Hanging animal",
+    "segment_index": 409
+  },
+  {
+    "id": "386_part_0",
+    "start_time": 2417.974,
+    "end_time": 2419.365304347826,
+    "speaker": "Dr. Khalifa",
+    "content": "Hanging Embryo. ",
+    "segment_index": 410
+  },
+  {
+    "id": "386_part_1",
+    "start_time": 2419.365304347826,
+    "end_time": 2419.974,
+    "speaker": "Edip",
+    "content": "Embryo.",
+    "segment_index": 411
+  },
+  {
+    "id": 387,
+    "start_time": 2420.667,
+    "end_time": 2426.095,
+    "speaker": "Edip",
+    "content": "But with old people, previous generations, they couldn't understand in this way.",
+    "segment_index": 412
+  },
+  {
+    "id": 388,
+    "start_time": 2426.095,
+    "end_time": 2433.87,
+    "speaker": "Edip",
+    "content": "They chose the first option and the old animals became the same translation.",
+    "segment_index": 413
+  },
+  {
+    "id": 389,
+    "start_time": 2433.87,
+    "end_time": 2435.35,
+    "speaker": "Edip",
+    "content": "Well, it's not correct.",
+    "segment_index": 414
+  },
+  {
+    "id": 390,
+    "start_time": 2435.35,
+    "end_time": 2437.985,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, I have news for you, Edip. It's only 2 meanings, not 3.",
+    "segment_index": 415
+  },
+  {
+    "id": 391,
+    "start_time": 2437.985,
+    "end_time": 2442.757,
+    "speaker": "Dr. Khalifa",
+    "content": "Alaq (عَلَقٍ), meaning clot, doesn't even exist. They invented that. It doesn't even mean clot.",
+    "segment_index": 416
+  },
+  {
+    "id": 392,
+    "start_time": 2443.046,
+    "end_time": 2449.377,
+    "speaker": "Dr. Khalifa",
+    "content": "So, they added the new... They invent these things as they go. Ok, back to Dr. Sabahi.",
+    "segment_index": 417
+  },
+  {
+    "id": 393,
+    "start_time": 2450.244,
+    "end_time": 2453.457,
+    "speaker": "Dr. Sabahi",
+    "content": "Before getting to 31, one comment",
+    "segment_index": 418
+  },
+  {
+    "id": 394,
+    "start_time": 2453.457,
+    "end_time": 2462.156,
+    "speaker": "Dr. Sabahi",
+    "content": "about what you said about the disbeliever, how miserable they are and they don't know it. 29:54, the verse says,",
+    "segment_index": 419
+  },
+  {
+    "id": 395,
+    "start_time": 2462.156,
+    "end_time": 2469.585,
+    "speaker": "Dr. Sabahi",
+    "content": "[29:54]  They challenge you to bring doom! Though Hell is actually surrounding the disbelievers and they don't realize it.",
+    "segment_index": 420
+  },
+  {
+    "id": 396,
+    "start_time": 2469.585,
+    "end_time": 2476.783,
+    "speaker": "Dr. Sabahi",
+    "content": "So, this is another verse that I found that relates to what it is really.",
+    "segment_index": 421
+  },
+  {
+    "id": 397,
+    "start_time": 2477.187,
+    "end_time": 2484.385,
+    "speaker": "Dr. Sabahi",
+    "content": "It's a continuous matter being in Hell that starts from here and then continues to the Day of Resurrection.",
+    "segment_index": 422
+  },
+  {
+    "id": 398,
+    "start_time": 2485.633,
+    "end_time": 2493.113,
+    "speaker": "Dr. Sabahi",
+    "content": "Verse 31 by itself, it is all in present time, in present tense, sorry.",
+    "segment_index": 423
+  },
+  {
+    "id": 399,
+    "start_time": 2493.113,
+    "end_time": 2497.769,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:31]  We made the guardians of Hell angels, and we assigned their numbers (19) ...",
+    "segment_index": 424
+  },
+  {
+    "id": 400,
+    "start_time": 2498.52,
+    "end_time": 2500.693,
+    "speaker": "Dr. Sabahi",
+    "content": "In parentheses, for the following reasons.",
+    "segment_index": 425
+  },
+  {
+    "id": 401,
+    "start_time": 2501.097,
+    "end_time": 2532.262,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:31]  ... (1) to disturb the disbelievers, (2) to convince the Christians and Jews, (3) to strengthen the faith of the faithful, (4) to remove all traces of doubt from the hearts of Christians, Jews, as well as the believers, and (5) to expose those who harbor doubt in their hearts, and the disbelievers; they will say, \"What did GOD mean by this allegory?\" GOD thus sends astray whoever He wills, and guides whomever He wills. None knows the soldiers of your Lord except He. ...",
+    "segment_index": 426
+  },
+  {
+    "id": 402,
+    "start_time": 2533.154,
+    "end_time": 2539.946,
+    "speaker": "Dr. Sabahi",
+    "content": "This by itself is a huge chapter. First, I tell you about the translations that I",
+    "segment_index": 427
+  },
+  {
+    "id": 403,
+    "start_time": 2539.946,
+    "end_time": 2546.36,
+    "speaker": "Dr. Sabahi",
+    "content": "I saw and it is very interesting when I look at them is that everyone translates, most of",
+    "segment_index": 428
+  },
+  {
+    "id": 404,
+    "start_time": 2546.36,
+    "end_time": 2552.245,
+    "speaker": "Dr. Sabahi",
+    "content": "the ones that I saw, translate this right. They say \"we made the guardians of Hell\",",
+    "segment_index": 429
+  },
+  {
+    "id": 405,
+    "start_time": 2552.245,
+    "end_time": 2559.06,
+    "speaker": "Dr. Sabahi",
+    "content": "exactly they say \"the guardians\", the ones who are guarding the Hell, \"19.\" And this is for these reasons",
+    "segment_index": 430
+  },
+  {
+    "id": 406,
+    "start_time": 2559.06,
+    "end_time": 2567.381,
+    "speaker": "Dr. Sabahi",
+    "content": "\"to disturb the disbelievers, to convince the Christians and the Jews to, to join this,",
+    "segment_index": 431
+  },
+  {
+    "id": 407,
+    "start_time": 2567.381,
+    "end_time": 2573.308,
+    "speaker": "Dr. Sabahi",
+    "content": "\"to accept that this is a divine scripture, and to strengthen the faith\" and so on. But",
+    "segment_index": 432
+  },
+  {
+    "id": 408,
+    "start_time": 2573.308,
+    "end_time": 2580.0,
+    "speaker": "Dr. Sabahi",
+    "content": "none of them relates this part to the beginning, the rest of the 29 verses that are preceding this.",
+    "segment_index": 433
+  },
+  {
+    "id": 409,
+    "start_time": 2580.415,
+    "end_time": 2586.372,
+    "speaker": "Dr. Sabahi",
+    "content": "So, they isolate this or translate it as if there is no relationship between this",
+    "segment_index": 434
+  },
+  {
+    "id": 410,
+    "start_time": 2586.372,
+    "end_time": 2592.131,
+    "speaker": "Dr. Sabahi",
+    "content": "and the hidden secret that God is mentioning at the first. What would it mean if God was",
+    "segment_index": 435
+  },
+  {
+    "id": 411,
+    "start_time": 2592.131,
+    "end_time": 2601.656,
+    "speaker": "Dr. Sabahi",
+    "content": "telling Muhammad \"okay, Qom (قُمْ), come out and and give the message and warn\" while He's telling that there are 19",
+    "segment_index": 436
+  },
+  {
+    "id": 412,
+    "start_time": 2601.656,
+    "end_time": 2607.913,
+    "speaker": "Dr. Sabahi",
+    "content": "angels and this number, this number 19, it's a secret. It is something that we have",
+    "segment_index": 437
+  },
+  {
+    "id": 413,
+    "start_time": 2607.913,
+    "end_time": 2613.84,
+    "speaker": "Dr. Sabahi",
+    "content": "put in there to disturb the disbelievers. The first thing that God is saying is that to disturb the disbelievers.",
+    "segment_index": 438
+  },
+  {
+    "id": 414,
+    "start_time": 2614.071,
+    "end_time": 2622.019,
+    "speaker": "Dr. Sabahi",
+    "content": "Because when you go to them with this, I haven't done it yet so I don't",
+    "segment_index": 439
+  },
+  {
+    "id": 415,
+    "start_time": 2622.019,
+    "end_time": 2627.494,
+    "speaker": "Dr. Sabahi",
+    "content": "know how the reactions is but I can imagine how they would react and seeing what, what",
+    "segment_index": 440
+  },
+  {
+    "id": 416,
+    "start_time": 2627.494,
+    "end_time": 2634.991,
+    "speaker": "Dr. Sabahi",
+    "content": "I have seen here is that it really disturbs them. So, they try to avoid what is the logic.",
+    "segment_index": 441
+  },
+  {
+    "id": 417,
+    "start_time": 2634.991,
+    "end_time": 2641.841,
+    "speaker": "Dr. Sabahi",
+    "content": "This is a logic. This is a mathematical code. This is something which nobody can say",
+    "segment_index": 442
+  },
+  {
+    "id": 418,
+    "start_time": 2641.841,
+    "end_time": 2648.144,
+    "speaker": "Dr. Sabahi",
+    "content": "that is something that made by Rashad Khalifa or whoever else. There's something which is in there.",
+    "segment_index": 443
+  },
+  {
+    "id": 419,
+    "start_time": 2648.144,
+    "end_time": 2653.209,
+    "speaker": "Dr. Sabahi",
+    "content": "And no can, nobody can deny it. So, it really disturbs the disbelievers.",
+    "segment_index": 444
+  },
+  {
+    "id": 420,
+    "start_time": 2653.449,
+    "end_time": 2662.467,
+    "speaker": "Dr. Sabahi",
+    "content": "And then to convince the Christians and Jews which is clear by itself to strengthen the faith of the faithful.",
+    "segment_index": 445
+  },
+  {
+    "id": 421,
+    "start_time": 2662.467,
+    "end_time": 2670.949,
+    "speaker": "Dr. Sabahi",
+    "content": "This is very crucial at least for me because usually especially the educated",
+    "segment_index": 446
+  },
+  {
+    "id": 422,
+    "start_time": 2670.949,
+    "end_time": 2677.973,
+    "speaker": "Dr. Sabahi",
+    "content": "people who go to college, if they go further and do more and more, all of a sudden they",
+    "segment_index": 447
+  },
+  {
+    "id": 423,
+    "start_time": 2677.973,
+    "end_time": 2684.121,
+    "speaker": "Dr. Sabahi",
+    "content": "look at them in the mirror to themselves and say \"wow, this is me discovering all these things finding all this thing\"",
+    "segment_index": 448
+  },
+  {
+    "id": 424,
+    "start_time": 2684.121,
+    "end_time": 2690.513,
+    "speaker": "Dr. Sabahi",
+    "content": "and you start thanking yourself in the mirror that \"wow what a creature I am that I'm doing all these things.\"",
+    "segment_index": 449
+  },
+  {
+    "id": 425,
+    "start_time": 2690.513,
+    "end_time": 2695.978,
+    "speaker": "Dr. Sabahi",
+    "content": "And slowly, you can't really lose your faith. You start questioning",
+    "segment_index": 450
+  },
+  {
+    "id": 426,
+    "start_time": 2695.978,
+    "end_time": 2702.483,
+    "speaker": "Dr. Sabahi",
+    "content": "\"what, what is, how can God do all these things?\" Especially for me, a chemist,",
+    "segment_index": 451
+  },
+  {
+    "id": 427,
+    "start_time": 2702.483,
+    "end_time": 2709.969,
+    "speaker": "Dr. Sabahi",
+    "content": "I was thinking, 20 years, I've been doing chemistry and it is a wonderful field and it is so amazing.",
+    "segment_index": 452
+  },
+  {
+    "id": 428,
+    "start_time": 2709.969,
+    "end_time": 2718.799,
+    "speaker": "Dr. Sabahi",
+    "content": "That for me I look at it and I say \"God, how could this happen?\", but look in coming back and",
+    "segment_index": 453
+  },
+  {
+    "id": 429,
+    "start_time": 2718.799,
+    "end_time": 2726.653,
+    "speaker": "Dr. Sabahi",
+    "content": "reading Quran and trying to understand it, it gives me more more the feeling that",
+    "segment_index": 454
+  },
+  {
+    "id": 430,
+    "start_time": 2726.653,
+    "end_time": 2733.03,
+    "speaker": "Dr. Sabahi",
+    "content": "\"no, this is real. This is scientific. This is something that God has created and left for us",
+    "segment_index": 455
+  },
+  {
+    "id": 431,
+    "start_time": 2733.03,
+    "end_time": 2739.253,
+    "speaker": "Dr. Sabahi",
+    "content": "to use for our everyday life.\" And (5) to expose those who harbor doubt in their hearts",
+    "segment_index": 456
+  },
+  {
+    "id": 432,
+    "start_time": 2739.253,
+    "end_time": 2746.628,
+    "speaker": "Dr. Sabahi",
+    "content": "and the disbeliever, see... Oh, to expose those who harbor doubts in their hearts which here",
+    "segment_index": 457
+  },
+  {
+    "id": 433,
+    "start_time": 2746.628,
+    "end_time": 2762.41,
+    "speaker": "Dr. Sabahi",
+    "content": "clearly, this is about the hypocrites that you... if you offer them this code, this evidence, this...",
+    "segment_index": 458
+  },
+  {
+    "id": 434,
+    "start_time": 2762.41,
+    "end_time": 2768.448,
+    "speaker": "Dr. Sabahi",
+    "content": "and then God does send astray whomever He wills and guides whomever He wills.",
+    "segment_index": 459
+  },
+  {
+    "id": 435,
+    "start_time": 2768.448,
+    "end_time": 2771.541,
+    "speaker": "Dr. Sabahi",
+    "content": "None knows the soldiers of your Lord except He.",
+    "segment_index": 460
+  },
+  {
+    "id": 436,
+    "start_time": 2777.057,
+    "end_time": 2786.698,
+    "speaker": "Dr. Sabahi",
+    "content": "Going back to what I mentioned about, at least my own experience and the question of number 19,",
+    "segment_index": 461
+  },
+  {
+    "id": 437,
+    "start_time": 2786.698,
+    "end_time": 2796.61,
+    "speaker": "Dr. Sabahi",
+    "content": "from the day that I came to this mosque, I heard about it and I saw it and I saw people talking about it. But it didn't catch up with me.",
+    "segment_index": 462
+  },
+  {
+    "id": 438,
+    "start_time": 2796.841,
+    "end_time": 2804.154,
+    "speaker": "Dr. Sabahi",
+    "content": "The reason was that as I said I had the background and also in every day of my life, I see",
+    "segment_index": 463
+  },
+  {
+    "id": 439,
+    "start_time": 2804.154,
+    "end_time": 2812.68,
+    "speaker": "Dr. Sabahi",
+    "content": "so many signs. As I said, I do chemistry and I see what is God... what has God created and",
+    "segment_index": 464
+  },
+  {
+    "id": 440,
+    "start_time": 2812.68,
+    "end_time": 2820.686,
+    "speaker": "Dr. Sabahi",
+    "content": "how this complicated system works. At least, thousands of thousands of chemists and scientists are trying to",
+    "segment_index": 465
+  },
+  {
+    "id": 441,
+    "start_time": 2820.686,
+    "end_time": 2827.71,
+    "speaker": "Dr. Sabahi",
+    "content": "find out how this system works and still, they are years and years away from understanding it.",
+    "segment_index": 466
+  },
+  {
+    "id": 442,
+    "start_time": 2827.999,
+    "end_time": 2837.449,
+    "speaker": "Dr. Sabahi",
+    "content": "So, to me, it wasn't, it wasn't unusual that there's such a code would be in Quran.",
+    "segment_index": 467
+  },
+  {
+    "id": 443,
+    "start_time": 2837.738,
+    "end_time": 2844.538,
+    "speaker": "Dr. Sabahi",
+    "content": "But it was something, as I said, that gave me the support, the support that I needed",
+    "segment_index": 468
+  },
+  {
+    "id": 444,
+    "start_time": 2844.538,
+    "end_time": 2854.782,
+    "speaker": "Dr. Sabahi",
+    "content": "to know that if I confront somebody who is scientific, who tries to take me out with science,",
+    "segment_index": 469
+  },
+  {
+    "id": 445,
+    "start_time": 2854.782,
+    "end_time": 2860.311,
+    "speaker": "Dr. Sabahi",
+    "content": "then we can get into real science and go to mathematical code and say \"okay, this is what it is.\"",
+    "segment_index": 470
+  },
+  {
+    "id": 446,
+    "start_time": 2860.946,
+    "end_time": 2869.439,
+    "speaker": "Dr. Sabahi",
+    "content": "And another thing that I have noticed, I have to mention it here, is that the mathematical",
+    "segment_index": 471
+  },
+  {
+    "id": 447,
+    "start_time": 2869.439,
+    "end_time": 2878.827,
+    "speaker": "Dr. Sabahi",
+    "content": "code is great as it was said in today's Khutba. It keeps going on and going on and what...",
+    "segment_index": 472
+  },
+  {
+    "id": 448,
+    "start_time": 2878.827,
+    "end_time": 2893.374,
+    "speaker": "Dr. Sabahi",
+    "content": "I have noticed sometimes people take... I shouldn't say abuse, but using it too, too many times for",
+    "segment_index": 473
+  },
+  {
+    "id": 449,
+    "start_time": 2893.374,
+    "end_time": 2901.452,
+    "speaker": "Dr. Sabahi",
+    "content": "for little things, you know. If I see something happening outside, it happens to be 19 cars,",
+    "segment_index": 474
+  },
+  {
+    "id": 450,
+    "start_time": 2901.452,
+    "end_time": 2908.327,
+    "speaker": "Dr. Sabahi",
+    "content": "it happens to be 19 on one guy's thing, as I don't know I never shared this with everyone, but",
+    "segment_index": 475
+  },
+  {
+    "id": 451,
+    "start_time": 2908.327,
+    "end_time": 2916.899,
+    "speaker": "Dr. Sabahi",
+    "content": "one night a few months back, in the middle of the night, I woke up and, and I started counting",
+    "segment_index": 476
+  },
+  {
+    "id": 452,
+    "start_time": 2916.899,
+    "end_time": 2924.27,
+    "speaker": "Dr. Sabahi",
+    "content": "the letters in Mary's name, in Farsi's name. She has a long name. It was very funny, I, you know, I thought",
+    "segment_index": 477
+  },
+  {
+    "id": 453,
+    "start_time": 2924.27,
+    "end_time": 2931.237,
+    "speaker": "Dr. Sabahi",
+    "content": "\"What am I doing in the middle of the night? Why am I counting those?\" So honestly, this really happened to me. I'm not saying this is but...",
+    "segment_index": 478
+  },
+  {
+    "id": 454,
+    "start_time": 2931.237,
+    "end_time": 2932.313,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 479
+  },
+  {
+    "id": 455,
+    "start_time": 2932.313,
+    "end_time": 2939.684,
+    "speaker": "Dr. Sabahi",
+    "content": "I counted them and it was 19. So, I recounted them, it was 19. Then, I said \"I have to wake  her up and say...\"",
+    "segment_index": 480
+  },
+  {
+    "id": 456,
+    "start_time": 2941.128,
+    "end_time": 2945.958,
+    "speaker": "Dr. Sabahi",
+    "content": "Then, I said \"she's gonna laugh at me say you know, 'you're crazy going to me in the middle of the night.'\"",
+    "segment_index": 481
+  },
+  {
+    "id": 457,
+    "start_time": 2946.189,
+    "end_time": 2952.405,
+    "speaker": "Dr. Sabahi",
+    "content": "But first of all, I got scared, totally scared. \"Ok. What is happening? What is this?\"",
+    "segment_index": 482
+  },
+  {
+    "id": 458,
+    "start_time": 2952.694,
+    "end_time": 2960.354,
+    "speaker": "Dr. Sabahi",
+    "content": "So, finally after half an hour, I didn't wake her up and went back to sleep. In the morning, as soon as I got up, she was in the kitchen.",
+    "segment_index": 483
+  },
+  {
+    "id": 459,
+    "start_time": 2960.354,
+    "end_time": 2965.145,
+    "speaker": "Dr. Sabahi",
+    "content": "I went to her I said \"Mary, if you know, there are 19 letters in your complete name.\"",
+    "segment_index": 484
+  },
+  {
+    "id": 460,
+    "start_time": 2965.39,
+    "end_time": 2971.624,
+    "speaker": "Dr. Sabahi",
+    "content": "She started laughing. She was dying and she said \"come on. Don't joke.\" I said \"honestly, this is what happened to me last night.\"",
+    "segment_index": 485
+  },
+  {
+    "id": 461,
+    "start_time": 2971.858,
+    "end_time": 2980.487,
+    "speaker": "Dr. Sabahi",
+    "content": "And so, we sat down and counted. It was 19. But whatever the reason, I looked at it as a coincidence.",
+    "segment_index": 486
+  },
+  {
+    "id": 462,
+    "start_time": 2980.487,
+    "end_time": 2985.663,
+    "speaker": "Dr. Sabahi",
+    "content": "You know, I wouldn't... because I think...",
+    "segment_index": 487
+  },
+  {
+    "id": 463,
+    "start_time": 2985.663,
+    "end_time": 2989.627,
+    "speaker": "A woman",
+    "content": "(unintelligible)",
+    "segment_index": 488
+  },
+  {
+    "id": 464,
+    "start_time": 2990.782,
+    "end_time": 2995.439,
+    "speaker": "Dr. Sabahi",
+    "content": "That's why I thought, yeah, I told Mary that she may be an Imamzadeh. You know what Imamzadeh is?",
+    "segment_index": 489
+  },
+  {
+    "id": 465,
+    "start_time": 2995.439,
+    "end_time": 2995.939,
+    "speaker": "Dr. Khalifa",
+    "content": "No.",
+    "segment_index": 490
+  },
+  {
+    "id": "466_part_0",
+    "start_time": 2995.939,
+    "end_time": 3000.31465625,
+    "speaker": "Dr. Sabahi",
+    "content": "Imamzadeh is...how do you... (unintelligible) you know, you know what Imamzadeh... ",
+    "segment_index": 491
+  },
+  {
+    "id": "466_part_1",
+    "start_time": 3000.31465625,
+    "end_time": 3001.0,
+    "speaker": "A man",
+    "content": "Like a saint.",
+    "segment_index": 492
+  },
+  {
+    "id": 467,
+    "start_time": 3001.0,
+    "end_time": 3001.845,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh, I see it.",
+    "segment_index": 493
+  },
+  {
+    "id": 468,
+    "start_time": 3001.845,
+    "end_time": 3005.982,
+    "speaker": "Dr. Sabahi",
+    "content": "Not a saint, exactly. Someone related to the Imam.",
+    "segment_index": 494
+  },
+  {
+    "id": 469,
+    "start_time": 3006.733,
+    "end_time": 3010.35,
+    "speaker": "Dr. Sabahi",
+    "content": "Right. Right. And I said, you know, I guess this is a...",
+    "segment_index": 495
+  },
+  {
+    "id": 470,
+    "start_time": 3010.35,
+    "end_time": 3012.35,
+    "speaker": "Dr. Sabahi",
+    "content": "So, anyway, what I...",
+    "segment_index": 496
+  },
+  {
+    "id": 471,
+    "start_time": 3012.35,
+    "end_time": 3018.739,
+    "speaker": "Dr. Khalifa",
+    "content": "She's counting this for you. She investigated (unintelligible)",
+    "segment_index": 497
+  },
+  {
+    "id": 472,
+    "start_time": 3021.28,
+    "end_time": 3023.28,
+    "speaker": "Dr. Khalifa",
+    "content": "She's much better than the (unintelligible)",
+    "segment_index": 498
+  },
+  {
+    "id": 473,
+    "start_time": 3023.28,
+    "end_time": 3029.423,
+    "speaker": "Dr. Sabahi",
+    "content": "So, in any case, but seriously, this is something that sometimes",
+    "segment_index": 499
+  },
+  {
+    "id": 474,
+    "start_time": 3029.423,
+    "end_time": 3037.776,
+    "speaker": "Dr. Sabahi",
+    "content": "we... I think those times when we go over, try to overkill something which is not related to this,",
+    "segment_index": 500
+  },
+  {
+    "id": 475,
+    "start_time": 3037.776,
+    "end_time": 3042.779,
+    "speaker": "Dr. Sabahi",
+    "content": "something that everybody can question your logic, because if you try to mix them up,",
+    "segment_index": 501
+  },
+  {
+    "id": 476,
+    "start_time": 3042.779,
+    "end_time": 3048.129,
+    "speaker": "Dr. Sabahi",
+    "content": "then you, you, I think, you are taking away from what is really here.",
+    "segment_index": 502
+  },
+  {
+    "id": 477,
+    "start_time": 3048.129,
+    "end_time": 3050.649,
+    "speaker": "Dr. Khalifa",
+    "content": "So, you just (unintelligible)",
+    "segment_index": 503
+  },
+  {
+    "id": "478_part_0",
+    "start_time": 3050.649,
+    "end_time": 3051.5878235294117,
+    "speaker": "Dr. Khalifa",
+    "content": "Did you, did you... ",
+    "segment_index": 504
+  },
+  {
+    "id": "478_part_1",
+    "start_time": 3051.5878235294117,
+    "end_time": 3052.245,
+    "speaker": "Dr. Sabahi",
+    "content": "Oh, this is...",
+    "segment_index": 505
+  },
+  {
+    "id": 479,
+    "start_time": 3052.245,
+    "end_time": 3055.054,
+    "speaker": "Dr. Sabahi",
+    "content": "Dilution. Oh, Ok. Chemical, yeah, chemical.",
+    "segment_index": 506
+  },
+  {
+    "id": 480,
+    "start_time": 3055.285,
+    "end_time": 3057.285,
+    "speaker": "Dr. Sabahi",
+    "content": "Yes, you're diluting. You're right.",
+    "segment_index": 507
+  },
+  {
+    "id": 481,
+    "start_time": 3057.831,
+    "end_time": 3059.831,
+    "speaker": "Dr. Sabahi",
+    "content": "So, this is something that",
+    "segment_index": 508
+  },
+  {
+    "id": 482,
+    "start_time": 3059.831,
+    "end_time": 3066.913,
+    "speaker": "Dr. Sabahi",
+    "content": "I wanted to mention as part of what I saw in this, in this verse and overall in this Sura.",
+    "segment_index": 509
+  },
+  {
+    "id": 483,
+    "start_time": 3067.317,
+    "end_time": 3070.126,
+    "speaker": "Dr. Sabahi",
+    "content": "And going back to this verse,",
+    "segment_index": 510
+  },
+  {
+    "id": 484,
+    "start_time": 3070.935,
+    "end_time": 3079.519,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:31]. ...GOD thus sends astray whomever He wills, and guides whomever He wills. None knows the soldiers of your Lord except He.",
+    "segment_index": 511
+  },
+  {
+    "id": 485,
+    "start_time": 3079.808,
+    "end_time": 3084.118,
+    "speaker": "Dr. Sabahi",
+    "content": "This is another thing that I would like to mention. I have another",
+    "segment_index": 512
+  },
+  {
+    "id": 486,
+    "start_time": 3084.118,
+    "end_time": 3088.544,
+    "speaker": "Dr. Sabahi",
+    "content": "verse from Sura 19, Maryam, I guess 73,",
+    "segment_index": 513
+  },
+  {
+    "id": 487,
+    "start_time": 3088.544,
+    "end_time": 3097.763,
+    "speaker": "Dr. Sabahi",
+    "content": "[19:73]  When our revelations are recited to them, clearly explained, the disbelievers ask the believers, \"Which side is more powerful and in greater number?\"",
+    "segment_index": 514
+  },
+  {
+    "id": 488,
+    "start_time": 3098.283,
+    "end_time": 3099.532,
+    "speaker": "Dr. Sabahi",
+    "content": "And here God says,",
+    "segment_index": 515
+  },
+  {
+    "id": 489,
+    "start_time": 3099.532,
+    "end_time": 3102.456,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:31]  ... None knows the soldiers of your Lord except He. ...",
+    "segment_index": 516
+  },
+  {
+    "id": 490,
+    "start_time": 3102.456,
+    "end_time": 3108.614,
+    "speaker": "Dr. Sabahi",
+    "content": "I think there's something related to this. My understanding is that God is telling us,",
+    "segment_index": 517
+  },
+  {
+    "id": 491,
+    "start_time": 3108.614,
+    "end_time": 3117.834,
+    "speaker": "Dr. Sabahi",
+    "content": "reminding us \"don't judge people, you.\" We have, we are responsible, okay, we have, we are, we have the responsibility of",
+    "segment_index": 518
+  },
+  {
+    "id": 492,
+    "start_time": 3117.834,
+    "end_time": 3127.111,
+    "speaker": "Dr. Sabahi",
+    "content": "giving the message, warn them, but in no ways, we have the right or are given the right to try to judge them.",
+    "segment_index": 519
+  },
+  {
+    "id": 493,
+    "start_time": 3127.573,
+    "end_time": 3130.208,
+    "speaker": "Dr. Sabahi",
+    "content": "If there are believers or non-believers, God knows it.",
+    "segment_index": 520
+  },
+  {
+    "id": 494,
+    "start_time": 3130.439,
+    "end_time": 3139.312,
+    "speaker": "Dr. Sabahi",
+    "content": "We don't have to say to someone that he's a disbeliever or non-believer because it is, it is a very very big",
+    "segment_index": 521
+  },
+  {
+    "id": 495,
+    "start_time": 3139.312,
+    "end_time": 3145.181,
+    "speaker": "Dr. Sabahi",
+    "content": "responsibility that I would take personally if I told someone he's not a believer",
+    "segment_index": 522
+  },
+  {
+    "id": 496,
+    "start_time": 3145.181,
+    "end_time": 3149.491,
+    "speaker": "Dr. Sabahi",
+    "content": "or he's a believer or he's not. The only thing that I can tell them is that",
+    "segment_index": 523
+  },
+  {
+    "id": 497,
+    "start_time": 3149.491,
+    "end_time": 3157.324,
+    "speaker": "Dr. Sabahi",
+    "content": "\"okay, this is the truth. This is God's message. This is the truth.\" Take heed or not and since God tells us later",
+    "segment_index": 524
+  },
+  {
+    "id": 498,
+    "start_time": 3157.324,
+    "end_time": 3166.947,
+    "speaker": "Dr. Sabahi",
+    "content": "and here again, He guides whom, whomever He wills and sends astray whomever He wills,",
+    "segment_index": 525
+  },
+  {
+    "id": 499,
+    "start_time": 3166.947,
+    "end_time": 3173.509,
+    "speaker": "Dr. Sabahi",
+    "content": "that again telling us, is telling us that we have no business of judging people.",
+    "segment_index": 526
+  },
+  {
+    "id": 500,
+    "start_time": 3173.798,
+    "end_time": 3183.768,
+    "speaker": "Dr. Sabahi",
+    "content": "And again, I have experienced this that a lot of people who are really interested to come and listen and",
+    "segment_index": 527
+  },
+  {
+    "id": 501,
+    "start_time": 3183.768,
+    "end_time": 3189.926,
+    "speaker": "Dr. Sabahi",
+    "content": "and learn for different reasons. Some of them are curious. Some of them are really looking for a place",
+    "segment_index": 528
+  },
+  {
+    "id": 502,
+    "start_time": 3189.926,
+    "end_time": 3195.449,
+    "speaker": "Dr. Sabahi",
+    "content": "that would be free from all the things that have been added to Islam,",
+    "segment_index": 529
+  },
+  {
+    "id": 503,
+    "start_time": 3195.449,
+    "end_time": 3204.091,
+    "speaker": "Dr. Sabahi",
+    "content": "somewhere that they can sit down freely to listen and learn and then decide. If God wills,",
+    "segment_index": 530
+  },
+  {
+    "id": 504,
+    "start_time": 3204.091,
+    "end_time": 3211.808,
+    "speaker": "Dr. Sabahi",
+    "content": "they will learn and they will abide by the rules of the Quran, if not then they will go back to where they are.",
+    "segment_index": 531
+  },
+  {
+    "id": 505,
+    "start_time": 3211.808,
+    "end_time": 3219.294,
+    "speaker": "Dr. Sabahi",
+    "content": "But if we as persons as people who come here and somehow the more we come here",
+    "segment_index": 532
+  },
+  {
+    "id": 506,
+    "start_time": 3219.294,
+    "end_time": 3227.243,
+    "speaker": "Dr. Sabahi",
+    "content": "we feel that that feeling of belonging to this place. We try to protect it. And in that",
+    "segment_index": 533
+  },
+  {
+    "id": 507,
+    "start_time": 3227.243,
+    "end_time": 3233.17,
+    "speaker": "Dr. Sabahi",
+    "content": "protection, the thing that we feel we have to do because we think it is, it would be for the best interest of",
+    "segment_index": 534
+  },
+  {
+    "id": 508,
+    "start_time": 3233.17,
+    "end_time": 3240.368,
+    "speaker": "Dr. Sabahi",
+    "content": "the Quran and God, we may make a mistake. We may even if if one person",
+    "segment_index": 535
+  },
+  {
+    "id": 509,
+    "start_time": 3240.368,
+    "end_time": 3249.645,
+    "speaker": "Dr. Sabahi",
+    "content": "doesn't get the chance to come in here and listens at least to what is the message then and we have to do something with it,",
+    "segment_index": 536
+  },
+  {
+    "id": 510,
+    "start_time": 3249.645,
+    "end_time": 3253.782,
+    "speaker": "Dr. Sabahi",
+    "content": "then we are responsible. And this is something else that I have noticed",
+    "segment_index": 537
+  },
+  {
+    "id": 511,
+    "start_time": 3253.782,
+    "end_time": 3257.861,
+    "speaker": "Dr. Sabahi",
+    "content": "and I thought that I have to, because this is the only time that I can talk and everyone can listen.",
+    "segment_index": 538
+  },
+  {
+    "id": 512,
+    "start_time": 3257.861,
+    "end_time": 3267.369,
+    "speaker": "Dr. Sabahi",
+    "content": "So, that I wanted to mention and hope that everyone, all of us will learn from this and",
+    "segment_index": 539
+  },
+  {
+    "id": 513,
+    "start_time": 3267.369,
+    "end_time": 3273.412,
+    "speaker": "Dr. Sabahi",
+    "content": "a lot of other verses that are repeated in the Quran. I think, I'll stop here again",
+    "segment_index": 540
+  },
+  {
+    "id": 514,
+    "start_time": 3273.412,
+    "end_time": 3280.263,
+    "speaker": "Dr. Sabahi",
+    "content": "because this is a heavy verse and open the floor for discussions and questions from Dr. Khalifa.",
+    "segment_index": 541
+  },
+  {
+    "id": 515,
+    "start_time": 3282.977,
+    "end_time": 3287.98,
+    "speaker": "Edip",
+    "content": "About the [74:31]  ... None knows the soldiers of your Lord except He. ...",
+    "segment_index": 542
+  },
+  {
+    "id": 516,
+    "start_time": 3289.98,
+    "end_time": 3296.889,
+    "speaker": "Edip",
+    "content": "(unintelligible) God says, this, there's a relation with number, with 19.",
+    "segment_index": 543
+  },
+  {
+    "id": 517,
+    "start_time": 3297.582,
+    "end_time": 3308.418,
+    "speaker": "Edip",
+    "content": "And Allah uses Junud (جُنُودَ), word Junud (جُنُودَ), soldiers for angels and also for believers that I forgot.",
+    "segment_index": 544
+  },
+  {
+    "id": 518,
+    "start_time": 3310.728,
+    "end_time": 3311.862,
+    "speaker": "Edip",
+    "content": "And...",
+    "segment_index": 545
+  },
+  {
+    "id": 519,
+    "start_time": 3314.041,
+    "end_time": 3320.43,
+    "speaker": "Edip",
+    "content": "I have written down some verses about the soldiers of God. For example,",
+    "segment_index": 546
+  },
+  {
+    "id": 520,
+    "start_time": 3320.43,
+    "end_time": 3323.642,
+    "speaker": "Edip",
+    "content": "[48:7]  To GOD belongs all the forces ...",
+    "segment_index": 547
+  },
+  {
+    "id": 521,
+    "start_time": 3323.642,
+    "end_time": 3326.451,
+    "speaker": "Edip",
+    "content": "all the soldiers",
+    "segment_index": 548
+  },
+  {
+    "id": 522,
+    "start_time": 3326.451,
+    "end_time": 3330.241,
+    "speaker": "Edip",
+    "content": "[48:7]  ... of the heavens and the earth. GOD is Almighty, Wise.",
+    "segment_index": 549
+  },
+  {
+    "id": 523,
+    "start_time": 3330.688,
+    "end_time": 3332.053,
+    "speaker": "Edip",
+    "content": "In Sura Al-Fatt-h.",
+    "segment_index": 550
+  },
+  {
+    "id": 524,
+    "start_time": 3332.053,
+    "end_time": 3334.053,
+    "speaker": "Edip",
+    "content": "And another verse,",
+    "segment_index": 551
+  },
+  {
+    "id": 525,
+    "start_time": 3334.284,
+    "end_time": 3348.355,
+    "speaker": "Edip",
+    "content": "[9:40]  ... then GOD sent down a sense of security upon his messengers, and the believers and He send down invisible soldiers to torment the disbelievers. This is what the disbelievers deserve.",
+    "segment_index": 552
+  },
+  {
+    "id": 526,
+    "start_time": 3352.224,
+    "end_time": 3353.184,
+    "speaker": "Edip",
+    "content": "In another verse,",
+    "segment_index": 553
+  },
+  {
+    "id": 527,
+    "start_time": 3353.184,
+    "end_time": 3359.689,
+    "speaker": "Edip",
+    "content": "[3:124]  You had said to the believers, \"Is it not enough that GOD supports you with three thousand angels, descending?\"",
+    "segment_index": 554
+  },
+  {
+    "id": 528,
+    "start_time": 3362.981,
+    "end_time": 3373.297,
+    "speaker": "Edip",
+    "content": "You know, these numbers also in the Quran, the numbers of the Quran has been counted and their number, the total number of numbers without repetition is a multiple of 19.",
+    "segment_index": 555
+  },
+  {
+    "id": 529,
+    "start_time": 3373.644,
+    "end_time": 3385.924,
+    "speaker": "Edip",
+    "content": "If you add these numbers and to another numbers, and it will not be a multiple of 19,",
+    "segment_index": 556
+  },
+  {
+    "id": 530,
+    "start_time": 3385.924,
+    "end_time": 3389.657,
+    "speaker": "Edip",
+    "content": "unless you add another number that's mentioned after this word.",
+    "segment_index": 557
+  },
+  {
+    "id": 531,
+    "start_time": 3389.657,
+    "end_time": 3398.761,
+    "speaker": "Edip",
+    "content": "[3:125]  If you steadfastly persevere and work righteousness, then they attack you, your Lord will support you with five thousand* well trained angels.",
+    "segment_index": 558
+  },
+  {
+    "id": 532,
+    "start_time": 3398.761,
+    "end_time": 3406.594,
+    "speaker": "Edip",
+    "content": "If you add these 5,000 also the total of two numbers in Quran without repetition becomes multiple of 19.",
+    "segment_index": 559
+  },
+  {
+    "id": 533,
+    "start_time": 3407.114,
+    "end_time": 3414.196,
+    "speaker": "Edip",
+    "content": "From this, we can understand that God has many kinds of soldiers, many kinds of forces.",
+    "segment_index": 560
+  },
+  {
+    "id": 534,
+    "start_time": 3414.196,
+    "end_time": 3420.874,
+    "speaker": "Edip",
+    "content": "One of them is number. And number, the whole number we cannot know, the greatness of this number.",
+    "segment_index": 561
+  },
+  {
+    "id": 535,
+    "start_time": 3420.874,
+    "end_time": 3426.801,
+    "speaker": "Edip",
+    "content": "And also the kind of soldiers of God, what kind of soldiers does God have.",
+    "segment_index": 562
+  },
+  {
+    "id": 536,
+    "start_time": 3427.61,
+    "end_time": 3433.653,
+    "speaker": "Edip",
+    "content": "And here I think, Allah mentioned that number 19 also one of the soldiers of God.",
+    "segment_index": 563
+  },
+  {
+    "id": 537,
+    "start_time": 3433.653,
+    "end_time": 3442.526,
+    "speaker": "Edip",
+    "content": "And you don't know its strength and its limitation.",
+    "segment_index": 564
+  },
+  {
+    "id": 538,
+    "start_time": 3450.381,
+    "end_time": 3453.998,
+    "speaker": "A man",
+    "content": "And verse 31 where He's talking about",
+    "segment_index": 565
+  },
+  {
+    "id": 539,
+    "start_time": 3453.998,
+    "end_time": 3462.813,
+    "speaker": "A man",
+    "content": "to convince the Christians and the Jews under number 2 and number 4 also, where you were talking about the Christians and the Jews. They're talking of... Is that as",
+    "segment_index": 566
+  },
+  {
+    "id": 540,
+    "start_time": 3462.813,
+    "end_time": 3466.95,
+    "speaker": "A man",
+    "content": "like you were talking about, last week about",
+    "segment_index": 567
+  },
+  {
+    "id": 541,
+    "start_time": 3466.95,
+    "end_time": 3474.147,
+    "speaker": "A man",
+    "content": "in the next 300 years, there'll be more people than, you know, which were in the early generations, you were talking about Christians and Jews as a whole",
+    "segment_index": 568
+  },
+  {
+    "id": 542,
+    "start_time": 3474.147,
+    "end_time": 3480.478,
+    "speaker": "A man",
+    "content": "and the religion being started now and, and, like, convincing the body of the Christians and the body of the Jews",
+    "segment_index": 569
+  },
+  {
+    "id": 543,
+    "start_time": 3480.478,
+    "end_time": 3482.709,
+    "speaker": "A man",
+    "content": "or as an individual basis?",
+    "segment_index": 570
+  },
+  {
+    "id": 544,
+    "start_time": 3482.94,
+    "end_time": 3490.657,
+    "speaker": "Dr. Khalifa",
+    "content": "Both, both. Individuals and as a whole. Because the Christians and Jews wonder \"is the Quran the word of God or not?\"",
+    "segment_index": 571
+  },
+  {
+    "id": 545,
+    "start_time": 3491.639,
+    "end_time": 3497.74,
+    "speaker": "Dr. Khalifa",
+    "content": "And the people who may come across it, Navid, and say \"is this your scripture? Is it from God? Is it Muhammad-made? or what?\"",
+    "segment_index": 572
+  },
+  {
+    "id": 546,
+    "start_time": 3497.74,
+    "end_time": 3498.643,
+    "speaker": "Edip",
+    "content": "(unintelligible)",
+    "segment_index": 573
+  },
+  {
+    "id": 547,
+    "start_time": 3498.643,
+    "end_time": 3502.261,
+    "speaker": "Dr. Khalifa",
+    "content": "So, the mathematical code, it will remove the doubts.",
+    "segment_index": 574
+  },
+  {
+    "id": 548,
+    "start_time": 3502.261,
+    "end_time": 3507.495,
+    "speaker": "A man",
+    "content": "Right. That's an individual basis. What about as like, I don't, I guess, (unintelligible)?",
+    "segment_index": 575
+  },
+  {
+    "id": 549,
+    "start_time": 3507.495,
+    "end_time": 3512.44,
+    "speaker": "A man",
+    "content": "A lot of religions today as organizations, full organizations rather than faith.",
+    "segment_index": 576
+  },
+  {
+    "id": 550,
+    "start_time": 3513.364,
+    "end_time": 3520.619,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, you start out with individuals, but this will reach to groups, groups, nations, communities.",
+    "segment_index": 577
+  },
+  {
+    "id": 551,
+    "start_time": 3521.89,
+    "end_time": 3524.468,
+    "speaker": "Dr. Khalifa",
+    "content": "The trip of a thousand miles begins with one step.",
+    "segment_index": 578
+  },
+  {
+    "id": 552,
+    "start_time": 3530.821,
+    "end_time": 3534.669,
+    "speaker": "Edip",
+    "content": "The so called Muslim that they do not accept miracle of",
+    "segment_index": 579
+  },
+  {
+    "id": 553,
+    "start_time": 3534.669,
+    "end_time": 3540.827,
+    "speaker": "Edip",
+    "content": "mathematical miracle of the Quran, you know, they interpret this verse in another way. They said",
+    "segment_index": 580
+  },
+  {
+    "id": 554,
+    "start_time": 3540.827,
+    "end_time": 3549.584,
+    "speaker": "Edip",
+    "content": "\"It's the number of guardians of Hell.\" And I have one question to them. They cannot answer to this question.",
+    "segment_index": 581
+  },
+  {
+    "id": 555,
+    "start_time": 3549.931,
+    "end_time": 3557.071,
+    "speaker": "Edip",
+    "content": "This question is the fourth, the item fourth in verse 30. Item 4 says",
+    "segment_index": 582
+  },
+  {
+    "id": 556,
+    "start_time": 3557.071,
+    "end_time": 3563.749,
+    "speaker": "Edip",
+    "content": "[74:31]  ... (4) to remove all traces of doubt from the hearts of Christians, Jews, as well as the believers, ...",
+    "segment_index": 583
+  },
+  {
+    "id": 557,
+    "start_time": 3563.98,
+    "end_time": 3574.643,
+    "speaker": "Edip",
+    "content": "I ask them \"with our number 19, with our understanding and with our message, many Christians",
+    "segment_index": 584
+  },
+  {
+    "id": 558,
+    "start_time": 3574.643,
+    "end_time": 3582.591,
+    "speaker": "Edip",
+    "content": "\"become Muslim. And in the future, they will be Muslim, IN SHAA ALLAH. But with your number 19,",
+    "segment_index": 585
+  },
+  {
+    "id": 559,
+    "start_time": 3582.591,
+    "end_time": 3590.193,
+    "speaker": "Edip",
+    "content": "\"how many Christians became Muslim and become Muslims. Why? Why should they become Muslim with this number this number 19?\"",
+    "segment_index": 586
+  },
+  {
+    "id": 560,
+    "start_time": 3590.193,
+    "end_time": 3591.904,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 587
+  },
+  {
+    "id": 561,
+    "start_time": 3592.943,
+    "end_time": 3597.253,
+    "speaker": "Edip",
+    "content": "Yes, what's the reason? And they cannot answer this question.",
+    "segment_index": 588
+  },
+  {
+    "id": 562,
+    "start_time": 3597.253,
+    "end_time": 3603.411,
+    "speaker": "Dr. Khalifa",
+    "content": "I used number 3, actually. I asked the same question that the people started (unintelligible). I used number 3,",
+    "segment_index": 589
+  },
+  {
+    "id": 563,
+    "start_time": 3603.411,
+    "end_time": 3605.064,
+    "speaker": "Dr. Khalifa",
+    "content": "[74:31]  ... (3) to strengthen the faith of the faithful, ...",
+    "segment_index": 590
+  },
+  {
+    "id": 564,
+    "start_time": 3605.631,
+    "end_time": 3611.309,
+    "speaker": "Dr. Khalifa",
+    "content": "Why should it increase the faith of the faithful, whether the angels guarding Hell are 19, or 26, or 72?",
+    "segment_index": 591
+  },
+  {
+    "id": 565,
+    "start_time": 3612.868,
+    "end_time": 3613.96,
+    "speaker": "Dr. Khalifa",
+    "content": "Why?",
+    "segment_index": 592
+  },
+  {
+    "id": 566,
+    "start_time": 3613.96,
+    "end_time": 3620.58,
+    "speaker": "Edip",
+    "content": "They say, their answer is this. It has been prepared before. The answer is",
+    "segment_index": 593
+  },
+  {
+    "id": 567,
+    "start_time": 3620.58,
+    "end_time": 3628.624,
+    "speaker": "Edip",
+    "content": "\"Because they will find, the Christians and Jews will find that the number 19, 19 guardians in their book also.\"",
+    "segment_index": 594
+  },
+  {
+    "id": 568,
+    "start_time": 3629.107,
+    "end_time": 3637.984,
+    "speaker": "Edip",
+    "content": "I say \"no, it's not true, because they can't find in their book the number 19 guardian in their book.",
+    "segment_index": 595
+  },
+  {
+    "id": 569,
+    "start_time": 3637.984,
+    "end_time": 3645.415,
+    "speaker": "Edip",
+    "content": "\"And the second, let's accept that there is, but it will not increase their faith because there are many things",
+    "segment_index": 596
+  },
+  {
+    "id": 570,
+    "start_time": 3645.415,
+    "end_time": 3653.398,
+    "speaker": "Edip",
+    "content": "\"mentioned in Quran and in their book. These will decrease their belief because they say 'you stole, you have stolen from our book,",
+    "segment_index": 597
+  },
+  {
+    "id": 571,
+    "start_time": 3653.398,
+    "end_time": 3659.499,
+    "speaker": "Edip",
+    "content": "\"you copied from our book.'\" Mary, the story of Mary. Many stories in Quran are common. Why?",
+    "segment_index": 598
+  },
+  {
+    "id": 572,
+    "start_time": 3659.73,
+    "end_time": 3662.308,
+    "speaker": "Edip",
+    "content": "Especially number 19, too.",
+    "segment_index": 599
+  },
+  {
+    "id": 573,
+    "start_time": 3662.308,
+    "end_time": 3667.138,
+    "speaker": "A man",
+    "content": "That's a common belief anyway amongst the Christians and Jews that the Quran is a copy from the Torah.",
+    "segment_index": 600
+  },
+  {
+    "id": 574,
+    "start_time": 3667.716,
+    "end_time": 3670.236,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes. (unintelligible).",
+    "segment_index": 601
+  },
+  {
+    "id": 575,
+    "start_time": 3670.645,
+    "end_time": 3675.0,
+    "speaker": "Dr. Khalifa",
+    "content": "But this was, what Edip mentioned, it's one of the ignorant Tafsirs (Interpretations) where they said,",
+    "segment_index": 602
+  },
+  {
+    "id": 576,
+    "start_time": 3675.0,
+    "end_time": 3679.772,
+    "speaker": "Dr. Khalifa",
+    "content": "\"It must be that 19 guardians of Hell is also mentioned in the Bible.",
+    "segment_index": 603
+  },
+  {
+    "id": 577,
+    "start_time": 3679.772,
+    "end_time": 3683.043,
+    "speaker": "Dr. Khalifa",
+    "content": "\"And when the Christians and Jews see this they say 'oh, the Quran must be correct, then.'\"",
+    "segment_index": 604
+  },
+  {
+    "id": 578,
+    "start_time": 3683.043,
+    "end_time": 3684.465,
+    "speaker": "Dr. Khalifa",
+    "content": "Just imagine this.",
+    "segment_index": 605
+  },
+  {
+    "id": 579,
+    "start_time": 3686.465,
+    "end_time": 3688.465,
+    "speaker": "Dr. Khalifa",
+    "content": "But there is no such thing in the Bible.",
+    "segment_index": 606
+  },
+  {
+    "id": 580,
+    "start_time": 3690.465,
+    "end_time": 3700.319,
+    "speaker": "A man",
+    "content": "Many times you can explain miracle of 19 since it's undeniable. The best answer they have is...",
+    "segment_index": 607
+  },
+  {
+    "id": 581,
+    "start_time": 3700.319,
+    "end_time": 3706.375,
+    "speaker": "A man",
+    "content": "they cannot deny it. I have seen at least one case that the miracle of Quran is more than that.",
+    "segment_index": 608
+  },
+  {
+    "id": "582_part_0",
+    "start_time": 3706.866,
+    "end_time": 3710.28932,
+    "speaker": "A man",
+    "content": "So, that's the best answer they can find. So, ",
+    "segment_index": 609
+  },
+  {
+    "id": "582_part_1",
+    "start_time": 3710.28932,
+    "end_time": 3710.587,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "segment_index": 610
+  },
+  {
+    "id": 583,
+    "start_time": 3710.587,
+    "end_time": 3715.013,
+    "speaker": "A man",
+    "content": "They cannot deny it. They don't accept it. So, but the answer they have is...",
+    "segment_index": 611
+  },
+  {
+    "id": "584_part_0",
+    "start_time": 3715.359,
+    "end_time": 3716.2893636363638,
+    "speaker": "Dr. Khalifa",
+    "content": "It's more than that. ",
+    "segment_index": 612
+  },
+  {
+    "id": "584_part_1",
+    "start_time": 3716.2893636363638,
+    "end_time": 3716.821,
+    "speaker": "A man",
+    "content": "It's much...",
+    "segment_index": 613
+  },
+  {
+    "id": 585,
+    "start_time": 3718.15,
+    "end_time": 3722.922,
+    "speaker": "Edip",
+    "content": "Ask them \"give me, please, examples. Give me examples, one more example.\"",
+    "segment_index": 614
+  },
+  {
+    "id": 586,
+    "start_time": 3722.922,
+    "end_time": 3725.442,
+    "speaker": "Edip",
+    "content": "They will not give you.",
+    "segment_index": 615
+  },
+  {
+    "id": 587,
+    "start_time": 3726.02,
+    "end_time": 3729.117,
+    "speaker": "A man",
+    "content": "No, I had people who tried to write a Sura.",
+    "segment_index": 616
+  },
+  {
+    "id": "588_part_0",
+    "start_time": 3730.734,
+    "end_time": 3731.495189189189,
+    "speaker": "A man",
+    "content": "I'm serious ",
+    "segment_index": 617
+  },
+  {
+    "id": "588_part_1",
+    "start_time": 3731.495189189189,
+    "end_time": 3732.890702702703,
+    "speaker": "Dr. Khalifa",
+    "content": "Mathematically coded? ",
+    "segment_index": 618
+  },
+  {
+    "id": "588_part_2",
+    "start_time": 3732.890702702703,
+    "end_time": 3733.081,
+    "speaker": "A man",
+    "content": "Yes",
+    "segment_index": 619
+  },
+  {
+    "id": 589,
+    "start_time": 3734.236,
+    "end_time": 3741.203,
+    "speaker": "A man",
+    "content": "By grabbing three letters and stuff that makes sense, like tower of Babel.",
+    "segment_index": 620
+  },
+  {
+    "id": 590,
+    "start_time": 3741.723,
+    "end_time": 3743.723,
+    "speaker": "Dr. Khalifa",
+    "content": "It's too late. Now, it's too overwhelming.",
+    "segment_index": 621
+  },
+  {
+    "id": "591_part_0",
+    "start_time": 3745.456,
+    "end_time": 3746.8605,
+    "speaker": "Dr. Khalifa",
+    "content": "Any other questions? ",
+    "segment_index": 622
+  },
+  {
+    "id": "591_part_1",
+    "start_time": 3746.8605,
+    "end_time": 3748.2649999999994,
+    "speaker": "A man",
+    "content": "Yeah, I have comment.",
+    "segment_index": 623
+  },
+  {
+    "id": "592_part_0",
+    "start_time": 3749.362,
+    "end_time": 3750.981391304348,
+    "speaker": "A man",
+    "content": "You wanted questions. ",
+    "segment_index": 624
+  },
+  {
+    "id": "592_part_1",
+    "start_time": 3750.981391304348,
+    "end_time": 3752.748,
+    "speaker": "Dr. Sabahi",
+    "content": "Comments. Give comments.",
+    "segment_index": 625
+  },
+  {
+    "id": 593,
+    "start_time": 3757.484,
+    "end_time": 3759.484,
+    "speaker": "A man",
+    "content": "About making judgment about others.",
+    "segment_index": 626
+  },
+  {
+    "id": 594,
+    "start_time": 3760.119,
+    "end_time": 3767.374,
+    "speaker": "A man",
+    "content": "I think the function of the person who's making judgment, all the time, every second, you're making judgement",
+    "segment_index": 627
+  },
+  {
+    "id": 595,
+    "start_time": 3767.374,
+    "end_time": 3775.554,
+    "speaker": "A man",
+    "content": "about things, about people, about everything. So, if you mean that, if you make a judgement",
+    "segment_index": 628
+  },
+  {
+    "id": 596,
+    "start_time": 3775.554,
+    "end_time": 3778.949,
+    "speaker": "A man",
+    "content": "without having any proof, do not disclose it to others.",
+    "segment_index": 629
+  },
+  {
+    "id": 597,
+    "start_time": 3780.965,
+    "end_time": 3789.456,
+    "speaker": "A man",
+    "content": "But in your day-to-day life, you love one person more than the other. This is just based on your personal judgment.",
+    "segment_index": 630
+  },
+  {
+    "id": 598,
+    "start_time": 3790.166,
+    "end_time": 3796.075,
+    "speaker": "A man",
+    "content": "You feel one person is more reverent than the other. You get more close to him than the other.",
+    "segment_index": 631
+  },
+  {
+    "id": 599,
+    "start_time": 3796.075,
+    "end_time": 3804.063,
+    "speaker": "A man",
+    "content": "This is just based on your personal judgment. But I agree that if you don't have enough...",
+    "segment_index": 632
+  },
+  {
+    "id": 600,
+    "start_time": 3804.063,
+    "end_time": 3809.066,
+    "speaker": "A man",
+    "content": "If you don't have enough evidence, you should not disclose it to somebody else that \"this guy is not Mu'min (believer).\"",
+    "segment_index": 633
+  },
+  {
+    "id": 601,
+    "start_time": 3809.066,
+    "end_time": 3814.762,
+    "speaker": "A man",
+    "content": "Because this is illegal, if you don't have enough evidence. Or, you cannot prosecute.",
+    "segment_index": 634
+  },
+  {
+    "id": 602,
+    "start_time": 3814.762,
+    "end_time": 3822.018,
+    "speaker": "A man",
+    "content": "That's, that is the function of God. God will prosecute or make judgment, final judgment on any,",
+    "segment_index": 635
+  },
+  {
+    "id": 603,
+    "start_time": 3822.018,
+    "end_time": 3828.811,
+    "speaker": "A man",
+    "content": "whoever He wills. If that's you mean by different....But personal judgment, you are doing every second.",
+    "segment_index": 636
+  },
+  {
+    "id": 604,
+    "start_time": 3830.313,
+    "end_time": 3835.258,
+    "speaker": "Dr. Khalifa",
+    "content": "Yes, this is a very important point, because they make a big deal here about \"don't judge.\"",
+    "segment_index": 637
+  },
+  {
+    "id": 605,
+    "start_time": 3836.413,
+    "end_time": 3841.301,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, you cannot say the person is going to Heaven or Hell. This is what you cannot do.",
+    "segment_index": 638
+  },
+  {
+    "id": 606,
+    "start_time": 3841.301,
+    "end_time": 3847.695,
+    "speaker": "Dr. Khalifa",
+    "content": "Because people change. You can change tomorrow. Remember Dr. Sabahi himself made a statement that somebody",
+    "segment_index": 639
+  },
+  {
+    "id": 607,
+    "start_time": 3847.695,
+    "end_time": 3851.623,
+    "speaker": "Dr. Khalifa",
+    "content": "doesn't believe in God. It's a statement of fact. The person himself said \"I don't believe in God.\"",
+    "segment_index": 640
+  },
+  {
+    "id": 608,
+    "start_time": 3852.05,
+    "end_time": 3855.88,
+    "speaker": "Dr. Khalifa",
+    "content": "But we don't know if this person is going to Hell or Heaven, because tomorrow, he may believe better than me.",
+    "segment_index": 641
+  },
+  {
+    "id": 609,
+    "start_time": 3856.494,
+    "end_time": 3860.497,
+    "speaker": "Dr. Khalifa",
+    "content": "And so, this is where you cannot judge in that respect, but you can,",
+    "segment_index": 642
+  },
+  {
+    "id": 610,
+    "start_time": 3860.497,
+    "end_time": 3868.872,
+    "speaker": "Dr. Khalifa",
+    "content": "like you said, you make judgments all day, based on the Quran and certain criteria.",
+    "segment_index": 643
+  },
+  {
+    "id": 611,
+    "start_time": 3869.331,
+    "end_time": 3873.899,
+    "speaker": "Dr. Khalifa",
+    "content": "If the person himself says \"I don't believe in God\", you can say \"this person does not believe in God.\"",
+    "segment_index": 644
+  },
+  {
+    "id": 612,
+    "start_time": 3874.13,
+    "end_time": 3875.655,
+    "speaker": "Dr. Khalifa",
+    "content": "And this is not judgment.",
+    "segment_index": 645
+  },
+  {
+    "id": 613,
+    "start_time": 3876.637,
+    "end_time": 3878.984,
+    "speaker": "Edip",
+    "content": "(unintelligible)",
+    "segment_index": 646
+  },
+  {
+    "id": 614,
+    "start_time": 3878.984,
+    "end_time": 3883.868,
+    "speaker": "Dr. Khalifa",
+    "content": "You can say \"if he continues like this and dies as disbeliever in God, he will go to Hell.\" That's what God said.",
+    "segment_index": 647
+  },
+  {
+    "id": 615,
+    "start_time": 3884.756,
+    "end_time": 3893.611,
+    "speaker": "Dr. Khalifa",
+    "content": "But you cannot say \"this person is going to Hell or Heaven without any basis. Because this is a changing possibility.",
+    "segment_index": 648
+  },
+  {
+    "id": 616,
+    "start_time": 3893.611,
+    "end_time": 3897.268,
+    "speaker": "A man",
+    "content": "They even cannot disclose it. I think it's not good to disclose to somebody else.",
+    "segment_index": 649
+  },
+  {
+    "id": 617,
+    "start_time": 3903.794,
+    "end_time": 3910.107,
+    "speaker": "A man",
+    "content": "People oftentimes, though, when you're talking about, like, personal judgments even, there's, you find a lot of fault in them,",
+    "segment_index": 650
+  },
+  {
+    "id": 618,
+    "start_time": 3910.107,
+    "end_time": 3915.283,
+    "speaker": "A man",
+    "content": "because oftentimes, you draw conclusions. Somebody says something, well, I don't do this, and then",
+    "segment_index": 651
+  },
+  {
+    "id": "619_part_0",
+    "start_time": 3915.283,
+    "end_time": 3921.643857142857,
+    "speaker": "A man",
+    "content": "you know, you make assumptions which is... So, judging all the way around. That's all you have to worry about it yourself. ",
+    "segment_index": 652
+  },
+  {
+    "id": "619_part_1",
+    "start_time": 3921.643857142857,
+    "end_time": 3922.885,
+    "speaker": "Dr. Khalifa",
+    "content": "That's (unintelligible).",
+    "segment_index": 653
+  },
+  {
+    "id": 620,
+    "start_time": 3922.885,
+    "end_time": 3924.309,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "segment_index": 654
+  },
+  {
+    "id": "621_part_0",
+    "start_time": 3928.294,
+    "end_time": 3930.5974352941175,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) assumptions that's are just... ",
+    "segment_index": 655
+  },
+  {
+    "id": "621_part_1",
+    "start_time": 3930.5974352941175,
+    "end_time": 3932.373,
+    "speaker": "A man",
+    "content": "Oh, just... yeah, well like if you...",
+    "segment_index": 656
+  },
+  {
+    "id": 622,
+    "start_time": 3932.373,
+    "end_time": 3936.51,
+    "speaker": "A man",
+    "content": "It's a natural tendency that if you see this and you see this, well people",
+    "segment_index": 657
+  },
+  {
+    "id": 623,
+    "start_time": 3936.51,
+    "end_time": 3942.899,
+    "speaker": "A man",
+    "content": "make conclusions, or they assume that, you know, one and two, well, that makes three. But you don't know for sure,",
+    "segment_index": 658
+  },
+  {
+    "id": 624,
+    "start_time": 3942.899,
+    "end_time": 3949.404,
+    "speaker": "A man",
+    "content": "you know just because it's a human tendency to draw conclusions from, you know, other examples or",
+    "segment_index": 659
+  },
+  {
+    "id": 625,
+    "start_time": 3949.404,
+    "end_time": 3954.118,
+    "speaker": "A man",
+    "content": "things that may have affected you in your life, but it may not be true for all circumstances.",
+    "segment_index": 660
+  },
+  {
+    "id": 626,
+    "start_time": 3954.118,
+    "end_time": 3959.41,
+    "speaker": "Dr. Khalifa",
+    "content": "Exactly. This is a very important principle in the Quran that we must always remember,",
+    "segment_index": 661
+  },
+  {
+    "id": 627,
+    "start_time": 3959.41,
+    "end_time": 3963.663,
+    "speaker": "Dr. Khalifa",
+    "content": "that a little bit of suspicion is sinful. Even a little bit is sinful.",
+    "segment_index": 662
+  },
+  {
+    "id": 628,
+    "start_time": 3964.01,
+    "end_time": 3970.688,
+    "speaker": "Dr. Khalifa",
+    "content": "If a person is passing by you and making a face, you draw a conclusion that this person is unfriendly or doesn't like you.",
+    "segment_index": 663
+  },
+  {
+    "id": 629,
+    "start_time": 3971.036,
+    "end_time": 3977.358,
+    "speaker": "Dr. Khalifa",
+    "content": "Based on that, you can be wrong, and it is sinful, because that person could be having a headache or a stomachache.",
+    "segment_index": 664
+  },
+  {
+    "id": 630,
+    "start_time": 3977.647,
+    "end_time": 3979.296,
+    "speaker": "Dr. Khalifa",
+    "content": "You don't know why he's making a face.",
+    "segment_index": 665
+  },
+  {
+    "id": 631,
+    "start_time": 3979.815,
+    "end_time": 3986.349,
+    "speaker": "Dr. Khalifa",
+    "content": "And you must give the person the benefit of doubt. Instead of stating that the person is unfriendly or doesn't like you,",
+    "segment_index": 666
+  },
+  {
+    "id": 632,
+    "start_time": 3986.349,
+    "end_time": 3989.318,
+    "speaker": "Dr. Khalifa",
+    "content": "you have to say that something is bothering this person.",
+    "segment_index": 667
+  },
+  {
+    "id": 633,
+    "start_time": 3989.608,
+    "end_time": 3995.886,
+    "speaker": "Dr. Khalifa",
+    "content": "And you feel more, actually, pity or kindness towards the person instead of the other way around.",
+    "segment_index": 668
+  },
+  {
+    "id": 634,
+    "start_time": 3996.174,
+    "end_time": 4003.479,
+    "speaker": "Dr. Khalifa",
+    "content": "So, the Quran makes this very clear, very strong. A little bit of suspicion is sinful.",
+    "segment_index": 669
+  },
+  {
+    "id": 635,
+    "start_time": 4003.479,
+    "end_time": 4007.416,
+    "speaker": "Dr. Khalifa",
+    "content": "You cannot make conclusions or assumptions without proof.",
+    "segment_index": 670
+  },
+  {
+    "id": 636,
+    "start_time": 4008.687,
+    "end_time": 4010.687,
+    "speaker": "A man",
+    "content": "Can I make a comment here?",
+    "segment_index": 671
+  },
+  {
+    "id": 637,
+    "start_time": 4011.401,
+    "end_time": 4019.472,
+    "speaker": "A man",
+    "content": "Like, some people think that if a person doesn't come to the mosque and pray, he prays in the afternoons and people come at 12, and some of them cannot come.",
+    "segment_index": 672
+  },
+  {
+    "id": 638,
+    "start_time": 4019.472,
+    "end_time": 4024.564,
+    "speaker": "A man",
+    "content": "And people think that only because we don't come, you know, we don't pray",
+    "segment_index": 673
+  },
+  {
+    "id": 639,
+    "start_time": 4024.564,
+    "end_time": 4030.402,
+    "speaker": "A man",
+    "content": "you know, because we always have to be here or something. You know, it doesn't have to be that we don't pray.",
+    "segment_index": 674
+  },
+  {
+    "id": 640,
+    "start_time": 4030.402,
+    "end_time": 4035.0,
+    "speaker": "A man",
+    "content": "We can pray when we're working or something like that. So, it doesn't mean that we don't pray.",
+    "segment_index": 675
+  },
+  {
+    "id": 641,
+    "start_time": 4035.0,
+    "end_time": 4042.775,
+    "speaker": "A man",
+    "content": "Or that we don't have to do something. Like I missed a lot of (unintelligible).",
+    "segment_index": 676
+  },
+  {
+    "id": "642_part_0",
+    "start_time": 4042.775,
+    "end_time": 4043.9634545454546,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) ",
+    "segment_index": 677
+  },
+  {
+    "id": "642_part_1",
+    "start_time": 4043.9634545454546,
+    "end_time": 4044.313,
+    "speaker": "A man",
+    "content": "Yeah.",
+    "segment_index": 678
+  },
+  {
+    "id": 643,
+    "start_time": 4044.313,
+    "end_time": 4046.313,
+    "speaker": "Dr. Khalifa",
+    "content": "That's, that's a sin.",
+    "segment_index": 679
+  },
+  {
+    "id": 644,
+    "start_time": 4047.353,
+    "end_time": 4049.353,
+    "speaker": "Dr. Khalifa",
+    "content": "You shouldn't miss Quranic studies or prayers.",
+    "segment_index": 680
+  },
+  {
+    "id": 645,
+    "start_time": 4049.353,
+    "end_time": 4051.353,
+    "speaker": "A man",
+    "content": "No. Well, I was working. Sure.",
+    "segment_index": 681
+  },
+  {
+    "id": 646,
+    "start_time": 4051.353,
+    "end_time": 4053.064,
+    "speaker": "Dr. Khalifa",
+    "content": "Oh, okay. You have an excuse.",
+    "segment_index": 682
+  },
+  {
+    "id": 647,
+    "start_time": 4055.064,
+    "end_time": 4060.067,
+    "speaker": "A man",
+    "content": "It doesn't mean that you're not trying to do your best to come or do something, you know.",
+    "segment_index": 683
+  },
+  {
+    "id": 648,
+    "start_time": 4060.067,
+    "end_time": 4061.894,
+    "speaker": "Dr. Khalifa",
+    "content": "They're excuses. That's it.",
+    "segment_index": 684
+  },
+  {
+    "id": 649,
+    "start_time": 4062.298,
+    "end_time": 4063.778,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) Dr. Sabahi.",
+    "segment_index": 685
+  },
+  {
+    "id": 650,
+    "start_time": 4063.778,
+    "end_time": 4068.261,
+    "speaker": "Dr. Sabahi",
+    "content": "I think I want us to continue. No, I'm not gonna answer,",
+    "segment_index": 686
+  },
+  {
+    "id": 651,
+    "start_time": 4068.261,
+    "end_time": 4072.841,
+    "speaker": "Dr. Sabahi",
+    "content": "because I wanna go and finish as much as I can. Then at the end, I will do it, because I think",
+    "segment_index": 687
+  },
+  {
+    "id": 652,
+    "start_time": 4072.841,
+    "end_time": 4079.212,
+    "speaker": "Dr. Sabahi",
+    "content": "it's very important to get to the later part of the Sura, which is kind of interesting",
+    "segment_index": 688
+  },
+  {
+    "id": 653,
+    "start_time": 4079.212,
+    "end_time": 4089.798,
+    "speaker": "Dr. Sabahi",
+    "content": "the way it is worded. 32 to 39. Again, it's in the present tense.",
+    "segment_index": 689
+  },
+  {
+    "id": 654,
+    "start_time": 4090.087,
+    "end_time": 4098.786,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:32]  Absolutely, (I swear) by the moon. [74:33]  And the night as it passes. [74:34]  And the morning as it shines.",
+    "segment_index": 690
+  },
+  {
+    "id": 655,
+    "start_time": 4099.71,
+    "end_time": 4101.71,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:35]  This is one of the great miracles.*",
+    "segment_index": 691
+  },
+  {
+    "id": 656,
+    "start_time": 4101.71,
+    "end_time": 4106.251,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:36]  A warning to the human race. [74:37]  For those among you who wish to advance, or regress.",
+    "segment_index": 692
+  },
+  {
+    "id": 657,
+    "start_time": 4106.771,
+    "end_time": 4111.832,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:38]  Every soul is trapped by its sins. [74:39]  Except for those on the right.",
+    "segment_index": 693
+  },
+  {
+    "id": 658,
+    "start_time": 4113.969,
+    "end_time": 4122.033,
+    "speaker": "Dr. Sabahi",
+    "content": "Again, if you put this, if you not try to isolate verses from each other, you see clearly that",
+    "segment_index": 694
+  },
+  {
+    "id": 659,
+    "start_time": 4122.033,
+    "end_time": 4130.137,
+    "speaker": "Dr. Sabahi",
+    "content": "God in 32, 33 and 34 is swearing even to human beings that",
+    "segment_index": 695
+  },
+  {
+    "id": 660,
+    "start_time": 4130.137,
+    "end_time": 4135.256,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:32]  ... (I swear) by the moon. [74:33]  By the night as it passes.",
+    "segment_index": 696
+  },
+  {
+    "id": 661,
+    "start_time": 4135.256,
+    "end_time": 4140.0,
+    "speaker": "Dr. Sabahi",
+    "content": "because these are the things that we see, we feel, we experience everyday.",
+    "segment_index": 697
+  },
+  {
+    "id": 662,
+    "start_time": 4140.0,
+    "end_time": 4145.638,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:34]  And the morning as it shines. [74:35]  This is one of the great miracles.*",
+    "segment_index": 698
+  },
+  {
+    "id": 663,
+    "start_time": 4146.022,
+    "end_time": 4154.241,
+    "speaker": "Dr. Sabahi",
+    "content": "This is referring exactly to 31 that God is talking about 19 angels and the number 19.",
+    "segment_index": 699
+  },
+  {
+    "id": 664,
+    "start_time": 4154.241,
+    "end_time": 4159.533,
+    "speaker": "Dr. Sabahi",
+    "content": "And God is swearing that this is one of the greatest miracles. And",
+    "segment_index": 700
+  },
+  {
+    "id": 665,
+    "start_time": 4163.46,
+    "end_time": 4174.296,
+    "speaker": "Dr. Sabahi",
+    "content": "verse 36 is telling us that this is a warning to human race which could apply to any way, at any period of time as we know it.",
+    "segment_index": 701
+  },
+  {
+    "id": 666,
+    "start_time": 4174.664,
+    "end_time": 4177.05,
+    "speaker": "Dr. Sabahi",
+    "content": "And, and",
+    "segment_index": 702
+  },
+  {
+    "id": 667,
+    "start_time": 4177.05,
+    "end_time": 4180.149,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:37]  For those among you who wish to advance, or regress.",
+    "segment_index": 703
+  },
+  {
+    "id": 668,
+    "start_time": 4180.149,
+    "end_time": 4190.581,
+    "speaker": "Dr. Sabahi",
+    "content": "We have the choice. If we see the miracle, if we follow the Quran, then we advance. Otherwise, we regress. And it says,",
+    "segment_index": 704
+  },
+  {
+    "id": 669,
+    "start_time": 4190.581,
+    "end_time": 4192.581,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:38]  Every soul is trapped by its sins.",
+    "segment_index": 705
+  },
+  {
+    "id": 670,
+    "start_time": 4192.928,
+    "end_time": 4196.43,
+    "speaker": "Dr. Sabahi",
+    "content": "The more you commit sins, the more you are gonna be trapped.",
+    "segment_index": 706
+  },
+  {
+    "id": 671,
+    "start_time": 4196.43,
+    "end_time": 4200.682,
+    "speaker": "Dr. Sabahi",
+    "content": "The more you will have a difficult time to get out of it. And this goes back to",
+    "segment_index": 707
+  },
+  {
+    "id": 672,
+    "start_time": 4200.682,
+    "end_time": 4209.363,
+    "speaker": "Dr. Sabahi",
+    "content": "what has been discussed quite a few number of times here that 40 years of age is the limit.",
+    "segment_index": 708
+  },
+  {
+    "id": 673,
+    "start_time": 4209.363,
+    "end_time": 4214.232,
+    "speaker": "Dr. Sabahi",
+    "content": "But are we free to do everything up to that point? But I guess here",
+    "segment_index": 709
+  },
+  {
+    "id": 674,
+    "start_time": 4214.232,
+    "end_time": 4215.943,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:38]  Every soul is trapped by its sins.",
+    "segment_index": 710
+  },
+  {
+    "id": 675,
+    "start_time": 4215.943,
+    "end_time": 4220.08,
+    "speaker": "Dr. Sabahi",
+    "content": "The more you sin, the more you get trapped into it. The harder it is to get out.",
+    "segment_index": 711
+  },
+  {
+    "id": 676,
+    "start_time": 4220.363,
+    "end_time": 4226.725,
+    "speaker": "Dr. Sabahi",
+    "content": "And so, it is something that the progress has to be made by time.",
+    "segment_index": 712
+  },
+  {
+    "id": 677,
+    "start_time": 4228.419,
+    "end_time": 4240.219,
+    "speaker": "Dr. Sabahi",
+    "content": "Then, from 39 to I guess to 47, God is explaining what will happen in the future.",
+    "segment_index": 713
+  },
+  {
+    "id": 678,
+    "start_time": 4241.894,
+    "end_time": 4244.472,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:39]  Except for those on the right. [74:40]  While in Paradise, ...",
+    "segment_index": 714
+  },
+  {
+    "id": 679,
+    "start_time": 4244.472,
+    "end_time": 4245.894,
+    "speaker": "Dr. Sabahi",
+    "content": "The ones was on the right.",
+    "segment_index": 715
+  },
+  {
+    "id": 680,
+    "start_time": 4245.894,
+    "end_time": 4250.089,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:40]  While in Paradise, they will ask. [74:41]  About the guilty.",
+    "segment_index": 716
+  },
+  {
+    "id": 681,
+    "start_time": 4250.32,
+    "end_time": 4256.247,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:42]  \"What brought you to this retribution?\" [74:43]  They will say, \"We did not observe the contact prayers (Salat).",
+    "segment_index": 717
+  },
+  {
+    "id": 682,
+    "start_time": 4256.478,
+    "end_time": 4262.116,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:44]  \"We did not feed the poor. [74:45]  \"We blundered with the blunderers. [74:46]  \"We disbelieved in the Day of Judgment.",
+    "segment_index": 718
+  },
+  {
+    "id": 683,
+    "start_time": 4262.347,
+    "end_time": 4264.694,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:47]  \"Until certainty came to us now.\"",
+    "segment_index": 719
+  },
+  {
+    "id": 684,
+    "start_time": 4266.941,
+    "end_time": 4272.619,
+    "speaker": "Dr. Sabahi",
+    "content": "If we compare these verses 40 to 47,",
+    "segment_index": 720
+  },
+  {
+    "id": 685,
+    "start_time": 4272.619,
+    "end_time": 4280.723,
+    "speaker": "Dr. Sabahi",
+    "content": "God is giving the reasons for people who go to the Hell. Basically, these are the things that",
+    "segment_index": 721
+  },
+  {
+    "id": 686,
+    "start_time": 4280.723,
+    "end_time": 4286.97,
+    "speaker": "Dr. Sabahi",
+    "content": "have been said over and over here in the studies or in the Khutbahs that",
+    "segment_index": 722
+  },
+  {
+    "id": 687,
+    "start_time": 4286.97,
+    "end_time": 4288.607,
+    "speaker": "Dr. Sabahi",
+    "content": "God is giving the reasons to say,",
+    "segment_index": 723
+  },
+  {
+    "id": 688,
+    "start_time": 4288.607,
+    "end_time": 4293.379,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:43]  They will say, \"We did not observe the contact prayers (Salat). [74:44]  \"We did not feed the poor.",
+    "segment_index": 724
+  },
+  {
+    "id": 689,
+    "start_time": 4293.379,
+    "end_time": 4294.224,
+    "speaker": "Dr. Sabahi",
+    "content": "The Zakat.",
+    "segment_index": 725
+  },
+  {
+    "id": 690,
+    "start_time": 4294.224,
+    "end_time": 4298.65,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:45]  \"We blundered with the blunderers. [74:46]  \"We disbelieved in the Day of Judgment.",
+    "segment_index": 726
+  },
+  {
+    "id": 691,
+    "start_time": 4298.65,
+    "end_time": 4302.139,
+    "speaker": "Dr. Sabahi",
+    "content": "So, these are the major that you can commit.",
+    "segment_index": 727
+  },
+  {
+    "id": 692,
+    "start_time": 4302.139,
+    "end_time": 4308.106,
+    "speaker": "Dr. Sabahi",
+    "content": "And then, you deserve Hell. And then, when in the Day of Judgment,",
+    "segment_index": 728
+  },
+  {
+    "id": 693,
+    "start_time": 4308.106,
+    "end_time": 4316.036,
+    "speaker": "Dr. Sabahi",
+    "content": "when you are in there, certainty came to you, it's too late. You have already committed enough",
+    "segment_index": 729
+  },
+  {
+    "id": 694,
+    "start_time": 4316.036,
+    "end_time": 4328.529,
+    "speaker": "Dr. Sabahi",
+    "content": "that it's too late for you to repent. And God now is saying, it's a kind of closing on the whole Sura. God is saying,",
+    "segment_index": 730
+  },
+  {
+    "id": 695,
+    "start_time": 4328.529,
+    "end_time": 4331.28,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:48]  The intercession of the intercessors will never help them.",
+    "segment_index": 731
+  },
+  {
+    "id": 696,
+    "start_time": 4331.664,
+    "end_time": 4334.685,
+    "speaker": "Dr. Sabahi",
+    "content": "Because of what they committed, the sins that they committed.",
+    "segment_index": 732
+  },
+  {
+    "id": 697,
+    "start_time": 4335.263,
+    "end_time": 4340.786,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:49]  Why are they so averse to this reminder? [74:50]  Running like zebras. [74:51]  Who are fleeing from the lion!",
+    "segment_index": 733
+  },
+  {
+    "id": 698,
+    "start_time": 4341.017,
+    "end_time": 4350.525,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:52]  Does each one of them want to receive the scripture personally? [74:53]  Indeed, they do not fear the Hereafter. [74:54]  Indeed, this is a reminder.",
+    "segment_index": 734
+  },
+  {
+    "id": 699,
+    "start_time": 4350.525,
+    "end_time": 4360.553,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:55]  For those who wish to take heed. [74:56]  They cannot take heed against GOD's will. He is the source of righteousness; He is the source of forgiveness.",
+    "segment_index": 735
+  },
+  {
+    "id": 700,
+    "start_time": 4361.188,
+    "end_time": 4371.214,
+    "speaker": "Dr. Sabahi",
+    "content": "48 is clearly what I didn't know before coming to the mosque that Shafa'at or intercession is not gonna help anyone.",
+    "segment_index": 736
+  },
+  {
+    "id": 701,
+    "start_time": 4371.214,
+    "end_time": 4377.181,
+    "speaker": "Dr. Sabahi",
+    "content": "That's why a lot of people who think they are Muslims, they believe in",
+    "segment_index": 737
+  },
+  {
+    "id": 702,
+    "start_time": 4377.181,
+    "end_time": 4383.898,
+    "speaker": "Dr. Sabahi",
+    "content": "intercession by Muhammad, by his followers, Ali and maybe Omar and so on and so forth.",
+    "segment_index": 738
+  },
+  {
+    "id": 703,
+    "start_time": 4384.241,
+    "end_time": 4389.919,
+    "speaker": "Dr. Sabahi",
+    "content": "But clearly, God is saying that no Shafa'at, no intercession. And then, God is kind of,",
+    "segment_index": 739
+  },
+  {
+    "id": 704,
+    "start_time": 4389.919,
+    "end_time": 4398.601,
+    "speaker": "Dr. Sabahi",
+    "content": "when I read this verse, it's kind of a son, a father talking to his son, because I have a son, 2 sons. It say",
+    "segment_index": 740
+  },
+  {
+    "id": 705,
+    "start_time": 4398.601,
+    "end_time": 4400.601,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:49]  Why are they so averse to this reminder?",
+    "segment_index": 741
+  },
+  {
+    "id": 706,
+    "start_time": 4400.89,
+    "end_time": 4406.471,
+    "speaker": "Dr. Sabahi",
+    "content": "Because you tell your son, because you are more experienced, you have a little more gray hair. And you say \"don't do this.\"",
+    "segment_index": 742
+  },
+  {
+    "id": 707,
+    "start_time": 4407.28,
+    "end_time": 4412.456,
+    "speaker": "Dr. Sabahi",
+    "content": "God is telling us \"don't do this. Do the right things.\" But we are averse to the reminder.",
+    "segment_index": 743
+  },
+  {
+    "id": 708,
+    "start_time": 4412.456,
+    "end_time": 4416.304,
+    "speaker": "Dr. Sabahi",
+    "content": "And then, we go and experience it. And God says, you know,",
+    "segment_index": 744
+  },
+  {
+    "id": 709,
+    "start_time": 4416.304,
+    "end_time": 4419.286,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:49]  Why are they so averse to this reminder?",
+    "segment_index": 745
+  },
+  {
+    "id": 710,
+    "start_time": 4419.286,
+    "end_time": 4426.772,
+    "speaker": "Dr. Sabahi",
+    "content": "Why they don't take heed and they don't understand? They are running like zebras who are fleeing from lion.",
+    "segment_index": 746
+  },
+  {
+    "id": 711,
+    "start_time": 4428.447,
+    "end_time": 4435.125,
+    "speaker": "Dr. Sabahi",
+    "content": "And then, God is asking, I think there's a little bit sarcasm in here, that",
+    "segment_index": 747
+  },
+  {
+    "id": 712,
+    "start_time": 4435.125,
+    "end_time": 4438.049,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:52]  Does each one of them want to receive the scripture personally?",
+    "segment_index": 748
+  },
+  {
+    "id": 713,
+    "start_time": 4438.341,
+    "end_time": 4443.499,
+    "speaker": "Dr. Sabahi",
+    "content": "Should God come to each one of us personally and tell \"okay, this is your Scripture. Go and follow these rules.\"",
+    "segment_index": 749
+  },
+  {
+    "id": 714,
+    "start_time": 4443.961,
+    "end_time": 4447.329,
+    "speaker": "Dr. Sabahi",
+    "content": "And then, God is telling us,",
+    "segment_index": 750
+  },
+  {
+    "id": 715,
+    "start_time": 4447.329,
+    "end_time": 4449.329,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:53]  Indeed, they do not fear the Hereafter.",
+    "segment_index": 751
+  },
+  {
+    "id": 716,
+    "start_time": 4450.043,
+    "end_time": 4457.858,
+    "speaker": "Dr. Sabahi",
+    "content": "They are not afraid of the Day of Judgment. Indeed, this is a reminder. This book, this message,",
+    "segment_index": 752
+  },
+  {
+    "id": 717,
+    "start_time": 4457.858,
+    "end_time": 4463.016,
+    "speaker": "Dr. Sabahi",
+    "content": "this miracle is a reminder for all the people. For those...",
+    "segment_index": 753
+  },
+  {
+    "id": 718,
+    "start_time": 4463.42,
+    "end_time": 4464.496,
+    "speaker": "Dr. Sabahi",
+    "content": "Oh,...",
+    "segment_index": 754
+  },
+  {
+    "id": 719,
+    "start_time": 4464.727,
+    "end_time": 4466.207,
+    "speaker": "Dr. Khalifa",
+    "content": "You're alright?",
+    "segment_index": 755
+  },
+  {
+    "id": 720,
+    "start_time": 4469.441,
+    "end_time": 4470.921,
+    "speaker": "A woman",
+    "content": "Are you Ok?",
+    "segment_index": 756
+  },
+  {
+    "id": 721,
+    "start_time": 4471.73,
+    "end_time": 4473.73,
+    "speaker": "A man",
+    "content": "I think it came down on him.",
+    "segment_index": 757
+  },
+  {
+    "id": 722,
+    "start_time": 4474.539,
+    "end_time": 4475.615,
+    "speaker": "Dr. Sabahi",
+    "content": "Are you Ok?",
+    "segment_index": 758
+  },
+  {
+    "id": 723,
+    "start_time": 4491.901,
+    "end_time": 4493.439,
+    "speaker": "Dr. Khalifa",
+    "content": "See God protects you.",
+    "segment_index": 759
+  },
+  {
+    "id": 724,
+    "start_time": 4495.528,
+    "end_time": 4497.222,
+    "speaker": "Dr. Sabahi",
+    "content": "You should have come down directly.",
+    "segment_index": 760
+  },
+  {
+    "id": 725,
+    "start_time": 4501.034,
+    "end_time": 4510.253,
+    "speaker": "Dr. Sabahi",
+    "content": "[74:54]  Indeed, this is a reminder. [74:55]  For those who wish to take heed. [74:56]  They cannot take heed against GOD's will. He is the source of righteousness; He is the source of forgiveness.",
+    "segment_index": 761
+  },
+  {
+    "id": 726,
+    "start_time": 4511.521,
+    "end_time": 4517.545,
+    "speaker": "Dr. Sabahi",
+    "content": "These have been discussed before here. And since there's only five minutes, I'm gonna stop.",
+    "segment_index": 762
+  },
+  {
+    "id": 727,
+    "start_time": 4517.545,
+    "end_time": 4521.895,
+    "speaker": "Dr. Sabahi",
+    "content": "There are a few verses that I took out of other places that would support what is here,",
+    "segment_index": 763
+  },
+  {
+    "id": 728,
+    "start_time": 4521.895,
+    "end_time": 4530.0,
+    "speaker": "Dr. Sabahi",
+    "content": "which I'm gonna quote here and then leave for questions and answers.",
+    "segment_index": 764
+  },
+  {
+    "id": 729,
+    "start_time": 4532.657,
+    "end_time": 4534.657,
+    "speaker": "Dr. Sabahi",
+    "content": "Edip, you can ask your question.",
+    "segment_index": 765
+  },
+  {
+    "id": 730,
+    "start_time": 4536.39,
+    "end_time": 4538.043,
+    "speaker": "Edip",
+    "content": "I forgot my question.",
+    "segment_index": 766
+  },
+  {
+    "id": 731,
+    "start_time": 4538.757,
+    "end_time": 4540.41,
+    "speaker": "Dr. Sabahi",
+    "content": "That was the whole purpose.",
+    "segment_index": 767
+  },
+  {
+    "id": 732,
+    "start_time": 4541.103,
+    "end_time": 4545.0,
+    "speaker": "Edip",
+    "content": "Your question is up. My question is",
+    "segment_index": 768
+  },
+  {
+    "id": 733,
+    "start_time": 4546.097,
+    "end_time": 4553.468,
+    "speaker": "Edip",
+    "content": "When hypocrites appear, when they feel advantage in any community, they appear.",
+    "segment_index": 769
+  },
+  {
+    "id": 734,
+    "start_time": 4554.45,
+    "end_time": 4563.092,
+    "speaker": "Edip",
+    "content": "And during the first beginning of revelation, there was no any hypocrite.",
+    "segment_index": 770
+  },
+  {
+    "id": 735,
+    "start_time": 4563.965,
+    "end_time": 4569.816,
+    "speaker": "Edip",
+    "content": "There shouldn't be, because there is no benefit to become Muslim. Many Muslims are under torture.",
+    "segment_index": 771
+  },
+  {
+    "id": 736,
+    "start_time": 4569.816,
+    "end_time": 4579.652,
+    "speaker": "Edip",
+    "content": "Some of them hide their (unintelligible) persecution. But here, this is a hint that this is a prophecy of Quran.",
+    "segment_index": 772
+  },
+  {
+    "id": 737,
+    "start_time": 4579.652,
+    "end_time": 4584.366,
+    "speaker": "Edip",
+    "content": "(unintelligible) describes (unintelligible). It says,",
+    "segment_index": 773
+  },
+  {
+    "id": 738,
+    "start_time": 4584.366,
+    "end_time": 4588.676,
+    "speaker": "Edip",
+    "content": "(74:31) وَلِيَقُولَ ٱلَّذِينَ فِى قُلُوبِهِم مَّرَضٌۭ وَٱلْكَـٰفِرُونَ مَاذَآ أَرَادَ ٱللَّهُ",
+    "segment_index": 774
+  },
+  {
+    "id": 739,
+    "start_time": 4589.643,
+    "end_time": 4594.397,
+    "speaker": "Edip",
+    "content": "So, to expose those who harbor doubts in their hearts.",
+    "segment_index": 775
+  },
+  {
+    "id": 740,
+    "start_time": 4594.686,
+    "end_time": 4596.282,
+    "speaker": "Edip",
+    "content": "فِى قُلُوبِهِم مَّرَضٌۭ",
+    "segment_index": 776
+  },
+  {
+    "id": 741,
+    "start_time": 4596.282,
+    "end_time": 4604.519,
+    "speaker": "Edip",
+    "content": "The people who have disease in their hearts. This description is used in the whole Quran for the description",
+    "segment_index": 777
+  },
+  {
+    "id": 742,
+    "start_time": 4604.519,
+    "end_time": 4609.58,
+    "speaker": "Edip",
+    "content": "to describe hypocrite. But during this time of revelation, the revelation of this chapter,",
+    "segment_index": 778
+  },
+  {
+    "id": 743,
+    "start_time": 4609.58,
+    "end_time": 4613.89,
+    "speaker": "Edip",
+    "content": "there was no hypocrite. This is, this shows that this is",
+    "segment_index": 779
+  },
+  {
+    "id": 744,
+    "start_time": 4615.218,
+    "end_time": 4616.525,
+    "speaker": "Dr. Sabahi",
+    "content": "For the future.",
+    "segment_index": 780
+  },
+  {
+    "id": "745_part_0",
+    "start_time": 4616.525,
+    "end_time": 4619.071709677419,
+    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) of Quran. ",
+    "segment_index": 781
+  },
+  {
+    "id": "745_part_1",
+    "start_time": 4619.071709677419,
+    "end_time": 4619.449,
+    "speaker": "Edip",
+    "content": "Yes.",
+    "segment_index": 782
+  },
+  {
+    "id": 746,
+    "start_time": 4620.546,
+    "end_time": 4625.029,
+    "speaker": "Edip",
+    "content": "Another interesting point is, they say,",
+    "segment_index": 783
+  },
+  {
+    "id": 747,
+    "start_time": 4625.029,
+    "end_time": 4627.029,
+    "speaker": "Edip",
+    "content": "[74:46]  \"We disbelieved in the Day of Judgment.",
+    "segment_index": 784
+  },
+  {
+    "id": 748,
+    "start_time": 4627.029,
+    "end_time": 4631.628,
+    "speaker": "Edip",
+    "content": "But, two verse after this, Allah says,",
+    "segment_index": 785
+  },
+  {
+    "id": 749,
+    "start_time": 4631.628,
+    "end_time": 4635.303,
+    "speaker": "Edip",
+    "content": "[74:48]  The intercession of the intercessors will never help them.",
+    "segment_index": 786
+  },
+  {
+    "id": 750,
+    "start_time": 4635.608,
+    "end_time": 4644.751,
+    "speaker": "Edip",
+    "content": "If you believe in intercession, it shows that you believe in Resurrection also. Because you believe in the intercession,",
+    "segment_index": 787
+  },
+  {
+    "id": 751,
+    "start_time": 4644.751,
+    "end_time": 4650.949,
+    "speaker": "Edip",
+    "content": "you say when you resurrect, somebody will save you from God. Is there any contradiction",
+    "segment_index": 788
+  },
+  {
+    "id": 752,
+    "start_time": 4650.949,
+    "end_time": 4658.995,
+    "speaker": "Edip",
+    "content": "in these verses? No. You see, they disbelieve in the Day of Judgment. What is the Day of Judgment?",
+    "segment_index": 789
+  },
+  {
+    "id": 753,
+    "start_time": 4659.84,
+    "end_time": 4664.074,
+    "speaker": "Edip",
+    "content": "The description of Day of Judgment, we see in Quran, we see, there is no Shafa'at",
+    "segment_index": 790
+  },
+  {
+    "id": 754,
+    "start_time": 4664.074,
+    "end_time": 4672.08,
+    "speaker": "Edip",
+    "content": "in that day. If you believe in Shafa'at, intercession, you deny, you disbelieve, you are disbeliever of Day of Judgment.",
+    "segment_index": 791
+  },
+  {
+    "id": 755,
+    "start_time": 4672.311,
+    "end_time": 4673.502,
+    "speaker": "Edip",
+    "content": "Because Allah says,",
+    "segment_index": 792
+  },
+  {
+    "id": 756,
+    "start_time": 4673.502,
+    "end_time": 4680.664,
+    "speaker": "Edip",
+    "content": "(82:18) ثُمَّ مَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ (82:19) يَوْمَ لَا تَمْلِكُ نَفْسٌۭ لِّنَفْسٍۢ شَيْـًۭٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍۢ لِّلَّهِ",
+    "segment_index": 793
+  },
+  {
+    "id": 757,
+    "start_time": 4680.664,
+    "end_time": 4685.205,
+    "speaker": "Edip",
+    "content": "On that day, nobody has any power, has no any power.",
+    "segment_index": 794
+  },
+  {
+    "id": 758,
+    "start_time": 4686.23,
+    "end_time": 4695.72,
+    "speaker": "Edip",
+    "content": "All power is power of God. And, if somebody believe in Shafa'at, yes, he doesn't believe in Day of Judgment.",
+    "segment_index": 795
+  },
+  {
+    "id": "759_part_0",
+    "start_time": 4696.298,
+    "end_time": 4700.123377358491,
+    "speaker": "Edip",
+    "content": "If he says, he is only (unintelligible). ",
+    "segment_index": 796
+  },
+  {
+    "id": "759_part_1",
+    "start_time": 4700.123377358491,
+    "end_time": 4701.243,
+    "speaker": "Dr. Sabahi",
+    "content": "Mã Shã Allãh",
+    "segment_index": 797
+  },
+  {
+    "id": 760,
+    "start_time": 4702.432,
+    "end_time": 4715.271,
+    "speaker": "Edip",
+    "content": "Because, I think, both Muslims, so-called Muslim, and also rejecter of, or atheist, both of them are addressed in these verses.",
+    "segment_index": 798
+  },
+  {
+    "id": 761,
+    "start_time": 4716.502,
+    "end_time": 4721.14,
+    "speaker": "Edip",
+    "content": "Some people may understand, Allah excuse so-called Muslim because",
+    "segment_index": 799
+  },
+  {
+    "id": 762,
+    "start_time": 4721.14,
+    "end_time": 4726.183,
+    "speaker": "Edip",
+    "content": "they say \"we believe in Day of Judgment.\" But in fact, they do not believe in Day of Judgment.",
+    "segment_index": 800
+  },
+  {
+    "id": 763,
+    "start_time": 4734.944,
+    "end_time": 4743.625,
+    "speaker": "Dr. Khalifa",
+    "content": "Do you understand Edip's point about the hypocrites? The hypocrites show up only later, when, when the new message",
+    "segment_index": 801
+  },
+  {
+    "id": 764,
+    "start_time": 4743.625,
+    "end_time": 4755.578,
+    "speaker": "Dr. Khalifa",
+    "content": "from God is strong and generally accepted. But in the initial times, of the elite of the elite, the first believers,",
+    "segment_index": 802
+  },
+  {
+    "id": 765,
+    "start_time": 4755.578,
+    "end_time": 4762.814,
+    "speaker": "Dr. Khalifa",
+    "content": "when there's persecution of the believers, why will the hypocrites be attracted to a place where they are being persecuted, and threatened",
+    "segment_index": 803
+  },
+  {
+    "id": 766,
+    "start_time": 4762.814,
+    "end_time": 4766.933,
+    "speaker": "Dr. Khalifa",
+    "content": "and things like that. So, there's no hypocrites at that time. Because if you announce",
+    "segment_index": 804
+  },
+  {
+    "id": 767,
+    "start_time": 4766.933,
+    "end_time": 4773.188,
+    "speaker": "Dr. Khalifa",
+    "content": "that everyone who comes to Masjid Tucson, we'll give him $200, you know, we have big crowds here,",
+    "segment_index": 805
+  },
+  {
+    "id": 768,
+    "start_time": 4773.188,
+    "end_time": 4776.556,
+    "speaker": "Dr. Khalifa",
+    "content": "and you can be sure some of them are hypocrites. You know they are not all believers.",
+    "segment_index": 806
+  },
+  {
+    "id": 769,
+    "start_time": 4777.341,
+    "end_time": 4781.188,
+    "speaker": "Dr. Khalifa",
+    "content": "When there is persecution and difficult times, there are no hypocrites.",
+    "segment_index": 807
+  },
+  {
+    "id": 770,
+    "start_time": 4781.864,
+    "end_time": 4788.639,
+    "speaker": "Dr. Khalifa",
+    "content": "Okay, we thank you very much, Dr. Sabahi. It was very enlightening. Well, I have to ask you to give us the Khutba next Friday, IN SHAA ALLAH.",
+    "segment_index": 808
+  },
+  {
+    "id": "771_part_0",
+    "start_time": 4788.639,
+    "end_time": 4789.191,
+    "speaker": "Dr. Sabahi",
+    "content": "No, no, please. ",
+    "segment_index": 809
+  },
+  {
+    "id": "771_part_1",
+    "start_time": 4789.191,
+    "end_time": 4789.812,
+    "speaker": "Dr. Khalifa",
+    "content": "You are fantastic.",
+    "segment_index": 810
+  },
+  {
+    "id": 772,
+    "start_time": 4792.411,
+    "end_time": 4796.022,
+    "speaker": "Audience",
+    "content": "Do it. Do it. Do it.",
+    "segment_index": 811
+  },
+  {
+    "id": "773_part_0",
+    "start_time": 4797.84,
+    "end_time": 4799.704226415094,
+    "speaker": "Dr. Khalifa",
+    "content": "You have a whole week to prepare. ",
+    "segment_index": 812
+  },
+  {
+    "id": "773_part_1",
+    "start_time": 4799.704226415094,
+    "end_time": 4800.746,
+    "speaker": "Dr. Sabahi",
+    "content": "No, please. No, no.",
+    "segment_index": 813
+  },
+  {
+    "id": "774_part_0",
+    "start_time": 4800.746,
+    "end_time": 4801.7771999999995,
+    "speaker": "A woman",
+    "content": "Do it. Do it. ",
+    "segment_index": 814
+  },
+  {
+    "id": "774_part_1",
+    "start_time": 4801.7771999999995,
+    "end_time": 4803.324,
+    "speaker": "Dr. Sabahi",
+    "content": "No, wait. No, please.",
+    "segment_index": 815
+  },
+  {
+    "id": 775,
+    "start_time": 4809.388,
+    "end_time": 4816.528,
+    "speaker": "Dr. Khalifa",
+    "content": "Well, our teacher next week will be Gatut, IN SHAA ALLAH, Suras 75 and 76, page 76.",
+    "segment_index": 816
+  },
+  {
+    "id": 776,
+    "start_time": 4817.625,
+    "end_time": 4822.455,
+    "speaker": "Dr. Khalifa",
+    "content": "And we turn to God for this time and ask Him to give Robert a great year coming up,",
+    "segment_index": 817
+  },
+  {
+    "id": 777,
+    "start_time": 4822.455,
+    "end_time": 4826.188,
+    "speaker": "Dr. Khalifa",
+    "content": "best year of his life so far, and every year after that to be even greater.",
+    "segment_index": 818
+  },
+  {
+    "id": 778,
+    "start_time": 4826.188,
+    "end_time": 4830.267,
+    "speaker": "Dr. Khalifa",
+    "content": "May God bless him, and continue to give us guidance and wisdom. Al-Fãtehah.",
+    "segment_index": 819
+  },
+  {
+    "id": 779,
+    "start_time": 4831.423,
+    "end_time": 4848.843,
+    "speaker": "Dr. Khalifa",
+    "content": "Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7)",
+    "segment_index": 820
+  },
+  {
+    "id": 780,
+    "start_time": 4848.843,
+    "end_time": 4851.478,
+    "speaker": "Dr. Khalifa",
+    "content": "Congratulations. Congratulations. God bless you.",
+    "segment_index": 821
+  },
+  {
+    "id": 781,
+    "start_time": 4864.183,
+    "end_time": 4865.548,
+    "speaker": "Dr. Khalifa",
+    "content": "Dr. Sabahi (Speaking Farsi): It has vibration.",
+    "segment_index": 822
+  }
+]

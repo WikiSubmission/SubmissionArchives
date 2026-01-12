@@ -5,7 +5,7 @@
     "segment_index": 0,
     "start_time": 2.726,
     "end_time": 4.351,
-    "content": "Dr. Khalifa: أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
+    "content": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'أعوذ':3 'بِٱللَّهِ':4 'مِنَ':5 'ٱلرَّجِيمِ':7 'ٱلشَّيْطَـٰنِ':6"
   },
@@ -1275,8 +1275,8 @@
     "segment_index": 127,
     "start_time": 561.744,
     "end_time": 563.207,
-    "content": "A woman: Hi. Is it okay?",
-    "speaker": "Dr. Khalifa",
+    "content": "Hi. Is it okay?",
+    "speaker": "A woman",
     "search_vector": "'hi':3 'okay':6 'woman':2"
   },
   {
@@ -1285,7 +1285,7 @@
     "segment_index": 128,
     "start_time": 563.207,
     "end_time": 563.865,
-    "content": "Dr. Khalifa: Okay, what?",
+    "content": "Okay, what?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'okay':3"
   },
@@ -1295,8 +1295,8 @@
     "segment_index": 129,
     "start_time": 563.865,
     "end_time": 567.314,
-    "content": "A woman: I had to peek over at the museum and I just wanted to come by to pray.",
-    "speaker": "Dr. Khalifa",
+    "content": "I had to peek over at the museum and I just wanted to come by to pray.",
+    "speaker": "A woman",
     "search_vector": "'come':16 'museum':10 'peek':6 'pray':19 'want':14 'woman':2"
   },
   {
@@ -1305,7 +1305,7 @@
     "segment_index": 130,
     "start_time": 567.314,
     "end_time": 568.077,
-    "content": "Dr. Khalifa: Sure.",
+    "content": "Sure.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'sure':3"
   },
@@ -1665,8 +1665,8 @@
     "segment_index": 166,
     "start_time": 728.627,
     "end_time": 731.271,
-    "content": "A woman: I also have a cold and fever, you know, I must be (unintelligible).",
-    "speaker": "Dr. Khalifa",
+    "content": "I also have a cold and fever, you know, I must be (unintelligible).",
+    "speaker": "A woman",
     "search_vector": "'also':4 'cold':7 'fever':9 'know':11 'must':13 'unintellig':15 'woman':2"
   },
   {
@@ -1675,7 +1675,7 @@
     "segment_index": 167,
     "start_time": 731.271,
     "end_time": 732.797,
-    "content": "Dr. Khalifa: You have cold and fever now?",
+    "content": "You have cold and fever now?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'cold':5 'dr':1 'fever':7 'khalifa':2"
   },
@@ -1685,8 +1685,8 @@
     "segment_index": 168,
     "start_time": 732.797,
     "end_time": 734.336,
-    "content": "A woman: Yes, (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "Yes, (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':4 'woman':2 'yes':3"
   },
   {
@@ -1695,7 +1695,7 @@
     "segment_index": 169,
     "start_time": 734.336,
     "end_time": 737.366,
-    "content": "Dr. Khalifa: Oh, well, this is part of the fun of traveling, you know.",
+    "content": "Oh, well, this is part of the fun of traveling, you know.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'fun':10 'khalifa':2 'know':14 'oh':3 'part':7 'travel':12 'well':4"
   },
@@ -1725,8 +1725,8 @@
     "segment_index": 172,
     "start_time": 760.816,
     "end_time": 764.661384615385,
-    "content": "A woman: I do feel that they were idolizing (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "I do feel that they were idolizing (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'feel':5 'idol':9 'unintellig':10 'woman':2"
   },
   {
@@ -1745,8 +1745,8 @@
     "segment_index": 174,
     "start_time": 765.815,
     "end_time": 767.383604651163,
-    "content": "A woman: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':3 'woman':2"
   },
   {
@@ -1765,8 +1765,8 @@
     "segment_index": 176,
     "start_time": 768.513,
     "end_time": 773.41,
-    "content": "A woman: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':3 'woman':2"
   },
   {
@@ -1775,7 +1775,7 @@
     "segment_index": 177,
     "start_time": 773.867,
     "end_time": 777.56,
-    "content": "Dr. Khalifa: Well, their judgment is in God's hand. But I don't think...",
+    "content": "Well, their judgment is in God's hand. But I don't think...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'god':8 'hand':10 'judgment':5 'khalifa':2 'think':15 'well':3"
   },
@@ -1865,8 +1865,8 @@
     "segment_index": 186,
     "start_time": 819.226,
     "end_time": 820.724311111111,
-    "content": "A woman: (unintelligible) and perhaps. they would have believed.",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) and perhaps. they would have believed.",
+    "speaker": "A woman",
     "search_vector": "'believ':9 'perhap':5 'unintellig':3 'woman':2 'would':7"
   },
   {
@@ -1885,7 +1885,7 @@
     "segment_index": 188,
     "start_time": 821.333,
     "end_time": 824.578,
-    "content": "Dr. Khalifa: No, but see they had the Quran. They had the message there.",
+    "content": "No, but see they had the Quran. They had the message there.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'messag':13 'quran':9 'see':5"
   },
@@ -1895,7 +1895,7 @@
     "segment_index": 189,
     "start_time": 824.578,
     "end_time": 826.578,
-    "content": "Dr. Khalifa: Ok, Lisa, you better get going. Yeah.",
+    "content": "Ok, Lisa, you better get going. Yeah.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'better':6 'dr':1 'get':7 'go':8 'khalifa':2 'lisa':4 'ok':3 'yeah':9"
   },
@@ -1905,8 +1905,8 @@
     "segment_index": 190,
     "start_time": 826.578,
     "end_time": 830.080325581395,
-    "content": "A woman: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':3 'woman':2"
   },
   {
@@ -1925,7 +1925,7 @@
     "segment_index": 192,
     "start_time": 832.602,
     "end_time": 840,
-    "content": "Dr. Khalifa: Yes, but you see, if they deserved better, God would have seen to it that they received the corrections.",
+    "content": "Yes, but you see, if they deserved better, God would have seen to it that they received the corrections.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'better':10 'correct':21 'deserv':9 'dr':1 'god':11 'khalifa':2 'receiv':19 'see':6 'seen':14 'would':12 'yes':3"
   },
@@ -1935,8 +1935,8 @@
     "segment_index": 193,
     "start_time": 841.057,
     "end_time": 844.952,
-    "content": "A woman: Because exactly this line my father would say, like \"if there's a true believer, nothing",
-    "speaker": "Dr. Khalifa",
+    "content": "Because exactly this line my father would say, like \"if there's a true believer, nothing",
+    "speaker": "A woman",
     "search_vector": "'believ':17 'exact':4 'father':8 'like':11 'line':6 'noth':18 'say':10 'true':16 'woman':2 'would':9"
   },
   {
@@ -1945,8 +1945,8 @@
     "segment_index": 194,
     "start_time": 844.952,
     "end_time": 847.415214285714,
-    "content": "A woman: can harm him and God will give him Heaven in this world.\"",
-    "speaker": "Dr. Khalifa",
+    "content": "can harm him and God will give him Heaven in this world.\"",
+    "speaker": "A woman",
     "search_vector": "'give':9 'god':7 'harm':4 'heaven':11 'woman':2 'world':14"
   },
   {
@@ -1965,8 +1965,8 @@
     "segment_index": 196,
     "start_time": 848.087,
     "end_time": 851.422361445783,
-    "content": "A woman: And he will enjoy life. There can't be a happier person.",
-    "speaker": "Dr. Khalifa",
+    "content": "And he will enjoy life. There can't be a happier person.",
+    "speaker": "A woman",
     "search_vector": "'enjoy':6 'happier':13 'life':7 'person':14 'woman':2"
   },
   {
@@ -1985,8 +1985,8 @@
     "segment_index": 198,
     "start_time": 852.346,
     "end_time": 856.199247058824,
-    "content": "A woman: And he was one (unintelligible) wherever he went.",
-    "speaker": "Dr. Khalifa",
+    "content": "And he was one (unintelligible) wherever he went.",
+    "speaker": "A woman",
     "search_vector": "'one':6 'unintellig':7 'went':10 'wherev':8 'woman':2"
   },
   {
@@ -2005,7 +2005,7 @@
     "segment_index": 200,
     "start_time": 858.476,
     "end_time": 859.403,
-    "content": "Dr. Khalifa: This, yeah...",
+    "content": "This, yeah...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'yeah':4"
   },
@@ -2015,7 +2015,7 @@
     "segment_index": 201,
     "start_time": 859.785,
     "end_time": 864.006,
-    "content": "Dr. Khalifa: Yeah, but this is fine, but you cannot generalize it to the population.",
+    "content": "Yeah, but this is fine, but you cannot generalize it to the population.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'cannot':10 'dr':1 'fine':7 'general':11 'khalifa':2 'popul':15 'yeah':3"
   },
@@ -2085,8 +2085,8 @@
     "segment_index": 208,
     "start_time": 897.167,
     "end_time": 901.601,
-    "content": "A woman: I got a terrible headache yesterday because I was questioning this (unintelligible) about the...",
-    "speaker": "Dr. Khalifa",
+    "content": "I got a terrible headache yesterday because I was questioning this (unintelligible) about the...",
+    "speaker": "A woman",
     "search_vector": "'got':4 'headach':7 'question':12 'terribl':6 'unintellig':14 'woman':2 'yesterday':8"
   },
   {
@@ -2095,7 +2095,7 @@
     "segment_index": 209,
     "start_time": 901.816,
     "end_time": 906.372,
-    "content": "Dr. Khalifa: Yes, the case of the first cousin. I'm glad, I'm glad you knew that, yeah.",
+    "content": "Yes, the case of the first cousin. I'm glad, I'm glad you knew that, yeah.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'case':5 'cousin':9 'dr':1 'first':8 'glad':12,15 'khalifa':2 'knew':17 'm':11,14 'yeah':19 'yes':3"
   },
@@ -2125,8 +2125,8 @@
     "segment_index": 212,
     "start_time": 915.059,
     "end_time": 916.75372,
-    "content": "A woman: (unintelligible.) Then,",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible.) Then,",
+    "speaker": "A woman",
     "search_vector": "'unintellig':3 'woman':2"
   },
   {
@@ -2145,7 +2145,7 @@
     "segment_index": 214,
     "start_time": 919.352,
     "end_time": 924.448,
-    "content": "Dr. Khalifa: And it's wonderful to know that, because you probably never again question the wisdom of the Quran.",
+    "content": "And it's wonderful to know that, because you probably never again question the wisdom of the Quran.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'know':8 'never':13 'probabl':12 'question':15 'quran':20 'wisdom':17 'wonder':6"
   },
@@ -2155,8 +2155,8 @@
     "segment_index": 215,
     "start_time": 924.75,
     "end_time": 927.152,
-    "content": "A woman: I didn't mean to, but the way I sounded, I probably...",
-    "speaker": "Dr. Khalifa",
+    "content": "I didn't mean to, but the way I sounded, I probably...",
+    "speaker": "A woman",
     "search_vector": "'didn':4 'mean':6 'probabl':14 'sound':12 'way':10 'woman':2"
   },
   {
@@ -2165,7 +2165,7 @@
     "segment_index": 216,
     "start_time": 927.152,
     "end_time": 929.747,
-    "content": "Dr. Khalifa: Yes, exactly. It is the way it sounds.",
+    "content": "Yes, exactly. It is the way it sounds.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'exact':4 'khalifa':2 'sound':10 'way':8 'yes':3"
   },
@@ -2495,8 +2495,8 @@
     "segment_index": 249,
     "start_time": 1087.405,
     "end_time": 1093.9497972973,
-    "content": "Roxana: I think it takes a while before we realize that every letter of the Quran has to be followed, otherwise we makes mistakes.",
-    "speaker": "Dr. Khalifa",
+    "content": "I think it takes a while before we realize that every letter of the Quran has to be followed, otherwise we makes mistakes.",
+    "speaker": "Roxana",
     "search_vector": "'everi':12 'follow':20 'letter':13 'make':23 'mistak':24 'otherwis':21 'quran':16 'realiz':10 'roxana':1 'take':5 'think':3"
   },
   {
@@ -2515,7 +2515,7 @@
     "segment_index": 251,
     "start_time": 1094.856,
     "end_time": 1096.995,
-    "content": "Dr. Khalifa: Yes, exactly. It takes a while.",
+    "content": "Yes, exactly. It takes a while.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'exact':4 'khalifa':2 'take':6 'yes':3"
   },
@@ -2605,8 +2605,8 @@
     "segment_index": 260,
     "start_time": 1123.577,
     "end_time": 1125.201,
-    "content": "A woman: Nora, thank you.",
-    "speaker": "Dr. Khalifa",
+    "content": "Nora, thank you.",
+    "speaker": "A woman",
     "search_vector": "'nora':3 'thank':4 'woman':2"
   },
   {
@@ -2615,7 +2615,7 @@
     "segment_index": 261,
     "start_time": 1140.448,
     "end_time": 1145.078,
-    "content": "Dr. Khalifa: Mrs. Amir-Ali is not supposed to have a headache or cold or flu or anything like that.",
+    "content": "Mrs. Amir-Ali is not supposed to have a headache or cold or flu or anything like that.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'ali':6 'amir':5 'amir-ali':4 'anyth':19 'cold':15 'dr':1 'flu':17 'headach':13 'khalifa':2 'like':20 'mrs':3 'suppos':9"
   },
@@ -2635,7 +2635,7 @@
     "segment_index": 263,
     "start_time": 1161.383,
     "end_time": 1163.06810144928,
-    "content": "Dr. Khalifa: No, I don't wanna compromise with that.",
+    "content": "No, I don't wanna compromise with that.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'compromis':8 'dr':1 'khalifa':2 'wanna':7"
   },
@@ -2655,8 +2655,8 @@
     "segment_index": 265,
     "start_time": 1164.61,
     "end_time": 1166.394,
-    "content": "Behrouz: Well, my problem is...",
-    "speaker": "Dr. Khalifa",
+    "content": "Well, my problem is...",
+    "speaker": "Behrouz",
     "search_vector": "'behrouz':1 'problem':4 'well':2"
   },
   {
@@ -2665,7 +2665,7 @@
     "segment_index": 266,
     "start_time": 1166.394,
     "end_time": 1167.965,
-    "content": "Dr. Khalifa: I just remembered...",
+    "content": "I just remembered...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'rememb':5"
   },
@@ -2675,8 +2675,8 @@
     "segment_index": 267,
     "start_time": 1168.877,
     "end_time": 1171.1712173913,
-    "content": "Behrouz: My back problem is (unintelligible).",
-    "speaker": "Dr. Khalifa",
+    "content": "My back problem is (unintelligible).",
+    "speaker": "Behrouz",
     "search_vector": "'back':3 'behrouz':1 'problem':4 'unintellig':6"
   },
   {
@@ -2695,8 +2695,8 @@
     "segment_index": 269,
     "start_time": 1174.74,
     "end_time": 1178.296,
-    "content": "Behrouz: But surprisingly, in four days, I didn't have any pain.",
-    "speaker": "Dr. Khalifa",
+    "content": "But surprisingly, in four days, I didn't have any pain.",
+    "speaker": "Behrouz",
     "search_vector": "'behrouz':1 'day':6 'didn':8 'four':5 'pain':12 'surpris':3"
   },
   {
@@ -2705,7 +2705,7 @@
     "segment_index": 270,
     "start_time": 1180.461,
     "end_time": 1183.31033333333,
-    "content": "Dr. Khalifa: It's just part of the test. You took Mehdi's...",
+    "content": "It's just part of the test. You took Mehdi's...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'mehdi':12 'part':6 'test':9 'took':11"
   },
@@ -2725,7 +2725,7 @@
     "segment_index": 272,
     "start_time": 1184.735,
     "end_time": 1187.50446153846,
-    "content": "Dr. Khalifa: You love him so much that you said \"I'm gonna take you backache.",
+    "content": "You love him so much that you said \"I'm gonna take you backache.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'backach':16 'dr':1 'gonna':13 'khalifa':2 'love':4 'm':12 'much':7 'said':10 'take':14"
   },
@@ -2745,8 +2745,8 @@
     "segment_index": 274,
     "start_time": 1188.332,
     "end_time": 1190.601,
-    "content": "Behrouz: I don't know if he's gonna love me this much.",
-    "speaker": "Dr. Khalifa",
+    "content": "I don't know if he's gonna love me this much.",
+    "speaker": "Behrouz",
     "search_vector": "'behrouz':1 'gonna':9 'know':5 'love':10 'much':13"
   },
   {
@@ -2755,7 +2755,7 @@
     "segment_index": 275,
     "start_time": 1190.601,
     "end_time": 1192.008,
-    "content": "Dr. Khalifa: Because it's his anniversary.",
+    "content": "Because it's his anniversary.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'anniversari':7 'dr':1 'khalifa':2"
   },
@@ -2905,8 +2905,8 @@
     "segment_index": 290,
     "start_time": 1254.201,
     "end_time": 1258.61481818182,
-    "content": "A woman: Ok. Satan (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "Ok. Satan (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'ok':3 'satan':4 'unintellig':5 'woman':2"
   },
   {
@@ -2925,8 +2925,8 @@
     "segment_index": 292,
     "start_time": 1261.137,
     "end_time": 1263.20767307692,
-    "content": "A woman: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':3 'woman':2"
   },
   {
@@ -2945,8 +2945,8 @@
     "segment_index": 294,
     "start_time": 1265.444,
     "end_time": 1268.6725106383,
-    "content": "A woman: (unintelligible) Does he know what is in your mind?",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) Does he know what is in your mind?",
+    "speaker": "A woman",
     "search_vector": "'know':6 'mind':11 'unintellig':3 'woman':2"
   },
   {
@@ -2965,7 +2965,7 @@
     "segment_index": 296,
     "start_time": 1270.785,
     "end_time": 1272.529,
-    "content": "Dr. Khalifa: No, he doesn't know what's in your mind.",
+    "content": "No, he doesn't know what's in your mind.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'doesn':5 'dr':1 'khalifa':2 'know':7 'mind':12"
   },
@@ -2975,8 +2975,8 @@
     "segment_index": 297,
     "start_time": 1272.905,
     "end_time": 1274.78542424242,
-    "content": "A woman: (unintelligible) what you say orally?",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) what you say orally?",
+    "speaker": "A woman",
     "search_vector": "'oral':7 'say':6 'unintellig':3 'woman':2"
   },
   {
@@ -3135,8 +3135,8 @@
     "segment_index": 313,
     "start_time": 1323.876,
     "end_time": 1328.045,
-    "content": "A man: So, even thoughts that come into your mind, Satan doesn't put them there.",
-    "speaker": "Dr. Khalifa",
+    "content": "So, even thoughts that come into your mind, Satan doesn't put them there.",
+    "speaker": "A man",
     "search_vector": "'come':7 'doesn':12 'even':4 'man':2 'mind':10 'put':14 'satan':11 'thought':5"
   },
   {
@@ -3145,7 +3145,7 @@
     "segment_index": 314,
     "start_time": 1329,
     "end_time": 1333.573,
-    "content": "Dr. Khalifa: Your companion does. Yes. Your companion is in there.",
+    "content": "Your companion does. Yes. Your companion is in there.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'companion':4,8 'dr':1 'khalifa':2 'yes':6"
   },
@@ -3215,7 +3215,7 @@
     "segment_index": 321,
     "start_time": 1368.58,
     "end_time": 1372.146,
-    "content": "Dr. Khalifa: Does this mean Batul lose her temper? No. No way.",
+    "content": "Does this mean Batul lose her temper? No. No way.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'batul':6 'dr':1 'khalifa':2 'lose':7 'mean':5 'temper':9 'way':12"
   },
@@ -3255,8 +3255,8 @@
     "segment_index": 325,
     "start_time": 1391.957,
     "end_time": 1395.36868571429,
-    "content": "A man: So, your companion is not in touch with Satan?",
-    "speaker": "Dr. Khalifa",
+    "content": "So, your companion is not in touch with Satan?",
+    "speaker": "A man",
     "search_vector": "'companion':5 'man':2 'satan':11 'touch':9"
   },
   {
@@ -3275,7 +3275,7 @@
     "segment_index": 327,
     "start_time": 1396.927,
     "end_time": 1399.785,
-    "content": "Dr. Khalifa: He is Satan. He represents Satan.",
+    "content": "He is Satan. He represents Satan.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'repres':7 'satan':5,8"
   },
@@ -3305,8 +3305,8 @@
     "segment_index": 330,
     "start_time": 1411.772,
     "end_time": 1415.489,
-    "content": "A man: So, Satan has no... is not in touch with them until...",
-    "speaker": "Dr. Khalifa",
+    "content": "So, Satan has no... is not in touch with them until...",
+    "speaker": "A man",
     "search_vector": "'man':2 'satan':4 'touch':10"
   },
   {
@@ -3315,7 +3315,7 @@
     "segment_index": 331,
     "start_time": 1415.489,
     "end_time": 1418.706,
-    "content": "Dr. Khalifa: That's his seed. That's his seed.",
+    "content": "That's his seed. That's his seed.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'seed':6,10"
   },
@@ -3345,8 +3345,8 @@
     "segment_index": 334,
     "start_time": 1433.369,
     "end_time": 1437.931,
-    "content": "A woman: So, it's about your practices in (unintelligible) and living the righteous life that converts Satan?",
-    "speaker": "Dr. Khalifa",
+    "content": "So, it's about your practices in (unintelligible) and living the righteous life that converts Satan?",
+    "speaker": "A woman",
     "search_vector": "'convert':17 'life':15 'live':12 'practic':8 'righteous':14 'satan':18 'unintellig':10 'woman':2"
   },
   {
@@ -3355,7 +3355,7 @@
     "segment_index": 335,
     "start_time": 1438.215,
     "end_time": 1441.906,
-    "content": "Dr. Khalifa: See, he's reading the Quran now, as you are reading. She is reading the Quran now, excuse me.",
+    "content": "See, he's reading the Quran now, as you are reading. She is reading the Quran now, excuse me.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'excus':20 'khalifa':2 'quran':8,18 'read':6,13,16 'see':3"
   },
@@ -3405,7 +3405,7 @@
     "segment_index": 340,
     "start_time": 1453.415,
     "end_time": 1457.961,
-    "content": "Dr. Khalifa: She tried her best to keep you from doing this. But you won, and you brought her.",
+    "content": "She tried her best to keep you from doing this. But you won, and you brought her.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'best':6 'brought':18 'dr':1 'keep':8 'khalifa':2 'tri':4 'won':15"
   },
@@ -3415,7 +3415,7 @@
     "segment_index": 341,
     "start_time": 1462.009,
     "end_time": 1469.586,
-    "content": "Dr. Khalifa: In Sura 72, verse 6, that human beings sometimes use the jinn and they end up in trouble.",
+    "content": "In Sura 72, verse 6, that human beings sometimes use the jinn and they end up in trouble.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'6':7 '72':5 'be':10 'dr':1 'end':17 'human':9 'jinn':14 'khalifa':2 'sometim':11 'sura':4 'troubl':20 'use':12 'vers':6"
   },
@@ -3485,8 +3485,8 @@
     "segment_index": 348,
     "start_time": 1512.762,
     "end_time": 1514.971,
-    "content": "A man: That information (unintelligible) wrong.",
-    "speaker": "Dr. Khalifa",
+    "content": "That information (unintelligible) wrong.",
+    "speaker": "A man",
     "search_vector": "'inform':4 'man':2 'unintellig':5 'wrong':6"
   },
   {
@@ -3495,7 +3495,7 @@
     "segment_index": 349,
     "start_time": 1516.419,
     "end_time": 1517.419,
-    "content": "Dr. Khalifa: Of course, it's wrong.",
+    "content": "Of course, it's wrong.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'cours':4 'dr':1 'khalifa':2 'wrong':7"
   },
@@ -3505,8 +3505,8 @@
     "segment_index": 350,
     "start_time": 1519.128,
     "end_time": 1522.048,
-    "content": "A man: They are the big jinn of Ali, for example?",
-    "speaker": "Dr. Khalifa",
+    "content": "They are the big jinn of Ali, for example?",
+    "speaker": "A man",
     "search_vector": "'ali':9 'big':6 'exampl':11 'jinn':7 'man':2"
   },
   {
@@ -3515,7 +3515,7 @@
     "segment_index": 351,
     "start_time": 1523.014,
     "end_time": 1526.516,
-    "content": "Dr. Khalifa: No, probably not the jinn of Ali, but the companion of Ali.",
+    "content": "No, probably not the jinn of Ali, but the companion of Ali.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'ali':9,14 'companion':12 'dr':1 'jinn':7 'khalifa':2 'probabl':4"
   },
@@ -4455,7 +4455,7 @@
     "segment_index": 445,
     "start_time": 2015.036,
     "end_time": 2016.253,
-    "content": "Dr. Khalifa: Are we going with you?",
+    "content": "Are we going with you?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'go':5 'khalifa':2"
   },
@@ -4465,8 +4465,8 @@
     "segment_index": 446,
     "start_time": 2016.253,
     "end_time": 2017.272,
-    "content": "A man: No.",
-    "speaker": "Dr. Khalifa",
+    "content": "No.",
+    "speaker": "A man",
     "search_vector": "'man':2"
   },
   {
@@ -4475,7 +4475,7 @@
     "segment_index": 447,
     "start_time": 2017.272,
     "end_time": 2018.253,
-    "content": "Dr. Khalifa: Alright.",
+    "content": "Alright.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'alright':3 'dr':1 'khalifa':2"
   },
@@ -4815,8 +4815,8 @@
     "segment_index": 481,
     "start_time": 2213.225,
     "end_time": 2217.024,
-    "content": "A woman: (unintelligible) appreciate what God has given us.",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) appreciate what God has given us.",
+    "speaker": "A woman",
     "search_vector": "'appreci':4 'given':8 'god':6 'unintellig':3 'us':9 'woman':2"
   },
   {
@@ -4825,8 +4825,8 @@
     "segment_index": 482,
     "start_time": 2217.024,
     "end_time": 2223.086,
-    "content": "A woman: And we praise that, but in the meanwhile we say that \"thank you Lord, this is from You.\"",
-    "speaker": "Dr. Khalifa",
+    "content": "And we praise that, but in the meanwhile we say that \"thank you Lord, this is from You.\"",
+    "speaker": "A woman",
     "search_vector": "'lord':16 'meanwhil':10 'prais':5 'say':12 'thank':14 'woman':2"
   },
   {
@@ -4835,8 +4835,8 @@
     "segment_index": 483,
     "start_time": 2223.535,
     "end_time": 2224.65654545455,
-    "content": "A woman: (unintelligible).",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible).",
+    "speaker": "A woman",
     "search_vector": "'unintellig':3 'woman':2"
   },
   {
@@ -4855,7 +4855,7 @@
     "segment_index": 485,
     "start_time": 2226.721,
     "end_time": 2227.594,
-    "content": "Dr. Khalifa: Sure.",
+    "content": "Sure.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'sure':3"
   },
@@ -4865,7 +4865,7 @@
     "segment_index": 486,
     "start_time": 2227.594,
     "end_time": 2230,
-    "content": "Dr. Khalifa: This is how we thank God for whatever He gave you.",
+    "content": "This is how we thank God for whatever He gave you.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'gave':12 'god':8 'khalifa':2 'thank':7 'whatev':10"
   },
@@ -5225,8 +5225,8 @@
     "segment_index": 522,
     "start_time": 2410,
     "end_time": 2411.508,
-    "content": "A man: Since 44, yeah.",
-    "speaker": "Dr. Khalifa",
+    "content": "Since 44, yeah.",
+    "speaker": "A man",
     "search_vector": "'44':4 'man':2 'sinc':3 'yeah':5"
   },
   {
@@ -5235,7 +5235,7 @@
     "segment_index": 523,
     "start_time": 2411.591,
     "end_time": 2412.935,
-    "content": "Dr. Khalifa: 44, yeah.",
+    "content": "44, yeah.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'44':3 'dr':1 'khalifa':2 'yeah':4"
   },
@@ -5255,8 +5255,8 @@
     "segment_index": 525,
     "start_time": 2424.347,
     "end_time": 2426.85536363636,
-    "content": "A man: Yeah, but the ideology does not break up.",
-    "speaker": "Dr. Khalifa",
+    "content": "Yeah, but the ideology does not break up.",
+    "speaker": "A man",
     "search_vector": "'break':9 'ideolog':6 'man':2 'yeah':3"
   },
   {
@@ -5275,8 +5275,8 @@
     "segment_index": 527,
     "start_time": 2428.762,
     "end_time": 2433.391,
-    "content": "A man: It's just that they are fed up with the old guys. They want to do away with the old guys.",
-    "speaker": "Dr. Khalifa",
+    "content": "It's just that they are fed up with the old guys. They want to do away with the old guys.",
+    "speaker": "A man",
     "search_vector": "'away':19 'fed':9 'guy':14,23 'man':2 'old':13,22 'want':16"
   },
   {
@@ -5285,7 +5285,7 @@
     "segment_index": 528,
     "start_time": 2433.391,
     "end_time": 2435.89,
-    "content": "Dr. Khalifa: And communism. Did you see the Romanian flag?",
+    "content": "And communism. Did you see the Romanian flag?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'communism':4 'dr':1 'flag':10 'khalifa':2 'romanian':9 'see':7"
   },
@@ -5295,8 +5295,8 @@
     "segment_index": 529,
     "start_time": 2436.44,
     "end_time": 2437.52,
-    "content": "A man: Yes.",
-    "speaker": "Dr. Khalifa",
+    "content": "Yes.",
+    "speaker": "A man",
     "search_vector": "'man':2 'yes':3"
   },
   {
@@ -5305,7 +5305,7 @@
     "segment_index": 530,
     "start_time": 2437.788,
     "end_time": 2439.466,
-    "content": "Dr. Khalifa: Yeah? What does it look like now?",
+    "content": "Yeah? What does it look like now?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'like':8 'look':7 'yeah':3"
   },
@@ -5315,8 +5315,8 @@
     "segment_index": 531,
     "start_time": 2439.466,
     "end_time": 2441.144,
-    "content": "A man: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A man",
     "search_vector": "'man':2 'unintellig':3"
   },
   {
@@ -5325,7 +5325,7 @@
     "segment_index": 532,
     "start_time": 2441.583,
     "end_time": 2443.659,
-    "content": "Dr. Khalifa: He was an opponent of Ceaușescu.",
+    "content": "He was an opponent of Ceaușescu.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'ceaușescu':8 'dr':1 'khalifa':2 'oppon':6"
   },
@@ -5355,8 +5355,8 @@
     "segment_index": 535,
     "start_time": 2453.678,
     "end_time": 2455.034,
-    "content": "A man: They are still in power.",
-    "speaker": "Dr. Khalifa",
+    "content": "They are still in power.",
+    "speaker": "A man",
     "search_vector": "'man':2 'power':7 'still':5"
   },
   {
@@ -5365,7 +5365,7 @@
     "segment_index": 536,
     "start_time": 2455.034,
     "end_time": 2456.015,
-    "content": "Dr. Khalifa: Okay.",
+    "content": "Okay.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'okay':3"
   },
@@ -5375,8 +5375,8 @@
     "segment_index": 537,
     "start_time": 2456.498,
     "end_time": 2464.078,
-    "content": "A man: For for human... With human standards. For all political persons, they are still in power. They still control",
-    "speaker": "Dr. Khalifa",
+    "content": "For for human... With human standards. For all political persons, they are still in power. They still control",
+    "speaker": "A man",
     "search_vector": "'control':20 'human':5,7 'man':2 'person':12 'polit':11 'power':17 'standard':8 'still':15,19"
   },
   {
@@ -5415,7 +5415,7 @@
     "segment_index": 541,
     "start_time": 2480.863,
     "end_time": 2481.897,
-    "content": "Dr. Khalifa: I see.",
+    "content": "I see.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'see':4"
   },
@@ -5425,8 +5425,8 @@
     "segment_index": 542,
     "start_time": 2481.897,
     "end_time": 2483.468,
-    "content": "A man: And they want socialism to work.",
-    "speaker": "Dr. Khalifa",
+    "content": "And they want socialism to work.",
+    "speaker": "A man",
     "search_vector": "'man':2 'social':6 'want':5 'work':8"
   },
   {
@@ -5435,7 +5435,7 @@
     "segment_index": 543,
     "start_time": 2483.468,
     "end_time": 2487.668,
-    "content": "Dr. Khalifa: So, we have to conclude that communism is a success, basically.",
+    "content": "So, we have to conclude that communism is a success, basically.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'basic':13 'communism':9 'conclud':7 'dr':1 'khalifa':2 'success':12"
   },
@@ -5445,8 +5445,8 @@
     "segment_index": 544,
     "start_time": 2487.936,
     "end_time": 2493.263,
-    "content": "A man: The people are still supporting socialism. The people (unintelligible).",
-    "speaker": "Dr. Khalifa",
+    "content": "The people are still supporting socialism. The people (unintelligible).",
+    "speaker": "A man",
     "search_vector": "'man':2 'peopl':4,10 'social':8 'still':6 'support':7 'unintellig':11"
   },
   {
@@ -5455,7 +5455,7 @@
     "segment_index": 545,
     "start_time": 2493.478,
     "end_time": 2494.834,
-    "content": "Dr. Khalifa: I'm agreeing with you.",
+    "content": "I'm agreeing with you.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'agre':5 'dr':1 'khalifa':2 'm':4"
   },
@@ -5625,8 +5625,8 @@
     "segment_index": 562,
     "start_time": 2558.831,
     "end_time": 2563.138,
-    "content": "A man: Why is this the people of the Woods?",
-    "speaker": "Dr. Khalifa",
+    "content": "Why is this the people of the Woods?",
+    "speaker": "A man",
     "search_vector": "'man':2 'peopl':7 'wood':10"
   },
   {
@@ -5635,7 +5635,7 @@
     "segment_index": 563,
     "start_time": 2563.138,
     "end_time": 2565.138,
-    "content": "Dr. Khalifa: Midyan. Midyan.",
+    "content": "Midyan. Midyan.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'midyan':3,4"
   },
@@ -5675,8 +5675,8 @@
     "segment_index": 567,
     "start_time": 2575.162,
     "end_time": 2580,
-    "content": "A man: In the translation in this (unintelligible).",
-    "speaker": "Dr. Khalifa",
+    "content": "In the translation in this (unintelligible).",
+    "speaker": "A man",
     "search_vector": "'man':2 'translat':5 'unintellig':8"
   },
   {
@@ -5685,7 +5685,7 @@
     "segment_index": 568,
     "start_time": 2580,
     "end_time": 2582,
-    "content": "Dr. Khalifa: So? People of the Woods.",
+    "content": "So? People of the Woods.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'peopl':4 'wood':7"
   },
@@ -5695,8 +5695,8 @@
     "segment_index": 569,
     "start_time": 2582,
     "end_time": 2583.955,
-    "content": "A man: (unintelligible) Woods.",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) Woods.",
+    "speaker": "A man",
     "search_vector": "'man':2 'unintellig':3 'wood':4"
   },
   {
@@ -5705,7 +5705,7 @@
     "segment_index": 570,
     "start_time": 2585.243,
     "end_time": 2588.102,
-    "content": "Dr. Khalifa: What is KHASHAB? Do you have KHASHAB in Farsi?",
+    "content": "What is KHASHAB? Do you have KHASHAB in Farsi?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'farsi':11 'khalifa':2 'khashab':5,9"
   },
@@ -5715,8 +5715,8 @@
     "segment_index": 571,
     "start_time": 2588.799,
     "end_time": 2589.785,
-    "content": "A woman: KHASHAB?",
-    "speaker": "Dr. Khalifa",
+    "content": "KHASHAB?",
+    "speaker": "A woman",
     "search_vector": "'khashab':3 'woman':2"
   },
   {
@@ -5725,7 +5725,7 @@
     "segment_index": 572,
     "start_time": 2589.785,
     "end_time": 2590.819,
-    "content": "Dr. Khalifa: KHASHAB?",
+    "content": "KHASHAB?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'khashab':3"
   },
@@ -5735,7 +5735,7 @@
     "segment_index": 573,
     "start_time": 2590.819,
     "end_time": 2592.175,
-    "content": "Dr. Khalifa: Wood, what is wood?",
+    "content": "Wood, what is wood?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'wood':3,6"
   },
@@ -5745,8 +5745,8 @@
     "segment_index": 574,
     "start_time": 2593.087,
     "end_time": 2594.282,
-    "content": "A woman: KHASHAB?",
-    "speaker": "Dr. Khalifa",
+    "content": "KHASHAB?",
+    "speaker": "A woman",
     "search_vector": "'khashab':3 'woman':2"
   },
   {
@@ -5755,8 +5755,8 @@
     "segment_index": 575,
     "start_time": 2594.282,
     "end_time": 2595.048,
-    "content": "A man: CHOOB (چوب)",
-    "speaker": "Dr. Khalifa",
+    "content": "CHOOB (چوب)",
+    "speaker": "A man",
     "search_vector": "'choob':3 'man':2 'چوب':4"
   },
   {
@@ -5785,7 +5785,7 @@
     "segment_index": 578,
     "start_time": 2598.458,
     "end_time": 2599.378,
-    "content": "Dr. Khalifa: He knows.",
+    "content": "He knows.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'know':4"
   },
@@ -5795,8 +5795,8 @@
     "segment_index": 579,
     "start_time": 2600.344,
     "end_time": 2601.807,
-    "content": "A woman: He can't take it enough.",
-    "speaker": "Dr. Khalifa",
+    "content": "He can't take it enough.",
+    "speaker": "A woman",
     "search_vector": "'enough':8 'take':6 'woman':2"
   },
   {
@@ -5805,7 +5805,7 @@
     "segment_index": 580,
     "start_time": 2604.666,
     "end_time": 2607.847,
-    "content": "Dr. Khalifa: Ok, folks. There's a new word in the Farsi language.",
+    "content": "Ok, folks. There's a new word in the Farsi language.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'farsi':12 'folk':4 'khalifa':2 'languag':13 'new':8 'ok':3 'word':9"
   },
@@ -5825,7 +5825,7 @@
     "segment_index": 582,
     "start_time": 2610.705,
     "end_time": 2611.417,
-    "content": "Dr. Khalifa: CHOOB (چوب)?",
+    "content": "CHOOB (چوب)?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'choob':3 'dr':1 'khalifa':2 'چوب':4"
   },
@@ -5835,8 +5835,8 @@
     "segment_index": 583,
     "start_time": 2611.417,
     "end_time": 2612.183,
-    "content": "A man: CHOOB (چوب)",
-    "speaker": "Dr. Khalifa",
+    "content": "CHOOB (چوب)",
+    "speaker": "A man",
     "search_vector": "'choob':3 'man':2 'چوب':4"
   },
   {
@@ -5845,7 +5845,7 @@
     "segment_index": 584,
     "start_time": 2612.183,
     "end_time": 2613.11,
-    "content": "Dr. Khalifa: CHOOB (چوب).",
+    "content": "CHOOB (چوب).",
     "speaker": "Dr. Khalifa",
     "search_vector": "'choob':3 'dr':1 'khalifa':2 'چوب':4"
   },
@@ -5865,8 +5865,8 @@
     "segment_index": 586,
     "start_time": 2615.539,
     "end_time": 2617.217,
-    "content": "A man: The people of the CHOOB. Ok.",
-    "speaker": "Dr. Khalifa",
+    "content": "The people of the CHOOB. Ok.",
+    "speaker": "A man",
     "search_vector": "'choob':7 'man':2 'ok':8 'peopl':4"
   },
   {
@@ -5875,8 +5875,8 @@
     "segment_index": 587,
     "start_time": 2617.217,
     "end_time": 2621.9,
-    "content": "A man: But the Woods here means JANGAL (jungle).",
-    "speaker": "Dr. Khalifa",
+    "content": "But the Woods here means JANGAL (jungle).",
+    "speaker": "A man",
     "search_vector": "'jangal':8 'jungl':9 'man':2 'mean':7 'wood':5"
   },
   {
@@ -5885,7 +5885,7 @@
     "segment_index": 588,
     "start_time": 2622.383,
     "end_time": 2623.954,
-    "content": "Dr. Khalifa: Not necessarily, no.",
+    "content": "Not necessarily, no.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'necessarili':4"
   },
@@ -5915,7 +5915,7 @@
     "segment_index": 591,
     "start_time": 2633.252,
     "end_time": 2634.501,
-    "content": "Dr. Khalifa: They would have been carpenting",
+    "content": "They would have been carpenting",
     "speaker": "Dr. Khalifa",
     "search_vector": "'carpent':7 'dr':1 'khalifa':2 'would':4"
   },
@@ -5925,8 +5925,8 @@
     "segment_index": 592,
     "start_time": 2634.501,
     "end_time": 2636.501,
-    "content": "A man: NAJJAR. Do you mean carpenter?",
-    "speaker": "Dr. Khalifa",
+    "content": "NAJJAR. Do you mean carpenter?",
+    "speaker": "A man",
     "search_vector": "'carpent':7 'man':2 'mean':6 'najjar':3"
   },
   {
@@ -5935,7 +5935,7 @@
     "segment_index": 593,
     "start_time": 2636.501,
     "end_time": 2637.213,
-    "content": "Dr. Khalifa: NAJJAR",
+    "content": "NAJJAR",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'najjar':3"
   },
@@ -5945,7 +5945,7 @@
     "segment_index": 594,
     "start_time": 2638.072,
     "end_time": 2640.924,
-    "content": "Dr. Khalifa: Don't call NAJJAR. Whatever the Arabic says.",
+    "content": "Don't call NAJJAR. Whatever the Arabic says.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'arab':9 'call':5 'dr':1 'khalifa':2 'najjar':6 'say':10 'whatev':7"
   },
@@ -5975,8 +5975,8 @@
     "segment_index": 597,
     "start_time": 2646.118,
     "end_time": 2646.957,
-    "content": "A man: لْـَٔيْكَةِ",
-    "speaker": "Dr. Khalifa",
+    "content": "لْـَٔيْكَةِ",
+    "speaker": "A man",
     "search_vector": "'man':2 'لْـَٔيْكَةِ':3"
   },
   {
@@ -5995,7 +5995,7 @@
     "segment_index": 599,
     "start_time": 2660.835,
     "end_time": 2663.264,
-    "content": "Dr. Khalifa: We don't have to put around interpretation. Go ahead.",
+    "content": "We don't have to put around interpretation. Go ahead.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'ahead':12 'around':9 'dr':1 'go':11 'interpret':10 'khalifa':2 'put':8"
   },
@@ -6005,8 +6005,8 @@
     "segment_index": 600,
     "start_time": 2663.962,
     "end_time": 2670,
-    "content": "A man: It's funny when you say \"they get tricked by big literaries.\"",
-    "speaker": "Dr. Khalifa",
+    "content": "It's funny when you say \"they get tricked by big literaries.\"",
+    "speaker": "A man",
     "search_vector": "'big':13 'funni':5 'get':10 'literari':14 'man':2 'say':8 'trick':11"
   },
   {
@@ -6035,7 +6035,7 @@
     "segment_index": 603,
     "start_time": 2681.234,
     "end_time": 2682.912,
-    "content": "Dr. Khalifa: They are the (unintelligible).",
+    "content": "They are the (unintelligible).",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'unintellig':6"
   },
@@ -6065,8 +6065,8 @@
     "segment_index": 606,
     "start_time": 2685.824,
     "end_time": 2692.17,
-    "content": "A man: Because when they are trying to give us (unintelligible), you don't have to do Ramadan.",
-    "speaker": "Dr. Khalifa",
+    "content": "Because when they are trying to give us (unintelligible), you don't have to do Ramadan.",
+    "speaker": "A man",
     "search_vector": "'give':9 'man':2 'ramadan':18 'tri':7 'unintellig':11 'us':10"
   },
   {
@@ -6075,8 +6075,8 @@
     "segment_index": 607,
     "start_time": 2693.136,
     "end_time": 2697.76979518072,
-    "content": "A man: So (unintelligible), they are the people (unintelligible).",
-    "speaker": "Dr. Khalifa",
+    "content": "So (unintelligible), they are the people (unintelligible).",
+    "speaker": "A man",
     "search_vector": "'man':2 'peopl':8 'unintellig':4,9"
   },
   {
@@ -6095,7 +6095,7 @@
     "segment_index": 609,
     "start_time": 2700.716,
     "end_time": 2705.399,
-    "content": "Dr. Khalifa: You see, having this message creates a great responsibility.",
+    "content": "You see, having this message creates a great responsibility.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'creat':8 'dr':1 'great':10 'khalifa':2 'messag':7 'respons':11 'see':4"
   },
@@ -6245,8 +6245,8 @@
     "segment_index": 624,
     "start_time": 2766.394,
     "end_time": 2773.491,
-    "content": "A man: God says in the Quran that He never destroys a land before bringing a messenger.",
-    "speaker": "Dr. Khalifa",
+    "content": "God says in the Quran that He never destroys a land before bringing a messenger.",
+    "speaker": "A man",
     "search_vector": "'bring':15 'destroy':11 'god':3 'land':13 'man':2 'messeng':17 'never':10 'quran':7 'say':4"
   },
   {
@@ -6255,7 +6255,7 @@
     "segment_index": 625,
     "start_time": 2776.174,
     "end_time": 2777.315,
-    "content": "Dr. Khalifa: The bad signs.",
+    "content": "The bad signs.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'bad':4 'dr':1 'khalifa':2 'sign':5"
   },
@@ -6265,8 +6265,8 @@
     "segment_index": 626,
     "start_time": 2777.637,
     "end_time": 2781.18629896907,
-    "content": "A man: When the messenger comes, (unintelligible) does that land get destroyed?",
-    "speaker": "Dr. Khalifa",
+    "content": "When the messenger comes, (unintelligible) does that land get destroyed?",
+    "speaker": "A man",
     "search_vector": "'come':6 'destroy':12 'get':11 'land':10 'man':2 'messeng':5 'unintellig':7"
   },
   {
@@ -6285,8 +6285,8 @@
     "segment_index": 628,
     "start_time": 2781.995,
     "end_time": 2782.495,
-    "content": "A man: Yes?",
-    "speaker": "Dr. Khalifa",
+    "content": "Yes?",
+    "speaker": "A man",
     "search_vector": "'man':2 'yes':3"
   },
   {
@@ -6295,7 +6295,7 @@
     "segment_index": 629,
     "start_time": 2782.495,
     "end_time": 2784.28,
-    "content": "Dr. Khalifa: Yes, I can say that 100%.",
+    "content": "Yes, I can say that 100%.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'100':8 'dr':1 'khalifa':2 'say':6 'yes':3"
   },
@@ -6345,8 +6345,8 @@
     "segment_index": 634,
     "start_time": 2803.816,
     "end_time": 2808.124,
-    "content": "A man: So, land means, what? (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "So, land means, what? (unintelligible)",
+    "speaker": "A man",
     "search_vector": "'land':4 'man':2 'mean':5 'unintellig':7"
   },
   {
@@ -6355,7 +6355,7 @@
     "segment_index": 635,
     "start_time": 2808.124,
     "end_time": 2809.533,
-    "content": "Dr. Khalifa: No, there is no land.",
+    "content": "No, there is no land.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'land':7"
   },
@@ -6365,8 +6365,8 @@
     "segment_index": 636,
     "start_time": 2810,
     "end_time": 2812.376,
-    "content": "A man: They are a native nations.",
-    "speaker": "Dr. Khalifa",
+    "content": "They are a native nations.",
+    "speaker": "A man",
     "search_vector": "'man':2 'nation':7 'nativ':6"
   },
   {
@@ -6375,7 +6375,7 @@
     "segment_index": 637,
     "start_time": 2813.235,
     "end_time": 2815.235,
-    "content": "Dr. Khalifa: No, God left it blank.",
+    "content": "No, God left it blank.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'blank':7 'dr':1 'god':4 'khalifa':2 'left':5"
   },
@@ -6425,8 +6425,8 @@
     "segment_index": 642,
     "start_time": 2880,
     "end_time": 2881.18,
-    "content": "A woman: 15.",
-    "speaker": "Dr. Khalifa",
+    "content": "15.",
+    "speaker": "A woman",
     "search_vector": "'15':3 'woman':2"
   },
   {
@@ -6435,7 +6435,7 @@
     "segment_index": 643,
     "start_time": 2881.18,
     "end_time": 2882.362,
-    "content": "Dr. Khalifa: 15?",
+    "content": "15?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'15':3 'dr':1 'khalifa':2"
   },
@@ -6445,7 +6445,7 @@
     "segment_index": 644,
     "start_time": 2892.986,
     "end_time": 2894.664,
-    "content": "Dr. Khalifa: Yeah, the end of 15.",
+    "content": "Yeah, the end of 15.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'15':7 'dr':1 'end':5 'khalifa':2 'yeah':3"
   },
@@ -6515,7 +6515,7 @@
     "segment_index": 651,
     "start_time": 2940.844,
     "end_time": 2942.254,
-    "content": "Dr. Khalifa: What's the verse number?",
+    "content": "What's the verse number?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'number':7 'vers':6"
   },
@@ -6525,8 +6525,8 @@
     "segment_index": 652,
     "start_time": 2945.634,
     "end_time": 2946.815,
-    "content": "A man: It's 24.",
-    "speaker": "Dr. Khalifa",
+    "content": "It's 24.",
+    "speaker": "A man",
     "search_vector": "'24':5 'man':2"
   },
   {
@@ -6545,7 +6545,7 @@
     "segment_index": 654,
     "start_time": 2950.425,
     "end_time": 2951.674,
-    "content": "Dr. Khalifa: Why don't you read it?",
+    "content": "Why don't you read it?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'read':7"
   },
@@ -6565,8 +6565,8 @@
     "segment_index": 656,
     "start_time": 2957.913,
     "end_time": 2958.733,
-    "content": "A man: 24",
-    "speaker": "Dr. Khalifa",
+    "content": "24",
+    "speaker": "A man",
     "search_vector": "'24':3 'man':2"
   },
   {
@@ -6585,8 +6585,8 @@
     "segment_index": 658,
     "start_time": 2966.65,
     "end_time": 2973.855,
-    "content": "A man: And (unintelligible) 24",
-    "speaker": "Dr. Khalifa",
+    "content": "And (unintelligible) 24",
+    "speaker": "A man",
     "search_vector": "'24':5 'man':2 'unintellig':4"
   },
   {
@@ -6605,7 +6605,7 @@
     "segment_index": 660,
     "start_time": 2980.816,
     "end_time": 2988.879,
-    "content": "Dr. Khalifa: This is an incident where David was in a sanctuary and these two people went in, snuck in.",
+    "content": "This is an incident where David was in a sanctuary and these two people went in, snuck in.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'david':8 'dr':1 'incid':6 'khalifa':2 'peopl':16 'sanctuari':12 'snuck':19 'two':15 'went':17"
   },
@@ -6655,8 +6655,8 @@
     "segment_index": 665,
     "start_time": 3004.224,
     "end_time": 3007.019,
-    "content": "A man: I did it before, actually. 24.",
-    "speaker": "Dr. Khalifa",
+    "content": "I did it before, actually. 24.",
+    "speaker": "A man",
     "search_vector": "'24':8 'actual':7 'man':2"
   },
   {
@@ -6665,7 +6665,7 @@
     "segment_index": 666,
     "start_time": 3007.502,
     "end_time": 3008.74388235294,
-    "content": "Dr. Khalifa: You don't know what it is?",
+    "content": "You don't know what it is?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'know':6"
   },
@@ -6685,7 +6685,7 @@
     "segment_index": 668,
     "start_time": 3009.126,
     "end_time": 3012.521,
-    "content": "Dr. Khalifa: It's just two brothers, two brothers.",
+    "content": "It's just two brothers, two brothers.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'brother':7,9 'dr':1 'khalifa':2 'two':6,8"
   },
@@ -6805,7 +6805,7 @@
     "segment_index": 680,
     "start_time": 3083.081,
     "end_time": 3084.008,
-    "content": "Dr. Khalifa: Right.",
+    "content": "Right.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'right':3"
   },
@@ -6825,7 +6825,7 @@
     "segment_index": 682,
     "start_time": 3086.652,
     "end_time": 3090.6638,
-    "content": "Dr. Khalifa: He told the fellow with the one sheep \"keep your sheep. Don't give it to him.\"",
+    "content": "He told the fellow with the one sheep \"keep your sheep. Don't give it to him.\"",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'fellow':6 'give':16 'keep':11 'khalifa':2 'one':9 'sheep':10,13 'told':4"
   },
@@ -6845,7 +6845,7 @@
     "segment_index": 684,
     "start_time": 3091.657,
     "end_time": 3099.13,
-    "content": "Dr. Khalifa: Then, even though this is a very clear and extreme example of a good judgment,",
+    "content": "Then, even though this is a very clear and extreme example of a good judgment,",
     "speaker": "Dr. Khalifa",
     "search_vector": "'clear':10 'dr':1 'even':4 'exampl':13 'extrem':12 'good':16 'judgment':17 'khalifa':2 'though':5"
   },
@@ -6915,8 +6915,8 @@
     "segment_index": 691,
     "start_time": 3123.579,
     "end_time": 3143.15,
-    "content": "A man: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A man",
     "search_vector": "'man':2 'unintellig':3"
   },
   {
@@ -6925,7 +6925,7 @@
     "segment_index": 692,
     "start_time": 3143.15,
     "end_time": 3146.76,
-    "content": "Dr. Khalifa: No, no he wanted it. He wanted it. Maybe, he wanted to buy it.",
+    "content": "No, no he wanted it. He wanted it. Maybe, he wanted to buy it.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'buy':15 'dr':1 'khalifa':2 'mayb':11 'want':6,9,13"
   },
@@ -6935,8 +6935,8 @@
     "segment_index": 693,
     "start_time": 3149.711,
     "end_time": 3150.584,
-    "content": "A man: No, he won't",
-    "speaker": "Dr. Khalifa",
+    "content": "No, he won't",
+    "speaker": "A man",
     "search_vector": "'man':2 'won':5"
   },
   {
@@ -6945,7 +6945,7 @@
     "segment_index": 694,
     "start_time": 3154.125,
     "end_time": 3157.252,
-    "content": "Dr. Khalifa: That's okay. They wanted to mix, but he doesn't want to.",
+    "content": "That's okay. They wanted to mix, but he doesn't want to.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'doesn':12 'dr':1 'khalifa':2 'mix':9 'okay':5 'want':7,14"
   },
@@ -6965,8 +6965,8 @@
     "segment_index": 696,
     "start_time": 3161.842,
     "end_time": 3163.252,
-    "content": "A man: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A man",
     "search_vector": "'man':2 'unintellig':3"
   },
   {
@@ -6975,7 +6975,7 @@
     "segment_index": 697,
     "start_time": 3163.52,
     "end_time": 3165.52,
-    "content": "Dr. Khalifa: That's not the point.",
+    "content": "That's not the point.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'point':7"
   },
@@ -7095,8 +7095,8 @@
     "segment_index": 709,
     "start_time": 3212.94,
     "end_time": 3213.867,
-    "content": "A woman: I don't know.",
-    "speaker": "Dr. Khalifa",
+    "content": "I don't know.",
+    "speaker": "A woman",
     "search_vector": "'know':6 'woman':2"
   },
   {
@@ -7105,7 +7105,7 @@
     "segment_index": 710,
     "start_time": 3214.243,
     "end_time": 3214.97984210526,
-    "content": "Dr. Khalifa: Well,...",
+    "content": "Well,...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'well':3"
   },
@@ -7125,7 +7125,7 @@
     "segment_index": 712,
     "start_time": 3216.511,
     "end_time": 3217.706,
-    "content": "Dr. Khalifa: Well, you are now.",
+    "content": "Well, you are now.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'well':3"
   },
@@ -7165,8 +7165,8 @@
     "segment_index": 716,
     "start_time": 3228.858,
     "end_time": 3235.204,
-    "content": "A woman: He can give the brother the sheep, but here everyone's money is his own.",
-    "speaker": "Dr. Khalifa",
+    "content": "He can give the brother the sheep, but here everyone's money is his own.",
+    "speaker": "A woman",
     "search_vector": "'brother':7 'everyon':12 'give':5 'money':14 'sheep':9 'woman':2"
   },
   {
@@ -7195,7 +7195,7 @@
     "segment_index": 719,
     "start_time": 3245.16,
     "end_time": 3249.736,
-    "content": "Dr. Khalifa: Okay, but the, but this fellow without the sheep, he will just sit there and do nothing.",
+    "content": "Okay, but the, but this fellow without the sheep, he will just sit there and do nothing.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'fellow':8 'khalifa':2 'noth':19 'okay':3 'sheep':11 'sit':15 'without':9"
   },
@@ -7225,8 +7225,8 @@
     "segment_index": 722,
     "start_time": 3265.215,
     "end_time": 3269.2,
-    "content": "Parivash: I have a question. It is my understanding. I don't know if it's true.",
-    "speaker": "Dr. Khalifa",
+    "content": "I have a question. It is my understanding. I don't know if it's true.",
+    "speaker": "Parivash",
     "search_vector": "'know':13 'parivash':1 'question':5 'true':17 'understand':9"
   },
   {
@@ -7295,7 +7295,7 @@
     "segment_index": 729,
     "start_time": 3296.72,
     "end_time": 3298.935,
-    "content": "Dr. Khalifa: Seven pairs have to do with the end of the world.",
+    "content": "Seven pairs have to do with the end of the world.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'end':10 'khalifa':2 'pair':4 'seven':3 'world':13"
   },
@@ -7305,8 +7305,8 @@
     "segment_index": 730,
     "start_time": 3298.935,
     "end_time": 3301.472,
-    "content": "Parivash: Okay, no, but after that, it says",
-    "speaker": "Dr. Khalifa",
+    "content": "Okay, no, but after that, it says",
+    "speaker": "Parivash",
     "search_vector": "'okay':2 'parivash':1 'say':8"
   },
   {
@@ -7325,7 +7325,7 @@
     "segment_index": 732,
     "start_time": 3303.15,
     "end_time": 3304.828,
-    "content": "Dr. Khalifa: [15:88]  Do not be jealous of what others...",
+    "content": "[15:88]  Do not be jealous of what others...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'15':3 '88':4 'dr':1 'jealous':8 'khalifa':2 'other':11"
   },
@@ -7335,8 +7335,8 @@
     "segment_index": 733,
     "start_time": 3304.828,
     "end_time": 3306.223,
-    "content": "Parivash: Ok. Ok. And after",
-    "speaker": "Dr. Khalifa",
+    "content": "Ok. Ok. And after",
+    "speaker": "Parivash",
     "search_vector": "'ok':2,3 'parivash':1"
   },
   {
@@ -7345,8 +7345,8 @@
     "segment_index": 734,
     "start_time": 3306.223,
     "end_time": 3307.124,
-    "content": "Parivash: [15:89]",
-    "speaker": "Dr. Khalifa",
+    "content": "[15:89]",
+    "speaker": "Parivash",
     "search_vector": "'15':2 '89':3 'parivash':1"
   },
   {
@@ -7365,7 +7365,7 @@
     "segment_index": 736,
     "start_time": 3309.779,
     "end_time": 3310.491,
-    "content": "Dr. Khalifa: Yes.",
+    "content": "Yes.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'yes':3"
   },
@@ -7375,8 +7375,8 @@
     "segment_index": 737,
     "start_time": 3310.491,
     "end_time": 3315.227,
-    "content": "Parivash: [15:90]  For we will also deal with the dividers.",
-    "speaker": "Dr. Khalifa",
+    "content": "[15:90]  For we will also deal with the dividers.",
+    "speaker": "Parivash",
     "search_vector": "'15':2 '90':3 'also':7 'deal':8 'divid':11 'parivash':1"
   },
   {
@@ -7385,7 +7385,7 @@
     "segment_index": 738,
     "start_time": 3315.656,
     "end_time": 3316.656,
-    "content": "Dr. Khalifa: Yes, to accept the",
+    "content": "Yes, to accept the",
     "speaker": "Dr. Khalifa",
     "search_vector": "'accept':5 'dr':1 'khalifa':2 'yes':3"
   },
@@ -7405,8 +7405,8 @@
     "segment_index": 740,
     "start_time": 3318.139,
     "end_time": 3323.68,
-    "content": "Parivash: If it was time of Muhammad, it would say \"And Proclaim I am the messenger.\"",
-    "speaker": "Dr. Khalifa",
+    "content": "If it was time of Muhammad, it would say \"And Proclaim I am the messenger.\"",
+    "speaker": "Parivash",
     "search_vector": "'messeng':16 'muhammad':7 'parivash':1 'proclaim':12 'say':10 'time':5 'would':9"
   },
   {
@@ -7415,7 +7415,7 @@
     "segment_index": 741,
     "start_time": 3323.68,
     "end_time": 3325.68,
-    "content": "Dr. Khalifa: I didn't say, I didn't say it was the time of Muhammad.",
+    "content": "I didn't say, I didn't say it was the time of Muhammad.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'didn':4,8 'dr':1 'khalifa':2 'muhammad':16 'say':6,10 'time':14"
   },
@@ -7425,8 +7425,8 @@
     "segment_index": 742,
     "start_time": 3325.948,
     "end_time": 3332.709,
-    "content": "Parivash: It was the...they accepted Quran only partially. At the time of Muhammad...",
-    "speaker": "Dr. Khalifa",
+    "content": "It was the...they accepted Quran only partially. At the time of Muhammad...",
+    "speaker": "Parivash",
     "search_vector": "'accept':6 'muhammad':14 'parivash':1 'partial':9 'quran':7 'time':12"
   },
   {
@@ -7435,7 +7435,7 @@
     "segment_index": 743,
     "start_time": 3332.709,
     "end_time": 3333.797,
-    "content": "Dr. Khalifa: There was no Quran.",
+    "content": "There was no Quran.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'quran':6"
   },
@@ -7455,7 +7455,7 @@
     "segment_index": 745,
     "start_time": 3335.421,
     "end_time": 3337.582,
-    "content": "Dr. Khalifa: Because you're making an assumption that is not there.",
+    "content": "Because you're making an assumption that is not there.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'assumpt':8 'dr':1 'khalifa':2 'make':6 're':5"
   },
@@ -7465,7 +7465,7 @@
     "segment_index": 746,
     "start_time": 3338.065,
     "end_time": 3340.065,
-    "content": "Dr. Khalifa: I didn't say it's been the time of Muhammad.",
+    "content": "I didn't say it's been the time of Muhammad.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'didn':4 'dr':1 'khalifa':2 'muhammad':13 'say':6 'time':11"
   },
@@ -7485,8 +7485,8 @@
     "segment_index": 748,
     "start_time": 3343.997,
     "end_time": 3345.874,
-    "content": "Parivash: It wasn't. It couldn't be at...",
-    "speaker": "Dr. Khalifa",
+    "content": "It wasn't. It couldn't be at...",
+    "speaker": "Parivash",
     "search_vector": "'couldn':6 'parivash':1 'wasn':3"
   },
   {
@@ -7495,7 +7495,7 @@
     "segment_index": 749,
     "start_time": 3345.874,
     "end_time": 3347.874,
-    "content": "Dr. Khalifa: I didn't say that. Where did you get that?",
+    "content": "I didn't say that. Where did you get that?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'didn':4 'dr':1 'get':11 'khalifa':2 'say':6"
   },
@@ -7505,8 +7505,8 @@
     "segment_index": 750,
     "start_time": 3348.089,
     "end_time": 3352.074,
-    "content": "Parivash: No, I think my understanding is wrong. And I wanted your idea.",
-    "speaker": "Dr. Khalifa",
+    "content": "No, I think my understanding is wrong. And I wanted your idea.",
+    "speaker": "Parivash",
     "search_vector": "'idea':13 'parivash':1 'think':4 'understand':6 'want':11 'wrong':8"
   },
   {
@@ -7515,7 +7515,7 @@
     "segment_index": 751,
     "start_time": 3352.074,
     "end_time": 3355.04,
-    "content": "Dr. Khalifa: No, but does it say in the translation that this is the time of Muhammad?",
+    "content": "No, but does it say in the translation that this is the time of Muhammad?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'muhammad':17 'say':7 'time':15 'translat':10"
   },
@@ -7525,8 +7525,8 @@
     "segment_index": 752,
     "start_time": 3356.757,
     "end_time": 3357.761,
-    "content": "Parviash: No.",
-    "speaker": "Dr. Khalifa",
+    "content": "No.",
+    "speaker": "Parviash",
     "search_vector": "'parviash':1"
   },
   {
@@ -7535,7 +7535,7 @@
     "segment_index": 753,
     "start_time": 3358.62,
     "end_time": 3362.337,
-    "content": "Dr. Khalifa: You're making the wrong assumption and then you're carrying on based on that.",
+    "content": "You're making the wrong assumption and then you're carrying on based on that.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'assumpt':8 'base':15 'carri':13 'dr':1 'khalifa':2 'make':5 're':4,12 'wrong':7"
   },
@@ -7585,8 +7585,8 @@
     "segment_index": 758,
     "start_time": 3406.245,
     "end_time": 3413.396,
-    "content": "Parivash: I'm talking about 91. It could be...couldn't be at the time of... now.",
-    "speaker": "Dr. Khalifa",
+    "content": "I'm talking about 91. It could be...couldn't be at the time of... now.",
+    "speaker": "Parivash",
     "search_vector": "'91':6 'could':8 'couldn':10 'm':3 'parivash':1 'talk':4 'time':15"
   },
   {
@@ -7595,7 +7595,7 @@
     "segment_index": 759,
     "start_time": 3413.718,
     "end_time": 3415.879,
-    "content": "Dr. Khalifa: It's applicable also at the time of Muhammad.",
+    "content": "It's applicable also at the time of Muhammad.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'also':6 'applic':5 'dr':1 'khalifa':2 'muhammad':11 'time':9"
   },
@@ -7665,8 +7665,8 @@
     "segment_index": 766,
     "start_time": 3447.249,
     "end_time": 3449.249,
-    "content": "A woman: We read in the afternoon that...",
-    "speaker": "Dr. Khalifa",
+    "content": "We read in the afternoon that...",
+    "speaker": "A woman",
     "search_vector": "'afternoon':7 'read':4 'woman':2"
   },
   {
@@ -7695,7 +7695,7 @@
     "segment_index": 769,
     "start_time": 3467.668,
     "end_time": 3472.351,
-    "content": "Dr. Khalifa: Because he will not make it until after the judgement.",
+    "content": "Because he will not make it until after the judgement.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'judgement':12 'khalifa':2 'make':7"
   },
@@ -7855,8 +7855,8 @@
     "segment_index": 785,
     "start_time": 3541.189,
     "end_time": 3543.189,
-    "content": "A man: And Sura 15 says",
-    "speaker": "Dr. Khalifa",
+    "content": "And Sura 15 says",
+    "speaker": "A man",
     "search_vector": "'15':5 'man':2 'say':6 'sura':4"
   },
   {
@@ -7885,7 +7885,7 @@
     "segment_index": 788,
     "start_time": 3549.496,
     "end_time": 3553.535,
-    "content": "Dr. Khalifa: No, no, it's the English expression, meaning praise God all the time.",
+    "content": "No, no, it's the English expression, meaning praise God all the time.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'english':8 'express':9 'god':12 'khalifa':2 'mean':10 'prais':11 'time':15"
   },
@@ -7895,8 +7895,8 @@
     "segment_index": 789,
     "start_time": 3554.661,
     "end_time": 3555.749,
-    "content": "A man: It's not singing.",
-    "speaker": "Dr. Khalifa",
+    "content": "It's not singing.",
+    "speaker": "A man",
     "search_vector": "'man':2 'sing':6"
   },
   {
@@ -7905,7 +7905,7 @@
     "segment_index": 790,
     "start_time": 3556.983,
     "end_time": 3559.627,
-    "content": "Dr. Khalifa: If you wanna do it, do it outside of here.",
+    "content": "If you wanna do it, do it outside of here.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'outsid':10 'wanna':5"
   },
@@ -7915,7 +7915,7 @@
     "segment_index": 791,
     "start_time": 3567.139,
     "end_time": 3569.139,
-    "content": "Dr. Khalifa: Mani can put up with that.",
+    "content": "Mani can put up with that.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'mani':3 'put':5"
   },
@@ -7945,8 +7945,8 @@
     "segment_index": 794,
     "start_time": 3584.529,
     "end_time": 3591.787,
-    "content": "A woman: Rashad, we previously read that Haroot and Maroot (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "Rashad, we previously read that Haroot and Maroot (unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'haroot':8 'maroot':10 'previous':5 'rashad':3 'read':6 'unintellig':11 'woman':2"
   },
   {
@@ -7955,7 +7955,7 @@
     "segment_index": 795,
     "start_time": 3591.787,
     "end_time": 3593.465,
-    "content": "Dr. Khalifa: Magic. Witchcraft.",
+    "content": "Magic. Witchcraft.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'magic':3 'witchcraft':4"
   },
@@ -7965,8 +7965,8 @@
     "segment_index": 796,
     "start_time": 3594.27,
     "end_time": 3602.602,
-    "content": "A woman: But it says also that people used it in a bad way. Does it mean that people can use it in a good way?",
-    "speaker": "Dr. Khalifa",
+    "content": "But it says also that people used it in a bad way. Does it mean that people can use it in a good way?",
+    "speaker": "A woman",
     "search_vector": "'also':6 'bad':13 'good':25 'mean':17 'peopl':8,19 'say':5 'use':9,21 'way':14,26 'woman':2"
   },
   {
@@ -7975,7 +7975,7 @@
     "segment_index": 797,
     "start_time": 3602.602,
     "end_time": 3603.529,
-    "content": "Dr. Khalifa: No.",
+    "content": "No.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2"
   },
@@ -7995,8 +7995,8 @@
     "segment_index": 799,
     "start_time": 3610,
     "end_time": 3611.141,
-    "content": "A woman: Either way.",
-    "speaker": "Dr. Khalifa",
+    "content": "Either way.",
+    "speaker": "A woman",
     "search_vector": "'either':3 'way':4 'woman':2"
   },
   {
@@ -8005,7 +8005,7 @@
     "segment_index": 800,
     "start_time": 3614.146,
     "end_time": 3615.878,
-    "content": "Dr. Khalifa: That should not be \"abuse.\"",
+    "content": "That should not be \"abuse.\"",
     "speaker": "Dr. Khalifa",
     "search_vector": "'abus':7 'dr':1 'khalifa':2"
   },
@@ -8025,7 +8025,7 @@
     "segment_index": 802,
     "start_time": 3621.098,
     "end_time": 3622.59758208955,
-    "content": "Dr. Khalifa: But it's the statement...",
+    "content": "But it's the statement...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'statement':7"
   },
@@ -8045,7 +8045,7 @@
     "segment_index": 804,
     "start_time": 3623.742,
     "end_time": 3624.85311111111,
-    "content": "Dr. Khalifa: Yeah, it's using the jinns.",
+    "content": "Yeah, it's using the jinns.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'jinn':8 'khalifa':2 'use':6 'yeah':3"
   },
@@ -8065,7 +8065,7 @@
     "segment_index": 806,
     "start_time": 3626.815,
     "end_time": 3627.527,
-    "content": "Dr. Khalifa: Yes.",
+    "content": "Yes.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'yes':3"
   },
@@ -8075,8 +8075,8 @@
     "segment_index": 807,
     "start_time": 3632.141,
     "end_time": 3639.185,
-    "content": "Parivash: If nobody asks it then I (unintelligible).",
-    "speaker": "Dr. Khalifa",
+    "content": "If nobody asks it then I (unintelligible).",
+    "speaker": "Parivash",
     "search_vector": "'ask':4 'nobodi':3 'parivash':1 'unintellig':8"
   },
   {
@@ -8085,7 +8085,7 @@
     "segment_index": 808,
     "start_time": 3640,
     "end_time": 3642.751,
-    "content": "Dr. Khalifa: You see, if it's something good, it should be temporary.",
+    "content": "You see, if it's something good, it should be temporary.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'good':9 'khalifa':2 'see':4 'someth':8 'temporari':13"
   },
@@ -8125,8 +8125,8 @@
     "segment_index": 812,
     "start_time": 3670,
     "end_time": 3675.634,
-    "content": "A woman: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A woman",
     "search_vector": "'unintellig':3 'woman':2"
   },
   {
@@ -8135,7 +8135,7 @@
     "segment_index": 813,
     "start_time": 3675.634,
     "end_time": 3676.346,
-    "content": "Dr. Khalifa: Right.",
+    "content": "Right.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'right':3"
   },
@@ -8155,8 +8155,8 @@
     "segment_index": 815,
     "start_time": 3680.976,
     "end_time": 3683.766,
-    "content": "A woman: Some people are curious about the things that drive them away from God",
-    "speaker": "Dr. Khalifa",
+    "content": "Some people are curious about the things that drive them away from God",
+    "speaker": "A woman",
     "search_vector": "'away':13 'curious':6 'drive':11 'god':15 'peopl':4 'thing':9 'woman':2"
   },
   {
@@ -8165,7 +8165,7 @@
     "segment_index": 816,
     "start_time": 3685.215,
     "end_time": 3686.893,
-    "content": "Dr. Khalifa: Yes. Invariably. Yes.",
+    "content": "Yes. Invariably. Yes.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'invari':4 'khalifa':2 'yes':3,5"
   },
@@ -8185,8 +8185,8 @@
     "segment_index": 818,
     "start_time": 3692.22,
     "end_time": 3695.239,
-    "content": "A man: So, how come (unintelligible) with the jinns?",
-    "speaker": "Dr. Khalifa",
+    "content": "So, how come (unintelligible) with the jinns?",
+    "speaker": "A man",
     "search_vector": "'come':5 'jinn':9 'man':2 'unintellig':6"
   },
   {
@@ -8215,7 +8215,7 @@
     "segment_index": 821,
     "start_time": 3708.936,
     "end_time": 3710.453,
-    "content": "Dr. Khalifa: Who? Karim?",
+    "content": "Who? Karim?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'karim':4 'khalifa':2"
   },
@@ -8235,8 +8235,8 @@
     "segment_index": 823,
     "start_time": 3712.346,
     "end_time": 3716.814,
-    "content": "A woman: Do you mean that convert our jinn by...",
-    "speaker": "Dr. Khalifa",
+    "content": "Do you mean that convert our jinn by...",
+    "speaker": "A woman",
     "search_vector": "'convert':7 'jinn':9 'mean':5 'woman':2"
   },
   {
@@ -8245,7 +8245,7 @@
     "segment_index": 824,
     "start_time": 3717.121,
     "end_time": 3717.994,
-    "content": "Dr. Khalifa: Right.",
+    "content": "Right.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'right':3"
   },
@@ -8255,8 +8255,8 @@
     "segment_index": 825,
     "start_time": 3718.316,
     "end_time": 3722.677,
-    "content": "A woman: So, it would be converted and then...",
-    "speaker": "Dr. Khalifa",
+    "content": "So, it would be converted and then...",
+    "speaker": "A woman",
     "search_vector": "'convert':7 'woman':2 'would':5"
   },
   {
@@ -8265,7 +8265,7 @@
     "segment_index": 826,
     "start_time": 3723.628,
     "end_time": 3724.716,
-    "content": "Dr. Khalifa: to be come a good one.",
+    "content": "to be come a good one.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'come':5 'dr':1 'good':7 'khalifa':2 'one':8"
   },
@@ -8365,8 +8365,8 @@
     "segment_index": 836,
     "start_time": 3773.222,
     "end_time": 3774.954,
-    "content": "A woman: Then, what happens after that?",
-    "speaker": "Dr. Khalifa",
+    "content": "Then, what happens after that?",
+    "speaker": "A woman",
     "search_vector": "'happen':5 'woman':2"
   },
   {
@@ -8375,7 +8375,7 @@
     "segment_index": 837,
     "start_time": 3775.169,
     "end_time": 3778.296,
-    "content": "Dr. Khalifa: Then, you become friends, become identical.",
+    "content": "Then, you become friends, become identical.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'becom':5,7 'dr':1 'friend':6 'ident':8 'khalifa':2"
   },
@@ -8385,8 +8385,8 @@
     "segment_index": 838,
     "start_time": 3781.247,
     "end_time": 3783.891,
-    "content": "A man: My question was simple.",
-    "speaker": "Dr. Khalifa",
+    "content": "My question was simple.",
+    "speaker": "A man",
     "search_vector": "'man':2 'question':4 'simpl':6"
   },
   {
@@ -8415,7 +8415,7 @@
     "segment_index": 841,
     "start_time": 3795.993,
     "end_time": 3797.744,
-    "content": "Dr. Khalifa: Yes, the jinn will whisper to you.",
+    "content": "Yes, the jinn will whisper to you.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'jinn':5 'khalifa':2 'whisper':7 'yes':3"
   },
@@ -8425,8 +8425,8 @@
     "segment_index": 842,
     "start_time": 3797.744,
     "end_time": 3798.8864,
-    "content": "A man: (unintelligible) believer",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible) believer",
+    "speaker": "A man",
     "search_vector": "'believ':4 'man':2 'unintellig':3"
   },
   {
@@ -8445,8 +8445,8 @@
     "segment_index": 844,
     "start_time": 3799.529,
     "end_time": 3800.85711627907,
-    "content": "A man: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A man",
     "search_vector": "'man':2 'unintellig':3"
   },
   {
@@ -8465,8 +8465,8 @@
     "segment_index": 846,
     "start_time": 3802.012,
     "end_time": 3805.729,
-    "content": "A man: (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "(unintelligible)",
+    "speaker": "A man",
     "search_vector": "'man':2 'unintellig':3"
   },
   {
@@ -8495,8 +8495,8 @@
     "segment_index": 849,
     "start_time": 3810.274,
     "end_time": 3812.274,
-    "content": "A man: But my question is...",
-    "speaker": "Dr. Khalifa",
+    "content": "But my question is...",
+    "speaker": "A man",
     "search_vector": "'man':2 'question':5"
   },
   {
@@ -8505,7 +8505,7 @@
     "segment_index": 850,
     "start_time": 3812.908,
     "end_time": 3819.757,
-    "content": "Dr. Khalifa: Yeah, this is all of us. Our jinn is always telling us to not to, not worship God alone.",
+    "content": "Yeah, this is all of us. Our jinn is always telling us to not to, not worship God alone.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'alon':21 'alway':12 'dr':1 'god':20 'jinn':10 'khalifa':2 'tell':13 'us':8,14 'worship':19 'yeah':3"
   },
@@ -8515,8 +8515,8 @@
     "segment_index": 851,
     "start_time": 3820,
     "end_time": 3824.56156349206,
-    "content": "A man: You believe all the time \"oh, I don't (unintelligible) because I have a challenge between me and him.\"",
-    "speaker": "Dr. Khalifa",
+    "content": "You believe all the time \"oh, I don't (unintelligible) because I have a challenge between me and him.\"",
+    "speaker": "A man",
     "search_vector": "'believ':4 'challeng':17 'man':2 'oh':8 'time':7 'unintellig':12"
   },
   {
@@ -8535,7 +8535,7 @@
     "segment_index": 853,
     "start_time": 3825.863,
     "end_time": 3830,
-    "content": "Dr. Khalifa: There'll be a time when, like Karim said, there'll be a time when he's completely converted.",
+    "content": "There'll be a time when, like Karim said, there'll be a time when he's completely converted.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'complet':20 'convert':21 'dr':1 'karim':10 'khalifa':2 'like':9 'll':4,13 'said':11 'time':7,16"
   },
@@ -8585,8 +8585,8 @@
     "segment_index": 858,
     "start_time": 3839.472,
     "end_time": 3840.238,
-    "content": "A man: IN SHAA ALLAH.",
-    "speaker": "Dr. Khalifa",
+    "content": "IN SHAA ALLAH.",
+    "speaker": "A man",
     "search_vector": "'allah':5 'man':2 'shaa':4"
   },
   {
@@ -8595,7 +8595,7 @@
     "segment_index": 859,
     "start_time": 3840.238,
     "end_time": 3844.015,
-    "content": "Dr. Khalifa: So, you're gonna hear an example of a jinn that is cooperating with you.",
+    "content": "So, you're gonna hear an example of a jinn that is cooperating with you.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'cooper':15 'dr':1 'exampl':9 'gonna':6 'hear':7 'jinn':12 'khalifa':2 're':5"
   },
@@ -8605,8 +8605,8 @@
     "segment_index": 860,
     "start_time": 3848.576,
     "end_time": 3850.576,
-    "content": "A woman: Our jinn is being Muslim.",
-    "speaker": "Dr. Khalifa",
+    "content": "Our jinn is being Muslim.",
+    "speaker": "A woman",
     "search_vector": "'jinn':4 'muslim':7 'woman':2"
   },
   {
@@ -8635,7 +8635,7 @@
     "segment_index": 863,
     "start_time": 3857.996,
     "end_time": 3859.781,
-    "content": "Dr. Khalifa: Sometimes the jinn will be ahead of you.",
+    "content": "Sometimes the jinn will be ahead of you.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'ahead':8 'dr':1 'jinn':5 'khalifa':2 'sometim':3"
   },
@@ -8695,8 +8695,8 @@
     "segment_index": 869,
     "start_time": 3888.2,
     "end_time": 3892.024,
-    "content": "A man: Rashad, what about astrology? Isn't it a thing that jinn do that?",
-    "speaker": "Dr. Khalifa",
+    "content": "Rashad, what about astrology? Isn't it a thing that jinn do that?",
+    "speaker": "A man",
     "search_vector": "'astrolog':6 'isn':7 'jinn':13 'man':2 'rashad':3 'thing':11"
   },
   {
@@ -8705,7 +8705,7 @@
     "segment_index": 870,
     "start_time": 3892.453,
     "end_time": 3894.99,
-    "content": "Dr. Khalifa: No, this is simply observation.",
+    "content": "No, this is simply observation.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'observ':7 'simpli':6"
   },
@@ -8775,7 +8775,7 @@
     "segment_index": 877,
     "start_time": 3937.768,
     "end_time": 3938.768,
-    "content": "Dr. Khalifa: No.",
+    "content": "No.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2"
   },
@@ -8785,7 +8785,7 @@
     "segment_index": 878,
     "start_time": 3950.268,
     "end_time": 3956.048,
-    "content": "Dr. Khalifa: See, we cannot see the jinns. But I guess some manifestations of the jinn, people would think they're ghosts.",
+    "content": "See, we cannot see the jinns. But I guess some manifestations of the jinn, people would think they're ghosts.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'cannot':5 'dr':1 'ghost':22 'guess':11 'jinn':8,16 'khalifa':2 'manifest':13 'peopl':17 're':21 'see':3,6 'think':19 'would':18"
   },
@@ -8795,8 +8795,8 @@
     "segment_index": 879,
     "start_time": 3963.023,
     "end_time": 3968.028,
-    "content": "Parivash: Rashad, the jinn (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "Rashad, the jinn (unintelligible)",
+    "speaker": "Parivash",
     "search_vector": "'jinn':4 'parivash':1 'rashad':2 'unintellig':5"
   },
   {
@@ -8805,8 +8805,8 @@
     "segment_index": 880,
     "start_time": 3968.028,
     "end_time": 3972.5576,
-    "content": "Parivash: And they, in their first life, they say, they totally admitted the",
-    "speaker": "Dr. Khalifa",
+    "content": "And they, in their first life, they say, they totally admitted the",
+    "speaker": "Parivash",
     "search_vector": "'admit':12 'first':6 'life':7 'parivash':1 'say':9 'total':11"
   },
   {
@@ -8825,8 +8825,8 @@
     "segment_index": 882,
     "start_time": 3974.286,
     "end_time": 3979.203,
-    "content": "Parivash: Our difference is the human and the jinn (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "Our difference is the human and the jinn (unintelligible)",
+    "speaker": "Parivash",
     "search_vector": "'differ':3 'human':6 'jinn':9 'parivash':1 'unintellig':10"
   },
   {
@@ -8835,7 +8835,7 @@
     "segment_index": 883,
     "start_time": 3980.681,
     "end_time": 3989.247,
-    "content": "Dr. Khalifa: God gives the jinns a longer life and more ability to fly in the universe and study God's signs.",
+    "content": "God gives the jinns a longer life and more ability to fly in the universe and study God's signs.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'abil':12 'dr':1 'fli':14 'give':4 'god':3,20 'jinn':6 'khalifa':2 'life':9 'longer':8 'sign':22 'studi':19 'univers':17"
   },
@@ -8865,8 +8865,8 @@
     "segment_index": 886,
     "start_time": 4002.315,
     "end_time": 4010.754,
-    "content": "A man: Rashad, (unintelligible) ability (unintelligible)",
-    "speaker": "Dr. Khalifa",
+    "content": "Rashad, (unintelligible) ability (unintelligible)",
+    "speaker": "A man",
     "search_vector": "'abil':5 'man':2 'rashad':3 'unintellig':4,6"
   },
   {
@@ -8875,7 +8875,7 @@
     "segment_index": 887,
     "start_time": 4010.754,
     "end_time": 4016.349,
-    "content": "Dr. Khalifa: No, because they already made up their minds very strongly that Satan is right.",
+    "content": "No, because they already made up their minds very strongly that Satan is right.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'alreadi':6 'dr':1 'khalifa':2 'made':7 'mind':10 'right':16 'satan':14 'strong':12"
   },
@@ -8895,8 +8895,8 @@
     "segment_index": 889,
     "start_time": 4027.379,
     "end_time": 4030.17163157895,
-    "content": "A man: So, did Shaytan know that he is (unintelligible)?",
-    "speaker": "Dr. Khalifa",
+    "content": "So, did Shaytan know that he is (unintelligible)?",
+    "speaker": "A man",
     "search_vector": "'know':6 'man':2 'shaytan':5 'unintellig':10"
   },
   {
@@ -8915,7 +8915,7 @@
     "segment_index": 891,
     "start_time": 4037.546,
     "end_time": 4045.629,
-    "content": "Dr. Khalifa: Not really, no. It's just that there's a different allegorical Heaven for them. Because...",
+    "content": "Not really, no. It's just that there's a different allegorical Heaven for them. Because...",
     "speaker": "Dr. Khalifa",
     "search_vector": "'allegor':14 'differ':13 'dr':1 'heaven':15 'khalifa':2 'realli':4"
   },
@@ -9035,8 +9035,8 @@
     "segment_index": 903,
     "start_time": 4097.635,
     "end_time": 4099.66530434783,
-    "content": "A woman: Because the tree doesn't like the steak.",
-    "speaker": "Dr. Khalifa",
+    "content": "Because the tree doesn't like the steak.",
+    "speaker": "A woman",
     "search_vector": "'doesn':6 'like':8 'steak':10 'tree':5 'woman':2"
   },
   {
@@ -9095,8 +9095,8 @@
     "segment_index": 909,
     "start_time": 4123.725,
     "end_time": 4125.13814772727,
-    "content": "A woman: It's actually going to be...",
-    "speaker": "Dr. Khalifa",
+    "content": "It's actually going to be...",
+    "speaker": "A woman",
     "search_vector": "'actual':5 'go':6 'woman':2"
   },
   {
@@ -9115,8 +9115,8 @@
     "segment_index": 911,
     "start_time": 4135.617,
     "end_time": 4138.32321538462,
-    "content": "A woman: Are the plants' souls the same as us?",
-    "speaker": "Dr. Khalifa",
+    "content": "Are the plants' souls the same as us?",
+    "speaker": "A woman",
     "search_vector": "'plant':5 'soul':6 'us':10 'woman':2"
   },
   {
@@ -9165,8 +9165,8 @@
     "segment_index": 916,
     "start_time": 4166.613,
     "end_time": 4168.348,
-    "content": "A woman: The stars and the trees are like me?",
-    "speaker": "Dr. Khalifa",
+    "content": "The stars and the trees are like me?",
+    "speaker": "A woman",
     "search_vector": "'like':9 'star':4 'tree':7 'woman':2"
   },
   {
@@ -9185,7 +9185,7 @@
     "segment_index": 918,
     "start_time": 4170.222,
     "end_time": 4170.881,
-    "content": "Dr. Khalifa: No.",
+    "content": "No.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2"
   },
@@ -9215,8 +9215,8 @@
     "segment_index": 921,
     "start_time": 4180.247,
     "end_time": 4181.388,
-    "content": "People: IN SHAA ALLAH.",
-    "speaker": "Dr. Khalifa",
+    "content": "IN SHAA ALLAH.",
+    "speaker": "People",
     "search_vector": "'allah':4 'peopl':1 'shaa':3"
   },
   {
@@ -9225,7 +9225,7 @@
     "segment_index": 922,
     "start_time": 4181.388,
     "end_time": 4183.012,
-    "content": "Dr. Khalifa: I got up at what time?",
+    "content": "I got up at what time?",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'got':4 'khalifa':2 'time':8"
   },
@@ -9235,8 +9235,8 @@
     "segment_index": 923,
     "start_time": 4183.71,
     "end_time": 4184.422,
-    "content": "A man: This morning?",
-    "speaker": "Dr. Khalifa",
+    "content": "This morning?",
+    "speaker": "A man",
     "search_vector": "'man':2 'morn':4"
   },
   {
@@ -9245,8 +9245,8 @@
     "segment_index": 924,
     "start_time": 4184.422,
     "end_time": 4185.081,
-    "content": "A man: 4.",
-    "speaker": "Dr. Khalifa",
+    "content": "4.",
+    "speaker": "A man",
     "search_vector": "'4':3 'man':2"
   },
   {
@@ -9255,7 +9255,7 @@
     "segment_index": 925,
     "start_time": 4189.481,
     "end_time": 4190.783,
-    "content": "Dr. Khalifa: No, it was one o'clock.",
+    "content": "No, it was one o'clock.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'clock':8 'dr':1 'khalifa':2 'o':7 'one':6"
   },
@@ -9265,8 +9265,8 @@
     "segment_index": 926,
     "start_time": 4193.466,
     "end_time": 4194.554,
-    "content": "A woman: Are you working?",
-    "speaker": "Dr. Khalifa",
+    "content": "Are you working?",
+    "speaker": "A woman",
     "search_vector": "'woman':2 'work':5"
   },
   {
@@ -9275,7 +9275,7 @@
     "segment_index": 927,
     "start_time": 4195.52,
     "end_time": 4196.501,
-    "content": "Dr. Khalifa: Yeah.",
+    "content": "Yeah.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'khalifa':2 'yeah':3"
   },
@@ -9285,7 +9285,7 @@
     "segment_index": 928,
     "start_time": 4196.877,
     "end_time": 4200.326,
-    "content": "Dr. Khalifa: Well, I left home at one. So, I got here about twenty after one.",
+    "content": "Well, I left home at one. So, I got here about twenty after one.",
     "speaker": "Dr. Khalifa",
     "search_vector": "'dr':1 'got':11 'home':6 'khalifa':2 'left':5 'one':8,16 'twenti':14 'well':3"
   },

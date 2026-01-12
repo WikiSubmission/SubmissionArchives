@@ -17,7 +17,7 @@ const BUCKET = process.env.R2_BUCKET_NAME!;
 async function main() {
     console.log("Fetching Quran Study files from R2...\n");
 
-    let allKeys: string[] = [];
+    const allKeys: string[] = [];
     let continuationToken;
 
     do {

@@ -72,7 +72,7 @@ const RENAME_MAP: Record<number, string> = {
 };
 
 async function getAllFiles(): Promise<string[]> {
-    let allKeys: string[] = [];
+    const allKeys: string[] = [];
     let continuationToken;
 
     do {

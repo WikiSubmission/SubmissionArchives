@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Crimson_Text, Cinzel, JetBrains_Mono, Playfair_Display, Rubik, Frank_Ruhl_Libre, Scheherazade_New, Roboto_Slab } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { ThemeProvider } from "@/app/components/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",

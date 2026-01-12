@@ -9260,19 +9260,29 @@
     "search_vector": "'yeah':1"
   },
   {
-    "id": 36235,
+    "id": "36235_part_0",
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
     "segment_index": 926,
     "start_time": 4160.714,
-    "end_time": 4163.928,
-    "content": "This happens to almost every one of us actually. Ismail Barakat: (unintelligible)",
+    "end_time": 4163.136861538462,
+    "content": "This happens to almost every one of us actually. ",
     "speaker": "Dr. Khalifa",
+    "search_vector": "'actual':9 'almost':4 'barakat':11 'everi':5 'happen':2 'ismail':10 'one':6 'unintellig':12 'us':8"
+  },
+  {
+    "id": "36235_part_1",
+    "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
+    "segment_index": 927,
+    "start_time": 4163.136861538462,
+    "end_time": 4163.928,
+    "content": "(unintelligible)",
+    "speaker": "Ismail Barakat",
     "search_vector": "'actual':9 'almost':4 'barakat':11 'everi':5 'happen':2 'ismail':10 'one':6 'unintellig':12 'us':8"
   },
   {
     "id": 36236,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 927,
+    "segment_index": 928,
     "start_time": 4163.928,
     "end_time": 4168.903,
     "content": "You find yourself in a situation, and you remember that you've seen this before.",
@@ -9282,7 +9292,7 @@
   {
     "id": 36237,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 928,
+    "segment_index": 929,
     "start_time": 4168.903,
     "end_time": 4170.903,
     "content": "And you swear, you know, saw it.",
@@ -9292,7 +9302,7 @@
   {
     "id": 36238,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 929,
+    "segment_index": 930,
     "start_time": 4170.903,
     "end_time": 4176.121,
     "content": "(unintelligible)",
@@ -9302,7 +9312,7 @@
   {
     "id": 36239,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 930,
+    "segment_index": 931,
     "start_time": 4176.121,
     "end_time": 4185.408,
     "content": "It's a, it's simply a glimpse of your future. You look, you have fast forward. You've have fast forward, then you pause to play for a second, and then you came back. Yes.",
@@ -9312,7 +9322,7 @@
   {
     "id": 36240,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 931,
+    "segment_index": 932,
     "start_time": 4185.772,
     "end_time": 4191.476,
     "content": "My mother, Rashad, tried to tell me that dreams always come true.",
@@ -9322,7 +9332,7 @@
   {
     "id": 36241,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 932,
+    "segment_index": 933,
     "start_time": 4191.719,
     "end_time": 4195.844,
     "content": "So one day, she bought me a red shirt.",
@@ -9332,7 +9342,7 @@
   {
     "id": 36242,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 933,
+    "segment_index": 934,
     "start_time": 4195.844,
     "end_time": 4200,
     "content": "I said \"this is a very strange thing, why would you buy me a red shirt?\"",
@@ -9342,7 +9352,7 @@
   {
     "id": 36243,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 934,
+    "segment_index": 935,
     "start_time": 4200,
     "end_time": 4201.271,
     "content": "Especially in Egypt.",
@@ -9352,7 +9362,7 @@
   {
     "id": 36244,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 935,
+    "segment_index": 936,
     "start_time": 4201.271,
     "end_time": 4201.8219122807,
     "content": "No, no, not...",
@@ -9362,7 +9372,7 @@
   {
     "id": 76625,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 936,
+    "segment_index": 937,
     "start_time": 4201.8219122807,
     "end_time": 4202.9630877193,
     "content": "Oh, not. Not (unintelligible)",
@@ -9372,7 +9382,7 @@
   {
     "id": 36245,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 937,
+    "segment_index": 938,
     "start_time": 4203.514,
     "end_time": 4208.307,
     "content": "So, she said \"well, I dreamt that I bought you a red shirt, so I went out to buy it.\"",
@@ -9382,7 +9392,7 @@
   {
     "id": 36246,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 938,
+    "segment_index": 939,
     "start_time": 4209.643,
     "end_time": 4212.129,
     "content": "A self-, a self-proclaimed prophecy.",
@@ -9392,7 +9402,7 @@
   {
     "id": 36247,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 939,
+    "segment_index": 940,
     "start_time": 4212.129,
     "end_time": 4213.461,
     "content": "A self-proclaimed prophecy.",
@@ -9402,7 +9412,7 @@
   {
     "id": 36248,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 940,
+    "segment_index": 941,
     "start_time": 4214.311,
     "end_time": 4220.501,
     "content": "(unintelligible)",
@@ -9412,7 +9422,7 @@
   {
     "id": 36249,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 941,
+    "segment_index": 942,
     "start_time": 4220.501,
     "end_time": 4221.926,
     "content": "Not that I know of.",
@@ -9422,7 +9432,7 @@
   {
     "id": 36250,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 942,
+    "segment_index": 943,
     "start_time": 4221.926,
     "end_time": 4223.926,
     "content": "(unintelligible)",
@@ -9432,7 +9442,7 @@
   {
     "id": 36251,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 943,
+    "segment_index": 944,
     "start_time": 4224.249,
     "end_time": 4226.949,
     "content": "ESP (extra-sensory perception) and things like that? Maybe, yes.",
@@ -9442,7 +9452,7 @@
   {
     "id": 36252,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 944,
+    "segment_index": 945,
     "start_time": 4226.949,
     "end_time": 4227.87583018868,
     "content": "It happened to me.",
@@ -9452,7 +9462,7 @@
   {
     "id": 77292,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 945,
+    "segment_index": 946,
     "start_time": 4227.87583018868,
     "end_time": 4228.95713207547,
     "content": "Ok. Tell us about it.",
@@ -9462,7 +9472,7 @@
   {
     "id": 36253,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 946,
+    "segment_index": 947,
     "start_time": 4230.828,
     "end_time": 4231.828,
     "content": "No, I don't want to.",
@@ -9472,7 +9482,7 @@
   {
     "id": 36254,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 947,
+    "segment_index": 948,
     "start_time": 4233.467,
     "end_time": 4235.863,
     "content": "Oh, really, because we share these experiences.",
@@ -9482,7 +9492,7 @@
   {
     "id": 36255,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 948,
+    "segment_index": 949,
     "start_time": 4236.834,
     "end_time": 4239.259,
     "content": "I know that thinking about it is possible.",
@@ -9492,7 +9502,7 @@
   {
     "id": 36256,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 949,
+    "segment_index": 950,
     "start_time": 4240.231,
     "end_time": 4241.32,
     "content": "It happened to me.",
@@ -9502,7 +9512,7 @@
   {
     "id": 36257,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 950,
+    "segment_index": 951,
     "start_time": 4241.32,
     "end_time": 4242.409,
     "content": "The premonition.",
@@ -9512,7 +9522,7 @@
   {
     "id": 36258,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 951,
+    "segment_index": 952,
     "start_time": 4242.834,
     "end_time": 4244.288,
     "content": "I think I saw it.",
@@ -9522,7 +9532,7 @@
   {
     "id": 36259,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 952,
+    "segment_index": 953,
     "start_time": 4253.153,
     "end_time": 4255.153,
     "content": "(unintelligible)",
@@ -9532,7 +9542,7 @@
   {
     "id": 36260,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 953,
+    "segment_index": 954,
     "start_time": 4255.517,
     "end_time": 4259.096,
     "content": "It had to do with, with my marriage to (unintelligible).",
@@ -9542,7 +9552,7 @@
   {
     "id": 36261,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 954,
+    "segment_index": 955,
     "start_time": 4259.521,
     "end_time": 4264.072,
     "content": "I was, when I met him, I was at the hospital. And I...",
@@ -9552,7 +9562,7 @@
   {
     "id": 36262,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 955,
+    "segment_index": 956,
     "start_time": 4264.618,
     "end_time": 4270.443,
     "content": "I just met him. It was really by chance that I met him. I wanted to (unintelligible)",
@@ -9562,7 +9572,7 @@
   {
     "id": 36263,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 956,
+    "segment_index": 957,
     "start_time": 4270.443,
     "end_time": 4276.268,
     "content": "But I really wasn't particularly interested in (unintelligible) for coffee.",
@@ -9572,7 +9582,7 @@
   {
     "id": 36264,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 957,
+    "segment_index": 958,
     "start_time": 4276.632,
     "end_time": 4278.632,
     "content": "That kind of thing. Nothing special.",
@@ -9582,7 +9592,7 @@
   {
     "id": 36265,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 958,
+    "segment_index": 959,
     "start_time": 4278.936,
     "end_time": 4280.936,
     "content": "I think once I went for dinner with him.",
@@ -9592,7 +9602,7 @@
   {
     "id": 36266,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 959,
+    "segment_index": 960,
     "start_time": 4281.3,
     "end_time": 4294.411,
     "content": "And then by chance (unintelligible) and I went back Seattle. But I actually had a friend in Seattle who wanted, you know, try to impress me. There was a possibility of marriage. (unintelligible)",
@@ -9602,7 +9612,7 @@
   {
     "id": 36267,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 960,
+    "segment_index": 961,
     "start_time": 4294.411,
     "end_time": 4299.144,
     "content": "And I was at this person's home. And I was sitting there.",
@@ -9612,7 +9622,7 @@
   {
     "id": 36268,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 961,
+    "segment_index": 962,
     "start_time": 4299.144,
     "end_time": 4309.584,
     "content": "And I got (unintelligible) when I left (unintelligible) \"give me a call when you're coming back (unintelligible). I'll pick you up (unintelligible)\"",
@@ -9622,7 +9632,7 @@
   {
     "id": 36269,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 962,
+    "segment_index": 963,
     "start_time": 4309.584,
     "end_time": 4313.223,
     "content": "(unintelligible)",
@@ -9632,7 +9642,7 @@
   {
     "id": 36270,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 963,
+    "segment_index": 964,
     "start_time": 4313.648,
     "end_time": 4318.441,
     "content": "And I was sitting at this friend's house in Seattle. And I got...",
@@ -9642,7 +9652,7 @@
   {
     "id": 36271,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 964,
+    "segment_index": 965,
     "start_time": 4318.441,
     "end_time": 4319.591,
     "content": "Premonition",
@@ -9652,7 +9662,7 @@
   {
     "id": 36272,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 965,
+    "segment_index": 966,
     "start_time": 4319.591,
     "end_time": 4323.595,
     "content": "this strangest feeling that I could go and call him because I was (unintelligible)",
@@ -9662,7 +9672,7 @@
   {
     "id": 36273,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 966,
+    "segment_index": 967,
     "start_time": 4323.595,
     "end_time": 4324.381,
     "content": "Wow.",
@@ -9672,7 +9682,7 @@
   {
     "id": 36274,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 967,
+    "segment_index": 968,
     "start_time": 4324.381,
     "end_time": 4329.753,
     "content": "It was just incredible. I knew it. It was just like a, just like a flash in front of me.",
@@ -9682,7 +9692,7 @@
   {
     "id": 36275,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 968,
+    "segment_index": 969,
     "start_time": 4329.753,
     "end_time": 4333.271,
     "content": "I went to the phone. I called him up. I told him (unintelligible)",
@@ -9692,7 +9702,7 @@
   {
     "id": 36276,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 969,
+    "segment_index": 970,
     "start_time": 4333.271,
     "end_time": 4335.789,
     "content": "From that minute on, I knew I was getting married to him.",
@@ -9702,7 +9712,7 @@
   {
     "id": 36277,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 970,
+    "segment_index": 971,
     "start_time": 4335.789,
     "end_time": 4339.914,
     "content": "I had no idea why. I was not particularly interested.",
@@ -9712,7 +9722,7 @@
   {
     "id": 36278,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 971,
+    "segment_index": 972,
     "start_time": 4340.67,
     "end_time": 4342.71827586207,
     "content": "Obviously, you had a glimpse of your future.",
@@ -9722,7 +9732,7 @@
   {
     "id": 76626,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 972,
+    "segment_index": 973,
     "start_time": 4342.71827586207,
     "end_time": 4342.90448275862,
     "content": "Yes.",
@@ -9732,7 +9742,7 @@
   {
     "id": 36279,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 973,
+    "segment_index": 974,
     "start_time": 4343.37,
     "end_time": 4344.674,
     "content": "But you were fully awake.",
@@ -9742,7 +9752,7 @@
   {
     "id": 36280,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 974,
+    "segment_index": 975,
     "start_time": 4344.674,
     "end_time": 4345.34,
     "content": "I was fully awake.",
@@ -9752,7 +9762,7 @@
   {
     "id": 77293,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 975,
+    "segment_index": 976,
     "start_time": 4345.34,
     "end_time": 4345.488,
     "content": "Yes.",
@@ -9762,7 +9772,7 @@
   {
     "id": 36281,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 976,
+    "segment_index": 977,
     "start_time": 4346.006,
     "end_time": 4347.492,
     "content": "So, it is possible.",
@@ -9772,7 +9782,7 @@
   {
     "id": 36282,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 977,
+    "segment_index": 978,
     "start_time": 4347.492,
     "end_time": 4348.52,
     "content": "Ihsan.",
@@ -9782,7 +9792,7 @@
   {
     "id": 36283,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 978,
+    "segment_index": 979,
     "start_time": 4348.52,
     "end_time": 4356.106,
     "content": "I'd like to share my experience here because Ali, that I had agreed before I married him that I (unintelligible) married to him.",
@@ -9792,7 +9802,7 @@
   {
     "id": 36284,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 979,
+    "segment_index": 980,
     "start_time": 4356.106,
     "end_time": 4356.952,
     "content": "Really?",
@@ -9802,7 +9812,7 @@
   {
     "id": 36285,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 980,
+    "segment_index": 981,
     "start_time": 4356.952,
     "end_time": 4357.07055072464,
     "content": "Yeah.",
@@ -9812,7 +9822,7 @@
   {
     "id": 77294,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 981,
+    "segment_index": 982,
     "start_time": 4357.07055072464,
     "end_time": 4357.44991304348,
     "content": "(unintelligible)",
@@ -9822,7 +9832,7 @@
   {
     "id": 76627,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 982,
+    "segment_index": 983,
     "start_time": 4357.78185507246,
     "end_time": 4358.39831884058,
     "content": "And he was married before.",
@@ -9832,7 +9842,7 @@
   {
     "id": 36286,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 983,
+    "segment_index": 984,
     "start_time": 4358.588,
     "end_time": 4361.742,
     "content": "He's absolutely nowhere (unintelligible) divorced at that time.",
@@ -9842,7 +9852,7 @@
   {
     "id": 36287,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 984,
+    "segment_index": 985,
     "start_time": 4361.742,
     "end_time": 4365,
     "content": "(unintelligible)",
@@ -9852,7 +9862,7 @@
   {
     "id": 36288,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 985,
+    "segment_index": 986,
     "start_time": 4365.789,
     "end_time": 4368.275,
     "content": "that (unintelligible) his brother.",
@@ -9862,7 +9872,7 @@
   {
     "id": 36289,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 986,
+    "segment_index": 987,
     "start_time": 4368.275,
     "end_time": 4370.97,
     "content": "(unintelligible)",
@@ -9872,7 +9882,7 @@
   {
     "id": 36290,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 987,
+    "segment_index": 988,
     "start_time": 4372.184,
     "end_time": 4374.184,
     "content": "seeing that (unintelligible)",
@@ -9882,7 +9892,7 @@
   {
     "id": 36291,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 988,
+    "segment_index": 989,
     "start_time": 4375.095,
     "end_time": 4377.399,
     "content": "You know what, (unintelligible)",
@@ -9892,7 +9902,7 @@
   {
     "id": 36292,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 989,
+    "segment_index": 990,
     "start_time": 4378.249,
     "end_time": 4380,
     "content": "That's the only time I've ever heard that.",
@@ -9902,7 +9912,7 @@
   {
     "id": 36293,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 990,
+    "segment_index": 991,
     "start_time": 4380,
     "end_time": 4382.546,
     "content": "But it's already 200... Go ahead.",
@@ -9912,7 +9922,7 @@
   {
     "id": 36294,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 991,
+    "segment_index": 992,
     "start_time": 4382.546,
     "end_time": 4387.521,
     "content": "And I had a dream that his ex-wife was waking me up and telling me all about him.",
@@ -9922,7 +9932,7 @@
   {
     "id": 36295,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 992,
+    "segment_index": 993,
     "start_time": 4388.675,
     "end_time": 4394.015,
     "content": "I mean, stuff that I overlooked because I was too young, I was married when I was 17.",
@@ -9932,7 +9942,7 @@
   {
     "id": 36296,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 993,
+    "segment_index": 994,
     "start_time": 4394.015,
     "end_time": 4397.108,
     "content": "No, I was 16 at that time. I said \"what the heck (unintelligible)?\"",
@@ -9942,7 +9952,7 @@
   {
     "id": 36297,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 994,
+    "segment_index": 995,
     "start_time": 4397.108,
     "end_time": 4397.41761538462,
     "content": "No way.",
@@ -9952,7 +9962,7 @@
   {
     "id": 77295,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 995,
+    "segment_index": 996,
     "start_time": 4397.41761538462,
     "end_time": 4397.63876923077,
     "content": "Yeah.",
@@ -9962,7 +9972,7 @@
   {
     "id": 36298,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 996,
+    "segment_index": 997,
     "start_time": 4398.744,
     "end_time": 4400.38,
     "content": "How much later did you marry him?",
@@ -9972,7 +9982,7 @@
   {
     "id": 36299,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 997,
+    "segment_index": 998,
     "start_time": 4400.805,
     "end_time": 4401.53,
     "content": "Sorry?",
@@ -9982,7 +9992,7 @@
   {
     "id": 36300,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 998,
+    "segment_index": 999,
     "start_time": 4401.53,
     "end_time": 4403.105,
     "content": "How old were you when you got married?",
@@ -9992,7 +10002,7 @@
   {
     "id": 36301,
     "media_id": "4aba34cf-0de3-48b5-a2e1-d78a99b2faf2",
-    "segment_index": 999,
+    "segment_index": 1000,
     "start_time": 4403.105,
     "end_time": 4405.105,
     "content": "(unintelligible)",
