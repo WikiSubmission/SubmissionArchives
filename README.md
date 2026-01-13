@@ -1,49 +1,34 @@
-# RK Media Platform
+# SubmissionArchives
 
-## Getting Started
+![Submission Archives](public/images/submission-archives-logo.png)
 
-First, run the development server:
+**SubmissionArchives** is a comprehensive media archive preserving the work of **Dr. Rashad Khalifa**, the Messenger of the Covenant. This platform serves as a digital library for his audio recordings, video programs, and written publications, featuring advanced search capabilities across transcripts and texts.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Archive Categories
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Audio & Video
+- **Quran Studies**: Complete collection of 52 MP3 audio studies conducted by Dr. Khalifa and the masjid.
+- **Messenger Audios**: Extensive archive of sermons, discussions, and studies from the 1980s.
+- **Video Programs**: Restored MP4 video programs including *King of Chaos*, *Old Message New Messenger*, and other seminal works.
+- **Sermons**: A curated compilation of sermons, including the pivotal "God Is Doing Everything."
 
-## Search System
+### Written Works
+- **Submitters Perspectives**: Complete newsletter archive from February 1985 to March 1990.
+- **Appendices**: In-depth elaborations on Quranic topics, including the *Introduction* and *Proclamation* from Dr. Khalifa's translation.
+- **Other Publications**: Various works including books (*Quran, Hadith, Islam*), brochures (e.g., *Contact Prayer/Salat*), and articles.
 
-The platform features a high-performance, client-side search engine for the Submitter's Perspective newsletter archive.
+## Features
 
-### Architecture
+- **Deep Search**: Full-text search across all video/audio transcripts and written materials.
+- **Smart Filtering**: Filter results by media type, year, or category.
+- **Transcript Synchronization**: Read along with audio/video playback.
+- **Responsive Design**: Optimized for desktop and mobile devices.
 
-- **Pre-computed Index**: An inverted index is generated at build time (`scripts/build-search-index.ts`) to ensure O(1) lookups.
-- **Client-Side Caching**: Search results are cached in memory (`src/lib/search/cache.ts`) for instant repeated queries.
-- **Fuzzy Matching**: Uses n-gram generation (trigrams) to support typo-tolerant web searching.
-- **Content Store**: Actual document content is separated from the index to minimize initial load time.
+## Roadmap
 
-### Building the Index
+### Quick Notes (Coming Soon)
+A topical aggregation engine designed to compile all mentions of specific subjects across the entire archive.
+*   *Example*: A "Contact Prayer (Salat)" note would aggregate every sermon clip, Quran study remark, and newsletter article mentioning Salat details (e.g., the correction on numbering units from Quran Study 52) into a single, organized view.
 
-The search index is automatically generated during the build process. You can also generate it manually:
-
-```bash
-npm run build:search
-```
-
-This will create:
-- `public/data/newsletters/search-index-optimized.json` (~200KB)
-- `public/data/newsletters/search-content.json` (~60KB)
-- `public/data/newsletters/search-stats.json`
-
-### Performance Metrics
-
-- **Search Latency**: < 10ms for typical queries
-- **Cache Hit**: < 1ms
-- **Index Load**: < 50ms (async)
-
-### Deployment
-
-The `prebuild` script in `package.json` ensures the search index is fresh for every production deployment.
+---
+*Dedicated to the preservation and dissemination of the message of God alone.*

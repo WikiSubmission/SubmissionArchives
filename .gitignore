@@ -62,4 +62,7 @@ legacy_scripts_root/
 
 # Raw Data (Moved from root)
 /raw_data/
+!/raw_data/keys/ # If keys are public. If private, keep ignored. Don't publish risky security.
+# Ignoring keys explicitly just in case they are private
+/raw_data/keys/
 
