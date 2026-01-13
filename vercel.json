@@ -1,8 +1,0 @@
-{
-    "version": 2,
-    "buildCommand": "cd rk-media-platform && npm install && npm run build",
-    "devCommand": "cd rk-media-platform && npm run dev",
-    "installCommand": "echo 'Using buildCommand to install dependencies'",
-    "framework": "nextjs",
-    "outputDirectory": "rk-media-platform/.next"
-}

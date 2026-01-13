@@ -1,34 +1,61 @@
-# Media Files (Ignore Large Files)
-*.mp4
-*.mp3
-*.wav
-*.m4a
-*.mov
-*.mkv
-*.zip
-*.rar
+# Next.js
+/.next/
+/out/
+/build
+.DSTore
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.log
-venv/
+# Node
+node_modules/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+/.pnpm-debug.log*
+
+# Local Env
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# System
-Thumbs.db
-Desktop.ini
+# Typescript
+*.tsbuildinfo
 
-# RKM Specific
-debug_*.txt
-debug_*.jpg
-debug_*.png
-temp_subs/
-scripts/archive/
-transcripts_youtube_raw/
-transcripts_api_raw/
-transcripts/backup_pre_std/
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# Large media assets directory
-media-assets/
+# Backup & Temp
+scripts_root_backup/
+legacy/
+legacy_scripts_root/
+/downloads/
+/temp_audios.html
+/debug_quran_study_log.txt
+/download_log.txt
+/rclone-config-template.conf
+
+# Reprocessing & Data
+/reprocess_temp/
+/reprocess_ready/
+/reprocess_temp_fix/
+/recovery_output/
+/data/disorganized_sermons/
+/data/rk_video_programs/
+/data/messenger_quran_studies/
+/data/messenger_audios/
+/debug_subs/
+
+# Large Files & Generated
+*.mp3
+*.mp4
+*.zip
+*.tar.gz
+*.iso
+/all_media_files.txt
+/ALL_QURAN_STUDIES_TRANSCRIPTS_MEGA.json
+
+# Vercel
+.vercel

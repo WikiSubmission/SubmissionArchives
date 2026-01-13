@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #7e22ce;
+  --primary-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --border: #e5e5e5;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-crimson);
+  --font-heading: var(--font-cinzel);
+  --font-rubik: var(--font-rubik);
+  --font-roboto-slab: var(--font-roboto-slab);
+}
+
+.dark {
+  --background: #09090b;
+  /* Zinc 950 */
+  --foreground: #fafafa;
+  /* Zinc 50 */
+  --primary: #a855f7;
+  --primary-foreground: #ffffff;
+  --card: #18181b;
+  /* Zinc 900 */
+  --card-foreground: #fafafa;
+  --border: #27272a;
+  /* Zinc 800 */
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  /* Zinc 400 */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Newsletter Special Blocks - Using CSS Variables for Dark Mode */
+.newsletter-center-block {
+  background-color: var(--muted);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-quote-block {
+  background: linear-gradient(135deg, var(--muted) 0%, transparent 100%);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-reflection-block {
+  background: linear-gradient(135deg, var(--muted) 0%, transparent 100%);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-table {
+  border-color: var(--border);
+}
+
+.newsletter-table th,
+.newsletter-table td {
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.newsletter-table thead {
+  background-color: var(--muted);
+}
+
+.newsletter-table tbody tr:nth-child(even) {
+  background-color: var(--muted);
+}
+
+.newsletter-table tbody tr:nth-child(odd) {
+  background-color: var(--background);
+}

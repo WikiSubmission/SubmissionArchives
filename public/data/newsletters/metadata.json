@@ -1,0 +1,642 @@
+[
+  {
+    "id": "1990_mar",
+    "title": "Submitter Perspectives March 1990",
+    "date": "MARCH 1990",
+    "fullDate": "1990-03-01",
+    "monthSort": 3,
+    "year": 1990,
+    "filename": "1990_mar",
+    "pdfLink": "/data/newsletters/1990_03_March.pdf"
+  },
+  {
+    "id": "1990_feb",
+    "title": "Submitter Perspectives February 1990",
+    "date": "FEBRUARY 1990",
+    "fullDate": "1990-02-01",
+    "monthSort": 2,
+    "year": 1990,
+    "filename": "1990_feb",
+    "pdfLink": "/data/newsletters/1990_02_February.pdf"
+  },
+  {
+    "id": "1990_jan",
+    "title": "Submitter Perspectives January 1990",
+    "date": "JANUARY 1990",
+    "fullDate": "1990-01-01",
+    "monthSort": 1,
+    "year": 1990,
+    "filename": "1990_jan",
+    "pdfLink": "/data/newsletters/1990_01_January.pdf"
+  },
+  {
+    "id": "1990_jan_2",
+    "title": "Submitter Perspectives January (Bonus) 1990",
+    "date": "JANUARY (BONUS) 1990",
+    "fullDate": "1990-01-01",
+    "monthSort": 1.5,
+    "year": 1990,
+    "filename": "1990_jan_2",
+    "pdfLink": "/data/newsletters/1990_01_January_bonus_issue.pdf"
+  },
+  {
+    "id": "1989_nov",
+    "title": "Submitter Perspectives November 1989",
+    "date": "NOVEMBER 1989",
+    "fullDate": "1989-11-01",
+    "monthSort": 11,
+    "year": 1989,
+    "filename": "1989_nov",
+    "pdfLink": "/data/newsletters/1989_11_November.pdf"
+  },
+  {
+    "id": "1989_dec",
+    "title": "Submitter Perspectives December 1989",
+    "date": "DECEMBER 1989",
+    "fullDate": "1989-12-01",
+    "monthSort": 12,
+    "year": 1989,
+    "filename": "1989_dec",
+    "pdfLink": "/data/newsletters/1989_12_December.pdf"
+  },
+  {
+    "id": "1989_oct",
+    "title": "Submitter Perspectives October 1989",
+    "date": "OCTOBER 1989",
+    "fullDate": "1989-10-01",
+    "monthSort": 10,
+    "year": 1989,
+    "filename": "1989_oct",
+    "pdfLink": "/data/newsletters/1989_10_October.pdf"
+  },
+  {
+    "id": "1989_sep",
+    "title": "Submitter Perspectives September 1989",
+    "date": "SEPTEMBER 1989",
+    "fullDate": "1989-09-01",
+    "monthSort": 9,
+    "year": 1989,
+    "filename": "1989_sep",
+    "pdfLink": "https://www.masjidtucson.org/publications/books/sp/1989/sep/sep1989.pdf"
+  },
+  {
+    "id": "1989_aug",
+    "title": "Submitter Perspectives August 1989",
+    "date": "AUGUST 1989",
+    "fullDate": "1989-08-01",
+    "monthSort": 8,
+    "year": 1989,
+    "filename": "1989_aug",
+    "pdfLink": "/data/newsletters/1989_08_August.pdf"
+  },
+  {
+    "id": "1989_jul",
+    "title": "Submitter Perspectives July 1989",
+    "date": "JULY 1989",
+    "fullDate": "1989-07-01",
+    "monthSort": 7,
+    "year": 1989,
+    "filename": "1989_jul",
+    "pdfLink": "/data/newsletters/1989_07_July.pdf"
+  },
+  {
+    "id": "1989_jun",
+    "title": "Submitter Perspectives June 1989",
+    "date": "JUNE 1989",
+    "fullDate": "1989-06-01",
+    "monthSort": 6,
+    "year": 1989,
+    "filename": "1989_jun",
+    "pdfLink": "/data/newsletters/1989_06_June.pdf"
+  },
+  {
+    "id": "1989_may",
+    "title": "Submitter Perspectives May 1989",
+    "date": "MAY 1989",
+    "fullDate": "1989-05-01",
+    "monthSort": 5,
+    "year": 1989,
+    "filename": "1989_may",
+    "pdfLink": "/data/newsletters/1989_05_May.pdf"
+  },
+  {
+    "id": "1989_apr",
+    "title": "Submitter Perspectives April 1989",
+    "date": "APRIL 1989",
+    "fullDate": "1989-04-01",
+    "monthSort": 4,
+    "year": 1989,
+    "filename": "1989_apr",
+    "pdfLink": "/data/newsletters/1989_04_April.pdf"
+  },
+  {
+    "id": "1989_mar",
+    "title": "Submitter Perspectives March 1989",
+    "date": "MARCH 1989",
+    "fullDate": "1989-03-01",
+    "monthSort": 3,
+    "year": 1989,
+    "filename": "1989_mar",
+    "pdfLink": "/data/newsletters/1989_03_March.pdf"
+  },
+  {
+    "id": "1989_feb",
+    "title": "Submitter Perspectives February 1989",
+    "date": "FEBRUARY 1989",
+    "fullDate": "1989-02-01",
+    "monthSort": 2,
+    "year": 1989,
+    "filename": "1989_feb",
+    "pdfLink": "/data/newsletters/1989_02_February.pdf"
+  },
+  {
+    "id": "1989_jan",
+    "title": "Submitter Perspectives January 1989",
+    "date": "JANUARY 1989",
+    "fullDate": "1989-01-01",
+    "monthSort": 1,
+    "year": 1989,
+    "filename": "1989_jan",
+    "pdfLink": "/data/newsletters/1989_01_January.pdf"
+  },
+  {
+    "id": "1988_dec",
+    "title": "Submitter Perspectives December 1988",
+    "date": "DECEMBER 1988",
+    "fullDate": "1988-12-01",
+    "monthSort": 12,
+    "year": 1988,
+    "filename": "1988_dec",
+    "pdfLink": "/data/newsletters/1988_12_December.pdf"
+  },
+  {
+    "id": "1988_nov",
+    "title": "Submitter Perspectives November 1988",
+    "date": "NOVEMBER 1988",
+    "fullDate": "1988-11-01",
+    "monthSort": 11,
+    "year": 1988,
+    "filename": "1988_nov",
+    "pdfLink": "/data/newsletters/1988_11_November.pdf"
+  },
+  {
+    "id": "1988_oct",
+    "title": "Submitter Perspectives October 1988",
+    "date": "OCTOBER 1988",
+    "fullDate": "1988-10-01",
+    "monthSort": 10,
+    "year": 1988,
+    "filename": "1988_oct",
+    "pdfLink": "/data/newsletters/1988_10_October.pdf"
+  },
+  {
+    "id": "1988_sep",
+    "title": "Submitter Perspectives September 1988",
+    "date": "SEPTEMBER 1988",
+    "fullDate": "1988-09-01",
+    "monthSort": 9,
+    "year": 1988,
+    "filename": "1988_sep",
+    "pdfLink": "/data/newsletters/1988_09_September.pdf"
+  },
+  {
+    "id": "1988_aug",
+    "title": "Submitter Perspectives August 1988",
+    "date": "AUGUST 1988",
+    "fullDate": "1988-08-01",
+    "monthSort": 8,
+    "year": 1988,
+    "filename": "1988_aug",
+    "pdfLink": "/data/newsletters/1988_08_August.pdf"
+  },
+  {
+    "id": "1988_jul",
+    "title": "Submitter Perspectives July 1988",
+    "date": "JULY 1988",
+    "fullDate": "1988-07-01",
+    "monthSort": 7,
+    "year": 1988,
+    "filename": "1988_jul",
+    "pdfLink": "/data/newsletters/1988_07_July.pdf"
+  },
+  {
+    "id": "1988_jun",
+    "title": "Submitter Perspectives June 1988",
+    "date": "JUNE 1988",
+    "fullDate": "1988-06-01",
+    "monthSort": 6,
+    "year": 1988,
+    "filename": "1988_jun",
+    "pdfLink": "/data/newsletters/1988_06_June.pdf"
+  },
+  {
+    "id": "1988_may",
+    "title": "Submitter Perspectives May 1988",
+    "date": "MAY 1988",
+    "fullDate": "1988-05-01",
+    "monthSort": 5,
+    "year": 1988,
+    "filename": "1988_may",
+    "pdfLink": "/data/newsletters/1988_05_May.pdf"
+  },
+  {
+    "id": "1988_may_bonus",
+    "title": "Submitter Perspectives May (Bonus) 1988",
+    "date": "MAY (BONUS) 1988",
+    "fullDate": "1988-05-01",
+    "monthSort": 5.5,
+    "year": 1988,
+    "filename": "1988_may_bonus",
+    "pdfLink": "/data/newsletters/1988_05_May_Bulletin.pdf"
+  },
+  {
+    "id": "1988_apr",
+    "title": "Submitter Perspectives April 1988",
+    "date": "APRIL 1988",
+    "fullDate": "1988-04-01",
+    "monthSort": 4,
+    "year": 1988,
+    "filename": "1988_apr",
+    "pdfLink": "/data/newsletters/1988_04_April.pdf"
+  },
+  {
+    "id": "1988_mar",
+    "title": "Submitter Perspectives March 1988",
+    "date": "MARCH 1988",
+    "fullDate": "1988-03-01",
+    "monthSort": 3,
+    "year": 1988,
+    "filename": "1988_mar",
+    "pdfLink": "/data/newsletters/1988_03_March.pdf"
+  },
+  {
+    "id": "1988_feb",
+    "title": "Submitter Perspectives February 1988",
+    "date": "FEBRUARY 1988",
+    "fullDate": "1988-02-01",
+    "monthSort": 2,
+    "year": 1988,
+    "filename": "1988_feb",
+    "pdfLink": "/data/newsletters/1988_02_February.pdf"
+  },
+  {
+    "id": "1988_jan",
+    "title": "Submitter Perspectives January 1988",
+    "date": "JANUARY 1988",
+    "fullDate": "1988-01-01",
+    "monthSort": 1,
+    "year": 1988,
+    "filename": "1988_jan",
+    "pdfLink": "/data/newsletters/1988_01_January.pdf"
+  },
+  {
+    "id": "1987_dec",
+    "title": "Submitter Perspectives December 1987",
+    "date": "DECEMBER 1987",
+    "fullDate": "1987-12-01",
+    "monthSort": 12,
+    "year": 1987,
+    "filename": "1987_dec",
+    "pdfLink": "/data/newsletters/1987_12_December.pdf"
+  },
+  {
+    "id": "1987_nov",
+    "title": "Submitter Perspectives November 1987",
+    "date": "NOVEMBER 1987",
+    "fullDate": "1987-11-01",
+    "monthSort": 11,
+    "year": 1987,
+    "filename": "1987_nov",
+    "pdfLink": "/data/newsletters/1987_11_November.pdf"
+  },
+  {
+    "id": "1987_oct",
+    "title": "Submitter Perspectives October 1987",
+    "date": "OCTOBER 1987",
+    "fullDate": "1987-10-01",
+    "monthSort": 10,
+    "year": 1987,
+    "filename": "1987_oct",
+    "pdfLink": "/data/newsletters/1987_10_October.pdf"
+  },
+  {
+    "id": "1987_sep",
+    "title": "Submitter Perspectives September 1987",
+    "date": "SEPTEMBER 1987",
+    "fullDate": "1987-09-01",
+    "monthSort": 9,
+    "year": 1987,
+    "filename": "1987_sep",
+    "pdfLink": "/data/newsletters/1987_09_September.pdf"
+  },
+  {
+    "id": "1987_aug",
+    "title": "Submitter Perspectives August 1987",
+    "date": "AUGUST 1987",
+    "fullDate": "1987-08-01",
+    "monthSort": 8,
+    "year": 1987,
+    "filename": "1987_aug",
+    "pdfLink": "/data/newsletters/1987_08_August.pdf"
+  },
+  {
+    "id": "1987_jul",
+    "title": "Submitter Perspectives July 1987",
+    "date": "JULY 1987",
+    "fullDate": "1987-07-01",
+    "monthSort": 7,
+    "year": 1987,
+    "filename": "1987_jul",
+    "pdfLink": "/data/newsletters/1987_07_July.pdf"
+  },
+  {
+    "id": "1987_jun",
+    "title": "Submitter Perspectives June 1987",
+    "date": "JUNE 1987",
+    "fullDate": "1987-06-01",
+    "monthSort": 6,
+    "year": 1987,
+    "filename": "1987_jun",
+    "pdfLink": "/data/newsletters/1987_06_June.pdf"
+  },
+  {
+    "id": "1987_may",
+    "title": "Submitter Perspectives May 1987",
+    "date": "MAY 1987",
+    "fullDate": "1987-05-01",
+    "monthSort": 5,
+    "year": 1987,
+    "filename": "1987_may",
+    "pdfLink": "/data/newsletters/1987_05_May.pdf"
+  },
+  {
+    "id": "1987_apr",
+    "title": "Submitter Perspectives April 1987",
+    "date": "APRIL 1987",
+    "fullDate": "1987-04-01",
+    "monthSort": 4,
+    "year": 1987,
+    "filename": "1987_apr",
+    "pdfLink": "/data/newsletters/1987_04_April.pdf"
+  },
+  {
+    "id": "1987_mar",
+    "title": "Submitter Perspectives March 1987",
+    "date": "MARCH 1987",
+    "fullDate": "1987-03-01",
+    "monthSort": 3,
+    "year": 1987,
+    "filename": "1987_mar",
+    "pdfLink": "/data/newsletters/1987_03_March.pdf"
+  },
+  {
+    "id": "1987_feb",
+    "title": "Submitter Perspectives February 1987",
+    "date": "FEBRUARY 1987",
+    "fullDate": "1987-02-01",
+    "monthSort": 2,
+    "year": 1987,
+    "filename": "1987_feb",
+    "pdfLink": "/data/newsletters/1987_02_February.pdf"
+  },
+  {
+    "id": "1987_jan",
+    "title": "Submitter Perspectives January 1987",
+    "date": "JANUARY 1987",
+    "fullDate": "1987-01-01",
+    "monthSort": 1,
+    "year": 1987,
+    "filename": "1987_jan",
+    "pdfLink": "/data/newsletters/1987_01_January.pdf"
+  },
+  {
+    "id": "1986_dec",
+    "title": "Submitter Perspectives December 1986",
+    "date": "DECEMBER 1986",
+    "fullDate": "1986-12-01",
+    "monthSort": 12,
+    "year": 1986,
+    "filename": "1986_dec",
+    "pdfLink": "/data/newsletters/1986_12_December.pdf"
+  },
+  {
+    "id": "1986_nov",
+    "title": "Submitter Perspectives November 1986",
+    "date": "NOVEMBER 1986",
+    "fullDate": "1986-11-01",
+    "monthSort": 11,
+    "year": 1986,
+    "filename": "1986_nov",
+    "pdfLink": "/data/newsletters/1986_11_November.pdf"
+  },
+  {
+    "id": "1986_oct",
+    "title": "Submitter Perspectives October 1986",
+    "date": "OCTOBER 1986",
+    "fullDate": "1986-10-01",
+    "monthSort": 10,
+    "year": 1986,
+    "filename": "1986_oct",
+    "pdfLink": "/data/newsletters/1986_10_October.pdf"
+  },
+  {
+    "id": "1986_sep",
+    "title": "Submitter Perspectives September 1986",
+    "date": "SEPTEMBER 1986",
+    "fullDate": "1986-09-01",
+    "monthSort": 9,
+    "year": 1986,
+    "filename": "1986_sep",
+    "pdfLink": "/data/newsletters/1986_09_September.pdf"
+  },
+  {
+    "id": "1986_aug",
+    "title": "Submitter Perspectives August 1986",
+    "date": "AUGUST 1986",
+    "fullDate": "1986-08-01",
+    "monthSort": 8,
+    "year": 1986,
+    "filename": "1986_aug",
+    "pdfLink": "/data/newsletters/1986_08_August.pdf"
+  },
+  {
+    "id": "1986_jul",
+    "title": "Submitter Perspectives July 1986",
+    "date": "JULY 1986",
+    "fullDate": "1986-07-01",
+    "monthSort": 7,
+    "year": 1986,
+    "filename": "1986_jul",
+    "pdfLink": "/data/newsletters/1986_07_July.pdf"
+  },
+  {
+    "id": "1986_jun",
+    "title": "Submitter Perspectives June 1986",
+    "date": "JUNE 1986",
+    "fullDate": "1986-06-01",
+    "monthSort": 6,
+    "year": 1986,
+    "filename": "1986_jun",
+    "pdfLink": "/data/newsletters/1986_06_June.pdf"
+  },
+  {
+    "id": "1986_may",
+    "title": "Submitter Perspectives May 1986",
+    "date": "MAY 1986",
+    "fullDate": "1986-05-01",
+    "monthSort": 5,
+    "year": 1986,
+    "filename": "1986_may",
+    "pdfLink": "/data/newsletters/1986_05_May.pdf"
+  },
+  {
+    "id": "1986_apr",
+    "title": "Submitter Perspectives April 1986",
+    "date": "APRIL 1986",
+    "fullDate": "1986-04-01",
+    "monthSort": 4,
+    "year": 1986,
+    "filename": "1986_apr",
+    "pdfLink": "/data/newsletters/1986_04_April.pdf"
+  },
+  {
+    "id": "1986_mar",
+    "title": "Submitter Perspectives March 1986",
+    "date": "MARCH 1986",
+    "fullDate": "1986-03-01",
+    "monthSort": 3,
+    "year": 1986,
+    "filename": "1986_mar",
+    "pdfLink": "/data/newsletters/1986_03_March.pdf"
+  },
+  {
+    "id": "1986_feb",
+    "title": "Submitter Perspectives February 1986",
+    "date": "FEBRUARY 1986",
+    "fullDate": "1986-02-01",
+    "monthSort": 2,
+    "year": 1986,
+    "filename": "1986_feb",
+    "pdfLink": "/data/newsletters/1986_02_February.pdf"
+  },
+  {
+    "id": "1986_jan",
+    "title": "Submitter Perspectives January 1986",
+    "date": "JANUARY 1986",
+    "fullDate": "1986-01-01",
+    "monthSort": 1,
+    "year": 1986,
+    "filename": "1986_jan",
+    "pdfLink": "/data/newsletters/1986_01_January.pdf"
+  },
+  {
+    "id": "1985_dec",
+    "title": "Submitter Perspectives December 1985",
+    "date": "DECEMBER 1985",
+    "fullDate": "1985-12-01",
+    "monthSort": 12,
+    "year": 1985,
+    "filename": "1985_dec",
+    "pdfLink": "/data/newsletters/1985_12_December.pdf"
+  },
+  {
+    "id": "1985_nov",
+    "title": "Submitter Perspectives November 1985",
+    "date": "NOVEMBER 1985",
+    "fullDate": "1985-11-01",
+    "monthSort": 11,
+    "year": 1985,
+    "filename": "1985_nov",
+    "pdfLink": "/data/newsletters/1985_11_November.pdf"
+  },
+  {
+    "id": "1985_oct",
+    "title": "Submitter Perspectives October 1985",
+    "date": "OCTOBER 1985",
+    "fullDate": "1985-10-01",
+    "monthSort": 10,
+    "year": 1985,
+    "filename": "1985_oct",
+    "pdfLink": "/data/newsletters/1985_10_October.pdf"
+  },
+  {
+    "id": "1985_sep",
+    "title": "Submitter Perspectives September 1985",
+    "date": "SEPTEMBER 1985",
+    "fullDate": "1985-09-01",
+    "monthSort": 9,
+    "year": 1985,
+    "filename": "1985_sep",
+    "pdfLink": "/data/newsletters/1985_09_September.pdf"
+  },
+  {
+    "id": "1985_aug",
+    "title": "Submitter Perspectives August 1985",
+    "date": "AUGUST 1985",
+    "fullDate": "1985-08-01",
+    "monthSort": 8,
+    "year": 1985,
+    "filename": "1985_aug",
+    "pdfLink": "/data/newsletters/1985_08_August.pdf"
+  },
+  {
+    "id": "1985_jul",
+    "title": "Submitter Perspectives July 1985",
+    "date": "JULY 1985",
+    "fullDate": "1985-07-01",
+    "monthSort": 7,
+    "year": 1985,
+    "filename": "1985_jul",
+    "pdfLink": "/data/newsletters/1985_07_July.pdf"
+  },
+  {
+    "id": "1985_jun",
+    "title": "Submitter Perspectives June 1985",
+    "date": "JUNE 1985",
+    "fullDate": "1985-06-01",
+    "monthSort": 6,
+    "year": 1985,
+    "filename": "1985_jun",
+    "pdfLink": "/data/newsletters/1985_06_June.pdf"
+  },
+  {
+    "id": "1985_may",
+    "title": "Submitter Perspectives May 1985",
+    "date": "MAY 1985",
+    "fullDate": "1985-05-01",
+    "monthSort": 5,
+    "year": 1985,
+    "filename": "1985_may",
+    "pdfLink": "/data/newsletters/1985_05_May.pdf"
+  },
+  {
+    "id": "1985_apr",
+    "title": "Submitter Perspectives April 1985",
+    "date": "APRIL 1985",
+    "fullDate": "1985-04-01",
+    "monthSort": 4,
+    "year": 1985,
+    "filename": "1985_apr",
+    "pdfLink": "/data/newsletters/1985_04_April.pdf"
+  },
+  {
+    "id": "1985_mar",
+    "title": "Submitter Perspectives March 1985",
+    "date": "MARCH 1985",
+    "fullDate": "1985-03-01",
+    "monthSort": 3,
+    "year": 1985,
+    "filename": "1985_mar",
+    "pdfLink": "/data/newsletters/1985_03_March.pdf"
+  },
+  {
+    "id": "1985_feb",
+    "title": "Submitter Perspectives February 1985",
+    "date": "FEBRUARY 1985",
+    "fullDate": "1985-02-01",
+    "monthSort": 2,
+    "year": 1985,
+    "filename": "1985_feb",
+    "pdfLink": "/data/newsletters/1985_02_February.pdf"
+  }
+]
