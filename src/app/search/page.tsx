@@ -8,7 +8,9 @@ import { formatMedia } from '@/lib/formatUtils';
 import { searchTranscripts } from './actions';
 import { useTheme } from '../components/ThemeProvider';
 
-export default function SearchPage() {
+import { Suspense } from 'react';
+
+function SearchContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
 
@@ -512,6 +514,14 @@ export default function SearchPage() {
                 )}
             </main>
         </div>
+    );
+}
+
+export default function SearchPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-white dark:bg-zinc-950 flex items-center justify-center font-mono text-xs uppercase tracking-widest animate-pulse">Loading Search Module...</div>}>
+            <SearchContent />
+        </Suspense>
     );
 }
 
