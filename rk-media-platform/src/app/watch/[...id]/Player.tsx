@@ -143,7 +143,21 @@ function useKeyboardShortcuts(handlers: Record<string, (e: KeyboardEvent) => voi
 
 // ==================== MAIN COMPONENT ====================
 
-export default function Player({ media, segments: initialSegments, signedUrl, prev, next }: { media: any, segments: any[], signedUrl?: string, prev?: { id: string, title: string }, next?: { id: string, title: string } }) {
+export default function Player({
+    media,
+    segments: initialSegments,
+    signedUrl,
+    prev,
+    next,
+    initialTime = 0
+}: {
+    media: any,
+    segments: any[],
+    signedUrl?: string,
+    prev?: { id: string, title: string },
+    next?: { id: string, title: string },
+    initialTime?: number
+}) {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -153,6 +167,21 @@ export default function Player({ media, segments: initialSegments, signedUrl, pr
     // Premium Features Hooks
     const { bookmarks, addBookmark, deleteBookmark, exportBookmarks: exportBookmarksList } = useBookmarks(media.id);
     const { progress, lastWatched, saveProgress } = useWatchHistory(media.id, player.duration, media.title);
+
+    // Handle initial time seek once video handles match
+    useEffect(() => {
+        if (initialTime > 0 && videoRef.current) {
+            // We set it immediately, but might need to wait for metadata
+            player.setCurrentTime(initialTime);
+            if (videoRef.current.readyState >= 1) { // metadata loaded
+                player.seekTo(initialTime);
+            } else {
+                const onLoaded = () => player.seekTo(initialTime);
+                videoRef.current.addEventListener('loadedmetadata', onLoaded);
+                return () => videoRef.current?.removeEventListener('loadedmetadata', onLoaded);
+            }
+        }
+    }, [initialTime]); // Run once when initialTime is provided
 
     // Common UI State for Premium Features
     const [activeTab, setActiveTab] = useState<'transcript' | 'bookmarks'>('transcript');
@@ -464,102 +493,123 @@ export default function Player({ media, segments: initialSegments, signedUrl, pr
 
             <div className="max-w-[1600px] mx-auto px-6 py-8">
                 {!isVideo ? (
-                    // === AUDIO LAYOUT (Updated with new UI) ===
-                    <div className="max-w-4xl mx-auto space-y-8">
-                        <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden shadow-2xl">
-                            <div className="flex flex-col md:flex-row">
-                                <div className="w-full md:w-80 h-80 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center relative shrink-0">
-                                    <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10"></div>
-                                    <Headphones className="w-20 h-20 text-zinc-500 relative z-10" />
-                                    <video
-                                        ref={videoRef}
-                                        className="hidden"
-                                        onTimeUpdate={handleTimeUpdate}
-                                        onLoadedMetadata={() => player.setDuration(videoRef.current?.duration || 0)}
-                                        onEnded={() => player.setIsPlaying(false)}
-                                        onWaiting={() => player.setIsBuffering(true)}
-                                        onCanPlay={() => player.setIsBuffering(false)}
-                                        src={videoSrc}
-                                        onError={() => setMediaError(true)}
-                                    />
-                                </div>
-                                <div className="flex-1 p-8 flex flex-col justify-between bg-zinc-950">
-                                    <div>
-                                        <h1 style={{ fontFamily: 'var(--font-roboto-slab)' }} className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">{displayTitle}</h1>
-                                        <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-widest text-zinc-500">
-                                            <span className="flex items-center gap-2"><User className="w-3 h-3" />{author}</span>
-                                            {displayDate && <span className="flex items-center gap-2"><Calendar className="w-3 h-3" />{displayDate}</span>}
+                    // === AUDIO LAYOUT (Compact Horizontal Player) ===
+                    <div className="max-w-4xl mx-auto space-y-6">
+                        {/* Compact Audio Player */}
+                        <div className="bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl overflow-hidden">
+                            <div className="p-4">
+                                <div className="flex items-center gap-4">
+                                    {/* Album Art */}
+                                    <div className="w-16 h-16 bg-gradient-to-br from-zinc-800 to-black rounded flex items-center justify-center shrink-0">
+                                        <Headphones className="w-8 h-8 text-zinc-600" />
+                                    </div>
+
+                                    {/* Title & Metadata */}
+                                    <div className="flex-1 min-w-0">
+                                        <h1 style={{ fontFamily: 'var(--font-playfair)' }} className="text-base md:text-lg font-semibold text-white mb-1 truncate leading-tight">{displayTitle}</h1>
+                                        <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-wider text-zinc-500">
+                                            <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{author}</span>
+                                            {displayDate && <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{displayDate}</span>}
                                         </div>
                                     </div>
-                                    <div className="space-y-6 mt-8">
-                                        <div className="space-y-2">
-                                            <div className="relative w-full h-1.5 bg-zinc-800 rounded-full cursor-pointer group" onClick={handleSeek}>
-                                                <div className="absolute h-full bg-green-500 rounded-full group-hover:bg-green-400 transition-all" style={{ width: `${(player.currentTime / player.duration) * 100}%` }} />
-                                            </div>
-                                            <div className="flex justify-between text-[10px] font-mono text-zinc-500">
-                                                <span>{formatTime(player.currentTime)}</span>
-                                                <span>{formatTime(player.duration)}</span>
-                                            </div>
-                                        </div>
+
+                                    {/* Controls */}
+                                    <div className="hidden md:flex items-center gap-2">
+                                        <button onClick={() => player.skipTime(-5)} className="p-1.5 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors" title="Back 5s">
+                                            <SkipBack className="w-4 h-4" />
+                                        </button>
+                                        <button onClick={player.togglePlay} className="w-10 h-10 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center transition-all shadow-lg">
+                                            {player.isPlaying ? <Pause className="w-5 h-5 fill-white text-white" /> : <Play className="w-5 h-5 fill-white text-white ml-0.5" />}
+                                        </button>
+                                        <button onClick={() => player.skipTime(5)} className="p-1.5 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors" title="Forward 5s">
+                                            <SkipForward className="w-4 h-4" />
+                                        </button>
+                                        <span className="text-xs font-mono text-zinc-500 min-w-[80px] text-center">{formatTime(player.currentTime)} / {formatTime(player.duration)}</span>
+                                        <button onClick={player.toggleMute} className="p-1.5 text-zinc-400 hover:text-white transition-colors">
+                                            {player.isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                                        </button>
+                                        <button onClick={() => setShowSettings(!showSettings)} className={`p-1.5 transition-colors ${showSettings ? 'text-green-500' : 'text-zinc-400 hover:text-white'}`}>
+                                            <Settings className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Progress Bar */}
+                                <div className="mt-3">
+                                    <div className="relative w-full h-1 bg-zinc-800 rounded-full cursor-pointer group" onClick={handleSeek}>
+                                        <div className="absolute h-full bg-green-500 rounded-full group-hover:bg-green-400 transition-all" style={{ width: `${(player.currentTime / player.duration) * 100}%` }} />
+                                    </div>
+                                </div>
+
+                                {/* Mobile Controls */}
+                                <div className="md:hidden flex items-center justify-between mt-3">
+                                    <div className="flex items-center gap-3">
+                                        <button onClick={() => player.skipTime(-5)} className="p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors">
+                                            <SkipBack className="w-5 h-5" />
+                                        </button>
+                                        <button onClick={player.togglePlay} className="w-12 h-12 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center transition-all shadow-lg">
+                                            {player.isPlaying ? <Pause className="w-6 h-6 fill-white text-white" /> : <Play className="w-6 h-6 fill-white text-white ml-0.5" />}
+                                        </button>
+                                        <button onClick={() => player.skipTime(5)} className="p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors">
+                                            <SkipForward className="w-5 h-5" />
+                                        </button>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-mono text-zinc-500">{formatTime(player.currentTime)}</span>
+                                        <button onClick={player.toggleMute} className="p-2 text-zinc-400 hover:text-white transition-colors">
+                                            {player.isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                                        </button>
+                                        <button onClick={() => setShowSettings(!showSettings)} className={`p-2 transition-colors ${showSettings ? 'text-green-500' : 'text-zinc-400 hover:text-white'}`}>
+                                            <Settings className="w-5 h-5" />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Settings Panel */}
+                                {showSettings && (
+                                    <div className="mt-4 bg-zinc-800/50 p-4 rounded-lg space-y-4 border border-zinc-700/50">
                                         <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <button onClick={player.toggleMute} className="text-zinc-400 hover:text-white transition-colors">
-                                                    {player.isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                                                </button>
-                                                <input
-                                                    type="range" min="0" max="1" step="0.1"
-                                                    value={player.isMuted ? 0 : player.volume}
-                                                    onChange={e => player.handleVolumeChange(parseFloat(e.target.value))}
-                                                    className="w-20 accent-green-500 h-1 bg-zinc-800 rounded-lg cursor-pointer"
-                                                />
+                                            <span className="text-sm text-zinc-400 flex items-center gap-2"><Gauge className="w-4 h-4" /> Speed</span>
+                                            <div className="flex gap-1 bg-zinc-900 p-1 rounded border border-zinc-800">
+                                                {[0.5, 0.75, 1, 1.25, 1.5, 2].map(rate => (
+                                                    <button
+                                                        key={rate}
+                                                        onClick={() => player.changePlaybackRate(rate)}
+                                                        className={`px-2 py-1 text-xs rounded font-mono transition-colors ${player.playbackRate === rate ? 'bg-zinc-700 text-white' : 'text-zinc-500 hover:text-zinc-300'}`}
+                                                    >
+                                                        {rate}x
+                                                    </button>
+                                                ))}
                                             </div>
-                                            <div className="flex items-center gap-6">
-                                                <button onClick={() => player.skipTime(-5)} className="p-2 text-zinc-400 hover:text-white rounded-full hover:bg-zinc-800 transition-colors">
-                                                    <RotateCcw className="w-5 h-5" />
-                                                </button>
-                                                <button onClick={player.togglePlay} className="w-14 h-14 bg-white rounded-full flex items-center justify-center hover:scale-105 transition-transform shadow-lg shadow-green-900/20">
-                                                    {player.isPlaying ? <Pause className="w-6 h-6 fill-black text-black" /> : <Play className="w-6 h-6 fill-black text-black ml-1" />}
-                                                </button>
-                                                <button onClick={() => player.skipTime(5)} className="p-2 text-zinc-400 hover:text-white rounded-full hover:bg-zinc-800 transition-colors transform scale-x-[-1]">
-                                                    <RotateCcw className="w-5 h-5" />
-                                                </button>
-                                            </div>
-                                            <button onClick={() => setShowSettings(!showSettings)} className={`p-2 transition-colors ${showSettings ? 'text-green-500' : 'text-zinc-400 hover:text-white'}`}>
-                                                <Settings className="w-5 h-5" />
-                                            </button>
                                         </div>
-                                        {showSettings && (
-                                            <div className="bg-zinc-800/50 p-4 rounded-lg space-y-4 border border-zinc-700/50 animate-in slide-in-from-top-2 fade-in duration-200">
-                                                <div className="flex items-center justify-between">
-                                                    <span className="text-sm text-zinc-400 flex items-center gap-2"><Gauge className="w-4 h-4" /> Playback Speed</span>
-                                                    <div className="flex gap-1 bg-zinc-900 p-1 rounded-lg border border-zinc-800">
-                                                        {[0.5, 0.75, 1, 1.25, 1.5, 2].map(rate => (
-                                                            <button
-                                                                key={rate}
-                                                                onClick={() => player.changePlaybackRate(rate)}
-                                                                className={`px-2 py-1 text-xs rounded font-mono transition-colors ${player.playbackRate === rate ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
-                                                            >
-                                                                {rate}x
-                                                            </button>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                                <button onClick={exportTranscript} className="w-full py-2 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded text-sm flex items-center justify-center gap-2 transition-colors text-zinc-300 hover:text-white">
-                                                    <Download className="w-4 h-4" /> Export Transcript as Text
-                                                </button>
-                                            </div>
-                                        )}
+                                        <button onClick={exportTranscript} className="w-full py-2 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded text-sm flex items-center justify-center gap-2 transition-colors text-zinc-300 hover:text-white">
+                                            <Download className="w-4 h-4" /> Export Transcript
+                                        </button>
                                     </div>
-                                    <ResumePrompt
-                                        lastPosition={lastWatched}
-                                        onResume={() => player.seekTo(lastWatched || 0)}
-                                        onStartOver={() => {
-                                            player.seekTo(0);
-                                            saveProgress(0);
-                                        }}
-                                    />
-                                </div>
+                                )}
                             </div>
+
+                            {/* Hidden Video Element */}
+                            <video
+                                ref={videoRef}
+                                className="hidden"
+                                onTimeUpdate={handleTimeUpdate}
+                                onLoadedMetadata={() => player.setDuration(videoRef.current?.duration || 0)}
+                                onEnded={() => player.setIsPlaying(false)}
+                                onWaiting={() => player.setIsBuffering(true)}
+                                onCanPlay={() => player.setIsBuffering(false)}
+                                src={videoSrc}
+                                onError={() => setMediaError(true)}
+                            />
+
+                            <ResumePrompt
+                                lastPosition={lastWatched}
+                                onResume={() => player.seekTo(lastWatched || 0)}
+                                onStartOver={() => {
+                                    player.seekTo(0);
+                                    saveProgress(0);
+                                }}
+                            />
                         </div>
 
                         {/* Audio Transcript / Bookmarks Tabs */}
@@ -675,8 +725,8 @@ export default function Player({ media, segments: initialSegments, signedUrl, pr
                                                                 __html: seg.content.replace(
                                                                     new RegExp(`(${searchQuery})`, 'gi'),
                                                                     isCurrentMatch
-                                                                        ? '<mark class="bg-yellow-500 text-black font-bold">$1</mark>'
-                                                                        : '<mark class="bg-yellow-200 dark:bg-yellow-500/50 text-black dark:text-white">$1</mark>'
+                                                                        ? '<mark class="bg-amber-400 text-black font-bold">$1</mark>'
+                                                                        : '<mark class="bg-amber-200 text-amber-900 dark:bg-amber-900/60 dark:text-amber-100">$1</mark>'
                                                                 )
                                                             }} />
                                                         ) : seg.content}
@@ -966,7 +1016,7 @@ export default function Player({ media, segments: initialSegments, signedUrl, pr
                                                                 __html: seg.content.replace(
                                                                     new RegExp(`(${searchQuery})`, 'gi'),
                                                                     isCurrentMatch
-                                                                        ? '<mark class="bg-yellow-500 text-black font-bold">$1</mark>'
+                                                                        ? '<mark class="bg-amber-400 text-black font-bold">$1</mark>'
                                                                         : '<mark class="bg-emerald-900/50 text-emerald-200">$1</mark>'
                                                                 )
                                                             }} />

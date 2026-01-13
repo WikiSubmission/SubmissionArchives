@@ -17,6 +17,7 @@ interface IndexDocument {
     titleLower: string;
     date: string;
     filename: string;
+    dateTimestamp?: number; // Pre-parsed for fast sorting
 }
 
 interface OptimizedIndex {
@@ -29,12 +30,24 @@ interface ContentStore {
     [docId: string]: string;
 }
 
+// Common English stopwords to filter out
+const STOPWORDS = new Set([
+    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
+    'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'should',
+    'could', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those',
+    'i', 'you', 'he', 'she', 'it', 'we', 'they', 'what', 'which', 'who',
+    'when', 'where', 'why', 'how', 'all', 'each', 'every', 'both', 'few',
+    'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only',
+    'own', 'same', 'so', 'than', 'too', 'very'
+]);
+
 function tokenize(text: string): string[] {
     return text
         .toLowerCase()
         .replace(/[^\w\s]/g, ' ')
         .split(/\s+/)
-        .filter(w => w.length > 2);
+        .filter(w => w.length > 2 && !STOPWORDS.has(w)); // Filter stopwords
 }
 
 function generateTrigrams(word: string): string[] {
@@ -44,6 +57,17 @@ function generateTrigrams(word: string): string[] {
         trigrams.push(word.substring(i, i + 3));
     }
     return trigrams;
+}
+
+// Parse date string to timestamp for sorting
+function parseDateToTimestamp(dateStr: string): number {
+    try {
+        // Try parsing common formats
+        const date = new Date(dateStr);
+        return isNaN(date.getTime()) ? 0 : date.getTime();
+    } catch {
+        return 0;
+    }
 }
 
 // Calculate relevance score
@@ -72,7 +96,7 @@ function calculateScore(
             score += 20;
         }
 
-        // Term in content
+        // Term in content with word boundaries
         const regex = new RegExp(`\\b${term}\\b`, 'gi');
         const matches = (contentLower.match(regex) || []).length;
         score += Math.min(matches * 5, 20); // Cap term frequency bonus
@@ -134,6 +158,7 @@ export async function searchOptimized(
     query: string,
     options: SearchOptions
 ): Promise<SearchResult[]> {
+    // Preprocess query: tokenize and remove stopwords
     const terms = tokenize(query);
     if (terms.length === 0) return [];
 
@@ -150,8 +175,6 @@ export async function searchOptimized(
             trigrams.forEach(trigram => {
                 const similarWords = index.ngrams[trigram] || [];
                 similarWords.forEach(word => {
-                    // Similarity check could be added here (Levenshtein)
-                    // For now, accept n-gram matches (simple fuzzy)
                     const fuzzyDocs = index.invertedIndex[word] || [];
                     fuzzyDocs.forEach(id => candidateDocs.add(id));
                 });
@@ -159,7 +182,8 @@ export async function searchOptimized(
         }
     });
 
-    const results: SearchResult[] = [];
+    // Results with scores for sorting
+    const resultsWithScores: Array<SearchResult & { score: number; dateTimestamp: number }> = [];
 
     for (const docId of candidateDocs) {
         const doc = index.documents.find(d => d.id === docId);
@@ -174,36 +198,32 @@ export async function searchOptimized(
         const score = calculateScore(doc, terms, content, query);
 
         if (score >= (options.minScore || 10)) {
-            results.push({
+            const dateTimestamp = doc.dateTimestamp || parseDateToTimestamp(doc.date);
+
+            resultsWithScores.push({
                 id: doc.id,
                 title: doc.title,
                 date: doc.date,
                 filename: doc.filename,
-                matches: [generateSnippet(content, terms)] // Single snippet for now
-                // In future we can add score to SearchResult type if needed
+                matches: [generateSnippet(content, terms)],
+                score,
+                dateTimestamp
             });
         }
     }
 
-    // Sort
-    if (options.sortBy === 'date-asc') {
-        // Naive sort, assuming fullDate is available or parsable
-        // But doc only has display timestamp. The index HAS date field which is display date.
-        // build script stores date: newsletter.displayDate
-        // We might need ISO date for sorting. 
-        // For now, let's skip complex date sorting or rely on display string if standard
-    } else if (options.sortBy === 'relevance') {
-        // We don't have score in SearchResult type yet.
-        // But we computed it. 
-        // Actually, my cache.ts defined SearchResult WITHOUT score. 
-        // I should update SearchResult type to include score.
+    // Sort results based on option
+    if (options.sortBy === 'relevance' || !options.sortBy) {
+        // Sort by score descending (highest relevance first)
+        resultsWithScores.sort((a, b) => b.score - a.score);
+    } else if (options.sortBy === 'date-desc') {
+        // Sort by date descending (newest first)
+        resultsWithScores.sort((a, b) => b.dateTimestamp - a.dateTimestamp);
+    } else if (options.sortBy === 'date-asc') {
+        // Sort by date ascending (oldest first)
+        resultsWithScores.sort((a, b) => a.dateTimestamp - b.dateTimestamp);
     }
 
-    // Since SearchResult doesn't have score, we need to sort BEFORE mapping to result? 
-    // No, I pushed to results array. 
-
-    // FIXME: Proper sorting requires score in the object. 
-    // I will extend the type locally for sorting.
-
-    return results.slice(0, options.maxResults || 50);
+    // Return limited results
+    return resultsWithScores.slice(0, options.maxResults || 50);
 }

@@ -128,6 +128,9 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
                 }
             }
         }
+
+        // Remove YouTube IDs in brackets from display title (e.g., [j6WwnOk44MU])
+        displayTitle = displayTitle.replace(/\s*\[([a-zA-Z0-9_-]{11})\]\s*/g, '').trim();
     }
 
     // --- Audio ---

@@ -1,5 +1,6 @@
 import { Media, ThemeColors } from "@/types/media";
 import { BookOpen, FileText, Headphones, Video, User, Clock, ArrowRight } from "lucide-react";
+import thumbnailMapping from "@/data/thumbnail_mapping.json";
 
 interface MediaCardProps {
     item: Media;
@@ -29,38 +30,90 @@ export function MediaCard({ item, theme }: MediaCardProps) {
                     ? 'bg-purple-100 dark:bg-purple-900/30 border-purple-200 dark:border-purple-800 text-purple-700 dark:text-purple-300'
                     : 'bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300';
 
-    return (
-        <div className={`h-full border ${theme.border} rounded-lg ${theme.card} p-6 ${theme.borderHover} transition-all duration-300 flex flex-col justify-between relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg`}>
-            <div className="relative z-10">
-                <div className="flex items-center justify-between mb-4">
-                    <div className={`flex items-center gap-2 px-2.5 py-1 rounded-md border ${badgeColors}`}>
-                        <Icon className="w-3.5 h-3.5" />
-                        <span className="text-[10px] font-mono uppercase tracking-wider">
-                            {typeLabel}
-                        </span>
-                    </div>
-                </div>
+    // Get thumbnail path based on media type
+    let thumbnailSrc = '/images/placeholders/rashad-khalifa.png';
 
-                <h3
-                    className={`text-xl font-mono ${theme.text} leading-tight mb-3 line-clamp-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors font-semibold`}
-                >
-                    {item.displayTitle}
-                </h3>
+    if (item.type === 'sermon' || item.type === 'video-program') {
+        // Check if there's a mapping for this media ID
+        const mappedFilename = (thumbnailMapping as Record<string, string>)[item.id];
+
+        if (mappedFilename) {
+            // Use the mapped filename
+            thumbnailSrc = item.type === 'sermon'
+                ? `/images/sermons/${mappedFilename}.jpg`
+                : `/images/video-programs/${mappedFilename}.jpg`;
+        } else {
+            // Fallback to clean ID approach
+            const cleanId = item.id
+                .replace(/^media\/(FRIDAY SERMONS|VIDEO PROGRAMS|disorganized_sermons|rk_video_programs)\//, '')
+                .replace(/\s+/g, '_')
+                .replace(/[^\w\-_.]/g, '')
+                .replace(/\.mp4$/, '');
+            thumbnailSrc = item.type === 'sermon'
+                ? `/images/sermons/${cleanId}.jpg`
+                : `/images/video-programs/${cleanId}.jpg`;
+        }
+    } else if (item.type === 'audio' || item.type === 'messenger-audio') {
+        thumbnailSrc = '/images/messenger-audios/default.jpg';
+    } else if (item.type === 'quran-study') {
+        const match = item.displayTitle.match(/^(\d+)\)/) || item.id.match(/quran-study-v2\/(\d+)/);
+        if (match) {
+            const num = parseInt(match[1]);
+            if (num === 52) {
+                thumbnailSrc = `/images/quran-studies/QS${num}.png`;
+            } else if (num >= 1 && num <= 51) {
+                thumbnailSrc = `/images/quran-studies/QS${num}.jpg`;
+            }
+        }
+    }
+
+    return (
+        <div className={`h-full border ${theme.border} rounded-lg ${theme.card} overflow-hidden ${theme.borderHover} transition-all duration-300 flex flex-col relative group cursor-pointer shadow-sm hover:shadow-lg`}>
+            {/* Thumbnail Image */}
+            <div className="relative w-full aspect-video bg-black/5 dark:bg-black/20 overflow-hidden">
+                <img
+                    src={thumbnailSrc}
+                    alt={item.displayTitle}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                        e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
 
-            <div className={`relative z-10 pt-4 mt-auto border-t ${theme.border} flex items-center justify-between text-xs ${theme.textVeryMuted} font-mono`}>
-                <span className="flex items-center gap-2 line-clamp-1">
-                    <User className="w-3.5 h-3.5 flex-shrink-0" />
-                    {item.author}
-                </span>
-                <span className="flex items-center gap-3 flex-shrink-0">
-                    {item.duration_seconds && (
-                        <span className="flex items-center gap-1.5">
-                            <Clock className="w-3.5 h-3.5" />
-                            {Math.floor(item.duration_seconds / 60)}m
-                        </span>
-                    )}
-                </span>
+            <div className="p-6 flex flex-col flex-1">
+                <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4">
+                        <div className={`flex items-center gap-2 px-2.5 py-1 rounded-md border ${badgeColors}`}>
+                            <Icon className="w-3.5 h-3.5" />
+                            <span className="text-[10px] font-mono uppercase tracking-wider">
+                                {typeLabel}
+                            </span>
+                        </div>
+                    </div>
+
+                    <h3
+                        className={`text-xl font-mono ${theme.text} leading-tight mb-3 line-clamp-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors font-semibold`}
+                    >
+                        {item.displayTitle}
+                    </h3>
+                </div>
+
+                <div className={`relative z-10 pt-4 mt-auto border-t ${theme.border} flex items-center justify-between text-xs ${theme.textVeryMuted} font-mono`}>
+                    <span className="flex items-center gap-2 line-clamp-1">
+                        <User className="w-3.5 h-3.5 flex-shrink-0" />
+                        {item.author}
+                    </span>
+                    <span className="flex items-center gap-3 flex-shrink-0">
+                        {item.duration_seconds && (
+                            <span className="flex items-center gap-1.5">
+                                <Clock className="w-3.5 h-3.5" />
+                                {Math.floor(item.duration_seconds / 60)}m
+                            </span>
+                        )}
+                    </span>
+                </div>
             </div>
         </div>
     );

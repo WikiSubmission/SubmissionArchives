@@ -9,7 +9,6 @@ interface AppendicesViewProps {
 
 const APPENDICES = [
     { id: 'proclamation', title: 'Proclamation' },
-    { id: 'glossary', title: 'Glossary' },
     { id: 'introduction', title: 'Introduction' },
     { id: 'appendix-1', title: '1. One of the Great Miracles [74:35]' },
     { id: 'appendix-2', title: '2. God\'s Messenger of the Covenant [3:81]' },
@@ -59,7 +58,7 @@ export function AppendicesView({ theme, darkMode }: AppendicesViewProps) {
                     <div className="flex items-baseline gap-4">
                         <h3 className={`text-2xl font-serif ${theme.text}`}>Quran Translation Appendices</h3>
                         <span className={`text-[10px] font-mono font-bold ${theme.textVeryMuted} border ${theme.border} px-2 py-0.5 rounded-sm uppercase tracking-wider`}>
-                            {APPENDICES.length} Appendices
+                            {APPENDICES.length - 2} Appendices
                         </span>
                     </div>
                 </div>
@@ -68,20 +67,35 @@ export function AppendicesView({ theme, darkMode }: AppendicesViewProps) {
                         {APPENDICES.map((appendix) => (
                             <Link
                                 key={appendix.id}
-                                href={`/appendices/${appendix.id}`}
-                                className={`group h-full ${theme.card} border ${theme.border} rounded-sm p-5 hover:border-zinc-400 transition-all cursor-pointer flex flex-col relative overflow-hidden shadow-sm hover:shadow-md`}
+                                href={`/read/${appendix.id}`}
+                                className={`group h-full ${theme.card} border ${theme.border} rounded-sm overflow-hidden hover:border-zinc-400 transition-all cursor-pointer flex flex-col relative shadow-sm hover:shadow-md`}
                             >
-                                <div className="mb-4">
-                                    <h4 className={`font-serif text-base ${theme.text} group-hover:opacity-70 transition-opacity leading-tight`}>
-                                        {appendix.title}
-                                    </h4>
+                                {/* Thumbnail Image */}
+                                <div className="relative w-full aspect-[3/4] bg-black/5 dark:bg-black/20 overflow-hidden">
+                                    <img
+                                        src={`/images/appendices/${appendix.id}.jpg`}
+                                        alt={appendix.title}
+                                        className="w-full h-full object-contain p-2 bg-white dark:bg-zinc-900 group-hover:scale-105 transition-transform duration-300"
+                                        onError={(e) => {
+                                            e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
+                                        }}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
-                                <div className={`mt-auto flex items-center justify-between pt-4 border-t ${theme.border} text-xs font-mono uppercase tracking-widest ${theme.textVeryMuted}`}>
-                                    <div className="flex items-center gap-1.5">
-                                        <BookOpen className="w-3 h-3" />
-                                        <span>Read</span>
+
+                                <div className="p-5 flex flex-col flex-1">
+                                    <div className="mb-4">
+                                        <h4 className={`font-serif text-base ${theme.text} group-hover:opacity-70 transition-opacity leading-tight`}>
+                                            {appendix.title}
+                                        </h4>
                                     </div>
-                                    <ArrowLeft className={`w-3 h-3 rotate-180 transform group-hover:translate-x-1 transition-transform ${theme.text}`} />
+                                    <div className={`mt-auto flex items-center justify-between pt-4 border-t ${theme.border} text-xs font-mono uppercase tracking-widest ${theme.textVeryMuted}`}>
+                                        <div className="flex items-center gap-1.5">
+                                            <BookOpen className="w-3 h-3" />
+                                            <span>Read PDF</span>
+                                        </div>
+                                        <ArrowLeft className={`w-3 h-3 rotate-180 transform group-hover:translate-x-1 transition-transform ${theme.text}`} />
+                                    </div>
                                 </div>
                             </Link>
                         ))}

@@ -62,6 +62,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const saved = localStorage.getItem('theme');
+                if (saved === 'light') {
+                  document.documentElement.classList.remove('dark');
+                } else {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         suppressHydrationWarning
         className={`${inter.variable} ${playfair.variable} ${rubik.variable} ${scheherazade.variable} ${frank.variable} ${crimson.variable} ${cinzel.variable} ${mono.variable} ${robotoSlab.variable} font-sans antialiased`}

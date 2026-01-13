@@ -9,7 +9,7 @@ export interface ThemeColors {
     textVeryMuted: string;
     input: string;
     header: string;
-    statsBar?: string;
+    statsBar: string;
     button: string;
     highlight?: string;
     yearHeader?: string;

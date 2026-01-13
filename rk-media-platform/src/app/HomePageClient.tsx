@@ -14,6 +14,7 @@ import Header from '@/components/Header';
 import { MediaGrid } from './components/home/MediaGrid';
 import { NewslettersView } from './components/home/NewslettersView';
 import { AppendicesView } from './components/home/AppendicesView';
+import { OtherView } from './components/home/OtherView';
 
 interface HomePageClientProps {
     initialMedia: any[]; // Keeping any[] for initial input as per current data structure, will map to Media
@@ -175,72 +176,94 @@ export default function HomePageClient({ initialMedia }: HomePageClientProps) {
                         ARCHIVE SYSTEM V2.0 // COMPREHENSIVE DIGITAL ARCHIVE OF DR. RASHAD KHALIFA'S AUDIOS, VIDEOS, SERMONS, SUBMITTER PERSPECTIVES, AND QURAN STUDIES. CATALOGUED. TRANSCRIBED. SEARCHABLE.
                     </p>
 
-                    <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
-                        <FilterButton
-                            active={selectedType === 'quran-study'}
-                            onClick={() => setSelectedType(selectedType === 'quran-study' ? 'all' : 'quran-study')}
-                            theme={theme}
-                        >
-                            <BookOpen className="w-3.5 h-3.5 mr-2" />
-                            QURAN STUDIES
-                        </FilterButton>
-                        <FilterButton
-                            active={selectedType === 'audio' || selectedType.includes('audio')}
-                            onClick={() => setSelectedType(selectedType === 'audio' ? 'all' : 'audio')}
-                            theme={theme}
-                        >
-                            <Headphones className="w-3.5 h-3.5 mr-2" />
-                            AUDIOS
-                        </FilterButton>
-                        <FilterButton
-                            active={selectedType === 'video-program'}
-                            onClick={() => setSelectedType(selectedType === 'video-program' ? 'all' : 'video-program')}
-                            theme={theme}
-                        >
-                            <Video className="w-3.5 h-3.5 mr-2" />
-                            VIDEO PROGRAMS
-                        </FilterButton>
-                        <FilterButton
-                            active={selectedType === 'sermon'}
-                            onClick={() => setSelectedType(selectedType === 'sermon' ? 'all' : 'sermon')}
-                            theme={theme}
-                        >
-                            <Video className="w-3.5 h-3.5 mr-2" />
-                            SERMONS
-                        </FilterButton>
-                        <FilterButton
-                            active={selectedType === 'perspectives'}
-                            onClick={() => setSelectedType(selectedType === 'perspectives' ? 'all' : 'perspectives')}
-                            theme={theme}
-                        >
-                            <FileText className="w-3.5 h-3.5 mr-2" />
-                            PERSPECTIVES
-                        </FilterButton>
-                        <FilterButton
-                            active={selectedType === 'appendices'}
-                            onClick={() => setSelectedType(selectedType === 'appendices' ? 'all' : 'appendices')}
-                            theme={theme}
-                        >
-                            <BookOpen className="w-3.5 h-3.5 mr-2" />
-                            APPENDICES
-                        </FilterButton>
+                    <div className="flex flex-col items-center gap-3 mb-10 w-full">
+                        {/* Row 1: Main Media Types */}
+                        <div className="flex flex-wrap items-center justify-center gap-3">
+                            <FilterButton
+                                active={selectedType === 'quran-study'}
+                                onClick={() => setSelectedType(selectedType === 'quran-study' ? 'all' : 'quran-study')}
+                                theme={theme}
+                                darkMode={darkMode}
+                            >
+                                <BookOpen className="w-3.5 h-3.5 mr-2" />
+                                QURAN STUDIES
+                            </FilterButton>
+                            <FilterButton
+                                active={selectedType === 'audio' || selectedType.includes('audio')}
+                                onClick={() => setSelectedType(selectedType === 'audio' ? 'all' : 'audio')}
+                                theme={theme}
+                                darkMode={darkMode}
+                            >
+                                <Headphones className="w-3.5 h-3.5 mr-2" />
+                                AUDIOS
+                            </FilterButton>
+                            <FilterButton
+                                active={selectedType === 'video-program'}
+                                onClick={() => setSelectedType(selectedType === 'video-program' ? 'all' : 'video-program')}
+                                theme={theme}
+                                darkMode={darkMode}
+                            >
+                                <Video className="w-3.5 h-3.5 mr-2" />
+                                VIDEO PROGRAMS
+                            </FilterButton>
+                            <FilterButton
+                                active={selectedType === 'sermon'}
+                                onClick={() => setSelectedType(selectedType === 'sermon' ? 'all' : 'sermon')}
+                                theme={theme}
+                                darkMode={darkMode}
+                            >
+                                <Video className="w-3.5 h-3.5 mr-2" />
+                                SERMONS
+                            </FilterButton>
+                        </div>
+
+                        {/* Row 2: Resources - Single Row */}
+                        <div className="flex flex-wrap items-center justify-center gap-3">
+                            <FilterButton
+                                active={selectedType === 'perspectives'}
+                                onClick={() => setSelectedType(selectedType === 'perspectives' ? 'all' : 'perspectives')}
+                                theme={theme}
+                                darkMode={darkMode}
+                            >
+                                <FileText className="w-3.5 h-3.5 mr-2" />
+                                PERSPECTIVES
+                            </FilterButton>
+                            <FilterButton
+                                active={selectedType === 'appendices'}
+                                onClick={() => setSelectedType(selectedType === 'appendices' ? 'all' : 'appendices')}
+                                theme={theme}
+                                darkMode={darkMode}
+                            >
+                                <BookOpen className="w-3.5 h-3.5 mr-2" />
+                                APPENDICES
+                            </FilterButton>
+                            <FilterButton
+                                active={selectedType === 'other'}
+                                onClick={() => setSelectedType(selectedType === 'other' ? 'all' : 'other')}
+                                theme={theme}
+                                darkMode={darkMode}
+                            >
+                                <FileText className="w-3.5 h-3.5 mr-2" />
+                                OTHER
+                            </FilterButton>
+                        </div>
                     </div>
 
                     <div className="flex justify-center flex-wrap gap-4">
                         <a href="https://wikisubmission.org/quran" target="_blank" rel="noopener noreferrer">
-                            <button className={`px-6 py-3 rounded-sm ${theme.text === 'text-zinc-100' ? 'bg-zinc-800 text-zinc-100 ring-1 ring-zinc-700 hover:bg-zinc-700' : 'bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-50'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all shadow-sm hover:shadow-md flex items-center gap-3`}>
+                            <button className={`px-6 py-3 rounded-sm ${darkMode ? 'bg-zinc-800 text-zinc-100 border border-zinc-700 hover:bg-zinc-700' : 'bg-white text-gray-900 border border-gray-200 hover:bg-gray-50'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all flex items-center gap-3`}>
                                 <BookOpen className="w-4 h-4" />
                                 QURAN READER
                             </button>
                         </a>
                         <Link href="/search">
-                            <button className={`px-6 py-3 rounded-sm ${theme.text === 'text-zinc-100' ? 'bg-zinc-100 text-zinc-900 hover:bg-white' : 'bg-zinc-900 text-white hover:bg-black'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all shadow-sm hover:shadow-md flex items-center gap-3 group`}>
+                            <button className={`px-6 py-3 rounded-sm ${darkMode ? 'bg-white text-zinc-900 hover:bg-zinc-100' : 'bg-zinc-900 text-white hover:bg-black'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all flex items-center gap-3 group`}>
                                 <Search className="w-4 h-4" />
                                 ADVANCED SEARCH
                             </button>
                         </Link>
                         <Link href="/notes">
-                            <button className={`px-6 py-3 rounded-sm ${theme.text === 'text-zinc-100' ? 'bg-zinc-800 text-zinc-100 ring-1 ring-zinc-700 hover:bg-zinc-700' : 'bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-50'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all shadow-sm hover:shadow-md flex items-center gap-3`}>
+                            <button className={`px-6 py-3 rounded-sm ${darkMode ? 'bg-zinc-800 text-zinc-100 border border-zinc-700 hover:bg-zinc-700' : 'bg-white text-gray-900 border border-gray-200 hover:bg-gray-50'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all flex items-center gap-3`}>
                                 <FileText className="w-4 h-4" />
                                 QUICK NOTES
                             </button>
@@ -286,12 +309,14 @@ export default function HomePageClient({ initialMedia }: HomePageClientProps) {
                     />
                 ) : selectedType === 'appendices' ? (
                     <AppendicesView theme={theme} darkMode={darkMode} />
+                ) : selectedType === 'other' ? (
+                    <OtherView theme={theme} darkMode={darkMode} />
                 ) : (
                     <MediaGrid media={paginatedMedia} theme={theme} viewMode={viewMode} />
                 )}
 
                 {/* Pagination */}
-                {selectedType !== 'perspectives' && selectedType !== 'appendices' && totalPages > 1 && (
+                {selectedType !== 'perspectives' && selectedType !== 'appendices' && selectedType !== 'other' && totalPages > 1 && (
                     <div className={`flex items-center justify-between mt-8 pt-6 border-t ${theme.border}`}>
                         <button
                             onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
@@ -319,14 +344,18 @@ export default function HomePageClient({ initialMedia }: HomePageClientProps) {
     );
 }
 
-function FilterButton({ active, children, onClick, theme }: any) {
+function FilterButton({ active, children, onClick, theme, darkMode }: any) {
     return (
         <button
             onClick={onClick}
             aria-pressed={active}
             className={`px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-widest transition-all flex items-center border ${active
-                ? `bg-zinc-100 text-zinc-900 border-zinc-500 dark:bg-zinc-100 dark:text-zinc-900 dark:border-zinc-100`
-                : `${theme.textMuted} ${theme.bg} ${theme.border} hover:${theme.text} hover:border-gray-400 dark:hover:border-zinc-600`
+                ? darkMode
+                    ? 'bg-white text-zinc-900 border-white'
+                    : 'bg-zinc-900 text-white border-zinc-900'
+                : darkMode
+                    ? 'bg-transparent text-zinc-400 border-zinc-700 hover:text-zinc-100 hover:border-zinc-500'
+                    : 'bg-transparent text-gray-600 border-gray-300 hover:text-gray-900 hover:border-gray-400'
                 }`}
         >
             {children}

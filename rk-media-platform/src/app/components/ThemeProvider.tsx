@@ -10,7 +10,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true); // Default to dark mode
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -23,7 +23,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         } else if (saved === 'light') {
             setDarkMode(false);
             document.documentElement.classList.remove('dark');
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        } else {
+            // Default to dark mode if no preference saved
             setDarkMode(true);
             document.documentElement.classList.add('dark');
         }

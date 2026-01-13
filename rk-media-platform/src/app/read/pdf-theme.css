@@ -1,0 +1,44 @@
+/* .rpv-core__page-layer {
+    filter: invert(1) hue-rotate(180deg); - Disabled per user request
+} */
+
+/* Re-invert images so they look normal */
+/* Note: This is a best-effort. PDF.js renders images on a canvas separate from text layer in some modes. 
+   If images are part of the main canvas, they might be inverted. 
+   We target common image containers if possible, but pure canvas inversion affects everything.
+   For text-heavy books, full inversion is usually preferred. */
+
+/* Custom Selection Color: Amber/Gold */
+::selection {
+    background: rgba(251, 191, 36, 0.4) !important;
+    /* amber-400 with opacity */
+    color: #fff !important;
+}
+
+/* Custom Highlight Color */
+/* Override react-pdf-viewer's default yellow */
+.rpv-search__highlight {
+    background-color: rgba(251, 191, 36, 0.5) !important;
+    outline: 1px solid rgba(251, 191, 36, 0.8);
+}
+
+/* Scrollbar customization for the sidebar */
+.rpv-search__sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.rpv-search__sidebar::-webkit-scrollbar-track {
+    background: #18181b;
+    /* zinc-900 */
+}
+
+.rpv-search__sidebar::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    /* zinc-700 */
+    border-radius: 3px;
+}
+
+.rpv-search__sidebar::-webkit-scrollbar-thumb:hover {
+    background: #52525b;
+    /* zinc-600 */
+}

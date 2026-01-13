@@ -33,4 +33,6 @@ export interface ThemeColors {
     header: string;
     statsBar: string;
     button: string;
+    highlight?: string;
+    yearHeader?: string;
 }

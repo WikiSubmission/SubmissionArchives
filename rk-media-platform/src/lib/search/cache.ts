@@ -7,6 +7,8 @@ export type SearchResult = {
     date: string;
     filename: string;
     matches: string[];
+    score?: number; // Relevance score for sorting
+    dateTimestamp?: number; // Parsed timestamp for date sorting
 };
 
 export interface SearchOptions {
@@ -27,9 +29,9 @@ export class SearchCache {
     private maxAge: number;
     private maxSize: number;
 
-    constructor(maxAge: number = 5 * 60 * 1000, maxSize: number = 50) {
-        this.maxAge = maxAge; // Default: 5 minutes
-        this.maxSize = maxSize; // Default: 50 queries
+    constructor(maxAge: number = 15 * 60 * 1000, maxSize: number = 100) {
+        this.maxAge = maxAge; // Default: 15 minutes (optimized for static content)
+        this.maxSize = maxSize; // Default: 100 queries
     }
 
     /**

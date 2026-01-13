@@ -131,9 +131,14 @@ function parseVTT(vttContent: string) {
     return segments;
 }
 
-export default async function WatchPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function WatchPage({ params, searchParams }: { params: Promise<{ id: string[] }>, searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
     const { id } = await params;
-    const key = decodeURIComponent(id);
+    const { t } = await searchParams;
+    const initialTime = t ? parseInt(t as string) : 0;
+
+    // Reconstruct key from path segments
+    // decoding each segment handles spaces/special chars if Next.js encoded them
+    const key = id.map(segment => decodeURIComponent(segment)).join('/');
     const filename = key.split('/').pop() || key;
 
     // Determine type from key prefix
@@ -269,5 +274,5 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
         console.error("Error fetching transcript:", err);
     }
 
-    return <Player media={media as any} segments={segments} signedUrl={signedUrl} prev={prev} next={next} />;
+    return <Player media={media as any} segments={segments} signedUrl={signedUrl} prev={prev} next={next} initialTime={initialTime} />;
 }
