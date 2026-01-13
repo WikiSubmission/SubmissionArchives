@@ -30,5 +30,52 @@
 A topical aggregation engine designed to compile all mentions of specific subjects across the entire archive.
 *   *Example*: A "Contact Prayer (Salat)" note would aggregate every sermon clip, Quran study remark, and newsletter article mentioning Salat details (e.g., the correction on numbering units from Quran Study 52) into a single, organized view.
 
+## Architecture & Technology
+
+Built on a modern stack designed for performance and longevity:
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Storage**: **Cloudflare R2** (Serves 50GB+ of media)
+- **Search**: Custom client-side engine with fuzzy matching and n-gram indices.
+
+## Local Development
+
+### Prerequisites
+- Node.js 18+
+- NPM
+
+### Setup
+
+1.  **Clone & Install**:
+    ```bash
+    git clone https://github.com/HadithCritic/SubmissionArchives.git
+    cd SubmissionArchives
+    npm install
+    ```
+
+2.  **Configure Environment**:
+    Create a `.env.local` file in the root with your Cloudflare R2 credentials (required for media playback):
+    ```env
+    R2_ACCOUNT_ID=your_id
+    R2_ACCESS_KEY_ID=your_key
+    R2_SECRET_ACCESS_KEY=your_secret
+    R2_BUCKET_NAME=your_bucket
+    ```
+
+3.  **Run Dev Server**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000).
+
+4.  **Production Build**:
+    ```bash
+    npm run build
+    ```
+    *Note: This automatically runs `build-search-index.ts` to generate optimized search indices.*
+
 ---
+
 *Dedicated to the preservation and dissemination of the message of God alone.*
