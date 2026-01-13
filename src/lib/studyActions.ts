@@ -1,6 +1,6 @@
 'use server';
 
-import { createClient } from '@supabase/supabase-js';
+
 
 // --- TYPES ---
 
@@ -22,7 +22,9 @@ export interface StudyEntry {
 }
 
 // --- DATABASE CLIENT ---
-import { supabase } from '@/lib/supabaseClient';
+// --- DATABASE CLIENT ---
+// Removed Supabase client
+
 
 // --- LOCAL DATA OVERRIDES ---
 
@@ -1251,29 +1253,8 @@ export async function fetchChapterNotes(source: string, book: string, chapter: n
   };
   const dbSource = prefixMap[source] || source.toUpperCase();
 
-  // Reference format example: "NT:Matthew:5:*"
-  const searchPattern = `${dbSource}:${book}:${chapter}:%`;
-
-  // 1. Fetch from Supabase
-  const { data, error } = await supabase
-    .from('study_entries')
-    .select('*')
-    .like('verse_ref', searchPattern);
-
-  if (error) {
-    console.error("Error fetching study notes:", error);
-    // Fallback to local entries if DB fails
-    return getLocalEntries(dbSource, book, chapter);
-  }
-
-  const dbEntries = (data as StudyEntry[]) || [];
-
-  // 2. Merge with Local Entries
-  const localEntries = getLocalEntries(dbSource, book, chapter);
-
-  // Combine, prioritizing local entries? or just appending?
-  // Let's prepend local entries so they appear first if they are critical
-  return [...localEntries, ...dbEntries];
+  // Return only local entries
+  return getLocalEntries(dbSource, book, chapter);
 }
 
 function getLocalEntries(dbSource: string, book: string, chapter: number): StudyEntry[] {
@@ -1282,12 +1263,5 @@ function getLocalEntries(dbSource: string, book: string, chapter: number): Study
 }
 
 export async function createStudyEntry(entry: Partial<StudyEntry>) {
-  const { data, error } = await supabase
-    .from('study_entries')
-    .insert(entry)
-    .select()
-    .single();
-
-  if (error) throw error;
-  return data;
+  throw new Error("createStudyEntry is disabled as Supabase has been removed.");
 }
