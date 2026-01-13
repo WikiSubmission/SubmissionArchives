@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, BookOpen } from 'lucide-react';
-import Header from '@/components/Header';
+import Header from '@/components/layout/Header';
 
 type AppendixContentProps = {
     content: any;

@@ -10,7 +10,7 @@ import { useDebounce } from '@/hooks/useDebounce';
 import { Media, Newsletter } from '@/types/media';
 
 import DigitalRain from '@/components/effects/DigitalRain';
-import Header from '@/components/Header';
+import Header from '@/components/layout/Header';
 import { MediaGrid } from './components/home/MediaGrid';
 import { NewslettersView } from './components/home/NewslettersView';
 import { AppendicesView } from './components/home/AppendicesView';

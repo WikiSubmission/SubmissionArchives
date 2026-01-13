@@ -6,7 +6,7 @@ import { BookOpen, Search, Play, Pause, Volume2, VolumeX, RotateCcw, Maximize, C
 import { formatMedia } from '@/lib/formatUtils';
 import { MEDIA_METADATA } from '@/lib/mediaMetadata';
 import { updateTranscript } from '../actions';
-import Header from '@/components/Header';
+import Header from '@/components/layout/Header';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { useWatchHistory } from '@/hooks/useWatchHistory';
 import BookmarkPanel from '@/components/player/BookmarkPanel';
