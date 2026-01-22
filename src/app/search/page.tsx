@@ -380,7 +380,7 @@ function SearchContent() {
                                                 const visibleMatches = isExpanded ? matches : matches.slice(0, 3);
 
                                                 // Universal PDF Reader linking
-                                                let mediaLink = `/watch/${media.id}`;
+                                                let mediaLink = `/media/${media.id}`;
                                                 let thumbnailSrc = '/images/placeholders/appendix.png'; // Default
 
                                                 // Determine Thumbnail (keeping logic exactly as is)
@@ -425,7 +425,7 @@ function SearchContent() {
                                                     if (query) params.append('q', query);
                                                     if (media.page) params.append('page', media.page.toString());
 
-                                                    mediaLink = `/read/${media.id}?${params.toString()}`;
+                                                    mediaLink = `/library/${media.id}?${params.toString()}`;
                                                 }
 
                                                 return (

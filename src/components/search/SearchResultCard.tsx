@@ -53,7 +53,7 @@ export default function SearchResultCard({ result, theme, query }: SearchResultC
     };
 
     return (
-        <Link href={`/submitter-perspectives/${result.filename}`}>
+        <Link href={`/library/${result.filename}`}>
             <div className={`${theme.card} group relative p-6 border ${theme.border} rounded-sm overflow-hidden hover:border-amber-500/50 transition-all cursor-pointer hover:shadow-md animate-in fade-in slide-in-from-bottom-2 duration-300`}>
                 <div className="flex items-start gap-4">
                     {/* Icon / Date Box */}
