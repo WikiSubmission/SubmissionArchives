@@ -13,7 +13,7 @@ export function MediaGrid({ media, theme, viewMode }: MediaGridProps) {
         return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {media.map((item) => (
-                    <Link href={`/watch/${encodeURIComponent(item.id)}`} key={item.id} className="block h-full">
+                    <Link href={`/media/${encodeURIComponent(item.id)}`} key={item.id} className="block h-full">
                         <MediaCard item={item} theme={theme} />
                     </Link>
                 ))}
@@ -24,7 +24,7 @@ export function MediaGrid({ media, theme, viewMode }: MediaGridProps) {
     return (
         <div className="space-y-3">
             {media.map((item) => (
-                <Link href={`/watch/${encodeURIComponent(item.id)}`} key={item.id} className="block">
+                <Link href={`/media/${encodeURIComponent(item.id)}`} key={item.id} className="block">
                     <MediaList item={item} theme={theme} />
                 </Link>
             ))}

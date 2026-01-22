@@ -33,6 +33,7 @@ function SearchContent() {
     });
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set());
+    const [expandedMatches, setExpandedMatches] = useState<Set<string>>(new Set());
 
     // Theme classes (Matching HomePageClient)
     const theme = darkMode ? {
@@ -89,6 +90,7 @@ function SearchContent() {
 
         setIsSearching(true);
         setResults([]);
+        setExpandedMatches(new Set()); // Reset expansions on new search
         setErrorMsg(null);
 
         try {
@@ -132,8 +134,6 @@ function SearchContent() {
     const toggleFilter = (key: keyof typeof filters) => {
         setFilters(prev => {
             const newFilters = { ...prev, [key]: !prev[key] };
-            // Update URL when filters change
-            updateURL(query, newFilters);
             return newFilters;
         });
     };
@@ -158,6 +158,18 @@ function SearchContent() {
         });
     };
 
+    const toggleMatches = (key: string) => {
+        setExpandedMatches(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(key)) {
+                newSet.delete(key);
+            } else {
+                newSet.add(key);
+            }
+            return newSet;
+        });
+    };
+
     // Group results by type
     const groupedResults = useMemo(() => {
         const groups: Record<string, any[]> = {};
@@ -175,6 +187,7 @@ function SearchContent() {
     useEffect(() => {
         if (!query.trim()) {
             setResults([]);
+            setExpandedMatches(new Set());
             return;
         }
 
@@ -362,14 +375,16 @@ function SearchContent() {
                                         <div className="divide-y divide-zinc-800">
                                             {typeResults.map(({ media, matches }) => {
                                                 const Icon = sectionConfig.icon;
+                                                const itemKey = `${media.id}${media.page ? `-${media.page}` : ''}`;
+                                                const isExpanded = expandedMatches.has(itemKey);
+                                                const visibleMatches = isExpanded ? matches : matches.slice(0, 3);
 
                                                 // Universal PDF Reader linking
                                                 let mediaLink = `/watch/${media.id}`;
                                                 let thumbnailSrc = '/images/placeholders/appendix.png'; // Default
 
-                                                // Determine Thumbnail
+                                                // Determine Thumbnail (keeping logic exactly as is)
                                                 if (['sermon'].includes(media.type)) {
-                                                    // Use YouTube thumbnail for sermons
                                                     const cleanId = media.id
                                                         .replace(/^media\/(disorganized_sermons|VIDEO PROGRAMS)\//, '')
                                                         .replace(/\s+/g, '_')
@@ -377,7 +392,6 @@ function SearchContent() {
                                                         .replace(/\.mp4$/, '');
                                                     thumbnailSrc = `/images/sermons/${cleanId}.jpg`;
                                                 } else if (['video-program'].includes(media.type)) {
-                                                    // Use YouTube thumbnail for video programs
                                                     const cleanId = media.id
                                                         .replace(/^media\/(disorganized_sermons|VIDEO PROGRAMS)\//, '')
                                                         .replace(/\s+/g, '_')
@@ -393,7 +407,6 @@ function SearchContent() {
                                                 } else if (['other'].includes(media.type)) {
                                                     thumbnailSrc = `/images/other/${media.id}.jpg`;
                                                 } else if (media.type === 'quran-study') {
-                                                    // Extract number from title/id (e.g. "1) Quran Study...")
                                                     const match = media.title.match(/^(\d+)\)/) || media.id.match(/quran-study-v2\/(\d+)/);
                                                     if (match) {
                                                         const num = parseInt(match[1]);
@@ -416,7 +429,7 @@ function SearchContent() {
                                                 }
 
                                                 return (
-                                                    <div key={`${media.id}${media.page ? `-${media.page}` : ''}`} className={`${theme.card} overflow-hidden group border-b ${theme.border} last:border-0`}>
+                                                    <div key={itemKey} className={`${theme.card} overflow-hidden group border-b ${theme.border} last:border-0`}>
                                                         <div className="flex flex-col md:flex-row">
                                                             {/* Thumbnail Column */}
                                                             <div className="w-32 md:w-40 shrink-0 p-3">
@@ -426,7 +439,6 @@ function SearchContent() {
                                                                         alt={media.title}
                                                                         className={`w-full h-full ${['quran-study', 'perspective', 'appendix', 'other'].includes(media.type) ? 'object-contain p-1 bg-black/5 dark:bg-black' : 'object-cover'} opacity-90 group-hover:opacity-100 transition-opacity`}
                                                                     />
-                                                                    {/* Overlay Icon for Media */}
                                                                     {['sermon', 'video-program', 'audio', 'messenger-audio'].includes(media.type) && (
                                                                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                                                             <div className="bg-black/30 rounded-full p-1.5 backdrop-blur-[1px]">
@@ -465,7 +477,7 @@ function SearchContent() {
                                                                 {/* Matches Grid */}
                                                                 <div className={`border-t ${theme.border}`}>
                                                                     <div className="divide-y divide-dashed dark:divide-zinc-800/50">
-                                                                        {matches.slice(0, 3).map((match: any) => (
+                                                                        {visibleMatches.map((match: any) => (
                                                                             <div key={match.id} className="p-3 pl-4 md:pl-6 transition-colors group/match">
                                                                                 <div className="flex gap-4 items-baseline">
                                                                                     <div className="shrink-0 w-16 pt-0.5">
@@ -492,12 +504,12 @@ function SearchContent() {
                                                                         ))}
                                                                     </div>
                                                                     {matches.length > 3 && (
-                                                                        <Link
-                                                                            href={mediaLink}
-                                                                            className={`block py-2 text-center text-[10px] font-bold uppercase tracking-widest ${theme.textVeryMuted} hover:${theme.text} transition-colors font-mono border-t border-dashed dark:border-zinc-800/50`}
+                                                                        <button
+                                                                            onClick={() => toggleMatches(itemKey)}
+                                                                            className={`w-full block py-2 text-center text-[10px] font-bold uppercase tracking-widest ${theme.textVeryMuted} hover:${theme.text} transition-colors font-mono border-t border-dashed dark:border-zinc-800/50`}
                                                                         >
-                                                                            +{matches.length - 3} more matches
-                                                                        </Link>
+                                                                            {isExpanded ? 'Show Less' : `+${matches.length - 3} more matches`}
+                                                                        </button>
                                                                     )}
                                                                 </div>
                                                             </div>

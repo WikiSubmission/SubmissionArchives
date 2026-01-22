@@ -4,20 +4,20 @@ import React, { useEffect, useRef, useState } from 'react';
 
 interface DigitalRainProps {
     className?: string;
-    color?: string; // Hex or rgba color for the characters
-    speed?: number; // Speed factor (default 1)
-    opacity?: number; // Overall opacity of the effect
-    direction?: 'down' | 'up'; // Future proofing
-    fadeColor?: string; // Color to fade trails to (usually background color)
-    duration?: number; // Duration in ms before fading out completely (optional)
+    color?: string;
+    speed?: number;
+    opacity?: number;
+    direction?: 'down' | 'up';
+    fadeColor?: string;
+    duration?: number;
 }
 
 const DigitalRain: React.FC<DigitalRainProps> = ({
     className = "",
-    color = "#10B981", // Default Emerald-500
+    color = "#10B981",
     speed = 1,
-    opacity = 0.2, // Default low opacity for background
-    fadeColor = "rgba(0, 0, 0, 0.05)", // Default dark mode fade
+    opacity = 0.3,
+    fadeColor = "rgba(0, 0, 0, 0.05)",
     duration
 }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -26,16 +26,9 @@ const DigitalRain: React.FC<DigitalRainProps> = ({
 
     useEffect(() => {
         if (duration) {
-            const fadeStart = Math.max(0, duration - 1000); // Start fading 1s before end
-
-            const fadeTimer = setTimeout(() => {
-                setIsFading(true);
-            }, fadeStart);
-
-            const endTimer = setTimeout(() => {
-                setVisible(false);
-            }, duration);
-
+            const fadeStart = Math.max(0, duration - 1000);
+            const fadeTimer = setTimeout(() => setIsFading(true), fadeStart);
+            const endTimer = setTimeout(() => setVisible(false), duration);
             return () => {
                 clearTimeout(fadeTimer);
                 clearTimeout(endTimer);
@@ -47,10 +40,9 @@ const DigitalRain: React.FC<DigitalRainProps> = ({
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d', { alpha: true });
         if (!ctx) return;
 
-        // Set canvas dimensions
         const resizeCanvas = () => {
             if (canvas) {
                 canvas.width = window.innerWidth;
@@ -61,50 +53,96 @@ const DigitalRain: React.FC<DigitalRainProps> = ({
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        // Configuration
-        const fontSize = 14;
+        // Enhanced configuration
+        const fontSize = 16; // Slightly larger for visibility
         const columns = Math.floor(canvas.width / fontSize);
-        const drops: number[] = [];
 
-        // Initialize drops
-        for (let i = 0; i < columns; i++) {
-            drops[i] = Math.random() * -100; // Start at random positions above visible area
+        // Drop state tracking
+        interface Drop {
+            y: number;
+            speed: number;
+            brightness: number;
         }
 
-        const characters = "01"; // Binary rain
+        const drops: Drop[] = [];
+
+        // Initialize with varied properties
+        for (let i = 0; i < columns; i++) {
+            drops[i] = {
+                y: Math.random() * -canvas.height,
+                speed: 0.5 + Math.random() * 1.5, // Varied speeds
+                brightness: 0.3 + Math.random() * 0.7 // Varied brightness
+            };
+        }
+
+        // Binary only
+        const characters = "01";
 
         let animationId: number;
 
         const draw = () => {
-            // Fade out previous frame to create trails
+            // Semi-transparent black for trailing effect
             ctx.fillStyle = fadeColor;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = color;
-            ctx.font = `${fontSize}px monospace`;
-
+            // Draw each column
             for (let i = 0; i < drops.length; i++) {
-                // Randomly skip drawing some frames for "glitchier" look or varying speeds
-                if (Math.random() > 0.975) {
-                    // flickering character
-                }
+                const drop = drops[i];
 
-                const text = characters.charAt(Math.floor(Math.random() * characters.length));
-
-                // x = i * fontSize, y = value of drops[i] * fontSize
+                // Random character
+                const char = characters.charAt(Math.floor(Math.random() * characters.length));
                 const x = i * fontSize;
-                const y = drops[i] * fontSize;
+                const y = drop.y * fontSize;
 
-                ctx.fillText(text, x, y);
+                // Leading character (brightest)
+                if (y > 0 && y < canvas.height) {
+                    // Glow effect for leading char
+                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = color;
 
-                // Reset drop to top randomly after it crossed screen
-                // Add randomness to reset so they don't all look like a curtain
-                if (y > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
+                    // Convert hex to rgba with brightness
+                    const r = parseInt(color.slice(1, 3), 16);
+                    const g = parseInt(color.slice(3, 5), 16);
+                    const b = parseInt(color.slice(5, 7), 16);
+
+                    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${drop.brightness})`;
+                    ctx.font = `bold ${fontSize}px monospace`;
+                    ctx.fillText(char, x, y);
+
+                    // Trail characters (dimmer)
+                    for (let j = 1; j < 8; j++) {
+                        const trailY = y - j * fontSize;
+                        if (trailY > 0) {
+                            const trailOpacity = drop.brightness * (1 - j / 8);
+                            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${trailOpacity})`;
+                            ctx.shadowBlur = 5;
+                            ctx.font = `${fontSize}px monospace`;
+                            ctx.fillText(
+                                characters.charAt(Math.floor(Math.random() * characters.length)),
+                                x,
+                                trailY
+                            );
+                        }
+                    }
+
+                    // Reset shadow
+                    ctx.shadowBlur = 0;
                 }
 
-                // Increment y coordinate
-                drops[i] += speed;
+                // Move drop
+                drop.y += drop.speed * speed;
+
+                // Reset when off screen
+                if (drop.y * fontSize > canvas.height + 100) {
+                    drop.y = Math.random() * -10;
+                    drop.speed = 0.5 + Math.random() * 1.5;
+                    drop.brightness = 0.3 + Math.random() * 0.7;
+                }
+
+                // Occasional random repositioning for variety
+                if (Math.random() > 0.998) {
+                    drop.y = Math.random() * -50;
+                }
             }
 
             animationId = requestAnimationFrame(draw);

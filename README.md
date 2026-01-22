@@ -76,6 +76,24 @@ Built on a modern stack designed for performance and longevity:
     ```
     *Note: This automatically runs `build-search-index.ts` to generate optimized search indices.*
 
+## Recent Updates (v2.1)
+
+### Mobile Responsiveness
+Major UI overhaul to ensure a seamless experience on mobile devices:
+- **Responsive Navigation**: New mobile-friendly header with hamburger menu and slide-out drawer.
+- **Adaptive Homepage**: Horizontal scrolling stats bar and single-column media layouts for small screens.
+- **Optimized Content**: Typography and layouts (e.g., "The False Verses") now scale gracefully.
+- **Improved Player**: Video and transcript views stack vertically on mobile for better usability.
+
+### Codebase Cleanup & Optimization
+- **Script Audit**: Removed deprecated debugging scripts to keep the repository clean.
+- **Structure**: Reorganized deprecated "Biblical" code and orphaned files.
+- **Performance**: Optimized build process and dependency management.
+
+### R2 Storage Migration
+- **VTT Transcripts**: Migrated all local transcript files (`.vtt`) to Cloudflare R2.
+- **Direct Fetching**: Updated application logic to fetch transcripts directly from R2, reducing repository size and local dependencies.
+
 ---
 
 *Dedicated to the preservation and dissemination of the message of God alone.*

@@ -40,36 +40,94 @@ function tokenize(text: string): string[] {
         .filter(w => w.length > 2); // Filter out short words
 }
 
-function generateTrigrams(word: string): string[] {
-    if (word.length < 3) return [];
-    const trigrams: string[] = [];
-    for (let i = 0; i <= word.length - 3; i++) {
-        trigrams.push(word.substring(i, i + 3));
+
+function getPhoneticCode(word: string): string {
+    let code = word.toUpperCase();
+    code = code.replace(/[^A-Z]/g, '');
+    if (code.length === 0) return '';
+    if (code.startsWith('KN') || code.startsWith('GN') || code.startsWith('PN') || code.startsWith('AE') || code.startsWith('WR')) {
+        code = code.substring(1);
     }
-    return trigrams;
+    let ph = '';
+    const len = code.length;
+    for (let i = 0; i < len; i++) {
+        const c = code[i];
+        const next = code[i + 1] || '';
+        const prev = code[i - 1] || '';
+        if (c === prev && c !== 'C') continue;
+        switch (c) {
+            case 'A': case 'E': case 'I': case 'O': case 'U':
+                if (i === 0) ph += c;
+                break;
+            case 'B':
+                if (prev === 'M' && i === len - 1) break;
+                ph += 'B';
+                break;
+            case 'C':
+                if (next === 'H') { ph += 'X'; i++; }
+                else if (next === 'I' || next === 'E' || next === 'Y') { ph += 'S'; }
+                else { ph += 'K'; }
+                break;
+            case 'D':
+                if (next === 'G' && (code[i + 2] === 'E' || code[i + 2] === 'I' || code[i + 2] === 'Y')) { ph += 'J'; i += 2; }
+                else { ph += 'T'; }
+                break;
+            case 'F': ph += 'F'; break;
+            case 'G':
+                if (next === 'H') {
+                    if (i > 0 && !'AEIOU'.includes(code[i - 2])) ph += 'F';
+                    i++;
+                } else if (next === 'N') { ph += 'N'; }
+                else if (next === 'I' || next === 'E' || next === 'Y') { ph += 'J'; }
+                else { ph += 'K'; }
+                break;
+            case 'H':
+                if (i === 0 || 'AEIOU'.includes(prev)) ph += 'H';
+                break;
+            case 'J': ph += 'J'; break;
+            case 'K': if (prev !== 'C') ph += 'K'; break;
+            case 'L': ph += 'L'; break;
+            case 'M': ph += 'M'; break;
+            case 'N': ph += 'N'; break;
+            case 'P': if (next === 'H') { ph += 'F'; i++; } else { ph += 'P'; } break;
+            case 'Q': ph += 'K'; break;
+            case 'R': ph += 'R'; break;
+            case 'S': if (next === 'H') { ph += 'X'; i++; } else { ph += 'S'; } break;
+            case 'T':
+                if (next === 'H') { ph += '0'; i++; }
+                else if (next === 'I' && (code[i + 2] === 'O' || code[i + 2] === 'A')) { ph += 'X'; }
+                else { ph += 'T'; }
+                break;
+            case 'V': ph += 'F'; break;
+            case 'W': case 'Y': if (i === 0) ph += c; break;
+            case 'X': ph += 'KS'; break;
+            case 'Z': ph += 'S'; break;
+        }
+    }
+    return ph;
 }
 
 function buildSearchIndex() {
     console.log('[Build] Starting search index generation...');
 
-    const sourcePath = 'src/data/newsletters/search_index.json'; // Changed from public to src/data where we moved it
+    const sourcePath = 'src/data/newsletters/search_index.json';
 
     if (!fs.existsSync(sourcePath)) {
         console.error(`[Build] Source file not found: ${sourcePath}`);
         process.exit(1);
     }
 
-    // Load source data
     const sourceData = JSON.parse(
         fs.readFileSync(sourcePath, 'utf-8')
     ) as Newsletter[];
 
     console.log(`[Build] Loaded ${sourceData.length} newsletters`);
 
-    const index: OptimizedIndex = {
+    // UPDATED INTERFACE to use phonetic instead of ngrams
+    const index: any = {
         documents: [],
         invertedIndex: {},
-        ngrams: {},
+        phonetic: {}, // CHANGED
         metadata: {
             totalDocuments: sourceData.length,
             totalWords: 0,
@@ -80,13 +138,11 @@ function buildSearchIndex() {
     const contentStore: ContentStore = {};
     const vocabularySet = new Set<string>();
 
-    // Process each document
     sourceData.forEach((newsletter, idx) => {
         if (idx % 50 === 0) {
             console.log(`[Build] Processing ${idx}/${sourceData.length}...`);
         }
 
-        // Store document metadata
         index.documents.push({
             id: newsletter.id,
             title: newsletter.title,
@@ -95,15 +151,12 @@ function buildSearchIndex() {
             filename: newsletter.filename
         });
 
-        // Store content separately
         contentStore[newsletter.id] = newsletter.content;
 
-        // Tokenize title and content
         const titleWords = tokenize(newsletter.title);
         const contentWords = tokenize(newsletter.content);
         const allWords = [...new Set([...titleWords, ...contentWords])];
 
-        // Build inverted index
         allWords.forEach(word => {
             vocabularySet.add(word);
 
@@ -111,7 +164,6 @@ function buildSearchIndex() {
                 index.invertedIndex[word] = [];
             }
 
-            // Store document ID if not already present
             if (!index.invertedIndex[word].includes(newsletter.id)) {
                 index.invertedIndex[word].push(newsletter.id);
             }
@@ -121,24 +173,24 @@ function buildSearchIndex() {
     console.log(`[Build] Vocabulary size: ${vocabularySet.size} unique words`);
     index.metadata.totalWords = vocabularySet.size;
 
-    // Build n-gram index for fuzzy matching
-    console.log('[Build] Building n-gram index for fuzzy matching...');
-    let ngramCount = 0;
+    // Build Phonetic Index
+    console.log('[Build] Building phonetic index for fuzzy matching...');
+    let phoneticCount = 0;
 
     vocabularySet.forEach(word => {
-        const trigrams = generateTrigrams(word);
-        trigrams.forEach(trigram => {
-            if (!index.ngrams[trigram]) {
-                index.ngrams[trigram] = [];
-                ngramCount++;
-            }
-            if (!index.ngrams[trigram].includes(word)) {
-                index.ngrams[trigram].push(word);
-            }
-        });
+        const code = getPhoneticCode(word);
+        if (!code) return;
+
+        if (!index.phonetic[code]) {
+            index.phonetic[code] = [];
+            phoneticCount++;
+        }
+        if (!index.phonetic[code].includes(word)) {
+            index.phonetic[code].push(word);
+        }
     });
 
-    console.log(`[Build] Generated ${ngramCount} unique trigrams`);
+    console.log(`[Build] Generated ${phoneticCount} phonetic codes from ${vocabularySet.size} words`);
 
     // Write optimized index
     const indexPath = 'src/data/newsletters/search-index-optimized.json';
@@ -160,7 +212,7 @@ function buildSearchIndex() {
     const stats = {
         totalDocuments: index.metadata.totalDocuments,
         totalWords: index.metadata.totalWords,
-        totalTrigrams: ngramCount,
+        totalPhoneticCodes: phoneticCount,
         indexSize: `${indexSize}MB`,
         contentSize: `${contentSize}MB`,
         buildDate: index.metadata.buildDate,
@@ -177,14 +229,9 @@ function buildSearchIndex() {
     console.log(JSON.stringify(stats, null, 2));
 }
 
-// Run if called directly
-if (require.main === module) {
-    try {
-        buildSearchIndex();
-    } catch (error) {
-        console.error('[Build] Error:', error);
-        process.exit(1);
-    }
-}
+
+// Run directly
+buildSearchIndex();
+
 
 export { buildSearchIndex };

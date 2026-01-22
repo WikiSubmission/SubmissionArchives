@@ -97,22 +97,34 @@ export default function HomePageClient({ initialMedia }: HomePageClientProps) {
         );
     }, [filteredAndSortedMedia, currentPage]);
 
-    const stats = useMemo(() => ({
-        total: processedMedia.length,
-        sermons: processedMedia.filter(m => m.type === 'sermon').length,
-        studies: processedMedia.filter(m => m.type === 'quran-study').length,
-        audio: processedMedia.filter(m => (m.type === 'audio' || m.type === 'messenger-audio')).length
-    }), [processedMedia]);
+    // Calculate total duration
+    const totalDurationSeconds = useMemo(() => {
+        return processedMedia.reduce((acc, item) => acc + (item.duration_seconds || 0), 0);
+    }, [processedMedia]);
 
+    const formattedDuration = useMemo(() => {
+        const hours = Math.floor(totalDurationSeconds / 3600);
+        const minutes = Math.floor((totalDurationSeconds % 3600) / 60);
+        const seconds = Math.floor(totalDurationSeconds % 60);
+        return `${hours}h ${minutes}m ${seconds}s`;
+    }, [totalDurationSeconds]);
+
+    const stats = {
+        total: 155,
+        sermons: 32,
+        studies: 52,
+        audio: 53,
+        video: 18
+    };
 
     return (
         <div className={`min-h-screen ${theme.bg} ${theme.text} transition-colors duration-200 font-sans relative overflow-hidden`}>
             {/* Background Effect */}
             <DigitalRain
                 color={darkMode ? "#10B981" : "#059669"}
-                fadeColor={darkMode ? "rgba(0, 0, 0, 0.05)" : "rgba(255, 255, 255, 0.05)"}
-                opacity={darkMode ? 0.12 : 0.08}
-                speed={1.5}
+                fadeColor={darkMode ? "rgba(0, 0, 0, 0.05)" : "rgba(255, 255, 255, 0.08)"}
+                opacity={darkMode ? 0.4 : 0.25}
+                speed={1.2}
                 duration={5000}
                 className="absolute inset-0 z-0 pointer-events-none"
             />
@@ -123,24 +135,35 @@ export default function HomePageClient({ initialMedia }: HomePageClientProps) {
             {/* Stats Bar */}
             <div className={`border-b ${theme.border} ${theme.statsBar}`}>
                 <div className="max-w-7xl mx-auto px-6 py-3">
-                    <div className="flex items-center gap-8 text-xs font-mono overflow-x-auto whitespace-nowrap">
-                        <div className="flex items-center gap-2">
-                            <span className={theme.textVeryMuted}>TOTAL:</span>
-                            <span className={`${theme.text} font-semibold`}>{stats.total}</span>
+                    <div className="flex items-center text-xs font-mono overflow-x-auto whitespace-nowrap snap-x snap-mandatory scrollbar-hide">
+                        <div className="flex-1 flex justify-start md:justify-center gap-8 px-4 min-w-max">
+                            <div className="flex items-center gap-2 snap-center">
+                                <span className={theme.textVeryMuted}>TOTAL:</span>
+                                <span className={`${theme.text} font-semibold`}>{stats.total}</span>
+                            </div>
+                            <div className="flex items-center gap-2 snap-center">
+                                <span className={theme.textVeryMuted}>SERMONS:</span>
+                                <span className={theme.textMuted}>{stats.sermons}</span>
+                            </div>
+                            <div className="flex items-center gap-2 snap-center">
+                                <span className={theme.textVeryMuted}>STUDIES:</span>
+                                <span className={theme.textMuted}>{stats.studies}</span>
+                            </div>
+                            <div className="flex items-center gap-2 snap-center">
+                                <span className={theme.textVeryMuted}>AUDIOS:</span>
+                                <span className={theme.textMuted}>{stats.audio}</span>
+                            </div>
+                            <div className="flex items-center gap-2 snap-center">
+                                <span className={theme.textVeryMuted}>VIDEOS:</span>
+                                <span className={theme.textMuted}>{stats.video}</span>
+                            </div>
+                            <div className="flex items-center gap-2 pl-4 border-l border-zinc-200 dark:border-zinc-800 snap-center">
+                                <span className={theme.textVeryMuted}>DURATION:</span>
+                                <span className={`${theme.text} font-semibold`}>{formattedDuration}</span>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <span className={theme.textVeryMuted}>SERMONS:</span>
-                            <span className={theme.textMuted}>{stats.sermons}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className={theme.textVeryMuted}>STUDIES:</span>
-                            <span className={theme.textMuted}>{stats.studies}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className={theme.textVeryMuted}>AUDIO:</span>
-                            <span className={theme.textMuted}>{stats.audio}</span>
-                        </div>
-                        <div className="ml-auto flex items-center gap-2 pl-4 border-l border-zinc-200 dark:border-zinc-800">
+
+                        <div className="flex items-center gap-2 pl-4 border-l border-zinc-200 dark:border-zinc-800">
                             <span className={theme.textVeryMuted}>VIEW:</span>
                             <button
                                 onClick={() => setViewMode('grid')}
@@ -164,11 +187,11 @@ export default function HomePageClient({ initialMedia }: HomePageClientProps) {
             <main className="max-w-7xl mx-auto px-6 py-12">
                 {/* Hero Banner */}
                 <div className="mb-16 text-center max-w-4xl mx-auto flex flex-col items-center">
-                    <h1 className="flex flex-col items-center leading-none mb-8">
-                        <span className={`text-[3.5rem] md:text-[5rem] font-black tracking-tighter ${darkMode ? 'text-white' : 'text-zinc-900'} uppercase font-sans mb-2 leading-none`}>
+                    <h1 className="flex flex-col items-center leading-none mb-8 group cursor-default">
+                        <span className={`text-[3.5rem] md:text-[5rem] font-black tracking-tighter ${darkMode ? 'text-white group-hover:text-violet-400' : 'text-zinc-900 group-hover:text-violet-600'} uppercase font-sans mb-2 leading-none transition-all duration-500 ease-out group-hover:scale-105 group-hover:tracking-tight`}>
                             SUBMISSION
                         </span>
-                        <span style={{ fontFamily: 'var(--font-roboto-slab)' }} className={`text-5xl md:text-7xl font-bold italic tracking-widest text-white bg-zinc-700 px-6 py-2 uppercase shadow-lg min-w-[min-content] w-auto text-center block`}>
+                        <span style={{ fontFamily: 'var(--font-roboto-slab)' }} className={`text-5xl md:text-7xl font-bold italic tracking-widest text-white bg-zinc-700 px-6 py-2 uppercase shadow-lg min-w-[min-content] w-auto text-center block transition-all duration-500 ease-out group-hover:scale-110 group-hover:-rotate-2 group-hover:bg-violet-600 group-hover:shadow-2xl group-hover:shadow-violet-500/50`}>
                             ARCHIVES
                         </span>
                     </h1>
@@ -262,10 +285,10 @@ export default function HomePageClient({ initialMedia }: HomePageClientProps) {
                                 ADVANCED SEARCH
                             </button>
                         </Link>
-                        <Link href="/notes">
+                        <Link href="/topics">
                             <button className={`px-6 py-3 rounded-sm ${darkMode ? 'bg-zinc-800 text-zinc-100 border border-zinc-700 hover:bg-zinc-700' : 'bg-white text-gray-900 border border-gray-200 hover:bg-gray-50'} text-xs font-mono font-bold tracking-[0.2em] uppercase transition-all flex items-center gap-3`}>
                                 <FileText className="w-4 h-4" />
-                                QUICK NOTES
+                                QUICK TOPICS
                             </button>
                         </Link>
                     </div>

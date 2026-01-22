@@ -53,6 +53,10 @@ const robotoSlab = Roboto_Slab({
 export const metadata: Metadata = {
   title: "Submission Archives",
   description: "Dr. Rashad Khalifa - Sermons, Studies, and Audio",
+  icons: {
+    icon: '/submission-logo.png',
+    apple: '/submission-logo.png',
+  },
 };
 
 export default function RootLayout({

@@ -67,7 +67,7 @@ export function AppendicesView({ theme, darkMode }: AppendicesViewProps) {
                         {APPENDICES.map((appendix) => (
                             <Link
                                 key={appendix.id}
-                                href={`/read/${appendix.id}`}
+                                href={`/library/${appendix.id}`}
                                 className={`group h-full ${theme.card} border ${theme.border} rounded-sm overflow-hidden hover:border-zinc-400 transition-all cursor-pointer flex flex-col relative shadow-sm hover:shadow-md`}
                             >
                                 {/* Thumbnail Image */}

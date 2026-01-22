@@ -1,5 +1,7 @@
 import { listMediaFiles } from '@/lib/r2Bucket';
 import HomePageClient from './HomePageClient';
+import path from 'path';
+import fs from 'fs';
 
 import { STUDY_TITLES } from '@/lib/studyTitles';
 
@@ -10,7 +12,24 @@ export default async function Home() {
     const media = await listMediaFiles();
 
 
-    // Pass data to Client Component
+    // Load durations if available
+    const durationsPath = path.join(process.cwd(), 'src', 'data', 'mediaDurations.json');
+    let durationMap: Record<string, number> = {};
 
-    return <HomePageClient initialMedia={media || []} />;
+    if (fs.existsSync(durationsPath)) {
+        try {
+            durationMap = JSON.parse(fs.readFileSync(durationsPath, 'utf-8'));
+        } catch (e) {
+            console.error("Failed to load media durations map");
+        }
+    }
+
+    // Inject durations
+    const enrichedMedia = (media || []).map(item => ({
+        ...item,
+        duration_seconds: durationMap[item.id] || 0
+    }));
+
+    // Pass data to Client Component
+    return <HomePageClient initialMedia={enrichedMedia} />;
 }

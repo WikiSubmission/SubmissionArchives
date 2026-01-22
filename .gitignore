@@ -66,3 +66,30 @@ legacy_scripts_root/
 # Ignoring keys explicitly just in case they are private
 /raw_data/keys/
 
+
+# Python Env & Debug
+.venv/
+debug_page_*.png
+scripts/ocr_paddle.py
+scripts/debug_ocr.py
+__pycache__/
+
+node_modules
+
+# Tesseract Models
+*.traineddata
+
+# Temporary Processing
+temp_json/
+temp_vtt/
+extraction.log
+extraction_debug.txt
+temp_listing.txt
+
+# Media Files (Should be in R2)
+public/**/*.mp3
+public/**/*.mp4
+public/**/*.mov
+public/**/*.avi
+public/**/*.wav
+

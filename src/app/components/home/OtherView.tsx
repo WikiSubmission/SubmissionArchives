@@ -30,7 +30,8 @@ const OTHER_RESOURCES = [
         id: 'quran-visual-presentation',
         title: 'Quran: Visual Presentation of the Miracle',
         filename: 'quran_visual_presentation.pdf',
-        description: 'By Dr. Rashad Khalifa'
+        description: 'By Dr. Rashad Khalifa',
+        image: '/images/other/quran-visual-presentation.png'
     },
     {
         id: 'perpetual-miracle',
@@ -63,13 +64,13 @@ export function OtherView({ theme, darkMode }: OtherViewProps) {
                         {OTHER_RESOURCES.map((resource) => (
                             <Link
                                 key={resource.id}
-                                href={`/read/${resource.id}`}
+                                href={`/library/${resource.id}`}
                                 className={`group h-full ${theme.card} border ${theme.border} rounded-sm overflow-hidden hover:border-zinc-400 transition-all cursor-pointer flex flex-col relative shadow-sm hover:shadow-md`}
                             >
                                 {/* Thumbnail Image */}
                                 <div className="relative w-full aspect-[3/4] bg-black/5 dark:bg-black/20 overflow-hidden">
                                     <img
-                                        src={`/images/other/${resource.id}.jpg`}
+                                        src={(resource as any).image || `/images/other/${resource.id}.jpg`}
                                         alt={resource.title}
                                         className="w-full h-full object-contain p-2 bg-white dark:bg-zinc-900 group-hover:scale-105 transition-transform duration-300"
                                         onError={(e) => {

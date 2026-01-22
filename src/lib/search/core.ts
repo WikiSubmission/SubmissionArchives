@@ -20,10 +20,13 @@ interface IndexDocument {
     dateTimestamp?: number; // Pre-parsed for fast sorting
 }
 
+
+import { getPhoneticCode } from './phonetic';
+
 interface OptimizedIndex {
     documents: IndexDocument[];
     invertedIndex: Record<string, string[]>;
-    ngrams: Record<string, string[]>;
+    phonetic: Record<string, string[]>; // CHANGED: ngrams -> phonetic
 }
 
 interface ContentStore {
@@ -41,6 +44,32 @@ const STOPWORDS = new Set([
     'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only',
     'own', 'same', 'so', 'than', 'too', 'very'
 ]);
+
+
+export function normalizeQuery(query: string): string {
+    return query
+        .toLowerCase()
+        .replace(/[^\w\s"]/g, '') // Keep quotes for phrase detection
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+export function splitQuery(query: string): string[] {
+    // Handle "exact phrases"
+    const phraseMatches = query.match(/"([^"]+)"/g);
+
+    if (phraseMatches) {
+        const phrases = phraseMatches.map(p => p.replace(/"/g, ''));
+        const words = query
+            .replace(/"[^"]+"/g, '') // Remove phrases
+            .split(/\s+/)
+            .filter(w => w.length > 0 && !STOPWORDS.has(w));
+
+        return [...phrases, ...words];
+    }
+
+    return query.split(/\s+/).filter(w => w.length > 0 && !STOPWORDS.has(w));
+}
 
 function tokenize(text: string): string[] {
     return text
@@ -158,8 +187,8 @@ export async function searchOptimized(
     query: string,
     options: SearchOptions
 ): Promise<SearchResult[]> {
-    // Preprocess query: tokenize and remove stopwords
-    const terms = tokenize(query);
+    // Preprocess query
+    const terms = splitQuery(query);
     if (terms.length === 0) return [];
 
     const candidateDocs = new Set<string>();
@@ -169,23 +198,29 @@ export async function searchOptimized(
         const docIds = index.invertedIndex[term] || [];
         docIds.forEach(id => candidateDocs.add(id));
 
-        // Fuzzy match
-        if (options.enableFuzzy) {
-            const trigrams = generateTrigrams(term);
-            trigrams.forEach(trigram => {
-                const similarWords = index.ngrams[trigram] || [];
+        // Fuzzy match (Phonetic) - Apply only to single words, not phrases
+        if (options.enableFuzzy && !term.includes(' ')) {
+            const code = getPhoneticCode(term);
+            if (code) {
+                const similarWords = index.phonetic[code] || [];
                 similarWords.forEach(word => {
+                    if (word === term) return;
                     const fuzzyDocs = index.invertedIndex[word] || [];
                     fuzzyDocs.forEach(id => candidateDocs.add(id));
                 });
-            });
+            }
         }
     });
 
-    // Results with scores for sorting
+    // Results with scores
     const resultsWithScores: Array<SearchResult & { score: number; dateTimestamp: number }> = [];
+    let topScore = 0;
+    const maxResults = options.maxResults || 50;
 
-    for (const docId of candidateDocs) {
+    // Convert Set to Array for iteration
+    const docIds = Array.from(candidateDocs);
+
+    for (const docId of docIds) {
         const doc = index.documents.find(d => d.id === docId);
         if (!doc) continue;
 
@@ -198,6 +233,10 @@ export async function searchOptimized(
         const score = calculateScore(doc, terms, content, query);
 
         if (score >= (options.minScore || 10)) {
+            if (score > topScore) {
+                topScore = score;
+            }
+
             const dateTimestamp = doc.dateTimestamp || parseDateToTimestamp(doc.date);
 
             resultsWithScores.push({
@@ -209,21 +248,34 @@ export async function searchOptimized(
                 score,
                 dateTimestamp
             });
+
+            // Early termination check
+            // Only if we found enough results and the current one is significantly worse than the best
+            // Note: Since we are iterating candidateDocs (which are unsorted), this heuristic 
+            // works best if we assume high relevance docs share many terms and appear early or 
+            // if we are processing many docs. 
+            // Actually, since candidateDocs is arbitrary order, early termination is risky UNLESS
+            // we have processed a large number.
+            // The heuristic "scoredResults.length >= maxResults * 2" is safer.
+
+            if (resultsWithScores.length >= maxResults * 2) {
+                if (score < topScore * 0.3) {
+                    // console.log(`⏩ Early termination: score ${score} too low vs ${topScore}`);
+                    break;
+                }
+            }
         }
     }
 
     // Sort results based on option
     if (options.sortBy === 'relevance' || !options.sortBy) {
-        // Sort by score descending (highest relevance first)
         resultsWithScores.sort((a, b) => b.score - a.score);
     } else if (options.sortBy === 'date-desc') {
-        // Sort by date descending (newest first)
         resultsWithScores.sort((a, b) => b.dateTimestamp - a.dateTimestamp);
     } else if (options.sortBy === 'date-asc') {
-        // Sort by date ascending (oldest first)
         resultsWithScores.sort((a, b) => a.dateTimestamp - b.dateTimestamp);
     }
 
     // Return limited results
-    return resultsWithScores.slice(0, options.maxResults || 50);
+    return resultsWithScores.slice(0, maxResults);
 }
