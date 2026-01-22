@@ -74,7 +74,7 @@ export function NewslettersView({ newsletters, loading, theme, darkMode }: Newsl
                                     .map(item => (
                                         <Link
                                             key={item.id}
-                                            href={`/read/${item.id}`}
+                                            href={`/library/${item.id}`}
                                         >
                                             <div className={`group h-full ${theme.card} border ${theme.border} rounded-sm overflow-hidden hover:border-zinc-400 transition-all cursor-pointer flex flex-col relative shadow-sm hover:shadow-md`}>
                                                 {/* Thumbnail Image */}
