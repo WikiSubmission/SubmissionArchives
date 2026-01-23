@@ -72,44 +72,54 @@ export function NewslettersView({ newsletters, loading, theme, darkMode }: Newsl
                                 {groupedNewsletters[year]
                                     .sort((a, b) => a.fullDate.localeCompare(b.fullDate))
                                     .map(item => (
-                                        <Link
+                                        <div
                                             key={item.id}
-                                            href={`/library/${item.id}`}
+                                            className={`group h-full ${theme.card} border ${theme.border} rounded-sm overflow-hidden hover:border-zinc-400 transition-all flex flex-col relative shadow-sm hover:shadow-md`}
                                         >
-                                            <div className={`group h-full ${theme.card} border ${theme.border} rounded-sm overflow-hidden hover:border-zinc-400 transition-all cursor-pointer flex flex-col relative shadow-sm hover:shadow-md`}>
-                                                {/* Thumbnail Image */}
-                                                <div className="relative w-full aspect-[3/4] bg-black/5 dark:bg-black/20 overflow-hidden">
-                                                    <img
-                                                        src={`/images/newsletters/${item.id}.jpg`}
-                                                        alt={item.title}
-                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                                        onError={(e) => {
-                                                            e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
-                                                        }}
-                                                    />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                            {/* Thumbnail Image */}
+                                            <div className="relative w-full aspect-[3/4] bg-black/5 dark:bg-black/20 overflow-hidden">
+                                                <img
+                                                    src={`/images/newsletters/${item.id}.jpg`}
+                                                    alt={item.title}
+                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                    onError={(e) => {
+                                                        e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
+                                                    }}
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                            </div>
+
+                                            <div className="p-5 flex flex-col flex-1">
+                                                <div className="mb-4">
+                                                    <div className={`text-[10px] font-mono font-bold tracking-widest ${theme.textVeryMuted} mb-2 uppercase border-b ${theme.border} pb-2 inline-block`}>
+                                                        {item.date.split(' ')[0]}
+                                                    </div>
+                                                    <h4 className={`font-serif text-lg ${theme.text} leading-tight`}>
+                                                        {item.title}
+                                                    </h4>
                                                 </div>
 
-                                                <div className="p-5 flex flex-col flex-1">
-                                                    <div className="mb-4">
-                                                        <div className={`text-[10px] font-mono font-bold tracking-widest ${theme.textVeryMuted} mb-2 uppercase border-b ${theme.border} pb-2 inline-block`}>
-                                                            {item.date.split(' ')[0]}
-                                                        </div>
-                                                        <h4 className={`font-serif text-lg ${theme.text} group-hover:opacity-70 transition-opacity line-clamp-2 leading-tight`}>
-                                                            {item.title}
-                                                        </h4>
-                                                    </div>
+                                                <div className={`mt-auto pt-4 border-t ${theme.border} grid grid-cols-2 gap-3`}>
+                                                    {/* PDF Button */}
+                                                    <Link
+                                                        href={`/library/${item.id}`}
+                                                        className={`flex items-center justify-center gap-1.5 py-2 px-3 text-[10px] font-mono uppercase tracking-widest font-bold border ${theme.border} rounded-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors ${theme.text}`}
+                                                    >
+                                                        <FileText className="w-3 h-3" />
+                                                        <span>PDF</span>
+                                                    </Link>
 
-                                                    <div className={`mt-auto flex items-center justify-between pt-4 border-t ${theme.border} text-xs font-mono uppercase tracking-widest ${theme.textVeryMuted}`}>
-                                                        <div className="flex items-center gap-1.5">
-                                                            <FileText className="w-3 h-3" />
-                                                            <span>PDF</span>
-                                                        </div>
-                                                        <ArrowLeft className={`w-3 h-3 rotate-180 transform group-hover:translate-x-1 transition-transform ${theme.text}`} />
-                                                    </div>
+                                                    {/* Web View Button */}
+                                                    <Link
+                                                        href={`/newsletter/${item.id}`}
+                                                        className={`flex items-center justify-center gap-1.5 py-2 px-3 text-[10px] font-mono uppercase tracking-widest font-bold border ${theme.border} rounded-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors ${theme.text}`}
+                                                    >
+                                                        <FileText className="w-3 h-3" />
+                                                        <span>WEB</span>
+                                                    </Link>
                                                 </div>
                                             </div>
-                                        </Link>
+                                        </div>
                                     ))}
                             </div>
                         </div>

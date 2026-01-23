@@ -29,6 +29,19 @@
   --font-heading: var(--font-cinzel);
   --font-rubik: var(--font-rubik);
   --font-roboto-slab: var(--font-roboto-slab);
+  --font-arabic: var(--font-amiri);
+  --font-sora: var(--font-sora);
+}
+
+/* Universal Arabic Font */
+[dir="rtl"],
+.font-arabic {
+  font-family: var(--font-arabic), serif;
+}
+
+/* Content Font */
+.font-sora {
+  font-family: var(--font-sora), sans-serif;
 }
 
 .dark {
@@ -96,16 +109,17 @@ body {
 }
 
 @keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-fade-in {
-    animation: fade-in 0.4s ease-out;
+  animation: fade-in 0.4s ease-out;
 }

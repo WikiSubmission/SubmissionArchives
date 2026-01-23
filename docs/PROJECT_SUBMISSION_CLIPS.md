@@ -47,9 +47,9 @@ CREATE INDEX idx_clips_media ON clips(media_id);
 
 ## 4. User Flows
 
-### A. Creation Flow (Desktop Recommended)
+### A. Creation Flow
 1.  **Select**: User navigates to `/create` or clicks "Clip" on `/watch/[id]`.
-2.  **Edit**: Player UI loads. User drags handles (e.g., `1:00` to `1:30`).
+2.  **Edit**: Player UI loads. User enters **Start** and **End** timestamps in text fields (e.g., `1:00` to `1:30`). Optional: A "Preview" button plays the selected range before processing.
 3.  **Process**: User clicks "Create Clip".
     *   **Step 1 (Client)**: Browser fetches source byte-range (approximate).
     *   **Step 2 (Client)**: `ffmpeg.wasm` cuts the precise segment (re-encoding not always needed if using `-c copy`, but safer for browser playback to ensure headers are correct).

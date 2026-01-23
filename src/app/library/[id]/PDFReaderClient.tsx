@@ -22,9 +22,11 @@ type Props = {
     title: string;
     initialPage: number; // 1-based
     initialQuery: string;
+    prevId?: string | null;
+    nextId?: string | null;
 };
 
-export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQuery }: Props) {
+export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQuery, prevId, nextId }: Props) {
     const router = useRouter();
     const [isMounted, setIsMounted] = useState(false);
 
@@ -84,6 +86,31 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                 </div>
 
                 <div className="flex items-center gap-2">
+                    {/* Navigation Buttons */}
+                    {(prevId || nextId) && (
+                        <div className="flex items-center gap-1 mr-4 border-r border-zinc-800 pr-4">
+                            {prevId ? (
+                                <Link
+                                    href={`/library/${prevId}`}
+                                    className="p-1.5 rounded-sm hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors"
+                                    title="Previous"
+                                >
+                                    <ChevronLeft className="w-5 h-5" />
+                                </Link>
+                            ) : <div className="w-8" />}
+
+                            {nextId ? (
+                                <Link
+                                    href={`/library/${nextId}`}
+                                    className="p-1.5 rounded-sm hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors"
+                                    title="Next"
+                                >
+                                    <ChevronLeft className="w-5 h-5 rotate-180" />
+                                </Link>
+                            ) : <div className="w-8" />}
+                        </div>
+                    )}
+
                     {/* Example Custom Control: Toggle Outline from here if we wanted */}
                     <Link href={pdfUrl} target="_blank" className="text-xs text-zinc-500 hover:text-zinc-300">
                         View Original PDF

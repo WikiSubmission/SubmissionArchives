@@ -93,3 +93,7 @@ public/**/*.mov
 public/**/*.avi
 public/**/*.wav
 
+
+# Analysis & Temp Lists
+/speaker_analysis.json
+/temp_listing.txt

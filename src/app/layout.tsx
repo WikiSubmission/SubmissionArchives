@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Crimson_Text, Cinzel, JetBrains_Mono, Playfair_Display, Rubik, Frank_Ruhl_Libre, Scheherazade_New, Roboto_Slab } from "next/font/google";
+import { Inter, Crimson_Text, Cinzel, JetBrains_Mono, Playfair_Display, Rubik, Frank_Ruhl_Libre, Scheherazade_New, Roboto_Slab, Amiri, Sora } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 
@@ -22,6 +22,17 @@ const scheherazade = Scheherazade_New({
   weight: ['400', '700'],
   variable: "--font-scheherazade",
   subsets: ["arabic"],
+});
+
+const amiri = Amiri({
+  weight: ['400', '700'],
+  variable: "--font-amiri",
+  subsets: ["arabic"],
+});
+
+const sora = Sora({
+  variable: "--font-sora",
+  subsets: ["latin"],
 });
 
 const frank = Frank_Ruhl_Libre({
@@ -84,7 +95,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${playfair.variable} ${rubik.variable} ${scheherazade.variable} ${frank.variable} ${crimson.variable} ${cinzel.variable} ${mono.variable} ${robotoSlab.variable} font-sans antialiased`}
+        className={`${inter.variable} ${playfair.variable} ${rubik.variable} ${scheherazade.variable} ${amiri.variable} ${sora.variable} ${frank.variable} ${crimson.variable} ${cinzel.variable} ${mono.variable} ${robotoSlab.variable} font-sans antialiased`}
       >
         <ThemeProvider>
           {children}

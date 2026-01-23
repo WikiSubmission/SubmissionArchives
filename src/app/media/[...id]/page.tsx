@@ -144,7 +144,7 @@ export default async function WatchPage({ params, searchParams }: { params: Prom
     // Determine type from key prefix
     let type = 'unknown';
     if (key.includes('disorganized_sermons') || key.includes('FRIDAY SERMONS')) type = 'sermon';
-    else if (key.includes('quran-study-v2') || key.includes('messenger_quran_studies')) type = 'quran-study';
+    else if (key.includes('quran-study-v2') || key.includes('messenger_quran_studies') || key.includes('QURAN STUDY AUDIO')) type = 'quran-study';
     else if (key.includes('messenger_audios')) type = 'audio';
     else if (key.includes('rk_video_programs') || key.includes('VIDEO PROGRAMS')) type = 'video-program';
 
@@ -204,6 +204,7 @@ export default async function WatchPage({ params, searchParams }: { params: Prom
     // Try to fetch transcript from R2
     let segments: any[] = [];
     try {
+        // Build transcript candidates - try various extensions and locations
         const transcriptCandidates = [
             key.replace(/\.(mp4|mp3|m4a)$/i, ".json"),
             key.replace(/\.(mp4|mp3|m4a)$/i, ".en-US.json"),
@@ -219,6 +220,17 @@ export default async function WatchPage({ params, searchParams }: { params: Prom
             key + ".en-US.vtt",
             key + ".vtt"
         ];
+
+        // For quran-study, also look in messenger_quran_studies folder
+        if (type === 'quran-study') {
+            const altKey = `media/messenger_quran_studies/${filename}`;
+            transcriptCandidates.push(
+                altKey.replace(/\.(mp4|mp3|m4a)$/i, ".json"),
+                altKey.replace(/\.(mp4|mp3|m4a)$/i, "_diarized.json"),
+                altKey.replace(/\.(mp4|mp3|m4a)$/i, ".vtt"),
+                altKey.replace(/\.(mp4|mp3|m4a)$/i, ".en-US.vtt")
+            );
+        }
 
         let transcriptBody = "";
 

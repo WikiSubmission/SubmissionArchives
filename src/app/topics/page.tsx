@@ -8,6 +8,7 @@ import { FileText, Disc, Layers, ChevronDown, BookOpen, Download, Headphones, Vi
 import quranStudiesNotes from '@/data/notes/quran-studies.json';
 
 import Link from 'next/link';
+import { TopicCard } from './TopicCard';
 
 export default function NotesPage() {
     const { darkMode } = useTheme();
@@ -154,23 +155,11 @@ export default function NotesPage() {
                         ) : (
                             // Topic View
                             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                                <Link
+                                <TopicCard
+                                    title="The False Verses"
+                                    subtitle="Quran 9:128–129"
                                     href="/topics/false-verses"
-                                    className={`group p-6 rounded-lg border ${theme.border} transition-all hover:scale-[1.02] ${darkMode ? 'bg-zinc-900/50 hover:bg-zinc-900 border-zinc-800 hover:border-emerald-500/50' : 'bg-white hover:bg-gray-50 border-gray-200 hover:border-emerald-500/30'} flex flex-col justify-between h-48`}
-                                >
-                                    <div>
-                                        <div className={`mb-4 w-10 h-10 rounded-full flex items-center justify-center ${darkMode ? 'bg-emerald-500/10 text-emerald-400' : 'bg-emerald-50 text-emerald-600'}`}>
-                                            <Layers className="w-5 h-5" />
-                                        </div>
-                                        <h3 className={`font-bold font-serif text-xl ${theme.text} mb-2 group-hover:text-emerald-500 transition-colors`}>
-                                            The False Verses
-                                            <span className="block text-sm font-sans font-normal opacity-60 mt-1">(9:128 & 9:129)</span>
-                                        </h3>
-                                    </div>
-                                    <div className={`text-xs font-mono uppercase tracking-widest ${theme.textVeryMuted} flex items-center gap-2`}>
-                                        Explore Topic <ChevronDown className="w-3 h-3 -rotate-90" />
-                                    </div>
-                                </Link>
+                                />
 
                                 {/* More placeholders or actual topics can go here */}
                             </div>

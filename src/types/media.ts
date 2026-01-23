@@ -19,6 +19,7 @@ export interface Newsletter {
     date: string;
     fullDate: string;
     filename: string;
+    pdfLink?: string;
 }
 
 export interface ThemeColors {

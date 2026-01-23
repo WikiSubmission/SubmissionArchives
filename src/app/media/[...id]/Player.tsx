@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/app/components/ThemeProvider';
-import { BookOpen, Search, Play, Pause, Volume2, VolumeX, RotateCcw, Maximize, Clock, User, Calendar, Share2, Download, Bookmark, ChevronDown, ChevronUp, Headphones, SkipBack, SkipForward, Settings, Keyboard, Gauge, Minimize } from 'lucide-react';
+import { BookOpen, Search, Play, Pause, Volume2, VolumeX, RotateCcw, Maximize, Clock, User, Calendar, Share2, Download, Bookmark, ChevronDown, ChevronUp, Headphones, SkipBack, SkipForward, Settings, Keyboard, Gauge, Minimize, Scissors, Check } from 'lucide-react';
 import { formatMedia } from '@/lib/formatUtils';
 import { MEDIA_METADATA } from '@/lib/mediaMetadata';
 import { updateTranscript } from '../actions';
@@ -13,6 +13,7 @@ import { useWatchHistory } from '@/hooks/useWatchHistory';
 import BookmarkPanel from '@/components/player/BookmarkPanel';
 import ResumePrompt from '@/components/player/ResumePrompt';
 import SmartSearch from '@/components/player/SmartSearch';
+import ClipModal from '@/components/clips/ClipModal';
 
 // ==================== CUSTOM HOOKS ====================
 
@@ -213,6 +214,7 @@ export default function Player({
     const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
     const [showShortcuts, setShowShortcuts] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
+    const [showClipModal, setShowClipModal] = useState(false);
 
     // Transcript State
     const [autoScroll, setAutoScroll] = useState(true);
@@ -499,12 +501,12 @@ export default function Player({
                     // === AUDIO LAYOUT (Compact Horizontal Player) ===
                     <div className="max-w-4xl mx-auto space-y-6">
                         {/* Compact Audio Player */}
-                        <div className="bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl overflow-hidden">
+                        <div className="bg-zinc-900 border border-zinc-800 rounded-lg shadow-xl overflow-hidden group/audio">
                             <div className="p-4">
                                 <div className="flex items-center gap-4">
                                     {/* Album Art */}
-                                    <div className="w-16 h-16 bg-gradient-to-br from-zinc-800 to-black rounded flex items-center justify-center shrink-0">
-                                        <Headphones className="w-8 h-8 text-zinc-600" />
+                                    <div className="w-16 h-16 bg-gradient-to-br from-violet-900/20 to-black rounded-lg flex items-center justify-center shrink-0 border border-white/5">
+                                        <Headphones className="w-8 h-8 text-violet-500" />
                                     </div>
 
                                     {/* Title & Metadata */}
@@ -518,51 +520,57 @@ export default function Player({
 
                                     {/* Controls */}
                                     <div className="hidden md:flex items-center gap-2">
-                                        <button onClick={() => player.skipTime(-5)} className="p-1.5 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors" title="Back 5s">
+                                        <button onClick={() => player.skipTime(-5)} className="p-2 text-zinc-400 hover:text-white rounded-full hover:bg-zinc-800 transition-all hover:scale-105" title="Back 5s">
                                             <SkipBack className="w-4 h-4" />
                                         </button>
-                                        <button onClick={player.togglePlay} className="w-10 h-10 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center transition-all shadow-lg">
-                                            {player.isPlaying ? <Pause className="w-5 h-5 fill-white text-white" /> : <Play className="w-5 h-5 fill-white text-white ml-0.5" />}
+                                        <button onClick={player.togglePlay} className="w-10 h-10 bg-violet-600 hover:bg-violet-500 rounded-full flex items-center justify-center transition-all shadow-lg hover:scale-105 hover:shadow-violet-500/20">
+                                            {player.isPlaying ? <Pause className="w-4 h-4 fill-white text-white" /> : <Play className="w-4 h-4 fill-white text-white ml-0.5" />}
                                         </button>
-                                        <button onClick={() => player.skipTime(5)} className="p-1.5 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors" title="Forward 5s">
+                                        <button onClick={() => player.skipTime(5)} className="p-2 text-zinc-400 hover:text-white rounded-full hover:bg-zinc-800 transition-all hover:scale-105" title="Forward 5s">
                                             <SkipForward className="w-4 h-4" />
                                         </button>
                                         <span className="text-xs font-mono text-zinc-500 min-w-[80px] text-center">{formatTime(player.currentTime)} / {formatTime(player.duration)}</span>
-                                        <button onClick={player.toggleMute} className="p-1.5 text-zinc-400 hover:text-white transition-colors">
+                                        <button onClick={player.toggleMute} className="p-2 text-zinc-400 hover:text-white transition-colors hover:scale-105">
                                             {player.isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                                         </button>
-                                        <button onClick={() => setShowSettings(!showSettings)} className={`p-1.5 transition-colors ${showSettings ? 'text-green-500' : 'text-zinc-400 hover:text-white'}`}>
+                                        <button onClick={() => setShowSettings(!showSettings)} className={`p-2 transition-all hover:scale-105 ${showSettings ? 'text-violet-400' : 'text-zinc-400 hover:text-white'}`}>
                                             <Settings className="w-4 h-4" />
                                         </button>
                                     </div>
                                 </div>
 
                                 {/* Progress Bar */}
-                                <div className="mt-3">
-                                    <div className="relative w-full h-1 bg-zinc-800 rounded-full cursor-pointer group" onClick={handleSeek}>
-                                        <div className="absolute h-full bg-green-500 rounded-full group-hover:bg-green-400 transition-all" style={{ width: `${(player.currentTime / player.duration) * 100}%` }} />
+                                <div className="mt-4 relative group/progress h-4 flex items-center cursor-pointer" onClick={handleSeek}>
+                                    {/* Background Track */}
+                                    <div className="w-full h-1 bg-zinc-800 rounded-full overflow-hidden">
+                                        <div
+                                            className="h-full bg-violet-600 relative"
+                                            style={{ width: `${(player.currentTime / player.duration) * 100}%` }}
+                                        />
                                     </div>
+                                    {/* Scrubber Handle */}
+                                    <div
+                                        className="absolute h-3 w-3 bg-violet-500 rounded-full shadow-lg scale-0 group-hover/progress:scale-100 transition-transform duration-200 ring-2 ring-white/10"
+                                        style={{ left: `${(player.currentTime / player.duration) * 100}%`, transform: 'translateX(-50%)' }}
+                                    />
                                 </div>
 
                                 {/* Mobile Controls */}
-                                <div className="md:hidden flex items-center justify-between mt-3">
+                                <div className="md:hidden flex items-center justify-between mt-2">
                                     <div className="flex items-center gap-3">
-                                        <button onClick={() => player.skipTime(-5)} className="p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors">
+                                        <button onClick={() => player.skipTime(-5)} className="p-2 text-zinc-400 hover:text-white">
                                             <SkipBack className="w-5 h-5" />
                                         </button>
-                                        <button onClick={player.togglePlay} className="w-12 h-12 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center transition-all shadow-lg">
-                                            {player.isPlaying ? <Pause className="w-6 h-6 fill-white text-white" /> : <Play className="w-6 h-6 fill-white text-white ml-0.5" />}
+                                        <button onClick={player.togglePlay} className="w-12 h-12 bg-violet-600 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-transform">
+                                            {player.isPlaying ? <Pause className="w-5 h-5 fill-white text-white" /> : <Play className="w-5 h-5 fill-white text-white ml-0.5" />}
                                         </button>
-                                        <button onClick={() => player.skipTime(5)} className="p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-800 transition-colors">
+                                        <button onClick={() => player.skipTime(5)} className="p-2 text-zinc-400 hover:text-white">
                                             <SkipForward className="w-5 h-5" />
                                         </button>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <span className="text-xs font-mono text-zinc-500">{formatTime(player.currentTime)}</span>
-                                        <button onClick={player.toggleMute} className="p-2 text-zinc-400 hover:text-white transition-colors">
-                                            {player.isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                                        </button>
-                                        <button onClick={() => setShowSettings(!showSettings)} className={`p-2 transition-colors ${showSettings ? 'text-green-500' : 'text-zinc-400 hover:text-white'}`}>
+                                        <button onClick={() => setShowSettings(!showSettings)} className="p-2 text-zinc-400">
                                             <Settings className="w-5 h-5" />
                                         </button>
                                     </div>
@@ -570,7 +578,7 @@ export default function Player({
 
                                 {/* Settings Panel */}
                                 {showSettings && (
-                                    <div className="mt-4 bg-zinc-800/50 p-4 rounded-lg space-y-4 border border-zinc-700/50">
+                                    <div className="mt-4 bg-zinc-800/50 p-4 rounded-lg space-y-4 border border-zinc-700/50 animate-in fade-in slide-in-from-top-2">
                                         <div className="flex items-center justify-between">
                                             <span className="text-sm text-zinc-400 flex items-center gap-2"><Gauge className="w-4 h-4" /> Speed</span>
                                             <div className="flex gap-1 bg-zinc-900 p-1 rounded border border-zinc-800">
@@ -578,7 +586,7 @@ export default function Player({
                                                     <button
                                                         key={rate}
                                                         onClick={() => player.changePlaybackRate(rate)}
-                                                        className={`px-2 py-1 text-xs rounded font-mono transition-colors ${player.playbackRate === rate ? 'bg-zinc-700 text-white' : 'text-zinc-500 hover:text-zinc-300'}`}
+                                                        className={`px-2 py-1 text-xs rounded font-mono transition-colors ${player.playbackRate === rate ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
                                                     >
                                                         {rate}x
                                                     </button>
@@ -587,6 +595,9 @@ export default function Player({
                                         </div>
                                         <button onClick={exportTranscript} className="w-full py-2 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded text-sm flex items-center justify-center gap-2 transition-colors text-zinc-300 hover:text-white">
                                             <Download className="w-4 h-4" /> Export Transcript
+                                        </button>
+                                        <button onClick={() => setShowClipModal(true)} className="w-full py-2 bg-violet-600 hover:bg-violet-500 rounded text-sm flex items-center justify-center gap-2 transition-colors text-white font-semibold shadow-lg shadow-violet-900/20">
+                                            <Scissors className="w-4 h-4" /> Create Clip
                                         </button>
                                     </div>
                                 )}
@@ -778,7 +789,7 @@ export default function Player({
                         <div className="space-y-6">
                             {/* Player Container */}
                             <div
-                                className="bg-black rounded-lg overflow-hidden shadow-xl aspect-video relative group sticky top-24 z-40"
+                                className="bg-black rounded-lg overflow-hidden shadow-xl aspect-video relative group"
                                 onMouseEnter={() => setShowControls(true)}
                                 onMouseLeave={() => !player.isPlaying && setShowControls(true) || setShowControls(false)}
                             >
@@ -786,7 +797,14 @@ export default function Player({
                                     ref={videoRef}
                                     className="w-full h-full object-contain"
                                     onTimeUpdate={handleTimeUpdate}
-                                    onLoadedMetadata={() => player.setDuration(videoRef.current?.duration || 0)}
+                                    onLoadedMetadata={() => {
+                                        const d = videoRef.current?.duration;
+                                        if (d && Number.isFinite(d)) {
+                                            player.setDuration(d);
+                                        } else if (media.duration_seconds) {
+                                            player.setDuration(media.duration_seconds);
+                                        }
+                                    }}
                                     onEnded={() => player.setIsPlaying(false)}
                                     onWaiting={() => player.setIsBuffering(true)}
                                     onCanPlay={() => player.setIsBuffering(false)}
@@ -827,52 +845,121 @@ export default function Player({
 
                                 {/* Centered Play Button */}
                                 {!player.isPlaying && !player.isBuffering && videoSrc && !showSync && (
-                                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer" onClick={player.togglePlay}>
-                                        <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur flex items-center justify-center border border-white/30 hover:scale-105 transition-transform">
-                                            <Play className="w-10 h-10 text-white fill-white ml-2" />
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 cursor-pointer animate-in fade-in duration-200" onClick={player.togglePlay}>
+                                        <div className="w-20 h-20 rounded-full bg-violet-600/90 backdrop-blur shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 group/play">
+                                            <Play className="w-10 h-10 text-white fill-white ml-2 drop-shadow-md" />
                                         </div>
                                     </div>
                                 )}
 
                                 {/* Controls Overlay */}
-                                <div className={`absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-300 ${showControls || !player.isPlaying ? 'opacity-100' : 'opacity-0'}`}>
-                                    <div className="relative w-full h-1.5 bg-white/30 rounded-full mb-4 cursor-pointer group/progress" onClick={handleSeek}>
-                                        <div className="absolute top-0 left-0 h-full bg-white rounded-full transition-all" style={{ width: `${(player.currentTime / player.duration) * 100}%` }} />
-                                    </div>
-                                    <div className="flex items-center justify-between text-white">
-                                        <div className="flex items-center gap-4">
-                                            <button onClick={player.togglePlay} className="hover:text-white/80 transition-colors">
-                                                {player.isPlaying ? <Pause className="w-6 h-6 fill-current" /> : <Play className="w-6 h-6 fill-current" />}
-                                            </button>
-                                            <div className="flex items-center gap-1">
-                                                <button onClick={() => player.skipTime(-5)}><RotateCcw className="w-4 h-4 text-white hover:text-white/80" /></button>
-                                                <button onClick={() => player.skipTime(5)}><RotateCcw className="w-4 h-4 text-white hover:text-white/80 transform scale-x-[-1]" /></button>
-                                            </div>
-                                            <span className="text-xs font-mono opacity-80">{formatTime(player.currentTime)} / {formatTime(player.duration)}</span>
-                                            <div className="flex items-center gap-2 group/volume">
-                                                <button onClick={player.toggleMute}>{player.isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}</button>
-                                                <input type="range" min="0" max="1" step="0.1" value={player.isMuted ? 0 : player.volume} onChange={e => player.handleVolumeChange(parseFloat(e.target.value))} className="w-0 overflow-hidden group-hover/volume:w-20 h-1 bg-white/50 rounded-lg cursor-pointer transition-all" />
-                                            </div>
+                                <div className={`absolute bottom-0 left-0 right-0 pt-12 pb-2 px-4 bg-gradient-to-t from-black/95 via-black/60 to-transparent transition-opacity duration-200 ${showControls || !player.isPlaying ? 'opacity-100' : 'opacity-0'}`}>
+                                    {/* Progress Bar Container */}
+                                    <div className="relative w-full h-4 flex items-center cursor-pointer group/progress mb-2" onClick={handleSeek}>
+                                        {/* Background Track */}
+                                        <div className="absolute w-full h-[3px] bg-white/20 rounded-full overflow-hidden group-hover/progress:h-[5px] transition-all duration-200">
+                                            {/* Buffered/Loaded (approx) would go here */}
                                         </div>
-                                        <div className="flex items-center gap-3">
-                                            {/* Speed Popover */}
-                                            <div className="relative group/speed">
-                                                <button className="text-xs font-bold border border-white/30 px-2 py-0.5 rounded hover:bg-white/10">{player.playbackRate}x</button>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-black/90 rounded border border-white/10 hidden group-hover/speed:flex flex-col p-1 gap-1">
-                                                    {[0.5, 1, 1.25, 1.5, 2].map(rate => (
-                                                        <button
-                                                            key={rate}
-                                                            onClick={() => player.changePlaybackRate(rate)}
-                                                            className={`px-3 py-1 text-xs hover:bg-white/20 rounded ${player.playbackRate === rate ? 'text-green-400 font-bold' : 'text-white'}`}
-                                                        >
-                                                            {rate}x
-                                                        </button>
-                                                    ))}
+                                        {/* Played Track */}
+                                        <div
+                                            className="absolute h-[3px] bg-violet-500 rounded-full group-hover/progress:h-[5px] transition-all duration-200"
+                                            style={{ width: `${(player.currentTime / player.duration) * 100}%` }}
+                                        />
+                                        {/* Youtube-style Scrubber Handle */}
+                                        <div
+                                            className="absolute w-3.5 h-3.5 bg-violet-500 rounded-full shadow-lg scale-0 group-hover/progress:scale-100 transition-transform duration-200"
+                                            style={{ left: `${(player.currentTime / player.duration) * 100}%`, transform: 'translate(-50%)' }}
+                                        />
+                                    </div>
+
+                                    {/* Bottom Controls Row */}
+                                    <div className="flex items-center justify-between text-white -mx-2">
+                                        {/* Left: Play, Next/Prev, Volume, Time */}
+                                        <div className="flex items-center gap-1">
+                                            {/* Play/Pause */}
+                                            <button
+                                                onClick={player.togglePlay}
+                                                className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                                                title={player.isPlaying ? "Pause (k)" : "Play (k)"}
+                                            >
+                                                {player.isPlaying ? <Pause className="w-7 h-7 fill-white" /> : <Play className="w-7 h-7 fill-white" />}
+                                            </button>
+
+                                            {/* Skip Buttons */}
+                                            <div className="flex items-center">
+                                                <button onClick={() => player.skipTime(-5)} className="p-2 hover:bg-white/10 rounded-full transition-colors opacity-80 hover:opacity-100">
+                                                    <RotateCcw className="w-5 h-5" />
+                                                </button>
+                                                <button onClick={() => player.skipTime(5)} className="p-2 hover:bg-white/10 rounded-full transition-colors opacity-80 hover:opacity-100">
+                                                    <RotateCcw className="w-5 h-5 transform scale-x-[-1]" />
+                                                </button>
+                                            </div>
+
+                                            {/* Volume */}
+                                            <div className="flex items-center gap-0 group/volume mr-2">
+                                                <button onClick={player.toggleMute} className="p-2 hover:bg-white/10 rounded-full transition-colors" title="Mute (m)">
+                                                    {player.isMuted ? <VolumeX className="w-6 h-6" /> : <Volume2 className="w-6 h-6" />}
+                                                </button>
+                                                <div className="w-0 overflow-hidden group-hover/volume:w-16 transition-all duration-300 flex items-center">
+                                                    <input
+                                                        type="range"
+                                                        min="0"
+                                                        max="1"
+                                                        step="0.05"
+                                                        value={player.isMuted ? 0 : player.volume}
+                                                        onChange={e => player.handleVolumeChange(parseFloat(e.target.value))}
+                                                        className="w-14 h-1 bg-white/40 rounded-lg cursor-pointer accent-white"
+                                                    />
                                                 </div>
                                             </div>
 
-                                            <button onClick={togglePiP} className="hover:text-white transition-colors" title="Picture-in-Picture"><Minimize className="w-5 h-5" /></button>
-                                            <button onClick={toggleFullscreen} className="hover:text-white transition-colors" title="Fullscreen"><Maximize className="w-5 h-5" /></button>
+                                            {/* Time Display */}
+                                            <span className="text-xs font-medium font-sans opacity-90 ml-1">
+                                                {formatTime(player.currentTime)} <span className="opacity-50 mx-0.5">/</span> {formatTime(player.duration)}
+                                            </span>
+                                        </div>
+
+                                        {/* Right: Clip, Speed, PiP, Fullscreen */}
+                                        <div className="flex items-center gap-1">
+                                            {/* Clip Button (Quick) */}
+                                            <button
+                                                onClick={() => setShowClipModal(true)}
+                                                className="p-2 hover:bg-white/10 rounded-full transition-colors opacity-90 hover:opacity-100 group/clip"
+                                                title="Clip"
+                                            >
+                                                <Scissors className="w-5 h-5 group-hover/clip:text-violet-400 transition-colors" />
+                                            </button>
+
+                                            {/* Settings / Speed */}
+                                            <div className="relative group/speed">
+                                                <button className="p-2 hover:bg-white/10 rounded-full transition-colors opacity-90 hover:opacity-100">
+                                                    <Settings className="w-5 h-5" />
+                                                </button>
+
+                                                {/* Settings Menu Popup */}
+                                                <div className="absolute bottom-full right-0 mb-3 bg-black/95 rounded-xl border border-white/10 p-2 min-w-[200px] hidden group-hover/speed:block animate-in fade-in slide-in-from-bottom-2 shadow-2xl">
+                                                    <div className="text-xs font-bold text-white/50 uppercase tracking-wider px-3 py-2 mb-1 border-b border-white/10">Playback Speed</div>
+                                                    <div className="flex flex-col gap-0.5">
+                                                        {[0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2].map(rate => (
+                                                            <button
+                                                                key={rate}
+                                                                onClick={() => player.changePlaybackRate(rate)}
+                                                                className={`px-3 py-2 text-sm text-left rounded-lg transition-colors flex items-center justify-between ${player.playbackRate === rate ? 'bg-white/10 text-violet-400 font-bold' : 'text-white hover:bg-white/5'}`}
+                                                            >
+                                                                <span>{rate === 1 ? 'Normal' : rate}</span>
+                                                                {player.playbackRate === rate && <Check className="w-4 h-4 ml-2" />}
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button onClick={togglePiP} className="p-2 hover:bg-white/10 rounded-full transition-colors opacity-90 hover:opacity-100" title="Picture-in-Picture">
+                                                <Minimize className="w-5 h-5" />
+                                            </button>
+                                            <button onClick={toggleFullscreen} className="p-2 hover:bg-white/10 rounded-full transition-colors opacity-90 hover:opacity-100" title="Fullscreen">
+                                                <Maximize className="w-5 h-5" />
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -889,6 +976,12 @@ export default function Player({
                                 <div className="mt-6 flex items-center gap-4 border-t border-border pt-4">
                                     <button onClick={exportTranscript} className="text-xs font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground flex items-center gap-2">
                                         <Download className="w-3 h-3" /> Export Transcript
+                                    </button>
+                                    <button
+                                        onClick={() => setShowClipModal(true)}
+                                        className="text-xs font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground flex items-center gap-2"
+                                    >
+                                        <Scissors className="w-3 h-3" /> Create Clip
                                     </button>
                                 </div>
                             </div>
@@ -1064,6 +1157,17 @@ export default function Player({
                     </div>
                 )}
             </div>
+
+            {/* Clip Modal */}
+            <ClipModal
+                isOpen={showClipModal}
+                onClose={() => setShowClipModal(false)}
+                mediaId={media.id}
+                mediaTitle={displayTitle}
+                mediaUrl={videoSrc || ''}
+                mediaType={isVideo ? 'video' : 'audio'}
+                currentTime={player.currentTime}
+            />
         </div>
     );
 }

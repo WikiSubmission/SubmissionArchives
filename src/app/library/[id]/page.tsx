@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PDFReaderClient from './PDFReaderClient';
+import { getAdjacentNewsletters } from '@/lib/newsletterUtils';
 
 // Import data sources
 import otherData from '../../../../public/data/other/search_index.json';
@@ -74,6 +75,15 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
         pdfUrl = book.pdfLink || `/data/newsletters/${book.filename}`;
     }
 
+    // Calculate navigation for newsletters
+    let prevId = null;
+    let nextId = null;
+    if (book.type === 'newsletter') {
+        const adj = getAdjacentNewsletters(id);
+        prevId = adj.prevId;
+        nextId = adj.nextId;
+    }
+
     return (
         <main className="h-screen w-screen bg-zinc-950 overflow-hidden flex flex-col">
             <PDFReaderClient
@@ -81,6 +91,8 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
                 title={book.title}
                 initialPage={initialPage}
                 initialQuery={initialQuery}
+                prevId={prevId}
+                nextId={nextId}
             />
         </main>
     );
