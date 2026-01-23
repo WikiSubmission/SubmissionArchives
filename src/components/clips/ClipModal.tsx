@@ -59,15 +59,14 @@ export default function ClipModal({
     const [error, setError] = useState<string | null>(null);
     const [clipUrl, setClipUrl] = useState<string | null>(null);
 
-    // Check for browser support on mount
-    const [isSupported, setIsSupported] = useState(true);
+    // Check for browser support and determine mode
+    const [isClientSideSupported, setIsClientSideSupported] = useState(true);
 
     useEffect(() => {
-        // Simple check for captureStream support
         const supported = typeof document !== 'undefined' &&
             (('captureStream' in HTMLMediaElement.prototype) ||
                 ('mozCaptureStream' in HTMLMediaElement.prototype));
-        setIsSupported(supported);
+        setIsClientSideSupported(supported);
     }, []);
 
     // Hidden media element for recording
@@ -95,13 +94,62 @@ export default function ClipModal({
     const isValid = startSeconds !== null && endSeconds !== null && startSeconds < endSeconds;
     const duration = isValid ? endSeconds - startSeconds : 0;
 
-    // Create clip using MediaRecorder - plays the segment and records it
+    // Create clip handler
     const handleCreateClip = async () => {
         if (!isValid || startSeconds === null || endSeconds === null) return;
 
         setStatus('processing');
         setProgress(0);
         setError(null);
+
+        // STRATEGY: Client-side (Desktop) vs Server-side (Mobile)
+        if (isClientSideSupported) {
+            await createClipClientSide();
+        } else {
+            await createClipServerSide();
+        }
+    };
+
+    // SERVER-SIDE PROCESSING (Mobile/Fallback)
+    const createClipServerSide = async () => {
+        try {
+            // Fake progress since we can't track real server progress easily yet
+            const progressInterval = setInterval(() => {
+                setProgress(p => Math.min(90, p + 5));
+            }, 1000);
+
+            const res = await fetch('/api/clips/process', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    mediaUrl, // We send the original URL
+                    startTime: startSeconds,
+                    endTime: endSeconds,
+                    title: clipTitle
+                })
+            });
+
+            clearInterval(progressInterval);
+
+            if (!res.ok) {
+                const err = await res.json();
+                throw new Error(err.error || 'Server processing failed');
+            }
+
+            const { key } = await res.json();
+
+            // Metadata Save Step
+            await saveClipMetadata(key);
+
+        } catch (err: any) {
+            console.error('Server clip error:', err);
+            setError(err.message || 'Failed to create clip on server');
+            setStatus('error');
+        }
+    };
+
+    // CLIENT-SIDE PROCESSING (Desktop)
+    const createClipClientSide = async () => {
         chunksRef.current = [];
 
         try {
@@ -125,7 +173,7 @@ export default function ClipModal({
             setProgress(15);
 
             // Seek to start time
-            element.currentTime = startSeconds;
+            element.currentTime = startSeconds!;
             await new Promise<void>((resolve) => {
                 element.onseeked = () => resolve();
             });
@@ -141,7 +189,7 @@ export default function ClipModal({
             } else if (mediaElement.mozCaptureStream) {
                 stream = mediaElement.mozCaptureStream();
             } else {
-                throw new Error('Clip creation is not supported in this browser. Please use Chrome, Edge, or Firefox.');
+                throw new Error('Capture stream not supported');
             }
 
             // Determine MIME type
@@ -172,9 +220,9 @@ export default function ClipModal({
             element.play();
 
             // Monitor playback and stop at end time
-            const clipDuration = endSeconds - startSeconds;
+            const clipDuration = endSeconds! - startSeconds!;
             let progressInterval = setInterval(() => {
-                const elapsed = element.currentTime - startSeconds;
+                const elapsed = element.currentTime - startSeconds!;
                 const pct = Math.min(90, 25 + (elapsed / clipDuration) * 65);
                 setProgress(pct);
             }, 200);
@@ -182,15 +230,13 @@ export default function ClipModal({
             // Wait for clip duration then stop
             await new Promise<void>((resolve) => {
                 const checkTime = () => {
-                    if (element.currentTime >= endSeconds) {
+                    if (element.currentTime >= endSeconds!) {
                         resolve();
                     } else {
                         requestAnimationFrame(checkTime);
                     }
                 };
                 checkTime();
-
-                // Also stop after expected duration (fallback)
                 setTimeout(resolve, (clipDuration + 1) * 1000);
             });
 
@@ -225,31 +271,36 @@ export default function ClipModal({
 
             setProgress(95);
 
-            // Save metadata
-            const metaRes = await fetch('/api/clips', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    mediaId,
-                    mediaTitle,
-                    startSeconds,
-                    endSeconds,
-                    title: clipTitle || undefined,
-                    r2Key: key,
-                }),
-            });
-            const { url } = await metaRes.json();
-
-            setProgress(100);
-            setClipUrl(window.location.origin + url);
-            setStatus('done');
+            // Metadata Save
+            await saveClipMetadata(key);
 
         } catch (err: any) {
-            console.error('Clip creation error:', err);
+            console.error('Client clip error:', err);
             setError(err.message || 'Failed to create clip');
             setStatus('error');
         }
     };
+
+    // Shared Metadata Save
+    const saveClipMetadata = async (key: string) => {
+        const metaRes = await fetch('/api/clips', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                mediaId,
+                mediaTitle,
+                startSeconds,
+                endSeconds,
+                title: clipTitle || undefined,
+                r2Key: key,
+            }),
+        });
+        const { url } = await metaRes.json();
+
+        setProgress(100);
+        setClipUrl(window.location.origin + url);
+        setStatus('done');
+    }
 
     const copyToClipboard = async () => {
         if (clipUrl) {
@@ -278,25 +329,8 @@ export default function ClipModal({
                     </button>
                 </div>
 
-                {!isSupported ? (
-                    <div className="text-center py-8 space-y-4">
-                        <div className="bg-amber-900/20 p-4 rounded-full w-fit mx-auto">
-                            <AlertCircle className="w-12 h-12 text-amber-500" />
-                        </div>
-                        <div className="space-y-2">
-                            <h3 className="text-lg font-semibold text-foreground">Desktop Browser Required</h3>
-                            <p className="text-muted-foreground text-sm max-w-[300px] mx-auto">
-                                Analyzing and clipping media requires powerful browser features not available on mobile devices.
-                            </p>
-                        </div>
-                        <button
-                            onClick={onClose}
-                            className="px-6 py-2 bg-muted hover:bg-border rounded-lg text-foreground transition-colors mt-4"
-                        >
-                            Close
-                        </button>
-                    </div>
-                ) : status === 'done' && clipUrl ? (
+                {/* Main Content - No longer checking isSupported to block UI */}
+                {status === 'done' && clipUrl ? (
                     /* Success State */
                     <div className="space-y-4">
                         <div className="p-4 bg-emerald-900/30 border border-emerald-700 rounded-lg">
@@ -344,6 +378,14 @@ export default function ClipModal({
                 ) : (
                     /* Input State */
                     <div className="space-y-4">
+                        {/* Mobile Warning/Info Badge */}
+                        {!isClientSideSupported && (
+                            <div className="p-3 bg-blue-900/20 border border-blue-800 rounded-lg text-xs text-blue-200 flex items-center gap-2 mb-2">
+                                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                                <span>Using Cloud Processing (Mobile Mode)</span>
+                            </div>
+                        )}
+
                         {/* ... existing form content ... */}
                         <p className="text-sm text-muted-foreground">
                             From: <span className="text-foreground">{mediaTitle}</span>
@@ -416,10 +458,10 @@ export default function ClipModal({
                                         style={{ width: `${progress}%` }}
                                     />
                                 </div>
-                                <p className="text-sm text-muted-foreground text-center">
+                                <p className="text-sm text-muted-foreground text-center animate-pulse">
                                     {status === 'processing'
-                                        ? `Recording clip... ${formatTimestamp(Math.floor((progress - 25) / 65 * duration))}`
-                                        : 'Uploading...'}
+                                        ? (isClientSideSupported ? 'Recording clip locally...' : 'Processing on server (this may take a moment)...')
+                                        : 'Finalizing upload...'}
                                 </p>
                             </div>
                         )}
@@ -443,7 +485,7 @@ export default function ClipModal({
                             {status === 'processing' || status === 'uploading' ? (
                                 <>
                                     <Loader2 className="w-5 h-5 animate-spin" />
-                                    {status === 'processing' ? 'Recording...' : 'Uploading...'}
+                                    {status === 'processing' ? 'Processing...' : 'Uploading...'}
                                 </>
                             ) : (
                                 <>

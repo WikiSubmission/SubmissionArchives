@@ -1,49 +1,95 @@
+
 import { NextRequest, NextResponse } from 'next/server';
 import { r2Client, R2_BUCKET_NAME } from '@/lib/r2';
-import { GetObjectCommand } from '@aws-sdk/client-s3';
-import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
+import { PutObjectCommand } from '@aws-sdk/client-s3';
+import ffmpeg from 'fluent-ffmpeg';
+import fs from 'fs';
+import path from 'path';
+import os from 'os';
+import { Readable } from 'stream';
 
-// Server-side clip processing using fetch + byte range requests
-// This is a simplified approach that extracts a segment for formats that support it
+// Helper to generate unique ID
+function generateClipId(): string {
+    const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    let id = '';
+    for (let i = 0; i < 8; i++) {
+        id += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return id;
+}
 
 export async function POST(request: NextRequest) {
     try {
-        const { mediaUrl, mediaType, startSeconds, endSeconds } = await request.json();
+        const body = await request.json();
+        const { mediaUrl, startTime, endTime, title } = body;
 
-        if (!mediaUrl || startSeconds === undefined || endSeconds === undefined) {
+        if (!mediaUrl || startTime === undefined || endTime === undefined) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        const duration = endSeconds - startSeconds;
-        if (duration <= 0 || duration > 300) {
-            return NextResponse.json({ error: 'Invalid duration (must be 1-300 seconds)' }, { status: 400 });
+        const duration = endTime - startTime;
+        if (duration <= 0 || duration > 300) { // Max 5 mins
+            return NextResponse.json({ error: 'Invalid duration (max 5 mins)' }, { status: 400 });
         }
 
-        // For now, we'll return the full media with instructions for client-side trimming
-        // Full server-side FFmpeg processing would require a different infrastructure
-        // This is a temporary solution that lets us continue testing the flow
+        console.log(`Processing clip: ${mediaUrl} [${startTime}-${endTime}]`);
 
-        // Fetch the media
-        const response = await fetch(mediaUrl);
-        if (!response.ok) {
-            return NextResponse.json({ error: 'Failed to fetch media' }, { status: 500 });
-        }
+        // Determine file type from URL or default to mp4
+        const isAudio = mediaUrl.endsWith('.mp3') || mediaUrl.includes('audio');
+        const extension = isAudio ? 'mp3' : 'mp4';
+        const contentType = isAudio ? 'audio/mpeg' : 'video/mp4';
 
-        const contentType = mediaType === 'video' ? 'video/mp4' : 'audio/mpeg';
-        const mediaBuffer = await response.arrayBuffer();
+        // Temp file paths
+        const tempDir = os.tmpdir();
+        const clipId = generateClipId();
+        const outputPath = path.join(tempDir, `${clipId}.${extension}`);
 
-        // Return the media (client will need to handle trimming display-side)
-        // In production, you'd use FFmpeg here via a Node.js binding or external service
-        return new NextResponse(mediaBuffer, {
-            headers: {
-                'Content-Type': contentType,
-                'X-Clip-Start': startSeconds.toString(),
-                'X-Clip-End': endSeconds.toString(),
-            },
+        // Process with FFmpeg
+        await new Promise<void>((resolve, reject) => {
+            ffmpeg(mediaUrl)
+                .setStartTime(startTime)
+                .setDuration(duration)
+                .output(outputPath)
+                .on('end', () => {
+                    console.log('FFmpeg processing finished');
+                    resolve();
+                })
+                .on('error', (err) => {
+                    console.error('FFmpeg error:', err);
+                    reject(err);
+                })
+                .run();
+        });
+
+        // Read the processed file
+        const fileBuffer = await fs.promises.readFile(outputPath);
+
+        // Upload to R2
+        const key = `clips/${clipId}.${extension}`;
+        const command = new PutObjectCommand({
+            Bucket: R2_BUCKET_NAME,
+            Key: key,
+            Body: fileBuffer,
+            ContentType: contentType,
+        });
+
+        await r2Client.send(command);
+
+        // Cleanup temp file
+        await fs.promises.unlink(outputPath).catch(console.error);
+
+        // Return the key for the metadata step
+        return NextResponse.json({
+            success: true,
+            key,
+            clipId
         });
 
     } catch (error: any) {
-        console.error('Clip processing error:', error);
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        console.error('Server-side processing error:', error);
+        return NextResponse.json(
+            { error: `Processing failed: ${error.message}` },
+            { status: 500 }
+        );
     }
 }
