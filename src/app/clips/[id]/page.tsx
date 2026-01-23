@@ -20,8 +20,41 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     const title = clip.title || `Clip from ${clip.mediaTitle}`;
-    const duration = clip.endSeconds - clip.startSeconds;
-    const description = `${formatTime(clip.startSeconds)} - ${formatTime(clip.endSeconds)} (${formatTime(duration)})`;
+
+    // Attempt to fetch transcript text for description
+    let transcriptText = '';
+    try {
+        const transcriptKey = clip.mediaId.replace(/\.(mp3|mp4)$/i, '.json');
+
+        const command = new GetObjectCommand({
+            Bucket: R2_BUCKET_NAME,
+            Key: transcriptKey,
+        });
+
+        const response = await r2Client.send(command);
+        if (response.Body) {
+            const jsonText = await response.Body.transformToString();
+            const segments: Array<{ start_time: number; end_time: number; content: string }> = JSON.parse(jsonText);
+
+            // Filter segments that overlap with the clip
+            const relevantSegments = segments.filter(
+                s => s.start_time < clip.endSeconds && s.end_time > clip.startSeconds
+            );
+
+            transcriptText = relevantSegments
+                .map(s => s.content)
+                .join(' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+    } catch (err) {
+        console.warn('Failed to fetch/parse transcript for metadata:', err);
+    }
+
+    const durationText = `${formatTime(clip.startSeconds)} - ${formatTime(clip.endSeconds)}`;
+    const description = transcriptText
+        ? `"${transcriptText.length > 250 ? transcriptText.slice(0, 250) + '...' : transcriptText}"\n\n(${durationText})`
+        : durationText;
 
     // Direct R2 URL for the clip (Discord needs a direct file URL)
     const clipUrl = `https://pub-1f70c66e36d64e469999b82b1dfdafcb.r2.dev/${clip.r2Key}`;
@@ -52,7 +85,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         other: {
             // Discord-specific meta tags
             ...(isVideo && { 'og:video': clipUrl, 'og:video:type': 'video/mp4' }),
-            ...(!isVideo && { 'og:audio': clipUrl, 'og:audio:type': 'audio/mpeg' }),
+            ...(!isVideo && {
+                'og:audio': clipUrl,
+                'og:audio:type': 'audio/mpeg',
+                // Fallback for some clients that might treat audio better with video tags
+                'og:video': clipUrl,
+                'og:video:type': 'video/mp4',
+                'og:video:width': '480',
+                'og:video:height': '60'
+            }),
         },
     };
 }
