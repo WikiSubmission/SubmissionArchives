@@ -59,6 +59,17 @@ export default function ClipModal({
     const [error, setError] = useState<string | null>(null);
     const [clipUrl, setClipUrl] = useState<string | null>(null);
 
+    // Check for browser support on mount
+    const [isSupported, setIsSupported] = useState(true);
+
+    useEffect(() => {
+        // Simple check for captureStream support
+        const supported = typeof document !== 'undefined' &&
+            (('captureStream' in HTMLMediaElement.prototype) ||
+                ('mozCaptureStream' in HTMLMediaElement.prototype));
+        setIsSupported(supported);
+    }, []);
+
     // Hidden media element for recording
     const hiddenMediaRef = useRef<HTMLVideoElement | HTMLAudioElement | null>(null);
     const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -123,10 +134,14 @@ export default function ClipModal({
 
             // Get media stream from the element
             let stream: MediaStream;
-            if ('captureStream' in element) {
-                stream = (element as any).captureStream();
+            const mediaElement = element as any;
+
+            if (mediaElement.captureStream) {
+                stream = mediaElement.captureStream();
+            } else if (mediaElement.mozCaptureStream) {
+                stream = mediaElement.mozCaptureStream();
             } else {
-                throw new Error('captureStream not supported in this browser. Try Chrome or Edge.');
+                throw new Error('Clip creation is not supported in this browser. Please use Chrome, Edge, or Firefox.');
             }
 
             // Determine MIME type
@@ -263,7 +278,25 @@ export default function ClipModal({
                     </button>
                 </div>
 
-                {status === 'done' && clipUrl ? (
+                {!isSupported ? (
+                    <div className="text-center py-8 space-y-4">
+                        <div className="bg-amber-900/20 p-4 rounded-full w-fit mx-auto">
+                            <AlertCircle className="w-12 h-12 text-amber-500" />
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-lg font-semibold text-foreground">Desktop Browser Required</h3>
+                            <p className="text-muted-foreground text-sm max-w-[300px] mx-auto">
+                                Analyzing and clipping media requires powerful browser features not available on mobile devices.
+                            </p>
+                        </div>
+                        <button
+                            onClick={onClose}
+                            className="px-6 py-2 bg-muted hover:bg-border rounded-lg text-foreground transition-colors mt-4"
+                        >
+                            Close
+                        </button>
+                    </div>
+                ) : status === 'done' && clipUrl ? (
                     /* Success State */
                     <div className="space-y-4">
                         <div className="p-4 bg-emerald-900/30 border border-emerald-700 rounded-lg">
@@ -311,6 +344,7 @@ export default function ClipModal({
                 ) : (
                     /* Input State */
                     <div className="space-y-4">
+                        {/* ... existing form content ... */}
                         <p className="text-sm text-muted-foreground">
                             From: <span className="text-foreground">{mediaTitle}</span>
                         </p>
