@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:search": "tsx scripts/build-search-index.ts",
-    "prebuild": "npm run build:search",
     "start": "next start",
     "lint": "eslint"
   },

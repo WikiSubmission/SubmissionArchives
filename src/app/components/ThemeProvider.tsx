@@ -11,22 +11,28 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const [darkMode, setDarkMode] = useState(true); // Default to dark mode
-    const [mounted, setMounted] = useState(false);
+
+    const applyTheme = (isDark: boolean) => {
+        const theme = isDark ? 'dark' : 'light';
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.dataset.theme = theme;
+        document.body.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+    };
 
     useEffect(() => {
-        setMounted(true);
         // Load preference from local storage
         const saved = localStorage.getItem('theme');
         if (saved === 'dark') {
             setDarkMode(true);
-            document.documentElement.classList.add('dark');
+            applyTheme(true);
         } else if (saved === 'light') {
             setDarkMode(false);
-            document.documentElement.classList.remove('dark');
+            applyTheme(false);
         } else {
             // Default to dark mode if no preference saved
             setDarkMode(true);
-            document.documentElement.classList.add('dark');
+            applyTheme(true);
         }
     }, []);
 
@@ -34,11 +40,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         const newMode = !darkMode;
         setDarkMode(newMode);
         localStorage.setItem('theme', newMode ? 'dark' : 'light');
-        if (newMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+        applyTheme(newMode);
     };
 
     // Prevent hydration mismatch by not rendering until mounted
@@ -49,11 +51,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     // Sync class on mount/change
     useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+        applyTheme(darkMode);
     }, [darkMode]);
 
     return (

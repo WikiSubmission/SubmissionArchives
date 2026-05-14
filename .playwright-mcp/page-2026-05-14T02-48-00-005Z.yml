@@ -1,0 +1,133 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - img "egregore" [ref=e4]
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - heading "T o w a r d s s h a r e d m i n d s" [level=1] [ref=e7]:
+          - generic [ref=e8]: T
+          - generic [ref=e9]: o
+          - generic [ref=e10]: w
+          - generic [ref=e11]: a
+          - generic [ref=e12]: r
+          - generic [ref=e13]: d
+          - generic [ref=e14]: s
+          - generic [ref=e15]: s
+          - generic [ref=e16]: h
+          - generic [ref=e17]: a
+          - generic [ref=e18]: r
+          - generic [ref=e19]: e
+          - generic [ref=e20]: d
+          - generic [ref=e21]: m
+          - generic [ref=e22]: i
+          - generic [ref=e23]: "n"
+          - generic [ref=e24]: d
+          - generic [ref=e25]: s
+        - paragraph [ref=e26]: AI-native collaboration is here. Turn the traces of your team's work into persistent collective cognition.
+      - generic [ref=e27]:
+        - button "npx create-egregore@latest --open" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: npx create-egregore@latest --open
+          - img [ref=e30]
+        - paragraph [ref=e33]:
+          - text: See
+          - link "documentation" [ref=e34] [cursor=pointer]:
+            - /url: /docs
+  - generic [ref=e35]:
+    - generic [ref=e37]:
+      - heading "Organizational cognition" [level=3] [ref=e38]
+      - paragraph [ref=e39]: Every session leaves a trace. Decisions, patterns, handoffs structured and ready to build on. Persistent context beyond individual sessions, compounding into institutional knowledge that any member human or AI can work with.
+    - generic [ref=e41]:
+      - heading "Multi-agent continuity" [level=3] [ref=e42]
+      - paragraph [ref=e43]: Human-AI pairs communicating with each other across a rich, shared context space. Handoffs carry not just state, but the reasoning that produced it enabling speed and situational awareness for people, and depth for AI agents picking up the thread.
+    - generic [ref=e45]:
+      - heading "Deep pattern recognition" [level=3] [ref=e46]
+      - paragraph [ref=e47]: Your organization generates more signal than anyone can track. Deep pattern recognition makes the invisible visible revealing how your team actually operates, where it's converging, and where the coordination infrastructure itself can evolve.
+  - generic [ref=e50]:
+    - navigation [ref=e51]:
+      - generic [ref=e52]: Features
+      - generic [ref=e53] [cursor=pointer]: "> /invite"
+      - generic [ref=e54] [cursor=pointer]: "> /handoff"
+      - generic [ref=e55] [cursor=pointer]: "> /save"
+      - generic [ref=e56] [cursor=pointer]: "> /activity"
+      - generic [ref=e57] [cursor=pointer]: "> /deep-reflect"
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - heading "Make it multiplayer /invite" [level=2] [ref=e61]
+          - paragraph [ref=e62]: One command brings a teammate into your egregore. They get access to shared memory and coordination workflows from their first session.
+        - generic [ref=e63]:
+          - generic [ref=e68]: Claude Code
+          - generic [ref=e71]: $
+          - generic [ref=e72]:
+            - generic [ref=e73]: "> |"
+            - generic [ref=e74]: ⚡ develop
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - heading "Atomic unit of AI-native coordination /handoff" [level=2] [ref=e79]
+          - paragraph [ref=e80]: A handoff doesn't just communicate the state of the work it carries the context graph that generated it. Decisions, trade-offs, open threads, and the reasoning behind them.
+        - generic [ref=e81]:
+          - generic [ref=e86]: Claude Code
+          - generic [ref=e89]: $
+          - generic [ref=e90]:
+            - generic [ref=e91]: "> |"
+            - generic [ref=e92]: ⚡ develop
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - heading "Automate the git workflow /save" [level=2] [ref=e97]
+          - paragraph [ref=e98]: Stage, commit, push, open a PR one command. Automatic enforcement of versioning best practices so that collaborative AI-driven development stays streamlined.
+        - generic [ref=e99]:
+          - generic [ref=e104]: Claude Code
+          - generic [ref=e107]: $
+          - generic [ref=e108]:
+            - generic [ref=e109]: "> |"
+            - generic [ref=e110]: ⚡ dev/alex/dashboard-redesign
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - heading "See the whole board /activity" [level=2] [ref=e115]
+          - paragraph [ref=e116]: What happened today. Who worked on what. Open threads, pending handoffs, quest momentum the full picture of your organization's work. A /activity is worth a thousand standups.
+        - generic [ref=e117]:
+          - generic [ref=e122]: Claude Code
+          - generic [ref=e125]: $
+          - generic [ref=e126]:
+            - generic [ref=e127]: "> |"
+            - generic [ref=e128]: ⚡ develop
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - heading "Surface what's beneath /deep-reflect" [level=2] [ref=e133]
+          - paragraph [ref=e134]: Your team's knowledge base holds more than anyone has read end to end. Deep-reflect traverses it across decisions, handoffs, quests, and the patterns forming between them.
+        - generic [ref=e135]:
+          - generic [ref=e140]: Claude Code
+          - generic [ref=e143]: $
+          - generic [ref=e144]:
+            - generic [ref=e145]: "> |"
+            - generic [ref=e146]: ⚡ develop
+  - generic [ref=e149]:
+    - generic [ref=e150]:
+      - paragraph [ref=e151]: From the lab
+      - heading "Context gardening" [level=2] [ref=e152]
+    - generic [ref=e153]:
+      - paragraph [ref=e154]: "Most teams treat knowledge like a warehouse. Store it, label it, forget where you put it. Context gardening is different: it treats organizational knowledge as something alive that grows, connects, and compounds when you tend to it."
+      - generic [ref=e155]:
+        - link "Read the full article" [ref=e156] [cursor=pointer]:
+          - /url: /blog/teams-forgot-how-to-remember
+        - button "Show next article" [ref=e157] [cursor=pointer]: Next post →
+  - generic [ref=e160]:
+    - heading "Try it now" [level=2] [ref=e161]
+    - paragraph [ref=e162]:
+      - strong [ref=e163]: Draw the magic circle
+      - text: One command. Egregore becomes your team's shared brain.
+    - button "npx create-egregore@latest --open" [ref=e167] [cursor=pointer]:
+      - generic [ref=e168]: npx create-egregore@latest --open
+      - img [ref=e169]
+    - generic [ref=e172]:
+      - link "GitHub" [ref=e173] [cursor=pointer]:
+        - /url: https://github.com/egregore-labs/egregore
+        - img [ref=e174]
+      - link "X" [ref=e176] [cursor=pointer]:
+        - /url: https://x.com/egregore_xyz
+        - img [ref=e177]
+  - contentinfo [ref=e179]:
+    - generic [ref=e180]:
+      - text: For enterprise inquiries —
+      - link "info@egregore.xyz" [ref=e181] [cursor=pointer]:
+        - /url: mailto:info@egregore.xyz
+  - alert [ref=e182]

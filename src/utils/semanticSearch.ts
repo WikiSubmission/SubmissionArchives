@@ -3,10 +3,15 @@
 export interface SearchResult {
     index: number;
     score: number;
-    segment: any;
+    segment: TranscriptSegment;
 }
 
-export function buildVocabulary(segments: any[]) {
+export interface TranscriptSegment {
+    content: string;
+    start_time: number;
+}
+
+export function buildVocabulary(segments: TranscriptSegment[]) {
     const vocab = new Map<string, number[]>();
     const stopWords = new Set(['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'is', 'it', 'this', 'that']);
 
@@ -27,7 +32,7 @@ export function buildVocabulary(segments: any[]) {
     return vocab;
 }
 
-export function calculateTFIDF(segments: any[]) {
+export function calculateTFIDF(segments: TranscriptSegment[]) {
     const vocab = buildVocabulary(segments);
     const tfidf: Map<string, number>[] = [];
 
@@ -54,7 +59,7 @@ export function calculateTFIDF(segments: any[]) {
     return tfidf;
 }
 
-export function semanticSearch(query: string, segments: any[], tfidf: Map<string, number>[]) {
+export function semanticSearch(query: string, segments: TranscriptSegment[], tfidf: Map<string, number>[]) {
     const queryTerms = query.toLowerCase().split(/\s+/);
     const scores: SearchResult[] = [];
 

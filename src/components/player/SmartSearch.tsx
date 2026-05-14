@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Search, Loader2 } from 'lucide-react';
 import { useSemanticSearch } from '@/hooks/useSemanticSearch';
-import { SearchResult } from '@/utils/semanticSearch';
+import { SearchResult, TranscriptSegment } from '@/utils/semanticSearch';
 
 interface SmartSearchProps {
-    segments: any[];
+    segments: TranscriptSegment[];
     onSeek: (time: number) => void;
 }
 
@@ -95,7 +95,7 @@ export default function SmartSearch({ segments, onSeek }: SmartSearchProps) {
 
             {query.length > 2 && results.length === 0 && !isIndexing && (
                 <div className="text-center py-6 text-zinc-500 text-sm italic">
-                    No relevant topics found. Try different keywords.
+                    No relevant segments found. Try different keywords.
                 </div>
             )}
         </div>

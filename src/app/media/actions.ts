@@ -3,8 +3,9 @@
 import { r2Client, R2_BUCKET_NAME } from '@/lib/r2';
 import { PutObjectCommand } from '@aws-sdk/client-s3';
 import { revalidatePath } from 'next/cache';
+import { getMediaHref } from '@/lib/utils';
 
-export async function updateTranscript(mediaId: string, segments: any[]) {
+export async function updateTranscript(mediaId: string, segments: unknown[]) {
     try {
         console.log(`[Server Action] Updating transcript for ${mediaId}`);
 
@@ -36,10 +37,13 @@ export async function updateTranscript(mediaId: string, segments: any[]) {
 
         console.log(`[Server Action] Successfully uploaded to ${targetKey}`);
 
-        revalidatePath(`/watch/${mediaId}`);
+        revalidatePath(getMediaHref(mediaId));
         return { success: true };
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error("[Server Action] Error updating transcript:", error);
-        return { success: false, error: error.message };
+        return {
+            success: false,
+            error: error instanceof Error ? error.message : 'Unknown transcript update error',
+        };
     }
 }

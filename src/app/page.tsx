@@ -3,8 +3,6 @@ import HomePageClient from './HomePageClient';
 import path from 'path';
 import fs from 'fs';
 
-import { STUDY_TITLES } from '@/lib/studyTitles';
-
 export const revalidate = 0; // Disable cache to debug R2 listing
 
 export default async function Home() {
@@ -19,7 +17,7 @@ export default async function Home() {
     if (fs.existsSync(durationsPath)) {
         try {
             durationMap = JSON.parse(fs.readFileSync(durationsPath, 'utf-8'));
-        } catch (e) {
+        } catch {
             console.error("Failed to load media durations map");
         }
     }

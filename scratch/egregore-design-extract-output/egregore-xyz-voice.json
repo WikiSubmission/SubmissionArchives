@@ -1,0 +1,42 @@
+{
+  "tone": "neutral",
+  "pronoun": "you-only",
+  "headingStyle": "Sentence case",
+  "headingLengthClass": "tight",
+  "ctaVerbs": [
+    {
+      "value": "create",
+      "count": 2
+    },
+    {
+      "value": "next",
+      "count": 1
+    }
+  ],
+  "buttonPatterns": [
+    {
+      "value": "npx create-egregore@latest --open",
+      "count": 2
+    },
+    {
+      "value": "next post →",
+      "count": 1
+    }
+  ],
+  "sampleHeadings": [
+    "Towards\nsharedminds",
+    "Organizational cognition",
+    "Multi-agent continuity",
+    "Deep pattern recognition",
+    "Make it multiplayer /invite",
+    "Atomic unit of AI-native coordination /handoff",
+    "Automate the git workflow /save",
+    "See the whole board /activity",
+    "Surface what's beneath /deep-reflect",
+    "Context gardening"
+  ],
+  "stats": {
+    "buttons": 3,
+    "headings": 11
+  }
+}

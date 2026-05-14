@@ -85,8 +85,12 @@ export default function RootLayout({
                 const saved = localStorage.getItem('theme');
                 if (saved === 'light') {
                   document.documentElement.classList.remove('dark');
+                  document.documentElement.dataset.theme = 'light';
+                  document.documentElement.style.colorScheme = 'light';
                 } else {
                   document.documentElement.classList.add('dark');
+                  document.documentElement.dataset.theme = 'dark';
+                  document.documentElement.style.colorScheme = 'dark';
                 }
               })();
             `,

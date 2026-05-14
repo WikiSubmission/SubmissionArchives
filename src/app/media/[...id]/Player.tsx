@@ -3,9 +3,8 @@
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/app/components/ThemeProvider';
-import { BookOpen, Search, Play, Pause, Volume2, VolumeX, RotateCcw, Maximize, Clock, User, Calendar, Share2, Download, Bookmark, ChevronDown, ChevronUp, Headphones, SkipBack, SkipForward, Settings, Keyboard, Gauge, Minimize, Scissors, Check } from 'lucide-react';
+import { BookOpen, Search, Play, Pause, Volume2, VolumeX, RotateCcw, Maximize, Clock, User, Calendar, Share2, Download, Bookmark, ChevronDown, ChevronUp, Headphones, SkipBack, SkipForward, Settings, Keyboard, Gauge, Minimize, Check } from 'lucide-react';
 import { formatMedia } from '@/lib/formatUtils';
-import { MEDIA_METADATA } from '@/lib/mediaMetadata';
 import { updateTranscript } from '../actions';
 import Header from '@/components/layout/Header';
 import { useBookmarks } from '@/hooks/useBookmarks';
@@ -13,8 +12,8 @@ import { useWatchHistory } from '@/hooks/useWatchHistory';
 import BookmarkPanel from '@/components/player/BookmarkPanel';
 import ResumePrompt from '@/components/player/ResumePrompt';
 import SmartSearch from '@/components/player/SmartSearch';
-import ClipModal from '@/components/clips/ClipModal';
 import thumbnailMapping from "@/data/thumbnail_mapping.json";
+import quranStudyThumbnails from "@/data/quran_study_thumbnails.json";
 
 // ==================== CUSTOM HOOKS ====================
 
@@ -215,7 +214,6 @@ export default function Player({
     const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
     const [showShortcuts, setShowShortcuts] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
-    const [showClipModal, setShowClipModal] = useState(false);
 
     // Transcript State
     const [autoScroll, setAutoScroll] = useState(true);
@@ -498,11 +496,7 @@ export default function Player({
         const match = displayTitle.match(/^(\d+)\)/) || media.id.match(/quran-study-v2\/(\d+)/);
         if (match) {
             const num = parseInt(match[1]);
-            if (num === 52) {
-                thumbnailSrc = `/images/quran-studies/QS${num}.png`;
-            } else if (num >= 1 && num <= 51) {
-                thumbnailSrc = `/images/quran-studies/QS${num}.jpg`;
-            }
+            thumbnailSrc = (quranStudyThumbnails as Record<string, string>)[String(num)] || thumbnailSrc;
         }
     }
 
@@ -537,17 +531,6 @@ export default function Player({
                     </div>
                 </div>
             )}
-
-            {/* Clipping Modal */}
-            <ClipModal
-                isOpen={showClipModal}
-                onClose={() => setShowClipModal(false)}
-                mediaId={media.id}
-                mediaTitle={media.title}
-                mediaUrl={videoSrc || ''}
-                mediaType={media.type === 'video-program' || media.type === 'sermon' ? 'video' : 'audio'}
-                currentTime={player.currentTime}
-            />
 
             <div className={`max-w-[1800px] mx-auto px-4 sm:px-6 py-6 transition-all duration-500 ${videoLayout === 'overlay' ? 'max-w-6xl' : ''}`}>
 
@@ -610,7 +593,6 @@ export default function Player({
                                     </div>
                                     <div className="flex items-end justify-end gap-2">
                                         <button onClick={exportTranscript} className="px-3 py-1.5 text-xs font-medium bg-muted hover:bg-muted/80 rounded flex items-center gap-2 transition-colors"><Download className="w-3.5 h-3.5" /> Transcript</button>
-                                        <button onClick={() => setShowClipModal(true)} className="px-3 py-1.5 text-xs font-medium bg-primary/10 text-primary hover:bg-primary/20 rounded flex items-center gap-2 transition-colors"><Scissors className="w-3.5 h-3.5" /> Clip</button>
                                     </div>
                                 </div>
                             )}
@@ -752,7 +734,6 @@ export default function Player({
                                             <span className="text-sm font-mono opacity-80">{formatTime(player.currentTime)} / {formatTime(player.duration)}</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <button onClick={() => setShowClipModal(true)} className="p-2 hover:bg-white/10 rounded-full" title="Clip"><Scissors className="w-5 h-5" /></button>
                                             <button onClick={player.toggleMute} className="p-2 hover:bg-white/10 rounded-full">{player.isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}</button>
                                             <button onClick={toggleFullscreen} className="p-2 hover:bg-white/10 rounded-full"><Maximize className="w-5 h-5" /></button>
                                         </div>

@@ -7,6 +7,7 @@ import { searchPlugin } from '@react-pdf-viewer/search';
 import { ChevronLeft, FileText, Search as SearchIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useTheme } from '@/app/components/ThemeProvider';
 
 // Styles
 import '@react-pdf-viewer/core/lib/styles/index.css';
@@ -28,6 +29,7 @@ type Props = {
 
 export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQuery, prevId, nextId }: Props) {
     const router = useRouter();
+    const { darkMode } = useTheme();
     const [isMounted, setIsMounted] = useState(false);
 
     // Ensure component only renders on client
@@ -64,23 +66,23 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
     }, [initialQuery, highlight, hasHighlighted, isMounted]);
 
     return (
-        <div className="flex flex-col h-full bg-zinc-950 text-zinc-200">
+        <div className="flex flex-col h-full bg-ed-bg text-ed-fg">
             {/* Custom Header */}
-            <header className="flex items-center justify-between h-14 bg-zinc-900 border-b border-zinc-800 px-4 shrink-0 z-10 relative">
+            <header className="flex items-center justify-between h-14 bg-ed-surface border-b border-ed-rule px-4 shrink-0 z-10 relative">
                 <div className="flex items-center gap-4">
                     <Link
                         href="/search?filters=other"
-                        className="flex items-center text-zinc-400 hover:text-white transition-colors"
+                        className="flex items-center text-ed-fg-muted hover:text-ed-fg transition-colors"
                         title="Back to Search"
                     >
                         <ChevronLeft className="w-5 h-5" />
                         <span className="text-sm font-medium ml-1">Back</span>
                     </Link>
 
-                    <div className="h-4 w-px bg-zinc-700" />
+                    <div className="h-4 w-px bg-ed-rule" />
 
                     <h1 className="text-sm font-semibold truncate max-w-xl flex items-center gap-2">
-                        <FileText className="w-4 h-4 text-emerald-500" />
+                        <FileText className="w-4 h-4 text-ed-accent" />
                         {title}
                     </h1>
                 </div>
@@ -88,11 +90,11 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                 <div className="flex items-center gap-2">
                     {/* Navigation Buttons */}
                     {(prevId || nextId) && (
-                        <div className="flex items-center gap-1 mr-4 border-r border-zinc-800 pr-4">
+                        <div className="flex items-center gap-1 mr-4 border-r border-ed-rule pr-4">
                             {prevId ? (
                                 <Link
                                     href={`/library/${prevId}`}
-                                    className="p-1.5 rounded-sm hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors"
+                                    className="p-1.5 rounded-sm hover:bg-ed-bg text-ed-fg-muted hover:text-ed-fg transition-colors"
                                     title="Previous"
                                 >
                                     <ChevronLeft className="w-5 h-5" />
@@ -102,7 +104,7 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                             {nextId ? (
                                 <Link
                                     href={`/library/${nextId}`}
-                                    className="p-1.5 rounded-sm hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors"
+                                    className="p-1.5 rounded-sm hover:bg-ed-bg text-ed-fg-muted hover:text-ed-fg transition-colors"
                                     title="Next"
                                 >
                                     <ChevronLeft className="w-5 h-5 rotate-180" />
@@ -112,7 +114,7 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                     )}
 
                     {/* Example Custom Control: Toggle Outline from here if we wanted */}
-                    <Link href={pdfUrl} target="_blank" className="text-xs text-zinc-500 hover:text-zinc-300">
+                    <Link href={pdfUrl} target="_blank" className="text-xs text-ed-fg-muted hover:text-ed-fg">
                         View Original PDF
                     </Link>
                 </div>
@@ -129,7 +131,7 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                                 fileUrl={pdfUrl}
                                 initialPage={initialPage - 1} // Viewer uses 0-based indexing
                                 defaultScale={SpecialZoomLevel.PageFit}
-                                theme="dark" // We override this with our CSS
+                                theme={darkMode ? 'dark' : 'light'} // PDF viewer follows the site theme.
                                 plugins={[
                                     defaultLayoutPluginInstance,
                                     searchPluginInstance
@@ -142,7 +144,7 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                     </Worker>
                 ) : (
                     <div className="h-full w-full flex items-center justify-center">
-                        <div className="text-zinc-500">Loading PDF viewer...</div>
+                        <div className="text-ed-fg-muted">Loading PDF viewer...</div>
                     </div>
                 )}
             </div>

@@ -1,6 +1,7 @@
 import { Media, ThemeColors } from "@/types/media";
 import { BookOpen, FileText, Headphones, Video } from "lucide-react";
 import thumbnailMapping from "@/data/thumbnail_mapping.json";
+import quranStudyThumbnails from "@/data/quran_study_thumbnails.json";
 
 interface MediaCardProps {
     item: Media;
@@ -49,11 +50,7 @@ export function MediaCard({ item, theme }: MediaCardProps) {
         const match = item.displayTitle.match(/^(\d+)\)/) || item.id.match(/quran-study-v2\/(\d+)/);
         if (match) {
             const num = parseInt(match[1]);
-            if (num === 52) {
-                thumbnailSrc = `/images/quran-studies/QS${num}.png`;
-            } else if (num >= 1 && num <= 51) {
-                thumbnailSrc = `/images/quran-studies/QS${num}.jpg`;
-            }
+            thumbnailSrc = (quranStudyThumbnails as Record<string, string>)[String(num)] || thumbnailSrc;
         }
     }
 

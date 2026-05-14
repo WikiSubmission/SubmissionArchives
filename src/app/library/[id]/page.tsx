@@ -1,12 +1,18 @@
 import { Metadata } from 'next';
 import PDFReaderClient from './PDFReaderClient';
-import { getAdjacentNewsletters } from '@/lib/newsletterUtils';
+import { getAdjacentNewsletterIssues, getNewsletterIssue } from '@/lib/newsletterCatalog';
+import { getAppendixItem } from '@/lib/appendixCatalog';
 
 // Import data sources
 import otherData from '../../../../public/data/other/search_index.json';
-import appendicesData from '../../../../public/data/appendices/search_index.json';
-import newsletterData from '../../../../public/data/newsletters/search_index.json';
-import newsletterMetadata from '../../../../public/data/newsletters/metadata.json';
+
+type IndexedBook = {
+    id: string;
+    title: string;
+    filename: string;
+    type?: 'other' | 'appendix' | 'newsletter';
+    pdfLink?: string;
+};
 
 type Props = {
     params: Promise<{ id: string }>;
@@ -16,20 +22,16 @@ type Props = {
 // Map URL slugs to filenames (or look up in JSON)
 const getBookData = (id: string) => {
     // Check Other Resources
-    const otherItem = otherData.find((item: any) => item.id === id);
+    const otherItem = (otherData as IndexedBook[]).find((item) => item.id === id);
     if (otherItem) return { ...otherItem, type: 'other', pdfLink: undefined };
 
     // Check Appendices
-    const appendixItem = appendicesData.find((item: any) => item.id === id);
-    if (appendixItem) return { ...appendixItem, type: 'appendix', pdfLink: undefined };
+    const appendixItem = getAppendixItem(id);
+    if (appendixItem) return { ...appendixItem, type: 'appendix' };
 
-    // Check Newsletters
-    const newsletterItem = newsletterData.find((item: any) => item.id === id);
-    if (newsletterItem) {
-        // Find corresponding metadata for PDF link
-        const meta = newsletterMetadata.find((m: any) => m.id === id);
-        return { ...newsletterItem, type: 'newsletter', pdfLink: meta?.pdfLink };
-    }
+    // Check Submitter Perspectives PDFs
+    const newsletterItem = getNewsletterIssue(id);
+    if (newsletterItem) return { ...newsletterItem, type: 'newsletter' };
 
     return null;
 };
@@ -53,10 +55,10 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
 
     if (!book) {
         return (
-            <div className="min-h-screen bg-zinc-950 text-white flex items-center justify-center">
+            <div className="min-h-screen bg-ed-bg text-ed-fg flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold mb-4">Resource Not Found</h1>
-                    <p className="text-zinc-400">The requested resource "{id}" could not be located.</p>
+                    <p className="text-ed-fg-muted">The requested resource &quot;{id}&quot; could not be located.</p>
                 </div>
             </div>
         );
@@ -65,27 +67,24 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
     // Determine PDF URL based on type
     let pdfUrl = '';
     if (book.type === 'other') {
-        pdfUrl = `/other/${book.filename}`;
+        pdfUrl = `/content/books/${book.filename}`;
     } else if (book.type === 'appendix') {
-        // Transform "appendix-1" to "appendix_1.pdf"
-        const filename = book.filename.replace('-', '_') + '.pdf';
-        pdfUrl = `/appendices/${filename}`;
+        pdfUrl = book.pdfLink || `/content/appendix/pdfs/${book.filename}`;
     } else if (book.type === 'newsletter') {
-        // Use the link from metadata, or fallback to constructing it if missing (though metadata should have it)
-        pdfUrl = book.pdfLink || `/data/newsletters/${book.filename}`;
+        pdfUrl = book.pdfLink || `/content/newsletter/pdfs/${book.filename}`;
     }
 
     // Calculate navigation for newsletters
     let prevId = null;
     let nextId = null;
     if (book.type === 'newsletter') {
-        const adj = getAdjacentNewsletters(id);
+        const adj = getAdjacentNewsletterIssues(id);
         prevId = adj.prevId;
         nextId = adj.nextId;
     }
 
     return (
-        <main className="h-screen w-screen bg-zinc-950 overflow-hidden flex flex-col">
+        <main className="h-screen w-screen bg-ed-bg overflow-hidden flex flex-col">
             <PDFReaderClient
                 pdfUrl={pdfUrl}
                 title={book.title}

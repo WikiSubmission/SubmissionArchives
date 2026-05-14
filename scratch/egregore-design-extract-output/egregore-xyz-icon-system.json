@@ -1,0 +1,46 @@
+{
+  "library": "unknown",
+  "confidence": 0,
+  "alternates": [],
+  "stats": {
+    "count": 4,
+    "strokeOnly": 2,
+    "fillOnly": 2,
+    "mixed": 0,
+    "avgStrokeWidth": 2,
+    "gridDistribution": {
+      "24": 4
+    },
+    "roundedCapsFraction": 0.5
+  },
+  "signals": [
+    "roundedCaps",
+    "grid24"
+  ],
+  "icons": [
+    {
+      "class": "copy-icon",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "copy-icon",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    }
+  ]
+}

@@ -1,6 +1,65 @@
 @import "tailwindcss";
 
-:root {
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Superior Serif';
+  src: url('/fonts/LTSuperiorSerif-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Superior Serif';
+  src: url('/fonts/LTSuperiorSerif-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Superior Serif';
+  src: url('/fonts/LTSuperiorSerif-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Superior Serif';
+  src: url('/fonts/LTSuperiorSerif-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Superior Serif';
+  src: url('/fonts/LTSuperiorSerif-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('/fonts/GlacialIndifference-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('/fonts/GlacialIndifference-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+[data-theme="light"] {
   --background: #ffffff;
   --foreground: #171717;
   --primary: #7e22ce;
@@ -10,6 +69,13 @@
   --border: #e5e5e5;
   --muted: #f3f4f6;
   --muted-foreground: #6b7280;
+  --ed-bg: #f3ede4;
+  --ed-fg: #1d221d;
+  --ed-fg-muted: #5e655f;
+  --ed-rule: rgba(47, 56, 31, 0.16);
+  --ed-surface: #fbf7f1;
+  --ed-accent: #961515;
+  --ed-accent-soft: #f4c0a3;
 }
 
 @theme {
@@ -22,15 +88,27 @@
   --color-border: var(--border);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-ed-bg: var(--ed-bg);
+  --color-ed-fg: var(--ed-fg);
+  --color-ed-fg-muted: var(--ed-fg-muted);
+  --color-ed-rule: var(--ed-rule);
+  --color-ed-surface: var(--ed-surface);
+  --color-ed-accent: var(--ed-accent);
+  --color-ed-accent-soft: var(--ed-accent-soft);
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-crimson);
+  --font-serif: 'Superior Serif', serif;
   --font-heading: var(--font-cinzel);
   --font-rubik: var(--font-rubik);
   --font-roboto-slab: var(--font-roboto-slab);
   --font-arabic: var(--font-amiri);
   --font-sora: var(--font-sora);
+  --font-superior: 'Superior Serif', serif;
+  --font-glacial: 'Glacial Indifference', sans-serif;
+  --font-body: var(--font-sora);
+  --font-ui: 'Glacial Indifference', sans-serif;
+  --font-display: 'Superior Serif', serif;
 }
 
 /* Universal Arabic Font */
@@ -44,7 +122,8 @@
   font-family: var(--font-sora), sans-serif;
 }
 
-.dark {
+.dark,
+[data-theme="dark"] {
   --background: #09090b;
   /* Zinc 950 */
   --foreground: #fafafa;
@@ -59,53 +138,58 @@
   --muted: #27272a;
   --muted-foreground: #a1a1aa;
   /* Zinc 400 */
+  --ed-bg: #151c18;
+  --ed-fg: #e9dfd3;
+  --ed-fg-muted: #b7aa9b;
+  --ed-rule: rgba(233, 223, 211, 0.11);
+  --ed-surface: #171f1a;
+  --ed-accent: #f6ae82;
+  --ed-accent-soft: #c85a4e;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 220ms ease-out, color 220ms ease-out;
 }
 
-/* Newsletter Special Blocks - Using CSS Variables for Dark Mode */
-.newsletter-center-block {
-  background-color: var(--muted);
-  border-color: var(--border);
-  color: var(--foreground);
+body {
+  text-rendering: optimizeLegibility;
 }
 
-.newsletter-quote-block {
-  background: linear-gradient(135deg, var(--muted) 0%, transparent 100%);
-  border-color: var(--border);
-  color: var(--foreground);
+::selection {
+  background: color-mix(in srgb, #ffa878 28%, transparent);
+  color: #f6efe4;
 }
 
-.newsletter-reflection-block {
-  background: linear-gradient(135deg, var(--muted) 0%, transparent 100%);
-  border-color: var(--border);
-  color: var(--foreground);
+.archive-atmosphere {
+  background:
+    radial-gradient(circle at top, color-mix(in srgb, var(--ed-accent) 18%, transparent), transparent 30%),
+    radial-gradient(circle at 80% 18%, color-mix(in srgb, var(--ed-accent) 10%, transparent), transparent 24%),
+    linear-gradient(180deg, var(--ed-surface) 0%, var(--ed-bg) 54%, var(--background) 100%);
 }
 
-.newsletter-table {
-  border-color: var(--border);
+.archive-grid {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--ed-fg) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--ed-fg) 8%, transparent) 1px, transparent 1px);
+  background-size: 108px 108px;
 }
 
-.newsletter-table th,
-.newsletter-table td {
-  border-color: var(--border);
-  color: var(--foreground);
+.archive-image-fade {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--ed-bg) 10%, transparent) 0%,
+    color-mix(in srgb, var(--ed-bg) 52%, transparent) 52%,
+    color-mix(in srgb, var(--ed-bg) 94%, transparent) 100%
+  );
 }
 
-.newsletter-table thead {
-  background-color: var(--muted);
-}
-
-.newsletter-table tbody tr:nth-child(even) {
-  background-color: var(--muted);
-}
-
-.newsletter-table tbody tr:nth-child(odd) {
-  background-color: var(--background);
+.archive-soft-orb {
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--ed-accent) 10%, transparent), transparent 30%),
+    radial-gradient(circle at bottom left, color-mix(in srgb, var(--ed-accent) 8%, transparent), transparent 26%);
 }
 
 @keyframes fade-in {
@@ -122,4 +206,38 @@ body {
 
 .animate-fade-in {
   animation: fade-in 0.4s ease-out;
+}
+
+.transcript-range::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 168, 120, 0.42), rgba(233, 223, 211, 0.18));
+}
+
+.transcript-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -4px;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(233, 223, 211, 0.52);
+  background: #f6efe4;
+  box-shadow: 0 0 0 4px rgba(255, 168, 120, 0.08);
+}
+
+.transcript-range::-moz-range-track {
+  height: 0.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 168, 120, 0.42), rgba(233, 223, 211, 0.18));
+}
+
+.transcript-range::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid rgba(233, 223, 211, 0.52);
+  border-radius: 999px;
+  background: #f6efe4;
+  box-shadow: 0 0 0 4px rgba(255, 168, 120, 0.08);
 }

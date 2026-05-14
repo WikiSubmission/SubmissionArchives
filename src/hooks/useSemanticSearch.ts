@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { calculateTFIDF, semanticSearch, SearchResult } from '../utils/semanticSearch';
+import { calculateTFIDF, semanticSearch, SearchResult, TranscriptSegment } from '../utils/semanticSearch';
 
-export function useSemanticSearch(segments: any[]) {
+export function useSemanticSearch(segments: TranscriptSegment[]) {
     const [tfidf, setTfidf] = useState<Map<string, number>[] | null>(null);
     const [isIndexing, setIsIndexing] = useState(false);
 

@@ -2,9 +2,9 @@
 
 import fs from 'fs';
 import path from 'path';
-import newsletterData from '../../../public/data/newsletters/search_index.json';
-import appendicesData from '../../../public/data/appendices/search_index.json';
 import otherData from '../../../public/data/other/search_index.json';
+import { searchNewsletterCsv } from '@/lib/newsletterCatalog';
+import { searchAppendixCsv } from '@/lib/appendixCatalog';
 
 // Helper for stream
 function streamToString(stream: any): Promise<string> {
@@ -35,7 +35,7 @@ export async function searchTranscripts(query: string, typeFilters: string[]) {
             searchPromises.push(searchQuranStudies(query));
         }
 
-        // 2. Search Newsletters (Local JSON)
+        // 2. Search Submitter Perspectives from the CSV OCR rows, linking only to PDFs.
         if (typeFilters.includes('perspective')) {
             searchPromises.push(searchNewsletters(query));
         }
@@ -256,53 +256,18 @@ async function searchQuranStudies(query: string): Promise<any[]> {
 // Helper: Search Newsletters
 async function searchNewsletters(query: string): Promise<any[]> {
     try {
-        const lowerQuery = query.toLowerCase();
-
-        // Load metadata to get PDF links
-        const metadata = require('../../../public/data/newsletters/metadata.json');
-        const metadataMap = new Map(metadata.map((m: any) => [m.id, m]));
-
-        const newsletterMatches = newsletterData
-            .filter((item: any) => item.content.toLowerCase().includes(lowerQuery))
-            .map((item: any) => {
-                const content = item.content;
-                const matches = [];
-                const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-                let match;
-                let count = 0;
-
-                while ((match = regex.exec(content)) !== null && count < 5) {
-                    const start = Math.max(0, match.index - 60);
-                    const end = Math.min(content.length, match.index + query.length + 60);
-                    let snippet = content.substring(start, end);
-                    if (start > 0) snippet = '...' + snippet;
-                    if (end < content.length) snippet = snippet + '...';
-
-                    matches.push({
-                        id: `nl-${item.id}-${count}`,
-                        content: snippet,
-                        start_time: 0
-                    });
-                    count++;
-                }
-
-                const meta = metadataMap.get(item.id) as { pdfLink?: string } | undefined;
-
-                return {
-                    media: {
-                        id: item.filename,
-                        title: item.title,
-                        type: 'perspective',
-                        displayDate: item.displayDate,
-                        author: 'Rashad Khalifa',
-                        filename: item.filename,
-                        pdfLink: meta?.pdfLink
-                    },
-                    matches
-                };
-            });
-
-        return newsletterMatches;
+        return searchNewsletterCsv(query).map(({ issue, matches }) => ({
+            media: {
+                id: issue.id,
+                title: issue.title,
+                type: 'perspective',
+                displayDate: issue.date,
+                author: 'Rashad Khalifa',
+                filename: issue.filename,
+                pdfLink: issue.pdfLink,
+            },
+            matches,
+        }));
     } catch (err) {
         console.error("Error searching newsletters:", err);
         return [];
@@ -312,44 +277,17 @@ async function searchNewsletters(query: string): Promise<any[]> {
 // Helper: Search Appendices
 async function searchAppendices(query: string): Promise<any[]> {
     try {
-        const lowerQuery = query.toLowerCase();
-        const appendixMatches = appendicesData
-            .filter((item: any) => item.content.toLowerCase().includes(lowerQuery))
-            .map((item: any) => {
-                const content = item.content;
-                const matches = [];
-                const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-                let match;
-                let count = 0;
-
-                while ((match = regex.exec(content)) !== null && count < 5) {
-                    const start = Math.max(0, match.index - 60);
-                    const end = Math.min(content.length, match.index + query.length + 60);
-                    let snippet = content.substring(start, end);
-                    if (start > 0) snippet = '...' + snippet;
-                    if (end < content.length) snippet = snippet + '...';
-
-                    matches.push({
-                        id: `ap-${item.id}-${count}`,
-                        content: snippet,
-                        start_time: 0
-                    });
-                    count++;
-                }
-
-                return {
-                    media: {
-                        id: item.filename,
-                        title: item.title,
-                        type: 'appendix',
-                        author: 'Rashad Khalifa',
-                        filename: item.filename
-                    },
-                    matches
-                };
-            });
-
-        return appendixMatches;
+        return searchAppendixCsv(query).map(({ appendix, matches }) => ({
+            media: {
+                id: appendix.id,
+                title: appendix.title,
+                type: 'appendix',
+                author: 'Rashad Khalifa',
+                filename: appendix.filename,
+                pdfLink: appendix.pdfLink,
+            },
+            matches,
+        }));
     } catch (err) {
         console.error("Error searching appendices:", err);
         return [];

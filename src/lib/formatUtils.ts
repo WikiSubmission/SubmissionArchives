@@ -3,7 +3,6 @@ export interface FormattedMedia {
     displayTitle: string;
     displayDate: string;
     author: string;
-    topics: string[];
     sortValue: number; // Timestamp for date-based, or number for numeric
 }
 
@@ -15,7 +14,6 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
     let displayTitle = rawTitle;
     let displayDate = item.date || '';
     const author = 'Dr. Rashad Khalifa';
-    const topics: string[] = [];
     let sortValue = item.created_at ? new Date(item.created_at).getTime() : 0;
 
     // --- Quran Study ---
@@ -158,7 +156,6 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
         displayTitle,
         displayDate,
         author,
-        topics,
         sortValue
     };
 }
