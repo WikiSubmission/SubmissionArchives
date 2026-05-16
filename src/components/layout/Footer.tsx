@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { MessageCircle, Twitter, Youtube } from 'lucide-react';
+import { MessageCircle, Youtube } from 'lucide-react';
 import { useTheme } from '@/app/components/ThemeProvider';
 
 export default function Footer() {
@@ -10,23 +10,23 @@ export default function Footer() {
 
     const palette = darkMode
         ? {
-            frame: 'bg-[#111512] text-[#cbbca9]',
+            frame: 'bg-[#111111] text-[#cbbca9]',
             border: 'border-[#e9dfd3]/10',
             text: 'text-[#f6efe4]',
             muted: 'text-[#cbbca9]/62',
             link: 'text-[#d8ccbd]/72 hover:text-[#f6ae82]',
-            panel: 'bg-[#151c18]',
+            panel: 'bg-[#181817]',
             icon: 'text-[#cbbca9]/72 hover:text-[#f6ae82]',
             accent: 'text-[#f6ae82]',
         }
         : {
-            frame: 'bg-[#efe7dd] text-[#5e655f]',
-            border: 'border-[#2f381f]/12',
-            text: 'text-[#1d221d]',
-            muted: 'text-[#5e655f]/72',
-            link: 'text-[#4f574f] hover:text-[#961515]',
+            frame: 'bg-[#efe7dd] text-[#625c54]',
+            border: 'border-[#1b1a18]/12',
+            text: 'text-[#1b1a18]',
+            muted: 'text-[#625c54]/72',
+            link: 'text-[#625c54] hover:text-[#961515]',
             panel: 'bg-[#f7f2eb]',
-            icon: 'text-[#5e655f] hover:text-[#961515]',
+            icon: 'text-[#625c54] hover:text-[#961515]',
             accent: 'text-[#961515]',
         };
 
@@ -37,24 +37,23 @@ export default function Footer() {
                 { name: 'Video Library', href: '/videos' },
                 { name: 'Audio Library', href: '/audios' },
                 { name: 'Search Engine', href: '/search' },
-                { name: 'Written Material', href: '/other' },
             ],
         },
         {
             title: 'Collections',
             links: [
+                { name: 'Video Programs', href: '/videos' },
+                { name: 'Friday Sermons', href: '/videos' },
                 { name: 'Quran Studies', href: '/audios' },
-                { name: 'Submitter Perspectives', href: '/other' },
-                { name: 'Appendices', href: '/other' },
-                { name: 'Historical Scans', href: '/other' },
+                { name: 'Messenger Audios', href: '/audios' },
             ],
         },
         {
             title: 'Community',
             links: [
                 { name: 'YouTube', href: 'https://youtube.com/@submissionarchives' },
-                { name: 'Discord', href: 'https://discord.gg/submission' },
-                { name: 'Newsletter Search', href: '/search?types=perspective' },
+                { name: 'Discord', href: 'https://discord.gg/submissionserver' },
+                { name: 'Newsletter Search', href: '/search?filters=perspective' },
             ],
         },
     ];
@@ -62,10 +61,10 @@ export default function Footer() {
     return (
         <footer className={`w-full border-t ${palette.border} ${palette.frame} px-6 pb-12 pt-20 sm:px-8 lg:px-10`}>
             <div className="mx-auto max-w-[1440px]">
-                <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr_0.9fr]">
+                <div className="soft-shell grid gap-14 p-6 sm:p-8 lg:grid-cols-[1.1fr_1fr_0.9fr]">
                     <div className="space-y-7">
                         <Link href="/" className="group inline-flex items-center gap-3">
-                            <div className={`flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border ${palette.border} ${palette.panel}`}>
+                            <div className={`flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border ${palette.border} ${palette.panel} shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_12px_30px_rgba(0,0,0,0.16)]`}>
                                 <Image
                                     src="/submission-logo.png"
                                     alt="Submission Archives"
@@ -83,19 +82,15 @@ export default function Footer() {
                         </Link>
 
                         <p className="max-w-sm text-sm leading-7 opacity-85">
-                            A study archive for sermons, recordings, newsletters, appendices, and related material.
-                            The design goal is sobriety and endurance, not platform spectacle.
+                            SubmissionArchives platform is designed to preserve, catalogue, and display works in relation to Submission and the Messenger of the Covenant, Dr. Rashad Khalifa. Transcriptions may be error-prone, please use personal judgement if you notice any errors. Verify everything you cite (17:36).
                         </p>
 
                         <div className="flex items-center gap-3">
                             <FooterIcon href="https://youtube.com/@submissionarchives" palette={palette}>
                                 <Youtube className="h-4 w-4" />
                             </FooterIcon>
-                            <FooterIcon href="https://discord.gg/submission" palette={palette}>
+                            <FooterIcon href="https://discord.gg/submissionserver" palette={palette}>
                                 <MessageCircle className="h-4 w-4" />
-                            </FooterIcon>
-                            <FooterIcon href="https://x.com" palette={palette}>
-                                <Twitter className="h-4 w-4" />
                             </FooterIcon>
                         </div>
                     </div>
@@ -106,10 +101,10 @@ export default function Footer() {
                                 <p className={`text-[0.66rem] uppercase tracking-[0.24em] ${palette.muted}`}>
                                     {section.title}
                                 </p>
-                                <ul className="space-y-3">
+                                <ul className="space-y-2">
                                     {section.links.map((link) => (
                                         <li key={link.name}>
-                                            <Link href={link.href} className={`text-sm transition ${palette.link}`}>
+                                            <Link href={link.href} className={`inline-flex rounded-full px-3 py-1.5 text-sm transition hover:bg-ed-fg/[0.04] ${palette.link}`}>
                                                 {link.name}
                                             </Link>
                                         </li>
@@ -120,19 +115,15 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className={`mt-16 grid gap-px border ${palette.border} bg-current/10 sm:grid-cols-3`}>
-                    <FooterStat label="Indexed records" value="1,240+" palette={palette} />
-                    <FooterStat label="Editorial mode" value="Dark and light" palette={palette} />
-                    <FooterStat label="Version" value="v2.0.4" palette={palette} />
-                </div>
 
-                <div className={`mt-12 flex flex-col gap-4 border-t ${palette.border} pt-8 text-[0.64rem] uppercase tracking-[0.22em] ${palette.muted} sm:flex-row sm:items-center sm:justify-between`}>
+
+                <div className={`mt-8 flex flex-col gap-4 px-2 pt-4 text-[0.64rem] uppercase tracking-[0.22em] ${palette.muted} sm:flex-row sm:items-center sm:justify-between`}>
                     <div className="flex flex-wrap items-center gap-4">
                         <span>© 2026 Submission Archives</span>
-                        <Link href="/privacy" className={palette.link}>
+                        <Link href="https://wikisubmission.org/legal/privacy-policy" className={palette.link}>
                             Privacy
                         </Link>
-                        <Link href="/terms" className={palette.link}>
+                        <Link href="https://wikisubmission.org/legal/terms-of-use" className={palette.link}>
                             Terms
                         </Link>
                     </div>
@@ -157,26 +148,9 @@ function FooterIcon({
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`border ${palette.border} ${palette.panel} p-2 transition ${palette.icon}`}
+            className={`soft-pill p-2 transition ${palette.icon}`}
         >
             {children}
         </a>
-    );
-}
-
-function FooterStat({
-    label,
-    value,
-    palette,
-}: {
-    label: string;
-    value: string;
-    palette: { panel: string; text: string; muted: string };
-}) {
-    return (
-        <div className={`${palette.panel} px-5 py-5`}>
-            <p className={`font-serif text-2xl ${palette.text}`}>{value}</p>
-            <p className={`mt-2 text-[0.62rem] uppercase tracking-[0.22em] ${palette.muted}`}>{label}</p>
-        </div>
     );
 }

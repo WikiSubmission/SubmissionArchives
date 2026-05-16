@@ -2,7 +2,8 @@
 /.next/
 /out/
 /build
-.DSTore
+.DS_Store
+*.tsbuildinfo
 
 # Node
 node_modules/
@@ -11,89 +12,103 @@ node_modules/
 /yarn-error.log*
 /.pnpm-debug.log*
 
-# Local Env
+# Local Environment
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env*.local
 
-# Typescript
-*.tsbuildinfo
-
-# Editors
+# Editors & IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
+Thumbs.db
 
-# Backup & Temp
-scripts_root_backup/
-legacy/
-legacy_scripts_root/
+# Backup, Legacy & Temp Directories
+/scripts_root_backup/
+/legacy/
+/legacy_scripts_root/
 /downloads/
-/temp_audios.html
-/debug_quran_study_log.txt
-/download_log.txt
-/rclone-config-template.conf
-
-# Reprocessing & Data
 /reprocess_temp/
 /reprocess_ready/
 /reprocess_temp_fix/
 /recovery_output/
+/scratch/
+/.playwright-mcp/
+
+# Debug Logs & Temp Files
+/temp_audios.html
+/debug_quran_study_log.txt
+/download_log.txt
+/rclone-config-template.conf
+/debug_subs/
+/speaker_analysis.json
+/temp_listing.txt
+/extraction.log
+/extraction_debug.txt
+debug_page_*.png
+temp_json/
+temp_vtt/
+
+# Media & Large Assets (Served from R2)
+# These are the "big files" that should stay out of the repository
+*.mp3
+*.mp4
+*.m4a
+*.wav
+*.mov
+*.avi
+*.wmv
+*.mkv
+*.webm
+*.flv
+*.pdf
+*.zip
+*.tar.gz
+*.iso
+*.traineddata
+
+# Specific Public Media Paths
+public/content/**/*.mp3
+public/content/**/*.mp4
+public/content/**/*.m4a
+public/content/**/*.wav
+public/content/**/*.mov
+public/content/**/*.avi
+public/content/**/*.wmv
+public/content/**/*.mkv
+public/content/**/*.webm
+public/content/**/*.flv
+public/content/**/*.pdf
+
+# Data & Reprocessing (Root level artifacts)
 /data/disorganized_sermons/
 /data/rk_video_programs/
 /data/messenger_quran_studies/
 /data/messenger_audios/
-/debug_subs/
-
-# Large Files & Generated
-*.mp3
-*.mp4
-*.zip
-*.tar.gz
-*.iso
 /all_media_files.txt
 /ALL_QURAN_STUDIES_TRANSCRIPTS_MEGA.json
+
+# Raw Data
+/raw_data/
+!/raw_data/keys/
+# Ignoring keys explicitly just in case they are private
+/raw_data/keys/
 
 # Vercel
 .vercel
 
-# Raw Data (Moved from root)
-/raw_data/
-!/raw_data/keys/ # If keys are public. If private, keep ignored. Don't publish risky security.
-# Ignoring keys explicitly just in case they are private
-/raw_data/keys/
-
-
-# Python Env & Debug
+# Python Environment
 .venv/
-debug_page_*.png
+__pycache__/
 scripts/ocr_paddle.py
 scripts/debug_ocr.py
-__pycache__/
 
-node_modules
-
-# Tesseract Models
-*.traineddata
-
-# Temporary Processing
-temp_json/
-temp_vtt/
-extraction.log
-extraction_debug.txt
-temp_listing.txt
-
-# Media Files (Should be in R2)
-public/**/*.mp3
-public/**/*.mp4
-public/**/*.mov
-public/**/*.avi
-public/**/*.wav
-
-
-# Analysis & Temp Lists
-/speaker_analysis.json
-/temp_listing.txt
+# CRUCIAL - DO NOT IGNORE
+# public/data/generated_indices/ - Contains site metadata and search indices
+# public/content/**/*.vtt - Contains video/audio transcripts
+# public/images/ - Static UI assets
+# public/fonts/ - Custom typography
