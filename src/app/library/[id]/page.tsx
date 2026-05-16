@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import PDFReaderClient from './PDFReaderClient';
 import { getAdjacentNewsletterIssues, getNewsletterIssue } from '@/lib/newsletterCatalog';
 import { getAppendixItem } from '@/lib/appendixCatalog';
+import { getPublicAssetUrl } from '@/lib/mediaAssets';
 
 // Import data sources
 import otherData from '../../../../public/data/other/search_index.json';
@@ -50,8 +51,9 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
     const { id } = await params;
     const resolvedSearchParams = await searchParams;
     const book = getBookData(id);
-    const initialPage = resolvedSearchParams?.page ? parseInt(resolvedSearchParams.page as string) : 1;
-    const initialQuery = resolvedSearchParams?.q ? (resolvedSearchParams.q as string) : '';
+    const requestedPage = resolvedSearchParams?.page ? parseInt(resolvedSearchParams.page as string, 10) : 1;
+    const initialPage = Number.isFinite(requestedPage) && requestedPage > 0 ? Math.min(requestedPage, 10000) : 1;
+    const initialQuery = resolvedSearchParams?.q ? String(resolvedSearchParams.q).slice(0, 120) : '';
 
     if (!book) {
         return (
@@ -86,7 +88,7 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
     return (
         <main className="h-screen w-screen bg-ed-bg overflow-hidden flex flex-col">
             <PDFReaderClient
-                pdfUrl={pdfUrl}
+                pdfUrl={getPublicAssetUrl(pdfUrl)}
                 title={book.title}
                 initialPage={initialPage}
                 initialQuery={initialQuery}

@@ -4,35 +4,30 @@ import Image from 'next/image';
 import { Suspense, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import {
-    BookOpen,
-    ChevronDown,
-    FileText,
-    Headphones,
-    Play,
-    Search,
-    Video,
-} from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import { Play, Search } from 'lucide-react';
 import { formatMedia } from '@/lib/formatUtils';
 import { getMediaHref } from '@/lib/utils';
+import { getPublicAssetUrl } from '@/lib/mediaAssets';
+import { getHighlightTerms } from '@/lib/search/queryMatch';
 import { searchTranscripts } from './actions';
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
+import thumbnailMapping from '@/data/thumbnail_mapping.json';
 
 type FilterKey =
-    | 'sermon'
+    | 'video'
     | 'quran-study'
-    | 'video-program'
-    | 'audio'
+    | 'messenger-audio'
     | 'perspective'
-    | 'appendix'
-    | 'other';
+    | 'appendix';
 
 type SearchMatch = {
     id: string;
     content: string;
     start_time: number;
+    page?: number;
+    score?: number;
+    kind?: string;
+    distance?: number;
 };
 
 type SearchResultMedia = {
@@ -45,34 +40,33 @@ type SearchResultMedia = {
     filename?: string;
     page?: number;
     pdfLink?: string;
+    thumbnailOverride?: string;
+    primaryNumber?: number;
+    alternateNumbers?: string[];
+    alternateNumberLabel?: string;
 };
 
 type SearchResult = {
     media: SearchResultMedia;
     matches: SearchMatch[];
+    bestScore?: number;
+    matchCount?: number;
 };
 
-const FILTER_ROWS: Array<{ label: string; items: Array<{ key: FilterKey; label: string; icon: typeof Video }> }> = [
+const FILTER_ROWS: Array<{ label: string; items: Array<{ key: FilterKey; label: string }> }> = [
     {
-        label: 'Video',
+        label: 'Media',
         items: [
-            { key: 'video-program', label: 'Programs', icon: Video },
-            { key: 'sermon', label: 'Sermons', icon: Video },
+            { key: 'video', label: 'Videos' },
+            { key: 'quran-study', label: 'Quran studies' },
+            { key: 'messenger-audio', label: 'Messenger audios' },
         ],
     },
     {
-        label: 'Audio',
+        label: 'Texts',
         items: [
-            { key: 'quran-study', label: 'Quran studies', icon: BookOpen },
-            { key: 'audio', label: 'Messenger audios', icon: Headphones },
-        ],
-    },
-    {
-        label: 'Written',
-        items: [
-            { key: 'perspective', label: 'Perspectives', icon: FileText },
-            { key: 'appendix', label: 'Appendices', icon: BookOpen },
-            { key: 'other', label: 'Other', icon: FileText },
+            { key: 'perspective', label: 'Submitter Perspectives' },
+            { key: 'appendix', label: 'Appendices' },
         ],
     },
 ];
@@ -82,37 +76,45 @@ function SearchContent() {
     const router = useRouter();
     const initialQuery = searchParams.get('q') || '';
     const initialFilters = searchParams.get('filters')?.split(',') || [];
+    const initialNear = Number(searchParams.get('near') || 18);
 
     const [query, setQuery] = useState(initialQuery);
+    const [proximityWindow] = useState(Number.isFinite(initialNear) ? Math.min(40, Math.max(2, initialNear)) : 18);
     const [isSearching, setIsSearching] = useState(false);
     const [results, setResults] = useState<SearchResult[]>([]);
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
-    const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set());
     const [expandedMatches, setExpandedMatches] = useState<Set<string>>(new Set());
     const [filters, setFilters] = useState<Record<FilterKey, boolean>>({
-        sermon: initialFilters.length === 0 || initialFilters.includes('sermon'),
+        video: initialFilters.length === 0
+            || initialFilters.includes('video')
+            || initialFilters.includes('sermon')
+            || initialFilters.includes('video-program'),
         'quran-study': initialFilters.length === 0 || initialFilters.includes('quran-study'),
-        'video-program': initialFilters.length === 0 || initialFilters.includes('video-program'),
-        audio: initialFilters.length === 0 || initialFilters.includes('audio'),
+        'messenger-audio': initialFilters.length === 0
+            || initialFilters.includes('messenger-audio')
+            || initialFilters.includes('audio'),
         perspective: initialFilters.length === 0 || initialFilters.includes('perspective'),
         appendix: initialFilters.length === 0 || initialFilters.includes('appendix'),
-        other: initialFilters.length === 0 || initialFilters.includes('other'),
     });
 
-    const groupedResults = useMemo(() => {
-        const groups = new Map<string, SearchResult[]>();
-
-        results.forEach((result) => {
-            const type = result.media.type;
-            const existing = groups.get(type) || [];
-            existing.push(result);
-            groups.set(type, existing);
+    const rankedResults = useMemo(() => {
+        return [...results].sort((a, b) => {
+            const bScore = b.bestScore ?? mediaBestScore(b.matches);
+            const aScore = a.bestScore ?? mediaBestScore(a.matches);
+            return bScore - aScore;
         });
-
-        return Array.from(groups.entries());
     }, [results]);
 
-    const updateURL = (searchQuery: string, currentFilters: Record<FilterKey, boolean>) => {
+    const totalMatches = useMemo(
+        () => results.reduce((sum, result) => sum + (result.matchCount ?? result.matches.length), 0),
+        [results],
+    );
+
+    const updateURL = (
+        searchQuery: string,
+        currentFilters: Record<FilterKey, boolean>,
+        currentProximityWindow: number,
+    ) => {
         const params = new URLSearchParams();
 
         if (searchQuery.trim()) {
@@ -125,6 +127,10 @@ function SearchContent() {
 
         if (activeFilters.length > 0 && activeFilters.length < Object.keys(currentFilters).length) {
             params.set('filters', activeFilters.join(','));
+        }
+
+        if (currentProximityWindow !== 18) {
+            params.set('near', String(currentProximityWindow));
         }
 
         const nextUrl = params.toString() ? `/search?${params.toString()}` : '/search';
@@ -145,33 +151,32 @@ function SearchContent() {
 
         try {
             const typeFilters: string[] = [];
-            if (filters.sermon) typeFilters.push('sermon');
+            if (filters.video) typeFilters.push('video');
             if (filters['quran-study']) typeFilters.push('quran-study');
-            if (filters['video-program']) typeFilters.push('video-program');
-            if (filters.audio) {
-                typeFilters.push('audio');
-                typeFilters.push('messenger-audio');
-            }
+            if (filters['messenger-audio']) typeFilters.push('messenger-audio');
             if (filters.perspective) typeFilters.push('perspective');
             if (filters.appendix) typeFilters.push('appendix');
-            if (filters.other) typeFilters.push('other');
 
-            const response = await searchTranscripts(query, typeFilters);
+            const response = await searchTranscripts(query, typeFilters, { proximityWindow });
             if (!response.success) {
                 throw new Error(response.error || 'Search failed');
             }
 
             const rawResults = (response.data || []) as SearchResult[];
-            const formattedResults = rawResults.map((item) => ({
-                ...item,
-                media: {
-                    ...item.media,
-                    ...formatMedia(item.media),
-                },
-            }));
+            const formattedResults = rawResults.map((item) => {
+                const formattedMedia = formatMedia(item.media);
+                return {
+                    ...item,
+                    media: {
+                        ...item.media,
+                        ...formattedMedia,
+                        displayTitle: item.media.displayTitle || formattedMedia.displayTitle,
+                    },
+                };
+            });
 
             setResults(formattedResults);
-            updateURL(query, filters);
+            updateURL(query, filters, proximityWindow);
         } catch (error) {
             const message = error instanceof Error ? error.message : 'An unknown error occurred';
             setErrorMsg(message);
@@ -200,22 +205,10 @@ function SearchContent() {
 
         return () => clearTimeout(timer);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [query, filters]);
+    }, [query, filters, proximityWindow]);
 
     const toggleFilter = (key: FilterKey) => {
         setFilters((prev) => ({ ...prev, [key]: !prev[key] }));
-    };
-
-    const toggleSection = (sectionKey: string) => {
-        setCollapsedSections((prev) => {
-            const next = new Set(prev);
-            if (next.has(sectionKey)) {
-                next.delete(sectionKey);
-            } else {
-                next.add(sectionKey);
-            }
-            return next;
-        });
     };
 
     const toggleMatches = (itemKey: string) => {
@@ -232,55 +225,66 @@ function SearchContent() {
 
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
-            <Header />
+
 
             <main className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                <section className="grid gap-8 border border-ed-rule bg-ed-surface/72 p-6 backdrop-blur-sm sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-3 text-ed-accent">
+                <section className="soft-shell grid gap-8 p-5 sm:p-7 lg:grid-cols-[0.85fr_1.15fr] lg:p-8">
+                    <div className="flex flex-col items-center space-y-5 text-center lg:col-span-2">
+                        <div className="soft-pill inline-flex items-center gap-3 px-4 py-2 text-ed-accent">
                             <Search className="h-6 w-6" />
                             <span className="text-[0.68rem] uppercase tracking-[0.28em]">
                                 Archive search
                             </span>
                         </div>
-                        <h1 className="max-w-[11ch] font-display text-5xl leading-[0.92] text-ed-fg sm:text-6xl lg:text-7xl">
-                            Find what matters without turning the archive into a dashboard.
+                        <h1 className="max-w-full whitespace-nowrap font-display text-[clamp(0.72rem,3vw,2.9rem)] leading-none text-ed-fg">
+                            Find exact words, nearby ideas, and buried passages.
                         </h1>
-                        <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted sm:text-base">
-                            Search across transcripts and written material from one surface. The interface stays
-                            quiet in both dark and light mode so the results, not the chrome, carry the attention.
+                        <p className="max-w-full whitespace-nowrap font-sans text-[clamp(0.38rem,1.1vw,0.92rem)] font-semibold leading-7 tracking-[0.01em] text-ed-fg-muted">
+                            Search normally. Exact phrases, close word clusters, and repeated terms rise together
+                            so the strongest findings stay at the top.
                         </p>
                     </div>
 
-                    <div className="space-y-6 lg:self-end">
-                        <form
-                            onSubmit={(event) => {
-                                event.preventDefault();
-                                void handleSearch();
-                            }}
-                            className="relative"
-                        >
-                            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ed-fg-muted" />
-                            <input
-                                type="text"
-                                value={query}
-                                onChange={(event) => setQuery(event.target.value)}
-                                placeholder="Search transcripts, newsletters, appendices..."
-                                className="w-full border border-ed-rule bg-ed-bg px-12 py-4 text-base text-ed-fg outline-none transition placeholder:text-ed-fg-muted/70 focus:border-ed-accent"
-                                autoFocus
-                            />
-                            <button
-                                type="submit"
-                                className="absolute right-2 top-1/2 -translate-y-1/2 border border-ed-rule bg-ed-surface px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-ed-fg transition hover:border-ed-accent hover:text-ed-accent"
-                            >
-                                Search
-                            </button>
-                        </form>
+                    <div className="grid gap-5 lg:col-span-2 lg:grid-cols-[0.95fr_1.05fr] lg:self-end">
+                        <div className="soft-panel p-4">
+                            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                                <div>
+                                    <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                                        Ranked automatically
+                                    </p>
+                                    <p className="mt-1 text-[15px] leading-6 text-ed-fg">
+                                        Closest findings appear first.
+                                    </p>
+                                </div>
+                                <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent">
+                                    exact + nearby + repeated
+                                </span>
+                            </div>
+                            <div className="mt-4 flex flex-wrap gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-ed-fg-muted">
+                                <button type="button" onClick={() => setQuery('"God alone"')} className="soft-pill px-3 py-2 transition hover:border-ed-accent hover:text-ed-accent">
+                                    &quot;God alone&quot;
+                                </button>
+                                <button type="button" onClick={() => setQuery('messenger covenant')} className="soft-pill px-3 py-2 transition hover:border-ed-accent hover:text-ed-accent">
+                                    messenger covenant
+                                </button>
+                                <button type="button" onClick={() => setQuery('quran mathematical miracle')} className="soft-pill px-3 py-2 transition hover:border-ed-accent hover:text-ed-accent">
+                                    mathematical miracle
+                                </button>
+                            </div>
+                        </div>
 
-                        <div className="space-y-3">
+                        <div className="soft-panel space-y-4 p-4">
+                            <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+                                <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                                    Searchable collections
+                                </p>
+                                <p className="text-xs leading-5 text-ed-fg-muted">
+                                    Videos, two audio archives, perspectives, and appendices.
+                                </p>
+                            </div>
                             {FILTER_ROWS.map((row) => (
-                                <div key={row.label} className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                                    <span className="w-20 text-[0.64rem] uppercase tracking-[0.22em] text-ed-fg-muted">
+                                <div key={row.label} className="flex flex-col gap-2 sm:grid sm:grid-cols-[88px_1fr] sm:items-center">
+                                    <span className="text-[0.68rem] uppercase tracking-[0.2em] text-ed-fg-muted">
                                         {row.label}
                                     </span>
                                     <div className="flex flex-wrap gap-2">
@@ -290,7 +294,6 @@ function SearchContent() {
                                                 active={filters[item.key]}
                                                 onClick={() => toggleFilter(item.key)}
                                                 label={item.label}
-                                                icon={item.icon}
                                             />
                                         ))}
                                     </div>
@@ -298,23 +301,46 @@ function SearchContent() {
                             ))}
                         </div>
                     </div>
+
+                    <form
+                        onSubmit={(event) => {
+                            event.preventDefault();
+                            void handleSearch();
+                        }}
+                        className="relative lg:col-span-2"
+                    >
+                        <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ed-fg-muted" />
+                        <input
+                            type="text"
+                            value={query}
+                            onChange={(event) => setQuery(event.target.value)}
+                            placeholder="Search transcripts, perspectives, appendices..."
+                            className="soft-pill w-full px-12 py-4 pr-28 text-base text-ed-fg outline-none transition placeholder:text-ed-fg-muted/70 focus:border-ed-accent sm:py-5 sm:text-lg"
+                        />
+                        <button
+                            type="submit"
+                            className="soft-pill absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-ed-fg transition hover:border-ed-accent hover:text-ed-accent sm:px-5 sm:py-2.5"
+                        >
+                            Search
+                        </button>
+                    </form>
                 </section>
 
                 {errorMsg ? (
-                    <div className="mt-8 border border-[#961515]/24 bg-[#961515]/10 p-4 text-sm text-[#961515] dark:text-[#f6ae82]">
+                    <div className="soft-panel mt-8 p-4 text-sm text-[#961515] dark:text-[#f6ae82]">
                         {errorMsg}
                     </div>
                 ) : null}
 
-                <section className="mt-12 space-y-6">
+                <section className="mt-8 space-y-6">
                     {isSearching ? (
-                        <div className="border border-ed-rule bg-ed-surface/64 px-6 py-14 text-center text-[0.72rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                        <div className="soft-shell px-6 py-14 text-center text-[0.72rem] uppercase tracking-[0.24em] text-ed-fg-muted">
                             Searching the archive...
                         </div>
                     ) : null}
 
                     {!isSearching && query && results.length === 0 ? (
-                        <div className="border border-ed-rule bg-ed-surface/64 px-6 py-14 text-center">
+                        <div className="soft-shell px-6 py-14 text-center">
                             <p className="font-display text-3xl text-ed-fg">No matches found.</p>
                             <p className="mt-3 text-sm leading-7 text-ed-fg-muted">
                                 Try a shorter phrase, remove a filter, or search by title keywords.
@@ -323,156 +349,40 @@ function SearchContent() {
                     ) : null}
 
                     {!isSearching && results.length > 0 ? (
-                        <div className="flex items-center gap-3 border-b border-ed-rule pb-4 text-[0.68rem] uppercase tracking-[0.24em] text-ed-fg-muted">
-                            <FileText className="h-4 w-4 text-ed-accent" />
-                            {results.length} documents matched
+                        <div className="flex flex-col gap-3 border-b border-ed-rule pb-4 sm:flex-row sm:items-end sm:justify-between">
+                            <div>
+                                <p className="text-[0.68rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                                    Best matches first
+                                </p>
+                                <p className="mt-1 font-display text-3xl text-ed-fg">
+                                    {results.length} documents, {totalMatches} passages
+                                </p>
+                            </div>
+                            <p className="whitespace-nowrap text-[clamp(0.52rem,2.7vw,0.875rem)] leading-6 text-ed-fg-muted sm:text-right">
+                                Exact phrases and nearby terms are already folded into the ranking.
+                            </p>
                         </div>
                     ) : null}
 
-                    {groupedResults.map(([type, typeResults]) => {
-                        const config = getSectionConfig(type);
-                        const isCollapsed = collapsedSections.has(type);
-                        const Icon = config.icon;
-
-                        return (
-                            <div key={type} className="border border-ed-rule bg-ed-surface/74">
-                                <button
-                                    onClick={() => toggleSection(type)}
-                                    className="flex w-full items-center justify-between gap-4 border-b border-ed-rule px-5 py-5 text-left transition hover:bg-ed-bg/30"
-                                >
-                                    <div className="flex items-center gap-4">
-                                        <Icon className="h-5 w-5 text-ed-accent" />
-                                        <div>
-                                            <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
-                                                {config.title}
-                                            </p>
-                                            <p className="mt-1 font-display text-2xl text-ed-fg">{config.title}</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-4">
-                                        <span className="text-[0.62rem] uppercase tracking-[0.22em] text-ed-fg-muted">
-                                            {typeResults.length} results
-                                        </span>
-                                        <ChevronDown
-                                            className={`h-5 w-5 text-ed-fg-muted transition-transform ${
-                                                isCollapsed ? '-rotate-90' : 'rotate-0'
-                                            }`}
-                                        />
-                                    </div>
-                                </button>
-
-                                {!isCollapsed ? (
-                                    <div className="divide-y divide-ed-rule">
-                                        {typeResults.map(({ media, matches }) => {
-                                            const itemKey = `${media.id}${media.page ? `-${media.page}` : ''}`;
-                                            const isExpanded = expandedMatches.has(itemKey);
-                                            const visibleMatches = isExpanded ? matches : matches.slice(0, 3);
-                                            const mediaLink = getMediaLink(media, query);
-                                            const thumbnailSrc = getThumbnailSrc(media);
-
-                                            return (
-                                                <article key={itemKey} className="grid gap-4 p-4 sm:p-5 lg:grid-cols-[180px_1fr]">
-                                                    <Link
-                                                        href={mediaLink}
-                                                        className="relative aspect-video overflow-hidden border border-ed-rule bg-ed-bg"
-                                                    >
-                                                        <Image
-                                                            src={thumbnailSrc}
-                                                            alt={media.displayTitle || media.title}
-                                                            fill
-                                                            sizes="(max-width: 1024px) 100vw, 180px"
-                                                            className={`h-full w-full ${
-                                                                isDocumentType(media.type)
-                                                                    ? 'object-contain p-1'
-                                                                    : 'object-cover'
-                                                            }`}
-                                                        />
-                                                        {!isDocumentType(media.type) ? (
-                                                            <div className="absolute inset-0 flex items-center justify-center bg-black/12">
-                                                                <div className="rounded-full bg-black/45 p-2 text-white">
-                                                                    <Play className="h-4 w-4 fill-current" />
-                                                                </div>
-                                                            </div>
-                                                        ) : null}
-                                                    </Link>
-
-                                                    <div className="min-w-0">
-                                                        <Link href={mediaLink} className="block border-b border-ed-rule pb-4">
-                                                            <div className="flex flex-wrap items-center gap-3">
-                                                                <span className="border border-ed-rule bg-ed-bg px-2 py-1 text-[0.58rem] uppercase tracking-[0.22em] text-ed-fg-muted">
-                                                                    {media.type === 'messenger-audio'
-                                                                        ? 'audio'
-                                                                        : media.type.replace('-', ' ')}
-                                                                </span>
-                                                                {media.displayDate ? (
-                                                                    <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-fg-muted">
-                                                                        {media.displayDate}
-                                                                    </span>
-                                                                ) : null}
-                                                            </div>
-                                                            <h3 className="mt-3 font-display text-3xl leading-tight text-ed-fg">
-                                                                {media.displayTitle || media.title}
-                                                            </h3>
-                                                            {media.author ? (
-                                                                <p className="mt-2 text-sm text-ed-fg-muted">
-                                                                    {media.author}
-                                                                </p>
-                                                            ) : null}
-                                                        </Link>
-
-                                                        <div className="divide-y divide-ed-rule">
-                                                            {visibleMatches.map((match) => (
-                                                                <div key={match.id} className="grid gap-3 py-4 sm:grid-cols-[78px_1fr]">
-                                                                    <Link
-                                                                        href={
-                                                                            isDocumentType(media.type)
-                                                                                ? mediaLink
-                                                                                : `${mediaLink}?t=${Math.floor(
-                                                                                    match.start_time,
-                                                                                )}`
-                                                                        }
-                                                                        className="inline-flex items-start text-[0.64rem] uppercase tracking-[0.2em] text-ed-accent"
-                                                                    >
-                                                                        {isDocumentType(media.type)
-                                                                            ? 'Text'
-                                                                            : formatTime(match.start_time)}
-                                                                    </Link>
-                                                                    <p
-                                                                        className="text-sm leading-7 text-ed-fg-muted"
-                                                                        dangerouslySetInnerHTML={{
-                                                                            __html: highlightMatch(
-                                                                                match.content,
-                                                                                query,
-                                                                            ),
-                                                                        }}
-                                                                    />
-                                                                </div>
-                                                            ))}
-                                                        </div>
-
-                                                        {matches.length > 3 ? (
-                                                            <button
-                                                                onClick={() => toggleMatches(itemKey)}
-                                                                className="mt-2 text-[0.62rem] uppercase tracking-[0.22em] text-ed-fg-muted transition hover:text-ed-accent"
-                                                            >
-                                                                {isExpanded
-                                                                    ? 'Show less'
-                                                                    : `Show ${matches.length - 3} more matches`}
-                                                            </button>
-                                                        ) : null}
-                                                    </div>
-                                                </article>
-                                            );
-                                        })}
-                                    </div>
-                                ) : null}
-                            </div>
-                        );
-                    })}
+                    <div className="space-y-5">
+                        {rankedResults.map((result, index) => {
+                            const itemKey = `${result.media.id}${result.media.page ? `-${result.media.page}` : ''}`;
+                            return (
+                                <SearchResultCard
+                                    key={itemKey}
+                                    result={result}
+                                    query={query}
+                                    rank={index + 1}
+                                    expanded={expandedMatches.has(itemKey)}
+                                    onToggle={() => toggleMatches(itemKey)}
+                                />
+                            );
+                        })}
+                    </div>
                 </section>
             </main>
 
-            <Footer />
+
         </div>
     );
 }
@@ -491,51 +401,266 @@ export default function SearchPage() {
     );
 }
 
+function SearchResultCard({
+    result,
+    query,
+    rank,
+    expanded,
+    onToggle,
+}: {
+    result: SearchResult;
+    query: string;
+    rank: number;
+    expanded: boolean;
+    onToggle: () => void;
+}) {
+    const { media, matches } = result;
+    const mediaLink = getMediaLink(media, query);
+    const thumbnailSrc = getThumbnailSrc(media);
+    const isDocument = isDocumentType(media.type);
+    const visibleMatches = expanded ? matches : matches.slice(0, 2);
+    const bestMatch = matches[0];
+    const bestHref = bestMatch
+        ? isDocumentType(media.type)
+            ? getDocumentMatchLink(media, bestMatch, query)
+            : `${mediaLink}?t=${Math.floor(bestMatch.start_time)}`
+        : mediaLink;
+
+    return (
+        <article className={`soft-shell overflow-hidden ${isDocument ? 'bg-ed-muted/20' : ''}`}>
+            <div className={`grid gap-5 p-4 sm:p-5 lg:p-6 ${
+                isDocument ? 'lg:grid-cols-[156px_1fr]' : 'lg:grid-cols-[210px_1fr]'
+            }`}>
+                <Link
+                    href={bestHref}
+                    className={`soft-panel group relative overflow-hidden ${
+                        isDocument
+                            ? 'mx-auto aspect-[3/4] w-full max-w-[176px] rounded-[0.85rem] bg-ed-bg p-2 shadow-[0_18px_44px_rgba(31,26,20,0.12)]'
+                            : 'aspect-video'
+                    }`}
+                    aria-label={`Open ${media.displayTitle || media.title}`}
+                >
+                    <Image
+                        src={thumbnailSrc}
+                        alt={media.displayTitle || media.title}
+                        fill
+                        sizes={isDocument ? '(max-width: 1024px) 176px, 156px' : '(max-width: 1024px) 100vw, 210px'}
+                        className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${
+                            isDocument ? 'object-contain' : 'object-cover'
+                        }`}
+                    />
+                    {!isDocument ? (
+                        <div className="absolute inset-0 flex items-center justify-center bg-[rgba(12,12,12,0.16)]">
+                            <div className="soft-pill p-2 text-ed-fg shadow-[0_14px_36px_rgba(0,0,0,0.18)]">
+                                <Play className="h-4 w-4 fill-current" />
+                            </div>
+                        </div>
+                    ) : null}
+                </Link>
+
+                <div className="min-w-0">
+                    <div className="flex flex-col gap-4 border-b border-ed-rule pb-5 sm:flex-row sm:items-start sm:justify-between">
+                        <Link href={mediaLink} className="min-w-0">
+                            <div className="flex flex-wrap items-center gap-2">
+                                <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent">
+                                    {String(rank).padStart(2, '0')}
+                                </span>
+                                <span className="soft-pill px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.2em] text-ed-fg-muted">
+                                    {getMediaTypeLabel(media.type)}
+                                </span>
+                                {media.displayDate ? (
+                                    <span className="text-[0.68rem] uppercase tracking-[0.18em] text-ed-fg-muted">
+                                        {media.displayDate}
+                                    </span>
+                                ) : null}
+                            </div>
+                            <h3 className="mt-3 font-display text-3xl leading-tight text-ed-fg sm:text-4xl">
+                                {media.displayTitle || media.title}
+                            </h3>
+                            {media.author ? (
+                                <p className="mt-2 text-[15px] leading-6 text-ed-fg-muted">
+                                    {media.author}
+                                    {media.alternateNumberLabel ? ` | ${media.alternateNumberLabel}` : ''}
+                                </p>
+                            ) : null}
+                        </Link>
+
+                        <div className="flex flex-wrap gap-2 sm:justify-end">
+                            <SignalBadge score={result.bestScore ?? mediaBestScore(matches)} />
+                            {bestMatch?.kind ? <MatchKindPill match={bestMatch} /> : null}
+                        </div>
+                    </div>
+
+                    {bestMatch ? (
+                        <Link
+                            href={bestHref}
+                            className="my-4 block rounded-[1.35rem] border border-ed-rule bg-ed-muted/45 px-4 py-4 transition hover:border-ed-accent/50"
+                        >
+                            <div className="mb-3 flex flex-wrap items-center gap-2">
+                                <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent">
+                                    Best passage
+                                </span>
+                                <span className="soft-pill px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-fg-muted">
+                                    {isDocumentType(media.type) ? 'Open text' : `Play at ${formatTime(bestMatch.start_time)}`}
+                                </span>
+                            </div>
+                            <p
+                                className="text-[15px] leading-7 text-ed-fg"
+                                dangerouslySetInnerHTML={{
+                                    __html: highlightMatch(bestMatch.content, query),
+                                }}
+                            />
+                        </Link>
+                    ) : null}
+
+                    {visibleMatches.length > 1 ? (
+                        <div className="divide-y divide-ed-rule">
+                            {visibleMatches.slice(1).map((match) => (
+                                <SearchMatchRow
+                                    key={match.id}
+                                    media={media}
+                                    mediaLink={mediaLink}
+                                    match={match}
+                                    query={query}
+                                />
+                            ))}
+                        </div>
+                    ) : null}
+
+                    {matches.length > 2 ? (
+                        <button
+                            onClick={onToggle}
+                            className="mt-4 soft-pill px-4 py-2 text-[0.66rem] uppercase tracking-[0.2em] text-ed-fg-muted transition hover:border-ed-accent hover:text-ed-accent"
+                        >
+                            {expanded ? 'Show fewer passages' : `Show ${matches.length - 2} more passages`}
+                        </button>
+                    ) : null}
+                </div>
+            </div>
+        </article>
+    );
+}
+
+function SearchMatchRow({
+    media,
+    mediaLink,
+    match,
+    query,
+}: {
+    media: SearchResultMedia;
+    mediaLink: string;
+    match: SearchMatch;
+    query: string;
+}) {
+    const href = isDocumentType(media.type)
+        ? getDocumentMatchLink(media, match, query)
+        : `${mediaLink}?t=${Math.floor(match.start_time)}`;
+
+    return (
+        <div className="grid gap-3 py-4 sm:grid-cols-[104px_1fr]">
+            <Link
+                href={href}
+                className="soft-pill inline-flex h-fit w-fit px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-accent transition hover:border-ed-accent"
+            >
+                {isDocumentType(media.type) ? 'Open text' : formatTime(match.start_time)}
+            </Link>
+            <div>
+                <div className="mb-2 flex flex-wrap gap-2">
+                    {match.kind ? <MatchKindPill match={match} /> : null}
+                </div>
+                <p
+                    className="text-sm leading-7 text-ed-fg-muted"
+                    dangerouslySetInnerHTML={{
+                        __html: highlightMatch(match.content, query),
+                    }}
+                />
+            </div>
+        </div>
+    );
+}
+
 function FilterButton({
     active,
     onClick,
     label,
-    icon: Icon,
 }: {
     active: boolean;
     onClick: () => void;
     label: string;
-    icon: typeof Video;
 }) {
     return (
         <button
             type="button"
             onClick={onClick}
-            className={`inline-flex items-center gap-2 border px-3 py-2 text-[0.64rem] uppercase tracking-[0.22em] transition ${
+            className={`soft-pill inline-flex items-center px-4 py-2.5 text-[0.68rem] uppercase tracking-[0.18em] transition ${
                 active
-                    ? 'border-ed-accent bg-ed-accent/10 text-ed-accent'
-                    : 'border-ed-rule bg-ed-surface text-ed-fg-muted hover:text-ed-fg'
+                    ? 'border-ed-accent bg-ed-accent/12 text-ed-accent shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]'
+                    : 'text-ed-fg-muted hover:border-ed-accent/50 hover:text-ed-fg'
             }`}
         >
-            <Icon className="h-3.5 w-3.5" />
             {label}
         </button>
     );
 }
 
-function getSectionConfig(type: string): { title: string; icon: typeof Video } {
+function SignalBadge({ score }: { score: number }) {
+    const label = score >= 100 ? 'Best match' : score >= 80 ? 'Close match' : score >= 55 ? 'Relevant' : 'Broad match';
+    return (
+        <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-accent">
+            {label}
+        </span>
+    );
+}
+
+function MatchKindPill({ match }: { match: SearchMatch }) {
+    return (
+        <span className="soft-pill px-3 py-1.5 text-[0.6rem] uppercase tracking-[0.18em] text-ed-fg-muted">
+            {getMatchKindLabel(match.kind || '')}
+            {typeof match.distance === 'number' && match.kind !== 'single-term'
+                ? `, ${match.distance} words apart`
+                : ''}
+        </span>
+    );
+}
+
+function getMediaTypeLabel(type: string) {
     switch (type) {
         case 'sermon':
-            return { title: 'Friday sermons', icon: Video };
+        case 'video':
+            return 'Videos';
         case 'quran-study':
-            return { title: 'Quran studies', icon: BookOpen };
+            return 'Quran Studies';
         case 'video-program':
-            return { title: 'Video programs', icon: Video };
+            return 'Videos';
         case 'messenger-audio':
         case 'audio':
-            return { title: 'Audio recordings', icon: Headphones };
+            return 'Messenger Audios';
         case 'perspective':
-            return { title: 'Newsletters', icon: FileText };
+            return 'Submitter Perspectives';
         case 'appendix':
-            return { title: 'Appendices', icon: BookOpen };
+            return 'Appendices';
         default:
-            return { title: 'Other resources', icon: FileText };
+            return 'Resource';
     }
+}
+
+function getMatchKindLabel(kind: string) {
+    switch (kind) {
+        case 'phrase':
+            return 'Exact phrase';
+        case 'proximity':
+            return 'Nearby terms';
+        case 'single-term':
+            return 'Term match';
+        case 'all-terms':
+            return 'All terms';
+        default:
+            return 'Ranked match';
+    }
+}
+
+function mediaBestScore(matches: SearchMatch[]) {
+    return Math.max(0, ...matches.map((match) => match.score ?? 0));
 }
 
 function isDocumentType(type: string) {
@@ -553,35 +678,48 @@ function getMediaLink(media: SearchResultMedia, query: string) {
     return getMediaHref(media.id);
 }
 
+function getDocumentMatchLink(media: SearchResultMedia, match: SearchMatch, query: string) {
+    const params = new URLSearchParams();
+    if (query) params.append('q', query);
+
+    const page = typeof match.page === 'number' ? match.page : media.page;
+    if (typeof page === 'number') {
+        params.append('page', String(page));
+    }
+
+    const queryString = params.toString();
+    return queryString ? `/library/${media.id}?${queryString}` : `/library/${media.id}`;
+}
+
 function getThumbnailSrc(media: SearchResultMedia) {
+    if (media.thumbnailOverride) {
+        return getPublicAssetUrl(media.thumbnailOverride);
+    }
+
     if (media.type === 'sermon') {
-        const cleanId = media.id
-            .replace(/^media\/(disorganized_sermons|VIDEO PROGRAMS)\//, '')
-            .replace(/\s+/g, '_')
-            .replace(/[^\w\-_.]/g, '')
-            .replace(/\.mp4$/, '');
-        return `/images/sermons/${cleanId}.jpg`;
+        const mappedFilename = (thumbnailMapping as Record<string, string>)[media.id];
+        return mappedFilename
+            ? `/images/sermons/${mappedFilename}.jpg`
+            : `/images/sermons/${getCleanMediaId(media.id)}.jpg`;
     }
 
     if (media.type === 'video-program') {
-        const cleanId = media.id
-            .replace(/^media\/(disorganized_sermons|VIDEO PROGRAMS)\//, '')
-            .replace(/\s+/g, '_')
-            .replace(/[^\w\-_.]/g, '')
-            .replace(/\.mp4$/, '');
-        return `/images/video-programs/${cleanId}.jpg`;
+        const mappedFilename = (thumbnailMapping as Record<string, string>)[media.id];
+        return mappedFilename
+            ? `/images/video-programs/${mappedFilename}.jpg`
+            : `/images/video-programs/${getCleanMediaId(media.id)}.jpg`;
     }
 
     if (media.type === 'audio' || media.type === 'messenger-audio') {
-        return '/images/messenger-audios/default.jpg';
+        return getPublicAssetUrl('/content/audio/messenger-audios/default.jpg');
     }
 
     if (media.type === 'perspective') {
-        return '/images/placeholders/rashad-khalifa.png';
+        return '/images/placeholders/newsletter.png';
     }
 
     if (media.type === 'appendix') {
-        return '/images/placeholders/rashad-khalifa.png';
+        return '/images/placeholders/appendix.png';
     }
 
     if (media.type === 'other') {
@@ -601,6 +739,14 @@ function getThumbnailSrc(media: SearchResultMedia) {
     return '/images/placeholders/rashad-khalifa.png';
 }
 
+function getCleanMediaId(id: string) {
+    return id
+        .replace(/^media\/(FRIDAY SERMONS|VIDEO PROGRAMS|disorganized_sermons|rk_video_programs)\//, '')
+        .replace(/\s+/g, '_')
+        .replace(/[^\w\-_.]/g, '')
+        .replace(/\.mp4$/, '');
+}
+
 function formatTime(seconds: number) {
     const min = Math.floor(seconds / 60);
     const sec = Math.floor(seconds % 60);
@@ -608,13 +754,40 @@ function formatTime(seconds: number) {
 }
 
 function highlightMatch(text: string, query: string) {
+    const safeText = escapeHtml(text);
+
     if (!query) {
-        return text;
+        return safeText;
     }
 
-    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    return text.replace(
-        regex,
-        '<span class="rounded bg-ed-accent/12 px-1 font-semibold text-ed-accent">$1</span>',
+    const terms = getHighlightTerms(query).map(escapeHtml);
+    if (terms.length === 0) {
+        return safeText;
+    }
+
+    const regex = new RegExp(
+        `(${terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`,
+        'gi',
     );
+
+    return safeText.replace(regex, '<span class="rounded bg-ed-accent/12 px-1 font-semibold text-ed-accent">$1</span>');
+}
+
+function escapeHtml(value: string) {
+    return value.replace(/[&<>"']/g, (char) => {
+        switch (char) {
+            case '&':
+                return '&amp;';
+            case '<':
+                return '&lt;';
+            case '>':
+                return '&gt;';
+            case '"':
+                return '&quot;';
+            case "'":
+                return '&#39;';
+            default:
+                return char;
+        }
+    });
 }

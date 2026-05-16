@@ -2,294 +2,221 @@
 
 import fs from 'fs';
 import path from 'path';
-import otherData from '../../../public/data/other/search_index.json';
-import { searchNewsletterCsv } from '@/lib/newsletterCatalog';
-import { searchAppendixCsv } from '@/lib/appendixCatalog';
+import { headers } from 'next/headers';
+import { findQueryMatch } from '@/lib/search/queryMatch';
+import { checkRateLimit, getClientIp } from '@/lib/security';
 
-// Helper for stream
-function streamToString(stream: any): Promise<string> {
-    return new Promise((resolve, reject) => {
-        const chunks: any[] = [];
-        stream.on('data', (chunk: any) => chunks.push(chunk));
-        stream.on('error', reject);
-        stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
-    });
+const MAX_QUERY_LENGTH = 120;
+const SEARCH_RATE_LIMIT = 40;
+const ALLOWED_FILTERS = new Set([
+    'video',
+    'sermon',
+    'quran-study',
+    'video-program',
+    'audio',
+    'messenger-audio',
+    'perspective',
+    'appendix',
+    'other',
+]);
+
+type SearchMatch = {
+    id: string;
+    content: string;
+    start_time: number;
+    page?: number;
+    score?: number;
+    kind?: string;
+    distance?: number;
+};
+
+type SearchMedia = {
+    id: string;
+    title: string;
+    type: string;
+    author?: string;
+    pdfLink?: string;
+    page?: number;
+    thumbnailOverride?: string;
+    displayTitle?: string;
+    displayDate?: string;
+    primaryNumber?: number;
+    alternateNumbers?: string[];
+    alternateNumberLabel?: string;
+};
+
+type SearchResult = {
+    media: SearchMedia;
+    matches: SearchMatch[];
+    bestScore?: number;
+    matchCount?: number;
+};
+
+type SearchOptions = {
+    proximityWindow?: number;
+};
+
+type MasterSegment = {
+    start?: number;
+    end?: number;
+    text?: string;
+    page?: number;
+    sectionIndex?: number;
+};
+
+type MasterIndexItem = {
+    id: string;
+    title?: string;
+    displayTitle?: string;
+    type: string;
+    category?: string;
+    author?: string;
+    date?: string;
+    fullDate?: string;
+    pdfLink?: string;
+    thumbnailOverride?: string;
+    primaryNumber?: number;
+    alternateNumbers?: string[];
+    alternateNumberLabel?: string;
+    segments?: MasterSegment[];
+};
+
+function readGeneratedIndex<T>(filename: string): T[] {
+    const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
+    if (!fs.existsSync(filePath)) return [];
+    return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T[];
 }
 
-import { r2Client, R2_BUCKET_NAME } from '@/lib/r2';
-import { GetObjectCommand } from '@aws-sdk/client-s3';
+function getSearchIndex() {
+    const master = readGeneratedIndex<MasterIndexItem>('MASTER_INDEX.json');
+    if (master.length > 0) return master;
 
-// Cache Mega JSON in memory
-let megaJsonCache: any = null;
-let lastFetchTime = 0;
+    const videos = readGeneratedIndex<MasterIndexItem>('ALL_VIDEO_PROGRAMS.json')
+        .map((item) => ({ ...item, category: 'Videos' }));
+    const audios = readGeneratedIndex<MasterIndexItem>('ALL_AUDIOS.json')
+        .map((item) => ({
+            ...item,
+            category: item.type === 'quran-study' ? 'Quran Studies' : 'Messenger Audios',
+        }));
 
-export async function searchTranscripts(query: string, typeFilters: string[]) {
+    return [...videos, ...audios];
+}
+
+export async function searchTranscripts(query: string, typeFilters: string[], options: SearchOptions = {}) {
     try {
-        console.log(`[Server Action] Searching for "${query}" in types: ${typeFilters.join(', ')}`);
-
-        // Execute all searches in parallel for better performance
-        const searchPromises: Promise<any[]>[] = [];
-
-        // 1. Search Quran Studies (Mega JSON via R2)
-        if (typeFilters.includes('quran-study')) {
-            searchPromises.push(searchQuranStudies(query));
+        const requestHeaders = await headers();
+        const rateLimit = checkRateLimit(`search:${getClientIp(requestHeaders)}`, SEARCH_RATE_LIMIT);
+        if (rateLimit.limited) {
+            return { success: false, error: 'Too many searches. Please try again shortly.' };
         }
 
-        // 2. Search Submitter Perspectives from the CSV OCR rows, linking only to PDFs.
-        if (typeFilters.includes('perspective')) {
-            searchPromises.push(searchNewsletters(query));
+        if (typeof query !== 'string' || query.trim().length === 0) {
+            return { success: true, data: [] };
         }
 
-        // 3. Search Appendices (Local JSON)
-        if (typeFilters.includes('appendix')) {
-            searchPromises.push(searchAppendices(query));
-        }
+        const cleanQuery = query.trim().slice(0, MAX_QUERY_LENGTH);
+        const cleanOptions: Required<SearchOptions> = {
+            proximityWindow: clamp(Number(options.proximityWindow) || 18, 2, 40),
+        };
+        const cleanFilters = Array.isArray(typeFilters)
+            ? [...new Set(typeFilters.filter((filter) => ALLOWED_FILTERS.has(filter)))]
+            : [];
 
-        // 4. Search Sermons (Generated Local Index)
-        if (typeFilters.includes('sermon')) {
-            searchPromises.push(searchLocalMegaIndex('ALL_SERMONS.json', query, 'sermon'));
-            searchPromises.push(searchLocalMegaIndex('ALL_FRIDAY_SERMONS.json', query, 'sermon'));
-        }
+        const finalResults = searchMasterIndex(cleanQuery, cleanFilters, cleanOptions)
+            .map(rankResult)
+            .sort((a, b) => (b.bestScore ?? 0) - (a.bestScore ?? 0));
 
-        // 5. Search Video Programs (Generated Local Index)
-        if (typeFilters.includes('video-program')) {
-            searchPromises.push(searchLocalMegaIndex('ALL_VIDEO_PROGRAMS.json', query, 'video-program'));
-        }
-
-        // 6. Search Audio (Generated Local Index)
-        if (typeFilters.includes('audio') || typeFilters.includes('messenger-audio')) {
-            searchPromises.push(searchLocalMegaIndex('ALL_AUDIOS.json', query, 'messenger-audio'));
-        }
-
-        // 7. Search Other Resources (Local JSON)
-        if (typeFilters.includes('other')) {
-            searchPromises.push(searchOther(query));
-        }
-
-        // Wait for all searches to complete in parallel
-        const results = await Promise.all(searchPromises);
-        const finalResults = results.flat(); // Combine all results
-
-        console.log(`[Server Action] Found ${finalResults.length} items total.`);
         return { success: true, data: finalResults };
 
-    } catch (err: any) {
-        console.error("[Server Action] Search Exception:", err);
-        return { success: false, error: err.message };
+    } catch (err: unknown) {
+        console.error('[Server Action] Search Exception:', err);
+        return { success: false, error: err instanceof Error ? err.message : 'Search failed' };
     }
 }
 
-// ... existing helpers ...
+function searchMasterIndex(
+    query: string,
+    filters: string[],
+    options: Required<SearchOptions>,
+): SearchResult[] {
+    const results: SearchResult[] = [];
+    const items = getSearchIndex();
 
-// Helper: Search Other Resources
-async function searchOther(query: string): Promise<any[]> {
-    try {
-        const lowerQuery = query.toLowerCase();
+    for (const item of items) {
+        if (!isMasterItemAllowed(item, filters)) continue;
 
-        // Structure: item.pages = [{ page: 1, content: "..." }, ...]
+        const matches: SearchMatch[] = [];
+        item.segments?.forEach((segment, index) => {
+            const result = findQueryMatch(segment.text || '', query, options);
+            if (!result.matched) return;
 
-        const results: any[] = [];
-        const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-
-        (otherData || []).forEach((item: any) => {
-            if (!item.pages) return;
-
-            item.pages.forEach((page: any) => {
-                const content = page.content;
-                const lowerContent = content.toLowerCase();
-
-                if (lowerContent.includes(lowerQuery)) {
-                    // Match found on this page
-                    let match;
-                    let count = 0;
-                    // Reset regex index
-                    regex.lastIndex = 0;
-
-                    const matchesOnPage: any[] = [];
-
-                    while ((match = regex.exec(content)) !== null && count < 3) { // Limit matches per page
-                        const start = Math.max(0, match.index - 60);
-                        const end = Math.min(content.length, match.index + query.length + 60);
-                        let snippet = content.substring(start, end);
-                        if (start > 0) snippet = '...' + snippet;
-                        if (end < content.length) snippet = snippet + '...';
-
-                        matchesOnPage.push({
-                            id: `other-${item.id}-p${page.page}-${count}`, // Unique ID per match
-                            content: snippet,
-                            start_time: 0 // Placeholder
-                        });
-                        count++;
-                    }
-
-                    if (matchesOnPage.length > 0) {
-                        results.push({
-                            media: {
-                                id: item.id,
-                                title: `${item.title} (Page ${page.page})`, // Show page in title
-                                type: 'other',
-                                author: item.author || 'Dr. Rashad Khalifa',
-                                filename: item.filename,
-                                page: page.page // Pass page info!
-                            },
-                            matches: matchesOnPage
-                        });
-                    }
-                }
+            matches.push({
+                id: `${item.id}-${segment.start ?? segment.page ?? index}`,
+                content: result.snippet || segment.text || '',
+                start_time: segment.start ?? 0,
+                page: segment.page,
+                score: result.score,
+                kind: result.kind,
+                distance: result.distance,
             });
         });
 
-        return results;
-    } catch (err) {
-        console.error("Error searching Other resources:", err);
-        return [];
-    }
-}
+        if (matches.length === 0) continue;
 
-
-// Helper: Search Local Mega Index (Generated by script)
-async function searchLocalMegaIndex(filename: string, query: string, type: string): Promise<any[]> {
-    try {
-        // Look in public/data/generated_indices/
-        const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
-        if (!fs.existsSync(filePath)) {
-            // console.warn(`Index file not found: ${filename}`); // Optional: mute warning to avoid log spam if incomplete
-            return [];
-        }
-
-        const fileContent = await fs.promises.readFile(filePath, 'utf-8');
-        const data = JSON.parse(fileContent);
-        const lowerQuery = query.toLowerCase();
-
-        return data.map((item: any) => {
-            // Check matches in segments
-            // Note: Script output uses 'text', 'start', 'end'
-            // If generation script used 'content', adjust here. My script uses 'text'.
-            const matches = (item.segments || [])
-                .filter((seg: any) => (seg.text || seg.content) && (seg.text || seg.content).toLowerCase().includes(lowerQuery))
-                .map((seg: any) => ({
-                    id: `${type}-${item.index || item.id}-${seg.start || seg.start_time}`,
-                    content: seg.text || seg.content,
-                    start_time: seg.start || seg.start_time || 0
-                }));
-
-            if (matches.length === 0) return null;
-
-            return {
-                media: {
-                    id: item.id, // R2 Key
-                    title: item.title,
-                    type: type,
-                    displayTitle: item.title,
-                    filename: item.id.split('/').pop(), // Helper for potential links
-                    author: 'Dr. Rashad Khalifa'
-                },
-                matches: matches.slice(0, 50)
-            };
-        }).filter((r: any) => r !== null);
-
-    } catch (err) {
-        console.error(`Error searching local index ${filename}:`, err);
-        return [];
-    }
-}
-
-// Helper: Search Quran Studies
-async function searchQuranStudies(query: string): Promise<any[]> {
-    try {
-        // Fetch Mega JSON if not cached or old (cache for 5 mins)
-        const now = Date.now();
-        if (!megaJsonCache || (now - lastFetchTime > 1000 * 60 * 5)) {
-            console.log("Fetching Mega JSON from R2...");
-            const cmd = new GetObjectCommand({
-                Bucket: R2_BUCKET_NAME,
-                Key: "media/data/ALL_QURAN_STUDIES_TRANSCRIPTS_MEGA.json"
-            });
-            const response = await r2Client.send(cmd);
-            if (response.Body) {
-                const str = await streamToString(response.Body);
-                megaJsonCache = JSON.parse(str);
-                lastFetchTime = now;
-            }
-        }
-
-        if (!megaJsonCache) return [];
-
-        const lowerQuery = query.toLowerCase();
-        const quranResults = megaJsonCache
-            .map((item: any) => {
-                // Filter segments that match
-                const matches = item.transcript
-                    .filter((seg: any) => seg.content && seg.content.toLowerCase().includes(lowerQuery))
-                    .map((seg: any) => ({
-                        id: `qs-${item.index}-${seg.id}`,
-                        content: seg.content,
-                        start_time: seg.start_time
-                    }));
-
-                if (matches.length === 0) return null;
-
-                const mp3Filename = item.filename.replace('.json', '.mp3');
-                const r2Key = `media/quran-study-v2/${mp3Filename}`;
-
-                return {
-                    media: {
-                        id: r2Key,
-                        title: item.title,
-                        type: 'quran-study',
-                        displayTitle: item.title,
-                        filename: mp3Filename,
-                        author: 'Dr. Rashad Khalifa'
-                    },
-                    matches: matches.slice(0, 50)
-                };
-            })
-            .filter((r: any) => r !== null);
-
-        return quranResults;
-    } catch (err) {
-        console.error("Error searching Quran Studies:", err);
-        return [];
-    }
-}
-
-// Helper: Search Newsletters
-async function searchNewsletters(query: string): Promise<any[]> {
-    try {
-        return searchNewsletterCsv(query).map(({ issue, matches }) => ({
+        results.push({
             media: {
-                id: issue.id,
-                title: issue.title,
-                type: 'perspective',
-                displayDate: issue.date,
-                author: 'Rashad Khalifa',
-                filename: issue.filename,
-                pdfLink: issue.pdfLink,
+                id: item.id,
+                title: item.displayTitle || item.title || item.id,
+                type: item.type,
+                author: item.author || 'Dr. Rashad Khalifa',
+                pdfLink: item.pdfLink,
+                page: matches[0]?.page,
+                thumbnailOverride: item.thumbnailOverride,
+                displayTitle: item.displayTitle || item.title || item.id,
+                displayDate: item.date || item.fullDate || '',
+                primaryNumber: item.primaryNumber,
+                alternateNumbers: item.alternateNumbers,
+                alternateNumberLabel: item.alternateNumberLabel,
             },
-            matches,
-        }));
-    } catch (err) {
-        console.error("Error searching newsletters:", err);
-        return [];
+            matches: sortMatches(matches).slice(0, 20),
+        });
     }
+
+    return results;
 }
 
-// Helper: Search Appendices
-async function searchAppendices(query: string): Promise<any[]> {
-    try {
-        return searchAppendixCsv(query).map(({ appendix, matches }) => ({
-            media: {
-                id: appendix.id,
-                title: appendix.title,
-                type: 'appendix',
-                author: 'Rashad Khalifa',
-                filename: appendix.filename,
-                pdfLink: appendix.pdfLink,
-            },
-            matches,
-        }));
-    } catch (err) {
-        console.error("Error searching appendices:", err);
-        return [];
-    }
+function isMasterItemAllowed(item: MasterIndexItem, filters: string[]) {
+    if (filters.length === 0) return true;
+
+    return filters.some((filter) => {
+        if (filter === 'video' || filter === 'sermon' || filter === 'video-program') {
+            return item.type === 'video-program' || item.type === 'sermon' || item.type === 'video';
+        }
+        if (filter === 'quran-study') return item.type === 'quran-study';
+        if (filter === 'audio' || filter === 'messenger-audio') {
+            return item.type === 'messenger-audio' || item.type === 'audio';
+        }
+        if (filter === 'perspective') return item.type === 'perspective';
+        if (filter === 'appendix') return item.type === 'appendix';
+        return filter === item.type;
+    });
+}
+
+function sortMatches(matches: SearchMatch[]) {
+    return matches.sort((a, b) => (b.score ?? 0) - (a.score ?? 0) || a.start_time - b.start_time);
+}
+
+function rankResult(result: SearchResult): SearchResult {
+    const matches = sortMatches(result.matches);
+    const bestScore = matches[0]?.score ?? 0;
+    return {
+        ...result,
+        matches,
+        bestScore,
+        matchCount: matches.length,
+    };
+}
+
+function clamp(value: number, min: number, max: number) {
+    return Math.max(min, Math.min(max, value));
 }

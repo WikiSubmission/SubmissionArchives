@@ -1,290 +1,234 @@
-import { r2Client, R2_BUCKET_NAME } from '@/lib/r2';
-import { listMediaFiles } from '@/lib/r2Bucket';
+import fs from 'fs';
+import path from 'path';
+import { notFound } from 'next/navigation';
 import { formatMedia } from '@/lib/formatUtils';
-import { GetObjectCommand } from '@aws-sdk/client-s3';
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import { getMediaAssetUrl } from '@/lib/mediaAssets';
 import Player from './Player';
 
-// Helper to convert stream to string
-const streamToString = (stream: any) =>
-    new Promise<string>((resolve, reject) => {
-        const chunks: any[] = [];
-        stream.on('data', (chunk: any) => chunks.push(chunk));
-        stream.on('error', reject);
-        stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
-    });
+type LocalMediaItem = {
+  id: string;
+  title: string;
+  type: string;
+  folder: string;
+  date?: string;
+  created_at?: string;
+  videoFile?: string;
+  audioFile?: string;
+  vttFile?: string;
+  thumbnailOverride?: string;
+  duration_seconds?: number;
+  primaryNumber?: number;
+  alternateNumbers?: string[];
+  alternateNumberLabel?: string;
+};
+
+type PlayerSegment = {
+  id: number;
+  start_time: number;
+  end_time: number;
+  speaker: string;
+  content: string;
+  segment_index?: number;
+};
+
+type TranscriptJson = PlayerSegment[] | { segments?: PlayerSegment[] };
+
+type MasterIndexItem = LocalMediaItem & {
+  segments?: Array<{
+    start?: number;
+    end?: number;
+    text?: string;
+  }>;
+};
+
+function getLocalIndex(filename: string): LocalMediaItem[] {
+  const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
+  if (!fs.existsSync(filePath)) return [];
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+function getVideoCatalog(masterIndex: MasterIndexItem[]) {
+  const videos = getLocalIndex('VIDEO_PROGRAMS_LIST.json');
+  if (videos.length > 0) return videos;
+
+  return masterIndex.filter((item) =>
+    item.type === 'video-program' || item.type === 'sermon' || item.type === 'video'
+  ) as LocalMediaItem[];
+}
+
+function getAudioCatalog(masterIndex: MasterIndexItem[]) {
+  const audios = getLocalIndex('AUDIOS_LIST.json');
+  if (audios.length > 0) return audios;
+
+  const masterAudios = masterIndex.filter((item) =>
+    item.type === 'quran-study' || item.type === 'messenger-audio' || item.type === 'audio'
+  ) as LocalMediaItem[];
+  if (masterAudios.length > 0) return masterAudios;
+
+  return getLocalIndex('ALL_AUDIOS.json');
+}
 
 function parseVttTimestamp(timestamp: string): number {
-    if (!timestamp) return 0;
-    const parts = timestamp.split(':');
-    let seconds = 0;
-    if (parts.length === 3) {
-        seconds += parseInt(parts[0]) * 3600;
-        seconds += parseInt(parts[1]) * 60;
-        seconds += parseFloat(parts[2]);
-    } else if (parts.length === 2) {
-        seconds += parseInt(parts[0]) * 60;
-        seconds += parseFloat(parts[1]);
-    }
-    return seconds;
+  if (!timestamp) return 0;
+  const parts = timestamp.split(':');
+  let seconds = 0;
+  if (parts.length === 3) {
+    seconds += parseInt(parts[0], 10) * 3600;
+    seconds += parseInt(parts[1], 10) * 60;
+    seconds += parseFloat(parts[2]);
+  } else if (parts.length === 2) {
+    seconds += parseInt(parts[0], 10) * 60;
+    seconds += parseFloat(parts[1]);
+  }
+  return seconds;
 }
 
-function parseVTT(vttContent: string) {
-    const segments = [];
-    const normalized = vttContent.replace(/\r\n/g, '\n');
-    const blocks = normalized.split('\n\n');
+function parseVTT(vttContent: string): PlayerSegment[] {
+  const segments: PlayerSegment[] = [];
+  const normalized = vttContent.replace(/\r\n/g, '\n');
+  const blocks = normalized.split('\n\n');
+  let index = 0;
+  const speakerPattern = /(?:^|\s)((?:Dr\.?\s+)?[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?):/g;
 
-    let index = 0;
-    const speakerPattern = /(?:^|\s)((?:Dr\.?\s+)?[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?):/g;
+  for (const block of blocks) {
+    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+    if (lines.length === 0) continue;
+    if (lines[0].startsWith('WEBVTT')) continue;
+    if (lines[0].startsWith('NOTE')) continue;
+    if (lines[0].startsWith('Kind:')) continue;
+    if (lines[0].startsWith('Language:')) continue;
 
-    for (const block of blocks) {
-        const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
-        if (lines.length === 0) continue;
-        if (lines[0].startsWith('WEBVTT')) continue;
-        if (lines[0].startsWith('NOTE')) continue;
-        if (lines[0].startsWith('Kind:')) continue;
-        if (lines[0].startsWith('Language:')) continue;
+    const timeLineIdx = lines.findIndex(l => l.includes('-->'));
+    if (timeLineIdx === -1) continue;
 
-        // Find time line containing "-->"
-        const timeLineIdx = lines.findIndex(l => l.includes('-->'));
-        if (timeLineIdx === -1) continue;
+    const timeLine = lines[timeLineIdx];
+    const [startStr, endStrPart] = timeLine.split('-->').map(s => s.trim());
+    const endStr = endStrPart ? endStrPart.split(' ')[0] : startStr;
 
-        const timeLine = lines[timeLineIdx];
-        const [startStr, endStrPart] = timeLine.split('-->').map(s => s.trim());
-        const endStr = endStrPart ? endStrPart.split(' ')[0] : startStr;
+    const start = parseVttTimestamp(startStr);
+    const end = parseVttTimestamp(endStr);
+    let content = lines.slice(timeLineIdx + 1).join(' ');
+    content = content.replace(/<<[^>]*>/g, '').trim();
+    content = content.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+    if (!content) continue;
 
-        const start = parseVttTimestamp(startStr);
-        const end = parseVttTimestamp(endStr);
-
-        // Content is lines after time line
-        let content = lines.slice(timeLineIdx + 1).join(' ');
-
-        // Strip VTT tags
-        content = content.replace(/<[^>]*>/g, '').trim();
-        content = content.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
-
-        if (!content) continue;
-
-        // --- Speaker Splitting Logic ---
-        const matches = Array.from(content.matchAll(speakerPattern));
-
-        if (matches.length === 0) {
-            segments.push({
-                id: index++,
-                start_time: start,
-                end_time: end,
-                speaker: "Dr. Rashad Khalifa",
-                content: content,
-                segment_index: index
-            });
-            continue;
-        }
-
-        const totalDuration = end - start;
-        const subSegments = [];
-
-        const firstMatchStart = matches[0].index!;
-
-        if (firstMatchStart > 0) {
-            const preText = content.substring(0, firstMatchStart).trim();
-            if (preText) {
-                subSegments.push({
-                    speaker: "Dr. Rashad Khalifa",
-                    content: preText
-                });
-            }
-        }
-
-        for (let i = 0; i < matches.length; i++) {
-            const match = matches[i];
-            const speakerName = match[1].trim();
-            const contentStart = match.index! + match[0].length;
-            const contentEnd = (i < matches.length - 1) ? matches[i + 1].index! : content.length;
-
-            const speechText = content.substring(contentStart, contentEnd).trim();
-            if (speechText) {
-                subSegments.push({
-                    speaker: speakerName,
-                    content: speechText
-                });
-            }
-        }
-
-        const segmentTotalLen = subSegments.reduce((acc, s) => acc + s.content.length, 0) || 1;
-        let currentTimeCursor = start;
-
-        for (const sub of subSegments) {
-            const ratio = sub.content.length / segmentTotalLen;
-            const subDuration = totalDuration * ratio;
-
-            segments.push({
-                id: index++,
-                start_time: currentTimeCursor,
-                end_time: currentTimeCursor + subDuration,
-                speaker: sub.speaker,
-                content: sub.content,
-                segment_index: index
-            });
-            currentTimeCursor += subDuration;
-        }
+    const matches = Array.from(content.matchAll(speakerPattern));
+    if (matches.length === 0) {
+      segments.push({ id: index++, start_time: start, end_time: end, speaker: 'Dr. Rashad Khalifa', content, segment_index: index });
+      continue;
     }
-    return segments;
+
+    const totalDuration = end - start;
+    const subSegments: Array<{ speaker: string; content: string }> = [];
+    const firstMatchStart = matches[0].index!;
+    if (firstMatchStart > 0) {
+      const preText = content.substring(0, firstMatchStart).trim();
+      if (preText) subSegments.push({ speaker: 'Dr. Rashad Khalifa', content: preText });
+    }
+
+    for (let i = 0; i < matches.length; i++) {
+      const match = matches[i];
+      const speakerName = match[1].trim();
+      const contentStart = match.index! + match[0].length;
+      const contentEnd = (i < matches.length - 1) ? matches[i + 1].index! : content.length;
+      const speechText = content.substring(contentStart, contentEnd).trim();
+      if (speechText) subSegments.push({ speaker: speakerName, content: speechText });
+    }
+
+    const segmentTotalLen = subSegments.reduce((acc, s) => acc + s.content.length, 0) || 1;
+    let currentTimeCursor = start;
+    for (const sub of subSegments) {
+      const ratio = sub.content.length / segmentTotalLen;
+      const subDuration = totalDuration * ratio;
+      segments.push({
+        id: index++,
+        start_time: currentTimeCursor,
+        end_time: currentTimeCursor + subDuration,
+        speaker: sub.speaker,
+        content: sub.content,
+        segment_index: index
+      });
+      currentTimeCursor += subDuration;
+    }
+  }
+  return segments;
 }
 
-export default async function WatchPage({ params, searchParams }: { params: Promise<{ id: string[] }>, searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
-    const { id } = await params;
-    const { t } = await searchParams;
-    const initialTime = t ? parseInt(t as string) : 0;
+export default async function WatchPage({
+  params,
+  searchParams
+}: {
+  params: Promise<{ id: string[] }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const { id } = await params;
+  const { t } = await searchParams;
+  const initialTime = typeof t === 'string' ? parseInt(t, 10) || 0 : 0;
 
-    // Reconstruct key from path segments
-    // decoding each segment handles spaces/special chars if Next.js encoded them
-    const key = id.map(segment => decodeURIComponent(segment)).join('/');
-    const filename = key.split('/').pop() || key;
+  const key = id.map(decodeURIComponent).join('/');
+  const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
+  const allVideos = getVideoCatalog(masterIndex);
+  const allAudios = getAudioCatalog(masterIndex);
 
-    // Determine type from key prefix
-    let type = 'unknown';
-    if (key.includes('disorganized_sermons') || key.includes('FRIDAY SERMONS')) type = 'sermon';
-    else if (key.includes('quran-study-v2') || key.includes('messenger_quran_studies') || key.includes('QURAN STUDY AUDIO')) type = 'quran-study';
-    else if (key.includes('messenger_audios')) type = 'audio';
-    else if (key.includes('rk_video_programs') || key.includes('VIDEO PROGRAMS')) type = 'video-program';
+  let item = allVideos.find(v => v.id === key);
+  let isVideo = true;
+  if (!item) {
+    item = allAudios.find(a => a.id === key);
+    isVideo = false;
+  }
+  if (!item) notFound();
 
-    const title = filename
-        .replace(/\.(mp4|mp3|m4a)$/i, "")
-        .replace(/_/g, " ")
-        .trim();
+  const { displayTitle, displayDate, author } = formatMedia(item);
+  const publicDir = path.join(process.cwd(), 'public');
+  const masterItem = masterIndex.find((record) => record.id === key);
+  const mediaUrl = getMediaAssetUrl(item);
+  let transcriptPath = '';
 
-    // GENERATE SIGNED URL
-    let signedUrl = "";
-    try {
-        const cmd = new GetObjectCommand({ Bucket: R2_BUCKET_NAME, Key: key });
-        signedUrl = await getSignedUrl(r2Client, cmd, { expiresIn: 3600 });
-    } catch (err) {
-        console.error("Failed to sign URL:", err);
+  if (isVideo) {
+    transcriptPath = path.join(publicDir, 'content', 'video', item.folder, item.vttFile || '');
+  } else {
+    const subFolder = item.type === 'quran-study' ? 'quran-studies' : 'messenger-audios';
+    transcriptPath = path.join(publicDir, 'content', 'audio', subFolder, item.folder, item.vttFile || '');
+  }
+
+  let segments: PlayerSegment[] = (masterItem?.segments || []).map((segment, index) => ({
+    id: index,
+    start_time: segment.start ?? 0,
+    end_time: segment.end ?? segment.start ?? 0,
+    speaker: 'Dr. Rashad Khalifa',
+    content: segment.text ?? '',
+    segment_index: index + 1,
+  })).filter((segment) => segment.content);
+
+  try {
+    if (segments.length === 0 && fs.existsSync(transcriptPath)) {
+      const content = fs.readFileSync(transcriptPath, 'utf-8');
+      if (transcriptPath.endsWith('.vtt')) segments = parseVTT(content);
+      else if (transcriptPath.endsWith('.json')) {
+        const json = JSON.parse(content) as TranscriptJson;
+        segments = Array.isArray(json) ? json : (json.segments || []);
+      }
     }
+  } catch (err) {
+    console.error('Failed to load transcript:', err);
+  }
 
-    // CALCULATE NEXT / PREV
-    let nextItem = null;
-    let prevItem = null;
+  const collection = isVideo ? allVideos : allAudios;
+  const idx = collection.findIndex(m => m.id === key);
+  const prevItem = idx > 0 ? collection[idx - 1] : null;
+  const nextItem = idx < collection.length - 1 ? collection[idx + 1] : null;
 
-    try {
-        const allMedia = await listMediaFiles();
+  const prev = prevItem ? { id: prevItem.id, title: formatMedia(prevItem).displayTitle } : undefined;
+  const next = nextItem ? { id: nextItem.id, title: formatMedia(nextItem).displayTitle } : undefined;
 
-        const filtered = allMedia
-            .filter(m => m.type === type)
-            // Format to get sortValue
-            .map(m => ({ ...m, ...formatMedia(m) }))
-            // Sort (Same logic as HomePage)
-            .sort((a, b) => {
-                if (type === 'sermon') return b.sortValue - a.sortValue; // Desc
-                return a.sortValue - b.sortValue; // Asc
-            });
-
-        const currentIndex = filtered.findIndex(m => m.id === key);
-        if (currentIndex !== -1) {
-            if (currentIndex > 0) prevItem = filtered[currentIndex - 1];
-            if (currentIndex < filtered.length - 1) nextItem = filtered[currentIndex + 1];
-        }
-    } catch (e) {
-        console.error("Error calculating neighbors:", e);
-    }
-
-    const prev = prevItem ? { id: prevItem.id, title: prevItem.displayTitle } : undefined;
-    const next = nextItem ? { id: nextItem.id, title: nextItem.displayTitle } : undefined;
-
-    const media = {
-        id: key,
-        title,
-        displayTitle: title,
-        type,
-        local_filename: filename,
-        author: "Dr. Rashad Khalifa",
-        description: "Streamed from Cloudflare R2",
-    };
-
-    // Try to fetch transcript from R2
-    let segments: any[] = [];
-    try {
-        // Build transcript candidates - try various extensions and locations
-        const transcriptCandidates = [
-            key.replace(/\.(mp4|mp3|m4a)$/i, ".json"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, ".en-US.json"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, ".en.json"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, ".json.json"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, "_diarized.json"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, "_diarized.json.json"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, "-tagged.json"),
-            key + ".json",
-            key.replace(/\.(mp4|mp3|m4a)$/i, ".en-US.vtt"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, ".en.vtt"),
-            key.replace(/\.(mp4|mp3|m4a)$/i, ".vtt"),
-            key + ".en-US.vtt",
-            key + ".vtt"
-        ];
-
-        // For quran-study, also look in messenger_quran_studies folder
-        if (type === 'quran-study') {
-            const altKey = `media/messenger_quran_studies/${filename}`;
-            transcriptCandidates.push(
-                altKey.replace(/\.(mp4|mp3|m4a)$/i, ".json"),
-                altKey.replace(/\.(mp4|mp3|m4a)$/i, "_diarized.json"),
-                altKey.replace(/\.(mp4|mp3|m4a)$/i, ".vtt"),
-                altKey.replace(/\.(mp4|mp3|m4a)$/i, ".en-US.vtt")
-            );
-        }
-
-        let transcriptBody = "";
-
-        for (const tKey of transcriptCandidates) {
-            try {
-                const cmd = new GetObjectCommand({ Bucket: R2_BUCKET_NAME, Key: tKey });
-                const response = await r2Client.send(cmd);
-                if (response.Body) {
-                    transcriptBody = await streamToString(response.Body);
-                    break;
-                }
-            } catch (e) {
-                // ignore 404
-            }
-        }
-
-        if (transcriptBody) {
-            if (transcriptBody.startsWith('WEBVTT') || transcriptBody.includes('-->')) {
-                segments = parseVTT(transcriptBody);
-            } else {
-                try {
-                    const json = JSON.parse(transcriptBody);
-                    if (Array.isArray(json)) {
-                        segments = json;
-                    } else if (json.results?.channels?.[0]?.alternatives?.[0]?.paragraphs?.paragraphs) {
-                        segments = json.results.channels[0].alternatives[0].paragraphs.paragraphs.map((p: any, i: number) => ({
-                            id: i,
-                            start_time: p.start,
-                            end_time: p.end,
-                            speaker: "Speaker " + p.speaker,
-                            content: p.sentences.map((s: any) => s.text).join(' '),
-                            segment_index: i
-                        }));
-                    } else if (json.results?.utterances) {
-                        segments = json.results.utterances.map((u: any, i: number) => ({
-                            id: i,
-                            start_time: u.start,
-                            end_time: u.end,
-                            speaker: u.speaker ? "Speaker " + u.speaker : "Speaker",
-                            content: u.transcript,
-                            segment_index: i
-                        }));
-                    } else if (json.segments) {
-                        segments = json.segments;
-                    }
-                } catch (e) {
-                    console.error("Failed to parse transcript JSON", e);
-                }
-            }
-        }
-
-    } catch (err) {
-        console.error("Error fetching transcript:", err);
-    }
-
-    return <Player media={media as any} segments={segments} signedUrl={signedUrl} prev={prev} next={next} initialTime={initialTime} />;
+  return (
+    <Player
+      media={{ ...item, displayTitle, displayDate, author, type: item.type }}
+      segments={segments}
+      mediaUrl={mediaUrl}
+      prev={prev}
+      next={next}
+      initialTime={initialTime}
+    />
+  );
 }

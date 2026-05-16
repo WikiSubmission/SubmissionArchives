@@ -1,10 +1,9 @@
 'use server';
 
-import * as fs from 'fs';
-import * as path from 'path';
-import { r2Client, R2_BUCKET_NAME } from '@/lib/r2';
-import { ListObjectsV2Command, GetObjectCommand, GetObjectCommandOutput } from '@aws-sdk/client-s3';
+import fs from 'fs';
+import path from 'path';
 import { parseVttToSegments, Segment } from '@/lib/transcriptUtils';
+import { getMediaAssetUrl } from '@/lib/mediaAssets';
 
 export interface StudyTranscriptData {
   studyNumber: number;
@@ -13,66 +12,79 @@ export interface StudyTranscriptData {
   audioUrl: string;
 }
 
+type AudioIndexItem = {
+  type: string;
+  folder: string;
+  audioFile?: string | null;
+};
+
+function readGeneratedIndex<T>(filename: string): T[] {
+  const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
+  if (!fs.existsSync(filePath)) return [];
+  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T[];
+}
+
+function getAudioCatalog() {
+  const catalog = readGeneratedIndex<AudioIndexItem>('AUDIOS_LIST.json');
+  if (catalog.length > 0) return catalog;
+
+  const master = readGeneratedIndex<AudioIndexItem>('MASTER_INDEX.json')
+    .filter((item) => item.type === 'quran-study' || item.type === 'messenger-audio');
+  if (master.length > 0) return master;
+
+  return readGeneratedIndex<AudioIndexItem>('ALL_AUDIOS.json');
+}
+
 export async function fetchQuranStudyData(studyNumber: number): Promise<StudyTranscriptData | null> {
-  // Find files in R2
-  let vttKey = '';
-  let audioKey = '';
-  let filename = '';
-
   try {
-    const prefix = `media/quran-study-v2/${studyNumber})`;
-    const listCmd = new ListObjectsV2Command({
-      Bucket: R2_BUCKET_NAME,
-      Prefix: prefix,
-      MaxKeys: 10
-    });
-    const listRes = await r2Client.send(listCmd);
+    // 1. Find the item in local audios index
+    const allAudios = getAudioCatalog();
+    // Find item starting with the study number or matching the pattern
+    const item = allAudios.find(a =>
+      a.type === 'quran-study' &&
+      (a.folder.startsWith(`${studyNumber} `) || a.folder.startsWith(`0${studyNumber} `) || a.folder.startsWith(`${studyNumber})`))
+    );
 
-    if (listRes.Contents) {
-      const vttFile = listRes.Contents.find(c => c.Key && c.Key.endsWith('.vtt'));
-      const audioFile = listRes.Contents.find(c => c.Key && /\.(mp3|m4a|wav)$/i.test(c.Key));
-
-      if (vttFile && vttFile.Key) {
-        vttKey = vttFile.Key;
-        filename = path.basename(vttKey);
-      }
-      if (audioFile && audioFile.Key) {
-        audioKey = audioFile.Key;
-      }
+    if (!item) {
+      console.warn(`No local record found for Quran Study ${studyNumber}`);
+      return null;
     }
-  } catch (e) {
-    console.error('Error listing R2 objects:', e);
-    return null;
-  }
 
-  if (!vttKey) {
-    console.warn(`No VTT file found for Study ${studyNumber}`);
-    return null;
-  }
+    const publicDir = path.join(process.cwd(), 'public');
+    const folderPath = path.join(publicDir, 'content', 'audio', 'quran-studies', item.folder);
 
-  // Fetch VTT Content from R2
-  let vttContent = '';
-  try {
-    const getCmd = new GetObjectCommand({
-      Bucket: R2_BUCKET_NAME,
-      Key: vttKey
-    });
-    const response = await r2Client.send(getCmd) as GetObjectCommandOutput;
-    if (response.Body) {
-      vttContent = await response.Body.transformToString();
+    if (!fs.existsSync(folderPath)) {
+      console.warn(`Local folder not found: ${folderPath}`);
+      return null;
     }
+
+    // 2. Find VTT and Audio files
+    const files = fs.readdirSync(folderPath);
+    const vttFile = files.find(f => f.endsWith('.vtt'));
+    const audioFile = files.find(f => /\.(mp3|m4a|wav)$/i.test(f));
+
+    if (!vttFile) {
+        console.warn(`No VTT file found in folder: ${item.folder}`);
+        return null;
+    }
+
+    const vttContent = fs.readFileSync(path.join(folderPath, vttFile), 'utf-8');
+    const segments = parseVttToSegments(vttContent);
+
+    // Construct local public URL for audio
+    const audioUrl = audioFile
+      ? getMediaAssetUrl({ type: item.type, folder: item.folder, audioFile })
+      : '';
+
+    return {
+      studyNumber,
+      filename: vttFile,
+      segments,
+      audioUrl: encodeURI(audioUrl)
+    };
+
   } catch (e) {
-    console.error(`Error fetching VTT content for ${vttKey}:`, e);
+    console.error('Error fetching local Quran Study data:', e);
     return null;
   }
-
-  const segments = parseVttToSegments(vttContent);
-  const audioUrl = audioKey ? `/api/proxy-audio?key=${encodeURIComponent(audioKey)}` : '';
-
-  return {
-    studyNumber,
-    filename,
-    segments,
-    audioUrl
-  };
 }
