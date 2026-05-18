@@ -186,17 +186,22 @@ function SearchContent() {
     };
 
     useEffect(() => {
+        const timer = setTimeout(() => {
         if (initialQuery && results.length === 0 && !isSearching) {
             void handleSearch();
         }
+        }, 0);
+        return () => clearTimeout(timer);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
         if (!query.trim()) {
-            setResults([]);
-            setExpandedMatches(new Set());
-            return;
+            const timer = setTimeout(() => {
+                setResults([]);
+                setExpandedMatches(new Set());
+            }, 0);
+            return () => clearTimeout(timer);
         }
 
         const timer = setTimeout(() => {

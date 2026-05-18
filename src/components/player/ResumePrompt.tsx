@@ -12,11 +12,14 @@ export default function ResumePrompt({ lastPosition, onResume, onStartOver }: Re
 
     useEffect(() => {
         if (lastPosition && lastPosition > 10) { // Only prompt if > 10 seconds in
-            setIsVisible(true);
+            const showTimer = setTimeout(() => setIsVisible(true), 0);
 
             // Auto-hide after 15 seconds
-            const timer = setTimeout(() => setIsVisible(false), 15000);
-            return () => clearTimeout(timer);
+            const hideTimer = setTimeout(() => setIsVisible(false), 15000);
+            return () => {
+                clearTimeout(showTimer);
+                clearTimeout(hideTimer);
+            };
         }
     }, [lastPosition]);
 
@@ -32,7 +35,7 @@ export default function ResumePrompt({ lastPosition, onResume, onStartOver }: Re
     return (
         <div className="absolute top-4 right-4 bg-zinc-900/95 backdrop-blur-sm p-4 rounded-lg border border-zinc-700 z-50 animate-in slide-in-from-top fade-in shadow-2xl max-w-sm">
             <p className="text-sm font-medium text-white mb-3 flex items-center gap-2">
-                <span>Resume from <span className="text-green-400 font-mono">{formatTime(lastPosition)}</span>?</span>
+                <span>Resume from <span className="font-mono text-ed-accent">{formatTime(lastPosition)}</span>?</span>
             </p>
             <div className="flex gap-2">
                 <button
@@ -40,7 +43,7 @@ export default function ResumePrompt({ lastPosition, onResume, onStartOver }: Re
                         onResume();
                         setIsVisible(false);
                     }}
-                    className="flex-1 px-3 py-2 bg-green-600 hover:bg-green-500 rounded text-xs font-bold uppercase tracking-wider text-white flex items-center justify-center gap-2 transition-colors"
+                    className="flex-1 px-3 py-2 bg-ed-accent/90 hover:bg-ed-accent rounded text-xs font-bold uppercase tracking-wider text-ed-bg flex items-center justify-center gap-2 transition-colors"
                 >
                     <Play className="w-3 h-3 fill-current" /> Resume
                 </button>

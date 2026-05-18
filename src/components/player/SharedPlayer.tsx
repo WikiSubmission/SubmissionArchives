@@ -22,6 +22,20 @@ import {
 } from '@vidstack/react';
 import type { MediaPlayerInstance } from '@vidstack/react';
 
+type SharedMedia = {
+    displayTitle: string;
+    author: string;
+    thumbnailOverride?: string;
+};
+
+type SharedSegment = {
+    start_time: number;
+    end_time: number;
+    speaker: string;
+    content: string;
+    segment_index: number;
+};
+
 const formatTime = (seconds: number) => {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
@@ -50,8 +64,8 @@ export default function SharedPlayer({
     segments,
     videoUrl,
 }: {
-    media: any,
-    segments: any[],
+    media: SharedMedia,
+    segments: SharedSegment[],
     videoUrl: string,
 }) {
     const videoRef = useRef<MediaPlayerInstance>(null);
@@ -331,10 +345,10 @@ export default function SharedPlayer({
                                     {filteredSegments.length === 0 ? (
                                         <div className="flex flex-col items-center justify-center h-full text-ed-fg-muted gap-2">
                                             <Search className="w-8 h-8 opacity-20" />
-                                            <p className="text-sm font-ui">No matches found for "{searchQuery}"</p>
+                                            <p className="text-sm font-ui">No matches found for &quot;{searchQuery}&quot;</p>
                                         </div>
                                     ) : (
-                                        filteredSegments.map((seg, i) => {
+                                        filteredSegments.map((seg) => {
                                             const isActive = seg.segment_index === activeSegmentIndex;
                                             return (
                                                 <div 
@@ -357,7 +371,7 @@ export default function SharedPlayer({
                                                                 className="text-ed-fg-muted hover:text-ed-fg transition-colors"
                                                                 title="Copy quote"
                                                             >
-                                                                {copiedId === seg.segment_index ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5" />}
+                                                                {copiedId === seg.segment_index ? <Check className="w-3.5 h-3.5 text-ed-accent" /> : <Copy className="w-3.5 h-3.5" />}
                                                             </button>
                                                             <span className="text-[10px] font-mono text-ed-fg-muted">
                                                                 {formatTime(seg.start_time)}

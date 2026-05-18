@@ -56,7 +56,7 @@ export function recoverMojibake(text: string): string {
             // using fatal: true to ensure we only accept valid UTF-8 sequences
             const decoded = new TextDecoder('utf-8', { fatal: true }).decode(buffer);
             return decoded;
-        } catch (e) {
+        } catch {
             // If decoding fails, return original garbled text
             return match;
         }

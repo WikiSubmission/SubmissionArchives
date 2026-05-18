@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { calculateTFIDF, semanticSearch, SearchResult, TranscriptSegment } from '../utils/semanticSearch';
 
 export function useSemanticSearch(segments: TranscriptSegment[]) {
@@ -8,10 +8,9 @@ export function useSemanticSearch(segments: TranscriptSegment[]) {
     useEffect(() => {
         if (!segments || segments.length === 0) return;
 
-        setIsIndexing(true);
-
         // Run in timeout to allow UI to render first
         const timer = setTimeout(() => {
+            setIsIndexing(true);
             try {
                 // This is a heavy operation, effectively "indexing"
                 const computed = calculateTFIDF(segments);

@@ -23,13 +23,13 @@ interface IndexDocument {
 
 import { getPhoneticCode } from './phonetic';
 
-interface OptimizedIndex {
+export interface OptimizedIndex {
     documents: IndexDocument[];
     invertedIndex: Record<string, string[]>;
     phonetic: Record<string, string[]>; // CHANGED: ngrams -> phonetic
 }
 
-interface ContentStore {
+export interface ContentStore {
     [docId: string]: string;
 }
 
@@ -69,23 +69,6 @@ export function splitQuery(query: string): string[] {
     }
 
     return query.split(/\s+/).filter(w => w.length > 0 && !STOPWORDS.has(w));
-}
-
-function tokenize(text: string): string[] {
-    return text
-        .toLowerCase()
-        .replace(/[^\w\s]/g, ' ')
-        .split(/\s+/)
-        .filter(w => w.length > 2 && !STOPWORDS.has(w)); // Filter stopwords
-}
-
-function generateTrigrams(word: string): string[] {
-    if (word.length < 3) return [];
-    const trigrams: string[] = [];
-    for (let i = 0; i <= word.length - 3; i++) {
-        trigrams.push(word.substring(i, i + 3));
-    }
-    return trigrams;
 }
 
 // Parse date string to timestamp for sorting

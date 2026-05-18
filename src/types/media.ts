@@ -10,6 +10,11 @@ export interface Media {
     date?: string;
     description?: string;
     filename?: string;
+    thumbnailOverride?: string;
+    folder?: string;
+    primaryNumber?: number;
+    alternateNumbers?: string[];
+    alternateNumberLabel?: string;
 }
 
 export interface Newsletter {

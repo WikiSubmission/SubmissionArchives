@@ -4,21 +4,21 @@ This folder contains optional data-maintenance scripts for rebuilding generated 
 
 ## Media Indexes
 
-`generate_mega_indices.ts` scans media storage and rebuilds the master transcript indexes for sermons, video programs, Quran studies, and messenger audios.
+`generate/generate_catalog_search_indices.mjs` rebuilds the runtime catalog and search indexes for videos, Quran studies, messenger audios, and R2 asset metadata.
 
 Run manually when new media is uploaded:
 
 ```bash
-npx tsx scripts/generate_mega_indices.ts
+node scripts/generate/generate_catalog_search_indices.mjs
 ```
 
 ## Books Indexes
 
-`generate_other_index.ts` and `ocr-other-books.ts` rebuild `public/data/other/search_index.json` from the PDFs in `public/content/books`.
+`generate/generate_other_index.ts` and `process/ocr-other-books.ts` rebuild `public/data/other/search_index.json` from the PDFs in `public/content/books`.
 
 Run one of these only when the books PDFs change:
 
 ```bash
-npx tsx scripts/generate_other_index.ts
-npx tsx scripts/ocr-other-books.ts
+npx tsx scripts/generate/generate_other_index.ts
+npx tsx scripts/process/ocr-other-books.ts
 ```

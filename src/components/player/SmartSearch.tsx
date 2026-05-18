@@ -41,7 +41,7 @@ export default function SmartSearch({ segments, onSeek }: SmartSearchProps) {
         const parts = text.split(pattern);
 
         return parts.map((part, i) =>
-            pattern.test(part) ? <mark key={i} className="bg-green-500/30 text-white rounded px-0.5">{part}</mark> : part
+            pattern.test(part) ? <mark key={i} className="rounded bg-ed-accent/25 px-0.5 text-ed-fg">{part}</mark> : part
         );
     };
 
@@ -50,7 +50,7 @@ export default function SmartSearch({ segments, onSeek }: SmartSearchProps) {
             <div className="relative mb-4">
                 <div className="absolute left-3 top-1/2 -translate-y-1/2">
                     {isIndexing ? (
-                        <Loader2 className="w-4 h-4 text-green-500 animate-spin" />
+                        <Loader2 className="w-4 h-4 text-ed-accent animate-spin" />
                     ) : (
                         <Search className="w-4 h-4 text-zinc-400" />
                     )}
@@ -61,7 +61,7 @@ export default function SmartSearch({ segments, onSeek }: SmartSearchProps) {
                     value={query}
                     onChange={e => handleSearch(e.target.value)}
                     disabled={isIndexing}
-                    className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-sm text-white focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all placeholder:text-zinc-600"
+                    className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-sm text-white focus:outline-none focus:border-ed-accent focus:ring-1 focus:ring-ed-accent transition-all placeholder:text-zinc-600"
                 />
             </div>
 
@@ -81,7 +81,7 @@ export default function SmartSearch({ segments, onSeek }: SmartSearchProps) {
                                 <span className="text-xs font-mono text-zinc-400 bg-zinc-900 px-1.5 py-0.5 rounded">
                                     {formatTime(result.segment.start_time)}
                                 </span>
-                                <span className={`text-[10px] font-bold uppercase tracking-wider ${result.score > 5 ? 'text-green-400' : 'text-zinc-500'}`}>
+                                <span className={`text-[10px] font-bold uppercase tracking-wider ${result.score > 5 ? 'text-ed-accent' : 'text-zinc-500'}`}>
                                     {Math.min(100, Math.round(result.score * 20))}% Relevant
                                 </span>
                             </div>

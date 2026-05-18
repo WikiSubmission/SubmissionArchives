@@ -1,13 +1,9 @@
 import Link from 'next/link';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import { Home, ArrowLeft, Search } from 'lucide-react';
+import { Home, Search } from 'lucide-react';
 
 export default function NotFound() {
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body flex flex-col">
-            <Header />
-            
             <main className="flex-1 flex items-center justify-center px-6 py-24">
                 <div className="max-w-2xl w-full text-center space-y-12">
                     {/* Visual Element */}
@@ -57,8 +53,6 @@ export default function NotFound() {
                     </div>
                 </div>
             </main>
-
-            <Footer />
         </div>
     );
 }

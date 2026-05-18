@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export interface WatchHistoryItem {
     mediaId: string;
@@ -13,21 +13,24 @@ export interface WatchHistoryItem {
 export function useWatchHistory(mediaId: string, duration: number, title?: string) {
     const [progress, setProgress] = useState(0);
     const [lastWatched, setLastWatched] = useState<number | null>(null);
-    // const updateInterval = useRef<NodeJS.Timeout | null>(null); // Not utilizing interval currently, but nice to have if needed
 
     // Load saved progress
     useEffect(() => {
         if (!mediaId) return;
-        const saved = localStorage.getItem(`progress-${mediaId}`);
-        if (saved) {
-            try {
-                const data = JSON.parse(saved);
-                setProgress(data.progress);
-                setLastWatched(data.currentTime);
-            } catch (e) {
-                console.error("Failed to parse progress", e);
+        const timer = setTimeout(() => {
+            const saved = localStorage.getItem(`progress-${mediaId}`);
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    setProgress(data.progress);
+                    setLastWatched(data.currentTime);
+                } catch (e) {
+                    console.error("Failed to parse progress", e);
+                }
             }
-        }
+        }, 0);
+
+        return () => clearTimeout(timer);
     }, [mediaId]);
 
     // Track in global history list

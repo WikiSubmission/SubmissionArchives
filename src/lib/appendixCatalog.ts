@@ -1,12 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import { rowsToObjects } from '@/lib/csv';
+import { findQueryMatch } from '@/lib/search/queryMatch';
 
 export type AppendixItem = {
     id: string;
     title: string;
     filename: string;
     pdfLink: string;
+    thumbnailOverride?: string;
 };
 
 export type AppendixSearchResult = {
@@ -15,11 +17,15 @@ export type AppendixSearchResult = {
         id: string;
         content: string;
         start_time: number;
+        score?: number;
+        kind?: string;
+        distance?: number;
     }>;
 };
 
 const APPENDICES_DIR = path.join(process.cwd(), 'public', 'content', 'appendix');
 const APPENDICES_PDF_DIR = path.join(APPENDICES_DIR, 'pdfs');
+const APPENDICES_THUMB_DIR = path.join(APPENDICES_DIR, 'thumbnails');
 const CSV_PATH = path.join(APPENDICES_DIR, 'csv', 'quran_appendices_rows.csv');
 
 let rowsCache: Array<Record<string, string>> | null = null;
@@ -30,10 +36,6 @@ function getRows() {
     if (!fs.existsSync(CSV_PATH)) return [];
     rowsCache = rowsToObjects(fs.readFileSync(CSV_PATH, 'utf8'));
     return rowsCache;
-}
-
-function pdfExists(filename: string) {
-    return fs.existsSync(path.join(APPENDICES_PDF_DIR, filename));
 }
 
 function titleFromFilename(filename: string) {
@@ -65,6 +67,7 @@ export function getAppendixCatalog() {
                 title: titleById.get(id) ?? titleFromFilename(filename),
                 filename,
                 pdfLink: `/content/appendix/pdfs/${filename}`,
+                thumbnailOverride: getThumbnailLink(APPENDICES_THUMB_DIR, '/content/appendix/thumbnails', filename),
             };
         })
         .sort((a, b) => sortValue(a.id) - sortValue(b.id));
@@ -72,39 +75,37 @@ export function getAppendixCatalog() {
     return catalogCache;
 }
 
+function getThumbnailLink(thumbnailDir: string, publicBase: string, pdfFilename: string) {
+    const thumbnailName = `${pdfFilename.replace(/\.pdf$/i, '')}.jpg`;
+    const thumbnailPath = path.join(thumbnailDir, thumbnailName);
+    return fs.existsSync(thumbnailPath) ? `${publicBase}/${thumbnailName}` : undefined;
+}
+
 export function getAppendixItem(id: string) {
     const normalized = decodeURIComponent(id).replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
     return getAppendixCatalog().find((item) => item.id === normalized || item.filename.replace(/\.pdf$/i, '') === normalized);
 }
 
-export function searchAppendixCsv(query: string): AppendixSearchResult[] {
-    const lowerQuery = query.toLowerCase();
-    const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+export function searchAppendixCsv(query: string, options: { proximityWindow?: number } = {}): AppendixSearchResult[] {
     const catalog = new Map(getAppendixCatalog().map((item) => [item.id, item]));
     const results = new Map<string, AppendixSearchResult>();
 
     for (const row of getRows()) {
         const appendix = catalog.get(row.id);
         const content = row.content ?? '';
-        if (!appendix || !content.toLowerCase().includes(lowerQuery)) continue;
+        const queryMatch = findQueryMatch(content, query, options);
+        if (!appendix || !queryMatch.matched) continue;
 
         const result = results.get(appendix.id) ?? { appendix, matches: [] };
-        let match;
-        let count = 0;
-        regex.lastIndex = 0;
-
-        while ((match = regex.exec(content)) !== null && count < 3 && result.matches.length < 12) {
-            const start = Math.max(0, match.index - 80);
-            const end = Math.min(content.length, match.index + query.length + 80);
-            const prefix = start > 0 ? '...' : '';
-            const suffix = end < content.length ? '...' : '';
-
+        if (result.matches.length < 12) {
             result.matches.push({
-                id: `ap-${appendix.id}-${row.section_index}-${count}`,
-                content: `${prefix}${content.substring(start, end)}${suffix}`,
+                id: `ap-${appendix.id}-${row.section_index}`,
+                content: queryMatch.snippet,
                 start_time: 0,
+                score: queryMatch.score,
+                kind: queryMatch.kind,
+                distance: queryMatch.distance,
             });
-            count++;
         }
 
         results.set(appendix.id, result);

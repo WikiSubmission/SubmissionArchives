@@ -59,8 +59,30 @@ const RENAME_MAP: Record<number, string> = {
     52: "Quran Study - Q.1-2 (05-09-1989)"
 };
 
+type Candidate = {
+    filename: string;
+    snippet?: string;
+    diff?: number;
+};
+
+type QueueItem = {
+    audioId: number;
+    audioKey: string;
+    audioUrl: string;
+    candidates: Candidate[];
+};
+
+type MatchQueueResponse = {
+    queue: QueueItem[];
+    snippets: Record<string, string>;
+};
+
+type SearchResponse = {
+    results: Candidate[];
+};
+
 export default function MatchToolPage() {
-    const [queue, setQueue] = useState<any[]>([]);
+    const [queue, setQueue] = useState<QueueItem[]>([]);
     const [snippets, setSnippets] = useState<Record<string, string>>({});
     const [loading, setLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -69,18 +91,18 @@ export default function MatchToolPage() {
 
     // Search State
     const [searchQuery, setSearchQuery] = useState("");
-    const [searchResults, setSearchResults] = useState<any[]>([]);
+    const [searchResults, setSearchResults] = useState<Candidate[]>([]);
     const [isSearching, setIsSearching] = useState(false);
 
     // If selected from search, we override the current candidate view
-    const [overrideCandidate, setOverrideCandidate] = useState<any>(null);
+    const [overrideCandidate, setOverrideCandidate] = useState<Candidate | null>(null);
 
     const videoRef = useRef<HTMLVideoElement>(null);
 
     const fetchQueue = async () => {
         try {
             const res = await fetch('/api/match-tool');
-            const data = await res.json();
+            const data = await res.json() as MatchQueueResponse;
             setQueue(data.queue);
             setSnippets(data.snippets);
             setLoading(false);
@@ -91,7 +113,11 @@ export default function MatchToolPage() {
     };
 
     useEffect(() => {
-        fetchQueue();
+        const timer = setTimeout(() => {
+            void fetchQueue();
+        }, 0);
+
+        return () => clearTimeout(timer);
     }, []);
 
     const performSearch = async (query: string) => {
@@ -102,7 +128,7 @@ export default function MatchToolPage() {
         setIsSearching(true);
         try {
             const res = await fetch(`/api/match-tool?search=${encodeURIComponent(query)}`);
-            const data = await res.json();
+            const data = await res.json() as SearchResponse;
             setSearchResults(data.results);
         } catch (e) {
             console.error(e);
@@ -162,13 +188,13 @@ export default function MatchToolPage() {
         setCurrentIndex(prev => prev + 1);
     };
 
-    const handleSearchResultClick = (result: any) => {
+    const handleSearchResultClick = (result: Candidate) => {
         setOverrideCandidate(result);
         setSearchResults([]); // Hide results (optional UX choice)
     };
 
     if (loading) return <div className="p-10 text-xl">Loading Matching Queue...</div>;
-    if (!currentItem) return <div className="p-10 text-xl text-green-600">All Done! No more items in queue.</div>;
+    if (!currentItem) return <div className="p-10 text-xl text-ed-accent">All Done! No more items in queue.</div>;
 
     const title = RENAME_MAP[currentItem.audioId] || `Quran Study ${currentItem.audioId}`;
 
@@ -206,6 +232,11 @@ export default function MatchToolPage() {
                             }
                         }}
                     />
+                    {isSearching && (
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400">
+                            Searching...
+                        </div>
+                    )}
                     {/* Checkbox for live search results could go here, but using dropdown style instead */}
                     {searchResults.length > 0 && (
                         <div className="absolute top-full left-0 right-0 bg-gray-800 border border-gray-600 mt-1 max-h-60 overflow-y-auto z-50 rounded-lg shadow-xl">
@@ -215,7 +246,7 @@ export default function MatchToolPage() {
                                     onClick={() => handleSearchResultClick(res)}
                                     className="p-3 hover:bg-gray-700 cursor-pointer border-b border-gray-700 last:border-0"
                                 >
-                                    <div className="font-mono text-xs text-green-400 mb-1">{res.filename}</div>
+                                    <div className="font-mono text-xs text-ed-accent mb-1">{res.filename}</div>
                                     <div className="text-sm text-gray-300 line-clamp-2">{res.snippet}</div>
                                 </div>
                             ))}
@@ -252,11 +283,11 @@ export default function MatchToolPage() {
                 {/* Right Column: Transcript Candidate */}
                 <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg flex flex-col h-full overflow-hidden">
                     <div className="flex justify-between items-center mb-4 shrink-0">
-                        <h2 className="text-xl font-semibold text-green-300">
+                        <h2 className="text-xl font-semibold text-ed-accent">
                             {overrideCandidate ? "Selected from Search" : `Candidate ${candidateIndex + 1}`}
                         </h2>
                         {activeCandidate?.diff !== undefined && (
-                            <span className={`text-xs px-2 py-1 rounded ${activeCandidate.diff < 5 ? 'bg-green-900 text-green-300' : 'bg-yellow-900 text-yellow-300'}`}>
+                            <span className={`text-xs px-2 py-1 rounded ${activeCandidate.diff < 5 ? 'bg-ed-accent/15 text-ed-accent' : 'bg-yellow-900 text-yellow-300'}`}>
                                 Diff: {activeCandidate.diff.toFixed(1)}s
                             </span>
                         )}
@@ -278,7 +309,7 @@ export default function MatchToolPage() {
                         <button
                             onClick={handleMatch}
                             disabled={!activeCandidate}
-                            className={`text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-lg ${activeCandidate ? 'bg-green-600 hover:bg-green-500 shadow-green-900/50' : 'bg-gray-600 cursor-not-allowed'}`}
+                            className={`font-bold py-3 px-6 rounded-lg transition-colors shadow-lg ${activeCandidate ? 'bg-ed-accent text-ed-bg hover:bg-ed-accent/90 shadow-black/40' : 'bg-gray-600 text-white cursor-not-allowed'}`}
                         >
                             MATCH THIS!
                         </button>

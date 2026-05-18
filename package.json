@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "verify:deploy": "npm ci --dry-run && npm run lint && npm run build",
     "generate:catalog": "node scripts/generate/generate_catalog_search_indices.mjs",
     "r2:dry-run": "node scripts/upload/upload_r2_assets.mjs --dry-run",
     "r2:upload": "node scripts/upload/upload_r2_assets.mjs",

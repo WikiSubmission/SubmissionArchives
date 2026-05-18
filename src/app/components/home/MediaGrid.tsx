@@ -12,9 +12,9 @@ interface MediaGridProps {
 export function MediaGrid({ media, theme, viewMode }: MediaGridProps) {
     if (viewMode === 'grid') {
         return (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-6">
                 {media.map((item) => (
-                    <Link href={getMediaHref(item.id)} key={item.id} className="block h-full">
+                    <Link href={getMediaHref(item.id)} key={item.id} className="block">
                         <MediaCard item={item} theme={theme} />
                     </Link>
                 ))}
@@ -23,9 +23,13 @@ export function MediaGrid({ media, theme, viewMode }: MediaGridProps) {
     }
 
     return (
-        <div className="space-y-3">
+        <div className="flex flex-col divide-y divide-border">
             {media.map((item) => (
-                <Link href={getMediaHref(item.id)} key={item.id} className="block">
+                <Link
+                    href={getMediaHref(item.id)}
+                    key={item.id}
+                    className="block py-2 first:pt-0 last:pb-0"
+                >
                     <MediaList item={item} theme={theme} />
                 </Link>
             ))}

@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import { ArrowRight, BookOpenText, FileStack, LibraryBig, ScrollText } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 
 const shelves = [
     {
@@ -27,12 +25,12 @@ const shelves = [
 export default function OtherPage() {
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
-            <Header />
 
-            <main className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                <header className="grid gap-8 border border-ed-rule bg-ed-surface/72 p-6 backdrop-blur-sm sm:p-8 lg:grid-cols-[1fr_0.9fr] lg:p-10">
+
+            <main className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
+                <header className="soft-shell grid gap-8 p-6 backdrop-blur-sm sm:p-8 lg:grid-cols-[1fr_0.9fr] lg:p-10">
                     <div className="space-y-6">
-                        <div className="flex items-center gap-3 text-ed-accent">
+                        <div className="soft-pill inline-flex items-center gap-3 px-4 py-2 text-ed-accent">
                             <LibraryBig className="h-6 w-6" />
                             <span className="text-[0.68rem] uppercase tracking-[0.28em]">
                                 Written archive
@@ -42,24 +40,22 @@ export default function OtherPage() {
                             The text archive, given its own room.
                         </h1>
                         <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted sm:text-base">
-                            This route used to fall back to the homepage. It now has its own surface, with the same
-                            dark and light editorial system as the rest of the site, so written material can develop
-                            as a proper destination.
+                            Newsletters, appendices, scans, and longer written works share one calm reading surface.
                         </p>
                     </div>
 
-                    <div className="grid gap-px border border-ed-rule bg-ed-rule sm:grid-cols-3 lg:self-end">
+                    <div className="soft-panel grid gap-2 p-2 sm:grid-cols-3 lg:self-end">
                         <ShelfStat label="Primary mode" value="Reading" />
                         <ShelfStat label="Collections" value="4" />
-                        <ShelfStat label="Palette" value="Parchment and olive" />
+                        <ShelfStat label="Palette" value="Gold and ink" />
                     </div>
                 </header>
 
                 <section className="mt-14 grid gap-6 lg:grid-cols-2">
                     {shelves.map((shelf, index) => (
-                        <article key={shelf.title} className="border border-ed-rule bg-ed-surface/68 p-6 sm:p-8">
+                        <article key={shelf.title} className="soft-shell p-6 sm:p-8">
                             <div className="flex items-center justify-between gap-4 border-b border-ed-rule pb-5">
-                                <div className="flex items-center gap-3 text-ed-accent">
+                                <div className="soft-pill inline-flex items-center gap-3 px-4 py-2 text-ed-accent">
                                     {index % 2 === 0 ? (
                                         <BookOpenText className="h-5 w-5" />
                                     ) : (
@@ -77,7 +73,7 @@ export default function OtherPage() {
                             </p>
                             <Link
                                 href="/search"
-                                className="mt-6 inline-flex items-center gap-3 text-[0.68rem] uppercase tracking-[0.22em] text-ed-accent transition hover:opacity-80"
+                                className="soft-pill mt-6 inline-flex items-center gap-3 px-5 py-3 text-[0.68rem] uppercase tracking-[0.22em] text-ed-accent transition hover:text-ed-fg"
                             >
                                 Search this material
                                 <ArrowRight className="h-4 w-4" />
@@ -87,14 +83,14 @@ export default function OtherPage() {
                 </section>
             </main>
 
-            <Footer />
+
         </div>
     );
 }
 
 function ShelfStat({ label, value }: { label: string; value: string }) {
     return (
-        <div className="bg-ed-surface px-5 py-5">
+        <div className="soft-panel px-5 py-5">
             <p className="font-display text-2xl text-ed-fg">{value}</p>
             <p className="mt-2 text-[0.62rem] uppercase tracking-[0.22em] text-ed-fg-muted">{label}</p>
         </div>

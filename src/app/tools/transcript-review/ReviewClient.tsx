@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {
     Check,
@@ -92,28 +92,23 @@ export default function ReviewClient({
     const [hasChanges, setHasChanges] = useState(false);
     const [saving, setSaving] = useState(false);
     const [saveMessage, setSaveMessage] = useState('');
-    const [activeSegmentId, setActiveSegmentId] = useState<number | null>(null);
+    const [duration, setDuration] = useState(0);
     const [modifiedSegments, setModifiedSegments] = useState<Set<number>>(new Set());
-
-    useEffect(() => {
-        const segment = segments.find(
-            (item) => currentTime >= item.start_time && currentTime < item.end_time,
-        );
-
-        if (segment) {
-            setActiveSegmentId(segment.id);
-        }
-    }, [currentTime, segments]);
 
     useEffect(() => {
         if (!initialStudyData) {
             return;
         }
 
-        setSegments(initialStudyData.segments);
-        setHasChanges(false);
-        setModifiedSegments(new Set());
-        setSaveMessage('');
+        const timer = setTimeout(() => {
+            setSegments(initialStudyData.segments);
+            setHasChanges(false);
+            setModifiedSegments(new Set());
+            setSaveMessage('');
+            setDuration(0);
+        }, 0);
+
+        return () => clearTimeout(timer);
     }, [initialStudyData]);
 
     useEffect(() => {
@@ -125,15 +120,18 @@ export default function ReviewClient({
         const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
         const handlePlay = () => setIsPlaying(true);
         const handlePause = () => setIsPlaying(false);
+        const handleLoadedMetadata = () => setDuration(audio.duration || 0);
 
         audio.addEventListener('timeupdate', handleTimeUpdate);
         audio.addEventListener('play', handlePlay);
         audio.addEventListener('pause', handlePause);
+        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
 
         return () => {
             audio.removeEventListener('timeupdate', handleTimeUpdate);
             audio.removeEventListener('play', handlePlay);
             audio.removeEventListener('pause', handlePause);
+            audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
         };
     }, []);
 
@@ -271,18 +269,18 @@ export default function ReviewClient({
     const transitionCount = segments.filter((segment) => segment.isTransition).length;
     const uniqueSpeakers = [...new Set(segments.map((segment) => segment.speaker))];
     const modifiedCount = modifiedSegments.size;
-    const duration = audioRef.current?.duration || 0;
+    const activeSegmentId = useMemo(
+        () =>
+            segments.find(
+                (item) => currentTime >= item.start_time && currentTime < item.end_time,
+            )?.id ?? null,
+        [currentTime, segments],
+    );
 
     return (
-        <div className="relative min-h-screen overflow-hidden bg-[#151c18] text-[#e9dfd3]">
-            <div className="pointer-events-none absolute inset-0">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,168,120,0.12),_transparent_32%),radial-gradient(circle_at_70%_20%,_rgba(150,21,21,0.12),_transparent_28%),linear-gradient(180deg,_#1a221d_0%,_#151c18_45%,_#121715_100%)]" />
-                <div className="absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(233,223,211,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(233,223,211,0.08)_1px,transparent_1px)] [background-size:96px_96px]" />
-                <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top,_rgba(255,168,120,0.14),_transparent_60%)]" />
-            </div>
-
+        <div className="relative min-h-screen overflow-hidden bg-[#111111] text-[#f6efe4]">
             <div className="relative mx-auto max-w-[1440px] px-4 pb-16 pt-6 sm:px-6 lg:px-10">
-                <section className="border border-[#e9dfd3]/10 bg-[#171f1a]/75 px-5 py-6 shadow-[0_24px_90px_rgba(0,0,0,0.22)] backdrop-blur-sm sm:px-7 lg:px-10 lg:py-8">
+                <section className="border border-[#e9dfd3]/10 bg-[#181817]/75 px-5 py-6 shadow-[0_24px_90px_rgba(0,0,0,0.22)] backdrop-blur-sm sm:px-7 lg:px-10 lg:py-8">
                     <div className="flex flex-col gap-8 border-b border-[#e9dfd3]/10 pb-8 lg:flex-row lg:items-end lg:justify-between">
                         <div className="max-w-3xl space-y-4">
                             <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#f6ae82]/78">
@@ -326,7 +324,7 @@ export default function ReviewClient({
                                     <select
                                         value={currentStudyNumber}
                                         onChange={(e) => navigateToStudy(Number(e.target.value))}
-                                        className="w-full appearance-none border border-[#e9dfd3]/12 bg-[#111713]/80 px-4 py-3 text-sm text-[#f6efe4] outline-none transition focus:border-[#f6ae82]/45"
+                                        className="w-full appearance-none border border-[#e9dfd3]/12 bg-[#111111]/80 px-4 py-3 text-sm text-[#f6efe4] outline-none transition focus:border-[#f6ae82]/45"
                                     >
                                         {studyList.map((study) => (
                                             <option key={study.studyNumber} value={study.studyNumber}>
@@ -518,7 +516,7 @@ export default function ReviewClient({
                                                                                     setEditValue(event.target.value);
                                                                                 }
                                                                             }}
-                                                                            className="border border-[#e9dfd3]/12 bg-[#111713]/80 px-3 py-2 text-sm text-[#f6efe4] outline-none transition focus:border-[#f6ae82]/45"
+                                                                            className="border border-[#e9dfd3]/12 bg-[#111111]/80 px-3 py-2 text-sm text-[#f6efe4] outline-none transition focus:border-[#f6ae82]/45"
                                                                             autoFocus
                                                                         >
                                                                             {KNOWN_SPEAKERS.map((speaker) => (
@@ -604,7 +602,7 @@ function NavButton({
         <button
             onClick={onClick}
             disabled={disabled}
-            className="flex h-12 w-12 items-center justify-center border border-[#e9dfd3]/12 bg-[#111713]/72 text-[#f6efe4] transition hover:border-[#f6ae82]/22 hover:bg-[#ffffff]/[0.035] disabled:text-[#d8ccbd]/28 disabled:hover:border-[#e9dfd3]/12 disabled:hover:bg-[#111713]/72"
+            className="flex h-12 w-12 items-center justify-center border border-[#e9dfd3]/12 bg-[#111111]/72 text-[#f6efe4] transition hover:border-[#f6ae82]/22 hover:bg-[#ffffff]/[0.035] disabled:text-[#d8ccbd]/28 disabled:hover:border-[#e9dfd3]/12 disabled:hover:bg-[#111111]/72"
         >
             <Icon className="h-4 w-4" />
         </button>
@@ -613,7 +611,7 @@ function NavButton({
 
 function Stat({ label, value }: { label: string; value: string }) {
     return (
-        <div className="border border-[#e9dfd3]/10 bg-[#111713]/56 px-4 py-4">
+        <div className="border border-[#e9dfd3]/10 bg-[#111111]/56 px-4 py-4">
             <p className="text-[0.63rem] uppercase tracking-[0.2em] text-[#d8ccbd]/44">{label}</p>
             <p className="mt-3 font-serif text-3xl leading-none text-[#f6efe4]">{value}</p>
         </div>

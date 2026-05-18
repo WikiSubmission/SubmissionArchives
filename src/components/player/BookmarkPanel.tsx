@@ -27,12 +27,12 @@ export default function BookmarkPanel({ bookmarks, onSeek, onDelete, onAdd, onEx
         <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 animate-in fade-in slide-in-from-right-4">
             <div className="flex items-center justify-between mb-4">
                 <h3 className="font-bold flex items-center gap-2 text-white">
-                    <BookmarkIcon className="w-4 h-4 text-green-500" />
+                    <BookmarkIcon className="w-4 h-4 text-ed-accent" />
                     My Bookmarks ({bookmarks.length})
                 </h3>
                 <button
                     onClick={() => setShowNoteInput(!showNoteInput)}
-                    className="px-3 py-1 bg-green-600 hover:bg-green-500 rounded text-sm text-white transition-colors"
+                    className="px-3 py-1 bg-ed-accent/90 hover:bg-ed-accent rounded text-sm text-ed-bg transition-colors"
                 >
                     + Add
                 </button>
@@ -45,7 +45,7 @@ export default function BookmarkPanel({ bookmarks, onSeek, onDelete, onAdd, onEx
                         placeholder="Add a note..."
                         value={newNote}
                         onChange={e => setNewNote(e.target.value)}
-                        className="w-full px-3 py-2 bg-zinc-900 border border-zinc-700 rounded text-sm text-white focus:outline-none focus:border-green-500"
+                        className="w-full px-3 py-2 bg-zinc-900 border border-zinc-700 rounded text-sm text-white focus:outline-none focus:border-ed-accent"
                         autoFocus
                     />
                     <div className="flex gap-2">
@@ -64,7 +64,7 @@ export default function BookmarkPanel({ bookmarks, onSeek, onDelete, onAdd, onEx
                             setNewNote('');
                             setShowNoteInput(false);
                         }}
-                        className="w-full py-2 bg-green-600 hover:bg-green-500 rounded text-sm font-medium text-white transition-colors"
+                        className="w-full py-2 bg-ed-accent/90 hover:bg-ed-accent rounded text-sm font-medium text-ed-bg transition-colors"
                     >
                         Save Bookmark
                     </button>
@@ -98,7 +98,7 @@ export default function BookmarkPanel({ bookmarks, onSeek, onDelete, onAdd, onEx
                         )}
                         {bookmark.segmentText && (
                             <p className="text-xs text-zinc-500 italic line-clamp-2 pl-2 border-l-2 border-zinc-600">
-                                "{bookmark.segmentText}"
+                                &quot;{bookmark.segmentText}&quot;
                             </p>
                         )}
                     </div>

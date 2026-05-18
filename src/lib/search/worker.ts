@@ -1,9 +1,10 @@
 
 import { searchOptimized, SearchResult, SearchOptions, normalizeQuery } from './core';
+import type { ContentStore, OptimizedIndex } from './core';
 
 // Define message types
 export type WorkerMessage =
-    | { type: 'LOAD_INDEX'; payload: { index: any; content: any } }
+    | { type: 'LOAD_INDEX'; payload: { index: OptimizedIndex; content: ContentStore } }
     | { type: 'SEARCH'; payload: { query: string; options: SearchOptions } };
 
 export type WorkerResponse =
@@ -12,8 +13,8 @@ export type WorkerResponse =
     | { type: 'READY' };
 
 // State
-let searchIndex: any = null;
-let contentStore: any = null;
+let searchIndex: OptimizedIndex | null = null;
+let contentStore: ContentStore | null = null;
 
 // Cache
 const queryCache = new Map<string, SearchResult[]>();
@@ -100,10 +101,10 @@ self.onmessage = async (e: MessageEvent<WorkerMessage>) => {
                 } as WorkerResponse);
                 break;
         }
-    } catch (err: any) {
+    } catch (err: unknown) {
         self.postMessage({
             type: 'ERROR',
-            payload: { error: err.message || 'Unknown worker error' }
+            payload: { error: err instanceof Error ? err.message : 'Unknown worker error' }
         } as WorkerResponse);
     }
 };

@@ -1,10 +1,6 @@
-
-import Header from '@/components/layout/Header';
-
 export default function Loading() {
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg">
-            <Header />
             <div className="max-w-[1800px] mx-auto px-4 md:px-8 py-8 animate-pulse">
                 <div className="grid lg:grid-cols-[1fr_450px] gap-8">
                     <div className="space-y-6">

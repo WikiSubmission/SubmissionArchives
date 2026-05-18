@@ -70,12 +70,20 @@
   --muted: #f3f4f6;
   --muted-foreground: #6b7280;
   --ed-bg: #f3ede4;
-  --ed-fg: #1d221d;
-  --ed-fg-muted: #5e655f;
-  --ed-rule: rgba(47, 56, 31, 0.16);
+  --ed-fg: #1b1a18;
+  --ed-fg-muted: #625c54;
+  --ed-rule: rgba(27, 26, 24, 0.16);
   --ed-surface: #fbf7f1;
   --ed-accent: #961515;
   --ed-accent-soft: #f4c0a3;
+  --hero-vanta-background: #f3ede4;
+  --hero-vanta-sky: #efe7dd;
+  --hero-vanta-cloud: #cbbca9;
+  --hero-vanta-cloud-shadow: #625c54;
+  --hero-vanta-sun: #f6ae82;
+  --hero-vanta-sun-glare: #6b3d2e;
+  --hero-vanta-sunlight: #f6ae82;
+  --hero-vanta-speed: 0.75;
 }
 
 @theme {
@@ -97,6 +105,7 @@
   --color-ed-accent-soft: var(--ed-accent-soft);
 
   --font-sans: var(--font-inter);
+  --font-archivo-black: var(--font-archivo-black);
   --font-mono: var(--font-geist-mono);
   --font-serif: 'Superior Serif', serif;
   --font-heading: var(--font-cinzel);
@@ -138,13 +147,21 @@
   --muted: #27272a;
   --muted-foreground: #a1a1aa;
   /* Zinc 400 */
-  --ed-bg: #151c18;
-  --ed-fg: #e9dfd3;
-  --ed-fg-muted: #b7aa9b;
-  --ed-rule: rgba(233, 223, 211, 0.11);
-  --ed-surface: #171f1a;
+  --ed-bg: #111111;
+  --ed-fg: #f6efe4;
+  --ed-fg-muted: #cbbca9;
+  --ed-rule: rgba(246, 239, 228, 0.12);
+  --ed-surface: #181817;
   --ed-accent: #f6ae82;
   --ed-accent-soft: #c85a4e;
+  --hero-vanta-background: #000000;
+  --hero-vanta-sky: #161616;
+  --hero-vanta-cloud: #adc1de;
+  --hero-vanta-cloud-shadow: #183550;
+  --hero-vanta-sun: #f6ae82;
+  --hero-vanta-sun-glare: #6b3d2e;
+  --hero-vanta-sunlight: #f6ae82;
+  --hero-vanta-speed: 0.85;
 }
 
 body {
@@ -165,9 +182,9 @@ body {
 
 .archive-atmosphere {
   background:
-    radial-gradient(circle at top, color-mix(in srgb, var(--ed-accent) 18%, transparent), transparent 30%),
-    radial-gradient(circle at 80% 18%, color-mix(in srgb, var(--ed-accent) 10%, transparent), transparent 24%),
-    linear-gradient(180deg, var(--ed-surface) 0%, var(--ed-bg) 54%, var(--background) 100%);
+    radial-gradient(circle at top, color-mix(in srgb, var(--ed-accent) 6%, transparent), transparent 34%),
+    radial-gradient(circle at 80% 18%, color-mix(in srgb, var(--ed-accent) 4%, transparent), transparent 28%),
+    linear-gradient(180deg, color-mix(in srgb, var(--ed-surface) 82%, var(--ed-bg)) 0%, var(--ed-bg) 56%, var(--background) 100%);
 }
 
 .archive-grid {
@@ -180,9 +197,9 @@ body {
 .archive-image-fade {
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--ed-bg) 10%, transparent) 0%,
-    color-mix(in srgb, var(--ed-bg) 52%, transparent) 52%,
-    color-mix(in srgb, var(--ed-bg) 94%, transparent) 100%
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    var(--ed-bg) 95%
   );
 }
 
@@ -190,6 +207,144 @@ body {
   background:
     radial-gradient(circle at top right, color-mix(in srgb, var(--ed-accent) 10%, transparent), transparent 30%),
     radial-gradient(circle at bottom left, color-mix(in srgb, var(--ed-accent) 8%, transparent), transparent 26%);
+}
+
+.soft-shell {
+  border: 1px solid color-mix(in srgb, var(--ed-fg) 7%, transparent);
+  border-radius: 2rem;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ed-surface) 88%, var(--ed-accent) 4%),
+      color-mix(in srgb, var(--ed-bg) 90%, var(--ed-surface) 10%)
+    );
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--ed-fg) 7%, transparent),
+    0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+.soft-panel {
+  border: 1px solid color-mix(in srgb, var(--ed-fg) 7%, transparent);
+  border-radius: 1.45rem;
+  background: color-mix(in srgb, var(--ed-surface) 74%, var(--ed-accent) 3%);
+  box-shadow:
+    inset 0 2px 12px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px color-mix(in srgb, var(--ed-fg) 3%, transparent);
+}
+
+.soft-pill {
+  border: 1px solid color-mix(in srgb, var(--ed-fg) 7%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ed-surface) 86%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--ed-fg) 7%, transparent),
+    0 14px 38px rgba(0, 0, 0, 0.14);
+}
+
+.hero-vanta-field > *:not(.hero-vanta-canvas):not(.hero-vanta-shade) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-vanta-field {
+  isolation: isolate;
+}
+
+.hero-vanta-shade {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-vanta-canvas {
+  inset: 0;
+  pointer-events: auto;
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-vanta-canvas canvas {
+  opacity: 0.72;
+}
+
+.hero-vanta-shade {
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--ed-bg) 0%, color-mix(in srgb, var(--ed-bg) 42%, transparent) 16%, transparent 48%, color-mix(in srgb, var(--ed-bg) 32%, transparent) 82%, var(--ed-bg) 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--ed-bg) 90%, transparent) 0%, transparent 24%, transparent 72%, var(--ed-bg) 100%);
+  z-index: 1;
+}
+
+@keyframes hero-image-progress {
+  from {
+    transform: scaleX(0.025);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.hero-image-progress {
+  width: 100%;
+  transform-origin: left center;
+  animation: hero-image-progress linear forwards;
+}
+
+.archive-cursor-field {
+  --cursor-x: 50%;
+  --cursor-y: 42%;
+}
+
+.archive-cursor-field::before,
+.archive-cursor-field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.archive-cursor-field::before {
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, var(--ed-fg) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--ed-fg) 10%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(360px circle at var(--cursor-x) var(--cursor-y), #000 0%, transparent 76%);
+  opacity: 0.38;
+  animation: archive-field-drift 18s linear infinite;
+}
+
+.archive-cursor-field::after {
+  background:
+    linear-gradient(115deg, transparent 0%, color-mix(in srgb, var(--ed-accent) 9%, transparent) 46%, transparent 62%);
+  mask-image: radial-gradient(420px circle at var(--cursor-x) var(--cursor-y), #000 0%, transparent 72%);
+  opacity: 0.42;
+}
+
+@keyframes archive-field-drift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+
+  to {
+    background-position: 44px 44px, 44px 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-progress {
+    animation: none;
+    transform: scaleX(1);
+  }
+
+  .archive-cursor-field::before {
+    animation: none;
+  }
+
+  .hero-vanta-canvas {
+    opacity: 0.34;
+  }
 }
 
 @keyframes fade-in {
@@ -206,6 +361,120 @@ body {
 
 .animate-fade-in {
   animation: fade-in 0.4s ease-out;
+}
+
+@keyframes search-demo-type {
+  0% {
+    width: 0;
+  }
+
+  24%,
+  100% {
+    width: 29ch;
+  }
+}
+
+@keyframes search-demo-caret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0.16;
+  }
+}
+
+@keyframes search-demo-result {
+  0%,
+  32% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  42%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes search-demo-selected {
+  0%,
+  58% {
+    border-color: rgba(246, 239, 228, 0.1);
+    background: rgba(24, 24, 23, 0.8);
+    transform: translateX(0);
+  }
+
+  68%,
+  100% {
+    border-color: rgba(246, 174, 130, 0.34);
+    background: rgba(246, 174, 130, 0.08);
+    transform: translateX(6px);
+  }
+}
+
+@keyframes search-demo-player {
+  0%,
+  70% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  80%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes search-demo-progress {
+  0%,
+  82% {
+    width: 0;
+  }
+
+  100% {
+    width: 68%;
+  }
+}
+
+.search-demo-type {
+  animation: search-demo-type 8s steps(29, end) infinite;
+  max-width: 100%;
+}
+
+.search-demo-caret {
+  animation: search-demo-caret 0.9s steps(1, end) infinite;
+}
+
+.search-demo-result {
+  opacity: 0;
+  animation: search-demo-result 8s ease-out infinite;
+}
+
+.search-demo-result-2 {
+  animation-delay: 0.45s;
+}
+
+.search-demo-result-3 {
+  animation-delay: 0.8s;
+}
+
+.search-demo-selected {
+  animation: search-demo-selected 8s ease-out infinite;
+}
+
+.search-demo-player {
+  opacity: 0;
+  animation: search-demo-player 8s ease-out infinite;
+}
+
+.search-demo-progress {
+  width: 0;
+  animation: search-demo-progress 8s ease-out infinite;
 }
 
 .transcript-range::-webkit-slider-runnable-track {

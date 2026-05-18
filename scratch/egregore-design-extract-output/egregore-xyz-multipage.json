@@ -1,9 +1,0 @@
-{
-  "targets": [],
-  "pages": [],
-  "consistency": {
-    "pairwise": [],
-    "drift": {},
-    "shared": {}
-  }
-}

@@ -9,38 +9,24 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+function getInitialDarkMode() {
+    if (typeof window === 'undefined') return true;
+    return localStorage.getItem('theme') !== 'light';
+}
+
+function applyTheme(isDark: boolean) {
+    const theme = isDark ? 'dark' : 'light';
+    document.documentElement.classList.toggle('dark', isDark);
+    document.documentElement.dataset.theme = theme;
+    document.body.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-    const [darkMode, setDarkMode] = useState(true); // Default to dark mode
-
-    const applyTheme = (isDark: boolean) => {
-        const theme = isDark ? 'dark' : 'light';
-        document.documentElement.classList.toggle('dark', isDark);
-        document.documentElement.dataset.theme = theme;
-        document.body.dataset.theme = theme;
-        document.documentElement.style.colorScheme = theme;
-    };
-
-    useEffect(() => {
-        // Load preference from local storage
-        const saved = localStorage.getItem('theme');
-        if (saved === 'dark') {
-            setDarkMode(true);
-            applyTheme(true);
-        } else if (saved === 'light') {
-            setDarkMode(false);
-            applyTheme(false);
-        } else {
-            // Default to dark mode if no preference saved
-            setDarkMode(true);
-            applyTheme(true);
-        }
-    }, []);
+    const [darkMode, setDarkMode] = useState(getInitialDarkMode);
 
     const toggleDarkMode = () => {
-        const newMode = !darkMode;
-        setDarkMode(newMode);
-        localStorage.setItem('theme', newMode ? 'dark' : 'light');
-        applyTheme(newMode);
+        setDarkMode(prev => !prev);
     };
 
     // Prevent hydration mismatch by not rendering until mounted
@@ -52,6 +38,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     // Sync class on mount/change
     useEffect(() => {
         applyTheme(darkMode);
+        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
     }, [darkMode]);
 
     return (

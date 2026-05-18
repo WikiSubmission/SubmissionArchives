@@ -83,6 +83,7 @@ public/content/**/*.mkv
 public/content/**/*.webm
 public/content/**/*.flv
 public/content/**/*.pdf
+!public/content/**/*.pdf
 
 # Data & Reprocessing (Root level artifacts)
 /data/disorganized_sermons/
@@ -112,3 +113,10 @@ scripts/debug_ocr.py
 # public/content/**/*.vtt - Contains video/audio transcripts
 # public/images/ - Static UI assets
 # public/fonts/ - Custom typography
+
+# Generated reports / bulky non-runtime index artifacts
+public/data/generated_indices/R2_UPLOAD_REPORT.csv
+public/data/generated_indices/TRANSCRIPTS_MASTER.csv
+public/data/generated_indices/ALL_FRIDAY_SERMONS.json
+public/data/generated_indices/ALL_SERMONS.json
+public/data/generated_indices/ALL_PROGRAMS.json

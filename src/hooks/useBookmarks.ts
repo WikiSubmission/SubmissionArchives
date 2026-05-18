@@ -14,16 +14,20 @@ export function useBookmarks(mediaId: string) {
 
     useEffect(() => {
         if (!mediaId) return;
-        const saved = localStorage.getItem(`bookmarks-${mediaId}`);
-        if (saved) {
-            try {
-                setBookmarks(JSON.parse(saved));
-            } catch (e) {
-                console.error("Failed to parse bookmarks", e);
+        const timer = setTimeout(() => {
+            const saved = localStorage.getItem(`bookmarks-${mediaId}`);
+            if (saved) {
+                try {
+                    setBookmarks(JSON.parse(saved));
+                } catch (e) {
+                    console.error("Failed to parse bookmarks", e);
+                }
+            } else {
+                setBookmarks([]);
             }
-        } else {
-            setBookmarks([]);
-        }
+        }, 0);
+
+        return () => clearTimeout(timer);
     }, [mediaId]);
 
     const addBookmark = useCallback((time: number, note: string = '', color: string = 'yellow', segmentText: string = '') => {

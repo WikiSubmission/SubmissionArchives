@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { rowsToObjects } from '@/lib/csv';
+import { findQueryMatch } from '@/lib/search/queryMatch';
 
 export type NewsletterIssue = {
     id: string;
@@ -11,6 +12,7 @@ export type NewsletterIssue = {
     year: number;
     filename: string;
     pdfLink: string;
+    thumbnailOverride?: string;
     aliases: string[];
 };
 
@@ -21,11 +23,15 @@ export type NewsletterSearchResult = {
         content: string;
         page: number;
         start_time: number;
+        score?: number;
+        kind?: string;
+        distance?: number;
     }>;
 };
 
 const NEWSLETTER_DIR = path.join(process.cwd(), 'public', 'content', 'newsletter');
 const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
+const NEWSLETTER_THUMB_DIR = path.join(NEWSLETTER_DIR, 'thumbnails');
 const CSV_PATH = path.join(NEWSLETTER_DIR, 'csv', 'newsletters_rows.csv');
 
 const MONTHS: Record<string, { number: number; name: string; abbr: string }> = {
@@ -89,6 +95,7 @@ function issueFromPdf(filename: string): NewsletterIssue | null {
         year,
         filename,
         pdfLink: `/content/newsletter/pdfs/${filename}`,
+        thumbnailOverride: getThumbnailLink(filename),
         aliases: [id, baseName, `${year}_${month.abbr}`],
     };
 }
@@ -105,6 +112,12 @@ export function getNewsletterIssues() {
         .sort((a, b) => a.fullDate.localeCompare(b.fullDate) || a.monthSort - b.monthSort);
 
     return issueCache;
+}
+
+function getThumbnailLink(pdfFilename: string) {
+    const thumbnailName = `${pdfFilename.replace(/\.pdf$/i, '')}.jpg`;
+    const thumbnailPath = path.join(NEWSLETTER_THUMB_DIR, thumbnailName);
+    return fs.existsSync(thumbnailPath) ? `/content/newsletter/thumbnails/${thumbnailName}` : undefined;
 }
 
 export function getNewsletterIssue(id: string) {
@@ -125,9 +138,7 @@ export function getAdjacentNewsletterIssues(id: string) {
     };
 }
 
-export function searchNewsletterCsv(query: string): NewsletterSearchResult[] {
-    const lowerQuery = query.toLowerCase();
-    const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+export function searchNewsletterCsv(query: string, options: { proximityWindow?: number } = {}): NewsletterSearchResult[] {
     const issueByDate = new Map(
         getNewsletterIssues()
             .filter((issue) => !issue.id.endsWith('_bonus') && !issue.id.endsWith('_2'))
@@ -137,7 +148,8 @@ export function searchNewsletterCsv(query: string): NewsletterSearchResult[] {
 
     for (const row of getCsvRows()) {
         const content = row.content ?? '';
-        if (!content.toLowerCase().includes(lowerQuery)) continue;
+        const queryMatch = findQueryMatch(content, query, options);
+        if (!queryMatch.matched) continue;
 
         const year = Number(row.year);
         const month = MONTHS[(row.month ?? '').toLowerCase()];
@@ -145,23 +157,16 @@ export function searchNewsletterCsv(query: string): NewsletterSearchResult[] {
         if (!issue) continue;
 
         const matches = results.get(issue.id) ?? { issue, matches: [] };
-        let match;
-        let count = 0;
-        regex.lastIndex = 0;
-
-        while ((match = regex.exec(content)) !== null && count < 3 && matches.matches.length < 12) {
-            const start = Math.max(0, match.index - 80);
-            const end = Math.min(content.length, match.index + query.length + 80);
-            const prefix = start > 0 ? '...' : '';
-            const suffix = end < content.length ? '...' : '';
-
+        if (matches.matches.length < 12) {
             matches.matches.push({
-                id: `nl-${issue.id}-p${row.page}-${row.index}-${count}`,
-                content: `${prefix}${content.substring(start, end)}${suffix}`,
+                id: `nl-${issue.id}-p${row.page}-${row.index}`,
+                content: queryMatch.snippet,
                 page: Number(row.page) || 1,
                 start_time: 0,
+                score: queryMatch.score,
+                kind: queryMatch.kind,
+                distance: queryMatch.distance,
             });
-            count++;
         }
 
         results.set(issue.id, matches);

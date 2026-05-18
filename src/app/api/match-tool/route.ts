@@ -2,22 +2,44 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import { S3Client } from '@aws-sdk/client-s3';
+import {
+    checkRateLimit,
+    getClientIp,
+    hasUnsafePathCharacters,
+    parsePositiveInt,
+    rateLimitResponse,
+    requireAdminRequest,
+    resolvePathWithin,
+} from '@/lib/security';
 
 const CSV_PATH = path.join(process.cwd(), 'duration_match_debug.csv');
 const TRANSCRIPTS_DIR = path.join(process.cwd(), 'transcripts');
 const RECOVERY_OUTPUT_DIR = path.join(process.cwd(), 'recovery_output');
 
-// R2 Config
-const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME;
-const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID;
-const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
-const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
+const MAX_SEARCH_LENGTH = 120;
+const MAX_TITLE_LENGTH = 180;
+
+type CsvItem = {
+    name: string;
+    value: number;
+};
+
+type Candidate = {
+    filename: string;
+    duration: number;
+    diff: number;
+    ratio: number;
+};
+
+type TranscriptSegment = {
+    content?: unknown;
+    end_time?: unknown;
+};
 
 // Helper to parse CSV manually to handle commas in filenames
 function parseCSV() {
-    const audio: { name: string; value: number }[] = [];
-    const transcripts: { name: string; value: number }[] = [];
+    const audio: CsvItem[] = [];
+    const transcripts: CsvItem[] = [];
 
     if (!fs.existsSync(CSV_PATH)) return { audio, transcripts };
 
@@ -52,7 +74,7 @@ function parseCSV() {
 }
 
 // Logic to find candidates
-function findCandidates(audioSize: number, transcripts: any[]) {
+function findCandidates(audioSize: number, transcripts: CsvItem[]): Candidate[] {
     // Est duration = size / 24000 (approx)
     const estDuration = audioSize / 24000;
 
@@ -72,7 +94,7 @@ function findCandidates(audioSize: number, transcripts: any[]) {
 }
 
 // Ensure snippets are loaded
-function loadSnippets(transcripts: any[]) {
+function loadSnippets(transcripts: CsvItem[]) {
     const snippets: Record<string, string> = {};
     for (const t of transcripts) {
         const filePath = path.join(TRANSCRIPTS_DIR, t.name);
@@ -81,17 +103,22 @@ function loadSnippets(transcripts: any[]) {
             if (fs.existsSync(filePath)) {
                 const fileContent = fs.readFileSync(filePath, 'utf-8');
                 try {
-                    const json = JSON.parse(fileContent);
+                    const json = JSON.parse(fileContent) as TranscriptSegment[];
                     if (Array.isArray(json) && json.length > 0) {
                         // Join segments up to 2 minutes (120 seconds)
-                        let collected = [];
+                        let collected: string[] = [];
                         for (const seg of json) {
-                            collected.push(seg.content);
-                            if (seg.end_time > 120) break;
+                            if (typeof seg.content === 'string') {
+                                collected.push(seg.content);
+                            }
+                            if (typeof seg.end_time === 'number' && seg.end_time > 120) break;
                         }
                         if (collected.length === 0) {
                             // Fallback if timestamps are weird or all 0
-                            collected = json.slice(0, 30).map((s: any) => s.content);
+                            collected = json
+                                .slice(0, 30)
+                                .map((segment) => segment.content)
+                                .filter((content): content is string => typeof content === 'string');
                         }
                         snippet = collected.join(" ");
                     }
@@ -99,7 +126,7 @@ function loadSnippets(transcripts: any[]) {
                     snippet = fileContent.substring(0, 2000); // Increased fallback length
                 }
             }
-        } catch (e) {
+        } catch {
             // ignore
         }
         snippets[t.name] = snippet.substring(0, 3000) + "..."; // Increased max length
@@ -123,15 +150,28 @@ function getCompletedAudioIds() {
 }
 
 export async function GET(req: Request) {
+    const adminError = requireAdminRequest(req);
+    if (adminError) return adminError;
+
+    const rateLimit = checkRateLimit(`match-tool:${getClientIp(req.headers)}`, 60);
+    if (rateLimit.limited) {
+        return rateLimitResponse(rateLimit);
+    }
+
     const { searchParams } = new URL(req.url);
-    const searchQuery = searchParams.get('search')?.toLowerCase();
+    const rawSearchQuery = searchParams.get('search')?.trim();
+    if (rawSearchQuery && rawSearchQuery.length > MAX_SEARCH_LENGTH) {
+        return NextResponse.json({ error: 'Search query is too long' }, { status: 400 });
+    }
+
+    const searchQuery = rawSearchQuery?.toLowerCase();
 
     const { audio, transcripts } = parseCSV();
     const snippets = loadSnippets(transcripts);
 
     // If search query is present, return search results
     if (searchQuery) {
-        const results = [];
+        const results: Array<{ filename: string; duration: number; snippet: string }> = [];
         for (const t of transcripts) {
             const filePath = path.join(TRANSCRIPTS_DIR, t.name);
             if (fs.existsSync(filePath)) {
@@ -157,7 +197,7 @@ export async function GET(req: Request) {
                             snippet: snippet
                         });
                     }
-                } catch (e) {
+                } catch {
                     // ignore read errors
                 }
             }
@@ -194,28 +234,57 @@ export async function GET(req: Request) {
 }
 
 export async function POST(req: Request) {
-    try {
-        const body = await req.json();
-        const { audioId, transcriptFilename, targetTitle } = body;
+    const adminError = requireAdminRequest(req);
+    if (adminError) return adminError;
 
-        if (!audioId || !transcriptFilename) {
+    const rateLimit = checkRateLimit(`match-tool-post:${getClientIp(req.headers)}`, 20);
+    if (rateLimit.limited) {
+        return rateLimitResponse(rateLimit);
+    }
+
+    try {
+        const body = await req.json() as {
+            audioId?: unknown;
+            transcriptFilename?: unknown;
+            targetTitle?: unknown;
+        };
+        const { audioId, transcriptFilename, targetTitle } = body;
+        const parsedAudioId = parsePositiveInt(audioId, 1000);
+
+        if (!parsedAudioId || typeof transcriptFilename !== 'string') {
             return NextResponse.json({ error: "Missing audioId or transcriptFilename" }, { status: 400 });
         }
 
-        const safeTitle = (targetTitle || `Quran Study ${audioId}`).replace(/[<>:"\/\\|?*]/g, '');
-        const destFilename = `${audioId}) ${safeTitle}.json`;
+        if (
+            hasUnsafePathCharacters(transcriptFilename) ||
+            !transcriptFilename.toLowerCase().endsWith('.json')
+        ) {
+            return NextResponse.json({ error: "Invalid transcript filename" }, { status: 400 });
+        }
 
-        const srcPath = path.join(TRANSCRIPTS_DIR, transcriptFilename);
-        const destPath = path.join(RECOVERY_OUTPUT_DIR, destFilename);
-        const processedPath = path.join(TRANSCRIPTS_DIR, "processed", transcriptFilename);
+        const title = typeof targetTitle === 'string' ? targetTitle.slice(0, MAX_TITLE_LENGTH) : `Quran Study ${parsedAudioId}`;
+        const safeTitle = title.replace(/[<>:"\/\\|?*\x00-\x1F]/g, '').trim() || `Quran Study ${parsedAudioId}`;
+        const destFilename = `${parsedAudioId}) ${safeTitle}.json`;
+
+        const srcPath = resolvePathWithin(TRANSCRIPTS_DIR, transcriptFilename);
+        const destPath = resolvePathWithin(RECOVERY_OUTPUT_DIR, destFilename);
+        const processedDir = path.join(TRANSCRIPTS_DIR, "processed");
+        const processedPath = resolvePathWithin(processedDir, transcriptFilename);
+
+        if (!srcPath || !destPath || !processedPath) {
+            return NextResponse.json({ error: "Invalid file path" }, { status: 400 });
+        }
 
         // Ensure output dirs
         if (!fs.existsSync(RECOVERY_OUTPUT_DIR)) {
             fs.mkdirSync(RECOVERY_OUTPUT_DIR, { recursive: true });
         }
-        const processedDir = path.join(TRANSCRIPTS_DIR, "processed");
         if (!fs.existsSync(processedDir)) {
             fs.mkdirSync(processedDir, { recursive: true });
+        }
+
+        if (fs.existsSync(destPath) || fs.existsSync(processedPath)) {
+            return NextResponse.json({ error: "Destination already exists" }, { status: 409 });
         }
 
         // Copy/Move
@@ -232,8 +301,9 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ success: true, path: destFilename });
 
-    } catch (e: any) {
+    } catch (e: unknown) {
         console.error(e);
-        return NextResponse.json({ error: e.message }, { status: 500 });
+        const message = e instanceof Error ? e.message : 'Failed to save match';
+        return NextResponse.json({ error: message }, { status: 500 });
     }
 }

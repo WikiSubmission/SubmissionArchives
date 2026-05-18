@@ -17,15 +17,14 @@ export default function Header() {
         { name: 'Videos', href: '/videos' },
         { name: 'Audios', href: '/audios' },
         { name: 'Search', href: '/search' },
-        { name: 'Other', href: '/other' },
     ];
 
     const palette = darkMode
         ? {
             border: 'border-[#e9dfd3]/10',
-            frame: 'bg-[#151c18]/84 text-[#efe5d8]',
+            frame: 'bg-[#111111]/86 text-[#f6efe4]',
             muted: 'text-[#cbbca9]/62',
-            panel: 'bg-[#111713]/88',
+            panel: 'bg-[#181817]/88',
             hover: 'hover:bg-[#ffffff]/[0.04]',
             active: 'bg-[#f6ae82]/10 text-[#f6efe4] border-[#f6ae82]/20',
             idle: 'text-[#cbbca9]/58 border-transparent hover:text-[#f6efe4] hover:border-[#e9dfd3]/10',
@@ -33,14 +32,14 @@ export default function Header() {
             iconHover: 'hover:text-[#f6ae82]',
         }
         : {
-            border: 'border-[#2f381f]/14',
-            frame: 'bg-[#f3ede4]/86 text-[#1d221d]',
-            muted: 'text-[#495144]/62',
+            border: 'border-[#1b1a18]/14',
+            frame: 'bg-[#f3ede4]/86 text-[#1b1a18]',
+            muted: 'text-[#625c54]/62',
             panel: 'bg-[#f7f2eb]/92',
-            hover: 'hover:bg-[#151c18]/[0.04]',
-            active: 'bg-[#961515]/8 text-[#1d221d] border-[#961515]/16',
-            idle: 'text-[#4d554b] border-transparent hover:text-[#1d221d] hover:border-[#2f381f]/12',
-            icon: 'text-[#4d554b]',
+            hover: 'hover:bg-[#111111]/[0.04]',
+            active: 'bg-[#961515]/8 text-[#1b1a18] border-[#961515]/16',
+            idle: 'text-[#625c54] border-transparent hover:text-[#1b1a18] hover:border-[#1b1a18]/12',
+            icon: 'text-[#625c54]',
             iconHover: 'hover:text-[#961515]',
         };
 
@@ -48,29 +47,35 @@ export default function Header() {
         <header className={`sticky top-0 z-50 border-b ${palette.border} ${palette.frame} backdrop-blur-xl`}>
             <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-10">
                 <div className="grid grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
-                    <div className="flex items-center">
-                        <Link href="/" className="group inline-flex items-center gap-3">
-                            <div className={`flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border ${palette.border} bg-[#111713]/70`}>
+                    <div className="flex items-center gap-3">
+                        <Link href="/" className="group inline-flex items-center gap-3" aria-label="Submission Archives home">
+                            <div className={`relative h-9 w-9 shrink-0 overflow-hidden rounded-full border ${palette.border} bg-[#111111]/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_12px_30px_rgba(0,0,0,0.18)] transition-colors duration-300 group-hover:border-[#f6ae82]/40`}>
                                 <Image
                                     src="/submission-logo.png"
                                     alt="Submission Archives"
-                                    width={40}
-                                    height={40}
-                                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                    width={36}
+                                    height={36}
+                                    className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-110"
                                 />
                             </div>
 
-                            <div className="leading-none">
-                                <p className="font-serif text-xl tracking-[0.02em]">Submission</p>
-                                <p className={`mt-1 text-[0.63rem] uppercase tracking-[0.32em] ${palette.muted}`}>
-                                    Archives
-                                </p>
+                            <div className="flex flex-col leading-none">
+                                <span className="font-sans text-base font-bold uppercase tracking-tight text-ed-fg transition-colors duration-300 group-hover:text-ed-accent">
+                                    SUBMISSION
+                                </span>
+                                <span
+                                    style={{ fontFamily: 'var(--font-roboto-slab)' }}
+                                    className={`mt-0.5 font-mono text-[10px] uppercase tracking-[0.25em] transition-colors duration-300 group-hover:text-ed-fg ${palette.muted}`}
+                                >
+                                    ARCHIVES
+                                </span>
                             </div>
                         </Link>
+
                     </div>
 
                     <div className="hidden lg:flex justify-center">
-                        <nav className={`flex items-center gap-1 border ${palette.border} ${palette.panel} px-1.5 py-1.5`}>
+                        <nav className={`soft-pill flex items-center gap-1 px-1.5 py-1.5`}>
                             {navItems.map((item) => {
                                 const isActive = pathname === item.href;
 
@@ -78,7 +83,7 @@ export default function Header() {
                                     <Link
                                         key={item.name}
                                         href={item.href}
-                                        className={`border px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] transition ${isActive ? palette.active : palette.idle}`}
+                                        className={`rounded-full border px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.22em] transition ${isActive ? palette.active : palette.idle}`}
                                     >
                                         {item.name}
                                     </Link>
@@ -124,7 +129,7 @@ export default function Header() {
 
                         <button
                             onClick={() => setIsMenuOpen((open) => !open)}
-                            className={`md:hidden border ${palette.border} ${palette.panel} p-2 ${palette.icon} transition ${palette.hover}`}
+                            className={`soft-pill md:hidden p-2 ${palette.icon} transition ${palette.hover}`}
                             aria-label="Toggle menu"
                         >
                             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -144,7 +149,7 @@ export default function Header() {
                                     key={item.name}
                                     href={item.href}
                                     onClick={() => setIsMenuOpen(false)}
-                                    className={`border px-4 py-3 text-sm uppercase tracking-[0.22em] transition ${isActive ? palette.active : `${palette.idle} ${palette.hover}`}`}
+                                    className={`rounded-full border px-4 py-3 text-sm font-bold uppercase tracking-[0.22em] transition ${isActive ? palette.active : `${palette.idle} ${palette.hover}`}`}
                                 >
                                     {item.name}
                                 </Link>
@@ -178,7 +183,7 @@ function HeaderIconButton({
         <button
             onClick={onClick}
             aria-label={label}
-            className={`border ${palette.border} ${palette.panel} p-2 ${palette.icon} transition ${palette.hover} ${palette.iconHover}`}
+            className={`soft-pill p-2 ${palette.icon} transition ${palette.hover} ${palette.iconHover}`}
         >
             {children}
         </button>
