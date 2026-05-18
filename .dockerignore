@@ -3,6 +3,10 @@
 node_modules
 npm-debug.log*
 yarn-error.log*
+*.part
+*.zip
+*.tar.gz
+*.iso
 .env
 .env.local
 .env*.local
@@ -28,3 +32,4 @@ public/content/**/*.mkv
 public/content/**/*.webm
 public/content/**/*.flv
 public/content/**/*.pdf
+public/content/**/*.part
