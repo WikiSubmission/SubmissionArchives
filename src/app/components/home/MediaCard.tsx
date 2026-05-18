@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Media, ThemeColors } from "@/types/media";
 import thumbnailMapping from "@/data/thumbnail_mapping.json";
 import quranStudyThumbnails from "@/data/quran_study_thumbnails.json";
@@ -60,15 +61,16 @@ export function MediaCard({ item }: MediaCardProps) {
     const thumbnailSrc = getThumbnailSrc(item);
 
     return (
-        <article className="soft-shell group flex h-full flex-col gap-4 p-2 transition duration-300 hover:-translate-y-0.5">
+        <article className="media-card-shell soft-shell group flex h-full flex-col gap-4 p-2 transition duration-300 motion-safe:hover:-translate-y-0.5">
             {/* Thumbnail */}
             <div className="soft-panel relative aspect-video overflow-hidden rounded-[1.35rem] bg-ed-bg">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                     src={thumbnailSrc}
                     alt={item.displayTitle}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                    loading="lazy"
+                    fill
+                    quality={60}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                     onError={(e) => {
                         e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
                     }}
@@ -115,12 +117,13 @@ export function MediaList({ item }: MediaCardProps) {
         <div className="soft-shell group flex gap-4 p-2 font-ui">
             {/* Thumbnail */}
             <div className="soft-panel relative aspect-video w-40 flex-shrink-0 overflow-hidden rounded-[1.15rem] bg-ed-bg sm:w-48">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                     src={thumbnailSrc}
                     alt={item.displayTitle}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
+                    fill
+                    quality={60}
+                    sizes="(max-width: 640px) 160px, 192px"
+                    className="object-cover"
                     onError={(e) => {
                         e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
                     }}

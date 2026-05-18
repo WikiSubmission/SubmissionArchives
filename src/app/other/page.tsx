@@ -1,7 +1,7 @@
-'use client';
-
 import Link from 'next/link';
 import { ArrowRight, BookOpenText, FileStack, LibraryBig, ScrollText } from 'lucide-react';
+
+export const revalidate = 3600;
 
 const shelves = [
     {

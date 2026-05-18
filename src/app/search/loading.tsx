@@ -1,17 +1,4 @@
-import { Suspense } from 'react';
-import SearchClient from './SearchClient';
-
-export const revalidate = 3600;
-
-export default function SearchPage() {
-    return (
-        <Suspense fallback={<SearchLoadingShell />}>
-            <SearchClient />
-        </Suspense>
-    );
-}
-
-function SearchLoadingShell() {
+export default function SearchLoading() {
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg">
             <main className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">

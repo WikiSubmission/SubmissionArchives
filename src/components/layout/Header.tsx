@@ -22,9 +22,9 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-50 border-b border-black/5 bg-[#f7f2eb]/70 backdrop-blur-2xl dark:border-white/5 dark:bg-[#0a0a0a]/70 text-ed-fg">
             <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-10">
-                <div className="grid grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
-                    <div className="flex items-center gap-3">
-                        <Link href="/" className="group inline-flex items-center gap-3" aria-label="Submission Archives home">
+                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+                    <div className="flex min-w-0 items-center gap-3">
+                        <Link href="/" className="group inline-flex min-w-0 items-center gap-3" aria-label="Submission Archives home">
                             <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-black/10 bg-[#111111]/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_12px_30px_rgba(0,0,0,0.18)] transition-colors duration-300 group-hover:border-ed-accent/40 dark:border-white/10">
                                 <Image
                                     src="/submission-logo.png"
@@ -35,7 +35,7 @@ export default function Header() {
                                 />
                             </div>
 
-                            <div className="flex flex-col leading-none">
+                            <div className="flex min-w-0 flex-col leading-none">
                                 <span className="font-sans text-base font-bold uppercase tracking-tight text-ed-fg transition-colors duration-300 group-hover:text-ed-accent">
                                     SUBMISSION
                                 </span>

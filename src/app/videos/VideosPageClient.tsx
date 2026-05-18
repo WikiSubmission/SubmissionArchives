@@ -77,7 +77,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                 <div className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
                     <header className="relative overflow-hidden rounded-[1.25rem] bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl grid gap-10 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
                         {/* Deep Ambient Spotlight */}
-                        <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[var(--ed-accent)] opacity-[0.08] blur-[100px] dark:opacity-[0.15]" />
+                        <div className="pointer-events-none absolute -right-40 -top-40 hidden h-96 w-96 rounded-full bg-[var(--ed-accent)] opacity-[0.08] blur-[100px] dark:opacity-[0.15] sm:block" />
                         
                         <div className="relative z-10 space-y-6">
                             <span className="inline-flex items-center gap-2 px-1 text-[0.68rem] uppercase tracking-[0.24em] text-ed-accent font-medium">

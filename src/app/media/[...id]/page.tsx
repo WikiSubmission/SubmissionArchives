@@ -1,9 +1,23 @@
 import fs from 'fs';
 import path from 'path';
+import { cache } from 'react';
+import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { formatMedia } from '@/lib/formatUtils';
 import { getMediaAssetUrl } from '@/lib/mediaAssets';
-import Player from './Player';
+
+export const revalidate = 3600;
+export const dynamicParams = true;
+
+const Player = dynamic(() => import('./Player'), {
+  loading: () => (
+    <div className="min-h-screen bg-ed-bg text-ed-fg">
+      <main className="mx-auto max-w-[1440px] px-4 py-10 sm:px-6 lg:px-10">
+        <div className="soft-shell h-[56vw] max-h-[640px] min-h-[220px] animate-pulse" />
+      </main>
+    </div>
+  ),
+});
 
 type LocalMediaItem = {
   id: string;
@@ -41,11 +55,11 @@ type MasterIndexItem = LocalMediaItem & {
   }>;
 };
 
-function getLocalIndex(filename: string): LocalMediaItem[] {
+const getLocalIndex = cache((filename: string): LocalMediaItem[] => {
   const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
   if (!fs.existsSync(filePath)) return [];
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-}
+});
 
 function getVideoCatalog(masterIndex: MasterIndexItem[]) {
   const videos = getLocalIndex('VIDEO_PROGRAMS_LIST.json');
@@ -66,6 +80,22 @@ function getAudioCatalog(masterIndex: MasterIndexItem[]) {
   if (masterAudios.length > 0) return masterAudios;
 
   return getLocalIndex('ALL_AUDIOS.json');
+}
+
+export async function generateStaticParams() {
+  const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
+  const allMedia = [...getVideoCatalog(masterIndex), ...getAudioCatalog(masterIndex)];
+  const seen = new Set<string>();
+
+  return allMedia
+    .filter((item) => {
+      if (!item.id || seen.has(item.id)) return false;
+      seen.add(item.id);
+      return true;
+    })
+    .map((item) => ({
+      id: item.id.split('/').filter(Boolean),
+    }));
 }
 
 function parseVttTimestamp(timestamp: string): number {
@@ -155,15 +185,11 @@ function parseVTT(vttContent: string): PlayerSegment[] {
 }
 
 export default async function WatchPage({
-  params,
-  searchParams
+  params
 }: {
   params: Promise<{ id: string[] }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { id } = await params;
-  const { t } = await searchParams;
-  const initialTime = typeof t === 'string' ? parseInt(t, 10) || 0 : 0;
 
   const key = id.map(decodeURIComponent).join('/');
   const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
@@ -228,7 +254,6 @@ export default async function WatchPage({
       mediaUrl={mediaUrl}
       prev={prev}
       next={next}
-      initialTime={initialTime}
     />
   );
 }

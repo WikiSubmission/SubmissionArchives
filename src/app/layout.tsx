@@ -1,35 +1,15 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Inter, Crimson_Text, Cinzel, JetBrains_Mono, Playfair_Display, Rubik, Frank_Ruhl_Libre, Scheherazade_New, Roboto_Slab, Amiri, Sora } from "next/font/google";
+import { Inter, JetBrains_Mono, Roboto_Slab, Amiri, Sora } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
+import { WebVitals } from "@/app/components/WebVitals";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const archivoBlack = Archivo_Black({
-  variable: "--font-archivo-black",
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
-const rubik = Rubik({
-  variable: "--font-rubik",
-  subsets: ["latin"],
-});
-
-const scheherazade = Scheherazade_New({
-  weight: ['400', '700'],
-  variable: "--font-scheherazade",
-  subsets: ["arabic"],
 });
 
 const amiri = Amiri({
@@ -43,30 +23,42 @@ const sora = Sora({
   subsets: ["latin"],
 });
 
-const frank = Frank_Ruhl_Libre({
-  variable: "--font-frank",
-  subsets: ["hebrew"],
-});
-
-const crimson = Crimson_Text({
-  weight: ['400', '600', '700'],
-  variable: "--font-crimson",
-  subsets: ["latin"],
-});
-
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin"],
-});
-
 const mono = JetBrains_Mono({
-  variable: "--font-mono",
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 const robotoSlab = Roboto_Slab({
   variable: "--font-roboto-slab",
   subsets: ["latin"],
+});
+
+const superiorSerif = localFont({
+  variable: "--font-local-superior",
+  display: "swap",
+  src: [
+    {
+      path: "../../public/fonts/LTSuperiorSerif-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LTSuperiorSerif-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LTSuperiorSerif-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
+
+const glacial = localFont({
+  variable: "--font-local-glacial",
+  display: "swap",
+  src: "../../public/fonts/GlacialIndifference-Regular.ttf",
 });
 
 export const metadata: Metadata = {
@@ -107,9 +99,10 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${archivoBlack.variable} ${playfair.variable} ${rubik.variable} ${scheherazade.variable} ${amiri.variable} ${sora.variable} ${frank.variable} ${crimson.variable} ${cinzel.variable} ${mono.variable} ${robotoSlab.variable} font-sans antialiased`}
+        className={`${inter.variable} ${amiri.variable} ${sora.variable} ${mono.variable} ${robotoSlab.variable} ${superiorSerif.variable} ${glacial.variable} font-sans antialiased`}
       >
         <ThemeProvider>
+          <WebVitals />
           <Header />
           {children}
           <Footer />

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Search, Clock, Copy, Check, X, LayoutTemplate, AlignLeft,
   Play, Pause, Volume2, VolumeX, ArrowLeft, ArrowRight,
@@ -174,10 +175,11 @@ export default function Player({
 
     /* ---- Initial seek ---- */
     useEffect(() => {
-        if (initialTime <= 0 || !playerRef.current) return;
+        const urlInitialTime = Number(new URLSearchParams(window.location.search).get('t') || initialTime);
+        if (!Number.isFinite(urlInitialTime) || urlInitialTime <= 0 || !playerRef.current) return;
         const player = playerRef.current;
         const go = () => {
-            player.currentTime = initialTime;
+            player.currentTime = urlInitialTime;
         };
         const t = setTimeout(go, 800); // Slightly longer for stability
         return () => clearTimeout(t);
@@ -270,8 +272,19 @@ export default function Player({
 
                                 {!isVideo ? (
                                     <div className="absolute inset-0 flex items-center justify-center bg-ed-surface z-0">
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img src={thumbnail} alt={media.displayTitle} className="w-48 h-48 rounded-2xl shadow-2xl object-cover" onError={e => { e.currentTarget.src = '/images/placeholders/rashad-khalifa.png'; }} />
+                                        <div className="relative h-48 w-48 overflow-hidden rounded-2xl shadow-2xl">
+                                            <Image
+                                                src={thumbnail}
+                                                alt={media.displayTitle}
+                                                fill
+                                                quality={60}
+                                                sizes="192px"
+                                                className="object-cover"
+                                                onError={(e) => {
+                                                    e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
+                                                }}
+                                            />
+                                        </div>
                                     </div>
                                 ) : (
                                     <Poster

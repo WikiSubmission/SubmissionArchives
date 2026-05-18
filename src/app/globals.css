@@ -2,62 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@font-face {
-  font-family: 'Superior Serif';
-  src: url('/fonts/LTSuperiorSerif-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Superior Serif';
-  src: url('/fonts/LTSuperiorSerif-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Superior Serif';
-  src: url('/fonts/LTSuperiorSerif-Semibold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Superior Serif';
-  src: url('/fonts/LTSuperiorSerif-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Superior Serif';
-  src: url('/fonts/LTSuperiorSerif-ExtraBold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Glacial Indifference';
-  src: url('/fonts/GlacialIndifference-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Glacial Indifference';
-  src: url('/fonts/GlacialIndifference-Regular.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root,
 [data-theme="light"] {
   --background: #ffffff;
@@ -105,19 +49,17 @@
   --color-ed-accent-soft: var(--ed-accent-soft);
 
   --font-sans: var(--font-inter);
-  --font-archivo-black: var(--font-archivo-black);
-  --font-mono: var(--font-geist-mono);
-  --font-serif: 'Superior Serif', serif;
-  --font-heading: var(--font-cinzel);
-  --font-rubik: var(--font-rubik);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-serif: var(--font-local-superior);
+  --font-heading: var(--font-local-superior);
   --font-roboto-slab: var(--font-roboto-slab);
   --font-arabic: var(--font-amiri);
   --font-sora: var(--font-sora);
-  --font-superior: 'Superior Serif', serif;
-  --font-glacial: 'Glacial Indifference', sans-serif;
+  --font-superior: var(--font-local-superior);
+  --font-glacial: var(--font-local-glacial);
   --font-body: var(--font-sora);
-  --font-ui: 'Glacial Indifference', sans-serif;
-  --font-display: 'Superior Serif', serif;
+  --font-ui: var(--font-local-glacial);
+  --font-display: var(--font-local-superior);
 }
 
 /* Universal Arabic Font */
@@ -164,6 +106,12 @@
   --hero-vanta-speed: 0.85;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -173,6 +121,7 @@ body {
 
 body {
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -241,6 +190,11 @@ body {
   box-shadow: 
     inset 0 1px 1px 0 color-mix(in srgb, var(--ed-fg) 15%, transparent),
     0 14px 38px rgba(0, 0, 0, 0.14);
+}
+
+.media-card-shell {
+  content-visibility: auto;
+  contain-intrinsic-size: 320px;
 }
 
 .hero-vanta-field > *:not(.hero-vanta-canvas):not(.hero-vanta-shade) {
@@ -346,6 +300,46 @@ body {
 
   .hero-vanta-canvas {
     opacity: 0.34;
+  }
+}
+
+@media (max-width: 639px) {
+  .soft-shell,
+  .soft-panel,
+  .soft-pill {
+    backdrop-filter: none;
+    box-shadow:
+      inset 0 1px 0 0 color-mix(in srgb, var(--ed-fg) 8%, transparent),
+      inset 0 0 0 1px color-mix(in srgb, var(--ed-fg) 4%, transparent),
+      0 10px 24px rgba(0, 0, 0, 0.14);
+  }
+
+  .archive-cursor-field::before,
+  .archive-cursor-field::after {
+    display: none;
+  }
+
+  .archive-grid {
+    background-size: 72px 72px;
+  }
+
+  .search-demo-type,
+  .search-demo-caret,
+  .search-demo-result-1,
+  .search-demo-result-2,
+  .search-demo-result-3,
+  .search-demo-scroll,
+  .search-demo-selected,
+  .search-demo-scene-search,
+  .search-demo-scene-transcript,
+  .search-demo-highlight,
+  .search-demo-player,
+  .search-demo-progress,
+  .search-demo-phase-1,
+  .search-demo-phase-2,
+  .search-demo-phase-3,
+  .search-demo-phase-4 {
+    animation: none;
   }
 }
 
