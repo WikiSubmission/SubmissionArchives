@@ -75,12 +75,16 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
             <main className="relative overflow-hidden">
                 <div className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                    <header className="soft-shell grid gap-10 p-6 backdrop-blur-sm sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
-                        <div className="space-y-6">
-                            <span className="soft-pill inline-flex px-4 py-2 text-[0.64rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                    <header className="relative overflow-hidden rounded-[1.25rem] bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl grid gap-10 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
+                        {/* Deep Ambient Spotlight */}
+                        <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[var(--ed-accent)] opacity-[0.08] blur-[100px] dark:opacity-[0.15]" />
+                        
+                        <div className="relative z-10 space-y-6">
+                            <span className="inline-flex items-center gap-2 px-1 text-[0.68rem] uppercase tracking-[0.24em] text-ed-accent font-medium">
+                                <span className="h-1.5 w-1.5 rounded-full bg-ed-accent shadow-[0_0_8px_var(--ed-accent)]" />
                                 Video index
                             </span>
-                            <h1 className="max-w-[11ch] font-display text-5xl leading-[0.92] text-ed-fg sm:text-6xl lg:text-7xl">
+                            <h1 className="max-w-[11ch] font-display text-5xl leading-[0.92] text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted drop-shadow-sm sm:text-6xl lg:text-7xl">
                                 The Video Archive
                             </h1>
                             <p className="max-w-[64ch] text-[15px] leading-8 text-ed-fg-muted sm:text-base">
@@ -88,7 +92,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap items-end gap-3 lg:self-end lg:justify-end">
+                        <div className="relative z-10 flex flex-wrap items-end gap-3 lg:self-end lg:justify-end">
                             <StatPill value={String(initialVideos.length)} label="videos indexed" />
                             <StatPill value={String(categorizedVideos.length)} label="collections" />
                             <StatPill value="Editorial" label="presentation" />
@@ -100,7 +104,8 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                             <section key={section.id} className="space-y-8">
                                 <div className="flex flex-col gap-4 border-b border-ed-rule pb-6 sm:flex-row sm:items-end sm:justify-between">
                                     <div className="space-y-3">
-                                        <span className="soft-pill inline-flex px-3 py-1.5 text-[0.58rem] uppercase tracking-[0.2em] text-ed-fg-muted">
+                                        <span className="inline-flex items-center gap-2 px-1 text-[0.58rem] uppercase tracking-[0.2em] text-ed-fg-muted">
+                                            <span className="h-1 w-1 rounded-full bg-ed-fg-muted" />
                                             Collection
                                         </span>
                                         <h2 className="font-display text-3xl text-ed-fg sm:text-4xl">
@@ -110,7 +115,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                             {section.description}
                                         </p>
                                     </div>
-                                    <span className="soft-pill shrink-0 px-4 py-2 text-[0.64rem] uppercase tracking-[0.22em] text-ed-fg-muted">
+                                    <span className="flex items-center gap-2 rounded-full px-4 py-2 bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] text-[0.64rem] uppercase tracking-[0.22em] text-ed-fg-muted">
                                         {section.videos.length} records
                                     </span>
                                 </div>
@@ -127,8 +132,8 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
 function StatPill({ value, label }: { value: string; label: string }) {
     return (
-        <div className="soft-pill flex items-center gap-3 px-5 py-2.5">
-            <span className="font-display text-xl text-ed-fg">{value}</span>
+        <div className="group flex items-center gap-3 rounded-full px-5 py-2.5 bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] hover:bg-black/[0.04] transition-colors dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-[#0a0a0a]/60 backdrop-blur-md">
+            <span className="font-display text-xl text-ed-fg transition-colors group-hover:text-ed-accent">{value}</span>
             <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-fg-muted">{label}</span>
         </div>
     );

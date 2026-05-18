@@ -233,15 +233,18 @@ function SearchContent() {
 
 
             <main className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                <section className="soft-shell grid gap-8 p-5 sm:p-7 lg:grid-cols-[0.85fr_1.15fr] lg:p-8">
-                    <div className="flex flex-col items-center space-y-5 text-center lg:col-span-2">
-                        <div className="soft-pill inline-flex items-center gap-3 px-4 py-2 text-ed-accent">
-                            <Search className="h-6 w-6" />
-                            <span className="text-[0.68rem] uppercase tracking-[0.28em]">
+                <section className="relative overflow-hidden rounded-[1.25rem] bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl grid gap-8 p-5 sm:p-7 lg:grid-cols-[0.85fr_1.15fr] lg:p-8">
+                    {/* Ambient Center Glow */}
+                    <div className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--ed-accent)] opacity-[0.06] blur-[120px] dark:opacity-[0.12]" />
+
+                    <div className="relative z-10 flex flex-col items-center space-y-5 text-center lg:col-span-2">
+                        <div className="inline-flex items-center gap-3 rounded-full bg-black/[0.02] px-4 py-2 text-ed-accent shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] backdrop-blur-md">
+                            <Search className="h-4 w-4" />
+                            <span className="text-[0.68rem] font-medium uppercase tracking-[0.28em]">
                                 Archive search
                             </span>
                         </div>
-                        <h1 className="max-w-full whitespace-nowrap font-display text-[clamp(0.72rem,3vw,2.9rem)] leading-none text-ed-fg">
+                        <h1 className="max-w-full whitespace-nowrap font-display text-[clamp(0.72rem,3vw,2.9rem)] leading-none text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted drop-shadow-sm">
                             Find exact words, nearby ideas, and buried passages.
                         </h1>
                         <p className="max-w-full whitespace-nowrap font-sans text-[clamp(0.38rem,1.1vw,0.92rem)] font-semibold leading-7 tracking-[0.01em] text-ed-fg-muted">
@@ -250,8 +253,8 @@ function SearchContent() {
                         </p>
                     </div>
 
-                    <div className="grid gap-5 lg:col-span-2 lg:grid-cols-[0.95fr_1.05fr] lg:self-end">
-                        <div className="soft-panel p-4">
+                    <div className="relative z-10 grid gap-5 lg:col-span-2 lg:grid-cols-[0.95fr_1.05fr] lg:self-end">
+                        <div className="rounded-2xl bg-black/[0.02] p-5 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:bg-[#0a0a0a]/50 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]">
                             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                                 <div>
                                     <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
@@ -261,24 +264,24 @@ function SearchContent() {
                                         Closest findings appear first.
                                     </p>
                                 </div>
-                                <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent">
+                                <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent font-medium">
                                     exact + nearby + repeated
                                 </span>
                             </div>
-                            <div className="mt-4 flex flex-wrap gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-ed-fg-muted">
-                                <button type="button" onClick={() => setQuery('"God alone"')} className="soft-pill px-3 py-2 transition hover:border-ed-accent hover:text-ed-accent">
+                            <div className="mt-5 flex flex-wrap gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-ed-fg-muted">
+                                <button type="button" onClick={() => setQuery('"God alone"')} className="rounded-full bg-black/[0.03] px-4 py-2 font-medium shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]">
                                     &quot;God alone&quot;
                                 </button>
-                                <button type="button" onClick={() => setQuery('messenger covenant')} className="soft-pill px-3 py-2 transition hover:border-ed-accent hover:text-ed-accent">
+                                <button type="button" onClick={() => setQuery('messenger covenant')} className="rounded-full bg-black/[0.03] px-4 py-2 font-medium shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]">
                                     messenger covenant
                                 </button>
-                                <button type="button" onClick={() => setQuery('quran mathematical miracle')} className="soft-pill px-3 py-2 transition hover:border-ed-accent hover:text-ed-accent">
+                                <button type="button" onClick={() => setQuery('quran mathematical miracle')} className="rounded-full bg-black/[0.03] px-4 py-2 font-medium shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]">
                                     mathematical miracle
                                 </button>
                             </div>
                         </div>
 
-                        <div className="soft-panel space-y-4 p-4">
+                        <div className="rounded-2xl bg-black/[0.02] p-5 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:bg-[#0a0a0a]/50 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] space-y-5">
                             <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
                                 <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
                                     Searchable collections
@@ -320,11 +323,11 @@ function SearchContent() {
                             value={query}
                             onChange={(event) => setQuery(event.target.value)}
                             placeholder="Search transcripts, perspectives, appendices..."
-                            className="soft-pill w-full px-12 py-4 pr-28 text-base text-ed-fg outline-none transition placeholder:text-ed-fg-muted/70 focus:border-ed-accent sm:py-5 sm:text-lg"
+                            className="w-full rounded-[1.25rem] border border-black/5 bg-black/[0.02] px-12 py-4 pr-28 text-base text-ed-fg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] outline-none backdrop-blur-md transition-all placeholder:text-ed-fg-muted/70 focus:bg-black/[0.04] focus:shadow-[inset_0_0_0_1px_var(--ed-accent),0_10px_40px_rgba(0,0,0,0.05)] sm:py-5 sm:text-lg dark:border-white/5 dark:bg-[#0a0a0a]/50 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] dark:focus:bg-[#0a0a0a]/80 dark:focus:shadow-[inset_0_0_0_1px_var(--ed-accent),0_20px_60px_rgba(0,0,0,0.8)]"
                         />
                         <button
                             type="submit"
-                            className="soft-pill absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-ed-fg transition hover:border-ed-accent hover:text-ed-accent sm:px-5 sm:py-2.5"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-[1rem] bg-black/[0.03] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-ed-fg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent sm:px-5 sm:py-2.5 dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]"
                         >
                             Search
                         </button>

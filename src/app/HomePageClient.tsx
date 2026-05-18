@@ -2,12 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     ArrowRight,
     Play,
     Search,
 } from 'lucide-react';
 import { useTheme } from './components/ThemeProvider';
+import { getPublicAssetUrl } from '@/lib/mediaAssets';
 
 interface HomePageClientProps {
     initialMedia?: unknown[];
@@ -90,22 +92,30 @@ export default function HomePageClient({ initialMedia: _initialMedia }: HomePage
     return (
         <div className="relative min-h-screen overflow-hidden bg-ed-bg text-ed-fg">
             <main className="relative z-10">
-                <section className="hero-vanta-field relative mx-auto grid max-w-[1440px] gap-12 overflow-hidden px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:pb-20 lg:pt-16">
-                    <div className="flex flex-col justify-center">
+                <section className="relative mx-auto grid max-w-[1440px] gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:pb-20 lg:pt-16">
+                    {/* Hero Ambient Background Glow */}
+                    <div className="pointer-events-none absolute -left-20 top-10 h-[800px] w-[800px] rounded-full bg-[var(--ed-accent)] opacity-[0.04] blur-[200px] dark:opacity-[0.08]" />
+
+                    <div className="relative z-10 flex flex-col justify-center">
                         <div className="max-w-3xl space-y-8">
-                            <div className="space-y-4">
-                                <p className="text-[0.68rem] uppercase tracking-[0.3em] text-ed-accent">
+                            <div className="space-y-6">
+                                <span className="inline-flex items-center gap-2 rounded-full bg-black/[0.02] px-3 py-1.5 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-ed-accent shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-ed-accent shadow-[0_0_8px_var(--ed-accent)]" />
                                     Preservation infrastructure for a living archive
-                                </p>
-                                <h1 className="flex flex-col items-start leading-none mb-8 group cursor-default">
-                                    <span className={`text-[3.5rem] md:text-[5rem] font-black tracking-tighter ${darkMode ? 'text-white' : 'text-zinc-900'} uppercase font-sans mb-2 leading-none`}>
+                                </span>
+                                
+                                <h1 className="group flex cursor-default flex-col items-start leading-none mb-8">
+                                    <span className="mb-2 font-sans text-[3.5rem] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted drop-shadow-sm md:text-[5rem]">
                                         SUBMISSION
                                     </span>
-                                    <span style={{ fontFamily: 'var(--font-roboto-slab)' }} className="text-5xl md:text-7xl font-bold italic tracking-widest text-white bg-zinc-700 px-6 py-2 uppercase shadow-lg min-w-[min-content] w-auto text-center block">
+                                    <span
+                                        style={{ fontFamily: 'var(--font-roboto-slab)' }}
+                                        className="block min-w-[min-content] w-auto rounded-[1.25rem] bg-black/[0.02] px-8 py-3 text-center text-5xl font-bold uppercase italic tracking-widest text-ed-fg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:bg-[#111111]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] md:text-7xl"
+                                    >
                                         ARCHIVES
                                     </span>
                                 </h1>
-                                <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted sm:text-base">
+                                <p className="max-w-[62ch] text-[16px] leading-8 text-ed-fg-muted sm:text-lg font-medium">
                                     Watch, Listen, and Search a variety of materials.
                                 </p>
                             </div>
@@ -113,26 +123,58 @@ export default function HomePageClient({ initialMedia: _initialMedia }: HomePage
                             <div className="flex flex-col gap-4 sm:flex-row">
                                 <Link
                                     href="/videos"
-                                    className="soft-pill inline-flex items-center justify-center gap-3 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-ed-fg transition hover:text-ed-accent"
+                                    className="inline-flex items-center justify-center gap-3 rounded-full bg-ed-fg px-8 py-4 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-ed-bg shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] transition-all hover:scale-[1.02] hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.15)]"
                                 >
                                     Start with the archive
                                     <ArrowRight className="h-4 w-4" />
                                 </Link>
                                 <Link
                                     href="/search"
-                                    className="soft-pill inline-flex items-center justify-center gap-3 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-ed-fg-muted transition hover:text-ed-fg"
+                                    className="inline-flex items-center justify-center gap-3 rounded-full bg-black/[0.03] px-8 py-4 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-ed-fg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md transition-all hover:bg-black/[0.06] hover:text-ed-accent dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]"
                                 >
                                     Search the corpus
                                 </Link>
                             </div>
                         </div>
-
-
                     </div>
 
-                    <div className="relative flex items-center justify-center lg:justify-end">
-                        <div className="soft-shell w-full max-w-[720px] p-2 backdrop-blur-sm sm:p-3">
-                            <div className="relative aspect-[1.38/1] overflow-hidden rounded-[1.65rem] bg-[#111111] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:aspect-[1.34/1] lg:aspect-[1.38/1]">
+                    <div className="relative z-10 flex items-center justify-center lg:justify-end">
+                        <div className="flex w-full max-w-[720px] flex-col overflow-hidden rounded-[1rem] border border-black/10 bg-white/60 shadow-[0_20px_60px_rgba(0,0,0,0.15)] backdrop-blur-3xl dark:border-white/10 dark:bg-[#1c1c1c]/80 dark:shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
+                            {/* Window Title Bar */}
+                            <div className="flex h-[3.25rem] items-center bg-[#e5e5e5]/50 px-4 dark:bg-[#2d2d2d]/50">
+                                <div className="flex shrink-0 gap-2">
+                                    <div className="h-3 w-3 rounded-full bg-[#ff5f56] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.3)]" />
+                                    <div className="h-3 w-3 rounded-full bg-[#ffbd2e] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.3)]" />
+                                    <div className="h-3 w-3 rounded-full bg-[#27c93f] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.3)]" />
+                                </div>
+                                <div className="mx-auto flex h-7 w-64 items-center justify-center rounded-[0.4rem] border border-black/5 bg-white/60 text-[0.65rem] font-medium tracking-wide text-black/60 shadow-sm dark:border-black/50 dark:bg-black/20 dark:text-white/60">
+                                    Submission Archives
+                                </div>
+                                <div className="w-[52px]" />
+                            </div>
+
+                            {/* Window Tab Bar */}
+                            <div className="flex w-full border-b border-black/10 bg-[#dfdfdf]/50 dark:border-black/80 dark:bg-[#151515]/50">
+                                {HERO_IMAGES.map((_, index) => {
+                                    const isActive = index === heroImageIndex;
+                                    return (
+                                        <button
+                                            key={index}
+                                            onClick={() => setHeroImageIndex(index)}
+                                            className={`relative flex flex-1 items-center justify-center border-r border-black/10 px-4 py-2 text-[0.65rem] transition-colors last:border-r-0 dark:border-black/80 ${
+                                                isActive
+                                                    ? 'bg-[#f4f4f4]/90 font-medium text-black dark:bg-[#1e1e1e]/90 dark:text-white'
+                                                    : 'bg-transparent font-normal text-black/60 hover:bg-black/5 dark:text-white/50 dark:hover:bg-white/5'
+                                            }`}
+                                        >
+                                            <span className="truncate tracking-wide">Archive {String(index + 1).padStart(2, '0')}</span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Image Frame */}
+                            <div className="relative aspect-[1.38/1] w-full bg-[#f4f4f4]/90 dark:bg-[#1e1e1e]/90 sm:aspect-[1.34/1] lg:aspect-[1.38/1]">
                                 {HERO_IMAGES.map((image, index) => (
                                     <div
                                         key={image.src}
@@ -141,36 +183,23 @@ export default function HomePageClient({ initialMedia: _initialMedia }: HomePage
                                         }`}
                                     >
                                         <div
-                                            className="absolute inset-0 scale-105 bg-cover bg-center opacity-30 blur-2xl"
+                                            className="absolute inset-0 scale-105 bg-cover bg-center opacity-10 blur-2xl dark:opacity-30"
                                             style={{ backgroundImage: `url("${image.src}")` }}
                                         />
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src={image.src}
                                             alt={image.alt}
-                                            className="relative z-10 h-full w-full object-contain"
-                                            style={{
-                                                filter: darkMode
-                                                    ? 'saturate(0.9) contrast(1.05)'
-                                                    : 'saturate(0.72) contrast(0.96)',
-                                            }}
+                                            className="relative z-10 h-[92%] w-[92%] object-contain"
                                         />
                                     </div>
                                 ))}
-                                <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#111111]/80 via-[#111111]/8 to-[#111111]/10" />
-                                <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_18%_10%,rgba(126,34,206,0.18),transparent_32%)] mix-blend-soft-light" />
+                                <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/5 via-transparent to-transparent dark:from-black/40" />
 
-                                <div className="absolute left-4 top-4 z-30 flex items-center gap-3 rounded-full border border-[#f6efe4]/14 bg-[#111111]/82 px-4 py-2 text-[0.56rem] uppercase tracking-[0.2em] text-[#f6efe4] shadow-[0_14px_38px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md">
-                                    <span>Submission Archives</span>
-                                    <span className="text-[#cbbca9]">
-                                        {String(heroImageIndex + 1).padStart(2, '0')}/{String(HERO_IMAGES.length).padStart(2, '0')}
-                                    </span>
-                                </div>
-
-                                <div className="absolute inset-x-0 bottom-0 z-30 h-1.5 overflow-hidden bg-[#f6efe4]/16">
+                                <div className="absolute inset-x-0 bottom-0 z-30 h-[2px] overflow-hidden bg-black/10 dark:bg-white/10">
                                     <div
                                         key={heroImageIndex}
-                                        className="hero-image-progress h-full bg-[#f6ae82]"
+                                        className="hero-image-progress h-full bg-ed-accent"
                                         style={{ animationDuration: `${HERO_ROTATION_MS}ms` }}
                                     />
                                 </div>
@@ -318,7 +347,7 @@ function MiniAudioPlayer({
     const btnBg     = dark ? 'bg-[#0d0d0d] shadow-[inset_0_2px_6px_rgba(0,0,0,0.85),inset_0_0_0_1px_rgba(255,255,255,0.05)]'
                            : 'bg-white shadow-[inset_0_2px_5px_rgba(0,0,0,0.12),0_1px_0_rgba(255,255,255,0.9)]';
     const iconColor = dark ? 'rgba(255,255,255,0.70)' : 'rgba(0,0,0,0.60)';
-    const barPlayed = dark ? 'rgba(255,255,255,0.85)' : 'rgba(0,0,0,0.75)';
+    const barPlayed = '#f6ae82';
     const barRest   = dark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.12)';
     const timeColor = dark ? 'text-white/30' : 'text-black/35';
 
@@ -327,7 +356,7 @@ function MiniAudioPlayer({
             <audio ref={audioRef} src={src} />
             <button
                 onClick={toggle}
-                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition active:scale-95 ${btnBg}`}
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 active:scale-95 ${btnBg} ${playing ? 'shadow-[0_0_0_1px_rgba(246,174,130,0.4),0_0_15px_rgba(246,174,130,0.15)] scale-[1.02]' : ''}`}
             >
                 {playing ? (
                     <span className="flex gap-[3px]">
@@ -353,8 +382,8 @@ function MiniAudioPlayer({
                     className="pointer-events-none absolute inset-y-0 flex flex-col items-center"
                     style={{ left: `calc(${progress * 100}% - 1px)`, willChange: 'left' }}
                 >
-                    <div className="absolute -top-0.5 h-2 w-2 -translate-x-[3px] rounded-full bg-red-500" />
-                    <div className="h-full w-px bg-red-500/90" />
+                    <div className="absolute -top-0.5 h-2 w-2 -translate-x-[3px] rounded-full bg-ed-accent animate-pulse shadow-[0_0_6px_color-mix(in_srgb,var(--ed-accent)_80%,transparent)]" />
+                    <div className="h-full w-px bg-ed-accent/90 shadow-[0_0_8px_color-mix(in_srgb,var(--ed-accent)_40%,transparent)]" />
                 </div>
             </div>
             <span className={`shrink-0 font-mono text-xs tabular-nums ${timeColor}`}>
@@ -377,12 +406,12 @@ function AudioArchiveSection() {
             <div className="space-y-6">
                 <div className="flex flex-col gap-5 border-b border-ed-rule pb-5 sm:flex-row sm:items-end">
                     <div className="flex items-end">
-                        <span className="font-serif text-6xl leading-none text-ed-accent/50 sm:text-7xl">II</span>
+                        <span className="font-serif text-6xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-ed-accent to-ed-accent-soft sm:text-7xl drop-shadow-[0_0_15px_color-mix(in_srgb,var(--ed-accent)_30%,transparent)]">II</span>
                     </div>
-                    <h3 className="font-serif text-4xl leading-[0.98] text-ed-fg sm:text-5xl lg:whitespace-nowrap">The Audio Archives</h3>
+                    <h3 className="font-serif text-4xl leading-[0.98] text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted sm:text-5xl lg:whitespace-nowrap">The Audio Archives</h3>
                 </div>
                 <div className="space-y-4">
-                    <p className="max-w-[64ch] text-base leading-8 text-ed-fg-muted">
+                    <p className="max-w-[64ch] text-[15px] leading-8 text-ed-fg-muted">
                         Consists of Quran Studies and Messenger Audios to browse through.
                     </p>
                 </div>
@@ -395,7 +424,11 @@ function AudioArchiveSection() {
                 <SectionCta href="/audios" label="Browse the audio archive" />
             </div>
 
-            <div className="soft-shell flex flex-col overflow-hidden p-2">
+            <div className="relative rounded-[1.25rem] p-[1px] overflow-hidden shadow-[0_0_30px_0_color-mix(in_srgb,var(--ed-accent)_6%,transparent)]">
+                {/* Rotating glow for the slideshow frame */}
+                <div className="absolute inset-[-100%] z-0 animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,color-mix(in_srgb,var(--ed-accent)_40%,transparent)_15%,transparent_20%)]" />
+                
+                <div className="relative z-10 flex flex-col h-full overflow-hidden rounded-[1.25rem] bg-ed-bg/95 p-2 backdrop-blur-xl">
                 <div className="soft-pill mx-2 mt-2 flex items-center justify-between px-5 py-3 text-xs uppercase tracking-[0.18em] text-ed-fg-muted">
                     <span>Audio Archive</span>
                     <span>{selected + 1} / {AUDIO_CLIPS.length}</span>
@@ -481,16 +514,18 @@ function AudioArchiveSection() {
                             return (
                                 <p
                                     key={i}
-                                    className="text-sm leading-6 transition-all duration-200"
+                                    className="text-[15px] leading-6 transition-all duration-300 ease-out"
                                     style={{
                                         color: isActive
-                                            ? (darkMode ? 'rgba(255,255,255,0.92)' : 'rgba(0,0,0,0.88)')
-                                            : (darkMode ? 'rgba(255,255,255,0.22)' : 'rgba(0,0,0,0.25)'),
+                                            ? (darkMode ? 'rgba(255,255,255,1)' : 'rgba(0,0,0,1)')
+                                            : (darkMode ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.3)'),
                                         fontWeight: isActive ? 500 : 400,
+                                        transform: isActive ? 'translateX(6px) scale(1.02)' : 'translateX(0) scale(1)',
+                                        textShadow: isActive && darkMode ? '0 0 15px rgba(255,255,255,0.3)' : 'none',
                                     }}
                                 >
                                     {isActive && (
-                                        <span className="mr-2 inline-block h-1.5 w-1.5 translate-y-[-1px] rounded-full bg-red-500" />
+                                        <span className="mr-3 inline-block h-2 w-2 translate-y-[-1px] rounded-full bg-ed-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ed-accent)_60%,transparent)] animate-[pulse_1s_ease-in-out_infinite]" />
                                     )}
                                     {cue.text}
                                 </p>
@@ -503,6 +538,7 @@ function AudioArchiveSection() {
                         )}
                     </div>
                 </div>
+            </div>
             </div>
         </article>
     );
@@ -524,9 +560,22 @@ function SectionCta({ href, label }: { href: string; label: string }) {
 
 function ExpectationCard({ title, body }: { title: string; body: string }) {
     return (
-        <div className="soft-panel p-4">
-            <p className="text-xs uppercase tracking-[0.18em] text-ed-accent">{title}</p>
-            <p className="mt-2 text-sm leading-6 text-ed-fg-muted">{body}</p>
+        <div className="group relative overflow-hidden rounded-2xl p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] hover:bg-black/[0.04] hover:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.12),0_10px_40px_rgba(0,0,0,0.08)] dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-[#0a0a0a]/60 dark:hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15),0_10px_40px_rgba(0,0,0,0.4)]">
+            {/* Hover Spotlight Glow */}
+            <div className="pointer-events-none absolute -left-20 -top-20 h-40 w-40 rounded-full bg-[var(--ed-accent)] opacity-0 blur-[40px] transition-opacity duration-500 group-hover:opacity-10 dark:blur-[50px] dark:group-hover:opacity-20" />
+            
+            <div className="relative z-10">
+                <div className="flex items-center gap-2">
+                    {/* Glowing Accent Dot */}
+                    <span className="h-1.5 w-1.5 rounded-full bg-ed-accent shadow-[0_0_6px_var(--ed-accent)] dark:shadow-[0_0_8px_var(--ed-accent)]" />
+                    <h4 className="text-[15px] font-medium tracking-wide text-ed-fg">
+                        {title}
+                    </h4>
+                </div>
+                <p className="mt-2.5 text-[13px] leading-relaxed text-ed-fg-muted">
+                    {body}
+                </p>
+            </div>
         </div>
     );
 }
@@ -568,12 +617,12 @@ function VideoArchiveSection() {
             <div className="space-y-6">
                 <div className="flex flex-col gap-5 border-b border-ed-rule pb-5 sm:flex-row sm:items-end">
                     <div className="flex items-end">
-                        <span className="font-serif text-6xl leading-none text-ed-accent/50 sm:text-7xl">I</span>
+                        <span className="font-serif text-6xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-ed-accent to-ed-accent-soft sm:text-7xl drop-shadow-[0_0_15px_color-mix(in_srgb,var(--ed-accent)_30%,transparent)]">I</span>
                     </div>
-                    <h3 className="font-serif text-4xl leading-[0.98] text-ed-fg sm:text-5xl lg:whitespace-nowrap">Video Archive</h3>
+                    <h3 className="font-serif text-4xl leading-[0.98] text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted sm:text-5xl lg:whitespace-nowrap">Video Archive</h3>
                 </div>
                 <div className="space-y-4">
-                    <p className="max-w-[64ch] text-base leading-8 text-ed-fg-muted">
+                    <p className="max-w-[64ch] text-[15px] leading-8 text-ed-fg-muted">
                         Friday sermons, instructional video programs, and United Submitters International conference recordings — preserved as a comprehensive visual study collection.
                     </p>
                 </div>
@@ -595,7 +644,11 @@ function VideoArchiveSection() {
                 <SectionCta href="/videos" label="Browse the video archive" />
             </div>
 
-            <div className="soft-shell relative min-h-[440px] overflow-hidden p-3">
+            <div className="relative rounded-[1.25rem] p-[1px] overflow-hidden shadow-[0_0_30px_0_color-mix(in_srgb,var(--ed-accent)_6%,transparent)]">
+                {/* Rotating glow for the slideshow frame */}
+                <div className="absolute inset-[-100%] z-0 animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,color-mix(in_srgb,var(--ed-accent)_40%,transparent)_15%,transparent_20%)]" />
+                
+                <div className="relative z-10 flex flex-col h-full min-h-[440px] overflow-hidden rounded-[1.25rem] bg-ed-bg/95 p-3 backdrop-blur-xl">
                 <div
                     className="absolute inset-0 scale-105 bg-cover bg-center opacity-30 blur-2xl"
                     style={{ backgroundImage: `url("${slide.src}")` }}
@@ -618,11 +671,12 @@ function VideoArchiveSection() {
                                 style={{
                                     filter: 'saturate(0.78) contrast(1.04)',
                                     opacity: visible ? 1 : 0,
-                                    transition: 'opacity 0.38s ease',
+                                    transform: visible ? 'scale(1)' : 'scale(1.05)',
+                                    transition: 'opacity 0.4s ease, transform 4s ease-out',
                                 }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/86 via-[#111111]/18 to-transparent" />
-                            <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-full border border-[#f6efe4]/16 bg-[#111111]/70 text-[#f6efe4] backdrop-blur-md">
+                            <div className="absolute left-5 top-5 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-[#f6efe4]/16 bg-[#111111]/70 text-[#f6efe4] shadow-[0_4px_15px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-ed-accent hover:text-[#111111] hover:shadow-[0_0_15px_color-mix(in_srgb,var(--ed-accent)_40%,transparent)]">
                                 <Play className="ml-0.5 h-4 w-4 fill-current" />
                             </div>
                             <div
@@ -636,15 +690,16 @@ function VideoArchiveSection() {
                     </div>
                 </div>
 
-                <div className="absolute bottom-6 left-8 z-30 flex gap-1.5">
+                <div className="absolute bottom-6 left-8 z-30 flex items-center gap-2">
                     {VIDEO_SLIDES.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => goTo(i)}
-                            className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-ed-accent' : 'w-1.5 bg-ed-rule hover:bg-ed-fg-muted'}`}
+                            className={`h-1.5 rounded-full transition-all duration-300 ease-out ${i === current ? 'w-8 bg-ed-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ed-accent)_80%,transparent)]' : 'w-2 bg-ed-rule hover:w-4 hover:bg-ed-fg-muted'}`}
                         />
                     ))}
                 </div>
+            </div>
             </div>
         </article>
     );
@@ -652,85 +707,249 @@ function VideoArchiveSection() {
 
 function SearchFunctionDemo() {
     return (
-        <div className="relative min-h-[500px] overflow-hidden bg-[#0f0f0f] px-4 py-8 text-[#f6efe4] sm:px-8">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_0%,rgba(126,34,206,0.11),transparent_30%),radial-gradient(circle_at_78%_24%,rgba(246,174,130,0.08),transparent_26%)]" />
+        <div className="relative w-full overflow-hidden rounded-[1.25rem] bg-[#0a0a0a] shadow-[0_0_0_1px_rgba(255,255,255,0.05),0_30px_80px_rgba(0,0,0,0.5)]">
+            {/* Desktop Background Ambient Glow */}
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-60">
+                <div className="h-[400px] w-[800px] rounded-full bg-[var(--ed-accent)] blur-[120px]" />
+                <div className="absolute h-[300px] w-[500px] rounded-full bg-ed-accent-soft blur-[100px]" />
+            </div>
 
-            <div className="relative mx-auto flex max-w-4xl flex-col items-center gap-5">
-                <div className="search-demo-shell w-full max-w-3xl rounded-[2rem] border border-white/[0.06] bg-[#171717] p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.36)]">
-                    <div className="flex items-center gap-3 rounded-[1.55rem] bg-[#0f1111] px-5 py-4 shadow-[inset_0_2px_10px_rgba(0,0,0,0.72),inset_0_0_0_1px_rgba(255,255,255,0.04)]">
-                        <span className="text-xs uppercase tracking-[0.18em] text-[#cbbca9]/50">Search</span>
-                        <span className="h-5 w-px bg-white/10" />
-                        <span className="min-w-0 flex-1 font-mono text-sm text-[#f6efe4] sm:text-base">
-                            <span className="search-demo-type inline-block max-w-full overflow-hidden whitespace-nowrap align-bottom">
-                                covenant mathematical miracle
-                            </span>
-                            <span className="search-demo-caret ml-1 inline-block h-5 w-px translate-y-1 bg-[#f6ae82]" />
-                        </span>
-                        <span className="rounded-full bg-[#f6ae82] px-3 py-1.5 text-xs uppercase tracking-[0.16em] text-[#111111] shadow-[0_0_24px_rgba(246,174,130,0.22)]">
-                            Go
-                        </span>
-                    </div>
+            {/* Fake macOS Menu Bar */}
+            <div className="relative z-10 flex w-full items-center justify-between px-4 py-1.5 text-[11px] font-medium text-white/70 bg-black/20 backdrop-blur-md border-b border-white/5">
+                <div className="flex items-center gap-4">
+                    <span className="font-bold text-white tracking-wide">Submission Archives</span>
+                    <span className="hidden sm:inline hover:text-white cursor-default">File</span>
+                    <span className="hidden sm:inline hover:text-white cursor-default">Edit</span>
+                    <span className="hidden sm:inline hover:text-white cursor-default">View</span>
+                    <span className="hidden sm:inline hover:text-white cursor-default">Go</span>
+                    <span className="hidden sm:inline hover:text-white cursor-default">Window</span>
+                    <span className="hidden sm:inline hover:text-white cursor-default">Help</span>
                 </div>
+                <div className="flex items-center gap-4">
+                    <span className="hidden sm:inline opacity-50">100%</span>
+                    <span>Mon Jun 22 9:41 AM</span>
+                </div>
+            </div>
 
-                <div className="flex flex-wrap justify-center gap-2">
-                    {['Quran Studies', 'Messenger Audios', 'Video Programs', 'Appendices', 'Perspectives', 'Other Works'].map((item, index) => (
-                        <span
-                            key={item}
-                            className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.14em] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] ${
-                                index < 3
-                                    ? 'border-[#f6ae82]/18 bg-[#f6ae82]/10 text-[#f6ae82]'
-                                    : 'border-white/[0.06] bg-[#171717] text-[#cbbca9]/58'
-                            }`}
-                        >
-                            {item}
-                        </span>
+            {/* The Floating App Window Container */}
+            <div className="relative z-20 mx-auto mt-10 mb-16 max-w-[90%] sm:max-w-[85%]">
+                <div className="relative rounded-[1.25rem] p-[1px] overflow-hidden shadow-[0_0_40px_0_color-mix(in_srgb,var(--ed-accent)_10%,transparent),0_40px_80px_rgba(0,0,0,0.6)]">
+                    {/* Rotating Raycast Glow for the App Window itself */}
+                    <div className="absolute inset-[-100%] z-0 animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,color-mix(in_srgb,var(--ed-accent)_60%,transparent)_15%,transparent_20%)]" />
+                    
+                    <div className="relative z-10 flex min-h-[620px] flex-col overflow-hidden rounded-[1.25rem] bg-ed-bg/85 px-4 py-8 sm:px-8 backdrop-blur-[30px]">
+                        {/* Premium Raycast-style Spotlight Background */}
+                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(85.77%_49.97%_at_51%_5.12%,color-mix(in_srgb,var(--ed-accent)_8%,transparent)_0%,color-mix(in_srgb,var(--ed-primary)_6%,transparent)_45.83%,transparent_100%)]" />
+
+                <div className="relative mx-auto flex w-full max-w-4xl flex-col gap-5">
+
+                {/* Phase indicator dots */}
+                <div className="flex items-center justify-center gap-3 pb-1">
+                    {[
+                        { cls: 'search-demo-phase-1', label: 'Search' },
+                        { cls: 'search-demo-phase-2', label: 'Results' },
+                        { cls: 'search-demo-phase-3', label: 'Select' },
+                        { cls: 'search-demo-phase-4', label: 'Play' },
+                    ].map((dot) => (
+                        <div key={dot.label} className="flex items-center gap-1.5">
+                            <span className={`${dot.cls} inline-block h-1.5 w-1.5 rounded-full`} />
+                            <span className="text-[0.56rem] uppercase tracking-[0.2em] text-ed-fg-muted">{dot.label}</span>
+                        </div>
                     ))}
                 </div>
 
-                <div className="search-demo-result w-full max-w-3xl rounded-[1.7rem] border border-white/[0.06] bg-[#171717] p-2 shadow-[0_22px_70px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.05)]">
-                    <div className="search-demo-selected rounded-[1.25rem] bg-[#101010] p-4 shadow-[inset_0_0_0_1px_rgba(246,174,130,0.14)] sm:p-5">
-                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                            <div>
-                                <p className="text-xs uppercase tracking-[0.18em] text-[#f6ae82]">Nearby terms, 6 words apart</p>
-                                <p className="mt-2 font-display text-2xl leading-tight text-[#f6efe4] sm:text-3xl">
-                                    Sura 74: The mathematical miracle
-                                </p>
-                                <p className="mt-2 max-w-xl text-sm leading-6 text-[#cbbca9]/66">
-                                    ...the <span className="text-[#f6ae82]">mathematical</span> composition of the Quran is a <span className="text-[#f6ae82]">miracle</span> and a covenant...
-                                </p>
-                            </div>
-                            <div className="flex shrink-0 items-center gap-2 rounded-full bg-[#f6ae82]/10 px-4 py-2 text-xs uppercase tracking-[0.14em] text-[#f6ae82]">
-                                <span className="h-1.5 w-1.5 rounded-full bg-[#f6ae82]" />
-                                selected
+                {/* ═══════ SCENE 1: Search Page ═══════ */}
+                <div className="search-demo-scene-search">
+                    {/* Search Input Bar */}
+                    <div className="relative mb-5 w-full">
+                        <Search className="absolute left-4 top-1/2 z-10 h-5 w-5 -translate-y-1/2 text-ed-fg-muted" />
+                        <div className="soft-pill relative flex w-full items-center bg-ed-surface px-12 py-4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.3)] sm:py-5">
+                            <span className="flex min-w-0 flex-1 items-center font-sans text-sm text-ed-fg sm:text-base">
+                                <span className="search-demo-type inline-block max-w-full overflow-hidden whitespace-nowrap align-bottom">
+                                    covenant mathematical miracle
+                                </span>
+                                <span className="search-demo-caret ml-px inline-block h-5 w-[8px] animate-[pulse_1s_step-end_infinite] bg-ed-accent shadow-[0_0_10px_color-mix(in_srgb,var(--ed-accent)_80%,transparent)]" />
+                            </span>
+                        </div>
+                        <div className="soft-pill absolute right-2 top-1/2 z-10 -translate-y-1/2 bg-ed-bg px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-ed-fg shadow-sm sm:px-5 sm:py-2.5">
+                            Search
+                        </div>
+                    </div>
+
+                    {/* Filter Pills */}
+                    <div className="mb-5 flex flex-wrap justify-center gap-2">
+                        {['Videos', 'Quran Studies', 'Messenger Audios', 'Perspectives', 'Appendices'].map((item, index) => {
+                            const active = index < 3;
+                            return (
+                                <span
+                                    key={item}
+                                    className={`soft-pill px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] transition sm:px-4 sm:py-2 sm:text-[0.68rem] ${
+                                        active
+                                            ? 'border-ed-accent/50 bg-ed-accent/12 text-ed-accent shadow-[inset_0_0_8px_color-mix(in_srgb,var(--ed-accent)_20%,transparent)]'
+                                            : 'border-ed-rule bg-ed-surface text-ed-fg-muted'
+                                    }`}
+                                >
+                                    {item}
+                                </span>
+                            );
+                        })}
+                    </div>
+
+                    {/* Result Cards */}
+                    <div className="relative space-y-3">
+                        {/* Result 1 — selected */}
+                        <div className="search-demo-result-1">
+                            <article className="search-demo-selected soft-shell relative overflow-hidden transition-all backdrop-brightness-110 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] bg-white/5">
+                                <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ed-accent/10 to-transparent opacity-50" />
+                                <div className="relative z-10 grid grid-cols-[80px_1fr] gap-3 p-3 sm:grid-cols-[120px_1fr] sm:gap-4 sm:p-4">
+                                    <div className="soft-panel relative aspect-video overflow-hidden bg-ed-bg shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                                        <Image src={getPublicAssetUrl('/content/audio/quran-studies/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz\'s Home Deja Vu Believers Usually 95 Yrs Old F/QS45.jpg')} alt="Quran Study 45" fill className="object-cover" sizes="120px" unoptimized />
+                                    </div>
+                                    <div className="min-w-0">
+                                        <div className="flex flex-wrap items-center gap-1.5">
+                                            <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-2 py-1 text-[0.56rem] uppercase tracking-[0.2em] text-ed-accent">01</span>
+                                            <span className="soft-pill px-2 py-1 text-[0.56rem] uppercase tracking-[0.2em] text-ed-fg-muted">Quran Studies</span>
+                                            <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-2 py-1 text-[0.56rem] uppercase tracking-[0.18em] text-ed-accent">Best match</span>
+                                        </div>
+                                        <h3 className="mt-2 font-display text-lg leading-tight text-ed-fg sm:text-2xl">Quran Study 45: Sura 40 & Firoz's Home</h3>
+                                        <p className="mt-1.5 line-clamp-2 text-[13px] leading-6 text-ed-fg-muted">
+                                            ...So, this is God's <span className="font-semibold text-ed-accent drop-shadow-[0_0_8px_color-mix(in_srgb,var(--ed-accent)_50%,transparent)]">mathematical</span> confirmation that we're living in an age where God will send the messenger of the <span className="font-semibold text-ed-accent drop-shadow-[0_0_8px_color-mix(in_srgb,var(--ed-accent)_50%,transparent)]">covenant</span>...
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        {/* Result 2 */}
+                        <div className="search-demo-result-2">
+                            <article className="soft-shell overflow-hidden">
+                                <div className="grid grid-cols-[80px_1fr] gap-3 p-3 sm:grid-cols-[120px_1fr] sm:gap-4 sm:p-4">
+                                    <div className="soft-panel relative aspect-video overflow-hidden bg-ed-bg">
+                                        <Image src="/images/video-programs/_Old_Message_New_Messenger.jpg" alt="Old Message New Messenger" fill className="object-cover" sizes="120px" />
+                                    </div>
+                                    <div className="min-w-0">
+                                        <div className="flex flex-wrap items-center gap-1.5">
+                                            <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-2 py-1 text-[0.56rem] uppercase tracking-[0.2em] text-ed-accent">02</span>
+                                            <span className="soft-pill px-2 py-1 text-[0.56rem] uppercase tracking-[0.2em] text-ed-fg-muted">Videos</span>
+                                            <span className="soft-pill px-2 py-1 text-[0.56rem] uppercase tracking-[0.18em] text-ed-fg-muted">Close match</span>
+                                        </div>
+                                        <h3 className="mt-2 font-display text-lg leading-tight text-ed-fg sm:text-2xl">Old Message New Messenger</h3>
+                                        <p className="mt-1.5 line-clamp-2 text-[13px] leading-6 text-ed-fg-muted">
+                                            ...the <span className="font-semibold text-ed-accent">covenant</span> was fulfilled through a <span className="font-semibold text-ed-accent">mathematical</span> code...
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        {/* Result 3 */}
+                        <div className="search-demo-result-3">
+                            <article className="soft-shell overflow-hidden">
+                                <div className="grid grid-cols-[80px_1fr] gap-3 p-3 sm:grid-cols-[120px_1fr] sm:gap-4 sm:p-4">
+                                    <div className="soft-panel relative aspect-video overflow-hidden bg-ed-bg">
+                                        <Image src="/images/messenger-audios/default.jpg" alt="Messenger Audio" fill className="object-cover" sizes="120px" />
+                                    </div>
+                                    <div className="min-w-0">
+                                        <div className="flex flex-wrap items-center gap-1.5">
+                                            <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-2 py-1 text-[0.56rem] uppercase tracking-[0.2em] text-ed-accent">03</span>
+                                            <span className="soft-pill px-2 py-1 text-[0.56rem] uppercase tracking-[0.2em] text-ed-fg-muted">Messenger Audios</span>
+                                            <span className="soft-pill px-2 py-1 text-[0.56rem] uppercase tracking-[0.18em] text-ed-fg-muted">Relevant</span>
+                                        </div>
+                                        <h3 className="mt-2 font-display text-lg leading-tight text-ed-fg sm:text-2xl">Messenger Audio 14</h3>
+                                        <p className="mt-1.5 line-clamp-2 text-[13px] leading-6 text-ed-fg-muted">
+                                            ...this is a <span className="font-semibold text-ed-accent">miracle</span> from God, a proven <span className="font-semibold text-ed-accent">covenant</span>...
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        {/* Scroll indicator */}
+                        <div className="search-demo-scroll flex justify-center pt-2">
+                            <div className="flex flex-col items-center gap-1 text-ed-fg-muted">
+                                <span className="text-[0.56rem] uppercase tracking-[0.22em]">Selecting best result</span>
+                                <ArrowRight className="h-3 w-3 rotate-90" />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="search-demo-player w-full max-w-3xl rounded-[2rem] border border-white/[0.06] bg-[#171717] p-2 shadow-[0_24px_80px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.05)]">
-                    <div className="rounded-[1.55rem] bg-[#0f0f0f] px-4 py-3 shadow-[inset_0_2px_12px_rgba(0,0,0,0.72)]">
-                        <div className="mb-3 flex items-center justify-between gap-4">
-                    <div>
-                                <p className="text-xs uppercase tracking-[0.18em] text-[#cbbca9]/52">Playing selected result</p>
-                                <p className="mt-1 text-sm text-[#f6efe4]">Quran Study, 14:22</p>
-                    </div>
-                            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#f6ae82] text-[#111111] shadow-[0_0_30px_rgba(246,174,130,0.22)]">
-                                <Play className="ml-0.5 h-4 w-4 fill-current" />
+                {/* ═══════ SCENE 2: Quran Study Media Page ═══════ */}
+                <div className="search-demo-scene-transcript absolute inset-0 flex flex-col px-4 pt-14 sm:px-8">
+                    <div className="mx-auto w-full max-w-4xl">
+                        {/* Back nav + category */}
+                        <div className="mb-4 flex items-center gap-3">
+                            <span className="soft-pill px-3 py-1.5 text-[0.56rem] uppercase tracking-[0.2em] text-ed-fg-muted">
+                                &#8592; Back to results
+                            </span>
+                            <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-3 py-1.5 text-[0.56rem] uppercase tracking-[0.2em] text-ed-accent">
+                                Quran Studies
+                            </span>
+                        </div>
+
+                        {/* Quran Study title + thumbnail */}
+                        <div className="mb-5 flex items-start gap-4">
+                            <div className="soft-panel relative hidden aspect-video w-[140px] shrink-0 overflow-hidden sm:block">
+                                <Image src={getPublicAssetUrl('/content/audio/quran-studies/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz\'s Home Deja Vu Believers Usually 95 Yrs Old F/QS45.jpg')} alt="Quran Study 45" fill className="object-cover" sizes="140px" unoptimized />
                             </div>
-                    </div>
-                        <div className="flex items-center gap-3">
-                            <span className="font-mono text-xs text-[#f6ae82]">14:22</span>
-                            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#f6efe4]/12">
-                                <div className="search-demo-progress h-full rounded-full bg-[#f6ae82]" />
+                            <div className="min-w-0">
+                                <h3 className="font-display text-2xl leading-tight text-ed-fg sm:text-3xl">
+                                    Quran Study 45: Sura 40 & Firoz's Home
+                                </h3>
+                                <p className="mt-1 text-[0.62rem] uppercase tracking-[0.18em] text-ed-fg-muted">
+                                    Quran Study 45 &middot; From Roxana
+                                </p>
                             </div>
-                            <span className="font-mono text-xs text-[#cbbca9]/42">18:44</span>
+                        </div>
+
+                        {/* Transcript passage with highlight */}
+                        <div className="soft-shell p-4 sm:p-5">
+                            <div className="mb-3 flex flex-wrap items-center gap-2">
+                                <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent">Best passage</span>
+                                <span className="soft-pill bg-ed-bg px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-fg-muted">
+                                    Jump to 07:01
+                                </span>
+                            </div>
+                            <p className="text-[15px] leading-8 text-ed-fg">
+                                So, this is, this is God's
+                                {' '}<span className="search-demo-highlight font-semibold text-ed-accent">mathematical</span>{' '}
+                                confirmation that we're living in an age where God will send the messenger of the
+                                {' '}<span className="search-demo-highlight font-semibold text-ed-accent">covenant</span>.
+                            </p>
+                        </div>
+
+                        {/* Player */}
+                        <div className="search-demo-player mt-5">
+                            <div className="soft-shell bg-ed-surface px-4 py-3 shadow-[0_24px_80px_rgba(0,0,0,0.24)]">
+                                <div className="mb-3 flex items-center justify-between gap-4">
+                                    <div>
+                                        <p className="text-[0.62rem] uppercase tracking-[0.18em] text-ed-fg-muted">Now playing at matched timestamp</p>
+                                        <p className="mt-1 text-sm text-ed-fg">Quran Study 45 &mdash; Sura 40</p>
+                                    </div>
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-ed-accent text-[#111111] shadow-[0_0_30px_rgba(246,174,130,0.22)]">
+                                        <Play className="ml-0.5 h-4 w-4 fill-current" />
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <span className="font-mono text-xs text-ed-accent">07:01</span>
+                                    <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-ed-rule">
+                                        <div className="search-demo-progress h-full rounded-full bg-ed-accent" />
+                                    </div>
+                                    <span className="font-mono text-xs text-ed-fg-muted">45:12</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                </div>
+
+            </div>
+            </div>
             </div>
         </div>
     );
 }
+
 
 function ArchiveBranch({
     numeral,
@@ -767,17 +986,17 @@ function ArchiveBranch({
             <div className={`${isRight ? 'lg:order-2' : ''} ${isCenter ? 'mx-auto max-w-4xl text-center' : ''} space-y-6`}>
                 <div className={`flex flex-col gap-5 border-b border-ed-rule pb-5 sm:flex-row sm:items-end ${isCenter ? 'justify-center' : ''}`}>
                     <div className={`flex items-end ${isCenter ? 'justify-center' : ''}`}>
-                        <span className="font-serif text-6xl leading-none text-ed-accent/50 sm:text-7xl">
+                        <span className="font-serif text-6xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-ed-accent to-ed-accent-soft sm:text-7xl drop-shadow-[0_0_15px_color-mix(in_srgb,var(--ed-accent)_30%,transparent)]">
                             {numeral}
                         </span>
                     </div>
-                    <h3 className="font-serif text-4xl leading-[0.98] text-ed-fg sm:text-5xl lg:whitespace-nowrap">
+                    <h3 className="font-serif text-4xl leading-[0.98] text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted sm:text-5xl lg:whitespace-nowrap">
                         {title}
                     </h3>
                 </div>
 
                 <div className="space-y-4">
-                    <p className={`${isCenter ? 'mx-auto lg:max-w-none lg:whitespace-nowrap' : ''} max-w-[68ch] text-base leading-8 text-ed-fg-muted`}>
+                    <p className={`${isCenter ? 'mx-auto lg:max-w-none lg:whitespace-nowrap' : ''} max-w-[68ch] text-[15px] leading-8 text-ed-fg-muted`}>
                         {body}
                     </p>
                 </div>
@@ -792,20 +1011,24 @@ function ArchiveBranch({
             </div>
 
             <div className={`${isRight ? 'lg:order-1' : ''} ${isCenter ? 'mx-auto w-full max-w-5xl' : ''}`}>
-                <div className="soft-shell relative min-h-[320px] p-3 sm:min-h-[360px] sm:p-4">
-                    <div className="archive-soft-orb absolute inset-0" />
-                    {kind === 'search' ? (
-                        <SearchFunctionDemo />
-                    ) : (
-                    <div className="relative flex h-full flex-col justify-between">
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="inline-flex h-12 w-12 items-center justify-center border border-ed-rule bg-ed-surface text-ed-accent">
-                                <Icon className="h-5 w-5" />
-                            </div>
-                            <p className="max-w-[18ch] text-right text-[0.58rem] uppercase tracking-[0.24em] text-ed-fg-muted">
-                                Archival Record
-                            </p>
-                        </div>
+                {kind === 'search' ? (
+                    <SearchFunctionDemo />
+                ) : (
+                    <div className="relative rounded-[1.25rem] p-[1px] overflow-hidden shadow-[0_0_30px_0_color-mix(in_srgb,var(--ed-accent)_6%,transparent)]">
+                        {/* Rotating glow for the slideshow frame */}
+                        <div className="absolute inset-[-100%] z-0 animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,color-mix(in_srgb,var(--ed-accent)_40%,transparent)_15%,transparent_20%)]" />
+                        
+                        <div className="relative z-10 flex flex-col h-full min-h-[320px] overflow-hidden rounded-[1.25rem] bg-ed-bg/95 p-3 backdrop-blur-xl sm:min-h-[360px] sm:p-4">
+                            <div className="archive-soft-orb absolute inset-0" />
+                            <div className="relative flex h-full flex-col justify-between">
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="inline-flex h-12 w-12 items-center justify-center border border-ed-rule bg-ed-surface text-ed-accent">
+                                        <Icon className="h-5 w-5" />
+                                    </div>
+                                    <p className="max-w-[18ch] text-right text-[0.58rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                                        Archival Record
+                                    </p>
+                                </div>
 
                         <div className="space-y-4">
                             <div className="h-px w-24 bg-ed-rule" />
@@ -832,9 +1055,11 @@ function ArchiveBranch({
                             </div>
                         </div>
                     </div>
-                    )}
-                </div>
+                    </div>
+                    </div>
+                )}
             </div>
         </article>
     );
 }
+
