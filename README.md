@@ -53,7 +53,7 @@ Built on a modern stack designed for performance and longevity:
 
 1.  **Clone & Install**:
     ```bash
-    git clone https://github.com/HadithCritic/SubmissionArchives.git
+    git clone https://github.com/WikiSubmission/SubmissionArchives.git
     cd SubmissionArchives
     npm install
     ```
