@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { WebVitals } from "@/app/components/WebVitals";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/siteConfig";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/config/site";
 
 const libreFranklin = Libre_Franklin({
   variable: "--font-libre-franklin",

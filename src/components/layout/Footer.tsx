@@ -1,36 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircle, Youtube } from 'lucide-react';
+import { FOOTER_NAV } from '@/config/navigation';
+import { YOUTUBE_URL, DISCORD_URL, LEGAL_LINKS } from '@/config/social';
 
-const sections = [
-    {
-        title: 'Archive',
-        links: [
-            { name: 'Video library', href: '/videos' },
-            { name: 'Audio library', href: '/audios' },
-            { name: 'Written archive', href: '/written' },
-            { name: "Qur'an editions", href: '/quran' },
-        ],
-    },
-    {
-        title: 'Research',
-        links: [
-            { name: 'Search the archive', href: '/search' },
-            { name: 'Video programs', href: '/videos#programs' },
-            { name: 'Friday sermons', href: '/videos#sermons' },
-            { name: 'Newsletter search', href: '/search?filters=perspective' },
-        ],
-    },
-    {
-        title: 'Community',
-        links: [
-            { name: 'YouTube', href: 'https://youtube.com/@submissionarchives' },
-            { name: 'Discord', href: 'https://discord.gg/submissionserver' },
-            { name: 'Quran studies', href: '/audios#quran-studies' },
-            { name: 'Messenger audios', href: '/audios#messenger-audios' },
-        ],
-    },
-];
+const sections = FOOTER_NAV;
 
 const sectionLinkClasses =
     'inline-flex min-h-11 items-center rounded-md px-2 py-2 text-[0.95rem] text-ed-fg-muted transition-colors hover:bg-ed-surface hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent';
@@ -67,10 +41,10 @@ export default function Footer() {
                         </p>
 
                         <div className="flex items-center gap-3">
-                            <FooterIcon href="https://youtube.com/@submissionarchives" label="YouTube">
+                            <FooterIcon href={YOUTUBE_URL} label="YouTube">
                                 <Youtube className="h-4 w-4" />
                             </FooterIcon>
-                            <FooterIcon href="https://discord.gg/submissionserver" label="Discord">
+                            <FooterIcon href={DISCORD_URL} label="Discord">
                                 <MessageCircle className="h-4 w-4" />
                             </FooterIcon>
                         </div>
@@ -103,13 +77,12 @@ export default function Footer() {
 
                 <div className="mt-10 flex flex-col gap-3 border-t border-ed-rule pt-6 text-sm text-ed-fg-muted sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex flex-wrap items-center gap-4">
-                        <span>© 2026 Submission Archives</span>
-                        <a href="https://wikisubmission.org/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className={legalLinkClasses}>
-                            Privacy<span className="sr-only"> (opens in new tab)</span>
-                        </a>
-                        <a href="https://wikisubmission.org/legal/terms-of-use" target="_blank" rel="noopener noreferrer" className={legalLinkClasses}>
-                            Terms<span className="sr-only"> (opens in new tab)</span>
-                        </a>
+                        <span>© {new Date().getFullYear()} Submission Archives</span>
+                        {LEGAL_LINKS.map((link) => (
+                            <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" className={legalLinkClasses}>
+                                {link.name}<span className="sr-only"> (opens in new tab)</span>
+                            </a>
+                        ))}
                     </div>
                     <span className="font-medium text-ed-accent">Preserving the proofs with clarity</span>
                 </div>

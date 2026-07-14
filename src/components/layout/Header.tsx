@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Menu, MessageCircle, Moon, Sun, X, Youtube } from 'lucide-react';
 import { useTheme } from '@/app/components/ThemeProvider';
 import { usePathname } from 'next/navigation';
+import { PRIMARY_NAV } from '@/config/navigation';
+import { YOUTUBE_URL, DISCORD_URL } from '@/config/social';
 
 export default function Header() {
     const { darkMode, toggleDarkMode } = useTheme();
@@ -14,14 +16,7 @@ export default function Header() {
     const menuButtonRef = useRef<HTMLButtonElement>(null);
     const pathname = usePathname();
 
-    const navItems = [
-        { name: 'Home', href: '/' },
-        { name: 'Videos', href: '/videos' },
-        { name: 'Audios', href: '/audios' },
-        { name: 'Written', href: '/written' },
-        { name: "Qur'an", href: '/quran' },
-        { name: 'Search', href: '/search' },
-    ];
+    const navItems = PRIMARY_NAV;
 
     // Close the mobile menu on navigation, adjusting state during render
     // instead of in an effect (https://react.dev/learn/you-might-not-need-an-effect).
@@ -103,11 +98,11 @@ export default function Header() {
                                 {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                             </HeaderIconButton>
 
-                            <HeaderIconLink label="YouTube" href="https://www.youtube.com/@SubmissionArchives">
+                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}>
                                 <Youtube className="h-4 w-4" />
                             </HeaderIconLink>
 
-                            <HeaderIconLink label="Discord" href="https://discord.gg/SubmissionServer">
+                            <HeaderIconLink label="Discord" href={DISCORD_URL}>
                                 <MessageCircle className="h-4 w-4" />
                             </HeaderIconLink>
                         </div>
@@ -160,11 +155,11 @@ export default function Header() {
                                 {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                             </HeaderIconButton>
 
-                            <HeaderIconLink label="YouTube" href="https://www.youtube.com/@SubmissionArchives">
+                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}>
                                 <Youtube className="h-4 w-4" />
                             </HeaderIconLink>
 
-                            <HeaderIconLink label="Discord" href="https://discord.gg/SubmissionServer">
+                            <HeaderIconLink label="Discord" href={DISCORD_URL}>
                                 <MessageCircle className="h-4 w-4" />
                             </HeaderIconLink>
                         </div>

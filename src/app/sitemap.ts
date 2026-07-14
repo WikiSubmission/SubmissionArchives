@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import type { MetadataRoute } from 'next';
-import { SITE_URL } from '@/lib/siteConfig';
+import { SITE_URL } from '@/config/site';
 
 type MasterIndexItem = {
     id: string;

@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { formatMedia } from '@/lib/formatUtils';
 import { getMediaAssetUrl, getMediaPlaybackWindow, getPublicAssetUrl } from '@/lib/mediaAssets';
-import { SITE_NAME } from '@/lib/siteConfig';
+import { SITE_NAME } from '@/config/site';
 export const dynamicParams = true;
 
 import PlayerWrapper from './PlayerWrapper';
