@@ -39,7 +39,7 @@ const collections = [
     },
 ];
 
-export default function OtherPage() {
+export default function WrittenArchivePage() {
     return (
         <div className="min-h-screen bg-ed-bg font-body text-ed-fg">
             <main id="main-content" className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">

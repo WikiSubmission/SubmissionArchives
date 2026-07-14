@@ -8,7 +8,7 @@ const sections = [
         links: [
             { name: 'Video library', href: '/videos' },
             { name: 'Audio library', href: '/audios' },
-            { name: 'Written archive', href: '/other' },
+            { name: 'Written archive', href: '/written' },
             { name: "Qur'an editions", href: '/quran' },
         ],
     },

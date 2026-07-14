@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE_URL}/audios`, changeFrequency: 'weekly', priority: 0.8 },
         { url: `${SITE_URL}/quran`, changeFrequency: 'monthly', priority: 0.8 },
         { url: `${SITE_URL}/search`, changeFrequency: 'monthly', priority: 0.5 },
-        { url: `${SITE_URL}/other`, changeFrequency: 'monthly', priority: 0.5 },
+        { url: `${SITE_URL}/written`, changeFrequency: 'monthly', priority: 0.5 },
     ];
 
     const mediaRoutes: MetadataRoute.Sitemap = masterIndex

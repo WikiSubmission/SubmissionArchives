@@ -62,6 +62,11 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      { source: "/other", destination: "/written", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -18,7 +18,7 @@ export default function Header() {
         { name: 'Home', href: '/' },
         { name: 'Videos', href: '/videos' },
         { name: 'Audios', href: '/audios' },
-        { name: 'Written', href: '/other' },
+        { name: 'Written', href: '/written' },
         { name: "Qur'an", href: '/quran' },
         { name: 'Search', href: '/search' },
     ];
