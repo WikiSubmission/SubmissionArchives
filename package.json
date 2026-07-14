@@ -18,7 +18,8 @@
     "generate:catalog": "node scripts/generate/generate_catalog_search_indices.mjs",
     "validate:catalog": "node scripts/validate/validate_catalog.mjs",
     "generate:book-thumbnails": "node scripts/generate/generate_book_thumbnails.mjs",
-    "prepare:standalone": "node scripts/prepare-standalone.mjs"
+    "prepare:standalone": "node scripts/prepare-standalone.mjs",
+    "audit:assets": "node scripts/assets/audit-assets.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
