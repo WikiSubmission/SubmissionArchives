@@ -1,0 +1,633 @@
+{
+  "metadata": {
+    "title": "The Contact Prayers",
+    "subtitle": "[Salat]",
+    "publisher_or_group": "United Submitters International",
+    "address": "739 E 6th street, Tucson, AZ 85719",
+    "phone": "(602) 791-3989",
+    "source_files": [
+      "The Contact Prayers.pdf"
+    ],
+    "pdf_page_count": 8,
+    "printed_page_count": 7,
+    "language": "English with Arabic transliteration",
+    "transcription_date": "2026-07-08",
+    "transcription_notes": [
+      "The JSON is organized from the PDF page images and the supplied Markdown/OCR text.",
+      "The cover title and figure speech-bubble texts were restored from the rendered PDF pages because they were incomplete or absent from the plain text extraction.",
+      "Printed source anomalies and typographical irregularities are preserved in page-level transcription and flagged under `source_anomalies` where useful.",
+      "The PDF does not contain Arabic script needing repair in the way the prior booklet did; the relevant language material here is English transliteration of Arabic prayer phrases. Those phrases are preserved, with normalized figure-text forms where the cartoons are visibly misspelled or unclear."
+    ]
+  },
+  "sections": [
+    {
+      "id": "cover",
+      "title": "The Contact Prayers [Salat]",
+      "pdf_pages": [
+        1
+      ],
+      "summary": "Cover page with title, subtitle, publisher, address, and phone number."
+    },
+    {
+      "id": "abraham-source",
+      "title": "Abraham: Original Source of the Contact Prayers",
+      "pdf_pages": [
+        2
+      ],
+      "content": "The booklet presents the Contact Prayers as part of the religion of Abraham and cites Quranic references for Muhammad’s following Abraham and for the pre-Muhammad existence of prayer positions."
+    },
+    {
+      "id": "five-times",
+      "title": "The Five Times Are Specified in the Quran",
+      "pdf_pages": [
+        2
+      ],
+      "items": [
+        {
+          "prayer": "Dawn",
+          "reference": "24:58",
+          "time_description": "Before sunrise."
+        },
+        {
+          "prayer": "Noon",
+          "reference": "17:78",
+          "time_description": "When the sun declines."
+        },
+        {
+          "prayer": "Afternoon",
+          "reference": "2:238",
+          "time_description": "Midway between noon and sunset."
+        },
+        {
+          "prayer": "Sunset",
+          "reference": "11:114",
+          "time_description": "Immediately after sunset."
+        },
+        {
+          "prayer": "Night",
+          "reference": "11:114; 24:58",
+          "time_description": "Night prayer."
+        }
+      ]
+    },
+    {
+      "id": "azaan",
+      "title": "The Call to Prayer and the Correct Azaan",
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "correct_azaan": [
+        {
+          "phrase": "Allahu Akbar",
+          "meaning": "God is Great",
+          "count": 4
+        },
+        {
+          "phrase": "La Elaaha Ella Allah",
+          "meaning": "There is no other god beside God",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "ablution",
+      "title": "Preparation for the Contact Prayer",
+      "pdf_pages": [
+        3
+      ],
+      "ablution_steps": [
+        "wash your faces",
+        "wash your arms to the elbows",
+        "wipe your heads with wet hands",
+        "wash your feet to the ankles"
+      ],
+      "major_ablution": "Following any sexual activity that results in a climax (orgasm/ejaculation), one must bathe or take a shower (4:43).",
+      "dry_ablution": "If water is not available, one must touch clean dry soil, then wipe his hands and face. This suffices as a substitute for ablution (4:43; 5:6).",
+      "nullifies_ablution": "Digestive excretions through the intestines, including gas, solids, or urine nullify ablution. Sleeping also nullifies ablution."
+    },
+    {
+      "id": "how-to-perform",
+      "title": "How to Perform the Contact Prayers",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Face the direction of Mecca (Qiblah)",
+          "instruction": "Face the same direction when observing the Contact Prayers. In the U.S., the direction is slightly South of East."
+        },
+        {
+          "number": 2,
+          "title": "The Intention",
+          "instruction": "State the intention to observe the Contact Prayer and state the time."
+        },
+        {
+          "number": 3,
+          "title": "Raise your hands to the sides of your face",
+          "instruction": "Thumbs touch the ears and palms face forward."
+        },
+        {
+          "number": 4,
+          "title": "Say, “Allahu Akbar”",
+          "instruction": "Say “Allahu Akbar” while raising and lowering the hands."
+        },
+        {
+          "number": 5,
+          "title": "The Standing Position",
+          "instruction": "Stand with arms at the sides, or place the left hand on the stomach and the right hand over it."
+        },
+        {
+          "number": 6,
+          "title": "Recite “The Key” (Sura 1) in Arabic",
+          "instruction": "Recite the Arabic sounds of “The Key.” Everything else can be said in one’s own language."
+        },
+        {
+          "number": 7,
+          "title": "The bowing position (Rukoo’)",
+          "instruction": "Bow from the waist, keep knees straight, place hands on knees, and say the bowing glorification."
+        },
+        {
+          "number": 8,
+          "title": "Stand up",
+          "instruction": "Stand from bowing and say “Sami ‘Allahu Liman Hamidah.”"
+        },
+        {
+          "number": 9,
+          "title": "The Prostration Position (Sujood)",
+          "instruction": "Go down on the knees and place the forehead on the floor about 1-2 feet in front of the knees."
+        },
+        {
+          "number": 10,
+          "title": "The Sitting Position",
+          "instruction": "Sit up, then go down for the second prostration. Completing the second prostration completes one Rak’ah."
+        },
+        {
+          "number": 11,
+          "title": "Stand up for the second unit",
+          "instruction": "Stand up and say “Allahu Akbar.”"
+        }
+      ]
+    },
+    {
+      "id": "the-key",
+      "title": "The Key",
+      "pdf_pages": [
+        5
+      ],
+      "recitation_lines": [
+        {
+          "number": 1,
+          "transliteration": "BISMIL LAAHIR RAHMAANIR RAHEEM.",
+          "translation": "In the name of God, Most Gracious, Most Merciful."
+        },
+        {
+          "number": 2,
+          "transliteration": "AL HAMDU LILLAAHI RABBIL ‘AALAMEEN.",
+          "translation": "Praise be to God, Lord of the universe."
+        },
+        {
+          "number": 3,
+          "transliteration": "AR RAHMAANIR RAHEEM.",
+          "translation": "Most Gracious, Most Merciful."
+        },
+        {
+          "number": 4,
+          "transliteration": "MAALIKI YAWMID DEEN.",
+          "translation": "Master of the Day of Judgment."
+        },
+        {
+          "number": 5,
+          "transliteration": "EYYAAKA NA’BUDU, WA EYYAAKA NASTA’EEN.",
+          "translation": "Only You we worship; only You we ask for help."
+        },
+        {
+          "number": 6,
+          "transliteration": "EHDENAS SIRAATAL MUSTAQEEM.",
+          "translation": "Guide us in the straight path."
+        },
+        {
+          "number": 7,
+          "transliteration": "SIRAATAL LAZINA AN’AMTA ‘ALAYHIM / GHAYRIL MAGHDOOBI ‘ALAYHIM WALADDAALLEEN",
+          "translation": "The path of those whom You blessed / Not of those who incur wrath, nor the strayers."
+        }
+      ]
+    },
+    {
+      "id": "prayer-units",
+      "title": "Prayer Units",
+      "pdf_pages": [
+        6,
+        7,
+        8
+      ],
+      "daily_prayers": [
+        {
+          "prayer": "Dawn",
+          "units": 2,
+          "notes": "After the second prostration, sit, pronounce the Shahaadah, and give Salaams to both sides."
+        },
+        {
+          "prayer": "Noon",
+          "units": 4,
+          "notes": "After two units, pronounce the Shahaadah but do not utter the Salaams; stand for the third unit. End after the fourth unit."
+        },
+        {
+          "prayer": "Afternoon",
+          "units": 4,
+          "notes": "Identical to the Noon Prayer except for the intention."
+        },
+        {
+          "prayer": "Sunset",
+          "units": 3,
+          "notes": "After the third unit, sit, recite the Shahaadah, then utter Salaams on both sides."
+        },
+        {
+          "prayer": "Night",
+          "units": 4,
+          "notes": "Identical with the Noon and Afternoon Prayers."
+        }
+      ],
+      "mathematical_code_note": "The sequence 2, 4, 4, 3, and 4 forms 24434, which the booklet states is 19 x 1286."
+    },
+    {
+      "id": "group-and-friday-prayer",
+      "title": "Group Prayer and Friday Prayer",
+      "pdf_pages": [
+        8
+      ],
+      "group_prayer": "Two or more people may pray together; one person leads and recites “The Key” audibly enough for the group.",
+      "friday_prayer": "The Friday Prayer replaces the Noon Prayer on Friday and consists of two sermons and two prayer units."
+    }
+  ],
+  "pages": [
+    {
+      "pdf_page": 1,
+      "printed_page_label": null,
+      "type": "cover",
+      "headings": [
+        "THE CONTACT PRAYERS",
+        "[Salat]"
+      ],
+      "transcribed_text": "In the name Of God, Most Gracious, Most Merciful\n\nTHE\nCONTACT\nPRAYERS\n\n[Salat]\n\nStep by step explanation\nof the daily 5 Contact Prayers.\nWhat to do. What to say.\n\nUnited Submitters International\n739 E 6th street, Tucson, AZ 85719\n(602) 791-3989",
+      "visual_elements": [
+        {
+          "kind": "cover_title",
+          "description": "Large stylized title text centered on the page.",
+          "text": "THE CONTACT PRAYERS"
+        },
+        {
+          "kind": "boxed_subtitle",
+          "description": "Boxed description beneath the title.",
+          "text": "Step by step explanation\nof the daily 5 Contact Prayers.\nWhat to do. What to say."
+        }
+      ],
+      "transcription_notes": [
+        "The embedded OCR/text layer omitted the large cover title, so the title was restored from the rendered PDF page."
+      ]
+    },
+    {
+      "pdf_page": 2,
+      "printed_page_label": "Page 1",
+      "type": "body",
+      "headings": [
+        "Abraham: Original Source of the Contact Prayers",
+        "The Five Times Are Specified in the Quran",
+        "The Call to Prayer (Azaan)"
+      ],
+      "transcribed_text": "Abraham: Original Source of the Contact Prayers\n\nThe Quran teaches us in many suras that Submission (in Arabic “Islam”) is the religion of Abraham (please consult 2:135, 3:95, 4:125, 6:161 and 22:78). Muhammad was a follower of Abraham, as we learn from 16:123. All religious practices in Submission (Islam) were given to us through Abraham; they include:\n\n(1) the five daily Contact Prayers (Salat),\n(2) the obligatory charity (Zakat),\n(3) the fasting during Ramadan, and\n(4) the Hajj Pilgrimage to Mecca.\n\nSpecifically, we learn from the Quran (21:73) that the Contact Prayers (Salat) and the obligatory charity (Zakat) were given to Abraham.\n\nNumerous verses throughout the Quran inform us that the Contact Prayers were in existence, intact, and practiced before the advent of Muhammad (see for example 8:35 & 9:54).\n\nAll positions of the Contact Prayers are found in the Quran, including the standing position (3:39, 39:9), and the bowing and prostrating positions (Rukoo’ and Sujood) (2:43, 3:43, 9:112, 22:26 & 77).\n\nThe Five Times Are Specified in the Quran\n\n(1) The Dawn Prayer is mentioned by name in 24:58. Before sunrise.\n(2) The Noon Prayer is specified in 17:78. When the sun declines.\n(3) The Afternoon Prayer is in 2:238. Midway between noon and sunset.\n(4) The Sunset Prayer is mentioned in 11:114. Immediately after sunset.\n(5) The Night Prayer is in 11:114, and is mentioned by name in 24:58.\n\nThe Call to Prayer (Azaan)\n\nAzaan is not a part of the Contact Prayers, nor is it required. But it has become a tradition in the Muslim communities to summon the people to prayer through a loud announcement. The original Azaan used to conform with the Quran’s teachings, and became corrupted with time.\n\nOriginally, the call to prayer consisted of:\n\n(1) Allahu Akbar (God is Great), 4 times.\n(2) Laa Elaaha Ellah Allah (There is no other god beside God), once.\n\nMany years later, some people added Muhammad’s name to the Azaan. This violates God’s commandments in 2:136, 2:285, 3:84, 4:150 and 72:18. Later, other groups of Muslims added the names of Ali and his family. Today, the Azaan is severely corrupted throughout the Muslim world, and constitutes idol worship, not Submission to God ALONE.\n\n- Page 1 -",
+      "visual_elements": []
+    },
+    {
+      "pdf_page": 3,
+      "printed_page_label": "Page 2",
+      "type": "body",
+      "headings": [
+        "The Correct Azaan",
+        "Preparation for the Contact Prayer",
+        "The Major Ablution",
+        "The Dry Ablution (Tayammum)",
+        "What Nullifies Ablution"
+      ],
+      "transcribed_text": "The Correct Azaan\n\nIf you pray by yourself, an Azaan is not needed. The Azaan is usually observed when a group of people are ready to observe the prayer. One person stands up and utters the Azaan words, or chants them as follows:\n\nAllahu Akbar, Allahu Akbar (God is Great, God is Great).\nAllahu Akbar, Allahu Akbar.\nLa Elaaha Ella Allah (There is no other god beside God).\n\nPreparation for the Contact Prayer\n(The Ablution)\n\nO you who believe, in preparation for the Contact Prayer, you shall\n(1) wash your faces,\n(2) wash your arms to the elbows,\n(3) wipe your heads with wet hands, and\n(4) wash your feet to the ankles.\n[5:6]\n\nLike all other aspects of Submission, the Muslims have corrupted the ablution by adding unauthorized steps. Ironically, the innovations became vested with such authority that anyone who questions them finds himself accused of innovation!!\n\nIt is therefore crucial to uphold God’s commands by strictly observing the ablution decreed in the Quran. Any additional steps represent another god besides God.\n\nThe Major Ablution\n\nFollowing any sexual activity that results in a climax (orgasm/ejaculation), one must bathe or take a shower (4:43).\n\nThe Dry Ablution (Tayammum)\n\nIf water is not available, one must touch clean dry soil, then wipe his hands and face. This suffices as a substitute for ablution (4:43; 5:6).\n\nWhat Nullifies Ablution\n\nDigestive excretions through the intestines, including gas, solids, or urine nullify ablution. Sleeping also nullifies ablution, since one becomes unaware. Thus, one may observe a number of Contact Prayers with one ablution, provided he or she does not go to the bathroom, pass gas, or fall asleep.\n\n- Page 2 -",
+      "visual_elements": [
+        {
+          "kind": "boxed_quranic_instruction",
+          "description": "A boxed excerpt listing the four ablution steps and citing [5:6].",
+          "text": "O you who believe, in preparation for the Contact Prayer, you shall\n(1) wash your faces,\n(2) wash your arms to the elbows,\n(3) wipe your heads with wet hands, and\n(4) wash your feet to the ankles.\n[5:6]"
+        }
+      ]
+    },
+    {
+      "pdf_page": 4,
+      "printed_page_label": "Page 3",
+      "type": "body",
+      "headings": [
+        "HOW TO PERFORM THE CONTACT PRAYERS",
+        "1. Face the direction of Mecca (Qiblah)",
+        "2. The Intention",
+        "3. Raise your hands to the sides of your face",
+        "4. Say, “Allahu Akbar”",
+        "5. The Standing Position",
+        "6. Recite “The Key” (Sura 1) in Arabic"
+      ],
+      "transcribed_text": "HOW TO PERFORM THE CONTACT PRAYERS\n\n1. Face the direction of Mecca (Qiblah):\n\nThis is an organizational point decreed by God in 2:125. God wills that all Submitters must face the same direction when they observe the Contact Prayers. In the U.S., the direction is slightly South of East.\n\n2. The Intention:\n\nIn your own language, secretly or audibly, state your intention that you are about to observe the Contact Prayer. Remember to state the time (Dawn, Noon, Afternoon, Sunset, or Night).\n\n3. Raise your hands to the sides of your face:\n\nYour thumbs touch your ears, and the palms of your hands face forward.\n\n4. Say, “Allahu Akbar”:\n\nAs you raise your hands to the sides of your face, then move them down to your sides in a continuous motion, you say, “Allahu Akbar” (God is Great). This opens up the prayer. You are in contact with your Creator.\n\n5. The Standing Position:\n\nYou are now standing with your arms resting naturally at your sides. Some people place the left hand on the stomach, and the right hand on top of the left hand. Either position is correct you may place your hands on your stomach while standing, or you may let your arms hand down by your sides.\n\n6. Recite “The Key” (Sura 1) in Arabic:\n\nWe learn from 2:37 that God gives us the words by which we establish contact with Him. We must utter the specific sounds dictated in “The Key.” A translation of “The Key” would be human-made. The Arabic sounds of “The Key” represent a numerical How to Do the Prayers 41 combination that opens the treasure. Like a telephone number, unless the specific numbers are dialed, contact cannot be established. This is all the Arabic you need. Everything else can be said in your own language.\n\n- Page 3 -",
+      "visual_elements": [
+        {
+          "kind": "illustration",
+          "associated_step": 4,
+          "description": "Person raising hands to start the prayer.",
+          "figure_text_raw": "ALLAHU AKBAR",
+          "figure_text_normalized": "Allahu Akbar"
+        },
+        {
+          "kind": "illustration",
+          "associated_step": 6,
+          "description": "Person standing for recitation.",
+          "figure_text_raw": "She quietly says AL FAATHAH out loud",
+          "figure_text_normalized": "She quietly says Al-Faatihah out loud",
+          "confidence_note": "The handwritten label appears to omit the letter I in FAATIHAH. The normalized form uses the standard title represented elsewhere in the booklet as “The Key.”"
+        }
+      ],
+      "source_anomalies": [
+        {
+          "text": "numerical How to Do the Prayers 41 combination",
+          "note": "This appears in the PDF image itself, not just the OCR layer. It was preserved as part of the source transcription."
+        },
+        {
+          "text": "let your arms hand down",
+          "note": "Preserved as printed. It may be intended as “hang down,” but the source page reads “hand down.”"
+        }
+      ]
+    },
+    {
+      "pdf_page": 5,
+      "printed_page_label": "Page 4",
+      "type": "body",
+      "headings": [
+        "[ The Key: ]",
+        "7. The bowing position (Rukoo’)",
+        "8. Stand up"
+      ],
+      "transcribed_text": "Reciting “The Key” in Arabic unifies all Submitters of the world, regardless of their languages.\n\n[ The Key: ]\n\n1. BISMIL LAAHIR RAHMAANIR RAHEEM.\n(In the name of God, Most Gracious, Most Merciful.)\n\n2. AL HAMDU LILLAAHI RABBIL ‘AALAMEEN.\n(Praise be to God, Lord of the universe.)\n\n3. AR RAHMAANIR RAHEEM.\n(Most Gracious, Most Merciful.)\n\n4. MAALIKI YAWMID DEEN.\n(Master of the Day of Judgment.)\n\n5. EYYAAKA NA’BUDU, WA EYYAAKA NASTA’EEN.\n(Only You we worship; only You we ask for help.)\n\n6. EHDENAS SIRAATAL MUSTAQEEM.\n(Guide us in the straight path.)\n\n7. SIRAATAL LAZINA AN’AMTA ‘ALAYHIM\n(The path of those whom You blessed)\nGHAYRIL MAGHDOOBI ‘ALAYHIM WALADDAALLEEN\n(Not of those who incur wrath, nor the strayers).\n\nSince “The Key” is recited 17 times a day, it will become easy for you to recite and understand in a few weeks; it will become like your mother tongue.\n\n7. The bowing position (Rukoo’):\n\nAfter reciting “The Key” while standing, you bow down into the position of Rukoo’. As shown in the figure, you bow down from the waist, keep the knees straight, and place your hands on your knees. Your eyes look at a point about 2 feet in front of you.\n\nAs you move from the standing position to the bowing position you say, “Allahu Akbar.”\n\nWhile bowing you say, “Subhaana Rabbiyal ‘Azeem” or “God be glorified.”\n\n8. Stand up:\n\nAs you stand up from the bowing position to the standing position you say, “Sami ‘Allahu Liman Hamidah,” or “God responds to those who praise Him.”\n\n- Page 4 -",
+      "visual_elements": [
+        {
+          "kind": "boxed_recitation",
+          "description": "A boxed list of the seven lines of “The Key,” with translations.",
+          "text": "[ The Key: ]"
+        },
+        {
+          "kind": "illustration",
+          "associated_step": 7,
+          "description": "Person bowing in Rukoo’. The handwritten caption notes that the phrase is said silently.",
+          "figure_text_raw": "SUBHANNA RABBIYAL-‘AZZEEM\nShe says this silently.",
+          "figure_text_normalized": "Subhaana Rabbiyal ‘Azeem. She says this silently."
+        },
+        {
+          "kind": "illustration",
+          "associated_step": 8,
+          "description": "Person standing after bowing.",
+          "figure_text_raw": "SAMI’ALLAHU LIHAN IHAHIDAH",
+          "figure_text_normalized": "Sami ‘Allahu Liman Hamidah",
+          "confidence_note": "The handwritten bubble appears misspelled; the normalized text follows the printed instruction on the same page."
+        }
+      ]
+    },
+    {
+      "pdf_page": 6,
+      "printed_page_label": "Page 5",
+      "type": "body",
+      "headings": [
+        "9. The Prostration Position (Sujood)",
+        "10. The Sitting Position",
+        "11. Stand up for the second unit",
+        "The Dawn Prayer"
+      ],
+      "transcribed_text": "You remain in the standing position only a second, then you fall prostrate. As you go from the standing position to the prostration position you say, “Allahu Akbar.”\n\n9. The Prostration Position (Sujood):\n\nFrom the standing position you go down on your knees, then place your forehead on the floor about 1-2 feet in front of your knees (see figure).\n\nDuring prostration you say, “Subhaana Rabbiyal A’laa” or “God be glorified.”\n\n10. The Sitting Position:\n\nAs you sit up from the prostration position, you say, “Allahu Akbar.” You remain in the sitting position only a second, then you go down for the second prostration.\n\nAs you go down for the second prostration you say, “Allahu Akbar.”\n\nDuring the second prostration you say, “Subhanna Rabbiyal A’laa.” Once you complete the second prostration, you have completed one full unit (Rak’ah).\n\n11. Stand up for the second unit:\n\nAs you stand up you say, “Allahu Akbar.”\n\nThe Dawn Prayer\n\nThis Contact Prayer consists of 2 units. Thus, when you get up from the second prostration, you say, “Allahu Akbar,” and you assume the sitting position. While in the sitting position you pronounce the First Pillar of Submission, the Shahaadah:\n\nAsh-Hadu Allaa Elaaha Ellaa Allah.\n(I bear witness that there is no other god beside God.)\nWahdahu Laa Shareeka Lah.\n(He ALONE is God; He has no partner.)\n\nLook to the right and say, “Assalaamu Alaikum,” then to the left and say the same. This completes the Dawn Prayer.\n\n- Page 5 -",
+      "visual_elements": [
+        {
+          "kind": "illustration",
+          "associated_step": 9,
+          "description": "Person in prostration.",
+          "figure_text_raw": "SUBUHANA RABBIYAL-A’LAA",
+          "figure_text_normalized": "Subhaana Rabbiyal A’laa",
+          "confidence_note": "The handwritten bubble appears to spell the first word as SUBUHANA. The normalized text follows the printed instruction."
+        },
+        {
+          "kind": "illustration",
+          "associated_step": 10,
+          "description": "Person sitting and reciting the Shahaadah.",
+          "figure_text_raw": "ASH-HADU AN LAA ILAAHA ILLAL-LAAH, WAHDAHU, LAA SHAREEKA LAH.",
+          "figure_text_normalized": "Ash-Hadu An Laa Ilaaha Illal-Laah, Wahdahu, Laa Shareeka Lah."
+        },
+        {
+          "kind": "illustration",
+          "associated_step": "Salaams at the end of the prayer",
+          "description": "Person looking to the side while giving the closing greeting.",
+          "figure_text_raw": "ASSALAAHU AL.AIKUM",
+          "figure_text_normalized": "Assalaamu Alaikum",
+          "confidence_note": "The handwritten bubble appears misspelled; the normalized text follows the printed instruction."
+        }
+      ],
+      "source_anomalies": [
+        {
+          "text": "Subhanna Rabbiyal A’laa",
+          "note": "This spelling appears in the printed text for the second prostration and was preserved. The earlier printed form on the page is “Subhaana Rabbiyal A’laa.”"
+        }
+      ]
+    },
+    {
+      "pdf_page": 7,
+      "printed_page_label": "Page 6",
+      "type": "body",
+      "headings": [
+        "The Noon Prayer",
+        "The Afternoon Prayer",
+        "The Sunset Prayer",
+        "The Night Prayer",
+        "The Contact Prayers and the Quran’s Mathematical Code",
+        "Your Tone of Voice During the Contact Prayers"
+      ],
+      "transcribed_text": "The Noon Prayer\n\nThis prayer consists of 4 units. Thus, you do the first two units exactly as explained for the Dawn Prayer up to the sitting position [step 10]. You pronounce the First Pillar (known as “Shahaadah”) then you stand up for the third unit. You do not utter the Salaams (Assalamu Alaikum).\n\nAs you stand up for the third unit you say, “Allahu Akbar.” The third and fourth units are identical to the first two units.\n\nWhen you get up from the second prostration of the fourth unit, you say “Allahu Akbar” and you assume the sitting position. In the sitting position you pronounce the Shahaadah, and you say the Salaams on both sides. This concludes the Noon Prayer.\n\nThe Afternoon Prayer\n\nThis prayer is identical to the Noon Prayer. Only the “Intention” of course is different.\n\nThe Sunset Prayer\n\nThis prayer consists of three units. Thus, when you complete the second prostration of the third unit you do not stand up; you assume the sitting position, recite the Shahaadah, then you utter the Salaams on both sides. This concludes the Sunset Prayer.\n\nThe Night Prayer\n\nThis prayer is identical with the other 4-unit prayers, the Noon and the Afternoon Prayers.\n\nThe Contact Prayers and the Quran’s Mathematical Code\n\nAs noted above, the Dawn, Noon, Afternoon, Sunset and Night Prayers consist of 2, 4, 4, 3, & 4 units, respectively. When we put these 5 numbers next to each other we get 24434, and this number is a multiple of 19 (24434 = 19 x 1286). The common denominator of the Quran’s code is 19. This phenomenon confirms that the number of units for each Contact Prayer has been reserved intact, and the sequence 2, 4, 4, 3 and 4 is also confirmed.\n\nYour Tone of Voice During the Contact Prayers\n\nYour shall not be too loud during your Contact Prayers, nor shall you say them secretly; you shall maintain an intermediate tone [17:110]. During a group prayer, only the Imam is audible; everyone else listens.\n\n- Page 6 -",
+      "visual_elements": [],
+      "source_anomalies": [
+        {
+          "text": "Your shall not be too loud",
+          "note": "Preserved as printed. It may be intended as “You shall not be too loud.”"
+        }
+      ]
+    },
+    {
+      "pdf_page": 8,
+      "printed_page_label": "Page 7",
+      "type": "body",
+      "headings": [
+        "The Group Prayer",
+        "The Friday Prayer",
+        "At the end of every prayer",
+        "For More Information",
+        "Write or Call"
+      ],
+      "transcribed_text": "The Group Prayer\n\nTwo or more people may observe the Contact Prayers together. One person leads the group prayer, uttering “The Key” in a loud enough voice to be heard by everyone in the group. Other utterances must be silent. Anyone may join the group late, in the middle of the prayer. He or she must make the same moves as the group, then, at the end of the prayer, he or she must stand up and make up whatever portion was missed.\n\nThe Friday Prayer\n\nThe Friday Congregational Prayer (Salat Al-Jum’ah) is so important, a whole sura is entitled “Friday” and a commandment is decreed in verse nine to observe this prayer. Every Submitter -man, woman, and child- is commanded by God to observe the Friday Congregational Prayer.\n\nThe Friday Prayer replaces the Noon Prayer every Friday. Instead of 4 units, the Friday Prayer consists of listening to two sermons delivered by the Imam, and two units of prayer.\n\nEach sermon must begin with “Al-Hamdu Lillah” (Praise be to God), “Laa Elaaha Ella Allah” (No other god beside God). Each sermon should last 10-15 minutes and must be delivered in the language of the congregation. At the end of the first sermon, the congregation is asked to repent, “Tooboo Ela Allah.” The Imam then sits down for about a minute and makes his repentance together with the congregation, then stands up for the second sermon. The second sermon ends by asking one of the people to say the Azaan. The Imam then leads the 2-unit prayer.\n\nAt the end of every prayer\n\nThe worshipers may shake hands, hug each other, and/or exchange greetings after completing the prayer. The custom is to say to each other, “Congratulations.” This is because the Contact Prayers are a gift from God, that helps us nourish and develop our souls. One should be congratulated upon completing such a blessed accomplishment.\n\nFor More Information\n\nThis booklet should be used in conjunction with our audio or video tape in order to practice the correct pronunciation of the Arabic words. The audio/video tape provides the sounds and visual effects that will help you learn the correct pronunciations.\n\nWrite or Call:\n\nUnited Submitters International, 739 E 6th St, Tucson, AZ 85719\n(602) 791-3989\n\n- Page 7 -",
+      "visual_elements": []
+    }
+  ],
+  "utterances": [
+    {
+      "context": "Azaan/opening movements",
+      "source_form": "Allahu Akbar",
+      "meaning_in_booklet": "God is Great"
+    },
+    {
+      "context": "Azaan",
+      "source_form": "Laa Elaaha Ellah Allah",
+      "meaning_in_booklet": "There is no other god beside God",
+      "note": "Page 1 uses “Ellah”; page 2 uses “Ella.”"
+    },
+    {
+      "context": "Correct Azaan",
+      "source_form": "La Elaaha Ella Allah",
+      "meaning_in_booklet": "There is no other god beside God"
+    },
+    {
+      "context": "Rukoo’",
+      "source_form": "Subhaana Rabbiyal ‘Azeem",
+      "meaning_in_booklet": "God be glorified"
+    },
+    {
+      "context": "Standing after Rukoo’",
+      "source_form": "Sami ‘Allahu Liman Hamidah",
+      "meaning_in_booklet": "God responds to those who praise Him"
+    },
+    {
+      "context": "Sujood",
+      "source_form": "Subhaana Rabbiyal A’laa",
+      "meaning_in_booklet": "God be glorified"
+    },
+    {
+      "context": "Second prostration",
+      "source_form": "Subhanna Rabbiyal A’laa",
+      "meaning_in_booklet": null,
+      "note": "Spelling preserved from source."
+    },
+    {
+      "context": "Shahaadah",
+      "source_form": "Ash-Hadu Allaa Elaaha Ellaa Allah.",
+      "meaning_in_booklet": "I bear witness that there is no other god beside God."
+    },
+    {
+      "context": "Shahaadah continuation",
+      "source_form": "Wahdahu Laa Shareeka Lah.",
+      "meaning_in_booklet": "He ALONE is God; He has no partner."
+    },
+    {
+      "context": "Closing Salaams",
+      "source_form": "Assalaamu Alaikum",
+      "meaning_in_booklet": null
+    },
+    {
+      "context": "Friday sermons",
+      "source_form": "Al-Hamdu Lillah",
+      "meaning_in_booklet": "Praise be to God"
+    },
+    {
+      "context": "Friday sermons",
+      "source_form": "Laa Elaaha Ella Allah",
+      "meaning_in_booklet": "No other god beside God"
+    },
+    {
+      "context": "Repentance after first Friday sermon",
+      "source_form": "Tooboo Ela Allah",
+      "meaning_in_booklet": null
+    }
+  ],
+  "figures": [
+    {
+      "kind": "illustration",
+      "associated_step": 4,
+      "description": "Person raising hands to start the prayer.",
+      "figure_text_raw": "ALLAHU AKBAR",
+      "figure_text_normalized": "Allahu Akbar",
+      "pdf_page": 4,
+      "figure_index_on_page": 1
+    },
+    {
+      "kind": "illustration",
+      "associated_step": 6,
+      "description": "Person standing for recitation.",
+      "figure_text_raw": "She quietly says AL FAATHAH out loud",
+      "figure_text_normalized": "She quietly says Al-Faatihah out loud",
+      "confidence_note": "The handwritten label appears to omit the letter I in FAATIHAH. The normalized form uses the standard title represented elsewhere in the booklet as “The Key.”",
+      "pdf_page": 4,
+      "figure_index_on_page": 2
+    },
+    {
+      "kind": "illustration",
+      "associated_step": 7,
+      "description": "Person bowing in Rukoo’. The handwritten caption notes that the phrase is said silently.",
+      "figure_text_raw": "SUBHANNA RABBIYAL-‘AZZEEM\nShe says this silently.",
+      "figure_text_normalized": "Subhaana Rabbiyal ‘Azeem. She says this silently.",
+      "pdf_page": 5,
+      "figure_index_on_page": 2
+    },
+    {
+      "kind": "illustration",
+      "associated_step": 8,
+      "description": "Person standing after bowing.",
+      "figure_text_raw": "SAMI’ALLAHU LIHAN IHAHIDAH",
+      "figure_text_normalized": "Sami ‘Allahu Liman Hamidah",
+      "confidence_note": "The handwritten bubble appears misspelled; the normalized text follows the printed instruction on the same page.",
+      "pdf_page": 5,
+      "figure_index_on_page": 3
+    },
+    {
+      "kind": "illustration",
+      "associated_step": 9,
+      "description": "Person in prostration.",
+      "figure_text_raw": "SUBUHANA RABBIYAL-A’LAA",
+      "figure_text_normalized": "Subhaana Rabbiyal A’laa",
+      "confidence_note": "The handwritten bubble appears to spell the first word as SUBUHANA. The normalized text follows the printed instruction.",
+      "pdf_page": 6,
+      "figure_index_on_page": 1
+    },
+    {
+      "kind": "illustration",
+      "associated_step": 10,
+      "description": "Person sitting and reciting the Shahaadah.",
+      "figure_text_raw": "ASH-HADU AN LAA ILAAHA ILLAL-LAAH, WAHDAHU, LAA SHAREEKA LAH.",
+      "figure_text_normalized": "Ash-Hadu An Laa Ilaaha Illal-Laah, Wahdahu, Laa Shareeka Lah.",
+      "pdf_page": 6,
+      "figure_index_on_page": 2
+    },
+    {
+      "kind": "illustration",
+      "associated_step": "Salaams at the end of the prayer",
+      "description": "Person looking to the side while giving the closing greeting.",
+      "figure_text_raw": "ASSALAAHU AL.AIKUM",
+      "figure_text_normalized": "Assalaamu Alaikum",
+      "confidence_note": "The handwritten bubble appears misspelled; the normalized text follows the printed instruction.",
+      "pdf_page": 6,
+      "figure_index_on_page": 3
+    }
+  ],
+  "transcription_corrections_applied": [
+    {
+      "location": "PDF page 1 / cover",
+      "issue": "The OCR/Markdown text omitted the large title THE CONTACT PRAYERS and [Salat].",
+      "fix": "Restored the title from the page image."
+    },
+    {
+      "location": "PDF pages 4-6",
+      "issue": "The OCR/Markdown text did not capture the handwritten figure labels and speech bubbles.",
+      "fix": "Added the visible cartoon text under `visual_elements` and normalized unclear spellings in separate fields."
+    },
+    {
+      "location": "PDF page 4 / Step 6",
+      "issue": "The phrase “numerical How to Do the Prayers 41 combination” appears to be a source artifact.",
+      "fix": "Preserved it in the transcription and flagged it under `source_anomalies` rather than silently correcting it."
+    }
+  ]
+}

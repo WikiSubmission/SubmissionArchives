@@ -21,6 +21,7 @@ recovery_output
 raw_data
 temp_json
 temp_vtt
+data/sources
 public/content/**/*.mp3
 public/content/**/*.mp4
 public/content/**/*.m4a
@@ -31,5 +32,5 @@ public/content/**/*.wmv
 public/content/**/*.mkv
 public/content/**/*.webm
 public/content/**/*.flv
-public/content/**/*.pdf
 public/content/**/*.part
+!public/content/**/*.pdf

@@ -12,6 +12,10 @@ export interface Media {
     filename?: string;
     thumbnailOverride?: string;
     folder?: string;
+    youtubeId?: string;
+    youtubeUrl?: string;
+    youtubeStartTime?: number;
+    youtubeEndTime?: number;
     primaryNumber?: number;
     alternateNumbers?: string[];
     alternateNumberLabel?: string;

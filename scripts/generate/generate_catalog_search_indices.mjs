@@ -1,50 +1,32 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import path from 'node:path';
+import pdfParse from 'pdf-parse';
+import { assertValidArchiveRecords } from '../lib/archive-schema.mjs';
 
 const ROOT = process.cwd();
 const GENERATED_DIR = path.join(ROOT, 'public', 'data', 'generated_indices');
 const VIDEO_LIST = path.join(GENERATED_DIR, 'VIDEO_PROGRAMS_LIST.json');
 const AUDIO_LIST = path.join(GENERATED_DIR, 'AUDIOS_LIST.json');
-const VIDEO_OUTPUT = path.join(GENERATED_DIR, 'ALL_VIDEO_PROGRAMS.json');
-const AUDIO_OUTPUT = path.join(GENERATED_DIR, 'ALL_AUDIOS.json');
 const MASTER_OUTPUT = path.join(GENERATED_DIR, 'MASTER_INDEX.json');
 const ASSET_MANIFEST_OUTPUT = path.join(GENERATED_DIR, 'ASSET_MANIFEST.csv');
-const TRANSCRIPTS_MASTER_OUTPUT = path.join(GENERATED_DIR, 'TRANSCRIPTS_MASTER.csv');
+const BOOKS_LIST_OUTPUT = path.join(GENERATED_DIR, 'BOOKS_LIST.json');
+const VALIDATION_OUTPUT = path.join(GENERATED_DIR, 'CATALOG_VALIDATION.json');
+const LEGACY_BOOKS_OUTPUT = path.join(ROOT, 'public', 'data', 'other', 'search_index.json');
 const APPENDIX_DIR = path.join(ROOT, 'public', 'content', 'appendix');
 const APPENDIX_PDF_DIR = path.join(APPENDIX_DIR, 'pdfs');
 const APPENDIX_THUMB_DIR = path.join(APPENDIX_DIR, 'thumbnails');
 const APPENDIX_CSV = path.join(APPENDIX_DIR, 'csv', 'quran_appendices_rows.csv');
 const NEWSLETTER_DIR = path.join(ROOT, 'public', 'content', 'newsletter');
-const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
 const NEWSLETTER_THUMB_DIR = path.join(NEWSLETTER_DIR, 'thumbnails');
-const NEWSLETTER_CSV = path.join(NEWSLETTER_DIR, 'csv', 'newsletters_rows.csv');
-
-const MONTHS = {
-  jan: { number: 1, name: 'January', abbr: 'jan' },
-  january: { number: 1, name: 'January', abbr: 'jan' },
-  feb: { number: 2, name: 'February', abbr: 'feb' },
-  february: { number: 2, name: 'February', abbr: 'feb' },
-  mar: { number: 3, name: 'March', abbr: 'mar' },
-  march: { number: 3, name: 'March', abbr: 'mar' },
-  apr: { number: 4, name: 'April', abbr: 'apr' },
-  april: { number: 4, name: 'April', abbr: 'apr' },
-  may: { number: 5, name: 'May', abbr: 'may' },
-  jun: { number: 6, name: 'June', abbr: 'jun' },
-  june: { number: 6, name: 'June', abbr: 'jun' },
-  jul: { number: 7, name: 'July', abbr: 'jul' },
-  july: { number: 7, name: 'July', abbr: 'jul' },
-  aug: { number: 8, name: 'August', abbr: 'aug' },
-  august: { number: 8, name: 'August', abbr: 'aug' },
-  sep: { number: 9, name: 'September', abbr: 'sep' },
-  september: { number: 9, name: 'September', abbr: 'sep' },
-  oct: { number: 10, name: 'October', abbr: 'oct' },
-  october: { number: 10, name: 'October', abbr: 'oct' },
-  nov: { number: 11, name: 'November', abbr: 'nov' },
-  november: { number: 11, name: 'November', abbr: 'nov' },
-  dec: { number: 12, name: 'December', abbr: 'dec' },
-  december: { number: 12, name: 'December', abbr: 'dec' },
-};
+const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
+const SOURCE_DATA_DIR = path.join(ROOT, 'data', 'sources');
+const QURAN_DIR = path.join(SOURCE_DATA_DIR, 'quran');
+const QURAN_CHAPTERS_OUTPUT = path.join(GENERATED_DIR, 'QURAN_CHAPTERS.json');
+const BOOKS_DIR = path.join(ROOT, 'public', 'content', 'books');
+const BOOKS_JSON_DIR = path.join(BOOKS_DIR, 'jsons');
+const BOOKS_TRANSCRIPTION_DIR = path.join(SOURCE_DATA_DIR, 'books');
+const BOOKS_THUMB_DIR = path.join(BOOKS_DIR, 'thumbnails');
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -65,17 +47,6 @@ function toAbsolutePublicPath(localPath) {
 function normalizePublicPath(value) {
   if (!value) return '';
   return stripPublicPrefix(value);
-}
-
-function publicUrlForKey(r2Key) {
-  const baseUrl = process.env.R2_PUBLIC_BASE_URL
-    || process.env.R2_PUBLIC_URL
-    || process.env.NEXT_PUBLIC_R2_PUBLIC_BASE_URL
-    || process.env.NEXT_PUBLIC_R2_PUBLIC_URL
-    || '';
-  if (!baseUrl) return '';
-  const encodedKey = r2Key.split('/').map((segment) => encodeURIComponent(segment)).join('/');
-  return `${baseUrl.replace(/\/+$/, '')}/${encodedKey}`;
 }
 
 function csvEscape(value) {
@@ -182,8 +153,25 @@ function readCsvRows(filePath) {
   return rowsToObjects(fs.readFileSync(filePath, 'utf8'));
 }
 
-function parseVttTimestamp(timestamp) {
-  const parts = timestamp.trim().split(':');
+function compactSegments(segments) {
+  return segments.map((segment) => ({
+    start: segment.start ?? 0,
+    end: segment.end ?? segment.start ?? 0,
+    text: segment.text ?? segment.content ?? '',
+    ...(segment.speaker ? { speaker: segment.speaker } : {}),
+    ...(typeof segment.page === 'number' ? { page: segment.page } : {}),
+    ...(segment.label ? { label: segment.label } : {}),
+  })).filter((segment) => segment.text);
+}
+
+const PLAYLIST_DIRS = [
+  path.join(ROOT, 'public', 'playlist_1'),
+  path.join(ROOT, 'public', 'playlist_2'),
+];
+
+function parsePlaylistTimestamp(value) {
+  if (!value) return 0;
+  const parts = value.trim().split(':');
   if (parts.length === 3) {
     return Number(parts[0]) * 3600 + Number(parts[1]) * 60 + Number.parseFloat(parts[2]);
   }
@@ -193,75 +181,90 @@ function parseVttTimestamp(timestamp) {
   return Number.parseFloat(parts[0]) || 0;
 }
 
-function parseVTT(vttContent) {
-  const segments = [];
-  const normalized = vttContent.replace(/\r\n/g, '\n');
-  const blocks = normalized.split('\n\n');
+function extractYoutubeIdFromLink(link) {
+  const match = (link || '').match(/[?&]v=([A-Za-z0-9_-]{6,})/) || (link || '').match(/youtu\.be\/([A-Za-z0-9_-]{6,})/);
+  return match ? match[1] : null;
+}
 
-  for (const block of blocks) {
-    const lines = block.split('\n').map((line) => line.trim()).filter(Boolean);
-    if (lines.length === 0) continue;
-    if (lines[0].startsWith('WEBVTT')) continue;
-    if (lines[0].startsWith('NOTE')) continue;
-    if (lines[0].startsWith('Kind:')) continue;
-    if (lines[0].startsWith('Language:')) continue;
-
-    const timeLineIndex = lines.findIndex((line) => line.includes('-->'));
-    if (timeLineIndex === -1) continue;
-
-    const timeLine = lines[timeLineIndex];
-    const [startRaw, endRaw] = timeLine.split('-->').map((part) => part.trim());
-    const end = endRaw ? endRaw.split(' ')[0] : startRaw;
-    const text = lines
-      .slice(timeLineIndex + 1)
-      .join(' ')
-      .replace(/<[^>]*>/g, '')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&#39;/g, "'")
-      .replace(/&quot;/g, '"')
-      .trim();
-
-    if (!text) continue;
-
-    segments.push({
-      start: parseVttTimestamp(startRaw),
-      end: parseVttTimestamp(end),
-      text,
-    });
+function loadPlaylistSegmentsByYoutubeId() {
+  const byId = new Map();
+  for (const dir of PLAYLIST_DIRS) {
+    if (!fs.existsSync(dir)) continue;
+    for (const filename of fs.readdirSync(dir)) {
+      if (!filename.toLowerCase().endsWith('.csv')) continue;
+      const rows = readCsvRows(path.join(dir, filename));
+      for (const row of rows) {
+        const youtubeId = extractYoutubeIdFromLink(row.Link);
+        const text = (row.Text || '').trim();
+        if (!youtubeId || !text) continue;
+        const list = byId.get(youtubeId) ?? [];
+        list.push({
+          start: parsePlaylistTimestamp(row['Start Time']),
+          end: parsePlaylistTimestamp(row['End Time'] || row['Start Time']),
+          text,
+          speaker: (row.Speaker || '').trim() || undefined,
+        });
+        byId.set(youtubeId, list);
+      }
+    }
   }
-
-  return segments;
+  for (const list of byId.values()) list.sort((a, b) => a.start - b.start);
+  return byId;
 }
 
-function readSegments(transcriptPath) {
-  if (!transcriptPath || !fs.existsSync(transcriptPath)) return [];
-
-  const body = fs.readFileSync(transcriptPath, 'utf8');
-  if (transcriptPath.endsWith('.vtt')) return parseVTT(body);
-
-  const json = JSON.parse(body);
-  const segments = Array.isArray(json) ? json : json.segments || [];
-  return segments.map((segment) => ({
-    start: segment.start_time ?? segment.start ?? 0,
-    end: segment.end_time ?? segment.end ?? segment.start_time ?? segment.start ?? 0,
-    text: segment.content ?? segment.text ?? '',
-  })).filter((segment) => segment.text);
+function readPlaylistSegments(playlistIndex, youtubeId, startWindow, endWindow) {
+  if (!youtubeId) return [];
+  const all = playlistIndex.get(youtubeId);
+  if (!all) return [];
+  const lo = startWindow ?? 0;
+  const hi = endWindow ?? Infinity;
+  return all.filter((segment) => segment.start >= lo - 0.5 && segment.start < hi);
 }
 
-function compactSegments(segments) {
+// Some catalog items play a standalone re-upload of a clip that was originally
+// transcribed as part of a longer combined recording. `transcriptYoutubeId` /
+// `transcriptStartTime` / `transcriptEndTime` point back at that combined
+// recording's playlist transcript, and `transcriptOffset` rebases each
+// matched segment onto the standalone video's own zero-based timeline.
+function resolveTranscriptSegments(item, playlistIndex) {
+  const sourceId = item.transcriptYoutubeId || item.youtubeId;
+  const startWindow = item.transcriptYoutubeId ? item.transcriptStartTime : item.youtubeStartTime;
+  const endWindow = item.transcriptYoutubeId ? item.transcriptEndTime : item.youtubeEndTime;
+  const segments = readPlaylistSegments(playlistIndex, sourceId, startWindow, endWindow);
+
+  const offset = item.transcriptOffset ?? 0;
+  if (!offset) return segments;
+
   return segments.map((segment) => ({
-    start: segment.start ?? 0,
-    end: segment.end ?? segment.start ?? 0,
-    text: segment.text ?? segment.content ?? '',
-  })).filter((segment) => segment.text);
+    ...segment,
+    start: segment.start - offset,
+    end: segment.end - offset,
+  }));
 }
 
 function getThumbnailLink(thumbnailDir, publicBase, pdfFilename) {
-  const thumbnailName = `${pdfFilename.replace(/\.pdf$/i, '')}.jpg`;
-  return fs.existsSync(path.join(thumbnailDir, thumbnailName)) ? `${publicBase}/${thumbnailName}` : undefined;
+  const baseName = pdfFilename.replace(/\.pdf$/i, '');
+  for (const extension of ['jpg', 'jpeg', 'png', 'webp']) {
+    const thumbnailName = `${baseName}.${extension}`;
+    if (fs.existsSync(path.join(thumbnailDir, thumbnailName))) {
+      return `${publicBase}/${thumbnailName}`;
+    }
+  }
+  return undefined;
+}
+
+function getNewsletterThumbnailLink(year, monthNumber, monthName) {
+  const thumbnailName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.jpg`;
+  return fs.existsSync(path.join(NEWSLETTER_THUMB_DIR, thumbnailName))
+    ? `/content/newsletter/thumbnails/${thumbnailName}`
+    : undefined;
+}
+
+function getNewsletterPdfLink(year, monthNumber, monthName) {
+  const pdfName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.pdf`;
+  return fs.existsSync(path.join(NEWSLETTER_PDF_DIR, pdfName))
+    ? `/content/newsletter/pdfs/${pdfName}`
+    : undefined;
 }
 
 function titleFromAppendixFilename(filename) {
@@ -279,43 +282,10 @@ function appendixSortValue(id) {
   return appendixNumber ? Number(appendixNumber) : 999;
 }
 
-function newsletterIssueFromPdf(filename) {
-  const match = filename.match(/^(\d{4})_(\d{2})_([A-Za-z]+)(?:_(.+))?\.pdf$/);
-  if (!match) return null;
-
-  const year = Number(match[1]);
-  const monthNumber = Number(match[2]);
-  const month = MONTHS[match[3].toLowerCase()];
-  if (!month) return null;
-
-  const suffix = match[4]?.toLowerCase() ?? '';
-  const isBonus = suffix.includes('bonus') || suffix.includes('bulletin');
-  const id = `${year}_${month.abbr}${suffix.includes('bonus_issue') ? '_2' : isBonus ? '_bonus' : ''}`;
-  const titleSuffix = isBonus ? ' Bonus Issue' : '';
-  const baseName = filename.replace(/\.pdf$/i, '');
-
-  return {
-    id,
-    title: `Submitter Perspectives ${month.name}${titleSuffix} ${year}`,
-    displayTitle: `Submitter Perspectives ${month.name}${titleSuffix} ${year}`,
-    type: 'perspective',
-    author: 'Submitters',
-    date: `${month.name.toUpperCase()}${titleSuffix.toUpperCase()} ${year}`,
-    fullDate: `${year}-${String(monthNumber).padStart(2, '0')}-01`,
-    monthSort: monthNumber + (isBonus ? 0.5 : 0),
-    year,
-    filename,
-    pdfLink: `/content/newsletter/pdfs/${filename}`,
-    thumbnailOverride: getThumbnailLink(NEWSLETTER_THUMB_DIR, '/content/newsletter/thumbnails', filename),
-    aliases: [id, baseName, `${year}_${month.abbr}`],
-  };
-}
-
-function buildVideoIndex({ includeEmpty = false } = {}) {
+function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
   const videos = readJson(VIDEO_LIST);
   return videos.map((item) => {
-    const transcriptPath = path.join(ROOT, 'public', 'content', 'video', item.folder, item.vttFile || '');
-    const segments = readSegments(transcriptPath);
+    const segments = resolveTranscriptSegments(item, playlistIndex);
     return {
       id: item.id,
       title: item.displayTitle || item.title,
@@ -326,18 +296,20 @@ function buildVideoIndex({ includeEmpty = false } = {}) {
       folder: item.folder,
       videoFile: item.videoFile,
       vttFile: item.vttFile,
-      transcriptStatus: segments.length > 0 ? 'available' : item.vttFile ? 'empty' : 'missing',
+      youtubeId: item.youtubeId,
+      youtubeUrl: item.youtubeUrl,
+      youtubeStartTime: item.youtubeStartTime,
+      youtubeEndTime: item.youtubeEndTime,
+      transcriptStatus: segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
       segments,
     };
   }).filter((item) => includeEmpty || item.segments.length > 0);
 }
 
-function buildAudioIndex({ includeEmpty = false } = {}) {
+function buildAudioIndex({ includeEmpty = false } = {}, playlistIndex) {
   const audios = readJson(AUDIO_LIST);
   return audios.map((item) => {
-    const subFolder = item.type === 'quran-study' ? 'quran-studies' : 'messenger-audios';
-    const transcriptPath = path.join(ROOT, 'public', 'content', 'audio', subFolder, item.folder, item.vttFile || '');
-    const segments = readSegments(transcriptPath);
+    const segments = resolveTranscriptSegments(item, playlistIndex);
     return {
       id: item.id,
       title: item.displayTitle || item.title,
@@ -353,13 +325,46 @@ function buildAudioIndex({ includeEmpty = false } = {}) {
       alternateNumberLabel: item.alternateNumberLabel,
       youtubeId: item.youtubeId,
       youtubeUrl: item.youtubeUrl,
-      transcriptStatus: segments.length > 0 ? 'available' : item.vttFile ? 'empty' : 'missing',
+      youtubeStartTime: item.youtubeStartTime,
+      youtubeEndTime: item.youtubeEndTime,
+      transcriptStatus: segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
       segments,
     };
   }).filter((item) => includeEmpty || item.segments.length > 0);
 }
 
-function buildAppendixIndex() {
+function normalizeForPageMatch(value) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+async function extractPageTexts(pdfPath) {
+  const buffer = fs.readFileSync(pdfPath);
+  const pageTexts = [];
+  await pdfParse(buffer, {
+    pagerender: async (pageData) => {
+      const content = await pageData.getTextContent();
+      pageTexts.push(normalizeForPageMatch(content.items.map((item) => item.str).join(' ')));
+      return '';
+    },
+  });
+  return pageTexts;
+}
+
+// Sections read sequentially, so once a section's page is found, later sections
+// can only be on that page or later. Sections whose content doesn't match cleanly
+// (tables, images, short headings) inherit the current page rather than guessing.
+function findSectionPage(content, pageTexts, searchFromPage) {
+  const words = normalizeForPageMatch(content).split(' ').filter(Boolean);
+  const fragment = words.slice(0, 15).join(' ');
+  if (fragment.length > 8) {
+    for (let p = searchFromPage - 1; p < pageTexts.length; p++) {
+      if (pageTexts[p].includes(fragment)) return p + 1;
+    }
+  }
+  return null;
+}
+
+async function buildAppendixIndex() {
   if (!fs.existsSync(APPENDIX_PDF_DIR)) return [];
 
   const rows = readCsvRows(APPENDIX_CSV);
@@ -371,6 +376,7 @@ function buildAppendixIndex() {
   }
 
   const segmentsById = new Map();
+  const rowsById = new Map();
   for (const row of rows) {
     if (!row.id || !row.content) continue;
     const segments = segmentsById.get(row.id) ?? [];
@@ -384,11 +390,26 @@ function buildAppendixIndex() {
       sourceUrl: row.source_url || undefined,
     });
     segmentsById.set(row.id, segments);
+    rowsById.set(row.id, [...(rowsById.get(row.id) ?? []), row]);
   }
 
-  return fs
-    .readdirSync(APPENDIX_PDF_DIR)
-    .filter((name) => name.toLowerCase().endsWith('.pdf'))
+  const filenames = fs.readdirSync(APPENDIX_PDF_DIR).filter((name) => name.toLowerCase().endsWith('.pdf'));
+
+  for (const filename of filenames) {
+    const id = filename.replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
+    const segments = segmentsById.get(id);
+    if (!segments) continue;
+
+    const pageTexts = await extractPageTexts(path.join(APPENDIX_PDF_DIR, filename));
+    let currentPage = 1;
+    for (const segment of segments) {
+      const found = findSectionPage(segment.text, pageTexts, currentPage);
+      currentPage = found ?? currentPage;
+      segment.page = currentPage;
+    }
+  }
+
+  return filenames
     .map((filename) => {
       const id = filename.replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
       return {
@@ -407,58 +428,441 @@ function buildAppendixIndex() {
     .sort((a, b) => appendixSortValue(a.id) - appendixSortValue(b.id));
 }
 
-function buildNewsletterIndex() {
-  if (!fs.existsSync(NEWSLETTER_PDF_DIR)) return [];
+const STRUCTURED_TEXT_IGNORED_KEYS = new Set([
+  'type',
+  'id',
+  'issue_id',
+  'source_pdf',
+  'source_pdf_page',
+  'source_position',
+  'source_spread_index',
+  'source_spread_side',
+  'continued_on_page',
+  'page_number',
+  'pdf_page',
+]);
 
-  const issues = fs
-    .readdirSync(NEWSLETTER_PDF_DIR)
-    .filter((name) => name.toLowerCase().endsWith('.pdf'))
-    .map(newsletterIssueFromPdf)
+function collectStructuredText(value, key = '') {
+  if (typeof value === 'string') {
+    return STRUCTURED_TEXT_IGNORED_KEYS.has(key) ? [] : [value];
+  }
+  if (Array.isArray(value)) {
+    return value.flatMap((item) => collectStructuredText(item, key));
+  }
+  if (!value || typeof value !== 'object') return [];
+
+  return Object.entries(value).flatMap(([childKey, childValue]) => {
+    if (STRUCTURED_TEXT_IGNORED_KEYS.has(childKey)) return [];
+    return collectStructuredText(childValue, childKey);
+  });
+}
+
+function normalizeSearchText(parts) {
+  return parts
+    .map((part) => String(part || '').replace(/\s+/g, ' ').trim())
     .filter(Boolean)
-    .sort((a, b) => a.fullDate.localeCompare(b.fullDate) || a.monthSort - b.monthSort);
+    .join(' ')
+    .trim();
+}
 
-  const regularIssueByMonth = new Map(
-    issues
-      .filter((issue) => !issue.id.endsWith('_bonus') && !issue.id.endsWith('_2'))
-      .map((issue) => [issue.fullDate.slice(0, 7), issue])
-  );
+function buildNewsletterIndex() {
+  const jsonPath = path.join(NEWSLETTER_DIR, 'json', 'SP1985_1990_all_issues_combined.json');
+  if (!fs.existsSync(jsonPath)) return [];
 
-  const segmentsById = new Map();
-  for (const row of readCsvRows(NEWSLETTER_CSV)) {
-    const year = Number(row.year);
-    const month = MONTHS[(row.month ?? '').toLowerCase()];
-    const issue = month ? regularIssueByMonth.get(`${year}-${String(month.number).padStart(2, '0')}`) : null;
-    if (!issue || !row.content) continue;
+  const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+  const issuesData = data.issues || [];
 
-    const segments = segmentsById.get(issue.id) ?? [];
-    const page = Number(row.page) || 1;
-    segments.push({
+  return issuesData.map(issue => {
+    const id = issue.issue_id;
+    const segments = [];
+
+    const pages = issue.transcription?.pages || issue.pages || [];
+    if (pages.length > 0) {
+      pages.forEach(page => {
+        const pageNum = page.page_number;
+        const pageText = page.transcription || page.transcription_text;
+        if (typeof pageText === 'string' && pageText.trim()) {
+          segments.push({
+            start: 0,
+            end: 0,
+            text: pageText.trim(),
+            page: pageNum,
+            index: segments.length + 1,
+            htmlTag: 'page',
+          });
+        } else {
+          const blocks = page.blocks || page.sections || [];
+          blocks.forEach((block) => {
+            const text = normalizeSearchText(collectStructuredText(block));
+
+            if (text) {
+              segments.push({
+                start: 0,
+                end: 0,
+                text,
+                page: pageNum,
+                index: segments.length + 1,
+                htmlTag: block.type
+              });
+            }
+          });
+        }
+      });
+    }
+
+    const monthStr = String(issue.month_number).padStart(2, '0');
+    return {
+      id: id,
+      title: `Submitter Perspectives ${issue.date_label}`,
+      displayTitle: `Submitter Perspectives ${issue.date_label}`,
+      type: 'perspective',
+      author: 'Submitters',
+      date: issue.date_label,
+      fullDate: `${issue.year}-${monthStr}-01`,
+      year: issue.year,
+      filename: issue.source_file,
+      pdfLink: getNewsletterPdfLink(issue.year, issue.month_number, issue.month_name) || '',
+      thumbnailOverride: getNewsletterThumbnailLink(issue.year, issue.month_number, issue.month_name),
+      aliases: [id],
+      transcriptStatus: segments.length > 0 ? 'available' : 'missing',
+      segments: segments,
+    };
+  });
+}
+
+const LEGACY_BOOK_IDS = new Map([
+  ['The Contact Prayers.pdf', 'salat-booklet'],
+  ['Quran, Hadith, and Islam.pdf', 'quran-hadith-islam'],
+  ["The Computer Speaks God's Message to the World.pdf", 'computer-speaks'],
+  ['The Perpetual Miracle of Muhammad.pdf', 'perpetual-miracle'],
+  ['Miracle of Quran - Significance of the Mysterious Alphabets.pdf', 'miracle-of-quran-alphabets'],
+  ['Quran - Visual Presentation of the Miracle.pdf', 'quran-visual-presentation'],
+]);
+
+function slugifyBookName(value) {
+  return value
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function buildBookSegments(transcription) {
+  if (!transcription) return [];
+
+  const pageSegments = (transcription.pages || [])
+    .map((page, index) => ({
       start: 0,
       end: 0,
-      text: row.content,
-      page,
-      index: Number(row.index) || segments.length + 1,
-      htmlTag: row.html_tag || undefined,
-    });
-    segmentsById.set(issue.id, segments);
+      text: normalizeSearchText([
+        page.transcribed_text,
+        page.transcription,
+        page.transcription_text,
+        page.reading_text,
+        page.content,
+      ]),
+      page: Number(page.pdf_page ?? page.page_number ?? index + 1),
+      label: 'page',
+    }))
+    .filter((segment) => segment.text);
+
+  if (pageSegments.length > 0) return pageSegments;
+
+  return (transcription.sections || [])
+    .map((section, index) => ({
+      start: 0,
+      end: 0,
+      text: normalizeSearchText([section.title, section.content]),
+      page: Number(section.pdf_pages?.[0] ?? index + 1),
+      label: 'section',
+    }))
+    .filter((segment) => segment.text);
+}
+
+function canonicalBookSourceKey(value) {
+  return path.basename(String(value || ''))
+    .replace(/\(\d+\)(?=\.pdf$)/i, '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function bookSourceFiles(transcription) {
+  const metadata = transcription?.metadata || transcription?.manifest || {};
+  return metadata.source_files || (metadata.source_file ? [metadata.source_file] : metadata.source_pdf ? [metadata.source_pdf] : []);
+}
+
+function loadBookTranscriptions() {
+  const transcriptionBySourceFile = new Map();
+
+  // Keep the older hand-created JSON files as a fallback, then deliberately
+  // overwrite them with the canonical corpus transcriptions below.
+  if (fs.existsSync(BOOKS_JSON_DIR)) {
+    const jsonFiles = fs.readdirSync(BOOKS_JSON_DIR).filter((file) => file.endsWith('.json'));
+    for (const file of jsonFiles) {
+      const data = readJson(path.join(BOOKS_JSON_DIR, file));
+      for (const sourceFile of bookSourceFiles(data)) {
+        transcriptionBySourceFile.set(canonicalBookSourceKey(sourceFile), {
+          data,
+          source: `public/content/books/jsons/${file}`,
+          method: data.metadata?.transcription_method,
+        });
+      }
+    }
   }
 
-  return issues.map((issue) => ({
-    id: issue.id,
-    title: issue.title,
-    displayTitle: issue.displayTitle,
-    type: issue.type,
-    author: issue.author,
-    date: issue.date,
-    fullDate: issue.fullDate,
-    year: issue.year,
-    filename: issue.filename,
-    pdfLink: issue.pdfLink,
-    thumbnailOverride: issue.thumbnailOverride,
-    aliases: issue.aliases,
-    transcriptStatus: segmentsById.has(issue.id) ? 'available' : 'empty',
-    segments: segmentsById.get(issue.id) ?? [],
-  }));
+  const corpusManifestPath = path.join(BOOKS_TRANSCRIPTION_DIR, 'corpus_manifest.json');
+  if (fs.existsSync(corpusManifestPath)) {
+    const corpusManifest = readJson(corpusManifestPath);
+    for (const entry of corpusManifest) {
+      const completePath = path.join(BOOKS_TRANSCRIPTION_DIR, entry.slug, `${entry.slug}_complete.json`);
+      if (!fs.existsSync(completePath)) {
+        throw new Error(`Canonical book transcription is missing: ${path.relative(ROOT, completePath)}`);
+      }
+      const data = readJson(completePath);
+      transcriptionBySourceFile.set(canonicalBookSourceKey(entry.source_pdf), {
+        data,
+        source: path.relative(ROOT, completePath).replace(/\\/g, '/'),
+        method: data.metadata?.transcription_method,
+        quality: {
+          meanOcrConfidence: entry.mean_ocr_confidence,
+          lowConfidencePages: entry.low_confidence_pages,
+          unverifiedArabicSegments: entry.unverified_arabic_segments,
+        },
+      });
+    }
+  }
+
+  // The two historical Quran volumes are also books in the public catalog.
+  // Their complete page transcriptions provide full-text PDF search even where
+  // an edition does not contain safe verse-level boundaries (notably 1981).
+  for (const edition of ['1981', '1989']) {
+    const completePath = path.join(QURAN_DIR, edition, `Quran${edition}_complete.json`);
+    if (!fs.existsSync(completePath)) continue;
+    const data = readJson(completePath);
+    for (const sourceFile of bookSourceFiles(data)) {
+      transcriptionBySourceFile.set(canonicalBookSourceKey(sourceFile), {
+        data,
+        source: path.relative(ROOT, completePath).replace(/\\/g, '/'),
+        method: data.manifest?.method,
+        editionYear: Number(data.manifest?.edition_year) || Number(edition),
+      });
+    }
+  }
+
+  return transcriptionBySourceFile;
+}
+
+// The PDFs are authoritative for the readable catalog. Canonical private source
+// transcriptions enrich them with page-level search text and provenance.
+function buildBooksIndex() {
+  if (!fs.existsSync(BOOKS_DIR)) return [];
+
+  const transcriptionBySourceFile = loadBookTranscriptions();
+
+  return fs.readdirSync(BOOKS_DIR)
+    .filter((filename) => filename.toLowerCase().endsWith('.pdf'))
+    .sort((a, b) => a.localeCompare(b))
+    .map((filename) => {
+      const transcriptionRecord = transcriptionBySourceFile.get(canonicalBookSourceKey(filename));
+      const transcription = transcriptionRecord?.data;
+      const fallbackTitle = filename.replace(/\.pdf$/i, '');
+      const title = transcription?.metadata?.title || transcription?.manifest?.title || fallbackTitle;
+      const segments = buildBookSegments(transcription);
+      return {
+        id: LEGACY_BOOK_IDS.get(filename) || slugifyBookName(fallbackTitle),
+        title,
+        displayTitle: title,
+        type: 'other',
+        author: 'Dr. Rashad Khalifa',
+        filename,
+        pdfLink: `/content/books/${filename}`,
+        thumbnailOverride: getThumbnailLink(BOOKS_THUMB_DIR, '/content/books/thumbnails', filename),
+        aliases: LEGACY_BOOK_IDS.has(filename) ? [slugifyBookName(fallbackTitle)] : [],
+        segments,
+        transcriptStatus: segments.length > 0 ? 'available' : 'missing',
+        transcriptionSource: transcriptionRecord?.source,
+        transcriptionMethod: transcriptionRecord?.method,
+        transcriptionQuality: transcriptionRecord?.quality,
+        editionYear: transcriptionRecord?.editionYear,
+      };
+    });
+}
+
+// Reads the raw Quran CSVs (verses, chapters, footnotes, subtitles — word-by-word
+// is intentionally not used here) and joins them by verse_id into one record per
+// chapter. Footnotes and subtitles are folded into each verse's searchable text
+// so a search hit inside commentary still surfaces the verse it belongs to.
+function buildQuranIndex() {
+  const primaryDir = path.join(QURAN_DIR, '1992');
+  const chapterRows = readCsvRows(path.join(primaryDir, 'ws_quran_chapters_rows.csv'));
+  const textRows = readCsvRows(path.join(primaryDir, 'ws_quran_text_rows.csv'));
+  const footnoteRows = readCsvRows(path.join(primaryDir, 'ws_quran_footnotes_rows.csv'));
+  const subtitleRows = readCsvRows(path.join(primaryDir, 'ws_quran_subtitles_rows.csv'));
+
+  if (chapterRows.length === 0 || textRows.length === 0) {
+    return { quranMasterItems: [], quranChapters: [] };
+  }
+
+  function loadEdition(dirName) {
+    if (dirName !== '1989') return new Map();
+    const editionDir = path.join(QURAN_DIR, dirName);
+    const t = readCsvRows(path.join(editionDir, 'Quran1989_verse_index.csv')).map((row) => ({
+      verse_id: row.verse_id,
+      english: row.english_1989,
+    }));
+    const f = readCsvRows(path.join(editionDir, 'Quran1989_footnotes.csv')).flatMap((row) => {
+      const match = row.verse_reference?.match(/^(\d+):(\d+)(?:-(\d+))?$/);
+      if (!match) return [];
+      const chapter = Number(match[1]);
+      const start = Number(match[2]);
+      let end = Number(match[3] || match[2]);
+      if (end < start && match[3]) {
+        const magnitude = 10 ** match[3].length;
+        end = Math.floor(start / magnitude) * magnitude + end;
+        if (end < start) end += magnitude;
+      }
+      return Array.from({ length: end - start + 1 }, (_, index) => ({
+        verse_id: `${chapter}:${start + index}`,
+        english: row.text,
+      }));
+    });
+    const s = readCsvRows(path.join(editionDir, 'Quran1989_subheadings.csv')).map((row) => ({
+      verse_id: row.verse_id || (row.chapter_number && row.placement_before_verse
+        ? `${row.chapter_number}:${row.placement_before_verse}`
+        : ''),
+      english: row.text,
+    }));
+
+    const fMap = new Map();
+    for (const row of f) {
+      if (row.verse_id && row.english) fMap.set(row.verse_id, row.english.replace(/^±\d+:\d+(-\d+)?\s*/, '').trim());
+    }
+    const sMap = new Map();
+    for (const row of s) {
+      if (row.verse_id && row.english) sMap.set(row.verse_id, row.english.replace(/\*+$/, '').trim());
+    }
+    const vMap = new Map();
+    for (const row of t) {
+      if (row.verse_id && row.english) {
+        vMap.set(row.verse_id, {
+          english: row.english.replace(/±/g, '').trim(),
+          subtitle: sMap.get(row.verse_id) || undefined,
+          footnote: fMap.get(row.verse_id) || undefined,
+        });
+      }
+    }
+    return vMap;
+  }
+
+  const ed1989 = loadEdition('1989');
+  const expectedVerseIds = textRows
+    .filter((row) => Number(row.chapter_number) > 0 && Number(row.verse_number) > 0)
+    .map((row) => row.verse_id);
+  const missing1989VerseIds = expectedVerseIds.filter((verseId) => !ed1989.has(verseId));
+  if (missing1989VerseIds.length > 0) {
+    throw new Error(`1989 Quran edition is missing ${missing1989VerseIds.length} numbered verses (first: ${missing1989VerseIds.slice(0, 5).join(', ')})`);
+  }
+
+  const footnoteByVerseId = new Map();
+  for (const row of footnoteRows) {
+    if (!row.verse_id || !row.english) continue;
+    footnoteByVerseId.set(row.verse_id, row.english.replace(/^±\d+:\d+(-\d+)?\s*/, '').trim());
+  }
+
+  const subtitleByVerseId = new Map();
+  for (const row of subtitleRows) {
+    if (!row.verse_id || !row.english) continue;
+    subtitleByVerseId.set(row.verse_id, row.english.replace(/\*+$/, '').trim());
+  }
+
+  const versesByChapter = new Map();
+  for (const row of textRows) {
+    const chapterNumber = Number(row.chapter_number);
+    const verseNumber = Number(row.verse_number);
+    if (!chapterNumber || !verseNumber) continue;
+
+    const verse = {
+      verseNumber,
+      verseId: row.verse_id,
+      arabic: row.arabic,
+      arabicClean: row.arabic_clean,
+      transliterated: row.transliterated,
+      english: (row.english || '').replace(/±/g, '').trim(),
+      subtitle: subtitleByVerseId.get(row.verse_id) || undefined,
+      footnote: footnoteByVerseId.get(row.verse_id) || undefined,
+      editions: {},
+    };
+
+    if (ed1989.has(row.verse_id)) verse.editions['1989'] = ed1989.get(row.verse_id);
+    if (Object.keys(verse.editions).length === 0) delete verse.editions;
+
+    const list = versesByChapter.get(chapterNumber) ?? [];
+    list.push(verse);
+    versesByChapter.set(chapterNumber, list);
+  }
+  for (const list of versesByChapter.values()) {
+    list.sort((a, b) => a.verseNumber - b.verseNumber);
+  }
+
+  const quranChapters = [];
+  const quranMasterItems = [];
+
+  for (const row of chapterRows) {
+    const chapterNumber = Number(row.chapter_number);
+    if (!chapterNumber) continue;
+
+    const verses = versesByChapter.get(chapterNumber) ?? [];
+    const displayTitle = `${chapterNumber}. ${row.title_english}`;
+
+    quranChapters.push({
+      chapterNumber,
+      verseCount: Number(row.chapter_verses) || verses.length,
+      revelationOrder: Number(row.revelation_order) || undefined,
+      titleEnglish: row.title_english,
+      titleArabic: row.title_arabic,
+      titleTransliterated: row.title_transliterated,
+      verses,
+    });
+
+    // One segment per content kind (rather than one combined blob per verse) so a
+    // search hit can be labeled as coming from the verse text, its heading, or its
+    // footnote — otherwise a footnote match reads as an unexplained Quran result.
+    const segments = [];
+    for (const verse of verses) {
+      if (verse.subtitle) {
+        segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.subtitle, page: verse.verseNumber, label: 'heading-1992' });
+      }
+      if (verse.english) {
+        segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.english, page: verse.verseNumber, label: 'verse-1992' });
+      }
+      if (verse.footnote) {
+        segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.footnote, page: verse.verseNumber, label: 'footnote-1992' });
+      }
+
+      if (verse.editions?.['1989']) {
+        if (verse.editions['1989'].subtitle) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].subtitle, page: verse.verseNumber, label: 'heading-1989' });
+        if (verse.editions['1989'].english) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].english, page: verse.verseNumber, label: 'verse-1989' });
+        if (verse.editions['1989'].footnote) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].footnote, page: verse.verseNumber, label: 'footnote-1989' });
+      }
+    }
+
+    quranMasterItems.push({
+      id: `quran/${chapterNumber}`,
+      title: displayTitle,
+      displayTitle,
+      type: 'quran',
+      author: 'Dr. Rashad Khalifa',
+      thumbnailOverride: '/images/placeholders/rashad-khalifa.png',
+      segments,
+      transcriptStatus: segments.length > 0 ? 'available' : 'missing',
+    });
+  }
+
+  return { quranMasterItems, quranChapters };
 }
 
 function masterRecord(item, category) {
@@ -484,7 +888,13 @@ function masterRecord(item, category) {
     alternateNumberLabel: item.alternateNumberLabel,
     youtubeId: item.youtubeId,
     youtubeUrl: item.youtubeUrl,
+    youtubeStartTime: item.youtubeStartTime,
+    youtubeEndTime: item.youtubeEndTime,
     aliases: item.aliases,
+    transcriptionSource: item.transcriptionSource,
+    transcriptionMethod: item.transcriptionMethod,
+    transcriptionQuality: item.transcriptionQuality,
+    editionYear: item.editionYear,
     transcriptStatus: item.transcriptStatus ?? ((item.segments?.length ?? 0) > 0 ? 'available' : 'missing'),
     segmentCount: item.segments?.length ?? 0,
     segments: compactSegments(item.segments ?? []),
@@ -492,7 +902,7 @@ function masterRecord(item, category) {
 }
 
 function addAsset(assets, item, category, assetKind, localPath) {
-  if (!localPath) return;
+  if (!localPath || /^https?:\/\//i.test(localPath)) return;
   const normalizedLocalPath = normalizePublicPath(localPath);
   const absolutePath = toAbsolutePublicPath(normalizedLocalPath);
   assets.push({
@@ -502,12 +912,9 @@ function addAsset(assets, item, category, assetKind, localPath) {
     title: item.displayTitle || item.title,
     asset_kind: assetKind,
     local_path: normalizedLocalPath,
-    r2_key: normalizedLocalPath,
-    public_url: publicUrlForKey(normalizedLocalPath),
     absolutePath,
     exists: fs.existsSync(absolutePath),
     content_type: contentTypeFor(normalizedLocalPath),
-    upload_status: 'pending',
   });
 }
 
@@ -515,15 +922,12 @@ async function buildAssetManifest(masterIndex) {
   const assets = [];
   for (const item of masterIndex) {
     if (item.category === 'Videos') {
-      addAsset(assets, item, item.category, 'media', toPublicLocalPath('content', 'video', item.folder, item.videoFile || ''));
-      addAsset(assets, item, item.category, 'transcript', toPublicLocalPath('content', 'video', item.folder, item.vttFile || ''));
-    } else if (item.category === 'Quran Studies') {
-      addAsset(assets, item, item.category, 'media', item.audioFile ? toPublicLocalPath('content', 'audio', 'quran-studies', item.folder, item.audioFile) : '');
-      addAsset(assets, item, item.category, 'transcript', toPublicLocalPath('content', 'audio', 'quran-studies', item.folder, item.vttFile || ''));
-    } else if (item.category === 'Messenger Audios') {
-      addAsset(assets, item, item.category, 'media', item.audioFile ? toPublicLocalPath('content', 'audio', 'messenger-audios', item.folder, item.audioFile) : '');
-      addAsset(assets, item, item.category, 'transcript', toPublicLocalPath('content', 'audio', 'messenger-audios', item.folder, item.vttFile || ''));
-    } else if (item.category === 'Submitter Perspectives' || item.category === 'Appendices') {
+      if (!item.youtubeId && !item.youtubeUrl && item.videoFile) {
+        addAsset(assets, item, item.category, 'media', toPublicLocalPath('content', 'video', item.folder, item.videoFile));
+      }
+    } else if (item.category === 'Quran Studies' || item.category === 'Messenger Audios') {
+      // Audio media plays from YouTube; no local media asset to track.
+    } else if (item.category === 'Submitter Perspectives' || item.category === 'Appendices' || item.category === 'Books') {
       addAsset(assets, item, item.category, 'pdf', item.pdfLink);
     }
 
@@ -540,122 +944,62 @@ async function buildAssetManifest(masterIndex) {
   return assets;
 }
 
-function buildTranscriptRows(masterIndex) {
-  const rows = [];
-  for (const item of masterIndex) {
-    const sourceFile = sourceTranscriptPath(item);
-    const segments = item.segments ?? [];
-    if (segments.length === 0) {
-      rows.push({
-        record_id: item.id,
-        category: item.category,
-        type: item.type,
-        title: item.displayTitle || item.title,
-        primary_number: item.primaryNumber,
-        alternate_numbers: item.alternateNumbers,
-        transcript_status: item.transcriptStatus || 'empty',
-        segment_index: '',
-        start: '',
-        end: '',
-        page: '',
-        section_index: '',
-        source_file: sourceFile,
-        text: '',
-      });
-      continue;
-    }
-
-    segments.forEach((segment, index) => {
-      rows.push({
-        record_id: item.id,
-        category: item.category,
-        type: item.type,
-        title: item.displayTitle || item.title,
-        primary_number: item.primaryNumber,
-        alternate_numbers: item.alternateNumbers,
-        transcript_status: item.transcriptStatus || 'available',
-        segment_index: index + 1,
-        start: segment.start ?? '',
-        end: segment.end ?? '',
-        page: segment.page ?? '',
-        section_index: segment.sectionIndex ?? segment.index ?? '',
-        source_file: sourceFile,
-        text: segment.text ?? '',
-      });
-    });
-  }
-  return rows;
-}
-
-function sourceTranscriptPath(item) {
-  if (item.category === 'Videos') return toPublicLocalPath('content', 'video', item.folder, item.vttFile || '');
-  if (item.category === 'Quran Studies') return toPublicLocalPath('content', 'audio', 'quran-studies', item.folder, item.vttFile || '');
-  if (item.category === 'Messenger Audios') return toPublicLocalPath('content', 'audio', 'messenger-audios', item.folder, item.vttFile || '');
-  if (item.category === 'Submitter Perspectives') return 'public/content/newsletter/csv/newsletters_rows.csv';
-  if (item.category === 'Appendices') return 'public/content/appendix/csv/quran_appendices_rows.csv';
-  return '';
-}
-
 async function main() {
-const videoSearchIndex = buildVideoIndex();
-const audioSearchIndex = buildAudioIndex();
-const fullVideoIndex = buildVideoIndex({ includeEmpty: true });
-const fullAudioIndex = buildAudioIndex({ includeEmpty: true });
-const appendixIndex = buildAppendixIndex();
-const newsletterIndex = buildNewsletterIndex();
-const masterIndex = [
-  ...fullVideoIndex.map((item) => masterRecord(item, 'Videos')),
-  ...fullAudioIndex
-    .filter((item) => item.type === 'quran-study')
-    .map((item) => masterRecord(item, 'Quran Studies')),
-  ...fullAudioIndex
-    .filter((item) => item.type === 'messenger-audio')
-    .map((item) => masterRecord(item, 'Messenger Audios')),
-  ...newsletterIndex.map((item) => masterRecord(item, 'Submitter Perspectives')),
-  ...appendixIndex.map((item) => masterRecord(item, 'Appendices')),
-];
-const assetManifest = await buildAssetManifest(masterIndex);
-const transcriptRows = buildTranscriptRows(masterIndex);
+  const playlistIndex = loadPlaylistSegmentsByYoutubeId();
+  const fullVideoIndex = buildVideoIndex({ includeEmpty: true }, playlistIndex);
+  const fullAudioIndex = buildAudioIndex({ includeEmpty: true }, playlistIndex);
+  const appendixIndex = await buildAppendixIndex();
+  const newsletterIndex = buildNewsletterIndex();
+  const { quranMasterItems, quranChapters } = buildQuranIndex();
+  const booksIndex = buildBooksIndex();
+  const masterIndex = [
+    ...fullVideoIndex.map((item) => masterRecord(item, 'Videos')),
+    ...fullAudioIndex
+      .filter((item) => item.type === 'quran-study')
+      .map((item) => masterRecord(item, 'Quran Studies')),
+    ...fullAudioIndex
+      .filter((item) => item.type === 'messenger-audio')
+      .map((item) => masterRecord(item, 'Messenger Audios')),
+    ...newsletterIndex.map((item) => masterRecord(item, 'Submitter Perspectives')),
+    ...appendixIndex.map((item) => masterRecord(item, 'Appendices')),
+    ...quranMasterItems.map((item) => masterRecord(item, 'Quran')),
+    ...booksIndex.map((item) => masterRecord(item, 'Books')),
+  ];
 
-fs.writeFileSync(VIDEO_OUTPUT, `${JSON.stringify(videoSearchIndex, null, 2)}\n`);
-fs.writeFileSync(AUDIO_OUTPUT, `${JSON.stringify(audioSearchIndex, null, 2)}\n`);
-fs.writeFileSync(MASTER_OUTPUT, `${JSON.stringify(masterIndex, null, 2)}\n`);
-fs.writeFileSync(ASSET_MANIFEST_OUTPUT, `${toCsv(assetManifest, [
-  'record_id',
-  'category',
-  'type',
-  'title',
-  'asset_kind',
-  'local_path',
-  'r2_key',
-  'public_url',
-  'size_bytes',
-  'sha256',
-  'content_type',
-  'upload_status',
-])}\n`);
-fs.writeFileSync(TRANSCRIPTS_MASTER_OUTPUT, `${toCsv(transcriptRows, [
-  'record_id',
-  'category',
-  'type',
-  'title',
-  'primary_number',
-  'alternate_numbers',
-  'transcript_status',
-  'segment_index',
-  'start',
-  'end',
-  'page',
-  'section_index',
-  'source_file',
-  'text',
-])}\n`);
+  const validationReport = assertValidArchiveRecords(masterIndex, {
+    publicDir: path.join(ROOT, 'public'),
+  });
+  const assetManifest = await buildAssetManifest(masterIndex);
+  const booksList = masterIndex
+    .filter((item) => item.category === 'Books')
+    .map((item) => {
+      const summary = { ...item };
+      delete summary.segments;
+      return summary;
+    });
 
-console.log(`Wrote ${videoSearchIndex.length} video records to ${path.relative(ROOT, VIDEO_OUTPUT)}`);
-console.log(`Wrote ${audioSearchIndex.length} audio records to ${path.relative(ROOT, AUDIO_OUTPUT)}`);
-console.log(`Wrote ${masterIndex.length} master records to ${path.relative(ROOT, MASTER_OUTPUT)}`);
-console.log(`Wrote ${assetManifest.length} asset rows to ${path.relative(ROOT, ASSET_MANIFEST_OUTPUT)}`);
-console.log(`Wrote ${transcriptRows.length} transcript rows to ${path.relative(ROOT, TRANSCRIPTS_MASTER_OUTPUT)}`);
+  fs.writeFileSync(QURAN_CHAPTERS_OUTPUT, `${JSON.stringify(quranChapters, null, 2)}\n`);
+  fs.writeFileSync(MASTER_OUTPUT, `${JSON.stringify(masterIndex, null, 2)}\n`);
+  fs.writeFileSync(BOOKS_LIST_OUTPUT, `${JSON.stringify(booksList, null, 2)}\n`);
+  fs.writeFileSync(LEGACY_BOOKS_OUTPUT, `${JSON.stringify(booksList, null, 2)}\n`);
+  fs.writeFileSync(VALIDATION_OUTPUT, `${JSON.stringify(validationReport, null, 2)}\n`);
+  fs.writeFileSync(ASSET_MANIFEST_OUTPUT, `${toCsv(assetManifest, [
+    'record_id',
+    'category',
+    'type',
+    'title',
+    'asset_kind',
+    'local_path',
+    'size_bytes',
+    'sha256',
+    'content_type',
+  ])}\n`);
+
+  console.log(`Wrote ${masterIndex.length} master records to ${path.relative(ROOT, MASTER_OUTPUT)}`);
+  console.log(`Wrote ${booksList.length} book records to ${path.relative(ROOT, BOOKS_LIST_OUTPUT)}`);
+  console.log(`Wrote ${assetManifest.length} asset rows to ${path.relative(ROOT, ASSET_MANIFEST_OUTPUT)}`);
+  console.log(`Wrote ${quranChapters.length} Quran chapters to ${path.relative(ROOT, QURAN_CHAPTERS_OUTPUT)}`);
+  for (const warning of validationReport.warnings) console.warn(`Warning: ${warning}`);
 }
 
 main().catch((error) => {

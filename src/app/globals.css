@@ -4,39 +4,30 @@
 
 :root,
 [data-theme="light"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #7e22ce;
-  --primary-foreground: #ffffff;
-  --card: #ffffff;
-  --card-foreground: #171717;
-  --border: #e5e5e5;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
-  --ed-bg: #f3ede4;
-  --ed-fg: #1b1a18;
-  --ed-fg-muted: #625c54;
-  --ed-rule: rgba(27, 26, 24, 0.16);
-  --ed-surface: #fbf7f1;
-  --ed-accent: #b85114;
-  --ed-accent-soft: #d9783f;
-  --hero-vanta-background: #f3ede4;
-  --hero-vanta-sky: #efe7dd;
-  --hero-vanta-cloud: #cbbca9;
-  --hero-vanta-cloud-shadow: #625c54;
-  --hero-vanta-sun: #f6ae82;
-  --hero-vanta-sun-glare: #6b3d2e;
-  --hero-vanta-sunlight: #f6ae82;
-  --hero-vanta-speed: 0.75;
+  /* Warm cream/ink palette. Pure white backgrounds read as glare against
+     the rest of the palette, so every token stays below white. */
+  --ed-bg: oklch(0.92 0.025 78);
+  --ed-fg: oklch(0.22 0.012 70);
+  --ed-fg-muted: oklch(0.46 0.025 69);
+  --ed-rule: color-mix(in oklch, var(--ed-fg) 17%, transparent);
+  --ed-surface: oklch(0.95 0.021 79);
+  --ed-accent: oklch(0.54 0.15 43);
+  --ed-accent-soft: oklch(0.68 0.13 47);
+  /* Backdrop specifically for full-page document viewers (PDF/book pages),
+     which render a literal white page and need a dimmer neutral surround. */
+  --ed-viewer-bg: oklch(0.86 0.022 78);
+  /* Generic aliases kept for legacy utilities (loading skeletons,
+     divide-border). The --ed-* group is the single source of truth. */
+  --background: var(--ed-bg);
+  --foreground: var(--ed-fg);
+  --border: var(--ed-rule);
+  --muted: var(--ed-surface);
+  --muted-foreground: var(--ed-fg-muted);
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
   --color-border: var(--border);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -47,19 +38,15 @@
   --color-ed-surface: var(--ed-surface);
   --color-ed-accent: var(--ed-accent);
   --color-ed-accent-soft: var(--ed-accent-soft);
+  --color-ed-viewer-bg: var(--ed-viewer-bg);
 
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-libre-franklin);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-serif: var(--font-local-superior);
-  --font-heading: var(--font-local-superior);
-  --font-roboto-slab: var(--font-roboto-slab);
-  --font-arabic: var(--font-amiri);
-  --font-sora: var(--font-sora);
-  --font-superior: var(--font-local-superior);
-  --font-glacial: var(--font-local-glacial);
-  --font-body: var(--font-sora);
-  --font-ui: var(--font-local-glacial);
   --font-display: var(--font-local-superior);
+  --font-arabic: var(--font-amiri);
+  --font-body: var(--font-libre-franklin);
+  --font-ui: var(--font-libre-franklin);
 }
 
 /* Universal Arabic Font */
@@ -68,42 +55,16 @@
   font-family: var(--font-arabic), serif;
 }
 
-/* Content Font */
-.font-sora {
-  font-family: var(--font-sora), sans-serif;
-}
-
 .dark,
 [data-theme="dark"] {
-  --background: #09090b;
-  /* Zinc 950 */
-  --foreground: #fafafa;
-  /* Zinc 50 */
-  --primary: #a855f7;
-  --primary-foreground: #ffffff;
-  --card: #18181b;
-  /* Zinc 900 */
-  --card-foreground: #fafafa;
-  --border: #27272a;
-  /* Zinc 800 */
-  --muted: #27272a;
-  --muted-foreground: #a1a1aa;
-  /* Zinc 400 */
-  --ed-bg: #111111;
-  --ed-fg: #f6efe4;
-  --ed-fg-muted: #cbbca9;
-  --ed-rule: rgba(246, 239, 228, 0.12);
-  --ed-surface: #181817;
-  --ed-accent: #f6ae82;
-  --ed-accent-soft: #c85a4e;
-  --hero-vanta-background: #000000;
-  --hero-vanta-sky: #161616;
-  --hero-vanta-cloud: #adc1de;
-  --hero-vanta-cloud-shadow: #183550;
-  --hero-vanta-sun: #f6ae82;
-  --hero-vanta-sun-glare: #6b3d2e;
-  --hero-vanta-sunlight: #f6ae82;
-  --hero-vanta-speed: 0.85;
+  --ed-bg: oklch(0.18 0.005 70);
+  --ed-fg: oklch(0.95 0.023 78);
+  --ed-fg-muted: oklch(0.78 0.035 72);
+  --ed-rule: color-mix(in oklch, var(--ed-fg) 14%, transparent);
+  --ed-surface: oklch(0.22 0.007 70);
+  --ed-accent: oklch(0.79 0.11 48);
+  --ed-accent-soft: oklch(0.61 0.14 31);
+  --ed-viewer-bg: oklch(0.18 0.005 70);
 }
 
 html,
@@ -112,44 +73,47 @@ body {
   overflow-x: clip;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  transition: background-color 220ms ease-out, color 220ms ease-out;
+  font-family: var(--font-libre-franklin), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-feature-settings: "kern" 1, "liga" 1, "case" 1;
+  transition: background-color 220ms cubic-bezier(0.16, 1, 0.3, 1), color 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-body {
-  text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
 }
 
 ::selection {
-  background: color-mix(in srgb, #ffa878 28%, transparent);
-  color: #f6efe4;
-}
-
-.archive-atmosphere {
-  background:
-    radial-gradient(circle at top, color-mix(in srgb, var(--ed-accent) 6%, transparent), transparent 34%),
-    radial-gradient(circle at 80% 18%, color-mix(in srgb, var(--ed-accent) 4%, transparent), transparent 28%),
-    linear-gradient(180deg, color-mix(in srgb, var(--ed-surface) 82%, var(--ed-bg)) 0%, var(--ed-bg) 56%, var(--background) 100%);
-}
-
-.archive-grid {
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--ed-fg) 8%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--ed-fg) 8%, transparent) 1px, transparent 1px);
-  background-size: 108px 108px;
-}
-
-.archive-image-fade {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.4) 40%,
-    var(--ed-bg) 95%
-  );
+  background: color-mix(in srgb, var(--ed-accent) 28%, transparent);
+  color: var(--ed-fg);
 }
 
 .archive-soft-orb {
@@ -159,76 +123,100 @@ body {
 }
 
 .soft-shell {
-  backdrop-filter: blur(12px);
-  background-color: transparent;
-  background-image: linear-gradient(138deg, color-mix(in srgb, var(--ed-surface) 70%, transparent) 22%, color-mix(in srgb, var(--ed-bg) 70%, transparent) 82%);
-  border-radius: 1.5rem;
-  border: 1px solid color-mix(in srgb, var(--ed-fg) 6%, transparent);
-  box-shadow: 
-    inset 0 1px 0 0 color-mix(in srgb, var(--ed-fg) 10%, transparent),
-    inset 0 0 0 1px color-mix(in srgb, var(--ed-fg) 4%, transparent),
-    0 0 20px 3px rgba(0, 0, 0, 0.15),
-    0 0 40px 20px rgba(0, 0, 0, 0.08);
+  background: color-mix(in oklch, var(--ed-surface) 72%, var(--ed-bg));
+  border-radius: 0.875rem;
+  border: 1px solid var(--ed-rule);
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--ed-fg) 5%, transparent), 0 14px 32px color-mix(in oklch, var(--ed-fg) 7%, transparent);
 }
 
 .soft-panel {
-  background-image: linear-gradient(137deg, color-mix(in srgb, var(--ed-surface) 80%, transparent) 5%, color-mix(in srgb, var(--ed-bg) 80%, transparent) 75%);
-  border: 1px solid color-mix(in srgb, var(--ed-fg) 6%, transparent);
-  border-radius: 1.25rem;
-  box-shadow: 
-    inset 0 1px 1px 0 color-mix(in srgb, var(--ed-fg) 15%, transparent),
-    inset 0 0 0 1px color-mix(in srgb, var(--ed-fg) 4%, transparent),
-    0 2px 40px 10px rgba(0, 0, 0, 0.05),
-    0 0 16px -7px rgba(0, 0, 0, 0.05);
+  background: var(--ed-surface);
+  border: 1px solid var(--ed-rule);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--ed-fg) 4%, transparent);
 }
 
 .soft-pill {
-  backdrop-filter: blur(8px);
-  background-image: linear-gradient(137deg, color-mix(in srgb, var(--ed-surface) 65%, transparent) 5%, color-mix(in srgb, var(--ed-bg) 85%, transparent) 75%);
-  border: 1px solid color-mix(in srgb, var(--ed-fg) 6%, transparent);
+  background: color-mix(in oklch, var(--ed-surface) 74%, var(--ed-bg));
+  border: 1px solid var(--ed-rule);
   border-radius: 999px;
-  box-shadow: 
-    inset 0 1px 1px 0 color-mix(in srgb, var(--ed-fg) 15%, transparent),
-    0 14px 38px rgba(0, 0, 0, 0.14);
+  box-shadow: none;
+}
+
+.archive-kicker {
+  color: var(--ed-accent);
+  font-family: var(--font-ui), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.archive-button {
+  display: inline-flex;
+  min-height: 2.875rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  border-radius: 0.625rem;
+  padding: 0.75rem 1.15rem;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  transition: color 180ms cubic-bezier(0.16, 1, 0.3, 1), background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.archive-button:active {
+  transform: translateY(1px);
+}
+
+.archive-button-primary {
+  background: var(--ed-fg);
+  color: var(--ed-bg);
+}
+
+.archive-button-primary:hover {
+  background: var(--ed-accent);
+  color: var(--ed-bg);
+}
+
+.archive-button-secondary {
+  background: transparent;
+  border: 1px solid var(--ed-rule);
+  color: var(--ed-fg);
+}
+
+.archive-button-secondary:hover {
+  background: var(--ed-surface);
+  border-color: color-mix(in oklch, var(--ed-accent) 55%, var(--ed-rule));
+  color: var(--ed-accent);
+}
+
+.archive-input {
+  min-height: 3.25rem;
+  border: 1px solid var(--ed-rule);
+  border-radius: 0.75rem;
+  background: var(--ed-surface);
+  color: var(--ed-fg);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.archive-input::placeholder {
+  color: color-mix(in oklch, var(--ed-fg-muted) 76%, transparent);
+}
+
+.archive-input:focus {
+  border-color: var(--ed-accent);
+  outline: none;
 }
 
 .media-card-shell {
   content-visibility: auto;
   contain-intrinsic-size: 320px;
-}
-
-.hero-vanta-field > *:not(.hero-vanta-canvas):not(.hero-vanta-shade) {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-vanta-field {
-  isolation: isolate;
-}
-
-.hero-vanta-shade {
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
-}
-
-.hero-vanta-canvas {
-  inset: 0;
-  pointer-events: auto;
-  position: absolute;
-  z-index: 0;
-}
-
-.hero-vanta-canvas canvas {
-  opacity: 0.72;
-}
-
-.hero-vanta-shade {
-  inset: 0;
-  background:
-    linear-gradient(90deg, var(--ed-bg) 0%, color-mix(in srgb, var(--ed-bg) 42%, transparent) 16%, transparent 48%, color-mix(in srgb, var(--ed-bg) 32%, transparent) 82%, var(--ed-bg) 100%),
-    linear-gradient(180deg, color-mix(in srgb, var(--ed-bg) 90%, transparent) 0%, transparent 24%, transparent 72%, var(--ed-bg) 100%);
-  z-index: 1;
 }
 
 @keyframes hero-image-progress {
@@ -289,6 +277,16 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
   .hero-image-progress {
     animation: none;
     transform: scaleX(1);
@@ -297,30 +295,18 @@ body {
   .archive-cursor-field::before {
     animation: none;
   }
-
-  .hero-vanta-canvas {
-    opacity: 0.34;
-  }
 }
 
 @media (max-width: 639px) {
   .soft-shell,
   .soft-panel,
   .soft-pill {
-    backdrop-filter: none;
-    box-shadow:
-      inset 0 1px 0 0 color-mix(in srgb, var(--ed-fg) 8%, transparent),
-      inset 0 0 0 1px color-mix(in srgb, var(--ed-fg) 4%, transparent),
-      0 10px 24px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 1px 0 color-mix(in oklch, var(--ed-fg) 5%, transparent);
   }
 
   .archive-cursor-field::before,
   .archive-cursor-field::after {
     display: none;
-  }
-
-  .archive-grid {
-    background-size: 72px 72px;
   }
 
   .search-demo-type,
@@ -343,20 +329,13 @@ body {
   }
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
+@media (prefers-contrast: more) {
+  :root,
+  [data-theme="light"],
+  .dark,
+  [data-theme="dark"] {
+    --ed-rule: color-mix(in oklch, var(--ed-fg) 34%, transparent);
   }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.4s ease-out;
 }
 
 /* ─── Search Demo: 20s cinematic loop ───────────────────────────
@@ -536,36 +515,16 @@ body {
 .search-demo-phase-3 { animation: search-demo-phase-3 20s ease infinite; }
 .search-demo-phase-4 { animation: search-demo-phase-4 20s ease infinite; }
 
-.transcript-range::-webkit-slider-runnable-track {
-  height: 0.5rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 168, 120, 0.42), rgba(233, 223, 211, 0.18));
+mark.pdf-search-highlight {
+  /* Sits inside react-pdf's text-selection layer, which is stacked directly on top
+     of the rendered page image — an opaque background here would paint over and
+     hide the actual text underneath, so this needs to stay translucent. */
+  background-color: color-mix(in srgb, var(--ed-accent) 45%, transparent);
+  border-radius: 2px;
+  padding: 0 1px;
+  mix-blend-mode: multiply;
 }
 
-.transcript-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  margin-top: -4px;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(233, 223, 211, 0.52);
-  background: #f6efe4;
-  box-shadow: 0 0 0 4px rgba(255, 168, 120, 0.08);
-}
-
-.transcript-range::-moz-range-track {
-  height: 0.5rem;
-  border: 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 168, 120, 0.42), rgba(233, 223, 211, 0.18));
-}
-
-.transcript-range::-moz-range-thumb {
-  height: 1rem;
-  width: 1rem;
-  border: 1px solid rgba(233, 223, 211, 0.52);
-  border-radius: 999px;
-  background: #f6efe4;
-  box-shadow: 0 0 0 4px rgba(255, 168, 120, 0.08);
+.react-pdf__Page__textContent mark.pdf-search-highlight {
+  color: transparent;
 }

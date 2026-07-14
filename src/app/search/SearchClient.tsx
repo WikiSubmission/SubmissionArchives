@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Play, Search } from 'lucide-react';
@@ -11,14 +11,15 @@ import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
 import { searchTranscripts } from './actions';
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
-import thumbnailMapping from '@/data/thumbnail_mapping.json';
 
 type FilterKey =
     | 'video'
     | 'quran-study'
     | 'messenger-audio'
     | 'perspective'
-    | 'appendix';
+    | 'appendix'
+    | 'quran'
+    | 'other';
 
 type SearchMatch = {
     id: string;
@@ -28,6 +29,7 @@ type SearchMatch = {
     score?: number;
     kind?: string;
     distance?: number;
+    label?: string;
 };
 
 type SearchResultMedia = {
@@ -67,6 +69,13 @@ const FILTER_ROWS: Array<{ label: string; items: Array<{ key: FilterKey; label: 
         items: [
             { key: 'perspective', label: 'Submitter Perspectives' },
             { key: 'appendix', label: 'Appendices' },
+            { key: 'other', label: 'Books' },
+        ],
+    },
+    {
+        label: 'Scripture',
+        items: [
+            { key: 'quran', label: "Qur'an" },
         ],
     },
 ];
@@ -76,14 +85,14 @@ function SearchContent() {
     const router = useRouter();
     const initialQuery = searchParams.get('q') || '';
     const initialFilters = searchParams.get('filters')?.split(',') || [];
-    const initialNear = Number(searchParams.get('near') || 18);
 
     const [query, setQuery] = useState(initialQuery);
-    const [proximityWindow] = useState(Number.isFinite(initialNear) ? Math.min(40, Math.max(2, initialNear)) : 18);
     const [isSearching, setIsSearching] = useState(false);
     const [results, setResults] = useState<SearchResult[]>([]);
+    const [visibleCount, setVisibleCount] = useState(10);
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const [expandedMatches, setExpandedMatches] = useState<Set<string>>(new Set());
+    const attemptedInitialQueryRef = useRef<string | null>(null);
     const [filters, setFilters] = useState<Record<FilterKey, boolean>>({
         video: initialFilters.length === 0
             || initialFilters.includes('video')
@@ -95,6 +104,8 @@ function SearchContent() {
             || initialFilters.includes('audio'),
         perspective: initialFilters.length === 0 || initialFilters.includes('perspective'),
         appendix: initialFilters.length === 0 || initialFilters.includes('appendix'),
+        quran: initialFilters.length === 0 || initialFilters.includes('quran'),
+        other: initialFilters.length === 0 || initialFilters.includes('other'),
     });
 
     const rankedResults = useMemo(() => {
@@ -110,10 +121,9 @@ function SearchContent() {
         [results],
     );
 
-    const updateURL = (
+    const updateURL = useCallback((
         searchQuery: string,
-        currentFilters: Record<FilterKey, boolean>,
-        currentProximityWindow: number,
+        currentFilters: Record<FilterKey, boolean>
     ) => {
         const params = new URLSearchParams();
 
@@ -129,17 +139,14 @@ function SearchContent() {
             params.set('filters', activeFilters.join(','));
         }
 
-        if (currentProximityWindow !== 18) {
-            params.set('near', String(currentProximityWindow));
-        }
-
         const nextUrl = params.toString() ? `/search?${params.toString()}` : '/search';
         router.push(nextUrl, { scroll: false });
-    };
+    }, [router]);
 
-    const handleSearch = async () => {
+    const handleSearch = useCallback(async () => {
         if (!query.trim()) {
             setResults([]);
+            setVisibleCount(10);
             setErrorMsg(null);
             return;
         }
@@ -156,8 +163,10 @@ function SearchContent() {
             if (filters['messenger-audio']) typeFilters.push('messenger-audio');
             if (filters.perspective) typeFilters.push('perspective');
             if (filters.appendix) typeFilters.push('appendix');
+            if (filters.quran) typeFilters.push('quran');
+            if (filters.other) typeFilters.push('other');
 
-            const response = await searchTranscripts(query, typeFilters, { proximityWindow });
+            const response = await searchTranscripts(query, typeFilters, { proximityWindow: 18 });
             if (!response.success) {
                 throw new Error(response.error || 'Search failed');
             }
@@ -176,24 +185,29 @@ function SearchContent() {
             });
 
             setResults(formattedResults);
-            updateURL(query, filters, proximityWindow);
+            setVisibleCount(10);
+            updateURL(query, filters);
         } catch (error) {
             const message = error instanceof Error ? error.message : 'An unknown error occurred';
             setErrorMsg(message);
         } finally {
             setIsSearching(false);
         }
-    };
+    }, [query, filters, updateURL, setResults, setVisibleCount, setErrorMsg, setIsSearching, setExpandedMatches]);
 
     useEffect(() => {
+        // Runs the search once per distinct URL-provided query (e.g. arriving via a
+        // shared search link), regardless of outcome. Gating on results.length === 0
+        // instead would retry forever on a legitimate zero-result search or a failed
+        // request (e.g. rate limiting), hammering the server indefinitely.
         const timer = setTimeout(() => {
-        if (initialQuery && results.length === 0 && !isSearching) {
-            void handleSearch();
-        }
+            if (initialQuery && attemptedInitialQueryRef.current !== initialQuery && !isSearching) {
+                attemptedInitialQueryRef.current = initialQuery;
+                void handleSearch();
+            }
         }, 0);
         return () => clearTimeout(timer);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [handleSearch, initialQuery, isSearching]);
 
     useEffect(() => {
         if (!query.trim()) {
@@ -209,8 +223,7 @@ function SearchContent() {
         }, 300);
 
         return () => clearTimeout(timer);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [query, filters, proximityWindow]);
+    }, [query, filters, handleSearch]);
 
     const toggleFilter = (key: FilterKey) => {
         setFilters((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -232,67 +245,63 @@ function SearchContent() {
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
 
 
-            <main className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                <section className="relative overflow-hidden rounded-[1.25rem] bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl grid gap-8 p-5 sm:p-7 lg:grid-cols-[0.85fr_1.15fr] lg:p-8">
-                    {/* Ambient Center Glow */}
-                    <div className="pointer-events-none absolute left-1/2 top-0 hidden h-[400px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--ed-accent)] opacity-[0.06] blur-[120px] dark:opacity-[0.12] sm:block" />
-
-                    <div className="relative z-10 flex flex-col items-center space-y-5 text-center lg:col-span-2">
-                        <div className="inline-flex items-center gap-3 rounded-full bg-black/[0.02] px-4 py-2 text-ed-accent shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] backdrop-blur-md">
+            <main id="main-content" className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
+                <section className="grid gap-8 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[0.85fr_1.15fr]">
+                    <div className="relative z-10 space-y-5 lg:col-span-2">
+                        <div className="inline-flex items-center gap-3 border-l-2 border-ed-accent pl-3 text-ed-accent">
                             <Search className="h-4 w-4" />
-                            <span className="text-[0.68rem] font-medium uppercase tracking-[0.28em]">
+                            <span className="archive-kicker">
                                 Archive search
                             </span>
                         </div>
-                        <h1 className="max-w-full whitespace-nowrap font-display text-[clamp(0.72rem,3vw,2.9rem)] leading-none text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted drop-shadow-sm">
-                            Find exact words, nearby ideas, and buried passages.
+                        <h1 className="max-w-[18ch] font-display text-[clamp(2.75rem,6vw,5rem)] leading-[0.92] text-ed-fg">
+                            Find exact words and buried passages.
                         </h1>
-                        <p className="max-w-full whitespace-nowrap font-sans text-[clamp(0.38rem,1.1vw,0.92rem)] font-semibold leading-7 tracking-[0.01em] text-ed-fg-muted">
-                            Search normally. Exact phrases, close word clusters, and repeated terms rise together
-                            so the strongest findings stay at the top.
+                        <p className="max-w-[70ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
+                            Search recordings, transcripts, books, newsletters, appendices, and all three Qur&apos;an editions. Exact phrases and nearby terms are ranked automatically.
                         </p>
                     </div>
 
-                    <div className="relative z-10 grid gap-5 lg:col-span-2 lg:grid-cols-[0.95fr_1.05fr] lg:self-end">
-                        <div className="rounded-2xl bg-black/[0.02] p-5 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:bg-[#0a0a0a]/50 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]">
+                    <div className="relative z-10 order-3 grid gap-8 border-t border-ed-rule pt-8 lg:col-span-2 lg:grid-cols-[0.8fr_1.2fr] lg:self-end">
+                        <div>
                             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                                 <div>
-                                    <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
-                                        Ranked automatically
+                                    <p className="archive-kicker text-ed-fg-muted">
+                                        Try a search
                                     </p>
                                     <p className="mt-1 text-[15px] leading-6 text-ed-fg">
                                         Closest findings appear first.
                                     </p>
                                 </div>
-                                <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent font-medium">
+                                <span className="text-xs font-medium text-ed-accent">
                                     exact + nearby + repeated
                                 </span>
                             </div>
-                            <div className="mt-5 flex flex-wrap gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-ed-fg-muted">
-                                <button type="button" onClick={() => setQuery('"God alone"')} className="rounded-full bg-black/[0.03] px-4 py-2 font-medium shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]">
+                            <div className="mt-5 flex flex-wrap gap-2 text-sm text-ed-fg-muted">
+                                <button type="button" onClick={() => setQuery('"God alone"')} className="archive-button archive-button-secondary min-h-11 px-4">
                                     &quot;God alone&quot;
                                 </button>
-                                <button type="button" onClick={() => setQuery('messenger covenant')} className="rounded-full bg-black/[0.03] px-4 py-2 font-medium shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]">
+                                <button type="button" onClick={() => setQuery('messenger covenant')} className="archive-button archive-button-secondary min-h-11 px-4">
                                     messenger covenant
                                 </button>
-                                <button type="button" onClick={() => setQuery('quran mathematical miracle')} className="rounded-full bg-black/[0.03] px-4 py-2 font-medium shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]">
+                                <button type="button" onClick={() => setQuery('quran mathematical miracle')} className="archive-button archive-button-secondary min-h-11 px-4">
                                     mathematical miracle
                                 </button>
                             </div>
                         </div>
 
-                        <div className="rounded-2xl bg-black/[0.02] p-5 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:bg-[#0a0a0a]/50 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] space-y-5">
+                        <div className="space-y-5">
                             <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-                                <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                                <p className="archive-kicker text-ed-fg-muted">
                                     Searchable collections
                                 </p>
                                 <p className="text-xs leading-5 text-ed-fg-muted">
-                                    Videos, two audio archives, perspectives, and appendices.
+                                    Videos, two audio archives, perspectives, appendices, books, and the Qur&apos;an.
                                 </p>
                             </div>
                             {FILTER_ROWS.map((row) => (
                                 <div key={row.label} className="flex flex-col gap-2 sm:grid sm:grid-cols-[88px_1fr] sm:items-center">
-                                    <span className="text-[0.68rem] uppercase tracking-[0.2em] text-ed-fg-muted">
+                                    <span className="text-xs font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
                                         {row.label}
                                     </span>
                                     <div className="flex flex-wrap gap-2">
@@ -315,19 +324,24 @@ function SearchContent() {
                             event.preventDefault();
                             void handleSearch();
                         }}
-                        className="relative lg:col-span-2"
+                        className="relative order-2 lg:col-span-2"
                     >
                         <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ed-fg-muted" />
+                        <label htmlFor="archive-search-input" className="sr-only">
+                            Search transcripts, perspectives, appendices
+                        </label>
                         <input
+                            id="archive-search-input"
+                            name="q"
                             type="text"
                             value={query}
                             onChange={(event) => setQuery(event.target.value)}
-                            placeholder="Search transcripts, perspectives, appendices..."
-                            className="w-full rounded-[1.25rem] border border-black/5 bg-black/[0.02] px-12 py-4 pr-28 text-base text-ed-fg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] outline-none backdrop-blur-md transition-all placeholder:text-ed-fg-muted/70 focus:bg-black/[0.04] focus:shadow-[inset_0_0_0_1px_var(--ed-accent),0_10px_40px_rgba(0,0,0,0.05)] sm:py-5 sm:text-lg dark:border-white/5 dark:bg-[#0a0a0a]/50 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] dark:focus:bg-[#0a0a0a]/80 dark:focus:shadow-[inset_0_0_0_1px_var(--ed-accent),0_20px_60px_rgba(0,0,0,0.8)]"
+                            placeholder="Search the archive..."
+                            className="archive-input w-full py-4 pl-12 pr-28 text-base sm:min-h-16 sm:text-lg"
                         />
                         <button
                             type="submit"
-                            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-[1rem] bg-black/[0.03] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-ed-fg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition-all hover:bg-black/[0.06] hover:text-ed-accent sm:px-5 sm:py-2.5 dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.04]"
+                            className="archive-button archive-button-primary absolute right-2 top-1/2 -translate-y-1/2 px-5"
                         >
                             Search
                         </button>
@@ -373,7 +387,7 @@ function SearchContent() {
                     ) : null}
 
                     <div className="space-y-5">
-                        {rankedResults.map((result, index) => {
+                        {rankedResults.slice(0, visibleCount).map((result, index) => {
                             const itemKey = `${result.media.id}${result.media.page ? `-${result.media.page}` : ''}`;
                             return (
                                 <SearchResultCard
@@ -387,6 +401,18 @@ function SearchContent() {
                             );
                         })}
                     </div>
+
+                    {visibleCount < rankedResults.length ? (
+                        <div className="flex justify-center pt-8">
+                            <button
+                                type="button"
+                                onClick={() => setVisibleCount((prev) => prev + 10)}
+                                className="soft-pill px-6 py-3 text-sm font-semibold uppercase tracking-widest text-ed-fg hover:bg-black/[0.04] dark:hover:bg-white/[0.04] focus-visible:ring-2 focus-visible:ring-ed-accent focus-visible:ring-offset-2"
+                            >
+                                Load more results
+                            </button>
+                        </div>
+                    ) : null}
                 </section>
             </main>
 
@@ -426,16 +452,14 @@ function SearchResultCard({
 
     return (
         <article className={`soft-shell overflow-hidden ${isDocument ? 'bg-ed-muted/20' : ''}`}>
-            <div className={`grid gap-5 p-4 sm:p-5 lg:p-6 ${
-                isDocument ? 'lg:grid-cols-[156px_1fr]' : 'lg:grid-cols-[210px_1fr]'
-            }`}>
+            <div className={`grid gap-5 p-4 sm:p-5 lg:p-6 ${isDocument ? 'lg:grid-cols-[156px_1fr]' : 'lg:grid-cols-[210px_1fr]'
+                }`}>
                 <Link
                     href={bestHref}
-                    className={`soft-panel group relative overflow-hidden ${
-                        isDocument
+                    className={`soft-panel group relative overflow-hidden ${isDocument
                             ? 'mx-auto aspect-[3/4] w-full max-w-[176px] rounded-[0.85rem] bg-ed-bg p-2 shadow-[0_18px_44px_rgba(31,26,20,0.12)]'
                             : 'aspect-video'
-                    }`}
+                        }`}
                     aria-label={`Open ${media.displayTitle || media.title}`}
                 >
                     <Image
@@ -444,9 +468,8 @@ function SearchResultCard({
                         fill
                         quality={60}
                         sizes={isDocument ? '(max-width: 1024px) 176px, 156px' : '(max-width: 1024px) 100vw, 210px'}
-                        className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${
-                            isDocument ? 'object-contain' : 'object-cover'
-                        }`}
+                        className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${isDocument ? 'object-contain' : 'object-cover'
+                            }`}
                     />
                     {!isDocument ? (
                         <div className="absolute inset-0 flex items-center justify-center bg-[rgba(12,12,12,0.16)]">
@@ -479,13 +502,18 @@ function SearchResultCard({
                             {media.author ? (
                                 <p className="mt-2 text-[15px] leading-6 text-ed-fg-muted">
                                     {media.author}
-                                    {media.alternateNumberLabel ? ` | ${media.alternateNumberLabel}` : ''}
                                 </p>
                             ) : null}
                         </Link>
 
-                        <div className="flex flex-wrap gap-2 sm:justify-end">
+                        <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+                            {bestMatch && getQuranVerseRef(media, bestMatch) ? (
+                                <span className="font-mono text-xs font-bold text-ed-fg-muted">
+                                    {getQuranVerseRef(media, bestMatch)}
+                                </span>
+                            ) : null}
                             <SignalBadge score={result.bestScore ?? mediaBestScore(matches)} />
+                            {bestMatch?.label ? <ContentLabelPill label={bestMatch.label} /> : null}
                             {bestMatch?.kind ? <MatchKindPill match={bestMatch} /> : null}
                         </div>
                     </div>
@@ -499,6 +527,16 @@ function SearchResultCard({
                                 <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent">
                                     Best passage
                                 </span>
+                                {getQuranVerseRef(media, bestMatch) ? (
+                                    <span className="font-mono text-xs font-bold text-ed-fg">
+                                        {getQuranVerseRef(media, bestMatch)}
+                                    </span>
+                                ) : null}
+                                {bestMatch.label ? (
+                                    <span className="soft-pill px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-accent">
+                                        {getContentLabelText(bestMatch.label)}
+                                    </span>
+                                ) : null}
                                 <span className="soft-pill px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-fg-muted">
                                     {isDocumentType(media.type) ? 'Open text' : `Play at ${formatTime(bestMatch.start_time)}`}
                                 </span>
@@ -513,7 +551,7 @@ function SearchResultCard({
                     ) : null}
 
                     {visibleMatches.length > 1 ? (
-                        <div className="divide-y divide-ed-rule">
+                        <div>
                             {visibleMatches.slice(1).map((match) => (
                                 <SearchMatchRow
                                     key={match.id}
@@ -528,8 +566,10 @@ function SearchResultCard({
 
                     {matches.length > 2 ? (
                         <button
+                            type="button"
                             onClick={onToggle}
-                            className="mt-4 soft-pill px-4 py-2 text-[0.66rem] uppercase tracking-[0.2em] text-ed-fg-muted transition hover:border-ed-accent hover:text-ed-accent"
+                            aria-expanded={expanded}
+                            className="mt-4 soft-pill inline-flex min-h-11 items-center px-4 py-3 text-[0.66rem] uppercase tracking-[0.2em] text-ed-fg-muted transition hover:border-ed-accent hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
                         >
                             {expanded ? 'Show fewer passages' : `Show ${matches.length - 2} more passages`}
                         </button>
@@ -556,25 +596,31 @@ function SearchMatchRow({
         : `${mediaLink}?t=${Math.floor(match.start_time)}`;
 
     return (
-        <div className="grid gap-3 py-4 sm:grid-cols-[104px_1fr]">
-            <Link
-                href={href}
-                className="soft-pill inline-flex h-fit w-fit px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-accent transition hover:border-ed-accent"
-            >
-                {isDocumentType(media.type) ? 'Open text' : formatTime(match.start_time)}
-            </Link>
-            <div>
-                <div className="mb-2 flex flex-wrap gap-2">
-                    {match.kind ? <MatchKindPill match={match} /> : null}
-                </div>
+        <Link
+            href={href}
+            className="group flex gap-4 border-t border-ed-rule py-4 transition first:border-t-0 first:pt-3"
+        >
+            <span className="w-12 shrink-0 pt-0.5 text-right font-mono text-[0.72rem] font-bold tabular-nums text-ed-fg-muted transition-colors group-hover:text-ed-accent sm:w-14">
+                {getQuranVerseRef(media, match) || (isDocumentType(media.type) ? 'Text' : formatTime(match.start_time))}
+            </span>
+            <div className="min-w-0 flex-1 border-l border-ed-rule pl-4 transition-colors group-hover:border-ed-accent/40">
+                {match.kind || match.label ? (
+                    <span className="mb-1.5 block text-[0.6rem] uppercase tracking-[0.16em] text-ed-fg-muted">
+                        {match.label ? `${getContentLabelText(match.label)} · ` : ''}
+                        {getMatchKindLabel(match.kind || '')}
+                        {typeof match.distance === 'number' && match.kind !== 'single-term'
+                            ? ` · ${match.distance} words apart`
+                            : ''}
+                    </span>
+                ) : null}
                 <p
-                    className="text-sm leading-7 text-ed-fg-muted"
+                    className="text-sm leading-7 text-ed-fg/90"
                     dangerouslySetInnerHTML={{
                         __html: highlightMatch(match.content, query),
                     }}
                 />
             </div>
-        </div>
+        </Link>
     );
 }
 
@@ -591,11 +637,11 @@ function FilterButton({
         <button
             type="button"
             onClick={onClick}
-            className={`soft-pill inline-flex items-center px-4 py-2.5 text-[0.68rem] uppercase tracking-[0.18em] transition ${
-                active
-                    ? 'border-ed-accent bg-ed-accent/12 text-ed-accent shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]'
+            aria-pressed={active}
+            className={`inline-flex min-h-11 items-center rounded-lg border px-4 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${active
+                    ? 'border-ed-accent bg-ed-accent/10 text-ed-accent'
                     : 'text-ed-fg-muted hover:border-ed-accent/50 hover:text-ed-fg'
-            }`}
+                }`}
         >
             {label}
         </button>
@@ -622,6 +668,50 @@ function MatchKindPill({ match }: { match: SearchMatch }) {
     );
 }
 
+function ContentLabelPill({ label }: { label: string }) {
+    return (
+        <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-3 py-1.5 text-[0.6rem] uppercase tracking-[0.18em] text-ed-accent">
+            {getContentLabelText(label)}
+        </span>
+    );
+}
+
+// Distinguishes what kind of content a match came from — most relevant for the
+// Qur'an, where a single result can be a verse, a section heading, or a footnote,
+// and without this a footnote hit reads as an unexplained/out-of-place match.
+function getContentLabelText(label: string) {
+    const editionMatch = label.match(/^(verse|heading|footnote)-(1989|1992)$/);
+    if (editionMatch) {
+        const [, kind, edition] = editionMatch;
+        return `${edition} ${kind[0].toUpperCase()}${kind.slice(1)}`;
+    }
+
+    switch (label) {
+        case 'verse':
+            return 'Verse';
+        case 'heading':
+            return 'Heading';
+        case 'footnote':
+            return 'Footnote';
+        default:
+            return label;
+    }
+}
+
+function getQuranEditionFromLabel(label?: string) {
+    const edition = label?.match(/-(1989|1992)$/)?.[1];
+    return edition === '1989' || edition === '1992' ? edition : undefined;
+}
+
+// "chapter:verse" reference chip (e.g. "49:12"), mirroring how the standalone
+// Qur'an reader identifies a verse — makes a Qur'an search hit self-explanatory
+// without needing to open it first.
+function getQuranVerseRef(media: SearchResultMedia, match: SearchMatch) {
+    if (media.type !== 'quran' || typeof match.page !== 'number') return null;
+    const chapterNumber = media.id.replace(/^quran\//, '');
+    return `${chapterNumber}:${match.page}`;
+}
+
 function getMediaTypeLabel(type: string) {
     switch (type) {
         case 'sermon':
@@ -638,6 +728,10 @@ function getMediaTypeLabel(type: string) {
             return 'Submitter Perspectives';
         case 'appendix':
             return 'Appendices';
+        case 'quran':
+            return "Qur'an";
+        case 'other':
+            return 'Books';
         default:
             return 'Resource';
     }
@@ -663,7 +757,14 @@ function mediaBestScore(matches: SearchMatch[]) {
 }
 
 function isDocumentType(type: string) {
-    return ['perspective', 'appendix', 'other'].includes(type);
+    return ['perspective', 'appendix', 'other', 'quran'].includes(type);
+}
+
+function getDocumentBasePath(media: SearchResultMedia) {
+    if (media.type === 'quran') {
+        return `/quran/${media.id.replace(/^quran\//, '')}`;
+    }
+    return `/library/${media.id}`;
 }
 
 function getMediaLink(media: SearchResultMedia, query: string) {
@@ -671,7 +772,7 @@ function getMediaLink(media: SearchResultMedia, query: string) {
         const params = new URLSearchParams();
         if (query) params.append('q', query);
         if (typeof media.page === 'number') params.append('page', String(media.page));
-        return `/library/${media.id}?${params.toString()}`;
+        return `${getDocumentBasePath(media)}?${params.toString()}`;
     }
 
     return getMediaHref(media.id);
@@ -681,13 +782,19 @@ function getDocumentMatchLink(media: SearchResultMedia, match: SearchMatch, quer
     const params = new URLSearchParams();
     if (query) params.append('q', query);
 
+    if (media.type === 'quran') {
+        const edition = getQuranEditionFromLabel(match.label);
+        if (edition) params.append('edition', edition);
+    }
+
     const page = typeof match.page === 'number' ? match.page : media.page;
     if (typeof page === 'number') {
         params.append('page', String(page));
     }
 
+    const basePath = getDocumentBasePath(media);
     const queryString = params.toString();
-    return queryString ? `/library/${media.id}?${queryString}` : `/library/${media.id}`;
+    return queryString ? `${basePath}?${queryString}` : basePath;
 }
 
 function getThumbnailSrc(media: SearchResultMedia) {
@@ -696,17 +803,11 @@ function getThumbnailSrc(media: SearchResultMedia) {
     }
 
     if (media.type === 'sermon') {
-        const mappedFilename = (thumbnailMapping as Record<string, string>)[media.id];
-        return mappedFilename
-            ? `/images/sermons/${mappedFilename}.jpg`
-            : `/images/sermons/${getCleanMediaId(media.id)}.jpg`;
+        return `/images/sermons/${getCleanMediaId(media.id)}.jpg`;
     }
 
     if (media.type === 'video-program') {
-        const mappedFilename = (thumbnailMapping as Record<string, string>)[media.id];
-        return mappedFilename
-            ? `/images/video-programs/${mappedFilename}.jpg`
-            : `/images/video-programs/${getCleanMediaId(media.id)}.jpg`;
+        return `/images/video-programs/${getCleanMediaId(media.id)}.jpg`;
     }
 
     if (media.type === 'audio' || media.type === 'messenger-audio') {
@@ -743,7 +844,7 @@ function getCleanMediaId(id: string) {
         .replace(/^media\/(FRIDAY SERMONS|VIDEO PROGRAMS|disorganized_sermons|rk_video_programs)\//, '')
         .replace(/\s+/g, '_')
         .replace(/[^\w\-_.]/g, '')
-        .replace(/\.mp4$/, '');
+        .replace(/\.(mp4|mp3|webm|m4a|ogg)$/i, '');
 }
 
 function formatTime(seconds: number) {

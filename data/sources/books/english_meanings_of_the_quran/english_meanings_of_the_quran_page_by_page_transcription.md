@@ -1,0 +1,569 @@
+# English Meanings of the Quran
+
+**Source PDF:** `English Meanings of the Quran(1).pdf`
+**PDF pages:** 16
+
+**Transcription note:** Every PDF page is represented below. English is taken from the embedded text layer where usable and otherwise from page OCR. Quranic Arabic is restored as readable Unicode when a verse match is supported. Unverified non-Quranic Arabic remains explicitly marked rather than silently guessed.
+
+---
+
+## PDF Page 1
+
+### Page transcription
+
+English Meanings
+ of the Qur’an : 1
+ A true understanding of Islam requires, as a minimum, a reasonable
+ understanding of its message, the Qur’an. While many people acquire a
+ distorted picture of the religion by observing some aspects of the actions,
+ history, or personal conduct of its professed followers, the readers of this
+ series are presented with an opportunity to grasp the basic principles of
+ true Islam. Readers who are familiar with the various Qur’anic translations
+ will appreciate the fact that this is the first English rendering of the qur'an
+ meanings by a Muslim Arab. It is being printed for the first time.
+ Sura Al-Fatihah (The Opener) 1:1-7
+ Al-Fatihah (The Opener)
+ REVEALED IN MECCA
+ 1 In the Name of God, the Compassionate, the Merci-
+ ful. 2 Praise be to God, the Lord of all beings, 3 The
+ Compassionate, the Merciful, 4 Master of the day of
+ judgment. 5 Only You do we worship, and only You do
+ we implore for help. 6 Guide us along the right path,
+ 7 The path of those upon whom You bestow Your grace;
+ not of those who incur indignation, nor of the strayers.
+ 40 ISLAM 1394/1974, 1(1): 40-56
+
+---
+
+## PDF Page 2
+
+### Arabic text
+
+**Quran 1:1-7**
+<div dir="rtl" lang="ar">
+
+بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ ﴿١﴾ ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِینَ ﴿٢﴾ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ ﴿٣﴾ مَـٰلِكِ یَوۡمِ ٱلدِّینِ ﴿٤﴾ إِیَّاكَ نَعۡبُدُ وَإِیَّاكَ نَسۡتَعِینُ ﴿٥﴾ ٱهۡدِنَا ٱلصِّرَ ٰ⁠طَ ٱلۡمُسۡتَقِیمَ ﴿٦﴾ صِرَ ٰ⁠طَ ٱلَّذِینَ أَنۡعَمۡتَ عَلَیۡهِمۡ غَیۡرِ ٱلۡمَغۡضُوبِ عَلَیۡهِمۡ وَلَا ٱلضَّاۤلِّینَ ﴿٧﴾
+
+</div>
+
+### Page transcription
+
+[Arabic Quran facsimile page. The complete Arabic text is transcribed in the Arabic section above.]
+
+---
+
+## PDF Page 3
+
+### Page transcription
+
+ENGLISH MEANINGS OF THE QUR’AN : 1
+ Furthermore, the word “Al-Rahman” is an exclusive name of God which equals
+ the name “Allah” in every respect. Why then should we translate
+ “Al-Rahman,” and not “Allah?” The same principle applies to the divine
+ name “Al-Rakim.”
+ The practice of partially translating “Bismillahir Rahman Rakim,” and
+ using the Arabic (but not necessarily Islamic) word ‘‘Allah” without
+ translation, has led to a number of unfortunate misunderstandings. One such
+ misunderstanding is the impression upon certain people, especially those
+ accustomed to deification of human beings, that “Allah” is the name of
+ a man. Even highly respectable circles, such as Webster’s Dictionaries, were
+ led to believe that “Allah” is the “Supreme Being of the Muslims” (2). Allah,
+ of course, is “THE GOD” of all beings, whether they realize it or not.
+ The Source of Anger
+ Sura Al-Fatikah, as the reader realizes, is generally self-explanatory. The last
+ verse, however, has been invariably mistranslated. Thus, most translators,
+ if not all of them, have erroneously identified the source of “ghadab Caz, >
+ i.e., anger, or wrath, or indignation, to be God Almighty (3, 4, 5, 6, 7, 8). The
+ term “ghayril maghdibi ‘alayhim Stet goal Ac ,” however, does not iden-
+ tiny the source of anger. The source of anger or indignation incurred by
+ the sinners could be God, the angels, or the people. Whatever the case
+ may be, the source of anger is NOT identified in sura Al-Fatihah. Putting
+ this fact in perspective may be significant for those who wish to study the
+ question, “Is anger a quality of God?”
+ ISLAM 1394/1074, 1(1)
+
+---
+
+## PDF Page 4
+
+### Page transcription
+
+Rashad Khalifa
+ chance of coincidence highly unlikely, and confirms that the opening
+ statement is not exogenous to the divine revelation.
+ 3. Aside from the observations on the first and the last suras, one sura in
+ the middle of the Qur’an deliberately omits the opening statement “In
+ the name of God . . .”* As mentioned above, this one sura is Al-Tawbah
+ (No. 9).
+ While “Bismillahir Rahmanir Rahim” is the first verse of Al-Fatihah, it
+ is not assigned a specific number in the other suras. In the humble opinion
+ of this commentator, the opening statement, “In the name of God,” takes
+ on the number of any verse wherever we start a Qur’anic recitation. Thus,
+ when we recite any sura, with the exception of Al-Tawbah (No. 9), the
+ opening statement, “In the name of God, the Compassionate, the Merciful,”
+ becomes part of the first verse if we start the recitation at the beginning
+ of the sura; it becomes part of verse number 15 if we start the recitation
+ at verse 15, and so forth. Since the opening statement is shown to be
+ an integral part of each sura (except Al-Tawbah), this discussion emphasizes
+ that is must be included whenever we recite the Qur’an. When the recitation
+ is not part of a salat prayer, Muslims are enjoined to begin the recitation
+ with a statement whereby they ask God’s protection from the influence
+ of Satan (Qur’an 16:98).
+ God vs. Allah
+ Some translators have apparently considered the word “Allah” to be the
+ proper name of God in Islam. Consequently, they did not translate this
+ “name” into other languages. According to them, the opening words
+ “Bismillah”? are rendered into “in the name of Allah.” However, the word
+ “Allah” is not THE Islamic name of God, as erroneously believed by some.
+ It is merely the Arabic counterpart of the English words “the God.” The
+ syllable “Al” in the word “Allah” means “the.” A god or a deity is called
+ “alah” in the Arabic language. Thus, the words “the God” would be equivalent
+ to the Arabic “A/-7lah,” which is rather awkward phonetically. To overcome
+ this awkwardness, the Arabs simply dropped the letter “i” from “Al-ilah,”
+ which made it “Allah”. The literal translation of the word “Allah,” therefore,
+ would be “The God”. Support for the statement that “Allah” is not necessarily
+ THE Islamic name of God comes from the fact that all Arabs use this word,
+ regardless of their religion, to mean God. Additionally, the word “Allah”
+ has been used in pre-Islamic Arabia. The Prophet’s father, for example, was
+ named “‘Abdullah (servant of God).”
+ Translating “Bismillahir Rahmanir Rahim” into “In the name of Allah,
+ the Compassionate, the Merciful” constitutes an incomplete translation.
+ ISLAM 1394/1974, 1(1) 43
+
+---
+
+## PDF Page 5
+
+### Page transcription
+
+ENGLISH MEANINGS OF THE QUR’AN : 1
+ COMMENTARY
+ This sura, properly entitled “The Opener,” was the first sura revealed in
+ its entirety. It was described by the prophet Muhammad (may God bestow
+ blessings and peace upon him) as ‘‘the essence of the Qur’an = ummul Kitab
+ = semi zi .” This description can be appreciated if we recount the major
+ Islamic principles which are stated in this short sura. Thus, in the seven
+ verses of Al-Fatihah we are told:
+ 1. To believe in God; that He is One.
+ 2. That God is characterized by compassion and mercy.
+ 3. That God is the Lord, cherished, and sustainer of all beings.
+ 4. That there shall be a day of judgment, hence resurrection and the eternal
+ hereafter.
+ 5. That only God deserves to be worshiped; He alone is capable of helping
+ us.
+ The importance of Al-Fatihah is manifested in the fact that all Muslim
+ men and women are enjoined to recite it a minimum of 17 times per day
+ as part of the salat prayers.
+ The Opening Statement
+ The opening statement “Bismillahir Rahmanir Rahim = In the name of God,
+ the Compassionate, the Merciful” precedes every sura in the Qur’an with
+ one exception, namely, sura Al-Tawbah (Repentance) (No. 9). There is a
+ general consensus among the leading mufassirs (Qur’anic commentators) that
+ this statement is an integral part of each sura (except Al-Tawbah). This is
+ supported by a number of observations:
+ 1. The opening statement constitutes the first verse of the first sura. In a
+ strongly documented Hadith, the prophet Muhammad (God’s blessings
+ and peace be upon him) specifically designated Bismillahir Rahmanir Hakim
+ as the first verse of Al-Fatihah (Al-Bukhan, Muslim).
+ 2. Recent computerized analysis of the alphabetical structure of the Qur’an
+ (1) has provided new and conclusive evidence to supplement the already
+ convincing historical evidence and prophetic traditions. The physical
+ evidence indicated by the computerized study shows clearly that each
+ letter in the qur'an composition was accurately and deliberately cal-
+ curated. For example, computed without excluding the opening statement
+ “Bismillah ...” the final sura of the Qur’an, Al-Nas, was found to consist
+ of 99 alphabetic letters — the same number as God’s ninety-nine
+ magnificent names. The fact that this particular number of alphabetic
+ letters does not occur in any other sura but the closing sura renders the
+ 42 ISLAM 1394/1974, 1(1)
+
+---
+
+## PDF Page 6
+
+### Page transcription
+
+ENGLISH MEANINGS OF THE QUR’AN : 1
+ Sura Al-Baqarah (The Heifer) 2:1-29
+ Al-Baqarah (The Heifer)
+ REVEALED IN MEDINA
+ In the Name of God, the Compassionate, the Merciful
+ 1 A.L.M. 2 This scripture is without a doubt; providing
+ guidance for the righteous, 3 Who believe in the unseen,
+ observe the salat prayers, and from My provisions to them
+ they spend. 4 They believe in what was sent down to you
+ (O Muhammad), and in what was sent down before you,
+ and they firmly believe in the hereafter.
+ ISLAM 1394/1974, 1(1)
+
+---
+
+## PDF Page 7
+
+### Arabic text
+
+**Quran 2:1-4**
+<div dir="rtl" lang="ar">
+
+بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ الۤمۤ ﴿١﴾ ذَ ٰ⁠لِكَ ٱلۡكِتَـٰبُ لَا رَیۡبَۛ فِیهِۛ هُدࣰى لِّلۡمُتَّقِینَ ﴿٢﴾ ٱلَّذِینَ یُؤۡمِنُونَ بِٱلۡغَیۡبِ وَیُقِیمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقۡنَـٰهُمۡ یُنفِقُونَ ﴿٣﴾ وَٱلَّذِینَ یُؤۡمِنُونَ بِمَاۤ أُنزِلَ إِلَیۡكَ وَمَاۤ أُنزِلَ مِن قَبۡلِكَ وَبِٱلۡـَٔاخِرَةِ هُمۡ یُوقِنُونَ ﴿٤﴾
+
+</div>
+
+### Page transcription
+
+[Arabic Quran facsimile page. The complete Arabic text is transcribed in the Arabic section above.]
+
+---
+
+## PDF Page 8
+
+### Page transcription
+
+5 Share the followers of guidance from their Lord. Such
+ are the winners.
+ 6 As for those who disbelieve, it is the same for them;
+ whether you warn them or not, they do not believe. 7 God
+ seals their hearts, and their hearing, and their visions are
+ veiled. Theirs is a grievous punishment. 8 And there are
+ those who say, ‘‘We believe in God and the hereafter,”
+ while they are not believers. 9 In attempting to deceive
+ God and the believers, they deceive only themselves,
+ without perceiving. 10 In their hearts is skepticism.
+ Consequently, God augments their skepticism. Theirs is
+ a painful punishment for their lying. 11 When they are
+ told, ‘‘Do not corrupt the earth,’”’ they say, ““We are but
+ reformers.”’ 12 Indeed, they are the corruptors, but they
+ do not perceive. 13 And when they are told, ‘‘You shall
+ believe as the people have believed,’’ they say, ““Shall we
+ believe as the fools have believed?’’ Indeed, it is they who
+ are fools, but they do not know. 14 Whenever they meet
+ the believers, they say, ‘‘We believe.’’ But when alone with
+ their devils, they say, ‘‘We are with you. We were only
+ mocking.’’ 15 God mocks them by allowing them to
+ continue their transgressions blindly. 16 These have
+ traded away guidance for straying. Thus, their trade never
+ profits, nor do they find guidance. 17 Their allegory is
+ like one who kindles a fire to provide light. As it begins
+ to shed light around him, God takes away their light,
+ leaving them in total darkness, unable to see. 18 Deaf,
+ dumb, and blind; they fail to reform.
+
+---
+
+## PDF Page 9
+
+### Arabic text
+
+**Quran 2:5-18**
+<div dir="rtl" lang="ar">
+
+أُو۟لَـٰۤىِٕكَ عَلَىٰ هُدࣰى مِّن رَّبِّهِمۡۖ وَأُو۟لَـٰۤىِٕكَ هُمُ ٱلۡمُفۡلِحُونَ ﴿٥﴾ إِنَّ ٱلَّذِینَ كَفَرُوا۟ سَوَاۤءٌ عَلَیۡهِمۡ ءَأَنذَرۡتَهُمۡ أَمۡ لَمۡ تُنذِرۡهُمۡ لَا یُؤۡمِنُونَ ﴿٦﴾ خَتَمَ ٱللَّهُ عَلَىٰ قُلُوبِهِمۡ وَعَلَىٰ سَمۡعِهِمۡۖ وَعَلَىٰۤ أَبۡصَـٰرِهِمۡ غِشَـٰوَةࣱۖ وَلَهُمۡ عَذَابٌ عَظِیمࣱ ﴿٧﴾ وَمِنَ ٱلنَّاسِ مَن یَقُولُ ءَامَنَّا بِٱللَّهِ وَبِٱلۡیَوۡمِ ٱلۡـَٔاخِرِ وَمَا هُم بِمُؤۡمِنِینَ ﴿٨﴾ یُخَـٰدِعُونَ ٱللَّهَ وَٱلَّذِینَ ءَامَنُوا۟ وَمَا یَخۡدَعُونَ إِلَّاۤ أَنفُسَهُمۡ وَمَا یَشۡعُرُونَ ﴿٩﴾ فِی قُلُوبِهِم مَّرَضࣱ فَزَادَهُمُ ٱللَّهُ مَرَضࣰاۖ وَلَهُمۡ عَذَابٌ أَلِیمُۢ بِمَا كَانُوا۟ یَكۡذِبُونَ ﴿١٠﴾ وَإِذَا قِیلَ لَهُمۡ لَا تُفۡسِدُوا۟ فِی ٱلۡأَرۡضِ قَالُوۤا۟ إِنَّمَا نَحۡنُ مُصۡلِحُونَ ﴿١١﴾ أَلَاۤ إِنَّهُمۡ هُمُ ٱلۡمُفۡسِدُونَ وَلَـٰكِن لَّا یَشۡعُرُونَ ﴿١٢﴾ وَإِذَا قِیلَ لَهُمۡ ءَامِنُوا۟ كَمَاۤ ءَامَنَ ٱلنَّاسُ قَالُوۤا۟ أَنُؤۡمِنُ كَمَاۤ ءَامَنَ ٱلسُّفَهَاۤءُۗ أَلَاۤ إِنَّهُمۡ هُمُ ٱلسُّفَهَاۤءُ وَلَـٰكِن لَّا یَعۡلَمُونَ ﴿١٣﴾ وَإِذَا لَقُوا۟ ٱلَّذِینَ ءَامَنُوا۟ قَالُوۤا۟ ءَامَنَّا وَإِذَا خَلَوۡا۟ إِلَىٰ شَیَـٰطِینِهِمۡ قَالُوۤا۟ إِنَّا مَعَكُمۡ إِنَّمَا نَحۡنُ مُسۡتَهۡزِءُونَ ﴿١٤﴾ ٱللَّهُ یَسۡتَهۡزِئُ بِهِمۡ وَیَمُدُّهُمۡ فِی طُغۡیَـٰنِهِمۡ یَعۡمَهُونَ ﴿١٥﴾ أُو۟لَـٰۤىِٕكَ ٱلَّذِینَ ٱشۡتَرَوُا۟ ٱلضَّلَـٰلَةَ بِٱلۡهُدَىٰ فَمَا رَبِحَت تِّجَـٰرَتُهُمۡ وَمَا كَانُوا۟ مُهۡتَدِینَ ﴿١٦﴾ مَثَلُهُمۡ كَمَثَلِ ٱلَّذِی ٱسۡتَوۡقَدَ نَارࣰا فَلَمَّاۤ أَضَاۤءَتۡ مَا حَوۡلَهُۥ ذَهَبَ ٱللَّهُ بِنُورِهِمۡ وَتَرَكَهُمۡ فِی ظُلُمَـٰتࣲ لَّا یُبۡصِرُونَ ﴿١٧﴾ صُمُّۢ بُكۡمٌ عُمۡیࣱ فَهُمۡ لَا یَرۡجِعُونَ ﴿١٨﴾
+
+</div>
+
+### Page transcription
+
+[Arabic Quran facsimile page. The complete Arabic text is transcribed in the Arabic section above.]
+
+---
+
+## PDF Page 10
+
+### Page transcription
+
+SURA AL-BAQARAH 2:19.25
+ ee ee 27 ججح‎ eee
+ 19 Or, like a storm from the sky, with darkness, thunder,
+ and lightning. They place their fingers in their ears, as
+ if to evade death by the thunder bolts. God thus encom-
+ passes the disbelievers. 20 The lightning intermittently
+ snatches away their eyesight. Whenever it lights for them,
+ they walk therein. And when it turns dark, they stand still.
+ If God wills, He can deprive them of their hearing, and
+ their sight. Surely, God is Omnipotent.
+ 21 O mankind, you shall worship your Lord, who
+ created you, and those before you, that you may be de-
+ vout. 22 It is He Who rendered the earth habitable for
+ you, and He rendered the sky a structure. He sends down
+ water from the sky to produce fruits for your sustenance.
+ Therefore, you shall not set up rivals to rank with God,
+ despite this knowledge. 23 If you have any doubts con-
+ cerning what We have revealed herein to our servant
+ (Muhammad), then produce one sura like these, and invite
+ your idols, whom you worship instead of God, to do the
+ same, if you are right. 24 If you fail to do this, and most
+ certainly you shall fail, then beware of the hellfire whose
+ fuel shall be people and rocks. It awaits the disbe-
+ levers. 25 As for those who believe, and do good works,
+ give them the good news that they shall enjoy Gardens
+ with flowing streams. Whenever they are provided with
+ fruits therein, they shall say, “‘This was provided for us
+ previously.”” They shall be given similar provisions, and
+ they shall have pure spouses therein. They shall abide
+ therein eternally. 26 Thus, God is not ashamed to cite
+ any kind of allegory, from as lowly as a mosquito, and
+ higher. As for those who believe, they shall know that it
+ is the truth from their Lord. As for those who disbelieve,
+ they shall say, ‘‘What did God mean by such an allegory ?”
+ Thus, He misleads many thereby, and He guides many
+ thereby. But he never misleads any thereby except the
+ wicked.
+ 50 ISLAM 1394/1974, 1(1)
+
+---
+
+## PDF Page 11
+
+### Arabic text
+
+**Quran 2:19-26**
+<div dir="rtl" lang="ar">
+
+أَوۡ كَصَیِّبࣲ مِّنَ ٱلسَّمَاۤءِ فِیهِ ظُلُمَـٰتࣱ وَرَعۡدࣱ وَبَرۡقࣱ یَجۡعَلُونَ أَصَـٰبِعَهُمۡ فِیۤ ءَاذَانِهِم مِّنَ ٱلصَّوَ ٰ⁠عِقِ حَذَرَ ٱلۡمَوۡتِۚ وَٱللَّهُ مُحِیطُۢ بِٱلۡكَـٰفِرِینَ ﴿١٩﴾ یَكَادُ ٱلۡبَرۡقُ یَخۡطَفُ أَبۡصَـٰرَهُمۡۖ كُلَّمَاۤ أَضَاۤءَ لَهُم مَّشَوۡا۟ فِیهِ وَإِذَاۤ أَظۡلَمَ عَلَیۡهِمۡ قَامُوا۟ۚ وَلَوۡ شَاۤءَ ٱللَّهُ لَذَهَبَ بِسَمۡعِهِمۡ وَأَبۡصَـٰرِهِمۡۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَیۡءࣲ قَدِیرࣱ ﴿٢٠﴾ یَـٰۤأَیُّهَا ٱلنَّاسُ ٱعۡبُدُوا۟ رَبَّكُمُ ٱلَّذِی خَلَقَكُمۡ وَٱلَّذِینَ مِن قَبۡلِكُمۡ لَعَلَّكُمۡ تَتَّقُونَ ﴿٢١﴾ ٱلَّذِی جَعَلَ لَكُمُ ٱلۡأَرۡضَ فِرَ ٰ⁠شࣰا وَٱلسَّمَاۤءَ بِنَاۤءࣰ وَأَنزَلَ مِنَ ٱلسَّمَاۤءِ مَاۤءࣰ فَأَخۡرَجَ بِهِۦ مِنَ ٱلثَّمَرَ ٰ⁠تِ رِزۡقࣰا لَّكُمۡۖ فَلَا تَجۡعَلُوا۟ لِلَّهِ أَندَادࣰا وَأَنتُمۡ تَعۡلَمُونَ ﴿٢٢﴾ وَإِن كُنتُمۡ فِی رَیۡبࣲ مِّمَّا نَزَّلۡنَا عَلَىٰ عَبۡدِنَا فَأۡتُوا۟ بِسُورَةࣲ مِّن مِّثۡلِهِۦ وَٱدۡعُوا۟ شُهَدَاۤءَكُم مِّن دُونِ ٱللَّهِ إِن كُنتُمۡ صَـٰدِقِینَ ﴿٢٣﴾ فَإِن لَّمۡ تَفۡعَلُوا۟ وَلَن تَفۡعَلُوا۟ فَٱتَّقُوا۟ ٱلنَّارَ ٱلَّتِی وَقُودُهَا ٱلنَّاسُ وَٱلۡحِجَارَةُۖ أُعِدَّتۡ لِلۡكَـٰفِرِینَ ﴿٢٤﴾ وَبَشِّرِ ٱلَّذِینَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ أَنَّ لَهُمۡ جَنَّـٰتࣲ تَجۡرِی مِن تَحۡتِهَا ٱلۡأَنۡهَـٰرُۖ كُلَّمَا رُزِقُوا۟ مِنۡهَا مِن ثَمَرَةࣲ رِّزۡقࣰا قَالُوا۟ هَـٰذَا ٱلَّذِی رُزِقۡنَا مِن قَبۡلُۖ وَأُتُوا۟ بِهِۦ مُتَشَـٰبِهࣰاۖ وَلَهُمۡ فِیهَاۤ أَزۡوَ ٰ⁠جࣱ مُّطَهَّرَةࣱۖ وَهُمۡ فِیهَا خَـٰلِدُونَ ﴿٢٥﴾ ۞ إِنَّ ٱللَّهَ لَا یَسۡتَحۡیِۦۤ أَن یَضۡرِبَ مَثَلࣰا مَّا بَعُوضَةࣰ فَمَا فَوۡقَهَاۚ فَأَمَّا ٱلَّذِینَ ءَامَنُوا۟ فَیَعۡلَمُونَ أَنَّهُ ٱلۡحَقُّ مِن رَّبِّهِمۡۖ وَأَمَّا ٱلَّذِینَ كَفَرُوا۟ فَیَقُولُونَ مَاذَاۤ أَرَادَ ٱللَّهُ بِهَـٰذَا مَثَلࣰاۘ یُضِلُّ بِهِۦ كَثِیرࣰا وَیَهۡدِی بِهِۦ كَثِیرࣰاۚ وَمَا یُضِلُّ بِهِۦۤ إِلَّا ٱلۡفَـٰسِقِینَ ﴿٢٦﴾
+
+</div>
+
+### Page transcription
+
+[Arabic Quran facsimile page. The complete Arabic text is transcribed in the Arabic section above.]
+
+---
+
+## PDF Page 12
+
+### Page transcription
+
+SURA AL-BAQARAH 2:27.29
+ 27 (The wicked ones) who break their covenant with God
+ after accepting it, tear asunder what God had commanded
+ to preserve, and corrupt the earth. Such are the losers.
+ 28 How can you disbelieve in God? You were dead,
+ and He granted you life; then He will put you to death;
+ then He will bring you back to life; then to Him you shall
+ be returned. 29 It is He who created for you everything
+ on earth. Then He turned to the sky and fashioned seven
+ heavens therein. He is Omniscient.
+ COMMENTARY
+ Sura Al-Baqarah was the first sura revealed in Medina. Its title, which means
+ the heifer, refers to a very significant incident which is reported in verses
+ 67-74; an incident wherein Moses proved to the Israelites that he did
+ communicate with God; an incident wherein a murder victim was revived
+ to point out his murderer, and thus a great sign was manifested to the Children
+ of Israel. A distorted version of this incident appears in today’s bibles.
+ (Numbers 19:6)
+ The Letters A.LM.:
+ The first verse of sura Al-Bagarah consists of three independent letters of
+ the Arabic alphabet, namely, Alif(A), Lam (L), and Mim (M). Throughout
+ the Qur’an, there are 29 suras which are prefixed with such “initials.” These
+ Qur’anic initials are known as “openers of the suras 3p فوع‎ :” in the
+ Western literature, they are called “the mysterious letters.” The possible
+ significance of these letters has been the subject of numerous theories in
+ the past 14 centuries. There is a unanimous agreement in the literature that
+ the significance of the Qur’anic initials has never been unveiled (3, 4, 5,
+ 6, 7, 8, 9, 10, 11, 12).
+ In the course of preparing this commentary, however, the Qur’anic
+ initials were studied extensively with the help of electronic computers. By
+ the grace of God, the possible role of the Qur’anic initials was at least partially
+ uncovered. The data, the results, and the conclusions were so vast that they
+ 52 ISLAM 1394/1974, 1(1)
+
+---
+
+## PDF Page 13
+
+### Arabic text
+
+**Quran 2:27-29**
+<div dir="rtl" lang="ar">
+
+ٱلَّذِینَ یَنقُضُونَ عَهۡدَ ٱللَّهِ مِنۢ بَعۡدِ مِیثَـٰقِهِۦ وَیَقۡطَعُونَ مَاۤ أَمَرَ ٱللَّهُ بِهِۦۤ أَن یُوصَلَ وَیُفۡسِدُونَ فِی ٱلۡأَرۡضِۚ أُو۟لَـٰۤىِٕكَ هُمُ ٱلۡخَـٰسِرُونَ ﴿٢٧﴾ كَیۡفَ تَكۡفُرُونَ بِٱللَّهِ وَكُنتُمۡ أَمۡوَ ٰ⁠تࣰا فَأَحۡیَـٰكُمۡۖ ثُمَّ یُمِیتُكُمۡ ثُمَّ یُحۡیِیكُمۡ ثُمَّ إِلَیۡهِ تُرۡجَعُونَ ﴿٢٨﴾ هُوَ ٱلَّذِی خَلَقَ لَكُم مَّا فِی ٱلۡأَرۡضِ جَمِیعࣰا ثُمَّ ٱسۡتَوَىٰۤ إِلَى ٱلسَّمَاۤءِ فَسَوَّىٰهُنَّ سَبۡعَ سَمَـٰوَ ٰ⁠تࣲۚ وَهُوَ بِكُلِّ شَیۡءٍ عَلِیمࣱ ﴿٢٩﴾
+
+</div>
+
+### Page transcription
+
+of men, in the past, present, or future.
+ Since we are concerned here with the three Qur’anic initials Alif (A),
+ Lam (L), and Mim (M) of sura Al-Bagqarah, the specific function of these
+ letters is presented herein. It appeared from the detailed computerized study
+ that the letters A.L.M. provide mathematical support for the system of
+ recording the Qur’an (1). The frequency of occurrence of these 3 letters
+ throughout the Qur’an indicates that the final form of Qur’an as we know it
+ today is the divinely ordained form. Thus, it was found that the suras which
+ contain these initials [Al-Baqarah (No. 2), Ali-‘Imran (No. 3), Al-‘Ankabit
+ (No. 29), Al-Ram (No. 30), Human (No. 31), and Al-Sajdah (No. 32)] were
+ required to be averaged together according to their continuity in the Qur’an,
+ regardless of their revelation sequence, in order to observe their superiority
+ with regard to the frequency of A, L, & M. It should be noted that the
+ A.L.M.-initialed suras were revealed separately, but recorded conseéutively.
+ The opposite was true with regard to the letters A.L.R.; the A.L.R.-initialed
+ suras were revealed consecutively, but recorded separately. The computerized
+ study showed that while the Qur’anic initials A.L.M. serve to confirm the
+ recorded sequence of Qur’an, the initials A.L.R. serve to confirm the au-
+ authenticity of the revelation sequence. The indulgence of the reader is requested
+ for presenting this extremely condensed explanation of the Qur’anic initials.
+ For a full understanding of this discussion the reader may refer to the detailed
+ study.
+ ISLAM 1394/1974, 1(1) 53
+
+---
+
+## PDF Page 14
+
+### Page transcription
+
+ENGLISH MEANINGS OF THE QUR’AN : 1
+ Linguistic Efficiency of the Qur’an
+ ous literary phenomena of the Qur’an is the frequent
+ i 1
+ One of the miracle s a number of different meanings,
+ occurrence of a verse which convey
+ In just the few verses which we
+ simultaneously and without contradiction.
+ These are verse number 2 and
+ are discussing here, two such verses occur.
+ conveys the following two
+ verse number 7 of sura Al-Bagarah. Thus, verse 2 ©
+ messages:
+ in the least. There is no doubt in its
+ 1. This Qur’an cannot be doubted ١
+ authenticity; there is no doubt that it came from God. This meaning
+ is obtained when we place a full stop after the word “doubt” last : لاز‎ eS
+ = This scripture is without a doubt = there is no doubt that this-is a
+ divine scripture.
+ 2. This Qur’an provides guidance for the righteous people who heed the
+ message. Such meaning is obtained as we recite the same verse to the
+ end, “ لكين‎ هُدى id -. ckeelfey5 this scripture is without a doubt; pro-
+ viding guidance for the righteous.” ; ١
+ The reader will note that the English rendering was done in such a
+ way to convey, as closely as possible, the same impression as that conveyed
+ by the Arabic text upon the Arabic reader.
+ Similarly, we can simultaneously derive two compatible meanings from
+ verse 7:
+ 1. God seals the hearts of the disbelievers, and places a veil on their hearing
+ and their vision.
+ 2. God seals the hearts and the hearing of the disbelievers, and places a veil
+ upon their vision.
+ This linguistic efficiency is unique to the Qur’an; it explains to us the
+ deliberate omission of the punctuation marks therefrom.
+ Three Types of People:
+ Verses 3 through 20 of sura Al-Baqarah divide the people into three categories;
+ the righteous, the heathens, and the hypocrites. It is significant that the
+ righteous are described in three verses; the heathens are described in two
+ verses, while the hypocrites are described in 13 verses. These facts reflect
+ the subtleness of hypocrisy and the need to recognize it, especially within
+ ourselves, and expose it.
+ Since the criteria are set so clearly and vividly in the Qur’an, no further
+ comment is needed regarding the three categories of people. One can read
+ the divine verses, and directly use them to find his place within these three
+ categories. Thus, I cannot count myself among the righteous unless I fulfill
+ 54 ISLAM 1394/1974, 1(1)
+
+---
+
+## PDF Page 15
+
+### Page transcription
+
+Rashad Khalifa
+ all the requirements set forth in verses 3 and 4, namely, belief in the unseen
+ (God, the angels, the hereafter, etc), observing the five daily salat prayers,
+ spending from God’s provision (not hoarding), belief in and upholding the
+ Qur’an, belief in and upholding all previous revelations, and certainty about
+ resurrection. Unless I fulfill these six requirements, I will have to find my
+ place within the other two categories, the heathens or the hypocrites. As
+ we seek to find our place among these three categories, it is of vital importance
+ that one must never defend his “self or find excuses to absolve it. Those
+ who do achieve salvation and discover the right path are those who can
+ courageously accuse the self and never side with it. The prophet Muhammad
+ (God’s blessings and peace be upon him) said in this respect, “Your most
+ ardent enemy is your ‘self’ which resides within your body.” (Al-Bukhari)
+ (13).
+ It should be noted that as a consequence of their decision, with their own
+ free will, to reject God’s guidance, the heathens and the hypocrites are
+ rendered totally deaf, dumb, and blind to any divine admonition (verses
+ 6, 7, 10, & 18). Thus, there is no way whereby anyone can convince them
+ of the most obvious truths.
+ Moreover, verses 10 and 26 of sura Al-Baqarah (as well as numerous
+ verses throughout the Qur’an) explicitly inform us that the rejectors of truth
+ are actually led further and further from the truth by none other than the
+ Almighty Himself. After exercising their absolute freedom, and after reaching
+ a decision to reject God’s truth, such rejectors are placed under circumstances
+ which serve invariably to move them away from the right path. This fact
+ is especially evident in the writings of the anti-Islam activists; one can see
+ so clearly that they are always led into a maze of dead-end alleys where
+ they remain hopelessly trapped.
+ In verses 21 and 22, mankind is enjoined to worship the Creator;
+ Who created them and provided for them. As for the skeptics who refuse
+ to give serious, objective thought to God’s message, the Qur’an, they are
+ handed a challenge to prove their claim that it is man-made. The challenge
+ (verse 23) is coupled with an assurance that no one can possibly meet it
+ (verse 24). The recent computerized study of the Qur’an, which provided
+ physical evidence that the Qur’an could never be man-made, sheds a new
+ light on the Qur’anic challenge explained here. By physical, examinable
+ means, it is now proven that the miraculous composition of the Qur’an is
+ not only literal, but also mathematical. For the reader who is not yet familiar
+ with the computerized study of the qur'an alphabetical structure, let us
+ take a simple example. Among the qur'an 114 suras, two are initialed
+ with the letter Qaf(Q). These two suras are Al-Shiira (No. 42) and Qaf (No.
+ 50). Although sura AJ/-Shiira is more than twice as long as sura Q4f, the
+ ISLAM 1394/1974, 1(1) 55
+
+---
+
+## PDF Page 16
+
+### Page transcription
+
+ENGLISH MEANINGS OF THE QUR’AN : 1
+ computer revealed that these two suras contain the same number of the
+ letter Qaf (Q), namely 57 each. Considering that the Qur’an was revealed
+ over a period of 23 years, and that the individual verses came down widely
+ separated both in time and place, it becomes undeniably clear that the Qur’an
+ is the word of God. No creature could ever possess advance knowledge of
+ the mathematical distribution of the individual alphabetic letters throughout
+ the Quran. This overwhelming evidence is physical, touchable, and ex-
+ aminable, since anyone anywhere in the world can count the letter Qaf in
+ the two Qaf-initialed suras and find for himself or herself that they contain
+ the same numbers of Qafs, 57. Obviously, this number is not random. When
+ we add the 57 Qafs of sura Al-Shira to the 57 Qafs of sura Qaf we get
+ 114, same number as the suras of Qur’an. Thus, if the letter “Q” stands
+ for “Qur’an,” the inescapable message is clear; that the 114 suras constitute
+ God’s message to humanity, the whole message, and nothing but the message.
+ This very small and very simple example from the computerized study
+ of Qur’an is consistent with the divine statement in verse 24 regarding the
+ impossibility of composing anything like the Qur’an by other than God
+ Himself.
+ We come across the first description of heaven and hell in verses 24
+ and 25. Verse 24 describes hell as a fire whose fuel shall be people and
+ rocks. Verse 25 describes heaven as gardens with flowing streams, fruits, and
+ pure spouses. At the same time, we are told in verse 26 that these are
+ allegorical descriptions; that heaven and hell are described in the Qur’an
+ in terms we can comprehend; terms which the simplest, illiterate individuals,
+ as well as the most educated ones, can appreciate and understand. The
+ Prophet Muhammad (may God bestow blessings and peace upon him) re-
+ iterated the spirit of verse 26 when he told us that heaven is something
+ “no eye has ever seen, no ear has ever heard, and never imagined by a
+ human being.”
+ References
+ . Khalifa, R. 1973. Miracle of the Qur'an: Significance of the Mysterious Alphabets. Islamic Productions International,
+ Inc., Box 12202, St. Louis, Mo. 63157.
+ 2. Webster's Seventh New Collegiate Dictionary. 1965. G. & C. Merriam Co., Springfield, Mass. .م‎
+ 3. Sale, George. 1883. The Koran. John B. Alden, New York. p. 13.
+ 4. Pickthall, M. M. 1961. The Meaning of the Glorious Koran. The New American Library, New York. p. 31.
+ 5. Arberry, A. J. 1970. The Koran Interpreted. The MacMillian Co., New York. p. 29.
+ . Dawood, N. J. 1970. The Koran. Penguin Books, Baltimore, Maryland. .م‎ 15.
+ 6.
+ . Maududi, 5. A. A. 1971. The Meaning of the Qur'an, Islamic Publications Ltd. Lahore, Pakistan. .م‎ 32.
+ 7
+ . Jeffrey, Arthur. 1958. The Koran. The Heritage Press, New York. .م‎
+ 8
+ . Ali, A. .لا‎ 1968. The Holy Qur'an. Dar Al-Arabia, Box 6089, Beirut, Lebanon. p. 17.
+ 9.
+ 10. Wajdi, M. F. 1969. Al-Mus-haf Al-Mufassir. Dar Al-Sha'b, Cairo, Egypt. .م‎ 3.
+ ١١١ Al-Jalalain. 1925. Taser Al-Qur'ani Al-‘Azgim. Al-Taqaddum AI-‘IImiyyah Press, Cairo, Egypt. .م‎ 2.
+ 12. Al-Baydawl 1960. Taser Al-Qur'an Al-Karim. Al-Jumhiriyyah Al-Migriyyah Bookstore, Cairo, Egypt. .م‎ 5.
+ 13. Al-Ghazali, (Imam) M. 1898, /hya' ‘Slim Al-Din. Vol. 3. Al-Azhariyyah Al-Misriyyah Press, Cairo, Egypt.
+ p. 143.
+
+---

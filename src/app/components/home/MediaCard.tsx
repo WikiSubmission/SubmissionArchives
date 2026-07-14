@@ -1,6 +1,8 @@
+'use client';
+
 import Image from "next/image";
+import { useState } from "react";
 import { Media, ThemeColors } from "@/types/media";
-import thumbnailMapping from "@/data/thumbnail_mapping.json";
 import quranStudyThumbnails from "@/data/quran_study_thumbnails.json";
 import { getPublicAssetUrl } from "@/lib/mediaAssets";
 
@@ -28,21 +30,14 @@ function getThumbnailSrc(item: Media): string {
     let thumbnailSrc = '/images/placeholders/rashad-khalifa.png';
 
     if (item.type === 'sermon' || item.type === 'video-program') {
-        const mappedFilename = (thumbnailMapping as Record<string, string>)[item.id];
-        if (mappedFilename) {
-            thumbnailSrc = item.type === 'sermon'
-                ? `/images/sermons/${mappedFilename}.jpg`
-                : `/images/video-programs/${mappedFilename}.jpg`;
-        } else {
-            const cleanId = item.id
-                .replace(/^media\/(FRIDAY SERMONS|VIDEO PROGRAMS|disorganized_sermons|rk_video_programs)\//, '')
-                .replace(/\s+/g, '_')
-                .replace(/[^\w\-_.]/g, '')
-                .replace(/\.mp4$/, '');
-            thumbnailSrc = item.type === 'sermon'
-                ? `/images/sermons/${cleanId}.jpg`
-                : `/images/video-programs/${cleanId}.jpg`;
-        }
+        const cleanId = item.id
+            .replace(/^media\/(FRIDAY SERMONS|VIDEO PROGRAMS|disorganized_sermons|rk_video_programs)\//, '')
+            .replace(/\s+/g, '_')
+            .replace(/[^\w\-_.]/g, '')
+            .replace(/\.mp4$/, '');
+        thumbnailSrc = item.type === 'sermon'
+            ? `/images/sermons/${cleanId}.jpg`
+            : `/images/video-programs/${cleanId}.jpg`;
     } else if (item.type === 'audio' || item.type === 'messenger-audio') {
         thumbnailSrc = '/images/messenger-audios/default.jpg';
     } else if (item.type === 'quran-study') {
@@ -59,45 +54,38 @@ function getThumbnailSrc(item: Media): string {
 
 export function MediaCard({ item }: MediaCardProps) {
     const thumbnailSrc = getThumbnailSrc(item);
+    const [failed, setFailed] = useState(false);
 
     return (
-        <article className="media-card-shell soft-shell group flex h-full flex-col gap-4 p-2 transition duration-300 motion-safe:hover:-translate-y-0.5">
+        <article className="media-card-shell group flex h-full flex-col gap-4 border-t border-ed-rule pt-3 transition-colors duration-300">
             {/* Thumbnail */}
-            <div className="soft-panel relative aspect-video overflow-hidden rounded-[1.35rem] bg-ed-bg">
+            <div className="relative aspect-video overflow-hidden rounded-lg border border-ed-rule bg-ed-surface">
                 <Image
-                    src={thumbnailSrc}
+                    src={failed ? '/images/placeholders/rashad-khalifa.png' : thumbnailSrc}
                     alt={item.displayTitle}
                     fill
                     quality={60}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                    onError={(e) => {
-                        e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
-                    }}
+                    onError={() => setFailed(true)}
                 />
 
                 {/* Duration badge — bottom right like YouTube */}
                 {item.duration_seconds ? (
-                    <div className="soft-pill absolute bottom-2 right-2 px-2 py-1 text-[10px] font-medium text-ed-fg">
+                    <div className="absolute bottom-2 right-2 rounded bg-ed-bg/90 px-2 py-1 font-mono text-xs font-medium tabular-nums text-ed-fg">
                         {formatDuration(item.duration_seconds)}
                     </div>
                 ) : null}
             </div>
 
             {/* Content */}
-            <div className="flex flex-1 flex-col gap-2 px-2 pb-3 font-ui">
-                <h3 className="line-clamp-2 font-serif text-[15px] font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+            <div className="flex flex-1 flex-col gap-2 pb-3 font-ui">
+                <h3 className="line-clamp-2 font-serif text-[1.05rem] font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
                     {item.displayTitle}
                 </h3>
 
-                <div className="line-clamp-1 text-[11px] uppercase tracking-[0.12em] text-ed-fg-muted">
+                <div className="line-clamp-1 text-xs leading-5 text-ed-fg-muted">
                     <span>{item.author}</span>
-                    {item.alternateNumberLabel ? (
-                        <>
-                            <span className="mx-1">|</span>
-                            <span>{item.alternateNumberLabel}</span>
-                        </>
-                    ) : null}
                     {item.displayDate ? (
                         <>
                             <span className="mx-1">•</span>
@@ -112,25 +100,24 @@ export function MediaCard({ item }: MediaCardProps) {
 
 export function MediaList({ item }: MediaCardProps) {
     const thumbnailSrc = getThumbnailSrc(item);
+    const [failed, setFailed] = useState(false);
 
     return (
-        <div className="soft-shell group flex gap-4 p-2 font-ui">
+        <div className="group flex gap-4 border-t border-ed-rule py-4 font-ui">
             {/* Thumbnail */}
-            <div className="soft-panel relative aspect-video w-40 flex-shrink-0 overflow-hidden rounded-[1.15rem] bg-ed-bg sm:w-48">
+            <div className="relative aspect-video w-40 flex-shrink-0 overflow-hidden rounded-lg border border-ed-rule bg-ed-surface sm:w-48">
                 <Image
-                    src={thumbnailSrc}
+                    src={failed ? '/images/placeholders/rashad-khalifa.png' : thumbnailSrc}
                     alt={item.displayTitle}
                     fill
                     quality={60}
                     sizes="(max-width: 640px) 160px, 192px"
                     className="object-cover"
-                    onError={(e) => {
-                        e.currentTarget.src = '/images/placeholders/rashad-khalifa.png';
-                    }}
+                    onError={() => setFailed(true)}
                 />
 
                 {item.duration_seconds ? (
-                    <div className="soft-pill absolute bottom-1.5 right-1.5 px-2 py-0.5 text-[10px] font-medium tabular-nums text-ed-fg">
+                    <div className="absolute bottom-1.5 right-1.5 rounded bg-ed-bg/90 px-2 py-1 font-mono text-xs font-medium tabular-nums text-ed-fg">
                         {formatDuration(item.duration_seconds)}
                     </div>
                 ) : null}
@@ -138,18 +125,12 @@ export function MediaList({ item }: MediaCardProps) {
 
             {/* Content */}
             <div className="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1 pr-2">
-                <h3 className="line-clamp-2 font-serif text-sm font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+                <h3 className="line-clamp-2 font-serif text-base font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
                     {item.displayTitle}
                 </h3>
 
-                <div className="line-clamp-1 text-[11px] uppercase tracking-[0.12em] text-ed-fg-muted">
+                <div className="line-clamp-1 text-xs leading-5 text-ed-fg-muted">
                     <span>{item.author}</span>
-                    {item.alternateNumberLabel ? (
-                        <>
-                            <span className="mx-1">|</span>
-                            <span>{item.alternateNumberLabel}</span>
-                        </>
-                    ) : null}
                     {item.displayDate ? (
                         <>
                             <span className="mx-1">•</span>
@@ -159,7 +140,7 @@ export function MediaList({ item }: MediaCardProps) {
                 </div>
 
                 {item.duration_seconds ? (
-                    <div className="text-[10px] text-ed-fg-muted tabular-nums">
+                    <div className="font-mono text-xs text-ed-fg-muted tabular-nums">
                         {formatDuration(item.duration_seconds)}
                     </div>
                 ) : null}

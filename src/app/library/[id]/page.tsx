@@ -1,19 +1,13 @@
 import { Metadata } from 'next';
-import PDFReaderClient from './PDFReaderClient';
+import { notFound } from 'next/navigation';
 import { getAdjacentNewsletterIssues, getNewsletterIssue } from '@/lib/newsletterCatalog';
 import { getAppendixItem } from '@/lib/appendixCatalog';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
+import type { ArchiveBookSummary } from '@/types/archive';
+import NewsletterViewer from './NewsletterViewer';
+import PDFReaderClient from './PDFReaderWrapper';
 
-// Import data sources
-import otherData from '../../../../public/data/other/search_index.json';
-
-type IndexedBook = {
-    id: string;
-    title: string;
-    filename: string;
-    type?: 'other' | 'appendix' | 'newsletter';
-    pdfLink?: string;
-};
+import booksData from '../../../../public/data/generated_indices/BOOKS_LIST.json';
 
 type Props = {
     params: Promise<{ id: string }>;
@@ -23,18 +17,35 @@ type Props = {
 // Map URL slugs to filenames (or look up in JSON)
 const getBookData = (id: string) => {
     // Check Other Resources
-    const otherItem = (otherData as IndexedBook[]).find((item) => item.id === id);
-    if (otherItem) return { ...otherItem, type: 'other', pdfLink: undefined };
+    const otherItem = (booksData as ArchiveBookSummary[]).find((item) => item.id === id);
+    if (otherItem) return otherItem;
 
     // Check Appendices
     const appendixItem = getAppendixItem(id);
-    if (appendixItem) return { ...appendixItem, type: 'appendix' };
+    if (appendixItem) return { ...appendixItem, type: 'appendix' as const };
 
     // Check Submitter Perspectives PDFs
     const newsletterItem = getNewsletterIssue(id);
-    if (newsletterItem) return { ...newsletterItem, type: 'newsletter' };
+    if (newsletterItem) return { ...newsletterItem, type: 'newsletter' as const };
 
     return null;
+};
+
+const getBookDescription = (book: NonNullable<ReturnType<typeof getBookData>>): string => {
+    if (book.type === 'newsletter') {
+        const issueName = book.title.replace(book.date, '').trim() || book.title;
+        return `Newsletter issue: ${issueName}, ${book.date}. Read the full issue in the Submission Archives.`;
+    }
+    if (book.type === 'appendix') {
+        const appendixNumber = book.id.match(/^appendix-(\d+)$/)?.[1];
+        const label = appendixNumber && book.title !== `Appendix ${appendixNumber}`
+            ? `Appendix ${appendixNumber}: ${book.title}`
+            : book.title;
+        return `${label}. Read the full text in the Submission Archives.`;
+    }
+    return book.author
+        ? `Book: ${book.title} by ${book.author}. Read the full text in the Submission Archives.`
+        : `Book: ${book.title}. Read the full text in the Submission Archives.`;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -42,8 +53,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const book = getBookData(id);
     if (!book) return { title: 'Resource Not Found' };
     return {
-        title: `${book.title} | Submission Archives`,
-        description: `Read ${book.title}`
+        title: book.title,
+        description: getBookDescription(book)
     };
 }
 
@@ -56,24 +67,17 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
     const initialQuery = resolvedSearchParams?.q ? String(resolvedSearchParams.q).slice(0, 120) : '';
 
     if (!book) {
-        return (
-            <div className="min-h-screen bg-ed-bg text-ed-fg flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-2xl font-bold mb-4">Resource Not Found</h1>
-                    <p className="text-ed-fg-muted">The requested resource &quot;{id}&quot; could not be located.</p>
-                </div>
-            </div>
-        );
+        notFound();
     }
 
     // Determine PDF URL based on type
     let pdfUrl = '';
     if (book.type === 'other') {
-        pdfUrl = `/content/books/${book.filename}`;
+        pdfUrl = book.pdfLink;
     } else if (book.type === 'appendix') {
         pdfUrl = book.pdfLink || `/content/appendix/pdfs/${book.filename}`;
     } else if (book.type === 'newsletter') {
-        pdfUrl = book.pdfLink || `/content/newsletter/pdfs/${book.filename}`;
+        pdfUrl = book.pdfLink || '';
     }
 
     // Calculate navigation for newsletters
@@ -85,8 +89,16 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
         nextId = adj.nextId;
     }
 
+    if (book.type === 'newsletter' && !book.pdfLink) {
+        const newsletterIssue = book as unknown as { jsonData: Record<string, unknown> };
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        return <NewsletterViewer issue={newsletterIssue.jsonData as any} query={initialQuery} />;
+    }
+
+    const backFilter = book.type === 'newsletter' ? 'perspective' : book.type;
+
     return (
-        <main className="h-screen w-screen bg-ed-bg overflow-hidden flex flex-col">
+        <main id="main-content" className="h-screen w-screen bg-ed-bg overflow-hidden flex flex-col">
             <PDFReaderClient
                 pdfUrl={getPublicAssetUrl(pdfUrl)}
                 title={book.title}
@@ -94,6 +106,7 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
                 initialQuery={initialQuery}
                 prevId={prevId}
                 nextId={nextId}
+                backHref={`/search?filters=${backFilter}`}
             />
         </main>
     );

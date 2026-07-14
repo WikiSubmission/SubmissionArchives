@@ -1,98 +1,139 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpenText, FileStack, LibraryBig, ScrollText } from 'lucide-react';
+import Image from 'next/image';
+import type { Metadata } from 'next';
+import { ArrowUpRight, BookOpenText, FileText, LibraryBig, Newspaper } from 'lucide-react';
+
+import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
 
 export const revalidate = 3600;
 
-const shelves = [
+export const metadata: Metadata = {
+    title: 'Written Archive',
+    description: 'Newsletters, appendices, historical scans, and longer written works from the Submission Archives.',
+};
+
+const collections = [
+    {
+        title: 'Books and major works',
+        copy: 'Search the complete transcribed books and longer works in the Rashad Khalifa corpus.',
+        href: '/search?filters=other',
+        icon: BookOpenText,
+    },
     {
         title: 'Submitter perspectives',
-        copy: 'Newsletter writing, commentary, and interpretive material preserved for contextual study.',
+        copy: 'Newsletter writing, commentary, and contextual material preserved for close study.',
+        href: '/search?filters=perspective',
+        icon: Newspaper,
     },
     {
-        title: 'Appendices',
-        copy: 'Reference material, structured explanatory works, and study-ready supplements.',
+        title: 'Qur\'an appendices',
+        copy: 'Reference material and structured explanatory works from the translated editions.',
+        href: '/search?filters=appendix',
+        icon: FileText,
     },
     {
-        title: 'Historical scans',
-        copy: 'Documents and archival imagery that belong to the longer textual memory of the archive.',
-    },
-    {
-        title: 'Major works',
-        copy: 'Longer-form written material that should feel substantial, not buried in a generic file list.',
+        title: 'All written records',
+        copy: 'Search across every available book, newsletter, appendix, and related document.',
+        href: '/search?filters=other,perspective,appendix',
+        icon: LibraryBig,
     },
 ];
 
 export default function OtherPage() {
     return (
-        <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
-
-
-            <main className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                <header className="soft-shell grid gap-8 p-6 backdrop-blur-sm sm:p-8 lg:grid-cols-[1fr_0.9fr] lg:p-10">
+        <div className="min-h-screen bg-ed-bg font-body text-ed-fg">
+            <main id="main-content" className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
+                <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
                     <div className="space-y-6">
-                        <div className="soft-pill inline-flex items-center gap-3 px-4 py-2 text-ed-accent">
-                            <LibraryBig className="h-6 w-6" />
-                            <span className="text-[0.68rem] uppercase tracking-[0.28em]">
-                                Written archive
-                            </span>
-                        </div>
-                        <h1 className="max-w-[11ch] font-display text-5xl leading-[0.92] text-ed-fg sm:text-6xl lg:text-7xl">
-                            The text archive, given its own room.
+                        <p className="archive-kicker border-l-2 border-ed-accent pl-3">Written archive</p>
+                        <h1 className="max-w-[12ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9] text-ed-fg">
+                            A reading room for the written record.
                         </h1>
-                        <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted sm:text-base">
-                            Newsletters, appendices, scans, and longer written works share one calm reading surface.
-                        </p>
                     </div>
-
-                    <div className="soft-panel grid gap-2 p-2 sm:grid-cols-3 lg:self-end">
-                        <ShelfStat label="Primary mode" value="Reading" />
-                        <ShelfStat label="Collections" value="4" />
-                        <ShelfStat label="Palette" value="Gold and ink" />
+                    <div className="space-y-5 lg:pb-1">
+                        <p className="max-w-[58ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
+                            Books, newsletters, appendices, and related documents are transcribed and connected to the same research search used by the audio, video, and Qur&apos;an collections.
+                        </p>
+                        <Link href="/search" className="archive-button archive-button-primary">
+                            Search all written material
+                            <ArrowUpRight className="h-4 w-4" />
+                        </Link>
                     </div>
                 </header>
 
-                <section className="mt-14 grid gap-6 lg:grid-cols-2">
-                    {shelves.map((shelf, index) => (
-                        <article key={shelf.title} className="soft-shell p-6 sm:p-8">
-                            <div className="flex items-center justify-between gap-4 border-b border-ed-rule pb-5">
-                                <div className="soft-pill inline-flex items-center gap-3 px-4 py-2 text-ed-accent">
-                                    {index % 2 === 0 ? (
-                                        <BookOpenText className="h-5 w-5" />
-                                    ) : (
-                                        <ScrollText className="h-5 w-5" />
-                                    )}
-                                    <span className="text-[0.66rem] uppercase tracking-[0.24em]">
-                                        Collection {index + 1}
+                <section aria-labelledby="written-collections" className="mt-16">
+                    <div className="mb-8 flex flex-col gap-3 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
+                        <div>
+                            <p className="archive-kicker text-ed-fg-muted">Browse by collection</p>
+                            <h2 id="written-collections" className="mt-3 font-display text-3xl text-ed-fg sm:text-4xl">Four entrances to the text archive</h2>
+                        </div>
+                        <p className="text-sm text-ed-fg-muted">Select a collection to open a pre-filtered search.</p>
+                    </div>
+
+                    <div className="border-t border-ed-rule">
+                        {collections.map((collection, index) => {
+                            const Icon = collection.icon;
+                            return (
+                                <Link
+                                    key={collection.title}
+                                    href={collection.href}
+                                    className="group grid gap-4 border-b border-ed-rule py-7 transition-colors hover:bg-ed-surface sm:grid-cols-[4rem_1fr_auto] sm:items-center sm:px-4"
+                                >
+                                    <span className="flex items-center gap-3 font-mono text-sm tabular-nums text-ed-accent">
+                                        {String(index + 1).padStart(2, '0')}
+                                        <Icon className="h-5 w-5" aria-hidden="true" />
                                     </span>
+                                    <span>
+                                        <span className="block font-display text-2xl text-ed-fg transition-colors group-hover:text-ed-accent">{collection.title}</span>
+                                        <span className="mt-2 block max-w-[64ch] text-sm leading-7 text-ed-fg-muted sm:text-base">{collection.copy}</span>
+                                    </span>
+                                    <ArrowUpRight className="h-5 w-5 text-ed-fg-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ed-accent" aria-hidden="true" />
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                <section aria-labelledby="featured-books" className="mt-16">
+                    <div className="mb-8 flex flex-col gap-3 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
+                        <div>
+                            <p className="archive-kicker text-ed-fg-muted">Featured Works</p>
+                            <h2 id="featured-books" className="mt-3 font-display text-3xl text-ed-fg sm:text-4xl">Books & Publications</h2>
+                        </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                        {booksData.filter(book => book.category === 'Books').map((book) => (
+                            <Link key={book.id} href={`/library/${book.id}`} className="group flex flex-col gap-3">
+                                <div className="relative aspect-[2/3] w-full overflow-hidden rounded-md border border-ed-rule bg-ed-surface transition-colors group-hover:border-ed-accent">
+                                    {book.thumbnailOverride ? (
+                                        <Image
+                                            src={book.thumbnailOverride}
+                                            alt={`Cover of ${book.title}`}
+                                            fill
+                                            unoptimized={true}
+                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                                        />
+                                    ) : (
+                                        <div className="flex h-full w-full items-center justify-center bg-ed-surface text-ed-fg-muted">
+                                            <span className="font-serif text-sm">No Cover</span>
+                                        </div>
+                                    )}
                                 </div>
-                                <FileStack className="h-4 w-4 text-ed-fg-muted" />
-                            </div>
-                            <h2 className="mt-6 font-display text-3xl text-ed-fg">{shelf.title}</h2>
-                            <p className="mt-3 max-w-[40ch] text-sm leading-8 text-ed-fg-muted sm:text-[15px]">
-                                {shelf.copy}
-                            </p>
-                            <Link
-                                href="/search"
-                                className="soft-pill mt-6 inline-flex items-center gap-3 px-5 py-3 text-[0.68rem] uppercase tracking-[0.22em] text-ed-accent transition hover:text-ed-fg"
-                            >
-                                Search this material
-                                <ArrowRight className="h-4 w-4" />
+                                <div>
+                                    <h3 className="font-serif text-sm font-medium text-ed-fg group-hover:text-ed-accent line-clamp-2">
+                                        {book.title}
+                                    </h3>
+                                    {book.author && (
+                                        <p className="mt-1 text-xs text-ed-fg-muted">{book.author}</p>
+                                    )}
+                                </div>
                             </Link>
-                        </article>
-                    ))}
+                        ))}
+                    </div>
                 </section>
             </main>
-
-
-        </div>
-    );
-}
-
-function ShelfStat({ label, value }: { label: string; value: string }) {
-    return (
-        <div className="soft-panel px-5 py-5">
-            <p className="font-display text-2xl text-ed-fg">{value}</p>
-            <p className="mt-2 text-[0.62rem] uppercase tracking-[0.22em] text-ed-fg-muted">{label}</p>
         </div>
     );
 }

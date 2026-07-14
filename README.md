@@ -37,13 +37,16 @@ Built on a modern stack designed for performance and longevity:
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Storage**: **Cloudflare R2** (Serves 50GB+ of media)
-- **Search**: Custom client-side engine with fuzzy matching and n-gram indices.
+- **Media Playback**: All video and audio streams directly from YouTube. Nothing is self-hosted or proxied.
+- **Transcripts**: Sourced from timestamped CSV exports (`public/playlist_1`, `public/playlist_2`) and compiled into `public/data/generated_indices/MASTER_INDEX.json` by `scripts/generate/generate_catalog_search_indices.mjs`.
+- **Documents**: Appendix and newsletter PDFs, thumbnails, and books are served locally from `public/content/`.
+- **Search**: Custom client-side engine with fuzzy matching and phonetic scoring.
+- **Deployment**: Self-hosted via [Coolify](https://coolify.io/) using the included `Dockerfile` (Next.js standalone output).
 
 ## Local Development
 
 ### Prerequisites
-- Node.js 18+
+- Node.js 20+
 - NPM
 
 ### Setup
@@ -56,12 +59,9 @@ Built on a modern stack designed for performance and longevity:
     ```
 
 2.  **Configure Environment**:
-    Create a `.env.local` file in the root with your Cloudflare R2 credentials (required for media playback):
-    ```env
-    R2_ACCOUNT_ID=your_id
-    R2_ACCESS_KEY_ID=your_key
-    R2_SECRET_ACCESS_KEY=your_secret
-    R2_BUCKET_NAME=your_bucket
+    Copy `.env.example` to `.env.local`. Override `SITE_URL` when developing metadata or deploying under a different public origin:
+    ```bash
+    cp .env.example .env.local
     ```
 
 3.  **Run Dev Server**:
@@ -70,29 +70,39 @@ Built on a modern stack designed for performance and longevity:
     ```
     Open [http://localhost:3000](http://localhost:3000).
 
-4.  **Production Build**:
+4.  **Regenerate Search Indices** (after editing catalog lists or playlist CSVs):
+    ```bash
+    npm run generate:catalog
+    ```
+
+5.  **Production Build**:
     ```bash
     npm run build
+    npm start
     ```
-    *Note: This automatically runs `build-search-index.ts` to generate optimized search indices.*
 
-## Recent Updates (v2.1)
+    `npm start` prepares Next.js's standalone directory with the required `public/` and `.next/static/` assets, then launches the same server artifact used by the container image.
 
-### Mobile Responsiveness
-Major UI overhaul to ensure a seamless experience on mobile devices:
-- **Responsive Navigation**: New mobile-friendly header with hamburger menu and slide-out drawer.
-- **Adaptive Homepage**: Horizontal scrolling stats bar and single-column media layouts for small screens.
-- **Optimized Content**: Typography and layouts (e.g., "The False Verses") now scale gracefully.
-- **Improved Player**: Video and transcript views stack vertically on mobile for better usability.
+### Docker
 
-### Codebase Cleanup & Optimization
-- **Script Audit**: Removed deprecated debugging scripts to keep the repository clean.
-- **Structure**: Reorganized deprecated "Biblical" code and orphaned files.
-- **Performance**: Optimized build process and dependency management.
+A multi-stage `Dockerfile` is included for self-hosted deployment (e.g. Coolify):
+```bash
+docker build -t submissionarchives .
+docker run -p 3000:3000 submissionarchives
+```
 
-### R2 Storage Migration
-- **VTT Transcripts**: Migrated all local transcript files (`.vtt`) to Cloudflare R2.
-- **Direct Fetching**: Updated application logic to fetch transcripts directly from R2, reducing repository size and local dependencies.
+The production image runs as an unprivileged user and exposes `/api/health` for Coolify or container-orchestrator readiness checks. A healthy response includes the validated catalog record and segment counts. The image also contains a Docker `HEALTHCHECK` that polls this endpoint every 30 seconds.
+
+### Deployment verification
+
+Before deployment, run:
+
+```bash
+npm run verify:deploy
+npm run test:e2e
+```
+
+The first command verifies the lockfile, linting, TypeScript, unit and content contracts, deterministic catalog generation, production dependencies, and the standalone production build. The browser suite verifies representative archive, document, search, Qur'an, accessibility, and health-check flows against that build.
 
 ---
 

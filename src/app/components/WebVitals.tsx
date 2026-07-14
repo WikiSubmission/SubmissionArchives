@@ -7,14 +7,20 @@ const reportWebVitals = (metric: {
     name: string;
     value: number;
     rating?: 'good' | 'needs-improvement' | 'poor';
-    attribution?: unknown;
+    navigationType?: string;
 }) => {
     if (process.env.NODE_ENV !== 'production') {
         console.debug('[web-vitals]', metric);
         return;
     }
 
-    const body = JSON.stringify(metric);
+    const body = JSON.stringify({
+        id: metric.id,
+        name: metric.name,
+        value: metric.value,
+        rating: metric.rating,
+        navigationType: metric.navigationType,
+    });
     if (navigator.sendBeacon) {
         navigator.sendBeacon('/api/vitals', body);
         return;

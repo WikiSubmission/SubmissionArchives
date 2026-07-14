@@ -1,0 +1,32 @@
+{
+  "title": "Quran: The Final Testament (Authorized English Version) With the Arabic Text",
+  "translator": "Rashad Khalifa, Ph.D.",
+  "edition_year": 1989,
+  "source_pdf": "Hard Cover 1989.pdf",
+  "pdf_page_count": 748,
+  "quran_printed_pages": 604,
+  "chapters": 114,
+  "verse_index_rows": 6346,
+  "subheadings_extracted": 752,
+  "quran_footnotes_extracted": 341,
+  "appendices": 38,
+  "method": "The scan’s embedded English OCR and exact line/block coordinates were extracted from every page. Chapter, verse-range, subtitle, footnote, appendix, glossary, and index structures were parsed separately. Arabic Quran panels were transcribed with canonical Uthmani verse text and aligned to the exact 1989 page ranges; the scan remains authoritative for ornamental glyph forms and line wrapping.",
+  "important_note": "The supplied later-edition CSVs were used for chapter counts, verse indexing, and cross-edition validation only. Their English wording was not substituted for the 1989 edition wording.",
+  "files": [
+    "Quran1989_complete.json",
+    "Quran1989_pages_layout.jsonl",
+    "Quran1989_full_transcription.md",
+    "Quran1989_pages.csv",
+    "Quran1989_chapters.csv",
+    "Quran1989_verse_index.csv",
+    "Quran1989_subheadings.csv",
+    "Quran1989_footnotes.csv",
+    "Quran1989_appendices.csv",
+    "Quran1989_appendix_contents.csv",
+    "Quran1989_subject_index_lines.csv",
+    "Quran1989_glossary_lines.csv",
+    "Quran1989_contents_suras.csv",
+    "Quran1989_QA_report.md",
+    "README.md"
+  ]
+}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import { MediaGrid } from '@/app/components/home/MediaGrid';
+import { PaginatedMediaGrid } from '@/app/components/media/PaginatedMediaGrid';
 import { getTheme } from '@/lib/theme';
 import { useTheme } from '@/app/components/ThemeProvider';
 import type { Media } from '@/types/media';
@@ -73,22 +73,16 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
-            <main className="relative overflow-hidden">
+            <main id="main-content" className="relative overflow-hidden">
                 <div className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                    <header className="relative overflow-hidden rounded-[1.25rem] bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl grid gap-10 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
-                        {/* Deep Ambient Spotlight */}
-                        <div className="pointer-events-none absolute -right-40 -top-40 hidden h-96 w-96 rounded-full bg-[var(--ed-accent)] opacity-[0.08] blur-[100px] dark:opacity-[0.15] sm:block" />
-                        
+                    <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1.1fr_0.9fr]">
                         <div className="relative z-10 space-y-6">
-                            <span className="inline-flex items-center gap-2 px-1 text-[0.68rem] uppercase tracking-[0.24em] text-ed-accent font-medium">
-                                <span className="h-1.5 w-1.5 rounded-full bg-ed-accent shadow-[0_0_8px_var(--ed-accent)]" />
-                                Video index
-                            </span>
-                            <h1 className="max-w-[11ch] font-display text-5xl leading-[0.92] text-transparent bg-clip-text bg-gradient-to-br from-ed-fg via-ed-fg to-ed-fg-muted drop-shadow-sm sm:text-6xl lg:text-7xl">
+                            <p className="archive-kicker border-l-2 border-ed-accent pl-3">Video index</p>
+                            <h1 className="max-w-[16ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9] text-ed-fg">
                                 The Video Archive
                             </h1>
-                            <p className="max-w-[64ch] text-[15px] leading-8 text-ed-fg-muted sm:text-base">
-                                Sermons, instructional programs, and conference recordings - organized as a preserved study collection.
+                            <p className="max-w-[64ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
+                                Sermons, instructional programs, and conference recordings, organized as a preserved study collection.
                             </p>
                         </div>
 
@@ -101,13 +95,10 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
                     <div className="mt-16 space-y-20">
                         {categorizedVideos.map((section) => (
-                            <section key={section.id} className="space-y-8">
+                            <section key={section.id} id={section.id} className="space-y-8">
                                 <div className="flex flex-col gap-4 border-b border-ed-rule pb-6 sm:flex-row sm:items-end sm:justify-between">
                                     <div className="space-y-3">
-                                        <span className="inline-flex items-center gap-2 px-1 text-[0.58rem] uppercase tracking-[0.2em] text-ed-fg-muted">
-                                            <span className="h-1 w-1 rounded-full bg-ed-fg-muted" />
-                                            Collection
-                                        </span>
+                                        <p className="archive-kicker text-ed-fg-muted">Collection</p>
                                         <h2 className="font-display text-3xl text-ed-fg sm:text-4xl">
                                             {section.title}
                                         </h2>
@@ -115,12 +106,12 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                             {section.description}
                                         </p>
                                     </div>
-                                    <span className="flex items-center gap-2 rounded-full px-4 py-2 bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] text-[0.64rem] uppercase tracking-[0.22em] text-ed-fg-muted">
+                                    <span className="text-sm tabular-nums text-ed-fg-muted">
                                         {section.videos.length} records
                                     </span>
                                 </div>
 
-                                <MediaGrid media={section.videos} theme={theme} viewMode="grid" />
+                                <PaginatedMediaGrid media={section.videos} theme={theme} viewMode="grid" label={section.title} />
                             </section>
                         ))}
                     </div>
@@ -132,9 +123,9 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
 function StatPill({ value, label }: { value: string; label: string }) {
     return (
-        <div className="group flex items-center gap-3 rounded-full px-5 py-2.5 bg-black/[0.02] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] hover:bg-black/[0.04] transition-colors dark:bg-[#0a0a0a]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-[#0a0a0a]/60 backdrop-blur-md">
-            <span className="font-display text-xl text-ed-fg transition-colors group-hover:text-ed-accent">{value}</span>
-            <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-fg-muted">{label}</span>
+        <div className="group border-l border-ed-rule pl-4 first:border-l-0 first:pl-0">
+            <span className="block font-display text-2xl text-ed-fg transition-colors group-hover:text-ed-accent">{value}</span>
+            <span className="mt-1 block text-xs font-medium uppercase tracking-[0.12em] text-ed-fg-muted">{label}</span>
         </div>
     );
 }

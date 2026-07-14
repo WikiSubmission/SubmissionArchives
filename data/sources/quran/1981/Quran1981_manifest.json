@@ -1,0 +1,29 @@
+{
+  "title": "Quran: The Final Scripture (Authorized English Version)",
+  "translator": "Rashad Khalifa, Ph.D.",
+  "edition_year": 1981,
+  "source_pdf": "Quran1981.pdf",
+  "pdf_page_count": 562,
+  "printed_quran_pages": 469,
+  "chapters": 114,
+  "verses_indexed": 6346,
+  "subheadings_extracted": 459,
+  "quran_footnotes_extracted": 387,
+  "appendices": 19,
+  "method": "Embedded page OCR and coordinates from the scan, structural parsing, cross-edition alignment using the supplied CSVs, and targeted visual transcription for pages absent from the OCR layer.",
+  "important_note": "The supplied later-edition CSV wording was used for alignment and validation only; it was not substituted for the 1981 edition wording.",
+  "files": [
+    "Quran1981_pages_layout.jsonl",
+    "Quran1981_complete.json",
+    "Quran1981_full_transcription.md",
+    "Quran1981_pages.csv",
+    "Quran1981_chapters.csv",
+    "Quran1981_verse_index.csv",
+    "Quran1981_subheadings.csv",
+    "Quran1981_footnotes.csv",
+    "Quran1981_appendices.csv",
+    "Quran1981_subject_index_lines.csv",
+    "Quran1981_sura_index.csv",
+    "Quran1981_QA_report.md"
+  ]
+}

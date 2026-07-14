@@ -1,0 +1,26 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "recordCount": 380,
+  "segmentCount": 106966,
+  "categoryCounts": {
+    "Appendices": 40,
+    "Books": 11,
+    "Messenger Audios": 48,
+    "Quran": 114,
+    "Quran Studies": 52,
+    "Submitter Perspectives": 64,
+    "Videos": 51
+  },
+  "typeCounts": {
+    "appendix": 40,
+    "messenger-audio": 48,
+    "other": 11,
+    "perspective": 64,
+    "quran": 114,
+    "quran-study": 52,
+    "video-program": 51
+  },
+  "recordsWithoutSegments": []
+}

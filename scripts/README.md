@@ -1,24 +1,33 @@
 # Maintenance Scripts
 
-This folder contains optional data-maintenance scripts for rebuilding generated indexes.
+Optional data-maintenance scripts for rebuilding generated indices. None of these run automatically; the app reads their output at request time from `public/data/generated_indices/`.
 
-## Media Indexes
+## Catalog & Search Indices
 
-`generate/generate_catalog_search_indices.mjs` rebuilds the runtime catalog and search indexes for videos, Quran studies, messenger audios, and R2 asset metadata.
+`generate/generate_catalog_search_indices.mjs` rebuilds `MASTER_INDEX.json` (the canonical catalog of video, audio, newsletter, appendix, Quran, and book records), `BOOKS_LIST.json` (lightweight reader/sitemap metadata), `QURAN_CHAPTERS.json`, `CATALOG_VALIDATION.json`, and `ASSET_MANIFEST.csv`. Video/audio transcript segments are sourced from the timestamped CSVs in `public/playlist_1` and `public/playlist_2`, matched by YouTube ID and playback window. Canonical book and Quran transcription inputs live in `data/sources`; raw source bundles are not deployed from `public`.
 
-Run manually when new media is uploaded:
+For compatibility with older local tooling, the generator also writes the same lightweight book list to `public/data/other/search_index.json`. Application code uses `BOOKS_LIST.json`; the compatibility path is not a second source of truth.
 
-```bash
-node scripts/generate/generate_catalog_search_indices.mjs
-```
-
-## Books Indexes
-
-`generate/generate_other_index.ts` and `process/ocr-other-books.ts` rebuild `public/data/other/search_index.json` from the PDFs in `public/content/books`.
-
-Run one of these only when the books PDFs change:
+Generation validates record IDs, types, segment counts, required collection coverage, and referenced local assets before writing output. Run the same checks against existing generated output with:
 
 ```bash
-npx tsx scripts/generate/generate_other_index.ts
-npx tsx scripts/process/ocr-other-books.ts
+npm run validate:catalog
 ```
+
+Run after editing catalog lists, playlist CSVs, or anything under `data/sources`:
+
+```bash
+npm run generate:catalog
+```
+
+## Books and Quran
+
+The public PDFs in `public/content/books` are matched to canonical transcriptions by a normalized source filename. Copy-number suffixes such as `(1)` are ignored, allowing the corpus source names to match the readable archive PDFs without renaming either artifact. The 1981 and 1989 complete Quran JSON files are also used as page-level book transcriptions; the 1989 verse index additionally powers the edition switcher in the Quran reader.
+
+## Transcript Tooling
+
+`transcription_pipeline.py` downloads audio via `yt-dlp` and runs local ASR (Whisper/Canary/Parakeet) to produce VTT transcripts for catalog items that have no playlist CSV coverage.
+
+`process/vtt-to-json-converter.ts` converts raw VTT files in a `temp_vtt/` working directory into speaker-attributed JSON, including CP437 mojibake recovery for Arabic text.
+
+`utils/analyze-speakers.ts` scans a `temp_vtt/` directory and reports detected speaker-label patterns, useful when tuning the normalization rules in `vtt-to-json-converter.ts`.
