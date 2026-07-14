@@ -101,15 +101,6 @@ export function VideoArchiveSection() {
                         Friday sermons, instructional video programs, and United Submitters International conference recordings — preserved as a comprehensive visual study collection.
                     </p>
                 </div>
-                <div className="hidden">
-                    <p className="text-[0.62rem] uppercase tracking-[0.24em] text-ed-accent">What&apos;s in the archive</p>
-                    <ul className="space-y-1 text-sm leading-7 text-ed-fg-muted list-none">
-                        <li>Weekly Friday sermons, 1986–1990</li>
-                        <li>Instructional programs on Quranic study</li>
-                        <li>USI conference recordings and speeches</li>
-                        <li>Debate programs and public appearances</li>
-                    </ul>
-                </div>
                 <div className="grid gap-3 sm:grid-cols-2">
                     <ExpectationCard title="Friday sermons" body="Chronological sermon recordings with preserved titles, dates, and playable pages." />
                     <ExpectationCard title="Instructional programs" body="Watch explanations from Dr. Khalifa on The Contact Prayers, Ablution, The Essentials of Submission, and more." />
