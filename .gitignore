@@ -118,3 +118,8 @@ scripts/debug_ocr.py
 # public/data/generated_indices/ - Contains site metadata and search indices
 # public/images/ - Static UI assets
 # public/fonts/ - Custom typography
+
+public/content/books/1974 Islam 2.pdf
+public/content/books/1975 Islam 3.pdf
+public/content/books/1975 Islam 4.pdf
+public/content/appendix/pdfs/1982/1981_Appendices.pdf

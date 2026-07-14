@@ -1,461 +1,487 @@
-﻿chapter_number,placement_before_verse,verse_id,text,pdf_page,printed_page,bbox,bbox_normalized,later_edition_candidates_same_verse,exact_match_to_later_edition
-2,2,2:2,Three Categories of People,14,2,"[491.0, 702.421, 1107.999, 754.575]","[0.288824, 0.256358, 0.651764, 0.275392]",,False
-2,2,2:2,D)The Righteous,14,2,"[618.0, 781.603, 961.996, 832.199]","[0.363529, 0.285257, 0.56588, 0.303722]",,False
-2,6,2:6,2} The Disbelievers,14,2,"[593.0, 1232.603, 987.994, 1283.199]","[0.348824, 0.449855, 0.581173, 0.468321]",(2) The Disbelievers,False
-2,8,2:8,Q^The Hypocrites,14,2,"[606.0, 1579.083, 976.995, 1626.411]","[0.356471, 0.576308, 0.574703, 0.593581]",(3) The Hypocrites,False
-2,20,2:20,The Light of Faith,15,3,"[728.0, 1354.603, 1088.004, 1405.199]","[0.428235, 0.499669, 0.640003, 0.518332]",The Light of Faith,True
-2,24,2:24,Heaven and Hell Allegorically Described,15,3,"[511.0, 2174.603, 1309.99, 2225.199]","[0.300588, 0.802141, 0.770582, 0.820804]",Allegorical Description of Hell,False
-2,29,2:29,Two Deaths and Two Lives,16,4,"[528.0, 1022.274, 1082.012, 1075.939]","[0.310588, 0.375974, 0.636478, 0.395711]",,False
-2,30,2:30,Creation of Man,16,4,"[628.0, 1615.603, 960.006, 1666.199]","[0.369412, 0.59419, 0.564709, 0.612799]","Satan: A Temporary ""god""*",False
-2,40,2:40,The Children of Israel*,17,5,"[697.0, 1505.421, 1153.003, 1557.575]","[0.41, 0.555711, 0.678237, 0.574963]","Divine Commandments to All Jews: ""You Shall Believe in This Quran.""",False
-2,57,2:57,In Sinai,19,7,"[864.0, 291.603, 1022.001, 342.199]","[0.508235, 0.107286, 0.601177, 0.125901]",,False
-2,62,2:62,Minimum Requirement for Salvation,19,7,"[584.0, 1611.603, 1300.013, 1662.199]","[0.343529, 0.592937, 0.764714, 0.611552]",Unity of All Submitters,False
-2,63,2:63,The Covenant,19,7,"[800.0, 1983.421, 1086.999, 2035.575]","[0.470588, 0.729736, 0.639411, 0.748924]",Covenant with Israel,False
-2,67,2:67,The Heifer*,20,8,"[669.0, 280.083, 904.998, 327.411]","[0.393529, 0.102858, 0.532352, 0.120239]",The Heifer*,True
-2,80,2:80,Heaven and Hell are Eternal,21,9,"[611.0, 293.822, 1182.995, 342.812]","[0.359412, 0.108102, 0.69588, 0.126127]",Eternity of Heaven and Hell*,False
-2,83,2:83,The Children of Israel Rebel,21,9,"[620.0, 930.603, 1178.005, 981.199]","[0.364706, 0.342385, 0.692944, 0.361]",The Commandments,False
-2,97,2:97,Gabriel Mediated the Revelation,22,10,"[501.0, 1729.822, 1142.004, 1778.812]","[0.294706, 0.637135, 0.671767, 0.655179]",Gabriel Mediates the Revelation,False
-2,102,2:102,Sorcery Prohibited,23,11,"[708.0, 632.083, 1085.004, 679.411]","[0.416471, 0.232811, 0.638237, 0.250244]",Witchcraft Condemned,False
-2,104,2:104,Playing on Words,23,11,"[725.0, 1451.071, 1081.002, 1507.639]","[0.426471, 0.534464, 0.635884, 0.5553]",Twisting the Words of Supplication,False
-2,105,2:105,Superceding Previous Revelations,23,11,"[560.0, 1752.822, 1227.982, 1801.812]","[0.329412, 0.645607, 0.722342, 0.663651]",Jealousy Condemned,False
-2,111,2:111,Submission: Key to Salvation,24,12,"[510.0, 683.606, 1120.995, 768.459]","[0.3, 0.251789, 0.659409, 0.283042]","All Believers Are Redeemed, Regardless of the Name of Their Religion",False
-2,124,2:124,Abraham Passes the Test,25,13,"[643.0, 699.274, 1161.002, 752.939]","[0.378235, 0.257465, 0.682942, 0.277224]",Abraham,False
-2,142,2:142,Abolition of Prejudice and Bigotry,27,15,"[574.0, 301.126, 1247.263, 352.351]","[0.337647, 0.110871, 0.733684, 0.129732]",Abolition of Bigotry and Prejudice*,False
-2,148,2:148,Steadfastness Required,28,16,"[595.0, 1161.36, 1063.257, 1210.959]","[0.35, 0.428546, 0.625445, 0.446848]",,False
-2,148,2:148,Hajj Pilgrimage,28,16,"[672.0, 1853.959, 974.242, 1900.133]","[0.395294, 0.684118, 0.573083, 0.701156]",,False
-2,165,2:165,Overwhelming Signs of God,29,17,"[620.0, 790.822, 1181.003, 839.812]","[0.364706, 0.292032, 0.694707, 0.310123]",The Idols Disown Their Idolizers*,False
-2,165,2:165,The Idol Worshipers Disowned by Their Idols,29,17,"[450.0, 1174.786, 1348.991, 1227.777]","[0.264706, 0.43382, 0.793524, 0.453389]",The Idols Disown Their Idolizers*,False
-2,168,2:168,Free Mind Prerequisite for Salvation,29,17,"[539.0, 1881.822, 1257.994, 1930.812]","[0.317059, 0.694912, 0.739996, 0.713003]",Satan Prohibits Lawful Things,False
-2,172,2:172,Dietary Regulations,30,18,"[607.0, 656.822, 1000.01, 705.812]","[0.357059, 0.24139, 0.588241, 0.259394]",Only Four Meats Prohibited*,False
-2,178,2:178,Righteousness Defined,30,18,"[544.0, 1542.557, 1085.747, 1605.073]","[0.32, 0.566908, 0.638674, 0.589884]",Discouraging Capital Punishment*,False
-2,180,2:180,Leave a Will Before Death,31,19,"[628.0, 624.158, 1158.995, 679.294]","[0.369412, 0.229892, 0.681762, 0.2502]",Write A Will,False
-2,183,2:183,Fasting Reinforced and Revised*,31,19,"[561.0, 1293.205, 1223.736, 1360.138]","[0.33, 0.476319, 0.719845, 0.500972]",Fasting Emphasized and Modified*,False
-2,188,2:188,Dishonesty and Bribery Prohibited,32,20,"[468.0, 991.822, 1149.991, 1040.812]","[0.275294, 0.363571, 0.676465, 0.381529]","Bribery, Corruption Condemned",False
-2,189,2:189,Do Not Beat Around the Bush*,32,20,"[496.0, 1339.603, 1126.993, 1390.199]","[0.291765, 0.491057, 0.662937, 0.509604]",Do Not Beat Around the Bush,False
-2,191,2:191,Rules of War,32,20,"[681.0, 1793.603, 947.005, 1844.199]","[0.400588, 0.657479, 0.557062, 0.676026]",,False
-2,196,2:196,Hajj Pilgrimage*,33,21,"[738.0, 737.389, 1062.995, 782.996]","[0.434118, 0.270701, 0.625291, 0.287444]",Hajj and 'Umrah Pilgrimage*,False
-2,204,2:204,Appearances May Be Deceiving,34,22,"[501.0, 685.822, 1138.995, 734.812]","[0.294706, 0.251033, 0.669997, 0.268965]",Appearances May Be Deceiving,True
-2,203,2:203,The Hereafter is the Real Life,34,22,"[523.0, 1912.274, 1109.995, 1965.939]","[0.307647, 0.699954, 0.652938, 0.719597]",Mena: Last Rites of Hajj,False
-2,214,2:214,Hardship: A Mandatory Test,35,23,"[577.0, 307.421, 1156.002, 359.575]","[0.339412, 0.113523, 0.680001, 0.132782]",,False
-2,217,2:217,Recipients of Charity,35,23,"[647.0, 677.822, 1069.0, 726.812]","[0.380588, 0.250304, 0.628823, 0.268394]",Oppression Condemned,False
-2,219,2:219,Intoxicants and Gambling Prohibited,35,23,"[502.0, 1945.822, 1232.01, 1994.812]","[0.295294, 0.718546, 0.724712, 0.736637]",Intoxicants and Gambling Prohibited*,False
-2,221,2:221,Do Not Marry Pagans*,36,24,"[582.0, 303.822, 1050.995, 352.812]","[0.342353, 0.111249, 0.618233, 0.129188]",Do Not Marry Idol Worshipers,False
-2,222,2:222,Menstruation,36,24,"[674.0, 864.616, 942.011, 908.607]","[0.396471, 0.316593, 0.554124, 0.332701]",Menstruation,True
-2,225,2:225,Do Not Take the Name of God in Vain,36,24,"[419.0, 1551.158, 1202.994, 1606.294]","[0.246471, 0.567982, 0.707643, 0.588171]",,False
-2,240,2:240,You Shall Observe the Salat Prayers,38,26,"[266.0, 871.233, 703.258, 901.233]","[0.260784, 0.536804, 0.689468, 0.555289]",Alimony For Widows and Divorcees,False
-2,240,2:240,Alimony For Widows and Divorcees,38,26,"[268.0, 1105.002, 699.242, 1136.625]","[0.262745, 0.680839, 0.685531, 0.700323]",Alimony For Widows and Divorcees,True
-2,243,2:243,You Shall Courageously Struggle for the Cause of God,39,27,"[350.0, 302.421, 1442.997, 354.575]","[0.205882, 0.11094, 0.848822, 0.130071]",Striving in the Cause of God,False
-2,246,2:246,The Believers Always Victorious,39,27,"[575.0, 907.158, 1214.993, 962.294]","[0.338235, 0.33278, 0.714702, 0.353006]",Saul*,False
-2,251,2:251,No Compulsion in Religion,40,28,"[554.0, 1686.421, 1084.006, 1738.575]","[0.325882, 0.623215, 0.63765, 0.642489]",,False
-2,270,2:270,Secret Charities Recommended,42,30,"[498.0, 1835.421, 1127.996, 1887.575]","[0.292941, 0.673549, 0.663527, 0.692688]",Anonymous Charity Better,False
-2,263,2:263,On/y God Guides*,42,30,"[615.0, 2254.603, 988.745, 2305.199]","[0.361765, 0.827377, 0.581615, 0.845945]",,False
-2,282,2:282,Write Down Monetary Transactions,44,32,"[445.0, 297.274, 1161.009, 350.939]","[0.261765, 0.109898, 0.682947, 0.129737]",Write Down Financial Transactions,False
-2,282,2:282,Make No Distinction Among the Prophets,44,32,"[379.0, 1841.603, 1210.994, 1892.199]","[0.222941, 0.680814, 0.712349, 0.699519]",Write Down Financial Transactions,False
-3,23,3:23,The Danger of Ignorance,47,35,"[653.0, 307.822, 1152.998, 356.812]","[0.384118, 0.113546, 0.678234, 0.131616]",,False
-3,29,3:29,Do Not Befriend Disbelievers,47,35,"[611.0, 1175.822, 1189.989, 1224.812]","[0.359412, 0.433723, 0.699993, 0.451793]",,False
-3,23,3:23,The Prophet Preaches Quran*,47,35,"[599.0, 1886.421, 1207.75, 1938.575]","[0.352353, 0.69584, 0.710441, 0.715077]",,False
-3,33,3:33,The Family of Imran,48,36,"[601.0, 448.603, 1007.01, 499.199]","[0.353529, 0.165781, 0.592359, 0.184479]",The Birth of Mary,False
-3,35,3:35,Mary,48,36,"[747.0, 743.903, 859.998, 787.516]","[0.439412, 0.274909, 0.505881, 0.291026]",,False
-3,38,3:38,John,48,36,"[751.0, 1451.143, 854.997, 1495.757]","[0.441765, 0.536269, 0.502939, 0.552756]",The Birth of John,False
-3,42,3:42,Jesus,48,36,"[739.0, 2103.67, 856.999, 2148.907]","[0.434706, 0.777409, 0.504117, 0.794127]",Mary and Jesus,False
-3,64,3:64,The Great Commandment: You Shall Not Worship Except God*,50,38,"[170.0, 775.071, 1455.727, 831.639]","[0.1, 0.286215, 0.85631, 0.307105]",Invitation to All Believers,False
-3,65,3:65,Abraham: The Founder of Islam*,50,38,"[480.0, 1185.158, 1146.004, 1240.294]","[0.282353, 0.437651, 0.67412, 0.458011]",,False
-3,75,3:75,v You Shall Act Righteously With All The People,51,39,"[414.0, 1145.464, 1370.25, 1204.15]","[0.243529, 0.42268, 0.806029, 0.444336]",Be Honest With All People,False
-3,81,3:81,Before Genesis*,52,40,"[651.0, 304.126, 978.0, 355.351]","[0.382941, 0.111976, 0.575294, 0.130836]",Major Prophecy Fulfilled* God's Messenger of the Covenant,False
-3,84,3:84,Islam Preached By All Messengers,52,40,"[474.0, 1062.36, 1157.262, 1111.959]","[0.278824, 0.391149, 0.680742, 0.40941]",Make No Distinction Among God's Messengers,False
-3,93,3:93,Unauthorized Prohibition of Foods Is Wickedness,53,41,"[417.0, 590.071, 1395.026, 646.639]","[0.245294, 0.217738, 0.820604, 0.238612]",Do Not Prohibit What Is Lawful,False
-3,99,3:99,You Shall Be United,54,42,"[617.0, 729.296, 1082.753, 798.745]","[0.362941, 0.269312, 0.636914, 0.294957]",,False
-3,116,3:116,Righteous Jews and Christians,55,43,"[539.0, 644.822, 1260.006, 693.812]","[0.317059, 0.23803, 0.74118, 0.256114]",,False
-3,121,3:121,The Battle of Badr,55,43,"[717.0, 2108.603, 1091.008, 2159.199]","[0.421765, 0.77837, 0.641769, 0.797047]",The Battle of Badr,True
-3,130,3:130,Usury Prohibited,56,44,"[653.0, 1181.083, 990.997, 1228.411]","[0.384118, 0.432631, 0.58294, 0.449968]",Usury Prohibited*,False
-3,151,3:151,Time of Death Predetermined,57,45,"[599.0, 1072.603, 1189.0, 1123.199]","[0.352353, 0.39492, 0.699412, 0.413549]",God Controls Your Enemies,False
-3,151,3:151,The Disbelievers Invariably Lose,57,45,"[574.0, 2016.822, 1214.993, 2065.812]","[0.337647, 0.742571, 0.714702, 0.760608]",God Controls Your Enemies,False
-3,153,3:153,The Believers Never Defeatedj,58,46,"[529.0, 2058.603, 1155.013, 2109.199]","[0.311176, 0.758233, 0.67942, 0.776869]",,False
-3,169,3:169,Martyrdom: A Great Honor,59,47,"[602.0, 1325.274, 1159.995, 1378.939]","[0.354118, 0.489211, 0.68235, 0.509022]",The Righteous Do Not Really Die*,False
-3,179,3:179,You Must Be Put To The TestJ,60,48,"[483.0, 1044.158, 1175.993, 1099.294]","[0.284118, 0.38473, 0.69176, 0.405046]",,False
-3,196,3:196,Overwhelming Signs of God,61,49,"[588.0, 1117.603, 1145.994, 1168.199]","[0.345882, 0.411186, 0.674114, 0.429801]",,False
-3,196,3:196,Equality of Men and Women,61,49,"[580.0, 2057.274, 1151.009, 2110.939]","[0.341176, 0.756907, 0.677064, 0.776652]",,False
-4,2,4:2,The Orphans,63,51,"[755.0, 802.603, 1020.995, 853.199]","[0.444118, 0.296382, 0.600585, 0.315066]",Regard the Orphans,False
-4,7,4:7,Women's Rights Decreed,64,52,"[570.0, 299.603, 1069.007, 350.199]","[0.335294, 0.110351, 0.628827, 0.128987]",Women's Inheritance Rights,False
-4,17,4:17,Punish the Adulterers,65,53,"[687.0, 560.274, 1118.998, 613.939]","[0.404118, 0.206819, 0.658234, 0.22663]",Repentance,False
-4,17,4:17,Conditions For Acceptable Repentance,65,53,"[513.0, 1021.822, 1290.992, 1070.812]","[0.301765, 0.377195, 0.759407, 0.395279]",Repentance,False
-4,19,4:19,Protection For Women,65,53,"[672.0, 1582.274, 1130.005, 1635.939]","[0.395294, 0.58408, 0.664709, 0.60389]",,False
-4,22,4:22,Marriage Laws,66,54,"[681.0, 293.083, 985.992, 340.411]","[0.400588, 0.10787, 0.579995, 0.125289]",Respect for the Father,False
-4,29,4:29,You Shall Not Confiscate Properties,67,55,"[544.0, 298.603, 1264.009, 349.199]","[0.32, 0.110226, 0.743535, 0.128903]","Murder, Suicide, and Illicit Gains Prohibited",False
-4,32,4:32,Men and Women Shall Not Covet Each Other’s Qualities,67,55,"[323.0, 807.421, 1459.995, 859.575]","[0.19, 0.298051, 0.858821, 0.317303]",Men and Women Endowed With Unique Qualities,False
-4,36,4:36,The Great Commandment: You Shall Not Worship Except God,67,55,"[264.0, 1871.805, 1556.987, 1960.349]","[0.155294, 0.690958, 0.915875, 0.723643]",Major Commandments,False
-4,43,4:43,Tayammum: The Waterless Ablution,68,56,"[456.0, 902.158, 1183.997, 957.294]","[0.268235, 0.33131, 0.696469, 0.351559]",What Nullifies Ablution,False
-4,48,4:48,Idol Worship: The Only Unforgivable Offense,68,56,"[372.0, 2155.004, 1272.992, 2218.249]","[0.218824, 0.791408, 0.748819, 0.814634]",The Unforgivable Sin,False
-4,56,4:56,Allegorical Descriptions of Heaven and Hell*,69,57,"[465.0, 1116.603, 1351.984, 1167.199]","[0.273529, 0.410063, 0.795285, 0.428645]",Allegorical Description of Hell,False
-4,58,4:58,You Shall Be Trustworthy,69,57,"[653.0, 1532.158, 1174.0, 1587.294]","[0.384118, 0.562673, 0.690589, 0.582921]",Honesty & Justice Advocated,False
-4,64,4:64,All Messengers Preached the Word of God*,70,58,"[385.0, 981.158, 1261.012, 1036.294]","[0.226471, 0.362318, 0.741772, 0.382679]",Unquestioning Submission: Quality of the True Believers,False
-4,60,4:60,Submission Must Be Total,70,58,"[522.0, 1493.783, 1129.744, 1550.731]","[0.307059, 0.551618, 0.664555, 0.572648]",Believers Or Hypocrites?,False
-4,77,4:77,You Shall Be Courageous,71,59,"[643.0, 1300.603, 1158.007, 1351.199]","[0.378235, 0.476411, 0.68118, 0.494945]",,False
-4,82,4:82,Proof Of Divine Revelation,72,60,"[565.0, 577.822, 1096.989, 626.812]","[0.332353, 0.213534, 0.645288, 0.231638]",Proof of Divine Authorship,False
-4,83,4:83,You Shall Verify Any Rumors,72,60,"[542.0, 820.421, 1127.001, 872.575]","[0.318824, 0.303186, 0.662942, 0.322459]",Beware of the Devil's Rumors,False
-4,88,4:88,The Hypocrites Condemned,72,60,"[561.0, 1855.421, 1120.986, 1907.575]","[0.33, 0.685669, 0.659403, 0.704943]",How to Deal With the Hypocrites,False
-4,92,4:92,The Grossness of Murder,73,61,"[642.0, 1213.603, 1154.005, 1264.199]","[0.377647, 0.447659, 0.678826, 0.466322]",You Shall Not Kill,False
-4,97,4:97,Do Not Yield to Oppression,74,62,"[546.0, 444.158, 1104.002, 499.294]","[0.321176, 0.164017, 0.649413, 0.184377]",Apathy Condemned,False
-4,103,4:103,Salat Decreed at Specific Times,74,62,"[510.0, 1815.274, 1148.002, 1868.939]","[0.3, 0.670337, 0.675296, 0.690155]",The Contact Prayers,False
-4,105,4:105,"You Shall Follow The Messenger, But Do Not Idolize Him",75,63,"[333.0, 1753.421, 1476.994, 1805.575]","[0.195882, 0.643694, 0.86882, 0.66284]",,False
-4,125,4:125,This Is The Religion of Abraham,76,64,"[512.0, 1517.768, 1152.241, 1572.1]","[0.301176, 0.560476, 0.677789, 0.580539]",Abraham: Original Messenger of Submission*,False
-4,127,4:127,You Shall Regard The Women And The Orphans,76,64,"[348.0, 1975.768, 1325.253, 2030.1]","[0.204706, 0.729604, 0.779561, 0.749668]",,False
-4,135,4:135,You Shall Not Bear False Witness,77,65,"[570.0, 1310.768, 1249.263, 1365.1]","[0.335294, 0.481369, 0.734861, 0.501322]",You Shall Not Bear False Witness,True
-4,137,4:137,The Hypocrites,77,65,"[710.0, 1920.781, 1126.003, 1998.815]","[0.417647, 0.705391, 0.662354, 0.734049]",,False
-4,148,4:148,Do Not Utter Bad Language,78,66,"[554.0, 1500.421, 1126.005, 1552.575]","[0.325882, 0.554275, 0.662356, 0.573541]",Do Not Use Bad Language,False
-4,150,4:150,No Distinction Among the Messengers*,78,66,"[449.0, 1867.603, 1233.753, 1918.199]","[0.264118, 0.689916, 0.725737, 0.708607]",You Shall Not Make Any Distinction Among God's Messengers,False
-4,153,4:153,Lessons From Israel*,79,67,"[699.0, 302.361, 1127.25, 351.959]","[0.411176, 0.110958, 0.663088, 0.129159]",Lessons From Israel,False
-4,163,4:163,No Excuse For Disbelieving,80,68,"[577.0, 668.289, 1127.994, 716.664]","[0.339412, 0.246875, 0.663526, 0.264745]",God's Messengers,False
-4,171,4:171,Jesus: A Messenger of God*,80,68,"[569.0, 1942.011, 1146.992, 1999.976]","[0.334706, 0.717403, 0.674701, 0.738816]",Trinity: A False Doctrine,False
-4,174,4:174,The Proof Is Right Here,81,69,"[680.0, 735.083, 1154.0, 782.411]","[0.4, 0.269854, 0.678823, 0.287229]","The Quran's Mathematical Code: Tangible, Irrefutable Proof",False
-4,176,4:176,More Inheritance Statutes,81,69,"[666.0, 1127.083, 1186.999, 1174.411]","[0.391765, 0.41376, 0.698235, 0.431135]",,False
-5,3,5:3,On/y Four Kinds of Meat Prohibited*,82,70,"[456.0, 1252.603, 1188.997, 1303.199]","[0.268235, 0.462386, 0.69941, 0.481063]","Only Four Meats Prohibited ""Animals that die of themselves"" Defined",False
-5,6,5:6,Ablution and Tayammum Detailed,83,71,"[581.0, 1150.603, 1272.005, 1201.199]","[0.341765, 0.423795, 0.748238, 0.442431]",Ablution,False
-5,8,5:8,You Shall Not Bear False Witness,83,71,"[586.0, 2109.158, 1265.999, 2164.294]","[0.344706, 0.776854, 0.744705, 0.797162]",You Shall Not Bear False Witness,True
-5,11,5:11,God Defends the Believers,84,72,"[550.0, 305.421, 1081.999, 357.575]","[0.323529, 0.112785, 0.63647, 0.132044]",God Defends the Believers,True
-5,17,5:17,The Great Blasphemy*,85,73,"[681.0, 317.603, 1142.002, 368.199]","[0.400588, 0.116809, 0.671766, 0.135417]",Gross Blasphemy,False
-5,20,5:20,Lessons From Israel*,85,73,"[700.0, 1250.822, 1128.004, 1299.812]","[0.411765, 0.46003, 0.663532, 0.478048]",,False
-5,27,5:27,The First Murder,85,73,"[746.0, 2239.822, 1091.007, 2288.812]","[0.438824, 0.823767, 0.641769, 0.841784]",The First Murder*,False
-5,39,5:39,Criminal Justice,86,74,"[654.0, 2066.949, 980.008, 2111.819]","[0.384706, 0.749981, 0.576475, 0.766262]",,False
-5,45,5:45,God's Statutes: The Only Just Law,88,76,"[457.0, 285.004, 1174.007, 348.249]","[0.268824, 0.103826, 0.690592, 0.126867]",The Law of Equivalence,False
-5,48,5:48,"Muhammad's Mission: Deliver Quran, and Nothing But Quran*",88,76,"[181.0, 1115.975, 1453.742, 1175.305]","[0.106471, 0.406548, 0.855142, 0.428162]",Quran: The Ultimate Reference,False
-5,52,5:52,Historical Fact of Life,89,77,"[689.0, 311.083, 1127.993, 358.411]","[0.405294, 0.113245, 0.663525, 0.130474]",,False
-5,65,5:65,Salvation For Jews and Christians,90,78,"[466.0, 774.822, 1157.991, 823.812]","[0.274118, 0.281959, 0.681171, 0.299786]",Salvation For Jews and Christians,True
-5,67,5:67,The Messenger Delivers Everything Revealed to Him*,90,78,"[284.0, 1174.603, 1349.998, 1225.199]","[0.167059, 0.427439, 0.794117, 0.445851]",The Messenger Must Deliver,False
-5,69,5:69,Three Requirements For Salvation,90,78,"[477.0, 1739.603, 1161.997, 1790.199]","[0.280588, 0.633043, 0.683528, 0.651455]",Minimum Requirements For Salvation,False
-5,74,5:74,The Great Blasphemy,91,79,"[695.0, 342.421, 1138.008, 394.575]","[0.408824, 0.124607, 0.669416, 0.143586]",,False
-5,83,5:83,An Historical Fact,92,80,"[625.0, 303.603, 996.996, 354.199]","[0.367647, 0.110764, 0.586468, 0.129223]",,False
-5,87,5:87,Do Not Prohibit Lawful Foods*,92,80,"[493.0, 1114.289, 1119.739, 1162.664]","[0.29, 0.406527, 0.65867, 0.424175]",Do Not Prohibit Lawful Things,False
-5,90,5:90,Keep Your Vows,92,80,"[632.0, 1488.158, 980.002, 1543.294]","[0.371765, 0.542925, 0.576472, 0.56304]",Intoxicants and Gambling Prohibited,False
-5,90,5:90,Intoxicants and Gambling Prohibited,92,80,"[443.0, 1978.822, 1177.002, 2027.812]","[0.260588, 0.721934, 0.692354, 0.739807]",Intoxicants and Gambling Prohibited,True
-5,5,5:5,Sole Function of the Messenger*,93,81,"[558.0, 555.603, 1213.991, 606.199]","[0.328235, 0.202332, 0.714112, 0.220757]",,False
-5,5,5:5,Do Not Hunt During Pilgrimage,93,81,"[583.0, 1087.822, 1215.997, 1136.812]","[0.342941, 0.396148, 0.715293, 0.413988]",,False
-5,98,5:98,Sole Function of the Messenger*,94,82,"[486.0, 476.93, 1140.268, 529.731]","[0.285882, 0.17438, 0.670746, 0.193686]",,False
-5,106,5:106,Witnessing a Will,95,83,"[675.0, 333.538, 1022.261, 390.809]","[0.397059, 0.121774, 0.60133, 0.142683]",Witnessing A Will,True
-5,112,5:112,The Feast,95,83,"[786.0, 2042.36, 992.251, 2091.959]","[0.462353, 0.745659, 0.583677, 0.763767]",The Feast,True
-5,116,5:116,Jesus Disowns His Worshipers,96,84,"[502.0, 318.637, 1121.261, 374.459]","[0.295294, 0.116249, 0.659566, 0.136614]",On The Day Of Resurrection,False
-6,4,6:4,The Disbelievers,97,85,"[725.0, 1077.36, 1055.246, 1126.959]","[0.426471, 0.392624, 0.620733, 0.410699]",,False
-6,12,6:12,God Alone Worthy of Worship,97,85,"[587.0, 2283.637, 1203.257, 2339.459]","[0.345294, 0.832229, 0.707798, 0.852573]",,False
-6,17,6:17,Only God Benefits and Harms,98,86,"[505.0, 780.93, 1114.263, 833.731]","[0.297059, 0.283356, 0.655449, 0.302515]",Only God Controls Happiness,False
-6,19,6:19,Quran: The Only Divine Revelation to Muhammad,98,86,"[287.0, 1086.97, 1329.238, 1176.614]","[0.168824, 0.394401, 0.781904, 0.426928]","Quran, the Whole Quran, and Nothing But the Quran",False
-6,21,6:21,Hadith and Sunna: Imperceptible Idolatry*,98,86,"[369.0, 1638.535, 1249.239, 1723.482]","[0.217059, 0.594534, 0.734847, 0.625356]",,False
-6,33,6:33,Cod's Messengers Persecuted,99,87,"[593.0, 1842.36, 1195.267, 1891.959]","[0.348824, 0.672885, 0.703098, 0.691]",,False
-6,38,6:38,Quran: All the Commandments We Need,100,88,"[383.0, 473.807, 1245.261, 559.713]","[0.225294, 0.172985, 0.732506, 0.204349]",Animals and Birds: Submitting Creatures*,False
-6,42,6:42,The Standard Method,100,88,"[589.0, 1153.36, 1034.244, 1202.959]","[0.346471, 0.421088, 0.608379, 0.439196]",,False
-6,46,6:46,"God Alone Omnipotent, While the Messengers Powerless",101,89,"[311.0, 301.417, 1451.255, 361.483]","[0.182941, 0.109806, 0.853679, 0.131688]",God Alone Worthy of Worship,False
-6,52,6:52,First Believers: The Poor and Oppressed,101,89,"[481.0, 1333.637, 1299.252, 1389.459]","[0.282941, 0.485842, 0.764266, 0.506178]",,False
-6,68,6:68,Stay Away From the Wicked,102,90,"[523.0, 1863.768, 1112.255, 1918.1]","[0.307647, 0.679216, 0.654267, 0.699016]",Respect for the Word of God,False
-6,74,6:74,Abraham Discovers God,103,91,"[649.0, 1368.126, 1155.245, 1419.351]","[0.381765, 0.498588, 0.679556, 0.517256]",Abraham Debates With Idol Worshipers,False
-6,92,6:92,True Believers of all Religions Will Accept Quran,104,92,"[359.0, 1895.637, 1329.764, 1951.459]","[0.211176, 0.693357, 0.782214, 0.713774]",,False
-6,95,6:95,God Alone Worthy of Worship,105,93,"[640.0, 636.768, 1258.245, 691.1]","[0.376471, 0.232737, 0.740144, 0.252595]",Greatness of God,False
-6,108,6:108,Do Not Berate Their Idols,106,94,"[534.0, 571.768, 1060.257, 626.1]","[0.314118, 0.208598, 0.623681, 0.22842]",,False
-6,106,6:106,Hadith and Sunna: The Great Test to Distinguish,106,94,"[299.0, 1431.445, 1292.235, 1496.744]","[0.175882, 0.522235, 0.760138, 0.546058]",,False
-6,106,6:106,True Muslims From False Muslims,106,94,"[455.0, 1496.36, 1141.249, 1545.959]","[0.267647, 0.545918, 0.671323, 0.564013]",,False
-6,118,6:118,Permission From the Creator Before Killing Animals,107,95,"[386.0, 782.93, 1424.263, 835.731]","[0.227059, 0.286159, 0.837802, 0.305457]",,False
-6,6,6:6,Scientific Miracle*,108,96,"[621.0, 304.361, 988.256, 353.959]","[0.365294, 0.110959, 0.581327, 0.129041]",,False
-6,6,6:6,The Majority of People Heedless,108,96,"[484.0, 965.361, 1130.257, 1014.959]","[0.284706, 0.351936, 0.664857, 0.370018]",,False
-6,136,6:136,Ancient Traditions,109,97,"[716.0, 330.93, 1092.255, 383.731]","[0.421176, 0.120513, 0.642503, 0.139742]",Abusing God's Provisions,False
-6,138,6:138,Do Not Prohibit Lawful Things,109,97,"[581.0, 1001.126, 1199.251, 1052.351]","[0.341765, 0.364576, 0.705442, 0.38323]",Religious Innovations Condemned,False
-6,142,6:142,Follow the Teachings of God Alone,109,97,"[547.0, 1831.768, 1258.243, 1886.1]","[0.321765, 0.667068, 0.740143, 0.686854]",,False
-6,145,6:145,Only Four Things Prohibited,110,98,"[520.0, 879.126, 1091.245, 930.351]","[0.305882, 0.320732, 0.641909, 0.33942]",The Only Dietary Prohibitions*,False
-6,151,6:151,Do Not Bicker Over Minor Issues,111,99,"[558.0, 619.636, 1234.254, 667.553]","[0.328235, 0.225077, 0.726032, 0.242482]",The Major Commandments,False
-6,6,6:6,One Quran; One Islam,112,100,"[587.0, 296.408, 1058.24, 360.439]","[0.345294, 0.108217, 0.622494, 0.131595]",,False
-6,6,6:6,Muhammad: A Follower of Abraham*,112,100,"[441.0, 835.417, 1213.248, 895.483]","[0.259412, 0.305008, 0.713675, 0.326938]",,False
-7,2,7:2,Quran: The Only Source of Islamic Knowledge,114,102,"[343.0, 661.502, 1285.25, 728.044]","[0.201765, 0.2416, 0.756029, 0.265904]",,False
-7,11,7:11,Satan: The Great Challenge*,114,102,"[506.0, 1718.97, 1125.256, 1808.614]","[0.297647, 0.62782, 0.661915, 0.66056]",,False
-7,28,7:28,God Never Advocates Evil,116,104,"[538.0, 320.361, 1073.244, 369.959]","[0.316471, 0.117005, 0.63132, 0.13512]",Examine All Inherited Information,False
-7,32,7:32,Do Not Prohibit Lawful Things*,116,104,"[485.0, 1082.93, 1125.247, 1135.731]","[0.285294, 0.395519, 0.66191, 0.414803]",Innovated Prohibitions Condemned,False
-7,35,7:35,Follow the Teachings of God Alone,116,104,"[456.0, 1741.637, 1166.253, 1797.459]","[0.268235, 0.636098, 0.686031, 0.656486]",Messengers From Among You,False
-7,38,7:38,What Happened on the Day of Judgment*,117,105,"[479.0, 686.768, 1326.233, 741.1]","[0.281765, 0.250098, 0.780137, 0.269884]",Mutual Blaming,False
-7,54,7:54,God Alone Worthy of Worship,119,107,"[581.0, 302.768, 1197.258, 357.1]","[0.341765, 0.110701, 0.70427, 0.130567]",,False
-7,59,7:59,Believers: The Ultimate Winners,119,107,"[550.0, 1298.97, 1226.237, 1388.614]","[0.323529, 0.474943, 0.721316, 0.50772]",Noah,False
-7,59,7:59,Noah,119,107,"[829.0, 1411.846, 946.252, 1456.851]","[0.487647, 0.516214, 0.556619, 0.53267]",Noah,True
-7,73,7:73,Saalih,120,108,"[743.0, 1424.334, 873.247, 1468.696]","[0.437059, 0.518694, 0.513674, 0.534849]",Sãleh,False
-7,85,7:85,Shu’aib,121,109,"[836.0, 954.826, 991.25, 998.54]","[0.491765, 0.347336, 0.583088, 0.363238]","Shu'aib: Cheating, Dishonesty Condemned",False
-7,94,7:94,God’s System,122,110,"[677.0, 304.361, 957.246, 353.959]","[0.398235, 0.111162, 0.563086, 0.129276]",Blessings in Disguise,False
-7,103,7:103,Moses,122,110,"[750.0, 1740.924, 884.002, 1784.509]","[0.441176, 0.635838, 0.520001, 0.651756]",Moses,True
-7,138,7:138,Idol Worship: A Perennial Human Disease,124,112,"[389.0, 1165.768, 1233.249, 1220.1]","[0.228824, 0.4233, 0.72544, 0.443028]",After All the Miracles,False
-7,143,7:143,God is Not Here*,125,113,"[709.0, 302.361, 1067.746, 351.959]","[0.417059, 0.11019, 0.628086, 0.128265]",,False
-7,146,7:146,The Curse of Pride,125,113,"[697.0, 1083.126, 1080.249, 1134.351]","[0.41, 0.394725, 0.63544, 0.413393]",Divine Intervention Keeps the Disbelievers in the Dark,False
-7,157,7:157,Quran: God's Message to the Jews and the Christians*,126,114,"[269.0, 1363.219, 1380.514, 1424.863]","[0.158235, 0.497344, 0.812067, 0.519833]",,False
-7,158,7:158,Muhammad: God's Messenger to ALL the People,126,114,"[327.0, 1873.164, 1323.508, 1933.563]","[0.192353, 0.683387, 0.778534, 0.705422]",,False
-7,159,7:159,The Example of Israel*,126,114,"[600.0, 2288.764, 1056.003, 2336.513]","[0.352941, 0.835011, 0.621178, 0.852431]",The Guided Jews,False
-7,169,7:169,Knowledge of God: Our Natural Instinct,128,116,"[394.0, 1076.408, 1210.244, 1140.439]","[0.231765, 0.392277, 0.711908, 0.415612]",,False
-7,186,7:186,Quran is the Only “Hadith,129,117,"[545.0, 1247.768, 1227.261, 1302.1]","[0.320588, 0.455722, 0.721918, 0.475566]",,False
-7,187,7:187,Do Not Idolize Muhammad,129,117,"[606.0, 1739.126, 1156.253, 1790.351]","[0.356471, 0.635181, 0.680149, 0.65389]",,False
-7,188,7:188,Various Kinds of Idols*,130,118,"[592.0, 645.361, 1056.251, 694.959]","[0.348235, 0.234847, 0.621324, 0.252896]",Messengers Are Powerless; They Do Not Know the Future.,False
-7,204,7:204,Muhammad Could Not Utter the Quran on His Own*,131,119,"[285.0, 295.421, 1425.0, 348.575]","[0.167647, 0.107936, 0.838236, 0.127357]",,False
-8,23,8:23,God Knows Which Among Us Deserve to Hear,133,121,"[410.0, 1211.538, 1364.248, 1268.809]","[0.241176, 0.442813, 0.802499, 0.463746]",,False
-8,30,8:30,The Believers Persecuted,134,122,"[570.0, 465.361, 1075.253, 514.959]","[0.335294, 0.16953, 0.632502, 0.187599]",God Protects His Messenger*,False
-8,35,8:35,Salat Prayers Observed Before Muhammad,134,122,"[385.0, 1207.93, 1263.244, 1260.731]","[0.226471, 0.440047, 0.743085, 0.459283]",The Contact Prayers (Salat) Existed Before the Quran*,False
-8,49,8:49,The Disbelievers Always Losers,135,123,"[561.0, 2030.126, 1197.257, 2081.351]","[0.33, 0.737959, 0.704269, 0.75658]",,False
-8,57,8:57,Believers Are Stern and Alert,136,124,"[538.0, 1429.126, 1130.249, 1480.351]","[0.316471, 0.52006, 0.664852, 0.538701]",,False
-8,67,8:67,The Prophet Subject to the Same Tests,137,125,"[493.0, 786.768, 1283.995, 841.1]","[0.29, 0.287037, 0.755291, 0.306859]",,False
-9,17,9:17,God Guards His Mosques,139,127,"[642.0, 1937.822, 1167.996, 1986.812]","[0.377647, 0.707751, 0.687056, 0.725644]",,False
-9,24,9:24,God: The Only Priority,140,128,"[525.0, 662.625, 1115.996, 732.958]","[0.308824, 0.239734, 0.656468, 0.26518]",Important Criterion*,False
-9,30,9:30,Quran Rectifies Previous Deviations,140,128,"[454.0, 2023.603, 1171.003, 2074.199]","[0.267059, 0.732128, 0.688825, 0.750434]",Blasphemies,False
-9,37,9:37,Conservation,141,129,"[781.0, 1265.552, 1049.992, 1309.627]","[0.459412, 0.461039, 0.617642, 0.477095]",Altering the Sacred Months*,False
-9,38,9:38,You Shall Eagerly Struggle,141,129,"[653.0, 2055.603, 1183.997, 2106.199]","[0.384118, 0.748854, 0.696469, 0.767286]",,False
-9,62,9:62,Distribution of Charities,143,131,"[665.0, 1366.421, 1146.004, 1418.575]","[0.391176, 0.499788, 0.67412, 0.518864]",,False
-9,67,9:67,The Winners,144,132,"[684.0, 1250.158, 942.003, 1305.294]","[0.402353, 0.454934, 0.554119, 0.474998]",,False
-9,81,9:81,The Sedentary,145,133,"[770.0, 951.822, 1067.001, 1000.812]","[0.452941, 0.34738, 0.627647, 0.36526]",,False
-9,103,9:103,Repentance,147,135,"[801.0, 333.226, 1041.992, 377.73]","[0.471176, 0.121305, 0.612937, 0.137507]",,False
-9,107,9:107,Mosques Abused*,147,135,"[738.0, 1138.083, 1108.012, 1185.411]","[0.434118, 0.4143, 0.651772, 0.431529]",Masjids that Oppose God and His Messenger*,False
-9,102,9:102,Most Profitable Trade,147,135,"[703.0, 1947.274, 1146.003, 2000.939]","[0.413529, 0.708873, 0.674119, 0.728409]",,False
-9,113,9:113,God: The Only Priority,148,136,"[575.0, 643.053, 1044.997, 707.551]","[0.338235, 0.234008, 0.614704, 0.257479]",You Shall Disown God's Enemies Abraham Disowned His Father,False
-9,112,9:112,The Importance of Religious Knowledge,148,136,"[419.0, 2322.603, 1211.996, 2373.199]","[0.246471, 0.845198, 0.712939, 0.86361]",The Believers,False
-10,5,10:5,Overwhelming Signs of God,150,138,"[549.0, 1352.822, 1111.992, 1401.812]","[0.322941, 0.494091, 0.654113, 0.511984]",,False
-10,10,10:10,The Initial Decision is Ours,151,139,"[645.0, 560.786, 1187.748, 613.777]","[0.379412, 0.20311, 0.698675, 0.222302]",,False
-10,15,10:15,Quran: Muhammad’s Sole Mission,151,139,"[561.0, 1663.542, 1257.754, 1723.443]","[0.33, 0.602514, 0.739855, 0.62421]",Every Letter Calculated and Divinely Designed,False
-10,18,10:18,Do Not Idolize Anyone,151,139,"[689.0, 2298.535, 1150.749, 2345.268]","[0.405294, 0.832501, 0.676911, 0.849427]",,False
-10,21,10:21,Muhammad’s Miracle Revealed Centuries Later*,152,140,"[348.0, 558.126, 1324.249, 609.351]","[0.204706, 0.203399, 0.77897, 0.222067]",Rebellious Humans,False
-10,21,10:21,Do Not Waiver With Circumstances,152,140,"[484.0, 872.768, 1211.253, 927.1]","[0.284706, 0.318064, 0.712502, 0.337864]",Rebellious Humans,False
-10,28,10:28,Idols Disown Their Idolizers,153,141,"[613.0, 313.538, 1173.246, 370.809]","[0.360588, 0.113559, 0.690145, 0.134302]",Idols Disown Their Worshipers,False
-10,28,10:28,"Hadith” is Conjecture, While Quran is Flawless*",153,141,"[426.0, 1818.417, 1411.236, 1878.483]","[0.250588, 0.658608, 0.830139, 0.680363]",Idols Disown Their Worshipers,False
-10,54,10:54,One Chance to Develop Our Souls,154,142,"[486.0, 2158.93, 1190.251, 2211.731]","[0.285882, 0.787643, 0.700148, 0.806907]",What Price Faith,False
-10,60,10:60,Only Four Meats Specifically Prohibited*,155,143,"[536.0, 573.071, 1354.982, 629.639]","[0.315294, 0.20771, 0.797048, 0.228213]",,False
-10,69,10:69,Heaven Begins Here,155,143,"[681.0, 1317.126, 1095.254, 1368.351]","[0.400588, 0.477392, 0.644267, 0.495959]",,False
-10,71,10:71,Noah,156,144,"[771.0, 328.688, 889.247, 373.901]","[0.453529, 0.119959, 0.523086, 0.13646]",Noah,True
-10,75,10:75,Moses,156,144,"[763.0, 1096.378, 898.254, 1140.682]","[0.448824, 0.400138, 0.528384, 0.416307]",Moses and Aaron,False
-10,94,10:94,Muhammad the Man us Muhammad the Messenger*,157,145,"[365.0, 1289.93, 1423.242, 1342.731]","[0.214706, 0.470606, 0.837201, 0.489869]",The Messenger's Doubt,False
-10,99,10:99,God Blocks Out the Skeptics*,158,146,"[521.0, 890.126, 1129.258, 941.351]","[0.306471, 0.324272, 0.664269, 0.342933]",,False
-11,12,11:12,Muhammad’s Role: Deliver the Message,160,148,"[433.0, 468.126, 1236.247, 519.351]","[0.254706, 0.170911, 0.727204, 0.189613]",God's Revelation is Heavy,False
-11,25,11:25,The First Commandment*,161,149,"[603.0, 308.126, 1132.254, 359.351]","[0.354706, 0.112619, 0.666032, 0.131342]",Noah,False
-11,25,11:25,You Shall NOT Worship Except God,161,149,"[496.0, 386.93, 1243.25, 439.731]","[0.291765, 0.141422, 0.731323, 0.16072]",Noah,False
-11,50,11:50,Hood,162,150,"[735.0, 1931.307, 853.746, 1977.023]","[0.432353, 0.705887, 0.502203, 0.722596]",Hûd: One and the Same Message,False
-11,61,11:61,Saalih,163,151,"[817.0, 1364.334, 947.247, 1408.696]","[0.480588, 0.496483, 0.557204, 0.512626]",Sãleh: One and the Same Message,False
-11,69,11:69,Abraham,164,152,"[724.0, 307.829, 918.254, 352.857]","[0.425882, 0.111492, 0.540149, 0.1278]",Abraham and Lot,False
-11,84,11:84,Shu’aib,164,152,"[750.0, 2269.825, 905.25, 2313.54]","[0.441176, 0.822103, 0.5325, 0.837936]",Shu'aib: One and the Same Message,False
-11,96,11:96,Moses,165,153,"[797.0, 1998.31, 931.994, 2044.021]","[0.468824, 0.73011, 0.548232, 0.746811]",Moses,True
-11,113,11:113,Important Commandments,166,154,"[546.0, 1785.93, 1089.237, 1838.731]","[0.321176, 0.652514, 0.640728, 0.671805]",,False
-12,40,12:40,You Shall Not Worship Except God*,171,159,"[528.0, 569.158, 1267.993, 624.294]","[0.310588, 0.208026, 0.745878, 0.228178]",,False
-12,43,12:43,The King’s Dream,171,159,"[718.0, 1343.822, 1083.012, 1392.812]","[0.422353, 0.491163, 0.637066, 0.509069]",The King's Dream,False
-12,92,12:92,Israel’s Family Moves to Egypt,174,162,"[514.0, 1744.421, 1127.994, 1796.575]","[0.302353, 0.632724, 0.663526, 0.651641]",,False
-12,103,12:103,The Majority of People Will Not Believe,175,163,"[515.0, 1370.637, 1302.258, 1426.459]","[0.302941, 0.500964, 0.766034, 0.521367]",The Majority of People Do Not Believe,False
-12,106,12:106,Minority of the Minority Attain Salvation,175,163,"[503.0, 1774.36, 1311.259, 1823.959]","[0.295882, 0.648524, 0.771329, 0.666652]",The Majority of Believers Destined for Hell,False
-13,15,13:15,God On/y Worthy of Worship,178,166,"[528.0, 901.158, 1123.999, 956.294]","[0.310588, 0.327694, 0.661176, 0.347743]",All Creation Has Submitted to God,False
-13,17,13:17,Muhammad Performed No Miracles*,179,167,"[528.0, 2015.636, 1269.237, 2063.553]","[0.310588, 0.736978, 0.74661, 0.754499]",The Truth vs Falsehood,False
-13,31,13:31,The Disbelievers Hopelessly Blocked Out,180,168,"[412.0, 724.822, 1230.999, 773.812]","[0.242353, 0.264052, 0.724117, 0.281899]",Mathematical Miracle of the Quran,False
-13,36,13:36,Quran Recognized and Appreciated by Jews and Christians,180,168,"[226.0, 2017.421, 1418.018, 2069.575]","[0.132941, 0.734944, 0.834128, 0.753943]",,False
-14,11,14:11,The Future That Already Took Place*,183,171,"[520.0, 1662.274, 1283.001, 1715.939]","[0.305882, 0.607112, 0.754706, 0.626713]",,False
-14,29,14:29,God Misleads the Wicked*,184,172,"[547.0, 685.158, 1086.749, 740.294]","[0.321765, 0.248877, 0.639264, 0.268904]",Idol Worship: The Mother of All Evil,False
-14,35,14:35,Abraham,184,172,"[721.0, 1940.158, 915.993, 1984.752]","[0.424118, 0.704743, 0.53882, 0.720942]",Abraham,True
-14,42,14:42,The Day of Reckoning*,185,173,"[662.0, 802.822, 1135.001, 851.812]","[0.389412, 0.290352, 0.667647, 0.308069]",,False
-15,1,15:1,God’s Promise,186,174,"[689.0, 1294.083, 985.994, 1341.411]","[0.405294, 0.469722, 0.579997, 0.486901]",,False
-15,1,15:1,The Disbelievers Hopelessly Blocked,186,174,"[473.0, 1497.822, 1204.994, 1546.812]","[0.278235, 0.543674, 0.70882, 0.561456]",,False
-15,20,15:20,The Humans and the Jinns*,187,175,"[606.0, 867.603, 1172.993, 918.199]","[0.356471, 0.314919, 0.689996, 0.333285]",,False
-15,51,15:51,Sodom and Gomorrah,188,176,"[600.0, 753.822, 1058.003, 802.812]","[0.352941, 0.27362, 0.622355, 0.291402]",Angels Visit Abraham,False
-15,80,15:80,Al-Hijr,189,177,"[807.0, 318.96, 945.245, 361.18]","[0.474706, 0.115691, 0.556026, 0.131005]",,False
-15,80,15:80,The Seven Pairs*,189,177,"[706.0, 711.93, 1056.747, 764.731]","[0.415294, 0.258226, 0.621616, 0.277378]",,False
-16,51,16:51,All the Messengers Humans Like You and Me,193,181,"[418.0, 290.538, 1344.256, 347.809]","[0.245882, 0.105382, 0.790739, 0.126155]",,False
-16,51,16:51,One God,193,181,"[790.0, 1367.93, 984.247, 1420.731]","[0.464706, 0.496166, 0.578969, 0.515318]",,False
-16,61,16:61,Overwhelming Signs of God,194,182,"[542.0, 1154.126, 1107.254, 1205.351]","[0.318824, 0.419529, 0.651326, 0.43815]",The Original Sin,False
-16,82,16:82,The Strong Believer Better Than The Weak Believer,195,183,"[357.0, 317.637, 1406.239, 373.459]","[0.21, 0.114629, 0.827199, 0.134774]",,False
-16,85,16:85,The Idols Disown Their Idolizers,195,183,"[561.0, 1779.538, 1208.249, 1836.809]","[0.33, 0.642201, 0.710734, 0.662869]",,False
-16,100,16:100,Satan Prevents People From Reading Quran,196,184,"[383.0, 1975.93, 1275.231, 2028.731]","[0.225294, 0.718781, 0.750136, 0.737989]",,False
-16,106,16:106,A The Advocates of “Hadith” and/or “Sunna,197,185,"[55.0, 754.361, 1296.246, 816.277]","[0.032353, 0.27145, 0.762498, 0.29373]",Lip Service Does Not Count,False
-16,112,16:112,Do Not Prohibit Lawful Foods,197,185,"[576.0, 1844.603, 1186.254, 1895.199]","[0.338824, 0.663765, 0.697796, 0.681972]",Prohibiting Lawful Food Brings Deprivation,False
-16,115,16:115,Only Four Prohibited Foods*,198,186,"[514.0, 307.361, 1098.245, 356.959]","[0.302353, 0.111767, 0.646026, 0.129803]",Only Four Foods Prohibited,False
-16,120,16:120,Abraham: The Source of Religious Practice Muhammad: A Follower of Abraham,198,186,"[373.0, 1053.637, 1242.247, 1163.351]","[0.219412, 0.383141, 0.730734, 0.423037]",Abraham,False
-16,124,16:124,The Sabbath Law Modified,198,186,"[536.0, 1657.126, 1086.249, 1708.351]","[0.315294, 0.602591, 0.63897, 0.621219]",The Sabbath Abrogated,False
-17,9,17:9,Quran: The Only Reliable Source,200,188,"[491.0, 925.637, 1161.242, 981.459]","[0.288824, 0.33684, 0.683083, 0.357154]",Quran: Our Means to Salvation,False
-17,14,17:14,The Video Record*,200,188,"[639.0, 1668.637, 1027.245, 1724.459]","[0.375882, 0.607219, 0.604262, 0.627532]",,False
-17,22,17:22,The Commandments,201,189,"[685.0, 934.655, 1108.496, 986.501]","[0.402941, 0.339627, 0.652056, 0.358467]",Major Commandments,False
-17,34,17:34,Quran: An Uncommon Book,202,190,"[515.0, 1761.158, 1096.994, 1816.294]","[0.302941, 0.639259, 0.64529, 0.659272]",,False
-17,49,17:49,Resurrection Closer Than You Think*,203,191,"[507.0, 811.071, 1274.999, 867.639]","[0.298235, 0.2944, 0.749999, 0.314933]",,False
-17,55,17:55,Satan Divides You,203,191,"[704.0, 1439.011, 1082.998, 1496.976]","[0.414118, 0.522327, 0.637058, 0.543367]",,False
-17,46,17:46,The Idols Themselves Need God’s Help *y,203,191,"[445.0, 2068.071, 1326.988, 2124.639]","[0.261765, 0.750661, 0.780581, 0.771194]",Quran: The ONLY Source,False
-17,60,17:60,Muhammad Performed No Miracles*,204,192,"[432.0, 711.636, 1176.248, 759.553]","[0.254118, 0.258683, 0.691911, 0.276101]",,False
-17,61,17:61,The Beginning of Satan,204,192,"[576.0, 1280.36, 1045.248, 1329.959]","[0.338824, 0.465416, 0.614852, 0.483446]",Satan Dupes the People,False
-17,66,17:66,"The Quran, the Whole Quran, and Nothing But the Quran",205,193,"[318.0, 1320.538, 1493.241, 1377.809]","[0.187059, 0.476901, 0.878377, 0.497584]",,False
-17,66,17:66,Attainment of the Highest Ranks,205,193,"[581.0, 2038.126, 1240.258, 2089.351]","[0.341765, 0.736051, 0.729563, 0.754551]",,False
-17,82,17:82,Quran: God’s Miraculous Revelation*,206,194,"[459.0, 700.93, 1213.25, 753.731]","[0.27, 0.255069, 0.713677, 0.274283]",Healing and Mercy,False
-17,101,17:101,Muslims and Jews: the Great Parallel,207,195,"[508.0, 1211.768, 1264.253, 1266.1]","[0.298824, 0.438252, 0.743678, 0.457902]",Moses and Pharaoh,False
-18,1,18:1,The Seuen Sleepers of Ephesus*,209,197,"[554.0, 1325.953, 1291.988, 1389.265]","[0.325882, 0.48129, 0.759993, 0.504271]",,False
-18,27,18:27,Quran Revealed to All of Us Through Muhammad*,211,199,"[400.0, 2011.637, 1428.266, 2067.459]","[0.235294, 0.729118, 0.840156, 0.749351]",,False
-18,30,18:30,Freedom to Believe or Disbelieve,212,200,"[483.0, 624.444, 1193.004, 688.427]","[0.284118, 0.226248, 0.701767, 0.24943]",,False
-18,32,18:32,Do Not Idolize Your Material Properties,212,200,"[413.0, 1344.637, 1217.26, 1400.459]","[0.242941, 0.487187, 0.716035, 0.507413]",Property as an Idol*,False
-18,50,18:50,Satan Turns From Angel to Jinn,213,201,"[567.0, 1806.637, 1221.257, 1862.459]","[0.333529, 0.656243, 0.718386, 0.67652]",Classification of God's Creatures,False
-18,54,18:54,Quran is Truth; Other Sources Are Falsehood,214,202,"[350.0, 310.768, 1280.23, 365.1]","[0.205882, 0.112556, 0.753077, 0.132235]",Disbelievers Refuse to Accept the Completeness of the Quran,False
-18,57,18:57,The Curse,214,202,"[710.0, 928.93, 925.25, 981.731]","[0.417647, 0.336447, 0.544265, 0.355571]",Divine Intervention,False
-18,60,18:60,A Good Reason For Everything,214,202,"[499.0, 1599.768, 1136.254, 1654.1]","[0.293529, 0.579416, 0.668385, 0.599095]",Valuable Lessons from Moses and His Teacher,False
-18,83,18:83,Gog and Magog,215,203,"[736.0, 2239.636, 1066.256, 2287.553]","[0.432941, 0.808533, 0.627209, 0.825832]",Zul-Qarnain: The One With the Two Horns or Two Generations,False
-18,102,18:102,Idolizing God’s Sewants,216,204,"[575.0, 1864.93, 1062.264, 1917.731]","[0.338235, 0.674721, 0.624861, 0.693824]",,False
-18,110,18:110,Quran Encompasses Everything We Need,217,205,"[463.0, 304.768, 1306.239, 359.1]","[0.272353, 0.110664, 0.768376, 0.130392]",,False
-18,110,18:110,"Uphold the Words of God, Not the Words Attributed to Muhammad*",217,205,"[185.0, 383.637, 1579.253, 439.459]","[0.108824, 0.139302, 0.928972, 0.159571]",,False
-19,16,19:16,Mary,218,206,"[757.0, 1982.329, 871.251, 2026.698]","[0.445294, 0.7198, 0.5125, 0.735911]",Mary,True
-19,34,19:34,The True Story of Jesus,219,207,"[654.0, 2008.637, 1141.251, 2064.459]","[0.384706, 0.727504, 0.671324, 0.747722]",The Proven Truth,False
-19,41,19:41,Abraham,220,208,"[728.0, 644.923, 921.247, 689.827]","[0.428235, 0.234092, 0.54191, 0.250391]",Abraham,True
-19,51,19:51,Other Prophets,220,208,"[665.0, 1849.636, 978.247, 1897.553]","[0.391176, 0.671374, 0.575439, 0.688767]",Moses,False
-19,58,19:58,The Words of Quran Speaking,221,209,"[574.0, 1097.768, 1194.249, 1152.1]","[0.337647, 0.398464, 0.7025, 0.418185]",,False
-19,81,19:81,The Idols Disown Their Idolizers*,222,210,"[480.0, 1550.637, 1151.241, 1606.459]","[0.282353, 0.563049, 0.677201, 0.583319]",,False
-19,88,19:88,The Great Blasphemy,223,211,"[651.0, 641.93, 1094.24, 694.731]","[0.382941, 0.233769, 0.643671, 0.252997]",Gross Blasphemy,False
-20,77,20:77,The Children of Israel Delivered,227,215,"[554.0, 1197.603, 1194.998, 1248.199]","[0.325882, 0.436126, 0.70294, 0.454552]",,False
-20,109,20:109,No Intercession For the Wicked,229,217,"[544.0, 297.637, 1190.26, 353.459]","[0.32, 0.108192, 0.700153, 0.128484]",,False
-20,116,20:116,Adam Fails,229,217,"[748.0, 1336.126, 983.248, 1387.351]","[0.44, 0.485687, 0.578381, 0.504308]",,False
-20,133,20:133,1:„ Important Commandment,230,218,"[185.0, 1084.15, 1090.244, 1313.235]","[0.108824, 0.39438, 0.64132, 0.477714]",Why Messengers?,False
-21,21,21:21,Do Not Idolize the Prophets,232,220,"[547.0, 323.421, 1110.995, 375.575]","[0.321765, 0.117522, 0.653526, 0.136473]",One God,False
-21,30,21:30,The “Big Bang Theory” Confirmed*,232,220,"[476.0, 1598.274, 1190.013, 1651.939]","[0.28, 0.580768, 0.700008, 0.600269]",The Big Bang Theory Confirmed*,False
-21,42,21:42,All Power Belongs to God,233,221,"[624.0, 1294.768, 1152.253, 1349.1]","[0.367059, 0.469119, 0.677796, 0.488804]",Priorities Confused,False
-21,48,21:48,Moses and Aaron,233,221,"[707.0, 2245.93, 1069.242, 2298.731]","[0.415882, 0.813743, 0.628966, 0.832874]",Prophets Moses and Aaron,False
-21,51,21:51,Abraham,234,222,"[732.0, 341.249, 925.996, 385.723]","[0.430588, 0.124046, 0.544704, 0.140212]",Abraham,True
-21,51,21:51,The Origin of Salat Prayers and Zakat Charity,234,222,"[360.0, 2287.274, 1309.006, 2340.939]","[0.211765, 0.831434, 0.770004, 0.850941]",Abraham,False
-21,76,21:76,Noah,235,223,"[827.0, 847.109, 944.997, 891.768]","[0.486471, 0.307258, 0.55588, 0.323456]",Noah,True
-21,78,21:78,Dauid and Solomon,235,223,"[690.0, 1179.389, 1091.001, 1224.996]","[0.405882, 0.42778, 0.641765, 0.444322]",David and Solomon,False
-21,85,21:85,Many Prophets; One Message,236,224,"[501.0, 561.004, 1117.001, 624.249]","[0.294706, 0.203336, 0.65706, 0.226259]",,False
-22,4,22:4,Relevance of Faith to This Life*,239,227,"[582.0, 568.274, 1223.004, 621.939]","[0.342353, 0.205896, 0.719414, 0.22534]",,False
-22,26,22:26,"Hajj Pilgrimage, Like All Religious",240,228,"[484.0, 297.768, 1155.253, 352.1]","[0.284706, 0.108004, 0.67956, 0.127711]","Pilgrimage, Like All Duties in Submission, Decreed Through Abraham*",False
-22,26,22:26,"Practices, Decreed Through Abraham*",240,228,"[426.0, 377.768, 1215.232, 432.1]","[0.250588, 0.137021, 0.714843, 0.156728]","Pilgrimage, Like All Duties in Submission, Decreed Through Abraham*",False
-22,38,22:38,God Defends the Believers,241,229,"[616.0, 787.93, 1152.256, 840.731]","[0.362353, 0.286, 0.677798, 0.305165]",God Defends the Believers,True
-22,42,22:42,The Disbelievers Consistent/y Doomed,241,229,"[501.0, 1627.93, 1275.248, 1680.731]","[0.294706, 0.5909, 0.750146, 0.610066]",,False
-22,52,22:52,Messengers Surrounded By Tests,242,230,"[490.0, 490.274, 1163.252, 543.939]","[0.288235, 0.178411, 0.684266, 0.19794]",The System*,False
-22,61,22:61,Tokens of God’s Power,242,230,"[598.0, 1822.126, 1074.262, 1873.351]","[0.351765, 0.663073, 0.631919, 0.681714]",God's Omnipotence,False
-22,78,22:78,Islam: The Religion of Abraham,244,232,"[483.0, 283.97, 1151.245, 373.614]","[0.284118, 0.103, 0.677203, 0.135515]",Abraham: Original Messenger of Submission*,False
-23,12,23:12,Evolution of the Human Being,245,233,"[602.0, 1309.126, 1209.245, 1360.351]","[0.354118, 0.475354, 0.711321, 0.493955]",Accurate Embryology,False
-23,23,23:23,Noah,246,234,"[762.0, 302.688, 880.247, 347.901]","[0.448235, 0.109948, 0.517792, 0.126372]",Noah,True
-23,31,23:31,Similar Conditions Face Every Messenger,246,234,"[403.0, 1367.126, 1239.237, 1418.351]","[0.237059, 0.496595, 0.728963, 0.515202]",,False
-23,52,23:52,All Messengers Preached One Religion,247,235,"[509.0, 1224.636, 1280.261, 1272.553]","[0.299412, 0.442107, 0.753095, 0.459406]",,False
-23,63,23:63,The Unfortunate Disregard These Revelations,247,235,"[445.0, 2274.93, 1359.232, 2327.731]","[0.261765, 0.821274, 0.799548, 0.840336]",,False
-23,101,23:101,On/y One Chance,249,237,"[707.0, 1646.93, 1076.25, 1699.731]","[0.415882, 0.596066, 0.633088, 0.615176]",,False
-24,11,24:11,Historical Accusation of the Prophet’s Wife,251,239,"[454.0, 1764.637, 1318.258, 1820.459]","[0.267059, 0.641686, 0.775446, 0.661985]",How to Deal With Rumors and Unproven Accusations,False
-24,47,24:47,Submission to God Must be Total,254,242,"[466.0, 1828.768, 1149.242, 1883.1]","[0.274118, 0.6638, 0.676025, 0.683521]",God Sends Instructions Through His Messenger,False
-24,5,24:5,The Great Promise,255,243,"[686.0, 809.126, 1072.25, 860.351]","[0.403529, 0.294335, 0.630735, 0.312969]",,False
-25,17,25:17,The Righteous Idols*,258,246,"[610.0, 311.361, 1028.251, 360.959]","[0.358824, 0.113099, 0.604853, 0.131115]",,False
-25,17,25:17,Choose Your Friends Carefully,258,246,"[464.0, 1982.369, 1176.0, 2038.545]","[0.272941, 0.720076, 0.691764, 0.740481]",,False
-25,32,25:32,Muhammad’s Mission and Wish*,259,247,"[528.0, 309.768, 1193.241, 364.1]","[0.310588, 0.112725, 0.701906, 0.132496]",,False
-25,35,25:35,The Disbelievers Consistently Doomed,259,247,"[483.0, 1076.768, 1256.248, 1131.1]","[0.284118, 0.391837, 0.73897, 0.411608]",,False
-25,55,25:55,Do Not Idolize Muhammad,260,248,"[526.0, 1814.822, 1076.241, 1863.812]","[0.309412, 0.658738, 0.633083, 0.67652]",,False
-25,58,25:58,Muhammad Dies; God Does Not,260,248,"[469.0, 2292.93, 1135.243, 2345.731]","[0.275882, 0.832279, 0.66779, 0.851445]",The Prophets and the Saints Are Dead,False
-26,10,26:10,Moses,262,250,"[743.0, 1295.244, 879.249, 1339.725]","[0.437059, 0.470656, 0.517205, 0.486819]",Moses,True
-26,69,26:69,Abraham,264,252,"[727.0, 1570.923, 920.247, 1615.827]","[0.427647, 0.56794, 0.541322, 0.584175]",Abraham,True
-26,105,26:105,Noah,265,253,"[833.0, 1503.688, 951.247, 1548.901]","[0.49, 0.54187, 0.559557, 0.558163]",Noah,True
-26,123,26:123,Hood,266,254,"[747.0, 526.966, 866.254, 571.813]","[0.439412, 0.191276, 0.509561, 0.207555]",Hûd,False
-26,141,26:141,Saalih,266,254,"[739.0, 1766.194, 870.251, 1810.741]","[0.434706, 0.641087, 0.511912, 0.657256]",Sãleh,False
-26,176,26:176,Shu’aib,267,255,"[794.0, 1991.597, 951.253, 2035.613]","[0.467059, 0.719768, 0.55956, 0.735675]",Shu'aib,False
-26,192,26:192,The Guilty Isolated From Quran*,268,256,"[480.0, 792.93, 1151.253, 845.731]","[0.282353, 0.288129, 0.677207, 0.307315]",The Quran,False
-27,7,27:7,Moses,270,258,"[742.0, 1120.378, 877.254, 1164.682]","[0.436471, 0.406523, 0.516031, 0.422599]",Moses,True
-27,15,27:15,David and Solomon,270,258,"[613.0, 2152.636, 1013.24, 2200.553]","[0.360588, 0.781073, 0.596024, 0.798459]",David and Solomon,True
-27,45,27:45,Saalih,273,261,"[821.0, 732.335, 951.247, 776.696]","[0.482941, 0.266013, 0.559557, 0.282127]",Sãleh,False
-27,59,27:59,God Alone Worthy of Worship,274,262,"[523.0, 305.637, 1142.249, 361.459]","[0.307647, 0.110939, 0.671911, 0.131201]",Make No Distinction Among God's Messengers,False
-27,67,27:67,Belief in the Hereafter: The Greatest Obstacle,274,262,"[382.0, 1585.502, 1318.26, 1652.044]","[0.224706, 0.5755, 0.775447, 0.599653]",,False
-28,48,28:48,Quran: God’s Message to the World,279,267,"[519.0, 673.408, 1261.263, 737.439]","[0.305294, 0.245054, 0.741919, 0.268355]",The Torah and The Quran,False
-28,57,28:57,Only God Guides,279,267,"[712.0, 1946.126, 1068.257, 1997.351]","[0.418824, 0.708197, 0.628386, 0.726838]",,False
-28,76,28:76,Qaroon,281,269,"[799.0, 304.634, 959.248, 349.919]","[0.47, 0.11118, 0.564263, 0.127707]",Qãroon,False
-29,18,29:18,Role Of the Messenger,283,271,"[654.0, 1168.93, 1117.253, 1221.731]","[0.384706, 0.426928, 0.657207, 0.446213]",,False
-29,43,29:43,Muhammad Performed No Miracles*,285,273,"[509.0, 1412.636, 1253.239, 1460.553]","[0.299412, 0.515372, 0.737199, 0.532854]",,False
-29,56,29:56,"Move Away, If You Have To",286,274,"[517.0, 992.768, 1100.247, 1047.1]","[0.304118, 0.361664, 0.647204, 0.381457]",Immigrate in the Cause of God,False
-29,61,29:61,The Idol-Worshipers Believe in God,286,274,"[454.0, 1572.93, 1165.254, 1625.731]","[0.267059, 0.573016, 0.685444, 0.592252]",Most Believers Destined for Hell,False
-30,17,30:17,Signs of God,289,277,"[742.0, 303.361, 1010.251, 352.959]","[0.436471, 0.110675, 0.594266, 0.12877]","Remember God, Always",False
-30,28,30:28,Monotheism: Natural Instinct,289,277,"[572.0, 1796.535, 1190.236, 1881.482]","[0.336471, 0.65543, 0.700139, 0.686422]",Absurdity of Idol Worship,False
-30,44,30:44,No Time Between Death and Resurrection*,291,279,"[375.0, 1655.812, 1363.26, 1719.31]","[0.220588, 0.604532, 0.801918, 0.627715]",,False
-31,6,31:6,Quran versus Hadith*,292,280,"[582.0, 947.768, 1027.249, 1002.1]","[0.342353, 0.344768, 0.604264, 0.364533]",,False
-31,12,31:12,Luqmaan s Wisdom,292,280,"[608.0, 1934.538, 1008.255, 1991.809]","[0.357647, 0.703724, 0.593091, 0.724558]",Luqmãn's Wisdom,False
-31,20,31:20,Be Appreciative of God,293,281,"[638.0, 1413.36, 1116.248, 1462.959]","[0.375294, 0.514885, 0.656617, 0.532954]",,False
-33,4,33:4,Forsake Traditions,297,285,"[698.0, 849.768, 1082.257, 904.1]","[0.410588, 0.307998, 0.636622, 0.327691]",Devotion to God Is Indivisible,False
-33,9,33:9,The Battle of the Allies*,297,285,"[657.0, 1972.126, 1140.253, 2023.351]","[0.386471, 0.714797, 0.670737, 0.733364]",The Battle of the Parties,False
-33,28,33:28,Instructions to All Women*,299,287,"[603.0, 1461.93, 1154.238, 1514.731]","[0.354706, 0.532191, 0.678963, 0.551413]",Special Responsibility For Being Close,False
-33,36,33:36,Muhammad the Man uersus Muhammad the Messenger*,300,288,"[241.0, 1150.93, 1385.254, 1203.731]","[0.141765, 0.420662, 0.814855, 0.43996]","Major Error Committed by Muhammad
-Muhammad the Man Disobeys Muhammad the Messenger",False
-33,53,33:53,General Etiquette,302,290,"[653.0, 304.959, 1009.256, 351.133]","[0.384118, 0.110733, 0.59368, 0.127499]",Etiquette,False
-33,59,33:59,Women Shall Dress Modestly,302,290,"[539.0, 1685.36, 1130.252, 1734.959]","[0.317059, 0.611968, 0.664854, 0.629978]",Dress Code for Women,False
-33,72,33:72,Only The Humans Are Free To Choose,303,291,"[490.0, 1583.768, 1290.246, 1638.1]","[0.288235, 0.57487, 0.758969, 0.594592]",Freedom of Choice,False
-34,10,34:10,David and Solomon,304,292,"[637.0, 2063.636, 1036.248, 2111.553]","[0.374706, 0.750686, 0.609558, 0.768117]",David and Solomon,True
-34,15,34:15,Sheba,305,293,"[825.0, 748.387, 959.253, 793.997]","[0.485294, 0.271943, 0.564266, 0.288516]",,False
-34,22,34:22,"Worship God, And Do Not Idolize Anyone",305,293,"[467.0, 2002.93, 1317.243, 2055.731]","[0.274706, 0.727809, 0.774849, 0.746995]",,False
-34,28,34:28,Muhammad Sent To All The People,306,294,"[443.0, 886.93, 1167.253, 939.731]","[0.260588, 0.323461, 0.686619, 0.342717]",God's Messenger of the Covenant,False
-35,9,35:9,Dignity Only With God,308,296,"[589.0, 1712.637, 1056.256, 1768.459]","[0.346471, 0.624367, 0.621327, 0.644717]",,False
-36,13,36:13,Perennial Human Plague,312,300,"[569.0, 1622.126, 1067.243, 1673.351]","[0.334706, 0.591369, 0.62779, 0.610044]",Rejecting The Messengers: A Tragic Human Trait*,False
-36,55,36:55,Heaven and Hell*,314,302,"[629.0, 1520.126, 991.255, 1571.351]","[0.37, 0.554184, 0.583091, 0.572859]",,False
-36,65,36:65,The Video Tape*,315,303,"[713.0, 295.637, 1062.255, 351.459]","[0.419412, 0.10774, 0.624856, 0.128083]",,False
-36,74,36:74,Your Idols Can Never Help You*,315,303,"[558.0, 1263.637, 1226.249, 1319.459]","[0.328235, 0.460509, 0.721323, 0.480852]",Powerless Idols,False
-37,50,37:50,The People In Heaven Visit The People in Hell*,317,305,"[419.0, 1445.464, 1367.256, 1504.15]","[0.246471, 0.524669, 0.804268, 0.545971]",The Dwellers of Heaven Visit the Dwellers of Hell,False
-37,69,37:69,Do Not Blindly Follow Your Parents,318,306,"[482.0, 819.637, 1210.251, 875.459]","[0.283529, 0.299575, 0.711913, 0.319978]",They Followed Their Parents Blindly,False
-37,75,37:75,Noah and Abraham,318,306,"[646.0, 1265.93, 1052.244, 1318.731]","[0.38, 0.462694, 0.618967, 0.481992]",Noah,False
-37,114,37:114,Moses and Aaron,319,307,"[714.0, 1423.603, 1075.256, 1474.199]","[0.42, 0.519753, 0.632503, 0.538225]",Moses and Aaron,True
-37,123,37:123,Elias,319,307,"[847.0, 2042.222, 948.254, 2085.414]","[0.498235, 0.745609, 0.557796, 0.761378]",Elias,True
-37,139,37:139,Jonah,320,308,"[757.0, 1094.15, 887.247, 1140.072]","[0.445294, 0.397151, 0.52191, 0.413819]",Jonah,True
-37,149,37:149,Blasphemies Against God,320,308,"[563.0, 1755.126, 1083.254, 1806.351]","[0.331176, 0.637069, 0.637208, 0.655663]",,False
-38,18,38:18,David,322,310,"[711.0, 2007.606, 886.246, 2092.459]","[0.418235, 0.731102, 0.521321, 0.762003]",,False
-38,30,38:30,Solomon,323,311,"[773.0, 1656.565, 954.252, 1700.623]","[0.454706, 0.604365, 0.561325, 0.620439]",Solomon's Exemplary Devotion,False
-38,45,38:45,Abraham And Descendants,324,312,"[540.0, 890.361, 1101.254, 939.959]","[0.317647, 0.323885, 0.647796, 0.341927]",,False
-38,65,38:65,Satan Determined To Mislead Us,324,312,"[487.0, 2373.93, 1159.251, 2426.731]","[0.286471, 0.863561, 0.681912, 0.882769]",,False
-39,11,39:11,Muhammad An Example,327,315,"[616.0, 1142.126, 1120.252, 1193.351]","[0.362353, 0.413964, 0.658972, 0.43253]",God ALONE,False
-39,27,39:27,Quran: Sufficient Source of Jurisprudence,328,316,"[393.0, 1121.392, 1239.237, 1182.808]","[0.231176, 0.409566, 0.728963, 0.431997]",Quran: No Ambiguity,False
-39,38,39:38,You May Believe In God And Still Go To Hell *,329,317,"[478.0, 1058.125, 1382.492, 1114.622]","[0.281176, 0.385895, 0.813231, 0.4065]","They Believe in God Yet, They Are Going to Hell",False
-39,46,39:46,The Great Criterion*,330,318,"[587.0, 522.768, 1013.245, 577.1]","[0.345294, 0.19107, 0.596026, 0.210928]",,False
-39,53,39:53,God Forgives All Sins*,331,319,"[640.0, 286.636, 1100.255, 334.553]","[0.376471, 0.104688, 0.647209, 0.122189]",God's Infinite Mercy,False
-39,62,39:62,God Alone Worthy of Worship,331,319,"[557.0, 1290.637, 1177.252, 1346.459]","[0.327647, 0.47138, 0.692501, 0.491767]",,False
-39,68,39:68,The Day Of Resurrection,332,320,"[559.0, 273.93, 1066.251, 326.731]","[0.328824, 0.100121, 0.627206, 0.119419]",The Day of Judgment,False
-40,7,40:7,Believers Enjoy The Priuilege Of Forgiveness,333,321,"[446.0, 1327.768, 1335.254, 1382.1]","[0.262353, 0.484941, 0.785443, 0.504785]",Angels Pray for the Believers,False
-40,10,40:10,Worship God ALONE,333,321,"[673.0, 2003.126, 1119.246, 2054.351]","[0.395882, 0.731602, 0.65838, 0.750311]",God ALONE: The Disbelievers Confess,False
-40,23,40:23,Moses,334,322,"[763.0, 1952.378, 898.254, 1996.682]","[0.448824, 0.711767, 0.528384, 0.727919]",Moses,True
-40,51,40:51,Victory For The Believers,336,324,"[572.0, 1624.93, 1085.255, 1677.731]","[0.336471, 0.59304, 0.638385, 0.612311]",Guaranteed Victory; Here and Forever,False
-40,57,40:57,V Creation of the Universe More Complex than the Creation of Man*,337,325,"[183.0, 289.768, 1609.252, 344.1]","[0.107647, 0.105678, 0.946619, 0.125492]",Awesome Construction of the Universe,False
-40,57,40:57,Muhammad Worshiped Idols Before The Message* I,337,325,"[358.0, 1405.637, 1429.258, 1461.459]","[0.210588, 0.512632, 0.84074, 0.53299]",Awesome Construction of the Universe,False
-40,83,40:83,Evil Satisfaction With Inherited Knowledge,338,326,"[385.0, 2215.464, 1236.256, 2274.15]","[0.226471, 0.808563, 0.727209, 0.829982]",,False
-41,7,41:7,Do Not Idolize Muhammad,340,328,"[531.0, 1226.36, 1082.252, 1275.959]","[0.312353, 0.44725, 0.636619, 0.465339]",,False
-41,14,41:14,You Shall Not Worship Except God*,341,329,"[523.0, 1208.637, 1264.255, 1264.459]","[0.307647, 0.441109, 0.743679, 0.461481]",,False
-41,20,41:20,All Our Works Recorded*,342,330,"[554.0, 312.768, 1080.255, 367.1]","[0.325882, 0.113899, 0.635444, 0.133685]",,False
-41,26,41:26,The Disbelievers Violate Quran,342,330,"[507.0, 1305.538, 1134.255, 1362.809]","[0.298235, 0.475433, 0.667209, 0.496289]",,False
-41,30,41:30,Happiness In This World Guaranteed For the Believers'y,342,330,"[271.0, 1931.538, 1422.249, 1988.809]","[0.159412, 0.7034, 0.836617, 0.724257]",Perfect Happiness: Now and Forever,False
-41,43,41:43,Blaspheming Against Quran,343,331,"[620.0, 1565.126, 1184.269, 1616.351]","[0.364706, 0.569344, 0.696629, 0.587978]",God's Messenger of the Covenant*,False
-41,43,41:43,Language Is No Barrier,343,331,"[660.0, 2378.361, 1137.251, 2427.959]","[0.388235, 0.865173, 0.668971, 0.883215]",God's Messenger of the Covenant*,False
-41,49,41:49,Submission Required Under All Circumstances,344,332,"[350.0, 1331.126, 1283.252, 1382.351]","[0.205882, 0.485458, 0.754854, 0.50414]",Bad Weather Friends,False
-41,52,41:52,Quran’s Miracles To Be Revealed,344,332,"[480.0, 1960.637, 1155.257, 2016.459]","[0.282353, 0.715039, 0.679563, 0.735397]",,False
-42,16,42:16,Only One Religion,347,335,"[714.0, 322.126, 1081.252, 373.351]","[0.42, 0.117265, 0.63603, 0.135912]",,False
-42,21,42:21,The Idol Worshipers Invent Laws,347,335,"[572.0, 1925.768, 1237.25, 1980.1]","[0.336471, 0.701044, 0.727794, 0.720823]",The Idols: Innovating New Religious Laws*,False
-42,27,42:27,Why God Controls Provisions,348,336,"[45.0, 1062.572, 1120.24, 1322.726]","[0.026471, 0.388083, 0.658965, 0.483099]",,False
-42,36,42:36,Sole Function Of The Messenger,349,337,"[547.0, 1716.93, 1209.258, 1769.731]","[0.321765, 0.626388, 0.711328, 0.645652]",,False
-42,36,42:36,9 <(God Communicates With Lis,349,337,"[545.0, 2288.281, 1219.243, 2371.459]","[0.320588, 0.834834, 0.717202, 0.86518]",,False
-43,9,43:9,Worshipping God Not Enough*,351,339,"[568.0, 1146.444, 1194.493, 1199.885]","[0.334118, 0.417344, 0.702643, 0.436798]",,False
-43,22,43:22,Do Not Follow Your Parents Blindly,352,340,"[483.0, 766.158, 1210.005, 821.294]","[0.284118, 0.279416, 0.711767, 0.299524]",Inherited Traditions Condemned,False
-43,31,43:31,Cod Chooses His Messenger,352,340,"[558.0, 1830.603, 1142.004, 1881.199]","[0.328235, 0.667616, 0.671767, 0.686068]",Muhammad Ridiculed,False
-43,33,43:33,The Materials Of This World Are Nil,353,341,"[503.0, 305.158, 1239.011, 360.294]","[0.295882, 0.111331, 0.72883, 0.131446]",Materials of This World: All That The Disbelievers Get,False
-43,46,43:46,The Lesson From Moses,353,341,"[626.0, 1773.603, 1123.004, 1824.199]","[0.368235, 0.647064, 0.660591, 0.665523]",,False
-43,87,43:87,There Will Be No Intercession*,355,343,"[532.0, 1197.538, 1155.25, 1254.809]","[0.312941, 0.43452, 0.679559, 0.455301]",,False
-44,1,44:1,Before The End Of The World*,356,344,"[485.0, 1199.538, 1204.252, 1256.809]","[0.285294, 0.43699, 0.708384, 0.457854]",,False
-44,34,44:34,Resurrection Will Come,357,345,"[612.0, 1671.464, 1092.246, 1730.15]","[0.36, 0.606922, 0.642498, 0.628232]",Expect The Same Consequences,False
-45,6,45:6,The Inventors and Followers Of “Hadith” Doomed,359,347,"[377.0, 1128.93, 1399.233, 1181.731]","[0.221765, 0.409478, 0.823078, 0.428629]",Which Hadith?*,False
-46,5,46:5,The Righteous Idols*,362,350,"[596.0, 1186.126, 1013.256, 1237.351]","[0.350588, 0.432419, 0.596033, 0.451094]",The Idols Totally Unaware,False
-46,10,46:10,Muhammad On/y Human,362,350,"[546.0, 1956.603, 1061.243, 2007.199]","[0.321176, 0.713308, 0.624261, 0.731753]",Rabbi Judah the Pious*,False
-46,16,46:16,The Crucial Age Of Forty,363,351,"[628.0, 1191.93, 1146.244, 1244.731]","[0.369412, 0.43517, 0.674261, 0.454447]",,False
-46,21,46:21,You Shall Not Worship Except God*,364,352,"[405.0, 313.637, 1144.249, 369.459]","[0.238235, 0.114299, 0.673087, 0.134643]",Hûd,False
-46,29,46:29,Quran Is The Whole Message*,364,352,"[464.0, 1697.637, 1086.239, 1753.459]","[0.272941, 0.618673, 0.638964, 0.639016]",Believers Among the Jinns*,False
-47,32,47:32,We Must Be Put To The Test,368,356,"[513.0, 294.637, 1109.251, 350.459]","[0.301765, 0.107453, 0.652501, 0.127812]",,False
-48,29,48:29,Islam Will Prevail,371,359,"[721.0, 618.538, 1073.255, 675.809]","[0.424118, 0.225579, 0.631327, 0.246466]",Qualities of the Believers,False
-49,2,49:2,Etiquette,372,360,"[714.0, 727.268, 898.254, 771.717]","[0.42, 0.26504, 0.528385, 0.281238]",,False
-49,6,49:6,Investigate Rumors,372,360,"[613.0, 1387.36, 999.248, 1436.959]","[0.360588, 0.505598, 0.587793, 0.523673]",Investigate Rumors Before Believing Them,False
-49,9,49:9,L Islam uersus Iman* f,373,361,"[662.0, 1390.89, 1137.251, 1462.192]","[0.389412, 0.505594, 0.668971, 0.531513]",Reconcile The Believers,False
-49,9,49:9,"4, Definition of Mu’min'y",373,361,"[643.0, 1794.36, 1154.262, 1843.959]","[0.378235, 0.652258, 0.678978, 0.670287]",Reconcile The Believers,False
-50,12,50:12,Miraculous Numerical Code,375,363,"[595.0, 1508.126, 1160.255, 1559.351]","[0.35, 0.550612, 0.682503, 0.569314]",,False
-50,20,50:20,The Day of Judgment*,376,364,"[590.0, 897.603, 1048.013, 948.199]","[0.347059, 0.326996, 0.616478, 0.345428]",,False
-50,36,50:36,We Should Learn From The Past,377,365,"[573.0, 407.637, 1239.259, 463.459]","[0.337059, 0.148286, 0.728976, 0.168592]",,False
-51,24,51:24,Abraham,378,366,"[721.0, 1955.829, 915.254, 2000.857]","[0.424118, 0.71485, 0.538385, 0.731307]",,False
-51,31,51:31,Sodom And Gomorrah,379,367,"[669.0, 275.126, 1133.253, 326.351]","[0.393529, 0.100301, 0.666619, 0.118976]",,False
-51,38,51:38,Moses,379,367,"[834.0, 797.378, 969.254, 841.682]","[0.490588, 0.290695, 0.570149, 0.306847]",,False
-51,41,51:41,‘Aad And Thamood,379,367,"[693.0, 1258.126, 1094.242, 1309.351]","[0.407647, 0.458668, 0.643672, 0.477343]",,False
-51,51,51:51,Humans And Jinns Created To Worship God Alone,379,367,"[384.0, 1822.637, 1423.253, 1878.459]","[0.225882, 0.664469, 0.837208, 0.684819]",,False
-53,19,53:19,Idol Worshipers Never Sure,384,372,"[533.0, 307.421, 1090.993, 359.575]","[0.313529, 0.112279, 0.641761, 0.131328]",The Flimsy Idols,False
-55,37,55:37,The Day Of Resurrection*,390,378,"[549.0, 1306.126, 1077.257, 1357.351]","[0.322941, 0.477385, 0.63368, 0.496108]",,False
-55,41,55:41,Hell,390,378,"[759.0, 1661.296, 847.251, 1704.391]","[0.446471, 0.607199, 0.498383, 0.62295]",,False
-55,46,55:46,The Higher Heaven,391,379,"[695.0, 398.361, 1087.248, 447.959]","[0.408824, 0.145493, 0.639558, 0.163608]",,False
-55,62,55:62,The Lower Heaven,391,379,"[700.0, 1534.36, 1087.253, 1583.959]","[0.411765, 0.560395, 0.639561, 0.578509]",,False
-56,10,56:10,The High Heaven,393,381,"[715.0, 1097.126, 1067.258, 1148.351]","[0.420588, 0.40129, 0.627799, 0.420026]",,False
-56,27,56:27,The Lower Heaven,393,381,"[706.0, 2143.361, 1091.255, 2192.959]","[0.415294, 0.783965, 0.641914, 0.802106]",The Lower Heaven,True
-56,41,56:41,Hell,394,382,"[777.0, 1060.507, 864.249, 1103.324]","[0.457059, 0.38747, 0.508381, 0.403114]",Hell,True
-56,62,56:62,The Honorable Quran,395,383,"[697.0, 1079.126, 1142.25, 1130.351]","[0.41, 0.393698, 0.671912, 0.412386]",,False
-57,24,57:24,Profound Fact*,399,387,"[716.0, 582.959, 1031.25, 629.133]","[0.421176, 0.212371, 0.606618, 0.229192]",,False
-58,22,58:22,Run For Your Life,402,390,"[622.0, 291.768, 994.247, 346.1]","[0.365882, 0.106757, 0.584851, 0.126637]",Run For Your Life,True
-59,9,59:9,Awesomeness Of Quran,404,392,"[552.0, 2309.768, 1045.257, 2364.1]","[0.324706, 0.843597, 0.614857, 0.863441]",,False
-60,8,60:8,Fight On/y The Aggressors,407,395,"[623.0, 304.274, 1163.244, 357.939]","[0.366471, 0.111293, 0.684261, 0.130922]",Basic Law Regulating Relations With Unbelievers,False
-61,10,61:10,The Most Profitable Trade,408,396,"[561.0, 1666.768, 1091.243, 1721.1]","[0.33, 0.609199, 0.641907, 0.629057]",The Best Deal,False
-62,10,62:10,Friday Prayer Decreed,409,397,"[668.0, 1594.36, 1129.247, 1643.959]","[0.392941, 0.584015, 0.664263, 0.602183]",,False
-63,9,63:9,Do Not Be Distracted By Business And/Or Family,410,398,"[299.0, 1761.126, 1306.253, 1812.351]","[0.175882, 0.642981, 0.768384, 0.661683]",,False
-64,9,64:9,The Day of Mutual Blaming,411,399,"[625.0, 1657.36, 1180.242, 1706.959]","[0.367647, 0.606204, 0.69426, 0.624345]",,False
-64,16,64:16,Your Monies And Families Are A Test,412,400,"[425.0, 393.538, 1189.243, 450.809]","[0.25, 0.143627, 0.699555, 0.164529]",,False
-65,8,65:8,You Shall Heed God’s Law,414,402,"[540.0, 301.126, 1087.252, 352.351]","[0.317647, 0.110181, 0.63956, 0.128925]",,False
-66,10,66:10,Spouses May Disagree,415,403,"[650.0, 2289.361, 1110.243, 2338.959]","[0.382353, 0.834619, 0.653084, 0.852701]",The Myth of Intercession Shattered,False
-69,13,69:13,The Day Of Resurrection,421,409,"[613.0, 1427.93, 1117.239, 1480.731]","[0.360588, 0.520762, 0.657199, 0.540019]",,False
-72,20,72:20,The Prophet’s Teachings,428,416,"[550.0, 297.768, 1046.245, 352.1]","[0.323529, 0.108833, 0.615438, 0.128692]",,False
-74,32,74:32,One Of The Greatest Miracles,432,420,"[503.0, 913.93, 1117.246, 966.731]","[0.295882, 0.333795, 0.657204, 0.353079]",,False
-75,16,75:16,Muhammad Only Delivers Quran,434,422,"[503.0, 1498.93, 1170.239, 1551.731]","[0.295882, 0.547055, 0.688376, 0.566325]",Muhammad Forbidden From Explaining the Quran,False
+verse_id,text
+2:2,"Three Categories of People
+(1) The Righteous"
+2:6,(2) The Disbelievers
+2:8,(3) The Hypocrites
+2:20,The Light of Faith
+2:24,Heaven and Hell Allegorically Described
+2:28,Two Deaths and Two Lives
+2:29,Creation of the Heavens and the Earth
+2:30,Creation of Man
+2:40,The Children of Israel\
+2:57,In Sinai
+2:62,Minimum Requirement for Salvation
+2:63,The Covenant
+2:67,The Heifer\
+2:80,Heaven and Hell are Eternal
+2:83,The Children of Israel Rebel
+2:97,Gabriel Mediated the Revelation
+2:102,Sorcery Prohibited
+2:104,Playing on Words
+2:105,Superceding Previous Revelations
+2:111,Submission: Key to Salvation
+2:124,Abraham Passes the Test
+2:135,Islam is the Religion of Abraham\
+2:142,Abolition of Prejudice and Bigotry
+2:153,Steadfastness Required
+2:158,Hajj Pilgrimage
+2:164,Overwhelming Signs of God
+2:165,The Idol Worshipers Disowned by Their Idols
+2:168,Free Mind Prerequisite for Salvation
+2:172,Dietary Regulations
+2:177,Righteousness Defined
+2:178,Equivalence is the Law
+2:180,Leave a Will Before Death
+2:183,Fasting Reinforced and Revised\
+2:188,Dishonesty and Bribery Prohibited
+2:189,Do Not Beat Around the Bush\
+2:190,Rules of War
+2:196,Hajj Pilgrimage\
+2:204,Appearances May Be Deceiving
+2:212,The Hereafter is the Real Life
+2:214,Hardship: A Mandatory Test
+2:215,Recipients of Charity
+2:216,Submit to the Omniscient
+2:219,Intoxicants and Gambling Prohibited
+2:221,Do Not Marry Pagans\
+2:222,Menstruation
+2:224,Do Not Take the Name of God in Vain
+2:226,Divorce Laws
+2:238,You Shall Observe the Salat Prayers
+2:240,Alimony For Widows and Divorcees
+2:243,You Shall Courageously Struggle for the Cause of God
+2:246,The Believers Always Victorious
+2:255,God
+2:256,No Compulsion in Religion
+2:259,No Time Between Death and Resurrection\
+2:260,Even Believers Need Reassurance\
+2:261,The Great Investment
+2:270,Secret Charities Recommended
+2:272,Only God Guides\
+2:275,Usury Prohibited\
+2:282,Write Down Monetary Transactions
+2:285,Make No Distinction Among the Prophets
+3:23,The Danger of Ignorance
+3:28,Do Not Befriend Disbelievers
+3:31,The Prophet Preaches Quran\
+3:33,The Family of Imran
+3:35,Mary
+3:38,John
+3:42,Jesus
+3:64,The Great Commandment: You Shall Not Worship Except God\
+3:65,Abraham: The Founder of Islam\
+3:75,You Shall Act Righteously With All The People
+3:81,Before Genesis\
+3:84,Islam Preached By All Messengers
+3:92,You Shall Be Charitable
+3:93,Unauthorized Prohibition of Foods Is Wickedness
+3:102,You Shall Be United
+3:113,Righteous Jews and Christians
+3:121,The Battle of Badr
+3:130,Usury Prohibited
+3:132,Attributes of the Righteous
+3:145,Time of Death Predetermined
+3:151,The Disbelievers Invariably Lose
+3:160,The Believers Never Defeated
+3:169,Martyrdom: A Great Honor
+3:179,You Must Be Put To The Test
+3:190,Overwhelming Signs of God
+3:195,Equality of Men and Women
+4:2,The Orphans
+4:7,Women's Rights Decreed
+4:15,Punish the Adulterers
+4:17,Conditions For Acceptable Repentance
+4:19,Protection For Women
+4:22,Marriage Laws
+4:29,You Shall Not Confiscate Properties
+4:32,Men and Women Shall Not Covet Each Other's Qualities
+4:36,The Great Commandment: You Shall Not Worship Except God
+4:43,Tayammum: The Waterless Ablution
+4:48,Idol Worship: The Only Unforgivable Offense
+4:56,Allegorical Descriptions of Heaven and Hell\
+4:58,You Shall Be Trustworthy
+4:64,All Messengers Preached the Word of God\
+4:66,Submission Must Be Total
+4:77,You Shall Be Courageous
+4:82,Proof Of Divine Revelation
+4:83,You Shall Verify Any Rumors
+4:88,The Hypocrites Condemned
+4:92,The Grossness of Murder
+4:97,Do Not Yield to Oppression
+4:103,Salat Decreed at Specific Times
+4:115,"You Shall Follow The Messenger, But Do Not Idolize Him"
+4:125,This Is The Religion of Abraham
+4:127,You Shall Regard The Women And The Orphans
+4:135,You Shall Not Bear False Witness
+4:137,The Hypocrites
+4:148,Do Not Utter Bad Language
+4:150,No Distinction Among the Messengers\
+4:153,Lessons From Israel\
+4:163,No Excuse For Disbelieving
+4:171,Jesus: A Messenger of God\
+4:174,The Proof Is Right Here
+4:176,More Inheritance Statutes
+5:3,Only Four Kinds of Meat Prohibited\
+5:6,Ablution and Tayammum Detailed
+5:8,You Shall Not Bear False Witness
+5:11,God Defends the Believers
+5:17,The Great Blasphemy\
+5:20,Lessons From Israel\
+5:27,The First Murder
+5:38,Criminal Justice
+5:45,God's Statutes: The Only Just Law
+5:48,"Muhammad's Mission: Deliver Quran, and Nothing But Quran\"
+5:51,Historical Fact of Life
+5:65,Salvation For Jews and Christians
+5:67,The Messenger Delivers Everything Revealed to Him\
+5:69,Three Requirements For Salvation
+5:72,The Great Blasphemy
+5:82,An Historical Fact
+5:87,Do Not Prohibit Lawful Foods\
+5:89,Keep Your Vows
+5:90,Intoxicants and Gambling Prohibited
+5:92,Sole Function of the Messenger\
+5:94,Do Not Hunt During Pilgrimage
+5:99,Sole Function of the Messenger\
+5:106,Witnessing a Will
+5:112,The Feast
+5:116,Jesus Disowns His Worshipers
+6:4,The Disbelievers
+6:12,God Alone Worthy of Worship
+6:17,Only God Benefits and Harms
+6:19,Quran: The Only Divine Revelation to Muhammad
+6:21,Hadith and Sunna: Imperceptible Idolatry\
+6:33,God's Messengers Persecuted
+6:38,Quran: All the Commandments We Need
+6:42,The Standard Method
+6:46,"God Alone Omnipotent, While the Messengers Powerless"
+6:52,First Believers: The Poor and Oppressed
+6:68,Stay Away From the Wicked
+6:74,Abraham Discovers God
+6:92,True Believers of all Religions Will Accept Quran
+6:95,God Alone Worthy of Worship
+6:108,Do Not Berate Their Idols
+6:112,Hadith and Sunna: The Great Test to Distinguish True Muslims From False Muslims
+6:118,Permission From the Creator Before Killing Animals
+6:125,Scientific Miracle\
+6:128,The Majority of People Heedless
+6:136,Ancient Traditions
+6:138,Do Not Prohibit Lawful Things
+6:141,Follow the Teachings of God Alone
+6:145,Only Four Things Prohibited
+6:151,Do Not Bicker Over Minor Issues
+6:159,One Quran; One Islam
+6:161,Muhammad: A Follower of Abraham\
+7:2,Quran: The Only Source of Islamic Knowledge
+7:11,Satan: The Great Challenge\
+7:28,God Never Advocates Evil
+7:32,Do Not Prohibit Lawful Things\
+7:35,Follow the Teachings of God Alone
+7:38,What Happened on the Day of Judgment\
+7:54,God Alone Worthy of Worship
+7:59,"Believers: The Ultimate Winners
+Noah"
+7:65,Hūd
+7:73,Saalih
+7:80,Lot
+7:85,Shu'aib
+7:94,God's System
+7:103,Moses
+7:138,Idol Worship: A Perennial Human Disease
+7:143,God is Not Here\
+7:146,The Curse of Pride
+7:157,Quran: God's Message to the Jews and the Christians\
+7:158,Muhammad: God's Messenger to ALL the People
+7:159,The Example of Israel\
+7:172,Knowledge of God: Our Natural Instinct
+7:185,"Quran is the Only ""Hadith"""
+7:187,Do Not Idolize Muhammad
+7:189,Various Kinds of Idols\
+7:203,Muhammad Could Not Utter the Quran on His Own\
+8:23,God Knows Which Among Us Deserve to Hear
+8:30,The Believers Persecuted
+8:35,Salat Prayers Observed Before Muhammad
+8:41,Distribution of the Spoils of War
+8:49,The Disbelievers Always Losers
+8:57,Believers Are Stern and Alert
+8:67,The Prophet Subject to the Same Tests
+9:17,God Guards His Mosques
+9:23,God: The Only Priority
+9:30,Quran Rectifies Previous Deviations
+9:36,Conservation
+9:38,You Shall Eagerly Struggle
+9:60,Distribution of Charities
+9:67,The Winners
+9:81,The Sedentary
+9:102,Repentance
+9:107,Mosques Abused\
+9:111,Most Profitable Trade
+9:113,God: The Only Priority
+9:122,The Importance of Religious Knowledge
+10:5,Overwhelming Signs of God
+10:9,The Initial Decision is Ours
+10:15,Quran: Muhammad's Sole Mission
+10:18,Do Not Idolize Anyone
+10:20,Muhammad's Miracle Revealed Centuries Later\
+10:21,Do Not Waiver With Circumstances
+10:28,Idols Disown Their Idolizers
+10:36,"""Hadith"" is Conjecture, While Quran is Flawless\"
+10:54,One Chance to Develop Our Souls
+10:59,Only Four Meats Specifically Prohibited\
+10:62,Heaven Begins Here
+10:71,Noah
+10:75,Moses
+10:94,Muhammad the Man vs Muhammad the Messenger\
+10:99,God Blocks Out the Skeptics\
+11:12,Muhammad's Role: Deliver the Message
+11:25,"The First Commandment
+You Shall NOT Worship Except God"
+11:50,Hood
+11:61,Saalih
+11:69,Abraham
+11:77,Lot
+11:84,Shu'aib
+11:96,Moses
+11:112,Important Commandments
+12:40,You Shall Not Worship Except God
+12:43,The King's Dream
+12:92,Israel's Family Moves to Egypt
+12:103,The Majority of People Will Not Believe
+12:106,Minority of the Minority Attain Salvation
+13:8,God Only Worthy of Worship
+13:27,Muhammad Performed No Miracles
+13:31,The Disbelievers Hopelessly Blocked Out
+13:36,Quran Recognized and Appreciated by Jews and Christians
+14:21,The Future That Already Took Place
+14:27,God Misleads the Wicked
+14:35,Abraham
+14:42,The Day of Reckoning
+15:9,God's Promise
+15:10,The Disbelievers Hopelessly Blocked
+15:26,The Humans and the Jinns
+15:51,Sodom and Gomorrah
+15:80,Al-Hijr
+15:85,The Seven Pairs
+16:17,God vs the Idols
+16:43,All the Messengers Humans Like You and Me
+16:51,One God
+16:65,Overwhelming Signs of God
+16:75,The Strong Believer Better Than The Weak Believer
+16:84,The Idols Disown Their Idolizers
+16:98,Satan Prevents People From Reading Quran
+16:104,"The Advocates of ""Hadith"" and/or ""Sunna"""
+16:112,Do Not Prohibit Lawful Foods
+16:115,Only Four Prohibited Foods
+16:120,"Abraham: The Source of Religious Practice
+Muhammad: A Follower of Abraham"
+16:124,The Sabbath Law Modified
+17:9,Quran: The Only Reliable Source
+17:13,The Video Record
+17:22,The Commandments
+17:45,Quran: An Uncommon Book
+17:49,Resurrection Closer Than You Think
+17:53,Satan Divides You
+17:56,The Idols Themselves Need God's Help
+17:59,Muhammad Performed No Miracles
+17:61,The Beginning of Satan
+17:73,"The Quran, the Whole Quran, and Nothing But the Quran"
+17:78,Attainment of the Highest Ranks
+17:85,Quran: God's Miraculous Revelation
+17:101,Muslims and Jews: the Great Parallel
+18:9,The Seven Sleepers of Ephesus
+18:27,Quran Revealed to All of Us Through Muhammad
+18:29,Freedom to Believe or Disbelieve
+18:32,Do Not Idolize Your Material Properties
+18:45,Property and Children Can be Distracting Idols
+18:50,Satan Turns From Angel to Jinn
+18:54,Quran is Truth; Other Sources Are Falsehood
+18:57,The Curse
+18:60,A Good Reason For Everything
+18:83,Gog and Magog
+18:102,Idolizing God's Servants
+18:109,"Quran Encompasses Everything We Need
+Uphold the Words of God, Not the Words Attributed to Muhammad"
+19:16,Mary
+19:34,The True Story of Jesus
+19:41,Abraham
+19:51,Other Prophets
+19:64,The Words of Quran Speaking
+19:71,"Initially, We All Go To Hell"
+19:81,The Idols Disown Their Idolizers
+19:88,The Great Blasphemy
+20:9,Moses
+20:77,The Children of Israel Delivered
+20:109,No Intercession For the Wicked
+20:116,Adam Fails
+20:132,Important Commandment
+21:21,Do Not Idolize the Prophets
+21:30,"The ""Big Bang Theory"" Confirmed*\"
+21:42,All Power Belongs to God
+21:48,Moses and Aaron
+21:51,Abraham
+21:72,The Origin of Salat Prayers and Zakat Charity
+21:74,Lot
+21:76,Noah
+21:78,David and Solomon
+21:83,Job
+21:85,Many Prophets; One Message
+22:5,Do You Doubt Resurrection?
+22:15,Relevance of Faith to This Life*\
+22:26,"Hajj Pilgrimage, Like All Religious Practices, Decreed Through Abraham*\"
+22:38,God Defends the Believers
+22:42,The Disbelievers Consistently Doomed
+22:52,Messengers Surrounded By Tests
+22:61,Tokens of God's Power
+22:73,Can Your Idols Create A Fly?
+22:78,Islam: The Religion of Abraham
+23:12,Evolution of the Human Being
+23:17,Creation of the Heavens and the Earth
+23:23,Noah
+23:31,Similar Conditions Face Every Messenger
+23:52,All Messengers Preached One Religion
+23:63,The Unfortunate Disregard These Revelations
+23:78,Belief in God Nullified by Idol Worship*\
+23:99,Only One Chance
+24:11,Historical Accusation of the Prophet's Wife
+24:47,Submission to God Must be Total
+24:55,The Great Promise
+24:58,Etiquette
+25:17,The Righteous Idols*\
+25:27,Choose Your Friends Carefully
+25:30,Muhammad's Mission and Wish*\
+25:35,The Disbelievers Consistently Doomed
+25:55,Do Not Idolize Muhammad
+25:58,Muhammad Dies; God Does Not
+26:10,Moses
+26:69,Abraham
+26:105,Noah
+26:123,Hood
+26:141,Saalih
+26:160,Lot
+26:176,Shu'aib
+26:192,The Guilty Isolated From Quran*\
+27:7,Moses
+27:15,David and Solomon
+27:45,Saalih
+27:54,Lot
+27:59,God Alone Worthy of Worship
+27:67,Belief in the Hereafter: The Greatest Obstacle
+27:88,A Quranic Scientific Marvel
+28:48,Quran: God's Message to the World
+28:56,Only God Guides
+28:76,Qaroon
+29:18,Role Of the Messenger
+29:50,Muhammad Performed No Miracles*\
+29:56,"Move Away, If You Have To"
+29:61,The Idol-Worshipers Believe in God
+30:17,Signs of God
+30:28,Monotheism: Natural Instinct
+30:55,No Time Between Death and Resurrection
+31:6,Quran versus Hadith
+31:12,Luqmaan's Wisdom
+31:20,Be Appreciative of God
+33:4,Forsake Traditions
+33:9,The Battle of the Allies
+33:28,Instructions to All Women
+33:36,Muhammad the Man versus Muhammad the Messenger
+33:53,General Etiquette
+33:59,Women Shall Dress Modestly
+34:10,David and Solomon
+34:15,Sheba
+34:22,"Worship God, And Do Not Idolize Anyone"
+34:28,Muhammad Sent To All The People
+35:9,Dignity Only With God
+36:13,Perennial Human Plague
+36:55,Heaven and Hell
+37:50,The People In Heaven Visit The People in Hell
+37:69,Do Not Blindly Follow Your Parents
+37:75,Noah and Abraham
+38:18,David
+38:30,Solomon
+38:41,Job
+38:45,Abraham And Descendants
+38:65,Satan Determined To Mislead Us
+39:11,Muhammad An Example
+39:23,Quran: Sufficient Source of Jurisprudence
+39:32,You May Believe In God And Still Go To Hell
+39:45,The Great Criterion
+39:53,God Forgives All Sins
+39:62,God Alone Worthy of Worship
+39:68,The Day Of Resurrection
+40:7,Believers Enjoy The Privilege Of Forgiveness
+40:10,Worship God ALONE
+40:23,Moses
+40:51,Victory For The Believers
+40:57,Creation of the Universe More Complex than the Creation of Man
+40:66,Muhammad Worshiped Idols Before The Message
+40:83,Evil Satisfaction With Inherited Knowledge
+41:6,Do Not Idolize Muhammad
+41:14,You Shall Not Worship Except God
+41:20,All Our Works Recorded
+41:26,The Disbelievers Violate Quran
+41:30,Happiness In This World Guaranteed For The Believers
+41:40,Blaspheming Against Quran
+41:43,Language Is No Barrier
+41:49,Submission Required Under All Circumstances
+41:52,Quran's Miracles To Be Revealed
+42:13,Only One Religion
+42:21,The Idol Worshipers Invent Laws
+42:27,Why God Controls Provisions
+42:48,Sole Function Of The Messenger
+42:51,God Communicates With Us
+43:9,Worshipping God Not Enough
+43:22,Do Not Follow Your Parents Blindly
+43:31,God Chooses His Messenger
+43:33,The Materials Of This World Are Nil
+43:46,The Lesson From Moses
+43:86,There Will Be No Intercession
+44:10,Before The End Of The World
+44:34,Resurrection Will Come
+45:6,"The Inventors and Followers Of ""Hadith"" Doomed"
+46:5,The Righteous Idols
+46:9,Muhammad Only Human
+46:15,The Crucial Age Of Forty
+46:21,You Shall Not Worship Except God
+46:29,Quran Is The Whole Message
+47:31,We Must Be Put To The Test
+48:28,Islam Will Prevail
+49:2,Etiquette
+49:6,Investigate Rumors
+49:14,Islam versus Iman
+49:15,Definition of Mu'min
+50:12,Miraculous Numerical Code
+50:20,The Day of Judgment
+50:36,We Should Learn From The Past
+51:24,"Lessons From The Past
+Abraham"
+51:31,Sodom And Gomorrah
+51:38,Moses
+51:41,'Aad And Thamood
+51:47,Humans And Jinns Created To Worship God Alone
+53:19,Idol Worshipers Never Sure
+55:37,The Day Of Resurrection
+55:41,Hell
+55:46,The Higher Heaven
+55:62,The Lower Heaven
+56:10,The High Heaven
+56:27,The Lower Heaven
+56:41,Hell
+56:75,The Honorable Quran
+57:22,Profound Fact
+58:22,Run For Your Life
+59:21,Awesomeness Of Quran
+60:8,Fight Only The Aggressors
+61:10,The Most Profitable Trade
+62:9,Friday Prayer Decreed
+63:9,Do Not Be Distracted By Business And/Or Family
+64:9,The Day of Mutual Blaming
+65:8,You Shall Heed God's Law
+66:10,Spouses May Disagree
+67:2,The Sole Purpose Of Creation\
+69:13,The Day Of Resurrection
+72:20,The Prophet's Teachings
+74:32,One Of The Greatest Miracles
+75:16,Muhammad Only Delivers Quran
+83:29,The Believers Ridiculed
+96:1,First Sura Ever Revealed
+110:1,Last Sura Ever Revealed

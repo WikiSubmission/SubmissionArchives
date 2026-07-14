@@ -9,6 +9,32 @@ export type AppendixItem = {
     filename: string;
     pdfLink: string;
     thumbnailOverride?: string;
+    thumbnail1982?: string;
+    has1982?: boolean;
+    startPage1982?: number;
+};
+
+const PAGE_MAPPING_1982: Record<string, number> = {
+    'introduction': 1,
+    'appendix-1': 2,
+    'appendix-2': 15,
+    'appendix-3': 17,
+    'appendix-4': 19,
+    'appendix-5': 20,
+    'appendix-6': 21,
+    'appendix-7': 23,
+    'appendix-8': 24,
+    'appendix-9': 25,
+    'appendix-10': 26,
+    'appendix-11': 30,
+    'appendix-12': 34,
+    'appendix-13': 35,
+    'appendix-14': 36,
+    'appendix-15': 37,
+    'appendix-16': 38,
+    'appendix-17': 40,
+    'appendix-18': 41,
+    'appendix-19': 43,
 };
 
 export type AppendixSearchResult = {
@@ -62,12 +88,17 @@ export function getAppendixCatalog() {
         .filter((name) => name.toLowerCase().endsWith('.pdf'))
         .map((filename) => {
             const id = filename.replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
+            const startPage1982 = PAGE_MAPPING_1982[id];
+            
             return {
                 id,
                 title: titleById.get(id) ?? titleFromFilename(filename),
                 filename,
                 pdfLink: `/content/appendix/pdfs/${filename}`,
                 thumbnailOverride: getThumbnailLink(APPENDICES_THUMB_DIR, '/content/appendix/thumbnails', filename),
+                thumbnail1982: getThumbnailLink(path.join(APPENDICES_THUMB_DIR, '1982'), '/content/appendix/thumbnails/1982', `${id}.pdf`),
+                has1982: startPage1982 !== undefined,
+                startPage1982,
             };
         })
         .sort((a, b) => sortValue(a.id) - sortValue(b.id));
@@ -76,9 +107,17 @@ export function getAppendixCatalog() {
 }
 
 function getThumbnailLink(thumbnailDir: string, publicBase: string, pdfFilename: string) {
-    const thumbnailName = `${pdfFilename.replace(/\.pdf$/i, '')}.jpg`;
-    const thumbnailPath = path.join(thumbnailDir, thumbnailName);
-    return fs.existsSync(thumbnailPath) ? `${publicBase}/${thumbnailName}` : undefined;
+    const baseName = pdfFilename.replace(/\.pdf$/i, '');
+    const jpgName = `${baseName}.jpg`;
+    const pngName = `${baseName}.png`;
+    
+    if (fs.existsSync(path.join(thumbnailDir, jpgName))) {
+        return `${publicBase}/${jpgName}`;
+    }
+    if (fs.existsSync(path.join(thumbnailDir, pngName))) {
+        return `${publicBase}/${pngName}`;
+    }
+    return undefined;
 }
 
 export function getAppendixItem(id: string) {

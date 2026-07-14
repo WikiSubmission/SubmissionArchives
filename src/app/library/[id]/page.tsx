@@ -72,12 +72,25 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
 
     // Determine PDF URL based on type
     let pdfUrl = '';
+    let startPageFromOverride: number | undefined = undefined;
+
     if (book.type === 'other') {
         pdfUrl = book.pdfLink;
     } else if (book.type === 'appendix') {
-        pdfUrl = book.pdfLink || `/content/appendix/pdfs/${book.filename}`;
+        const is1982 = resolvedSearchParams?.edition === '1982';
+        if (is1982 && book.has1982) {
+            pdfUrl = '/content/appendix/pdfs/1982/1981_Appendices.pdf';
+            startPageFromOverride = book.startPage1982;
+        } else {
+            pdfUrl = book.pdfLink || `/content/appendix/pdfs/${book.filename}`;
+        }
     } else if (book.type === 'newsletter') {
         pdfUrl = book.pdfLink || '';
+    }
+
+    let finalInitialPage = initialPage;
+    if (startPageFromOverride && !resolvedSearchParams?.page) {
+        finalInitialPage = startPageFromOverride;
     }
 
     // Calculate navigation for newsletters
@@ -102,7 +115,7 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
             <PDFReaderClient
                 pdfUrl={getPublicAssetUrl(pdfUrl)}
                 title={book.title}
-                initialPage={initialPage}
+                initialPage={finalInitialPage}
                 initialQuery={initialQuery}
                 prevId={prevId}
                 nextId={nextId}

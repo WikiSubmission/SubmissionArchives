@@ -708,14 +708,15 @@ function buildQuranIndex() {
   }
 
   function loadEdition(dirName) {
-    if (dirName !== '1989') return new Map();
+    if (dirName !== '1989' && dirName !== '1981') return new Map();
     const editionDir = path.join(QURAN_DIR, dirName);
-    const t = readCsvRows(path.join(editionDir, 'Quran1989_verse_index.csv')).map((row) => ({
+    const t = readCsvRows(path.join(editionDir, `Quran${dirName}_verse_index.csv`)).map((row) => ({
       verse_id: row.verse_id,
-      english: row.english_1989,
+      english: row[`english_${dirName}`],
     }));
-    const f = readCsvRows(path.join(editionDir, 'Quran1989_footnotes.csv')).flatMap((row) => {
-      const match = row.verse_reference?.match(/^(\d+):(\d+)(?:-(\d+))?$/);
+    const f = readCsvRows(path.join(editionDir, `Quran${dirName}_footnotes.csv`)).flatMap((row) => {
+      const ref = row.verse_reference || row.verse_id;
+      const match = ref?.match(/^(\d+):(\d+)(?:-(\d+))?$/);
       if (!match) return [];
       const chapter = Number(match[1]);
       const start = Number(match[2]);
@@ -730,7 +731,7 @@ function buildQuranIndex() {
         english: row.text,
       }));
     });
-    const s = readCsvRows(path.join(editionDir, 'Quran1989_subheadings.csv')).map((row) => ({
+    const s = readCsvRows(path.join(editionDir, `Quran${dirName}_subheadings.csv`)).map((row) => ({
       verse_id: row.verse_id || (row.chapter_number && row.placement_before_verse
         ? `${row.chapter_number}:${row.placement_before_verse}`
         : ''),
@@ -759,6 +760,7 @@ function buildQuranIndex() {
   }
 
   const ed1989 = loadEdition('1989');
+  const ed1981 = loadEdition('1981');
   const expectedVerseIds = textRows
     .filter((row) => Number(row.chapter_number) > 0 && Number(row.verse_number) > 0)
     .map((row) => row.verse_id);
@@ -798,6 +800,7 @@ function buildQuranIndex() {
     };
 
     if (ed1989.has(row.verse_id)) verse.editions['1989'] = ed1989.get(row.verse_id);
+    if (ed1981.has(row.verse_id)) verse.editions['1981'] = ed1981.get(row.verse_id);
     if (Object.keys(verse.editions).length === 0) delete verse.editions;
 
     const list = versesByChapter.get(chapterNumber) ?? [];
@@ -847,6 +850,12 @@ function buildQuranIndex() {
         if (verse.editions['1989'].subtitle) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].subtitle, page: verse.verseNumber, label: 'heading-1989' });
         if (verse.editions['1989'].english) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].english, page: verse.verseNumber, label: 'verse-1989' });
         if (verse.editions['1989'].footnote) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].footnote, page: verse.verseNumber, label: 'footnote-1989' });
+      }
+
+      if (verse.editions?.['1981']) {
+        if (verse.editions['1981'].subtitle) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1981'].subtitle, page: verse.verseNumber, label: 'heading-1981' });
+        if (verse.editions['1981'].english) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1981'].english, page: verse.verseNumber, label: 'verse-1981' });
+        if (verse.editions['1981'].footnote) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1981'].footnote, page: verse.verseNumber, label: 'footnote-1981' });
       }
     }
 

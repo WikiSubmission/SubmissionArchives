@@ -26,6 +26,7 @@
     "lru-cache": "^11.5.1",
     "lucide-react": "^0.561.0",
     "next": "^16.2.6",
+    "pdf-lib": "^1.17.1",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "react-pdf": "^10.4.1",
