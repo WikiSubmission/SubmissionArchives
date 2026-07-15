@@ -81,7 +81,7 @@ Built on a modern stack designed for performance and longevity:
     npm start
     ```
 
-    `npm start` prepares Next.js's standalone directory with the required `public/` and `.next/static/` assets, then launches the same server artifact used by the container image.
+    `npm start` prepares Next.js's standalone directory with the required `public/`, `.next/static/`, and `data/` assets, then launches the same server artifact used by the container image.
 
 ### Docker
 

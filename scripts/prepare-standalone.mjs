@@ -15,6 +15,7 @@ copyDirectory(
   path.join(root, '.next', 'static'),
   path.join(standaloneRoot, '.next', 'static'),
 );
+copyDirectory(path.join(root, 'data'), path.join(standaloneRoot, 'data'));
 
 function copyDirectory(source, destination) {
   if (!fs.existsSync(source)) {
