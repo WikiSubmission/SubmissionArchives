@@ -2,10 +2,10 @@
   "valid": true,
   "errors": [],
   "warnings": [
-    "1 record(s) are clearly marked without searchable segments."
+    "3 record(s) are clearly marked without searchable segments."
   ],
   "recordCount": 383,
-  "segmentCount": 115142,
+  "segmentCount": 113842,
   "categoryCounts": {
     "Appendices": 40,
     "Books": 13,
@@ -30,6 +30,18 @@
       "category": "Videos",
       "type": "video-program",
       "transcriptStatus": "empty"
+    },
+    {
+      "id": "hard-cover-1989",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
+    },
+    {
+      "id": "quran1981",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
     }
   ]
 }
