@@ -14,14 +14,9 @@ import { createCanvas } from '@napi-rs/canvas';
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 
 const ROOT = process.cwd();
-const BOOKS_DIR = path.join(ROOT, 'public', 'content', 'books');
+const BOOKS_DIR = path.join(ROOT, 'public', 'content', 'written', 'books');
 const THUMB_DIR = path.join(BOOKS_DIR, 'thumbnails');
 const TARGET_WIDTH = 900;
-
-const BOOKS = [
-  { pdf: 'salat_booklet.pdf', thumb: 'salat_booklet.jpg' },
-  { pdf: 'perpetual_miracle.pdf', thumb: 'perpetual_miracle.jpg' },
-];
 
 async function renderFirstPage(pdfPath, outPath) {
   const data = new Uint8Array(fs.readFileSync(pdfPath));
@@ -43,13 +38,20 @@ async function renderFirstPage(pdfPath, outPath) {
 async function main() {
   fs.mkdirSync(THUMB_DIR, { recursive: true });
 
-  for (const book of BOOKS) {
-    const pdfPath = path.join(BOOKS_DIR, book.pdf);
-    const outPath = path.join(THUMB_DIR, book.thumb);
-    if (!fs.existsSync(pdfPath)) {
-      console.log('skip (pdf missing):', book.pdf);
+  const books = fs.readdirSync(BOOKS_DIR).filter((filename) => filename.toLowerCase().endsWith('.pdf'));
+
+  for (const pdf of books) {
+    const baseName = pdf.replace(/\.pdf$/i, '');
+    const existingThumbnail = ['.jpg', '.png'].find((extension) =>
+      fs.existsSync(path.join(THUMB_DIR, `${baseName}${extension}`)),
+    );
+    if (existingThumbnail) {
+      console.log('skip (thumbnail exists):', `${baseName}${existingThumbnail}`);
       continue;
     }
+
+    const pdfPath = path.join(BOOKS_DIR, pdf);
+    const outPath = path.join(THUMB_DIR, `${baseName}.jpg`);
     await renderFirstPage(pdfPath, outPath);
     console.log('wrote', path.relative(ROOT, outPath));
   }

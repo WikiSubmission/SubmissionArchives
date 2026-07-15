@@ -1,7 +1,7 @@
 # Canonical transcription sources
 
 This directory contains private build inputs. Nothing here is served directly by Next.js.
-The public PDFs remain in `public/content/books`; search data is generated into
+The public PDFs remain in `public/content/written/books`; search data is generated into
 `public/data/generated_indices` by `npm run generate:catalog`.
 
 ## Layout
@@ -17,8 +17,7 @@ The public PDFs remain in `public/content/books`; search data is generated into
 
 ## Source precedence
 
-The catalog generator prefers these canonical sources over legacy JSON files in
-`public/content/books/jsons`. The legacy files are compatibility fallbacks only.
-If a canonical source is missing or the 1989 verse index does not cover every numbered
+The catalog generator requires these canonical sources; duplicate public transcription
+copies are intentionally not maintained. If a canonical source is missing or the 1989
+verse index does not cover every numbered
 verse in the 1992 base edition, generation fails instead of silently substituting text.
-

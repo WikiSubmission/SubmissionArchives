@@ -3,18 +3,18 @@ import test from 'node:test';
 import { getAssetKey, getMediaPlaybackWindow, getPublicAssetUrl } from '../../src/lib/mediaAssets';
 
 test('normalizes public asset keys', () => {
-    assert.equal(getAssetKey('public\\content\\books\\Example.pdf'), 'content/books/Example.pdf');
+    assert.equal(getAssetKey('public\\content\\written\\books\\Example.pdf'), 'content/written/books/Example.pdf');
     assert.equal(getAssetKey('/public/images/example.png'), 'images/example.png');
 });
 
 test('encodes each local path segment without double encoding', () => {
     assert.equal(
-        getPublicAssetUrl('/content/books/Quran, Hadith, and Islam.pdf'),
-        '/content/books/Quran%2C%20Hadith%2C%20and%20Islam.pdf',
+        getPublicAssetUrl('/content/written/books/Quran, Hadith, and Islam.pdf'),
+        '/content/written/books/Quran%2C%20Hadith%2C%20and%20Islam.pdf',
     );
     assert.equal(
-        getPublicAssetUrl("/content/books/The Computer Speaks God's Message.pdf"),
-        '/content/books/The%20Computer%20Speaks%20God%27s%20Message.pdf',
+        getPublicAssetUrl("/content/written/books/The Computer Speaks God's Message.pdf"),
+        '/content/written/books/The%20Computer%20Speaks%20God%27s%20Message.pdf',
     );
     assert.equal(getPublicAssetUrl('/content/already%20encoded.pdf'), '/content/already%20encoded.pdf');
 });

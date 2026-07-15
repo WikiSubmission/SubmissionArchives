@@ -802,16 +802,8 @@ function getThumbnailSrc(media: SearchResultMedia) {
         return getPublicAssetUrl(media.thumbnailOverride);
     }
 
-    if (media.type === 'sermon') {
-        return `/images/sermons/${getCleanMediaId(media.id)}.jpg`;
-    }
-
-    if (media.type === 'video-program') {
-        return `/images/video-programs/${getCleanMediaId(media.id)}.jpg`;
-    }
-
     if (media.type === 'audio' || media.type === 'messenger-audio') {
-        return getPublicAssetUrl('/content/audio/messenger-audios/default.jpg');
+        return getPublicAssetUrl('/content/audios/messenger-audios/default.jpg');
     }
 
     if (media.type === 'perspective') {
@@ -837,14 +829,6 @@ function getThumbnailSrc(media: SearchResultMedia) {
     }
 
     return '/images/placeholders/rashad-khalifa.png';
-}
-
-function getCleanMediaId(id: string) {
-    return id
-        .replace(/^media\/(FRIDAY SERMONS|VIDEO PROGRAMS|disorganized_sermons|rk_video_programs)\//, '')
-        .replace(/\s+/g, '_')
-        .replace(/[^\w\-_.]/g, '')
-        .replace(/\.(mp4|mp3|webm|m4a|ogg)$/i, '');
 }
 
 function formatTime(seconds: number) {

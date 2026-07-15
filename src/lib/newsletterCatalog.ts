@@ -18,8 +18,8 @@ export type NewsletterIssue = {
     jsonData?: JsonData;
 };
 
-const NEWSLETTER_DIR = path.join(process.cwd(), 'public', 'content', 'newsletter');
-const JSON_PATH = path.join(NEWSLETTER_DIR, 'json', 'SP1985_1990_all_issues_combined.json');
+const NEWSLETTER_DIR = path.join(process.cwd(), 'public', 'content', 'written', 'newsletters');
+const JSON_PATH = path.join(process.cwd(), 'data', 'catalog', 'newsletters.json');
 const NEWSLETTER_THUMB_DIR = path.join(NEWSLETTER_DIR, 'thumbnails');
 const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
 
@@ -28,13 +28,13 @@ let issueCache: NewsletterIssue[] | null = null;
 function getThumbnailLink(year: number, monthNumber: number, monthName: string) {
     const thumbnailName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.jpg`;
     const thumbnailPath = path.join(NEWSLETTER_THUMB_DIR, thumbnailName);
-    return fs.existsSync(thumbnailPath) ? `/content/newsletter/thumbnails/${thumbnailName}` : undefined;
+    return fs.existsSync(thumbnailPath) ? `/content/written/newsletters/thumbnails/${thumbnailName}` : undefined;
 }
 
 function getPdfLink(year: number, monthNumber: number, monthName: string) {
     const pdfName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.pdf`;
     const pdfPath = path.join(NEWSLETTER_PDF_DIR, pdfName);
-    return fs.existsSync(pdfPath) ? `/content/newsletter/pdfs/${pdfName}` : undefined;
+    return fs.existsSync(pdfPath) ? `/content/written/newsletters/pdfs/${pdfName}` : undefined;
 }
 
 export function getNewsletterIssues(): NewsletterIssue[] {

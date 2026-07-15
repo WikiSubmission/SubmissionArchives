@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const mdPath = path.join(ROOT, '1981_Quran_Complete.md');
+const mdPath = path.join(ROOT, 'data', 'sources', 'quran', '1981', 'source-markdown', 'quran-complete.md');
 const outDir = path.join(ROOT, 'data', 'sources', 'quran', '1981');
 fs.mkdirSync(outDir, { recursive: true });
 

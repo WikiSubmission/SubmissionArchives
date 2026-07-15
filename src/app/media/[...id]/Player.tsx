@@ -72,7 +72,7 @@ function getThumbnail(media: Media): string {
         return getPublicAssetUrl(media.thumbnailOverride);
     }
     let src = '/images/placeholders/rashad-khalifa.png';
-    if (media.type === 'messenger-audio') src = '/images/messenger-audios/default.jpg';
+    if (media.type === 'messenger-audio') src = '/content/audios/messenger-audios/default.jpg';
     return getPublicAssetUrl(src);
 }
 

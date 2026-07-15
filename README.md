@@ -1,109 +1,124 @@
-# SubmissionArchives
+![Submission Archives animated banner](assets/readme/submission-archives-banner.gif)
 
-![Submission Archives](public/images/submission-archives-logo.png)
+# Submission Archives
 
-**SubmissionArchives** is a comprehensive media archive preserving the work of **Dr. Rashad Khalifa**, the Messenger of the Covenant. This platform serves as a digital library for his audio recordings, video programs, and written publications, featuring advanced search capabilities across transcripts and texts.
+Submission Archives is a digital reading room preserving the recorded and written work of Dr. Rashad Khalifa. It brings Qur'an editions, studies, sermons, video programs, books, appendices, and *Submitters Perspectives* into one research-focused archive.
 
-## Archive Categories
+[Visit the archive](https://archive.wikisubmission.org) · [Search the corpus](https://archive.wikisubmission.org/search) · [Read the Qur'an](https://archive.wikisubmission.org/quran) · [Browse written works](https://archive.wikisubmission.org/written)
 
-### Audio & Video
-- **Quran Studies**: Complete collection of 52 MP3 audio studies conducted by Dr. Khalifa and the masjid.
-- **Messenger Audios**: Extensive archive of sermons, discussions, and studies from the 1980s.
-- **Video Programs**: Restored MP4 video programs including *King of Chaos*, *Old Message New Messenger*, and other seminal works.
-- **Sermons**: A curated compilation of sermons, including the pivotal "God Is Doing Everything."
+## The Archive
 
-### Written Works
-- **Submitters Perspectives**: Complete newsletter archive from February 1985 to March 1990.
-- **Appendices**: In-depth elaborations on Quranic topics, including the *Introduction* and *Proclamation* from Dr. Khalifa's translation.
-- **Other Publications**: Various works including books (*Quran, Hadith, Islam*), brochures (e.g., *Contact Prayer/Salat*), and articles.
+- **Qur'an:** A readable 1992 edition with structured chapters, footnotes, subtitles, multilingual material, and preserved 1981 and 1989 editions.
+- **Audio:** Qur'an studies, Messenger audios, sermons, and related recordings with synchronized transcripts where available.
+- **Video:** Preserved programs and talks connected to their source recordings and searchable passages.
+- **Written works:** Books, historical publications, organized appendices, and 64 issues of *Submitters Perspectives* from 1985 through 1990.
+- **Research search:** Exact phrases and nearby terms lead back to the relevant timestamp, page, verse, or complete source.
 
-## Features
+The interface is designed as an editorial archive rather than a streaming catalog. Dates, editions, page numbers, source relationships, and transcription status remain visible so visitors can move from discovery to evidence.
 
-- **Deep Search**: Full-text search across all video/audio transcripts and written materials.
-- **Smart Filtering**: Filter results by media type, year, or category.
-- **Transcript Synchronization**: Read along with audio/video playback.
-- **Responsive Design**: Optimized for desktop and mobile devices.
+## Technology
 
-## Roadmap
+- [Next.js](https://nextjs.org/) App Router with React and TypeScript
+- Tailwind CSS and repository-local typography
+- YouTube-backed audio and video playback
+- Local PDF readers for books, newsletters, and Qur'an material
+- Generated, schema-validated search indices
+- Playwright browser coverage and Node test suites
+- Standalone Docker deployment with a readiness endpoint
 
-### Quick Notes (Coming Soon)
-A topical aggregation engine designed to compile all mentions of specific subjects across the entire archive.
-*   *Example*: A "Contact Prayer (Salat)" note would aggregate every sermon clip, Quran study remark, and newsletter article mentioning Salat details (e.g., the correction on numbering units from Quran Study 52) into a single, organized view.
+## Repository Layout
 
-## Architecture & Technology
+The filesystem mirrors the main areas of the site. Browser-requestable artifacts live under `public/`; canonical sources and catalog inputs remain under `data/`.
 
-Built on a modern stack designed for performance and longevity:
-
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Media Playback**: All video and audio streams directly from YouTube. Nothing is self-hosted or proxied.
-- **Transcripts**: Sourced from timestamped CSV exports (`public/playlist_1`, `public/playlist_2`) and compiled into `public/data/generated_indices/MASTER_INDEX.json` by `scripts/generate/generate_catalog_search_indices.mjs`.
-- **Documents**: Appendix and newsletter PDFs, thumbnails, and books are served locally from `public/content/`.
-- **Search**: Custom client-side engine with fuzzy matching and phonetic scoring.
-- **Deployment**: Self-hosted via [Coolify](https://coolify.io/) using the included `Dockerfile` (Next.js standalone output).
+```text
+assets/
+  readme/                         # repository presentation assets
+data/
+  catalog/                        # server-side catalog inputs
+  sources/                        # canonical transcripts and source material
+public/
+  content/
+    audios/                       # /audios assets
+    quran/
+      organized_appendices/
+        1981/
+        1989/
+        1992/                     # appendix editions
+    videos/                       # /videos assets
+    written/
+      books/
+      newsletters/               # /written assets
+  data/generated_indices/        # browser-readable catalog and search data
+src/
+  app/                            # Next.js routes
+  components/                     # shared interface and media components
+scripts/
+  assets/ generate/ process/ validate/
+```
 
 ## Local Development
 
-### Prerequisites
-- Node.js 20+
-- NPM
+Use Node.js 20 or newer.
 
-### Setup
-
-1.  **Clone & Install**:
-    ```bash
-    git clone https://github.com/WikiSubmission/SubmissionArchives.git
-    cd SubmissionArchives
-    npm install
-    ```
-
-2.  **Configure Environment**:
-    Copy `.env.example` to `.env.local`. Override `SITE_URL` when developing metadata or deploying under a different public origin:
-    ```bash
-    cp .env.example .env.local
-    ```
-
-3.  **Run Dev Server**:
-    ```bash
-    npm run dev
-    ```
-    Open [http://localhost:3000](http://localhost:3000).
-
-4.  **Regenerate Search Indices** (after editing catalog lists or playlist CSVs):
-    ```bash
-    npm run generate:catalog
-    ```
-
-5.  **Production Build**:
-    ```bash
-    npm run build
-    npm start
-    ```
-
-    `npm start` prepares Next.js's standalone directory with the required `public/`, `.next/static/`, and `data/` assets, then launches the same server artifact used by the container image.
-
-### Docker
-
-A multi-stage `Dockerfile` is included for self-hosted deployment (e.g. Coolify):
 ```bash
-docker build -t submissionarchives .
-docker run -p 3000:3000 submissionarchives
+git clone https://github.com/WikiSubmission/SubmissionArchives.git
+cd SubmissionArchives
+npm install
+cp .env.example .env.local
+npm run dev
 ```
 
-The production image runs as an unprivileged user and exposes `/api/health` for Coolify or container-orchestrator readiness checks. A healthy response includes the validated catalog record and segment counts. The image also contains a Docker `HEALTHCHECK` that polls this endpoint every 30 seconds.
+Open [http://localhost:3000](http://localhost:3000). `SITE_URL` defaults to the production archive and can be overridden in `.env.local`.
 
-### Deployment verification
+## Catalog Workflow
 
-Before deployment, run:
+Regenerate the public indices after changing catalog inputs, source lists, or public assets:
 
 ```bash
-npm run verify:deploy
+npm run generate:catalog
+npm run validate:catalog
+npm run audit:assets
+```
+
+The generator compiles catalog metadata and searchable source material into `public/data/generated_indices/`. The validator checks the runtime contract and confirms that referenced local assets exist.
+
+## Verification
+
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
 npm run test:e2e
 ```
 
-The first command verifies the lockfile, linting, TypeScript, unit and content contracts, deterministic catalog generation, production dependencies, and the standalone production build. The browser suite verifies representative archive, document, search, Qur'an, accessibility, and health-check flows against that build.
+For the complete deployment check, run:
+
+```bash
+npm run verify:deploy
+```
+
+## Deployment
+
+The included multi-stage `Dockerfile` produces the same standalone Next.js artifact used by the self-hosted deployment.
+
+```bash
+docker build -t submission-archives .
+docker run -p 3000:3000 submission-archives
+```
+
+The production container runs as an unprivileged user. `/api/health` reports catalog readiness for Coolify and other container orchestrators.
+
+## Banner
+
+The animated banner is generated from the original Submission logo and repository-local fonts. The optional rebuild step requires Python 3 with [Pillow](https://python-pillow.github.io/):
+
+```bash
+python scripts/assets/build_readme_banner.py
+```
+
+The script writes `assets/readme/submission-archives-banner.gif` and keeps the motion asset reproducible without altering the source logo.
 
 ---
 
-*Dedicated to the preservation and dissemination of the message of God alone.*
+*Dedicated to preserving and sharing the message of God alone.*

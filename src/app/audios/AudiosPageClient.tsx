@@ -1,9 +1,9 @@
 'use client';
 
 import { useMemo } from 'react';
-import { PaginatedMediaGrid } from '@/app/components/media/PaginatedMediaGrid';
+import { PaginatedMediaGrid } from '@/components/media/PaginatedMediaGrid';
 import { getTheme } from '@/lib/theme';
-import { useTheme } from '@/app/components/ThemeProvider';
+import { useTheme } from '@/components/providers/ThemeProvider';
 import type { Media } from '@/types/media';
 
 type AudioSection = {

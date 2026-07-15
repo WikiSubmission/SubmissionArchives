@@ -13,19 +13,19 @@ const MASTER_OUTPUT = path.join(GENERATED_DIR, 'MASTER_INDEX.json');
 const ASSET_MANIFEST_OUTPUT = path.join(GENERATED_DIR, 'ASSET_MANIFEST.csv');
 const BOOKS_LIST_OUTPUT = path.join(GENERATED_DIR, 'BOOKS_LIST.json');
 const VALIDATION_OUTPUT = path.join(GENERATED_DIR, 'CATALOG_VALIDATION.json');
-const LEGACY_BOOKS_OUTPUT = path.join(ROOT, 'public', 'data', 'other', 'search_index.json');
-const APPENDIX_DIR = path.join(ROOT, 'public', 'content', 'appendix');
-const APPENDIX_PDF_DIR = path.join(APPENDIX_DIR, 'pdfs');
-const APPENDIX_THUMB_DIR = path.join(APPENDIX_DIR, 'thumbnails');
-const APPENDIX_CSV = path.join(APPENDIX_DIR, 'csv', 'quran_appendices_rows.csv');
-const NEWSLETTER_DIR = path.join(ROOT, 'public', 'content', 'newsletter');
+const APPENDIX_DIR = path.join(ROOT, 'public', 'content', 'quran', 'organized_appendices');
+const APPENDIX_PDF_DIR = path.join(APPENDIX_DIR, '1992');
+const APPENDIX_THUMB_DIR = path.join(APPENDIX_PDF_DIR, 'thumbnails');
+const APPENDIX_CSV = path.join(CATALOG_DIR, 'quran-appendices.csv');
+const APPENDIX_EDITION_MANIFEST = readJson(path.join(CATALOG_DIR, 'appendix-editions.json'));
+const NEWSLETTER_DIR = path.join(ROOT, 'public', 'content', 'written', 'newsletters');
+const NEWSLETTER_CATALOG = path.join(CATALOG_DIR, 'newsletters.json');
 const NEWSLETTER_THUMB_DIR = path.join(NEWSLETTER_DIR, 'thumbnails');
 const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
 const SOURCE_DATA_DIR = path.join(ROOT, 'data', 'sources');
 const QURAN_DIR = path.join(SOURCE_DATA_DIR, 'quran');
 const QURAN_CHAPTERS_OUTPUT = path.join(GENERATED_DIR, 'QURAN_CHAPTERS.json');
-const BOOKS_DIR = path.join(ROOT, 'public', 'content', 'books');
-const BOOKS_JSON_DIR = path.join(BOOKS_DIR, 'jsons');
+const BOOKS_DIR = path.join(ROOT, 'public', 'content', 'written', 'books');
 const BOOKS_TRANSCRIPTION_DIR = path.join(SOURCE_DATA_DIR, 'books');
 const BOOKS_THUMB_DIR = path.join(BOOKS_DIR, 'thumbnails');
 
@@ -257,14 +257,14 @@ function getThumbnailLink(thumbnailDir, publicBase, pdfFilename) {
 function getNewsletterThumbnailLink(year, monthNumber, monthName) {
   const thumbnailName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.jpg`;
   return fs.existsSync(path.join(NEWSLETTER_THUMB_DIR, thumbnailName))
-    ? `/content/newsletter/thumbnails/${thumbnailName}`
+    ? `/content/written/newsletters/thumbnails/${thumbnailName}`
     : undefined;
 }
 
 function getNewsletterPdfLink(year, monthNumber, monthName) {
   const pdfName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.pdf`;
   return fs.existsSync(path.join(NEWSLETTER_PDF_DIR, pdfName))
-    ? `/content/newsletter/pdfs/${pdfName}`
+    ? `/content/written/newsletters/pdfs/${pdfName}`
     : undefined;
 }
 
@@ -272,8 +272,31 @@ function titleFromAppendixFilename(filename) {
   if (filename === 'introduction.pdf') return 'Introduction';
   if (filename === 'proclamation.pdf') return 'Proclamation';
 
-  const appendixNumber = filename.match(/^appendix_(\d+)\.pdf$/)?.[1];
+  const appendixNumber = filename.match(/^appendix[_-](\d+)\.pdf$/)?.[1];
   return appendixNumber ? `Appendix ${appendixNumber}` : filename.replace(/\.pdf$/i, '');
+}
+
+function getAppendixEditions(id, primaryFilename) {
+  return Object.fromEntries(
+    Object.entries(APPENDIX_EDITION_MANIFEST.editions).flatMap(([edition, config]) => {
+      const editionDir = path.join(APPENDIX_DIR, edition);
+      const publicBase = `/content/quran/organized_appendices/${edition}`;
+      const startPage = config.startPages?.[id];
+      const filename = config.sharedPdf || primaryFilename;
+      if (config.sharedPdf && startPage === undefined) return [];
+      if (!fs.existsSync(path.join(editionDir, filename))) return [];
+
+      return [[edition, {
+        pdfLink: `${publicBase}/${filename}`,
+        thumbnailOverride: getThumbnailLink(
+          path.join(editionDir, 'thumbnails'),
+          `${publicBase}/thumbnails`,
+          config.sharedPdf ? `${id}.pdf` : filename,
+        ),
+        startPage,
+      }]];
+    }),
+  );
 }
 
 function appendixSortValue(id) {
@@ -397,7 +420,7 @@ async function buildAppendixIndex() {
   const filenames = fs.readdirSync(APPENDIX_PDF_DIR).filter((name) => name.toLowerCase().endsWith('.pdf'));
 
   for (const filename of filenames) {
-    const id = filename.replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
+    const id = filename.replace(/\.pdf$/i, '').replace(/^appendix[_-]0*(\d+)$/, 'appendix-$1');
     const segments = segmentsById.get(id);
     if (!segments) continue;
 
@@ -412,7 +435,8 @@ async function buildAppendixIndex() {
 
   return filenames
     .map((filename) => {
-      const id = filename.replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
+      const id = filename.replace(/\.pdf$/i, '').replace(/^appendix[_-]0*(\d+)$/, 'appendix-$1');
+      const editions = getAppendixEditions(id, filename);
       return {
         id,
         title: titleById.get(id) ?? titleFromAppendixFilename(filename),
@@ -420,8 +444,13 @@ async function buildAppendixIndex() {
         type: 'appendix',
         author: 'Dr. Rashad Khalifa',
         filename,
-        pdfLink: `/content/appendix/pdfs/${filename}`,
-        thumbnailOverride: getThumbnailLink(APPENDIX_THUMB_DIR, '/content/appendix/thumbnails', filename),
+        pdfLink: `/content/quran/organized_appendices/1992/${filename}`,
+        thumbnailOverride: getThumbnailLink(
+          APPENDIX_THUMB_DIR,
+          '/content/quran/organized_appendices/1992/thumbnails',
+          filename,
+        ),
+        editions,
         transcriptStatus: segmentsById.has(id) ? 'available' : 'missing',
         segments: segmentsById.get(id) ?? [],
       };
@@ -467,7 +496,7 @@ function normalizeSearchText(parts) {
 }
 
 function buildNewsletterIndex() {
-  const jsonPath = path.join(NEWSLETTER_DIR, 'json', 'SP1985_1990_all_issues_combined.json');
+  const jsonPath = NEWSLETTER_CATALOG;
   if (!fs.existsSync(jsonPath)) return [];
 
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
@@ -599,22 +628,6 @@ function bookSourceFiles(transcription) {
 function loadBookTranscriptions() {
   const transcriptionBySourceFile = new Map();
 
-  // Keep the older hand-created JSON files as a fallback, then deliberately
-  // overwrite them with the canonical corpus transcriptions below.
-  if (fs.existsSync(BOOKS_JSON_DIR)) {
-    const jsonFiles = fs.readdirSync(BOOKS_JSON_DIR).filter((file) => file.endsWith('.json'));
-    for (const file of jsonFiles) {
-      const data = readJson(path.join(BOOKS_JSON_DIR, file));
-      for (const sourceFile of bookSourceFiles(data)) {
-        transcriptionBySourceFile.set(canonicalBookSourceKey(sourceFile), {
-          data,
-          source: `public/content/books/jsons/${file}`,
-          method: data.metadata?.transcription_method,
-        });
-      }
-    }
-  }
-
   const corpusManifestPath = path.join(BOOKS_TRANSCRIPTION_DIR, 'corpus_manifest.json');
   if (fs.existsSync(corpusManifestPath)) {
     const corpusManifest = readJson(corpusManifestPath);
@@ -680,8 +693,8 @@ function buildBooksIndex() {
         type: 'other',
         author: 'Dr. Rashad Khalifa',
         filename,
-        pdfLink: `/content/books/${filename}`,
-        thumbnailOverride: getThumbnailLink(BOOKS_THUMB_DIR, '/content/books/thumbnails', filename),
+        pdfLink: `/content/written/books/${filename}`,
+        thumbnailOverride: getThumbnailLink(BOOKS_THUMB_DIR, '/content/written/books/thumbnails', filename),
         aliases: LEGACY_BOOK_IDS.has(filename) ? [slugifyBookName(fallbackTitle)] : [],
         segments,
         transcriptStatus: segments.length > 0 ? 'available' : 'missing',
@@ -905,6 +918,7 @@ function masterRecord(item, category) {
     transcriptionMethod: item.transcriptionMethod,
     transcriptionQuality: item.transcriptionQuality,
     editionYear: item.editionYear,
+    editions: item.editions,
     transcriptStatus: item.transcriptStatus ?? ((item.segments?.length ?? 0) > 0 ? 'available' : 'missing'),
     segmentCount: item.segments?.length ?? 0,
     segments: compactSegments(item.segments ?? []),
@@ -933,11 +947,16 @@ async function buildAssetManifest(masterIndex) {
   for (const item of masterIndex) {
     if (item.category === 'Videos') {
       if (!item.youtubeId && !item.youtubeUrl && item.videoFile) {
-        addAsset(assets, item, item.category, 'media', toPublicLocalPath('content', 'video', item.folder, item.videoFile));
+        addAsset(assets, item, item.category, 'media', toPublicLocalPath('content', 'videos', item.folder, item.videoFile));
       }
     } else if (item.category === 'Quran Studies' || item.category === 'Messenger Audios') {
       // Audio media plays from YouTube; no local media asset to track.
-    } else if (item.category === 'Submitter Perspectives' || item.category === 'Appendices' || item.category === 'Books') {
+    } else if (item.category === 'Appendices' && item.editions) {
+      for (const [edition, asset] of Object.entries(item.editions)) {
+        addAsset(assets, item, item.category, `pdf-${edition}`, asset.pdfLink);
+        addAsset(assets, item, item.category, `thumbnail-${edition}`, asset.thumbnailOverride);
+      }
+    } else if (item.category === 'Submitter Perspectives' || item.category === 'Books') {
       addAsset(assets, item, item.category, 'pdf', item.pdfLink);
     }
 
@@ -991,7 +1010,6 @@ async function main() {
   fs.writeFileSync(QURAN_CHAPTERS_OUTPUT, `${JSON.stringify(quranChapters, null, 2)}\n`);
   fs.writeFileSync(MASTER_OUTPUT, `${JSON.stringify(masterIndex, null, 2)}\n`);
   fs.writeFileSync(BOOKS_LIST_OUTPUT, `${JSON.stringify(booksList, null, 2)}\n`);
-  fs.writeFileSync(LEGACY_BOOKS_OUTPUT, `${JSON.stringify(booksList, null, 2)}\n`);
   fs.writeFileSync(VALIDATION_OUTPUT, `${JSON.stringify(validationReport, null, 2)}\n`);
   fs.writeFileSync(ASSET_MANIFEST_OUTPUT, `${toCsv(assetManifest, [
     'record_id',

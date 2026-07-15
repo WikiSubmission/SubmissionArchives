@@ -65,6 +65,25 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/other", destination: "/written", permanent: true },
+      { source: "/content/audio/:path*", destination: "/content/audios/:path*", permanent: true },
+      { source: "/content/video/:path*", destination: "/content/videos/:path*", permanent: true },
+      { source: "/content/books/:path*", destination: "/content/written/books/:path*", permanent: true },
+      { source: "/content/newsletter/:path*", destination: "/content/written/newsletters/:path*", permanent: true },
+      {
+        source: "/content/appendix/pdfs/1982/1981_Appendices.pdf",
+        destination: "/content/quran/organized_appendices/1981/appendices.pdf",
+        permanent: true,
+      },
+      {
+        source: "/content/appendix/pdfs/appendix_:number(\\d+).pdf",
+        destination: "/content/quran/organized_appendices/1992/appendix-:number.pdf",
+        permanent: true,
+      },
+      {
+        source: "/content/appendix/pdfs/:document(introduction|proclamation).pdf",
+        destination: "/content/quran/organized_appendices/1992/:document.pdf",
+        permanent: true,
+      },
     ];
   },
 };

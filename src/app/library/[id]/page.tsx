@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAdjacentNewsletterIssues, getNewsletterIssue } from '@/lib/newsletterCatalog';
-import { getAppendixItem } from '@/lib/appendixCatalog';
+import { getAppendixItem, type AppendixEdition } from '@/lib/appendixCatalog';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import type { ArchiveBookSummary } from '@/types/archive';
 import NewsletterViewer from './NewsletterViewer';
@@ -77,13 +77,11 @@ export default async function PDFReaderPage({ params, searchParams }: Props) {
     if (book.type === 'other') {
         pdfUrl = book.pdfLink;
     } else if (book.type === 'appendix') {
-        const is1982 = resolvedSearchParams?.edition === '1982';
-        if (is1982 && book.has1982) {
-            pdfUrl = '/content/appendix/pdfs/1982/1981_Appendices.pdf';
-            startPageFromOverride = book.startPage1982;
-        } else {
-            pdfUrl = book.pdfLink || `/content/appendix/pdfs/${book.filename}`;
-        }
+        const requestedEdition = String(resolvedSearchParams?.edition ?? '1992') as AppendixEdition;
+        const editionAsset = book.editions[requestedEdition] ?? book.editions['1992'];
+        if (!editionAsset) notFound();
+        pdfUrl = editionAsset.pdfLink;
+        startPageFromOverride = editionAsset.startPage;
     } else if (book.type === 'newsletter') {
         pdfUrl = book.pdfLink || '';
     }

@@ -21,9 +21,9 @@ test('the generated archive satisfies the canonical runtime contract', () => {
     const report = validateArchiveRecords(records, { publicDir });
 
     assert.equal(report.valid, true, report.errors.join('\n'));
-    assert.equal(report.recordCount, 380);
+    assert.equal(report.recordCount, 382);
     assert.equal(report.categoryCounts.Quran, 114);
-    assert.equal(report.categoryCounts.Books, 11);
+    assert.equal(report.categoryCounts.Books, 13);
     assert.equal(report.categoryCounts['Submitter Perspectives'], 64);
 });
 
@@ -36,8 +36,17 @@ test('every newsletter is searchable', () => {
 });
 
 test('book summaries resolve to real PDFs and match master records', () => {
-    assert.equal(books.length, 11);
+    const scanOnlyBookIds = books
+        .filter((book) => book.transcriptStatus === 'missing')
+        .map((book) => book.id)
+        .sort();
+
+    assert.equal(books.length, 13);
     assert.equal(books.filter((book) => book.transcriptStatus === 'available').length, 11);
+    assert.deepEqual(scanOnlyBookIds, [
+        'islam-volume-1-number-2-july-1974',
+        'islam-volume-1-number-3-4-january-1975',
+    ]);
 
     for (const book of books) {
         assert.equal(fs.existsSync(path.join(publicDir, book.pdfLink.replace(/^\//, ''))), true, book.pdfLink);
@@ -48,7 +57,8 @@ test('book summaries resolve to real PDFs and match master records', () => {
 });
 
 test('canonical transcription sources take precedence for every book', () => {
-    assert.equal(books.every((book) => book.transcriptionSource?.startsWith('data/sources/')), true);
+    const searchableBooks = books.filter((book) => book.transcriptStatus === 'available');
+    assert.equal(searchableBooks.every((book) => book.transcriptionSource?.startsWith('data/sources/')), true);
     assert.match(books.find((book) => book.id === 'quran-hadith-islam')?.transcriptionSource ?? '', /data\/sources\/books/);
     assert.match(books.find((book) => book.id === 'quran1981')?.transcriptionSource ?? '', /data\/sources\/quran\/1981/);
     assert.match(books.find((book) => book.id === 'hard-cover-1989')?.transcriptionSource ?? '', /data\/sources\/quran\/1989/);

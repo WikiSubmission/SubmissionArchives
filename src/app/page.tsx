@@ -1,4 +1,4 @@
-import HomePageClient from './HomePageClient';
+import HomePageClient from '@/components/home/HomePageClient';
 
 export const revalidate = 3600;
 

@@ -5,8 +5,37 @@ test('health endpoint reports the validated catalog as ready', async ({ request 
     expect(response.ok()).toBe(true);
     await expect(response.json()).resolves.toMatchObject({
         status: 'ok',
-        catalog: { records: 380, segments: 112488 },
+        catalog: { records: 382, segments: 113886 },
     });
+});
+
+test('written archive prioritizes books and exposes every newsletter issue', async ({ page }) => {
+    await page.goto('/written');
+
+    const books = page.getByRole('region', { name: 'Books & Publications' });
+    const bookLinks = await books.locator('a[href^="/library/"]').evaluateAll((links) =>
+        links.map((link) => link.getAttribute('href')),
+    );
+
+    expect(bookLinks.slice(0, 10)).toEqual([
+        '/library/quran1981',
+        '/library/hard-cover-1989',
+        '/library/quran-visual-presentation',
+        '/library/miracle-of-quran-alphabets',
+        '/library/quran-hadith-islam',
+        '/library/islam-volume-1-number-1-april-1974',
+        '/library/islam-volume-1-number-2-july-1974',
+        '/library/islam-volume-1-number-3-4-january-1975',
+        '/library/perpetual-miracle',
+        '/library/computer-speaks',
+    ]);
+
+    const newsletters = page.getByRole('region', { name: 'Submitters Perspectives' });
+    await expect(newsletters.getByRole('link', { name: /Search the newsletters/ })).toHaveAttribute(
+        'href',
+        '/search?filters=perspective',
+    );
+    await expect(newsletters.locator('a[href^="/library/"]')).toHaveCount(64);
 });
 
 test('home route exposes primary archive pathways without mobile overflow', async ({ page }) => {

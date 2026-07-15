@@ -1,12 +1,14 @@
 {
   "valid": true,
   "errors": [],
-  "warnings": [],
-  "recordCount": 380,
+  "warnings": [
+    "2 record(s) are clearly marked without searchable segments."
+  ],
+  "recordCount": 382,
   "segmentCount": 113886,
   "categoryCounts": {
     "Appendices": 40,
-    "Books": 11,
+    "Books": 13,
     "Messenger Audios": 48,
     "Quran": 114,
     "Quran Studies": 52,
@@ -16,11 +18,24 @@
   "typeCounts": {
     "appendix": 40,
     "messenger-audio": 48,
-    "other": 11,
+    "other": 13,
     "perspective": 64,
     "quran": 114,
     "quran-study": 52,
     "video-program": 51
   },
-  "recordsWithoutSegments": []
+  "recordsWithoutSegments": [
+    {
+      "id": "islam-volume-1-number-2-july-1974",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
+    },
+    {
+      "id": "islam-volume-1-number-3-4-january-1975",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
+    }
+  ]
 }

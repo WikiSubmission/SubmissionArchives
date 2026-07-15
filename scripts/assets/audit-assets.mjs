@@ -180,7 +180,7 @@ async function writeImageInventoryAndReferences(
 
     const referencedBy = referenceIndex.get(publicRelPath) ?? [];
     const hash = hashByRelPath.get(entry.relPath) ?? '';
-    const sourceOrGenerated = /^public\/content\/[^/]+\/thumbnails\//.test(entry.relPath)
+    const sourceOrGenerated = /^public\/content\/.+\/thumbnails\//.test(entry.relPath)
       ? 'generated'
       : 'source';
     const duplicateGroup = duplicateGroupIdByHash.get(hash) ?? '';

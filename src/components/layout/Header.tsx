@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { Menu, MessageCircle, Moon, Sun, X, Youtube } from 'lucide-react';
-import { useTheme } from '@/app/components/ThemeProvider';
+import { useTheme } from '@/components/providers/ThemeProvider';
 import { usePathname } from 'next/navigation';
 import { PRIMARY_NAV } from '@/config/navigation';
 import { YOUTUBE_URL, DISCORD_URL } from '@/config/social';

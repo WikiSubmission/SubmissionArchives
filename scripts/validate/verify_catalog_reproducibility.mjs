@@ -11,7 +11,6 @@ const files = [
   path.join(generatedDir, 'CATALOG_VALIDATION.json'),
   path.join(generatedDir, 'MASTER_INDEX.json'),
   path.join(generatedDir, 'QURAN_CHAPTERS.json'),
-  path.join(root, 'public', 'data', 'other', 'search_index.json'),
 ];
 
 function digest(filePath) {

@@ -39,10 +39,8 @@
     },
     "pdf-lib": {
       "declaredIn": "dependencies",
-      "classification": "script-only",
-      "foundIn": [
-        "scripts"
-      ]
+      "classification": "unused",
+      "foundIn": []
     },
     "react": {
       "declaredIn": "dependencies",
@@ -135,10 +133,8 @@
     },
     "canvas": {
       "declaredIn": "devDependencies",
-      "classification": "script-only",
-      "foundIn": [
-        "scripts"
-      ]
+      "classification": "unused",
+      "foundIn": []
     },
     "eslint": {
       "declaredIn": "devDependencies",
@@ -170,10 +166,8 @@
     },
     "tesseract.js": {
       "declaredIn": "devDependencies",
-      "classification": "script-only",
-      "foundIn": [
-        "scripts"
-      ]
+      "classification": "unused",
+      "foundIn": []
     },
     "ts-node": {
       "declaredIn": "devDependencies",
