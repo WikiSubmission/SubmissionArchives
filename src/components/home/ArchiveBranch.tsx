@@ -1,14 +1,11 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
+
 import { ExpectationCard } from './ExpectationCard';
 import { SectionCta } from './SectionCta';
 
-const SearchFunctionDemo = dynamic(() => import('./SearchFunctionDemo'), {
-    ssr: false,
-    loading: () => <div className="h-[560px] sm:h-[620px] animate-pulse rounded-[1.25rem] bg-ed-surface" />
-});
+import { DeferredSearchFunctionDemo } from './DeferredSearchFunctionDemo';
 
 export function ArchiveBranch({
     numeral,
@@ -71,7 +68,7 @@ export function ArchiveBranch({
 
             <div className={`${isRight ? 'lg:order-1' : ''} ${isCenter ? 'mx-auto w-full max-w-[calc(100vw-4.5rem)] sm:max-w-5xl' : ''}`}>
                 {kind === 'search' ? (
-                    <SearchFunctionDemo />
+                    <DeferredSearchFunctionDemo />
                 ) : (
                     <div className="relative rounded-[1.25rem] p-[1px] overflow-hidden shadow-[0_0_30px_0_color-mix(in_srgb,var(--ed-accent)_6%,transparent)]">
                         {/* Rotating glow for the slideshow frame */}

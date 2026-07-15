@@ -67,7 +67,7 @@ const DEMO_RESULTS = [
         signal: 'Best match',
         timestamp: '07:01',
         snippet: [
-            { text: 'This is God\'s ' },
+            { text: 'This is God’s ' },
             { text: 'mathematical', highlighted: true },
             { text: ' confirmation of the messenger of the ' },
             { text: 'covenant', highlighted: true },
@@ -353,7 +353,7 @@ export default function SearchFunctionDemo() {
                             <span>Play at 07:01</span>
                         </div>
                         <p>
-                            This is God&apos;s{' '}
+                            This is God’s{' '}
                             <mark className={styles.highlight}>mathematical</mark>{' '}
                             confirmation that we are living in an age where God will send the
                             messenger of the{' '}
