@@ -23,17 +23,19 @@ type VideoRecord = Omit<Media, 'sortValue' | 'displayDate'> & {
     youtubeEndTime?: number;
 };
 
-const readGeneratedIndex = cache((filename: string): unknown[] => {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
+const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
+const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
+
+const readJsonIndex = cache((filePath: string): unknown[] => {
     if (!fs.existsSync(filePath)) return [];
     return JSON.parse(fs.readFileSync(filePath, 'utf8')) as unknown[];
 });
 
 function getVideoCatalog() {
-    const catalog = readGeneratedIndex('VIDEO_PROGRAMS_LIST.json') as VideoRecord[];
+    const catalog = readJsonIndex(path.join(SOURCE_CATALOG_DIR, 'videos.json')) as VideoRecord[];
     if (catalog.length > 0) return catalog;
 
-    return (readGeneratedIndex('MASTER_INDEX.json') as VideoRecord[])
+    return (readJsonIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as VideoRecord[])
         .filter((item) => item.type === 'video-program' || item.type === 'sermon' || item.type === 'video');
 }
 

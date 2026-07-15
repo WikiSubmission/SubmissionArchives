@@ -18,17 +18,19 @@ type AudioRecord = Media & {
     segmentCount?: number;
 };
 
-const readGeneratedIndex = cache((filename: string): unknown[] => {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
+const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
+const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
+
+const readJsonIndex = cache((filePath: string): unknown[] => {
     if (!fs.existsSync(filePath)) return [];
     return JSON.parse(fs.readFileSync(filePath, 'utf8')) as unknown[];
 });
 
 function getAudioCatalog() {
-    const catalog = readGeneratedIndex('AUDIOS_LIST.json') as AudioRecord[];
+    const catalog = readJsonIndex(path.join(SOURCE_CATALOG_DIR, 'audios.json')) as AudioRecord[];
     if (catalog.length > 0) return catalog;
 
-    return (readGeneratedIndex('MASTER_INDEX.json') as AudioRecord[])
+    return (readJsonIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as AudioRecord[])
         .filter((item) => item.type === 'quran-study' || item.type === 'messenger-audio');
 }
 

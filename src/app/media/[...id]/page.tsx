@@ -49,14 +49,16 @@ type MasterIndexItem = LocalMediaItem & {
   }>;
 };
 
-const getLocalIndex = cache((filename: string): LocalMediaItem[] => {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
+const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
+const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
+
+const getLocalIndex = cache((filePath: string): LocalMediaItem[] => {
   if (!fs.existsSync(filePath)) return [];
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 });
 
 function getVideoCatalog(masterIndex: MasterIndexItem[]) {
-  const videos = getLocalIndex('VIDEO_PROGRAMS_LIST.json');
+  const videos = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'videos.json'));
   if (videos.length > 0) return videos;
 
   return masterIndex.filter((item) =>
@@ -65,7 +67,7 @@ function getVideoCatalog(masterIndex: MasterIndexItem[]) {
 }
 
 function getAudioCatalog(masterIndex: MasterIndexItem[]) {
-  const audios = getLocalIndex('AUDIOS_LIST.json');
+  const audios = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'audios.json'));
   if (audios.length > 0) return audios;
 
   return masterIndex.filter((item) =>
@@ -74,7 +76,7 @@ function getAudioCatalog(masterIndex: MasterIndexItem[]) {
 }
 
 export async function generateStaticParams() {
-  const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
   const allMedia = [...getVideoCatalog(masterIndex), ...getAudioCatalog(masterIndex)];
   const seen = new Set<string>();
 
@@ -90,7 +92,7 @@ export async function generateStaticParams() {
 }
 
 function findCatalogItem(key: string) {
-  const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
   const allAudios = getAudioCatalog(masterIndex);
   return allVideos.find((v) => v.id === key) || allAudios.find((a) => a.id === key);
@@ -143,7 +145,7 @@ export default async function WatchPage({
   const initialSeekTime = Number.isFinite(requestedTime) && requestedTime! >= 0 ? requestedTime : undefined;
 
   const key = id.map(decodeURIComponent).join('/');
-  const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
   const allAudios = getAudioCatalog(masterIndex);
 

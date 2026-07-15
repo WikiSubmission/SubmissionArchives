@@ -4,7 +4,7 @@ Optional data-maintenance scripts for rebuilding generated indices. None of thes
 
 ## Catalog & Search Indices
 
-`generate/generate_catalog_search_indices.mjs` rebuilds `MASTER_INDEX.json` (the canonical catalog of video, audio, newsletter, appendix, Quran, and book records), `BOOKS_LIST.json` (lightweight reader/sitemap metadata), `QURAN_CHAPTERS.json`, `CATALOG_VALIDATION.json`, and `ASSET_MANIFEST.csv`. Video/audio transcript segments are sourced from the timestamped CSVs in `public/playlist_1` and `public/playlist_2`, matched by YouTube ID and playback window. Canonical book and Quran transcription inputs live in `data/sources`; raw source bundles are not deployed from `public`.
+`generate/generate_catalog_search_indices.mjs` rebuilds `MASTER_INDEX.json` (the canonical catalog of video, audio, newsletter, appendix, Quran, and book records), `BOOKS_LIST.json` (lightweight reader/sitemap metadata), `QURAN_CHAPTERS.json`, `CATALOG_VALIDATION.json`, and `ASSET_MANIFEST.csv`. Video/audio transcript segments are sourced from the timestamped CSVs in `data/sources/playlists/video-transcripts` and `data/sources/playlists/audio-transcripts`, matched by YouTube ID and playback window. Canonical book and Quran transcription inputs live in `data/sources`; raw source bundles are not deployed from `public`.
 
 For compatibility with older local tooling, the generator also writes the same lightweight book list to `public/data/other/search_index.json`. Application code uses `BOOKS_LIST.json`; the compatibility path is not a second source of truth.
 

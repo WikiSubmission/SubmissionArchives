@@ -6,8 +6,9 @@ import { assertValidArchiveRecords } from '../lib/archive-schema.mjs';
 
 const ROOT = process.cwd();
 const GENERATED_DIR = path.join(ROOT, 'public', 'data', 'generated_indices');
-const VIDEO_LIST = path.join(GENERATED_DIR, 'VIDEO_PROGRAMS_LIST.json');
-const AUDIO_LIST = path.join(GENERATED_DIR, 'AUDIOS_LIST.json');
+const CATALOG_DIR = path.join(ROOT, 'data', 'catalog');
+const VIDEO_LIST = path.join(CATALOG_DIR, 'videos.json');
+const AUDIO_LIST = path.join(CATALOG_DIR, 'audios.json');
 const MASTER_OUTPUT = path.join(GENERATED_DIR, 'MASTER_INDEX.json');
 const ASSET_MANIFEST_OUTPUT = path.join(GENERATED_DIR, 'ASSET_MANIFEST.csv');
 const BOOKS_LIST_OUTPUT = path.join(GENERATED_DIR, 'BOOKS_LIST.json');
@@ -165,8 +166,8 @@ function compactSegments(segments) {
 }
 
 const PLAYLIST_DIRS = [
-  path.join(ROOT, 'public', 'playlist_1'),
-  path.join(ROOT, 'public', 'playlist_2'),
+  path.join(ROOT, 'data', 'sources', 'playlists', 'video-transcripts'),
+  path.join(ROOT, 'data', 'sources', 'playlists', 'audio-transcripts'),
 ];
 
 function parsePlaylistTimestamp(value) {

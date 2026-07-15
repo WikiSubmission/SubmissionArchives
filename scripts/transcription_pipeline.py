@@ -148,7 +148,7 @@ def export_vtt(segments, vtt_path):
             f.write(f"{text}\n\n")
 
 def process_catalog():
-    catalog_path = "public/data/generated_indices/AUDIOS_LIST.json"
+    catalog_path = "data/catalog/audios.json"
     with open(catalog_path, "r", encoding="utf-8") as f:
         audios = json.load(f)
         
