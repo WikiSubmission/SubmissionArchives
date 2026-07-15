@@ -24,6 +24,10 @@ export default function QuranChapterClient({ chapter, prev, next, initialVerse, 
     const [globalEdition, setGlobalEdition] = useState<'primary' | '1989' | '1981'>(safeInitialEdition);
     const hasScrolledToVerse = useRef(false);
     const highlightTerms = useMemo(() => getHighlightTerms(query.trim().toLowerCase()), [query]);
+    const visibleVerses = useMemo(
+        () => chapter.verses.filter((verse) => Boolean(verse.english) || Boolean(verse.editions?.[globalEdition as '1989' | '1981'])),
+        [chapter.verses, globalEdition],
+    );
 
     useEffect(() => {
         if (!initialVerse || hasScrolledToVerse.current) return;
@@ -81,7 +85,7 @@ export default function QuranChapterClient({ chapter, prev, next, initialVerse, 
             <main id="main-content" className="mx-auto max-w-[820px] px-4 py-10 sm:px-6">
                 <section className="mb-8 space-y-2 border-y border-ed-rule py-8 text-center sm:py-10">
                     <p className="archive-kicker">
-                        Sura {chapter.chapterNumber} &middot; {chapter.verseCount} verses
+                        Sura {chapter.chapterNumber} &middot; {visibleVerses.length} verses
                     </p>
                     <h2 className="font-display text-3xl text-ed-fg sm:text-4xl">{chapter.titleEnglish}</h2>
                     <p className="text-sm text-ed-fg-muted">{chapter.titleTransliterated}</p>
@@ -146,7 +150,7 @@ export default function QuranChapterClient({ chapter, prev, next, initialVerse, 
                 </section>
 
                 <div>
-                    {chapter.verses.map((verse) => (
+                    {visibleVerses.map((verse) => (
                         <QuranVerseCard
                             key={verse.verseId}
                             verse={verse}
@@ -235,16 +239,18 @@ function QuranVerseCard({
                     <div className="flex items-center gap-2">
                         {verse.editions && Object.keys(verse.editions).length > 0 && (
                             <div role="group" aria-label={`Edition for verse ${verse.verseNumber}`} className="flex items-center gap-1 rounded-full bg-black/5 p-0.5 dark:bg-white/5">
-                                <button
-                                    type="button"
-                                    onClick={() => setEdition('primary')}
-                                    aria-pressed={edition === 'primary'}
-                                    className={`min-h-9 rounded-full px-3 py-2 text-[0.65rem] font-bold uppercase tracking-widest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
-                                        edition === 'primary' ? 'bg-ed-surface text-ed-accent shadow-sm' : 'text-ed-fg-muted hover:text-ed-fg'
-                                    }`}
-                                >
-                                    Primary
-                                </button>
+                                {verse.english && (
+                                    <button
+                                        type="button"
+                                        onClick={() => setEdition('primary')}
+                                        aria-pressed={edition === 'primary'}
+                                        className={`min-h-9 rounded-full px-3 py-2 text-[0.65rem] font-bold uppercase tracking-widest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
+                                            edition === 'primary' ? 'bg-ed-surface text-ed-accent shadow-sm' : 'text-ed-fg-muted hover:text-ed-fg'
+                                        }`}
+                                    >
+                                        Primary
+                                    </button>
+                                )}
                                 {verse.editions['1989'] && (
                                     <button
                                         type="button"
@@ -286,9 +292,11 @@ function QuranVerseCard({
                     </div>
                 </div>
 
-                <p dir="rtl" className="font-arabic text-right text-2xl leading-[2.4] text-ed-fg">
-                    {verse.arabic}
-                </p>
+                {verse.arabic ? (
+                    <p dir="rtl" className="font-arabic text-right text-2xl leading-[2.4] text-ed-fg">
+                        {verse.arabic}
+                    </p>
+                ) : null}
 
                 <p className="text-[1.08rem] leading-8 text-ed-fg sm:text-lg">
                     <HighlightedText text={activeEnglish} terms={highlightTerms} />

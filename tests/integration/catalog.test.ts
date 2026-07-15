@@ -16,6 +16,14 @@ function readJson<T>(filePath: string): T {
 
 const records = readJson<ArchiveRecord[]>(path.join(generatedDir, 'MASTER_INDEX.json'));
 const books = readJson<ArchiveBookSummary[]>(path.join(generatedDir, 'BOOKS_LIST.json'));
+const quranChapters = readJson<Array<{
+    chapterNumber: number;
+    verses: Array<{
+        verseNumber: number;
+        english: string;
+        editions?: { '1981'?: { english: string }; '1989'?: { english: string } };
+    }>;
+}>>(path.join(generatedDir, 'QURAN_CHAPTERS.json'));
 
 test('the generated archive satisfies the canonical runtime contract', () => {
     const report = validateArchiveRecords(records, { publicDir });
@@ -33,6 +41,24 @@ test('every newsletter is searchable', () => {
     assert.equal(newsletters.length, 64);
     assert.equal(newsletters.every((record) => record.transcriptStatus === 'available'), true);
     assert.equal(newsletters.every((record) => record.segmentCount > 0), true);
+});
+
+test('September and October 1989 have complete reader assets', () => {
+    for (const id of ['SP1989sep', 'SP1989oct']) {
+        const issue = records.find((record) => record.id === id && record.type === 'perspective');
+        assert.ok(issue, `Missing newsletter record: ${id}`);
+        assert.ok(issue.pdfLink, `Missing PDF link: ${id}`);
+        assert.ok(issue.thumbnailOverride, `Missing thumbnail: ${id}`);
+
+        const pdfPath = path.join(publicDir, issue.pdfLink.replace(/^\//, ''));
+        const thumbnailPath = path.join(publicDir, issue.thumbnailOverride.replace(/^\//, ''));
+        assert.equal(fs.existsSync(pdfPath), true, pdfPath);
+        assert.equal(fs.existsSync(thumbnailPath), true, thumbnailPath);
+
+        const pdf = fs.readFileSync(pdfPath);
+        assert.equal(pdf.subarray(0, 5).toString('ascii'), '%PDF-', `Invalid PDF header: ${id}`);
+        assert.match(pdf.subarray(-2048).toString('latin1'), /%%EOF/, `Incomplete PDF: ${id}`);
+    }
 });
 
 test('book summaries resolve to real PDFs and match master records', () => {
@@ -80,6 +106,39 @@ test('Quran search contains complete, edition-labeled 1992 and 1989 verse text',
 
     assert.equal(labels.filter((label) => label === 'verse-1992').length, 6234);
     assert.equal(labels.filter((label) => label === 'verse-1989').length, 6234);
+});
+
+test('the 1981 edition preserves Chapter 9 verses 128 and 129', () => {
+    const chapter9 = quranChapters.find((chapter) => chapter.chapterNumber === 9);
+    assert.ok(chapter9, 'Missing Quran Chapter 9');
+
+    for (const verseNumber of [128, 129]) {
+        const verse = chapter9.verses.find((candidate) => candidate.verseNumber === verseNumber);
+        assert.ok(verse, `Missing 9:${verseNumber}`);
+        assert.equal(verse.english, '', `9:${verseNumber} should not be attributed to the primary edition`);
+        assert.ok(verse.editions?.['1981']?.english, `Missing 1981 text for 9:${verseNumber}`);
+        assert.equal(verse.editions?.['1989'], undefined, `9:${verseNumber} should not be attributed to the 1989 edition`);
+    }
+
+    const quranRecords = records.filter((record) => record.type === 'quran');
+    const verse1981Count = quranRecords
+        .flatMap((record) => record.segments)
+        .filter((segment) => segment.label === 'verse-1981').length;
+    assert.equal(verse1981Count, 6236);
+});
+
+test('the 1989 Chapter 9 heading and footnotes are free of OCR rule debris', () => {
+    const chapter9 = quranChapters.find((chapter) => chapter.chapterNumber === 9);
+    assert.ok(chapter9, 'Missing Quran Chapter 9');
+    const verse1 = chapter9.verses.find((verse) => verse.verseNumber === 1);
+    assert.ok(verse1?.editions?.['1989'], 'Missing 1989 text for 9:1');
+
+    const edition = verse1.editions['1989'] as { subtitle?: string; footnote?: string };
+    assert.equal(edition.subtitle, 'No Basmalah');
+    assert.doesNotMatch(edition.subtitle, /_{3,}|-{5,}|✓/);
+    assert.match(edition.footnote ?? '', /absence of Basmalah/i);
+    assert.match(edition.footnote ?? '', /9:1 & 9:127/);
+    assert.doesNotMatch(edition.footnote ?? '', /repre sents/);
 });
 
 test('legacy book slugs resolve to their current filenames', () => {

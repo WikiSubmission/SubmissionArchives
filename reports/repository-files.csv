@@ -8,7 +8,7 @@ path,size_bytes,extension
 .gitignore,2045,
 Dockerfile,1241,
 PRODUCT.md,3397,.md
-README.md,5937,.md
+README.md,4651,.md
 data/catalog/appendix-editions.json,758,.json
 data/catalog/audios.json,70438,.json
 data/catalog/newsletters.json,2854939,.json
@@ -659,7 +659,8 @@ public/content/written/newsletters/pdfs/1989_05_May.pdf,1376622,.pdf
 public/content/written/newsletters/pdfs/1989_06_June.pdf,1475386,.pdf
 public/content/written/newsletters/pdfs/1989_07_July.pdf,1542221,.pdf
 public/content/written/newsletters/pdfs/1989_08_August.pdf,1646600,.pdf
-public/content/written/newsletters/pdfs/1989_10_October.pdf,393216,.pdf
+public/content/written/newsletters/pdfs/1989_09_September.pdf,195245,.pdf
+public/content/written/newsletters/pdfs/1989_10_October.pdf,210874,.pdf
 public/content/written/newsletters/pdfs/1989_11_November.pdf,1294336,.pdf
 public/content/written/newsletters/pdfs/1989_12_December.pdf,1482236,.pdf
 public/content/written/newsletters/pdfs/1990_01_January.pdf,1664779,.pdf
@@ -720,16 +721,17 @@ public/content/written/newsletters/thumbnails/1989_05_May.jpg,114541,.jpg
 public/content/written/newsletters/thumbnails/1989_06_June.jpg,111439,.jpg
 public/content/written/newsletters/thumbnails/1989_07_July.jpg,111585,.jpg
 public/content/written/newsletters/thumbnails/1989_08_August.jpg,118274,.jpg
-public/content/written/newsletters/thumbnails/1989_10_October.jpg,2685,.jpg
+public/content/written/newsletters/thumbnails/1989_09_September.jpg,255823,.jpg
+public/content/written/newsletters/thumbnails/1989_10_October.jpg,195597,.jpg
 public/content/written/newsletters/thumbnails/1989_11_November.jpg,120330,.jpg
 public/content/written/newsletters/thumbnails/1989_12_December.jpg,117155,.jpg
 public/content/written/newsletters/thumbnails/1990_01_January.jpg,121533,.jpg
 public/content/written/newsletters/thumbnails/1990_02_February.jpg,121880,.jpg
 public/content/written/newsletters/thumbnails/1990_03_March.jpg,122470,.jpg
-public/data/generated_indices/ASSET_MANIFEST.csv,156154,.csv
+public/data/generated_indices/ASSET_MANIFEST.csv,156623,.csv
 public/data/generated_indices/BOOKS_LIST.json,12287,.json
 public/data/generated_indices/CATALOG_VALIDATION.json,869,.json
-public/data/generated_indices/MASTER_INDEX.json,26222284,.json
+public/data/generated_indices/MASTER_INDEX.json,26222429,.json
 public/data/generated_indices/QURAN_CHAPTERS.json,7570919,.json
 public/fonts/GlacialIndifference-Regular.ttf,53116,.ttf
 public/fonts/LTSuperiorSerif-Bold.otf,140076,.otf
@@ -749,6 +751,7 @@ scripts/README.md,2284,.md
 scripts/assets/audit-assets.mjs,13157,.mjs
 scripts/assets/audit-lib.mjs,10595,.mjs
 scripts/assets/build_islam_volume_pdfs.py,2593,.py
+scripts/assets/build_readme_banner.py,9104,.py
 scripts/generate/generate_book_thumbnails.mjs,2411,.mjs
 scripts/generate/generate_catalog_search_indices.mjs,39784,.mjs
 scripts/generate/parse_1981_md_to_csv.mjs,3487,.mjs
@@ -797,7 +800,7 @@ src/app/videos/VideosPageClient.tsx,6251,.tsx
 src/app/videos/loading.tsx,1001,.tsx
 src/app/videos/page.tsx,2100,.tsx
 src/app/written/loading.tsx,844,.tsx
-src/app/written/page.tsx,8033,.tsx
+src/app/written/page.tsx,12269,.tsx
 src/components/analytics/WebVitals.tsx,1014,.tsx
 src/components/home/ArchiveBranch.tsx,6215,.tsx
 src/components/home/AudioArchiveSection.tsx,8510,.tsx

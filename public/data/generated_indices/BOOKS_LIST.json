@@ -90,8 +90,15 @@
     "filename": "ISLAM - Volume 1, Number 2 (July 1974).pdf",
     "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 2 (July 1974).pdf",
     "aliases": [],
-    "transcriptStatus": "missing",
-    "segmentCount": 0
+    "transcriptionSource": "data/sources/books/islam_volume_2/islam_volume_2_complete.json",
+    "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
+    "transcriptionQuality": {
+      "meanOcrConfidence": null,
+      "lowConfidencePages": 3,
+      "unverifiedArabicSegments": 14
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 84
   },
   {
     "id": "islam-volume-1-number-3-4-january-1975",
@@ -104,8 +111,15 @@
     "filename": "ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",
     "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",
     "aliases": [],
-    "transcriptStatus": "missing",
-    "segmentCount": 0
+    "transcriptionSource": "data/sources/books/islam_volume_3_4/islam_volume_3_4_complete.json",
+    "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
+    "transcriptionQuality": {
+      "meanOcrConfidence": null,
+      "lowConfidencePages": 11,
+      "unverifiedArabicSegments": 60
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 137
   },
   {
     "id": "miracle-of-quran-alphabets",

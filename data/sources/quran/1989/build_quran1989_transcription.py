@@ -112,6 +112,14 @@ MANUAL_VERSE_CORRECTIONS: dict[str, dict[str, Any]] = {
     },
 }
 
+MANUAL_FOOTNOTE_CORRECTIONS: dict[tuple[str, int], str] = {
+    ('9:1', 206): (
+        'The absence of Basmalah from this sura is not only a profound sign from the Almighty Author of the Quran '
+        'that this sura has been tampered with, but also represents an awesome miracle in its own right. See the '
+        'details in Appendices 24 & 29.'
+    ),
+}
+
 APPENDIX_TITLES = {
     1: 'One of the Great Miracles [74:35]',
     2: 'God’s Messenger of the Covenant [3:81]',
@@ -677,7 +685,15 @@ def extract_subheadings(page: dict[str, Any], ref_sub_by_verse: dict[str, list[s
         below = [n for yy, n in verse_positions[ch] if yy > b['bbox'][1]]
         seg = next((s for s in page['chapter_segments'] if s['chapter_number'] == ch), None)
         before = min(below) if below else (seg['verse_start'] if seg else None)
-        text = b['reading_text'].strip()
+        # OCR sometimes merges ornamental rules into the same block as a real
+        # heading (for example the rule above "No Basmalah" on PDF page 206).
+        # Preserve those lines in the raw page layout, but exclude them from the
+        # structured subheading transcription.
+        text = join_reading_lines([
+            ln['clean_text'] for ln in b['lines'] if not is_rule_text(ln['clean_text'])
+        ]).strip()
+        if not text:
+            continue
         verse_id = f'{ch}:{before}' if before else None
         refs = ref_sub_by_verse.get(verse_id, []) if verse_id else []
         out.append({
@@ -925,6 +941,12 @@ def main() -> None:
         footnotes.extend(extract_footnotes(p, ref_fn_by_label))
         subheadings.extend(extract_subheadings(p, ref_sub_by_verse))
         extracted_verses.extend(extract_english_verses(p))
+
+    for footnote in footnotes:
+        correction = MANUAL_FOOTNOTE_CORRECTIONS.get((footnote['verse_reference'], footnote['pdf_page']))
+        if correction:
+            footnote['text'] = correction
+            footnote['manual_correction'] = True
 
     # Choose the most complete OCR extraction when a verse is encountered more than once.
     eng_by_id: dict[str, dict[str, Any]] = {}

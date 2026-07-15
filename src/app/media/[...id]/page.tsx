@@ -47,6 +47,12 @@ type MasterIndexItem = LocalMediaItem & {
     text?: string;
     speaker?: string;
   }>;
+  segments_ar?: Array<{
+    start?: number;
+    end?: number;
+    text?: string;
+    speaker?: string;
+  }>;
 };
 
 const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
@@ -164,11 +170,21 @@ export default async function WatchPage({
 
   // MA 70+ transcripts come from unverified auto-generated captions with no
   // reliable speaker attribution, so they should not default to a named speaker.
-  const isUnverifiedSpeakerSource = item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 70;
+  // The 1987 Debate also has multiple speakers without attribution.
+  const isUnverifiedSpeakerSource = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 70) || item.id === 'video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987';
   const defaultSpeaker = isUnverifiedSpeakerSource ? '' : 'Dr. Rashad Khalifa';
-  const transcriptDisclaimer = isUnverifiedSpeakerSource ? 'MA 70-100 are NOT hand-transcribed.' : undefined;
+  const transcriptDisclaimer = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 70) ? 'MA 70-100 are NOT hand-transcribed.' : undefined;
 
   const segments: PlayerSegment[] = (masterItem?.segments || []).map((segment, index) => ({
+    id: index,
+    start_time: segment.start ?? 0,
+    end_time: segment.end ?? segment.start ?? 0,
+    speaker: segment.speaker || defaultSpeaker,
+    content: segment.text ?? '',
+    segment_index: index + 1,
+  })).filter((segment) => segment.content);
+
+  const segments_ar: PlayerSegment[] = (masterItem?.segments_ar || []).map((segment, index) => ({
     id: index,
     start_time: segment.start ?? 0,
     end_time: segment.end ?? segment.start ?? 0,
@@ -192,6 +208,7 @@ export default async function WatchPage({
       <PlayerWrapper
         media={{ ...item, displayTitle, displayDate, author, type: item.type }}
         segments={segments}
+        segments_ar={segments_ar}
         mediaUrl={mediaUrl}
         prev={prev}
         next={next}

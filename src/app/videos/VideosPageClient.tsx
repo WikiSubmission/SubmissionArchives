@@ -26,6 +26,12 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                 videos: [],
             },
             {
+                id: 'debates',
+                title: 'Debates',
+                description: 'Debates featuring Dr. Rashad Khalifa.',
+                videos: [],
+            },
+            {
                 id: 'instructional',
                 title: 'Instructional works',
                 description: 'Practical lessons and foundational teaching materials.',
@@ -63,6 +69,8 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                 title.includes('arabic language lessons')
             ) {
                 sections.find((section) => section.id === 'instructional')?.videos.push(video);
+            } else if (title.includes('debate')) {
+                sections.find((section) => section.id === 'debates')?.videos.push(video);
             } else {
                 sections.find((section) => section.id === 'programs')?.videos.push(video);
             }

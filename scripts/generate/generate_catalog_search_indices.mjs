@@ -193,33 +193,48 @@ function loadPlaylistSegmentsByYoutubeId() {
     if (!fs.existsSync(dir)) continue;
     for (const filename of fs.readdirSync(dir)) {
       if (!filename.toLowerCase().endsWith('.csv')) continue;
+      const isArabic = filename.toLowerCase().includes('- arabic');
       const rows = readCsvRows(path.join(dir, filename));
       for (const row of rows) {
         const youtubeId = extractYoutubeIdFromLink(row.Link);
         const text = (row.Text || '').trim();
         if (!youtubeId || !text) continue;
-        const list = byId.get(youtubeId) ?? [];
-        list.push({
+        
+        const entry = byId.get(youtubeId) || { segments: [], segments_ar: [] };
+        
+        const segment = {
           start: parsePlaylistTimestamp(row['Start Time']),
           end: parsePlaylistTimestamp(row['End Time'] || row['Start Time']),
           text,
           speaker: (row.Speaker || '').trim() || undefined,
-        });
-        byId.set(youtubeId, list);
+        };
+
+        if (isArabic) {
+          entry.segments_ar.push(segment);
+        } else {
+          entry.segments.push(segment);
+        }
+        byId.set(youtubeId, entry);
       }
     }
   }
-  for (const list of byId.values()) list.sort((a, b) => a.start - b.start);
+  for (const entry of byId.values()) {
+    entry.segments.sort((a, b) => a.start - b.start);
+    entry.segments_ar.sort((a, b) => a.start - b.start);
+  }
   return byId;
 }
 
 function readPlaylistSegments(playlistIndex, youtubeId, startWindow, endWindow) {
-  if (!youtubeId) return [];
+  if (!youtubeId) return { segments: [], segments_ar: [] };
   const all = playlistIndex.get(youtubeId);
-  if (!all) return [];
+  if (!all) return { segments: [], segments_ar: [] };
   const lo = startWindow ?? 0;
   const hi = endWindow ?? Infinity;
-  return all.filter((segment) => segment.start >= lo - 0.5 && segment.start < hi);
+  return {
+    segments: all.segments.filter((segment) => segment.start >= lo - 0.5 && segment.start < hi),
+    segments_ar: all.segments_ar.filter((segment) => segment.start >= lo - 0.5 && segment.start < hi)
+  };
 }
 
 // Some catalog items play a standalone re-upload of a clip that was originally
@@ -231,16 +246,23 @@ function resolveTranscriptSegments(item, playlistIndex) {
   const sourceId = item.transcriptYoutubeId || item.youtubeId;
   const startWindow = item.transcriptYoutubeId ? item.transcriptStartTime : item.youtubeStartTime;
   const endWindow = item.transcriptYoutubeId ? item.transcriptEndTime : item.youtubeEndTime;
-  const segments = readPlaylistSegments(playlistIndex, sourceId, startWindow, endWindow);
+  const { segments, segments_ar } = readPlaylistSegments(playlistIndex, sourceId, startWindow, endWindow);
 
   const offset = item.transcriptOffset ?? 0;
-  if (!offset) return segments;
+  if (!offset) return { segments, segments_ar };
 
-  return segments.map((segment) => ({
-    ...segment,
-    start: segment.start - offset,
-    end: segment.end - offset,
-  }));
+  return {
+    segments: segments.map((segment) => ({
+      ...segment,
+      start: segment.start - offset,
+      end: segment.end - offset,
+    })),
+    segments_ar: segments_ar.map((segment) => ({
+      ...segment,
+      start: segment.start - offset,
+      end: segment.end - offset,
+    }))
+  };
 }
 
 function getThumbnailLink(thumbnailDir, publicBase, pdfFilename) {
@@ -309,7 +331,7 @@ function appendixSortValue(id) {
 function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
   const videos = readJson(VIDEO_LIST);
   return videos.map((item) => {
-    const segments = resolveTranscriptSegments(item, playlistIndex);
+    const resolved = resolveTranscriptSegments(item, playlistIndex);
     return {
       id: item.id,
       title: item.displayTitle || item.title,
@@ -324,8 +346,9 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
       youtubeUrl: item.youtubeUrl,
       youtubeStartTime: item.youtubeStartTime,
       youtubeEndTime: item.youtubeEndTime,
-      transcriptStatus: segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
-      segments,
+      transcriptStatus: resolved.segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
+      segments: resolved.segments,
+      segments_ar: resolved.segments_ar,
     };
   }).filter((item) => includeEmpty || item.segments.length > 0);
 }
@@ -333,7 +356,7 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
 function buildAudioIndex({ includeEmpty = false } = {}, playlistIndex) {
   const audios = readJson(AUDIO_LIST);
   return audios.map((item) => {
-    const segments = resolveTranscriptSegments(item, playlistIndex);
+    const resolved = resolveTranscriptSegments(item, playlistIndex);
     return {
       id: item.id,
       title: item.displayTitle || item.title,
@@ -351,8 +374,9 @@ function buildAudioIndex({ includeEmpty = false } = {}, playlistIndex) {
       youtubeUrl: item.youtubeUrl,
       youtubeStartTime: item.youtubeStartTime,
       youtubeEndTime: item.youtubeEndTime,
-      transcriptStatus: segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
-      segments,
+      transcriptStatus: resolved.segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
+      segments: resolved.segments,
+      segments_ar: resolved.segments_ar,
     };
   }).filter((item) => includeEmpty || item.segments.length > 0);
 }
@@ -922,6 +946,7 @@ function masterRecord(item, category) {
     transcriptStatus: item.transcriptStatus ?? ((item.segments?.length ?? 0) > 0 ? 'available' : 'missing'),
     segmentCount: item.segments?.length ?? 0,
     segments: compactSegments(item.segments ?? []),
+    segments_ar: item.segments_ar ? compactSegments(item.segments_ar) : undefined,
   };
 }
 

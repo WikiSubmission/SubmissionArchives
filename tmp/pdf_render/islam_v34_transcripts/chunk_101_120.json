@@ -1,0 +1,236 @@
+[
+  {
+    "pdf_page": 101,
+    "printed_page": "265",
+    "blank_page": false,
+    "transcription_text": "[Right-hand page: Arabic Qur'an text, Surah al-Baqarah (Surat 2), Juz' 2 (al-Juz' al-Thani), verses approximately 177-183, printed in a decorated maroon-ink frame with the page number \"21\" (Qur'an mushaf page number) at the bottom of the frame.]\n\n[Left-hand margin shows a sliver of the facing page's English translation, cut off by the camera angle and page curvature: fragments include \"...Ordained...\", \"...ordained for you...\", \"...may fast an equal number...\", \"...all, they shall expiate by...\", \"...or volunteers to feed none...\", \"...for you, if you only know...\", \"...wherein the Qur'an was...\", \"...a clear message and the...\", \"...witnesses this month shall...\", \"...fast an equal number of...\", \"...to hardship; you shall...\", \"...ult Allah for guiding you...\", \"...m near. I respond to...\", \"...they shall respond to...\", \"...rected.\", \"...your women during...\", \"...you are their confidan...\", \"...He redeems you her...\", \"...se with them, seek...\", \"...t and drink until...\", \"...om the black threa...\", \"...omplete the fasting...\", \"...ourse with them...\", \"...are the limits o...\", \"...hus clarified th...\". These fragments are the edge of the English translation on the facing (preceding) page and are too fragmentary and obscured by page-curl to transcribe as continuous prose.\n\nFooter: \"ISLAM 1395/1975 1(3-4)\" and page number \"265\".",
+    "arabic_segments": [
+      {
+        "raw_text": "لَيْسَ الْبِرَّ أَنْ تُوَلُّوا وُجُوهَكُمْ قِبَلَ الْمَشْرِقِ وَالْمَغْرِبِ وَلَٰكِنَّ الْبِرَّ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ وَالْمَلَائِكَةِ وَالْكِتَابِ وَالنَّبِيِّينَ وَآتَى الْمَالَ عَلَىٰ حُبِّهِ ذَوِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينَ وَابْنَ السَّبِيلِ وَالسَّائِلِينَ وَفِي الرِّقَابِ وَأَقَامَ الصَّلَاةَ وَآتَى الزَّكَاةَ وَالْمُوفُونَ بِعَهْدِهِمْ إِذَا عَاهَدُوا وَالصَّابِرِينَ فِي الْبَأْسَاءِ وَالضَّرَّاءِ وَحِينَ الْبَأْسِ أُولَٰئِكَ الَّذِينَ صَدَقُوا وَأُولَٰئِكَ هُمُ الْمُتَّقُونَ",
+        "quran_reference": "Qur'an 2:177",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الْقِصَاصُ فِي الْقَتْلَى الْحُرُّ بِالْحُرِّ وَالْعَبْدُ بِالْعَبْدِ وَالْأُنْثَىٰ بِالْأُنْثَىٰ فَمَنْ عُفِيَ لَهُ مِنْ أَخِيهِ شَيْءٌ فَاتِّبَاعٌ بِالْمَعْرُوفِ وَأَدَاءٌ إِلَيْهِ بِإِحْسَانٍ ذَٰلِكَ تَخْفِيفٌ مِنْ رَبِّكُمْ وَرَحْمَةٌ فَمَنِ اعْتَدَىٰ بَعْدَ ذَٰلِكَ فَلَهُ عَذَابٌ أَلِيمٌ",
+        "quran_reference": "Qur'an 2:178",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "وَلَكُمْ فِي الْقِصَاصِ حَيَاةٌ يَا أُولِي الْأَلْبَابِ لَعَلَّكُمْ تَتَّقُونَ",
+        "quran_reference": "Qur'an 2:179",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "كُتِبَ عَلَيْكُمْ إِذَا حَضَرَ أَحَدَكُمُ الْمَوْتُ إِنْ تَرَكَ خَيْرًا الْوَصِيَّةُ لِلْوَالِدَيْنِ وَالْأَقْرَبِينَ بِالْمَعْرُوفِ حَقًّا عَلَى الْمُتَّقِينَ",
+        "quran_reference": "Qur'an 2:180",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "فَمَنْ بَدَّلَهُ بَعْدَمَا سَمِعَهُ فَإِنَّمَا إِثْمُهُ عَلَى الَّذِينَ يُبَدِّلُونَهُ إِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ",
+        "quran_reference": "Qur'an 2:181",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+        "quran_reference": "Qur'an 2:182",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
+        "quran_reference": "Qur'an 2:183",
+        "confidence": "high"
+      }
+    ],
+    "notes": "This is a printed Arabic mushaf page (Quran page 21 per its own internal pagination) reproduced within the journal, covering the end of the fasting/testament/qisas verses of Surat al-Baqarah. The facing page's English translation bleeds into the left edge of this scan but is too cut off by page curvature to transcribe reliably; only isolated word fragments are legible and are noted above rather than reconstructed as full sentences, per instructions not to invent text."
+  },
+  {
+    "pdf_page": 102,
+    "printed_page": "266",
+    "blank_page": false,
+    "transcription_text": "[Left-hand page: Arabic Qur'an text, Surat al-Baqarah, continuing Juz' 2, verses approximately 184-187, in the same decorated frame, ending with mushaf page number \"22\".]\n\n[Right-hand page, partially visible/curved, is the start of a new English-language article. Legible fragments, reconstructed as continuous where the words are unambiguous despite the curve of the page: \"...be to Allah, Lord... compassionate, most Me[rciful]... and blessings [on His messenger Muh]ammad. The journal ISLAM w[ill not be published during the year] 1395/1975 in order... full resources and c[apabilities]... [to devote to] the production of an his[torical]... QUR'ANIC TRANSLAT[ION]... [WHOSE MOTHER TONGUE IS ARABIC]... represents the culminat[ion]... [ef]fort and dedicated e[xertion]... [to produce an English ren]dering of the Qur'a[n's meanings]... [as accurately as hu]manly possible; a re[ndering]... [worthy of God's fin]alized and complete[d message]... Realizing the aw[esome responsibility]... [tr]anslating and/or int[erpreting God's message, the Arab] Muslim scholars of th[e past 1400 years have shied away] fr[om] this great under[taking. Thus, though it is the ruling con]stitution in the li[ves of millions of English-speaking] Muslims, the Qur'an [was never previously translated into] E[nglish] by a Muslim... [The evident] errors, deficiencies,... [and inconsistencies common to the] presently available [translations have been a source of fru]stration and di[sappointment for the English-speaking] st[udents] of the Qur'an. In spite of the... [admirable life-time eff]orts of such [great Muslim scholars]... [Abdullah Yusuf 'Ali a]nd Muḥ[ammad Marmaduke Pickth]all...\" This is the same article that continues clearly on the following page (page 103/267), titled \"1395/1975: An Historical Year.\"",
+    "arabic_segments": [
+      {
+        "raw_text": "أَيَّامًا مَعْدُودَاتٍ فَمَنْ كَانَ مِنْكُمْ مَرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِنْ أَيَّامٍ أُخَرَ وَعَلَى الَّذِينَ يُطِيقُونَهُ فِدْيَةٌ طَعَامُ مِسْكِينٍ فَمَنْ تَطَوَّعَ خَيْرًا فَهُوَ خَيْرٌ لَهُ وَأَنْ تَصُومُوا خَيْرٌ لَكُمْ إِنْ كُنْتُمْ تَعْلَمُونَ",
+        "quran_reference": "Qur'an 2:184",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِلنَّاسِ وَبَيِّنَاتٍ مِنَ الْهُدَىٰ وَالْفُرْقَانِ فَمَنْ شَهِدَ مِنْكُمُ الشَّهْرَ فَلْيَصُمْهُ وَمَنْ كَانَ مَرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِنْ أَيَّامٍ أُخَرَ يُرِيدُ اللَّهُ بِكُمُ الْيُسْرَ وَلَا يُرِيدُ بِكُمُ الْعُسْرَ وَلِتُكْمِلُوا الْعِدَّةَ وَلِتُكَبِّرُوا اللَّهَ عَلَىٰ مَا هَدَاكُمْ وَلَعَلَّكُمْ تَشْكُرُونَ",
+        "quran_reference": "Qur'an 2:185",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ فَلْيَسْتَجِيبُوا لِي وَلْيُؤْمِنُوا بِي لَعَلَّهُمْ يَرْشُدُونَ",
+        "quran_reference": "Qur'an 2:186",
+        "confidence": "high"
+      },
+      {
+        "raw_text": "أُحِلَّ لَكُمْ لَيْلَةَ الصِّيَامِ الرَّفَثُ إِلَىٰ نِسَائِكُمْ هُنَّ لِبَاسٌ لَكُمْ وَأَنْتُمْ لِبَاسٌ لَهُنَّ عَلِمَ اللَّهُ أَنَّكُمْ كُنْتُمْ تَخْتَانُونَ أَنْفُسَكُمْ فَتَابَ عَلَيْكُمْ وَعَفَا عَنْكُمْ فَالْآنَ بَاشِرُوهُنَّ وَابْتَغُوا مَا كَتَبَ اللَّهُ لَكُمْ وَكُلُوا وَاشْرَبُوا حَتَّىٰ يَتَبَيَّنَ لَكُمُ الْخَيْطُ الْأَبْيَضُ مِنَ الْخَيْطِ الْأَسْوَدِ مِنَ الْفَجْرِ ثُمَّ أَتِمُّوا الصِّيَامَ إِلَى اللَّيْلِ وَلَا تُبَاشِرُوهُنَّ وَأَنْتُمْ عَاكِفُونَ فِي الْمَسَاجِدِ تِلْكَ حُدُودُ اللَّهِ فَلَا تَقْرَبُوهَا كَذَٰلِكَ يُبَيِّنُ اللَّهُ آيَاتِهِ لِلنَّاسِ لَعَلَّهُمْ يَتَّقُونَ",
+        "quran_reference": "Qur'an 2:187",
+        "confidence": "high"
+      }
+    ],
+    "notes": "The right-hand page is the opening of the article titled '1395/1975: An Historical Year,' which appears cleanly on pdf_page 103. Because this scan captures the right page at a steep curved angle, only partial words are legible; brackets above mark reconstructed connective text inferred from the clean version on the next page, not independently confirmed on this page. Flagged here for transparency rather than presented as a firm transcription of page 102 itself."
+  },
+  {
+    "pdf_page": 103,
+    "printed_page": "267",
+    "blank_page": false,
+    "transcription_text": "1395/1975: An Historical Year\n\nPraise be to Allah, Lord of the Universe; the most Compassionate, most Merciful, and may Allah bestow peace and blessings on His beloved messenger Muhammad.\n\nThe journal ISLAM will not be published during the year 1395/1975 in order to devote all our editorial efforts and full resources and capabilities to the final stage in the production of an historical first, namely, THE FIRST QUR'ANIC TRANSLATION BY A MUSLIM SCHOLAR WHOSE MOTHER TONGUE IS ARABIC. This final stage represents the culmination of many years of painstaking effort and dedicated exertion to produce an English rendering of the Qur'an's meanings as accurately as humanly possible; a rendering which is worthy of God's finalized and completed message to all mankind.\n\nRealizing the awesome responsibility inherent in translating and/or interpreting God's message, the Arab Muslim scholars of the past 1400 years have shied away from this great undertaking. Thus, though it is the ruling constitution in the lives of millions of English-speaking Muslims, the Qur'an was never previously translated into English by a Muslim Arab. The evident errors, inaccuracies, deficiencies, and inconsistencies common to the presently available translations have been a source of frustration and disappointment for the English-speaking students of the Qur'an. In spite of the admirable life-time efforts of such great Muslim scholars as 'Abdullah Yusuf 'Ali and Muhammad Marmaduke Pickthall, it is no secret that their renderings did not capture the spirit of the [continues to next page]",
+    "arabic_segments": [],
+    "notes": "Flattened diacritics: 'Muhammad' printed with a dot under the h (Muḥammad) in source; 'Qur'an' printed with an apostrophe for the hamza. Article continues onto pdf_page 104."
+  },
+  {
+    "pdf_page": 104,
+    "printed_page": "268",
+    "blank_page": false,
+    "transcription_text": "[continued from previous page] Qur'an's language. This is especially recognized by those familiar with the Arabic language.\n\nPublication of the new translation, with commentary, a comprehensive index, and the Arabic text, is scheduled for Ramadan 1395 (September 1975). The pre-publication price is set at $12.65 (quantity discounts available). You may reserve your copy now by sending your payment, address, and telephone number to:\n\nIslamic Productions\nBox 12202\nSt. Louis, Missouri 63157\n\nWe also solicit your generous donations to this historical project. Undoubtedly, you will be repaid many fold for your contributions by the Almighty Allah.\n\nAllah willing, publication of the journal will resume with the first issue of the second volume in Muharram 1396 (January 1976). Reminders to renew your subscription will be mailed out October 1975.",
+    "arabic_segments": [],
+    "notes": "This confirms the translation project referenced is Rashad Khalifa's 'English Meanings of the Qur'an,' whose title page appears on pdf_page 105. The right edge of this scan shows the beginning of the following decorative title-page border, not independently transcribed here."
+  },
+  {
+    "pdf_page": 105,
+    "printed_page": "269",
+    "blank_page": false,
+    "transcription_text": "[Decorative title page, bordered in maroon ink]\n\n[Arabic calligraphic title, large script]\n\nEnglish Meanings of the Qur'an\n(With the Arabic Text)\n\nTRANSLATION AND COMMENTARY\nby\n\nRashad Khalifa, Ph.D.\n\nReviewed and Edited by:\nSulayman Shahid Mufassir",
+    "arabic_segments": [
+      {
+        "raw_text": "قرآن كريم لا يمسه الا المطهرون تنزيل من رب العالمين",
+        "quran_reference": null,
+        "confidence": "medium"
+      }
+    ],
+    "notes": "Header line above reads '1395/1975: AN HISTORICAL YEAR', repeated from the article title. The large Arabic calligraphy reads approximately 'Qur'an Karim' (Noble Qur'an) followed by a phrase resembling 'la yamassuhu illal-mutahharun, tanzilun min rabbil-'alamin' (none shall touch it except the purified; a revelation from the Lord of the Worlds), rendered in decorative thuluth-style script; confidence is medium due to stylization of the calligraphy."
+  },
+  {
+    "pdf_page": 106,
+    "printed_page": "270",
+    "blank_page": false,
+    "transcription_text": "[Two boxed quotations on the page]\n\nMy beloved: Do not argue with others in defense of the truth. All you need to do is declare it. You are not responsible for their rejection of the truth; if they accept it, then Allah has blessed them; if they reject it, you are not liable.\nSalamah b. Hasan Al-Radi\n\nFaith is necessary for religions, but it ceases to be so for those who go further and who achieve self-realization in God. Then one no longer believes because one sees. There is no longer any need to believe, when one sees the Truth.\nAhmad b. Mustafa Al-'Alawi\n\n[Right-hand edge of the page shows the start of the next article, partially cut off: \"The Ap[horisms] of Salam[ah]...\", \"These aphorisms, w[ith]...\", \"Qur'an, the sunna,...\", \"Sufism. Published fo[r]...\", \"are valuable pieces...\", \"time, Shaykh Salam[ah]...\", and the numbered items 31-36 beginning, which are fully legible on the following page (pdf_page 107).]",
+    "arabic_segments": [],
+    "notes": "Flattened diacritics: 'Ḥasan' and 'Muṣṭafā' appear with dots under h/s in source; rendered here as plain Hasan/Mustafa per instructions."
+  },
+  {
+    "pdf_page": 107,
+    "printed_page": "271",
+    "blank_page": false,
+    "transcription_text": "Islamic Concentrates\n\nThe Aphorisms of Salamah Al-Radi: 3\n\nThese aphorisms, with their esoteric connotations, are derived from the Qur'an, the sunna, teachings of the great imams, and the principles of Sufism. Published for the first time in English, these particular aphorisms are valuable pieces of advice delivered by one of the greatest Sufis of all time, Shaykh Salamah Al-Radi, to his dervishes.\n\n31. My beloved: Once you achieve absolute slavery to Allah, you become masters of your surroundings; you say to anything, \"Be,\" and it is. Once you eliminate your ego, and live totally devoted to your Lord, everything obeys you.\n\n32. My beloved: If you become filled with the love of Allah, all things will go your way: you simply wish for anything, and it comes true.\n\n33. My beloved: Your Master treats you in the like of your treatment of Him; If you remember Him, He remembers you; If you long for Him, He longs for you; If you hasten to please Him, He hastens to please you. Accordingly, judge your position with Him for yourselves.\n\n34. My beloved: If you care only for your own desires, and fail to control them, you may not be admitted into the court of your Master. Moses had said, \"My Lord, how can I reach you?\" God said, \"Abandon your ego and come.\"\n\n35. My beloved: Your monies and your children are favors from Allah to you for as long as they do not divert you away from your Master; If you abandon your Master in their favor, they become but a disasterous curse.\n\n36. My beloved: If your hearts are purged from loving anything besides your Master, He grants you a restful worldly life; only a minimum of worldly work will sustain you. Otherwise, you will have a life of hard labor.",
+    "arabic_segments": [],
+    "notes": "Archaic/idiosyncratic spelling 'disasterous' preserved as printed. Footer notes series range 'ISLAM 1395/1975 1(3-4): 271-275'."
+  },
+  {
+    "pdf_page": 108,
+    "printed_page": "272",
+    "blank_page": false,
+    "transcription_text": "The Aphorisms of Salamah Al-Radi: 3\n\n37. My beloved: So long as the ego remains alive, the heart remains dead. Therefore, you shall revive your hearts by killing your egos; the heart is the abode of the Lord, most Glorified, most High.\n\n38. My beloved: If you wish to avoid the opposition of anyone, you shall not compete with him for the things he loves.\n\n39. My beloved: If you wish to achieve a high rank, do not claim for yourselves any rank. And, if anyone claims for himself a rank above you, do not dispute him, and allow him such a claim. As a consequence, you will taste the genuine sweetness of Iman and Allah will fill your hearts with light.\n\n40. My beloved: Whenever anyone transgresses against you, you shall attribute your troubles to your sinful deeds, and see that Allah is the One who punishes you. Do not seek revenge, nor shall you pray to Allah against your enemy. You shall be pardoners, for the beloved Prophet (blessings of Allah and peace be upon him) said, \"The pardoners shall be the winners.\"\n\n41. My beloved: You shall avoid all forms of show-off for it renders your efforts a servitude to other than Allah. Your Master needs not any of your deeds, and when you do anything for the show-off, He will not accept your works, saying, \"Take your recompense from whomever you showed off your works.\"\n\n42. My beloved: Our works are filled with deficiencies and insincerity; they are not worthy of the Almighty. How then can we pride ourselves with that which is defective? We can only turn to Allah in hopeful anticipation that out of His abundant grace, He might accept our works despite the defects therein.\n\n43. My beloved: Directing your attention to the purgation of your hearts is much more important than preoccupying yourselves with the collection of knowledge; Purging your hearts will open the doors of Divine knowledge for you, and the knowledge will come to you in its pristine purity, unadulterated.\n\n44. My beloved: Whenever you speak of anything, you shall speak of the good qualities, rather than the bad qualities thereof. The mentioning of bad qualities is itself a bad quality, and you may become so accustomed to seeing bad qualities that you end up believing that everthing must have bad qualities.",
+    "arabic_segments": [],
+    "notes": "Archaic spelling 'everthing' (for 'everything') preserved as printed on this page. 'Iman' printed with a macron over the I in source (Iman), flattened here per instructions."
+  },
+  {
+    "pdf_page": 109,
+    "printed_page": "273",
+    "blank_page": false,
+    "transcription_text": "The Aphorisms of Salamah Al-Radi: 3\n\n45. My beloved: Your bodies are vehicles, while your souls are the drivers thereof; Let not the vehicles take you to what angers your Master; they are driven only by your souls.\n\n46. My beloved: The real affliction is to turn away from Allah, and the real disease is that of skeptic hearts. Thus whenever you see such afflictions in others, you shall ask Allah to grant you health, and to alleviate their afflictions.\n\n47. My beloved: Seeking the materials of this world, as a sole objective, leads away from Allah, and results ultimately in spiritual death. Thus, regretting the loss of worldly materials would be like regretting the loss of a poisonous snake.\n\n48. My beloved: Turning away from materialism and towards Allah is the key you need for opening your hearts; when one lacks this key, his heart remains locked.\n\n49. My beloved: This worldly life is an attractive illusion; who ever rejoices over material gains therefrom actually rejoices over that which diverts his heart and takes him away from his Lord.\n\n50. My beloved: When you turn on your physical senses, you simultaneously turn off your spiritual senses; this leads to blindness of the soul. Therefore, you shall strive to open your spiritual eye which sees the Divine dominion, by keeping the physical eye from preoccupation with the worldly dominion.\n\n51. My beloved: The people are of varied qualities, and when you associate yourselves with the evil ones, your souls become adulterated; this in turn leads to spiritual sickness and misery for you.\n\n52. My beloved: If you find sweetness in the taste of everything which emanates from your beloved Master, then you have achieved genuine steadfastness. But if you find some of His givings to be sweet and some to be sour, then this indicates a deficiency in your love. When you taste sourness from the beloved Master, this reflects your objection, and the lack of total submission to Him.\n\n53. My beloved: If you love two entities, your heart would be divided in two; each half would compete with the other for complete dominance. This will at least dim the brightness of your love, and the beloved Master requires pure, undivided, attention.",
+    "arabic_segments": [],
+    "notes": null
+  },
+  {
+    "pdf_page": 110,
+    "printed_page": "274",
+    "blank_page": false,
+    "transcription_text": "The Aphorisms of Salamah Al-Radi: 3\n\n54. My beloved: The human being is an animal by his body; an angel or a devil by his soul. The wise among you would reflect and judge whether he wants to be an animal, a devil, or a pure angel.\n\n55. My beloved: The capital of each one of you is right here in this world; whoever wastes away his capital, how could he make any profit?\n\n56. My beloved: This worldly life is like the Suq market (operates only on a specific day of the week); if one misses the market, where will he sell his goods?\n\n57. My beloved: However you live in this world, so will be your life in the Hereafter; you shall reflect and determine for yourselves whether your life here is in the blessings and pleasure of Allah, or are you incurring His anger (God forbid)?\n\n58. My beloved: The character of the human being is the garment of his soul; you shall reflect and note whether your soul's garment is clean, pure, and lighted, or dirty, dark, and vile.\n\n59. My beloved: If the one of you is told that a scorpion got into his garment, he would immediately take it off or tear it off to get rid of the scorpion. Inside each one of us we have the various lusts which continue to sting our hearts without invoking a reaction from us.\n\n60. My beloved: The grave is your inevitable abode; you shall strive to make it a spacious, and well-lighted abode. If your present spiritual abode is spacious and well-lighted, so will your graves.\n\n61. My beloved: If you are impressed by good deeds, you should first fetch the sincerity therein; if you do not find it, then discount them as good deeds.\n\n62. My beloved: Your works are but ghosts; their real life and light are in the hearts. If the heart accompanies your good works, they would be of value; otherwise, they will be life-less, light-less.\n\n63. My beloved: If you become too impatient with humbleness, then you should realize that your ego is trying to take you out from the courtship of Allah. Beware lest it succeeds in dismissing you from the Divine courtship.\n\n64. My beloved: Once you become fully content with your Lord, your command becomes His command, and your deeds become solely in His name; nothing will disobey you. If your \"self\" expresses its own wishes, this [continues on next page: 'would reflect a defective heart...']",
+    "arabic_segments": [],
+    "notes": "The facing/next page (275) is barely visible at the right edge of this scan showing item 65's opening words; not separately transcribed here since it duplicates content fully legible on pdf_page 111."
+  },
+  {
+    "pdf_page": 111,
+    "printed_page": "275",
+    "blank_page": false,
+    "transcription_text": "The Aphorisms of Salamah Al-Radi: 3\n\n[continued] would reflect a defective heart; then nothing will obey you or go your way.\n\n65. My beloved: If you wish to progress along the path of humbleness, you shall keep company with the people of humbleness until you are genuinely humble on your own. Afterwards, you may mix with all kinds of people. Those who keep company with other than the people of humbleness, before being genuinely humble on their own, will be like one who tries to light a feeble candle in the midst of a violent storm.\n\n66. My beloved: The breath of the human being who is in a state of obedience to Allah is but light, and the light is accompanied by angels; if he is in a sinful state, every breath is but darkness, and the darkness is accompanied by devils. The light emanating from each of you, or the darkness, surrounds you. Thus, look around you and find out whether you are surrounded by light and angels, or darkness and devils.\n\n67. My beloved: As you like the people to treat you, so shall be your treatment of them; what you dislike from the people, let them not see coming from you. He who expects the people to treat him better than he treats them is utterly unjust; he who does what others dislike deserves mal-treatment; he who does things for which he later apologizes may not someday find a valid excuse, and if he does, his excuse may not be accepted.\n\n68. My beloved: Do not argue with others in defense of the truth. All you need to do is declare it. You are not responsible for their rejection of the truth; if they accept it, then Allah has blessed them; if they reject it, you are not liable.\n\n69. My beloved: So long as your hearts are totally devoted to your Master, you continue to reside in His courtship. Once they become fond of anything else, they become deprived of His courtship. You shall watch your hearts very carefully lest they love other than your Master.\n\n70. My beloved: Once you taste the sweetness of Iman (unshakeable faith), you lose the taste for this worldly life. Any heart which actually enjoys the taste of this life is forbidden from tasting the sweetness of Iman.",
+    "arabic_segments": [],
+    "notes": "A small printed sticker/barcode label reading '2682' is visible in the top right margin of the physical scan; this is a library/archive marking, not part of the original printed content."
+  },
+  {
+    "pdf_page": 112,
+    "printed_page": "276",
+    "blank_page": false,
+    "transcription_text": "[Decorated heading, Arabic: Surat Muhammad]\n\nIN THE NAME OF GOD, THE COMPASSIONATE, THE MERCIFUL\n\nThose who disbelieve and divert others from the path of Allah, God will render their work but vain. As for those who believe and do good works; those who believe in what was revealed through Muhammad (for it is the truth from their Lord), God will remit their sins and care for them. That, because those who disbelieve follow but falsehood, while those who believe follow the truth from their Lord. Thus does God set the examples for mankind.\n(Qur'an 47:1-3)\n\n[Right-hand edge shows the start of the next article, cut off: \"Islam[ic Concentrates]... The Invocatio[ns of] 'Abdullah A[nsari]...\" and fragments of the introductory paragraph and a poem, fully legible on the following pages (113-114).]",
+    "arabic_segments": [
+      {
+        "raw_text": "سُورَةُ مُحَمَّد (٤٧) مَدَنِيَّة الآيَة ١٣ نَزَلَتْ فِي الطَّرِيقِ أَثْنَاءَ الهِجْرَة وَآيَاتُهَا ٣٨ نَزَلَتْ بَعْدَ الحَدِيد",
+        "quran_reference": null,
+        "confidence": "medium"
+      },
+      {
+        "raw_text": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ الَّذِينَ كَفَرُوا وَصَدُّوا عَنْ سَبِيلِ اللَّهِ أَضَلَّ أَعْمَالَهُمْ وَالَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَآمَنُوا بِمَا نُزِّلَ عَلَىٰ مُحَمَّدٍ وَهُوَ الْحَقُّ مِنْ رَبِّهِمْ كَفَّرَ عَنْهُمْ سَيِّئَاتِهِمْ وَأَصْلَحَ بَالَهُمْ ذَٰلِكَ بِأَنَّ الَّذِينَ كَفَرُوا اتَّبَعُوا الْبَاطِلَ وَأَنَّ الَّذِينَ آمَنُوا اتَّبَعُوا الْحَقَّ مِنْ رَبِّهِمْ كَذَٰلِكَ يَضْرِبُ اللَّهُ لِلنَّاسِ أَمْثَالَهُمْ",
+        "quran_reference": "Qur'an 47:1-3",
+        "confidence": "high"
+      }
+    ],
+    "notes": "The small header box above the basmalah lists the surah's classification (Medinan), verse count, and revelation-order information typical of a mushaf sura heading; transcribed with medium confidence due to small print size."
+  },
+  {
+    "pdf_page": 113,
+    "printed_page": "277",
+    "blank_page": false,
+    "transcription_text": "Islamic Concentrates\n\nThe Invocations of 'Abdullah Ansari: 3\n\n'Abdullah Ansari, a famous Persian Sufi, was born in Herat 396 AH (1005 C.E.). It is said that one of his ancestors was a companion of the prophet Muhammad (God's blessings and peace be upon him) who moved to Herat with 'Asaf, son of Qays. Ansari's father, Abu Mansur Muhammad Ansari, became a permanent resident of Herat.\n\nThese invocations, translated into English by Sir Jogendra Singh, contain true advice to guide the Pilgrim along the path of discipleship to the temple of peace. They come from a man who himself had trodden the path and found what his heart desired.\n\nWhen 'Abdullah Ansari departed from this world, he was 85 years old, leaving behind a wealth of Sufi knowledge. Among his well-known works are Risala Munajat (The Book of Prayer), Tabaqat-ul-Sufiyyah (The Book of Sufis), Zad-ul-'Arifin (Provisions of the Sufi Teachers), and Kitab-i-Israr (The Book of Mysteries).\n\nMy friend, make an effort,\nThat thou mayest become a man,\nAnd gather treasures\nOf feeling for others,\nSo that with the favour of saints\nAnd by the blessings of waiting on them\nThy cheeks may grow pale,\nAnd love of the world grow\nCold in thy heart.\n\nIf thou wishest to become a man\nIn the world,\nIn the path of religion\nLearn to feel for others,\nNight and day attend on holy men.\nWhen thou hast become like dust\nOf their feet\nThou shalt become a man.",
+    "arabic_segments": [],
+    "notes": "Footer notes series range 'ISLAM 1395/1975 1(3-4): 277-282'. Flattened diacritics throughout (Ansari, Muhammad, etc. printed with macrons/dots in source)."
+  },
+  {
+    "pdf_page": 114,
+    "printed_page": "278",
+    "blank_page": false,
+    "transcription_text": "The Invocations of 'Abdullah Ansari: 3\n\nO man, remember death at all times;\nRenounce all discord and tyranny;\nDeem what has not been done as done,\nAnd what has been done as not done.\nWatch vigilantly the state of\nThine own mind.\nLove of God begins in\nHarmlessness.\n\nKnow that the Prophet built an external Kaba\nOf clay and water,\nAnd an inner Kaba in life and heart.\nThe outer Kaba was built by Abraham,\nThe Holy;\nThe inner is sanctified by the glory of\nGod Himself.\n\nOn the path of God\nTwo places of worship mark the stages.\nThe material temple,\nAnd the temple of the heart.\nMake your best endeavour\nTo worship at the temple of the heart.\n\nO mendicant, paradise is only an\nAllurement;\nThe real objective is\nThe house of God Himself.\n\nFasting only means the saving of bread,\nFormal prayer is the business\nOf old men and women,\nPilgrimage is a pleasure of the world.\nConquer the heart,\nIts subjection is conquest indeed.\n\nIf thou canst walk on water\nThou art no better than a straw.\nIf thou canst fly in air\nThou art no better than a fly.\nConquer thy heart\nThat thou mayest become somebody.",
+    "arabic_segments": [],
+    "notes": "Right margin of scan shows fragments of the next page's poem, fully legible on pdf_page 115; not separately transcribed here."
+  },
+  {
+    "pdf_page": 115,
+    "printed_page": "279",
+    "blank_page": false,
+    "transcription_text": "The Invocations of 'Abdullah Ansari: 3\n\nOne man spends seventy years in learning\nAnd fails to kindle the light.\nAnother, all his life learns nothing\nBut hears one word\nAnd is consumed by that word.\n\nOn this path argument is of no avail;\nSeek, and thou mayest find the truth.\n\nHelpless in childhood,\nIntoxicated in youth,\nAnd decrepit in old age;\nThen, O helpless one, when couldst thou\nWorship God?\n\nAlas! alas, for the master-craftman's ways:\nFrom the same iron he forges a horse-shoe\nAs well as a mirror for the Emperor.\n\nMy friend, see thine own faults;\nThe faults of others,\nFor thee they are not.\nMake thy heart forgiving;\nNor sell thy soul for the fruits of the world.\n\nIt is wrong to consider oneself above all others\nAnd to exalt one's self.\nLearn from the pupil of thine eye\nTo see others, but to thyself be blind.\n\nKnow friend,\nHuman sorrow springs from three things:\nTo want before it is due,\nTo want more than the destined share,\nTo want for oneself\nWhat belongs to others.\n\nWhen Providence has provided thy share\nSeparately from others\nThen why art thou jealous,\nAnd hungering for that which is not for thee?\n\nDesire for knowledge is the path\nOf honour;\nDesire for wealth, that of dishonour.",
+    "arabic_segments": [],
+    "notes": "Archaic spelling 'craftman's' (for 'craftsman's') preserved as printed."
+  },
+  {
+    "pdf_page": 116,
+    "printed_page": "280",
+    "blank_page": false,
+    "transcription_text": "The Invocations of 'Abdullah Ansari: 3\n\nWealth is the chain which slaves wear\nKnowledge the kingly crown.\n\nThe path is narrow and beset by\nYawning chasms.\nWoe to him who is heavily laden with sin\nAnd walks without the light of faith.\n\nHe with whom virtue has become a habit,\nHath accomplished his work here,\nAnd hereafter.\n\nThe law of life requires:\n1. Sincerity to God.\n2. Severity to self.\n3. Justice to all people.\n4. Service to elders.\n5. Kindness to the young.\n6. Generosity to the poor.\n7. Good counsel to friends.\n8. Forbearance with enemies.\n9. Indifference to fools.\n10. Respect to the learned.\n\nKnow that four things are symbols of\nIll luck:\nIngratitude in good fortune,\nImpatience in ill fortune,\nDiscontent with what fate ordains,\nHesitation in serving fellow-men.\n\nIn this path, be a man\nWith a heart full of compassion.\nEngage not in vain doing,\nMake not thy home in the street of lust and desire.\n\nIf thou wouldst become a pilgrim on the path\nOf love\nThe first condition is\nThat thou become as humble as dust\nAnd ashes.\n\nRemove \"A\" from \"Murad\" (desire) it becomes\nMurd (man);\nHe who renounceth desire becometh a man.",
+    "arabic_segments": [],
+    "notes": "Item 8 in the printed list is followed by a comma rather than a period in the source ('8, Forbearance with enemies.'), preserved as printed."
+  },
+  {
+    "pdf_page": 117,
+    "printed_page": "281",
+    "blank_page": false,
+    "transcription_text": "The Invocations of 'Abdullah Ansari: 3\n\nKnow that he who desires the things of the\nWorld\nIs haunted by sorrow.\nHe who desires Heaven\nIs a labourer working for wages.\nBut, he who desires God,\nIs on the path of glory.\n\nO thou who covetest the world\nHow long wilt thou follow the path of sorrow?\nEven if thou seekest the pleasures of Heaven\nThy quest is on the wrong trail.\nBut if thou seekest God and receivest His seal,\nThou art victorious in both the worlds.\n\nKnow, that when thou learnest to lose thyself\nThou wilt reach the Beloved.\nThere is no other secret to be revealed,\nAnd more than this is not known to me.\nBe humble and cultivate silence.\nIf thou hast received, rejoice,\nAnd fill thyself with ecstasy\nAnd if not, continue the demand.\n\nBe a rose and not a thorn!\nBe a friend and not an enemy!\n\nTo exalt the Beloved is to practise religion;\nTo exalt the self is to practice paganism.\n\nIf the seeker is worthy\nAttainment is easy.\n\nThe company of a good friend\nIs the light of the soul.\nThe company of an ungodly person\nIs the poison of life.\nA snake is preferable to a faithless friend.\n\nWere I to abide in fire a hundred\nYears\nThat scorching flame would be easier to bear\nThan the company of Godless men;\nDeath is preferable to such company.",
+    "arabic_segments": [],
+    "notes": "Note the source alternates British and American spelling of 'practise/practice' within the same couplet, preserved exactly as printed."
+  },
+  {
+    "pdf_page": 118,
+    "printed_page": "282",
+    "blank_page": false,
+    "transcription_text": "The Invocations of 'Abdullah Ansari: 3\n\nWhat is worship?\nTo realise reality.\nWhat is the sacred law?\nTo do no evil.\nWhat is reality?\nSelflessness.\n\nThe heart enquired of the soul\nWhat is the beginning of this business?\nWhat its end, and what its fruit?\nThe soul answered:\nThe beginning of it is\nThe annihilation of self,\nIts end faithfulness,\nAnd its fruit immortality.\n\nThe heart asked what is annihilation?\nWhat is faithfulness?\nWhat is immortality?\n\nThe soul answered:\nFreedom from self is annihilation;\nFaithfulness is\nFulfilment of love;\nImmortality is union of immortal\nWith mortal.\n\nO Devotee, if thou lovest God truly\nWhy dost thou cast longing eyes\nOn things other than Him?\n\nIn this path the eye must cease to see,\nAnd the ear to hear.\nSave unto Him, and about Him.\nBe as dust on His path,\nEven the kings of this earth\nMake the dust of His feet.\nThe balm of their eyes.",
+    "arabic_segments": [],
+    "notes": "This appears to be the closing portion of the 'Invocations of Abdullah Ansari' feature; no further verses follow on this page before white space. The final line is a sentence fragment as printed ('The balm of their eyes.') without preceding grammatical connection legible on the page; transcribed exactly as it appears rather than corrected."
+  },
+  {
+    "pdf_page": 119,
+    "printed_page": "283",
+    "blank_page": false,
+    "transcription_text": "Islamic Concentrates\n\nIndex to the Qur'an: 3\n\nTells you where to find what in the Qur'an. Since some translators have arbitrarily changed the sequence of the verses and/or suras of their renditions, this index applies only to those Qur'anic printings which adhere to the original Qur'an as approved by Al-Azhar University.\n\n[Table with columns: Key Word | Frequency of Occurrence | Subject | Sura & Verse Numbers]\n\nAdmonition (24 occurrences):\n- Punishment of those who descrated the Sabbath should provide admonition for the pious ... 2:66\n- In matters of divorce, you shall observe the Qur'an's admonitions ... 2:231-232\n- You shall heed God's admonition prohibiting usury ... 2:275\n- The Qur'an provides a clear message from Allah, a guidance, and admonition for the pious ... 3:138\n- When the wife rebels, she should be admonished first before imposing any kind of punishment ... 4:34\n- We are admonished to be trust-worthy and just ... 4:58\n- You shall avoid company of the hypocrites, and admonish them that they may reform ... 4:63\n- If the hypocrites heed the admonition, it would be for their own good ... 4:66\n- The Gospel of Jesus Christ provided guidance and admonition for the pious ... 5:46\n- Admonitions given to Moses for the guidance of the Children of Israel were recorded on tablets ... 5:145\n- The evil ones reject and ridicule the divine admonitions; as a consequence, they are doomed to a miserable retribution ... 7:164-165\n- The Qur'an provides admonitions from your Lord, healing for the heart, guidance, and mercy to those who believe ... 10:57",
+    "arabic_segments": [],
+    "notes": "Source spelling 'descrated' (for 'desecrated') preserved as printed, likely a typographical error in the original journal. Footer notes series range 'ISLAM 1395/1975 1(3-4): 283-290'. The dotted leader lines in the original table (connecting subject text to verse numbers) are represented here with ellipses."
+  },
+  {
+    "pdf_page": 120,
+    "printed_page": "284",
+    "blank_page": false,
+    "transcription_text": "Index to the Qur'an: 3\n\n[Table continues, columns: Key Word | Frequency of Occurrence | Subject | Sura & Verse Numbers]\n\nAdmonition (cont'd.) (24 occurrences):\n- Noah admonished that his son was no longer a member of his family, since he rejected God's message ... 11:46\n- The history of previous messengers narrated in the Qur'an to provide admonition for the Prophet and the believers ... 11:120\n- Allah enjoins justice, virtue, and kindness to the relatives; He prohibits but vice, evil, and transgression; He admonishes us that we may reflect and heed His admonitions ... 16:90\n- Invite others to the path of your Lord using the utmost diplomacy and affable admonition, and debate with them in a most compassionate and tolerant manner ... 16:125\n- We are admonished never to make unfounded accusations of infidelity against married women ... 24:17\n- The Qur'an provides revelations which clarify various matters, as well as examples from previous generations, in order to admonish the pious ... 24:34\n- The people of 'Ad rejected the admonitions given them by Prophet Hud; as a consequence, they were destroyed ... 26:136\n- Prophet Luqman admonishes his son never to worship other than Allah; that polytheism is the greatest sin ... 31:13\n- Prophet Muhammad enjoined to admonish mankind to worship Allah alone, to reflect on the message he brought, and to beware of the awesome retribution for disbelief ... 34:46\n- We are admonished to expiate for sexual boycott of the wife; the expiation is effected by freeing a slave, fasting 60 consecutive days, or feeding 60 poor persons ... 58:3\n- Admonition is given to guarantee justice to women in matters of divorce ... 65:2\n\nAdolescence (4 occurrences):\n- When the orphans reach adolescence, their guardian shall hand over their properties to them, after testing them to guarantee their ability to administer such property. The guardian shall not hasten to consume the orphans' properties before they reach adolescence ... 4:6\n- The women shall not be seen in their informal garb or exhibit their femininity except to their husbands, [continues on next page]",
+    "arabic_segments": [],
+    "notes": "Table leader dots represented with ellipses as on the previous page. The final entry under 'Adolescence' is cut off at the bottom of the page and continues onto the following page, not included in this chunk."
+  }
+]

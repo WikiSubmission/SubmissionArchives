@@ -1807,9 +1807,9 @@ In the name of God most gracious, most merciful
 63. "Is it such a wonder that a message from your Lord should come to you through a man like you? This is to alert you, and to make you righteous, that you may attain mercy."
 64. They disbelieved him, and consequently, we saved him and his followers in the ark, and we drowned those who rejected our revelations; they had turned blind.
 
-*Hūd*
+*Hood*
 
-65. To the people of 'Aad, we sent their brother Hūd. He said, "O my people, you shall worship God. You have no other god besides Him. Would you not work righteousness?
+65. To the people of 'Aad, we sent their brother Hood. He said, "O my people, you shall worship God. You have no other god besides Him. Would you not work righteousness?
 
 66. The leaders who disbelieved among his people said, "We see that you are foolish, and we believe that you are a liar."
 67. He said, "O my people, I am not foolish; I am a messenger from the Lord of the universe.
@@ -5564,7 +5564,7 @@ In the name of God, most gracious, most merciful
 ---
 
 ## Sura 33: The Allies (Al-Ahzaab)
-*The Allies (Al-Ahzaab) 33:1-9 — p. 285 / 33:10-19 — p. 286 / 33:20-32 — p. 287 / 33:33-39 — p. 288 / 33:40-52 — p. 289 / 33:53-59 — p. 290*
+*The Allies (Al-Ahzaab) 33:1-9 — p. 285 / 33:10-19 — p. 286 / 33:20-32 — p. 287 / 33:33-39 — p. 288 / 33:40-52 — p. 289 / 33:53-59 — p. 290 / 33:60-73 — p. 291*
 
 In the name of God, most gracious, most merciful
 
@@ -5650,6 +5650,24 @@ In the name of God, most gracious, most merciful
 
 59. O you prophet, tell your wives and your daughters, and the believing women to lengthen their garments. Thus, they will be recognized and will not be insulted. God is forgiver, merciful.
 
+60. Unless the hypocrites, those whose hearts are diseased, and the skeptics of the town refrain (from insulting the believers), we will order you to fight them until they move away.
+61. Otherwise, they shall be condemned wherever they go; they shall be taken and executed.
+62. This is the same system of God as given to those before you, for God's system is never changeable.
+63. The people ask you about the Hour; say, "Only God knows about it." You may not realize it, but the Hour may be very close.*
+64. God has cursed the disbelievers and has prepared for them hell.
+65. They abide therein forever; they will find no ally or supporter.
+66. On the day when their faces turn about the hellfire, they will say, "We wish we obeyed God and obeyed the messenger."
+67. They will say, "Our Lord, we obeyed our masters and elders, and they misguided us.
+68. "Our Lord, give them double the retribution, and curse them a mighty curse."
+69. O you who believe, do not be like those who insulted Moses, then God absolved him of everything they said; he was honorable in the sight of God.
+70. O you who believe, beware of God and speak only righteousness.
+71. He will then correct your works and forgive your sins. Whoever obeys God and His messenger has triumphed a great triumph.
+
+*Only The Humans Are Free To Choose*
+
+72. We had offered the responsibility to the heavens and the earth and the mountains, but they refused to accept it and were afraid thereof. But the human being accepted it; surely, he was wrong, ignorant.*
+73. For God will punish the hypocrite men and women, and the idol-worshiping men and women. And God will redeem the believing men and women; God is forgiver, merciful.
+
 **Footnotes:**
 33:4. A previously prevalent expression in the Arabic language was to estrange a wife by saying that she is like the husband's mother (as far as intercourse is concerned), without giving her the freedom of divorce.
 
@@ -5673,10 +5691,14 @@ In the name of God, most gracious, most merciful
 
 33:56. God and His angels honor and regard every believer. Note the similarity of Arabic words in 33:43. This is the verse that is used by satan most frequently to lead the believers into the trap of idol worship. To love and honor the prophet Muhammad or any other prophet is to worship God alone and to follow and uphold God's scripture as the only source of law.
 
+33:63. The time from now to the day of resurrection equals, for all practical purposes, the time that is left of anyone's life. For people who will die within the next hour, the "hour" (of resurrection) is less than one hour away from them. See 30:55.
+
+33:72. In view of the general human plague of idol-worship, and the fact that the vast majority of people are condemned to hell (see 12:103 and 106), the chance that any particular individual will make it to heaven is practically nil. See also 32:13 and 36:7.
+
 ---
 
 ## Sura 34: Sheba (Saba')
-*Sheba (Saba') 34:1-12 — p. 292 / 34:13-23 — p. 293 / 34:24-39 — p. 294*
+*Sheba (Saba') 34:1-12 — p. 292 / 34:13-23 — p. 293 / 34:24-39 — p. 294 / 34:40-54 — p. 295*
 
 In the name of God, most gracious, most merciful
 
@@ -5733,10 +5755,28 @@ In the name of God, most gracious, most merciful
 38. As for those who challenge our revelations, they are condemned to retribution.
 39. Say, "My Lord is the one who provides for whomever He chooses, or withholds it from him." Whatever you spend in charity, He multiplies it; He is the best provider.
 
+40. On the day when He gathers them all, He will say to the angels, "Did these people idolize you?"
+41. They will say, "Glory be to You; You are our Lord, not them." Instead, they idolized the jinns, and most of them were believers therein.*
+42. Today, you possess no power to benefit or harm one another. We will say to the wicked, "Suffer the retribution of hell that you used to deny."
+43. When our clear revelations are recited for them, they say, "This is a man who wants to divert you from the religion of your parents." They also say, "This is fabricated falsehood." And the disbelievers say, when the truth comes to them, "This is obvious magic."
+44. We did not give them scriptures to study, nor did we send to them a warner before you.
+45. Others before them have disbelieved; and although we gave them less than one-tenth of this, when they disbelieved My messengers, how terrible was My retribution!
+46. Say, "I exhort you to do one thing: that you totally submit to God in pairs, or as individuals, then reflect. Your friend is not crazy; he only alerts you to evade terrible retribution."
+47. Say, "I have not asked you for any wage. My wage comes from God; He witnesses all things."
+48. Say, "My Lord presents the truth; He is fully aware of all secrets."
+49. Say, "The truth has come, while falsehood can neither initiate anything nor repeat it."
+50. Say, "If I go astray, I go astray to my own detriment; and if I am guided, it is because I follow the revelations of my Lord; He is hearer and very close."
+51. If you could envision them as terror strikes; they cannot escape then and will be readily seized.
+52. They will say, "We now believe in this," but it will be too late.
+53. They had already disbelieved; and when they believe in the unseen after it becomes manifest it will be much too late.
+54. They will be isolated from everything they like, just like the previous generations of their kind. They had harbored too much doubt.
+
 **Footnotes:**
 34:14. Could be a goat or a sheep.
 
 34:23. See Appendix 7.
+
+34:41. When we fail to worship God alone, we are in effect worshiping the devil. (See 36:60.)
 
 ---
 
@@ -5805,7 +5845,7 @@ In the name of God, most gracious, most merciful
 ---
 
 ## Sura 36: Y. S. (Ya Seen)
-*Y. S. (Ya Seen) 36:1-18 — p. 300 / 36:19-44 — p. 301 / 36:45-64 — p. 302*
+*Y. S. (Ya Seen) 36:1-18 — p. 300 / 36:19-44 — p. 301 / 36:45-64 — p. 302 / 36:65-83 — p. 303*
 
 In the name of God, most gracious, most merciful
 
@@ -5882,6 +5922,31 @@ In the name of God, most gracious, most merciful
 63. This is Gehenna that has been promised to you.
 64. Burn in it today, because of your disbelief.
 
+*The Video Tape\**
+
+65. On that day, we will seal their mouths, and their hands will speak to us, and their feet will testify about everything they had done.
+66. Whenever we will, we cover up their eyes, so they miss the path by failing to see.
+67. Whenever we will, we freeze them in the situation they choose; they can neither progress nor go back.
+68. Anyone we allow to survive long enough, we revert them to weakness. Do they not understand?
+69. We did not teach him (Muhammad) any poetry, nor should he. This is a profound message; a profound Quran.
+70. To warn those who are alive, and to condemn the disbelievers.
+71. Do they not realize that we created for them, with our hands, the livestock that they own?
+72. We subdued the animals for them, so they ride some and eat some.
+73. They derive various benefits therefrom, as well as drinks. Would they not be thankful?
+
+*Your Idols Can Never Help You\**
+
+74. Yet, they set up idols besides God to be of help to them.
+75. But they can never help; instead, they become subjugated soldiers of their idols.
+76. Do not be saddened by their utterances. We are fully aware of everything they conceal and everything they declare.
+77. Does the human being realize that we created him from a tiny drop, then he turns into a defiant opponent?
+78. He asks us a question, forgetting his initial creation, and says, "Who can resurrect the bones after having decayed?"
+79. Say, "Resurrecting them will be the One who initiated them the first time. Of every creation, He is fully aware."
+80. He is the One who turns the green trees into fuel for you.
+81. Is it not possible for the One who created the heavens and the earth to create them again? Yes indeed, He is the creator, the omniscient.
+82. His only command to have anything done, is to say, "Be," and it is.
+83. Therefore, glorified be the One who possesses the kingship over all things, and to Him you ultimately return.
+
 **Footnotes:**
 36:1-5. The miraculous numerical code associated with the Quranic initials, such as Y. S. here, proves that Muhammad was indeed a messenger of God (see also 13:43), and that the Quran is a divine revelation (see Appendix 1 for details).
 
@@ -5891,10 +5956,14 @@ In the name of God, most gracious, most merciful
 
 36:60. See 7:172
 
+36:65. God invented the video recorder in order to give us an idea how our hands and feet will testify on the day of judgment. See 42:21 and Appendix 10.
+
+36:74-75. Muhammad, Jesus, Mary, the saints, and all the idols possess no power to benefit or harm anyone. See 6:50, 7:188, 10:49, 11:31, 60:4, 72:21 and Appendix 7.
+
 ---
 
 ## Sura 37: The Columns (Al-Saaffaat)
-*The Columns (Al-Saaffaat) 37:1-29 — p. 304 / 37:30-59 — p. 305 / 37:60-97 — p. 306*
+*The Columns (Al-Saaffaat) 37:1-29 — p. 304 / 37:30-59 — p. 305 / 37:60-97 — p. 306 / 37:98-127 — p. 307 / 37:128-161 — p. 308 / 37:162-182 — p. 309*
 
 In the name of God, most gracious, most merciful.
 
@@ -6007,12 +6076,115 @@ In the name of God, most gracious, most merciful.
 96. "While God created you and everything you make."
 97. They said, "Build a great fire for him."
 
+98. They wanted to hurt him; but we made them the losers.
+99. He said, "I will turn to my Lord; He will guide me.
+100. "My Lord, grant me righteous children."
+101. We promised him a clement son.*
+102. When he grew up and started to accompany him, he said, "My son, I see in a vision that I must sacrifice you. What do you think?" He said, "Father, do whatever is enjoined upon you. You will find me, God willing, patient."
+103. When they both submitted, and he turned him down on his forehead,
+104. We called him, "O Abraham!
+105. "You have fulfilled the vision." We thus reward the pious.
+106. It was indeed an exacting test.
+107. We ransomed him with a great offering.
+108. And preserved his history for the following generations.
+109. Peace be upon Abraham.
+110. We thus reward the pious.
+111. He was one of our believing servants.
+112. We gave him the good news of Isaac, to be a righteous prophet.
+113. We blessed him and Isaac. Among their descendants some are pious and some are wicked.
+
+*Moses and Aaron*
+
+114. We also blessed Moses and Aaron.
+115. We delivered them and their people from the great disaster.
+116. We supported them and made them the winners.
+117. We gave them enlightening scripture.
+118. We guided them in the straight path.
+119. And preserved their history for the following generations.
+120. Peace be upon Moses and Aaron.
+121. We thus reward the pious.
+122. They were of our believing servants.
+
+*Elias*
+
+123. Elias was one of the messengers.
+124. He said to his people, "Would you turn to righteousness?
+125. "Do you worship an idol and leave the almighty creator?
+126. "God is your Lord, and the Lord of your ancestors."
+127. They disbelieved him and were doomed.
+128. Only the devoted servants of God are saved.
+129. We preserved his history for the following generations.
+130. Peace be upon Elias' followers.
+131. We thus reward the pious.
+132. He was one of our believing servants.
+
+*Lot*
+
+133. Lot was one of the messengers.
+134. We saved him and all his family;
+135. Except the old woman; she was doomed.
+136. Then we destroyed the others.
+137. You can travel and see their ruins by day,
+138. And by night. Would you then understand?
+
+*Jonah*
+
+139. Jonah was one of the messengers.
+140. He fled to the loaded ship.
+141. He rebelled and deserved distress.
+142. Consequently, the fish swallowed him, as he complained.
+143. If it were not that he repented.
+144. He would have stayed in his belly until the day of resurrection.
+145. We threw him out into the desert, exhausted.
+146. We grew for him an edible tree.
+147. Then we sent him to a hundred thousand people, or more.
+148. They believed, and we let them enjoy their lives.
+
+*Blasphemies Against God*
+
+149. Consult them; does your Lord have daughters, while they have sons?
+150. Did we create the angels as females? Did they witness?
+151. They make up other blasphemies and say,
+152. "God has begotten a son!" They are liars.
+153. Did He prefer daughters over sons?
+154. What is wrong with you? How do you make those statements?
+155. Would you not take heed?
+156. Do you have any proof?
+157. Show me your scripture, if you are truthful.
+158. They even invented a relationship between Him and the jinns. But the jinns know that they are subservient.
+159. God be glorified; high above their claims.
+160. Only the devoted servants of God are saved.
+161. You and the idols you worship.
+162. Do not bother Him in the least.
+163. It is the idol worshipers who will burn in hell.
+164. Each one of us (angels) has a recognized position.
+165. It is we who will arrange them in ranks.
+166. It is we who glorify Him.
+167. They used to say,
+168. "If we receive a message, like those before us,
+169. "We would be devoted servants of God."
+170. They disbelieved therein, and consequently, they will find out.
+171. Our decree has already been issued to our servant messengers.
+172. They will always be victorious.
+173. Our soldiers will always be winners.
+174. Therefore, disregard them for awhile.
+175. Watch them, and they will be watching.
+176. Are they in a hurry to see our retribution?
+177. Once it comes to their area, what a miserable day it will be; they have been warned.
+178. Just leave them alone for awhile.
+179. Watch them, and they will be watching.
+180. Glory be to your Lord; the Lord who possesses all power; over and above anything they claim.
+181. And peace be upon the messengers.
+182. Praise be to God, Lord of the universe.
+
 **Footnotes:**
 37:6. See Appendix 5. Our immediate universe, with all the countless billions of stars and planets, is the smallest and innermost of seven heavens.
 
 37:7. The outer limit of our heaven is not penetrable by anything except the angels.
 
 37:50-59. Immediately after resurrection and the manifested physical appearance of the almighty God and the angels, all people will be automatically stratified into four ranks, the highest being the closest to God. These four initial ranks are the high heaven, the lower heaven, the purgatory, and hell. Eventually, God's mercy will merge the purgatory into the lower heaven. The three final groups will be separated by barriers. The inhabitants of any rank can only move downward to visit lower rank(s), but no one will be able to move upward beyond his rank. Those closest to God, i.e., in the highest rank, will have access to any other stratum. See Appendix 10 for details.
+
+37:101. This is Ishmael. According to the Bible (Genesis 16:16, 21:1-5, and 22:1-3), Ishmael was Abraham's only son for fourteen years. Isaac comes later in 37:112.
 
 ---
 

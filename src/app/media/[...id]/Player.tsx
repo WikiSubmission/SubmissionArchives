@@ -46,6 +46,7 @@ interface Media {
 export interface PlayerProps {
     media: Media;
     segments: Segment[];
+    segments_ar?: Segment[];
     mediaUrl: string;
     prev?: { id: string; title: string };
     next?: { id: string; title: string };
@@ -81,6 +82,7 @@ function getThumbnail(media: Media): string {
 export default function Player({
     media,
     segments,
+    segments_ar,
     mediaUrl,
     prev,
     next,
@@ -89,6 +91,9 @@ export default function Player({
     initialSeekTime,
     transcriptDisclaimer
 }: PlayerProps) {
+
+    const [captionLanguage, setCaptionLanguage] = useState<'en' | 'ar'>('en');
+    const activeSegments = captionLanguage === 'ar' && segments_ar && segments_ar.length > 0 ? segments_ar : segments;
 
     // Absolute time (unclipped) for transcript syncing
     const [absoluteTime, setAbsoluteTime] = useState(initialSeekTime ?? 0);
@@ -104,14 +109,14 @@ export default function Player({
     const playerRef = useRef<any>(null);
 
     const activeSegmentIndex = useMemo(() => {
-        if (segments.length === 0) return -1;
-        for (let i = 0; i < segments.length; i++) {
-            if (absoluteTime >= segments[i].start_time && absoluteTime < segments[i].end_time) {
+        if (activeSegments.length === 0) return -1;
+        for (let i = 0; i < activeSegments.length; i++) {
+            if (absoluteTime >= activeSegments[i].start_time && absoluteTime < activeSegments[i].end_time) {
                 return i;
             }
         }
         return -1;
-    }, [absoluteTime, segments]);
+    }, [absoluteTime, activeSegments]);
     const [fontSize, setFontSize] = useState<number>(1);
     const fontSizes = ['text-sm', 'text-base', 'text-lg', 'text-xl'];
 
@@ -124,18 +129,18 @@ export default function Player({
     const effectiveInitialSeekTime = Number.isFinite(initialSeekTime) && initialSeekTime! > 0 ? initialSeekTime : undefined;
 
     const filteredSegments = useMemo(() => {
-        if (!searchQuery) return segments;
+        if (!searchQuery) return activeSegments;
         const q = searchQuery.toLowerCase();
-        return segments.filter(s => s.content.toLowerCase().includes(q) || s.speaker.toLowerCase().includes(q));
-    }, [segments, searchQuery]);
+        return activeSegments.filter(s => s.content.toLowerCase().includes(q) || s.speaker.toLowerCase().includes(q));
+    }, [activeSegments, searchQuery]);
 
 
 
     useEffect(() => {
         if (!autoScroll || activeSegmentIndex === -1 || searchQuery) return;
-        const el = document.getElementById(`seg-${segments[activeSegmentIndex].segment_index ?? activeSegmentIndex}`);
+        const el = document.getElementById(`seg-${activeSegments[activeSegmentIndex].segment_index ?? activeSegmentIndex}`);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, [activeSegmentIndex, autoScroll, searchQuery, segments]);
+    }, [activeSegmentIndex, autoScroll, searchQuery, activeSegments]);
 
     const handleSegmentClick = (startTime: number) => {
         if (playerRef.current) {
@@ -156,7 +161,7 @@ export default function Player({
     };
 
     const exportTranscript = () => {
-        const text = segments.map(s => `[${formatDuration(s.start_time)}] ${s.speaker}: ${s.content}`).join('\n\n');
+        const text = activeSegments.map(s => `[${formatDuration(s.start_time)}] ${s.speaker}: ${s.content}`).join('\n\n');
         const blob = new Blob([text], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -166,7 +171,7 @@ export default function Player({
         URL.revokeObjectURL(url);
     };
 
-    const activeSegment = activeSegmentIndex >= 0 ? segments[activeSegmentIndex] : null;
+    const activeSegment = activeSegmentIndex >= 0 ? activeSegments[activeSegmentIndex] : null;
 
 
 
@@ -175,7 +180,27 @@ export default function Player({
             <main id="main-content" className="mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10">
 
                 {/* View Mode Toggle */}
-                <div className="mb-6 flex justify-end">
+                <div className="mb-6 flex justify-end gap-4">
+                    {segments_ar && segments_ar.length > 0 && (
+                        <div className="inline-flex rounded-lg border border-ed-rule bg-ed-surface p-1">
+                            <button
+                                type="button"
+                                onClick={() => setCaptionLanguage('en')}
+                                aria-pressed={captionLanguage === 'en'}
+                                className={`flex min-h-11 items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold font-ui transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${captionLanguage === 'en' ? 'bg-ed-bg text-ed-accent' : 'text-ed-fg-muted hover:text-ed-fg'}`}
+                            >
+                                English
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setCaptionLanguage('ar')}
+                                aria-pressed={captionLanguage === 'ar'}
+                                className={`flex min-h-11 items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold font-ui transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${captionLanguage === 'ar' ? 'bg-ed-bg text-ed-accent' : 'text-ed-fg-muted hover:text-ed-fg'}`}
+                            >
+                                Arabic
+                            </button>
+                        </div>
+                    )}
                     <div className="inline-flex rounded-lg border border-ed-rule bg-ed-surface p-1">
                         <button
                             type="button"

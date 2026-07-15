@@ -5,9 +5,9 @@
 - `Quran1981_full_transcription.md`: readable page-by-page transcription preserving block breaks and structural labels.
 - `Quran1981_pages.csv`: one row per PDF page with page metadata and full text.
 - `Quran1981_chapters.csv`: the 114 chapter starts, titles, verse counts, and page ranges in this edition.
-- `Quran1981_verse_index.csv`: all 6,346 supplied verse-index rows mapped to their 1981 PDF and printed pages, including verse-0 opening-formula rows.
-- `Quran1981_subheadings.csv`: extracted 1981 subheadings with the verse before which each is printed and its page coordinates.
-- `Quran1981_footnotes.csv`: extracted Quran footnotes with labels, text, pages, and coordinates.
+- `Quran1981_verse_index.csv`: all 6,236 canonical verses (`verse_id,english_1981`), regenerated from `source-markdown/quran-complete.md` by `scripts/generate/parse_1981_md_to_csv.mjs`. Does not carry page mappings; use `Quran1981_chapters.csv` for chapter-to-page ranges.
+- `Quran1981_subheadings.csv`: extracted 1981 subheadings (`verse_id,text`) keyed to the verse before which each is printed. Regenerated alongside the verse index; no longer carries page coordinates.
+- `Quran1981_footnotes.csv`: extracted Quran footnotes (`verse_reference,verse_id,text`). Regenerated alongside the verse index; no longer carries page coordinates.
 - `Quran1981_appendices.csv`: Appendix 1-19 page ranges.
 - `Quran1981_subject_index_lines.csv`: line-level transcription and placement for the printed subject index.
 - `Quran1981_sura_index.csv`: the front-matter sura index in structured form.

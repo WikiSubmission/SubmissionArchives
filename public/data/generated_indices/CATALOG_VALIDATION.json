@@ -2,10 +2,10 @@
   "valid": true,
   "errors": [],
   "warnings": [
-    "2 record(s) are clearly marked without searchable segments."
+    "1 record(s) are clearly marked without searchable segments."
   ],
-  "recordCount": 382,
-  "segmentCount": 113886,
+  "recordCount": 383,
+  "segmentCount": 115142,
   "categoryCounts": {
     "Appendices": 40,
     "Books": 13,
@@ -13,7 +13,7 @@
     "Quran": 114,
     "Quran Studies": 52,
     "Submitter Perspectives": 64,
-    "Videos": 51
+    "Videos": 52
   },
   "typeCounts": {
     "appendix": 40,
@@ -22,20 +22,14 @@
     "perspective": 64,
     "quran": 114,
     "quran-study": 52,
-    "video-program": 51
+    "video-program": 52
   },
   "recordsWithoutSegments": [
     {
-      "id": "islam-volume-1-number-2-july-1974",
-      "category": "Books",
-      "type": "other",
-      "transcriptStatus": "missing"
-    },
-    {
-      "id": "islam-volume-1-number-3-4-january-1975",
-      "category": "Books",
-      "type": "other",
-      "transcriptStatus": "missing"
+      "id": "video-program/arabic-language-lessons-by-dr-rashad-khalifa",
+      "category": "Videos",
+      "type": "video-program",
+      "transcriptStatus": "empty"
     }
   ]
 }

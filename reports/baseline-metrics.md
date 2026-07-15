@@ -19,7 +19,7 @@ Command: `npm run build`
 
 Build succeeded.
 
-`.next/` size: 680.58 MB
+`.next/` size: 783.16 MB
 
 ## Docker Image Size
 

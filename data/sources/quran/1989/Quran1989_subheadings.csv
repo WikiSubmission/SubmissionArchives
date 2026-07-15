@@ -1,4 +1,4 @@
-﻿chapter_number,placement_before_verse,verse_id,text,pdf_page,printed_page,bbox,bbox_normalized,later_edition_candidates_same_verse,exact_match_to_later_edition
+chapter_number,placement_before_verse,verse_id,text,pdf_page,printed_page,bbox,bbox_normalized,later_edition_candidates_same_verse,exact_match_to_later_edition
 2,3,2:3,Three Categories of People,21,2,"[78.099, 156.448, 212.067, 168.448]","[0.150799, 0.218901, 0.409475, 0.235691]",Three Categories of People (1) The Righteous,False
 2,6,2:6,(2) The Disbelievers.,22,3,"[209.4, 43.511, 310.996, 54.511]","[0.404325, 0.06088, 0.600494, 0.076271]",(2) The Disbelievers,False
 2,8,2:8,(3) The Hypocrites.,22,3,"[213.25, 130.861, 307.96, 141.861]","[0.411759, 0.183099, 0.594632, 0.19849]",(3) The Hypocrites,False
@@ -240,7 +240,7 @@
 8,48,8:48,The Devil Sees God's Invisible Soldiers,202,183,"[161.9, 170.948, 356.981, 182.948]","[0.312609, 0.239189, 0.689286, 0.255979]",The Devil Sees God's Invisible Soldiers,True
 8,53,8:53,Retribution: A Consequence of Sin,203,184,"[171.5, 48.198, 346.244, 60.198]","[0.331145, 0.067439, 0.668554, 0.084229]",Retribution: A Consequence of Sin,True
 8,62,8:62,God Suffices the Believers,204,185,"[194.5, 48.448, 325.456, 60.448]","[0.375555, 0.067788, 0.628415, 0.084579]",God Suffices the Believers,True
-9,1,9:1,V________________________________ _______________ _ _ _ _ _ ________ _______ ✓ No Basmalah*,206,187,"[41.9, 81.271, 472.8, 107.498]","[0.080904, 0.113713, 0.912917, 0.15041]",No Basmalah*,False
+9,1,9:1,No Basmalah*,206,187,"[41.9, 81.271, 472.8, 107.498]","[0.080904, 0.113713, 0.912917, 0.15041]",No Basmalah*,True
 9,11,9:11,Repentance: Cleaning the Slate,207,188,"[67.099, 385.048, 223.651, 397.048]","[0.12956, 0.538755, 0.431842, 0.555545]",Repentance: Cleaning the Slate,True
 9,19,9:19,Question to the Arabs,208,189,"[92.5, 484.148, 202.636, 496.148]","[0.178606, 0.677415, 0.391265, 0.694205]",Question to the Arabs,True
 9,20,9:20,Good News,208,189,"[230.5, 596.248, 289.0, 608.248]","[0.445067, 0.834264, 0.558023, 0.851054]",Good News,True
@@ -481,7 +481,7 @@
 24,23,24:23,Gross Sin,371,352,"[122.3, 255.348, 170.3, 267.348]","[0.236146, 0.35728, 0.328828, 0.374071]",Gross Sin,True
 24,27,24:27,Divine Etiquette,371,352,"[217.55, 598.548, 298.706, 610.548]","[0.420062, 0.837482, 0.576764, 0.854272]",Divine Etiquette,True
 24,30,24:30,Dress Code for Believers*,372,353,"[84.099, 197.848, 213.399, 209.848]","[0.162385, 0.276827, 0.412047, 0.293617]",Dress Code for Believers*,True
-24,32,24:32,Encourage Maniage to Discourage Immorality,373,354,"[141.69, 48.698, 376.122, 60.698]","[0.273586, 0.068138, 0.726244, 0.084928]",Encourage Marriage to Discourage Immorality,False
+24,32,24:32,Encourage Marriage to Discourage Immorality,373,354,"[141.69, 48.698, 376.122, 60.698]","[0.273586, 0.068138, 0.726244, 0.084928]",Encourage Marriage to Discourage Immorality,False
 24,35,24:35,God,373,354,"[135.5, 431.748, 157.304, 443.748]","[0.261634, 0.604097, 0.303734, 0.620887]",God,True
 24,40,24:40,Exile From God: Total Darkness,374,355,"[64.2, 306.098, 230.892, 318.098]","[0.123962, 0.428289, 0.445823, 0.44508]",Exile From God: Total Darkness,True
 24,47,24:47,God Sends Instructions Through His Messenger,375,356,"[96.599, 168.348, 218.755, 194.748]","[0.186521, 0.235551, 0.422388, 0.27249]",God Sends Instructions Through His Messenger,True
@@ -525,7 +525,7 @@
 28,19,28:19,Moses’ Crime Exposed,406,387,"[90.349, 474.798, 205.045, 486.798]","[0.174453, 0.664332, 0.395916, 0.681122]",Moses' Crime Exposed,False
 28,26,28:26,Moses Marries,407,388,"[108.84, 383.598, 181.74, 395.598]","[0.210156, 0.536726, 0.350917, 0.553517]",Moses Marries,True
 28,29,28:29,Back to Egypt,408,389,"[224.75, 47.848, 295.142, 59.848]","[0.433964, 0.066949, 0.569882, 0.083739]",Back to Egypt,True
-28,30,28:30,Moses ADDointed,408,389,"[217.55, 170.348, 303.348, 182.348]","[0.420062, 0.238349, 0.585727, 0.25514]",Moses Appointed,False
+28,30,28:30,Moses Appointed,408,389,"[217.55, 170.348, 303.348, 182.348]","[0.420062, 0.238349, 0.585727, 0.25514]",Moses Appointed,False
 28,36,28:36,Pharaoh’s Arrogance,409,390,"[206.05, 48.448, 311.494, 60.448]","[0.397857, 0.067788, 0.601456, 0.084579]",Pharaoh's Arrogance,False
 28,48,28:48,The Torah and The Quran,410,391,"[80.5, 393.698, 215.812, 405.698]","[0.155435, 0.550858, 0.416706, 0.567648]",The Torah and The Quran,True
 28,50,28:50,God Sends His Teachings to us Through His Messengers,410,391,"[117.95, 595.648, 401.81, 607.648]","[0.227747, 0.833424, 0.775845, 0.850215]",God Sends His Teachings to us Through His Messengers,True

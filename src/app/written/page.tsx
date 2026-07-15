@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { ArrowUpRight, BookOpenText, FileText, LibraryBig, Newspaper } from 'lucide-react';
+import { ArrowUpRight, Newspaper } from 'lucide-react';
 
 import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
 import { getNewsletterIssues } from '@/lib/newsletterCatalog';
@@ -12,33 +12,6 @@ export const metadata: Metadata = {
     title: 'Written Archive',
     description: 'Newsletters, appendices, historical scans, and longer written works from the Submission Archives.',
 };
-
-const collections = [
-    {
-        title: 'Books and major works',
-        copy: 'Search the complete transcribed books and longer works in the Rashad Khalifa corpus.',
-        href: '/search?filters=other',
-        icon: BookOpenText,
-    },
-    {
-        title: 'Submitters Perspectives',
-        copy: 'Newsletter writing, commentary, and contextual material preserved for close study.',
-        href: '/search?filters=perspective',
-        icon: Newspaper,
-    },
-    {
-        title: 'Qur\'an appendices',
-        copy: 'Reference material and structured explanatory works from the translated editions.',
-        href: '/search?filters=appendix',
-        icon: FileText,
-    },
-    {
-        title: 'All written records',
-        copy: 'Search across every available book, newsletter, appendix, and related document.',
-        href: '/search?filters=other,perspective,appendix',
-        icon: LibraryBig,
-    },
-];
 
 const preferredBookOrder = [
     'quran1981',
@@ -85,39 +58,6 @@ export default function WrittenArchivePage() {
                         </Link>
                     </div>
                 </header>
-
-                <section aria-labelledby="written-collections" className="mt-16">
-                    <div className="mb-8 flex flex-col gap-3 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
-                        <div>
-                            <p className="archive-kicker text-ed-fg-muted">Browse by collection</p>
-                            <h2 id="written-collections" className="mt-3 font-display text-3xl text-ed-fg sm:text-4xl">Four entrances to the text archive</h2>
-                        </div>
-                        <p className="text-sm text-ed-fg-muted">Select a collection to open a pre-filtered search.</p>
-                    </div>
-
-                    <div className="border-t border-ed-rule">
-                        {collections.map((collection, index) => {
-                            const Icon = collection.icon;
-                            return (
-                                <Link
-                                    key={collection.title}
-                                    href={collection.href}
-                                    className="group grid gap-4 border-b border-ed-rule py-7 transition-colors hover:bg-ed-surface sm:grid-cols-[4rem_1fr_auto] sm:items-center sm:px-4"
-                                >
-                                    <span className="flex items-center gap-3 font-mono text-sm tabular-nums text-ed-accent">
-                                        {String(index + 1).padStart(2, '0')}
-                                        <Icon className="h-5 w-5" aria-hidden="true" />
-                                    </span>
-                                    <span>
-                                        <span className="block font-display text-2xl text-ed-fg transition-colors group-hover:text-ed-accent">{collection.title}</span>
-                                        <span className="mt-2 block max-w-[64ch] text-sm leading-7 text-ed-fg-muted sm:text-base">{collection.copy}</span>
-                                    </span>
-                                    <ArrowUpRight className="h-5 w-5 text-ed-fg-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ed-accent" aria-hidden="true" />
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </section>
 
                 <section aria-labelledby="featured-books" className="mt-16">
                     <div className="mb-8 flex flex-col gap-3 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">

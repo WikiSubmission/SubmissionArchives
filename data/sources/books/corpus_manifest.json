@@ -106,5 +106,29 @@
     "unverified_arabic_segments": 0,
     "low_confidence_pages": 0,
     "mean_ocr_confidence": 93.13
+  },
+  {
+    "slug": "islam_volume_2",
+    "title": "ISLAM - Volume 1, Number 2 (July 1974)",
+    "source_pdf": "ISLAM - Volume 1, Number 2 (July 1974).pdf",
+    "pages": 92,
+    "blank_pages": 0,
+    "arabic_segments": 36,
+    "canonical_quran_segments": 22,
+    "unverified_arabic_segments": 14,
+    "low_confidence_pages": 3,
+    "mean_ocr_confidence": null
+  },
+  {
+    "slug": "islam_volume_3_4",
+    "title": "ISLAM - Volume 1, Number 3 & 4 (January 1975)",
+    "source_pdf": "ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",
+    "pages": 139,
+    "blank_pages": 2,
+    "arabic_segments": 99,
+    "canonical_quran_segments": 39,
+    "unverified_arabic_segments": 60,
+    "low_confidence_pages": 11,
+    "mean_ocr_confidence": null
   }
 ]

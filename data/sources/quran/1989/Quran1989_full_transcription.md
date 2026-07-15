@@ -17107,8 +17107,6 @@ Sura 9: Ultimatum (Baraa’ah)
 
 ## Subheading
 
-V________________________________
-_______________ _ _ _ _ _ ________ _______ ✓
 No Basmalah*
 
 ## Verse Text
@@ -72253,4 +72251,3 @@ Simple to Understand
 Impossible to Imitate
 
 This book comes to you with built-in physical evidence that it is God’s message to you; it is mathematically composed far beyond human capability (see Appendix 1).
-

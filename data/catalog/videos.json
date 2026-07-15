@@ -657,5 +657,15 @@
     "videoFile": "Arabic Language Lessons By Dr. Rashad Khalifa.mp4",
     "youtubeId": "2Z7j7dqe6gQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=2Z7j7dqe6gQ"
+  },
+  {
+    "id": "video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987",
+    "title": "Debate: Dr Rashad Khalifa Ph D vs Sunni Scholars (1987)",
+    "displayTitle": "Debate: Dr Rashad Khalifa Ph D vs Sunni Scholars (1987)",
+    "type": "video-program",
+    "author": "Dr. Rashad Khalifa",
+    "youtubeId": "iRB21i_238Q",
+    "youtubeUrl": "https://www.youtube.com/watch?v=iRB21i_238Q",
+    "thumbnailOverride": "/content/videos/thumbnails/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987.jpg"
   }
 ]
