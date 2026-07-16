@@ -1066,10 +1066,16 @@ async function main() {
       return summary;
     });
 
-  fs.writeFileSync(QURAN_CHAPTERS_OUTPUT, `${JSON.stringify(quranChapters, null, 2)}\n`);
-  fs.writeFileSync(MASTER_OUTPUT, `${JSON.stringify(masterIndex, null, 2)}\n`);
-  fs.writeFileSync(BOOKS_LIST_OUTPUT, `${JSON.stringify(booksList, null, 2)}\n`);
-  fs.writeFileSync(VALIDATION_OUTPUT, `${JSON.stringify(validationReport, null, 2)}\n`);
+  function normalizeLineEndings(key, value) {
+    return typeof value === 'string'
+      ? value.replace(/\r\n?/g, '\n')
+      : value;
+  }
+
+  fs.writeFileSync(QURAN_CHAPTERS_OUTPUT, `${JSON.stringify(quranChapters, normalizeLineEndings, 2)}\n`);
+  fs.writeFileSync(MASTER_OUTPUT, `${JSON.stringify(masterIndex, normalizeLineEndings, 2)}\n`);
+  fs.writeFileSync(BOOKS_LIST_OUTPUT, `${JSON.stringify(booksList, normalizeLineEndings, 2)}\n`);
+  fs.writeFileSync(VALIDATION_OUTPUT, `${JSON.stringify(validationReport, normalizeLineEndings, 2)}\n`);
   fs.writeFileSync(ASSET_MANIFEST_OUTPUT, `${toCsv(assetManifest, [
     'record_id',
     'category',
