@@ -386,9 +386,9 @@ export default function AskArchiveClient() {
 
                         <p className={styles.trustNote}>
                             <ShieldCheck size={15} strokeWidth={1.8} aria-hidden="true" />
-                            Responses are limited to indexed archive evidence. Verify
-                            citations against the original recording or scan before
-                            formal use.
+                            <span>
+                                <strong>Beta:</strong> Ask the Archive is still in testing and can make mistakes. Responses are limited to indexed archive evidence. Verify citations against the original recording or scan before formal use.
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -400,7 +400,12 @@ export default function AskArchiveClient() {
         <section className={styles.askPage} data-mode="conversation">
             <div className={styles.conversationShell}>
                 <header className={styles.conversationHeader}>
-                    <p className={styles.eyebrow}>Ask the Archive</p>
+                    <p className={styles.eyebrow}>
+                        Ask the Archive
+                        <span className="ml-2 rounded-full border border-ed-accent/40 bg-ed-accent/10 px-2 py-0.5 text-[0.55rem] uppercase tracking-widest text-ed-accent">
+                            Beta
+                        </span>
+                    </p>
 
                     <button
                         type="button"

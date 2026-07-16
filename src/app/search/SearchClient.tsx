@@ -798,6 +798,10 @@ function getDocumentMatchLink(media: SearchResultMedia, match: SearchMatch, quer
 }
 
 function getThumbnailSrc(media: SearchResultMedia) {
+    if (media.type === 'quran') {
+        return '/images/placeholders/quran.jpg';
+    }
+
     if (media.thumbnailOverride) {
         return getPublicAssetUrl(media.thumbnailOverride);
     }

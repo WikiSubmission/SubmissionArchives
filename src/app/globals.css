@@ -599,3 +599,84 @@ mark.pdf-search-highlight {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ------------------------------ Qur'an reader ------------------------------ */
+
+/* Frosted-glass sticky header — tinted translucent in BOTH themes */
+.quran-glass {
+    background-color: color-mix(in oklab, var(--ed-bg) 76%, transparent);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    backdrop-filter: blur(14px) saturate(1.5);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .quran-glass {
+        background-color: var(--ed-bg);
+    }
+}
+
+/* Verse scroll-reveal */
+@keyframes quran-rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.quran-reveal {
+    opacity: 0;
+}
+.quran-reveal.is-visible {
+    animation: quran-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Edition cross-fade (replays because the keyed wrapper remounts) */
+@keyframes quran-edition-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.quran-edition-swap {
+    animation: quran-edition-in 0.35s ease-out;
+}
+
+/* Sliding segmented-control thumb */
+.quran-thumb {
+    transition:
+        transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+        width 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.2s ease;
+    will-change: transform;
+}
+
+/* Search highlight — theme-aware accent wash that wraps cleanly across lines */
+.quran-mark {
+    background-color: color-mix(in oklab, var(--ed-accent) 26%, transparent);
+    color: inherit;
+    border-radius: 0.25em;
+    padding-inline: 0.12em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .quran-reveal,
+    .quran-reveal.is-visible {
+        opacity: 1;
+        animation: none;
+    }
+    .quran-edition-swap {
+        animation: none;
+    }
+    .quran-thumb {
+        transition: none;
+    }
+}

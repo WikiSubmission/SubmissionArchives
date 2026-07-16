@@ -28,7 +28,7 @@ export default function QuranPageClient({ chapters }: { chapters: QuranChapterSu
                             <h1 className="!mt-8 max-w-[16ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9] text-ed-fg">
                                 The Qur&apos;an
                             </h1>
-                            <p className="max-w-[62ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
+                            <p className="!mt-8 max-w-[62ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
                                 All 114 suras with Arabic text and the 1981, 1989, and 1992 English editions, including subtitles and footnotes by Dr. Rashad Khalifa.
                             </p>
                             <div className="pt-2">

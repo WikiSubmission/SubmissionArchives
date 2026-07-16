@@ -31,6 +31,10 @@ function getQuranStudyNumber(item: Media): number | null {
 }
 
 export function getThumbnailSrc(item: Media): string {
+    if (item.type === 'quran') {
+        return getPublicAssetUrl('/images/placeholders/quran.jpg');
+    }
+
     if (item.thumbnailOverride) return getPublicAssetUrl(item.thumbnailOverride);
 
     if (item.type === 'audio' || item.type === 'messenger-audio') {
