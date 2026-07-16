@@ -54,7 +54,7 @@ const SEARCH_CAPABILITIES = [
     },
 ] as const;
 
-export default function HomePageClient() {
+export default function HomePage() {
     return (
         <main id="main-content" className="ambient-page min-h-screen overflow-hidden bg-ed-bg text-ed-fg">
             <HeroSection />
