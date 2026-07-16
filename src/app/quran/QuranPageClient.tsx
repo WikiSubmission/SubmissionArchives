@@ -25,7 +25,7 @@ export default function QuranPageClient({ chapters }: { chapters: QuranChapterSu
                     <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1fr_0.9fr]">
                         <div className="relative z-10 space-y-6">
                             <p className="archive-kicker border-l-2 border-ed-accent pl-3">Scripture</p>
-                            <h1 className="max-w-[16ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9] text-ed-fg">
+                            <h1 className="!mt-8 max-w-[16ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9] text-ed-fg">
                                 The Qur&apos;an
                             </h1>
                             <p className="max-w-[62ch] text-base leading-8 text-ed-fg-muted sm:text-lg">

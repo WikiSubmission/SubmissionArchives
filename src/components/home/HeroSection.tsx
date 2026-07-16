@@ -78,7 +78,7 @@ export function HeroSection() {
                         <p className="archive-kicker">A living digital archive</p>
                     </div>
 
-                    <h1 className="mt-8 max-w-[11ch] font-display text-[clamp(3.5rem,10vw,8.25rem)] font-medium leading-[0.78] tracking-[-0.055em] text-ed-fg">
+                    <h1 className="mt-12 max-w-[11ch] font-display text-[clamp(3.5rem,10vw,8.25rem)] font-medium leading-[0.78] tracking-[-0.055em] text-ed-fg">
                         Submission
                         <span className="mt-3 block font-ui text-[0.31em] font-bold uppercase leading-none tracking-[0.24em] text-ed-accent sm:tracking-[0.3em]">
                             Archives
@@ -216,7 +216,7 @@ function CarouselButton({
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule bg-ed-bg text-ed-fg-muted transition-colors hover:border-ed-accent/55 hover:text-ed-accent"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule bg-ed-bg text-ed-fg-muted transition-[color,border-color,transform] duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 hover:border-ed-accent/55 hover:text-ed-accent active:scale-95"
         >
             {children}
         </button>

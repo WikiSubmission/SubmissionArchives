@@ -1,4 +1,3 @@
-import { CheckCircle2 } from 'lucide-react';
 import type { AskMessage } from './askUiTypes';
 import AnswerStream from './AnswerStream';
 import AskProgress from './AskProgress';
@@ -26,26 +25,11 @@ export default function AskConversationMessage({
         <article className={styles.message} aria-labelledby={`${message.id}-question`}>
             <div className={styles.questionRow}>
                 <div className={styles.questionBubble}>
-                    <span className={styles.speakerLabel}>You</span>
                     <p id={`${message.id}-question`}>{message.question}</p>
                 </div>
             </div>
 
             <div className={styles.response}>
-                <div className={styles.responseHeader}>
-                    <div>
-                        <span className={styles.archiveMark} aria-hidden="true">A</span>
-                        <span>Archive response</span>
-                    </div>
-
-                    {message.phase === 'complete' && message.answerText ? (
-                        <span className={styles.verifiedLabel}>
-                            <CheckCircle2 size={14} strokeWidth={1.9} />
-                            Citations checked
-                        </span>
-                    ) : null}
-                </div>
-
                 {isWorking && !message.answerText ? (
                     <AskProgress
                         stage={message.progressStage}
@@ -98,6 +82,7 @@ export default function AskConversationMessage({
                     messageId={message.id}
                     sources={message.sources}
                     highlightedSourceId={activeSourceId}
+                    verified={message.phase === 'complete' && Boolean(message.answerText)}
                 />
             </div>
         </article>

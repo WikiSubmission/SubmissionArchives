@@ -13,12 +13,10 @@ import {
     useState,
 } from 'react';
 import type { AskStreamEvent } from '@/lib/rag/streamTypes';
-import AskArchiveAtmosphere from './AskArchiveAtmosphere';
 import AskConversationMessage from './AskConversationMessage';
 import AskForm from './AskForm';
 import { streamAsk } from './askStream';
 import type {
-    AskAtmosphereMode,
     AskMessage,
     HighlightedSource,
 } from './askUiTypes';
@@ -164,25 +162,6 @@ function createMessageId(): string {
     return `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
 
-function getAtmosphereMode(messages: AskMessage[]): AskAtmosphereMode {
-    const lastMessage = messages[messages.length - 1];
-    if (!lastMessage) return 'idle';
-
-    switch (lastMessage.phase) {
-        case 'retrieving':
-            return 'retrieving';
-        case 'synthesizing':
-            return 'synthesizing';
-        case 'revealing':
-            return 'revealing';
-        case 'error':
-            return 'error';
-        case 'complete':
-        case 'cancelled':
-            return 'settled';
-    }
-}
-
 export default function AskArchiveClient() {
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
     const [highlightedSource, setHighlightedSource] =
@@ -206,7 +185,6 @@ export default function AskArchiveClient() {
                 lastMessage.phase === 'revealing'),
     );
 
-    const atmosphereMode = getAtmosphereMode(messages);
     const sourceCount = lastMessage?.sources.length ?? 0;
     const lastAnswerText = lastMessage?.answerText ?? '';
 
@@ -347,17 +325,21 @@ export default function AskArchiveClient() {
             clearTimeout(highlightTimerRef.current);
         }
 
-        const target = document.getElementById(getSourceDomId(messageId, sourceId));
-        target?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-        });
-
+        // The source list may be collapsed; give it a moment to expand
+        // before scrolling to the card.
         window.setTimeout(() => {
-            if (target instanceof HTMLElement) {
-                target.focus({ preventScroll: true });
-            }
-        }, 450);
+            const target = document.getElementById(getSourceDomId(messageId, sourceId));
+            target?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+            });
+
+            window.setTimeout(() => {
+                if (target instanceof HTMLElement) {
+                    target.focus({ preventScroll: true });
+                }
+            }, 400);
+        }, 120);
 
         highlightTimerRef.current = setTimeout(() => {
             setHighlightedSource((current) =>
@@ -384,16 +366,12 @@ export default function AskArchiveClient() {
     if (messages.length === 0) {
         return (
             <section className={styles.askPage} data-mode="empty">
-                <AskArchiveAtmosphere mode="idle" sourceCount={0} />
-
                 <div className={styles.emptyState}>
                     <div className={styles.emptyIntro}>
-                        <p className={styles.eyebrow}>Evidence-led archive assistant</p>
-                        <h1>Ask the Archive</h1>
+                        <h1>Peace be upon you.</h1>
                         <p className={styles.emptyGreeting}>
-                            Peace be upon you. Ask a question about the preserved
-                            recordings, transcripts, books, newsletters, appendices,
-                            or Qur&apos;an editions.
+                            Ask a question about the preserved recordings, transcripts,
+                            books, newsletters, appendices, or Qur&apos;an editions.
                         </p>
                     </div>
 
@@ -420,17 +398,9 @@ export default function AskArchiveClient() {
 
     return (
         <section className={styles.askPage} data-mode="conversation">
-            <AskArchiveAtmosphere
-                mode={atmosphereMode}
-                sourceCount={sourceCount}
-            />
-
             <div className={styles.conversationShell}>
                 <header className={styles.conversationHeader}>
-                    <div>
-                        <p className={styles.eyebrow}>Ask the Archive</p>
-                        <h1>Evidence, assembled with citations.</h1>
-                    </div>
+                    <p className={styles.eyebrow}>Ask the Archive</p>
 
                     <button
                         type="button"

@@ -254,7 +254,7 @@ function SearchContent() {
                                 Archive search
                             </span>
                         </div>
-                        <h1 className="max-w-[18ch] font-display text-[clamp(2.75rem,6vw,5rem)] leading-[0.92] text-ed-fg">
+                        <h1 className="!mt-8 max-w-[18ch] font-display text-[clamp(2.75rem,6vw,5rem)] leading-[0.92] text-ed-fg">
                             Find exact words and buried passages.
                         </h1>
                         <p className="max-w-[70ch] text-base leading-8 text-ed-fg-muted sm:text-lg">

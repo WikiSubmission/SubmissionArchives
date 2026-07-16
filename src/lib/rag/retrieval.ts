@@ -60,17 +60,49 @@ async function vectorSearch(embedding: number[], limit: number): Promise<RawChun
 async function textSearch(query: string, limit: number): Promise<RawChunkRow[]> {
   const pool = getRagPool();
   const result = await pool.query<RawChunkRow>(
-    `${CHUNK_SELECT} WHERE c.tsv @@ plainto_tsquery('english', $1)
-     ORDER BY ts_rank_cd(c.tsv, plainto_tsquery('english', $1)) DESC LIMIT $2`,
+    `${CHUNK_SELECT} WHERE c.tsv @@ plainto_tsquery('english', f_unaccent($1))
+     ORDER BY ts_rank_cd(c.tsv, plainto_tsquery('english', f_unaccent($1))) DESC LIMIT $2`,
     [query, limit],
   );
   return result.rows;
 }
 
-function reciprocalRankFusion(vectorRows: RawChunkRow[], textRows: RawChunkRow[], k = 60): Map<number, number> {
+/** Lowercased, accent-stripped OR-joined tokens for a loose tsquery. */
+function toOrTokens(query: string): string {
+  const tokens = query
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[̀-ͯ]/g, '')
+    .match(/[a-z0-9]+/g);
+  return tokens ? tokens.join(' | ') : '';
+}
+
+/**
+ * Recordings often discuss a concept named only in the document title (for
+ * example a Quran study titled "Déjà Vu" where the transcript never uses the
+ * phrase). Chunk-level search misses those entirely, so this channel matches
+ * the query against document titles and returns those documents' chunks
+ * ranked by embedding similarity to the question.
+ */
+async function titleMatchSearch(query: string, embedding: number[], limit: number): Promise<RawChunkRow[]> {
+  const orTokens = toOrTokens(query);
+  if (!orTokens) return [];
+
+  const pool = getRagPool();
+  const result = await pool.query<RawChunkRow>(
+    `${CHUNK_SELECT}
+     WHERE to_tsvector('english', f_unaccent(d.title || ' ' || coalesce(d.display_title, ''))) @@ to_tsquery('english', $1)
+     ORDER BY c.embedding <=> $2 LIMIT $3`,
+    [orTokens, `[${embedding.join(',')}]`, limit],
+  );
+  return result.rows;
+}
+
+function reciprocalRankFusion(rankedLists: RawChunkRow[][], k = 60): Map<number, number> {
   const scores = new Map<number, number>();
-  vectorRows.forEach((row, i) => scores.set(row.id, (scores.get(row.id) ?? 0) + 1 / (k + i + 1)));
-  textRows.forEach((row, i) => scores.set(row.id, (scores.get(row.id) ?? 0) + 1 / (k + i + 1)));
+  for (const rows of rankedLists) {
+    rows.forEach((row, i) => scores.set(row.id, (scores.get(row.id) ?? 0) + 1 / (k + i + 1)));
+  }
   return scores;
 }
 
@@ -99,6 +131,19 @@ function rerankAndDiversify(chunks: RetrievedChunk[], topN: number): RetrievedCh
     if (diversified.length >= topN) break;
   }
 
+  // When one document dominates the candidates (common for questions that
+  // name a specific recording), the cap alone would starve the context.
+  // Fill the remaining slots with the best capped-out chunks.
+  if (diversified.length < topN) {
+    const chosen = new Set(diversified.map((chunk) => chunk.id));
+    for (const chunk of boosted) {
+      if (chosen.has(chunk.id)) continue;
+      diversified.push(chunk);
+      chosen.add(chunk.id);
+      if (diversified.length >= topN) break;
+    }
+  }
+
   return diversified;
 }
 
@@ -107,14 +152,15 @@ export async function retrieveChunks(
   embedding: number[],
   opts: { topK: number; topN: number },
 ): Promise<RetrievedChunk[]> {
-  const [vectorRows, textRows] = await Promise.all([
+  const [vectorRows, textRows, titleRows] = await Promise.all([
     vectorSearch(embedding, opts.topK),
     textSearch(query, opts.topK),
+    titleMatchSearch(query, embedding, opts.topK),
   ]);
 
-  const fusedScores = reciprocalRankFusion(vectorRows, textRows);
+  const fusedScores = reciprocalRankFusion([vectorRows, textRows, titleRows]);
   const byId = new Map<number, RawChunkRow>();
-  for (const row of [...vectorRows, ...textRows]) byId.set(row.id, row);
+  for (const row of [...vectorRows, ...textRows, ...titleRows]) byId.set(row.id, row);
 
   const chunks = [...byId.entries()].map(([id, row]) => toRetrievedChunk(row, fusedScores.get(id) ?? 0));
 

@@ -42,7 +42,7 @@ export default function WrittenArchivePage() {
         <div className="min-h-screen bg-ed-bg font-body text-ed-fg">
             <main id="main-content" className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
                 <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                         <p className="archive-kicker border-l-2 border-ed-accent pl-3">Written archive</p>
                         <h1 className="max-w-[12ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9] text-ed-fg">
                             A reading room for the written record.
@@ -63,7 +63,7 @@ export default function WrittenArchivePage() {
                     <div className="mb-8 flex flex-col gap-3 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
                         <div>
                             <p className="archive-kicker text-ed-fg-muted">Featured Works</p>
-                            <h2 id="featured-books" className="mt-3 font-display text-3xl text-ed-fg sm:text-4xl">Books & Publications</h2>
+                            <h2 id="featured-books" className="mt-5 font-display text-3xl text-ed-fg sm:text-4xl">Books & Publications</h2>
                         </div>
                     </div>
                     
@@ -103,7 +103,7 @@ export default function WrittenArchivePage() {
                     <div className="mb-8 flex flex-col gap-4 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
                         <div>
                             <p className="archive-kicker text-ed-fg-muted">Newsletter archive</p>
-                            <h2 id="submitters-perspectives" className="mt-3 font-display text-3xl text-ed-fg sm:text-4xl">Submitters Perspectives</h2>
+                            <h2 id="submitters-perspectives" className="mt-5 font-display text-3xl text-ed-fg sm:text-4xl">Submitters Perspectives</h2>
                         </div>
                         <div className="flex flex-col items-start gap-3 sm:items-end">
                             <p className="text-sm text-ed-fg-muted">{newsletterIssues.length} preserved issues, 1985–1990</p>

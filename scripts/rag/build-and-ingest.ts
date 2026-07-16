@@ -10,6 +10,9 @@ import type { ArchiveRecord } from '../../src/types/archive';
 const MASTER_INDEX_PATH = path.resolve(process.cwd(), 'public', 'data', 'generated_indices', 'MASTER_INDEX.json');
 const EMBED_MODEL = process.env.MISTRAL_EMBED_MODEL || 'mistral-embed-2312';
 const BATCH_SIZE = Number(process.env.RAG_EMBED_BATCH_SIZE) || 32;
+// Bump when the embedding input format changes so unchanged documents are
+// still re-processed (v2: document title prepended to each chunk embedding).
+const EMBED_VERSION = 'v2';
 
 function isRashadAuthored(record: ArchiveRecord): boolean {
   return (record.author || 'Dr. Rashad Khalifa') === 'Dr. Rashad Khalifa';
@@ -40,7 +43,7 @@ async function main(): Promise<void> {
   for (const record of records) {
     if (!record.segments?.length) continue;
 
-    const documentHash = sha256(JSON.stringify(record.segments));
+    const documentHash = sha256(`${EMBED_VERSION}:${JSON.stringify(record.segments)}`);
     const existingDoc = (
       await pool.query<{ content_hash: string }>('SELECT content_hash FROM rag_documents WHERE id = $1', [
         record.id,
@@ -82,22 +85,29 @@ async function main(): Promise<void> {
     ).rows;
     const existingByIndex = new Map(existingChunks.map((row) => [row.chunk_index, row.content_hash]));
 
-    const toEmbed: { draft: RagChunkDraft; hash: string }[] = [];
+    // Embed each chunk with its document title prepended so concepts named
+    // only in the title (e.g. a study titled "Déjà Vu" whose transcript never
+    // uses the phrase) are still retrievable. The stored text stays clean;
+    // only the embedding input carries the title. Hash covers the embedding
+    // input so this change re-embeds existing rows on the next run.
+    const documentContext = record.displayTitle ?? record.title;
+    const toEmbed: { draft: RagChunkDraft; hash: string; embedInput: string }[] = [];
     const toSkip: { draft: RagChunkDraft; hash: string }[] = [];
 
     for (const draft of drafts) {
-      const hash = sha256(draft.text);
+      const embedInput = `${documentContext}\n${draft.text}`;
+      const hash = sha256(embedInput);
       if (existingByIndex.get(draft.chunkIndex) === hash) {
         toSkip.push({ draft, hash });
       } else {
-        toEmbed.push({ draft, hash });
+        toEmbed.push({ draft, hash, embedInput });
       }
     }
 
     for (let i = 0; i < toEmbed.length; i += BATCH_SIZE) {
       const batch = toEmbed.slice(i, i + BATCH_SIZE);
       const embeddings = await embedBatch(
-        batch.map((item) => item.draft.text),
+        batch.map((item) => item.embedInput),
         EMBED_MODEL,
       );
 

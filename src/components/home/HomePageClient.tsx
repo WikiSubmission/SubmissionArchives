@@ -1,9 +1,9 @@
-import { BookText, Search, Sparkles } from 'lucide-react';
-
 import { ArchiveBranch } from './ArchiveBranch';
 import { AudioArchiveSection } from './AudioArchiveSection';
 import { HeroSection } from './HeroSection';
+import { QuranEditionsVisual } from './QuranEditionsVisual';
 import { VideoArchiveSection } from './VideoArchiveSection';
+import { WrittenArchiveVisual } from './WrittenArchiveVisual';
 
 const WRITTEN_CAPABILITIES = [
     {
@@ -62,7 +62,7 @@ export default function HomePageClient() {
                 <header className="grid gap-6 border-y border-ed-rule py-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end lg:py-10">
                     <div>
                         <p className="archive-kicker">Ways into the collection</p>
-                        <p className="mt-3 max-w-[35ch] text-sm leading-7 text-ed-fg-muted">
+                        <p className="mt-5 max-w-[35ch] text-sm leading-7 text-ed-fg-muted">
                             Browse by medium, then move from a catalog record to its original recording, transcript, or scan.
                         </p>
                     </div>
@@ -80,32 +80,32 @@ export default function HomePageClient() {
                     <ArchiveBranch
                         numeral="III"
                         kicker="Books, newsletters, appendices"
-                        title="Read the written archive"
+                        title="Written archive"
                         body="Books, newsletters, and appendices by Dr. Rashad Khalifa, transcribed and connected to the same research search used across the whole collection."
                         href="/written"
                         cta="Browse the written archive"
                         details={WRITTEN_CAPABILITIES}
-                        icon={BookText}
+                        visual={<WrittenArchiveVisual />}
                     />
                     <ArchiveBranch
                         numeral="IV"
                         kicker="Three editions, one text"
-                        title="Study the Qur'an editions"
+                        title="Qur'an editions"
                         body="Arabic text alongside the 1981, 1989, and 1992 English editions, with subtitles, footnotes, and verse-level search for all 114 suras."
                         href="/quran"
                         cta="Open the Qur'an editions"
                         details={QURAN_CAPABILITIES}
-                        icon={Sparkles}
+                        visual={<QuranEditionsVisual />}
+                        reverse
                     />
                     <ArchiveBranch
                         numeral="V"
                         kicker="Cross-collection search"
-                        title="Search the full archive"
+                        title="Search the archive"
                         body="Search names, verses, phrases, and recurring ideas across transcripts and written works. Results are ranked by exact phrases, nearby terms, and repeated evidence."
                         href="/search"
                         cta="Search the archive"
                         details={SEARCH_CAPABILITIES}
-                        icon={Search}
                         showSearchDemo
                     />
                 </div>

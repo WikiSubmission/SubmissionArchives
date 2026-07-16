@@ -18,7 +18,7 @@ export default function AppendicesGrid({ appendices }: Props) {
             <div className="mb-8 flex flex-col gap-3 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                     <p className="archive-kicker text-ed-fg-muted">The Appendices</p>
-                    <h2 id="appendices-grid" className="mt-3 font-display text-3xl text-ed-fg sm:text-4xl">All Reference Materials</h2>
+                    <h2 id="appendices-grid" className="mt-5 font-display text-3xl text-ed-fg sm:text-4xl">All Reference Materials</h2>
                 </div>
                 <div className="flex bg-ed-surface border border-ed-rule rounded-md overflow-hidden text-sm">
                     {editions.map((year) => (

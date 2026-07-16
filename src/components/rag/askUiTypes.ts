@@ -9,14 +9,6 @@ export type AskMessagePhase =
     | 'cancelled'
     | 'error';
 
-export type AskAtmosphereMode =
-    | 'idle'
-    | 'retrieving'
-    | 'synthesizing'
-    | 'revealing'
-    | 'settled'
-    | 'error';
-
 export interface AskMessage {
     id: string;
     question: string;
