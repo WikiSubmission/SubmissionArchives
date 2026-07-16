@@ -4,7 +4,7 @@
     width: 100%;
     overflow: hidden;
     border: 1px solid var(--ed-rule);
-    border-radius: 1rem;
+    border-radius: var(--ed-radius-lg);
     background:
         radial-gradient(circle at 85% 10%, color-mix(in oklch, var(--ed-accent) 9%, transparent), transparent 32%),
         color-mix(in oklch, var(--ed-surface) 76%, var(--ed-bg));

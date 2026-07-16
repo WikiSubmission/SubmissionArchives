@@ -40,7 +40,7 @@ export function ArchiveBranch({
             >
                 <div className={`min-w-0 ${reverse ? 'lg:order-2' : ''}`}>
                     <Reveal>
-                        <p className="archive-kicker mb-16">{kicker}</p>
+                        <p className="archive-kicker mb-6">{kicker}</p>
                     </Reveal>
                     <Reveal delay={70}>
                         <SectionHeading numeral={numeral} title={title} />
@@ -79,7 +79,7 @@ export function ArchiveBranch({
         <article className="archive-section">
             <div className="max-w-3xl">
                 <Reveal>
-                    <p className="archive-kicker mb-16">{kicker}</p>
+                    <p className="archive-kicker mb-6">{kicker}</p>
                 </Reveal>
                 <Reveal delay={70}>
                     <SectionHeading numeral={numeral} title={title} />

@@ -92,9 +92,9 @@ export function HeroSection() {
                     </Reveal>
 
                     <Reveal delay={90}>
-                        <h1 className="mt-24 font-display text-[clamp(3.6rem,9.5vw,7.75rem)] font-medium leading-[0.8] tracking-[-0.05em] text-ed-fg">
+                        <h1 className="mt-10 font-display text-[clamp(3.6rem,9.5vw,7.75rem)] font-medium leading-[0.8] tracking-[-0.05em] text-ed-fg">
                             <span className="block">Submission</span>
-                            <span className="mt-5 flex items-center gap-5 font-ui text-[clamp(1.4rem,3vw,1.8rem)] font-bold uppercase leading-none tracking-[0.34em] text-ed-accent">
+                            <span className="mt-5 flex items-center gap-5 font-ui text-[clamp(0.82rem,1.5vw,1.05rem)] font-bold uppercase leading-none tracking-[0.34em] text-ed-accent">
                                 Archives
                                 <span
                                     aria-hidden="true"
@@ -105,7 +105,7 @@ export function HeroSection() {
                     </Reveal>
 
                     <Reveal delay={180}>
-                        <p className="mt-20 max-w-[54ch] text-[1.05rem] leading-8 text-ed-fg-muted sm:text-lg">
+                        <p className="mt-8 max-w-[54ch] text-[1.05rem] leading-8 text-ed-fg-muted sm:text-lg">
                             Explore preserved recordings, Qur&apos;an editions, newsletters, books, appendices, and searchable transcripts from the Submission archive.
                         </p>
                     </Reveal>
