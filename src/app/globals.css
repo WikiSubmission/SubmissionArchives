@@ -4,25 +4,35 @@
 
 :root,
 [data-theme="light"] {
-  /* Warm cream/ink palette. Pure white backgrounds read as glare against
-     the rest of the palette, so every token stays below white. */
-  --ed-bg: oklch(0.92 0.025 78);
+  --ed-bg: oklch(0.925 0.024 78);
   --ed-fg: oklch(0.22 0.012 70);
-  --ed-fg-muted: oklch(0.46 0.025 69);
-  --ed-rule: color-mix(in oklch, var(--ed-fg) 17%, transparent);
-  --ed-surface: oklch(0.95 0.021 79);
+  --ed-fg-muted: oklch(0.47 0.024 69);
+  --ed-rule: color-mix(in oklch, var(--ed-fg) 18%, transparent);
+  --ed-surface: oklch(0.955 0.019 79);
+  --ed-surface-strong: oklch(0.975 0.014 80);
   --ed-accent: oklch(0.54 0.15 43);
   --ed-accent-soft: oklch(0.68 0.13 47);
-  /* Backdrop specifically for full-page document viewers (PDF/book pages),
-     which render a literal white page and need a dimmer neutral surround. */
   --ed-viewer-bg: oklch(0.86 0.022 78);
-  /* Generic aliases kept for legacy utilities (loading skeletons,
-     divide-border). The --ed-* group is the single source of truth. */
+  --ed-shadow: color-mix(in oklch, var(--ed-fg) 8%, transparent);
   --background: var(--ed-bg);
   --foreground: var(--ed-fg);
   --border: var(--ed-rule);
   --muted: var(--ed-surface);
   --muted-foreground: var(--ed-fg-muted);
+}
+
+.dark,
+[data-theme="dark"] {
+  --ed-bg: oklch(0.18 0.005 70);
+  --ed-fg: oklch(0.95 0.023 78);
+  --ed-fg-muted: oklch(0.76 0.032 72);
+  --ed-rule: color-mix(in oklch, var(--ed-fg) 15%, transparent);
+  --ed-surface: oklch(0.22 0.007 70);
+  --ed-surface-strong: oklch(0.245 0.009 70);
+  --ed-accent: oklch(0.79 0.11 48);
+  --ed-accent-soft: oklch(0.61 0.14 31);
+  --ed-viewer-bg: oklch(0.18 0.005 70);
+  --ed-shadow: rgba(0, 0, 0, 0.34);
 }
 
 @theme {
@@ -36,10 +46,10 @@
   --color-ed-fg-muted: var(--ed-fg-muted);
   --color-ed-rule: var(--ed-rule);
   --color-ed-surface: var(--ed-surface);
+  --color-ed-surface-strong: var(--ed-surface-strong);
   --color-ed-accent: var(--ed-accent);
   --color-ed-accent-soft: var(--ed-accent-soft);
   --color-ed-viewer-bg: var(--ed-viewer-bg);
-
   --font-sans: var(--font-libre-franklin);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-serif: var(--font-local-superior);
@@ -49,43 +59,43 @@
   --font-ui: var(--font-libre-franklin);
 }
 
-/* Universal Arabic Font */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  background: var(--ed-bg);
+  color: var(--ed-fg);
+  font-family: var(--font-libre-franklin), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "case" 1;
+}
+
 [dir="rtl"],
 .font-arabic {
   font-family: var(--font-arabic), serif;
 }
 
-.dark,
-[data-theme="dark"] {
-  --ed-bg: oklch(0.18 0.005 70);
-  --ed-fg: oklch(0.95 0.023 78);
-  --ed-fg-muted: oklch(0.78 0.035 72);
-  --ed-rule: color-mix(in oklch, var(--ed-fg) 14%, transparent);
-  --ed-surface: oklch(0.22 0.007 70);
-  --ed-accent: oklch(0.79 0.11 48);
-  --ed-accent-soft: oklch(0.61 0.14 31);
-  --ed-viewer-bg: oklch(0.18 0.005 70);
-}
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: clip;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-libre-franklin), ui-sans-serif, system-ui, sans-serif;
-  text-rendering: optimizeLegibility;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-feature-settings: "kern" 1, "liga" 1, "case" 1;
-  transition: background-color 220ms cubic-bezier(0.16, 1, 0.3, 1), color 220ms cubic-bezier(0.16, 1, 0.3, 1);
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-block: 0;
 }
 
 h1,
@@ -98,12 +108,25 @@ p {
   text-wrap: pretty;
 }
 
-a,
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
 button,
+a,
 input,
 select,
 textarea {
   -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
 }
 
 :focus-visible {
@@ -116,39 +139,12 @@ textarea {
   color: var(--ed-fg);
 }
 
-.archive-soft-orb {
-  background:
-    radial-gradient(circle at top right, color-mix(in srgb, var(--ed-accent) 10%, transparent), transparent 30%),
-    radial-gradient(circle at bottom left, color-mix(in srgb, var(--ed-accent) 8%, transparent), transparent 26%);
-}
-
-.soft-shell {
-  background: color-mix(in oklch, var(--ed-surface) 72%, var(--ed-bg));
-  border-radius: 0.875rem;
-  border: 1px solid var(--ed-rule);
-  box-shadow: 0 1px 0 color-mix(in oklch, var(--ed-fg) 5%, transparent), 0 14px 32px color-mix(in oklch, var(--ed-fg) 7%, transparent);
-}
-
-.soft-panel {
-  background: var(--ed-surface);
-  border: 1px solid var(--ed-rule);
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 0 color-mix(in oklch, var(--ed-fg) 4%, transparent);
-}
-
-.soft-pill {
-  background: color-mix(in oklch, var(--ed-surface) 74%, var(--ed-bg));
-  border: 1px solid var(--ed-rule);
-  border-radius: 999px;
-  box-shadow: none;
-}
-
 .archive-kicker {
   color: var(--ed-accent);
   font-family: var(--font-ui), sans-serif;
-  font-size: 0.75rem;
-  font-weight: 650;
-  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -159,14 +155,18 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  border-radius: 0.625rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
   padding: 0.75rem 1.15rem;
   font-family: var(--font-ui), sans-serif;
   font-size: 0.875rem;
-  font-weight: 650;
-  letter-spacing: 0.01em;
+  font-weight: 680;
   line-height: 1.2;
-  transition: color 180ms cubic-bezier(0.16, 1, 0.3, 1), background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .archive-button:active {
@@ -184,21 +184,21 @@ textarea {
 }
 
 .archive-button-secondary {
+  border-color: var(--ed-rule);
   background: transparent;
-  border: 1px solid var(--ed-rule);
   color: var(--ed-fg);
 }
 
 .archive-button-secondary:hover {
+  border-color: color-mix(in oklch, var(--ed-accent) 62%, var(--ed-rule));
   background: var(--ed-surface);
-  border-color: color-mix(in oklch, var(--ed-accent) 55%, var(--ed-rule));
   color: var(--ed-accent);
 }
 
 .archive-input {
   min-height: 3.25rem;
   border: 1px solid var(--ed-rule);
-  border-radius: 0.75rem;
+  border-radius: 0.35rem;
   background: var(--ed-surface);
   color: var(--ed-fg);
   font-size: 1rem;
@@ -214,65 +214,43 @@ textarea {
   outline: none;
 }
 
+.soft-shell {
+  border: 1px solid var(--ed-rule);
+  border-radius: 0.625rem;
+  background: color-mix(in oklch, var(--ed-surface) 76%, var(--ed-bg));
+  box-shadow: 0 12px 34px var(--ed-shadow);
+}
+
+.soft-panel {
+  border: 1px solid var(--ed-rule);
+  border-radius: 0.5rem;
+  background: var(--ed-surface);
+}
+
+.soft-pill {
+  border: 1px solid var(--ed-rule);
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--ed-surface) 78%, var(--ed-bg));
+}
+
+.archive-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 980px;
+}
+
 .media-card-shell {
   content-visibility: auto;
-  contain-intrinsic-size: 320px;
+  contain-intrinsic-size: auto 320px;
 }
 
-@keyframes hero-image-progress {
+@keyframes archive-media-reveal {
   from {
-    transform: scaleX(0.025);
+    opacity: 0.55;
+    transform: scale(1.018);
   }
-
   to {
-    transform: scaleX(1);
-  }
-}
-
-.hero-image-progress {
-  width: 100%;
-  transform-origin: left center;
-  animation: hero-image-progress linear forwards;
-}
-
-.archive-cursor-field {
-  --cursor-x: 50%;
-  --cursor-y: 42%;
-}
-
-.archive-cursor-field::before,
-.archive-cursor-field::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.archive-cursor-field::before {
-  background-image:
-    linear-gradient(90deg, color-mix(in srgb, var(--ed-fg) 12%, transparent) 1px, transparent 1px),
-    linear-gradient(180deg, color-mix(in srgb, var(--ed-fg) 10%, transparent) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: radial-gradient(360px circle at var(--cursor-x) var(--cursor-y), #000 0%, transparent 76%);
-  opacity: 0.38;
-  animation: archive-field-drift 18s linear infinite;
-}
-
-.archive-cursor-field::after {
-  background:
-    linear-gradient(115deg, transparent 0%, color-mix(in srgb, var(--ed-accent) 9%, transparent) 46%, transparent 62%);
-  mask-image: radial-gradient(420px circle at var(--cursor-x) var(--cursor-y), #000 0%, transparent 72%);
-  opacity: 0.42;
-}
-
-@keyframes archive-field-drift {
-  from {
-    background-position: 0 0, 0 0;
-  }
-
-  to {
-    background-position: 44px 44px, 44px 44px;
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -285,30 +263,10 @@ textarea {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .hero-image-progress {
-    animation: none;
-    transform: scaleX(1);
-  }
-
-  .archive-cursor-field::before {
-    animation: none;
-  }
-}
-
-@media (max-width: 639px) {
-  .soft-shell,
-  .soft-panel,
-  .soft-pill {
-    box-shadow: 0 1px 0 color-mix(in oklch, var(--ed-fg) 5%, transparent);
-  }
-
-  .archive-cursor-field::before,
-  .archive-cursor-field::after {
-    display: none;
-  }
-
 }
 
 @media (prefers-contrast: more) {
@@ -316,18 +274,23 @@ textarea {
   [data-theme="light"],
   .dark,
   [data-theme="dark"] {
-    --ed-rule: color-mix(in oklch, var(--ed-fg) 34%, transparent);
+    --ed-rule: color-mix(in oklch, var(--ed-fg) 38%, transparent);
   }
 }
 
+@media (forced-colors: active) {
+  .archive-button,
+  .soft-shell,
+  .soft-panel,
+  .soft-pill {
+    border: 1px solid CanvasText;
+  }
+}
 
 mark.pdf-search-highlight {
-  /* Sits inside react-pdf's text-selection layer, which is stacked directly on top
-     of the rendered page image — an opaque background here would paint over and
-     hide the actual text underneath, so this needs to stay translucent. */
-  background-color: color-mix(in srgb, var(--ed-accent) 45%, transparent);
   border-radius: 2px;
   padding: 0 1px;
+  background-color: color-mix(in srgb, var(--ed-accent) 45%, transparent);
   mix-blend-mode: multiply;
 }
 

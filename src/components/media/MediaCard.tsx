@@ -1,141 +1,117 @@
-'use client';
+import Image from 'next/image';
 
-import Image from "next/image";
-import { useState } from "react";
-import { Media, ThemeColors } from "@/types/media";
-import quranStudyThumbnails from "@/data/quran_study_thumbnails.json";
-import { getPublicAssetUrl } from "@/lib/mediaAssets";
+import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
+import { getPublicAssetUrl } from '@/lib/mediaAssets';
+import type { Media } from '@/types/media';
 
-interface MediaCardProps {
-    item: Media;
-    theme: ThemeColors;
+const DEFAULT_MEDIA_THUMBNAIL = '/images/placeholders/rashad-khalifa.png';
+const DEFAULT_AUDIO_THUMBNAIL = '/content/audios/messenger-audios/default.jpg';
+
+function formatDuration(value: number): string {
+    const seconds = Number.isFinite(value) && value > 0 ? Math.floor(value) : 0;
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = seconds % 60;
+
+    return hours > 0
+        ? `${hours}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`
+        : `${minutes}:${String(remainingSeconds).padStart(2, '0')}`;
 }
 
-function formatDuration(seconds: number): string {
-    const hrs = Math.floor(seconds / 3600);
-    const mins = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
-    if (hrs > 0) {
-        return `${hrs}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+function getQuranStudyNumber(item: Media): number | null {
+    if (typeof item.primaryNumber === 'number' && Number.isFinite(item.primaryNumber)) {
+        return item.primaryNumber;
     }
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+
+    const idMatch = item.id.match(/^quran-study\/(\d+)/i);
+    if (idMatch) return Number(idMatch[1]);
+
+    const titleMatch = item.displayTitle.match(/^(?:QS\s*)?(\d{1,3})\b/i);
+    return titleMatch ? Number(titleMatch[1]) : null;
 }
 
-function getThumbnailSrc(item: Media): string {
-    // 1. Check for explicit thumbnail override (used by video-programs in content folder)
-    if (item.thumbnailOverride) {
-        return getPublicAssetUrl(item.thumbnailOverride);
-    }
-
-    let thumbnailSrc = '/images/placeholders/rashad-khalifa.png';
+export function getThumbnailSrc(item: Media): string {
+    if (item.thumbnailOverride) return getPublicAssetUrl(item.thumbnailOverride);
 
     if (item.type === 'audio' || item.type === 'messenger-audio') {
-        thumbnailSrc = '/content/audios/messenger-audios/default.jpg';
-    } else if (item.type === 'quran-study') {
-        const match = item.displayTitle.match(/^(\d+)\)/) || item.id.match(/quran-study-v2\/(\d+)/);
-        if (match) {
-            const num = parseInt(match[1]);
-            thumbnailSrc = (quranStudyThumbnails as Record<string, string>)[String(num)] || thumbnailSrc;
+        return getPublicAssetUrl(DEFAULT_AUDIO_THUMBNAIL);
+    }
+
+    if (item.type === 'quran-study') {
+        const number = getQuranStudyNumber(item);
+        if (number !== null) {
+            const thumbnail = (quranStudyThumbnails as Record<string, string>)[String(number)];
+            if (thumbnail) return getPublicAssetUrl(thumbnail);
         }
     }
 
-    // Encode the path if it's a local content folder to handle spaces/special characters
-    return thumbnailSrc.startsWith('/content/') ? getPublicAssetUrl(thumbnailSrc) : thumbnailSrc;
+    return DEFAULT_MEDIA_THUMBNAIL;
 }
 
-export function MediaCard({ item }: MediaCardProps) {
+export function MediaCard({ item }: { item: Media }) {
     const thumbnailSrc = getThumbnailSrc(item);
-    const [failed, setFailed] = useState(false);
 
     return (
-        <article className="media-card-shell group flex h-full flex-col gap-4 border-t border-ed-rule pt-3 transition-colors duration-300">
-            {/* Thumbnail */}
-            <div className="relative aspect-video overflow-hidden rounded-lg border border-ed-rule bg-ed-surface">
+        <article className="media-card-shell group flex h-full flex-col border-t border-ed-rule pt-3">
+            <div className="relative aspect-video overflow-hidden border border-ed-rule bg-ed-surface">
                 <Image
-                    src={failed ? '/images/placeholders/rashad-khalifa.png' : thumbnailSrc}
-                    alt={item.displayTitle}
+                    src={thumbnailSrc}
+                    alt=""
                     fill
                     quality={60}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                    onError={() => setFailed(true)}
+                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.025]"
                 />
-
-                {/* Duration badge — bottom right like YouTube */}
                 {item.duration_seconds ? (
-                    <div className="absolute bottom-2 right-2 rounded bg-ed-bg/90 px-2 py-1 font-mono text-xs font-medium tabular-nums text-ed-fg">
+                    <span className="absolute bottom-2 right-2 bg-[#111111]/88 px-2 py-1 font-mono text-xs font-medium tabular-nums text-white">
                         {formatDuration(item.duration_seconds)}
-                    </div>
+                    </span>
                 ) : null}
             </div>
 
-            {/* Content */}
-            <div className="flex flex-1 flex-col gap-2 pb-3 font-ui">
-                <h3 className="line-clamp-2 font-serif text-[1.05rem] font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+            <div className="flex flex-1 flex-col py-4">
+                <h3 className="line-clamp-2 font-display text-[1.15rem] font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
                     {item.displayTitle}
                 </h3>
-
-                <div className="line-clamp-1 text-xs leading-5 text-ed-fg-muted">
-                    <span>{item.author}</span>
-                    {item.displayDate ? (
-                        <>
-                            <span className="mx-1">•</span>
-                            <span>{item.displayDate}</span>
-                        </>
-                    ) : null}
-                </div>
+                <p className="mt-2 line-clamp-1 text-xs leading-5 text-ed-fg-muted">
+                    {item.author}
+                    {item.displayDate ? <><span aria-hidden="true"> · </span>{item.displayDate}</> : null}
+                </p>
             </div>
         </article>
     );
 }
 
-export function MediaList({ item }: MediaCardProps) {
+export function MediaList({ item }: { item: Media }) {
     const thumbnailSrc = getThumbnailSrc(item);
-    const [failed, setFailed] = useState(false);
 
     return (
-        <div className="group flex gap-4 border-t border-ed-rule py-4 font-ui">
-            {/* Thumbnail */}
-            <div className="relative aspect-video w-40 flex-shrink-0 overflow-hidden rounded-lg border border-ed-rule bg-ed-surface sm:w-48">
+        <article className="group grid gap-4 border-t border-ed-rule py-4 sm:grid-cols-[12rem_1fr] sm:items-center">
+            <div className="relative aspect-video overflow-hidden border border-ed-rule bg-ed-surface">
                 <Image
-                    src={failed ? '/images/placeholders/rashad-khalifa.png' : thumbnailSrc}
-                    alt={item.displayTitle}
+                    src={thumbnailSrc}
+                    alt=""
                     fill
                     quality={60}
-                    sizes="(max-width: 640px) 160px, 192px"
-                    className="object-cover"
-                    onError={() => setFailed(true)}
+                    sizes="(max-width: 640px) 100vw, 192px"
+                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.025]"
                 />
-
                 {item.duration_seconds ? (
-                    <div className="absolute bottom-1.5 right-1.5 rounded bg-ed-bg/90 px-2 py-1 font-mono text-xs font-medium tabular-nums text-ed-fg">
+                    <span className="absolute bottom-2 right-2 bg-[#111111]/88 px-2 py-1 font-mono text-xs font-medium tabular-nums text-white">
                         {formatDuration(item.duration_seconds)}
-                    </div>
+                    </span>
                 ) : null}
             </div>
 
-            {/* Content */}
-            <div className="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1 pr-2">
-                <h3 className="line-clamp-2 font-serif text-base font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+            <div className="min-w-0">
+                <h3 className="line-clamp-2 font-display text-xl font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
                     {item.displayTitle}
                 </h3>
-
-                <div className="line-clamp-1 text-xs leading-5 text-ed-fg-muted">
-                    <span>{item.author}</span>
-                    {item.displayDate ? (
-                        <>
-                            <span className="mx-1">•</span>
-                            <span>{item.displayDate}</span>
-                        </>
-                    ) : null}
-                </div>
-
-                {item.duration_seconds ? (
-                    <div className="font-mono text-xs text-ed-fg-muted tabular-nums">
-                        {formatDuration(item.duration_seconds)}
-                    </div>
-                ) : null}
+                <p className="mt-2 line-clamp-1 text-xs leading-5 text-ed-fg-muted">
+                    {item.author}
+                    {item.displayDate ? <><span aria-hidden="true"> · </span>{item.displayDate}</> : null}
+                </p>
             </div>
-        </div>
+        </article>
     );
 }

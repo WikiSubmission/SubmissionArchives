@@ -2,8 +2,6 @@
 
 import { useMemo } from 'react';
 import { PaginatedMediaGrid } from '@/components/media/PaginatedMediaGrid';
-import { getTheme } from '@/lib/theme';
-import { useTheme } from '@/components/providers/ThemeProvider';
 import type { Media } from '@/types/media';
 
 type AudioSection = {
@@ -14,9 +12,6 @@ type AudioSection = {
 };
 
 export default function AudiosPageClient({ initialAudios }: { initialAudios: Media[] }) {
-    const { darkMode } = useTheme();
-    const theme = getTheme(darkMode);
-
     const categorizedAudios = useMemo<AudioSection[]>(() => {
         const sections: AudioSection[] = [
             {
@@ -83,7 +78,7 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
                                     </span>
                                 </div>
 
-                                <PaginatedMediaGrid media={section.audios} theme={theme} viewMode="grid" label={section.title} />
+                                <PaginatedMediaGrid media={section.audios} viewMode="grid" label={section.title} />
                             </section>
                         ))}
                     </div>

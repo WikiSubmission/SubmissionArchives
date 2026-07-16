@@ -2,94 +2,90 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
-import { Menu, MessageCircle, Moon, Sun, X, Youtube } from 'lucide-react';
-import { useTheme } from '@/components/providers/ThemeProvider';
 import { usePathname } from 'next/navigation';
+import { Menu, MessageCircle, Moon, Sun, X, Youtube } from 'lucide-react';
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
+
 import { PRIMARY_NAV } from '@/config/navigation';
-import { YOUTUBE_URL, DISCORD_URL } from '@/config/social';
+import { DISCORD_URL, YOUTUBE_URL } from '@/config/social';
+import { useTheme } from '@/components/providers/ThemeProvider';
 
 export default function Header() {
     const { darkMode, toggleDarkMode } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [lastPathname, setLastPathname] = useState<string | null>(null);
-    const menuButtonRef = useRef<HTMLButtonElement>(null);
     const pathname = usePathname();
+    const [previousPathname, setPreviousPathname] = useState(pathname);
+    const menuId = useId();
+    const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
 
-    const navItems = PRIMARY_NAV;
-
-    // Close the mobile menu on navigation, adjusting state during render
-    // instead of in an effect (https://react.dev/learn/you-might-not-need-an-effect).
-    if (lastPathname !== pathname) {
-        setLastPathname(pathname);
-        if (isMenuOpen) setIsMenuOpen(false);
+    if (pathname !== previousPathname) {
+        setPreviousPathname(pathname);
+        setIsMenuOpen(false);
     }
 
     useEffect(() => {
         if (!isMenuOpen) return;
 
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        window.requestAnimationFrame(() => firstMenuLinkRef.current?.focus());
+
         const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                setIsMenuOpen(false);
-                menuButtonRef.current?.focus();
-            }
+            if (event.key !== 'Escape') return;
+            setIsMenuOpen(false);
+            menuButtonRef.current?.focus();
         };
 
         document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            document.removeEventListener('keydown', handleKeyDown);
+        };
     }, [isMenuOpen]);
 
     return (
-        <header className="sticky top-0 z-50 border-b border-ed-rule bg-ed-bg text-ed-fg">
-            <div className="mx-auto max-w-[1440px] px-4 py-3 sm:px-6 lg:px-10">
-                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
-                    <div className="flex min-w-0 items-center gap-3">
-                        <Link href="/" className="group inline-flex min-h-11 min-w-0 items-center gap-3" aria-label="Submission Archives home">
-                            <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-ed-rule bg-[#111111] transition-colors duration-300 group-hover:border-ed-accent">
-                                <Image
-                                    src="/submission-logo.png"
-                                    alt="Submission Archives"
-                                    width={36}
-                                    height={36}
-                                    className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-110"
-                                />
-                            </div>
+        <header className="sticky top-0 z-50 border-b border-ed-rule bg-ed-bg/96 text-ed-fg supports-[backdrop-filter]:bg-ed-bg/90 supports-[backdrop-filter]:backdrop-blur-md">
+            <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
+                <div className="grid min-h-[4.5rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+                    <Link href="/" className="group inline-flex min-h-11 min-w-0 items-center gap-3" aria-label="Submission Archives home">
+                        <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-ed-rule bg-[#111111] transition-colors group-hover:border-ed-accent">
+                            <Image
+                                src="/assets/brand/submission-archives-mark.png"
+                                alt=""
+                                width={44}
+                                height={44}
+                                preload
+                                className="h-10 w-10 object-contain p-0.5 transition-transform duration-300 group-hover:scale-[1.04]"
+                            />
+                        </span>
+                        <span className="min-w-0 leading-none">
+                            <span className="block truncate text-[0.82rem] font-bold uppercase tracking-[0.08em] text-ed-fg">Submission</span>
+                            <span className="mt-1 block truncate font-display text-[1.03rem] text-ed-fg-muted transition-colors group-hover:text-ed-accent">Archives</span>
+                        </span>
+                    </Link>
 
-                            <div className="flex min-w-0 flex-col leading-none">
-                                <span className="font-sans text-[0.95rem] font-bold uppercase tracking-[0.02em] text-ed-fg transition-colors duration-300 group-hover:text-ed-accent">
-                                    SUBMISSION
-                                </span>
-                                <span className="mt-1 font-sans text-[0.68rem] font-medium uppercase tracking-[0.18em] text-ed-fg-muted transition-colors duration-300 group-hover:text-ed-fg">
-                                    ARCHIVES
-                                </span>
-                            </div>
-                        </Link>
-                    </div>
-
-                    <div className="hidden lg:flex justify-center">
-                        <nav aria-label="Primary" className="flex items-center gap-1">
-                            {navItems.map((item) => {
-                                const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
-                                return (
-                                    <Link
-                                        key={item.name}
-                                        href={item.href}
-                                        aria-current={isActive ? 'page' : undefined}
-                                        className={`inline-flex min-h-11 items-center rounded-lg px-3 py-2 text-[0.75rem] font-semibold uppercase tracking-[0.1em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
-                                            isActive
-                                                ? 'bg-ed-surface text-ed-fg'
-                                                : 'text-ed-fg-muted hover:bg-ed-surface hover:text-ed-fg'
-                                        }`}
-                                    >
-                                        {item.name}
-                                    </Link>
-                                );
-                            })}
-                        </nav>
-                    </div>
+                    <nav aria-label="Primary" className="hidden items-stretch lg:flex">
+                        {PRIMARY_NAV.map((item) => {
+                            const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    aria-current={isActive ? 'page' : undefined}
+                                    className={`relative inline-flex min-h-11 items-center px-3 text-[0.72rem] font-semibold uppercase tracking-[0.1em] transition-colors ${
+                                        isActive ? 'text-ed-fg' : 'text-ed-fg-muted hover:text-ed-fg'
+                                    }`}
+                                >
+                                    {item.name}
+                                    <span className={`absolute inset-x-3 bottom-0 h-px bg-ed-accent transition-transform ${isActive ? 'scale-x-100' : 'scale-x-0'}`} />
+                                </Link>
+                            );
+                        })}
+                    </nav>
 
                     <div className="flex items-center justify-end gap-2">
-                        <div className="-my-1 hidden items-center gap-2 lg:flex">
+                        <div className="hidden items-center gap-1 lg:flex">
                             <HeaderIconButton
                                 label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
                                 onClick={toggleDarkMode}
@@ -97,24 +93,18 @@ export default function Header() {
                             >
                                 {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                             </HeaderIconButton>
-
-                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}>
-                                <Youtube className="h-4 w-4" />
-                            </HeaderIconLink>
-
-                            <HeaderIconLink label="Discord" href={DISCORD_URL}>
-                                <MessageCircle className="h-4 w-4" />
-                            </HeaderIconLink>
+                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
+                            <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
                         </div>
 
                         <button
                             ref={menuButtonRef}
                             type="button"
                             onClick={() => setIsMenuOpen((open) => !open)}
-                            className="-my-1 flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-ed-rule bg-transparent p-2 text-ed-fg-muted transition hover:bg-ed-surface hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent lg:hidden"
-                            aria-label="Menu"
+                            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                             aria-expanded={isMenuOpen}
-                            aria-controls="mobile-menu"
+                            aria-controls={menuId}
+                            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-fg lg:hidden"
                         >
                             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                         </button>
@@ -123,30 +113,39 @@ export default function Header() {
             </div>
 
             {isMenuOpen ? (
-                <div className="border-t border-ed-rule bg-ed-bg px-4 py-4 sm:px-6 lg:hidden">
-                    <nav id="mobile-menu" aria-label="Primary">
-                        <div className="flex flex-col gap-2">
-                            {navItems.map((item) => {
+                <div className="fixed inset-0 top-[4.5rem] z-50 lg:hidden">
+                    <button
+                        type="button"
+                        aria-label="Close navigation menu"
+                        className="absolute inset-0 bg-black/45"
+                        onClick={() => setIsMenuOpen(false)}
+                    />
+                    <div
+                        id={menuId}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Site navigation"
+                        className="relative ml-auto flex h-full w-[min(92vw,26rem)] flex-col border-l border-ed-rule bg-ed-bg px-5 py-6 shadow-2xl"
+                    >
+                        <nav aria-label="Mobile primary" className="flex flex-col">
+                            {PRIMARY_NAV.map((item, index) => {
                                 const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
                                 return (
                                     <Link
                                         key={item.name}
+                                        ref={index === 0 ? firstMenuLinkRef : undefined}
                                         href={item.href}
-                                        onClick={() => setIsMenuOpen(false)}
                                         aria-current={isActive ? 'page' : undefined}
-                                        className={`rounded-lg border px-4 py-3 text-sm font-semibold tracking-[0.02em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
-                                            isActive
-                                                ? 'border-ed-rule bg-ed-surface text-ed-fg'
-                                                : 'border-transparent text-ed-fg-muted hover:bg-ed-surface hover:text-ed-fg'
-                                        }`}
+                                        className={`flex min-h-14 items-center justify-between border-b border-ed-rule text-lg ${isActive ? 'text-ed-accent' : 'text-ed-fg'}`}
                                     >
                                         {item.name}
+                                        <span className="font-mono text-xs text-ed-fg-muted">{String(index + 1).padStart(2, '0')}</span>
                                     </Link>
                                 );
                             })}
-                        </div>
+                        </nav>
 
-                        <div className="mt-4 flex items-center gap-2 border-t border-ed-rule pt-4">
+                        <div className="mt-auto grid grid-cols-3 gap-2 border-t border-ed-rule pt-5">
                             <HeaderIconButton
                                 label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
                                 onClick={toggleDarkMode}
@@ -154,62 +153,38 @@ export default function Header() {
                             >
                                 {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                             </HeaderIconButton>
-
-                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}>
-                                <Youtube className="h-4 w-4" />
-                            </HeaderIconLink>
-
-                            <HeaderIconLink label="Discord" href={DISCORD_URL}>
-                                <MessageCircle className="h-4 w-4" />
-                            </HeaderIconLink>
+                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
+                            <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
                         </div>
-                    </nav>
+                    </div>
                 </div>
             ) : null}
         </header>
     );
 }
 
-function HeaderIconButton({
-    children,
-    label,
-    onClick,
-    pressed,
-}: {
-    children: React.ReactNode;
-    label: string;
-    onClick?: () => void;
-    pressed?: boolean;
-}) {
+function HeaderIconButton({ children, label, onClick, pressed }: { children: ReactNode; label: string; onClick: () => void; pressed?: boolean }) {
     return (
         <button
             type="button"
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-ed-rule bg-transparent p-2 text-ed-fg-muted transition hover:bg-ed-surface hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
         >
             {children}
         </button>
     );
 }
 
-function HeaderIconLink({
-    children,
-    label,
-    href,
-}: {
-    children: React.ReactNode;
-    label: string;
-    href: string;
-}) {
+function HeaderIconLink({ children, label, href }: { children: ReactNode; label: string; href: string }) {
     return (
         <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={label}
-            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-ed-rule bg-transparent p-2 text-ed-fg-muted transition hover:bg-ed-surface hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+            aria-label={`${label} (opens in a new tab)`}
+            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
         >
             {children}
         </a>

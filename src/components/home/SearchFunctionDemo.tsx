@@ -166,12 +166,7 @@ function useDemoTimeline({
     const [cycle, setCycle] = useState(0);
 
     useEffect(() => {
-        if (reducedMotion) {
-            setPhase('player');
-            return;
-        }
-
-        if (!enabled || isPaused) return;
+        if (!enabled || isPaused || reducedMotion) return;
 
         const timeout = window.setTimeout(() => {
             const currentIndex = PHASES.indexOf(phase);
@@ -189,12 +184,12 @@ function useDemoTimeline({
 
     const restart = useCallback(() => {
         setCycle((currentCycle) => currentCycle + 1);
-        setPhase(reducedMotion ? 'player' : 'query');
+        setPhase('query');
         setIsPaused(false);
-    }, [reducedMotion]);
+    }, []);
 
     return {
-        phase,
+        phase: reducedMotion ? 'player' : phase,
         cycle,
         isPaused,
         setIsPaused,

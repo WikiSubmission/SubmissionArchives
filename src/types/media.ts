@@ -30,19 +30,3 @@ export interface Newsletter {
     filename: string;
     pdfLink?: string;
 }
-
-export interface ThemeColors {
-    bg: string;
-    card: string;
-    border: string;
-    borderHover: string;
-    text: string;
-    textMuted: string;
-    textVeryMuted: string;
-    input: string;
-    header: string;
-    statsBar: string;
-    button: string;
-    highlight?: string;
-    yearHeader?: string;
-}

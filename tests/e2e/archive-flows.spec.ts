@@ -42,9 +42,13 @@ test('home route exposes primary archive pathways without mobile overflow', asyn
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('/');
 
+    const main = page.getByRole('main');
     await expect(page.getByRole('heading', { level: 1, name: 'SUBMISSION ARCHIVES' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Start with the archive' })).toHaveAttribute('href', '/videos');
-    await expect(page.getByRole('link', { name: 'Search the corpus' })).toHaveAttribute('href', '/search');
+    await expect(main.getByRole('link', { name: 'Browse recordings' })).toHaveAttribute('href', '/videos');
+    await expect(main.getByRole('link', { name: 'Search the archive', exact: true }).first()).toHaveAttribute(
+        'href',
+        '/search',
+    );
 
     const horizontalOverflow = await page.evaluate(() =>
         document.documentElement.scrollWidth - document.documentElement.clientWidth,

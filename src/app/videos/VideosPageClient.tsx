@@ -2,8 +2,6 @@
 
 import { useMemo } from 'react';
 import { PaginatedMediaGrid } from '@/components/media/PaginatedMediaGrid';
-import { getTheme } from '@/lib/theme';
-import { useTheme } from '@/components/providers/ThemeProvider';
 import type { Media } from '@/types/media';
 
 type VideoSection = {
@@ -14,9 +12,6 @@ type VideoSection = {
 };
 
 export default function VideosPageClient({ initialVideos }: { initialVideos: Media[] }) {
-    const { darkMode } = useTheme();
-    const theme = getTheme(darkMode);
-
     const categorizedVideos = useMemo<VideoSection[]>(() => {
         const sections: VideoSection[] = [
             {
@@ -119,7 +114,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                     </span>
                                 </div>
 
-                                <PaginatedMediaGrid media={section.videos} theme={theme} viewMode="grid" label={section.title} />
+                                <PaginatedMediaGrid media={section.videos} viewMode="grid" label={section.title} />
                             </section>
                         ))}
                     </div>

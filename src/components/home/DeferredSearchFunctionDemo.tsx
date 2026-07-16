@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
 
 const SearchFunctionDemo = dynamic(() => import('./SearchFunctionDemo'), {
+    ssr: false,
     loading: () => <SearchDemoPlaceholder />,
 });
 
@@ -15,13 +16,18 @@ export function DeferredSearchFunctionDemo() {
         const host = hostRef.current;
         if (!host || shouldLoad) return;
 
+        if (!('IntersectionObserver' in window)) {
+            queueMicrotask(() => setShouldLoad(true));
+            return;
+        }
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (!entry.isIntersecting) return;
                 setShouldLoad(true);
                 observer.disconnect();
             },
-            { rootMargin: '500px 0px', threshold: 0.01 },
+            { rootMargin: '600px 0px', threshold: 0.01 },
         );
 
         observer.observe(host);
@@ -38,7 +44,7 @@ export function DeferredSearchFunctionDemo() {
 function SearchDemoPlaceholder() {
     return (
         <div
-            className="min-h-[34rem] w-full animate-pulse rounded-[1rem] border border-ed-rule bg-ed-surface"
+            className="min-h-[34rem] w-full border border-ed-rule bg-ed-surface motion-safe:animate-pulse motion-reduce:animate-none"
             aria-hidden="true"
         />
     );
