@@ -5,6 +5,7 @@ import { ArrowUpRight, Newspaper } from 'lucide-react';
 
 import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
 import { getNewsletterIssues } from '@/lib/newsletterCatalog';
+import { getPublicAssetUrl } from '@/lib/mediaAssets';
 
 export const revalidate = 3600;
 
@@ -73,7 +74,7 @@ export default function WrittenArchivePage() {
                                 <div className="relative aspect-[2/3] w-full overflow-hidden rounded-md border border-ed-rule bg-ed-surface transition-colors group-hover:border-ed-accent">
                                     {book.thumbnailOverride ? (
                                         <Image
-                                            src={book.thumbnailOverride}
+                                            src={getPublicAssetUrl(book.thumbnailOverride)}
                                             alt={`Cover of ${book.title}`}
                                             fill
                                             unoptimized={true}
