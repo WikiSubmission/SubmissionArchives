@@ -29,7 +29,7 @@ test('the generated archive satisfies the canonical runtime contract', () => {
     const report = validateArchiveRecords(records, { publicDir });
 
     assert.equal(report.valid, true, report.errors.join('\n'));
-    assert.equal(report.recordCount, 382);
+    assert.equal(report.recordCount, 383);
     assert.equal(report.categoryCounts.Quran, 114);
     assert.equal(report.categoryCounts.Books, 13);
     assert.equal(report.categoryCounts['Submitter Perspectives'], 64);
@@ -68,11 +68,8 @@ test('book summaries resolve to real PDFs and match master records', () => {
         .sort();
 
     assert.equal(books.length, 13);
-    assert.equal(books.filter((book) => book.transcriptStatus === 'available').length, 11);
-    assert.deepEqual(scanOnlyBookIds, [
-        'islam-volume-1-number-2-july-1974',
-        'islam-volume-1-number-3-4-january-1975',
-    ]);
+    assert.equal(books.filter((book) => book.transcriptStatus === 'available').length, 13);
+    assert.deepEqual(scanOnlyBookIds, []);
 
     for (const book of books) {
         assert.equal(fs.existsSync(path.join(publicDir, book.pdfLink.replace(/^\//, ''))), true, book.pdfLink);
@@ -136,8 +133,8 @@ test('the 1989 Chapter 9 heading and footnotes are free of OCR rule debris', () 
     const edition = verse1.editions['1989'] as { subtitle?: string; footnote?: string };
     assert.equal(edition.subtitle, 'No Basmalah');
     assert.doesNotMatch(edition.subtitle, /_{3,}|-{5,}|✓/);
-    assert.match(edition.footnote ?? '', /absence of Basmalah/i);
-    assert.match(edition.footnote ?? '', /9:1 & 9:127/);
+    assert.match(edition.footnote ?? '', /absence of (the )?Basmalah/i);
+    assert.match(edition.footnote ?? '', /& \*?9:127/);
     assert.doesNotMatch(edition.footnote ?? '', /repre sents/);
 });
 

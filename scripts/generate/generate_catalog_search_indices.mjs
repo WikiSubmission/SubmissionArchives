@@ -849,6 +849,40 @@ function buildQuranIndex() {
     list.sort((a, b) => a.verseNumber - b.verseNumber);
   }
 
+  // Ensure verses present in historical editions but missing in 1992 (e.g. 9:128, 9:129) are added
+  for (const edition of [{ year: '1989', ed: ed1989 }, { year: '1981', ed: ed1981 }]) {
+    for (const [verseId, edVerse] of edition.ed) {
+      const match = verseId.match(/^(\d+):(\d+)$/);
+      if (!match) continue;
+      const chapterNumber = Number(match[1]);
+      const verseNumber = Number(match[2]);
+      if (!chapterNumber || !verseNumber) continue;
+      
+      let list = versesByChapter.get(chapterNumber);
+      if (!list) {
+        list = [];
+        versesByChapter.set(chapterNumber, list);
+      }
+      
+      let verse = list.find(v => v.verseNumber === verseNumber);
+      if (!verse) {
+        verse = {
+          verseNumber,
+          verseId,
+          english: '',
+          editions: {}
+        };
+        list.push(verse);
+        // Resort if we added a new verse
+        list.sort((a, b) => a.verseNumber - b.verseNumber);
+      }
+      
+      if (!verse.editions[edition.year]) {
+        verse.editions[edition.year] = edVerse;
+      }
+    }
+  }
+
   const quranChapters = [];
   const quranMasterItems = [];
 
