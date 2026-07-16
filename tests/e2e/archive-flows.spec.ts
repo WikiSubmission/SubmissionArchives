@@ -1,11 +1,16 @@
 import { expect, test } from '@playwright/test';
 
+import catalogValidation from '../../public/data/generated_indices/CATALOG_VALIDATION.json';
+
 test('health endpoint reports the validated catalog as ready', async ({ request }) => {
     const response = await request.get('/api/health');
     expect(response.ok()).toBe(true);
     await expect(response.json()).resolves.toMatchObject({
         status: 'ok',
-        catalog: { records: 382, segments: 113886 },
+        catalog: {
+            records: catalogValidation.recordCount,
+            segments: catalogValidation.segmentCount,
+        },
     });
 });
 
@@ -50,10 +55,12 @@ test('home route exposes primary archive pathways without mobile overflow', asyn
         '/search',
     );
 
+    // scroll-gutter reservation can make scrollWidth slightly smaller than
+    // clientWidth; only a positive difference means real horizontal overflow.
     const horizontalOverflow = await page.evaluate(() =>
         document.documentElement.scrollWidth - document.documentElement.clientWidth,
     );
-    expect(horizontalOverflow).toBe(0);
+    expect(horizontalOverflow).toBeLessThanOrEqual(0);
 });
 
 test('book-only search returns a page-specific reader link', async ({ page }) => {
