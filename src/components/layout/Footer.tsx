@@ -1,126 +1,104 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircle, Youtube } from 'lucide-react';
+import type { ReactNode } from 'react';
+
+import { FOOTER_NAV } from '@/config/navigation';
+import { DISCORD_URL, LEGAL_LINKS, YOUTUBE_URL } from '@/config/social';
 
 export default function Footer() {
-    const sections = [
-        {
-            title: 'Archive',
-            links: [
-                { name: 'Video Library', href: '/videos' },
-                { name: 'Audio Library', href: '/audios' },
-                { name: 'Search Engine', href: '/search' },
-            ],
-        },
-        {
-            title: 'Collections',
-            links: [
-                { name: 'Video Programs', href: '/videos' },
-                { name: 'Friday Sermons', href: '/videos' },
-                { name: 'Quran Studies', href: '/audios' },
-                { name: 'Messenger Audios', href: '/audios' },
-            ],
-        },
-        {
-            title: 'Community',
-            links: [
-                { name: 'YouTube', href: 'https://youtube.com/@submissionarchives' },
-                { name: 'Discord', href: 'https://discord.gg/submissionserver' },
-                { name: 'Newsletter Search', href: '/search?filters=perspective' },
-            ],
-        },
-    ];
-
     return (
-        <footer className="w-full border-t border-black/5 bg-[#f7f2eb] px-6 pb-12 pt-20 dark:border-white/5 dark:bg-[#0a0a0a] sm:px-8 lg:px-10 text-ed-fg">
+        <footer className="border-t border-ed-rule bg-ed-bg px-4 pb-8 pt-14 text-ed-fg sm:px-6 lg:px-10 lg:pt-20">
             <div className="mx-auto max-w-[1440px]">
-                <div className="grid gap-14 rounded-[1.25rem] border border-black/5 bg-black/[0.02] p-6 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_10px_40px_rgba(0,0,0,0.02)] backdrop-blur-2xl dark:border-white/5 dark:bg-[#111111]/40 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_60px_rgba(0,0,0,0.5)] sm:p-8 lg:grid-cols-[1.1fr_1fr_0.9fr]">
-                    <div className="space-y-7">
-                        <Link href="/" className="group inline-flex items-center gap-3">
-                            <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-black/10 bg-[#111111]/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_12px_30px_rgba(0,0,0,0.16)] dark:border-white/10">
+                <div className="grid gap-12 lg:grid-cols-[1.15fr_1.85fr] lg:gap-20">
+                    <div>
+                        <Link href="/" className="group inline-flex min-h-11 items-center gap-4" aria-label="Submission Archives home">
+                            <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-ed-rule bg-[#111111]">
                                 <Image
-                                    src="/submission-logo.png"
-                                    alt="Submission Archives"
-                                    width={40}
-                                    height={40}
-                                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                    src="/assets/brand/submission-archives-mark.png"
+                                    alt=""
+                                    width={56}
+                                    height={56}
+                                    className="h-12 w-12 object-contain p-1 transition-transform duration-300 group-hover:scale-[1.04]"
                                 />
-                            </div>
-                            <div className="leading-none">
-                                <p className="font-serif text-xl text-ed-fg">Submission</p>
-                                <p className="mt-1 text-[0.63rem] uppercase tracking-[0.32em] text-ed-fg-muted">
-                                    Archives
-                                </p>
-                            </div>
+                            </span>
+                            <span>
+                                <span className="block font-display text-2xl leading-none text-ed-fg">Submission Archives</span>
+                                <span className="mt-2 block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ed-fg-muted">Digital preservation project</span>
+                            </span>
                         </Link>
 
-                        <p className="max-w-sm text-sm leading-7 text-ed-fg-muted opacity-85">
-                            SubmissionArchives platform is designed to preserve, catalogue, and display works in relation to Submission and the Messenger of the Covenant, Dr. Rashad Khalifa. Transcriptions may be error-prone, please use personal judgement if you notice any errors. Verify everything you cite (17:36).
+                        <p className="mt-7 max-w-[48ch] text-[0.94rem] leading-7 text-ed-fg-muted">
+                            Submission Archives preserves works related to Submission and the Messenger of the Covenant, Dr. Rashad Khalifa. Transcriptions can contain errors. Verify passages against their original recordings or scans before citing them (17:36).
                         </p>
 
-                        <div className="flex items-center gap-3">
-                            <FooterIcon href="https://youtube.com/@submissionarchives">
-                                <Youtube className="h-4 w-4" />
-                            </FooterIcon>
-                            <FooterIcon href="https://discord.gg/submissionserver">
-                                <MessageCircle className="h-4 w-4" />
-                            </FooterIcon>
+                        <div className="mt-7 flex items-center gap-2">
+                            <FooterIcon href={YOUTUBE_URL} label="YouTube"><Youtube className="h-4 w-4" /></FooterIcon>
+                            <FooterIcon href={DISCORD_URL} label="Discord"><MessageCircle className="h-4 w-4" /></FooterIcon>
                         </div>
                     </div>
 
-                    <div className="grid gap-10 sm:grid-cols-3 lg:col-span-2">
-                        {sections.map((section) => (
-                            <div key={section.title} className="space-y-5">
-                                <p className="text-[0.66rem] uppercase tracking-[0.24em] text-ed-fg-muted">
+                    <nav aria-label="Footer" className="grid gap-10 sm:grid-cols-3">
+                        {FOOTER_NAV.map((section) => (
+                            <div key={section.title}>
+                                <h2 className="border-b border-ed-rule pb-3 text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
                                     {section.title}
-                                </p>
-                                <ul className="space-y-2">
+                                </h2>
+                                <ul className="mt-3">
                                     {section.links.map((link) => (
                                         <li key={link.name}>
-                                            <Link
-                                                href={link.href}
-                                                className="inline-flex rounded-full px-3 py-1.5 text-sm text-ed-fg-muted transition-colors hover:bg-black/5 hover:text-ed-fg dark:hover:bg-white/5"
-                                            >
-                                                {link.name}
-                                            </Link>
+                                            {link.href.startsWith('http') ? (
+                                                <a
+                                                    href={link.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex min-h-11 items-center text-[0.92rem] text-ed-fg-muted transition-colors hover:text-ed-accent"
+                                                >
+                                                    {link.name}<span className="sr-only"> (opens in a new tab)</span>
+                                                </a>
+                                            ) : (
+                                                <Link href={link.href} className="inline-flex min-h-11 items-center text-[0.92rem] text-ed-fg-muted transition-colors hover:text-ed-accent">
+                                                    {link.name}
+                                                </Link>
+                                            )}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         ))}
-                    </div>
+                    </nav>
                 </div>
 
-                <div className="mt-8 flex flex-col gap-4 px-2 pt-4 text-[0.64rem] uppercase tracking-[0.22em] text-ed-fg-muted sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex flex-wrap items-center gap-4">
-                        <span>© 2026 Submission Archives</span>
-                        <Link href="https://wikisubmission.org/legal/privacy-policy" className="transition-colors hover:text-ed-fg">
-                            Privacy
-                        </Link>
-                        <Link href="https://wikisubmission.org/legal/terms-of-use" className="transition-colors hover:text-ed-fg">
-                            Terms
-                        </Link>
+                <div className="mt-12 grid gap-5 border-t border-ed-rule pt-6 text-sm text-ed-fg-muted sm:grid-cols-[1fr_auto] sm:items-center">
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                        <span>© {new Date().getFullYear()} Submission Archives</span>
+                        {LEGAL_LINKS.map((link) => (
+                            link.href.startsWith('http') ? (
+                                <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center transition-colors hover:text-ed-fg">
+                                    {link.name}<span className="sr-only"> (opens in a new tab)</span>
+                                </a>
+                            ) : (
+                                <Link key={link.name} href={link.href} className="inline-flex min-h-11 items-center transition-colors hover:text-ed-fg">
+                                    {link.name}
+                                </Link>
+                            )
+                        ))}
                     </div>
-                    <span className="text-ed-accent">Preserving the proofs with clarity</span>
+                    <span className="font-display text-lg text-ed-accent">Preserved for careful study.</span>
                 </div>
             </div>
         </footer>
     );
 }
 
-function FooterIcon({
-    href,
-    children,
-}: {
-    href: string;
-    children: React.ReactNode;
-}) {
+function FooterIcon({ href, children, label }: { href: string; children: ReactNode; label: string }) {
     return (
         <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center rounded-full border border-black/5 bg-black/[0.02] p-2 text-ed-fg-muted shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition hover:bg-black/[0.05] hover:text-ed-accent dark:border-white/5 dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.05]"
+            aria-label={`${label} (opens in a new tab)`}
+            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
         >
             {children}
         </a>

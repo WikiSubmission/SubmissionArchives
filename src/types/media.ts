@@ -12,6 +12,10 @@ export interface Media {
     filename?: string;
     thumbnailOverride?: string;
     folder?: string;
+    youtubeId?: string;
+    youtubeUrl?: string;
+    youtubeStartTime?: number;
+    youtubeEndTime?: number;
     primaryNumber?: number;
     alternateNumbers?: string[];
     alternateNumberLabel?: string;
@@ -25,20 +29,4 @@ export interface Newsletter {
     fullDate: string;
     filename: string;
     pdfLink?: string;
-}
-
-export interface ThemeColors {
-    bg: string;
-    card: string;
-    border: string;
-    borderHover: string;
-    text: string;
-    textMuted: string;
-    textVeryMuted: string;
-    input: string;
-    header: string;
-    statsBar: string;
-    button: string;
-    highlight?: string;
-    yearHeader?: string;
 }

@@ -1,0 +1,47 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    "3 record(s) are clearly marked without searchable segments."
+  ],
+  "recordCount": 383,
+  "segmentCount": 113842,
+  "categoryCounts": {
+    "Appendices": 40,
+    "Books": 13,
+    "Messenger Audios": 48,
+    "Quran": 114,
+    "Quran Studies": 52,
+    "Submitter Perspectives": 64,
+    "Videos": 52
+  },
+  "typeCounts": {
+    "appendix": 40,
+    "messenger-audio": 48,
+    "other": 13,
+    "perspective": 64,
+    "quran": 114,
+    "quran-study": 52,
+    "video-program": 52
+  },
+  "recordsWithoutSegments": [
+    {
+      "id": "video-program/arabic-language-lessons-by-dr-rashad-khalifa",
+      "category": "Videos",
+      "type": "video-program",
+      "transcriptStatus": "empty"
+    },
+    {
+      "id": "hard-cover-1989",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
+    },
+    {
+      "id": "quran1981",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
+    }
+  ]
+}

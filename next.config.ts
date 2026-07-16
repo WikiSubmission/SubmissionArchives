@@ -7,8 +7,9 @@ const contentSecurityPolicy = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'self'",
+  "frame-src 'self' https://www.youtube.com https://youtube.com",
   "object-src 'none'",
-  `script-src 'self' 'unsafe-inline'${isProduction ? "" : " 'unsafe-eval'"}`,
+  `script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com${isProduction ? "" : " 'unsafe-eval'"}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
@@ -32,6 +33,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   experimental: {
     optimizePackageImports: ["lucide-react"],
     webVitalsAttribution: ["CLS", "LCP", "INP"],
@@ -44,7 +46,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'img.youtube.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
       },
     ],
   },
@@ -53,6 +59,30 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: securityHeaders,
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      { source: "/other", destination: "/written", permanent: true },
+      { source: "/content/audio/:path*", destination: "/content/audios/:path*", permanent: true },
+      { source: "/content/video/:path*", destination: "/content/videos/:path*", permanent: true },
+      { source: "/content/books/:path*", destination: "/content/written/books/:path*", permanent: true },
+      { source: "/content/newsletter/:path*", destination: "/content/written/newsletters/:path*", permanent: true },
+      {
+        source: "/content/appendix/pdfs/1982/1981_Appendices.pdf",
+        destination: "/content/quran/organized_appendices/1981/appendices.pdf",
+        permanent: true,
+      },
+      {
+        source: "/content/appendix/pdfs/appendix_:number(\\d+).pdf",
+        destination: "/content/quran/organized_appendices/1992/appendix-:number.pdf",
+        permanent: true,
+      },
+      {
+        source: "/content/appendix/pdfs/:document(introduction|proclamation).pdf",
+        destination: "/content/quran/organized_appendices/1992/:document.pdf",
+        permanent: true,
       },
     ];
   },

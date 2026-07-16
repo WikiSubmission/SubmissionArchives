@@ -1,113 +1,105 @@
-import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Roboto_Slab, Amiri, Sora } from "next/font/google";
-import localFont from "next/font/local";
-import "./globals.css";
-import { ThemeProvider } from "@/app/components/ThemeProvider";
-import { WebVitals } from "@/app/components/WebVitals";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
+import { Amiri, Libre_Franklin } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+import { WebVitals } from '@/components/analytics/WebVitals';
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/config/site';
+
+import './globals.css';
+
+const libreFranklin = Libre_Franklin({
+    variable: '--font-libre-franklin',
+    subsets: ['latin'],
+    display: 'swap',
 });
 
 const amiri = Amiri({
-  weight: ['400', '700'],
-  variable: "--font-amiri",
-  subsets: ["arabic"],
-});
-
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-});
-
-const mono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
-
-const robotoSlab = Roboto_Slab({
-  variable: "--font-roboto-slab",
-  subsets: ["latin"],
+    weight: ['400', '700'],
+    variable: '--font-amiri',
+    subsets: ['arabic'],
+    display: 'swap',
 });
 
 const superiorSerif = localFont({
-  variable: "--font-local-superior",
-  display: "swap",
-  src: [
-    {
-      path: "../../public/fonts/LTSuperiorSerif-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/LTSuperiorSerif-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/LTSuperiorSerif-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
-
-const glacial = localFont({
-  variable: "--font-local-glacial",
-  display: "swap",
-  src: "../../public/fonts/GlacialIndifference-Regular.ttf",
+    variable: '--font-local-superior',
+    display: 'swap',
+    src: [
+        { path: '../../public/fonts/LTSuperiorSerif-Regular.otf', weight: '400', style: 'normal' },
+        { path: '../../public/fonts/LTSuperiorSerif-Medium.otf', weight: '500', style: 'normal' },
+        { path: '../../public/fonts/LTSuperiorSerif-Bold.otf', weight: '700', style: 'normal' },
+    ],
 });
 
 export const metadata: Metadata = {
-  title: "Submission Archives",
-  description: "Dr. Rashad Khalifa - Sermons, Studies, and Audio",
-  icons: {
-    icon: '/submission-logo.png',
-    apple: '/submission-logo.png',
-  },
+    metadataBase: new URL(SITE_URL),
+    title: {
+        default: SITE_NAME,
+        template: `%s | ${SITE_NAME}`,
+    },
+    description: SITE_DESCRIPTION,
+    icons: {
+        icon: [
+            { url: '/assets/brand/favicon-32.png', sizes: '32x32', type: 'image/png' },
+            { url: '/assets/brand/submission-archives-mark-192.png', sizes: '192x192', type: 'image/png' },
+        ],
+        apple: [{ url: '/assets/brand/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    },
+    openGraph: {
+        type: 'website',
+        siteName: SITE_NAME,
+        url: SITE_URL,
+        images: [{ url: '/og-card.png', width: 1200, height: 630, alt: SITE_NAME }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        images: ['/og-card.png'],
+    },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const saved = localStorage.getItem('theme');
-                if (saved === 'light') {
-                  document.documentElement.classList.remove('dark');
-                  document.documentElement.dataset.theme = 'light';
-                  document.documentElement.style.colorScheme = 'light';
-                } else {
-                  document.documentElement.classList.add('dark');
-                  document.documentElement.dataset.theme = 'dark';
-                  document.documentElement.style.colorScheme = 'dark';
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body
-        suppressHydrationWarning
-        className={`${inter.variable} ${amiri.variable} ${sora.variable} ${mono.variable} ${robotoSlab.variable} ${superiorSerif.variable} ${glacial.variable} font-sans antialiased`}
-      >
-        <ThemeProvider>
-          <WebVitals />
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+export const viewport: Viewport = {
+    colorScheme: 'dark light',
+    themeColor: [
+        { media: '(prefers-color-scheme: dark)', color: '#191817' },
+        { media: '(prefers-color-scheme: light)', color: '#eee8dc' },
+    ],
+};
+
+const themeBootstrapScript = `
+(function () {
+  var theme = 'dark';
+  try {
+    theme = localStorage.getItem('theme') === 'light' ? 'light' : 'dark';
+  } catch (_) {}
+  var root = document.documentElement;
+  root.classList.toggle('dark', theme === 'dark');
+  root.dataset.theme = theme;
+  root.style.colorScheme = theme;
+})();`;
+
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+    return (
+        <html lang="en" className="dark" data-theme="dark" suppressHydrationWarning>
+            <head>
+                <script dangerouslySetInnerHTML={{ __html: themeBootstrapScript }} />
+            </head>
+            <body className={`${libreFranklin.variable} ${amiri.variable} ${superiorSerif.variable} antialiased`}>
+                <a
+                    href="#main-content"
+                    className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ed-fg focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-ed-bg"
+                >
+                    Skip to content
+                </a>
+                <ThemeProvider>
+                    <WebVitals />
+                    <Header />
+                    {children}
+                    <Footer />
+                </ThemeProvider>
+            </body>
+        </html>
+    );
 }

@@ -53,8 +53,8 @@ debug_page_*.png
 temp_json/
 temp_vtt/
 
-# Media & Large Assets (Served from R2)
-# These are the "big files" that should stay out of the repository
+# Media & Large Assets
+# Video/audio play directly from YouTube; these extensions should stay out of the repository
 *.mp3
 *.mp4
 *.m4a
@@ -82,7 +82,8 @@ public/content/**/*.wmv
 public/content/**/*.mkv
 public/content/**/*.webm
 public/content/**/*.flv
-public/content/**/*.pdf
+
+# Appendix/newsletter PDFs are local content, not caught by the blanket *.pdf rule above
 !public/content/**/*.pdf
 
 # Data & Reprocessing (Root level artifacts)
@@ -102,6 +103,11 @@ public/content/**/*.pdf
 # Vercel
 .vercel
 
+# Test artifacts
+/playwright-report/
+/test-results/
+/blob-report/
+
 # Python Environment
 .venv/
 __pycache__/
@@ -110,13 +116,5 @@ scripts/debug_ocr.py
 
 # CRUCIAL - DO NOT IGNORE
 # public/data/generated_indices/ - Contains site metadata and search indices
-# public/content/**/*.vtt - Contains video/audio transcripts
 # public/images/ - Static UI assets
 # public/fonts/ - Custom typography
-
-# Generated reports / bulky non-runtime index artifacts
-public/data/generated_indices/R2_UPLOAD_REPORT.csv
-public/data/generated_indices/TRANSCRIPTS_MASTER.csv
-public/data/generated_indices/ALL_FRIDAY_SERMONS.json
-public/data/generated_indices/ALL_SERMONS.json
-public/data/generated_indices/ALL_PROGRAMS.json

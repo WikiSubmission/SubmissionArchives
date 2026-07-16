@@ -2,97 +2,109 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { Menu, MessageCircle, Moon, Sun, X, Youtube } from 'lucide-react';
-import { useTheme } from '@/app/components/ThemeProvider';
 import { usePathname } from 'next/navigation';
+import { Menu, MessageCircle, Moon, Sun, X, Youtube } from 'lucide-react';
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
+
+import { PRIMARY_NAV } from '@/config/navigation';
+import { DISCORD_URL, YOUTUBE_URL } from '@/config/social';
+import { useTheme } from '@/components/providers/ThemeProvider';
 
 export default function Header() {
     const { darkMode, toggleDarkMode } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
+    const [previousPathname, setPreviousPathname] = useState(pathname);
+    const menuId = useId();
+    const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
 
-    const navItems = [
-        { name: 'Home', href: '/' },
-        { name: 'Videos', href: '/videos' },
-        { name: 'Audios', href: '/audios' },
-        { name: 'Search', href: '/search' },
-    ];
+    if (pathname !== previousPathname) {
+        setPreviousPathname(pathname);
+        setIsMenuOpen(false);
+    }
+
+    useEffect(() => {
+        if (!isMenuOpen) return;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        window.requestAnimationFrame(() => firstMenuLinkRef.current?.focus());
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key !== 'Escape') return;
+            setIsMenuOpen(false);
+            menuButtonRef.current?.focus();
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isMenuOpen]);
 
     return (
-        <header className="sticky top-0 z-50 border-b border-black/5 bg-[#f7f2eb]/70 backdrop-blur-2xl dark:border-white/5 dark:bg-[#0a0a0a]/70 text-ed-fg">
-            <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-10">
-                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
-                    <div className="flex min-w-0 items-center gap-3">
-                        <Link href="/" className="group inline-flex min-w-0 items-center gap-3" aria-label="Submission Archives home">
-                            <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-black/10 bg-[#111111]/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_12px_30px_rgba(0,0,0,0.18)] transition-colors duration-300 group-hover:border-ed-accent/40 dark:border-white/10">
-                                <Image
-                                    src="/submission-logo.png"
-                                    alt="Submission Archives"
-                                    width={36}
-                                    height={36}
-                                    className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-110"
-                                />
-                            </div>
+        <header className="sticky top-0 z-50 border-b border-ed-rule bg-ed-bg/96 text-ed-fg supports-[backdrop-filter]:bg-ed-bg/90 supports-[backdrop-filter]:backdrop-blur-md">
+            <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
+                <div className="grid min-h-[4.5rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+                    <Link href="/" className="group inline-flex min-h-11 min-w-0 items-center gap-3" aria-label="Submission Archives home">
+                        <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-ed-rule bg-[#111111] transition-colors group-hover:border-ed-accent">
+                            <Image
+                                src="/assets/brand/submission-archives-mark.png"
+                                alt=""
+                                width={44}
+                                height={44}
+                                preload
+                                className="h-10 w-10 object-contain p-0.5 transition-transform duration-300 group-hover:scale-[1.04]"
+                            />
+                        </span>
+                        <span className="min-w-0 leading-none">
+                            <span className="block truncate text-[0.82rem] font-bold uppercase tracking-[0.08em] text-ed-fg">Submission</span>
+                            <span className="mt-1 block truncate font-display text-[1.03rem] text-ed-fg-muted transition-colors group-hover:text-ed-accent">Archives</span>
+                        </span>
+                    </Link>
 
-                            <div className="flex min-w-0 flex-col leading-none">
-                                <span className="font-sans text-base font-bold uppercase tracking-tight text-ed-fg transition-colors duration-300 group-hover:text-ed-accent">
-                                    SUBMISSION
-                                </span>
-                                <span
-                                    style={{ fontFamily: 'var(--font-roboto-slab)' }}
-                                    className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.25em] text-ed-fg-muted transition-colors duration-300 group-hover:text-ed-fg"
+                    <nav aria-label="Primary" className="hidden items-stretch lg:flex">
+                        {PRIMARY_NAV.map((item) => {
+                            const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    aria-current={isActive ? 'page' : undefined}
+                                    className={`relative inline-flex min-h-11 items-center px-3 text-[0.72rem] font-semibold uppercase tracking-[0.1em] transition-colors ${
+                                        isActive ? 'text-ed-fg' : 'text-ed-fg-muted hover:text-ed-fg'
+                                    }`}
                                 >
-                                    ARCHIVES
-                                </span>
-                            </div>
-                        </Link>
-                    </div>
-
-                    <div className="hidden lg:flex justify-center">
-                        <nav className="flex items-center gap-1 rounded-full border border-black/5 bg-black/[0.02] p-1 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:border-white/5 dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]">
-                            {navItems.map((item) => {
-                                const isActive = pathname === item.href;
-                                return (
-                                    <Link
-                                        key={item.name}
-                                        href={item.href}
-                                        className={`rounded-full px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.22em] transition-all ${
-                                            isActive
-                                                ? 'bg-black/5 text-ed-fg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] dark:bg-white/10 dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]'
-                                                : 'text-ed-fg-muted hover:bg-black/5 hover:text-ed-fg dark:hover:bg-white/5'
-                                        }`}
-                                    >
-                                        {item.name}
-                                    </Link>
-                                );
-                            })}
-                        </nav>
-                    </div>
+                                    {item.name}
+                                    <span className={`absolute inset-x-3 bottom-0 h-px bg-ed-accent transition-transform ${isActive ? 'scale-x-100' : 'scale-x-0'}`} />
+                                </Link>
+                            );
+                        })}
+                    </nav>
 
                     <div className="flex items-center justify-end gap-2">
-                        <div className="hidden md:flex items-center gap-2">
-                            <HeaderIconButton label="Toggle theme" onClick={toggleDarkMode}>
+                        <div className="hidden items-center gap-1 lg:flex">
+                            <HeaderIconButton
+                                label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
+                                onClick={toggleDarkMode}
+                                pressed={darkMode}
+                            >
                                 {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                             </HeaderIconButton>
-
-                            <a href="https://www.youtube.com/@SubmissionArchives" target="_blank" rel="noopener noreferrer">
-                                <HeaderIconButton label="YouTube">
-                                    <Youtube className="h-4 w-4" />
-                                </HeaderIconButton>
-                            </a>
-
-                            <a href="https://discord.gg/SubmissionServer" target="_blank" rel="noopener noreferrer">
-                                <HeaderIconButton label="Discord">
-                                    <MessageCircle className="h-4 w-4" />
-                                </HeaderIconButton>
-                            </a>
+                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
+                            <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
                         </div>
 
                         <button
+                            ref={menuButtonRef}
+                            type="button"
                             onClick={() => setIsMenuOpen((open) => !open)}
-                            className="flex items-center justify-center rounded-full border border-black/5 bg-black/[0.02] p-2 text-ed-fg-muted shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition hover:bg-black/[0.05] hover:text-ed-fg dark:border-white/5 dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.05] md:hidden"
-                            aria-label="Toggle menu"
+                            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                            aria-expanded={isMenuOpen}
+                            aria-controls={menuId}
+                            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-fg lg:hidden"
                         >
                             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                         </button>
@@ -101,25 +113,49 @@ export default function Header() {
             </div>
 
             {isMenuOpen ? (
-                <div className="border-t border-black/5 bg-[#f7f2eb]/90 px-4 py-4 backdrop-blur-xl dark:border-white/5 dark:bg-[#0a0a0a]/90 sm:px-6 md:hidden">
-                    <div className="flex flex-col gap-2">
-                        {navItems.map((item) => {
-                            const isActive = pathname === item.href;
-                            return (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    onClick={() => setIsMenuOpen(false)}
-                                    className={`rounded-full border px-4 py-3 text-sm font-bold uppercase tracking-[0.22em] transition ${
-                                        isActive
-                                            ? 'border-black/10 bg-black/5 text-ed-fg dark:border-white/10 dark:bg-white/10'
-                                            : 'border-transparent text-ed-fg-muted hover:bg-black/5 hover:text-ed-fg dark:hover:bg-white/5'
-                                    }`}
-                                >
-                                    {item.name}
-                                </Link>
-                            );
-                        })}
+                <div className="fixed inset-0 top-[4.5rem] z-50 lg:hidden">
+                    <button
+                        type="button"
+                        aria-label="Close navigation menu"
+                        className="absolute inset-0 bg-black/45"
+                        onClick={() => setIsMenuOpen(false)}
+                    />
+                    <div
+                        id={menuId}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Site navigation"
+                        className="relative ml-auto flex h-full w-[min(92vw,26rem)] flex-col border-l border-ed-rule bg-ed-bg px-5 py-6 shadow-2xl"
+                    >
+                        <nav aria-label="Mobile primary" className="flex flex-col">
+                            {PRIMARY_NAV.map((item, index) => {
+                                const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        ref={index === 0 ? firstMenuLinkRef : undefined}
+                                        href={item.href}
+                                        aria-current={isActive ? 'page' : undefined}
+                                        className={`flex min-h-14 items-center justify-between border-b border-ed-rule text-lg ${isActive ? 'text-ed-accent' : 'text-ed-fg'}`}
+                                    >
+                                        {item.name}
+                                        <span className="font-mono text-xs text-ed-fg-muted">{String(index + 1).padStart(2, '0')}</span>
+                                    </Link>
+                                );
+                            })}
+                        </nav>
+
+                        <div className="mt-auto grid grid-cols-3 gap-2 border-t border-ed-rule pt-5">
+                            <HeaderIconButton
+                                label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
+                                onClick={toggleDarkMode}
+                                pressed={darkMode}
+                            >
+                                {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                            </HeaderIconButton>
+                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
+                            <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
+                        </div>
                     </div>
                 </div>
             ) : null}
@@ -127,22 +163,30 @@ export default function Header() {
     );
 }
 
-function HeaderIconButton({
-    children,
-    label,
-    onClick,
-}: {
-    children: React.ReactNode;
-    label: string;
-    onClick?: () => void;
-}) {
+function HeaderIconButton({ children, label, onClick, pressed }: { children: ReactNode; label: string; onClick: () => void; pressed?: boolean }) {
     return (
         <button
+            type="button"
             onClick={onClick}
             aria-label={label}
-            className="flex items-center justify-center rounded-full border border-black/5 bg-black/[0.02] p-2 text-ed-fg-muted shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] transition hover:bg-black/[0.05] hover:text-ed-accent dark:border-white/5 dark:bg-white/[0.02] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] dark:hover:bg-white/[0.05]"
+            aria-pressed={pressed}
+            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
         >
             {children}
         </button>
+    );
+}
+
+function HeaderIconLink({ children, label, href }: { children: ReactNode; label: string; href: string }) {
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${label} (opens in a new tab)`}
+            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
+        >
+            {children}
+        </a>
     );
 }

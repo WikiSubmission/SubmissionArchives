@@ -1,23 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import { cache } from 'react';
-import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { formatMedia } from '@/lib/formatUtils';
-import { getMediaAssetUrl } from '@/lib/mediaAssets';
-
-export const revalidate = 3600;
+import { getMediaAssetUrl, getMediaPlaybackWindow, getPublicAssetUrl } from '@/lib/mediaAssets';
+import { SITE_NAME } from '@/config/site';
 export const dynamicParams = true;
 
-const Player = dynamic(() => import('./Player'), {
-  loading: () => (
-    <div className="min-h-screen bg-ed-bg text-ed-fg">
-      <main className="mx-auto max-w-[1440px] px-4 py-10 sm:px-6 lg:px-10">
-        <div className="soft-shell h-[56vw] max-h-[640px] min-h-[220px] animate-pulse" />
-      </main>
-    </div>
-  ),
-});
+import PlayerWrapper from './PlayerWrapper';
 
 type LocalMediaItem = {
   id: string;
@@ -30,6 +21,10 @@ type LocalMediaItem = {
   audioFile?: string;
   vttFile?: string;
   thumbnailOverride?: string;
+  youtubeId?: string;
+  youtubeUrl?: string;
+  youtubeStartTime?: number;
+  youtubeEndTime?: number;
   duration_seconds?: number;
   primaryNumber?: number;
   alternateNumbers?: string[];
@@ -45,24 +40,31 @@ type PlayerSegment = {
   segment_index?: number;
 };
 
-type TranscriptJson = PlayerSegment[] | { segments?: PlayerSegment[] };
-
 type MasterIndexItem = LocalMediaItem & {
   segments?: Array<{
     start?: number;
     end?: number;
     text?: string;
+    speaker?: string;
+  }>;
+  segments_ar?: Array<{
+    start?: number;
+    end?: number;
+    text?: string;
+    speaker?: string;
   }>;
 };
 
-const getLocalIndex = cache((filename: string): LocalMediaItem[] => {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
+const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
+const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
+
+const getLocalIndex = cache((filePath: string): LocalMediaItem[] => {
   if (!fs.existsSync(filePath)) return [];
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 });
 
 function getVideoCatalog(masterIndex: MasterIndexItem[]) {
-  const videos = getLocalIndex('VIDEO_PROGRAMS_LIST.json');
+  const videos = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'videos.json'));
   if (videos.length > 0) return videos;
 
   return masterIndex.filter((item) =>
@@ -71,19 +73,16 @@ function getVideoCatalog(masterIndex: MasterIndexItem[]) {
 }
 
 function getAudioCatalog(masterIndex: MasterIndexItem[]) {
-  const audios = getLocalIndex('AUDIOS_LIST.json');
+  const audios = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'audios.json'));
   if (audios.length > 0) return audios;
 
-  const masterAudios = masterIndex.filter((item) =>
+  return masterIndex.filter((item) =>
     item.type === 'quran-study' || item.type === 'messenger-audio' || item.type === 'audio'
   ) as LocalMediaItem[];
-  if (masterAudios.length > 0) return masterAudios;
-
-  return getLocalIndex('ALL_AUDIOS.json');
 }
 
 export async function generateStaticParams() {
-  const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
   const allMedia = [...getVideoCatalog(masterIndex), ...getAudioCatalog(masterIndex)];
   const seen = new Set<string>();
 
@@ -98,101 +97,61 @@ export async function generateStaticParams() {
     }));
 }
 
-function parseVttTimestamp(timestamp: string): number {
-  if (!timestamp) return 0;
-  const parts = timestamp.split(':');
-  let seconds = 0;
-  if (parts.length === 3) {
-    seconds += parseInt(parts[0], 10) * 3600;
-    seconds += parseInt(parts[1], 10) * 60;
-    seconds += parseFloat(parts[2]);
-  } else if (parts.length === 2) {
-    seconds += parseInt(parts[0], 10) * 60;
-    seconds += parseFloat(parts[1]);
-  }
-  return seconds;
+function findCatalogItem(key: string) {
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
+  const allVideos = getVideoCatalog(masterIndex);
+  const allAudios = getAudioCatalog(masterIndex);
+  return allVideos.find((v) => v.id === key) || allAudios.find((a) => a.id === key);
 }
 
-function parseVTT(vttContent: string): PlayerSegment[] {
-  const segments: PlayerSegment[] = [];
-  const normalized = vttContent.replace(/\r\n/g, '\n');
-  const blocks = normalized.split('\n\n');
-  let index = 0;
-  const speakerPattern = /(?:^|\s)((?:Dr\.?\s+)?[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?):/g;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string[] }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const key = id.map(decodeURIComponent).join('/');
+  const item = findCatalogItem(key);
+  if (!item) return { title: 'Not Found' };
 
-  for (const block of blocks) {
-    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
-    if (lines.length === 0) continue;
-    if (lines[0].startsWith('WEBVTT')) continue;
-    if (lines[0].startsWith('NOTE')) continue;
-    if (lines[0].startsWith('Kind:')) continue;
-    if (lines[0].startsWith('Language:')) continue;
+  const { displayTitle, displayDate, author } = formatMedia(item);
+  const description = displayDate ? `${displayTitle}: ${displayDate}, by ${author}.` : `${displayTitle}, by ${author}.`;
+  const image = item.thumbnailOverride ? [getPublicAssetUrl(item.thumbnailOverride)] : ['/og-card.png'];
 
-    const timeLineIdx = lines.findIndex(l => l.includes('-->'));
-    if (timeLineIdx === -1) continue;
-
-    const timeLine = lines[timeLineIdx];
-    const [startStr, endStrPart] = timeLine.split('-->').map(s => s.trim());
-    const endStr = endStrPart ? endStrPart.split(' ')[0] : startStr;
-
-    const start = parseVttTimestamp(startStr);
-    const end = parseVttTimestamp(endStr);
-    let content = lines.slice(timeLineIdx + 1).join(' ');
-    content = content.replace(/<<[^>]*>/g, '').trim();
-    content = content.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
-    if (!content) continue;
-
-    const matches = Array.from(content.matchAll(speakerPattern));
-    if (matches.length === 0) {
-      segments.push({ id: index++, start_time: start, end_time: end, speaker: 'Dr. Rashad Khalifa', content, segment_index: index });
-      continue;
-    }
-
-    const totalDuration = end - start;
-    const subSegments: Array<{ speaker: string; content: string }> = [];
-    const firstMatchStart = matches[0].index!;
-    if (firstMatchStart > 0) {
-      const preText = content.substring(0, firstMatchStart).trim();
-      if (preText) subSegments.push({ speaker: 'Dr. Rashad Khalifa', content: preText });
-    }
-
-    for (let i = 0; i < matches.length; i++) {
-      const match = matches[i];
-      const speakerName = match[1].trim();
-      const contentStart = match.index! + match[0].length;
-      const contentEnd = (i < matches.length - 1) ? matches[i + 1].index! : content.length;
-      const speechText = content.substring(contentStart, contentEnd).trim();
-      if (speechText) subSegments.push({ speaker: speakerName, content: speechText });
-    }
-
-    const segmentTotalLen = subSegments.reduce((acc, s) => acc + s.content.length, 0) || 1;
-    let currentTimeCursor = start;
-    for (const sub of subSegments) {
-      const ratio = sub.content.length / segmentTotalLen;
-      const subDuration = totalDuration * ratio;
-      segments.push({
-        id: index++,
-        start_time: currentTimeCursor,
-        end_time: currentTimeCursor + subDuration,
-        speaker: sub.speaker,
-        content: sub.content,
-        segment_index: index
-      });
-      currentTimeCursor += subDuration;
-    }
-  }
-  return segments;
+  return {
+    title: displayTitle,
+    description,
+    openGraph: {
+      title: displayTitle,
+      description,
+      type: 'video.other',
+      siteName: SITE_NAME,
+      url: `/media/${id.join('/')}`,
+      images: image,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: displayTitle,
+      description,
+      images: image,
+    },
+  };
 }
 
 export default async function WatchPage({
-  params
+  params,
+  searchParams
 }: {
   params: Promise<{ id: string[] }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { id } = await params;
+  const resolvedSearchParams = await searchParams;
+  const requestedTime = resolvedSearchParams?.t ? Number(resolvedSearchParams.t) : undefined;
+  const initialSeekTime = Number.isFinite(requestedTime) && requestedTime! >= 0 ? requestedTime : undefined;
 
   const key = id.map(decodeURIComponent).join('/');
-  const masterIndex = getLocalIndex('MASTER_INDEX.json') as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
   const allAudios = getAudioCatalog(masterIndex);
 
@@ -205,55 +164,59 @@ export default async function WatchPage({
   if (!item) notFound();
 
   const { displayTitle, displayDate, author } = formatMedia(item);
-  const publicDir = path.join(process.cwd(), 'public');
   const masterItem = masterIndex.find((record) => record.id === key);
   const mediaUrl = getMediaAssetUrl(item);
-  let transcriptPath = '';
+  const playbackWindow = getMediaPlaybackWindow(item);
 
-  if (isVideo) {
-    transcriptPath = path.join(publicDir, 'content', 'video', item.folder, item.vttFile || '');
-  } else {
-    const subFolder = item.type === 'quran-study' ? 'quran-studies' : 'messenger-audios';
-    transcriptPath = path.join(publicDir, 'content', 'audio', subFolder, item.folder, item.vttFile || '');
-  }
+  // MA 70+ transcripts come from unverified auto-generated captions with no
+  // reliable speaker attribution, so they should not default to a named speaker.
+  // The 1987 Debate also has multiple speakers without attribution.
+  const isUnverifiedSpeakerSource = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 70) || item.id === 'video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987';
+  const defaultSpeaker = isUnverifiedSpeakerSource ? '' : 'Dr. Rashad Khalifa';
+  const transcriptDisclaimer = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 70) ? 'MA 70-100 are NOT hand-transcribed.' : undefined;
 
-  let segments: PlayerSegment[] = (masterItem?.segments || []).map((segment, index) => ({
+  const segments: PlayerSegment[] = (masterItem?.segments || []).map((segment, index) => ({
     id: index,
     start_time: segment.start ?? 0,
     end_time: segment.end ?? segment.start ?? 0,
-    speaker: 'Dr. Rashad Khalifa',
+    speaker: segment.speaker || defaultSpeaker,
     content: segment.text ?? '',
     segment_index: index + 1,
   })).filter((segment) => segment.content);
 
-  try {
-    if (segments.length === 0 && fs.existsSync(transcriptPath)) {
-      const content = fs.readFileSync(transcriptPath, 'utf-8');
-      if (transcriptPath.endsWith('.vtt')) segments = parseVTT(content);
-      else if (transcriptPath.endsWith('.json')) {
-        const json = JSON.parse(content) as TranscriptJson;
-        segments = Array.isArray(json) ? json : (json.segments || []);
-      }
-    }
-  } catch (err) {
-    console.error('Failed to load transcript:', err);
-  }
+  const segments_ar: PlayerSegment[] = (masterItem?.segments_ar || []).map((segment, index) => ({
+    id: index,
+    start_time: segment.start ?? 0,
+    end_time: segment.end ?? segment.start ?? 0,
+    speaker: segment.speaker || defaultSpeaker,
+    content: segment.text ?? '',
+    segment_index: index + 1,
+  })).filter((segment) => segment.content);
 
   const collection = isVideo ? allVideos : allAudios;
   const idx = collection.findIndex(m => m.id === key);
   const prevItem = idx > 0 ? collection[idx - 1] : null;
+
+
   const nextItem = idx < collection.length - 1 ? collection[idx + 1] : null;
 
   const prev = prevItem ? { id: prevItem.id, title: formatMedia(prevItem).displayTitle } : undefined;
   const next = nextItem ? { id: nextItem.id, title: formatMedia(nextItem).displayTitle } : undefined;
 
   return (
-    <Player
-      media={{ ...item, displayTitle, displayDate, author, type: item.type }}
-      segments={segments}
-      mediaUrl={mediaUrl}
-      prev={prev}
-      next={next}
-    />
+    <div className="min-h-screen bg-ed-bg text-ed-fg">
+      <PlayerWrapper
+        media={{ ...item, displayTitle, displayDate, author, type: item.type }}
+        segments={segments}
+        segments_ar={segments_ar}
+        mediaUrl={mediaUrl}
+        prev={prev}
+        next={next}
+        clipStartTime={playbackWindow.startTime}
+        clipEndTime={playbackWindow.endTime}
+        initialSeekTime={initialSeekTime}
+        transcriptDisclaimer={transcriptDisclaimer}
+      />
+    </div>
   );
 }

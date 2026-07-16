@@ -9,6 +9,26 @@ export type AppendixItem = {
     filename: string;
     pdfLink: string;
     thumbnailOverride?: string;
+    editions: Partial<Record<AppendixEdition, AppendixEditionAsset>>;
+};
+
+export type AppendixEdition = '1981' | '1989' | '1992';
+
+export type AppendixEditionAsset = {
+    pdfLink: string;
+    thumbnail?: string;
+    startPage?: number;
+};
+
+type AppendixEditionConfig = {
+    sharedPdf?: string;
+    splitPdfs?: boolean;
+    startPages?: Record<string, number>;
+};
+
+type AppendixEditionManifest = {
+    primaryEdition: AppendixEdition;
+    editions: Record<AppendixEdition, AppendixEditionConfig>;
 };
 
 export type AppendixSearchResult = {
@@ -23,13 +43,20 @@ export type AppendixSearchResult = {
     }>;
 };
 
-const APPENDICES_DIR = path.join(process.cwd(), 'public', 'content', 'appendix');
-const APPENDICES_PDF_DIR = path.join(APPENDICES_DIR, 'pdfs');
-const APPENDICES_THUMB_DIR = path.join(APPENDICES_DIR, 'thumbnails');
-const CSV_PATH = path.join(APPENDICES_DIR, 'csv', 'quran_appendices_rows.csv');
+const APPENDICES_DIR = path.join(process.cwd(), 'public', 'content', 'quran', 'organized_appendices');
+const PRIMARY_EDITION_DIR = path.join(APPENDICES_DIR, '1992');
+const CSV_PATH = path.join(process.cwd(), 'data', 'catalog', 'quran-appendices.csv');
+const EDITION_MANIFEST_PATH = path.join(process.cwd(), 'data', 'catalog', 'appendix-editions.json');
 
 let rowsCache: Array<Record<string, string>> | null = null;
 let catalogCache: AppendixItem[] | null = null;
+let editionManifestCache: AppendixEditionManifest | null = null;
+
+function getEditionManifest() {
+    if (editionManifestCache) return editionManifestCache;
+    editionManifestCache = JSON.parse(fs.readFileSync(EDITION_MANIFEST_PATH, 'utf8')) as AppendixEditionManifest;
+    return editionManifestCache;
+}
 
 function getRows() {
     if (rowsCache) return rowsCache;
@@ -42,13 +69,13 @@ function titleFromFilename(filename: string) {
     if (filename === 'introduction.pdf') return 'Introduction';
     if (filename === 'proclamation.pdf') return 'Proclamation';
 
-    const appendixNumber = filename.match(/^appendix_(\d+)\.pdf$/)?.[1];
+    const appendixNumber = filename.match(/^appendix[_-](\d+)\.pdf$/)?.[1];
     return appendixNumber ? `Appendix ${appendixNumber}` : filename.replace(/\.pdf$/i, '');
 }
 
 export function getAppendixCatalog() {
     if (catalogCache) return catalogCache;
-    if (!fs.existsSync(APPENDICES_PDF_DIR)) return [];
+    if (!fs.existsSync(PRIMARY_EDITION_DIR)) return [];
 
     const titleById = new Map<string, string>();
     for (const row of getRows()) {
@@ -58,16 +85,26 @@ export function getAppendixCatalog() {
     }
 
     catalogCache = fs
-        .readdirSync(APPENDICES_PDF_DIR)
+        .readdirSync(PRIMARY_EDITION_DIR)
         .filter((name) => name.toLowerCase().endsWith('.pdf'))
         .map((filename) => {
-            const id = filename.replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
+            const id = filenameToId(filename);
+            const editions: AppendixItem['editions'] = {};
+
+            for (const edition of ['1981', '1989', '1992'] as const) {
+                const asset = getEditionAsset(id, filename, edition);
+                if (asset) editions[edition] = asset;
+            }
+
+            const primaryAsset = editions['1992']!;
+            
             return {
                 id,
                 title: titleById.get(id) ?? titleFromFilename(filename),
                 filename,
-                pdfLink: `/content/appendix/pdfs/${filename}`,
-                thumbnailOverride: getThumbnailLink(APPENDICES_THUMB_DIR, '/content/appendix/thumbnails', filename),
+                pdfLink: primaryAsset.pdfLink,
+                thumbnailOverride: primaryAsset.thumbnail,
+                editions,
             };
         })
         .sort((a, b) => sortValue(a.id) - sortValue(b.id));
@@ -75,15 +112,56 @@ export function getAppendixCatalog() {
     return catalogCache;
 }
 
+function getEditionAsset(id: string, primaryFilename: string, edition: AppendixEdition): AppendixEditionAsset | undefined {
+    const editionDir = path.join(APPENDICES_DIR, edition);
+    const publicBase = `/content/quran/organized_appendices/${edition}`;
+    const editionConfig = getEditionManifest().editions[edition];
+
+    if (editionConfig.sharedPdf) {
+        const startPage = editionConfig.startPages?.[id];
+        const filename = editionConfig.sharedPdf;
+        if (startPage === undefined || !fs.existsSync(path.join(editionDir, filename))) return undefined;
+
+        return {
+            pdfLink: `${publicBase}/${filename}`,
+            thumbnail: getThumbnailLink(path.join(editionDir, 'thumbnails'), `${publicBase}/thumbnails`, `${id}.pdf`),
+            startPage,
+        };
+    }
+
+    const filename = edition === '1992' ? primaryFilename : `${id}.pdf`;
+    if (!fs.existsSync(path.join(editionDir, filename))) return undefined;
+
+    return {
+        pdfLink: `${publicBase}/${filename}`,
+        thumbnail: getThumbnailLink(path.join(editionDir, 'thumbnails'), `${publicBase}/thumbnails`, filename),
+    };
+}
+
 function getThumbnailLink(thumbnailDir: string, publicBase: string, pdfFilename: string) {
-    const thumbnailName = `${pdfFilename.replace(/\.pdf$/i, '')}.jpg`;
-    const thumbnailPath = path.join(thumbnailDir, thumbnailName);
-    return fs.existsSync(thumbnailPath) ? `${publicBase}/${thumbnailName}` : undefined;
+    const baseName = pdfFilename.replace(/\.pdf$/i, '');
+    const jpgName = `${baseName}.jpg`;
+    const pngName = `${baseName}.png`;
+    
+    if (fs.existsSync(path.join(thumbnailDir, jpgName))) {
+        return `${publicBase}/${jpgName}`;
+    }
+    if (fs.existsSync(path.join(thumbnailDir, pngName))) {
+        return `${publicBase}/${pngName}`;
+    }
+    return undefined;
 }
 
 export function getAppendixItem(id: string) {
-    const normalized = decodeURIComponent(id).replace(/\.pdf$/i, '').replace(/^appendix_(\d+)$/, 'appendix-$1');
-    return getAppendixCatalog().find((item) => item.id === normalized || item.filename.replace(/\.pdf$/i, '') === normalized);
+    const normalized = filenameToId(decodeURIComponent(id));
+    return getAppendixCatalog().find((item) => item.id === normalized || filenameToId(item.filename) === normalized);
+}
+
+function filenameToId(filename: string) {
+    return filename
+        .replace(/\.pdf$/i, '')
+        .replace(/^appendix[_-]0*(\d+)$/i, 'appendix-$1')
+        .toLowerCase();
 }
 
 export function searchAppendixCsv(query: string, options: { proximityWindow?: number } = {}): AppendixSearchResult[] {

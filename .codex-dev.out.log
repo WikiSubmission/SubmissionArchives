@@ -1,0 +1,19 @@
+
+> rk-media-platform@0.1.0 dev
+> next dev -p 3001
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://172.26.224.1:3001
+- Environments: .env.local
+✓ Ready in 1752ms
+- Experiments (use with caution):
+  · optimizePackageImports
+  · webVitalsAttribution
+
+ GET / 404 in 4.8s (next.js: 4.2s, application-code: 596ms)
+ GET / 404 in 202ms (next.js: 23ms, application-code: 179ms)
+ GET / 404 in 141ms (next.js: 20ms, application-code: 121ms)
+ GET / 404 in 136ms (next.js: 20ms, application-code: 116ms)
+ GET / 404 in 196ms (next.js: 23ms, application-code: 173ms)
+[?25h

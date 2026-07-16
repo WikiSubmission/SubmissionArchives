@@ -1,0 +1,273 @@
+[
+  {
+    "id": "english-meanings-of-the-quran",
+    "title": "English Meanings of the Quran",
+    "displayTitle": "English Meanings of the Quran",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/English Meanings of the Quran.png",
+    "filename": "English Meanings of the Quran.pdf",
+    "pdfLink": "/content/written/books/English Meanings of the Quran.pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 82.14,
+      "lowConfidencePages": 4,
+      "unverifiedArabicSegments": 0
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 16
+  },
+  {
+    "id": "eternity-screenplay",
+    "title": "ETERNITY - Screenplay",
+    "displayTitle": "ETERNITY - Screenplay",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/ETERNITY - Screenplay.png",
+    "filename": "ETERNITY - Screenplay.pdf",
+    "pdfLink": "/content/written/books/ETERNITY - Screenplay.pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/eternity_screenplay/eternity_screenplay_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 90.65,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 94
+  },
+  {
+    "id": "hard-cover-1989",
+    "title": "Hard Cover 1989",
+    "displayTitle": "Hard Cover 1989",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/Hard Cover 1989.png",
+    "filename": "Hard Cover 1989.pdf",
+    "pdfLink": "/content/written/books/Hard Cover 1989.pdf",
+    "aliases": [],
+    "transcriptStatus": "missing",
+    "segmentCount": 0
+  },
+  {
+    "id": "islam-volume-1-number-1-april-1974",
+    "title": "ISLAM - Volume 1, Number 1 (April 1974)",
+    "displayTitle": "ISLAM - Volume 1, Number 1 (April 1974)",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/ISLAM - Volume 1, Number 1 (April 1974).png",
+    "filename": "ISLAM - Volume 1, Number 1 (April 1974).pdf",
+    "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 1 (April 1974).pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/islam_volume_1/islam_volume_1_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 84.94,
+      "lowConfidencePages": 9,
+      "unverifiedArabicSegments": 5
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 89
+  },
+  {
+    "id": "islam-volume-1-number-2-july-1974",
+    "title": "ISLAM - Volume 1, Number 2 (July 1974)",
+    "displayTitle": "ISLAM - Volume 1, Number 2 (July 1974)",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/ISLAM - Volume 1, Number 2 (July 1974).png",
+    "filename": "ISLAM - Volume 1, Number 2 (July 1974).pdf",
+    "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 2 (July 1974).pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/islam_volume_2/islam_volume_2_complete.json",
+    "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
+    "transcriptionQuality": {
+      "meanOcrConfidence": null,
+      "lowConfidencePages": 3,
+      "unverifiedArabicSegments": 14
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 84
+  },
+  {
+    "id": "islam-volume-1-number-3-4-january-1975",
+    "title": "ISLAM - Volume 1, Number 3 & 4 (January 1975)",
+    "displayTitle": "ISLAM - Volume 1, Number 3 & 4 (January 1975)",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/ISLAM - Volume 1, Number 3 & 4 (January 1975).png",
+    "filename": "ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",
+    "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/islam_volume_3_4/islam_volume_3_4_complete.json",
+    "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
+    "transcriptionQuality": {
+      "meanOcrConfidence": null,
+      "lowConfidencePages": 11,
+      "unverifiedArabicSegments": 60
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 137
+  },
+  {
+    "id": "miracle-of-quran-alphabets",
+    "title": "Miracle of the Quran - Significance of the Mysterious Alphabets",
+    "displayTitle": "Miracle of the Quran - Significance of the Mysterious Alphabets",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/Miracle of Quran - Significance of the Mysterious Alphabets.png",
+    "filename": "Miracle of Quran - Significance of the Mysterious Alphabets.pdf",
+    "pdfLink": "/content/written/books/Miracle of Quran - Significance of the Mysterious Alphabets.pdf",
+    "aliases": [
+      "miracle-of-quran-significance-of-the-mysterious-alphabets"
+    ],
+    "transcriptionSource": "data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 80.29,
+      "lowConfidencePages": 48,
+      "unverifiedArabicSegments": 31
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 211
+  },
+  {
+    "id": "quran-visual-presentation",
+    "title": "Quran - Visual Presentation of the Miracle",
+    "displayTitle": "Quran - Visual Presentation of the Miracle",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/Quran - Visual Presentation of the Miracle.png",
+    "filename": "Quran - Visual Presentation of the Miracle.pdf",
+    "pdfLink": "/content/written/books/Quran - Visual Presentation of the Miracle.pdf",
+    "aliases": [
+      "quran-visual-presentation-of-the-miracle"
+    ],
+    "transcriptionSource": "data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 50.93,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 58
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 251
+  },
+  {
+    "id": "quran-hadith-islam",
+    "title": "Quran, Hadith, and Islam",
+    "displayTitle": "Quran, Hadith, and Islam",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/Quran, Hadith, and Islam.png",
+    "filename": "Quran, Hadith, and Islam.pdf",
+    "pdfLink": "/content/written/books/Quran, Hadith, and Islam.pdf",
+    "aliases": [
+      "quran-hadith-and-islam"
+    ],
+    "transcriptionSource": "data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 85.64,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 5
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 92
+  },
+  {
+    "id": "quran1981",
+    "title": "Quran1981",
+    "displayTitle": "Quran1981",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/Quran1981.png",
+    "filename": "Quran1981.pdf",
+    "pdfLink": "/content/written/books/Quran1981.pdf",
+    "aliases": [],
+    "transcriptStatus": "missing",
+    "segmentCount": 0
+  },
+  {
+    "id": "computer-speaks",
+    "title": "The Computer Speaks: God's Message to the World",
+    "displayTitle": "The Computer Speaks: God's Message to the World",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/The Computer Speaks God's Message to the World.jpg",
+    "filename": "The Computer Speaks God's Message to the World.pdf",
+    "pdfLink": "/content/written/books/The Computer Speaks God's Message to the World.pdf",
+    "aliases": [
+      "the-computer-speaks-god-s-message-to-the-world"
+    ],
+    "transcriptionSource": "data/sources/books/the_computer_speaks/the_computer_speaks_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 73.66,
+      "lowConfidencePages": 94,
+      "unverifiedArabicSegments": 46
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 270
+  },
+  {
+    "id": "salat-booklet",
+    "title": "The Contact Prayers",
+    "displayTitle": "The Contact Prayers",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/The Contact Prayers.png",
+    "filename": "The Contact Prayers.pdf",
+    "pdfLink": "/content/written/books/The Contact Prayers.pdf",
+    "aliases": [
+      "the-contact-prayers"
+    ],
+    "transcriptionSource": "data/sources/books/the_contact_prayers/the_contact_prayers_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 95.47,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 8
+  },
+  {
+    "id": "perpetual-miracle",
+    "title": "The Perpetual Miracle of Muhammad",
+    "displayTitle": "The Perpetual Miracle of Muhammad",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/The Perpetual Miracle of Muhammad.png",
+    "filename": "The Perpetual Miracle of Muhammad.pdf",
+    "pdfLink": "/content/written/books/The Perpetual Miracle of Muhammad.pdf",
+    "aliases": [
+      "the-perpetual-miracle-of-muhammad"
+    ],
+    "transcriptionSource": "data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 93.13,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 16
+  }
+]

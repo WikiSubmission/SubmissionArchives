@@ -1,10 +1,15 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Home, Search } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'Page Not Found',
+};
 
 export default function NotFound() {
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body flex flex-col">
-            <main className="flex-1 flex items-center justify-center px-6 py-24">
+            <main id="main-content" className="flex-1 flex items-center justify-center px-6 py-24">
                 <div className="max-w-2xl w-full text-center space-y-12">
                     {/* Visual Element */}
                     <div className="relative inline-block">

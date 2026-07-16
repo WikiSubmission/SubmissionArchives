@@ -1,0 +1,26 @@
+
+> rk-media-platform@0.1.0 start
+> npm run prepare:standalone && node .next/standalone/server.js
+
+
+> rk-media-platform@0.1.0 prepare:standalone
+> node scripts/prepare-standalone.mjs
+
+▲ Next.js 16.2.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+[web-vitals] {
+  id: 'v4-1783977125417-8911656075308',
+  name: 'TTFB',
+  value: 361.5,
+  rating: 'good',
+  navigationType: 'navigate'
+}
+[web-vitals] {
+  id: 'v4-1783977125417-1617457605100',
+  name: 'FCP',
+  value: 784,
+  rating: 'good',
+  navigationType: 'navigate'
+}

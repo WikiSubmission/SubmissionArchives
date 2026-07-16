@@ -1,0 +1,189 @@
+{
+  "dependencies": {
+    "clsx": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "framer-motion": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "lru-cache": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "lucide-react": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src",
+        "config"
+      ]
+    },
+    "next": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src",
+        "config"
+      ]
+    },
+    "pdf-lib": {
+      "declaredIn": "dependencies",
+      "classification": "unused",
+      "foundIn": []
+    },
+    "react": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "react-dom": {
+      "declaredIn": "dependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    },
+    "react-pdf": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "react-player": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "sharp": {
+      "declaredIn": "dependencies",
+      "classification": "script-only",
+      "foundIn": [
+        "scripts"
+      ]
+    },
+    "tailwind-merge": {
+      "declaredIn": "dependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "@axe-core/playwright": {
+      "declaredIn": "devDependencies",
+      "classification": "development",
+      "foundIn": [
+        "tests"
+      ]
+    },
+    "@napi-rs/canvas": {
+      "declaredIn": "devDependencies",
+      "classification": "script-only",
+      "foundIn": [
+        "scripts"
+      ]
+    },
+    "@playwright/test": {
+      "declaredIn": "devDependencies",
+      "classification": "development",
+      "foundIn": [
+        "tests",
+        "config"
+      ]
+    },
+    "@tailwindcss/postcss": {
+      "declaredIn": "devDependencies",
+      "classification": "development",
+      "foundIn": [
+        "config"
+      ]
+    },
+    "@types/node": {
+      "declaredIn": "devDependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    },
+    "@types/pdf-parse": {
+      "declaredIn": "devDependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    },
+    "@types/react": {
+      "declaredIn": "devDependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    },
+    "@types/react-dom": {
+      "declaredIn": "devDependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    },
+    "canvas": {
+      "declaredIn": "devDependencies",
+      "classification": "unused",
+      "foundIn": []
+    },
+    "eslint": {
+      "declaredIn": "devDependencies",
+      "classification": "development",
+      "foundIn": [
+        "config"
+      ]
+    },
+    "eslint-config-next": {
+      "declaredIn": "devDependencies",
+      "classification": "development",
+      "foundIn": [
+        "config"
+      ]
+    },
+    "pdf-parse": {
+      "declaredIn": "devDependencies",
+      "classification": "script-only",
+      "foundIn": [
+        "scripts"
+      ]
+    },
+    "tailwindcss": {
+      "declaredIn": "devDependencies",
+      "classification": "runtime",
+      "foundIn": [
+        "src"
+      ]
+    },
+    "tesseract.js": {
+      "declaredIn": "devDependencies",
+      "classification": "unused",
+      "foundIn": []
+    },
+    "ts-node": {
+      "declaredIn": "devDependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    },
+    "tsx": {
+      "declaredIn": "devDependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    },
+    "typescript": {
+      "declaredIn": "devDependencies",
+      "classification": "uncertain",
+      "foundIn": []
+    }
+  },
+  "generatedAt": "static-scan"
+}

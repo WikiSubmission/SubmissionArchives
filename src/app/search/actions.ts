@@ -3,8 +3,15 @@
 import fs from 'fs';
 import path from 'path';
 import { headers } from 'next/headers';
+import { LRUCache } from 'lru-cache';
 import { findQueryMatch } from '@/lib/search/queryMatch';
 import { checkRateLimit, getClientIp } from '@/lib/security';
+import type { ArchiveRecord, ArchiveSegment } from '@/types/archive';
+
+const searchCache = new LRUCache<string, SearchResult[]>({
+    max: 200,
+    ttl: 1000 * 60 * 5, // 5 minutes
+});
 
 const MAX_QUERY_LENGTH = 120;
 const SEARCH_RATE_LIMIT = 40;
@@ -18,6 +25,7 @@ const ALLOWED_FILTERS = new Set([
     'perspective',
     'appendix',
     'other',
+    'quran',
 ]);
 
 type SearchMatch = {
@@ -28,6 +36,7 @@ type SearchMatch = {
     score?: number;
     kind?: string;
     distance?: number;
+    label?: string;
 };
 
 type SearchMedia = {
@@ -56,30 +65,8 @@ type SearchOptions = {
     proximityWindow?: number;
 };
 
-type MasterSegment = {
-    start?: number;
-    end?: number;
-    text?: string;
-    page?: number;
-    sectionIndex?: number;
-};
-
-type MasterIndexItem = {
-    id: string;
-    title?: string;
-    displayTitle?: string;
-    type: string;
-    category?: string;
-    author?: string;
-    date?: string;
-    fullDate?: string;
-    pdfLink?: string;
-    thumbnailOverride?: string;
-    primaryNumber?: number;
-    alternateNumbers?: string[];
-    alternateNumberLabel?: string;
-    segments?: MasterSegment[];
-};
+type MasterSegment = ArchiveSegment;
+type MasterIndexItem = ArchiveRecord;
 
 function readGeneratedIndex<T>(filename: string): T[] {
     const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', filename);
@@ -88,18 +75,7 @@ function readGeneratedIndex<T>(filename: string): T[] {
 }
 
 function getSearchIndex() {
-    const master = readGeneratedIndex<MasterIndexItem>('MASTER_INDEX.json');
-    if (master.length > 0) return master;
-
-    const videos = readGeneratedIndex<MasterIndexItem>('ALL_VIDEO_PROGRAMS.json')
-        .map((item) => ({ ...item, category: 'Videos' }));
-    const audios = readGeneratedIndex<MasterIndexItem>('ALL_AUDIOS.json')
-        .map((item) => ({
-            ...item,
-            category: item.type === 'quran-study' ? 'Quran Studies' : 'Messenger Audios',
-        }));
-
-    return [...videos, ...audios];
+    return readGeneratedIndex<MasterIndexItem>('MASTER_INDEX.json');
 }
 
 export async function searchTranscripts(query: string, typeFilters: string[], options: SearchOptions = {}) {
@@ -122,10 +98,16 @@ export async function searchTranscripts(query: string, typeFilters: string[], op
             ? [...new Set(typeFilters.filter((filter) => ALLOWED_FILTERS.has(filter)))]
             : [];
 
+        const cacheKey = `${cleanQuery}::${cleanFilters.sort().join(',')}::${cleanOptions.proximityWindow}`;
+        if (searchCache.has(cacheKey)) {
+            return { success: true, data: searchCache.get(cacheKey) };
+        }
+
         const finalResults = searchMasterIndex(cleanQuery, cleanFilters, cleanOptions)
             .map(rankResult)
             .sort((a, b) => (b.bestScore ?? 0) - (a.bestScore ?? 0));
 
+        searchCache.set(cacheKey, finalResults);
         return { success: true, data: finalResults };
 
     } catch (err: unknown) {
@@ -146,18 +128,23 @@ function searchMasterIndex(
         if (!isMasterItemAllowed(item, filters)) continue;
 
         const matches: SearchMatch[] = [];
-        item.segments?.forEach((segment, index) => {
+        item.segments.forEach((segment: MasterSegment, index) => {
             const result = findQueryMatch(segment.text || '', query, options);
             if (!result.matched) return;
 
+            // Page/verse-based documents (books, appendices, the Qur'an) all set
+            // start: 0 on every segment since there's no timestamp, so start can't
+            // disambiguate them — page (or verse number) must be checked first, or
+            // every match on the same document collapses to the same id.
             matches.push({
-                id: `${item.id}-${segment.start ?? segment.page ?? index}`,
+                id: `${item.id}-${segment.page ?? segment.start ?? index}`,
                 content: result.snippet || segment.text || '',
                 start_time: segment.start ?? 0,
                 page: segment.page,
                 score: result.score,
                 kind: result.kind,
                 distance: result.distance,
+                label: segment.label,
             });
         });
 
