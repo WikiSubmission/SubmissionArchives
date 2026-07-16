@@ -30,9 +30,10 @@ test('the generated archive satisfies the canonical runtime contract', () => {
 
     assert.equal(report.valid, true, report.errors.join('\n'));
     assert.equal(report.recordCount, 383);
-    assert.equal(report.categoryCounts.Quran, 114);
-    assert.equal(report.categoryCounts.Books, 13);
-    assert.equal(report.categoryCounts['Submitter Perspectives'], 64);
+    const categoryCounts = report.categoryCounts as Record<string, number>;
+    assert.equal(categoryCounts.Quran, 114);
+    assert.equal(categoryCounts.Books, 13);
+    assert.equal(categoryCounts['Submitter Perspectives'], 64);
 });
 
 test('every newsletter is searchable', () => {
@@ -110,11 +111,15 @@ test('the 1981 edition preserves Chapter 9 verses 128 and 129', () => {
     assert.ok(chapter9, 'Missing Quran Chapter 9');
 
     for (const verseNumber of [128, 129]) {
-        const verse = chapter9.verses.find((candidate) => candidate.verseNumber === verseNumber);
-        assert.ok(verse, `Missing 9:${verseNumber}`);
-        assert.equal(verse.english, '', `9:${verseNumber} should not be attributed to the primary edition`);
-        assert.ok(verse.editions?.['1981']?.english, `Missing 1981 text for 9:${verseNumber}`);
-        assert.equal(verse.editions?.['1989'], undefined, `9:${verseNumber} should not be attributed to the 1989 edition`);
+        const targetVerse: {
+            verseNumber: number;
+            english: string;
+            editions?: { '1981'?: { english: string }; '1989'?: { english: string } };
+        } | undefined = chapter9.verses.find((candidate) => candidate.verseNumber === verseNumber);
+        assert.ok(targetVerse, `Missing 9:${verseNumber}`);
+        assert.equal(targetVerse.english, '', `9:${verseNumber} should not be attributed to the primary edition`);
+        assert.ok(targetVerse.editions?.['1981']?.english, `Missing 1981 text for 9:${verseNumber}`);
+        assert.equal(targetVerse.editions?.['1989'], undefined, `9:${verseNumber} should not be attributed to the 1989 edition`);
     }
 
     const quranRecords = records.filter((record) => record.type === 'quran');
