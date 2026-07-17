@@ -6,7 +6,6 @@
     "quran/30"
   ],
   "title": "30. The Romans translation evolution (1981/1989/1992)",
-  "source_class": "quran-edition-comparison",
   "review_status": "draft",
   "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
   "sections": [

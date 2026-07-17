@@ -370,13 +370,15 @@ function main(): void {
     const sections = chapterGroups.map((group) => buildSection(group, record));
     if (chapter === 9) sections.push(buildDossierSection(record));
 
+    // Document-level metadata fields (source_class, date, retrieval priority)
+    // are intentionally omitted so the canonical inventory metadata for the
+    // quran/N documents is preserved.
     const enrichment = {
       schema_version: '1.0-quran-editions',
       document_id: `quran-editions/sura-${chapter}`,
       canonical_document_id: canonicalId,
       canonical_catalog_ids: [canonicalId],
       title: `${record.title} translation evolution (1981/1989/1992)`,
-      source_class: 'quran-edition-comparison',
       review_status: 'draft',
       generation_note:
         'Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.',
