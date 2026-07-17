@@ -873,11 +873,16 @@ async function buildEnrichmentLists(
     .slice(0, options.enrichmentMaxSections);
   const resolved = await resolveEnrichmentSections(selected);
 
+  // The enrichment channel produces a single ranked list while vector and
+  // lexical channels produce one list per query variant. Scaling by the
+  // variant count keeps enrichment guidance competitive in the fusion.
+  const variantScale = Math.max(1, Math.min(queries.length, 6));
+
   return resolved.length > 0
     ? [{
         rows: resolved,
         channel: 'enrichment:resolved-canonical',
-        weight: 1.35,
+        weight: 1.35 * variantScale,
         signal: 'enrichment',
       }]
     : [];

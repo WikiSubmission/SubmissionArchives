@@ -216,17 +216,72 @@ function scoreCase(
   };
 }
 
+const EMBED_CACHE_PATH = path.join(REPORT_DIR, 'question-embeddings.json');
+const EMBED_RETRY_ATTEMPTS = 4;
+const EMBED_RETRY_BASE_DELAY_MS = 2_000;
+
+function embedCacheKey(question: string): string {
+  const model = process.env.MISTRAL_EMBED_MODEL || 'mistral-embed-2312';
+  return `${model}::${question}`;
+}
+
+function loadEmbedCache(): Record<string, number[]> {
+  try {
+    return JSON.parse(readFileSync(EMBED_CACHE_PATH, 'utf8')) as Record<string, number[]>;
+  } catch {
+    return {};
+  }
+}
+
+function delay(milliseconds: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
+async function embedWithRetry(texts: string[]): Promise<number[][]> {
+  let lastError: unknown;
+  for (let attempt = 0; attempt < EMBED_RETRY_ATTEMPTS; attempt += 1) {
+    try {
+      return await embedQueries(texts);
+    } catch (error: unknown) {
+      lastError = error;
+      const wait = EMBED_RETRY_BASE_DELAY_MS * 2 ** attempt;
+      process.stdout.write(`\nEmbedding batch failed (attempt ${attempt + 1}), retrying in ${wait}ms\n`);
+      await delay(wait);
+    }
+  }
+  throw lastError;
+}
+
 async function embedAllQuestions(cases: EvalCase[]): Promise<Map<string, number[]>> {
+  const cache = loadEmbedCache();
   const embeddings = new Map<string, number[]>();
-  for (let offset = 0; offset < cases.length; offset += EMBED_BATCH_SIZE) {
-    const batch = cases.slice(offset, offset + EMBED_BATCH_SIZE);
-    const vectors = await embedQueries(batch.map((item) => item.question));
-    batch.forEach((item, index) => embeddings.set(item.id, vectors[index]));
+  const uncached: EvalCase[] = [];
+
+  for (const item of cases) {
+    const hit = cache[embedCacheKey(item.question)];
+    if (hit?.length) embeddings.set(item.id, hit);
+    else uncached.push(item);
+  }
+  if (uncached.length < cases.length) {
+    console.log(`Embedding cache: ${cases.length - uncached.length}/${cases.length} questions reused.`);
+  }
+
+  for (let offset = 0; offset < uncached.length; offset += EMBED_BATCH_SIZE) {
+    const batch = uncached.slice(offset, offset + EMBED_BATCH_SIZE);
+    const vectors = await embedWithRetry(batch.map((item) => item.question));
+    batch.forEach((item, index) => {
+      embeddings.set(item.id, vectors[index]);
+      cache[embedCacheKey(item.question)] = vectors[index];
+    });
     process.stdout.write(
-      `\rEmbedding questions: ${Math.min(offset + EMBED_BATCH_SIZE, cases.length)}/${cases.length}`,
+      `\rEmbedding questions: ${Math.min(offset + EMBED_BATCH_SIZE, uncached.length)}/${uncached.length}`,
     );
   }
-  process.stdout.write('\n');
+  if (uncached.length > 0) {
+    process.stdout.write('\n');
+    mkdirSync(REPORT_DIR, { recursive: true });
+    writeFileSync(EMBED_CACHE_PATH, JSON.stringify(cache));
+  }
   return embeddings;
 }
 

@@ -122,6 +122,9 @@ scripts/debug_ocr.py
 # Local retrieval traces
 /reports/rag-traces/
 
+# Eval question embedding cache
+/reports/rag-eval/question-embeddings.json
+
 # Local corpus import and rollback artifacts
 /askarchives_complete_corpus_three_quran_editions_windows*/
 /.corpus-migration-backup/
