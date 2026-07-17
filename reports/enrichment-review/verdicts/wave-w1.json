@@ -1,0 +1,244 @@
+[
+ {
+  "file": "data/rag_enrichment/written-works/computer-speaks.json",
+  "sections": [
+   {
+    "id": "cs-s01",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s02",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s03",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s04",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s05",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s06",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s07",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s08",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s09",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s10",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s11",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s12",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s13",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s14",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s15",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s16",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s17",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s18",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s19",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s20",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s21",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s22",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s23",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s24",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s25",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s26",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s27",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s28",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s29",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s30",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s31",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s32",
+    "verdict": "approve"
+   },
+   {
+    "id": "cs-s33",
+    "verdict": "approve"
+   }
+  ]
+ },
+ {
+  "file": "data/rag_enrichment/written-works/miracle-of-quran-alphabets.json",
+  "sections": [
+   {
+    "id": "mqa-s01",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s02",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s03",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s04",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s05",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s06",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s07",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s08",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s09",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s10",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s11",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s12",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s13",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s14",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s15",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s16",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s17",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s18",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s19",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s20",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s21",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s22",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s23",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s24",
+    "verdict": "approve"
+   },
+   {
+    "id": "mqa-s25",
+    "verdict": "approve"
+   }
+  ]
+ }
+]

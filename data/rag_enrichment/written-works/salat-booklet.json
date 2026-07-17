@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0-written-works",
+  "document_id": "written-works/salat-booklet",
+  "canonical_document_id": "salat-booklet",
+  "canonical_catalog_ids": [
+    "salat-booklet"
+  ],
+  "title": "The Contact Prayers",
+  "review_status": "approved",
+  "generation_note": "Sections authored from canonical page text by an AI assistant; review before approval.",
+  "sections": [
+    {
+      "id": "sb-s00",
+      "title": "Abraham's Religious Heritage and Quranic Foundations",
+      "summary": "The booklet establishes that Submission (Islam) originates from Abraham's teachings according to the Quran. It identifies four pillars of practice from Abraham: five daily Contact Prayers (Salat), obligatory charity (Zakat), Ramadan fasting, and Hajj pilgrimage. The text claims all prayer positions are specified in the Quran and notes that five prayer times are explicitly named in scripture with specific timing guidelines.",
+      "section_kind": "introduction",
+      "concepts": [
+        {
+          "id": "abraham-religion",
+          "relation": "established",
+          "explicit": true
+        },
+        {
+          "id": "submission-islam",
+          "relation": "defined",
+          "explicit": true
+        },
+        {
+          "id": "five-pillars",
+          "relation": "listed",
+          "explicit": true
+        },
+        {
+          "id": "salat",
+          "relation": "introduced",
+          "explicit": true
+        },
+        {
+          "id": "five-daily-prayers",
+          "relation": "prescribed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Abraham religion Islam Submission",
+        "five daily prayers salat",
+        "prayer times dawn noon sunset",
+        "Islamic pillars practice",
+        "contact prayer foundation",
+        "Quranic prayer requirements"
+      ],
+      "related_questions": [
+        "What are the five daily prayer times in Islam?",
+        "How did Abraham establish the practice of salat?",
+        "What Quranic verses specify the prayer positions?"
+      ],
+      "quran_references": [
+        "2:135",
+        "3:95",
+        "4:125",
+        "6:161",
+        "22:78",
+        "16:123",
+        "21:73",
+        "8:35",
+        "9:54",
+        "3:39",
+        "39:9",
+        "2:43",
+        "3:43",
+        "9:112",
+        "22:26",
+        "24:58",
+        "17:78",
+        "2:238",
+        "11:114"
+      ],
+      "retrieval_note": "Foundation text establishing the Quranic basis and historical roots of Islamic prayer practice.",
+      "source_segment_start": 0,
+      "source_segment_end": 1,
+      "page_start": 1,
+      "page_end": 2
+    },
+    {
+      "id": "sb-s01",
+      "title": "Ablution and Preparation for Prayer",
+      "summary": "The text prescribes the required ablution (ritual purification) before prayer as washing faces, arms to elbows, wiping heads with wet hands, and washing feet to ankles, citing Quran 5:6. It describes a major ablution following sexual activity and introduces the dry ablution (Tayammum) using clean soil when water is unavailable. The text specifies what nullifies ablution: digestive excretions, gas, urine, and sleep.",
+      "section_kind": "procedure",
+      "concepts": [
+        {
+          "id": "ablution",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "ritual-purification",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "tayammum",
+          "relation": "explained",
+          "explicit": true
+        },
+        {
+          "id": "preparation-prayer",
+          "relation": "specified",
+          "explicit": true
+        },
+        {
+          "id": "major-ablution",
+          "relation": "defined",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "ablution wudu purification",
+        "washing ritual Islam",
+        "prayer preparation requirements",
+        "tayammum dry ablution",
+        "face arms feet washing",
+        "nullifies ablution",
+        "what breaks wudu"
+      ],
+      "related_questions": [
+        "What are the steps of ablution before prayer?",
+        "When is ablution nullified or broken?",
+        "What is tayammum and when is it used?",
+        "How is major ablution performed?"
+      ],
+      "quran_references": [
+        "5:6",
+        "4:43"
+      ],
+      "retrieval_note": "Step-by-step procedures for ritual purification and preparation before performing contact prayers.",
+      "source_segment_start": 2,
+      "source_segment_end": 2,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "sb-s02",
+      "title": "Prayer Positions and Movements",
+      "summary": "The booklet provides detailed instructions for the physical movements in prayer: facing Mecca, stating intention, raising hands, saying takbir (Allahu Akbar), standing position, reciting Al-Fatihah in Arabic (The Key), bowing (Rukoo'), standing again, prostration (Sujood), sitting position, and second prostration. Each transition requires saying 'Allahu Akbar' and specific glorifications. The author notes that Al-Fatihah's Arabic sounds represent a numerical combination that establishes contact, analogous to a telephone number.",
+      "section_kind": "procedure",
+      "concepts": [
+        {
+          "id": "prayer-positions",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "qiblah",
+          "relation": "specified",
+          "explicit": true
+        },
+        {
+          "id": "takbir",
+          "relation": "explained",
+          "explicit": true
+        },
+        {
+          "id": "rukoo",
+          "relation": "illustrated",
+          "explicit": true
+        },
+        {
+          "id": "sujood",
+          "relation": "detailed",
+          "explicit": true
+        },
+        {
+          "id": "al-fatiha",
+          "relation": "prescribed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "prayer positions rukoo bowing",
+        "prostration sujood",
+        "standing prayer position",
+        "prayer movements directions",
+        "takbir Allahu Akbar",
+        "salat steps procedure",
+        "facing Mecca qiblah",
+        "Al-Fatihah recitation"
+      ],
+      "related_questions": [
+        "What are the correct physical positions during prayer?",
+        "In what order are the prayer positions performed?",
+        "What is said during each movement?",
+        "How long is each position held?"
+      ],
+      "quran_references": [
+        "2:37",
+        "2:43",
+        "17:110"
+      ],
+      "retrieval_note": "Detailed procedural guide to prayer positions, movements, and corresponding recitations throughout a single prayer unit.",
+      "source_segment_start": 3,
+      "source_segment_end": 5,
+      "page_start": 4,
+      "page_end": 6
+    },
+    {
+      "id": "sb-s03",
+      "title": "Prayer Variations and Group Worship",
+      "summary": "The booklet describes how the five daily prayers vary by number of units: Dawn (2 units), Noon (4 units), Afternoon (4 units), Sunset (3 units), Night (4 units). It notes these numbers (2-4-4-3-4 = 24434) form a multiple of 19, described as the common denominator of the Quran's code. The Friday congregational prayer replaces the Noon prayer and includes two sermons plus two prayer units. Group prayers allow people to join late and make up missed portions, with only the Imam audible during The Key.",
+      "section_kind": "procedure",
+      "concepts": [
+        {
+          "id": "prayer-units",
+          "relation": "specified",
+          "explicit": true
+        },
+        {
+          "id": "five-daily-prayers",
+          "relation": "differentiated",
+          "explicit": true
+        },
+        {
+          "id": "friday-prayer",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "group-prayer",
+          "relation": "explained",
+          "explicit": true
+        },
+        {
+          "id": "numerical-code",
+          "relation": "referenced",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "prayer units rakah",
+        "dawn noon afternoon sunset night",
+        "Friday prayer Salat Al-Jumah",
+        "number of units each prayer",
+        "group congregational prayer",
+        "Imam leadership prayer",
+        "sermon khutba"
+      ],
+      "related_questions": [
+        "How many units are in each of the five daily prayers?",
+        "What is special about Friday prayer?",
+        "Can someone join a group prayer in progress?",
+        "What is the significance of the number sequence 2-4-4-3-4?"
+      ],
+      "quran_references": [
+        "62:9"
+      ],
+      "retrieval_note": "Specification of prayer variations, unit counts, congregational practices, and claimed numerical significance.",
+      "source_segment_start": 6,
+      "source_segment_end": 7,
+      "page_start": 7,
+      "page_end": 8
+    }
+  ]
+}

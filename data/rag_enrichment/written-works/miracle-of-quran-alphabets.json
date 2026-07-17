@@ -2,9 +2,11 @@
   "schema_version": "1.0-written-works",
   "document_id": "written-works/miracle-of-quran-alphabets",
   "canonical_document_id": "miracle-of-quran-alphabets",
-  "canonical_catalog_ids": ["miracle-of-quran-alphabets"],
+  "canonical_catalog_ids": [
+    "miracle-of-quran-alphabets"
+  ],
   "title": "Miracle of the Quran - Significance of the Mysterious Alphabets",
-  "review_status": "draft",
+  "review_status": "approved",
   "generation_note": "Sections authored from canonical page text by an AI assistant; review before approval.",
   "sections": [
     {
@@ -13,9 +15,21 @@
       "summary": "These opening pages present the book's title and identify Rashad Khalifa, Ph.D. as author, published in 1973 by Islamic Productions International, Inc. in St. Louis, Missouri. They include the copyright notice, a list of reviewers who read and commented on the manuscript (Virgil I. Moss, Ahmed H. Sakr, Sulayman Shahid Mufassir, and Mujahid Al-Sawwaf), and a dedication to the author's father and Sufi teacher, Abdul-Halim Khalifa, described as an Egyptian Sage of Sufism and founder of Tariqat Al-Rashad Al-Shaziliyya.",
       "section_kind": "introduction",
       "concepts": [
-        {"id": "rashad-khalifa", "relation": "described", "explicit": true},
-        {"id": "islamic-productions-international", "relation": "described", "explicit": true},
-        {"id": "sufi-dedication", "relation": "described", "explicit": true}
+        {
+          "id": "rashad-khalifa",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "islamic-productions-international",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "sufi-dedication",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "who wrote miracle of the Quran alphabets",
@@ -36,7 +50,7 @@
       "source_segment_end": 4,
       "page_start": 1,
       "page_end": 7,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s02",
@@ -44,10 +58,26 @@
       "summary": "This section gives Rashad Khalifa's biography as a Sufi-raised Egyptian who studied plant biochemistry in the United States and worked at Anheuser-Busch, along with his record of Muslim community service. Sulayman Shahid Mufassir's introduction frames the book's findings as faith-strengthening evidence comparable to the reassurance God gave the prophet Abraham. Khalifa's own preface describes how translating the Qur'an into English in 1968 stalled at the mysterious letters Alif Lam Mim opening sura Al-Baqara, prompting four years of research that culminated in a computerized letter count of the whole Qur'an. A table of contents lists the book's chapter structure.",
       "section_kind": "introduction",
       "concepts": [
-        {"id": "rashad-khalifa-biography", "relation": "described", "explicit": true},
-        {"id": "quranic-initials", "relation": "introduced", "explicit": true},
-        {"id": "research-origin-story", "relation": "described", "explicit": true},
-        {"id": "sulayman-shahid-mufassir", "relation": "described", "explicit": true}
+        {
+          "id": "rashad-khalifa-biography",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quranic-initials",
+          "relation": "introduced",
+          "explicit": true
+        },
+        {
+          "id": "research-origin-story",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "sulayman-shahid-mufassir",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Rashad Khalifa biography",
@@ -63,13 +93,15 @@
         "How long did the research take?",
         "What does the introduction by Mufassir argue about the book's evidence?"
       ],
-      "quran_references": ["75:17"],
+      "quran_references": [
+        "75:17"
+      ],
       "retrieval_note": "Useful for questions about the author's motivation and the origin of the research project, not the mathematical findings themselves.",
       "source_segment_start": 5,
       "source_segment_end": 12,
       "page_start": 9,
       "page_end": 16,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s03",
@@ -77,10 +109,26 @@
       "summary": "The prologue argues that the Qur'an itself is Muhammad's miracle, citing verses that challenge humans and jinn to produce anything comparable. It lists examples the author considers scientific miracles already stated in the Qur'an, including the earth's rotation, the sun as a light source versus the moon's reflected light, and the preservation of the Pharaoh's body. It argues the Qur'an contains no statements ever disproven by science, contrasts this with the era's widespread superstitions, and notes God's vow to preserve the Qur'an, concluding that the mysterious Qur'anic Initials letters are another facet of this perpetual, ongoing miracle.",
       "section_kind": "argument",
       "concepts": [
-        {"id": "quran-as-miracle", "relation": "argued", "explicit": true},
-        {"id": "scientific-miracles-in-quran", "relation": "argued", "explicit": true},
-        {"id": "quran-preservation", "relation": "argued", "explicit": true},
-        {"id": "quranic-initials", "relation": "introduced", "explicit": true}
+        {
+          "id": "quran-as-miracle",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "scientific-miracles-in-quran",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "quran-preservation",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "quranic-initials",
+          "relation": "introduced",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Quran miracle argument",
@@ -96,13 +144,30 @@
         "Why does the author say the Qur'an must be preserved?",
         "How does the prologue introduce the Qur'anic Initials?"
       ],
-      "quran_references": ["29:50-51", "17:88", "2:23", "10:38", "11:13", "52:34", "27:88", "10:5", "25:61", "71:16", "10:92", "6:25", "17:46", "18:57", "56:77-79", "15:9"],
+      "quran_references": [
+        "29:50-51",
+        "17:88",
+        "2:23",
+        "10:38",
+        "11:13",
+        "52:34",
+        "27:88",
+        "10:5",
+        "25:61",
+        "71:16",
+        "10:92",
+        "6:25",
+        "17:46",
+        "18:57",
+        "56:77-79",
+        "15:9"
+      ],
       "retrieval_note": "Useful for the book's opening case that the Qur'an is a perpetual, scientifically-verifiable miracle, setting up the initials study.",
       "source_segment_start": 13,
       "source_segment_end": 17,
       "page_start": 17,
       "page_end": 21,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s04",
@@ -110,10 +175,26 @@
       "summary": "Chapter 1 explains background facts needed to follow the study: the Qur'an's 114 suras vary from 3 to 286 verses, and each sura is classified as Meccan or Medinan depending on whether it was revealed before or after the Hijra. It presents a transliteration convention for the Arabic alphabet (Table 1), a table of all suras in their recorded sequence with revelation location (Table 2), and a table of all suras in chronological revelation sequence with location (Table 3).",
       "section_kind": "reference",
       "concepts": [
-        {"id": "sura-structure", "relation": "described", "explicit": true},
-        {"id": "meccan-medinan-classification", "relation": "described", "explicit": true},
-        {"id": "arabic-transliteration-convention", "relation": "described", "explicit": true},
-        {"id": "recorded-vs-revelation-order", "relation": "described", "explicit": true}
+        {
+          "id": "sura-structure",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "meccan-medinan-classification",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "arabic-transliteration-convention",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "recorded-vs-revelation-order",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "how many verses in each sura",
@@ -135,7 +216,7 @@
       "source_segment_end": 25,
       "page_start": 22,
       "page_end": 29,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s05",
@@ -143,10 +224,26 @@
       "summary": "These pages narrate the traditional account of how the Qur'an was recorded and preserved unaltered, describing the Prophet Muhammad's personal supervision of the writing of revelation through his scribe Zeid ibn Thabit. It recounts how, after martyrs at the Battle of Yamama died with the Qur'an memorized, Umar ibn Al-Khattab urged Caliph Abu Bakr to have Zeid collect the Qur'an into a single written volume, which later passed to Hafsa, and how Caliph Uthman had Zeid and three others reproduce standardized copies sent to Basra, Kufa, Damascus, and Mecca after Huzeifa ibn Al-Yaman reported recitation variations among Muslims in Syria and Iraq. The author argues these copies are the source of all Qur'ans published today.",
       "section_kind": "narrative",
       "concepts": [
-        {"id": "quran-preservation", "relation": "argued", "explicit": true},
-        {"id": "zeid-ibn-thabit", "relation": "described", "explicit": true},
-        {"id": "uthman-codex", "relation": "described", "explicit": true},
-        {"id": "battle-of-yamama", "relation": "described", "explicit": true}
+        {
+          "id": "quran-preservation",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "zeid-ibn-thabit",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "uthman-codex",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "battle-of-yamama",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "how was the Quran compiled",
@@ -168,7 +265,7 @@
       "source_segment_end": 28,
       "page_start": 30,
       "page_end": 32,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s06",
@@ -176,9 +273,21 @@
       "summary": "Chapter 2 defines the Qur'anic Initials as the sets of Arabic letters prefixing 28 of the Qur'an's 114 suras (one sura has two sets), formed from 14 distinct letters out of the 28-letter alphabet, which Sufi mystics traditionally call the illumination letters. It lists the 14 letters involved and presents tables of the 14 different initial sets and which suras contain them, in both recorded order (Table 5) and chronological revelation order (Table 6).",
       "section_kind": "introduction",
       "concepts": [
-        {"id": "quranic-initials", "relation": "defined", "explicit": true},
-        {"id": "illumination-letters", "relation": "described", "explicit": true},
-        {"id": "muqattaat", "relation": "described", "explicit": false}
+        {
+          "id": "quranic-initials",
+          "relation": "defined",
+          "explicit": true
+        },
+        {
+          "id": "illumination-letters",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "muqattaat",
+          "relation": "described",
+          "explicit": false
+        }
       ],
       "user_terms": [
         "what are the Quranic initials",
@@ -199,7 +308,7 @@
       "source_segment_end": 32,
       "page_start": 33,
       "page_end": 36,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s07",
@@ -207,10 +316,26 @@
       "summary": "Chapter 3 surveys prior scholarly theories about the Qur'anic initials drawn from Al-Suyuti and Al-Baydawi, noting unanimous agreement among Muslim scholars that the letters relate to the Qur'an's miraculous nature. It lists predominant theories, including that the letters are a literary challenge, an attention-getting device, secret names of God or of the Qur'an, or foreign words, and recounts Ibn Abbas's view that Alif Lam Mim spells out God, Gabriel, and Muhammad. The bulk of the section reproduces Abdullah Yusuf Ali's detailed appendix analyzing patterns in how the abbreviated letters occur and offering tentative, admittedly speculative, symbolic interpretations for specific letter combinations across many suras.",
       "section_kind": "argument",
       "concepts": [
-        {"id": "muqattaat-theories", "relation": "described", "explicit": true},
-        {"id": "al-suyuti", "relation": "described", "explicit": true},
-        {"id": "abdullah-yusuf-ali-appendix", "relation": "described", "explicit": true},
-        {"id": "ibn-abbas-interpretation", "relation": "described", "explicit": true}
+        {
+          "id": "muqattaat-theories",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "al-suyuti",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "abdullah-yusuf-ali-appendix",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "ibn-abbas-interpretation",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "theories about mysterious Quran letters",
@@ -231,7 +356,7 @@
       "source_segment_end": 40,
       "page_start": 37,
       "page_end": 44,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s08",
@@ -239,10 +364,26 @@
       "summary": "Chapter 4 describes hypotheses the author tested and discarded, such as correlating the initials with God's names or with prophets' names occurring in the same sura, before deciding to physically count every letter in all 114 suras with electronic computers. Chapter 5 details the manual tally method using a hand-marked form, then the FORTRAN IV programming on a Xerox Data Systems Sigma 7 computer that calculated each letter's absolute frequency, its percentage of a sura's total letters, and its average occurrence per verse, using sura Al-Baqara's letters Alif, Lam, and Mim as a worked example. It also explains the statistical caution required when comparing very short suras.",
       "section_kind": "procedure",
       "concepts": [
-        {"id": "letter-frequency-methodology", "relation": "described", "explicit": true},
-        {"id": "computer-analysis", "relation": "described", "explicit": true},
-        {"id": "percentage-vs-absolute-frequency", "relation": "described", "explicit": true},
-        {"id": "discarded-hypotheses", "relation": "described", "explicit": true}
+        {
+          "id": "letter-frequency-methodology",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "computer-analysis",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "percentage-vs-absolute-frequency",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "discarded-hypotheses",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "how was the letter counting done",
@@ -263,7 +404,7 @@
       "source_segment_end": 53,
       "page_start": 45,
       "page_end": 57,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s09",
@@ -271,9 +412,21 @@
       "summary": "This section presents the raw computer printouts referenced by Chapter 5: Table 8 lists the absolute frequency of each of the 14 initial letters in every sura, Table 9 lists the absolute frequency of each multi-letter initial set per sura, Table 10 gives percentage frequency values, and Table 11 gives average per-verse occurrence values for each initial set across all 114 suras. These tables form the raw data base for the sura-by-sura arguments made in the following chapter.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letter-frequency-tables", "relation": "presented", "explicit": true},
-        {"id": "percentage-frequency-table", "relation": "presented", "explicit": true},
-        {"id": "average-per-verse-table", "relation": "presented", "explicit": true}
+        {
+          "id": "letter-frequency-tables",
+          "relation": "presented",
+          "explicit": true
+        },
+        {
+          "id": "percentage-frequency-table",
+          "relation": "presented",
+          "explicit": true
+        },
+        {
+          "id": "average-per-verse-table",
+          "relation": "presented",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Quran letter frequency table",
@@ -292,7 +445,7 @@
       "source_segment_end": 69,
       "page_start": 58,
       "page_end": 73,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s10",
@@ -300,10 +453,26 @@
       "summary": "This section argues that sura Qaf, titled after and initialed with the letter Qaf, contains the highest frequency of that letter of any sura except three very short suras, which it shows are numerically inferior once absolute frequency and average-per-verse values are considered. It further observes that sura Qaf and the only other Qaf-initialed sura, Al-Shura, each contain exactly 57 occurrences of the letter Qaf, whose sum (114) equals the total number of suras in the Qur'an, offered as evidence that no human author, and only God, could have controlled such a distribution across a revelation spanning 23 years.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letter-qaf-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-qaf", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-shura", "relation": "analyzed", "explicit": true},
-        {"id": "overall-frequency-computation", "relation": "applied", "explicit": true}
+        {
+          "id": "letter-qaf-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-qaf",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-shura",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "overall-frequency-computation",
+          "relation": "applied",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "letter Qaf frequency in Quran",
@@ -318,13 +487,15 @@
         "Which suras contain a higher percentage of Qaf than sura Qaf, and why are they not truly superior?",
         "What does the 57+57=114 observation argue about authorship?"
       ],
-      "quran_references": ["50:38"],
+      "quran_references": [
+        "50:38"
+      ],
       "retrieval_note": "Useful for the specific numerical argument built around the letter Qaf as a Qur'anic initial.",
       "source_segment_start": 70,
       "source_segment_end": 81,
       "page_start": 74,
       "page_end": 85,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s11",
@@ -332,9 +503,21 @@
       "summary": "This section examines the initial Nun in sura Al-Qalam (The Pen), showing it ranks near the top in percentage frequency of Nun among all suras once its three highest competitors are re-averaged with their own initialed sister suras (Al-Shu'ara, Al-Dukhan, Al-Hijr). After this averaging, only Al-Saffat and Al-Waqi'a retain a higher percentage, but both fall below sura Al-Qalam in average per-verse frequency, leading the author to conclude that no sura has all three frequency measures of Nun higher than Al-Qalam.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letter-nun-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-qalam", "relation": "analyzed", "explicit": true},
-        {"id": "sister-sura-averaging", "relation": "applied", "explicit": true}
+        {
+          "id": "letter-nun-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-qalam",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sister-sura-averaging",
+          "relation": "applied",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "letter Nun frequency Quran",
@@ -353,7 +536,7 @@
       "source_segment_end": 91,
       "page_start": 86,
       "page_end": 95,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s12",
@@ -361,10 +544,26 @@
       "summary": "This section analyzes the letter Sad, which initials both sura Sad and, in combination with Alif Lam Mim, sura Al-A'raf, two suras revealed consecutively. It shows that sura Sad alone is surpassed by three short suras, but that when the letter's frequency is averaged across Sad and Al-A'raf together, and compared against averaged groups such as the five Alif Lam Ra suras, the combined Sad/Al-A'raf frequency of Sad proves the highest in the Qur'an, taken as evidence that the initials extend deliberately across paired suras.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letter-sad-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-sad", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-araf", "relation": "analyzed", "explicit": true},
-        {"id": "paired-sura-averaging", "relation": "applied", "explicit": true}
+        {
+          "id": "letter-sad-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-sad",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-araf",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "paired-sura-averaging",
+          "relation": "applied",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "letter Sad frequency Quran",
@@ -383,7 +582,7 @@
       "source_segment_end": 104,
       "page_start": 96,
       "page_end": 108,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s13",
@@ -391,9 +590,21 @@
       "summary": "This section presents the frequency analysis of the combined letters Ta and Ha as the initials of sura Ta Ha, comparing its percentage, absolute frequency, and average per-verse values against all other suras. The discussion concludes that sura Ta Ha's overall frequency of these letters is superior to all Meccan suras, though not to every Medinan sura, a pattern the author treats as evidence tied to the location of revelation.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-ta-ha-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-ta-ha", "relation": "analyzed", "explicit": true},
-        {"id": "meccan-medinan-classification", "relation": "applied", "explicit": true}
+        {
+          "id": "letters-ta-ha-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-ta-ha",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "meccan-medinan-classification",
+          "relation": "applied",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Ta Ha letters frequency Quran",
@@ -411,7 +622,7 @@
       "source_segment_end": 113,
       "page_start": 109,
       "page_end": 117,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s14",
@@ -419,9 +630,21 @@
       "summary": "This section covers the analysis of the combined letters Ya and Sin as the initials of sura Ya Sin, presenting their percentage, absolute frequency, and average per-verse tables across all suras. Unlike most other initials studied, the author notes this set has the lowest overall frequency of these letters of any sura bearing them, which the discussion frames as a case of alphabetic-order reversal rather than the mathematical superiority pattern seen elsewhere.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-ya-sin-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-ya-sin", "relation": "analyzed", "explicit": true},
-        {"id": "alphabetic-order-reversal", "relation": "argued", "explicit": true}
+        {
+          "id": "letters-ya-sin-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-ya-sin",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "alphabetic-order-reversal",
+          "relation": "argued",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Ya Sin letters frequency",
@@ -438,7 +661,7 @@
       "source_segment_end": 121,
       "page_start": 118,
       "page_end": 125,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s15",
@@ -446,9 +669,21 @@
       "summary": "This section analyzes the combined letters Ha and Mim as shared initials of seven suras (Ghafir, Fussilat, Al-Shura, Al-Zukhruf, Al-Dukhan, Al-Jathiya, Al-Ahqaf), which the author treats as one unified group for frequency averaging. It concludes that the averaged frequency of Ha Mim across these seven Meccan suras is superior to all other Meccan suras, though not to every Medinan sura.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-ha-mim-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "ha-mim-sura-group", "relation": "described", "explicit": true},
-        {"id": "sister-sura-averaging", "relation": "applied", "explicit": true}
+        {
+          "id": "letters-ha-mim-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "ha-mim-sura-group",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "sister-sura-averaging",
+          "relation": "applied",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Ha Mim suras list",
@@ -467,7 +702,7 @@
       "source_segment_end": 129,
       "page_start": 126,
       "page_end": 133,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s16",
@@ -475,11 +710,31 @@
       "summary": "This section studies three consecutive suras: Al-Shu'ara and Al-Qasas, each initialed with the three letters Ta Sin Mim, separated by Al-Naml, initialed with only Ta Sin. It reports that exactly 35 suras have a higher percentage of Ta Sin Mim than Al-Shu'ara and exactly 35 have a lower percentage than Al-Qasas, with the raw letter counts differing by exactly 35 (615 versus 580), and separately argues Al-Naml's frequency of Ta Sin is exceeded only by sura Al-Isra', framing these findings as evidence of deliberate mathematical balance across the three suras.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-ta-sin-mim-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-shuara", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-qasas", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-naml", "relation": "analyzed", "explicit": true},
-        {"id": "balance-argument", "relation": "argued", "explicit": true}
+        {
+          "id": "letters-ta-sin-mim-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-shuara",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-qasas",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-naml",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "balance-argument",
+          "relation": "argued",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Ta Sin Mim letters frequency",
@@ -498,7 +753,7 @@
       "source_segment_end": 147,
       "page_start": 134,
       "page_end": 151,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s17",
@@ -506,9 +761,21 @@
       "summary": "This section analyzes the initials Alif Lam Mim across six suras, four Meccan (Al-Ankabut, Al-Rum, Luqman, Al-Sajda) and two Medinan (Al-Baqara, Ali-Imran), arguing that the averaged Meccan group is superior in frequency to all other Meccan suras and the averaged Medinan pair is superior to all suras in the Qur'an without exception. It further argues that these suras must be grouped by their order of recording rather than their revelation order, taken as evidence that the recorded sequence of the Qur'an is divinely intended.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-alif-lam-mim-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-baqara", "relation": "analyzed", "explicit": true},
-        {"id": "recorded-sequence-argument", "relation": "argued", "explicit": true}
+        {
+          "id": "letters-alif-lam-mim-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-baqara",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "recorded-sequence-argument",
+          "relation": "argued",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Alif Lam Mim suras list",
@@ -527,7 +794,7 @@
       "source_segment_end": 157,
       "page_start": 152,
       "page_end": 161,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s18",
@@ -535,9 +802,21 @@
       "summary": "This section studies the initials Alif Lam Ra across five suras (Yunus, Hud, Yusuf, Ibrahim, Al-Hijr), testing several combinations of averaging based on revelation order versus recorded order. It concludes that groupings based on revelation sequence consistently show mathematical superiority over all Meccan suras except sura Al-Isra', arguing this validates the Qur'an's chronological revelation sequence, in contrast to the recorded-sequence argument made for Alif Lam Mim.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-alif-lam-ra-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "revelation-sequence-argument", "relation": "argued", "explicit": true},
-        {"id": "sura-al-isra", "relation": "described", "explicit": true}
+        {
+          "id": "letters-alif-lam-ra-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "revelation-sequence-argument",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-isra",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Alif Lam Ra suras list",
@@ -556,7 +835,7 @@
       "source_segment_end": 165,
       "page_start": 162,
       "page_end": 169,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s19",
@@ -564,8 +843,16 @@
       "summary": "This section analyzes the four-letter initial set Alif Lam Mim Sad, found only in sura Al-A'raf, showing that after computing overall frequency values only four Medinan suras exceed it, leading the author to conclude that this Meccan sura is mathematically superior to every other Meccan sura in the frequency of these four letters.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-alif-lam-mim-sad-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-araf", "relation": "analyzed", "explicit": true}
+        {
+          "id": "letters-alif-lam-mim-sad-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-araf",
+          "relation": "analyzed",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Alif Lam Mim Sad meaning",
@@ -582,7 +869,7 @@
       "source_segment_end": 170,
       "page_start": 170,
       "page_end": 174,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s20",
@@ -590,8 +877,16 @@
       "summary": "This section analyzes the initials Alif Lam Mim Ra, unique to sura Al-Ra'd (Thunder), reporting that although the sura ranks only 84th of 114 suras by simple percentage, every sura with a nominally higher percentage proves inferior once all three frequency measures are combined, so that sura Al-Ra'd is judged superior to every sura in the Qur'an without exception in this letter combination.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-alif-lam-mim-ra-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-rad", "relation": "analyzed", "explicit": true}
+        {
+          "id": "letters-alif-lam-mim-ra-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-rad",
+          "relation": "analyzed",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Alif Lam Mim Ra meaning",
@@ -608,7 +903,7 @@
       "source_segment_end": 176,
       "page_start": 175,
       "page_end": 180,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s21",
@@ -616,9 +911,21 @@
       "summary": "This section analyzes the five-letter initials Kaf Ha Ya Ayn Sad, unique to sura Maryam, and argues that the shared letter Ha, which occupies the same second position in the immediately following sura Ta Ha, must be averaged between the two suras before Maryam's mathematical superiority becomes apparent. After this adjustment, the author concludes sura Maryam is superior to all Meccan suras in the overall frequency of these letters.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-kaf-ha-ya-ayn-sad-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-maryam", "relation": "analyzed", "explicit": true},
-        {"id": "shared-letter-averaging", "relation": "argued", "explicit": true}
+        {
+          "id": "letters-kaf-ha-ya-ayn-sad-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-maryam",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "shared-letter-averaging",
+          "relation": "argued",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Kaf Ha Ya Ayn Sad meaning",
@@ -636,7 +943,7 @@
       "source_segment_end": 184,
       "page_start": 181,
       "page_end": 188,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s22",
@@ -644,9 +951,21 @@
       "summary": "This section examines the initials Ha Mim Ayn Sin Qaf, found only in sura Al-Shura, whose first verse (Ha Mim) also belongs to the seven-sura Ha Mim group discussed earlier. It reports that sura Al-Shura alone shows no mathematical superiority, and that superiority only emerges once its Ayn Sin Qaf values are combined with the averaged Ha Mim values of its six sister suras, after which the combination is judged superior to all Meccan suras.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "letters-ha-mim-ayn-sin-qaf-frequency", "relation": "analyzed", "explicit": true},
-        {"id": "sura-al-shura", "relation": "analyzed", "explicit": true},
-        {"id": "ha-mim-sura-group", "relation": "applied", "explicit": true}
+        {
+          "id": "letters-ha-mim-ayn-sin-qaf-frequency",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-shura",
+          "relation": "analyzed",
+          "explicit": true
+        },
+        {
+          "id": "ha-mim-sura-group",
+          "relation": "applied",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Ha Mim Ayn Sin Qaf meaning",
@@ -663,7 +982,7 @@
       "source_segment_end": 192,
       "page_start": 189,
       "page_end": 196,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s23",
@@ -671,11 +990,31 @@
       "summary": "Chapter 7 summarizes the mathematical properties found for each of the 14 Qur'anic initials in a master table, then draws several broader conclusions: that the Qur'an's letter-level composition proves it is God's word, illustrated by a calculated figure of 11 raised to the 414th power (roughly 6.26 x 10^26) possible letter arrangements; that the recorded and revelation orders of suras are each divinely confirmed by different initial groups; that the Meccan or Medinan locations of revelation are confirmed; that the Qur'an's distinctive spelling conventions must never be modernized; that verse divisions must never be altered, criticizing Yusuf Ali's rearrangement of a verse boundary in sura Ali-Imran; and that Bismillah is an integral verse of every sura except Al-Tawba. It closes by noting the number 14 recurs suggestively across 14 centuries and 14 letters, and offers a simplified thought experiment about the impossibility of a human controlling multi-letter distributions across a book's chapters.",
       "section_kind": "conclusion",
       "concepts": [
-        {"id": "quran-divine-authorship-argument", "relation": "argued", "explicit": true},
-        {"id": "recorded-sequence-argument", "relation": "argued", "explicit": true},
-        {"id": "revelation-sequence-argument", "relation": "argued", "explicit": true},
-        {"id": "bismillah-integral-verse", "relation": "argued", "explicit": true},
-        {"id": "quranic-spelling-preservation", "relation": "argued", "explicit": true}
+        {
+          "id": "quran-divine-authorship-argument",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "recorded-sequence-argument",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "revelation-sequence-argument",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "bismillah-integral-verse",
+          "relation": "argued",
+          "explicit": true
+        },
+        {
+          "id": "quranic-spelling-preservation",
+          "relation": "argued",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Miracle of Quran alphabets conclusion",
@@ -692,13 +1031,18 @@
         "Why should Qur'anic spelling and verse divisions never be altered?",
         "What significance does the number 14 have in the conclusion?"
       ],
-      "quran_references": ["59:21", "17:88", "2:2", "3:3-4"],
+      "quran_references": [
+        "59:21",
+        "17:88",
+        "2:2",
+        "3:3-4"
+      ],
       "retrieval_note": "Useful for the book's final summary table and its headline conclusions about what the initials collectively prove.",
       "source_segment_start": 193,
       "source_segment_end": 204,
       "page_start": 197,
       "page_end": 208,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s24",
@@ -706,9 +1050,21 @@
       "summary": "The addendum recounts a hadith in which Jewish scripturists calculated the abjad numerical value of Alif Lam Mim as 71 and challenged Islam's longevity on that basis, to which the Prophet is reported to have replied by citing other initialed combinations (ALMS, ALR, ALMR). The author then applies the same ancient gematria system to all 14 sets of Qur'anic initials, weighting each by its frequency of occurrence, and presents a table arriving at a grand total the text suggests may indicate the lifespan of Islam, while noting this is offered only as a further illustration of the initials' multidimensional nature.",
       "section_kind": "data-presentation",
       "concepts": [
-        {"id": "gematria", "relation": "applied", "explicit": true},
-        {"id": "abjad-numerals", "relation": "applied", "explicit": false},
-        {"id": "hadith-jewish-scripturists", "relation": "described", "explicit": true}
+        {
+          "id": "gematria",
+          "relation": "applied",
+          "explicit": true
+        },
+        {
+          "id": "abjad-numerals",
+          "relation": "applied",
+          "explicit": false
+        },
+        {
+          "id": "hadith-jewish-scripturists",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "gematria Quranic initials",
@@ -722,13 +1078,15 @@
         "How does the author apply gematria to all 14 sets of Qur'anic initials?",
         "What total value does the addendum's table arrive at?"
       ],
-      "quran_references": ["2:1"],
+      "quran_references": [
+        "2:1"
+      ],
       "retrieval_note": "Useful for the book's closing gematria exercise applying abjad numerology to the initials, distinct from the frequency-count argument.",
       "source_segment_start": 205,
       "source_segment_end": 206,
       "page_start": 209,
       "page_end": 210,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "mqa-s25",
@@ -736,8 +1094,16 @@
       "summary": "These closing pages are promotional back matter from the publisher, Islamic Productions International, Inc., advertising audio cassette and LP recordings it sold, including Essentials of Islam, Principles of the Muslim Prayer, Stories of the Prophets, Islamic stories for children, a life history of the Prophet Muhammad, Qur'an recitations by named reciters, and an English-meanings recitation series translated by Rashad Khalifa, along with ordering information and prices. The book closes with a short back-cover statement urging readers that the book's mathematical evidence proves the Qur'an is God's word.",
       "section_kind": "reference",
       "concepts": [
-        {"id": "islamic-productions-international", "relation": "described", "explicit": true},
-        {"id": "audio-recording-catalog", "relation": "described", "explicit": true}
+        {
+          "id": "islamic-productions-international",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "audio-recording-catalog",
+          "relation": "described",
+          "explicit": true
+        }
       ],
       "user_terms": [
         "Islamic Productions International catalog",
@@ -755,7 +1121,7 @@
       "source_segment_end": 210,
       "page_start": 212,
       "page_end": 216,
-      "review_status": "draft"
+      "review_status": "approved"
     }
   ]
 }

@@ -1,0 +1,110 @@
+[
+  {
+    "file": "data/rag_enrichment/written-works/quran-visual-presentation.json",
+    "sections": [
+      {
+        "id": "qvp-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "qvp-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "qvp-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "qvp-s04",
+        "verdict": "edit",
+        "reason": "Chapter 96 contains 285 letters (19×15), not 304 letters (19×16) as claimed",
+        "edited_summary": "This section argues that Chapter 96, the first chapter revealed, consists of 19 verses, and separately shows that when counted from the end of the Quran, Chapter 96 occupies the 19th position by listing chapters 114 down to 96. It further presents a two-page table of every word and letter in Chapter 96 to establish that the chapter contains 285 letters, a multiple of 19, and reproduces the Arabic text of the chapter as supporting evidence."
+      },
+      {
+        "id": "qvp-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "qvp-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "qvp-s07",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/written-works/english-meanings-of-the-quran.json",
+    "sections": [
+      {
+        "id": "emq-s00",
+        "verdict": "approve"
+      },
+      {
+        "id": "emq-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "emq-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "emq-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "emq-s04",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/written-works/salat-booklet.json",
+    "sections": [
+      {
+        "id": "sb-s00",
+        "verdict": "approve"
+      },
+      {
+        "id": "sb-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "sb-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "sb-s03",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/written-works/perpetual-miracle.json",
+    "sections": [
+      {
+        "id": "pm-s00",
+        "verdict": "approve"
+      },
+      {
+        "id": "pm-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "pm-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "pm-s03",
+        "verdict": "edit",
+        "reason": "The Sad vs Sin spelling example is in Sura 7 verse 69 (Al-A'raf), not Sura Qaf verse 69; Sura Qaf has only 45 verses",
+        "edited_summary": "Khalifa provides detailed analysis of specific letter occurrences across suras. The letter Qaf appears in exactly 2 suras (Qaf 50 and Al-Shura 42), each containing 57 Qafs (19×3), totaling 114 (19×6, equivalent to the number of Quranic suras). He argues this balance is impossible by chance or human design. He notes examples including one where Sura 7 verse 69 uses an unusual spelling with Sad instead of Sin to maintain exact letter count, described as mandatory ('Tawqifiyyah')."
+      },
+      {
+        "id": "pm-s04",
+        "verdict": "approve"
+      }
+    ]
+  }
+]

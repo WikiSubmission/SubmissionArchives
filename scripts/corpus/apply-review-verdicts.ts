@@ -111,7 +111,11 @@ function main(): void {
           verdict: 'edit',
           reason: verdict.reason ?? '',
         });
-        return { ...section, summary: verdict.edited_summary };
+        return {
+          ...section,
+          summary: verdict.edited_summary,
+          ...(section.review_status ? { review_status: 'approved' } : {}),
+        };
       }
       if (verdict.verdict === 'draft') {
         draftsPinned += 1;
@@ -123,7 +127,11 @@ function main(): void {
         });
         return { ...section, review_status: 'draft' };
       }
-      return section;
+      // Approve verdicts promote an explicit per-section draft status so the
+      // file-level approval is not overridden.
+      return section.review_status && section.review_status !== 'approved'
+        ? { ...section, review_status: 'approved' }
+        : section;
     });
 
     const updated: EnrichmentDoc = {

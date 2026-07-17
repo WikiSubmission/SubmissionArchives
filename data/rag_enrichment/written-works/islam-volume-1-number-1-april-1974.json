@@ -1,0 +1,609 @@
+{
+  "schema_version": "1.0-written-works",
+  "document_id": "written-works/islam-volume-1-number-1-april-1974",
+  "canonical_document_id": "islam-volume-1-number-1-april-1974",
+  "canonical_catalog_ids": [
+    "islam-volume-1-number-1-april-1974"
+  ],
+  "title": "ISLAM - Volume 1, Number 1 (April 1974)",
+  "review_status": "approved",
+  "generation_note": "Sections authored from canonical page text by an AI assistant; review before approval.",
+  "sections": [
+    {
+      "id": "iv1-s01",
+      "title": "Journal Front Matter and Editorial Guidelines",
+      "summary": "The opening section presents editorial staff, publication details, and journal guidelines for manuscript submissions. It establishes the journal's commitment to scholarly Islamic discourse while maintaining neutrality on political and sectarian matters. Guidelines specify citation formats for Qur'anic verses, hadith sources, and transliteration conventions for Arabic terms.",
+      "section_kind": "introduction",
+      "concepts": [
+        {
+          "id": "islamic-journal-editorial",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quranic-citation-format",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "hadith-documentation",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "arabic-transliteration",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "journal editorial policy",
+        "manuscript guidelines",
+        "Arabic transliteration standards",
+        "Islamic publication standards",
+        "citation conventions for Qur'an",
+        "hadith referencing",
+        "journal scope and objectives"
+      ],
+      "related_questions": [
+        "What are the manuscript submission guidelines for ISLAM journal?",
+        "How should Qur'anic verses be cited according to ISLAM journal standards?",
+        "What transliteration conventions are used for Arabic names and terms?",
+        "What are the journal's editorial objectives and scope?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Editorial introduction establishing journal policy and technical submission requirements for scholarly Islamic publications.",
+      "source_segment_start": 0,
+      "source_segment_end": 6,
+      "page_start": 1,
+      "page_end": 7
+    },
+    {
+      "id": "iv1-s02",
+      "title": "Biblical Prophecies Regarding Muhammad",
+      "summary": "Sulayman Shahid Mufassir presents textual evidence from the Torah and Gospel supporting the prophecy of Muhammad. The author argues that despite historical corruption of scriptural texts, biblical passages describing the characteristics of the final prophet align with Muhammad's life and mission. Key claims include parallels between the promised prophet's universal mission and Muhammad's role as the seal of prophets.",
+      "section_kind": "argument",
+      "concepts": [
+        {
+          "id": "quranic-prophecy-muhammad",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "torah-gospel-authenticity",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "biblical-prophecy",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "ishmael-lineage",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "paraclete-concept",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "biblical prophecy of Muhammad",
+        "Torah and Gospel predictions",
+        "final prophet in scripture",
+        "Ishmael's descendants",
+        "Qaydar in prophecy",
+        "Paraclete in John's Gospel",
+        "Islamic and Christian scripture comparison"
+      ],
+      "related_questions": [
+        "What biblical passages predict Muhammad according to this article?",
+        "How does the author interpret the Paraclete passage in John 16?",
+        "What role does Ishmael's lineage play in biblical prophecy?",
+        "How does the article address textual corruption in the Bible?"
+      ],
+      "quran_references": [
+        "2:121",
+        "18:109"
+      ],
+      "retrieval_note": "Comparative scriptural analysis arguing for prophetic references to Muhammad in pre-Islamic scriptures.",
+      "source_segment_start": 7,
+      "source_segment_end": 19,
+      "page_start": 8,
+      "page_end": 20
+    },
+    {
+      "id": "iv1-s03",
+      "title": "Qur'anic Treatment of Christians and Christianity",
+      "summary": "Pope Shenuda III presents the Qur'an's respectful treatment of Christians as 'People of the Book.' The author demonstrates that the Qur'an honors Jesus Christ, reveres Mary, and affirms Christian scripture while acknowledging points of theological disagreement. The section addresses misunderstandings about polytheism and clarifies that the Qur'an distinguishes Christians from idolaters and polytheists.",
+      "section_kind": "argument",
+      "concepts": [
+        {
+          "id": "quran-christianity",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "people-of-book",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "jesus-christ-quran",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "virgin-mary-quran",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "trinity-doctrine",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Qur'anic view of Christians",
+        "People of the Book in Qur'an",
+        "Jesus Christ in Islamic teaching",
+        "Mary mother of Jesus",
+        "Trinity in Islamic theology",
+        "Christian-Muslim relations",
+        "Gospel and Torah in Qur'an"
+      ],
+      "related_questions": [
+        "How does the Qur'an describe Christians and Christianity?",
+        "What is the Qur'anic position on Jesus Christ?",
+        "How does the Qur'an address the Trinity doctrine?",
+        "What does the Qur'an say about Mary and the Gospel?"
+      ],
+      "quran_references": [
+        "3:45",
+        "3:46",
+        "3:55",
+        "3:84",
+        "3:113",
+        "3:114",
+        "4:131",
+        "5:15",
+        "5:16",
+        "5:46",
+        "5:48",
+        "5:69",
+        "5:73",
+        "2:62",
+        "22:17"
+      ],
+      "retrieval_note": "Papal commentary on Qur'anic recognition of Christian faith and clarification of misunderstandings regarding Islamic monotheism.",
+      "source_segment_start": 20,
+      "source_segment_end": 32,
+      "page_start": 21,
+      "page_end": 33
+    },
+    {
+      "id": "iv1-s04",
+      "title": "Islam and the Question of Forced Conversion",
+      "summary": "The article addresses the historical question of whether Islam was spread by military conquest and coerced conversion. The author cites historical evidence and Qur'anic principles to argue that Islam's expansion occurred through voluntary acceptance, intellectual persuasion, and the appeal of Islamic teachings rather than forced compliance.",
+      "section_kind": "argument",
+      "concepts": [
+        {
+          "id": "islamic-expansion-history",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "forced-conversion-myth",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "religious-freedom-islam",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "jihad-concept",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Islam spread by sword",
+        "forced conversion Islamic history",
+        "Islamic military expansion",
+        "Qur'anic stance on coercion",
+        "voluntary acceptance of Islam",
+        "jihad and conquest",
+        "religious freedom in Islam"
+      ],
+      "related_questions": [
+        "How did Islam spread during the early Islamic period?",
+        "What does the Qur'an say about forced conversion?",
+        "What is the relationship between jihad and territorial expansion?",
+        "Why did people voluntarily accept Islam?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Historical and theological argument against the characterization of Islamic expansion as purely military conquest.",
+      "source_segment_start": 33,
+      "source_segment_end": 39,
+      "page_start": 29,
+      "page_end": 39
+    },
+    {
+      "id": "iv1-s05",
+      "title": "English Translation and Qur'anic Meanings",
+      "summary": "Dr. Rashad Khalifa presents selected English renderings of Qur'anic passages with commentary on translation challenges and theological significance. The section explores how various English translations attempt to convey the meanings of the original Arabic text while acknowledging inherent limitations in translation.",
+      "section_kind": "reference",
+      "concepts": [
+        {
+          "id": "quran-translation-english",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quranic-semantics",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "translation-methodology",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "English Qur'an translation",
+        "Qur'anic meaning in English",
+        "translation challenges Qur'an",
+        "Arabic to English semantics",
+        "Qur'anic exegesis in English",
+        "Rashad Khalifa translation"
+      ],
+      "related_questions": [
+        "How are Qur'anic meanings conveyed in English translation?",
+        "What are the challenges in translating the Qur'an to English?",
+        "How do different English translations vary in their renderings?",
+        "What is the approach to preserving theological precision in translation?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Technical treatment of Qur'anic translation methodology and English language rendering of Islamic scriptural meanings.",
+      "source_segment_start": 40,
+      "source_segment_end": 56,
+      "page_start": 40,
+      "page_end": 56
+    },
+    {
+      "id": "iv1-s06",
+      "title": "Islamic Unity of Faith and Divine Religion",
+      "summary": "Professor M. Farid Wajdi argues that Islam's fundamental principle is the unity of all religions in their divine source and common ethical foundation. The author explains that doctrinal differences arose from human corruption and deviation, and that reason combined with faith provides the path to universal religious understanding.",
+      "section_kind": "argument",
+      "concepts": [
+        {
+          "id": "religious-unity-islam",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "reason-and-faith",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "prophetic-succession",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "religious-difference-causes",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "religious unity Islam",
+        "Islamic principle divine faith",
+        "reason and revelation",
+        "prophetic messages unity",
+        "religious difference corruption",
+        "Islamic civilization comparative religion",
+        "interfaith dialogue Islam"
+      ],
+      "related_questions": [
+        "What is Islam's approach to religious unity?",
+        "How does the Qur'an explain differences among religions?",
+        "What role does reason play in Islamic thought?",
+        "How did early Islamic civilization achieve interfaith cooperation?"
+      ],
+      "quran_references": [
+        "2:136",
+        "2:138",
+        "3:19",
+        "3:83",
+        "30:30",
+        "42:14",
+        "67:10"
+      ],
+      "retrieval_note": "Theological exposition of Islamic unity principle drawing from Qur'anic teaching and Islamic historical practice.",
+      "source_segment_start": 57,
+      "source_segment_end": 63,
+      "page_start": 57,
+      "page_end": 63
+    },
+    {
+      "id": "iv1-s07",
+      "title": "Sufi Aphorisms and Spiritual Wisdom",
+      "summary": "The section presents the aphorisms of Shaykh Salamah Al-Radi, a modern Sufi teacher and spiritual guide. These teachings, derived from Qur'an, hadith, and Sufi principles, address the spiritual relationship between God and His servants, emphasizing mercy, surrender, and the path to divine closeness.",
+      "section_kind": "reference",
+      "concepts": [
+        {
+          "id": "sufism-spirituality",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "divine-mercy",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-discipline",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "sufi-master-disciple",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Salamah Al-Radi aphorisms",
+        "Sufi teachings",
+        "spiritual guidance Islamic",
+        "divine mercy Sufism",
+        "Sufi path discipline",
+        "Islamic spiritual tradition",
+        "Shaykh-murid relationship"
+      ],
+      "related_questions": [
+        "What are the central themes in Salamah Al-Radi's teachings?",
+        "How do Sufi aphorisms relate to Qur'anic teaching?",
+        "What is the path to spiritual closeness in Sufism?",
+        "How does Sufi tradition understand divine mercy?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Compilation of Sufi spiritual aphorisms addressing the human relationship with the divine in Islamic mystical tradition.",
+      "source_segment_start": 64,
+      "source_segment_end": 67,
+      "page_start": 64,
+      "page_end": 67
+    },
+    {
+      "id": "iv1-s08",
+      "title": "Invocations and Devotional Prayers",
+      "summary": "The section presents invocations and supplicatory prayers attributed to Abdullah Ansari, a renowned Persian Sufi of the eleventh century. These prayers address God with various divine attributes and seek guidance, purification, forgiveness, and spiritual transformation.",
+      "section_kind": "reference",
+      "concepts": [
+        {
+          "id": "islamic-devotion-prayer",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "sufi-invocation",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "divine-attributes",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-repentance",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Abdullah Ansari prayers",
+        "Islamic invocations du'a",
+        "Sufi devotional practice",
+        "divine names attributes",
+        "spiritual repentance Islam",
+        "supplication tradition",
+        "Persian Sufi prayers"
+      ],
+      "related_questions": [
+        "What are the main themes in Ansari's invocations?",
+        "How do Sufi prayers address divine attributes?",
+        "What is the role of devotional prayer in Islamic spirituality?",
+        "How does Ansari approach spiritual struggle and repentance?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Collection of devotional invocations from medieval Sufi tradition emphasizing prayer, repentance, and spiritual seeking.",
+      "source_segment_start": 68,
+      "source_segment_end": 71,
+      "page_start": 68,
+      "page_end": 71
+    },
+    {
+      "id": "iv1-s09",
+      "title": "Qur'anic Topical Index and Reference System",
+      "summary": "A comprehensive index organizing Qur'anic verses by subject matter and topic, enabling readers to locate relevant scriptural references on specific themes. The index includes entries for prophets, religious practices, historical narratives, and doctrinal subjects discussed throughout the Qur'an.",
+      "section_kind": "reference",
+      "concepts": [
+        {
+          "id": "quran-index",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quranic-topics",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "scriptural-reference-system",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Qur'an index by subject",
+        "topical Qur'an concordance",
+        "scriptural reference guide",
+        "Qur'anic themes index",
+        "prophet references Qur'an",
+        "Islamic practice references"
+      ],
+      "related_questions": [
+        "How can readers find Qur'anic verses on a particular topic?",
+        "What subjects are covered in the Qur'anic index?",
+        "How is the index organized?",
+        "What is the frequency of scriptural references on key topics?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Reference tool providing systematic topical organization of Qur'anic content for scholarly research and study.",
+      "source_segment_start": 72,
+      "source_segment_end": 77,
+      "page_start": 73,
+      "page_end": 79
+    },
+    {
+      "id": "iv1-s10",
+      "title": "Islamic Calendar Conversion Tables",
+      "summary": "A detailed reference table enabling conversion between Islamic Hijra calendar dates and Gregorian calendar dates. The table covers conversion dates from the establishment of the Hijra (622 CE) through fifteen hundred Hijra years, facilitating chronological reference and historical dating of Islamic historical events.",
+      "section_kind": "data-presentation",
+      "concepts": [
+        {
+          "id": "hijra-calendar",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "calendar-conversion",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "islamic-chronology",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Islamic calendar Hijra",
+        "Hijra to Gregorian conversion",
+        "Islamic date conversion",
+        "lunar calendar Islamic",
+        "chronological dating Islamic history",
+        "calendar tables reference"
+      ],
+      "related_questions": [
+        "How do Islamic calendar dates convert to Gregorian dates?",
+        "When did the Hijra calendar begin?",
+        "How many days are in an Islamic year?",
+        "What is the significance of the Hijra year numbering?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Reference tables for precise chronological conversion between Islamic Hijra and Western Gregorian calendars.",
+      "source_segment_start": 78,
+      "source_segment_end": 81,
+      "page_start": 78,
+      "page_end": 81
+    },
+    {
+      "id": "iv1-s11",
+      "title": "Islamic Approaches to Race and Racial Equality",
+      "summary": "A book review critiquing claims that Islam practices racial discrimination. The reviewer argues that Islamic principles establish complete racial equality and that historical instances of racial prejudice among some Muslims represent personal failings rather than Islamic doctrine. The section defends Islam's historical record on racial justice compared to Western societies.",
+      "section_kind": "argument",
+      "concepts": [
+        {
+          "id": "racism-islam-critique",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "racial-equality-islam",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "islamic-slavery-practice",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "comparative-race-relations",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Islam racial equality",
+        "racism Islamic teaching",
+        "Islamic slavery historical",
+        "racial discrimination Islam",
+        "color prejudice Qur'an",
+        "Islamic societies race relations",
+        "West Africa Islamic empires"
+      ],
+      "related_questions": [
+        "What does Islamic teaching say about racial equality?",
+        "How has Islam historically addressed race and color?",
+        "What is the Islamic stance on slavery?",
+        "How do Islamic societies compare to Western societies on racial matters?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Critical analysis defending Islam's religious principles on racial equality against claims of inherent Islamic racism.",
+      "source_segment_start": 82,
+      "source_segment_end": 85,
+      "page_start": 83,
+      "page_end": 87
+    },
+    {
+      "id": "iv1-s12",
+      "title": "Back Matter and Publication Information",
+      "summary": "Final pages containing advertisements for Islamic publications, book promotion announcements, journal subscription information, and publisher contact details. Includes advertisements for works on Qur'anic miracles and Islamic educational resources.",
+      "section_kind": "reference",
+      "concepts": [
+        {
+          "id": "islamic-publishing",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "journal-administration",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Islamic publications",
+        "journal subscription",
+        "Islamic books advertised",
+        "publisher contact information",
+        "Islamic Productions International",
+        "Rashad Khalifa works"
+      ],
+      "related_questions": [
+        "What Islamic publications are available from the publisher?",
+        "How can readers subscribe to ISLAM journal?",
+        "What is the contact information for Islamic Productions International?",
+        "What other works by Rashad Khalifa are available?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Administrative and promotional material providing publication details and contact information.",
+      "source_segment_start": 86,
+      "source_segment_end": 88,
+      "page_start": 86,
+      "page_end": 89
+    }
+  ]
+}

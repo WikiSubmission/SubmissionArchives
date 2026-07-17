@@ -1,0 +1,640 @@
+{
+  "schema_version": "1.0-written-works",
+  "document_id": "written-works/eternity-screenplay",
+  "canonical_document_id": "eternity-screenplay",
+  "canonical_catalog_ids": [
+    "eternity-screenplay"
+  ],
+  "title": "ETERNITY - Screenplay",
+  "review_status": "approved",
+  "generation_note": "Sections authored from canonical page text by an AI assistant; review before approval.",
+  "sections": [
+    {
+      "id": "es-s01",
+      "title": "Title and Opening Scene",
+      "summary": "The screenplay begins with title and copyright information. The story opens on a California street with a ceremonial gathering at the State Capitol building. Governor Delaney and Judge Malloy preside over a historic ceremony to open a time capsule buried 100 years earlier in 1885.",
+      "section_kind": "introduction",
+      "concepts": [
+        {
+          "id": "time-capsule-ceremony",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "california-history",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "1985-march-setting",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "government-officials",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "time capsule",
+        "California Capitol",
+        "Governor Delaney",
+        "Judge Malloy",
+        "March 1 1985",
+        "ceremonial opening",
+        "historic event"
+      ],
+      "related_questions": [
+        "What is the occasion for the ceremony in the opening scene?",
+        "Who are the main officials presiding over the event?",
+        "What is the significance of the date and location?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Establishes the premise and setting of the screenplay with opening ceremonial scene at California Capitol.",
+      "source_segment_start": 0,
+      "source_segment_end": 3,
+      "page_start": 1,
+      "page_end": 4
+    },
+    {
+      "id": "es-s02",
+      "title": "Time Capsule Excavation and Primary Contents",
+      "summary": "Workers excavate the granite stone marker and retrieve the sealed wooden box buried in 1885. Inside, they find a metal cylinder containing old newspapers with headlines marking key historical moments like Lincoln's Emancipation Proclamation, his assassination, Lee's surrender, and Grant's presidency. Also found is an announcement from Barclay Leland Stamford about a will bequeathing one million acres of land.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "time-capsule-contents",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "stamford-will-announcement",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "historical-newspapers",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "land-inheritance",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "time capsule excavation",
+        "Stamford will",
+        "historical newspapers",
+        "land bequest",
+        "million acres",
+        "1885 capsule",
+        "California pioneer"
+      ],
+      "related_questions": [
+        "What historical newspapers are found in the capsule?",
+        "Who is Barclay Leland Stamford?",
+        "What is the nature of the announcement about inheritance?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Describes the physical contents of the primary time capsule and introduces the central plot element of the Stamford will.",
+      "source_segment_start": 4,
+      "source_segment_end": 6,
+      "page_start": 5,
+      "page_end": 7
+    },
+    {
+      "id": "es-s03",
+      "title": "Secondary Capsule Discovery and Media Coverage",
+      "summary": "A second, smaller time capsule is discovered within the first, addressed specifically to the Governor to be opened sixty days later on May 1st. The Governor announces a second ceremony. Meanwhile, Dan Rather and Ed Bradley report the findings on CBS Evening News, introducing the stakes of the inheritance claim with thirty-six days remaining for the rightful heir to come forward, or the property reverts to California.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "nested-capsule",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "may-first-ceremony",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "media-coverage",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "inheritance-deadline",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "secondary capsule",
+        "Governor announcement",
+        "May 1 ceremony",
+        "CBS News",
+        "Dan Rather",
+        "inheritance claim",
+        "36 days deadline"
+      ],
+      "related_questions": [
+        "What is the significance of the nested capsule?",
+        "When is the secondary capsule scheduled to be opened?",
+        "How much time do claimants have to present the will?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Introduces nested-capsule plot device and establishes media attention and public stakes of the inheritance claim.",
+      "source_segment_start": 7,
+      "source_segment_end": 9,
+      "page_start": 8,
+      "page_end": 10
+    },
+    {
+      "id": "es-s04",
+      "title": "Will Authentication Process and Stamford's Mathematical Code",
+      "summary": "Governor Delaney opens the secondary capsule on May 1st to find a parchment with Stamford's mathematical coding scheme for authenticating the will. The document specifies intricate numerical patterns for each chapter: Chapter One contains 722 M's; Chapter Two contains specific counts of A's, G's, and R's; Chapters Three and Nine total 228 C's. This elaborate code is designed as inviolable proof of authenticity.",
+      "section_kind": "procedure",
+      "concepts": [
+        {
+          "id": "authentication-code",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "mathematical-verification",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "stamford-will-content",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "cryptographic-method",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "mathematical code",
+        "authentication method",
+        "chapter patterns",
+        "letter count",
+        "Stamford will",
+        "encoded message",
+        "verification scheme"
+      ],
+      "related_questions": [
+        "What are the specific numerical requirements Stamford established?",
+        "How many chapters does the will contain?",
+        "What other verification requirements are mentioned?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Presents the procedure for authenticating the will through mathematical verification of letter and word counts in chapters.",
+      "source_segment_start": 10,
+      "source_segment_end": 12,
+      "page_start": 11,
+      "page_end": 13
+    },
+    {
+      "id": "es-s05",
+      "title": "Will Committee Verification and Validation",
+      "summary": "The Stamford Will Committee, composed of five men and three women, meticulously examines thirty-eight candidate wills to verify which matches Stamford's mathematical code. Judge Malloy leads the verification, checking each specification: Chapter One's M count, Chapter Two's letter frequencies, Chapters Four and Six's paragraph counts, Pages 19, 38, and 57's word counts, and the word 'Oxalis' appearing seven times with one deliberate misspelling as 'Axolis' in Chapter 8.",
+      "section_kind": "procedure",
+      "concepts": [
+        {
+          "id": "will-verification",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "committee-process",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "code-validation",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "authentication-success",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "will committee",
+        "code verification",
+        "Judge Malloy",
+        "authentic will",
+        "mathematical validation",
+        "letter counting",
+        "specification match"
+      ],
+      "related_questions": [
+        "How many wills were submitted for verification?",
+        "What was the final count of authenticated wills?",
+        "What is the significance of the word 'Oxalis'?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Details the procedural verification process by which the authentic will is identified through matching the mathematical code criteria.",
+      "source_segment_start": 13,
+      "source_segment_end": 16,
+      "page_start": 14,
+      "page_end": 17
+    },
+    {
+      "id": "es-s06",
+      "title": "Space Program Announcement and Mission Briefing",
+      "summary": "ABC's Good Morning program announces that the Stamford Will Committee has positively identified the authentic will. The scene then shifts to preparations for 'Operation Intergalactic,' a major space odyssey at Cape Canaveral involving a spacecraft named 'Eternity,' three male astronauts, three female astronauts, and three robots. The mission involves traveling beyond the light barrier with the ability to manipulate time and maintain communication with Mission Control Center across time dimensions.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "space-mission-operation",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "eternity-spacecraft",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "astronaut-crew",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "light-barrier-travel",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Operation Intergalactic",
+        "Eternity spacecraft",
+        "Cape Canaveral",
+        "astronauts",
+        "robots",
+        "light barrier",
+        "space mission",
+        "time dimension"
+      ],
+      "related_questions": [
+        "What is the name of the spacecraft?",
+        "How many crew members are on the mission?",
+        "What is the primary capability of the ship?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Transitions from earthly inheritance drama to space exploration plot, introducing the main spacecraft and crew composition.",
+      "source_segment_start": 17,
+      "source_segment_end": 21,
+      "page_start": 18,
+      "page_end": 22
+    },
+    {
+      "id": "es-s07",
+      "title": "Astronaut Crew Introduction and Characterization",
+      "summary": "The screenplay introduces the astronaut crew in detail: Commander Virgil Moss, an experienced pilot who flew Eternity's maiden voyage six years ago; Captain Kathleen Sheard, a space veteran; Major Jane Anderson; Captain Raymond Catton; Major Shirley Van Cleef; and Mike Barakat. Additionally, three robots join the mission: Rit-Seventy-Six, a five-foot cone-shaped unit with nine extendable arms; and Octa-Ohm-R, a four-foot porcelain-plated unit with a rotating eight-headed top and computer display chest.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "crew-commander",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "astronaut-characters",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "robot-crew",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "mission-experience",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Commander Virgil Moss",
+        "astronaut crew",
+        "Captain Kathleen Sheard",
+        "robots",
+        "Rit-Seventy-Six",
+        "Octa-Ohm-R",
+        "mission experience"
+      ],
+      "related_questions": [
+        "Who is the commanding officer of the mission?",
+        "What are the names and roles of the other astronauts?",
+        "What are the specifications of the robots?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Develops character profiles of the human astronauts and the specialized robots that comprise the Eternity mission crew.",
+      "source_segment_start": 22,
+      "source_segment_end": 24,
+      "page_start": 23,
+      "page_end": 25
+    },
+    {
+      "id": "es-s08",
+      "title": "Spacecraft Systems Check and Pre-Launch Procedures",
+      "summary": "Inside the Eternity spacecraft control room, Commander Moss conducts a comprehensive systems check with the crew at their assigned stations. The crew verifies breeder reactor cells, oxygen generation system, food synthesizer, gravity simulation system, time and calendar indicators, emergency locator transmitters, and emergency position indicating beacons. All systems check green. The focus shifts to checking the Time Advance Monitor, which can display dates from past to future, helping the crew monitor temporal positions during the voyage.",
+      "section_kind": "procedure",
+      "concepts": [
+        {
+          "id": "spacecraft-systems",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "systems-verification",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "time-monitor",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "control-room-operations",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "systems check",
+        "reactor cells",
+        "oxygen generator",
+        "time monitor",
+        "emergency beacons",
+        "spacecraft control",
+        "pre-launch procedures"
+      ],
+      "related_questions": [
+        "What are the major spacecraft systems that need verification?",
+        "What does the Time Advance Monitor display?",
+        "What date range can the crew observe on the monitor?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Describes the technical procedure and spacecraft specifications through the pre-launch systems verification sequence.",
+      "source_segment_start": 25,
+      "source_segment_end": 29,
+      "page_start": 26,
+      "page_end": 30
+    },
+    {
+      "id": "es-s09",
+      "title": "Countdown and Launch Sequence",
+      "summary": "Mission Control communicates with the spacecraft crew as they complete final preparations. The countdown is displayed on the main viewscreen. TV announcers outside Cape Canaveral describe the historic nature of the intergalactic mission to the public. The crew straps in as the floor of the spacecraft tilts ninety degrees for launch position. With characteristic humor, Captain Sheard says goodbye to Mission Control with a joke about staying in touch. The massive spacecraft lifts off with tremendous power and rumble, engulfing in a fiery cloud as Mach Two is reached almost immediately.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "countdown-sequence",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "launch-procedure",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "public-broadcast",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "mission-control-communication",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "countdown",
+        "launch sequence",
+        "Mach Two",
+        "spacecraft liftoff",
+        "Mission Control",
+        "Cape Canaveral",
+        "fiery cloud",
+        "historic mission"
+      ],
+      "related_questions": [
+        "What is the countdown timer showing?",
+        "What joke does Captain Sheard make?",
+        "What is the rapid speed achievement after launch?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Documents the dramatic launch sequence of the Eternity spacecraft with crew interactions and public attention.",
+      "source_segment_start": 30,
+      "source_segment_end": 36,
+      "page_start": 31,
+      "page_end": 37
+    },
+    {
+      "id": "es-s10",
+      "title": "Initial Flight and Time Acceleration",
+      "summary": "During initial flight phases, the crew reaches supersonic and hypersonic speeds. As the spacecraft accelerates beyond conventional speed limits, it begins to manipulate time. The crew reports acceleration milestones while the Time Advance Monitor shows the calendar advancing through different years. The spacecraft achieves the ability to move through time dimensions, demonstrating the key capability of the mission: traveling backward and forward through history while maintaining communication with Mission Control in the year 2242.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "speed-acceleration",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "time-travel-initiation",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "temporal-dimension",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "mission-objective",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "supersonic",
+        "hypersonic",
+        "time travel",
+        "time acceleration",
+        "temporal dimension",
+        "speed records",
+        "calendar display"
+      ],
+      "related_questions": [
+        "What speed milestones does the crew report?",
+        "How does the Time Advance Monitor respond during acceleration?",
+        "What year is Mission Control operating from?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Narrates the transition from conventional spaceflight to temporal travel capability central to the mission's scientific objective.",
+      "source_segment_start": 37,
+      "source_segment_end": 45,
+      "page_start": 38,
+      "page_end": 46
+    },
+    {
+      "id": "es-s11",
+      "title": "Time Travel Through Historical Periods",
+      "summary": "The Eternity crew uses its temporal capabilities to travel through different historical eras. The screenplay describes the spacecraft encountering and observing key historical events including Satan's realm in ancient times, angelic beings, scenes from multiple universes, and theological encounters. The crew manipulates their position through time using the odometer and calendar indicators, traveling through vast distances measured both spatially and temporally as they move backward through centuries of history.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "historical-travel",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "theological-encounters",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-realm",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "alternate-universes",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "time travel history",
+        "theological scenes",
+        "spiritual encounters",
+        "Satan",
+        "angels",
+        "universes",
+        "temporal journey",
+        "historical observation"
+      ],
+      "related_questions": [
+        "What historical periods are visited during the journey?",
+        "What spiritual entities does the crew encounter?",
+        "What is displayed on the odometer during travel?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Portrays the spacecraft's fantastical journey through time encountering spiritual and theological phenomena across different eras.",
+      "source_segment_start": 46,
+      "source_segment_end": 67,
+      "page_start": 47,
+      "page_end": 68
+    },
+    {
+      "id": "es-s12",
+      "title": "Discovery and Return Communications",
+      "summary": "During the temporal journey, the crew makes extraordinary discoveries about spiritual reality, encountering angelic beings and evidence of divine cosmic order. As they prepare to return, they communicate their findings back to Mission Control in 2242. The Russian President is shown receiving intelligence about the mission, and global attention focuses on the implications of the discoveries made during the intergalactic voyage.",
+      "section_kind": "narrative",
+      "concepts": [
+        {
+          "id": "discovery-announcement",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "return-communication",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "global-awareness",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "geopolitical-implications",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "discoveries",
+        "Mission Control communication",
+        "Russian President",
+        "global implications",
+        "spiritual evidence",
+        "return journey",
+        "intelligence reports"
+      ],
+      "related_questions": [
+        "What are the major discoveries made during the mission?",
+        "How does global leadership respond to the findings?",
+        "What are the implications of the discoveries?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Concludes the temporal journey narrative with the crew's communication of discoveries and global reception of extraordinary findings.",
+      "source_segment_start": 68,
+      "source_segment_end": 88,
+      "page_start": 69,
+      "page_end": 89
+    },
+    {
+      "id": "es-s13",
+      "title": "Mission Conclusion and Theological Reflection",
+      "summary": "The screenplay concludes with the spacecraft's return and the final messages received from the mission. The discoveries point to theological and spiritual truths about divine cosmic order and the nature of reality across time dimensions. The mission's ultimate finding relates to confirmation of spiritual and religious understanding through scientific exploration of temporal dimensions, bridging the narrative's initial inheritance mystery with the larger cosmic mystery explored through the space voyage.",
+      "section_kind": "conclusion",
+      "concepts": [
+        {
+          "id": "mission-completion",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "theological-discovery",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "cosmic-understanding",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "divine-order",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "mission conclusion",
+        "theological findings",
+        "spiritual truth",
+        "cosmic order",
+        "divine reality",
+        "final discoveries",
+        "mission implications"
+      ],
+      "related_questions": [
+        "What is the ultimate message of the mission?",
+        "How does the spacecraft's journey conclude?",
+        "What broader significance do the discoveries hold?"
+      ],
+      "quran_references": [],
+      "retrieval_note": "Provides narrative and thematic resolution connecting the screenplay's initial premise with larger theological and cosmic themes explored through the space odyssey.",
+      "source_segment_start": 89,
+      "source_segment_end": 93,
+      "page_start": 90,
+      "page_end": 94
+    }
+  ]
+}

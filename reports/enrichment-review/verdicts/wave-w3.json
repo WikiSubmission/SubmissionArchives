@@ -1,0 +1,80 @@
+[
+  {
+    "file": "data/rag_enrichment/written-works/islam-volume-1-number-1-april-1974.json",
+    "sections": [
+      {"id": "iv1-s01", "verdict": "approve"},
+      {"id": "iv1-s02", "verdict": "approve"},
+      {"id": "iv1-s03", "verdict": "approve"},
+      {"id": "iv1-s04", "verdict": "approve"},
+      {"id": "iv1-s05", "verdict": "approve"},
+      {"id": "iv1-s06", "verdict": "approve"},
+      {"id": "iv1-s07", "verdict": "approve"},
+      {"id": "iv1-s08", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/written-works/islam-volume-1-number-2-july-1974.json",
+    "sections": [
+      {"id": "iv2-s01", "verdict": "approve"},
+      {"id": "iv2-s02", "verdict": "approve"},
+      {"id": "iv2-s03", "verdict": "approve"},
+      {"id": "iv2-s04", "verdict": "approve"},
+      {"id": "iv2-s05", "verdict": "approve"},
+      {"id": "iv2-s06", "verdict": "approve"},
+      {"id": "iv2-s07", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/written-works/islam-volume-1-number-3-4-january-1975.json",
+    "sections": [
+      {"id": "iv34-s01", "verdict": "approve"},
+      {"id": "iv34-s02", "verdict": "approve"},
+      {"id": "iv34-s03", "verdict": "approve"},
+      {"id": "iv34-s04", "verdict": "approve"},
+      {"id": "iv34-s05", "verdict": "approve"},
+      {"id": "iv34-s06", "verdict": "approve"},
+      {"id": "iv34-s07", "verdict": "approve"},
+      {"id": "iv34-s08", "verdict": "approve"},
+      {"id": "iv34-s09", "verdict": "approve"},
+      {"id": "iv34-s10", "verdict": "approve"},
+      {"id": "iv34-s11", "verdict": "approve"},
+      {"id": "iv34-s12", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/written-works/quran-hadith-islam.json",
+    "sections": [
+      {"id": "qhi-s01", "verdict": "approve"},
+      {"id": "qhi-s02", "verdict": "approve"},
+      {"id": "qhi-s03", "verdict": "approve"},
+      {"id": "qhi-s04", "verdict": "approve"},
+      {"id": "qhi-s05", "verdict": "approve"},
+      {"id": "qhi-s06", "verdict": "approve"},
+      {"id": "qhi-s07", "verdict": "approve"},
+      {"id": "qhi-s08", "verdict": "approve"},
+      {"id": "qhi-s09", "verdict": "approve"},
+      {"id": "qhi-s10", "verdict": "approve"},
+      {"id": "qhi-s11", "verdict": "approve"},
+      {"id": "qhi-s12", "verdict": "approve"},
+      {"id": "qhi-s13", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/written-works/eternity-screenplay.json",
+    "sections": [
+      {"id": "es-s01", "verdict": "approve"},
+      {"id": "es-s02", "verdict": "approve"},
+      {"id": "es-s03", "verdict": "approve"},
+      {"id": "es-s04", "verdict": "approve"},
+      {"id": "es-s05", "verdict": "approve"},
+      {"id": "es-s06", "verdict": "approve"},
+      {"id": "es-s07", "verdict": "approve"},
+      {"id": "es-s08", "verdict": "approve"},
+      {"id": "es-s09", "verdict": "approve"},
+      {"id": "es-s10", "verdict": "approve"},
+      {"id": "es-s11", "verdict": "approve"},
+      {"id": "es-s12", "verdict": "approve"},
+      {"id": "es-s13", "verdict": "approve"}
+    ]
+  }
+]

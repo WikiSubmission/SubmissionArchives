@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-17T13:30:32.554Z",
-  "filesApproved": 157,
-  "sectionsCovered": 464,
-  "editsApplied": 11,
-  "draftsPinned": 0,
+  "generatedAt": "2026-07-17T22:58:02.305Z",
+  "filesApproved": 168,
+  "sectionsCovered": 626,
+  "editsApplied": 13,
+  "draftsPinned": 3,
   "unreviewedFiles": [],
   "exceptions": [
     {
@@ -71,6 +71,36 @@
       "sectionId": "audio47-s07",
       "verdict": "edit",
       "reason": "Speaker is Kathryn, not Catherine."
+    },
+    {
+      "file": "data/rag_enrichment/written-works/islam-volume-1-number-2-july-1974.json",
+      "sectionId": "iv2-s08",
+      "verdict": "draft",
+      "reason": "Summary describes Abdullah Ansari's devotional prayers, but spanText shows Qur'anic topical index and calendar conversion tables."
+    },
+    {
+      "file": "data/rag_enrichment/written-works/islam-volume-1-number-2-july-1974.json",
+      "sectionId": "iv2-s09",
+      "verdict": "draft",
+      "reason": "Summary describes a Qur'anic verse index, but spanText shows book review of 'Late Great Planet Earth' and calendar conversion continuation."
+    },
+    {
+      "file": "data/rag_enrichment/written-works/islam-volume-1-number-2-july-1974.json",
+      "sectionId": "iv2-s10",
+      "verdict": "draft",
+      "reason": "Summary describes calendar conversion tables; spanText shows advertisements, order forms, and monthly Islamic calendar grids."
+    },
+    {
+      "file": "data/rag_enrichment/written-works/perpetual-miracle.json",
+      "sectionId": "pm-s03",
+      "verdict": "edit",
+      "reason": "The Sad vs Sin spelling example is in Sura 7 verse 69 (Al-A'raf), not Sura Qaf verse 69; Sura Qaf has only 45 verses"
+    },
+    {
+      "file": "data/rag_enrichment/written-works/quran-visual-presentation.json",
+      "sectionId": "qvp-s04",
+      "verdict": "edit",
+      "reason": "Chapter 96 contains 285 letters (19×15), not 304 letters (19×16) as claimed"
     }
   ]
 }

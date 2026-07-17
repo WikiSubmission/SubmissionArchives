@@ -19,7 +19,7 @@ const MASTER_INDEX_PATH = path.resolve(
 const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag_enrichment');
 const PACKET_DIR = path.resolve(process.cwd(), 'reports', 'enrichment-review', 'packets');
 const SPAN_MAX_CHARS = 9_000;
-const CATEGORIES = new Set(['audio-program', 'video-program']);
+const CATEGORIES = new Set(['audio-program', 'video-program', 'written-works']);
 
 interface PacketSection {
   id: string;
