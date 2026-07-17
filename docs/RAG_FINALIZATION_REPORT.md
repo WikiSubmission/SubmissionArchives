@@ -138,9 +138,37 @@ end-of-world epilogue).
 | direct-match hit@24 | 87.5% | 92.9% |
 | recall@10 overall | 96.1% | 95.6% (within noise) |
 
+## Answer-quality eval (baseline)
+
+`npm run rag:answer-eval` drives the real `/api/ask` endpoint for a sampled
+set of gold cases and judges each generated answer with mistral-large against
+the gold answer note and the shown sources. This measures answer quality,
+which the retrieval eval does not. First baseline (24-case sample):
+
+| Metric | Score |
+|---|---|
+| Answered rate | 83.3% |
+| Faithfulness (0-4) | 3.60 |
+| Correctness (0-4) | 3.05 |
+| Completeness (0-4) | 2.55 |
+
+Reading: faithfulness is high (the canonical trust boundary holds; little
+fabrication). The correctness floor and the unanswered cases both trace to
+the same retrieval-hard cases as the WS3 residual misses, so improving
+retrieval on those pays off in answer correctness too. Completeness is the
+clear weakness and the direct measure of answer detail: low scorers are
+almost all omissions (specific verse numbers, named examples, secondary
+themes present in the source but dropped from the answer). `citedExpectedDoc`
+is informational only, since a fact can be correctly answered from a valid
+document other than the gold one.
+
 ## Remaining follow-ups
 
-1. Three islam vol 2 sections (iv2-s08/s09/s10) have misaligned summaries
+1. Raise completeness: the answer prompt already asks for synthesis, but the
+   next lever is feeding more/fuller source context to the model and pushing
+   the prompt harder toward including concrete specifics (verse numbers,
+   named examples). Measure each change with `rag:answer-eval`.
+2. Three islam vol 2 sections (iv2-s08/s09/s10) have misaligned summaries
    and are pinned draft; see `reports/enrichment-review/review-exceptions.json`.
 2. `RAG_ENRICHMENT_STATUSES` can now be tightened to `approved` once you are
    comfortable dropping those pinned drafts from retrieval.
