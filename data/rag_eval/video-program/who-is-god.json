@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "document_id": "video-program/who-is-god",
+  "title": "Who is GOD?",
+  "cases": [
+    {
+      "id": "god-01-eval-001",
+      "question": "What Arabic declarations open Who is GOD?",
+      "expected_section_ids": [
+        "god-01-s01"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "The program begins with repeated takbir and the declaration that there is no god except the One God."
+    },
+    {
+      "id": "god-01-eval-002",
+      "question": "Why did Rashad say people fall into idol worship?",
+      "expected_section_ids": [
+        "god-01-s02"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Because they do not know or appreciate God's greatness."
+    },
+    {
+      "id": "god-01-eval-003",
+      "question": "Did Rashad discuss shirk in Who is GOD?",
+      "expected_section_ids": [
+        "god-01-s02",
+        "god-01-s11"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The term may not be spoken, but he condemns idolizing prophets, saints, and partners with God."
+    },
+    {
+      "id": "god-01-eval-004",
+      "question": "How did Rashad use astronomy to explain who God is?",
+      "expected_section_ids": [
+        "god-01-s03",
+        "god-01-s04",
+        "god-01-s05",
+        "god-01-s06",
+        "god-01-s07",
+        "god-01-s10"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He moves from Earth through the solar system, galaxies, and the universe to contrast the scale of creation with human beings."
+    },
+    {
+      "id": "god-01-eval-005",
+      "question": "Did Rashad say Earth is the only planet with life in the solar system?",
+      "expected_section_ids": [
+        "god-01-s03"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Yes, that is what he says in the recording. The answer should attribute the claim to him."
+    },
+    {
+      "id": "god-01-eval-006",
+      "question": "How long did Rashad say sunlight takes to reach Earth?",
+      "expected_section_ids": [
+        "god-01-s03",
+        "god-01-s04"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "The transcript says four minutes, but the timestamp is flagged for audio verification because it may be a numerical mistranscription."
+    },
+    {
+      "id": "god-01-eval-007",
+      "question": "How large did Rashad say the solar system is?",
+      "expected_section_ids": [
+        "god-01-s03"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He gives a span of roughly two to four billion miles."
+    },
+    {
+      "id": "god-01-eval-008",
+      "question": "How long did Rashad say it would take to cross the Milky Way?",
+      "expected_section_ids": [
+        "god-01-s04"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He says one hundred thousand years at the speed of light."
+    },
+    {
+      "id": "god-01-eval-009",
+      "question": "Why did Rashad compare Earth to a mote?",
+      "expected_section_ids": [
+        "god-01-s04"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "To illustrate that Earth is almost nothing when viewed against the scale of the Milky Way."
+    },
+    {
+      "id": "god-01-eval-010",
+      "question": "Did Rashad mention the Andromeda galaxy?",
+      "expected_section_ids": [
+        "god-01-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He speaks of the neighboring or next-door galaxy without naming it. Andromeda is therefore only a likely modern alias."
+    },
+    {
+      "id": "god-01-eval-011",
+      "question": "Could Jesus or Muhammad be seen from another galaxy according to Rashad?",
+      "expected_section_ids": [
+        "god-01-s05"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He rhetorically says they could not be seen from the neighboring galaxy."
+    },
+    {
+      "id": "god-01-eval-012",
+      "question": "Where did Rashad call Earth an insignificant speck in God's kingdom?",
+      "expected_section_ids": [
+        "god-01-s06"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "In the section describing the scale and edge of the universe."
+    },
+    {
+      "id": "god-01-eval-013",
+      "question": "How many galaxies did Rashad say are in the universe?",
+      "expected_section_ids": [
+        "god-01-s06"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He says one billion galaxies. The answer should attribute the number to the historical recording."
+    },
+    {
+      "id": "god-01-eval-014",
+      "question": "How long would it take to count a quintillion at one number per second?",
+      "expected_section_ids": [
+        "god-01-s07"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Rashad gives approximately thirty-two billion years."
+    },
+    {
+      "id": "god-01-eval-015",
+      "question": "What was Rashad's point about counting versus creating the stars?",
+      "expected_section_ids": [
+        "god-01-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Counting an immense number would take billions of years, while God created the stars rather than merely counting them."
+    },
+    {
+      "id": "god-01-eval-016",
+      "question": "What did Rashad mean by seven universes?",
+      "expected_section_ids": [
+        "god-01-s08",
+        "god-01-s09"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He describes seven nested universes and identifies ours as the smallest and innermost."
+    },
+    {
+      "id": "god-01-eval-017",
+      "question": "Did Rashad interpret the Quran's seven heavens as seven universes?",
+      "expected_section_ids": [
+        "god-01-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Yes, the recording presents the Quranic sevenfold cosmos as seven universes."
+    },
+    {
+      "id": "god-01-eval-018",
+      "question": "Which universe did Rashad say ours is, the first or the seventh?",
+      "expected_section_ids": [
+        "god-01-s09"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He calls ours the seventh and innermost, while calling the outermost the first."
+    },
+    {
+      "id": "god-01-eval-019",
+      "question": "How did Rashad interpret Quran 39:67?",
+      "expected_section_ids": [
+        "god-01-s10"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He says the image of the universes in God's hand is allegorical and intended to communicate God's greatness."
+    },
+    {
+      "id": "god-01-eval-020",
+      "question": "Did Rashad believe God literally has a human hand?",
+      "expected_section_ids": [
+        "god-01-s10"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He explicitly calls the hand description allegorical."
+    },
+    {
+      "id": "god-01-eval-021",
+      "question": "Did Rashad reject the idea that Jesus is God's son?",
+      "expected_section_ids": [
+        "god-01-s10",
+        "god-01-s11"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Yes. He describes divine sonship as blasphemous, even when Jesus is not named in that exact sentence."
+    },
+    {
+      "id": "god-01-eval-022",
+      "question": "Did Rashad reject the Trinity in this sermon?",
+      "expected_section_ids": [
+        "god-01-s10",
+        "god-01-s11"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The word Trinity is absent, but he rejects divine sonship, family relations, and partners with God."
+    },
+    {
+      "id": "god-01-eval-023",
+      "question": "What did Rashad say about God having a wife, mother, or son?",
+      "expected_section_ids": [
+        "god-01-s11"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He calls such claims blasphemous."
+    },
+    {
+      "id": "god-01-eval-024",
+      "question": "Why did Rashad say Muhammad should not be idolized?",
+      "expected_section_ids": [
+        "god-01-s02",
+        "god-01-s11",
+        "god-01-s12"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He contrasts Muhammad's humanity and lack of control over the cosmic order with God's governance of creation."
+    },
+    {
+      "id": "god-01-eval-025",
+      "question": "How did Rashad use the Moon to argue for worshipping God alone?",
+      "expected_section_ids": [
+        "god-01-s12"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He points to the Moon's synchronized motion and asks what role prophets or saints had in determining it."
+    },
+    {
+      "id": "god-01-eval-026",
+      "question": "Did Rashad discuss tidal locking?",
+      "expected_section_ids": [
+        "god-01-s12"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He does not use the term, but he describes the Moon rotating so that the same side faces Earth."
+    },
+    {
+      "id": "god-01-eval-027",
+      "question": "Why did Rashad mention the sunrise on July 4, 2025?",
+      "expected_section_ids": [
+        "god-01-s12"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "As an example of the predictability and precision of celestial motion."
+    },
+    {
+      "id": "god-01-eval-028",
+      "question": "What is tawhid according to Who is GOD?",
+      "expected_section_ids": [
+        "god-01-s01",
+        "god-01-s02",
+        "god-01-s11",
+        "god-01-s12"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The sermon presents God as the sole creator and governor, without family, partners, or created beings worthy of worship."
+    },
+    {
+      "id": "god-01-eval-029",
+      "question": "How big did Rashad say God is?",
+      "expected_section_ids": [
+        "god-01-s09",
+        "god-01-s10"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He does not give God a numerical size. He uses the immeasurable seven universes and the allegory of God's hand to communicate greatness."
+    },
+    {
+      "id": "god-01-eval-030",
+      "question": "Did Rashad use science as proof of monotheism?",
+      "expected_section_ids": [
+        "god-01-s03",
+        "god-01-s04",
+        "god-01-s05",
+        "god-01-s06",
+        "god-01-s07",
+        "god-01-s12"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He repeatedly labels astronomical claims scientific facts and uses them to argue that God alone governs creation."
+    }
+  ],
+  "canonical_document_id": "video-program/who-is-god",
+  "canonical_catalog_ids": [
+    "video-program/who-is-god"
+  ],
+  "canonical_mapping": "exact-document-id"
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-31-sura-18-sura-81-adhan-salat-1989-11-04",
+  "title": "Quran Study from Parivash 31: Sura 18:98–110, Adhan and Salat, and Sura 81 (1989-11-04)",
+  "cases": [
+    {
+      "id": "audio31-eval-001",
+      "question": "What happens when the barrier falls?",
+      "expected_section_ids": [
+        "parivash31-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study completes the barrier narrative, the invasion of Gog and Magog, the trumpet, Judgment, Hell, and people whose worldly works were misguided while they thought they were righteous."
+    },
+    {
+      "id": "audio31-eval-002",
+      "question": "Whose works are wasted?",
+      "expected_section_ids": [
+        "parivash31-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study completes the barrier narrative, the invasion of Gog and Magog, the trumpet, Judgment, Hell, and people whose worldly works were misguided while they thought they were righteous."
+    },
+    {
+      "id": "audio31-eval-003",
+      "question": "How were deeds weighed?",
+      "expected_section_ids": [
+        "parivash31-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final verses contrast weightless deeds and Hell with permanent Paradise. The ocean-of-ink image is used for Quranic completeness. Rashad and participants argue that God specified four ablution steps and that only al-Fatihah belongs in every prayer unit, without added Suras or names."
+    },
+    {
+      "id": "audio31-eval-004",
+      "question": "How was Quranic sufficiency defended?",
+      "expected_section_ids": [
+        "parivash31-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final verses contrast weightless deeds and Hell with permanent Paradise. The ocean-of-ink image is used for Quranic completeness. Rashad and participants argue that God specified four ablution steps and that only al-Fatihah belongs in every prayer unit, without added Suras or names."
+    },
+    {
+      "id": "audio31-eval-005",
+      "question": "What prayer recitation was prescribed?",
+      "expected_section_ids": [
+        "parivash31-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final verses contrast weightless deeds and Hell with permanent Paradise. The ocean-of-ink image is used for Quranic completeness. Rashad and participants argue that God specified four ablution steps and that only al-Fatihah belongs in every prayer unit, without added Suras or names."
+    },
+    {
+      "id": "audio31-eval-006",
+      "question": "How did Rashad explain divine 'We'?",
+      "expected_section_ids": [
+        "parivash31-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The open discussion distinguishes Lord from lesser lords, interprets divine plural speech as participation of angels, rejects treating Allah as an untranslated proper name, and raises gematrical questions."
+    },
+    {
+      "id": "audio31-eval-007",
+      "question": "Why did he translate Allah as God?",
+      "expected_section_ids": [
+        "parivash31-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The open discussion distinguishes Lord from lesser lords, interprets divine plural speech as participation of angels, rejects treating Allah as an untranslated proper name, and raises gematrical questions."
+    },
+    {
+      "id": "audio31-eval-008",
+      "question": "What exact prayer was demonstrated?",
+      "expected_section_ids": [
+        "parivash31-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recites the God-alone adhan and performs a four-unit prayer using al-Fatihah, bowing formulas, prostration formulas, the God-alone shahada, and the closing salams. Short remembrance follows."
+    },
+    {
+      "id": "audio31-eval-009",
+      "question": "Which testimony was used?",
+      "expected_section_ids": [
+        "parivash31-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recites the God-alone adhan and performs a four-unit prayer using al-Fatihah, bowing formulas, prostration formulas, the God-alone shahada, and the closing salams. Short remembrance follows."
+    },
+    {
+      "id": "audio31-eval-010",
+      "question": "Which events open Sura 81?",
+      "expected_section_ids": [
+        "parivash31-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the collapse of the cosmic system, resurrection, restoration of souls to bodies, gathering of animals, and the questioning of the girl buried alive. Rashad compares the cosmic event with implosion and black holes and makes broad claims concerning Saudi treatment of women."
+    },
+    {
+      "id": "audio31-eval-011",
+      "question": "What did Rashad say about animals?",
+      "expected_section_ids": [
+        "parivash31-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the collapse of the cosmic system, resurrection, restoration of souls to bodies, gathering of animals, and the questioning of the girl buried alive. Rashad compares the cosmic event with implosion and black holes and makes broad claims concerning Saudi treatment of women."
+    },
+    {
+      "id": "audio31-eval-012",
+      "question": "How was the buried-girl passage applied?",
+      "expected_section_ids": [
+        "parivash31-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the collapse of the cosmic system, resurrection, restoration of souls to bodies, gathering of animals, and the questioning of the girl buried alive. Rashad compares the cosmic event with implosion and black holes and makes broad claims concerning Saudi treatment of women."
+    },
+    {
+      "id": "audio31-eval-013",
+      "question": "How was Sura 81 applied to Rashad?",
+      "expected_section_ids": [
+        "parivash31-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip and Rashad apply Quran 81:19–24 to Rashad, including the parenthetical phrase 'your friend Rashad is not crazy.' They connect Sura 81, verse 19, Quran 3:81, gematrical values, cumulative Sura and verse totals, and multiples of nineteen."
+    },
+    {
+      "id": "audio31-eval-014",
+      "question": "Which numerical links were claimed?",
+      "expected_section_ids": [
+        "parivash31-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip and Rashad apply Quran 81:19–24 to Rashad, including the parenthetical phrase 'your friend Rashad is not crazy.' They connect Sura 81, verse 19, Quran 3:81, gematrical values, cumulative Sura and verse totals, and multiples of nineteen."
+    },
+    {
+      "id": "audio31-eval-015",
+      "question": "What happened at the high horizon?",
+      "expected_section_ids": [
+        "parivash31-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says he was summoned beyond the universe and acknowledged by all prophets as Messenger of the Covenant. He describes people as already stamped for guidance or misguidance, calls those accepting the new message the elite of the elite, and says numerical information arrived at exactly the time needed for the new Quran."
+    },
+    {
+      "id": "audio31-eval-016",
+      "question": "Who were the elite of the elite?",
+      "expected_section_ids": [
+        "parivash31-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says he was summoned beyond the universe and acknowledged by all prophets as Messenger of the Covenant. He describes people as already stamped for guidance or misguidance, calls those accepting the new message the elite of the elite, and says numerical information arrived at exactly the time needed for the new Quran."
+    },
+    {
+      "id": "audio31-eval-017",
+      "question": "How did Rashad interpret the timing of discoveries?",
+      "expected_section_ids": [
+        "parivash31-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says he was summoned beyond the universe and acknowledged by all prophets as Messenger of the Covenant. He describes people as already stamped for guidance or misguidance, calls those accepting the new message the elite of the elite, and says numerical information arrived at exactly the time needed for the new Quran."
+    }
+  ],
+  "canonical_document_id": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
+  "canonical_catalog_ids": [
+    "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989"
+  ],
+  "canonical_mapping": "youtube-id"
+}

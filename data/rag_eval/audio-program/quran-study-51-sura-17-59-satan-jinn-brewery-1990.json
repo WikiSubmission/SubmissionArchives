@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-51-sura-17-59-satan-jinn-brewery-1990",
+  "title": "Quran Study 51: Sura 17:59–67, Satan, Jinn Companions, and the Brewery Discovery (1990)",
+  "cases": [
+    {
+      "id": "audio51-eval-001",
+      "question": "How did Rashad interpret losing the soul?",
+      "expected_section_ids": [
+        "audio51-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the loss of one's soul and family as literal spiritual shrinkage. Gambling, drinking, greed, violence, and hatred are used as examples of contracted souls, while the righteous receive mansions and the water cycle and plants become signs of God."
+    },
+    {
+      "id": "audio51-eval-002",
+      "question": "Why were gambling and drinking associated with hatred?",
+      "expected_section_ids": [
+        "audio51-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the loss of one's soul and family as literal spiritual shrinkage. Gambling, drinking, greed, violence, and hatred are used as examples of contracted souls, while the righteous receive mansions and the water cycle and plants become signs of God."
+    },
+    {
+      "id": "audio51-eval-003",
+      "question": "Which natural sign appears in Quran 39:21?",
+      "expected_section_ids": [
+        "audio51-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the loss of one's soul and family as literal spiritual shrinkage. Gambling, drinking, greed, violence, and hatred are used as examples of contracted souls, while the righteous receive mansions and the water cycle and plants become signs of God."
+    },
+    {
+      "id": "audio51-eval-004",
+      "question": "How did the jinn companion develop with a child?",
+      "expected_section_ids": [
+        "audio51-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says a child's assigned jinn companion is also immature and develops alongside the human. As reasoning begins, the companion encourages sleep over Dawn Prayer, avoidance of homework, and other choices considered harmful. Humans and companions are said to share pain and joy."
+    },
+    {
+      "id": "audio51-eval-005",
+      "question": "Which temptations were attributed to it?",
+      "expected_section_ids": [
+        "audio51-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says a child's assigned jinn companion is also immature and develops alongside the human. As reasoning begins, the companion encourages sleep over Dawn Prayer, avoidance of homework, and other choices considered harmful. Humans and companions are said to share pain and joy."
+    },
+    {
+      "id": "audio51-eval-006",
+      "question": "How did Rashad interpret AIDS and starvation?",
+      "expected_section_ids": [
+        "audio51-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Roman Empire, communism, population growth, starvation, and AIDS are treated as evidence that Satan cannot manage his dominion. Rashad then recounts moving from Monsanto to Anheuser-Busch, initially rejecting brewery employment, working on protein extraction from yeast, and using the company's time and computers for Quranic research. He calls the discovery a miracle hidden in Satan's pocket."
+    },
+    {
+      "id": "audio51-eval-007",
+      "question": "Why did he initially reject Anheuser-Busch?",
+      "expected_section_ids": [
+        "audio51-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Roman Empire, communism, population growth, starvation, and AIDS are treated as evidence that Satan cannot manage his dominion. Rashad then recounts moving from Monsanto to Anheuser-Busch, initially rejecting brewery employment, working on protein extraction from yeast, and using the company's time and computers for Quranic research. He calls the discovery a miracle hidden in Satan's pocket."
+    },
+    {
+      "id": "audio51-eval-008",
+      "question": "How did the brewery facilitate the Quranic research?",
+      "expected_section_ids": [
+        "audio51-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Roman Empire, communism, population growth, starvation, and AIDS are treated as evidence that Satan cannot manage his dominion. Rashad then recounts moving from Monsanto to Anheuser-Busch, initially rejecting brewery employment, working on protein extraction from yeast, and using the company's time and computers for Quranic research. He calls the discovery a miracle hidden in Satan's pocket."
+    },
+    {
+      "id": "audio51-eval-009",
+      "question": "What speculation surrounded the number seventeen?",
+      "expected_section_ids": [
+        "audio51-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group speculates about seventeen centuries, days, or hours between revelation and Gog and Magog, while Rashad says the number may not be relevant unless clarified. Questions about six-day creation lead him to describe births, viruses, television, and inventions as continuing creation."
+    },
+    {
+      "id": "audio51-eval-010",
+      "question": "How did Rashad describe ongoing creation?",
+      "expected_section_ids": [
+        "audio51-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group speculates about seventeen centuries, days, or hours between revelation and Gog and Magog, while Rashad says the number may not be relevant unless clarified. Questions about six-day creation lead him to describe births, viruses, television, and inventions as continuing creation."
+    },
+    {
+      "id": "audio51-eval-011",
+      "question": "What were the four categories of disaster?",
+      "expected_section_ids": [
+        "audio51-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes four kinds of apparent disaster. They are the admission test, a blessing in disguise, an educational pinch after wrongdoing, and retribution for corruption beyond reform. A question about Quran 21:79 introduces David and Solomon's different judgments concerning sheep and a damaged field."
+    },
+    {
+      "id": "audio51-eval-012",
+      "question": "How did the David and Solomon example illustrate judgment?",
+      "expected_section_ids": [
+        "audio51-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes four kinds of apparent disaster. They are the admission test, a blessing in disguise, an educational pinch after wrongdoing, and retribution for corruption beyond reform. A question about Quran 21:79 introduces David and Solomon's different judgments concerning sheep and a damaged field."
+    },
+    {
+      "id": "audio51-eval-013",
+      "question": "What did the child recite?",
+      "expected_section_ids": [
+        "audio51-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A child recites al-Fatihah and is praised. The group asks how children know prayer and how souls are assigned to families. Rashad says God assigns good or evil souls according to household conditions and speaks of people already stamped for Heaven or Hell, while cautioning against geographic restrictions on marriage."
+    },
+    {
+      "id": "audio51-eval-014",
+      "question": "How did Rashad explain the assignment of souls to families?",
+      "expected_section_ids": [
+        "audio51-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A child recites al-Fatihah and is praised. The group asks how children know prayer and how souls are assigned to families. Rashad says God assigns good or evil souls according to household conditions and speaks of people already stamped for Heaven or Hell, while cautioning against geographic restrictions on marriage."
+    },
+    {
+      "id": "audio51-eval-015",
+      "question": "What geographic conclusion did he reject?",
+      "expected_section_ids": [
+        "audio51-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A child recites al-Fatihah and is praised. The group asks how children know prayer and how souls are assigned to families. Rashad says God assigns good or evil souls according to household conditions and speaks of people already stamped for Heaven or Hell, while cautioning against geographic restrictions on marriage."
+    },
+    {
+      "id": "audio51-eval-016",
+      "question": "Why were earlier visible miracles stopped?",
+      "expected_section_ids": [
+        "audio51-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 17:59 says earlier visible miracles were stopped because previous peoples rejected them. Satan refuses to prostrate, asks for respite, and is permitted to entice descendants through voice, forces, money, children, and promises, while God's servants remain beyond his power. Ships and danger at sea illustrate people who implore God alone in crisis and revert after rescue."
+    },
+    {
+      "id": "audio51-eval-017",
+      "question": "Which methods was Satan permitted to use?",
+      "expected_section_ids": [
+        "audio51-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 17:59 says earlier visible miracles were stopped because previous peoples rejected them. Satan refuses to prostrate, asks for respite, and is permitted to entice descendants through voice, forces, money, children, and promises, while God's servants remain beyond his power. Ships and danger at sea illustrate people who implore God alone in crisis and revert after rescue."
+    },
+    {
+      "id": "audio51-eval-018",
+      "question": "What happens to people in danger at sea?",
+      "expected_section_ids": [
+        "audio51-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 17:59 says earlier visible miracles were stopped because previous peoples rejected them. Satan refuses to prostrate, asks for respite, and is permitted to entice descendants through voice, forces, money, children, and promises, while God's servants remain beyond his power. Ships and danger at sea illustrate people who implore God alone in crisis and revert after rescue."
+    }
+  ],
+  "canonical_document_id": "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990",
+  "canonical_catalog_ids": [
+    "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990"
+  ],
+  "canonical_mapping": "youtube-id"
+}

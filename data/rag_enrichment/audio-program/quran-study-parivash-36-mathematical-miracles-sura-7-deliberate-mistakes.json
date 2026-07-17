@@ -1,0 +1,991 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 36,
+  "document_id": "audio-program/quran-study-parivash-36-mathematical-miracles-sura-7-deliberate-mistakes",
+  "title": "Quran Study from Parivash 36: Mathematical Miracles, Sura 7, and Deliberate Mistakes to Destroy Idols",
+  "date": "",
+  "date_precision": "unknown",
+  "date_note": "No reliable date is present; the source begins mid-conversation.",
+  "source_file": "data/sources/playlists/audio-transcripts/36 - Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi.csv",
+  "youtube_id": "F0UVvvE92-E",
+  "youtube_url": "https://www.youtube.com/watch?v=F0UVvvE92-E",
+  "primary_speakers": [
+    "Dr. Rashad Khalifa",
+    "Edip Yuksel",
+    "Feroz",
+    "Abdullah",
+    "Hamid",
+    "Other participants"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 736,
+    "first_speech_time": "00:00:00.000",
+    "last_speech_time": "00:58:00.920",
+    "section_count": 7,
+    "speaker_counts": {
+      "Dr. Khalifa": 463,
+      "A man": 52,
+      "Feroz": 11,
+      "A woman": 204,
+      "Edip": 2,
+      "Hamid": 1,
+      "Abdullah": 2,
+      "Barbara": 1
+    }
+  },
+  "document_summary": "The recording opens mid-discussion of matching humans with jinn companions. Most of the first half is a detailed presentation of structural Quranic calculations using Sura numbers, verse totals, zeros for Bismillah, sequential verse numbers, 6,346 verses, 12,806 component numbers, 37,088 digits, word totals, and exclusion of Quran 9:128–129. A woman leads collective prostration and repentance during the presentation. The second half studies Sura 7's Noah, Hud, and Salih narratives as recurring examples of human messengers being called astray, foolish, or liars. Rashad says he sometimes accepts blame or deliberately makes mistakes to demonstrate his humanity and destroy idolatry. The closing emphasizes the camel, punishment, ancestral following, ego, and independent thought by age forty.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "video-program/friday-sermon-proving-every-verse-word-letter-1989-11-09",
+      "relationship": "same structural number families",
+      "note": "Audit all totals and construction rules."
+    },
+    {
+      "document_id": "audio-program/quran-study-parivash-28-sura-45-sura-46-code-19",
+      "relationship": "same 12,692 and 6,346 framework",
+      "note": "The sources preserve related stages of the calculation."
+    },
+    {
+      "document_id": "video-program/friday-sermon-why-announce-messengership-1989-08-11",
+      "relationship": "same human messenger and anti-idolatry defense",
+      "note": "The audio adds the deliberate-mistake statement."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Separate the mathematical and Sura 7 halves",
+      "instruction": "They are distinct sessions."
+    },
+    {
+      "rule": "Make the deliberate-mistake section easy to retrieve",
+      "instruction": "It is conceptually important."
+    },
+    {
+      "rule": "Do not infer which other claims were deliberate mistakes",
+      "instruction": "The recording does not identify them."
+    }
+  ],
+  "sections": [
+    {
+      "id": "parivash36-s01",
+      "start": 0,
+      "end": 180,
+      "title": "Partial opening on matching humans and jinn companions",
+      "summary": "The source begins mid-discussion with the claim that God matches jinn deserving guidance with selected humans and gives jinn a longer period of learning.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "jinn-matching",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "chosen-humans",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "guidance",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "jinn assigned to chosen",
+        "longer schooling"
+      ],
+      "related_questions": [
+        "What claim survives in the partial opening?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "The beginning is missing.",
+      "retrieval_priority": "secondary",
+      "start_time": "00:00:00.000",
+      "end_time": "00:03:08.195",
+      "source_segment_start": 0,
+      "source_segment_end": 50,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Feroz"
+      ],
+      "canonical_text": "Dr. Khalifa: Matching, obviously, is a jinn who, in his heart, really deserves to be guided and be A man: assigned to the chosens. Dr. Khalifa: Yes. Dr. Khalifa: Because they'll be given a longer period of time, longer period of schooling, a lot more information, a lot more knowledge of the universe than the human being. A man: (unintelligible) A man: The being that just got into being jinn rather than being human will be assigned to the best human. Dr. Khalifa: Right. Feroz: So, 49 is... Dr. Khalifa: God is the One who does this assignment, the matching. A man: 800. A man: 49 is 100. A man: I mean, a human is down the scale, one is Satan and 101 is angels, 101 is animals. Dr. Khalifa: There are a lot more humans who are redeemed than jinns, by the way. They're not exactly equal. A man: Because of the 40 age. Because of the what? A man: 40 age. A woman: Age of 40. Dr. Khalifa: Yes. Yes. A man: Yes. Dr. Khalifa: I mean, look, let's say a child comes in for three years and dies. Dr. Khalifa: The jinn is freed without being convinced of anything. A man: So that... Dr. Khalifa: That jinn will not, probably will not believe. A man: Oh, or he could also, it could also be the other way around that... Dr. Khalifa: Yes, it can be the other way around. Yes. A man: He can be convinced and redeemed. Dr. Khalifa: Yes. Dr. Khalifa: A jinn can be released after from a disbeliever. A man: Even after 40 and still become a believer? Dr. Khalifa: Yes. Yes. Dr. Khalifa: This is Sura 72. A man: (unintelligible) Dr. Khalifa: They said \"we heard the Quran and the foolish used to think that Jesus is God or son of God. But we don't anymore.\" Feroz: But it doesn't apply to... A woman: This is incredible. Because these numbers are now getting really beyond humans. A woman: And with this system (unintelligible). Dr. Khalifa: Jinns? Yes. Yes. Dr. Khalifa: Jinns. A woman: Yeah. Dr. Khalifa: Yes. Dr. Khalifa: Okay, I'm gonna get you some (unintelligible). Dr. Khalifa: ... a good husband, IN SHAA ALLAH. Dr. Khalifa: You know, she and Apamea are inseparable. Edip is having rough time. A man: Wow. Dr. Khalifa: Today is really a fantastic day. Because we are going to share together God's gift to us as a result of the conference. As you know, God always gives us a gift. Every time we do something which is actually a gift from God. The conference itself is a gift from God. But each one of us underwent efforts and financial sacrifices and time sacrifices. And where God sends... God is so generous. So, He sent us a gift that is two great miracles. Each one of them makes the parting of the Red Sea a tiny miracle. They're all God's miracles. The parting of the Red Sea, the miracles of Jesus, and all the miracles we see in the Quran are all God's miracles. But this miracle, God specializes... Like, I mean, honors especially by calling it one of the great miracles",
+      "review_status": "draft",
+      "retrieval_text": "Partial opening on matching humans and jinn companions\nThe source begins mid-discussion with the claim that God matches jinn deserving guidance with selected humans and gives jinn a longer period of learning.\nConcepts: jinn-matching; chosen-humans; guidance\nTerms: jinn assigned to chosen; longer schooling\nQuestions: What claim survives in the partial opening?\nQuran: \nBible: \nEntities: "
+    },
+    {
+      "id": "parivash36-s02",
+      "start": 180,
+      "end": 600,
+      "title": "Sura numbers, verse totals, Bismillah zeros, and a 13,038-digit number",
+      "summary": "Rashad explains constructing a long number from each Sura number, verse total, Bismillah represented by zero, and every verse number. Adding zeros reportedly produces a 13,038-digit number divisible by nineteen and distinguishes Sura 9's missing Bismillah.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-verse-concatenation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "bismillah-zero",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "13038-digits",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "sura-9",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "code-19",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "put zero for Bismillah",
+        "Sura 9 no zero",
+        "13038 digits"
+      ],
+      "related_questions": [
+        "How was the first long number built?",
+        "What role did the missing Bismillah have?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Audit all totals programmatically.",
+      "retrieval_priority": "primary",
+      "start_time": "00:02:59.562",
+      "end_time": "00:09:57.891",
+      "source_segment_start": 50,
+      "source_segment_end": 131,
+      "csv_speakers": [
+        "A woman",
+        "Dr. Khalifa",
+        "Edip"
+      ],
+      "canonical_text": "But this miracle, God specializes... Like, I mean, honors especially by calling it one of the great miracles with a very strong assurance in the Arabic language. (74:35) إِنَّهَا لَإِحْدَى ٱلْكُبَرِ إِنَّهَا إِحْدَى الْكُبَرِ is one of the great miracles. But (74:35) إِنَّهَا لَإِحْدَى ٱلْكُبَرِ it is indeed, most assuredly, one of the great miracles. And this is in Sura, as you know it has to do, it is based on the number 19. I would ask you to situate yourself where you can see this. It is in Sura 74, verse 35. It is one of the greatest miracles. 7 plus 4 is 11, plus 3 is 14, plus 5 is 19. This adds up to 19. And we're going to witness this together. In addition to this miracle that you see on the wall. And before I start explaining this, hopefully make it clear to you, I want to share with you how God collectively inspires the believers. Because in this miracle on the wall here, we have, the first Sura in the Quran consists of 7 verses, as you know. And then, we wrote the number of every verse in the Quran. This is...These are the verses in the first Sura. 1, 2, 3, 4, 5, 6, 7. So, this represents the first Sura. It consists of 7 verses, and these are the verses in it. 1, 2, 3, 4, 5, 6, 7. The next Sura consists of 286 verses. So, you write this next to this number. And then, the number of every verse in the Sura. 1, 2, and so on to 286. This will represent Sura number 2. Now, you're putting all these numbers next to each other, until you go to the end of the Quran. And you end up with the number of digits. Each one of these is a digit. The number of digits is 12,692, which is a multiple of 19. This is the number of digits in this long number. And the long number itself is a multiple of 19, okay? So, we know about this miracle on the wall. Everyone who walks in this masjid can witness a perpetual miracle that anyone can witness anywhere in the world. Now, the collective inspiration of the believers is that... you know, you met Ali Fazily from New Mexico, Dr. Fazili, a physicist, who was talking to Abdullah and to a number of us, and he said, okay, this is the first Sura, has 7 verses. This is the first verse, Bism Allah Arrahman Arraheem (1:1) This is the second verse, Al hamdu Lillahi Rabbil ‘Alameen (1:2) This is the third verse, and so on. Then, the next Sura is 286. And this is the first verse, it says, Alif Lam Meem (2:1). \"So, what happened to Bism Allah Arrahman Arraheem? \"It is, it is not being considered here.\" So, Ali said \"why don't you put a zero for Bism Allah Arrahman Arraheem?\" \"Put a zero here.\" And this is the first miracle we're going to witness today. Because Abdullah went to his computer, and he put zero for every Bism Allah Arrahman Arraheem. As you know, the first Bism Allah Arrahman Arraheem, the first verse, number one has a number. So, there is no zero in the first Sura. And Sura 9 does not have Bismillah. So, it will not have a zero. So, when you come to Sura 9, it will look like this. This is now Sura 9. You put the number of the Sura, and then you don't put a zero, you start with the first one right away. 1, 2, 3, and so on. Dr. Khalifa: With the other Suras, you put the number of verses, you put the number of the Sura followed by the zero. Edip: Instead of 9, it must be total number of verses. A woman: Verses. Edip: Abjad numbers. Dr. Khalifa: Just a minute. A woman: (unintelligible) Dr. Khalifa: Well,... Dr. Khalifa: You put the number of the Sura, you put the total number of verses. Yes. So, you put, you put also the number of the Sura here. Because the disbelievers say \"why do you ignore the number of the Sura?\" Anyway, with this miracle, anything that the disbelievers want, God gave them. He left no excuse for them. But the idea here is that we... Ali suggested the zeros, and sure enough, when we put the zeros in for Bismillahs, the end result was a multiple of 19. Now, these colors are supposed to be erased easily. So, let's take the number that represents Sura number 1 and the beginning of Sura number 2. Sura number 1 has... is number 1. It has 7 verses. Then, you put the numbers of verses, 1, 2, 3, 4, 5, 6, 7. Then, you put Sura number 2. It has 286 verses. And then, the Bismillah has a zero, and then 1, 2, and so on to the end of the Sura. And you go like this to the end of the Quran. Now, these zeros, they're not zeros, because they are in the middle of the number. You have 11. If you have 11, it's 11, right? You put a zero in the middle of the number, it becomes 101. There is no connection mathematically between 11 and 101. Except... So, these zeros were inserted in that big number. And the end result is a very long number that is 13,038 digits. Dr. Khalifa: It is divisible by 19. A woman: And the digits are divisible? Dr. Khalifa: No. The number of digits is not divisible by 19. Okay? This will take us to the second miracle, which is even greater than this one, if you can believe that. So...",
+      "review_status": "draft",
+      "retrieval_text": "Sura numbers, verse totals, Bismillah zeros, and a 13,038-digit number\nRashad explains constructing a long number from each Sura number, verse total, Bismillah represented by zero, and every verse number. Adding zeros reportedly produces a 13,038-digit number divisible by nineteen and distinguishes Sura 9's missing Bismillah.\nConcepts: sura-verse-concatenation; bismillah-zero; 13038-digits; sura-9; code-19\nTerms: put zero for Bismillah; Sura 9 no zero; 13038 digits\nQuestions: How was the first long number built? What role did the missing Bismillah have?\nQuran: \nBible: \nEntities: "
+    },
+    {
+      "id": "parivash36-s03",
+      "start": 600,
+      "end": 810,
+      "title": "Collective prostration, repentance, literary structure, letters, words, God, and Quran counts",
+      "summary": "A woman leads collective prostration and repentance. She distinguishes structural mathematics from literary composition and cites controlled initials, 2,698 occurrences of God with a verse-reference sum, and fifty-seven occurrences of Quran.",
+      "section_kind": "devotional and mathematical presentation",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "collective-prostration",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "repentance",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quranic-initials",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "allah-count",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-word-count",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "fall prostrate collectively",
+        "2698 God",
+        "118123",
+        "57 Quran"
+      ],
+      "related_questions": [
+        "Why did the group prostrate?",
+        "Which letter and word totals were presented?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Verify counts and speaker attribution.",
+      "retrieval_priority": "primary",
+      "start_time": "00:10:00.818",
+      "end_time": "00:13:33.207",
+      "source_segment_start": 132,
+      "source_segment_end": 169,
+      "csv_speakers": [
+        "A woman"
+      ],
+      "canonical_text": "Let us all collectively fall prostrate before God. I will lead you in the prostration, and then, we'll repent to God and ask Him to guide us. Tooboo Ela Allah Allahu Akbar. Allahu Akbar. Alhamdu Lillah, We praise God. Wa Ash-hadu Alla Elaha Ella Allah Wahdahu La Shareeka Lah. And we bear witness that there is no other god besides God. These miracles that we're witnessing are strictly mathematical or structural miracles. They have nothing to do with the literary miracle in the Quran. As you know, there is a literary miracle that has to do with the distribution of every letter. This is... You know the Quranic initials, Alif, Lam, Meem, at the beginning of Sura number 2. The counts of Alif and Lam and Meem are mathematically controlled. The counts of Ha Meem and the 7 Ha Meem initialed Suras are mathematically controlled. Every letter in the Quran is mathematically controlled. I'm talking about letters. Also, words are mathematically controlled in the Quran. We're talking about the literary mathematical composition. The word \"God\", as you know, is 2698 times in the Quran. And if you add the numbers of verses wherever the word \"God\" is mentioned, it is 118123, which is also a multiple of 19. The word \"Quran\" happens in the Quran 57 times, 19 times 3. When you add the Suras and verses, wherever the word Quran is found, the total is 44008, 4408 which is also a multiple of 19. So, we're talking about a giant Rubik's cube, which is consisting of two sections, a literary mathematical composition where the letters and the words are mathematically composed and distributed far beyond the human ability. In Sura 17, verse 81, it says \"if all the humans and all the jinns banded together to produce a Quran like this, they cannot do it. And it has nothing to do with literature. It has to do with this, this impossible mathematical composition, which is very simple to understand, but very impossible to imitate. What we're talking about today is strictly mathematical numbers. You take any book from the library. Every book in the library has chapters and sentences. And take those chapters and number the sentences, and see if there is any mathematical pattern in them. You will not find anything. If you find anything, it will be by coincidence and maybe one chance of some kind of a system. Like, for example, the number of sentences may be divisible by the number of chapters, by accident, in one of the books. But that would be the extent of it. So, we're talking now about strictly mathematics. It has nothing to do with the literary sense. The second miracle that we are witnessing, let us take the Quran from the first verse to the last verse, and give these verses numbers that Abdullah called a sequential number.",
+      "review_status": "draft",
+      "retrieval_text": "Collective prostration, repentance, literary structure, letters, words, God, and Quran counts\nA woman leads collective prostration and repentance. She distinguishes structural mathematics from literary composition and cites controlled initials, 2,698 occurrences of God with a verse-reference sum, and fifty-seven occurrences of Quran.\nConcepts: collective-prostration; repentance; quranic-initials; allah-count; quran-word-count\nTerms: fall prostrate collectively; 2698 God; 118123; 57 Quran\nQuestions: Why did the group prostrate? Which letter and word totals were presented?\nQuran: \nBible: \nEntities: "
+    },
+    {
+      "id": "parivash36-s04",
+      "start": 810,
+      "end": 1680,
+      "title": "Sequential verse numbers, 6,346 verses, 12,806 numbers, 37,088 digits, and rejection of two verses",
+      "summary": "The second construction pairs each verse's local number with its sequential position from the beginning of the Quran and prefixes Sura numbers. It yields claims of 6,346 verses, 12,806 component numbers, 37,088 digits, and a long number divisible by nineteen. Including Quran 9:128–129 or a Bismillah before Sura 9 allegedly destroys the pattern.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sequential-verse-number",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "6346-verses",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "12806-numbers",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "37088-digits",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-9-128-129",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "last verse 6346",
+        "12806 numbers",
+        "37088 digits",
+        "two false verses collapse"
+      ],
+      "related_questions": [
+        "How was the sequential construction made?",
+        "Which totals were claimed?",
+        "What happens if the two verses are included?"
+      ],
+      "quran_references": [
+        "9:128-129"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "This entire calculation requires independent code-based reproduction.",
+      "retrieval_priority": "primary",
+      "start_time": "00:13:27.674",
+      "end_time": "00:28:00.630",
+      "source_segment_start": 169,
+      "source_segment_end": 341,
+      "csv_speakers": [
+        "A woman",
+        "Abdullah",
+        "Dr. Khalifa",
+        "Hamid"
+      ],
+      "canonical_text": "and give these verses numbers that Abdullah called a sequential number. So, Bism Allah Arrahman Arraheem (1:1) We have Sura number 1. Bism Allah Arrahman Arraheem (1:1) is the first verse. Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) These are the first 7 verses of the Quran. And then, we go to Bism Allah Arrahman Arraheem of the second Sura. It would be number 8. And then, the first verse of Sura number 2 says, Alif Laam Meem. That would be number 9. Are you following me? So, we keep going to the end of the Quran. The last verse is number 6346 which is a multiple of 19. This is the all the verses of the Quran, including Bism Allah Arrahman Arraheem in every Sura. Sura 9 does not have any Bism Allah Arrahman Arraheem. Okay, now, of course, this is verse number 1, this is number 2, this is number 3, this is number 4, this is number 5, 6, 7, 0. Because this is the first Bismillah of Sura number 2. And this is verse number 1 of Sura number 2. And this is verse 6 of the last Sura of the Quran. So, here we have two sets of numbers. We have the number of the verse and its sequential number in the Quran. So, the last verse in the Quran is number 6 of the last Sura, which is verse number 6. But it is number 6346 in the whole Quran. Is this simple? Everybody's following this. It's very easy. So, what Abdullah did, he put all these numbers next to each other to form one very long number. But he also put the number of the Sura before every Sura. So, before the numbers of Sura number 1, he put the number of the Sura, which is 1. So, now the number representing the first Sura of the Quran will be 1 11 22 33 44 55 66 77. And then, you'll put Sura number 2. And then 08 19 210 311 412. Are you following me? No? Ok. The first Sura in the Quran is 7 verses. And they are verses number 1, 2, 3, 4, 5, 6, 7. If you... When you arrange them from the beginning of the Quran sequentially, they are also number 1, 2, 3, 4, 5, 6, 7. And then, the Bismillah of Sura number 2 is number 8. The first verse in Sura number 2 is number 9. So, what we're doing in this column here, we're just giving a number to every verse of the Quran from the beginning to the end. So, if you go to the middle of the Quran, for example, verse number 1 of the last Sura in the Quran, when you count from the beginning of the Quran, it becomes number 6341. In other words, up to the first verse of the last Sura, we have 6,341 verses. When you go to the last verse of the Quran, it is verse number 6 in the last Sura. (114:6) مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ This number 6 here says... the last verse of Sura number 114. And it is number 6346 from the beginning of the Quran. It is number 6 from the beginning of the Sura, and it is number 6346 from the beginning of the Quran. Ok? So far so good? So, Abdullah put the number of every verse and the number of this verse from the beginning of the Quran. So, verse number 7 in Sura Al-Fãtehah, Sura Al-Hamd, is verse number 7. And it is also the 7th verse from the beginning of the Quran. And then, Bism Allah Arrahman Arraheem of Sura number 2 is number zero, as you know. And it is the 8th verse from the beginning of the Quran. The first verse in Sura number 2 is the 9th verse from the beginning of the Quran. So, these numbers were put next to each other to form one big number. Except the number of every Sura was at the beginning of every Sura. So, this is Sura number 1. The number representing Sura number 1 would be... here it is. It will be Sura number 1, verse number 1 in the Sura. It is verse number 1 in the whole Quran. And then, verse number 2 is also number 2 from the beginning of the Quran. 3, this is also 3. 4, this is all one number. 44 55 66 77. Then, we go to Sura number 2. We continue the numbers. It is Sura number 2. And we have... Bism Allah Arrahman Arraheem is number zero. And it is the 8th verse. See, this was the 7th verse. The 8th verse from the beginning of the Quran. And then, verse number 1 of Sura number 2, which is the 9th verse from the beginning of the Quran. And then, verse number two is the 10th verse from the Quran, and so on, to the end of the Quran. We end up... Now, I want you to observe this with me. This number of the Sura is one number. The number of the other verse is another number, and so on. Now, we come here to the double numbers. The 2nd verse of Sura number 2 is number 2. But from the beginning of the Quran, it is number 10. So, this is a number, and this is a number. If you count the numbers in the long number, they are... They are, let me see... 12,806. 12,806 numbers. This is a multiple of 19. This is the number of numbers. See, this is one number, 10. And this here also is one number. This is the last verse of the Quran. It is verse number 6346 in the whole Quran. It is verse number 6 in the last Sura. So, this is a number, this is a number, this is a number, the number of these numbers is 12806, which is a multiple of 19. Now, if you count the digits, meaning there are 2 digits here, this is 10, has two digits, These are 4 digits, 1, 2, 3, 4. Four digits. There's one number, but 4 digits. When you count the digits in this long number, you have 37... Excuse me. 37088. This is the number, this is one long number that has 37,088 digits in it. This number of digits is a multiple of 19, and the long number itself is also a multiple of 19. So, the whole world should be Muslim tomorrow. Dr. Khalifa: So, is this... Hamid, maybe this clarifies... Hamid: 6346 (unintelligible) 19. Dr. Khalifa: Yes, this adds, this adds up to 19, and it is a multiple of 19. This is the total number of verses in the Quran. Dr. Khalifa: It is 19 times 3.. A man: 334 A woman: That other, the half of the digits of the (unintelligible) Dr. Khalifa: Yes. Dr. Khalifa: The number of digits in that number, the basic number which has the number of verses followed by the number of every verse, This sheet of paper on the wall has the number of every verse in the whole Quran. And the number of digits there is exactly twice as much as the number of verses in the Quran. There is no, it's not necessary to have that connection, but it is true. Now, I don't wanna confuse you anymore, but, is there anything else you can think of, Abdullah? you need to point out. Abdullah went to the computer and put the zeros in there, and then he walks in with this piece of paper casually. I said \"oh, oh, Abdullah, you have a piece of paper in your hand.\" What I said was, we want to start a new translation of the Quran to be ready, in case the demand increases and we have to print some more, maybe a few millions, IN SHAA ALLAH. At the minute the suggestion of the new translation came, the flood is beginning already. It's just awesome, I don't know what... There's something I need to say, but I forget what it is. This is... This really leaves you speechless. Is there anything that is mysterious to anybody? Don't be embarrassed if you wanna clarify any point. Otherwise, we will do the prayer, and as we prostrate to God, we remember these miracles. Oh, there is what I wanna say. As you know, Sura 9 had these 2 false verses. And if we include these 2 false verses, 128 and 129, in that number, you don't have anything. You don't have divisible by 19. The whole thing collapses. And here, we're adding zeros inside for Bism Allah Arrahman Arraheem. We're putting zeros for each one, and you still have a divisible. If you include the 2 false verses, the whole thing collapses. We have nothing. So right now, we have something to talk about, something awesome. When we inject these zeros, this is a zero, Bism Allah Arrahman Arraheem of Sura number 2 When you come to Sura 9, there is no Bismillah. If you put the zero... this is worth erasing or something. We're struggling with these numbers. Hey, they are being erased. I just want to demonstrate for you Sura number 9. Okay, open your eyes now. The number where we inject the zeros, which is the first miracle we talked about. You put the Sura number, 9, and then you put the first verse in it, which is number 1. Dr. Khalifa: Did you put the verse numbers? 127? Abdullah: The previous miracle? Yeah. Dr. Khalifa: Yes. Abdullah: (unintelligible) first one you put (unintelligible). Dr. Khalifa: Yes. Dr. Khalifa: 127, right? With the verse numbers. This is the total number of verses in the Sura. If you put 129, which includes the 2 false verses, of course, the whole thing collapses. And then, you put verse number 1, 2, and we go on to 127. And this will represent Sura number 9. And then after that, we get to Sura number 10. So, you put the number of the Sura, right after that. And then, you put the number of verses, which is what, 106? For Sura number 10. And then, you put Bism Allah Arrahman Arraheem, a zero. And then, the first verse, and then the second verse and so on to 106. Now, Sura number 10, the number of verses and Bism Allah Arrahman Arraheem has a zero. Sura number 9 does not have Bism Allah Arrahman Arraheem, so there is no zero. Now, if, and at the end, the end result is a very long number that is a multiple of 19. If you put Bism Allah Arrahman Arraheem in Sura 9, you put a zero here, the whole thing collapses. How is that for accuracy? Subhan Allah Aqem Al-Salat Allahu Akbar Allahu Akbar La Elaha Ella Allah Bism Allah Arrahman Arraheem In the name of God, Most Gracious, Most Merciful [7:58] The good land readily produces its plants by the leave of its Lord, while the bad land barely produces anything useful. We thus explain the revelations for people who are appreciative. What this verse is saying is that you recognize the tree by its fruit. You recognize the good person or the bad person by their actions, their words, what they produce. The good tree will bear good fruit. The bad tree will bear bad fruit. This is why there's a big fallacy about \"it is the intention that counts.\" It is the intention that counts on the person who's perfect. All actions and words are perfect. They say \"We worship God alone. We uphold the word of God alone. We believe in the Hereafter\" and everything is from the utterances looks perfect. This is when the intentions are what counts. Because only God knows what's inside, what the convictions are. So, the person says \"I cannot say 'La Elaha Ella Allah' by itself, I have to put Muhammad next to God.\" That person is a dead duck. There's no matter... There's no longer... it's not a matter of intentions anymore. You know, they tell you that you can't condemn a person for saying \"La Elaha Ella Allah, Muhammad Rasulullah\" or putting some name next to the name of God or for breaking the commandments regarding distinction among the messengers, etc., etc. \"It is the intention that counts\" they say.",
+      "review_status": "draft",
+      "retrieval_text": "Sequential verse numbers, 6,346 verses, 12,806 numbers, 37,088 digits, and rejection of two verses\nThe second construction pairs each verse's local number with its sequential position from the beginning of the Quran and prefixes Sura numbers. It yields claims of 6,346 verses, 12,806 component numbers, 37,088 digits, and a long number divisible by nineteen. Including Quran 9:128–129 or a Bismillah before Sura 9 allegedly destroys the pattern.\nConcepts: sequential-verse-number; 6346-verses; 12806-numbers; 37088-digits; quran-9-128-129\nTerms: last verse 6346; 12806 numbers; 37088 digits; two false verses collapse\nQuestions: How was the sequential construction made? Which totals were claimed? What happens if the two verses are included?\nQuran: 9:128-129\nBible: \nEntities: "
+    },
+    {
+      "id": "parivash36-s05",
+      "start": 1680,
+      "end": 2670,
+      "title": "Sura 7, Noah and Hud, the repeated human-messenger pattern, and ego",
+      "summary": "Rashad reads Noah and Hud being called astray, foolish, or liars despite offering sincere advice and clear messages. He applies the repeated wording to contemporary resistance to a human messenger and says ego causes resentment when truth comes through another ordinary person.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-7",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "noah",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "hud",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "human-messenger",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "ego",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "recurring-pattern",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "man like you",
+        "you are astray",
+        "you are liar",
+        "same thing happening now"
+      ],
+      "related_questions": [
+        "How were Noah and Hud treated?",
+        "Why did Rashad connect the narratives to ego?"
+      ],
+      "quran_references": [
+        "7:59-72"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Noah",
+        "Hud"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:27:58.630",
+      "end_time": "00:44:33.088",
+      "source_segment_start": 341,
+      "source_segment_end": 551,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "\"It is the intention that counts\" they say. But this is a big, big fallacy. The intention, when the Quran talks about \"the intention is what counts.\" Because this is what the Quran says. It is talking about when everything appears to be perfect. Noah [7:59] We sent Noah to his people, saying, \"O my people, worship GOD; you have no other god beside Him. I fear for you the retribution of an awesome day.\" [7:60] The leaders among his people said, \"We see that you are far astray.\" How could that be? He's just telling them to worship God, right? This is always the case. Here comes a guy saying \"worship God\" and they say \"you're far astray.\" \"You're way off. You're going to Hell.\" Moses went to Pharaoh and Pharaoh said \"Moses is here to corrupt your religion.\" \"He's telling you to worship God.\" Yep, Satan does that. [7:61] He said, \"O my people, I am not astray; I am a messenger from the Lord of the universe. [7:62] \"I deliver to you the messages of my Lord, and I advise you, and I know from GOD what you do not know. [7:63] \"Is it too much of a wonder that a message should come to you from your Lord, through a man like you, to warn you, and to lead you to righteousness, that you may attain mercy?\" [7:64] They rejected him. Consequently, we saved him and those with him in the ark, and we drowned those who rejected our revelations for they were blinded people. The same thing is happening right now. The same thing God repeats for His system is never changeable. His system is never changeable. Now more than ever it is happening. And the same system is going to happen. The same things, the same thing that the disbelievers said, the same things that the messengers said, and the same consequences are happening right now. You notice, Noah didn't say, worship God and observe the Salat prayer and this and that. You do not see the Salat prayer before Abraham. Or the fasting of Ramadan or any other worship. People were very primitive and just believing in God was sufficient to save them. A man: (unintelligible) Dr. Khalifa: Hmm? A man: (unintelligible) Dr. Khalifa: Yes, of course. Dr. Khalifa: Both. A man: (unintelligible) God alone (unintelligible). Dr. Khalifa: Yes, they were same, idol worshippers and disbelievers. A woman: (unintelligible) disbelievers different from idol worshippers, no? Dr. Khalifa: They're both, they're both disbelievers. Dr. Khalifa: But there are disbelievers who don't believe that God exists. A woman: Yes. Dr. Khalifa: The idol worshippers believe in God. That's the difference. The idol worshippers are believers. Dr. Khalifa: Or they can be disbelievers who worship idols. A woman: But God divides people into two or three types. Dr. Khalifa: Well, you see, they interfere, they overlap. A woman: Because... Dr. Khalifa: See, the idol worshippers, the Muslims, for example, and the Christians, they believe in God. A woman: Because somebody told me that why God divided people into three kinds, three types. Dr. Khalifa: Yes. A woman: \"Why you said you met five types of people, you divided.\" I said \"I met the five groups, and it doesn't matter. (unintelligible).\" Dr. Khalifa: There are many kinds of idol worshippers and many kinds of disbelievers. There are idol worshippers worship idols and not God. Dr. Khalifa: They worship the sun or the moon or the cow or whatever. A woman: Yeah, and idol worshippers... Dr. Khalifa: And they don't believe in God. That you think this is... that is God Dr. Khalifa: But there are idol worshippers who believe in God and the cow. A woman: An idol worship can two, one of them they practice... they don't practice what they worship. Dr. Khalifa: There are also the hypocrites. A woman: Yes. Dr. Khalifa: Hypocrites are the people who say they believe in God when they really don't. Or believe in the Hereafter when they really don't. But it's amazing how what was happening at the time of Noah, who was the first prophet after Adam, is exactly happening right now. It's the same words. Let's read them again. [7:59] We sent Noah to his people, saying, \"O my people, worship GOD; you have no other god beside Him. ... Which means worship God alone. [7:59] ... I fear for you the retribution of an awesome day.\" And there are other, many other places where Noah was mentioned. He said \"I'm not asking you for any money. I'm not asking for any wage.\" \"All I'm asking you is to save you from the retribution.\" \"I am inviting you to be forgiven by God.\" So, they stuck their fingers in their ears and covered themselves with their clothes. What is it, I mean, human being is averse to being saved. And there seems to be a resentment of a human being like them telling them to worship God alone. Telling them that they are wrong. So, it appears that ego is really the biggest god besides God. It was here in verse 63. [7:63] \"Is it too much of a wonder that a message should come to you from your Lord, through a man like you, to warn you, and to lead you to righteousness, that you may attain mercy?\" So, it is not... You know, kill your ego at the beginning of the Quran seems to be a very very important prerequisite. And the intelligent ones will do that. We kill our ego. So, I don't care who comes to tell me that God is telling him or her that we must be (unintelligible), be righteous and go to Heaven. If I'm intelligent. If I'm stupid, I will say \"who are you to tell me that? You're telling me I'm wrong?\" So, it seems like the ego is the obstacle. And it has to be idol worship. Because why will a person resent another person? Because they think he's better than them. When they think he's better than them, that's idol worship. When you raise somebody over the truth, then that's idol worship. But the believer knows that the messenger is just one of us who has the same problems and the same requirements of belief. And therefore, will not resent that. He's just one of us. He's not any better. There's no resentment. There's no ego, actually. But the idol worshippers say \"wow, a messenger of God. Oh, no. This is tremendous.\" So, this is idol worship. It's all in their mentality. It's because they idolize the messenger of God. That they cannot, cannot stand... the jealousy comes in. Ego comes in. And the believers realize that the messenger of God is just a flopster like the rest of us, who's required to listen to the message and believe without doubts. A woman: I reminded one of my friends that I talked to her about the messenger. And after so many hours that I spent time And he believed. She believed and said \"ok. messenger.\" And a week after, somebody said \"Rashad is Rasool Allah.\" And (unintelligible) in Arabic Rasool Allah. A woman: She said \"Rasool Allah?\" Dr. Khalifa: Right. A woman: \"You didn't tell me 'Rasool Allah.' You said 'Rasool.'\" Dr. Khalifa: Right. A woman: \"No, not Rasool Allah.\" Dr. Khalifa: Yes. A woman: \"Rasool Allah!\" I said \"Who was... Rasool who? Pharaoh or Rasool Shaytan Rasool?\" Dr. Khalifa: Yes. Exactly. A woman: \"If he's right, he must be Rasool Allah.\" She said \"Only Rasool, not Rasool Allah.\" A woman: \"Rasool Allah, you're talking that you worship him.\" Dr. Khalifa: Actually, this is exactly what Ismail Barakat did in the first conference. Dr. Khalifa: Exactly. Ihsan Ramadan told Ismail \"why don't you believe that he's a Rasool?\" And Ismail said, after some discussion. She told him \"he discovered the miracle of Quran and this and that. And he couldn't be... Quran says 'nobody touches the Quran unless he's a sincere believer.'\" He said \"yeah, ok, I agree that he's a Rasool.\" So, Ihsan said \"that's right, he's Rasool Allah.\" He said \"oh no, wait a minute.\" She said \"what do you... you believe he's a Rasool, but Rasool who? What else?\" It's just the expression, you see. We idolize the expression \"Rasool Allah.\" And Ismail never forgets this and Ihsan never forgets this. It was in the kitchen of that place in San Francisco. 64 is the inevitable consequences of disbelieving. [7:64] They rejected him. Consequently, we saved him and those with him in the ark, and we drowned those who rejected our revelations, for they were blinded people. And it's gonna happen to our generation. It's gonna happen now. Exactly when, we don't know. But it's gonna happen. It's gonna be some kind of an ark. Hûd, number 65. [7:65] To 'Ãd we sent their brother Hûd. He said, ... Same thing. [7:65] ... \"O my people, worship GOD; you have no other god beside Him. ... Which means worship God alone. [7:65] ... Would you then observe righteousness?\" [7:66] The leaders ... as usual [7:66] ... who disbelieved ... Like Bin Baz [7:66] The leaders who disbelieved among his people said, \"We see that you are behaving foolishly, ... You know, foolishly. \"How can you tell us to worship God alone?\" \"You're an idiot.\" [7:66] ... and we think that you are a liar.\" Dr. Khalifa: \"Kazzab (كَـٰذب) (liar)\" A man: Same word, Kazzab (كَـٰذب) (liar). Dr. Khalifa: Yes. Dr. Khalifa: It's amazing, you know. He used the word against me. \"Kazzab.\" What is Kazzab? What is Kazzab? I'm telling you to worship God alone. \"You're a liar. You're Kazzab.\" Dr. Khalifa: You forget the message. And all they concern is \"you're Kazzab that you're a messenger of God.\" A man: Just like the man from (unintelligible) who wrote in that South African article which you reproduced. Dr. Khalifa: Yes. A man: All, Everything he used, like page 199, volume 9 and 10. Dr. Khalifa: Yes. Dr. Khalifa: Yes, you noticed it. The fellow from India? A man: Yes. Dr. Khalifa: Yes. [7:66] ... \"We see that you are behaving foolishly, and we think that you are a liar.\" [7:67] He said, \"O my people, there is no foolishness in me; I am a messenger from the Lord of the universe. [7:68] \"I deliver to you my Lord's messages, and I am honestly advising you. [7:69] \"Is it too much of a wonder that a message should come to you from your Lord, through a man like you, to warn you? Recall that He made you inheritors after the people of Noah, and multiplied your number. Remember GOD's blessings, that you may succeed.\" Same things, right? [7:69] \"Is it too much of a wonder that a message should come to you from your Lord, through a man like you, ... 64. 63. [7:63] \"Is it too much of a wonder that a message should come to you from your Lord, through a man like you, ... Same things. Why is God repeating this with every messenger? Because it's human nature. It's gonna happen every time. So, these are actually good signs. Following the Parents Blindly: A Human Tragedy Number 70. [7:70] They said, \"Did you come to make us worship GOD alone, and abandon what our parents used to worship? We challenge you to bring the doom you threaten us with, if you are truthful.\" Same thing is happening now. \"You want us to worship God alone and leave Muhammad? And leave the Imams? And leave the Saints?\" \"You want us to leave Imam ibn Hanbal and Imam Al-Shafi'i?\" \"It's God alone. Is that all?\" [7:71] He said, \"You have incurred condemnation and wrath from your Lord. Do you argue with me in defense of innovations you have fabricated— you and your parents—which GOD has placed no power? Therefore, wait and I will wait along with you.\" [7:72] We then saved him and those with him, by mercy from us, and we annihilated those who rejected our revelations and refused to be believers. People come, look at the message, examine it. They find that the message is worship God alone. Well, they reject it and then they go. They think they got away with it. Then, when they get their retribution, they say \"why is this happening to me?\" And they cry. And the people who see them at that time, they may feel sorry for them. They (unintelligible) She comes to the message. And then because of something at the very end, she uses that as an excuse to reject the message. And she goes, and then ten years from now, she's hit by disaster. She says \"Why is this happening to me?\" We know. It doesn't happen to believers. At the same time, none of the disbelievers gets away with it. They have to be smashed. Dr. Khalifa: You see them all the time, having problems, cancers, disasters. A man: Just the knowledge of God's miracle, that there is a miracle put by God in the Quran, in that they don't have, I mean, they don't know even at that point of time, they've got the message and they've chosen not to do more about it. Dr. Khalifa: Yeah. We have a fantastic, overwhelming miracle. It makes Moses' and Jesus' miracles look like toys, children's stuff. And yet, they become diverted by something very flimsy, \"He picks his nose.\" You know, \"Not that!\" Really, I'm not exaggerating. It the things like this. You had wonderful people here. They may be coming back, I don't know. But we had the Mu'innis, the Sabahis, (unintelligible) people like that, who were seemingly strong believers. Then, they go and listen to Apamea's father sipping his whiskey and saying \"Oh, Rashad, didn't keep his words.\" He said \"Oh, no! Then, we have to go to Hell.\" \"We're not gonna fall, we're not going to the mosque again.\" They made that statement, this statement. Because I expressed my... Because I told them when Edip was meeting, engaging Apamea... Apamea's father \"I want them to live far from the mosque.\" And I said \"OK. If you want them to live far from the mosque, you live far from the mosque.\" \"What are you thinking?\" \"It is better for them to live near the mosque.\" And then days later, I expressed, and I still do, my views, that it is better for them to live right near the mosque. Because then, Edip doesn't have to ride the bus to the mosque (unintelligible). So, they said I don't keep my word. Because I think that they should live near the mosque. So, even if I didn't keep my word... but I went along with them and so on.",
+      "review_status": "draft",
+      "retrieval_text": "Sura 7, Noah and Hud, the repeated human-messenger pattern, and ego\nRashad reads Noah and Hud being called astray, foolish, or liars despite offering sincere advice and clear messages. He applies the repeated wording to contemporary resistance to a human messenger and says ego causes resentment when truth comes through another ordinary person.\nConcepts: sura-7; noah; hud; human-messenger; ego; recurring-pattern\nTerms: man like you; you are astray; you are liar; same thing happening now\nQuestions: How were Noah and Hud treated? Why did Rashad connect the narratives to ego?\nQuran: 7:59-72\nBible: \nEntities: Noah; Hud"
+    },
+    {
+      "id": "parivash36-s06",
+      "start": 2670,
+      "end": 3000,
+      "title": "Deliberate mistakes, accepting blame, and destroying idols",
+      "summary": "Rashad says one of his important tasks is destroying idols. He may refuse to defend himself, accept an accusation, change his mind, or even deliberately make a mistake so followers see that he is fallible and do not idolize him.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "deliberate-mistakes",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "fallible-messenger",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "destroy-idols",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "accept-blame",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "I deliberately make mistake",
+        "show I make mistakes",
+        "destroy idols"
+      ],
+      "related_questions": [
+        "Why did Rashad say he made deliberate mistakes?",
+        "How was this supposed to prevent idolatry?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "This statement should be preserved verbatim in canonical retrieval because it affects interpretation of later claims.",
+      "retrieval_priority": "primary",
+      "start_time": "00:44:27.405",
+      "end_time": "00:50:03.563",
+      "source_segment_start": 551,
+      "source_segment_end": 629,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "So, even if I didn't keep my word... but I went along with them and so on. So, I changed my mind. So, I lied. I mean, so, it's my neck. What does this have to do with the message? If I lied, it's my neck, right? Sometimes, I accept mistakes just to destroy the idol worship. I may even deliberately make mistakes. A man: (unintelligible) Dr. Khalifa: Huh? A man: (unintelligible) Dr. Khalifa: It's one of my very important jobs to destroy idols. So, sometimes I will accept mistakes. I will not defend myself. Or even deliberately make a mistake. Dr. Khalifa: Just to show that I make mistakes. A man: They're coming back? Dr. Khalifa: Yeah, I don't know. I hope they are. A woman: IN SHAA ALLAH Dr. Khalifa: But this shows... I mean, here's the miracle, and then here's \"he didn't keep his word.\" So, which one should supersede the other one? And who are they listening to? A man: (unintelligible) Dr. Khalifa: I know. A man: That's why (unintelligible) Dr. Khalifa: And I was sympathetic with him. A man: Yeah. Dr. Khalifa: He didn't want to live far from the mosque. A woman: They are just strongly like that (unintelligible) Dr. Khalifa: Yes, that too. Dr. Khalifa: But because of that lack of belief, they are kind of flimsy. Dr. Khalifa: Anything will drive them away, use it as an excuse. A woman: I told them that \"oh my God, you worship Rashad?\" A woman: We said \"ok, Rashad did a mistake. If you worshipped him, when he does something wrong, you break your idol. Dr. Khalifa: Right. A woman: And, you know, but.. and Alhamdu Lillah, I opened the Quran by accident, not... And it comes this Sura 24, Aya 54. [24:54] Say, \"Obey GOD, and obey the messenger.\" If they refuse, then he is responsible for his obligations, and you are responsible for your obligations. If you obey him, you will be guided. The sole duty of the messenger is to deliver (the message). A woman: By accident. Dr. Khalifa: It's got to be perfect. A man: Alhamdu Lillah, you just opened it. A woman: No, when I talked to them, I opened just the Quran, you know, by accident, and it comes... Dr. Khalifa: At the time. A woman: Allahu Akbar. At the time. Dr. Khalifa: Yes. A woman: Subhan Allah. God talked with us, Alhamdu Lillah. Dr. Khalifa: Yes. A man: That changed them a little? A woman: Alhamdu Lillah, I think. IN SHAA ALLAH. A woman: IN SHAA ALLAH, all of them are in God's Grace. Dr. Khalifa: God says, remember, whoever's guided is guided for his own good. A woman: Yes, IN SHAA ALLAH. Dr. Khalifa: I have, you know, I just get emotionally involved with some people. I love them. I don't want them to drop out. There's nothing I can do. I can love them as much as I want. It's a very very exacting process. 72 is almost the final result. [7:72] We then saved him and those with him, by mercy from us, and we annihilated those who rejected our revelations and refused to be believers. I think the retribution for this generation of rejecters will be a lot worse. Mainly because of the strength of the miracle, the clarity of the message, and the sophistication and education of the people. We have no, no excuse. Sãleh Number 73, [7:73] To Thamûd we sent their brother Sãleh. He said, ... the same thing. [7:73] ... \"O my people, worship GOD alone; you have no other god beside Him. ... meaning \"alone.\" [7:73] ... Proof has been provided for you from your Lord: this is GOD's camel, to serve as a sign for you. Let her eat from GOD's earth, and do not touch her with any harm, lest you incur a painful retribution. Dr. Khalifa: He received proof. The camel was that proof that he was God's messenger. A man: God sent the camels out of the invisible? I mean, the camel was always there? Dr. Khalifa: Well, it's a camel that showed up. You know, they had herds of camels. A man: Yes. Dr. Khalifa: And Sãleh said \"this camel is my sign.\" \"And this camel will drink only on a specific day.\" A man: It won’t drink on any other day. Dr. Khalifa: \"It will not drink on any other day.\" Dr. Khalifa: \"And will have certain, it must have some other characteristics.\" A man: Yes. Dr. Khalifa: But what is given to us in the Quran is that it's a camel that knows what day it is. Dr. Khalifa: Yes. A woman: And compare the proof with what camels are now with the primitive times. Dr. Khalifa: Yes. A woman: (unintelligible) Dr. Khalifa: So primitive signs. 74, [7:74] \"Recall that He made you inheritors after 'Ãd, and established you on earth, building mansions in its valleys, and carving homes in its mountains. You shall remember GOD's blessings, and do not roam the earth corruptingly.\" The Message, not the Messenger, is important. [7:75] The arrogant leaders among his people said to the common people who believed, \"Do you know that Sãleh is sent by his Lord?\" They said, \"We are believers in the message he brought.\" [7:76] The arrogant ones said, \"We reject what you believe in.\"",
+      "review_status": "draft",
+      "retrieval_text": "Deliberate mistakes, accepting blame, and destroying idols\nRashad says one of his important tasks is destroying idols. He may refuse to defend himself, accept an accusation, change his mind, or even deliberately make a mistake so followers see that he is fallible and do not idolize him.\nConcepts: deliberate-mistakes; fallible-messenger; destroy-idols; accept-blame\nTerms: I deliberately make mistake; show I make mistakes; destroy idols\nQuestions: Why did Rashad say he made deliberate mistakes? How was this supposed to prevent idolatry?\nQuran: \nBible: \nEntities: Rashad Khalifa"
+    },
+    {
+      "id": "parivash36-s07",
+      "start": 3000,
+      "end": 3480.9300000000003,
+      "title": "Salih, the camel, punishment, parents, age forty, and independent thought",
+      "summary": "The final verses describe Salih, the camel, rebellion, the earthquake, and rejection of advice. The group identifies attachment to parents and ancestral practice as a major obstacle and says age forty allows a person to become independent of the parental nest.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "salih",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "camel-test",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "earthquake",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "following-parents",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "age-forty",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "independent-thought",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "slaughtered camel",
+        "do not like advisers",
+        "our parents",
+        "break away from nest"
+      ],
+      "related_questions": [
+        "What happened to Salih's people?",
+        "Why were parents and age forty discussed?"
+      ],
+      "quran_references": [
+        "7:73-79"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:49:59.563",
+      "end_time": "00:58:00.920",
+      "source_segment_start": 629,
+      "source_segment_end": 735,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Barbara",
+        "Dr. Khalifa",
+        "Feroz"
+      ],
+      "canonical_text": "[7:76] The arrogant ones said, \"We reject what you believe in.\" [7:77] Subsequently, they slaughtered the camel, rebelled against the command of their Lord, and said, \"O Sãleh, bring the doom you threaten us with, if you are really a messenger.\" [7:78] Consequently, ... Oh, here it is. [7:78] ... the quake annihilated them, leaving them dead in their homes. [7:79] He turned away from them, saying, \"O my people, I have delivered my Lord's message to you, and advised you, but you do not like any advisers.\" So, we can see the same system in all the prophets and messengers. The message is the same from the time of Adam. Just one message, worship God alone. And it's not for God's benefit or to help God or anything, it's to redeem us. This is the course. What did you call the course? Dr. Khalifa: Something mad...something. Something mad... A woman: Remedial. Remedial Dr. Khalifa: Remedial? A woman: Yes. Dr. Khalifa: Yes, remedial submission. Remedial submission. This is the course we are here to do for more schooling. If we learn, if we pass the course, we go back to God. If we don't pass the course, we go to exile. God bless you. Congratulations. Dr. Khalifa: .... is very important. Feroz: I think it may not be the only idol, but it certainly plays a part in every idol, in every form of idol worship. Dr. Khalifa: Well, it's the last idol anyway. Feroz: I think it's the only idol. Dr. Khalifa: At the very end it's the ego. Feroz: I'm thinking it is the only idol really. Dr. Khalifa: Yes, almost, maybe the only one. It's a very good point. This stands out from what we read, the three pages we read this morning. The ego stands out as the, maybe the only other god besides God. So, I mean, the whole thing is ego to start with. What did Satan say? \"I can serve as a god, too.\" \"I have enough power.\" It's an egotistic statement, that happens to be wrong. So, apparently, we are miniature satans. We have to kill this quality in us. Kill your ego. Dr. Khalifa: Right. Right. We have the same trait. A woman: Just (unintelligible) Dr. Khalifa: As a matter of fact we see repetitions, you know. Dr. Khalifa: We see repetitions, now. A woman: I don't understand what (unintelligible) Dr. Khalifa: Satan's problem is ego and our problem is also ego. So, God exiled all the creatures with ego. Dr. Khalifa: They think they are too great. A woman: (unintelligible) Dr. Khalifa: Well, it's a simple thing. I mean, the twin also has an ego problem, a bigger one. It's a jinn. A man: The ego perhaps did not allow the humans in the other dimension first to believe that only, there could be only one God. A man: Because perhaps, I'm just trying to rationalize or analyze that Satan could be god and someday perhaps they could be gods, too. Dr. Khalifa: Right. Dr. Khalifa: limited, and to a limited extent they could be gods, also. In other words, Satan said \"I can be a god, too.\" So, apparently, all of us said \"yeah, maybe we can also be gods.\" A man: Like little... Dr. Khalifa: Little gods. A woman: Just opening the door. If God has that Absolute Power, then maybe (unintelligible). Dr. Khalifa: We have some power, too. Yes. A man: Like in the Bible, Satan takes Jesus to a high point and shows the kingdoms of the earth. This could be us. Dr. Khalifa: Yes. God gave Satan the earth as a dominion. A man: Yes. So, he offered it to Jesus (unintelligible). Dr. Khalifa: Yes, these are very important verses telling us that we were part of the picture, that God sold Satan. (2:30) إِنِّى جَاعِلٌۭ فِى ٱلْأَرْضِ خَلِيفَةًۭ Putting Satan to be a god on earth. A woman: It's right that the same thing when we had a doubt about Satan \"yeah, God, but Satan, maybe.\" It's exactly like now that we say \"God but Muhammad.\" Dr. Khalifa: Exactly. Dr. Khalifa: Just a miniature. It's a miniature environment. A woman: Another good point that you said last night about the people who worry, they want to believe that this is (unintelligible), but they're afraid of people because people... Dr. Khalifa: \"What will the people say about me?\" A woman: Yes. Ego, too. Feroz: Even when you see like people always become attached with like when they say \"our own team\" Feroz: like when you have our own team, like a baseball team or something, you support it because it's our team. Dr. Khalifa: Yeah. Right. Yes. Dr. Khalifa: Must be the best. Feroz: It must be the best kind of... So, when they say \"our parents are following this.\" Dr. Khalifa: Yes. Feroz: Again, the ego comes in. \"Our parents.\" \"Our parents are better than your parents, so how can they be wrong\" kind of thing. A woman: Exactly. Dr. Khalifa: It's one of the biggest... one of the biggest problems is following the parents, being attached as to what the parents. Feroz: \"Because they're our parents.\" Feroz: That is why perhaps God gives us 40 years so that, you know, we start feeling like parents ourselves. Dr. Khalifa: Exactly. Also, break away from the nest. A man: Yes. Dr. Khalifa: To be independent thinkers. A woman: Also, prejudice. Dr. Khalifa: Yes, prejudice to nationalism. Feroz: Our country. Feroz: Our country. Dr. Khalifa: You take the sleeping corner? Dr. Khalifa: You're sitting there enjoying everything. Mã Shã Allãh A woman: I'm not sleeping. Dr. Khalifa: But that's the sleeping corner, but Barbara's smile still fades. A woman: Barbara's smile fades. Dr. Khalifa: We're gonna miss you. Barbara: Well, how come? Dr. Khalifa: Because that's such a nice smile. A man: Yes. A man: I mean, somewhat on the same subject, but on a different page, one of the things that I wanted to ask is, you know, before... I mean, I changed this... to give us a head start, the Most Merciful gathered all human beings before Him, prior to sending us to this world, and we bore witness that He alone is our Lord and Master as in 7:172. Thus, upholding God's Absolute Authority is a natural instinct and that's an integral part of every human being. Now, does this mean that unlike animals and other beings, other living beings besides humans, humans too, humans also hesitated, but then again reverted back to the same way as animals did and bore witness that \"Ash-hadu Alla Elaha Ella Allah\"? Dr. Khalifa: No, no. This was a piece of knowledge that God gave us as to be an insight as we come to this world. Dr. Khalifa: That's God's message to us. A man: He made us bear witness. Dr. Khalifa: Right. A man: It's not that we voluntarily...",
+      "review_status": "draft",
+      "retrieval_text": "Salih, the camel, punishment, parents, age forty, and independent thought\nThe final verses describe Salih, the camel, rebellion, the earthquake, and rejection of advice. The group identifies attachment to parents and ancestral practice as a major obstacle and says age forty allows a person to become independent of the parental nest.\nConcepts: salih; camel-test; earthquake; following-parents; age-forty; independent-thought\nTerms: slaughtered camel; do not like advisers; our parents; break away from nest\nQuestions: What happened to Salih's people? Why were parents and age forty discussed?\nQuran: 7:73-79\nBible: \nEntities: "
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "12806-numbers",
+      "preferred_label": "12806 Numbers",
+      "aliases": [
+        "12806 numbers",
+        "37088 digits",
+        "last verse 6346",
+        "two false verses collapse"
+      ],
+      "appears_in_sections": [
+        "parivash36-s04"
+      ]
+    },
+    {
+      "id": "13038-digits",
+      "preferred_label": "13038 Digits",
+      "aliases": [
+        "13038 digits",
+        "Sura 9 no zero",
+        "put zero for Bismillah"
+      ],
+      "appears_in_sections": [
+        "parivash36-s02"
+      ]
+    },
+    {
+      "id": "37088-digits",
+      "preferred_label": "37088 Digits",
+      "aliases": [
+        "12806 numbers",
+        "37088 digits",
+        "last verse 6346",
+        "two false verses collapse"
+      ],
+      "appears_in_sections": [
+        "parivash36-s04"
+      ]
+    },
+    {
+      "id": "6346-verses",
+      "preferred_label": "6346 Verses",
+      "aliases": [
+        "12806 numbers",
+        "37088 digits",
+        "last verse 6346",
+        "two false verses collapse"
+      ],
+      "appears_in_sections": [
+        "parivash36-s04"
+      ]
+    },
+    {
+      "id": "accept-blame",
+      "preferred_label": "Accept Blame",
+      "aliases": [
+        "I deliberately make mistake",
+        "destroy idols",
+        "show I make mistakes"
+      ],
+      "appears_in_sections": [
+        "parivash36-s06"
+      ]
+    },
+    {
+      "id": "age-forty",
+      "preferred_label": "Age Forty",
+      "aliases": [
+        "break away from nest",
+        "do not like advisers",
+        "our parents",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "parivash36-s07"
+      ]
+    },
+    {
+      "id": "allah-count",
+      "preferred_label": "Allah Count",
+      "aliases": [
+        "118123",
+        "2698 God",
+        "57 Quran",
+        "fall prostrate collectively"
+      ],
+      "appears_in_sections": [
+        "parivash36-s03"
+      ]
+    },
+    {
+      "id": "bismillah-zero",
+      "preferred_label": "Bismillah Zero",
+      "aliases": [
+        "13038 digits",
+        "Sura 9 no zero",
+        "put zero for Bismillah"
+      ],
+      "appears_in_sections": [
+        "parivash36-s02"
+      ]
+    },
+    {
+      "id": "camel-test",
+      "preferred_label": "Camel Test",
+      "aliases": [
+        "break away from nest",
+        "do not like advisers",
+        "our parents",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "parivash36-s07"
+      ]
+    },
+    {
+      "id": "chosen-humans",
+      "preferred_label": "Chosen Humans",
+      "aliases": [
+        "jinn assigned to chosen",
+        "longer schooling"
+      ],
+      "appears_in_sections": [
+        "parivash36-s01"
+      ]
+    },
+    {
+      "id": "code-19",
+      "preferred_label": "Code 19",
+      "aliases": [
+        "13038 digits",
+        "Sura 9 no zero",
+        "put zero for Bismillah"
+      ],
+      "appears_in_sections": [
+        "parivash36-s02"
+      ]
+    },
+    {
+      "id": "collective-prostration",
+      "preferred_label": "Collective Prostration",
+      "aliases": [
+        "118123",
+        "2698 God",
+        "57 Quran",
+        "fall prostrate collectively"
+      ],
+      "appears_in_sections": [
+        "parivash36-s03"
+      ]
+    },
+    {
+      "id": "deliberate-mistakes",
+      "preferred_label": "Deliberate Mistakes",
+      "aliases": [
+        "I deliberately make mistake",
+        "destroy idols",
+        "show I make mistakes"
+      ],
+      "appears_in_sections": [
+        "parivash36-s06"
+      ]
+    },
+    {
+      "id": "destroy-idols",
+      "preferred_label": "Destroy Idols",
+      "aliases": [
+        "I deliberately make mistake",
+        "destroy idols",
+        "show I make mistakes"
+      ],
+      "appears_in_sections": [
+        "parivash36-s06"
+      ]
+    },
+    {
+      "id": "earthquake",
+      "preferred_label": "Earthquake",
+      "aliases": [
+        "break away from nest",
+        "do not like advisers",
+        "our parents",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "parivash36-s07"
+      ]
+    },
+    {
+      "id": "ego",
+      "preferred_label": "Ego",
+      "aliases": [
+        "man like you",
+        "same thing happening now",
+        "you are astray",
+        "you are liar"
+      ],
+      "appears_in_sections": [
+        "parivash36-s05"
+      ]
+    },
+    {
+      "id": "fallible-messenger",
+      "preferred_label": "Fallible Messenger",
+      "aliases": [
+        "I deliberately make mistake",
+        "destroy idols",
+        "show I make mistakes"
+      ],
+      "appears_in_sections": [
+        "parivash36-s06"
+      ]
+    },
+    {
+      "id": "following-parents",
+      "preferred_label": "Following Parents",
+      "aliases": [
+        "break away from nest",
+        "do not like advisers",
+        "our parents",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "parivash36-s07"
+      ]
+    },
+    {
+      "id": "guidance",
+      "preferred_label": "Guidance",
+      "aliases": [
+        "jinn assigned to chosen",
+        "longer schooling"
+      ],
+      "appears_in_sections": [
+        "parivash36-s01"
+      ]
+    },
+    {
+      "id": "hud",
+      "preferred_label": "Hud",
+      "aliases": [
+        "man like you",
+        "same thing happening now",
+        "you are astray",
+        "you are liar"
+      ],
+      "appears_in_sections": [
+        "parivash36-s05"
+      ]
+    },
+    {
+      "id": "human-messenger",
+      "preferred_label": "Human Messenger",
+      "aliases": [
+        "man like you",
+        "same thing happening now",
+        "you are astray",
+        "you are liar"
+      ],
+      "appears_in_sections": [
+        "parivash36-s05"
+      ]
+    },
+    {
+      "id": "independent-thought",
+      "preferred_label": "Independent Thought",
+      "aliases": [
+        "break away from nest",
+        "do not like advisers",
+        "our parents",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "parivash36-s07"
+      ]
+    },
+    {
+      "id": "jinn-matching",
+      "preferred_label": "Jinn Matching",
+      "aliases": [
+        "jinn assigned to chosen",
+        "longer schooling"
+      ],
+      "appears_in_sections": [
+        "parivash36-s01"
+      ]
+    },
+    {
+      "id": "noah",
+      "preferred_label": "Noah",
+      "aliases": [
+        "man like you",
+        "same thing happening now",
+        "you are astray",
+        "you are liar"
+      ],
+      "appears_in_sections": [
+        "parivash36-s05"
+      ]
+    },
+    {
+      "id": "quran-9-128-129",
+      "preferred_label": "Quran 9 128 129",
+      "aliases": [
+        "12806 numbers",
+        "37088 digits",
+        "last verse 6346",
+        "two false verses collapse"
+      ],
+      "appears_in_sections": [
+        "parivash36-s04"
+      ]
+    },
+    {
+      "id": "quran-word-count",
+      "preferred_label": "Quran Word Count",
+      "aliases": [
+        "118123",
+        "2698 God",
+        "57 Quran",
+        "fall prostrate collectively"
+      ],
+      "appears_in_sections": [
+        "parivash36-s03"
+      ]
+    },
+    {
+      "id": "quranic-initials",
+      "preferred_label": "Quranic Initials",
+      "aliases": [
+        "118123",
+        "2698 God",
+        "57 Quran",
+        "fall prostrate collectively"
+      ],
+      "appears_in_sections": [
+        "parivash36-s03"
+      ]
+    },
+    {
+      "id": "recurring-pattern",
+      "preferred_label": "Recurring Pattern",
+      "aliases": [
+        "man like you",
+        "same thing happening now",
+        "you are astray",
+        "you are liar"
+      ],
+      "appears_in_sections": [
+        "parivash36-s05"
+      ]
+    },
+    {
+      "id": "repentance",
+      "preferred_label": "Repentance",
+      "aliases": [
+        "118123",
+        "2698 God",
+        "57 Quran",
+        "fall prostrate collectively"
+      ],
+      "appears_in_sections": [
+        "parivash36-s03"
+      ]
+    },
+    {
+      "id": "salih",
+      "preferred_label": "Salih",
+      "aliases": [
+        "break away from nest",
+        "do not like advisers",
+        "our parents",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "parivash36-s07"
+      ]
+    },
+    {
+      "id": "sequential-verse-number",
+      "preferred_label": "Sequential Verse Number",
+      "aliases": [
+        "12806 numbers",
+        "37088 digits",
+        "last verse 6346",
+        "two false verses collapse"
+      ],
+      "appears_in_sections": [
+        "parivash36-s04"
+      ]
+    },
+    {
+      "id": "sura-7",
+      "preferred_label": "Sura 7",
+      "aliases": [
+        "man like you",
+        "same thing happening now",
+        "you are astray",
+        "you are liar"
+      ],
+      "appears_in_sections": [
+        "parivash36-s05"
+      ]
+    },
+    {
+      "id": "sura-9",
+      "preferred_label": "Sura 9",
+      "aliases": [
+        "13038 digits",
+        "Sura 9 no zero",
+        "put zero for Bismillah"
+      ],
+      "appears_in_sections": [
+        "parivash36-s02"
+      ]
+    },
+    {
+      "id": "sura-verse-concatenation",
+      "preferred_label": "Sura Verse Concatenation",
+      "aliases": [
+        "13038 digits",
+        "Sura 9 no zero",
+        "put zero for Bismillah"
+      ],
+      "appears_in_sections": [
+        "parivash36-s02"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio36-issue-01",
+      "issue_type": "partial-opening",
+      "original_text": "The recording starts mid-sentence.",
+      "suggested_action": "Mark the source partial.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio36-issue-02",
+      "issue_type": "numerical-audit",
+      "original_text": "Several giant-number constructions and totals are spoken rapidly.",
+      "suggested_action": "Reproduce programmatically.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio36-issue-03",
+      "issue_type": "speaker-label",
+      "original_text": "The principal mathematical presenter is sometimes labeled only 'A woman.'",
+      "suggested_action": "Verify against audio.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio36-issue-04",
+      "issue_type": "contested-quran-text",
+      "original_text": "Two verses are rejected through the calculations.",
+      "suggested_action": "Keep attributed.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio36-issue-05",
+      "issue_type": "deliberate-mistake-statement",
+      "original_text": "This affects trust and interpretation.",
+      "suggested_action": "Preserve accurately without extrapolation.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
+  "canonical_catalog_ids": [
+    "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi"
+  ],
+  "canonical_mapping": "youtube-id",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.4-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-24-sura-55-sura-56",
+  "title": "Quran Study from Behrouz 24: Sura 55 and Sura 56",
+  "cases": [
+    {
+      "id": "audio24-eval-001",
+      "question": "What did Rashad correct?",
+      "expected_section_ids": [
+        "behrouz24-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad corrects tactless remarks from the day's khutba. Laurie describes the jinn companion as having taken Satan's side and trying to convert the human back to the original error. Knowing the enemy's goal and tactics is presented as protection."
+    },
+    {
+      "id": "audio24-eval-002",
+      "question": "How did Laurie describe the jinn companion?",
+      "expected_section_ids": [
+        "behrouz24-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad corrects tactless remarks from the day's khutba. Laurie describes the jinn companion as having taken Satan's side and trying to convert the human back to the original error. Knowing the enemy's goal and tactics is presented as protection."
+    },
+    {
+      "id": "audio24-eval-003",
+      "question": "Why was knowing the enemy useful?",
+      "expected_section_ids": [
+        "behrouz24-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad corrects tactless remarks from the day's khutba. Laurie describes the jinn companion as having taken Satan's side and trying to convert the human back to the original error. Knowing the enemy's goal and tactics is presented as protection."
+    },
+    {
+      "id": "audio24-eval-004",
+      "question": "What rewards are described in Sura 55?",
+      "expected_section_ids": [
+        "behrouz24-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Lori reads the rewards of the two gardens, furnishings, fruits, spouses, and the repeated question concerning God's marvels. The block closes with al-Fatihah for Yula, her baby, Lamia's dental operation, and birthdays."
+    },
+    {
+      "id": "audio24-eval-005",
+      "question": "For whom was al-Fatihah requested?",
+      "expected_section_ids": [
+        "behrouz24-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Lori reads the rewards of the two gardens, furnishings, fruits, spouses, and the repeated question concerning God's marvels. The block closes with al-Fatihah for Yula, her baby, Lamia's dental operation, and birthdays."
+    },
+    {
+      "id": "audio24-eval-006",
+      "question": "Who are the foremost?",
+      "expected_section_ids": [
+        "behrouz24-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Naghmeh reads the three groups and the foremost. Clothing and worldly comparison are contrasted with accepting what God has provided. The early generations are described as people who followed the Quran alone before Hadith and Sunnah."
+    },
+    {
+      "id": "audio24-eval-007",
+      "question": "How did Naghmeh address material comparison?",
+      "expected_section_ids": [
+        "behrouz24-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Naghmeh reads the three groups and the foremost. Clothing and worldly comparison are contrasted with accepting what God has provided. The early generations are described as people who followed the Quran alone before Hadith and Sunnah."
+    },
+    {
+      "id": "audio24-eval-008",
+      "question": "How were early generations characterized?",
+      "expected_section_ids": [
+        "behrouz24-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Naghmeh reads the three groups and the foremost. Clothing and worldly comparison are contrasted with accepting what God has provided. The early generations are described as people who followed the Quran alone before Hadith and Sunnah."
+    },
+    {
+      "id": "audio24-eval-009",
+      "question": "What cycle of corruption and renewal did Rashad describe?",
+      "expected_section_ids": [
+        "behrouz24-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes a cycle in which Abraham's religion and Muhammad's message were gradually corrupted by idolatry. Contemporary restoration creates another first generation that faces ridicule and receives a special rank analogous to the earliest followers."
+    },
+    {
+      "id": "audio24-eval-010",
+      "question": "Why was the current group called a first generation?",
+      "expected_section_ids": [
+        "behrouz24-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes a cycle in which Abraham's religion and Muhammad's message were gradually corrupted by idolatry. Contemporary restoration creates another first generation that faces ridicule and receives a special rank analogous to the earliest followers."
+    },
+    {
+      "id": "audio24-eval-011",
+      "question": "What three-hundred-year pattern was claimed?",
+      "expected_section_ids": [
+        "behrouz24-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Christianity and Islam were corrupted roughly three hundred years after Jesus and Muhammad. He contrasts the current movement, whose three-hundred-year point would coincide with the end of the world, and predicts millions of Quran-alone believers within fifty years or less."
+    },
+    {
+      "id": "audio24-eval-012",
+      "question": "What prediction did Rashad make for fifty years?",
+      "expected_section_ids": [
+        "behrouz24-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Christianity and Islam were corrupted roughly three hundred years after Jesus and Muhammad. He contrasts the current movement, whose three-hundred-year point would coincide with the end of the world, and predicts millions of Quran-alone believers within fifty years or less."
+    },
+    {
+      "id": "audio24-eval-013",
+      "question": "How were the signs expected to spread?",
+      "expected_section_ids": [
+        "behrouz24-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group says the mathematical signs will become universally known and that people connected with the community have discovered them. Questions about children and family tests lead into the claim that forty is the definitive cutoff for adult responsibility."
+    },
+    {
+      "id": "audio24-eval-014",
+      "question": "How did children enter the discussion?",
+      "expected_section_ids": [
+        "behrouz24-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group says the mathematical signs will become universally known and that people connected with the community have discovered them. Questions about children and family tests lead into the claim that forty is the definitive cutoff for adult responsibility."
+    },
+    {
+      "id": "audio24-eval-015",
+      "question": "What was claimed about age forty?",
+      "expected_section_ids": [
+        "behrouz24-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group says the mathematical signs will become universally known and that people connected with the community have discovered them. Questions about children and family tests lead into the claim that forty is the definitive cutoff for adult responsibility."
+    },
+    {
+      "id": "audio24-eval-016",
+      "question": "How is Hell described?",
+      "expected_section_ids": [
+        "behrouz24-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Naghmeh reads the punishment of rejecters and their denial of resurrection. The final discussion shifts to the precise functioning of semen, pregnancy, and the female body as evidence of divine design."
+    },
+    {
+      "id": "audio24-eval-017",
+      "question": "What resurrection objection is answered?",
+      "expected_section_ids": [
+        "behrouz24-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Naghmeh reads the punishment of rejecters and their denial of resurrection. The final discussion shifts to the precise functioning of semen, pregnancy, and the female body as evidence of divine design."
+    },
+    {
+      "id": "audio24-eval-018",
+      "question": "What biological design was discussed?",
+      "expected_section_ids": [
+        "behrouz24-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Naghmeh reads the punishment of rejecters and their denial of resurrection. The final discussion shifts to the precise functioning of semen, pregnancy, and the female body as evidence of divine design."
+    }
+  ],
+  "canonical_document_id": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
+  "canonical_catalog_ids": [
+    "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube"
+}

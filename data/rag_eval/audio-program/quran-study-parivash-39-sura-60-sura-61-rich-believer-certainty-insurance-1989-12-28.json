@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-39-sura-60-sura-61-rich-believer-certainty-insurance-1989-12-28",
+  "title": "Quran Study from Parivash 39: Suras 60–61, the Rich Believer, Certainty, Insurance, and Quran 24 (1989-12-28)",
+  "cases": [
+    {
+      "id": "audio39-eval-001",
+      "question": "What mistake did Abraham make?",
+      "expected_section_ids": [
+        "parivash39-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Abraham's example requires a firm stand against religious idolatry while acknowledging his mistaken promise to seek forgiveness for his father. The group distinguishes active religious enemies from personal friction, where responding to evil with good may turn an enemy into a friend."
+    },
+    {
+      "id": "audio39-eval-002",
+      "question": "How did religious and personal enemies differ?",
+      "expected_section_ids": [
+        "parivash39-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Abraham's example requires a firm stand against religious idolatry while acknowledging his mistaken promise to seek forgiveness for his father. The group distinguishes active religious enemies from personal friction, where responding to evil with good may turn an enemy into a friend."
+    },
+    {
+      "id": "audio39-eval-003",
+      "question": "Who may be treated equitably?",
+      "expected_section_ids": [
+        "parivash39-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 60 permits kindness and equity toward those who do not fight or expel believers. Rashad says diplomacy is required where hope remains that someone may accept truth, while friendship is forbidden with people judged hopelessly hostile."
+    },
+    {
+      "id": "audio39-eval-004",
+      "question": "When did Rashad recommend diplomacy?",
+      "expected_section_ids": [
+        "parivash39-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 60 permits kindness and equity toward those who do not fight or expel believers. Rashad says diplomacy is required where hope remains that someone may accept truth, while friendship is forbidden with people judged hopelessly hostile."
+    },
+    {
+      "id": "audio39-eval-005",
+      "question": "What conduct does Sura 61 condemn?",
+      "expected_section_ids": [
+        "parivash39-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Everything glorifies God. Believers must practice what they tell others, stand like one wall, and avoid hurting the messenger as Moses' people did. Sectarian labels are condemned, and participants contrast Masjid Tucson with conflict in other mosques."
+    },
+    {
+      "id": "audio39-eval-006",
+      "question": "What did the wall metaphor mean?",
+      "expected_section_ids": [
+        "parivash39-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Everything glorifies God. Believers must practice what they tell others, stand like one wall, and avoid hurting the messenger as Moses' people did. Sectarian labels are condemned, and participants contrast Masjid Tucson with conflict in other mosques."
+    },
+    {
+      "id": "audio39-eval-007",
+      "question": "How was sectarianism treated?",
+      "expected_section_ids": [
+        "parivash39-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Everything glorifies God. Believers must practice what they tell others, stand like one wall, and avoid hurting the messenger as Moses' people did. Sectarian labels are condemned, and participants contrast Masjid Tucson with conflict in other mosques."
+    },
+    {
+      "id": "audio39-eval-008",
+      "question": "Why did Rashad preserve the heading?",
+      "expected_section_ids": [
+        "parivash39-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A woman asks why a rich believer is called better than a poor believer. Rashad says greater resources can support charity and God's cause. Edip warns the phrase is open to abuse and may imply Solomon is spiritually superior to Job. The debate repeatedly returns to belief as the common denominator."
+    },
+    {
+      "id": "audio39-eval-009",
+      "question": "What objection did Edip raise?",
+      "expected_section_ids": [
+        "parivash39-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A woman asks why a rich believer is called better than a poor believer. Rashad says greater resources can support charity and God's cause. Edip warns the phrase is open to abuse and may imply Solomon is spiritually superior to Job. The debate repeatedly returns to belief as the common denominator."
+    },
+    {
+      "id": "audio39-eval-010",
+      "question": "How was belief kept central?",
+      "expected_section_ids": [
+        "parivash39-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A woman asks why a rich believer is called better than a poor believer. Rashad says greater resources can support charity and God's cause. Edip warns the phrase is open to abuse and may imply Solomon is spiritually superior to Job. The debate repeatedly returns to belief as the common denominator."
+    },
+    {
+      "id": "audio39-eval-011",
+      "question": "How was wealth made relative?",
+      "expected_section_ids": [
+        "parivash39-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The debate continues through relative standards of wealth, useful work, God's assigned provision, Job's restoration, ranks in Heaven, and Quran 2:25's statement that heavenly provisions resemble something known while being fundamentally different."
+    },
+    {
+      "id": "audio39-eval-012",
+      "question": "What did work contribute?",
+      "expected_section_ids": [
+        "parivash39-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The debate continues through relative standards of wealth, useful work, God's assigned provision, Job's restoration, ranks in Heaven, and Quran 2:25's statement that heavenly provisions resemble something known while being fundamentally different."
+    },
+    {
+      "id": "audio39-eval-013",
+      "question": "How were heavenly ranks discussed?",
+      "expected_section_ids": [
+        "parivash39-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The debate continues through relative standards of wealth, useful work, God's assigned provision, Job's restoration, ranks in Heaven, and Quran 2:25's statement that heavenly provisions resemble something known while being fundamentally different."
+    },
+    {
+      "id": "audio39-eval-014",
+      "question": "How are genuine believers described?",
+      "expected_section_ids": [
+        "parivash39-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Clarifying revelations guide whom God wills. People who claim belief but reject the messenger's judgment are contrasted with those who say 'we hear and obey.' The group debates the age-forty doctrine, mobilization, and God's promise to make righteous believers sovereigns and replace fear with security."
+    },
+    {
+      "id": "audio39-eval-015",
+      "question": "What promise appears in Quran 24:55?",
+      "expected_section_ids": [
+        "parivash39-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Clarifying revelations guide whom God wills. People who claim belief but reject the messenger's judgment are contrasted with those who say 'we hear and obey.' The group debates the age-forty doctrine, mobilization, and God's promise to make righteous believers sovereigns and replace fear with security."
+    },
+    {
+      "id": "audio39-eval-016",
+      "question": "How did age forty enter the debate?",
+      "expected_section_ids": [
+        "parivash39-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Clarifying revelations guide whom God wills. People who claim belief but reject the messenger's judgment are contrasted with those who say 'we hear and obey.' The group debates the age-forty doctrine, mobilization, and God's promise to make righteous believers sovereigns and replace fear with security."
+    },
+    {
+      "id": "audio39-eval-017",
+      "question": "What distinguished Muslim and Mu'min?",
+      "expected_section_ids": [
+        "parivash39-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes a Muslim or submitter who obeys while retaining occasional doubts from a Mu'min whose doubts are gone. Quran 15:99, the practices, and the mathematical miracle produce certainty. Only a full believer is said to know that God's insurance is sufficient."
+    },
+    {
+      "id": "audio39-eval-018",
+      "question": "How was certainty attained?",
+      "expected_section_ids": [
+        "parivash39-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes a Muslim or submitter who obeys while retaining occasional doubts from a Mu'min whose doubts are gone. Quran 15:99, the practices, and the mathematical miracle produce certainty. Only a full believer is said to know that God's insurance is sufficient."
+    },
+    {
+      "id": "audio39-eval-019",
+      "question": "Who was said to possess divine insurance?",
+      "expected_section_ids": [
+        "parivash39-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes a Muslim or submitter who obeys while retaining occasional doubts from a Mu'min whose doubts are gone. Quran 15:99, the practices, and the mathematical miracle produce certainty. Only a full believer is said to know that God's insurance is sufficient."
+    },
+    {
+      "id": "audio39-eval-020",
+      "question": "How did translations of Quran 22:15 differ?",
+      "expected_section_ids": [
+        "parivash39-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The promise that fear will become security leads to Quran 22:15. Older translations are read as telling a person to hang himself, while Rashad's translation calls for severing dependence on anyone besides God."
+    },
+    {
+      "id": "audio39-eval-021",
+      "question": "How was security interpreted?",
+      "expected_section_ids": [
+        "parivash39-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The promise that fear will become security leads to Quran 22:15. Older translations are read as telling a person to hang himself, while Rashad's translation calls for severing dependence on anyone besides God."
+    },
+    {
+      "id": "audio39-eval-022",
+      "question": "How was Masjid Tucson acquired?",
+      "expected_section_ids": [
+        "parivash39-s09"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recounts purchasing and expanding the mosque, criticizes another mosque's qibla, and says believers must never pray in a mosque characterized by idolatry or opposition."
+    },
+    {
+      "id": "audio39-eval-023",
+      "question": "Why did Rashad reject another mosque?",
+      "expected_section_ids": [
+        "parivash39-s09"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recounts purchasing and expanding the mosque, criticizes another mosque's qibla, and says believers must never pray in a mosque characterized by idolatry or opposition."
+    },
+    {
+      "id": "audio39-eval-024",
+      "question": "What child stories were told?",
+      "expected_section_ids": [
+        "parivash39-s10"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Vicky and others recount infants, children, and sleeping adults saying God's name or remembrance phrases. Rashad says the mind is less able to manipulate speech immediately after waking."
+    },
+    {
+      "id": "audio39-eval-025",
+      "question": "Why did waking speech matter?",
+      "expected_section_ids": [
+        "parivash39-s10"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Vicky and others recount infants, children, and sleeping adults saying God's name or remembrance phrases. Rashad says the mind is less able to manipulate speech immediately after waking."
+    }
+  ],
+  "canonical_document_id": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
+  "canonical_catalog_ids": [
+    "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28"
+  ],
+  "canonical_mapping": "youtube-id"
+}

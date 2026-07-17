@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.6-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-roxana-44-sura-64-sura-59-sura-70-composite",
+  "title": "Quran Study from Roxana 44: Sura 64, Sura 59, and Sura 70 (Composite Recording)",
+  "cases": [
+    {
+      "id": "audio44-eval-001",
+      "question": "How did atoms and bodies glorify God?",
+      "expected_section_ids": [
+        "audio44-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Everything, including the bodies of rejecters and every atom, follows God's laws. God determines provision and employment. Humanity divides into believers and disbelievers, and Judgment is called the Day of Mutual Blaming."
+    },
+    {
+      "id": "audio44-eval-002",
+      "question": "What is the Day of Mutual Blaming?",
+      "expected_section_ids": [
+        "audio44-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Everything, including the bodies of rejecters and every atom, follows God's laws. God determines provision and employment. Humanity divides into believers and disbelievers, and Judgment is called the Day of Mutual Blaming."
+    },
+    {
+      "id": "audio44-eval-003",
+      "question": "How did Rashad explain disability?",
+      "expected_section_ids": [
+        "audio44-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad praises human design but says flaws, disability, or disease result from Satanic interference after a person leaves God's protection. Rabbi Kushner is used as an example. Angels are called the world's best surgeons and are said to repair bodies invisibly."
+    },
+    {
+      "id": "audio44-eval-004",
+      "question": "What did he claim angels do?",
+      "expected_section_ids": [
+        "audio44-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad praises human design but says flaws, disability, or disease result from Satanic interference after a person leaves God's protection. Rabbi Kushner is used as an example. Angels are called the world's best surgeons and are said to repair bodies invisibly."
+    },
+    {
+      "id": "audio44-eval-005",
+      "question": "Why did people reject human messengers?",
+      "expected_section_ids": [
+        "audio44-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Sura continues through rejected human messengers, consequences of decisions, resurrection, accountability, and enormous visible differences in afterlife development. God controls even disbelievers' actions."
+    },
+    {
+      "id": "audio44-eval-006",
+      "question": "How were afterlife differences pictured?",
+      "expected_section_ids": [
+        "audio44-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Sura continues through rejected human messengers, consequences of decisions, resurrection, accountability, and enormous visible differences in afterlife development. God controls even disbelievers' actions."
+    },
+    {
+      "id": "audio44-eval-007",
+      "question": "How were spoils distributed?",
+      "expected_section_ids": [
+        "audio44-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Dana reads distribution of spoils and the preference shown to immigrants and the needy. Rashad praises community generosity and recounts Lori being thrown from a car yet caring for the driver as evidence of an invisible giant's protection."
+    },
+    {
+      "id": "audio44-eval-008",
+      "question": "What accident was used as protection evidence?",
+      "expected_section_ids": [
+        "audio44-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Dana reads distribution of spoils and the preference shown to immigrants and the needy. Rashad praises community generosity and recounts Lori being thrown from a car yet caring for the driver as evidence of an invisible giant's protection."
+    },
+    {
+      "id": "audio44-eval-009",
+      "question": "How was hypocrisy defined?",
+      "expected_section_ids": [
+        "audio44-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study defines a hypocrite as a person claiming belief without realizing their inner disbelief. Participants discuss Mujahideen-e Khalq, Iranian executions, alleged addiction statistics, and Rashad's prediction that true Islam will come to Iran."
+    },
+    {
+      "id": "audio44-eval-010",
+      "question": "What claims were made about Iran?",
+      "expected_section_ids": [
+        "audio44-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study defines a hypocrite as a person claiming belief without realizing their inner disbelief. Participants discuss Mujahideen-e Khalq, Iranian executions, alleged addiction statistics, and Rashad's prediction that true Islam will come to Iran."
+    },
+    {
+      "id": "audio44-eval-011",
+      "question": "What does the fifty-thousand-year comparison mean in the study?",
+      "expected_section_ids": [
+        "audio44-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip begins Sura 70. The question about Judgment, divine height, angels ascending in a day equivalent to fifty thousand years, angelic reports, Gabriel, Jesus and Adam, relativity, faster-than-light travel, and observing past events dominate the final block."
+    },
+    {
+      "id": "audio44-eval-012",
+      "question": "How were relativity and past observation discussed?",
+      "expected_section_ids": [
+        "audio44-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip begins Sura 70. The question about Judgment, divine height, angels ascending in a day equivalent to fifty thousand years, angelic reports, Gabriel, Jesus and Adam, relativity, faster-than-light travel, and observing past events dominate the final block."
+    }
+  ],
+  "canonical_document_id": "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By",
+  "canonical_catalog_ids": [
+    "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By"
+  ],
+  "canonical_mapping": "youtube-id"
+}

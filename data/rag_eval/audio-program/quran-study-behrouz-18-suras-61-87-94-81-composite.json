@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.3-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-18-suras-61-87-94-81-composite",
+  "title": "Quran Study from Behrouz 18: Suras 61, 87–94, and 81 (composite recording)",
+  "cases": [
+    {
+      "id": "behrouz18-eval-001",
+      "question": "What behavior is condemned in Sura 61?",
+      "expected_section_ids": [
+        "behrouz18-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The opening discusses Quran 61:1–13. Believers should not say what they fail to practice, should form a solid structure in God's cause, and should support God as Jesus' disciples did. The promised victory is interpreted as beginning in worldly life rather than being postponed entirely to the Hereafter."
+    },
+    {
+      "id": "behrouz18-eval-002",
+      "question": "How should believers support God's cause?",
+      "expected_section_ids": [
+        "behrouz18-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The opening discusses Quran 61:1–13. Believers should not say what they fail to practice, should form a solid structure in God's cause, and should support God as Jesus' disciples did. The promised victory is interpreted as beginning in worldly life rather than being postponed entirely to the Hereafter."
+    },
+    {
+      "id": "behrouz18-eval-003",
+      "question": "When does the promised victory begin?",
+      "expected_section_ids": [
+        "behrouz18-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The opening discusses Quran 61:1–13. Believers should not say what they fail to practice, should form a solid structure in God's cause, and should support God as Jesus' disciples did. The promised victory is interpreted as beginning in worldly life rather than being postponed entirely to the Hereafter."
+    },
+    {
+      "id": "behrouz18-eval-004",
+      "question": "Which divine actions open Sura 87?",
+      "expected_section_ids": [
+        "behrouz18-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "An unidentified male teacher reads Sura 87 on glorifying God, creation, design, guidance, and pasture. The study moves into Sura 88's Overwhelming, contrasting exhausted faces in Hell with joyful faces in Paradise. Camels and other natural signs are introduced as subjects for reflection."
+    },
+    {
+      "id": "behrouz18-eval-005",
+      "question": "How are the two sets of faces contrasted in Sura 88?",
+      "expected_section_ids": [
+        "behrouz18-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "An unidentified male teacher reads Sura 87 on glorifying God, creation, design, guidance, and pasture. The study moves into Sura 88's Overwhelming, contrasting exhausted faces in Hell with joyful faces in Paradise. Camels and other natural signs are introduced as subjects for reflection."
+    },
+    {
+      "id": "behrouz18-eval-006",
+      "question": "Why were camels discussed?",
+      "expected_section_ids": [
+        "behrouz18-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "An unidentified male teacher reads Sura 87 on glorifying God, creation, design, guidance, and pasture. The study moves into Sura 88's Overwhelming, contrasting exhausted faces in Hell with joyful faces in Paradise. Camels and other natural signs are introduced as subjects for reflection."
+    },
+    {
+      "id": "behrouz18-eval-007",
+      "question": "Which destroyed peoples appear in Sura 89?",
+      "expected_section_ids": [
+        "behrouz18-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sura 89 is read from the oaths by dawn and ten nights through the destruction of Ad, Thamud, and Pharaoh. Material abundance and reduction are both tests rather than simple honor or humiliation. Neglecting orphans, failing to advocate charity, consuming inheritance, and loving money explain hardship."
+    },
+    {
+      "id": "behrouz18-eval-008",
+      "question": "How are abundance and reduced provision interpreted?",
+      "expected_section_ids": [
+        "behrouz18-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sura 89 is read from the oaths by dawn and ten nights through the destruction of Ad, Thamud, and Pharaoh. Material abundance and reduction are both tests rather than simple honor or humiliation. Neglecting orphans, failing to advocate charity, consuming inheritance, and loving money explain hardship."
+    },
+    {
+      "id": "behrouz18-eval-009",
+      "question": "Which social failures are condemned?",
+      "expected_section_ids": [
+        "behrouz18-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sura 89 is read from the oaths by dawn and ten nights through the destruction of Ad, Thamud, and Pharaoh. Material abundance and reduction are both tests rather than simple honor or humiliation. Neglecting orphans, failing to advocate charity, consuming inheritance, and loving money explain hardship."
+    },
+    {
+      "id": "behrouz18-eval-010",
+      "question": "What instruction comes from Quran 94:7–8?",
+      "expected_section_ids": [
+        "behrouz18-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad emphasizes Quran 94:7–8: whenever possible one should strive while seeking only God. He links sustained charity with nourishing the soul and says material success does not create happiness. The discussion briefly invokes Sura 92's divergent works and Sura 93's statement that Muhammad was astray before being guided and poor before being enriched."
+    },
+    {
+      "id": "behrouz18-eval-011",
+      "question": "Why was charity described as continuous?",
+      "expected_section_ids": [
+        "behrouz18-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad emphasizes Quran 94:7–8: whenever possible one should strive while seeking only God. He links sustained charity with nourishing the soul and says material success does not create happiness. The discussion briefly invokes Sura 92's divergent works and Sura 93's statement that Muhammad was astray before being guided and poor before being enriched."
+    },
+    {
+      "id": "behrouz18-eval-012",
+      "question": "How did Rashad interpret Quran 93:7–8?",
+      "expected_section_ids": [
+        "behrouz18-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad emphasizes Quran 94:7–8: whenever possible one should strive while seeking only God. He links sustained charity with nourishing the soul and says material success does not create happiness. The discussion briefly invokes Sura 92's divergent works and Sura 93's statement that Muhammad was astray before being guided and poor before being enriched."
+    },
+    {
+      "id": "behrouz18-eval-013",
+      "question": "Which end-time events open Sura 81?",
+      "expected_section_ids": [
+        "behrouz18-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the opening of Sura 81: the sun is rolled, stars crash, mountains disappear, reproduction halts, animals gather, oceans ignite, souls return to bodies, and a buried girl is asked why she was killed. The discussion treats animal resurrection, female infanticide, forced dress, and broader oppression of women as forms of burial."
+    },
+    {
+      "id": "behrouz18-eval-014",
+      "question": "How did the group interpret the gathering of animals?",
+      "expected_section_ids": [
+        "behrouz18-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the opening of Sura 81: the sun is rolled, stars crash, mountains disappear, reproduction halts, animals gather, oceans ignite, souls return to bodies, and a buried girl is asked why she was killed. The discussion treats animal resurrection, female infanticide, forced dress, and broader oppression of women as forms of burial."
+    },
+    {
+      "id": "behrouz18-eval-015",
+      "question": "How was the buried-girl passage applied to modern oppression?",
+      "expected_section_ids": [
+        "behrouz18-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the opening of Sura 81: the sun is rolled, stars crash, mountains disappear, reproduction halts, animals gather, oceans ignite, souls return to bodies, and a buried girl is asked why she was killed. The discussion treats animal resurrection, female infanticide, forced dress, and broader oppression of women as forms of burial."
+    },
+    {
+      "id": "behrouz18-eval-016",
+      "question": "How did Rashad apply Quran 81:19–22?",
+      "expected_section_ids": [
+        "behrouz18-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the oath by galaxies and the honorable messenger authorized by the Possessor of the Throne. Rashad applies the messenger passage to himself, including the parenthetical translation 'your friend Rashad is not crazy.' He presents gematrical and structural links between Sura 81, Quran 3:81, his name, and multiples of nineteen."
+    },
+    {
+      "id": "behrouz18-eval-017",
+      "question": "What numerical connections were presented?",
+      "expected_section_ids": [
+        "behrouz18-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the oath by galaxies and the honorable messenger authorized by the Possessor of the Throne. Rashad applies the messenger passage to himself, including the parenthetical translation 'your friend Rashad is not crazy.' He presents gematrical and structural links between Sura 81, Quran 3:81, his name, and multiples of nineteen."
+    },
+    {
+      "id": "behrouz18-eval-018",
+      "question": "Why did he insert his name into the translation?",
+      "expected_section_ids": [
+        "behrouz18-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip reads the oath by galaxies and the honorable messenger authorized by the Possessor of the Throne. Rashad applies the messenger passage to himself, including the parenthetical translation 'your friend Rashad is not crazy.' He presents gematrical and structural links between Sura 81, Quran 3:81, his name, and multiples of nineteen."
+    },
+    {
+      "id": "behrouz18-eval-019",
+      "question": "What did Rashad say happened at the high horizon?",
+      "expected_section_ids": [
+        "behrouz18-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad interprets Quran 81:23 as his summons beyond the universe to a high horizon where every prophet acknowledged him as Messenger of the Covenant. He says messengers are appointed after forty, live normally among their people, and are called crazy only after announcing the mission. The claim is presented as difficult but open to examination."
+    },
+    {
+      "id": "behrouz18-eval-020",
+      "question": "Why was age forty significant?",
+      "expected_section_ids": [
+        "behrouz18-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad interprets Quran 81:23 as his summons beyond the universe to a high horizon where every prophet acknowledged him as Messenger of the Covenant. He says messengers are appointed after forty, live normally among their people, and are called crazy only after announcing the mission. The claim is presented as difficult but open to examination."
+    },
+    {
+      "id": "behrouz18-eval-021",
+      "question": "How did he explain accusations of madness?",
+      "expected_section_ids": [
+        "behrouz18-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad interprets Quran 81:23 as his summons beyond the universe to a high horizon where every prophet acknowledged him as Messenger of the Covenant. He says messengers are appointed after forty, live normally among their people, and are called crazy only after announcing the mission. The claim is presented as difficult but open to examination."
+    },
+    {
+      "id": "behrouz18-eval-022",
+      "question": "How did Rashad explain who receives guidance?",
+      "expected_section_ids": [
+        "behrouz18-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final discussion says God places deserving people in circumstances that bring them to the message. Douglas calls the messenger sign a protection for believers and obstacle for the misguided. Rashad identifies the first generation around a messenger as the elite of the elite and recalls evidence arriving at exactly the right time for the appendix rejecting Quran 9:128–129."
+    },
+    {
+      "id": "behrouz18-eval-023",
+      "question": "Who were the elite of the elite?",
+      "expected_section_ids": [
+        "behrouz18-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final discussion says God places deserving people in circumstances that bring them to the message. Douglas calls the messenger sign a protection for believers and obstacle for the misguided. Rashad identifies the first generation around a messenger as the elite of the elite and recalls evidence arriving at exactly the right time for the appendix rejecting Quran 9:128–129."
+    },
+    {
+      "id": "behrouz18-eval-024",
+      "question": "What evidence timing did he describe?",
+      "expected_section_ids": [
+        "behrouz18-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final discussion says God places deserving people in circumstances that bring them to the message. Douglas calls the messenger sign a protection for believers and obstacle for the misguided. Rashad identifies the first generation around a messenger as the elite of the elite and recalls evidence arriving at exactly the right time for the appendix rejecting Quran 9:128–129."
+    }
+  ],
+  "canonical_document_id": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
+  "canonical_catalog_ids": [
+    "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8"
+  ],
+  "canonical_mapping": "youtube-id"
+}

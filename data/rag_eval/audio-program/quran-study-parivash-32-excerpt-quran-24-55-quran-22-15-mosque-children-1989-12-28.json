@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-32-excerpt-quran-24-55-quran-22-15-mosque-children-1989-12-28",
+  "title": "Quran Study from Parivash 32: Short Excerpt on Quran 24:55, Quran 22:15, Mosques, and Children (1989-12-28)",
+  "cases": [
+    {
+      "id": "audio32-eval-001",
+      "question": "What promise appears in Quran 24:55?",
+      "expected_section_ids": [
+        "parivash32-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The excerpt begins with the promise of sovereignty and security for those worshiping God alone. The group contrasts Rashad's reading of Quran 22:15 with older English and Turkish translations that are mocked as commanding a person to hang himself."
+    },
+    {
+      "id": "audio32-eval-002",
+      "question": "How did the translations of Quran 22:15 differ?",
+      "expected_section_ids": [
+        "parivash32-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The excerpt begins with the promise of sovereignty and security for those worshiping God alone. The group contrasts Rashad's reading of Quran 22:15 with older English and Turkish translations that are mocked as commanding a person to hang himself."
+    },
+    {
+      "id": "audio32-eval-003",
+      "question": "How was Masjid Tucson acquired?",
+      "expected_section_ids": [
+        "parivash32-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recounts buying and expanding the mosque, criticizes another mosque's direction, and says Quran 9:108 forbids praying in a mosque founded on opposition or idolatry."
+    },
+    {
+      "id": "audio32-eval-004",
+      "question": "Why did Rashad reject prayer in another mosque?",
+      "expected_section_ids": [
+        "parivash32-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recounts buying and expanding the mosque, criticizes another mosque's direction, and says Quran 9:108 forbids praying in a mosque founded on opposition or idolatry."
+    },
+    {
+      "id": "audio32-eval-005",
+      "question": "What stories were told about children?",
+      "expected_section_ids": [
+        "parivash32-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Vicky recounts a very young child saying God's name, and others describe children or sleeping adults repeating zikr formulas. Rashad treats speech immediately after waking as unfiltered."
+    },
+    {
+      "id": "audio32-eval-006",
+      "question": "Why did Rashad emphasize speech after waking?",
+      "expected_section_ids": [
+        "parivash32-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Vicky recounts a very young child saying God's name, and others describe children or sleeping adults repeating zikr formulas. Rashad treats speech immediately after waking as unfiltered."
+    }
+  ],
+  "canonical_document_id": "quran-study/32 Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8",
+  "canonical_catalog_ids": [
+    "quran-study/32 Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8"
+  ],
+  "canonical_mapping": "youtube-id"
+}

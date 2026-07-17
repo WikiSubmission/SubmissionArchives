@@ -1,0 +1,753 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 58,
+  "document_id": "audio-program/friday-sermon-58-sura-2-gabriel-angels-fajr-1982-11-12",
+  "title": "Friday Sermon 58: Sura 2, Gabriel, Angels, Dawn Prayer, and Divine Correction (1982-11-12)",
+  "date": "1982-11-12",
+  "date_precision": "day",
+  "date_note": "Explicit in the filename.",
+  "source_file": "data/sources/playlists/audio-transcripts/58 - Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa.csv",
+  "youtube_id": "rjuCvRFSHLo",
+  "youtube_url": "https://www.youtube.com/watch?v=rjuCvRFSHLo",
+  "primary_speakers": [
+    "Dr. Rashad Khalifa",
+    "Latifa",
+    "Dean Mahmoud",
+    "Inga",
+    "Unidentified men and women"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 607,
+    "first_speech_time": "00:00:01.136",
+    "last_speech_time": "00:31:33.824",
+    "section_count": 5,
+    "speaker_counts": {
+      "A man": 16,
+      "Dr. Khalifa": 350,
+      "Dean Mahmoud": 101,
+      "Latifa": 117,
+      "Inga": 11,
+      "A woman": 12
+    }
+  },
+  "document_summary": "A Friday gathering continuing Sura 2 from verses 88 through 101. The opening stresses accepting the whole Quran rather than selecting convenient parts. The study treats shielded hearts, resentment toward a messenger chosen by God, the calf, Sinai, exclusive claims to Heaven, Gabriel and Michael, revelation into Muhammad's heart, and repeated covenant violation. A long question-and-answer section concerns Gabriel's function, angels awakening believers for Dawn Prayer by speech, knocks, or pinches, protective guards, and a personal story in which Rashad expected a corrective pinch after praising the smell of an intoxicant and then faced a dangerous furnace-gas incident.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-57-november-5-1982-sura-2-scripture-distortion",
+      "relationship": "previous consecutive Sura 2 installment",
+      "note": "Study 57 ends near the cow narrative and visible miracles."
+    },
+    {
+      "document_id": "audio-program/quran-study-behrouz-10-sura-71-sura-72-1989-05-19",
+      "relationship": "later angels and jinn discussion",
+      "note": "The 1982 recording focuses on guardian angels and Fajr awakening."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Keep the Sura 2 sequence primary",
+      "instruction": "The angel discussion follows from Gabriel's verses."
+    },
+    {
+      "rule": "Strongly safeguard experiences of voices and touch",
+      "instruction": "No psychiatric or supernatural diagnosis."
+    },
+    {
+      "rule": "Keep the furnace story separate",
+      "instruction": "It is a personal interpretation, not a safety rule."
+    }
+  ],
+  "sections": [
+    {
+      "id": "audio58-s01",
+      "start": 0,
+      "end": 390,
+      "title": "Accepting the whole Quran, selective obedience, war, and divided scripture",
+      "summary": "Rashad says people cannot accept convenient Quranic teachings while refusing difficult ones. Iranian and Iraqi soldiers praying before fighting and other conflicts illustrate following one part while violating another. Sura 15's condemnation of dividing scripture is invoked.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "whole-quran",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "selective-obedience",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "war",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "dividing-scripture",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "take total thing or not",
+        "Iranian Iraqi troops pray then fight",
+        "woe to dividers"
+      ],
+      "related_questions": [
+        "What did selective obedience mean?",
+        "Which contemporary examples were used?"
+      ],
+      "quran_references": [
+        "15:90-91"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Iran",
+        "Iraq"
+      ],
+      "retrieval_note": "Political examples are dated and simplified.",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:01.136",
+      "end_time": "00:06:31.366",
+      "source_segment_start": 0,
+      "source_segment_end": 131,
+      "csv_speakers": [
+        "A man",
+        "Dean Mahmoud",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "A man: Allahu Akbar. Allahu Akbar Ash-hadu Alla Elaha Ella Allah Ash-hadu Alla Elaha Ella Allah Hayya Alal Salat. Hayya Alal Salat Hayya Alal Falah. Hayya Alal Falah Allahu Akbar. Allahu Akbar A man: La Elaha Ella Allah Dr. Khalifa: Alhamdu Lillah, Wa Ash-hadu Alla Elaha Ella Allah Wahdahu La Shareeka Lah. Last week and the week before, we went overtime and some of the brothers and sisters were have to catch classes at one o'clock were a little late, they had to leave. But, so, I pledge to finish by quarter of one, IN SHAA ALLAH. However, I'm already five minutes late. I cheated myself out of five minutes. So, I will try to compress everything in the next half hour. The problem with most people is unawareness of God or underestimating the greatness of God. So, the subject today was the awareness. We look at the people in the streets, see how they are going about their lives unaware of their Creator. So, we're gonna look at a few verses in here to see the importance of being aware. The first one is in Sura 7, verse 179. Page 117. It says, [7:179] We have assigned to Hell multitudes of jinns and humans. They are the ones who have ... hearts [7:179] ... have minds ... It should be minds. [7:179] ... that do not understand, eyes that do not see, and ears that do not hear. They are like animals; no, they are even worse—they are unaware. So, the people who are unaware are assigned to Hell. They have minds with which they do not think. They have eyes with which they do not see, and they have ears with which they do not hear. The next verse is in Sura 10, verse 7. It's page 139. It says, [10:7] Yet, there are those who are oblivious of meeting us, are satisfied and content with this life, and are heedless of our revelations; [10:8] these have deserved Hell, as a consequence of their work. Now, heedless or unaware, the same word is used in the Arabic word Ghafilun (غَٰفِلُونَ). They are unaware And you notice they are content with this life. So, you look at the majority of people out there on the street and they are unaware of their Creator, unaware of the Hereafter, accountability. And they are busy with this life. The next verse, 16:106. It's page 185. It says, Dr. Khalifa: [16:106] Anyone who disbelieves in GOD, after having believed, unless forced while the heart is content with faith, such persons whose hearts are ... Dean Mahmoud: ... for us. Now, what's very interesting is this if Quran is mentioning this. When I was in (unintelligible), the Arab tribes are fighting (unintelligible) are fighting with (unintelligible). So, Jews are killing Jews. And when Jews are killing Jews, they are disobeying the commandments of Allah, given to them, that Jews should not fight Jews or kill each other. But something very interesting would happen. When some Arab tribes would capture Jews, the Jews combined to ransom Jewish captive, because there is another commandment also, the Mosaic law, which says, when Jews are taken prisoners, then it's the duty of the Jew to, to ransom. So, this is very strange. Jews are killing each other, and when some of them are captured, they help each other to, to ransom. It's possible. And maybe this is malicious that the Jew consider the Arab inferior, and therefore it's not proper for an Arab where the Jew is a slave. There's something very subtle in it. So, they will see to it that one Jew is not a slave of an Arab, Dean Mahmoud: but they are killing each other. Dr. Khalifa: Definitely, my, my Jew enemy... Dean Mahmoud: Yes. Dean Mahmoud: So, so, Allah is saying You obey one part of the law, no, yeah, by ransoming Jews and you disobey Dean Mahmoud: the other one by killing each other. Dr. Khalifa: by attacking each other. Dean Mahmoud: And so, the message is if the Jews are doing this with the revelations of Allah, well, it's almost telling, telling us Muslims now, we cannot obey one part of Quran and then say, \"oh, this other part is too, is too hard. It is forbidden.\" Now, I'm sorry I just confined on the historical aspect, Dean Mahmoud: but if now... Dr. Khalifa: It's even, it's even clear in Sura 15. Dean Mahmoud: Yeah, it says that. Dr. Khalifa: that says woe to the dividers who, who take part of the Quran, Dr. Khalifa: and leave the other part. Dean Mahmoud: And the, and the Dr. Khalifa: So, that's Dean Mahmoud: Yeah. Dr. Khalifa: So, they're making the Quran go with their wishes, you know. Dean Mahmoud: And the (unintelligible) Dr. Khalifa: You have to take the total thing or not. Dean Mahmoud: Yes, and the message is very clear. With these troops, (unintelligible) for us, I'm sure this Iranian troops and these Iraqi troops, when there is Azan (Call to Prayer), then they Wudu (Ablution) and they Pray. So, they follow a part of the Quran. Then, when it's time to fight, like the Polisario and the Morocco, Dean Mahmoud: then they kill. Dr. Khalifa: Yes. Dean Mahmoud: Now, Islam is a total way of life. You cannot just choose this when it's necessary for and then disregard something.",
+      "review_status": "draft",
+      "retrieval_text": "Accepting the whole Quran, selective obedience, war, and divided scripture\nRashad says people cannot accept convenient Quranic teachings while refusing difficult ones. Iranian and Iraqi soldiers praying before fighting and other conflicts illustrate following one part while violating another. Sura 15's condemnation of dividing scripture is invoked.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: whole-quran; selective-obedience; war; dividing-scripture\nUser terminology: take total thing or not; Iranian Iraqi troops pray then fight; woe to dividers\nQuestions: What did selective obedience mean? Which contemporary examples were used?\nQuran references: 15:90-91\nBible references: \nEntities: Iran; Iraq"
+    },
+    {
+      "id": "audio58-s02",
+      "start": 390,
+      "end": 1110,
+      "title": "Quran 2:88–96, shielded hearts, resentment, the calf, Sinai, Heaven claims, and desire for long life",
+      "summary": "The study reads shielded hearts, rejection of a confirming scripture through resentment over God's choice, claims to believe only prior revelation, the killing of prophets, worship of the calf, the Sinai covenant, exclusive claims to the Hereafter, and extreme attachment to long life.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "shielded-hearts",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "resentment",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "confirming-scripture",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "calf",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "sinai-covenant",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "exclusive-heaven",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "long-life",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "hearts shielded",
+        "resentment God bestows blessings",
+        "believe only what revealed to us",
+        "long for death if truthful"
+      ],
+      "related_questions": [
+        "Why was the confirming scripture rejected?",
+        "What covenant failures were recalled?",
+        "How was the exclusive claim to Heaven tested?"
+      ],
+      "quran_references": [
+        "2:88-96"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:06:29.440",
+      "end_time": "00:18:40.357",
+      "source_segment_start": 131,
+      "source_segment_end": 360,
+      "csv_speakers": [
+        "A man",
+        "Dean Mahmoud",
+        "Dr. Khalifa",
+        "Inga",
+        "Latifa"
+      ],
+      "canonical_text": "and then disregard something. Dean Mahmoud: Well, I'm sorry that's taking so much time Dr. Khalifa: Well, that's great. Dr. Khalifa: Okay. 88. [2:88] They said, \"Our hearts have shielded!\" Rather, it is a curse ... You see, they don't wanna accept Quran, in other words. [2:88] ... \"Our hearts have shielded!\" Rather, it is a curse from GOD, because of their disbelief, that prevents them from ever believing, ... [2:89] Thus when a scripture came to them from GOD, and even though it confirms what they have, and even though they used to predict its coming to the idolaters, when their own predictions came true, they disbelieved. Thus, does GOD's curse affects the disbelievers. I think it's all clear. [2:90] Miserable indeed is what they sold their souls for—rejecting these revelations of GOD out of sheer resentment that GOD should bestow His blessings upon whomever He wills. Consequently, they incurred wrath upon wrath. They will suffer humiliating retribution. There may be some people who will not, they look at the Quran, there's nothing wrong with it, there is even physical evidence that it is a divine scripture, but they will not accept it just out of resentment that it's coming from the Arabs, maybe, or for some other reason. So, what they do is they're really destroying their own souls. It's from themselves. [2:91] When they are told, \"Believe in these revelations of GOD,\" they say, \"We believe only in what was revealed to us.\" They, thus, reject all subsequent scripture, even though they know it is the truth, and even though it confirms their own scriptures! Say, \"Why did you slay GOD's prophets in the past, if you were really believers?\" See, they say we believe on our revelations. It didn't come to us. But then, the question here is you really didn't when you had your own scripture without the Quran, you didn't follow it. And they even killed their prophets. Dr. Khalifa: This touches a (unintelligible). Dean Mahmoud: I just want to mention something, I mean that it's very interesting. This one says, they killed their prophets, 91. Dean Mahmoud: In 87, messenger. Dr. Khalifa: Yes. Dean Mahmoud: I found out that this is not for accounting, but I was able to get, there are around 9 verses I know, there might be more about killing the prophets and messengers. Out of these 9 Dean Mahmoud: 3 mentioned messengers Dean Mahmoud: and 6 prophets. Dr. Khalifa: Prophet. Yes. Dean Mahmoud: It's very... Dr. Khalifa: very accurate. Dean Mahmoud: very, Dean Mahmoud: very, very, very, very interesting. In other words, it's not just prophets, but some of these prophets were also messengers. Dean Mahmoud: And certainly, there are few (unintelligible) that... Dr. Khalifa: Yes. Dean Mahmoud: Yeah, and prophets (unintelligible) Dr. Khalifa: Well, Dean Mahmoud did some thinking about the killing of Moses, probably, the killing of Moses and Aaron. It's, it's a possibility that they killed them. But there are also many other prophets that the Children of Israel that they killed, you know, there's Dr. Khalifa: prophets like Isaiah, Ezekiel. I don't know which ones were killed by them, Dr. Khalifa: but many of their prophets were killed by them. Dean Mahmoud: Jeremiah Dean Mahmoud: Jeremiah was killed. Dr. Khalifa: Jeremiah. Dean Mahmoud: on the way to Egypt. Dean Mahmoud: (unintelligible) Dr. Khalifa: Yeah. A man: Zach, Zachariah. Dean Mahmoud: Zachariah. Zachariah, also. Dean Mahmoud: Zachariah was killed. A man: Zachariah. A man: Yeah. Dr. Khalifa: Yeah. Dean Mahmoud: The uncle of A man: Mary? Dean Mahmoud: The uncle of Dr. Khalifa: of Jesus Dean Mahmoud: Jesus, yeah. Dr. Khalifa: Yeah. Dean Mahmoud: (unintelligible) A man: Yeah. Dean Mahmoud: Zachariah. A man: Well, John the Baptist was (unintelligible) Dr. Khalifa: Anyway, we were discussing this at length the other day, and my, my thoughts about this are that Satan, initially, when, when Moses was sent to the Children of Israel, Well, either you, Aaron, give the lesson or me. We can't have two teachers. When Moses came, Satan directed his attention to, to have them desecrate the prophets and the messengers, have no respect for Moses. They don't even now. And if you watch the 7th Commandment, the movie, they just... So, but this technique backfires on Satan because they ended up worshipping God. Now, later on, of course, the scholars came and they invented the Mishnah (Hadith) and the Gemarrah (Sunna) and the Talmud. But that was something that Satan did later And then, when he came to the Christians, he went the other way. He made them idolize their prophet too much worship him like a god. So, that also, that was very successful. And he did it better with the Muslims by making it subtle. He did, he followed the same technique that succeeded in the Christians, but it's very subtle. Yet, the Muslims are exactly like the Christians. They really idolize Muhammad exactly the way the Christians idolize Jesus. I mean, it's... You tell them \"Hadith is no good\" and their hair stands up, I mean, they're very, very emotional about it, as you know to the extent that they don't believe the Quran, you know. The Quran says, it's complete, it is perfect, it shall be the only source, but they cannot (unintelligible) that. So, the initial attempt of Satan was to make the Jews disrespect their messengers of God. Dr. Khalifa: Where are we now? A man: 92. Dr. Khalifa: 92? A man: Yes. Dr. Khalifa: Ok. Dr. Khalifa: Latifa, you wanna, you wanna take 92? Yeah, there's only one Latifa here. Dr. Khalifa: Don't look around. Latifa: 92. [2:92] Moses say \"I come to you with profound miracles\", yet you idolized the calf in his absence, and turned wicked. Latifa: You want me to continue reading (unintelligible) Dean Mahmoud: Yes. Latifa: Ok. [2:93] We made a covenant with you, as we raised Mount Sinai above you, \"You shall firmly uphold the commandments we have given you, and listen.\" They said, \"We heard, but we will not obey.\" Their hearts were filled with adoration for the calf, as a consequence of their disbelief. Say, \"Miserable indeed is what your convictions dictate upon you, if you do have any convictions.\" [2:94] Say, \"If the Hereafter is reserved for you alone at GOD, to the exclusion of all others, then you should long for death, if you are truthful.\" [2:95] They would never long for it, because of what their hands have sent forth. GOD is fully aware of the wicked. [2:96] In fact, you will find them the most covetous of life; even more so than the pagans. The one of them wishes to live a thousand years. But this will never spare him the retribution, should he survive. GOD sees everything they do. Latifa: You want me to (unintelligible) Dr. Khalifa: Yeah, please do. Latifa: Ok. What I, what I understand here from 90 to 96 is (unintelligible) that all the way to 96, Allah said to Moses, just show him (unintelligible) to obey the commandments. But yet, there were some who disobeyed, and yet they feel that what they themselves had been like more than a (unintelligible) thousand people, they feel that this here, would still get them into Heaven, you know. If they had covered up some words, you know, and some kind of guy came and said, \"hey,...\" and yet, they had so many followers. Of course, all of this is, was Satan's trickeries and stuff. But the man, or people themselves, that fell into this pit. And a lot of the Christians (unintelligible), they are idolizing Jesus Christ and other prophets, then say (unintelligible) that they're going to get into Heaven, but they're not gonna get into Heaven. (unintelligible) they're going to Hell, because, (unintelligible) that this is what God wanted them to do. And, also, (unintelligible) it's one of us, one of us, (unintelligible) and how they deny (unintelligible). Then, you reach out to them, and if they are really twisted, you're supposed to tell them that, you know, you show us truth or something, and let us know that, what you're saying is the real. You have to show us your truth. And so, you can also let them know too, that they didn't see it because, if they were really truthful, they wouldn't, they would know it (unintelligible). But they don't, they (unintelligible) forever and forever. You'll see their silver, and their gold, and their (unintelligible) and the good yields, their growing yields (unintelligible) keep them safe, and away from (unintelligible). Where, it's not. And, like us, the true mission that's here, Rashad,... But, you know, we long for that. You know, because we know, that that appointment day is coming. And we know, right now, that we have the truth, and yet, we didn't dare to (unintelligible) anybody else, that they're (unintelligible) even though we know we have the truth. And this is the country we live in, but yet, they water it down for the people. And, if these people need to be, you know, (unintelligible). They hide it from man, then they tell them (unintelligible). Latifa: So, that's my understanding. Dr. Khalifa: Cause that's beautiful. It's, You're touching a very important point of proof, you know. When people come to you and say anything, make a statement \"Jesus is the Son of God\", you know (unintelligible) \"Why do you say that? You have proof? Are you sure?\" \"If you prove it to me, I'd be glad to believe it.\" But, the difference is that we have, we have proof. Dr. Khalifa: That's a big difference. Latifa: (unintelligible) it saved a lot of time, like, (unintelligible) I try to give out as much as possible, and even more than that, but then, when I talk to people, I find it that a lot of times (unintelligible). They try to not believe, you know, they say, \"oh,...\", you know, \"thanks.\" But a lot of times, their, their spirit it gets decided, Latifa: (unintelligible), you know. Dr. Khalifa: Exactly. Latifa: It'd be such, you know, one of the (unintelligible) that take over and talk to (unintelligible) I can hear, I can hear (unintelligible) And so, therefore, when I, you know, when it came related to it, they go \"wow, yeah\", you know. And I was thinking, a lot of people, (unintelligible) a lot of people, why? And then, when it comes down to, \"okay, (unintelligible)\", you know. (unintelligible) Latifa: You know what I'm saying? (unintelligible) Dr. Khalifa: Yeah. Like, you know, that point you pointed out, really comes as an (unintelligible) They're wronging their soul (unintelligible) beautiful or Alhamdu Lillah (unintelligible) Latifa: (unintelligible), you know. Dr. Khalifa: Yes. Latifa: Well, Alhamdu Lillah, (unintelligible) Dr. Khalifa: (unintelligible) Well, Dr. Khalifa: You did your job, yes, and then God knows if they deserve to be guided or not. Latifa: Yes. Dr. Khalifa: Yeah. Dr. Khalifa: Okay, Inga (unintelligible) Dr. Khalifa: 97 Inga: [2:97] Say, \"Anyone who opposes Gabriel should know that he revealed this scripture (Quran) into your heart, with GOD's permission, confirming previous scriptures, and providing guidance and good news for the believers.\"",
+      "review_status": "draft",
+      "retrieval_text": "Quran 2:88–96, shielded hearts, resentment, the calf, Sinai, Heaven claims, and desire for long life\nThe study reads shielded hearts, rejection of a confirming scripture through resentment over God's choice, claims to believe only prior revelation, the killing of prophets, worship of the calf, the Sinai covenant, exclusive claims to the Hereafter, and extreme attachment to long life.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: shielded-hearts; resentment; confirming-scripture; calf; sinai-covenant; exclusive-heaven; long-life\nUser terminology: hearts shielded; resentment God bestows blessings; believe only what revealed to us; long for death if truthful\nQuestions: Why was the confirming scripture rejected? What covenant failures were recalled? How was the exclusive claim to Heaven tested?\nQuran references: 2:88-96\nBible references: \nEntities: "
+    },
+    {
+      "id": "audio58-s03",
+      "start": 1110,
+      "end": 1440,
+      "title": "Quran 2:97–101, Gabriel, Michael, revelation into the heart, and covenant violation",
+      "summary": "Gabriel is said to reveal the Quran into Muhammad's heart with God's permission, confirming earlier scripture. Opposition to God, angels, messengers, Gabriel, or Michael is condemned, and scripture followers are criticized for casting their book behind their backs when a confirming messenger arrives.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "gabriel",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "michael",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-in-heart",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "confirming-scripture",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "covenant-violation",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Gabriel revealed into heart",
+        "opposes Gabriel Michael",
+        "put scripture behind backs"
+      ],
+      "related_questions": [
+        "What role did Gabriel have in revelation?",
+        "Who is opposed in Quran 2:98?",
+        "How did scripture followers violate their covenant?"
+      ],
+      "quran_references": [
+        "2:97-101"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Gabriel",
+        "Michael",
+        "Muhammad"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:18:29.685",
+      "end_time": "00:23:58.044",
+      "source_segment_start": 360,
+      "source_segment_end": 450,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dean Mahmoud",
+        "Dr. Khalifa",
+        "Inga",
+        "Latifa"
+      ],
+      "canonical_text": "Inga: [2:97] Say, \"Anyone who opposes Gabriel should know that he revealed this scripture (Quran) into your heart, with GOD's permission, confirming previous scriptures, and providing guidance and good news for the believers.\" [2:98] Anyone who opposes GOD, His angels, His messengers, and Gabriel and Michael, should know that GOD opposes the disbelievers. [2:99] We have revealed to you profound revelations, and only the wicked will disbelieve therein. [2:100] Is it not a fact that whenever they made a covenant, some of them would violate it? Indeed, most of them do not believe. Inga: [2:101] And when a messenger came to them from GOD,* confirming their own scripture, some of those who followed previous scriptures (Jews, Christians, and Muslims) disregarded this scripture, as if they did not know it. Dr. Khalifa: That's a, that's an important piece of information. Inga: Why do I feel like a (unintelligible)? Inga: I guess I don't understand that there is relation with (unintelligible). Because to me, Gabriel means, you know, Inga: (unintelligible) Dr. Khalifa: Gabriel? Inga: Yes. Dr. Khalifa: Cause Gabriel, you know who Gabriel is? Inga: Yeah. He came to Mary, Dr. Khalifa: Right. Inga: and told her of the coming of Christ. Dr. Khalifa: Right. (unintelligible) Inga: of a child. Dr. Khalifa: Right. A woman: (unintelligible) So, they didn't believe. Maybe (unintelligible) didn't believe (unintelligible) cause he was seeing Gabriel A woman: (unintelligible) A man: Yeah, Gabriel... Dr. Khalifa: Okay. So, this is, so this statement of Gabriel's function is to mediate revelations between God and the messengers. And this happened since Adam. He's one who carried the revelations to Adam, to Noah, to Mary, to Jesus, to Moses, to Muhammad. Well, God spoke directly with Moses. Dr. Khalifa: But, but there were instances where Gabriel also meditated revelations. A man: (unintelligible) A woman: (unintelligible) Dr. Khalifa: At least he, this is his job. Latifa: I feel like Eric said, but I don't, there may be a (unintelligible), Latifa: but the danger of certain people (unintelligible), you know. A woman: (unintelligible) Dr. Khalifa: Well, no, not necessarily. Oh. Dean Mahmoud: Could you repeat that one? Dean Mahmoud: I didn't... Latifa: So, I was saying, like, okay, like, how do we say that, like, (unintelligible) the archangel. Latifa: Okay (unintelligible) Dr. Khalifa: But there were many archangels. Also, Satan was kicked out before the revelation... before the human beings were on earth. Dr. Khalifa: Right? Latifa: Right. Dr. Khalifa: So, that was not one of his functions. Latifa: Okay. It was just my understanding, (unintelligible) aside that I'm speaking that. Latifa: (unintelligible) Latifa: Alright. Dr. Khalifa: No, no, no, there was many. Latifa: Yeah. Latifa: There was trillions. Dr. Khalifa: Probably a million billion. Latifa: Oh, okay. Dr. Khalifa: Yeah. Latifa: Okay. A man: Did the, did the angels, then, reveal the, the scripture on their own initiative or was it, was it like an order from God or was it...? Dr. Khalifa: It's an order. It's an order from God. And He, He just transmit it because the, it's one of the transmission methods, that is mentioned in Quran. Moses is the only one that God spoke to. I mean, the only one reported in Quran, anyway. But every, these, these are the words of God. The Quran are the words of God. And Gabriel was told to go and put them in Muhammad's heart, release them, actually, from Muhammad's heart. So, Muhammad was summoned to the highest horizon and the Quran was in his heart. The word is like the, it's like you and I, everybody, each one of us has in his heart or her heart the knowledge that God is the Master, the Lord of the Universe. We all met God, all of us, before we were born. But because of this body, we don't remember it. And the same, in the same way, Muhammad had the Quran in his heart, exactly in the same way. But he needed Gabriel to come and release it to his mouth, from inside. So, if that knowledge that you have, about meeting God, needs to be, come to the surface, you'll need the help of an angel. Or you need to die, get rid of the body. So, Gabriel was just transmitting the words of God, Dr. Khalifa: orders from God, letter by letter. A woman: Now, why did you say what you said about the body? Dr. Khalifa: Because the, the body obscures that knowledge. A woman: Or you... Dr. Khalifa: Do you remember your meeting with God? A woman: No. (unintelligible) Dr. Khalifa: The, the initial one. A woman: No. Dr. Khalifa: Because of creation of the heavens and the earth. Where God said, Do you bear witness I am the Lord of the universe? And we said, [7:172] ... We bear witness. ... that You are the Lord of the universe. And God said, Now, you cannot claim on the Day of Judgment that you never heard of Me. That's in Sura 7. So, but we don't remember that because of this body.",
+      "review_status": "draft",
+      "retrieval_text": "Quran 2:97–101, Gabriel, Michael, revelation into the heart, and covenant violation\nGabriel is said to reveal the Quran into Muhammad's heart with God's permission, confirming earlier scripture. Opposition to God, angels, messengers, Gabriel, or Michael is condemned, and scripture followers are criticized for casting their book behind their backs when a confirming messenger arrives.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: gabriel; michael; quran-in-heart; confirming-scripture; covenant-violation\nUser terminology: Gabriel revealed into heart; opposes Gabriel Michael; put scripture behind backs\nQuestions: What role did Gabriel have in revelation? Who is opposed in Quran 2:98? How did scripture followers violate their covenant?\nQuran references: 2:97-101\nBible references: \nEntities: Gabriel; Michael; Muhammad"
+    },
+    {
+      "id": "audio58-s04",
+      "start": 1440,
+      "end": 1800,
+      "title": "Gabriel's mediating function, guardian angels, Dawn Prayer, speech, knocks, and pinches",
+      "summary": "Rashad says Gabriel mediated revelation from Adam through Noah, Mary, Jesus, Moses, and Muhammad. Guardian angels are said to awaken believers for Dawn Prayer by speaking, knocking, shaking, pushing, or pinching. Rashad recounts hearing an Egyptian warning when he intended to return to sleep.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "gabriel-mediator",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "guardian-angels",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "dawn-prayer",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "angelic-speech",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "pinches",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Gabriel job mediate",
+        "knock apartment door",
+        "push off bed",
+        "Egyptian accent warning"
+      ],
+      "related_questions": [
+        "How broadly did Gabriel's mediating role extend?",
+        "Which methods were guardian angels said to use?",
+        "What personal experience did Rashad report?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Adam",
+        "Noah",
+        "Mary",
+        "Jesus",
+        "Moses",
+        "Muhammad",
+        "Gabriel"
+      ],
+      "retrieval_note": "Auditory and tactile experiences must not be used to interpret medical or psychiatric symptoms.",
+      "retrieval_priority": "primary",
+      "start_time": "00:24:00.315",
+      "end_time": "00:30:00.996",
+      "source_segment_start": 451,
+      "source_segment_end": 563,
+      "csv_speakers": [
+        "A woman",
+        "Dean Mahmoud",
+        "Dr. Khalifa",
+        "Latifa"
+      ],
+      "canonical_text": "And the, the Quran was in Muhammad's heart in the same way. But Gabriel's function was to release the Quran. So, what we're just reading is a piece of information telling us Dr. Khalifa: that Gabriel mediated the release of, of Quran. Latifa: But, but Rashad, what was, what is this, Latifa: that we take the knowledge (unintelligible)? Dr. Khalifa: That, that could be angels, yes. Latifa: (unintelligible) angels. Ok. Dr. Khalifa: Also, angels... Latifa: Could it be the two, Latifa: (unintelligible) mind or... Dr. Khalifa: Not necessarily. There are lots of angels. Latifa: (unintelligible) Latifa: Okay. Dr. Khalifa: We have a whole bunch of angels with us, each one of us. Latifa: (unintelligible) Dr. Khalifa: We have guards. Latifa: But that's what I'm saying. Would it be mine? Latifa: Or would it be like, you know, the other people's or...? Dr. Khalifa: Oh, they do all kinds of things. Latifa: Ok. Dr. Khalifa: They'll wake you up for Fajr Prayer, don't they? Latifa: Uhum. Latifa: You know, (unintelligible) Dr. Khalifa: They will do all kinds of things when you, when they really get familiar with you. They pinch you to wake you up. I mean, pinch. They push you off the bed sometimes. They will speak to you. They'll knock on your doors. (unintelligible) shaking our head. They'll knock your apartment door. When she gets out of bed, opens the door, there's nobody there. But it's time for Fajr Prayer. They'll speak to you. They did it to me once. I was, I was sleeping in bed, and I always keep on the radio next to me. I always like to hear the radio. And then, the Fajr, Fajr, Fajr came, and I got up very sleepy and very tired. I was really especially tired that night. So, after I stood up next to bed, I said \"Oh, well, I'm gonna sleep again for maybe a half hour.\" So, just as I was going to sit down, in, in an Egyptian accent, as purely Egyptian, the word was EwA (اوعى). It means \"don't you...\" Dr. Khalifa: Where is Baroni cause he'll know that? A woman: EwA Dr. Khalifa: EwA (اوعى) A woman: So, why are you saying that? Dr. Khalifa: He said \"don't you...\" You know, a real warning. So, I looked around, you know. Then, I thought maybe the radio was on, was saying one word, but it was off. It was very clear, loud and clear. \"Don't you go back to sleep.\" (unintelligible) what happened after that. And then, whenever they do it, you're never afraid, you're never scared. They're very nice. It doesn't matter what they do, you're never scared. It is never a frightening experience. If anything, it's an exalting experience. I'm sure quite a few of you, somehow, open up their eyes just before sunrise. And they're given the impression, this is the time to Pray morning. And that's, angels do that. We go to Sura 13, this, we're talking about this subject. 13. I give you the verse number, right? Right. Dr. Khalifa: I know it's here. Dean Mahmoud: (unintelligible) Dr. Khalifa: About the angels. Huh? Dean Mahmoud: (unintelligible) Dean Mahmoud: and the angels? Dr. Khalifa: Yeah, the angels take turns... A woman: You're talking about Sura 13, Aya 11? Dr. Khalifa: Is it 11? A woman: You're talking about 11. Dr. Khalifa: Right. There we go. Dr. Khalifa: Yeah, verse 11. Dr. Khalifa: It says, Each of you, that's you and me. Each of you has a succession of angels [13:11] ... in front of you and behind you who guard you in accordance with God's decision. And that's, so, you have angels around you who make sure that nothing happens to you except exactly what, what is to happen to you. I mean, it's just, it is just amazing. What is supposed to happen to you has to happen, there is nothing... It all depends on your decision and what you do. And I just, I just, I have to tell you this story. But it, it shows you exactly the, how, how the example is. I had a friend who was, who was talking about marijuana. Marijuana. I, I don't know what brought the subject up. Oh, I was walking down the alleyway and I saw high school kids at the corner there. They were smoking, and marijuana. Smoking. And I smelled it. It's not cigarettes. So, I came, not that way. I didn't sniff that hard. So, I mentioned, I mentioned to my friend that,",
+      "review_status": "draft",
+      "retrieval_text": "Gabriel's mediating function, guardian angels, Dawn Prayer, speech, knocks, and pinches\nRashad says Gabriel mediated revelation from Adam through Noah, Mary, Jesus, Moses, and Muhammad. Guardian angels are said to awaken believers for Dawn Prayer by speaking, knocking, shaking, pushing, or pinching. Rashad recounts hearing an Egyptian warning when he intended to return to sleep.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: gabriel-mediator; guardian-angels; dawn-prayer; angelic-speech; pinches\nUser terminology: Gabriel job mediate; knock apartment door; push off bed; Egyptian accent warning\nQuestions: How broadly did Gabriel's mediating role extend? Which methods were guardian angels said to use? What personal experience did Rashad report?\nQuran references: \nBible references: \nEntities: Adam; Noah; Mary; Jesus; Moses; Muhammad; Gabriel"
+    },
+    {
+      "id": "audio58-s05",
+      "start": 1800,
+      "end": 1893.834,
+      "title": "Intoxicants, expecting correction, furnace gas, and the educational pinch",
+      "summary": "Rashad says he praised the smell of an intoxicant instead of fully condemning it and expected a corrective pinch. Later that day, while lighting a furnace pilot, he heard gas hissing and interpreted the danger as educational divine correction.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "intoxicants",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "educational-pinch",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "furnace-gas",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-correction",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "intoxicants haram",
+        "expect a pinch",
+        "pilot not lighting",
+        "hissing gas"
+      ],
+      "related_questions": [
+        "What mistake did Rashad think he made?",
+        "How did he interpret the furnace incident?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not interpret accidents as divine punishment or replace gas-safety procedures.",
+      "retrieval_priority": "primary",
+      "start_time": "00:29:58.520",
+      "end_time": "00:31:33.824",
+      "source_segment_start": 563,
+      "source_segment_end": 606,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "I mentioned to my friend that, that it smells nice. And, and the friend said, \"yeah, that stuff is good.\" Or something like, something that affects. So, I said \"well, expect a pinch.\" I said \"God doesn't like it.\" I said \"intoxicants are haram.\" It's prohibited. And if God doesn't like it, we're not supposed to like it, or even praise it, or say anything nice about it. So, you have to expect a, a pinch. And I wasn't, I, I felt like preaching. You know, I, a big lesson about this subject that I, I held back. So, that was my, my, my, it was a mistake on my part. I felt that I was not doing justice to the subject when I really should have. Now, that same day, the two of us, same two people, were starting a heater in one of the apartments, a furnace. And I was lighting the pilot, the pilot was not lighting, but all of a sudden, I heard the hissing of the gas. The hissing of the gas came in. Now, I'm not boasting, but I'm not really dumb, you know. I know that if I strike a match, with the gas, I mean, there's going to be an explosion. But it was, it was as if I was completely hypnotized. Yeah. And I, I I flicked my (unintelligible) anyway.",
+      "review_status": "draft",
+      "retrieval_text": "Intoxicants, expecting correction, furnace gas, and the educational pinch\nRashad says he praised the smell of an intoxicant instead of fully condemning it and expected a corrective pinch. Later that day, while lighting a furnace pilot, he heard gas hissing and interpreted the danger as educational divine correction.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: intoxicants; educational-pinch; furnace-gas; divine-correction\nUser terminology: intoxicants haram; expect a pinch; pilot not lighting; hissing gas\nQuestions: What mistake did Rashad think he made? How did he interpret the furnace incident?\nQuran references: \nBible references: \nEntities: "
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "angelic-speech",
+      "preferred_label": "Angelic Speech",
+      "aliases": [
+        "Egyptian accent warning",
+        "Gabriel job mediate",
+        "knock apartment door",
+        "push off bed"
+      ],
+      "appears_in_sections": [
+        "audio58-s04"
+      ]
+    },
+    {
+      "id": "calf",
+      "preferred_label": "Calf",
+      "aliases": [
+        "believe only what revealed to us",
+        "hearts shielded",
+        "long for death if truthful",
+        "resentment God bestows blessings"
+      ],
+      "appears_in_sections": [
+        "audio58-s02"
+      ]
+    },
+    {
+      "id": "confirming-scripture",
+      "preferred_label": "Confirming Scripture",
+      "aliases": [
+        "Gabriel revealed into heart",
+        "believe only what revealed to us",
+        "hearts shielded",
+        "long for death if truthful",
+        "opposes Gabriel Michael",
+        "put scripture behind backs",
+        "resentment God bestows blessings"
+      ],
+      "appears_in_sections": [
+        "audio58-s02",
+        "audio58-s03"
+      ]
+    },
+    {
+      "id": "covenant-violation",
+      "preferred_label": "Covenant Violation",
+      "aliases": [
+        "Gabriel revealed into heart",
+        "opposes Gabriel Michael",
+        "put scripture behind backs"
+      ],
+      "appears_in_sections": [
+        "audio58-s03"
+      ]
+    },
+    {
+      "id": "dawn-prayer",
+      "preferred_label": "Dawn Prayer",
+      "aliases": [
+        "Egyptian accent warning",
+        "Gabriel job mediate",
+        "knock apartment door",
+        "push off bed"
+      ],
+      "appears_in_sections": [
+        "audio58-s04"
+      ]
+    },
+    {
+      "id": "dividing-scripture",
+      "preferred_label": "Dividing Scripture",
+      "aliases": [
+        "Iranian Iraqi troops pray then fight",
+        "take total thing or not",
+        "woe to dividers"
+      ],
+      "appears_in_sections": [
+        "audio58-s01"
+      ]
+    },
+    {
+      "id": "divine-correction",
+      "preferred_label": "Divine Correction",
+      "aliases": [
+        "expect a pinch",
+        "hissing gas",
+        "intoxicants haram",
+        "pilot not lighting"
+      ],
+      "appears_in_sections": [
+        "audio58-s05"
+      ]
+    },
+    {
+      "id": "educational-pinch",
+      "preferred_label": "Educational Pinch",
+      "aliases": [
+        "expect a pinch",
+        "hissing gas",
+        "intoxicants haram",
+        "pilot not lighting"
+      ],
+      "appears_in_sections": [
+        "audio58-s05"
+      ]
+    },
+    {
+      "id": "exclusive-heaven",
+      "preferred_label": "Exclusive Heaven",
+      "aliases": [
+        "believe only what revealed to us",
+        "hearts shielded",
+        "long for death if truthful",
+        "resentment God bestows blessings"
+      ],
+      "appears_in_sections": [
+        "audio58-s02"
+      ]
+    },
+    {
+      "id": "furnace-gas",
+      "preferred_label": "Furnace Gas",
+      "aliases": [
+        "expect a pinch",
+        "hissing gas",
+        "intoxicants haram",
+        "pilot not lighting"
+      ],
+      "appears_in_sections": [
+        "audio58-s05"
+      ]
+    },
+    {
+      "id": "gabriel",
+      "preferred_label": "Gabriel",
+      "aliases": [
+        "Gabriel revealed into heart",
+        "opposes Gabriel Michael",
+        "put scripture behind backs"
+      ],
+      "appears_in_sections": [
+        "audio58-s03"
+      ]
+    },
+    {
+      "id": "gabriel-mediator",
+      "preferred_label": "Gabriel Mediator",
+      "aliases": [
+        "Egyptian accent warning",
+        "Gabriel job mediate",
+        "knock apartment door",
+        "push off bed"
+      ],
+      "appears_in_sections": [
+        "audio58-s04"
+      ]
+    },
+    {
+      "id": "guardian-angels",
+      "preferred_label": "Guardian Angels",
+      "aliases": [
+        "Egyptian accent warning",
+        "Gabriel job mediate",
+        "knock apartment door",
+        "push off bed"
+      ],
+      "appears_in_sections": [
+        "audio58-s04"
+      ]
+    },
+    {
+      "id": "intoxicants",
+      "preferred_label": "Intoxicants",
+      "aliases": [
+        "expect a pinch",
+        "hissing gas",
+        "intoxicants haram",
+        "pilot not lighting"
+      ],
+      "appears_in_sections": [
+        "audio58-s05"
+      ]
+    },
+    {
+      "id": "long-life",
+      "preferred_label": "Long Life",
+      "aliases": [
+        "believe only what revealed to us",
+        "hearts shielded",
+        "long for death if truthful",
+        "resentment God bestows blessings"
+      ],
+      "appears_in_sections": [
+        "audio58-s02"
+      ]
+    },
+    {
+      "id": "michael",
+      "preferred_label": "Michael",
+      "aliases": [
+        "Gabriel revealed into heart",
+        "opposes Gabriel Michael",
+        "put scripture behind backs"
+      ],
+      "appears_in_sections": [
+        "audio58-s03"
+      ]
+    },
+    {
+      "id": "pinches",
+      "preferred_label": "Pinches",
+      "aliases": [
+        "Egyptian accent warning",
+        "Gabriel job mediate",
+        "knock apartment door",
+        "push off bed"
+      ],
+      "appears_in_sections": [
+        "audio58-s04"
+      ]
+    },
+    {
+      "id": "quran-in-heart",
+      "preferred_label": "Quran In Heart",
+      "aliases": [
+        "Gabriel revealed into heart",
+        "opposes Gabriel Michael",
+        "put scripture behind backs"
+      ],
+      "appears_in_sections": [
+        "audio58-s03"
+      ]
+    },
+    {
+      "id": "resentment",
+      "preferred_label": "Resentment",
+      "aliases": [
+        "believe only what revealed to us",
+        "hearts shielded",
+        "long for death if truthful",
+        "resentment God bestows blessings"
+      ],
+      "appears_in_sections": [
+        "audio58-s02"
+      ]
+    },
+    {
+      "id": "selective-obedience",
+      "preferred_label": "Selective Obedience",
+      "aliases": [
+        "Iranian Iraqi troops pray then fight",
+        "take total thing or not",
+        "woe to dividers"
+      ],
+      "appears_in_sections": [
+        "audio58-s01"
+      ]
+    },
+    {
+      "id": "shielded-hearts",
+      "preferred_label": "Shielded Hearts",
+      "aliases": [
+        "believe only what revealed to us",
+        "hearts shielded",
+        "long for death if truthful",
+        "resentment God bestows blessings"
+      ],
+      "appears_in_sections": [
+        "audio58-s02"
+      ]
+    },
+    {
+      "id": "sinai-covenant",
+      "preferred_label": "Sinai Covenant",
+      "aliases": [
+        "believe only what revealed to us",
+        "hearts shielded",
+        "long for death if truthful",
+        "resentment God bestows blessings"
+      ],
+      "appears_in_sections": [
+        "audio58-s02"
+      ]
+    },
+    {
+      "id": "war",
+      "preferred_label": "War",
+      "aliases": [
+        "Iranian Iraqi troops pray then fight",
+        "take total thing or not",
+        "woe to dividers"
+      ],
+      "appears_in_sections": [
+        "audio58-s01"
+      ]
+    },
+    {
+      "id": "whole-quran",
+      "preferred_label": "Whole Quran",
+      "aliases": [
+        "Iranian Iraqi troops pray then fight",
+        "take total thing or not",
+        "woe to dividers"
+      ],
+      "appears_in_sections": [
+        "audio58-s01"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio58-issue-01",
+      "issue_type": "genre-label",
+      "original_text": "The file is titled Friday Sermon but contains substantial interactive Quran study.",
+      "suggested_action": "Preserve both functions.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio58-issue-02",
+      "issue_type": "auditory-tactile-risk",
+      "original_text": "Angels are said to speak, knock, push, or pinch.",
+      "suggested_action": "Do not use clinically.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio58-issue-03",
+      "issue_type": "accident-spiritualization",
+      "original_text": "A gas incident is interpreted as divine correction.",
+      "suggested_action": "Do not moralize accidents.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio58-issue-04",
+      "issue_type": "religious-group-generalization",
+      "original_text": "Earlier scripture communities are discussed broadly.",
+      "suggested_action": "Maintain attribution.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

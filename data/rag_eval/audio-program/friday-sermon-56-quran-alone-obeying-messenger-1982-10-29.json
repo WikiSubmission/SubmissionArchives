@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/friday-sermon-56-quran-alone-obeying-messenger-1982-10-29",
+  "title": "Friday Sermon 56: Quran Alone and the Meaning of Obeying the Messenger (1982-10-29)",
+  "cases": [
+    {
+      "id": "audio56-eval-001",
+      "question": "How did Rashad define obeying the messenger?",
+      "expected_section_ids": [
+        "audio56-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "After the adhan, Rashad says the evidence shows that seeking religious authority outside the Quran creates another god. Quran 9:120 concerns following the messenger in mobilization, while Quran 69:40–47 and 17:73–75 say Muhammad could not fabricate or add religious teachings without punishment."
+    },
+    {
+      "id": "audio56-eval-002",
+      "question": "What would have happened if Muhammad added religious teachings?",
+      "expected_section_ids": [
+        "audio56-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "After the adhan, Rashad says the evidence shows that seeking religious authority outside the Quran creates another god. Quran 9:120 concerns following the messenger in mobilization, while Quran 69:40–47 and 17:73–75 say Muhammad could not fabricate or add religious teachings without punishment."
+    },
+    {
+      "id": "audio56-eval-003",
+      "question": "Which verses denied Muhammad authority to change the Quran?",
+      "expected_section_ids": [
+        "audio56-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 10:15 is used to deny Muhammad authority to change revelation. Quran 17:39 identifies the Quranic commandments as wisdom, 17:46 describes aversion to Quran-alone preaching, and Quran 6:38 and 6:114 describe the book as leaving nothing out and being fully detailed."
+    },
+    {
+      "id": "audio56-eval-004",
+      "question": "Why was the Quran itself identified as wisdom?",
+      "expected_section_ids": [
+        "audio56-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 10:15 is used to deny Muhammad authority to change revelation. Quran 17:39 identifies the Quranic commandments as wisdom, 17:46 describes aversion to Quran-alone preaching, and Quran 6:38 and 6:114 describe the book as leaving nothing out and being fully detailed."
+    },
+    {
+      "id": "audio56-eval-005",
+      "question": "How was completeness argued?",
+      "expected_section_ids": [
+        "audio56-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 10:15 is used to deny Muhammad authority to change revelation. Quran 17:39 identifies the Quranic commandments as wisdom, 17:46 describes aversion to Quran-alone preaching, and Quran 6:38 and 6:114 describe the book as leaving nothing out and being fully detailed."
+    },
+    {
+      "id": "audio56-eval-006",
+      "question": "What did the moon demonstration illustrate?",
+      "expected_section_ids": [
+        "audio56-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A physical demonstration of the moon's rotation illustrates order and design. Quran 6:115–116 says God's word is complete and the majority follows conjecture. Quran 60:12 is interpreted as conditioning women's obedience to the prophet on what is right, while Quran 4:79 attributes Muhammad's misfortunes to himself."
+    },
+    {
+      "id": "audio56-eval-007",
+      "question": "How was majority opinion treated?",
+      "expected_section_ids": [
+        "audio56-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A physical demonstration of the moon's rotation illustrates order and design. Quran 6:115–116 says God's word is complete and the majority follows conjecture. Quran 60:12 is interpreted as conditioning women's obedience to the prophet on what is right, while Quran 4:79 attributes Muhammad's misfortunes to himself."
+    },
+    {
+      "id": "audio56-eval-008",
+      "question": "What condition limited obedience to the prophet?",
+      "expected_section_ids": [
+        "audio56-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A physical demonstration of the moon's rotation illustrates order and design. Quran 6:115–116 says God's word is complete and the majority follows conjecture. Quran 60:12 is interpreted as conditioning women's obedience to the prophet on what is right, while Quran 4:79 attributes Muhammad's misfortunes to himself."
+    },
+    {
+      "id": "audio56-eval-009",
+      "question": "Which biblical prophecy was cited?",
+      "expected_section_ids": [
+        "audio56-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says the Quran is the reminder and cites Deuteronomy's promise of a prophet like Moses. Obedience belongs to the divine message delivered by a human messenger, and the sermon distinguishes the messenger's office from personal worship."
+    },
+    {
+      "id": "audio56-eval-010",
+      "question": "What exactly were listeners expected to obey?",
+      "expected_section_ids": [
+        "audio56-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says the Quran is the reminder and cites Deuteronomy's promise of a prophet like Moses. Obedience belongs to the divine message delivered by a human messenger, and the sermon distinguishes the messenger's office from personal worship."
+    },
+    {
+      "id": "audio56-eval-011",
+      "question": "How did Quran 5:48–50 define the Quran's relation to earlier scripture?",
+      "expected_section_ids": [
+        "audio56-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 5:48–50 says the revealed book confirms and supersedes previous scripture and requires judgment according to God's law. Quran 10:18 rejects powerless intercessors. The sermon says scriptural supersession does not authorize human tradition to replace revelation."
+    },
+    {
+      "id": "audio56-eval-012",
+      "question": "Why was intercession rejected?",
+      "expected_section_ids": [
+        "audio56-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 5:48–50 says the revealed book confirms and supersedes previous scripture and requires judgment according to God's law. Quran 10:18 rejects powerless intercessors. The sermon says scriptural supersession does not authorize human tradition to replace revelation."
+    },
+    {
+      "id": "audio56-eval-013",
+      "question": "What evidence distinction was drawn between Quran and Hadith?",
+      "expected_section_ids": [
+        "audio56-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad contrasts physical proof for the Quran with the absence of comparable proof for Hadith reports. Quran 53:23 condemns conjecture. Quran 28:56, 46:9, and 7:188 deny Muhammad independent power, knowledge of the future, or ability to guide loved ones. Quran 33:56 is interpreted as encouraging and supporting the prophet rather than ritually praying upon him."
+    },
+    {
+      "id": "audio56-eval-014",
+      "question": "Which limitations did Muhammad acknowledge?",
+      "expected_section_ids": [
+        "audio56-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad contrasts physical proof for the Quran with the absence of comparable proof for Hadith reports. Quran 53:23 condemns conjecture. Quran 28:56, 46:9, and 7:188 deny Muhammad independent power, knowledge of the future, or ability to guide loved ones. Quran 33:56 is interpreted as encouraging and supporting the prophet rather than ritually praying upon him."
+    },
+    {
+      "id": "audio56-eval-015",
+      "question": "How was Quran 33:56 translated?",
+      "expected_section_ids": [
+        "audio56-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad contrasts physical proof for the Quran with the absence of comparable proof for Hadith reports. Quran 53:23 condemns conjecture. Quran 28:56, 46:9, and 7:188 deny Muhammad independent power, knowledge of the future, or ability to guide loved ones. Quran 33:56 is interpreted as encouraging and supporting the prophet rather than ritually praying upon him."
+    },
+    {
+      "id": "audio56-eval-016",
+      "question": "What practices involving Durood were criticized?",
+      "expected_section_ids": [
+        "audio56-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The sermon criticizes daily formulas praising Muhammad, Durood books, and chain-letter distribution. Rashad says prophetic enemies use attractive speech and closes with questions about later titles such as the rightly guided caliphs."
+    },
+    {
+      "id": "audio56-eval-017",
+      "question": "How were chain-letter books distributed?",
+      "expected_section_ids": [
+        "audio56-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The sermon criticizes daily formulas praising Muhammad, Durood books, and chain-letter distribution. Rashad says prophetic enemies use attractive speech and closes with questions about later titles such as the rightly guided caliphs."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id"
+}

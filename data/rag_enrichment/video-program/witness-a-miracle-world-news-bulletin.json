@@ -1,0 +1,1829 @@
+{
+  "schema_version": "1.1",
+  "document_id": "video-program/witness-a-miracle-world-news-bulletin",
+  "title": "Witness a Miracle & World News Bulletin",
+  "source_file": "data/sources/playlists/video-transcripts/03 - Witness a Miracle & World News Bulletin.csv",
+  "youtube_id": "3Hn1zD5z6Cg",
+  "youtube_url": "https://www.youtube.com/watch?v=3Hn1zD5z6Cg",
+  "primary_speaker": "Dr. Rashad Khalifa",
+  "primary_speaker_basis": "data/catalog/videos.json",
+  "review_status": "draft",
+  "recording_parts": [
+    {
+      "title": "Witness a Miracle",
+      "start_time": "00:00:42.960",
+      "end_time": "00:37:19.190",
+      "genre": "religious-scientific presentation"
+    },
+    {
+      "title": "World News Bulletin",
+      "start_time": "00:37:49.990",
+      "end_time": "00:48:50.238",
+      "genre": "dated prophetic bulletin and religious polemic",
+      "recorded_date_claim": "1986-05-15"
+    }
+  ],
+  "transcript_statistics": {
+    "source_segments": 382,
+    "first_speech_time": "00:00:42.960",
+    "last_speech_time": "00:48:50.238",
+    "section_count": 19,
+    "speaker_column_blank_rows": 382
+  },
+  "document_summary": "The first part compares Carl Sagan's Contact with Rashad's claim that the Quran contains a real mathematically coded message proving God's existence. It traces one divine message through earlier messengers, recounts Rashad's computer analysis of the Quranic initials, presents examples of code 19, and interprets nineteen as the numerical value of the Arabic word for one. The second part is a bulletin recorded in May 1986. It predicts a new era beginning in 1986–1987 and the end of the world in 2280, describes the world as Satan's failed domain, gives three conditions for membership in God's kingdom, and issues polemical challenges to Christian, Jewish, and Muslim leaders.",
+  "content_guidance": [
+    {
+      "rule": "Separate quotations from Rashad's claims",
+      "instruction": "The recording quotes Carl Sagan, Studies in Jewish Mysticism, Rabbi Judah the Pious, and named books. Identify quoted material separately from Rashad's interpretation."
+    },
+    {
+      "rule": "Attribute proof claims",
+      "instruction": "Statements that the code is scientific, incontrovertible, beyond human ability, or the first physical proof of God must be phrased as Rashad's claims unless independently verified elsewhere."
+    },
+    {
+      "rule": "Date predictions explicitly",
+      "instruction": "The World News Bulletin was recorded May 15, 1986. Predictions about a transition in 1986–1987 and an end in 2280 must always be labeled as dated predictions."
+    },
+    {
+      "rule": "Do not certify prediction fulfillment",
+      "instruction": "Retrieval metadata may surface the prediction, but the RAG should not declare it fulfilled, failed, or reinterpreted without evidence beyond the transcript."
+    },
+    {
+      "rule": "Attribute historical scientific quantities",
+      "instruction": "Astronomical quantities and descriptions should be introduced with 'Rashad says' or 'the 1986 recording states.'"
+    },
+    {
+      "rule": "Use careful attribution for named individuals",
+      "instruction": "Claims that religious leaders were used by Satan, were in contempt of God, or that personal tragedy followed theology are Rashad's polemical assertions. Never state them as fact."
+    },
+    {
+      "rule": "Mark conceptual terminology",
+      "instruction": "Terms such as SETI, progressive revelation, muqattaat, gematria, tawhid, theodicy, failed prophecy, Unitarian Christianity, and hadith may be user labels absent from the source. Mark them as conceptual matches."
+    },
+    {
+      "rule": "Preserve section part",
+      "instruction": "Identify whether evidence comes from Witness a Miracle or the later World News Bulletin. The two parts have different genres and evidentiary status."
+    },
+    {
+      "rule": "Do not quote enrichment prose",
+      "instruction": "Section titles, summaries, aliases, and generated questions are retrieval metadata. Only canonical transcript text may be quoted as source evidence."
+    }
+  ],
+  "sections": [
+    {
+      "id": "miracle-01-s01",
+      "part": "Witness a Miracle",
+      "start_row": 0,
+      "end_row": 33,
+      "title": "Carl Sagan's Contact and the promise of a real coded message",
+      "summary": "Rashad introduces Carl Sagan's novel Contact, quotes its portrayal of a computer-decoded message from an intelligence older than the universe, and says Sagan's hope that fiction would be overtaken by scientific discovery has come true.",
+      "claim_classification": "discussion and quotation of a fictional work followed by Rashad's claim",
+      "concepts": [
+        {
+          "id": "carl-sagan-contact",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "coded-message",
+          "relation": "introduced",
+          "explicit": true
+        },
+        {
+          "id": "extraterrestrial-intelligence",
+          "relation": "quoted-from-fiction",
+          "explicit": true
+        },
+        {
+          "id": "intelligence-before-universe",
+          "relation": "quoted-from-fiction",
+          "explicit": true
+        },
+        {
+          "id": "science-and-religion",
+          "relation": "connected",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Carl Sagan Contact",
+        "coded message from outer space",
+        "SETI",
+        "extraterrestrial intelligence",
+        "intelligence older than the universe",
+        "science proving God",
+        "Contact novel"
+      ],
+      "related_questions": [
+        "Why did Rashad discuss Carl Sagan's Contact?",
+        "What quotations from Contact did Rashad use?",
+        "Did Rashad compare the Quran's code to a message from outer space?",
+        "What did Carl Sagan hope would make Contact obsolete?",
+        "Did Rashad discuss extraterrestrial intelligence or SETI?"
+      ],
+      "quoted_sources": [
+        {
+          "work": "Contact",
+          "author": "Carl Sagan",
+          "role": "fictional comparison and quoted material"
+        }
+      ],
+      "quran_references": [],
+      "entities": [
+        "Rashad Khalifa",
+        "Carl Sagan",
+        "Contact"
+      ],
+      "retrieval_note": "The source alternates between quotations from Sagan's novel and Rashad's own claims. Answers must identify which statement belongs to which source.",
+      "start": 42.96,
+      "end": 262.15,
+      "start_time": "00:00:42.960",
+      "end_time": "00:04:22.150",
+      "source_segment_start": 0,
+      "source_segment_end": 33,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "In the name of God, the Most Gracious, the Most Merciful. We are recording this program in January of 1986. A couple of months ago, around November 1985, a book appeared in bookstores across the nation that soon became a best-seller. The book is a fictitious novel, narrating the arrival, monitoring of a coded message from outer space that proved the existence of a super intelligence out there trying to contact us on earth. The message was decoded by computers. And the novel - this fictitious novel - even supports all-time religions' belief in God. The novel is \"Contact.\" You probably saw this book, \"Contact\" by Carl Sagan. And there are only four quotations that I would like to share with you in this book. The first quotation appears on the front flap of the book and it says \"in Contact, Carl Sagan, whose cosmos enthralled millions of readers and television viewers, has brilliantly employed the freedom of fiction to imagine the greatest adventure of all; humanity's first encounter with other intelligent beings.\" The second quotation appears on page 219. And it describes the computer decoding of this message as \"This is only the most amazing discovery in the history of the world.\" Let me repeat this quotation. It describes the computer decoding of the message like this \"This is only the most amazing discovery in the history of the world.\" The third quotation that I would like to share with you, appears at the end of the novel, page 430, where we find the conclusion of the whole novel. And here it is \"There is an intelligence that antedates the universe.\" In other words, the novel is trying to say that there is God out there. \"There is an intelligence that antedates the universe.\" The last quotation that I wish to share with you is non-fictitious. It is not fiction at all. It is Carl Sagan's notes at the end of the book. Carl Sagan says, in his... in the author's note \"My fondest hope for this book is that it will be made obsolete by the pace of real scientific discovery.\" Well, ladies and gentlemen, Carl Sagan's fondest hope has just come true.",
+      "retrieval_text": "Witness a Miracle\nCarl Sagan's Contact and the promise of a real coded message\nRashad introduces Carl Sagan's novel Contact, quotes its portrayal of a computer-decoded message from an intelligence older than the universe, and says Sagan's hope that fiction would be overtaken by scientific discovery has come true.\nClaim classification: discussion and quotation of a fictional work followed by Rashad's claim\nConcepts: carl sagan contact; coded message; extraterrestrial intelligence; intelligence before universe; science and religion\nUser terminology: Carl Sagan Contact; coded message from outer space; SETI; extraterrestrial intelligence; intelligence older than the universe; science proving God; Contact novel\nQuestions: Why did Rashad discuss Carl Sagan's Contact? What quotations from Contact did Rashad use? Did Rashad compare the Quran's code to a message from outer space? What did Carl Sagan hope would make Contact obsolete? Did Rashad discuss extraterrestrial intelligence or SETI?\nEntities: Rashad Khalifa; Carl Sagan; Contact"
+    },
+    {
+      "id": "miracle-01-s02",
+      "part": "Witness a Miracle",
+      "start_row": 34,
+      "end_row": 53,
+      "title": "Claiming the first physical proof that God exists",
+      "summary": "Rashad announces that the program will present a real coded message that could not be human-made. He characterizes it as the first physical and incontrovertible evidence for God's existence and claims that every statement in the program is mathematically proven.",
+      "claim_classification": "Rashad's evidentiary claim",
+      "concepts": [
+        {
+          "id": "physical-proof-of-god",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "incontrovertible-evidence",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "mathematical-code",
+          "relation": "introduced",
+          "explicit": true
+        },
+        {
+          "id": "faith-versus-knowledge",
+          "relation": "anticipated",
+          "explicit": false
+        },
+        {
+          "id": "scientific-proof-claim",
+          "relation": "claimed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "proof God exists",
+        "physical evidence for God",
+        "scientific proof of God",
+        "incontrovertible proof",
+        "miracle witnessed on television",
+        "coded message not made by humans"
+      ],
+      "related_questions": [
+        "What did Rashad call the first physical evidence for God?",
+        "Did Rashad claim every statement in the program was scientifically proven?",
+        "What did Rashad mean by witnessing a miracle?",
+        "How did Rashad distinguish this evidence from circumstantial evidence?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "God",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "These are the speaker's claims about the evidence. The RAG must not independently certify that the proof is scientifically incontrovertible.",
+      "start": 262.15,
+      "end": 393.189,
+      "start_time": "00:04:22.150",
+      "end_time": "00:06:33.189",
+      "source_segment_start": 34,
+      "source_segment_end": 53,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "In the next 50 minutes or so, I will share with you the real scientific discovery of a coded message from outer space, from deep space. And the message will represent the first physical evidence ever for the existence of God. We have been talking about God, and those who believe in God have been presenting circumstantial evidence. But now, we are going to witness a miracle. We are going to witness physical evidence, the first incontrovertible evidence that God exists. And we are going to see this proof through the real scientific discovery of a coded message that came to us and could never be human-made. Before I get to the historical development of this message, and the monitoring and decoding of it, I would like to make a couple of statements that I consider very important. The first statement is that every utterance you are going to hear in this program is a proven scientific fact. Every statement you are going to hear is proven by means of a mathematical code that gives us, provides us with physical evidence that every statement is correct. It is very important that you have full confidence that every statement here is proven by physical evidence. The reason I'm saying this is that some of the statements you are going to hear had in the past provoked ridicule or snickering or some laughter. This will no longer be the case.",
+      "retrieval_text": "Witness a Miracle\nClaiming the first physical proof that God exists\nRashad announces that the program will present a real coded message that could not be human-made. He characterizes it as the first physical and incontrovertible evidence for God's existence and claims that every statement in the program is mathematically proven.\nClaim classification: Rashad's evidentiary claim\nConcepts: physical proof of god; incontrovertible evidence; mathematical code; faith versus knowledge; scientific proof claim\nUser terminology: proof God exists; physical evidence for God; scientific proof of God; incontrovertible proof; miracle witnessed on television; coded message not made by humans\nQuestions: What did Rashad call the first physical evidence for God? Did Rashad claim every statement in the program was scientifically proven? What did Rashad mean by witnessing a miracle? How did Rashad distinguish this evidence from circumstantial evidence?\nEntities: God; Rashad Khalifa"
+    },
+    {
+      "id": "miracle-01-s03",
+      "part": "Witness a Miracle",
+      "start_row": 54,
+      "end_row": 85,
+      "title": "One divine message transmitted from Adam through the messengers",
+      "summary": "Rashad presents revelation as one continuous message delivered in portions through Adam, Noah, Abraham, Moses, David, Solomon, Jesus, Muhammad, and other messengers. He says its purpose is to explain human origins, earthly existence, destiny, and the purpose of life.",
+      "claim_classification": "theological teaching",
+      "concepts": [
+        {
+          "id": "one-divine-message",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "continuity-of-revelation",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "adam-first-message",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "messengers-of-god",
+          "relation": "listed",
+          "explicit": true
+        },
+        {
+          "id": "purpose-of-life",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "descent-of-adam",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "one religion from Adam",
+        "continuity of scripture",
+        "progressive revelation",
+        "message through all prophets",
+        "Adam came from above to Earth",
+        "why humans are here",
+        "where humans came from"
+      ],
+      "related_questions": [
+        "Did Rashad teach that all messengers brought one message?",
+        "What did Rashad say Adam taught his descendants?",
+        "What questions was the divine message supposed to answer?",
+        "Which messengers did Rashad name in the chain of revelation?",
+        "Did Rashad say Adam came to Earth from somewhere above?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "Adam",
+        "Eve",
+        "Noah",
+        "Abraham",
+        "Moses",
+        "David",
+        "Solomon",
+        "Jesus",
+        "Muhammad",
+        "God"
+      ],
+      "retrieval_note": "Useful for conceptual questions about progressive revelation, perennial religion, or scriptural continuity even when those technical terms are absent.",
+      "start": 393.189,
+      "end": 646.3,
+      "start_time": "00:06:33.189",
+      "end_time": "00:10:46.300",
+      "source_segment_start": 54,
+      "source_segment_end": 85,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "You see, the message came to this world in many parts, and the first part came to us through the first man, Adam. Adam was created by God, and he knew about God and when he came to this world, he transmitted the first portion of the message. The purpose of the message as you will see is to tell us where we came from, why we are here, where we are going, the purpose of our existence. So, Adam taught his children and grandchildren about God, and everything he knew about the creation of Adam, the creation of the human being, the creation of his wife, Eve, and how he came from up there to the planet Earth. That is a very important part of the message. The message, afterwards, came to us through every messenger of God: Noah, Abraham, Moses, Jesus, Muhammad. And I will go through the stages of development of the message and show you the mathematical code that was embedded in these messages. What happened was that God picked out from every generation a human being through whom God sent part of the message. We are talking about one and the same message. Abraham, Moses, David, Solomon, Jesus, Muhammad, all these people received parts of one and the same message. And as a proof of authenticity, as it turns out, and as you will witness in this program, God incorporated in His message to us an intricate mathematical code. Intricate beyond human ability, just to prove that this message is not fabricated by any human being. Abraham contributed a good portion of that message. And you know, you probably watched the movie \"the Ten Commandments.\" You know that Moses was walking in the desert when he saw the burning bush, and God communicated with Moses. God communicated part of that message. It was a very significant part - part that we call today the Torah. You saw in the movie and you read in the Bible how the tablets were, were written, were recorded, that the scripture was recorded on the tablets. That scripture, in the language of Moses, was mathematically coded beyond human ability, and this is what this program is all about. The discovery of a mathematical code embedded within God's message to us through His messengers.",
+      "retrieval_text": "Witness a Miracle\nOne divine message transmitted from Adam through the messengers\nRashad presents revelation as one continuous message delivered in portions through Adam, Noah, Abraham, Moses, David, Solomon, Jesus, Muhammad, and other messengers. He says its purpose is to explain human origins, earthly existence, destiny, and the purpose of life.\nClaim classification: theological teaching\nConcepts: one divine message; continuity of revelation; adam first message; messengers of god; purpose of life; descent of adam\nUser terminology: one religion from Adam; continuity of scripture; progressive revelation; message through all prophets; Adam came from above to Earth; why humans are here; where humans came from\nQuestions: Did Rashad teach that all messengers brought one message? What did Rashad say Adam taught his descendants? What questions was the divine message supposed to answer? Which messengers did Rashad name in the chain of revelation? Did Rashad say Adam came to Earth from somewhere above?\nEntities: Adam; Eve; Noah; Abraham; Moses; David; Solomon; Jesus; Muhammad; God"
+    },
+    {
+      "id": "miracle-01-s04",
+      "part": "Witness a Miracle",
+      "start_row": 86,
+      "end_row": 117,
+      "title": "Mathematical coding in the Torah, Gospel, and original scriptures",
+      "summary": "Rashad says the original-language scriptures given through Moses, Jesus, and other messengers were composed according to a common mathematical pattern. He quotes Studies in Jewish Mysticism about numerical harmony and the significance of letters, punctuation, and numerical structures.",
+      "claim_classification": "speaker claim supported by quotation of a secondary source",
+      "concepts": [
+        {
+          "id": "mathematical-code-in-scripture",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "original-language-scripture",
+          "relation": "emphasized",
+          "explicit": true
+        },
+        {
+          "id": "torah-code",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "gospel-code",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "jewish-mysticism",
+          "relation": "quoted",
+          "explicit": true
+        },
+        {
+          "id": "textual-numerical-harmony",
+          "relation": "quoted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Bible code",
+        "Torah code",
+        "mathematical code in the Gospel",
+        "Jewish numerology",
+        "gematria",
+        "scripture encoded in original languages",
+        "Studies in Jewish Mysticism",
+        "Rabbi Judah the Pious"
+      ],
+      "related_questions": [
+        "Did Rashad say the Torah and Gospel also had a mathematical code?",
+        "Why did Rashad emphasize the original languages of scripture?",
+        "What did Studies in Jewish Mysticism say about changing one letter?",
+        "Did Rashad connect Jewish mysticism with the Quran code?",
+        "What did Rashad say about Aramaic scripture given to Jesus?"
+      ],
+      "quoted_sources": [
+        {
+          "work": "Studies in Jewish Mysticism",
+          "author": "not identified in the transcript",
+          "role": "quoted secondary source on numerical harmony"
+        }
+      ],
+      "quran_references": [],
+      "entities": [
+        "Moses",
+        "Jesus",
+        "Adam",
+        "Abraham",
+        "David",
+        "Solomon",
+        "Muhammad",
+        "Rabbi Judah"
+      ],
+      "retrieval_note": "The transcript attributes broad claims about lost original scriptures to Rashad. The quoted book supports a narrower claim about Jewish mystical attention to numerical structure.",
+      "start": 646.77,
+      "end": 853.829,
+      "start_time": "00:10:46.770",
+      "end_time": "00:14:13.829",
+      "source_segment_start": 86,
+      "source_segment_end": 117,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "The first hint - let me go back to Moses, when he carried the tablet with the message on them, the letters on those tablets were counted according to an intricate mathematical code, the same mathematical code that was discovered in all the scriptures. The message given to Jesus, in his language, Aramaic, was also mathematically coded in that language. The alphabet letters of that message were counted and carefully placed. The whole message in Aramaic was composed according to a mathematical pattern. And this is the pattern that was consistent through every part of the message, from Adam to Abraham, Noah, before that, Moses, David, Solomon, Jesus, Muhammad. The same mathematical code, the letters, the words, the verses, everything was calculated and carefully placed to prove that the message is from God. The first hint of the discovery of a mathematical code was, at least what we know of, was announced about 1000 years ago. And this was printed recently in a book called \"Studies in Jewish Mysticism.\" \"Studies in Jewish Mysticism.\" And I'm going to read for you a quotation from that book \"No change can be tolerated in the text of the prayers, not even a minute one, because every change, even of one letter, would destroy the numerical harmony inherent in the text.\" That was the first hint of a mathematical code in God's message to the world. Here is another quotation from the same book, and this quotation also was written about 900 years ago. \"According to Rabbi Judah and the Ashkenazi Hasidic school in general, there can be nothing accidental in the Bible, not even the forms of letters, the punctuation, the vocalization, and especially in the numerical structures.\" How do you like that? 900 years ago marks the first discovery of a mathematical code in the scriptures. And I will go through the details of this amazing mathematical code, and how it penetrates and encodes the complete scripture of God. Of course, I'm talking about the original scripture, not any translation. We are talking about the original words of God in the languages of God's messengers: Adam, Abraham, Moses, David, Solomon, many many others, Jesus, Muhammad. And the original scripture was coded according to this very intricate miraculous system.",
+      "retrieval_text": "Witness a Miracle\nMathematical coding in the Torah, Gospel, and original scriptures\nRashad says the original-language scriptures given through Moses, Jesus, and other messengers were composed according to a common mathematical pattern. He quotes Studies in Jewish Mysticism about numerical harmony and the significance of letters, punctuation, and numerical structures.\nClaim classification: speaker claim supported by quotation of a secondary source\nConcepts: mathematical code in scripture; original language scripture; torah code; gospel code; jewish mysticism; textual numerical harmony\nUser terminology: Bible code; Torah code; mathematical code in the Gospel; Jewish numerology; gematria; scripture encoded in original languages; Studies in Jewish Mysticism; Rabbi Judah the Pious\nQuestions: Did Rashad say the Torah and Gospel also had a mathematical code? Why did Rashad emphasize the original languages of scripture? What did Studies in Jewish Mysticism say about changing one letter? Did Rashad connect Jewish mysticism with the Quran code? What did Rashad say about Aramaic scripture given to Jesus?\nEntities: Moses; Jesus; Adam; Abraham; David; Solomon; Muhammad; Rabbi Judah"
+    },
+    {
+      "id": "miracle-01-s05",
+      "part": "Witness a Miracle",
+      "start_row": 118,
+      "end_row": 160,
+      "title": "The Quran as the intact scripture and the computer discovery",
+      "summary": "Rashad argues that the Quran is the only original scripture still intact in its original language. He recounts noticing the Quranic initials in 1968, transliterating the Arabic text for a computer, counting letters and words, and discovering an intricate mathematical pattern.",
+      "claim_classification": "historical narrative and theological claim",
+      "concepts": [
+        {
+          "id": "quran-preservation",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "quran-final-edition",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "quranic-initials",
+          "relation": "investigated",
+          "explicit": true
+        },
+        {
+          "id": "computer-analysis-of-quran",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "1968-code-discovery",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "faith-versus-knowledge",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "how Rashad discovered the Quran code",
+        "1968 computer analysis",
+        "muqattaat",
+        "mysterious Quran initials",
+        "Quran preservation",
+        "Quran as final scripture",
+        "transliterating Arabic for computers",
+        "no longer believe but know God exists"
+      ],
+      "related_questions": [
+        "How did Rashad say he discovered the Quran's mathematical code?",
+        "Why did he transliterate Arabic letters into English letters?",
+        "What did Rashad say the Quranic initials meant?",
+        "Did Rashad call the Quran the only intact original scripture?",
+        "What did he mean by no longer needing faith after studying the code?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "Quran",
+        "Muhammad",
+        "Rashad Khalifa",
+        "Moses",
+        "Jesus",
+        "David"
+      ],
+      "retrieval_note": "This section contains the core discovery narrative. Modern user terms such as muqattaat or disjointed letters should retrieve it even though those terms are absent.",
+      "start": 874.258,
+      "end": 1162.7,
+      "start_time": "00:14:34.258",
+      "end_time": "00:19:22.700",
+      "source_segment_start": 118,
+      "source_segment_end": 160,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "How in the world are we going to study the original scriptures given to Abraham, Moses, David, Jesus and Muhammad? The mathematical code that God put in His message to the world, is in the original scripture, the original words, letters, verses that were written by God Almighty in those scriptures. In Abraham's scripture, in his original language, Moses' scripture, in his original language and so on. How are we going to study the original scripture given to Jesus in Aramaic, his language? Well, there is only one scripture in the world today that is original and still intact, and that is the Quran. Back in the year 610 AD, God picked out a man named Muhammad and communicated with us through him, by giving him the Quran. And Quran today is the only original intact scripture in the original language as written by God Almighty. The Quran represents the latest edition of the scripture. Remember, we are talking about one and the same message. And the mathematical code that I will share with you today was throughout the whole message, in the Torah, in the Gospel of Jesus, in the Quran, in the Psalms. And as I mentioned... I mentioned to you glimpses of the mathematical code that were written about, about a thousand years ago. Back in 1968, I noticed that the Quran had mysterious letters at the beginning of certain chapters. For example, chapter 2, begins... the first verse is only three letters A.L.M. \"What is A.L.M.?\" I wondered. 29 chapters in Quran have these mysterious letters. Chapter 50 is entitled Q. That's it, Q. and is prefixed with the letter Q, nothing else, Q. Chapter 68 is prefixed with the letter N. Chapter 36 is prefixed with the letter, letters Y.S. and so on. These letters remained mysterious for 1,400 years since 610 AD. Well, curiosity led me to put the Quran in the computer just to find out what these letters represent. So, I wrote the Quran in the computer. Of course, the Quran in the original language is Arabic, remember? And the computers when back in 1968, they didn't have Arabic computers. So, what I did, I took every Arabic letter in the Quran and I used an English letter to represent the Arabic letter. And I put the whole scripture, the final edition of God's message to the world in the computer. Then, I asked the computer for a number of mathematical characteristics. The number of every letter in every chapter, the numbers of words, and all kinds of questions. I had no idea what to expect. And when the computer was through and answering my questions, a very intricate mathematical pattern emerged, and fit with the older findings of mathematical codes in the original scriptures of Moses, Jesus, David, and so on. The mathematical code that emerged provides the first physical evidence for the existence of God. In fact, once you study this mathematical pattern in detail and understand it, you will no longer believe in God. You will know that God exists. You will need faith no longer. So, that's how intricate and how miraculous this mathematical code is.",
+      "retrieval_text": "Witness a Miracle\nThe Quran as the intact scripture and the computer discovery\nRashad argues that the Quran is the only original scripture still intact in its original language. He recounts noticing the Quranic initials in 1968, transliterating the Arabic text for a computer, counting letters and words, and discovering an intricate mathematical pattern.\nClaim classification: historical narrative and theological claim\nConcepts: quran preservation; quran final edition; quranic initials; computer analysis of quran; 1968 code discovery; faith versus knowledge\nUser terminology: how Rashad discovered the Quran code; 1968 computer analysis; muqattaat; mysterious Quran initials; Quran preservation; Quran as final scripture; transliterating Arabic for computers; no longer believe but know God exists\nQuestions: How did Rashad say he discovered the Quran's mathematical code? Why did he transliterate Arabic letters into English letters? What did Rashad say the Quranic initials meant? Did Rashad call the Quran the only intact original scripture? What did he mean by no longer needing faith after studying the code?\nEntities: Quran; Muhammad; Rashad Khalifa; Moses; Jesus; David"
+    },
+    {
+      "id": "miracle-01-s06",
+      "part": "Witness a Miracle",
+      "start_row": 161,
+      "end_row": 174,
+      "title": "The Quranic initials occur in multiples of nineteen",
+      "summary": "Rashad says the initialed chapters make up about half the Quran and that every set of mysterious letters occurs in its chapter in a multiple of nineteen. He presents this as proof of the Quran's authenticity and divine authorship.",
+      "claim_classification": "mathematical and theological claim",
+      "concepts": [
+        {
+          "id": "code-19",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "quranic-initials",
+          "relation": "counted",
+          "explicit": true
+        },
+        {
+          "id": "multiples-of-nineteen",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "quran-authenticity",
+          "relation": "claimed-proven",
+          "explicit": true
+        },
+        {
+          "id": "quran-divine-authorship",
+          "relation": "claimed-proven",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Quran code 19",
+        "multiples of 19",
+        "initialed suras",
+        "muqattaat counts",
+        "mathematical miracle of Quran",
+        "proof Quran is authentic"
+      ],
+      "related_questions": [
+        "What did Rashad claim about every set of Quranic initials?",
+        "How much of the Quran did he say is covered by initialed chapters?",
+        "How did he connect multiples of nineteen with Quranic authenticity?",
+        "Did Rashad say there were exceptions to the pattern?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "Quran",
+        "God"
+      ],
+      "retrieval_note": "The RAG should distinguish Rashad's claim of a universal pattern from an independently verified result.",
+      "start": 1191.64,
+      "end": 1282.8,
+      "start_time": "00:19:51.640",
+      "end_time": "00:21:22.800",
+      "source_segment_start": 161,
+      "source_segment_end": 174,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "As it turns out, these mysterious letters have specific counts in their chapters. And there was one common denominator in the whole scripture that is common to all these letters. We're talking about exactly half the Quran. The Quran is about 500 pages of the regular-sized pages, and the mysterious letters prefix 29 chapters that represent, in size, about half the Quran. The Quran consists of 114 chapters, many of them are short chapters, but these mysterious letters prefix about half the Quran and it turned out that every single set of these mysterious letters is found in its chapter in multiples of 19, without a single exception. In other words, the letters are distributed within Quran according to this intricate mathematical pattern that is way beyond the human ability. When you study it in detail, you will have no doubt whatsoever that there is a mathematical system proving the authenticity of Quran as God's message to the world. To be more accurate: as God's final edition of the scripture, His message to the world.",
+      "retrieval_text": "Witness a Miracle\nThe Quranic initials occur in multiples of nineteen\nRashad says the initialed chapters make up about half the Quran and that every set of mysterious letters occurs in its chapter in a multiple of nineteen. He presents this as proof of the Quran's authenticity and divine authorship.\nClaim classification: mathematical and theological claim\nConcepts: code 19; quranic initials; multiples of nineteen; quran authenticity; quran divine authorship\nUser terminology: Quran code 19; multiples of 19; initialed suras; muqattaat counts; mathematical miracle of Quran; proof Quran is authentic\nQuestions: What did Rashad claim about every set of Quranic initials? How much of the Quran did he say is covered by initialed chapters? How did he connect multiples of nineteen with Quranic authenticity? Did Rashad say there were exceptions to the pattern?\nEntities: Quran; God"
+    },
+    {
+      "id": "miracle-01-s07",
+      "part": "Witness a Miracle",
+      "start_row": 175,
+      "end_row": 203,
+      "title": "Examples from Q, N, and Y.S.",
+      "summary": "Rashad gives numerical examples from Quran chapters 50, 42, 68, and 36. He says the two Q-initialed chapters each contain fifty-seven Qs, chapter 68 contains 133 Ns, and chapter 36 contains a combined 285 occurrences of Y and S.",
+      "claim_classification": "specific count claims",
+      "concepts": [
+        {
+          "id": "qaf-counts",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "nun-count",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "ya-sin-count",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "code-19",
+          "relation": "illustrated",
+          "explicit": true
+        },
+        {
+          "id": "interlocking-letter-pattern",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "57 Qs",
+        "Qaf chapter 50",
+        "Qaf chapter 42",
+        "133 Nuns",
+        "Nun chapter 68",
+        "285 Ya Sin letters",
+        "chapter 36 code",
+        "Quran initials numerical examples"
+      ],
+      "related_questions": [
+        "How many Qs did Rashad say are in chapters 50 and 42?",
+        "What count did Rashad give for the letter N in chapter 68?",
+        "What total did he give for Y and S in chapter 36?",
+        "How did the two Q chapters connect with the 114 chapters of the Quran?",
+        "What did Rashad mean by an interlocking relationship among the initials?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [
+        "42",
+        "50",
+        "68",
+        "36"
+      ],
+      "entities": [
+        "Quran"
+      ],
+      "retrieval_note": "These are precise count claims and should be reported exactly as the recording states, without silently correcting or independently validating them.",
+      "start": 1306.847,
+      "end": 1494.72,
+      "start_time": "00:21:46.847",
+      "end_time": "00:24:54.720",
+      "source_segment_start": 175,
+      "source_segment_end": 203,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "So, now let me give you a few examples to demonstrate the miraculous nature of this mathematical code. Chapter 50, for example, in Quran is entitled Q, as I mentioned before, and is prefixed with the letter Q. When you count the letter Q in that chapter, you will find 57 Q's in the whole chapter. That is 19 times 3. It's a multiple of 19. And as I said every single one of these mysterious letters is found in its chapter in multiples of 19. There is another chapter in Quran, one other chapter, that is also prefixed with the letter Q, and that is chapter 42. And guess what, even though chapter 42 of Quran is more than twice as long as chapter 50, it has the same number of Q in it, 57. So,...and 57 is 19 equals 3. So, the only two chapters in Quran that are prefixed with the letter Q have exactly the same number, 57 and 57. And Q, we are told in chapter 50, represents Quran. Quran is spelled with the heavy K in the Arabic language, which is represented by the letter Q. Only two chapters, 57 and 57, the total is 114. And guess what, this is the number of chapters in Quran, 114, 19 times 6. The letter N prefixes chapter 68, and when we count the letter N in that chapter, we find 133. These as you notice are physical facts. It is not guesswork. I'm not saying \"in my opinion, chapter 68 contains 133 N's.\" This is a physical fact. The chapter is initialed with the letter N, prefixed with the initial N, and it contains 133 Ns. 133 is a multiple of 19. It equals 19 times 7. Chapter 36, for example, is prefixed with the letters Y.S., and when you count the letters Y and S in this chapter, the total is 285, or 19 times 15. How do you like that? This means every letter Y, every letter S, in this chapter, is counted, calculated and harmonized with the other initialed chapters. There is also an interlocking relationship between these letters, because you find these letters in a number of chapters and they interlock with each other, and all of them give you totals that are multiples of 19. We will find out why 19 before the end of this program. But at",
+      "retrieval_text": "Witness a Miracle\nExamples from Q, N, and Y.S.\nRashad gives numerical examples from Quran chapters 50, 42, 68, and 36. He says the two Q-initialed chapters each contain fifty-seven Qs, chapter 68 contains 133 Ns, and chapter 36 contains a combined 285 occurrences of Y and S.\nClaim classification: specific count claims\nConcepts: qaf counts; nun count; ya sin count; code 19; interlocking letter pattern\nUser terminology: 57 Qs; Qaf chapter 50; Qaf chapter 42; 133 Nuns; Nun chapter 68; 285 Ya Sin letters; chapter 36 code; Quran initials numerical examples\nQuestions: How many Qs did Rashad say are in chapters 50 and 42? What count did Rashad give for the letter N in chapter 68? What total did he give for Y and S in chapter 36? How did the two Q chapters connect with the 114 chapters of the Quran? What did Rashad mean by an interlocking relationship among the initials?\nQuran references: 42; 50; 68; 36\nEntities: Quran"
+    },
+    {
+      "id": "miracle-01-s08",
+      "part": "Witness a Miracle",
+      "start_row": 204,
+      "end_row": 228,
+      "title": "Rabbi Judah the Pious and patterns of nineteen in Jewish prayer",
+      "summary": "Rashad quotes a passage attributed to Rabbi Judah the Pious stating that divine names and references to Israel occur nineteen times in a Jewish morning prayer section. He presents this as evidence that nineteen is a common denominator across earlier scripture and the Quran.",
+      "claim_classification": "quotation followed by Rashad's interfaith conclusion",
+      "concepts": [
+        {
+          "id": "rabbi-judah-the-pious",
+          "relation": "quoted",
+          "explicit": true
+        },
+        {
+          "id": "nineteen-in-jewish-prayer",
+          "relation": "quoted",
+          "explicit": true
+        },
+        {
+          "id": "interfaith-code-19",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "elohim-count",
+          "relation": "quoted",
+          "explicit": true
+        },
+        {
+          "id": "scriptural-common-denominator",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rabbi Judah the Pious",
+        "Jewish prayer and number 19",
+        "Elohim nineteen times",
+        "Ashrei Temimei Derekh",
+        "code 19 in Torah",
+        "nineteen in earlier scriptures"
+      ],
+      "related_questions": [
+        "What did Rashad quote from Rabbi Judah the Pious?",
+        "Where did Rashad find nineteen in Jewish prayer?",
+        "Did Rashad claim code 19 existed before the Quran?",
+        "What did the quotation say about Elohim occurring nineteen times?",
+        "How did Rashad connect the Torah, Gospel, Psalms, and Quran?"
+      ],
+      "quoted_sources": [
+        {
+          "work": "writings attributed to Rabbi Judah the Pious",
+          "author": "Rabbi Judah the Pious",
+          "role": "quoted evidence for patterns of nineteen"
+        }
+      ],
+      "quran_references": [],
+      "entities": [
+        "Rabbi Judah the Pious",
+        "Elohim",
+        "Israel",
+        "Quran",
+        "Torah",
+        "Psalms",
+        "Gospel"
+      ],
+      "retrieval_note": "The quotation and Rashad's interpretation must remain distinct. The transcript's dating varies between roughly nine hundred and one thousand years ago.",
+      "start": 1494.72,
+      "end": 1720.8,
+      "start_time": "00:24:54.720",
+      "end_time": "00:28:40.800",
+      "source_segment_start": 204,
+      "source_segment_end": 228,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "this point, I would like to quote for you from Rabbi Judah the pious, his writings of about a thousand years ago, and it demonstrates the common denominator in all the scriptures, one and the same message: the Quran, the Gospel of Jesus, the Torah of Moses, the Psalms of David. Let me quote for you from Rabbi Judah the pious, where we find that the number 19 is the common denominator in all the scriptures. Here's what Rabbi Judah said 900 years ago \"The people, the Jews in France, made it a custom to add in the morning prayer the words: ashrei temimei derekh, which means blessed are those who walk the right righteous way. And our Rabbi the Pious of blessed memory wrote that they were completely and utterly wrong. It is all gross falsehood because there are only 19 times...\" here it is \"...there are only 19 times that the holy name is mentioned in that portion of the morning prayer. And similarly, you find the word Elohim 19 times. Similarly, you find that Israel were called sons 19 times, and there are many other examples. All these sets of 19...\" 19, here we go. ...\"are intricately intertwined and they contain many secrets and esoteric meanings which are contained in more than eight large volumes.\" So, this is just to give you an idea that the number 19 is the common denominator in all portions of the message, God's message to the world. Ladies and gentlemen, it is impossible, statistically impossible to write a book with this kind of mathematical composition, where every letter, every word is calculated and carefully placed according to a mathematical pattern that is clearly beyond human ability. We find this mathematical pattern in God's scripture, the one and the same message, in Quran and in previous scriptures. I just gave you the example from the Torah as written by Rabbi Judah the pious.",
+      "retrieval_text": "Witness a Miracle\nRabbi Judah the Pious and patterns of nineteen in Jewish prayer\nRashad quotes a passage attributed to Rabbi Judah the Pious stating that divine names and references to Israel occur nineteen times in a Jewish morning prayer section. He presents this as evidence that nineteen is a common denominator across earlier scripture and the Quran.\nClaim classification: quotation followed by Rashad's interfaith conclusion\nConcepts: rabbi judah the pious; nineteen in jewish prayer; interfaith code 19; elohim count; scriptural common denominator\nUser terminology: Rabbi Judah the Pious; Jewish prayer and number 19; Elohim nineteen times; Ashrei Temimei Derekh; code 19 in Torah; nineteen in earlier scriptures\nQuestions: What did Rashad quote from Rabbi Judah the Pious? Where did Rashad find nineteen in Jewish prayer? Did Rashad claim code 19 existed before the Quran? What did the quotation say about Elohim occurring nineteen times? How did Rashad connect the Torah, Gospel, Psalms, and Quran?\nEntities: Rabbi Judah the Pious; Elohim; Israel; Quran; Torah; Psalms; Gospel"
+    },
+    {
+      "id": "miracle-01-s09",
+      "part": "Witness a Miracle",
+      "start_row": 229,
+      "end_row": 253,
+      "title": "Why nineteen signifies the oneness of God",
+      "summary": "Rashad asks why nineteen is the scriptural common denominator and answers that the Arabic word for one, which he renders as WAHD, has the numerical value nineteen in the traditional letter-number system. He says the code therefore signifies that God is one.",
+      "claim_classification": "numerological and theological interpretation",
+      "concepts": [
+        {
+          "id": "wahid-value-nineteen",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "abjad-numerals",
+          "relation": "explained",
+          "explicit": true
+        },
+        {
+          "id": "divine-oneness",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "tawhid",
+          "relation": "conceptually-affirmed",
+          "explicit": false
+        },
+        {
+          "id": "meaning-of-number-nineteen",
+          "relation": "explained",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "why number 19",
+        "wahid equals 19",
+        "abjad value of one",
+        "Arabic numerology",
+        "tawhid and code 19",
+        "W A H D numerical value",
+        "wahed",
+        "wahid"
+      ],
+      "related_questions": [
+        "Why did Rashad say the number nineteen was used?",
+        "How did he calculate the Arabic word for one as nineteen?",
+        "What letter values did Rashad assign to W, A, H, and D?",
+        "Did Rashad connect code 19 with tawhid?",
+        "What spelling did the transcript use for the Arabic word one?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "God"
+      ],
+      "retrieval_note": "Index common transliterations such as wahid and wahed even though the transcript displays WAHD. Do not silently treat the transliteration as a verbatim quote.",
+      "start": 1732.59,
+      "end": 1904.989,
+      "start_time": "00:28:52.590",
+      "end_time": "00:31:44.989",
+      "source_segment_start": 229,
+      "source_segment_end": 253,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "And now we come to the big question \"why 19?\" in the older scripture as well as in the Quran. Why is 19 the common denominator of God's message to the world, from the time of Adam until now? And why did it have to wait? You see, when Rabbi Judah discovered the number 19 in the older scriptures, he didn't know why 19. As you recall when I quoted him, he said \"there is a secret and a great esoteric meaning to the number 19\" but he didn't know why. Because this question had to wait until the completion of God's message to the world by revealing the final edition, the Quran in the Arabic language. You see 19 is the numerical value of the word \"one\", in Arabic. And this is the whole essence of the scripture, that there is one God, that we shall worship only the one God. In Arabic, the word \"one\" is written like this. It is pronounced: \"WAHD.\" And at the time of revelation of Quran, there were no numbers as we know them today. They used the alphabet letters as numbers. So, the numbers were non-existent. This is a relatively recent invention, the numbers. So, let us go to this word in Arabic, the word \"one\" or \"WAHD\" and see how the numerical value equals 19. The first letter in this word \"W\" was 6 in those days. It was the letter \"W\" and also the number 6. This is the letter \"A\" and it represents the numeral 1. This is the letter \"Ha\" which represented the numeral 8. Finally, the letter \"D\", \"WAHD\", the letter \"D\" was 4. And if you add the total, 6 plus 1 is 7... 7 plus 8 is 15... 15 plus 4 is 19. So, there's the total the numerical value of the word \"one\" in Arabic. And now with the completion of the scriptures, through the revelation of Quran, we know why 19. 19, the common denominator of the mathematical code throughout the scriptures, means \"one.\" God is one.",
+      "retrieval_text": "Witness a Miracle\nWhy nineteen signifies the oneness of God\nRashad asks why nineteen is the scriptural common denominator and answers that the Arabic word for one, which he renders as WAHD, has the numerical value nineteen in the traditional letter-number system. He says the code therefore signifies that God is one.\nClaim classification: numerological and theological interpretation\nConcepts: wahid value nineteen; abjad numerals; divine oneness; tawhid; meaning of number nineteen\nUser terminology: why number 19; wahid equals 19; abjad value of one; Arabic numerology; tawhid and code 19; W A H D numerical value; wahed; wahid\nQuestions: Why did Rashad say the number nineteen was used? How did he calculate the Arabic word for one as nineteen? What letter values did Rashad assign to W, A, H, and D? Did Rashad connect code 19 with tawhid? What spelling did the transcript use for the Arabic word one?\nEntities: God"
+    },
+    {
+      "id": "miracle-01-s10",
+      "part": "Witness a Miracle",
+      "start_row": 254,
+      "end_row": 266,
+      "title": "The message's content matters more than the code",
+      "summary": "Rashad says the code is less important than the message's answers to the central human questions: who people are, where they came from, where they are going, why they are here, and who created them. He describes God as omnipotent, omnipresent, and omniscient.",
+      "claim_classification": "theological teaching",
+      "concepts": [
+        {
+          "id": "content-over-code",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "purpose-of-life",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "human-origins-and-destiny",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "divine-attributes",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "creator-authority",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "content more important than code",
+        "who are we",
+        "where did humans come from",
+        "where are humans going",
+        "purpose of life",
+        "omnipotent omnipresent omniscient",
+        "who created us"
+      ],
+      "related_questions": [
+        "What did Rashad say was more important than the mathematical code?",
+        "What major human questions did he say the message answers?",
+        "How did Rashad describe God's attributes?",
+        "Did Rashad say the code was the main point of scripture?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "God"
+      ],
+      "retrieval_note": "This section should answer broad existential questions even when the user does not mention code 19.",
+      "start": 1908.7,
+      "end": 1990,
+      "start_time": "00:31:48.700",
+      "end_time": "00:33:10.000",
+      "source_segment_start": 254,
+      "source_segment_end": 266,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "What is more important than the mathematical code is the content of the message itself. Because the message, being from our Creator, tells us who we are, where we came from, where we are going, and why we are here, what is the purpose of our life. These are the most important questions as far as any human being is concerned. And now, we have the answers from the most authoritative source, the Creator Himself. Naturally, we cannot discuss all the contents of the message in one program. Hopefully, in a series of programs, we will present to you the contents of the message. But for now, let me deal with just one question: Who is God? Who is the One who created you and me? There is a specific One who created you and me, and the whole universe. There is a certain One that we should know who is the Omnipotent, Omnipresent, Omniscient God who runs this universe. Who is He? The Quran describes God as following:",
+      "retrieval_text": "Witness a Miracle\nThe message's content matters more than the code\nRashad says the code is less important than the message's answers to the central human questions: who people are, where they came from, where they are going, why they are here, and who created them. He describes God as omnipotent, omnipresent, and omniscient.\nClaim classification: theological teaching\nConcepts: content over code; purpose of life; human origins and destiny; divine attributes; creator authority\nUser terminology: content more important than code; who are we; where did humans come from; where are humans going; purpose of life; omnipotent omnipresent omniscient; who created us\nQuestions: What did Rashad say was more important than the mathematical code? What major human questions did he say the message answers? How did Rashad describe God's attributes? Did Rashad say the code was the main point of scripture?\nEntities: God"
+    },
+    {
+      "id": "miracle-01-s11",
+      "part": "Witness a Miracle",
+      "start_row": 267,
+      "end_row": 300,
+      "title": "Who God is: cosmic scale, seven universes, and divine control",
+      "summary": "Rashad repeats his cosmic-scale argument, describing the Milky Way, billions of galaxies and stars, and seven nested universes. He says Quran chapter 39 depicts God holding the seven universes in His right hand and identifies God as the sole creator and controller of celestial order.",
+      "claim_classification": "theological interpretation using historical astronomical claims",
+      "concepts": [
+        {
+          "id": "cosmic-scale",
+          "relation": "illustrated",
+          "explicit": true
+        },
+        {
+          "id": "seven-universes",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "quran-39-67",
+          "relation": "cited",
+          "explicit": true
+        },
+        {
+          "id": "divine-control-of-cosmos",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "god-holds-universes",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "sole-creator",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Who is God according to Rashad",
+        "seven universes",
+        "seven heavens",
+        "God holding the universe in His hand",
+        "Quran 39:67",
+        "God controls the sun and moon",
+        "cosmic proof of God"
+      ],
+      "related_questions": [
+        "How did Rashad answer the question Who is God?",
+        "How many universes did he say exist?",
+        "What did he say chapter 39 teaches about God's hand?",
+        "Who did Rashad say controls the Sun, Moon, stars, and galaxies?",
+        "How did he connect cosmic precision with God's sole authority?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [
+        "39:67"
+      ],
+      "entities": [
+        "God",
+        "Quran",
+        "Earth",
+        "Milky Way",
+        "Sun",
+        "Moon"
+      ],
+      "retrieval_note": "Astronomical quantities must be attributed to the 1986 recording. Separate Quran 39:67 from Rashad's interpretation of seven heavens as seven universes.",
+      "start": 1990,
+      "end": 2218.95,
+      "start_time": "00:33:10.000",
+      "end_time": "00:36:58.950",
+      "source_segment_start": 267,
+      "source_segment_end": 300,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "You see, this planet Earth is part of the Milky Way galaxy, and the Milky Way galaxy is so huge that it takes 30,000 light years, if you travel at the speed of light, it will take you 30,000 years to reach the outer limit of the Milky Way galaxy, our galaxy. And our universe contains 1 billion galaxies like the Milky Way, a billion trillion stars. These numbers are actual scientific numbers. The astronomers, the scientists, stopped counting at 1 billion galaxies in our universe and the billion trillion stars. That's how big our universe is. We now measured 26 billion light years within our universe, 26,000 millions of light years within our universe. And the Quran, God tells us in Quran that there are seven universes. The billion trillion stars, the 1 billion galaxies, the 26 billion light years are only within the smallest and innermost of seven universes. This is how God describes the universes. You can imagine seven balls inside each other. And we live in the smallest and innermost of the seven universes. Can you imagine the size of the second universe? How about the third universe? The fourth? The fifth? The sixth? And the seventh universe? How can we describe the circumference of the seventh universe? Infinity will be the most accurate description of the length of the circumference of the seventh universe. And you know what? Quran describes God as holding the seven universes in His right hand. That's who God is. God is holding the seven universes in one hand. It makes a difference whether you are holding something in both hands, like this, or within the fists of one hand. And in chapter 39 of Quran, God describes Himself as holding the seven universes in His right hand, and this tells you who God is. God is the One who created the sun, the moon, the stars, the galaxies in the extreme accuracy that you see. The sun will rise tomorrow exactly at the specific time from the specific place because God designed it this way. And He's the only one who controls it. No other entity, human or non-human, designed this universe. So, this is just an example of the contents of the message. The message goes on and tells you exactly why you are here and how to fulfill the purpose of your life. But we will get into these topics in the future, God willing. And I hope you will follow these series of programs. Meanwhile,",
+      "retrieval_text": "Witness a Miracle\nWho God is: cosmic scale, seven universes, and divine control\nRashad repeats his cosmic-scale argument, describing the Milky Way, billions of galaxies and stars, and seven nested universes. He says Quran chapter 39 depicts God holding the seven universes in His right hand and identifies God as the sole creator and controller of celestial order.\nClaim classification: theological interpretation using historical astronomical claims\nConcepts: cosmic scale; seven universes; quran 39 67; divine control of cosmos; god holds universes; sole creator\nUser terminology: Who is God according to Rashad; seven universes; seven heavens; God holding the universe in His hand; Quran 39:67; God controls the sun and moon; cosmic proof of God\nQuestions: How did Rashad answer the question Who is God? How many universes did he say exist? What did he say chapter 39 teaches about God's hand? Who did Rashad say controls the Sun, Moon, stars, and galaxies? How did he connect cosmic precision with God's sole authority?\nQuran references: 39:67\nEntities: God; Quran; Earth; Milky Way; Sun; Moon"
+    },
+    {
+      "id": "miracle-01-s12",
+      "part": "Witness a Miracle",
+      "start_row": 301,
+      "end_row": 303,
+      "title": "Invitation to contact Rashad in Tucson",
+      "summary": "Rashad invites viewers to send questions or call and gives a Tucson street address and telephone number.",
+      "claim_classification": "historical contact information",
+      "concepts": [
+        {
+          "id": "tucson-contact-information",
+          "relation": "provided",
+          "explicit": true
+        },
+        {
+          "id": "viewer-questions",
+          "relation": "invited",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad Tucson address",
+        "Rashad phone number",
+        "739 East Sixth Street",
+        "how to contact Rashad"
+      ],
+      "related_questions": [
+        "What address did Rashad give in the program?",
+        "What telephone number did he provide?",
+        "How could viewers send questions?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "Rashad Khalifa",
+        "Tucson"
+      ],
+      "retrieval_note": "This is historical contact information and should not be implied to be currently valid.",
+      "start": 2218.95,
+      "end": 2239.19,
+      "start_time": "00:36:58.950",
+      "end_time": "00:37:19.190",
+      "source_segment_start": 301,
+      "source_segment_end": 303,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "if you have any questions, please write to me or call. Our address is 739 East sixth Street Tucson, Arizona 85719. The telephone is area code 602 791 3989.",
+      "retrieval_text": "Witness a Miracle\nInvitation to contact Rashad in Tucson\nRashad invites viewers to send questions or call and gives a Tucson street address and telephone number.\nClaim classification: historical contact information\nConcepts: tucson contact information; viewer questions\nUser terminology: Rashad Tucson address; Rashad phone number; 739 East Sixth Street; how to contact Rashad\nQuestions: What address did Rashad give in the program? What telephone number did he provide? How could viewers send questions?\nEntities: Rashad Khalifa; Tucson"
+    },
+    {
+      "id": "bulletin-01-s01",
+      "part": "World News Bulletin",
+      "start_row": 304,
+      "end_row": 315,
+      "title": "Dated prediction of a new era beginning in 1986–1987 and ending in 2280",
+      "summary": "In a bulletin recorded on May 15, 1986, Rashad predicts that the world as then known would end as a system and that a new worldwide era would begin between September 6, 1986 and August 25, 1987. He says the era would last 303 lunar years, or 294 solar years, and that the world would end in 2280.",
+      "claim_classification": "dated prediction by Rashad Khalifa",
+      "concepts": [
+        {
+          "id": "new-era-1986-1987",
+          "relation": "predicted",
+          "explicit": true
+        },
+        {
+          "id": "world-end-2280",
+          "relation": "predicted",
+          "explicit": true
+        },
+        {
+          "id": "303-lunar-years",
+          "relation": "predicted-duration",
+          "explicit": true
+        },
+        {
+          "id": "world-news-bulletin",
+          "relation": "announced",
+          "explicit": true
+        },
+        {
+          "id": "built-in-proof-claim",
+          "relation": "claimed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad 1986 prophecy",
+        "new era prediction",
+        "September 6 1986",
+        "August 25 1987",
+        "end of the world 2280",
+        "303 lunar years",
+        "294 regular years",
+        "failed prophecy",
+        "World News Bulletin"
+      ],
+      "related_questions": [
+        "What did Rashad predict would happen in 1986 or 1987?",
+        "When did Rashad say the new era would begin?",
+        "When did Rashad predict the world would end?",
+        "How long did he say the new era would last?",
+        "On what date was the World News Bulletin recorded?",
+        "Did Rashad make a dated prophecy in this video?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "Always state the recording date and present these as Rashad's predictions. Do not imply that the predicted transition is an established historical fact.",
+      "start": 2269.99,
+      "end": 2359.653,
+      "start_time": "00:37:49.990",
+      "end_time": "00:39:19.653",
+      "source_segment_start": 304,
+      "source_segment_end": 315,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "Ladies and gentlemen, my name is Rashad Khalifa, and what I'm about to share with you is the most important news in the history of the world. Because this is the most important news, it comes with something unique, something never witnessed before, a built-in irrefutable proof of authenticity. The world's leaders are invited, as well as each and every one of you, invited to examine the evidence then take action in accordance with this news. Here are the headlines. This year, 1986, is the last year to experience the world as we know it, today. A new worldwide era or worldwide system will begin sometime between September 6, 1986 and August 25th, 1987. We are recording this bulletin on May 15th, 1986. The new era will last 303 lunar years, which is equivalent to 294 regular years after which the world will come to an end. In other words, after 300 years of a new era, the world will end in the year 2280.",
+      "retrieval_text": "World News Bulletin\nDated prediction of a new era beginning in 1986–1987 and ending in 2280\nIn a bulletin recorded on May 15, 1986, Rashad predicts that the world as then known would end as a system and that a new worldwide era would begin between September 6, 1986 and August 25, 1987. He says the era would last 303 lunar years, or 294 solar years, and that the world would end in 2280.\nClaim classification: dated prediction by Rashad Khalifa\nConcepts: new era 1986 1987; world end 2280; 303 lunar years; world news bulletin; built in proof claim\nUser terminology: Rashad 1986 prophecy; new era prediction; September 6 1986; August 25 1987; end of the world 2280; 303 lunar years; 294 regular years; failed prophecy; World News Bulletin\nQuestions: What did Rashad predict would happen in 1986 or 1987? When did Rashad say the new era would begin? When did Rashad predict the world would end? How long did he say the new era would last? On what date was the World News Bulletin recorded? Did Rashad make a dated prophecy in this video?\nEntities: Rashad Khalifa"
+    },
+    {
+      "id": "bulletin-01-s02",
+      "part": "World News Bulletin",
+      "start_row": 316,
+      "end_row": 337,
+      "title": "Satan's failed domain contrasted with the coming kingdom of God",
+      "summary": "Rashad says the world had served as a test of Satan's claim to be a god and points to misery, disease, famine, poverty, divorce, oppression, and war as evidence of Satan's failure. He predicts a coming divine kingdom characterized by health, wealth, peace, and joy.",
+      "claim_classification": "theological explanation and prediction",
+      "concepts": [
+        {
+          "id": "satans-domain",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "satan-claim-to-divinity",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "problem-of-evil",
+          "relation": "explained",
+          "explicit": false
+        },
+        {
+          "id": "kingdom-of-god-on-earth",
+          "relation": "predicted",
+          "explicit": true
+        },
+        {
+          "id": "perfect-health-wealth-peace",
+          "relation": "predicted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "why suffering exists",
+        "Satan's experiment",
+        "Satan tried to be God",
+        "world as Satan's domain",
+        "kingdom of God on earth",
+        "perfect health wealth and peace",
+        "theodicy"
+      ],
+      "related_questions": [
+        "Why did Rashad say the world contains misery and war?",
+        "What did Rashad mean by Satan's domain?",
+        "What did he predict God's coming kingdom would be like?",
+        "Did Rashad explain suffering as a test of Satan's claim?",
+        "What was supposed to replace Satan's kingdom?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "God",
+        "Satan",
+        "Earth"
+      ],
+      "retrieval_note": "Modern terms such as theodicy or problem of evil are conceptual aliases. The predicted kingdom must be framed as the speaker's dated proclamation.",
+      "start": 2388.479,
+      "end": 2538.09,
+      "start_time": "00:39:48.479",
+      "end_time": "00:42:18.090",
+      "source_segment_start": 316,
+      "source_segment_end": 337,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "Up until now, the world has served as the testing ground for Satan's claim that he can be a god besides God. Up until now, the world has been Satan's domain. Satan's incompetence as a god has been proven by the abundance of misery, disease, famine, divorce, oppression, and wars, in this world. In the new era, Satan will throw up his arms and declare his failure. For thousands of years, Satan has been trying very hard to make his domain, the planet Earth, a perfect place, where everyone enjoys perfect health, perfect wealth, and perfect peace, but he just couldn't do it. While Satan's kingdom is plagued with misery, disease, famine, poverty, oppression, and wars, the upcoming era of God's kingdom is characterized by perfect health, perfect wealth, and perfect peace and joy. To become a member in the upcoming kingdom of God, you must satisfy three minimum requirements. First, you must believe in the one true God as the Omnipotent, Omniscient and Omnipresent Creator and Sustainer of the universe. You must believe in the one true God, the specific One who actually created you. You must believe in the one true God ALONE without idolization of any creature of God, such as Jesus, or Mary, or Buddha, or Muhammad, or the saints. The definition of idol worship is believing that anyone or anything other than God can benefit you. The second requirement for membership in the upcoming kingdom of God is to believe in the Hereafter, Resurrection after death, Heaven and Hell. The third requirement is to lead a righteous life and this means that you're a person who is honest, truthful, nice, one who never hurts anyone.",
+      "retrieval_text": "World News Bulletin\nSatan's failed domain contrasted with the coming kingdom of God\nRashad says the world had served as a test of Satan's claim to be a god and points to misery, disease, famine, poverty, divorce, oppression, and war as evidence of Satan's failure. He predicts a coming divine kingdom characterized by health, wealth, peace, and joy.\nClaim classification: theological explanation and prediction\nConcepts: satans domain; satan claim to divinity; problem of evil; kingdom of god on earth; perfect health wealth peace\nUser terminology: why suffering exists; Satan's experiment; Satan tried to be God; world as Satan's domain; kingdom of God on earth; perfect health wealth and peace; theodicy\nQuestions: Why did Rashad say the world contains misery and war? What did Rashad mean by Satan's domain? What did he predict God's coming kingdom would be like? Did Rashad explain suffering as a test of Satan's claim? What was supposed to replace Satan's kingdom?\nEntities: God; Satan; Earth"
+    },
+    {
+      "id": "bulletin-01-s03",
+      "part": "World News Bulletin",
+      "start_row": 327,
+      "end_row": 340,
+      "title": "Three requirements for membership in God's kingdom",
+      "summary": "Rashad gives three minimum requirements: belief in God alone without idolizing any creature, belief in the Hereafter and resurrection, and a righteous life defined by honesty, truthfulness, kindness, and not harming others.",
+      "claim_classification": "religious prescription",
+      "concepts": [
+        {
+          "id": "three-requirements",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "worship-god-alone",
+          "relation": "required",
+          "explicit": true
+        },
+        {
+          "id": "hereafter-and-resurrection",
+          "relation": "required",
+          "explicit": true
+        },
+        {
+          "id": "righteous-life",
+          "relation": "required",
+          "explicit": true
+        },
+        {
+          "id": "definition-of-idolatry",
+          "relation": "given",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "how to join God's kingdom",
+        "three requirements",
+        "salvation requirements",
+        "belief in God alone",
+        "belief in resurrection",
+        "righteous conduct",
+        "definition of idol worship"
+      ],
+      "related_questions": [
+        "What three requirements did Rashad give for God's kingdom?",
+        "How did Rashad define idol worship?",
+        "What did he mean by leading a righteous life?",
+        "Did Rashad require belief in the Hereafter?",
+        "Which religious figures did he say should not be idolized?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "God",
+        "Jesus",
+        "Mary",
+        "Buddha",
+        "Muhammad"
+      ],
+      "retrieval_note": "The section overlaps the preceding prediction but functions as a distinct doctrinal list.",
+      "start": 2464.209,
+      "end": 2587.98,
+      "start_time": "00:41:04.209",
+      "end_time": "00:43:07.980",
+      "source_segment_start": 327,
+      "source_segment_end": 340,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "kingdom of God, you must satisfy three minimum requirements. First, you must believe in the one true God as the Omnipotent, Omniscient and Omnipresent Creator and Sustainer of the universe. You must believe in the one true God, the specific One who actually created you. You must believe in the one true God ALONE without idolization of any creature of God, such as Jesus, or Mary, or Buddha, or Muhammad, or the saints. The definition of idol worship is believing that anyone or anything other than God can benefit you. The second requirement for membership in the upcoming kingdom of God is to believe in the Hereafter, Resurrection after death, Heaven and Hell. The third requirement is to lead a righteous life and this means that you're a person who is honest, truthful, nice, one who never hurts anyone. So, these are the three minimum requirements for membership in God's Kingdom. First, to believe in God alone without setting up any idols. Second, to believe in the Hereafter. Third, to lead a righteous life.",
+      "retrieval_text": "World News Bulletin\nThree requirements for membership in God's kingdom\nRashad gives three minimum requirements: belief in God alone without idolizing any creature, belief in the Hereafter and resurrection, and a righteous life defined by honesty, truthfulness, kindness, and not harming others.\nClaim classification: religious prescription\nConcepts: three requirements; worship god alone; hereafter and resurrection; righteous life; definition of idolatry\nUser terminology: how to join God's kingdom; three requirements; salvation requirements; belief in God alone; belief in resurrection; righteous conduct; definition of idol worship\nQuestions: What three requirements did Rashad give for God's kingdom? How did Rashad define idol worship? What did he mean by leading a righteous life? Did Rashad require belief in the Hereafter? Which religious figures did he say should not be idolized?\nEntities: God; Jesus; Mary; Buddha; Muhammad"
+    },
+    {
+      "id": "bulletin-01-s04",
+      "part": "World News Bulletin",
+      "start_row": 341,
+      "end_row": 344,
+      "title": "The Myth of God Incarnate and Jesus as messenger rather than God",
+      "summary": "Rashad says the bulletin confirms conclusions of Christian scholars who argued that Jesus is neither God nor the son of God, but a teacher and messenger. He identifies their publication as The Myth of God Incarnate.",
+      "claim_classification": "summary of a named scholarly work used in Christian polemic",
+      "concepts": [
+        {
+          "id": "myth-of-god-incarnate",
+          "relation": "cited",
+          "explicit": true
+        },
+        {
+          "id": "jesus-not-god",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "jesus-not-son-of-god",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "jesus-as-messenger",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "christian-unitarianism",
+          "relation": "conceptually-connected",
+          "explicit": false
+        }
+      ],
+      "user_terms": [
+        "The Myth of God Incarnate",
+        "Jesus is not God",
+        "Jesus is not the son of God",
+        "Christian scholars rejecting incarnation",
+        "Jesus as messenger",
+        "Unitarian Christianity"
+      ],
+      "related_questions": [
+        "What book did Rashad cite about Jesus not being God?",
+        "How did Rashad summarize The Myth of God Incarnate?",
+        "Did Rashad call Jesus a messenger of God?",
+        "Did Rashad appeal to Christian scholars against incarnation?"
+      ],
+      "quoted_sources": [
+        {
+          "work": "The Myth of God Incarnate",
+          "author": "collection of Christian scholars; individual editors not named in transcript",
+          "role": "cited scholarly support"
+        }
+      ],
+      "quran_references": [],
+      "entities": [
+        "Jesus",
+        "God",
+        "The Myth of God Incarnate"
+      ],
+      "retrieval_note": "The transcript gives Rashad's summary of the book. Do not attribute his exact wording to every contributor.",
+      "start": 2587.98,
+      "end": 2612.783,
+      "start_time": "00:43:07.980",
+      "end_time": "00:43:32.783",
+      "source_segment_start": 341,
+      "source_segment_end": 344,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "This news bulletin confirms the conclusions of the outstanding Christian scholars who thoroughly researched the Bible then concluded that Jesus is neither God nor the son of God, but a great teacher and the messenger of God. They published their findings in the famous book \"the myth of God incarnate.\"",
+      "retrieval_text": "World News Bulletin\nThe Myth of God Incarnate and Jesus as messenger rather than God\nRashad says the bulletin confirms conclusions of Christian scholars who argued that Jesus is neither God nor the son of God, but a teacher and messenger. He identifies their publication as The Myth of God Incarnate.\nClaim classification: summary of a named scholarly work used in Christian polemic\nConcepts: myth of god incarnate; jesus not god; jesus not son of god; jesus as messenger; christian unitarianism\nUser terminology: The Myth of God Incarnate; Jesus is not God; Jesus is not the son of God; Christian scholars rejecting incarnation; Jesus as messenger; Unitarian Christianity\nQuestions: What book did Rashad cite about Jesus not being God? How did Rashad summarize The Myth of God Incarnate? Did Rashad call Jesus a messenger of God? Did Rashad appeal to Christian scholars against incarnation?\nEntities: Jesus; God; The Myth of God Incarnate"
+    },
+    {
+      "id": "bulletin-01-s05",
+      "part": "World News Bulletin",
+      "start_row": 345,
+      "end_row": 364,
+      "title": "Challenge to Christian evangelists and Pope John Paul II",
+      "summary": "Rashad challenges religious leaders to examine his evidence and repent. He addresses Billy Graham and several American evangelists, urges them to stop calling Jesus God or son of God, and calls on Pope John Paul II to lead Catholics away from the veneration of Jesus, Mary, and saints.",
+      "claim_classification": "religious polemic and direct challenge",
+      "concepts": [
+        {
+          "id": "challenge-to-christian-leaders",
+          "relation": "issued",
+          "explicit": true
+        },
+        {
+          "id": "billy-graham",
+          "relation": "addressed",
+          "explicit": true
+        },
+        {
+          "id": "pope-john-paul-ii",
+          "relation": "addressed",
+          "explicit": true
+        },
+        {
+          "id": "divine-sonship",
+          "relation": "rejected",
+          "explicit": true
+        },
+        {
+          "id": "saint-and-mary-veneration",
+          "relation": "criticized",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad challenges Billy Graham",
+        "Rashad and Pat Robertson",
+        "Rashad and Jerry Falwell",
+        "Rashad and Pope John Paul II",
+        "Catholic idolatry",
+        "calling Jesus God",
+        "evangelists used by Satan"
+      ],
+      "related_questions": [
+        "Which Christian leaders did Rashad challenge?",
+        "What did Rashad say Billy Graham needed to do?",
+        "Why did Rashad address Pope John Paul II?",
+        "What did he ask evangelists to stop saying about Jesus?",
+        "Did Rashad accuse Christian leaders of opposing Jesus?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "Billy Graham",
+        "Pat Robertson",
+        "Jerry Falwell",
+        "Robert Schuller",
+        "Oral Roberts",
+        "Jimmy Swaggart",
+        "Pope John Paul II",
+        "Jesus",
+        "Mary",
+        "God",
+        "Satan"
+      ],
+      "retrieval_note": "These are Rashad's polemical judgments. Answers should not endorse allegations that named individuals were used by Satan.",
+      "start": 2629.261,
+      "end": 2769.435,
+      "start_time": "00:43:49.261",
+      "end_time": "00:46:09.435",
+      "source_segment_start": 345,
+      "source_segment_end": 364,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "The next headline is actually an invitation and a challenge to the world's leaders to examine the evidence, the incontrovertible physical evidence that comes to the world built into this message. I invite them to examine the evidence, then take whatever action they deem necessary to save their own necks and the necks of millions of people who follow them. I invite Billy Graham to examine the evidence, then repent and save himself and his millions of followers. One of Dr. Graham's favorite statements is \"I know I am going to Heaven.\" Well, I have news for Dr. Graham. He will see Heaven only if he repents and reverses the mobilization of millions of people against Jesus Christ and the teachings of Jesus Christ. I have no doubt about the sincerity of Dr. Graham. But I can show him physical evidence, proving that he has been used by Satan to oppose Jesus Christ. I invite Billy Graham, Pat Robertson, Jerry Falwell, Robert Schuller, Oral Roberts, Jimmy Swaggart and all evangelists to join God's Kingdom by upholding the teachings of Jesus Christ, and by abstaining from offending Jesus by calling him God or son of God. I invite the Pope to join God's Kingdom before it's too late. I call on Pope John Paul II to examine the evidence, then lead his 1 billion followers out of Satan's grip and into God's upcoming Kingdom. The Pope is in contempt of God so long as he idolizes Jesus, Mary and the Saints against their will.",
+      "retrieval_text": "World News Bulletin\nChallenge to Christian evangelists and Pope John Paul II\nRashad challenges religious leaders to examine his evidence and repent. He addresses Billy Graham and several American evangelists, urges them to stop calling Jesus God or son of God, and calls on Pope John Paul II to lead Catholics away from the veneration of Jesus, Mary, and saints.\nClaim classification: religious polemic and direct challenge\nConcepts: challenge to christian leaders; billy graham; pope john paul ii; divine sonship; saint and mary veneration\nUser terminology: Rashad challenges Billy Graham; Rashad and Pat Robertson; Rashad and Jerry Falwell; Rashad and Pope John Paul II; Catholic idolatry; calling Jesus God; evangelists used by Satan\nQuestions: Which Christian leaders did Rashad challenge? What did Rashad say Billy Graham needed to do? Why did Rashad address Pope John Paul II? What did he ask evangelists to stop saying about Jesus? Did Rashad accuse Christian leaders of opposing Jesus?\nEntities: Billy Graham; Pat Robertson; Jerry Falwell; Robert Schuller; Oral Roberts; Jimmy Swaggart; Pope John Paul II; Jesus; Mary; God; Satan"
+    },
+    {
+      "id": "bulletin-01-s06",
+      "part": "World News Bulletin",
+      "start_row": 365,
+      "end_row": 371,
+      "title": "Criticism of Rabbi Kushner's view of suffering",
+      "summary": "Rashad criticizes Rabbi Harold Kushner's book When Bad Things Happen to Good People, saying it denies God's omnipotence. He further claims that this denial explains why Satan victimized Kushner and his late son, and calls on Kushner to retract what Rashad calls blasphemies.",
+      "claim_classification": "religious polemic containing a causal accusation about personal tragedy",
+      "concepts": [
+        {
+          "id": "rabbi-kushner",
+          "relation": "criticized",
+          "explicit": true
+        },
+        {
+          "id": "when-bad-things-happen-to-good-people",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-omnipotence",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "problem-of-evil",
+          "relation": "disputed",
+          "explicit": false
+        },
+        {
+          "id": "personal-tragedy-as-divine-or-satanic-consequence",
+          "relation": "claimed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad on Rabbi Kushner",
+        "When Bad Things Happen to Good People",
+        "does suffering deny God's omnipotence",
+        "problem of evil",
+        "Rashad's comments on Kushner's son"
+      ],
+      "related_questions": [
+        "What did Rashad say about Rabbi Kushner?",
+        "Why did Rashad criticize When Bad Things Happen to Good People?",
+        "How did Rashad connect Kushner's theology with his personal tragedy?",
+        "Did Rashad accuse Rabbi Kushner of denying God's omnipotence?"
+      ],
+      "quoted_sources": [
+        {
+          "work": "When Bad Things Happen to Good People",
+          "author": "Harold Kushner",
+          "role": "book criticized by Rashad"
+        }
+      ],
+      "quran_references": [],
+      "entities": [
+        "Harold Kushner",
+        "God",
+        "Satan"
+      ],
+      "retrieval_note": "Use especially careful attribution. The causal claim about a deceased child is Rashad's polemical assertion and must never be stated as an established fact.",
+      "start": 2790.21,
+      "end": 2831.994,
+      "start_time": "00:46:30.210",
+      "end_time": "00:47:11.994",
+      "source_segment_start": 365,
+      "source_segment_end": 371,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "Rabbi Kushner of Boston has published a book entitled \"When bad things happen to good people.\" This book exposed Rabbi Kushner's denial of God's Omnipotence and revealed the reason why Satan had victimized Rabbi Kushner and his late son. I invite rabbi Kushner to break away from his persecutor, Satan, and to join God's Kingdom by professing God's Omnipotence and by taking whatever action necessary to retract his blasphemies against God.",
+      "retrieval_text": "World News Bulletin\nCriticism of Rabbi Kushner's view of suffering\nRashad criticizes Rabbi Harold Kushner's book When Bad Things Happen to Good People, saying it denies God's omnipotence. He further claims that this denial explains why Satan victimized Kushner and his late son, and calls on Kushner to retract what Rashad calls blasphemies.\nClaim classification: religious polemic containing a causal accusation about personal tragedy\nConcepts: rabbi kushner; when bad things happen to good people; divine omnipotence; problem of evil; personal tragedy as divine or satanic consequence\nUser terminology: Rashad on Rabbi Kushner; When Bad Things Happen to Good People; does suffering deny God's omnipotence; problem of evil; Rashad's comments on Kushner's son\nQuestions: What did Rashad say about Rabbi Kushner? Why did Rashad criticize When Bad Things Happen to Good People? How did Rashad connect Kushner's theology with his personal tragedy? Did Rashad accuse Rabbi Kushner of denying God's omnipotence?\nEntities: Harold Kushner; God; Satan"
+    },
+    {
+      "id": "bulletin-01-s07",
+      "part": "World News Bulletin",
+      "start_row": 372,
+      "end_row": 381,
+      "title": "Critique of the Muslim world and claim to voice God's judgment",
+      "summary": "Rashad says Muslims collectively abandoned the word of God for man-made fabrications and calls on Islamic leaders to uphold the word of God alone. He then denies that he is personally judging anyone, saying that the bulletin expresses God's judgment and is supported by verifiable proof.",
+      "claim_classification": "religious polemic and prophetic-authority claim",
+      "concepts": [
+        {
+          "id": "quran-alone",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "hadith-and-tradition-as-fabrication",
+          "relation": "conceptually-criticized",
+          "explicit": false
+        },
+        {
+          "id": "critique-of-muslim-world",
+          "relation": "issued",
+          "explicit": true
+        },
+        {
+          "id": "god-alone-as-judge",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "speaking-gods-judgment",
+          "relation": "claimed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad on Muslims",
+        "Muslims abandoned the Quran",
+        "hadith are man-made fabrications",
+        "Quran alone",
+        "God alone judges",
+        "Rashad claimed to speak God's judgment",
+        "Islamic leaders"
+      ],
+      "related_questions": [
+        "What did Rashad say the Muslim world had abandoned?",
+        "Did Rashad criticize hadith or man-made religious traditions here?",
+        "What did he ask leaders of the Islamic world to do?",
+        "Did Rashad say he was judging people personally?",
+        "Why did he say the bulletin represented God's judgment?"
+      ],
+      "quoted_sources": [],
+      "quran_references": [],
+      "entities": [
+        "God",
+        "Muslims",
+        "Islamic leaders",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "The term hadith is not spoken in these lines, although 'man-made fabrications' may conceptually refer to that broader doctrine. Mark such answers as conceptual and avoid overclaiming.",
+      "start": 2845.98,
+      "end": 2930.238,
+      "start_time": "00:47:25.980",
+      "end_time": "00:48:50.238",
+      "source_segment_start": 372,
+      "source_segment_end": 381,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "review_status": "draft",
+      "canonical_text": "This bulletin declares that the Muslim world has been in Satan's camp for 1,200 years. The Muslims, en masse, have abandoned the word of God in favor of man-made fabrications. I invite the leaders of the Islamic world to stop misleading their 1 billion followers, and to join God's upcoming Kingdom by upholding the word of God and nothing but the word of God. I must point out that no one should ever think that I am judging anyone. Only God is Judge. What I uttered in this bulletin was God's judgment, not my judgment. And God's judgment is supported by its built-in proof of authenticity that anyone can examine and verify. May God guide us all towards membership in His eternal Kingdom.",
+      "retrieval_text": "World News Bulletin\nCritique of the Muslim world and claim to voice God's judgment\nRashad says Muslims collectively abandoned the word of God for man-made fabrications and calls on Islamic leaders to uphold the word of God alone. He then denies that he is personally judging anyone, saying that the bulletin expresses God's judgment and is supported by verifiable proof.\nClaim classification: religious polemic and prophetic-authority claim\nConcepts: quran alone; hadith and tradition as fabrication; critique of muslim world; god alone as judge; speaking gods judgment\nUser terminology: Rashad on Muslims; Muslims abandoned the Quran; hadith are man-made fabrications; Quran alone; God alone judges; Rashad claimed to speak God's judgment; Islamic leaders\nQuestions: What did Rashad say the Muslim world had abandoned? Did Rashad criticize hadith or man-made religious traditions here? What did he ask leaders of the Islamic world to do? Did Rashad say he was judging people personally? Why did he say the bulletin represented God's judgment?\nEntities: God; Muslims; Islamic leaders; Rashad Khalifa"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "carl-sagan-contact",
+      "preferred_label": "Carl Sagan's novel Contact",
+      "aliases": [
+        "Contact novel",
+        "Carl Sagan coded message",
+        "SETI fiction"
+      ]
+    },
+    {
+      "id": "coded-message",
+      "preferred_label": "A coded message attributed to a nonhuman intelligence",
+      "aliases": [
+        "message from outer space",
+        "computer-decoded message",
+        "deep-space message"
+      ]
+    },
+    {
+      "id": "physical-proof-of-god",
+      "preferred_label": "Claimed physical proof of God's existence",
+      "aliases": [
+        "scientific proof of God",
+        "incontrovertible evidence",
+        "proof God exists"
+      ]
+    },
+    {
+      "id": "one-divine-message",
+      "preferred_label": "One message delivered through all messengers",
+      "aliases": [
+        "progressive revelation",
+        "continuity of revelation",
+        "one religion from Adam"
+      ]
+    },
+    {
+      "id": "mathematical-code-in-scripture",
+      "preferred_label": "Mathematical coding across scripture",
+      "aliases": [
+        "Bible code",
+        "Torah code",
+        "Gospel code",
+        "scriptural numerical harmony"
+      ]
+    },
+    {
+      "id": "quran-preservation",
+      "preferred_label": "Preservation of the Quran's original text",
+      "aliases": [
+        "Quran intact",
+        "original Arabic Quran",
+        "preserved scripture"
+      ]
+    },
+    {
+      "id": "quranic-initials",
+      "preferred_label": "The Quranic initials",
+      "aliases": [
+        "muqattaat",
+        "disjointed letters",
+        "mysterious letters",
+        "initialed suras"
+      ]
+    },
+    {
+      "id": "computer-analysis-of-quran",
+      "preferred_label": "Computer analysis of the Quran",
+      "aliases": [
+        "Quran in computer",
+        "1968 code discovery",
+        "letter counting by computer"
+      ]
+    },
+    {
+      "id": "code-19",
+      "preferred_label": "The Quran's mathematical code based on nineteen",
+      "aliases": [
+        "Quran code 19",
+        "mathematical miracle",
+        "multiples of 19"
+      ]
+    },
+    {
+      "id": "qaf-counts",
+      "preferred_label": "Qaf counts in chapters 42 and 50",
+      "aliases": [
+        "57 Qs",
+        "Qaf code",
+        "Q chapters"
+      ]
+    },
+    {
+      "id": "nun-count",
+      "preferred_label": "Nun count in chapter 68",
+      "aliases": [
+        "133 Ns",
+        "Nun code",
+        "chapter 68 count"
+      ]
+    },
+    {
+      "id": "ya-sin-count",
+      "preferred_label": "Ya and Sin count in chapter 36",
+      "aliases": [
+        "285 Y and S",
+        "Ya Sin code",
+        "chapter 36 count"
+      ]
+    },
+    {
+      "id": "rabbi-judah-the-pious",
+      "preferred_label": "Rabbi Judah the Pious",
+      "aliases": [
+        "Judah the Pious",
+        "Rabbi Yehuda he-Hasid",
+        "Jewish code 19 source"
+      ]
+    },
+    {
+      "id": "wahid-value-nineteen",
+      "preferred_label": "The numerical value of the Arabic word for one",
+      "aliases": [
+        "wahid equals 19",
+        "wahed equals 19",
+        "WAHD",
+        "abjad value of one"
+      ]
+    },
+    {
+      "id": "tawhid",
+      "preferred_label": "God's absolute oneness",
+      "aliases": [
+        "one God",
+        "worship God alone",
+        "divine unity"
+      ]
+    },
+    {
+      "id": "content-over-code",
+      "preferred_label": "The message's content is more important than its code",
+      "aliases": [
+        "purpose more important than miracle",
+        "meaning over mathematics"
+      ]
+    },
+    {
+      "id": "seven-universes",
+      "preferred_label": "Seven nested universes",
+      "aliases": [
+        "seven heavens",
+        "seven cosmic spheres",
+        "innermost universe"
+      ]
+    },
+    {
+      "id": "quran-39-67",
+      "preferred_label": "Quran 39:67",
+      "aliases": [
+        "heavens folded in God's right hand",
+        "God holding the universes"
+      ]
+    },
+    {
+      "id": "new-era-1986-1987",
+      "preferred_label": "Predicted worldwide transition in 1986–1987",
+      "aliases": [
+        "1986 prophecy",
+        "1987 new era",
+        "September 6 1986",
+        "August 25 1987"
+      ]
+    },
+    {
+      "id": "world-end-2280",
+      "preferred_label": "Prediction that the world ends in 2280",
+      "aliases": [
+        "2280 end of world",
+        "end-time calculation",
+        "294 solar years"
+      ]
+    },
+    {
+      "id": "satans-domain",
+      "preferred_label": "The world described as Satan's domain",
+      "aliases": [
+        "Satan's kingdom",
+        "Satanic experiment",
+        "world under Satan"
+      ]
+    },
+    {
+      "id": "kingdom-of-god-on-earth",
+      "preferred_label": "Predicted kingdom of God on Earth",
+      "aliases": [
+        "new divine era",
+        "God's earthly kingdom",
+        "perfect peace and wealth"
+      ]
+    },
+    {
+      "id": "three-requirements",
+      "preferred_label": "Three requirements for God's kingdom",
+      "aliases": [
+        "salvation requirements",
+        "membership conditions",
+        "minimum requirements"
+      ]
+    },
+    {
+      "id": "myth-of-god-incarnate",
+      "preferred_label": "The Myth of God Incarnate",
+      "aliases": [
+        "Christian scholars against incarnation",
+        "Jesus not God book"
+      ]
+    },
+    {
+      "id": "challenge-to-christian-leaders",
+      "preferred_label": "Challenge to Christian leaders",
+      "aliases": [
+        "Billy Graham challenge",
+        "evangelists invited to repent",
+        "Pope challenge"
+      ]
+    },
+    {
+      "id": "rabbi-kushner",
+      "preferred_label": "Rashad's criticism of Rabbi Harold Kushner",
+      "aliases": [
+        "When Bad Things Happen to Good People",
+        "Kushner and omnipotence"
+      ]
+    },
+    {
+      "id": "quran-alone",
+      "preferred_label": "Upholding the Quran or word of God alone",
+      "aliases": [
+        "Quran alone",
+        "reject man-made traditions",
+        "word of God only"
+      ]
+    },
+    {
+      "id": "speaking-gods-judgment",
+      "preferred_label": "Claim to convey God's judgment",
+      "aliases": [
+        "not my judgment",
+        "God's judgment in bulletin",
+        "divine authority claim"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "miracle-01-issue-01",
+      "start_time": "00:00:42.960",
+      "end_time": "00:48:50.238",
+      "source_segment_start": 0,
+      "source_segment_end": 381,
+      "original_text": "The Speaker column is blank for all 382 rows.",
+      "issue_type": "missing_speaker_metadata",
+      "suggested_action": "Confirm whether Rashad is the sole speaker, including all quoted passages and bulletin segments, before populating speaker metadata.",
+      "status": "metadata_review"
+    },
+    {
+      "id": "miracle-01-issue-02",
+      "start_time": "00:01:29.990",
+      "end_time": "00:01:37.729",
+      "source_segment_start": 8,
+      "source_segment_end": 8,
+      "original_text": "The novel - this fictitious novel - even supports all-time religions' belief in God.",
+      "issue_type": "possible_phrase_mistranscription",
+      "suggested_action": "Check whether Rashad says 'all three religions' belief in God' or another phrase. The present wording is grammatically unclear.",
+      "status": "needs_audio_review"
+    },
+    {
+      "id": "miracle-01-issue-03",
+      "start_time": "00:10:46.770",
+      "end_time": "00:11:08.723",
+      "source_segment_start": 86,
+      "source_segment_end": 89,
+      "original_text": "when he carried the tablet with the message on them",
+      "issue_type": "possible_singular_plural_error",
+      "suggested_action": "Check whether the audio says 'tablets' rather than 'tablet.'",
+      "status": "needs_audio_review"
+    },
+    {
+      "id": "miracle-01-issue-04",
+      "start_time": "00:22:46.670",
+      "end_time": "00:22:54.350",
+      "source_segment_start": 185,
+      "source_segment_end": 185,
+      "original_text": "And 57 is 19 equals 3.",
+      "issue_type": "probable_math_phrase_error",
+      "suggested_action": "Check whether the audio says '57 is 19 times 3.'",
+      "status": "needs_audio_review"
+    },
+    {
+      "id": "miracle-01-issue-05",
+      "start_time": "00:29:59.720",
+      "end_time": "00:31:36.359",
+      "source_segment_start": 240,
+      "source_segment_end": 253,
+      "original_text": "The Arabic word one is repeatedly transcribed as WAHD.",
+      "issue_type": "transliteration_review",
+      "suggested_action": "Verify the pronunciation and decide whether the displayed transliteration should be WAHD, WAHED, or WAHID. Preserve common aliases in retrieval metadata.",
+      "status": "content_review"
+    },
+    {
+      "id": "miracle-01-issue-06",
+      "start_time": "00:33:10.000",
+      "end_time": "00:36:40.829",
+      "source_segment_start": 267,
+      "source_segment_end": 297,
+      "original_text": "The segment contains historical astronomical quantities such as 30,000 light years to the Milky Way's outer limit, one billion galaxies, and twenty-six billion light years.",
+      "issue_type": "historical_scientific_claims",
+      "suggested_action": "Retain the transcript but ensure the RAG always attributes these quantities to the 1986 recording. Independently verify only if a user asks for current astronomy.",
+      "status": "response_guidance"
+    },
+    {
+      "id": "miracle-01-issue-07",
+      "start_time": "00:38:27.490",
+      "end_time": "00:39:10.000",
+      "source_segment_start": 310,
+      "source_segment_end": 315,
+      "original_text": "A new worldwide era is predicted to begin between September 6, 1986 and August 25, 1987, with the world ending in 2280.",
+      "issue_type": "dated_prediction",
+      "suggested_action": "Always label this as a prediction made in a bulletin recorded May 15, 1986. Do not present it as a fulfilled or current fact.",
+      "status": "response_guidance"
+    },
+    {
+      "id": "miracle-01-issue-08",
+      "start_time": "00:46:30.210",
+      "end_time": "00:47:09.170",
+      "source_segment_start": 365,
+      "source_segment_end": 371,
+      "original_text": "Rashad claims Rabbi Kushner's theological denial explains why Satan victimized Kushner and his late son.",
+      "issue_type": "sensitive_causal_accusation",
+      "suggested_action": "Use strict attribution and never state the causal allegation as fact. Avoid repeating it unless directly relevant to the user's question.",
+      "status": "response_guidance"
+    }
+  ],
+  "canonical_document_id": "video-program/witness-a-miracle-world-news-bulletin",
+  "canonical_catalog_ids": [
+    "video-program/witness-a-miracle-world-news-bulletin"
+  ],
+  "canonical_mapping": "exact-document-id",
+  "archive_number": 3,
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

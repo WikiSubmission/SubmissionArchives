@@ -1,0 +1,872 @@
+{
+  "schema_version": "1.8-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 64,
+  "document_id": "audio-program/quran-study-64-sura-2-qiblah-steadfastness-hajj-1982-11-26",
+  "title": "Quran Study 64: Sura 2, the Qiblah, Steadfastness, Testing, and Safa and Marwah (1982-11-26)",
+  "date": "1982-11-26",
+  "date_precision": "day",
+  "date_note": "Explicit in the filename. The file begins mid-discussion.",
+  "source_file": "data/sources/playlists/audio-transcripts/64 - Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa.csv",
+  "youtube_id": "vcUtTX5rQPs",
+  "youtube_url": "https://www.youtube.com/watch?v=vcUtTX5rQPs",
+  "primary_speakers": [
+    "Dr. Rashad Khalifa",
+    "Dean Mahmoud",
+    "Carl",
+    "Inga",
+    "Latifa",
+    "Fatima",
+    "Ahmad",
+    "Other participants"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 1172,
+    "first_speech_time": "00:00:00.000",
+    "last_speech_time": "01:01:25.850",
+    "section_count": 5,
+    "speaker_counts": {
+      "Dr. Khalifa": 716,
+      "A woman": 120,
+      "A man": 147,
+      "Beth": 1,
+      "Audience": 8,
+      "Dean Mahmoud": 87,
+      "Carl": 21,
+      "Fatima": 9,
+      "Latifa": 20,
+      "Inga": 29,
+      "Ahmad": 13,
+      "Adam": 1
+    }
+  },
+  "document_summary": "A same-date companion to Study 62 that begins mid-discussion of mosques, Quran-alone preaching, the God-alone testimony, and the accumulated growth of tradition around the Quran. The group then conducts an extended qiblah debate using Quran 2:144–151, maps, compass directions, globe geometry, and the orientation of Tucson mosques. Quran 2:153–157 introduces steadfastness, martyrs alive with God, fear, hunger, loss, disaster, and the claim that believers should retain happiness through every circumstance. Personal letters and experiences are used to test the concept. The final block studies Safa and Marwah, Hagar's search for water, Hajj as an Abrahamic practice, and the distinction between obeying a ritual command and idolizing a place.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-62-sura-2-abraham-submission-scripture-communities-1982-11-26",
+      "relationship": "same-date companion recording",
+      "note": "Study 62 covers Quran 2:119–141 and leads into the material here."
+    },
+    {
+      "document_id": "audio-program/friday-sermon-63-adam-eve-qiblah-1982-12-03",
+      "relationship": "later qiblah study with overlapping geometry",
+      "note": "The December source revisits and expands the Tucson directional debate."
+    },
+    {
+      "document_id": "audio-program/quran-study-65-sura-2-qiblah-signs-idols-composite-1982-12",
+      "relationship": "continuation and composite overlap",
+      "note": "Study 65 begins with Quran 2:159–163 and preserves more qiblah discussion."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Keep the qiblah debate as one large block",
+      "instruction": "Its value is historical rather than directional accuracy."
+    },
+    {
+      "rule": "Separate Quran 2:153–157 from personal testimony",
+      "instruction": "The verse and applications have different evidentiary status."
+    },
+    {
+      "rule": "Link to Studies 62 and 65",
+      "instruction": "They form a connected Sura 2 sequence."
+    },
+    {
+      "rule": "Quote only canonical transcript text",
+      "instruction": "Enrichment prose remains retrieval metadata."
+    }
+  ],
+  "sections": [
+    {
+      "id": "audio64-s01",
+      "start": 0,
+      "end": 600,
+      "title": "Mosques, Quran-alone preaching, the God-alone testimony, names, and accumulated tradition",
+      "summary": "The file opens mid-debate over Quran 9:107–108 and whether a person should pray in a mosque where sources besides the Quran are preached. Rashad recounts arguing against the added Muhammad testimony and compares tradition to a large growth that has accumulated around the Quran and must be cut away.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "mosques",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-alone",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-alone-testimony",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "muhammad-shahada",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "tradition-growth",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "do not worship in such mosque",
+        "preaching other than Quran",
+        "Muhammad Rasul Allah",
+        "big growth around Quran",
+        "cut it away"
+      ],
+      "related_questions": [
+        "What mosque problem was being debated?",
+        "How did Rashad describe accumulated tradition around the Quran?"
+      ],
+      "quran_references": [
+        "9:107-108"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Muhammad"
+      ],
+      "retrieval_note": "The opening is incomplete and depends on earlier discussion.",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:00.000",
+      "end_time": "00:10:03.920",
+      "source_segment_start": 0,
+      "source_segment_end": 164,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Beth",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Dr. Khalifa: ...anything beside Quran are abusing the mosque, disobeying God and His messenger, and creating divisiveness. It is the preaching of other than the Quran that (unintelligible) in Islam. Dr. Khalifa: Well, it says, do not worship in such a mosque. A woman: What... Dr. Khalifa: That's what I'm saying. A woman: What does that mean in a situation where you're (unintelligible) Dr. Khalifa: (unintelligible) people like yourselves. A woman: But it's real weird you just don't go there. A woman: Like any place else there is no mosque. Dr. Khalifa: Yeah, it's like any other place where there is no mosque. A man: God will understand you, you know. Dr. Khalifa: Yeah. Actually, it is not a mosque. A man: It's not a mosque, why there is no (unintelligible) Dr. Khalifa: Yeah. Dr. Khalifa: It's like saying there is a place where there's only churches and synagogues. A man: (unintelligible) Dr. Khalifa: There are only churches and synagogues. Dr. Khalifa: We can count it as one of them. A woman: So, (unintelligible), how do we (unintelligible) A woman: Like you're in a strange place traveling. Dr. Khalifa: Well, you have, you have to find out. A woman: (unintelligible) I mean, (unintelligible) Dr. Khalifa: The preacher is something besides Quran. You don't believe Quran. A woman: Basically, (unintelligible) where there's, where there's (unintelligible) Dr. Khalifa: (unintelligible) If I, if I am in Tempe or Phoenix or New York, and I want to Pray the Noon of the Afternoon, I walk in any of these mosques and I go make my Wudu and, and Pray. Just like at work, I, I go make my Wudu and find a place and go Pray. Dr. Khalifa: Tempe. A woman: This is, this is, this is what came to my mind. A woman: There there is a specific... Dr. Khalifa: Well, up here we have a choice. We have a mosque where only God is commemorated, and only Quran is preached. Dr. Khalifa: So, I would, I would, I would run for my life. I wouldn't go there. A woman: But in another place where there isn't that choice... Dr. Khalifa: Right. Then, it's just like you're being at (unintelligible) or anywhere. I Pray at church. Dr. Khalifa: This is the only place I, I can Pray. A woman: (unintelligible) Dr. Khalifa: Yeah. I mean, you wouldn't go to the Ahmadiyya mosque here on Speedway, Dr. Khalifa: cause you know they, they idolize Ghulam Ahmad. A man: It's never open. Dr. Khalifa: Somebody said, (unintelligible) open on Sunday. Dr. Khalifa: Even if it's open 24 hours a day, seven days a week, you wouldn't go there. Because it's... A woman: (unintelligible) Dr. Khalifa: (unintelligible) A man: It's a small place. A woman: But in another (unintelligible) the only mosque. A woman: I could say (unintelligible) Dr. Khalifa: I would go there and Pray. A man: looks like something in this miniature vault or something. A man: Would you like me a different (unintelligible) and get some clean clothes? Dr. Khalifa: No, any clean clothes would be... Dr. Khalifa: (unintelligible) The point is you could spare any clean clothes. Dr. Khalifa: Right. A man: Yes. A woman: (unintelligible) A woman: Could we just stay home (unintelligible) our 4 Rak'ats? Dr. Khalifa: Yes, you Pray the Noon, 4 Rak'ats. A woman: (unintelligible) Dr. Khalifa: See, what I'm saying is... A woman: (unintelligible) Dr. Khalifa: you're in Los Angeles and there is the Islamic Center of Southern California where they're hardcore Hadithists. But, maybe, as people we'll go who talked only about Quran. Like I did one time, and they disconnected the speaker. Yeah. But the people got the message. Dr. Khalifa: There were a couple thousand people there, yeah. A woman: (unintelligible) there are some people who go to the mosque (unintelligible) A woman: but in fact (unintelligible) Dr. Khalifa: Yeah. A woman: It makes (unintelligible) so we have a lot of information (unintelligible) Dr. Khalifa: Yeah, I gave (unintelligible) on July 4th. Because it was July 4th and there were lots of people on vacation, they were a big crowd. Dr. Khalifa: And they got the message. A woman: Then, you got disconnected. Dr. Khalifa: And then, I got disconnected. There were three people who were, became very emotional. They were yelling and everything. And Beth was there. Dr. Khalifa: Remember that, Beth? Beth: I don't think anyone will forget. Dr. Khalifa: And then, and then, I had actually a long discussion after that about the very thing that Rashid was talking about, about Ash-hadu Alla Elaha Ella Allah Wa Ash-hadu Anna Muhammadan Rasool Allah. He said \"don't you say Ash-hadu Alla Elaha Ella Allah Wa Ash-hadu Anna Muhammadan Rasool Allah.\" I said \"no, I don't.\" Dr. Khalifa: \"What?\" A woman: They (unintelligible) Dr. Khalifa: Yeah. A woman: That's when they started (unintelligible), right? Dr. Khalifa: I was, I was going on with the names of Muhammad, that they give to Muhammad, and they gave him actual names of God, exclusive names of God to give to Muhammad, like Al-Muhaymin (المهیمن), one of Muhammad's names. Al-Muhaymin (المهیمن), the Supreme Being. Al-Muhaymin (المهیمن) is in Sura, you know, you heard it today. That's one of his names that are written in his mosque on the wall. Al-Shafi (الشافی), the healer. Yeah, Al-Muhaymin (المهیمن), Al-Shafi (الشافی). I have a list here, two hundred and two names. Now, God has ninety-nine names. Muhammad's names are two hundred and two. Yeah. So, how else will they ... It's unbelievable, isn't it? Dr. Khalifa: Don't blame me if you don't believe me, but I have the list here, if you wanna look at it. A woman: I have a student whose name is Al-Mu'tasim, is that (unintelligible)? A woman: It's a name, I've just never heard it before, and I didn't know if that was... Dr. Khalifa: Mu'tasim (معتصم) or Al-Mu'tasim (المعتصم)? A woman: Well, Dr. Khalifa: Mu'tasim (معتصم). A woman: Mu'tasim (معتصم). Dr. Khalifa: Yeah, it's okay. Dr. Khalifa: It's holding fast. Mu'tasim (معتصم) means holding fast. There's a verse in Quran says, hold fast to the rope of God. Dr. Khalifa: So, his name derives from that. A man: So, a lots more people who are (unintelligible) from all these communication and stuff. A man: You said that there's a lot of positive response from all over the world. Dr. Khalifa: Say it again. Say it. A man: So, you've been saying that you're getting a lot of positive response from all over the world. Dr. Khalifa: Yes. A man: So, A man: had there been any correspondence that people find do these things in their mosques (unintelligible)? A man: And they talked about... Dr. Khalifa: These are the last ones Dr. Khalifa: that they were circulating from Singapore. A man: Yeah. Dr. Khalifa: This fellow who lost his friends. Dr. Khalifa: Did you read it? A man: No. Dr. Khalifa: Did you read (unintelligible) A woman: Last Friday. Dr. Khalifa: Yeah. Dr. Khalifa: Some people read it. He's a fellow in Singapore. I sent him the translation. And at first, he himself was sharp and then he came to the God's circle and he lost his friends and he's happy and content. Yeah, see, when you see the truth, there is nothing anybody can do. It doesn't matter what you lose. You don't wanna lose your neck (unintelligible), you know. Dr. Khalifa: Your friends don't see your way. It's too bad. A man: Well, you don't really feel like Dr. Khalifa: It's just a matter... Dr. Khalifa: You have no choice anymore. Once you see the truth, you have no choice. A man: I mean, you really don't get interested in people after a while (unintelligible). Dr. Khalifa: That's right. Exactly. In fact, you will see them as unfortunate, misguided. And this is why there's so much in the Quran about \"oh, I wish i didn't take this fellow as a friend. He took me away from the right guidance.\" A man: But I see some people that... Dr. Khalifa: And the Quran says that many people are going to Hell because of friendship with some other people. A man: Yeah. Well, that's because they put the friendship, they'd rather keep the friendship than really keep the belief, yeah. Dr. Khalifa: Exactly. Dr. Khalifa: Right. So, this fellow wrote and he said \"I lost my friends but I'm happy and content. You feel bad for them. A man: I see some people that I don't know i suppose it's just a matter of time that A man: sometimes if we don't see people respond right away to the way (unintelligible) A man: I mean, we still gotta be careful because it may be taking time because I see people that, Dr. Khalifa: Exactly. A man: you know, they seem to be believing this but they won't accept, I mean, even it's Muslim, you know, as people have grown up with it. But they've been so turned off by, you know, they actually believe, you know, that they don't accept all this, this stuff that we're against. But they've actually kind of rejected the Quran because they're still convinced that that stuff is actually being taught there. because it's interpreted. So, they'll read those verses, and they've been taught that that's what it means, A man: so they reject it and reject the Quran. Dr. Khalifa: Yes. A man: So, hopefully, that crossed it, because I think there's really a truthful there, you know, in time that they would. But, I mean, I can see them saying \"I can't accept this\" and they're interpreting it in such a totally opposite way cause they can't even see the correct interpretation, yet what they're saying with their mouth is, is the correct belief. So, it's a confusing thing. A man: I see it, but I don't (unintelligible) the explanation. A man: I see what you're doing. I was talking to an Iranian who was talking about how people in this country were prevented from reading the Quran. It was just put up on the shelf. And I was trying to explain there's this big growth around the Quran that has to be cut away and blown from the copy of the computer screen.",
+      "review_status": "draft",
+      "retrieval_text": "Mosques, Quran-alone preaching, the God-alone testimony, names, and accumulated tradition\nThe file opens mid-debate over Quran 9:107–108 and whether a person should pray in a mosque where sources besides the Quran are preached. Rashad recounts arguing against the added Muhammad testimony and compares tradition to a large growth that has accumulated around the Quran and must be cut away.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: mosques; quran-alone; god-alone-testimony; muhammad-shahada; tradition-growth\nUser terminology: do not worship in such mosque; preaching other than Quran; Muhammad Rasul Allah; big growth around Quran; cut it away\nQuestions: What mosque problem was being debated? How did Rashad describe accumulated tradition around the Quran?\nQuran references: 9:107-108\nBible references: \nEntities: Muhammad"
+    },
+    {
+      "id": "audio64-s02",
+      "start": 600,
+      "end": 2100,
+      "title": "Quran 2:144–152, Tucson's qiblah, maps, straight lines, and testimony from previous scripture",
+      "summary": "The group debates the direction from Tucson to Mecca at length. Participants compare local east, northeast, great-circle flight paths, globe surfaces, radial lines, and straight lines through or across Earth. Quran 2:144–152 is read concerning facing the Sacred Mosque, opposition from previous scripture communities, competing directions, remembrance, and gratitude.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "quran-2-144-152",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "tucson-qiblah",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "maps",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "great-circle",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "straight-line",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mecca",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "face Sacred Mosque",
+        "northeast or east",
+        "straight line to Mecca",
+        "planes over North Pole",
+        "remember Me"
+      ],
+      "related_questions": [
+        "Which directions from Tucson were debated?",
+        "How did the speakers use Quran 2:144–152?",
+        "Why did map and globe models produce disagreement?"
+      ],
+      "quran_references": [
+        "2:144-152"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Tucson",
+        "Mecca",
+        "Jerusalem"
+      ],
+      "retrieval_note": "Use modern geodesic calculations rather than this debate for current qiblah direction.",
+      "retrieval_priority": "primary",
+      "start_time": "00:09:59.540",
+      "end_time": "00:35:03.059",
+      "source_segment_start": 164,
+      "source_segment_end": 701,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Audience",
+        "Carl",
+        "Dean Mahmoud",
+        "Dr. Khalifa",
+        "Fatima"
+      ],
+      "canonical_text": "that has to be cut away and blown from the copy of the computer screen. It's quite in the computer, you know, actually kind of like that. A man: But that's they put it up on the shelf, and they don't read it, man. Dr. Khalifa: I know. A man: Or we have to wash our hands. A man: You can't even translate the Quran, you can't even translate the Quran in any other language. Dr. Khalifa: (unintelligible) interesting. A man: They wanna keep the... A man: Apparently, Sheytan (Satan) wants to keep the Quran away from people. Dr. Khalifa: Exactly. A man: You can't just put people... Dr. Khalifa: (unintelligible) A man: so holy you can't translate it, you can't touch it, you can't look at it, you can't read it. (unintelligible) A man: \"We have other things that is related to you instead.\" Dr. Khalifa: Right. Exactly. (unintelligible) A man: It's, I mean, the fact that it's actually happened, you know, it's not for people who have not had much contact with the Middle East to realize. And the poor, and the poor people in Morocco are kept illiterate. And they have the Hadith and the Quran often confused in their mind. A man: And also, the sayings of the king, or the dictates of the king, like that. Dr. Khalifa: Yeah. A man: The DAHIR (ظهير). A man: That's the word. The royal decree. Dr. Khalifa: What do they call it? A man: DAHIR (ظهير). D-A-H-I-R. A man: The name made for law made by the king? Dr. Khalifa: I know. I know. A man: This put on the same level as they have even... Dr. Khalifa: Or more important. A man: or more important, I mean, A man: But I mean, it's put, you know, symbolically on the same level as they have even sanctified by the Quran. Dr. Khalifa: Yeah. A man: And the king's picture is with words from the Quran. And his, his words are, therefore, the word of God, you know, indirectly. A man: And even they mentioned the king, Hassan II, in the mosque along with the query. A man: (unintelligible) Dr. Khalifa: In the Khutba, they have to, by law. Dr. Khalifa: But the (unintelligible) A man: (unintelligible) Dr. Khalifa: The head of the Islamic Da'wah Council in India is, is (unintelligible) like us. Exactly. They have some of his writings, but... And they wrote a book. Exactly like the Quran alone, right. No Hadith, no Sunnah. Dr. Khalifa: The head... A woman: When was that, Rashad? Dr. Khalifa: The head of the Islamic Da'wah Council of India. Dr. Khalifa: His name is Waheeduddin (unintelligible). A woman: Is this something very recent? Dr. Khalifa: Well, no. Dr. Khalifa: It's couple of years. A woman: Is it an Arabic or English book? Dr. Khalifa: Well, he's Indian. Dr. Khalifa: Well, he writes in English and in Hindi. A woman: Hindi. Dr. Khalifa: Hindi. Yes. A woman: So, their Quran is in Hindi Hindi? Dr. Khalifa: Oh, yes. Hindi. His, his thoughts and my thoughts are identical. Okay, we're very late so, but it was very interesting discussion. Dr. Khalifa: So, let's close it, go home and take a good, good sleep and come back at 6 o'clock for the Fajr Prayer. A woman: So, no cake? Dr. Khalifa: Oh, we're gonna have a cake. Masoud's (unintelligible) A man: Dr. Khalifa. Dr. Khalifa. Dr. Khalifa: Yeah. A man: I have a question. There is a verse 133. A woman: That's right. Dr. Khalifa: What Sura? Baqarah? A man: Al-Baqarah. Dr. Khalifa: Oh. A man: [2:133] ... \"We will continue to worship your god; the god of your fathers Abraham, Ismail, and Isaac; ... A man: And is that an (unintelligible) to say Abraham, Ismail, and Isaac, you fathers. Dr. Khalifa: I believe these were Jacob's sons, children, Jacob's children talking to Jacob. A man: Right. Dr. Khalifa: They said, [2:133] ... the god of your fathers ... Dr. Khalifa: The fathers are Abraham, Ishmael and Isaac. A man: Okay. Isaac was the... Dr. Khalifa: Isaac was Jacob's father. A man: Jacob's father. Alright. Because I thought... Dr. Khalifa: Yeah. A man: And there's other verses, 134 and 141 are identical verses. Dr. Khalifa: Yeah. A man: Exactly. Dr. Khalifa: Right. A man: (unintelligible) Dr. Khalifa: The Quran does this quite often. Dr. Khalifa: Just to, for emphasis. A woman: (unintelligible) Dr. Khalifa: Yeah. Okay. Al-Fãtehah. Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) A man: ... although it may, of course, ultimately be quite different from one country to another depending on the dissatisfactions. A man: I think it has to do with the world that we live in which is a world of revolutionary... Dr. Khalifa: ...between you and the Ka'bah, or a mountain, whatever you wanna call it. Now, when you wanna go to the Ka'bah, actually this is, this is a fact. the, the hills in Mecca where you have to drive around to go to the Ka'bah. Now, the shortest distance to the Ka'bah will be to go this way, even though the Ka'bah is right straight, and if you go up the hill or up the mountain and then down, you'll go to the Ka'bah in a straight line. But you don't do that when you go to the Ka'bah you go like this. Therefore, the shortest distance, the right Qiblah according to them would be this way even though the Ka'bah is here. Because the shortest distance is around the mountain or the hill. And the earth is the same way. And between us and, and Mecca is part of the earth, part of the globe. So, it's like a hill between you and, and Mecca and even though if you, if you wanna go to the Ka'bah, you will walk in this direction you'll still face this direction Dr. Khalifa: because your soul can go through the mountain, and through the walls. A man: But not only this you can't tell me that (unintelligible) If we're following the, A man: if, if we follow their direction, (unintelligible) Dr. Khalifa: You mean the shortest distance? A man: Yes. Dr. Khalifa: See, they go by the shortest distance, (unintelligible) A man: (unintelligible) A man: I told you, let's take the map and then take the Qiblah. Dr. Khalifa: on the map. A man: in the map. Dr. Khalifa: Right. A man: Okay. A man: Let's find it out. Dr. Khalifa: But they don't go by the map. A man: No, no, no. They... Yes. That's right. It's East. A man: But there's a Hadith that we have to take a 20 degree to the North. Dr. Khalifa: Super. A man: Something that 20 degree that we have to take to north east. Dr. Khalifa: Yeah. A man: That's what (unintelligible) Dr. Khalifa: Of course, now, we're told in Quran that now God doesn't want them to face... It said, God says if you don't wanna worship Me alone, Dr. Khalifa: I don't want you, you know, facing the right direction. Dr. Khalifa: But I think Dean Mahmoud: (unintelligible) Dr. Khalifa: we came to a point where the most important reason, Dr. Khalifa: the most important reason for facing north-east was that we in Masjid Tucson are facing east. A man: There's compass maps. They're either doing that thing going over (unintelligible) Dr. Khalifa: I mean now even if they find out that the right direction is, is what we're doing, Dr. Khalifa: they will find some other direction. Dean Mahmoud: That's what I thought the big (unintelligible), no? Audience: (unintelligible) A man: If we walk in the direction east from here, A man: if we, if we walk in a straight line, you know, if you think A man: (unintelligible) Mecca Dr. Khalifa: Exactly. A woman: (unintelligible) Audience: (unintelligible). Dr. Khalifa: And you see, did you see the point that Adeem is saying? Audience: (unintelligible). Dr. Khalifa: Ok. Let's, let's, let's get back together here. Adeem was raising a point, he said, if we walk in a straight line, we're gonna hit Mecca, which is true, because this is slightly south of east. If you go in a straight line, you will hit Mecca. Now, people who are Praying right there, they're standing in circles, okay, around the Ka'bah. And each, each person is part of a straight line. Okay, now these straight lines, they're supposed to extend all through the earth without any lines cutting them. Now, what they're doing, for example, at the Islamic Center, look, look in north-east is they may, if they go that line, they may hit, I don't think they will, but if, if they, if they hit the Ka'bah somehow, that line will cut the straight lines that are going from, from the Ka'bah. Dr. Khalifa: Do you understand? A man: In, then, just to reinforce, I think it must be in Sura Abraham or wherever it is when Abraham and Ishmael built the Ka'bah, it says as a focal point. A man: And a focal point has to be a point... Dr. Khalifa: where stra. ght lines come out of it. A man: Yeah. Dr. Khalifa: But if you make a line that is curving, what they're doing is a line that is curving, Dr. Khalifa: actually, they're not looking anywhere. A man: That couldn't... Dr. Khalifa: (unintelligible) A man: Yeah, that, I mean focal point wouldn't be on a curved line. It has to be on a raised coming up line. Dr. Khalifa: Anyway, so, there is a commandment. It is, it is that we shall face Dr. Khalifa: Mecca. It is very important, so you cannot take it lightly. A man: It's... Dr. Khalifa: I, I was, I was in, in situations where people were praying this way, facing this way. We had the Iranian group here in this mosque meeting every Saturday. Dr. Khalifa: And they would face this way. A man: Well, the north east? A woman: Yeah. Dr. Khalifa: Yeah, north-east. A woman: Even worse, I mean, you said there's always (unintelligible) Dr. Khalifa: Now, they exaggerated. Dean Mahmoud: that way. Dr. Khalifa: Now, they're facing very north. Dean Mahmoud: Those people there, I think, pray that way. A man: No, no. Dr. Khalifa: No, this way. A woman: No, no. A woman: North. Audience: (unintelligible) Dr. Khalifa: No, this way, north. This way. A woman: North. Definitely. Dean Mahmoud: Are they really? Dr. Khalifa: Yes. A man: Via north-east. Audience: (unintelligible) A woman: Maybe, some of them were a little mixed up and they were going the other... Audience: (unintelligible) A woman: They're all mixed. Dr. Khalifa: Yes. Carl: It's... Carl: It's interesting here, I just wanted to talk about... Dr. Khalifa: Ok. Just listen to Carl, just listen to Carl. Carl: I think one of the things that confuses people now Carl: as it's being handed out all these little compasses with construction books Dr. Khalifa: Yeah. Carl: which give these really weird directions and they vary a lot all over the world. But here, it, we say, I mean, we see here that He's saying [2:144] We saw you (Muhammad) turning your face about the sky ... So, he's using the sky as a guide to find his direction. Now, it tells us over and over again in the Quran that the stars are there to give us the right direction. So, if we look, if we look for a direction on the surface of the Earth following the stars as a guide, we have to be following those lines of rotation around the world, around the Earth, cause that reinforces the idea of those lines of rotation, Carl: not lines on the surface itself. Dr. Khalifa: There was, there was no way they can justify that look at north-east except that this is how the planes go. It's the only way because Jumu'ah and Tariq and the others were debating with them on the individual basis and group basis and they went together to the geography department and all the answers came. This is the right direction, Dr. Khalifa: slightly south of east Carl: Well, how long ago did this whole business start? I mean... Dr. Khalifa: 4 years. Carl: Yeah, here in Tucson. But I mean in the Muslim communities all over the world. Carl: How long has this thing been going on? Carl: Cause evidently... Dr. Khalifa: There were no, there were no differences until these people decided to change. Carl: No, but it's, it's all over the country, all over the world they're having (unintelligible) Dr. Khalifa: It's becoming general now because the MSA, it all started here. The MSA issued directions to all their branches everywhere that they shall face north-east. Dr. Khalifa: And unfortunately, north-east A man: United States. Dr. Khalifa: Yeah, in the United States and unfortunately, the Masjid Muhammad group also decided to follow that. A woman: (unintelligible) Dr. Khalifa: Yeah. Dr. Khalifa: Yeah. They make a point. Dr. Khalifa: And it's only because of us. A woman: (unintelligible) is that a valid (unintelligible) because I (unintelligible) I think some there are (unintelligible) early. I think I had kind of answered that before. Is that a valid structure A woman: where you just pray between certain hours A woman: (unintelligible) Dr. Khalifa: It's, it's, it's probably accurate. Dr. Khalifa: Yeah, the times. But they go out of their way to point out that \"Pray in this wrong direction, please.\" They don't want you to Pray in the right direction. I'm gonna pass the globe around. Bring the globe and you can look at where Tucson is and where Mecca is Dr. Khalifa: and see where the (unintelligible). Dean Mahmoud: Can we be assured of our, our house, our (unintelligible) A man: Yeah. A man: Yeah, it's, it's natural. It's a natural architectural thing anyway because it's the position of the building that makes the least amount of (unintelligible) A man: in relation to the sun. A man: That's right. A man: Almost any place (unintelligible) A man: in the country. Dean Mahmoud: Because we, we all say, you know, Dean Mahmoud: I do not follow the compass. A man: Not unless there are more (unintelligible) Dean Mahmoud: You notice (unintelligible) Dr. Khalifa: Wait. Hold on. I'm gonna pass the, the globe around. And if you locate Tucson, Arizona is where this finger is. And then, Mecca is right here. Dr. Khalifa: It's, it's very slightly south of east. A man: Yes. Dr. Khalifa: You draw the line. So, I'm gonna pass this around and you can look at Tucson and Mecca. It's very clear. Now,... Now, Mecca is right here. And Tucson is here. The shortest distance, if you follow that logic, is right aligned. You put an needle right here that will come out here. And this will make it exactly our direction here. Because the soul goes through the earth. Dr. Khalifa: Because this material doesn't mean a thing. A man: Well, we're not, A man: I mean, our prayers aren't going to Mecca anyway. They're just the direction of orientation. Dr. Khalifa: Right. It's only... A man: Well, nothing's going to Mecca. A man: (unintelligible) that's just the direction we're facing (unintelligible) Dr. Khalifa: We're conforming to the commandment. A man: Yeah. Dr. Khalifa: That's all. A man: It's the commandment, it's not... Dr. Khalifa: The command is... A man: Nothing's going to that location. Dr. Khalifa: I don't know. Maybe,... A man: It's something I don't know. Dr. Khalifa: Maybe, there is. A man: (unintelligible) Dean Mahmoud: I thought (unintelligible) Dr. Khalifa: Yes. Dean Mahmoud: Let me take it again. Dr. Khalifa: But you actually, if you concentrate enough, Dr. Khalifa: your soul actually will go there. Dean Mahmoud: wherever you are. A man: It will just go to God. Dr. Khalifa: That will go to Mecca. Dean Mahmoud: The righteous (unintelligible) A woman: Is that why you (unintelligible) Dr. Khalifa: Pardon? A woman: Is that why you feel cool sometimes? Dr. Khalifa: I don't know if it's cool or not. I have to tell you this, but don't let it freak you out. But it is part of the lessons that God, God teaches us. At some time I was interested in the out of body experiences. I think I mentioned that and I tried it, but I don't recommend it to anybody but when I tried it, I went through the ceiling. And I noticed that these walls don't mean a thing. I could see my body down there. And I learned from that Dr. Khalifa: that the soul does not, does not stop. Audience: (unintelligible) A woman: Rashad,... Dr. Khalifa: You can (unintelligible) Dr. Khalifa: You just walk through it. It's whatever you will. You wanna be in Egypt with the pyramids, you'll be in Egypt. Dr. Khalifa: And if the Ka'bah, and then the Ka'bah. A man: Is that common? Dean Mahmoud: Do you ever fly? Dr. Khalifa: At the speed of things. A man: (unintelligible) Dean Mahmoud: You might not come back. A woman: Yeah. Dr. Khalifa: Really. It's a wonderful experience. Dean Mahmoud: We try to experience. Dr. Khalifa: At the first time, it is quite... yes. Audience: (unintelligible) Dr. Khalifa: Because it's weird. You see yourself. A woman: (unintelligible) Dr. Khalifa: Pardon? A woman: It's like you're not afraid you're not gonna get back to your body. A man: Why you're afraid, I mean, you should not be afraid because (unintelligible) Dr. Khalifa: And this, this. reverses later on where you don't wanna go back to the body because if your body is not feeling well Dr. Khalifa: and don't feel any of the pains. A woman: Yeah. Dr. Khalifa: It's a way to get rid of the headache, A woman: Rashad,... Dr. Khalifa: the pains. A woman: How many (unintelligible) Dr. Khalifa: (unintelligible) 2 hours. A woman: Yeah. A man: (unintelligible) A woman: I mean, would you (unintelligible) Dr. Khalifa: Yeah, why not. Audience: (unintelligible) Dr. Khalifa: Today. How about now? A woman: Yeah. A woman: It's a few people (unintelligible) Dean Mahmoud: (unintelligible) A woman: Where you go, where do you wanna go? Dean Mahmoud: Isn't it the case (unintelligible) when you really concentrate on your Prayer, Dean Mahmoud: such an ordinary Salat. Dr. Khalifa: Yes. Dean Mahmoud: If you concentrate on your Prayer, Dean Mahmoud: these ordinary things that you had before Prayer are forgotten temporarily. Dr. Khalifa: That's right. In fact you may... Dean Mahmoud: And after this Taslim (Submission)... Dr. Khalifa: You may (unintelligible) go out-of-body experience Dean Mahmoud: But after the Taslim (Submission), the old things Dr. Khalifa: come back. Dean Mahmoud: come back. Dean Mahmoud: Can I raise a question on what you were saying? I would, I would like to raise a, a question. I'm not so sure of the answer myself, Dean Mahmoud: but something that we can reflect on. Dr. Khalifa: Let's, let's concentrate, let's look at Dean Mahmoud now. A man: Yeah. Dean Mahmoud: Now, it says here that, referring to the, to the Qiblah now, as the Ka'bah, it says here, 145, [2:145] However, even if you show the followers of previous scripture every kind of miracle, they will not follow your Qiblah. ... However, before that, it says, [2:144] ... Even those who received previous scripture recognize that this is the truth from their Lord. ... Then, 146, [2:146] Those who received previous scripture recognize this, just as they recognize their own children. ... The question I want to raise is this. Is Allah not telling the Jews that in the final analysis, the, the right Qiblah, even for the Jews, Dean Mahmoud: should be from their great great grandfather Abraham? Dr. Khalifa: That's right. Dean Mahmoud: Because, I, this entered my mind various times, but I've never read any Tafsir wherein the commentators say, this is telling the, the Jews, no, that the Ka'bah is the first Qiblah. But the Jews are becoming also very nationalistic. Dean Mahmoud: They're still thinking of, of Jerusalem. Dr. Khalifa: No, they don't have any Qiblah now. They don't have anything. Dr. Khalifa: Their Qiblah is, I think they sit in a circle in the synagogue now. Dean Mahmoud: And, they pray (unintelligible) Dr. Khalifa: Semi-circle? Dr. Khalifa: Yeah. Dean Mahmoud: But, they conquered the city. Dr. Khalifa: So, I'm just raising that question. Is this telling the, the Jews that if they want to have the real Qiblah, they must look towards the Ka'bah? Dean Mahmoud: Although, I'm afraid now, if the Jews come to believe that, Dean Mahmoud: they might decide to invade it later. Dr. Khalifa: (unintelligible) they will not. Dr. Khalifa: Right. Dean Mahmoud: So, we better not say it. Dr. Khalifa: It becomes their Holy Land then. Dean Mahmoud: But, it is the Holy Land of all Muslims. Dean Mahmoud: According to Quran, many Jews are believers. Dr. Khalifa: Yeah. Dean Mahmoud: Many Jews are Muslims, isn't that right? Dr. Khalifa: Many? Dean Mahmoud: Meaning, some Jews are Muslims. Dr. Khalifa: Yes. Some Hindus and some Buddhists. Dean Mahmoud: Therefore, that's also their Holy Land. Dr. Khalifa: Yeah. (unintelligible) A woman: Too bad, you know. Dean Mahmoud: Huh? A woman: Too bad, you know. Dean Mahmoud: No, I am afraid. They might invade it. A woman: So, I'm (unintelligible) Dr. Khalifa: But, nothing happens without the will of God. [2:147] This is the truth from your Lord; do not harbor any doubt. Let's finish this subject with the knowledge that we have a commandment from God to face, the Qiblah in Mecca, when we Pray. And, it's a wonderful commandment because, as you see, we stand in one line, facing the same direction. And, it's a very good organizational point. You can imagine, if we didn't have that, we'd be looking in a hundred different directions. Dr. Khalifa: We'll be very dis... A woman: (unintelligible) Dr. Khalifa: Right. A woman: and feel energetic. Dr. Khalifa: Right. Exactly. Dr. Khalifa: Right. That's the point. Dean Mahmoud: Yeah. Can you feel that in the, in Mecca? Dr. Khalifa: Yeah. Dean Mahmoud: In the circle? A woman: Oh, that must be great. Dr. Khalifa: (unintelligible) Dean Mahmoud: (unintelligible) Dean Mahmoud: I think, in general, that the most undisciplined people in this earth are Muslims. Dean Mahmoud: But, when they pray, they are the most disciplined people. Dr. Khalifa: Right. Dean Mahmoud: It's amazing. Mecca, you, if you are on the up (unintelligible) all of them... Dr. Khalifa: It's a miracle. Yes. Dean Mahmoud: It is, it's fantastic. A woman: (unintelligible) Dr. Khalifa: Did you see that movie that we were showing here... A man: (unintelligible) Dr. Khalifa: of Mecca? Dean Mahmoud: Yeah. But as of now, actually where is that? Dr. Khalifa: But, you see, the movie, you see, when you're there, you're part of the Prayer. So, you're making Sujud (Prostration). But, you see, I had to miss a Rak'at just to take the movie. And it's really dramatic. And when you see it in the movie, it's different. Dr. Khalifa: You're not, you're not part of it. A man: Yes. A man: (unintelligible) Dr. Khalifa: Right. A woman: (unintelligible) A woman: Habitually, only one standing up to worship or were you sitting down? Dr. Khalifa: Yeah, I was the only one standing up. Dr. Khalifa: (unintelligible) A woman: (unintelligible) A woman: The only one. Dean Mahmoud: Oh, you were not up there. Dr. Khalifa: Yeah, I was up there. A man: (unintelligible) A woman: Did they slap you or anything? Dr. Khalifa: They, they couldn't see, they were making Sujud (Prostration). A woman: Oh, yes. It's (unintelligible) A woman: Yeah. (unintelligible) Dr. Khalifa: Okay, let's go to 148, page 16. 148 says, [2:148] To each is his own direction; therefore, you shall race towards righteous works. Wherever you might be, GOD will bring you all. GOD is Omnipotent. [2:149] Wherever you may go, you shall turn your face ... Oh, there's the repetition. [2:149] Wherever you may go, you shall turn your face (in Salat) towards the Sacred Mosque of Mecca.* This is the truth from your Lord. GOD is never unaware of anything you do. [2:150] Wherever you may go, you shall turn your face (during Salat) towards the Sacred Mosque of Mecca; wherever you may be, you shall turn your faces (during Salat) towards it. Thus, the people will have no argument against you, except the wicked among them. Do not fear them, and fear Me instead that I may complete My blessings upon you, that you may be guided. So, you can see the repetition, indicating how important the commandment is, to face the Qiblah in Mecca. [2:151] Such (blessings) as the sending of a messenger from among you to recite for you our revelations, and to sanctify you, and to teach you the scripture and wisdom, and to teach you what you never knew. [2:152] Therefore, you shall remember Me, that I may remember you, and be thankful to Me; do not be unappreciative. Dr. Khalifa: Ok. Any questions on these parts? A woman: (unintelligible) Dr. Khalifa: Yeah. A woman: I wanted (unintelligible) Dean Mahmoud: (unintelligible) Dr. Khalifa: Well, It means the Jews, the Christians, the Hindus, the Buddhists, the Muslims, and so forth. Dean Mahmoud: Yeah. Dean Mahmoud: Because 145 says that. [2:145] ... they will not follow your Qiblah. Nor should you follow their Qiblah. ... Dr. Khalifa: Yeah. Dean Mahmoud: 145 is related to... A woman: So, did you just rephrase (unintelligible) or... Dr. Khalifa: Yes, statement of fact. Dean Mahmoud: Statement of fact, yeah. Dr. Khalifa: The direction of, of Mecca is for us specifically. Dean Mahmoud: For the Jews wrong way. Dr. Khalifa: Yes, to each congregation is their own mark, and they will be judged according to their own mark. So, God says, [2:148] ... you shall compete in righteousness. ... All of us should compete in righteousness. Okay, Fatima, you wanna take the steadfastness part? Dr. Khalifa: (unintelligible) 153. Fatima: [2:153] O you who believe, seek help through steadfastness and Salat. GOD is with those who steadfastly persevere. [2:154] Do not say of those who are killed in the cause of GOD, \"They are dead. \"They are alive at their Lord, but you do not perceive.*",
+      "review_status": "draft",
+      "retrieval_text": "Quran 2:144–152, Tucson's qiblah, maps, straight lines, and testimony from previous scripture\nThe group debates the direction from Tucson to Mecca at length. Participants compare local east, northeast, great-circle flight paths, globe surfaces, radial lines, and straight lines through or across Earth. Quran 2:144–152 is read concerning facing the Sacred Mosque, opposition from previous scripture communities, competing directions, remembrance, and gratitude.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: quran-2-144-152; tucson-qiblah; maps; great-circle; straight-line; mecca\nUser terminology: face Sacred Mosque; northeast or east; straight line to Mecca; planes over North Pole; remember Me\nQuestions: Which directions from Tucson were debated? How did the speakers use Quran 2:144–152? Why did map and globe models produce disagreement?\nQuran references: 2:144-152\nBible references: \nEntities: Tucson; Mecca; Jerusalem"
+    },
+    {
+      "id": "audio64-s03",
+      "start": 2100,
+      "end": 2580,
+      "title": "Quran 2:153–157, steadfastness, martyrs alive, fear, hunger, loss, and perfect happiness",
+      "summary": "Quran 2:153–157 calls for steadfastness and prayer, describes those killed in God's cause as alive, and announces tests involving fear, hunger, money, lives, and crops. Rashad says the test reveals whether a person remains happy and convinced of God's mastery through success, failure, health, sickness, or loss.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "steadfastness",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "martyrs-alive",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "fear-hunger-loss",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "testing",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "perfect-happiness",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "seek help through steadfastness and Salat",
+        "martyrs alive",
+        "fear hunger loss",
+        "perfect happiness",
+        "extreme success or failure"
+      ],
+      "related_questions": [
+        "Which tests are listed in Quran 2:155?",
+        "How did Rashad define steadfastness?",
+        "What did he claim about happiness through hardship?"
+      ],
+      "quran_references": [
+        "2:153-157",
+        "2:45"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not use the sermon to shame grief, illness, trauma, or poverty.",
+      "retrieval_priority": "primary",
+      "start_time": "00:34:55.269",
+      "end_time": "00:43:03.797",
+      "source_segment_start": 701,
+      "source_segment_end": 806,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Ahmad",
+        "Dr. Khalifa",
+        "Fatima",
+        "Inga",
+        "Latifa"
+      ],
+      "canonical_text": "[2:154] Do not say of those who are killed in the cause of GOD, \"They are dead. \"They are alive at their Lord, but you do not perceive.* [2:155] We will surely put you to the test by means of some fear, hunger, loss of money, lives, and crops. Give good news to those who are steadfast.* [2:156] If an affliction strikes them, they say, \"We belong to GOD, and to Him is our ultimate return.\" [2:157] These have deserved blessings from their Lord and mercy. They are the guided ones. Fatima: (unintelligible) Dr. Khalifa: Ok. Fatima: (unintelligible). Fatima: (unintelligible). Fatima: (unintelligible). Dr. Khalifa: So, steadfastness, steadfastness is, is very important. A man: What's that? Dr. Khalifa: You may want to come to God because you want to be happy in this world and Hereafter. So, after a year of Praying five times a day, fasting the month of Ramadan and following God's law, you'll still have problems, then you say \"what is this? I came to God because I want to be happy, how come I have problems?\" Then, see, you're not a Muslim. You didn't come to God. You're coming to happiness. Now, you must be proven that you, you know that God is the Master, doesn't matter what happens, to you, happiness or misery or accidents or what. I mean, it's a knowledge that is established in your mind, in your conviction, and it doesn't matter what happens, it's not gonna change. Therefore, you must be proven. You must be shown that you have reached that conviction, and that is proven by steadfastness. Steadfastness is very important. It may take 15 years. It may take 20 years, until you attain that state of perfect happiness. It may take 20 years, it may take 2 months. But the state of perfect happiness is not the object. The object is belief in God, and. knowing that God is the Master. In fact, when you say why is this happening to me, you're not a Muslim, you're not submitting, you're objecting, it's an objection. You're not a Muslim yet, and you don't deserve the, the perfect happiness, where there are no problems. When you say \"why is this happening to me? I Prayed my five Prayers.\" Now, it's because you haven't come to God, you have come to happiness, this is your objective. You want, you want a life without any problem. So, this is what you want, and this is what you worship. Now, what are the choices? Now, you can be steadfast for 15 years, and then you attain the perfect conviction, the perfect happiness that comes as a side effect. Now, that's, that's something on the side. It's not your objective. It will come as a natural consequence of your deep conviction that God is the only Master. The other choice is to have, to be steadfast 15 years of misery, and then go on. That way, you'll be steadfast for 15 years and then attain perfect happiness, or have the 15 years of misery plus eternal misery, that's the other choice. There are no other, there's no, there are no other choices. So, steadfastness is very important. [2:45] ... seek help through steadfastness ... You're steadfast. You're unshakable. It doesn't matter what happens. Something happens, \"why did this happen to me, I'm not gonna Pray today.\" That's cutting off your nose to spite your face. Dr. Khalifa: So, you, when you're convinced, nothing's gonna change that knowledge. A man: (unintelligible) Dr. Khalifa: Okay, question (unintelligible) A woman: (unintelligible) Dr. Khalifa: Exactly. A woman: (unintelligible) we've been talking about. We know (unintelligible) that I know (unintelligible) I would say I didn't think I (unintelligible) that bad. (unintelligible) is that, you know, we all have (unintelligible) A woman: So, (unintelligible) Dr. Khalifa: Right. A woman: (unintelligible) Dr. Khalifa: This is why the verses of the test came immediately after steadfastness, because God wants you to show the angels and to show Satan that you are convinced that He is the only Master, and nothing is gonna change that no matter what happens, extreme success, extreme failure, health, sickness, better or worse. Dr. Khalifa: Latifa (unintelligible) Latifa: I just want to know about steadfastness as far as like, okay, like the night when I thought that I wasn't gonna be able to make it to Quran study, okay, like sure thing (unintelligible) my eyes, but yet I was still comfortable at home and said, \"well, I'll watch the TV for a bit.\" But then, it was like, I know, if, if I missed the one study, (unintelligible). But then still, what I'm trying to say is, knowing it, you know, knowing that you're being put through a test, again not submitting this. But that steadfastness, what is that, or is that (unintelligible) or what? Latifa: You know, like if you know, oh, wow, this happened, but then you go, Alhamdu Lillah. Dr. Khalifa: The test, the test, in your case, is being far away without transportation. That's the test. Yeah, so, you have to struggle, you have to go around and find the ride, and which is what we did, and you have to do your best to, to go to the Quran study. That's what you're supposed to do, but then if this, Dr. Khalifa: you can't find the ride, and there's no way you can make it, then you satisfy the requirements, and then you submit to that. Latifa: Oh, okay. Dr. Khalifa: That's submission. Latifa: Okay. Dr. Khalifa: After you do what you're supposed to do, after you do your best, and you cannot accomplish it, then you submit, Dr. Khalifa: and don't object. Latifa: Ok. Dr. Khalifa: The submitters do not object. Dr. Khalifa: Inga's, Inga's here. Inga: I don't know (unintelligible) how many times in Quran, it's being written. The children and the wealth (unintelligible). And I think this is the first time I've really paid much attention, I've noticed that there are other tests that I've mentioned, but something that kind of surprises me, because I know that many times I, and probably other people, I'll finish half the (unintelligible), and you say, well, you know, we don't have a job, but somehow we know (unintelligible) or the money will appear to kind (unintelligible) Inga: And you sort of (unintelligible), and so it's okay that we don't have a lot, because we know the (unintelligible). (unintelligible), just to (unintelligible) like this. Inga: It's like saying to me, uh-uh, if, if you, if you're getting the worse, or there's more, but it's still just gonna be a test. Dr. Khalifa: Right. Inga: I think I don't think that's clear, but think I'm happy that I've read this, Inga: because if things get worse, or for anybody, or any other story, it's like, it doesn't even mean you'll be (unintelligible). Dr. Khalifa: Yeah, the verses is... Inga: I think I might have reacted with (unintelligible). Dr. Khalifa: The teachings of Quran, the teachings of Quran will come to you at the right time, when you need it, at the time you need it. This is why, this is why the Quran is never a boring book, because every time you read it, you get something new out of it. And you say, \"I got to have heard this a million times, how come I didn't see it?\" Yeah. It's because you're not ready yet. Dr. Khalifa: Ahmad. Ahmad: But this, you know, steadfastness I think that it is a, a real requirement, maybe, to be a (unintelligible)",
+      "review_status": "draft",
+      "retrieval_text": "Quran 2:153–157, steadfastness, martyrs alive, fear, hunger, loss, and perfect happiness\nQuran 2:153–157 calls for steadfastness and prayer, describes those killed in God's cause as alive, and announces tests involving fear, hunger, money, lives, and crops. Rashad says the test reveals whether a person remains happy and convinced of God's mastery through success, failure, health, sickness, or loss.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: steadfastness; martyrs-alive; fear-hunger-loss; testing; perfect-happiness\nUser terminology: seek help through steadfastness and Salat; martyrs alive; fear hunger loss; perfect happiness; extreme success or failure\nQuestions: Which tests are listed in Quran 2:155? How did Rashad define steadfastness? What did he claim about happiness through hardship?\nQuran references: 2:153-157; 2:45\nBible references: \nEntities: "
+    },
+    {
+      "id": "audio64-s04",
+      "start": 2580,
+      "end": 3120,
+      "title": "Practical steadfastness, Inga's experiences, disaster language, and accepting God's mastery",
+      "summary": "Participants test the meaning of steadfastness through personal experiences, emotional reactions, letters, and events they considered disasters. Rashad says steadfastness means remembering God under every condition rather than merely thinking positively after an event.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "practical-steadfastness",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "personal-testimony",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "disaster",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-mastery",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "emotional-reaction",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "boat calm or drowning",
+        "if disaster strikes",
+        "biggest disaster",
+        "remember God under all conditions"
+      ],
+      "related_questions": [
+        "How did participants distinguish steadfastness from ordinary positive thinking?",
+        "Which personal experiences were used to test the concept?"
+      ],
+      "quran_references": [
+        "2:156"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Inga"
+      ],
+      "retrieval_note": "Personal distress must not be invalidated by the ideal of constant happiness.",
+      "retrieval_priority": "primary",
+      "start_time": "00:42:55.400",
+      "end_time": "00:52:00.877",
+      "source_segment_start": 806,
+      "source_segment_end": 964,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Ahmad",
+        "Dean Mahmoud",
+        "Dr. Khalifa",
+        "Latifa"
+      ],
+      "canonical_text": "Ahmad: But this, you know, steadfastness I think that it is a, a real requirement, maybe, to be a (unintelligible) The reason is that maybe (unintelligible) is (unintelligible) related to the real (unintelligible) Is it clear? I think, if there's a steadfastness, if, you know, perseverance, you know that you're training some of those qualities, (unintelligible) qualities you have. For example, if you take a lot of wealth, when you get rich, you always remember the truth. You can, you know, help the truth. And if you have a child, or if you, if you don't have a child, and you appear to love of the child, and then you have this, then you have a child, (unintelligible) more. Ahmad: Or if (unintelligible), you know. Ahmad: And... Dr. Khalifa: When you're steadfast, you're rewarded. Ahmad: Right. Dr. Khalifa: (unintelligible) Dr. Khalifa: But, the idea is, while, I, I did a good example. When we were young, you probably did this, and I did this. When we were young, and not quite certain yet in the religion, you know how the examinations back home are really tough, you know, they really make you or break you. And I noticed that I and my friends were more religious in the days of examination than on others days. Which means, you know, when, when you don't need God, you know, you don't pray as much, you're not as, as religious as you should be. But, when you're, you're squeezed, then you turn to God. So, God says, you must be steadfast under all circumstances. And we're given examples in the Quran where people are riding the boat in the, here comes the storm, they're about to drown, and then they turn to God. \"Please God save us from this one.\" Dr. Khalifa: As soon as they land on shore, they forget God. A woman: Yeah. Dr. Khalifa: And so, that's not steadfastness. Now, steadfastness means to think of God, under all circumstances whether the boat is going nice, or it's drowning, or we're on land, or in sea, or in, Dr. Khalifa: in stormy conditions, or in pacific conditions. A woman: (unintelligible) we need to remember something that you said last week, too, about being steadfast. We can't necessarily expect more, or anything that we (unintelligible) Well, I think we need to remember, too, that this is something (unintelligible) the test is through (unintelligible) we're difficult, because (unintelligible) Satan, \"you can't do this, you can't do that.\" A woman: So, now, it's gonna turn to (unintelligible) A man: Right, (unintelligible) A woman: We've been steadfast. A woman: We're still (unintelligible) A man: That's right. Dr. Khalifa: Yep. Everything you say Dr. Khalifa: from the time you wake up to the time you sleep, you can say (unintelligible) A man: For example. Dr. Khalifa: There are, there are many things you have to think about. A man: Yes. Dr. Khalifa: How much did you pay for this? Did you get the accurate price? Or did you, did you buy it? Dr. Khalifa: There are, there are many things that we have to watch out for. Dean Mahmoud: This, this thing about how easily forget. This is, I think, very, very normal. It should not be normal. Like this, now, it happens. \"Allah, I want this letter,\" let's say, \"from my mother.\" And every day you're missing, \"Allah, I want this letter of...\" And after waiting three or four weeks, the mailman comes with the letter. Dean Mahmoud: And when you see it, you forget Allah. Dean Mahmoud: You thank the mailman. Dr. Khalifa: The mailman. Dean Mahmoud: You give him a tip. And after reading the letter, then you realize, Dean Mahmoud: you have thanked everybody except Dr. Khalifa: (unintelligible) Dean Mahmoud: Allah. Dean Mahmoud: It's very, I think, very common. Dr. Khalifa: You have to also seek help through steadfastness and Salat Prayer. Dr. Khalifa: Although if you are steadfast and you're doing your Salat, you're gonna receive help. A woman: (unintelligible) Dr. Khalifa: Right. Steadfastness Exhort each other, yes, exhort each other to being steadfast. And if you see 156, it says, [2:156] If a disaster should strike them, they say, \"We belong to GOD, and to Him is our ultimate return.\" In other words, the Muslim says, \"well, this is what God wants to do to me. Fine.\" When I got in trouble in Libya, and they threw me in the dungeon, I was very upset I was very objecting for, for a couple of days. \"why, why, why is this happening to me?\" And then, I was, they don't give you any books, nothing. They just, not even clothes, nothing. I was afraid I will forget the Quran. So, I was reading it continuously. And then, I came to a verse in Sura 15 that says,... ...was doing. I mean, I was objecting violently. Then, I, I totally submitted. So, this is what God wants to... So, this is what this verse means. [2:156] When a disaster ... \"We belong to GOD, ... Dr. Khalifa: I said, \"If this is what God wants to do to me, there is nothing anybody can do and I just have to accept it. Latifa: Okay. That's, that's, that's what I was talking about so far as that Dr. Khalifa: Yeah. Latifa: first thought you had. Latifa: That's what I was talking about that first thought you had, is that okay? Dr. Khalifa: No. Latifa: (unintelligible) that first thought, I know it's not okay Latifa: because we should keep that second thought continuously. Dr. Khalifa: Yes. Latifa: But is it okay as far as us being humans to have that first thought as long as we get back as quickly as we possibly can Dr. Khalifa: Right. Latifa: to the second thought? Dr. Khalifa: Because the Quran just reminded me. Latifa: Ok. Because that's what I was (unintelligible). Dr. Khalifa: Thank God, but Dr. Khalifa: that, that must have been the toughest test I ever had in my life. That was really... Dr. Khalifa: Yeah, that was the toughest test. A woman: (unintelligible) Dr. Khalifa: But the rewards were beautiful after that. Because, I mean, just two days later I was, I was really honored, you know, the, the President's men came in and they kicked the doors and beat up the jailers. And they had me in a, a government limousine, and going to the what they call the people's palace. for the second man in the country. What's his name? Ahmed, Ahmed the bodyguard of Gaddafi gave me a big hug and asked me what happened when he, he's the one who put me in to start with. They pretended like they rescued me, but, of course, God was doing the whole thing, but only after I submitted and I accepted. I mean, this verse, I identify with this verse right away, 156, to look at. [2:156] If a disaster should strike them, ... To me that was the biggest disaster ever. Because it's a place where there are no laws. There are no courts. They don't have to put you on trial any time. They don't have to release you. They don't have to justify or give you any reasons. You don't know what will happen to you. And on the walls of the dungeon, I saw those lines marking days and weeks. People every week they crossed it (unintelligible). Dr. Khalifa: And I didn't know how long I'll... A woman: (unintelligible) Dr. Khalifa: Yeah really, I thought I'd never see my children again. A woman: Wow. Dr. Khalifa: And it happened before. I mean, they took Imam Musa Sadr, Lebanon. And he totally disappeared, never showed up again. There are lots of speculations what happened to him. Also, I know from experience that when they do this to you, even for one hour, you become an enemy of the state. They won't let you go out to speak like I'm talking now against them to expose their tyranny and the torture that I saw in the, in the dungeon and all the horrible things that happened to human beings over there. They won't let you go. But it was no less than a miracle. Yet, it's very easy for God to do. So, when we look at this verse again, 156. [2:156] If a disaster should strike them, they say, \"We belong to GOD, and to Him is our ultimate return.\" So, this is exactly what I said by instinct. Alhamdu Lillah, all I said was \"Well, if this is what God wants to do to me who's gonna do anything about it?\" And I had a great sense of relief. And only then I can imagine the angels working on my release because they go and take over the people and they make this rash decision of letting me go. Unheard of, you know. Really, this is unheard of. I haven't seen anybody go in and come out. Dr. Khalifa: Yeah. A woman: That first thought that we get the one that doesn't wanna us (unintelligible).",
+      "review_status": "draft",
+      "retrieval_text": "Practical steadfastness, Inga's experiences, disaster language, and accepting God's mastery\nParticipants test the meaning of steadfastness through personal experiences, emotional reactions, letters, and events they considered disasters. Rashad says steadfastness means remembering God under every condition rather than merely thinking positively after an event.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: practical-steadfastness; personal-testimony; disaster; divine-mastery; emotional-reaction\nUser terminology: boat calm or drowning; if disaster strikes; biggest disaster; remember God under all conditions\nQuestions: How did participants distinguish steadfastness from ordinary positive thinking? Which personal experiences were used to test the concept?\nQuran references: 2:156\nBible references: \nEntities: Inga"
+    },
+    {
+      "id": "audio64-s05",
+      "start": 3120,
+      "end": 3685.86,
+      "title": "Quran 2:158–163, Safa and Marwah, Hagar, Hajj, ritual obedience, and one God",
+      "summary": "Quran 2:158 introduces Safa and Marwah. Rashad traces the practice to Hagar's search for water and says Hajj and its rites came through Abraham. The group asks why traversing the hills is permitted if stones and places can become idols. Rashad distinguishes obeying God's command from worshiping the Kaaba or hills. The recording approaches Quran 2:163's declaration that the community's god is one God.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "safa-marwah",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "hagar",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "hajj",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "abrahamic-rites",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "ritual-obedience",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "one-god",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Safa and Marwah",
+        "Hagar search for water",
+        "Hajj came through Abraham",
+        "not idolizing Kaaba",
+        "your god is one god"
+      ],
+      "related_questions": [
+        "How were Safa and Marwah connected with Hagar?",
+        "Why did Rashad say traversing them was not idolatry?",
+        "What larger Abrahamic claim was made about Hajj?"
+      ],
+      "quran_references": [
+        "2:158-163"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Hagar",
+        "Abraham",
+        "Kaaba"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:51:58.340",
+      "end_time": "01:01:25.850",
+      "source_segment_start": 964,
+      "source_segment_end": 1171,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Adam",
+        "Dean Mahmoud",
+        "Dr. Khalifa",
+        "Inga"
+      ],
+      "canonical_text": "the one that doesn't wanna us (unintelligible). Is that the fear and the doubt? (unintelligible) Fear and doubt, you know, (unintelligible) no fear and no doubt. A woman: Is that what that first thought is (unintelligible) Dr. Khalifa: The objection? A woman: Uhuh. Dr. Khalifa: The objection is simply lack of faith in God. When I, when I was put in that disaster, I just, I became selfish. I, I forgot, my faith in God was not strong. I was objecting all over the place. Ok. I thought I was great. \"Why is this happening to me?\" \"That shouldn't happen to me.\" That was objection. I was bad. So, for as long as I was flunking the test, I was in bad shape. But when I made that statement [2:156] ... \"We belong to GOD, ... And He can do anything with us and we submit, then everything, the test was over. There was no point in continuing the test. But had I continued with that attitude of why is this happening to me, I would have continued there. Okay, our next teacher is Adam Baruni. He's sitting up now. Okay. Adam, you wanna take the Hajj pilgrimage? Inga, why don't you take the Hajj pilgrimage since Adam doesn't wanna respond? Inga: (unintelligible) Dr. Khalifa: He's sitting up. Dr. Khalifa: When did you start sitting up? Adam: (unintelligible) Dr. Khalifa: Huh? A couple of days? Dr. Khalifa: Mã Shã Allãh. A woman: (unintelligible) Dr. Khalifa: No, he's busy, no, he's just sitting there reaching for things and toys throwing them up in the air and chewing on them. He's having fun, Mã Shã Allãh. Dr. Khalifa: Okay, Inga. Inga: [2:158] The knolls of Safa and Marwah are part of the worship practices decreed by GOD. Thus whoever observes the Hajj pilgrimage or the 'Umrah pilgrimage commits no error by traversing the distance between them. If one volunteers more righteous works, then GOD is Appreciative, Fully Aware. [2:159] As for those who conceal what we sent down, our profound revelations and guidance, after declaring them to the people of the scripture, they have deserved GOD's curse, and should be cursed by all who curse. [2:160] For those who repent, reform, and clarify, I redeem them. I am the Redeemer, the Merciful. [2:161] Those who disbelieve and die as disbelievers, have deserved the curse of GOD, and the angels, and all the people (on the Day of Judgment). [2:162] Eternally they will abide therein. Their retribution is never commuted for, nor are they reprieved. [2:163] Your god is one god; there is no god except He, the Gracious, the Merciful. From what I understand Safa and Marwah are both Inga: the opposite sides. And is this something against walking normally? Dr. Khalifa: No, no. Inga: I'm just saying it's okay but why do we, why do we... Dr. Khalifa: Ok. See, Dr. Khalifa: Hajj, like all worships in Islam came through Ibrahim, Abraham. And Safa and Marwah are two knolls where Hagar used to go up the hill to look and see when Abraham is coming because he left them there. He left Hagar and Ishmael there. And he'll go to Sarah in Palestine for a couple of months and come to Hagar and Ishmael for a couple of months. So, she used to go up. And they were really in distress just before discovery of water. And so, she will go up and look for Abraham and then go to this one because he comes with the supplies. They were running, supplies were running down. And then, the well of Zamzam, the spring sprung out of the earth. And then, the caravans will stop and buy the water from them. And they became rich etc. etc. So, the Safa and Marwah are a commemoration of the fact that God will take care of you because some people just can't imagine that God will provide for you whence you never expect. When you put your trust in God, the verse says those who observe God will be provided for whence they never expect. And some people just can't imagine that. So, this symbolizes the fact that Abraham followed the instructions. He took Hagar and Ishmael, put them in a barren desert, no plants, no water, nothing. And he said, you're gonna live here. Can you imagine going in the middle of the desert, not, not like the desert of Arizona here. If you've seen the desert in Yuma, between Yuma and El Centro where it is just yellow sand dunes, this is how Mecca looks. I mean, no plants, nothing, no water. And this is the area that as, as you see in other verses in Quran, Sura 14, he said Please, God I put my family in a plantless valley. Please, provide for them. He left them, left them with some supplies. This is the spot that God selected for you. Bye. But God provided for them. The water came out. The caravans came. They both became rich. Wealthy. God provided for them. So, this Safa and Marwah business is a commemoration of that. And it reminds you that God will provide for you and take care of you. He guarantees that. See, God says, I guarantee you provision in this life. It's guaranteed. All I want you to do is worship Me alone. I'm gonna take care of all your needs. And I just want you to make a decision, to worship Me alone. Dr. Khalifa: So, the Safa and Marwah are the symbol for this. Inga: That line Inga: [2:158] ... If one volunteers more righteous works, then GOD is Appreciative, Fully Aware. Dr. Khalifa: Right, where is this now? Inga: It's in that very same 158 Inga: That's, that's further (unintelligible), I can, I can see it. Inga: He's bringing it to like modern day times. Inga: (unintelligible) Dr. Khalifa: Right. Dr. Khalifa: Because it's traversing the distance seven times. So, but if you wanna do it more, if you wanna commemorate, because you're commemorating God, you're saying Allahu Akbar. Subhan Allah. all the time you're going back and forth. You're saying that. You're saying, Labbayka Allāhumma Labbyak (لَبَيْكَ اللَّهُمَّ لَبَيْكَ) means I respond to you my Lord and I obey Your commandments. It's making Zikr. So, it says that if you volunteer more of this worship, Dr. Khalifa: then you'll be rewarded for it. A woman: What do you say (unintelligible) Dr. Khalifa: Labbayka Allāhumma Labbyak (لَبَيْكَ اللَّهُمَّ لَبَيْكَ). Labbyak (لَبَيْكَ) is an expression like when a king calls a slave. Yeah, then the slave comes and says, Labbyak (لَبَيْكَ). Dr. Khalifa: In other words, I'm at your command. A man: Here I am. Dr. Khalifa: Yeah, here I am at your command. So, you will say this when you make, make Hajj. Throughout the Hajj, you're saying that. Labbayka Allāhumma (لَبَيْكَ اللَّهُمَّ). my God, our God. Labbayk (لَبَيْكَ) So, You called me to this place. And I am at Your command. In obedience to You, I come all this distance. Dr. Khalifa: Beautiful words, yeah. A woman: (unintelligible) Dr. Khalifa: Yes. Dr. Khalifa: Well, that's what it says here. A woman: (unintelligible) A woman: It says, (2:158) فَلَا جُنَاحَ عَلَيْهِ أَن يَطَّوَّفَ Dr. Khalifa: Yeah. (2:158) أَن يَطَّوَّفَ بِهِمَا A woman: (unintelligible) Dr. Khalifa: Yes, but in other words, it is not, you're not worshiping idols by doing this. You are, you are doing it because of My command. In other words, some people would say, you're going around the Ka'bah, then the Ka'bah is your idol. But we're doing it because God said. It's like God saying, [2:34] ... the angels, \"Fall prostrate before Adam,\" ... Are they worshiping Adam? It's a commandment of God. So, God said, it is, it's okay. God, The verse that we just read said it's okay to go around them, or traverse the distance between them. And in this way, you are not idolizing the Ka'bah, or idolizing Safa or Marwah. Because it is a commandment from God. Now, I said God was telling the angels, it's all right, you fall prostrate before Adam. Dr. Khalifa: It's okay, I'm telling you. A woman: The verse then said (2:158) وَمَن تَطَوَّعَ خَيْرًا Dr. Khalifa: Yes. A woman: (unintelligible) A woman: (unintelligible) Dr. Khalifa: Yes. A woman: volunteers what? Dr. Khalifa: volunteers more worship, more Zikr. Because these are worship practices. While we're on this subject, I must say that all pillars of Islam are shown in this Sura in the sequence of the year. The first one was the Salat and then Zakat, and then comes the Fasting in the ninth month. And now, this is Hajj on the twelfth month, month. Dr. Khalifa: So, the, you remember, did you go through your fasting? Didn't we? Yeah. Dr. Khalifa: (unintelligible) Dean Mahmoud: No, not yet. A woman: (unintelligible) Dean Mahmoud: It's next. Dean Mahmoud: You... Dr. Khalifa: Oh, is it? A woman: (unintelligible) Dr. Khalifa: Oh, oops. This is an oops. (unintelligible) No, I think the Hajj Dr. Khalifa: yes, Hajj comes after the fasting. Dean Mahmoud: Then, you mention Hajj after Dr. Khalifa: Right. Dean Mahmoud: (unintelligible) Dr. Khalifa: So, this, this has to do with the Safa and Marwah and (unintelligible) Dean Mahmoud: Yeah. (unintelligible) Dr. Khalifa: Because the verse goes to Abraham. A woman: But then, (unintelligible) Dr. Khalifa: Right. Dean Mahmoud: Yeah. Dean Mahmoud: More Zikr. Dr. Khalifa: The, the decree...",
+      "review_status": "draft",
+      "retrieval_text": "Quran 2:158–163, Safa and Marwah, Hagar, Hajj, ritual obedience, and one God\nQuran 2:158 introduces Safa and Marwah. Rashad traces the practice to Hagar's search for water and says Hajj and its rites came through Abraham. The group asks why traversing the hills is permitted if stones and places can become idols. Rashad distinguishes obeying God's command from worshiping the Kaaba or hills. The recording approaches Quran 2:163's declaration that the community's god is one God.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: safa-marwah; hagar; hajj; abrahamic-rites; ritual-obedience; one-god\nUser terminology: Safa and Marwah; Hagar search for water; Hajj came through Abraham; not idolizing Kaaba; your god is one god\nQuestions: How were Safa and Marwah connected with Hagar? Why did Rashad say traversing them was not idolatry? What larger Abrahamic claim was made about Hajj?\nQuran references: 2:158-163\nBible references: \nEntities: Hagar; Abraham; Kaaba"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "abrahamic-rites",
+      "preferred_label": "Abrahamic Rites",
+      "aliases": [
+        "Hagar search for water",
+        "Hajj came through Abraham",
+        "Safa and Marwah",
+        "not idolizing Kaaba",
+        "your god is one god"
+      ],
+      "appears_in_sections": [
+        "audio64-s05"
+      ]
+    },
+    {
+      "id": "disaster",
+      "preferred_label": "Disaster",
+      "aliases": [
+        "biggest disaster",
+        "boat calm or drowning",
+        "if disaster strikes",
+        "remember God under all conditions"
+      ],
+      "appears_in_sections": [
+        "audio64-s04"
+      ]
+    },
+    {
+      "id": "divine-mastery",
+      "preferred_label": "Divine Mastery",
+      "aliases": [
+        "biggest disaster",
+        "boat calm or drowning",
+        "if disaster strikes",
+        "remember God under all conditions"
+      ],
+      "appears_in_sections": [
+        "audio64-s04"
+      ]
+    },
+    {
+      "id": "emotional-reaction",
+      "preferred_label": "Emotional Reaction",
+      "aliases": [
+        "biggest disaster",
+        "boat calm or drowning",
+        "if disaster strikes",
+        "remember God under all conditions"
+      ],
+      "appears_in_sections": [
+        "audio64-s04"
+      ]
+    },
+    {
+      "id": "fear-hunger-loss",
+      "preferred_label": "Fear Hunger Loss",
+      "aliases": [
+        "extreme success or failure",
+        "fear hunger loss",
+        "martyrs alive",
+        "perfect happiness",
+        "seek help through steadfastness and Salat"
+      ],
+      "appears_in_sections": [
+        "audio64-s03"
+      ]
+    },
+    {
+      "id": "god-alone-testimony",
+      "preferred_label": "God Alone Testimony",
+      "aliases": [
+        "Muhammad Rasul Allah",
+        "big growth around Quran",
+        "cut it away",
+        "do not worship in such mosque",
+        "preaching other than Quran"
+      ],
+      "appears_in_sections": [
+        "audio64-s01"
+      ]
+    },
+    {
+      "id": "great-circle",
+      "preferred_label": "Great Circle",
+      "aliases": [
+        "face Sacred Mosque",
+        "northeast or east",
+        "planes over North Pole",
+        "remember Me",
+        "straight line to Mecca"
+      ],
+      "appears_in_sections": [
+        "audio64-s02"
+      ]
+    },
+    {
+      "id": "hagar",
+      "preferred_label": "Hagar",
+      "aliases": [
+        "Hagar search for water",
+        "Hajj came through Abraham",
+        "Safa and Marwah",
+        "not idolizing Kaaba",
+        "your god is one god"
+      ],
+      "appears_in_sections": [
+        "audio64-s05"
+      ]
+    },
+    {
+      "id": "hajj",
+      "preferred_label": "Hajj",
+      "aliases": [
+        "Hagar search for water",
+        "Hajj came through Abraham",
+        "Safa and Marwah",
+        "not idolizing Kaaba",
+        "your god is one god"
+      ],
+      "appears_in_sections": [
+        "audio64-s05"
+      ]
+    },
+    {
+      "id": "maps",
+      "preferred_label": "Maps",
+      "aliases": [
+        "face Sacred Mosque",
+        "northeast or east",
+        "planes over North Pole",
+        "remember Me",
+        "straight line to Mecca"
+      ],
+      "appears_in_sections": [
+        "audio64-s02"
+      ]
+    },
+    {
+      "id": "martyrs-alive",
+      "preferred_label": "Martyrs Alive",
+      "aliases": [
+        "extreme success or failure",
+        "fear hunger loss",
+        "martyrs alive",
+        "perfect happiness",
+        "seek help through steadfastness and Salat"
+      ],
+      "appears_in_sections": [
+        "audio64-s03"
+      ]
+    },
+    {
+      "id": "mecca",
+      "preferred_label": "Mecca",
+      "aliases": [
+        "face Sacred Mosque",
+        "northeast or east",
+        "planes over North Pole",
+        "remember Me",
+        "straight line to Mecca"
+      ],
+      "appears_in_sections": [
+        "audio64-s02"
+      ]
+    },
+    {
+      "id": "mosques",
+      "preferred_label": "Mosques",
+      "aliases": [
+        "Muhammad Rasul Allah",
+        "big growth around Quran",
+        "cut it away",
+        "do not worship in such mosque",
+        "preaching other than Quran"
+      ],
+      "appears_in_sections": [
+        "audio64-s01"
+      ]
+    },
+    {
+      "id": "muhammad-shahada",
+      "preferred_label": "Muhammad Shahada",
+      "aliases": [
+        "Muhammad Rasul Allah",
+        "big growth around Quran",
+        "cut it away",
+        "do not worship in such mosque",
+        "preaching other than Quran"
+      ],
+      "appears_in_sections": [
+        "audio64-s01"
+      ]
+    },
+    {
+      "id": "one-god",
+      "preferred_label": "One God",
+      "aliases": [
+        "Hagar search for water",
+        "Hajj came through Abraham",
+        "Safa and Marwah",
+        "not idolizing Kaaba",
+        "your god is one god"
+      ],
+      "appears_in_sections": [
+        "audio64-s05"
+      ]
+    },
+    {
+      "id": "perfect-happiness",
+      "preferred_label": "Perfect Happiness",
+      "aliases": [
+        "extreme success or failure",
+        "fear hunger loss",
+        "martyrs alive",
+        "perfect happiness",
+        "seek help through steadfastness and Salat"
+      ],
+      "appears_in_sections": [
+        "audio64-s03"
+      ]
+    },
+    {
+      "id": "personal-testimony",
+      "preferred_label": "Personal Testimony",
+      "aliases": [
+        "biggest disaster",
+        "boat calm or drowning",
+        "if disaster strikes",
+        "remember God under all conditions"
+      ],
+      "appears_in_sections": [
+        "audio64-s04"
+      ]
+    },
+    {
+      "id": "practical-steadfastness",
+      "preferred_label": "Practical Steadfastness",
+      "aliases": [
+        "biggest disaster",
+        "boat calm or drowning",
+        "if disaster strikes",
+        "remember God under all conditions"
+      ],
+      "appears_in_sections": [
+        "audio64-s04"
+      ]
+    },
+    {
+      "id": "quran-2-144-152",
+      "preferred_label": "Quran 2 144 152",
+      "aliases": [
+        "face Sacred Mosque",
+        "northeast or east",
+        "planes over North Pole",
+        "remember Me",
+        "straight line to Mecca"
+      ],
+      "appears_in_sections": [
+        "audio64-s02"
+      ]
+    },
+    {
+      "id": "quran-alone",
+      "preferred_label": "Quran Alone",
+      "aliases": [
+        "Muhammad Rasul Allah",
+        "big growth around Quran",
+        "cut it away",
+        "do not worship in such mosque",
+        "preaching other than Quran"
+      ],
+      "appears_in_sections": [
+        "audio64-s01"
+      ]
+    },
+    {
+      "id": "ritual-obedience",
+      "preferred_label": "Ritual Obedience",
+      "aliases": [
+        "Hagar search for water",
+        "Hajj came through Abraham",
+        "Safa and Marwah",
+        "not idolizing Kaaba",
+        "your god is one god"
+      ],
+      "appears_in_sections": [
+        "audio64-s05"
+      ]
+    },
+    {
+      "id": "safa-marwah",
+      "preferred_label": "Safa Marwah",
+      "aliases": [
+        "Hagar search for water",
+        "Hajj came through Abraham",
+        "Safa and Marwah",
+        "not idolizing Kaaba",
+        "your god is one god"
+      ],
+      "appears_in_sections": [
+        "audio64-s05"
+      ]
+    },
+    {
+      "id": "steadfastness",
+      "preferred_label": "Steadfastness",
+      "aliases": [
+        "extreme success or failure",
+        "fear hunger loss",
+        "martyrs alive",
+        "perfect happiness",
+        "seek help through steadfastness and Salat"
+      ],
+      "appears_in_sections": [
+        "audio64-s03"
+      ]
+    },
+    {
+      "id": "straight-line",
+      "preferred_label": "Straight Line",
+      "aliases": [
+        "face Sacred Mosque",
+        "northeast or east",
+        "planes over North Pole",
+        "remember Me",
+        "straight line to Mecca"
+      ],
+      "appears_in_sections": [
+        "audio64-s02"
+      ]
+    },
+    {
+      "id": "testing",
+      "preferred_label": "Testing",
+      "aliases": [
+        "extreme success or failure",
+        "fear hunger loss",
+        "martyrs alive",
+        "perfect happiness",
+        "seek help through steadfastness and Salat"
+      ],
+      "appears_in_sections": [
+        "audio64-s03"
+      ]
+    },
+    {
+      "id": "tradition-growth",
+      "preferred_label": "Tradition Growth",
+      "aliases": [
+        "Muhammad Rasul Allah",
+        "big growth around Quran",
+        "cut it away",
+        "do not worship in such mosque",
+        "preaching other than Quran"
+      ],
+      "appears_in_sections": [
+        "audio64-s01"
+      ]
+    },
+    {
+      "id": "tucson-qiblah",
+      "preferred_label": "Tucson Qiblah",
+      "aliases": [
+        "face Sacred Mosque",
+        "northeast or east",
+        "planes over North Pole",
+        "remember Me",
+        "straight line to Mecca"
+      ],
+      "appears_in_sections": [
+        "audio64-s02"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio64-issue-01",
+      "issue_type": "partial-opening",
+      "original_text": "The recording starts in the middle of a mosque discussion.",
+      "suggested_action": "Link it to related 1982 files.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio64-issue-02",
+      "issue_type": "qiblah-geometry",
+      "original_text": "The directional reasoning is lengthy and scientifically unreliable.",
+      "suggested_action": "Use current geodesy.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio64-issue-03",
+      "issue_type": "mental-health-and-grief-risk",
+      "original_text": "Steadfastness is equated with constant happiness through severe loss.",
+      "suggested_action": "Do not shame emotional responses.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio64-issue-04",
+      "issue_type": "afterlife-claim",
+      "original_text": "Martyrs are described as presently alive and painless.",
+      "suggested_action": "Keep theological and attributed.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio64-issue-05",
+      "issue_type": "ritual-history",
+      "original_text": "All Hajj rites are traced directly to Abraham without source discussion.",
+      "suggested_action": "Use historical scholarship when required.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

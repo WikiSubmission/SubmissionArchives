@@ -1,0 +1,1128 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 51,
+  "document_id": "audio-program/quran-study-51-sura-17-59-satan-jinn-brewery-1990",
+  "title": "Quran Study 51: Sura 17:59–67, Satan, Jinn Companions, and the Brewery Discovery (1990)",
+  "date": "1990",
+  "date_precision": "year",
+  "date_note": "The filename identifies 1990, but no exact date is established.",
+  "source_file": "data/sources/playlists/audio-transcripts/51 - Quran Study 51 Sura 17_59 Rashad 1990.csv",
+  "youtube_id": "PFxoFm1F3PQ",
+  "youtube_url": "https://www.youtube.com/watch?v=PFxoFm1F3PQ",
+  "primary_speakers": [
+    "Dr. Rashad Khalifa",
+    "Edip Yuksel",
+    "Behrouz",
+    "Feroz",
+    "Muhammad",
+    "Unidentified men, women, and children"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 644,
+    "first_speech_time": "00:00:01.420",
+    "last_speech_time": "00:47:17.225",
+    "section_count": 7,
+    "speaker_counts": {
+      "Dr. Khalifa": 420,
+      "A woman": 53,
+      "A man": 130,
+      "Muhammad": 10,
+      "Edip": 18,
+      "Behrouz": 2,
+      "Feroz": 4,
+      "A child": 7
+    }
+  },
+  "document_summary": "A composite Quran-study recording that begins with Quran 39:15–21 and the loss or growth of the soul, then develops the idea that every child has a correspondingly young jinn companion. Rashad interprets disease, starvation, and AIDS as signs of Satan's inability to govern an expanding human population and gives an extended account of how his work at Monsanto and Anheuser-Busch enabled the Quranic computer research. The group then discusses Gog and Magog, numerical speculation concerning seventeen, ongoing creation, four kinds of disasters, the admission test, David and Solomon's judgments, a child's recitation of al-Fatihah, soul assignment across families and generations, and Quran 17:59–67 concerning the cessation of earlier visible miracles, Satan's challenge, divine protection, ships, and people who remember God only in danger.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-parivash-35-sura-30-brewery-intercession-divine-control",
+      "relationship": "same Monsanto and Anheuser-Busch discovery narrative",
+      "note": "Treat the brewery accounts as repeated movement history rather than independent proof."
+    },
+    {
+      "document_id": "audio-program/quran-study-parivash-22-sura-39-admission-test-no-compromise",
+      "relationship": "same admission-test and disaster framework",
+      "note": "The present recording gives a four-category disaster classification."
+    },
+    {
+      "document_id": "audio-program/quran-study-parivash-49-code-19-heavenly-feud-1989-11-05",
+      "relationship": "same Satanic-dominion and disease framework",
+      "note": "Medical claims must remain attributed and safety-qualified."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Separate the seven blocks",
+      "instruction": "The recording is much broader than its filename."
+    },
+    {
+      "rule": "Preserve the brewery history but link duplicates",
+      "instruction": "Repeated versions are one narrative family."
+    },
+    {
+      "rule": "Strongly qualify medical, childhood, and destiny claims",
+      "instruction": "They cannot guide diagnosis or judgment."
+    }
+  ],
+  "sections": [
+    {
+      "id": "audio51-s01",
+      "start": 0,
+      "end": 240,
+      "title": "Quran 39:15–21, losing the soul, gambling, drinking, hatred, and divine signs",
+      "summary": "Rashad reads the loss of one's soul and family as literal spiritual shrinkage. Gambling, drinking, greed, violence, and hatred are used as examples of contracted souls, while the righteous receive mansions and the water cycle and plants become signs of God.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-39",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "soul-loss",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "gambling",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "drinking",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "greed",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "water-cycle",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "lose souls and families",
+        "negative charges",
+        "poker whiskey shooting",
+        "plants various colors"
+      ],
+      "related_questions": [
+        "How did Rashad interpret losing the soul?",
+        "Why were gambling and drinking associated with hatred?",
+        "Which natural sign appears in Quran 39:21?"
+      ],
+      "quran_references": [
+        "39:15-21"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "The spiritual explanation of violence and addiction is theological, not clinical.",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:01.420",
+      "end_time": "00:04:01.927",
+      "source_segment_start": 0,
+      "source_segment_end": 49,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Dr. Khalifa: [39:15] ... their souls, and their families, on the Day of Resurrection.\" Most certainly, this is the worst loss. Dr. Khalifa: Losing the soul... A woman: Losing soul? Dr. Khalifa: is, is literal. When we don't Pray, we don't worship God alone, the soul shrinks. Not only to zero, it goes to negative. It'll just be full of negative charges. Losing their souls and their families, because a soul that is shrunk is repulsed by everything else. Do you remember those movies about gambling and the Old West and drinking and shooting and killing? Murders, fighting, shooting and killing are always associated with the places of gambling and, and drinking. Because the souls are so shrunk, there is so much hate. Yeah, it's amazing how they show those movies and they have poker hands or something, and they Dr. Khalifa: focus on the faces and there is so much hatred and cheating, and money grabbing, A woman: greed Dr. Khalifa: greed, and then they shoot each other. Dr. Khalifa: They're reaching for their guns, you know, every, every few minutes. A man: They have, they have their guns on their lap, actually. Dr. Khalifa: Yes, exactly. A man: Or on the table, and the whiskey. Dr. Khalifa: Right. Dr. Khalifa: Yes, you know, gambling and drinking. Dr. Khalifa: And the (unintelligible) A man: In France, for instance, they show these films, all the films they show in one week in France. A man: There are so many killings and murders, and it's only this. Dr. Khalifa: Wait, that was murder week or something? Dr. Khalifa: the movies... A man: No, every week. Dr. Khalifa: Oh, every week. A man: Yeah, it's something like that. Dr. Khalifa: Yeah. It affects the people. A man: Of course. Dr. Khalifa: 16. [39:16] They will have masses of fire on top of them, and under them. GOD thus alerts His servants: O My servants, you shall reverence Me. [39:17] As for those who discarded the worship of all idols, and devoted themselves totally to GOD, they have the good news. Give good news to My servants. [39:18] They are the ones who examine all words, then follow the best. These are the ones whom GOD has guided; these are the ones who possess intelligence. [39:19] For those who have incurred the retribution, can you save those who are already in Hell? [39:20] As for those who reverence their Lord, they will have mansions upon mansions constructed for them, with flowing streams. This is GOD 's promise, and GOD never breaks His promise. [39:21] Do you not see that GOD sends down from the sky water, then places it into underground wells, then produces with it plants of various colors, then they grow until they turn yellow, and become hay? This should be a reminder for those who possess intelligence. Dr. Khalifa: I think I'll stop here, have general discussions if there is any. A man: By interruption here, by Makan, is it in devil... Sheytan (Satan) has any action here or any... A man: For example, Makan, because (unintelligible), that made me nervous, I couldn't understand properly. Dr. Khalifa: Say it again. Start all over again. A man: Ok. Makan, (unintelligible) makes me nervous, my son, Muhammad. Dr. Khalifa: Ahan A man: So, he interrupts, really, and makes me nervous, I couldn't understand. Dr. Khalifa: Oh, because Muhammad is making noise? A man: Yes. Dr. Khalifa: That's natural. A man: Did Sheytan (Satan) has any, Sheytan (Satan) has any... Dr. Khalifa: Yes. A man: ...power here? Dr. Khalifa: Yes, yes, he scares you and makes you nervous.",
+      "review_status": "draft",
+      "retrieval_text": "Quran 39:15–21, losing the soul, gambling, drinking, hatred, and divine signs\nRashad reads the loss of one's soul and family as literal spiritual shrinkage. Gambling, drinking, greed, violence, and hatred are used as examples of contracted souls, while the righteous receive mansions and the water cycle and plants become signs of God.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sura-39; soul-loss; gambling; drinking; greed; water-cycle\nUser terminology: lose souls and families; negative charges; poker whiskey shooting; plants various colors\nQuestions: How did Rashad interpret losing the soul? Why were gambling and drinking associated with hatred? Which natural sign appears in Quran 39:21?\nQuran references: 39:15-21\nBible references: \nEntities: "
+    },
+    {
+      "id": "audio51-s02",
+      "start": 240,
+      "end": 660,
+      "title": "Children and their jinn companions, developing reason, prayer resistance, and shared experience",
+      "summary": "Rashad says a child's assigned jinn companion is also immature and develops alongside the human. As reasoning begins, the companion encourages sleep over Dawn Prayer, avoidance of homework, and other choices considered harmful. Humans and companions are said to share pain and joy.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "child-jinn-companion",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "development",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "dawn-prayer",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "homework",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "shared-pain",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "jinn is also child",
+        "as soon as human reasons",
+        "do not get up for Morning Prayer",
+        "share pain and joys"
+      ],
+      "related_questions": [
+        "How did the jinn companion develop with a child?",
+        "Which temptations were attributed to it?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not use jinn explanations to interpret children's behavior or mental-health symptoms.",
+      "retrieval_priority": "primary",
+      "start_time": "00:03:58.431",
+      "end_time": "00:11:03.227",
+      "source_segment_start": 49,
+      "source_segment_end": 152,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Muhammad"
+      ],
+      "canonical_text": "Dr. Khalifa: Yes, yes, he scares you and makes you nervous. You need to relax. Dr. Khalifa: Concentrate on that, though. Don't worry. He's in God's hands. A man: Satan is very smoky but don't worry. Dr. Khalifa: Yeah. (4:76) إِنَّ كَيْدَ ٱلشَّيْطَٰنِ كَانَ ضَعِيفًا Dr. Khalifa: Yes. A woman: Does the jinn that you were born with knows you (unintelligible) A woman: As a barely child, can he already start, when we are too young to really understand, and (unintelligible) in the Quran, already starts to influence the deeds of Satan? A woman: Not like, take the cookies from the cookie jar, but stuff like, there's no God, and already starts... Dr. Khalifa: Yes, that will be, that will be from Sheytan (Satan). There is... It has to do with God. Dr. Khalifa: But remember that the jinn is also a baby at the time you're a baby. A woman: Oh. Dr. Khalifa: Yes. Dr. Khalifa: Our, our qualities as, as humans are not really complete. They grow, we grow in our human qualities, and so does the jinn. He also grows in his jinn qualities. A man: So, this, this childishness in children is when the jinn is in control. Dr. Khalifa: No, no, I didn't say that. I said, I said the exact opposite. Dr. Khalifa: I said when they're children, the jinn is also children. A man: Yes. Dr. Khalifa: It's not an adult jinn getting hold of, of our child. A man: No, I heard. Dr. Khalifa: Jinn also is a child. A man: Yeah, but I mean the age (unintelligible) A woman: It's directly proportionate (unintelligible) Dr. Khalifa: You mean to the age? A man: Kinda Dr. Khalifa: Yes. Dr. Khalifa: As soon as the human being begins to reason, so will the jinn. And he will, for example, he will tell you \"as of now, don't get up early in the morning to do the Morning Prayer.\" \"It's more fun to sleep\" he'll tell you. He'll even keep you from school homework. He'll make it boring for you. You know, it's really crazy. I mean, jinn tells us the things that are bad for us. I mean, don't they realize that if I starve, he will starve, too, you know? Because they share in our pain and our joys. Dr. Khalifa: Yes. A woman: In other words, there are as many jinn as human beings? A woman: No. Dr. Khalifa: No, as many companions as human beings. Every human being is two, a human being and a companion, a human being and a companion. A man: But Satan... Dr. Khalifa: Now, jinns are freed companions. There are many more of those. A man: But Satan must be really stupid, because he wants to prove that he's competent. Dr. Khalifa: Yes. A man: But basically, he's just proving the opposite all the time, willingly. Dr. Khalifa: How? A man: Well, by... I mean, he should be smart to see that his ways are destructive, that they don't lead anywhere. A man: So, why can't he, he, he have... Dr. Khalifa: give up, yeah. A man: ...enough intelligence and draw the conclusions that way? Dr. Khalifa: Because he's still hoping that he can fix everything. Yes. A man: Just like... Dr. Khalifa: He's still hoping, yeah. A man: Just like the Perestroika A man: He, he has a continued Perestroika. Dr. Khalifa: Yeah. Dr. Khalifa: Right. Yes, very good, very good analogy. A man: Ok, Rashad, just to (unintelligible) A man: Right now, maybe just 10% of the population, (unintelligible) A man: is below this population, just 10% of the global (unintelligible). Dr. Khalifa: The total human population, yes. A man: So, he thinks he still has lots of time to catch up. Dr. Khalifa: Yes, he's still, he's still hoping that he will fix everything. A man: He already failed. Dr. Khalifa: But things keep popping up. A man: Yeah. Dr. Khalifa: Just as he takes care of polio, for example, AIDS comes up. And he's working on AIDS, and so on. So, it's, it's like somebody who's guarding a wall or a dam that has leaks in it, holes. I always give this analogy. And he puts his finger in the hole to stop the water, but another leak comes up, he puts the other hole. Dr. Khalifa: It seems like right now he's got all 10 fingers and 10 toes. A woman: He's running out of fingers and toes. Dr. Khalifa: Yes, running out of fingers and toes. Yes. Dr. Khalifa: This is the purpose of, of God's system of increasing the population. For example, how come AIDS didn't show up 1,000 years ago? There were homosexuals 1,000 years ago. Why, why didn't AIDS show up then? Can you guess? Why do we have AIDS now and not 1,000 years ago? Where did it come from? A woman: (unintelligible) and (unintelligible) that Allah wants to... A woman: They become (unintelligible). Oh, no? (unintelligible) Dr. Khalifa: No. A man: Depends on the Sheytan (Satan). Dr. Khalifa: Give Muhammad a chance to think. Dr. Khalifa: Could you keep the children apart? Call your child next to you. A man: Makan Dr. Khalifa: Hany, Hany, Hany, come here. Come here. Dr. Khalifa: The only way to keep them quiet is to keep them apart. That's it. A man: Divide and rule. Dr. Khalifa: Yes. Dr. Khalifa: Hanan, come next to Mom. Dr. Khalifa: Okay, where do you, where do you prefer to sit? In that chair over there? Dr. Khalifa: You prefer to sit in that chair? A woman: No. Dr. Khalifa: No? Dr. Khalifa: Okay, you pick out a good spot. A woman: I don't know. Dr. Khalifa: What's the best spot? Where you are? Okay. Okay, Muhammad. Dr. Khalifa: It gets the attention away from there. Muhammad: Like, (unintelligible) the Romans. The Roman Empire cannot, mostly because of their own doing. They have other diseases. Muhammad: The population was small. Dr. Khalifa: Yes. Muhammad: (unintelligible) very small (unintelligible) So, being given just the best of what... they tried to make (unintelligible) Romans, wanted to protect the Roman Empire that... The general idea, just like in the communists, as long as it's on the papers, it's fantastic.",
+      "review_status": "draft",
+      "retrieval_text": "Children and their jinn companions, developing reason, prayer resistance, and shared experience\nRashad says a child's assigned jinn companion is also immature and develops alongside the human. As reasoning begins, the companion encourages sleep over Dawn Prayer, avoidance of homework, and other choices considered harmful. Humans and companions are said to share pain and joy.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: child-jinn-companion; development; dawn-prayer; homework; shared-pain\nUser terminology: jinn is also child; as soon as human reasons; do not get up for Morning Prayer; share pain and joys\nQuestions: How did the jinn companion develop with a child? Which temptations were attributed to it?\nQuran references: \nBible references: \nEntities: "
+    },
+    {
+      "id": "audio51-s03",
+      "start": 660,
+      "end": 1500,
+      "title": "Satan's failing dominion, AIDS, starvation, Monsanto, Anheuser-Busch, and the miracle in a brewery",
+      "summary": "The Roman Empire, communism, population growth, starvation, and AIDS are treated as evidence that Satan cannot manage his dominion. Rashad then recounts moving from Monsanto to Anheuser-Busch, initially rejecting brewery employment, working on protein extraction from yeast, and using the company's time and computers for Quranic research. He calls the discovery a miracle hidden in Satan's pocket.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "satanic-dominion",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "aids",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "starvation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "monsanto",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "anheuser-busch",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-computer-research",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Satan losing control",
+        "AIDS new",
+        "biggest brewery",
+        "protein from yeast",
+        "miracle in Satan's pocket"
+      ],
+      "related_questions": [
+        "How did Rashad interpret AIDS and starvation?",
+        "Why did he initially reject Anheuser-Busch?",
+        "How did the brewery facilitate the Quranic research?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Monsanto",
+        "Anheuser-Busch"
+      ],
+      "retrieval_note": "Disease and starvation must never be blamed on patients or treated as proof of spiritual failure.",
+      "retrieval_priority": "primary",
+      "start_time": "00:10:56.381",
+      "end_time": "00:25:00.275",
+      "source_segment_start": 152,
+      "source_segment_end": 344,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Behrouz",
+        "Dr. Khalifa",
+        "Edip",
+        "Feroz",
+        "Muhammad"
+      ],
+      "canonical_text": "The general idea, just like in the communists, as long as it's on the papers, it's fantastic. But it has to stay on the paper. Muhammad: And they try to, they put it on applications... Dr. Khalifa: (unintelligible) Muhammad: (unintelligible) Dr. Khalifa: Yeah. Muhammad: And... Dr. Khalifa: My feeling is that AIDS, Ok, a thousand years ago, the population of the earth was very small, and Satan was able to handle that. But now that the population increased, he's losing control. So, we get all this, all this starving children in Africa and AIDS. So, things are getting out of control for him. And if I get the chance in the next few days, maybe... We had examples here of Satan's incompetence, where, where we have proved that his ability to see is very limited. I mean, God, I mean, God sees everything in the universe. Not a single atom is out of God's control. But we have very strong evidence that Satan's control is very limited. Dr. Khalifa: And he cannot... he had very serious limitations with seeing. Edip: Rashad, the other thing, by the way, he made a completely wrong decision, how do you say it, wrong point. Edip: Did Satan want to, how do you say it, (unintelligible) power (unintelligible) salvation and, or AIDS... Dr. Khalifa: (unintelligible) Edip: ...Trying to, for example, to try to find a cure for AIDS, Edip: or people, how you say it, charitable people who try to, how do you say it, help starving people. Dr. Khalifa: Yes. Edip: And today, by this way, they help Satan to make it better. Dr. Khalifa: Yes. Dr. Khalifa: He helps them, yes. Satan is trying very hard to make everything perfect. Edip: I know that, for example, if we help starving children,... Dr. Khalifa: Yes. Edip: ...starving children, do we help Satan? By this way, we shouldn't help starving people. Dr. Khalifa: No, no, you help because that's your requirement. But it doesn't, it doesn't make any difference, as far as Satan is concerned. Edip: I don't think he understands. Edip: If you try to have a good world, or have a good, for example, state, whatever,... Dr. Khalifa: Yes. Edip: ...and if, if to be good is Satan's object... Dr. Khalifa: Your, your Zakat or your contribution is, is insignificant. You'll not cause, you will not counteract the damage that Satan is doing by his incompetence. You don't correct it. But it is my duty and your duty to give Zakat and to be charitable. And this is in Sura 36, (36:47) أَنُطْعِمُ مَن لَّوْ يَشَآءُ ٱللَّهُ أَطْعَمَهُۥٓ that, that we feed... This is what the unbelievers will say. \"You want me to feed somebody that God wants to starve? God wants them to starve, why should I feed them?\" This is what he's saying. Dr. Khalifa: But that's not... Edip: I think in God's dominion, things will go bad, good, also good, but in Satan's dominion, people (unintelligible) Dr. Khalifa: Things will go bad. Edip: Yes, go bad and... Dr. Khalifa: Yes. Edip: Satan will want to make it good. Dr. Khalifa: Why? Satan is trying to hurt to make it good. Dr. Khalifa: Let me, let me mention it now, and very quickly, anyway. The miracle of Quran, which is a fantastic finding at this time, came out, came out of Satan's pocket. It was hidden in his pocket. Because... Because this is a long story, I don't have to make it short without doing it injustice. I was working for Monsanto company, and then I had to, I had to give a paper at the American Chemical Society meeting in Chicago, 1970. And after I gave the paper, this gentleman approaches me and he says, he's the research director for Anheuser-Busch, same city where I was working. I was working for Monsanto in St. Louis. Anheuser-Busch is the biggest brewery in the world, produces more alcohol than any place in the world, drinks for drinking, beer. And he came and he said \"we would like you to work for us.\" So, I laughed. I said \"no way, I can't work for Anheuser-Busch.\" He says \"why?\" I said \"because I'm a Muslim and I can't deal with alcohol.\" He said \"this position has nothing to do with alcohol.\" \"You're gonna be in the food technology section, the food research section, and it has nothing to do with alcohol, it has to do with yeast, baker's yeast, and brewer's yeast, and so on.\" I said \"I still, I still, I will be connected with the name of Anheuser-Busch, and this is something I don't want to be connected with, the name of Anheuser-Busch.\" He said, then he started from another angle. He said \"what we're trying to do is, in the world, there are millions of tons of yeast and other agricultural \"waste that we throw away, and it's full of protein. If you can help us get this protein out and turn it into food, \"those starving people in your country and back in Africa will not be starving.\" So, he's trying to use a humanitarian thing. And he was really, he was really persistent. And I was also persistent. There was no way I'll work for Anheuser-Busch. Then, he said \"how much do you make at Monsanto?\" I said \"$14,000.\" He said \"we'll give you $24,000.\" I said \"where do I sign?\" I mean, he gave me a big raise. After all this discussion, convincing and so on. Anyway, I said \"why do I care if the people think I was working for Anheuser-Busch, as long as my work is not contributing to the alcohol? Has nothing to do with it, and is not against God's law, so I will go.\" $10,000 more, it's almost doubling the salary. So, I went to a Anheuser-Busch, and this is where the miracle was discovered, inside the brewery in St. Louis, the biggest brewery in the world. And Satan, of course, would have tried to stop this. Dr. Khalifa: But you can imagine him looking at the world and saying \"oh, this is the brewery, oh, this is my pocket here. (unintelligible) Nothing godly could be going on in there.\" Dr. Khalifa: Yes. A woman: But it came out of it. Dr. Khalifa: Yes, this came out of it. And Ihsan told me, remember when we used to play, our, our kids in Egypt, the kids playing games where you take an object and hide it, and then people go look for it. So, the best place to hide is in the pocket of the person who's looking for the, for the object. If you can slide it in their pocket, they'll go around looking, and it's in their pocket. Also, the circumstances that worked out, again, very quickly, I mention this. The biggest problem was how to break the yeast wall to get the protein out of it. The yeast wall is very strong, and they tried everything. And the first week I was there, the first week, I decided to use potassium hydroxide. They tried sodium hydroxide, acid, caustics. And... So, I decided to use potassium hydroxide for the first time, and sure enough, protein came out. So, it was a, it was a process that became patented. It was a breakthrough, and the way you do it is you put the yeast in potassium hydroxide for four hours. So, what do I do for four hours? I do my Quran research and the counting of the letters and so on. This is what I did. So, I go, what do you do for four hours waiting for the thing to hydrolyze? So, I go at eight o'clock in the morning, I put the yeast in the thing we leave for four hours, and come to my office and do all the calculations and the work. Dr. Khalifa: And then in the afternoon, I will look at the microscope for... maybe start another batch, in the afternoon, it takes four hours. A woman: How long... Dr. Khalifa: So, this is, what we learned from this, Muhammad, is that Satan is very limited in his vision, because Satan, if people are going to study theology, for example, children, you go to a theological school, Satan will possess those kids, because he knows they will be leaders who will teach the people religion. He owns them all, from the Pope to the Sheikh of Azhar to all the mullahs of Iran. Because from their youth, he knows these people are going into religion. So, but he will not look in breweries for any Godly work. The moral of the story is, not an atom is absent from God, but Satan has serious limitations. This was a very serious limitation. Dr. Khalifa: If, if anybody, if, if we put ourselves in Satan's shoes, and we see the miracle in process, and he has this ability, he can go and mess it up. Behrouz: He cannot. Dr. Khalifa: He can. Dr. Khalifa: If it's obvious. Behrouz: He can try. Dr. Khalifa: Yes. Dr. Khalifa: Because he possesses, for example, the children I just mentioned that the, the children who are going into theology, he owns them because he knows if he, if he, if he gets hold of one religious leader, Dr. Khalifa: he can manipulate millions of people through this one person. A woman: Rashad, is it also true to say then that the opposite is also true, that we can find God's work in any domain, even Satan's domain? Yes? A woman: Like what you were saying, that this derives from, you know, going to work about Satan's world. Dr. Khalifa: Yes. Yes. Dr. Khalifa: Yes. A woman: And we can find God's work everywhere. Dr. Khalifa: Everywhere, yes. It's true, yes. Dr. Khalifa: This is a statement in the Quran. It says, there are so many signs in the heavens and the earth, signs of God in the heavens and the earth, that the disbelievers pass by totally oblivious to it. Dr. Khalifa: But the believers can find God's signs everywhere. A woman: Thank you, Rashad. Edip: Rashad, in the summary... Dr. Khalifa: Like we were talking a minute ago about the nightclub, the gambling, the intoxicants. You can see exactly what God said in the Quran happened there. The people hate each other, they shoot each other. If you read the paper every day, you see that the crimes and the murders and the fights are in the nightclubs. Dr. Khalifa: So, that's, this proves that the word of God is true. Edip: Rashad, can we summarize that Satan wants to make happy, to help his kingdom, Dr. Khalifa: Yes. Edip: but to give harm to people in God's kingdom? Dr. Khalifa: If he can, yes. Dr. Khalifa: He tries, yes. Edip: Yes, he tries. Yes. Edip: He tries to give harm to (unintelligible) and to help the other side. Dr. Khalifa: Yes. Dr. Khalifa: But he cannot help his domain, so this is the whole idea, is to prove his incompetence. A man: Look at the job that Jerry Lewis is doing. Dr. Khalifa: Who? A man: Jerry Lewis. Dr. Khalifa: Yes. A man: He's helping the muscular dystrophy. Dr. Khalifa: Yes. A man: Now, Satan knows already that all of these people can go to Heaven. Dr. Khalifa: Who? A man: The children that they are gonna be retarded and... Dr. Khalifa: Yes. A man: (unintelligible) But he's still working hard, gathering like 24 million dollars a year to a billion... Dr. Khalifa: Yes. A man: ...to help these kids. Dr. Khalifa: Yes. A man: But actually, it's his fault. A man: (unintelligible) Dr. Khalifa: No, you see, those are his victims. A man: Victims of what? Dr. Khalifa: Yes. Victims of his incompetence. Sometimes his deliberate actions. A man: And he doesn't want them to go to Heaven? Dr. Khalifa: No, he doesn't want them to go to Heaven. A man: That's why he wants to save them from death. Dr. Khalifa: Yeah. A man: Because he knows that if they die, before 40, they're go to Heaven. Dr. Khalifa: Yes, that's another point. Yes. A man: (unintelligible) Dr. Khalifa: Yeah, see, he's trying very hard to have a perfect world. Dr. Khalifa: But he just cannot do it. Edip: For other people also, to make them that they are good, to show them that they are good. Dr. Khalifa: Yeah. A man: He's have, actually, he's trying his best to save them from the Heaven. Dr. Khalifa: From Heaven. Yes. Feroz: Satan knows... Dr. Khalifa: The more, the more people he can keep after 40, the more, the more people he gets in Hell. Dr. Khalifa: Yeah. A man: Rashad, well, I met the guy now up here. And he told me about the miracle of 19, that there is a man called Josep (unintelligible) who wrote a book about music, that there are not 12 tones, you know, do, re, mi, fa, sol, la, ti, do. There are 19 tones. And there is a guy who has a music shop in Speedway called Dave Glick who... I will go and find out more about this. A man: (unintelligible) Maybe I can, I hope. Dr. Khalifa: It would be very interesting. A man: 19. Dr. Khalifa: Well, I'll go back to work. And I'll see you, IN SHAA ALLAH. Dr. Khalifa: Yeah, 3:30. There's 2 o'clock there, but we extended that. Yes. Dr. Khalifa: 3:30 is the next meeting. A man: IN SHAA ALLAH. A woman: ...after. Dr. Khalifa: From the revelation of Quran to the appearance of Gog and Magog, 17th centuries.",
+      "review_status": "draft",
+      "retrieval_text": "Satan's failing dominion, AIDS, starvation, Monsanto, Anheuser-Busch, and the miracle in a brewery\nThe Roman Empire, communism, population growth, starvation, and AIDS are treated as evidence that Satan cannot manage his dominion. Rashad then recounts moving from Monsanto to Anheuser-Busch, initially rejecting brewery employment, working on protein extraction from yeast, and using the company's time and computers for Quranic research. He calls the discovery a miracle hidden in Satan's pocket.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: satanic-dominion; aids; starvation; monsanto; anheuser-busch; quran-computer-research\nUser terminology: Satan losing control; AIDS new; biggest brewery; protein from yeast; miracle in Satan's pocket\nQuestions: How did Rashad interpret AIDS and starvation? Why did he initially reject Anheuser-Busch? How did the brewery facilitate the Quranic research?\nQuran references: \nBible references: \nEntities: Monsanto; Anheuser-Busch"
+    },
+    {
+      "id": "audio51-s04",
+      "start": 1500,
+      "end": 1860,
+      "title": "Gog and Magog, the number seventeen, ongoing creation, and new biological or technological forms",
+      "summary": "The group speculates about seventeen centuries, days, or hours between revelation and Gog and Magog, while Rashad says the number may not be relevant unless clarified. Questions about six-day creation lead him to describe births, viruses, television, and inventions as continuing creation.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "gog-and-magog",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "seventeen",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "end-time-speculation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "ongoing-creation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "technology",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "17 centuries",
+        "17 days before end",
+        "AIDS virus new",
+        "television creation"
+      ],
+      "related_questions": [
+        "What speculation surrounded the number seventeen?",
+        "How did Rashad describe ongoing creation?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "The end-time and virus claims are speculative and dated.",
+      "retrieval_priority": "primary",
+      "start_time": "00:24:56.757",
+      "end_time": "00:31:00.424",
+      "source_segment_start": 344,
+      "source_segment_end": 441,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Dr. Khalifa: From the revelation of Quran to the appearance of Gog and Magog, 17th centuries. Dr. Khalifa: (unintelligible) valid possibility that maybe 17 days before the end of the world. Dr. Khalifa: 17 hours. A woman: Yeah, (unintelligible) always A woman: end in 17 before the end... Dr. Khalifa: 17 Dr. Khalifa: Yeah, 17 something. A woman: Yeah. Dr. Khalifa: Well, obviously, it's not relevant to us. If it is relevant, God will let us know. A woman: Yeah. A man: Yeah, all creation was exactly in that 6 days. After that, no creation comes, no ant, no (unintelligible), nothing? Dr. Khalifa: Your son was born, what, a year ago? That's a new creation. A man: No, just something new, for example... Dr. Khalifa: AIDS virus is new. It never existed before. Dr. Khalifa: (unintelligible) A man: (unintelligible) if I (unintelligible). Dr. Khalifa: God says He creates what you never knew. He continues to create the TV. Great grandfather never saw a TV. Dr. Khalifa: That's a creation. A man: Something big (unintelligible) Dr. Khalifa: Hmm? A man: as a film, for example, is that.... Dr. Khalifa: Well, you keep adding conditions. A man: Talking about the 17 century, most of the numbers that we're getting are about 14 century right now, it is 14th century. A man: I told you the numbers could be... Dr. Khalifa: Seven pairs. A man: Right. Dr. Khalifa: Yes. A man: So, if this is again 17, that... Dr. Khalifa: goes on with the 17th century. All this is why I lean towards that. Dr. Khalifa: We cannot, we cannot be sure. A man: We're not sure. Dr. Khalifa: It's not relevant to us. When it is relevant, God will send the information somehow and will let the people know, the believers. Dr. Khalifa: Believers are in light, in the light, not in the dark. A man: What you say makes sense, though. A man: It's been 1,400 years, and there's 3 more hundred years, so that would be like 17 together A man: after Quran is revealed. Dr. Khalifa: Yeah. Dr. Khalifa: See, in those days, the world... If the world goes on like this at this rate, it will be so advanced that the war or invasion of (unintelligible) will not last nine years. But in any case, you are probably the only people in the world who know that Gog and Magog are mentioned in two Suras in the 17 verses to the end. It's a piece of, important piece of information. So, I'm gonna stop right here. Dr. Khalifa: The Gog and Magog. A woman: Do you think Buddha was a messenger? Dr. Khalifa: Who? A woman: Buddha? Dr. Khalifa: Yes. Dr. Khalifa: Definitely. A woman: We have (unintelligible), I have, I have the impression that he was the one who got rid of Gog and Magog. Dr. Khalifa: Yeah. A woman: But how do you know or...? Dr. Khalifa: Because he preached the worship of God alone. That's, that's the, that's the main thing. The number one proof for any messenger is that he preaches the worship of God alone. If you look at the fake messengers, they all have some other, something else besides God. Ghulam Ahmad is a strong believer in Hadith. Dr. Khalifa: Joseph Smith is hung up on Jesus, and so on. A woman: Ghulam Ahmad of Ahmadiyya movement? Dr. Khalifa: Uhum. A woman: He's a what in a strong believer? Dr. Khalifa: Hadith. He makes up Hadith. All, everything they do is based on Hadith. Dr. Khalifa: Go take a nap, Barbara. A woman: 21:82 talked about Solomon, [21:82] And of the devils there were those who would dive for him... A woman: Is it the same as jinns or...? A woman: Yes. Dr. Khalifa: Yes. A woman: another name. Dr. Khalifa: Yeah, another name for the jinns is devils. Dr. Khalifa: Because they are Satan's descendants. A woman: Is it more of the same to be a devil? I mean, (unintelligible) Dr. Khalifa: No, it's just another name. Like, your companion can be called a devil. But, since it became a believer, we don't have to call her devil anymore. A woman: She's telling her companion (unintelligible). Dr. Khalifa: Yes. A woman: You were saying yesterday about the Job, when he was afflicted with adversity, you said there was a reason for it. Dr. Khalifa: Uhum. A woman: (unintelligible) Dr. Khalifa: The admission test. A woman: Oh. Dr. Khalifa: He claimed that he worshipped God alone, and Satan said he was a liar. So, God said, Satan said, if you read the book of Job, he said \"if You take his property, he will blaspheme You.\" He said \"okay, you can take his property, but you cannot touch him.\" So, he went and destroyed his sheep and cattle and land and home. And they didn't (unintelligible) him. So, this is how it went. It doesn't happen quite this way now. Because this is a whole different era. But it's just as effective. It's a very exacting test. Dr. Khalifa: The admission test. A woman: (unintelligible) explain it here. Dr. Khalifa: Yes. Dr. Khalifa: There are four kinds of disasters that I can think of. The admission test, blessings in disguise, I go apply for a job and I don't get it. That's because God sees that if I get this job, there'll be lots of problems created for me. Number three is educational disasters. You step out, you get a pinch. This will teach you that you did something wrong. And the fourth one is retribution, like in Sodom and Gomorrah. When an individual or a nation or a community are corrupted beyond, to the point of no reform, then they get smashed.",
+      "review_status": "draft",
+      "retrieval_text": "Gog and Magog, the number seventeen, ongoing creation, and new biological or technological forms\nThe group speculates about seventeen centuries, days, or hours between revelation and Gog and Magog, while Rashad says the number may not be relevant unless clarified. Questions about six-day creation lead him to describe births, viruses, television, and inventions as continuing creation.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: gog-and-magog; seventeen; end-time-speculation; ongoing-creation; technology\nUser terminology: 17 centuries; 17 days before end; AIDS virus new; television creation\nQuestions: What speculation surrounded the number seventeen? How did Rashad describe ongoing creation?\nQuran references: \nBible references: \nEntities: "
+    },
+    {
+      "id": "audio51-s05",
+      "start": 1860,
+      "end": 2160,
+      "title": "Four kinds of disasters, the admission test, hidden blessings, education, retribution, and Solomon's judgment",
+      "summary": "Rashad distinguishes four kinds of apparent disaster. They are the admission test, a blessing in disguise, an educational pinch after wrongdoing, and retribution for corruption beyond reform. A question about Quran 21:79 introduces David and Solomon's different judgments concerning sheep and a damaged field.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "four-disasters",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "admission-test",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "blessing-in-disguise",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "educational-pinch",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "retribution",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "solomon-judgment",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "four kinds disasters",
+        "job not received",
+        "educational pinch",
+        "Sodom and Gomorrah",
+        "Solomon correct understanding"
+      ],
+      "related_questions": [
+        "What were the four categories of disaster?",
+        "How did the David and Solomon example illustrate judgment?"
+      ],
+      "quran_references": [
+        "21:79"
+      ],
+      "bible_references": [],
+      "entities": [
+        "David",
+        "Solomon"
+      ],
+      "retrieval_note": "Do not tell users that trauma, illness, or loss was a divine test or retribution.",
+      "retrieval_priority": "primary",
+      "start_time": "00:30:59.090",
+      "end_time": "00:36:00.274",
+      "source_segment_start": 441,
+      "source_segment_end": 517,
+      "csv_speakers": [
+        "A child",
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Feroz"
+      ],
+      "canonical_text": "then they get smashed. Dr. Khalifa: These are the four kinds. Feroz: In 79, it says, [21:79] We granted Solomon the correct understanding, though we endowed both of them with wisdom and knowledge. ... Feroz: Does that mean that David was not given the. correct understanding? Dr. Khalifa: In that particular incident. These two guys came and they said \"his sheep went into my Alfalfa and ate it up. What do we do?\" So, David made a judgment, and Solomon made a judgment. I think Solomon's judgment was, this is what I read in books here in history, Solomon said that \"you take his sheep and keep them and use their milk and wool and so on, until your Alfalfa grows back.\" \"You give him his sheep.\" So who lost? The guy lost his sheep for until the Alfalfa's grown back. It makes sense. God says \"I gave the understanding to Solomon.\" David was a wonderful, wonderful person. He just spent his time singing, loving God. You can see it in the Psalms. And the Quran, and God says \"I gave the Psalms to David.\" So who's...? It's because David loves God so much, God, God inspired him to sing the Psalms. I like those beautiful Psalms. It's really the words of God, but... It's funny, but the Jews think, or the scripture people, teachers and so on, they think of David as the writer of the Psalms, which is true, but he's the writer of the Psalms with God's inspiration. And all of them are loving God. Figure that out. It's like the Five Prayers a day. We seem like we are doing the Five Prayers, but it really is a gift from God. Because what Abraham says, he prays, (14:40) رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ Please God, make me one who observes the Five Prayers. It's a, it's a wonderful way of teaching us. So, is it David who wrote the Psalms or is it God? Is it us who are doing the Five Prayers or is it God? It's a gift from God. You cannot do the Five daily Prayers unless God, God wills that you be guided and you receive that gift and do the Five Prayers. Why do these kids do the Five Prayers? Why? Because, of course, we're telling them, we say \"Noura, you must pray, you pray five times a day?\" You know Sura Al-Hamd? Surah al-Fatiha, read it loud. I know. Ok, Say, Bism Allah Arrahman Arraheem (1:1), say it loud, Dr. Khalifa: so Ihsan will hear you. Tell her. A woman: (unintelligible) is teaching the kids. Dr. Khalifa: I know. A woman: Remember? Dr. Khalifa: Don't be shy. Dr. Khalifa: Loud, loud. Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi ... (1:2) Dr. Khalifa: Go ahead. A man: Chocolate. Candy. Dr. Khalifa: Yes. A man: Chocolate (unintelligible) A woman: Where's Ma? Where's Ma? Where's Ma? A child: (unintelligible) A woman: (unintelligible) Dr. Khalifa: Well, I'll get somebody else to read it and give him the chocolate. So, you go ahead and give the chocolate to him. A child: Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Dr. Khalifa: She can't hear you. A child: Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) Dr. Khalifa: Yeah, Mã Shã Allãh. Mã Shã Allãh. Dr. Khalifa: It was perfect. A man: Alhamdu Lillah A man: Can I read it? A man: Of course you can read. May God gave it to you. Go ahead. A man: (unintelligible) Dr. Khalifa: You're gonna read it? A man: Too many stuff. Go ahead, go ahead, read. Dr. Khalifa: You know it? Dr. Khalifa: Can you read it? No? A man: (unintelligible) A woman: (unintelligible) a little bit. Dr. Khalifa: There's, there's more (unintelligible) A woman: (unintelligible)",
+      "review_status": "draft",
+      "retrieval_text": "Four kinds of disasters, the admission test, hidden blessings, education, retribution, and Solomon's judgment\nRashad distinguishes four kinds of apparent disaster. They are the admission test, a blessing in disguise, an educational pinch after wrongdoing, and retribution for corruption beyond reform. A question about Quran 21:79 introduces David and Solomon's different judgments concerning sheep and a damaged field.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: four-disasters; admission-test; blessing-in-disguise; educational-pinch; retribution; solomon-judgment\nUser terminology: four kinds disasters; job not received; educational pinch; Sodom and Gomorrah; Solomon correct understanding\nQuestions: What were the four categories of disaster? How did the David and Solomon example illustrate judgment?\nQuran references: 21:79\nBible references: \nEntities: David; Solomon"
+    },
+    {
+      "id": "audio51-s06",
+      "start": 2160,
+      "end": 2640,
+      "title": "A child's al-Fatihah, inherited environment, soul assignment, families, and spiritual destiny",
+      "summary": "A child recites al-Fatihah and is praised. The group asks how children know prayer and how souls are assigned to families. Rashad says God assigns good or evil souls according to household conditions and speaks of people already stamped for Heaven or Hell, while cautioning against geographic restrictions on marriage.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "child-al-fatihah",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "soul-assignment",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "family-environment",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "generational-effect",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "heaven-hell-stamp",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "child recited perfectly",
+        "pool of souls",
+        "assigned evil souls",
+        "stamp Heaven or Hell"
+      ],
+      "related_questions": [
+        "What did the child recite?",
+        "How did Rashad explain the assignment of souls to families?",
+        "What geographic conclusion did he reject?"
+      ],
+      "quran_references": [
+        "1:1-7"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not classify children, families, ethnic groups, or deceased people by spiritual destiny.",
+      "retrieval_priority": "primary",
+      "start_time": "00:35:59.287",
+      "end_time": "00:44:02.398",
+      "source_segment_start": 517,
+      "source_segment_end": 619,
+      "csv_speakers": [
+        "A child",
+        "A man",
+        "A woman",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "A woman: (unintelligible) A child: (unintelligible) A woman: (unintelligible) Dr. Khalifa: Good. What is this? A woman: (unintelligible) chocolate A man: It's good. A man: My son's mouth... A man: Yes, I don't know, in the phoenix, phoenix. Dr. Khalifa: All the kids, they have to have it. A man: Medicine? She'll give you medicine? A woman: Thank you. A man: She'll be, she'll be here (unintelligible), IN SHAA ALLAH, by next couple of hours. Dr. Khalifa: Ok. Now, we have to deal with this important question. Why did she know how to do Al-Fãtehah and the Five Prayers? If it's a gift from God, we are telling them to do the Five Prayers. Dr. Khalifa: Why is... A woman: Umar. Dr. Khalifa: Umar? A woman: Yeah, Umar. Dr. Khalifa: Why is Umar doing the Five Prayers? And all our kids. Because God put them in Roxana's house, so she'll teach him how to do the Prayers. This is how God is giving him that gift of the Five Prayers. Fasting of the month of Ramadan is a gift. Dr. Khalifa: You cannot do it unless God gives you that gift. A man: IN SHAA ALLAH. Yes. When a baby is born, there is a careful selection process where God chooses a certain soul to assign to that baby. A baby's born in the Karmally house. So, God selects a specific soul to be assigned to that baby. Dr. Khalifa: Because that baby deserves to be taught how to do the Five Prayers, and to be taught how to observe him, and so on. A woman: Is that why it says that on the last day, those people who did not do righteous works, they (unintelligible) in the Hereafter and their family? Dr. Khalifa: Uhum. Yes, it's one of the verses. A woman : Yeah. Dr. Khalifa: Yes. You see, if you look at the statistics, the true believers of worshipping God alone are one in ten million, for example, one in hundred million. Ok. So, how, how is it that a whole family, in one house you have three or four people believing? How does this, I mean, this doesn't follow the statistics, but it's because of that. There's also one good proof of this fact is when, when God says in the Bible to the children of Israel, if you do not keep the commandments, you will be cursed, and your children will be cursed up to four generations. So, the immediate question that people will ask \"what is the fault of the children? They're innocent.\" In fact, I said this to the Arabs the other day, some Arab. He said \"do you mean the door of repentance is closed on the Arabs until the end of the world? I said \"yes.\" He said \"how would that be, the children, this and that?\" I said \"when a baby is born in your house, God is gonna assign an evil soul to your house.\" That's how. So, I was testing Muhammad, (unintelligible) I said \"this is a nice guy, you know, he couldn't be an Arab.\" \"How could that be, you know, why is he so nice?\" Yeah. And then, he volunteered the piece of information. \"I was just in the ... my grandmother was Italian.\" I said \"God bless you!\" That's it. God answers my questions right away. Dr. Khalifa: Huh? A man: He looks Italian. Dr. Khalifa: Yes, powerful influence. Mã Shã Allãh But when God says that your children of the disbelievers will be cursed up to four generations, it means that whatever babies are born in their homes for four generations will be, God will assign evil souls. There's a pool of souls and God knows exactly who are the good souls and who are the bad souls. Dr. Khalifa: He already have the stamp on them, Heaven or Hell. A man: Rashad, (unintelligible) my mind is (unintelligible) some correct, I hope so. A man: So, someone we shouldn't, our generation shouldn't get married to any Arab and go to live in the Arab country. Dr. Khalifa: Why? Dr. Khalifa: It has nothing to do... A man: Because the babies... A man: Babies, they're born in that area, maybe will be disbelievers. Dr. Khalifa: No, but wherever you go, it's, how about these people, your neighbors? Dr. Khalifa: In, in your apartment building, how many people worship God alone? A man: I think only one. Dr. Khalifa: There you have it, so it doesn't matter where you go. Dr. Khalifa: Now, don't put restrictions on yourself. A man: Disbelieving souls are that contagious. Dr. Khalifa: Right, exactly. Dr. Khalifa: Okay, I'll see you, IN SHAA ALLAH. A man: IN SHAA ALLAH. Dr. Khalifa: For the Maghrib Prayer, 5:30, one hour from now. A man: (unintelligible) 2 years and (unintelligible) Dr. Khalifa: Bism Allah Arrahman Arraheem. Old Kind of Miracles Made Obsolete We have a computer-age miracle. Keep the kids away from each other, please. Get your kids next to you. We have to separate the kids from each other. Targul, come and sit next to daddy. Maha, Maha, come and sit here, honey. Dr. Khalifa: Come and sit here. A man: (unintelligible) Dr. Khalifa: Come and sit here. There. Luna Dr. Khalifa: You can sit on it. A man: Makan, Makan. Old Kind of Miracles Made Obsolete You're gonna put him between you and Eric? Muhammad. There. Easy, easy, so he doesn't cry. Dr. Khalifa: Then, we defeat the purpose. A man: Oh, thank you. [17:59] What stopped us from sending the miracles is that the previous generations have rejected them. For example, we showed Thamoud the camel, a profound (miracle), but they transgressed against it. We sent the miracles only to instill reverence. The children of Israel saw the Red Sea part and they passed through the water, but they still worshipped the calf later on. So, that kind of miracle was made obsolete. And now, we have this mental miracle that people must think about. Do you look at it? Do you think? They have a long time, anytime, anywhere, and they can see the miracle and witness it. Number 60. [17:60] We informed you that your Lord fully controls all the people, but we rendered the vision that we showed you including the tree that is accursed in the Quran only a test for the people.* We showed them miracles, but this only augmented their defiance. So, the prophet Muhammad came back and he said \"I went up to the first heaven. I was given the Quran\" and this was a test.",
+      "review_status": "draft",
+      "retrieval_text": "A child's al-Fatihah, inherited environment, soul assignment, families, and spiritual destiny\nA child recites al-Fatihah and is praised. The group asks how children know prayer and how souls are assigned to families. Rashad says God assigns good or evil souls according to household conditions and speaks of people already stamped for Heaven or Hell, while cautioning against geographic restrictions on marriage.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: child-al-fatihah; soul-assignment; family-environment; generational-effect; heaven-hell-stamp\nUser terminology: child recited perfectly; pool of souls; assigned evil souls; stamp Heaven or Hell\nQuestions: What did the child recite? How did Rashad explain the assignment of souls to families? What geographic conclusion did he reject?\nQuran references: 1:1-7\nBible references: \nEntities: "
+    },
+    {
+      "id": "audio51-s07",
+      "start": 2640,
+      "end": 2837.235,
+      "title": "Quran 17:59–67, visible miracles stopped, Satan's challenge, protected servants, ships, and bad-weather faith",
+      "summary": "Quran 17:59 says earlier visible miracles were stopped because previous peoples rejected them. Satan refuses to prostrate, asks for respite, and is permitted to entice descendants through voice, forces, money, children, and promises, while God's servants remain beyond his power. Ships and danger at sea illustrate people who implore God alone in crisis and revert after rescue.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-17",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "miracles-stopped",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "satan-challenge",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "money-and-children",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "protected-servants",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "bad-weather-faith",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "stopped sending miracles",
+        "take share of money and children",
+        "no power over servants",
+        "middle of sea forget idols"
+      ],
+      "related_questions": [
+        "Why were earlier visible miracles stopped?",
+        "Which methods was Satan permitted to use?",
+        "What happens to people in danger at sea?"
+      ],
+      "quran_references": [
+        "17:59-67"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Satan"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:43:56.303",
+      "end_time": "00:47:17.225",
+      "source_segment_start": 619,
+      "source_segment_end": 643,
+      "csv_speakers": [
+        "A man",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "So, the prophet Muhammad came back and he said \"I went up to the first heaven. I was given the Quran\" and this was a test. Some people believed and some did not. [17:61] When we said to the angels, \"Fall prostrate before Adam,\" they fell prostrate, except Satan. He said, \"Shall I prostrate to one You created from mud?\" [17:62] He said, \"Since You have honored him over me, if You respite me till the Day of Resurrection, I will possess all his descendants, except a few.\" [17:63] He said, \"Go; you and those who follow you will end up in Hell as your just retribution. [17:64] \"Go ahead and entice them with your voice, mobilize all your forces and all your men against them, and take a share of their money and children, and promise them. Anything the devil promises is no more than an illusion. So, you can see, Satan is a reality, and in this, in this world, the secular world, it's a very bad thing to believe in Satan, that Satan exists. They try to make you look like a quack or a strange person, if you talk about Satan or indicate that you believe in Satan. Satan certainly is a reality. One of his targets or his objectives is to make the people avoid talking about him. If we believe in God, we'll believe that Satan exists, because, because God said so. We wanna welcome Omnia here, without embarrassing her. Welcome to Tucson. He said, in 64, God said to Satan, [17:64] \"Go ahead and entice them with your voice, mobilize all your forces and all your men against them, and take a share of their money and children, and promise them. Anything the devil promises is no more than an illusion. [17:65] \"As for My servants, you have no power over them.\" ... Dr. Khalifa: Muhammad, you have to stop talking, Muhammad. A man: You too, Makan. Dr. Khalifa: Yes. You, too. [17:66] Your Lord is the One who causes the ships to float on the ocean,* that you may seek His bounties. He is Most Merciful towards you. Bad Weather Friends This is playing on an American idiom. Bad Weather Friends [17:67] If you are afflicted in the middle of the sea, you forget your idols and sincerely implore Him alone. But as soon as He saves you to the shore, you revert. ...",
+      "review_status": "draft",
+      "retrieval_text": "Quran 17:59–67, visible miracles stopped, Satan's challenge, protected servants, ships, and bad-weather faith\nQuran 17:59 says earlier visible miracles were stopped because previous peoples rejected them. Satan refuses to prostrate, asks for respite, and is permitted to entice descendants through voice, forces, money, children, and promises, while God's servants remain beyond his power. Ships and danger at sea illustrate people who implore God alone in crisis and revert after rescue.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sura-17; miracles-stopped; satan-challenge; money-and-children; protected-servants; bad-weather-faith\nUser terminology: stopped sending miracles; take share of money and children; no power over servants; middle of sea forget idols\nQuestions: Why were earlier visible miracles stopped? Which methods was Satan permitted to use? What happens to people in danger at sea?\nQuran references: 17:59-67\nBible references: \nEntities: Satan"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "admission-test",
+      "preferred_label": "Admission Test",
+      "aliases": [
+        "Sodom and Gomorrah",
+        "Solomon correct understanding",
+        "educational pinch",
+        "four kinds disasters",
+        "job not received"
+      ],
+      "appears_in_sections": [
+        "audio51-s05"
+      ]
+    },
+    {
+      "id": "aids",
+      "preferred_label": "Aids",
+      "aliases": [
+        "AIDS new",
+        "Satan losing control",
+        "biggest brewery",
+        "miracle in Satan's pocket",
+        "protein from yeast"
+      ],
+      "appears_in_sections": [
+        "audio51-s03"
+      ]
+    },
+    {
+      "id": "anheuser-busch",
+      "preferred_label": "Anheuser Busch",
+      "aliases": [
+        "AIDS new",
+        "Satan losing control",
+        "biggest brewery",
+        "miracle in Satan's pocket",
+        "protein from yeast"
+      ],
+      "appears_in_sections": [
+        "audio51-s03"
+      ]
+    },
+    {
+      "id": "bad-weather-faith",
+      "preferred_label": "Bad Weather Faith",
+      "aliases": [
+        "middle of sea forget idols",
+        "no power over servants",
+        "stopped sending miracles",
+        "take share of money and children"
+      ],
+      "appears_in_sections": [
+        "audio51-s07"
+      ]
+    },
+    {
+      "id": "blessing-in-disguise",
+      "preferred_label": "Blessing In Disguise",
+      "aliases": [
+        "Sodom and Gomorrah",
+        "Solomon correct understanding",
+        "educational pinch",
+        "four kinds disasters",
+        "job not received"
+      ],
+      "appears_in_sections": [
+        "audio51-s05"
+      ]
+    },
+    {
+      "id": "child-al-fatihah",
+      "preferred_label": "Child Al Fatihah",
+      "aliases": [
+        "assigned evil souls",
+        "child recited perfectly",
+        "pool of souls",
+        "stamp Heaven or Hell"
+      ],
+      "appears_in_sections": [
+        "audio51-s06"
+      ]
+    },
+    {
+      "id": "child-jinn-companion",
+      "preferred_label": "Child Jinn Companion",
+      "aliases": [
+        "as soon as human reasons",
+        "do not get up for Morning Prayer",
+        "jinn is also child",
+        "share pain and joys"
+      ],
+      "appears_in_sections": [
+        "audio51-s02"
+      ]
+    },
+    {
+      "id": "dawn-prayer",
+      "preferred_label": "Dawn Prayer",
+      "aliases": [
+        "as soon as human reasons",
+        "do not get up for Morning Prayer",
+        "jinn is also child",
+        "share pain and joys"
+      ],
+      "appears_in_sections": [
+        "audio51-s02"
+      ]
+    },
+    {
+      "id": "development",
+      "preferred_label": "Development",
+      "aliases": [
+        "as soon as human reasons",
+        "do not get up for Morning Prayer",
+        "jinn is also child",
+        "share pain and joys"
+      ],
+      "appears_in_sections": [
+        "audio51-s02"
+      ]
+    },
+    {
+      "id": "drinking",
+      "preferred_label": "Drinking",
+      "aliases": [
+        "lose souls and families",
+        "negative charges",
+        "plants various colors",
+        "poker whiskey shooting"
+      ],
+      "appears_in_sections": [
+        "audio51-s01"
+      ]
+    },
+    {
+      "id": "educational-pinch",
+      "preferred_label": "Educational Pinch",
+      "aliases": [
+        "Sodom and Gomorrah",
+        "Solomon correct understanding",
+        "educational pinch",
+        "four kinds disasters",
+        "job not received"
+      ],
+      "appears_in_sections": [
+        "audio51-s05"
+      ]
+    },
+    {
+      "id": "end-time-speculation",
+      "preferred_label": "End Time Speculation",
+      "aliases": [
+        "17 centuries",
+        "17 days before end",
+        "AIDS virus new",
+        "television creation"
+      ],
+      "appears_in_sections": [
+        "audio51-s04"
+      ]
+    },
+    {
+      "id": "family-environment",
+      "preferred_label": "Family Environment",
+      "aliases": [
+        "assigned evil souls",
+        "child recited perfectly",
+        "pool of souls",
+        "stamp Heaven or Hell"
+      ],
+      "appears_in_sections": [
+        "audio51-s06"
+      ]
+    },
+    {
+      "id": "four-disasters",
+      "preferred_label": "Four Disasters",
+      "aliases": [
+        "Sodom and Gomorrah",
+        "Solomon correct understanding",
+        "educational pinch",
+        "four kinds disasters",
+        "job not received"
+      ],
+      "appears_in_sections": [
+        "audio51-s05"
+      ]
+    },
+    {
+      "id": "gambling",
+      "preferred_label": "Gambling",
+      "aliases": [
+        "lose souls and families",
+        "negative charges",
+        "plants various colors",
+        "poker whiskey shooting"
+      ],
+      "appears_in_sections": [
+        "audio51-s01"
+      ]
+    },
+    {
+      "id": "generational-effect",
+      "preferred_label": "Generational Effect",
+      "aliases": [
+        "assigned evil souls",
+        "child recited perfectly",
+        "pool of souls",
+        "stamp Heaven or Hell"
+      ],
+      "appears_in_sections": [
+        "audio51-s06"
+      ]
+    },
+    {
+      "id": "gog-and-magog",
+      "preferred_label": "Gog And Magog",
+      "aliases": [
+        "17 centuries",
+        "17 days before end",
+        "AIDS virus new",
+        "television creation"
+      ],
+      "appears_in_sections": [
+        "audio51-s04"
+      ]
+    },
+    {
+      "id": "greed",
+      "preferred_label": "Greed",
+      "aliases": [
+        "lose souls and families",
+        "negative charges",
+        "plants various colors",
+        "poker whiskey shooting"
+      ],
+      "appears_in_sections": [
+        "audio51-s01"
+      ]
+    },
+    {
+      "id": "heaven-hell-stamp",
+      "preferred_label": "Heaven Hell Stamp",
+      "aliases": [
+        "assigned evil souls",
+        "child recited perfectly",
+        "pool of souls",
+        "stamp Heaven or Hell"
+      ],
+      "appears_in_sections": [
+        "audio51-s06"
+      ]
+    },
+    {
+      "id": "homework",
+      "preferred_label": "Homework",
+      "aliases": [
+        "as soon as human reasons",
+        "do not get up for Morning Prayer",
+        "jinn is also child",
+        "share pain and joys"
+      ],
+      "appears_in_sections": [
+        "audio51-s02"
+      ]
+    },
+    {
+      "id": "miracles-stopped",
+      "preferred_label": "Miracles Stopped",
+      "aliases": [
+        "middle of sea forget idols",
+        "no power over servants",
+        "stopped sending miracles",
+        "take share of money and children"
+      ],
+      "appears_in_sections": [
+        "audio51-s07"
+      ]
+    },
+    {
+      "id": "money-and-children",
+      "preferred_label": "Money And Children",
+      "aliases": [
+        "middle of sea forget idols",
+        "no power over servants",
+        "stopped sending miracles",
+        "take share of money and children"
+      ],
+      "appears_in_sections": [
+        "audio51-s07"
+      ]
+    },
+    {
+      "id": "monsanto",
+      "preferred_label": "Monsanto",
+      "aliases": [
+        "AIDS new",
+        "Satan losing control",
+        "biggest brewery",
+        "miracle in Satan's pocket",
+        "protein from yeast"
+      ],
+      "appears_in_sections": [
+        "audio51-s03"
+      ]
+    },
+    {
+      "id": "ongoing-creation",
+      "preferred_label": "Ongoing Creation",
+      "aliases": [
+        "17 centuries",
+        "17 days before end",
+        "AIDS virus new",
+        "television creation"
+      ],
+      "appears_in_sections": [
+        "audio51-s04"
+      ]
+    },
+    {
+      "id": "protected-servants",
+      "preferred_label": "Protected Servants",
+      "aliases": [
+        "middle of sea forget idols",
+        "no power over servants",
+        "stopped sending miracles",
+        "take share of money and children"
+      ],
+      "appears_in_sections": [
+        "audio51-s07"
+      ]
+    },
+    {
+      "id": "quran-computer-research",
+      "preferred_label": "Quran Computer Research",
+      "aliases": [
+        "AIDS new",
+        "Satan losing control",
+        "biggest brewery",
+        "miracle in Satan's pocket",
+        "protein from yeast"
+      ],
+      "appears_in_sections": [
+        "audio51-s03"
+      ]
+    },
+    {
+      "id": "retribution",
+      "preferred_label": "Retribution",
+      "aliases": [
+        "Sodom and Gomorrah",
+        "Solomon correct understanding",
+        "educational pinch",
+        "four kinds disasters",
+        "job not received"
+      ],
+      "appears_in_sections": [
+        "audio51-s05"
+      ]
+    },
+    {
+      "id": "satan-challenge",
+      "preferred_label": "Satan Challenge",
+      "aliases": [
+        "middle of sea forget idols",
+        "no power over servants",
+        "stopped sending miracles",
+        "take share of money and children"
+      ],
+      "appears_in_sections": [
+        "audio51-s07"
+      ]
+    },
+    {
+      "id": "satanic-dominion",
+      "preferred_label": "Satanic Dominion",
+      "aliases": [
+        "AIDS new",
+        "Satan losing control",
+        "biggest brewery",
+        "miracle in Satan's pocket",
+        "protein from yeast"
+      ],
+      "appears_in_sections": [
+        "audio51-s03"
+      ]
+    },
+    {
+      "id": "seventeen",
+      "preferred_label": "Seventeen",
+      "aliases": [
+        "17 centuries",
+        "17 days before end",
+        "AIDS virus new",
+        "television creation"
+      ],
+      "appears_in_sections": [
+        "audio51-s04"
+      ]
+    },
+    {
+      "id": "shared-pain",
+      "preferred_label": "Shared Pain",
+      "aliases": [
+        "as soon as human reasons",
+        "do not get up for Morning Prayer",
+        "jinn is also child",
+        "share pain and joys"
+      ],
+      "appears_in_sections": [
+        "audio51-s02"
+      ]
+    },
+    {
+      "id": "solomon-judgment",
+      "preferred_label": "Solomon Judgment",
+      "aliases": [
+        "Sodom and Gomorrah",
+        "Solomon correct understanding",
+        "educational pinch",
+        "four kinds disasters",
+        "job not received"
+      ],
+      "appears_in_sections": [
+        "audio51-s05"
+      ]
+    },
+    {
+      "id": "soul-assignment",
+      "preferred_label": "Soul Assignment",
+      "aliases": [
+        "assigned evil souls",
+        "child recited perfectly",
+        "pool of souls",
+        "stamp Heaven or Hell"
+      ],
+      "appears_in_sections": [
+        "audio51-s06"
+      ]
+    },
+    {
+      "id": "soul-loss",
+      "preferred_label": "Soul Loss",
+      "aliases": [
+        "lose souls and families",
+        "negative charges",
+        "plants various colors",
+        "poker whiskey shooting"
+      ],
+      "appears_in_sections": [
+        "audio51-s01"
+      ]
+    },
+    {
+      "id": "starvation",
+      "preferred_label": "Starvation",
+      "aliases": [
+        "AIDS new",
+        "Satan losing control",
+        "biggest brewery",
+        "miracle in Satan's pocket",
+        "protein from yeast"
+      ],
+      "appears_in_sections": [
+        "audio51-s03"
+      ]
+    },
+    {
+      "id": "sura-17",
+      "preferred_label": "Sura 17",
+      "aliases": [
+        "middle of sea forget idols",
+        "no power over servants",
+        "stopped sending miracles",
+        "take share of money and children"
+      ],
+      "appears_in_sections": [
+        "audio51-s07"
+      ]
+    },
+    {
+      "id": "sura-39",
+      "preferred_label": "Sura 39",
+      "aliases": [
+        "lose souls and families",
+        "negative charges",
+        "plants various colors",
+        "poker whiskey shooting"
+      ],
+      "appears_in_sections": [
+        "audio51-s01"
+      ]
+    },
+    {
+      "id": "technology",
+      "preferred_label": "Technology",
+      "aliases": [
+        "17 centuries",
+        "17 days before end",
+        "AIDS virus new",
+        "television creation"
+      ],
+      "appears_in_sections": [
+        "audio51-s04"
+      ]
+    },
+    {
+      "id": "water-cycle",
+      "preferred_label": "Water Cycle",
+      "aliases": [
+        "lose souls and families",
+        "negative charges",
+        "plants various colors",
+        "poker whiskey shooting"
+      ],
+      "appears_in_sections": [
+        "audio51-s01"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio51-issue-01",
+      "issue_type": "composite-recording",
+      "original_text": "The title names Sura 17:59, but most of the recording consists of preceding theological and autobiographical discussion.",
+      "suggested_action": "Preserve all internal blocks.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio51-issue-02",
+      "issue_type": "medical-stigma",
+      "original_text": "AIDS, starvation, and disease are used as evidence of Satanic failure.",
+      "suggested_action": "Never stigmatize patients or replace medical explanations.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio51-issue-03",
+      "issue_type": "jinn-child-risk",
+      "original_text": "Child development and unwanted thoughts are attributed to a jinn companion.",
+      "suggested_action": "Do not use clinically or educationally.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio51-issue-04",
+      "issue_type": "afterlife-classification",
+      "original_text": "Souls and families are described as stamped for Heaven or Hell.",
+      "suggested_action": "Do not apply to real people.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio51-issue-05",
+      "issue_type": "end-time-speculation",
+      "original_text": "The number seventeen is explored without a settled conclusion.",
+      "suggested_action": "Keep explicitly speculative.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990",
+  "canonical_catalog_ids": [
+    "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990"
+  ],
+  "canonical_mapping": "youtube-id",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-34-sura-33-prayer-innovations-god-physical",
+  "title": "Quran Study from Parivash 34: Sura 33, Prayer Innovations, the Covenant, and Whether God Is Physical",
+  "cases": [
+    {
+      "id": "audio34-eval-001",
+      "question": "What private practices were allowed?",
+      "expected_section_ids": [
+        "parivash34-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad warns that fixed additions creep into prayer over generations. Private tasbih, zikr, supplication, and prostration are permitted, but congregational prayer should end uniformly without making spontaneous practices into ritual law."
+    },
+    {
+      "id": "audio34-eval-002",
+      "question": "Why did Rashad oppose fixed post-prayer additions?",
+      "expected_section_ids": [
+        "parivash34-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad warns that fixed additions creep into prayer over generations. Private tasbih, zikr, supplication, and prostration are permitted, but congregational prayer should end uniformly without making spontaneous practices into ritual law."
+    },
+    {
+      "id": "audio34-eval-003",
+      "question": "What should believers follow?",
+      "expected_section_ids": [
+        "parivash34-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Believers are eternal brothers and sisters but should not be idolized. The Quran rather than Muhammad or Jesus is followed. God controls provision and employment, so daily work is scheduled around the five prayers."
+    },
+    {
+      "id": "audio34-eval-004",
+      "question": "How were work and prayer priorities ordered?",
+      "expected_section_ids": [
+        "parivash34-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Believers are eternal brothers and sisters but should not be idolized. The Quran rather than Muhammad or Jesus is followed. God controls provision and employment, so daily work is scheduled around the five prayers."
+    },
+    {
+      "id": "audio34-eval-005",
+      "question": "What adoption rules were discussed?",
+      "expected_section_ids": [
+        "parivash34-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Sura's adoption rules lead to discussion of calling children by biological parentage, preserving identity, a real case of siblings unknowingly marrying, and whether married women should retain their original names despite civil inconvenience."
+    },
+    {
+      "id": "audio34-eval-006",
+      "question": "Why did Rashad favor retaining names?",
+      "expected_section_ids": [
+        "parivash34-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Sura's adoption rules lead to discussion of calling children by biological parentage, preserving identity, a real case of siblings unknowingly marrying, and whether married women should retain their original names despite civil inconvenience."
+    },
+    {
+      "id": "audio34-eval-007",
+      "question": "How were prophet and messenger distinguished?",
+      "expected_section_ids": [
+        "parivash34-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes local incidents involving a nabi from the broader messenger concept and discusses which prophets brought scripture. Abraham's practices are called a message even without a surviving book. Rashad also briefly recounts a deliberately induced out-of-body experience."
+    },
+    {
+      "id": "audio34-eval-008",
+      "question": "What did Abraham receive?",
+      "expected_section_ids": [
+        "parivash34-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes local incidents involving a nabi from the broader messenger concept and discusses which prophets brought scripture. Abraham's practices are called a message even without a surviving book. Rashad also briefly recounts a deliberately induced out-of-body experience."
+    },
+    {
+      "id": "audio34-eval-009",
+      "question": "What personal experience did Rashad mention?",
+      "expected_section_ids": [
+        "parivash34-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad distinguishes local incidents involving a nabi from the broader messenger concept and discusses which prophets brought scripture. Abraham's practices are called a message even without a surviving book. Rashad also briefly recounts a deliberately induced out-of-body experience."
+    },
+    {
+      "id": "audio34-eval-010",
+      "question": "How were Quran 33:7 and 3:81 linked?",
+      "expected_section_ids": [
+        "parivash34-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The covenant with prophets is linked to Quran 3:81 and the Messenger of the Covenant. Rashad gives dates for fulfillment in Mecca, adds calendar numbers to multiples of nineteen, and connects the 1971 experience with the 1974 emergence of the miracle."
+    },
+    {
+      "id": "audio34-eval-011",
+      "question": "Which dates and calculations were presented?",
+      "expected_section_ids": [
+        "parivash34-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The covenant with prophets is linked to Quran 3:81 and the Messenger of the Covenant. Rashad gives dates for fulfillment in Mecca, adds calendar numbers to multiples of nineteen, and connects the 1971 experience with the 1974 emergence of the miracle."
+    },
+    {
+      "id": "audio34-eval-012",
+      "question": "How were believers described after death?",
+      "expected_section_ids": [
+        "parivash34-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 4:69 and related verses are used to say prophets, saints, martyrs, and righteous believers belong together and remain alive with God while bodies are inert. Death is described as gentle and joyful for believers but violent for rejecters."
+    },
+    {
+      "id": "audio34-eval-013",
+      "question": "How did the two kinds of death differ?",
+      "expected_section_ids": [
+        "parivash34-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 4:69 and related verses are used to say prophets, saints, martyrs, and righteous believers belong together and remain alive with God while bodies are inert. Death is described as gentle and joyful for believers but violent for rejecters."
+    },
+    {
+      "id": "audio34-eval-014",
+      "question": "Why did Chester ask whether God is physical?",
+      "expected_section_ids": [
+        "parivash34-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Chester asks whether God must be physical to act on physical objects. Rashad argues from physical force and then imagines an infinite regress of gods, claiming mathematically that an infinity of gods reduces to one infinite God."
+    },
+    {
+      "id": "audio34-eval-015",
+      "question": "How did Rashad use infinite regress?",
+      "expected_section_ids": [
+        "parivash34-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Chester asks whether God must be physical to act on physical objects. Rashad argues from physical force and then imagines an infinite regress of gods, claiming mathematically that an infinity of gods reduces to one infinite God."
+    },
+    {
+      "id": "audio34-eval-016",
+      "question": "How was the universe structured?",
+      "expected_section_ids": [
+        "parivash34-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses spiritual bodies, seeing God after resurrection, a veil separating dimensions, the six universes surrounding the smallest seventh universe, enormous cosmic distances, angels and jinn, and Earth as a tiny realm given to Satan as humiliation."
+    },
+    {
+      "id": "audio34-eval-017",
+      "question": "What veil would be removed?",
+      "expected_section_ids": [
+        "parivash34-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses spiritual bodies, seeing God after resurrection, a veil separating dimensions, the six universes surrounding the smallest seventh universe, enormous cosmic distances, angels and jinn, and Earth as a tiny realm given to Satan as humiliation."
+    },
+    {
+      "id": "audio34-eval-018",
+      "question": "How was Earth placed in Satan's dominion?",
+      "expected_section_ids": [
+        "parivash34-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses spiritual bodies, seeing God after resurrection, a veil separating dimensions, the six universes surrounding the smallest seventh universe, enormous cosmic distances, angels and jinn, and Earth as a tiny realm given to Satan as humiliation."
+    }
+  ],
+  "canonical_document_id": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
+  "canonical_catalog_ids": [
+    "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal"
+  ],
+  "canonical_mapping": "youtube-id"
+}

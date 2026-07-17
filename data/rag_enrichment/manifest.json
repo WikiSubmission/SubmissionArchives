@@ -1,0 +1,1097 @@
+{
+  "generatedAt": "2026-07-17T05:05:32.061Z",
+  "reviewRule": "All enrichment remains draft metadata and may never be quoted as canonical evidence.",
+  "sourcePackage": "askarchives_complete_corpus_three_quran_editions_windows (1)",
+  "uniqueDocuments": 64,
+  "duplicateCopiesRemoved": 64,
+  "catalogCoverage": [
+    {
+      "documentId": "audio-program/quran-study-behrouz-11-january-1990-compilation",
+      "title": "Quran Study from Behrouz 11: Sura 23:60–89, Sura 16:66–72, Sura 11:38–60, and Sura 10:26–34 (January 1990 compilation)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19"
+      ],
+      "declaredYoutubeId": "E9lRYCLSWBc",
+      "resolvedYoutubeId": "6O6brIx2BtE",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=6O6brIx2BtE",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/11 - Quran Study From Behrouz 111 Sura 23_60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19.csv",
+      "archiveNumber": 11,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0001.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-12-community-dispute-1990-01-25",
+      "title": "Quran Study from Behrouz 12: Behrouz's Khutba and the Community Dispute Concerning Edip Yuksel (1990-01-25)",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990"
+      ],
+      "declaredYoutubeId": "QwIy7ipGFPc",
+      "resolvedYoutubeId": "jYTRnyx-9L0",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=jYTRnyx-9L0",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/12 - Quran Study From Behrouz 212 Behrouz_s Khutba Edip Yuksel_s Exposure 01 25 1990.csv",
+      "archiveNumber": 12,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0002.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-13-sura-7-adam-eve-bodies-1989-12-24",
+      "title": "Quran Study from Behrouz 13: Sura 7:12 and Adam and Eve's Bodies (1989-12-24)",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989"
+      ],
+      "declaredYoutubeId": "hQFuMtrDsRg",
+      "resolvedYoutubeId": "FE-6av2KRP4",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=FE-6av2KRP4",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/13 - Quran Study From Behrouz 313 Sura 7_12 By Rashad Adam & Eve_s Body 12 24 1989.csv",
+      "archiveNumber": 13,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0003.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-14-night-of-destiny-zikr",
+      "title": "Quran Study from Behrouz 14: Night of Destiny Zikr",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad"
+      ],
+      "declaredYoutubeId": "bO8UX8ow5mo",
+      "resolvedYoutubeId": "_m-_aeqgaXA",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=_m-_aeqgaXA",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/14 - Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad.csv",
+      "archiveNumber": 14,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0004.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-15-sura-54-sura-55-sura-56-sura-51-compilation",
+      "title": "Quran Study from Behrouz 15: Sura 54:23–40, Sura 55, Sura 56, and Sura 51 (composite recording)",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen"
+      ],
+      "declaredYoutubeId": "iZNidJjKbzU",
+      "resolvedYoutubeId": "dkW9QphWF3Y",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=dkW9QphWF3Y",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/15 - Quran Study From Behrouz 515 Sura 54_23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen.csv",
+      "archiveNumber": 15,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0005.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-16-sura-64-and-partial-sura-70",
+      "title": "Quran Study from Behrouz 16: Sura 64 and a Partial Sura 70 Study",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast"
+      ],
+      "declaredYoutubeId": "Lrqb3N6b6gY",
+      "resolvedYoutubeId": "Lrqb3N6b6gY",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=Lrqb3N6b6gY",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/16 - Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast.csv",
+      "archiveNumber": 16,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0006.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-17-suras-90-91-82-83-1989-07-21",
+      "title": "Quran Study from Behrouz 17: Suras 90, 91, 82, and 83 (1989-07-21)",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7"
+      ],
+      "declaredYoutubeId": "ZGqIH1KtgQk",
+      "resolvedYoutubeId": "ZGqIH1KtgQk",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=ZGqIH1KtgQk",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/17 - Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7.csv",
+      "archiveNumber": 17,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0007.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-18-suras-61-87-94-81-composite",
+      "title": "Quran Study from Behrouz 18: Suras 61, 87–94, and 81 (composite recording)",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8"
+      ],
+      "declaredYoutubeId": "wjDFBR6vWlA",
+      "resolvedYoutubeId": "wjDFBR6vWlA",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=wjDFBR6vWlA",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/18 - Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8.csv",
+      "archiveNumber": 18,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0008.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-19-sura-2-witchcraft-blue-quran",
+      "title": "Quran Study from Behrouz 19: Quran 2:89–119, Witchcraft, Reversion, and the Blue Quran",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13"
+      ],
+      "declaredYoutubeId": "qgNByS6nWbM",
+      "resolvedYoutubeId": "qgNByS6nWbM",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=qgNByS6nWbM",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/19 - Quran Study From Behrouz 919 Sura 2_89 119 Witchcraft Reverting Intro To Blue Quran No 13.csv",
+      "archiveNumber": 19,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0009.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-20-sura-3-fear-worry-insurance",
+      "title": "Quran Study from Behrouz 20: Sura 3:1–20, Fear, Worry, Insurance, and Outreach",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry"
+      ],
+      "declaredYoutubeId": "jlYvG8mSkGs",
+      "resolvedYoutubeId": "jlYvG8mSkGs",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=jlYvG8mSkGs",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/20 - Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry.csv",
+      "archiveNumber": 20,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0010.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-21-sura-9-sura-56-mathematical-circle",
+      "title": "Quran Study from Behrouz 21: Sura 9:52–72, Sura 56:75–96, and the Mathematical Circle",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "wdA8HlLLe3U",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=wdA8HlLLe3U",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/21 - Quran Study From Behrouz 1121 Sura 9_52 By Rashad The Hypocrites Apology To Parivash Sura 56_75 B.csv",
+      "archiveNumber": 21,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0011.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-22-sura-39-admission-test-no-compromise",
+      "title": "Quran Study from Behrouz 22: Sura 39, the Admission Test, and the No-Compromise Discussion",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "-ApTJpCzxso",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=-ApTJpCzxso",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/22 - Quran Study From Behrouz 1222 Sura 39_11 By Rashad Admission Test I Don_t Compromise With A Littl.csv",
+      "archiveNumber": 22,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0012.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-23-sura-51-protection-from-accidents",
+      "title": "Quran Study from Behrouz 23: Sura 51 and Protection from Accidents",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "33ZgjUWYZ_8",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=33ZgjUWYZ_8",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/23 - Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &.csv",
+      "archiveNumber": 23,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0013.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-24-sura-55-sura-56",
+      "title": "Quran Study from Behrouz 24: Sura 55 and Sura 56",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "Q8ZsD-FMhJU",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=Q8ZsD-FMhJU",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/24 - Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh.csv",
+      "archiveNumber": 24,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0014.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-25-sura-58",
+      "title": "Quran Study from Behrouz 25: Sura 58",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "Qr_e-6xqbD4",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=Qr_e-6xqbD4",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/25 - Quran Study From Behrouz 1525 Sura 58 By Robert.csv",
+      "archiveNumber": 25,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0015.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-26-sura-67-hamid-argument",
+      "title": "Quran Study from Behrouz 26: Sura 67 and Hamid's Argument with Rashad",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/26 Quran Study From Behrouz 1626 Sura 67 By Gatut Hamid Argues With Rashad"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "CGfev9VS4Mw",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=CGfev9VS4Mw",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/26 - Quran Study From Behrouz 1626 Sura 67 By Gatut Hamid Argues With Rashad.csv",
+      "archiveNumber": 26,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0016.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-behrouz-27-sura-14-sura-17-chastity-pregnancy",
+      "title": "Quran Study from Behrouz 27: Sura 14, Sura 17, Chastity, and Premarital Pregnancy",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "NPb1hfwEpRo",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=NPb1hfwEpRo",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/27 - Quran Study From Behrouz 1727 Sura 14_19 Chastity Premarital Pregnancy Sura 17_47 We Are Allowed.csv",
+      "archiveNumber": 27,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0017.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-28-sura-45-sura-46-code-19",
+      "title": "Quran Study from Parivash 28: Sura 45:33–37, Sura 46, and Code 19",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "2wJituk57Ho",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=2wJituk57Ho",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/28 - Quran Study From Parivash 128 Sura 45_33 Parivash_s Home 19 Math.csv",
+      "archiveNumber": 28,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0018.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-29-admission-final-test-1985",
+      "title": "Quran Study from Parivash 29: Mehri's Questions, the Admission Test, and the Final Test (1985)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "H4C4mkPtoO8",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=H4C4mkPtoO8",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/29 - Quran Study From Parivash 229 Mehri_s Questions Admission Test & Final Test Tucson 1985.csv",
+      "archiveNumber": 29,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0019.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-30-sura-28-sura-57-insurance-rabbi-judah",
+      "title": "Quran Study from Parivash 30: Sura 28, Sura 57, Insurance with God, Rabbi Judah, and the Heavenly Feud",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "archive-number-to-canonical-youtube",
+      "catalogIds": [
+        "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To"
+      ],
+      "declaredYoutubeId": "unknown",
+      "resolvedYoutubeId": "q1snri6J2w4",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=q1snri6J2w4",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/30 - Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45_33 Rashad Was Told To.csv",
+      "archiveNumber": 30,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0020.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-31-sura-18-sura-81-adhan-salat-1989-11-04",
+      "title": "Quran Study from Parivash 31: Sura 18:98–110, Adhan and Salat, and Sura 81 (1989-11-04)",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989"
+      ],
+      "declaredYoutubeId": "o5IqOX9zwzo",
+      "resolvedYoutubeId": "o5IqOX9zwzo",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=o5IqOX9zwzo",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/31 - Quran Study From Parivash 431 Sura 18_98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989.csv",
+      "archiveNumber": 31,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0021.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-32-excerpt-quran-24-55-quran-22-15-mosque-children-1989-12-28",
+      "title": "Quran Study from Parivash 32: Short Excerpt on Quran 24:55, Quran 22:15, Mosques, and Children (1989-12-28)",
+      "reviewStatus": "draft",
+      "sectionCount": 3,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/32 Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8"
+      ],
+      "declaredYoutubeId": "jpTj9DAzZO4",
+      "resolvedYoutubeId": "jpTj9DAzZO4",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=jpTj9DAzZO4",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/32 - Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8.csv",
+      "archiveNumber": 32,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0022.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-33-sura-74-1989-06-02",
+      "title": "Quran Study from Parivash 33: Sura 74 (1989-06-02)",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989"
+      ],
+      "declaredYoutubeId": "cMoTZEsn7Iw",
+      "resolvedYoutubeId": "cMoTZEsn7Iw",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=cMoTZEsn7Iw",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/33 - Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989.csv",
+      "archiveNumber": 33,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0023.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-34-sura-33-prayer-innovations-god-physical",
+      "title": "Quran Study from Parivash 34: Sura 33, Prayer Innovations, the Covenant, and Whether God Is Physical",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal"
+      ],
+      "declaredYoutubeId": "dH2WDuFNJyI",
+      "resolvedYoutubeId": "dH2WDuFNJyI",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=dH2WDuFNJyI",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/34 - Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal.csv",
+      "archiveNumber": 34,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0024.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-35-sura-30-brewery-intercession-divine-control",
+      "title": "Quran Study from Parivash 35: Sura 30, the Brewery Origin of the Miracle, Intercession, and Divine Control",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg"
+      ],
+      "declaredYoutubeId": "GOZ5pXt-0pU",
+      "resolvedYoutubeId": "GOZ5pXt-0pU",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=GOZ5pXt-0pU",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/35 - Quran Study From Parivash 835 Sura 30_25 Miracle Coming Out Of Biggest Brewery Intercession Alleg.csv",
+      "archiveNumber": 35,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0025.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-36-mathematical-miracles-sura-7-deliberate-mistakes",
+      "title": "Quran Study from Parivash 36: Mathematical Miracles, Sura 7, and Deliberate Mistakes to Destroy Idols",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi"
+      ],
+      "declaredYoutubeId": "F0UVvvE92-E",
+      "resolvedYoutubeId": "F0UVvvE92-E",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=F0UVvvE92-E",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/36 - Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi.csv",
+      "archiveNumber": 36,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0026.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-37-shakira-home-sura-10-68-1989-11-04",
+      "title": "Quran Study from Parivash 37 at Shakira's Home: Sura 10:68 and Related Discussions (1989-11-04)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989"
+      ],
+      "declaredYoutubeId": "EiTW2MhEtTc",
+      "resolvedYoutubeId": "EiTW2MhEtTc",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=EiTW2MhEtTc",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/37 - Quran Study From Parivash 1037 Shakira_s Home Sura 11_68 11 04 1989.csv",
+      "archiveNumber": 37,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0027.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-38-certainty-1989-11-29",
+      "title": "Quran Study from Parivash 38: Certainty (1989-11-29)",
+      "reviewStatus": "draft",
+      "sectionCount": 8,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989"
+      ],
+      "declaredYoutubeId": "OElDY5TJ2ZE",
+      "resolvedYoutubeId": "OElDY5TJ2ZE",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=OElDY5TJ2ZE",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/38 - Quran Study From Parivash 1138 Certainty 11 29 1989.csv",
+      "archiveNumber": 38,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0028.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-39-sura-60-sura-61-rich-believer-certainty-insurance-1989-12-28",
+      "title": "Quran Study from Parivash 39: Suras 60–61, the Rich Believer, Certainty, Insurance, and Quran 24 (1989-12-28)",
+      "reviewStatus": "draft",
+      "sectionCount": 10,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28"
+      ],
+      "declaredYoutubeId": "9YlP1msrWIM",
+      "resolvedYoutubeId": "9YlP1msrWIM",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=9YlP1msrWIM",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/39 - Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28.csv",
+      "archiveNumber": 39,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0029.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-40-sura-3-59-80-1989-12-29",
+      "title": "Quran Study from Parivash 40: Sura 3:59–80 (1989-12-29)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989"
+      ],
+      "declaredYoutubeId": "9tNeF2RTA9A",
+      "resolvedYoutubeId": "9tNeF2RTA9A",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=9tNeF2RTA9A",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/40 - Quran Study From Parivash 1340 Sura 3_59 12 29 1989.csv",
+      "archiveNumber": 40,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0030.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-48-parivash-home-salat-zakat-messenger-debate-1989-01-11",
+      "title": "Quran Study 48 at Parivash's Home: Salat, Zakat, the Messenger, and a Muhammadan Debate (1989-01-11)",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989"
+      ],
+      "declaredYoutubeId": "NZXuGdG_NzM",
+      "resolvedYoutubeId": "NZXuGdG_NzM",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=NZXuGdG_NzM",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/48 - Quran Study 48 Rashad_s Speech Parivash_s Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989.csv",
+      "archiveNumber": 48,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0031.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-49-code-19-heavenly-feud-1989-11-05",
+      "title": "Quran Study 49: Code 19 and the Heavenly Feud (1989-11-05)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989"
+      ],
+      "declaredYoutubeId": "FYaZpRU4LZs",
+      "resolvedYoutubeId": "FYaZpRU4LZs",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=FYaZpRU4LZs",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/49 - Quran Study 49 Speech Of Rashad Parivash_s Home 19 Math 11 05 1989.csv",
+      "archiveNumber": 49,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0032.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-50-suras-92-93-94-zakat-1989-07-27",
+      "title": "Quran Study 50: Suras 92, 93, and 94, Charity and Zakat (Provisionally 1989-07-27)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198"
+      ],
+      "declaredYoutubeId": "N5tt8GfiiYk",
+      "resolvedYoutubeId": "N5tt8GfiiYk",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=N5tt8GfiiYk",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/50 - Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198.csv",
+      "archiveNumber": 50,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0033.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-parivash-41-sura-54-al-fatihah-libertarianism",
+      "title": "Quran Study from Parivash 41: Sura 54, al-Fatihah for Personal Requests, and Extreme Libertarianism",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari"
+      ],
+      "declaredYoutubeId": "N-DjyN6a0tc",
+      "resolvedYoutubeId": "N-DjyN6a0tc",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=N-DjyN6a0tc",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/41 - Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari.csv",
+      "archiveNumber": 41,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0034.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-roxana-42-ray-caton-interview-quran-alone-finance-ritual",
+      "title": "Quran Study from Roxana 42: Ray Caton Interviews Rashad on Quran Alone, Interest, and Ritual Practice",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest"
+      ],
+      "declaredYoutubeId": "zHnerwexwN8",
+      "resolvedYoutubeId": "zHnerwexwN8",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=zHnerwexwN8",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/42 - Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest.csv",
+      "archiveNumber": 42,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0035.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-roxana-43-third-international-conference-sura-17-wisdom-insurance",
+      "title": "Quran Study from Roxana 43: Third International Conference Speech, Quran 17:39, and Insurance",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/43 Quran Study From Roxana 243 Third International Conference Tucson Rashad's Speech Sura 17;39 Insu"
+      ],
+      "declaredYoutubeId": "KceHeCtRxcw",
+      "resolvedYoutubeId": "KceHeCtRxcw",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=KceHeCtRxcw",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/43 - Quran Study From Roxana 243 Third International Conference Tucson Rashad_s Speech Sura 17_39 Insu.csv",
+      "archiveNumber": 43,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0036.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-roxana-44-sura-64-sura-59-sura-70-composite",
+      "title": "Quran Study from Roxana 44: Sura 64, Sura 59, and Sura 70 (Composite Recording)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By"
+      ],
+      "declaredYoutubeId": "k-8tDovGWsM",
+      "resolvedYoutubeId": "k-8tDovGWsM",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=k-8tDovGWsM",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/44 - Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By.csv",
+      "archiveNumber": 44,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0037.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-roxana-45-sura-40-messenger-dreams-afterlife-food",
+      "title": "Quran Study from Roxana 45: Sura 40, Messenger Evidence, Afterlife Bodies, Dreams, and Food",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F"
+      ],
+      "declaredYoutubeId": "MBNuPXwnXew",
+      "resolvedYoutubeId": "MBNuPXwnXew",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=MBNuPXwnXew",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/45 - Quran Study From Roxana 445 Sura 40 By Rashad Firoz_s Home Deja Vu Believers Usually 95 Yrs Old F.csv",
+      "archiveNumber": 45,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0038.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-roxana-46-sura-38-sura-9-sura-39-admission-test",
+      "title": "Quran Study from Roxana 46: Sura 38, Sura 9, Sura 39, and the Admission Test",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co"
+      ],
+      "declaredYoutubeId": "9bsMcVdmSqk",
+      "resolvedYoutubeId": "9bsMcVdmSqk",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=9bsMcVdmSqk",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/46 - Quran Study From Roxana 546 Sura 37_159 To 38_25 Sura 9_50 & Sura 39_11 Admission Test I Don_t Co.csv",
+      "archiveNumber": 46,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0039.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2",
+      "title": "Quran Study from Roxana 47: Introduction to the Blue Quran, al-Fatihah, and the Beginning of Sura 2",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2"
+      ],
+      "declaredYoutubeId": "H7gWUeJB-_4",
+      "resolvedYoutubeId": "H7gWUeJB-_4",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=H7gWUeJB-_4",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/47 - Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2.csv",
+      "archiveNumber": 47,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0040.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-56-quran-alone-obeying-messenger-1982-10-29",
+      "title": "Friday Sermon 56: Quran Alone and the Meaning of Obeying the Messenger (1982-10-29)",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "RJlRdRd-ZfY",
+      "resolvedYoutubeId": "RJlRdRd-ZfY",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=RJlRdRd-ZfY",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/56 - Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 56,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0041.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-58-sura-2-gabriel-angels-fajr-1982-11-12",
+      "title": "Friday Sermon 58: Sura 2, Gabriel, Angels, Dawn Prayer, and Divine Correction (1982-11-12)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "rjuCvRFSHLo",
+      "resolvedYoutubeId": "rjuCvRFSHLo",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=rjuCvRFSHLo",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/58 - Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 58,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0042.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-59-adam-eve-garments-1982-11-19",
+      "title": "Friday Sermon 59 by Dean Mahmoud: Adam and Eve's Garments, Bodies, and Temptation (1982-11-19)",
+      "reviewStatus": "draft",
+      "sectionCount": 4,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/59 Friday Sermon 19 Nov 1982 By Dean Mahmoud"
+      ],
+      "declaredYoutubeId": "A1dhuhdFtvA",
+      "resolvedYoutubeId": "A1dhuhdFtvA",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=A1dhuhdFtvA",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/59 - Friday Sermon 19 Nov 1982 By Dean Mahmoud.csv",
+      "archiveNumber": 59,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0043.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-60-abrogation-scripture-communities-quran-2-1982-11-19",
+      "title": "Friday Sermon 60 by Rashad Khalifa: Abrogation, Scripture Communities, and Quran 2:111–123 (1982-11-19)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "VF4oOE0raI0",
+      "resolvedYoutubeId": "VF4oOE0raI0",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=VF4oOE0raI0",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/60 - Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 60,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0044.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-51-sura-17-59-satan-jinn-brewery-1990",
+      "title": "Quran Study 51: Sura 17:59–67, Satan, Jinn Companions, and the Brewery Discovery (1990)",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990"
+      ],
+      "declaredYoutubeId": "PFxoFm1F3PQ",
+      "resolvedYoutubeId": "PFxoFm1F3PQ",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=PFxoFm1F3PQ",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/51 - Quran Study 51 Sura 17_59 Rashad 1990.csv",
+      "archiveNumber": 51,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0045.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-52-al-fatihah-prayer-concentration-partial-1989-05-08",
+      "title": "Quran Study 52: al-Fatihah, Prayer Concentration, and the Beginning of Sura 2 (Partial, 1989-05-08)",
+      "reviewStatus": "draft",
+      "sectionCount": 4,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial"
+      ],
+      "declaredYoutubeId": "4vzFRGPYqRQ",
+      "resolvedYoutubeId": "4vzFRGPYqRQ",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=4vzFRGPYqRQ",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/52 - Quran Study 5⧸8⧸89 by Linda Sura 1 & 2 partial.csv",
+      "archiveNumber": 52,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0046.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-53-october-22-1982-original-al-fatihah-prelude",
+      "title": "Quran Study 53: October 22, 1982 Original Recording, Intellectual Freedom and al-Fatihah",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/53 Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original"
+      ],
+      "declaredYoutubeId": "6-yFshRBpcQ",
+      "resolvedYoutubeId": "6-yFshRBpcQ",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=6-yFshRBpcQ",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/53 - Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original.csv",
+      "archiveNumber": 53,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0047.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-54-october-22-1982-sura-2-adam-angels",
+      "title": "Quran Study 54: Sura 2, the Original Covenant, Adam, Satan, and the Angels (1982-10-22)",
+      "reviewStatus": "draft",
+      "sectionCount": 7,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "x-FTCj3EPPI",
+      "resolvedYoutubeId": "x-FTCj3EPPI",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=x-FTCj3EPPI",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/54 - Quran Study 22 Oct 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 54,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0048.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-57-november-5-1982-sura-2-scripture-distortion",
+      "title": "Quran Study 57: Sura 2, Scripture Distortion, Hearsay, and the Cessation of Visible Miracles (1982-11-05)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "vFWMZvAfqkw",
+      "resolvedYoutubeId": "vFWMZvAfqkw",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=vFWMZvAfqkw",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/57 - Quran Study 05 Nov 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 57,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0049.json"
+    },
+    {
+      "documentId": "audio-program/zikr-55-october-23-1982",
+      "title": "Zikr 55: Suras 113–114, al-Fatihah, God Alone, Qayyum, and Glorification (1982-10-23)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/55 Zikr 23 Oct 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "GqnPazpDQ-Y",
+      "resolvedYoutubeId": "GqnPazpDQ-Y",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=GqnPazpDQ-Y",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/55 - Zikr 23 Oct 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 55,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0050.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-61-greatness-god-satan-three-strategies-mosque-1982",
+      "title": "Friday Sermon 61: God's Greatness, Satan's Three Strategies, and God-Alone Mosque Practice (1982)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "NZVf3Y97icc",
+      "resolvedYoutubeId": "NZVf3Y97icc",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=NZVf3Y97icc",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/61 - Friday Sermon 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 61,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0051.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-63-adam-eve-qiblah-1982-12-03",
+      "title": "Friday Sermon 63: Adam and Eve, Power and Immortality, and the Qiblah (1982-12-03)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "vx8Ct06xnjU",
+      "resolvedYoutubeId": "vx8Ct06xnjU",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=vx8Ct06xnjU",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/63 - Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 63,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0052.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-66-greatness-god-food-prohibitions-righteousness-1982-12-10",
+      "title": "Friday Sermon 66: God's Greatness, Human Idols, Food Prohibitions, and Righteousness (1982-12-10)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "VD4-XQbvnSs",
+      "resolvedYoutubeId": "VD4-XQbvnSs",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=VD4-XQbvnSs",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/66 - Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 66,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0053.json"
+    },
+    {
+      "documentId": "audio-program/friday-sermon-68-adam-names-remembrance-code-19-libya-1982-12-17",
+      "title": "Friday Sermon 68: Adam's Names, Remembrance, Code 19, and Libya (1982-12-17)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/68 Friday Sermon 17 Dec 1982"
+      ],
+      "declaredYoutubeId": "SOWtLVZvm3Y",
+      "resolvedYoutubeId": "SOWtLVZvm3Y",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=SOWtLVZvm3Y",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/68 - Friday Sermon 17 Dec. 1982 By Dr. Rashad Khalifa.csv",
+      "archiveNumber": 68,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0054.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-62-sura-2-abraham-submission-scripture-communities-1982-11-26",
+      "title": "Quran Study 62: Sura 2, Abraham, Submission, and Scripture Communities (1982-11-26)",
+      "reviewStatus": "draft",
+      "sectionCount": 6,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "VngUt0JThE0",
+      "resolvedYoutubeId": "VngUt0JThE0",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=VngUt0JThE0",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/62 - Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 62,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0055.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-64-sura-2-qiblah-steadfastness-hajj-1982-11-26",
+      "title": "Quran Study 64: Sura 2, the Qiblah, Steadfastness, Testing, and Safa and Marwah (1982-11-26)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "vcUtTX5rQPs",
+      "resolvedYoutubeId": "vcUtTX5rQPs",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=vcUtTX5rQPs",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/64 - Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 64,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0056.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-65-sura-2-qiblah-signs-idols-composite-1982-12",
+      "title": "Quran Study 65: Sura 2, Death, the Qiblah, Overwhelming Signs, and Idols (Composite, 1982-12)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "AxFWjNWKFno",
+      "resolvedYoutubeId": "AxFWjNWKFno",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=AxFWjNWKFno",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/65 - Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa.csv",
+      "archiveNumber": 65,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0057.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-67-capital-punishment-wills-inheritance-adoption-1982-12-10",
+      "title": "Quran Study 67: Capital Punishment, Wills, Inheritance, and Adoption (1982-12-10)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/67 Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa"
+      ],
+      "declaredYoutubeId": "7wP_-BUP1Lg",
+      "resolvedYoutubeId": "7wP_-BUP1Lg",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=7wP_-BUP1Lg",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/67 - Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa.csv",
+      "archiveNumber": 67,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0058.json"
+    },
+    {
+      "documentId": "audio-program/quran-study-69-fasting-revelation-prayer-1982-12-17",
+      "title": "Quran Study 69: Fasting, the Revelation of the Quran, Dawn Prayer, and Answered Prayer (1982-12-17)",
+      "reviewStatus": "draft",
+      "sectionCount": 5,
+      "duplicateCopies": 1,
+      "mapping": "youtube-id",
+      "catalogIds": [
+        "messenger-audio/69 Friday Sermon 17 Dec 1982"
+      ],
+      "declaredYoutubeId": "ZoJv66rG2Q0",
+      "resolvedYoutubeId": "ZoJv66rG2Q0",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=ZoJv66rG2Q0",
+      "canonicalTranscriptPath": "data/sources/playlists/audio-transcripts/69 - Friday Sermon 17 Dec. 1982 By Dr. Rashad Khalifa.csv",
+      "archiveNumber": 69,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0059.json"
+    },
+    {
+      "documentId": "video-program/mathematical-miracle-of-quran",
+      "title": "Mathematical Miracle of Quran",
+      "reviewStatus": "draft",
+      "sectionCount": 16,
+      "duplicateCopies": 1,
+      "mapping": "exact-document-id",
+      "catalogIds": [
+        "video-program/mathematical-miracle-of-quran"
+      ],
+      "declaredYoutubeId": "NWUt_bESl0c",
+      "resolvedYoutubeId": "NWUt_bESl0c",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=NWUt_bESl0c",
+      "canonicalTranscriptPath": "data/sources/playlists/video-transcripts/04 - Mathematical Miracle of Quran.csv",
+      "archiveNumber": 4,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0060.json"
+    },
+    {
+      "documentId": "video-program/old-message-new-messenger",
+      "title": "Old Message, New Messenger",
+      "reviewStatus": "draft",
+      "sectionCount": 26,
+      "duplicateCopies": 1,
+      "mapping": "exact-document-id",
+      "catalogIds": [
+        "video-program/old-message-new-messenger"
+      ],
+      "declaredYoutubeId": "f7doI2Z4o4M",
+      "resolvedYoutubeId": "f7doI2Z4o4M",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=f7doI2Z4o4M",
+      "canonicalTranscriptPath": "data/sources/playlists/video-transcripts/05 - Old Message, New Messenger.csv",
+      "archiveNumber": 5,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0061.json"
+    },
+    {
+      "documentId": "video-program/what-is-life-all-about",
+      "title": "What is Life All About?",
+      "reviewStatus": "draft",
+      "sectionCount": 13,
+      "duplicateCopies": 1,
+      "mapping": "exact-document-id",
+      "catalogIds": [
+        "video-program/what-is-life-all-about"
+      ],
+      "declaredYoutubeId": "tNqQJR5LyXo",
+      "resolvedYoutubeId": "tNqQJR5LyXo",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=tNqQJR5LyXo",
+      "canonicalTranscriptPath": "data/sources/playlists/video-transcripts/01 - What is Life All About.csv",
+      "archiveNumber": 1,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0062.json"
+    },
+    {
+      "documentId": "video-program/who-is-god",
+      "title": "Who is GOD?",
+      "reviewStatus": "draft",
+      "sectionCount": 12,
+      "duplicateCopies": 1,
+      "mapping": "exact-document-id",
+      "catalogIds": [
+        "video-program/who-is-god"
+      ],
+      "declaredYoutubeId": "HngIrz8xHTw",
+      "resolvedYoutubeId": "HngIrz8xHTw",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=HngIrz8xHTw",
+      "canonicalTranscriptPath": "data/sources/playlists/video-transcripts/02 - Who is GOD.csv",
+      "archiveNumber": 2,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0063.json"
+    },
+    {
+      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
+      "title": "Witness a Miracle & World News Bulletin",
+      "reviewStatus": "draft",
+      "sectionCount": 19,
+      "duplicateCopies": 1,
+      "mapping": "exact-document-id",
+      "catalogIds": [
+        "video-program/witness-a-miracle-world-news-bulletin"
+      ],
+      "declaredYoutubeId": "3Hn1zD5z6Cg",
+      "resolvedYoutubeId": "3Hn1zD5z6Cg",
+      "resolvedYoutubeUrl": "https://www.youtube.com/watch?v=3Hn1zD5z6Cg",
+      "canonicalTranscriptPath": "data/sources/playlists/video-transcripts/03 - Witness a Miracle & World News Bulletin.csv",
+      "archiveNumber": 3,
+      "sourceFile": "askarchives_complete_corpus_three_quran_editions_windows (1)/enrichment/E0064.json"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "edition_page_stats": {
+    "1981": {
+      "pages": 562,
+      "quran_pages": 469,
+      "page_chunks": 601
+    },
+    "1989": {
+      "pages": 748,
+      "quran_pages": 604,
+      "page_chunks": 845
+    }
+  },
+  "candidate_extraction_stats": {
+    "1981": {
+      "expected_unique_verse_ids": 6236,
+      "candidate_verse_ids": 5249,
+      "coverage_percent": 84.17,
+      "missing_candidate_ids": 987,
+      "duplicate_verse_ids": 0
+    },
+    "1989": {
+      "expected_unique_verse_ids": 6234,
+      "candidate_verse_ids": 6194,
+      "coverage_percent": 99.36,
+      "missing_candidate_ids": 40,
+      "duplicate_verse_ids": 0
+    }
+  },
+  "change_class_counts_1981_to_1992": {
+    "near-identical": 243,
+    "minor-revision": 492,
+    "major-rewording-or-extraction-noise": 2302,
+    "substantial-revision": 2065,
+    "unavailable": 1134
+  },
+  "change_class_counts_1989_to_1992": {
+    "substantial-revision": 1110,
+    "near-identical": 2745,
+    "major-rewording-or-extraction-noise": 643,
+    "minor-revision": 1696,
+    "unavailable": 42
+  },
+  "comparison_record_count": 6236,
+  "method_note": "Change classes are discovery aids. OCR, subtitles, footnotes, and segmentation can lower similarity."
+}

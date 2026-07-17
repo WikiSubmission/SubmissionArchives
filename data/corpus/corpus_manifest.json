@@ -1,0 +1,55 @@
+{
+  "package_name": "askarchives_complete_corpus_with_written_works_windows",
+  "spoken_transcript_files": 122,
+  "spoken_recording_groups": 121,
+  "written_works": 11,
+  "written_pages": 1295,
+  "quran_edition": 1992,
+  "quran_chapters": 114,
+  "quran_verse_rows": 6346,
+  "quran_subtitle_rows": 1049,
+  "quran_footnote_rows": 398,
+  "windows_path_policy": "Short internal paths, standard DEFLATE ZIP, Zip64 enabled.",
+  "canonical_evidence": {
+    "spoken": "original transcript CSV text",
+    "written": "page transcription_text with page provenance",
+    "quran": "English fields in the selected 1992 CSV files"
+  },
+  "quran_editions": [
+    {
+      "year": 1981,
+      "title": "Quran: The Final Scripture (Authorized English Version)",
+      "role": "historical_translation_layer",
+      "pdf_pages": 562,
+      "subheadings": 459,
+      "footnotes": 387,
+      "appendices": 19
+    },
+    {
+      "year": 1989,
+      "title": "Quran: The Final Testament (Authorized English Version) With the Arabic Text",
+      "role": "historical_translation_layer",
+      "pdf_pages": 748,
+      "subheadings": 752,
+      "footnotes": 341,
+      "appendices": 38
+    },
+    {
+      "year": 1992,
+      "title": "Quran: The Final Testament, Authorized English Version",
+      "role": "final_edition",
+      "verse_rows": 6346
+    }
+  ],
+  "quran_comparison": {
+    "comparison_records": 6236,
+    "1981_candidate_coverage_percent": 84.17,
+    "1989_candidate_coverage_percent": 99.36,
+    "warning": "1981 and 1989 comparison texts are machine-extracted candidates from page transcriptions."
+  },
+  "sura_9_128_129": {
+    "1981": "present in main text",
+    "1989": "removed from main text and rejected in Appendix 24",
+    "1992": "absent"
+  }
+}

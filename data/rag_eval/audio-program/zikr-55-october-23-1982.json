@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/zikr-55-october-23-1982",
+  "title": "Zikr 55: Suras 113–114, al-Fatihah, God Alone, Qayyum, and Glorification (1982-10-23)",
+  "cases": [
+    {
+      "id": "audio55-eval-001",
+      "question": "Which three Suras opened the zikr?",
+      "expected_section_ids": [
+        "audio55-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The gathering opens with the complete Arabic and English recitation of al-Falaq, al-Nas, and al-Fatihah, seeking protection from evil, darkness, envy, and whisperers before praising and asking guidance from God."
+    },
+    {
+      "id": "audio55-eval-002",
+      "question": "From which dangers was refuge sought?",
+      "expected_section_ids": [
+        "audio55-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The gathering opens with the complete Arabic and English recitation of al-Falaq, al-Nas, and al-Fatihah, seeking protection from evil, darkness, envy, and whisperers before praising and asking guidance from God."
+    },
+    {
+      "id": "audio55-eval-003",
+      "question": "What visualization did Rashad guide?",
+      "expected_section_ids": [
+        "audio55-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad asks God to accept the gathering's prayer and inner requests, then instructs participants to imagine traveling across galaxies and seven universes to announce before the angels that there is no god except God. The testimony is repeated for several minutes."
+    },
+    {
+      "id": "audio55-eval-004",
+      "question": "Which testimony was repeated?",
+      "expected_section_ids": [
+        "audio55-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad asks God to accept the gathering's prayer and inner requests, then instructs participants to imagine traveling across galaxies and seven universes to announce before the angels that there is no god except God. The testimony is repeated for several minutes."
+    },
+    {
+      "id": "audio55-eval-005",
+      "question": "How did the second remembrance cycle differ?",
+      "expected_section_ids": [
+        "audio55-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad asks participants to whisper the God-alone testimony, let the soul cross the seventh heaven, avoid distraction, and then repeat God's name alone for an extended period."
+    },
+    {
+      "id": "audio55-eval-006",
+      "question": "What concentration instruction was given?",
+      "expected_section_ids": [
+        "audio55-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad asks participants to whisper the God-alone testimony, let the soul cross the seventh heaven, avoid distraction, and then repeat God's name alone for an extended period."
+    },
+    {
+      "id": "audio55-eval-007",
+      "question": "Which divine title was invoked?",
+      "expected_section_ids": [
+        "audio55-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The chant shifts to Qayyum, glossed in the transcript as the Absolute and Eternal King, followed by God's name."
+    },
+    {
+      "id": "audio55-eval-008",
+      "question": "How was Qayyum translated in the transcript?",
+      "expected_section_ids": [
+        "audio55-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The chant shifts to Qayyum, glossed in the transcript as the Absolute and Eternal King, followed by God's name."
+    },
+    {
+      "id": "audio55-eval-009",
+      "question": "Which formulas closed the zikr?",
+      "expected_section_ids": [
+        "audio55-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final cycle repeatedly glorifies and praises God through Subhan Allah and alhamdulillah until the recording ends."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/55 Zikr 23 Oct 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/55 Zikr 23 Oct 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id"
+}

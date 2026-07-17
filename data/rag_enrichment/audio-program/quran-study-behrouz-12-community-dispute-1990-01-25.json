@@ -1,0 +1,1326 @@
+{
+  "schema_version": "1.2-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study from Behrouz",
+  "document_id": "audio-program/quran-study-behrouz-12-community-dispute-1990-01-25",
+  "title": "Quran Study from Behrouz 12: Behrouz's Khutba and the Community Dispute Concerning Edip Yuksel (1990-01-25)",
+  "date": "1990-01-25",
+  "date_precision": "day",
+  "date_note": "Explicit in the filename.",
+  "source_file": "data/sources/playlists/audio-transcripts/12 - Quran Study From Behrouz 212 Behrouz_s Khutba Edip Yuksel_s Exposure 01 25 1990.csv",
+  "youtube_id": "jYTRnyx-9L0",
+  "youtube_url": "https://www.youtube.com/watch?v=jYTRnyx-9L0",
+  "primary_speakers": [
+    "Behrouz",
+    "Dr. Rashad Khalifa",
+    "Edip Yuksel",
+    "Dr. Mahmoud Sabahi",
+    "Dr. Masoud",
+    "Apamea",
+    "Ali",
+    "Laurie",
+    "Martha",
+    "Other community participants"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 1163,
+    "first_speech_time": "00:00:00.361",
+    "last_speech_time": "01:28:02.200",
+    "section_count": 8,
+    "speaker_counts": {
+      "A man": 20,
+      "Dr. Khalifa": 353,
+      "Behrouz": 282,
+      "Audience": 22,
+      "Dr. Sabahi": 93,
+      "Susan": 1,
+      "Edip": 203,
+      "Laurie": 19,
+      "Linda": 5,
+      "A woman": 32,
+      "Mahmoud Abib": 6,
+      "Martha": 12,
+      "Ahmad": 5,
+      "Apamea": 39,
+      "Ali": 25,
+      "Dr. Masoud": 23,
+      "Douglas": 23
+    }
+  },
+  "document_summary": "Behrouz delivers a khutba arguing that the community treats God's messenger too casually. He urges special titles, dress, silence, obedience, and deference, comparing Rashad with presidents and kings. Sabahi strongly objects that such treatment resembles the religious hierarchy he rejected. Rashad frames the event as a divinely arranged lesson. The conversation expands into modesty, Quran 24:63, consultation with a messenger, Edip's earlier claim that God needs angels, whether he lied or merely misspoke, anger, shouting, public confrontation, witness testimony, fairness, due process, and risk of nullifying righteous works. Several participants defend Edip's sincerity while criticizing his behavior. The recording ends as a new lesson with Apamea is about to begin and therefore preserves only a fragment of the following study.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "video-program/friday-sermon-why-announce-messengership-1989-08-11",
+      "relationship": "same question of how a human messenger should be received",
+      "note": "The video gives Rashad's doctrinal defense; this audio reveals internal institutional consequences."
+    },
+    {
+      "document_id": "audio-program/quran-study-azhar-07-sura-62-sura-63-1989-03-24",
+      "relationship": "same value of internal disagreement and correction",
+      "note": "Hamid's objections in the earlier audio show that dissent was part of study practice before this conflict."
+    },
+    {
+      "document_id": "video-program/friday-sermon-natural-instinct-real-you-perfect-happiness-1988-05-27",
+      "relationship": "same sifting and ego language",
+      "note": "The community dispute applies those categories to a named member and must be handled cautiously."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Preserve disagreement",
+      "instruction": "Behrouz, Sabahi, Edip, Rashad, Ali, and others hold distinct positions."
+    },
+    {
+      "rule": "Avoid adjudicating the dispute",
+      "instruction": "The enrichment should support reconstruction, not a verdict."
+    },
+    {
+      "rule": "Down-weight the truncated ending",
+      "instruction": "It is not a substantive Quran-study source."
+    },
+    {
+      "rule": "Quote only canonical transcript",
+      "instruction": "Enrichment prose is retrieval metadata."
+    }
+  ],
+  "sections": [
+    {
+      "id": "behrouz12-s01",
+      "start": 0,
+      "end": 480,
+      "title": "Behrouz's khutba: responsibility toward God's messenger and the under-forty doctrine",
+      "summary": "Behrouz says a visitor from San Francisco was shocked by the community's casual treatment of Rashad. He argues that divine selection makes the messenger's position exceptional and that followers have a responsibility to accept Quranic statements, including the doctrine that those dying before forty enter Heaven.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "behrouz-khutba",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "treatment-of-messenger",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-selection",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "under-forty-salvation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "community-responsibility",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "visitor shocked how messenger treated",
+        "responsibility toward God's messenger",
+        "if die before forty go Heaven",
+        "obey this responsibility"
+      ],
+      "related_questions": [
+        "Why did Behrouz deliver the khutba?",
+        "What responsibility did he assign to the community?",
+        "Which doctrine did he use as an example of unquestioned acceptance?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "San Francisco visitor",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:00.361",
+      "end_time": "00:08:03.639",
+      "source_segment_start": 0,
+      "source_segment_end": 74,
+      "csv_speakers": [
+        "A man",
+        "Behrouz",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "A man: Yes. Dr. Khalifa: Hmm? Dr. Khalifa: (unintelligible) Behrouz: Alhamdu Lillah, Wa Ash-hadu Alla Elaha Ella Allah Wahdahu La Shareeka Lah. Behrouz: The reason for this Khutba is because we had a visitor from San Francisco. And she came by to check us out and unfortunately she got shocked because the way we were treating the God's messenger. According from Quran, the verse is 6:8 says [6:8] They also said, \"If only an angel could come down with him!\" Had we sent an angel, the whole matter would have been terminated, and they would not have been respited. 6 Chapter 6, verse 9 says, [6:9] Had we sent an angel, we would have sent him in the form of a man, and we would have kept them confused. 43:53 and 6:50 say the same thing, [6:50] Say, \"I do not say to you that I possess the treasures of GOD. Nor do I know the future. Nor do I say to you that I am an angel. I simply follow what is revealed to me.\" Say, \"Is the blind the same as the seer? Do you not think?\" 6:158 says, [6:158] Are they waiting for the angels to come to them, or your Lord, or some manifestations of your Lord? The day this happens, no soul will benefit from believing if it did not believe before that. So, \"Keep on waiting; we too will wait.\" [2:210] Are they waiting until GOD comes down to them in dense clouds, with the angels? The whole matter will then be terminated, and to GOD everything will be returned.* [16:33] They are waiting for the angels ... [16:33] They are waiting for the angels to come to them, or until your Lord's judgment comes to pass. Those before them did the same thing. GOD is not the One who wronged them; they are the ones who wronged themselves. 11:12 [11:12] You may tend to disregard some of that which is revealed to you, and you may be annoyed by it. When they may say, \"How come no treasure comes down to him, or an angel?\" You are only a warner; GOD controls all things. 15:7 says, [15:7] \"Why do you not bring down the angels, if you are truthful?\" 15:8 says, [15:8] We do not send down the angels except for specific purpose. Otherwise, no one will be respited. 17:92 says, [17:92] \"Or unless we cause masses from the sky to fall on us, as you claimed. Or unless you bring GOD and the angels before our eyes. 17:95 says, [17:95] \"If the earth were inhabited by angels, we could have sent down to them from the sky an angel messenger.\" [25:22] The day they see the angels, it will not be good news for the guilty; they will say, \"We are irreversibly confused.\" [43:60] If we willed, we could have made you angels colonizing the earth. Behrouz: I wish to God that among us there would be anyone that would not believe in God's messenger because God's messenger, Alhamdu Lillah, is live and well among us and we just have to obey. And constantly, Quran repeated, you have to believe in God and obey His messenger. Right after \"God\" comes the word of \"messenger.\" You have to follow the messenger. Excuse me. Obey the messenger. Now, a couple of weeks ago, our brother Muhtesem talked about the responsibility, but today, God willing, I'm gonna specify our responsibilities, which is God's will that's the time we are in this world now. And believe me, anything happens in this Masjid, I have seen it with my own eyes. Just last week, in computer room, Dr. Khalifa was writing the new perspective, and there was a word, it would not go to the computer. That was not God's will. It took some time, either it was shorter or a long. That it took some times till it eventually (unintelligible). That was God's will. Alhamdu Lillah. So, anything happening over here, Alhamdu Lillah, it's just like God is looking at us, all of us, right in here, and it's a very, very crucial moment. Now, so, we have to obey this responsibility. Now, God is telling us how to fulfill this responsibility about our messenger. We shall not argue with the messenger. There is no way whatsoever we can argue with the messenger. That's arguing with the word of God, with God's messenger. And when a verse says that after, if you die before age of 40, you go to Heaven, that's it. We cannot ask him why. If you have any problem, you can ask God, because his job is to just deliver the message. 6:33 says, [6:33] We know that you may sadden by what they say. You should know that it is not you that they reject; it is GOD's revelations that the wicked disregard. Unfortunately, last week, that is fortunate actually, Dr. Shakira came from San Francisco, and she was, she is a beautiful, Mã Shã Allãh, a very, very strong believer. If she was not, she would have left the message, Masjid because she actually said it herself that \"I'm confused\", the way we are treating the messenger. We cannot have any opinion or any suggestions. It's just the word of God. And if you all remember the story of Moses and his teacher, he kept interrupting him, Why did you kill that? Why did you take the, made a hole in the ship? We, we are not supposed to ask these questions. When the right time comes, we will find out ourselves, IN SHAA ALLAH. 49:1 says, [49:1] O you who believe, do not place your opinion above that of GOD and His messenger. You shall reverence GOD. GOD is Hearer, Omniscient. The reason is because we might help the messenger. 9:61 says [9:61] ... He is a mercy for those among you who believe.\" Those who hurt GOD's messenger have incurred a painful retribution. 33:57 says, [33:57] Surely, those who oppose GOD and His messenger, GOD condemns them in this life, and in the Hereafter; ... [33:69] O you who believe, do not be like those who hurt Moses, then GOD absolved him of what they said. He was, in the sight of GOD, honorable.",
+      "review_status": "draft",
+      "retrieval_text": "Behrouz's khutba: responsibility toward God's messenger and the under-forty doctrine\nBehrouz says a visitor from San Francisco was shocked by the community's casual treatment of Rashad. He argues that divine selection makes the messenger's position exceptional and that followers have a responsibility to accept Quranic statements, including the doctrine that those dying before forty enter Heaven.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: behrouz-khutba; treatment-of-messenger; divine-selection; under-forty-salvation; community-responsibility\nUser terminology: visitor shocked how messenger treated; responsibility toward God's messenger; if die before forty go Heaven; obey this responsibility\nQuestions: Why did Behrouz deliver the khutba? What responsibility did he assign to the community? Which doctrine did he use as an example of unquestioned acceptance?\nQuran references: \nBible references: \nEntities: San Francisco visitor; Rashad Khalifa"
+    },
+    {
+      "id": "behrouz12-s02",
+      "start": 480,
+      "end": 1422,
+      "title": "Titles, dress, presidents, kings, mosque etiquette, and exceptional deference",
+      "summary": "Behrouz compares Rashad with President Bush and wealthy rulers, arguing that people dress formally, use titles, and show deference to worldly leaders while treating the messenger casually. He invokes Quran 7:31 on dressing nicely at the mosque, criticizes informal behavior, and argues that intelligence consists in believing God and following God's system.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "titles-and-deference",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "president-bush-analogy",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mosque-dress",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-7-31",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "messenger-status",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "intelligence-as-belief",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "do not call President Bush by first name",
+        "wear suit and tie",
+        "dress nicely at mosque",
+        "messenger highest position"
+      ],
+      "related_questions": [
+        "How did Behrouz compare the messenger with political leaders?",
+        "What did he say Quran 7:31 requires?",
+        "How did he define intelligence?"
+      ],
+      "quran_references": [
+        "7:31"
+      ],
+      "bible_references": [],
+      "entities": [
+        "George H. W. Bush",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "Behrouz's institutional proposals are his own khutba, not a unanimously accepted policy.",
+      "retrieval_priority": "primary",
+      "start_time": "00:07:49.601",
+      "end_time": "00:23:38.605",
+      "source_segment_start": 74,
+      "source_segment_end": 234,
+      "csv_speakers": [
+        "Audience",
+        "Behrouz",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "[33:69] O you who believe, do not be like those who hurt Moses, then GOD absolved him of what they said. He was, in the sight of GOD, honorable. 61:5 says, [61:5] Recall that Moses said to his people, \"O my people, why do you hurt me, even though you know that I am GOD's messenger?\" When they deviated, GOD diverted their hearts. For GOD does not guide the wicked people. [49:2] O you who believe, do not raise your voices above the voice of the prophet,* nor shall you shout at him as you shout at each other, lest your works become nullified while you do not perceive. [49:3] Surely, those who lower ... This is 49:3, [49:3] ... who lower their voices at the messenger of GOD are the ones whose hearts are prepared by GOD to become righteous.* They deserve forgiveness and a great recompense. [49:4] As for those who call on you from outside the walls, most of them do not understand. We cannot call \"Dr. Khalifa, come over here. We wanna go, let's do the prayer.\" We cannot do that. This is, it doesn't bother him personally, but this is, it's gonna nullify our, our work, whatever we have done. God says on 49:5, [49:5] Had they been patient until you came out to them, it would have been better for them. GOD is Forgiver, Most Merciful. As for any communities, this community, we have to have discipline, disciplines according to the God's law that we have to follow. Now, I'm just gonna give you an example, that is outside example. It's probably the human and devil kingdom, but you cannot and you will not call President Bush by his first name. Have you seen anyone call him by his first name? If he was here right now with us, we would wear all suit and tie, he had millions of bodyguards, and you would come and sit just like that. Now, but messenger is a position that God has given, and this is the highest point, position in this world. And we have to follow God's word. God called him messenger. For the newcomers, they come outside, they see us, we have Friday classes. When they leave, they don't know who was the messenger, who was the student, who was the teacher. Everybody is laying down, some people are sleeping. Please, we have to cut this off, because this is against God's law, against God's rules. Please, over here, this side of this door, be very formal. When we go outside, when we go inside to RASOOL ALLAH, just call him Rashad, or whatever you want as a friend. But when we are here, on this side of the door, please let us be example for the newcomers. We don't want someone, as a reporter, come over here, they call him RASOOL ALLAH, and then call him, Rashad. Don't you feel funny when there is someone coming from outside, they tell us what to tell him? Like God already called him RASOOL ALLAH. God positioned him as a RASOOL ALLAH. So, we have to, I mean, this is up to everybody, whatever they want, we think about it, but this is God's rule. This is God's law. This is the rule we should have among us. This is a very, very crucial moment that we have to take heed, and understand it. We are so busy with the miracle of 19, we forgot the small things over here. And one is, please, you can call him RASOOL ALLAH, Mr. Khalifa, Dr. Khalifa. Please, when we are having on a study group, don't, don't call by the first name. First name is me, or you, or others, but he is RASOOL ALLAH. God is teaching us everything, all for the, even the manners, how to treat each other, and RASOOL ALLAH, His messenger. Last conference, that was my first conference, I didn't know many people, I only knew Dr. Khalifa, and Susan, Lisa, and few other people, because of my last visit for a couple of days. At the time of conference, I was sitting on the right hand side, facing the microphone, I was leaning to the bookshelf, and I was watching the whole group, there was a gentleman among us. He would not leave the meeting. He would not come in unless Dr. Khalifa turned to him, or accidentally see him, he said \"can I go?\" Then, he would go. And that gentleman was Sammy. That is his son. And we all, I just have to thank you, this is the thing that every one of us, we have to know this, is to learn it. We have to learn this lesson. This is and mine, and all of you, I'm sure, is the first messenger. We do not know how to treat. And last time, I, I probably said something wrong, and I called Dr. Khalifa, I said \"I'm very sorry, you are my first messenger, and I don't have no experience about it, just forgive me, please.\" And so as for all of us, it's no problem, we just don't know, but that doesn't mean that we just have to keep following whatever we have been doing. Now, God says on 24:62, [24:62] The true believers are those who believe in GOD and His messenger,* and when they are with him in a community meeting, they do not leave him without permission. Again, God says exactly the same thing, Those who ask your permission are the ones who do not believe in God, who, I'm sorry, who do believe in God and His messenger. He put the God and His messenger first sentence, and then get the permission, and then the second sentence, He said, these are the ones, they believe in God and His messenger. I mean, this is very, very crucial and important. And just from this, this verse, we get millions of things about how to treat the messenger. It's just completely different with, with anyone else on this earth. My brother, Mahmood JAN, just mentioned to me, verse 7, Sura 7:31. God says, [7:31] O children of Adam, you shall be clean and dress nicely when you go to the mosque. You shall eat and drink moderately. God does not love excess. Now, please again, brothers, sisters, just, I love you, that's why I'm talking about this. If there was someone outside, I would not. I would tell my children, I would tell my mom, because I care about them. And please, when you come in, freedom, it's a beautiful word. But when you are in a group, when you are in a society, when you are in a, this community, it's completely freedom. But being having respect is different. So please, I wanna ask you, I love you, especially the ones, I, I know they have the same feeling about me too, but this is the word of God. Please do not lay down. We have the, I know for some of us, it's very uncomfortable to sit down. But believe me, it's very uncomfortable in the Hell, too. To be (unintelligible) it's only two hours. And you are, if you are sleeping, please sleep at home, and come later. I mean, this is, it's, it's not bad. I'm sorry. Please don't get mad at me, because we all, if, he, he does not, we don't know it. We just do not notice these things. We think, if you go to a class, do you lay down and make a position like you are in a Hollywood and then take a movie? If you just sit down properly, the teacher is over there, we have to follow him. Believe me, back home, we could never ever put our foot on the, on the top of the table. Every time you put it down. So, these are the rules. Please, this is, we learn it from each other, from the society, from God, especially forgive me, God, that we have to follow for, especially for our messenger. And also something else I wanna give as the parents. Believe me, if you are in that room, if one child runs from here to there, it's like an airport over there. Believe me. I, I was there two days ago, in the afternoon, there was no one in the office, I was taking care of Ahmad's children, beautiful, but they just went to get the pillow, bring it back over here and sleep. And they slept. I couldn't believe it. But as soon as they run over there, it's, I don't know what happened, the reaction over there, it's just like an airport. Now, Friday nights, RASOOL ALLAH, Susan, Lisa, Emily, they are here, they work 19, 20 hours a day. They need the rest. Now, after this last meeting, everybody, every, all the kids, they get up, they bring the pillows, they have fun over there. Please take care of them. Please let them, you know, have them, quiet them down, please. Now, we repent. Alhamdu Lillah, Ash-hadu Alla Elaha Ella Allah Wahdahu La Shareeka Lah. Last time, I forgot on my notes that is today I have everything from (unintelligible). The other point, the subject that I wanna talk about is, it's about ego, the ego as a god. [45:23] Have you noted the one whose god is his ego? Consequently, GOD sends him astray, knowingly and seals his hearing and his mind, and places a veil on his eyes. Who then can guide him, after such a decision by GOD? Would you not take heed? Please, this is, this is a very very sensitive point, very sensitive action that most of the time, knowing, without knowing it, we just pass through it, then later on we find out about it, then we're gonna be, feel sorry about it. The other point is, out there, there is a word, they call it intelligent, smart, entrepreneur, so and so, genius, whatever. This is not this place's word. This is not God's word. Behrouz: The only intelligent to God is repeated in 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17...16,17 Dr. Khalifa: 16, 17 Behrouz: About 18 verses that I could have find that God calls intelligent only to the one they believe in God and follow God's system. That's it. God doesn't, He doesn't care if you are in real estate, you make billions of dollars, good for you, if you are genius, good for your parents, that's fine. If, but when you come to this masjid, please, as you take off your shoes, please take off you ego, take off your genius, hang it on a tree and come in. I'm just telling you as a friend, because I try my best to do it, and believe me, every night when I go home, I repent and I ask God, if I did something wrong today, please forgive me. I ask God for four months to be in here in this masjid, to be close to His messenger. And Alhamdu Lillah, He granted it. But now, I'm just going by the rule that please God, if I make something, some mistake, please let me know. So, if someone tells you this and that, this is because we are brothers, we are sisters, and I really appreciate the ladies, they, we, men, have to learn from them, please become a gentleman. Because I haven't seen any ladies to lay down or, I just love it. Aqem Al-Salat. Allahu Akbar Allahu Akbar La Elaha Ella Allah Behrouz: Allahu Akbar Audience: Allahu Akbar Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) Behrouz: Allahu Akbar Audience: Allahu Akbar Subhaana Rabbiya Al-‘Azeem x 3 Sami’a Allahu Leman Hamidah Allahu Akbar Subhaana Rabbiya Al-A‘alaa x 3 Behrouz: Allahu Akbar Audience: Allahu Akbar Behrouz: Allahu Akbar Audience: Allahu Akbar Subhaana Rabbiya Al-A‘alaa x 3 Behrouz: Allahu Akbar Audience: Allahu Akbar Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) Behrouz: Allahu Akbar Audience: Allahu Akbar Subhaana Rabbiya Al-‘Azeem x 3 Sami’a Allahu Leman Hamidah Behrouz: Allahu Akbar Audience: Allahu Akbar Subhaana Rabbiya Al-A‘alaa x 3 Behrouz: Allahu Akbar Audience: Allahu Akbar Behrouz: Allahu Akbar Audience: Allahu Akbar Subhaana Rabbiya Al-A‘alaa x 3 Behrouz: Allahu Akbar Audience: Allahu Akbar Ash-hadu Alla Elaha Ella Allah, Wahdahu La Shareeka Lah Behrouz: Al-Salaamu ‘Alaykum Al-Salaamu ‘Alaykum Audience: Al-Salaamu ‘Alaykum Al-Salaamu ‘Alaykum",
+      "review_status": "draft",
+      "retrieval_text": "Titles, dress, presidents, kings, mosque etiquette, and exceptional deference\nBehrouz compares Rashad with President Bush and wealthy rulers, arguing that people dress formally, use titles, and show deference to worldly leaders while treating the messenger casually. He invokes Quran 7:31 on dressing nicely at the mosque, criticizes informal behavior, and argues that intelligence consists in believing God and following God's system.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: titles-and-deference; president-bush-analogy; mosque-dress; quran-7-31; messenger-status; intelligence-as-belief\nUser terminology: do not call President Bush by first name; wear suit and tie; dress nicely at mosque; messenger highest position\nQuestions: How did Behrouz compare the messenger with political leaders? What did he say Quran 7:31 requires? How did he define intelligence?\nQuran references: 7:31\nBible references: \nEntities: George H. W. Bush; Rashad Khalifa"
+    },
+    {
+      "id": "behrouz12-s03",
+      "start": 1422,
+      "end": 1890,
+      "title": "Sabahi's rejection of religious hierarchy and Rashad's lesson from the Cow",
+      "summary": "Sabahi says he disagrees with nearly all of Behrouz's khutba and asks Rashad whether he truly wants this system. He says such hierarchy resembles the Islam he spent his life rejecting. Rashad responds by invoking the Cow narrative as a lesson that difficult incidents can become divinely arranged opportunities for purification and learning.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sabahi-objection",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "religious-hierarchy",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "institutional-authority",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "cow-narrative",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "purification-process",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "I disagree with 99 percent",
+        "is this system Rashad wants",
+        "Islam I gave away all my life",
+        "lesson of the Cow"
+      ],
+      "related_questions": [
+        "Why did Sabahi object so strongly?",
+        "What did he ask Rashad to clarify?",
+        "How did Rashad use the Cow narrative?"
+      ],
+      "quran_references": [
+        "2:67-71"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Dr. Mahmoud Sabahi",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:23:43.887",
+      "end_time": "00:31:31.819",
+      "source_segment_start": 235,
+      "source_segment_end": 326,
+      "csv_speakers": [
+        "Behrouz",
+        "Dr. Khalifa",
+        "Dr. Sabahi",
+        "Edip",
+        "Susan"
+      ],
+      "canonical_text": "Dr. Khalifa: Congratualtions. Dr. Sabahi: Rashad, Dr. Khalifa: Mã Shã Allãh. Dr. Sabahi: I have, I, I have, to make some comments before what he said, on this Khutba before I go. Dr. Khalifa: Okay, go ahead. Dr. Sabahi: Just, listen please. No, Quranic study is not the place because other people come in. What this Khutba reminded me was the Islam that I have been giving away all my life. This reminded me of my teacher in my grade school who told me to shut up. \"Put your intelligence outside and come in and listen to what I tell you and what God is telling you.\" We are intelligent people. We have....I tell my friend, Behrouz, you are just a newcomer. Sit down. Listen. This system is working. If you wanna make changes, don't push it. Don't ask us to change everything in overnight and go to a system that is all the religious establishment outside is like that. You go to any religious establishment, you can't see the guy, whoever it is. You have to go through steps to see the person. You wanna create that, we have it outside, we don't have to come here. I, I don't agree with 99% of what he said personally and I would love to hear Rashad. Dr. Sabahi: I usually call him Dr. Khalifa to come out and say whether he really believes that this is the system he wants. Susan: How come you object (unintelligible) Quran? Dr. Sabahi: I don't object to Quran. I, I can sit down and, and read Quran and follow it and see whether I am doing something wrong. But if I come here and I see Khalifa, Dr. Khalifa is available for me, this is something that people see different from others. I'm not saying that I can insult him. Have you seen me treating him or calling him? But other things that \"you put your intelligence outside and come in.\" Dr. Sabahi: That is asking me to be a follower closed eyes, eyes closed, ear closed and just follow. Behrouz: No, God describes intelligence different. Dr. Sabahi: This is not right. You cannot, ego, yes. Dr. Sabahi: I, I say ego, yes. Dr. Sabahi: But intelligence, this is what God gave to me and to everyone to do that. Dr. Khalifa: We'll, we'll discuss it tonight and there's very good reason for saying what he said and like Susan said \"he only read Quran.\" Dr. Khalifa: So, together we're gonna read this and our choices to follow what God is saying. Dr. Sabahi: I would love to hear what you have to say. Dr. Sabahi: If you wanna put it in Quranic study to discuss, that would be great. Dr. Khalifa: Yeah, we'll, we'll... Dr. Khalifa: I'll discuss it for about 10 minutes. Behrouz: I'm not breaking the rules. I just read it from Quran. Edip: Nowhere in the Quran doesn't say don't call with name. Edip: We call Muhammad with his name. We call Moses with his name. Dr. Khalifa: No, it's not true. It's not true. Edip: God, God... Dr. Khalifa: (24:63) لَّا تَجْعَلُوا۟ دُعَآءَ ٱلرَّسُولِ بَيْنَكُمْ كَدُعَآءِ بَعْضِكُم Dr. Khalifa: It's in the Quran. Edip: But we call, Edip: But we shouldn't say that Muhammad only by itself. We shouldn't say Moses by itself. Edip: We shouldn't make distinction between messengers. Dr. Khalifa: They're not, they're not here. They're not here. Dr. Khalifa: I will discuss it, Edip: But all the same mistake. Dr. Khalifa: I will discuss it tonight. But you can leave your ego outside or stay with it outside. You can't, If you have any ego, don't come in here. Dr. Khalifa: You can stay with it outside. Edip: Not ego, Rashad. Edip: I want to discuss the subject because... Dr. Khalifa: Tonight, we'll discuss it, Edip. Dr. Khalifa: Humans insisted on it. So, the human being generally is just a hard core criminal. And we have to know that... ....in order to solve our problems. Obviously, we have a problem that caused our dismissal from God's kingdom, not once or twice, but a few times. And then, God gives us lessons in the Quran to teach us that we are rebels. Otherwise, why, why does God put in the Quran those lessons, those examples from life? The biggest Sura in the Quran, the longest Sura, is entitled \"the Heifer.\" Even though it's a Sura that is full of, all the five so-called pillars of Islam are in Sura number two. The order to Pray, the orders to Fast Ramadan, the orders to give Zakat, the orders to make pilgrimage, the rules of marriage, divorce, war, they're all in Sura number two. But the title indicates the importance of, of the subject that is within every Sura. And God chose the title \"the Heifer.\" So, what is the Heifer? The Heifer symbolizes the people who, who are with the messenger, but they are rebels. And they give the messenger a hell of a time. This is what the Heifer is all about. So, if we are fortunate, we will learn from this. And we will catch our rebellious nature and correct it in order to be redeemed back to God's kingdom, to, to get rid of the rebellion, and to correct it. Moses told his people, God orders [2:67] ... you to sacrifice a heifer. ... So, what did they do? They said \"are you kidding?\" He said, I seek refuge in God, lest I be that ignorant. And you know the rest of the story. I'm not gonna tell you the story of the Heifer again. But why is God putting it there? Why God is putting so much importance on it? And giving the name of the, the title of the Sura from that incident, why? It's for us to learn. The same story happened this afternoon. Very similar story. And the fortunate ones are the ones who learn from their, their, their God-given lessons. I mean, we, we love each other very much, and we know that we are in the, in the purification process. We're being purified. I love Hamid very much. I don't know if he's here or not. But today, he, after a discussion with some people about the way he was dressed. He was dressed in a short and a sweatshirt. And then, they asked me \"what does God say about dressing for the, for the mosque, for the masjid?\" I said \"there are two things in the Quran, one of them says, dress up for the, for the mosque.\" And one says \"dress modestly.\" Okay, so God says, it's like God says, [2:67] ... sacrifice a heifer. ... God says, dress up for the mosque. So, what did he say? He said \"how do you dress up for the mosque?\"",
+      "review_status": "draft",
+      "retrieval_text": "Sabahi's rejection of religious hierarchy and Rashad's lesson from the Cow\nSabahi says he disagrees with nearly all of Behrouz's khutba and asks Rashad whether he truly wants this system. He says such hierarchy resembles the Islam he spent his life rejecting. Rashad responds by invoking the Cow narrative as a lesson that difficult incidents can become divinely arranged opportunities for purification and learning.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sabahi-objection; religious-hierarchy; institutional-authority; cow-narrative; purification-process\nUser terminology: I disagree with 99 percent; is this system Rashad wants; Islam I gave away all my life; lesson of the Cow\nQuestions: Why did Sabahi object so strongly? What did he ask Rashad to clarify? How did Rashad use the Cow narrative?\nQuran references: 2:67-71\nBible references: \nEntities: Dr. Mahmoud Sabahi; Rashad Khalifa"
+    },
+    {
+      "id": "behrouz12-s04",
+      "start": 1890,
+      "end": 2370,
+      "title": "Modesty, clothing, distraction, and equal standards for men and women",
+      "summary": "Community members discuss bare legs, shorts, and clothing in the study space. Laurie says men's modesty is as important as women's and that distracting clothing interferes with concentration. The section reflects a broader effort to define informal mosque etiquette after Behrouz's khutba.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "modesty",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mens-clothing",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "womens-clothing",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "distraction",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mosque-etiquette",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "bare legs distracting",
+        "modesty in men as important",
+        "dress in mosque",
+        "hard to concentrate"
+      ],
+      "related_questions": [
+        "What modesty concern did Laurie raise?",
+        "Was the standard applied only to women?",
+        "How did this continue the khutba discussion?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Laurie"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:31:29.052",
+      "end_time": "00:39:33.485",
+      "source_segment_start": 326,
+      "source_segment_end": 436,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Edip",
+        "Laurie",
+        "Linda"
+      ],
+      "canonical_text": "He said \"how do you dress up for the mosque?\" It's the same answer that was given to Moses, right? We are human beings. Those were human beings. And these are human beings. You know, we're applying for a job in God's kingdom. This is why we're trying, we're trying to go back, and we are applying for a job. So, if you, if you are, have an interview for a job, how will you dress? Will you go in a short and slippers? Of course, we don't wanna be that formal, but I mean, we have to be reasonable. So, I have to explain how you, how you dress up for, for the mosque. God says, (7:31) يَـٰبَنِىٓ ءَادَمَ خُذُوا۟ زِينَتَكُمْ عِندَ كُلِّ مَسْجِدٍۢ He says, [7:31] O children of Adam, ... dress up is a good, is a good translation for that. Every time you go to the mosque. I mean, why? Why is God telling us to dress up every, every time we go to the mosque? I mean, is God, is He finicky or what? I mean, Astaghfirullah. Why is He telling us to dress up for the mosque? How would you like to go to the mosque and find that everybody is, looks terrible and stinks? How, how will, what, what will happen? I mean, this is what.... What we're doing, we're not following God's commands. So, we have to learn from our lessons that God has given us. There are reasons for calling it the Heifer and emphasizing this story. And over and over and over throughout the Quran, we see the children of Israel, the story of the children of Israel. Believe me, it's happening. Everything they did. This is why God put the children of Israel in the Quran. Because we are doing the same things. And these are God's chosen people. \"What color is she?\" These are God's chosen people. We are not talking about the rebels of the rebels. We're talking the chosen ones among the rebels. So, with this introduction, I'm going to have, see how we, all of us collectively feel about this. Dr. Khalifa: Laurie, what's you said? Laurie: I think I can see that a word that to me is very important. (unintelligible) Men have to be modest, too. We're here at Quranic sitting, we're at Juma'. And it's really hot and people are speaking, and you look around and all you see is legs. You know, just bare legs. So, you turn away, over here is another pair of bare legs. And you look over here and there's another pair of bare legs. And the shorts are short and it's like... You know, women have the same feelings as men. And, you know, if we all came in shorts, nobody would be able to concentrate on anything. This is such (unintelligible). I'm so glad to hear it finally brought up that modesty in men is just as important, you know, as it is for women. Laurie: (unintelligible) Dr. Khalifa: Mã Shã Allãh. Laurie: It's been, you know, very distracting. Laurie: Sometimes, it's really hard to concentrate (unintelligible) bare legs. Laurie: So, (unintelligible) Dr. Khalifa: And God addressed both the men and the women to subdue their eyes, both of them. So, so, God wants us to help each other in this way. Dr. Khalifa: Linda. Linda: (unintelligible) A man: (unintelligible) Dr. Khalifa: That, that, you speak louder. Linda: Are you saying... Dr. Khalifa: Did I think the same thing that Laurie is saying. Linda: Yeah, (unintelligible) Dr. Khalifa: Oh. Linda: (unintelligible) this room. Dr. Khalifa: Right. Dr. Khalifa: They can be distracted as well. Linda: (unintelligible) A woman: (unintelligible) Rashad. I, I really, (unintelligible) think, I think the first responsibility lies within each one of us, A woman: with your eyes. (unintelligible) any kind of distraction. Dr. Khalifa: Right. A woman: And, and A woman: And that, I mean, the, the fact that we see that right, we need (unintelligible) A woman: in order to help each other. We need not to present situations. Especially, Dr. Khalifa: Right. A woman: within our community, it will hinder each other because we are brothers and sisters. We need to recognize our weaknesses and help each other not to, A woman: to be in situations where our, where the devil can bring our weaknesses out. Dr. Khalifa: Uhum. Mã Shã Allãh. Edip: Rashad, (unintelligible) the reason I want to (unintelligible) is because Dr. Khalifa: Yeah, go ahead. Edip: I Edip: I (unintelligible) Dr. Khalifa: That's right. Edip: And Edip: some people knows and some people doesn't know (unintelligible) and some people I know they are (unintelligible) and they are brightened and just really very disturbing. I just want to share with you this few pages. First of all, I honestly I am a sincere believer. I know myself. I will say it. It is not ego. You know, if you are sincere, people around you can judge that we are sincere. In Turkey, when I heard this, this message, thank God, from Rashad, I, God put me in the greatest. I gave up everything that I had until that time. I gave up from my thousands of readers. I gave up from my job. I gave up from my family, from my father, mother, sisters, each friend. And I accepted when I first heard that Rashad says \"I'm messenger of God\", I accepted without any doubt. I said \"yes, okay.\" I had no ego in this case. And now some people just want to accuse me that I have great ego and I am idol worship. I worship my ego. It is very easy accusation. Oh, somebody who takes questions or discusses a subject if he doesn't understand. \"Oh, you are egoistic. You are worshiping your ego.\" It is very easy. And for some people, they want to show that they are protector of the messenger. From whom? From believer. And backbite a believer and accuse a believer. At that time, show yourself, you are protector of the messenger. You love messenger more than everybody. What kind of race is this? Is that righteous race? I want to share some verses from Quran. Bism Allah Arrahman Arraheem أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ [2:269] ... Only those who possess intelligence will take heed. God always says, intelligent people will take heed. The other verse, [17:36] You shall not accept any information, unless you verify it for yourself. I have given you the hearing, the eyesight, and the brain, and you are responsible for using them. These are two verses from Quran. And God says in Quran, believers are brothers. And, [49:12] O you who believe, you shall avoid any suspicion, for even a little bit of suspicion is sinful. You shall not spy, nor shall you backbite one another; this is as abominable as eating the flesh of your dead brother.",
+      "review_status": "draft",
+      "retrieval_text": "Modesty, clothing, distraction, and equal standards for men and women\nCommunity members discuss bare legs, shorts, and clothing in the study space. Laurie says men's modesty is as important as women's and that distracting clothing interferes with concentration. The section reflects a broader effort to define informal mosque etiquette after Behrouz's khutba.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: modesty; mens-clothing; womens-clothing; distraction; mosque-etiquette\nUser terminology: bare legs distracting; modesty in men as important; dress in mosque; hard to concentrate\nQuestions: What modesty concern did Laurie raise? Was the standard applied only to women? How did this continue the khutba discussion?\nQuran references: \nBible references: \nEntities: Laurie"
+    },
+    {
+      "id": "behrouz12-s05",
+      "start": 2370,
+      "end": 3120,
+      "title": "Quran 24:63, consultation with the messenger, Edip's criticism, and the risk of driving outsiders away",
+      "summary": "Edip argues that Quran 24:63 was mistranslated and concerns responding to the messenger's invitation rather than forbidding use of his name. He asks why a messenger consults believers and raises a more serious issue: whether Rashad had said God needs angels. Rashad warns that harsh community behavior can drive an outsider away and make the responsible person bear consequences.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "quran-24-63",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "messenger-invitation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "consultation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-needs-angels-dispute",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "driving-outsider-away",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "nullifying-works",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "24:63 mistranslation",
+        "do not take messenger invitation casually",
+        "why messenger consults believers",
+        "God needs angels",
+        "carry outsider's sins"
+      ],
+      "related_questions": [
+        "How did Edip reinterpret Quran 24:63?",
+        "What question did he raise about consultation?",
+        "Why did Rashad warn about driving outsiders away?"
+      ],
+      "quran_references": [
+        "24:63"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Edip Yuksel",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:39:17.943",
+      "end_time": "00:52:09.731",
+      "source_segment_start": 436,
+      "source_segment_end": 619,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Behrouz",
+        "Dr. Khalifa",
+        "Edip",
+        "Laurie",
+        "Mahmoud Abib"
+      ],
+      "canonical_text": "[49:12] O you who believe, you shall avoid any suspicion, for even a little bit of suspicion is sinful. You shall not spy, nor shall you backbite one another; this is as abominable as eating the flesh of your dead brother. Because he cannot defend himself when you are backbiting him. Now in this, Rashad, if I have your permission, just I want to talk on the Khutba. There are some points which I'm not only to ask questions. First, Behrouz brother said \"we shouldn't call him by his name, as Rashad.\" Which, there is a mistranslation of verse 24:63. Which, could you please open it? 24:63. It doesn't say \"don't call him by name like you each other.\" Don't take his invitation, his request like your invitation. Because he is leader, he is messenger of God, you must obey him. But in respect of calling him with name, it is human being like us. Then, all messenger has been called with their name. And even now, you call Muhammad as Muhammad, Moses as Moses. God says, they are human being like you. Which, what kind of difference God show us? Which respect is they are different we must respect? And which respect they are like us? They are walking in the city. They eat like us. This is not what, which is mistranslated. [24:63] Do not treat the messenger's requests as you treat each others' requests. ... Because, and also in the context, if you look, some people they do not take serious invitation of the messenger. And they are waver. And the second point, \"we shouldn't discuss with him\", brother said. Why? Doesn't he make mistakes? Only God doesn't make mistakes. What about verses 60:12? What about that verse 60:12? Here, from Hadith... Quran, Hadith and Islam, the verse 60:12, the title is \"Obeying the messenger is conditioned\" Underlined. (60:12) وَلَا يَعْصِينَكَ فِى مَعْرُوفٍۢ nor disobey you when you are right. That means, believers sometimes they may see something wrong and they can criticize. Edip: Even they can, that time they can, they can disobey. This is conditioned. A woman: 60:12? Edip: 60 and 12. Mahmood Abib: What chapter? Edip: Chapter 60, verse 12. Mahmood Abib: (unintelligible) Edip: 60. A man: 6 0. Edip: Yes, 6 0. A man: 6 0? Edip: Yes. Edip: Here, in the, in this book, it is underlined, \"Nor disobey you, nor disobey you, messenger, when you are right.\" Or in your translation I'm reading, [60:12] ... righteous commands, ... Obeying the messenger is conditioned What is the condition? God says, [4:79] Anything good that happens to you is from GOD, and anything bad that happens to you is from you. ... That's messengers, like human, they make mistakes, and these not from God. Edip: These are from themselves, and God may change later, forgive them. It's... Laurie: Is it okay if we, we have to discuss this briefly. Dr. Khalifa: Yes. Mahmood Abib: (unintelligible) Laurie: There are some differences between discussion and argument. Laurie: And what would happen if... Edip: I'm coming to the subject, thank you. Edip: Laurie, you are right, I'm coming to subject. Edip: What about verse 3, chapter 3, verse 159? God says, messenger must consult people around him. This is duty of messenger. And if people around him are zero, they have no idea, they don't, frankly, they don't say their idea, they're only, they just, messenger whatever he says, okay, accept, true. Messenger, 1 plus 0 is 1. Messenger says 12, 12 plus 0 is 12. 6, messenger says 6, he says 0. 6 plus 0 is 6. There is no change. What is the reason of consultation of messenger with believer? According to Quran, believers has also personality. They have all their idea. They are not fool people. Dr. Khalifa: Wow! Wow! A woman: Wow! Dr. Khalifa: Mã Shã Allãh. A man: Wow! Dr. Khalifa: Mã Shã Allãh. Congratulations, Behrouz. It worked. It worked. Mahmood Abib: (unintelligible) Dr. Khalifa: Come here. Mahmood Abib: Don't go over there. Come here. Behrouz: Mã Shã Allãh. God bless you. Edip: The other point, we must, one lady, one sincere lady, believer, because of last week, we had discussion with Rashad, I, and Ismail Barakat, really according to Quran, we made mistake and I repented because of this. But, I will tell you something which, more important than this mistake, more important than this mistake, but we forget this, some, we, we want to cover the subject. Why a person shouts? Every shouting person are not the same. If you punch.... person comes here, shout, because he is.... Edip: So, God needs angels for other things. Third claim, third verse, God is the Alpha... (57:3) هُوَ ٱلْأَوَّلُ وَٱلْـَٔاخِرُ He is the beginning... And also this verse 57:3, and other verse, God is the Creator, is the Creator of everything. There are many verses about this, for example, 13.16. Edip: God didn't create, did not create, or could not create hydrogen. A woman: What?! Edip: Hydrogen. A man: What?! A woman: (unintelligible) Edip: Yes. Dr. Khalifa: On the Quran? A woman: Honestly, what does it, what does it have ... Edip: Wait. Wait. Mahmood Abib: (unintelligible) Edip: That discussion, we made... Dr. Khalifa: Who said, who said all those black things? Edip: This Behrouz said, and you accepted, Rashad. Dr. Khalifa: So, I said, I said that God is not Omnipotent? Edip: I asked some questions. Edip: Excuse me? Dr. Khalifa: You, you, you heard, you heard me say \"God is not Omnipotent.\" Edip: God... no, no, I only, I don't say you didn't say God is... Dr. Khalifa: No, wait, wait, wait. Dr. Khalifa: Does anybody in this room believe that God is not Omnipotent? Raise your hand, please. Anyone? Edip: I only want... Dr. Khalifa: Wait, wait. Hold it. Hold it. Dr. Khalifa: Does anyone in this room believe that God is not Omnipotent? He is able to do anything. Does anyone here believe that? Dr. Khalifa: Okay, there's the first issue is finished. Dr. Khalifa: There is nobody here who does not believe.... Edip: But God is witness, Rashad, Edip: The only is, is (unintelligible). Dr. Khalifa: Yes. Dr. Khalifa: There is nobody in this room who believes that God is not Omnipotent. So, this is finished. Edip: What about this God cannot do this, this, without this. If we say God cannot do, even if He wants, cannot do this. Edip: Isn't this really reduced God's condition, the Omnipotence of God? Edip: This contradicts itself. Dr. Khalifa: No. Dr. Khalifa: You have to go talk to some people who don't believe that is Omnipotent. We all believe God is Omnipotent. Edip: Okay, can we say God can do whatever He wants? Dr. Khalifa: Yes. Edip: God can do? Edip: Alhamdu Lillah. Thank God. Edip: Please, we erase this, this problem. Ok. Edip: This was the discussion. Dr. Khalifa: This was always the case. It was never otherwise. A woman: That's right. The rest of us that were at the discussion, Edip, didn't take it that way at all. Dr. Khalifa: Go ahead, what was the second point? Edip: Okay, thank God. Yes, I want to be liar. Really, I want to be, in this case, liar. Because I don't want to make trouble. But God knows. God knows everything. Edip: IN SHAA ALLAH, even if Rashad said he must repent, if he doesn't remember, it is better for him. Edip: But I remember, I heard from my ears, the discussion was about this. A woman: There were other people there. Edip: Any, anyway, God needs angels. We cannot say this, IN SHAA ALLAH. That's correct? A woman: Edip, nobody says you're a liar. Behrouz: But you're missing the point. Let's bring up the subject that we were talking about. Chapter 15, starting from 74 to 78. Just read the whole thing. Behrouz: It's gonna tell you that God turned upside down the city of Lot by the angels. Behrouz: That is God's system. God's system never change. And that's it. You wanna go into it.... Dr. Khalifa: [49:1] O you who believe, do not place your opinion above that of GOD and His messenger. You shall reverence GOD. GOD is Hearer, Omniscient. [49:2] O you who believe, do not raise your voices above the voice of the prophet, ... This is the prophet Muhammad, and it is set as an example for us. [49:2] ... nor shall you shout at him as you shout at each other, ... Why is God saying this? Why? He tells us why. [49:2] ... lest your works become nullified while you do not perceive. Why will my work be nullified if I shout at the messenger? Or if I raise my opinion above the opinion of the messenger? How will my work be nullified? \"I Pray five times a day. I Fast the month of Ramadan. I worship God alone.\" What God is telling me, if you raise, place your opinion above that of God and the messenger, your works are nullified. How, what is the mechanism of nullifying my works by doing this? Here's the mechanism. Because when I do this to the messenger, and there is an outsider who will come and see this, now the outsider comes and sees that one of the closest persons to the messenger is telling him \"you don't believe in God's Omnipotence. You don't believe that this and that.\" So, the outsider will leave. Okay, and become a disbeliever, for example. If I do this and drive the outsider away, I will carry this person's sins. This is how my works should be nullified. Why, why is God saying this? Is, is God advocating idol worship, or what? Of course not. So, there is a reason for it. But, see, you see now what the point is. Edip came to a certain conclusion, and he made an opinion, and he didn't wanna give it up. Dr. Khalifa: He still doesn't want to give it up. Edip: I just, Rashad, if this is correct, this is wrong. This is... Whatever people you ask, if some person, if any being... Dr. Khalifa: Okay, you're still on number one. So, let me go to number one. Edip: (unintelligible) Edip: Yes. Dr. Khalifa: Edip says that I say that God is not Omnipotent. Dr. Khalifa: Of course, I, I never said that. Edip: No, no, the second one. Edip: The second one contradicts God. Dr. Khalifa: I said that God cannot turn Sodom upside down without the angels. Dr. Khalifa: Is this what you are saying? Edip: Excuse me? Edip: If God wants, He is Omnipotent, He can, He can do. Dr. Khalifa: without angels. Edip: He can do without angels. Dr. Khalifa: Okay, then let us look at this. Let's see what God says, and we cannot be more godly than God. I'm going to use an example that is, that is identical. And this, God says that the creation of Jesus is like the creation of Adam, equal to the creation of Adam. We're all familiar with this verse. And then, God goes on in the verse and says, I [3:59] ... said to him, \"Be,\"and he was. So, this is how God gets things done. God can get anything done, by saying \"be\", and it is, right? Yet, we, we look at the Quran consistently about the creation of Adam. We see that God says, I blew into Adam [15:29] ... from My spirit, ... Because that was up there in the first heaven. Adam was up there. God was up there. And God blew into Adam from His spirit. Now, the identical creation of Jesus, God said to Jesus, \"be\", and he was. God said \"be\" and he was. But God tells us in the Quran, He sent the angel to Mary, carrying this command \"to be.\"",
+      "review_status": "draft",
+      "retrieval_text": "Quran 24:63, consultation with the messenger, Edip's criticism, and the risk of driving outsiders away\nEdip argues that Quran 24:63 was mistranslated and concerns responding to the messenger's invitation rather than forbidding use of his name. He asks why a messenger consults believers and raises a more serious issue: whether Rashad had said God needs angels. Rashad warns that harsh community behavior can drive an outsider away and make the responsible person bear consequences.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: quran-24-63; messenger-invitation; consultation; god-needs-angels-dispute; driving-outsider-away; nullifying-works\nUser terminology: 24:63 mistranslation; do not take messenger invitation casually; why messenger consults believers; God needs angels; carry outsider's sins\nQuestions: How did Edip reinterpret Quran 24:63? What question did he raise about consultation? Why did Rashad warn about driving outsiders away?\nQuran references: 24:63\nBible references: \nEntities: Edip Yuksel; Rashad Khalifa"
+    },
+    {
+      "id": "behrouz12-s06",
+      "start": 3120,
+      "end": 3750,
+      "title": "Does God need angels? Want versus need, witness memory, and Edip's statement 'I lied'",
+      "summary": "Participants distinguish God's omnipotence from His chosen system of using angels. Rashad asks a linguist to distinguish want from need and cites God sending an angel to Mary. Edip insists he remembers Rashad's earlier wording, while others deny calling him a liar. Under pressure he says, 'I give up. I lied,' producing further confusion about whether this is a confession or exasperation.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "god-and-angels",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "want-versus-need",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mary-and-angel",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "witness-memory",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "edip-i-lied",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "public-pressure",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "God wants angels not needs angels",
+        "angel sent to Mary",
+        "I heard with my ears",
+        "I give up I lied"
+      ],
+      "related_questions": [
+        "What distinction did the group make between want and need?",
+        "How did Mary enter the argument?",
+        "What did Edip mean when he said he lied?"
+      ],
+      "quran_references": [
+        "19:17",
+        "21:91"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Mary",
+        "Edip Yuksel",
+        "Martha"
+      ],
+      "retrieval_note": "The meaning of Edip's statement is disputed in the recording and must not be summarized as a clear confession.",
+      "retrieval_priority": "primary",
+      "start_time": "00:51:59.706",
+      "end_time": "01:02:33.747",
+      "source_segment_start": 619,
+      "source_segment_end": 781,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Ahmad",
+        "Apamea",
+        "Behrouz",
+        "Dr. Khalifa",
+        "Dr. Sabahi",
+        "Edip",
+        "Martha"
+      ],
+      "canonical_text": "But God tells us in the Quran, He sent the angel to Mary, carrying this command \"to be.\" And, and God speaks in the plural. Dr. Khalifa: He said, \"we blew into\" Mary \"from our spirit.\" Edip: The question, Rashad. Does He... Dr. Khalifa: So, therefore, therefore, God is teaching us that there is a system of be, and it is. God, God didn't, didn't just sit up there in the first universe, He said \"be\", and Jesus was. The mechanism was that the angel Gabriel came down to the planet earth, which cannot stand the physical presence of God, and Gabriel carried that command. And, [21:91] ... we blew into her from our spirit, ... So, this is the difference. God tells us about the system. Now, I cannot say that God said, be to Jesus, and Jesus was, without the intervention of the angel. Dr. Khalifa: I cannot say that, because it will be a lie. A man: Sure. Dr. Khalifa: Satan, when Satan failed to stop you from worshipping God, he will push you to the other extreme. He will, he will make you demand of God more than what God Himself said. So, this is the situation that we have here. In other words, God said He sent the angel to create Jesus, and then, we say \"God doesn't need the angels.\" Well, who am I, who am I to decide that? God Himself told us that He sent the angel with the command. These are two identical things. And you can... God also said He sent the angels to turn Sodom upside down. So, I cannot say otherwise. I have to abide by what God said. If God said He sent the angels to turn it upside down, I can't say that God can sit up there and say \"be\", and it is upside down. God is teaching us that there is a system, there is a mechanism. But the point that Behrouz was talking about is nullifying our works. And it brings out this very serious idol worship that is idolizing our opinion. We must give up our opinion in favor of God's opinion. God said He sent the angel to blow into Mary from, from God's Spirit, Dr. Khalifa: through the mediation of the angel, we have to believe that. Edip: Rashad, did I say, please, did I say \"God didn't send angels?\" Did I say \"God doesn't use angels?\" I only say \"God uses angels, but this doesn't mean God need, needs angels.\" God has obligation, needs them. Edip: God doesn't need anybody. But God.... may God selected angels. Dr. Khalifa: What did you say now? A woman: I think maybe it's different. The difference between the words, God wants to use the angels, and Edip: Yes. A woman: God, that God Edip: (unintelligible) A woman: won't, maybe God won't control without angels, but it's not that God cannot. A woman: Do you know what I mean? Like, God can do everything, but God has chosen His system, Edip: Yes. A woman: that He will use them. Dr. Khalifa: Ok. We have a linguist, we have a linguist here. Dr. Khalifa: What is the difference of \"want\" and \"need\", Martha? Martha: (unintelligible) Dr. Khalifa: No, I want you to answer this first, then go on. Edip: God wanted this, or God needed this. Martha: (unintelligible) I think we don't need a linguist to answer that question. Dr. Khalifa: OK. Tell us what you think. Martha: (unintelligible) Can I just back up? Dr. Khalifa: No, just tell us the difference between \"need\" and \"want\", first. Martha: \"Need\" implies a certain dependency on something else. Martha: \"Want\" is something that you have a decision about, meaning, you're choosing to do one thing as opposed to another. Dr. Khalifa: Okay, what's the question? Martha: I wasn't here for the original thing, right. Martha: I just have this fear that what's happening is that the devil is just kind of Dr. Khalifa: Yep. Martha: getting in between us here based on, on just a real, maybe a misunderstanding. Dr. Khalifa: Yes. Dr. Khalifa: Yes. A woman: No. A man: No. Martha: Are you saying that Rashad said, number one, two, and the ones that are in black there? Edip: The black is that Rashad said. Martha: Ok. Wait a second, wait a second, wait a second. Edip: That (unintelligible) God Martha: Rashad, did you say those things? Dr. Khalifa: No. Martha: It's the end. Edip: You didn't say that God cannot control without angels, cannot do this without angels, Rashad, that day. Lisa, he didn't say this? Edip: Behrouz, he didn't say this? Thank God. You, you forgot. Alhamdu Lillah. Edip: I will foget. Behrouz: That is God... Dr. Khalifa: No, we didn't forget. A woman: Edip. A woman: You're the only one that is saying that. Dr. Khalifa: Ahmad. Mahmood Abib: (unintelligible) Ahmad: There is another Aya in the Quran that says that God wants all the big people to believe, He can do it, right? Ahmad: So, there is a big difference between me and God. Edip: Sure. Mã Shã Allãh. Ahmad: So, be careful. He can want, He can, He can do all of these things without angels, Ahmad: but His system specifies angels to do this. A woman: Sure He can. Ahmad: And to do that, and to do that. Dr. Khalifa: This is exactly what we were saying. That's what I said. Dr. Khalifa: Yes. A man: I think the whole problem, the whole problem with everything that's being said is that everybody in this room believes number one. A man: Everybody does. Edip: You don't believe number 2, number 2? A man: Hold on, hold on, hold on, hold on, hold on. A man: So then words, so then verbs like, verbs like we use, can, or need, or has to, they don't, they don't apply. A man: They don't, you just can't, you can't say, like Rashad said,.... A man: ....God in a different way, or can do things, or needs to do things. These are verbs that we don't apply to God. A woman: I don't think any of this (unintelligible) Edip: Okay. Edip: This was the discussion, this was the discussion, and many times has been used word can. You can't call... A woman: Edip, don't, don't allow the devil to continue... Edip: Alhamdu Lillah. A woman: Because A woman: No, but (unintelligible) we're all worried, right? Dr. Khalifa: Right. You hit the nail on the head. Apamea: (unintelligible) Edip (unintelligible) Apamea: Okay. And there are many people here that cannot speak it. And it's... Apamea: his people, does he believe, are his brothers, turn against him. A woman: Nobody is turning against him. (unintelligible) Behrouz: No one is turn against him. Behrouz: No one is racing with him. He's making up these things. I am not racing with him. None of us over here, we're racing with him. Apamea: Edip is not the kind of Edip: Okay, Rashad, what is the... Apamea: (unintelligible) Dr. Khalifa: Edip has a severe problem, and we're trying to help him. A man: Yeah. Behrouz: That's all. Dr. Khalifa: We are his brothers, we are his brothers and sisters, and we're trying to help him. Dr. Khalifa: He has, he has a real, Edip: Rashad, why don't you... Dr. Khalifa: he has a severe, has a very severer problem that Edip: in the last, in the last question, my last question. Dr. Khalifa: that may destroy... Edip: I shouted at you, Rashad, please. Apamea: He, he needed to know that he heard the word (unintelligible). Behrouz: Now, the one thing happened. Wait, wait. How come Ismail Barakat does not have any linguistic problem? Behrouz: His English is perfect. He understood it, and he repented. He said \"I'm sorry.\" Edip: No, he all didn't accept it. Edip: You can, in fact, you cannot use Behrouz: Come on. (unintelligible) Edip: \"God cannot do this.\" Behrouz: He, at latest, he said \"I'm sorry\" Edip: Oh, he did not, he actually shouted at messenger. Behrouz: Well, his English is perfect. Dr. Khalifa: Well, he shouts at everybody. Ok, the man is... Edip: But he discussed... Edip: Rashad, one question. Dr. Khalifa: Yes. Edip: Why don't you worry about this brother? Dr. Khalifa: It was (unintelligible) Edip: You're worried about me because I shouted at you because I may misunderstand, Edip: I may understand according to Quran, I see.... Dr. Khalifa: No, I worry about you because you worship your opinion to the point of Edip: Ok. Now, Dr. Khalifa: destroying you. Dr. Sabahi wants to say something. Edip: That question. That brother... Edip: Excuse me, only this part is not good. Edip: Did you say that God did not create hydrogen? Did you say that day? God is witness. Behrouz: Edip, JAN, you were telling me millions of crazy things. You brought it from your mind. I don't know where. Edip: Did you say? Yes or no? You said things and (unintelligible) Edip: Rashad warned me, but you said \"God cannot create, He didn't create hydrogen.\" Dr. Khalifa: Nobody will say that, Edip. Nobody will say that. Nobody will say that. Edip: I know you. You are... He said, he said, you said. Dr. Khalifa: You thought he said. You thought he said that. Behrouz: The only reason I'm worried about you Behrouz: is because I love you. Dr. Khalifa: God created everything. Edip: Gid is witness. Don't you lie. Behrouz: I love you and I know you know a lot. Edip: Did you say... Behrouz: I sit over there, I ask you all the Arabic. Edip: Did he say it or not? Dr. Khalifa: No, he did not. I was there. Edip: Please, for the (unintelligible) of God. A man: Edip wants to know... Dr. Khalifa: There's a statement in the Quran. Hold it. Okay, Muhtesem. Edip: I give up. I lied. Dr. Khalifa: Muhtesem. Edip, Edip. Dr. Khalifa: Edip, Behrouz. Apamea (Speaking Farsi): Edip, be quiet. Dr. Khalifa: There's a statement in the Quran says, (39:62) ٱللَّهُ خَـٰلِقُ كُلِّ شَىْءٍۢ Okay? God is the Creator of all things. Dr. Khalifa: Everybody believes that. We all believe that. Edip: Subhan Allah. Mã Shã Allãh. Edip: God is witness, he said this. Dr. Khalifa: You think He said this. Edip: No, he said. From his face, you understand he's lying now. Behrouz: No, I'm not lying. You said, you said, \"God...\", you said \"God create everything from nothing.\" And I said \"so if something created from nothing, that must be nothing.\" That was your reason. Dr. Khalifa: Yes. Behrouz: Did you understand it? So, \"God is nothing.\" Behrouz: You, you said \"God is nothing.\" Edip: No. Dr. Khalifa: See? Behrouz: Come on. Dr. Khalifa: It's the same... It's the same problem. Behrouz: Everybody is witness (unintelligible) It's the same thing. Dr. Khalifa: You can, you can take a statement out of context. Behrouz: I don't understand (unintelligible) Dr. Khalifa: Dr. Sabahi. Apamea: It's just a misunderstanding of the words. We all agree that the black things they are not correct. And whoever, Edip: Alhamdu Lillah. There's no problem. Apamea: Someone here heard it wrong or used the wrong vocabulary, but we all agree that the black is not right. Apamea: And that the red is in the Quran and it's the right thing. So, we all agree. Dr. Khalifa: Right. Mã Shã Allãh. Dr. Khalifa: Dr. Sabahi. Dr. Sabahi: I wanna read Sura 114 أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ Bism Allah Arrahman Arraheem [114:1] Say, \"I seek refuge in the Lord of the people. [114:2] \"The King of the people. [114:3] \"The god of the people. [114:4] \"From the evils of sneaky whisperers. [114:5] \"Who whisper into the chests of the people. [114:6] \"Be they of the jinns, or the people.\" I just speak in interpretation for yourself. I was the teacher last Friday. And I read verse 110, Sura 3. The Best Community. And then, I referred you to verse 103. [3:103] You shall hold fast to the rope of GOD, all of you, and do not be divided. Recall GOD's blessings upon you—you used to be enemies and He reconciled your hearts. By His grace, you became brethren. You were at the brink of a pit of fire, and He saved you. GOD thus explains His revelations for you, that you may be guided. [3:104] Let there be a community of you who invite to goodness, advocate righteousness, and forbid evil. These are the successful ones.",
+      "review_status": "draft",
+      "retrieval_text": "Does God need angels? Want versus need, witness memory, and Edip's statement 'I lied'\nParticipants distinguish God's omnipotence from His chosen system of using angels. Rashad asks a linguist to distinguish want from need and cites God sending an angel to Mary. Edip insists he remembers Rashad's earlier wording, while others deny calling him a liar. Under pressure he says, 'I give up. I lied,' producing further confusion about whether this is a confession or exasperation.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: god-and-angels; want-versus-need; mary-and-angel; witness-memory; edip-i-lied; public-pressure\nUser terminology: God wants angels not needs angels; angel sent to Mary; I heard with my ears; I give up I lied\nQuestions: What distinction did the group make between want and need? How did Mary enter the argument? What did Edip mean when he said he lied?\nQuran references: 19:17; 21:91\nBible references: \nEntities: Mary; Edip Yuksel; Martha"
+    },
+    {
+      "id": "behrouz12-s07",
+      "start": 3750,
+      "end": 4650,
+      "title": "Sabahi's defense of fairness, anger, public confrontation, and due process",
+      "summary": "Sabahi criticizes the anger and collective pressure directed at Edip. He says disagreement should be handled by sitting down with him, identifying the actual problem, and avoiding a search for guilt without proof. Ali notes that Edip raised concerns publicly rather than speaking behind anyone's back. The group debates whether a public outburst justifies a public response.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "fair-process",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "anger",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "public-confrontation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "private-correction",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "no-mob-judgment",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "edip-defense",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "do not dispute among yourselves",
+        "sit down and find problem",
+        "cannot find guilty without cause",
+        "he said it in front of us"
+      ],
+      "related_questions": [
+        "How did Sabahi think Edip should be corrected?",
+        "What did he object to in the group's response?",
+        "How did Ali defend Edip's conduct?"
+      ],
+      "quran_references": [
+        "8:46"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Dr. Mahmoud Sabahi",
+        "Ali",
+        "Edip Yuksel"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "01:02:25.487",
+      "end_time": "01:17:30.384",
+      "source_segment_start": 781,
+      "source_segment_end": 1021,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Ali",
+        "Apamea",
+        "Behrouz",
+        "Dr. Khalifa",
+        "Dr. Sabahi",
+        "Edip"
+      ],
+      "canonical_text": "[3:104] Let there be a community of you who invite to goodness, advocate righteousness, and forbid evil. These are the successful ones. [3:105] Do not be like those who became divided and disputed, despite the clear proofs that comes to them. These have incurred a terrible retribution. [3:106] The day will come when some faces will be brightened (with joy), while other faces will be darkened (with misery). As for those whose faces are darkened, they will be asked, \"Did you not disbelieve after believing? Consequently, taste the retribution for your disbelief.\" Dr. Sabahi: I guess if we are good students of the Quran, this would never happen to us. Dr. Khalifa: That's right. Dr. Sabahi: Believe me, I call you Rashad, Dr. Khalifa, before, before this Khutba, I didn't know anything about what has happened. And tonight, when he explained, Edip, I didn't see a big thing about it. Because what I understood is a misunderstanding, and the rest of it is whispering and making it big. Looking at Edip and this mosque for the last year and a half or so, or even more, I know that we put God's Omnipotence in front of everything else. I know what you stand for, and I know what everybody here, most of the people, at least the ones that I, stand for, and I think I know what Edip stands for. And if he has an ego, I guess all of us have more or less. But at the same time, I guess, I never doubt his belief in, in Quran or in God's Omnipotence or you as being the messenger. But if something comes up, and we make it bigger and bigger, so I, I'm surprised, and I agree with Naghmeh. As, as someone who doesn't know anything, how can all of a sudden things turn from day to night? You know, if you're telling me that somebody's shouting at Rashad, he's gonna, you know, think that what is going on in here. Imagine if somebody comes in, last week he was sitting next to Rashad, he was giving all the opinions, and he was, he's a knowledgeable person, all of a sudden, now we don't even let him talk. I don't, I don't support this anger, this excitement, you know, but, what, what I'm saying is, if we believe that we are believers here, respect each other, as that God is saying is this, don't dispute among yourselves. Dr. Sabahi: He did something wrong, you have to call him in, sit down, and try to, Dr. Sabahi: he's a logical person. Dr. Khalifa: Exactly, that's what we're doing here. Dr. Sabahi: So, now, I'm telling the truth, this is not the, the feeling that I get from sitting here for about 45 minutes. Everybody is, you know, attacking him, at least the people who have seen his outbursts in that day. Dr. Sabahi: It is not fair. Dr. Sabahi: It is A woman: (unintelligible) Dr. Sabahi: No, that is... I agree. You see, I, I, that's why I, I objected very strongly to Behrouz's Khutba because we didn't know what is going on. Dr. Sabahi: You come in and you drop the bomb. If something went on... Dr. Khalifa: He read the Quran. He read the Quran. Dr. Sabahi: No, I agree. But I didn't like... The messenger: No, let's, Dr. Khalifa: Okay, let me say something here, because we just witnessed a commandment of God being broken, and we, Whatever you do, your nice words will not fix the wound that he's been stabbed with. This is a very nice, very gentle man. And somebody told him \"you're a liar.\" And we're all sitting here indifferent. How can we fix his wound now? Dr. Khalifa: You think everything will be alright? If we, we read, we read here. Edip: Rashad, I have one, I think... Dr. Khalifa: Let me finish. See what God is saying... God is saying Edip: (unintelligible) God.... [17:53] Tell My servants ... This is 287, [17:53] Tell My servants to treat each other in the best possible manner, for the devil will always try to drive a wedge among them. Surely, the devil is man's most ardent enemy. Now, I want you to put yourself in Behrouz's place, and somebody is calling you a liar. I'll correct it. Is this what God is saying [17:53] Tell My servants to treat each other in the best possible manner, ... He's getting deeper and deeper in trouble with God. And, and what you just read is to [3:104] ... advocate righteousness, and forbid evil. ... We cannot sit indifferently and watch Edip blaspheme against God and, and hurt one of our people, his brother, in this way. Dr. Khalifa: I mean, do you think Behrouz will sleep tonight? I mean, do you have any consideration for his feelings? Edip: What about my feelings? Dr. Khalifa: Can we just pass it up? Dr. Khalifa: Can we, can we pass up the fact that he was called a liar unjustly? Or even justly? Edip: Rashad. Dr. Khalifa: So,... yes? A woman: I think the messenger has some feelings. You are a human being and he was very (unintelligible). Dr. Khalifa: There is one of the witnesses there. Edip: Rashad, excuse me, Rashad. There is one person who has not listened to this conversation. Dr. Khalifa: Who? Edip: Ismail Barakat. He, he doesn't know whatever I say or Behrouz says. Edip: Just like record, ask him what was the conversation, why we discussed, why he shouted at you like me. Dr. Khalifa: Well, first of all, you owe Behrouz an apology because you committed a breaking of the commandment right here. Edip: First of all, Behrouz, I am ready. Edip: I know that now I say and you are here, I know exactly Behrouz said \"God didn't create hydrogen.\" Edip: I'm sure like my belief. Edip: If you let witness God... Dr. Khalifa: Ok. I can tell you God says here... Edip: (unintelligible) Edip: Let, are you ready? Are you ready that you didn't say that God... Mahmood Abib: No, no, no. Edip: I'm ready. Mahmood Abib: Don't shout. Don't shout. Edip: I'm ready. I leave, I leave to God. I will not speak English. I leave to God. Mahmood Abib: No, no, no. Edip: Whoever is liar, God will curse him. Behrouz: What are you doing?! Mahmood Abib: No, don't say that. Edip: This is accusation. Dr. Khalifa: No, see, I can tell you what God said. OK? You wanna, you wanna see what God said in the Quran? A man: (unintelligible) A woman: God knows what he said. (unintelligible) Edip: He must repent, he must repent like me. I repent to God. Behrouz: You did? Edip: Yes, sure. Behrouz: For these past seven, eight days? Edip: Sure. Behrouz: None of us saw it. Behrouz: And you didn't show anything. You didn't talk to any of us. A man: I think the lessons is (unintelligible). Behrouz: OK? Apamea: I've seen him at home, Behrouz. Apamea: I've seen him. He's been suffering as much as everybody else. Behrouz: I know he is. Dr. Khalifa: Ok. Behrouz: But why, Apamea: I have been suffering along with him. Behrouz: Why all this didn't help him? Why is that? Dr. Khalifa: OK, God said, God said in the Quran Dr. Khalifa: after the people die and they turn into dust and bones, they come back to life? This is ridiculous. This is what God said. Is it true? Dr. Khalifa: God said, this is what you're saying Behrouz said. Edip: This is quotation. Dr. Khalifa: Because God is saying in the Quran, Dr. Khalifa: I can show you, God said, after the people die and become dust and bones, do they come back to life? This is ridiculous. Dr. Khalifa: So, you think God said that? Edip: This quotation... Edip: Yes, God quotes. Dr. Khalifa: Right, this is how you are misquoting Behrouz, because we were all there. Edip: Oh. Dr. Khalifa: We all know that God created everything. Edip: Rashad. Dr. Khalifa: It is not fair to take something out of context just to defend your opinion. Edip: Yes, summarize... Dr. Khalifa: You just wipe out your friends and your brothers just to hold you to your opinion. Dr. Khalifa: You don't wanna say you're wrong. Edip: OK, I accept I'm wrong. Dr. Khalifa: Ali. Edip: Alhamdu Lillah, (unintelligible) Dr. Khalifa: Ali. Edip: But God knows what happens. Edip: But... Dr. Khalifa: But, who's but? Dr. Khalifa: Ali. Ali: I thought it was just something else. Ali: He saw there was maybe something wrong and he just kind of stepped back and let it build up. Ali: Maybe if there was something wrong, you know, he brought it up. Ali: He brought it up in front of all of us. Dr. Khalifa: Yes. Ali: He didn't say anything behind your back or his back. Ali: He just said it right here. Dr. Khalifa: Well... Ali: No, I'm just saying. He said there was something. He thought there was something wrong. I don't even know what it's about. But he thought there was something wrong. I don't know if it is or it's not. And I'm not taking sides. And he got up and he talked. And I think about courage to talk in front of people. Then, all of a sudden, all you people whispering, saying that he's laughing at, smiling, going \"ha ha\" this is your right. Ali: They said \"he's confident.\" Of course, he... Dr. Khalifa: Who told you we were whispering? Ali: Man, I can look. I can understand. I, How many times do you think all the great men of our century, the people who stood up for their rights, guys, I mean, if Martin Luther King didn't stand up, what would have happened? You know, if all those people didn't stand up for their rights, what would have happened? He stood up and he saw something, was maybe something's wrong, and he tried to fix it before it got bigger. Ali: And I think you guys should be thankful for this man for being here and standing up and saying... Dr. Khalifa: No, you got to pull it offside. Ali: I don't think, I don't think that you should be mad at him. Ali: I think if there is... Dr. Khalifa: No, I'm not... A woman: He's making A woman: false accusations of Behrouz Ali: No, if there's false... Then what? Ali: How do you know it's false? A woman: Because I was there. I was there. I was there. Behrouz: There were seven people seated over here watching. Ali: But also, also, Ali: we're all human beings, we're all allowed to make mistakes. Ali: To me, it just means to make one mistake isn't... A woman: If serious mistakes, then it's wrong. Ali: So, we're all humans. A woman: The most serious is... A man: No excuse, no compromise. Apamea: Idol worship. Dr. Khalifa: That's exactly what he's doing, Apamea. This is exactly what he's doing, idol worship. He's worshiping his opinion. My, my estimate of the situation from all the things I learned in my life is that Edip is in a serious, serious trouble. He, he idolizes his opinion. And unless he changes, he's gonna go to Hell. This is just the summary of the whole thing. His opinion is, is, has more value than God Himself. Dr. Khalifa: This is what we see in Sura 25, I forget the verse. Dr. Khalifa: Remember... Edip: Please state the verse. Edip: Please state the (unintelligible) Dr. Khalifa: Remember, do you know the person whose opinion is his god? And in Arabic, which he understands very well, (25:43) أَرَءَيْتَ مَنِ ٱتَّخَذَ إِلَـٰهَهُۥ هَوَىٰهُ His god, right now, is his opinion and I'm hoping that he will snap out of it someday and, and give in to God's opinion. Dr. Khalifa: This is what was happening. Edip: Mahmood also at that time was witness of conversation. He was, he is a sincere believer, also. Edip: Why not ask him or ask Dr. Khalifa: About what? Dr. Khalifa: Ask him, go ahead. Edip: He's, he's suffering now because there is something Edip: which Rashad is not clear. Dr. Khalifa: Ask him, ask him. Mahmood Abib: Edip, you are making (unintelligible). Edip: No, no, what happened? Edip: Did somebody say \"God cannot control this?\" Did somebody say \"God didn't create?\" Am I lying? Let, let this guy... Dr. Khalifa: Well, did God say, after, after we die, Edip: I'm lying? Dr. Khalifa: we're resurrected? This is ridiculous. Edip: If I am lying, Ismail Barakat will not hear my lie. Edip: Please ask Isamil, Ismail Barakat \"what happened?\" He will say exactly what I said. Edip: There is a truth. A woman: (unintelligible) Edip: Yes, I am ready for this truth. Dr. Khalifa: The fact... A woman: Maybe, you heard it wrong, Edip. You were... Edip: Isamil Barakat heard it wrong? A woman: At least, at least A woman: now we know that the fact is God did create hydrogen. Edip: (unintelligible) I'm happy. Edip: I'm happy, if I agreed, I am happy. I accept that they made mistake, now they repent. Dr. Khalifa: Behrouz never said \"God did not create hydrogen.\" Behrouz never said that. Edip thought that Behrouz said that. Apamea: Why did he think? Dr. Khalifa: Or Edip misunderstood what Behrouz is saying. As simple as that. Apamea: Ok. Dr. Khalifa: Nobody.... Edip: (unintelligible) Rashad, (unintelligible) Dr. Khalifa: Well... Edip: And you were just next to him, you were there, Rashad. You cannot witness like this. Dr. Khalifa: Yes. Dr. Khalifa: Listen, I don't have, Dr. Khalifa: I don't have really, I really don't have to be there to know that Behrouz will never say \"God did not create hydrogen.\" Apamea: You know, but why? Dr. Khalifa: Dr. Sabahi. Dr. Sabahi: I guess, Edip, you are making a few mistakes because you are speaking to something that you believe beside. Dr. Sabahi: You don't give even a one part per million or billion chance Dr. Sabahi: that you may be wrong, or you may have heard it wrong, or Satan might have intervened. Dr. Khalifa: Exactly. Dr. Khalifa: Exactly. Dr. Sabahi: And this, if you dig more and more into it, it is gonna turn ugly. Dr. Sabahi: Because you want him to say that he, he said so, so that you'll be relieved. Dr. Khalifa: Right. Dr. Sabahi: And he is saying that he didn't say so. Edip: Alhamdu Lillah, Dr. Sabahi: Hold on. Listen, listen, Edip: (unintelligible) Dr. Sabahi: you say that and then again you get (unintelligible) Dr. Khalifa: Right. Dr. Sabahi: It's not fun but I may, Dr. Sabahi: You have to seriously, all of us, have to seriously think about this and analyze the situation. Dr. Khalifa: Yes. Dr. Sabahi: And if you really, really deep down believe that God is the Omnipotent, then He's gonna take care of it. Dr. Sabahi: If somebody is doing something wrong, if somebody has wrong beliefs, He's gonna be exposed. Dr. Khalifa: Exactly. Dr. Sabahi: if you believe that God is capable of it. Dr. Sabahi: So, we don't have to take it in our hands. So, let it drop. You can, you know, cool down, get to your work, and let's, you know, you can, you can discuss the issue, discuss it, find the problem. Dr. Sabahi: But you cannot find the guilty if this is not the cause. Dr. Khalifa: Exactly. Dr. Sabahi: You cannot find someone. Let God take care of it. (unintelligible) things are clear, the things that you were worried about, that God is not Omnipotent, I can't see what you think. Dr. Sabahi: So, Dr. Khalifa: Mã Shã Allãh. Dr. Sabahi: I was surprised that you brought that up. Dr. Sabahi: Because from what I understand this is not the case, here. These are, sometimes you may hear something, I wait, and then say \"oh, I made a mistake.\" You hear it, or somebody made a mistake. Let them correct themselves. But you are asking too much now. Dr. Sabahi: You want someone to come out and say \"I made this mistake. I'm sorry. You are right.\" No, this is not gonna happen. Behrouz: And another thing I wanna... Dr. Khalifa: Mã Shã Allãh, we, I have to, I have to compliment you for, you, you found out exactly what the problem is. And you just, you put it really better than anyone can, can possibly put it. Dr. Khalifa: Were you, were you talking? Behrouz: Excuse me. I want to tell Apamea that we all love Edip. And all over the world, they know Edip. He is knowledgeable. We appreciate it. And I appreciate it myself because I sit there, and he is, he's knowledgeable. Ok? And believe me, I suggested to Mahmood and Muhtesem from the day that happened, that let's, guys, sit, let's sit down and talk to him. But God is witness. That was not a day that we could have get him, you know, by himself. You were here. We didn't wanna talk to him in front of you. And we were, all wanted to talk to him, three of us together. Because if someone talked to him, all the things he says, he says \"no.\" Whatever you say, he says \"no.\" And then, it takes him two days and half \"I found out.\" That say \"okay, you're right.\" But us, me to him, I'm just stupid. I don't know nothing. Behrouz: Okay, now see, this is the impression everybody's getting. Behrouz: Everybody, to him, he does, everybody does not understand but him. Okay, thanks. Apamea: But every individual (unintelligible) Behrouz: Now, we tried to help him. Three days in a row, we tried to get him in a corner. \"Hey, this is it, brother.\" \"We are worried about you.\" \"Let's repent and forget about it.\" And there were seven people witnessing that day. I'm not taking sides. I'm not politician. If I was, I wouldn't be here. I would have a beautiful job.",
+      "review_status": "draft",
+      "retrieval_text": "Sabahi's defense of fairness, anger, public confrontation, and due process\nSabahi criticizes the anger and collective pressure directed at Edip. He says disagreement should be handled by sitting down with him, identifying the actual problem, and avoiding a search for guilt without proof. Ali notes that Edip raised concerns publicly rather than speaking behind anyone's back. The group debates whether a public outburst justifies a public response.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: fair-process; anger; public-confrontation; private-correction; no-mob-judgment; edip-defense\nUser terminology: do not dispute among yourselves; sit down and find problem; cannot find guilty without cause; he said it in front of us\nQuestions: How did Sabahi think Edip should be corrected? What did he object to in the group's response? How did Ali defend Edip's conduct?\nQuran references: 8:46\nBible references: \nEntities: Dr. Mahmoud Sabahi; Ali; Edip Yuksel"
+    },
+    {
+      "id": "behrouz12-s08",
+      "start": 4650,
+      "end": 5286,
+      "title": "Sincerity, the danger of nullifying works, a committee to help Edip, and the truncated next lesson",
+      "summary": "Rashad says everyone knows Edip is sincere but warns that he may nullify his works through a spiritual failure, noting that Satan also believed in God. A committee including Behrouz and others had been formed to speak with him. Other participants predict rapid spread of the Quranic miracle. The recording ends as Apamea is introduced for the next study and declines to teach, leaving the following segment incomplete.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "edip-sincerity",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "nullifying-works",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "satan-believed",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "help-committee",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "miracle-spreads",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "truncated-next-study",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "everybody knows Edip sincere",
+        "may nullify all works",
+        "Satan believed in God",
+        "committee to help him",
+        "spread like wildfire"
+      ],
+      "related_questions": [
+        "How did Rashad balance praise of Edip's sincerity with warning?",
+        "What committee had been formed?",
+        "Why is the next Quran-study segment incomplete?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Edip Yuksel",
+        "Behrouz",
+        "Muhtesem",
+        "Mahmoud",
+        "Apamea"
+      ],
+      "retrieval_note": "Do not adopt the spiritual judgment that a named person's works were nullified.",
+      "retrieval_priority": "primary",
+      "start_time": "01:17:28.120",
+      "end_time": "01:28:02.200",
+      "source_segment_start": 1021,
+      "source_segment_end": 1162,
+      "csv_speakers": [
+        "A man",
+        "Apamea",
+        "Behrouz",
+        "Douglas",
+        "Dr. Khalifa",
+        "Dr. Masoud"
+      ],
+      "canonical_text": "I would have a beautiful job. I was making a lot of money like the others they're doing. I'm not the smart outside. I'm just, my heart is very open. You will find out later on. And I think this is the reason that I'm here. This is the reason he's here. But when you get over here, you wanna say \"hey, I'm this and that.\" You're gonna lose it. And this is what's gonna happen. It's going to happen. But we care about him. We don't want this to happen to him. And I'm sure as much as us, you worry about him more, Behrouz: and so as Naghmeh and other friends. Apamea: I'm his wife, and I have never seen him opinionated with me. Behrouz: Because you're his wife. Right. Apamea: If anyone's opinionated, it's me. I would be the one all the time and he humbles me. Behrouz: Yes, that's the love. Behrouz: But the love between you and him.... Apamea: So, I can't comprehend the fact that he's being blamed for being opinionated. Apamea: Because he is so humble. Behrouz: To you it is. Apamea: And he is... Behrouz: If I was his wife, he would be humbling. Dr. Khalifa: Edip is in deep trouble. Behrouz: This relationship is different. Behrouz: This is different. Dr. Khalifa: Ok. Behrouz: But to him and me and us sitting over here. We're not proving anything that \"I'm smart, you're smart.\" No. Behrouz: \"I'm God's....\" Apamea: You're smart for yourself. Behrouz: Well, unfortunately, this is the impression everybody is getting. Dr. Khalifa: (unintelligible) it's Ok. Ok. Let me, Dr. Khalifa: Let's see what God is saying. Let's see what God is saying. Wait, Martha. Let's, let's see, let's see what God is saying. I wanna reiterate what Behrouz said that we, we all love Edip. We're trying to step him out of it. He's in deep, deep trouble. Satan, remember Satan believed in God. Satan knew God. But he was kicked out of God's kingdom because of ego. We read in, on page 465, verse 65, Sura 39. [39:65] It has been revealed to you, ... And this means every messenger. [39:65] ... and to those before you ... every messenger [39:65] ... that if you ever commit idol worship, all your works will be nullified, and you will be with the losers. To, to idolize one's opinion is stated in the Quran as idol worship, stated very clearly. Idolize one's opinion means you hold fast to it. Just like Dr. Sabahi spotted it. And, and, and nothing will stand in your, nothing will stand in the way of your opinion. You just hold, this is, this is idol worship. Everybody knows Edip is a believer. Everybody knows Edip is knowledgeable. Everybody knows he's sincere. But the danger he's in now is that he may fall into this, 65. He may nullify all his work. We have to remember that Satan believed in God. And out of love, all of us, we are, we are trying to help him. In fact, they made a committee, Behrouz, Muhtesem and Mahood and they wanted to talk to him. Dr. Khalifa: To, to help him. Dr. Khalifa: Not to attack him. Edip: Rashad, why you didn't inquire (unintelligible) Dr. Khalifa: Dr. Masoud is trying to talk for a long time. Dr. Masoud: Yes. (unintelligible) Dr. Khalifa: Go ahead. Dr. Masoud: Dr. Khalifa, as a new believer, Alhamdu Lillah. Dr. Masoud: One of the side attractions of this place, I call it side attraction, Because the main attraction here for me is God's word, God's message. The side attraction for me here was the closeness, Dr. Masoud: the family, atmosphere that I saw with you. Dr. Khalifa: Yes. Right. Dr. Masoud: You know, being from Iran, being a Shia, Shia that they taught us, I haven't seen anything like this. And this was very, very attractive for me. I brought all my family over here. But what I saw today in the Khutba, and what I saw today here, is completely different from what I have been thinking during these past two months of coming over here. You taught me that the prophet is a human. I did never, really never thought that the prophet was human. I thought prophet was walking with a halo, you know, over his head. You couldn't see his face. All these things. Dr. Masoud: I came over here and I saw that the prophet is somebody like me, and somebody like you. You can talk to him. Dr. Khalifa: Messenger. Dr. Masoud: You can go and ask him questions. Dr. Masoud: But now you are just completely different. Dr. Khalifa: This will never change. Dr. Khalifa: This will never change. Dr. Masoud: And this is really, really disappointing. Dr. Khalifa: What do you think Behrouz said, and what do you think should be done? Dr. Masoud: I cannot judge on that because I don't know really, I cannot retroactive, you know, what happened over there. So, I'm not going, I'm going to leave these two together. But we are going to go back to the community that Dr. Sabahi was in. Dr. Masoud: We are going to love each other. Dr. Masoud: We are going to respect each other. Dr. Khalifa: Yes. Dr. Masoud: And we are going to apologize to each other, every one of us. Dr. Masoud: For what happened over here today and what we are teaching our children today. Dr. Khalifa: This is exactly what Behrouz was calling for. He doesn't want, he wants to follow what, what God is saying to ensure that we are a family. Because God said the believers are a family. Dr. Khalifa: Douglas. Douglas: In Sura 39, verse 18, God says, [39:18] They are the ones who examine all words, then follow the best. These are the ones whom GOD has guided; these are the ones who possess intelligence. And I think that one of the things that Satan's doing here is that he is making people feel that their words are better than someone else's. And what we're supposed to do is that whenever we discuss anything or follow the messenger of God or what have you, the ultimate is always God's words. Another verse in the Quran is in Sura 58, verse 10. It says, [58:10] Secret conspiracy is the devil's idea, through which he seeks to hurt those who believed. ... He seeks to hurt those who believe. [58:10] ... However, he cannot hurt them against GOD's will. In GOD the believers shall trust. And I think we all should remember that God says in the Quran that He's aware of the innermost thoughts. And He will cause to come forth in us all of our weaknesses. That He will bring out our weaknesses according to His will and that when these weaknesses come out, if we are really sincere and we worship God alone, we will pray to Allah to face them in ourselves and we will follow what is best. We will follow and examine the words and follow what, what is best and we will not try to defend our own weaknesses and our own opinions and our own words. Because I, I think all of us do and God knows this. This is an extremely critical time. Not just this situation, but in a very short time and I think all of us feel this. The miracle in the Quran, the awareness that Rashad is the Messenger of the Covenant is going to spread like wildfire. It is going to spread like wildfire. It's almost as if we are on the verge Douglas: of major events that, and so the family Douglas: has to be prepared. Dr. Khalifa: And Satan doesn't like, Dr. Khalifa: Satan doesn't like it. Douglas: When you, Douglas: when you know that people are coming to your house, what do you do? You run and pick up the trash and straighten up and try to make it look good. Douglas: We have to be prepared for what is about to take place. Dr. Khalifa: Alhamdu Lillah. Let us now turn to God and ask him. God never turns us down. We're going to recite Al-Fãtehah that He may keep us all in His path and not a single one in this place, not a single one is to, to, to be driven away from the path of God. So, we'll leave it in God's hand. He is the only One who can solve our problems. Al-Fãtehah Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) Our teacher tonight is Apamea. And we're at verse... Dr. Khalifa: What is the verse? Apamea: Only I don't wanna teach. I don't wanna teach. Lisa: (unintelligible) out of it. Dr. Khalifa: Yes. Dr. Khalifa: We're at verse number what? Apamea: 130. Dr. Khalifa: Page 66. Verse 130. Apamea: Bism Allah Arrahman Arraheem. أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ Apamea: Verse 130. [3:130] O you who believe, you shall not take usury, compounded over and over. You shall observe GOD, that you may succeed. [3:131] Beware of the hellfire that awaits the disbelievers. [3:132] You shall obey GOD and the messenger, that you may attain mercy. I'll stop here. We have discussed in great deal, detail about usury a few weeks ago. But going back to one of the verses, chapter 2, verse 275. There is a good section about this. [2:275] Those who take usury are in the same position as those who are possessed by the devil. This is because they claim that usury is the same as trade. GOD has made trade lawful, and has made usury unlawful. Whoever heeds this commandment from his Lord, and refrains from usury, he may keep his past earnings, and his judgment rests with GOD. As for those who persist, they incur Hell, they abide therein forever. This is exactly what God is telling us here. And we should realize what the difference is between trade and usury, where usury is lending money at excessive interest and taking advantage of the situation. Especially in this section, where God is teaching us about the war. It was war time. We have talked about the battle of Badr last week. And some people, because of the economic situation, could very much take advantage of that, and hurt others. And God teaches us that that is evil. And the people who commit this wicked act, their place is in the hellfire and they are disbelievers. And definitely, this is given to us many times from God and the messenger confirms it. And we should attain certainty about it and have... so that we can have mercy from God. (unintelligible) Do you have any comments? A man: I have a quick comment. A woman: He has a (unintelligible) A man: The very concept of usury. Usury as a practice...",
+      "review_status": "draft",
+      "retrieval_text": "Sincerity, the danger of nullifying works, a committee to help Edip, and the truncated next lesson\nRashad says everyone knows Edip is sincere but warns that he may nullify his works through a spiritual failure, noting that Satan also believed in God. A committee including Behrouz and others had been formed to speak with him. Other participants predict rapid spread of the Quranic miracle. The recording ends as Apamea is introduced for the next study and declines to teach, leaving the following segment incomplete.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: edip-sincerity; nullifying-works; satan-believed; help-committee; miracle-spreads; truncated-next-study\nUser terminology: everybody knows Edip sincere; may nullify all works; Satan believed in God; committee to help him; spread like wildfire\nQuestions: How did Rashad balance praise of Edip's sincerity with warning? What committee had been formed? Why is the next Quran-study segment incomplete?\nQuran references: \nBible references: \nEntities: Edip Yuksel; Behrouz; Muhtesem; Mahmoud; Apamea"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "anger",
+      "preferred_label": "Anger",
+      "aliases": [
+        "cannot find guilty without cause",
+        "do not dispute among yourselves",
+        "he said it in front of us",
+        "sit down and find problem"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s07"
+      ]
+    },
+    {
+      "id": "behrouz-khutba",
+      "preferred_label": "Behrouz Khutba",
+      "aliases": [
+        "if die before forty go Heaven",
+        "obey this responsibility",
+        "responsibility toward God's messenger",
+        "visitor shocked how messenger treated"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s01"
+      ]
+    },
+    {
+      "id": "community-responsibility",
+      "preferred_label": "Community Responsibility",
+      "aliases": [
+        "if die before forty go Heaven",
+        "obey this responsibility",
+        "responsibility toward God's messenger",
+        "visitor shocked how messenger treated"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s01"
+      ]
+    },
+    {
+      "id": "consultation",
+      "preferred_label": "Consultation",
+      "aliases": [
+        "24:63 mistranslation",
+        "God needs angels",
+        "carry outsider's sins",
+        "do not take messenger invitation casually",
+        "why messenger consults believers"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s05"
+      ]
+    },
+    {
+      "id": "cow-narrative",
+      "preferred_label": "Cow Narrative",
+      "aliases": [
+        "I disagree with 99 percent",
+        "Islam I gave away all my life",
+        "is this system Rashad wants",
+        "lesson of the Cow"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s03"
+      ]
+    },
+    {
+      "id": "distraction",
+      "preferred_label": "Distraction",
+      "aliases": [
+        "bare legs distracting",
+        "dress in mosque",
+        "hard to concentrate",
+        "modesty in men as important"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s04"
+      ]
+    },
+    {
+      "id": "divine-selection",
+      "preferred_label": "Divine Selection",
+      "aliases": [
+        "if die before forty go Heaven",
+        "obey this responsibility",
+        "responsibility toward God's messenger",
+        "visitor shocked how messenger treated"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s01"
+      ]
+    },
+    {
+      "id": "driving-outsider-away",
+      "preferred_label": "Driving Outsider Away",
+      "aliases": [
+        "24:63 mistranslation",
+        "God needs angels",
+        "carry outsider's sins",
+        "do not take messenger invitation casually",
+        "why messenger consults believers"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s05"
+      ]
+    },
+    {
+      "id": "edip-defense",
+      "preferred_label": "Edip Defense",
+      "aliases": [
+        "cannot find guilty without cause",
+        "do not dispute among yourselves",
+        "he said it in front of us",
+        "sit down and find problem"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s07"
+      ]
+    },
+    {
+      "id": "edip-i-lied",
+      "preferred_label": "Edip I Lied",
+      "aliases": [
+        "God wants angels not needs angels",
+        "I give up I lied",
+        "I heard with my ears",
+        "angel sent to Mary"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s06"
+      ]
+    },
+    {
+      "id": "edip-sincerity",
+      "preferred_label": "Edip Sincerity",
+      "aliases": [
+        "Satan believed in God",
+        "committee to help him",
+        "everybody knows Edip sincere",
+        "may nullify all works",
+        "spread like wildfire"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s08"
+      ]
+    },
+    {
+      "id": "fair-process",
+      "preferred_label": "Fair Process",
+      "aliases": [
+        "cannot find guilty without cause",
+        "do not dispute among yourselves",
+        "he said it in front of us",
+        "sit down and find problem"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s07"
+      ]
+    },
+    {
+      "id": "god-and-angels",
+      "preferred_label": "God And Angels",
+      "aliases": [
+        "God wants angels not needs angels",
+        "I give up I lied",
+        "I heard with my ears",
+        "angel sent to Mary"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s06"
+      ]
+    },
+    {
+      "id": "god-needs-angels-dispute",
+      "preferred_label": "God Needs Angels Dispute",
+      "aliases": [
+        "24:63 mistranslation",
+        "God needs angels",
+        "carry outsider's sins",
+        "do not take messenger invitation casually",
+        "why messenger consults believers"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s05"
+      ]
+    },
+    {
+      "id": "help-committee",
+      "preferred_label": "Help Committee",
+      "aliases": [
+        "Satan believed in God",
+        "committee to help him",
+        "everybody knows Edip sincere",
+        "may nullify all works",
+        "spread like wildfire"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s08"
+      ]
+    },
+    {
+      "id": "institutional-authority",
+      "preferred_label": "Institutional Authority",
+      "aliases": [
+        "I disagree with 99 percent",
+        "Islam I gave away all my life",
+        "is this system Rashad wants",
+        "lesson of the Cow"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s03"
+      ]
+    },
+    {
+      "id": "intelligence-as-belief",
+      "preferred_label": "Intelligence As Belief",
+      "aliases": [
+        "do not call President Bush by first name",
+        "dress nicely at mosque",
+        "messenger highest position",
+        "wear suit and tie"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s02"
+      ]
+    },
+    {
+      "id": "mary-and-angel",
+      "preferred_label": "Mary And Angel",
+      "aliases": [
+        "God wants angels not needs angels",
+        "I give up I lied",
+        "I heard with my ears",
+        "angel sent to Mary"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s06"
+      ]
+    },
+    {
+      "id": "mens-clothing",
+      "preferred_label": "Mens Clothing",
+      "aliases": [
+        "bare legs distracting",
+        "dress in mosque",
+        "hard to concentrate",
+        "modesty in men as important"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s04"
+      ]
+    },
+    {
+      "id": "messenger-invitation",
+      "preferred_label": "Messenger Invitation",
+      "aliases": [
+        "24:63 mistranslation",
+        "God needs angels",
+        "carry outsider's sins",
+        "do not take messenger invitation casually",
+        "why messenger consults believers"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s05"
+      ]
+    },
+    {
+      "id": "messenger-status",
+      "preferred_label": "Messenger Status",
+      "aliases": [
+        "do not call President Bush by first name",
+        "dress nicely at mosque",
+        "messenger highest position",
+        "wear suit and tie"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s02"
+      ]
+    },
+    {
+      "id": "miracle-spreads",
+      "preferred_label": "Miracle Spreads",
+      "aliases": [
+        "Satan believed in God",
+        "committee to help him",
+        "everybody knows Edip sincere",
+        "may nullify all works",
+        "spread like wildfire"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s08"
+      ]
+    },
+    {
+      "id": "modesty",
+      "preferred_label": "Modesty",
+      "aliases": [
+        "bare legs distracting",
+        "dress in mosque",
+        "hard to concentrate",
+        "modesty in men as important"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s04"
+      ]
+    },
+    {
+      "id": "mosque-dress",
+      "preferred_label": "Mosque Dress",
+      "aliases": [
+        "do not call President Bush by first name",
+        "dress nicely at mosque",
+        "messenger highest position",
+        "wear suit and tie"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s02"
+      ]
+    },
+    {
+      "id": "mosque-etiquette",
+      "preferred_label": "Mosque Etiquette",
+      "aliases": [
+        "bare legs distracting",
+        "dress in mosque",
+        "hard to concentrate",
+        "modesty in men as important"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s04"
+      ]
+    },
+    {
+      "id": "no-mob-judgment",
+      "preferred_label": "No Mob Judgment",
+      "aliases": [
+        "cannot find guilty without cause",
+        "do not dispute among yourselves",
+        "he said it in front of us",
+        "sit down and find problem"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s07"
+      ]
+    },
+    {
+      "id": "nullifying-works",
+      "preferred_label": "Nullifying Works",
+      "aliases": [
+        "24:63 mistranslation",
+        "God needs angels",
+        "Satan believed in God",
+        "carry outsider's sins",
+        "committee to help him",
+        "do not take messenger invitation casually",
+        "everybody knows Edip sincere",
+        "may nullify all works",
+        "spread like wildfire",
+        "why messenger consults believers"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s05",
+        "behrouz12-s08"
+      ]
+    },
+    {
+      "id": "president-bush-analogy",
+      "preferred_label": "President Bush Analogy",
+      "aliases": [
+        "do not call President Bush by first name",
+        "dress nicely at mosque",
+        "messenger highest position",
+        "wear suit and tie"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s02"
+      ]
+    },
+    {
+      "id": "private-correction",
+      "preferred_label": "Private Correction",
+      "aliases": [
+        "cannot find guilty without cause",
+        "do not dispute among yourselves",
+        "he said it in front of us",
+        "sit down and find problem"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s07"
+      ]
+    },
+    {
+      "id": "public-confrontation",
+      "preferred_label": "Public Confrontation",
+      "aliases": [
+        "cannot find guilty without cause",
+        "do not dispute among yourselves",
+        "he said it in front of us",
+        "sit down and find problem"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s07"
+      ]
+    },
+    {
+      "id": "public-pressure",
+      "preferred_label": "Public Pressure",
+      "aliases": [
+        "God wants angels not needs angels",
+        "I give up I lied",
+        "I heard with my ears",
+        "angel sent to Mary"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s06"
+      ]
+    },
+    {
+      "id": "purification-process",
+      "preferred_label": "Purification Process",
+      "aliases": [
+        "I disagree with 99 percent",
+        "Islam I gave away all my life",
+        "is this system Rashad wants",
+        "lesson of the Cow"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s03"
+      ]
+    },
+    {
+      "id": "quran-24-63",
+      "preferred_label": "Quran 24 63",
+      "aliases": [
+        "24:63 mistranslation",
+        "God needs angels",
+        "carry outsider's sins",
+        "do not take messenger invitation casually",
+        "why messenger consults believers"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s05"
+      ]
+    },
+    {
+      "id": "quran-7-31",
+      "preferred_label": "Quran 7 31",
+      "aliases": [
+        "do not call President Bush by first name",
+        "dress nicely at mosque",
+        "messenger highest position",
+        "wear suit and tie"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s02"
+      ]
+    },
+    {
+      "id": "religious-hierarchy",
+      "preferred_label": "Religious Hierarchy",
+      "aliases": [
+        "I disagree with 99 percent",
+        "Islam I gave away all my life",
+        "is this system Rashad wants",
+        "lesson of the Cow"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s03"
+      ]
+    },
+    {
+      "id": "sabahi-objection",
+      "preferred_label": "Sabahi Objection",
+      "aliases": [
+        "I disagree with 99 percent",
+        "Islam I gave away all my life",
+        "is this system Rashad wants",
+        "lesson of the Cow"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s03"
+      ]
+    },
+    {
+      "id": "satan-believed",
+      "preferred_label": "Satan Believed",
+      "aliases": [
+        "Satan believed in God",
+        "committee to help him",
+        "everybody knows Edip sincere",
+        "may nullify all works",
+        "spread like wildfire"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s08"
+      ]
+    },
+    {
+      "id": "titles-and-deference",
+      "preferred_label": "Titles And Deference",
+      "aliases": [
+        "do not call President Bush by first name",
+        "dress nicely at mosque",
+        "messenger highest position",
+        "wear suit and tie"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s02"
+      ]
+    },
+    {
+      "id": "treatment-of-messenger",
+      "preferred_label": "Treatment Of Messenger",
+      "aliases": [
+        "if die before forty go Heaven",
+        "obey this responsibility",
+        "responsibility toward God's messenger",
+        "visitor shocked how messenger treated"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s01"
+      ]
+    },
+    {
+      "id": "truncated-next-study",
+      "preferred_label": "Truncated Next Study",
+      "aliases": [
+        "Satan believed in God",
+        "committee to help him",
+        "everybody knows Edip sincere",
+        "may nullify all works",
+        "spread like wildfire"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s08"
+      ]
+    },
+    {
+      "id": "under-forty-salvation",
+      "preferred_label": "Under Forty Salvation",
+      "aliases": [
+        "if die before forty go Heaven",
+        "obey this responsibility",
+        "responsibility toward God's messenger",
+        "visitor shocked how messenger treated"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s01"
+      ]
+    },
+    {
+      "id": "want-versus-need",
+      "preferred_label": "Want Versus Need",
+      "aliases": [
+        "God wants angels not needs angels",
+        "I give up I lied",
+        "I heard with my ears",
+        "angel sent to Mary"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s06"
+      ]
+    },
+    {
+      "id": "witness-memory",
+      "preferred_label": "Witness Memory",
+      "aliases": [
+        "God wants angels not needs angels",
+        "I give up I lied",
+        "I heard with my ears",
+        "angel sent to Mary"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s06"
+      ]
+    },
+    {
+      "id": "womens-clothing",
+      "preferred_label": "Womens Clothing",
+      "aliases": [
+        "bare legs distracting",
+        "dress in mosque",
+        "hard to concentrate",
+        "modesty in men as important"
+      ],
+      "appears_in_sections": [
+        "behrouz12-s04"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "behrouz12-issue-01",
+      "issue_type": "sensitive-community-conflict",
+      "original_text": "The source records a real dispute involving named individuals, public pressure, and spiritual warnings.",
+      "suggested_action": "Represent all sides carefully and avoid declaring a guilty party.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz12-issue-02",
+      "issue_type": "ambiguous-confession",
+      "original_text": "Edip's statement 'I lied' appears exasperated and is immediately contested.",
+      "suggested_action": "Do not treat it as an unambiguous confession.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz12-issue-03",
+      "issue_type": "spiritual-condemnation",
+      "original_text": "Rashad warns that Edip may nullify his works and compares the danger with Satan's belief.",
+      "suggested_action": "Keep attributed and do not reproduce as fact.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz12-issue-04",
+      "issue_type": "speaker-and-overlap-errors",
+      "original_text": "Rapid interruptions cause overlapping or incomplete speaker labels.",
+      "suggested_action": "Review key exchanges against the audio.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz12-issue-05",
+      "issue_type": "truncated-following-study",
+      "original_text": "The recording begins a new lesson with Apamea but ends almost immediately.",
+      "suggested_action": "Do not infer missing content.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
+  "canonical_catalog_ids": [
+    "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube",
+  "archive_number": 12,
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

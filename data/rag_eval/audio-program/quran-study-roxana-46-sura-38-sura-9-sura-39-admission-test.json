@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.6-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-roxana-46-sura-38-sura-9-sura-39-admission-test",
+  "title": "Quran Study from Roxana 46: Sura 38, Sura 9, Sura 39, and the Admission Test",
+  "cases": [
+    {
+      "id": "audio46-eval-001",
+      "question": "How did jinn allegedly impersonate famous people?",
+      "expected_section_ids": [
+        "audio46-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad warns that contacted jinn impersonate revered figures such as Ali or Elvis and mislead users. Anecdotes of severe suffering in a wealthy family and political discussion about Romania and communism lead into the formal study."
+    },
+    {
+      "id": "audio46-eval-002",
+      "question": "What anecdotes preceded Sura 38?",
+      "expected_section_ids": [
+        "audio46-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad warns that contacted jinn impersonate revered figures such as Ali or Elvis and mislead users. Anecdotes of severe suffering in a wealthy family and political discussion about Romania and communism lead into the formal study."
+    },
+    {
+      "id": "audio46-eval-003",
+      "question": "How was Sad interpreted?",
+      "expected_section_ids": [
+        "audio46-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sura 38 begins with Sad and the Quran containing remembrance or mathematical code. Rejecters call the human warner a magician and liar because he reduces many gods to one. The study proceeds through earlier nations and David."
+    },
+    {
+      "id": "audio46-eval-004",
+      "question": "Why did leaders reject the warner?",
+      "expected_section_ids": [
+        "audio46-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sura 38 begins with Sad and the Quran containing remembrance or mathematical code. Rejecters call the human warner a magician and liar because he reduces many gods to one. The study proceeds through earlier nations and David."
+    },
+    {
+      "id": "audio46-eval-005",
+      "question": "What dispute came before David?",
+      "expected_section_ids": [
+        "audio46-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Two disputants present David with ninety-nine sheep versus one sheep. Even after issuing an apparently fair judgment, David worries he judged too quickly and repents. The lesson emphasizes extreme caution in deciding cases."
+    },
+    {
+      "id": "audio46-eval-006",
+      "question": "Why did he repent?",
+      "expected_section_ids": [
+        "audio46-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Two disputants present David with ninety-nine sheep versus one sheep. Even after issuing an apparently fair judgment, David worries he judged too quickly and repents. The lesson emphasizes extreme caution in deciding cases."
+    },
+    {
+      "id": "audio46-eval-007",
+      "question": "Can the jinn companion stop opposing a person?",
+      "expected_section_ids": [
+        "audio46-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants ask whether the inner jinn remains an opponent for life. Rashad says it can become fully converted, cooperate with the human, and even advance ahead spiritually."
+    },
+    {
+      "id": "audio46-eval-008",
+      "question": "What role could it later play?",
+      "expected_section_ids": [
+        "audio46-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants ask whether the inner jinn remains an opponent for life. Rashad says it can become fully converted, cooperate with the human, and even advance ahead spiritually."
+    },
+    {
+      "id": "audio46-eval-009",
+      "question": "How are hypocrites described?",
+      "expected_section_ids": [
+        "audio46-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Good events distress hypocrites while affliction makes them rejoice. Quran 9:51 says only what God decrees happens. Rejecters still observed Salat and gave charity lazily, which Rashad uses to argue that prayer predated Muhammad. Charity may respond immediately to strangers in disaster and is not confined to relatives."
+    },
+    {
+      "id": "audio46-eval-010",
+      "question": "How did Quran 9:54 establish earlier Salat?",
+      "expected_section_ids": [
+        "audio46-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Good events distress hypocrites while affliction makes them rejoice. Quran 9:51 says only what God decrees happens. Rejecters still observed Salat and gave charity lazily, which Rashad uses to argue that prayer predated Muhammad. Charity may respond immediately to strangers in disaster and is not confined to relatives."
+    },
+    {
+      "id": "audio46-eval-011",
+      "question": "Who may receive urgent charity?",
+      "expected_section_ids": [
+        "audio46-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Good events distress hypocrites while affliction makes them rejoice. Quran 9:51 says only what God decrees happens. Rejecters still observed Salat and gave charity lazily, which Rashad uses to argue that prayer predated Muhammad. Charity may respond immediately to strangers in disaster and is not confined to relatives."
+    },
+    {
+      "id": "audio46-eval-012",
+      "question": "How were competing charity needs balanced?",
+      "expected_section_ids": [
+        "audio46-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group debates whether to support a poor unbelieving relative or a believing orphan. Rashad says circumstances determine the choice and cites Quran 16:125 for wise, diplomatic invitation that avoids driving people away."
+    },
+    {
+      "id": "audio46-eval-013",
+      "question": "What did wise outreach require?",
+      "expected_section_ids": [
+        "audio46-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group debates whether to support a poor unbelieving relative or a believing orphan. Rashad says circumstances determine the choice and cites Quran 16:125 for wise, diplomatic invitation that avoids driving people away."
+    },
+    {
+      "id": "audio46-eval-014",
+      "question": "What was the admission test?",
+      "expected_section_ids": [
+        "audio46-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final block repeats absolute devotion to God alone. Rashad calls the first years of commitment an exacting admission test in which Satan receives limited permission to challenge a claimant. He refuses compromise over white lies or insurance and says evil thoughts come from the personal jinn companion."
+    },
+    {
+      "id": "audio46-eval-015",
+      "question": "Why did Rashad reject small compromises?",
+      "expected_section_ids": [
+        "audio46-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final block repeats absolute devotion to God alone. Rashad calls the first years of commitment an exacting admission test in which Satan receives limited permission to challenge a claimant. He refuses compromise over white lies or insurance and says evil thoughts come from the personal jinn companion."
+    },
+    {
+      "id": "audio46-eval-016",
+      "question": "Where did evil thoughts come from in his explanation?",
+      "expected_section_ids": [
+        "audio46-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final block repeats absolute devotion to God alone. Rashad calls the first years of commitment an exacting admission test in which Satan receives limited permission to challenge a claimant. He refuses compromise over white lies or insurance and says evil thoughts come from the personal jinn companion."
+    }
+  ],
+  "canonical_document_id": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
+  "canonical_catalog_ids": [
+    "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co"
+  ],
+  "canonical_mapping": "youtube-id"
+}

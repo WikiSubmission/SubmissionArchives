@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-35-sura-30-brewery-intercession-divine-control",
+  "title": "Quran Study from Parivash 35: Sura 30, the Brewery Origin of the Miracle, Intercession, and Divine Control",
+  "cases": [
+    {
+      "id": "audio35-eval-001",
+      "question": "Which themes appear in Quran 30:25–32?",
+      "expected_section_ids": [
+        "parivash35-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The verses describe creation standing at God's disposal, immediate resurrection, the absurdity of sharing divine authority, natural instinct toward God alone, Contact Prayer, and rejection of sectarianism. Rashad connects them with the premortal test, Satan's challenge, mercy, and salvation before forty."
+    },
+    {
+      "id": "audio35-eval-002",
+      "question": "How did age forty enter the explanation?",
+      "expected_section_ids": [
+        "parivash35-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The verses describe creation standing at God's disposal, immediate resurrection, the absurdity of sharing divine authority, natural instinct toward God alone, Contact Prayer, and rejection of sectarianism. Rashad connects them with the premortal test, Satan's challenge, mercy, and salvation before forty."
+    },
+    {
+      "id": "audio35-eval-003",
+      "question": "How did Rashad move from Monsanto to Anheuser-Busch?",
+      "expected_section_ids": [
+        "parivash35-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recounts learning computer programming at Monsanto, being recruited by Anheuser-Busch's research director, developing a process for extracting protein from brewer's yeast, and using four morning hours and brewery computers to analyze Quranic initials. He calls this God hiding the miracle in Satan's pocket."
+    },
+    {
+      "id": "audio35-eval-004",
+      "question": "Why did he say the miracle came from Satan's pocket?",
+      "expected_section_ids": [
+        "parivash35-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recounts learning computer programming at Monsanto, being recruited by Anheuser-Busch's research director, developing a process for extracting protein from brewer's yeast, and using four morning hours and brewery computers to analyze Quranic initials. He calls this God hiding the miracle in Satan's pocket."
+    },
+    {
+      "id": "audio35-eval-005",
+      "question": "What was Satan trying to prove?",
+      "expected_section_ids": [
+        "parivash35-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes Satan trying to prove he can rule a dominion. Hell becomes an eighth universe farther from God and without His provisions. The group asks whether believers will feel sorrow for relatives there; Rashad says no and cites his own father as someone he loved but believed had insisted on rejection."
+    },
+    {
+      "id": "audio35-eval-006",
+      "question": "How was Hell located?",
+      "expected_section_ids": [
+        "parivash35-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes Satan trying to prove he can rule a dominion. Hell becomes an eighth universe farther from God and without His provisions. The group asks whether believers will feel sorrow for relatives there; Rashad says no and cites his own father as someone he loved but believed had insisted on rejection."
+    },
+    {
+      "id": "audio35-eval-007",
+      "question": "Why did Rashad say there would be no remorse?",
+      "expected_section_ids": [
+        "parivash35-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes Satan trying to prove he can rule a dominion. Hell becomes an eighth universe farther from God and without His provisions. The group asks whether believers will feel sorrow for relatives there; Rashad says no and cites his own father as someone he loved but believed had insisted on rejection."
+    },
+    {
+      "id": "audio35-eval-008",
+      "question": "What Swedish claim was made?",
+      "expected_section_ids": [
+        "parivash35-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A participant describes controversial Swedish childcare material. The study then criticizes the biblical statement that God rested after creation. Quran 50:38 is used to deny fatigue, and six days are interpreted as a measuring yardstick or stages rather than ordinary days."
+    },
+    {
+      "id": "audio35-eval-009",
+      "question": "How did Rashad interpret the six days?",
+      "expected_section_ids": [
+        "parivash35-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A participant describes controversial Swedish childcare material. The study then criticizes the biblical statement that God rested after creation. Quran 50:38 is used to deny fatigue, and six days are interpreted as a measuring yardstick or stages rather than ordinary days."
+    },
+    {
+      "id": "audio35-eval-010",
+      "question": "What biblical statement was criticized?",
+      "expected_section_ids": [
+        "parivash35-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A participant describes controversial Swedish childcare material. The study then criticizes the biblical statement that God rested after creation. Quran 50:38 is used to deny fatigue, and six days are interpreted as a measuring yardstick or stages rather than ordinary days."
+    },
+    {
+      "id": "audio35-eval-011",
+      "question": "How did Rashad explain molecular and bodily processes?",
+      "expected_section_ids": [
+        "parivash35-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Questions concern how atoms, molecules, lungs, blood, oxygen, and other systems know what to do. Rashad attributes their operation to physical and electromagnetic laws established by God rather than an angel individually managing each exchange. The Big Bang and cosmic laws are briefly discussed."
+    },
+    {
+      "id": "audio35-eval-012",
+      "question": "Did he assign each process to angels?",
+      "expected_section_ids": [
+        "parivash35-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Questions concern how atoms, molecules, lungs, blood, oxygen, and other systems know what to do. Rashad attributes their operation to physical and electromagnetic laws established by God rather than an angel individually managing each exchange. The Big Bang and cosmic laws are briefly discussed."
+    },
+    {
+      "id": "audio35-eval-013",
+      "question": "How was intercession rejected?",
+      "expected_section_ids": [
+        "parivash35-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad rejects intercession by asking how Muhammad could know every deserving person. Christian claims that Jesus is God's son or God are challenged through the demand for an explicit biblical statement. The group discusses the Word and Catholic access to scripture."
+    },
+    {
+      "id": "audio35-eval-014",
+      "question": "What question was posed to Christians?",
+      "expected_section_ids": [
+        "parivash35-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad rejects intercession by asking how Muhammad could know every deserving person. Christian claims that Jesus is God's son or God are challenged through the demand for an explicit biblical statement. The group discusses the Word and Catholic access to scripture."
+    },
+    {
+      "id": "audio35-eval-015",
+      "question": "What happened when the flight was cancelled?",
+      "expected_section_ids": [
+        "parivash35-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A cancelled Labor Day flight produces celebration rather than disappointment because the travelers interpret the change as God's decision. The anecdote illustrates the doctrine that believers accept unexpected outcomes rather than fear or grieve."
+    },
+    {
+      "id": "audio35-eval-016",
+      "question": "What theological lesson was drawn?",
+      "expected_section_ids": [
+        "parivash35-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A cancelled Labor Day flight produces celebration rather than disappointment because the travelers interpret the change as God's decision. The anecdote illustrates the doctrine that believers accept unexpected outcomes rather than fear or grieve."
+    },
+    {
+      "id": "audio35-eval-017",
+      "question": "How was new evidence circulated?",
+      "expected_section_ids": [
+        "parivash35-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The community discusses sending discoveries to religious leaders, numerical claims concerning Sura 9 and Quranic initials, accusations that Rashad altered the Quran, threats connected with the revised translation, and the phrase 'those on the right' in Quran 74:39."
+    },
+    {
+      "id": "audio35-eval-018",
+      "question": "What opposition did Rashad describe?",
+      "expected_section_ids": [
+        "parivash35-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The community discusses sending discoveries to religious leaders, numerical claims concerning Sura 9 and Quranic initials, accusations that Rashad altered the Quran, threats connected with the revised translation, and the phrase 'those on the right' in Quran 74:39."
+    },
+    {
+      "id": "audio35-eval-019",
+      "question": "What translation question closed the study?",
+      "expected_section_ids": [
+        "parivash35-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The community discusses sending discoveries to religious leaders, numerical claims concerning Sura 9 and Quranic initials, accusations that Rashad altered the Quran, threats connected with the revised translation, and the phrase 'those on the right' in Quran 74:39."
+    }
+  ],
+  "canonical_document_id": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
+  "canonical_catalog_ids": [
+    "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg"
+  ],
+  "canonical_mapping": "youtube-id"
+}

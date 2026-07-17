@@ -1,0 +1,1001 @@
+{
+  "schema_version": "1.0",
+  "document_id": "video-program/what-is-life-all-about",
+  "title": "What is Life All About?",
+  "source_file": "data/sources/playlists/video-transcripts/01 - What is Life All About.csv",
+  "youtube_id": "tNqQJR5LyXo",
+  "youtube_url": "https://www.youtube.com/watch?v=tNqQJR5LyXo",
+  "primary_speaker": "Dr. Rashad Khalifa",
+  "primary_speaker_basis": "data/catalog/videos.json",
+  "review_status": "draft",
+  "transcript_statistics": {
+    "source_segments": 219,
+    "first_speech_time": "00:01:04.110",
+    "last_speech_time": "00:23:26.223",
+    "section_count": 13,
+    "speaker_column_blank_rows": 219
+  },
+  "document_summary": "Rashad argues that the soul is the real person and that bodily life should serve its development. He presents daily contact with God, fasting, and prescribed religious practice as nourishment for the soul, connects spiritual development with happiness in this world and rank in eternal life, and appeals to a mathematically coded message as tangible evidence.",
+  "sections": [
+    {
+      "id": "life-01-s01",
+      "start_row": 0,
+      "end_row": 22,
+      "title": "The real self is the soul, not the body",
+      "summary": "Rashad identifies ignorance of the real self as the world's central problem. He distinguishes the temporary body from the soul, which he calls the real person, and argues that this confusion reverses human priorities.",
+      "concepts": [
+        {
+          "id": "human-identity",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "body-and-soul",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "soul-as-real-self",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "body-as-temporary-garment",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-priorities",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Who am I?",
+        "the real self",
+        "the body is not the person",
+        "body as a garment",
+        "body versus soul",
+        "identity crisis",
+        "purpose of human life"
+      ],
+      "related_questions": [
+        "What did Rashad say was the biggest problem in the world?",
+        "Did Rashad say the body is not the real person?",
+        "What did Rashad call the real self?",
+        "Why did Rashad compare the body to a garment?",
+        "Why are people's priorities reversed?"
+      ],
+      "retrieval_note": "Useful for modern questions about identity, the self, dualism, or the purpose of life even when the question does not use the transcript's words.",
+      "start": 64.11,
+      "end": 210.91,
+      "start_time": "00:01:04.110",
+      "end_time": "00:03:30.910",
+      "source_segment_start": 0,
+      "source_segment_end": 22,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "The biggest problem in the world today is not war. It is not disease, cancer, AIDS, and so on. It is not children starving in Africa or in some other parts of the world. It is not poverty, and it is not crime. The biggest problem in the world today is that people do not know who they are. And consequently, they got their priorities all mixed up. You ask the average person \"who are you?\" and they will look in the mirror and they will say \"this is me.\" And they are wrong. When you look in the mirror, you do not see your \"self\", you see your body. And your body is simply a garment that you are wearing for fifty or a hundred years. Then, you shed it. You know, it's a matter of common sense. There is a difference between a living body and a dead body. The living body is full of vitality and spark, and when it dies, the spark is gone and becomes stiff just like a piece of wood. And we know that something is gone. The person is gone. So, we can easily agree that a person consists of a body and a soul. And the soul is the real person. And this is where the people fail to recognize who they are. If they knew that the body is not them, they will rearrange their priorities, and they will pay more attention to themselves, their selves, not their bodies. A person goes to school for many many years, works hard, takes examinations, and even after school he gets a job to make some money, and so on. All this to care for the body, a vanishing entity that will become stiff, dead someday. And when that day comes, almost everyone will look at that lifeless body and say \"for this thing, I went to school, I worked hard, I took examinations, I earned a lot of money and I spent it all to care for this thing, this vanishing stiff part of",
+      "retrieval_text": "The real self is the soul, not the body\nRashad identifies ignorance of the real self as the world's central problem. He distinguishes the temporary body from the soul, which he calls the real person, and argues that this confusion reverses human priorities.\nConcepts: human identity; body and soul; soul as real self; body as temporary garment; spiritual priorities\nUser terminology: Who am I?; the real self; the body is not the person; body as a garment; body versus soul; identity crisis; purpose of human life\nQuestions: What did Rashad say was the biggest problem in the world? Did Rashad say the body is not the real person? What did Rashad call the real self? Why did Rashad compare the body to a garment? Why are people's priorities reversed?"
+    },
+    {
+      "id": "life-01-s02",
+      "start_row": 23,
+      "end_row": 35,
+      "title": "What did you feed your real self?",
+      "summary": "Rashad frames life's purpose as caring for the soul rather than devoting all effort to the body. He uses food and childhood growth as analogies for the neglect of the real person.",
+      "concepts": [
+        {
+          "id": "purpose-of-life",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "soul-nourishment",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "body-in-service-of-soul",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-neglect",
+          "relation": "criticized",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "feeding the soul",
+        "spiritual food",
+        "what is life all about",
+        "taking care of the inner person",
+        "nourishing the real self",
+        "body serving the soul"
+      ],
+      "related_questions": [
+        "What does Rashad mean by feeding yourself?",
+        "What did Rashad say life is all about?",
+        "How should the body serve the soul?",
+        "Why does he compare bodily food with spiritual nourishment?"
+      ],
+      "retrieval_note": "This section should match questions about spiritual nutrition, inner development, and the meaning of life even when users never say 'soul nourishment.'",
+      "start": 210.91,
+      "end": 291.856,
+      "start_time": "00:03:30.910",
+      "end_time": "00:04:51.856",
+      "source_segment_start": 23,
+      "source_segment_end": 35,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "me. What did I do for myself?\" There is something that we must do. And this is what life is all about. We have to rearrange our priorities and this cannot result without knowing that I am a body and the soul, and I must put the body in the service of the soul. To drive the point home, just take an average person and ask him or her \"what did you feed your self today? What did you feed your soul today?\" Let's start with the question \"what did you feed your body today?\" And they will tell you \"I gave my body breakfast, lunch, dinner, numerous snacks.\" But they gave nothing to the real person, to themselves. What did they feed themselves? We nourish the babies. When we are born, we give the baby milk and so on. And then, the baby grows, becomes a child, and we give them potatoes and meat and rice, and the body grows to five or six feet. But what did we do for the real person? This is the major question that we're addressing right now. This is what life is all about.",
+      "retrieval_text": "What did you feed your real self?\nRashad frames life's purpose as caring for the soul rather than devoting all effort to the body. He uses food and childhood growth as analogies for the neglect of the real person.\nConcepts: purpose of life; soul nourishment; body in service of soul; spiritual neglect\nUser terminology: feeding the soul; spiritual food; what is life all about; taking care of the inner person; nourishing the real self; body serving the soul\nQuestions: What does Rashad mean by feeding yourself? What did Rashad say life is all about? How should the body serve the soul? Why does he compare bodily food with spiritual nourishment?"
+    },
+    {
+      "id": "life-01-s03",
+      "start_row": 36,
+      "end_row": 55,
+      "title": "Soul growth and contact with God",
+      "summary": "Rashad says the soul can grow greatly and that daily contact with God nourishes it. He connects the soul with God's breath into Adam and presents divine contact as the source of growth.",
+      "concepts": [
+        {
+          "id": "soul-growth",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "soul-size",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "contact-with-god",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "divine-breath-origin-of-soul",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "soul-nourishment",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "can the soul grow",
+        "size of the soul",
+        "spiritual growth",
+        "soul as God's breath",
+        "soul as part of God",
+        "how to strengthen the soul",
+        "daily connection with God"
+      ],
+      "related_questions": [
+        "Did Rashad say the soul grows in size?",
+        "How did Rashad say the soul is nourished?",
+        "What did he mean by the soul coming from God's breath?",
+        "Did Rashad say the soul is a piece of God?"
+      ],
+      "retrieval_note": "Contains unusual claims that users may ask using theological or philosophical vocabulary not spoken in the recording.",
+      "start": 291.856,
+      "end": 422.08,
+      "start_time": "00:04:51.856",
+      "end_time": "00:07:02.080",
+      "source_segment_start": 36,
+      "source_segment_end": 55,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "People are giving attention to the vanishing entity and totally ignoring the real person. There is such a thing as food for the soul, nourishment for the real person. And now, the new thing that I have for you is tangible evidence that there is food and nutrition for the real person. And the strange thing that is not known yet, is not commonly known anyway, is that just as the body grows, the real person or the soul grows in leaps and bounds. Maybe, the body grows to five or six feet, but the soul or the real person grows to immense sizes. I don't wanna confuse you right now but the size of the soul can be as big as the City of Tucson. I'm not exaggerating. We now have tangible evidence that the soul can grow from a very small size like a cat to a huge size. And this makes it even more important to nourish and feed the real person. Now, what is the food for the soul? This tangible evidence that we just obtained tells us... the evidence by the way comes from the Creator, from God Himself, and He tells us that we must make contact with God every day to cause this nutrition and nourishment of the soul, because the soul is literally a piece of God. And God says \"if you have anything to do with Me, with God, your soul will grow.\" If you remember, in the Bible, at the beginning, God said He breathed into Adam the breath of life. So, the soul is part of God's breath. And if we have anything to do with God, we grow. However, there's a specific set of nutrition that we can offer to ourselves.",
+      "retrieval_text": "Soul growth and contact with God\nRashad says the soul can grow greatly and that daily contact with God nourishes it. He connects the soul with God's breath into Adam and presents divine contact as the source of growth.\nConcepts: soul growth; soul size; contact with god; divine breath origin of soul; soul nourishment\nUser terminology: can the soul grow; size of the soul; spiritual growth; soul as God's breath; soul as part of God; how to strengthen the soul; daily connection with God\nQuestions: Did Rashad say the soul grows in size? How did Rashad say the soul is nourished? What did he mean by the soul coming from God's breath? Did Rashad say the soul is a piece of God?"
+    },
+    {
+      "id": "life-01-s04",
+      "start_row": 56,
+      "end_row": 75,
+      "title": "The soul is ancient and eternal",
+      "summary": "Rashad says the real person is billions of years old and continues forever, while bodily life lasts only decades and is effectively zero beside eternity. He uses this contrast to challenge bodily priorities.",
+      "concepts": [
+        {
+          "id": "premortal-existence",
+          "relation": "affirmed",
+          "explicit": false
+        },
+        {
+          "id": "age-of-soul",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "eternal-soul",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "mortality-of-body",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "earthly-life-versus-eternity",
+          "relation": "contrasted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "life before birth",
+        "pre-existence of the soul",
+        "premortal existence",
+        "how old is the soul",
+        "eternal self",
+        "immortality of the soul",
+        "earthly life is nothing compared with eternity"
+      ],
+      "related_questions": [
+        "Did Rashad teach that people existed before birth?",
+        "How old did Rashad say the real person is?",
+        "Did Rashad say the soul is eternal?",
+        "Why did he compare a human lifespan with zero?"
+      ],
+      "retrieval_note": "This is a high-value conceptual section. The words 'premortal existence' are absent, but the teaching is directly relevant to that modern label.",
+      "start": 422.569,
+      "end": 552.776,
+      "start_time": "00:07:02.569",
+      "end_time": "00:09:12.776",
+      "source_segment_start": 56,
+      "source_segment_end": 75,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "Another question that illustrates this biggest problem in the world, namely that the people do not know who they are, is that you ask the average person \"how old are you?\" And he or she will give you a number somewhere between 15 and 85 years old. Wrong, again. Any person, the real person, is a few billion years old. And this is the new information that we obtained from this new tangible evidence. You can easily see the problem if we illustrate a little bit how the human being consists of two entities. One entity is the body. Let us represent it by this dot right here. And the eternal person, and this is an infinite entity. It will never die. It just goes on forever and ever. So, here we have a body that lasts a period of time somewhere between fifty and a hundred years. We know that we all exist, we are all under death sentence. And this period, when you divide any number by infinity, it equals zero. If you live 1,000 years, you divide this by infinity and it equals zero. This is just plain mathematics. So, the body that is going to live for a zero, for all practical purposes, zero period of time, is taking all our attention. We spend 24 hours a day taking care of this insignificant entity, the vanishing entity. And the question is \"how much are we doing for this eternal entity, the real me? What am I doing for it?\"",
+      "retrieval_text": "The soul is ancient and eternal\nRashad says the real person is billions of years old and continues forever, while bodily life lasts only decades and is effectively zero beside eternity. He uses this contrast to challenge bodily priorities.\nConcepts: premortal existence; age of soul; eternal soul; mortality of body; earthly life versus eternity\nUser terminology: life before birth; pre-existence of the soul; premortal existence; how old is the soul; eternal self; immortality of the soul; earthly life is nothing compared with eternity\nQuestions: Did Rashad teach that people existed before birth? How old did Rashad say the real person is? Did Rashad say the soul is eternal? Why did he compare a human lifespan with zero?"
+    },
+    {
+      "id": "life-01-s05",
+      "start_row": 76,
+      "end_row": 102,
+      "title": "Five daily contacts as exact spiritual nourishment",
+      "summary": "Rashad rejects vague spirituality and says God supplied an exact method for developing the soul through earlier scriptures and the Quran. He identifies five daily contacts with God as the principal nourishment.",
+      "concepts": [
+        {
+          "id": "contact-prayers",
+          "relation": "affirmed",
+          "explicit": false
+        },
+        {
+          "id": "five-daily-contacts",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "scriptural-continuity",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "specific-spiritual-method",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "mathematical-code",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "salat",
+        "five daily prayers",
+        "Contact Prayer",
+        "how to nourish the soul",
+        "exact spiritual practice",
+        "prayer as a numerical combination",
+        "religious practice from Adam to the Quran"
+      ],
+      "related_questions": [
+        "How often did Rashad say people should contact God?",
+        "What did Rashad present as the main food for the soul?",
+        "Did he connect the five daily prayers with earlier scriptures?",
+        "Why did Rashad describe the practice as a numerical combination?"
+      ],
+      "retrieval_note": "The transcript often says 'contact with God' rather than the modern archive label 'Contact Prayer' or 'salat.'",
+      "start": 552.776,
+      "end": 709.7,
+      "start_time": "00:09:12.776",
+      "end_time": "00:11:49.700",
+      "source_segment_start": 76,
+      "source_segment_end": 102,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "Now that we agree that we must rearrange our priorities and give more attention to the real person, the soul, instead of wasting all our life taking care of the vanishing entity. Now, what specifically are you supposed to do? You know, there are so many people who are talking in vague terms about capturing the heavenly light and dissolving it into your whole being and all this doesn't mean a thing, you know, all these things. It is much more practical than that. It is much more specific than that. And God has been sending to us the exact methodology of developing our person, our real self, since Adam, since the first human being. It came down to us in the Bible, in the Old Testament, in the Psalms of David, in the gospel of Jesus, in the Quran. And now we have specific methods of developing the person, the soul, and exactly what to do and when, and the most efficient ways and the least efficient ways. We now possess this valuable information. And we're told that you must make contact with God, your Creator, five times a day. This contact, you can think of ropes coming down from the Creator and keeping us out of this sizzling pan called the world. At the same time, we develop and we nourish our self, the real self, the soul, by making these contacts five times a day. We are given exactly the combination. Actually, it's a numerical secret combination that anyone can obtain. And through this secret mathematical combination, you can make contact with God and nourish and develop your real self. Five times a day, you are given the combination, you are given the method, how to do it, when to do it. And this is the way to provide for yourself. Everyone takes breakfast, lunch, dinner, snacks and so on, and dresses nicely, and buys a nice home, and has a beautiful spouse or a handsome spouse, as the case may be, and all this to take care of the vanishing entity, the body. The big question is \"what are you doing for you, the real person? And you can agree with me now that this is the biggest problem in the world, not knowing who we are.",
+      "retrieval_text": "Five daily contacts as exact spiritual nourishment\nRashad rejects vague spirituality and says God supplied an exact method for developing the soul through earlier scriptures and the Quran. He identifies five daily contacts with God as the principal nourishment.\nConcepts: contact prayers; five daily contacts; scriptural continuity; specific spiritual method; mathematical code\nUser terminology: salat; five daily prayers; Contact Prayer; how to nourish the soul; exact spiritual practice; prayer as a numerical combination; religious practice from Adam to the Quran\nQuestions: How often did Rashad say people should contact God? What did Rashad present as the main food for the soul? Did he connect the five daily prayers with earlier scriptures? Why did Rashad describe the practice as a numerical combination?"
+    },
+    {
+      "id": "life-01-s06",
+      "start_row": 103,
+      "end_row": 123,
+      "title": "Prayer versus the specific Contact Prayer",
+      "summary": "Rashad distinguishes ordinary supplication from a specific spiritual meal consisting of prescribed sounds and movements. He compares the procedure to a safe combination and says it was transmitted through the scriptures.",
+      "concepts": [
+        {
+          "id": "supplication-versus-contact-prayer",
+          "relation": "distinguished",
+          "explicit": true
+        },
+        {
+          "id": "ritual-sounds-and-movements",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "safe-combination-analogy",
+          "relation": "illustrated",
+          "explicit": true
+        },
+        {
+          "id": "scriptural-continuity",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "contact-prayers",
+          "relation": "affirmed",
+          "explicit": false
+        }
+      ],
+      "user_terms": [
+        "difference between prayer and salat",
+        "supplication versus Contact Prayer",
+        "ritual prayer",
+        "specific words and movements",
+        "safe combination analogy",
+        "how Contact Prayer works"
+      ],
+      "related_questions": [
+        "What distinction did Rashad make between prayer and Contact Prayer?",
+        "Why did Rashad compare salat to opening a safe?",
+        "What did he say about prescribed sounds and movements?",
+        "Did Rashad say ordinary prayer still benefits the soul?"
+      ],
+      "retrieval_note": "Important for questions using 'salat,' although the term itself does not appear in this excerpt.",
+      "start": 710.18,
+      "end": 835.54,
+      "start_time": "00:11:50.180",
+      "end_time": "00:13:55.540",
+      "source_segment_start": 103,
+      "source_segment_end": 123,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "You notice I mentioned \"making contact with God,\" and this is... I'm talking about specific methodology. I'm not talking about prayer. Prayer is fine and it will contribute to the growth and nourishment of the person's soul, the real person. You know, millions of children grow up... we grew up knowing that we must say grace before we eat, say a short prayer \"God is good. God is great. Please. Thank you for our food\" and all that. Millions of people pray. I mean, they utter supplications, ask God for favors and all this is fine. God loves that. But I'm talking about a practical, a real meal for the real person. We have this physical evidence telling us exactly what to say, what sounds to utter. It is like the combination of a safe. You have this combination, a knob on a safe where there is a treasure and you have to turn it this way a certain number of times and then this way to another number and so on and then you open the safe and you have the treasure. It is very similar to that. A numerical combination, a combination of sounds that you must utter, a combination of movements that you must do. And this is common to all religions. It came to us, like I said, in the older scriptures, and the latest scriptures, and in this new discovery of a tangible mathematically coded method. And if you contact me at the telephone numbers shown at the end of this program, I can discuss this specific method with you. And the contact with God is not the only way to develop the soul. There are many other methods, but the daily contact with God is the most efficient. This is the steak of the soul food.",
+      "retrieval_text": "Prayer versus the specific Contact Prayer\nRashad distinguishes ordinary supplication from a specific spiritual meal consisting of prescribed sounds and movements. He compares the procedure to a safe combination and says it was transmitted through the scriptures.\nConcepts: supplication versus contact prayer; ritual sounds and movements; safe combination analogy; scriptural continuity; contact prayers\nUser terminology: difference between prayer and salat; supplication versus Contact Prayer; ritual prayer; specific words and movements; safe combination analogy; how Contact Prayer works\nQuestions: What distinction did Rashad make between prayer and Contact Prayer? Why did Rashad compare salat to opening a safe? What did he say about prescribed sounds and movements? Did Rashad say ordinary prayer still benefits the soul?"
+    },
+    {
+      "id": "life-01-s07",
+      "start_row": 124,
+      "end_row": 136,
+      "title": "Fasting and reversing priorities",
+      "summary": "Rashad names fasting as another means of developing the soul because it places bodily appetite under command. He returns to the need to prioritize the soul and warns of regret when the body is shed.",
+      "concepts": [
+        {
+          "id": "fasting-as-spiritual-discipline",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "self-control-over-body",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "soul-nourishment",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-priorities",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "regret-after-death",
+          "relation": "warned",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "spiritual purpose of fasting",
+        "fasting controls the body",
+        "disciplining bodily desires",
+        "regret after death",
+        "neglecting the soul"
+      ],
+      "related_questions": [
+        "What other method did Rashad give for nourishing the soul?",
+        "Why did Rashad say fasting helps the soul?",
+        "What did he say people will regret when they shed the body?"
+      ],
+      "retrieval_note": "This should answer concept questions about ascetic discipline and mastery over appetite.",
+      "start": 835.54,
+      "end": 926.07,
+      "start_time": "00:13:55.540",
+      "end_time": "00:15:26.070",
+      "source_segment_start": 124,
+      "source_segment_end": 136,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "But, for example, there is a method of fasting, where you dictate on the body exactly when the body is going to eat or drink. And there is even a specific time of the year for that. So, God told us exactly what to do to nourish our soul. And if this becomes known to you or to any other person, you can ask them \"what did you do for your self today?\" And they will not say \"zero or nothing,\" like most people would say now. The person would answer \"I gave my body breakfast, lunch and dinner, and I gave my self five good meals by contacting my Creator five times today.\" There will be a big difference. There will be the proper arrangement of priorities. Right now, the priorities are all reversed. People are spending 99% of their time caring for the vanishing entity and totally unaware, totally neglecting the real self, the real person. And it's a big shame because when the time comes and we shed the body, we will really regret that we didn't give the real person, the soul, the proper attention.",
+      "retrieval_text": "Fasting and reversing priorities\nRashad names fasting as another means of developing the soul because it places bodily appetite under command. He returns to the need to prioritize the soul and warns of regret when the body is shed.\nConcepts: fasting as spiritual discipline; self control over body; soul nourishment; spiritual priorities; regret after death\nUser terminology: spiritual purpose of fasting; fasting controls the body; disciplining bodily desires; regret after death; neglecting the soul\nQuestions: What other method did Rashad give for nourishing the soul? Why did Rashad say fasting helps the soul? What did he say people will regret when they shed the body?"
+    },
+    {
+      "id": "life-01-s08",
+      "start_row": 137,
+      "end_row": 147,
+      "title": "Material success does not produce happiness",
+      "summary": "Rashad argues that wealth, fame, beauty, and bodily comfort cannot supply happiness when the soul is neglected. He invokes television examples involving Barbara Hutton and Eddie Murphy to illustrate spiritual emptiness amid success.",
+      "concepts": [
+        {
+          "id": "material-success-and-happiness",
+          "relation": "rejected",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-emptiness",
+          "relation": "affirmed",
+          "explicit": false
+        },
+        {
+          "id": "wealth-and-fame",
+          "relation": "insufficient",
+          "explicit": true
+        },
+        {
+          "id": "soul-nourishment",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "money cannot buy happiness",
+        "fame does not bring fulfillment",
+        "spiritual emptiness",
+        "successful but unhappy",
+        "Eddie Murphy interview",
+        "Barbara Walters",
+        "Barbara Hutton"
+      ],
+      "related_questions": [
+        "Did Rashad say money cannot buy happiness?",
+        "What did Rashad say about Eddie Murphy?",
+        "Why can a wealthy person still feel something is missing?",
+        "How did Rashad connect spiritual neglect with unhappiness?"
+      ],
+      "retrieval_note": "Useful for modern psychological language such as emptiness, fulfillment, or dissatisfaction.",
+      "start": 926.07,
+      "end": 985.54,
+      "start_time": "00:15:26.070",
+      "end_time": "00:16:25.540",
+      "source_segment_start": 137,
+      "source_segment_end": 147,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "You know, it is very well and finally established now that money, fame, beauty and so on, do not bring happiness. There is always something missing. Did you see the Barbara Hutton story that was shown on TV the other day? I was listening to a special, Barbara Walters special. She was interviewing Eddie Murphy. Here's a movie star who's got everything. He has two Rolls Royces, a Mercedes, a Corvette. He's got a palatial estate in New Jersey, his family, yet he told Barber Walters there is something missing. We have to develop the real self in order to be happy. If you have a body that has everything, money, fame, everything it wants, everything the body wants, but the soul is not nourished, happiness will be missing. And this, now you can appreciate that this is the biggest problem in the world.",
+      "retrieval_text": "Material success does not produce happiness\nRashad argues that wealth, fame, beauty, and bodily comfort cannot supply happiness when the soul is neglected. He invokes television examples involving Barbara Hutton and Eddie Murphy to illustrate spiritual emptiness amid success.\nConcepts: material success and happiness; spiritual emptiness; wealth and fame; soul nourishment\nUser terminology: money cannot buy happiness; fame does not bring fulfillment; spiritual emptiness; successful but unhappy; Eddie Murphy interview; Barbara Walters; Barbara Hutton\nQuestions: Did Rashad say money cannot buy happiness? What did Rashad say about Eddie Murphy? Why can a wealthy person still feel something is missing? How did Rashad connect spiritual neglect with unhappiness?"
+    },
+    {
+      "id": "life-01-s09",
+      "start_row": 148,
+      "end_row": 174,
+      "title": "The secret of happiness in this life",
+      "summary": "Rashad says the method for happiness is free, concrete, and available now. He locates happiness in developing the real self and compares the required procedure to a safe combination and a cookbook recipe.",
+      "concepts": [
+        {
+          "id": "secret-of-happiness",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "earthly-happiness",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "soul-development",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "specific-spiritual-method",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "recipe-analogy",
+          "relation": "illustrated",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "how to be happy",
+        "secret of happiness",
+        "happiness in this world",
+        "spiritual fulfillment",
+        "practical recipe for happiness",
+        "religion as a concrete method"
+      ],
+      "related_questions": [
+        "What did Rashad call the secret of happiness?",
+        "Did Rashad say happiness is attainable in this life?",
+        "Why did Rashad compare the method to a cookbook recipe?",
+        "Did he say the knowledge was free?"
+      ],
+      "retrieval_note": "Should match broad wellbeing questions that use neither 'soul' nor 'contact with God.'",
+      "start": 985.54,
+      "end": 1156.75,
+      "start_time": "00:16:25.540",
+      "end_time": "00:19:16.750",
+      "source_segment_start": 148,
+      "source_segment_end": 174,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "And I know what you're thinking. You're probably saying \"what is the catch? How much do I have to pay for this?\" Ironically, this very precious knowledge is free. It is just yours for the asking. And like I said it is not... there is no mincing of words. There is no vague ideas. This is... I'm talking about specifics. Happiness has been the most elusive goal for everybody and now we know that material success, money, fame, and all this does not bring happiness. Now, we have a concrete tangible method where we know... actually, the secret of happiness, this most elusive of our goals, has been unveiled. You ask all the philosophers, and people who have a lot of experience in life, and they will tell you, readily, that material success does not bring happiness. Money, fame, success, all this does not bring happiness. And I mentioned to you Eddie Murphy as an example in his interview with Barbara Walters. But now we have a concrete method with a track record that tells us that this most elusive of our goals, happiness, is actually attainable. And the secret is in developing and nourishing the real person. The people are unaware. They're going about their life, totally unaware, totally neglecting the real self. And if they only develop and nourish the real person, and put their priorities in perspective, happiness will be readily theirs. I'm not talking about something over there in heaven somewhere, where you have to die first, stay in the grave millions of years, and then get resurrected in order to be in paradise and all that. I'm talking about happiness, victory, success, the real thing, here, in this world. Just like I mentioned earlier, like the combination. You turn that combination to the right, left, and so on in the correct numbers and you open it and you have the treasure now. You do the specific procedure, just like a cookbook recipe. It's just as simple as that. I'm not exaggerating. God told us exactly how to do it, what to do and what to say and the combination is very specific. You do it and you get the results.",
+      "retrieval_text": "The secret of happiness in this life\nRashad says the method for happiness is free, concrete, and available now. He locates happiness in developing the real self and compares the required procedure to a safe combination and a cookbook recipe.\nConcepts: secret of happiness; earthly happiness; soul development; specific spiritual method; recipe analogy\nUser terminology: how to be happy; secret of happiness; happiness in this world; spiritual fulfillment; practical recipe for happiness; religion as a concrete method\nQuestions: What did Rashad call the secret of happiness? Did Rashad say happiness is attainable in this life? Why did Rashad compare the method to a cookbook recipe? Did he say the knowledge was free?"
+    },
+    {
+      "id": "life-01-s10",
+      "start_row": 175,
+      "end_row": 185,
+      "title": "Demanding tangible evidence",
+      "summary": "Rashad explains that listeners should believe only after seeing what he calls a mathematically coded message from God. He contrasts tangible evidence with imagination, speculation, and conjecture.",
+      "concepts": [
+        {
+          "id": "tangible-evidence",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "mathematical-code",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "evidence-over-speculation",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "why-believe-rashad",
+          "relation": "answered",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "proof of Rashad's claims",
+        "physical evidence",
+        "mathematical proof",
+        "why believe Rashad",
+        "evidence rather than faith",
+        "Quran code evidence"
+      ],
+      "related_questions": [
+        "Why did Rashad say people should believe him?",
+        "What evidence did Rashad claim he could show?",
+        "Did Rashad ask people to accept his claims without proof?",
+        "How did he distinguish evidence from speculation?"
+      ],
+      "retrieval_note": "Directly relevant to questions about his evidentiary method and the mathematical code.",
+      "start": 1156.78,
+      "end": 1210.78,
+      "start_time": "00:19:16.780",
+      "end_time": "00:20:10.780",
+      "source_segment_start": 175,
+      "source_segment_end": 185,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "As you see, it's been all common sense and this is why you ought to believe me. Why should you believe me by the way? Let me ask that question. Why should you believe me? You should believe me because when you discuss this matter with me, if we meet in person, I'll show you tangible evidence and you will see that we have a mathematically coded message from God. You will see the physical evidence. If you don't see it, just leave. I mean, you don't have to take it. You look at the evidence, you see it is tangible, concrete, and you see the results. And you visualize the whole thing. I mean, it will be in front of you. There is no imagination, or speculation, or conjecture. This is the real thing. And from the beginning of this program to the end, it is all common sense, isn't it?",
+      "retrieval_text": "Demanding tangible evidence\nRashad explains that listeners should believe only after seeing what he calls a mathematically coded message from God. He contrasts tangible evidence with imagination, speculation, and conjecture.\nConcepts: tangible evidence; mathematical code; evidence over speculation; why believe rashad\nUser terminology: proof of Rashad's claims; physical evidence; mathematical proof; why believe Rashad; evidence rather than faith; Quran code evidence\nQuestions: Why did Rashad say people should believe him? What evidence did Rashad claim he could show? Did Rashad ask people to accept his claims without proof? How did he distinguish evidence from speculation?"
+    },
+    {
+      "id": "life-01-s11",
+      "start_row": 186,
+      "end_row": 200,
+      "title": "Divine authority, one earthly life, and eternal rank",
+      "summary": "Rashad identifies God as the authority behind the teaching, calls the discovery a new stage in history, and says each person has one life in this world before entering eternal life. Rank there depends on development of the soul.",
+      "concepts": [
+        {
+          "id": "divine-authority",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "one-earthly-life",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "reincarnation",
+          "relation": "implicitly-rejected",
+          "explicit": false
+        },
+        {
+          "id": "eternal-rank",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "soul-development",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "one life only",
+        "reincarnation",
+        "multiple earthly lives",
+        "rank in the afterlife",
+        "preparing for eternal life",
+        "spiritual maturity"
+      ],
+      "related_questions": [
+        "Did Rashad believe in reincarnation?",
+        "How many earthly lives did Rashad say people have?",
+        "What determines a person's rank in eternal life?",
+        "Why did he compare an undeveloped soul to a child who cannot be a pilot?"
+      ],
+      "retrieval_note": "A key conceptual match: the word 'reincarnation' is absent, but the one-life statement bears directly on it.",
+      "start": 1211.32,
+      "end": 1304.96,
+      "start_time": "00:20:11.320",
+      "end_time": "00:21:44.960",
+      "source_segment_start": 186,
+      "source_segment_end": 200,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "Now, who would be the most authoritative source to give you this kind of information? The Creator, the One who created your soul, the One who breathed into Adam from His breath. Your soul is a piece of God, and the source of all this information is God. And you will see it supported by physical evidence. This is a new stage in human history and you can be one of the pioneers to discover this. The discovery, by the way, is very recent. And maybe 50 years from now, everybody will know about it. But right now, only select few, the elite of the elite, knows it, and you can be one of those. God willing, it will be known in a shorter time than 50 years. But you can grasp this opportunity now. You live in this world only one life and then we go on to the... we move on to a new stage, the eternal real life where everyone is assigned a rank and a position depending on how much you nourished your real self. Can you hire a child as a pilot or an engineer? You can't. Therefore, you have to develop the real person and grow and nourish in order to be strong enough for the eternal real life that will come after this world. And then you'll be assigned a prominent rank.",
+      "retrieval_text": "Divine authority, one earthly life, and eternal rank\nRashad identifies God as the authority behind the teaching, calls the discovery a new stage in history, and says each person has one life in this world before entering eternal life. Rank there depends on development of the soul.\nConcepts: divine authority; one earthly life; reincarnation; eternal rank; soul development\nUser terminology: one life only; reincarnation; multiple earthly lives; rank in the afterlife; preparing for eternal life; spiritual maturity\nQuestions: Did Rashad believe in reincarnation? How many earthly lives did Rashad say people have? What determines a person's rank in eternal life? Why did he compare an undeveloped soul to a child who cannot be a pilot?"
+    },
+    {
+      "id": "life-01-s12",
+      "start_row": 201,
+      "end_row": 205,
+      "title": "Spiritual nourishment brings earthly benefit",
+      "summary": "Rashad says the effects of nourishing the soul begin in the present world. He cites God's promise that believers who lead righteous lives will become sovereign on earth.",
+      "concepts": [
+        {
+          "id": "earthly-benefits-of-faith",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "sovereignty-on-earth",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "righteous-life",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "divine-promise",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "benefits of faith in this life",
+        "success on earth",
+        "believers becoming sovereign",
+        "kings and queens on earth",
+        "God's promises"
+      ],
+      "related_questions": [
+        "Did Rashad say the benefits of faith begin before the afterlife?",
+        "What did he say God promises righteous believers on earth?",
+        "What did Rashad mean by becoming kings and queens on earth?"
+      ],
+      "retrieval_note": "Relevant to questions about worldly success, divine promises, and the present consequences of righteousness.",
+      "start": 1304.96,
+      "end": 1333.63,
+      "start_time": "00:21:44.960",
+      "end_time": "00:22:13.630",
+      "source_segment_start": 201,
+      "source_segment_end": 205,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "And like I said, you don't have to wait for that. Happiness, real happiness and the consequences of nourishing your soul begin right here. God's promises have to be a fact. And God says He promises those among you who believe and lead a righteous life that they will be sovereigns on earth, kings and queens on earth. And when God says that He promises, it is done.",
+      "retrieval_text": "Spiritual nourishment brings earthly benefit\nRashad says the effects of nourishing the soul begin in the present world. He cites God's promise that believers who lead righteous lives will become sovereign on earth.\nConcepts: earthly benefits of faith; sovereignty on earth; righteous life; divine promise\nUser terminology: benefits of faith in this life; success on earth; believers becoming sovereign; kings and queens on earth; God's promises\nQuestions: Did Rashad say the benefits of faith begin before the afterlife? What did he say God promises righteous believers on earth? What did Rashad mean by becoming kings and queens on earth?"
+    },
+    {
+      "id": "life-01-s13",
+      "start_row": 206,
+      "end_row": 218,
+      "title": "Invitation to examine the evidence",
+      "summary": "Rashad closes by inviting viewers to request proof, meet him in Tucson, and decide for themselves without payment. He returns to the claim that human beings are more than bodies.",
+      "concepts": [
+        {
+          "id": "free-invitation-to-examine-evidence",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "personal-verification",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "tucson-ministry",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "human-identity",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "where to meet Rashad",
+        "Tucson address",
+        "Rashad's phone number",
+        "free proof",
+        "examine the evidence personally",
+        "humans are more than bodies"
+      ],
+      "related_questions": [
+        "Where did Rashad invite viewers to meet him?",
+        "Did Rashad charge money to show the evidence?",
+        "What telephone number did the program give?",
+        "How did Rashad summarize the difference between people and walking bodies?"
+      ],
+      "retrieval_note": "Primarily navigational and historical metadata, with a concluding identity statement.",
+      "start": 1333.83,
+      "end": 1406.223,
+      "start_time": "00:22:13.830",
+      "end_time": "00:23:26.223",
+      "source_segment_start": 206,
+      "source_segment_end": 218,
+      "speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "catalog-author; confirm against audio during review",
+      "stance": "speaker's own teaching",
+      "review_status": "draft",
+      "canonical_text": "What I told you is a very condensed summary of this major historical event. Needless to say, there is a lot of detail that anyone can come and see me, and talk about it and discuss it. They can demand the proof. \"Where is the physical evidence, the concrete tangible evidence you're talking about?\" They can come and ask me that. And I will show it to them. And then they can make their decision themselves. They have got nothing to lose. And this is all free. I never ask him for a penny. So, they can come and see me in Tucson at 739 East 6th Street, or better yet call and make an appointment and I will sit with them and show them the proof. The telephone number should be shown at the end of this program. It is 791-3989. And it could be the most important step they have made in their life. And it results from the realization that we are not just walking zombies. We're not just bodies walking around with nothing in them.",
+      "retrieval_text": "Invitation to examine the evidence\nRashad closes by inviting viewers to request proof, meet him in Tucson, and decide for themselves without payment. He returns to the claim that human beings are more than bodies.\nConcepts: free invitation to examine evidence; personal verification; tucson ministry; human identity\nUser terminology: where to meet Rashad; Tucson address; Rashad's phone number; free proof; examine the evidence personally; humans are more than bodies\nQuestions: Where did Rashad invite viewers to meet him? Did Rashad charge money to show the evidence? What telephone number did the program give? How did Rashad summarize the difference between people and walking bodies?"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "human-identity",
+      "preferred_label": "Human identity and the real self",
+      "aliases": [
+        "Who am I?",
+        "real person",
+        "real self",
+        "inner person"
+      ]
+    },
+    {
+      "id": "body-and-soul",
+      "preferred_label": "Body and soul distinction",
+      "aliases": [
+        "body versus soul",
+        "dual nature of the human being"
+      ]
+    },
+    {
+      "id": "soul-as-real-self",
+      "preferred_label": "The soul as the real person",
+      "aliases": [
+        "real self",
+        "true self",
+        "eternal person"
+      ]
+    },
+    {
+      "id": "body-as-temporary-garment",
+      "preferred_label": "The body as a temporary garment",
+      "aliases": [
+        "shed the body",
+        "temporary body",
+        "body is not the self"
+      ]
+    },
+    {
+      "id": "spiritual-priorities",
+      "preferred_label": "Prioritizing the soul over the body",
+      "aliases": [
+        "rearranging priorities",
+        "body serving the soul"
+      ]
+    },
+    {
+      "id": "purpose-of-life",
+      "preferred_label": "Purpose of earthly life",
+      "aliases": [
+        "what life is all about",
+        "meaning of life"
+      ]
+    },
+    {
+      "id": "soul-nourishment",
+      "preferred_label": "Nourishment of the soul",
+      "aliases": [
+        "feeding the soul",
+        "spiritual food",
+        "food for the real self"
+      ]
+    },
+    {
+      "id": "soul-growth",
+      "preferred_label": "Growth of the soul",
+      "aliases": [
+        "developing the soul",
+        "strengthening the real self"
+      ]
+    },
+    {
+      "id": "premortal-existence",
+      "preferred_label": "Existence before bodily birth",
+      "aliases": [
+        "pre-existence of the soul",
+        "premortal life",
+        "life before birth"
+      ]
+    },
+    {
+      "id": "eternal-soul",
+      "preferred_label": "The soul's continuing existence",
+      "aliases": [
+        "immortal soul",
+        "eternal self",
+        "infinite person"
+      ]
+    },
+    {
+      "id": "contact-prayers",
+      "preferred_label": "Contact Prayers",
+      "aliases": [
+        "salat",
+        "ritual prayer",
+        "daily contact with God"
+      ]
+    },
+    {
+      "id": "supplication-versus-contact-prayer",
+      "preferred_label": "Supplication distinguished from Contact Prayer",
+      "aliases": [
+        "ordinary prayer versus salat",
+        "asking God versus ritual contact"
+      ]
+    },
+    {
+      "id": "fasting-as-spiritual-discipline",
+      "preferred_label": "Fasting as spiritual discipline",
+      "aliases": [
+        "controlling the body",
+        "mastering appetite",
+        "soul development through fasting"
+      ]
+    },
+    {
+      "id": "material-success-and-happiness",
+      "preferred_label": "Material success does not guarantee happiness",
+      "aliases": [
+        "money cannot buy happiness",
+        "fame does not satisfy",
+        "wealth without fulfillment"
+      ]
+    },
+    {
+      "id": "secret-of-happiness",
+      "preferred_label": "The method for attaining happiness",
+      "aliases": [
+        "how to be happy",
+        "spiritual fulfillment",
+        "real happiness"
+      ]
+    },
+    {
+      "id": "tangible-evidence",
+      "preferred_label": "Tangible evidence for religious claims",
+      "aliases": [
+        "physical proof",
+        "concrete evidence",
+        "evidence over speculation"
+      ]
+    },
+    {
+      "id": "one-earthly-life",
+      "preferred_label": "One earthly life",
+      "aliases": [
+        "one life only",
+        "no repeated earthly lives"
+      ]
+    },
+    {
+      "id": "reincarnation",
+      "preferred_label": "Reincarnation",
+      "aliases": [
+        "multiple lives",
+        "returning to earth",
+        "rebirth"
+      ]
+    },
+    {
+      "id": "eternal-rank",
+      "preferred_label": "Rank in eternal life",
+      "aliases": [
+        "afterlife rank",
+        "position in the next life",
+        "spiritual maturity"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "life-01-issue-01",
+      "start_time": "00:03:45.000",
+      "end_time": "00:04:00.450",
+      "source_segment_start": 25,
+      "source_segment_end": 26,
+      "original_text": "this cannot result without knowing that I am a body and the soul, and I must put the body in the service of the soul.",
+      "issue_type": "possible_mistranscription",
+      "suggested_action": "Listen to the audio. The surrounding argument suggests a phrase such as 'I am not the body; I am the soul' or 'I am a body and a soul,' but no correction should be made without audio verification.",
+      "status": "needs_audio_review"
+    },
+    {
+      "id": "life-01-issue-02",
+      "start_time": "00:15:58.530",
+      "end_time": "00:16:02.930",
+      "source_segment_start": 143,
+      "source_segment_end": 143,
+      "original_text": "yet he told Barber Walters there is something missing.",
+      "issue_type": "probable_name_error",
+      "suggested_action": "Verify and likely correct 'Barber Walters' to 'Barbara Walters.'",
+      "status": "needs_audio_review"
+    },
+    {
+      "id": "life-01-issue-03",
+      "start_time": "00:01:04.110",
+      "end_time": "00:23:26.223",
+      "source_segment_start": 0,
+      "source_segment_end": 218,
+      "original_text": "The Speaker column is blank for all 219 rows.",
+      "issue_type": "missing_speaker_metadata",
+      "suggested_action": "Populate the speaker as Dr. Rashad Khalifa after confirming that the program contains no other speakers. The archive catalog identifies him as the author.",
+      "status": "metadata_review"
+    }
+  ],
+  "canonical_document_id": "video-program/what-is-life-all-about",
+  "canonical_catalog_ids": [
+    "video-program/what-is-life-all-about"
+  ],
+  "canonical_mapping": "exact-document-id",
+  "archive_number": 1,
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

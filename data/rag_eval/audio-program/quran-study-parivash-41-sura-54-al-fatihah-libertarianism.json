@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.6-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-41-sura-54-al-fatihah-libertarianism",
+  "title": "Quran Study from Parivash 41: Sura 54, al-Fatihah for Personal Requests, and Extreme Libertarianism",
+  "cases": [
+    {
+      "id": "audio41-eval-001",
+      "question": "How did Rashad interpret the splitting of the moon?",
+      "expected_section_ids": [
+        "audio41-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the approach of the Hour and the splitting of the moon, identifying the early-1970s moon landing and lunar samples as fulfillment. The repeated rejection of signs leads into the soul as the real person that must be nourished rather than neglected."
+    },
+    {
+      "id": "audio41-eval-002",
+      "question": "What did he mean by feeding the soul?",
+      "expected_section_ids": [
+        "audio41-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the approach of the Hour and the splitting of the moon, identifying the early-1970s moon landing and lunar samples as fulfillment. The repeated rejection of signs leads into the soul as the real person that must be nourished rather than neglected."
+    },
+    {
+      "id": "audio41-eval-003",
+      "question": "How was resurrection illustrated?",
+      "expected_section_ids": [
+        "audio41-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 54:6–17 describes the call to Judgment, people leaving graves like locusts, and Noah's deliverance. Rashad compares resurrection with a caterpillar and butterfly, rejects a universal flood, criticizes Mount Ararat searches, and locates the ark in Judea."
+    },
+    {
+      "id": "audio41-eval-004",
+      "question": "What flood and ark claims were made?",
+      "expected_section_ids": [
+        "audio41-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 54:6–17 describes the call to Judgment, people leaving graves like locusts, and Noah's deliverance. Rashad compares resurrection with a caterpillar and butterfly, rejects a universal flood, criticizes Mount Ararat searches, and locates the ark in Judea."
+    },
+    {
+      "id": "audio41-eval-005",
+      "question": "What covenant was associated with Abraham?",
+      "expected_section_ids": [
+        "audio41-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses Abraham's earthly covenant and the origin of Submission. Sura 54's Ad and Thamud narratives show recurring rejection, the shared-water camel test, destruction, and the repeated statement that the Quran is easy to learn. Rashad says miracles suit their historical age."
+    },
+    {
+      "id": "audio41-eval-006",
+      "question": "How did the camel test work?",
+      "expected_section_ids": [
+        "audio41-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses Abraham's earthly covenant and the origin of Submission. Sura 54's Ad and Thamud narratives show recurring rejection, the shared-water camel test, destruction, and the repeated statement that the Quran is easy to learn. Rashad says miracles suit their historical age."
+    },
+    {
+      "id": "audio41-eval-007",
+      "question": "Why do signs vary by age?",
+      "expected_section_ids": [
+        "audio41-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses Abraham's earthly covenant and the origin of Submission. Sura 54's Ad and Thamud narratives show recurring rejection, the shared-water camel test, destruction, and the repeated statement that the Quran is easy to learn. Rashad says miracles suit their historical age."
+    },
+    {
+      "id": "audio41-eval-008",
+      "question": "What does Sura 54 say about recorded deeds?",
+      "expected_section_ids": [
+        "audio41-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The remaining Sura passages concern Lot, Pharaoh, judgment, the destruction of counterparts, every small and large deed being written, and the righteous in gardens. The discussion moves into hands, fingers, thumbs, bodily reach, atoms, and molecular design."
+    },
+    {
+      "id": "audio41-eval-009",
+      "question": "Which bodily features were treated as design evidence?",
+      "expected_section_ids": [
+        "audio41-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The remaining Sura passages concern Lot, Pharaoh, judgment, the destruction of counterparts, every small and large deed being written, and the righteous in gardens. The discussion moves into hands, fingers, thumbs, bodily reach, atoms, and molecular design."
+    },
+    {
+      "id": "audio41-eval-010",
+      "question": "What scientific claim was challenged?",
+      "expected_section_ids": [
+        "audio41-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi and other scientifically trained participants challenge claims about the number and classification of amino acids. The exchange shows internal correction and the risk of presenting an imprecise scientific claim as part of a numerical proof."
+    },
+    {
+      "id": "audio41-eval-011",
+      "question": "Why did Sabahi object to using it apologetically?",
+      "expected_section_ids": [
+        "audio41-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi and other scientifically trained participants challenge claims about the number and classification of amino acids. The exchange shows internal correction and the risk of presenting an imprecise scientific claim as part of a numerical proof."
+    },
+    {
+      "id": "audio41-eval-012",
+      "question": "What did Rashad mean by extreme libertarianism?",
+      "expected_section_ids": [
+        "audio41-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group debates the United States, foreign policy, the CIA, Yemen, government intervention, and responsibility. Rashad calls the Quran's position maximum freedom and extreme libertarianism. The gathering closes by reading al-Fatihah for Gatut, another participant facing a test, and any personal wish silently held by each reader."
+    },
+    {
+      "id": "audio41-eval-013",
+      "question": "How was al-Fatihah used at the close?",
+      "expected_section_ids": [
+        "audio41-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group debates the United States, foreign policy, the CIA, Yemen, government intervention, and responsibility. Rashad calls the Quran's position maximum freedom and extreme libertarianism. The gathering closes by reading al-Fatihah for Gatut, another participant facing a test, and any personal wish silently held by each reader."
+    }
+  ],
+  "canonical_document_id": "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari",
+  "canonical_catalog_ids": [
+    "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari"
+  ],
+  "canonical_mapping": "youtube-id"
+}

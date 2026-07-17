@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-36-mathematical-miracles-sura-7-deliberate-mistakes",
+  "title": "Quran Study from Parivash 36: Mathematical Miracles, Sura 7, and Deliberate Mistakes to Destroy Idols",
+  "cases": [
+    {
+      "id": "audio36-eval-001",
+      "question": "What claim survives in the partial opening?",
+      "expected_section_ids": [
+        "parivash36-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The source begins mid-discussion with the claim that God matches jinn deserving guidance with selected humans and gives jinn a longer period of learning."
+    },
+    {
+      "id": "audio36-eval-002",
+      "question": "How was the first long number built?",
+      "expected_section_ids": [
+        "parivash36-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad explains constructing a long number from each Sura number, verse total, Bismillah represented by zero, and every verse number. Adding zeros reportedly produces a 13,038-digit number divisible by nineteen and distinguishes Sura 9's missing Bismillah."
+    },
+    {
+      "id": "audio36-eval-003",
+      "question": "What role did the missing Bismillah have?",
+      "expected_section_ids": [
+        "parivash36-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad explains constructing a long number from each Sura number, verse total, Bismillah represented by zero, and every verse number. Adding zeros reportedly produces a 13,038-digit number divisible by nineteen and distinguishes Sura 9's missing Bismillah."
+    },
+    {
+      "id": "audio36-eval-004",
+      "question": "Why did the group prostrate?",
+      "expected_section_ids": [
+        "parivash36-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A woman leads collective prostration and repentance. She distinguishes structural mathematics from literary composition and cites controlled initials, 2,698 occurrences of God with a verse-reference sum, and fifty-seven occurrences of Quran."
+    },
+    {
+      "id": "audio36-eval-005",
+      "question": "Which letter and word totals were presented?",
+      "expected_section_ids": [
+        "parivash36-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A woman leads collective prostration and repentance. She distinguishes structural mathematics from literary composition and cites controlled initials, 2,698 occurrences of God with a verse-reference sum, and fifty-seven occurrences of Quran."
+    },
+    {
+      "id": "audio36-eval-006",
+      "question": "How was the sequential construction made?",
+      "expected_section_ids": [
+        "parivash36-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The second construction pairs each verse's local number with its sequential position from the beginning of the Quran and prefixes Sura numbers. It yields claims of 6,346 verses, 12,806 component numbers, 37,088 digits, and a long number divisible by nineteen. Including Quran 9:128–129 or a Bismillah before Sura 9 allegedly destroys the pattern."
+    },
+    {
+      "id": "audio36-eval-007",
+      "question": "Which totals were claimed?",
+      "expected_section_ids": [
+        "parivash36-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The second construction pairs each verse's local number with its sequential position from the beginning of the Quran and prefixes Sura numbers. It yields claims of 6,346 verses, 12,806 component numbers, 37,088 digits, and a long number divisible by nineteen. Including Quran 9:128–129 or a Bismillah before Sura 9 allegedly destroys the pattern."
+    },
+    {
+      "id": "audio36-eval-008",
+      "question": "What happens if the two verses are included?",
+      "expected_section_ids": [
+        "parivash36-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The second construction pairs each verse's local number with its sequential position from the beginning of the Quran and prefixes Sura numbers. It yields claims of 6,346 verses, 12,806 component numbers, 37,088 digits, and a long number divisible by nineteen. Including Quran 9:128–129 or a Bismillah before Sura 9 allegedly destroys the pattern."
+    },
+    {
+      "id": "audio36-eval-009",
+      "question": "How were Noah and Hud treated?",
+      "expected_section_ids": [
+        "parivash36-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Noah and Hud being called astray, foolish, or liars despite offering sincere advice and clear messages. He applies the repeated wording to contemporary resistance to a human messenger and says ego causes resentment when truth comes through another ordinary person."
+    },
+    {
+      "id": "audio36-eval-010",
+      "question": "Why did Rashad connect the narratives to ego?",
+      "expected_section_ids": [
+        "parivash36-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Noah and Hud being called astray, foolish, or liars despite offering sincere advice and clear messages. He applies the repeated wording to contemporary resistance to a human messenger and says ego causes resentment when truth comes through another ordinary person."
+    },
+    {
+      "id": "audio36-eval-011",
+      "question": "Why did Rashad say he made deliberate mistakes?",
+      "expected_section_ids": [
+        "parivash36-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says one of his important tasks is destroying idols. He may refuse to defend himself, accept an accusation, change his mind, or even deliberately make a mistake so followers see that he is fallible and do not idolize him."
+    },
+    {
+      "id": "audio36-eval-012",
+      "question": "How was this supposed to prevent idolatry?",
+      "expected_section_ids": [
+        "parivash36-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says one of his important tasks is destroying idols. He may refuse to defend himself, accept an accusation, change his mind, or even deliberately make a mistake so followers see that he is fallible and do not idolize him."
+    },
+    {
+      "id": "audio36-eval-013",
+      "question": "What happened to Salih's people?",
+      "expected_section_ids": [
+        "parivash36-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final verses describe Salih, the camel, rebellion, the earthquake, and rejection of advice. The group identifies attachment to parents and ancestral practice as a major obstacle and says age forty allows a person to become independent of the parental nest."
+    },
+    {
+      "id": "audio36-eval-014",
+      "question": "Why were parents and age forty discussed?",
+      "expected_section_ids": [
+        "parivash36-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final verses describe Salih, the camel, rebellion, the earthquake, and rejection of advice. The group identifies attachment to parents and ancestral practice as a major obstacle and says age forty allows a person to become independent of the parental nest."
+    }
+  ],
+  "canonical_document_id": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
+  "canonical_catalog_ids": [
+    "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi"
+  ],
+  "canonical_mapping": "youtube-id"
+}

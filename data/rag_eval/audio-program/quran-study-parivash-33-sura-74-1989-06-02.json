@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-33-sura-74-1989-06-02",
+  "title": "Quran Study from Parivash 33: Sura 74 (1989-06-02)",
+  "cases": [
+    {
+      "id": "audio33-eval-001",
+      "question": "Who was the covered figure?",
+      "expected_section_ids": [
+        "parivash33-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi introduces Sura 74 and questions the traditional view that the opening directly addresses Muhammad. Since the Quran speaks for all times, the hidden figure and command to warn can apply beyond the initial revelation."
+    },
+    {
+      "id": "audio33-eval-002",
+      "question": "Why did Sabahi broaden the application?",
+      "expected_section_ids": [
+        "parivash33-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi introduces Sura 74 and questions the traditional view that the opening directly addresses Muhammad. Since the Quran speaks for all times, the hidden figure and command to warn can apply beyond the initial revelation."
+    },
+    {
+      "id": "audio33-eval-003",
+      "question": "How is the rejecter portrayed?",
+      "expected_section_ids": [
+        "parivash33-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 74:11–25 portrays a man given wealth and children who demands more and plans how to dismiss revelation as human magic. Sabahi connects the passage with greed, the Iranian Revolution, his move to Tucson, discovery of the mosque, and the idea that contentment rather than money defines wealth."
+    },
+    {
+      "id": "audio33-eval-004",
+      "question": "What personal history did Sabahi share?",
+      "expected_section_ids": [
+        "parivash33-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 74:11–25 portrays a man given wealth and children who demands more and plans how to dismiss revelation as human magic. Sabahi connects the passage with greed, the Iranian Revolution, his move to Tucson, discovery of the mosque, and the idea that contentment rather than money defines wealth."
+    },
+    {
+      "id": "audio33-eval-005",
+      "question": "How was true wealth defined?",
+      "expected_section_ids": [
+        "parivash33-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 74:11–25 portrays a man given wealth and children who demands more and plans how to dismiss revelation as human magic. Sabahi connects the passage with greed, the Iranian Revolution, his move to Tucson, discovery of the mosque, and the idea that contentment rather than money defines wealth."
+    },
+    {
+      "id": "audio33-eval-006",
+      "question": "How did Rashad interpret cleansing the cover?",
+      "expected_section_ids": [
+        "parivash33-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Sura 74 concerns the number nineteen and interprets cleansing the cover as clearing doubt and removing the disputed two verses. Edip and others debate words such as dahaha, ummi, and alaq, criticizing traditional renderings including flat-earth assumptions, illiteracy, and blood clot."
+    },
+    {
+      "id": "audio33-eval-007",
+      "question": "Which translation disputes arose?",
+      "expected_section_ids": [
+        "parivash33-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Sura 74 concerns the number nineteen and interprets cleansing the cover as clearing doubt and removing the disputed two verses. Edip and others debate words such as dahaha, ummi, and alaq, criticizing traditional renderings including flat-earth assumptions, illiteracy, and blood clot."
+    },
+    {
+      "id": "audio33-eval-008",
+      "question": "What purposes does verse 31 assign to nineteen?",
+      "expected_section_ids": [
+        "parivash33-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The nineteen guardians are interpreted through the verse's stated functions: disturbing rejecters, convincing scripture communities, strengthening believers, removing doubt, and exposing diseased hearts. Sabahi describes his gradual acceptance and cautions that weak auxiliary arguments can diminish the stronger core evidence."
+    },
+    {
+      "id": "audio33-eval-009",
+      "question": "How did Sabahi describe his acceptance?",
+      "expected_section_ids": [
+        "parivash33-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The nineteen guardians are interpreted through the verse's stated functions: disturbing rejecters, convincing scripture communities, strengthening believers, removing doubt, and exposing diseased hearts. Sabahi describes his gradual acceptance and cautions that weak auxiliary arguments can diminish the stronger core evidence."
+    },
+    {
+      "id": "audio33-eval-010",
+      "question": "What warning did he give about weak arguments?",
+      "expected_section_ids": [
+        "parivash33-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The nineteen guardians are interpreted through the verse's stated functions: disturbing rejecters, convincing scripture communities, strengthening believers, removing doubt, and exposing diseased hearts. Sabahi describes his gradual acceptance and cautions that weak auxiliary arguments can diminish the stronger core evidence."
+    },
+    {
+      "id": "audio33-eval-011",
+      "question": "What judgments were permitted?",
+      "expected_section_ids": [
+        "parivash33-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants distinguish ordinary practical judgment from claiming that someone is destined for Heaven or Hell. Rashad says even slight suspicion is sinful and gives the example of misreading a facial expression caused by pain. Attendance and work obligations illustrate the danger of unsupported assumptions."
+    },
+    {
+      "id": "audio33-eval-012",
+      "question": "What kind of suspicion was condemned?",
+      "expected_section_ids": [
+        "parivash33-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants distinguish ordinary practical judgment from claiming that someone is destined for Heaven or Hell. Rashad says even slight suspicion is sinful and gives the example of misreading a facial expression caused by pain. Attendance and work obligations illustrate the danger of unsupported assumptions."
+    },
+    {
+      "id": "audio33-eval-013",
+      "question": "What is called a great miracle?",
+      "expected_section_ids": [
+        "parivash33-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads Quran 74:32–47. The great miracle warns humanity and allows advance or regression. Every soul is trapped by sins. The guilty say they neglected Contact Prayer, feeding the poor, independent thought, and Judgment until certainty arrived too late."
+    },
+    {
+      "id": "audio33-eval-014",
+      "question": "Which reasons do the guilty give?",
+      "expected_section_ids": [
+        "parivash33-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads Quran 74:32–47. The great miracle warns humanity and allows advance or regression. Every soul is trapped by sins. The guilty say they neglected Contact Prayer, feeding the poor, independent thought, and Judgment until certainty arrived too late."
+    },
+    {
+      "id": "audio33-eval-015",
+      "question": "How was age forty qualified?",
+      "expected_section_ids": [
+        "parivash33-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads Quran 74:32–47. The great miracle warns humanity and allows advance or regression. Every soul is trapped by sins. The guilty say they neglected Contact Prayer, feeding the poor, independent thought, and Judgment until certainty arrived too late."
+    },
+    {
+      "id": "audio33-eval-016",
+      "question": "Why did Edip connect intercession with denial of Judgment?",
+      "expected_section_ids": [
+        "parivash33-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip argues that belief in intercession contradicts genuine belief in Judgment because no soul controls anything that day. He also notes that hypocrites appear only after a movement gains benefits, making the reference to diseased hearts a future prophecy from the early revelation period."
+    },
+    {
+      "id": "audio33-eval-017",
+      "question": "When do hypocrites appear?",
+      "expected_section_ids": [
+        "parivash33-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip argues that belief in intercession contradicts genuine belief in Judgment because no soul controls anything that day. He also notes that hypocrites appear only after a movement gains benefits, making the reference to diseased hearts a future prophecy from the early revelation period."
+    }
+  ],
+  "canonical_document_id": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
+  "canonical_catalog_ids": [
+    "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989"
+  ],
+  "canonical_mapping": "youtube-id"
+}

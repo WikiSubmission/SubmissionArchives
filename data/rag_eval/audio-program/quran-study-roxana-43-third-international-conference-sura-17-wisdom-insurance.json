@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.6-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-roxana-43-third-international-conference-sura-17-wisdom-insurance",
+  "title": "Quran Study from Roxana 43: Third International Conference Speech, Quran 17:39, and Insurance",
+  "cases": [
+    {
+      "id": "audio43-eval-001",
+      "question": "What forms of messenger idolatry were criticized?",
+      "expected_section_ids": [
+        "audio43-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Christians idolize Jesus and Muslims idolize Muhammad through prayer and intercession. Quran 3:81 and 33:7 are used to argue that a messenger comes after the prophets and may be an ordinary contemporary human."
+    },
+    {
+      "id": "audio43-eval-002",
+      "question": "How was the covenant interpreted?",
+      "expected_section_ids": [
+        "audio43-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Christians idolize Jesus and Muslims idolize Muhammad through prayer and intercession. Quran 3:81 and 33:7 are used to argue that a messenger comes after the prophets and may be an ordinary contemporary human."
+    },
+    {
+      "id": "audio43-eval-003",
+      "question": "How was the conference described?",
+      "expected_section_ids": [
+        "audio43-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ismail congratulates the gathering as a unique God-alone conference. Rashad recounts a discussion about melodic recitation and jokingly adding music, followed by a bird appearing to harmonize with Parivash's reading. Other coincidences are treated as signs surrounding the conference."
+    },
+    {
+      "id": "audio43-eval-004",
+      "question": "What happened during Parivash's recitation?",
+      "expected_section_ids": [
+        "audio43-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ismail congratulates the gathering as a unique God-alone conference. Rashad recounts a discussion about melodic recitation and jokingly adding music, followed by a bird appearing to harmonize with Parivash's reading. Other coincidences are treated as signs surrounding the conference."
+    },
+    {
+      "id": "audio43-eval-005",
+      "question": "Why did Rashad call the Quran itself wisdom?",
+      "expected_section_ids": [
+        "audio43-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad rejects the claim that scripture means Quran while wisdom means Hadith. Quran 17:39 calls the preceding commandments wisdom. The invisible barrier, shields, deafness, and aversion to Quran-alone preaching become criteria for belief in the Hereafter."
+    },
+    {
+      "id": "audio43-eval-006",
+      "question": "What was the invisible barrier?",
+      "expected_section_ids": [
+        "audio43-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad rejects the claim that scripture means Quran while wisdom means Hadith. Quran 17:39 calls the preceding commandments wisdom. The invisible barrier, shields, deafness, and aversion to Quran-alone preaching become criteria for belief in the Hereafter."
+    },
+    {
+      "id": "audio43-eval-007",
+      "question": "How were belief criteria defined?",
+      "expected_section_ids": [
+        "audio43-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad rejects the claim that scripture means Quran while wisdom means Hadith. Quran 17:39 calls the preceding commandments wisdom. The invisible barrier, shields, deafness, and aversion to Quran-alone preaching become criteria for belief in the Hereafter."
+    },
+    {
+      "id": "audio43-eval-008",
+      "question": "How were hypocrites distinguished?",
+      "expected_section_ids": [
+        "audio43-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion distinguishes disbelievers from hypocrites, treats Satan's world as inherently deteriorating, compares Satan's attempts at reform with Perestroika, and recounts the miracle emerging from work at the largest brewery."
+    },
+    {
+      "id": "audio43-eval-009",
+      "question": "Why was Perestroika used as an analogy?",
+      "expected_section_ids": [
+        "audio43-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion distinguishes disbelievers from hypocrites, treats Satan's world as inherently deteriorating, compares Satan's attempts at reform with Perestroika, and recounts the miracle emerging from work at the largest brewery."
+    },
+    {
+      "id": "audio43-eval-010",
+      "question": "What did Satan's pocket mean?",
+      "expected_section_ids": [
+        "audio43-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion distinguishes disbelievers from hypocrites, treats Satan's world as inherently deteriorating, compares Satan's attempts at reform with Perestroika, and recounts the miracle emerging from work at the largest brewery."
+    },
+    {
+      "id": "audio43-eval-011",
+      "question": "How was human rank discussed?",
+      "expected_section_ids": [
+        "audio43-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip and Rashad discuss Quran 17:70 and human rank among creation. Rashad uses John 20:17 to say Jesus has a God and rejects the Trinity, while also discussing the questionable textual status of an only-begotten-son verse."
+    },
+    {
+      "id": "audio43-eval-012",
+      "question": "What argument came from John 20:17?",
+      "expected_section_ids": [
+        "audio43-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip and Rashad discuss Quran 17:70 and human rank among creation. Rashad uses John 20:17 to say Jesus has a God and rejects the Trinity, while also discussing the questionable textual status of an only-begotten-son verse."
+    },
+    {
+      "id": "audio43-eval-013",
+      "question": "How was insurance characterized?",
+      "expected_section_ids": [
+        "audio43-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says insurance operates through fear and that believers should have no grief, phobias, or fear of cockroaches because divine protection prevents even a scratch. Participants ask about smoking workplaces and selling beer, which he says should be avoided."
+    },
+    {
+      "id": "audio43-eval-014",
+      "question": "What was said about phobias and protection?",
+      "expected_section_ids": [
+        "audio43-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says insurance operates through fear and that believers should have no grief, phobias, or fear of cockroaches because divine protection prevents even a scratch. Participants ask about smoking workplaces and selling beer, which he says should be avoided."
+    },
+    {
+      "id": "audio43-eval-015",
+      "question": "What business practices were avoided?",
+      "expected_section_ids": [
+        "audio43-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says insurance operates through fear and that believers should have no grief, phobias, or fear of cockroaches because divine protection prevents even a scratch. Participants ask about smoking workplaces and selling beer, which he says should be avoided."
+    },
+    {
+      "id": "audio43-eval-016",
+      "question": "How was Joseph's prostration explained?",
+      "expected_section_ids": [
+        "audio43-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip asks why Joseph's family prostrated before him if prostration belongs to God alone. The discussion distinguishes a historical gesture of submission or respect from worship. A family telephone story provides reassurance before the recording loops back to the Quran-is-wisdom section."
+    },
+    {
+      "id": "audio43-eval-017",
+      "question": "Why is the final segment marked duplicate?",
+      "expected_section_ids": [
+        "audio43-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip asks why Joseph's family prostrated before him if prostration belongs to God alone. The discussion distinguishes a historical gesture of submission or respect from worship. A family telephone story provides reassurance before the recording loops back to the Quran-is-wisdom section."
+    }
+  ],
+  "canonical_document_id": "quran-study/43 Quran Study From Roxana 243 Third International Conference Tucson Rashad's Speech Sura 17;39 Insu",
+  "canonical_catalog_ids": [
+    "quran-study/43 Quran Study From Roxana 243 Third International Conference Tucson Rashad's Speech Sura 17;39 Insu"
+  ],
+  "canonical_mapping": "youtube-id"
+}

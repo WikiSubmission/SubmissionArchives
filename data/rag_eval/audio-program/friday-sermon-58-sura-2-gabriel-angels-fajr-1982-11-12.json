@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/friday-sermon-58-sura-2-gabriel-angels-fajr-1982-11-12",
+  "title": "Friday Sermon 58: Sura 2, Gabriel, Angels, Dawn Prayer, and Divine Correction (1982-11-12)",
+  "cases": [
+    {
+      "id": "audio58-eval-001",
+      "question": "What did selective obedience mean?",
+      "expected_section_ids": [
+        "audio58-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says people cannot accept convenient Quranic teachings while refusing difficult ones. Iranian and Iraqi soldiers praying before fighting and other conflicts illustrate following one part while violating another. Sura 15's condemnation of dividing scripture is invoked."
+    },
+    {
+      "id": "audio58-eval-002",
+      "question": "Which contemporary examples were used?",
+      "expected_section_ids": [
+        "audio58-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says people cannot accept convenient Quranic teachings while refusing difficult ones. Iranian and Iraqi soldiers praying before fighting and other conflicts illustrate following one part while violating another. Sura 15's condemnation of dividing scripture is invoked."
+    },
+    {
+      "id": "audio58-eval-003",
+      "question": "Why was the confirming scripture rejected?",
+      "expected_section_ids": [
+        "audio58-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study reads shielded hearts, rejection of a confirming scripture through resentment over God's choice, claims to believe only prior revelation, the killing of prophets, worship of the calf, the Sinai covenant, exclusive claims to the Hereafter, and extreme attachment to long life."
+    },
+    {
+      "id": "audio58-eval-004",
+      "question": "What covenant failures were recalled?",
+      "expected_section_ids": [
+        "audio58-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study reads shielded hearts, rejection of a confirming scripture through resentment over God's choice, claims to believe only prior revelation, the killing of prophets, worship of the calf, the Sinai covenant, exclusive claims to the Hereafter, and extreme attachment to long life."
+    },
+    {
+      "id": "audio58-eval-005",
+      "question": "How was the exclusive claim to Heaven tested?",
+      "expected_section_ids": [
+        "audio58-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study reads shielded hearts, rejection of a confirming scripture through resentment over God's choice, claims to believe only prior revelation, the killing of prophets, worship of the calf, the Sinai covenant, exclusive claims to the Hereafter, and extreme attachment to long life."
+    },
+    {
+      "id": "audio58-eval-006",
+      "question": "What role did Gabriel have in revelation?",
+      "expected_section_ids": [
+        "audio58-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gabriel is said to reveal the Quran into Muhammad's heart with God's permission, confirming earlier scripture. Opposition to God, angels, messengers, Gabriel, or Michael is condemned, and scripture followers are criticized for casting their book behind their backs when a confirming messenger arrives."
+    },
+    {
+      "id": "audio58-eval-007",
+      "question": "Who is opposed in Quran 2:98?",
+      "expected_section_ids": [
+        "audio58-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gabriel is said to reveal the Quran into Muhammad's heart with God's permission, confirming earlier scripture. Opposition to God, angels, messengers, Gabriel, or Michael is condemned, and scripture followers are criticized for casting their book behind their backs when a confirming messenger arrives."
+    },
+    {
+      "id": "audio58-eval-008",
+      "question": "How did scripture followers violate their covenant?",
+      "expected_section_ids": [
+        "audio58-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gabriel is said to reveal the Quran into Muhammad's heart with God's permission, confirming earlier scripture. Opposition to God, angels, messengers, Gabriel, or Michael is condemned, and scripture followers are criticized for casting their book behind their backs when a confirming messenger arrives."
+    },
+    {
+      "id": "audio58-eval-009",
+      "question": "How broadly did Gabriel's mediating role extend?",
+      "expected_section_ids": [
+        "audio58-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Gabriel mediated revelation from Adam through Noah, Mary, Jesus, Moses, and Muhammad. Guardian angels are said to awaken believers for Dawn Prayer by speaking, knocking, shaking, pushing, or pinching. Rashad recounts hearing an Egyptian warning when he intended to return to sleep."
+    },
+    {
+      "id": "audio58-eval-010",
+      "question": "Which methods were guardian angels said to use?",
+      "expected_section_ids": [
+        "audio58-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Gabriel mediated revelation from Adam through Noah, Mary, Jesus, Moses, and Muhammad. Guardian angels are said to awaken believers for Dawn Prayer by speaking, knocking, shaking, pushing, or pinching. Rashad recounts hearing an Egyptian warning when he intended to return to sleep."
+    },
+    {
+      "id": "audio58-eval-011",
+      "question": "What personal experience did Rashad report?",
+      "expected_section_ids": [
+        "audio58-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Gabriel mediated revelation from Adam through Noah, Mary, Jesus, Moses, and Muhammad. Guardian angels are said to awaken believers for Dawn Prayer by speaking, knocking, shaking, pushing, or pinching. Rashad recounts hearing an Egyptian warning when he intended to return to sleep."
+    },
+    {
+      "id": "audio58-eval-012",
+      "question": "What mistake did Rashad think he made?",
+      "expected_section_ids": [
+        "audio58-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says he praised the smell of an intoxicant instead of fully condemning it and expected a corrective pinch. Later that day, while lighting a furnace pilot, he heard gas hissing and interpreted the danger as educational divine correction."
+    },
+    {
+      "id": "audio58-eval-013",
+      "question": "How did he interpret the furnace incident?",
+      "expected_section_ids": [
+        "audio58-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says he praised the smell of an intoxicant instead of fully condemning it and expected a corrective pinch. Later that day, while lighting a furnace pilot, he heard gas hissing and interpreted the danger as educational divine correction."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id"
+}

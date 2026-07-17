@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-57-november-5-1982-sura-2-scripture-distortion",
+  "title": "Quran Study 57: Sura 2, Scripture Distortion, Hearsay, and the Cessation of Visible Miracles (1982-11-05)",
+  "cases": [
+    {
+      "id": "audio57-eval-001",
+      "question": "What forms of concealment and distortion were condemned?",
+      "expected_section_ids": [
+        "audio57-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:76–79 condemns concealing revealed information, relying on hearsay and conjecture, and writing religious material with one's own hands before calling it divine for gain."
+    },
+    {
+      "id": "audio57-eval-002",
+      "question": "How were hearsay and conjecture described?",
+      "expected_section_ids": [
+        "audio57-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:76–79 condemns concealing revealed information, relying on hearsay and conjecture, and writing religious material with one's own hands before calling it divine for gain."
+    },
+    {
+      "id": "audio57-eval-003",
+      "question": "Which claim about Hell was rejected?",
+      "expected_section_ids": [
+        "audio57-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:80–82 rejects the claim that Hell lasts only a few days. Anyone surrounded by sin remains in Hell, while believers who perform good works remain in Heaven. The speakers debate why identical Arabic endings may require different English translation."
+    },
+    {
+      "id": "audio57-eval-004",
+      "question": "How were the two final groups contrasted?",
+      "expected_section_ids": [
+        "audio57-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:80–82 rejects the claim that Hell lasts only a few days. Anyone surrounded by sin remains in Hell, while believers who perform good works remain in Heaven. The speakers debate why identical Arabic endings may require different English translation."
+    },
+    {
+      "id": "audio57-eval-005",
+      "question": "What translation issue arose?",
+      "expected_section_ids": [
+        "audio57-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:80–82 rejects the claim that Hell lasts only a few days. Anyone surrounded by sin remains in Hell, while believers who perform good works remain in Heaven. The speakers debate why identical Arabic endings may require different English translation."
+    },
+    {
+      "id": "audio57-eval-006",
+      "question": "What sign did the objectors demand?",
+      "expected_section_ids": [
+        "audio57-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:183 records a demand that a messenger produce an offering consumed by fire. Rashad responds that earlier messengers brought exactly such signs and were still rejected or killed. Jeremiah, Zechariah, and John the Baptist are discussed."
+    },
+    {
+      "id": "audio57-eval-007",
+      "question": "How did the study answer their demand?",
+      "expected_section_ids": [
+        "audio57-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:183 records a demand that a messenger produce an offering consumed by fire. Rashad responds that earlier messengers brought exactly such signs and were still rejected or killed. Jeremiah, Zechariah, and John the Baptist are discussed."
+    },
+    {
+      "id": "audio57-eval-008",
+      "question": "Which prophetic figures were mentioned?",
+      "expected_section_ids": [
+        "audio57-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:183 records a demand that a messenger produce an offering consumed by fire. Rashad responds that earlier messengers brought exactly such signs and were still rejected or killed. Jeremiah, Zechariah, and John the Baptist are discussed."
+    },
+    {
+      "id": "audio57-eval-009",
+      "question": "What did the speakers say the Quran revealed?",
+      "expected_section_ids": [
+        "audio57-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The speakers say the Quran reveals many matters that the Children of Israel concealed and that some knowledgeable people recognize the truth of the new scripture. The discussion is polemical but emphasizes access to hidden scriptural history."
+    },
+    {
+      "id": "audio57-eval-010",
+      "question": "Why would earlier scripture communities recognize it?",
+      "expected_section_ids": [
+        "audio57-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The speakers say the Quran reveals many matters that the Children of Israel concealed and that some knowledgeable people recognize the truth of the new scripture. The discussion is polemical but emphasizes access to hidden scriptural history."
+    },
+    {
+      "id": "audio57-eval-011",
+      "question": "How did the cow identify the murderer?",
+      "expected_section_ids": [
+        "audio57-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The cow narrative is revisited. A part of the sacrificed cow is used to revive a murder victim and identify the killer. Rashad says these were the days of visible miracles but cites Sura 17 for God's decision to stop sending them because even the sea crossing, manna, quail, and water from rocks did not produce lasting belief."
+    },
+    {
+      "id": "audio57-eval-012",
+      "question": "Why were visible miracles said to have stopped?",
+      "expected_section_ids": [
+        "audio57-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The cow narrative is revisited. A part of the sacrificed cow is used to revive a murder victim and identify the killer. Rashad says these were the days of visible miracles but cites Sura 17 for God's decision to stop sending them because even the sea crossing, manna, quail, and water from rocks did not produce lasting belief."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id"
+}

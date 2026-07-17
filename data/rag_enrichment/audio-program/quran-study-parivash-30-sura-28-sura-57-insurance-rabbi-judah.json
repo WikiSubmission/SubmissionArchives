@@ -1,0 +1,1327 @@
+{
+  "schema_version": "1.4-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 30,
+  "document_id": "audio-program/quran-study-parivash-30-sura-28-sura-57-insurance-rabbi-judah",
+  "title": "Quran Study from Parivash 30: Sura 28, Sura 57, Insurance with God, Rabbi Judah, and the Heavenly Feud",
+  "date": "1989",
+  "date_precision": "inferred_year",
+  "date_note": "The recording cites a November 25, 1985 source and contains late movement doctrines; the recording date itself remains uncertain.",
+  "source_file": "data/sources/playlists/audio-transcripts/30 - Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45_33 Rashad Was Told To.csv",
+  "youtube_id": "q1snri6J2w4",
+  "youtube_url": "https://www.youtube.com/watch?v=q1snri6J2w4",
+  "primary_speakers": [
+    "Dr. Rashad Khalifa",
+    "Parivash",
+    "Edip Yuksel",
+    "Feroz",
+    "Vicky",
+    "Behrouz",
+    "Susan",
+    "Other participants"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 1055,
+    "first_speech_time": "00:00:01.640",
+    "last_speech_time": "01:29:32.600",
+    "section_count": 8,
+    "speaker_counts": {
+      "Dr. Khalifa": 839,
+      "Edip": 30,
+      "A woman": 65,
+      "Parivash": 27,
+      "A man": 61,
+      "Susan": 1,
+      "Behrouz": 7,
+      "Feroz": 15,
+      "Iron": 1,
+      "Vicky": 9
+    }
+  },
+  "document_summary": "A long composite study. Quran 28:5–17 concerns support for the oppressed, Joseph's family, Moses' mother, Pharaoh, Moses' accidental killing, repentance, and complete submission to outcomes. A second block discusses Sura 57, the messengers, Jesus, monasticism, a claimed numerical relationship among Abraham, Noah, Muhammad, and Rashad, and Rashad's mother's death and his high-horizon experience. The group then explores tests involving loved things, children, jobs, family pressure, and trust. A historical insurance-file study dated November 25, 1985 is offered as evidence that accidents do not strike protected believers. Quran 46 discusses idols disowning worshipers and Rabbi Judah the Pious as an earlier discoverer of nineteen-based structures in Jewish liturgy. Rashad presents large word and number totals, then closes by returning to the heavenly feud, Satan's claim, and the second chance.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-behrouz-23-sura-51-protection-from-accidents",
+      "relationship": "same accident-protection doctrine",
+      "note": "Neither source should guide real-world safety decisions."
+    },
+    {
+      "document_id": "video-program/friday-sermon-miracle-of-miracles-al-fatiha-five-salat-1989-12-08",
+      "relationship": "same death of Rashad's mother and mathematical evidence",
+      "note": "The video gives a later public formulation."
+    },
+    {
+      "document_id": "video-program/friday-sermon-quran-only-book-mathematically-composed-1987-11",
+      "relationship": "same Rabbi Judah and Jewish numerical precedent",
+      "note": "The bibliographic source requires verification."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Treat this as a composite source",
+      "instruction": "Each block should retrieve separately."
+    },
+    {
+      "rule": "Strongly separate insurance claims from practical advice",
+      "instruction": "Ordinary risk management remains necessary."
+    },
+    {
+      "rule": "Keep personal testimony and numerical evidence distinct",
+      "instruction": "Neither verifies the other automatically."
+    }
+  ],
+  "sections": [
+    {
+      "id": "parivash30-s01",
+      "start": 0,
+      "end": 720,
+      "title": "Quran 28:5–13, the oppressed, Joseph's family, Moses' mother, and Pharaoh",
+      "summary": "Rashad reads God's support of the oppressed and connects Joseph's rise in Egypt with the later presence of Israel's family. Moses' mother is inspired to nurse him and place him in the river, Pharaoh's household adopts him, and he is returned to his mother.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-28",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "support-oppressed",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "joseph-family",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "moses-mother",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "pharaoh",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-plan",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "make oppressed inheritors",
+        "Joseph family Egypt",
+        "throw Moses into river",
+        "returned to mother"
+      ],
+      "related_questions": [
+        "How did Joseph's story set the background?",
+        "What instructions did Moses' mother receive?",
+        "How did divine planning appear?"
+      ],
+      "quran_references": [
+        "28:5-13"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Joseph",
+        "Moses",
+        "Pharaoh"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:01.640",
+      "end_time": "00:12:02.861",
+      "source_segment_start": 0,
+      "source_segment_end": 123,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Edip",
+        "Parivash"
+      ],
+      "canonical_text": "Dr. Khalifa: أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ Bism Allah Arrahman Arraheem [28:6] And to establish them on earth, and to give Pharaoh, Hãmãn, and their troops a taste of the suffering they have inflicted upon others. This verse has to do with God supporting the oppressed. This is a divine law that we see in verse 5, just before that, that God helps the oppressed. [28:5] We willed to make it up to those who were oppressed on earth, and to turn them into dignified people, and make them the inheritors. [28:6] And to establish them on earth, and to give Pharaoh, Hãmãn, and their troops a taste of the suffering they have inflicted upon others. They were enslaving the children of Israel. Now, you remember Joseph. Joseph was picked up from the well, taken to Egypt. Eventually, he became the treasurer, and he was the man in charge of all the food for the whole world actually, because the whole world was in the Middle East, excluding China, that area, but that was the most active area in the world. And people were coming to him from everywhere, including his own family, as you remember. And then he played that trick, where they put the king's cup in his brother's goods, kept his small brother, and then finally he told them who he was and asked them to bring his family to Egypt. That was in Joseph's time. So, now, his family was who? It was his father, Israel, and his mother, and his 11 brothers. And that was the beginning of the children of Israel in Egypt. So, they came. They were dignified. And he hosted his family in the mansion. It was a very important era in Egypt. Now this history in this Sura, is 300-400 years after Joseph. And the children of Israel had multiplied and they became slaves of the Egyptians. They looked different, just by virtue of their look and their race. The Egyptians became racist and used them as slaves, built the pyramids, did the hard work. So, God feels for the oppressed and makes it up to them. It's just a quick glance at the history of Israel, the children of Israel. And it actually reflects the greatness of the Quran, because there are many such complicated stories in the Quran, and they flow perfectly, without a flaw, of course. And I really appreciate this, because I tried to write the story of the Quran, and starting with a spaceship that had 6 astronauts and 3 robots, just 9 figures. And they were supposed to fly at the speed of light, and faster than the speed of light, and witness things. And I was putting the story of the Quran in this way. But I could not keep track of the 6 people and 3 robots. I had the toughest time keeping track of who is whom, and which robot does what. Because I just had a control room, and everyone had a duty to do. 6 6 humans and 3 robots. Did I say 9 humans? Six? See, I can't even keep track of numbers now. 6 humans, and this officer is in charge of navigation, and this one is the captain, and this one is that, and this robot does this. I could not keep track of 9 things. 6 humans and 3 robots. And the Quran has hundreds of people, and God keeps track of every, the Quran keeps track of every one of them, without a single mistake. So after all the reviews and everything, if I look back, I see that I mix the robots, who is doing what, things like that. So, these stories were scattered throughout the Quran, but they are perfect. Confidence in God [28:7] We inspired Moses' mother: \"Nurse him, and when you fear for his life, throw him into the river... Does this make sense? When it comes to God, yes. I interrupted in the middle of the verse, because this is one of the most incredible stories. And it must teach us the subtitle, \"Confidence in God.\" I mean, how can you fear for your children, when you are with God? You don't fear for your children at all. It's a piece of cake, raising children for the believers. And again, God is teaching all of us through my old age and my experience. God gave me a boy and a girl, so we can have the two kinds. And when they are in God's hand, you don't worry one bit, one minute. And you see, God will let you know that they are in His hand, and will let you know that they are protected. If you worry, you're not a strong believer, you're not a good enough believer to worry. You don't have confidence in God. And of course, this depends on you. I mean, you better be solidly with God. Then, you will have that confidence, and you'll not worry about your children. They can be out in the street riding a bicycle or something. And what can you do? You can't guard them, but God can. So here, God is telling Moses' mother, if you worry about him, throw him in the river. Who ever heard of this? You get a basket, put a baby in there. Can you imagine Samarukh throwing Jafar in the river? Yeah, I mean, just to bring it to our minds. Dr. Khalifa: Go ahead, Edip. Edip: Does she know about Moses, her son, when he became a believer? Dr. Khalifa: Yes. Dr. Khalifa: When he, on his own, yeah, after he grew up, he had to make his own decisions. Edip: Yes. Edip: Yes. After a certain age, they also (unintelligible) are not responsible for them. Dr. Khalifa: He's not responsible for them. Dr. Khalifa: Yeah. They make their own decision. I'm tempted here to give an example from my own life, also. When I, I was, I was in charge of Sammy until he was, what, 21? That's right. 21. And until he got to 21, I took him all the way to the top. Maybe I shouldn't take... God He made it to the major leagues. I mean, the peak of his career is hitting the home run in Dodger Stadium. And on that day, I had a discussion. He's young, of course, and he's entitled to his young ideas. So, I think he made a fatal statement where I told him to thank God. In fact, he was playing with the computer here, and the verse that came in front of him, I think he was sitting there, said \"the more you thank Me, the more I give you.\" That was the subject that I told him. I said \"thank God for the home run.\" [57:26] ... Some of them were guided, while many were wicked. Deterioration of Religion [57:27] Subsequent to them, we sent our messengers. We sent Jesus the son of Mary, and we gave him the Injeel (Gospel), and we placed in the hearts of his followers kindness and mercy. But they invented hermitism which we never decreed for them. All we asked them to do was to uphold the commandments approved by GOD. But they did not uphold the message as they should have. Consequently, we gave those who believed among them their recompense, while many of them were wicked. [57:28] O you who believe, you shall reverence GOD and believe in His messenger. He will then grant you double the reward from His mercy, endow you with light to guide you, and forgive you. GOD is Forgiver, Most Merciful. [57:29] Thus, the followers of previous scripture should know that they have not monopolized GOD's mercy and grace, and that all grace is in GOD's hand. He bestows it upon whomever He wills. GOD is Possessor of Infinite Grace. A woman: (unintelligible) Dr. Khalifa: Yes, the same. (57:29) ذُو ٱلْفَضْلِ ٱلْعَظِيمِ Yes. A woman: (unintelligible) Dr. Khalifa: Yes. And it is Sura 57. And it just repeats over and over, believing in God and His messengers. Dr. Khalifa: Very relevant to our time. A woman: Yeah. Parivash: They said that Sura Muhammad, 38, but Abraham, 52, and Nooh (Noah), 28. Dr. Khalifa: 28. Parivash: None of them is a multiple of 19, but Muhammad and Rashad is a multiple because the time of Abraham and Nooh is it was in the Quran with the... A woman: (unintelligible) Dr. Khalifa: ....not know his children, Abdulaziz Al Saud. And this is in our lifetime, in my lifetime. Excuse me. Dr. Khalifa: In my lifetime, Abdulaziz Al Saud did not know his children. Edip: Rashad, maybe with... how do you say it, polygamy (unintelligible) I think he was not the only man. There were others. Dr. Khalifa: Of course, and everyone was doing the same thing. Edip: No, no, no. Different ratio between men and woman Dr. Khalifa: No, no, no. Edip: It is (unintelligible) Dr. Khalifa: Yes, there were. Dr. Khalifa: There was a higher, much higher proportion of women than men because if you have a society of 200 men and 1 woman, you will still have 1 baby every year. But it was the other way around. Edip: (unintelligible) Dr. Khalifa: Yeah. No, no, the proportion of women was much higher, and lifespan was much longer. And the neighbors used to go to Noah and ask for allowance to take advantage of the fact that he didn't know who they were. A man: (unintelligible) A man: That's a joke. That's a joke isn't it? Dr. Khalifa: That's a joke. Dr. Khalifa: I'm sure it happened. Here comes a 10 year old kid \"Dad, give me my allowance.\" \"Who are you?\" \"I'm your son.\" \"You're sure?\" \"Yes.\" \"Okay.\" And he's the neighbor's kid. Anyway, we know about one who went bad, so that's not bad at all. This will not happen to us, IN SHAA ALLAH. Because we have what, 2, 3. And I'm positive that God will assign to our homes only good souls.",
+      "review_status": "draft",
+      "retrieval_text": "Quran 28:5–13, the oppressed, Joseph's family, Moses' mother, and Pharaoh\nRashad reads God's support of the oppressed and connects Joseph's rise in Egypt with the later presence of Israel's family. Moses' mother is inspired to nurse him and place him in the river, Pharaoh's household adopts him, and he is returned to his mother.\nConcepts: sura-28; support-oppressed; joseph-family; moses-mother; pharaoh; divine-plan\nUser terms: make oppressed inheritors; Joseph family Egypt; throw Moses into river; returned to mother\nQuestions: How did Joseph's story set the background? What instructions did Moses' mother receive? How did divine planning appear?\nQuran: 28:5-13\nBible: \nEntities: Joseph; Moses; Pharaoh"
+    },
+    {
+      "id": "parivash30-s02",
+      "start": 720,
+      "end": 1500,
+      "title": "Moses' accidental killing, repentance, consequences, and total submission",
+      "summary": "Moses strikes and kills a man, calls it Satan's work, asks forgiveness, and is forgiven. Rashad says disliked events may be good and liked events harmful, so believers should submit completely and accept what happens as serving their good.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "moses-killing",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "accident",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "repentance",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "disliked-good",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "total-submission",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "accept-outcomes",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Moses killed by accident",
+        "wronged my soul forgive",
+        "may dislike good thing",
+        "whatever happens for your good"
+      ],
+      "related_questions": [
+        "What happened when Moses intervened?",
+        "How did he repent?",
+        "What general lesson did Rashad draw?"
+      ],
+      "quran_references": [
+        "28:14-17"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not use total-submission rhetoric to dismiss harm, trauma, or legal responsibility.",
+      "retrieval_priority": "primary",
+      "start_time": "00:11:57.279",
+      "end_time": "00:25:00.000",
+      "source_segment_start": 123,
+      "source_segment_end": 279,
+      "csv_speakers": [
+        "A man",
+        "Behrouz",
+        "Dr. Khalifa",
+        "Edip",
+        "Parivash",
+        "Susan"
+      ],
+      "canonical_text": "And I'm positive that God will assign to our homes only good souls. This is a whole new era. And we have to keep in perspective what times, the time on earth it was. So, that was one of Edip's flies in the oatmeal. Your children are in God's hand. Okay, back to number 7. [28:7] We inspired Moses' mother: \"Nurse him, and when you fear for his life, throw him into the river without fear or grief. We will return him to you, and will make him one of the messengers.\" This is an example of God letting a human being know the future. Throughout the Quran, we know that God picks out whomever He wills to give him future information. And Moses' mother was one of them. [28:8] Pharaoh's family picked him up,... I mean, when a basket is flowing in the river, it can land anywhere. The possibility of the basket landing at Pharaoh's palace is one in billion. It just shows you God's control of the minutest detail in the world. [28:8] Pharaoh's family picked him up, only to have him lead the opposition and to be a source of grief for them. That is because Pharaoh, Hãmãn, and their troops were transgressors. Inside the Lion's Den [28:9] Pharaoh's wife said, \"This can be a joyous find for me and you. Do not kill him. He may benefit us, or we may adopt him to be our son.\" They had no idea. So, you can see that Pharaoh's wife was a plant. God planted her in the Pharaoh's palace. He assigned that soul to that place at that time just to make this statement. \"Don't kill him.\" The whole life is complicated and still is computerized by God to fit the circumstances. Fit in this way. As...Of course, we know that Pharaoh's wife was a fantastic believer. Right? If you look at the end of Sura 66. I think it is 66. Is it 65? Oh, this is 67. Ok. Excuse me. Yes, number 11, page 561. [66:11] And GOD cites as an example of those who believed the wife of Pharaoh. She said, \"My Lord, build a home for me at You in Paradise, and save me from Pharaoh and his works; save me from the transgressing people.\" So, she is one of the top believers. And she was in the home of the worst, just about the worst creature in history, Pharaoh. Who said \"I am your god.\" That's how bad he was. But she was one of the top believers. And God planted her there for this particular... I mean, one of the reasons. So, she said [28:9] ... Do not kill him. He may benefit us, or we may adopt him to be our son.\" They had no idea. The baby obviously looked Hebrew. But God controls the minds and the hearts of everyone, including Pharaoh. [28:10] The mind of Moses' mother was growing so anxious that she almost gave away his identity. ... She couldn't stand it anymore. [28:10] ... But we strengthened her heart, to make her a believer. [28:11] She said to his sister, \"Trace his path.\" She watched him from afar, while they did not perceive. The Infant Returned to His Mother Number 12 says, [28:12] We forbade him from accepting all the nursing mothers. (His sister) then said, \"I can show you a family that can raise him, and take good care of him.\" So, his sister was watching from afar. And when she saw the commotion, there's a baby screaming. I mean, he wasn't very popular because he's... Here's the Pharaoh's wife is trying to convince her husband to keep him. And he was making a lot of noise, hungry and crying. There was a commotion. And his sister volunteered the information. I can tell you of someone who'll take good care of him. [28:13] Thus, we restored him... [28:13] Thus, we restored him to his mother,... He will not... Now, here's a hungry baby who will not nurse from just any woman. What a plot. A Divine plot. [28:13] Thus, we restored him to his mother, in order to please her, remove her worries, and to let her know that GOD's promise is the truth. However, most of them do not know. \"God promise is the truth.\" And God promises you what you read yesterday, that He'll make you a king or queen on earth if you are with Him. God is the one who runs everything, all the minute details. He's the one who hires and fires and provides, and creates. [28:14] When he reached maturity and strength, we endowed him with wisdom and knowledge. We thus reward the righteous. Moses Commits Manslaughter [28:15] Once he entered the city unexpectedly, without being recognized by the people. He found two men fighting; one was (a Hebrew) from his people, and the other was (an Egyptian) from his enemies. The one from his people called on him for help against his enemy. Moses punched him, killing him. He said, \"This is the work of the devil; he is an enemy, and a profound misleader.\" Of course, the man who died did not die without God's permission. We have the law in Sura 3. \"No one dies without God's personal order.\" The angels do not know when anybody will die. Only God knows and decides. So, God computerized it so this man will die at this moment as Moses punched him. Why? Because Moses will leave, will go meet Joshua, and marry his daughter and be away from Egypt for a while and then go back to, in spite of his crime, to go back to Egypt and ask Pharaoh to believe. So, you can see God's plan. Something that looks bad, but it's really very good. And this, similarly, Joseph's prison was like a school. He worked in a school and he graduated prime minister. Dr. Khalifa: It's not bad. Edip: I think this, Rashad, this incident makes Moses a hero. Dr. Khalifa: Yes. Dr. Khalifa: Yes. Edip: And a hero among many tribes. Dr. Khalifa: Exactly. Edip: It's likely. Dr. Khalifa: Exactly. Edip: Because he killed one of the oppressors. And this is one of the problems of the unappreciated. Dr. Khalifa: Exactly. Exactly. That also, It's a very good point. Raises... Dr. Khalifa: Raises Moses as a leader among the children of Israel. Edip: And they wanted to kill (unintelligible) Dr. Khalifa: Yes. Edip: He's a very brave man. Dr. Khalifa: Yes. Dr. Khalifa: Because he left the palace. I mean, he was a prince. Dr. Khalifa: You can imagine him co. ing out of the palace in a chariot and going to the city. He's a prince, full prince. Edip: Yes. Dr. Khalifa: Grew up. Because the king adopted him, the queen. Edip: (unintelligible) Dr. Khalifa: And he sacrificed all this because of a Hebrew who was fighting with an Egyptian. So, it's a very good point. So, this is preparation for his leadership. When he goes back and tells him, you come with me, they follow him. He's a hero. The making of a hero. Mã Shã Allãh. [28:16] He said, \"My Lord, I have wronged my soul. Please forgive me,\" and He forgave him. He is the Forgiver, Most Merciful. So, this will fall under the law, the Quranic law, that you may dislike something when it is good for you. Or you may like something which is bad for you. So, the moral is, we must submit to God totally, completely. Whatever is happening, we have to accept it. We have to know that it is for your own good. If you're a believer, then whatever is happening is for your own good. 17. I think we've got to stop here because of the workers are going to work. 7 o'clock. Susan, wake up. You're supposed to go have breakfast and go to work. Why don't you go ahead? Lisa, you wanna help her find something in there? Lisa is not working today. You're the only one. Dr. Khalifa: We'll see you, IN SHAA ALLAH, what, at noon? Susan: I have a one. Dr. Khalifa: For the Noon Prayer? Great. Dr. Khalifa: Have a great morning. Susan: I have a one. Dr. Khalifa: Hmm? Susan: I have a one. Dr. Khalifa: Yes, I know. Dr. Khalifa: Let's read 17. [28:17] He said, \"My Lord, in return for Your blessings upon me, I will never be a supporter of the guilty ones.\" [28:18] In the morning, he was in the city, afraid and watchful. ... He didn't know if his crime has been exposed or not. [28:18] ... The one who sought his help the day before,... is a troublemaker. And he asked him for help again. [28:18] ... Moses said to him, \"You are really a troublemaker.\" Today, he was fighting again with an Egyptian. And his name was Wakili. Moses' Crime Exposed A man: What? Dr. Khalifa: Number 19. Dr. Khalifa: We know somebody called Wakili and he fights with anything that comes in his way. Yes. God shows us examples of everything. Moses' Crime Exposed [28:19] Before he attempted to strike their common enemy, he said, \"O Moses, do you want to kill me, like you killed the other man yesterday? Obviously, you wish to be a tyrant on earth; you do not wish to be righteous.\" So, this tells us that now everybody knows that he killed an Egyptian. [28:20] A man came running from the other side of the city, saying, \"O Moses, the people are plotting to kill you. You better leave immediately. I am giving you good advice.\" [28:21] He fled the city, afraid and watchful. He said, \"My Lord, save me from the oppressive people.\" Of course, we know the rest of this. This led to his marriage and his return to Egypt as a hero with God's message. Alhamdu Lillah Dr. Khalifa: Yeah. Go ahead. Parivash: Did he kill him by accident or was he angry? Dr. Khalifa: It was an accident. Dr. Khalifa: It was accident. Yes. Actually he didn't kill him, God killed him. Everything was timed that way. Dr. Khalifa: We know about Moses, he was hot-tempered and he was physically very strong. A man: I think the whole thing was done keeping with God's plan. Dr. Khalifa: Exactly. I mean, look here. This is a simple history, but there are so many lessons that we learn from it. Because God's power is illustrated in every, every sentence. Dr. Khalifa: Behrouz, you're here! You're home! Behrouz: Yes, sir. Yes. Alhamdu Lillah. Dr. Khalifa: Mã Shã Allãh. Dr. Khalifa: Parivash is shaking her head because we lost the guy. Now, he's in Tucson. Dr. Khalifa: We will come and visit him now. There's one more reason for them to come and visit Tucson. Behrouz: Last week, we were talking about the children of Israel. Behrouz: These people must be very different with other creatures in the world because of the miracles that God showed them. Behrouz: And even Moses was the only prophet, actually went to see God. You know, like everybody at that time, they were asking for more miracles. 9 miracles they had. Behrouz: And even Moses wanted to see God himself, I mean. Dr. Khalifa: But you know, it happened because he was speaking with God. Behrouz: Right. Dr. Khalifa: And it's a natural curiosity in that situation. Because, suppose I'm speaking to you and you're invisible. Dr. Khalifa: Then, I will want to see you. Behrouz: (unintelligible) Dr. Khalifa: Yes, so, it was in the conversation. But the children of Israel wanted to see God, but it was a totally different issue. It was out of defiance. They said \"We will not believe unless we see God physically\", they said. Dr. Khalifa: But the situation with Moses was different. He was... Edip: He was challenging, Moses only...",
+      "review_status": "draft",
+      "retrieval_text": "Moses' accidental killing, repentance, consequences, and total submission\nMoses strikes and kills a man, calls it Satan's work, asks forgiveness, and is forgiven. Rashad says disliked events may be good and liked events harmful, so believers should submit completely and accept what happens as serving their good.\nConcepts: moses-killing; accident; repentance; disliked-good; total-submission; accept-outcomes\nUser terms: Moses killed by accident; wronged my soul forgive; may dislike good thing; whatever happens for your good\nQuestions: What happened when Moses intervened? How did he repent? What general lesson did Rashad draw?\nQuran: 28:14-17\nBible: \nEntities: "
+    },
+    {
+      "id": "parivash30-s03",
+      "start": 1500,
+      "end": 2280,
+      "title": "Sura 57, messengers, Jesus, numerical names, Rashad's mother, and the high horizon",
+      "summary": "The recording shifts to Sura 57 and the sequence of messengers, Jesus, and monasticism. Parivash raises numerical values associated with Abraham, Noah, Muhammad, and Rashad. Rashad recounts receiving confirming verses shortly before his mother died and describes death as a better destination. He says the high horizon where he met the prophets was the same realm.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-57",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "messengers",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "jesus",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "monasticism",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "name-values",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mother-death",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "high-horizon",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "sent messengers Jesus Gospel",
+        "name values multiple 19",
+        "mother passed ten days later",
+        "met all prophets"
+      ],
+      "related_questions": [
+        "What did Sura 57 say about messengers and Jesus?",
+        "What numerical claim did Parivash raise?",
+        "How did Rashad interpret his mother's death?"
+      ],
+      "quran_references": [
+        "57:26-29"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Jesus",
+        "Rashad's mother",
+        "Abraham",
+        "Noah",
+        "Muhammad"
+      ],
+      "retrieval_note": "Afterlife and visionary claims remain personal testimony.",
+      "retrieval_priority": "primary",
+      "start_time": "00:25:00.000",
+      "end_time": "00:38:04.038",
+      "source_segment_start": 280,
+      "source_segment_end": 475,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Behrouz",
+        "Dr. Khalifa",
+        "Edip",
+        "Feroz",
+        "Parivash"
+      ],
+      "canonical_text": "Dr. Khalifa: Moses was in the conversation. He said \"my Lord, let me see You.\" (7:143) رَبِّ أَرِنِىٓ أَنظُرْ إِلَيْكَ \"My lord, let me look at You and see You.\" Behrouz: It was not because of this kind of nation that they didn't believe. Dr. Khalifa: Right. Behrouz: They wanted more miracles and more miracles. Dr. Khalifa: Right. Dr. Khalifa: That was the ultimate defiance. That's what they did. Edip: But Rashad, at that time, there were about 70 people around him who took them to... Dr. Khalifa: No, no, no, no. That's different. Dr. Khalifa: The 70 men went to apologize. Dr. Khalifa: This was back in the camp. They were all in Sinai and they thought they will not believe \"unless we see God physically.\" So, they died. Because God showed them a little bit. And they died. Then, God revived them. One of the incidents in the Quran where God revived the dead. But with Moses, this was done actually, it was computerized to teach us that this earth cannot stand the presence of God. Because God wiped out the mountain. Just to... It was a fact. I mean, God manifested Himself to the mountain. And the mountain shattered. And Moses fell unconscious. Then, when he came to, the first thing he said \"Subhanak (سُبْحَـٰنَكَ)\", Glory be to You. I apologize. Sorry. I'm ignorant. Parivash: His intention, his intention was like Abraham when he asked, he didn't believe them. Dr. Khalifa: Yes. Exactly. Dr. Khalifa: Exactly. I mean, there's no more belief than that. He's actually speaking with God. It was just in the course of conversation that he did that. A man: (unintelligible) Dr. Khalifa: Exactly. Exactly. Yeah. Dr. Khalifa: Please stay where you are. I'll be back in one minute. [57:19] Those who believed in GOD and His messengers are the saints and martyrs. ... A woman: Did you just say 504? 504? Dr. Khalifa: Wow. 540. A woman: Ok. Dr. Khalifa: The page number is 540. A woman: Wow. (unintelligible) Parivash: 57:19 A woman: Yeah. Dr. Khalifa: Yes. Dr. Khalifa: This is quite a statement. A woman: How? Dr. Khalifa: Yes. This is quite a statement here. It says, [57:19] Those who believed in GOD and His messengers are the saints and martyrs. ... And all of a sudden it fits to the new information that we got. That the righteous go straight to Heaven. They do not die. Remember the verse that says \"do not say about the martyrs that they are dead.\" So, martyrs are not only the people who die in battle, fighting. People who die believing in God and His messengers are the saints and the martyrs. [57:19] ... Reserved for them at their Lord are their rewards and their light. As for those who disbelieved and rejected our revelations, they have incurred Hell. Preoccupation With This Life Condemned [57:20] Know that this worldly life is no more than play and games, and boasting among you, and hoarding of money and children. It is like abundant rain that produces plants and pleases the disbelievers. But then the plants turn into useless hay, and are blown away by the wind. In the Hereafter there is either severe retribution, or forgiveness from GOD and approval. This worldly life is no more than a temporary illusion. The Intelligent Alternative [57:21] Therefore, you shall race towards forgiveness from your Lord, and a Paradise whose width encompasses the heaven and the earth. It awaits those who believed in GOD and His messengers. ... See, this fits with the first line that we read. The same Paradise where Adam and Eve lived. It awaits each, every righteous person when he or she departs from this world. To me, this is very exciting news and we were very excited when that happened. I was so excited that in the same day, I printed that page that you got in the mail and I mailed it. You get two of them? I sent one to your house and one to Batool. You're the only one I sent two copies to. I figured that if you get the two of them you can always pass it on to somebody else. But I immediately typed this and sent it and of course that was crucial because I don't know if Amir Ali knows this or not, but my mother passed away 10 days after that. Right after that. It was fantastic news. It's like God is telling us, assuring us because I knew all along that she was a believer. So, when she passed away and they were dreading telling me on the other end of the line, I said \"Wow. Alhamdu Lillah. Mã Shã Allãh\" \"What's wrong with him?\" Feroz: (unintelligible) They may die but they are in a better place. Dr. Khalifa: Yes. Very. Exactly. Dr. Khalifa: It's like she went to a wonderful vacation in Hawaii or something and she's waiting for us until we get there. So, but, these, these, and these verses came immediately after that to confirm. And I'm telling you it's wonderful because I experienced it. I know exactly how it feels. Because obviously this is where I went when I met all the Prophets. This is where I went. I just called the Parivash in my office to listen to some Quran by Sheikh Al-Banna, of my favorite reciter. And of course she cried. Because it was beautiful mainly. Not just because she's a good believer. But this is what I was doing when I experienced that. Let me call it righteous death which is not death. I was listening to Sheikh Al-Banna. I was listening to it. Now, what condition were you in when you were listening to Al-Banna, when you were listening to Al-Banna now? Dr. Khalifa: What condition were you in when you were listening to Sheikh Al-Banna in the Parivash: Now? Dr. Khalifa: when I called you in to listen to the Quran? Dr. Khalifa: What condition were you in? A woman (Speaking Farsi): How was your mood? Dr. Khalifa: How did you feel? Parivash: Well, great. Dr. Khalifa: Right. Parivash: More than good. Dr. Khalifa: It's a state of ecstasy. You know what I mean? Dr. Khalifa: This is how I felt when all of a sudden I was up there. That is exactly equivalent to the death of the righteous. Yeah. A woman: You were not asleep? Dr. Khalifa: No, no. I was not asleep. I will not sleep when Sheikh Al-Banna is reciting. God taught me a few things through that experience. First of all, I'm a person who does not know what I ate yesterday or even what day was it yesterday. Dr. Khalifa: What day is it today? A man: Tuesday. Dr. Khalifa: See, would you (unintelligible). Tuesday. It's very difficult for me to remember what I did last Thursday, what date it was, things like that. I'm very bad with remembering dates. But God did it in such a way that I know the day, the date, the time. Dr. Khalifa: And that I was awake. A man: What you were listening. Dr. Khalifa: Because I will never sleep when Sheikh Al-Banna is reciting. He reads only for half hour, 6 o'clock in the morning every Tuesday. All his life, this is what he did. All the other reciters in Egypt, the time slot changed, but not Sheikh Al-Banna. He only read 6 o'clock in the morning every Tuesday from Cairo Radio. A woman: So, it was on the radio? A woman: You were listening to the radio? Dr. Khalifa: Yes. Yes. Yes. Dr. Khalifa: I was... A woman: I thought you were reciting the Quran. Dr. Khalifa: No, no, I was listening. So, I, after we Prayed Fajr in the Ka‘bah, then I, we came with my parents. And then, I tuned into Cairo. So, I know the time. It was 6 o'clock in the morning. For Sheikh Al-Banna, so, I never go to sleep. Dr. Khalifa: And he was reading Sura Al-Rahmaan. A man: Yes. Dr. Khalifa: So, I was in a state of ecstasy. And my brother was recording it. At that very moment, my brother Atif was recording it in Egypt. Dr. Khalifa: So, I have a record of it. A woman: How long have you been...? Dr. Khalifa: I didn't miss it. Because when I came back, I knew that Atif recorded it. A man: You know date and the year. Dr. Khalifa: I know the date, the day was Tuesday. Dr. Khalifa: I know the date, it was December 21st, because my parents and myself spent only one Tuesday in Mecca. And it was December 21st. Cause I know it was Zul-Hijja 3. So, I mean, I know the lunar date, the solar date, the time. A woman: It was 1971? Dr. Khalifa: Yes, December 21, 1971. A woman: I thought we were there in 71, but we were. in Ramadan. And I thought it was November, but I don't think it could be November. Dr. Khalifa: No, November was Zul-Qaʿdah Dr. Khalifa: Zul-Hijja was in December. A woman: (unintelligible) relatives in Medina. A woman: We were there for Ramadan. A woman: But it should be (unintelligible) Dr. Khalifa: If it's Ramadan, then it was October, yes. A man: (Unintelligible) December. Dr. Khalifa: Yes. Dr. Khalifa: Of course, December 21 was Zul-Hijja 3. Dr. Khalifa: So, it could have been the beginning of November. Yes. A woman: November. Feroz: How many Earth minutes went by...? Dr. Khalifa: Because it was the end of December, but the beginning of Zul-Hijja. Dr. Khalifa: Pardon? Feroz: How many, like, how much time went by on Earth, when you, like, came back? Dr. Khalifa: Like one hour. Feroz: About one hour. Dr. Khalifa: Yeah. Feroz: But did you feel you were there for quite a while? Feroz: Did you feel you were there for quite a while? Dr. Khalifa: Yes, it was quite an elaborate introduction. It was quite a procession of people, going this way. Feroz: And they were all prophets? Dr. Khalifa: Yes. Feroz: (unintelligible) Dr. Khalifa: I didn't count. I didn't... A woman: Do you remember every detail of it or was it...? Dr. Khalifa: It was very sharp. Dr. Khalifa: The consciousness was very sharp. A woman: Like they... Dr. Khalifa: Sharper than what we're doing now. A woman: So, you saw everything in detail? Dr. Khalifa: I saw the persons. I didn't see surroundings. And God showed them to me in their worldly looks. Dr. Khalifa: What they're dressed like here in this world. Feroz: Do all look different in their faces? Dr. Khalifa: Oh yeah, they all looked different. I was taken aback by Abraham's resemblance to my family. \"Wow, who's this guy who looks like us?\" It was all in my mind, and the answer came in my mind also. \"This is Abraham.\" A woman: So, they all (unintelligible). Dr. Khalifa: Pardon? A woman: (unintelligible) Dr. Khalifa: Not much, no. Dr. Khalifa: It was only long robes and turbans. Dr. Khalifa: And beard. A woman: They all looked young or old? Dr. Khalifa: No, they were all around... A woman: (unintelligible) some looked young or some looked old. Dr. Khalifa: They looked about the same age. Edip: 19. Dr. Khalifa: About 40. No. Dr. Khalifa: It's about 40. Yes. Dr. Khalifa: I mean, if I'm asked how old do you think this guy is, I'll say \"40.\" Dr. Khalifa: Intriguing subject, but it came up because of this, the death of righteous. And I'm passing on to you that it's a wonderful experience. A man: (unintelligible) December is gonna be the 19th year of that... Dr. Khalifa: Yes. December 1990 A man: And (unintelligible) Dr. Khalifa: Definitely, I think so. A man: Yes. Dr. Khalifa: The way this official translation is going. Even with the editor. A man: Next, next year will be 19... Dr. Khalifa: Even Ceaușescu is dead. A man: Something... A woman: (unintelligible) Dr. Khalifa: Something is happening at the world level. 21 [57:21] Therefore, you shall race towards forgiveness from your Lord, and a Paradise whose width encompasses the heaven and the earth. ... Dr. Khalifa: The word \"race\" is mild, it's too mild. A woman: And it's just a forgiveness. Dr. Khalifa: Yes. It's... Dr. Khalifa: In other words, God is telling us \"if you are righteous, \"Heaven awaits you. You don't die, you just go there with this wonderful experience and fantastic property.\" The width of the heavens and the earth, it's a huge place. And we have mansions and great things. So, \"you shall race\", meaning you shall compete very hard. You shall insist,",
+      "review_status": "draft",
+      "retrieval_text": "Sura 57, messengers, Jesus, numerical names, Rashad's mother, and the high horizon\nThe recording shifts to Sura 57 and the sequence of messengers, Jesus, and monasticism. Parivash raises numerical values associated with Abraham, Noah, Muhammad, and Rashad. Rashad recounts receiving confirming verses shortly before his mother died and describes death as a better destination. He says the high horizon where he met the prophets was the same realm.\nConcepts: sura-57; messengers; jesus; monasticism; name-values; mother-death; high-horizon\nUser terms: sent messengers Jesus Gospel; name values multiple 19; mother passed ten days later; met all prophets\nQuestions: What did Sura 57 say about messengers and Jesus? What numerical claim did Parivash raise? How did Rashad interpret his mother's death?\nQuran: 57:26-29\nBible: \nEntities: Jesus; Rashad's mother; Abraham; Noah; Muhammad"
+    },
+    {
+      "id": "parivash30-s04",
+      "start": 2280,
+      "end": 3120,
+      "title": "Tests involving cherished things, children, family pressure, and faith in the unseen",
+      "summary": "Rashad says Satan may challenge any object, person, child, job, or attachment that seems more important than God. God may permit a test, but successful believers receive compensation. Participants discuss children as potential idols, family opposition, and judging a tree by its fruit. The Arabic bil-ghayb is discussed as faith in the unseen.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "attachment-test",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "children-as-idols",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "family-pressure",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "compensation-after-test",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "faith-in-unseen",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "tree-by-fruit",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "anything you do to keep it",
+        "baby becomes god",
+        "Satan asks to take it",
+        "judge tree by fruit",
+        "bilghayb"
+      ],
+      "related_questions": [
+        "What kinds of attachments could become tests?",
+        "What happened after passing a test?",
+        "How was bil-ghayb discussed?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not tell users that loss or family harm was a divinely assigned test.",
+      "retrieval_priority": "primary",
+      "start_time": "00:37:57.789",
+      "end_time": "00:52:05.588",
+      "source_segment_start": 475,
+      "source_segment_end": 654,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Edip",
+        "Feroz",
+        "Iron",
+        "Parivash"
+      ],
+      "canonical_text": "So, \"you shall race\", meaning you shall compete very hard. You shall insist, you know, and work hard [57:21] ...towards forgiveness from your Lord, and a Paradise whose width encompasses the heaven and the earth. It awaits those who believed in GOD and His messengers. Such is GOD's grace that He bestows upon whomever He wills. GOD is Possessor of Infinite Grace. (57:21) ٱللَّهُ ذُو ٱلْفَضْلِ ٱلْعَظِيمِ which is a very special name. Because the gematrical value of “Zul Fadl Al-‘Azim” is the same as the number of the word \"Allah\" in the whole Quran. So, we think there's something special about it. “Zul Fadl Al-‘Azim” Profound Fact [57:22] Anything that happens on earth, or to you, has already been recorded, even before the creation. This is easy for GOD to do. And we're told the reason, why is God telling us this? We're told the reason in 23. [57:23] Thus, you should not grieve over anything you miss, nor be proud of anything He has bestowed upon you. GOD does not love those who are boastful, proud. Edip: This is the key of happiness. Dr. Khalifa: Yes. Exactly. Dr. Khalifa: You have an even keel, nothing bothers you. Yes. Edip: Yes. Edip: If you are become very happy that you gain something, how do you say it, you'll lose it. Anything. Dr. Khalifa: Yes. Exactly. Edip: You become sorry as much as you became happy. Dr. Khalifa: Yes. Edip: You will pay. Dr. Khalifa: Well, there's a mechanism for this. If you love anything too much, then Satan will say \"Aha!\" Let me tell God that if you take this thing from him or from her, he or she will blaspheme against You. A woman: What is too much? Dr. Khalifa: Hmm? A woman: What is too much? (unintelligible) Dr. Khalifa: Well, if it... Dr. Khalifa: If you're gonna do anything to keep that. A woman: What? Oh, (unintelligible) Dr. Khalifa: If you do anything, you'll do anything to keep it, whatever it is. A woman: But what about the...? Dr. Khalifa: Then, Satan feels that if you're ever given a choice between this thing and God, you'll choose the thing. So, if you come even close to that, Satan will make that claim. And God will grant him his wish. God will say \"Okay, go ahead and take it.\" And of course, if the person passes the test, God makes it up twice as much, manifold after that. A woman: By turning to God and praying to God Dr. Khalifa: Right. A woman: like, letting Him (unintelligible) Dr. Khalifa: Right. Dr. Khalifa: Remember the verses in Sura 7 where God says \"People pray \"Please God give us a good baby.\" \"Then as soon as God gives them a good baby, they forget their prayer.\" They become preoccupied with the baby. And the baby becomes their God. They don't do the prayer. They don't... I mean, I know people who actually did that. They become so busy with the baby. And the baby runs their life. If the baby causes people to stop going to the Quranic study or going to the Fajr Prayer, or... Then, this is too much. Just to answer your question. A woman: So, when the baby comes... Dr. Khalifa: Then, there have to be, there have to be criteria. Dr. Khalifa: We have a child for adoption here. Dr. Khalifa: Yes, exactly. Yes. I have to go to the last line of verse 23 because it continues into verse 24. It says, [57:23] ... GOD does not love those who are boastful, proud. [57:24] They are stingy, and enjoin the people to be stingy. If one turns away, then GOD is the Rich, the Praiseworthy. The footnote for 57:22 says, *57:22 We are absolutely free to side with God, or with Satan. God happens to know precisely what kind of decision each of us will make. The video tape of your life, from birth to death, is already recorded. So, it's a matter of being a submitter or an objector. Anything that happens in our life, we must submit and say \"Okay God, if this is what You want,...\" *57:22 ... each of us will make. The video tape of your life, from birth to death, is already recorded. So, it's a matter of being a submitter or an objector. Anything that happens in our life, we must submit and say \"Okay God, if this is what You want, I accept it cheerfully.\" Underline cheerfully. No matter what happens. Iron: The Most Useful Metal Dr. Khalifa: There's an iron isomer that is 57. The atomic weight is 57. A woman: Wow Dr. Khalifa: Yes. The Most Useful Metal [57:25] We sent our messengers supported by clear proofs, and we sent down to them the scripture and the law, that the people may uphold justice. And we sent down the iron, wherein there is strength, and many benefits for the people. All this in order for GOD to distinguish those who would support Him and His messengers, on faith. GOD is Powerful, Almighty. \"On faith\" is a very difficult word to translate. In Arabic it's \"Bilghayb (بِٱلْغَيْبِ).\" And I'm always torn between translating it as \"on faith\" or \"when in privacy.\" Dr. Khalifa: \"When in their privacy.\" Edip: They don't see that. Dr. Khalifa: Yes. There are people who are in this mosque and they say \"We believe you're God's messenger.\" But they will not profess that outside. They're afraid that the people may ridicule them. They will hesitate to say it. So, \"Bilghayb (بِٱلْغَيْبِ)\" applies here. It's that even outside, even away from here or in their privacy, they have no no qualms or hesitation about saying \"We believe Rashad Khalifa is God's messenger.\" And we have the evidence if you want to examine it. It's very significant that God says [57:25] ... All this in order for GOD to distinguish those who would support Him and His messengers, even in their privacy. GOD is Powerful, Almighty. Because it's easy if we are here in a crowd that all of us believe in a certain way. We can profess that. It's easy because everyone around us is doing the same thing. Outside, do you really, do you maintain this belief or, or what? Dr. Khalifa: Yes. A woman: The \"on faith\" makes more sense than \"in privacy.\" A woman: Yeah, the \"privacy\" sounds like if you're in your own home. A woman: And it doesn't make sense if you don't distinguish. Dr. Khalifa: Yes. A man: In absence. Dr. Khalifa: Yes. Edip: Mã Shã Allãh Dr. Khalifa: That's good. A man: Even when they're not present, (unintelligible) in the absence of them. Dr. Khalifa: Yes. A man: That was accurate. Dr. Khalifa: Yes, that too, that's exactly what I said. A man: Because Ghayb (غَيْبِ) can also be \"absent.\" Dr. Khalifa: Right. A man: If he's not present, he's absent. Feroz: How would that fit in, in like, believe in God and support Him and His messengers in... A woman: In their absence. Dr. Khalifa: In the... Feroz: In their absence? A woman: Yeah. Dr. Khalifa: Yes. The messenger's absence. A woman: God is never absent. (unintelligible). Dr. Khalifa: Like I said, when we're out of here, is this something that you maintain continuously or is it just contingent on being in that, with the same crowd that believe? A man: Like, you know, for example, when you said about the party, (unintelligible) of party, like the first thing one should do is A man: accept that you are a messenger and... Dr. Khalifa: Exactly. A man: Okay, and then... Dr. Khalifa: And then discuss it intellectually. A man: So first, you accept it on faith, right? Dr. Khalifa: Right. A man: So maybe, I mean, that could also apply, that \"on faith\" could be applied there too, right? Dr. Khalifa: Right. Dr. Khalifa: Yeah, but it's a decision that the person makes. A man: So he makes it afterwards, like first he should... Dr. Khalifa: We look at the evidence, so we decide Rashad Khalifa is a messenger or is fraud. Whichever, it's a decision either way. And it's, it's one or the other. It's not... It cannot be both of them. It will be one of them for some time and the other one for some other time. A man: Ok. Isn't this also in a sense, like when you use \"on faith\", it's implied that if the messenger said something, you first accept it, and then logically, you know, like the party, you know? Dr. Khalifa: Yes. A man: First accept it on faith because you know he's the messenger. So, on faith, you accept it. Dr. Khalifa: If you accept it, then you believe that it is true. A man: Right. Dr. Khalifa: See, there are only three choices, actually. You believe that \"the age of 40\", this is true, this is God's truth, I believe it. Dr. Khalifa: Or I reject it. A man: Right. Dr. Khalifa: Or I'm neutral. I have to study the evidence first. Parivash: No. But, but maybe some people, they say for the... \"It doesn't make sense for me. It's not logical for me.\" Ok. But... Dr. Khalifa: Okay, well, then show them the evidence. Yes. Parivash: (unintelligible). Dr. Khalifa: Show them the evidence. \"Here's the evidence. Now, what is your reason for rejecting?\" \"You have to accept it or reject it. Here's the evidence.\" You say, this is... You see, the evidence is not arguable because it's all physical facts. A woman: Dr. Khalifa... Dr. Khalifa: I didn't, for example, write in the book that before I was born, \"Rashada\" 19 times, for example. When you add the verses in the Suras, it's a multiple of 19. And it goes on and on. So, they're all physical facts. I didn't say, in my opinion, the root word \"Rashada\" occurs in the Quran 19 times. Parivash: It happens sometimes, somebody even notices some proof that you just... Still, their knowledge was not enough and they cannot understand. But they believe because they understand the proof that goes on in 19 and everything. They believe you are messenger, okay? And believe this kind, and what is logically is not for them. That is your point? A man: That's my point. Yeah. Feroz: You see, they accepted Feroz: But they accepted on faith. Parivash: On faith. Feroz: Rather than, you know....And then later on, maybe the reason may come. Parivash: Yes. Feroz: They may understand it later on. Dr. Khalifa: Yes. Feroz: But just because they don't understand it right away, they don't reject it. Edip: What is the reason of faith? Edip: Faith also must have a reason. Why do you believe? A woman: Yeah. They... Dr. Khalifa: Yeah. A woman: Yeah. Edip: (unintelligible) Edip: For example, in Turkey, my friend didn't make a search on mathematical evidence, but he learned the message and he said, \"This is the message, the old message of messengers and the way of...\" how do you say it? \"The way of the message proves it. It shows that he's messenger.\" Edip: And by this way, by the message, he believes. Dr. Khalifa: That's well said. Dr. Khalifa: That's what the message is saying \"Worship God alone. Uphold the Words of God alone. Forget the dead saints and prophets.\" Edip: And this kind of things, and like that Saleh business. Some people may just, because of the faith, because of personality, and oh, because of the believers that are around, and all... These are all proofs. If people, crooked people, if some person around him, how do you say, get together, bad people, there are very bad communities among each other, and this shows that it's not good. Edip: And all this, these are also evidence, different kinds of evidence. Dr. Khalifa: No. Dr. Khalifa: The simplest form is given in the Bible, as you can judge the tree by its fruit. Edip: Yes, oh good. Dr. Khalifa: Yes. Parivash: Both ways, it work. Yeah? Both ways, \"in absence\" and it's \"on faith.\" Dr. Khalifa: Yes. This is a word, Bilghayb (بِٱلْغَيْبِ), in Arabic. It's just I always don't know exactly how to translate it, what is the best word. Feroz: Is this (رُسُلَهُ) word, plural, isn't it? Dr. Khalifa: Yes. \"Messengers\" A man: This is, what you said is so true, that I had very special experience in Turkey, that I went through the military service, and I come home, that when I think that the test is over, and everything is okay, my, my father came very heavy on me. Very heavy. And it was so heavy, because I know the commandment says that, you know, you have to respect them. It was coming on so heavy, that the phone rang. Guess who was calling? Rashad was on the phone. I burst into tears. This is God... You know, when you said \"in absence\", you know, I was like, I was getting so frustrated. He's coming, you know, I can't. He's coming on and on and on. All of a sudden the phone rings, my mother answers it, and it says, it's for you. And I said \"Alhamdu Lillah, what a relief.\" I was... Dr. Khalifa: That was the first time. A man: Yes. \"Alhamdu Lillah\", then I burst into tears. A man: You know, this is so special, that, you know, that we live Quran. When you said \"absent\", that just brought back to my, you know... Dr. Khalifa: That was his lowest point in Turkey. Edip: But Rashad,... A woman: A special thing happened to me when I was working this summer in Phoenix. A woman: I was working with these two Catholic boys, guys. And I, I told them a little bit about my religion, but I just kept quiet, because they're very obnoxious people.",
+      "review_status": "draft",
+      "retrieval_text": "Tests involving cherished things, children, family pressure, and faith in the unseen\nRashad says Satan may challenge any object, person, child, job, or attachment that seems more important than God. God may permit a test, but successful believers receive compensation. Participants discuss children as potential idols, family opposition, and judging a tree by its fruit. The Arabic bil-ghayb is discussed as faith in the unseen.\nConcepts: attachment-test; children-as-idols; family-pressure; compensation-after-test; faith-in-unseen; tree-by-fruit\nUser terms: anything you do to keep it; baby becomes god; Satan asks to take it; judge tree by fruit; bilghayb\nQuestions: What kinds of attachments could become tests? What happened after passing a test? How was bil-ghayb discussed?\nQuran: \nBible: \nEntities: "
+    },
+    {
+      "id": "parivash30-s05",
+      "start": 3120,
+      "end": 3600,
+      "title": "Insurance files, November 25, 1985, accidents, and the claim of divine protection",
+      "summary": "Rashad describes reviewing more than two thousand insurance accident files and points to a November 25, 1985 source. The study is presented as evidence that people aligned with God are protected from accidents and that ordinary insurance is inferior to insurance with God.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "insurance-files",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "accident-study",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "november-25-1985",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-protection",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "insurance-with-god",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "2000 insurance files",
+        "November 25 1985",
+        "protected from accidents",
+        "insurance with God"
+      ],
+      "related_questions": [
+        "What insurance study was described?",
+        "What date was cited?",
+        "What conclusion did Rashad draw?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "This claim must not be used to discourage insurance, safety measures, or evidence-based risk management.",
+      "retrieval_priority": "primary",
+      "start_time": "00:51:58.246",
+      "end_time": "01:00:00.642",
+      "source_segment_start": 654,
+      "source_segment_end": 752,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Vicky"
+      ],
+      "canonical_text": "And I, I told them a little bit about my religion, but I just kept quiet, because they're very obnoxious people. And one day, though, it got really hot, and I just started telling them all about the miracle and the religion. They were both just frustrated, and they were yelling at me, and they were like, and we had we had to go through files, insurance files of accidents. We had over 2,000 files. It covered the whole room. We had to go through one by one every day. And that day we hardly did any work, and we had a few files on the table. And after I started telling them about this, and they were getting frustrated, they were like \"this doesn't make sense.\" Then, I started telling them about the 19 in our body. They said \"now, you're going way too far with this.\" A woman: I'm like \"it's not like I'm making it up. You can go check it out.\" Dr. Khalifa: Right. A woman: And I was saying, you know \"the person in our mosque, you know, he's a messenger\" and all this stuff, trying to tell them. And, and they just got really frustrated. They said \"we just believe in different things. I don't wanna hear it.\" I said \"fine.\" I closed the whole thing. \"Do your work.\" The one that was giving me the most difficulty, Dr. Khalifa, he picked up a file, and it was your file. Dr. Khalifa: Oh, my God. A man: Subhan Allah. A woman: Dr. Khalifa, he's like \"what's going on here?\" It was an accident you had in Phoenix. Dr. Khalifa: Yes. A woman: I've seen people who had no insurance, but someone that was in the car or something had the insurance. Dr. Khalifa: I didn't have insurance. The guy who hit me had insurance. A woman: Right. You're covered by God. Dr. Khalifa: I had insurance of God. A woman: And he looked down and he goes, and he like started reading like the address and everything. And he said \"that's him.\" And he goes, doo-doo-doo-doo-doo. Dr. Khalifa: Wow A woman: I said \"I rest my case.\" Dr. Khalifa: Now, do you have access to that file? A woman: No, cause, well, no, it's in Phoenix. Dr. Khalifa: What I want you to do is get the date of that accident. Get the date of the accident. You're gonna find it, November 25th, 1985. which is, and the hour, 12:30 in the afternoon. This is, that was, folks, that was the minute I became eligible for pension from the state of Arizona. A man: Wow. Dr. Khalifa: And that was the last time I ever worked for this world. Dr. Khalifa: Yes. A woman: Wow. Dr. Khalifa: If you go back to that file, I was told, I'm telling you, I mean, I confess, I was told in advance \"you must quit.\" \"You have to quit this work. You give all your time to the Masjid.\" I said \"come on, how will I eat?\" In fact, I was given six weeks, six weeks without pay, before, about two months before that, just two months before that. A woman: (unintelligible) Dr. Khalifa: Yes. Dr. Khalifa: And during the six weeks without pay, somehow my account in the bank was better than ever. I was afraid to ask them \"how did this happen?\" And I was telling Ihsan \"don't ask, don't ask.\" In other words, yes, God was telling me, you're gonna be better off devoting all your time to Me alone. OK, so, if you check that file and look at the..., November 25th, because, I have to tell you what the law is in the state of Arizona. In the state of Arizona, you're eligible for pension on the seventh day after your 50th birthday. The seventh day after my birthday. Yes, 50 and 7, yes. If you work for the state more than five years. Oh my God, that was exactly five years, because I started in 1985, 1980, and that was exactly five years. And that was the minute, not the day, the minute, because I worked half the day of Monday. So, it was the minute I became eligible and I was making a turn into my work. I mean, the accident was right at my work. The gate, there was a gate that said \"University of Arizona Agriculture Experiment Station.\" And I'm turning into that gate and this guy ran a red light and he put me in the hospital. No more work. That was the last time I ever saw that place. A woman: Wow. Dr. Khalifa: Yeah. Dr. Khalifa: Funny thing how she brought this up. Dr. Khalifa: Yes. Dr. Khalifa: But God did not stop it at all. God didn't wait a week or two days or ten minutes. Yeah. Vicky: Dr. Khalifa, I have a question. A woman: (unintelligible) Vicky: Like I have some friends. They (unintelligible) And they accept all the message and everything, but they don't accept (unintelligible) Vicky: Do I have to stop being with them? Dr. Khalifa: No, not unless they're fighting you. Who's making the noise? Alright. If they're not fighting, you have to go on along with them but discuss it with them logically. Okay. Now, Vicky is saying that they accept the golden translation. Dr. Khalifa: Do they accept the miracle? Vicky: Yes, they do. Dr. Khalifa: They accept the miracle of 19. Vicky: And they do appreciate Dr. Rashad who brought all of these. Vicky: \"We appreciate from the time we met him. You are great.\" But they don't wanna accept your messengership. However, I have to say one of them once told me like \"the messengership is something else.\" Like, he really gives me imagination of a person who should probably have a wing or ... A woman: (unintelligible) Vicky: No, it doesn't look like that. So,... Dr. Khalifa: Yeah, but you have to discuss it with them logically. Batool has a very simple question for them which is... Dr. Khalifa: See, I remember what she told me, but she forgot. What is, How do you prove that I'm God's messenger? Dr. Khalifa: He had a very simple statement that you mentioned, when I was in your house last time. \"Why did he find the 19, the miracle of 19?\" \"How do you explain that?\" Dr. Khalifa: أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ Bism Allah Arrahman Arraheem [45:33] The evils of their works will become obvious to them and the very things they mocked will come back to haunt them. [45:34] It will be proclaimed: \"Today we forget you, just as you forgot the meeting of this day. Your abode is the hellfire, and you will have no helpers. [45:35] \"This is because you mocked and ridiculed GOD's revelations, and were preoccupied with the first life.\" Consequently, they will never exit therefrom, nor will they be excused. [45:36] To GOD belongs all praise; Lord of the heavens, Lord of the earth, Lord of the universe. [45:37] To Him belongs all supremacy in the heavens and the earth. He is the Almighty, Most Wise. In the name of God, Most Gracious, Most Merciful [46:1] H. M. [46:2] The revelation of this scripture is from GOD, the Almighty, the Wise. [46:3] We did not create the heavens and the earth, and everything between them except for a specific purpose, and for a finite interim. Those who disbelieve are totally oblivious to the warnings. [46:4] Say, \"Consider the idols you set up besides GOD. Show me what on earth did they create. Do they own part of the heavens? Show me any other scripture, or any piece of knowledge that supports your idolatry, if you are truthful.\" The Idols Totally Unaware [46:5] Who is farther astray than those who idolize besides GOD idols that can never respond to them until the Day of Resurrection, and are totally unaware of their worship? This is what most Sunnis todays do. The next page, The Idols Disown Their Worshipers*",
+      "review_status": "draft",
+      "retrieval_text": "Insurance files, November 25, 1985, accidents, and the claim of divine protection\nRashad describes reviewing more than two thousand insurance accident files and points to a November 25, 1985 source. The study is presented as evidence that people aligned with God are protected from accidents and that ordinary insurance is inferior to insurance with God.\nConcepts: insurance-files; accident-study; november-25-1985; divine-protection; insurance-with-god\nUser terms: 2000 insurance files; November 25 1985; protected from accidents; insurance with God\nQuestions: What insurance study was described? What date was cited? What conclusion did Rashad draw?\nQuran: \nBible: \nEntities: "
+    },
+    {
+      "id": "parivash30-s06",
+      "start": 3600,
+      "end": 4200,
+      "title": "Quran 46, idols disowning worshipers, Ali, Muhammad, Hussein, and powerless intercessors",
+      "summary": "Quran 46 says idols will become enemies of their worshipers. Rashad applies the passage to Ali, Muhammad, Hussein, Jesus, and other invoked figures, saying the dead cannot respond and will denounce their idolization.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-46",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "idols-disown-worshipers",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "intercession-rejected",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "dead-cannot-respond",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-alone",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "idols become enemies",
+        "Ali denounces Shias",
+        "Muhammad denounces Muslims",
+        "dead cannot respond"
+      ],
+      "related_questions": [
+        "What will idols do on Judgment Day?",
+        "Which figures were named?",
+        "Why could they not answer prayers?"
+      ],
+      "quran_references": [
+        "46:4-7"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Ali",
+        "Muhammad",
+        "Hussein",
+        "Jesus"
+      ],
+      "retrieval_note": "Group-wide spiritual judgments must remain attributed.",
+      "retrieval_priority": "primary",
+      "start_time": "00:59:58.642",
+      "end_time": "01:10:06.096",
+      "source_segment_start": 752,
+      "source_segment_end": 841,
+      "csv_speakers": [
+        "A man",
+        "Dr. Khalifa",
+        "Parivash"
+      ],
+      "canonical_text": "The Idols Disown Their Worshipers* [46:6] And when the people are summoned (on the Day of Judgment), their idols will become their enemies, and will denounce their idolatry.* [46:7] When our revelations were recited to them, clearly, those who disbelieved said of the truth that came to them, \"This is obviously magic!\" So, we're talking about idol worshipers who idolize people because we're told in verse 6 [46:6] ... when the people are summoned (on the Day of Judgment), their idols will become their enemies, and will denounce their idolatry.* So, Ali will have to denounce all the Shias and Muhammad denounces all the Muslims. Dr. Khalifa: In fact, this is documented in the Quran. A man: That's why (unintelligible) Dr. Khalifa: Hmm? A man: That's why (unintelligible) Dr. Khalifa: Yes. A man: Their idols can never respond to them until the Day of Resurrection. Dr. Khalifa: Exactly. A man: until the Day of Resurrection. Dr. Khalifa: Yeah. Muhammad and Ali and Hussein cannot respond to anybody. They're dead. Parivash: Until the Day of Resurrection. Then, they disown them. Dr. Khalifa: Then, they disown them. Right. Dr. Khalifa: \"We never knew about you.\" Now, these people, these particular people when our revelations were recited to them clearly that is \"Worship God alone. Uphold the word of God alone. The creed is La Elaha Ella Allah\" those who disbelieved say to the truth that comes to them \"\"This is obviously magic!\" [46:8] When they say, \"He fabricated this,\" say, \"If I fabricated this, then you cannot protect me from GOD. He is fully aware of everything you scheme. He suffices as a witness between me and you. He is the Forgiver, Most Merciful.\" When I apply this to me, personally, I notice always when it says \"say\", it is already said I always tell them \"if I'm a liar, then this is my problem. What is the message, what am I telling you? I'm telling you worship God alone \"and uphold the word of God alone. See. If I'm lying to you, this is my problem not as far as you're concerned. You can benefit from \"from the truth if it is truthful and you can benefit from the message. If I'm a liar, it is my problem not yours.\" [46:9] Say, \"I am not different from other messengers. I have no idea what will happen to me or to you. I only follow what is revealed to me. I am no more than a profound warner.\" [46:10] Say, \"What if it is from GOD and you disbelieved in it? A witness from the Children of Israel has borne witness to a similar phenomenon,* ... So, look at the footnote here. *46:10 This witness is Rabbi Judah the Pious (11th Century A.D.), who discovered the same 19-based mathematical code in intact fragments of the scripture (see Appendix 1). So, obviously number 9 \"say\" here refers to our generation. I am not different from other messengers I [46:9] ... \"I am not different from other messengers. I have no idea what will happen to me or to you. I only follow what is revealed to me. I am no more than a profound warner.\" [46:10] Say, \"What if it is from GOD and you disbelieved in it? A witness from the Children of Israel has borne witness to a similar phenomenon,* and he has believed, while you have turned arrogant. Surely, GOD does not guide the wicked people.\" Rabbi Judah the Pious is undoubtedly a believer, when you read his writings. \"God alone\" In fact, he's a strict scripturist just like we are. [46:11] Those who disbelieved said about those who believed, \"If it were anything good, they would not have preceded us to it.\" Because they were not guided thereby, they said, \"This is an old fabrication!\" [46:12] Before this, the book of Moses provided guidance and mercy. And this is a confirming Arabic scripture, to warn those who transgressed, and to give good news to the righteous. Good News [46:13] Surely, those who say, \"Our Lord is GOD,\" then lead a righteous life, will have no fear, nor will they grieve. Sounds familiar? [46:14] They have deserved Paradise, where they abide forever; a reward for their works. Congratulations! Any questions? Parivash: Yes. It is Sura, \"those who are Christians...\" not here but \"no fear no grief\" (unintelligible) the question was that there are those who are Jewish or Christians no fear. How about the people who do not believe you are messenger? Dr. Khalifa: They're going to Hell. Parivash: Ok. they say \"how about this?\" I told them something. I'm gonna make sure. Parivash: I said \"this is for people who didn't reach the proofs. If you, if you show...\" Dr. Khalifa: who don't know Dr. Khalifa: If these people, if they come and see the proof, I give them the proof, I give them the message and they say, and they don't believe, they are going Hell. Parivash: Yes. I, I,... Dr. Khalifa: If they are believers who are included here, they will readily accept everything. Parivash: Yes. Parivash: I said for example if now is the time of Moses and Jesus after Moses you know and everybody, you know, Parivash: they don't know if they died, they all are in Heaven. But if Jesus showed them the truth Dr. Khalifa: Yes. Parivash: and they still they say \"no, we don't believe.\" Dr. Khalifa: They go to Hell. Dr. Khalifa: Yeah, this is for people who don't know. They are in the middle of the jungle. They don't know anything about Quran or anything. But any time you show them the Quran, they'll believe it. They find nothing objectionable in it. You show them any proof on God, they accept it. Dr. Khalifa: You see, God will guide them and make them believe. Parivash: And after this, Alhamdu Lillah, they say \"Yeah, yeah.\" Dr. Khalifa: Yeah. A man: Will it be appropriate if somebody regarding verse 10, [46:10] ... A witness from the Children of Israel has borne witness to a similar phenomenon, ... if people say \"well, it also means that this verse also, a part of the verse also, refers to Jesus, I could say \"yes, it used to refer A man: to specifically Muhammad, but now it refers to (unintelligible) vis-à-vis, Rashad. Dr. Khalifa: No, actually... Dr. Khalifa: No, it never refers to Jesus. Dr. Khalifa: No, Jesus is not considered one of the children of Israel in the Quran. He's considered a vanguard of a new movement and a whole new religion. A man: The Quran says that? Dr. Khalifa: Yes. Dr. Khalifa: It says, (46:10) شَهِدَ شَاهِدٌۭ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ You know, if it was Jesus, God would have said \"Jesus borne witness.\" He wouldn't call Jesus one of the children of Israel. A man: There has no... I mean, there are two possibilities. One is that verse had a particular relevance at the time of Muhammad and has a further deeper relevance at your time. Dr. Khalifa: No. A man: Like not this one. Dr. Khalifa: It's just one of the things that were to come later, to become obvious later. A witness from among the children of Israel borne witness to something like it. Jesus didn't bear witness to something like the Quran. It's totally different. This is, there is no question that it is Rabbi Judah the Pious. A man: He has believed. Dr. Khalifa: And... Right. A man: He has believed. Dr. Khalifa: Yes. Ok... Dr. Khalifa: Bism Allah Arrahman Arraheem In the name of God, Most Gracious, Most Merciful This was an excellent brief presentation of the perpetual miracle that God sent to us that is to be witnessed by anybody, at any place, at any time. Anybody in Tokyo, Japan can open this and witness the miracle, this mathematically, mathematically coded book. This is an original idea. And I have to take you back a few years, a few centuries, actually where the realization came first that God spoke to us in mathematics. It was about 900 years ago when a Jewish Rabbi discovered this number 19 in the intact remnants of the scriptures, specifically in the Prayers that were given, came to them through Abraham, from the prophet Abraham, just like our Namaz came through Abraham. What happened about 900 years ago was that the Jews in France added a short statement to their Morning Prayer which was \"blessed are those who follow the righteous path.\" They just added this harmless, seemingly harmless statement. Rabbi Judah the Pious, who was living at that time, just wrote a barrage of literature, eight huge volumes, as to why this short statement would destroy what he called the divine rhythm, or the key that causes contact between us and God. And he showed that the number 19 is the basis of the scriptures, and the language that God is speaking to us, that it is the key to the Word of God. And I have it reproduced here, in the appendix. Actually, Rabbi Judah the Pious, I think some of you know this, is actually mentioned in the Quran, in Sura 46, verse 10. So, I reproduced part of his writing about him, on page 636 of this book.",
+      "review_status": "draft",
+      "retrieval_text": "Quran 46, idols disowning worshipers, Ali, Muhammad, Hussein, and powerless intercessors\nQuran 46 says idols will become enemies of their worshipers. Rashad applies the passage to Ali, Muhammad, Hussein, Jesus, and other invoked figures, saying the dead cannot respond and will denounce their idolization.\nConcepts: sura-46; idols-disown-worshipers; intercession-rejected; dead-cannot-respond; god-alone\nUser terms: idols become enemies; Ali denounces Shias; Muhammad denounces Muslims; dead cannot respond\nQuestions: What will idols do on Judgment Day? Which figures were named? Why could they not answer prayers?\nQuran: 46:4-7\nBible: \nEntities: Ali; Muhammad; Hussein; Jesus"
+    },
+    {
+      "id": "parivash30-s07",
+      "start": 4200,
+      "end": 4980,
+      "title": "Rabbi Judah the Pious, nineteen in Jewish liturgy, and large Quranic totals",
+      "summary": "Rashad quotes a book titled Studies in Jewish Mysticism about Rabbi Judah the Pious objecting to additions that disrupted sets of nineteen in prayer. He cites nineteen occurrences of divine names and related patterns, then presents Quranic totals such as 118,123 and other multiples of nineteen as tangible computer-age evidence.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "rabbi-judah-pious",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "jewish-mysticism",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "nineteen-liturgy",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quranic-total",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "118123",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "computer-age-proof",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Studies in Jewish Mysticism",
+        "Rabbi the Pious",
+        "nineteen Holy Name",
+        "118123 multiple 19"
+      ],
+      "related_questions": [
+        "What source did Rashad quote?",
+        "What did Rabbi Judah allegedly object to?",
+        "Which Quranic total was presented?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Rabbi Judah the Pious"
+      ],
+      "retrieval_note": "Verify the bibliography, quotation, Hebrew counts, and Quranic calculations.",
+      "retrieval_priority": "primary",
+      "start_time": "01:09:55.808",
+      "end_time": "01:23:05.964",
+      "source_segment_start": 841,
+      "source_segment_end": 976,
+      "csv_speakers": [
+        "A man",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "So, I reproduced part of his writing about him, on page 636 of this book. Now, I'm quoting from a book entitled Studies in Jewish Mysticism. It says, The people [Jews] in France made it a custom to add [in the morning prayer] the words: “ ’Ashrei temimei derekh which means [blessed are those who walk the righteous way],” and our Rabbi, the Pious, of blessed memory, wrote that they were completely and utterly wrong. It is all gross falsehood, because there are only nineteen times.. Now, notice the number 19. there are only nineteen times that the Holy Name is mentioned [in that portion of the morning prayer]... and similarly you find the word ’Elohim, which means God, nineteen times in the pericope of Ve-’elleh shemot. Similarly, you find that Israel were called “sons” nineteen times, and there are many other examples. Now, listen to this. All these sets of nineteen are intricately intertwined, and they contain many secrets and esoteric meanings, which are contained in more than eight large volumes. Furthermore, in this section there are 152 (19x8) words. 46:10. Is it 46:10 or 42:10? Let me see. Maybe 42:10 It's not 46:10. Yes, yes, 46:10 says, [46:10] Say, \"What if it is from GOD... this Quran [46:10] ... \"What if it is from GOD and you disbelieved in it? A witness from the Children of Israel has borne witness to a similar phenomenon, ... And I believe that this verse refers to Rabbi Judah the Pious, because if you read his writings, he's really a believer. So, what I would like to say is that the number 19 has always been the key, has always been the key in God's writings. And one of the strange statements of Galileo was that mathematics is the language with which God created the universe. That was a statement by Galileo. And we come to realize now that in nature, the number 19 also, which may be God's signature, is evident in God's creation. The sun, the moon, and the earth line up in the same position every 19 years. And you can see this in detail again if you go to the library and look at the Jewish calendar. In the Jewish encyclopedia, under calendar, you'll see this, because they have to adjust the calendar once every 19 years. The human body has 209 bones, which is 19 x 11. The human fetus, it is now established that the human, a full term embryo is in the mother's womb 266 days, 19 x 14. And this, not 267. And you see this in the textbooks in medical schools. So, obviously God puts His stamp on everything, including the Quran. The Quran is the only scripture that is intact. And this is where we have the system intact, cause Behrouz shared with you some of these phenomena. Maybe you can put this wherever we can see it. Just these numbers here will convince anybody that this is not a human made book. This top number, I'm gonna repeat because Behrouz went through it a little bit too fast. This number here is the number of digits if you write every verse in the Quran, the number of every verse. For example, the first Sura is 7 verses. So, write 1 2 3 4 5 6 7. Next Sura is 286 verses, so you write next to that, 1 2 3 4, all the way to 286, and so on, all the way to the end of the Quran. So, we'll talk about the physical structure of this book. Every verse in the Quran, you just write the number. You end up with a long number, which we have hanging on the wall at Masjid Tucson. And the number of digits is 12,692. This number is a multiple of 19. This is the number of digits in the long number, which takes about 3 pages, printed by the computer. And the long number itself is also a multiple of 19. So, this confirms the physical structure of the book. How many Suras and how many verses in every Sura. This number here is the number of verses in the Quran. You just look at this book and say, the first Sura is 7 verses, second Sura is 286 verses, third Sura is 200 verses. You add these numbers, you come up with this number, 6 3 4 6, which is also a multiple of 19. The number of Suras, of course, is 114, which is 19 x 6. The first verse, which is very famous, Bism Allah Arrahman Arraheem, is 19 letters. Okay, 2698, this is the number of the word \"God\" in the Quran, the word \"Allah\", from the beginning to the end, 2698. A multiple of 19. And, considering how the Quran was revealed to the Prophet Muhammad, separated in time and place, it is really incredible. In fact, when we were working on this book, we had about 6 college graduates, including one PhD, and we had so much difficulty just keeping track of the word \"God.\" We made so many mistakes in doing this. And, the book, of course, confirms itself. Because, if you notice, if you open this book, any of you who has it, will see on any page, will see on any page that the word \"God\" is written in capital bold letters. So, anyone can easily verify this. And the number of these, the word \"God\" is down, written on every page. So, you can look at any page and confirm that it is 6 times, this page here, page 97, has 6 words \"Allah\" in it. And you can do this randomly on any page. And make sure that these counts are correct. And you go to the end of the book and you see that the word \"God\" is a multiple of 19. 2698. 19 x 142. This number here is the sum of all the numbers mentioned in the Quran, without repetition. There are 30 numbers mentioned in the Quran. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 19, 20, 30, 40, 50, 60, 70, 80, 99, 100, 200, 300, 400, 500, 600, 700, not 700, 500, 3,000, 5,000, 50,000, and 100,000. And you add them up, you get this total. 162146, which is a multiple of 19. Now, you notice these are physical facts. Dr. Khalifa: Nobody is saying \"in my opinion, the total of the numbers in the Quran is 162,140.\" It's a physical fact. Yes, sir? A man: Is Quran has only one version, or has there been different versions of Quran? Dr. Khalifa: No, there's only one version. A man: One version. There hasn't been any contest as to the different, no denomination of... Dr. Khalifa: No, there's only one Quran. There's one Quran. A man: Just like in Christianity, the... Dr. Khalifa: There are different versions of the Bible. A man: The Bible has different versions. Dr. Khalifa: There has been different versions of the Bible, multiple versions, so on. A man: That's right. Dr. Khalifa: But the Quran is only one version. There are no differences. So, this is a physical fact. It is nobody's opinion. And it's... all you need to do is find the numbers in the Quran and add them up. If they don't add up to a multiple of 19, then the whole thing collapses and the subject is over. But this has been in existence for 20 years now. And it's been scrutinized. This research has been scrutinized more than any research in the history of humanity. Because back home, they looked at all these numbers, trying to find any errors. It has been confirmed and reconfirmed that these are physical facts. This number here is the total of the verses wherever the word \"God\" is mentioned. The word \"Allah\" is mentioned. And this is really and truly awesome. Because, again, if you have a copy of this, just open it at random anywhere, and see the word \"God.\" Okay, I opened at page 259. So, I opened page 259 if you have this, and I can tell you what's in it. In page 259, you see verses 25 to 33 in Sura 14. And you notice that the word \"God\", Allah, is mentioned in verse 25. Verse 27 has 3 of them. Verse 26 has 0. Verse 28 has 1. 29 has 0. 30 has 1 word \"Allah. 31 has 0, and 32 has 1, and 33 has 0. So, in this, there are 3 words \"Allah\" in verse 27, but we only add 27. So, we add 25 plus 27 plus 28 plus 30 plus 32. We add only the verses wherever the word \"Allah\" is mentioned. Whether it is 1 time or 10 times. And this is the total, in the whole Quran. It is 118123, which is also a multiple of 19. So, all these phenomena defy coincidence, or defy human manufacture. And you immediately realize that we have in our hand God's message to you. We have full confidence, because this is the age of computers. People have been demanding tangible evidence, now we have tangible evidence that this is God speaking to us, and not any human being trying to fool us. Okay, now that the book has proven the physical evidence, we have confidence that this is God speaking to us. It is not any human being with the shortcomings of human beings. And in the book we have answers to these questions. And we know that God is speaking to us. God is telling us. He created us and He's telling us where we came from. He's telling us why we are here on this earth. And He's telling us where we go from here. And like the Quran says, it says \"none can tell you this like the Expert\", one of the names of God, Khabir. In Arabic (35:14) وَلَا يُنَبِّئُكَ مِثْلُ خَبِيرٍۢ None can tell you these facts like the Expert. And God is the Supreme Expert. So now, I will try to share with you what God tells us about these questions. Where did we come from? Do you have some markers? Oh yes, thank you. Okay, why are we searching for these questions? \"Where did we come from?\" It's, we learn from Quran that we are here. We have no recollection of our previous past. But we were all in God's kingdom. You can think of us as angels. We used to be angels in God's kingdom. So, if I draw a line representing all the creatures in God's kingdom billions of years ago, and this includes you and me, billions of years ago, it is just very clear in the Quran that we existed in the past. For example, in Sura 7, verse 143, God says \"I gathered all of you, all the descendants of Adam, and I had you bear witness that I alone am your Lord.\" God tells us that. But we don't have any recollection of this. We don't remember standing before God and saying \"we bear witness You are our Lord.\" So, the Quran teaches us we don't have any remembrance of that. And this is one of the purposes of us being here, is to come into an existence where we do not remember the past and start, have a fresh start.",
+      "review_status": "draft",
+      "retrieval_text": "Rabbi Judah the Pious, nineteen in Jewish liturgy, and large Quranic totals\nRashad quotes a book titled Studies in Jewish Mysticism about Rabbi Judah the Pious objecting to additions that disrupted sets of nineteen in prayer. He cites nineteen occurrences of divine names and related patterns, then presents Quranic totals such as 118,123 and other multiples of nineteen as tangible computer-age evidence.\nConcepts: rabbi-judah-pious; jewish-mysticism; nineteen-liturgy; quranic-total; 118123; computer-age-proof\nUser terms: Studies in Jewish Mysticism; Rabbi the Pious; nineteen Holy Name; 118123 multiple 19\nQuestions: What source did Rashad quote? What did Rabbi Judah allegedly object to? Which Quranic total was presented?\nQuran: \nBible: \nEntities: Rabbi Judah the Pious"
+    },
+    {
+      "id": "parivash30-s08",
+      "start": 4980,
+      "end": 5372.601000000001,
+      "title": "Physical evidence, answers to existence, the heavenly feud, Satan's claim, and the second chance",
+      "summary": "Rashad says mathematical evidence establishes that the Quran is God's message and therefore reliably explains human origins, purpose, and destiny. He returns to the heavenly feud: some souls truly believed in God's absolute authority but followed the crowd supporting Satan to varying degrees. Earthly life is offered as a second chance to reconsider that agreement.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "physical-evidence-quran",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "purpose-of-life",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "heavenly-feud",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "satan-claim",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "crowd-following",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "second-chance",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "tangible evidence God speaking",
+        "where came from why here",
+        "agreed with Satan different degrees",
+        "second chance reconsider"
+      ],
+      "related_questions": [
+        "What did mathematical evidence establish for Rashad?",
+        "What was the heavenly feud?",
+        "Why was Earthly life granted?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Satan"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "01:22:55.919",
+      "end_time": "01:29:32.600",
+      "source_segment_start": 976,
+      "source_segment_end": 1054,
+      "csv_speakers": [
+        "A man",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "And this is one of the purposes of us being here, is to come into an existence where we do not remember the past and start, have a fresh start. Then, we are given two messages, one message from God and one message from Satan. And we're supposed to freely make a choice. God gave us the freedom to choose. You can choose either one of them, either God's message or Satan's message. As you know, I'm gonna interrupt to get to what God is telling us. In the middle of the subject, in the middle of the subject, Adam and Eve were in Heaven, and God gave them a message. This is because all of us, I'm sure, know this. But God gave Adam and Eve a message. He said \"you're in Paradise. You can enjoy anything you want, but not this tree.\" \"Don't come close to this tree.\" That was God's message to Adam and Eve. And they stayed in Heaven, God knows how long, maybe thousands, maybe millions of years. So, but the point is, for as long as they respected God's commandment, God's law, they stayed there. And then, most of you know, Satan went to them and said \"eat from this tree.\" Ok. So now, they have two messages. Hi Rashi, how are you? Adam and Eve were in Heaven, or in Paradise, or Heaven, the same thing. And they had a message from God telling them \"do not eat from this tree.\" And they had a message from Satan saying \"eat from this tree.\" For as long as they obeyed, adhered by God's message, they stayed in Heaven. Once they listened to Satan, they were kicked out of there. And this is what brought us here. I mean, as a second coming to this world, not the initial. This is not the original sin. The eating from the tree is not the original sin as believed in the previous creatures. So, this line is representing all of God's creatures, including you and me. And these creatures of God had different responsibilities, different assignments of work. And depending on their duties, they had different powers. For example, if somebody assigns to you something to do in New York, your company says \"you must go to New York and do something and come back.\" They'll give you a ticket to get on a plane, fly to New York, do the job and come back. This is some power given to you. So, God's creatures had different powers. One of the most powerful creatures, not the most powerful creature, one of the powerful creatures, now we got to know as Satan, his God-given powers went to his head. He had an egotistic problem. He thought he can be a god besides God. He thought he can run a dominion besides God. And this immediately created various degrees of agreement or disagreement with Satan. So, let's, just to put the matter in perspective, I'm going to put a representation of how many creatures agreed with Satan. The vast majority of God's creatures did not agree with Satan, only a few. I'm gonna represent them by this red dot. I hope you can see it right there. So, the vast majority of creatures, they said \"no way, Satan cannot be a god besides God. Only God can be a god.\" I mean, this is from a practical point of view. There's simply more to God-hood than Satan thought. And this is reflected in this world now, that Satan cannot run the world. There are many starving children, many diseases, earthquakes, cancer. All this is Satan's incompetence, reflects Satan's incompetence in this world. These creatures that did not agree with Satan are the angels. They are now, the creatures became classified. The creatures who upheld God's absolute authority were classified as angels. The creatures that rebelled and agreed with Satan were classified as, and then further classified. Let's now classify them as rebels. They did not believe in God's absolute authority. Now, I'm going to take this little dot here. By the way, this little dot represents something like a trillion creatures. The number of God's angels is not known to anybody except God. You see this in the Quran, Sura 74, verse 31. Where God says \"only God knows the number of His, the angels.\" Even the angels don't know how many of them there are. As you see, this red dot represents a trillion creatures. And the blue line is much larger, so there's countless numbers of angels. I'm going to extend this dot here into a long line. We're still dealing with the question \"where did we come from?\" This line represents about a trillion creatures. They are the creatures that agreed with Satan. And this includes you and me, in this line. To different degrees. Let's say here are the least agreeable with Satan and these are the most, the most agreeable with Satan. God gave these creatures a second chance. First of all, the angels said \"since these creatures here rebel, put them all in Hell.\" \"Throw them all in Hell. Banish them from Your kingdom.\" And in Sura 2, verse 30, God says \"no.\" One of the names of God is the Most Merciful. God wanted to give us another chance to reconsider our decision to side with Satan. In Sura 2, verse 30, God says \"I know what you do not know.\" The angels said \"throw them all in Hell.\" And God said \"I know what you do not know.\" What did God know that the angels didn't know? God knew that some of us, deep in our hearts, we really believed in God's absolute authority. But for some reason, we were swept in the crowd and we agreed with Satan, to different degrees. A man: (unintelligible) Dr. Khalifa: So,... pardon? So, this line here, representing the rebels, God gave them a second chance. He said \"how would you like to reconsider your agreement with Satan?\" \"I'm going to give you a chance to submit outright. Or, you can go through an experiment where we put Satan to the test.\" And I use the example of, for example, Muhammad coming and saying \"I can fly a plane.\" He's making a claim.",
+      "review_status": "draft",
+      "retrieval_text": "Physical evidence, answers to existence, the heavenly feud, Satan's claim, and the second chance\nRashad says mathematical evidence establishes that the Quran is God's message and therefore reliably explains human origins, purpose, and destiny. He returns to the heavenly feud: some souls truly believed in God's absolute authority but followed the crowd supporting Satan to varying degrees. Earthly life is offered as a second chance to reconsider that agreement.\nConcepts: physical-evidence-quran; purpose-of-life; heavenly-feud; satan-claim; crowd-following; second-chance\nUser terms: tangible evidence God speaking; where came from why here; agreed with Satan different degrees; second chance reconsider\nQuestions: What did mathematical evidence establish for Rashad? What was the heavenly feud? Why was Earthly life granted?\nQuran: \nBible: \nEntities: Satan"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "118123",
+      "preferred_label": "118123",
+      "aliases": [
+        "118123 multiple 19",
+        "Rabbi the Pious",
+        "Studies in Jewish Mysticism",
+        "nineteen Holy Name"
+      ],
+      "appears_in_sections": [
+        "parivash30-s07"
+      ]
+    },
+    {
+      "id": "accept-outcomes",
+      "preferred_label": "Accept Outcomes",
+      "aliases": [
+        "Moses killed by accident",
+        "may dislike good thing",
+        "whatever happens for your good",
+        "wronged my soul forgive"
+      ],
+      "appears_in_sections": [
+        "parivash30-s02"
+      ]
+    },
+    {
+      "id": "accident",
+      "preferred_label": "Accident",
+      "aliases": [
+        "Moses killed by accident",
+        "may dislike good thing",
+        "whatever happens for your good",
+        "wronged my soul forgive"
+      ],
+      "appears_in_sections": [
+        "parivash30-s02"
+      ]
+    },
+    {
+      "id": "accident-study",
+      "preferred_label": "Accident Study",
+      "aliases": [
+        "2000 insurance files",
+        "November 25 1985",
+        "insurance with God",
+        "protected from accidents"
+      ],
+      "appears_in_sections": [
+        "parivash30-s05"
+      ]
+    },
+    {
+      "id": "attachment-test",
+      "preferred_label": "Attachment Test",
+      "aliases": [
+        "Satan asks to take it",
+        "anything you do to keep it",
+        "baby becomes god",
+        "bilghayb",
+        "judge tree by fruit"
+      ],
+      "appears_in_sections": [
+        "parivash30-s04"
+      ]
+    },
+    {
+      "id": "children-as-idols",
+      "preferred_label": "Children As Idols",
+      "aliases": [
+        "Satan asks to take it",
+        "anything you do to keep it",
+        "baby becomes god",
+        "bilghayb",
+        "judge tree by fruit"
+      ],
+      "appears_in_sections": [
+        "parivash30-s04"
+      ]
+    },
+    {
+      "id": "compensation-after-test",
+      "preferred_label": "Compensation After Test",
+      "aliases": [
+        "Satan asks to take it",
+        "anything you do to keep it",
+        "baby becomes god",
+        "bilghayb",
+        "judge tree by fruit"
+      ],
+      "appears_in_sections": [
+        "parivash30-s04"
+      ]
+    },
+    {
+      "id": "computer-age-proof",
+      "preferred_label": "Computer Age Proof",
+      "aliases": [
+        "118123 multiple 19",
+        "Rabbi the Pious",
+        "Studies in Jewish Mysticism",
+        "nineteen Holy Name"
+      ],
+      "appears_in_sections": [
+        "parivash30-s07"
+      ]
+    },
+    {
+      "id": "crowd-following",
+      "preferred_label": "Crowd Following",
+      "aliases": [
+        "agreed with Satan different degrees",
+        "second chance reconsider",
+        "tangible evidence God speaking",
+        "where came from why here"
+      ],
+      "appears_in_sections": [
+        "parivash30-s08"
+      ]
+    },
+    {
+      "id": "dead-cannot-respond",
+      "preferred_label": "Dead Cannot Respond",
+      "aliases": [
+        "Ali denounces Shias",
+        "Muhammad denounces Muslims",
+        "dead cannot respond",
+        "idols become enemies"
+      ],
+      "appears_in_sections": [
+        "parivash30-s06"
+      ]
+    },
+    {
+      "id": "disliked-good",
+      "preferred_label": "Disliked Good",
+      "aliases": [
+        "Moses killed by accident",
+        "may dislike good thing",
+        "whatever happens for your good",
+        "wronged my soul forgive"
+      ],
+      "appears_in_sections": [
+        "parivash30-s02"
+      ]
+    },
+    {
+      "id": "divine-plan",
+      "preferred_label": "Divine Plan",
+      "aliases": [
+        "Joseph family Egypt",
+        "make oppressed inheritors",
+        "returned to mother",
+        "throw Moses into river"
+      ],
+      "appears_in_sections": [
+        "parivash30-s01"
+      ]
+    },
+    {
+      "id": "divine-protection",
+      "preferred_label": "Divine Protection",
+      "aliases": [
+        "2000 insurance files",
+        "November 25 1985",
+        "insurance with God",
+        "protected from accidents"
+      ],
+      "appears_in_sections": [
+        "parivash30-s05"
+      ]
+    },
+    {
+      "id": "faith-in-unseen",
+      "preferred_label": "Faith In Unseen",
+      "aliases": [
+        "Satan asks to take it",
+        "anything you do to keep it",
+        "baby becomes god",
+        "bilghayb",
+        "judge tree by fruit"
+      ],
+      "appears_in_sections": [
+        "parivash30-s04"
+      ]
+    },
+    {
+      "id": "family-pressure",
+      "preferred_label": "Family Pressure",
+      "aliases": [
+        "Satan asks to take it",
+        "anything you do to keep it",
+        "baby becomes god",
+        "bilghayb",
+        "judge tree by fruit"
+      ],
+      "appears_in_sections": [
+        "parivash30-s04"
+      ]
+    },
+    {
+      "id": "god-alone",
+      "preferred_label": "God Alone",
+      "aliases": [
+        "Ali denounces Shias",
+        "Muhammad denounces Muslims",
+        "dead cannot respond",
+        "idols become enemies"
+      ],
+      "appears_in_sections": [
+        "parivash30-s06"
+      ]
+    },
+    {
+      "id": "heavenly-feud",
+      "preferred_label": "Heavenly Feud",
+      "aliases": [
+        "agreed with Satan different degrees",
+        "second chance reconsider",
+        "tangible evidence God speaking",
+        "where came from why here"
+      ],
+      "appears_in_sections": [
+        "parivash30-s08"
+      ]
+    },
+    {
+      "id": "high-horizon",
+      "preferred_label": "High Horizon",
+      "aliases": [
+        "met all prophets",
+        "mother passed ten days later",
+        "name values multiple 19",
+        "sent messengers Jesus Gospel"
+      ],
+      "appears_in_sections": [
+        "parivash30-s03"
+      ]
+    },
+    {
+      "id": "idols-disown-worshipers",
+      "preferred_label": "Idols Disown Worshipers",
+      "aliases": [
+        "Ali denounces Shias",
+        "Muhammad denounces Muslims",
+        "dead cannot respond",
+        "idols become enemies"
+      ],
+      "appears_in_sections": [
+        "parivash30-s06"
+      ]
+    },
+    {
+      "id": "insurance-files",
+      "preferred_label": "Insurance Files",
+      "aliases": [
+        "2000 insurance files",
+        "November 25 1985",
+        "insurance with God",
+        "protected from accidents"
+      ],
+      "appears_in_sections": [
+        "parivash30-s05"
+      ]
+    },
+    {
+      "id": "insurance-with-god",
+      "preferred_label": "Insurance With God",
+      "aliases": [
+        "2000 insurance files",
+        "November 25 1985",
+        "insurance with God",
+        "protected from accidents"
+      ],
+      "appears_in_sections": [
+        "parivash30-s05"
+      ]
+    },
+    {
+      "id": "intercession-rejected",
+      "preferred_label": "Intercession Rejected",
+      "aliases": [
+        "Ali denounces Shias",
+        "Muhammad denounces Muslims",
+        "dead cannot respond",
+        "idols become enemies"
+      ],
+      "appears_in_sections": [
+        "parivash30-s06"
+      ]
+    },
+    {
+      "id": "jesus",
+      "preferred_label": "Jesus",
+      "aliases": [
+        "met all prophets",
+        "mother passed ten days later",
+        "name values multiple 19",
+        "sent messengers Jesus Gospel"
+      ],
+      "appears_in_sections": [
+        "parivash30-s03"
+      ]
+    },
+    {
+      "id": "jewish-mysticism",
+      "preferred_label": "Jewish Mysticism",
+      "aliases": [
+        "118123 multiple 19",
+        "Rabbi the Pious",
+        "Studies in Jewish Mysticism",
+        "nineteen Holy Name"
+      ],
+      "appears_in_sections": [
+        "parivash30-s07"
+      ]
+    },
+    {
+      "id": "joseph-family",
+      "preferred_label": "Joseph Family",
+      "aliases": [
+        "Joseph family Egypt",
+        "make oppressed inheritors",
+        "returned to mother",
+        "throw Moses into river"
+      ],
+      "appears_in_sections": [
+        "parivash30-s01"
+      ]
+    },
+    {
+      "id": "messengers",
+      "preferred_label": "Messengers",
+      "aliases": [
+        "met all prophets",
+        "mother passed ten days later",
+        "name values multiple 19",
+        "sent messengers Jesus Gospel"
+      ],
+      "appears_in_sections": [
+        "parivash30-s03"
+      ]
+    },
+    {
+      "id": "monasticism",
+      "preferred_label": "Monasticism",
+      "aliases": [
+        "met all prophets",
+        "mother passed ten days later",
+        "name values multiple 19",
+        "sent messengers Jesus Gospel"
+      ],
+      "appears_in_sections": [
+        "parivash30-s03"
+      ]
+    },
+    {
+      "id": "moses-killing",
+      "preferred_label": "Moses Killing",
+      "aliases": [
+        "Moses killed by accident",
+        "may dislike good thing",
+        "whatever happens for your good",
+        "wronged my soul forgive"
+      ],
+      "appears_in_sections": [
+        "parivash30-s02"
+      ]
+    },
+    {
+      "id": "moses-mother",
+      "preferred_label": "Moses Mother",
+      "aliases": [
+        "Joseph family Egypt",
+        "make oppressed inheritors",
+        "returned to mother",
+        "throw Moses into river"
+      ],
+      "appears_in_sections": [
+        "parivash30-s01"
+      ]
+    },
+    {
+      "id": "mother-death",
+      "preferred_label": "Mother Death",
+      "aliases": [
+        "met all prophets",
+        "mother passed ten days later",
+        "name values multiple 19",
+        "sent messengers Jesus Gospel"
+      ],
+      "appears_in_sections": [
+        "parivash30-s03"
+      ]
+    },
+    {
+      "id": "name-values",
+      "preferred_label": "Name Values",
+      "aliases": [
+        "met all prophets",
+        "mother passed ten days later",
+        "name values multiple 19",
+        "sent messengers Jesus Gospel"
+      ],
+      "appears_in_sections": [
+        "parivash30-s03"
+      ]
+    },
+    {
+      "id": "nineteen-liturgy",
+      "preferred_label": "Nineteen Liturgy",
+      "aliases": [
+        "118123 multiple 19",
+        "Rabbi the Pious",
+        "Studies in Jewish Mysticism",
+        "nineteen Holy Name"
+      ],
+      "appears_in_sections": [
+        "parivash30-s07"
+      ]
+    },
+    {
+      "id": "november-25-1985",
+      "preferred_label": "November 25 1985",
+      "aliases": [
+        "2000 insurance files",
+        "November 25 1985",
+        "insurance with God",
+        "protected from accidents"
+      ],
+      "appears_in_sections": [
+        "parivash30-s05"
+      ]
+    },
+    {
+      "id": "pharaoh",
+      "preferred_label": "Pharaoh",
+      "aliases": [
+        "Joseph family Egypt",
+        "make oppressed inheritors",
+        "returned to mother",
+        "throw Moses into river"
+      ],
+      "appears_in_sections": [
+        "parivash30-s01"
+      ]
+    },
+    {
+      "id": "physical-evidence-quran",
+      "preferred_label": "Physical Evidence Quran",
+      "aliases": [
+        "agreed with Satan different degrees",
+        "second chance reconsider",
+        "tangible evidence God speaking",
+        "where came from why here"
+      ],
+      "appears_in_sections": [
+        "parivash30-s08"
+      ]
+    },
+    {
+      "id": "purpose-of-life",
+      "preferred_label": "Purpose Of Life",
+      "aliases": [
+        "agreed with Satan different degrees",
+        "second chance reconsider",
+        "tangible evidence God speaking",
+        "where came from why here"
+      ],
+      "appears_in_sections": [
+        "parivash30-s08"
+      ]
+    },
+    {
+      "id": "quranic-total",
+      "preferred_label": "Quranic Total",
+      "aliases": [
+        "118123 multiple 19",
+        "Rabbi the Pious",
+        "Studies in Jewish Mysticism",
+        "nineteen Holy Name"
+      ],
+      "appears_in_sections": [
+        "parivash30-s07"
+      ]
+    },
+    {
+      "id": "rabbi-judah-pious",
+      "preferred_label": "Rabbi Judah Pious",
+      "aliases": [
+        "118123 multiple 19",
+        "Rabbi the Pious",
+        "Studies in Jewish Mysticism",
+        "nineteen Holy Name"
+      ],
+      "appears_in_sections": [
+        "parivash30-s07"
+      ]
+    },
+    {
+      "id": "repentance",
+      "preferred_label": "Repentance",
+      "aliases": [
+        "Moses killed by accident",
+        "may dislike good thing",
+        "whatever happens for your good",
+        "wronged my soul forgive"
+      ],
+      "appears_in_sections": [
+        "parivash30-s02"
+      ]
+    },
+    {
+      "id": "satan-claim",
+      "preferred_label": "Satan Claim",
+      "aliases": [
+        "agreed with Satan different degrees",
+        "second chance reconsider",
+        "tangible evidence God speaking",
+        "where came from why here"
+      ],
+      "appears_in_sections": [
+        "parivash30-s08"
+      ]
+    },
+    {
+      "id": "second-chance",
+      "preferred_label": "Second Chance",
+      "aliases": [
+        "agreed with Satan different degrees",
+        "second chance reconsider",
+        "tangible evidence God speaking",
+        "where came from why here"
+      ],
+      "appears_in_sections": [
+        "parivash30-s08"
+      ]
+    },
+    {
+      "id": "support-oppressed",
+      "preferred_label": "Support Oppressed",
+      "aliases": [
+        "Joseph family Egypt",
+        "make oppressed inheritors",
+        "returned to mother",
+        "throw Moses into river"
+      ],
+      "appears_in_sections": [
+        "parivash30-s01"
+      ]
+    },
+    {
+      "id": "sura-28",
+      "preferred_label": "Sura 28",
+      "aliases": [
+        "Joseph family Egypt",
+        "make oppressed inheritors",
+        "returned to mother",
+        "throw Moses into river"
+      ],
+      "appears_in_sections": [
+        "parivash30-s01"
+      ]
+    },
+    {
+      "id": "sura-46",
+      "preferred_label": "Sura 46",
+      "aliases": [
+        "Ali denounces Shias",
+        "Muhammad denounces Muslims",
+        "dead cannot respond",
+        "idols become enemies"
+      ],
+      "appears_in_sections": [
+        "parivash30-s06"
+      ]
+    },
+    {
+      "id": "sura-57",
+      "preferred_label": "Sura 57",
+      "aliases": [
+        "met all prophets",
+        "mother passed ten days later",
+        "name values multiple 19",
+        "sent messengers Jesus Gospel"
+      ],
+      "appears_in_sections": [
+        "parivash30-s03"
+      ]
+    },
+    {
+      "id": "total-submission",
+      "preferred_label": "Total Submission",
+      "aliases": [
+        "Moses killed by accident",
+        "may dislike good thing",
+        "whatever happens for your good",
+        "wronged my soul forgive"
+      ],
+      "appears_in_sections": [
+        "parivash30-s02"
+      ]
+    },
+    {
+      "id": "tree-by-fruit",
+      "preferred_label": "Tree By Fruit",
+      "aliases": [
+        "Satan asks to take it",
+        "anything you do to keep it",
+        "baby becomes god",
+        "bilghayb",
+        "judge tree by fruit"
+      ],
+      "appears_in_sections": [
+        "parivash30-s04"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio30-issue-01",
+      "issue_type": "composite-recording",
+      "original_text": "The source joins Sura 28, Sura 57, personal testimony, insurance, Sura 46, code 19, and heavenly-feud blocks.",
+      "suggested_action": "Preserve boundaries.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio30-issue-02",
+      "issue_type": "insurance-and-safety-risk",
+      "original_text": "An accident-file study is used to claim believers are protected.",
+      "suggested_action": "Do not discourage insurance or safety measures.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio30-issue-03",
+      "issue_type": "afterlife-and-visionary-claim",
+      "original_text": "Rashad assigns his mother a better destination and connects it with the high horizon.",
+      "suggested_action": "Keep personal and attributed.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio30-issue-04",
+      "issue_type": "bibliographic-and-numerical-audit",
+      "original_text": "Rabbi Judah quotations and multiple large totals require verification.",
+      "suggested_action": "Audit source text and calculations.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio30-issue-05",
+      "issue_type": "family-loss-test-risk",
+      "original_text": "Loss of cherished people or things is interpreted as Satanic testing.",
+      "suggested_action": "Do not apply to users experiencing grief or harm.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
+  "canonical_catalog_ids": [
+    "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

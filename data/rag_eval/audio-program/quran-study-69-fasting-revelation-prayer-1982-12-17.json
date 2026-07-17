@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.8-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-69-fasting-revelation-prayer-1982-12-17",
+  "title": "Quran Study 69: Fasting, the Revelation of the Quran, Dawn Prayer, and Answered Prayer (1982-12-17)",
+  "cases": [
+    {
+      "id": "audio69-eval-001",
+      "question": "How was fasting traced to Abraham?",
+      "expected_section_ids": [
+        "audio69-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says fasting existed before Muhammad and came through Abraham. The specified days are the lunar month of Ramadan. Illness and travel permit postponement, serious difficulty permits feeding a poor person, and voluntary extra feeding is praised, but the verse's ending is used to say fasting remains best whenever possible."
+    },
+    {
+      "id": "audio69-eval-002",
+      "question": "Which exemptions or substitutes were discussed?",
+      "expected_section_ids": [
+        "audio69-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says fasting existed before Muhammad and came through Abraham. The specified days are the lunar month of Ramadan. Illness and travel permit postponement, serious difficulty permits feeding a poor person, and voluntary extra feeding is praised, but the verse's ending is used to say fasting remains best whenever possible."
+    },
+    {
+      "id": "audio69-eval-003",
+      "question": "Why did Rashad still emphasize fasting?",
+      "expected_section_ids": [
+        "audio69-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says fasting existed before Muhammad and came through Abraham. The specified days are the lunar month of Ramadan. Illness and travel permit postponement, serious difficulty permits feeding a poor person, and voluntary extra feeding is praised, but the verse's ending is used to say fasting remains best whenever possible."
+    },
+    {
+      "id": "audio69-eval-004",
+      "question": "How did Rashad distinguish revelation from gradual release?",
+      "expected_section_ids": [
+        "audio69-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:185 and 44:3 are used to argue that the whole Quran was revealed in one blessed night by being placed into Muhammad's heart at the highest Masjid al-Aqsa, not at a terrestrial Jerusalem mosque. Gabriel later released small portions over twenty-three years. Rashad lists the first releases as portions of Suras 96, 68, 74, 75, and then al-Fatihah, connecting word counts and the nineteen-letter Bismillah."
+    },
+    {
+      "id": "audio69-eval-005",
+      "question": "Where did he locate Masjid al-Aqsa?",
+      "expected_section_ids": [
+        "audio69-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:185 and 44:3 are used to argue that the whole Quran was revealed in one blessed night by being placed into Muhammad's heart at the highest Masjid al-Aqsa, not at a terrestrial Jerusalem mosque. Gabriel later released small portions over twenty-three years. Rashad lists the first releases as portions of Suras 96, 68, 74, 75, and then al-Fatihah, connecting word counts and the nineteen-letter Bismillah."
+    },
+    {
+      "id": "audio69-eval-006",
+      "question": "Which early revelation sequence did he present?",
+      "expected_section_ids": [
+        "audio69-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:185 and 44:3 are used to argue that the whole Quran was revealed in one blessed night by being placed into Muhammad's heart at the highest Masjid al-Aqsa, not at a terrestrial Jerusalem mosque. Gabriel later released small portions over twenty-three years. Rashad lists the first releases as portions of Suras 96, 68, 74, 75, and then al-Fatihah, connecting word counts and the nineteen-letter Bismillah."
+    },
+    {
+      "id": "audio69-eval-007",
+      "question": "Why did Rashad emphasize the spelling Becca?",
+      "expected_section_ids": [
+        "audio69-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that the unusual spelling Becca was divinely commanded and mathematically necessary. Dean says contemporaries could distinguish Muhammad's ordinary speech from revelation. Quran 17:106 and 25:32 explain gradual release for memorization. Gabriel is said to provide verse placement, Sura titles, qiblah instructions, and other directions. The marriage to Zayd's former wife is discussed as an inspired legal precedent released at the proper time."
+    },
+    {
+      "id": "audio69-eval-008",
+      "question": "How were revelation and ordinary speech distinguished?",
+      "expected_section_ids": [
+        "audio69-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that the unusual spelling Becca was divinely commanded and mathematically necessary. Dean says contemporaries could distinguish Muhammad's ordinary speech from revelation. Quran 17:106 and 25:32 explain gradual release for memorization. Gabriel is said to provide verse placement, Sura titles, qiblah instructions, and other directions. The marriage to Zayd's former wife is discussed as an inspired legal precedent released at the proper time."
+    },
+    {
+      "id": "audio69-eval-009",
+      "question": "Which instructions was Gabriel said to provide?",
+      "expected_section_ids": [
+        "audio69-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that the unusual spelling Becca was divinely commanded and mathematically necessary. Dean says contemporaries could distinguish Muhammad's ordinary speech from revelation. Quran 17:106 and 25:32 explain gradual release for memorization. Gabriel is said to provide verse placement, Sura titles, qiblah instructions, and other directions. The marriage to Zayd's former wife is discussed as an inspired legal precedent released at the proper time."
+    },
+    {
+      "id": "audio69-eval-010",
+      "question": "How did the Zayd marriage example illustrate timed release?",
+      "expected_section_ids": [
+        "audio69-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that the unusual spelling Becca was divinely commanded and mathematically necessary. Dean says contemporaries could distinguish Muhammad's ordinary speech from revelation. Quran 17:106 and 25:32 explain gradual release for memorization. Gabriel is said to provide verse placement, Sura titles, qiblah instructions, and other directions. The marriage to Zayd's former wife is discussed as an inspired legal precedent released at the proper time."
+    },
+    {
+      "id": "audio69-eval-011",
+      "question": "How did Rashad distinguish genuine travel hardship?",
+      "expected_section_ids": [
+        "audio69-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study returns to Ramadan as guidance and a statute book. Comfortable air travel is distinguished from genuine hardship. Pregnancy may justify postponement, though Rashad also says fasting can be best for mother and baby if possible. Long summer days and early sunrise are treated as deliberate tests. Dawn Prayer reveals whether a person obeys God or an employer. The body is a wild horse that the soul must tame, and gradual progress from one prayer to five is encouraged."
+    },
+    {
+      "id": "audio69-eval-012",
+      "question": "What did he say concerning pregnancy and fasting?",
+      "expected_section_ids": [
+        "audio69-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study returns to Ramadan as guidance and a statute book. Comfortable air travel is distinguished from genuine hardship. Pregnancy may justify postponement, though Rashad also says fasting can be best for mother and baby if possible. Long summer days and early sunrise are treated as deliberate tests. Dawn Prayer reveals whether a person obeys God or an employer. The body is a wild horse that the soul must tame, and gradual progress from one prayer to five is encouraged."
+    },
+    {
+      "id": "audio69-eval-013",
+      "question": "How did seasonal sunrise test Dawn Prayer?",
+      "expected_section_ids": [
+        "audio69-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study returns to Ramadan as guidance and a statute book. Comfortable air travel is distinguished from genuine hardship. Pregnancy may justify postponement, though Rashad also says fasting can be best for mother and baby if possible. Long summer days and early sunrise are treated as deliberate tests. Dawn Prayer reveals whether a person obeys God or an employer. The body is a wild horse that the soul must tame, and gradual progress from one prayer to five is encouraged."
+    },
+    {
+      "id": "audio69-eval-014",
+      "question": "What did the wild-horse analogy mean?",
+      "expected_section_ids": [
+        "audio69-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study returns to Ramadan as guidance and a statute book. Comfortable air travel is distinguished from genuine hardship. Pregnancy may justify postponement, though Rashad also says fasting can be best for mother and baby if possible. Long summer days and early sunrise are treated as deliberate tests. Dawn Prayer reveals whether a person obeys God or an employer. The body is a wild horse that the soul must tame, and gradual progress from one prayer to five is encouraged."
+    },
+    {
+      "id": "audio69-eval-015",
+      "question": "Which duties and social responsibilities were listed?",
+      "expected_section_ids": [
+        "audio69-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad lists prayer, zakat, Ramadan fasting, Hajj, charity, and kindness as duties and criticizes hostility toward poor and transient people. Quran 2:186 says God is near and responds to callers who respond to Him and believe. He says a believer's prayer is always answered at the best time and that angels may act quickly on spoken wishes without knowing inner thoughts. The recording ends during a story in which he concluded prayer took three to six months, then struck a child with a car in Tripoli and interpreted the event as immediate correction."
+    },
+    {
+      "id": "audio69-eval-016",
+      "question": "What conditions for answered prayer were stated?",
+      "expected_section_ids": [
+        "audio69-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad lists prayer, zakat, Ramadan fasting, Hajj, charity, and kindness as duties and criticizes hostility toward poor and transient people. Quran 2:186 says God is near and responds to callers who respond to Him and believe. He says a believer's prayer is always answered at the best time and that angels may act quickly on spoken wishes without knowing inner thoughts. The recording ends during a story in which he concluded prayer took three to six months, then struck a child with a car in Tripoli and interpreted the event as immediate correction."
+    },
+    {
+      "id": "audio69-eval-017",
+      "question": "How did Rashad explain delayed answers and angelic action?",
+      "expected_section_ids": [
+        "audio69-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad lists prayer, zakat, Ramadan fasting, Hajj, charity, and kindness as duties and criticizes hostility toward poor and transient people. Quran 2:186 says God is near and responds to callers who respond to Him and believe. He says a believer's prayer is always answered at the best time and that angels may act quickly on spoken wishes without knowing inner thoughts. The recording ends during a story in which he concluded prayer took three to six months, then struck a child with a car in Tripoli and interpreted the event as immediate correction."
+    },
+    {
+      "id": "audio69-eval-018",
+      "question": "Why does the final accident story remain incomplete?",
+      "expected_section_ids": [
+        "audio69-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad lists prayer, zakat, Ramadan fasting, Hajj, charity, and kindness as duties and criticizes hostility toward poor and transient people. Quran 2:186 says God is near and responds to callers who respond to Him and believe. He says a believer's prayer is always answered at the best time and that angels may act quickly on spoken wishes without knowing inner thoughts. The recording ends during a story in which he concluded prayer took three to six months, then struck a child with a car in Tripoli and interpreted the event as immediate correction."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/69 Friday Sermon 17 Dec 1982",
+  "canonical_catalog_ids": [
+    "messenger-audio/69 Friday Sermon 17 Dec 1982"
+  ],
+  "canonical_mapping": "youtube-id"
+}

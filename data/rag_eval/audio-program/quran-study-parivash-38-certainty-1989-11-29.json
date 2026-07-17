@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-38-certainty-1989-11-29",
+  "title": "Quran Study from Parivash 38: Certainty (1989-11-29)",
+  "cases": [
+    {
+      "id": "audio38-eval-001",
+      "question": "What history did Rashad give for the two verses?",
+      "expected_section_ids": [
+        "parivash38-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad claims the two verses were added under Uthman and caused political conflict and the corruption of Islam. He says true mosques mention God alone and then describes the jinn companion opposing Dawn Prayer."
+    },
+    {
+      "id": "audio38-eval-002",
+      "question": "How did the jinn companion affect prayer?",
+      "expected_section_ids": [
+        "parivash38-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad claims the two verses were added under Uthman and caused political conflict and the corruption of Islam. He says true mosques mention God alone and then describes the jinn companion opposing Dawn Prayer."
+    },
+    {
+      "id": "audio38-eval-003",
+      "question": "What distinguishes submission from certainty?",
+      "expected_section_ids": [
+        "parivash38-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A submitter accepts the Quran even before every teaching makes sense. Doubts remain until worship and repeated experience produce certainty. Rashad uses the recorded-videotape analogy and says certainty leads to seeing miracles every day."
+    },
+    {
+      "id": "audio38-eval-004",
+      "question": "How is certainty attained?",
+      "expected_section_ids": [
+        "parivash38-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "A submitter accepts the Quran even before every teaching makes sense. Doubts remain until worship and repeated experience produce certainty. Rashad uses the recorded-videotape analogy and says certainty leads to seeing miracles every day."
+    },
+    {
+      "id": "audio38-eval-005",
+      "question": "When was zakat due?",
+      "expected_section_ids": [
+        "parivash38-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says certainty develops through the five prayers, Ramadan fasting, and zakat. He requires 2.5 percent from net income on the day money is received and urges planning recipients in advance rather than delaying small amounts."
+    },
+    {
+      "id": "audio38-eval-006",
+      "question": "How was the amount calculated?",
+      "expected_section_ids": [
+        "parivash38-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says certainty develops through the five prayers, Ramadan fasting, and zakat. He requires 2.5 percent from net income on the day money is received and urges planning recipients in advance rather than delaying small amounts."
+    },
+    {
+      "id": "audio38-eval-007",
+      "question": "Why plan it in advance?",
+      "expected_section_ids": [
+        "parivash38-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says certainty develops through the five prayers, Ramadan fasting, and zakat. He requires 2.5 percent from net income on the day money is received and urges planning recipients in advance rather than delaying small amounts."
+    },
+    {
+      "id": "audio38-eval-008",
+      "question": "How did Rashad define shura?",
+      "expected_section_ids": [
+        "parivash38-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad presents shura as discussion until everyone reaches agreement rather than a simple majority vote. He says Ali accepted the succession of Abu Bakr, Umar, and Uthman, though Uthman later violated the Quran."
+    },
+    {
+      "id": "audio38-eval-009",
+      "question": "What succession account did he give?",
+      "expected_section_ids": [
+        "parivash38-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad presents shura as discussion until everyone reaches agreement rather than a simple majority vote. He says Ali accepted the succession of Abu Bakr, Umar, and Uthman, though Uthman later violated the Quran."
+    },
+    {
+      "id": "audio38-eval-010",
+      "question": "What did the appendix claim?",
+      "expected_section_ids": [
+        "parivash38-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants read appendix claims that mathematical evidence excludes Quran 9:128–129 and structures every Quranic element. The first generation is said to possess the pure Quran. The discussion includes prayer led without any human name and whether cultural ceremonies around birth can be practiced without treating them as religion."
+    },
+    {
+      "id": "audio38-eval-011",
+      "question": "How were cultural customs distinguished from religion?",
+      "expected_section_ids": [
+        "parivash38-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants read appendix claims that mathematical evidence excludes Quran 9:128–129 and structures every Quranic element. The first generation is said to possess the pure Quran. The discussion includes prayer led without any human name and whether cultural ceremonies around birth can be practiced without treating them as religion."
+    },
+    {
+      "id": "audio38-eval-012",
+      "question": "How was usury defined?",
+      "expected_section_ids": [
+        "parivash38-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says a sin generally has a victim. Extortionate lending to someone under compulsion is usury, while voluntary bank interest is described as mutually beneficial and therefore not usury."
+    },
+    {
+      "id": "audio38-eval-013",
+      "question": "Why did Rashad distinguish bank interest?",
+      "expected_section_ids": [
+        "parivash38-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says a sin generally has a victim. Extortionate lending to someone under compulsion is usury, while voluntary bank interest is described as mutually beneficial and therefore not usury."
+    },
+    {
+      "id": "audio38-eval-014",
+      "question": "What mediumship story was told?",
+      "expected_section_ids": [
+        "parivash38-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes a jinn impersonating Jamal al-Din al-Afghani through a woman and says a person's jinn resembles them. A separate debate asks whether one can retire to a room and only pray; practical needs lead back to work, social interdependence, and broad worship through useful activity."
+    },
+    {
+      "id": "audio38-eval-015",
+      "question": "Why was isolated worship judged impractical?",
+      "expected_section_ids": [
+        "parivash38-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes a jinn impersonating Jamal al-Din al-Afghani through a woman and says a person's jinn resembles them. A separate debate asks whether one can retire to a room and only pray; practical needs lead back to work, social interdependence, and broad worship through useful activity."
+    },
+    {
+      "id": "audio38-eval-016",
+      "question": "What counted as worship?",
+      "expected_section_ids": [
+        "parivash38-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad describes a jinn impersonating Jamal al-Din al-Afghani through a woman and says a person's jinn resembles them. A separate debate asks whether one can retire to a room and only pray; practical needs lead back to work, social interdependence, and broad worship through useful activity."
+    },
+    {
+      "id": "audio38-eval-017",
+      "question": "What historical reports were cited?",
+      "expected_section_ids": [
+        "parivash38-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Azhar Khan reads an appendix citing Marwan's destruction of a Quran, Bukhari and al-Suyuti's reports that Quran 9:128–129 had only one witness, the later claim that Khuzaimah equaled two witnesses, Meccan-Medinan inconsistencies, and the word-God count through Sura 9."
+    },
+    {
+      "id": "audio38-eval-018",
+      "question": "How was Khuzaimah's testimony treated?",
+      "expected_section_ids": [
+        "parivash38-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Azhar Khan reads an appendix citing Marwan's destruction of a Quran, Bukhari and al-Suyuti's reports that Quran 9:128–129 had only one witness, the later claim that Khuzaimah equaled two witnesses, Meccan-Medinan inconsistencies, and the word-God count through Sura 9."
+    },
+    {
+      "id": "audio38-eval-019",
+      "question": "What mathematical evidence followed?",
+      "expected_section_ids": [
+        "parivash38-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Azhar Khan reads an appendix citing Marwan's destruction of a Quran, Bukhari and al-Suyuti's reports that Quran 9:128–129 had only one witness, the later claim that Khuzaimah equaled two witnesses, Meccan-Medinan inconsistencies, and the word-God count through Sura 9."
+    }
+  ],
+  "canonical_document_id": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
+  "canonical_catalog_ids": [
+    "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989"
+  ],
+  "canonical_mapping": "youtube-id"
+}

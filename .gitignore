@@ -118,3 +118,8 @@ scripts/debug_ocr.py
 # public/data/generated_indices/ - Contains site metadata and search indices
 # public/images/ - Static UI assets
 # public/fonts/ - Custom typography
+
+# Local corpus import and rollback artifacts
+/askarchives_complete_corpus_three_quran_editions_windows*/
+/.corpus-migration-backup/
+/.corpus-migration-state.json

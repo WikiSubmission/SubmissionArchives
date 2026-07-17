@@ -1,0 +1,53 @@
+{
+  "question_types": {
+    "final_quran_wording": [
+      "1992 English verse text",
+      "1992 English subtitle",
+      "1992 English footnote",
+      "1992 English chapter title"
+    ],
+    "published_final_or_official_position": [
+      "1992 Quran where relevant",
+      "dedicated published monograph or booklet",
+      "dated public video",
+      "dated audio discussion"
+    ],
+    "doctrinal_development": [
+      "earliest dated written publication",
+      "dated audio discussion with objections and corrections",
+      "later published synthesis",
+      "1992 final Quran formulation"
+    ],
+    "ritual_procedure": [
+      "The Contact Prayers booklet",
+      "dedicated Salat demonstration video",
+      "1992 Quran footnotes relevant to Salat",
+      "casual audio answers"
+    ],
+    "numerical_claim": [
+      "exact table or calculation in the original written page",
+      "reproducible 1992 footnote statement",
+      "dated presentation transcript",
+      "generated summary only for navigation"
+    ],
+    "translation_evolution": [
+      "1974 English Meanings installment where relevant",
+      "1981 complete edition page transcription",
+      "1989 complete edition page transcription",
+      "1992 final English verse row"
+    ]
+  },
+  "hard_rules": [
+    "Never quote generated summaries as evidence.",
+    "Retain exact page, verse, recording, timestamp, speaker, and edition provenance.",
+    "The 1992 Quran supersedes the 1974 English Meanings installment for final translation questions.",
+    "The 1974 and 1975 ISLAM journal issues are multi-author. Do not attribute every page to Rashad.",
+    "Eternity is a screenplay. Fictional dialogue is not a formal doctrinal ruling.",
+    "Low-confidence OCR must be checked against the scanned page before a precise quotation.",
+    "Repeated oral and written presentations are related witnesses within one claim family, not automatically independent corroboration.",
+    "Use 1992 for final wording, but use 1981 and 1989 for historical translation development.",
+    "The 1981 and 1989 verse comparison fields are extraction candidates and require page review.",
+    "Do not infer a deliberate deletion solely from a missing extraction candidate.",
+    "For 9:128–129, use the dedicated verified dossier."
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.6-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2",
+  "title": "Quran Study from Roxana 47: Introduction to the Blue Quran, al-Fatihah, and the Beginning of Sura 2",
+  "cases": [
+    {
+      "id": "audio47-eval-001",
+      "question": "What was the new book's central theme?",
+      "expected_section_ids": [
+        "audio47-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says the Quran's unifying theme includes righteous Jews, Christians, and Muslims devoted to God alone. He thanks contributors, presents one religion for all people, predicts the Final Testament may be printed with earlier scriptures, and imagines electronic books replacing paper within fifty years."
+    },
+    {
+      "id": "audio47-eval-002",
+      "question": "What future publication and technology did Rashad imagine?",
+      "expected_section_ids": [
+        "audio47-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says the Quran's unifying theme includes righteous Jews, Christians, and Muslims devoted to God alone. He thanks contributors, presents one religion for all people, predicts the Final Testament may be printed with earlier scriptures, and imagines electronic books replacing paper within fifty years."
+    },
+    {
+      "id": "audio47-eval-003",
+      "question": "Which biblical passages were invoked?",
+      "expected_section_ids": [
+        "audio47-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Deuteronomy and John are read as prophecies. Rashad insists followers do not follow Muhammad or Rashad but God's words. Quran 39:45 and 42:13 explain resentment toward God-alone religion and the single religion given through Noah, Abraham, Moses, and Jesus."
+    },
+    {
+      "id": "audio47-eval-004",
+      "question": "What did Rashad say believers follow?",
+      "expected_section_ids": [
+        "audio47-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Deuteronomy and John are read as prophecies. Rashad insists followers do not follow Muhammad or Rashad but God's words. Quran 39:45 and 42:13 explain resentment toward God-alone religion and the single religion given through Noah, Abraham, Moses, and Jesus."
+    },
+    {
+      "id": "audio47-eval-005",
+      "question": "Why do idol worshipers resent the invitation?",
+      "expected_section_ids": [
+        "audio47-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Deuteronomy and John are read as prophecies. Rashad insists followers do not follow Muhammad or Rashad but God's words. Quran 39:45 and 42:13 explain resentment toward God-alone religion and the single religion given through Noah, Abraham, Moses, and Jesus."
+    },
+    {
+      "id": "audio47-eval-006",
+      "question": "How did the introduction classify creation?",
+      "expected_section_ids": [
+        "audio47-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the book's introduction. It frames the Quran as God's final message, estimates past and future population, classifies angels, animals, jinn, and humans according to the heavenly dispute, and presents worldly life as a second chance after death erased memory of the feud."
+    },
+    {
+      "id": "audio47-eval-007",
+      "question": "Why was worldly life granted?",
+      "expected_section_ids": [
+        "audio47-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the book's introduction. It frames the Quran as God's final message, estimates past and future population, classifies angels, animals, jinn, and humans according to the heavenly dispute, and presents worldly life as a second chance after death erased memory of the feud."
+    },
+    {
+      "id": "audio47-eval-008",
+      "question": "What was the original sin?",
+      "expected_section_ids": [
+        "audio47-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The reading says the original sin preceded Adam's tree, explains salvation before forty, reviews signs given to Moses and Jesus, says Muhammad's miracle was withheld for fourteen centuries to prevent idolization, and predicts a new era in which submission dominates other religions."
+    },
+    {
+      "id": "audio47-eval-009",
+      "question": "Why was the miracle separated from Muhammad?",
+      "expected_section_ids": [
+        "audio47-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The reading says the original sin preceded Adam's tree, explains salvation before forty, reviews signs given to Moses and Jesus, says Muhammad's miracle was withheld for fourteen centuries to prevent idolization, and predicts a new era in which submission dominates other religions."
+    },
+    {
+      "id": "audio47-eval-010",
+      "question": "What new era was predicted?",
+      "expected_section_ids": [
+        "audio47-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The reading says the original sin preceded Adam's tree, explains salvation before forty, reviews signs given to Moses and Jesus, says Muhammad's miracle was withheld for fourteen centuries to prevent idolization, and predicts a new era in which submission dominates other religions."
+    },
+    {
+      "id": "audio47-eval-011",
+      "question": "How was the Bismillah count restored?",
+      "expected_section_ids": [
+        "audio47-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine reads appendix and footnote material concerning 114 Bismillahs, the missing Bismillah in Sura 9, the extra one in Sura 27, the sum from Suras 9 through 27, and the word count between the two Bismillahs. Al-Fatihah is introduced as the opening and prayer key."
+    },
+    {
+      "id": "audio47-eval-012",
+      "question": "Which numerical relationships were claimed?",
+      "expected_section_ids": [
+        "audio47-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine reads appendix and footnote material concerning 114 Bismillahs, the missing Bismillah in Sura 9, the extra one in Sura 27, the sum from Suras 9 through 27, and the word count between the two Bismillahs. Al-Fatihah is introduced as the opening and prayer key."
+    },
+    {
+      "id": "audio47-eval-013",
+      "question": "How was al-Fatihah introduced?",
+      "expected_section_ids": [
+        "audio47-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine reads appendix and footnote material concerning 114 Bismillahs, the missing Bismillah in Sura 9, the extra one in Sura 27, the sum from Suras 9 through 27, and the word count between the two Bismillahs. Al-Fatihah is introduced as the opening and prayer key."
+    },
+    {
+      "id": "audio47-eval-014",
+      "question": "What role did the messenger and believers have?",
+      "expected_section_ids": [
+        "audio47-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine discusses Quran 22:78, the messenger serving as witness among believers, believers witnessing among people, lowering one's voice, and accepting reminders. Her visible nervousness and self-correction remain part of the recording."
+    },
+    {
+      "id": "audio47-eval-015",
+      "question": "How did Catherine handle her nervousness?",
+      "expected_section_ids": [
+        "audio47-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine discusses Quran 22:78, the messenger serving as witness among believers, believers witnessing among people, lowering one's voice, and accepting reminders. Her visible nervousness and self-correction remain part of the recording."
+    },
+    {
+      "id": "audio47-eval-016",
+      "question": "How was A.L.M. explained?",
+      "expected_section_ids": [
+        "audio47-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine begins Sura 2. A.L.M. is described as a previously guarded secret now understood through the mathematical code. The righteous believe in the unseen even in privacy, observe Salat, give from God's provisions, accept earlier scripture, and possess certainty concerning the Hereafter."
+    },
+    {
+      "id": "audio47-eval-017",
+      "question": "Which qualities define the righteous?",
+      "expected_section_ids": [
+        "audio47-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine begins Sura 2. A.L.M. is described as a previously guarded secret now understood through the mathematical code. The righteous believe in the unseen even in privacy, observe Salat, give from God's provisions, accept earlier scripture, and possess certainty concerning the Hereafter."
+    }
+  ],
+  "canonical_document_id": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
+  "canonical_catalog_ids": [
+    "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2"
+  ],
+  "canonical_mapping": "youtube-id"
+}

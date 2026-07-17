@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.2-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-11-january-1990-compilation",
+  "title": "Quran Study from Behrouz 11: Sura 23:60–89, Sura 16:66–72, Sura 11:38–60, and Sura 10:26–34 (January 1990 compilation)",
+  "cases": [
+    {
+      "id": "behrouz11-eval-001",
+      "question": "Which qualities of believers appear in Quran 23:60–62?",
+      "expected_section_ids": [
+        "behrouz11-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the descriptions of charitable believers who remain conscious of accountability, then the rejection of revelation, accusations that the messenger is crazy, ancestral denial of resurrection, and questions concerning ownership of Earth and the seven universes. The footnote is used to argue that belief in God is valid only when one recognizes God's complete control and avoids idolizing prophets and saints."
+    },
+    {
+      "id": "behrouz11-eval-002",
+      "question": "How did the rejecters respond to resurrection and the messenger?",
+      "expected_section_ids": [
+        "behrouz11-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the descriptions of charitable believers who remain conscious of accountability, then the rejection of revelation, accusations that the messenger is crazy, ancestral denial of resurrection, and questions concerning ownership of Earth and the seven universes. The footnote is used to argue that belief in God is valid only when one recognizes God's complete control and avoids idolizing prophets and saints."
+    },
+    {
+      "id": "behrouz11-eval-003",
+      "question": "What did Rashad say valid belief in God requires?",
+      "expected_section_ids": [
+        "behrouz11-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads the descriptions of charitable believers who remain conscious of accountability, then the rejection of revelation, accusations that the messenger is crazy, ancestral denial of resurrection, and questions concerning ownership of Earth and the seven universes. The footnote is used to argue that belief in God is valid only when one recognizes God's complete control and avoids idolizing prophets and saints."
+    },
+    {
+      "id": "behrouz11-eval-004",
+      "question": "Which natural signs were discussed from Sura 16?",
+      "expected_section_ids": [
+        "behrouz11-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study turns to natural signs. Milk emerges from digested food and blood; dates and grapes yield both intoxicants and good products; bees receive inspired instructions, collect nectar and pollen, and produce honey of different colors. Old age reveals limits to acquired knowledge. Unequal provision, spouses, children, reproductive cells, and the halving and recombination of chromosomes are presented as evidence of design."
+    },
+    {
+      "id": "behrouz11-eval-005",
+      "question": "How did Rashad describe bees and honey?",
+      "expected_section_ids": [
+        "behrouz11-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study turns to natural signs. Milk emerges from digested food and blood; dates and grapes yield both intoxicants and good products; bees receive inspired instructions, collect nectar and pollen, and produce honey of different colors. Old age reveals limits to acquired knowledge. Unequal provision, spouses, children, reproductive cells, and the halving and recombination of chromosomes are presented as evidence of design."
+    },
+    {
+      "id": "behrouz11-eval-006",
+      "question": "How were chromosomes used as evidence of design?",
+      "expected_section_ids": [
+        "behrouz11-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study turns to natural signs. Milk emerges from digested food and blood; dates and grapes yield both intoxicants and good products; bees receive inspired instructions, collect nectar and pollen, and produce honey of different colors. Old age reveals limits to acquired knowledge. Unequal provision, spouses, children, reproductive cells, and the halving and recombination of chromosomes are presented as evidence of design."
+    },
+    {
+      "id": "behrouz11-eval-007",
+      "question": "Why was Noah's son excluded from his family?",
+      "expected_section_ids": [
+        "behrouz11-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Quran 11:38–49. Noah is mocked while building the ark, only a few believe, his son refuses rescue, and God says the son is not truly of Noah's family. The statement that it is unrighteous to ask for something one does not know becomes a warning against confident claims without knowledge. The discussion briefly compares singular and plural language concerning God's spirit."
+    },
+    {
+      "id": "behrouz11-eval-008",
+      "question": "What warning did Rashad draw from Quran 11:46?",
+      "expected_section_ids": [
+        "behrouz11-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Quran 11:38–49. Noah is mocked while building the ark, only a few believe, his son refuses rescue, and God says the son is not truly of Noah's family. The statement that it is unrighteous to ask for something one does not know becomes a warning against confident claims without knowledge. The discussion briefly compares singular and plural language concerning God's spirit."
+    },
+    {
+      "id": "behrouz11-eval-009",
+      "question": "How did spirit language enter the discussion?",
+      "expected_section_ids": [
+        "behrouz11-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Quran 11:38–49. Noah is mocked while building the ark, only a few believe, his son refuses rescue, and God says the son is not truly of Noah's family. The statement that it is unrighteous to ask for something one does not know becomes a warning against confident claims without knowledge. The discussion briefly compares singular and plural language concerning God's spirit."
+    },
+    {
+      "id": "behrouz11-eval-010",
+      "question": "What message did Hud deliver?",
+      "expected_section_ids": [
+        "behrouz11-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Hud passage stresses worship of God alone, asking no wage, repentance, increased provision, accusations of being cursed, and rejection of idols. Hud invites a collective response without fear because he trusts God. Rashad repeatedly emphasizes the Arabic statement that every creature is under God's control."
+    },
+    {
+      "id": "behrouz11-eval-011",
+      "question": "Why was asking no wage important?",
+      "expected_section_ids": [
+        "behrouz11-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Hud passage stresses worship of God alone, asking no wage, repentance, increased provision, accusations of being cursed, and rejection of idols. Hud invites a collective response without fear because he trusts God. Rashad repeatedly emphasizes the Arabic statement that every creature is under God's control."
+    },
+    {
+      "id": "behrouz11-eval-012",
+      "question": "How did Rashad interpret God's control of creatures?",
+      "expected_section_ids": [
+        "behrouz11-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The Hud passage stresses worship of God alone, asking no wage, repentance, increased provision, accusations of being cursed, and rejection of idols. Hud invites a collective response without fear because he trusts God. Rashad repeatedly emphasizes the Arabic statement that every creature is under God's control."
+    },
+    {
+      "id": "behrouz11-eval-013",
+      "question": "How are Paradise and Hell contrasted in Quran 10:26–27?",
+      "expected_section_ids": [
+        "behrouz11-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final study block contrasts multiplied reward and Paradise with humiliating retribution and darkness. Idols disown their worshipers on judgment day. Quran 10:31 asks who provides from heaven and Earth, controls hearing and eyesight, produces living from dead and dead from living, and controls all things. The inevitable answer, God, becomes a challenge to act righteously."
+    },
+    {
+      "id": "behrouz11-eval-014",
+      "question": "What will idols say to their worshipers?",
+      "expected_section_ids": [
+        "behrouz11-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final study block contrasts multiplied reward and Paradise with humiliating retribution and darkness. Idols disown their worshipers on judgment day. Quran 10:31 asks who provides from heaven and Earth, controls hearing and eyesight, produces living from dead and dead from living, and controls all things. The inevitable answer, God, becomes a challenge to act righteously."
+    },
+    {
+      "id": "behrouz11-eval-015",
+      "question": "Which divine powers are listed in Quran 10:31?",
+      "expected_section_ids": [
+        "behrouz11-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final study block contrasts multiplied reward and Paradise with humiliating retribution and darkness. Idols disown their worshipers on judgment day. Quran 10:31 asks who provides from heaven and Earth, controls hearing and eyesight, produces living from dead and dead from living, and controls all things. The inevitable answer, God, becomes a challenge to act righteously."
+    },
+    {
+      "id": "behrouz11-eval-016",
+      "question": "How did the study connect Quran 10:34 with biology?",
+      "expected_section_ids": [
+        "behrouz11-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion moves from Quran 10:34 to examples of God initiating and repeating creation. Embryos, eggs, cats, radar-like senses, genes, height, weight, extra toes, and the structure of DNA are discussed as signs of design. Rashad tells a modified joke involving James Watson and treats scientific discovery as recognition of a system already created by God."
+    },
+    {
+      "id": "behrouz11-eval-017",
+      "question": "Which traits were attributed to genes?",
+      "expected_section_ids": [
+        "behrouz11-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion moves from Quran 10:34 to examples of God initiating and repeating creation. Embryos, eggs, cats, radar-like senses, genes, height, weight, extra toes, and the structure of DNA are discussed as signs of design. Rashad tells a modified joke involving James Watson and treats scientific discovery as recognition of a system already created by God."
+    },
+    {
+      "id": "behrouz11-eval-018",
+      "question": "What role did James Watson play in the discussion?",
+      "expected_section_ids": [
+        "behrouz11-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion moves from Quran 10:34 to examples of God initiating and repeating creation. Embryos, eggs, cats, radar-like senses, genes, height, weight, extra toes, and the structure of DNA are discussed as signs of design. Rashad tells a modified joke involving James Watson and treats scientific discovery as recognition of a system already created by God."
+    }
+  ],
+  "canonical_document_id": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
+  "canonical_catalog_ids": [
+    "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube"
+}

@@ -1,0 +1,2413 @@
+{
+  "schema_version": "1.2",
+  "document_id": "video-program/old-message-new-messenger",
+  "title": "Old Message, New Messenger",
+  "source_file": "data/sources/playlists/video-transcripts/05 - Old Message, New Messenger.csv",
+  "youtube_id": "f7doI2Z4o4M",
+  "youtube_url": "https://www.youtube.com/watch?v=f7doI2Z4o4M",
+  "primary_speaker": "Dr. Rashad Khalifa",
+  "primary_speaker_basis": "repository catalog identity and later CSV speaker labels; opening speaker metadata remains blank",
+  "review_status": "draft",
+  "transcript_statistics": {
+    "source_segments": 635,
+    "first_speech_time": "00:00:00.000",
+    "last_speech_time": "01:19:30.820",
+    "section_count": 26,
+    "speaker_counts": {
+      "blank": 227,
+      "Dr. Khalifa": 404,
+      "Carole": 2,
+      "Audience": 2
+    }
+  },
+  "structural_notes": [
+    "The CSV title number and uploaded filename number disagree.",
+    "The recording repeats Sura 36 several times.",
+    "The final minutes reprise substantial earlier ritual-reform material.",
+    "The video ends in the middle of a sentence."
+  ],
+  "document_summary": "Rashad announces that he has been commissioned as a messenger of God and says he had known since 1980. He argues that a messenger is an ordinary human, distinguishes final prophethood from later messengership, and treats acceptance of a messenger as a covenantal and ego test. He offers code-19 calculations, name patterns, and an Abraham–Muhammad–Rashad sequence as signs. He recounts repeatedly opening the Quran at random and interpreting the resulting passages as messages that he was fired and later forgiven. The sermon also presents reforms of the shahada, salat, zakat, Ramadan calculation, and Hajj, recounts the early publication history of the Quran code, and defends the meaning of the title Old Message, New Messenger.",
+  "content_guidance": [
+    {
+      "rule": "Attribute the messenger claim",
+      "instruction": "Say that Rashad claimed, announced, or testified that he was commissioned as a messenger. Do not state the divine commission as independently established."
+    },
+    {
+      "rule": "Separate Quranic wording from Rashad's interpretation",
+      "instruction": "For 33:40, 3:81, 7:35, 40:34, 42:51, and other verses, distinguish the verse from Rashad's interpretation concerning later messengers."
+    },
+    {
+      "rule": "Treat random Quran openings as personal testimony",
+      "instruction": "Rashad's fired-and-restored account is his interpretation of repeated random openings. Do not independently affirm that God communicated through the selected pages."
+    },
+    {
+      "rule": "Mark bibliomancy terminology as conceptual",
+      "instruction": "Bibliomancy, Quranic sortilege, and istikhara are user terms absent from the recording. Use them only to explain why the passage is a conceptual match."
+    },
+    {
+      "rule": "Attribute mathematical evidence",
+      "instruction": "Name counts, verse sums, abjad totals, and the Abraham–Muhammad–Rashad triangle must be reported as Rashad's calculations unless separately audited."
+    },
+    {
+      "rule": "Treat legal and ritual instructions as Rashad's interpretation",
+      "instruction": "Salat, shahada, zakat, Ramadan calculation, and Hajj reforms in this recording do not by themselves represent all Islamic legal traditions."
+    },
+    {
+      "rule": "Use strict attribution for historical and ethnic assertions",
+      "instruction": "Claims about death sentences, Arabs, opponents, countries, and the movement's spread must be attributed and should not be generalized beyond the speaker's statement."
+    },
+    {
+      "rule": "Do not judge questioners through the sifting doctrine",
+      "instruction": "The speaker says rejection of a messenger exposes ego or insincerity. The assistant must not apply that judgment to the user."
+    },
+    {
+      "rule": "Down-weight duplicate passages",
+      "instruction": "Sections 25 and 26 repeat earlier material. They may provide a later timestamp but must not count as independent evidence or crowd unique sections from retrieval."
+    },
+    {
+      "rule": "Preserve multiple speakers",
+      "instruction": "Carole and an audience member speak briefly. Do not attribute their words to Rashad."
+    },
+    {
+      "rule": "Do not quote enrichment prose",
+      "instruction": "Section titles, summaries, aliases, related questions, and expected answers are retrieval metadata. Only canonical transcript text may be quoted as source evidence."
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "messenger-dup-01",
+      "primary_sections": [
+        "messenger-01-s01",
+        "messenger-01-s13"
+      ],
+      "secondary_sections": [
+        "messenger-01-s25"
+      ],
+      "description": "Repeated recitations of Quran 36:1–12.",
+      "retrieval_action": "Diversify to one recitation unless the user asks where or how often it was recited. Retain the additional 36:24 line from section 25."
+    },
+    {
+      "group_id": "messenger-dup-02",
+      "primary_sections": [
+        "messenger-01-s18",
+        "messenger-01-s19",
+        "messenger-01-s20"
+      ],
+      "secondary_sections": [
+        "messenger-01-s26"
+      ],
+      "description": "The ending reprises salat, zakat, fasting, Hajj, and global-spread material.",
+      "retrieval_action": "Prefer the earlier complete sections. Use the ending only when the user requests the final excerpt."
+    }
+  ],
+  "sections": [
+    {
+      "id": "messenger-01-s01",
+      "start_row": 0,
+      "end_row": 11,
+      "title": "Opening recitation of Quran 36:1–12",
+      "summary": "The recording opens with Arabic recitation from the beginning of Sura Ya-Sin. The passage includes the declaration that the addressee is among the messengers, warnings to an unheeding people, and the statement that all things are recorded.",
+      "section_kind": "scripture recitation",
+      "claim_classification": "Quran recitation",
+      "concepts": [
+        {
+          "id": "quran-36-1-12",
+          "relation": "recited",
+          "explicit": true
+        },
+        {
+          "id": "messenger-language-in-ya-sin",
+          "relation": "recited",
+          "explicit": true
+        },
+        {
+          "id": "warning-and-rejection",
+          "relation": "recited",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Ya-Sin opening",
+        "Quran 36:1-12",
+        "you are one of the messengers",
+        "recitation before messenger announcement",
+        "Sura 36 introduction"
+      ],
+      "related_questions": [
+        "What Quran passage opens Old Message, New Messenger?",
+        "Did the recording begin with the statement that someone is among the messengers?",
+        "Which verses of Ya-Sin were recited at the beginning?"
+      ],
+      "quran_references": [
+        "36:1-12"
+      ],
+      "entities": [
+        "Quran"
+      ],
+      "retrieval_note": "The first two subtitle rows appear to reverse the verse labels for 36:1–4. Preserve the canonical CSV until the video is checked.",
+      "start": 0,
+      "end": 152.402,
+      "start_time": "00:00:00.000",
+      "end_time": "00:02:32.402",
+      "source_segment_start": 0,
+      "source_segment_end": 11,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (36:2) يسٓ (36:1) وَٱلْقُرْءَانِ ٱلْحَكِيمِ (36:4) إِنَّكَ لَمِنَ ٱلْمُرْسَلِينَ (36:3) عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ (36:5) تَنزِيلَ ٱلْعَزِيزِ ٱلرَّحِيمِ (36:6) لِتُنذِرَ قَوْمًا مَّآ أُنذِرَ ءَابَآؤُهُمْ فَهُمْ غَـٰفِلُونَ (36:7) لَقَدْ حَقَّ ٱلْقَوْلُ عَلَىٰٓ أَكْثَرِهِمْ فَهُمْ لَا يُؤْمِنُونَ (36:8) إِنَّا جَعَلْنَا فِىٓ أَعْنَـٰقِهِمْ أَغْلَـٰلًا فَهِىَ إِلَى ٱلْأَذْقَانِ فَهُم مُّقْمَحُونَ وَجَعَلْنَا مِنۢ بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَـٰهُمْ فَهُمْ لَا يُبْصِرُونَ (36:9) (36:10) وَسَوَآءٌ عَلَيْهِمْ ءَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ إِنَّمَا تُنذِرُ مَنِ ٱتَّبَعَ ٱلذِّكْرَ وَخَشِىَ ٱلرَّحْمَـٰنَ بِٱلْغَيْبِ ۖ فَبَشِّرْهُ بِمَغْفِرَةٍ وَأَجْرٍ كَرِيمٍ (36:11) إِنَّا نَحْنُ نُحْىِ ٱلْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا۟ وَءَاثَـٰرَهُمْ ۚ وَكُلَّ شَىْءٍ (36:12) أَحْصَيْنَـٰهُ فِىٓ إِمَامٍۢ مُّبِينٍۢ",
+      "retrieval_text": "Opening recitation of Quran 36:1–12\nThe recording opens with Arabic recitation from the beginning of Sura Ya-Sin. The passage includes the declaration that the addressee is among the messengers, warnings to an unheeding people, and the statement that all things are recorded.\nSection kind: scripture recitation\nClaim classification: Quran recitation\nConcepts: quran 36 1 12; messenger language in ya sin; warning and rejection\nUser terminology: Ya-Sin opening; Quran 36:1-12; you are one of the messengers; recitation before messenger announcement; Sura 36 introduction\nQuestions: What Quran passage opens Old Message, New Messenger? Did the recording begin with the statement that someone is among the messengers? Which verses of Ya-Sin were recited at the beginning?\nQuran references: 36:1-12\nEntities: Quran"
+    },
+    {
+      "id": "messenger-01-s02",
+      "start_row": 12,
+      "end_row": 25,
+      "title": "Announcing a commission as a messenger of God",
+      "summary": "Rashad praises God, affirms devotion to God alone, and announces that he has been commissioned as a messenger of God. He says he had known this since 1980 but delayed the announcement for eight years because he feared appearing to claim superiority.",
+      "section_kind": "personal announcement",
+      "claim_classification": "Rashad Khalifa's claim of divine commission",
+      "concepts": [
+        {
+          "id": "rashad-messenger-claim",
+          "relation": "announced",
+          "explicit": true
+        },
+        {
+          "id": "divine-commission",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "known-since-1980",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "reluctant-announcement",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "worship-god-alone",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "when Rashad announced he was a messenger",
+        "Rashad messenger of the covenant",
+        "commissioned messenger of God",
+        "known since 1980",
+        "why Rashad delayed the announcement",
+        "messenger declaration"
+      ],
+      "related_questions": [
+        "Where did Rashad announce that he was a messenger of God?",
+        "When did Rashad say he first knew of his commission?",
+        "Why did he wait eight years to announce it?",
+        "Did Rashad say the announcement meant he was better than others?"
+      ],
+      "quran_references": [
+        "39",
+        "4"
+      ],
+      "entities": [
+        "God",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "Always frame the commission as Rashad's claim or testimony. Do not state the divine commission as independently established.",
+      "start": 153.4,
+      "end": 288.1,
+      "start_time": "00:02:33.400",
+      "end_time": "00:04:48.100",
+      "source_segment_start": 12,
+      "source_segment_end": 25,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "We praise God, and we bear witness that there is no god except the one God. And we declare that all devotion and all worship is directed to God alone. SURA 39 أَلَا لِلَّهِ ٱلدِّينُ ٱلْخَالِصُ devotion and worship belong to God alone. Some of you probably saw this bombshell where there is announcement that I have been commissioned a messenger of God. And this is probably the most difficult announcement that I have ever come up with. But something that I have known since 1980. And you can see that I was, I was coward. I was afraid to come up with it. I dreaded the time when I may have to announce it. Because there is a general tendency to resent anybody saying - I am going to use a wrong statement now, but this is what the resentment is for. Generally, people resent somebody saying \"I'm better than you\" or what appears to be saying \"I am better than you.\" And even the Quran condemns such a statement, in SURA 4, God says \"note those who exalt themselves. God is the one who exalts whomever He wills without the least injustice.\" The resentment in this case results from two things: ignorance and idol-worship.",
+      "retrieval_text": "Announcing a commission as a messenger of God\nRashad praises God, affirms devotion to God alone, and announces that he has been commissioned as a messenger of God. He says he had known this since 1980 but delayed the announcement for eight years because he feared appearing to claim superiority.\nSection kind: personal announcement\nClaim classification: Rashad Khalifa's claim of divine commission\nConcepts: rashad messenger claim; divine commission; known since 1980; reluctant announcement; worship god alone\nUser terminology: when Rashad announced he was a messenger; Rashad messenger of the covenant; commissioned messenger of God; known since 1980; why Rashad delayed the announcement; messenger declaration\nQuestions: Where did Rashad announce that he was a messenger of God? When did Rashad say he first knew of his commission? Why did he wait eight years to announce it? Did Rashad say the announcement meant he was better than others?\nQuran references: 39; 4\nEntities: God; Rashad Khalifa"
+    },
+    {
+      "id": "messenger-01-s03",
+      "start_row": 26,
+      "end_row": 70,
+      "title": "A messenger is an ordinary human and not necessarily superior",
+      "summary": "Rashad argues that a messenger is not necessarily more righteous than other believers. He uses Moses' encounter with God's servant in Sura 18, recalls his own former saint veneration, says a messenger remains vulnerable to idolatry and loss, rejects religious wages, and identifies righteousness rather than office as the criterion of superiority.",
+      "section_kind": "doctrinal explanation",
+      "claim_classification": "Rashad's Quranic interpretation of messengership",
+      "concepts": [
+        {
+          "id": "messenger-as-human",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "messenger-not-necessarily-superior",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "moses-and-gods-servant",
+          "relation": "interpreted",
+          "explicit": true
+        },
+        {
+          "id": "messenger-not-guaranteed-heaven",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "no-religious-wages",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "righteousness-as-criterion",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "is a messenger better than everyone",
+        "messenger is only human",
+        "Khidr taught Moses",
+        "messenger can go to hell",
+        "religious leaders taking money",
+        "best person is most righteous",
+        "former saint worship"
+      ],
+      "related_questions": [
+        "Did Rashad say a messenger is better than the congregation?",
+        "How did he use Moses and God's servant to explain messengership?",
+        "Did Rashad say being a messenger guarantees heaven?",
+        "Why did he refuse money from religious activity?",
+        "What did he say determines who is best before God?"
+      ],
+      "quran_references": [
+        "18:60-82",
+        "20:39",
+        "20:41",
+        "39:65",
+        "21:28",
+        "49:13"
+      ],
+      "entities": [
+        "Moses",
+        "God",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "The technical name Khidr is not spoken, but users may search it when asking about Moses' teacher.",
+      "start": 288.1,
+      "end": 587.26,
+      "start_time": "00:04:48.100",
+      "end_time": "00:09:47.260",
+      "source_segment_start": 26,
+      "source_segment_end": 70,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Ignorance, because the Quran teaches us that a messenger of God is not necessarily better than anyone else in the congregation. In SURA 18, from verses 60 to verse 82, we see that God picked out one of the biggest messengers, Moses, one that God said \"I made you for myself.\" (20:41) وَٱصْطَنَعْتُكَ لِنَفْسِى \"I made you for Me.\" And in other place, God said (20:39) لِتُصْنَعَ عَلَىٰ عَيْنِىٓ \"I had you made before My eyes.\" And we see in those verses that God sent Moses to \"one of our servants, whom we bestowed, we gave mercy and knowledge.\" And Moses proved to be a lousy student. So, this teaches us that a messenger of God is not necessarily better than anyone else in the congregation. I can think of quite a few of you whom I consider better than me. I see people, when I was their age, I used to go to the Saints and ask for help. I was an idol worshiper, when I was that age. Yet here they are, a lot younger. They have 20-year head start, compared to me. And so This is the first thing. Ignorance causes this resentment. Idol worship because the people idolize the messenger of God and they made him next to God. They made him a god besides God. So, when you mention the word \"messenger of God\", they are awed, you know. But the truth is, a messenger of God is - the Quran repeats \"a human being like you.\" or in colloquial, local terms a flopster like the rest of us whom we can kid around and who can be silly. What is more the Quran teaches that a messenger of God... if a person is picked out as a messenger of God, a commissioned messenger of God....there are kinds of messengers does not even guarantee Heaven. And we see this in SURAH 39 verse 65 where it says \"it has been revealed to you and to those before you that if you ever fall in idolatry, all you work will be nullified and you will be among the losers. So, a messenger of God does not even guarantee heaven. And this is why we see in SURA 21, verse 28 that the messengers are worried about their own neck. We are all familiar with these verses. But the people who have either ignorance or idolatry in them, they resent an announcement like this. If a person is picked as a messenger of God, it's a difficult job. It's a very difficult job. There is no material gain out of it. I certainly will not allow a single penny to enter my personal pocket because of this or because of religious reasons. I'm not a professional religionist and I will not allow a penny to enter my pocket from religious activities Because then the motive changes. And the Quran repeats \"stay with those who do not ask you for wages.\" The Quran says in SURA 49... Quran gives us the criteria of who is better than whom. And in says in Arabic (49:13) إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ The best among you is the most righteous. It didn't say the best among you is the messenger of God, or the richest, or the tallest, or the most knowledgeable. \"The best among you is the most righteous.\" So, all these things will teach us that messenger of God is no big deal. It is just a vehicle that God uses to communicate with us. A center of information. And with it goes a difficult job, a very difficult job, the abuse, the slandering, the threats.",
+      "retrieval_text": "A messenger is an ordinary human and not necessarily superior\nRashad argues that a messenger is not necessarily more righteous than other believers. He uses Moses' encounter with God's servant in Sura 18, recalls his own former saint veneration, says a messenger remains vulnerable to idolatry and loss, rejects religious wages, and identifies righteousness rather than office as the criterion of superiority.\nSection kind: doctrinal explanation\nClaim classification: Rashad's Quranic interpretation of messengership\nConcepts: messenger as human; messenger not necessarily superior; moses and gods servant; messenger not guaranteed heaven; no religious wages; righteousness as criterion\nUser terminology: is a messenger better than everyone; messenger is only human; Khidr taught Moses; messenger can go to hell; religious leaders taking money; best person is most righteous; former saint worship\nQuestions: Did Rashad say a messenger is better than the congregation? How did he use Moses and God's servant to explain messengership? Did Rashad say being a messenger guarantees heaven? Why did he refuse money from religious activity? What did he say determines who is best before God?\nQuran references: 18:60-82; 20:39; 20:41; 39:65; 21:28; 49:13\nEntities: Moses; God; Rashad Khalifa"
+    },
+    {
+      "id": "messenger-01-s04",
+      "start_row": 71,
+      "end_row": 83,
+      "title": "Divine communication and the Quran-only criterion",
+      "summary": "Rashad cites Quran 42:51 for inspiration, communication from behind a barrier, and communication through a messenger. He says any claimed information must conform to the whole Quran and that innovations or teachings not confirmed by the Quran must be rejected.",
+      "section_kind": "doctrinal criterion",
+      "claim_classification": "Rashad's Quran-alone epistemic rule",
+      "concepts": [
+        {
+          "id": "quran-42-51",
+          "relation": "cited",
+          "explicit": true
+        },
+        {
+          "id": "modes-of-divine-communication",
+          "relation": "explained",
+          "explicit": true
+        },
+        {
+          "id": "quran-alone",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "scriptural-confirmation-test",
+          "relation": "required",
+          "explicit": true
+        },
+        {
+          "id": "rejection-of-innovation",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "how God communicates",
+        "revelation inspiration barrier messenger",
+        "Quran alone",
+        "Quranist criterion",
+        "how to test a messenger",
+        "reject religious innovations"
+      ],
+      "related_questions": [
+        "What three modes of communication did Rashad derive from Quran 42:51?",
+        "How did Rashad say a messenger's information should be tested?",
+        "Did he accept teachings not confirmed by the Quran?",
+        "What did he mean by the whole Quran and nothing but the Quran?"
+      ],
+      "quran_references": [
+        "42:51"
+      ],
+      "entities": [
+        "God",
+        "Quran"
+      ],
+      "retrieval_note": "Index Quranism and Quranist as conceptual aliases even though the recording uses Quran alone.",
+      "start": 587.36,
+      "end": 662.66,
+      "start_time": "00:09:47.360",
+      "end_time": "00:11:02.660",
+      "source_segment_start": 71,
+      "source_segment_end": 83,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "And God says....I believe it's in 42:51. Yes. In SURA 42, verse 51, God says that \"No human being can communicate with God, except through three ways: inspiration, or from behind a barrier, or through a messenger\" that through whom God spreads certain information. So, people will know this is reliable information, that this is from God. We are people who follow the Quran, the whole Quran and nothing but the Quran. Therefore, anybody, and this means anybody, who brings any information must conform to the Quran. The whole Quran, nothing but the Quran. And if anyone, and underline anyone, comes up with any information that is not confirmed by the Quran, we tell him \"forget it!\" We don't accept it. So, the criterion is preaching, confirming existing scripture, the Quran and nothing else. No innovations.",
+      "retrieval_text": "Divine communication and the Quran-only criterion\nRashad cites Quran 42:51 for inspiration, communication from behind a barrier, and communication through a messenger. He says any claimed information must conform to the whole Quran and that innovations or teachings not confirmed by the Quran must be rejected.\nSection kind: doctrinal criterion\nClaim classification: Rashad's Quran-alone epistemic rule\nConcepts: quran 42 51; modes of divine communication; quran alone; scriptural confirmation test; rejection of innovation\nUser terminology: how God communicates; revelation inspiration barrier messenger; Quran alone; Quranist criterion; how to test a messenger; reject religious innovations\nQuestions: What three modes of communication did Rashad derive from Quran 42:51? How did Rashad say a messenger's information should be tested? Did he accept teachings not confirmed by the Quran? What did he mean by the whole Quran and nothing but the Quran?\nQuran references: 42:51\nEntities: God; Quran"
+    },
+    {
+      "id": "messenger-01-s05",
+      "start_row": 84,
+      "end_row": 114,
+      "title": "Final prophet does not mean final messenger",
+      "summary": "Rashad rejects the belief that Muhammad was the final messenger. He interprets Quran 33:40 as distinguishing messenger from prophet, defines a prophet as one who receives scripture, and defines a messenger as one who confirms existing scripture. He cites Quran 3:81 and 7:35 as evidence that messengers may come after Muhammad.",
+      "section_kind": "doctrinal interpretation",
+      "claim_classification": "Rashad's interpretation of finality and post-Quranic messengers",
+      "concepts": [
+        {
+          "id": "final-prophet-not-final-messenger",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "prophet-versus-messenger",
+          "relation": "distinguished",
+          "explicit": true
+        },
+        {
+          "id": "covenant-of-prophets",
+          "relation": "interpreted",
+          "explicit": true
+        },
+        {
+          "id": "post-muhammad-messengers",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "quran-7-35-future-messengers",
+          "relation": "interpreted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Muhammad last prophet not last messenger",
+        "seal of the prophets",
+        "khatam al-nabiyyin",
+        "messenger after Muhammad",
+        "difference between nabi and rasul",
+        "messenger of the covenant",
+        "Quran 3:81 covenant"
+      ],
+      "related_questions": [
+        "How did Rashad interpret Quran 33:40?",
+        "What distinction did he make between prophet and messenger?",
+        "Did Rashad believe messengers could come after Muhammad?",
+        "How did he use Quran 3:81?",
+        "Why did he say Quran 7:35 applies after Muhammad?"
+      ],
+      "quran_references": [
+        "33:40",
+        "3:81",
+        "7:35"
+      ],
+      "entities": [
+        "Muhammad",
+        "Jesus",
+        "Moses",
+        "God",
+        "Quran"
+      ],
+      "retrieval_note": "Separate the Quranic wording from Rashad's interpretation. The broader Islamic understanding should not be inferred from this source alone.",
+      "start": 662.7,
+      "end": 841.3,
+      "start_time": "00:11:02.700",
+      "end_time": "00:14:01.300",
+      "source_segment_start": 84,
+      "source_segment_end": 114,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Now, we come to the question: is it possible that we receive a messenger from God? If you ask an average Muhammadan, they will tell you Muhammad was the last messenger. But they have no basis, for saying this. And the Quran gives us a precedent since Joseph, the prophet Joseph. When he died, the Quran teaches us that the people said \"okay, that was the last messenger, we'll never see another messenger after that. So, this is a human tendency. And the Muhammdans claim that Muhammad was the last messenger. He's not. In SURA 33, verse 40, God says \"Muhammad was not the father of any of your men. He was a messenger of God and the final prophet.\" So, here we see a distinction between prophet and messenger. A prophet is one who delivers a scripture, like Jesus, Moses, Muhammad. They are prophets. And we this clearly in SURA 3, verse 81, where God says that He made a covenant with the prophets that He will give them the scripture and wisdom.\" So, here we have the definition of a prophet. Then, God made a covenant with us, with you and me, with every human being. He said \"then, when a messenger comes to you, confirming existing scripture. So, there's the definition of a messenger. \"When a messenger comes to you confirming existing scripture, you shall believe in him and support him.\" God said \"do you make a pledge with me?\" And we all said \"yes, we do.\" And God said \"you have thus borne witness and I bear witness along with you.\" Therefore, it is possible that there will be messengers after Muhammad. In SURA 7, verse 35, it says \"o children of Adam, when messengers come to you, reciting My revelations to you, those of you who believe are the successful ones.\" This is SURA 7, verse 35. Obviously, it is for people after the Quran. As a matter of fact, the verse begins by saying \"o children of Adam.\" So, as long as there are children of Adam on this Earth, this verse is valid. If messengers are coming after Muhammad, what do they look like? What will a messenger look like after Muhammad? Just think of any human being. What are his characteristics? You think he'll be walking on water or walking on the air or coming with 3 angels on each side or something. He's just one of us, just a human being.",
+      "retrieval_text": "Final prophet does not mean final messenger\nRashad rejects the belief that Muhammad was the final messenger. He interprets Quran 33:40 as distinguishing messenger from prophet, defines a prophet as one who receives scripture, and defines a messenger as one who confirms existing scripture. He cites Quran 3:81 and 7:35 as evidence that messengers may come after Muhammad.\nSection kind: doctrinal interpretation\nClaim classification: Rashad's interpretation of finality and post-Quranic messengers\nConcepts: final prophet not final messenger; prophet versus messenger; covenant of prophets; post muhammad messengers; quran 7 35 future messengers\nUser terminology: Muhammad last prophet not last messenger; seal of the prophets; khatam al-nabiyyin; messenger after Muhammad; difference between nabi and rasul; messenger of the covenant; Quran 3:81 covenant\nQuestions: How did Rashad interpret Quran 33:40? What distinction did he make between prophet and messenger? Did Rashad believe messengers could come after Muhammad? How did he use Quran 3:81? Why did he say Quran 7:35 applies after Muhammad?\nQuran references: 33:40; 3:81; 7:35\nEntities: Muhammad; Jesus; Moses; God; Quran"
+    },
+    {
+      "id": "messenger-01-s06",
+      "start_row": 115,
+      "end_row": 150,
+      "title": "A messenger as a test of covenant, ego, and acceptance",
+      "summary": "Rashad says a messenger is sent partly to test whether people will uphold their covenant, worship God alone, and accept guidance from an ordinary human being. He cites earlier communities' rejection of human messengers, treats resistance as an ego problem, names Bahaullah, Ghulam Ahmad, and Joseph Smith as prior claimants, and says a true messenger must come with signs.",
+      "section_kind": "doctrinal explanation",
+      "claim_classification": "Rashad's theory of messengership as a test",
+      "concepts": [
+        {
+          "id": "messenger-as-test",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "ego-test",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "human-messenger-objection",
+          "relation": "criticized",
+          "explicit": true
+        },
+        {
+          "id": "prior-messenger-claimants",
+          "relation": "listed",
+          "explicit": true
+        },
+        {
+          "id": "proof-required-for-messenger",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "messenger as test of ego",
+        "why God sends messengers",
+        "human messenger objection",
+        "Bahaullah messenger claim",
+        "Ghulam Ahmad messenger claim",
+        "Joseph Smith messenger claim",
+        "signs of a true messenger"
+      ],
+      "related_questions": [
+        "Why did Rashad say God sends a messenger?",
+        "How does a messenger test people's ego?",
+        "Which other messenger claimants did Rashad mention?",
+        "What proof did Rashad say a messenger must bring?",
+        "Did Rashad expect a messenger to appear supernatural?"
+      ],
+      "quran_references": [
+        "17:94",
+        "64:5-6",
+        "7:146"
+      ],
+      "entities": [
+        "Bahaullah",
+        "Ghulam Ahmad",
+        "Joseph Smith",
+        "Moses",
+        "Saleh",
+        "Jesus",
+        "God"
+      ],
+      "retrieval_note": "Named individuals are mentioned as comparison cases. Do not infer that Rashad accepted or rejected every aspect of their movements.",
+      "start": 841.3,
+      "end": 1069.16,
+      "start_time": "00:14:01.300",
+      "end_time": "00:17:49.160",
+      "source_segment_start": 115,
+      "source_segment_end": 150,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Some people came. I wanna answer the question why, why send a messenger? Why does God send a messenger? Why not just go the same way that people have been going? Reading the Quran, following the Quran. Well, one important element is the test. Because of this covenant that we made with God. What are you going to do if a messenger of God comes and says \"worship God alone, and forget about the human beings; Muhammad, Jesus, Moses or anybody. You must devote yourself totally to God alone.\" One who will preach the Quran, God's proven scripture. What are you going to do? Are you gonna scoff at him? Are you gonna help him, morally? Are you gonna rally around him? What are you going to do? A test. Another test is the test of ego. The Quran repeats they said \"Oh, he just wants to be better than we are. He wants to be a leader.\" And this is emphasized throughout the Quran. You're gonna find some verses in here. And there is in SURA 17, verse 94, it says \"what prevented many people from believing was that they said \"you mean God sent a human being to be a messenger?\"\" And in SURA 64, verses 5 & 6, I'm gonna read them for you. \"Did you not receive the news of those who disbelieved in the past? They suffered the consequences of their decision and deserved painful retribution. Why? This is because their messengers went to them with clear revelations, but they said \"human beings to guide us?\" Thus, they disbelieved and turned away. God does not need them. So, it's a tremendous test to accept somebody who says he is a messenger of God. There's an ego here. We're required to kill the ego. And this applies to all of us. One of the requirements in the Quran. The egotistic person will resent anything like this and will be deprived. And God says in the Quran \"I will divert from my revelations those who are arrogant.\" (7:146) سَأَصْرِفُ عَنْ ءَايَـٰتِىَ ٱلَّذِينَ يَتَكَبَّرُونَ فِى ٱلْأَرْض I will send them away. God will actively send them away. So, this is something we have to kill, the ego. So, many people came and said they were messengers of God. Baháʼu'lláh was one of them. And Ghulam Ahmad of Pakistan said he was a messenger of God. And Joseph Smith, the Mormon leader, said he was a messenger of God. But God made it mandatory that a messenger comes with proof, certain signs. Moses brought all kinds of proofs. Saleh brought proofs. Jesus came with signs that he is authorized and sent by God.",
+      "retrieval_text": "A messenger as a test of covenant, ego, and acceptance\nRashad says a messenger is sent partly to test whether people will uphold their covenant, worship God alone, and accept guidance from an ordinary human being. He cites earlier communities' rejection of human messengers, treats resistance as an ego problem, names Bahaullah, Ghulam Ahmad, and Joseph Smith as prior claimants, and says a true messenger must come with signs.\nSection kind: doctrinal explanation\nClaim classification: Rashad's theory of messengership as a test\nConcepts: messenger as test; ego test; human messenger objection; prior messenger claimants; proof required for messenger\nUser terminology: messenger as test of ego; why God sends messengers; human messenger objection; Bahaullah messenger claim; Ghulam Ahmad messenger claim; Joseph Smith messenger claim; signs of a true messenger\nQuestions: Why did Rashad say God sends a messenger? How does a messenger test people's ego? Which other messenger claimants did Rashad mention? What proof did Rashad say a messenger must bring? Did Rashad expect a messenger to appear supernatural?\nQuran references: 17:94; 64:5-6; 7:146\nEntities: Bahaullah; Ghulam Ahmad; Joseph Smith; Moses; Saleh; Jesus; God"
+    },
+    {
+      "id": "messenger-01-s07",
+      "start_row": 151,
+      "end_row": 170,
+      "title": "Reluctance, promised disclosure, and the need for additional signs",
+      "summary": "Rashad says he will disclose the details rather than remain mysterious. He uses a humorous story about an unanswered question, then says he had avoided the announcement for eight years and needed additional signs before making it.",
+      "section_kind": "personal testimony and transition",
+      "claim_classification": "Rashad's account of hesitation and requested signs",
+      "concepts": [
+        {
+          "id": "reluctant-announcement",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "request-for-signs",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "promise-full-disclosure",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "why Rashad needed signs",
+        "eight years of reluctance",
+        "curious man one question joke",
+        "details of messenger announcement"
+      ],
+      "related_questions": [
+        "Why did Rashad say he needed additional signs?",
+        "What did he promise to explain openly?",
+        "What was the point of the one-legged-man anecdote?"
+      ],
+      "quran_references": [],
+      "entities": [
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "This is a transition section. It should rank below the actual sign descriptions for evidence questions.",
+      "start": 1069.22,
+      "end": 1216.22,
+      "start_time": "00:17:49.220",
+      "end_time": "00:20:16.220",
+      "source_segment_start": 151,
+      "source_segment_end": 170,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "And on that difficult day, a few days ago, when... I'm going to give you all details. I'm not gonna be mysterious and say I was told this and that and leave it hanging. I'm going to give you... everything's is gonna be wide open in front of you and I will tell you exactly what happened in time if the time doesn't help us now. But this reminds me of the fellow... you've heard this... I told some of you at least this before... but this fellow was the most curious person in town and he would just ask questions. He'd always ask questions. And one time, he was sitting in the bar or the pub or whatever the place is and then comes in this man with one leg and he sits next to him and this very curious person... of course, he's curious, you know... \"how did you lose your leg?\" He wants to know. And the man with one leg knows that he is the most curious person in town. He would just die to know, how did this fellow lose his leg? So, he told... the man with the one leg told him, the curious fellow.... told the curious fellow. \"I will tell you on one condition.\" And he said \"anything... anything... just tell me... anything.... just tell me what to do and I will do it. Just tell me... anything.\" He said \"you ask only one question and you don't ask any questions after that.\" He said \"OK. OK. I do it. Just tell me. How did you lose your leg?\" He said \"it was bitten.\" So, I'm sure that curious guy died on the spot because he couldn't ask any more questions. So I'm not going to be mysterious with you, I'm gonna tell you everything gradually. But on that difficult day, when I realized that I must announce. I mean, I chickened out for 8 years, now. I needed some signs and I was shown. I had some signs but I was shown a couple of additional signs on that day. Now, I will share with you some of the signs that will assure all of us.",
+      "retrieval_text": "Reluctance, promised disclosure, and the need for additional signs\nRashad says he will disclose the details rather than remain mysterious. He uses a humorous story about an unanswered question, then says he had avoided the announcement for eight years and needed additional signs before making it.\nSection kind: personal testimony and transition\nClaim classification: Rashad's account of hesitation and requested signs\nConcepts: reluctant announcement; request for signs; promise full disclosure\nUser terminology: why Rashad needed signs; eight years of reluctance; curious man one question joke; details of messenger announcement\nQuestions: Why did Rashad say he needed additional signs? What did he promise to explain openly? What was the point of the one-legged-man anecdote?\nQuran references: \nEntities: Rashad Khalifa"
+    },
+    {
+      "id": "messenger-01-s08",
+      "start_row": 171,
+      "end_row": 187,
+      "title": "Code 19, the root Rashada, and the total of verse numbers containing God",
+      "summary": "Rashad presents the Quran's mathematical code as the first sign of his commission. He repeats elementary code-19 examples, says a Quranic index printed before his birth lists the root Rashada nineteen times, and claims that the verse numbers of every verse containing the word God total 118,123.",
+      "section_kind": "claimed mathematical evidence",
+      "claim_classification": "specific numerical claims offered as signs",
+      "concepts": [
+        {
+          "id": "code-19",
+          "relation": "offered-as-sign",
+          "explicit": true
+        },
+        {
+          "id": "rashada-root-nineteen",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "allah-count-2698",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "allah-verse-number-sum-118123",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "mathematical-proof-of-messenger",
+          "relation": "claimed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad name appears 19 times",
+        "root rashada in Quran",
+        "2698 Allah",
+        "118123",
+        "mathematical proof Rashad is messenger",
+        "Quran index page 320"
+      ],
+      "related_questions": [
+        "What mathematical signs did Rashad connect with his name?",
+        "How many times did he say the root Rashada appears?",
+        "What did Rashad say the number 118,123 represents?",
+        "How did he connect the Quran code with his messenger claim?"
+      ],
+      "quran_references": [],
+      "entities": [
+        "Rashad Khalifa",
+        "God",
+        "Quran",
+        "Turkey"
+      ],
+      "retrieval_note": "All numerical findings and conclusions must be attributed to Rashad. Do not treat the messenger claim as proven merely because the source calls it proof.",
+      "start": 1216.22,
+      "end": 1365.699,
+      "start_time": "00:20:16.220",
+      "end_time": "00:22:45.699",
+      "source_segment_start": 171,
+      "source_segment_end": 187,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Now, the first sign, of course, is the mathematical miracle of the Quran which is very simple and people should have seen it in the last 1400 years. Literally, thousands of scholars looked in the Quran and counted all its words, its letters, its vowels - those signs, little signs. They counted everything in the Quran. But they never came up with the mathematical composition of the Quran. BISMI ALLAH, 19 letters. The number of SURAs 19 times 6. The first revelation, 19 words. The last revelation, 19 words. All these are simple things that they should have discovered. But God reserved this for a person called Rashad, as we see in the index of the Quran page 320 which was printed one year before I was born, that index. It's a comprehensive index. And on page 320, you'll see that the root word RASHADA is mentioned 19 times. And this is something that came to us from Turkey. I didn't discover it. It was discovered and sent to us, as most of you know. Now, the additional things... Now, I want to give you a piece of new information that shows you the awesome miracle of the Quran that was reserved until this time. The word God, ALLAH, in the Quran is mentioned 2698 time. When you take every verse in the Quran, where you see the word ALLAH.... every verse... from verse 1 of SURA 1 and you add the numbers of verses, the total is 118123. These are the numbers of verses wherever you see the word God in here. It's awesome. Because not a single verse was transplanted from its place. Not a single verse was changed. And not a single word, ALLAH, was dropped out or added in the Quran. So, this is an awesome miracle that did not... was reserved for... God knew in advance who is going to be fortunate enough or blessed with releasing this information.",
+      "retrieval_text": "Code 19, the root Rashada, and the total of verse numbers containing God\nRashad presents the Quran's mathematical code as the first sign of his commission. He repeats elementary code-19 examples, says a Quranic index printed before his birth lists the root Rashada nineteen times, and claims that the verse numbers of every verse containing the word God total 118,123.\nSection kind: claimed mathematical evidence\nClaim classification: specific numerical claims offered as signs\nConcepts: code 19; rashada root nineteen; allah count 2698; allah verse number sum 118123; mathematical proof of messenger\nUser terminology: Rashad name appears 19 times; root rashada in Quran; 2698 Allah; 118123; mathematical proof Rashad is messenger; Quran index page 320\nQuestions: What mathematical signs did Rashad connect with his name? How many times did he say the root Rashada appears? What did Rashad say the number 118,123 represents? How did he connect the Quran code with his messenger claim?\nQuran references: \nEntities: Rashad Khalifa; God; Quran; Turkey"
+    },
+    {
+      "id": "messenger-01-s09",
+      "start_row": 188,
+      "end_row": 210,
+      "title": "Rashad and Khalifa name sums and the Abraham–Muhammad–Rashad triangle",
+      "summary": "Rashad says the Quranic locations of the words Rashada and Khalifa produce totals divisible by nineteen. He distinguishes a human khalifa associated with David, gives 171 for selected Rashad and Khalifa references, and says the gematrical values of Ibrahim, Muhammad, and Rashad total 855. He links this to his age of forty-five in 1980, the Islamic year 1400, and fourteen centuries after Muhammad.",
+      "section_kind": "claimed mathematical evidence",
+      "claim_classification": "name-based numerology offered as evidence of commission",
+      "concepts": [
+        {
+          "id": "rashad-khalifa-reference-sum-1369",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "rashad-human-khalifa-sum-171",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "abraham-muhammad-rashad-triangle",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "name-gematria-sum-855",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "1980-islamic-year-1400",
+          "relation": "connected",
+          "explicit": true
+        },
+        {
+          "id": "seven-pairs-fourteen-centuries",
+          "relation": "interpreted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad Khalifa name code",
+        "1369",
+        "171",
+        "Ibrahim Muhammad Rashad 855",
+        "Abraham Muhammad Rashad triangle",
+        "45 years old in 1980",
+        "Islamic year 1400",
+        "seven pairs fourteen centuries"
+      ],
+      "related_questions": [
+        "What did Rashad say 1,369 represents?",
+        "How did he obtain the number 171 from Rashad and Khalifa?",
+        "What was the Abraham, Muhammad, and Rashad triangle?",
+        "Why did Rashad emphasize his age forty-five in 1980?",
+        "How did he interpret the seven pairs as fourteen centuries?"
+      ],
+      "quran_references": [
+        "2",
+        "22:78",
+        "38:26",
+        "40:29",
+        "40:38"
+      ],
+      "entities": [
+        "Abraham",
+        "Muhammad",
+        "Rashad Khalifa",
+        "David",
+        "Satan"
+      ],
+      "retrieval_note": "Keep each numerical total attached to its own selection rule. The selection and interpretation are Rashad's claims.",
+      "start": 1365.699,
+      "end": 1553.82,
+      "start_time": "00:22:45.699",
+      "end_time": "00:25:53.820",
+      "source_segment_start": 188,
+      "source_segment_end": 210,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Now, if you add all the verses in the SURAHs of the 19 RASHADA and the last name... the last name is also involved there. This is very embarrassing to me but I have to tell you this and share it with you. But Khalifa is mentioned in the Quran twice. When you add all the SURAs and verses, the total is 1369 which is 19 times 77. You add all the SURAs and verses where RASHADA and Khalifa are mentioned. Well, I was not content with that. I'm greedy. I wanted specific Rashad Khalifa. Specific, Rashad Khalifa. And sure enough, you look up the.... Rashad is mentioned twice... Rashad. This is the way my name is written down. It is mentioned in Quran twice in SURA 40 verse 29 and verse 38. The Khalifa... they are twice in the Quran. One of them is a bad one and the other's a good one. The bad Khalifa is Satan which is in SURA 2. And the human Khalifa which is specifically mentioned in Quran in reference to David, the prophet, one of our favourite prophets, the Psalms. And this Khalifa is mentioned in SURA 38 verse 26. So, if you add the SURAs and verses connect it with Rashad and the human Khalifa the total is 171. 19 times 9. So, in other words, you look at every angle and you can see that the signs are connected with the mathematical code. Now, I will explain to you in detail at another time when we have time, but this is the religion of IBRAHIM, as we see in the last verse of SURA 22. (22:78) مِّلَّةَ أَبِيكُمْ إِبْرَٰهِيمَ This is the religion of your father Abraham. He is the one who named you Muslims before. Muhammad brought the Quran. And yours truly was blessed with bringing the proof. I was blessed with the proof of the Quran, and the secrets of the Quran. When you add Ibrahim, Muhammad and Rashad... The gematrical values of the 3 names.... This is all detailed here... The total is 855 which is 19x45. And 45 happens to be my age in 1980 when I was told for the first time... And again I will.... I promise you I'll explain to you how, But 45, in 1980, which is also 1400, exactly 14 centuries after Muhammad, who was told in the Quran that he will have 7 pairs, 14 centuries, among other meanings of the 7 pairs. So, it is very tight evidence and it suits the age of... computer age.",
+      "retrieval_text": "Rashad and Khalifa name sums and the Abraham–Muhammad–Rashad triangle\nRashad says the Quranic locations of the words Rashada and Khalifa produce totals divisible by nineteen. He distinguishes a human khalifa associated with David, gives 171 for selected Rashad and Khalifa references, and says the gematrical values of Ibrahim, Muhammad, and Rashad total 855. He links this to his age of forty-five in 1980, the Islamic year 1400, and fourteen centuries after Muhammad.\nSection kind: claimed mathematical evidence\nClaim classification: name-based numerology offered as evidence of commission\nConcepts: rashad khalifa reference sum 1369; rashad human khalifa sum 171; abraham muhammad rashad triangle; name gematria sum 855; 1980 islamic year 1400; seven pairs fourteen centuries\nUser terminology: Rashad Khalifa name code; 1369; 171; Ibrahim Muhammad Rashad 855; Abraham Muhammad Rashad triangle; 45 years old in 1980; Islamic year 1400; seven pairs fourteen centuries\nQuestions: What did Rashad say 1,369 represents? How did he obtain the number 171 from Rashad and Khalifa? What was the Abraham, Muhammad, and Rashad triangle? Why did Rashad emphasize his age forty-five in 1980? How did he interpret the seven pairs as fourteen centuries?\nQuran references: 2; 22:78; 38:26; 40:29; 40:38\nEntities: Abraham; Muhammad; Rashad Khalifa; David; Satan"
+    },
+    {
+      "id": "messenger-01-s10",
+      "start_row": 211,
+      "end_row": 231,
+      "title": "Quranic secrets, the end of the world, and salvation before age forty",
+      "summary": "Rashad says his messenger role explains teachings he calls previously hidden Quranic secrets, including the date of the end of the world and his belief that anyone who dies before age forty goes to heaven. A button saying that everything before forty is rehearsal is treated as a meaningful coincidence and another way God spreads information.",
+      "section_kind": "doctrinal claims and personal sign interpretation",
+      "claim_classification": "Rashad's eschatological and salvation claims",
+      "concepts": [
+        {
+          "id": "end-of-world-secret",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "under-forty-salvation",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "meaningful-coincidence",
+          "relation": "interpreted",
+          "explicit": true
+        },
+        {
+          "id": "divine-signs-in-ordinary-events",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "children under 40 go to heaven",
+        "age forty salvation",
+        "end of the world secret",
+        "everything before 40 is rehearsal",
+        "synchronicity",
+        "meaningful coincidence",
+        "God communicates through signs"
+      ],
+      "related_questions": [
+        "Did Rashad say everyone who dies before forty goes to heaven?",
+        "What did the button about age forty say?",
+        "Why did Rashad treat the button as a sign?",
+        "What Quranic secrets did he say had recently been revealed?"
+      ],
+      "quran_references": [],
+      "entities": [
+        "God",
+        "Rashad Khalifa",
+        "Carole",
+        "Latifah",
+        "Otis"
+      ],
+      "retrieval_note": "The term synchronicity is a conceptual alias. The age-forty and end-of-world teachings should be attributed to Rashad.",
+      "start": 1553.86,
+      "end": 1668.72,
+      "start_time": "00:25:53.860",
+      "end_time": "00:27:48.720",
+      "source_segment_start": 211,
+      "source_segment_end": 231,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Carole",
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Now, the secrets of the Quran....the Quran... I mentioned this because it explains to you the revolutionary ideas that I used to come up with once in a while or the crazy ideas, if you wanna call them that, like the end of the world. It is very clear in the Quran, but it was not shown before. It's a secret in the Quran. God knew when the end of the world will be and He put it in His final message. And we are the generation that was destined to know, to get this secret out of the Quran. And like the idea that drove a lot of people crazy, that anybody who dies before the age of 40 goes to heaven. \"How can they go to Heaven when they are 35 and they are awful bad? \"Put them in Hell.\" We are mean. Human beings are mean. There was so much opposition to that idea, it's not even funny. And it is not coincidental that Latifah hands... Carole... Caroline hands Otis a button, this button here. Today, was it? Did she give it to you today? ...yesterday? Yesterday. And he comes to me 5 minutes before, before the KHUTBAH to give me this button which says Everything up to the age of 40 is just rehearsal. Now, I thought she made the button, but she didn't. Where did you get it? Carole: I don’t know. I was in a shop but I don’t know what shop I was in. The messenger: Oh... Oh...but you picked it up in a shop. You were shopping and you saw that. Carole: Yeah, and I saw it and I said Alhamdullilah. The messenger: OK. So, it's not coincidence, you know. God spreads His information in many different ways, ways and means.",
+      "retrieval_text": "Quranic secrets, the end of the world, and salvation before age forty\nRashad says his messenger role explains teachings he calls previously hidden Quranic secrets, including the date of the end of the world and his belief that anyone who dies before age forty goes to heaven. A button saying that everything before forty is rehearsal is treated as a meaningful coincidence and another way God spreads information.\nSection kind: doctrinal claims and personal sign interpretation\nClaim classification: Rashad's eschatological and salvation claims\nConcepts: end of world secret; under forty salvation; meaningful coincidence; divine signs in ordinary events\nUser terminology: children under 40 go to heaven; age forty salvation; end of the world secret; everything before 40 is rehearsal; synchronicity; meaningful coincidence; God communicates through signs\nQuestions: Did Rashad say everyone who dies before forty goes to heaven? What did the button about age forty say? Why did Rashad treat the button as a sign? What Quranic secrets did he say had recently been revealed?\nQuran references: \nEntities: God; Rashad Khalifa; Carole; Latifah; Otis"
+    },
+    {
+      "id": "messenger-01-s11",
+      "start_row": 232,
+      "end_row": 259,
+      "title": "Correcting zakat as 2.5 percent of received income",
+      "summary": "Rashad says zakat was being practiced incorrectly and interprets Quran 6:141 as requiring payment on the day income is received. He treats a paycheck as a modern harvest, prescribes 2.5 percent of net income, permits brief accumulation for practicality, and gives an order of recipients beginning with parents and relatives.",
+      "section_kind": "legal and ritual instruction",
+      "claim_classification": "Rashad's interpretation of Quranic zakat practice",
+      "concepts": [
+        {
+          "id": "zakat-on-income",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "zakat-two-point-five-percent",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "paycheck-as-harvest",
+          "relation": "interpreted",
+          "explicit": true
+        },
+        {
+          "id": "zakat-recipient-order",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "purification-of-income",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad zakat method",
+        "2.5 percent of paycheck",
+        "zakat on net income",
+        "day of harvest 6:141",
+        "monthly zakat",
+        "who receives zakat first",
+        "zakat purifies money"
+      ],
+      "related_questions": [
+        "When did Rashad say zakat should be paid?",
+        "How much of a paycheck did he prescribe?",
+        "Why did he compare paychecks to harvested crops?",
+        "Who did Rashad say should receive zakat first?",
+        "Did he allow waiting until the end of the month?"
+      ],
+      "quran_references": [
+        "6:141"
+      ],
+      "entities": [
+        "God",
+        "Quran"
+      ],
+      "retrieval_note": "Present this as Rashad's legal interpretation, not as a universal summary of Islamic law.",
+      "start": 1668.72,
+      "end": 1860.62,
+      "start_time": "00:27:48.720",
+      "end_time": "00:31:00.620",
+      "source_segment_start": 232,
+      "source_segment_end": 259,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Another... other secrets of the Quran that we've been enjoying in the last 10 years... Oh, the ZAKAT. Now, this is new. And I'm gonna tell you about it now and you will have to do it, as of now, immediately. The ZAKAT... The ZAKAT is being done wrong all over the Muslim world. Now, here is the true ZAKAT from the Quran in SURA 6 verse 141. Yes, it is 6:141. You remember... You're gonna remember this verse because it says when you harvest the crop, give the ZAKAT on the day of harvest. You remember that? \"On the day of harvest.\" OK. Well, we are not farmers. We don't harvest wheat and barley or anything. But we harvest paychecks every two weeks or so. That's our harvest. The day you receive your harvest, the day you receive your paycheck, you take out 2.5% and you give it to people that you know who are in need. It makes so much sense... I mean, how come we didn’t think of this, you know, all the time? That makes so much sense and it is from the Quran and it will correct the method of ZAKAT that is dominant in the Muslim world. Because the people that we know who need help, they need it now. They are hungry now. They can't wait for a year, like they told us in the past. You get 10 dollars, you take out 25 cents. 2.5%. Is it 25 cent? Yeah. Now, if it is impractical to give 25 cents to somebody you know, you can keep it and accumulate it for a couple of weeks or a month, until it is a reasonable amount. Then you give it that month. Don't go beyond a month. You give it to somebody you know personally, according to the system of the Quran, your parents first, your relatives next, the orphans and the people who need it, in that order. Any money, any net income that you get, you take 2.5% because God says. Chances are this 2.5% that you have in your check are illegitimate, illicit. Get rid of it. It is called purifying your money. You spend most of your time sleeping on the job or something. Yet, you get the check, you know. So, God says this is way you purify your income. Take it out immidietly. Also, who's gonna keep track of one year? So, God has His ways. This is one of the secrets of the Quran. We reap these benefits.",
+      "retrieval_text": "Correcting zakat as 2.5 percent of received income\nRashad says zakat was being practiced incorrectly and interprets Quran 6:141 as requiring payment on the day income is received. He treats a paycheck as a modern harvest, prescribes 2.5 percent of net income, permits brief accumulation for practicality, and gives an order of recipients beginning with parents and relatives.\nSection kind: legal and ritual instruction\nClaim classification: Rashad's interpretation of Quranic zakat practice\nConcepts: zakat on income; zakat two point five percent; paycheck as harvest; zakat recipient order; purification of income\nUser terminology: Rashad zakat method; 2.5 percent of paycheck; zakat on net income; day of harvest 6:141; monthly zakat; who receives zakat first; zakat purifies money\nQuestions: When did Rashad say zakat should be paid? How much of a paycheck did he prescribe? Why did he compare paychecks to harvested crops? Who did Rashad say should receive zakat first? Did he allow waiting until the end of the month?\nQuran references: 6:141\nEntities: God; Quran"
+    },
+    {
+      "id": "messenger-01-s12",
+      "start_row": 260,
+      "end_row": 279,
+      "title": "Corrected salat, Sura 110, and family support for the announcement",
+      "summary": "Rashad briefly refers to the corrected method of salat and repeats devotion to God alone. He connects Sura 110 with the positive response to his announcement, says the sura contains nineteen words and its first verse nineteen letters, and recounts his daughter Beth saying she had known and supported his role.",
+      "section_kind": "ritual teaching and personal response",
+      "claim_classification": "Rashad's ritual teaching, numerical claim, and family testimony",
+      "concepts": [
+        {
+          "id": "corrected-salat",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "devotion-to-god-alone",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "sura-110-victory",
+          "relation": "applied",
+          "explicit": true
+        },
+        {
+          "id": "sura-110-nineteen-pattern",
+          "relation": "claimed",
+          "explicit": true
+        },
+        {
+          "id": "beth-support",
+          "relation": "recounted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad daughter supported messenger claim",
+        "Beth knew all along",
+        "Sura 110 victory",
+        "19 words in Sura 110",
+        "correct salat",
+        "repent to God"
+      ],
+      "related_questions": [
+        "How did Rashad connect Sura 110 with his announcement?",
+        "What numerical pattern did he claim for Sura 110?",
+        "What did Rashad say his daughter Beth told him?",
+        "What did he say about the correct method of salat?"
+      ],
+      "quran_references": [
+        "110"
+      ],
+      "entities": [
+        "Beth",
+        "God",
+        "Quran",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "The family's response is Rashad's recollection. Do not treat it as independent testimony unless another source confirms it.",
+      "start": 1860.62,
+      "end": 2017.087,
+      "start_time": "00:31:00.620",
+      "end_time": "00:33:37.087",
+      "source_segment_start": 260,
+      "source_segment_end": 279,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "Among the secrets of Quran that we've enjoyed in the last 10 years are the correct method of the SALAT prayer. I wanna... We're running out of time. So, TUBU ILLA ALLAH, repent. ALHAMDULLILAH WA ASHHADU AN LA ILLAHA WAHDAHU LA SHARIKA LAH We devote our worship and our devotion to God Alone. No human beings. There's a SURA in Quran that says when God's victory comes and support and you see the people entering God's religion, God's true religion in throngs, in great numbers. And this is what is happening now. This SURA is 19 words, consists of 19 words and the first verse is 19 letters. This is our SURA. And this is... and so far, this bombshell... the reaction has been positive. People have been calling me from everywhere in the world saying \"I'm calling to say I believe.\" And when that difficult day came and I was a coward and I was saying this thing here may cause my own children to disown me. They may say \"you're a crazy man. Get out of here.\" And, as I will tell you in detail. I cried. I fell prostrate. I was fired. I was fired. And I cried. I fell prostrate and I begged. And when, in my heart, I became solid and I said \"I will do it a any cost. Even if I lose my own children, my own friends, I will do it.\" Then, I was restored, as I will give the details. I give you. But the reason I'm mentioning this SURA, the victory, is that... I went I mean, there's unanimous, unanimous positive reaction to it from everybody... people here who read it and I went... I was very careful talking to Beth as we were... 3 o'clock in the morning and I told her \"guess what, Beth?\" I have to this and this and this and I was very careful diplomatic. And then she's casually drinking her tea and she says \"I knew that all along, dad. I support all the way.\"",
+      "retrieval_text": "Corrected salat, Sura 110, and family support for the announcement\nRashad briefly refers to the corrected method of salat and repeats devotion to God alone. He connects Sura 110 with the positive response to his announcement, says the sura contains nineteen words and its first verse nineteen letters, and recounts his daughter Beth saying she had known and supported his role.\nSection kind: ritual teaching and personal response\nClaim classification: Rashad's ritual teaching, numerical claim, and family testimony\nConcepts: corrected salat; devotion to god alone; sura 110 victory; sura 110 nineteen pattern; beth support\nUser terminology: Rashad daughter supported messenger claim; Beth knew all along; Sura 110 victory; 19 words in Sura 110; correct salat; repent to God\nQuestions: How did Rashad connect Sura 110 with his announcement? What numerical pattern did he claim for Sura 110? What did Rashad say his daughter Beth told him? What did he say about the correct method of salat?\nQuran references: 110\nEntities: Beth; God; Quran; Rashad Khalifa"
+    },
+    {
+      "id": "messenger-01-s13",
+      "start_row": 280,
+      "end_row": 293,
+      "title": "Second recitation of Quran 36:1–12",
+      "summary": "Rashad recites the opening twelve verses of Sura Ya-Sin again immediately before describing the experience that compelled him to make the messenger announcement.",
+      "section_kind": "scripture recitation",
+      "claim_classification": "Quran recitation",
+      "concepts": [
+        {
+          "id": "quran-36-1-12",
+          "relation": "recited-again",
+          "explicit": true
+        },
+        {
+          "id": "messenger-language-in-ya-sin",
+          "relation": "recited",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "second Ya-Sin recitation",
+        "Quran before fired experience",
+        "Sura 36 messenger verses"
+      ],
+      "related_questions": [
+        "What did Rashad recite before describing being fired?",
+        "Was Sura Ya-Sin recited more than once in the recording?"
+      ],
+      "quran_references": [
+        "36:1-12"
+      ],
+      "entities": [
+        "Quran"
+      ],
+      "retrieval_note": "This is distinct in time but substantially repeats the opening recitation. Diversification should avoid returning both recitations unless the question concerns repetition.",
+      "start": 2017.087,
+      "end": 2170.044,
+      "start_time": "00:33:37.087",
+      "end_time": "00:36:10.044",
+      "source_segment_start": 280,
+      "source_segment_end": 293,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (36:1) يسٓ (36:2) وَٱلْقُرْءَانِ ٱلْحَكِيمِ (36:3) إِنَّكَ لَمِنَ ٱلْمُرْسَلِينَ (36:4) عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ (36:5) تَنزِيلَ ٱلْعَزِيزِ ٱلرَّحِيمِ (36:6) لِتُنذِرَ قَوْمًا مَّآ أُنذِرَ ءَابَآؤُهُمْ فَهُمْ غَـٰفِلُونَ (36:7) لَقَدْ حَقَّ ٱلْقَوْلُ عَلَىٰٓ أَكْثَرِهِمْ فَهُمْ لَا يُؤْمِنُونَ (36:8) إِنَّا جَعَلْنَا فِىٓ أَعْنَـٰقِهِمْ أَغْلَـٰلًا فَهِىَ إِلَى ٱلْأَذْقَانِ فَهُم مُّقْمَحُونَ وَجَعَلْنَا مِنۢ بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَـٰهُمْ فَهُمْ (36:9) لَا يُبْصِرُونَ (36:10) وَسَوَآءٌ عَلَيْهِمْ ءَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ إِنَّمَا تُنذِرُ مَنِ ٱتَّبَعَ ٱلذِّكْرَ وَخَشِىَ ٱلرَّحْمَـٰنَ بِٱلْغَيْبِ ۖ فَبَشِّرْهُ (36:11) بِمَغْفِرَةٍ وَأَجْرٍ كَرِيمٍ إِنَّا نَحْنُ نُحْىِ ٱلْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا۟ وَءَاثَـٰرَهُمْ ۚ وَكُلَّ شَىْءٍ (36:12) أَحْصَيْنَـٰهُ فِىٓ إِمَامٍ مُّبِينٍ",
+      "retrieval_text": "Second recitation of Quran 36:1–12\nRashad recites the opening twelve verses of Sura Ya-Sin again immediately before describing the experience that compelled him to make the messenger announcement.\nSection kind: scripture recitation\nClaim classification: Quran recitation\nConcepts: quran 36 1 12; messenger language in ya sin\nUser terminology: second Ya-Sin recitation; Quran before fired experience; Sura 36 messenger verses\nQuestions: What did Rashad recite before describing being fired? Was Sura Ya-Sin recited more than once in the recording?\nQuran references: 36:1-12\nEntities: Quran"
+    },
+    {
+      "id": "messenger-01-s14",
+      "start_row": 294,
+      "end_row": 339,
+      "title": "Opening the Quran at random and the experience of being fired and forgiven",
+      "summary": "Rashad describes repeatedly opening several Qurans at random and interpreting the passages as messages that he was fired, condemned, and would be replaced because he had refused to announce his commission. After crying, prostrating, and resolving to make the announcement at any cost, he says the random openings changed to messages of forgiveness and restoration.",
+      "section_kind": "personal spiritual testimony",
+      "claim_classification": "Rashad's account of perceived divine communication through random Quran openings",
+      "concepts": [
+        {
+          "id": "random-opening-of-quran",
+          "relation": "practiced",
+          "explicit": true
+        },
+        {
+          "id": "bibliomancy",
+          "relation": "conceptual-alias",
+          "explicit": false
+        },
+        {
+          "id": "quranic-sortilege",
+          "relation": "conceptual-alias",
+          "explicit": false
+        },
+        {
+          "id": "fired-and-restored",
+          "relation": "experienced",
+          "explicit": true
+        },
+        {
+          "id": "repentance-and-forgiveness",
+          "relation": "experienced",
+          "explicit": true
+        },
+        {
+          "id": "divine-communication-claim",
+          "relation": "claimed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad opened Quran at random",
+        "bibliomancy",
+        "Quranic sortilege",
+        "istikhara with Quran",
+        "Rashad was fired by God",
+        "Rashad forgiven and restored",
+        "God spoke through Quran pages",
+        "random verse messages"
+      ],
+      "related_questions": [
+        "How did Rashad say God told him he was fired?",
+        "Did Rashad repeatedly open the Quran at random?",
+        "What convinced him the passages were not coincidence?",
+        "What did he do before the messages changed to forgiveness?",
+        "Did Rashad describe a form of bibliomancy or Quranic sortilege?"
+      ],
+      "quran_references": [],
+      "entities": [
+        "God",
+        "Satan",
+        "Quran",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "Bibliomancy, sortilege, and istikhara are user labels, not Rashad's terminology. Describe the event as his personal interpretation and do not independently validate divine causation.",
+      "start": 2171.741,
+      "end": 2588.44,
+      "start_time": "00:36:11.741",
+      "end_time": "00:43:08.440",
+      "source_segment_start": 294,
+      "source_segment_end": 339,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "But that night, in April, I opened Quran as usual and read the place where usually... the top right. And it said \"you're going to hell.\" So, I closed it again and said this is Satan telling me, trying to fighting me with giving me bad time. So, I said أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ And please God protect me from Satan. I seek refuge in You. And I said it in many different ways and then I opened it again at random as usual and it said \"you're fired. You will not do the job. You're a chicken. You're not suitable. And you are going to hell.\" So, I sought refuge in God again from Satan, from the devil in stronger terms for a longer time. I made SUJUD Then, I opened the Quran again at random. It said \"you're fired. You're going to hell. You're doomed. You're not gonna do it. We'll find somebody else to do the job.\" So, I closed it again. It is now defying statistics or coincidence. So, I turned to God very hard and I said \"please, God, let me know if this is coincidence or why is it giving me these bad ideas.\" So, I opened and I kept doing this and repeatedly every time, I opened. It said \"you're fired. You're no good. You're going to hell. You're doomed.\" And it was getting worse. Until I reached the conviction, a real conviction in my heart, that I'm doomed. I'm going to hell. Then, I started to cry. And I started to repent. And I opened it and as if the Quran had nothing in it except \"you're fired. You're going to hell. You're not gonna do the work. We'll substitute somebody in your place.\" So, I said this Quran is rigged. Maybe, because I'm using it a lot. So, I got this one which was brand new. And I opened it. It said \"you're fired. You're going to hell. You cannot do the job. You're a chicken. We'll substitute somebody in your place.\" So, I closed it again and I opened another place. The Quran had nothing in it except... I got the English Quran and I opened it. I looked in a neutral spot and it. \"You're fired. You'll not do the job. You're going to Hell.\" So, it is no longer coincidence. I got this big book, this big Quran, here. And I opened it this way. I mean, I did all kinds of crazy things to let the Quran open at random and go like this. And then I opened the Quran and looked in it. And it say \"you're going to hell. You're doomed. You cannot do the job. You're fired.\" So, with this, I got... Oh, I got a letter opener and I stacked the Qurans like this and I point. I closed my eyes and pointed the letter opener and inserted it in one of these pages and opened it and it tell me the same thing. There was nothing in the Quran that morning except \"you're fired. You cannot do the job. Get out of here. You're doomed. I don't need you anymore. I substitute somebody else in your place.\" So, I cried and I made SUJUD. And I repented. I sought refuge from Satan and it kept giving me the same message. So, I became convinced that God is speaking to me through the Quran and I became convinced that I'm no good, that I'm fired, that I'm going to hell. And I cried as hard as I never did in my life. I really became convinced that I'm finished and I'm doomed and there is no salvation inside. I... my SUJUD became longer, my crying was harder. There was nobody in the mosque. And then one time, I opened the Quran and it said \"We forgive you.\" Oh, I reached the conviction with all this crying that... now, the message was very clear that I am not coming out with an announcement that I am God's messenger. I have known it since 1980 and I ignored messages that say... there are verses in Quran that say \"say O, people I'm God's messenger to all of you.\" And I ignored those. They were very loud and very clear and I ignored them. Obviously, the timing was not right, then. I mean, now in retrospect I was supposed to have ignored those messages. They got loud and repeated and louder and clearer and I kept ignoring them until this happened. So, there is something that led to this. I mean, I opened the Quran says \"say O, people I'm God's messenger for all of you.\" And I became convinced that this is no longer the case. Then, with these repetitions, I reached the decision... in my repentance, I said \"please God accept my repentance. Take me back even if I lose my own children, my friends, if I lose everybody, I will, I will do anything. I will go out and I will make the announcement.\" And I really had that conviction cause I said chances are my children will tell me \"get out of here. You're a crazy man. What are you talking about?\" So, it became my neck. And there are verses in Quran where it says \"the person disowns his own parents, his own children. The children disown their parents\" and so on. It became a reality for me. And here I am doomed, going to hell. And all things are hinging on courage. God doesn’t want a coward to work for Him. It became very obvious. So, when I really reached the conviction that I will do it at any expense, I got this message that said \"you're forgiven. We'll accept your repentance.\" And my crying of sadness became crying of joy. And I still didn’t believe that remark. Maybe, it's a fluke. So, I did the same thing and there was nothing in the Quran except \"We accept your repentance. You're forgiven. Go now and do the job. God is Forgiver, Merciful.\" And I did it in the same way. I mean, this defied all statistic and all coincidence.",
+      "retrieval_text": "Opening the Quran at random and the experience of being fired and forgiven\nRashad describes repeatedly opening several Qurans at random and interpreting the passages as messages that he was fired, condemned, and would be replaced because he had refused to announce his commission. After crying, prostrating, and resolving to make the announcement at any cost, he says the random openings changed to messages of forgiveness and restoration.\nSection kind: personal spiritual testimony\nClaim classification: Rashad's account of perceived divine communication through random Quran openings\nConcepts: random opening of quran; bibliomancy; quranic sortilege; fired and restored; repentance and forgiveness; divine communication claim\nUser terminology: Rashad opened Quran at random; bibliomancy; Quranic sortilege; istikhara with Quran; Rashad was fired by God; Rashad forgiven and restored; God spoke through Quran pages; random verse messages\nQuestions: How did Rashad say God told him he was fired? Did Rashad repeatedly open the Quran at random? What convinced him the passages were not coincidence? What did he do before the messages changed to forgiveness? Did Rashad describe a form of bibliomancy or Quranic sortilege?\nQuran references: \nEntities: God; Satan; Quran; Rashad Khalifa"
+    },
+    {
+      "id": "messenger-01-s15",
+      "start_row": 340,
+      "end_row": 378,
+      "title": "Boldness after restoration and the announcement as a sifting test",
+      "summary": "Rashad says the fired-and-forgiven experience explains his later boldness. He again argues that a messenger is not inherently superior, attributes opponents' reaction to idolization of the title Rasul Allah, and says the announcement functions as one of the tests or traps that sift sincere believers from those who fall away.",
+      "section_kind": "personal explanation and doctrine",
+      "claim_classification": "Rashad's explanation of boldness and spiritual testing",
+      "concepts": [
+        {
+          "id": "boldness-after-restoration",
+          "relation": "explained",
+          "explicit": true
+        },
+        {
+          "id": "messenger-not-necessarily-superior",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "idolization-of-messenger-title",
+          "relation": "criticized",
+          "explicit": true
+        },
+        {
+          "id": "announcement-as-sifting-test",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "road-to-god-traps",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "why Rashad became bold",
+        "messenger announcement as test",
+        "sifting believers",
+        "spiritual dropout",
+        "idolizing Rasul Allah",
+        "road to God full of traps"
+      ],
+      "related_questions": [
+        "Why did Rashad say he could no longer be modest about the claim?",
+        "How did he describe the announcement as a test?",
+        "Why did he think opponents made messengership into a big deal?",
+        "What did he mean by believers falling off the road?"
+      ],
+      "quran_references": [
+        "18",
+        "39:65",
+        "67:1-2"
+      ],
+      "entities": [
+        "Moses",
+        "Muhammad",
+        "God",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "The sifting explanation is a theological claim that may discourage criticism. Answers should report it without adopting it as a judgment about questioners.",
+      "start": 2588.48,
+      "end": 2933.182,
+      "start_time": "00:43:08.480",
+      "end_time": "00:48:53.182",
+      "source_segment_start": 340,
+      "source_segment_end": 378,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "The background to this... This is why I'm not... people who around me know that I'm not making any bones about it. I'm not being humble about it and I could not take any chances. And I believe if it happens again, I will be really fired and be sent to Hell. And I'm not gonna do it. So, this is why I have been bold. And it really has nothing to do with humbleness or modesty. If we understand a few basic things in the Quran. One thing is that a messenger is no big deal. That it is a big deal only if we idolize the messengers. We get the picture in our mind... ...and this is the typical response with all the believers. The people who were averse from the beginning, they just continued to be averse or maybe a little bit worse. Except their harsh attacks had a little bit of reverence in, as if in the background, it said \"what if he is?\" I get this telephone calls on the machine and in the past, they used to call me bad names and all that but now they say... they read Quran. And they read the verses that says \"fear God.\" And then they add \"come back to Islam.\" This kind of thing. But you can sense the kind of respect they have at the back of their mind. This is the difference that happened with the opponents. And this is because of their reverence for RASOOL ALLAH. This word, they made it so big and put it next to God. And this is why it's a big deal for them. But if we understand the Quran, we'll find out that it is not a big deal because the Quran teaches us that a messenger is not necessarily better than anyone in the world, in his generation, or anyone around him. We have this lesson in SURA 18, where Moses, one of the big messengers of God, met someone who's described as one of God's servants \"one of our servants.\" God says. And this one of God's servants began teaching Moses a few lessons and Moses turned out to be a lousy student. So, this is teaching us that the messenger, the biggest ones, are not any better than anyone around them. I mean, not necessarily better than people around them. The Quran teaches that say \"I'm a human being like you.\" And this is about the prophet Muhammad, for example. The Quran teaches that the criterion for closeness to God is righteousness, not being a messenger or not being the most knowledgeable or the richest or the tallest or anything else. Righteousness. Nothing else. So, and anyone can be more righteous than the messenger or anybody else. There is also a verse in SURA 39 that says that \"being a messenger of God does not even guarantee Heaven.\" It is no guarantee. It says. I'm quoting the Quran, now. It says \"that's what We revealed to you and to those before you that if you ever fall in idol worship, in idolatry, all your work will be nullified and you'll be a loser.\" So, if people understand this, they won't make a big deal out of being a messenger of God. I called Atef and I told him about this. and he... logically, he started to discuss the wisdom of making an announcement like this and why is it necessary. And I found myself him and I talking as if I sat down and decided to make an announcement. Then, it dawned on me it's not really my decision. It was not my decision at all. Obviously, God wants this announcement to be made for reasons that only God knows. And we can speculate on. The first verse in SURA 67 says \"God created death and life to test us, to test the people.\" Cause before that there was no death. Before the human race came here, there was no death. This is why God says He created death. mentioned death before life. The whole purpose is a test. And it turns out and we know now that the road to God is full of traps on the side for people to fall off. They drop out. And when you hear somebody say \"I'm a messenger of God.\" Some people drop out. And it's part of the sifting process. There are so many traps along the road. And the matter is decided, really, from the very beginning. I mean, a person who has doubts, who is not a sincere believer will fall off at one of these traps along the road. The firm believer will keep going, no matter what happens. Because what we're saying is \"worship God Alone.\" We are saying \"destroy all idols.\" And we are fanatically against building idols.",
+      "retrieval_text": "Boldness after restoration and the announcement as a sifting test\nRashad says the fired-and-forgiven experience explains his later boldness. He again argues that a messenger is not inherently superior, attributes opponents' reaction to idolization of the title Rasul Allah, and says the announcement functions as one of the tests or traps that sift sincere believers from those who fall away.\nSection kind: personal explanation and doctrine\nClaim classification: Rashad's explanation of boldness and spiritual testing\nConcepts: boldness after restoration; messenger not necessarily superior; idolization of messenger title; announcement as sifting test; road to god traps\nUser terminology: why Rashad became bold; messenger announcement as test; sifting believers; spiritual dropout; idolizing Rasul Allah; road to God full of traps\nQuestions: Why did Rashad say he could no longer be modest about the claim? How did he describe the announcement as a test? Why did he think opponents made messengership into a big deal? What did he mean by believers falling off the road?\nQuran references: 18; 39:65; 67:1-2\nEntities: Moses; Muhammad; God; Rashad Khalifa"
+    },
+    {
+      "id": "messenger-01-s16",
+      "start_row": 379,
+      "end_row": 412,
+      "title": "The Quranic shahada, rejection of Muhammad's addition, and opposition to Rashad",
+      "summary": "Rashad argues from Quran 3:18 that the shahada is only 'there is no god except God' and condemns adding Muhammad's name. He humorously proposes replacing Muhammad with his own name to expose the problem, mentions being under death sentence in Saudi Arabia and Iran, rejects fame and money, and says he would have preferred a quiet private life.",
+      "section_kind": "ritual and polemical teaching",
+      "claim_classification": "Rashad's Quranic shahada interpretation and historical assertions",
+      "concepts": [
+        {
+          "id": "quranic-shahada",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "remove-muhammad-from-shahada",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "hypothetical-rashad-shahada",
+          "relation": "rhetorical",
+          "explicit": true
+        },
+        {
+          "id": "death-sentence-claims",
+          "relation": "asserted",
+          "explicit": true
+        },
+        {
+          "id": "rejection-of-fame-and-money",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad shahada",
+        "la ilaha illa God only",
+        "remove Muhammad from testimony",
+        "Quran 3:18 shahada",
+        "la ilaha illa God Rashad messenger",
+        "death sentence Saudi Arabia Iran",
+        "Rashad did not want fame"
+      ],
+      "related_questions": [
+        "What did Rashad say the Quranic shahada is?",
+        "Why did he reject adding Muhammad's name?",
+        "Why did he propose saying Rashad is the messenger of God?",
+        "Which countries did he say had placed him under a death sentence?",
+        "Did Rashad say he wanted fame or money?"
+      ],
+      "quran_references": [
+        "3:18"
+      ],
+      "entities": [
+        "Muhammad",
+        "God",
+        "Rashad Khalifa",
+        "Saudi Arabia",
+        "Iran"
+      ],
+      "retrieval_note": "The Rashad formula is presented rhetorically, not as a prescribed new shahada in these lines. Death-sentence statements are historical assertions by Rashad.",
+      "start": 2939.42,
+      "end": 3098.26,
+      "start_time": "00:48:59.420",
+      "end_time": "00:51:38.260",
+      "source_segment_start": 379,
+      "source_segment_end": 412,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "This reminds me of... I don't know if it's a good joke. I mean, there's nothing bad about the language but... The Muhammadans insist on putting Muhammad's name next to God and say لا إله إلا الله محمد رسول الله In the AZAN they say لا إله إلا الله محمد رسول الله So, I'm tempted to ask them how do you like if we follow your method and, you know, we say لا إله إلا الله That's it. There is no god except the One God. لا إله إلا الله This is like the Quran says. Verse 18 of SURA 3, God says شَهِدَ ٱللَّهُ God bears witness أَنَّهُۥ لَآ إِلَـٰهَ إِلَّا هُوَ that there is no god except Him.\" In other words, God's SHAHADA is لا إله إلا الله And then the verse goes on and says وَٱلْمَلَـٰٓئِكَةُ also the Angels وَأُو۟لُوا۟ ٱلْعِلْمِ and those who posses knowledge. This is their shahada. لا إله إلا الله So, it's very clear in the Quran that the SHAHADA is لا إله إلا الله They insist because of idolatry to add the Muhammad's name which violates a good number of commandments in the Quran. When you put Muhammad's name next to God in the so-called SHAHADA, their SHAHADA, they are violating a good number of commandments. So, the temptation is, I wanna tell them \"how do you like if we say\" لا إله إلا الله رشاد رسول الله if we follow your method. Now that they picked up this opposition to me... the Muhammadans... and to the point that I'm under death sentence in a good number of countries, now, Saudi Arabia is one of them. Iran is another one. So, now that they hate me so much, how would they like to say لا إله إلا الله رشاد رسول الله if I give them enough proof and so on. Maybe, this will induce them to just say لا إله إلا الله So, we are saying لا إله إلا الله We are, very strongly, starchly against building any idol. And I don’t know how to convince them that I don’t want any glory or money or fame. And for 8 years, I was really... I was a coward. I mean, what did this announcement bring to me? Except, I thought \"trouble.\" but it did not, actually. Their action has been positive so far. But I would rather go and worship God Alone by myself somewhere very quietly and just eke out and living out of this world and go into the eternal life. This is what I would rather do, personally. This is what I wanted to do for 8 years. This is why I was fired in that night.",
+      "retrieval_text": "The Quranic shahada, rejection of Muhammad's addition, and opposition to Rashad\nRashad argues from Quran 3:18 that the shahada is only 'there is no god except God' and condemns adding Muhammad's name. He humorously proposes replacing Muhammad with his own name to expose the problem, mentions being under death sentence in Saudi Arabia and Iran, rejects fame and money, and says he would have preferred a quiet private life.\nSection kind: ritual and polemical teaching\nClaim classification: Rashad's Quranic shahada interpretation and historical assertions\nConcepts: quranic shahada; remove muhammad from shahada; hypothetical rashad shahada; death sentence claims; rejection of fame and money\nUser terminology: Rashad shahada; la ilaha illa God only; remove Muhammad from testimony; Quran 3:18 shahada; la ilaha illa God Rashad messenger; death sentence Saudi Arabia Iran; Rashad did not want fame\nQuestions: What did Rashad say the Quranic shahada is? Why did he reject adding Muhammad's name? Why did he propose saying Rashad is the messenger of God? Which countries did he say had placed him under a death sentence? Did Rashad say he wanted fame or money?\nQuran references: 3:18\nEntities: Muhammad; God; Rashad Khalifa; Saudi Arabia; Iran"
+    },
+    {
+      "id": "messenger-01-s17",
+      "start_row": 413,
+      "end_row": 456,
+      "title": "Publication history, the Abraham–Muhammad–Rashad triangle, and the year 1980",
+      "summary": "Rashad says he had known since 1980 that he formed a three-part sequence with Abraham, who brought the religious practices, and Muhammad, who brought the Quran, while he brought the proof. He recalls publications in January and November 1973, associates his age thirty-eight with early reports, links 1980 with Islamic year 1400 and a new era, and says God had forsaken the Arabs while Islam was being reestablished in the English-speaking world.",
+      "section_kind": "autobiographical chronology and theological interpretation",
+      "claim_classification": "Rashad's chronology, role claim, and ethnic-religious polemic",
+      "concepts": [
+        {
+          "id": "abraham-muhammad-rashad-triangle",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "abraham-brought-practices",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "muhammad-brought-quran",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "rashad-brought-proof",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "1973-code-publications",
+          "relation": "recounted",
+          "explicit": true
+        },
+        {
+          "id": "1980-new-era",
+          "relation": "interpreted",
+          "explicit": true
+        },
+        {
+          "id": "arabs-forsaken-claim",
+          "relation": "asserted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Abraham Muhammad Rashad triangle",
+        "Abraham brought religious practices",
+        "Muhammad brought Quran",
+        "Rashad brought proof",
+        "first code 19 publication 1973",
+        "Akhir Saa magazine",
+        "Islamic year 1400",
+        "English-speaking world restored Islam",
+        "God forsook Arabs"
+      ],
+      "related_questions": [
+        "What three roles did Rashad assign to Abraham, Muhammad, and himself?",
+        "When did Rashad say the mathematical miracle was first published?",
+        "What happened on his thirty-eighth birthday in 1973?",
+        "Why did he emphasize the year 1980 or 1400 AH?",
+        "What did Rashad say about Arabs and the English-speaking world?"
+      ],
+      "quran_references": [
+        "15:87",
+        "47:38"
+      ],
+      "entities": [
+        "Abraham",
+        "Muhammad",
+        "Rashad Khalifa",
+        "David",
+        "Arabs",
+        "Egypt",
+        "San Francisco"
+      ],
+      "retrieval_note": "Statements about Arabs are Rashad's polemical generalizations and should never be adopted as neutral fact. Publication dates may be checked against archival materials during review.",
+      "start": 3098.36,
+      "end": 3443.18,
+      "start_time": "00:51:38.360",
+      "end_time": "00:57:23.180",
+      "source_segment_start": 413,
+      "source_segment_end": 456,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "So, I'm sure I forgot quite a few points that I wanted to tell you about. The background to this is that I have known since 1980 that I'm God's messenger in the sense that... not in a general sense... in the sense that Abraham was the original messenger of Islam. He brought all the practices. The NAMAZ, the fasting, the ZAKAT Charity, pilgrimage and of course the first commandment لا إله إلا الله and Muhammad brought the Quran. And that I am the third of a triangle that I brought the proof... the proof of authenticity of the religion. The first publication... we just found out this yesterday... The first time the miracle of Quran was published was in January 1973. 1973, I was 38 years old and I didn’t know anything except that I found this mathematical miracle in the Quran. And the 7th... the January 73 publication in the most popular magazine in the middle east: آخر الساعة had to do with the proportion of the initials. Qaf, for example, the letter Q in chapter 50. That chapter had the highest proportion of the letter Q. SURA Saad had the highest proportion of the letter Saad. SURA NuN had the highest proportion of SURA NuN. Alef Lam Meemm and so on. Every SURA had the highest proportion of its initials except SURA Ya Seen had the least... the exact opposite. And that was the whole article. And it didn’t have the computer printouts of the whole Quran which I had written in the computer. And then in 1973, in November which is exactly my 38th birthday was the first report on the number 19. That was back in 73. And... but I didn’t know that I am God's messenger in that sense until 1980. 1980 was correspondent to the year 1400, the Islamic year. And it seems like a new era began at that time, 1400. If you look here in SURA 47.... SURA 47, verse 38. 38 was very prominent. We were looking at this magazine yesterday We became curious... We were looking at it on the other page. They had reports in the magazine 38 years ago. They had a big number 38. 47, the last verse which is 38. I wrote in bold letters that if you turn away, God will substitute other people in your place and they will not be like you. This is one of the verses, by the way, about substituting somebody in your place. But then I wrote this in bold... in big letters and I put a footnote saying here.... at the end of the footnote it says \"Islam is being reestablished in the English-speaking world after being restored to its pristine purity. So, I wrote here, back in 1980, 1400 that God had forsaken the Arabs. The Arabs meaning in the Arabian peninsula. There's a certain geographical area where the Arabs are... that defines who the Arabs are. And now, it's been 8 years and we didn't have... we don't have a single Arab. Of the hundred million Arabs in the world, we don't have a single Arab who could see and appreciate the miracle of Quran even though it's very clear. An Arab, from the Arabian peninsula, not from North Africa and not from Egypt. Sometimes they call me and say \"you're an Arab, aren't you?\" I say \"No, Thank God. I'm Egyptian.\" But it's quite a phenomenon that we don’t have a single Arab. Last Friday, we had like 60 people in the mosque, not a single Arab. We had the conference in San Francisco, couple of hundred people, not a single Arab except those who came to harass us. So, there's.... something happened in 1980 after 7 pairs of centuries. SURA 13... 15 excuse me. SURA 15, verse 87. God is telling Muhammad \"I'm giving you 7 pairs.\" Among the other meanings, I'm convinced that it means 7 pairs of centuries because of what I've seen and the fact that this verse is at the end of SURA entitled Muhammad. So, the background is that I have known since 1980 and I have been evading the responsibility of... Actually, we'll just go, just go along and worship God and spread the message.",
+      "retrieval_text": "Publication history, the Abraham–Muhammad–Rashad triangle, and the year 1980\nRashad says he had known since 1980 that he formed a three-part sequence with Abraham, who brought the religious practices, and Muhammad, who brought the Quran, while he brought the proof. He recalls publications in January and November 1973, associates his age thirty-eight with early reports, links 1980 with Islamic year 1400 and a new era, and says God had forsaken the Arabs while Islam was being reestablished in the English-speaking world.\nSection kind: autobiographical chronology and theological interpretation\nClaim classification: Rashad's chronology, role claim, and ethnic-religious polemic\nConcepts: abraham muhammad rashad triangle; abraham brought practices; muhammad brought quran; rashad brought proof; 1973 code publications; 1980 new era; arabs forsaken claim\nUser terminology: Abraham Muhammad Rashad triangle; Abraham brought religious practices; Muhammad brought Quran; Rashad brought proof; first code 19 publication 1973; Akhir Saa magazine; Islamic year 1400; English-speaking world restored Islam; God forsook Arabs\nQuestions: What three roles did Rashad assign to Abraham, Muhammad, and himself? When did Rashad say the mathematical miracle was first published? What happened on his thirty-eighth birthday in 1973? Why did he emphasize the year 1980 or 1400 AH? What did Rashad say about Arabs and the English-speaking world?\nQuran references: 15:87; 47:38\nEntities: Abraham; Muhammad; Rashad Khalifa; David; Arabs; Egypt; San Francisco"
+    },
+    {
+      "id": "messenger-01-s18",
+      "start_row": 457,
+      "end_row": 485,
+      "title": "Restoring salat and zakat to pristine purity",
+      "summary": "Rashad says his community had been shown the correct form of Islam. He condemns mentioning Muhammad, his family, Abraham, or Abraham's family in salat, insists that the prayer be devoted to God alone, and repeats his interpretation that zakat should be 2.5 percent of income when it is received, distributed in a Quranic order.",
+      "section_kind": "ritual correction",
+      "claim_classification": "Rashad's reform of salat and zakat",
+      "concepts": [
+        {
+          "id": "salat-god-alone",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "remove-prophetic-names-from-salat",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "zakat-on-income",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "zakat-two-point-five-percent",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "restoration-of-pristine-islam",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "remove Muhammad from salat",
+        "no Abraham family in prayer",
+        "salat devoted to God alone",
+        "correct zakat paycheck",
+        "pristine Islam",
+        "Rashad ritual reforms"
+      ],
+      "related_questions": [
+        "What names did Rashad say should not be mentioned in salat?",
+        "How did he define prayer devoted to God alone?",
+        "What zakat method did he repeat here?",
+        "What did Rashad mean by restoring Islam to pristine purity?"
+      ],
+      "quran_references": [
+        "6:141"
+      ],
+      "entities": [
+        "Muhammad",
+        "Abraham",
+        "God",
+        "Quran"
+      ],
+      "retrieval_note": "This overlaps the earlier zakat section but adds the detailed salat correction. Diversify results by concept rather than returning both sections for every zakat query.",
+      "start": 3443.18,
+      "end": 3636.23,
+      "start_time": "00:57:23.180",
+      "end_time": "01:00:36.230",
+      "source_segment_start": 457,
+      "source_segment_end": 485,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "And what we've been doing was... God has been gracious to us in that He's been showing us what the correct Islam is. The Muhammadans, throughout the world, the hundred million of them are doing SALAT wrong, they mention محمد آل محمد. ابراهیم آل ابراهیم in the SALAT. We know now for sure that this is wrong. The Quran came out of Muhammad's mouth. It says \"you should never mention any other name during the SALAT besides other than the name of God. That the SALAT must be devoted to God Alone and no one else.\" So, they did the SALAT wrong. They did the ZAKAT wrong. They are doing it wrong. And now we have it corrected. If we look in SURA 6, verse 141, it tells you \"when you harvest the fruits or the crops, give the charity, the ZAKAT charity of that crop on the day of harvest.\" Now, the ZAKAT as being practiced now in the Muhammadan world is once a year on your savings, above a certain amount. But the Quran says \"give the ZAKAT on the day of harvest.\" Now, since we are not farmers, we do not harvest fruits or crops, or anything like that. We harvest paychecks. So, when we get the paycheck, we're supposed to take out what came to us from IBRAHIM in very clear words ربع العشر a quarter of ten. One quarter of one ten. This comes to 2.5 percent. So, you take 2.5% of your net income when you get it, the day you get it. So, I would... I would go... I would say it makes sense that we wait like a month to know what our month seems, we get our paychecks, our monthly income. It's a very common thing. And you, at the end of the month, figure out how much was your net income, 2.5 percent and you give it to people you personally know are in need. You know them, personally and you know that they need the assistance. And we are given specific order in the Quran as to who we give the money to. You give it first to your parents. If they don’t need it, you give it to your relatives, cousins, and uncles and aunts and so on. People you know, personally who are related to you and they need the money or the help. After that, the orphans. You find children who lost one or both parents for some reason, divorce or abandonment or death and you give them this money. And the fourth category is any poor persons and the last category are traveling aliens people who sneak into this country from Mexico. They have no jobs. They are hungry. So, you help them. We have a specific order in the Quran. This is the correct ZAKAT. So, what we did was, we cleaned out the SALAT. We returned it to its pristine purity.",
+      "retrieval_text": "Restoring salat and zakat to pristine purity\nRashad says his community had been shown the correct form of Islam. He condemns mentioning Muhammad, his family, Abraham, or Abraham's family in salat, insists that the prayer be devoted to God alone, and repeats his interpretation that zakat should be 2.5 percent of income when it is received, distributed in a Quranic order.\nSection kind: ritual correction\nClaim classification: Rashad's reform of salat and zakat\nConcepts: salat god alone; remove prophetic names from salat; zakat on income; zakat two point five percent; restoration of pristine islam\nUser terminology: remove Muhammad from salat; no Abraham family in prayer; salat devoted to God alone; correct zakat paycheck; pristine Islam; Rashad ritual reforms\nQuestions: What names did Rashad say should not be mentioned in salat? How did he define prayer devoted to God alone? What zakat method did he repeat here? What did Rashad mean by restoring Islam to pristine purity?\nQuran references: 6:141\nEntities: Muhammad; Abraham; God; Quran"
+    },
+    {
+      "id": "messenger-01-s19",
+      "start_row": 486,
+      "end_row": 501,
+      "title": "Correcting fasting through astronomical calculation rather than moon sighting",
+      "summary": "Rashad criticizes fasting practices that invert day and night or excuse bad behavior. He says computer calculations can determine the moon's birth, rise, and set regardless of visibility, rejects reliance on the hadith requiring visual sighting, and says Ramadan may last twenty-nine or thirty days.",
+      "section_kind": "ritual and calendar correction",
+      "claim_classification": "Rashad's fasting and lunar-calendar interpretation",
+      "concepts": [
+        {
+          "id": "astronomical-ramadan-calculation",
+          "relation": "prescribed",
+          "explicit": true
+        },
+        {
+          "id": "moon-sighting-hadith-rejected",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "ramadan-twenty-nine-or-thirty",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "fasting-behavior-critique",
+          "relation": "criticized",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad moon sighting",
+        "computer calculated Ramadan",
+        "astronomical new moon",
+        "reject hadith sighting",
+        "29 or 30 days Ramadan",
+        "fasting all day sleeping"
+      ],
+      "related_questions": [
+        "How did Rashad say Ramadan should be calculated?",
+        "Why did he reject visual moon sighting?",
+        "Did Rashad say Ramadan is always twenty-nine days?",
+        "What behavior during fasting did he criticize?"
+      ],
+      "quran_references": [],
+      "entities": [
+        "Egypt",
+        "Quran"
+      ],
+      "retrieval_note": "Present this as Rashad's calendar method, not as universal Islamic practice or current astronomical guidance.",
+      "start": 3636.23,
+      "end": 3712.8,
+      "start_time": "01:00:36.230",
+      "end_time": "01:01:52.800",
+      "source_segment_start": 486,
+      "source_segment_end": 501,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa",
+        "Audience"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "We corrected the ZAKAT. We corrected the fasting. Even the fasting was wrong. What SURA? What was wrong with it? Well, they sleep all day and stay up all night and use fasting as an excuse to be nasty and... You know that. They call names and say \"I'm fasting.\" So, \"excuse me, I'm fasting.\" And the timing of the moon is always wrong. I think they're fasting today, still in Egypt. And even though, tonight you can see the moon. I'd love to go out, but the computer tells you what time the moon is born, what time it rises, what time it sets. and whether the clouds or not, whether inside or not, whether you are sighted or blind, you can know exactly what the moon is doing. But they follow the Hadith that says \"you fast when you see it, and you break your fast when you don't see it. and if you cannot see it, you complete the month of Ramadan, 30 days.\" So, we fasted 29 days this month. Audience: \"Is it 29 days all the time?\" The messenger: No, sometimes 29, sometimes 30.",
+      "retrieval_text": "Correcting fasting through astronomical calculation rather than moon sighting\nRashad criticizes fasting practices that invert day and night or excuse bad behavior. He says computer calculations can determine the moon's birth, rise, and set regardless of visibility, rejects reliance on the hadith requiring visual sighting, and says Ramadan may last twenty-nine or thirty days.\nSection kind: ritual and calendar correction\nClaim classification: Rashad's fasting and lunar-calendar interpretation\nConcepts: astronomical ramadan calculation; moon sighting hadith rejected; ramadan twenty nine or thirty; fasting behavior critique\nUser terminology: Rashad moon sighting; computer calculated Ramadan; astronomical new moon; reject hadith sighting; 29 or 30 days Ramadan; fasting all day sleeping\nQuestions: How did Rashad say Ramadan should be calculated? Why did he reject visual moon sighting? Did Rashad say Ramadan is always twenty-nine days? What behavior during fasting did he criticize?\nQuran references: \nEntities: Egypt; Quran"
+    },
+    {
+      "id": "messenger-01-s20",
+      "start_row": 502,
+      "end_row": 515,
+      "title": "Rejecting Medina visits as part of Hajj and describing global spread",
+      "summary": "Rashad says visiting Medina is not part of Quranic Hajj and calls prayer at the Prophet's or Fatimah's tomb idolatry. He then says his translation, Quran, Hadith and Islam, and the reform message had spread to Mauritius, a French-speaking island, New Zealand, Australia, and other places.",
+      "section_kind": "pilgrimage reform and movement history",
+      "claim_classification": "Rashad's Hajj interpretation and account of global dissemination",
+      "concepts": [
+        {
+          "id": "medina-not-part-of-hajj",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "tomb-visitation-as-idolatry",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "quran-hadith-and-islam-book",
+          "relation": "mentioned",
+          "explicit": true
+        },
+        {
+          "id": "global-spread-of-message",
+          "relation": "recounted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Rashad on visiting Medina",
+        "Prophet tomb during Hajj",
+        "Fatimah tomb idolatry",
+        "Hajj only Quran",
+        "Quran Hadith and Islam brown book",
+        "Mauritius followers",
+        "Réunion Island"
+      ],
+      "related_questions": [
+        "Did Rashad consider Medina part of Hajj?",
+        "What did he say about praying at Muhammad's or Fatimah's tomb?",
+        "Which book did he call the small brown book?",
+        "Where did Rashad say the movement had spread?"
+      ],
+      "quran_references": [],
+      "entities": [
+        "Muhammad",
+        "Fatimah",
+        "Mauritius",
+        "New Zealand",
+        "Australia",
+        "Quran, Hadith and Islam"
+      ],
+      "retrieval_note": "The island name is unclear in the transcript and may refer to Réunion. Do not silently replace it without audio review.",
+      "start": 3712.8,
+      "end": 3815.18,
+      "start_time": "01:01:52.800",
+      "end_time": "01:03:35.180",
+      "source_segment_start": 502,
+      "source_segment_end": 515,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "The Hajj was wrong and we already wrote in the Muslim Perspective to correct... Hajj is wrong by going to Medina. It turns out that, as it is now done, going to Medina is the most important part of Hajj even though it is not part of Hajj at all in the Quran. Going to Medina is flagrant idol worship. They go to the prophet's tomb or to Fatimah's tomb and they pray and implore. \"Nothing.\" I'm quoting the Quran because on the Day of Judgement say \"we were worshipping nothing.\" So, this is what we've been doing and I was happy that way. So, we were just spreading the message. It has gone all over the world, literally. This... this translation and the small book, the brown book, Quran, Hadith and Islam and the message of returning Islam to its pristine purity as far as all the practices are concerned. These places, I never heard of, little islands in the Indian ocean. There's an island called \"l'union\"? Union Island in English? But it's a French... \"l'union.\" Ihsan lived in Mauritius. That's another country I never heard of, Mauritius. And we have people there in Mauritius. l'union? l'union? Close? Are they close to Mauritius? It must be. I went to New Zealand, Australia. I went everywhere and I was happy that way. The message is being spread all over the world. Exactly what needs to be done.",
+      "retrieval_text": "Rejecting Medina visits as part of Hajj and describing global spread\nRashad says visiting Medina is not part of Quranic Hajj and calls prayer at the Prophet's or Fatimah's tomb idolatry. He then says his translation, Quran, Hadith and Islam, and the reform message had spread to Mauritius, a French-speaking island, New Zealand, Australia, and other places.\nSection kind: pilgrimage reform and movement history\nClaim classification: Rashad's Hajj interpretation and account of global dissemination\nConcepts: medina not part of hajj; tomb visitation as idolatry; quran hadith and islam book; global spread of message\nUser terminology: Rashad on visiting Medina; Prophet tomb during Hajj; Fatimah tomb idolatry; Hajj only Quran; Quran Hadith and Islam brown book; Mauritius followers; Réunion Island\nQuestions: Did Rashad consider Medina part of Hajj? What did he say about praying at Muhammad's or Fatimah's tomb? Which book did he call the small brown book? Where did Rashad say the movement had spread?\nQuran references: \nEntities: Muhammad; Fatimah; Mauritius; New Zealand; Australia; Quran, Hadith and Islam"
+    },
+    {
+      "id": "messenger-01-s21",
+      "start_row": 516,
+      "end_row": 523,
+      "title": "Why the public announcement was necessary",
+      "summary": "Rashad acknowledges that he had previously thought the message could spread without a public announcement. He answers that God must have a purpose and cites Quran 21:23 to say God is not questioned about what He does.",
+      "section_kind": "personal justification",
+      "claim_classification": "Rashad's explanation of obedience to divine purpose",
+      "concepts": [
+        {
+          "id": "necessity-of-announcement",
+          "relation": "explained",
+          "explicit": true
+        },
+        {
+          "id": "god-not-questioned",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "obedience-over-personal-opinion",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "why announce messenger status",
+        "why not just spread message",
+        "God is not questioned 21:23",
+        "necessity of public declaration"
+      ],
+      "related_questions": [
+        "Why did Rashad say the public announcement was necessary?",
+        "What was his earlier justification for avoiding it?",
+        "How did he use Quran 21:23?"
+      ],
+      "quran_references": [
+        "21:23"
+      ],
+      "entities": [
+        "God",
+        "Rashad Khalifa"
+      ],
+      "retrieval_note": "This section records his rationale, not independent evidence that God required the announcement.",
+      "start": 3815.18,
+      "end": 3876.544,
+      "start_time": "01:03:35.180",
+      "end_time": "01:04:36.544",
+      "source_segment_start": 516,
+      "source_segment_end": 523,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "So, why the announcement? That was my justification. And that's why each one of you asked me \"why the announcement? Why is it necessary?\" So, my opinion was the same as yours. But then, I was... Pardon? Right. OK. What do they have? Obviously, God has a reason. The Quran says \"you don't ask God why. We ask.\" God is not to be asked about anything He does but we are to be asked about anything we do. (21:23) لَا يُسْـَٔلُ عَمَّا يَفْعَلُ وَهُمْ يُسْـَٔلُونَ",
+      "retrieval_text": "Why the public announcement was necessary\nRashad acknowledges that he had previously thought the message could spread without a public announcement. He answers that God must have a purpose and cites Quran 21:23 to say God is not questioned about what He does.\nSection kind: personal justification\nClaim classification: Rashad's explanation of obedience to divine purpose\nConcepts: necessity of announcement; god not questioned; obedience over personal opinion\nUser terminology: why announce messenger status; why not just spread message; God is not questioned 21:23; necessity of public declaration\nQuestions: Why did Rashad say the public announcement was necessary? What was his earlier justification for avoiding it? How did he use Quran 21:23?\nQuran references: 21:23\nEntities: God; Rashad Khalifa"
+    },
+    {
+      "id": "messenger-01-s22",
+      "start_row": 524,
+      "end_row": 545,
+      "title": "Quran 33:40 and 7:35 as evidence for later messengers",
+      "summary": "Rashad argues that the phrase messenger of God in Quran 33:40 is deliberately retained beside final prophet, which he reads as leaving messengership open. He then cites Quran 7:35, addressing the children of Adam when messengers come to them, and says it applies to readers of the Quran after Muhammad.",
+      "section_kind": "scriptural interpretation",
+      "claim_classification": "Rashad's argument for post-Muhammad messengership",
+      "concepts": [
+        {
+          "id": "quran-33-40-distinction",
+          "relation": "interpreted",
+          "explicit": true
+        },
+        {
+          "id": "final-prophet-not-final-messenger",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "quran-7-35-future-messengers",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "every-letter-purposeful",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:40 Rashad interpretation",
+        "seal of prophets but not messengers",
+        "why messenger of God phrase is present",
+        "7:35 future messengers",
+        "children of Adam messengers"
+      ],
+      "related_questions": [
+        "Why did Rashad think the phrase messenger of God in 33:40 was significant?",
+        "How did he argue that Muhammad was final prophet but not final messenger?",
+        "Who did Rashad say Quran 7:35 addresses?"
+      ],
+      "quran_references": [
+        "33:40",
+        "7:35"
+      ],
+      "entities": [
+        "Muhammad",
+        "God",
+        "Quran"
+      ],
+      "retrieval_note": "This repeats the earlier argument with a more detailed grammatical explanation. Avoid returning both passages unless additional context is useful.",
+      "start": 3878.985,
+      "end": 4009.056,
+      "start_time": "01:04:38.985",
+      "end_time": "01:06:49.056",
+      "source_segment_start": 524,
+      "source_segment_end": 545,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "So, obviously God has a purpose and very good reasons. Now, the Quran says that Muhammad is not the last messenger. And this could be one the very important reasons. So, if Muhammad is not the last messenger... The statement in the Quran in 33:40 says مَّا كَانَ مُحَمَّدٌ أَبَآ أَحَدٍ مِّن رِّجَالِكُمْ Muhammad was not the father of any of your men وَلَـٰكِن رَّسُولَ ٱللَّه a messenger of God وَخَاتَمَ ٱلنَّبِيِّـۧنَ and the final prophet This expression of رَّسُولَ ٱللَّه. وَلَـٰكِن رَّسُولَ ٱللَّه is not necessary at all for the meaning. If the prophet include the messenger or vice versa. You can have a perfect sentence saying مَّا كَانَ مُحَمَّدٌ أَبَآ أَحَدٍ مِّن رِّجَالِكُمْ وَلَـٰكِن خَاتَمَ ٱلنَّبِيِّـۧنَ Muhammad was not the father of any of your men but he was the final prophet. But of course every letter in the Quran is delivered as we know now, very well. It says وَلَـٰكِن رَّسُولَ ٱللَّه a messenger of God وَخَاتَمَ ٱلنَّبِيِّـۧنَ and the final prophet So, there is a verse 35 in SURA 7 says \"O, children of Adam when messengers come to you narrating My revelations to you, those of you who believe and lead a righteous life are the successful ones.\" Obviously, this is a verse for the people after Muhammad because it's in the Quran. And like Dr. Mansour said \"for as long as there are children of Adam on Earth, this verse is valid.\" Because it says \"O, children of Adam\" In Arabic يَـٰبَنِىٓ ءَادَمَ إِمَّا يَأْتِيَنَّكُمْ رُسُلٌ مِّنكُمْ يَقُصُّونَ عَلَيْكُمْ ءَايَـٰتِى ۙ (7:35) فَمَنِ ٱتَّقَىٰ وَأَصْلَحَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ 35, SURA 7. So, I mean, what is this verse directed to? Not the people before Muhammad because they've never seen the Quran. For the people who read the Quran.",
+      "retrieval_text": "Quran 33:40 and 7:35 as evidence for later messengers\nRashad argues that the phrase messenger of God in Quran 33:40 is deliberately retained beside final prophet, which he reads as leaving messengership open. He then cites Quran 7:35, addressing the children of Adam when messengers come to them, and says it applies to readers of the Quran after Muhammad.\nSection kind: scriptural interpretation\nClaim classification: Rashad's argument for post-Muhammad messengership\nConcepts: quran 33 40 distinction; final prophet not final messenger; quran 7 35 future messengers; every letter purposeful\nUser terminology: 33:40 Rashad interpretation; seal of prophets but not messengers; why messenger of God phrase is present; 7:35 future messengers; children of Adam messengers\nQuestions: Why did Rashad think the phrase messenger of God in 33:40 was significant? How did he argue that Muhammad was final prophet but not final messenger? Who did Rashad say Quran 7:35 addresses?\nQuran references: 33:40; 7:35\nEntities: Muhammad; God; Quran"
+    },
+    {
+      "id": "messenger-01-s23",
+      "start_row": 546,
+      "end_row": 564,
+      "title": "Joseph as precedent and a messenger for the modern technological generation",
+      "summary": "Rashad describes aversion to messengers as an ego test and cites Quran 40:34, where people said no messenger would come after Joseph, even though many later messengers did. He compares this with claims about Muhammad and says the vastly larger, technologically advanced modern generation has reason to receive a messenger.",
+      "section_kind": "scriptural precedent and contemporary rationale",
+      "claim_classification": "Rashad's analogy between Joseph and Muhammad and his modern-generation argument",
+      "concepts": [
+        {
+          "id": "joseph-last-messenger-precedent",
+          "relation": "interpreted",
+          "explicit": true
+        },
+        {
+          "id": "human-aversion-to-new-messengers",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "modern-generation-needs-messenger",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "technology-age-messenger",
+          "relation": "affirmed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Joseph last messenger verse",
+        "Quran 40:34",
+        "messenger for computer age",
+        "modern generation messenger",
+        "why send messenger after Muhammad",
+        "technology and revelation"
+      ],
+      "related_questions": [
+        "How did Rashad use Joseph as a precedent?",
+        "Who came after Joseph according to Rashad?",
+        "Why did he think the modern technological generation should receive a messenger?",
+        "What did he say about the world population since Muhammad?"
+      ],
+      "quran_references": [
+        "40:34"
+      ],
+      "entities": [
+        "Joseph",
+        "David",
+        "Solomon",
+        "Jesus",
+        "Moses",
+        "Muhammad",
+        "God"
+      ],
+      "retrieval_note": "Population and advancement comparisons are historical claims from the recording and should be attributed.",
+      "start": 4012.08,
+      "end": 4161.32,
+      "start_time": "01:06:52.080",
+      "end_time": "01:09:21.320",
+      "source_segment_start": 546,
+      "source_segment_end": 564,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "The Quran gives us all sorts of example of the human tendency or aversion to the idea of having a messenger of God. It seems to be a test of ego, a test of ego, you know. This guy is gonna sit here and say \"I'm messenger of God.\" So, he's gonna steal the show. And he's gonna get all the attention. And it may be one of the tests, you know, for dropping out. This is something I don't wanna contribute to that. But it's not up to me. So, the Quran illustrates this by using Joseph. Joseph... this is verse... I believe it's verse 34 in SURA 40. SURA 40, it says \"Joseph had come to you with clear revelations, but you doubted his message. Then, when he died you said he was the last messenger.\" Now, look who God picks out. Joseph. Who came after Joseph? The big ones. What are the big ones? David, Solomon, Jesus, Moses, Muhammad. All these came after Joseph even though the people said \"he's the last messenger. Nobody else will come after that.\" So, they have been saying the same thing about Muhammad that Muhammad is the last messenger. The world population today is a thousand times what it was at the time of Muhammad. And you've seen how much advancement the human being achieved. This is an enlightened generation of humans who are very advanced, computers, and sciences, and technology and video tapes. And it just makes sense that God wants to send a messenger to this generation. And I can't make any bones about it. I can't. I'm chickened the other way around now. I was a chicken in being afraid to announce and now I'm a chicken not to... I'm a chicken to hold back. Cause I'm afraid if I'm fired again, there will be no restoration. So, this verse about Joseph tells us that it's a human tendency.",
+      "retrieval_text": "Joseph as precedent and a messenger for the modern technological generation\nRashad describes aversion to messengers as an ego test and cites Quran 40:34, where people said no messenger would come after Joseph, even though many later messengers did. He compares this with claims about Muhammad and says the vastly larger, technologically advanced modern generation has reason to receive a messenger.\nSection kind: scriptural precedent and contemporary rationale\nClaim classification: Rashad's analogy between Joseph and Muhammad and his modern-generation argument\nConcepts: joseph last messenger precedent; human aversion to new messengers; modern generation needs messenger; technology age messenger\nUser terminology: Joseph last messenger verse; Quran 40:34; messenger for computer age; modern generation messenger; why send messenger after Muhammad; technology and revelation\nQuestions: How did Rashad use Joseph as a precedent? Who came after Joseph according to Rashad? Why did he think the modern technological generation should receive a messenger? What did he say about the world population since Muhammad?\nQuran references: 40:34\nEntities: Joseph; David; Solomon; Jesus; Moses; Muhammad; God"
+    },
+    {
+      "id": "messenger-01-s24",
+      "start_row": 565,
+      "end_row": 582,
+      "title": "Qualifications of a later messenger and demand for contrary evidence",
+      "summary": "Rashad asks what a messenger after Muhammad should teach and answers that such a person would call for worship of God alone, the word of God alone, removal of innovations, and destruction of idols. He says this is the same message from Adam onward, asks critics to explain why he should not be a messenger, cites mathematical and tangible evidence, and mentions an Oklahoma publication claiming that his name was not Rashad Khalifa.",
+      "section_kind": "self-defense and messenger criteria",
+      "claim_classification": "Rashad's defense of his commission claim",
+      "concepts": [
+        {
+          "id": "later-messenger-qualifications",
+          "relation": "defined",
+          "explicit": true
+        },
+        {
+          "id": "old-message-new-messenger",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "worship-god-alone",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "word-of-god-alone",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "remove-innovations-and-idols",
+          "relation": "affirmed",
+          "explicit": true
+        },
+        {
+          "id": "burden-on-critics",
+          "relation": "asserted",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "old message new messenger meaning",
+        "qualifications of God's messenger",
+        "why shouldn't Rashad be messenger",
+        "worship God alone word of God alone",
+        "remove innovations",
+        "Oklahoma article Rashad name"
+      ],
+      "related_questions": [
+        "What did Rashad say a later messenger would teach?",
+        "What did the title Old Message, New Messenger mean?",
+        "What evidence did he say critics needed to answer?",
+        "What unusual objection did an Oklahoma publication make?"
+      ],
+      "quran_references": [],
+      "entities": [
+        "Adam",
+        "Muhammad",
+        "God",
+        "Rashad Khalifa",
+        "Oklahoma"
+      ],
+      "retrieval_note": "The demand that critics disprove his status is part of his argument, not a neutral burden-of-proof rule.",
+      "start": 4161.32,
+      "end": 4304.479,
+      "start_time": "01:09:21.320",
+      "end_time": "01:11:44.479",
+      "source_segment_start": 565,
+      "source_segment_end": 582,
+      "review_status": "draft",
+      "duplicate_of_sections": [],
+      "retrieval_priority": "primary",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "And now the question to turn the table around... the question is why are they averse to this idea? So, if Muhammad was not the last messenger and somebody is gonna come after Muhammad, messengers after Muhammad. What do they look like? What are their qualifications? What will they say? So, if someone comes along and says \"worship God Alone. Uphold the word of God Alone, not the words of men. Clean out all the practices of worship. Destroy all idols. Remove all innovations.\" What's wrong with that? I mean, it makes sense that God's messenger will do that, will say that. Why will I oppose or object to someone who says that? We'll get along just fine. With any one of us. This is really the same message from Adam until now. It's one and the same message. So, I along with you would ask that question, you know. And I put it in the Perspective. They should tell us why shouldn't I be a messenger of God? I've given them enough proof. I've had lots of, there's a lot of evidence in that. And it is mathematical. It is physical, tangible. So, I want them to come up with evidence opposing that that I should not be. There's one thing that came out. The first thing that came out I'm thinking of some Muslim organization in Oklahoma and they issued the new magazine. The first issue. I think it was just for that and there was an article in it. said that \"my name is not Rashad Khalifa.\" my name is not Rashad Khalifa. I mean, I've heard everything now.",
+      "retrieval_text": "Qualifications of a later messenger and demand for contrary evidence\nRashad asks what a messenger after Muhammad should teach and answers that such a person would call for worship of God alone, the word of God alone, removal of innovations, and destruction of idols. He says this is the same message from Adam onward, asks critics to explain why he should not be a messenger, cites mathematical and tangible evidence, and mentions an Oklahoma publication claiming that his name was not Rashad Khalifa.\nSection kind: self-defense and messenger criteria\nClaim classification: Rashad's defense of his commission claim\nConcepts: later messenger qualifications; old message new messenger; worship god alone; word of god alone; remove innovations and idols; burden on critics\nUser terminology: old message new messenger meaning; qualifications of God's messenger; why shouldn't Rashad be messenger; worship God alone word of God alone; remove innovations; Oklahoma article Rashad name\nQuestions: What did Rashad say a later messenger would teach? What did the title Old Message, New Messenger mean? What evidence did he say critics needed to answer? What unusual objection did an Oklahoma publication make?\nQuran references: \nEntities: Adam; Muhammad; God; Rashad Khalifa; Oklahoma"
+    },
+    {
+      "id": "messenger-01-s25",
+      "start_row": 583,
+      "end_row": 596,
+      "title": "Repeated Ya-Sin recitation with Quran 36:24",
+      "summary": "The recording again includes Sura Ya-Sin 36:1–12, followed by the isolated recitation of 36:24. Most of this passage duplicates the earlier recitations.",
+      "section_kind": "repeated scripture recitation",
+      "claim_classification": "Quran recitation",
+      "concepts": [
+        {
+          "id": "quran-36-1-12",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "quran-36-24",
+          "relation": "recited",
+          "explicit": true
+        },
+        {
+          "id": "duplicate-passage",
+          "relation": "identified",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "third Ya-Sin recitation",
+        "Quran 36:24",
+        "clear error verse",
+        "repeated Quran passage"
+      ],
+      "related_questions": [
+        "Why does Ya-Sin appear again near the end?",
+        "What additional verse follows the repeated recitation?"
+      ],
+      "quran_references": [
+        "36:1-12",
+        "36:24"
+      ],
+      "entities": [
+        "Quran"
+      ],
+      "retrieval_note": "Lower retrieval priority because 36:1–12 already appears twice. Retain 36:24 as the only new verse in this excerpt.",
+      "duplicate_of_sections": [
+        "messenger-01-s01",
+        "messenger-01-s13"
+      ],
+      "retrieval_priority": "secondary",
+      "start": 4306.884,
+      "end": 4459.9,
+      "start_time": "01:11:46.884",
+      "end_time": "01:14:19.900",
+      "source_segment_start": 583,
+      "source_segment_end": 596,
+      "review_status": "draft",
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (36:1) يسٓ (36:2) وَٱلْقُرْءَانِ ٱلْحَكِيمِ (36:3) إِنَّكَ لَمِنَ ٱلْمُرْسَلِينَ (36:4) عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ (36:5) تَنزِيلَ ٱلْعَزِيزِ ٱلرَّحِيمِ (36:6) لِتُنذِرَ قَوْمًا مَّآ أُنذِرَ ءَابَآؤُهُمْ فَهُمْ غَـٰفِلُونَ (36:7) لَقَدْ حَقَّ ٱلْقَوْلُ عَلَىٰٓ أَكْثَرِهِمْ فَهُمْ لَا يُؤْمِنُونَ (36:8) إِنَّا جَعَلْنَا فِىٓ أَعْنَـٰقِهِمْ أَغْلَـٰلًا فَهِىَ إِلَى ٱلْأَذْقَانِ فَهُم مُّقْمَحُونَ وَجَعَلْنَا مِنۢ بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَـٰهُمْ فَهُمْ (36:9) لَا يُبْصِرُونَ (36:10) وَسَوَآءٌ عَلَيْهِمْ ءَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ إِنَّمَا تُنذِرُ مَنِ ٱتَّبَعَ ٱلذِّكْرَ وَخَشِىَ ٱلرَّحْمَـٰنَ بِٱلْغَيْبِ ۖ فَبَشِّرْهُ (36:11) بِمَغْفِرَةٍ وَأَجْرٍ كَرِيمٍ إِنَّا نَحْنُ نُحْىِ ٱلْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا۟ وَءَاثَـٰرَهُمْ ۚ وَكُلَّ شَىْءٍ (36:12) أَحْصَيْنَـٰهُ فِىٓ إِمَامٍ مُّبِينٍ (36:24) إِنِّىٓ إِذًۭا لَّفِى ضَلَـٰلٍۢ مُّبِينٍ",
+      "retrieval_text": "Repeated Ya-Sin recitation with Quran 36:24\nThe recording again includes Sura Ya-Sin 36:1–12, followed by the isolated recitation of 36:24. Most of this passage duplicates the earlier recitations.\nSection kind: repeated scripture recitation\nClaim classification: Quran recitation\nConcepts: quran 36 1 12; quran 36 24; duplicate passage\nUser terminology: third Ya-Sin recitation; Quran 36:24; clear error verse; repeated Quran passage\nQuestions: Why does Ya-Sin appear again near the end? What additional verse follows the repeated recitation?\nQuran references: 36:1-12; 36:24\nEntities: Quran"
+    },
+    {
+      "id": "messenger-01-s26",
+      "start_row": 597,
+      "end_row": 634,
+      "title": "Repeated excerpt on zakat, fasting, Hajj, and global spread",
+      "summary": "The final minutes repeat earlier material about correcting zakat as 2.5 percent of income, using astronomical calculation for Ramadan, rejecting Medina tomb visits as part of Hajj, and spreading the Quran-alone reform message. The video ends mid-thought.",
+      "section_kind": "repeated edited excerpt",
+      "claim_classification": "duplicate or reprise of earlier ritual-reform discussion",
+      "concepts": [
+        {
+          "id": "duplicate-passage",
+          "relation": "identified",
+          "explicit": true
+        },
+        {
+          "id": "zakat-on-income",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "astronomical-ramadan-calculation",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "medina-not-part-of-hajj",
+          "relation": "repeated",
+          "explicit": true
+        },
+        {
+          "id": "global-spread-of-message",
+          "relation": "repeated",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "duplicate ending",
+        "repeated zakat section",
+        "repeated fasting and Hajj excerpt",
+        "video ends mid-sentence"
+      ],
+      "related_questions": [
+        "Does the end of the transcript repeat earlier material?",
+        "Which sections are duplicated near the end?",
+        "Why should the final excerpt receive lower retrieval weight?"
+      ],
+      "quran_references": [
+        "6:141"
+      ],
+      "entities": [
+        "Muhammad",
+        "Fatimah",
+        "Abraham",
+        "God",
+        "Quran"
+      ],
+      "retrieval_note": "This passage substantially duplicates sections 18–20 and should be down-weighted to prevent repeated material from crowding out unique evidence.",
+      "duplicate_of_sections": [
+        "messenger-01-s18",
+        "messenger-01-s19",
+        "messenger-01-s20"
+      ],
+      "retrieval_priority": "secondary",
+      "start": 4479.18,
+      "end": 4770.82,
+      "start_time": "01:14:39.180",
+      "end_time": "01:19:30.820",
+      "source_segment_start": 597,
+      "source_segment_end": 634,
+      "review_status": "draft",
+      "csv_speakers": [
+        "Dr. Khalifa",
+        "Audience"
+      ],
+      "primary_speaker": "Dr. Rashad Khalifa",
+      "speaker_verification": "Most early rows have blank speaker metadata; later rows identify Dr. Khalifa. Audience and Carole appear briefly.",
+      "canonical_text": "So, they did the SALAT wrong. They did the ZAKAT wrong. They are doing it wrong. And now we have it corrected. If we look in SURA 6, verse 141, it tells you \"when you harvest the fruits or the crops, give the charity, the ZAKAT charity of that crop on the day of harvest.\" Now, the ZAKAT as being practiced now in the Muhammadan world is once a year on your savings, above a certain amount. But the Quran says \"give the ZAKAT on the day of harvest.\" Now, since we are not farmers, we do not harvest fruits or crops, or anything like that. We harvest paychecks. So, when we get the paycheck, we're supposed to take out what came to us from IBRAHIM in very clear words ربع العشر a quarter of ten. One quarter of one ten. This comes to 2.5 percent. So, you take 2.5% of your net income when you get it, the day you get it. So, I would... I would go... I would say it makes sense that we wait like a month to know what our month seems, we get our paychecks, our monthly income. It's a very common thing. And you, at the end of the month, figure out how much was your net income, 2.5 percent and you give it to people you personally know are in need. You know them, personally, and you know that they need the assistance. And we are given specific order in the Quran as to who we give the money to. You give it first to your parents. If they don’t need it, you give it to relatives, cousins, and uncles and aunts and so on. People you know, personally who are related to you and they need the money or the help. After that, the orphans. You find children who lost one or both parents for some reason, divorce or abandonment or death and you give them this money. And the fourth category is any poor persons and the last category are traveling aliens people who sneak into this country from Mexico. They have no jobs. They are hungry. So, you help them. We have a specific order in the Quran. This is the correct ZAKAT. So, what we did was, we cleaned out the SALAT. We returned it to its pristine purity. We corrected the ZAKAT. We corrected the fasting. Even the fasting was wrong. What SURA? What was wrong with it? Well, they sleep all day and stay up all night and use fasting as an excuse to be nasty and... You know that. They call names and then say \"I am fasting.\" So, \"excuse me, I'm fasting.\" And the timing of the moon is always wrong. I think they're fasting today, still in Egypt. And even though, tonight you can see the moon. I'd love to go out, but the computer tells you what time the moon is born, what time it rises, what time it sets and whether the clouds or not, whether inside or not, whether you are sighted or blind, you can know exactly what the moon is doing. But they follow the Hadith that says \"you fast when you see it, and you break your fast when you don't see it. and if you cannot see it, you complete the month of Ramadan, 30 days.\" So, we fasted 29 days this month. Audience: \"Is it 29 days all the time?\" The messenger: No, sometimes 29, sometimes 30. The Hajj was wrong and we already wrote in the Muslim Perspective to correct... Hajj is wrong by going to Medina. It turns out that, as it is now done, going to Medina is the most important part of Hajj even though it is not part of Hajj at all in the Quran. Going to Medina is flagrant idol worship. They go to the prophet's tomb or to Fatimah's tomb and they pray and implore. \"Nothing.\" I'm quoting the Quran because on the Day of Judgement say \"we were worshipping nothing.\" So, this is what we've been doing and I was happy that way. So, we were just spreading the message. It has gone all over the world, literally. This... this translation and the small book, the brown book, Quran, Hadith and Islam and the message of returning Islam to its pristine purity as far as all the practices are concerned. These places, I never heard of...",
+      "retrieval_text": "Repeated excerpt on zakat, fasting, Hajj, and global spread\nThe final minutes repeat earlier material about correcting zakat as 2.5 percent of income, using astronomical calculation for Ramadan, rejecting Medina tomb visits as part of Hajj, and spreading the Quran-alone reform message. The video ends mid-thought.\nSection kind: repeated edited excerpt\nClaim classification: duplicate or reprise of earlier ritual-reform discussion\nConcepts: duplicate passage; zakat on income; astronomical ramadan calculation; medina not part of hajj; global spread of message\nUser terminology: duplicate ending; repeated zakat section; repeated fasting and Hajj excerpt; video ends mid-sentence\nQuestions: Does the end of the transcript repeat earlier material? Which sections are duplicated near the end? Why should the final excerpt receive lower retrieval weight?\nQuran references: 6:141\nEntities: Muhammad; Fatimah; Abraham; God; Quran"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "rashad-messenger-claim",
+      "preferred_label": "Rashad Khalifa's claim to be a messenger of God",
+      "aliases": [
+        "messenger announcement",
+        "divine commission",
+        "Messenger of the Covenant"
+      ]
+    },
+    {
+      "id": "messenger-as-human",
+      "preferred_label": "A messenger as an ordinary human being",
+      "aliases": [
+        "human messenger",
+        "messenger like other people",
+        "not inherently superior"
+      ]
+    },
+    {
+      "id": "final-prophet-not-final-messenger",
+      "preferred_label": "Muhammad as final prophet but not final messenger",
+      "aliases": [
+        "seal of prophets",
+        "messenger after Muhammad",
+        "khatam al-nabiyyin interpretation"
+      ]
+    },
+    {
+      "id": "prophet-versus-messenger",
+      "preferred_label": "Distinction between prophet and messenger",
+      "aliases": [
+        "nabi versus rasul",
+        "prophet brings scripture",
+        "messenger confirms scripture"
+      ]
+    },
+    {
+      "id": "covenant-of-prophets",
+      "preferred_label": "The covenant concerning a confirming messenger",
+      "aliases": [
+        "Quran 3:81 covenant",
+        "Messenger of the Covenant",
+        "prophetic covenant"
+      ]
+    },
+    {
+      "id": "messenger-as-test",
+      "preferred_label": "Acceptance of a messenger as a spiritual test",
+      "aliases": [
+        "ego test",
+        "sifting believers",
+        "human messenger test"
+      ]
+    },
+    {
+      "id": "quran-alone",
+      "preferred_label": "The Quran as the sole doctrinal criterion",
+      "aliases": [
+        "Quranism",
+        "Quranist",
+        "word of God alone",
+        "whole Quran and nothing else"
+      ]
+    },
+    {
+      "id": "code-19",
+      "preferred_label": "The Quran's mathematical code based on nineteen",
+      "aliases": [
+        "mathematical miracle",
+        "Quran code 19",
+        "physical proof"
+      ]
+    },
+    {
+      "id": "rashada-root-nineteen",
+      "preferred_label": "Claim that the root Rashada occurs nineteen times",
+      "aliases": [
+        "Rashad name code",
+        "root rashada",
+        "page 320 index"
+      ]
+    },
+    {
+      "id": "allah-verse-number-sum-118123",
+      "preferred_label": "Claimed sum of verse numbers containing the word God",
+      "aliases": [
+        "118123",
+        "Allah verse number sum",
+        "2698 Allah occurrences"
+      ]
+    },
+    {
+      "id": "abraham-muhammad-rashad-triangle",
+      "preferred_label": "Abraham–Muhammad–Rashad three-part role",
+      "aliases": [
+        "Abraham practices Muhammad Quran Rashad proof",
+        "three messengers triangle",
+        "Ibrahim Muhammad Rashad"
+      ]
+    },
+    {
+      "id": "under-forty-salvation",
+      "preferred_label": "Claim that those who die before forty go to heaven",
+      "aliases": [
+        "age forty doctrine",
+        "children under forty saved",
+        "before 40 rehearsal"
+      ]
+    },
+    {
+      "id": "random-opening-of-quran",
+      "preferred_label": "Repeatedly opening the Quran at random for a message",
+      "aliases": [
+        "random verse",
+        "opening scripture for guidance",
+        "Quran pages as message"
+      ]
+    },
+    {
+      "id": "bibliomancy",
+      "preferred_label": "Bibliomancy or scriptural sortilege",
+      "aliases": [
+        "Quranic sortilege",
+        "istikhara by opening Quran",
+        "book divination"
+      ]
+    },
+    {
+      "id": "fired-and-restored",
+      "preferred_label": "Rashad's account of being fired and restored",
+      "aliases": [
+        "fired by God",
+        "forgiven and rehired",
+        "replacement threat"
+      ]
+    },
+    {
+      "id": "quranic-shahada",
+      "preferred_label": "The Quranic testimony that there is no god except God",
+      "aliases": [
+        "la ilaha illa Allah only",
+        "Quran 3:18 shahada",
+        "pure testimony"
+      ]
+    },
+    {
+      "id": "remove-muhammad-from-shahada",
+      "preferred_label": "Removing Muhammad's name from the shahada",
+      "aliases": [
+        "God alone testimony",
+        "no Muhammad in shahada",
+        "Quranic shahada reform"
+      ]
+    },
+    {
+      "id": "salat-god-alone",
+      "preferred_label": "Salat devoted to God alone",
+      "aliases": [
+        "remove names from prayer",
+        "no Muhammad in salat",
+        "correct Contact Prayer"
+      ]
+    },
+    {
+      "id": "zakat-on-income",
+      "preferred_label": "Zakat paid from income when received",
+      "aliases": [
+        "paycheck zakat",
+        "day of harvest zakat",
+        "monthly income charity"
+      ]
+    },
+    {
+      "id": "zakat-two-point-five-percent",
+      "preferred_label": "Zakat rate of 2.5 percent",
+      "aliases": [
+        "quarter of one tenth",
+        "2.5% net income",
+        "rubu al-ushr"
+      ]
+    },
+    {
+      "id": "astronomical-ramadan-calculation",
+      "preferred_label": "Ramadan determined through astronomical calculation",
+      "aliases": [
+        "computer moon calculation",
+        "new moon birth",
+        "calculated lunar calendar"
+      ]
+    },
+    {
+      "id": "moon-sighting-hadith-rejected",
+      "preferred_label": "Rejection of the visual moon-sighting hadith",
+      "aliases": [
+        "fast when you see it",
+        "moon sighting rejected",
+        "hadith lunar calendar"
+      ]
+    },
+    {
+      "id": "medina-not-part-of-hajj",
+      "preferred_label": "Medina visits excluded from Quranic Hajj",
+      "aliases": [
+        "Prophet tomb not Hajj",
+        "Medina pilgrimage",
+        "Hajj only in Quran"
+      ]
+    },
+    {
+      "id": "tomb-visitation-as-idolatry",
+      "preferred_label": "Prayer at prophetic tombs described as idolatry",
+      "aliases": [
+        "Muhammad tomb worship",
+        "Fatimah tomb",
+        "grave veneration"
+      ]
+    },
+    {
+      "id": "old-message-new-messenger",
+      "preferred_label": "The same message delivered by a new messenger",
+      "aliases": [
+        "old message new messenger meaning",
+        "one message from Adam",
+        "new messenger same doctrine"
+      ]
+    },
+    {
+      "id": "joseph-last-messenger-precedent",
+      "preferred_label": "Joseph as a precedent against final-messenger claims",
+      "aliases": [
+        "Quran 40:34",
+        "Joseph was last messenger claim",
+        "messengers after Joseph"
+      ]
+    },
+    {
+      "id": "1973-code-publications",
+      "preferred_label": "Early publication history of the Quran code",
+      "aliases": [
+        "January 1973 article",
+        "November 1973 report",
+        "Akhir Saa"
+      ]
+    },
+    {
+      "id": "1980-new-era",
+      "preferred_label": "The year 1980 or 1400 AH as a new stage",
+      "aliases": [
+        "Islamic year 1400",
+        "known since 1980",
+        "new era"
+      ]
+    },
+    {
+      "id": "arabs-forsaken-claim",
+      "preferred_label": "Rashad's claim that God had forsaken the Arabs",
+      "aliases": [
+        "English-speaking world restoration",
+        "Arab rejection of code",
+        "no Arab believers"
+      ]
+    },
+    {
+      "id": "duplicate-passage",
+      "preferred_label": "A repeated or duplicated passage within the recording",
+      "aliases": [
+        "repeated excerpt",
+        "duplicate transcript section",
+        "reprise"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "messenger-01-issue-01",
+      "start_time": "00:00:00.000",
+      "end_time": "01:19:30.820",
+      "source_segment_start": 0,
+      "source_segment_end": 634,
+      "original_text": "Speaker metadata is blank for 227 rows, Dr. Khalifa for 404 rows, Carole for 2 rows, and Audience for 2 rows.",
+      "issue_type": "incomplete_speaker_metadata",
+      "suggested_action": "Confirm the speaker against the audio and populate Rashad for the opening section. Preserve Carole and Audience as distinct speakers.",
+      "status": "metadata_review"
+    },
+    {
+      "id": "messenger-01-issue-02",
+      "start_time": "00:00:15.893",
+      "end_time": "00:00:35.688",
+      "source_segment_start": 2,
+      "source_segment_end": 4,
+      "original_text": "The opening recitation labels Ya-Sin as 36:2 and 'By the wise Quran' as 36:1, then appears to reverse 36:3 and 36:4.",
+      "issue_type": "quran_verse_label_error",
+      "suggested_action": "Check the video captions. The standard order is Ya-Sin 36:1, by the wise Quran 36:2, you are among the messengers 36:3, on a straight path 36:4.",
+      "status": "needs_visual_review"
+    },
+    {
+      "id": "messenger-01-issue-03",
+      "start_time": "00:00:00.000",
+      "end_time": "01:19:30.820",
+      "source_segment_start": 0,
+      "source_segment_end": 634,
+      "original_text": "The uploaded filename begins '05', while the CSV Video Title begins '07. Old Message, New Messenger'.",
+      "issue_type": "sequence_number_mismatch",
+      "suggested_action": "Use the stable document ID for ingestion. Confirm the intended playlist position before changing display numbering.",
+      "status": "metadata_review"
+    },
+    {
+      "id": "messenger-01-issue-04",
+      "start_time": "00:06:44.260",
+      "end_time": "00:07:02.960",
+      "source_segment_start": 44,
+      "source_segment_end": 46,
+      "original_text": "a flopster like the rest of us",
+      "issue_type": "possible_word_mistranscription",
+      "suggested_action": "Check the audio for the exact colloquial word. Do not normalize it without verification.",
+      "status": "needs_audio_review"
+    },
+    {
+      "id": "messenger-01-issue-05",
+      "start_time": "00:22:45.699",
+      "end_time": "00:25:43.620",
+      "source_segment_start": 188,
+      "source_segment_end": 210,
+      "original_text": "Several name-based numerical claims use different selections of Rashada, Rashad, Khalifa, Ibrahim, and Muhammad.",
+      "issue_type": "calculation_provenance_review",
+      "suggested_action": "Audit each selected verse, spelling, and abjad value separately before marking the numerical evidence verified.",
+      "status": "needs_source_audit"
+    },
+    {
+      "id": "messenger-01-issue-06",
+      "start_time": "00:36:11.741",
+      "end_time": "00:42:58.696",
+      "source_segment_start": 294,
+      "source_segment_end": 339,
+      "original_text": "Rashad interprets repeated random Quran openings as direct messages that he was fired, condemned, forgiven, and restored.",
+      "issue_type": "personal_divine_communication_claim",
+      "suggested_action": "Index the event for conceptual search, but use strict attribution and never present the divine causation as independently verified.",
+      "status": "response_guidance"
+    },
+    {
+      "id": "messenger-01-issue-07",
+      "start_time": "00:50:16.420",
+      "end_time": "00:50:39.020",
+      "source_segment_start": 398,
+      "source_segment_end": 402,
+      "original_text": "Rashad says he was under a death sentence in Saudi Arabia and Iran.",
+      "issue_type": "historical_assertion_needing_verification",
+      "suggested_action": "Retain as his statement. Independently verify only when a user asks whether the claim was historically accurate.",
+      "status": "response_guidance"
+    },
+    {
+      "id": "messenger-01-issue-08",
+      "start_time": "00:55:20.460",
+      "end_time": "00:56:36.160",
+      "source_segment_start": 443,
+      "source_segment_end": 452,
+      "original_text": "Rashad says God had forsaken the Arabs and generalizes that no Arab appreciated the Quranic miracle.",
+      "issue_type": "ethnic_generalization",
+      "suggested_action": "Use strict attribution, preserve the speaker's geographic qualification, and do not repeat the generalization as neutral fact.",
+      "status": "response_guidance"
+    },
+    {
+      "id": "messenger-01-issue-09",
+      "start_time": "01:02:51.880",
+      "end_time": "01:03:23.860",
+      "source_segment_start": 509,
+      "source_segment_end": 514,
+      "original_text": "The French island name is transcribed as 'l'union' or 'Union Island' near Mauritius.",
+      "issue_type": "place_name_review",
+      "suggested_action": "Check whether the intended place is Réunion. Do not silently correct without audio review.",
+      "status": "needs_audio_review"
+    },
+    {
+      "id": "messenger-01-issue-10",
+      "start_time": "01:11:46.884",
+      "end_time": "01:19:30.820",
+      "source_segment_start": 583,
+      "source_segment_end": 634,
+      "original_text": "The final portion repeats the Ya-Sin recitation and substantial portions of the earlier salat, zakat, fasting, Hajj, and global-spread discussion.",
+      "issue_type": "duplicate_or_reprised_video_material",
+      "suggested_action": "Keep the canonical transcript, but down-weight duplicate sections during retrieval and avoid presenting repeated passages as independent corroboration.",
+      "status": "retrieval_guidance"
+    }
+  ],
+  "canonical_document_id": "video-program/old-message-new-messenger",
+  "canonical_catalog_ids": [
+    "video-program/old-message-new-messenger"
+  ],
+  "canonical_mapping": "exact-document-id",
+  "archive_number": 5,
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

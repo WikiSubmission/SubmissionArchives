@@ -1,0 +1,1407 @@
+{
+  "schema_version": "1.2-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study from Behrouz",
+  "document_id": "audio-program/quran-study-behrouz-15-sura-54-sura-55-sura-56-sura-51-compilation",
+  "title": "Quran Study from Behrouz 15: Sura 54:23–40, Sura 55, Sura 56, and Sura 51 (composite recording)",
+  "date": "",
+  "date_precision": "composite_unknown",
+  "date_note": "The filename contains no usable date and the audio clearly joins multiple study blocks. Sura 56 material overlaps the February 17, 1989 Azhar study, while other portions appear later.",
+  "source_file": "data/sources/playlists/audio-transcripts/15 - Quran Study From Behrouz 515 Sura 54_23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen.csv",
+  "youtube_id": "dkW9QphWF3Y",
+  "youtube_url": "https://www.youtube.com/watch?v=dkW9QphWF3Y",
+  "primary_speakers": [
+    "Dr. Rashad Khalifa",
+    "Lisa",
+    "Laurie",
+    "Lori",
+    "Martha",
+    "Lydia",
+    "Douglas",
+    "Catherine",
+    "Other community participants"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 1177,
+    "first_speech_time": "00:00:00.841",
+    "last_speech_time": "01:32:08.259",
+    "section_count": 8,
+    "speaker_counts": {
+      "Dr. Khalifa": 913,
+      "Martha": 33,
+      "A woman": 87,
+      "Lisa": 54,
+      "Lydia": 9,
+      "A man": 14,
+      "Mahmoud Abib": 2,
+      "Atif": 2,
+      "Robert": 6,
+      "Lori": 21,
+      "Laurie": 28,
+      "Muhteshem": 2,
+      "Douglas": 4,
+      "Catherine": 2
+    }
+  },
+  "document_summary": "A composite source beginning with Sura 54:23–40. Rashad discusses Thamud, the camel test, rejection of a human messenger, Lot's people, sexual ethics, warnings, and the Quran's accessibility. The conversation then moves through polemics involving Al-Ahram, Salman Rushdie, the Catholic Church, an Islamic center, and Mary. A long jinn discussion concerns bodies of fire, different dimensions, extraordinary travel, freed jinn attending Quran studies, and death as transition to a better body. Sura 55 covers a rosy sky, immediate recognition of the guilty, two Paradises, and bodily appearance as a visible measure of soul development. Sura 56 becomes a movement history: Abraham, Muhammad, and the contemporary renewal; the foremost first generation; later followers; divine protection of Joseph; and the under-forty doctrine. The final appended Sura 51 block, led nominally by Douglas, discusses Earth as a spacecraft, water and atmospheric recycling, language, the Abrahamic sacrifice, Ishmael versus Isaac, and alleged alteration of Genesis.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-azhar-05-sura-56-75-sura-57-1989-02-17",
+      "relationship": "substantial overlap in the Sura 56 first-generation and under-forty material",
+      "note": "Treat repeated wording as the same teaching tradition rather than independent corroboration."
+    },
+    {
+      "document_id": "audio-program/quran-study-azhar-10-sura-71-sura-72-1989-05-19",
+      "relationship": "same jinn-body and attendance claims",
+      "note": "The earlier audio provides the direct Sura 72 setting."
+    },
+    {
+      "document_id": "video-program/friday-sermon-natural-instinct-real-you-perfect-happiness-1988-05-27",
+      "relationship": "same movement-first-generation and protected-believer framework",
+      "note": "The audio applies the framework to Sura 56."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Treat this as a composite source",
+      "instruction": "The four major Sura blocks should retrieve separately."
+    },
+    {
+      "rule": "Down-weight duplicated Sura 56 material",
+      "instruction": "A dedicated Azhar audio preserves overlapping content."
+    },
+    {
+      "rule": "Do not use stigmatizing or afterlife claims against users",
+      "instruction": "Maintain attribution and safety."
+    },
+    {
+      "rule": "Quote only canonical transcript",
+      "instruction": "Enrichment prose is retrieval metadata."
+    }
+  ],
+  "sections": [
+    {
+      "id": "behrouz15-s01",
+      "start": 0,
+      "end": 312,
+      "title": "Sura 54:23–40, Thamud, the human messenger, the camel, and Lot's people",
+      "summary": "Rashad reads the rejection of a human messenger by Thamud, the camel as a test, shared water, slaughter, punishment, and the repeated statement that the Quran is easy to remember. The reading continues with Lot's people, the saving of Lot's family, and the destruction of the rejecters.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-54-23-40",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "thamud",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "human-messenger-rejected",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "camel-test",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "lots-people",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-easy-to-learn",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "shall we follow man like us",
+        "camel test and shared water",
+        "slaughtered camel",
+        "people of Lot rejected warnings"
+      ],
+      "related_questions": [
+        "Why did Thamud reject the messenger?",
+        "What was the camel test?",
+        "How did the Lot narrative conclude?"
+      ],
+      "quran_references": [
+        "54:23-40"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Thamud",
+        "Lot"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:00.841",
+      "end_time": "00:05:12.511",
+      "source_segment_start": 0,
+      "source_segment_end": 63,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Dr. Khalifa: 23. [54:23] Thamûd ... another group of disbelievers [54:23] ... rejected the warnings. [54:24] They said, \"Shall we follow a man like us? We will then be wrong and stupid. 25. [54:25] \"Was he chosen out of all of us to receive the message? He is a flagrant liar.\" 26. [54:26] They will find out tomorrow who the flagrant liar is. 27. [54:27] We sent the camel as a test for them. Just watch them and be patient. 28. [54:28] Tell them, ... This was directed to their messenger, Saleh. 28. [54:28] Tell them that the water shall be shared between them at specific times. 29. [54:29] They consulted their leader and after receiving the message, he slaughtered the camel. [54:30] How terrible was my retribution and warnings. 31. [54:31] We sent upon them one strike, whereupon they became like harvested hay. [54:32] We have made the Quran easy to remember. Is there anyone who wishes to learn? As you know, God's signs suited every age. In that age, a camel that knew when to eat and when to drink on what day was a miracle for those people. They were dealing with camels a lot. At the time of Moses, magic was a big deal. At the time of Jesus, healing the sick was a big deal. At the time of Muhammad, the literary excellence was a big deal. They had the literary competitions. Now, the computer is a big deal, and now we have a computer miracle. Computer, a miracle that is suitable for the computer age. How can you divide the number that Abdullah did, when you take the number of verses and put the number of each verse in every Sura in the Quran, you end up with a half-mile-long number. 12,692 digits. This number of digits is a multiple of the common denominator of the Quran, the number 19. And also that number is a multiple of 19. When the Quran was revealed, the biggest number they heard of was a thousand. That was the biggest number. Well, 50,000. But then any multiples of thousand, anyway. So, how can you read this number? 12,692 digits. If you go to the mathematics department at the university, tell them \"read this number.\" \"Get out of here.\" But it's true. The number is here, conforms to the code. So, this is the computer age. You have to have a computer to know about this number. I can bring you the computer printout that Abdullah wrote in, this thick papers, just, just solving this one problem, about this one number, dividing it into 19, and it is divisible. So during the time of Thamûd, the camel was the sign. During the time of Moses, he threw down the staff and it became a serpent, and swallowed the serpent, the, the other snakes of the magicians. This is why they believed, because they realized this is no magician. They are the experts. Before we go to the people of Lot, are there any questions? Number 33, [54:33] The people of Lot rejected the warnings. [54:34] We showered them with rocks. Except Lot's family; we saved them at dawn. [54:35] That was a blessing from us; we thus reward the appreciative. [54:36] We had warned them of our strike, but they doubted the warnings. [54:37] They negotiated with him about his guests; we had blinded their eyes. They have deserved my retribution and warnings. [54:38] On the following morning, they were hit by devastating retribution. [54:39] They have incurred my retribution and warnings. [54:40] We have made the Quran easy to remember. Is there anyone who wishes to learn? So, as you see consistently, the warnings, there are enough warnings followed by the retribution. So, in other words, God is telling the people, you're neglecting your souls. You're neglecting yourselves. You're going to incur retribution.",
+      "review_status": "draft",
+      "retrieval_text": "Sura 54:23–40, Thamud, the human messenger, the camel, and Lot's people\nRashad reads the rejection of a human messenger by Thamud, the camel as a test, shared water, slaughter, punishment, and the repeated statement that the Quran is easy to remember. The reading continues with Lot's people, the saving of Lot's family, and the destruction of the rejecters.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sura-54-23-40; thamud; human-messenger-rejected; camel-test; lots-people; quran-easy-to-learn\nUser terminology: shall we follow man like us; camel test and shared water; slaughtered camel; people of Lot rejected warnings\nQuestions: Why did Thamud reject the messenger? What was the camel test? How did the Lot narrative conclude?\nQuran references: 54:23-40\nBible references: \nEntities: Thamud; Lot"
+    },
+    {
+      "id": "behrouz15-s02",
+      "start": 312,
+      "end": 840,
+      "title": "Sexual ethics, helping people avoid sin, language, and printed polemics",
+      "summary": "Questions about Lot lead Rashad to condemn homosexual behavior and argue that social acceptance does not help people avoid retribution. The discussion includes language, warnings, newspaper material, and Egyptian publication practices. It treats the Quran's condemnations as obligations to advise others rather than affirm conduct.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sexual-ethics",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "lot-and-homosexuality",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "warning-against-sin",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "social-acceptance",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "al-ahram",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "not doing homosexuals favor",
+        "talk them out of it",
+        "Al-Ahram Ramadan publication",
+        "incur retribution"
+      ],
+      "related_questions": [
+        "How did Rashad connect Lot's people with contemporary sexual ethics?",
+        "Why did he reject social acceptance as help?",
+        "What publication material entered the discussion?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Al-Ahram"
+      ],
+      "retrieval_note": "The section contains stigmatizing sexual language and must not be used to shame or target users.",
+      "retrieval_priority": "primary",
+      "start_time": "00:05:04.750",
+      "end_time": "00:14:01.122",
+      "source_segment_start": 63,
+      "source_segment_end": 169,
+      "csv_speakers": [
+        "A woman",
+        "Dr. Khalifa",
+        "Lisa",
+        "Lydia",
+        "Martha"
+      ],
+      "canonical_text": "So, in other words, God is telling the people, you're neglecting your souls. You're neglecting yourselves. You're going to incur retribution. The people of Lot were, were wicked homosexuals. You're not doing the homosexuals any favor by giving them their \"rights.\" You have to talk them out of it, somehow. The last 10 years, they have been demanding their rights until they got AIDS. Because now you can't just take San Francisco and turn it upside down like Sodom and Gomorrah. There are many good people in San Francisco. Dr. Khalifa: But this AIDS hits selectively the homosexuals. Martha: deserved my retribution and warning (unintelligible) Dr. Khalifa: Well, if you're doing everything right, why should you be warned? Martha: (unintelligible) Dr. Khalifa: Which verse is that? Martha: (unintelligible) 92. Incurred Dr. Khalifa: I like \"incurred\" better than \"deserved.\" (unintelligible). They have... Martha: (unintelligible) Dr. Khalifa: I don't know. I have to look it up. They have deserved my retribution and warnings. Martha: (unintelligible) their retribution (unintelligible) Dr. Khalifa: Well, if you're, if you're doing everything right, you don't deserve a warning. As a matter, as a matter of fact, wherever you're working, you'll get a warning only before you get disciplinary action. But if you're doing everything perfect, you don't get a warning, do you? Dr. Khalifa: Warning! You're doing everything perfect. Martha: (unintelligible) Dr. Khalifa: In the new translation, I'm using the word \"incurred\" in place of \"deserved.\" Because we learn that people incur whatever happens to them. Remember the law in the Quran, that nothing happens to you except as a consequence of your own actions? Dr. Khalifa: Nothing happens. Martha: Incur (unintelligible) retribution (unintelligible) Dr. Khalifa: Did you ever get a warning where you work Dr. Khalifa: that you, that there's something going? Martha: Yeah, (unintelligible), And I understand, I can understand the idea (unintelligible) incurring (unintelligible) Dr. Khalifa: It's okay. I don't care about linguistics as long as.... Martha: You incur (unintelligible) Dr. Khalifa: The warning is a negative thing. Yeah, warning, you're gonna be demoted next month. That's negative, you know. Unless you straighten up, you're gonna be demoted. That's, that's a negative. Any other questions? This is a, this is a, Sura is short, but it sure is full of lessons. The Arabs have been warned. I can tell you right now, we're gonna witness a terrible, terrible disaster coming up to the Arabs. Today in the mail, I just got a newspaper where they had the headlines telling them that they're not following the Quran. They received the warnings. This time they didn't put my negative. They put the real picture. They're calling me names and everything, but at least they didn't put the negative. So, they received warnings. I don't know what will happen, but the Quranic teachings point at a, a terrible disaster happening to the Arab world. Of course, they have been, they have been incurring a lot of humiliation, problems in the last 40 years. But now the warnings have been really concentrated to them. Dr. Khalifa: They have been told that every single mosque does not uphold the commandments of the Quran, not, not a single one. Dr. Khalifa: So, we'll see. A woman: (unintelligible) Dr. Khalifa: Hmm? A woman: You say, they have been told. Dr. Khalifa: Uhum. A woman: How? Dr. Khalifa: I just got a newspaper that is very popular there, and there's quite a prominent display of the warnings Dr. Khalifa: in there. It's not the first time either. Martha: (unintelligible) Dr. Khalifa: Which newspaper? Martha: (unintelligible) Dr. Khalifa: Warnings that the, that the Islam they're following has nothing to do with the Quran or the prophet Muhammad. Martha: (unintelligible) Dr. Khalifa: Yeah, yeah, Allewaa Al Islami (اللواء الإسلامي), it's called. Dr. Khalifa: But it's been in almost every newspaper over there. Martha: (unintelligible) Dr. Khalifa: Magazines, big, the most famous magazines. Martha: (unintelligible) Dr. Khalifa: The average Egyptian heard about the miracle of the Quran at least, yeah. Martha: (unintelligible) Dr. Khalifa: Yeah. Martha: (unintelligible) Dr. Khalifa: You met the wrong people. Martha: Yeah, though I didn't meet many (unintelligible) Dr. Khalifa: Yeah, it's been, it's been really intense. It's been intense. Dr. Khalifa: Publications and the warnings, and everybody heard about it, almost. Martha: It has Martha: (unintelligible) Dr. Khalifa: No, it's been in Akheru Sa'a (آخر ساعة). You know what Akheru Sa'a looks like, Rosol Yusuf. A woman: Yeah. I have the copies here. Dr. Khalifa: Al-Ahram (الأهرام), Ahram (أهرام), every day in Ramadan, they publish something, for the last three years. Martha: One of my, I don't know, my brother in-law (unintelligible) in a very (unintelligible) Martha: I remember having talked to (unintelligible) Dr. Khalifa: Right. Lisa: You know, Martha, you can also have Christians who read the Bible daily about Christ, and Christ says repeatedly in the Bible that he's the son of man. The whole message, basically, revolves around worshiping God alone There are a few distortions in the message there, but they don't get it. Lisa: It's probably the same thing. Martha: I just (unintelligible) distortions, you know. The more I find myself looking and questioning into them, the more I find them. Dr. Khalifa: But everything you told us, Martha: (unintelligible) Dr. Khalifa: everything you mentioned, Martha.... Martha: I was just recently (unintelligible) Martha: the whole thing, the whole thing is about, based on Jesus Christ. \"We have Jesus Christ. Salvation through Jesus Christ.\" It's just, you know, I always thought it was just, you know, one or two really famous ones, like none should come to Father except through the son (unintelligible) Martha: or else (unintelligible). Dr. Khalifa: Well, the epistles are now they, they, they have a Jesus conference every year. And they, they announced that only the first two epistles are correct, the rest are junk, they said. They have no confidence in them. Dr. Khalifa: So, so, but if you look at the Gospels, look at the Gospels, the majority is truth. Lydia: You get 99% of Christians who'd never hear that either. Lydia: sam as, Dr. Khalifa: Yeah. Lydia: same as the Muslims, I mean, even if they hear it, Dr. Khalifa: Exactly. Lydia: they won't hear it. Lydia: And the Christians would, you know, if they heard somebody say that, they wouldn't hear it. Dr. Khalifa: Yeah.",
+      "review_status": "draft",
+      "retrieval_text": "Sexual ethics, helping people avoid sin, language, and printed polemics\nQuestions about Lot lead Rashad to condemn homosexual behavior and argue that social acceptance does not help people avoid retribution. The discussion includes language, warnings, newspaper material, and Egyptian publication practices. It treats the Quran's condemnations as obligations to advise others rather than affirm conduct.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sexual-ethics; lot-and-homosexuality; warning-against-sin; social-acceptance; al-ahram\nUser terminology: not doing homosexuals favor; talk them out of it; Al-Ahram Ramadan publication; incur retribution\nQuestions: How did Rashad connect Lot's people with contemporary sexual ethics? Why did he reject social acceptance as help? What publication material entered the discussion?\nQuran references: \nBible references: \nEntities: Al-Ahram"
+    },
+    {
+      "id": "behrouz15-s03",
+      "start": 840,
+      "end": 1620,
+      "title": "The camel narrative, sensational reports, Salman Rushdie, the Catholic Church, and an Islamic center",
+      "summary": "The camel discussion continues through sensational or uncertain reports about the animal and the community's crime. Rashad then discusses a letter from an Islamic center attacking him while applauding the Catholic Church's response to Salman Rushdie, and cites Quran 58:15 against alliances with those who anger God. Praise of Mary as mother of God is contrasted with the God-alone testimony.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "camel-narrative",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "sensational-report",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "salman-rushdie",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "catholic-church",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "islamic-center",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mary-mother-of-god-polemic",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "sex with camel report",
+        "Islamic center applauds Catholic Church",
+        "Salman Rushdie",
+        "praise Mary mother of God",
+        "Quran 58:15"
+      ],
+      "related_questions": [
+        "What uncertain report concerning the camel was discussed?",
+        "Why did Rashad criticize the Islamic center?",
+        "How did Mary and the God-alone testimony enter the polemic?"
+      ],
+      "quran_references": [
+        "58:15",
+        "91:13"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Salman Rushdie",
+        "Catholic Church",
+        "Mary"
+      ],
+      "retrieval_note": "The camel report is sensational and unverified. Group polemics require strict attribution.",
+      "retrieval_priority": "primary",
+      "start_time": "00:13:57.200",
+      "end_time": "00:26:58.814",
+      "source_segment_start": 169,
+      "source_segment_end": 363,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Atif",
+        "Dr. Khalifa",
+        "Lydia",
+        "Mahmoud Abib",
+        "Martha",
+        "Robert"
+      ],
+      "canonical_text": "Lydia: And the Christians would, you know, if they heard somebody say that, they wouldn't hear it. Dr. Khalifa: Yeah. Dr. Khalifa: They will not recognize it. Yes. But it's in newspaper every year, the Jesus conference every year. In fact, Dr. Khalifa: these most famous statements, they declared they were fake. A woman: (unintelligible) Dr. Khalifa: Like the one just mentioned \"I'm the way. I'm the life and the way and this and that.\" \"None goes to the Father except through me.\" That's a fake one. And this is coming out of the Christian scholars. Martha: So, you (unintelligible) the Gospels, (unintelligible) majority? Dr. Khalifa: 99% is truth. For example, none of them says \"Jesus, son of God\" except John. And in John, it is only four times. John is the most recent of the four. Dr. Khalifa: But the other three don't say \"Jesus, son of God.\" Martha: And so, they are the ones who (unintelligible) the letters to Paul (unintelligible). Dr. Khalifa: Those are epistles, yes. Martha: (unintelligible) Dr. Khalifa: They ruled that they are all fake except for the first two. I forgot the names. If you read the book, Jesus, Lisa wrote, it gives a report on all of these. Dr. Khalifa: Have you read that book? Martha: (unintelligible) Dr. Khalifa: We have an office copy, you can get there. We'll put you in there and lock you in and have you read it. Dr. Khalifa: (unintelligible) Are there any questions on these? They're not to be, by the way, this Sura, this is the only Sura in the Quran, this is a certain piece of information on the side from the computer facts, this is the only Sura in the Quran where the name of God is in every verse. At least once. This Sura here, the only one in the whole Quran where every verse has the name of the word \"Allah\", at least once. Dr. Khalifa: Some of the verses have 4 of them. A man: Is that what (unintelligible) Dr. Khalifa: Say it again. A man: 57 \"God.\" 57 times. Dr. Khalifa: Really? Oh, my goodness. A man: divisible. Dr. Khalifa: Here's another piece of information. So, these are the... I mean, it's a blessing, yes. See, what is happening when there's a messenger, God is sending information to the whole group through the messenger. And the messenger himself is benefiting from this information, so it will save us a lot of trouble if we, if we obey. This includes the messenger and the people because this information is coming to everybody. They actually, like, I see this in my last trip to Canada, for example. I, I mentioned the issue of the age of 40. And I assumed that everybody accepted it. But they didn't. And I ended up wasting so much time on it. And it's a blessing if the people have the understanding of, for example, this verse. They'll be so comfortable if they have the conviction and understanding. They will not waste so much time arguing back and forth. \"Why 40?\" \"How can a person who's 35 go to Heaven who didn't do this and that?\" It's a piece of information that God sent to us and gave us the proofs and the evidence and the, a number from the Quran. So, a person who has, who's blessed God says, it's a blessing because it saves us a lot of time. It's finished. It's closed. When we say \"God said, up to 40, everybody goes to Heaven. \"And here's the number in the Quran, and here are the proofs. Here are the signs.\" Then, then, we're convinced. So, it's a blessing. So, I appreciate the fact that this verse deals specifically with the disobedience to the messenger. It's obedience in matters that have to do with God and information that's coming from God. Note that it's not personal obedience. It's obedience to God. It is the information that's coming from God. And we have, in history, the history tells us they were having a battle or something and the prophet Muhammad said \"let us camp here\" and they went to him and they said \"is this message from you or from God? If it's God, we'll do that.\" He said \"no, it's from me.\" They said \"this is a stupid idea.\" (unintelligible) out of here. So, once he said \"it's from me\", Ok, they were free to not, not, not obey. So, the obedience is really to God. This is actually written in history. Then, we'll be all dead if we obey you. Dr. Khalifa: And they did move on to some other place. A woman: (unintelligible) Dr. Khalifa: Ok. I agree with that. A woman: (unintelligible) Dr. Khalifa: Okay, we'll, we'll, just we do have time for asking general questions. \"General questions.\" (unintelligible) Dr. Khalifa: Yes. Mahmood Abib: Over here. Dr. Khalifa: Oh, yes, oh my God. Dr. Khalifa: Now, listen to this. Are you gonna get a (unintelligible). Yes. Thank you Dr. Khalifa: for reminding me. A man: Yeah, (unintelligible) Dr. Khalifa: The word, they said that Saleh, yeah, this is, it came out of their, their group and... The old timers will remember this. They said... now Saleh, he said, [91:13] ... \"This is God's camel; ... Let it be, have its own drink in some places. And then, they slaughtered the camel. So, the word, people under-aged, excuse us, but they said that they had sex with the camel. Dr. Khalifa: (unintelligible) A man: What?! A woman: (unintelligible) Mahmood Abib: (unintelligible) you're right. Dr. Khalifa: Isn't this what they said? Where do you get that? I said it didn't say, the word, they said \"the word did not mean...\" They wanted a specific word, it means \"slaughtering.\" And actually, the word that's specific enough (unintelligible). So, this is one of the examples of the conspiracies from the devil. And they actually came back and they argued with me. They said \"why did you translate this 'they slaughtered the camel?'\" So, we really are living the Quran. Dr. Khalifa: Conspiracy is from the devil. Obviously, the devil gave them that idea. Atif: Also, the people were reading from the... They were translating from the Quran in Arabic to English. They were not using this. Dr. Khalifa: I think they used both, Arabic and English or they had some other translations. Atif: And they were using it all together. Dr. Khalifa: Yes. They have, actually even got their proof from that idea. A man: (Unintelligible) Dr. Khalifa: Martha, you know Arabic. The word is \"Aqaroo.\" (7:77) عَقَرُوا۟ And they wanted the word Zabahu (ذبحو), It is slaughtering the camel. So, the word in the Quran, what they did to the camel was slaughtering. So, they said Aqaroo (عَقَرُوا۟) means \"they're having sex with the camel, not killing it.\" I mean, perverts. That's what they are. Conspiracies of the devil. This is what happens if we, if we separate ourselves from the believers, the wolf gets us. Dr. Khalifa: Ok, back to Robert. Robert: Ok. Robert: Especially the part that God may make room for you. Robert: Then, I thought, I thought that was in terms of... Dr. Khalifa: Actually, it's happening now literally (unintelligible) Dr. Khalifa: Did you find a place to sit down? A man: (unintelligible) Dr. Khalifa: Did you ask somebody to move? A man: (unintelligible) Dr. Khalifa: Did you have to ask somebody to move? A man: No. Dr. Khalifa: Great! Dr. Khalifa: Ok, then it's possible for you, if he wants, he came, he comes in and finds that there's nobody, and there's no room, ask them to make some room, you can take it literal or... Jack Roberts said. Dr. Khalifa: (unintelligible) A man: Think of it as be kind to others. Dr. Khalifa: Exactly. A man: Be kind to others. Dr. Khalifa: Exactly. Dr. Khalifa: Be considerate to others. It's a general principle. Dr. Khalifa: That is if you are nice to the people, do onto others like, A man: (unintelligible) Dr. Khalifa: and God will be kind to you, Dr. Khalifa: if you are kind to the others. A man: (unintelligible) Dr. Khalifa: If they all come and say \"(unintelligible)\" Dr. Khalifa: Just being inconsiderate. Robert: Is this why they did it? Dr. Khalifa: Yeah, they're allying themselves with the enemies of God. Actually, we have some examples of these. People who, for example, ally themselves told me that somebody that goes to the Islamic Center. In the Islamic Center, they're flagrant idol-worshipers, they don't devote their prayers to God alone. And you know them. They anger God when they do this. They will not accept, La Elaha Ella Allah. You go there and tell them La Elaha Ella Allah, they call you \"Kafir (کافر).\" (unintelligible) They're criticizing me for saying that Salman Rushdie should have his freedom of expression. And in that letter they say \"we agree to admire, we applaud the Catholic Church were making a stand against Salman Rushdie.\" Now, this is a Islamic Center liking that. They're attacking me and, and applauding the Catholic Church. Ok. Now, I say \"La Elaha Ella Allah.\" The Catholic Church says \"praise Mary, mother of God.\" So, it is not an issue of worshipping God. It's, it's politics or something. How can they applaud the Catholic Church for anything? Because the Catholic Church itself practiced the same thing that Khomeini practices. They don't like people to write about their \"Shroud of Turin\" and all the nonsense that they have. They have heavy censorship. They, they excommunicate people right and left because of their opinions. Dr. Khalifa: So, they are birds with Lydia: feather. Dr. Khalifa: birds with feather. (unintelligible) Lydia: (unintelligible) Dr. Khalifa: Right. And the Catholics... Lydia: Exactly the same thing (unintelligible) in right ear and goes right out the other. Lydia: So, you can just see how (unintelligible). Dr. Khalifa: So, (unintelligible) you can see how, how will God look at people with this, applauding people who are saying \"praise Mary, mother of God.\" (unintelligible) expression, \"Mary, mother of God.\" And condemning somebody who says \"La Elaha Ella Allah\" and worships God alone. So, anybody who allies himself with those people, God is angry with them. I mean, this is verse 15. [58:15] GOD has prepared for them a severe retribution. Miserable indeed is what they used to do. Robert: (unintelligible) there are those who ally themselves with people who have angered God. Dr. Khalifa: Uhum Robert: Ok. A woman: (unintelligible) Dr. Khalifa: We seek refuge in God from Satan. Bism Allah Arrahman Arraheem. In the name of God, Most Gracious, Most Merciful. Tonight, we're starting at Sura 54. 55, excuse me. And our teacher tonight will be Lori, right? But before we start, I want to make some corrections. In my Khutba today, I make some boo-boos sometimes. Sometimes I say things that are not, appear to be not very tactful. For example, we have, here, a great team of cake bringers or cake makers and when I asked, and Rahima was Rahima's turn, Lori's turn, I said the best. So, this, they're all, they're all great makers of cake, bringers of cake. Dr. Khalifa: And this appears not to be tactful, but I had to explain to you that each believer is the best. So, when I, when I say \"the best\", I'm referring to every single one of them. Because they're all, I hope I don't make it worse.",
+      "review_status": "draft",
+      "retrieval_text": "The camel narrative, sensational reports, Salman Rushdie, the Catholic Church, and an Islamic center\nThe camel discussion continues through sensational or uncertain reports about the animal and the community's crime. Rashad then discusses a letter from an Islamic center attacking him while applauding the Catholic Church's response to Salman Rushdie, and cites Quran 58:15 against alliances with those who anger God. Praise of Mary as mother of God is contrasted with the God-alone testimony.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: camel-narrative; sensational-report; salman-rushdie; catholic-church; islamic-center; mary-mother-of-god-polemic\nUser terminology: sex with camel report; Islamic center applauds Catholic Church; Salman Rushdie; praise Mary mother of God; Quran 58:15\nQuestions: What uncertain report concerning the camel was discussed? Why did Rashad criticize the Islamic center? How did Mary and the God-alone testimony enter the polemic?\nQuran references: 58:15; 91:13\nBible references: \nEntities: Salman Rushdie; Catholic Church; Mary"
+    },
+    {
+      "id": "behrouz15-s04",
+      "start": 1620,
+      "end": 2310,
+      "title": "Jinn bodies, dimensions, faster-than-light travel, jinn attending studies, and death as transition",
+      "summary": "Lori's questions prompt Rashad to describe humans as earthly bodies and jinn as bodies of fire or energy in another dimension. Jinn allegedly travel millions of times faster than light, see more of the universe, and receive additional evidence because of their stronger rebellion. Freed jinn of deceased people are said to attend Quran studies. Death is described as leaving a poor body for one that does not become sick or die.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "jinn-bodies",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "fire-and-energy",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "different-dimension",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "faster-than-light-jinn",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "jinn-attend-study",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "death-as-transition",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "jinn made from fire",
+        "millions times speed of light",
+        "go outer limit universe",
+        "grandparents jinn attend studies",
+        "new body does not get sick"
+      ],
+      "related_questions": [
+        "How did Rashad distinguish human and jinn bodies?",
+        "What abilities did he assign to jinn?",
+        "What did he say happens at death?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "jinn",
+        "Satan"
+      ],
+      "retrieval_note": "The jinn and physics claims are theological speculation and must not be used clinically or scientifically.",
+      "retrieval_priority": "primary",
+      "start_time": "00:27:00.000",
+      "end_time": "00:38:30.586",
+      "source_segment_start": 364,
+      "source_segment_end": 505,
+      "csv_speakers": [
+        "A woman",
+        "Dr. Khalifa",
+        "Lori"
+      ],
+      "canonical_text": "No, honest, I... Because you people are so special that every one of you is the best. And when I say that, I, I just want to pay you the highest possible compliment without infringing on the other's properties, Dr. Khalifa: that they are the best, each one of them. A woman: (unintelligible) Dr. Khalifa: Every single... A woman: (unintelligible) You don't describe your cake as the best when you brought it in? Now, how do I get out of this one? Help! Dr. Khalifa: I think I get out by saying \"okay, take it over, Lori.\" Lori: It was really a test for me, because I just wanted to know. And I never understood the jinns. It's just like, you know, I read it, and I needed to think, to think, and I knew because it was in the Quran, I had to believe it. But I didn't know what they were, and nobody could explain it to me. You know, and I got really wild explanations of what the jinns were. And it always troubled me, then I just forced myself to submit. And in the second chapter of the Quran where it says that the believers are those who believe in the unseen, and this is part of the unseen. And I knew that, IN SHAA ALLAH, at the time, that God would explain it to me. And one of the blessings of being in this mosque is having things explained to us. And as Rashad said in the Khutba today \"it's the mercy from God that He sends a messenger from among us to explain to us.\" The knowledge is here in the Quran, and all of us have read the Quran. You know, I read it once a month from front to back, and every time there's something new. And we get what we need at the time we need it. And we, in this mosque, are just developing so far. It's just amazing. You know, Rashad and Lisa and Hasan went to Canada, and there were the people believed the way we do, they're still way behind us in the knowledge, because we're here every Friday night, learning and studying. We have the input of all these believers here and learning and studying. We have the input of all these believers here. And we have a messenger that is given the knowledge that is passed on to us. Lori: And we're responsible for the information in this mosque. Dr. Khalifa: This Sura was directed to the humans and the jinns. Well, there were two kinds of creatures, creatures that sided with Satan completely, the jinns, and the creatures that did not, were, were neutral, didn't make a stand with God. That's you and me. (unintelligible) God decided to give us the body of clay, originally of the same material as the earth. We are earth now. But the jinns have a body of fire, fire. It's the difference. We are in dimensions and they are in different dimensions. Because the agreement called for Satan to remain invisible, just like God is invisible. Satan wanted to whisper to us while being invisible. Therefore, they had to be made of a different material in a different dimension. Also, the jinns, they're made from energy. It gives them the abilities to travel a lot faster than the speed of light, millions of times the speed of light. They can go to the outer limit of our universe, 26 billion light years. So, this gives them more, more to see, more evidence. Therefore, God is giving them more evidence because they are, they made a hard stand against God. So, when they go to Hell in the Hereafter, it seems like this whole, this whole life is really to nullify the excuses of the humans and the jinns, the creatures who did not make a firm stand on God's absolute authority. In other words, had God listened to the angels initially and said, okay, all those who didn't make a stand on My absolute authority are banished, are out. Go to Hell, they would have said \"oh, you didn't give us another chance. We didn't know how bad Hell is. You didn't give us warnings.\" So, this life is designed so that when the people insist, that the jinns insist on going to Hell, they will not be able to say that. They will not be able to say \"you didn't give us a chance. You didn't give us warnings. We didn't know what we were doing. \"If You told us how bad it is here in Hell, we would have made a different...\" See, God told us everything, the humans and the jinns. He told us how bad Hell is, how to get out of it, how to redeem ourselves, how to make it back to God's kingdom. So, the jinns, because they have this strong stand, they are given a chance to see more of the universe, and to convince them to redeem themselves. We were wishy-washy and this is the extent that we need to make that decision and to redeem ourselves. Dr. Khalifa: We have these different bodies. A woman: Can they read the scripture, too? Dr. Khalifa: This is it. A woman: They can read the same thing? Dr. Khalifa: Of course. A woman: Oh. Dr. Khalifa: We have, did we see, there was, there was one show on the Today's show before the elections. (unintelligible). And they had this magician, a fellow who uses jinns, I'm sure. And before the elections, two weeks before the elections, on the show, they decided to put, he said \"I'm going to put in this envelope who's going to win the elections and how many votes.\" And he sealed the, the envelope. That was two weeks before the elections. And he said \"on the election day, the next day, they will open the envelope and they will see \"that he wrote down two weeks back, two weeks ago, who won the elections and how many votes.\" Now, how will he do that? Can you guess? Dr. Khalifa: What did they do? A woman: They (unintelligible) they, they (unintelligible) Dr. Khalifa: No. A woman: So, what did they do? Dr. Khalifa: Ok. They, they don't know the future. The jinns don't know the future. They're just like us. But what they did, they waited until the newspaper came out and they said \"Reagan won and here are the number of votes.\" Then, they go in the envelope and they write. Dr. Khalifa: That's right. That's how they do it. A woman: What were (unintelligible) Dr. Khalifa: Because this is the number of votes. A woman: You know that A woman: at the end of the day... Dr. Khalifa: So, what I'm saying, what I'm saying is they go into closed, while it's closed and read it. A woman: But tell me this now Dr. Khalifa: They have x-ray vision A woman: (unintelligible) on the news, A woman: on the news, they showed pictures of Mars and this is why they said that the Russians (unintelligible) that they found two faces on Mars and they thought it was a shadow. A woman: So, they did a close-up and then they did a computer enhancement and saw teeth, A woman: their eyes and then a teeth, they understood. Dr. Khalifa: No. Dr. Khalifa: No. A woman: But I'm saying, A woman: I'm thinking about this then Dr. Khalifa: Somebody made that up. A woman: Now, wait a minute. First thing I thought about, Rashad, (unintelligible) A woman: Rashad would say, the jinns went there because they can leave (unintelligible). Dr. Khalifa: (unintelligible) A woman: Right. And they can go up there and plant these things for us to see. And they prove to us (unintelligible). Dr. Khalifa: No. A woman: And while we're busy worrying about this little thing on Mars, they sneak up, you know what I'm saying? Dr. Khalifa: They have (unintelligible). They cannot do anything without God's will. So, if God wants us to be fooled in that way, He will allow it. But they cannot slap you in the face, for example. They're sitting there and (unintelligible). First of all, each one of us has one. Those are not free yet. And then, there are the ones that have been freed of the dead people, our grandparents. They come here regularly and listen to Quranic studies. It is recorded in the (unintelligible). There's a person that says \"some jinns heard the Quran and went to their families and friends and told them \"we heard a wonderful Quran.\"\" So, this is one. We have this kind of body and the jinns that kind of body. (unintelligible). This says \"use me, O Lord, in Thy work.\" And in parentheses, especially, in an advisory capacity. Okay, anything else? There was something here about death. I want you to think of death as getting rid of this lousy body and getting a new body that does not get sick or die. That's what death is, smooth from stage to stage. And usually it happens when you're sick and tired of this one. And you want a new one. Dr. Khalifa: (unintelligible). You see, the balance in number seven can be understood by different generations, but now we understand the environmental balance, for example. Why do we have so many rabbits? What do they reproduce so much? The wilderness. You see, the foxes need food. There's an environmental balance. Foxes.... The coyotes did not need the rabbits to be invaded. There are hundreds of rabbits right here. So, I mean, this is a type of balance, well known. It was studied in school. (unintelligible) that there was some biological balance in the world. But this balance covers everything. And worrying has to do with cheating. It's a very important commandment. So, Prophet Shu‘aib was sent just for that particular commandment, not to cheat in trading. When we break this commandment, it costs us a lot. You cheat in paying your rent, collecting your rent, doing your work, or whatever, it will cost you a lot, more than you cheat. So, this is God's commandment. It's one of the very important commandments. I believe what is an ideal person in honesty and truthfulness. Okay, if there are no questions, we'll go to 37. A woman: What would that mean? Dr. Khalifa: The sky is blue now, right? A woman: Right. Dr. Khalifa: So, the Hereafter will be pink, will be rosy. It will be almost like Cherie's blouse, a little lighter. With a beautiful sky at the sunset or the sunrise.",
+      "review_status": "draft",
+      "retrieval_text": "Jinn bodies, dimensions, faster-than-light travel, jinn attending studies, and death as transition\nLori's questions prompt Rashad to describe humans as earthly bodies and jinn as bodies of fire or energy in another dimension. Jinn allegedly travel millions of times faster than light, see more of the universe, and receive additional evidence because of their stronger rebellion. Freed jinn of deceased people are said to attend Quran studies. Death is described as leaving a poor body for one that does not become sick or die.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: jinn-bodies; fire-and-energy; different-dimension; faster-than-light-jinn; jinn-attend-study; death-as-transition\nUser terminology: jinn made from fire; millions times speed of light; go outer limit universe; grandparents jinn attend studies; new body does not get sick\nQuestions: How did Rashad distinguish human and jinn bodies? What abilities did he assign to jinn? What did he say happens at death?\nQuran references: \nBible references: \nEntities: jinn; Satan"
+    },
+    {
+      "id": "behrouz15-s05",
+      "start": 2310,
+      "end": 3000,
+      "title": "Sura 55, the rosy sky, visible guilt, soul development, and two Paradises",
+      "summary": "The Sura 55 discussion treats the sky turning rosy as a physical event, then explains that humans and jinn need not be questioned because their spiritual development will be visible in their appearance. The guilty are recognized by their looks, while those reverencing God receive two Paradises with vegetation, springs, fruits, furnishings, and spouses.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-55",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "rosy-sky",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "guilty-recognized-by-looks",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "soul-development-visible",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "two-paradises",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "sky becomes rosy",
+        "not asked for sins",
+        "guilty recognized by looks",
+        "two Paradises"
+      ],
+      "related_questions": [
+        "Why would humans and jinn not need to be questioned?",
+        "How did Rashad describe visible spiritual development?",
+        "What rewards appear in Sura 55:46–60?"
+      ],
+      "quran_references": [
+        "55:37-60"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "The bodily-appearance interpretation is Rashad's theology and cannot be used to judge real people.",
+      "retrieval_priority": "primary",
+      "start_time": "00:38:27.229",
+      "end_time": "00:50:06.675",
+      "source_segment_start": 505,
+      "source_segment_end": 639,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Laurie"
+      ],
+      "canonical_text": "With a beautiful sky at the sunset or the sunrise. So, they studied (unintelligible). Psychologists, psychiatrists said that the most peaceful color is this, this color In fact, they suggested that people who are tense to get a piece of this color (unintelligible) for a couple of minutes. The sky will be like that on the Day of Judgement. By the way, Laurie mentioned substitution of the earth with a new earth, the heavens with the new heavens And we see this in the Old Testament and the New Testament as well. Most of the prophecies, in the Old Testament, are in the book of Isaiah. And if you want to put this (unintelligible) and put down Isaiah 65:22, it talks about substitution of a new heaven, a new earth. 65:22 Isaiah. Also, in 66:7. 66:7 That's the very end of the book of Isaiah. And also in the New Testament, you find it in the second book of Peter 3:13. 3, the verse number is 13. Both of them talk about substitution of a new heaven, new earth. The Quran and the Old Testament. The Old Testament and the New Testament and the Final Testament are identical in that respect. This is, this is one fact that God wants you to know. On the Day of Judgement, the color of the sky is going to be rosy. Is this something about Mars? I remember one of the cameras that went to Mars (unintelligible). You know, the reason our sky is blue is the diffraction of the light. You know, (unintelligible). And the blue happens to hit the atmosphere of the earth at such an angle that it gets deflected. (unintelligible) So, this is God's design. So, it's blue. Now if the... If the sunlight becomes a little, changes just the angle hitting the atmosphere, some other color will be deflected. Dr. Khalifa: It's a very simple matter. A man: The reason we see the sunset as being pinkish or red is because of the sun (unintelligible).... A man: .... that it's the reflection of the sun (unintelligible). Dr. Khalifa: Right. A man: And say, you know, (unintelligible) Dr. Khalifa: Also, the deflection is different, at sunrise and sunset. I'm glad you brought this up. There's a deflection and reflection and diffraction. When you go fishing and you put a stick in the water, you see the stick go like this. It's a great stick, but you can see it's called... I forget now (unintelligible), reflection, diffraction and all those terms. But the sunlight hits the earth atmosphere and this happens to it. It depends on which angle, which light (unintelligible) This is what changes the colors. So anyway, one of the things that God wants us to know is that the sky is rosy. It's very pleasant only to the believers, pleasant to the believers. Laurie: In verse 39, we're told that on the Day of Resurrection that neither jinns nor humans will be asked about their sins because it won't be necessary. We know from other verses in the Quran that everything that we've done in our lifetime has been reported by reporters that are honest and never miss anything at all. And it's recorded and we know now with the development of the videotape that that's what it's going to be like. We can see everything exactly as it was as it took place. Everything we said, all the thoughts that we had, everything we did will be recorded. And for those of us who are fortunate enough to have developed our souls to the extent that we're worthy of having our sins remitted, we'll have the power to edit our tapes, which will be so nice. And everybody else won't. And we've been told in many verses in the Quran that we don't have to even... We won't even be asked about our sins because everything will testify to them, our skin, you know, everything will... We've been reporting everything that we've done all this time. A man: (unintelligible) Dr. Khalifa: I don't know if he knows that. (unintelligible). See verse 40 says, well, 39... Verse (unintelligible) \"We won't be asked...\" Oh, 39, yeah. [55:39] Humans or the jinns will not be asked for their sins. Nobody will need to ask anybody about anything because the believers develop their souls and the disbelievers fail to develop their souls. And in Sura 17, we're told that the differences in the Hereafter, I mean... In this room, the differences in our sizes are within a few inches. But in the Hereafter, the differences will be like the difference between a mouse and the city of New York, city of Tucson, let's say. So, when you see somebody the size of the city of Tucson, he or she has developed the soul sufficiently. This is why they will be able to come closer to God. When you see somebody the size of a mouse, you don't need to ask, you know \"what did you do wrong?\" You know, that is... This is why nobody will need to ask anybody for their sins. It is so obvious. There'll be no question. Also in Sura 17, we're told that everybody will be the judge for him or herself for the sins. Because in that dimension, we will see what we really look like, how much we really develop, and how much we lack development. So, 41, [55:41] The guilty will be recognized by their looks;... They'll be undeveloped. They'll be shrunken. It's like being born without arms and legs, deformed. They will be born into the Hereafter deformed, undeveloped, aborted. But they'll be alive. They will (unintelligible). Very alive, Not well. Also, God lets us understand, as Laurie explained about 44, how they will try to sneak into Heaven and they'll find it worse than Hell. They will sneak into the Lower Heaven. They'll find it worse than Hell, because they do not stand to come any closer to God. See, God takes it completely up to us, completely. This is why God does not inflict an atom's weight of injustice. It's absolutely up to you. You can be as close to God as you want in the High Heaven, or you can be as far from God as you want. It's completely up to us. So, the conclusion is that God does not put a single person in Hell. It is the people who insist or choose, and they insist on going to Hell. The whole thing will be automatic in the Hereafter. This is why it is important to do, for example, the five Prayers a day. You don't do the five Prayers every day, you are in trouble. That's the minimum that you can do. Because those are the meals for the real person. Just imagine if you don't feed... your body is dry and you don't feed it and run for two months. What will your body look like? There is no death in the Hereafter. Just imagine not eating for two months. And the people out there in the street, they don't feed their soul for years and years and years. Can you imagine what they look like? Can you imagine what they look like? Just bring it to our dimension here and think of bodies that didn't eat for years. You see those skeletal pictures of the starving people in Central Africa, Ethiopia, Sudan? What do they look like? You can see their ribs, the shank, the skin and bones. And this happens to the soul. The soul is not fed. The five meals every day. [55:41] The guilty will be recognized by their looks;.... You can tell who is starving in Africa and who is not by looking at them. In the Hereafter, you'll be able to know who is starving and who is not. Except it will be by choice. Dr. Khalifa: So, now I'll go back to Laurie and number 46, the Higher Heaven. Laurie: Yes. Laurie: [55:46] For those who reverence the glory of their Lord, there will be two Paradises. [55:47] Which of your Lord's marvels can you deny? [55:48] With abundant vegetation. [55:49] Which of your Lord's marvels can you deny? [55:50] Two springs run freely therein. [55:51] Which of your Lord's marvels can you deny? [55:52] They will have two kinds of every fruit. [55:53] Which of your Lord's marvels can you deny? [55:54] They will relax on furnishings lined with silk, while the fruits of the two gardens are brought near. [55:55] Which of your Lord's marvels can you deny? [55:56] They will have magnificent spouses therein, never before touched by any human or jinn. [55:57] Which of your Lord's marvels can you deny? [55:58] They will look like gems and coral. [55:59] Which of your Lord's marvels can you deny? [55:60] Is the reward of righteousness anything but the best blessing? [55:61] Which of your Lord's marvels can you deny? A woman: Action. Dr. Khalifa: Verse 13, I have some very good news for you. I'm not flattering you. You are very, very special people. You've got to go to the Highest, Highest, Highest Heaven. I'm gonna explain to you why. When Abraham started the religion of Islam, according to God's instructions, he and the people around him were worshipping God alone. And as time went by, Satan sneakily and gradually added idol worship until the time of Muhammad came. Some centuries later, by the time Muhammad came, they were worshipping lots of idols,",
+      "review_status": "draft",
+      "retrieval_text": "Sura 55, the rosy sky, visible guilt, soul development, and two Paradises\nThe Sura 55 discussion treats the sky turning rosy as a physical event, then explains that humans and jinn need not be questioned because their spiritual development will be visible in their appearance. The guilty are recognized by their looks, while those reverencing God receive two Paradises with vegetation, springs, fruits, furnishings, and spouses.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sura-55; rosy-sky; guilty-recognized-by-looks; soul-development-visible; two-paradises\nUser terminology: sky becomes rosy; not asked for sins; guilty recognized by looks; two Paradises\nQuestions: Why would humans and jinn not need to be questioned? How did Rashad describe visible spiritual development? What rewards appear in Sura 55:46–60?\nQuran references: 55:37-60\nBible references: \nEntities: "
+    },
+    {
+      "id": "behrouz15-s06",
+      "start": 3000,
+      "end": 3750,
+      "title": "Abraham, Muhammad, the renewed message, persecution, and the foremost first generation",
+      "summary": "Rashad recounts recurring corruption after Abraham and Muhammad. The Kaaba became filled with idols, Muhammad preached worship of God alone and faced persecution, and a contemporary renewal now removes innovations. The foremost people of Quran 56:10 are identified with the small first generation that accepts the message before it becomes famous, while later mass followers receive lower rank.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "abraham-muhammad-renewal",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "kaaba-idols",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "persecution",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "contemporary-renewal",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "foremost-first-generation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "later-followers-lower-rank",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Abraham message corrupted",
+        "Muhammad persecuted worship God alone",
+        "renewing message now",
+        "few from later generations",
+        "you are closest to God"
+      ],
+      "related_questions": [
+        "What pattern of corruption and renewal did Rashad describe?",
+        "Why were Muhammad's followers persecuted?",
+        "Who were the foremost in his interpretation of Sura 56?"
+      ],
+      "quran_references": [
+        "56:10-14"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Abraham",
+        "Muhammad",
+        "Kaaba"
+      ],
+      "retrieval_note": "The ranking of current participants above later followers must remain attributed.",
+      "retrieval_priority": "primary",
+      "start_time": "00:49:58.579",
+      "end_time": "01:02:34.878",
+      "source_segment_start": 639,
+      "source_segment_end": 805,
+      "csv_speakers": [
+        "A woman",
+        "Dr. Khalifa",
+        "Muhteshem"
+      ],
+      "canonical_text": "Some centuries later, by the time Muhammad came, they were worshipping lots of idols, Allaat, Manaat, Al-‘Uzzah and all that. They were in the Ka‘bah that Abraham built. And you've read how many verses in Quran that say \"Abraham was never an idol worshipper.\" And yet there is the Ka‘bah that he built that was full of idols. And then, God renewed the message, sent the Quran to Muhammad, and sent Muhammad to tell the people \"the idols are bad. Worship God alone. Worship God alone.\" So, what happened? Now, Muhammad and his company were persecuted severely. They threw on them all kinds of dirt and bones. Then, they banished them when they grew. There were about 10 or 15 people for about 3 years. Then, they grew to about maybe 25 or 30 people. Then, they thought they were getting too strong. So, they banished them out of Mecca, boycotted them. Now, and those people were abused. So, those have to have a special place in Heaven. They went against the current. They were worshipping God alone in an ocean of idolatry. You can easily see that they are very special people. They will be in the highest place in the High Heaven. Because even within the High Heaven and the Low Heaven, there'll be ranks. Ok, now, 20 years ago, you see how it says here \"few from the later generations,\" the later generations after Muhammad. 1400 years after Muhammad, there is not a single mosque in the Muslim world that was worshipping God alone. That is upholding the commandment \"the mosque belongs to God. You shall not mention other names with God.\" And then God renewed the message, right now. And the message went loud and clear, ringing throughout the whole world \"worship God alone. Say \"La Elaha Ella Allah\"\", not \"La Elaha Ella Allah Muhammad Rasulallah.\" And \"devote yourself to God alone. Uphold the commandments of the Quran. Purify your worship. Your Prayer is wrong, Your fasting is wrong. Your Zakat is wrong.\" These are, these are all blessings from God that He sent to our generation. And again, we are subject to the same persecution, the same ridicule, lucky us. Yours truly cannot go into any country in the Middle East. I'll be shot within 24 hours. Just stabilize it. And if you go to the Middle East, you better disown me. I'm asking you to do that. I mean, God says, even disown God, if you are under those circumstances, as long as your heart is filled with faith. If you don't wanna get into trouble, you better tell them \"I don't know Rashad Khalifa\" on purpose. But this is... you are very, very special people. You've gone through the mill of ridicule and mocking. Today, Tasneem calls you from New York, and she was talking to some relatives of her in Chicago, who are very active in the so-called Islamic Center. And she told them \"I'm devoting myself to God alone. I only say \"La Elaha Ella Allah.\" And guess what they said? They said \"Tasneem went to the dogs.\" She's worshiping God alone. I mean, this is ridicule, right? They ridiculed her. You know, you're saying \"La Elaha Ella Allah.\" You're saying \"worship God alone.\" \"You mean, God alone. That's all you have, God?\" I mean, do you see the logic? They're ridiculing her. Mahmood was working the other night, and some so-called Muslims walked in the store. And they saw the label, it says \"Muhammad\" on Mahmood, on the label. They said \"are you a Muslim?\" He said \"yes.\" They said \"how come we don't see you at the mosque?\" He said \"how come I don't see you at the mosque?\" So, they said \"oh, you mean, you go to that mosque?\" Because the mosque that worships God alone, right? Now, Noah, if you remember in the Quran, Noah said, cause Noah was building the ark, with the flat, float, whatever you call it, water raft. And they were laughing at him. And he told them, he said \"you're laughing at me, but I'm really laughing at you.\" And that's what Mahmood was actually doing in the store. Because they said \"oh, we never believed in mathematics. A woman: Oh, God. Now, on that day, they probably had an exam in calculus, right? In university. And they had to follow the formulas and the equations, and otherwise they would flunk. So, they believe in mathematics. But if it comes to God and the Quran, and worshiping God alone, they don't believe in mathematics. So, they were looking at Mahmood, you know, ridiculing him, and of course, in his heart, he knows \"fool souls.\" Just like Noah, he was ridiculing them. Just like, I mean, he was laughing at them, just like they were laughing at him. But this makes Mahmood a very special person. This is what it means, \"multitudes from the early generations.\" We are the first generation of renewing the message. And we see it very clearly. Every one of us is in the light, and we can see it. Just go in any mosque in the world and say \"La Elaha Ella Allah,\" they will beat you up. You are saying \"worship God alone.\" So, you can see what happens after centuries, from the first generation. Abraham was a first generation. And those people, I mean, they threw Abraham in the fire, right? In those days, there was no America for Abraham to run to. They threw him in the fire, so what did God do? He turned the fire into a cool and safe place. Because God, God says \"do not think that I will abandon my messengers. God creates exits for them. So, the exit for Abraham was a cool and safe fire. And the people who were with him, they were persecuted. They had to be special people, because the easiest thing is to go along with the masses, with the crowds. You think this shook Mahmood? Not one hair. And this is why he is very special. I'm just using Mahmood as an example. Muhtesem went to a grocery store to buy some Middle Eastern stuff. And he met some Arabs there. They're just totally ignorant. They know nothing. But he says \"yes, we saw too much in Tucson. We worship God alone.\" And they almost beat him up. If he wasn't big enough and strong enough. And a Turk. He would have been beaten. So, why do you have to take all this abuse? And all this ridicule. Do you think it shook him up? Did it affect his faith? If anything, it strengthened his faith. Because he knows that those people are off. He knows they're ignorant. He knows they're not worshipping God alone. He knows they lost the Prayer. They probably never prayed. These people, do you think they prayed? Muhtesem: (unintelligible) Dr. Khalifa: Right. Right. They don't know? Dr. Khalifa: They don't know? Muhtesem: (unintelligible) Dr. Khalifa: And they don't know how many Suras are in the Quran. Muhtesem: (unintelligible) Muhtesem: (unintelligible) Dr. Khalifa: All of them. They're missing this. Dr. Khalifa: The Bashar couple. The Bashar's, they ridiculed them so many times. \"Do you really go to that mosque?\" And the answer is \"show me a place where they worship God alone that I go.\" \"We go to that place.\" I will go to that place. Any place where they worship God alone, we'll go. God is the One (unintelligible). God is the One who created you. God is the one who provides for you. God is the One who controls your health, your welfare. God is the One who controls your happiness. God is the only One who controls your success. Muhammad is dead. The saints are dead. Jesus is dead. Powerless. Even when they were alive. They had absolutely no power. So, (unintelligible). Because you are going through. This is the first generation. We are, We are so lucky. We are a first generation, just like Abraham's generation, Muhammad's generation. Muhammad's generation are ones who went through the ridicule, the abuse. And they had to leave their city, Mecca and go to Medina. The persecution they went through. Because of this, God reserves a special place for them. God is reserving a special place for us. I'm saying it by God's grace. So, I have this very good news for you. What you are, you fit here in verse 13. Multitude from the early generations. In 50 years, I assure you, in 50 years, there'll be millions of people worshipping God alone, upholding the Quran alone and praying the correct way. Millions. In just 50 years. But they will be following the crowd. They cannot be like you. They will be protected by their numbers. Right at this location, right here, there'll be thousands on this block, in this mosque. And there'll be powerful, the people jumping on the wagons. But they don't deserve the same position or the same credit as you. So, this is what it means. \"Multitude from the early generations, but only a few from the last generations.\" Because these are the far ahead, in Arabic, (56:10) ٱلسَّـٰبِقُونَ ٱلسَّـٰبِقُونَ These will be the closest to God. They are very special. And that is you. And you start collecting benefits now. And we've seen it. We have a history already. We have a track record in this mosque for 10 years. We have a track record, a perfect track record. In this life. It's guaranteed by God. You may have a pinch here and there, but it's because we make mistakes. The tests are brief for you. But if you stray off the path, you know you're gonna get the pinch. And you get the pinch and say \"thank You, God\", and come back to the path. You are very special people. You deserve a lot of congratulations. God says in Sura 35 that the angels have wings, two, three, and four. Two, three, and four, because the angels closest to God will be the most powerful, the highest in rank. You'll have more wings. This is figuratively speaking. And these (56:10) ٱلسَّـٰبِقُونَ ٱلسَّـٰبِقُونَ these far ahead people. Like (unintelligible), you'll be there. I mean, all those are angels, but still, they have ranks. And 50 years from now, the thousands of people will be in this location, IN SHAA ALLAH. They will go to the High Heaven because they worship God alone and they will pray the correct way. And they'll go to the High Heaven, but they cannot attain your rank, because you're the ones who are taking the abuse. The people who take the abuse and the ridicule have a very special position in the Bible and in the Quran. I had a little thing that I hang in there for a while that says \"congratulations to those who are persecuted.\" Well, the prophets also have been persecuted, remember that verse? I had it hanging here. And this is God telling you \"congratulations.\" (unintelligible) So, we are very, very lucky. And I'm stressing, I keep stressing this, because I cannot stress it enough.",
+      "review_status": "draft",
+      "retrieval_text": "Abraham, Muhammad, the renewed message, persecution, and the foremost first generation\nRashad recounts recurring corruption after Abraham and Muhammad. The Kaaba became filled with idols, Muhammad preached worship of God alone and faced persecution, and a contemporary renewal now removes innovations. The foremost people of Quran 56:10 are identified with the small first generation that accepts the message before it becomes famous, while later mass followers receive lower rank.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: abraham-muhammad-renewal; kaaba-idols; persecution; contemporary-renewal; foremost-first-generation; later-followers-lower-rank\nUser terminology: Abraham message corrupted; Muhammad persecuted worship God alone; renewing message now; few from later generations; you are closest to God\nQuestions: What pattern of corruption and renewal did Rashad describe? Why were Muhammad's followers persecuted? Who were the foremost in his interpretation of Sura 56?\nQuran references: 56:10-14\nBible references: \nEntities: Abraham; Muhammad; Kaaba"
+    },
+    {
+      "id": "behrouz15-s07",
+      "start": 3750,
+      "end": 4800,
+      "title": "Sura 56, those on the right, age forty, divine guidance, Joseph, and first-generation privilege",
+      "summary": "Lisa reads the end of Sura 56. Rashad interprets those on the right as people saved in a lower Heaven, including people dying before forty, and the rejecters as destined for Hell. He emphasizes that God guided Abraham and protected Joseph from sin, then applies this to differences among the premortal human crowd. The first generation of the restored message receives special credit before public success.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-56-ending",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "those-on-right",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "under-forty-salvation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "lower-heaven",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-guided-abraham",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "joseph-protected",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "first-generation-privilege",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "peace from those on right",
+        "people under age 40",
+        "God protected Joseph from sin",
+        "fortunate generation restoring message"
+      ],
+      "related_questions": [
+        "How did Rashad interpret those on the right?",
+        "What did he say about people dying before forty?",
+        "How did Abraham and Joseph illustrate divine guidance?",
+        "Why did the first generation receive greater credit?"
+      ],
+      "quran_references": [
+        "56:88-96",
+        "12:24",
+        "21:51"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Lisa",
+        "Abraham",
+        "Joseph"
+      ],
+      "retrieval_note": "Do not assign real deceased people to Heaven or Hell using this doctrine.",
+      "retrieval_priority": "primary",
+      "start_time": "01:02:27.412",
+      "end_time": "01:20:04.143",
+      "source_segment_start": 805,
+      "source_segment_end": 1033,
+      "csv_speakers": [
+        "A woman",
+        "Dr. Khalifa",
+        "Lisa"
+      ],
+      "canonical_text": "So, we are very, very lucky. And I'm stressing, I keep stressing this, because I cannot stress it enough. Just so we can thank God and be appreciative, so you know who you are. Satan will always put doubts in your mind. Always will tell you \"you're nobody.\" He hates your guts, okay? Because it's going to be deep, deep in Hell. You hear that, Iman? You're asking about Satan and the Hereafter? He will not be in Heaven, no. He will not even come close. He and his troops will be way deep down in the lowest pit of Hell. And he'll be beating them and they'll be beating him. They're gonna spend eternity doing that. So, he will try to tell you \"you're a nobody\", but you speak back to him. You tell him \"I believe God.\" And I believe that I am in this group, multitudes in the early generations. Because this is a first generation. I mean, I couldn't believe it myself. For a long time just \"it couldn't be just us here worshipping God alone. There must be millions in the world.\" But I discovered that I'm naive, that the human being is really bad. I was talking to my nephew, Sharif, in Egypt. He said \"I'm the only one in Egypt.\" He really is a believer. You can tell the people who believe, because they are in the light. They understand. And he's the only one that I know in Egypt, (unintelligible). He said \"really, I believe.\" IN SHAA ALLAH, he will come for the conference. He's only 20. He was born two weeks before Beth. And he's the only believer in all of Egypt. I mean, I was really naive. I mean, I said \"there must be millions in Egypt to worship God alone.\" Nope. Wrong. So, this is why I'm speaking so strongly. And I'm telling you \"you're very special.\" And when Satan tells you \"you're not\", you tell him to shut up. You're very special This is the verse that talks about you. Congratulations. Dr. Khalifa: Yes. Dr. Sabahi: (unintelligible). Dr. Khalifa: At this time Dr. Khalifa: At this time, right now. Dr. Khalifa: refers Muhammad's time, Ibrahim's time, and this time, our time. We are a first generation. Right now. Because we are the fortunate generation that is renewing God's message, restoring it, cleaning out all the junk and innovations. When you go back to Iran you'll be, which town will you be in? Tehran? I think you'll be the only one in Tehran who's praying the correct way, you and (unintelligible), the kids. You'll be the one, and they'll laugh at you. When you tell them, and they \"Sharooz\" \"I just say the name of God alone.\" \"So, you mean, you don't mention Muhammad, or Ahlul Beyt or Ali?\" See, this is what we cleaned out. We cleaned out all the creatures. (unintelligible) And this is restoring the religion. You are a first generation. Dr. Khalifa: Does this make you special or not? When you're the only one in Tehran who's praying the correct way. Lisa: How beautiful the Highest Heaven is. We know, of course, that these are all allegorical descriptions that God uses allegory because there is no way that we in our present state can even begin to understand really what is in store for us. But we know from the allegory of the Highest Heaven that it is truly bliss. And that it is wonderful beyond our dreams. God says that anything we wish for, anything those who are in the Highest Heaven, IN SHAA ALLAH, we'll be there, Anything they wish for and even more. So, God's grace is even greater than anything we can comprehend or desire, wish for. And then those on the right, those in the Lower Heaven, for them also, it's incredibly beautiful. And it's peace. [56:91] Peace to you from those on the right. An incredible, incredible triumph to be among those on the right. [56:92]. But if he is one of the rejecters, the strayers, [56:93] then the retribution [56:94] and burning hell. We know, again, that we can't comprehend really the awfulness of hell. We have a slight idea because we are as far from God as anything in the universe at this point. And we know how hellish this world is and how awful it is, particularly when you step out of God's kingdom. We're incredibly blessed to be in God's kingdom, IN SHAA ALLAH. But as soon as you step out, you know what an incredible hell that is. And that is nothing compared to the ultimate hell. [56:95] This is the inevitable truth. [56:96] You shall glorify the name of your Lord, the Great. Mã Shã Allãh Are there any comments or questions on these last verses? Dr. Khalifa: 88 and 89 refer to you, you special people. And I say this with thanking God and God says \"speak up of God's blessings on you.\" We're very rare, fortunate, and blessed group of people. And 90 refers to all the people who died before the age of 40. It says, as, as... [56:90] and if he belongs with those from the right - Those people will be very happy. Because they will go to the Lower Heaven. God knew that they deserved... they do not deserve to go to hell. They deserve to go to the Lower Heaven because of circumstances that only He knows. That's why He took them at (unintelligible) The children that came here to perform a function. And they were assigned souls that God knows deserve to go to the Lower Heaven. Well, they lived until the age of 39 or just before 40. And then God takes them at that time. Because had they lived, they would have been swept by circumstances. Which brings me to a point that I will be talking about, IN SHAA ALLAH, in the Khutba two weeks from today, IN SHAA ALLAH. Where very quickly, Ibrahim, God says \"we granted Abraham his understanding, for we were fully aware of him.\" Ok. This verse tells you it was not Abraham's intelligence that led him to discover God. God granted him the understanding because God knew that Abraham deserved to go to the High Heaven. And the other verse that I wish to share with you is Joseph. When Joseph almost fell for the governor's wife. And then God said \"if it were not that he saw a sign from his Lord.\" Then, God says \"we thus diverted sin from him. So, was it Joseph who was so great that he didn't fall in sin? Or, was it God that protected him from sin? It was God that protected him from sin. By the way, the verse goes on and says, (12:24) إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُخْلَصِينَ That he was one of our devoted servants. Because he was one of God's devoted servants, God diverted him, protected him from sin. So, what I'm saying is that when we agreed with Satan billions of years ago, some of us were swept in the crowd. And God knew that. This is what God meant when he said to the angels. The angels said \"put them all in hell.\" And God said \"I know what you do not know.\" So, God knows that we were swept in the crowd. Some of us were swept in the crowd and do not deserve to go to hell. This is why God granted Abraham his understanding. God granted you the fortune to come across the true message, worshipping Him alone and upholding His word alone. It's not because you're clever or because I'm smart. It's because, apparently, God, not apparently, obviously God knew that some of us were swept in the crowd somehow. And we agreed with Satan. And we deserve the chance to come here to be redeemed. So, the people who are taken, like Martin Luther King, taken only a few months before his 40th birthday, Malcolm X, being taken two months before his birthday, his 40th birthday, and all the other signs that we have seen. In fact, if you look at verse 41, where you're holding the book now, you see in 41, it's the beginning of hell. So, those of you who make the decision, we look in the previous Sura, verse 41. Well, now we know, we know from this circle here that these numbers of verses are designed, divinely designed, for a reason. And we have all these mathematical proofs. Once you get into the age of 41, you'd better be worshipping God alone. Just a second. I don't wanna forget what I'm saying. So, had God left Martin Luther King to live beyond the age of 40, he would have been swept. That's the word that brought me to the next Khutba two weeks from now. He would have been swept by his environment and his circumstances into maybe mentioning Jesus and things like that. (unintelligible) He was a pastor in a church, I think. But in his heart, and even vocally, he never said anything about Jesus. Not that I heard of. In his vast amount of recordings, he always talked about God. So, this is why God chose to take him at that time to protect him from going beyond to this number 41, and being swept by his environment and his circumstances into Christianity. So, he will be like we see here on verse 90. [56:90] If he belongs with those on the right - [56:91] Then, peace to you from those on the right. We can be sure that God's justice put these people exactly in the right place. He deserves to be in the Lower Heaven. When, when Satan made that blasphemy billions of years ago, there were degrees of convictions among us. To go from the jinns who completely agreed with Satan, to the majority of humans who were wishy-washy. They didn't... to some who were swept in the crowd. And hopefully, that's us. So, now Cathy has a question. You're talking about a very special group of people who will be the closest to God on the Day of Judgement. They are very special people. And this will be like when the Prophet Muhammad started to preach. Well, let's go to Abraham. Abraham started Islam. And then there were people who were with him when the others were throwing him in the fire. And then by the time the Prophet Muhammad came, they became idol worshippers. Then, the message was renewed by revealing the Quran through the Prophet Muhammad. And he was secretly preaching. And there were people with him. Those are very special people. This is the first generation. And then Muhammad became victorious and he opened Mecca. And all the people in Mecca became believers. They jumped in the wagon. But they do not deserve the same credit as the people who were with him when he was being persecuted and having stones thrown at him. And he was cursed and called names and persecuted. Does this make sense? So, that was a first generation at the time of Ibrahim, at the time of Muhammad. And then ten years ago, Islam was totally corrupted. There is not a single mosque in the world that upholds the commandment to mention only the name of God in the mosque, in the worship practices and so on. And then God renewed the message with this miracle. So, now we are a first generation. And the people who are in this movement, while it is being persecuted and the names and the insults and so on, are very special people. Now, ten years from now, we'll probably have millions. Maybe twenty years, fifty years from now. And everybody will jump in the wagon, but they do not deserve the same credit as you do. So, these very special people will be multiplied from this generation. And after that, when it is famous and successful and it is the thing to do, they don't deserve the same credit. They will not be in the same rank. This is what we did last week when we were absent. We don't even know if he was 40 or not. We didn't have birth certificates then. By just guessing that the prophet was 40, when he was selected and given the Quran. But it has nothing to do with that. It is in the Quran, Sura 46, verse 50, it says... It's what it says there. It's based on that. Dr. Khalifa: Any other questions? Lisa: [57:4] .... He is with you wherever you may be. God is Seer of everything you do. He truly is in absolute control of the universe. This verse, to me, expresses it very, very clearly and very, very beautifully. Verse 5, [57:5] To Him belongs the dominion of the heavens and the earth. God is in full control of all things. These verses again and again are saying absolutely what we've been saying that God does everything. And yet it is so hard for us to accept that. You can hear it and you can say \"yes\", but then you get sidetracked. \"Oh, if I don't take my vitamins I'm gonna get sick.\" You aren't gonna get sick unless you deserve to get sick. That doesn't mean you shouldn't take your vitamins. Because God, you know, God has given us the vitamins. He has given us the medicines. He has given... But we have to remember that God is the One who is controlling everything, who is doing everything. God controls our bosses. God controls our neighbors. God controls our spouses. He controls not only the physical things. He controls the emotions, the hearts and the minds of those around us and of us. As Rashad pointed out so beautifully, God bestowed on Abraham his righteousness, his understanding. Well, God says very clearly that He bestows on all of us our righteousness. It's not us. It's not ours. We... God gives it to us. He controls our hearts and our minds. If we make that one choice. The only thing we really control is that one choice of whether we worship God alone or not. Once we've made that decision, He goes from there. He takes it from there. And there are a lot of verses that talk about God misguiding those who disbelieve. Well, they make..... A woman: Yeah. Any questions about the Lower Heaven? How? 41. Hell goes right after 41. Wait, what? It's 41. My God. Yeah. Dr. Khalifa: This has a meaning. Dr. Khalifa: Yep. 41 means hell. If you don't make that decision. Dr. Khalifa: If you don't make that decision by that time. A woman: Okay. A woman: That's clear. I mean, wait a minute. Dr. Khalifa: 41 and higher. We didn't make the decision. A woman: Subhan Allah. Dr. Khalifa: Remember the circle? This circle here means every verse in the Quran is numbered according to a system, God's system. Dr. Khalifa: أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ We seek refuge in God from Satan, who was the basic cause for us being here in this world. And, in fact, may God make it backfire on Satan and give us happiness in this world and forever through believing in God alone. Bism Allah Arrahman Arraheem In the name of God, Most Gracious, Most Merciful.",
+      "review_status": "draft",
+      "retrieval_text": "Sura 56, those on the right, age forty, divine guidance, Joseph, and first-generation privilege\nLisa reads the end of Sura 56. Rashad interprets those on the right as people saved in a lower Heaven, including people dying before forty, and the rejecters as destined for Hell. He emphasizes that God guided Abraham and protected Joseph from sin, then applies this to differences among the premortal human crowd. The first generation of the restored message receives special credit before public success.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sura-56-ending; those-on-right; under-forty-salvation; lower-heaven; god-guided-abraham; joseph-protected; first-generation-privilege\nUser terminology: peace from those on right; people under age 40; God protected Joseph from sin; fortunate generation restoring message\nQuestions: How did Rashad interpret those on the right? What did he say about people dying before forty? How did Abraham and Joseph illustrate divine guidance? Why did the first generation receive greater credit?\nQuran references: 56:88-96; 12:24; 21:51\nBible references: \nEntities: Lisa; Abraham; Joseph"
+    },
+    {
+      "id": "behrouz15-s08",
+      "start": 4800,
+      "end": 5532,
+      "title": "Appended Sura 51 study: Earth as spacecraft, recycling systems, language, Ishmael and Isaac, and Genesis",
+      "summary": "A new study begins with Douglas nominally teaching Sura 51. Rashad compares Earth with a spacecraft carrying billions of astronauts and praises the recycling of water, carbon dioxide, food, and oxygen. He discusses the danger of pure oxygen through an astronaut fire, language as a divine miracle, and the Abrahamic sacrifice. He argues that Ishmael, not Isaac, was the only son at the time and calls the Isaac identification a racial alteration of Genesis.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-51",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "earth-as-spacecraft",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "water-cycle",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "oxygen-carbon-cycle",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "astronaut-fire",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "language-miracle",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "ishmael-versus-isaac",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "genesis-alteration",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "earth spaceship five billion astronauts",
+        "plants recycle carbon dioxide",
+        "100 percent oxygen killed astronauts",
+        "only son Ishmael not Isaac",
+        "Genesis racial distortion"
+      ],
+      "related_questions": [
+        "How did Rashad compare Earth with a spacecraft?",
+        "Which recycling systems did he emphasize?",
+        "What lesson came from the astronaut fire?",
+        "Why did he identify Ishmael as the intended son?"
+      ],
+      "quran_references": [],
+      "bible_references": [
+        "Genesis 22"
+      ],
+      "entities": [
+        "Douglas Brown",
+        "Abraham",
+        "Ishmael",
+        "Isaac",
+        "Jews",
+        "Christians"
+      ],
+      "retrieval_note": "Scientific details and claims of textual alteration require independent verification.",
+      "retrieval_priority": "primary",
+      "start_time": "01:19:59.680",
+      "end_time": "01:32:08.259",
+      "source_segment_start": 1033,
+      "source_segment_end": 1176,
+      "csv_speakers": [
+        "A woman",
+        "Catherine",
+        "Douglas",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Bism Allah Arrahman Arraheem In the name of God, Most Gracious, Most Merciful. We are gonna start with Sura 51, page 366. And our teacher tonight, I forgot his name. I don't know if you remember. What's your name, sir? Douglas: Rashid Dr. Khalifa: What's your name? Douglas: Rashid. Dr. Khalifa: I'm serious. We actually forgot. Dr. Khalifa: Rashid? Douglas: Douglas. Douglas: It's Douglas. Douglas Brown. Dr. Khalifa: Douglas Brown? Douglas: Yes. Dr. Khalifa: You're sure? Douglas: I'm sure of that. Douglas: You'll find out later when I... Dr. Khalifa: He's a very nervous teacher today. The Sura. You know, a believer appreciates God differently from people who are unaware or who are not strong believers. You can see here that the title of the Sura is \"the Winds.\" And we learn from the first few verses that the winds, their main job is to carry clouds and bring bounties. We need that water. So, in order to appreciate God and these simple words, just imagine yourself sending 10 astronauts to space. You sending 10 astronauts to space. And you tell them \"Okay, you're gonna be out there for three years. And when you need water, I made an invention in the spaceship so there'll be these clouds on top of you and they will give you water.\" You're sending them into space. And you devise that system that will give them water, clean water. When they pollute the water they have on the spaceship, it's gonna... you know, one of the... number one purification processes is distillation. So, when they pollute, their own water is gonna evaporate. It's gonna be pure water and come down again. So, you tell them that, so, to assure them that they will have enough water supply for three years or five years, ten years, whatever you're sending them. Just imagine that. See, God sent this spaceship with five billion astronauts. You and me, we are astronauts. That's right. And God gave us this system. God devised this system where the water evaporates and then comes down by... the wind drive the clouds here. How far are we from the ocean? We're far from the ocean. But these clouds came to us from the ocean, by the wind. It's a traveling system. And that sends down pure water. You appreciate God if you think. But if you imagine sending ten astronauts in space and you tell them \"I'm going to give the exact percentage of oxygen for you to breathe.\" Now, in 1967, we were technologically advanced people. In 1967. But we put three astronauts in a capsule in an atmosphere of 100% oxygen. Pure oxygen, right? To breathe. And all it took was a spark. And the three astronauts were combusted. Ed White, Gus Grissom, and Roger Chaffee. They're not with us today because of that. We were really advanced in science. But when you put anything in pure oxygen and light a match, everything would be combusted. Everything. Everything organic, that is. In fact, this is for chemists. If any chemist is here, this is the last thing you do to find out if there is, for example, radioactivity in the ashes of anything. You put it in a closed thing there. You fill it with 100% oxygen. And you create a spark. And everything will be combusted into ashes. This is what happened to the three astronauts. And this is why God didn't give us 100% oxygen. We have 20% oxygen. The rest is nitrogen. And this is what they do now when they send astronauts into space. But we learned the hard way. So, despite our... I mean, we were sending people to the moon. And we couldn't give them the correct atmosphere. So, these few verses here will make us appreciate God if we think of sending our own astronauts into space. Of course, you know how the oxygen is generated for us. We breathe it and we get out carbon dioxide, which is not good for breathing. So, God designed the trees so they will take carbon dioxide and turn it into apples and give us the oxygen. They take the carbon and give us back the oxygen. How do you like that for a system? Can you do that for your astronauts? You tell your 10 astronauts, you're gonna be out there for 10 years and you're gonna breathe out carbon dioxide. So, I'm gonna give you a couple of... I invented these plants or something that will take your carbon dioxide, turn it into food for you, and you'll get the oxygen back. That's what God's created. And you think it's all evolution, right? Are there any questions on these, the winds and the rains and bounties? We're talking only about the 5 billion human beings. Don't forget the 10 decillion ants and about 200 billion mice. Ihsan. There may be a few of them in this mosque running around. The name scares her this way. OK, back to Douglas. Yes, Cathy. Cathy: (unintelligible) and we do it. 3-year-old children, 2-year-old children. I mean, language is just amazing. (unintelligible) Dr. Khalifa: This is mentioned specifically as a great miracle in the Koran, the language. Just go to Europe. Cathy: Well, We don't doubt it. Dr. Khalifa: Where... Dr. Khalifa: Within a radius of 50 miles, not 50, 20 miles in Europe, you can come across 15 languages. Czechoslovakia, Hungary, Austria. Within Czechoslovakia, there are several languages. And it's just amazing how these people understand each other, but these people don't understand them. They understand each other. It's a miracle. It's still amazing. Douglas: Any questions or comments? Dr. Khalifa: There you said it, his only son. Isaac was never the only son. You said the truth right there. This is how they justify it. It didn't say \"take your only legitimate son.\" It said \"take your only son.\" Even if he's illegitimate. But he was not illegitimate. Did it say \"you take your only son or your only legitimate son?\" No. Somebody.... of course, the Jews and the Christians believe it was Isaac. But that's a racial, that's a racial distortion. They said \"take your only son, Isaac,....\" So, they made a boo-boo there, because Isaac was never the only son. So when you tell them, when you confront them with that \"only son\" business, because Ishmael was 14 years older than Isaac. They tell you \"oh, because Isaac was the only legitimate son. I said \"OK, let's look at the Bible.\" And the Bible consistently calls Ishmael Abraham's son until Ibrahim dies. And then they say \"when Abraham died, his two sons, Ishmael and Isaac, buried him.\" So there's no way out. No. No, he didn't. No, you read it in some novel. From who? No, no, it's not in Genesis, no. OK, Abraham had, I mean, Sarah was sterile. She didn't have anything but Isaac. There are lots of novels that he said, we married this and that. Many other children are irrelevant, because the Quran and the Bible mention only Ishmael and Isaac. Nobody else. In Genesis 22, in Genesis 22, around 25, it says \"when Abraham died, his two sons, Ishmael and Isaac, buried him.\" So, Ishmael was Abraham's son. He was the only son of Abraham for 14 years. Isaac was never the only son. Isaac is the father of the Jews. Ishmael is the father of the Arabs. Dr. Khalifa: The Jews wrote about.... I mean, played around with the Genesis, the Torah. A woman: So, the idea is that they just wanted a miracle to be a miracle to Isaac? Dr. Khalifa: Right, they didn't want anything Ishmael to have anything to do with anything. So, they made a big mistake. It's just like.... So, they made a big mistake. It's just like the two verses in the Quran. Exactly, they made a glaring error. And they tried to correct it in the newer editions of the Bible. They say \"take your only one.\" Trying very hard, but they make it worse. The only one what? Donkey or....? A woman: You're talking about (unintelligible). Dr. Khalifa: They don't learn, do they? They haven't learned a thing. People bring their destruction on themselves. We know that Sodom and Gomorrah, they were all corrupted beyond reform. And this is the one thing that.... and they brought it on themselves. So, it is God's law that when they do this, they are destroyed. Nowadays, when homosexuals are spread in the society, you cannot just destroy the city of Tucson because there are a thousand homosexuals in it. But you can send a virus to pick them out. This is what's happening now. Their parents brought it on them. Right, they brought it on themselves, their family. Their family take the children out of God's protection. This is what happens.",
+      "review_status": "draft",
+      "retrieval_text": "Appended Sura 51 study: Earth as spacecraft, recycling systems, language, Ishmael and Isaac, and Genesis\nA new study begins with Douglas nominally teaching Sura 51. Rashad compares Earth with a spacecraft carrying billions of astronauts and praises the recycling of water, carbon dioxide, food, and oxygen. He discusses the danger of pure oxygen through an astronaut fire, language as a divine miracle, and the Abrahamic sacrifice. He argues that Ishmael, not Isaac, was the only son at the time and calls the Isaac identification a racial alteration of Genesis.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: sura-51; earth-as-spacecraft; water-cycle; oxygen-carbon-cycle; astronaut-fire; language-miracle; ishmael-versus-isaac; genesis-alteration\nUser terminology: earth spaceship five billion astronauts; plants recycle carbon dioxide; 100 percent oxygen killed astronauts; only son Ishmael not Isaac; Genesis racial distortion\nQuestions: How did Rashad compare Earth with a spacecraft? Which recycling systems did he emphasize? What lesson came from the astronaut fire? Why did he identify Ishmael as the intended son?\nQuran references: \nBible references: Genesis 22\nEntities: Douglas Brown; Abraham; Ishmael; Isaac; Jews; Christians"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "abraham-muhammad-renewal",
+      "preferred_label": "Abraham Muhammad Renewal",
+      "aliases": [
+        "Abraham message corrupted",
+        "Muhammad persecuted worship God alone",
+        "few from later generations",
+        "renewing message now",
+        "you are closest to God"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s06"
+      ]
+    },
+    {
+      "id": "al-ahram",
+      "preferred_label": "Al Ahram",
+      "aliases": [
+        "Al-Ahram Ramadan publication",
+        "incur retribution",
+        "not doing homosexuals favor",
+        "talk them out of it"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s02"
+      ]
+    },
+    {
+      "id": "astronaut-fire",
+      "preferred_label": "Astronaut Fire",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    },
+    {
+      "id": "camel-narrative",
+      "preferred_label": "Camel Narrative",
+      "aliases": [
+        "Islamic center applauds Catholic Church",
+        "Quran 58:15",
+        "Salman Rushdie",
+        "praise Mary mother of God",
+        "sex with camel report"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s03"
+      ]
+    },
+    {
+      "id": "camel-test",
+      "preferred_label": "Camel Test",
+      "aliases": [
+        "camel test and shared water",
+        "people of Lot rejected warnings",
+        "shall we follow man like us",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s01"
+      ]
+    },
+    {
+      "id": "catholic-church",
+      "preferred_label": "Catholic Church",
+      "aliases": [
+        "Islamic center applauds Catholic Church",
+        "Quran 58:15",
+        "Salman Rushdie",
+        "praise Mary mother of God",
+        "sex with camel report"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s03"
+      ]
+    },
+    {
+      "id": "contemporary-renewal",
+      "preferred_label": "Contemporary Renewal",
+      "aliases": [
+        "Abraham message corrupted",
+        "Muhammad persecuted worship God alone",
+        "few from later generations",
+        "renewing message now",
+        "you are closest to God"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s06"
+      ]
+    },
+    {
+      "id": "death-as-transition",
+      "preferred_label": "Death As Transition",
+      "aliases": [
+        "go outer limit universe",
+        "grandparents jinn attend studies",
+        "jinn made from fire",
+        "millions times speed of light",
+        "new body does not get sick"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s04"
+      ]
+    },
+    {
+      "id": "different-dimension",
+      "preferred_label": "Different Dimension",
+      "aliases": [
+        "go outer limit universe",
+        "grandparents jinn attend studies",
+        "jinn made from fire",
+        "millions times speed of light",
+        "new body does not get sick"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s04"
+      ]
+    },
+    {
+      "id": "earth-as-spacecraft",
+      "preferred_label": "Earth As Spacecraft",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    },
+    {
+      "id": "faster-than-light-jinn",
+      "preferred_label": "Faster Than Light Jinn",
+      "aliases": [
+        "go outer limit universe",
+        "grandparents jinn attend studies",
+        "jinn made from fire",
+        "millions times speed of light",
+        "new body does not get sick"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s04"
+      ]
+    },
+    {
+      "id": "fire-and-energy",
+      "preferred_label": "Fire And Energy",
+      "aliases": [
+        "go outer limit universe",
+        "grandparents jinn attend studies",
+        "jinn made from fire",
+        "millions times speed of light",
+        "new body does not get sick"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s04"
+      ]
+    },
+    {
+      "id": "first-generation-privilege",
+      "preferred_label": "First Generation Privilege",
+      "aliases": [
+        "God protected Joseph from sin",
+        "fortunate generation restoring message",
+        "peace from those on right",
+        "people under age 40"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s07"
+      ]
+    },
+    {
+      "id": "foremost-first-generation",
+      "preferred_label": "Foremost First Generation",
+      "aliases": [
+        "Abraham message corrupted",
+        "Muhammad persecuted worship God alone",
+        "few from later generations",
+        "renewing message now",
+        "you are closest to God"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s06"
+      ]
+    },
+    {
+      "id": "genesis-alteration",
+      "preferred_label": "Genesis Alteration",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    },
+    {
+      "id": "god-guided-abraham",
+      "preferred_label": "God Guided Abraham",
+      "aliases": [
+        "God protected Joseph from sin",
+        "fortunate generation restoring message",
+        "peace from those on right",
+        "people under age 40"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s07"
+      ]
+    },
+    {
+      "id": "guilty-recognized-by-looks",
+      "preferred_label": "Guilty Recognized By Looks",
+      "aliases": [
+        "guilty recognized by looks",
+        "not asked for sins",
+        "sky becomes rosy",
+        "two Paradises"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s05"
+      ]
+    },
+    {
+      "id": "human-messenger-rejected",
+      "preferred_label": "Human Messenger Rejected",
+      "aliases": [
+        "camel test and shared water",
+        "people of Lot rejected warnings",
+        "shall we follow man like us",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s01"
+      ]
+    },
+    {
+      "id": "ishmael-versus-isaac",
+      "preferred_label": "Ishmael Versus Isaac",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    },
+    {
+      "id": "islamic-center",
+      "preferred_label": "Islamic Center",
+      "aliases": [
+        "Islamic center applauds Catholic Church",
+        "Quran 58:15",
+        "Salman Rushdie",
+        "praise Mary mother of God",
+        "sex with camel report"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s03"
+      ]
+    },
+    {
+      "id": "jinn-attend-study",
+      "preferred_label": "Jinn Attend Study",
+      "aliases": [
+        "go outer limit universe",
+        "grandparents jinn attend studies",
+        "jinn made from fire",
+        "millions times speed of light",
+        "new body does not get sick"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s04"
+      ]
+    },
+    {
+      "id": "jinn-bodies",
+      "preferred_label": "Jinn Bodies",
+      "aliases": [
+        "go outer limit universe",
+        "grandparents jinn attend studies",
+        "jinn made from fire",
+        "millions times speed of light",
+        "new body does not get sick"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s04"
+      ]
+    },
+    {
+      "id": "joseph-protected",
+      "preferred_label": "Joseph Protected",
+      "aliases": [
+        "God protected Joseph from sin",
+        "fortunate generation restoring message",
+        "peace from those on right",
+        "people under age 40"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s07"
+      ]
+    },
+    {
+      "id": "kaaba-idols",
+      "preferred_label": "Kaaba Idols",
+      "aliases": [
+        "Abraham message corrupted",
+        "Muhammad persecuted worship God alone",
+        "few from later generations",
+        "renewing message now",
+        "you are closest to God"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s06"
+      ]
+    },
+    {
+      "id": "language-miracle",
+      "preferred_label": "Language Miracle",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    },
+    {
+      "id": "later-followers-lower-rank",
+      "preferred_label": "Later Followers Lower Rank",
+      "aliases": [
+        "Abraham message corrupted",
+        "Muhammad persecuted worship God alone",
+        "few from later generations",
+        "renewing message now",
+        "you are closest to God"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s06"
+      ]
+    },
+    {
+      "id": "lot-and-homosexuality",
+      "preferred_label": "Lot And Homosexuality",
+      "aliases": [
+        "Al-Ahram Ramadan publication",
+        "incur retribution",
+        "not doing homosexuals favor",
+        "talk them out of it"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s02"
+      ]
+    },
+    {
+      "id": "lots-people",
+      "preferred_label": "Lots People",
+      "aliases": [
+        "camel test and shared water",
+        "people of Lot rejected warnings",
+        "shall we follow man like us",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s01"
+      ]
+    },
+    {
+      "id": "lower-heaven",
+      "preferred_label": "Lower Heaven",
+      "aliases": [
+        "God protected Joseph from sin",
+        "fortunate generation restoring message",
+        "peace from those on right",
+        "people under age 40"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s07"
+      ]
+    },
+    {
+      "id": "mary-mother-of-god-polemic",
+      "preferred_label": "Mary Mother Of God Polemic",
+      "aliases": [
+        "Islamic center applauds Catholic Church",
+        "Quran 58:15",
+        "Salman Rushdie",
+        "praise Mary mother of God",
+        "sex with camel report"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s03"
+      ]
+    },
+    {
+      "id": "oxygen-carbon-cycle",
+      "preferred_label": "Oxygen Carbon Cycle",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    },
+    {
+      "id": "persecution",
+      "preferred_label": "Persecution",
+      "aliases": [
+        "Abraham message corrupted",
+        "Muhammad persecuted worship God alone",
+        "few from later generations",
+        "renewing message now",
+        "you are closest to God"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s06"
+      ]
+    },
+    {
+      "id": "quran-easy-to-learn",
+      "preferred_label": "Quran Easy To Learn",
+      "aliases": [
+        "camel test and shared water",
+        "people of Lot rejected warnings",
+        "shall we follow man like us",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s01"
+      ]
+    },
+    {
+      "id": "rosy-sky",
+      "preferred_label": "Rosy Sky",
+      "aliases": [
+        "guilty recognized by looks",
+        "not asked for sins",
+        "sky becomes rosy",
+        "two Paradises"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s05"
+      ]
+    },
+    {
+      "id": "salman-rushdie",
+      "preferred_label": "Salman Rushdie",
+      "aliases": [
+        "Islamic center applauds Catholic Church",
+        "Quran 58:15",
+        "Salman Rushdie",
+        "praise Mary mother of God",
+        "sex with camel report"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s03"
+      ]
+    },
+    {
+      "id": "sensational-report",
+      "preferred_label": "Sensational Report",
+      "aliases": [
+        "Islamic center applauds Catholic Church",
+        "Quran 58:15",
+        "Salman Rushdie",
+        "praise Mary mother of God",
+        "sex with camel report"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s03"
+      ]
+    },
+    {
+      "id": "sexual-ethics",
+      "preferred_label": "Sexual Ethics",
+      "aliases": [
+        "Al-Ahram Ramadan publication",
+        "incur retribution",
+        "not doing homosexuals favor",
+        "talk them out of it"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s02"
+      ]
+    },
+    {
+      "id": "social-acceptance",
+      "preferred_label": "Social Acceptance",
+      "aliases": [
+        "Al-Ahram Ramadan publication",
+        "incur retribution",
+        "not doing homosexuals favor",
+        "talk them out of it"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s02"
+      ]
+    },
+    {
+      "id": "soul-development-visible",
+      "preferred_label": "Soul Development Visible",
+      "aliases": [
+        "guilty recognized by looks",
+        "not asked for sins",
+        "sky becomes rosy",
+        "two Paradises"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s05"
+      ]
+    },
+    {
+      "id": "sura-51",
+      "preferred_label": "Sura 51",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    },
+    {
+      "id": "sura-54-23-40",
+      "preferred_label": "Sura 54 23 40",
+      "aliases": [
+        "camel test and shared water",
+        "people of Lot rejected warnings",
+        "shall we follow man like us",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s01"
+      ]
+    },
+    {
+      "id": "sura-55",
+      "preferred_label": "Sura 55",
+      "aliases": [
+        "guilty recognized by looks",
+        "not asked for sins",
+        "sky becomes rosy",
+        "two Paradises"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s05"
+      ]
+    },
+    {
+      "id": "sura-56-ending",
+      "preferred_label": "Sura 56 Ending",
+      "aliases": [
+        "God protected Joseph from sin",
+        "fortunate generation restoring message",
+        "peace from those on right",
+        "people under age 40"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s07"
+      ]
+    },
+    {
+      "id": "thamud",
+      "preferred_label": "Thamud",
+      "aliases": [
+        "camel test and shared water",
+        "people of Lot rejected warnings",
+        "shall we follow man like us",
+        "slaughtered camel"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s01"
+      ]
+    },
+    {
+      "id": "those-on-right",
+      "preferred_label": "Those On Right",
+      "aliases": [
+        "God protected Joseph from sin",
+        "fortunate generation restoring message",
+        "peace from those on right",
+        "people under age 40"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s07"
+      ]
+    },
+    {
+      "id": "two-paradises",
+      "preferred_label": "Two Paradises",
+      "aliases": [
+        "guilty recognized by looks",
+        "not asked for sins",
+        "sky becomes rosy",
+        "two Paradises"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s05"
+      ]
+    },
+    {
+      "id": "under-forty-salvation",
+      "preferred_label": "Under Forty Salvation",
+      "aliases": [
+        "God protected Joseph from sin",
+        "fortunate generation restoring message",
+        "peace from those on right",
+        "people under age 40"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s07"
+      ]
+    },
+    {
+      "id": "warning-against-sin",
+      "preferred_label": "Warning Against Sin",
+      "aliases": [
+        "Al-Ahram Ramadan publication",
+        "incur retribution",
+        "not doing homosexuals favor",
+        "talk them out of it"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s02"
+      ]
+    },
+    {
+      "id": "water-cycle",
+      "preferred_label": "Water Cycle",
+      "aliases": [
+        "100 percent oxygen killed astronauts",
+        "Genesis racial distortion",
+        "earth spaceship five billion astronauts",
+        "only son Ishmael not Isaac",
+        "plants recycle carbon dioxide"
+      ],
+      "appears_in_sections": [
+        "behrouz15-s08"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "behrouz15-issue-01",
+      "issue_type": "composite-recording",
+      "original_text": "The source joins distinct Sura 54, 55, 56, and 51 study blocks and likely more than one date.",
+      "suggested_action": "Preserve internal boundaries and verify chronology.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz15-issue-02",
+      "issue_type": "stigmatizing-sexual-language",
+      "original_text": "The Lot discussion uses condemnatory language toward homosexual people.",
+      "suggested_action": "Do not reproduce the rhetoric to shame or target users.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz15-issue-03",
+      "issue_type": "jinn-and-physics-claims",
+      "original_text": "Jinn are said to travel millions of times faster than light and attend studies.",
+      "suggested_action": "Keep as theology, not science or clinical explanation.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz15-issue-04",
+      "issue_type": "spiritual-ranking-and-afterlife",
+      "original_text": "Participants and people under forty are assigned distinct heavenly ranks.",
+      "suggested_action": "Never apply these judgments to real people.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz15-issue-05",
+      "issue_type": "contested-biblical-history",
+      "original_text": "Genesis is said to have been racially altered from Ishmael to Isaac.",
+      "suggested_action": "Keep attributed and distinguish from textual scholarship.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
+  "canonical_catalog_ids": [
+    "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube",
+  "archive_number": 15,
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

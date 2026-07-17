@@ -1,0 +1,908 @@
+{
+  "schema_version": "1.4-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 25,
+  "document_id": "audio-program/quran-study-behrouz-25-sura-58",
+  "title": "Quran Study from Behrouz 25: Sura 58",
+  "date": "",
+  "date_precision": "unknown",
+  "date_note": "No reliable recording date is present.",
+  "source_file": "data/sources/playlists/audio-transcripts/25 - Quran Study From Behrouz 1525 Sura 58 By Robert.csv",
+  "youtube_id": "Qr_e-6xqbD4",
+  "youtube_url": "https://www.youtube.com/watch?v=Qr_e-6xqbD4",
+  "primary_speakers": [
+    "Robert",
+    "Dr. Rashad Khalifa",
+    "Keikhosrow Emami",
+    "Abdullah",
+    "Douglas",
+    "Dr. Mahmoud Sabahi",
+    "Other participants"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 688,
+    "first_speech_time": "00:00:00.000",
+    "last_speech_time": "01:02:09.640",
+    "section_count": 6,
+    "speaker_counts": {
+      "Robert": 179,
+      "Dr. Khalifa": 318,
+      "A man": 33,
+      "Douglas": 4,
+      "A woman": 24,
+      "Abdullah": 22,
+      "Dr. Sabahi": 3,
+      "Behrouz": 1,
+      "Keikhosrow Emami": 104
+    }
+  },
+  "document_summary": "Robert leads Sura 58, beginning after the opening marital complaint and reading the expiation required before resuming intercourse. The central discussion concerns secret conspiracy, private meetings that undermine group consultation, Satan's attempts to cause grief, trust in God, community unity, making room for others, leaving when requested, and the elevation of believers and knowledgeable people. The final verses concern alliances opposed to God even when they involve family. Rashad and participants apply the passage to community loyalty, the age-forty doctrine, family tests, and the claim that believers receive invisible protection. Keikhosrow closes with a personal testimony.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-behrouz-12-community-dispute-1990-01-25",
+      "relationship": "same consultation and community-conflict concerns",
+      "note": "The dispute source shows why private and public processes mattered."
+    },
+    {
+      "document_id": "audio-program/quran-study-behrouz-06-sura-59-1989-03-10",
+      "relationship": "same invisible-giant protection language",
+      "note": "The Sura 59 recording is the fuller source for the protector metaphor."
+    },
+    {
+      "document_id": "video-program/friday-sermon-why-announce-messengership-1989-08-11",
+      "relationship": "same loyalty to God over community pressure",
+      "note": "The audio applies the rule to family and internal organization."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Treat the source as partial",
+      "instruction": "Quran 58:1–2 is absent."
+    },
+    {
+      "rule": "Preserve the distinction between conspiracy and legitimate consultation",
+      "instruction": "Do not flatten all private speech into wrongdoing."
+    },
+    {
+      "rule": "Do not advise isolation from family or dissenters",
+      "instruction": "Use safety-aware interpretation."
+    }
+  ],
+  "sections": [
+    {
+      "id": "behrouz25-s01",
+      "start": 0,
+      "end": 480,
+      "title": "Sura 58:3–7, marital expiation, opposition, resurrection, and divine knowledge",
+      "summary": "Robert reads the expiation for a prohibited marital declaration, including freeing a slave, fasting two consecutive months, or feeding sixty poor people. The passage then warns opponents and states that God knows every private gathering.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "sura-58",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "marital-expiation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "fast-two-months",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "feed-sixty-poor",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "resurrection",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-knowledge",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "free slave before intercourse",
+        "fast two months",
+        "feed sixty poor",
+        "God knows secret meetings"
+      ],
+      "related_questions": [
+        "What expiation is required?",
+        "What does God know about gatherings?"
+      ],
+      "quran_references": [
+        "58:3-7"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:00.000",
+      "end_time": "00:08:05.930",
+      "source_segment_start": 0,
+      "source_segment_end": 73,
+      "csv_speakers": [
+        "Dr. Khalifa",
+        "Robert"
+      ],
+      "canonical_text": "Robert: [58:3] ...shall expiate by freeing a slave before they resume intercourse. This is to admonish you. God is Cognizant of everything you do. [58:4] If you cannot find a slave to free, then you shall fast two consecutive months before resuming intercourse. And those unable to fast shall feed sixty poor persons. This is for you to believe in God and His messenger. These are God's laws, and the rejecters have deserved painful retribution. [58:5] Those who oppose God and His messenger are doomed like those before them who were doomed. We have revealed clear revelations, and the disbelievers therein have deserved painful retribution. [58:6] The day will come when God resurrects them, then informs them of everything they had done. God has recorded it while they forgot. God witnesses all things. [58:7] Do you not realize that God knows everything in the heavens and the earth? No three people can meet in secrecy without Him being the fourth, nor five without Him being the sixth, nor less than this, nor more, without Him being there. Then, on the Day of Resurrection, He will inform them of everything they did. God is fully aware of all things. [58:8] Those who are prohibited from conspiracy, then go back to it, conspiring sinfully, maliciously, and in defiance of the messenger. When they come to you, they greet you not with God's greetings, and say to themselves, let us see if God will punish us for what we say. Their only destiny is Hell wherein they burn; what a miserable destiny. [58:9] O you who believe, if you have to confer secretly, you shall not confer to commit sin, transgression, and disobedience to the messenger. You may confer only to work righteousness and piety. Beware of God, for you will be gathered before Him. All right, we'll stop there. All right, verse one. [58:1] God has heard the woman who debated with you about her husband and complained to God... [58:2] Those among you who estranged their wives as if they were their mothers are doing wrong... Obviously, this is in the Quran for a reason. God... As the footnote says \"a common statement by Arabian husbands who wanted to punish their wives was \"you are forbidden to me in intercourse as my mother.\" Ok. That obviously, it obviously applied to that point in time in history where this was a common thing, to where it needed to be said. But as we know, the Quran is for every day, and it applies at all times. So, what these verses are saying, we should obviously take to heart. Ok. [58:3] Those who estranged their wives in this manner, then reconcile, shall expiate by freeing a slave before they resume intercourse. This is to admonish you. There again, obviously, we don't have slaves or things like this today. But the point is well taken about the relationship that should exist between a husband and a wife and how how regardless of the circumstances, how a person should treat his wife. Okay, [58:4] If you cannot find a slave, then you shall fast two consecutive months before resuming intercourse. Like this is just straightforwardness here, telling you or telling people this applies to, what they need to do to receive reconciliation. Ok. [58:5] Those who oppose God and His Messenger are doomed like those before them who were doomed. We have revealed clear revelations, and the disbelievers therein have deserved painful retribution. This verse is just tremendous. When God says \"We have revealed clear revelations, and the disbelievers therein have deserved painful retribution.\" When He says \"clear\", He means \"clear.\" The Quran come... the Quran is straightforward, and it says what...you know, what it says is what it means to you. When you read it, you don't have to... I mean, it's so fully detailed that you don't have to look to any other outside sources to find the meaning of it. It's right there. The Quran is complete. You don't need the Hadith, the Sunnah, the Bible. Plus, the Quran confirms these previous scriptures. So, there's no need for them, excluding the Hadith, Sunnah. So, when you see people that are rejecting this on the basis of one thing or another, it's... they truly deserve, or they will receive, their due... their due... (unintelligible). [58:6] The day will come when God resurrects them, then informs them of everything they have done. God has recorded it while they forgot. God witnesses all things. This verse is... tells us, while a lot of verses have, and it's been well discussed in here in terms of God recording everything, and God knows everything that we do. Nothing goes... nothing goes without... Dr. Khalifa: Martha, Martha (unintelligible) Robert: Okay. Nothing goes... nothing happens or in anything, in any place on this earth, without God knowing about it. From everything... from the ant moving, to the actions of the challenger. Anything. Anything. God... when you say God has recorded it, that means God knows your actions before you've even committed them. God... Everything has been recorded before they even took place. But when we say this, lots of times we know in the Quran that God controls everything here in this mosque, and God controls everything on the earth. But in the same sense, you have a... when you decide that you want to be a believer, you're making a covenant with God, and you have to hold up your end of the deal. You have... you have an obligation in which you're saying \"yes, I will Pray five times a day. Yes, I will give to charity.\" You have obligations that you have to do. You have to hold up the commandments. You have to be a righteous person. Okay, that doesn't... so that means just because God controls everything and God knows what's gonna happen, and everything is pre-recorded, doesn't mean you can sit back and relax Like, like a sticker on the... a bumper sticker on the car outside, I was looking at it a couple days ago, and it says \"relax, God's in charge.\" Okay, that means... to me, I took that and I thought \"relax, God's in charge. What does that mean? Relax, sit back, God's in charge?\" No, it means \"relax your emotions. Don't worry about anything, because God's in control.\" But that doesn't mean that your end of the deal... you don't have to hold up your end of the deal. You understand what I'm saying? It's not like you can just \"okay, well, we'll just relax, and I'll sleep from 8 p.m. to 8 p.m. the next day. So, we have an obligation to God, and that extends into everything we do. God wants us to be the best we can, and put forth the maximum effort in everything we do. I discussed this with Mr. Khalifa about, well, why should we wanna achieve in everyday life? Why should we want to be a success? Why should a person want to go to college and get an education, or make money, or all these things?",
+      "review_status": "draft",
+      "retrieval_text": "Sura 58:3–7, marital expiation, opposition, resurrection, and divine knowledge\nRobert reads the expiation for a prohibited marital declaration, including freeing a slave, fasting two consecutive months, or feeding sixty poor people. The passage then warns opponents and states that God knows every private gathering.\nConcepts: sura-58; marital-expiation; fast-two-months; feed-sixty-poor; resurrection; divine-knowledge\nUser terms: free slave before intercourse; fast two months; feed sixty poor; God knows secret meetings\nQuestions: What expiation is required? What does God know about gatherings?\nQuran: 58:3-7\nBible: \nEntities: "
+    },
+    {
+      "id": "behrouz25-s02",
+      "start": 480,
+      "end": 1200,
+      "title": "Secret conspiracy, private plotting, and consultation",
+      "summary": "Quran 58:8–10 produces a debate over conspiracy. Rashad defines it as secret meetings that undermine the group's consultation, such as organizing competing events or factions. Satanic conspiracy may grieve believers but cannot harm them outside God's will.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "conspiracy",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "secret-meetings",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "consultation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "factionalism",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "satan-causes-grief",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "meeting in secret",
+        "do not go to group picnic",
+        "Sura Consultation",
+        "cannot harm against God's will"
+      ],
+      "related_questions": [
+        "What counted as conspiracy?",
+        "How did consultation differ?",
+        "What limit was placed on Satanic harm?"
+      ],
+      "quran_references": [
+        "58:8-10",
+        "42"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:07:58.920",
+      "end_time": "00:20:04.090",
+      "source_segment_start": 73,
+      "source_segment_end": 204,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Douglas",
+        "Dr. Khalifa",
+        "Robert"
+      ],
+      "canonical_text": "Why should a person want to go to college and get an education, or make money, or all these things? Because in retrospect, they're not really important. All that's important in this life is our relationship to God. And realizing that, that's when these other things can become important, because a wealthy believer, he said, can do more good than a poor believer. They can help more people. They can do more things. Not that one is better than the other, but just the capability of giving more to charity and things like this is greater if you have more wealth, naturally. And with that in mind, also, God wants us to do our best in everything we do. And when it comes to our jobs, it's a matter of thinking about God in your job. That becomes our goal, to be conscious of God at all times. So you're going to work, but you're realizing that you're completely conscious of God at all times within your work. That's what we're talking about, of not idolizing anything else. When you set these goals, set these goals with the ultimate plan of being righteous in mind in your relationship with God. I kind of got stuck on that verse, because that's the one I understood. I can elaborate on that one a little bit longer. Ok. [58:7] Do you not realize that God knows everything in the heavens and the earth? No three people can meet in secrecy without Him being the fourth, nor five. This is, goes along the same lines. God knows everything. [58:7] ...God is completely Cognizant of all things. You can't meet in private. You can't, you know, it just... God knows everything, and everything is recorded. Ok. [58:8] Those who are prohibited from conspiracy then go back to conspiring sinfully, maliciously, and in defiance of the messenger. I didn't really understand this. Those who are prohibited from conspiracy, who would that be? Prohibited from conspiracy. Conspiracy in terms of... Dr. Khalifa: As meeting in secrect. Dr. Khalifa: People in their privacy, they may plot things that may not be in harmony with the society or the group. Robert: Ok. So, people... so in a society where you are prohibited from meeting in secret or... Dr. Khalifa: No, let's just say three or four of us are sitting somewhere and they say \"let us not go to the picnic of the group tomorrow, and let us go and invite some others to the mountain, or to the desert. So, they're conspiring to break up the group. So, this is the kind of conspiracy. Robert: Okay. [58:8] ...Conspiring sinfully, maliciously, and in defiance of the messenger... Then \"let us see if God will punish us for what we say.\" Robert: Here again, you see people testing God, and obviously, I mean, that's not the case here. Dr. Khalifa: Actually, we had these things happen here Dr. Khalifa: in the past, and those people are not here anymore. A man: (unintelligible) Dr. Khalifa: They're just troublemakers, and they want to do silly things to just create disharmony in the group. And time proved that they were not really believers. Robert: Ok. [58:9] O you who believe, if you have to confer secretly, you shall not confer to commit sin, transgression, and disobedience to the messenger. You may confer only to work righteousness and piety. Beware of God, for you will be gathered before Him. That is just always keeping in mind that the Day of Resurrection is coming. Regardless of where you meet, or the circumstances with which you meet, remember always to be righteous and pious. Okay, any questions or comments? A man: (unintelligible) Dr. Khalifa:. Yes. Dr. Khalifa: Okay, I think the custom of exchanging the wife as if she is the mother, is kind of unfair to the wife, especially in a society where there is polygamy. One wife is left hanging. She is not free to marry somebody else. She's not practicing getting her rights as a wife. So, God is ending that cruel practice. And in verse 3, we see the Quran's solution to the slave problem, where slavery was practiced. It was practiced in this country until 200 years ago. 200 or what? 100 years ago? And the Quran's method is the most effective and the best method economically, because if you free half a million slaves all at once, there will be problems. They will not be able to handle it. So, the Quran made it for expiation, or atonement for sins. So, to be (unintelligible). And Robert said we don't have any slaves, so it works. The guy who was sitting in a bus or something who was just clapping like this. Somebody asked \"what are you clapping for?\" So, he said \"this keeps the elephants away.\" The guy said \"But there are no elephants... The nearest elephant is 3,000 miles from here.\" He said \"see, it works.\" So, there are no slaves now, because this method works. And in the next verse, the verse says \"if you cannot find a slave\", so, if you don't have a slave of your own, you can always go and actually find a slave anywhere. And free, pay... pay for his freedom. Douglas? Douglas: Do these verses also refer to situations where the wife disclaims her husband? It seems that a wife should not treat her husband as if he's her father. Dr. Khalifa: I don't think that custom exists, although it is sometimes a de facto. It's called headache instead of... It's a de facto statement. Douglas: I've heard that before. (unintelligible) Dr. Khalifa: Sometimes, I see (unintelligible) Dr. Khalifa: It is a very common problem. Sometimes, it's the husband's problem. Sometimes, it's the wife's problem, you know. But fairness is common sense. A woman: (unintelligible). Dr. Khalifa: It's all common sense. These verses specifically deal with this practice. It was terribly unfair. It's actually happening now. When I was in Saudi Arabia, I would listen to... They have a radio program where people write letters and complain. This is their way of getting the solution, of getting somebody's attention. And you would be amazed how many problems there are where wives are locked up for months. They don't even see their husband. But they sneak out a letter somehow to the radio station. It's a program that makes you cry. It's a problem (unintelligible). So, this is the kind of problem that these verses address. It is a form of slavery, and maybe this is why the expiation is to free a slave. And then, Robert said, there are no slaves now, but the Quran provides alternatives. If you don't have a slave, you go find a slave, and you free him, or free her. And if this is not possible, it is not possible now, then you fast two consecutive months, which is indicative of the grossness of the offense. This is...This is... If you kill somebody by mistake, this is the expiation for killing somebody by mistake. And if you cannot fast two consecutive months, then you have to feed 60 poor people. Just the same as Ramadan. If you cannot fast in the month of Ramadan, you feed one poor person, for every day you break the fast. So, you can see the work of existence of God is good. So, this is for you to believe in God and His messengers. These are God's laws. Because people who adhere to these commandments prove that they believe in God. And when we follow the commandments, we attain certainty. The obligations, as Robert mentioned, these obligations are not for God's benefit, but for our benefit. And the most, the best thing out of those obligations is attaining certainty. When you do the five Prayers, if you miss a Prayer, you get a pinch immediately. Eventually, it's gonna sink in our head that God has (unintelligible). How does one know that they missed a Noon Prayer? So, it happens gradually. You're gonna have this conviction and this certainty. Another thing I want to comment on is no people meet without God being there. Dr. Khalifa: What verse it was? Robert: 7. Dr. Khalifa: [58:7] Do you not realize that GOD knows everything in the heavens and the earth? No three people can meet in secrecy without Him being their fourth,... So, when God says, He protects you and people who are conspiring to do harm to you, God is there. God's angels are there, too. But I want us to visualize God is with us. God is here. And subconsciously think that God is here. Do the snap. He knows that you're studying His Word. It's an awesome feeling. But we have to acquire it once in a while. We have to realize that God is here. God is with us. Always. And as believers, this is also... Believing in the invisible is very important. Just because we are in this dimension and we see each other, we can't ignore that other dimension. The invisible dimension. Behind each one of you, or next to you, is a big, huge, invisible giant protecting you. I'm laughing because there was a... I just glanced at the TV the other day and there was a child with a dragon, invisible dragon. They have something like this video. So, nobody can harm you. Nothing can harm you. So, it's just not, not just being conscious of God, but also being conscious of",
+      "review_status": "draft",
+      "retrieval_text": "Secret conspiracy, private plotting, and consultation\nQuran 58:8–10 produces a debate over conspiracy. Rashad defines it as secret meetings that undermine the group's consultation, such as organizing competing events or factions. Satanic conspiracy may grieve believers but cannot harm them outside God's will.\nConcepts: conspiracy; secret-meetings; consultation; factionalism; satan-causes-grief\nUser terms: meeting in secret; do not go to group picnic; Sura Consultation; cannot harm against God's will\nQuestions: What counted as conspiracy? How did consultation differ? What limit was placed on Satanic harm?\nQuran: 58:8-10; 42\nBible: \nEntities: "
+    },
+    {
+      "id": "behrouz25-s03",
+      "start": 1200,
+      "end": 1860,
+      "title": "One family, invisible guards, age forty, and internal acceptance",
+      "summary": "Rashad says repeated Friday gatherings have made the community one family and that God has assigned guards to believers and their children. The age-forty doctrine is mentioned as an issue he had assumed everyone accepted, revealing disagreement inside the group.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "community-family",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "invisible-guards",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "children-protected",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "age-forty",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "internal-disagreement",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "we become one family",
+        "guards protect children",
+        "assumed everyone accepted age 40"
+      ],
+      "related_questions": [
+        "How did Rashad describe the community?",
+        "What invisible protection was claimed?",
+        "What disagreement emerged?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not promise invisible protection or apply the age-forty doctrine.",
+      "retrieval_priority": "primary",
+      "start_time": "00:19:59.419",
+      "end_time": "00:31:07.200",
+      "source_segment_start": 204,
+      "source_segment_end": 315,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Abdullah",
+        "Dr. Khalifa",
+        "Dr. Sabahi",
+        "Robert"
+      ],
+      "canonical_text": "So, it's just not, not just being conscious of God, but also being conscious of the guards. God put to guard you and guard your children and guard all your affairs. Prohibiting the Conspiracy. God says in Sura 42, the whole Sura is titled \"Consultation.\" And this is... Alhamdu Lillah, we already achieved this. We're all just one unit. And we all become one family. Day after day, Friday after Friday, we are the same people who are meeting here. Dedicated. It's been wonderful. We've just become a family. So, we don't have this problem anymore. Except that God taught us what this is in the past. And (unintelligible) to take a boat (unintelligible) Opposition. (unintelligible) Remember what (unintelligible) A woman: (unintelligible) Dr. Khalifa: Yeah, we agree on that, yes. No, but that was opposition. (unintelligible) Ok. I forget. But we did see examples of this and as time went by, it just happened that the people who did these kinds of conspiracies turned out to be unbelievers. They just didn't have it. They never saw the miracle. They never appreciated it. And they disappeared. That was years ago. So, this verses 8 and 9 remind us of being always a united group. Our affairs based on consultation. Satan is like the wolf. The wolf only attacks the straying sheep. (unintelligible) Are there any questions on these? They're not to be... By the way, this Sura... this is the only Sura in the Quran... This is a certain piece of information on the side. From computer facts, this is the only Sura in the Quran where the name of God is in every verse. At least once. This Sura here. The only one in the whole Quran where every verse has the word \"Allah\" in it, at least once. Some of the verses have 4 of them. A man: 57 Allah. Dr. Khalifa: Say it again. A man: 57 God. 57 times. Dr. Khalifa: Really? Oh, my goodness. Alright. Here's another piece of information. So, these are the fine details that we are blessed to know, when the average so-called Muslim doesn't even know how many Suras are in the Quran. Ok. I thought you were saying something. Ok, if there are no questions we'll go back to Robert. Oh, Abdullah. Abdullah: On 7, when God says \"there are no three people can meet in secrecy, without Him being the fourth.\" Then, next one. Literally, it should come up like \"nor four people being, without being Him the fifth\", but jumped to \"five.\" Actually, when you read it, you can't really notice it, because it goes three, four, five, six. Abdullah: But the thing is, we know that, actually these numbers are counted, because if it was four and five, then the sum of the numbers will be short. Dr. Khalifa: Exactly. Abdullah: A couple of numbers. But the way God put it, you can't really notice it, if you read it a million times. See, it's so fluent. (unintelligible) Dr. Khalifa: How come it didn't say \"two people, God will be the third\", and so on? Because these numbers, what God is emphasizing is that the numbers are part of the mathematical code. And the total is a multiple of 19, the number of numbers and the total of the numbers. Abdullah: Actually, the reason that God didn't start from two is because the verse ends with, it says \"nor less than this, nor more.\" Dr. Khalifa: Yes. Abdullah: If it starts with two, there is no less of two, because you can't have one people conspiring. Dr. Khalifa: Unless you are schizophrenic. Conspiring with yourself. Very good point. Mã Shã Allãh. You see, nor less than this, nor more, covers the whole range of numbers. So, it's true. If the verse starts with two, then less than that would be one conspiring with who! Dr. Sabahi: (unintelligible) of the messenger. Dr. Sabahi: Why does (unintelligible) disobedience of God and messenger? Dr. Khalifa: Well, apparently, the word \"conspiracy\" is against the messenger, in particular. See, this verse is dealing with conspiracy. [58:9] O you who believe, if you have to confer secretly, you shall not confer to commit sin, transgression, and disobedience to the messenger. You may confer only to work righteousness and piety. Beware of God,... It's a specific commandment dealing with conspiring against the messenger. Dr. Sabahi: Does it mean that obedience of the messenger is required (unintelligible)? Dr. Khalifa: Well, it's a blessing, yes. See, what is happening, when there is a messenger, God is sending information to the whole group through the messenger. And the messenger himself is benefiting from this information. So, it will save us a lot of trouble if we obey him. This includes the messenger and the people, because this information comes to everybody. Actually, I see this in my last trip to Canada, for example. I mentioned the issue of the age of 40, and I assumed that everybody accepted it. But they didn't, and I ended up wasting so much time on it. And it's a blessing if the people have the understanding of, for example, this verse. They'd be so comfortable if they have the conviction and understanding. They will not waste so much time arguing back and forth, you know. Why 40? How can a person who is terrified go to Heaven if he didn't do this and that? Ok. But it's a piece of information that God sent to us and gave us the proofs and the evidence and a number from the Quran. So, a person who has, who is blessed... God says \"it's a blessing\" because it saves us a lot of time. It's finished. It's closed. Ok. When we say \"God says \"up to 40, everybody goes to Heaven. And here's the number in the Quran. And here are the proofs. Here are the signs.\" Then, we're convinced. So, it's a blessing. So, I appreciate the fact that this verse deals specifically with disobedience to the messenger. It's obedience in matters that have to do with God and the information that's coming from God. It's not personal obedience. It's obedience to God because it's the information that's coming from God. And we have in history... the history tells us they were having a battle or something and the Prophet Muhammad said \"let us camp here.\" And they went to him and they said \"this is information from you or from God?\" \"If it's from God, we'll do that.\" He said \"no, it's from me.\" They said \"this is a stupid idea.\" (unintelligible) So, once he said \"it's from me\", they were free not to obey. So, the obedience is really to God. This is actually written in history. \"Then, we're all dead if we obey you.\" And they did move on to some other place. A woman: (unintelligible) Dr. Khalifa: Okay, we'll... just we do have a part where we ask general questions. So, that falls under the general questions. We have to let Robert finish. It will take about 10 minutes to discuss circumcision. Robert: Okay, verse 10. Ok. [58:10] Conspiracy is from the devil, only causing problems to those who believe, though he cannot harm them against the will of GOD. In GOD the believers shall trust. [58:11] O you who believe, if you are asked to make room for others to sit down with you, you shall make room. Then, GOD will make room for you. If you are asked to leave, you shall leave. GOD raises those among you who believe, and those who attain knowledge to higher ranks. GOD is fully Cognizant of everything you do.",
+      "review_status": "draft",
+      "retrieval_text": "One family, invisible guards, age forty, and internal acceptance\nRashad says repeated Friday gatherings have made the community one family and that God has assigned guards to believers and their children. The age-forty doctrine is mentioned as an issue he had assumed everyone accepted, revealing disagreement inside the group.\nConcepts: community-family; invisible-guards; children-protected; age-forty; internal-disagreement\nUser terms: we become one family; guards protect children; assumed everyone accepted age 40\nQuestions: How did Rashad describe the community? What invisible protection was claimed? What disagreement emerged?\nQuran: \nBible: \nEntities: "
+    },
+    {
+      "id": "behrouz25-s04",
+      "start": 1860,
+      "end": 2580,
+      "title": "Making room, leaving when asked, knowledge, and consideration",
+      "summary": "Quran 58:11 is read as a general command to make room for others, leave when asked, and act considerately. God elevates believers and people who attain knowledge. The group applies the command to physical seating and broader social kindness.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "make-room",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "leave-when-asked",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "consideration",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "knowledge",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "higher-ranks",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "make room to sit",
+        "if asked to leave",
+        "be considerate",
+        "God raises knowledgeable"
+      ],
+      "related_questions": [
+        "What social rules came from Quran 58:11?",
+        "Who receives higher ranks?"
+      ],
+      "quran_references": [
+        "58:11"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:30:49.493",
+      "end_time": "00:43:00.686",
+      "source_segment_start": 315,
+      "source_segment_end": 480,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Abdullah",
+        "Behrouz",
+        "Dr. Khalifa",
+        "Robert"
+      ],
+      "canonical_text": "[58:11] O you who believe, if you are asked to make room for others to sit down with you, you shall make room. Then, GOD will make room for you. If you are asked to leave, you shall leave. GOD raises those among you who believe, and those who attain knowledge to higher ranks. GOD is fully Cognizant of everything you do. [58:12] O you who believe, if you wish to confer with the messenger, you shall give away a... [58:14] ... And they deliberately swear lies! [58:15] GOD has prepared for them a severe retribution. Evil indeed is what they did. [58:16] They used their oaths as a cover to repel others from the path of GOD. Consequently, they have deserved humiliating retribution. [58:17] Never will their money or children help them against GOD. They will have deserved Hell, wherein they abide forever. [58:18] On the Day when GOD resurrects them, they will swear to Him, just as they swear to you, and they will think they have some basis. Indeed, they are liars. [58:19] The devil possessed them, and persuaded them to neglect GOD's message. These are the party of the devil. The party of the devil are the losers. [58:20] Those who oppose GOD and His messenger are the lowliest. [58:21] GOD has decreed: \"I and My messengers will always win.\" GOD is Powerful, Almighty. Ok. And here again, we're talking about conspiracy as being from the devil. Conspiracy then meaning plotting, plotting against, to do wrong. Dr. Khalifa: Right. Robert: Ok. Cause... Dr. Khalifa: I wish I could think of something specific. Those happened, what, years ago. Robert: Because couldn't you also look at... Abdullah: Yeah, that's what I was... Dr. Khalifa: Right. Abdullah: Last (unintelligible) Dr. Khalifa: Yes, exactly. Dr. Khalifa: See, I forgot... Abdullah: These people were very opposed... Dr. Khalifa: And they all dropped off. Some people decided they wanna have a separate Quranic study and to look at other translations. And... Just to break, break away. On a separate night. They did and they're all done. Proved to be unbelievers. I mean, we really know that they are unbelievers. A woman: (unintelligible) Abdullah: (unintelligible) their actions are (unintelligible) He was against totally you being in charge. That's typical for him to go against messenger of God. Not listening to one that God has chosen as a messenger who is in charge. (unintelligible) Remember, he wanted... Dr. Khalifa: It's coming to me now, I remember. Abdullah: Yeah, he came, wanted the Quranic study to all (unintelligible) to debate this (unintelligible). Dr. Khalifa: He was, he was fooled by somebody who we know. is an FBI informer. We didn't mind him being here. He fooled the guy. I remember this detail. They're all gone. So, that's the kind of conspiracy. It's not good. It divides the group. It has no good results. It's amazing, by the way. When these things happened, people went and they had their own Quranic study. For example, they came out with the strangest conclusions, from the same Quran. I can tell you that Satan gets hold of them or something, confusing every issue for them. And eventually, I will remember some of the ideas that came out. Cause they are very strange ideas. And you know, it makes sense. (unintelligible) inferences \"That's right, you can derive this meaning from this verse. But that's not what it says.\" If you twist words, you can come up with certain meanings. So hopefully, I will remember some specific examples. But when people... It says here, actually. \"Conspiracy is from the devil.\" There we go. Ok. \"Conspiracy is from the devil.\" And these people who forced their opinion, and they went to study the Quran, I'm remembering some of the ideas. Dr. Khalifa: Yes. Abdullah: Oh, yes. Dr. Khalifa: Oh, yes. Oh, my God. Abdullah: Oh, my God. Dr. Khalifa: Now, listen to this. Now, you're gonna get a kick out of this. Yeah. Thank you. You reminded me. The word, they said that Saleh... Yeah, this came out of their group. The old timers will remember this. They said... now Saleh said \"this is God's camel. Let it be, have its own drink some places.\" And then they slaughtered the camel. So, the word... now people underaged, excuse us, but they said that they had sex with the camel. By (unintelligible) the camel. A man: What?! A woman: (unintelligible) Dr. Khalifa: That's what came out of their group. Abdullah: They're very sick. You're right. Dr. Khalifa: Is this what I said? I said \"where did you get that?\" They said \"the word did not mean...\" They wanted a specific word that means slaughtering. And actually, the word is specific enough, but it is not a common word. So, this is one of the examples that \"Conspiracy is from the devil.\" And they actually came back and they argued with me. They said \"why do you translate it as they slaughtered the camel?\" So, we really are living the Quran. \"Conspiracy is from the devil.\" Obviously, the devil gave them that idea. A man: Also, the people were reading from the... They were translating from the Arabic to English. They were not using this? Dr. Khalifa: I think they used both. They used Arabic and English. They had some other translations. A man: And they were using it all together? Dr. Khalifa: Yes, they have. Actually, you must be a fool to have that idea. Martha, you know Arabic. The word is فَعَقَرُوا۟ عَقَرُوا۟ And the word is عَقَرُوا۟ This is \"slaughtering the camel.\" So, the word in the Quran, what they did, the camel was slaughtered. So, they said عَقَرُوا۟ means They're having sex with the camel. They're not killing it. Perverts. \"Conspiracy is from the devil.\" You know, this is what happens if we separate ourselves from the believers. The wolf gets us. Dr. Khalifa: Ok, back to Robert. Robert: Ok. Dr. Khalifa: We should remember this. Robert: [58:10] Conspiracy is from the devil, though he cannot harm them against the will of GOD. In GOD the believers shall trust. That's right there. Quite an impressive sentence. [58:10] ....In GOD the believers shall trust. That right there should put everybody's mind at ease. When you're worried about things of any matter, whether it be daily life to anything. [58:11] O you who believe, make room for those who sit. Then, GOD will make room for you.... Now to me, this verse... What I thought of it as... As being righteous when someone... make room for somebody else to sit down. You're... I'm sure we (unintelligible) let somebody else sit down. And that God will make room for you in Heaven. This applied to... Could be from my background or something. That where... Clothe the needy, feed the hungry. This type of... That's what came to my mind when I read this verse. I don't know if that's... If that's along the same lines. But that's how I applied it. Especially the part that \"God may make room for you.\" I thought, I thought that was in terms of... Dr. Khalifa: Actually, it's happened now, literally in this room. Behrouz, did you find a place to sit down? Did you ask somebody to move? Did you have to ask somebody to move? Behrouz: No. Dr. Khalifa: Ok. Dr. Khalifa: But it's possible he comes in and finds that there's nobody...There's no room. And He asks somebody to make room for him. You can take it literal or that it covers issues. A man: Also, think of it as be considerate. Dr. Khalifa: Exactly. A man: Be kind to others. Dr. Khalifa: Exactly. Dr. Khalifa: Be considerate to others. It's a general principle. Otherwise, if you're nice to the people, do unto others like... Robert: As you would have... Right. Dr. Khalifa: God will be kind to you, like He is kind to others. Robert: Okay. Dr. Khalifa: If you all come and say \"please, move...\" (unintelligible) Just make it considerate. Robert: [58:11] ...GOD raises those among you who believe, and those who attain knowledge to higher ranks... Okay. There again, God raises those among you. In other words, God guides those among... God guides the believers and the people who attain knowledge, He brings them to higher ranks. A man: (unintelligible) A man: But why (unintelligible) that they have a high level of righteousness. [58:11] ... GOD is fully Cognizant of everything you do. There again, when you see that at the end of the verse, then you can apply some of the other things in terms of... He's fully Cognizant of all your actions in terms of... That's why every little thing as to letting a person sit down and being righteous in that manner is only seen as a benefit to you. It's seen as a plus. Or as a credit, as we always say. [58:12] O you who believe, if you wish to confer with the messenger, you shall give away a charity before you confer with him... Okay, I saw this as being another means for... another situation where God allows us to give to charity. Just another situation where He says \"if you have the money, before you confer with the messenger, give to charity.\" That's another situation where God is allowing us to, to grow, essentially. That's how I looked at it. Because underneath that, He says \"if you don't have the money, God is Forgiver, Merciful. So, that's... I looked at that as the situation where human beings tend to be greedy. And this is a way for us to give. Dr. Khalifa: Exactly. An excuse. Robert: Right. Robert: Ok. [58:13] If you have failed to give to charity before your conference, repent thereafter,... You shall observe the Salat Prayers, and Zakat charity, and obey GOD and His messenger. GOD is Cognizant of everything you do. This is again, just reflect upon your actions and repent. [58:14] There are those who lie themselves with people who have angered God. They neither belong with you nor with them, and they deliberately swear lies! Ok. This is a very important verse in terms of allying yourself with people who are believers like yourself so that you may also, so they will help you, I guess you would say, to grow yourselves. When you're around people who, as it says here, \"angered God\" or are disbelievers, their actions tend to be...",
+      "review_status": "draft",
+      "retrieval_text": "Making room, leaving when asked, knowledge, and consideration\nQuran 58:11 is read as a general command to make room for others, leave when asked, and act considerately. God elevates believers and people who attain knowledge. The group applies the command to physical seating and broader social kindness.\nConcepts: make-room; leave-when-asked; consideration; knowledge; higher-ranks\nUser terms: make room to sit; if asked to leave; be considerate; God raises knowledgeable\nQuestions: What social rules came from Quran 58:11? Who receives higher ranks?\nQuran: 58:11\nBible: \nEntities: "
+    },
+    {
+      "id": "behrouz25-s05",
+      "start": 2580,
+      "end": 3300,
+      "title": "Charity before consultation and loyalty to God over family",
+      "summary": "The later verses discuss charity before private consultation with the messenger and the impossibility of loving those who oppose God even if they are parents, children, siblings, or relatives. Participants connect this with prioritizing God over emotionally close family members.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "charity-before-consultation",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "loyalty-to-god",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "family-as-test",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-above-family",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-58-22",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "charity before consulting messenger",
+        "family obstacle",
+        "put God above all things"
+      ],
+      "related_questions": [
+        "What requirement preceded private consultation?",
+        "How did the Sura treat conflicting family loyalty?"
+      ],
+      "quran_references": [
+        "58:12-22"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not use this passage to encourage unsafe isolation from family or support.",
+      "retrieval_priority": "primary",
+      "start_time": "00:42:52.373",
+      "end_time": "00:55:07.212",
+      "source_segment_start": 480,
+      "source_segment_end": 621,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dr. Khalifa",
+        "Keikhosrow Emami",
+        "Robert"
+      ],
+      "canonical_text": "When you're around people who, as it says here, \"angered God\" or are disbelievers, their actions tend to be... Again, I'm not judging their actions. Some things that are said or done, you can look upon them in a non-righteous light, which doesn't further your progress along the lines of, along the right path. If you wanna keep yourself on the right path, the best way to do that is to align yourself with believers, or surround yourself with believers. [58:15] GOD has prepared for them a severe retribution. Evil indeed is what they did. Okay, this obviously refers to the angering of God in the above verse. Robert: Is there something, is that... what... Dr. Khalifa: Yes. Robert: Is there a specific thing that this applies to in terms of how these people angered God, or \"evil indeed is what they did\"? Dr. Khalifa: Yeah, they allied themselves with the enemies of God. Actually, we have examples of these. People who would, for example, ally themselves. I'm talking about somebody who goes to the Islamic Center. In the Islamic Center, they (unintelligible) with worshippers. They don't devote their Prayer to God alone. And you know that they anger God when they do this. They will not accept \"La Elaha Ella Allah.\" If you go there and tell them \"La Elaha Ella Allah\", they call you \"KAFIR.\" A man: This doesn't make sense. (unintelligible) Dr. Khalifa: (unintelligible) They're criticizing me for saying that Salman Rushdie should have the freedom of expression, And in that letter they say \"we agree, we admire, or we applaud the Catholic Church \"for making a stand against Salman Rushdie.\" So, this is the Islamic Center attacking me, and applauding the Catholic Church. Ok. Now, I say \"La Elaha Ella Allah.\" The Catholic Church says \"Praise Mary, Mother of God.\" So, it is not an issue of worshipping God, it's politics or something. How can they applaud the Catholic Church for anything? Of course, the Catholic Church itself practices the same thing that Khomeini practices. They don't like people to write about their Shroud of Turin and all the nonsense that they have. And they have heavy censorship. They excommunicate people right and left because of their opinions. Dr. Khalifa: So, they are (unintelligible). A woman: (unintelligible) Dr. Khalifa: Right. We had... A woman: ...which was exactly the same thing. A woman: It's nice that they're right here, one right after the other. Dr. Khalifa: Exactly. A woman: So, you just see how against them both groups are. Dr. Khalifa: You can see how will God look at people like this for applauding people who are saying \"Praise Mary, Mother of God.\" and condemning somebody who says \"La Elaha Ella Allah. Worship God alone.\" So, anybody who allies himself with those people, God is angry with them. This is verse 15. [58:15] GOD has prepared for them severe retribution. Evil indeed is what they did. Robert: They're saying that there are those who ally themselves with people who have angered God. Ok. A woman: (unintelligible) Dr. Khalifa: Yeah. \"Hail Mary, Mother of God. The Lord is with thee.\" A woman: (unintelligible) Robert: \"Blessed are thou.\" A woman: (unintelligible) and there's the (unintelligible) Dr. Khalifa: No, it doesn't make sense. Mary is dead. Jesus is dead. How can you bless the womb when the woman is dead? A woman: (unintelligible) Dr. Khalifa: Why do you (unintelligible) to him? (unintelligible) is dead. She's great. I mean, she's in God's grace. I'm the one who needs the submission. She made it. A woman: (unintelligible) Dr. Khalifa: Why? Dr. Khalifa: She's dead. A woman: (unintelligible) Dr. Khalifa: She's dead. A woman: Yeah, I know she's dead. Dr. Khalifa: Right. A woman: (unintelligible) Dr. Khalifa: (unintelligible) A woman: (unintelligible) Dr. Khalifa: Ok. Let me put it this way. Instead of saying \"Subhan Allah. God be glorified. God be praised,\" because God is alive. (unintelligible). He's the One that we worship. You don't need to mention Mary or Muhammad or Jesus or anybody. That's the point. A woman: (unintelligible) Dr. Khalifa: (unintelligible). We need it. I need it. Robert: Yeah. Robert: Want me to, want me to just read these last verses? Dr. Khalifa: (unintelligible) God's blessings with guidance. Robert: and then we can get on with the other discussion. A woman: (unintelligible) and I don't know Arabic but the fact is, the fact is that Muhammad is only a messenger. There's nothing wrong with that. A woman: You said, you said \"You shouldn't say it in conjunction with God.\" Dr. Khalifa: with God. A woman: because then you should mention every prophet, every messenger. We don't even know them. Dr. Khalifa: Because God... there's a commandment that says \"Do not make distinction among God's messengers.\" A man: Excuse me. Can we let Robert finish these? Robert: I just... Should I just read this last verse? Because you wanted to discuss the other... Dr. Khalifa: Yes. Robert: Yeah. And then... A woman: (unintelligible) Dr. Khalifa: (unintelligible) Robert: Oh, that's all right. There's only one verse left. Dr. Khalifa: Go ahead. Robert: Ok. Verse 22. Run For Your Life [58:22] You will not find people who believe in GOD and the Last Day befriending those who oppose GOD and His messenger, even if they were their own parents, or children, or siblings, or family. God places faith into their hearts as He supports them with inspiration. He will admit them into the gardens with flowing streams where they abide forever. GOD is pleased with them, and they are pleased with Him. They are the party of GOD. And the party of God are winners. This verse is incredibly strong. I think, just from looking at Mr. Khalifa's own situation. This really truly proves, if you're a believer, if you can ally yourself with God, even when your family is an obstacle for you. That's, that's truly showing that you're a believer. That is confirming to yourself when you can put God above all things, especially someone that's so close as your family. And when those people feel that they are doing the right things themselves. God is the one. As you go back \"in God, the believers shall trust.\" That says it all right there. And you have to put God above everything else, regardless of who it is. And to do this is oftentimes very difficult. But if you truly believe, then you'll be in the party of God, who are winners. A man: Is there anything else? A man: No, this, this answers your question earlier on. You asked about the people that oppose the messenger. And here it is. The verse says [58:22] You will not find people who believe in GOD and the Last Day befriending those who oppose GOD and His messenger,... Keikhosrow Emami: We have not, in any kind of a way, been forced to practice religion. Rather, open-minded family, I'm proud of them. But in my heart, I've been always searching. I told Dr. Khalifa, I was 16 years old when I felt like I wanna go to a masjid. I did. The second time I went to the masjid, I was turned off. Because it wasn't for me. Things that I heard, it was not simply logical. Of course, I'm 46 now, but I've been growing up. I've gone through so much. You know, you all know how we go through the steps. We get busy with other matters. We come and go. But one thing never went away from me, it was my thirst for God. And then later on, I got very, very interested in Quran. I don't know the reason, but I was just very interested. It sounds a little off. A man comes from Tehran, Iran, and he finds God in the United States of America. I call that destiny. It was in 1983, or perhaps, I believe it was 1983. Somehow, some kind of a way, I came across with 1 and 9. Makes it number 19. And I was fascinated. I was fascinated. That's why I went ahead and got a Quran and I was going around and bragging about it. \"Hey guys,...\" actually, I was talking to a Jewish fellow one time, Iranian guy, and I didn't know he was Jewish. And I was telling him \"look, look, what do you want? I mean, this is it. This is it.\" And he even didn't tell me he was Jewish. Dr. Khalifa: (unintelligible) Dr. Khalifa: Go on. Dr. Khalifa: Go ahead. Keikhosrow Emami: So, But as I said, as it comes and it goes, the first wave didn't knock me out, but just warmed me up. And, but again, I'm in transportation business. If you all ever come to Atlanta, you can ask who KE is. They call me KE. I owned the second largest taxi fleet in town, but I sold it. Of course, and I'm happy. I still have much to be thankful. If you ask them what his radio number is, they're gonna tell you \"it's 19.\" I have a property very close to downtown. It is on Highway 19. And IN SHAA ALLAH, I've got good plans. I'm not coming to Tucson to live in here, but my goodness, I envy you in a way. My heart is with you. But I'll tell you one thing. You will come to the masjid in Atlanta, IN SHAA ALLAH. It was a few months ago. Again, I don't know what happened. I was just, I wanted Quran again. I mean, never gave it up, but this time I really wanted it. I mean, I wanted Quran. So, I went through my papers. I found the address of Masjid Tucson again, wrote a letter, asked for a few books, and I got them.",
+      "review_status": "draft",
+      "retrieval_text": "Charity before consultation and loyalty to God over family\nThe later verses discuss charity before private consultation with the messenger and the impossibility of loving those who oppose God even if they are parents, children, siblings, or relatives. Participants connect this with prioritizing God over emotionally close family members.\nConcepts: charity-before-consultation; loyalty-to-god; family-as-test; god-above-family; quran-58-22\nUser terms: charity before consulting messenger; family obstacle; put God above all things\nQuestions: What requirement preceded private consultation? How did the Sura treat conflicting family loyalty?\nQuran: 58:12-22\nBible: \nEntities: "
+    },
+    {
+      "id": "behrouz25-s06",
+      "start": 3300,
+      "end": 3729.641,
+      "title": "Keikhosrow's testimony, accepting the messenger, prayer correction, and the protecting giant",
+      "summary": "Keikhosrow says acceptance of Rashad as messenger led him to seek the exact prayer procedure. He describes increasing confidence, regular prayer, love of family with God first, and personal experience of the protecting giant.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "keikhosrow-testimony",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "accepting-messenger",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "prayer-correction",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-first",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "protecting-giant",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "he is indeed messenger",
+        "wanted exact prayer",
+        "God number one",
+        "giant next to you"
+      ],
+      "related_questions": [
+        "What changed after Keikhosrow accepted the messenger claim?",
+        "How did he describe family and protection?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Keikhosrow Emami"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "secondary",
+      "start_time": "00:54:56.172",
+      "end_time": "01:02:09.640",
+      "source_segment_start": 621,
+      "source_segment_end": 687,
+      "csv_speakers": [
+        "Keikhosrow Emami"
+      ],
+      "canonical_text": "So, I went through my papers. I found the address of Masjid Tucson again, wrote a letter, asked for a few books, and I got them. But this time, it knocked me out. It knocked me out. I talked to Dr. Khalifa many times, a few times on the phone, actually. And I told him, when I was telling him, \"I have no doubt. I never meant that I never doubted you.\" When I was saying, I said \"I don't doubt. I have no doubt that Quran is indeed that communication which is direct.\" I didn't know that he had made any announcement, actually, at the time. This came to me about 3 and a half, 3, max 4 weeks ago. But let me say this to you. Without even the announcement, I was intelligent enough to see that, my goodness, there's got to be something. Now, if you all sleep tonight, and tomorrow you see a flying saucer in here, in Tucson, Arizona, and the crowds go around it, and there's no door, you can't figure it out. Then all of a sudden, somebody from the crowd steps forward, and he goes towards it, and does something, and the door opens, and he gets in it, and he flies around, and maneuver around, and he lands it again, don't you believe that somehow those who made the flying saucer taught him something? He got some kind of a training from them? It is simply simple logic. So, in the back of my mind, I was saying that, well, there's got to be something special. He's blessed. He's blessed. So, it was February publication, Muslim Perspectives, when I got it, and it says \"Give me only one reason.\" Dr. Khalifa, that was the first time I looked at what you said. So, hey, I'm fresh. And \"only one reason. I've produced so many Quranic evidences, proofs. \"You just give me one simple reason\", and not for a second, you know, backed off, didn't back off, even though I was expecting it. But, I loved it. I loved it, and I loved him, too. I just decided, I said \"hey, Khosrow, don't overdo it. Don't love him too much.\" Because I'll be just as, just as guilty, probably, I'll make another Jesus Christ, or Prophet Muhammad. You see, you go through these things, and things do make sense. They asked Prophet Muhammad \"bring a ladder, go up to the heaven, bring the whole book together, show it to us.\" The miracles are performed, of course, but again, miracles come on in all different forms and fashions. I am simply overwhelmed. I have a good friend of mine, Andy Mote, and we were talking with a couple of Sunni Muslims and a couple of Shias, and the Sunnis asked, you know, they wanted to at least eliminate some of the opposition to what they were saying. They said, well, he looks like blonde and American, \"Well, you must be Christian.\" He says \"no, I'm hoping to become a Muslim.\" So, I am a believer. I have no doubt. As I said, two things I know. I don't expect him to perform miracles every second. I know he's a human. I know he's gonna make mistakes. The rest of them did. And I make sure that I control my emotions. I think I have overcome that. I will stay in Atlanta, and I think I have got my works cut up for me. I think God has blessed me with a wonderful family. I don't see I've got any weaknesses. I'm sure, but I think I'm okay, and I'm situated that I do good things. I've got good plans. I am gonna be naturally communicating every step that I take with Dr. Khalifa and have his coaching and his approval. And IN SHAA ALLAH, I'm looking forward to good things. I feel God. An experience that I'd like to share with you, I've been always strong in my life. My frame is not all that big, but even physically I've been strong. I cannot be intimidated. I do my Prayer regularly. Yes, since when? When I said \"well, yes, he is indeed the messenger.\" So, even when I was gonna Pray, I said \"no, I've got to get to the point. I wanna know how \"I should Pray exactly\", because the Prayer that I used to do was a little different, not whole lot. So, I waited until I got the tapes and everything. Since then, I have been Praying five times a day. And truly, like he says, that this Contact Prayer, it is not good for... It's not for God. It is simply, you establish that contact. It is the way you nourish your own self, you, your true self. I feed me, like I feed my garments, like I exercise to keep my body trim. So, therefore, I wanna exercise my mind and grow. I've been talking to my wife lately, and she says \"Khosrow, you're beginning to sound like (unintelligible). I hope not.\" It is what I feel. It is my love for my family. One thing I've made clear that I love him so much, but definitely, for sure, God is number one. The experience I had, like Dr. Khalifa said \"there's a giant next to you protecting you.\" Anybody doubts that? Anybody is doubting that? I go to the Masjid on 14th Street and do my Prayer. And since the time I Prayed...",
+      "review_status": "draft",
+      "retrieval_text": "Keikhosrow's testimony, accepting the messenger, prayer correction, and the protecting giant\nKeikhosrow says acceptance of Rashad as messenger led him to seek the exact prayer procedure. He describes increasing confidence, regular prayer, love of family with God first, and personal experience of the protecting giant.\nConcepts: keikhosrow-testimony; accepting-messenger; prayer-correction; god-first; protecting-giant\nUser terms: he is indeed messenger; wanted exact prayer; God number one; giant next to you\nQuestions: What changed after Keikhosrow accepted the messenger claim? How did he describe family and protection?\nQuran: \nBible: \nEntities: Keikhosrow Emami"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "accepting-messenger",
+      "preferred_label": "Accepting Messenger",
+      "aliases": [
+        "God number one",
+        "giant next to you",
+        "he is indeed messenger",
+        "wanted exact prayer"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s06"
+      ]
+    },
+    {
+      "id": "age-forty",
+      "preferred_label": "Age Forty",
+      "aliases": [
+        "assumed everyone accepted age 40",
+        "guards protect children",
+        "we become one family"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s03"
+      ]
+    },
+    {
+      "id": "charity-before-consultation",
+      "preferred_label": "Charity Before Consultation",
+      "aliases": [
+        "charity before consulting messenger",
+        "family obstacle",
+        "put God above all things"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s05"
+      ]
+    },
+    {
+      "id": "children-protected",
+      "preferred_label": "Children Protected",
+      "aliases": [
+        "assumed everyone accepted age 40",
+        "guards protect children",
+        "we become one family"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s03"
+      ]
+    },
+    {
+      "id": "community-family",
+      "preferred_label": "Community Family",
+      "aliases": [
+        "assumed everyone accepted age 40",
+        "guards protect children",
+        "we become one family"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s03"
+      ]
+    },
+    {
+      "id": "consideration",
+      "preferred_label": "Consideration",
+      "aliases": [
+        "God raises knowledgeable",
+        "be considerate",
+        "if asked to leave",
+        "make room to sit"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s04"
+      ]
+    },
+    {
+      "id": "conspiracy",
+      "preferred_label": "Conspiracy",
+      "aliases": [
+        "Sura Consultation",
+        "cannot harm against God's will",
+        "do not go to group picnic",
+        "meeting in secret"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s02"
+      ]
+    },
+    {
+      "id": "consultation",
+      "preferred_label": "Consultation",
+      "aliases": [
+        "Sura Consultation",
+        "cannot harm against God's will",
+        "do not go to group picnic",
+        "meeting in secret"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s02"
+      ]
+    },
+    {
+      "id": "divine-knowledge",
+      "preferred_label": "Divine Knowledge",
+      "aliases": [
+        "God knows secret meetings",
+        "fast two months",
+        "feed sixty poor",
+        "free slave before intercourse"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s01"
+      ]
+    },
+    {
+      "id": "factionalism",
+      "preferred_label": "Factionalism",
+      "aliases": [
+        "Sura Consultation",
+        "cannot harm against God's will",
+        "do not go to group picnic",
+        "meeting in secret"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s02"
+      ]
+    },
+    {
+      "id": "family-as-test",
+      "preferred_label": "Family As Test",
+      "aliases": [
+        "charity before consulting messenger",
+        "family obstacle",
+        "put God above all things"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s05"
+      ]
+    },
+    {
+      "id": "fast-two-months",
+      "preferred_label": "Fast Two Months",
+      "aliases": [
+        "God knows secret meetings",
+        "fast two months",
+        "feed sixty poor",
+        "free slave before intercourse"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s01"
+      ]
+    },
+    {
+      "id": "feed-sixty-poor",
+      "preferred_label": "Feed Sixty Poor",
+      "aliases": [
+        "God knows secret meetings",
+        "fast two months",
+        "feed sixty poor",
+        "free slave before intercourse"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s01"
+      ]
+    },
+    {
+      "id": "god-above-family",
+      "preferred_label": "God Above Family",
+      "aliases": [
+        "charity before consulting messenger",
+        "family obstacle",
+        "put God above all things"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s05"
+      ]
+    },
+    {
+      "id": "god-first",
+      "preferred_label": "God First",
+      "aliases": [
+        "God number one",
+        "giant next to you",
+        "he is indeed messenger",
+        "wanted exact prayer"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s06"
+      ]
+    },
+    {
+      "id": "higher-ranks",
+      "preferred_label": "Higher Ranks",
+      "aliases": [
+        "God raises knowledgeable",
+        "be considerate",
+        "if asked to leave",
+        "make room to sit"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s04"
+      ]
+    },
+    {
+      "id": "internal-disagreement",
+      "preferred_label": "Internal Disagreement",
+      "aliases": [
+        "assumed everyone accepted age 40",
+        "guards protect children",
+        "we become one family"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s03"
+      ]
+    },
+    {
+      "id": "invisible-guards",
+      "preferred_label": "Invisible Guards",
+      "aliases": [
+        "assumed everyone accepted age 40",
+        "guards protect children",
+        "we become one family"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s03"
+      ]
+    },
+    {
+      "id": "keikhosrow-testimony",
+      "preferred_label": "Keikhosrow Testimony",
+      "aliases": [
+        "God number one",
+        "giant next to you",
+        "he is indeed messenger",
+        "wanted exact prayer"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s06"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "preferred_label": "Knowledge",
+      "aliases": [
+        "God raises knowledgeable",
+        "be considerate",
+        "if asked to leave",
+        "make room to sit"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s04"
+      ]
+    },
+    {
+      "id": "leave-when-asked",
+      "preferred_label": "Leave When Asked",
+      "aliases": [
+        "God raises knowledgeable",
+        "be considerate",
+        "if asked to leave",
+        "make room to sit"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s04"
+      ]
+    },
+    {
+      "id": "loyalty-to-god",
+      "preferred_label": "Loyalty To God",
+      "aliases": [
+        "charity before consulting messenger",
+        "family obstacle",
+        "put God above all things"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s05"
+      ]
+    },
+    {
+      "id": "make-room",
+      "preferred_label": "Make Room",
+      "aliases": [
+        "God raises knowledgeable",
+        "be considerate",
+        "if asked to leave",
+        "make room to sit"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s04"
+      ]
+    },
+    {
+      "id": "marital-expiation",
+      "preferred_label": "Marital Expiation",
+      "aliases": [
+        "God knows secret meetings",
+        "fast two months",
+        "feed sixty poor",
+        "free slave before intercourse"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s01"
+      ]
+    },
+    {
+      "id": "prayer-correction",
+      "preferred_label": "Prayer Correction",
+      "aliases": [
+        "God number one",
+        "giant next to you",
+        "he is indeed messenger",
+        "wanted exact prayer"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s06"
+      ]
+    },
+    {
+      "id": "protecting-giant",
+      "preferred_label": "Protecting Giant",
+      "aliases": [
+        "God number one",
+        "giant next to you",
+        "he is indeed messenger",
+        "wanted exact prayer"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s06"
+      ]
+    },
+    {
+      "id": "quran-58-22",
+      "preferred_label": "Quran 58 22",
+      "aliases": [
+        "charity before consulting messenger",
+        "family obstacle",
+        "put God above all things"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s05"
+      ]
+    },
+    {
+      "id": "resurrection",
+      "preferred_label": "Resurrection",
+      "aliases": [
+        "God knows secret meetings",
+        "fast two months",
+        "feed sixty poor",
+        "free slave before intercourse"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s01"
+      ]
+    },
+    {
+      "id": "satan-causes-grief",
+      "preferred_label": "Satan Causes Grief",
+      "aliases": [
+        "Sura Consultation",
+        "cannot harm against God's will",
+        "do not go to group picnic",
+        "meeting in secret"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s02"
+      ]
+    },
+    {
+      "id": "secret-meetings",
+      "preferred_label": "Secret Meetings",
+      "aliases": [
+        "Sura Consultation",
+        "cannot harm against God's will",
+        "do not go to group picnic",
+        "meeting in secret"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s02"
+      ]
+    },
+    {
+      "id": "sura-58",
+      "preferred_label": "Sura 58",
+      "aliases": [
+        "God knows secret meetings",
+        "fast two months",
+        "feed sixty poor",
+        "free slave before intercourse"
+      ],
+      "appears_in_sections": [
+        "behrouz25-s01"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio25-issue-01",
+      "issue_type": "community-isolation-risk",
+      "original_text": "Secret meetings and family opposition are framed as threats to the community.",
+      "suggested_action": "Do not encourage isolation or suppression of legitimate dissent.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio25-issue-02",
+      "issue_type": "age-forty-disagreement",
+      "original_text": "The recording reveals that not everyone accepted the doctrine.",
+      "suggested_action": "Preserve disagreement.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio25-issue-03",
+      "issue_type": "invisible-protection",
+      "original_text": "Believers and children are said to have invisible guards.",
+      "suggested_action": "Do not provide safety guarantees.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio25-issue-04",
+      "issue_type": "partial-opening",
+      "original_text": "The recording begins at Quran 58:3 and omits the opening complaint.",
+      "suggested_action": "Mark the transcript as partial.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
+  "canonical_catalog_ids": [
+    "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

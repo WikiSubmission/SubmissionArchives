@@ -1,0 +1,639 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 59,
+  "document_id": "audio-program/friday-sermon-59-adam-eve-garments-1982-11-19",
+  "title": "Friday Sermon 59 by Dean Mahmoud: Adam and Eve's Garments, Bodies, and Temptation (1982-11-19)",
+  "date": "1982-11-19",
+  "date_precision": "day",
+  "date_note": "Explicit in the filename.",
+  "source_file": "data/sources/playlists/audio-transcripts/59 - Friday Sermon 19 Nov 1982 By Dean Mahmoud.csv",
+  "youtube_id": "A1dhuhdFtvA",
+  "youtube_url": "https://www.youtube.com/watch?v=A1dhuhdFtvA",
+  "primary_speakers": [
+    "Dean Mahmoud",
+    "Unidentified man giving the adhan"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 448,
+    "first_speech_time": "00:00:00.000",
+    "last_speech_time": "00:23:45.056",
+    "section_count": 4,
+    "speaker_counts": {
+      "A man": 5,
+      "Dean Mahmoud": 443
+    }
+  },
+  "document_summary": "Dean Mahmoud delivers a sermon continuing an earlier discussion of Adam and Eve. He argues that the original garments in the garden may represent natural obedience, that Satan stripped these garments by producing disobedience, and that the later garment of righteousness belongs to Adam's descendants. He carefully distinguishes factual nakedness from interpretive language about shameful parts and warns against importing biblical moral vocabulary into the Quran. A detailed Arabic comparison of Quran 7:20 and 20:120 examines angels, immortality, the tree of eternity, and everlasting kingship. Dean concludes that Adam and Eve were mortal earthly beings who failed an intended period of training and discovered their limited bodies after the temptation.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-54-october-22-1982-sura-2-adam-angels",
+      "relationship": "earlier exploratory Adam, Satan, and body discussion",
+      "note": "The sermon develops the garment and temptation motifs more systematically."
+    },
+    {
+      "document_id": "audio-program/quran-study-behrouz-13-sura-7-adam-eve-bodies-1989-12-24",
+      "relationship": "later Rashad formulation of bodily transition",
+      "note": "The later teaching differs and should not be projected backward into Dean's sermon."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Preserve Dean Mahmoud as sole substantive teacher",
+      "instruction": "Do not attribute the sermon to Rashad."
+    },
+    {
+      "rule": "Keep translation methodology distinct from body speculation",
+      "instruction": "They are separate arguments."
+    },
+    {
+      "rule": "Do not merge the sermon with later Adam-body teachings",
+      "instruction": "The formulations differ."
+    }
+  ],
+  "sections": [
+    {
+      "id": "audio59-s01",
+      "start": 0,
+      "end": 360,
+      "title": "Review of the garden, hunger and nakedness, garments of obedience, and the garment of righteousness",
+      "summary": "Dean reviews Quran 20:118 and 7:22–27. Adam and Eve did not hunger or go naked in the garden. Their original covering may symbolize natural obedience, Satan's temptation stripped that obedience, and later scripture promises Adam's descendants a better garment of righteousness.",
+      "section_kind": "Friday sermon",
+      "claim_classification": "Dean Mahmoud's Quranic interpretation",
+      "concepts": [
+        {
+          "id": "garden-adam-eve",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "garment-obedience",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "garment-righteousness",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "nakedness",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "satan",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "garden not hunger naked",
+        "garment of obedience",
+        "Satan tore garments",
+        "children Adam better garment"
+      ],
+      "related_questions": [
+        "What did the original garment symbolize?",
+        "How did the garment of righteousness differ?"
+      ],
+      "quran_references": [
+        "20:118",
+        "7:22-27"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Adam",
+        "Eve",
+        "Satan"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:00.000",
+      "end_time": "00:06:03.120",
+      "source_segment_start": 0,
+      "source_segment_end": 84,
+      "csv_speakers": [
+        "A man",
+        "Dean Mahmoud"
+      ],
+      "canonical_text": "A man: ... La Elaha Ella Allah Hayya Alal Salat. Hayya Alal Salat Hayya Alal Falah. Hayya Alal Falah Allahu Akbar. Allahu Akbar A man: La Elaha Ella Allah Dean Mahmoud: Al-Salãmun ‘Alaykum wa Rahmatullahi wa Barakatuhu Bism Allah Arrahman Arraheem Alhamdu Lillah, (unintelligible) Wa Elaha Ella Allah Wahdahu La Shareeka Lah. (unintelligible) (33:41) يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱذْكُرُوا۟ ٱللَّهَ ذِكْرًۭا كَثِيرًۭا. The topic of this Khutba Prayer is a continuation of what we were discussing last time. We're still dealing in the problem of our great great great great great grand parents. I hope you've not forgotten that last time we discussed, based on explicit Quranic quotations, the meaning of the (unintelligible) or the garden of Adam and Eve. Let me just have a half a minute of review. In Sura 20, verse 118, Allah guarantees Adam and Eve that in the garden, they will not hunger, nor will go naked. The Quran is very modest, (unintelligible) garments. Thus, they had a garment. And one interpretation, out of so many other possible ones, is that, this I, I'm submitting as an observation, is that this was the garment of obedience. But obedience as a natural situation, as a natural state. Just unthinking obedience. But in Sura 7, verse 27, we are told explicitly in Quran that Satan tore off these garments. The very fact that they disobeyed Allah is the same, is equivalent to saying that these garments of obedience were taken off. They're equivalent, no? When they disobeyed, then the garments of disobedience of, then the garments obedience were taken off, taken off by Satan. And in Sura 7:22, and Sura 20:121, Adam and Eve covered themselves with garments which they made themselves, man-made. Garments made of leaves of the garden. In 7:26, a few verses after 7:22, Allah tells the children of, of Adam, We give you a better garment, that of righteousness. Now, I would like to mention that in the text, this garment of righteousness is not given to Adam and Eve. It's given to the children of Adam, to mankind. And mankind is Adam sometimes, (unintelligible) because as you know, sometimes Allah speaks to Adam, in the singular, sometimes He talks to both of them, in dual, and sometimes in the plural, something which is very hard to express in English. Now, the reason why I say that Allah gives Adam and Eve the garments of righteousness, although it says, of children of Adam, is because He gave words of revelation. He gave words of revelation to Adam and Eve. He was teaching them. And this to me, for all practical purposes, is the same also, as giving them the garments of, of righteousness. Now, as you all know by now, that the Jewish Bible is silent about the clothing that they had. That's probably why all of these movies and pictures of Adam and Eve, half-eliminated, you know, (unintelligible), half-informed, they're clothed and ashamed of themselves, and so on. But, there is something that is similar. Adam and Eve stitched leaves. They stitched it. Quran says they made (unintelligible) of clothes of it and so on. Then, after this, Allah, after showing this measure of their disobedience, He made clothes or skins for them. And then, He drived them out of the garden of Eden. Alright, back to the Quran. When Adam and Eve disobeyed, all, but it's the same thing. When Satan tore off their garments of obedience, what happened? What immediately happened? And what happened later on? This is now, we're becoming very, very curious.",
+      "review_status": "draft",
+      "retrieval_text": "Review of the garden, hunger and nakedness, garments of obedience, and the garment of righteousness\nDean reviews Quran 20:118 and 7:22–27. Adam and Eve did not hunger or go naked in the garden. Their original covering may symbolize natural obedience, Satan's temptation stripped that obedience, and later scripture promises Adam's descendants a better garment of righteousness.\nSection kind: Friday sermon\nClaim classification: Dean Mahmoud's Quranic interpretation\nConcepts: garden-adam-eve; garment-obedience; garment-righteousness; nakedness; satan\nUser terminology: garden not hunger naked; garment of obedience; Satan tore garments; children Adam better garment\nQuestions: What did the original garment symbolize? How did the garment of righteousness differ?\nQuran references: 20:118; 7:22-27\nBible references: \nEntities: Adam; Eve; Satan"
+    },
+    {
+      "id": "audio59-s02",
+      "start": 360,
+      "end": 720,
+      "title": "Bodies, nakedness, shame, translation methodology, and biblical influence",
+      "summary": "Dean compares translations of Quran 7:27 that say bodies, nakedness, shame, or shameful parts. He distinguishes factual description from moral evaluation and suspects that some shame language entered through influence from the Hebrew Bible.",
+      "section_kind": "Friday sermon",
+      "claim_classification": "Dean Mahmoud's linguistic argument",
+      "concepts": [
+        {
+          "id": "body",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "nakedness",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "shame",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "translation-method",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "biblical-influence",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "show them bodies",
+        "shameful parts",
+        "fact versus value judgment",
+        "Jewish Bible influence"
+      ],
+      "related_questions": [
+        "What methodological distinction did Dean make?",
+        "Why did he prefer body or nakedness over shameful parts?"
+      ],
+      "quran_references": [
+        "7:27"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "The biblical-influence claim requires textual-historical review.",
+      "retrieval_priority": "primary",
+      "start_time": "00:05:59.628",
+      "end_time": "00:11:59.819",
+      "source_segment_start": 84,
+      "source_segment_end": 229,
+      "csv_speakers": [
+        "Dean Mahmoud"
+      ],
+      "canonical_text": "This is now, we're becoming very, very curious. In Sura 7, verse 27, Allah said, that Satan removes their garments, in order to show them their bodies. That's very interesting, you know. This is Ustaz's (teacher) translation \"bodies.\" Other translators said \"shame\", \"nakedness.\" And another translator said, \"to show them their shameful parts.\" This is more explicit. Okay. Now, let's go to a problem of methodology. Here, we have, I believe, allegories or Masalan (مَثَلًۭا) involved. It's not, not something explicit like Wudu (Ablution). When Allah said, [5:6] ... (1) wash your faces, ... That's clear. [5:6] ... (1) wash your faces, ... However, you do it, [5:6] ... (1) wash your faces, ... Wash your hands, up to the elbows. Those are very clear. And Allah says so. There are verses that are clear. But, Masalans (مَثَلًۭا), allegories, are for people to reflect upon, to try to get messages, to draw implications, to draw ramifications. And, as long as we do not use these Masalans (مَثَلًۭا) to cast diversion of the memory of Allah, or as long as we don't use these Masalans (مَثَلًۭا) to cause division among the (unintelligible) of the believers, which Allah wants us, there are people who use these allegories to cast division. As long as we use them to understand more the Quran, to increase our Iman (faith), or to develop our understanding, I think we should not be afraid to try to get into the meaning, because as I said before, Allah presents these Masalans (مَثَلًۭا), these allegories, for men to reflect upon. And I hope I'm doing this for better understanding. The Quran is rich, so rich you can keep on getting more and more out of it. It's like a good orange. You keep on squeezing and squeezing, you can get as much orange juice as you want, make marmalade out of it, and make glazed candies out of it, (unintelligible) orange remains as is. This is, I think, a miracle of the Quran. I don't know why I'm talking of food so early in the morning. Now, the question again. What was disclosed? The crucial word here is Saw'atun (سَوْءَٰتِ) (unintelligible) Saw'at (سَوْءَٰتِ) This has been interpreted by some people within the Arabic context, not just when they translate in English. \"Ashamed\" \"Secret parts\" \"Hidden parts\" \"bodies\" and so on. A very primitive meaning is that it refers to something that is covered. Okay, please, let's put our attention to that. It means something that is covered, something that is not shown, something that you are unaware of, unconscious of. Now, take this word, \"bodies.\" Translation of Ustaz (teacher). This to me, or what one is unaware of, is factual. All the (unintelligible), correct? To say that a body is exposed, it's factual, only attempts to be factual. But if you say, \"shameful parts\", if you say \"shame\", then you are now interpreting, right? You are putting a moral value. To say someone is naked, that's a fact. But to say that someone is showing his or her shameful parts, that is more than the fact. That is something that involves a fact coupled with a valid judgment. You see, the person is naked, and it's not good. These are two different... Now, let's make that distinction. Those who say, \"shameful parts\", \"shame\", are now putting a value judgment. And I suspect, this comes because of influence of reading the Jewish Bible. And I'm glad, Ustaz (teacher) just says that. He didn't say a shameful body. Indeed, I'll go further and say, what is covered? What is hidden? What one is unaware of is not necessarily something that is shameful. It only means it's something one is not conscious about. And thus, my method in this Khutba today is to try to accommodate, more or less within a general feeling, this possible interpretation in a manner that would be intelligible, in a manner that would give credit to each and every one of these interpreters and so on. IN SHAA ALLAH. But first, we must study a little closer the nature of the temptation caused by Satan. The temptation which brought about the disrobing of Adam and Eve. There are two forms of the statement of temptation.",
+      "review_status": "draft",
+      "retrieval_text": "Bodies, nakedness, shame, translation methodology, and biblical influence\nDean compares translations of Quran 7:27 that say bodies, nakedness, shame, or shameful parts. He distinguishes factual description from moral evaluation and suspects that some shame language entered through influence from the Hebrew Bible.\nSection kind: Friday sermon\nClaim classification: Dean Mahmoud's linguistic argument\nConcepts: body; nakedness; shame; translation-method; biblical-influence\nUser terminology: show them bodies; shameful parts; fact versus value judgment; Jewish Bible influence\nQuestions: What methodological distinction did Dean make? Why did he prefer body or nakedness over shameful parts?\nQuran references: 7:27\nBible references: \nEntities: "
+    },
+    {
+      "id": "audio59-s03",
+      "start": 720,
+      "end": 1080,
+      "title": "Waswasa, angels, immortality, the tree of eternity, kingship, and Arabic roots",
+      "summary": "Dean compares Quran 7:20 and 20:120. Satan promises that the tree will make Adam and Eve angels or immortals and offers the tree of eternity and everlasting kingship. The sermon analyzes Arabic roots connected with whispering, angel or king, and eternity.",
+      "section_kind": "Friday sermon",
+      "claim_classification": "Dean Mahmoud's linguistic and theological interpretation",
+      "concepts": [
+        {
+          "id": "waswasa",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "angels",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "immortality",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "tree-eternity",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "everlasting-kingship",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "arabic-roots",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Waswas",
+        "become angels",
+        "become immortals",
+        "tree of Khuld",
+        "Mulkin never perish"
+      ],
+      "related_questions": [
+        "What two temptations were compared?",
+        "Which Arabic roots linked angels or kingship and eternity?"
+      ],
+      "quran_references": [
+        "7:20",
+        "20:120"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Adam",
+        "Eve",
+        "Satan"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:12:01.120",
+      "end_time": "00:18:02.628",
+      "source_segment_start": 230,
+      "source_segment_end": 338,
+      "csv_speakers": [
+        "Dean Mahmoud"
+      ],
+      "canonical_text": "The first is in Sura 7, verse 20, and the second is in Sura 20, verse 120. Now, we have to go very careful. I think in time, (unintelligible) and little effort in concentration because we have to use. a little Arabic. In 7, 1, in 7:20, [7:20] The devil whispered ... It's very interesting Arabic word, Waswas (وَسْوَسَ). It's not really just whisper, because you can whisper a nice thing. You can tell someone \"how are you?\" That's me just whispering. Or if you like a girl, \"I love you.\" (unintelligible) That's not, you know, this is whisper, huh? But this Waswas (وَسْوَسَ) is an onomatopoeic word. It's a word which sounds like what you're doing. It's like when, when whisper also, huh, \"shhh....\" Waswas (وَسْوَسَ). It is something, whispering in a sneaky, tempting way. And that's what Satan does. Whispering, tempting. He said, and I quote, [7:20] ... \"Your Lord did not prohibit you from this tree, except to prevent you from becoming angels, ... Don't forget this, [7:20] ... or becoming immortals.\" Alright? That's the first way the temptation is played. And that is in chapter 7. I'll repeat. [7:20] ... \"Your Lord did not prohibit you from this tree, except to prevent you from becoming angels, or becoming immortals.\" Okay. Now, let's go to the second form of the temptation. In Sura 20, verse 120. It's more dramatic. [20:120] But the devil whispered to him, saying, ... The word is Waswas (وَسْوَسَ), again. [20:120] ... \"O Adam, let me show you the tree of eternity and everlasting kingship.\" So, [20:120] ... let me show you the tree of eternity and everlasting kingship.\" It seems there is a, a difference, no? But actually, it's very beautiful as we go to the Arabic. So, three places. In 7, Sura 7:20, (unintelligible) Allah When the devil's saying, Allah does not want you to become angels, the word is Malakayn (مَلَكَيْنِ), alright, can you remember this? Malakayn (مَلَكَيْنِ) And Malakayn (مَلَكَيْنِ), angels, two, these Malakayn (مَلَكَيْنِ), two angels, the root is Malaka (مَلَكَ). M, L, K. Okay? Malaka (مَلَكَ), the word is Malaka (مَلَكَ). To hold something. Powerful. Angels are called Mala'ik (مَلَٰٓئِكَة) and two angels, Malakayn (مَلَكَيْنِ). Allah does not want you to become immortal. The word is Khalidin (خَٰلِدِين) Khalidin (خَٰلِدِين), okay? Can you remember that? From Khalada (خلد) to endure (unintelligible), the word Khalid (خالد) is a (unintelligible), it means one who's always subsisting (unintelligible). That's the first temptation. Allah does not want you to become Malakayn (مَلَكَيْنِ), M, L, K. And Allah does not want you to become immortal, Kha... Khalada (خلد) Kh, D, and L Khalada (خلد) is verb. The other one is Malaka (مَلَكَ). The second temptation is Allah... shall I show you the tree of eternity? The, the tree of eternity is Khuldi (خُلْدِ). It is Kh, L, D. Do you feel what it is? And a kingdom, a kingship, Mulkin (مُلْكٍۢ) M, L, K. (unintelligible) How beautiful, huh? See, these are two, two verses in Quran. Just I want you to become angels, M, L, K. Just I want you to become immortal, Kh, L, D. And the second temptation says, shall I show the tree of Kh, L, D and a kingdom that will never perish, M, L, K. Mulkin (مُلْكٍۢ). Mulkin (مُلْكٍۢ) means kingship. I'm just... This is a digression that shows you the beauty of the, of the Quran, the craftsmanship. It appears in different forms, but there is always a parallelism. It is the same source, naturally, the same author, Allah Himself. But anyhow, I'm sorry that I've gone through this literary exegesis. Let's go back to the temptation. The above temptation implies the following. First, that Adam and Eve were neither angels nor immortals, all right? Because why will you tempt them with something that they already have? When Satan says, Allah does not want you to become angels, doesn't want you to become immortal, it means from the beginning, they were neither angels nor immortals. The temptation makes sense if it offers you something that you want to, to, to have. So, that's the first thing you must consider. In other words, from the moment of their creation, when they were created out of earth, or dust, or clay, they were already destined to leave, to be sent to Earth, and, I may say, to die on earth. We must accept that as an action in the Quran. The plan was, from the beginning, they were mortals made of earth,",
+      "review_status": "draft",
+      "retrieval_text": "Waswasa, angels, immortality, the tree of eternity, kingship, and Arabic roots\nDean compares Quran 7:20 and 20:120. Satan promises that the tree will make Adam and Eve angels or immortals and offers the tree of eternity and everlasting kingship. The sermon analyzes Arabic roots connected with whispering, angel or king, and eternity.\nSection kind: Friday sermon\nClaim classification: Dean Mahmoud's linguistic and theological interpretation\nConcepts: waswasa; angels; immortality; tree-eternity; everlasting-kingship; arabic-roots\nUser terminology: Waswas; become angels; become immortals; tree of Khuld; Mulkin never perish\nQuestions: What two temptations were compared? Which Arabic roots linked angels or kingship and eternity?\nQuran references: 7:20; 20:120\nBible references: \nEntities: Adam; Eve; Satan"
+    },
+    {
+      "id": "audio59-s04",
+      "start": 1080,
+      "end": 1425.066,
+      "title": "Mortality, failed training, earthly bodies, and the discovery of human limitation",
+      "summary": "Dean argues that Adam and Eve were always intended to be mortal beings of Earth and that Satan deceived them because neither immortality nor angelhood followed. He compares their expulsion with students failing an early term of training and says they then recognized bodies limited by space, time, flesh, blood, and mortality.",
+      "section_kind": "Friday sermon",
+      "claim_classification": "Dean Mahmoud's theological interpretation",
+      "concepts": [
+        {
+          "id": "mortality",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "earthly-bodies",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "failed-training",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "space-time",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "human-limitation",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "mortals made of earth",
+        "flunked first semester",
+        "bodies flesh and blood",
+        "limited space-time"
+      ],
+      "related_questions": [
+        "What did Adam and Eve fail to become?",
+        "How did the school analogy explain expulsion?",
+        "What did they discover about their bodies?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Adam",
+        "Eve"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:17:58.532",
+      "end_time": "00:23:45.056",
+      "source_segment_start": 338,
+      "source_segment_end": 447,
+      "csv_speakers": [
+        "Dean Mahmoud"
+      ],
+      "canonical_text": "The plan was, from the beginning, they were mortals made of earth, they will be sent to earth, and they will have to die on earth. Or nothing for Satan. You, you cannot tempt them with immortality and so on. That's the first thing. The second one, old men say that deceived Adam and Eve. Why? Because after they ate of the tree, they did not become immortal, they did not become angels, right? It's very important. And not only that, they still had to go to earth, according to the original plan, as (unintelligible) Number three, Adam and Eve had, on account of this temptation, they were aspiring for something that they were not, and for which, I'm now submitting this, they were not ready before. In other words, they were not ready, they did not have the equipment, or the instruction, of how to become angels, or how to become immortal. The fourth one is that death, is not a punishment for the disobedience. No. Because they were destined to die from the beginning, right? So, dying is not a punishment for disobedience, for from the very beginning, they were mortal. And the fifth is that, what really happened was that, they were, they were untimely evicted from the garden. It's just like, they were supposed to leave the garden, but in this case, they left a little bit early than that was planned, although Allah knows this will happen. It's like a student who goes to college, he's supposed to stay four years or six years in college, depending on the degree, but if he lacks the first semester, then he is, he's kicked out. But this is what happened to our great grandparents. They were supposed to stay there for some time, I suppose, being taught more and trained, but they were kicked out a little bit, or very much earlier. They flunked, in other words. They were supposed to stay there temporarily, but not, although they were meant to stay there temporarily, the idea was not to have them kicked out, like a first-semester student who flunked. They were supposed to have to stay longer. Anyhow. When, when Adam and Eve did not get what they aspired to, when they did not become what they hoped for or wanted, they must have found out what they really were. And this is that they had bodies of flesh and blood, of earth, bodies limited by space-time coordinates, by space-time limitations. They realized that their bodies were of mortal stuff. See, they did not become immortal or angels. Then, they realized that their bodies were limited. They knew that they were mortal. Scales fell from their eyes. They realized that they were made out of bodies. And that, I think, I accept, (unintelligible) they were aware of their bodies, bodies that were supposed to rot, bodies that has blood. They realized they were deceived by Satan. They realized that they were vulnerable. They were in a precautious, precarious condition. They felt helpless. And more than ever, they needed Allah, alright? Aware of their bodies does not mean ashamed of their bodies. This is what I'm trying to say. Awareness of their bodies means that their bodies was, were limited. Neither this nor that were immortal. It was going to decay, and so on. Now to accommodate the thinking of the other students of the Quran, I submit that if there was any shame at all, it was not so much shame of the bodies, but it was the shame for disobeying Allah, alright? Allah had given them so much. Allah had given them food. Allah had given them clothing. Allah had warned them about Satan. They were not equal to the occasion. What existed now in their lives was a disharmony, a disequilibrium. Things were not what they were supposed to be. Things were not given them joy. It was, let's say, a world of square pegs and round holes all over. A disequilibrium. It was an atmosphere of living in a form of justice, brought by themselves to themselves. Things were not in their proper places. And as you all know, justice, one of the meanings of justice is putting things on the right position, giving things their proper joy. And they were helpless, abandoned by their sincere advisor, at least that's what Satan claimed he was. Later, there was no one to turn to, except Allah. This was a demo... (unintelligible) This is a dramatic recognition of Allah as the Lord. Dean Mahmoud: And this ...",
+      "review_status": "draft",
+      "retrieval_text": "Mortality, failed training, earthly bodies, and the discovery of human limitation\nDean argues that Adam and Eve were always intended to be mortal beings of Earth and that Satan deceived them because neither immortality nor angelhood followed. He compares their expulsion with students failing an early term of training and says they then recognized bodies limited by space, time, flesh, blood, and mortality.\nSection kind: Friday sermon\nClaim classification: Dean Mahmoud's theological interpretation\nConcepts: mortality; earthly-bodies; failed-training; space-time; human-limitation\nUser terminology: mortals made of earth; flunked first semester; bodies flesh and blood; limited space-time\nQuestions: What did Adam and Eve fail to become? How did the school analogy explain expulsion? What did they discover about their bodies?\nQuran references: \nBible references: \nEntities: Adam; Eve"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "angels",
+      "preferred_label": "Angels",
+      "aliases": [
+        "Mulkin never perish",
+        "Waswas",
+        "become angels",
+        "become immortals",
+        "tree of Khuld"
+      ],
+      "appears_in_sections": [
+        "audio59-s03"
+      ]
+    },
+    {
+      "id": "arabic-roots",
+      "preferred_label": "Arabic Roots",
+      "aliases": [
+        "Mulkin never perish",
+        "Waswas",
+        "become angels",
+        "become immortals",
+        "tree of Khuld"
+      ],
+      "appears_in_sections": [
+        "audio59-s03"
+      ]
+    },
+    {
+      "id": "biblical-influence",
+      "preferred_label": "Biblical Influence",
+      "aliases": [
+        "Jewish Bible influence",
+        "fact versus value judgment",
+        "shameful parts",
+        "show them bodies"
+      ],
+      "appears_in_sections": [
+        "audio59-s02"
+      ]
+    },
+    {
+      "id": "body",
+      "preferred_label": "Body",
+      "aliases": [
+        "Jewish Bible influence",
+        "fact versus value judgment",
+        "shameful parts",
+        "show them bodies"
+      ],
+      "appears_in_sections": [
+        "audio59-s02"
+      ]
+    },
+    {
+      "id": "earthly-bodies",
+      "preferred_label": "Earthly Bodies",
+      "aliases": [
+        "bodies flesh and blood",
+        "flunked first semester",
+        "limited space-time",
+        "mortals made of earth"
+      ],
+      "appears_in_sections": [
+        "audio59-s04"
+      ]
+    },
+    {
+      "id": "everlasting-kingship",
+      "preferred_label": "Everlasting Kingship",
+      "aliases": [
+        "Mulkin never perish",
+        "Waswas",
+        "become angels",
+        "become immortals",
+        "tree of Khuld"
+      ],
+      "appears_in_sections": [
+        "audio59-s03"
+      ]
+    },
+    {
+      "id": "failed-training",
+      "preferred_label": "Failed Training",
+      "aliases": [
+        "bodies flesh and blood",
+        "flunked first semester",
+        "limited space-time",
+        "mortals made of earth"
+      ],
+      "appears_in_sections": [
+        "audio59-s04"
+      ]
+    },
+    {
+      "id": "garden-adam-eve",
+      "preferred_label": "Garden Adam Eve",
+      "aliases": [
+        "Satan tore garments",
+        "children Adam better garment",
+        "garden not hunger naked",
+        "garment of obedience"
+      ],
+      "appears_in_sections": [
+        "audio59-s01"
+      ]
+    },
+    {
+      "id": "garment-obedience",
+      "preferred_label": "Garment Obedience",
+      "aliases": [
+        "Satan tore garments",
+        "children Adam better garment",
+        "garden not hunger naked",
+        "garment of obedience"
+      ],
+      "appears_in_sections": [
+        "audio59-s01"
+      ]
+    },
+    {
+      "id": "garment-righteousness",
+      "preferred_label": "Garment Righteousness",
+      "aliases": [
+        "Satan tore garments",
+        "children Adam better garment",
+        "garden not hunger naked",
+        "garment of obedience"
+      ],
+      "appears_in_sections": [
+        "audio59-s01"
+      ]
+    },
+    {
+      "id": "human-limitation",
+      "preferred_label": "Human Limitation",
+      "aliases": [
+        "bodies flesh and blood",
+        "flunked first semester",
+        "limited space-time",
+        "mortals made of earth"
+      ],
+      "appears_in_sections": [
+        "audio59-s04"
+      ]
+    },
+    {
+      "id": "immortality",
+      "preferred_label": "Immortality",
+      "aliases": [
+        "Mulkin never perish",
+        "Waswas",
+        "become angels",
+        "become immortals",
+        "tree of Khuld"
+      ],
+      "appears_in_sections": [
+        "audio59-s03"
+      ]
+    },
+    {
+      "id": "mortality",
+      "preferred_label": "Mortality",
+      "aliases": [
+        "bodies flesh and blood",
+        "flunked first semester",
+        "limited space-time",
+        "mortals made of earth"
+      ],
+      "appears_in_sections": [
+        "audio59-s04"
+      ]
+    },
+    {
+      "id": "nakedness",
+      "preferred_label": "Nakedness",
+      "aliases": [
+        "Jewish Bible influence",
+        "Satan tore garments",
+        "children Adam better garment",
+        "fact versus value judgment",
+        "garden not hunger naked",
+        "garment of obedience",
+        "shameful parts",
+        "show them bodies"
+      ],
+      "appears_in_sections": [
+        "audio59-s01",
+        "audio59-s02"
+      ]
+    },
+    {
+      "id": "satan",
+      "preferred_label": "Satan",
+      "aliases": [
+        "Satan tore garments",
+        "children Adam better garment",
+        "garden not hunger naked",
+        "garment of obedience"
+      ],
+      "appears_in_sections": [
+        "audio59-s01"
+      ]
+    },
+    {
+      "id": "shame",
+      "preferred_label": "Shame",
+      "aliases": [
+        "Jewish Bible influence",
+        "fact versus value judgment",
+        "shameful parts",
+        "show them bodies"
+      ],
+      "appears_in_sections": [
+        "audio59-s02"
+      ]
+    },
+    {
+      "id": "space-time",
+      "preferred_label": "Space Time",
+      "aliases": [
+        "bodies flesh and blood",
+        "flunked first semester",
+        "limited space-time",
+        "mortals made of earth"
+      ],
+      "appears_in_sections": [
+        "audio59-s04"
+      ]
+    },
+    {
+      "id": "translation-method",
+      "preferred_label": "Translation Method",
+      "aliases": [
+        "Jewish Bible influence",
+        "fact versus value judgment",
+        "shameful parts",
+        "show them bodies"
+      ],
+      "appears_in_sections": [
+        "audio59-s02"
+      ]
+    },
+    {
+      "id": "tree-eternity",
+      "preferred_label": "Tree Eternity",
+      "aliases": [
+        "Mulkin never perish",
+        "Waswas",
+        "become angels",
+        "become immortals",
+        "tree of Khuld"
+      ],
+      "appears_in_sections": [
+        "audio59-s03"
+      ]
+    },
+    {
+      "id": "waswasa",
+      "preferred_label": "Waswasa",
+      "aliases": [
+        "Mulkin never perish",
+        "Waswas",
+        "become angels",
+        "become immortals",
+        "tree of Khuld"
+      ],
+      "appears_in_sections": [
+        "audio59-s03"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio59-issue-01",
+      "issue_type": "continuation-sermon",
+      "original_text": "Dean explicitly continues a prior sermon or study not contained in this file.",
+      "suggested_action": "Preserve the review language.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio59-issue-02",
+      "issue_type": "linguistic-complexity",
+      "original_text": "Arabic roots and alternative translations are discussed orally.",
+      "suggested_action": "Review against the Arabic text.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio59-issue-03",
+      "issue_type": "speculative-anthropology",
+      "original_text": "The nature of Adam and Eve's bodies and training remains interpretive.",
+      "suggested_action": "Do not present as science.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio59-issue-04",
+      "issue_type": "biblical-influence-claim",
+      "original_text": "Other translations are linked to Hebrew Bible influence without documentation.",
+      "suggested_action": "Keep attributed.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "messenger-audio/59 Friday Sermon 19 Nov 1982 By Dean Mahmoud",
+  "canonical_catalog_ids": [
+    "messenger-audio/59 Friday Sermon 19 Nov 1982 By Dean Mahmoud"
+  ],
+  "canonical_mapping": "youtube-id",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

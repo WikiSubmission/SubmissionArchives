@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "document_id": "video-program/what-is-life-all-about",
+  "title": "What is Life All About?",
+  "cases": [
+    {
+      "id": "life-01-eval-001",
+      "question": "What did Rashad say was the biggest problem in the world?",
+      "expected_section_ids": [
+        "life-01-s01"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "People do not know who they are and therefore reverse their priorities."
+    },
+    {
+      "id": "life-01-eval-002",
+      "question": "Did Rashad say the body is just a garment?",
+      "expected_section_ids": [
+        "life-01-s01"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Yes. He describes the body as a garment worn for decades and then shed."
+    },
+    {
+      "id": "life-01-eval-003",
+      "question": "What did Rashad mean by the real self?",
+      "expected_section_ids": [
+        "life-01-s01",
+        "life-01-s02"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He identifies the soul, rather than the body, as the real person."
+    },
+    {
+      "id": "life-01-eval-004",
+      "question": "What did Rashad say life is all about?",
+      "expected_section_ids": [
+        "life-01-s02"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Rearranging priorities and nourishing the real person or soul."
+    },
+    {
+      "id": "life-01-eval-005",
+      "question": "What does it mean to feed the soul?",
+      "expected_section_ids": [
+        "life-01-s02",
+        "life-01-s03",
+        "life-01-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Developing the soul through contact with God and other prescribed practices."
+    },
+    {
+      "id": "life-01-eval-006",
+      "question": "Did Rashad say a soul can grow?",
+      "expected_section_ids": [
+        "life-01-s03"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Yes. He says the soul grows greatly and even speaks of its size."
+    },
+    {
+      "id": "life-01-eval-007",
+      "question": "Did Rashad teach that we existed before birth?",
+      "expected_section_ids": [
+        "life-01-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He says the real person is billions of years old, which directly bears on premortal existence."
+    },
+    {
+      "id": "life-01-eval-008",
+      "question": "How old did Rashad say the soul is?",
+      "expected_section_ids": [
+        "life-01-s04"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He says the real person is a few billion years old."
+    },
+    {
+      "id": "life-01-eval-009",
+      "question": "Why did Rashad say bodily life is effectively zero?",
+      "expected_section_ids": [
+        "life-01-s04"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Any finite lifespan divided by infinity is effectively zero."
+    },
+    {
+      "id": "life-01-eval-010",
+      "question": "How often should people perform the Contact Prayer?",
+      "expected_section_ids": [
+        "life-01-s05",
+        "life-01-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Five times daily. The transcript usually calls it contact with God rather than using the label Contact Prayer."
+    },
+    {
+      "id": "life-01-eval-011",
+      "question": "What is the difference between prayer and salat according to Rashad?",
+      "expected_section_ids": [
+        "life-01-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He distinguishes supplication from the prescribed sounds and movements that form the specific spiritual meal."
+    },
+    {
+      "id": "life-01-eval-012",
+      "question": "Why did Rashad compare the Contact Prayer to a safe combination?",
+      "expected_section_ids": [
+        "life-01-s05",
+        "life-01-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He says the prescribed sequence opens access to spiritual nourishment like the correct combination opens a safe."
+    },
+    {
+      "id": "life-01-eval-013",
+      "question": "What other practice did Rashad say nourishes the soul?",
+      "expected_section_ids": [
+        "life-01-s07"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Fasting."
+    },
+    {
+      "id": "life-01-eval-014",
+      "question": "Did Rashad say fasting is about controlling bodily desires?",
+      "expected_section_ids": [
+        "life-01-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Yes. He describes dictating to the body when it may eat and drink."
+    },
+    {
+      "id": "life-01-eval-015",
+      "question": "Did Rashad say money cannot buy happiness?",
+      "expected_section_ids": [
+        "life-01-s08",
+        "life-01-s09"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Yes. He says money, fame, beauty, and material success do not bring happiness."
+    },
+    {
+      "id": "life-01-eval-016",
+      "question": "What did Rashad say about Eddie Murphy?",
+      "expected_section_ids": [
+        "life-01-s08"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He cites an interview in which Eddie Murphy reportedly said something was missing despite material success."
+    },
+    {
+      "id": "life-01-eval-017",
+      "question": "What was Rashad's secret of happiness?",
+      "expected_section_ids": [
+        "life-01-s09"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Developing and nourishing the real person through the specific divine method."
+    },
+    {
+      "id": "life-01-eval-018",
+      "question": "Did Rashad think spiritual happiness only comes after death?",
+      "expected_section_ids": [
+        "life-01-s09",
+        "life-01-s12"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "No. He says happiness, victory, and success begin in this world."
+    },
+    {
+      "id": "life-01-eval-019",
+      "question": "Why should anyone believe Rashad?",
+      "expected_section_ids": [
+        "life-01-s10"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He says people should inspect tangible mathematical evidence and leave if it is not convincing."
+    },
+    {
+      "id": "life-01-eval-020",
+      "question": "Did Rashad believe in reincarnation?",
+      "expected_section_ids": [
+        "life-01-s11"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "This passage says people live only one life in this world, implicitly rejecting repeated earthly lives."
+    },
+    {
+      "id": "life-01-eval-021",
+      "question": "What determines a person's rank in eternal life?",
+      "expected_section_ids": [
+        "life-01-s11"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "How much the person developed and nourished the real self."
+    },
+    {
+      "id": "life-01-eval-022",
+      "question": "Did Rashad say the benefits of faith begin in this world?",
+      "expected_section_ids": [
+        "life-01-s12"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Yes. He says happiness and the consequences of nourishing the soul begin here."
+    },
+    {
+      "id": "life-01-eval-023",
+      "question": "Where could viewers meet Rashad?",
+      "expected_section_ids": [
+        "life-01-s13"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He gives an address in Tucson and invites viewers to arrange an appointment."
+    },
+    {
+      "id": "life-01-eval-024",
+      "question": "Did Rashad charge people to see his evidence?",
+      "expected_section_ids": [
+        "life-01-s13"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "No. He says it is free and he never asks for a penny."
+    }
+  ],
+  "canonical_document_id": "video-program/what-is-life-all-about",
+  "canonical_catalog_ids": [
+    "video-program/what-is-life-all-about"
+  ],
+  "canonical_mapping": "exact-document-id"
+}

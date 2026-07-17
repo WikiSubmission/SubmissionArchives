@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/friday-sermon-60-abrogation-scripture-communities-quran-2-1982-11-19",
+  "title": "Friday Sermon 60 by Rashad Khalifa: Abrogation, Scripture Communities, and Quran 2:111–123 (1982-11-19)",
+  "cases": [
+    {
+      "id": "audio60-eval-001",
+      "question": "What linguistic issue opened the recording?",
+      "expected_section_ids": [
+        "audio60-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The recording begins mid-discussion of Arabic and Hebrew pronunciation and historical ridicule. Dean Mahmoud then rejects the theory that Quranic verses abrogate one another because a consistent scripture cannot contain later correction of internal errors."
+    },
+    {
+      "id": "audio60-eval-002",
+      "question": "Why did Dean reject intra-Quranic abrogation?",
+      "expected_section_ids": [
+        "audio60-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The recording begins mid-discussion of Arabic and Hebrew pronunciation and historical ridicule. Dean Mahmoud then rejects the theory that Quranic verses abrogate one another because a consistent scripture cannot contain later correction of internal errors."
+    },
+    {
+      "id": "audio60-eval-003",
+      "question": "How was Quran 5:48 interpreted?",
+      "expected_section_ids": [
+        "audio60-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 5:48 is interpreted as assigning distinct statutes and methods to scripture communities while calling them to compete in righteousness. The group debates whether Christians and Jews may retain their own laws, whether pilgrimage existed across religions, dietary rules concerning pork, and New Testament claims about wine."
+    },
+    {
+      "id": "audio60-eval-004",
+      "question": "Which practices were said to differ among communities?",
+      "expected_section_ids": [
+        "audio60-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 5:48 is interpreted as assigning distinct statutes and methods to scripture communities while calling them to compete in righteousness. The group debates whether Christians and Jews may retain their own laws, whether pilgrimage existed across religions, dietary rules concerning pork, and New Testament claims about wine."
+    },
+    {
+      "id": "audio60-eval-005",
+      "question": "What questions arose over pork, wine, and pilgrimage?",
+      "expected_section_ids": [
+        "audio60-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 5:48 is interpreted as assigning distinct statutes and methods to scripture communities while calling them to compete in righteousness. The group debates whether Christians and Jews may retain their own laws, whether pilgrimage existed across religions, dietary rules concerning pork, and New Testament claims about wine."
+    },
+    {
+      "id": "audio60-eval-006",
+      "question": "What kind of competition did Quran 5:48 encourage?",
+      "expected_section_ids": [
+        "audio60-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The instruction to compete in righteousness is applied within and among communities as a competition that increases affection rather than hatred. The discussion moves through political and educational examples before returning to the Sura 2 study."
+    },
+    {
+      "id": "audio60-eval-007",
+      "question": "How did the study transition back to Sura 2?",
+      "expected_section_ids": [
+        "audio60-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The instruction to compete in righteousness is applied within and among communities as a competition that increases affection rather than hatred. The discussion moves through political and educational examples before returning to the Sura 2 study."
+    },
+    {
+      "id": "audio60-eval-008",
+      "question": "How were exclusive salvation claims challenged?",
+      "expected_section_ids": [
+        "audio60-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Exclusive Jewish and Christian claims to Heaven are called wishful thinking and are challenged to provide proof. Quran 2:112 states that anyone who submits to God while living righteously has nothing to fear. The passage continues through Jewish-Christian mutual denial, deserted mosques, God's east and west, sonship, creation by command, demands for direct speech or miracles, resistance to the messenger, and the inability of anyone to ransom or intercede on Judgment Day."
+    },
+    {
+      "id": "audio60-eval-009",
+      "question": "Who receives salvation in Quran 2:112?",
+      "expected_section_ids": [
+        "audio60-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Exclusive Jewish and Christian claims to Heaven are called wishful thinking and are challenged to provide proof. Quran 2:112 states that anyone who submits to God while living righteously has nothing to fear. The passage continues through Jewish-Christian mutual denial, deserted mosques, God's east and west, sonship, creation by command, demands for direct speech or miracles, resistance to the messenger, and the inability of anyone to ransom or intercede on Judgment Day."
+    },
+    {
+      "id": "audio60-eval-010",
+      "question": "Which disputes and Judgment themes followed?",
+      "expected_section_ids": [
+        "audio60-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Exclusive Jewish and Christian claims to Heaven are called wishful thinking and are challenged to provide proof. Quran 2:112 states that anyone who submits to God while living righteously has nothing to fear. The passage continues through Jewish-Christian mutual denial, deserted mosques, God's east and west, sonship, creation by command, demands for direct speech or miracles, resistance to the messenger, and the inability of anyone to ransom or intercede on Judgment Day."
+    },
+    {
+      "id": "audio60-eval-011",
+      "question": "How were the two easts and two wests interpreted?",
+      "expected_section_ids": [
+        "audio60-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses the east and west as possibly including the rising points of the sun and moon and reads Quran 2:115 as affirming God's presence everywhere. Quran 2:116–117 and 19:88–95 condemn claims that God has a son, saying creation belongs to Him and every being comes individually before God."
+    },
+    {
+      "id": "audio60-eval-012",
+      "question": "What language did Sura 19 use against divine sonship?",
+      "expected_section_ids": [
+        "audio60-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group discusses the east and west as possibly including the rising points of the sun and moon and reads Quran 2:115 as affirming God's presence everywhere. Quran 2:116–117 and 19:88–95 condemn claims that God has a son, saying creation belongs to Him and every being comes individually before God."
+    },
+    {
+      "id": "audio60-eval-013",
+      "question": "Why did Jesus' perfection not affect the argument?",
+      "expected_section_ids": [
+        "audio60-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The closing discussion says Jesus' perfection or sinlessness does not affect the God-alone principle and insists that Jesus is dead. Rashad argues that Genesis contradicts itself by naming Isaac as Abraham's only son after Ishmael had already been born, and says the traditional three-day burial of Jesus amounts to less than the stated duration when counted chronologically."
+    },
+    {
+      "id": "audio60-eval-014",
+      "question": "What contradiction was alleged regarding Ishmael and Isaac?",
+      "expected_section_ids": [
+        "audio60-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The closing discussion says Jesus' perfection or sinlessness does not affect the God-alone principle and insists that Jesus is dead. Rashad argues that Genesis contradicts itself by naming Isaac as Abraham's only son after Ishmael had already been born, and says the traditional three-day burial of Jesus amounts to less than the stated duration when counted chronologically."
+    },
+    {
+      "id": "audio60-eval-015",
+      "question": "What chronological objection concerned the three days?",
+      "expected_section_ids": [
+        "audio60-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The closing discussion says Jesus' perfection or sinlessness does not affect the God-alone principle and insists that Jesus is dead. Rashad argues that Genesis contradicts itself by naming Isaac as Abraham's only son after Ishmael had already been born, and says the traditional three-day burial of Jesus amounts to less than the stated duration when counted chronologically."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-52-al-fatihah-prayer-concentration-partial-1989-05-08",
+  "title": "Quran Study 52: al-Fatihah, Prayer Concentration, and the Beginning of Sura 2 (Partial, 1989-05-08)",
+  "cases": [
+    {
+      "id": "audio52-eval-001",
+      "question": "Why was al-Fatihah compared with a telephone number?",
+      "expected_section_ids": [
+        "audio52-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad calls al-Fatihah the key that opens daily contact with the Creator. Its Arabic sounds are compared with a telephone number that must be dialed correctly and are described as a universal, non-translatable ritual key. The study links its revelation after Sura 74 with nineteen."
+    },
+    {
+      "id": "audio52-eval-002",
+      "question": "How did the revelation sequence connect it with nineteen?",
+      "expected_section_ids": [
+        "audio52-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad calls al-Fatihah the key that opens daily contact with the Creator. Its Arabic sounds are compared with a telephone number that must be dialed correctly and are described as a universal, non-translatable ritual key. The study links its revelation after Sura 74 with nineteen."
+    },
+    {
+      "id": "audio52-eval-003",
+      "question": "Did Rashad require perfect concentration?",
+      "expected_section_ids": [
+        "audio52-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Satan concentrates on distracting worshipers and that perfect concentration is impossible. He nevertheless claims the correct sounds, bowing, and prostration establish contact mechanically, while encouraging as much concentration as possible. Quran 2:239 permits prayer while walking or riding under unusual circumstances."
+    },
+    {
+      "id": "audio52-eval-004",
+      "question": "What elements established contact in his explanation?",
+      "expected_section_ids": [
+        "audio52-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Satan concentrates on distracting worshipers and that perfect concentration is impossible. He nevertheless claims the correct sounds, bowing, and prostration establish contact mechanically, while encouraging as much concentration as possible. Quran 2:239 permits prayer while walking or riding under unusual circumstances."
+    },
+    {
+      "id": "audio52-eval-005",
+      "question": "When could prayer be performed while moving?",
+      "expected_section_ids": [
+        "audio52-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Satan concentrates on distracting worshipers and that perfect concentration is impossible. He nevertheless claims the correct sounds, bowing, and prostration establish contact mechanically, while encouraging as much concentration as possible. Quran 2:239 permits prayer while walking or riding under unusual circumstances."
+    },
+    {
+      "id": "audio52-eval-006",
+      "question": "What question was asked about useful thoughts during prayer?",
+      "expected_section_ids": [
+        "audio52-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants ask whether helpful ideas occurring during prayer can come from peace, God, or Satan. The discussion is fragmented, but distinguishes distracting thoughts from insights that may arise when the mind becomes calm."
+    },
+    {
+      "id": "audio52-eval-007",
+      "question": "Why is the answer difficult to reconstruct?",
+      "expected_section_ids": [
+        "audio52-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants ask whether helpful ideas occurring during prayer can come from peace, God, or Satan. The discussion is fragmented, but distinguishes distracting thoughts from insights that may arise when the mind becomes calm."
+    },
+    {
+      "id": "audio52-eval-008",
+      "question": "How was Quran 40:16 connected with intercession?",
+      "expected_section_ids": [
+        "audio52-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 40:16 states that all kingship belongs to God alone on Judgment Day. Sabahi connects this with the rejection of intercession. The group then returns to the order of early revelations, Sura 74, al-Fatihah, and the nineteen-letter Bismillah before the recording ends."
+    },
+    {
+      "id": "audio52-eval-009",
+      "question": "Which revelation-order issue closed the recording?",
+      "expected_section_ids": [
+        "audio52-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 40:16 states that all kingship belongs to God alone on Judgment Day. Sabahi connects this with the rejection of intercession. The group then returns to the order of early revelations, Sura 74, al-Fatihah, and the nineteen-letter Bismillah before the recording ends."
+    }
+  ],
+  "canonical_document_id": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
+  "canonical_catalog_ids": [
+    "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial"
+  ],
+  "canonical_mapping": "youtube-id"
+}

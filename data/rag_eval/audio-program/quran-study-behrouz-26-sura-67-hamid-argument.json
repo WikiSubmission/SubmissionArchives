@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.4-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-26-sura-67-hamid-argument",
+  "title": "Quran Study from Behrouz 26: Sura 67 and Hamid's Argument with Rashad",
+  "cases": [
+    {
+      "id": "audio26-eval-001",
+      "question": "What does kingship mean in Sura 67?",
+      "expected_section_ids": [
+        "behrouz26-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gatut explains that all authority belongs to God and that life and death were created to test who performs best. Divine kingship is connected with guidance and the purpose of existence."
+    },
+    {
+      "id": "audio26-eval-002",
+      "question": "Why were death and life created?",
+      "expected_section_ids": [
+        "behrouz26-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gatut explains that all authority belongs to God and that life and death were created to test who performs best. Divine kingship is connected with guidance and the purpose of existence."
+    },
+    {
+      "id": "audio26-eval-003",
+      "question": "What cosmic signs are described?",
+      "expected_section_ids": [
+        "behrouz26-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study examines the seven layered universes, repeated observation without flaw, the Milky Way and galaxies, stars as adornment in the lowest universe, and projectiles preventing devils and jinn from crossing limits."
+    },
+    {
+      "id": "audio26-eval-004",
+      "question": "What role did stars have regarding jinn?",
+      "expected_section_ids": [
+        "behrouz26-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study examines the seven layered universes, repeated observation without flaw, the Milky Way and galaxies, stars as adornment in the lowest universe, and projectiles preventing devils and jinn from crossing limits."
+    },
+    {
+      "id": "audio26-eval-005",
+      "question": "What admissions do rejecters make?",
+      "expected_section_ids": [
+        "behrouz26-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gatut continues with the fate of rejecters, the warning delivered by messengers, God's knowledge of secret speech and innermost thoughts, and rhetorical questions about provision and birds sustained in flight."
+    },
+    {
+      "id": "audio26-eval-006",
+      "question": "What does God know?",
+      "expected_section_ids": [
+        "behrouz26-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gatut continues with the fate of rejecters, the warning delivered by messengers, God's knowledge of secret speech and innermost thoughts, and rhetorical questions about provision and birds sustained in flight."
+    },
+    {
+      "id": "audio26-eval-007",
+      "question": "Which natural signs are used?",
+      "expected_section_ids": [
+        "behrouz26-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Gatut continues with the fate of rejecters, the warning delivered by messengers, God's knowledge of secret speech and innermost thoughts, and rhetorical questions about provision and birds sustained in flight."
+    },
+    {
+      "id": "audio26-eval-008",
+      "question": "What distinction did Hamid make?",
+      "expected_section_ids": [
+        "behrouz26-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Hamid argues that God is fully aware but does not necessarily interfere with every daily event. He emphasizes human peace of mind, study, and effort. Rashad and Robert answer that God controls everything, including the words being spoken."
+    },
+    {
+      "id": "audio26-eval-009",
+      "question": "How did Rashad answer?",
+      "expected_section_ids": [
+        "behrouz26-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Hamid argues that God is fully aware but does not necessarily interfere with every daily event. He emphasizes human peace of mind, study, and effort. Rashad and Robert answer that God controls everything, including the words being spoken."
+    },
+    {
+      "id": "audio26-eval-010",
+      "question": "What did Robert add?",
+      "expected_section_ids": [
+        "behrouz26-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Hamid argues that God is fully aware but does not necessarily interfere with every daily event. He emphasizes human peace of mind, study, and effort. Rashad and Robert answer that God controls everything, including the words being spoken."
+    },
+    {
+      "id": "audio26-eval-011",
+      "question": "How did Hamid defend intelligence and physical causes?",
+      "expected_section_ids": [
+        "behrouz26-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The argument turns to whether a person should believe in God-given intelligence and physical explanations. Hamid insists that surviving an accident has physical explanations and that confidence in one's capacities matters. Gatut answers that ego is the final idol and that one should believe in God rather than oneself."
+    },
+    {
+      "id": "audio26-eval-012",
+      "question": "How did Gatut answer with the ego doctrine?",
+      "expected_section_ids": [
+        "behrouz26-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The argument turns to whether a person should believe in God-given intelligence and physical explanations. Hamid insists that surviving an accident has physical explanations and that confidence in one's capacities matters. Gatut answers that ego is the final idol and that one should believe in God rather than oneself."
+    },
+    {
+      "id": "audio26-eval-013",
+      "question": "What remained unresolved?",
+      "expected_section_ids": [
+        "behrouz26-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The argument turns to whether a person should believe in God-given intelligence and physical explanations. Hamid insists that surviving an accident has physical explanations and that confidence in one's capacities matters. Gatut answers that ego is the final idol and that one should believe in God rather than oneself."
+    },
+    {
+      "id": "audio26-eval-014",
+      "question": "How did Robert describe the covenant?",
+      "expected_section_ids": [
+        "behrouz26-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Robert says belief in God alone also rests on common sense and the Quran's consistency. A covenant is built through many small decisions rather than one dramatic moment. The group reads al-Fatihah for Ali's studies and Farhad's birthday."
+    },
+    {
+      "id": "audio26-eval-015",
+      "question": "For whom was al-Fatihah read?",
+      "expected_section_ids": [
+        "behrouz26-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Robert says belief in God alone also rests on common sense and the Quran's consistency. A covenant is built through many small decisions rather than one dramatic moment. The group reads al-Fatihah for Ali's studies and Farhad's birthday."
+    }
+  ],
+  "canonical_document_id": "quran-study/26 Quran Study From Behrouz 1626 Sura 67 By Gatut Hamid Argues With Rashad",
+  "canonical_catalog_ids": [
+    "quran-study/26 Quran Study From Behrouz 1626 Sura 67 By Gatut Hamid Argues With Rashad"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube"
+}

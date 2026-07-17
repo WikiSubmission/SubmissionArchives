@@ -1,0 +1,9 @@
+﻿source_id,target_id,relationship,note
+written/W05,written/W02,extract_or_serial_reprint,The English Meanings material originated as an installment associated with the early ISLAM journal period. Do not count both as independent witnesses.
+written/W01,written/W07,precursor_to,The 1973 mysterious-alphabet research develops into the larger computer-based numerical compilation.
+written/W07,written/W09,overlapping_numerical_evidence,The two books present overlapping Code 19 evidence in different formats.
+written/W08,audio-video-quran-alone-family,published_counterpart,This monograph is the formal published counterpart to many Quran-alone sermons and interviews.
+written/W11,audio-video-salat-family,procedural_priority,The dedicated booklet outranks casual spoken answers for routine prayer procedure.
+quran/1992,written/W05,supersedes_for_final_translation,The 1992 authorized English edition is the final-edition authority. The 1974 rendering remains historical evidence.
+quran/1992,quran/1981-and-1989,selected_final_edition_only,The user intentionally excluded the 1981 and 1989 editions from this corpus.
+written/W10,doctrinal_sources,creative_adaptation,The screenplay may illuminate themes but is not a formal doctrinal authority.

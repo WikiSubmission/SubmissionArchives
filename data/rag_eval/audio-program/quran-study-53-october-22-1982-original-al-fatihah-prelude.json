@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.7-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-53-october-22-1982-original-al-fatihah-prelude",
+  "title": "Quran Study 53: October 22, 1982 Original Recording, Intellectual Freedom and al-Fatihah",
+  "cases": [
+    {
+      "id": "audio53-eval-001",
+      "question": "What intellectual decline was described?",
+      "expected_section_ids": [
+        "audio53-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants discuss how conquest and institutional change allegedly narrowed Muslim education to Hadith, Sunnah, and jurisprudence while algebra, philosophy, and free thought declined. The conversation distinguishes prediction by probability from responsible decision-making."
+    },
+    {
+      "id": "audio53-eval-002",
+      "question": "How were prediction and decision-making distinguished?",
+      "expected_section_ids": [
+        "audio53-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants discuss how conquest and institutional change allegedly narrowed Muslim education to Hadith, Sunnah, and jurisprudence while algebra, philosophy, and free thought declined. The conversation distinguishes prediction by probability from responsible decision-making."
+    },
+    {
+      "id": "audio53-eval-003",
+      "question": "Why did participants criticize reliance on Hadith?",
+      "expected_section_ids": [
+        "audio53-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group asks why people turn to Hadith rather than God and argues that additional books become more complicated. American television and advertising are criticized for creating a lifelong consume-and-produce mentality and unprecedented mass materialism."
+    },
+    {
+      "id": "audio53-eval-004",
+      "question": "How was American consumer culture described?",
+      "expected_section_ids": [
+        "audio53-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group asks why people turn to Hadith rather than God and argues that additional books become more complicated. American television and advertising are criticized for creating a lifelong consume-and-produce mentality and unprecedented mass materialism."
+    },
+    {
+      "id": "audio53-eval-005",
+      "question": "How were al-Fatihah's three groups mapped onto Sura 2?",
+      "expected_section_ids": [
+        "audio53-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study interprets those blessed as the righteous, those deserving wrath as disbelievers, and the strayers as hypocrites. The small number of verses devoted to disbelievers and the longer treatment of hypocrites at the beginning of Sura 2 are used to support the mapping."
+    },
+    {
+      "id": "audio53-eval-006",
+      "question": "Why were hypocrites identified with the strayers?",
+      "expected_section_ids": [
+        "audio53-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The study interprets those blessed as the righteous, those deserving wrath as disbelievers, and the strayers as hypocrites. The small number of verses devoted to disbelievers and the longer treatment of hypocrites at the beginning of Sura 2 are used to support the mapping."
+    },
+    {
+      "id": "audio53-eval-007",
+      "question": "Which English renderings of the path were compared?",
+      "expected_section_ids": [
+        "audio53-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Dean Mahmoud compares English and Arabic expressions for the straight, right, and correct path. The discussion treats these renderings as converging on the path one ought to follow rather than competing translations."
+    },
+    {
+      "id": "audio53-eval-008",
+      "question": "What shared meaning did they convey?",
+      "expected_section_ids": [
+        "audio53-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Dean Mahmoud compares English and Arabic expressions for the straight, right, and correct path. The discussion treats these renderings as converging on the path one ought to follow rather than competing translations."
+    },
+    {
+      "id": "audio53-eval-009",
+      "question": "Which classical commentaries were mentioned?",
+      "expected_section_ids": [
+        "audio53-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The speakers compare their interpretation with al-Manar, al-Zamakhshari, al-Baydawi, and other commentaries. They claim the answer lies on the next page in Sura 2 and that a strayer must first have been on the path, making the hypocrite especially culpable."
+    },
+    {
+      "id": "audio53-eval-010",
+      "question": "Why were hypocrites described as strayers?",
+      "expected_section_ids": [
+        "audio53-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The speakers compare their interpretation with al-Manar, al-Zamakhshari, al-Baydawi, and other commentaries. They claim the answer lies on the next page in Sura 2 and that a strayer must first have been on the path, making the hypocrite especially culpable."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/53 Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original",
+  "canonical_catalog_ids": [
+    "messenger-audio/53 Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original"
+  ],
+  "canonical_mapping": "youtube-id"
+}

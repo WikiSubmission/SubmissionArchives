@@ -1,0 +1,861 @@
+{
+  "schema_version": "1.8-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study Audio Archive",
+  "archive_number": 68,
+  "document_id": "audio-program/friday-sermon-68-adam-names-remembrance-code-19-libya-1982-12-17",
+  "title": "Friday Sermon 68: Adam's Names, Remembrance, Code 19, and Libya (1982-12-17)",
+  "date": "1982-12-17",
+  "date_precision": "day",
+  "date_note": "Explicit in the filename. The first twenty minutes are severely unintelligible.",
+  "source_file": "data/sources/playlists/audio-transcripts/68 - Friday Sermon 17 Dec. 1982 By Dr. Rashad Khalifa.csv",
+  "youtube_id": "SOWtLVZvm3Y",
+  "youtube_url": "https://www.youtube.com/watch?v=SOWtLVZvm3Y",
+  "primary_speakers": [
+    "Dean Mahmoud",
+    "Dr. Rashad Khalifa",
+    "Visiting Algerian participant",
+    "Other men and women"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 659,
+    "first_speech_time": "00:00:00.587",
+    "last_speech_time": "00:59:50.559",
+    "section_count": 5,
+    "speaker_counts": {
+      "A man": 128,
+      "Dean Mahmoud": 386,
+      "Dr. Khalifa": 142,
+      "A woman": 3
+    }
+  },
+  "document_summary": "A difficult recording whose opening sermon is largely unintelligible. From approximately twenty minutes onward, Dean Mahmoud returns to Quran 2:31 and argues that the names taught to Adam may be God's names or qualities, especially knowledge that all power comes from God. Satan's temptation causes humanity to forget the source of delegated power. Revelation, remembrance, prayer, Quran 2:286, and Quran 33:41 counteract forgetfulness. After prayer, the discussion becomes fragmented around scholarly authority, the nineteen-letter Bismillah, wahid, Deedat, Baha'i uses of nineteen, and religious additions. The final section introduces an Algerian visitor, Dean's 1977 Algeria trip, Rashad's education and employment, his period as Gaddafi's science adviser, the origins of his rejection of Hadith, and conflicting assessments of Gaddafi and Libya.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "audio-program/quran-study-54-october-22-1982-sura-2-adam-angels",
+      "relationship": "earlier debate over the names taught to Adam",
+      "note": "Study 68 develops Dean Mahmoud's divine-names and power interpretation."
+    },
+    {
+      "document_id": "audio-program/quran-study-49-code-19-heavenly-feud-1989-11-05",
+      "relationship": "later systematic Code 19 presentation",
+      "note": "The 1982 discussion is fragmentary and historically early."
+    },
+    {
+      "document_id": "audio-program/quran-study-51-sura-17-59-satan-jinn-brewery-1990",
+      "relationship": "later Rashad career and Satanic-dominion narrative",
+      "note": "Study 68 contains earlier autobiographical remarks about Gaddafi and the United Nations."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Give the opening low retrieval priority",
+      "instruction": "It is not reliably recoverable."
+    },
+    {
+      "rule": "Preserve Dean's divine-names interpretation",
+      "instruction": "It is the main coherent sermon argument."
+    },
+    {
+      "rule": "Separate autobiographical history from theological discussion",
+      "instruction": "They have different evidentiary status."
+    },
+    {
+      "rule": "Quote only canonical transcript text",
+      "instruction": "Enrichment prose remains retrieval metadata."
+    }
+  ],
+  "sections": [
+    {
+      "id": "audio68-s01",
+      "start": 0,
+      "end": 1320,
+      "title": "Severely unintelligible opening sermon and introductory remarks",
+      "summary": "The first portion contains an adhan and a long sermon or introduction dominated by unintelligible speech. Isolated references concern God, mankind, power, and Quranic verses, but the surviving transcript does not support a reliable detailed reconstruction.",
+      "section_kind": "Friday sermon, poorly intelligible",
+      "claim_classification": "insufficiently recoverable transcript",
+      "concepts": [
+        {
+          "id": "unintelligible-opening",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "sermon",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "power",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mankind",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "opening largely unintelligible",
+        "references to power and mankind"
+      ],
+      "related_questions": [
+        "What can safely be recovered from the opening?",
+        "Why is this section assigned low retrieval value?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Do not infer missing content from later themes.",
+      "retrieval_priority": "secondary",
+      "start_time": "00:00:00.587",
+      "end_time": "00:22:34.099",
+      "source_segment_start": 0,
+      "source_segment_end": 9,
+      "csv_speakers": [
+        "A man",
+        "Dean Mahmoud"
+      ],
+      "canonical_text": "A man: ...La Elaha Ella Allah. A man: (unintelligible) A man: (unintelligible) Dean Mahmoud: Allah has said Dean Mahmoud: (unintelligible) Dean Mahmoud: That is Dean Mahmoud: (unintelligible) of Allah. (unintelligible) (unintelligible) (unintelligible)",
+      "review_status": "draft",
+      "retrieval_text": "Severely unintelligible opening sermon and introductory remarks\nThe first portion contains an adhan and a long sermon or introduction dominated by unintelligible speech. Isolated references concern God, mankind, power, and Quranic verses, but the surviving transcript does not support a reliable detailed reconstruction.\nSection kind: Friday sermon, poorly intelligible\nClaim classification: insufficiently recoverable transcript\nConcepts: unintelligible-opening; sermon; power; mankind\nUser terminology: opening largely unintelligible; references to power and mankind\nQuestions: What can safely be recovered from the opening? Why is this section assigned low retrieval value?\nQuran references: \nBible references: \nEntities: "
+    },
+    {
+      "id": "audio68-s02",
+      "start": 1320,
+      "end": 2160,
+      "title": "Quran 2:31, Adam's names as divine qualities, delegated power, Satan, and bodily witnesses",
+      "summary": "Dean Mahmoud revisits the names taught to Adam and argues that they may be God's names or qualities, such as the Powerful, Merciful, Holy, Peace, and Source of all power. Adam possesses delegated power but Satan encourages forgetting its source. Human limbs and tongues are said to testify concerning how that power was used.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "quran-2-31",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "adam-names",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-qualities",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "delegated-power",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "satan",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "bodily-witnesses",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "taught Adam all names",
+        "names of God",
+        "source of all power",
+        "Satan makes Adam forget",
+        "hands and tongue witnesses"
+      ],
+      "related_questions": [
+        "What did Dean think the names taught to Adam might be?",
+        "How did Satan distort the use of delegated power?",
+        "What role did bodily witnesses have?"
+      ],
+      "quran_references": [
+        "2:31"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Adam",
+        "Satan"
+      ],
+      "retrieval_note": "Much of the section remains partially unintelligible; preserve uncertainty.",
+      "retrieval_priority": "primary",
+      "start_time": "00:21:38.792",
+      "end_time": "00:36:03.960",
+      "source_segment_start": 9,
+      "source_segment_end": 156,
+      "csv_speakers": [
+        "A man",
+        "Dean Mahmoud"
+      ],
+      "canonical_text": "(unintelligible) (unintelligible) Dean Mahmoud: of mankind (unintelligible) Dean Mahmoud: to realize (unintelligible) (unintelligible) the exercise of this power (unintelligible) or the source (unintelligible) Allah says (unintelligible) Allah says (unintelligible) Now (unintelligible) (unintelligible) The answer is clear. (unintelligible) Sura 18, verse 53. Sura 58, verse (unintelligible) (unintelligible) (unintelligible) Adam for that (unintelligible) Adam for this. (unintelligible) when Allah says (unintelligible) of Adam (unintelligible) When Allah says (unintelligible) When Allah says that is Adam (unintelligible) they did not say, Oh, please, we did not know. (unintelligible) Allah (unintelligible) And Allah says (unintelligible) Adam. And I let you know, this is (unintelligible). (unintelligible) Oh, please, I did not know. (unintelligible) Adam for this (unintelligible) In Sura 2, verse 31, Allah says [2:31] And He ... Allah [2:31] ... taught Adam all the names* ... (unintelligible) the truth is (unintelligible) you know, (unintelligible) secret. It's not a secret. It's really, really, (unintelligible). Now, let's go back (unintelligible) (unintelligible) Adam (unintelligible) before Eve's creation. Adam lived (unintelligible) animals (unintelligible) And then, (unintelligible) according to this (unintelligible). to find out how Adam is going to (unintelligible) (unintelligible) Adam (unintelligible) (unintelligible) to Adam, and (unintelligible) Adam. (unintelligible) what Adam is doing. (unintelligible) God (unintelligible) to Adam to find out what Adam (unintelligible) (unintelligible) the names of animals are all (unintelligible) (unintelligible) because (unintelligible) But (unintelligible) all theological point of views Dean Mahmoud: (unintelligible) A man: And it says, we will supply you with, with financial assistance, and I think that they have that supply (unintelligible) But it is a very, very serious miscalculation. A man: And if, if, if, if we find you to be (unintelligible), you can take that from us. A man: Not only... A man: (unintelligible) Dean Mahmoud: (unintelligible) to have (unintelligible) animals (unintelligible) It's more than that. (unintelligible) that these are the names of Allah (unintelligible) (unintelligible) Allah (unintelligible) Adam (unintelligible) (unintelligible) names of Allah. They're all in Quran. That is the Powerful. (unintelligible) That is He's the Rahman. He's (unintelligible). He's the Ghodoos (قُدُّوسُ). He's the Salam (سَّلَمُ). He's the Mu'min (مُؤْمِنُ), etc, etc, etc. These are the names of Allah. (unintelligible) (unintelligible) Allah (unintelligible) In other words, Allah (unintelligible) (unintelligible) Because Allah is the Merciful (unintelligible) Adam (unintelligible). And because Allah (unintelligible). (unintelligible) Before that, that Allah (unintelligible) (unintelligible) (unintelligible) that Allah is the Owner of all powers. (unintelligible) that Allah is the ultimate the King of kings and the source of all the power (unintelligible) In other words, (unintelligible) that, that Allah is the source of everything. And this is what (unintelligible) Adam from there. Adam had power. (unintelligible) But Sheytan (Satan) (unintelligible) that the source of this power is Allah. In other words, what Sheytan (Satan) believed was to (unintelligible) Adam (unintelligible) what Allah taught Adam. These are the names of Allah. (unintelligible) that whatever would be divine (unintelligible) was to be (unintelligible) And if (unintelligible) and would only (unintelligible) But Allah (unintelligible) Adam (unintelligible) (unintelligible) and all of these positions. All of these (unintelligible) And the Quran says, only (unintelligible) even our body parts, our tongue, our hands and (unintelligible), they will all be witnesses against us. They'll be witnesses against us (unintelligible) Sura 34, verse 34. So, to repeat, Sheytan (Satan) (unintelligible) Adam (unintelligible) (unintelligible) thoughts Adam by Allah (unintelligible) And Allah (unintelligible) him everything that the power Allah (unintelligible) (unintelligible) that is the manifestation of Allah (unintelligible) When there is an earthquake, (unintelligible) (unintelligible) All of this (unintelligible) which we know (unintelligible) And so, (unintelligible) we need a more time here the capacity or the forgetfulness. And this inclination was actualized. Now what do we mean by \"actualized?\" Remember a piece of iron at this room temperature. It can become very hot or very cold. But it is what we call potentially hot. How to make it hot? You put it on fire, then",
+      "review_status": "draft",
+      "retrieval_text": "Quran 2:31, Adam's names as divine qualities, delegated power, Satan, and bodily witnesses\nDean Mahmoud revisits the names taught to Adam and argues that they may be God's names or qualities, such as the Powerful, Merciful, Holy, Peace, and Source of all power. Adam possesses delegated power but Satan encourages forgetting its source. Human limbs and tongues are said to testify concerning how that power was used.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: quran-2-31; adam-names; divine-qualities; delegated-power; satan; bodily-witnesses\nUser terminology: taught Adam all names; names of God; source of all power; Satan makes Adam forget; hands and tongue witnesses\nQuestions: What did Dean think the names taught to Adam might be? How did Satan distort the use of delegated power? What role did bodily witnesses have?\nQuran references: 2:31\nBible references: \nEntities: Adam; Satan"
+    },
+    {
+      "id": "audio68-s03",
+      "start": 2160,
+      "end": 2700,
+      "title": "Forgetfulness actualized, revelation as reminder, prayer, Quran 2:286, and frequent remembrance",
+      "summary": "Dean uses an iron becoming actually hot to explain potentiality becoming actual. Satan turns the human capacity for forgetfulness into actual forgetting. Revelation and the Quran function as reminders, while prayer and repeated remembrance reconnect power with its divine source. Quran 2:286 asks not to be condemned for forgetting and Quran 33:41 commands frequent remembrance.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "forgetfulness",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "potentiality-actuality",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "revelation-reminder",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "prayer",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-2-286",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-33-41",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "potentially hot iron",
+        "revelation upsets forgetfulness",
+        "forget God forget soul",
+        "do not condemn us if we forget",
+        "remember God frequently"
+      ],
+      "related_questions": [
+        "How did Dean explain potential and actual forgetfulness?",
+        "Why were revelation and prayer necessary?",
+        "Which prayers and commands concerning remembrance were cited?"
+      ],
+      "quran_references": [
+        "2:286",
+        "33:41"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Dean Mahmoud"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:35:57.960",
+      "end_time": "00:45:00.224",
+      "source_segment_start": 156,
+      "source_segment_end": 302,
+      "csv_speakers": [
+        "A man",
+        "Dean Mahmoud",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "But it is what we call potentially hot. How to make it hot? You put it on fire, then it becomes actually hot. So, men have this potentiality. He has inclination, and (unintelligible) same time, use forgetfulness as the agent to make this inclination (unintelligible), which means not just (unintelligible), his inclination (unintelligible), but actually forgetting. And after (unintelligible), when abandoned by Sheytan (Satan), even (unintelligible) this condition. (unintelligible) return to Allah, God, Master and Creator, our Lord, King of all the kings. He is the source of all power. And Allah (unintelligible) and promise mankind's revelations. Why? Because revelations are reminder. Revelations are tools to upset forgetfulness. Revelations are (unintelligible) against Sheytan (Satan) (unintelligible) And (unintelligible) The Quran is the reminder, the remembrance for excellence. And it's always telling us to remember Allah. Always telling us to remember Allah, to remember His revelation. And it has to be recited by messengers. For if we, if we forget Allah, then He will forget us on the Day of Judgment. And if a person forgets Allah, he forgets his soul. (unintelligible) Now (unintelligible) see? If a man forgets Allah, (unintelligible), he forgets his soul. Because that part, part of our soul, it is finished. That is the same (unintelligible), okay? It's (unintelligible) of Allah's breath. Then (unintelligible) If (unintelligible) of the Quran. He who forgets Allah, forgets his soul. Because it is that part of his soul that remembers Allah. That is (unintelligible) Allah. So, this is all what is called topology. You know, (unintelligible). But one plus one is two. You can read this all in 6:68, (unintelligible) 21 (unintelligible) Sura 45, verse 34. Sura 59, (unintelligible), and so on. And now, you can see the value of prayer. Prayer is a technique, so that we do not forget Allah. Thus, to guard ourselves against temptations, or to prevent the occurrence of Adam's temptation, we must always remember Allah, and His qualities, or the names of His qualities, as found in the Quran. These are the things which will tell us how to use our powers in a guided and responsible manner. The overall guiding principle is that Allah is the source of all power, and the giver of all power, and the owner of all power, and that what little, or how much we have of this must be accountable to (unintelligible) on the Day of Judgment. In other words, to use modern language, we must keep this that our power is never alienated from its source. And may Allah always, always taught us to remember Him, and taught us that He may forgive us when we forget. And thus we can appreciate (unintelligible) in a prayer in the last verse of Sura 2 Well, Allah teaches us how to pray. We, and we are supposed to say it (2:286) رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا [2:286] ... \"Our Lord, do not condemn us if we forget ... Because we forget. (unintelligible). Do not forget or pray that we do not forget. (unintelligible). And we just found in Sura 2, verse 286. A'uzu Billahi Mina Shaytani Rajim (أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ) (unintelligible) (33:41) يَٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا ٱذْكُرُوا ٱللَّهَ ذِكْرًا كَثِيرًا Dean Mahmoud: (unintelligible) A man: Allahu Akbar. Allahu Akbar. Ash-hadu Alla Elaha Ella Allah (unintelligible) Ghad Ghamate Salat. A man: (unintelligible) A man: (unintelligible) A man: I wonder if, how do you, if, if Satan makes man forget, he makes you forget His power or the things that, or the soul... Dr. Khalifa: (unintelligible) A man: or what's (unintelligible), what God taught (unintelligible). Dean Mahmoud: You have to (unintelligible). Because, because man is not God, he's limited. (unintelligible) I forget (unintelligible) I believe God is not (unintelligible), he's not God. (unintelligible) But there's a counteract, counteract to this, remember, remember, remember. (unintelligible) (unintelligible), I went deep into the mystical aspect (unintelligible). Dean Mahmoud: I hope I don't (unintelligible) A man: We still have access to the power. A man: Even though they forget its force. Dean Mahmoud: I agree. Yes. But (unintelligible) A man: (unintelligible) A man: (unintelligible) A man: He has the access now, not merely power. Dean Mahmoud: Yes. Yes. Dean Mahmoud: Because you have power all the time. You never need power. There's nothing wrong with it. Dean Mahmoud: You need power so (unintelligible) A man: (unintelligible) Dean Mahmoud: Yes, yes, (unintelligible) Dean Mahmoud: (unintelligible) Then are these people (unintelligible) (unintelligible) It is here. So, I (unintelligible) Dean Mahmoud: (unintelligible) A man: (unintelligible) A man: You know, when I read that, I wanted to put (unintelligible) but then I didn't try to look for it. A man: Because there were... I really didn't make any comments. Dean Mahmoud: Jamila. Jamila. Jamila. Jamila. Dean Mahmoud: From all... Dr. Khalifa: (unintelligible) Dean Mahmoud: Yes, (unintelligible) Dr. Khalifa: South Africa? Dean Mahmoud: No, (unintelligible) from Africa. (unintelligible) A man: (unintelligible) A man: (unintelligible) Dean Mahmoud: (unintelligible) (unintelligible) to say if, if it was my children. Dean Mahmoud: Because of the military (unintelligible) Dr. Khalifa: Yep. Dean Mahmoud: I would give (unintelligible) Dr. Khalifa: (unintelligible) Yeah, I know. Dean Mahmoud: But you're never worried about something, huh? It worries me a lot. (unintelligible) Dean Mamhoud: You know what I'm worried? Dean Mahmoud: Because if men in that position have trust... Dr. Khalifa: What? Dean Mahmoud: If men in that position think that way, it shows that they're intellectually (unintelligible). A man: (unintelligible) A man: (unintelligible) Dr. Khalifa: I'll be back for that. I'm sorry. Dean Mahmoud: That's all right. A man: (unintelligible) A man: (unintelligible) A man: (unintelligible) A man: (unintelligible) No, I'm only student. (unintelligible) (unintelligible) A man: (unintelligible) Dean Mamhoud: (unintelligible) These people (unintelligible) The only (unintelligible) intellectually (unintelligible)",
+      "review_status": "draft",
+      "retrieval_text": "Forgetfulness actualized, revelation as reminder, prayer, Quran 2:286, and frequent remembrance\nDean uses an iron becoming actually hot to explain potentiality becoming actual. Satan turns the human capacity for forgetfulness into actual forgetting. Revelation and the Quran function as reminders, while prayer and repeated remembrance reconnect power with its divine source. Quran 2:286 asks not to be condemned for forgetting and Quran 33:41 commands frequent remembrance.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: forgetfulness; potentiality-actuality; revelation-reminder; prayer; quran-2-286; quran-33-41\nUser terminology: potentially hot iron; revelation upsets forgetfulness; forget God forget soul; do not condemn us if we forget; remember God frequently\nQuestions: How did Dean explain potential and actual forgetfulness? Why were revelation and prayer necessary? Which prayers and commands concerning remembrance were cited?\nQuran references: 2:286; 33:41\nBible references: \nEntities: Dean Mahmoud"
+    },
+    {
+      "id": "audio68-s04",
+      "start": 2700,
+      "end": 3180,
+      "title": "Scholarly authority, the nineteen-letter Bismillah, wahid, Deedat, and Baha'i numerology",
+      "summary": "The post-prayer discussion is fragmented. Participants criticize religious scholars and additions, argue that a nineteen-letter sentence cannot simply be fabricated to match the Quranic system, connect nineteen with wahid or one, mention Ahmed Deedat, and compare Baha'i uses of nineteen with Quran 74:30.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "religious-scholars",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "bismillah-nineteen",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "wahid",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "ahmed-deedat",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "bahai-numerology",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-74-30",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "anybody can make 19-letter sentence",
+        "19 equals one",
+        "Wahid",
+        "Deedat",
+        "Baha'i nineteen",
+        "over it is nineteen"
+      ],
+      "related_questions": [
+        "Which Code 19 objections were discussed?",
+        "How was nineteen connected with wahid?",
+        "Why were Deedat and the Baha'i faith mentioned?"
+      ],
+      "quran_references": [
+        "74:30"
+      ],
+      "bible_references": [],
+      "entities": [
+        "Ahmed Deedat"
+      ],
+      "retrieval_note": "The transcript is highly fragmentary and no complete calculation should be reconstructed from it.",
+      "retrieval_priority": "primary",
+      "start_time": "00:44:58.517",
+      "end_time": "00:53:03.215",
+      "source_segment_start": 302,
+      "source_segment_end": 499,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dean Mahmoud",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "intellectually (unintelligible) and (unintelligible) You remember two months ago, or three months ago, I told you that many of the old gods are literally heads of groups with power. Dean Mahmoud: There is chance that these ideas come from another source, one from them. Dr. Khalifa: (unintelligible) Dean Mahmoud: Because this (unintelligible) Dr. Khalifa: (unintelligible) Dean Mahmoud: Because the, the group as the, as a group, as a class group is power. Dean Mahmoud: It's lack of power. Dr. Khalifa: Yeah. Exactly. Dean Mahmoud: So, he says in life, (unintelligible) not know (unintelligible) (unintelligible) doesn't know this, he's not polite, and so on and so on. Besides, (unintelligible) anything. Dean Mahmoud: (unintelligible) these ideas come from these 'Ulama (unintelligible) Dean Mahmoud: (unintelligible) from us. Dean Mahmoud: In other words, in the group, Dr. Khalifa: Exactly. Dean Mahmoud: it only comes Dr. Khalifa: from us. Dean Mahmoud: from us. Dean Mahmoud: (unintelligible) Dr. Khalifa: (unintelligible) Dr. Khalifa: The same thing. Yeah. Dr. Khalifa: (unintelligible) Dean Mahmoud: (unintelligible) Dr. Khalifa: (unintelligible) Dean Mahmoud: Because these are (unintelligible) that have been (unintelligible) (unintelligible) Yeah. That is what it is. Dean Mahmoud: Now, if it doesn't come from them,... Dr. Khalifa: That. Dean Mahmoud: (unintelligible) that Dean Mahmoud: (unintelligible) Dr. Khalifa: Ok, now, the (unintelligible) (unintelligible) the Quran is, it has different numbers of verses, different numbers Suras. (unintelligible) But this doesn't support coming from an 'Alim. Dr. Khalifa: Two source. Dean Mahmoud: But he rebuild himself, but I said (unintelligible) Then he says, better conquer them. Dean Mahmoud: Now it's, it's (unintelligible) Dr. Khalifa: I know. A man: Well, how important it is particularly (unintelligible) Dr. Khalifa: (unintelligible) A man: Yeah, I read it on the (unintelligible). I read it on the (unintelligible) Dr. Khalifa: Did you know, I mean, this is really, to me, it's a fantastic (unintelligible). They're saying, \"Bism Allah Arrahman Arraheem is 19 letters from what? Anybody can make up a 19-letter sentence.\" And it doesn't have to be a (unintelligible). (unintelligible) هُمْ فِيهَا خَلِدُونَ Dr. Khalifa: (unintelligible) 19 letters A man: Yeah. Dr. Khalifa: You cannot make it up. Dean Mahmoud: Maybe, (unintelligible) A man: Salãmun ‘Alaykum Dean Mahmoud: ‘Alaykum Al-Salãm Dr. Khalifa: ‘Alaykum Al-Salãm Dr. Khalifa: They cannot make up (unintelligible) A man: (unintelligible) Dr. Khalifa: Only what? A man: Only (unintelligible) 2 pages you repeated that (unintelligible) A man: There is no place... Dean Mahmoud: (unintelligible) Dr. Khalifa: Yeah. Dean Mahmoud: (unintelligible) I think so. (unintelligible) But you know (unintelligible) These are, I think, (unintelligible) Dean Mahmoud: when we speak so many other things Dean Mahmoud: beside (unintelligible) Dr. Khalifa: Yeah. Dr. Khalifa: (unintelligible). Dean Mahmoud: (unintelligible) another (unintelligible) Dr. Khalifa: (unintelligible) from the Big Bang Dean Mahmoud: And then, it's alright. But (unintelligible) You know, what's interesting is that they never say the صل الله عليه وسلم (unintelligible) علیه السلام Dean Mahmoud: (unintelligible) Dr. Khalifa: Yeah. Dean Mahmoud: (unintelligible) these Muftis (unintelligible) Dr. Khalifa: Right. (unintelligible) Dean Mahmoud: Yeah. But at the same time (unintelligible) Dr. Khalifa: Yeah. Dean Mahmoud: (unintelligible) Dr. Khalifa: Right. Dean Mahmoud: (unintelligible) Dr. Khalifa: (unintelligible) Mufti (unintelligible) Dean Mahmoud: (unintelligible) Dean Mahmoud: (unintelligible) Dean Mahmoud: Because (unintelligible) Dr. Khalifa: Yeah. Dr. Khalifa: Good point. Dean Mahmoud: Because the Muftis, although (unintelligible) (unintelligible) Dean Mahmoud: But too A man: Idiomatic. Idiomatic Dean Mahmoud: (unintelligible) But (unintelligible) Dr. Khalifa: Actually, it describes (unintelligible) because (unintelligible) Dean Mahmoud: Well, nothing confidential (unintelligible) Dr. Khalifa: Yeah. A man: Salãmun ‘Alaykum Dr. Khalifa: ‘Alaykum Al-Salãm. Going to work? A man: Yes. Dean Mahmoud: But I have seen (unintelligible) Dr. Khalifa: (unintelligible) IN SHAA ALLAH. A man: (unintelligible) Dr. Khalifa: Alright. Dean Mahmoud: But I've only one (unintelligible) (unintelligible) (unintelligible) He speaks of Shari'a, Shari'a, Shari'a. Dean Mahmoud: (unintelligible) Dr. Khalifa: Yes Dean Mahmoud: So, it confused me. Dr. Khalifa: Oh, very confusing. (unintelligible) Dean Mahmoud: I think... Dr. Khalifa: (unintelligible) confusing if you can't try to fit (unintelligible) 19 letters. Dr. Khalifa: (unintelligible) Dean Mahmoud: And neither can (unintelligible) at that time because he's (unintelligible) of 19 Dean Mahmoud: as WAHID (واحد) Dr. Khalifa: Well, he didn't know. Yeah. Dean Mahmoud: No. Dr. Khalifa: He still doesn't know it. Dean Mahmoud: Who? Dr. Khalifa: Deedat. A woman: (unintelligible). Dr. Khalifa: I just lent him a book by mail. Yes. A man: With this guy (unintelligible) Dean Mahmoud: No, (unintelligible) Dr. Khalifa: Yeah, I forgot, really. I said. Dr. Khalifa: If I, if I remember (unintelligible) Dean Mahmoud: (unintelligible) make you forget. Dr. Khalifa: Yeah. Exactly. I think it's very important. I think that's the whole (unintelligible) of 19 equals one. Dean Mahmoud: (unintelligible) This person says (unintelligible) like 19. (unintelligible) with WAHID (واحد). Dean Mahmoud: (unintelligible) Dr. Khalifa: Is that right (unintelligible) Dean Mahmoud: Why? Dr. Khalifa: Cause it's because, it's because (unintelligible) Dean Mahmoud: (unintelligible) Dean Mahmoud: But Sometimes, some of the prayers of the Baha'i say, \"Allah, You're the Owner of everything.\" Dean Mahmoud: But it means now we will not take any more, because the Baha said. Dr. Khalifa: Well, how about the Jews. They worship God. Dean Mahmoud: Yes. Dr. Khalifa: This is what that, I opened an article (unintelligible) that became their (unintelligible) This, that accusation was (unintelligible) So, they tried in the addition to prayers. And (unintelligible) say at the beginning (unintelligible) number 19 (unintelligible) But this here (unintelligible) a verse in Quran that says (74:30) عَلَيْهَا تِسْعَةَ عَشَرَ Dr. Khalifa: And it will give (unintelligible) Dean Mahmoud: But this means only one thing. This is why it is related to the Arabic. Dean Mahmoud: The Baha'i can never entirely (unintelligible) the Quran. Dean Mahmoud: Because it is (unintelligible) Dr. Khalifa: (unintelligible) Dean Mahmoud: It's, it is (unintelligible) Dr. Khalifa: Yeah, the Quran is (unintelligible) Dean Mahmoud: However, they make a lot of superstitions. Dean Mahmoud: The date of the, the date of the birth of the (unintelligible) Dr. Khalifa: (unintelligible) idol worship Dean Mahmoud: Even that is very bad. Dean Mahmoud: Because they're using the English here in relation to using the Hijra here. Dr. Khalifa: Yeah. Dean Mahmoud: It's in a book. Dr. Khalifa: Right. Dean Mahmoud: But in other words, if people use it for the wrong thing, it's no argument against. (unintelligible) But it's very clear. This woman, in 1917 (unintelligible) the Baha'is (unintelligible) 19, revealed, I mean, put a number because it's (unintelligible) But only two people (unintelligible) Only two people (unintelligible) Dean Mahmoud: Only they do not know it's complete, entire, (unintelligible) A man: ‘Alaykum Al-Salãm Dr. Khalifa: ‘Alaykum Al-Salãm Dean Mahmoud: Salãmun ‘Alaykum Dr. Khalifa: (unintelligible) Muhammad is from Algeria and he goes to the University of California, Santa Barbara. Dean Mahmoud: Salãmun ‘Alaykum Dr. Khalifa: And he's visiting (unintelligible) Dean Mahmoud: I was in Algeria. Dr. Khalifa: No, Algeria. Dean Mahmoud: Yeah, I was in Algeria. Dr. Khalifa: (unintelligible) Dean Mahmoud: 1977 A man: 77, oh. A man: Where, which city were you there? A man: Algiers? Dean Mahmoud: Yeah. A man: Is that for a visit there? Dean Mahmoud: For a visit, yeah. A man: How did you like it? Dean Mahmoud: Very much, but I...some people were nice to me. Others were not nice.",
+      "review_status": "draft",
+      "retrieval_text": "Scholarly authority, the nineteen-letter Bismillah, wahid, Deedat, and Baha'i numerology\nThe post-prayer discussion is fragmented. Participants criticize religious scholars and additions, argue that a nineteen-letter sentence cannot simply be fabricated to match the Quranic system, connect nineteen with wahid or one, mention Ahmed Deedat, and compare Baha'i uses of nineteen with Quran 74:30.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: religious-scholars; bismillah-nineteen; wahid; ahmed-deedat; bahai-numerology; quran-74-30\nUser terminology: anybody can make 19-letter sentence; 19 equals one; Wahid; Deedat; Baha'i nineteen; over it is nineteen\nQuestions: Which Code 19 objections were discussed? How was nineteen connected with wahid? Why were Deedat and the Baha'i faith mentioned?\nQuran references: 74:30\nBible references: \nEntities: Ahmed Deedat"
+    },
+    {
+      "id": "audio68-s05",
+      "start": 3180,
+      "end": 3590.5690000000004,
+      "title": "Algeria, Rashad's education and career, Gaddafi, Hadith rejection, and Libya",
+      "summary": "A visiting Algerian participant speaks with Dean and Rashad about Algeria and Mostaganem. Rashad summarizes studying and teaching in California, industrial research at Monsanto, serving for two years as Gaddafi's science adviser, and joining the United Nations. He recounts a national billboard falsely labeled as Hadith and calls it the beginning of his rejection of Hadith. Participants debate propaganda and Gaddafi's writings, while Rashad describes him as a dictator who turned Libya into a prison.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "algeria",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "rashad-career",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "monsanto",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "gaddafi-adviser",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "hadith-rejection",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "libya",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "visited Algeria 1977",
+        "PhD California",
+        "Monsanto research",
+        "Gaddafi science adviser",
+        "beginning rejecting Hadith",
+        "Libya big prison"
+      ],
+      "related_questions": [
+        "Which autobiographical details did Rashad give?",
+        "What billboard story was connected with his rejection of Hadith?",
+        "How did participants disagree about Gaddafi and Libya?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "Algeria",
+        "Mostaganem",
+        "Monsanto",
+        "Muammar Gaddafi",
+        "Libya",
+        "United Nations"
+      ],
+      "retrieval_note": "Career and political claims require historical verification.",
+      "retrieval_priority": "primary",
+      "start_time": "00:52:57.685",
+      "end_time": "00:59:50.559",
+      "source_segment_start": 499,
+      "source_segment_end": 658,
+      "csv_speakers": [
+        "A man",
+        "A woman",
+        "Dean Mahmoud",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Dean Mahmoud: Very much, but I...some people were nice to me. Others were not nice. A man: (unintelligible) Dr. Khalifa: (unintelligible) Dean Mahmoud: The simple people, or newspaper men were nice. But the ministers did not want me to go to Mostaganem. They were giving me a car. They were giving me a hotel downtown. Dean Mahmoud: So, they give me hotel downtown. Dr. Khalifa: Was it Abdur-Rahman (unintelligible)? Dean Mahmoud: No, no, this was in the town of Mouloud, Mouloud... A man: Mouloud Kacem. Dean Mahmoud: Kacem, yeah. Mouloud Kacem. They were giving me a car. They were giving me a hotel. But they will not allow me to go to Mostaganem. So, I refused the car. I refused the hotel. Dean Mahmoud: And I went to sleep in the room of the consulate. A man: Would you, A man: would you be willing to see the... A man: He'll be there. A man: (unintelligible) A man: He'll be there. A man: (unintelligible) Dean Mahmoud: Oh, Ahmad. A man: Ahmad (unintelligible) Dean Mahmoud: (unintelligible) Dean Mahmoud: Yes, by the way, the... A man: That they didn't, they don't, they didn't talk about, A man: They don't talk about him at all. A man: About the... Dr. Khalifa: (unintelligible) A man: (unintelligible) at all. In Algeria, you don't hear about him. A man: I started to hear about him more here than in Algeria. Dr. Khalifa: Well, they wrote a book about him here. Dr. Khalifa: They wrote a book here. Dr. Khalifa: I'm most excited of the 20th century. Dean Mahmoud: Yeah. Dr. Khalifa: And I wrote about him. In fact, I keep quoting one of his quotations. Dr. Khalifa: Islam, (unintelligible) A man: I'm searching and I don't know anything. I don't know anything about him. So,... Dr. Khalifa: Yeah. A man: Do you have the book here? Dr. Khalifa: No, I don't have it. I... A man: Do you have something about him? Dr. Khalifa: I have it somewhere, but it's hiding in big piles of books. Dr. Khalifa: (unintelligible) A man: Okay, okay. Dr. Khalifa: Yeah. Well, I came here in 1959 to go to school. A man: Yeah, I'll be home in a while. Dr. Khalifa: Then, I went to University of California, Riverside. Dr. Khalifa: I got my PhD there and then I taught there. And back in... Dr. Khalifa: Well, I taught at University of (unintelligible). A woman: (unintelligible) amazing. Dr. Khalifa: And then, I went to (unintelligible) A man: Hope everything works out. I'm really worried. A man: (unintelligible) Dr. Khalifa: Yeah. A man: (unintelligible) Dr. Khalifa: Then, I came here at the university, I taught for one year. Then, I, I was in industrial research for Monsanto company for four years. Then, I joined the, then I was his science advisor for two years. I was Gaddafi's advisor, science advisor for two years. Dr. Khalifa: And then, I joined the United Nations. A woman: Yes. Yes. A man: Could I, could I either borrow this or get a copy of this? I'm trying to... Dr. Khalifa: Yes. A man: No, no, you can have it back. Dr. Khalifa: It's yours. A man: I'm trying to get as much material as I can have (unintelligible) Dr. Khalifa: No, you're wasting your time. A man: You had a chance. A man: (unintelligible) We have a lot in common. A man: You know him, I mean. Dr. Khalifa: Yeah. A man: He worked with... Dr. Khalifa: I don't think he's a good man, you know. A man: What do you think about him anyway? Dr. Khalifa: He's a dictator, you know. (unintelligible) Dr. Khalifa: He's now trapped in the, in keeping the (unintelligible) Dr. Khalifa: (unintelligible) A man: He's a dictator (unintelligible) A man: He's in the position about (unintelligible). Is he a good Muslim? Dr. Khalifa: I don't think so. Dr. Khalifa: He has some habits that he inherited from his father, he prays Dr. Khalifa: five times a day, and he talks about Islam, but he doesn't apply it. A man: He's, he's opposed to the (unintelligible) Dr. Khalifa: Only, but I, I, only for a funny reason. Dr. Khalifa: He had this statement written and then wrote, Dean Mahmoud: Al-Salãmun ‘Alaykum Ustaz. Dr. Khalifa: ‘Alaykum Al-Salãm A man: ‘Alaykum Al-Salãm Dean Mahmoud: Ok. (unintelligible) Dr. Khalifa: See you tonight. IN SHAA ALLAH. A man: IN SHAA ALLAH. Dr. Khalifa: He had this statement on billboards throughout the country. اتَّقِ شَرَّ مَنْ أَحْسَنْتَ إِلَيْهِ (Beware of the one that you're good to) Yeah, it was throughout the country. And then, after making it the, the motto of the nation, he put it in the official papers of the country, the government papers, or everything throughout the country. Then, he discovered it was not a Hadith, because it said under it, Hadith sharif. All of the billboards will say, this statement, a number of Hadith sharif. And then, he discovered it's not a Hadith at all. Dr. Khalifa: Somebody told him it's not a Hadith. A man: Ok. Dr. Khalifa: He was really mad and he... A man: What was the statement in English? Dr. Khalifa: It said, beware of the one that you're good to. A man: I thought he was opposed to Hadith in general, though. Dr. Khalifa: Well, yeah, after this, then he called someone and said, who said this is a Hadith? And then, he studied about Hadith and the contradictions in Hadith. Dr. Khalifa: And then he said, well the... A man: Maybe, he made a discovery or something at that point. Dr. Khalifa: Well, he was, but there's nothing (unintelligible) A man: You made the discovery yourself at a certain point, too. A man: There was a time when you accepted Hadith. Dr. Khalifa: Yeah. A man: And then, you made a discovery about it. A man: I mean, for some of us, it would (unintelligible) Dr. Khalifa: This was the beginning, right here. I wrote an article here. A man: But you know, he's, he's trying to (unintelligible) to make some changes in that. Dr. Khalifa: This one, this one was my, the beginning. A man: Change. Change (unintelligible) Dr. Khalifa: This is my beginning of rejecting Hadith. Dr. Khalifa: This is my... A man: Gaddafi? A man: Yeah. A man: Gaddafi? A man: Yeah, he's trying to (unintelligible) like (112:1) قُلْ هُوَ ٱللَّهُ أَحَدٌ He said, don't say it, Qul Huwa Allahu Ahad A man: Say, Huwa Allahu Ahad Dr. Khalifa: Yeah, but he didn't really want me to say it (unintelligible) We were just making a speech, talking to the people. He said, when you say (113:1) قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ You are supposed to say, A'uzu Bi Rabbil Falaq Dr. Khalifa: I seek refuge in God from the, from the devil. A man: Yeah, that's more academic, it's not... Dr. Khalifa: Yeah. Dr. Khalifa: Because just a common, but they capitalize, the one as his enemies, \"Yeah, he has lost it.\" A man: No, I've heard that before, you know. Dr. Khalifa: Yeah, but really, he doesn't want to send it. He has no intention of sending it. A man: So, I think this is why when I hear bad things about all these leaders in the Middle East, I wonder how much of it is propaganda. Dr. Khalifa: A lot of it, yeah. A man: You know, because the propaganda machines are, are very active. And we get, we get things here sifted down through many layers. And you can only judge the man in the end. A man: History will judge people by their writings about what they've done. A man: That's right. A man: So, I'm not gonna be so fast to judge people. And so what I am, you know... I hear what Gaddafi had done to people saying you can't buy vegetables now in Libya. I've been living abroad two times. But you cannot buy vegetables now here in Libya. And then, you know, I heard a lot of stuff. And I, I'm gonna keep my, reserve my judgment about Gaddafi until I have studied more of what he's read and written and, and, and investigated it more. Yes. Because what he's written, I've been very attracted to what he's written. He takes a system theory methodology, that we call a general approach to (unintelligible) A man: He wants his people on many levels. A man: Thank you very much. Also, very helpful for you to you can visit Libya. Dr. Khalifa: I wouldn't advise it. A man: I would like to live, I, I'd like to (unintelligible). A man: Because maybe his, his writings are really impressive. A man: But what he's doing... Dr. Khalifa: It's terrible. A man: It's terrible. A man: I, I haven't been there, but some (unintelligible) A man: So, what is, what is he doing? A man: I haven't been there, but the Libyan people are not very happy. Dr. Khalifa: He turned Libya into a big prison.",
+      "review_status": "draft",
+      "retrieval_text": "Algeria, Rashad's education and career, Gaddafi, Hadith rejection, and Libya\nA visiting Algerian participant speaks with Dean and Rashad about Algeria and Mostaganem. Rashad summarizes studying and teaching in California, industrial research at Monsanto, serving for two years as Gaddafi's science adviser, and joining the United Nations. He recounts a national billboard falsely labeled as Hadith and calls it the beginning of his rejection of Hadith. Participants debate propaganda and Gaddafi's writings, while Rashad describes him as a dictator who turned Libya into a prison.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: algeria; rashad-career; monsanto; gaddafi-adviser; hadith-rejection; libya\nUser terminology: visited Algeria 1977; PhD California; Monsanto research; Gaddafi science adviser; beginning rejecting Hadith; Libya big prison\nQuestions: Which autobiographical details did Rashad give? What billboard story was connected with his rejection of Hadith? How did participants disagree about Gaddafi and Libya?\nQuran references: \nBible references: \nEntities: Algeria; Mostaganem; Monsanto; Muammar Gaddafi; Libya; United Nations"
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "adam-names",
+      "preferred_label": "Adam Names",
+      "aliases": [
+        "Satan makes Adam forget",
+        "hands and tongue witnesses",
+        "names of God",
+        "source of all power",
+        "taught Adam all names"
+      ],
+      "appears_in_sections": [
+        "audio68-s02"
+      ]
+    },
+    {
+      "id": "ahmed-deedat",
+      "preferred_label": "Ahmed Deedat",
+      "aliases": [
+        "19 equals one",
+        "Baha'i nineteen",
+        "Deedat",
+        "Wahid",
+        "anybody can make 19-letter sentence",
+        "over it is nineteen"
+      ],
+      "appears_in_sections": [
+        "audio68-s04"
+      ]
+    },
+    {
+      "id": "algeria",
+      "preferred_label": "Algeria",
+      "aliases": [
+        "Gaddafi science adviser",
+        "Libya big prison",
+        "Monsanto research",
+        "PhD California",
+        "beginning rejecting Hadith",
+        "visited Algeria 1977"
+      ],
+      "appears_in_sections": [
+        "audio68-s05"
+      ]
+    },
+    {
+      "id": "bahai-numerology",
+      "preferred_label": "Bahai Numerology",
+      "aliases": [
+        "19 equals one",
+        "Baha'i nineteen",
+        "Deedat",
+        "Wahid",
+        "anybody can make 19-letter sentence",
+        "over it is nineteen"
+      ],
+      "appears_in_sections": [
+        "audio68-s04"
+      ]
+    },
+    {
+      "id": "bismillah-nineteen",
+      "preferred_label": "Bismillah Nineteen",
+      "aliases": [
+        "19 equals one",
+        "Baha'i nineteen",
+        "Deedat",
+        "Wahid",
+        "anybody can make 19-letter sentence",
+        "over it is nineteen"
+      ],
+      "appears_in_sections": [
+        "audio68-s04"
+      ]
+    },
+    {
+      "id": "bodily-witnesses",
+      "preferred_label": "Bodily Witnesses",
+      "aliases": [
+        "Satan makes Adam forget",
+        "hands and tongue witnesses",
+        "names of God",
+        "source of all power",
+        "taught Adam all names"
+      ],
+      "appears_in_sections": [
+        "audio68-s02"
+      ]
+    },
+    {
+      "id": "delegated-power",
+      "preferred_label": "Delegated Power",
+      "aliases": [
+        "Satan makes Adam forget",
+        "hands and tongue witnesses",
+        "names of God",
+        "source of all power",
+        "taught Adam all names"
+      ],
+      "appears_in_sections": [
+        "audio68-s02"
+      ]
+    },
+    {
+      "id": "divine-qualities",
+      "preferred_label": "Divine Qualities",
+      "aliases": [
+        "Satan makes Adam forget",
+        "hands and tongue witnesses",
+        "names of God",
+        "source of all power",
+        "taught Adam all names"
+      ],
+      "appears_in_sections": [
+        "audio68-s02"
+      ]
+    },
+    {
+      "id": "forgetfulness",
+      "preferred_label": "Forgetfulness",
+      "aliases": [
+        "do not condemn us if we forget",
+        "forget God forget soul",
+        "potentially hot iron",
+        "remember God frequently",
+        "revelation upsets forgetfulness"
+      ],
+      "appears_in_sections": [
+        "audio68-s03"
+      ]
+    },
+    {
+      "id": "gaddafi-adviser",
+      "preferred_label": "Gaddafi Adviser",
+      "aliases": [
+        "Gaddafi science adviser",
+        "Libya big prison",
+        "Monsanto research",
+        "PhD California",
+        "beginning rejecting Hadith",
+        "visited Algeria 1977"
+      ],
+      "appears_in_sections": [
+        "audio68-s05"
+      ]
+    },
+    {
+      "id": "hadith-rejection",
+      "preferred_label": "Hadith Rejection",
+      "aliases": [
+        "Gaddafi science adviser",
+        "Libya big prison",
+        "Monsanto research",
+        "PhD California",
+        "beginning rejecting Hadith",
+        "visited Algeria 1977"
+      ],
+      "appears_in_sections": [
+        "audio68-s05"
+      ]
+    },
+    {
+      "id": "libya",
+      "preferred_label": "Libya",
+      "aliases": [
+        "Gaddafi science adviser",
+        "Libya big prison",
+        "Monsanto research",
+        "PhD California",
+        "beginning rejecting Hadith",
+        "visited Algeria 1977"
+      ],
+      "appears_in_sections": [
+        "audio68-s05"
+      ]
+    },
+    {
+      "id": "mankind",
+      "preferred_label": "Mankind",
+      "aliases": [
+        "opening largely unintelligible",
+        "references to power and mankind"
+      ],
+      "appears_in_sections": [
+        "audio68-s01"
+      ]
+    },
+    {
+      "id": "monsanto",
+      "preferred_label": "Monsanto",
+      "aliases": [
+        "Gaddafi science adviser",
+        "Libya big prison",
+        "Monsanto research",
+        "PhD California",
+        "beginning rejecting Hadith",
+        "visited Algeria 1977"
+      ],
+      "appears_in_sections": [
+        "audio68-s05"
+      ]
+    },
+    {
+      "id": "potentiality-actuality",
+      "preferred_label": "Potentiality Actuality",
+      "aliases": [
+        "do not condemn us if we forget",
+        "forget God forget soul",
+        "potentially hot iron",
+        "remember God frequently",
+        "revelation upsets forgetfulness"
+      ],
+      "appears_in_sections": [
+        "audio68-s03"
+      ]
+    },
+    {
+      "id": "power",
+      "preferred_label": "Power",
+      "aliases": [
+        "opening largely unintelligible",
+        "references to power and mankind"
+      ],
+      "appears_in_sections": [
+        "audio68-s01"
+      ]
+    },
+    {
+      "id": "prayer",
+      "preferred_label": "Prayer",
+      "aliases": [
+        "do not condemn us if we forget",
+        "forget God forget soul",
+        "potentially hot iron",
+        "remember God frequently",
+        "revelation upsets forgetfulness"
+      ],
+      "appears_in_sections": [
+        "audio68-s03"
+      ]
+    },
+    {
+      "id": "quran-2-286",
+      "preferred_label": "Quran 2 286",
+      "aliases": [
+        "do not condemn us if we forget",
+        "forget God forget soul",
+        "potentially hot iron",
+        "remember God frequently",
+        "revelation upsets forgetfulness"
+      ],
+      "appears_in_sections": [
+        "audio68-s03"
+      ]
+    },
+    {
+      "id": "quran-2-31",
+      "preferred_label": "Quran 2 31",
+      "aliases": [
+        "Satan makes Adam forget",
+        "hands and tongue witnesses",
+        "names of God",
+        "source of all power",
+        "taught Adam all names"
+      ],
+      "appears_in_sections": [
+        "audio68-s02"
+      ]
+    },
+    {
+      "id": "quran-33-41",
+      "preferred_label": "Quran 33 41",
+      "aliases": [
+        "do not condemn us if we forget",
+        "forget God forget soul",
+        "potentially hot iron",
+        "remember God frequently",
+        "revelation upsets forgetfulness"
+      ],
+      "appears_in_sections": [
+        "audio68-s03"
+      ]
+    },
+    {
+      "id": "quran-74-30",
+      "preferred_label": "Quran 74 30",
+      "aliases": [
+        "19 equals one",
+        "Baha'i nineteen",
+        "Deedat",
+        "Wahid",
+        "anybody can make 19-letter sentence",
+        "over it is nineteen"
+      ],
+      "appears_in_sections": [
+        "audio68-s04"
+      ]
+    },
+    {
+      "id": "rashad-career",
+      "preferred_label": "Rashad Career",
+      "aliases": [
+        "Gaddafi science adviser",
+        "Libya big prison",
+        "Monsanto research",
+        "PhD California",
+        "beginning rejecting Hadith",
+        "visited Algeria 1977"
+      ],
+      "appears_in_sections": [
+        "audio68-s05"
+      ]
+    },
+    {
+      "id": "religious-scholars",
+      "preferred_label": "Religious Scholars",
+      "aliases": [
+        "19 equals one",
+        "Baha'i nineteen",
+        "Deedat",
+        "Wahid",
+        "anybody can make 19-letter sentence",
+        "over it is nineteen"
+      ],
+      "appears_in_sections": [
+        "audio68-s04"
+      ]
+    },
+    {
+      "id": "revelation-reminder",
+      "preferred_label": "Revelation Reminder",
+      "aliases": [
+        "do not condemn us if we forget",
+        "forget God forget soul",
+        "potentially hot iron",
+        "remember God frequently",
+        "revelation upsets forgetfulness"
+      ],
+      "appears_in_sections": [
+        "audio68-s03"
+      ]
+    },
+    {
+      "id": "satan",
+      "preferred_label": "Satan",
+      "aliases": [
+        "Satan makes Adam forget",
+        "hands and tongue witnesses",
+        "names of God",
+        "source of all power",
+        "taught Adam all names"
+      ],
+      "appears_in_sections": [
+        "audio68-s02"
+      ]
+    },
+    {
+      "id": "sermon",
+      "preferred_label": "Sermon",
+      "aliases": [
+        "opening largely unintelligible",
+        "references to power and mankind"
+      ],
+      "appears_in_sections": [
+        "audio68-s01"
+      ]
+    },
+    {
+      "id": "unintelligible-opening",
+      "preferred_label": "Unintelligible Opening",
+      "aliases": [
+        "opening largely unintelligible",
+        "references to power and mankind"
+      ],
+      "appears_in_sections": [
+        "audio68-s01"
+      ]
+    },
+    {
+      "id": "wahid",
+      "preferred_label": "Wahid",
+      "aliases": [
+        "19 equals one",
+        "Baha'i nineteen",
+        "Deedat",
+        "Wahid",
+        "anybody can make 19-letter sentence",
+        "over it is nineteen"
+      ],
+      "appears_in_sections": [
+        "audio68-s04"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "audio68-issue-01",
+      "issue_type": "severe-unintelligibility",
+      "original_text": "The first twenty minutes and many later exchanges are poorly transcribed.",
+      "suggested_action": "Avoid detailed inference and prioritize audio review.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio68-issue-02",
+      "issue_type": "fragmentary-code-19",
+      "original_text": "The numerical discussion lacks complete arguments and inputs.",
+      "suggested_action": "Do not reconstruct calculations.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio68-issue-03",
+      "issue_type": "political-and-biographical-claims",
+      "original_text": "Gaddafi, Algeria, Libya, employment, and Hadith-rejection history are discussed informally.",
+      "suggested_action": "Verify independently.",
+      "status": "needs_review"
+    },
+    {
+      "id": "audio68-issue-04",
+      "issue_type": "speaker-overlap",
+      "original_text": "Dean, Rashad, visitors, and unidentified speakers frequently overlap.",
+      "suggested_action": "Review audio before precise quotation.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "messenger-audio/68 Friday Sermon 17 Dec 1982",
+  "canonical_catalog_ids": [
+    "messenger-audio/68 Friday Sermon 17 Dec 1982"
+  ],
+  "canonical_mapping": "youtube-id",
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.2-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-14-night-of-destiny-zikr",
+  "title": "Quran Study from Behrouz 14: Night of Destiny Zikr",
+  "cases": [
+    {
+      "id": "behrouz14-eval-001",
+      "question": "How did Rashad describe the effect of zikr on the soul?",
+      "expected_section_ids": [
+        "behrouz14-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says the group's spiritual growth through zikr resembles a baby rapidly becoming a teenager. He calls remembrance God's most beloved form of worship and compares it with a steak-and-lobster meal for the soul. Participants are instructed to concentrate until the words become the dominant thought and every cell seems to repeat them."
+    },
+    {
+      "id": "behrouz14-eval-002",
+      "question": "What food metaphor did he use?",
+      "expected_section_ids": [
+        "behrouz14-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says the group's spiritual growth through zikr resembles a baby rapidly becoming a teenager. He calls remembrance God's most beloved form of worship and compares it with a steak-and-lobster meal for the soul. Participants are instructed to concentrate until the words become the dominant thought and every cell seems to repeat them."
+    },
+    {
+      "id": "behrouz14-eval-003",
+      "question": "How were participants told to concentrate?",
+      "expected_section_ids": [
+        "behrouz14-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says the group's spiritual growth through zikr resembles a baby rapidly becoming a teenager. He calls remembrance God's most beloved form of worship and compares it with a steak-and-lobster meal for the soul. Participants are instructed to concentrate until the words become the dominant thought and every cell seems to repeat them."
+    },
+    {
+      "id": "behrouz14-eval-004",
+      "question": "What formula dominated the first zikr?",
+      "expected_section_ids": [
+        "behrouz14-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group repeatedly chants the God-alone testimony. Rashad says the more sincerely it is repeated, the more the soul grows. Quran 20:14 is cited in the first-person singular: Contact Prayer is observed to commemorate God, not any human being."
+    },
+    {
+      "id": "behrouz14-eval-005",
+      "question": "How did Rashad connect repetition with growth?",
+      "expected_section_ids": [
+        "behrouz14-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group repeatedly chants the God-alone testimony. Rashad says the more sincerely it is repeated, the more the soul grows. Quran 20:14 is cited in the first-person singular: Contact Prayer is observed to commemorate God, not any human being."
+    },
+    {
+      "id": "behrouz14-eval-006",
+      "question": "How was Quran 20:14 applied?",
+      "expected_section_ids": [
+        "behrouz14-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group repeatedly chants the God-alone testimony. Rashad says the more sincerely it is repeated, the more the soul grows. Quran 20:14 is cited in the first-person singular: Contact Prayer is observed to commemorate God, not any human being."
+    },
+    {
+      "id": "behrouz14-eval-007",
+      "question": "What did Qayyum mean in the recording?",
+      "expected_section_ids": [
+        "behrouz14-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The chant narrows to repeated invocation of God's name. Rashad introduces Qayyum as recognition of God as the absolute, eternal, self-subsisting sovereign. The repetitive structure is intended to move from verbal utterance toward absorbed recognition."
+    },
+    {
+      "id": "behrouz14-eval-008",
+      "question": "What purpose did repeated invocation serve?",
+      "expected_section_ids": [
+        "behrouz14-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The chant narrows to repeated invocation of God's name. Rashad introduces Qayyum as recognition of God as the absolute, eternal, self-subsisting sovereign. The repetitive structure is intended to move from verbal utterance toward absorbed recognition."
+    },
+    {
+      "id": "behrouz14-eval-009",
+      "question": "Which three main formulas were recited?",
+      "expected_section_ids": [
+        "behrouz14-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad leads glorification, praise, and magnification of God. He says all creation glorifies God automatically, while humans possess choice and can fail to do so. Failure is described as stupidity, injustice, and ingratitude, while successful choice becomes a source of gratitude."
+    },
+    {
+      "id": "behrouz14-eval-010",
+      "question": "How did humans differ from the rest of creation?",
+      "expected_section_ids": [
+        "behrouz14-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad leads glorification, praise, and magnification of God. He says all creation glorifies God automatically, while humans possess choice and can fail to do so. Failure is described as stupidity, injustice, and ingratitude, while successful choice becomes a source of gratitude."
+    },
+    {
+      "id": "behrouz14-eval-011",
+      "question": "What moral meaning did Rashad attach to glorification?",
+      "expected_section_ids": [
+        "behrouz14-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad leads glorification, praise, and magnification of God. He says all creation glorifies God automatically, while humans possess choice and can fail to do so. Failure is described as stupidity, injustice, and ingratitude, while successful choice becomes a source of gratitude."
+    },
+    {
+      "id": "behrouz14-eval-012",
+      "question": "What did Rashad call the Mawlana chant?",
+      "expected_section_ids": [
+        "behrouz14-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad introduces a joyful 'national anthem' built around God, the God-alone testimony, and Mawlana. The group chants collectively, then closes the first cycle with al-Fatihah."
+    },
+    {
+      "id": "behrouz14-eval-013",
+      "question": "How did the first zikr cycle close?",
+      "expected_section_ids": [
+        "behrouz14-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad introduces a joyful 'national anthem' built around God, the God-alone testimony, and Mawlana. The group chants collectively, then closes the first cycle with al-Fatihah."
+    },
+    {
+      "id": "behrouz14-eval-014",
+      "question": "What special event occurs on the Night of Destiny?",
+      "expected_section_ids": [
+        "behrouz14-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The second cycle begins with Sura al-Qadr. Rashad says angels descend that night to carry out every command and may see the participants commemorating God and recognize their dearest wishes. The group chants phrases translated as God belongs to us or we belong to God, followed by the claim that happiness therefore belongs to the believers."
+    },
+    {
+      "id": "behrouz14-eval-015",
+      "question": "What did Rashad say the angels might recognize?",
+      "expected_section_ids": [
+        "behrouz14-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The second cycle begins with Sura al-Qadr. Rashad says angels descend that night to carry out every command and may see the participants commemorating God and recognize their dearest wishes. The group chants phrases translated as God belongs to us or we belong to God, followed by the claim that happiness therefore belongs to the believers."
+    },
+    {
+      "id": "behrouz14-eval-016",
+      "question": "What did the Allahu Lana chant express?",
+      "expected_section_ids": [
+        "behrouz14-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The second cycle begins with Sura al-Qadr. Rashad says angels descend that night to carry out every command and may see the participants commemorating God and recognize their dearest wishes. The group chants phrases translated as God belongs to us or we belong to God, followed by the claim that happiness therefore belongs to the believers."
+    },
+    {
+      "id": "behrouz14-eval-017",
+      "question": "What premortal event did Rashad recall?",
+      "expected_section_ids": [
+        "behrouz14-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recalls the premortal testimony that God alone is Lord. The renewed chant is presented as a declaration by both body and soul, reversing the original failure and restoring conscious allegiance to God alone."
+    },
+    {
+      "id": "behrouz14-eval-018",
+      "question": "Why did he emphasize both body and soul?",
+      "expected_section_ids": [
+        "behrouz14-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad recalls the premortal testimony that God alone is Lord. The renewed chant is presented as a declaration by both body and soul, reversing the original failure and restoring conscious allegiance to God alone."
+    },
+    {
+      "id": "behrouz14-eval-019",
+      "question": "What account metaphor did Rashad use?",
+      "expected_section_ids": [
+        "behrouz14-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says every remembrance places an enormous deposit in the soul's post-retirement account. He claims the Quran promises payment in health, wealth, perfect happiness, and dignity, while insisting that love of God would make zikr worthwhile even without reward. The group closes by asking God to accept prayer, zakat, fasting, and continued guidance, followed by al-Fatihah."
+    },
+    {
+      "id": "behrouz14-eval-020",
+      "question": "Which benefits did he promise?",
+      "expected_section_ids": [
+        "behrouz14-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says every remembrance places an enormous deposit in the soul's post-retirement account. He claims the Quran promises payment in health, wealth, perfect happiness, and dignity, while insisting that love of God would make zikr worthwhile even without reward. The group closes by asking God to accept prayer, zakat, fasting, and continued guidance, followed by al-Fatihah."
+    },
+    {
+      "id": "behrouz14-eval-021",
+      "question": "How did the Night of Destiny gathering close?",
+      "expected_section_ids": [
+        "behrouz14-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says every remembrance places an enormous deposit in the soul's post-retirement account. He claims the Quran promises payment in health, wealth, perfect happiness, and dignity, while insisting that love of God would make zikr worthwhile even without reward. The group closes by asking God to accept prayer, zakat, fasting, and continued guidance, followed by al-Fatihah."
+    }
+  ],
+  "canonical_document_id": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
+  "canonical_catalog_ids": [
+    "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube"
+}

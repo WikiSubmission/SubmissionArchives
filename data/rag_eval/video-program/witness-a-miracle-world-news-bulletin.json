@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.1",
+  "document_id": "video-program/witness-a-miracle-world-news-bulletin",
+  "title": "Witness a Miracle & World News Bulletin",
+  "cases": [
+    {
+      "id": "miracle-01-eval-001",
+      "question": "Why did Rashad discuss Carl Sagan's Contact?",
+      "expected_section_ids": [
+        "miracle-01-s01"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He used the fictional coded message as a comparison with what he claimed was a real coded divine message."
+    },
+    {
+      "id": "miracle-01-eval-002",
+      "question": "Did Rashad discuss SETI or extraterrestrial intelligence?",
+      "expected_section_ids": [
+        "miracle-01-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He discusses Contact's imagined encounter with intelligent beings and a coded message from outer space, although SETI is not named."
+    },
+    {
+      "id": "miracle-01-eval-003",
+      "question": "What did Rashad call the first physical proof that God exists?",
+      "expected_section_ids": [
+        "miracle-01-s02"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "The mathematically coded message he presents in the program."
+    },
+    {
+      "id": "miracle-01-eval-004",
+      "question": "Did Rashad claim every statement in the program was scientifically proven?",
+      "expected_section_ids": [
+        "miracle-01-s02"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Yes. The answer should state that this was Rashad's claim rather than independently endorse it."
+    },
+    {
+      "id": "miracle-01-eval-005",
+      "question": "Did Rashad teach progressive revelation?",
+      "expected_section_ids": [
+        "miracle-01-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He presents one message delivered in portions through Adam and successive messengers."
+    },
+    {
+      "id": "miracle-01-eval-006",
+      "question": "What did Rashad say Adam taught his descendants?",
+      "expected_section_ids": [
+        "miracle-01-s03"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Knowledge about God, human creation, Eve, and Adam's coming to Earth."
+    },
+    {
+      "id": "miracle-01-eval-007",
+      "question": "Did Rashad claim there was a Bible code?",
+      "expected_section_ids": [
+        "miracle-01-s04",
+        "miracle-01-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He claims the original Torah, Gospel, Psalms, and other scripture had the same mathematical code."
+    },
+    {
+      "id": "miracle-01-eval-008",
+      "question": "What did Studies in Jewish Mysticism say about changing one letter?",
+      "expected_section_ids": [
+        "miracle-01-s04"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "The quoted passage says even a one-letter change would destroy the text's numerical harmony."
+    },
+    {
+      "id": "miracle-01-eval-009",
+      "question": "How did Rashad say he discovered code 19?",
+      "expected_section_ids": [
+        "miracle-01-s05",
+        "miracle-01-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He says he transliterated the Arabic Quran for computer analysis beginning in 1968 and found a pattern."
+    },
+    {
+      "id": "miracle-01-eval-010",
+      "question": "Did Rashad discuss the muqattaat?",
+      "expected_section_ids": [
+        "miracle-01-s05",
+        "miracle-01-s06",
+        "miracle-01-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He discusses the mysterious initials A.L.M., Q, N, Y.S., and others without using the term muqattaat."
+    },
+    {
+      "id": "miracle-01-eval-011",
+      "question": "Why did Rashad say a computer was necessary?",
+      "expected_section_ids": [
+        "miracle-01-s05"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He used it to count every letter and word and inspect mathematical characteristics."
+    },
+    {
+      "id": "miracle-01-eval-012",
+      "question": "Did Rashad say the code removed the need for faith?",
+      "expected_section_ids": [
+        "miracle-01-s05"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Yes. He says understanding the pattern would turn belief into knowledge that God exists."
+    },
+    {
+      "id": "miracle-01-eval-013",
+      "question": "What did Rashad claim about every set of Quranic initials?",
+      "expected_section_ids": [
+        "miracle-01-s06"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He says every set occurs in its chapter in multiples of nineteen without exception."
+    },
+    {
+      "id": "miracle-01-eval-014",
+      "question": "How many Qs did Rashad say are in chapters 42 and 50?",
+      "expected_section_ids": [
+        "miracle-01-s07"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Fifty-seven in each chapter."
+    },
+    {
+      "id": "miracle-01-eval-015",
+      "question": "How many Ns did Rashad say are in chapter 68?",
+      "expected_section_ids": [
+        "miracle-01-s07"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "One hundred thirty-three."
+    },
+    {
+      "id": "miracle-01-eval-016",
+      "question": "What Ya-Sin total did Rashad give for chapter 36?",
+      "expected_section_ids": [
+        "miracle-01-s07"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "A combined total of 285 Y and S letters."
+    },
+    {
+      "id": "miracle-01-eval-017",
+      "question": "What did Rashad quote from Rabbi Judah the Pious about nineteen?",
+      "expected_section_ids": [
+        "miracle-01-s08"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "A passage saying divine names and references to Israel occur in sets of nineteen in a prayer section."
+    },
+    {
+      "id": "miracle-01-eval-018",
+      "question": "Did Rashad say code 19 appears in Jewish scripture or prayer?",
+      "expected_section_ids": [
+        "miracle-01-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Yes, through his quotation attributed to Rabbi Judah the Pious."
+    },
+    {
+      "id": "miracle-01-eval-019",
+      "question": "Why did Rashad say nineteen means one?",
+      "expected_section_ids": [
+        "miracle-01-s09"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He assigns the Arabic letters in the word one values of 6, 1, 8, and 4, totaling nineteen."
+    },
+    {
+      "id": "miracle-01-eval-020",
+      "question": "What is the abjad value of wahid according to Rashad?",
+      "expected_section_ids": [
+        "miracle-01-s09"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Nineteen. The transcript spells the word WAHD, while wahid and wahed are user aliases."
+    },
+    {
+      "id": "miracle-01-eval-021",
+      "question": "What did Rashad say was more important than code 19?",
+      "expected_section_ids": [
+        "miracle-01-s10"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "The content of God's message and its answers to the purpose of human life."
+    },
+    {
+      "id": "miracle-01-eval-022",
+      "question": "What existential questions did Rashad say scripture answers?",
+      "expected_section_ids": [
+        "miracle-01-s10"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Who humans are, where they came from, where they are going, why they are here, and who created them."
+    },
+    {
+      "id": "miracle-01-eval-023",
+      "question": "How did Rashad answer Who is God in this program?",
+      "expected_section_ids": [
+        "miracle-01-s11"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He describes God as the sole creator and controller who holds the seven universes."
+    },
+    {
+      "id": "miracle-01-eval-024",
+      "question": "Did Rashad interpret the seven heavens as seven universes?",
+      "expected_section_ids": [
+        "miracle-01-s11"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Yes, the section presents seven nested universes."
+    },
+    {
+      "id": "miracle-01-eval-025",
+      "question": "What address and telephone number did Rashad give?",
+      "expected_section_ids": [
+        "miracle-01-s12"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "The program gives a Tucson address and a 602 telephone number as historical contact information."
+    },
+    {
+      "id": "miracle-01-eval-026",
+      "question": "What did Rashad predict for September 1986 to August 1987?",
+      "expected_section_ids": [
+        "bulletin-01-s01"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He predicted a new worldwide era would begin during that date range."
+    },
+    {
+      "id": "miracle-01-eval-027",
+      "question": "When did Rashad predict the world would end?",
+      "expected_section_ids": [
+        "bulletin-01-s01"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "The bulletin predicts the year 2280. State that this was a prediction recorded in 1986."
+    },
+    {
+      "id": "miracle-01-eval-028",
+      "question": "Did Rashad make a failed prophecy in the World News Bulletin?",
+      "expected_section_ids": [
+        "bulletin-01-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The source clearly contains a dated prediction for a new era in 1986–1987. Whether and how to characterize fulfillment requires historical evaluation beyond retrieval."
+    },
+    {
+      "id": "miracle-01-eval-029",
+      "question": "How did Rashad explain the problem of evil?",
+      "expected_section_ids": [
+        "bulletin-01-s02",
+        "bulletin-01-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "He describes the world as a test of Satan's claim to divinity and treats suffering as evidence of Satan's failure."
+    },
+    {
+      "id": "miracle-01-eval-030",
+      "question": "What did Rashad predict God's kingdom on Earth would be like?",
+      "expected_section_ids": [
+        "bulletin-01-s02"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Perfect health, wealth, peace, and joy."
+    },
+    {
+      "id": "miracle-01-eval-031",
+      "question": "What three requirements did Rashad give for joining God's kingdom?",
+      "expected_section_ids": [
+        "bulletin-01-s03"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Belief in God alone, belief in the Hereafter and resurrection, and a righteous life."
+    },
+    {
+      "id": "miracle-01-eval-032",
+      "question": "How did Rashad define idol worship?",
+      "expected_section_ids": [
+        "bulletin-01-s03"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Believing that anyone or anything other than God can benefit a person."
+    },
+    {
+      "id": "miracle-01-eval-033",
+      "question": "What is The Myth of God Incarnate and why did Rashad mention it?",
+      "expected_section_ids": [
+        "bulletin-01-s04"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He cites it as Christian scholarly support for viewing Jesus as teacher and messenger rather than God."
+    },
+    {
+      "id": "miracle-01-eval-034",
+      "question": "Which Christian leaders did Rashad challenge in the bulletin?",
+      "expected_section_ids": [
+        "bulletin-01-s05"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Billy Graham, Pat Robertson, Jerry Falwell, Robert Schuller, Oral Roberts, Jimmy Swaggart, and Pope John Paul II."
+    },
+    {
+      "id": "miracle-01-eval-035",
+      "question": "What did Rashad say about Rabbi Kushner and his son?",
+      "expected_section_ids": [
+        "bulletin-01-s06"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "He made a sensitive causal accusation connecting Kushner's theology with Satan's victimization. It must be strictly attributed and not endorsed."
+    },
+    {
+      "id": "miracle-01-eval-036",
+      "question": "Did Rashad criticize hadith in this bulletin?",
+      "expected_section_ids": [
+        "bulletin-01-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The word hadith is not spoken in this excerpt. He says Muslims abandoned God's word for man-made fabrications, which may relate conceptually to his Quran-alone critique."
+    },
+    {
+      "id": "miracle-01-eval-037",
+      "question": "Did Rashad claim that the bulletin was God's judgment?",
+      "expected_section_ids": [
+        "bulletin-01-s07"
+      ],
+      "match_type": "direct",
+      "expected_answer_note": "Yes. He says he was not personally judging and that what he uttered was God's judgment."
+    }
+  ],
+  "canonical_document_id": "video-program/witness-a-miracle-world-news-bulletin",
+  "canonical_catalog_ids": [
+    "video-program/witness-a-miracle-world-news-bulletin"
+  ],
+  "canonical_mapping": "exact-document-id"
+}

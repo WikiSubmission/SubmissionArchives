@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.4-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-22-sura-39-admission-test-no-compromise",
+  "title": "Quran Study from Behrouz 22: Sura 39, the Admission Test, and the No-Compromise Discussion",
+  "cases": [
+    {
+      "id": "audio22-eval-001",
+      "question": "What was the admission test?",
+      "expected_section_ids": [
+        "behrouz22-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The command to devote religion absolutely to God alone is repeated. Rashad says acceptance is an admission test and asserts that God's allies have no fear, grief, headaches, tickets, or ordinary problems because God can manage every circumstance."
+    },
+    {
+      "id": "audio22-eval-002",
+      "question": "How did Rashad describe a believer's life?",
+      "expected_section_ids": [
+        "behrouz22-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The command to devote religion absolutely to God alone is repeated. Rashad says acceptance is an admission test and asserts that God's allies have no fear, grief, headaches, tickets, or ordinary problems because God can manage every circumstance."
+    },
+    {
+      "id": "audio22-eval-003",
+      "question": "Which verses were central?",
+      "expected_section_ids": [
+        "behrouz22-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The command to devote religion absolutely to God alone is repeated. Rashad says acceptance is an admission test and asserts that God's allies have no fear, grief, headaches, tickets, or ordinary problems because God can manage every circumstance."
+    },
+    {
+      "id": "audio22-eval-004",
+      "question": "Why did Rashad reject small compromises?",
+      "expected_section_ids": [
+        "behrouz22-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad warns that Satan exploits imprecise statements and any defense of idolatry. He refuses compromise over white lies, small insurance concessions, or slight deviations, saying Satan will point to them and ask God for permission to test the person within specified limits."
+    },
+    {
+      "id": "audio22-eval-005",
+      "question": "How did he describe Satan requesting a test?",
+      "expected_section_ids": [
+        "behrouz22-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad warns that Satan exploits imprecise statements and any defense of idolatry. He refuses compromise over white lies, small insurance concessions, or slight deviations, saying Satan will point to them and ask God for permission to test the person within specified limits."
+    },
+    {
+      "id": "audio22-eval-006",
+      "question": "What examples did he use?",
+      "expected_section_ids": [
+        "behrouz22-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad warns that Satan exploits imprecise statements and any defense of idolatry. He refuses compromise over white lies, small insurance concessions, or slight deviations, saying Satan will point to them and ask God for permission to test the person within specified limits."
+    },
+    {
+      "id": "audio22-eval-007",
+      "question": "What was the jinn companion?",
+      "expected_section_ids": [
+        "behrouz22-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The personal jinn companion is described as Satan's seed inside the brain. The human must convert the companion into a God-worshiping jinn. Rashad says the companion reads the Quran alongside the person. He also recounts people using jinn who impersonated Ali ibn Abi Talib and became idols."
+    },
+    {
+      "id": "audio22-eval-008",
+      "question": "How could it be converted?",
+      "expected_section_ids": [
+        "behrouz22-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The personal jinn companion is described as Satan's seed inside the brain. The human must convert the companion into a God-worshiping jinn. Rashad says the companion reads the Quran alongside the person. He also recounts people using jinn who impersonated Ali ibn Abi Talib and became idols."
+    },
+    {
+      "id": "audio22-eval-009",
+      "question": "What danger came from deliberately contacting jinn?",
+      "expected_section_ids": [
+        "behrouz22-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The personal jinn companion is described as Satan's seed inside the brain. The human must convert the companion into a God-worshiping jinn. Rashad says the companion reads the Quran alongside the person. He also recounts people using jinn who impersonated Ali ibn Abi Talib and became idols."
+    },
+    {
+      "id": "audio22-eval-010",
+      "question": "What examples did Rashad use to contrast wealth and happiness?",
+      "expected_section_ids": [
+        "behrouz22-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad discusses a wealthy unhappy woman who attempted suicide repeatedly and died before forty, her father's physical disability, and the idea that misery begins in this world. He interprets personal circumstances through divine judgment and salvation before forty."
+    },
+    {
+      "id": "audio22-eval-011",
+      "question": "How did the under-forty doctrine enter the story?",
+      "expected_section_ids": [
+        "behrouz22-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad discusses a wealthy unhappy woman who attempted suicide repeatedly and died before forty, her father's physical disability, and the idea that misery begins in this world. He interprets personal circumstances through divine judgment and salvation before forty."
+    },
+    {
+      "id": "audio22-eval-012",
+      "question": "How did Rashad interpret communism's collapse?",
+      "expected_section_ids": [
+        "behrouz22-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The collapse of communism in Eastern Europe is interpreted as a divine process that removed trinitarian religion and prepared people for submission. Quran 17:15 is cited for the rule that punishment follows delivery of a messenger and a conscious decision."
+    },
+    {
+      "id": "audio22-eval-013",
+      "question": "What law did he derive from Quran 17:15?",
+      "expected_section_ids": [
+        "behrouz22-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The collapse of communism in Eastern Europe is interpreted as a divine process that removed trinitarian religion and prepared people for submission. Quran 17:15 is cited for the rule that punishment follows delivery of a messenger and a conscious decision."
+    },
+    {
+      "id": "audio22-eval-014",
+      "question": "What assumption did Parivash make?",
+      "expected_section_ids": [
+        "behrouz22-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Parivash asks whether a passage could apply to Muhammad's time. Rashad first criticizes her assumption, then concedes that because the Quran was incomplete during Muhammad's lifetime, a fuller application may belong to the current period. The exchange shows correction during discussion."
+    },
+    {
+      "id": "audio22-eval-015",
+      "question": "Why did Rashad revise his answer?",
+      "expected_section_ids": [
+        "behrouz22-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Parivash asks whether a passage could apply to Muhammad's time. Rashad first criticizes her assumption, then concedes that because the Quran was incomplete during Muhammad's lifetime, a fuller application may belong to the current period. The exchange shows correction during discussion."
+    },
+    {
+      "id": "audio22-eval-016",
+      "question": "What did the exchange reveal?",
+      "expected_section_ids": [
+        "behrouz22-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Parivash asks whether a passage could apply to Muhammad's time. Rashad first criticizes her assumption, then concedes that because the Quran was incomplete during Muhammad's lifetime, a fuller application may belong to the current period. The exchange shows correction during discussion."
+    },
+    {
+      "id": "audio22-eval-017",
+      "question": "Can a jinn companion become helpful?",
+      "expected_section_ids": [
+        "behrouz22-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group asks whether a converted companion can guide the human. Rashad says it may advance ahead of the person and that God matches believing humans with believing jinn. Astrology is distinguished from jinn divination as observation. The recording ends with informal talk about Rashad arriving at one in the morning to work."
+    },
+    {
+      "id": "audio22-eval-018",
+      "question": "How were humans and companions matched?",
+      "expected_section_ids": [
+        "behrouz22-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group asks whether a converted companion can guide the human. Rashad says it may advance ahead of the person and that God matches believing humans with believing jinn. Astrology is distinguished from jinn divination as observation. The recording ends with informal talk about Rashad arriving at one in the morning to work."
+    },
+    {
+      "id": "audio22-eval-019",
+      "question": "How did Rashad distinguish astrology?",
+      "expected_section_ids": [
+        "behrouz22-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group asks whether a converted companion can guide the human. Rashad says it may advance ahead of the person and that God matches believing humans with believing jinn. Astrology is distinguished from jinn divination as observation. The recording ends with informal talk about Rashad arriving at one in the morning to work."
+    }
+  ],
+  "canonical_document_id": "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl",
+  "canonical_catalog_ids": [
+    "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube"
+}

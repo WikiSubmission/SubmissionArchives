@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.4-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-21-sura-9-sura-56-mathematical-circle",
+  "title": "Quran Study from Behrouz 21: Sura 9:52–72, Sura 56:75–96, and the Mathematical Circle",
+  "cases": [
+    {
+      "id": "audio21-eval-001",
+      "question": "Why did Rashad apologize to Parivash?",
+      "expected_section_ids": [
+        "behrouz21-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Believers are told to trust that apparent harm has a good reason and that war yields victory or martyrdom. Rashad publicly apologizes to Parivash for misunderstanding a prior statement. Quran 9:54 is used to show that opponents of the messenger can still perform Contact Prayer and charity while lacking sincere belief."
+    },
+    {
+      "id": "audio21-eval-002",
+      "question": "What were the two good outcomes?",
+      "expected_section_ids": [
+        "behrouz21-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Believers are told to trust that apparent harm has a good reason and that war yields victory or martyrdom. Rashad publicly apologizes to Parivash for misunderstanding a prior statement. Quran 9:54 is used to show that opponents of the messenger can still perform Contact Prayer and charity while lacking sincere belief."
+    },
+    {
+      "id": "audio21-eval-003",
+      "question": "How was Quran 9:54 used?",
+      "expected_section_ids": [
+        "behrouz21-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Believers are told to trust that apparent harm has a good reason and that war yields victory or martyrdom. Rashad publicly apologizes to Parivash for misunderstanding a prior statement. Quran 9:54 is used to show that opponents of the messenger can still perform Contact Prayer and charity while lacking sincere belief."
+    },
+    {
+      "id": "audio21-eval-004",
+      "question": "How were hypocrites described?",
+      "expected_section_ids": [
+        "behrouz21-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 9:64–72 is read as a warning that hypocrites may look loving and devout while spreading doubt and mocking the messenger. Rashad says the community must remain alert as it grows and that hidden motives will eventually be exposed."
+    },
+    {
+      "id": "audio21-eval-005",
+      "question": "Why were they especially dangerous inside the group?",
+      "expected_section_ids": [
+        "behrouz21-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 9:64–72 is read as a warning that hypocrites may look loving and devout while spreading doubt and mocking the messenger. Rashad says the community must remain alert as it grows and that hidden motives will eventually be exposed."
+    },
+    {
+      "id": "audio21-eval-006",
+      "question": "What did Rashad expect to expose them?",
+      "expected_section_ids": [
+        "behrouz21-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 9:64–72 is read as a warning that hypocrites may look loving and devout while spreading doubt and mocking the messenger. Rashad says the community must remain alert as it grows and that hidden motives will eventually be exposed."
+    },
+    {
+      "id": "audio21-eval-007",
+      "question": "How did Rashad distinguish ordinary believers from strivers?",
+      "expected_section_ids": [
+        "behrouz21-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion distinguishes sincere believers who follow the Quran and worship God alone from those who actively strive with their property and lives. Both may be saved, but Quran 4:95 is cited for different ranks."
+    },
+    {
+      "id": "audio21-eval-008",
+      "question": "Which verse established different ranks?",
+      "expected_section_ids": [
+        "behrouz21-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion distinguishes sincere believers who follow the Quran and worship God alone from those who actively strive with their property and lives. Both may be saved, but Quran 4:95 is cited for different ranks."
+    },
+    {
+      "id": "audio21-eval-009",
+      "question": "How did Lisa use astronomy?",
+      "expected_section_ids": [
+        "behrouz21-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Lisa discusses the oath by the positions of the stars, the Milky Way, neighboring galaxies, and a billion galaxies. The honorable preserved Quran is said to yield its meaning to sincere seekers, while following Hadith and Sunnah is characterized as evading the Quran."
+    },
+    {
+      "id": "audio21-eval-010",
+      "question": "How did she interpret access to the Quran?",
+      "expected_section_ids": [
+        "behrouz21-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Lisa discusses the oath by the positions of the stars, the Milky Way, neighboring galaxies, and a billion galaxies. The honorable preserved Quran is said to yield its meaning to sincere seekers, while following Hadith and Sunnah is characterized as evading the Quran."
+    },
+    {
+      "id": "audio21-eval-011",
+      "question": "What polemical conclusion followed?",
+      "expected_section_ids": [
+        "behrouz21-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Lisa discusses the oath by the positions of the stars, the Milky Way, neighboring galaxies, and a billion galaxies. The honorable preserved Quran is said to yield its meaning to sincere seekers, while following Hadith and Sunnah is characterized as evading the Quran."
+    },
+    {
+      "id": "audio21-eval-012",
+      "question": "What do the death verses demonstrate?",
+      "expected_section_ids": [
+        "behrouz21-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The death verses are read as proof that no person controls life or can return the departing soul. Lisa stresses God's control of every atom and subatomic particle and links worldly life with recovery from the premortal failure."
+    },
+    {
+      "id": "audio21-eval-013",
+      "question": "How extensive was divine control in Lisa's explanation?",
+      "expected_section_ids": [
+        "behrouz21-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The death verses are read as proof that no person controls life or can return the departing soul. Lisa stresses God's control of every atom and subatomic particle and links worldly life with recovery from the premortal failure."
+    },
+    {
+      "id": "audio21-eval-014",
+      "question": "How was the circular number constructed?",
+      "expected_section_ids": [
+        "behrouz21-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad presents two enormous concatenated numbers. One places each Sura's verse total after its verse sequence and the other places it before the sequence. He says both halves are independently divisible by nineteen, combines them into a circle, and attributes the discoveries to Feroz Karmally and Abdullah."
+    },
+    {
+      "id": "audio21-eval-015",
+      "question": "Who discovered the two halves?",
+      "expected_section_ids": [
+        "behrouz21-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad presents two enormous concatenated numbers. One places each Sura's verse total after its verse sequence and the other places it before the sequence. He says both halves are independently divisible by nineteen, combines them into a circle, and attributes the discoveries to Feroz Karmally and Abdullah."
+    },
+    {
+      "id": "audio21-eval-016",
+      "question": "Which divisibility claims were made?",
+      "expected_section_ids": [
+        "behrouz21-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad presents two enormous concatenated numbers. One places each Sura's verse total after its verse sequence and the other places it before the sequence. He says both halves are independently divisible by nineteen, combines them into a circle, and attributes the discoveries to Feroz Karmally and Abdullah."
+    }
+  ],
+  "canonical_document_id": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
+  "canonical_catalog_ids": [
+    "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube"
+}

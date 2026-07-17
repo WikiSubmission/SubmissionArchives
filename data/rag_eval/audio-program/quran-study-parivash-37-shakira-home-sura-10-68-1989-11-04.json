@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-37-shakira-home-sura-10-68-1989-11-04",
+  "title": "Quran Study from Parivash 37 at Shakira's Home: Sura 10:68 and Related Discussions (1989-11-04)",
+  "cases": [
+    {
+      "id": "audio37-eval-001",
+      "question": "Why was divine sonship rejected?",
+      "expected_section_ids": [
+        "parivash37-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "God is said to need no son. Jesus' language about children of God is contrasted with literal divine sonship. Quran 10:74 is interpreted as saying people reject in worldly life what they had already rejected billions of years earlier."
+    },
+    {
+      "id": "audio37-eval-002",
+      "question": "How was Quran 10:74 interpreted?",
+      "expected_section_ids": [
+        "parivash37-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "God is said to need no son. Jesus' language about children of God is contrasted with literal divine sonship. Quran 10:74 is interpreted as saying people reject in worldly life what they had already rejected billions of years earlier."
+    },
+    {
+      "id": "audio37-eval-003",
+      "question": "Which numerical claims were presented?",
+      "expected_section_ids": [
+        "parivash37-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad and Shakira discuss long numbers, Sura totals, letter values, and divisibility by nineteen as physical facts. They compare conventional uses of the value 786 with the actual Bismillah and describe al-Fatihah as the key that fits the prayer system."
+    },
+    {
+      "id": "audio37-eval-004",
+      "question": "Why was 786 criticized?",
+      "expected_section_ids": [
+        "parivash37-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad and Shakira discuss long numbers, Sura totals, letter values, and divisibility by nineteen as physical facts. They compare conventional uses of the value 786 with the actual Bismillah and describe al-Fatihah as the key that fits the prayer system."
+    },
+    {
+      "id": "audio37-eval-005",
+      "question": "How was al-Fatihah described?",
+      "expected_section_ids": [
+        "parivash37-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad and Shakira discuss long numbers, Sura totals, letter values, and divisibility by nineteen as physical facts. They compare conventional uses of the value 786 with the actual Bismillah and describe al-Fatihah as the key that fits the prayer system."
+    },
+    {
+      "id": "audio37-eval-006",
+      "question": "How did the group approach ordinary meat?",
+      "expected_section_ids": [
+        "parivash37-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group says the Quran is easy for believers while traditional complications make practice difficult. Questions concern eating ordinary market meat, invocation of God's name, alcohol, gambling, and the strongest Quranic prohibition."
+    },
+    {
+      "id": "audio37-eval-007",
+      "question": "What was said about alcohol and gambling?",
+      "expected_section_ids": [
+        "parivash37-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group says the Quran is easy for believers while traditional complications make practice difficult. Questions concern eating ordinary market meat, invocation of God's name, alcohol, gambling, and the strongest Quranic prohibition."
+    },
+    {
+      "id": "audio37-eval-008",
+      "question": "How was humanity represented in Adam and Eve?",
+      "expected_section_ids": [
+        "parivash37-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Shakira, Parivash, and Rashad develop the idea that all men were genetically represented in Adam and all women in Eve. Bodies were prepared on Earth, souls yet to be born are already present, and some angels participated where God says 'We created.'"
+    },
+    {
+      "id": "audio37-eval-009",
+      "question": "Where were bodies and souls located?",
+      "expected_section_ids": [
+        "parivash37-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Shakira, Parivash, and Rashad develop the idea that all men were genetically represented in Adam and all women in Eve. Bodies were prepared on Earth, souls yet to be born are already present, and some angels participated where God says 'We created.'"
+    },
+    {
+      "id": "audio37-eval-010",
+      "question": "What did divine 'We' mean?",
+      "expected_section_ids": [
+        "parivash37-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Shakira, Parivash, and Rashad develop the idea that all men were genetically represented in Adam and all women in Eve. Bodies were prepared on Earth, souls yet to be born are already present, and some angels participated where God says 'We created.'"
+    },
+    {
+      "id": "audio37-eval-011",
+      "question": "How did participants share the message?",
+      "expected_section_ids": [
+        "parivash37-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants tell stories of urgently sharing the mathematical message with strangers, visitors, and people asking unrelated questions. Rashad explains people's arrival as divine guidance and praises enthusiastic outreach."
+    },
+    {
+      "id": "audio37-eval-012",
+      "question": "How did Rashad interpret newcomers' arrival?",
+      "expected_section_ids": [
+        "parivash37-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants tell stories of urgently sharing the mathematical message with strangers, visitors, and people asking unrelated questions. Rashad explains people's arrival as divine guidance and praises enthusiastic outreach."
+    },
+    {
+      "id": "audio37-eval-013",
+      "question": "Can a sincere relative still be mistaken?",
+      "expected_section_ids": [
+        "parivash37-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Shakira asks about a sincere mother who nevertheless practices inherited religion. The group distinguishes sincere belief from correct worship, debates praying through Jesus or Muhammad, rejects human intermediaries, and says unity occurs when everyone addresses God directly rather than following ancestors."
+    },
+    {
+      "id": "audio37-eval-014",
+      "question": "Why were intermediaries rejected?",
+      "expected_section_ids": [
+        "parivash37-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Shakira asks about a sincere mother who nevertheless practices inherited religion. The group distinguishes sincere belief from correct worship, debates praying through Jesus or Muhammad, rejects human intermediaries, and says unity occurs when everyone addresses God directly rather than following ancestors."
+    },
+    {
+      "id": "audio37-eval-015",
+      "question": "How was unity defined?",
+      "expected_section_ids": [
+        "parivash37-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Shakira asks about a sincere mother who nevertheless practices inherited religion. The group distinguishes sincere belief from correct worship, debates praying through Jesus or Muhammad, rejects human intermediaries, and says unity occurs when everyone addresses God directly rather than following ancestors."
+    }
+  ],
+  "canonical_document_id": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
+  "canonical_catalog_ids": [
+    "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989"
+  ],
+  "canonical_mapping": "youtube-id"
+}

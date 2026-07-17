@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.6-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-roxana-42-ray-caton-interview-quran-alone-finance-ritual",
+  "title": "Quran Study from Roxana 42: Ray Caton Interviews Rashad on Quran Alone, Interest, and Ritual Practice",
+  "cases": [
+    {
+      "id": "audio42-eval-001",
+      "question": "Why was al-Fatihah read before the debate?",
+      "expected_section_ids": [
+        "audio42-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad begins by asking for guidance and continued brotherhood despite disagreement. Quran 9:31 is used to argue that religious authorities become gods when their extra-scriptural laws replace revelation. The Talmud is compared with Hadith and Sunnah."
+    },
+    {
+      "id": "audio42-eval-002",
+      "question": "How were the Talmud and Hadith compared?",
+      "expected_section_ids": [
+        "audio42-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad begins by asking for guidance and continued brotherhood despite disagreement. Quran 9:31 is used to argue that religious authorities become gods when their extra-scriptural laws replace revelation. The Talmud is compared with Hadith and Sunnah."
+    },
+    {
+      "id": "audio42-eval-003",
+      "question": "Which criteria were used to test belief?",
+      "expected_section_ids": [
+        "audio42-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says a person should test themselves rather than assume belief. Quran 39:45 examines reactions when God alone is mentioned, Quran 17:46 examines aversion to preaching with the Quran alone, and the invisible barrier and deafness become diagnostic criteria within his theology."
+    },
+    {
+      "id": "audio42-eval-004",
+      "question": "How did Quran 39:45 and 17:46 function?",
+      "expected_section_ids": [
+        "audio42-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says a person should test themselves rather than assume belief. Quran 39:45 examines reactions when God alone is mentioned, Quran 17:46 examines aversion to preaching with the Quran alone, and the invisible barrier and deafness become diagnostic criteria within his theology."
+    },
+    {
+      "id": "audio42-eval-005",
+      "question": "What regret appears on Judgment Day?",
+      "expected_section_ids": [
+        "audio42-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The interview reads judgment passages in which a wrongdoer regrets taking the messenger's opponent as a friend. Quran 6:114–115 is used to say the scripture is fully detailed and complete, making recourse to a binding religious source besides the Quran an act of setting up another god."
+    },
+    {
+      "id": "audio42-eval-006",
+      "question": "How was Quranic completeness argued?",
+      "expected_section_ids": [
+        "audio42-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The interview reads judgment passages in which a wrongdoer regrets taking the messenger's opponent as a friend. Quran 6:114–115 is used to say the scripture is fully detailed and complete, making recourse to a binding religious source besides the Quran an act of setting up another god."
+    },
+    {
+      "id": "audio42-eval-007",
+      "question": "When should a believer migrate?",
+      "expected_section_ids": [
+        "audio42-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Salat, zakat, fasting, and Hajj came through Abraham. Ray asks whether believers should live in a non-Muslim country and how to treat Jews and Christians. Rashad permits friendship with noncombatants, requires migration only when worship is prevented, and calls the United States more Islamic than Saudi Arabia because it protects religious freedom."
+    },
+    {
+      "id": "audio42-eval-008",
+      "question": "Why did Rashad compare the United States favorably with Saudi Arabia?",
+      "expected_section_ids": [
+        "audio42-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says Salat, zakat, fasting, and Hajj came through Abraham. Ray asks whether believers should live in a non-Muslim country and how to treat Jews and Christians. Rashad permits friendship with noncombatants, requires migration only when worship is prevented, and calls the United States more Islamic than Saudi Arabia because it protects religious freedom."
+    },
+    {
+      "id": "audio42-eval-009",
+      "question": "How many washes were required?",
+      "expected_section_ids": [
+        "audio42-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ray asks whether ablution requires washing three times and whether prayer benefits the dead. Rashad says the Quran specifies body parts rather than a fixed count and says the deceased person's deeds determine their outcome. He distinguishes exploitative usury from borrowing at interest for a productive project and says investment loans may be permissible."
+    },
+    {
+      "id": "audio42-eval-010",
+      "question": "Does prayer alter a deceased person's deeds?",
+      "expected_section_ids": [
+        "audio42-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ray asks whether ablution requires washing three times and whether prayer benefits the dead. Rashad says the Quran specifies body parts rather than a fixed count and says the deceased person's deeds determine their outcome. He distinguishes exploitative usury from borrowing at interest for a productive project and says investment loans may be permissible."
+    },
+    {
+      "id": "audio42-eval-011",
+      "question": "When did Rashad permit interest?",
+      "expected_section_ids": [
+        "audio42-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ray asks whether ablution requires washing three times and whether prayer benefits the dead. Rashad says the Quran specifies body parts rather than a fixed count and says the deceased person's deeds determine their outcome. He distinguishes exploitative usury from borrowing at interest for a productive project and says investment loans may be permissible."
+    },
+    {
+      "id": "audio42-eval-012",
+      "question": "What restrictions on menstruating women were rejected?",
+      "expected_section_ids": [
+        "audio42-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ray asks about menstruating women touching the Quran or attending the mosque. Rashad rejects the restrictions, argues that women and children were kept ignorant by Sunnah, applies Quran 62:9 to all believers, and insists the feet must be washed whenever ablution is renewed rather than merely wiping socks all day."
+    },
+    {
+      "id": "audio42-eval-013",
+      "question": "Who was obligated to Friday Prayer?",
+      "expected_section_ids": [
+        "audio42-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ray asks about menstruating women touching the Quran or attending the mosque. Rashad rejects the restrictions, argues that women and children were kept ignorant by Sunnah, applies Quran 62:9 to all believers, and insists the feet must be washed whenever ablution is renewed rather than merely wiping socks all day."
+    },
+    {
+      "id": "audio42-eval-014",
+      "question": "What did Rashad say about washing the feet?",
+      "expected_section_ids": [
+        "audio42-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Ray asks about menstruating women touching the Quran or attending the mosque. Rashad rejects the restrictions, argues that women and children were kept ignorant by Sunnah, applies Quran 62:9 to all believers, and insists the feet must be washed whenever ablution is renewed rather than merely wiping socks all day."
+    }
+  ],
+  "canonical_document_id": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
+  "canonical_catalog_ids": [
+    "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest"
+  ],
+  "canonical_mapping": "youtube-id"
+}

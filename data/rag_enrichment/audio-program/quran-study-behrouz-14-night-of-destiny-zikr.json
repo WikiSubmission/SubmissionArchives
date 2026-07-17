@@ -1,0 +1,1126 @@
+{
+  "schema_version": "1.2-audio",
+  "source_class": "audio-transcript",
+  "series": "Quran Study from Behrouz",
+  "document_id": "audio-program/quran-study-behrouz-14-night-of-destiny-zikr",
+  "title": "Quran Study from Behrouz 14: Night of Destiny Zikr",
+  "date": "",
+  "date_precision": "unknown",
+  "date_note": "No date appears in the filename. The recording identifies the occasion as the Night of Destiny.",
+  "source_file": "data/sources/playlists/audio-transcripts/14 - Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad.csv",
+  "youtube_id": "_m-_aeqgaXA",
+  "youtube_url": "https://www.youtube.com/watch?v=_m-_aeqgaXA",
+  "primary_speakers": [
+    "Dr. Rashad Khalifa",
+    "Unidentified woman",
+    "Unidentified man"
+  ],
+  "review_status": "draft",
+  "document_retrieval_priority": "primary",
+  "transcript_statistics": {
+    "source_segments": 210,
+    "first_speech_time": "00:00:04.241",
+    "last_speech_time": "01:13:25.773",
+    "section_count": 8,
+    "speaker_counts": {
+      "Dr. Khalifa": 208,
+      "A woman": 1,
+      "A man": 1
+    }
+  },
+  "document_summary": "A long devotional zikr led almost entirely by Rashad on the Night of Destiny. He compares remembrance with rapid growth of the soul from infancy to adolescence and calls it the most nourishing form of worship. Participants repeatedly recite 'there is no god except God,' God's name, Qayyum, Subhan Allah, alhamdulillah, and Allahu Akbar. Quran 20:14 is used to say Contact Prayer exists to commemorate God alone. The group chants a community 'national anthem,' recites al-Fatihah, and begins a second zikr cycle tied to Sura al-Qadr. Rashad says angels descend that night to execute every command and may recognize participants' dearest wishes. The closing chants connect body and soul with the premortal covenant, describe each remembrance as an enormous deposit in a post-retirement account, and promise health, wealth, dignity, and perfect happiness under God's law.",
+  "related_duplicate_sources": [
+    {
+      "document_id": "video-program/friday-sermon-power-of-repentance-secret-of-happiness-1988-01-01",
+      "relationship": "same remembrance formulas and happiness claims",
+      "note": "The audio is a performed zikr rather than a sermon explaining the practice."
+    },
+    {
+      "document_id": "audio-program/quran-study-azhar-05-sura-56-75-sura-57-1989-02-17",
+      "relationship": "same remembrance phrases and post-retirement imagery",
+      "note": "The Azhar audio contains a children's song; this source preserves an extended adult chant."
+    },
+    {
+      "document_id": "video-program/principles-of-contact-prayers-salat",
+      "relationship": "same interpretation of Quran 20:14",
+      "note": "Use the dedicated prayer source for ritual procedure and this source for zikr performance."
+    }
+  ],
+  "content_guidance": [
+    {
+      "rule": "Treat this as a devotional performance",
+      "instruction": "It differs structurally from explanatory Quran-study recordings."
+    },
+    {
+      "rule": "Down-weight repeated chant rows",
+      "instruction": "Retrieval should surface the relevant cycle without flooding results."
+    },
+    {
+      "rule": "Do not promise worldly benefits",
+      "instruction": "Health and wealth claims remain attributed."
+    },
+    {
+      "rule": "Quote only canonical transcript",
+      "instruction": "Enrichment prose is retrieval metadata."
+    }
+  ],
+  "sections": [
+    {
+      "id": "behrouz14-s01",
+      "start": 0,
+      "end": 420,
+      "title": "Zikr as accelerated growth and nourishment for the soul",
+      "summary": "Rashad says the group's spiritual growth through zikr resembles a baby rapidly becoming a teenager. He calls remembrance God's most beloved form of worship and compares it with a steak-and-lobster meal for the soul. Participants are instructed to concentrate until the words become the dominant thought and every cell seems to repeat them.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "zikr",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "soul-growth",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "spiritual-nourishment",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "dominant-thought",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "whole-body-remembrance",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "baby to teenager soul",
+        "steak and lobster for soul",
+        "most beloved worship",
+        "every cell say it"
+      ],
+      "related_questions": [
+        "How did Rashad describe the effect of zikr on the soul?",
+        "What food metaphor did he use?",
+        "How were participants told to concentrate?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:00:04.241",
+      "end_time": "00:08:09.747",
+      "source_segment_start": 0,
+      "source_segment_end": 64,
+      "csv_speakers": [
+        "A woman",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Dr. Khalifa: The equivalence of going from a baby to a young person, a teenager. We are now... If, if we started out as babies, we are now teenagers. That's how powerful the Zikr (ذکر) is. It's, it's God's absolutely most beloved form of worship, according to the Quran. Dr. Khalifa: And it is the most, it is the steak and lobster dinner for the soul. A woman: Subhan Allah. Dr. Khalifa: And if we are to visualize the importance of Zikr (ذکر), you can imagine the Day of Resurrection and people being resurrected as babies. Imagine, imagine a person staying a baby all their lives not, because of not feeding the soul. That is very important. I was gonna say, too bad that, that we don't see the, what happens to the soul because it's obscured by the body, but you can imagine it. Not too bad because this is God's design. The test requires that things be obscured and hidden. So, you rely completely on your logic and your belief, your faith. So, each one of us deserves congratulations for coming to this fantastic meal, feeding the soul, commemorating our God. A'uzu Billahi Mina Shaytani Rajim أعوذ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ (We seek refuge in God from Satan the rejected) Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (In the name of God, Most Gracious, Most Merciful) Qul Huwallahu Ahad (112:1) قُلْ هُوَ ٱللَّهُ أَحَدٌ [112:1] Proclaim, \"He is the One and only GOD. Allahu Samad (112:2) ٱللَّهُ ٱلصَّمَدُ [112:2] \"The Absolute GOD. Lam Yalid Wa Lam Yulad (112:3) لَمْ يَلِدْ وَلَمْ يُولَدْ [112:3] \"Never did He beget. Nor was He begotten. Wa Lam Yakullahu Kufuwan Ahad (112:4) وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ [112:4] \"None equals Him.\" Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ Qul Huwallahu Ahad (112:1) قُلْ هُوَ ٱللَّهُ أَحَدٌ Allahu Samad (112:2) ٱللَّهُ ٱلصَّمَدُ Lam Yalid Wa Lam Yulad (112:3) لَمْ يَلِدْ وَلَمْ يُولَدْ Wa Lam Yakullahu Kufuwan Ahad (112:4) وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ Qul Huwallahu Ahad (112:1) قُلْ هُوَ ٱللَّهُ أَحَدٌ Allahu Samad (112:2) ٱللَّهُ ٱلصَّمَدُ Lam Yalid Wa Lam Yulad (112:3) لَمْ يَلِدْ وَلَمْ يُولَدْ Wa Lam Yakullahu Kufuwan Ahad (112:4) وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (In the name of God, Most Gracious, Most Merciful) Qul A'uzu Bi Rabbil Falaq (113:1) قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ [113:1] Say, \"I seek refuge in the Lord of daybreak. Min Sharri Ma Khalaq (113:2) مِن شَرِّ مَا خَلَقَ [113:2] \"From the evils among His creations. Wa Min Sharri Ghasiqin Iza Waqab (113:3) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ [113:3] \"From the evils of darkness as it falls. Wa Min Sharri Naffasati Fil Uqad (113:4) وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ [113:4] \"From the evils of the troublemakers. Wa Min Sharri Hasidin Iza Hasad (113:5) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ [113:5] \"From the evils of the envious when they envy.\" Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (In the name of God, Most Gracious, Most Merciful) Qul A'uzu Bi Rabbi Nnas (114:1) قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ [114:1] Say, \"I seek refuge in the Lord of the people. Maliki Nnas (114:2) مَلِكِ ٱلنَّاسِ [114:2] \"The King of the people. Ilahi Nnas (114:3) إِلَـٰهِ ٱلنَّاسِ [114:3] \"The god of the people. Min Sharril Waswasil Khannas (114:4) مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ [114:4] \"From the evils of sneaky whisperers. Allaziyu Waswasu Fi Suduri Nnas (114:5) ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ [114:5] \"Who whisper into the chests of the people. Minal Jinnati Wa Nnas (114:6) مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ [114:6] \"Be they of the jinns, or the people.\" Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ Qul A'uzu Bi Rabbil Falaq (113:1) قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ Min Sharri Ma Khalaq (113:2) مِن شَرِّ مَا خَلَقَ Wa Min Sharri Ghasiqin Iza Waqab (113:3) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ Wa Min Sharri Naffasati Fil Uqad (113:4) وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ Wa Min Sharri Hasidin Iza Hasad (113:5) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ Qul A'uzu Bi Rabbi Nnas (114:1) قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ Maliki Nnas (114:2) مَلِكِ ٱلنَّاسِ Ilahi Nnas (114:3) إِلَـٰهِ ٱلنَّاسِ Min Sharril Waswasil Khannas (114:4) مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ Allaziyu Waswasu Fi Suduri Nnas (114:5) ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ Minal Jinnati Wa Nnas (114:6) مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ Bism Allah Arrahman Arraheem (1:1) (1:2) بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ [1:1] In the name of GOD, Most Gracious, Most Merciful. Al hamdu Lillahi Rabbil ‘Alameen (1:2) (1:2) ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ [1:2] Praise be to GOD, Lord of the universe. Arrahman Arraheem (1:3) (1:3) ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ [1:3] Most Gracious, Most Merciful. Maliki Yawm Eddeen (1:4) (1:4) مَـٰلِكِ يَوْمِ ٱلدِّينِ [1:4] Master of the Day of Judgment. Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) (1:5) إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ [1:5] You alone we worship; You alone we ask for help. Ehdina Al-Serata Al-Mustaqeem (1:6) (1:6) ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ [1:6] Guide us in the right path; Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا (1:7) ٱلضَّآلِّينَ [1:7] the path of those whom You blessed; not of those who have deserved wrath, nor of the strayers. I guess it doesn't hurt to seek refuge in God twice. I didn't mean to do that. Just to pursue that idea of healing the soul and developing the soul, you can imagine an adult in a community of babies. What a situation, I mean how, how will they look up to that adult? That, that will be, you know, an approximation of what happens on the, on the Day of Resurrection. And people are resurrected as adults, and some resurrected as young people, and some resurrected as, you know, babies, which is the vast majority. People neglecting to feed their, their soul. As you know, the goal of our life is to recognize that God Alone is to be worshiped. And to declare that there is no god except the One God. La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.) So, when you say it, close your eyes and concentrate. And let every cell in your body say it and mean it, and absorb it until it becomes the dominant thought. La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.) La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.)",
+      "review_status": "draft",
+      "retrieval_text": "Zikr as accelerated growth and nourishment for the soul\nRashad says the group's spiritual growth through zikr resembles a baby rapidly becoming a teenager. He calls remembrance God's most beloved form of worship and compares it with a steak-and-lobster meal for the soul. Participants are instructed to concentrate until the words become the dominant thought and every cell seems to repeat them.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: zikr; soul-growth; spiritual-nourishment; dominant-thought; whole-body-remembrance\nUser terminology: baby to teenager soul; steak and lobster for soul; most beloved worship; every cell say it\nQuestions: How did Rashad describe the effect of zikr on the soul? What food metaphor did he use? How were participants told to concentrate?\nQuran references: \nBible references: \nEntities: "
+    },
+    {
+      "id": "behrouz14-s02",
+      "start": 420,
+      "end": 870,
+      "title": "There is no god except God and Contact Prayer as remembrance of Me",
+      "summary": "The group repeatedly chants the God-alone testimony. Rashad says the more sincerely it is repeated, the more the soul grows. Quran 20:14 is cited in the first-person singular: Contact Prayer is observed to commemorate God, not any human being.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "la-ilaha-illa-god",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-alone",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "contact-prayer",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "quran-20-14",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "sincere-repetition",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "La Elaha Ella Allah",
+        "more you say and mean it",
+        "observe Salat for commemorating Me",
+        "not commemorate humans"
+      ],
+      "related_questions": [
+        "What formula dominated the first zikr?",
+        "How did Rashad connect repetition with growth?",
+        "How was Quran 20:14 applied?"
+      ],
+      "quran_references": [
+        "20:14"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:05:22.857",
+      "end_time": "00:14:48.146",
+      "source_segment_start": 64,
+      "source_segment_end": 67,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.) The more you say it, and the more you mean it, the more you grow with the consequences, enjoyable consequences. La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.) La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.)",
+      "review_status": "draft",
+      "retrieval_text": "There is no god except God and Contact Prayer as remembrance of Me\nThe group repeatedly chants the God-alone testimony. Rashad says the more sincerely it is repeated, the more the soul grows. Quran 20:14 is cited in the first-person singular: Contact Prayer is observed to commemorate God, not any human being.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: la-ilaha-illa-god; god-alone; contact-prayer; quran-20-14; sincere-repetition\nUser terminology: La Elaha Ella Allah; more you say and mean it; observe Salat for commemorating Me; not commemorate humans\nQuestions: What formula dominated the first zikr? How did Rashad connect repetition with growth? How was Quran 20:14 applied?\nQuran references: 20:14\nBible references: \nEntities: "
+    },
+    {
+      "id": "behrouz14-s03",
+      "start": 870,
+      "end": 1440,
+      "title": "Repeating God's name and recognizing Qayyum",
+      "summary": "The chant narrows to repeated invocation of God's name. Rashad introduces Qayyum as recognition of God as the absolute, eternal, self-subsisting sovereign. The repetitive structure is intended to move from verbal utterance toward absorbed recognition.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "allah-repetition",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "qayyum",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "divine-self-subsistence",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "absorbed-recognition",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "Allah repeated",
+        "Qayyum Absolute and Eternal King",
+        "recognize God's quality"
+      ],
+      "related_questions": [
+        "What did Qayyum mean in the recording?",
+        "What purpose did repeated invocation serve?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [
+        "God"
+      ],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:08:22.237",
+      "end_time": "00:24:10.000",
+      "source_segment_start": 67,
+      "source_segment_end": 91,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.) God speaks in the first person singular in the Quran saying you shall observe Salat for the purpose of commemorating Me. (20:14) وَأَقِمِ ٱلصَّلَوٰةَ Observe the Salat (Contact Prayers) (20:14) لِذِكْرِىٓ for commemorating Me So, when we make Zikr (ذکر) in this way, it is equivalent to making a hundred Salat or maybe more. And every time we say \"Allah\", the name of God, we wipe out God knows how many sins, how many of our sins are wiped out from the past. So, we make up for all the past years where we missed the Salat and we wipe out all the mistakes and sins that we fell in the past. Every time we say \"Allah.\" So, let it come out of your heart and be big enough to travel across the universe and reach for God, go up there. Let your soul go. Close your eyes, concentrate, and enjoy saying the name of God. Allah ٱللَّهُ (God) Allah ٱللَّهُ (God) Allah ٱللَّهُ (God) Allah ٱللَّهُ (God) Let's start with a whsiper. Allah ٱللَّهُ (God) When you say \"Qayyum\", you recognize God as the Absolute and Eternal King. Qayyum قَيُّوم (Absolute and Eternal King) Qayyum قَيُّوم (Absolute and Eternal King) Allah ٱللَّهُ (God)",
+      "review_status": "draft",
+      "retrieval_text": "Repeating God's name and recognizing Qayyum\nThe chant narrows to repeated invocation of God's name. Rashad introduces Qayyum as recognition of God as the absolute, eternal, self-subsisting sovereign. The repetitive structure is intended to move from verbal utterance toward absorbed recognition.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: allah-repetition; qayyum; divine-self-subsistence; absorbed-recognition\nUser terminology: Allah repeated; Qayyum Absolute and Eternal King; recognize God's quality\nQuestions: What did Qayyum mean in the recording? What purpose did repeated invocation serve?\nQuran references: \nBible references: \nEntities: God"
+    },
+    {
+      "id": "behrouz14-s04",
+      "start": 1440,
+      "end": 2100,
+      "title": "Subhan Allah, alhamdulillah, Allahu Akbar, free choice, and appreciation",
+      "summary": "Rashad leads glorification, praise, and magnification of God. He says all creation glorifies God automatically, while humans possess choice and can fail to do so. Failure is described as stupidity, injustice, and ingratitude, while successful choice becomes a source of gratitude.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "subhan-allah",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "alhamdulillah",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "allahu-akbar",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "creation-glorifies",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "human-free-choice",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "gratitude",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "God be glorified",
+        "God be praised",
+        "God is great",
+        "humans have choice",
+        "stupid unjust unappreciative"
+      ],
+      "related_questions": [
+        "Which three main formulas were recited?",
+        "How did humans differ from the rest of creation?",
+        "What moral meaning did Rashad attach to glorification?"
+      ],
+      "quran_references": [],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:22:07.913",
+      "end_time": "00:35:02.364",
+      "source_segment_start": 91,
+      "source_segment_end": 122,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Allah ٱللَّهُ (God) Subhan Allah سُبْحَـٰنَ ٱللَّه (God be glorified) Subhan Allah سُبْحَـٰنَ ٱللَّه (God be glorified) Alhamdu Lillah ٱلْحَمْدُ لِلَّه (GOD be praised) Alhamdu Lillah ٱلْحَمْدُ لِلَّه (GOD be praised) Allahu Akbar ٱللَّهِ أَكْبَر (God is great) Allahu Akbar ٱللَّهِ أَكْبَر (God is great) God teaches us in the Quran that everything, the seven universes and the earth and everything in them glorifies God. The word is Subhan Allah. That's glorification of God. And it is because they decided to recognize God as the Absolute Master and they had no choice. But we, the human beings, are the only ones in the universe that have the choice. So, when you make the choice to glorify God on your own, with your own free will, you attain a great achievement. When, when people fail to glorify God, saying Subhan Allah, and praise God by saying Alhamdu Lillah, they are described in Quran as stupid and ignorant, stupid and ignorant, unjust or unappreciative, for God gave us our eyes. A human being will do anything. If somebody holds a gun to his head and demands his eyes or pray a hundred times a day, then, they will say \"OK, I pray a hundred times a day and keep my eyes.\" But they are unappreciative of God. God gave them the eyes in advance without any requirements. The requirement is, you have the free choice to worship God and glorify Him or not. So, the human being who fails to glorify God, as we just said, is described as stupid and unjust and unappreciative in the Quran. So, but Alhamdu Lillah, we thank God that, you know, we succeeded in making that decision with God's help. On the Day of Judgment, when you're reviewing your tape, and watch this moment where you're glorifying God and praising God, and you watch the, the nonsense that we say throughout the day, you will be glad for the, for this time. You'll be happy that the proportion of your utterances that glorify God and praise God is a little higher than, than the others. That will distinguish you. So, this calls for celebration. (unintelligible). Let's celebrate. Allah, Allah, Allah, Allah, La Elaha Ella Allah اللهِ - اللهِ- اللهِ -اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (God, God, God, God, There is no god except the One God.) Allah, Allah, Allah, Allah, La Elaha Ella Allah اللهِ - اللهِ- اللهِ -اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (God, God, God, God, There is no god except the One God.) That kind of song is the song that also commemorates God,",
+      "review_status": "draft",
+      "retrieval_text": "Subhan Allah, alhamdulillah, Allahu Akbar, free choice, and appreciation\nRashad leads glorification, praise, and magnification of God. He says all creation glorifies God automatically, while humans possess choice and can fail to do so. Failure is described as stupidity, injustice, and ingratitude, while successful choice becomes a source of gratitude.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: subhan-allah; alhamdulillah; allahu-akbar; creation-glorifies; human-free-choice; gratitude\nUser terminology: God be glorified; God be praised; God is great; humans have choice; stupid unjust unappreciative\nQuestions: Which three main formulas were recited? How did humans differ from the rest of creation? What moral meaning did Rashad attach to glorification?\nQuran references: \nBible references: \nEntities: "
+    },
+    {
+      "id": "behrouz14-s05",
+      "start": 2100,
+      "end": 2610,
+      "title": "The community anthem, Mawlana chant, and al-Fatihah",
+      "summary": "Rashad introduces a joyful 'national anthem' built around God, the God-alone testimony, and Mawlana. The group chants collectively, then closes the first cycle with al-Fatihah.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "community-anthem",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "mawlana",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "collective-chant",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "al-fatihah",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "our national anthem",
+        "Allah Allah La Elaha Ella Allah Mawlana",
+        "close with Al-Fatiha"
+      ],
+      "related_questions": [
+        "What did Rashad call the Mawlana chant?",
+        "How did the first zikr cycle close?"
+      ],
+      "quran_references": [
+        "1:1-7"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "secondary",
+      "start_time": "00:34:58.926",
+      "end_time": "00:47:03.987",
+      "source_segment_start": 122,
+      "source_segment_end": 167,
+      "csv_speakers": [
+        "A man",
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "That kind of song is the song that also commemorates God, and declares that there is no god except Him, the one God. For those of you who are not familiar with the word Mawlana (مولانا), our Master. Some people make their job their master, their boss, their master. And those are insignificant creatures, the boss, the job, or whatever, that the people, most people choose. But we choose our Master, and the One who's holding the seven universes in His right hand, the Most Powerful, the Omnipotent, Omniscient, Omnipresent, King of the universe. So, in this, our national anthem, we declare that only God is our Master, which is the highest form of freedom. Because no one in the world controls your life or can touch you in any way. So, we're gonna chant happily our national anthem. Mawlana (مولانا) Allah, Allah, La Elaha Ella Allah, Mawlana اللهِ - اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ - مولانا (God, God, There is no god except the One God, our Master) Allah, Allah, La Elaha Ella Allah, Mawlana اللهِ - اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ - مولانا (God, God, There is no god except the One God, our Master) As we chant that God is our only Master, God mobilizes His forces to be with you. Remember we talked about the invisible soldiers and we saw them in the Quran, written in the Quran. The invisible soldiers will be with you and help you and see that everything that you do is guided. You make an application for a job, or the immigration department, or whatever, and the application will be carried through by angels. Because you, you said that you are with Him. Let us whisper it, first. Allah, Allah, La Elaha Ella Allah, Mawlana اللهِ - اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ - مولانا (God, God, There is no god except the One God, our Master) Allah, Allah, La Elaha Ella Allah, Mawlana اللهِ - اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ - مولانا (God, God, There is no god except the One God, our Master) Let's close with Al-Fãtehah. I'm gonna try to (unintelligible). Al-Fãtehah Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) Whether you know it or not, your soul is up there (unintelligible), part of the... Alhamdu Lillah Probably, your soul occupies half of Arizona. Our souls are just overlapping, hugging each other. Dr. Khalifa: The big souls love. The small, small souls hate. A man: Alhamdu Lillah. Dr. Khalifa: We read the paper every day and we see that there are murders and fights in bars and nightclubs every day. So, their souls are shrunk and breaking God's law and they're always fighting and angry and mad and shouting and shooting each other, in the paper every day and the TV and the radio. That's amazing. So, the big souls love. Even in temples and churches and synagogues and mosques. Even though they may be off, at least they mention the name of God, even though along with other idols, which is very wrong, but just that... You don't, you don't hear about murders in, in a church or synagogue or a mosque. Out of those places come individuals who make it. Alhamdu Lillah. (Bism Allah) Arrahman Arraheem Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (In the name of GOD, Most Gracious, Most Merciful.) Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (In the name of GOD, Most Gracious, Most Merciful.)",
+      "review_status": "draft",
+      "retrieval_text": "The community anthem, Mawlana chant, and al-Fatihah\nRashad introduces a joyful 'national anthem' built around God, the God-alone testimony, and Mawlana. The group chants collectively, then closes the first cycle with al-Fatihah.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: community-anthem; mawlana; collective-chant; al-fatihah\nUser terminology: our national anthem; Allah Allah La Elaha Ella Allah Mawlana; close with Al-Fatiha\nQuestions: What did Rashad call the Mawlana chant? How did the first zikr cycle close?\nQuran references: 1:1-7\nBible references: \nEntities: "
+    },
+    {
+      "id": "behrouz14-s06",
+      "start": 2610,
+      "end": 3360,
+      "title": "Night of Destiny, descending angels, wishes, and 'God belongs to us'",
+      "summary": "The second cycle begins with Sura al-Qadr. Rashad says angels descend that night to carry out every command and may see the participants commemorating God and recognize their dearest wishes. The group chants phrases translated as God belongs to us or we belong to God, followed by the claim that happiness therefore belongs to the believers.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "night-of-destiny",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "sura-al-qadr",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "angels-descend",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "dearest-wish",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "allahu-lana",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "happiness-belongs-to-us",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "angels descend tonight",
+        "see your dearest wish",
+        "Allahu Lana",
+        "Falana Al-hana"
+      ],
+      "related_questions": [
+        "What special event occurs on the Night of Destiny?",
+        "What did Rashad say the angels might recognize?",
+        "What did the Allahu Lana chant express?"
+      ],
+      "quran_references": [
+        "97:1-5"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "Promises concerning angels fulfilling personal wishes must remain attributed.",
+      "retrieval_priority": "primary",
+      "start_time": "00:43:10.385",
+      "end_time": "00:59:41.078",
+      "source_segment_start": 167,
+      "source_segment_end": 182,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Bism Allah Arrahman Arraheem بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (In the name of GOD, Most Gracious, Most Merciful.) As we read in the Sura Al-Qadr, at the beginning of this great night, we read in... God is telling us that the angels descend in this night to carry out every command. So, when they descend tonight and find people commemorating God, they will, they will see what your dearest wish is. And they will see to it that if there's anything wrong beginning in your body or whatever, you know, they'll fix it. And God will shower you with blessings just for commemorating His name in this great night. The angels are here. They're eager to help anybody who commemorates God. Let us now try the, this Allah Allah four times, La Elaha Ella Allah. Allah, Allah, Allah, Allah, La Elaha Ella Allah اللهِ - اللهِ- اللهِ -اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (God, God, God, God, There is no god except the One God.) Allah, Allah, Allah, Allah, La Elaha Ella Allah اللهِ - اللهِ- اللهِ -اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (God, God, God, God, There is no god except the One God.) Allahu Lana الله لنا We belong to God. Falana Al-hana. فلنا الهناء So, happiness belongs to us. Allahu Lana الله لنا We belong to Allah Falana Al-hana. فلنا الهناء So, happiness belongs to us. Allahu Lana, Allahu Lana, Allahu Lana, Falana Al-hana. الله لنا - الله لنا - الله لنا - فلنا الهناء (We belong to God. We belong to God. We belong to God. So, happiness belongs to us.) Allahu Lana, Allahu Lana, Allahu Lana, Falana Al-hana. الله لنا - الله لنا - الله لنا - فلنا الهناء (We belong to God. We belong to God. We belong to God. So, happiness belongs to us.)",
+      "review_status": "draft",
+      "retrieval_text": "Night of Destiny, descending angels, wishes, and 'God belongs to us'\nThe second cycle begins with Sura al-Qadr. Rashad says angels descend that night to carry out every command and may see the participants commemorating God and recognize their dearest wishes. The group chants phrases translated as God belongs to us or we belong to God, followed by the claim that happiness therefore belongs to the believers.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: night-of-destiny; sura-al-qadr; angels-descend; dearest-wish; allahu-lana; happiness-belongs-to-us\nUser terminology: angels descend tonight; see your dearest wish; Allahu Lana; Falana Al-hana\nQuestions: What special event occurs on the Night of Destiny? What did Rashad say the angels might recognize? What did the Allahu Lana chant express?\nQuran references: 97:1-5\nBible references: \nEntities: "
+    },
+    {
+      "id": "behrouz14-s07",
+      "start": 3360,
+      "end": 3960,
+      "title": "Body and soul affirming the premortal covenant",
+      "summary": "Rashad recalls the premortal testimony that God alone is Lord. The renewed chant is presented as a declaration by both body and soul, reversing the original failure and restoring conscious allegiance to God alone.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "premortal-covenant",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "body-and-soul",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "god-alone-lord",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "renewed-declaration",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "before creation souls bore witness",
+        "body and soul declare",
+        "only God is our Lord"
+      ],
+      "related_questions": [
+        "What premortal event did Rashad recall?",
+        "Why did he emphasize both body and soul?"
+      ],
+      "quran_references": [
+        "7:172"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "",
+      "retrieval_priority": "primary",
+      "start_time": "00:55:07.804",
+      "end_time": "01:07:10.688",
+      "source_segment_start": 182,
+      "source_segment_end": 193,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "Allahu Lana, Allahu Lana, Allahu Lana, Falana Al-hana. الله لنا - الله لنا - الله لنا - فلنا الهناء (We belong to God. We belong to God. We belong to God. So, happiness belongs to us.) Before the creation of the heavens and the earth, our souls bore witness that only God is our Lord. So now, our body and soul is going to declare that only God is our Lord. Allah, Allah, La Elaha Ella Allah, Mawlana اللهِ - اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ - مولانا (God, God, There is no god except the One God, our Master) Only God is our Lord. Body and soul. And we mean it. Allah, Allah, La Elaha Ella Allah, Mawlana اللهِ - اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ - مولانا (God, God, There is no god except the One God, our Master) Allah, Allah, La Elaha Ella Allah, Mawlana اللهِ - اللهِ - لَآ إِلَـٰهَ إِلَّا ٱللَّهُ - مولانا (God, God, There is no god except the One God, our Master) Everyone of these statements deposits a hundred million dollars in your Post-Retirement Account. You're gonna need every penny of it for eternity. But these are heavy statements, and heaviest of all is La Elaha Ella Allah. La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.)",
+      "review_status": "draft",
+      "retrieval_text": "Body and soul affirming the premortal covenant\nRashad recalls the premortal testimony that God alone is Lord. The renewed chant is presented as a declaration by both body and soul, reversing the original failure and restoring conscious allegiance to God alone.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: premortal-covenant; body-and-soul; god-alone-lord; renewed-declaration\nUser terminology: before creation souls bore witness; body and soul declare; only God is our Lord\nQuestions: What premortal event did Rashad recall? Why did he emphasize both body and soul?\nQuran references: 7:172\nBible references: \nEntities: "
+    },
+    {
+      "id": "behrouz14-s08",
+      "start": 3960,
+      "end": 4410,
+      "title": "Post-retirement deposits, promised health, wealth, dignity, happiness, and closing prayer",
+      "summary": "Rashad says every remembrance places an enormous deposit in the soul's post-retirement account. He claims the Quran promises payment in health, wealth, perfect happiness, and dignity, while insisting that love of God would make zikr worthwhile even without reward. The group closes by asking God to accept prayer, zakat, fasting, and continued guidance, followed by al-Fatihah.",
+      "section_kind": "Quran study discussion",
+      "claim_classification": "participants' discussion",
+      "concepts": [
+        {
+          "id": "post-retirement-account",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "zikr-reward",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "health-wealth-happiness",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "dignity",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "closing-prayer",
+          "relation": "discussed",
+          "explicit": true
+        },
+        {
+          "id": "al-fatihah",
+          "relation": "discussed",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "hundred million dollars in PRA",
+        "health wealth perfect happiness",
+        "guaranteed dignity",
+        "accept Salat Zakat fasting"
+      ],
+      "related_questions": [
+        "What account metaphor did Rashad use?",
+        "Which benefits did he promise?",
+        "How did the Night of Destiny gathering close?"
+      ],
+      "quran_references": [
+        "1:1-7"
+      ],
+      "bible_references": [],
+      "entities": [],
+      "retrieval_note": "The health, wealth, dignity, and happiness claims are devotional promises and must not be presented as medical or financial guarantees.",
+      "retrieval_priority": "primary",
+      "start_time": "01:03:59.673",
+      "end_time": "01:13:25.773",
+      "source_segment_start": 193,
+      "source_segment_end": 209,
+      "csv_speakers": [
+        "Dr. Khalifa"
+      ],
+      "canonical_text": "La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.) We would commemorate God because we appreciate His greatness, because we love God. We would do it for nothing. It just happens that this is God's law, 23 places in the Quran, that He will pay you for commemorating Him, health, wealth and perfect happiness, guaranteed dignity. But we do it because we appreciate God. We would do it for nothing. La Elaha Ella Allah لَآ إِلَـٰهَ إِلَّا ٱللَّهُ (There is no god except the One God.) Allah ٱللَّه God Let's turn to God and ask Him to accept our Contact Prayers, our Zakat charity and our fasting, and to continue to guide us in the right path. Al-Fãtehah Bism Allah Arrahman Arraheem (1:1) Al hamdu Lillahi Rabbil ‘Alameen (1:2) Arrahman Arraheem (1:3) Maliki Yawm Eddeen (1:4) Eyyaka Na’abudu Wa Eyyaka Nasta’aeen (1:5) Ehdina Al-Serata Al-Mustaqeem (1:6) Serata Al-Lazeena An’amta ‘Alayhim Ghayri Al-Maghdoobi ‘Alayhim Wa Laddaalleen (1:7) This is the greatest of all nights. This is the night that God mentioned in Quran, in Sura 2, verse 186, that He accepts the prayers, IN SHAA ALLAH. Congratulations. God bless you. God loves you. We'll take a break and take it from there. Mã Shã Allãh",
+      "review_status": "draft",
+      "retrieval_text": "Post-retirement deposits, promised health, wealth, dignity, happiness, and closing prayer\nRashad says every remembrance places an enormous deposit in the soul's post-retirement account. He claims the Quran promises payment in health, wealth, perfect happiness, and dignity, while insisting that love of God would make zikr worthwhile even without reward. The group closes by asking God to accept prayer, zakat, fasting, and continued guidance, followed by al-Fatihah.\nSection kind: Quran study discussion\nClaim classification: participants' discussion\nConcepts: post-retirement-account; zikr-reward; health-wealth-happiness; dignity; closing-prayer; al-fatihah\nUser terminology: hundred million dollars in PRA; health wealth perfect happiness; guaranteed dignity; accept Salat Zakat fasting\nQuestions: What account metaphor did Rashad use? Which benefits did he promise? How did the Night of Destiny gathering close?\nQuran references: 1:1-7\nBible references: \nEntities: "
+    }
+  ],
+  "concept_definitions": [
+    {
+      "id": "absorbed-recognition",
+      "preferred_label": "Absorbed Recognition",
+      "aliases": [
+        "Allah repeated",
+        "Qayyum Absolute and Eternal King",
+        "recognize God's quality"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s03"
+      ]
+    },
+    {
+      "id": "al-fatihah",
+      "preferred_label": "Al Fatihah",
+      "aliases": [
+        "Allah Allah La Elaha Ella Allah Mawlana",
+        "accept Salat Zakat fasting",
+        "close with Al-Fatiha",
+        "guaranteed dignity",
+        "health wealth perfect happiness",
+        "hundred million dollars in PRA",
+        "our national anthem"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s05",
+        "behrouz14-s08"
+      ]
+    },
+    {
+      "id": "alhamdulillah",
+      "preferred_label": "Alhamdulillah",
+      "aliases": [
+        "God be glorified",
+        "God be praised",
+        "God is great",
+        "humans have choice",
+        "stupid unjust unappreciative"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s04"
+      ]
+    },
+    {
+      "id": "allah-repetition",
+      "preferred_label": "Allah Repetition",
+      "aliases": [
+        "Allah repeated",
+        "Qayyum Absolute and Eternal King",
+        "recognize God's quality"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s03"
+      ]
+    },
+    {
+      "id": "allahu-akbar",
+      "preferred_label": "Allahu Akbar",
+      "aliases": [
+        "God be glorified",
+        "God be praised",
+        "God is great",
+        "humans have choice",
+        "stupid unjust unappreciative"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s04"
+      ]
+    },
+    {
+      "id": "allahu-lana",
+      "preferred_label": "Allahu Lana",
+      "aliases": [
+        "Allahu Lana",
+        "Falana Al-hana",
+        "angels descend tonight",
+        "see your dearest wish"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s06"
+      ]
+    },
+    {
+      "id": "angels-descend",
+      "preferred_label": "Angels Descend",
+      "aliases": [
+        "Allahu Lana",
+        "Falana Al-hana",
+        "angels descend tonight",
+        "see your dearest wish"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s06"
+      ]
+    },
+    {
+      "id": "body-and-soul",
+      "preferred_label": "Body And Soul",
+      "aliases": [
+        "before creation souls bore witness",
+        "body and soul declare",
+        "only God is our Lord"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s07"
+      ]
+    },
+    {
+      "id": "closing-prayer",
+      "preferred_label": "Closing Prayer",
+      "aliases": [
+        "accept Salat Zakat fasting",
+        "guaranteed dignity",
+        "health wealth perfect happiness",
+        "hundred million dollars in PRA"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s08"
+      ]
+    },
+    {
+      "id": "collective-chant",
+      "preferred_label": "Collective Chant",
+      "aliases": [
+        "Allah Allah La Elaha Ella Allah Mawlana",
+        "close with Al-Fatiha",
+        "our national anthem"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s05"
+      ]
+    },
+    {
+      "id": "community-anthem",
+      "preferred_label": "Community Anthem",
+      "aliases": [
+        "Allah Allah La Elaha Ella Allah Mawlana",
+        "close with Al-Fatiha",
+        "our national anthem"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s05"
+      ]
+    },
+    {
+      "id": "contact-prayer",
+      "preferred_label": "Contact Prayer",
+      "aliases": [
+        "La Elaha Ella Allah",
+        "more you say and mean it",
+        "not commemorate humans",
+        "observe Salat for commemorating Me"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s02"
+      ]
+    },
+    {
+      "id": "creation-glorifies",
+      "preferred_label": "Creation Glorifies",
+      "aliases": [
+        "God be glorified",
+        "God be praised",
+        "God is great",
+        "humans have choice",
+        "stupid unjust unappreciative"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s04"
+      ]
+    },
+    {
+      "id": "dearest-wish",
+      "preferred_label": "Dearest Wish",
+      "aliases": [
+        "Allahu Lana",
+        "Falana Al-hana",
+        "angels descend tonight",
+        "see your dearest wish"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s06"
+      ]
+    },
+    {
+      "id": "dignity",
+      "preferred_label": "Dignity",
+      "aliases": [
+        "accept Salat Zakat fasting",
+        "guaranteed dignity",
+        "health wealth perfect happiness",
+        "hundred million dollars in PRA"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s08"
+      ]
+    },
+    {
+      "id": "divine-self-subsistence",
+      "preferred_label": "Divine Self Subsistence",
+      "aliases": [
+        "Allah repeated",
+        "Qayyum Absolute and Eternal King",
+        "recognize God's quality"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s03"
+      ]
+    },
+    {
+      "id": "dominant-thought",
+      "preferred_label": "Dominant Thought",
+      "aliases": [
+        "baby to teenager soul",
+        "every cell say it",
+        "most beloved worship",
+        "steak and lobster for soul"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s01"
+      ]
+    },
+    {
+      "id": "god-alone",
+      "preferred_label": "God Alone",
+      "aliases": [
+        "La Elaha Ella Allah",
+        "more you say and mean it",
+        "not commemorate humans",
+        "observe Salat for commemorating Me"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s02"
+      ]
+    },
+    {
+      "id": "god-alone-lord",
+      "preferred_label": "God Alone Lord",
+      "aliases": [
+        "before creation souls bore witness",
+        "body and soul declare",
+        "only God is our Lord"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s07"
+      ]
+    },
+    {
+      "id": "gratitude",
+      "preferred_label": "Gratitude",
+      "aliases": [
+        "God be glorified",
+        "God be praised",
+        "God is great",
+        "humans have choice",
+        "stupid unjust unappreciative"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s04"
+      ]
+    },
+    {
+      "id": "happiness-belongs-to-us",
+      "preferred_label": "Happiness Belongs To Us",
+      "aliases": [
+        "Allahu Lana",
+        "Falana Al-hana",
+        "angels descend tonight",
+        "see your dearest wish"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s06"
+      ]
+    },
+    {
+      "id": "health-wealth-happiness",
+      "preferred_label": "Health Wealth Happiness",
+      "aliases": [
+        "accept Salat Zakat fasting",
+        "guaranteed dignity",
+        "health wealth perfect happiness",
+        "hundred million dollars in PRA"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s08"
+      ]
+    },
+    {
+      "id": "human-free-choice",
+      "preferred_label": "Human Free Choice",
+      "aliases": [
+        "God be glorified",
+        "God be praised",
+        "God is great",
+        "humans have choice",
+        "stupid unjust unappreciative"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s04"
+      ]
+    },
+    {
+      "id": "la-ilaha-illa-god",
+      "preferred_label": "La Ilaha Illa God",
+      "aliases": [
+        "La Elaha Ella Allah",
+        "more you say and mean it",
+        "not commemorate humans",
+        "observe Salat for commemorating Me"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s02"
+      ]
+    },
+    {
+      "id": "mawlana",
+      "preferred_label": "Mawlana",
+      "aliases": [
+        "Allah Allah La Elaha Ella Allah Mawlana",
+        "close with Al-Fatiha",
+        "our national anthem"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s05"
+      ]
+    },
+    {
+      "id": "night-of-destiny",
+      "preferred_label": "Night Of Destiny",
+      "aliases": [
+        "Allahu Lana",
+        "Falana Al-hana",
+        "angels descend tonight",
+        "see your dearest wish"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s06"
+      ]
+    },
+    {
+      "id": "post-retirement-account",
+      "preferred_label": "Post Retirement Account",
+      "aliases": [
+        "accept Salat Zakat fasting",
+        "guaranteed dignity",
+        "health wealth perfect happiness",
+        "hundred million dollars in PRA"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s08"
+      ]
+    },
+    {
+      "id": "premortal-covenant",
+      "preferred_label": "Premortal Covenant",
+      "aliases": [
+        "before creation souls bore witness",
+        "body and soul declare",
+        "only God is our Lord"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s07"
+      ]
+    },
+    {
+      "id": "qayyum",
+      "preferred_label": "Qayyum",
+      "aliases": [
+        "Allah repeated",
+        "Qayyum Absolute and Eternal King",
+        "recognize God's quality"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s03"
+      ]
+    },
+    {
+      "id": "quran-20-14",
+      "preferred_label": "Quran 20 14",
+      "aliases": [
+        "La Elaha Ella Allah",
+        "more you say and mean it",
+        "not commemorate humans",
+        "observe Salat for commemorating Me"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s02"
+      ]
+    },
+    {
+      "id": "renewed-declaration",
+      "preferred_label": "Renewed Declaration",
+      "aliases": [
+        "before creation souls bore witness",
+        "body and soul declare",
+        "only God is our Lord"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s07"
+      ]
+    },
+    {
+      "id": "sincere-repetition",
+      "preferred_label": "Sincere Repetition",
+      "aliases": [
+        "La Elaha Ella Allah",
+        "more you say and mean it",
+        "not commemorate humans",
+        "observe Salat for commemorating Me"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s02"
+      ]
+    },
+    {
+      "id": "soul-growth",
+      "preferred_label": "Soul Growth",
+      "aliases": [
+        "baby to teenager soul",
+        "every cell say it",
+        "most beloved worship",
+        "steak and lobster for soul"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s01"
+      ]
+    },
+    {
+      "id": "spiritual-nourishment",
+      "preferred_label": "Spiritual Nourishment",
+      "aliases": [
+        "baby to teenager soul",
+        "every cell say it",
+        "most beloved worship",
+        "steak and lobster for soul"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s01"
+      ]
+    },
+    {
+      "id": "subhan-allah",
+      "preferred_label": "Subhan Allah",
+      "aliases": [
+        "God be glorified",
+        "God be praised",
+        "God is great",
+        "humans have choice",
+        "stupid unjust unappreciative"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s04"
+      ]
+    },
+    {
+      "id": "sura-al-qadr",
+      "preferred_label": "Sura Al Qadr",
+      "aliases": [
+        "Allahu Lana",
+        "Falana Al-hana",
+        "angels descend tonight",
+        "see your dearest wish"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s06"
+      ]
+    },
+    {
+      "id": "whole-body-remembrance",
+      "preferred_label": "Whole Body Remembrance",
+      "aliases": [
+        "baby to teenager soul",
+        "every cell say it",
+        "most beloved worship",
+        "steak and lobster for soul"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s01"
+      ]
+    },
+    {
+      "id": "zikr",
+      "preferred_label": "Zikr",
+      "aliases": [
+        "baby to teenager soul",
+        "every cell say it",
+        "most beloved worship",
+        "steak and lobster for soul"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s01"
+      ]
+    },
+    {
+      "id": "zikr-reward",
+      "preferred_label": "Zikr Reward",
+      "aliases": [
+        "accept Salat Zakat fasting",
+        "guaranteed dignity",
+        "health wealth perfect happiness",
+        "hundred million dollars in PRA"
+      ],
+      "appears_in_sections": [
+        "behrouz14-s08"
+      ]
+    }
+  ],
+  "transcript_issues": [
+    {
+      "id": "behrouz14-issue-01",
+      "issue_type": "date-unknown",
+      "original_text": "The filename identifies the Night of Destiny but not the year or calendar date.",
+      "suggested_action": "Verify against the audio archive and Ramadan chronology.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz14-issue-02",
+      "issue_type": "repetitive-transcript",
+      "original_text": "Most rows reproduce repeated chants rather than propositional speech.",
+      "suggested_action": "Preserve canonical text but use sectional summaries for retrieval.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz14-issue-03",
+      "issue_type": "health-and-wealth-guarantees",
+      "original_text": "Zikr is associated with guaranteed health, wealth, dignity, and perfect happiness.",
+      "suggested_action": "Do not use as medical or financial advice.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz14-issue-04",
+      "issue_type": "angelic-wish-claim",
+      "original_text": "Descending angels are said to recognize and fulfill dearest wishes.",
+      "suggested_action": "Keep attributed and avoid promising outcomes.",
+      "status": "needs_review"
+    },
+    {
+      "id": "behrouz14-issue-05",
+      "issue_type": "translation-ambiguity",
+      "original_text": "Allahu Lana and related Arabic phrases receive varying English glosses.",
+      "suggested_action": "Review Arabic wording and translation.",
+      "status": "needs_review"
+    }
+  ],
+  "canonical_document_id": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
+  "canonical_catalog_ids": [
+    "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube",
+  "archive_number": 14,
+  "canonical_evidence_rule": "Enrichment is draft retrieval metadata. Quote only the canonical source identified by canonical_document_id and source_file."
+}

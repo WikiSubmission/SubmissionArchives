@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.3-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-16-sura-64-and-partial-sura-70",
+  "title": "Quran Study from Behrouz 16: Sura 64 and a Partial Sura 70 Study",
+  "cases": [
+    {
+      "id": "behrouz16-eval-001",
+      "question": "How did Rashad explain Quran 64:1?",
+      "expected_section_ids": [
+        "behrouz16-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad opens Sura 64 with the claim that everything glorifies God and that all kingship and praise belong to Him. Omnipotence is treated as the foundation for trusting God's protection, health, happiness, and fulfillment of His part when believers fulfill theirs."
+    },
+    {
+      "id": "behrouz16-eval-002",
+      "question": "Why was omnipotence central to the discussion?",
+      "expected_section_ids": [
+        "behrouz16-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad opens Sura 64 with the claim that everything glorifies God and that all kingship and praise belong to Him. Omnipotence is treated as the foundation for trusting God's protection, health, happiness, and fulfillment of His part when believers fulfill theirs."
+    },
+    {
+      "id": "behrouz16-eval-003",
+      "question": "How did he connect it with happiness and protection?",
+      "expected_section_ids": [
+        "behrouz16-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad opens Sura 64 with the claim that everything glorifies God and that all kingship and praise belong to Him. Omnipotence is treated as the foundation for trusting God's protection, health, happiness, and fulfillment of His part when believers fulfill theirs."
+    },
+    {
+      "id": "behrouz16-eval-004",
+      "question": "How did the study distinguish believers and disbelievers?",
+      "expected_section_ids": [
+        "behrouz16-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:2–4 is used to distinguish appreciative and unappreciative people, to discuss the purposeful creation of the heavens and Earth, the perfection of human design, final return to God, and God's knowledge of concealed speech and innermost thoughts."
+    },
+    {
+      "id": "behrouz16-eval-005",
+      "question": "What did Rashad say about human design?",
+      "expected_section_ids": [
+        "behrouz16-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:2–4 is used to distinguish appreciative and unappreciative people, to discuss the purposeful creation of the heavens and Earth, the perfection of human design, final return to God, and God's knowledge of concealed speech and innermost thoughts."
+    },
+    {
+      "id": "behrouz16-eval-006",
+      "question": "What does God know according to Quran 64:4?",
+      "expected_section_ids": [
+        "behrouz16-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:2–4 is used to distinguish appreciative and unappreciative people, to discuss the purposeful creation of the heavens and Earth, the perfection of human design, final return to God, and God's knowledge of concealed speech and innermost thoughts."
+    },
+    {
+      "id": "behrouz16-eval-007",
+      "question": "Why did earlier peoples suffer consequences?",
+      "expected_section_ids": [
+        "behrouz16-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:5–6 recalls earlier peoples who suffered the consequences of their decisions. Rashad distinguishes constructive use of God's laws from self-inflicted harm, then emphasizes that rejecters objected to following human messengers despite clear proof. The discussion briefly counts occurrences of the word God on the page."
+    },
+    {
+      "id": "behrouz16-eval-008",
+      "question": "What objection did they raise against messengers?",
+      "expected_section_ids": [
+        "behrouz16-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:5–6 recalls earlier peoples who suffered the consequences of their decisions. Rashad distinguishes constructive use of God's laws from self-inflicted harm, then emphasizes that rejecters objected to following human messengers despite clear proof. The discussion briefly counts occurrences of the word God on the page."
+    },
+    {
+      "id": "behrouz16-eval-009",
+      "question": "How did numerical observation enter the section?",
+      "expected_section_ids": [
+        "behrouz16-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:5–6 recalls earlier peoples who suffered the consequences of their decisions. Rashad distinguishes constructive use of God's laws from self-inflicted harm, then emphasizes that rejecters objected to following human messengers despite clear proof. The discussion briefly counts occurrences of the word God on the page."
+    },
+    {
+      "id": "behrouz16-eval-010",
+      "question": "How did Quran 64 answer denial of resurrection?",
+      "expected_section_ids": [
+        "behrouz16-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:7–9 answers denial of resurrection and says every action will be accounted for. Rashad compares this with passages in which the guilty are recognized without questioning. Belief in God, His messenger, and the revealed light is presented as the path to remission and Paradise on the Day of Mutual Blaming."
+    },
+    {
+      "id": "behrouz16-eval-011",
+      "question": "Why would detailed questioning be unnecessary in Rashad's explanation?",
+      "expected_section_ids": [
+        "behrouz16-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:7–9 answers denial of resurrection and says every action will be accounted for. Rashad compares this with passages in which the guilty are recognized without questioning. Belief in God, His messenger, and the revealed light is presented as the path to remission and Paradise on the Day of Mutual Blaming."
+    },
+    {
+      "id": "behrouz16-eval-012",
+      "question": "What is the Day of Mutual Blaming?",
+      "expected_section_ids": [
+        "behrouz16-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 64:7–9 answers denial of resurrection and says every action will be accounted for. Rashad compares this with passages in which the guilty are recognized without questioning. Belief in God, His messenger, and the revealed light is presented as the path to remission and Paradise on the Day of Mutual Blaming."
+    },
+    {
+      "id": "behrouz16-eval-013",
+      "question": "How was Hell personified?",
+      "expected_section_ids": [
+        "behrouz16-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The appended Sura 70 block begins at verse 15. Hell is personified as calling those who turn away and hoard. Edip compares speaking objects across the Quran. The phrase that the human being was created anxious is examined alongside passive descriptions of weakness and haste, with the suggestion that humans changed their original good design."
+    },
+    {
+      "id": "behrouz16-eval-014",
+      "question": "What grammatical problem did Edip examine?",
+      "expected_section_ids": [
+        "behrouz16-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The appended Sura 70 block begins at verse 15. Hell is personified as calling those who turn away and hoard. Edip compares speaking objects across the Quran. The phrase that the human being was created anxious is examined alongside passive descriptions of weakness and haste, with the suggestion that humans changed their original good design."
+    },
+    {
+      "id": "behrouz16-eval-015",
+      "question": "How did the group reconcile anxiety with humanity's best design?",
+      "expected_section_ids": [
+        "behrouz16-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The appended Sura 70 block begins at verse 15. Hell is personified as calling those who turn away and hoard. Edip compares speaking objects across the Quran. The phrase that the human being was created anxious is examined alongside passive descriptions of weakness and haste, with the suggestion that humans changed their original good design."
+    },
+    {
+      "id": "behrouz16-eval-016",
+      "question": "Which believer traits appear in Sura 70?",
+      "expected_section_ids": [
+        "behrouz16-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 70:22–34 lists regular prayer, a specified share for the needy, belief in judgment, reverence of punishment, chastity, trustworthy conduct, truthful testimony, and punctual prayer. The group compares the list with Sura 23 and discusses whether legally held relationships refer to captives or spouses."
+    },
+    {
+      "id": "behrouz16-eval-017",
+      "question": "How was the list compared with Sura 23?",
+      "expected_section_ids": [
+        "behrouz16-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 70:22–34 lists regular prayer, a specified share for the needy, belief in judgment, reverence of punishment, chastity, trustworthy conduct, truthful testimony, and punctual prayer. The group compares the list with Sura 23 and discusses whether legally held relationships refer to captives or spouses."
+    },
+    {
+      "id": "behrouz16-eval-018",
+      "question": "What disagreement arose over legally held relationships?",
+      "expected_section_ids": [
+        "behrouz16-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 70:22–34 lists regular prayer, a specified share for the needy, belief in judgment, reverence of punishment, chastity, trustworthy conduct, truthful testimony, and punctual prayer. The group compares the list with Sura 23 and discusses whether legally held relationships refer to captives or spouses."
+    },
+    {
+      "id": "behrouz16-eval-019",
+      "question": "How did Rashad define chastity and marriage?",
+      "expected_section_ids": [
+        "behrouz16-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad expands the chastity passage into discussion of disease, social changes, marriage difficulties, arranged marriage, coercion, consent, inheritance, and temporary unions. A legitimate marriage must begin with sincere permanent intention, while deliberate temporary marriage is labeled prostitution."
+    },
+    {
+      "id": "behrouz16-eval-020",
+      "question": "What did he say about consent?",
+      "expected_section_ids": [
+        "behrouz16-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad expands the chastity passage into discussion of disease, social changes, marriage difficulties, arranged marriage, coercion, consent, inheritance, and temporary unions. A legitimate marriage must begin with sincere permanent intention, while deliberate temporary marriage is labeled prostitution."
+    },
+    {
+      "id": "behrouz16-eval-021",
+      "question": "How did permanent intention distinguish marriage from a temporary union?",
+      "expected_section_ids": [
+        "behrouz16-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad expands the chastity passage into discussion of disease, social changes, marriage difficulties, arranged marriage, coercion, consent, inheritance, and temporary unions. A legitimate marriage must begin with sincere permanent intention, while deliberate temporary marriage is labeled prostitution."
+    },
+    {
+      "id": "behrouz16-eval-022",
+      "question": "How did Rashad qualify the rich-believer statement?",
+      "expected_section_ids": [
+        "behrouz16-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The post-study discussion says believers should be hard-working and explains the phrase that a rich believer can contribute more than a poor believer without denying equal belief. Rashad announces the first Quran printed as God intended and an authorized Farsi translation. He then explains that Gabriel released portions of the Quran from Muhammad's soul to memory, supplied placement instructions, and left Muhammad fully conscious while writing."
+    },
+    {
+      "id": "behrouz16-eval-023",
+      "question": "Which publications did he announce?",
+      "expected_section_ids": [
+        "behrouz16-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The post-study discussion says believers should be hard-working and explains the phrase that a rich believer can contribute more than a poor believer without denying equal belief. Rashad announces the first Quran printed as God intended and an authorized Farsi translation. He then explains that Gabriel released portions of the Quran from Muhammad's soul to memory, supplied placement instructions, and left Muhammad fully conscious while writing."
+    },
+    {
+      "id": "behrouz16-eval-024",
+      "question": "How did he describe Gabriel's role in revelation?",
+      "expected_section_ids": [
+        "behrouz16-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The post-study discussion says believers should be hard-working and explains the phrase that a rich believer can contribute more than a poor believer without denying equal belief. Rashad announces the first Quran printed as God intended and an authorized Farsi translation. He then explains that Gabriel released portions of the Quran from Muhammad's soul to memory, supplied placement instructions, and left Muhammad fully conscious while writing."
+    }
+  ],
+  "canonical_document_id": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
+  "canonical_catalog_ids": [
+    "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast"
+  ],
+  "canonical_mapping": "youtube-id"
+}

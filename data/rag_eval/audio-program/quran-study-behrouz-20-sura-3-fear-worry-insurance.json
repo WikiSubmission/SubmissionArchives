@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.3-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-20-sura-3-fear-worry-insurance",
+  "title": "Quran Study from Behrouz 20: Sura 3:1–20, Fear, Worry, Insurance, and Outreach",
+  "cases": [
+    {
+      "id": "behrouz20-eval-001",
+      "question": "What distinction does Quran 3:7 make?",
+      "expected_section_ids": [
+        "behrouz20-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads the opening of Sura 3 and concentrates on Quran 3:7. Straightforward verses form the essence of scripture, while people with doubt pursue multiple-meaning verses to create confusion. He asks whether those who possess knowledge are professional religious scholars or sincere seekers who study the Quran."
+    },
+    {
+      "id": "behrouz20-eval-002",
+      "question": "Who did Sabahi identify as people possessing knowledge?",
+      "expected_section_ids": [
+        "behrouz20-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads the opening of Sura 3 and concentrates on Quran 3:7. Straightforward verses form the essence of scripture, while people with doubt pursue multiple-meaning verses to create confusion. He asks whether those who possess knowledge are professional religious scholars or sincere seekers who study the Quran."
+    },
+    {
+      "id": "behrouz20-eval-003",
+      "question": "Why can multiple-meaning verses become a distraction?",
+      "expected_section_ids": [
+        "behrouz20-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads the opening of Sura 3 and concentrates on Quran 3:7. Straightforward verses form the essence of scripture, while people with doubt pursue multiple-meaning verses to create confusion. He asks whether those who possess knowledge are professional religious scholars or sincere seekers who study the Quran."
+    },
+    {
+      "id": "behrouz20-eval-004",
+      "question": "How does punctuation affect Quran 3:7?",
+      "expected_section_ids": [
+        "behrouz20-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip explains that punctuation after God changes the interpretation of Quran 3:7 and challenges scholars who deny that knowledgeable people can understand multiple-meaning verses. He uses Quranic initials, messenger and prophet, and nafs as examples of terms with multiple senses. The group criticizes books devoted to obscure details while neglecting God alone, prayer, fasting, zakat, and pilgrimage."
+    },
+    {
+      "id": "behrouz20-eval-005",
+      "question": "Which words did Edip use as multiple-meaning examples?",
+      "expected_section_ids": [
+        "behrouz20-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip explains that punctuation after God changes the interpretation of Quran 3:7 and challenges scholars who deny that knowledgeable people can understand multiple-meaning verses. He uses Quranic initials, messenger and prophet, and nafs as examples of terms with multiple senses. The group criticizes books devoted to obscure details while neglecting God alone, prayer, fasting, zakat, and pilgrimage."
+    },
+    {
+      "id": "behrouz20-eval-006",
+      "question": "What central teachings were being neglected?",
+      "expected_section_ids": [
+        "behrouz20-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip explains that punctuation after God changes the interpretation of Quran 3:7 and challenges scholars who deny that knowledgeable people can understand multiple-meaning verses. He uses Quranic initials, messenger and prophet, and nafs as examples of terms with multiple senses. The group criticizes books devoted to obscure details while neglecting God alone, prayer, fasting, zakat, and pilgrimage."
+    },
+    {
+      "id": "behrouz20-eval-007",
+      "question": "What prayers appear in Quran 3:8–9?",
+      "expected_section_ids": [
+        "behrouz20-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:8–17 is read. Believers ask that their hearts not waver. Wealth and children cannot protect rejecters. The two armies illustrate divine support. Women, children, gold, horses, livestock, and crops are worldly attractions, while Paradise is described allegorically. Believers are steadfast, truthful, submitting, charitable, and meditating at dawn."
+    },
+    {
+      "id": "behrouz20-eval-008",
+      "question": "What cannot protect rejecters?",
+      "expected_section_ids": [
+        "behrouz20-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:8–17 is read. Believers ask that their hearts not waver. Wealth and children cannot protect rejecters. The two armies illustrate divine support. Women, children, gold, horses, livestock, and crops are worldly attractions, while Paradise is described allegorically. Believers are steadfast, truthful, submitting, charitable, and meditating at dawn."
+    },
+    {
+      "id": "behrouz20-eval-009",
+      "question": "How were Paradise's descriptions understood?",
+      "expected_section_ids": [
+        "behrouz20-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:8–17 is read. Believers ask that their hearts not waver. Wealth and children cannot protect rejecters. The two armies illustrate divine support. Women, children, gold, horses, livestock, and crops are worldly attractions, while Paradise is described allegorically. Believers are steadfast, truthful, submitting, charitable, and meditating at dawn."
+    },
+    {
+      "id": "behrouz20-eval-010",
+      "question": "Which believer traits appear in verse 17?",
+      "expected_section_ids": [
+        "behrouz20-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:8–17 is read. Believers ask that their hearts not waver. Wealth and children cannot protect rejecters. The two armies illustrate divine support. Women, children, gold, horses, livestock, and crops are worldly attractions, while Paradise is described allegorically. Believers are steadfast, truthful, submitting, charitable, and meditating at dawn."
+    },
+    {
+      "id": "behrouz20-eval-011",
+      "question": "What criterion did Rashad give for being in God's dominion?",
+      "expected_section_ids": [
+        "behrouz20-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that grief over something lost or worry about the future means a person is outside God's dominion. Believers should identify the source, remove it, and accept every result cheerfully because God sees all roads ahead. A failed job application should not cause grief, and insurance is mentioned as a difficult attachment to relinquish. Material attractions are compared with the status of prisoners of war exiled from God's kingdom."
+    },
+    {
+      "id": "behrouz20-eval-012",
+      "question": "How did he apply it to a failed job application?",
+      "expected_section_ids": [
+        "behrouz20-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that grief over something lost or worry about the future means a person is outside God's dominion. Believers should identify the source, remove it, and accept every result cheerfully because God sees all roads ahead. A failed job application should not cause grief, and insurance is mentioned as a difficult attachment to relinquish. Material attractions are compared with the status of prisoners of war exiled from God's kingdom."
+    },
+    {
+      "id": "behrouz20-eval-013",
+      "question": "Why did insurance enter the discussion?",
+      "expected_section_ids": [
+        "behrouz20-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that grief over something lost or worry about the future means a person is outside God's dominion. Believers should identify the source, remove it, and accept every result cheerfully because God sees all roads ahead. A failed job application should not cause grief, and insurance is mentioned as a difficult attachment to relinquish. Material attractions are compared with the status of prisoners of war exiled from God's kingdom."
+    },
+    {
+      "id": "behrouz20-eval-014",
+      "question": "What did he mean by accepting outcomes cheerfully?",
+      "expected_section_ids": [
+        "behrouz20-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that grief over something lost or worry about the future means a person is outside God's dominion. Believers should identify the source, remove it, and accept every result cheerfully because God sees all roads ahead. A failed job application should not cause grief, and insurance is mentioned as a difficult attachment to relinquish. Material attractions are compared with the status of prisoners of war exiled from God's kingdom."
+    },
+    {
+      "id": "behrouz20-eval-015",
+      "question": "Who bears witness to God's oneness?",
+      "expected_section_ids": [
+        "behrouz20-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads the testimony that there is no god except God and discusses whether 'upholding justice' describes God or knowledgeable witnesses. Rashad interprets it as God alone being worthy of godhood. Quran 3:19 states that the only religion approved by God is submission, and disputes are attributed to jealousy."
+    },
+    {
+      "id": "behrouz20-eval-016",
+      "question": "How did Rashad interpret upholding justice?",
+      "expected_section_ids": [
+        "behrouz20-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads the testimony that there is no god except God and discusses whether 'upholding justice' describes God or knowledgeable witnesses. Rashad interprets it as God alone being worthy of godhood. Quran 3:19 states that the only religion approved by God is submission, and disputes are attributed to jealousy."
+    },
+    {
+      "id": "behrouz20-eval-017",
+      "question": "What religion is approved by God in the study's translation?",
+      "expected_section_ids": [
+        "behrouz20-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi reads the testimony that there is no god except God and discusses whether 'upholding justice' describes God or knowledgeable witnesses. Rashad interprets it as God alone being worthy of godhood. Quran 3:19 states that the only religion approved by God is submission, and disputes are attributed to jealousy."
+    },
+    {
+      "id": "behrouz20-eval-018",
+      "question": "Why did Sabahi caution against labeling others?",
+      "expected_section_ids": [
+        "behrouz20-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi says believers should be patient and avoid labeling someone a disbeliever because God may guide that person later. A participant compares Muslim outreach unfavorably with Christian missionaries in Africa and Nicaragua. Rashad says the sole mission is delivery and cites global believers distributing the mathematical miracle. He explains that Islam and Muslim are being rendered as submission and Submitter to avoid prejudice created by contemporary political associations."
+    },
+    {
+      "id": "behrouz20-eval-019",
+      "question": "What outreach question did the participant ask?",
+      "expected_section_ids": [
+        "behrouz20-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi says believers should be patient and avoid labeling someone a disbeliever because God may guide that person later. A participant compares Muslim outreach unfavorably with Christian missionaries in Africa and Nicaragua. Rashad says the sole mission is delivery and cites global believers distributing the mathematical miracle. He explains that Islam and Muslim are being rendered as submission and Submitter to avoid prejudice created by contemporary political associations."
+    },
+    {
+      "id": "behrouz20-eval-020",
+      "question": "How did Rashad describe global delivery?",
+      "expected_section_ids": [
+        "behrouz20-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi says believers should be patient and avoid labeling someone a disbeliever because God may guide that person later. A participant compares Muslim outreach unfavorably with Christian missionaries in Africa and Nicaragua. Rashad says the sole mission is delivery and cites global believers distributing the mathematical miracle. He explains that Islam and Muslim are being rendered as submission and Submitter to avoid prejudice created by contemporary political associations."
+    },
+    {
+      "id": "behrouz20-eval-021",
+      "question": "Why was Muslim changed to Submitter?",
+      "expected_section_ids": [
+        "behrouz20-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Sabahi says believers should be patient and avoid labeling someone a disbeliever because God may guide that person later. A participant compares Muslim outreach unfavorably with Christian missionaries in Africa and Nicaragua. Rashad says the sole mission is delivery and cites global believers distributing the mathematical miracle. He explains that Islam and Muslim are being rendered as submission and Submitter to avoid prejudice created by contemporary political associations."
+    }
+  ],
+  "canonical_document_id": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
+  "canonical_catalog_ids": [
+    "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry"
+  ],
+  "canonical_mapping": "youtube-id"
+}

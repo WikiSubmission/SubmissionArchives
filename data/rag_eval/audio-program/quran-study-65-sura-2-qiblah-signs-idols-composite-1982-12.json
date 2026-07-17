@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.8-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-65-sura-2-qiblah-signs-idols-composite-1982-12",
+  "title": "Quran Study 65: Sura 2, Death, the Qiblah, Overwhelming Signs, and Idols (Composite, 1982-12)",
+  "cases": [
+    {
+      "id": "audio65-eval-001",
+      "question": "What must a person who concealed truth do when repenting?",
+      "expected_section_ids": [
+        "audio65-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The opening continues discussion of people who conceal or distort revelation and may repent by clarifying it. Rashad says disbelievers are beaten by angels at death, believers' souls are taken gently without pain, and martyrs experience an easy transition. Quran 2:163 is read in Arabic and English as the declaration that God is one, Gracious, and Merciful."
+    },
+    {
+      "id": "audio65-eval-002",
+      "question": "How were the deaths of believers and disbelievers contrasted?",
+      "expected_section_ids": [
+        "audio65-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The opening continues discussion of people who conceal or distort revelation and may repent by clarifying it. Rashad says disbelievers are beaten by angels at death, believers' souls are taken gently without pain, and martyrs experience an easy transition. Quran 2:163 is read in Arabic and English as the declaration that God is one, Gracious, and Merciful."
+    },
+    {
+      "id": "audio65-eval-003",
+      "question": "How was Quran 2:163 read?",
+      "expected_section_ids": [
+        "audio65-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The opening continues discussion of people who conceal or distort revelation and may repent by clarifying it. Rashad says disbelievers are beaten by angels at death, believers' souls are taken gently without pain, and martyrs experience an easy transition. Quran 2:163 is read in Arabic and English as the declaration that God is one, Gracious, and Merciful."
+    },
+    {
+      "id": "audio65-eval-004",
+      "question": "Which geometric models were used in the qiblah debate?",
+      "expected_section_ids": [
+        "audio65-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants spend roughly half an hour drawing and debating the direction from Tucson to Mecca. They compare map projections, compass bearings, a person's upright orientation on a sphere, radii from Earth's center, satellites, latitude and longitude, east, northeast, and what counts as a straight line or shortest route."
+    },
+    {
+      "id": "audio65-eval-005",
+      "question": "Why did the participants disagree over east and northeast?",
+      "expected_section_ids": [
+        "audio65-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants spend roughly half an hour drawing and debating the direction from Tucson to Mecca. They compare map projections, compass bearings, a person's upright orientation on a sphere, radii from Earth's center, satellites, latitude and longitude, east, northeast, and what counts as a straight line or shortest route."
+    },
+    {
+      "id": "audio65-eval-006",
+      "question": "Why were Arabic lessons being restarted?",
+      "expected_section_ids": [
+        "audio65-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad announces Arabic lessons after zikr and asks participants to learn the alphabet in its initial, medial, and final forms. He says Arabic will help compare translations and identify crucial words. He also recalls a hostile letter calling him a 'deviated luminary.'"
+    },
+    {
+      "id": "audio65-eval-007",
+      "question": "What unusual insult did Rashad report receiving?",
+      "expected_section_ids": [
+        "audio65-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad announces Arabic lessons after zikr and asks participants to learn the alphabet in its initial, medial, and final forms. He says Arabic will help compare translations and identify crucial words. He also recalls a hostile letter calling him a 'deviated luminary.'"
+    },
+    {
+      "id": "audio65-eval-008",
+      "question": "Which bodily and animal features illustrated Quran 2:164?",
+      "expected_section_ids": [
+        "audio65-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad spends an extended session on Quran 2:164. The cat's ears, human teeth, swallowing, heartbeat, disbelievers' involuntary bodily functions, Earth and night, planetary precision, water's properties, floating ships, clouds, desert-seed inhibitors, rain, and wind are offered as overwhelming signs of God."
+    },
+    {
+      "id": "audio65-eval-009",
+      "question": "How were water, clouds, and wind treated as signs?",
+      "expected_section_ids": [
+        "audio65-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad spends an extended session on Quran 2:164. The cat's ears, human teeth, swallowing, heartbeat, disbelievers' involuntary bodily functions, Earth and night, planetary precision, water's properties, floating ships, clouds, desert-seed inhibitors, rain, and wind are offered as overwhelming signs of God."
+    },
+    {
+      "id": "audio65-eval-010",
+      "question": "What did Rashad say involuntary bodily functions mean?",
+      "expected_section_ids": [
+        "audio65-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad spends an extended session on Quran 2:164. The cat's ears, human teeth, swallowing, heartbeat, disbelievers' involuntary bodily functions, Earth and night, planetary precision, water's properties, floating ships, clouds, desert-seed inhibitors, rain, and wind are offered as overwhelming signs of God."
+    },
+    {
+      "id": "audio65-eval-011",
+      "question": "What do the idols and followers say in Quran 2:165–167?",
+      "expected_section_ids": [
+        "audio65-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:165–167 is read as a future event described in the past tense. Followers confront the people or figures they idolized, while those idols disown them. Rashad applies the verses to Jesus, Muhammad, Mary, Saint Jude, and intercession, and compares them with Matthew 7:23, where Jesus rejects people acting in his name."
+    },
+    {
+      "id": "audio65-eval-012",
+      "question": "How were Jesus and Muhammad used as examples?",
+      "expected_section_ids": [
+        "audio65-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:165–167 is read as a future event described in the past tense. Followers confront the people or figures they idolized, while those idols disown them. Rashad applies the verses to Jesus, Muhammad, Mary, Saint Jude, and intercession, and compares them with Matthew 7:23, where Jesus rejects people acting in his name."
+    },
+    {
+      "id": "audio65-eval-013",
+      "question": "What parallel was drawn with Matthew 7:23?",
+      "expected_section_ids": [
+        "audio65-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 2:165–167 is read as a future event described in the past tense. Followers confront the people or figures they idolized, while those idols disown them. Rashad applies the verses to Jesus, Muhammad, Mary, Saint Jude, and intercession, and compares them with Matthew 7:23, where Jesus rejects people acting in his name."
+    }
+  ],
+  "canonical_document_id": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
+  "canonical_catalog_ids": [
+    "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa"
+  ],
+  "canonical_mapping": "youtube-id"
+}

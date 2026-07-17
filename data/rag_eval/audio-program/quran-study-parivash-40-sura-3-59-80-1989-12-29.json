@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.5-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-parivash-40-sura-3-59-80-1989-12-29",
+  "title": "Quran Study from Parivash 40: Sura 3:59–80 (1989-12-29)",
+  "cases": [
+    {
+      "id": "audio40-eval-001",
+      "question": "How are Jesus and Adam compared?",
+      "expected_section_ids": [
+        "parivash40-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad briefly praises research on sad faces and recounts a speaker forgetting a prepared khutba. Catherine reads the comparison of Jesus and Adam, the truth from God, the challenge to disputants, and God's knowledge of evildoers."
+    },
+    {
+      "id": "audio40-eval-002",
+      "question": "What challenge follows the comparison?",
+      "expected_section_ids": [
+        "parivash40-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad briefly praises research on sad faces and recounts a speaker forgetting a prepared khutba. Catherine reads the comparison of Jesus and Adam, the truth from God, the challenge to disputants, and God's knowledge of evildoers."
+    },
+    {
+      "id": "audio40-eval-003",
+      "question": "Why might messengers need reassurance?",
+      "expected_section_ids": [
+        "parivash40-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip asks how a messenger could be told not to doubt. Catherine cites Abraham and other messengers who sought reassurance and describes the burden of mission. A statement about hearing God is clarified as metaphor rather than literal sound."
+    },
+    {
+      "id": "audio40-eval-004",
+      "question": "What did Catherine clarify as metaphor?",
+      "expected_section_ids": [
+        "parivash40-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip asks how a messenger could be told not to doubt. Catherine cites Abraham and other messengers who sought reassurance and describes the burden of mission. A statement about hearing God is clarified as metaphor rather than literal sound."
+    },
+    {
+      "id": "audio40-eval-005",
+      "question": "What was the logical agreement?",
+      "expected_section_ids": [
+        "parivash40-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:64 calls scripture communities to worship God alone without human lords. Rashad says Christians and Jews reject the proposal because of ego and social ties to Jesus, Muhammad, Mary, or inherited identity. The community's practices are traced to Abraham rather than Mosaic or later Christian law."
+    },
+    {
+      "id": "audio40-eval-006",
+      "question": "Why might people reject it?",
+      "expected_section_ids": [
+        "parivash40-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:64 calls scripture communities to worship God alone without human lords. Rashad says Christians and Jews reject the proposal because of ego and social ties to Jesus, Muhammad, Mary, or inherited identity. The community's practices are traced to Abraham rather than Mosaic or later Christian law."
+    },
+    {
+      "id": "audio40-eval-007",
+      "question": "Which religious lineage did Rashad claim?",
+      "expected_section_ids": [
+        "parivash40-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:64 calls scripture communities to worship God alone without human lords. Rashad says Christians and Jews reject the proposal because of ego and social ties to Jesus, Muhammad, Mary, or inherited identity. The community's practices are traced to Abraham rather than Mosaic or later Christian law."
+    },
+    {
+      "id": "audio40-eval-008",
+      "question": "How did Catherine test claims of God-alone worship?",
+      "expected_section_ids": [
+        "parivash40-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine discusses speaking with Christians who say they worship God alone while praying in Jesus' name. Rashad recommends beginning self-audit with the possibility that one is still an idolater and trying to disprove it. Catherine warns that outreach can produce discouragement and doubt."
+    },
+    {
+      "id": "audio40-eval-009",
+      "question": "What self-examination method did Rashad suggest?",
+      "expected_section_ids": [
+        "parivash40-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine discusses speaking with Christians who say they worship God alone while praying in Jesus' name. Rashad recommends beginning self-audit with the possibility that one is still an idolater and trying to disprove it. Catherine warns that outreach can produce discouragement and doubt."
+    },
+    {
+      "id": "audio40-eval-010",
+      "question": "What risk did outreach create?",
+      "expected_section_ids": [
+        "parivash40-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Catherine discusses speaking with Christians who say they worship God alone while praying in Jesus' name. Rashad recommends beginning self-audit with the possibility that one is still an idolater and trying to disprove it. Catherine warns that outreach can produce discouragement and doubt."
+    },
+    {
+      "id": "audio40-eval-011",
+      "question": "Which biblical verse was used?",
+      "expected_section_ids": [
+        "parivash40-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group cites Jesus' statement 'my God and your God' against the Trinity. Matt discusses the Council of Nicaea, and Rashad says a political minority imposed Trinitarian doctrine in 325 CE while dissenters included the people of the cave."
+    },
+    {
+      "id": "audio40-eval-012",
+      "question": "How did the group describe Nicaea?",
+      "expected_section_ids": [
+        "parivash40-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group cites Jesus' statement 'my God and your God' against the Trinity. Matt discusses the Council of Nicaea, and Rashad says a political minority imposed Trinitarian doctrine in 325 CE while dissenters included the people of the cave."
+    },
+    {
+      "id": "audio40-eval-013",
+      "question": "Who were linked with anti-Trinitarian dissent?",
+      "expected_section_ids": [
+        "parivash40-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The group cites Jesus' statement 'my God and your God' against the Trinity. Matt discusses the Council of Nicaea, and Rashad says a political minority imposed Trinitarian doctrine in 325 CE while dissenters included the people of the cave."
+    },
+    {
+      "id": "audio40-eval-014",
+      "question": "How is scripture distorted?",
+      "expected_section_ids": [
+        "parivash40-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:72–80 describes groups concealing truth and twisting their tongues to imitate scripture. It says no person given scripture and prophethood would command people to worship him, prophets, or angels. Instead, learned people should devote themselves to the Lord alone."
+    },
+    {
+      "id": "audio40-eval-015",
+      "question": "What would no true prophet command?",
+      "expected_section_ids": [
+        "parivash40-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:72–80 describes groups concealing truth and twisting their tongues to imitate scripture. It says no person given scripture and prophethood would command people to worship him, prophets, or angels. Instead, learned people should devote themselves to the Lord alone."
+    },
+    {
+      "id": "audio40-eval-016",
+      "question": "What should learned believers say?",
+      "expected_section_ids": [
+        "parivash40-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Quran 3:72–80 describes groups concealing truth and twisting their tongues to imitate scripture. It says no person given scripture and prophethood would command people to worship him, prophets, or angels. Instead, learned people should devote themselves to the Lord alone."
+    }
+  ],
+  "canonical_document_id": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
+  "canonical_catalog_ids": [
+    "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989"
+  ],
+  "canonical_mapping": "youtube-id"
+}

@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.2-audio",
+  "source_class": "audio-transcript",
+  "document_id": "audio-program/quran-study-behrouz-13-sura-7-adam-eve-bodies-1989-12-24",
+  "title": "Quran Study from Behrouz 13: Sura 7:12 and Adam and Eve's Bodies (1989-12-24)",
+  "cases": [
+    {
+      "id": "behrouz13-eval-001",
+      "question": "What does Quran 7:12 reveal about Satan?",
+      "expected_section_ids": [
+        "behrouz13-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Satan's refusal to prostrate and says the verse comes after the great rebellion and the decision to test humanity. He recalls a Chicago seminary presentation in which a professor called the Quran Muhammad's hallucination and Rashad immediately presented mathematical evidence. Participants discuss messengers as humans, public audiences, and the arrangement of speakers as providential."
+    },
+    {
+      "id": "behrouz13-eval-002",
+      "question": "How did Rashad connect the verse with the human test?",
+      "expected_section_ids": [
+        "behrouz13-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Satan's refusal to prostrate and says the verse comes after the great rebellion and the decision to test humanity. He recalls a Chicago seminary presentation in which a professor called the Quran Muhammad's hallucination and Rashad immediately presented mathematical evidence. Participants discuss messengers as humans, public audiences, and the arrangement of speakers as providential."
+    },
+    {
+      "id": "behrouz13-eval-003",
+      "question": "What happened at the Chicago seminar?",
+      "expected_section_ids": [
+        "behrouz13-s01"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad reads Satan's refusal to prostrate and says the verse comes after the great rebellion and the decision to test humanity. He recalls a Chicago seminary presentation in which a professor called the Quran Muhammad's hallucination and Rashad immediately presented mathematical evidence. Participants discuss messengers as humans, public audiences, and the arrangement of speakers as providential."
+    },
+    {
+      "id": "behrouz13-eval-004",
+      "question": "How did the pen enter the discussion?",
+      "expected_section_ids": [
+        "behrouz13-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion turns to God teaching by the pen, the role of written revelation, and traditions borrowed from the Bible. Rashad cites Quran 53:17–18 and says Muhammad saw the tree eaten from by Adam and Eve. Ihsan recounts an experience or vision that becomes a point of comparison for bodies, awareness, fear, and being returned to ordinary consciousness."
+    },
+    {
+      "id": "behrouz13-eval-005",
+      "question": "What did Rashad say Muhammad saw?",
+      "expected_section_ids": [
+        "behrouz13-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion turns to God teaching by the pen, the role of written revelation, and traditions borrowed from the Bible. Rashad cites Quran 53:17–18 and says Muhammad saw the tree eaten from by Adam and Eve. Ihsan recounts an experience or vision that becomes a point of comparison for bodies, awareness, fear, and being returned to ordinary consciousness."
+    },
+    {
+      "id": "behrouz13-eval-006",
+      "question": "How was Ihsan's experience used?",
+      "expected_section_ids": [
+        "behrouz13-s02"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The discussion turns to God teaching by the pen, the role of written revelation, and traditions borrowed from the Bible. Rashad cites Quran 53:17–18 and says Muhammad saw the tree eaten from by Adam and Eve. Ihsan recounts an experience or vision that becomes a point of comparison for bodies, awareness, fear, and being returned to ordinary consciousness."
+    },
+    {
+      "id": "behrouz13-eval-007",
+      "question": "What did Rashad think was hidden from Adam and Eve?",
+      "expected_section_ids": [
+        "behrouz13-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that Adam and Eve were initially outside visible earthly bodies. The command not to approach the tree preserved their state; when they broke the law, their bodies became visible and they were drawn or 'sucked' into prepared bodies on Earth. The group debates the Arabic wording concerning what had been hidden from them, whether this means part or all of the body, and whether Paradise existed in another dimension."
+    },
+    {
+      "id": "behrouz13-eval-008",
+      "question": "What happened when they ate from the tree?",
+      "expected_section_ids": [
+        "behrouz13-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that Adam and Eve were initially outside visible earthly bodies. The command not to approach the tree preserved their state; when they broke the law, their bodies became visible and they were drawn or 'sucked' into prepared bodies on Earth. The group debates the Arabic wording concerning what had been hidden from them, whether this means part or all of the body, and whether Paradise existed in another dimension."
+    },
+    {
+      "id": "behrouz13-eval-009",
+      "question": "How did Edip question the Arabic and dimensional interpretation?",
+      "expected_section_ids": [
+        "behrouz13-s03"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad argues that Adam and Eve were initially outside visible earthly bodies. The command not to approach the tree preserved their state; when they broke the law, their bodies became visible and they were drawn or 'sucked' into prepared bodies on Earth. The group debates the Arabic wording concerning what had been hidden from them, whether this means part or all of the body, and whether Paradise existed in another dimension."
+    },
+    {
+      "id": "behrouz13-eval-010",
+      "question": "Were souls included among all created things?",
+      "expected_section_ids": [
+        "behrouz13-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says God created all things, including souls. After the heavenly feud, human souls were put to death with a promise that they would enter worldly life at assigned times for redemption. Quran 7:172 is interpreted as the summons of the entire human race. Participants propose that each soul is matched to a specific body and family according to its premortal record."
+    },
+    {
+      "id": "behrouz13-eval-011",
+      "question": "What happened after the heavenly feud?",
+      "expected_section_ids": [
+        "behrouz13-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says God created all things, including souls. After the heavenly feud, human souls were put to death with a promise that they would enter worldly life at assigned times for redemption. Quran 7:172 is interpreted as the summons of the entire human race. Participants propose that each soul is matched to a specific body and family according to its premortal record."
+    },
+    {
+      "id": "behrouz13-eval-012",
+      "question": "How were souls assigned to bodies and families?",
+      "expected_section_ids": [
+        "behrouz13-s04"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Rashad says God created all things, including souls. After the heavenly feud, human souls were put to death with a promise that they would enter worldly life at assigned times for redemption. Quran 7:172 is interpreted as the summons of the entire human race. Participants propose that each soul is matched to a specific body and family according to its premortal record."
+    },
+    {
+      "id": "behrouz13-eval-013",
+      "question": "How were medical emergencies used in the discussion?",
+      "expected_section_ids": [
+        "behrouz13-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Atif recounts medical emergencies and apparent near-death recoveries. Rashad says humans possess a natural instinct recognizing God alone. Jinn are described as the creatures closest to Satan's view and as assigned companions to human beings. A story about religious neighbors illustrates opposition triggered by the God-alone testimony."
+    },
+    {
+      "id": "behrouz13-eval-014",
+      "question": "What natural instinct did Rashad identify?",
+      "expected_section_ids": [
+        "behrouz13-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Atif recounts medical emergencies and apparent near-death recoveries. Rashad says humans possess a natural instinct recognizing God alone. Jinn are described as the creatures closest to Satan's view and as assigned companions to human beings. A story about religious neighbors illustrates opposition triggered by the God-alone testimony."
+    },
+    {
+      "id": "behrouz13-eval-015",
+      "question": "What role did assigned jinn have?",
+      "expected_section_ids": [
+        "behrouz13-s05"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Atif recounts medical emergencies and apparent near-death recoveries. Rashad says humans possess a natural instinct recognizing God alone. Jinn are described as the creatures closest to Satan's view and as assigned companions to human beings. A story about religious neighbors illustrates opposition triggered by the God-alone testimony."
+    },
+    {
+      "id": "behrouz13-eval-016",
+      "question": "What did Edip ask about bearing witness?",
+      "expected_section_ids": [
+        "behrouz13-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip asks how a person can bear witness that someone is God's messenger on the basis of evidence. The group discusses what it means to witness, verify, and state what one knows. Rashad mentions scientific work cloning carrots and says it was published in Nature, using it to recall his earlier identity as a scientist."
+    },
+    {
+      "id": "behrouz13-eval-017",
+      "question": "How was evidence distinguished from direct sight?",
+      "expected_section_ids": [
+        "behrouz13-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip asks how a person can bear witness that someone is God's messenger on the basis of evidence. The group discusses what it means to witness, verify, and state what one knows. Rashad mentions scientific work cloning carrots and says it was published in Nature, using it to recall his earlier identity as a scientist."
+    },
+    {
+      "id": "behrouz13-eval-018",
+      "question": "What scientific work did Rashad recall?",
+      "expected_section_ids": [
+        "behrouz13-s06"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Edip asks how a person can bear witness that someone is God's messenger on the basis of evidence. The group discusses what it means to witness, verify, and state what one knows. Rashad mentions scientific work cloning carrots and says it was published in Nature, using it to recall his earlier identity as a scientist."
+    },
+    {
+      "id": "behrouz13-eval-019",
+      "question": "Where did Rashad locate the intellect?",
+      "expected_section_ids": [
+        "behrouz13-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants distinguish the thinking self from the brain. Rashad says the intellect belongs to the soul while the brain is an electronic instrument resembling a computer. Questions concern hormones, memory, personality, heart and brain transplantation, medical scandals, and whether replacing bodily organs changes the person."
+    },
+    {
+      "id": "behrouz13-eval-020",
+      "question": "How did he compare the brain with a computer?",
+      "expected_section_ids": [
+        "behrouz13-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants distinguish the thinking self from the brain. Rashad says the intellect belongs to the soul while the brain is an electronic instrument resembling a computer. Questions concern hormones, memory, personality, heart and brain transplantation, medical scandals, and whether replacing bodily organs changes the person."
+    },
+    {
+      "id": "behrouz13-eval-021",
+      "question": "What questions arose about hormones and transplants?",
+      "expected_section_ids": [
+        "behrouz13-s07"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "Participants distinguish the thinking self from the brain. Rashad says the intellect belongs to the soul while the brain is an electronic instrument resembling a computer. Questions concern hormones, memory, personality, heart and brain transplantation, medical scandals, and whether replacing bodily organs changes the person."
+    },
+    {
+      "id": "behrouz13-eval-022",
+      "question": "What bodily systems were discussed near the end?",
+      "expected_section_ids": [
+        "behrouz13-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final discussion examines lungs, endocrine regulation, dying bodies, preservation, and whether bodily functions continue without the soul. Rashad compares sleep and death and invokes the people of the cave, who slept 309 years and awoke believing only a short time had passed."
+    },
+    {
+      "id": "behrouz13-eval-023",
+      "question": "How were sleep and death compared?",
+      "expected_section_ids": [
+        "behrouz13-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final discussion examines lungs, endocrine regulation, dying bodies, preservation, and whether bodily functions continue without the soul. Rashad compares sleep and death and invokes the people of the cave, who slept 309 years and awoke believing only a short time had passed."
+    },
+    {
+      "id": "behrouz13-eval-024",
+      "question": "What did the people of the cave illustrate?",
+      "expected_section_ids": [
+        "behrouz13-s08"
+      ],
+      "match_type": "conceptual",
+      "expected_answer_note": "The final discussion examines lungs, endocrine regulation, dying bodies, preservation, and whether bodily functions continue without the soul. Rashad compares sleep and death and invokes the people of the cave, who slept 309 years and awoke believing only a short time had passed."
+    }
+  ],
+  "canonical_document_id": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
+  "canonical_catalog_ids": [
+    "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989"
+  ],
+  "canonical_mapping": "archive-number-to-canonical-youtube"
+}
