@@ -1,0 +1,676 @@
+{
+ "schema_version": "1.0-written-works",
+ "document_id": "written-works/computer-speaks",
+ "canonical_document_id": "computer-speaks",
+ "canonical_catalog_ids": ["computer-speaks"],
+ "title": "The Computer Speaks: God's Message to the World",
+ "review_status": "draft",
+ "generation_note": "Sections authored from canonical page text by an AI assistant; review before approval.",
+ "sections": [
+  {
+   "id": "cs-s01",
+   "title": "Prologue: The Book's Claims and the Coded Message",
+   "summary": "The prologue introduces this book as a demonstration, produced with the aid of a Hewlett-Packard computer, of physical and verifiable proof for the existence of God, a message from God to the reader, and the exact year the world will end. It states that God's coded message arrived to the world through a man from Arabia named Muhammad, released over 23 years in Arabic, and that all evidence in the book is simplified into verse-by-verse alphabet-letter counts so any reader can randomly spot-check the data. It argues that the Quran's 14-century existence without physical supporting evidence was a deliberate divine plan, letting distortions and abuses surface first so this numerical proof could later expose and purge them.",
+   "section_kind": "introduction",
+   "concepts": [
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "quran-coded-message", "relation": "described", "explicit": true},
+    {"id": "computer-generated-analysis", "relation": "described", "explicit": true},
+    {"id": "existence-of-god", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["what is the computer speaks book about", "Rashad Khalifa prologue", "proof God exists computer", "Quran coded message", "code 19 introduction", "why was this book written", "exact year world will end"],
+   "related_questions": ["What does the author claim this book proves?", "How was the Quran's numerical code described in the prologue?", "Why did the author say the Quran's proof was delayed 14 centuries?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for understanding the book's overall purpose and claims before its numerical evidence is presented.",
+   "source_segment_start": 0,
+   "source_segment_end": 8,
+   "page_start": 1,
+   "page_end": 9,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s02",
+   "title": "Nineteen-Letter Opening Statement and the First and Last Revelations",
+   "summary": "This section presents the book's first physical facts: the Quran's opening statement ('Bism Allah al-Rahman al-Raheem') consists of 19 Arabic letters; the first revelation, the first five verses of chapter 96 ('Read'), consists of 19 words made of 76 letters; the last revelation, chapter 110, also consists of 19 words; the Quran has 114 chapters; the first-revealed chapter sits in position 19 counted from the end of the Quran; that same chapter has 19 verses made of 285 letters; and the word 'Ism' (name), the first word of the opening statement, occurs exactly 19 times in the whole Quran. Each claim is backed by a computer-style table of letters, words, or chapter numbers.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "opening-statement-bismillah", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "chapter-96-iqra", "relation": "described", "explicit": true},
+    {"id": "chapter-110-help", "relation": "described", "explicit": true},
+    {"id": "word-ism", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["19 letters Bismillah", "first revelation 19 words", "last Quran revelation chapter 110", "114 chapters Quran", "chapter 96 Iqra verses", "word Ism count Quran", "physical facts opening statement"],
+   "related_questions": ["How many letters are in the Quran's opening statement?", "What was the first Quranic revelation and how many words did it contain?", "Why does the number of Quran chapters matter to the author's argument?"],
+   "quran_references": ["96:1-5", "110:1-3"],
+   "retrieval_note": "Use when a user asks about the basic 19-based numeric claims tied to the Quran's opening verse, first revelation, or chapter count.",
+   "source_segment_start": 9,
+   "source_segment_end": 20,
+   "page_start": 10,
+   "page_end": 21,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s03",
+   "title": "Word 'Allah' Occurrence Table, Chapters 1 Through 4",
+   "summary": "This section begins the book's tabulation of every occurrence of the word 'Allah' in the Quran, listing chapter and verse locations sequentially from chapter 1 through chapter 4, verse 176. It is the first quarter of a full verse-by-verse index intended to let readers verify, by spot-checking any listed verse, that the word occurs 2,698 times in the entire Quran.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-allah-occurrence-count", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "verse-by-verse-index", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["how many times does Allah appear in Quran", "Allah word count 2698", "Allah occurrences chapter 1 to 4", "word God frequency Quran table", "where does Allah appear early chapters"],
+   "related_questions": ["Where does the word Allah appear in chapters 1 through 4 of the Quran?", "How is the 2,698 count of Allah verified verse by verse?"],
+   "quran_references": [],
+   "retrieval_note": "Use for a user who wants to spot-check the location of the word Allah in the earlier chapters of the Quran.",
+   "source_segment_start": 21,
+   "source_segment_end": 38,
+   "page_start": 22,
+   "page_end": 39,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s04",
+   "title": "Word 'Allah' Occurrence Table, Chapters 4 Through 12",
+   "summary": "This section continues the verse-by-verse listing of every occurrence of the word 'Allah,' covering the remainder of chapter 4 through chapter 12, verse 86. It forms the second quarter of the full index supporting the claim that 'Allah' occurs 2,698 times across the whole Quran.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-allah-occurrence-count", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "verse-by-verse-index", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Allah occurrences chapter 5 to 12", "word Allah table middle chapters", "Allah count chapter 9", "how often is Allah mentioned chapters 4 to 12"],
+   "related_questions": ["Where does the word Allah appear between chapters 4 and 12 of the Quran?"],
+   "quran_references": [],
+   "retrieval_note": "Use for a user checking the locations of the word Allah in the middle-early chapters of the Quran.",
+   "source_segment_start": 39,
+   "source_segment_end": 55,
+   "page_start": 40,
+   "page_end": 56,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s05",
+   "title": "Word 'Allah' Occurrence Table, Chapters 12 Through 35",
+   "summary": "This section continues the verse-by-verse listing of every occurrence of the word 'Allah,' covering chapter 12 through chapter 35, verse 27. It forms the third quarter of the index supporting the claim that the word occurs 2,698 times across the whole Quran.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-allah-occurrence-count", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "verse-by-verse-index", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Allah occurrences chapter 12 to 35", "word Allah table middle of Quran", "Allah count chapter 27", "how often is Allah mentioned chapters 12 to 35"],
+   "related_questions": ["Where does the word Allah appear between chapters 12 and 35 of the Quran?"],
+   "quran_references": [],
+   "retrieval_note": "Use for a user checking the locations of the word Allah across the middle chapters of the Quran.",
+   "source_segment_start": 56,
+   "source_segment_end": 72,
+   "page_start": 57,
+   "page_end": 73,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s06",
+   "title": "Word 'Allah' Occurrence Table, Chapters 35 Through 114, and Final Tally",
+   "summary": "This section completes the verse-by-verse listing of every occurrence of the word 'Allah,' covering chapter 35 through the Quran's final chapter, 114. It closes with the author's final tally that the word 'Allah' occurs 2,698 times in the whole Quran, expressed as 19 multiplied by 142, completing the four-part index begun earlier in the book.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-allah-occurrence-count", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "verse-by-verse-index", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Allah occurrences chapter 35 to 114", "total Allah count Quran 2698", "19x142 Allah word count", "final tally word Allah Quran"],
+   "related_questions": ["Where does the word Allah appear between chapters 35 and 114 of the Quran?", "What is the final total count of the word Allah in the Quran?"],
+   "quran_references": [],
+   "retrieval_note": "Use for a user asking for the final total count of the word Allah in the Quran or its location in the later chapters.",
+   "source_segment_start": 73,
+   "source_segment_end": 88,
+   "page_start": 74,
+   "page_end": 89,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s07",
+   "title": "Word Counts for 'Al-Rahman' and 'Al-Raheem'",
+   "summary": "This section presents the third and fourth words of the Quran's opening statement. 'Al-Rahman' (Most Gracious) is shown, with a full verse-by-verse table, to occur 57 times in the Quran, and 'Al-Raheem' (Most Merciful) is shown to occur 114 times. The author notes that only one opening-statement occurrence is counted per chapter even though 'Bismillah' introduces nearly every chapter.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-al-rahman-occurrence-count", "relation": "described", "explicit": true},
+    {"id": "word-al-raheem-occurrence-count", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Al-Rahman count Quran 57 times", "Al-Raheem 114 times Quran", "most gracious most merciful word count", "opening statement four words count"],
+   "related_questions": ["How many times does Al-Rahman occur in the Quran?", "How many times does Al-Raheem occur in the Quran?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the frequency of the words Al-Rahman or Al-Raheem in the Quran.",
+   "source_segment_start": 89,
+   "source_segment_end": 93,
+   "page_start": 90,
+   "page_end": 94,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s08",
+   "title": "Commentary on the Opening Statement's Four-Word Numerical Pattern",
+   "summary": "The author reflects on the four preceding word-count facts, noting that the journal Scientific American (September 1980) referred to this kind of study as 'an ingenious study of the Koran.' The passage argues that each of the four words in the Quran's opening statement occurring a multiple of 19 times throughout the text is too consistent to be coincidental, and uses chapter 112 as an illustration of how altering a single 'Allah' word would collapse the whole numerical system, given that Muhammad delivered the Quran orally over 23 years without any apparent awareness of such a code.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "scientific-american-reference", "relation": "described", "explicit": true},
+    {"id": "quran-preservation-argument", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Scientific American Quran study", "ingenious study of Koran 1980", "why 19 pattern proves Quran divine", "opening statement four words argument"],
+   "related_questions": ["What did Scientific American say about this numerical study?", "Why does the author think a single altered word would destroy the code?"],
+   "quran_references": ["112:1-4"],
+   "retrieval_note": "Use when a user asks why the author considers the four-word opening pattern significant or references the Scientific American mention.",
+   "source_segment_start": 94,
+   "source_segment_end": 96,
+   "page_start": 95,
+   "page_end": 97,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s09",
+   "title": "The Missing and Compensating 'Bismillah' in Chapters 9 and 27",
+   "summary": "This section explains that the opening 'Bismillah' statement is absent from chapter 9, leaving only 113 total occurrences instead of a clean multiple of 19, but that chapter 27, verse 30, contains an extra 'Bismillah' quoting the Queen of Sheba's letter from Solomon, which restores the total to 114. A table shows that the number of chapters counted from chapter 9 to chapter 27 is exactly 19, which the author presents as proof that the chapter sequence was divinely arranged.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "missing-bismillah-chapter-9", "relation": "described", "explicit": true},
+    {"id": "extra-bismillah-chapter-27", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["why is Bismillah missing from chapter 9", "extra Bismillah chapter 27 verse 30", "19 chapters between 9 and 27", "Queen of Sheba letter Solomon Quran"],
+   "related_questions": ["Why does chapter 9 not begin with Bismillah?", "Where is the extra Bismillah found and why does it matter?", "How many chapters separate the missing and extra Bismillah?"],
+   "quran_references": ["27:30"],
+   "retrieval_note": "Use when a user asks about the absence of Bismillah from chapter 9 or the Queen of Sheba's letter in chapter 27.",
+   "source_segment_start": 97,
+   "source_segment_end": 99,
+   "page_start": 98,
+   "page_end": 100,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s10",
+   "title": "Word Counts of the Second and Third Quranic Revelations",
+   "summary": "This section presents word-by-word tables for the second revelation, the first nine verses of chapter 68 ('Al-Qalam'), showing 38 words, and the third revelation, the first ten verses of chapter 73 ('Al-Muzzammil'), showing 57 words. It concludes by summarizing that the first, second, and third revelations consisted of 19, 38, and 57 words respectively, each a multiple of 19.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "second-revelation-chapter-68", "relation": "described", "explicit": true},
+    {"id": "third-revelation-chapter-73", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["second Quran revelation word count", "chapter 68 Al-Qalam first verses", "third revelation chapter 73 Al-Muzzammil", "19 38 57 words revelations"],
+   "related_questions": ["How many words were in the second Quranic revelation?", "How many words were in the third Quranic revelation?"],
+   "quran_references": ["68:1-9", "73:1-10"],
+   "retrieval_note": "Use when a user asks about the word counts of the early chronological revelations of the Quran.",
+   "source_segment_start": 100,
+   "source_segment_end": 102,
+   "page_start": 101,
+   "page_end": 103,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s11",
+   "title": "Why the Number Nineteen: Chapter 74 and the Word 'Wahid'",
+   "summary": "This section argues that the fourth revelation, verses 1 through 30 of chapter 74 ('The Hidden Secret'), introduced the number 19 itself, declaring that anyone who calls the Quran man-made will be proven wrong by that number, and lists five stated purposes of the code: to stump disbelievers, reassure Jews and Christians, strengthen believers' faith, remove doubt, and expose hypocrites. It then explains that the fifth revelation, the opening chapter 'Al-Fatihah,' placed the 19-letter Bismillah immediately after this revelation, and argues 19 was chosen because the Arabic word for 'one' ('Wahid'), reflecting the Quran's monotheistic theme, has letters whose numerical values sum to 19.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "chapter-74-hidden-secret", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "arabic-letter-numerals", "relation": "described", "explicit": true},
+    {"id": "word-wahid-one", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["why number 19 in Quran", "chapter 74 hidden secret", "five reasons for number 19", "Arabic word Wahid equals 19", "Wahid means one numerology"],
+   "related_questions": ["Why does the Quran supposedly use the number 19?", "What five purposes does the author say the number 19 serves?", "How does the Arabic word for 'one' equal 19?"],
+   "quran_references": ["74:1-8", "74:30", "74:31", "74:35", "1:1"],
+   "retrieval_note": "Use when a user asks why the number 19 was chosen or wants the chapter 74 argument explained.",
+   "source_segment_start": 103,
+   "source_segment_end": 106,
+   "page_start": 104,
+   "page_end": 107,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s12",
+   "title": "Introducing the Quranic Initials as a Numerical System",
+   "summary": "This section introduces the 'Quranic Initials,' the mysterious single or combined Arabic letters that prefix 29 of the Quran's 114 chapters. It states that exactly 14 letters, half the Arabic alphabet, form 14 distinct sets of these initials, that 14 plus 14 plus 29 sums to 57, and that the Quranic word 'aayaat' used to describe these initials in several chapters should be understood to mean 'miracles' rather than 'verses.' It closes with a full list of the 29 chapters that open with Quranic initials.",
+   "section_kind": "introduction",
+   "concepts": [
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "word-aayaat-miracles", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["what are Quranic initials", "mysterious letters Quran chapters", "29 chapters with initials", "muqattaat letters meaning", "huroof muqatta'at 19"],
+   "related_questions": ["What are the Quranic initials and which chapters have them?", "Why does the author say 'aayaat' means miracles rather than verses?", "How many letters and chapter-sets make up the Quranic initials system?"],
+   "quran_references": ["10:1", "12:1", "13:1", "15:1", "26:2", "27:1", "28:2"],
+   "retrieval_note": "Use as background before any question about a specific Quranic-initial letter combination such as Qaf, Noon, or Ya-Seen.",
+   "source_segment_start": 107,
+   "source_segment_end": 111,
+   "page_start": 108,
+   "page_end": 112,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s13",
+   "title": "Letter Counts for 'Qaf' and 'Noon' in Their Initialed Chapters",
+   "summary": "This section shows that the letter 'Qaf' occurs 57 times in each of the two chapters it prefixes, chapters 42 and 50, for a combined total of 114 matching the Quran's chapter count. It also shows the letter 'Noon' occurring 133 times in chapter 68, the only chapter it prefixes, and includes a reference table of the percentage occurrence of the letter Qaf across all 114 chapters.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-qaf-frequency", "relation": "described", "explicit": true},
+    {"id": "letter-noon-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["letter Qaf count chapter 42 50", "letter Noon chapter 68 count", "Qaf 57 times each chapter", "Noon 133 times Quran"],
+   "related_questions": ["How many times does the letter Qaf occur in chapters 42 and 50?", "How many times does the letter Noon occur in chapter 68?"],
+   "quran_references": ["50:13"],
+   "retrieval_note": "Use when a user asks about the Qaf-initialed or Noon-initialed chapters and their letter counts.",
+   "source_segment_start": 112,
+   "source_segment_end": 119,
+   "page_start": 113,
+   "page_end": 120,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s14",
+   "title": "Letter Count for 'Saad' Across Chapters 7, 19, and 38",
+   "summary": "This section presents a verse-by-verse table counting the letter 'Saad' in the three chapters it prefixes: chapter 7 (Al-A'raaf), chapter 19 (Maryam), and chapter 38 (Saad), finding totals of 97, 26, and 29 respectively for a combined total of 152.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-saad-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["letter Saad count chapters 7 19 38", "Saad initialed chapters Quran", "152 letter Saad total"],
+   "related_questions": ["How many times does the letter Saad occur in chapters 7, 19, and 38?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the Saad-initialed chapters and their letter counts.",
+   "source_segment_start": 120,
+   "source_segment_end": 124,
+   "page_start": 121,
+   "page_end": 125,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s15",
+   "title": "Letter Counts for 'Ya' and 'Seen' in Chapter 36",
+   "summary": "This section provides a verse-by-verse table counting the letters 'Ya' and 'Seen' throughout chapter 36 ('Ya Seen'), finding 237 occurrences of 'Ya' and 48 of 'Seen,' for a combined total of 285.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letters-ya-seen-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "chapter-36-ya-seen", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["chapter 36 Ya Seen letter count", "Ya Seen 285 letters total", "letters Y S chapter 36"],
+   "related_questions": ["How many times do the letters Ya and Seen occur in chapter 36?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the Ya-Seen initialed chapter's letter counts.",
+   "source_segment_start": 125,
+   "source_segment_end": 127,
+   "page_start": 126,
+   "page_end": 128,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s16",
+   "title": "Letter Counts for 'Ha' and 'Meem' Across the Seven Ha-Meem Chapters",
+   "summary": "This section provides an extensive verse-by-verse table counting the letters 'Ha' and 'Meem' across the seven consecutive chapters they prefix, 40 through 46, finding 292 occurrences of 'Ha' and 1,855 of 'Meem,' for a combined total of 2,147. The author frames this as remarkable given that over 2,000 letters had to be distributed across roughly one-tenth of the Quran according to this pattern.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letters-ha-meem-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Ha Meem chapters 40 to 46 letter count", "chapters 40-46 initials Ha Meem", "2147 letters Ha Meem total"],
+   "related_questions": ["How many times do the letters Ha and Meem occur across chapters 40 through 46?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the Ha-Meem initialed chapters and their combined letter counts.",
+   "source_segment_start": 128,
+   "source_segment_end": 138,
+   "page_start": 129,
+   "page_end": 139,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s17",
+   "title": "Letter Counts for 'Ayn,' 'Seen,' and 'Qaf' in Chapter 42",
+   "summary": "This section counts the three letters of the 'Ayn Seen Qaf' initial, found only in chapter 42, which also carries the 'Ha Meem' initial in its first verse, showing 'Ayn' 98 times, 'Seen' 54 times, and 'Qaf' 57 times, for a combined total of 209.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letters-ayn-seen-qaf-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Ayn Seen Qaf chapter 42 letter count", "209 letters Ayn Seen Qaf", "chapter 42 two sets of initials"],
+   "related_questions": ["How many times do the letters Ayn, Seen, and Qaf occur in chapter 42?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the Ayn-Seen-Qaf initial in chapter 42.",
+   "source_segment_start": 139,
+   "source_segment_end": 140,
+   "page_start": 140,
+   "page_end": 141,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s18",
+   "title": "Letter Counts for 'Alif, Lam, Meem' Across Six Chapters",
+   "summary": "This section provides extensive verse-by-verse tables counting the letters 'Alif,' 'Lam,' and 'Meem' independently within each of the six chapters they prefix, 2, 3, 29, 30, 31, and 32, showing that the combined total in each chapter separately is a multiple of 19: 9,899 in chapter 2, 5,662 in chapter 3, 1,672 in chapter 29, 1,254 in chapter 30, 817 in chapter 31, and 570 in chapter 32.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letters-alif-lam-meem-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Alif Lam Meem letter count chapter 2", "ALM initials chapters 2 3 29 30 31 32", "9899 letters chapter 2", "chapter 3 alif lam meem count"],
+   "related_questions": ["How many times do the letters Alif, Lam, and Meem occur in chapter 2?", "Which six chapters carry the Alif-Lam-Meem initial and what are their letter totals?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the Alif-Lam-Meem initialed chapters and their per-chapter letter totals.",
+   "source_segment_start": 141,
+   "source_segment_end": 159,
+   "page_start": 142,
+   "page_end": 160,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s19",
+   "title": "Letter Counts for 'Alif, Lam, Ra' Across Five Chapters",
+   "summary": "This section provides verse-by-verse tables counting the letters 'Alif,' 'Lam,' and 'Ra' independently within each of the five chapters they prefix, 10, 11, 12, 14, and 15, showing chapter totals of 2,489 in chapter 10, 2,489 in chapter 11, 2,375 in chapter 12, 1,197 in chapter 14, and 912 in chapter 15, each a multiple of 19.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letters-alif-lam-ra-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Alif Lam Ra letter count chapters 10 11 12 14 15", "ALR initials Quran", "2489 letters chapter 10", "chapter 10 alif lam ra count"],
+   "related_questions": ["How many times do the letters Alif, Lam, and Ra occur in chapters 10 through 15?", "Why do chapters 10 and 11 have the same Alif-Lam-Ra total?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the Alif-Lam-Ra initialed chapters and their per-chapter letter totals.",
+   "source_segment_start": 160,
+   "source_segment_end": 172,
+   "page_start": 161,
+   "page_end": 173,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s20",
+   "title": "Letter Counts for 'Alif, Lam, Meem, Ra' in Chapter 13 and 'Alif, Lam, Meem, Saad' in Chapter 7",
+   "summary": "This section counts four-letter Quranic initials in two chapters. In chapter 13, the letters Alif, Lam, Meem, and Ra occur 605, 480, 260, and 137 times respectively, totalling 1,482. In chapter 7, the letters Alif, Lam, Meem, and Saad occur roughly 2,529, 1,530, 1,164, and 97 times respectively, totalling 5,320.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letters-alif-lam-meem-ra-frequency", "relation": "described", "explicit": true},
+    {"id": "letters-alif-lam-meem-saad-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Alif Lam Meem Ra chapter 13 count", "Alif Lam Meem Saad chapter 7 count", "1482 letters chapter 13", "5320 letters chapter 7"],
+   "related_questions": ["How many times do the letters Alif, Lam, Meem, and Ra occur in chapter 13?", "How many times do the letters Alif, Lam, Meem, and Saad occur in chapter 7?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the four-letter Quranic initials in chapters 13 or 7.",
+   "source_segment_start": 173,
+   "source_segment_end": 180,
+   "page_start": 174,
+   "page_end": 181,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s21",
+   "title": "Letter Counts for 'Kaf, Ha, Ya, Ayn, Saad' in Chapter 19",
+   "summary": "This section counts the five letters of the 'Kaf Ha Ya Ayn Saad' initial, found only in chapter 19 (Maryam), showing Kaf 137 times, Ha 175 times, Ya 343 times, Ayn 117 times, and Saad 26 times, for a combined total of 798.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letters-kaf-ha-ya-ayn-saad-frequency", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "chapter-19-maryam", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Kaf Ha Ya Ayn Saad chapter 19 count", "chapter 19 Maryam initials", "798 letters total chapter 19"],
+   "related_questions": ["How many times do the five letters of the Kaf-Ha-Ya-Ayn-Saad initial occur in chapter 19?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the five-letter Quranic initial in chapter 19 (Maryam).",
+   "source_segment_start": 181,
+   "source_segment_end": 183,
+   "page_start": 182,
+   "page_end": 184,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s22",
+   "title": "Interlocking Letter Counts Across Chapters 19, 20, 26, 27, and 28",
+   "summary": "This section argues that producing a book where several letters interlock and interact across multiple chapters would be virtually impossible for a human author, then presents extensive verse-by-verse tables counting the letters 'Ha,' 'Ta Ha,' 'Ta Seen,' and 'Ta Seen Meem' across the five chapters they prefix, 19, 20, 26, 27, and 28. The combined total of these interlocking initials across all five chapters is 1,767.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "interlocking-quranic-initials", "relation": "described", "explicit": true},
+    {"id": "code-19", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["interlocking Quranic initials chapters 19 20 26 27 28", "Ha Ta Ha Ta Seen Ta Seen Meem count", "1767 letters interlocking initials"],
+   "related_questions": ["How do the Quranic initials in chapters 19, 20, 26, 27, and 28 interlock?", "What is the combined letter total for this interlocking initials system?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user asks about the interlocking initials spanning chapters 19 through 28.",
+   "source_segment_start": 184,
+   "source_segment_end": 200,
+   "page_start": 185,
+   "page_end": 201,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s23",
+   "title": "Summary of the Simple and Intricate Physical Facts",
+   "summary": "This section recaps the book's 'simple physical facts,' including the 19-letter opening statement, the first and last revelation word counts, the 114 chapters, the missing and extra Bismillah, and the sequence of revelations, and briefly restates the 'intricate facts' represented by the 14 sets of Quranic initials found in 29 chapters, presenting both groups as complementary levels of proof of the Quran's divine origin.",
+   "section_kind": "conclusion",
+   "concepts": [
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "quran-preservation-argument", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["summary of physical facts Quran code 19", "list of simple facts number 19", "conclusion Quranic numerical miracle"],
+   "related_questions": ["What are all the simple physical facts listed together?", "How do the simple and intricate facts relate to each other?"],
+   "quran_references": [],
+   "retrieval_note": "Use when a user wants a consolidated recap of all the numeric proofs presented earlier in the book.",
+   "source_segment_start": 201,
+   "source_segment_end": 203,
+   "page_start": 202,
+   "page_end": 204,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s24",
+   "title": "Epilogue: Calculating the Year the World Will End",
+   "summary": "The epilogue argues that the 14 sets of Quranic initials, described as the 'seven pairs' mentioned in chapter 15 verse 87, represent the length of Muhammad's prophetic interim in years when their numerical letter-values are summed, yielding 1,789 lunar years. Subtracting the lunar year at the time of writing, 1400 AH, leaves 309 years remaining, which the author equates to 309 solar years based on the phrase about the Cave dwellers lasting 'three hundred years, increased by nine' in chapter 18 verse 25, and adds this figure to 1980 AD to conclude that the world will end in the year 2280 AD.",
+   "section_kind": "procedure",
+   "concepts": [
+    {"id": "end-of-world-date-calculation", "relation": "described", "explicit": true},
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "chapter-15-seven-pairs", "relation": "described", "explicit": true},
+    {"id": "lunar-solar-year-conversion", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["when will the world end Rashad Khalifa", "2280 AD end of world prediction", "seven pairs chapter 15 verse 87", "309 years Cave people chapter 18", "how was end of world date calculated"],
+   "related_questions": ["How does the author calculate the year the world will end?", "What are the 'seven pairs' mentioned in chapter 15?", "Why does the author use 309 years from the Cave story?"],
+   "quran_references": ["15:87", "15:85-86", "26:15", "18:25", "57:22", "33:40"],
+   "retrieval_note": "Use when a user asks how or why this book claims to predict the year the world will end (2280 AD).",
+   "source_segment_start": 204,
+   "source_segment_end": 212,
+   "page_start": 205,
+   "page_end": 213,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s25",
+   "title": "Appendix 1: Secret Quranic Proof Unveiled, an Historical Landmark",
+   "summary": "Reprinted from the author's Quran translation, this appendix restates in plain English the full numerical-code argument: the 19-letter opening statement and its four words occurring in multiples of 19, the 114 chapters, the missing and extra Bismillah, the first and last revelations, and the 14 sets of Quranic initials found in 29 chapters, including the Qaf, Noon, Saad, Ya-Seen, Ha-Meem, and Alif-Lam-Meem letter combinations. It closes by noting that a Syrian scholar found the Quran contains 285 numbers that sum to a multiple of 19, framing the whole system as proof the Quran is unaltered.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "quran-preservation-argument", "relation": "described", "explicit": true},
+    {"id": "quranic-numbers-285", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Appendix 1 secret Quranic proof", "summary of code 19 argument", "285 numbers in Quran", "Quranic initials list appendix"],
+   "related_questions": ["What is the condensed version of the whole numerical-code argument?", "How many numbers are mentioned in the Quran according to this appendix?"],
+   "quran_references": ["17:88", "10:20", "25:4-6", "13:43", "9:128", "27:30"],
+   "retrieval_note": "Use as a standalone, plain-English summary of the entire Code 19 argument when a user wants the whole case in one place.",
+   "source_segment_start": 213,
+   "source_segment_end": 226,
+   "page_start": 215,
+   "page_end": 229,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s26",
+   "title": "Appendices 2-3: The Quran's Memorization Design and Choice of Arabic",
+   "summary": "Appendix 2 argues that Quranic wording contains built-in 'reminding bells,' words placed earlier in a verse that cue the reader toward specific divine names or adjectives appearing later, illustrated with examples from chapters 2 and 3. Appendix 3 argues that Arabic was chosen as the Quran's language for its grammatical precision, especially in distinguishing gendered and dual pronouns needed for its legal verses, such as the inheritance and divorce laws of chapter 2.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "quran-memorization-design", "relation": "described", "explicit": true},
+    {"id": "reminding-bells", "relation": "described", "explicit": true},
+    {"id": "why-arabic-language", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["why is Quran easy to memorize", "reminding bells Quran verses", "why was Quran revealed in Arabic", "Arabic grammar precision Quran law"],
+   "related_questions": ["How does the Quran's wording help with memorization?", "Why does the author say Arabic was the necessary language for the Quran?"],
+   "quran_references": ["11:1", "2:127-129", "3:176-178", "41:44"],
+   "retrieval_note": "Use when a user asks about the Quran's literary memorization aids or why it was revealed in Arabic.",
+   "source_segment_start": 227,
+   "source_segment_end": 230,
+   "page_start": 230,
+   "page_end": 233,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s27",
+   "title": "Appendices 4-6: Heaven and Hell, God's Greatness, and the Purpose of Creation",
+   "summary": "Appendix 4 argues that the Quran's descriptions of heaven and hell are explicitly allegorical, comparing the real thing to a mosquito. Appendix 5 describes seven universes folded in God's hand, with the reader's own universe being the smallest and containing a billion galaxies. Appendix 6 explains that humans and jinn were created so God could expose Satan's hidden rebellion to the angels and show them a creature capable of submitting to God without ever seeing Him.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "heaven-hell-allegory", "relation": "described", "explicit": true},
+    {"id": "seven-universes", "relation": "described", "explicit": true},
+    {"id": "purpose-of-creation", "relation": "described", "explicit": true},
+    {"id": "satans-rebellion", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["are heaven and hell descriptions allegorical", "seven universes Quran", "why did God create Satan test angels", "why were humans created Quran"],
+   "related_questions": ["Are the Quran's descriptions of heaven and hell literal or allegorical?", "How many universes does the Quran describe and what is their scale?", "Why did God create humans and jinn according to this appendix?"],
+   "quran_references": ["2:24-26", "13:35", "47:15", "39:67", "41:12", "55:33", "67:5", "72:8-12", "7:143", "2:30", "2:34", "51:56"],
+   "retrieval_note": "Use when a user asks about heaven and hell allegory, the scale of the universe, or the purpose behind human creation.",
+   "source_segment_start": 231,
+   "source_segment_end": 234,
+   "page_start": 234,
+   "page_end": 237,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s28",
+   "title": "Appendices 7-9: Intercession, Abraham as Founder of Islam, and God's Plural Tense",
+   "summary": "Appendix 7 argues there is no effective intercession on judgment day beyond wishes that coincide with God's own decision, citing that Muhammad's uncle and Abraham's father could not be helped by their prophetic relatives. Appendix 8 argues that Abraham, not Muhammad, was the first to use the words 'Islam' and 'Muslims,' and that Abraham originally received the salat, zakat, fasting, and hajj practices. Appendix 9 explains that the Quran's plural references to God reflect the participation of angels such as Gabriel in a given action, while singular references indicate God acting alone.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "myth-of-intercession", "relation": "described", "explicit": true},
+    {"id": "abraham-founder-of-islam", "relation": "described", "explicit": true},
+    {"id": "gods-plural-tense", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["does intercession work in Islam", "Abraham founder of Islam not Muhammad", "why does Quran use we for God", "salat given to Abraham"],
+   "related_questions": ["Does the Quran teach that intercession works on judgment day?", "Why does the author say Abraham founded Islam?", "Why does God use plural pronouns in the Quran?"],
+   "quran_references": ["9:80", "4:125", "9:114", "11:45", "66:10", "21:28", "22:78", "16:123", "21:73", "2:183", "22:26-27", "2:97", "20:12-15"],
+   "retrieval_note": "Use when a user asks about intercession, Abraham's religious role, or God's use of plural language in the Quran.",
+   "source_segment_start": 235,
+   "source_segment_end": 237,
+   "page_start": 238,
+   "page_end": 240,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s29",
+   "title": "Appendix 10: The Day of Resurrection and the Mechanism of Worship",
+   "summary": "This appendix describes end-times signs, including the numerical code's discovery, the moon splitting, worldwide smoke, a speaking creature, and Gog and Magog, then explains that on the day of resurrection all people, including Jesus, Moses, and Muhammad, will initially be in hell before God appears and everyone is stratified into hell, purgatory, low heaven, or high heaven based on how much their souls grew through worship such as salat, zakat, fasting, and hajj. It frames these religious duties as spiritual nutrition needed for the soul, just as food nourishes the body.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "day-of-resurrection", "relation": "described", "explicit": true},
+    {"id": "end-times-signs", "relation": "described", "explicit": true},
+    {"id": "purgatory-al-araf", "relation": "described", "explicit": true},
+    {"id": "mechanism-of-worship", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["what happens on day of resurrection Islam", "end times signs Quran", "purgatory Al-Araf Islam", "why do we worship God salat zakat", "stratification heaven hell Quran"],
+   "related_questions": ["What are the signs that must occur before the end of the world?", "How are people stratified into hell, purgatory, or heaven on judgment day?", "Why does the Quran prescribe salat, zakat, fasting, and hajj?"],
+   "quran_references": ["74:35", "54:1", "44:10", "27:82", "18:94-99", "55:37-78", "56:1-56", "69:13-37", "75:6-15", "78:17-40", "82:1-19", "89:21-30", "19:71", "7:143", "50:16", "14:48", "55:46-62", "56:10-27", "7:46-49", "17:13-14", "10:91"],
+   "retrieval_note": "Use when a user asks about the day of judgment, the afterlife's stratified layers, or the purpose of Islamic worship practices.",
+   "source_segment_start": 238,
+   "source_segment_end": 241,
+   "page_start": 241,
+   "page_end": 244,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s30",
+   "title": "Appendix 11: The Prophet's Sole Mission Was to Deliver the Quran",
+   "summary": "This appendix argues, citing a hadith reported by Imam Ahmad Ben Hanbal about the caliph Mu'aawiyah and the scribe Zeid Ben Thaabit, that Muhammad forbade his followers from writing down anything but the Quran, and that this instruction was respected for roughly 250 years until Bukhari began recording hadith. It argues that Hadith and Sunna are false doctrines that God nonetheless permitted to arise as a test distinguishing true believers, who uphold the Quran alone, from false believers who accept fabricated sayings attributed to the Prophet.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "role-of-the-prophet", "relation": "described", "explicit": true},
+    {"id": "quran-alone-doctrine", "relation": "described", "explicit": true},
+    {"id": "hadith-as-false-doctrine", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["did Muhammad forbid writing hadith", "Quran alone doctrine", "Zeid Ben Thaabit Mu'aawiyah hadith story", "why hadith and sunna are false"],
+   "related_questions": ["What evidence does the author give that Muhammad forbade recording hadith?", "Why does the author consider Hadith and Sunna false doctrines?"],
+   "quran_references": ["3:20", "5:48-50", "5:92", "5:99", "6:19", "13:40", "16:35", "16:82", "24:54", "29:18", "42:48", "64:12", "6:112", "6:113", "6:114", "25:31"],
+   "retrieval_note": "Use when a user asks about this book's Quran-alone position and its argument against Hadith and Sunna.",
+   "source_segment_start": 242,
+   "source_segment_end": 245,
+   "page_start": 245,
+   "page_end": 248,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s31",
+   "title": "Appendices 12-15: Predestination, Dietary Law, Death, and the Sufficiency of the Quran",
+   "summary": "Appendix 12 argues humans freely choose belief or disbelief even though God, outside of time, already knows and has recorded each choice. Appendix 13 states the Quran specifically prohibits only four things in food: animals that die of themselves, free-flowing blood, pig meat, and animals sacrificed to other than God. Appendix 14 compares death to a single night's sleep between the moment of death and resurrection. Appendix 15 argues the Quran is complete and that supplementary man-made rules, such as a prescribed sleeping posture, are unnecessary inventions.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "predestination", "relation": "described", "explicit": true},
+    {"id": "dietary-prohibitions", "relation": "described", "explicit": true},
+    {"id": "death-as-sleep", "relation": "described", "explicit": true},
+    {"id": "quran-sufficiency-doctrine", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["predestination free will Quran", "what foods are prohibited in Quran", "what happens after death Islam sleep", "is Quran complete no hadith needed"],
+   "related_questions": ["Does the Quran teach predestination or free will?", "What foods does the Quran actually prohibit?", "What does the Quran say death is like?", "Why does the author say the Quran needs no supplementary rules?"],
+   "quran_references": ["33:72", "57:22", "6:145-146", "16:112-116", "6:142-152", "2:259", "6:60", "10:45", "16:21", "18:11", "19:25", "30:55", "19:64", "18:109", "31:27", "6:19", "6:38", "6:114", "20:114", "75:19"],
+   "retrieval_note": "Use when a user asks about predestination, halal or haram food rules, the nature of death, or the completeness of the Quran.",
+   "source_segment_start": 246,
+   "source_segment_end": 249,
+   "page_start": 249,
+   "page_end": 252,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s32",
+   "title": "Appendices 16-18: Hadith Versus the Code, Quranic Protection, and Satan's Fall",
+   "summary": "Appendix 16 argues that between 1968 and 1981 the numerical code proved Hadith and Sunna false, citing verses such as 6:19 and 6:38 declaring the Quran complete, which cost the author popularity among those who reject that conclusion. Appendix 17 argues that invisible forces protect the Quran from distortion and block those who reject its completeness from understanding it. Appendix 18 argues, against hadith claims that angels are made of light, that the Quran identifies Satan as a fallen angel who became a disbeliever after refusing to prostrate before Adam.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "code-19", "relation": "described", "explicit": true},
+    {"id": "hadith-as-false-doctrine", "relation": "described", "explicit": true},
+    {"id": "quran-protection-from-distortion", "relation": "described", "explicit": true},
+    {"id": "satan-fallen-angel", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["hadith secret code conflict", "Quran protected from distortion", "is Satan a fallen angel or jinn", "angels created from light or not"],
+   "related_questions": ["How does the author connect the numerical code to rejecting Hadith?", "What protects the Quran from distortion according to this appendix?", "Was Satan originally an angel according to the Quran?"],
+   "quran_references": ["6:19", "6:38", "13:39", "41:42", "42:24", "17:45-46", "18:57", "7:146", "13:31", "2:30", "2:34", "18:50", "7:11", "15:28", "17:61", "20:116", "38:71", "7:12", "15:27", "38:76", "55:15"],
+   "retrieval_note": "Use when a user asks how the numerical code relates to rejecting Hadith, what protects the Quran from alteration, or Satan's angelic origin.",
+   "source_segment_start": 250,
+   "source_segment_end": 254,
+   "page_start": 253,
+   "page_end": 257,
+   "review_status": "draft"
+  },
+  {
+   "id": "cs-s33",
+   "title": "Appendix 19: Biblical Prophecies of Muhammad in the Old and New Testaments",
+   "summary": "Written by Sulayman Shahid Mufassir, this appendix argues that Old Testament passages about Ishmael's birthright and Isaiah's 'Servant of the Lord' associated with Qaydar, together with Moses's prophecy in Deuteronomy of a prophet 'like unto thee' from among the Hebrews' brethren, and the New Testament Gospel of John's promise of a 'Paraclete' or 'Comforter' who would 'guide you unto all truth,' together preview Muhammad as the last prophet. It includes a genealogical table from Abraham through Ishmael to Muhammad and closes with footnotes citing biblical scholarship, including a note from Christian theologian Rudolf Bultmann.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "bible-prophecies-of-muhammad", "relation": "described", "explicit": true},
+    {"id": "paraclete-comforter", "relation": "described", "explicit": true},
+    {"id": "ishmael-birthright", "relation": "described", "explicit": true},
+    {"id": "isaiah-servant-of-the-lord", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["Bible predicts Muhammad", "Paraclete means Muhammad", "Ishmael birthright double honor", "Deuteronomy prophet like unto thee", "Isaiah 42 Qaydar Muhammad"],
+   "related_questions": ["What Old Testament passages does this appendix say preview Muhammad?", "What is the Paraclete and why does the author connect it to Muhammad?", "Why does the author say the birthright belonged to Ishmael's line?"],
+   "quran_references": ["2:121", "21:107", "65:11"],
+   "retrieval_note": "Use when a user asks about claimed biblical prophecies of Muhammad, the Paraclete, or Ishmael's lineage.",
+   "source_segment_start": 255,
+   "source_segment_end": 269,
+   "page_start": 258,
+   "page_end": 279,
+   "review_status": "draft"
+  }
+ ]
+}

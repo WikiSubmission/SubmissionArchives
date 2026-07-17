@@ -129,3 +129,7 @@ scripts/debug_ocr.py
 /askarchives_complete_corpus_three_quran_editions_windows*/
 /.corpus-migration-backup/
 /.corpus-migration-state.json
+
+# Enrichment review working files
+/reports/enrichment-review/packets/
+/reports/enrichment-review/gen-packets/

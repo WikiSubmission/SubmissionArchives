@@ -2,9 +2,14 @@ import './lib/env';
 import { readFileSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { retrieveChunks } from '../../src/lib/rag/retrieval';
-import { embedQueries } from '../../src/lib/rag/mistral';
+import { embedQueries, expandArchiveQuery } from '../../src/lib/rag/mistral';
 import { getRagPool } from '../../src/lib/rag/db';
-import type { RetrievedChunk, RetrievalOptions } from '../../src/lib/rag/types';
+import type {
+  QueryExpansion,
+  RetrievalQuery,
+  RetrievedChunk,
+  RetrievalOptions,
+} from '../../src/lib/rag/types';
 
 const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag_eval');
 const ENRICHMENT_DIR = path.resolve(process.cwd(), 'data', 'rag_enrichment');
@@ -44,6 +49,7 @@ interface CliArgs {
   concurrency: number;
   topN: number;
   write: boolean;
+  expansion: boolean;
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -56,6 +62,7 @@ function parseArgs(argv: string[]): CliArgs {
       Number(process.env.RAG_TOP_N_CONTEXT) || 10,
     ),
     write: true,
+    expansion: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -65,10 +72,38 @@ function parseArgs(argv: string[]): CliArgs {
     else if (arg === '--concurrency') args.concurrency = Number(argv[++i]) || 4;
     else if (arg === '--top-n') args.topN = Number(argv[++i]) || args.topN;
     else if (arg === '--no-write') args.write = false;
+    else if (arg === '--expansion') args.expansion = true;
     else throw new Error(`Unknown argument: ${arg}`);
   }
 
   return args;
+}
+
+const MAX_QUERY_VARIANTS = Number(process.env.RAG_MAX_QUERY_VARIANTS) || 8;
+
+// Mirrors the production route's seed construction so expansion-mode eval
+// exercises the same multi-query path users hit.
+function buildQuerySeeds(
+  question: string,
+  expansion: QueryExpansion,
+): Array<{ text: string; kind: RetrievalQuery['kind']; weight: number }> {
+  const seeds: Array<{ text: string; kind: RetrievalQuery['kind']; weight: number }> = [];
+  const seen = new Set<string>();
+  const add = (text: string, kind: RetrievalQuery['kind'], weight: number): void => {
+    const cleaned = text.replace(/\s+/g, ' ').trim();
+    const key = cleaned.toLocaleLowerCase();
+    if (!cleaned || seen.has(key) || seeds.length >= MAX_QUERY_VARIANTS) return;
+    seen.add(key);
+    seeds.push({ text: cleaned, kind, weight });
+  };
+
+  add(question, 'original', 1.25);
+  for (const term of expansion.exactTerms) add(term, 'expanded', 1.2);
+  for (const paraphrase of expansion.paraphrases) add(paraphrase, 'expanded', 1.05);
+  for (const concept of expansion.conceptDescriptions) add(concept, 'expanded', 1.1);
+  for (const phrase of expansion.archivePhrases) add(phrase, 'expanded', 1);
+  if (expansion.hypotheticalPassage) add(expansion.hypotheticalPassage, 'hyde', 1.1);
+  return seeds;
 }
 
 function listJsonFiles(root: string): string[] {
@@ -350,6 +385,40 @@ async function main(): Promise<void> {
   const results: CaseResult[] = [];
   let completed = 0;
   let cursor = 0;
+  const expansionCache = loadEmbedCache();
+
+  async function buildExpandedQueries(evalCase: EvalCase): Promise<RetrievalQuery[]> {
+    let expansion: QueryExpansion = {
+      exactTerms: [],
+      paraphrases: [],
+      conceptDescriptions: [],
+      archivePhrases: [],
+      hypotheticalPassage: '',
+      intent: 'general',
+      requestedEditionYears: [],
+    };
+    try {
+      expansion = await expandArchiveQuery(evalCase.question);
+    } catch {
+      // The original query remains fully usable if expansion fails.
+    }
+
+    const seeds = buildQuerySeeds(evalCase.question, expansion);
+    const uncachedTexts = seeds
+      .map((seed) => seed.text)
+      .filter((text) => !expansionCache[embedCacheKey(text)]?.length);
+    if (uncachedTexts.length > 0) {
+      const vectors = await embedWithRetry(uncachedTexts);
+      uncachedTexts.forEach((text, index) => {
+        expansionCache[embedCacheKey(text)] = vectors[index];
+      });
+    }
+
+    return seeds.map((seed) => ({
+      ...seed,
+      embedding: expansionCache[embedCacheKey(seed.text)] ?? [],
+    }));
+  }
 
   async function worker(): Promise<void> {
     while (cursor < cases.length) {
@@ -359,10 +428,10 @@ async function main(): Promise<void> {
       const embedding = embeddings.get(evalCase.id);
       if (!embedding) continue;
 
-      const chunks = await retrieveChunks(
-        [{ text: evalCase.question, embedding, kind: 'original', weight: 1 }],
-        options,
-      );
+      const queries: RetrievalQuery[] = args.expansion
+        ? await buildExpandedQueries(evalCase)
+        : [{ text: evalCase.question, embedding, kind: 'original', weight: 1 }];
+      const chunks = await retrieveChunks(queries, options);
       results.push(scoreCase(evalCase, chunks, locators));
       completed += 1;
       if (completed % 25 === 0 || completed === cases.length) {
@@ -374,6 +443,10 @@ async function main(): Promise<void> {
   const startedAt = Date.now();
   await Promise.all(Array.from({ length: args.concurrency }, () => worker()));
   process.stdout.write('\n');
+  if (args.expansion) {
+    mkdirSync(REPORT_DIR, { recursive: true });
+    writeFileSync(EMBED_CACHE_PATH, JSON.stringify(expansionCache));
+  }
 
   const byMatchType = new Map<string, CaseResult[]>();
   for (const result of results) {

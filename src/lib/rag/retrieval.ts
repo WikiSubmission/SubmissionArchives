@@ -578,6 +578,11 @@ function toRetrievedChunk(
   };
 }
 
+// Candidate-pool diversity cap. Answer-bearing sections often cluster inside
+// one document, so this cap trades cross-document variety against in-document
+// depth; tune with rag:eval.
+const DIVERSIFY_DOC_CAP = Number(process.env.RAG_DIVERSIFY_DOC_CAP) || 4;
+
 function deterministicDiversify(chunks: RetrievedChunk[], topN: number): RetrievedChunk[] {
   const sorted = [...chunks].sort((a, b) => b.fusedScore - a.fusedScore);
   const perDocumentCount = new Map<string, number>();
@@ -585,7 +590,7 @@ function deterministicDiversify(chunks: RetrievedChunk[], topN: number): Retriev
 
   for (const chunk of sorted) {
     const count = perDocumentCount.get(chunk.documentId) ?? 0;
-    if (count >= 4) continue;
+    if (count >= DIVERSIFY_DOC_CAP) continue;
     perDocumentCount.set(chunk.documentId, count + 1);
     selected.push(chunk);
     if (selected.length >= topN) break;

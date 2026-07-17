@@ -1,0 +1,602 @@
+{
+ "schema_version": "1.0-written-works",
+ "document_id": "written-works/quran-visual-presentation",
+ "canonical_document_id": "quran-visual-presentation",
+ "canonical_catalog_ids": ["quran-visual-presentation"],
+ "title": "Quran - Visual Presentation of the Miracle",
+ "review_status": "draft",
+ "generation_note": "Sections authored from canonical page text by an AI assistant; review before approval.",
+ "sections": [
+  {
+   "id": "qvp-s01",
+   "title": "Title Page and Publication Information",
+   "summary": "This section presents the book's title page and copyright information. It identifies the work as 'Quran: Visual Presentation of the Miracle' by Dr. Rashad Khalifa, Imam of the Mosque of Tucson, published in 1982 by Islamic Productions. It lists the ISBN, Library of Congress number, and standard copyright restrictions on reproduction.",
+   "section_kind": "reference",
+   "concepts": [
+    {"id": "publication-metadata", "relation": "described", "explicit": true},
+    {"id": "rashad-khalifa-authorship", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["who wrote quran visual presentation of the miracle", "rashad khalifa book publisher", "quran miracle book isbn", "mosque of tucson quran book", "islamic productions publisher", "when was this book published", "who is the author of this book"],
+   "related_questions": ["Who authored this book and where was it published?", "What is the publication date and ISBN of this work?", "What organization published this book?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for questions about the book's authorship, publisher, or bibliographic details rather than its content.",
+   "source_segment_start": 0,
+   "source_segment_end": 1,
+   "page_start": 1,
+   "page_end": 2,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s02",
+   "title": "Preface and Introduction: The Number 19 Secret in Chapter 74",
+   "summary": "The preface asserts that physical evidence for a mathematical code in the Quran has replaced the need for faith with certain knowledge of God's existence, and states the book was originally designed as a set of photographic slides. The introduction cites Quranic verses claiming God guarantees the Quran's preservation (15:9), that its power would make a mountain crumble (59:21), and that no human or jinn could produce a Quran like it (17:88). It presents Chapter 74, 'Al-Muddath-thir' ('The Hidden'), as prophesying a secret revealed only after Muhammad's era (10:20, 41:53), stating that those who call the Quran human-made will be proven wrong by the number nineteen (74:26-30), and that verse 74:31 gives five purposes for the number 19, including convincing Jews and Christians and strengthening believers' faith.",
+   "section_kind": "introduction",
+   "concepts": [
+    {"id": "number-19-code", "relation": "introduced", "explicit": true},
+    {"id": "quran-preservation", "relation": "described", "explicit": true},
+    {"id": "chapter-74-al-muddaththir", "relation": "described", "explicit": true},
+    {"id": "divine-authorship-claim", "relation": "described", "explicit": true},
+    {"id": "faith-versus-knowledge", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["what is the number 19 miracle in quran", "chapter 74 al-muddathir secret", "quran preservation guarantee verse", "why is quran a miracle", "does the quran predict a hidden code", "five purposes of number 19 in quran", "74:30 nineteen guardians of hell"],
+   "related_questions": ["What does the preface claim about faith versus knowledge?", "What Quranic verses does the introduction cite as evidence the Quran will be preserved?", "What is the significance of Chapter 74 and the number 19 according to this book?", "What are the five stated objectives of the number 19 in verse 74:31?"],
+   "quran_references": ["15:9", "59:21", "17:88", "25:4-6", "10:20", "41:53", "29:50-51", "74:1-7", "74:18-25", "74:26-30", "74:31", "74:32-35", "69:17"],
+   "retrieval_note": "Useful for questions about the book's foundational premise and the Quranic verses it uses to introduce the number-19 code.",
+   "source_segment_start": 2,
+   "source_segment_end": 10,
+   "page_start": 3,
+   "page_end": 12,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s03",
+   "title": "Physical Facts 1-4: Letter and Word Counts of the Opening Statement and First Revelation",
+   "summary": "This section presents the first four 'physical facts' of the numerical code. It states the Quran's opening statement (1:1) consists of 19 letters, that the Quran's 114 chapters equal 19 times 6, that the first revelation (96:1-5) consisted of 19 words, and that the same first revelation consisted of 76 letters, a multiple of 19. A table breaks down each word of 96:1-5 by its Arabic transliteration and letter count to support the 76-letter total.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "opening-statement-bismillah", "relation": "described", "explicit": true},
+    {"id": "chapter-96-al-alaq", "relation": "described", "explicit": true},
+    {"id": "letter-frequency-count", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["opening statement 19 letters", "bismillah 19 letters", "114 chapters multiple of 19", "first quran revelation 19 words", "surah alaq 76 letters", "physical fact number 1 quran", "how many chapters does quran have"],
+   "related_questions": ["How many letters are in the Quran's opening statement?", "Why is the number of Quran chapters significant to this book?", "How many words and letters made up the first revelation?"],
+   "quran_references": ["1:1", "96:1-5"],
+   "retrieval_note": "Useful for basic numerical claims about the opening statement and the first revelation's word/letter counts.",
+   "source_segment_start": 11,
+   "source_segment_end": 14,
+   "page_start": 13,
+   "page_end": 16,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s04",
+   "title": "Physical Facts 5-7: Position and Letter Count of Chapter 96",
+   "summary": "This section argues that Chapter 96, the first chapter revealed, consists of 19 verses, and separately shows that when counted from the end of the Quran, Chapter 96 occupies the 19th position by listing chapters 114 down to 96. It further presents a two-page table of every word and letter in Chapter 96 to establish that the chapter contains 304 letters, a multiple of 19, and reproduces the Arabic text of the chapter as supporting evidence.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "chapter-96-al-alaq", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "letter-frequency-count", "relation": "described", "explicit": true},
+    {"id": "revelation-order", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["chapter 96 position from end of quran", "surah alaq 19th from last chapter", "304 letters surah alaq", "why is chapter 96 first revealed", "quran chapter order numerology"],
+   "related_questions": ["What position does Chapter 96 hold when counted from the end of the Quran?", "How many letters does Chapter 96 contain according to this book?", "How does the book support its letter-count claim for Chapter 96?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the chapter-96 positional argument and its detailed letter-count table.",
+   "source_segment_start": 15,
+   "source_segment_end": 21,
+   "page_start": 17,
+   "page_end": 23,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s05",
+   "title": "Physical Facts 8-11: Word Counts of the Last, Second, and Third Revelations",
+   "summary": "This section states that the last Quranic revelation consisted of a number of words that is a multiple of 19, and that the first verse of that last revelation contains 19 letters. It then presents the second revelation, the first nine verses of Chapter 68 (68:1-9), with a full word-by-word transliteration table, and the third revelation, the first ten verses of Chapter 73 (73:1-10), across a two-page table, in each case totaling a multiple of 19 words.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "revelation-order", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "letter-frequency-count", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["last quran revelation word count", "second revelation chapter 68", "third revelation chapter 73", "surah al-qalam word count", "surah al-muzzammil word count 19"],
+   "related_questions": ["What does the book claim about the word count of the last revelation?", "How many words made up the second and third revelations?", "Which chapters correspond to the second and third revelations?"],
+   "quran_references": ["68:1-9", "73:1-10"],
+   "retrieval_note": "Useful for questions about word counts assigned to the last, second, and third Quranic revelations.",
+   "source_segment_start": 22,
+   "source_segment_end": 26,
+   "page_start": 24,
+   "page_end": 28,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s06",
+   "title": "Physical Facts 12-15: The Number 19 in Revelation Order and the Words Ism and Bism",
+   "summary": "This section states that the fourth revelation, the first 30 verses of Chapter 74 (74:1-30), brought the number 19 itself, and that in revelation order this number was immediately followed by the 19 letters of the opening statement (1:1). It presents a table showing the word 'Ism' is mentioned in the Quran 19 times across 19 chapter-and-verse locations, and states the word 'Bism' in its specific spelling appears in only 1:1, 11:41, and 27:30, with the sum of these mention counts and reference numbers totaling 114, the number of Quran chapters.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "opening-statement-bismillah", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "quranic-initials", "relation": "related", "explicit": false}
+   ],
+   "user_terms": ["word ism in quran how many times", "bism mentioned in quran", "chapter 74 verse 30 nineteen", "opening statement placement after 74:30", "quran numerology ism bism"],
+   "related_questions": ["How many times does the word 'Ism' appear in the Quran?", "Where does the specific spelling 'Bism' occur in the Quran?", "What connects the number 19 in 74:30 to the Quran's opening statement?"],
+   "quran_references": ["74:1-30", "74:30", "1:1", "11:41", "27:30"],
+   "retrieval_note": "Useful for the specific word-frequency claims about 'Ism' and 'Bism' and their numeric relationship to chapter 74.",
+   "source_segment_start": 27,
+   "source_segment_end": 30,
+   "page_start": 29,
+   "page_end": 32,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s07",
+   "title": "Physical Fact 16 (Part 1): Chapter-and-Verse List of the Word Allah",
+   "summary": "This section begins Physical Fact 16, which claims the word 'Allah' occurs 2,698 times in the Quran, a number equal to 19 times 142. It presents the first portion of an exhaustive chapter-and-verse list of every occurrence of the word, running from Chapter 2 through part of Chapter 9.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-frequency-allah", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["how many times is allah mentioned in quran", "word allah frequency count", "2698 allah quran", "allah occurrences chapter list"],
+   "related_questions": ["How many times does the word 'Allah' appear in the Quran according to this book?", "Where in the Quran does this list of 'Allah' occurrences begin?"],
+   "quran_references": [],
+   "retrieval_note": "Useful only as the opening portion of the exhaustive Allah-occurrence list; the concluding total appears later in Physical Fact 16.",
+   "source_segment_start": 31,
+   "source_segment_end": 42,
+   "page_start": 33,
+   "page_end": 44,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s08",
+   "title": "Physical Fact 16 (Part 2): Chapter-and-Verse List of the Word Allah, Continued",
+   "summary": "This section continues the exhaustive chapter-and-verse list of every occurrence of the word 'Allah' in the Quran, part of Physical Fact 16, spanning roughly Chapters 7 through 24.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-frequency-allah", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["allah word count quran chapters 7 to 24", "allah occurrences list continued", "word allah verse locations"],
+   "related_questions": ["Which chapters and verses in this range contain the word 'Allah'?"],
+   "quran_references": [],
+   "retrieval_note": "Middle portion of the exhaustive Allah-occurrence list; use alongside the preceding and following sections for the full tally.",
+   "source_segment_start": 43,
+   "source_segment_end": 54,
+   "page_start": 45,
+   "page_end": 56,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s09",
+   "title": "Physical Fact 16 (Part 3): Completion of the Allah List and Total of 2,698",
+   "summary": "This section completes the exhaustive chapter-and-verse list of 'Allah' occurrences, running through the final chapters of the Quran, and concludes with the claim that the total frequency of occurrence of the word 'Allah' throughout the Quran is exactly 2,698, which equals 19 times 142.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "word-frequency-allah", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["total allah count in quran", "2698 equals 19 times 142", "allah word frequency conclusion", "final tally of allah in quran"],
+   "related_questions": ["What is the final total count of the word 'Allah' in the Quran and how does the book explain its significance?"],
+   "quran_references": [],
+   "retrieval_note": "Contains the concluding total (2,698 = 19 x 142) for the word 'Allah'; use this section when the total figure itself is needed.",
+   "source_segment_start": 55,
+   "source_segment_end": 65,
+   "page_start": 57,
+   "page_end": 67,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s10",
+   "title": "Physical Facts 17-19: Frequency of Al-Rahman and Al-Raheem, and the Sum of Multiples",
+   "summary": "This section presents chapter-and-verse lists showing that 'Al-Rahman,' the third word of the opening statement, occurs 57 times in the Quran (19 times 3), and that 'Al-Raheem,' the fourth word, occurs 114 times (19 times 6). It then adds the four multiplication factors from the opening statement's four words, 1, 142, 3, and 6, to get a total of 152, which the book states is also a multiple of 19 (19 times 8).",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "opening-statement-bismillah", "relation": "described", "explicit": true},
+    {"id": "word-frequency-allah", "relation": "related", "explicit": false},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["al-rahman mentioned how many times in quran", "al-raheem frequency in quran", "57 times most gracious quran", "114 times most merciful quran", "opening statement word frequencies sum"],
+   "related_questions": ["How many times does 'Al-Rahman' appear in the Quran?", "How many times does 'Al-Raheem' appear in the Quran?", "What is the significance of adding the four opening-statement word frequencies together?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the specific frequency counts of 'Al-Rahman' and 'Al-Raheem' and the combined-total claim.",
+   "source_segment_start": 66,
+   "source_segment_end": 71,
+   "page_start": 68,
+   "page_end": 73,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s11",
+   "title": "Physical Facts 20-21: Abjad Values Linking Word Frequencies to Names of God",
+   "summary": "Using the pre-modern Arabic abjad system in which letters represent numbers, this section argues that each of the four opening-statement word frequencies corresponds to the numerical value of a name of God: 19 equals 'Waahid' (One), 2,698 equals 'Wadud' (Possessor of infinite grace, credited to Dr. Cesar Majul), 57 equals 'Majeed' (Glorious), and 114 equals 'Jaami'' (The Editor/Gatherer, citing 75:17). It claims that of more than 400 known names of God, only these four numerical values are divisible by 19, and that the opening statement itself is missing from Chapter 9 but is compensated for in 27:30.",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "abjad-numerology", "relation": "described", "explicit": true},
+    {"id": "names-of-god", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "chapter-9-anomaly", "relation": "introduced", "explicit": true}
+   ],
+   "user_terms": ["abjad numerology quran names of god", "waahid wadud majeed jaami numerical value", "why is bismillah missing from chapter 9", "chapter 9 no opening statement", "27:30 compensates missing bismillah", "god's names divisible by 19"],
+   "related_questions": ["How does the book use abjad numerology to connect word frequencies to God's names?", "Why is the opening statement absent from Chapter 9?", "Where is the missing opening statement compensated?"],
+   "quran_references": ["27:30", "75:17"],
+   "retrieval_note": "Useful for the abjad-based argument connecting word frequencies to divine names and the Chapter 9 opening-statement anomaly.",
+   "source_segment_start": 72,
+   "source_segment_end": 77,
+   "page_start": 74,
+   "page_end": 79,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s12",
+   "title": "Physical Facts 22-26: Chapters Between the Anomaly and the Letter Q in Chapters 50 and 42",
+   "summary": "This section lists the 19 chapters (9 through 27) that lie between the chapter missing the opening statement and the chapter containing its compensating occurrence. It then presents Physical Facts 23 through 26, showing that Chapter 50, entitled and initialed with the letter 'Q,' contains the letter 57 times, that Chapter 42 (the only other Q-initialed chapter) also contains 57 Q's, that the combined total of 114 equals the number of Quran chapters, and that the abjad numerical value of the word 'Majeed' (Glorious, from 50:1) is likewise 57.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-q-count", "relation": "described", "explicit": true},
+    {"id": "chapter-9-anomaly", "relation": "described", "explicit": true},
+    {"id": "abjad-numerology", "relation": "related", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["letter q count in surah qaf", "chapter 50 and 42 letter q", "57 q's in quran", "majeed numerical value 57", "chapters between chapter 9 and 27"],
+   "related_questions": ["Which chapters lie between the missing and compensating opening statements?", "How many times does the letter 'Q' occur in Chapters 50 and 42?", "What is the numerical value of the word 'Majeed' and why does it matter here?"],
+   "quran_references": ["50:1"],
+   "retrieval_note": "Useful for the letter-Q count claims tied to the two Q-initialed chapters and their combined total of 114.",
+   "source_segment_start": 78,
+   "source_segment_end": 90,
+   "page_start": 80,
+   "page_end": 92,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s13",
+   "title": "Physical Facts 27-28: Wording Exceptions Preserving Letter Counts, and the Letter N in Chapter 68",
+   "summary": "This section notes textual exceptions the book presents as deliberate: the disbelievers of Lot's people are called 'Qawm' throughout the Quran except in Chapter 50 (the 'Q' chapter), where the word 'Ikhwaan' is used instead so as not to disturb the letter-Q count, and similarly the word 'Bekka' replaces 'Mecca' in the 'M'-initialed Chapter 3 (3:96). It then states that Chapter 68, initialed with the letter 'N,' contains that letter 133 times, a multiple of 19 (19 times 7).",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-q-count", "relation": "related", "explicit": true},
+    {"id": "letter-n-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["qawm ikhwaan chapter 50 exception", "bekka instead of mecca 3:96", "chapter 68 letter n count", "133 n's surah al-qalam", "quran wording anomalies preserve letter count"],
+   "related_questions": ["Why does the Quran use 'Ikhwaan' instead of 'Qawm' in Chapter 50?", "Why does 3:96 use 'Bekka' instead of 'Mecca'?", "How many times does the letter 'N' occur in Chapter 68?"],
+   "quran_references": ["3:96", "22:43"],
+   "retrieval_note": "Useful for the wording-substitution examples and the Chapter 68 letter-N count.",
+   "source_segment_start": 91,
+   "source_segment_end": 94,
+   "page_start": 93,
+   "page_end": 96,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s14",
+   "title": "Physical Fact 29 (Part 1): Letter Saad Count Across Chapters 7, 19, and 38",
+   "summary": "This section begins a detailed, page-by-page tally of the occurrences of the letter 'Saad' (S) in the three chapters initialed with that letter: Chapter 7 ('Al-A'raaf'), Chapter 19 ('Mary'), and Chapter 38 ('Saad'). It presents running verse-by-verse counts building toward a combined total.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-saad-count", "relation": "described", "explicit": true},
+    {"id": "quranic-initials", "relation": "related", "explicit": true}
+   ],
+   "user_terms": ["letter saad count in quran", "chapter 7 19 38 letter s", "surah saad initial letter count"],
+   "related_questions": ["Which three chapters are initialed with the letter 'Saad'?", "How is the letter-Saad count tallied across these chapters?"],
+   "quran_references": [],
+   "retrieval_note": "First half of the Saad letter-count table; see the following section for the concluding total.",
+   "source_segment_start": 95,
+   "source_segment_end": 107,
+   "page_start": 97,
+   "page_end": 109,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s15",
+   "title": "Physical Fact 29 (Part 2): Conclusion of the Letter Saad Count, Totaling 152",
+   "summary": "This section completes the verse-by-verse tally of the letter 'Saad' across Chapters 7, 19, and 38, concluding that the combined total occurrence of the letter in these three chapters is 152, a number equal to 19 times 8.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-saad-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["total saad letters in chapters 7 19 38", "152 equals 19 times 8", "saad letter count conclusion"],
+   "related_questions": ["What is the final combined count of the letter 'Saad' across the three Saad-initialed chapters?"],
+   "quran_references": [],
+   "retrieval_note": "Contains the concluding total (152 = 19 x 8) for the letter-Saad count; use with the preceding section for the full table.",
+   "source_segment_start": 108,
+   "source_segment_end": 120,
+   "page_start": 110,
+   "page_end": 122,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s16",
+   "title": "Physical Fact 30: Letters Ya and Seen in Chapter 36",
+   "summary": "This section states that Chapter 36, entitled and initialed with the letters 'Y' and 'S' ('Yaa Seen'), contains a combined total occurrence of these two letters equal to 285, a number equal to 19 times 15.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-ya-seen-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "quranic-initials", "relation": "related", "explicit": true}
+   ],
+   "user_terms": ["surah ya sin letter count", "chapter 36 y and s letters", "285 equals 19 times 15"],
+   "related_questions": ["How many times do the letters 'Y' and 'S' occur in Chapter 36?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the Chapter 36 (Ya Seen) letter-frequency claim.",
+   "source_segment_start": 121,
+   "source_segment_end": 124,
+   "page_start": 123,
+   "page_end": 126,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s17",
+   "title": "Physical Fact 31 (Part 1): Letters Ha-Meem Across Seven Chapters (40-46)",
+   "summary": "This section begins a verse-by-verse tally of the letters 'Ha' (HH) and 'Meem' (M) across the seven consecutive chapters initialed with these letters, Chapters 40 through 46, building toward a combined total the book claims is a multiple of 19.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-ha-meem-count", "relation": "described", "explicit": true},
+    {"id": "quranic-initials", "relation": "related", "explicit": true}
+   ],
+   "user_terms": ["ha meem chapters 40 to 46", "letter count surah ghafir fussilat", "hameem initialed chapters"],
+   "related_questions": ["Which seven chapters are initialed with 'Ha' and 'Meem'?", "How does the book tally the Ha-Meem letters across these chapters?"],
+   "quran_references": [],
+   "retrieval_note": "First half of the Ha-Meem letter-count table for chapters 40-46; see the following section for the total.",
+   "source_segment_start": 125,
+   "source_segment_end": 137,
+   "page_start": 127,
+   "page_end": 139,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s18",
+   "title": "Physical Fact 31 (Part 2): Conclusion of the Ha-Meem Count, Totaling 2,147",
+   "summary": "This section completes the tally of the letters 'Ha' and 'Meem' across Chapters 40 through 46, concluding with a grand total of 2,147 occurrences, which the book states equals 19 times 113, and presents a summary table breaking down the count by chapter.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-ha-meem-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["total ha meem letters chapters 40-46", "2147 equals 19 times 113", "hameem chapters letter count table"],
+   "related_questions": ["What is the final combined count of the Ha-Meem letters across chapters 40 through 46?"],
+   "quran_references": [],
+   "retrieval_note": "Contains the concluding total (2,147 = 19 x 113) and per-chapter breakdown for the Ha-Meem letters.",
+   "source_segment_start": 138,
+   "source_segment_end": 150,
+   "page_start": 140,
+   "page_end": 152,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s19",
+   "title": "Physical Facts 32-34: Subgroup Analysis of the Ha-Meem Chapters",
+   "summary": "This section divides the seven Ha-Meem-initialed chapters (40-46) into two groups separated by Chapter 42, which uniquely also carries the initials 'A. S. Q.' It shows the first group (40-42) totals 1,121 occurrences of the letters, a multiple of 19, the second group (43-46) totals 1,026, also a multiple of 19, and a third overlapping window centered on Chapter 42 totals 1,045, again a multiple of 19, concluding with a diagram summarizing the interlocking relationship.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-ha-meem-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "quranic-initials", "relation": "related", "explicit": true}
+   ],
+   "user_terms": ["ha meem chapters split into groups", "chapter 42 separation point", "1121 1026 1045 multiples of 19"],
+   "related_questions": ["How does the book divide the Ha-Meem chapters into subgroups?", "What role does Chapter 42 play in separating these chapters?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the subgroup and overlapping-window breakdown of the Ha-Meem chapter letter counts.",
+   "source_segment_start": 151,
+   "source_segment_end": 154,
+   "page_start": 153,
+   "page_end": 156,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s20",
+   "title": "Physical Facts 35-36: Letters in Chapter 42's Triple Initials and Chapter 19's Five Initials",
+   "summary": "This section states that the three letters 'A,' 'S,' and 'Q' that prefix Chapter 42 occur a combined 209 times in that chapter, a multiple of 19. It then tallies the five letters 'K,' 'H,' 'Y,' 'A,' and 'S' that prefix Chapter 19 ('Mary'), reporting individual totals of 137, 175, 117, 343, and 26 respectively, summing to 798, which the book states equals 19 times 42.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["chapter 42 initials a s q letter count", "surah maryam five initials letters", "798 equals 19 times 42", "chapter 19 khyas letters"],
+   "related_questions": ["How many times do the letters 'A,' 'S,' and 'Q' occur in Chapter 42?", "How does the book tally the five initial letters of Chapter 19?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the letter-frequency claims tied to Chapter 42's and Chapter 19's multi-letter Quranic initials.",
+   "source_segment_start": 155,
+   "source_segment_end": 164,
+   "page_start": 157,
+   "page_end": 166,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s21",
+   "title": "Physical Fact 37 (Part 1): Interlocking Initials Across Chapters 19, 20, 26, 27, and 28",
+   "summary": "This section begins a combined tally of the letters making up the Quranic initials 'H,' 'T.H.,' 'T.S.,' and 'T.S.M.' as they occur across five chapters, 19, 20, 26, 27, and 28, which the book presents as an interlocking relationship building toward a total the book claims is a multiple of 19.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "letter-ha-meem-count", "relation": "related", "explicit": false}
+   ],
+   "user_terms": ["interlocking quranic initials chapters 19 20 26 27 28", "ha ta-ha ta-sin ta-sin-meem letter count"],
+   "related_questions": ["Which five chapters share this interlocking set of Quranic initials?", "How does the book describe the relationship between these five chapters' initials?"],
+   "quran_references": [],
+   "retrieval_note": "First half of the five-chapter interlocking-initials letter count; see the following section for the total.",
+   "source_segment_start": 165,
+   "source_segment_end": 179,
+   "page_start": 167,
+   "page_end": 181,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s22",
+   "title": "Physical Fact 37 (Part 2): Conclusion of the Interlocking Initials, Totaling 1,767",
+   "summary": "This section completes the tally of the letters making up the initials 'H,' 'T.H.,' 'T.S.,' and 'T.S.M.' across Chapters 19, 20, 26, 27, and 28, concluding with a grand total of 1,767, which the book states equals 19 times 93, and presents a final chapter-by-chapter breakdown table.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["1767 equals 19 times 93", "interlocking initials total count", "chapters 19 20 26 27 28 letter total"],
+   "related_questions": ["What is the final combined total for the interlocking initials across these five chapters?"],
+   "quran_references": [],
+   "retrieval_note": "Contains the concluding total (1,767 = 19 x 93) and per-chapter breakdown for this set of initials.",
+   "source_segment_start": 180,
+   "source_segment_end": 194,
+   "page_start": 182,
+   "page_end": 196,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s23",
+   "title": "Physical Fact 38: Letters Alif, Laam, Meem in Chapter 2",
+   "summary": "This section presents a full verse-by-verse computer-generated table counting the letters 'Alif' (A), 'Laam' (L), and 'Meem' (M) throughout Chapter 2 ('Al-Baqarah'), which is initialed with these three letters. It concludes that the letter totals are 4,502 Alifs, 3,202 Laams, and 2,195 Meems, for a grand total of 9,899, which the book states equals 19 times 521.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-alif-laam-meem-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "quranic-initials", "relation": "related", "explicit": true}
+   ],
+   "user_terms": ["chapter 2 alif laam meem count", "surah al-baqarah letter frequency", "9899 equals 19 times 521", "alm letters chapter 2 quran"],
+   "related_questions": ["How many times do the letters Alif, Laam, and Meem occur in Chapter 2?", "What is the grand total and its claimed significance?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the detailed letter-count table and total for Chapter 2's Alif-Laam-Meem initials.",
+   "source_segment_start": 195,
+   "source_segment_end": 202,
+   "page_start": 197,
+   "page_end": 204,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s24",
+   "title": "Physical Fact 39: Letters Alif, Laam, Meem in Chapter 3",
+   "summary": "This section presents a full verse-by-verse table counting the letters 'Alif,' 'Laam,' and 'Meem' throughout Chapter 3 ('Aal-Imraan'), also initialed with these three letters, concluding with totals of 2,521 Alifs, 1,892 Laams, and 1,249 Meems, for a grand total of 5,662, which the book states equals 19 times 298.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-alif-laam-meem-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["chapter 3 alif laam meem count", "surah aal imran letter frequency", "5662 equals 19 times 298"],
+   "related_questions": ["How many times do the letters Alif, Laam, and Meem occur in Chapter 3?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the detailed letter-count table and total for Chapter 3's Alif-Laam-Meem initials.",
+   "source_segment_start": 203,
+   "source_segment_end": 208,
+   "page_start": 205,
+   "page_end": 210,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s25",
+   "title": "Physical Facts 40-43: Letters Alif, Laam, Meem in Chapters 29, 30, 31, and 32",
+   "summary": "This section presents verse-by-verse letter tallies for the remaining four chapters initialed with 'Alif, Laam, Meem': Chapter 29 ('Al-'Ankaboot'), totaling 1,672 (19x88); Chapter 30 ('Al-Room'), totaling 1,254 (19x66); Chapter 31 ('Luqman'), totaling 817 (19x43); and Chapter 32 ('Al-Sajdah'), totaling 570 (19x30).",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-alif-laam-meem-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["surah ankabut letter count", "surah room luqman sajdah alif laam meem", "1672 1254 817 570 multiples of 19"],
+   "related_questions": ["What are the Alif-Laam-Meem letter totals for Chapters 29, 30, 31, and 32?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the letter-count totals of the remaining four Alif-Laam-Meem-initialed chapters.",
+   "source_segment_start": 209,
+   "source_segment_end": 216,
+   "page_start": 211,
+   "page_end": 218,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s26",
+   "title": "Physical Facts 44-45: Letters Alif, Laam, Raa in Chapters 10 and 11",
+   "summary": "This section presents verse-by-verse letter tallies for Chapter 10 ('Jonah') and Chapter 11 ('Hood'), both initialed with 'Alif, Laam, Raa,' reporting that each chapter contains exactly the same combined total of these three letters, 2,489, equal to 19 times 131, despite differing individual letter counts.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-alif-laam-raa-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["surah yunus surah hud letter count", "alif laam raa chapters 10 11", "2489 equals 19 times 131 both chapters"],
+   "related_questions": ["Why do Chapters 10 and 11 share the same Alif-Laam-Raa letter total according to this book?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the matching Alif-Laam-Raa letter totals shared by Chapters 10 and 11.",
+   "source_segment_start": 217,
+   "source_segment_end": 224,
+   "page_start": 219,
+   "page_end": 226,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s27",
+   "title": "Physical Facts 46-48: Letters Alif, Laam, Raa in Chapters 12, 14, and 15",
+   "summary": "This section presents verse-by-verse letter tallies for three more chapters initialed with 'Alif, Laam, Raa': Chapter 12 ('Yoosuf'), totaling 2,375 (19x125); Chapter 14 ('Abraham'), totaling 1,197 (19x63); and Chapter 15 ('Al-Hijr'), totaling 912 (19x48).",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-alif-laam-raa-count", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["surah yusuf ibrahim hijr letter count", "alif laam raa chapters 12 14 15", "2375 1197 912 multiples of 19"],
+   "related_questions": ["What are the Alif-Laam-Raa letter totals for Chapters 12, 14, and 15?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the letter-count totals of Chapters 12, 14, and 15's Alif-Laam-Raa initials.",
+   "source_segment_start": 225,
+   "source_segment_end": 233,
+   "page_start": 227,
+   "page_end": 235,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s28",
+   "title": "Physical Facts 49-50: Four-Letter Initials in Chapter 13 and Chapter 7",
+   "summary": "This section tallies the four letters 'Alif, Laam, Meem, Raa' in Chapter 13, reporting a total of 1,482 occurrences (19x78), and separately tallies the four letters 'Alif, Laam, Meem, Saad' across Chapter 7 ('Al-A'raaf') verse by verse, reporting individual totals of 2,529 Alifs, 1,530 Laams, 1,164 Meems, and 97 Saads, for a grand total of 5,320, which the book states equals 19 times 280.",
+   "section_kind": "data-presentation",
+   "concepts": [
+    {"id": "letter-alif-laam-meem-count", "relation": "related", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true}
+   ],
+   "user_terms": ["surah ra'd letter count alif laam meem raa", "surah araf four letter initials", "5320 equals 19 times 280", "1482 equals 19 times 78"],
+   "related_questions": ["What is the four-letter initial count for Chapter 13?", "What are the letter totals for Chapter 7's four-letter initials?"],
+   "quran_references": [],
+   "retrieval_note": "Useful for the two remaining multi-letter-initial chapters, 13 and 7, and their combined totals.",
+   "source_segment_start": 234,
+   "source_segment_end": 240,
+   "page_start": 236,
+   "page_end": 242,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s29",
+   "title": "Physical Facts 51-52: Catalog of Quranic Initials and Their Description as Miracles",
+   "summary": "This section catalogs the 14 alphabet letters used across the Quran's initials, the 14 distinct sets of Quranic initials themselves, and the 29 chapters that carry them, noting that summing 14, 14, and 29 yields 57, a multiple of 19. It then argues that the Quran explicitly describes these initials as miraculous, quoting eight verses (10:1, 12:1, 13:1, 15:1, 26:1-2, 27:1, 28:1-2, 32:1-2) each translated as declaring 'these are the miracles of this book.'",
+   "section_kind": "argument",
+   "concepts": [
+    {"id": "quranic-initials", "relation": "described", "explicit": true},
+    {"id": "number-19-code", "relation": "applied", "explicit": true},
+    {"id": "divine-authorship-claim", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["how many quranic initials are there", "29 initialed chapters list", "quran verses calling initials a miracle", "14 alphabet letters quranic initials"],
+   "related_questions": ["How many chapters carry Quranic initials, and how many distinct initial letters and sets are there?", "Which verses does the book cite as describing the initials as miracles?"],
+   "quran_references": ["10:1", "12:1", "13:1", "15:1", "26:1-2", "27:1", "28:1-2", "31:2", "32:1-2"],
+   "retrieval_note": "Useful for the full catalog of Quranic-initial chapters and the verses the book cites calling the initials a miracle.",
+   "source_segment_start": 241,
+   "source_segment_end": 245,
+   "page_start": 243,
+   "page_end": 247,
+   "review_status": "draft"
+  },
+  {
+   "id": "qvp-s30",
+   "title": "Conclusion: God Is One and Summary of All Physical Facts",
+   "summary": "This closing section uses the abjad system to show that the Arabic word 'Waahid' (One) has a numerical value of 19, concluding that the number 19 encodes the message 'God is One.' It then presents a numbered 'Summary and Conclusions' recap of all 43 physical facts covered in the book, dividing them into 'simple facts' (letter and word counts tied to the opening statement and early revelations) and 'intricate facts' (the Quranic-initial letter-frequency tables), and closes by asserting that this evidence proves the divine source of the Quran and its perfect preservation.",
+   "section_kind": "conclusion",
+   "concepts": [
+    {"id": "number-19-code", "relation": "described", "explicit": true},
+    {"id": "abjad-numerology", "relation": "described", "explicit": true},
+    {"id": "divine-authorship-claim", "relation": "described", "explicit": true},
+    {"id": "quran-preservation", "relation": "described", "explicit": true}
+   ],
+   "user_terms": ["god is one numerical value 19", "waahid abjad value", "summary of all 43 physical facts quran miracle", "quran number 19 conclusion", "simple facts vs intricate facts quran miracle"],
+   "related_questions": ["How does the book connect the number 19 to the phrase 'God is One'?", "What is the final summary of all the physical facts presented in the book?", "What does the author conclude the evidence proves about the Quran?"],
+   "quran_references": ["27:30"],
+   "retrieval_note": "Useful as the single best entry point for an overview of every numerical claim made throughout the book, and its final theological conclusion.",
+   "source_segment_start": 246,
+   "source_segment_end": 250,
+   "page_start": 248,
+   "page_end": 252,
+   "review_status": "draft"
+  }
+ ]
+}
