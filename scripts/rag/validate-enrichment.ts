@@ -21,7 +21,7 @@ function main(): void {
 
   let metadataOnlyViolations = 0;
   let unresolvedDocumentIds = 0;
-  let sectionsWithoutLocator = 0;
+  const sectionsWithoutLocator: string[] = [];
 
   for (const [documentId, sections] of corpus.sectionsByDocument) {
     const record = byId.get(documentId);
@@ -40,7 +40,7 @@ function main(): void {
         && section.startTime === null
         && section.pageStart === null
       ) {
-        sectionsWithoutLocator += 1;
+        sectionsWithoutLocator.push(`${documentId} :: ${section.id}`);
       }
     }
   }
@@ -74,7 +74,13 @@ function main(): void {
   console.log(`  Enrichment files mapped: ${corpus.statistics.mappedDocuments}`);
   console.log(`  Searchable enrichment sections: ${corpus.statistics.sections}`);
   console.log(`  Document relationships: ${corpus.statistics.relationships}`);
-  console.log(`  Sections without a precise locator: ${sectionsWithoutLocator}`);
+  console.log(`  Sections without a precise locator: ${sectionsWithoutLocator.length}`);
+  if (sectionsWithoutLocator.length > 0) {
+    console.warn(
+      '  These sections resolve through the whole-document fallback and should get segment, time, or page locators during review:',
+    );
+    for (const entry of sectionsWithoutLocator) console.warn(`    - ${entry}`);
+  }
   console.log(`  Metadata-only violations: ${metadataOnlyViolations}`);
   console.log(`  Documents without canonical segments: ${unresolvedDocumentIds}`);
   console.log(`  Edition metadata: ${JSON.stringify(Object.fromEntries([...editionCounts].sort()))}`);

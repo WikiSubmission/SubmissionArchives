@@ -1,7 +1,8 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import './lib/env';
 import { getPool, closePool } from './lib/db';
+import type { Pool } from 'pg';
 import type { ArchiveRecord } from '../../src/types/archive';
 
 const MASTER_INDEX_PATH = path.resolve(
@@ -11,6 +12,114 @@ const MASTER_INDEX_PATH = path.resolve(
   'generated_indices',
   'MASTER_INDEX.json',
 );
+const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag_eval');
+const GOLD_PROBE_COUNT = 12;
+const GOLD_PROBE_TOP_N = 20;
+const GOLD_PROBE_MIN_PASS_RATIO = 0.5;
+
+interface GoldProbe {
+  caseId: string;
+  documentId: string;
+  question: string;
+}
+
+function loadGoldProbes(): GoldProbe[] {
+  const probes: GoldProbe[] = [];
+
+  const walk = (dir: string): void => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+      } else if (entry.isFile() && entry.name.endsWith('.json')) {
+        const doc = JSON.parse(readFileSync(full, 'utf8')) as {
+          document_id?: string;
+          canonical_document_id?: string;
+          cases?: Array<{ id?: string; question?: string; match_type?: string }>;
+        };
+        const documentId = doc.canonical_document_id ?? doc.document_id;
+        if (!documentId || !Array.isArray(doc.cases)) continue;
+        for (const item of doc.cases) {
+          if (item.id && item.question && item.match_type === 'direct') {
+            probes.push({ caseId: item.id, documentId, question: item.question });
+          }
+        }
+      }
+    }
+  };
+
+  try {
+    walk(EVAL_DIR);
+  } catch {
+    return [];
+  }
+
+  probes.sort((a, b) => a.caseId.localeCompare(b.caseId));
+  if (probes.length <= GOLD_PROBE_COUNT) return probes;
+  const step = probes.length / GOLD_PROBE_COUNT;
+  return Array.from(
+    { length: GOLD_PROBE_COUNT },
+    (_, index) => probes[Math.floor(index * step)],
+  );
+}
+
+async function runGoldCaseProbes(pool: Pool): Promise<boolean> {
+  const probes = loadGoldProbes();
+  if (probes.length === 0) {
+    console.log('SKIP: no gold eval cases found for lexical probes.');
+    return true;
+  }
+
+  let passes = 0;
+  const misses: string[] = [];
+
+  for (const probe of probes) {
+    const canonicalHits = await pool.query<{ document_id: string }>(
+      `SELECT DISTINCT document_id
+       FROM (
+         SELECT c.document_id,
+                ts_rank_cd(c.tsv, websearch_to_tsquery('english', f_unaccent($1))) AS score
+         FROM rag_chunks c
+         WHERE c.tsv @@ websearch_to_tsquery('english', f_unaccent($1))
+         ORDER BY score DESC
+         LIMIT $2
+       ) ranked`,
+      [probe.question, GOLD_PROBE_TOP_N],
+    );
+    const enrichmentHits = await pool.query<{ document_id: string }>(
+      `SELECT DISTINCT document_id
+       FROM (
+         SELECT s.document_id,
+                ts_rank_cd(s.tsv, websearch_to_tsquery('english', f_unaccent($1))) AS score
+         FROM rag_enrichment_sections s
+         WHERE s.tsv @@ websearch_to_tsquery('english', f_unaccent($1))
+         ORDER BY score DESC
+         LIMIT $2
+       ) ranked`,
+      [probe.question, GOLD_PROBE_TOP_N],
+    );
+
+    const documentIds = new Set([
+      ...canonicalHits.rows.map((row) => row.document_id),
+      ...enrichmentHits.rows.map((row) => row.document_id),
+    ]);
+
+    if (documentIds.has(probe.documentId)) {
+      passes += 1;
+    } else {
+      misses.push(probe.caseId);
+    }
+  }
+
+  const ratio = passes / probes.length;
+  const summary = `gold lexical probes: ${passes}/${probes.length} located their expected document (top ${GOLD_PROBE_TOP_N})`;
+  if (ratio < GOLD_PROBE_MIN_PASS_RATIO) {
+    console.error(`FAIL: ${summary}. Missed cases: ${misses.join(', ')}`);
+    return false;
+  }
+  console.log(`OK: ${summary}.${misses.length > 0 ? ` Missed: ${misses.join(', ')}` : ''}`);
+  return true;
+}
 
 async function main(): Promise<void> {
   const records: ArchiveRecord[] = JSON.parse(readFileSync(MASTER_INDEX_PATH, 'utf8'));
@@ -244,18 +353,8 @@ async function main(): Promise<void> {
     console.log(`OK: enrichment cosine query returned ${enrichmentCosine.rowCount} result(s).`);
   }
 
-  const trigramTest = await pool.query<{ count: string }>(
-    `SELECT count(*) FROM rag_chunks WHERE f_unaccent(text) % f_unaccent('deja vu')`,
-  );
-  const enrichmentTrigramTest = await pool.query<{ count: string }>(
-    `SELECT count(*)
-     FROM rag_enrichment_sections
-     WHERE f_unaccent(search_text) % f_unaccent('admission test')`,
-  );
-  console.log(`OK: canonical trigram query executed (${trigramTest.rows[0].count} match(es)).`);
-  console.log(
-    `OK: enrichment trigram query executed (${enrichmentTrigramTest.rows[0].count} match(es)).`,
-  );
+  const goldProbeResult = await runGoldCaseProbes(pool);
+  if (!goldProbeResult) failed = true;
 
   const totalChunks = Number(
     (await pool.query<{ count: string }>('SELECT count(*) FROM rag_chunks')).rows[0].count,

@@ -17,6 +17,7 @@ export type AskStreamEvent =
     | {
           type: 'sources';
           sources: SourceCard[];
+          degraded?: string[];
       }
     | {
           type: 'answer_delta';

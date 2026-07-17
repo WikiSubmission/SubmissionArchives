@@ -28,7 +28,8 @@
     "rag:verify": "tsx scripts/rag/verify.ts",
     "rag:rebuild": "npm run rag:validate-enrichment && npm run rag:migrate && npm run rag:ingest && npm run rag:verify",
     "rag:validate-enrichment": "tsx scripts/rag/validate-enrichment.ts",
-    "rag:plan": "tsx scripts/rag/plan-ingest.ts"
+    "rag:plan": "tsx scripts/rag/plan-ingest.ts",
+    "rag:eval": "tsx --conditions=react-server scripts/rag/run-eval.ts"
   },
   "dependencies": {
     "@mistralai/mistralai": "^2.4.1",
@@ -43,6 +44,7 @@
     "react-dom": "19.2.1",
     "react-pdf": "^10.4.1",
     "react-player": "^2.16.0",
+    "server-only": "^0.0.1",
     "sharp": "^0.34.5",
     "tailwind-merge": "^3.4.0"
   },

@@ -28,6 +28,10 @@ import {
     extractCitedIds,
     validateCitations,
 } from '@/lib/rag/citations';
+import {
+    buildRetrievalTrace,
+    recordRetrievalTrace,
+} from '@/lib/rag/trace';
 import type {
     AskProgressStage,
     AskStreamEvent,
@@ -472,6 +476,9 @@ export async function POST(request: Request): Promise<Response> {
             try {
                 throwIfAborted(requestSignal);
 
+                const startedAtMs = Date.now();
+                const degraded: string[] = [];
+
                 sendStatus(
                     'embedding',
                     QUERY_EXPANSION_ENABLED
@@ -483,8 +490,10 @@ export async function POST(request: Request): Promise<Response> {
                 if (QUERY_EXPANSION_ENABLED) {
                     try {
                         expansion = await expandArchiveQuery(question);
-                    } catch {
+                    } catch (error: unknown) {
                         // The original query remains fully usable if expansion fails.
+                        degraded.push('query_expansion');
+                        console.error('[rag] query expansion failed', error);
                     }
                 }
 
@@ -536,8 +545,10 @@ export async function POST(request: Request): Promise<Response> {
                             candidates,
                             intent,
                         );
-                    } catch {
+                    } catch (error: unknown) {
                         // Deterministic hybrid ranking remains available.
+                        degraded.push('rerank');
+                        console.error('[rag] rerank failed', error);
                     }
                 }
 
@@ -550,9 +561,24 @@ export async function POST(request: Request): Promise<Response> {
                 send({
                     type: 'sources',
                     sources,
+                    ...(degraded.length > 0 ? { degraded } : {}),
                 });
 
                 const retrievalStrength = assessRetrieval(chunks);
+                recordRetrievalTrace(buildRetrievalTrace({
+                    question,
+                    intent,
+                    requestedEditionYears: editionYears,
+                    querySeeds: seeds.map((seed) => ({
+                        text: seed.text,
+                        kind: seed.kind,
+                    })),
+                    degraded,
+                    retrievalStrength,
+                    candidates: rankedCandidates,
+                    finalChunks: chunks,
+                    startedAtMs,
+                }));
                 if (retrievalStrength === 'none' || retrievalStrength === 'weak') {
                     send({
                         type: 'notice',
