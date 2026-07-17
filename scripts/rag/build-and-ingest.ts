@@ -23,6 +23,9 @@ const MASTER_INDEX_PATH = path.resolve(
 );
 const EMBED_MODEL = process.env.MISTRAL_EMBED_MODEL || 'mistral-embed-2312';
 const BATCH_SIZE = Number(process.env.RAG_EMBED_BATCH_SIZE) || 32;
+// Mistral rejects embedding requests whose combined inputs are too large, so
+// batches are capped by approximate size as well as item count.
+const BATCH_MAX_CHARS = Number(process.env.RAG_EMBED_BATCH_MAX_CHARS) || 48_000;
 const EMBED_DIMENSION = Number(process.env.RAG_EMBED_DIMENSION) || 1024;
 
 // v4 separates canonical evidence from enrichment metadata and adds edition-aware fields.
@@ -168,14 +171,35 @@ function hashSections(
   });
 }
 
+function buildEmbedBatches<T extends { embedInput: string }>(items: T[]): T[][] {
+  const batches: T[][] = [];
+  let current: T[] = [];
+  let currentChars = 0;
+
+  for (const item of items) {
+    const length = item.embedInput.length;
+    const overflows =
+      current.length >= BATCH_SIZE || currentChars + length > BATCH_MAX_CHARS;
+    if (current.length > 0 && overflows) {
+      batches.push(current);
+      current = [];
+      currentChars = 0;
+    }
+    current = [...current, item];
+    currentChars += length;
+  }
+
+  if (current.length > 0) batches.push(current);
+  return batches;
+}
+
 async function embedChanged<T extends { hash: string; embedInput: string }>(
   items: T[],
 ): Promise<Map<string, number[]>> {
   const embeddingsByHash = new Map<string, number[]>();
   const unique = [...new Map(items.map((item) => [item.hash, item])).values()];
 
-  for (let index = 0; index < unique.length; index += BATCH_SIZE) {
-    const batch = unique.slice(index, index + BATCH_SIZE);
+  for (const batch of buildEmbedBatches(unique)) {
     const embeddings = await embedBatch(
       batch.map((item) => item.embedInput),
       EMBED_MODEL,
