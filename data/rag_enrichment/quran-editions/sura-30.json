@@ -12,7 +12,7 @@
     {
       "id": "s2-3",
       "title": "30:2-3 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:2-3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The Romans will be defeated.\". 1992 final reading begins \"Certainly, the Romans will be defeated.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:2-3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The Romans will be defeated.\". 1992 final reading begins \"Certainly, the Romans will be defeated.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -53,50 +53,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s5",
-      "title": "30:5 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:5 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"in G O D ’s victory. He grants victory to whomever He wills. He is the Almighty, Most Merciful. *30:1 See Appe...\". 1992 final reading begins \"in GOD's victory. He grants victory to whomever He wills. He is the Almighty, Most Merciful.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "30:5",
-        "Quran 30:5",
-        "sura 30 verse 5",
-        "30:5",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 30:5 change between 1989 and 1992?",
-        "What is the final 1992 wording of 30:5?",
-        "Did Rashad Khalifa revise 30:5 in the final edition?"
-      ],
-      "quran_references": [
-        "30:5"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 15,
-      "source_segment_end": 17,
-      "page_start": 5,
-      "page_end": 5,
-      "review_status": "draft"
-    },
-    {
       "id": "s7",
       "title": "30:7 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:7 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"(Most people) care only about things of this world that are visible to them, while being totally oblivious to...\". 1992 final reading begins \"They care only about things of this world that are visible to them, while being totally oblivious to the Herea...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:7 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"(Most people) care only about things of this world that are visible to them, while being totally oblivious to...\". 1992 final reading begins \"They care only about things of this world that are visible to them, while being totally oblivious to the Herea...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -137,7 +96,7 @@
     {
       "id": "s10",
       "title": "30:10 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The consequences for those who committed evil was evil. That is because they rejected GOD’s revelations, and u...\". 1992 final reading begins \"The consequences for those who committed evil had to be evil. That is because they rejected GOD's revelations,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The consequences for those who committed evil was evil. That is because they rejected GOD’s revelations, and u...\". 1992 final reading begins \"The consequences for those who committed evil had to be evil. That is because they rejected GOD's revelations,...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -178,7 +137,7 @@
     {
       "id": "s13",
       "title": "30:13 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:13 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Their idols will not have any power to intercede on their behalf; in fact, they will disown their idols.\". 1992 final reading begins \"Their idols will have no power to intercede on their behalf; on the contrary, they will disown their idols.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:13 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Their idols will not have any power to intercede on their behalf; in fact, they will disown their idols.\". 1992 final reading begins \"Their idols will have no power to intercede on their behalf; on the contrary, they will disown their idols.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -219,7 +178,7 @@
     {
       "id": "s21-24",
       "title": "30:21-24 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 30:21-24 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 30:21-24 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -266,7 +225,7 @@
     {
       "id": "s25",
       "title": "30:25 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Among His signs is that the heaven and the earth are standing at His disposal. Finally, He calls you out of th...\". 1992 final reading begins \"Among His proofs is that the heaven and the earth are standing at His disposal. Finally, when He calls you out...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Among His signs is that the heaven and the earth are standing at His disposal. Finally, He calls you out of th...\". 1992 final reading begins \"Among His proofs is that the heaven and the earth are standing at His disposal. Finally, when He calls you out...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -307,7 +266,7 @@
     {
       "id": "s29",
       "title": "30:29 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, the transgressors have followed their own opinions, without knowledge. Thus, who can guide those who h...\". 1992 final reading begins \"Indeed, the transgressors have followed their own opinions, without knowledge. Who then can guide those who ha...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, the transgressors have followed their own opinions, without knowledge. Thus, who can guide those who h...\". 1992 final reading begins \"Indeed, the transgressors have followed their own opinions, without knowledge. Who then can guide those who ha...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -348,7 +307,7 @@
     {
       "id": "s30",
       "title": "30:30 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 30:30 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 30:30 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -389,7 +348,7 @@
     {
       "id": "s31",
       "title": "30:31 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:31 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall submit to Him, reverence Him, observe the contact prayers (Salat), and do not be among the idol wors...\". 1992 final reading begins \"You shall submit to Him, reverence Him, observe the Contact Prayers (Salat), and—whatever you do—do not ever f...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:31 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall submit to Him, reverence Him, observe the contact prayers (Salat), and do not be among the idol wors...\". 1992 final reading begins \"You shall submit to Him, reverence Him, observe the Contact Prayers (Salat), and—whatever you do—do not ever f...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -430,7 +389,7 @@
     {
       "id": "s32-43",
       "title": "30:32-43 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 30:32-43 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 30:32-43 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -493,7 +452,7 @@
     {
       "id": "s45",
       "title": "30:45 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For He will generously recompense from His bounties those who believe and lead a righteous life. And He does n...\". 1992 final reading begins \"For He will generously recompense those who believe and lead a righteous life from His bounties. He does not l...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For He will generously recompense from His bounties those who believe and lead a righteous life. And He does n...\". 1992 final reading begins \"For He will generously recompense those who believe and lead a righteous life from His bounties. He does not l...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -534,7 +493,7 @@
     {
       "id": "s50",
       "title": "30:50 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:50 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, you shall appreciate GOD’s continuous mercy, and how He revives the dead land. He will just as cert...\". 1992 final reading begins \"You shall appreciate GOD's continuous mercy, and how He revives the land that has been dead. He will just as c...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:50 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, you shall appreciate GOD’s continuous mercy, and how He revives the dead land. He will just as cert...\". 1992 final reading begins \"You shall appreciate GOD's continuous mercy, and how He revives the land that has been dead. He will just as c...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -575,7 +534,7 @@
     {
       "id": "s52-53",
       "title": "30:52-53 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 30:52-53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For you cannot make the dead, nor the deaf, hear the call, once they turn away (from the message).\". 1992 final reading begins \"You cannot make the dead, nor the deaf, hear the call, once they turn away.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 30:52-53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For you cannot make the dead, nor the deaf, hear the call, once they turn away (from the message).\". 1992 final reading begins \"You cannot make the dead, nor the deaf, hear the call, once they turn away.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -618,7 +577,7 @@
     {
       "id": "s55-60",
       "title": "30:55-60 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 30:55-60 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 30:55-60 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

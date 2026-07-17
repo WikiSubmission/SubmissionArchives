@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import type { ArchiveRecord } from '../../src/types/archive';
 
@@ -101,7 +101,23 @@ function normalizedReading(value: string | undefined): string {
     .toLowerCase();
 }
 
-function isQualifying(record: ComparisonRecord): boolean {
+function canonicalVerseReading(
+  record: ArchiveRecord | undefined,
+  verse: number,
+  editionYear: number,
+): string {
+  if (!record?.segments) return '';
+  const label = `verse-${editionYear}`;
+  const segment = record.segments.find(
+    (item) =>
+      item.label === label
+      && Number(item.start) <= verse
+      && Number(item.end) >= verse,
+  );
+  return segment?.text ?? '';
+}
+
+function isQualifying(record: ComparisonRecord, canonicalRecord: ArchiveRecord | undefined): boolean {
   const presence = record.presence ?? {};
   const presenceAnomaly =
     presence['1992'] === false || presence['1989'] === false || presence['1981'] === false;
@@ -111,6 +127,14 @@ function isQualifying(record: ComparisonRecord): boolean {
 
   // The machine change classes fire on footnote markers and OCR noise, so a
   // revision only qualifies when the normalized readings genuinely differ.
+  // The canonical labeled segments are ground truth; the OCR comparison
+  // candidates are only a fallback when canonical text is unavailable.
+  const canonical1989 = canonicalVerseReading(canonicalRecord, record.verse_number, 1989);
+  const canonical1992 = canonicalVerseReading(canonicalRecord, record.verse_number, 1992);
+  if (canonical1989 && canonical1992) {
+    return normalizedReading(canonical1989) !== normalizedReading(canonical1992);
+  }
+
   const before = normalizedReading(record.edition_1989?.candidate_text);
   const after = normalizedReading(record.edition_1992?.final_english);
   if (!before || !after) return true;
@@ -241,8 +265,13 @@ function buildSection(group: VerseGroup, record: ArchiveRecord): SectionDraft {
       : `${group.chapter}:${group.startVerse}-${group.endVerse}`;
   const locator = locateVerseSegments(record, group.startVerse, group.endVerse);
   const sample = group.records[0];
-  const before = cleanSnippet(sample.edition_1989?.candidate_text);
-  const after = cleanSnippet(sample.edition_1992?.final_english);
+  // Quote from the canonical labeled segments; the OCR comparison candidates
+  // are only a fallback when a canonical rendering is missing.
+  const canonicalBefore = canonicalVerseReading(record, sample.verse_number, 1989);
+  const canonicalAfter = canonicalVerseReading(record, sample.verse_number, 1992);
+  const quotesAreCanonical = Boolean(canonicalBefore && canonicalAfter);
+  const before = cleanSnippet(canonicalBefore || sample.edition_1989?.candidate_text);
+  const after = cleanSnippet(canonicalAfter || sample.edition_1992?.final_english);
 
   const summaryParts: string[] = [];
   if (group.presenceAnomaly) {
@@ -258,7 +287,9 @@ function buildSection(group: VerseGroup, record: ArchiveRecord): SectionDraft {
     summaryParts.push(`1989 reading begins "${before}". 1992 final reading begins "${after}".`);
   }
   summaryParts.push(
-    'Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.',
+    quotesAreCanonical
+      ? 'Readings quoted from the canonical labeled verse segments.'
+      : 'Machine comparison candidate; quoted readings are page-transcription extractions that need review.',
   );
 
   const verseTerms = group.records.slice(0, 12).map((item) => item.verse_id);
@@ -370,7 +401,9 @@ function main(): void {
   const records: ArchiveRecord[] = JSON.parse(readFileSync(MASTER_INDEX_PATH, 'utf8'));
   const recordById = new Map(records.map((record) => [record.id, record]));
   const comparisons = loadComparisonRecords();
-  const qualifying = comparisons.filter(isQualifying);
+  const qualifying = comparisons.filter((record) =>
+    isQualifying(record, recordById.get(`quran/${record.chapter_number}`)),
+  );
   const groups = groupVerses(qualifying);
 
   const groupsByChapter = new Map<number, VerseGroup[]>();
@@ -381,6 +414,7 @@ function main(): void {
   }
 
   mkdirSync(OUTPUT_DIR, { recursive: true });
+  const writtenFiles = new Set<string>();
   let fileCount = 0;
   let sectionCount = 0;
 
@@ -410,14 +444,25 @@ function main(): void {
       sections,
     };
 
+    const fileName = `sura-${chapter}.json`;
     writeFileSync(
-      path.join(OUTPUT_DIR, `sura-${chapter}.json`),
+      path.join(OUTPUT_DIR, fileName),
       `${JSON.stringify(enrichment, null, 2)}\n`,
       'utf8',
     );
+    writtenFiles.add(fileName);
     fileCount += 1;
     sectionCount += sections.length;
   }
+
+  let staleCount = 0;
+  for (const entry of readdirSync(OUTPUT_DIR)) {
+    if (entry.endsWith('.json') && !writtenFiles.has(entry)) {
+      unlinkSync(path.join(OUTPUT_DIR, entry));
+      staleCount += 1;
+    }
+  }
+  if (staleCount > 0) console.log(`Removed ${staleCount} stale enrichment file(s).`);
 
   const approxTokens = sectionCount * 130;
   console.log(`Quran edition enrichment generated:`);

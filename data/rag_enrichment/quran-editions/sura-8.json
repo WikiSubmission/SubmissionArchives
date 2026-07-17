@@ -12,7 +12,7 @@
     {
       "id": "s2",
       "title": "8:2 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 8:2 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 8:2 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -53,7 +53,7 @@
     {
       "id": "s4",
       "title": "8:4 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:4 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Such are the true believers. They attain high ranks at their Lord, as well as forgiveness and a generous recom...\". 1992 final reading begins \"Such are the true believers. They attain high ranks at their Lord, as well as forgiveness and a generous provi...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:4 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Such are the true believers. They attain high ranks at their Lord, as well as forgiveness and a generous recom...\". 1992 final reading begins \"Such are the true believers. They attain high ranks at their Lord, as well as forgiveness and a generous provi...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -94,7 +94,7 @@
     {
       "id": "s6-8",
       "title": "8:6-8 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:6-8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They argued with you against the truth, even after it became evident to them, as if they were driven to certai...\". 1992 final reading begins \"They argued with you against the truth, even after everything was explained to them. They acted as if they wer...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:6-8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They argued with you against the truth, even after it became evident to them, as if they were driven to certai...\". 1992 final reading begins \"They argued with you against the truth, even after everything was explained to them. They acted as if they wer...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -139,7 +139,7 @@
     {
       "id": "s12-13",
       "title": "8:12-13 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:12-13 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Thus, your Lord inspired the angels: “I will be with you as you support those who believed. I will throw terro...\". 1992 final reading begins \"Recall that your Lord inspired the angels: \"I am with you; so support those who believed. I will throw terror...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:12-13 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Thus, your Lord inspired the angels: “I will be with you as you support those who believed. I will throw terro...\". 1992 final reading begins \"Recall that your Lord inspired the angels: \"I am with you; so support those who believed. I will throw terror...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -180,50 +180,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s16",
-      "title": "8:16 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:16 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Anyone who turns back on that day, except to carry out a battle plan, or to join his group, has incurred wrath...\". 1992 final reading begins \"Anyone who turns back on that day, except to carry out a battle plan, or to join his group, has incurred wrath...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "8:16",
-        "Quran 8:16",
-        "sura 8 verse 16",
-        "8:16",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 8:16 change between 1989 and 1992?",
-        "What is the final 1992 wording of 8:16?",
-        "Did Rashad Khalifa revise 8:16 in the final edition?"
-      ],
-      "quran_references": [
-        "8:16"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 58,
-      "source_segment_end": 61,
-      "page_start": 16,
-      "page_end": 16,
-      "review_status": "draft"
-    },
-    {
       "id": "s20-22",
       "title": "8:20-22 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 8:20-22 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 8:20-22 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -268,7 +227,7 @@
     {
       "id": "s25-28",
       "title": "8:25-28 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 8:25-28 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 8:25-28 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -315,7 +274,7 @@
     {
       "id": "s29",
       "title": "8:29 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, if you observe GOD, He will enlighten you, remit your sins, and forgive you. GOD possesses...\". 1992 final reading begins \"O you who believe, if you reverence GOD, He will enlighten you, remit your sins, and forgive you. GOD possesse...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, if you observe GOD, He will enlighten you, remit your sins, and forgive you. GOD possesses...\". 1992 final reading begins \"O you who believe, if you reverence GOD, He will enlighten you, remit your sins, and forgive you. GOD possesse...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -356,7 +315,7 @@
     {
       "id": "s33-34",
       "title": "8:33-34 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:33-34 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"However, GOD is not to punish them while you are still in their midst; GOD is not to punish them so long as th...\". 1992 final reading begins \"However, GOD is not to punish them while you are in their midst; GOD is not to punish them while they are seek...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:33-34 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"However, GOD is not to punish them while you are still in their midst; GOD is not to punish them so long as th...\". 1992 final reading begins \"However, GOD is not to punish them while you are in their midst; GOD is not to punish them while they are seek...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -399,7 +358,7 @@
     {
       "id": "s41-42",
       "title": "8:41-42 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:41-42 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You should know that if you gain any spoils in war, one-fifth shall go to GOD and the messenger. It shall be g...\". 1992 final reading begins \"You should know that if you gain any spoils in war, one-fifth shall go to GOD and the messenger, to be given t...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:41-42 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You should know that if you gain any spoils in war, one-fifth shall go to GOD and the messenger. It shall be g...\". 1992 final reading begins \"You should know that if you gain any spoils in war, one-fifth shall go to GOD and the messenger, to be given t...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -442,7 +401,7 @@
     {
       "id": "s46",
       "title": "8:46 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 8:46 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 8:46 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -483,7 +442,7 @@
     {
       "id": "s47-48",
       "title": "8:47-48 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:47-48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do not be like those who left their homes grudgingly, only to show off, while actually repelling from the path...\". 1992 final reading begins \"Do not be like those who left their homes grudgingly, only to show off, and in fact discouraged others from fo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:47-48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do not be like those who left their homes grudgingly, only to show off, while actually repelling from the path...\". 1992 final reading begins \"Do not be like those who left their homes grudgingly, only to show off, and in fact discouraged others from fo...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -526,7 +485,7 @@
     {
       "id": "s54",
       "title": "8:54 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For example, the people of Pharaoh and others before them; they first rejected the signs of their Lord. Conseq...\". 1992 final reading begins \"Such was the case with the people of Pharaoh and others before them. They first rejected the signs of their Lo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For example, the people of Pharaoh and others before them; they first rejected the signs of their Lord. Conseq...\". 1992 final reading begins \"Such was the case with the people of Pharaoh and others before them. They first rejected the signs of their Lo...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -567,7 +526,7 @@
     {
       "id": "s56",
       "title": "8:56 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:56 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You reach agreements with them, but they consistently violate their agreements; they are not righteous.\". 1992 final reading begins \"You reach agreements with them, but they violate their agreements every time; they are not righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:56 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You reach agreements with them, but they consistently violate their agreements; they are not righteous.\". 1992 final reading begins \"You reach agreements with them, but they violate their agreements every time; they are not righteous.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -608,7 +567,7 @@
     {
       "id": "s66",
       "title": "8:66 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:66 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Now GOD has made the matter easier for you, for He knows that you are not as strong as you used to be. Hencefo...\". 1992 final reading begins \"Now (that many new people have joined you) GOD has made it easier for you, for He knows that you are not as st...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:66 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Now GOD has made the matter easier for you, for He knows that you are not as strong as you used to be. Hencefo...\". 1992 final reading begins \"Now (that many new people have joined you) GOD has made it easier for you, for He knows that you are not as st...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -649,7 +608,7 @@
     {
       "id": "s72",
       "title": "8:72 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 8:72 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those who believe, and emigrate, and strive with their money and their lives in the cause of GOD, as w...\". 1992 final reading begins \"Surely, those who believed, and emigrated, and strove with their money and their lives in the cause of GOD, as...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 8:72 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those who believe, and emigrate, and strive with their money and their lives in the cause of GOD, as w...\". 1992 final reading begins \"Surely, those who believed, and emigrated, and strove with their money and their lives in the cause of GOD, as...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

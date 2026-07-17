@@ -12,7 +12,7 @@
     {
       "id": "s15",
       "title": "56:15 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 56:15 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 56:15 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -51,132 +51,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s26",
-      "title": "56:26 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 56:26 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Only the utterance: “Peace, peace.” The Lower Heaven\". 1992 final reading begins \"Only the utterance: \"Peace, peace.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "56:26",
-        "Quran 56:26",
-        "sura 56 verse 26",
-        "56:26",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 56:26 change between 1989 and 1992?",
-        "What is the final 1992 wording of 56:26?",
-        "Did Rashad Khalifa revise 56:26 in the final edition?"
-      ],
-      "quran_references": [
-        "56:26"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 91,
-      "source_segment_end": 94,
-      "page_start": 26,
-      "page_end": 26,
-      "review_status": "draft"
-    },
-    {
-      "id": "s56",
-      "title": "56:56 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 56:56 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Such is their share on the Day of Judgment. Reflections\". 1992 final reading begins \"Such is their share on the Day of Judgment.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "56:56",
-        "Quran 56:56",
-        "sura 56 verse 56",
-        "56:56",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 56:56 change between 1989 and 1992?",
-        "What is the final 1992 wording of 56:56?",
-        "Did Rashad Khalifa revise 56:56 in the final edition?"
-      ],
-      "quran_references": [
-        "56:56"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 203,
-      "source_segment_end": 205,
-      "page_start": 56,
-      "page_end": 56,
-      "review_status": "draft"
-    },
-    {
-      "id": "s74",
-      "title": "56:74 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 56:74 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall glorify the name of your Lord, the Great. Only the Sincere Can Understand the Quran\". 1992 final reading begins \"You shall glorify the name of your Lord, the Great.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "56:74",
-        "Quran 56:74",
-        "sura 56 verse 74",
-        "56:74",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 56:74 change between 1989 and 1992?",
-        "What is the final 1992 wording of 56:74?",
-        "Did Rashad Khalifa revise 56:74 in the final edition?"
-      ],
-      "quran_references": [
-        "56:74"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 260,
-      "source_segment_end": 262,
-      "page_start": 74,
-      "page_end": 74,
-      "review_status": "draft"
-    },
-    {
       "id": "s75-92",
       "title": "56:75-92 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 56:75-92 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 56:75-92 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

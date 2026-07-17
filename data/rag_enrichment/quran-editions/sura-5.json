@@ -12,7 +12,7 @@
     {
       "id": "s5",
       "title": "5:5 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:5 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Today, all good food is made lawful for you. The food of the people of the scripture is lawful for you. And yo...\". 1992 final reading begins \"Today, all good food is made lawful for you. The food of the people of the scripture is lawful for you. Also,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:5 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Today, all good food is made lawful for you. The food of the people of the scripture is lawful for you. And yo...\". 1992 final reading begins \"Today, all good food is made lawful for you. The food of the people of the scripture is lawful for you. Also,...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -51,9 +51,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s10-11",
-      "title": "5:10-11 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:10-11 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who disbelieve and reject our revelations, they are the dwellers of Hell. God Defends the Believe...\". 1992 final reading begins \"As for those who disbelieve and reject our revelations, they are the dwellers of Hell.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "id": "s11",
+      "title": "5:11 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 5:11 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, remember GOD’s blessings upon you; when some people extended their hands in aggression agai...\". 1992 final reading begins \"O you who believe, remember GOD's blessings upon you; when some people extended their hands to aggress against...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -68,35 +68,33 @@
         }
       ],
       "user_terms": [
-        "5:10-11",
-        "Quran 5:10-11",
-        "sura 5 verse 10",
-        "5:10",
+        "5:11",
+        "Quran 5:11",
+        "sura 5 verse 11",
         "5:11",
         "translation change",
         "earlier translation",
         "edition difference"
       ],
       "related_questions": [
-        "How did the translation of 5:10-11 change between 1989 and 1992?",
-        "What is the final 1992 wording of 5:10-11?",
-        "Did Rashad Khalifa revise 5:10-11 in the final edition?"
+        "How did the translation of 5:11 change between 1989 and 1992?",
+        "What is the final 1992 wording of 5:11?",
+        "Did Rashad Khalifa revise 5:11 in the final edition?"
       ],
       "quran_references": [
-        "5:10",
         "5:11"
       ],
       "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 41,
+      "source_segment_start": 45,
       "source_segment_end": 49,
-      "page_start": 10,
+      "page_start": 11,
       "page_end": 11,
       "review_status": "draft"
     },
     {
       "id": "s15",
       "title": "5:15 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:15 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O people of the scripture, our messenger has come to you to proclaim for you many things you have concealed in...\". 1992 final reading begins \"O people of the scripture, our messenger has come to you to proclaim for you many things you have concealed in...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:15 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O people of the scripture, our messenger has come to you to proclaim for you many things you have concealed in...\". 1992 final reading begins \"O people of the scripture, our messenger has come to you to proclaim for you many things you have concealed in...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -135,50 +133,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s31",
-      "title": "5:31 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:31 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD then sent a raven to scratch the soil, to teach him how to bury his brother’s corpse. He said, “Woe to me;...\". 1992 final reading begins \"GOD then sent a raven to scratch the soil, to teach him how to bury his brother's corpse. He said, \"Woe to me;...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "5:31",
-        "Quran 5:31",
-        "sura 5 verse 31",
-        "5:31",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 5:31 change between 1989 and 1992?",
-        "What is the final 1992 wording of 5:31?",
-        "Did Rashad Khalifa revise 5:31 in the final edition?"
-      ],
-      "quran_references": [
-        "5:31"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 148,
-      "source_segment_end": 151,
-      "page_start": 31,
-      "page_end": 31,
-      "review_status": "draft"
-    },
-    {
       "id": "s33",
       "title": "5:33 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The just retribution for those who fight GOD and His messenger, and commit horrendous crimes, is to be killed,...\". 1992 final reading begins \"The just retribution for those who fight GOD and His messenger, and commit horrendous crimes, is to be killed,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The just retribution for those who fight GOD and His messenger, and commit horrendous crimes, is to be killed,...\". 1992 final reading begins \"The just retribution for those who fight GOD and His messenger, and commit horrendous crimes, is to be killed,...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -219,7 +176,7 @@
     {
       "id": "s35",
       "title": "5:35 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, observe GOD and seek the ways and means to Him, and strive in His cause, that you may succe...\". 1992 final reading begins \"O you who believe, you shall reverence GOD and seek the ways and means to Him, and strive in His cause, that y...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, observe GOD and seek the ways and means to Him, and strive in His cause, that you may succe...\". 1992 final reading begins \"O you who believe, you shall reverence GOD and seek the ways and means to Him, and strive in His cause, that y...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -258,50 +215,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s37",
-      "title": "5:37 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:37 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will want to exit Hell, but alas, they can never exit therefrom; their retribution is eternal. Mathematic...\". 1992 final reading begins \"They will want to exit Hell, but alas, they can never exit therefrom; their retribution is eternal.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "5:37",
-        "Quran 5:37",
-        "sura 5 verse 37",
-        "5:37",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 5:37 change between 1989 and 1992?",
-        "What is the final 1992 wording of 5:37?",
-        "Did Rashad Khalifa revise 5:37 in the final edition?"
-      ],
-      "quran_references": [
-        "5:37"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 172,
-      "source_segment_end": 174,
-      "page_start": 37,
-      "page_end": 37,
-      "review_status": "draft"
-    },
-    {
       "id": "s38",
       "title": "5:38 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:38 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:38 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -342,7 +258,7 @@
     {
       "id": "s42-43",
       "title": "5:42-43 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:42-43 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They listen to lies, and eat from illicit earnings. If they come to you to judge among them, you may judge amo...\". 1992 final reading begins \"They are upholders of lies, and eaters of illicit earnings. If they come to you to judge among them, you may j...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:42-43 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They listen to lies, and eat from illicit earnings. If they come to you to judge among them, you may judge amo...\". 1992 final reading begins \"They are upholders of lies, and eaters of illicit earnings. If they come to you to judge among them, you may j...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -385,7 +301,7 @@
     {
       "id": "s45",
       "title": "5:45 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And we decreed for them in it that: the soul for the soul, the eye for the eye, the nose for the nose, the ear...\". 1992 final reading begins \"And we decreed for them in it that: the life for the life, the eye for the eye, the nose for the nose, the ear...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And we decreed for them in it that: the soul for the soul, the eye for the eye, the nose for the nose, the ear...\". 1992 final reading begins \"And we decreed for them in it that: the life for the life, the eye for the eye, the nose for the nose, the ear...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -426,7 +342,7 @@
     {
       "id": "s47",
       "title": "5:47 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:47 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The people of the Gospel shall rule in accordance with GODs revelations therein. Anyone who does not rule in a...\". 1992 final reading begins \"The people of the Gospel shall rule in accordance with GOD's revelations therein. Those who do not rule in acc...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:47 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The people of the Gospel shall rule in accordance with GOD’s revelations therein. Anyone who does not rule in...\". 1992 final reading begins \"The people of the Gospel shall rule in accordance with GOD's revelations therein. Those who do not rule in acc...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -467,7 +383,7 @@
     {
       "id": "s50",
       "title": "5:50 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:50 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Is it the rules of the days of ignorance that they want? Whose rules are better than GODs for those who have a...\". 1992 final reading begins \"Is it the law of the days of ignorance that they seek to uphold? Whose law is better than GOD's for those who...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:50 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Is it the rules of the days of ignorance that they want? Whose rules are better than GOD’s for those who have...\". 1992 final reading begins \"Is it the law of the days of ignorance that they seek to uphold? Whose law is better than GOD's for those who...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -508,7 +424,7 @@
     {
       "id": "s51",
       "title": "5:51 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:51 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:51 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -549,7 +465,7 @@
     {
       "id": "s56",
       "title": "5:56 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:56 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:56 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -590,7 +506,7 @@
     {
       "id": "s60",
       "title": "5:60 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:60 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “Let me tell you who is worse in the sight of GOD: those who are condemned by GOD after incurring His wra...\". 1992 final reading begins \"Say, \"Let me tell you who are worse in the sight of GOD: those who are condemned by GOD after incurring His wr...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:60 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “Let me tell you who is worse in the sight of GOD: those who are condemned by GOD after incurring His wra...\". 1992 final reading begins \"Say, \"Let me tell you who are worse in the sight of GOD: those who are condemned by GOD after incurring His wr...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -631,7 +547,7 @@
     {
       "id": "s62-63",
       "title": "5:62-63 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:62-63 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:62-63 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -674,7 +590,7 @@
     {
       "id": "s72-73",
       "title": "5:72-73 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:72-73 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:72-73 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -717,7 +633,7 @@
     {
       "id": "s76-78",
       "title": "5:76-78 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:76-78 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:76-78 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -762,7 +678,7 @@
     {
       "id": "s80",
       "title": "5:80 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:80 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You see many of them befriending those who disbelieved; miserable indeed is what their hands have sent forth o...\". 1992 final reading begins \"You would see many of them allying themselves with those who disbelieve. Miserable indeed is what their hands...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:80 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You see many of them befriending those who disbelieved; miserable indeed is what their hands have sent forth o...\". 1992 final reading begins \"You would see many of them allying themselves with those who disbelieve. Miserable indeed is what their hands...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -801,50 +717,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s86",
-      "title": "5:86 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:86 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who disbelieve and reject our revelations, they are the dwellers of Hell. Do Not Prohibit Lawful...\". 1992 final reading begins \"As for those who disbelieve and reject our revelations, they are the dwellers of Hell.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "5:86",
-        "Quran 5:86",
-        "sura 5 verse 86",
-        "5:86",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 5:86 change between 1989 and 1992?",
-        "What is the final 1992 wording of 5:86?",
-        "Did Rashad Khalifa revise 5:86 in the final edition?"
-      ],
-      "quran_references": [
-        "5:86"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 375,
-      "source_segment_end": 377,
-      "page_start": 86,
-      "page_end": 86,
-      "review_status": "draft"
-    },
-    {
       "id": "s88",
       "title": "5:88 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:88 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Eat from the good and lawful things that GOD has provided for you, and observe GOD, in whom you are believers....\". 1992 final reading begins \"And eat from the good and lawful things that GOD has provided for you. You shall reverence GOD, in whom you ar...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:88 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Eat from the good and lawful things that GOD has provided for you, and observe GOD, in whom you are believers.\". 1992 final reading begins \"And eat from the good and lawful things that GOD has provided for you. You shall reverence GOD, in whom you ar...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -885,7 +760,7 @@
     {
       "id": "s89",
       "title": "5:89 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:89 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:89 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -926,7 +801,7 @@
     {
       "id": "s95",
       "title": "5:95 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:95 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, do not kill any game during pilgrimage. Anyone who kills any game on purpose, his fine shal...\". 1992 final reading begins \"O you who believe, do not kill any game during pilgrimage. Anyone who kills any game on purpose, his fine shal...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:95 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, do not kill any game during pilgrimage. Anyone who kills any game on purpose, his fine shal...\". 1992 final reading begins \"O you who believe, do not kill any game during pilgrimage. Anyone who kills any game on purpose, his fine shal...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -967,7 +842,7 @@
     {
       "id": "s98-105",
       "title": "5:98-105 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:98-105 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:98-105 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1022,7 +897,7 @@
     {
       "id": "s110",
       "title": "5:110 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 5:110 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 5:110 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1063,7 +938,7 @@
     {
       "id": "s113",
       "title": "5:113 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 5:113 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “We wish to eat therefrom, and reassure our hearts, and to know that you have brought us the truth,...\". 1992 final reading begins \"They said, \"We wish to eat from it, and to reassure our hearts, and to know for sure that you have told us the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 5:113 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “We wish to eat therefrom, and reassure our hearts, and to know that you have brought us the truth,...\". 1992 final reading begins \"They said, \"We wish to eat from it, and to reassure our hearts, and to know for sure that you have told us the...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

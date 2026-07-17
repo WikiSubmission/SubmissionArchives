@@ -12,7 +12,7 @@
     {
       "id": "s1",
       "title": "66:1 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 66:1 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 66:1 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -48,47 +48,6 @@
       "source_segment_end": 4,
       "page_start": 1,
       "page_end": 1,
-      "review_status": "draft"
-    },
-    {
-      "id": "s9",
-      "title": "66:9 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 66:9 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O prophet, struggle against the dis believers and the hypocrites and be stern with them. Their abode is Gehenn...\". 1992 final reading begins \"O prophet, struggle against the disbelievers and the hypocrites and be stern with them. Their abode is Gehenna...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "66:9",
-        "Quran 66:9",
-        "sura 66 verse 9",
-        "66:9",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 66:9 change between 1989 and 1992?",
-        "What is the final 1992 wording of 66:9?",
-        "Did Rashad Khalifa revise 66:9 in the final edition?"
-      ],
-      "quran_references": [
-        "66:9"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 28,
-      "source_segment_end": 30,
-      "page_start": 9,
-      "page_end": 9,
       "review_status": "draft"
     }
   ]

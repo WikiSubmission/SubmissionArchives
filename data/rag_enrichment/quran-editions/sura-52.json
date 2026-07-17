@@ -12,7 +12,7 @@
     {
       "id": "s21",
       "title": "52:21 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 52:21 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 52:21 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -48,129 +48,6 @@
       "source_segment_end": 63,
       "page_start": 21,
       "page_end": 21,
-      "review_status": "draft"
-    },
-    {
-      "id": "s28",
-      "title": "52:28 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 52:28 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“We used to implore Him; He is the Most Kind, Most Merciful.” The Messenger\". 1992 final reading begins \"\"We used to implore Him; He is the Most Kind, Most Merciful.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "52:28",
-        "Quran 52:28",
-        "sura 52 verse 28",
-        "52:28",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 52:28 change between 1989 and 1992?",
-        "What is the final 1992 wording of 52:28?",
-        "Did Rashad Khalifa revise 52:28 in the final edition?"
-      ],
-      "quran_references": [
-        "52:28"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 82,
-      "source_segment_end": 84,
-      "page_start": 28,
-      "page_end": 28,
-      "review_status": "draft"
-    },
-    {
-      "id": "s33",
-      "title": "52:33 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 52:33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do they say, “He made it all up?” Instead, they are simply disbelievers. “Mohammedans” Challenge God and Produ...\". 1992 final reading begins \"Do they say, \"He made it all up?\" Instead, they are simply disbelievers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "52:33",
-        "Quran 52:33",
-        "sura 52 verse 33",
-        "52:33",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 52:33 change between 1989 and 1992?",
-        "What is the final 1992 wording of 52:33?",
-        "Did Rashad Khalifa revise 52:33 in the final edition?"
-      ],
-      "quran_references": [
-        "52:33"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 99,
-      "source_segment_end": 101,
-      "page_start": 33,
-      "page_end": 33,
-      "review_status": "draft"
-    },
-    {
-      "id": "s49",
-      "title": "52:49 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 52:49 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Also during the night glorify Him, and at dawn as the stars fade away. <______________________________________...\". 1992 final reading begins \"Also during the night glorify Him, and at dawn as the stars fade away.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "52:49",
-        "Quran 52:49",
-        "sura 52 verse 49",
-        "52:49",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 52:49 change between 1989 and 1992?",
-        "What is the final 1992 wording of 52:49?",
-        "Did Rashad Khalifa revise 52:49 in the final edition?"
-      ],
-      "quran_references": [
-        "52:49"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 149,
-      "source_segment_end": 151,
-      "page_start": 49,
-      "page_end": 49,
       "review_status": "draft"
     }
   ]

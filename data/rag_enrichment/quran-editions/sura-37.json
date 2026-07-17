@@ -12,7 +12,7 @@
     {
       "id": "s6-7",
       "title": "37:6-7 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 37:6-7 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 37:6-7 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -55,7 +55,7 @@
     {
       "id": "s9",
       "title": "37:9 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:9 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are doomed; they have incurred an eternal retribution.\". 1992 final reading begins \"They have been condemned; they have incurred an eternal retribution.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:9 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are doomed; they have incurred an eternal retribution.\". 1992 final reading begins \"They have been condemned; they have incurred an eternal retribution.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -96,7 +96,7 @@
     {
       "id": "s18",
       "title": "37:18 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:18 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “Yes, you will be forced.”\". 1992 final reading begins \"Say, \"Yes, you will be forcibly summoned.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:18 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “Yes, you will be forced.”\". 1992 final reading begins \"Say, \"Yes, you will be forcibly summoned.\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -135,91 +135,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s24",
-      "title": "37:24 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Stop them, and ask them: 1 2099\". 1992 final reading begins \"Stop them, and ask them:\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "37:24",
-        "Quran 37:24",
-        "sura 37 verse 24",
-        "37:24",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 37:24 change between 1989 and 1992?",
-        "What is the final 1992 wording of 37:24?",
-        "Did Rashad Khalifa revise 37:24 in the final edition?"
-      ],
-      "quran_references": [
-        "37:24"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 73,
-      "source_segment_end": 75,
-      "page_start": 24,
-      "page_end": 24,
-      "review_status": "draft"
-    },
-    {
-      "id": "s26",
-      "title": "37:26 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:26 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will be, on that day, totally submitting. Mutual Blaming\". 1992 final reading begins \"They will be, on that day, totally submitting.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "37:26",
-        "Quran 37:26",
-        "sura 37 verse 26",
-        "37:26",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 37:26 change between 1989 and 1992?",
-        "What is the final 1992 wording of 37:26?",
-        "Did Rashad Khalifa revise 37:26 in the final edition?"
-      ],
-      "quran_references": [
-        "37:26"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 79,
-      "source_segment_end": 81,
-      "page_start": 26,
-      "page_end": 26,
-      "review_status": "draft"
-    },
-    {
       "id": "s30-34",
       "title": "37:30-34 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:30-34 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“We never had any power over you; it is you who were transgressors.\". 1992 final reading begins \"\"We never had any power over you; it is you who were wicked.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:30-34 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“We never had any power over you; it is you who were transgressors.\". 1992 final reading begins \"\"We never had any power over you; it is you who were wicked.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -268,7 +186,7 @@
     {
       "id": "s48",
       "title": "37:48 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"With them will be beautiful companions.\". 1992 final reading begins \"With them will be wonderful companions.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"With them will be beautiful companions.\". 1992 final reading begins \"With them will be wonderful companions.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -309,7 +227,7 @@
     {
       "id": "s50-51",
       "title": "37:50-51 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:50-51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will confer with one another.\". 1992 final reading begins \"They will come to each other, and confer with one another.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:50-51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will confer with one another.\". 1992 final reading begins \"They will come to each other, and confer with one another.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -352,7 +270,7 @@
     {
       "id": "s53-54",
       "title": "37:53-54 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:53-54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“ ‘After we die and turn into dust and bones, we get resurrected?’ ”\". 1992 final reading begins \"\" 'After we die and turn into dust and bones, do we get called to account?' \"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:53-54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“ ‘After we die and turn into dust and bones, we get resurrected?’ ”\". 1992 final reading begins \"\" 'After we die and turn into dust and bones, do we get called to account?' \"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -395,7 +313,7 @@
     {
       "id": "s58",
       "title": "37:58 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 37:58 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 37:58 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -436,7 +354,7 @@
     {
       "id": "s59",
       "title": "37:59 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:59 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“only the first death, then we never are requited?”\". 1992 final reading begins \"\"only the first death, and we never receive any requital?\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:59 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“only the first death, then we never are requited?”\". 1992 final reading begins \"\"only the first death, and we never receive any requital?\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -477,7 +395,7 @@
     {
       "id": "s67",
       "title": "37:67 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:67 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Then top it with a hellish drink.\". 1992 final reading begins \"Then they will top it with a hellish drink.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:67 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Then top it with a hellish drink.\". 1992 final reading begins \"Then they will top it with a hellish drink.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -518,7 +436,7 @@
     {
       "id": "s77",
       "title": "37:77 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:77 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We made his progeny the survivors.\". 1992 final reading begins \"We made his companions the survivors.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:77 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We made his progeny the survivors.\". 1992 final reading begins \"We made his companions the survivors.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -559,7 +477,7 @@
     {
       "id": "s80",
       "title": "37:80 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:80 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:80 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -598,50 +516,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s82",
-      "title": "37:82 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:82 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We drowned all the others. Abraham\". 1992 final reading begins \"We drowned all the others.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "37:82",
-        "Quran 37:82",
-        "sura 37 verse 82",
-        "37:82",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 37:82 change between 1989 and 1992?",
-        "What is the final 1992 wording of 37:82?",
-        "Did Rashad Khalifa revise 37:82 in the final edition?"
-      ],
-      "quran_references": [
-        "37:82"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 271,
-      "source_segment_end": 273,
-      "page_start": 82,
-      "page_end": 82,
-      "review_status": "draft"
-    },
-    {
       "id": "s86",
       "title": "37:86 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:86 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Is it these fabricated gods besides GOD that you want?\". 1992 final reading begins \"\"Is it these fabricated gods, instead of GOD, that you want?\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:86 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Is it these fabricated gods besides GOD that you want?\". 1992 final reading begins \"\"Is it these fabricated gods, instead of GOD, that you want?\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -682,7 +559,7 @@
     {
       "id": "s89",
       "title": "37:89 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He gave up: “I am tired of this!”\". 1992 final reading begins \"Then he gave up and said, \"I am tired of this!\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He gave up: “I am tired of this!”\". 1992 final reading begins \"Then he gave up and said, \"I am tired of this!\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -723,7 +600,7 @@
     {
       "id": "s93",
       "title": "37:93 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:93 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He then destroyed them completely\". 1992 final reading begins \"He then destroyed them.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:93 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He then destroyed them completely\". 1992 final reading begins \"He then destroyed them.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -764,7 +641,7 @@
     {
       "id": "s101",
       "title": "37:101 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 37:101 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 37:101 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -805,7 +682,7 @@
     {
       "id": "s105-106",
       "title": "37:105-106 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:105-106 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“You have believed your own dream.” We thus reward the pious.\". 1992 final reading begins \"\"You have believed the dream.\" We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:105-106 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“You have believed your own dream.” We thus reward the pious.\". 1992 final reading begins \"\"You have believed the dream.\" We thus reward the righteous.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -848,7 +725,7 @@
     {
       "id": "s113",
       "title": "37:113 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:113 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We blessed him and Isaac. Among their descendants, some are right eous, and some are transgressors. Moses and...\". 1992 final reading begins \"We blessed him and Isaac. Among their descendants, some are righteous, and some are wicked transgressors.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:113 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We blessed him and Isaac. Among their descendants, some are righteous, and some are transgressors.\". 1992 final reading begins \"We blessed him and Isaac. Among their descendants, some are righteous, and some are wicked transgressors.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -889,7 +766,7 @@
     {
       "id": "s121",
       "title": "37:121 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:121 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:121 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -930,7 +807,7 @@
     {
       "id": "s127",
       "title": "37:127 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:127 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They disbelieved him. Consequently, they had to pay.\". 1992 final reading begins \"They disbelieved him. Consequently, they had to be called to account.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:127 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They disbelieved him. Consequently, they had to pay.\". 1992 final reading begins \"They disbelieved him. Consequently, they had to be called to account.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -971,7 +848,7 @@
     {
       "id": "s131",
       "title": "37:131 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:131 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:131 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1012,7 +889,7 @@
     {
       "id": "s138",
       "title": "37:138 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:138 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And by night. Do you understand? Jonah\". 1992 final reading begins \"And by night. Would you understand?\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:138 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And by night. Do you understand?\". 1992 final reading begins \"And by night. Would you understand?\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1053,7 +930,7 @@
     {
       "id": "s141-142",
       "title": "37:141-142 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:141-142 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He rebelled, and joined the losers.\". 1992 final reading begins \"He rebelled and thus, he joined the losers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:141-142 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He rebelled, and joined the losers.\". 1992 final reading begins \"He rebelled and thus, he joined the losers.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1096,7 +973,7 @@
     {
       "id": "s149",
       "title": "37:149 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:149 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Ask them, “Does your Lord have daughters, while you have sons?”\". 1992 final reading begins \"Ask them if your Lord has daughters, while they have sons!\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:149 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Ask them, “Does your Lord have daughters, while you have sons?”\". 1992 final reading begins \"Ask them if your Lord has daughters, while they have sons!\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1137,7 +1014,7 @@
     {
       "id": "s151",
       "title": "37:151 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:151 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, they blaspheme when they say—\". 1992 final reading begins \"Indeed, they grossly blaspheme when they say—\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:151 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, they blaspheme when they say—\". 1992 final reading begins \"Indeed, they grossly blaspheme when they say—\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1178,7 +1055,7 @@
     {
       "id": "s156",
       "title": "37:156 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:156 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do you have solid proof?\". 1992 final reading begins \"Do you have any proof?\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:156 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do you have solid proof?\". 1992 final reading begins \"Do you have any proof?\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1219,7 +1096,7 @@
     {
       "id": "s164",
       "title": "37:164 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 37:164 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 37:164 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1260,7 +1137,7 @@
     {
       "id": "s166",
       "title": "37:166 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:166 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We have duly glorified (our Lord). Following The Parents\". 1992 final reading begins \"We have duly glorified (our Lord).\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:166 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We have duly glorified (our Lord). Following The Parents\". 1992 final reading begins \"We have duly glorified (our Lord).\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1301,7 +1178,7 @@
     {
       "id": "s177",
       "title": "37:177 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:177 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When it hits, they will be sorry— they have been warned.\". 1992 final reading begins \"When it hits them one day, it will be a miserable day; they have been sufficiently warned.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 37:177 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When it hits, they will be sorry— they have been warned.\". 1992 final reading begins \"When it hits them one day, it will be a miserable day; they have been sufficiently warned.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1337,47 +1214,6 @@
       "source_segment_end": 583,
       "page_start": 177,
       "page_end": 177,
-      "review_status": "draft"
-    },
-    {
-      "id": "s182",
-      "title": "37:182 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 37:182 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Praise be to GOD, Lord of the universe. \\ ____________________________________;_________ _____________________...\". 1992 final reading begins \"Praise be to GOD, Lord of the universe.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "37:182",
-        "Quran 37:182",
-        "sura 37 verse 182",
-        "37:182",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 37:182 change between 1989 and 1992?",
-        "What is the final 1992 wording of 37:182?",
-        "Did Rashad Khalifa revise 37:182 in the final edition?"
-      ],
-      "quran_references": [
-        "37:182"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 596,
-      "source_segment_end": 598,
-      "page_start": 182,
-      "page_end": 182,
       "review_status": "draft"
     }
   ]

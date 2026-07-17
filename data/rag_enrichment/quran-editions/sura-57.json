@@ -12,7 +12,7 @@
     {
       "id": "s20",
       "title": "57:20 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 57:20 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 57:20 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -51,50 +51,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s21",
-      "title": "57:21 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 57:21 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, you shall race towards forgiveness from your Lord, and a Paradise whose width encom passes the heav...\". 1992 final reading begins \"Therefore, you shall race towards forgiveness from your Lord, and a Paradise whose width encompasses the heave...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "57:21",
-        "Quran 57:21",
-        "sura 57 verse 21",
-        "57:21",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 57:21 change between 1989 and 1992?",
-        "What is the final 1992 wording of 57:21?",
-        "Did Rashad Khalifa revise 57:21 in the final edition?"
-      ],
-      "quran_references": [
-        "57:21"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 75,
-      "source_segment_end": 78,
-      "page_start": 21,
-      "page_end": 21,
-      "review_status": "draft"
-    },
-    {
       "id": "s23",
       "title": "57:23 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 57:23 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 57:23 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

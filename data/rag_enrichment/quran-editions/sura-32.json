@@ -12,7 +12,7 @@
     {
       "id": "s3",
       "title": "32:3 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 32:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They may say, “He fabricated it.” No. This is the truth from your Lord, to warn people who never received a wa...\". 1992 final reading begins \"They said, \"He fabricated it.\" Indeed, this is the truth from your Lord, to warn people who never received a w...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 32:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They may say, “He fabricated it.” No. This is the truth from your Lord, to warn people who never received a wa...\". 1992 final reading begins \"They said, \"He fabricated it.\" Indeed, this is the truth from your Lord, to warn people who never received a w...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -53,7 +53,7 @@
     {
       "id": "s5",
       "title": "32:5 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 32:5 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 32:5 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -94,7 +94,7 @@
     {
       "id": "s6-7",
       "title": "32:6-7 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 32:6-7 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Such is the Knower of all secrets and declarations; the Almighty, Most Merciful. The Origin of Man\". 1992 final reading begins \"Knower of all secrets and declarations; the Almighty, Most Merciful.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 32:6-7 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Such is the Knower of all secrets and declarations; the Almighty, Most Merciful.\". 1992 final reading begins \"Knower of all secrets and declarations; the Almighty, Most Merciful.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -137,7 +137,7 @@
     {
       "id": "s10",
       "title": "32:10 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 32:10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They wondered, “After we vanish into the earth, do we get created anew?” Indeed, they have disbelieved in meet...\". 1992 final reading begins \"They wonder, \"After we vanish into the earth, do we get created anew?\" Thus, as regards meeting their Lord, th...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 32:10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They wondered, “After we vanish into the earth, do we get created anew?” Indeed, they have disbelieved in meet...\". 1992 final reading begins \"They wonder, \"After we vanish into the earth, do we get created anew?\" Thus, as regards meeting their Lord, th...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -178,7 +178,7 @@
     {
       "id": "s14",
       "title": "32:14 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 32:14 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Taste the consequences of your forgetting this day—we now forget you. Taste the eternal retribution in return...\". 1992 final reading begins \"Taste the consequences of your forgetting this day; now we forget you. You have incurred eternal retribution i...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 32:14 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Taste the consequences of your forgetting this day—we now forget you. Taste the eternal retribution in return...\". 1992 final reading begins \"Taste the consequences of your forgetting this day; now we forget you. You have incurred eternal retribution i...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -217,50 +217,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s16",
-      "title": "32:16 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 32:16 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Their sides readily forsake their beds, in order to worship their Lord, out of reverence and hope. And from ou...\". 1992 final reading begins \"Their sides readily forsake their beds, in order to worship their Lord, out of reverence and hope, and from ou...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "32:16",
-        "Quran 32:16",
-        "sura 32 verse 16",
-        "32:16",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 32:16 change between 1989 and 1992?",
-        "What is the final 1992 wording of 32:16?",
-        "Did Rashad Khalifa revise 32:16 in the final edition?"
-      ],
-      "quran_references": [
-        "32:16"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 60,
-      "source_segment_end": 62,
-      "page_start": 16,
-      "page_end": 16,
-      "review_status": "draft"
-    },
-    {
       "id": "s18",
       "title": "32:18 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 32:18 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 32:18 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -301,7 +260,7 @@
     {
       "id": "s30",
       "title": "32:30 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 32:30 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, disregard them and wait, they too are waiting. ; N 0 1961\". 1992 final reading begins \"Therefore, disregard them and wait, they too are waiting.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 32:30 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, disregard them and wait, they too are waiting. N\". 1992 final reading begins \"Therefore, disregard them and wait, they too are waiting.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

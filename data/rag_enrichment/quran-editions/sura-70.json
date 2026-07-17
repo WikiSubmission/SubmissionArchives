@@ -12,7 +12,7 @@
     {
       "id": "s1-35",
       "title": "70:1-35 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 70:1-35 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 70:1-35 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -93,47 +93,6 @@
       "source_segment_end": 104,
       "page_start": 1,
       "page_end": 35,
-      "review_status": "draft"
-    },
-    {
-      "id": "s44",
-      "title": "70:44 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 70:44 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"With their eyes subdued, shame will cover them. That is the dav that is awaiting them. ( \\ Sura 71: Noah V____...\". 1992 final reading begins \"With their eyes subdued, shame will cover them. That is the day that is awaiting them.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "70:44",
-        "Quran 70:44",
-        "sura 70 verse 44",
-        "70:44",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 70:44 change between 1989 and 1992?",
-        "What is the final 1992 wording of 70:44?",
-        "Did Rashad Khalifa revise 70:44 in the final edition?"
-      ],
-      "quran_references": [
-        "70:44"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 129,
-      "source_segment_end": 131,
-      "page_start": 44,
-      "page_end": 44,
       "review_status": "draft"
     }
   ]

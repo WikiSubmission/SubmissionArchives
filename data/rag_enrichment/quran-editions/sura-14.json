@@ -12,7 +12,7 @@
     {
       "id": "s1",
       "title": "14:1 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:1 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:1 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -53,7 +53,7 @@
     {
       "id": "s3",
       "title": "14:3 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 14:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are the ones who give priority to this life over the Hereafter, repel from the way of GOD, and seek to ma...\". 1992 final reading begins \"They are the ones who give priority to this life over the Hereafter, repel from the way of GOD, and seek to ma...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 14:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are the ones who give priority to this life over the Hereafter, repel from the way of GOD, and seek to ma...\". 1992 final reading begins \"They are the ones who give priority to this life over the Hereafter, repel from the way of GOD, and seek to ma...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -94,7 +94,7 @@
     {
       "id": "s4",
       "title": "14:4 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:4 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:4 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -135,7 +135,7 @@
     {
       "id": "s7",
       "title": "14:7 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:7 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:7 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -176,7 +176,7 @@
     {
       "id": "s8",
       "title": "14:8 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 14:8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Moses said, “If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.” Humans C...\". 1992 final reading begins \"Moses said, \"If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 14:8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Moses said, “If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.” Humans C...\". 1992 final reading begins \"Moses said, \"If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -217,7 +217,7 @@
     {
       "id": "s10",
       "title": "14:10 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:10 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:10 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -258,7 +258,7 @@
     {
       "id": "s15",
       "title": "14:15 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 14:15 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They have challenged (us), and consequently, every stubborn tyrant has perished.\". 1992 final reading begins \"They issued a challenge, and consequently, every stubborn tyrant ended up doomed.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 14:15 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They have challenged (us), and consequently, every stubborn tyrant has perished.\". 1992 final reading begins \"They issued a challenge, and consequently, every stubborn tyrant ended up doomed.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -297,50 +297,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s20",
-      "title": "14:20 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 14:20 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This is not too difficult for GOD. On the Day of Resurrection\". 1992 final reading begins \"This is not too difficult for GOD.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "14:20",
-        "Quran 14:20",
-        "sura 14 verse 20",
-        "14:20",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 14:20 change between 1989 and 1992?",
-        "What is the final 1992 wording of 14:20?",
-        "Did Rashad Khalifa revise 14:20 in the final edition?"
-      ],
-      "quran_references": [
-        "14:20"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 77,
-      "source_segment_end": 79,
-      "page_start": 20,
-      "page_end": 20,
-      "review_status": "draft"
-    },
-    {
       "id": "s21-24",
       "title": "14:21-24 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:21-24 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:21-24 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -387,7 +346,7 @@
     {
       "id": "s26-28",
       "title": "14:26-28 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:26-28 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:26-28 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -430,50 +389,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s29",
-      "title": "14:29 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 14:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Hell is their destiny, wherein they burn; what a miserable end! Idol Worship: The Mother of All Evil\". 1992 final reading begins \"Hell is their destiny, wherein they burn; what a miserable end!\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "14:29",
-        "Quran 14:29",
-        "sura 14 verse 29",
-        "14:29",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 14:29 change between 1989 and 1992?",
-        "What is the final 1992 wording of 14:29?",
-        "Did Rashad Khalifa revise 14:29 in the final edition?"
-      ],
-      "quran_references": [
-        "14:29"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 120,
-      "source_segment_end": 122,
-      "page_start": 29,
-      "page_end": 29,
-      "review_status": "draft"
-    },
-    {
       "id": "s31-34",
       "title": "14:31-34 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:31-34 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:31-34 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -518,9 +436,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s43-46",
-      "title": "14:43-46 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 14:43-46 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As they rush (out of the graves), their faces will be looking upward, their eyes will not even blink, and thei...\". 1992 final reading begins \"As they rush (out of the graves), their faces will be looking upward, their eyes will not even blink, and thei...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "id": "s44-45",
+      "title": "14:44-45 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 14:44-45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall warn the people of the day when the retribution comes to them. Those who transgressed will say, “Our...\". 1992 final reading begins \"You shall warn the people of the day when the retribution comes to them. Those who transgressed will say, \"Our...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -535,39 +453,35 @@
         }
       ],
       "user_terms": [
-        "14:43-46",
-        "Quran 14:43-46",
-        "sura 14 verse 43",
-        "14:43",
+        "14:44-45",
+        "Quran 14:44-45",
+        "sura 14 verse 44",
         "14:44",
         "14:45",
-        "14:46",
         "translation change",
         "earlier translation",
         "edition difference"
       ],
       "related_questions": [
-        "How did the translation of 14:43-46 change between 1989 and 1992?",
-        "What is the final 1992 wording of 14:43-46?",
-        "Did Rashad Khalifa revise 14:43-46 in the final edition?"
+        "How did the translation of 14:44-45 change between 1989 and 1992?",
+        "What is the final 1992 wording of 14:44-45?",
+        "Did Rashad Khalifa revise 14:44-45 in the final edition?"
       ],
       "quran_references": [
-        "14:43",
         "14:44",
-        "14:45",
-        "14:46"
+        "14:45"
       ],
       "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 171,
-      "source_segment_end": 187,
-      "page_start": 43,
-      "page_end": 46,
+      "source_segment_start": 176,
+      "source_segment_end": 183,
+      "page_start": 44,
+      "page_end": 45,
       "review_status": "draft"
     },
     {
       "id": "s47-51",
       "title": "14:47-51 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 14:47-51 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 14:47-51 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

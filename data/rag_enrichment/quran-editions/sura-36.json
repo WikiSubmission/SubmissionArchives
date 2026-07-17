@@ -12,7 +12,7 @@
     {
       "id": "s1-4",
       "title": "36:1-4 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 36:1-4 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 36:1-4 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -59,7 +59,7 @@
     {
       "id": "s6-18",
       "title": "36:6-18 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 36:6-18 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 36:6-18 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -123,7 +123,7 @@
     {
       "id": "s19",
       "title": "36:19 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 36:19 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “Your omen depends on you, now that you are reminded. You are transgressing people.”\". 1992 final reading begins \"They said, \"Your omen depends on your response, now that you have been reminded. Indeed, you are transgressing...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 36:19 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “Your omen depends on you, now that you are reminded. You are transgressing people.”\". 1992 final reading begins \"They said, \"Your omen depends on your response, now that you have been reminded. Indeed, you are transgressing...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -164,7 +164,7 @@
     {
       "id": "s24",
       "title": "36:24 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 36:24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Then I would be totally astray.\". 1992 final reading begins \"\"In that case, I would be totally astray.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 36:24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Then I would be totally astray.\". 1992 final reading begins \"\"In that case, I would be totally astray.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -203,9 +203,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s31-32",
-      "title": "36:31-32 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 36:31-32 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Did they not see how many generations before them we annihilated, and how they never return to them?\". 1992 final reading begins \"Did they not see how many generations we annihilated before them, and how they never return to them?\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "id": "s31",
+      "title": "36:31 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 36:31 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Did they not see how many generations before them we annihilated, and how they never return to them?\". 1992 final reading begins \"Did they not see how many generations we annihilated before them, and how they never return to them?\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -220,35 +220,33 @@
         }
       ],
       "user_terms": [
-        "36:31-32",
-        "Quran 36:31-32",
+        "36:31",
+        "Quran 36:31",
         "sura 36 verse 31",
         "36:31",
-        "36:32",
         "translation change",
         "earlier translation",
         "edition difference"
       ],
       "related_questions": [
-        "How did the translation of 36:31-32 change between 1989 and 1992?",
-        "What is the final 1992 wording of 36:31-32?",
-        "Did Rashad Khalifa revise 36:31-32 in the final edition?"
+        "How did the translation of 36:31 change between 1989 and 1992?",
+        "What is the final 1992 wording of 36:31?",
+        "Did Rashad Khalifa revise 36:31 in the final edition?"
       ],
       "quran_references": [
-        "36:31",
-        "36:32"
+        "36:31"
       ],
       "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
       "source_segment_start": 127,
-      "source_segment_end": 132,
+      "source_segment_end": 129,
       "page_start": 31,
-      "page_end": 32,
+      "page_end": 31,
       "review_status": "draft"
     },
     {
       "id": "s35",
       "title": "36:35 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 36:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This is to provide them with fruits, and to let them manufacture what they need. Would they be thankful?\". 1992 final reading begins \"This is to provide them with fruits, and to let them manufacture with their own hands whatever they need. Woul...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 36:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This is to provide them with fruits, and to let them manufacture what they need. Would they be thankful?\". 1992 final reading begins \"This is to provide them with fruits, and to let them manufacture with their own hands whatever they need. Woul...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -289,7 +287,7 @@
     {
       "id": "s69-70",
       "title": "36:69-70 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 36:69-70 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We did not teach him (the messenger) poetry, nor should he. This is but a reminder; a profound Quran.\". 1992 final reading begins \"What we taught him (the messenger) was not poetry, nor is he (a poet). This is but a formidable proof,± and a...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 36:69-70 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We did not teach him (the messenger) poetry, nor should he. This is but a reminder; a profound Quran.\". 1992 final reading begins \"What we taught him (the messenger) was not poetry, nor is he (a poet). This is but a formidable proof, and a p...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -332,7 +330,7 @@
     {
       "id": "s74",
       "title": "36:74 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 36:74 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They set up besides GOD other gods, perhaps they help them!\". 1992 final reading begins \"They set up beside GOD other gods, perhaps they can be of help to them!\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 36:74 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They set up besides GOD other gods, perhaps they help them!\". 1992 final reading begins \"They set up beside GOD other gods, perhaps they can be of help to them!\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -373,7 +371,7 @@
     {
       "id": "s83",
       "title": "36:83 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 36:83 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, glory be to the One in whose hand is the kingship over all things, and to Him you will be returned....\". 1992 final reading begins \"Therefore, glory be to the One in whose hand is the sovereignty over all things, and to Him you will be return...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 36:83 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, glory be to the One in whose hand is the kingship over all things, and to Him you will be returned....\". 1992 final reading begins \"Therefore, glory be to the One in whose hand is the sovereignty over all things, and to Him you will be return...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

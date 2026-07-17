@@ -12,7 +12,7 @@
     {
       "id": "s6",
       "title": "3:6 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:6 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He shapes you in the wombs as He wills. There is no god except He; the Almighty, the Most Wise.\". 1992 final reading begins \"He is the One who shapes you in the wombs as He wills. There is no other god besides Him; the Almighty, Most W...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:6 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He shapes you in the wombs as He wills. There is no god except He; the Almighty, the Most Wise.\". 1992 final reading begins \"He is the One who shapes you in the wombs as He wills. There is no other god besides Him; the Almighty, Most W...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -53,7 +53,7 @@
     {
       "id": "s8",
       "title": "3:8 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:8 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:8 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -94,7 +94,7 @@
     {
       "id": "s9-10",
       "title": "3:9-10 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:9-10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Our Lord, You will surely summon all the people on a day that is inevitable. GOD never breaks a promise. *3:1...\". 1992 final reading begins \"\"Our Lord, You will surely gather the people on a day that is inevitable. GOD never breaks a promise.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:9-10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Our Lord, You will surely summon all the people on a day that is inevitable. GOD never breaks a promise.\". 1992 final reading begins \"\"Our Lord, You will surely gather the people on a day that is inevitable. GOD never breaks a promise.\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -135,50 +135,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s12",
-      "title": "3:12 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:12 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say to those who disbelieve, “You will be defeated, then gathered in Hell; what a miserable abode!” Believers:...\". 1992 final reading begins \"Say to those who disbelieve, \"You will be defeated, then gathered in Hell; what a miserable abode!\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "3:12",
-        "Quran 3:12",
-        "sura 3 verse 12",
-        "3:12",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 3:12 change between 1989 and 1992?",
-        "What is the final 1992 wording of 3:12?",
-        "Did Rashad Khalifa revise 3:12 in the final edition?"
-      ],
-      "quran_references": [
-        "3:12"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 38,
-      "source_segment_end": 40,
-      "page_start": 12,
-      "page_end": 12,
-      "review_status": "draft"
-    },
-    {
       "id": "s14",
       "title": "3:14 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:14 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:14 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -219,7 +178,7 @@
     {
       "id": "s16-18",
       "title": "3:16-18 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:16-18 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:16-18 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -264,7 +223,7 @@
     {
       "id": "s23",
       "title": "3:23 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:23 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Have you noted those who were given part of the scripture, and were invited to uphold this scripture of GOD? S...\". 1992 final reading begins \"Have you noted those who were given part of the scripture, and how they are invited to uphold this scripture o...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:23 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Have you noted those who were given part of the scripture, and were invited to uphold this scripture of GOD? S...\". 1992 final reading begins \"Have you noted those who were given part of the scripture, and how they are invited to uphold this scripture o...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -305,7 +264,7 @@
     {
       "id": "s25",
       "title": "3:25 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"How will it be for them when we summon them on that inevitable day? Each soul will then be paid for everything...\". 1992 final reading begins \"How will it be for them, when we summon them on that inevitable day? Each soul will be paid for whatever it ea...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"How will it be for them when we summon them on that inevitable day? Each soul will then be paid for everything...\". 1992 final reading begins \"How will it be for them, when we summon them on that inevitable day? Each soul will be paid for whatever it ea...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -346,7 +305,7 @@
     {
       "id": "s26-28",
       "title": "3:26-28 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:26-28 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:26-28 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -391,7 +350,7 @@
     {
       "id": "s31",
       "title": "3:31 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:31 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:31 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -432,7 +391,7 @@
     {
       "id": "s32-33",
       "title": "3:32-33 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:32-33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Proclaim: “Obey GOD and the messenger.” If they turn away, then GOD dislikes the disbelievers. The Birth of Ma...\". 1992 final reading begins \"Proclaim: \"You shall obey GOD and the messenger.\" If they turn away, GOD does not love the disbelievers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:32-33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Proclaim: “Obey GOD and the messenger.” If they turn away, then GOD dislikes the disbelievers.\". 1992 final reading begins \"Proclaim: \"You shall obey GOD and the messenger.\" If they turn away, GOD does not love the disbelievers.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -475,7 +434,7 @@
     {
       "id": "s40",
       "title": "3:40 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:40 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “Will I have a son despite my old age, and my wife’s sterility?” He said, “GOD does whatever He wills...\". 1992 final reading begins \"He said, \"How can I have a boy, when I am so old, and my wife is sterile?\" He said, \"GOD does whatever He will...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:40 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “Will I have a son despite my old age, and my wife’s sterility?” He said, “GOD does whatever He wills...\". 1992 final reading begins \"He said, \"How can I have a boy, when I am so old, and my wife is sterile?\" He said, \"GOD does whatever He will...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -516,7 +475,7 @@
     {
       "id": "s53",
       "title": "3:53 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Our Lord, we believe in what You have revealed, and we follow the messenger, so write us among the witnesses....\". 1992 final reading begins \"\"Our Lord, we have believed in what You have sent down, and we have followed the messenger; count us among the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Our Lord, we believe in what You have revealed, and we follow the messenger, so write us among the witnesses....\". 1992 final reading begins \"\"Our Lord, we have believed in what You have sent down, and we have followed the messenger; count us among the...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -557,7 +516,7 @@
     {
       "id": "s55",
       "title": "3:55 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:55 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Thus, GOD said, “O Jesus, I am terminating your life on earth, raising you to Me, and ridding you of the disbe...\". 1992 final reading begins \"Thus, GOD said, \"O Jesus, I am terminating your life, raising you to Me, and ridding you of the disbelievers....\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:55 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Thus, GOD said, “O Jesus, I am terminating your life on earth, raising you to Me, and ridding you of the disbe...\". 1992 final reading begins \"Thus, GOD said, \"O Jesus, I am terminating your life, raising you to Me, and ridding you of the disbelievers....\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -598,7 +557,7 @@
     {
       "id": "s57",
       "title": "3:57 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:57 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who believe, and lead a righteous life, He will pay them fully. GOD dislikes the unjust.\". 1992 final reading begins \"As for those who believe and lead a righteous life, He will fully recompense them. GOD does not love the unjus...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:57 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who believe, and lead a righteous life, He will pay them fully. GOD dislikes the unjust.\". 1992 final reading begins \"As for those who believe and lead a righteous life, He will fully recompense them. GOD does not love the unjus...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -639,7 +598,7 @@
     {
       "id": "s62",
       "title": "3:62 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:62 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This narration is the absolute truth. Absolutely, there is no other god besides GOD. Absolutely, GOD is the Al...\". 1992 final reading begins \"Absolutely, this is the narration of the truth. Absolutely, there is no god except GOD. Absolutely, GOD is the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:62 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This narration is the absolute truth. Absolutely, there is no other god besides GOD. Absolutely, GOD is the Al...\". 1992 final reading begins \"Absolutely, this is the narration of the truth. Absolutely, there is no god except GOD. Absolutely, GOD is the...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -680,7 +639,7 @@
     {
       "id": "s70",
       "title": "3:70 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:70 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O followers of the scripture, why do you reject these revelations of GOD, while you bear witness? 8 350\". 1992 final reading begins \"O followers of the scripture, why do you reject these revelations of GOD though you bear witness (that this is...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:70 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O followers of the scripture, why do you reject these revelations of GOD, while you bear witness?\". 1992 final reading begins \"O followers of the scripture, why do you reject these revelations of GOD though you bear witness (that this is...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -721,7 +680,7 @@
     {
       "id": "s72",
       "title": "3:72 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:72 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Some followers of the scripture said, “Believe in what was sent down to the believers in the morning, and reje...\". 1992 final reading begins \"Some followers of the scripture say, \"Believe in what was sent down to the believers in the morning, and rejec...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:72 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Some followers of the scripture said, “Believe in what was sent down to the believers in the morning, and reje...\". 1992 final reading begins \"Some followers of the scripture say, \"Believe in what was sent down to the believers in the morning, and rejec...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -762,7 +721,7 @@
     {
       "id": "s74",
       "title": "3:74 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:74 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He showers His mercy upon whomever He wills; GOD possesses unlimited grace. Be Honest With All People\". 1992 final reading begins \"He specifies His mercy for whomever He wills; GOD possesses unlimited grace.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:74 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He showers His mercy upon whomever He wills; GOD possesses unlimited grace.\". 1992 final reading begins \"He specifies His mercy for whomever He wills; GOD possesses unlimited grace.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -803,7 +762,7 @@
     {
       "id": "s76",
       "title": "3:76 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:76 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, if one fulfills his obligations, and leads a righteous life, then GOD loves the righteous.\". 1992 final reading begins \"Indeed, those who fulfill their obligations and lead a righteous life, GOD loves the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:76 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, if one fulfills his obligations, and leads a righteous life, then GOD loves the righteous.\". 1992 final reading begins \"Indeed, those who fulfill their obligations and lead a righteous life, GOD loves the righteous.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -844,7 +803,7 @@
     {
       "id": "s78",
       "title": "3:78 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:78 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Some of them twist their tongues to imitate the scripture, that you may think it is from the scripture, when i...\". 1992 final reading begins \"Among them are those who twist their tongues to imitate the scripture, that you may think it is from the scrip...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:78 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Some of them twist their tongues to imitate the scripture, that you may think it is from the scripture, when i...\". 1992 final reading begins \"Among them are those who twist their tongues to imitate the scripture, that you may think it is from the scrip...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -885,7 +844,7 @@
     {
       "id": "s80",
       "title": "3:80 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:80 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Nor would he command you to set up the angels and the prophets as lords. Would he order you to dis believe aft...\". 1992 final reading begins \"Nor would he command you to idolize the angels and the prophets as lords. Would he exhort you to disbelieve af...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:80 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Nor would he command you to set up the angels and the prophets as lords. Would he order you to disbelieve afte...\". 1992 final reading begins \"Nor would he command you to idolize the angels and the prophets as lords. Would he exhort you to disbelieve af...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -926,7 +885,7 @@
     {
       "id": "s87",
       "title": "3:87 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:87 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"These have incurred condemna tion from GOD, and from the angels, and from all the people.\". 1992 final reading begins \"These have incurred condemnation by GOD, and the angels, and all the people.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:87 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"These have incurred condemnation from GOD, and from the angels, and from all the people.\". 1992 final reading begins \"These have incurred condemnation by GOD, and the angels, and all the people.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -967,7 +926,7 @@
     {
       "id": "s89",
       "title": "3:89 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Exempted are those who repent after that, and reform. GOD Forgiver, Most Merciful. When Repentance is Unaccept...\". 1992 final reading begins \"Exempted are those who repent thereafter, and reform. GOD is Forgiver, Most Merciful.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Exempted are those who repent after that, and reform. GOD Forgiver, Most Merciful.\". 1992 final reading begins \"Exempted are those who repent thereafter, and reform. GOD is Forgiver, Most Merciful.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1008,7 +967,7 @@
     {
       "id": "s92",
       "title": "3:92 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:92 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You cannot attain righteousness until you give from the possessions you love. Whatever you give, GOD is fully...\". 1992 final reading begins \"You cannot attain righteousness until you give to charity from the possessions you love. Whatever you give to...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:92 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You cannot attain righteousness until you give from the possessions you love. Whatever you give, GOD is fully...\". 1992 final reading begins \"You cannot attain righteousness until you give to charity from the possessions you love. Whatever you give to...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1049,7 +1008,7 @@
     {
       "id": "s94",
       "title": "3:94 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:94 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who fabricate false prohibitions after this, and attribute them to GOD, are the evil ones.\". 1992 final reading begins \"Those who fabricate false prohibitions after this, and attribute them to GOD, are truly wicked.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:94 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who fabricate false prohibitions after this, and attribute them to GOD, are the evil ones.\". 1992 final reading begins \"Those who fabricate false prohibitions after this, and attribute them to GOD, are truly wicked.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1090,7 +1049,7 @@
     {
       "id": "s97",
       "title": "3:97 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:97 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"In it are clear signs: the station of Abraham. Anyone who enters it shall be guaranteed safe passage. The peop...\". 1992 final reading begins \"In it are clear signs: the station of Abraham. Anyone who enters it shall be granted safe passage. The people...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:97 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"In it are clear signs: the station of Abraham. Anyone who enters it shall be guaranteed safe passage. The peop...\". 1992 final reading begins \"In it are clear signs: the station of Abraham. Anyone who enters it shall be granted safe passage. The people...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1131,7 +1090,7 @@
     {
       "id": "s101",
       "title": "3:101 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:101 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"How could you disbelieve, when GOD’s revelations are being recited to you, and His messenger is in your midst?...\". 1992 final reading begins \"How can you disbelieve, when these revelations of GOD are being recited to you, and His messenger is in your m...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:101 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"How could you disbelieve, when GOD’s revelations are being recited to you, and His messenger is in your midst?...\". 1992 final reading begins \"How can you disbelieve, when these revelations of GOD are being recited to you, and His messenger is in your m...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1172,7 +1131,7 @@
     {
       "id": "s102-111",
       "title": "3:102-111 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:102-111 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:102-111 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1231,7 +1190,7 @@
     {
       "id": "s113-115",
       "title": "3:113-115 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:113-115 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:113-115 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1276,7 +1235,7 @@
     {
       "id": "s117",
       "title": "3:117 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:117 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The example of their spending in this world is like a violent wind that hits the harvest of people who wronged...\". 1992 final reading begins \"The example of their accomplishments in this life is like a violent wind that hits the harvest of people who h...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:117 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The example of their spending in this world is like a violent wind that hits the harvest of people who wronged...\". 1992 final reading begins \"The example of their accomplishments in this life is like a violent wind that hits the harvest of people who h...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1317,7 +1276,7 @@
     {
       "id": "s121",
       "title": "3:121 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:121 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Recall that you (Muhammad) set out to assign to your people their position for battle, and GOD is Hearer, Omni...\". 1992 final reading begins \"Recall that you (Muhammad) were among your people when you set out to assign to the believers their positions...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:121 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Recall that you (Muhammad) set out to assign to your people their position for battle, and GOD is Hearer, Omni...\". 1992 final reading begins \"Recall that you (Muhammad) were among your people when you set out to assign to the believers their positions...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1358,7 +1317,7 @@
     {
       "id": "s123",
       "title": "3:123 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:123 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Thus, GOD gave you victory at Badr even though you were weak. You shall observe GOD, to show your appreciation...\". 1992 final reading begins \"GOD has granted you victory at Badr, despite your weakness. Therefore, you shall observe GOD, to show your app...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:123 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Thus, GOD gave you victory at Badr even though you were weak. You shall observe GOD, to show your appreciation...\". 1992 final reading begins \"GOD has granted you victory at Badr, despite your weakness. Therefore, you shall observe GOD, to show your app...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1399,7 +1358,7 @@
     {
       "id": "s125-129",
       "title": "3:125-129 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:125-129 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Yes; if you steadfastly persevere and • ■ • they attack you suddenly, your Lord will supply you with five thou...\". 1992 final reading begins \"Indeed, if you steadfastly persevere and maintain righteousness, then they attack you suddenly, your Lord will...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:125-129 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Yes; if you steadfastly persevere and they attack you suddenly, your Lord will supply you with five thousand*...\". 1992 final reading begins \"Indeed, if you steadfastly persevere and maintain righteousness, then they attack you suddenly, your Lord will...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1448,7 +1407,7 @@
     {
       "id": "s136",
       "title": "3:136 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:136 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Their recompense is forgiveness from their Lord, and gardens with flowing streams; they abide therein forever....\". 1992 final reading begins \"Their recompense is forgiveness from their Lord, and gardens with flowing streams; they abide therein forever....\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:136 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Their recompense is forgiveness from their Lord, and gardens with flowing streams; they abide therein forever....\". 1992 final reading begins \"Their recompense is forgiveness from their Lord, and gardens with flowing streams; they abide therein forever....\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1489,7 +1448,7 @@
     {
       "id": "s139",
       "title": "3:139 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:139 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall never waver, nor worry, for you shall be the victors, if you are believers.\". 1992 final reading begins \"You shall not waver, nor shall you grieve, for you are the ultimate victors, if you are believers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:139 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall never waver, nor worry, for you shall be the victors, if you are believers.\". 1992 final reading begins \"You shall not waver, nor shall you grieve, for you are the ultimate victors, if you are believers.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1528,50 +1487,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s141",
-      "title": "3:141 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:141 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD thus toughens those who believe, and humiliates the disbelievers. Our Claims Must Be Tested\". 1992 final reading begins \"GOD thus toughens those who believe and humiliates the disbelievers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "3:141",
-        "Quran 3:141",
-        "sura 3 verse 141",
-        "3:141",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 3:141 change between 1989 and 1992?",
-        "What is the final 1992 wording of 3:141?",
-        "Did Rashad Khalifa revise 3:141 in the final edition?"
-      ],
-      "quran_references": [
-        "3:141"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 529,
-      "source_segment_end": 531,
-      "page_start": 141,
-      "page_end": 141,
-      "review_status": "draft"
-    },
-    {
       "id": "s142",
       "title": "3:142 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:142 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:142 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1612,7 +1530,7 @@
     {
       "id": "s143-144",
       "title": "3:143-144 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:143-144 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You claimed that you longed for death before you had to face it. Now you have seen it as you looked.\". 1992 final reading begins \"You used to long for death before you had to face it. Now you have faced it, right before your eyes.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:143-144 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You claimed that you longed for death before you had to face it. Now you have seen it as you looked.\". 1992 final reading begins \"You used to long for death before you had to face it. Now you have faced it, right before your eyes.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1655,7 +1573,7 @@
     {
       "id": "s145-150",
       "title": "3:145-150 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:145-150 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:145-150 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1706,7 +1624,7 @@
     {
       "id": "s151",
       "title": "3:151 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:151 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We will throw terror into the hearts of those who disbelieved, because they set up besides GOD powerless idols...\". 1992 final reading begins \"We will throw terror into the hearts of those who disbelieved, since they set up besides GOD powerless idols....\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:151 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We will throw terror into the hearts of those who disbelieved, because they set up besides GOD powerless idols...\". 1992 final reading begins \"We will throw terror into the hearts of those who disbelieved, since they set up besides GOD powerless idols....\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1747,7 +1665,7 @@
     {
       "id": "s155",
       "title": "3:155 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:155 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those among you who turned back the day the two armies clashed have been duped by the devil, due to so...\". 1992 final reading begins \"Surely, those among you who turned back the day the two armies clashed have been duped by the devil. This refl...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:155 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those among you who turned back the day the two armies clashed have been duped by the devil, due to so...\". 1992 final reading begins \"Surely, those among you who turned back the day the two armies clashed have been duped by the devil. This refl...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1788,7 +1706,7 @@
     {
       "id": "s158-162",
       "title": "3:158-162 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:158-162 (1981: present, 1989: absent, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:158-162 (1981: present, 1989: absent, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1837,7 +1755,7 @@
     {
       "id": "s165",
       "title": "3:165 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:165 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Now that you have suffered a setback, and even though you have inflicted twice as much suffering {upon your en...\". 1992 final reading begins \"Now that you have suffered a setback, and even though you inflicted twice as much suffering (upon your enemy),...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:165 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Now that you have suffered a setback, and even though you have inflicted twice as much suffering {upon your en...\". 1992 final reading begins \"Now that you have suffered a setback, and even though you inflicted twice as much suffering (upon your enemy),...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1878,7 +1796,7 @@
     {
       "id": "s167-168",
       "title": "3:167-168 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:167-168 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And to expose the hypocrites who were told, “Come fight in the cause of GOD, or contribute.” They said, “If we...\". 1992 final reading begins \"And to expose the hypocrites who were told, \"Come fight in the cause of GOD, or contribute.\" They said, \"If we...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:167-168 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And to expose the hypocrites who were told, “Come fight in the cause of GOD, or contribute.” They said, “If we...\". 1992 final reading begins \"And to expose the hypocrites who were told, \"Come fight in the cause of GOD, or contribute.\" They said, \"If we...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1921,7 +1839,7 @@
     {
       "id": "s172",
       "title": "3:172 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:172 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For those who respond to GOD and the messenger, despite all kinds of hardship, and lead a righteous life, ____...\". 1992 final reading begins \"For those who respond to GOD and the messenger, despite the persecution they suffer, and maintain their good w...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:172 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For those who respond to GOD and the messenger, despite all kinds of hardship, and lead a righteous life, a gr...\". 1992 final reading begins \"For those who respond to GOD and the messenger, despite the persecution they suffer, and maintain their good w...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -1962,7 +1880,7 @@
     {
       "id": "s174",
       "title": "3:174 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:174 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"In return, they receive blessings from GOD, and grace. No harm touches them. For they have attained GOD’s appr...\". 1992 final reading begins \"They have deserved GOD's blessings and grace. No harm ever touches them, for they have attained GOD's approval...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:174 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"In return, they receive blessings from GOD, and grace. No harm touches them. For they have attained GOD’s appr...\". 1992 final reading begins \"They have deserved GOD's blessings and grace. No harm ever touches them, for they have attained GOD's approval...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -2003,7 +1921,7 @@
     {
       "id": "s177",
       "title": "3:177 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:177 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those who buy disbelief at the expense of belief, do not hurt GOD in the least; they have incurred a p...\". 1992 final reading begins \"Those who choose disbelief, instead of belief, do not hurt GOD in the least; they have incurred a painful retr...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:177 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those who buy disbelief at the expense of belief, do not hurt GOD in the least; they have incurred a p...\". 1992 final reading begins \"Those who choose disbelief, instead of belief, do not hurt GOD in the least; they have incurred a painful retr...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -2044,7 +1962,7 @@
     {
       "id": "s184",
       "title": "3:184 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:184 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"If they reject you, messengers before you have been rejected. They brought proofs, the Psalms, and the enlight...\". 1992 final reading begins \"If they reject you, messengers before you have been rejected, even though they brought proofs, the Psalms, and...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:184 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"If they reject you, messengers before you have been rejected. They brought proofs, the Psalms, and the enlight...\". 1992 final reading begins \"If they reject you, messengers before you have been rejected, even though they brought proofs, the Psalms, and...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -2085,7 +2003,7 @@
     {
       "id": "s185",
       "title": "3:185 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:185 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:185 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -2126,7 +2044,7 @@
     {
       "id": "s187-188",
       "title": "3:187-188 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:187-188 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD took covenant from those who received the scripture: “You shall proclaim the scripture to the people, and...\". 1992 final reading begins \"GOD took a covenant from those who received the scripture: \"You shall proclaim it to the people, and never con...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:187-188 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD took covenant from those who received the scripture: “You shall proclaim the scripture to the people, and...\". 1992 final reading begins \"GOD took a covenant from those who received the scripture: \"You shall proclaim it to the people, and never con...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -2169,7 +2087,7 @@
     {
       "id": "s190-195",
       "title": "3:190-195 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:190-195 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:190-195 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -2220,7 +2138,7 @@
     {
       "id": "s198",
       "title": "3:198 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 3:198 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"But those who observe their Lord have deserved gardens with flowing streams; they abide therein forever. Such...\". 1992 final reading begins \"As for those who observe their Lord, they have deserved gardens with flowing streams; they abide therein forev...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 3:198 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"But those who observe their Lord have deserved gardens with flowing streams; they abide therein forever. Such...\". 1992 final reading begins \"As for those who observe their Lord, they have deserved gardens with flowing streams; they abide therein forev...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -2261,7 +2179,7 @@
     {
       "id": "s199-200",
       "title": "3:199-200 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 3:199-200 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 3:199-200 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

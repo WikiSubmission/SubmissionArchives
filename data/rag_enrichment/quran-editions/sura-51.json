@@ -12,7 +12,7 @@
     {
       "id": "s36",
       "title": "51:36 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 51:36 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We did not find in it except one house of Muslims.\". 1992 final reading begins \"We did not find in it except one house of submitters.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 51:36 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We did not find in it except one house of Muslims.\". 1992 final reading begins \"We did not find in it except one house of submitters.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -51,50 +51,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s46",
-      "title": "51:46 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 51:46 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And the people of Noah before that; they were wicked people. “Expansion of the Universe Theory” Confirmed\". 1992 final reading begins \"And the people of Noah before that; they were wicked people.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "51:46",
-        "Quran 51:46",
-        "sura 51 verse 46",
-        "51:46",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 51:46 change between 1989 and 1992?",
-        "What is the final 1992 wording of 51:46?",
-        "Did Rashad Khalifa revise 51:46 in the final edition?"
-      ],
-      "quran_references": [
-        "51:46"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 139,
-      "source_segment_end": 141,
-      "page_start": 46,
-      "page_end": 46,
-      "review_status": "draft"
-    },
-    {
       "id": "s47-50",
       "title": "51:47-50 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 51:47-50 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 51:47-50 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -141,7 +100,7 @@
     {
       "id": "s54",
       "title": "51:54 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 51:54 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 51:54 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -182,7 +141,7 @@
     {
       "id": "s56-57",
       "title": "51:56-57 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 51:56-57 (1981: present, 1989: absent, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 51:56-57 (1981: present, 1989: absent, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

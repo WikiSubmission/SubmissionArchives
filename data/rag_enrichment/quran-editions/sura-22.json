@@ -10,50 +10,9 @@
   "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
   "sections": [
     {
-      "id": "s10",
-      "title": "22:10 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This is what your hands have sent ahead for you. GOD is never unjust towards the people. Fair Weather Friends\". 1992 final reading begins \"This is what your hands have sent ahead for you. GOD is never unjust towards the people.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "22:10",
-        "Quran 22:10",
-        "sura 22 verse 10",
-        "22:10",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 22:10 change between 1989 and 1992?",
-        "What is the final 1992 wording of 22:10?",
-        "Did Rashad Khalifa revise 22:10 in the final edition?"
-      ],
-      "quran_references": [
-        "22:10"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 33,
-      "source_segment_end": 35,
-      "page_start": 10,
-      "page_end": 10,
-      "review_status": "draft"
-    },
-    {
       "id": "s14",
       "title": "22:14 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:14 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD admits those who believe and lead a righteous life into gardens with flowing streams. GOD does whatever He...\". 1992 final reading begins \"GOD admits those who believe and lead a righteous life into gardens with flowing streams. Everything is in acc...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:14 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD admits those who believe and lead a righteous life into gardens with flowing streams. GOD does whatever He...\". 1992 final reading begins \"GOD admits those who believe and lead a righteous life into gardens with flowing streams. Everything is in acc...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -94,7 +53,7 @@
     {
       "id": "s15",
       "title": "22:15 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 22:15 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 22:15 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -135,7 +94,7 @@
     {
       "id": "s16",
       "title": "22:16 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:16 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus revealed clear revelations, then GOD guides whomever He wills. God: The Only Judge\". 1992 final reading begins \"We have thus revealed clear revelations herein, then GOD guides whomever He wills.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:16 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus revealed clear revelations, then GOD guides whomever He wills.\". 1992 final reading begins \"We have thus revealed clear revelations herein, then GOD guides whomever He wills.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -176,7 +135,7 @@
     {
       "id": "s18",
       "title": "22:18 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 22:18 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 22:18 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -217,7 +176,7 @@
     {
       "id": "s25",
       "title": "22:25 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those who disbelieve and repulse from the path of GOD, and from the Sacred Mosque that we designated f...\". 1992 final reading begins \"Surely, those who disbelieve and repulse others from the path of GOD, and from the Sacred Masjid that we desig...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those who disbelieve and repulse from the path of GOD, and from the Sacred Mosque that we designated f...\". 1992 final reading begins \"Surely, those who disbelieve and repulse others from the path of GOD, and from the Sacred Masjid that we desig...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -258,7 +217,7 @@
     {
       "id": "s41",
       "title": "22:41 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:41 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"If we appoint them as rulers on earth they are the ones who establish the contact prayers (Salat) and the obli...\". 1992 final reading begins \"They are those who, if we appointed them as rulers on earth, they would establish the Contact Prayers (Salat)...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:41 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"If we appoint them as rulers on earth they are the ones who establish the contact prayers (Salat) and the obli...\". 1992 final reading begins \"They are those who, if we appointed them as rulers on earth, they would establish the Contact Prayers (Salat)...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -299,7 +258,7 @@
     {
       "id": "s48",
       "title": "22:48 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Many a community in the past committed evil; I led them on for awhile, then I called them to account; to Me is...\". 1992 final reading begins \"Many a community in the past committed evil, and I led them on for awhile, then I punished them. To Me is the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Many a community in the past committed evil; I led them on for awhile, then I called them to account; to Me is...\". 1992 final reading begins \"Many a community in the past committed evil, and I led them on for awhile, then I punished them. To Me is the...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -340,7 +299,7 @@
     {
       "id": "s54",
       "title": "22:54 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"At the same time, this allows those who are endowed with knowledge to realize that this is the truth from your...\". 1992 final reading begins \"Those who are blessed with knowledge will recognize the truth from your Lord, then believe in it, and their he...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"At the same time, this allows those who are endowed with knowledge to realize that this is the truth from your...\". 1992 final reading begins \"Those who are blessed with knowledge will recognize the truth from your Lord, then believe in it, and their he...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -381,7 +340,7 @@
     {
       "id": "s55-61",
       "title": "22:55-61 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 22:55-61 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 22:55-61 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -434,7 +393,7 @@
     {
       "id": "s62",
       "title": "22:62 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:62 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This is as guaranteed as the fact that GOD is the Truth, while any idols they set up besides Him are falsehood...\". 1992 final reading begins \"It is a fact that GOD is the Truth, while the setting up of any idols beside Him constitutes a falsehood, and...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:62 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This is as guaranteed as the fact that GOD is the Truth, while any idols they set up besides Him are falsehood...\". 1992 final reading begins \"It is a fact that GOD is the Truth, while the setting up of any idols beside Him constitutes a falsehood, and...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -475,7 +434,7 @@
     {
       "id": "s64-65",
       "title": "22:64-65 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:64-65 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"To Him belongs everything in the heavens and everything in the earth. Most assuredly, GOD is the Rich, Most Pr...\". 1992 final reading begins \"To Him belongs everything in the heavens and everything on earth. Absolutely, GOD is the Most Rich, Most Prais...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:64-65 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"To Him belongs everything in the heavens and everything in the earth. Most assuredly, GOD is the Rich, Most Pr...\". 1992 final reading begins \"To Him belongs everything in the heavens and everything on earth. Absolutely, GOD is the Most Rich, Most Prais...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -518,7 +477,7 @@
     {
       "id": "s71-73",
       "title": "22:71-73 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:71-73 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Yet, they idolize besides GOD idols wherein He placed no power, and they know nothing about them. Such transgr...\". 1992 final reading begins \"Yet, they idolize beside GOD idols wherein He placed no power, and they know nothing about them. The transgres...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:71-73 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Yet, they idolize besides GOD idols wherein He placed no power, and they know nothing about them. Such transgr...\". 1992 final reading begins \"Yet, they idolize beside GOD idols wherein He placed no power, and they know nothing about them. The transgres...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -563,7 +522,7 @@
     {
       "id": "s77-78",
       "title": "22:77-78 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 22:77-78 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, bow, prostrate, worship your Lord, and work righteousness, that you may succeed. Abraham: O...\". 1992 final reading begins \"O you who believe, you shall bow, prostrate, worship your Lord, and work righteousness, that you may succeed.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 22:77-78 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, bow, prostrate, worship your Lord, and work righteousness, that you may succeed.\". 1992 final reading begins \"O you who believe, you shall bow, prostrate, worship your Lord, and work righteousness, that you may succeed.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

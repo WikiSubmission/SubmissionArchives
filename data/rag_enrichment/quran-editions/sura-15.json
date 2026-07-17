@@ -12,7 +12,7 @@
     {
       "id": "s2",
       "title": "15:2 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:2 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Perhaps those who disbelieved will wish they were Muslims.\". 1992 final reading begins \"Certainly, those who disbelieved will wish they were submitters.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:2 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Perhaps those who disbelieved will wish they were Muslims.\". 1992 final reading begins \"Certainly, those who disbelieved will wish they were submitters.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -53,7 +53,7 @@
     {
       "id": "s8",
       "title": "15:8 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We do not send down the angels except for a specific purpose. Otherwise, no one will be respited. Perfect Pres...\". 1992 final reading begins \"We do not send down the angels except for specific functions. Otherwise, no one will be respited.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We do not send down the angels except for a specific purpose. Otherwise, no one will be respited. Perfect Pres...\". 1992 final reading begins \"We do not send down the angels except for specific functions. Otherwise, no one will be respited.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -94,7 +94,7 @@
     {
       "id": "s9-19",
       "title": "15:9-19 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 15:9-19 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 15:9-19 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -155,7 +155,7 @@
     {
       "id": "s22",
       "title": "15:22 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:22 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And we send the winds as pollinators to send down from the sky water for you to drink. Otherwise, you could no...\". 1992 final reading begins \"And we send the winds as pollinators, and cause water to come down from the sky for you to drink. Otherwise, y...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:22 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And we send the winds as pollinators to send down from the sky water for you to drink. Otherwise, you could no...\". 1992 final reading begins \"And we send the winds as pollinators, and cause water to come down from the sky for you to drink. Otherwise, y...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -194,50 +194,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s25",
-      "title": "15:25 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Your Lord will surely summon them. He is Most Wise, Omniscient. The Human Race\". 1992 final reading begins \"Your Lord will surely summon them. He is Most Wise, Omniscient.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "15:25",
-        "Quran 15:25",
-        "sura 15 verse 25",
-        "15:25",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 15:25 change between 1989 and 1992?",
-        "What is the final 1992 wording of 15:25?",
-        "Did Rashad Khalifa revise 15:25 in the final edition?"
-      ],
-      "quran_references": [
-        "15:25"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 81,
-      "source_segment_end": 83,
-      "page_start": 25,
-      "page_end": 25,
-      "review_status": "draft"
-    },
-    {
       "id": "s26-44",
       "title": "15:26-44 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 15:26-44 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 15:26-44 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -307,7 +266,7 @@
     {
       "id": "s49-50",
       "title": "15:49-50 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 15:49-50 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 15:49-50 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -350,7 +309,7 @@
     {
       "id": "s51",
       "title": "15:51 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And inform them about Abraham’s guests. 0 1487\". 1992 final reading begins \"Inform them about Abraham's guests.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And inform them about Abraham’s guests.\". 1992 final reading begins \"Inform them about Abraham's guests.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -391,7 +350,7 @@
     {
       "id": "s53-54",
       "title": "15:53-54 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:53-54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “Do not be apprehensive. We give you good news: an enlightened son.”\". 1992 final reading begins \"They said, \"Do not be apprehensive. We have good news for you: an enlightened son.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:53-54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “Do not be apprehensive. We give you good news: an enlightened son.”\". 1992 final reading begins \"They said, \"Do not be apprehensive. We have good news for you: an enlightened son.\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -434,7 +393,7 @@
     {
       "id": "s56",
       "title": "15:56 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:56 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “None despairs of the mercy of his Lord, except the strayers.”\". 1992 final reading begins \"He said, \"None despairs of his Lord's mercy, except the strayers.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:56 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “None despairs of the mercy of his Lord, except the strayers.”\". 1992 final reading begins \"He said, \"None despairs of his Lord's mercy, except the strayers.\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -475,7 +434,7 @@
     {
       "id": "s60-62",
       "title": "15:60-62 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:60-62 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“except his wife; she is destined to be with the doomed.” Lot\". 1992 final reading begins \"\"But not his wife; she is destined to be with the doomed.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:60-62 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“except his wife; she is destined to be with the doomed.”\". 1992 final reading begins \"\"But not his wife; she is destined to be with the doomed.\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -520,7 +479,7 @@
     {
       "id": "s75",
       "title": "15:75 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:75 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This should be a lesson for the intelligent ones.\". 1992 final reading begins \"This is a lesson for those who possess intelligence.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:75 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This should be a lesson for the intelligent ones.\". 1992 final reading begins \"This is a lesson for those who possess intelligence.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -561,7 +520,7 @@
     {
       "id": "s79",
       "title": "15:79 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 15:79 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We then avenged from them. Both communities are documented.\". 1992 final reading begins \"Consequently, we avenged from them, and both communities are fully documented.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 15:79 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We then avenged from them. Both communities are documented.\". 1992 final reading begins \"Consequently, we avenged from them, and both communities are fully documented.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -602,7 +561,7 @@
     {
       "id": "s85-87",
       "title": "15:85-87 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 15:85-87 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 15:85-87 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -647,7 +606,7 @@
     {
       "id": "s89-99",
       "title": "15:89-99 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 15:89-99 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 15:89-99 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

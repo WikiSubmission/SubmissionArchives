@@ -12,7 +12,7 @@
     {
       "id": "s1-5",
       "title": "60:1-5 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 60:1-5 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 60:1-5 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -61,7 +61,7 @@
     {
       "id": "s7",
       "title": "60:7 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 60:7 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 60:7 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -97,47 +97,6 @@
       "source_segment_end": 24,
       "page_start": 7,
       "page_end": 7,
-      "review_status": "draft"
-    },
-    {
-      "id": "s13",
-      "title": "60:13 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 60:13 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who believe, do not befriend people with whom GOD is angry, and who are hopelessly stuck in disbelief; t...\". 1992 final reading begins \"O you who believe, do not befriend people with whom GOD is angry, and who are hopelessly stuck in disbelief; t...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "60:13",
-        "Quran 60:13",
-        "sura 60 verse 13",
-        "60:13",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 60:13 change between 1989 and 1992?",
-        "What is the final 1992 wording of 60:13?",
-        "Did Rashad Khalifa revise 60:13 in the final edition?"
-      ],
-      "quran_references": [
-        "60:13"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 46,
-      "source_segment_end": 48,
-      "page_start": 13,
-      "page_end": 13,
       "review_status": "draft"
     }
   ]

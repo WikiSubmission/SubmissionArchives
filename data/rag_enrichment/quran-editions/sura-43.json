@@ -12,7 +12,7 @@
     {
       "id": "s6",
       "title": "43:6 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:6 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Many a prophet we have sent to the previous generations.\". 1992 final reading begins \"We have sent many a prophet to the previous generations.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:6 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Many a prophet we have sent to the previous generations.\". 1992 final reading begins \"We have sent many a prophet to the previous generations.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -53,7 +53,7 @@
     {
       "id": "s25",
       "title": "43:25 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, we requited them; note the consequences for the rejectors.\". 1992 final reading begins \"Consequently, we requited them. Note the consequences for the rejectors.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, we requited them; note the consequences for the rejectors.\". 1992 final reading begins \"Consequently, we requited them. Note the consequences for the rejectors.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -94,7 +94,7 @@
     {
       "id": "s28",
       "title": "43:28 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:28 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"After him, He made this example (of Abraham) an everlasting lesson for subsequent generations, that they may r...\". 1992 final reading begins \"This example (of Abraham) was rendered an everlasting lesson for subsequent generations; perhaps they redeem t...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:28 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"After him, He made this example (of Abraham) an everlasting lesson for subsequent generations, that they may r...\". 1992 final reading begins \"This example (of Abraham) was rendered an everlasting lesson for subsequent generations; perhaps they redeem t...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -133,50 +133,9 @@
       "review_status": "draft"
     },
     {
-      "id": "s30",
-      "title": "43:30 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:30 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When the truth came to them, they said, “This is magic, and we are disbelievers therein.” Muhammad Ridiculed\". 1992 final reading begins \"When the truth came to them, they said, \"This is magic, and we are disbelievers therein.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "43:30",
-        "Quran 43:30",
-        "sura 43 verse 30",
-        "43:30",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 43:30 change between 1989 and 1992?",
-        "What is the final 1992 wording of 43:30?",
-        "Did Rashad Khalifa revise 43:30 in the final edition?"
-      ],
-      "quran_references": [
-        "43:30"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 118,
-      "source_segment_end": 120,
-      "page_start": 30,
-      "page_end": 30,
-      "review_status": "draft"
-    },
-    {
       "id": "s32",
       "title": "43:32 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:32 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Are they the ones who assign your Lord’s mercy? We have assigned their shares in this life, raising some of th...\". 1992 final reading begins \"Are they the ones who assign your Lord's mercy? We have assigned their shares in this life, raising some of th...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:32 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Are they the ones who assign your Lord’s mercy? We have assigned their shares in this life, raising some of th...\". 1992 final reading begins \"Are they the ones who assign your Lord's mercy? We have assigned their shares in this life, raising some of th...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -217,7 +176,7 @@
     {
       "id": "s35",
       "title": "43:35 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And many vanities. All these are the temporary materials of this lowly life. The Hereafter, at your Lord, is f...\". 1992 final reading begins \"Also many ornaments. All these are the temporary materials of this lowly life. The Hereafter—at your Lord—is f...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And many vanities. All these are the temporary materials of this lowly life. The Hereafter, at your Lord, is f...\". 1992 final reading begins \"Also many ornaments. All these are the temporary materials of this lowly life. The Hereafter—at your Lord—is f...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -258,7 +217,7 @@
     {
       "id": "s38-40",
       "title": "43:38-40 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:38-40 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Then, when he comes to us he will say, “Oh I wish you were as far from me as the distance between the two east...\". 1992 final reading begins \"When he comes before us he will say, \"Oh I wish you were as far from me as the two easts.± What a miserable co...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:38-40 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Then, when he comes to us he will say, “Oh I wish you were as far from me as the distance between the two east...\". 1992 final reading begins \"When he comes before us he will say, \"Oh I wish you were as far from me as the two easts. What a miserable com...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -303,7 +262,7 @@
     {
       "id": "s43",
       "title": "43:43 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:43 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, you shall steadfastly uphold what we have given you; you are in the right path.\". 1992 final reading begins \"You shall steadfastly preach what is revealed to you; you are in the right path.±\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:43 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, you shall steadfastly uphold what we have given you; you are in the right path.\". 1992 final reading begins \"You shall steadfastly preach what is revealed to you; you are in the right path.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -344,7 +303,7 @@
     {
       "id": "s45",
       "title": "43:45 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Ask all those messengers that we sent __________ before you: “Have we set up besides the Most Gracious other g...\". 1992 final reading begins \"Check the messengers we sent before you: \"Have we ever appointed any other gods—beside the Most Gracious—to be...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Ask all those messengers that we sent before you: “Have we set up besides the Most Gracious other gods to be w...\". 1992 final reading begins \"Check the messengers we sent before you: \"Have we ever appointed any other gods—beside the Most Gracious—to be...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -385,7 +344,7 @@
     {
       "id": "s48-49",
       "title": "43:48-49 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:48-49 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Every sign we showed them was even bigger than the previous one, and we afflicted them with the plagues, perha...\". 1992 final reading begins \"Every sign we showed them was bigger than the one before it. We afflicted them with the plagues, perhaps they...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:48-49 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Every sign we showed them was even bigger than the previous one, and we afflicted them with the plagues, perha...\". 1992 final reading begins \"Every sign we showed them was bigger than the one before it. We afflicted them with the plagues, perhaps they...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -428,7 +387,7 @@
     {
       "id": "s51",
       "title": "43:51 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Pharaoh announced to his people, “O my people, do I not possess the kingship of Egypt, and these rivers are fl...\". 1992 final reading begins \"Pharaoh announced to his people, \"O my people, do I not possess the kingship over Egypt, and these flowing riv...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Pharaoh announced to his people, “O my people, do I not possess the kingship of Egypt, and these rivers are fl...\". 1992 final reading begins \"Pharaoh announced to his people, \"O my people, do I not possess the kingship over Egypt, and these flowing riv...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -469,7 +428,7 @@
     {
       "id": "s53",
       "title": "43:53 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Why does he not possess a treasure of gold, or bring the angels to work with him?”\". 1992 final reading begins \"\"How come he does not possess a treasure of gold; how come the angels do not accompany him?\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Why does he not possess a treasure of gold, or bring the angels to work with him?”\". 1992 final reading begins \"\"How come he does not possess a treasure of gold; how come the angels do not accompany him?\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -510,7 +469,7 @@
     {
       "id": "s57",
       "title": "43:57 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:57 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And when the son of Mary was cited as an example, your people immediately rejected it.\". 1992 final reading begins \"When the son of Mary was cited as an example, your people disregarded it.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:57 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And when the son of Mary was cited as an example, your people immediately rejected it.\". 1992 final reading begins \"When the son of Mary was cited as an example, your people disregarded it.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -551,7 +510,7 @@
     {
       "id": "s59-61",
       "title": "43:59-61 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:59-61 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He was no more than a human servant whom we blessed, and we rendered him a lesson for the Children of Israel.\". 1992 final reading begins \"He was no more than a servant whom we blessed, and we sent him as an example for the Children of Israel.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:59-61 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He was no more than a human servant whom we blessed, and we rendered him a lesson for the Children of Israel.\". 1992 final reading begins \"He was no more than a servant whom we blessed, and we sent him as an example for the Children of Israel.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -596,7 +555,7 @@
     {
       "id": "s63",
       "title": "43:63 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:63 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When Jesus came with the miracles, he said, “I bring to you wisdom, and clarification of some matters in which...\". 1992 final reading begins \"When Jesus went with the proofs, he said, \"I bring to you wisdom, and to clarify some of the matters in which...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:63 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When Jesus came with the miracles, he said, “I bring to you wisdom, and clarification of some matters in which...\". 1992 final reading begins \"When Jesus went with the proofs, he said, \"I bring to you wisdom, and to clarify some of the matters in which...\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -637,7 +596,7 @@
     {
       "id": "s69",
       "title": "43:69 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:69 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They believed in our revelations, and totally submitted.\". 1992 final reading begins \"They are the ones who believed in our revelations, and were submitters.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:69 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They believed in our revelations, and totally submitted.\". 1992 final reading begins \"They are the ones who believed in our revelations, and were submitters.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -678,7 +637,7 @@
     {
       "id": "s77",
       "title": "43:77 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:77 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will implore: “O Maalek, let your Lord finish us off.” He will say, “You are staying. They Hate The Truth\". 1992 final reading begins \"They will implore: \"O Mãlek, let your Lord finish us off.\" He will say, \"You are staying forever.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:77 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will implore: “O Maalek, let your Lord finish us off.” He will say, “You are staying.\". 1992 final reading begins \"They will implore: \"O Mãlek, let your Lord finish us off.\" He will say, \"You are staying forever.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -719,7 +678,7 @@
     {
       "id": "s81",
       "title": "43:81 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:81 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Proclaim: “If the Most Gracious did have a son, I would be the first to worship Him (anyway).”\". 1992 final reading begins \"Proclaim: \"If the Most Gracious did have a son, I would still be the foremost worshiper.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:81 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Proclaim: “If the Most Gracious did have a son, I would be the first to worship Him (anyway).”\". 1992 final reading begins \"Proclaim: \"If the Most Gracious did have a son, I would still be the foremost worshiper.\"\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -760,7 +719,7 @@
     {
       "id": "s84",
       "title": "43:84 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:84 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He is the only god in the heaven and the only god on earth, and He is the Most Wise, the Omniscient.\". 1992 final reading begins \"He is the only One who is a deity in the heaven and a deity on earth. He is the Most Wise, the Omniscient.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:84 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He is the only god in the heaven and the only god on earth, and He is the Most Wise, the Omniscient.\". 1992 final reading begins \"He is the only One who is a deity in the heaven and a deity on earth. He is the Most Wise, the Omniscient.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -801,7 +760,7 @@
     {
       "id": "s86",
       "title": "43:86 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 43:86 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 43:86 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -842,7 +801,7 @@
     {
       "id": "s89",
       "title": "43:89 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 43:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Disregard them and say, “Peace;” they will surely find out. 1 2274\". 1992 final reading begins \"You shall disregard them and say, \"Peace;\" they will surely find out.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "The English wording of 43:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Disregard them and say, “Peace;” they will surely find out.\". 1992 final reading begins \"You shall disregard them and say, \"Peace;\" they will surely find out.\". Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {

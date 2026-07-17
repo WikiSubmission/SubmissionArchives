@@ -12,7 +12,7 @@
     {
       "id": "s1-3",
       "title": "67:1-3 edition presence differences (1981/1989/1992)",
-      "summary": "Verse presence differs across editions for 67:1-3 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "summary": "Verse presence differs across editions for 67:1-3 (1981: absent, 1989: present, 1992: present). Readings quoted from the canonical labeled verse segments.",
       "section_kind": "translation-evolution",
       "concepts": [
         {
@@ -52,47 +52,6 @@
       "source_segment_end": 14,
       "page_start": 1,
       "page_end": 3,
-      "review_status": "draft"
-    },
-    {
-      "id": "s12",
-      "title": "67:12 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 67:12 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who reverence their Lord, when alone in their privacy, they have attained forgiveness and a great...\". 1992 final reading begins \"As for those who reverence their Lord, when alone in their privacy, they have attained forgiveness and a great...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "67:12",
-        "Quran 67:12",
-        "sura 67 verse 12",
-        "67:12",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 67:12 change between 1989 and 1992?",
-        "What is the final 1992 wording of 67:12?",
-        "Did Rashad Khalifa revise 67:12 in the final edition?"
-      ],
-      "quran_references": [
-        "67:12"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 40,
-      "source_segment_end": 42,
-      "page_start": 12,
-      "page_end": 12,
       "review_status": "draft"
     }
   ]
