@@ -121,10 +121,21 @@ function loadEvalCases(filter: string | null): EvalCase[] {
   return cases;
 }
 
+function stableHash(value: string): number {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < value.length; i += 1) {
+    hash ^= value.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  return hash >>> 0;
+}
+
+// Hash-ordered sampling so a given --sample is a stable, nested subset:
+// n=24 is a prefix of n=40, making tuning comparisons across sample sizes
+// valid, and adding cases to the corpus does not reshuffle existing picks.
 function sampleCases(cases: EvalCase[], sample: number): EvalCase[] {
-  if (sample >= cases.length) return cases;
-  const step = cases.length / sample;
-  return Array.from({ length: sample }, (_, index) => cases[Math.floor(index * step)]);
+  const ordered = [...cases].sort((a, b) => stableHash(a.id) - stableHash(b.id));
+  return sample >= ordered.length ? ordered : ordered.slice(0, sample);
 }
 
 function delay(ms: number): Promise<void> {

@@ -1,0 +1,747 @@
+{
+  "generatedAt": "2026-07-17T23:50:21.758Z",
+  "durationMs": 506480,
+  "judgeModel": "mistral-large-2512",
+  "args": {
+    "sample": 40,
+    "filter": null,
+    "concurrency": 2,
+    "baseUrl": "http://localhost:3000",
+    "write": true
+  },
+  "summary": {
+    "cases": 40,
+    "answeredRate": 0.775,
+    "meanCompleteness": 2.3548387096774195,
+    "meanCorrectness": 2.870967741935484,
+    "meanFaithfulness": 3.5483870967741935,
+    "citedExpectedDocRate": 0.5806451612903226,
+    "faithfulnessFailures": 4
+  },
+  "outcomes": [
+    {
+      "caseId": "audio56-eval-001",
+      "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 3,
+      "score": {
+        "answered": true,
+        "completeness": 3,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted reference to Quran 9:120, 69:40–47, and 17:73–75 as evidence for the definition",
+          "did not cite the expected source document (messenger-audio/56 Friday Sermon 29 Oct 1982)"
+        ]
+      }
+    },
+    {
+      "caseId": "audio58-eval-012",
+      "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 3,
+      "score": {
+        "answered": true,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted the specific mistake of praising the smell of an intoxicant instead of condemning it",
+          "omitted the expectation of a corrective pinch and the later interpretation of the gas hissing as divine correction",
+          "provided unrelated examples of deliberate mistakes and past religious errors without addressing the question"
+        ]
+      }
+    },
+    {
+      "caseId": "audio61-eval-004",
+      "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 6,
+      "score": {
+        "answered": true,
+        "completeness": 1,
+        "correctness": 1,
+        "faithfulness": 3,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted the three strategies from the gold note (atheism, polytheism, division among believers)",
+          "provided alternative strategies not matching the gold note",
+          "did not cite the expected source document (MA 61)",
+          "unsupported claim about 'admission test' as a third strategy (not clearly enumerated in sources)",
+          "focused on 1989 sources instead of the 1982 sermon where the gold note strategies are from"
+        ]
+      }
+    },
+    {
+      "caseId": "audio68-eval-014",
+      "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": [
+          "Declined to answer due to insufficient evidence",
+          "Omitted all substantive facts from the gold note",
+          "Did not address the disagreement or debate about Gaddafi and Libya as described in the gold note"
+        ]
+      }
+    },
+    {
+      "caseId": "audio66-eval-002",
+      "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 3,
+      "score": {
+        "answered": true,
+        "completeness": 2,
+        "correctness": 3,
+        "faithfulness": 3,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omitted specific verses (5:75, 25:7, 25:20) that explicitly mention messengers eating food",
+          "included verses (21:29, 67:15) that do not explicitly name messengers or prophets",
+          "claim about broader principle of human sustenance is supported but not directly answering the question"
+        ]
+      }
+    },
+    {
+      "caseId": "audio50-eval-002",
+      "documentId": "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 3,
+      "score": {
+        "answered": true,
+        "completeness": 2,
+        "correctness": 3,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omission of hospital assignments",
+          "omission of divine control of circumstances and thoughts",
+          "omission of illusion of worldly life",
+          "omission of contrast between charitable righteous and stingy rich"
+        ]
+      }
+    },
+    {
+      "caseId": "audio51-eval-018",
+      "documentId": "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 1,
+        "correctness": 2,
+        "faithfulness": 2,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted the core illustration of people imploring God alone in crisis at sea and reverting after rescue",
+          "focused on Moses and Pharaoh instead of the general pattern described in the gold note",
+          "cited S1 which does not support the claim about Pharaoh’s body being 'full of salt' in the Cairo Museum",
+          "did not cite the expected source document (S2/S3) despite mentioning related content",
+          "mixed historical narrative with the question about general danger at sea"
+        ]
+      }
+    },
+    {
+      "caseId": "audio54-eval-010",
+      "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": "error",
+      "citationCount": 0,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 0,
+        "citedExpectedDoc": false,
+        "issues": [
+          "API error occurred: Status 429\nBody: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+        ]
+      }
+    },
+    {
+      "caseId": "audio62-eval-007",
+      "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": "error",
+      "citationCount": 0,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 0,
+        "citedExpectedDoc": false,
+        "issues": [
+          "API error occurred: Status 429\nBody: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+        ]
+      }
+    },
+    {
+      "caseId": "audio69-eval-007",
+      "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 3,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omission of mathematical necessity argument",
+          "omission of broader context on divine commands (e.g., verse placement, Sura titles, qiblah instructions)"
+        ]
+      }
+    },
+    {
+      "caseId": "audio65-eval-005",
+      "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 3,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "Assistant declined to answer due to insufficient sources",
+          "No substantive answer provided",
+          "Omission of all gold note facts"
+        ]
+      }
+    },
+    {
+      "caseId": "behrouz13-eval-005",
+      "documentId": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 2,
+        "citedExpectedDoc": false,
+        "issues": [
+          "contradicts gold note (Muhammad saw Rashad, not the tree eaten by Adam and Eve)",
+          "omits key fact (Muhammad saw the tree eaten by Adam and Eve)",
+          "cites wrong sources (does not reference expected document)",
+          "unsupported claim about prophets acknowledging Rashad as Messenger of the Covenant (plausible but not in gold note or snippets)"
+        ]
+      }
+    },
+    {
+      "caseId": "behrouz11-eval-018",
+      "documentId": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
+      "matchType": "conceptual",
+      "notice": "no_answer",
+      "citationCount": 0,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 0,
+        "citedExpectedDoc": false,
+        "issues": [
+          "notice:no_answer"
+        ]
+      }
+    },
+    {
+      "caseId": "behrouz14-eval-010",
+      "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 5,
+      "score": {
+        "answered": true,
+        "completeness": 1,
+        "correctness": 2,
+        "faithfulness": 3,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted Rashad's core teaching on human choice vs. automatic glorification by rest of creation",
+          "omitted description of failure as stupidity, injustice, and ingratitude",
+          "omitted successful choice as source of gratitude",
+          "cited sources not from the expected document",
+          "included irrelevant details (e.g., humanitarian discussion in S1, hat analogy in S3)",
+          "physical distinction (clay vs. fire) not part of gold note"
+        ]
+      }
+    },
+    {
+      "caseId": "behrouz15-eval-017",
+      "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "behrouz16-eval-020",
+      "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 4,
+      "score": {
+        "answered": true,
+        "completeness": 1,
+        "correctness": 2,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted Rashad's specific discussion of consent in the context of marriage difficulties, coercion, and temporary unions",
+          "omitted the distinction between legitimate marriage requiring sincere permanent intention and deliberate temporary marriage being labeled prostitution",
+          "did not cite the expected source document (quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast)",
+          "focused on general Quranic verses about consent rather than Rashad's expanded discussion"
+        ]
+      }
+    },
+    {
+      "caseId": "behrouz18-eval-001",
+      "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 1,
+        "correctness": 1,
+        "faithfulness": 1,
+        "citedExpectedDoc": true,
+        "issues": [
+          "incorrect condemned behaviors listed (idols, stealing, adultery, killing children, falsehoods, disobeying Prophet's orders are not mentioned in the gold note or relevant to Sura 61:1–13)",
+          "omitted key condemned behavior: saying what one does not practice",
+          "omitted key positive behaviors: forming a solid structure in God's cause, supporting God as Jesus' disciples did",
+          "omitted interpretation of promised victory as beginning in worldly life",
+          "claims in answer are unrelated to the provided source snippets"
+        ]
+      }
+    },
+    {
+      "caseId": "behrouz19-eval-006",
+      "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
+      "matchType": "conceptual",
+      "notice": "no_answer",
+      "citationCount": 0,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 0,
+        "citedExpectedDoc": false,
+        "issues": [
+          "notice:no_answer"
+        ]
+      }
+    },
+    {
+      "caseId": "behrouz20-eval-009",
+      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
+      "matchType": "conceptual",
+      "notice": "error",
+      "citationCount": 0,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 0,
+        "citedExpectedDoc": false,
+        "issues": [
+          "API error occurred: Status 429\nBody: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+        ]
+      }
+    },
+    {
+      "caseId": "audio22-eval-001",
+      "documentId": "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 4,
+      "score": {
+        "answered": true,
+        "completeness": 3,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omission of the specific assertion that acceptance is an admission test",
+          "omission of the claim that God's allies have no fear, grief, headaches, tickets, or ordinary problems"
+        ]
+      }
+    },
+    {
+      "caseId": "audio25-eval-007",
+      "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "audio23-eval-011",
+      "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 2,
+        "correctness": 3,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted Douglas's point about the destruction as a sign for later generations",
+          "omitted Douglas's emphasis on using intelligence and precautions while recognizing divine will",
+          "cited sources S1 and S2 instead of the expected document"
+        ]
+      }
+    },
+    {
+      "caseId": "audio27-eval-007",
+      "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 1,
+        "correctness": 2,
+        "faithfulness": 3,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omitted debate on happiness and schooling guaranteeing success",
+          "omitted discussion of fifteen-year-old pregnancy and emotional readiness",
+          "omitted topics of infant mortality, premarital sex, and teaching chastity",
+          "included unrelated debate on intellectual decline in Islamic universities",
+          "focused primarily on modern education quality rather than the broader debate scope"
+        ]
+      }
+    },
+    {
+      "caseId": "audio28-eval-016",
+      "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 3,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omitted anecdotes about Egyptian parliamentarian, Ahmadi mullah, Ismail Barakat, and Saeed Talari",
+          "omitted contrast of former Sunni-Shia hostility with current unity"
+        ]
+      }
+    },
+    {
+      "caseId": "audio30-eval-010",
+      "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 5,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "audio31-eval-015",
+      "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 3,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "audio35-eval-014",
+      "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 2,
+        "correctness": 3,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omitted challenge to Christian claims about Jesus as God's son or God",
+          "omitted discussion of the Word and Catholic access to scripture"
+        ]
+      }
+    },
+    {
+      "caseId": "audio34-eval-004",
+      "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 4,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "Did not cite the expected source document (S1) despite covering the topic thoroughly",
+          "Omitted the explicit mention of God controlling provision and employment as a reason for scheduling work around prayers"
+        ]
+      }
+    },
+    {
+      "caseId": "audio37-eval-010",
+      "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
+      "matchType": "conceptual",
+      "notice": "error",
+      "citationCount": 0,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 0,
+        "citedExpectedDoc": false,
+        "issues": [
+          "API error occurred: Status 429\nBody: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+        ]
+      }
+    },
+    {
+      "caseId": "audio40-eval-009",
+      "documentId": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 2,
+        "correctness": 3,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omitted Rashad's recommendation to begin self-audit with the possibility of idolatry and trying to disprove it",
+          "omitted context about Catherine's discussion with Christians and her warning about discouragement and doubt",
+          "focused on hardship and defects rather than the specific self-examination method related to worship and idolatry"
+        ]
+      }
+    },
+    {
+      "caseId": "audio39-eval-005",
+      "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 1,
+        "correctness": 2,
+        "faithfulness": 3,
+        "citedExpectedDoc": true,
+        "issues": [
+          "omitted that everything glorifies God",
+          "omitted believers must practice what they tell others and stand like one wall",
+          "omitted avoiding hurting the messenger as Moses' people did",
+          "omitted condemnation of sectarian labels",
+          "omitted contrast of Masjid Tucson with conflict in other mosques",
+          "included specific prohibitions (idols, stealing, adultery, killing children, falsehood, disobeying Prophet) not mentioned in gold note"
+        ]
+      }
+    },
+    {
+      "caseId": "audio42-eval-009",
+      "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "audio44-eval-007",
+      "documentId": "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 2,
+        "correctness": 3,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omits Dana's reading of spoils distribution and preference for immigrants/needy",
+          "omits Rashad's praise of community generosity and Lori's story",
+          "does not cite the expected source document (quran-study/44)"
+        ]
+      }
+    },
+    {
+      "caseId": "audio46-eval-009",
+      "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
+      "matchType": "conceptual",
+      "notice": "error",
+      "citationCount": 0,
+      "score": {
+        "answered": false,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 0,
+        "citedExpectedDoc": false,
+        "issues": [
+          "API error occurred: Status 429\nBody: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+        ]
+      }
+    },
+    {
+      "caseId": "audio55-eval-005",
+      "documentId": "messenger-audio/55 Zikr 23 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 0,
+        "correctness": 0,
+        "faithfulness": 2,
+        "citedExpectedDoc": false,
+        "issues": [
+          "completely unrelated to the gold answer note",
+          "omits all facts about the second remembrance cycle (whispering testimony, soul crossing seventh heaven, avoiding distraction, repeating God's name alone)",
+          "claims about the second revelation of Quran (first 9 verses of Sura 68, 38 words) are supported by sources but irrelevant to the question",
+          "no citation of the expected source document"
+        ]
+      }
+    },
+    {
+      "caseId": "mathquran-01-eval-025",
+      "documentId": "video-program/mathematical-miracle-of-quran",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "messenger-01-eval-018",
+      "documentId": "video-program/old-message-new-messenger",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 3,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "life-01-eval-005",
+      "documentId": "video-program/what-is-life-all-about",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 7,
+      "score": {
+        "answered": true,
+        "completeness": 4,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": []
+      }
+    },
+    {
+      "caseId": "god-01-eval-010",
+      "documentId": "video-program/who-is-god",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 2,
+      "score": {
+        "answered": true,
+        "completeness": 3,
+        "correctness": 3,
+        "faithfulness": 4,
+        "citedExpectedDoc": true,
+        "issues": [
+          "Incorrectly states Rashad explicitly mentioned Andromeda by name (he did not; only referred to it as 'next-door galaxy' or 'neighbor galaxy')",
+          "Omission: Did not clarify that Andromeda is only a likely modern alias, not explicitly named by Rashad"
+        ]
+      }
+    },
+    {
+      "caseId": "miracle-01-eval-009",
+      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
+      "matchType": "conceptual",
+      "notice": null,
+      "citationCount": 1,
+      "score": {
+        "answered": true,
+        "completeness": 3,
+        "correctness": 4,
+        "faithfulness": 4,
+        "citedExpectedDoc": false,
+        "issues": [
+          "omission of transliteration detail",
+          "omission of timeline focus on 1968 as start of transliteration"
+        ]
+      }
+    }
+  ]
+}

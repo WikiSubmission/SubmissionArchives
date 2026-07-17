@@ -162,12 +162,36 @@ themes present in the source but dropped from the answer). `citedExpectedDoc`
 is informational only, since a fact can be correctly answered from a valid
 document other than the gold one.
 
+### Completeness experiment (prompt lever)
+
+The answer prompt's response rules were sharpened to name the concrete
+particulars to preserve (verse citations, proper names, dates, editions,
+numbers, secondary points), anchored with "when the sources state them" and
+"never introduce a particular the sources do not contain" so it cannot push
+toward invention. Measured on the identical 24-case sample (the only valid
+comparison):
+
+| Metric | Before | After prompt change |
+|---|---|---|
+| Completeness | 2.55 | 2.81 |
+| Correctness | 3.05 | 3.29 |
+| Faithfulness | 3.60 | 3.76 |
+
+Detail rose and faithfulness held (rose slightly), so the change was kept.
+
+Methodology note: answer scores carry run-to-run noise (generation is
+non-deterministic), and the sampler is now hash-ordered so a given
+`--sample` is a stable nested subset (n=24 is a prefix of n=40). Compare only
+across the same sample size; a larger sample is a different, harder
+population, not a regression.
+
 ## Remaining follow-ups
 
-1. Raise completeness: the answer prompt already asks for synthesis, but the
-   next lever is feeding more/fuller source context to the model and pushing
-   the prompt harder toward including concrete specifics (verse numbers,
-   named examples). Measure each change with `rag:answer-eval`.
+1. Raise completeness further: the prompt lever has been applied and measured
+   (above). The remaining lever is feeding more/fuller source context to the
+   model (more sources, or fuller per-source text). Measure with
+   `rag:answer-eval --sample 24` against the recorded reference, watching that
+   faithfulness does not drop as more evidence is packed in.
 2. Three islam vol 2 sections (iv2-s08/s09/s10) have misaligned summaries
    and are pinned draft; see `reports/enrichment-review/review-exceptions.json`.
 2. `RAG_ENRICHMENT_STATUSES` can now be tightened to `approved` once you are
