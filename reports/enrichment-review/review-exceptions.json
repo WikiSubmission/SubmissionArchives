@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-07-17T13:30:32.554Z",
+  "filesApproved": 157,
+  "sectionsCovered": 464,
+  "editsApplied": 11,
+  "draftsPinned": 0,
+  "unreviewedFiles": [],
+  "exceptions": [
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-49-code-19-heavenly-feud-1989-11-05.json",
+      "sectionId": "audio49-s03",
+      "verdict": "edit",
+      "reason": "Summary mentions 'repent' and 'jinn' which do not appear in spanText; should describe 'reconsidered' and exclude jinn reference"
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-49-code-19-heavenly-feud-1989-11-05.json",
+      "sectionId": "audio49-s05",
+      "verdict": "edit",
+      "reason": "List 'disease, starvation, earthquakes, cancer' imported from s03 span, not s05; s05 span focuses on AIDS"
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-behrouz-12-community-dispute-1990-01-25.json",
+      "sectionId": "behrouz12-s01",
+      "verdict": "edit",
+      "reason": "Summary claims 'those dying before forty enter Heaven' but this doctrine is not mentioned in the spanText."
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-behrouz-14-night-of-destiny-zikr.json",
+      "sectionId": "behrouz14-s02",
+      "verdict": "edit",
+      "reason": "Summary introduces Quran 20:14 and Contact Prayer content not present in span 64-67"
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-roxana-46-sura-38-sura-9-sura-39-admission-test.json",
+      "sectionId": "audio46-s01",
+      "verdict": "edit",
+      "reason": "Summary claims 'political discussion about Romania and communism' but spanText shows general political discussion without clear mention of Romania or communism specifically."
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-roxana-46-sura-38-sura-9-sura-39-admission-test.json",
+      "sectionId": "audio46-s06",
+      "verdict": "edit",
+      "reason": "Summary states 'group debates whether to support a poor unbelieving relative or a believing orphan' but spanText shows general discussion of charity and circumstances without this specific scenario clearly framed."
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-roxana-46-sura-38-sura-9-sura-39-admission-test.json",
+      "sectionId": "audio46-s07",
+      "verdict": "edit",
+      "reason": "Summary claims Rashad 'refuses compromise over white lies or insurance' but these specific refusals do not appear in the visible spanText, which focuses on admission tests, Satan's limits, and evil thoughts from the jinn companion."
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2.json",
+      "sectionId": "audio47-s04",
+      "verdict": "edit",
+      "reason": "Summary states 'Muhammad's miracle was withheld for fourteen centuries to prevent idolization' but visible spanText does not explicitly make this claim about withholding the miracle. The prediction about submission dominating is present but not the specific withholding claim."
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2.json",
+      "sectionId": "audio47-s05",
+      "verdict": "edit",
+      "reason": "Speaker is named Kathryn (appears consistently as 'Kathryn:' in transcript), not Catherine."
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2.json",
+      "sectionId": "audio47-s06",
+      "verdict": "edit",
+      "reason": "Speaker is Kathryn, not Catherine."
+    },
+    {
+      "file": "data/rag_enrichment/audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2.json",
+      "sectionId": "audio47-s07",
+      "verdict": "edit",
+      "reason": "Speaker is Kathryn, not Catherine."
+    }
+  ]
+}

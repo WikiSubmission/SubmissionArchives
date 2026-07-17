@@ -20,7 +20,7 @@
     "Ali",
     "Other participants"
   ],
-  "review_status": "draft",
+  "review_status": "approved",
   "document_retrieval_priority": "primary",
   "transcript_statistics": {
     "source_segments": 564,

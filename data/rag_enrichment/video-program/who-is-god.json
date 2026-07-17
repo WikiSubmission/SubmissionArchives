@@ -7,7 +7,7 @@
   "youtube_url": "https://www.youtube.com/watch?v=HngIrz8xHTw",
   "primary_speaker": "Dr. Rashad Khalifa",
   "primary_speaker_basis": "data/catalog/videos.json",
-  "review_status": "draft",
+  "review_status": "approved",
   "transcript_statistics": {
     "source_segments": 161,
     "first_speech_time": "00:01:19.251",

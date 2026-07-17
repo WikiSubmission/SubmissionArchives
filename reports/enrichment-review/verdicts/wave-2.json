@@ -1,0 +1,87 @@
+[
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-48-parivash-home-salat-zakat-messenger-debate-1989-01-11.json",
+    "sections": [
+      {"id": "audio48-s01", "verdict": "approve"},
+      {"id": "audio48-s02", "verdict": "approve"},
+      {"id": "audio48-s03", "verdict": "approve"},
+      {"id": "audio48-s04", "verdict": "approve"},
+      {"id": "audio48-s05", "verdict": "approve"},
+      {"id": "audio48-s06", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-49-code-19-heavenly-feud-1989-11-05.json",
+    "sections": [
+      {"id": "audio49-s01", "verdict": "approve"},
+      {"id": "audio49-s02", "verdict": "approve"},
+      {"id": "audio49-s03", "verdict": "edit", "reason": "Summary mentions 'repent' and 'jinn' which do not appear in spanText; should describe 'reconsidered' and exclude jinn reference", "edited_summary": "The presentation shifts to the heavenly feud. God delegates powers to creatures, Satan claims he can independently rule a dominion, angels uphold God's authority, and rebels divide into those who reconsidered their position and the hardcore humans who continue the challenge."},
+      {"id": "audio49-s04", "verdict": "approve"},
+      {"id": "audio49-s05", "verdict": "edit", "reason": "List 'disease, starvation, earthquakes, cancer' imported from s03 span, not s05; s05 span focuses on AIDS", "edited_summary": "A hypothetical isolated person can discover God through natural instinct, as Abraham did by observing the heavens. Satan's world is judged by AIDS, which Rashad treats as evidence that Satan cannot manage a perfect dominion."}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-50-suras-92-93-94-zakat-1989-07-27.json",
+    "sections": [
+      {"id": "audio50-s01", "verdict": "approve"},
+      {"id": "audio50-s02", "verdict": "approve"},
+      {"id": "audio50-s03", "verdict": "approve"},
+      {"id": "audio50-s04", "verdict": "approve"},
+      {"id": "audio50-s05", "verdict": "approve"},
+      {"id": "audio50-s06", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-51-sura-17-59-satan-jinn-brewery-1990.json",
+    "sections": [
+      {"id": "audio51-s01", "verdict": "approve"},
+      {"id": "audio51-s02", "verdict": "approve"},
+      {"id": "audio51-s03", "verdict": "approve"},
+      {"id": "audio51-s04", "verdict": "approve"},
+      {"id": "audio51-s05", "verdict": "approve"},
+      {"id": "audio51-s06", "verdict": "approve"},
+      {"id": "audio51-s07", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-52-al-fatihah-prayer-concentration-partial-1989-05-08.json",
+    "sections": [
+      {"id": "audio52-s01", "verdict": "approve"},
+      {"id": "audio52-s02", "verdict": "approve"},
+      {"id": "audio52-s03", "verdict": "approve"},
+      {"id": "audio52-s04", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-53-october-22-1982-original-al-fatihah-prelude.json",
+    "sections": [
+      {"id": "audio53-s01", "verdict": "approve"},
+      {"id": "audio53-s02", "verdict": "approve"},
+      {"id": "audio53-s03", "verdict": "approve"},
+      {"id": "audio53-s04", "verdict": "approve"},
+      {"id": "audio53-s05", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-54-october-22-1982-sura-2-adam-angels.json",
+    "sections": [
+      {"id": "audio54-s01", "verdict": "approve"},
+      {"id": "audio54-s02", "verdict": "approve"},
+      {"id": "audio54-s03", "verdict": "approve"},
+      {"id": "audio54-s04", "verdict": "approve"},
+      {"id": "audio54-s05", "verdict": "approve"},
+      {"id": "audio54-s06", "verdict": "approve"},
+      {"id": "audio54-s07", "verdict": "approve"}
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-57-november-5-1982-sura-2-scripture-distortion.json",
+    "sections": [
+      {"id": "audio57-s01", "verdict": "approve"},
+      {"id": "audio57-s02", "verdict": "approve"},
+      {"id": "audio57-s03", "verdict": "approve"},
+      {"id": "audio57-s04", "verdict": "approve"},
+      {"id": "audio57-s05", "verdict": "approve"}
+    ]
+  }
+]

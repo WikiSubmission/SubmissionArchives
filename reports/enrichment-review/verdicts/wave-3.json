@@ -1,0 +1,224 @@
+[
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-62-sura-2-abraham-submission-scripture-communities-1982-11-26.json",
+    "sections": [
+      {
+        "id": "audio62-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio62-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio62-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio62-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio62-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio62-s06",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-64-sura-2-qiblah-steadfastness-hajj-1982-11-26.json",
+    "sections": [
+      {
+        "id": "audio64-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio64-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio64-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio64-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio64-s05",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-65-sura-2-qiblah-signs-idols-composite-1982-12.json",
+    "sections": [
+      {
+        "id": "audio65-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio65-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio65-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio65-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio65-s05",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-67-capital-punishment-wills-inheritance-adoption-1982-12-10.json",
+    "sections": [
+      {
+        "id": "audio67-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio67-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio67-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio67-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio67-s05",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-69-fasting-revelation-prayer-1982-12-17.json",
+    "sections": [
+      {
+        "id": "audio69-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio69-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio69-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio69-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "audio69-s05",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-11-january-1990-compilation.json",
+    "sections": [
+      {
+        "id": "behrouz11-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz11-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz11-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz11-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz11-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz11-s06",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-12-community-dispute-1990-01-25.json",
+    "sections": [
+      {
+        "id": "behrouz12-s01",
+        "verdict": "edit",
+        "reason": "Summary claims 'those dying before forty enter Heaven' but this doctrine is not mentioned in the spanText.",
+        "edited_summary": "Behrouz says a visitor from San Francisco was shocked by the community's casual treatment of Rashad. He argues that divine selection makes the messenger's position exceptional and that followers have a responsibility to accept Quranic statements about the messenger's role."
+      },
+      {
+        "id": "behrouz12-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz12-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz12-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz12-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz12-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz12-s07",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-13-sura-7-adam-eve-bodies-1989-12-24.json",
+    "sections": [
+      {
+        "id": "behrouz13-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz13-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz13-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz13-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz13-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz13-s06",
+        "verdict": "approve"
+      }
+    ]
+  }
+]

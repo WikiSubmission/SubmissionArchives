@@ -1,0 +1,284 @@
+[
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-14-night-of-destiny-zikr.json",
+    "sections": [
+      {
+        "id": "behrouz14-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz14-s02",
+        "verdict": "edit",
+        "reason": "Summary introduces Quran 20:14 and Contact Prayer content not present in span 64-67",
+        "edited_summary": "The group repeatedly chants the God-alone testimony. Rashad says the more sincerely it is repeated, the more the soul grows."
+      },
+      {
+        "id": "behrouz14-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz14-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz14-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz14-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz14-s07",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz14-s08",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-15-sura-54-sura-55-sura-56-sura-51-compilation.json",
+    "sections": [
+      {
+        "id": "behrouz15-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz15-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz15-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz15-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz15-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz15-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz15-s07",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz15-s08",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-16-sura-64-and-partial-sura-70.json",
+    "sections": [
+      {
+        "id": "behrouz16-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz16-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz16-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz16-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz16-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz16-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz16-s07",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz16-s08",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-17-suras-90-91-82-83-1989-07-21.json",
+    "sections": [
+      {
+        "id": "behrouz17-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz17-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz17-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz17-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz17-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz17-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz17-s07",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz17-s08",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-18-suras-61-87-94-81-composite.json",
+    "sections": [
+      {
+        "id": "behrouz18-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz18-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz18-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz18-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz18-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz18-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz18-s07",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz18-s08",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-19-sura-2-witchcraft-blue-quran.json",
+    "sections": [
+      {
+        "id": "behrouz19-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz19-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz19-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz19-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz19-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz19-s06",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz19-s07",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz19-s08",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-20-sura-3-fear-worry-insurance.json",
+    "sections": [
+      {
+        "id": "behrouz20-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz20-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz20-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz20-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz20-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz20-s06",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-21-sura-9-sura-56-mathematical-circle.json",
+    "sections": [
+      {
+        "id": "behrouz21-s01",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz21-s02",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz21-s03",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz21-s04",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz21-s05",
+        "verdict": "approve"
+      },
+      {
+        "id": "behrouz21-s06",
+        "verdict": "approve"
+      }
+    ]
+  }
+]
