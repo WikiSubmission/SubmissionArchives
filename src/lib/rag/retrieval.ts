@@ -396,7 +396,14 @@ async function resolveEnrichmentSections(
        )
      )
      SELECT ${CHUNK_COLUMNS},
-       GREATEST(selected.signal_score, selected.fused_score * 20) AS enrichment_score,
+       GREATEST(selected.signal_score, selected.fused_score * 20)
+         * CASE
+             WHEN e.source_segment_start IS NULL
+               AND e.start_time IS NULL
+               AND e.page_start IS NULL
+               THEN 0.5
+             ELSE 1.0
+           END AS enrichment_score,
        e.section_id AS enrichment_section_id,
        e.title AS enrichment_section_title
      FROM selected
@@ -591,12 +598,54 @@ function speakerPrefixedText(row: Pick<NeighborRow, 'speaker' | 'text'>): string
   return row.speaker ? `${row.speaker}: ${row.text}` : row.text;
 }
 
+interface ContextWindowRow {
+  text: string;
+  start_time: string | null;
+  end_time: string | null;
+  page: number | null;
+}
+
+async function fetchContextWindows(
+  chunks: RetrievedChunk[],
+): Promise<Map<number, ContextWindowRow>> {
+  const pool = getRagPool();
+  const windows = new Map<number, ContextWindowRow>();
+
+  await Promise.all(
+    chunks.map(async (chunk) => {
+      if (chunk.chunkKind !== 'precision') return;
+      if (chunk.sourceSegmentStart === null || chunk.sourceSegmentEnd === null) return;
+
+      const result = await pool.query<ContextWindowRow>(
+        `SELECT text, start_time, end_time, page
+         FROM rag_chunks
+         WHERE document_id = $1
+           AND chunk_kind = 'context'
+           AND source_segment_start IS NOT NULL
+           AND source_segment_end IS NOT NULL
+           AND source_segment_start <= $3
+           AND source_segment_end >= $2
+         ORDER BY
+           (source_segment_start <= $2 AND source_segment_end >= $3) DESC,
+           LEAST(source_segment_end, $3) - GREATEST(source_segment_start, $2) DESC,
+           source_segment_end - source_segment_start ASC
+         LIMIT 1`,
+        [chunk.documentId, chunk.sourceSegmentStart, chunk.sourceSegmentEnd],
+      );
+      if (result.rows[0]) windows.set(chunk.id, result.rows[0]);
+    }),
+  );
+
+  return windows;
+}
+
 async function attachNeighborContexts(chunks: RetrievedChunk[]): Promise<RetrievedChunk[]> {
   const pool = getRagPool();
+  const contextWindows = await fetchContextWindows(chunks);
   const indicesByDocument = new Map<string, Set<number>>();
 
   for (const chunk of chunks) {
-    if (chunk.chunkKind !== 'precision') continue;
+    if (chunk.chunkKind !== 'precision' || contextWindows.has(chunk.id)) continue;
     const indices = indicesByDocument.get(chunk.documentId) ?? new Set<number>();
     indices.add(Math.max(0, chunk.chunkIndex - 1));
     indices.add(chunk.chunkIndex);
@@ -622,6 +671,20 @@ async function attachNeighborContexts(chunks: RetrievedChunk[]): Promise<Retriev
 
   return chunks.map((chunk) => {
     if (chunk.chunkKind === 'context') return chunk;
+
+    const window = contextWindows.get(chunk.id);
+    if (window) {
+      const windowStart = window.start_time === null ? null : Number(window.start_time);
+      const windowEnd = window.end_time === null ? null : Number(window.end_time);
+      return {
+        ...chunk,
+        contextText: window.text,
+        contextStartTime: Number.isFinite(windowStart) ? windowStart : chunk.startTime,
+        contextEndTime: Number.isFinite(windowEnd) ? windowEnd : chunk.endTime,
+        contextPage: window.page ?? chunk.page,
+      };
+    }
+
     const rowsByIndex = rowsByDocument.get(chunk.documentId);
     if (!rowsByIndex) return chunk;
 

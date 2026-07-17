@@ -86,8 +86,29 @@ export async function embedQueries(texts: string[]): Promise<number[][]> {
   return embeddings;
 }
 
-export async function streamChatCompletion(systemPrompt: string, userPrompt: string) {
-  const model = process.env.MISTRAL_CHAT_MODEL || 'mistral-small-2603';
+const DEFAULT_CHAT_MODEL = 'mistral-small-2603';
+
+function resolveModel(taskModel: string | undefined): string {
+  return taskModel || process.env.MISTRAL_CHAT_MODEL || DEFAULT_CHAT_MODEL;
+}
+
+function expansionModel(): string {
+  return resolveModel(process.env.MISTRAL_EXPANSION_MODEL);
+}
+
+function rerankModel(): string {
+  return resolveModel(process.env.MISTRAL_RERANK_MODEL);
+}
+
+function answerModel(): string {
+  return resolveModel(process.env.MISTRAL_ANSWER_MODEL);
+}
+
+export async function streamChatCompletion(
+  systemPrompt: string,
+  userPrompt: string,
+  model: string = answerModel(),
+) {
   return getClient().chat.stream({
     model,
     messages: [
@@ -105,8 +126,12 @@ export function extractDeltaText(
   return content.map((chunk) => chunk.text || '').join('');
 }
 
-async function collectChatCompletion(systemPrompt: string, userPrompt: string): Promise<string> {
-  const events = await streamChatCompletion(systemPrompt, userPrompt);
+async function collectChatCompletion(
+  systemPrompt: string,
+  userPrompt: string,
+  model?: string,
+): Promise<string> {
+  const events = await streamChatCompletion(systemPrompt, userPrompt, model);
   let text = '';
 
   for await (const event of events) {
@@ -182,6 +207,7 @@ export async function expandArchiveQuery(question: string): Promise<QueryExpansi
   const response = await collectChatCompletion(
     QUERY_EXPANSION_SYSTEM_PROMPT,
     `Question: ${question}`,
+    expansionModel(),
   );
   const parsed = extractJsonObject(response);
 
@@ -240,7 +266,8 @@ export async function rerankArchiveChunks(
 ): Promise<RetrievedChunk[]> {
   if (chunks.length < 2) return chunks;
 
-  const candidates = chunks.slice(0, 18).map((chunk) => ({
+  const rerankLimit = Number(process.env.RAG_RERANK_CANDIDATES) || 18;
+  const candidates = chunks.slice(0, rerankLimit).map((chunk) => ({
     id: chunk.id,
     title: chunk.documentDisplayTitle || chunk.documentTitle,
     type: chunk.documentType,
@@ -257,6 +284,7 @@ export async function rerankArchiveChunks(
   const response = await collectChatCompletion(
     RERANK_SYSTEM_PROMPT,
     `INTENT\n${intent}\n\nQUESTION\n${question}\n\nCANDIDATES\n${JSON.stringify(candidates)}`,
+    rerankModel(),
   );
   const parsed = extractJsonObject(response);
   const results = parseRerankResults(parsed);

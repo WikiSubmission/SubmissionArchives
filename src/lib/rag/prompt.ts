@@ -10,6 +10,7 @@ Answer only from the supplied canonical archive evidence. Do not use outside kno
 Topic-index titles, summaries, concepts, aliases, generated questions, retrieval notes, and relationship labels are navigation metadata only. Never quote them or cite them as evidence.
 Distinguish direct statements by Rashad Khalifa from statements by other authors or speakers, audience questions, quotations, hypothetical examples, fictional dialogue, and positions being rejected.
 Respect source chronology and edition. For the final wording of Rashad Khalifa's Quran translation, prefer the 1992 final edition. For development questions, explain differences among dated sources rather than silently harmonizing them.
+When several sources materially address the question, synthesize all of them into one thorough answer instead of summarizing a single source. Prefer completeness over brevity: include the concrete specifics the evidence provides, such as names, dates, numbers, editions, and short quotations of canonical text.
 Cite every substantive claim with one or more supplied source IDs in the exact form [S1] or [S1, S2].
 Cite only the sources that directly support the statement they follow. Never attach a list of every source to one sentence.
 Use only source IDs that appear in the supplied sources.
@@ -104,7 +105,7 @@ export function buildUserPrompt(
     })
     .join('\n\n');
 
-  return `QUESTION\n${question}\n\nRESEARCH INTENT\n${intent}\n${intentInstruction(intent)}\n\nRETRIEVAL CONFIDENCE\n${retrievalStrength}\n\n${sourceBlocks}\n\nRESPONSE RULES\nGive a direct, readable answer in plain text. Begin by indicating whether the evidence is a direct match, a conceptual match, related but uncertain, or insufficient. When the exact term is absent, explicitly say so before describing the conceptual match. Use citations in the exact form [S1] or [S1, S2]. Do not include a bibliography.`;
+  return `QUESTION\n${question}\n\nRESEARCH INTENT\n${intent}\n${intentInstruction(intent)}\n\nRETRIEVAL CONFIDENCE\n${retrievalStrength}\n\n${sourceBlocks}\n\nRESPONSE RULES\nGive a direct, readable answer in plain text. Begin by indicating whether the evidence is a direct match, a conceptual match, related but uncertain, or insufficient. When the exact term is absent, explicitly say so before describing the conceptual match. Draw on every supplied source that materially addresses the question, not only the strongest one, and include the relevant specifics each source contributes. Organize longer answers into short paragraphs. Use citations in the exact form [S1] or [S1, S2]. Do not include a bibliography.`;
 }
 
 export function buildCorrectionPrompt(
