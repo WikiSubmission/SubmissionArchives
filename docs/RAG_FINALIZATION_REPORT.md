@@ -89,15 +89,61 @@ Recommended review protocol before flipping sections to `approved`:
 section hashes now include locators and review status, so review edits
 propagate on the next `rag:ingest` (which is incremental and cheap).
 
+## Follow-up execution (2026-07-17, workstreams 1-3)
+
+All three follow-ups were executed the same day.
+
+### Workstream 1: enrichment review and approval
+
+- Quran edition sections regenerated to quote the canonical labeled verse
+  segments instead of OCR extraction candidates; marker-only differences no
+  longer count as revisions (963 sections across 93 suras remain).
+- A mechanical grounding checker (`scripts/corpus/check-enrichment-grounding.ts`)
+  and a packet pipeline (`build-review-packets.ts`, `apply-review-verdicts.ts`)
+  support review at scale: canonical spans are pre-extracted so review agents
+  judge content instead of exploring the index.
+- Every spoken section (464) was reviewed against its canonical span: 453
+  approved as written, 11 summaries corrected for imported or unsupported
+  claims, 0 rejected. The quran-editions category was approved on
+  deterministic generation plus the corpus-wide quote check and sampling.
+- Post-approval eval gate passed with improvement (see numbers below).
+
+### Workstream 2: written-works enrichment
+
+All 11 written works (1,295 pages) now carry enrichment metadata: 205
+sections authored by agents from canonical page text, each section reviewed
+against its page span (2 summaries corrected, 3 misaligned sections pinned
+draft, 1 invalid locator removed). Verified live: book-specific questions
+surface their sections through the enrichment channel with correct page
+locators (e.g. the salat booklet ablution procedure, the Computer Speaks
+end-of-world epilogue).
+
+### Workstream 3: tuning against the eval
+
+- Gold-label audit of all 39 failing cases confirmed every label correct;
+  the failures were genuine retrieval misses, not measurement artifacts.
+- The `--expansion` eval mode (mirroring the production multi-query path)
+  showed the misses persist under expansion, ruling out single-query bias.
+- Root cause: the hardcoded per-document candidate cap evicted answer-bearing
+  chunks when many relevant sections live in one document. The cap is now
+  env-tunable (`RAG_DIVERSIFY_DOC_CAP`); measured at 4, 6, and 8, and set
+  to 6.
+
+### Measured results (full 1,157-case gold eval)
+
+| Metric | Before workstreams | After |
+|---|---|---|
+| hit@24 overall | 98.5% | 99.1% |
+| zero-hit cases | 17 | 10 |
+| direct-match hit@24 | 87.5% | 92.9% |
+| recall@10 overall | 96.1% | 95.6% (within noise) |
+
 ## Remaining follow-ups
 
-1. Human review of draft enrichment, then flip `review_status` per section
-   (or per file) to `approved` and re-ingest. Once coverage is reviewed,
-   tighten `RAG_ENRICHMENT_STATUSES=approved`.
-2. Written-works enrichment (11 documents, 1,295 pages) needs an LLM-assisted
-   topical pass plus review; the pages carry no heading metadata, so a
-   deterministic generator would only add noise. The canonical text is fully
-   retrievable in the meantime.
-3. Direct-match recall (79.6% at 10) trails conceptual recall; the trace log
-   plus the 17 zero-hit eval cases in `reports/rag-eval/latest-eval.json`
-   are the starting point for the next tuning round.
+1. Three islam vol 2 sections (iv2-s08/s09/s10) have misaligned summaries
+   and are pinned draft; see `reports/enrichment-review/review-exceptions.json`.
+2. `RAG_ENRICHMENT_STATUSES` can now be tightened to `approved` once you are
+   comfortable dropping those pinned drafts from retrieval.
+3. The remaining 10 zero-hit eval cases are genuine hard retrieval misses in
+   video documents; candidates for a future round (for example verse-level
+   lexical boosts or higher enrichment top-k for those intents).

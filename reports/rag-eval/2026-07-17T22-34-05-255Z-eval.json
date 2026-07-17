@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-17T23:05:05.327Z",
-  "durationMs": 304025,
+  "generatedAt": "2026-07-17T22:34:05.255Z",
+  "durationMs": 209087,
   "options": {
     "topK": 40,
     "topN": 24,
@@ -21,37 +21,37 @@
   "overall": {
     "cases": 1157,
     "meanRecallAt": {
-      "5": 0.7922788821665225,
-      "10": 0.952549697493518,
+      "5": 0.80653990204552,
+      "10": 0.9562950158455779,
       "24": 0.9845289541918755
     },
     "anyHitRateAt": {
-      "5": 0.7994814174589455,
-      "10": 0.9611063094209161,
+      "5": 0.8133102852203976,
+      "10": 0.9645635263612792,
       "24": 0.9913569576490925
     },
-    "mrr": 0.5427458200262514
+    "mrr": 0.5616714784787974
   },
   "byMatchType": {
     "conceptual": {
       "cases": 1045,
       "meanRecallAt": {
-        "5": 0.8089314194577352,
-        "10": 0.9686762360446571,
+        "5": 0.8247208931419457,
+        "10": 0.9725039872408293,
         "24": 0.9935566188197767
       },
       "anyHitRateAt": {
-        "5": 0.8124401913875599,
-        "10": 0.9732057416267943,
+        "5": 0.8277511961722488,
+        "10": 0.9770334928229665,
         "24": 0.9980861244019139
       },
-      "mrr": 0.5475837987642459
+      "mrr": 0.5673879021568665
     },
     "direct": {
       "cases": 112,
       "meanRecallAt": {
         "5": 0.636904761904762,
-        "10": 0.8020833333333334,
+        "10": 0.8050595238095238,
         "24": 0.900297619047619
       },
       "anyHitRateAt": {
@@ -59,7 +59,7 @@
         "10": 0.8482142857142857,
         "24": 0.9285714285714286
       },
-      "mrr": 0.4976057505512088
+      "mrr": 0.5083352039825255
     }
   },
   "missedCases": [
@@ -97,14 +97,14 @@
       "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 5,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -178,23 +178,6 @@
       }
     },
     {
-      "caseId": "audio56-eval-008",
-      "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio56-eval-007",
       "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
@@ -212,11 +195,28 @@
       }
     },
     {
+      "caseId": "audio56-eval-008",
+      "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio56-eval-010",
       "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -233,7 +233,7 @@
       "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -267,7 +267,7 @@
       "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 7,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -284,31 +284,14 @@
       "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 2,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio56-eval-015",
-      "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 6,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -331,11 +314,45 @@
       }
     },
     {
+      "caseId": "audio56-eval-015",
+      "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 6,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio56-eval-016",
       "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio56-eval-017",
+      "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -365,23 +382,6 @@
       }
     },
     {
-      "caseId": "audio56-eval-017",
-      "documentId": "messenger-audio/56 Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio58-eval-002",
       "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
@@ -399,28 +399,11 @@
       }
     },
     {
-      "caseId": "audio58-eval-006",
-      "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 3,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio58-eval-003",
       "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -433,11 +416,11 @@
       }
     },
     {
-      "caseId": "audio58-eval-005",
+      "caseId": "audio58-eval-006",
       "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -467,24 +450,7 @@
       }
     },
     {
-      "caseId": "audio58-eval-010",
-      "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio58-eval-009",
+      "caseId": "audio58-eval-005",
       "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -522,24 +488,24 @@
       "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 10,
+      "firstHitRank": 11,
       "recallAt": {
         "5": 0,
-        "10": 1,
+        "10": 0,
         "24": 1
       },
       "anyHitAt": {
         "5": false,
-        "10": true,
+        "10": false,
         "24": true
       }
     },
     {
-      "caseId": "audio58-eval-011",
+      "caseId": "audio58-eval-009",
       "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -552,11 +518,28 @@
       }
     },
     {
-      "caseId": "audio58-eval-013",
+      "caseId": "audio58-eval-010",
       "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio58-eval-011",
+      "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -598,6 +581,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio58-eval-013",
+      "documentId": "messenger-audio/58 Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -722,8 +722,8 @@
       }
     },
     {
-      "caseId": "audio60-eval-001",
-      "documentId": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
+      "caseId": "audio59-eval-009",
+      "documentId": "messenger-audio/59 Friday Sermon 19 Nov 1982 By Dean Mahmoud",
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 8,
@@ -739,8 +739,8 @@
       }
     },
     {
-      "caseId": "audio59-eval-009",
-      "documentId": "messenger-audio/59 Friday Sermon 19 Nov 1982 By Dean Mahmoud",
+      "caseId": "audio60-eval-001",
+      "documentId": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 8,
@@ -807,11 +807,11 @@
       }
     },
     {
-      "caseId": "audio60-eval-006",
+      "caseId": "audio60-eval-005",
       "documentId": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -824,11 +824,11 @@
       }
     },
     {
-      "caseId": "audio60-eval-005",
+      "caseId": "audio60-eval-006",
       "documentId": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -875,11 +875,11 @@
       }
     },
     {
-      "caseId": "audio60-eval-010",
+      "caseId": "audio60-eval-009",
       "documentId": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -892,11 +892,11 @@
       }
     },
     {
-      "caseId": "audio60-eval-009",
+      "caseId": "audio60-eval-010",
       "documentId": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -964,7 +964,7 @@
       "documentId": "messenger-audio/60 Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 7,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -994,23 +994,6 @@
       }
     },
     {
-      "caseId": "audio61-eval-002",
-      "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio61-eval-001",
       "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
@@ -1023,6 +1006,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio61-eval-002",
+      "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 4,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -1079,11 +1079,11 @@
       }
     },
     {
-      "caseId": "audio61-eval-007",
+      "caseId": "audio61-eval-006",
       "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1096,11 +1096,11 @@
       }
     },
     {
-      "caseId": "audio61-eval-006",
+      "caseId": "audio61-eval-007",
       "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1147,11 +1147,11 @@
       }
     },
     {
-      "caseId": "audio61-eval-011",
+      "caseId": "audio61-eval-010",
       "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1164,11 +1164,11 @@
       }
     },
     {
-      "caseId": "audio61-eval-010",
+      "caseId": "audio61-eval-011",
       "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1236,6 +1236,23 @@
       "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio61-eval-017",
+      "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
       "firstHitRank": 1,
       "recallAt": {
         "5": 1,
@@ -1266,11 +1283,11 @@
       }
     },
     {
-      "caseId": "audio61-eval-017",
-      "documentId": "messenger-audio/61 Friday Sermon 1982 By Dr Rashad Khalifa",
+      "caseId": "audio63-eval-002",
+      "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1283,24 +1300,7 @@
       }
     },
     {
-      "caseId": "audio63-eval-002",
-      "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 7,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio63-eval-003",
+      "caseId": "audio63-eval-001",
       "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -1317,7 +1317,7 @@
       }
     },
     {
-      "caseId": "audio63-eval-001",
+      "caseId": "audio63-eval-003",
       "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -1372,6 +1372,23 @@
       "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio63-eval-008",
+      "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
       "firstHitRank": 2,
       "recallAt": {
         "5": 1,
@@ -1390,40 +1407,6 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio63-eval-008",
-      "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 5,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio63-eval-011",
-      "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1470,11 +1453,28 @@
       }
     },
     {
+      "caseId": "audio63-eval-011",
+      "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio63-eval-012",
       "documentId": "messenger-audio/63 Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1525,7 +1525,7 @@
       "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 7,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -1661,7 +1661,7 @@
       "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1708,23 +1708,6 @@
       }
     },
     {
-      "caseId": "audio66-eval-012",
-      "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio66-eval-013",
       "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
@@ -1742,11 +1725,28 @@
       }
     },
     {
+      "caseId": "audio66-eval-012",
+      "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio66-eval-014",
       "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1763,7 +1763,7 @@
       "documentId": "messenger-audio/66 Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1810,6 +1810,40 @@
       }
     },
     {
+      "caseId": "audio68-eval-001",
+      "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio68-eval-002",
+      "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio68-eval-003",
       "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
@@ -1827,45 +1861,11 @@
       }
     },
     {
-      "caseId": "audio68-eval-002",
-      "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio68-eval-001",
-      "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 6,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio68-eval-004",
       "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1916,7 +1916,7 @@
       "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1933,7 +1933,7 @@
       "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -1967,14 +1967,14 @@
       "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 6,
       "recallAt": {
-        "5": 1,
+        "5": 0,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": true,
+        "5": false,
         "10": true,
         "24": true
       }
@@ -2018,7 +2018,7 @@
       "documentId": "messenger-audio/68 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2069,7 +2069,7 @@
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2086,7 +2086,7 @@
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2116,6 +2116,23 @@
       }
     },
     {
+      "caseId": "audio48-eval-005",
+      "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio48-eval-006",
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
@@ -2133,11 +2150,11 @@
       }
     },
     {
-      "caseId": "audio48-eval-005",
+      "caseId": "audio48-eval-007",
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2201,40 +2218,6 @@
       }
     },
     {
-      "caseId": "audio48-eval-007",
-      "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 5,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio48-eval-012",
-      "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio48-eval-011",
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
@@ -2269,6 +2252,23 @@
       }
     },
     {
+      "caseId": "audio48-eval-012",
+      "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio48-eval-014",
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
@@ -2286,11 +2286,11 @@
       }
     },
     {
-      "caseId": "audio48-eval-016",
+      "caseId": "audio48-eval-015",
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2303,11 +2303,11 @@
       }
     },
     {
-      "caseId": "audio48-eval-015",
+      "caseId": "audio48-eval-016",
       "documentId": "quran-study/48 Quran Study 48 Rashad's Speech Parivash's Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2341,7 +2341,7 @@
       "documentId": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 10,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -2358,24 +2358,7 @@
       "documentId": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio49-eval-003",
-      "documentId": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2389,6 +2372,23 @@
     },
     {
       "caseId": "audio49-eval-004",
+      "documentId": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio49-eval-003",
       "documentId": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -2477,7 +2477,7 @@
       "documentId": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2494,24 +2494,7 @@
       "documentId": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio50-eval-002",
-      "documentId": "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2541,11 +2524,28 @@
       }
     },
     {
+      "caseId": "audio50-eval-002",
+      "documentId": "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 5,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio50-eval-003",
       "documentId": "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2643,23 +2643,6 @@
       }
     },
     {
-      "caseId": "audio50-eval-009",
-      "documentId": "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 7,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio50-eval-010",
       "documentId": "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198",
       "matchType": "conceptual",
@@ -2672,6 +2655,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio50-eval-009",
+      "documentId": "quran-study/50 Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 7,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -2813,11 +2813,11 @@
       }
     },
     {
-      "caseId": "audio51-eval-006",
+      "caseId": "audio51-eval-007",
       "documentId": "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -2830,11 +2830,11 @@
       }
     },
     {
-      "caseId": "audio51-eval-007",
+      "caseId": "audio51-eval-006",
       "documentId": "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3038,24 +3038,7 @@
       "documentId": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio52-eval-002",
-      "documentId": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3072,7 +3055,7 @@
       "documentId": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3085,11 +3068,11 @@
       }
     },
     {
-      "caseId": "audio52-eval-004",
+      "caseId": "audio52-eval-002",
       "documentId": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3106,7 +3089,7 @@
       "documentId": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -3119,18 +3102,35 @@
       }
     },
     {
-      "caseId": "audio52-eval-006",
+      "caseId": "audio52-eval-004",
       "documentId": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 1,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio52-eval-006",
+      "documentId": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -3208,7 +3208,7 @@
       "documentId": "messenger-audio/53 Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3238,7 +3238,7 @@
       }
     },
     {
-      "caseId": "audio53-eval-005",
+      "caseId": "audio53-eval-004",
       "documentId": "messenger-audio/53 Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -3255,7 +3255,7 @@
       }
     },
     {
-      "caseId": "audio53-eval-004",
+      "caseId": "audio53-eval-005",
       "documentId": "messenger-audio/53 Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -3310,14 +3310,14 @@
       "documentId": "messenger-audio/53 Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 5,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -3374,23 +3374,6 @@
       }
     },
     {
-      "caseId": "audio54-eval-003",
-      "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 3,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio54-eval-001",
       "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
@@ -3403,6 +3386,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio54-eval-003",
+      "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -3429,7 +3429,7 @@
       "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3476,7 +3476,7 @@
       }
     },
     {
-      "caseId": "audio54-eval-008",
+      "caseId": "audio54-eval-009",
       "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -3493,7 +3493,7 @@
       }
     },
     {
-      "caseId": "audio54-eval-009",
+      "caseId": "audio54-eval-008",
       "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -3595,23 +3595,6 @@
       }
     },
     {
-      "caseId": "audio54-eval-015",
-      "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 9,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio54-eval-016",
       "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
@@ -3624,6 +3607,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio54-eval-015",
+      "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 9,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -3684,7 +3684,7 @@
       "documentId": "messenger-audio/54 Quran Study 22 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3701,7 +3701,7 @@
       "documentId": "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3731,11 +3731,11 @@
       }
     },
     {
-      "caseId": "audio57-eval-003",
+      "caseId": "audio57-eval-004",
       "documentId": "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3748,11 +3748,11 @@
       }
     },
     {
-      "caseId": "audio57-eval-004",
+      "caseId": "audio57-eval-003",
       "documentId": "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3799,7 +3799,7 @@
       }
     },
     {
-      "caseId": "audio57-eval-007",
+      "caseId": "audio57-eval-008",
       "documentId": "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -3816,7 +3816,7 @@
       }
     },
     {
-      "caseId": "audio57-eval-008",
+      "caseId": "audio57-eval-007",
       "documentId": "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -3854,7 +3854,7 @@
       "documentId": "messenger-audio/57 Quran Study 05 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3905,7 +3905,7 @@
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3956,7 +3956,7 @@
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -3973,14 +3973,14 @@
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 5,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -4007,14 +4007,14 @@
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 2,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -4058,6 +4058,23 @@
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio62-eval-011",
+      "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
       "firstHitRank": 2,
       "recallAt": {
         "5": 1,
@@ -4088,28 +4105,11 @@
       }
     },
     {
-      "caseId": "audio62-eval-011",
-      "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio62-eval-013",
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4126,7 +4126,7 @@
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4194,7 +4194,7 @@
       "documentId": "messenger-audio/62 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4224,23 +4224,6 @@
       }
     },
     {
-      "caseId": "audio64-eval-003",
-      "documentId": "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio64-eval-002",
       "documentId": "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
@@ -4258,11 +4241,11 @@
       }
     },
     {
-      "caseId": "audio64-eval-005",
+      "caseId": "audio64-eval-003",
       "documentId": "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4292,11 +4275,28 @@
       }
     },
     {
+      "caseId": "audio64-eval-005",
+      "documentId": "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio64-eval-006",
       "documentId": "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4415,7 +4415,7 @@
       "documentId": "messenger-audio/64 Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4466,24 +4466,7 @@
       "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio65-eval-004",
-      "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4496,7 +4479,7 @@
       }
     },
     {
-      "caseId": "audio65-eval-006",
+      "caseId": "audio65-eval-004",
       "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -4547,11 +4530,28 @@
       }
     },
     {
+      "caseId": "audio65-eval-006",
+      "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio65-eval-008",
       "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4598,11 +4598,11 @@
       }
     },
     {
-      "caseId": "audio65-eval-011",
+      "caseId": "audio65-eval-012",
       "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4615,11 +4615,11 @@
       }
     },
     {
-      "caseId": "audio65-eval-012",
+      "caseId": "audio65-eval-011",
       "documentId": "messenger-audio/65 Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4687,7 +4687,7 @@
       "documentId": "messenger-audio/67 Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4785,23 +4785,6 @@
       }
     },
     {
-      "caseId": "audio67-eval-009",
-      "documentId": "messenger-audio/67 Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio67-eval-010",
       "documentId": "messenger-audio/67 Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa",
       "matchType": "conceptual",
@@ -4814,6 +4797,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio67-eval-009",
+      "documentId": "messenger-audio/67 Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -4857,7 +4857,7 @@
       "documentId": "messenger-audio/67 Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -4887,23 +4887,6 @@
       }
     },
     {
-      "caseId": "audio69-eval-002",
-      "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 7,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio69-eval-001",
       "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
@@ -4916,6 +4899,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio69-eval-002",
+      "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 7,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -4976,7 +4976,7 @@
       "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5006,7 +5006,7 @@
       }
     },
     {
-      "caseId": "audio69-eval-009",
+      "caseId": "audio69-eval-008",
       "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -5023,11 +5023,11 @@
       }
     },
     {
-      "caseId": "audio69-eval-008",
+      "caseId": "audio69-eval-009",
       "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5095,14 +5095,14 @@
       "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 3,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -5146,20 +5146,37 @@
       "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 3,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
     },
     {
       "caseId": "audio69-eval-017",
+      "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio69-eval-018",
       "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -5193,45 +5210,11 @@
       }
     },
     {
-      "caseId": "audio69-eval-018",
-      "documentId": "messenger-audio/69 Friday Sermon 17 Dec 1982",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz11-eval-002",
       "documentId": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "behrouz11-eval-004",
-      "documentId": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5256,6 +5239,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "behrouz11-eval-004",
+      "documentId": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -5367,7 +5367,7 @@
       "documentId": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -5418,7 +5418,7 @@
       "documentId": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -5435,7 +5435,7 @@
       "documentId": "quran-study/11 Quran Study From Behrouz 111 Sura 23;60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5499,23 +5499,6 @@
       }
     },
     {
-      "caseId": "behrouz12-eval-002",
-      "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 5,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz12-eval-001",
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
@@ -5533,11 +5516,28 @@
       }
     },
     {
+      "caseId": "behrouz12-eval-002",
+      "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 5,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "behrouz12-eval-003",
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5588,14 +5588,14 @@
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 8,
       "recallAt": {
-        "5": 1,
+        "5": 0,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": true,
+        "5": false,
         "10": true,
         "24": true
       }
@@ -5639,7 +5639,7 @@
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5758,7 +5758,7 @@
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5775,7 +5775,7 @@
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5826,7 +5826,7 @@
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -5873,23 +5873,6 @@
       }
     },
     {
-      "caseId": "behrouz12-eval-023",
-      "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 7,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz12-eval-024",
       "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
       "matchType": "conceptual",
@@ -5902,6 +5885,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "behrouz12-eval-023",
+      "documentId": "quran-study/12 Quran Study From Behrouz 212 Behrouz's Khutba Edip Yuksel's Exposure 01 25 1990",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 7,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -5979,7 +5979,7 @@
       "documentId": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6077,11 +6077,11 @@
       }
     },
     {
-      "caseId": "behrouz13-eval-011",
+      "caseId": "behrouz13-eval-012",
       "documentId": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6094,11 +6094,11 @@
       }
     },
     {
-      "caseId": "behrouz13-eval-012",
+      "caseId": "behrouz13-eval-011",
       "documentId": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6234,7 +6234,7 @@
       "documentId": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6281,11 +6281,11 @@
       }
     },
     {
-      "caseId": "behrouz13-eval-023",
+      "caseId": "behrouz13-eval-024",
       "documentId": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6298,11 +6298,11 @@
       }
     },
     {
-      "caseId": "behrouz13-eval-024",
+      "caseId": "behrouz13-eval-023",
       "documentId": "quran-study/13 Quran Study From Behrouz 313 Sura 7;12 By Rashad Adam & Eve's Body 12 24 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6332,23 +6332,6 @@
       }
     },
     {
-      "caseId": "behrouz14-eval-002",
-      "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 7,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz14-eval-003",
       "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
       "matchType": "conceptual",
@@ -6361,6 +6344,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "behrouz14-eval-002",
+      "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 7,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -6400,11 +6400,11 @@
       }
     },
     {
-      "caseId": "behrouz14-eval-006",
+      "caseId": "behrouz14-eval-007",
       "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6417,11 +6417,11 @@
       }
     },
     {
-      "caseId": "behrouz14-eval-007",
+      "caseId": "behrouz14-eval-006",
       "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6502,11 +6502,11 @@
       }
     },
     {
-      "caseId": "behrouz14-eval-013",
+      "caseId": "behrouz14-eval-012",
       "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6519,11 +6519,11 @@
       }
     },
     {
-      "caseId": "behrouz14-eval-012",
+      "caseId": "behrouz14-eval-013",
       "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6625,7 +6625,7 @@
       "documentId": "quran-study/14 Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6774,23 +6774,6 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-007",
-      "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz15-eval-008",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
@@ -6808,11 +6791,11 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-009",
+      "caseId": "behrouz15-eval-007",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -6837,6 +6820,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "behrouz15-eval-009",
+      "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 4,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -6876,6 +6876,23 @@
       }
     },
     {
+      "caseId": "behrouz15-eval-014",
+      "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "behrouz15-eval-013",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
@@ -6893,7 +6910,7 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-014",
+      "caseId": "behrouz15-eval-016",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -6927,7 +6944,7 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-016",
+      "caseId": "behrouz15-eval-017",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -6944,7 +6961,7 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-017",
+      "caseId": "behrouz15-eval-018",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -6978,23 +6995,6 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-018",
-      "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz15-eval-020",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
@@ -7012,11 +7012,11 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-021",
+      "caseId": "behrouz15-eval-022",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7029,7 +7029,7 @@
       }
     },
     {
-      "caseId": "behrouz15-eval-022",
+      "caseId": "behrouz15-eval-021",
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -7101,7 +7101,7 @@
       "documentId": "quran-study/15 Quran Study From Behrouz 515 Sura 54;23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -7199,7 +7199,7 @@
       }
     },
     {
-      "caseId": "behrouz16-eval-006",
+      "caseId": "behrouz16-eval-007",
       "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -7216,7 +7216,7 @@
       }
     },
     {
-      "caseId": "behrouz16-eval-007",
+      "caseId": "behrouz16-eval-006",
       "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -7254,6 +7254,23 @@
       "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "behrouz16-eval-010",
+      "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
+      "matchType": "conceptual",
+      "expectedSections": 1,
       "firstHitRank": 1,
       "recallAt": {
         "5": 1,
@@ -7284,18 +7301,18 @@
       }
     },
     {
-      "caseId": "behrouz16-eval-010",
+      "caseId": "behrouz16-eval-013",
       "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 10,
       "recallAt": {
-        "5": 1,
+        "5": 0,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": true,
+        "5": false,
         "10": true,
         "24": true
       }
@@ -7314,23 +7331,6 @@
       "anyHitAt": {
         "5": false,
         "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "behrouz16-eval-013",
-      "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 11,
-      "recallAt": {
-        "5": 0,
-        "10": 0,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": false,
         "24": true
       }
     },
@@ -7356,7 +7356,7 @@
       "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7390,7 +7390,7 @@
       "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7475,7 +7475,7 @@
       "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7505,11 +7505,11 @@
       }
     },
     {
-      "caseId": "behrouz16-eval-024",
-      "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
+      "caseId": "behrouz17-eval-001",
+      "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7522,11 +7522,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-001",
-      "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
+      "caseId": "behrouz16-eval-024",
+      "documentId": "quran-study/16 Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7556,11 +7556,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-003",
+      "caseId": "behrouz17-eval-004",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7573,11 +7573,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-004",
+      "caseId": "behrouz17-eval-003",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7624,11 +7624,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-007",
+      "caseId": "behrouz17-eval-008",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7641,11 +7641,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-008",
+      "caseId": "behrouz17-eval-007",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7692,11 +7692,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-011",
+      "caseId": "behrouz17-eval-012",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7709,11 +7709,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-012",
+      "caseId": "behrouz17-eval-011",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7760,11 +7760,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-015",
+      "caseId": "behrouz17-eval-016",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7777,11 +7777,11 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-016",
+      "caseId": "behrouz17-eval-015",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -7879,7 +7879,7 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-023",
+      "caseId": "behrouz17-eval-022",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -7896,7 +7896,7 @@
       }
     },
     {
-      "caseId": "behrouz17-eval-022",
+      "caseId": "behrouz17-eval-023",
       "documentId": "quran-study/17 Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -7964,23 +7964,6 @@
       }
     },
     {
-      "caseId": "behrouz18-eval-003",
-      "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 9,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz18-eval-004",
       "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
       "matchType": "conceptual",
@@ -7993,6 +7976,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "behrouz18-eval-003",
+      "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 9,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -8066,6 +8066,23 @@
       }
     },
     {
+      "caseId": "behrouz18-eval-009",
+      "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 4,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "behrouz18-eval-010",
       "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
       "matchType": "conceptual",
@@ -8083,11 +8100,11 @@
       }
     },
     {
-      "caseId": "behrouz18-eval-009",
+      "caseId": "behrouz18-eval-012",
       "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8117,7 +8134,7 @@
       }
     },
     {
-      "caseId": "behrouz18-eval-012",
+      "caseId": "behrouz18-eval-013",
       "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -8135,23 +8152,6 @@
     },
     {
       "caseId": "behrouz18-eval-014",
-      "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "behrouz18-eval-013",
       "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -8206,14 +8206,14 @@
       "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 5,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -8223,7 +8223,7 @@
       "documentId": "quran-study/18 Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8338,11 +8338,11 @@
       }
     },
     {
-      "caseId": "behrouz19-eval-002",
+      "caseId": "behrouz19-eval-001",
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8355,11 +8355,11 @@
       }
     },
     {
-      "caseId": "behrouz19-eval-001",
+      "caseId": "behrouz19-eval-002",
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8423,11 +8423,11 @@
       }
     },
     {
-      "caseId": "behrouz19-eval-007",
+      "caseId": "behrouz19-eval-006",
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8440,11 +8440,11 @@
       }
     },
     {
-      "caseId": "behrouz19-eval-006",
+      "caseId": "behrouz19-eval-007",
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8512,7 +8512,7 @@
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8648,7 +8648,7 @@
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8695,11 +8695,11 @@
       }
     },
     {
-      "caseId": "behrouz19-eval-023",
+      "caseId": "behrouz19-eval-022",
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8712,11 +8712,11 @@
       }
     },
     {
-      "caseId": "behrouz19-eval-022",
+      "caseId": "behrouz19-eval-023",
       "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8763,11 +8763,11 @@
       }
     },
     {
-      "caseId": "behrouz20-eval-001",
-      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
+      "caseId": "behrouz19-eval-026",
+      "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8780,11 +8780,11 @@
       }
     },
     {
-      "caseId": "behrouz19-eval-026",
-      "documentId": "quran-study/19 Quran Study From Behrouz 919 Sura 2;89 119 Witchcraft Reverting Intro To Blue Quran No 13",
+      "caseId": "behrouz20-eval-001",
+      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8818,24 +8818,7 @@
       "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "behrouz20-eval-005",
-      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8853,6 +8836,23 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "behrouz20-eval-005",
+      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8916,11 +8916,11 @@
       }
     },
     {
-      "caseId": "behrouz20-eval-010",
+      "caseId": "behrouz20-eval-009",
       "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8933,11 +8933,11 @@
       }
     },
     {
-      "caseId": "behrouz20-eval-009",
+      "caseId": "behrouz20-eval-010",
       "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -8967,23 +8967,6 @@
       }
     },
     {
-      "caseId": "behrouz20-eval-013",
-      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 5,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "behrouz20-eval-012",
       "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
       "matchType": "conceptual",
@@ -9001,11 +8984,28 @@
       }
     },
     {
+      "caseId": "behrouz20-eval-013",
+      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 5,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "behrouz20-eval-014",
       "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9120,6 +9120,23 @@
       }
     },
     {
+      "caseId": "behrouz20-eval-021",
+      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 4,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio21-eval-001",
       "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
       "matchType": "conceptual",
@@ -9137,8 +9154,8 @@
       }
     },
     {
-      "caseId": "behrouz20-eval-021",
-      "documentId": "quran-study/20 Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry",
+      "caseId": "audio21-eval-002",
+      "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 4,
@@ -9159,23 +9176,6 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 3,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio21-eval-002",
-      "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9209,7 +9209,7 @@
       "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9222,7 +9222,7 @@
       }
     },
     {
-      "caseId": "audio21-eval-006",
+      "caseId": "audio21-eval-007",
       "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -9239,7 +9239,7 @@
       }
     },
     {
-      "caseId": "audio21-eval-007",
+      "caseId": "audio21-eval-006",
       "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -9375,23 +9375,6 @@
       }
     },
     {
-      "caseId": "audio21-eval-016",
-      "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio21-eval-015",
       "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
       "matchType": "conceptual",
@@ -9409,11 +9392,11 @@
       }
     },
     {
-      "caseId": "audio22-eval-001",
-      "documentId": "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl",
+      "caseId": "audio21-eval-016",
+      "documentId": "quran-study/21 Quran Study From Behrouz 1121 Sura 9;52 By Rashad The Hypocrites Apology To Parivash Sura 56;75 B",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9438,6 +9421,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio22-eval-001",
+      "documentId": "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -9698,11 +9698,11 @@
       }
     },
     {
-      "caseId": "audio22-eval-019",
+      "caseId": "audio22-eval-018",
       "documentId": "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9715,11 +9715,11 @@
       }
     },
     {
-      "caseId": "audio22-eval-018",
+      "caseId": "audio22-eval-019",
       "documentId": "quran-study/22 Quran Study From Behrouz 1222 Sura 39;11 By Rashad Admission Test I Don't Compromise With A Littl",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9753,15 +9753,15 @@
       "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 11,
+      "firstHitRank": 10,
       "recallAt": {
         "5": 0,
-        "10": 0,
+        "10": 1,
         "24": 1
       },
       "anyHitAt": {
         "5": false,
-        "10": false,
+        "10": true,
         "24": true
       }
     },
@@ -9804,7 +9804,7 @@
       "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9821,23 +9821,6 @@
       "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio23-eval-007",
-      "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
-      "matchType": "conceptual",
-      "expectedSections": 1,
       "firstHitRank": 6,
       "recallAt": {
         "5": 0,
@@ -9851,11 +9834,11 @@
       }
     },
     {
-      "caseId": "audio23-eval-008",
+      "caseId": "audio23-eval-007",
       "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9873,6 +9856,23 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio23-eval-008",
+      "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9970,11 +9970,11 @@
       }
     },
     {
-      "caseId": "audio23-eval-015",
-      "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
+      "caseId": "audio24-eval-001",
+      "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -9987,11 +9987,11 @@
       }
     },
     {
-      "caseId": "audio24-eval-001",
-      "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
+      "caseId": "audio23-eval-015",
+      "documentId": "quran-study/23 Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10025,7 +10025,7 @@
       "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10042,7 +10042,7 @@
       "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10123,11 +10123,11 @@
       }
     },
     {
-      "caseId": "audio24-eval-009",
+      "caseId": "audio24-eval-010",
       "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10140,18 +10140,18 @@
       }
     },
     {
-      "caseId": "audio24-eval-010",
+      "caseId": "audio24-eval-009",
       "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 3,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -10178,7 +10178,7 @@
       "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10246,15 +10246,15 @@
       "documentId": "quran-study/24 Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 11,
+      "firstHitRank": 10,
       "recallAt": {
         "5": 0,
-        "10": 0,
+        "10": 1,
         "24": 1
       },
       "anyHitAt": {
         "5": false,
-        "10": false,
+        "10": true,
         "24": true
       }
     },
@@ -10382,6 +10382,23 @@
       "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
       "matchType": "conceptual",
       "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio25-eval-007",
+      "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
+      "matchType": "conceptual",
+      "expectedSections": 1,
       "firstHitRank": 1,
       "recallAt": {
         "5": 1,
@@ -10400,23 +10417,6 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio25-eval-007",
-      "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10463,23 +10463,6 @@
       }
     },
     {
-      "caseId": "audio25-eval-012",
-      "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 3,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio25-eval-011",
       "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
       "matchType": "conceptual",
@@ -10497,11 +10480,28 @@
       }
     },
     {
+      "caseId": "audio25-eval-012",
+      "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio25-eval-013",
       "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10518,7 +10518,7 @@
       "documentId": "quran-study/25 Quran Study From Behrouz 1525 Sura 58 By Robert",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -10552,7 +10552,7 @@
       "documentId": "quran-study/26 Quran Study From Behrouz 1626 Sura 67 By Gatut Hamid Argues With Rashad",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 13,
+      "firstHitRank": 12,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -10786,23 +10786,6 @@
       }
     },
     {
-      "caseId": "audio27-eval-001",
-      "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 9,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio27-eval-002",
       "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
       "matchType": "conceptual",
@@ -10815,6 +10798,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio27-eval-001",
+      "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 9,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -10922,11 +10922,11 @@
       }
     },
     {
-      "caseId": "audio27-eval-009",
+      "caseId": "audio27-eval-010",
       "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 9,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -10939,11 +10939,11 @@
       }
     },
     {
-      "caseId": "audio27-eval-010",
+      "caseId": "audio27-eval-009",
       "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 10,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -10994,14 +10994,14 @@
       "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 5,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -11058,11 +11058,11 @@
       }
     },
     {
-      "caseId": "audio27-eval-017",
+      "caseId": "audio27-eval-018",
       "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11075,11 +11075,11 @@
       }
     },
     {
-      "caseId": "audio27-eval-018",
+      "caseId": "audio27-eval-017",
       "documentId": "quran-study/27 Quran Study From Behrouz 1727 Sura 14;19 Chastity Premarital Pregnancy Sura 17;47 We Are Allowed",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11126,23 +11126,6 @@
       }
     },
     {
-      "caseId": "audio28-eval-001",
-      "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio28-eval-002",
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
@@ -11155,6 +11138,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio28-eval-001",
+      "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -11181,7 +11181,7 @@
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11215,14 +11215,14 @@
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 4,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -11232,7 +11232,7 @@
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11266,7 +11266,7 @@
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11279,11 +11279,11 @@
       }
     },
     {
-      "caseId": "audio28-eval-011",
+      "caseId": "audio28-eval-010",
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 9,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -11296,11 +11296,11 @@
       }
     },
     {
-      "caseId": "audio28-eval-010",
+      "caseId": "audio28-eval-011",
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -11330,11 +11330,11 @@
       }
     },
     {
-      "caseId": "audio28-eval-013",
+      "caseId": "audio28-eval-014",
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11347,11 +11347,11 @@
       }
     },
     {
-      "caseId": "audio28-eval-014",
+      "caseId": "audio28-eval-013",
       "documentId": "quran-study/28 Quran Study From Parivash 128 Sura 45;33 Parivash's Home 19 Math",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11436,7 +11436,7 @@
       "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11500,23 +11500,6 @@
       }
     },
     {
-      "caseId": "audio29-eval-006",
-      "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio29-eval-005",
       "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
@@ -11534,11 +11517,28 @@
       }
     },
     {
+      "caseId": "audio29-eval-006",
+      "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio29-eval-007",
       "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -11555,7 +11555,7 @@
       "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11572,7 +11572,7 @@
       "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11589,7 +11589,7 @@
       "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11623,14 +11623,14 @@
       "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 5,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -11704,11 +11704,11 @@
       }
     },
     {
-      "caseId": "audio29-eval-017",
-      "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
+      "caseId": "audio30-eval-001",
+      "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11721,11 +11721,11 @@
       }
     },
     {
-      "caseId": "audio30-eval-001",
-      "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
+      "caseId": "audio29-eval-017",
+      "documentId": "quran-study/29 Quran Study From Parivash 229 Mehri's Questions Admission Test & Final Test Tucson 1985",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11759,7 +11759,7 @@
       "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -11767,23 +11767,6 @@
       },
       "anyHitAt": {
         "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio30-eval-004",
-      "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
         "10": true,
         "24": true
       }
@@ -11806,11 +11789,11 @@
       }
     },
     {
-      "caseId": "audio30-eval-006",
+      "caseId": "audio30-eval-004",
       "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11823,11 +11806,11 @@
       }
     },
     {
-      "caseId": "audio30-eval-008",
+      "caseId": "audio30-eval-006",
       "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11862,6 +11845,23 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 4,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio30-eval-008",
+      "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11959,11 +11959,28 @@
       }
     },
     {
+      "caseId": "audio30-eval-016",
+      "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio30-eval-015",
       "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -11993,28 +12010,11 @@
       }
     },
     {
-      "caseId": "audio30-eval-016",
-      "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio30-eval-018",
       "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -12099,7 +12099,7 @@
       "documentId": "quran-study/30 Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45;33 Rashad Was Told To",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -12197,24 +12197,24 @@
       }
     },
     {
-      "caseId": "audio31-eval-005",
+      "caseId": "audio31-eval-006",
       "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 3,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
     },
     {
-      "caseId": "audio31-eval-006",
+      "caseId": "audio31-eval-005",
       "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -12252,31 +12252,14 @@
       "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 12,
+      "firstHitRank": 9,
       "recallAt": {
         "5": 0,
-        "10": 0,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": false,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio31-eval-009",
-      "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": true,
+        "5": false,
         "10": true,
         "24": true
       }
@@ -12294,6 +12277,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio31-eval-009",
+      "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 4,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -12354,24 +12354,7 @@
       "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio31-eval-015",
-      "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12396,6 +12379,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio31-eval-015",
+      "documentId": "quran-study/31 Quran Study From Parivash 431 Sura 18;98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -12435,11 +12435,11 @@
       }
     },
     {
-      "caseId": "audio32-eval-002",
+      "caseId": "audio32-eval-003",
       "documentId": "quran-study/32 Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12452,11 +12452,11 @@
       }
     },
     {
-      "caseId": "audio32-eval-003",
+      "caseId": "audio32-eval-002",
       "documentId": "quran-study/32 Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12524,14 +12524,14 @@
       "documentId": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 6,
       "recallAt": {
-        "5": 1,
+        "5": 0,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": true,
+        "5": false,
         "10": true,
         "24": true
       }
@@ -12588,11 +12588,11 @@
       }
     },
     {
-      "caseId": "audio33-eval-005",
+      "caseId": "audio33-eval-006",
       "documentId": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12605,11 +12605,11 @@
       }
     },
     {
-      "caseId": "audio33-eval-006",
+      "caseId": "audio33-eval-005",
       "documentId": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12677,7 +12677,7 @@
       "documentId": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12724,23 +12724,6 @@
       }
     },
     {
-      "caseId": "audio33-eval-013",
-      "documentId": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 10,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio33-eval-014",
       "documentId": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
       "matchType": "conceptual",
@@ -12753,6 +12736,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio33-eval-013",
+      "documentId": "quran-study/33 Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 10,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -12813,7 +12813,7 @@
       "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12847,7 +12847,7 @@
       "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -12864,7 +12864,7 @@
       "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -12983,7 +12983,7 @@
       "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13000,14 +13000,14 @@
       "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 5,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -13064,6 +13064,23 @@
       }
     },
     {
+      "caseId": "audio34-eval-016",
+      "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 7,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio34-eval-017",
       "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
       "matchType": "conceptual",
@@ -13081,28 +13098,11 @@
       }
     },
     {
-      "caseId": "audio34-eval-016",
-      "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 8,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio34-eval-018",
       "documentId": "quran-study/34 Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 10,
+      "firstHitRank": 9,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -13183,23 +13183,6 @@
       }
     },
     {
-      "caseId": "audio35-eval-006",
-      "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 8,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio35-eval-005",
       "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
       "matchType": "conceptual",
@@ -13212,6 +13195,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio35-eval-006",
+      "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 7,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -13251,11 +13251,11 @@
       }
     },
     {
-      "caseId": "audio35-eval-010",
+      "caseId": "audio35-eval-009",
       "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13268,11 +13268,11 @@
       }
     },
     {
-      "caseId": "audio35-eval-009",
+      "caseId": "audio35-eval-010",
       "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13323,7 +13323,7 @@
       "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -13353,23 +13353,6 @@
       }
     },
     {
-      "caseId": "audio35-eval-015",
-      "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio35-eval-016",
       "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
       "matchType": "conceptual",
@@ -13387,7 +13370,7 @@
       }
     },
     {
-      "caseId": "audio35-eval-018",
+      "caseId": "audio35-eval-015",
       "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -13421,11 +13404,11 @@
       }
     },
     {
-      "caseId": "audio35-eval-019",
+      "caseId": "audio35-eval-018",
       "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13442,7 +13425,24 @@
       "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio35-eval-019",
+      "documentId": "quran-study/35 Quran Study From Parivash 835 Sura 30;25 Miracle Coming Out Of Biggest Brewery Intercession Alleg",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13476,7 +13476,7 @@
       "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13493,7 +13493,7 @@
       "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 7,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -13523,11 +13523,11 @@
       }
     },
     {
-      "caseId": "audio36-eval-007",
+      "caseId": "audio36-eval-006",
       "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13540,11 +13540,11 @@
       }
     },
     {
-      "caseId": "audio36-eval-006",
+      "caseId": "audio36-eval-007",
       "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13591,23 +13591,6 @@
       }
     },
     {
-      "caseId": "audio36-eval-011",
-      "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 3,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio36-eval-010",
       "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
       "matchType": "conceptual",
@@ -13621,6 +13604,23 @@
       "anyHitAt": {
         "5": false,
         "10": false,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio36-eval-011",
+      "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
         "24": true
       }
     },
@@ -13659,11 +13659,11 @@
       }
     },
     {
-      "caseId": "audio37-eval-001",
-      "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
+      "caseId": "audio36-eval-014",
+      "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13676,11 +13676,11 @@
       }
     },
     {
-      "caseId": "audio36-eval-014",
-      "documentId": "quran-study/36 Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi",
+      "caseId": "audio37-eval-001",
+      "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13731,7 +13731,7 @@
       "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13748,7 +13748,7 @@
       "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13765,14 +13765,14 @@
       "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 4,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -13833,7 +13833,7 @@
       "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -13901,7 +13901,7 @@
       "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13918,7 +13918,7 @@
       "documentId": "quran-study/37 Quran Study From Parivash 1037 Shakira's Home Sura 11;68 11 04 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -13952,7 +13952,7 @@
       "documentId": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14020,7 +14020,7 @@
       "documentId": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14088,7 +14088,7 @@
       "documentId": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14105,7 +14105,7 @@
       "documentId": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14190,7 +14190,7 @@
       "documentId": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14207,7 +14207,7 @@
       "documentId": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14241,7 +14241,7 @@
       "documentId": "quran-study/38 Quran Study From Parivash 1138 Certainty 11 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -14258,7 +14258,7 @@
       "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14441,23 +14441,6 @@
       }
     },
     {
-      "caseId": "audio39-eval-012",
-      "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 5,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio39-eval-013",
       "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
       "matchType": "conceptual",
@@ -14475,7 +14458,7 @@
       }
     },
     {
-      "caseId": "audio39-eval-014",
+      "caseId": "audio39-eval-012",
       "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -14487,6 +14470,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio39-eval-014",
+      "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 7,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -14662,11 +14662,11 @@
       }
     },
     {
-      "caseId": "audio40-eval-001",
-      "documentId": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
+      "caseId": "audio39-eval-025",
+      "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14679,11 +14679,11 @@
       }
     },
     {
-      "caseId": "audio39-eval-025",
-      "documentId": "quran-study/39 Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28",
+      "caseId": "audio40-eval-001",
+      "documentId": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14747,11 +14747,11 @@
       }
     },
     {
-      "caseId": "audio40-eval-006",
+      "caseId": "audio40-eval-005",
       "documentId": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14764,11 +14764,11 @@
       }
     },
     {
-      "caseId": "audio40-eval-005",
+      "caseId": "audio40-eval-006",
       "documentId": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14870,7 +14870,7 @@
       "documentId": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -14921,7 +14921,7 @@
       "documentId": "quran-study/40 Quran Study From Parivash 1340 Sura 3;59 12 29 1989",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -14972,7 +14972,7 @@
       "documentId": "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 9,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -14989,7 +14989,7 @@
       "documentId": "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 9,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -15023,7 +15023,7 @@
       "documentId": "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15087,23 +15087,6 @@
       }
     },
     {
-      "caseId": "audio41-eval-010",
-      "documentId": "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio41-eval-009",
       "documentId": "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari",
       "matchType": "conceptual",
@@ -15116,6 +15099,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio41-eval-010",
+      "documentId": "quran-study/41 Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -15172,7 +15172,7 @@
       }
     },
     {
-      "caseId": "audio42-eval-001",
+      "caseId": "audio42-eval-002",
       "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -15189,11 +15189,11 @@
       }
     },
     {
-      "caseId": "audio42-eval-002",
+      "caseId": "audio42-eval-001",
       "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15240,11 +15240,11 @@
       }
     },
     {
-      "caseId": "audio42-eval-005",
+      "caseId": "audio42-eval-006",
       "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15257,11 +15257,11 @@
       }
     },
     {
-      "caseId": "audio42-eval-006",
+      "caseId": "audio42-eval-005",
       "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15329,7 +15329,7 @@
       "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15376,28 +15376,28 @@
       }
     },
     {
-      "caseId": "audio42-eval-013",
-      "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 7,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio42-eval-014",
       "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio42-eval-013",
+      "documentId": "quran-study/42 Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15444,7 +15444,7 @@
       }
     },
     {
-      "caseId": "audio43-eval-003",
+      "caseId": "audio43-eval-004",
       "documentId": "quran-study/43 Quran Study From Roxana 243 Third International Conference Tucson Rashad's Speech Sura 17;39 Insu",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -15461,7 +15461,7 @@
       }
     },
     {
-      "caseId": "audio43-eval-004",
+      "caseId": "audio43-eval-003",
       "documentId": "quran-study/43 Quran Study From Roxana 243 Third International Conference Tucson Rashad's Speech Sura 17;39 Insu",
       "matchType": "conceptual",
       "expectedSections": 1,
@@ -15652,7 +15652,7 @@
       "documentId": "quran-study/43 Quran Study From Roxana 243 Third International Conference Tucson Rashad's Speech Sura 17;39 Insu",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15716,11 +15716,11 @@
       }
     },
     {
-      "caseId": "audio44-eval-002",
+      "caseId": "audio44-eval-003",
       "documentId": "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15733,11 +15733,11 @@
       }
     },
     {
-      "caseId": "audio44-eval-003",
+      "caseId": "audio44-eval-002",
       "documentId": "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -15771,7 +15771,7 @@
       "documentId": "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -15805,7 +15805,7 @@
       "documentId": "quran-study/44 Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 12,
+      "firstHitRank": 11,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -15920,6 +15920,23 @@
       }
     },
     {
+      "caseId": "audio45-eval-003",
+      "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 5,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio45-eval-002",
       "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
       "matchType": "conceptual",
@@ -15942,23 +15959,6 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio45-eval-003",
-      "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16043,24 +16043,7 @@
       "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 6,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "audio45-eval-010",
-      "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16078,6 +16061,23 @@
       "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio45-eval-010",
+      "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16111,15 +16111,15 @@
       "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 11,
+      "firstHitRank": 10,
       "recallAt": {
         "5": 0,
-        "10": 0,
+        "10": 1,
         "24": 1
       },
       "anyHitAt": {
         "5": false,
-        "10": false,
+        "10": true,
         "24": true
       }
     },
@@ -16141,11 +16141,11 @@
       }
     },
     {
-      "caseId": "audio46-eval-001",
-      "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
+      "caseId": "audio45-eval-014",
+      "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16158,11 +16158,11 @@
       }
     },
     {
-      "caseId": "audio45-eval-014",
-      "documentId": "quran-study/45 Quran Study From Roxana 445 Sura 40 By Rashad Firoz's Home Deja Vu Believers Usually 95 Yrs Old F",
+      "caseId": "audio46-eval-001",
+      "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16196,7 +16196,7 @@
       "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16277,23 +16277,6 @@
       }
     },
     {
-      "caseId": "audio46-eval-008",
-      "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio46-eval-009",
       "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
       "matchType": "conceptual",
@@ -16306,6 +16289,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio46-eval-008",
+      "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -16328,11 +16328,11 @@
       }
     },
     {
-      "caseId": "audio46-eval-012",
+      "caseId": "audio46-eval-011",
       "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16345,11 +16345,11 @@
       }
     },
     {
-      "caseId": "audio46-eval-011",
+      "caseId": "audio46-eval-012",
       "documentId": "quran-study/46 Quran Study From Roxana 546 Sura 37;159 To 38;25 Sura 9;50 & Sura 39;11 Admission Test I Don't Co",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16434,7 +16434,7 @@
       "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 5,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16485,7 +16485,7 @@
       "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16515,23 +16515,6 @@
       }
     },
     {
-      "caseId": "audio47-eval-006",
-      "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 2,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio47-eval-007",
       "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
       "matchType": "conceptual",
@@ -16544,6 +16527,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "audio47-eval-006",
+      "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 2,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -16583,23 +16583,6 @@
       }
     },
     {
-      "caseId": "audio47-eval-010",
-      "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "audio47-eval-011",
       "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
       "matchType": "conceptual",
@@ -16617,11 +16600,28 @@
       }
     },
     {
+      "caseId": "audio47-eval-010",
+      "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 6,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "audio47-eval-012",
       "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16655,15 +16655,15 @@
       "documentId": "quran-study/47 Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 10,
+      "firstHitRank": 11,
       "recallAt": {
         "5": 0,
-        "10": 1,
+        "10": 0,
         "24": 1
       },
       "anyHitAt": {
         "5": false,
-        "10": true,
+        "10": false,
         "24": true
       }
     },
@@ -16825,7 +16825,7 @@
       "documentId": "messenger-audio/55 Zikr 23 Oct 1982 By Dr Rashad Khalifa",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16927,7 +16927,7 @@
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -16995,7 +16995,7 @@
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
       "expectedSections": 2,
-      "firstHitRank": 15,
+      "firstHitRank": 16,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -17076,23 +17076,6 @@
       }
     },
     {
-      "caseId": "mathquran-01-eval-013",
-      "documentId": "video-program/mathematical-miracle-of-quran",
-      "matchType": "direct",
-      "expectedSections": 1,
-      "firstHitRank": 5,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "mathquran-01-eval-014",
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
@@ -17127,6 +17110,23 @@
       }
     },
     {
+      "caseId": "mathquran-01-eval-013",
+      "documentId": "video-program/mathematical-miracle-of-quran",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 5,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "mathquran-01-eval-016",
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
@@ -17144,11 +17144,11 @@
       }
     },
     {
-      "caseId": "mathquran-01-eval-017",
+      "caseId": "mathquran-01-eval-018",
       "documentId": "video-program/mathematical-miracle-of-quran",
-      "matchType": "conceptual",
+      "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 7,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -17161,11 +17161,11 @@
       }
     },
     {
-      "caseId": "mathquran-01-eval-018",
+      "caseId": "mathquran-01-eval-017",
       "documentId": "video-program/mathematical-miracle-of-quran",
-      "matchType": "direct",
+      "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -17199,7 +17199,7 @@
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -17267,31 +17267,14 @@
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 10,
+      "firstHitRank": 4,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "mathquran-01-eval-025",
-      "documentId": "video-program/mathematical-miracle-of-quran",
-      "matchType": "conceptual",
-      "expectedSections": 1,
-      "firstHitRank": 6,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -17309,6 +17292,23 @@
       },
       "anyHitAt": {
         "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "mathquran-01-eval-025",
+      "documentId": "video-program/mathematical-miracle-of-quran",
+      "matchType": "conceptual",
+      "expectedSections": 1,
+      "firstHitRank": 6,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
         "10": true,
         "24": true
       }
@@ -17335,14 +17335,14 @@
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 4,
       "recallAt": {
-        "5": 0,
+        "5": 1,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": false,
+        "5": true,
         "10": true,
         "24": true
       }
@@ -17403,7 +17403,7 @@
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -17420,7 +17420,7 @@
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 3,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -17450,23 +17450,6 @@
       }
     },
     {
-      "caseId": "mathquran-01-eval-035",
-      "documentId": "video-program/mathematical-miracle-of-quran",
-      "matchType": "direct",
-      "expectedSections": 1,
-      "firstHitRank": 3,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "mathquran-01-eval-036",
       "documentId": "video-program/mathematical-miracle-of-quran",
       "matchType": "direct",
@@ -17481,6 +17464,23 @@
         "5": false,
         "10": false,
         "24": false
+      }
+    },
+    {
+      "caseId": "mathquran-01-eval-035",
+      "documentId": "video-program/mathematical-miracle-of-quran",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 3,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
       }
     },
     {
@@ -17709,7 +17709,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "conceptual",
       "expectedSections": 3,
-      "firstHitRank": 9,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 0.3333333333333333,
@@ -17807,23 +17807,6 @@
       }
     },
     {
-      "caseId": "messenger-01-eval-021",
-      "documentId": "video-program/old-message-new-messenger",
-      "matchType": "direct",
-      "expectedSections": 1,
-      "firstHitRank": 4,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "messenger-01-eval-020",
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "direct",
@@ -17837,6 +17820,23 @@
       "anyHitAt": {
         "5": false,
         "10": false,
+        "24": true
+      }
+    },
+    {
+      "caseId": "messenger-01-eval-021",
+      "documentId": "video-program/old-message-new-messenger",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 4,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
         "24": true
       }
     },
@@ -17909,11 +17909,11 @@
       }
     },
     {
-      "caseId": "messenger-01-eval-027",
+      "caseId": "messenger-01-eval-026",
       "documentId": "video-program/old-message-new-messenger",
-      "matchType": "conceptual",
+      "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -17926,11 +17926,11 @@
       }
     },
     {
-      "caseId": "messenger-01-eval-026",
+      "caseId": "messenger-01-eval-027",
       "documentId": "video-program/old-message-new-messenger",
-      "matchType": "direct",
+      "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 7,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -17964,7 +17964,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -17998,7 +17998,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 10,
+      "firstHitRank": 9,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -18015,7 +18015,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "direct",
       "expectedSections": 2,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 0.5,
         "10": 0.5,
@@ -18049,7 +18049,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 6,
+      "firstHitRank": 7,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -18066,7 +18066,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "conceptual",
       "expectedSections": 2,
-      "firstHitRank": 5,
+      "firstHitRank": 4,
       "recallAt": {
         "5": 0.5,
         "10": 0.5,
@@ -18083,7 +18083,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "direct",
       "expectedSections": 2,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 0.5,
         "10": 0.5,
@@ -18117,7 +18117,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 8,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -18134,7 +18134,7 @@
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 8,
+      "firstHitRank": 9,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -18181,23 +18181,6 @@
       }
     },
     {
-      "caseId": "life-01-eval-001",
-      "documentId": "video-program/what-is-life-all-about",
-      "matchType": "direct",
-      "expectedSections": 1,
-      "firstHitRank": 6,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "messenger-01-eval-042",
       "documentId": "video-program/old-message-new-messenger",
       "matchType": "conceptual",
@@ -18215,11 +18198,28 @@
       }
     },
     {
+      "caseId": "life-01-eval-001",
+      "documentId": "video-program/what-is-life-all-about",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 6,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "life-01-eval-002",
       "documentId": "video-program/what-is-life-all-about",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
         "10": 1,
@@ -18355,7 +18355,7 @@
       "documentId": "video-program/what-is-life-all-about",
       "matchType": "conceptual",
       "expectedSections": 2,
-      "firstHitRank": 14,
+      "firstHitRank": 15,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -18372,7 +18372,24 @@
       "documentId": "video-program/what-is-life-all-about",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 11,
+      "firstHitRank": 8,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "life-01-eval-012",
+      "documentId": "video-program/what-is-life-all-about",
+      "matchType": "conceptual",
+      "expectedSections": 2,
+      "firstHitRank": 13,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -18399,23 +18416,6 @@
         "5": false,
         "10": false,
         "24": false
-      }
-    },
-    {
-      "caseId": "life-01-eval-012",
-      "documentId": "video-program/what-is-life-all-about",
-      "matchType": "conceptual",
-      "expectedSections": 2,
-      "firstHitRank": 13,
-      "recallAt": {
-        "5": 0,
-        "10": 0,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": false,
-        "24": true
       }
     },
     {
@@ -18508,7 +18508,7 @@
       "documentId": "video-program/what-is-life-all-about",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 12,
+      "firstHitRank": 13,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -18538,7 +18538,7 @@
       }
     },
     {
-      "caseId": "life-01-eval-022",
+      "caseId": "life-01-eval-021",
       "documentId": "video-program/what-is-life-all-about",
       "matchType": "direct",
       "expectedSections": 1,
@@ -18555,7 +18555,7 @@
       }
     },
     {
-      "caseId": "life-01-eval-021",
+      "caseId": "life-01-eval-022",
       "documentId": "video-program/what-is-life-all-about",
       "matchType": "direct",
       "expectedSections": 1,
@@ -18627,7 +18627,7 @@
       "documentId": "video-program/who-is-god",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 3,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -18691,10 +18691,10 @@
       }
     },
     {
-      "caseId": "god-01-eval-007",
+      "caseId": "god-01-eval-006",
       "documentId": "video-program/who-is-god",
       "matchType": "direct",
-      "expectedSections": 1,
+      "expectedSections": 2,
       "firstHitRank": 1,
       "recallAt": {
         "5": 1,
@@ -18708,10 +18708,10 @@
       }
     },
     {
-      "caseId": "god-01-eval-006",
+      "caseId": "god-01-eval-007",
       "documentId": "video-program/who-is-god",
       "matchType": "direct",
-      "expectedSections": 2,
+      "expectedSections": 1,
       "firstHitRank": 1,
       "recallAt": {
         "5": 1,
@@ -18793,7 +18793,7 @@
       }
     },
     {
-      "caseId": "god-01-eval-012",
+      "caseId": "god-01-eval-013",
       "documentId": "video-program/who-is-god",
       "matchType": "direct",
       "expectedSections": 1,
@@ -18810,7 +18810,7 @@
       }
     },
     {
-      "caseId": "god-01-eval-013",
+      "caseId": "god-01-eval-012",
       "documentId": "video-program/who-is-god",
       "matchType": "direct",
       "expectedSections": 1,
@@ -18878,11 +18878,11 @@
       }
     },
     {
-      "caseId": "god-01-eval-018",
+      "caseId": "god-01-eval-017",
       "documentId": "video-program/who-is-god",
-      "matchType": "direct",
+      "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -18895,11 +18895,11 @@
       }
     },
     {
-      "caseId": "god-01-eval-017",
+      "caseId": "god-01-eval-018",
       "documentId": "video-program/who-is-god",
-      "matchType": "conceptual",
+      "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -18946,23 +18946,6 @@
       }
     },
     {
-      "caseId": "god-01-eval-022",
-      "documentId": "video-program/who-is-god",
-      "matchType": "conceptual",
-      "expectedSections": 2,
-      "firstHitRank": 9,
-      "recallAt": {
-        "5": 0,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "god-01-eval-021",
       "documentId": "video-program/who-is-god",
       "matchType": "conceptual",
@@ -18980,10 +18963,10 @@
       }
     },
     {
-      "caseId": "god-01-eval-023",
+      "caseId": "god-01-eval-022",
       "documentId": "video-program/who-is-god",
-      "matchType": "direct",
-      "expectedSections": 1,
+      "matchType": "conceptual",
+      "expectedSections": 2,
       "firstHitRank": 9,
       "recallAt": {
         "5": 0,
@@ -18997,14 +18980,31 @@
       }
     },
     {
+      "caseId": "god-01-eval-023",
+      "documentId": "video-program/who-is-god",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 15,
+      "recallAt": {
+        "5": 0,
+        "10": 0,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
+        "10": false,
+        "24": true
+      }
+    },
+    {
       "caseId": "god-01-eval-024",
       "documentId": "video-program/who-is-god",
       "matchType": "direct",
       "expectedSections": 3,
-      "firstHitRank": 7,
+      "firstHitRank": 6,
       "recallAt": {
         "5": 0,
-        "10": 0.6666666666666666,
+        "10": 1,
         "24": 1
       },
       "anyHitAt": {
@@ -19150,23 +19150,6 @@
       }
     },
     {
-      "caseId": "miracle-01-eval-004",
-      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
-      "matchType": "direct",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "miracle-01-eval-003",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "direct",
@@ -19179,6 +19162,23 @@
       },
       "anyHitAt": {
         "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
+      "caseId": "miracle-01-eval-004",
+      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
         "10": true,
         "24": true
       }
@@ -19256,7 +19256,7 @@
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "conceptual",
       "expectedSections": 2,
-      "firstHitRank": 14,
+      "firstHitRank": 15,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -19290,7 +19290,7 @@
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 23,
+      "firstHitRank": 24,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -19320,6 +19320,23 @@
       }
     },
     {
+      "caseId": "miracle-01-eval-013",
+      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 6,
+      "recallAt": {
+        "5": 0,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": false,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "miracle-01-eval-014",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "direct",
@@ -19337,18 +19354,18 @@
       }
     },
     {
-      "caseId": "miracle-01-eval-013",
+      "caseId": "miracle-01-eval-016",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 5,
+      "firstHitRank": 10,
       "recallAt": {
-        "5": 1,
+        "5": 0,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": true,
+        "5": false,
         "10": true,
         "24": true
       }
@@ -19358,7 +19375,7 @@
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -19367,23 +19384,6 @@
       "anyHitAt": {
         "5": true,
         "10": true,
-        "24": true
-      }
-    },
-    {
-      "caseId": "miracle-01-eval-016",
-      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
-      "matchType": "direct",
-      "expectedSections": 1,
-      "firstHitRank": 16,
-      "recallAt": {
-        "5": 0,
-        "10": 0,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": false,
-        "10": false,
         "24": true
       }
     },
@@ -19409,7 +19409,7 @@
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 13,
+      "firstHitRank": 12,
       "recallAt": {
         "5": 0,
         "10": 0,
@@ -19422,11 +19422,11 @@
       }
     },
     {
-      "caseId": "miracle-01-eval-019",
+      "caseId": "miracle-01-eval-020",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
-      "matchType": "direct",
+      "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 2,
+      "firstHitRank": 1,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -19439,11 +19439,11 @@
       }
     },
     {
-      "caseId": "miracle-01-eval-020",
+      "caseId": "miracle-01-eval-019",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
-      "matchType": "conceptual",
+      "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -19541,23 +19541,6 @@
       }
     },
     {
-      "caseId": "miracle-01-eval-026",
-      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
-      "matchType": "direct",
-      "expectedSections": 1,
-      "firstHitRank": 1,
-      "recallAt": {
-        "5": 1,
-        "10": 1,
-        "24": 1
-      },
-      "anyHitAt": {
-        "5": true,
-        "10": true,
-        "24": true
-      }
-    },
-    {
       "caseId": "miracle-01-eval-027",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "direct",
@@ -19575,11 +19558,28 @@
       }
     },
     {
+      "caseId": "miracle-01-eval-026",
+      "documentId": "video-program/witness-a-miracle-world-news-bulletin",
+      "matchType": "direct",
+      "expectedSections": 1,
+      "firstHitRank": 1,
+      "recallAt": {
+        "5": 1,
+        "10": 1,
+        "24": 1
+      },
+      "anyHitAt": {
+        "5": true,
+        "10": true,
+        "24": true
+      }
+    },
+    {
       "caseId": "miracle-01-eval-028",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "conceptual",
       "expectedSections": 1,
-      "firstHitRank": 1,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -19596,14 +19596,14 @@
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
       "matchType": "conceptual",
       "expectedSections": 2,
-      "firstHitRank": 5,
+      "firstHitRank": 6,
       "recallAt": {
-        "5": 0.5,
+        "5": 0,
         "10": 1,
         "24": 1
       },
       "anyHitAt": {
-        "5": true,
+        "5": false,
         "10": true,
         "24": true
       }
@@ -19694,11 +19694,11 @@
       }
     },
     {
-      "caseId": "miracle-01-eval-036",
+      "caseId": "miracle-01-eval-035",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
-      "matchType": "conceptual",
+      "matchType": "direct",
       "expectedSections": 1,
-      "firstHitRank": 4,
+      "firstHitRank": 2,
       "recallAt": {
         "5": 1,
         "10": 1,
@@ -19711,9 +19711,9 @@
       }
     },
     {
-      "caseId": "miracle-01-eval-035",
+      "caseId": "miracle-01-eval-036",
       "documentId": "video-program/witness-a-miracle-world-news-bulletin",
-      "matchType": "direct",
+      "matchType": "conceptual",
       "expectedSections": 1,
       "firstHitRank": 2,
       "recallAt": {
