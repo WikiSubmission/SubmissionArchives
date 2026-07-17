@@ -29,7 +29,8 @@
     "rag:rebuild": "npm run rag:validate-enrichment && npm run rag:migrate && npm run rag:ingest && npm run rag:verify",
     "rag:validate-enrichment": "tsx scripts/rag/validate-enrichment.ts",
     "rag:plan": "tsx scripts/rag/plan-ingest.ts",
-    "rag:eval": "tsx --conditions=react-server scripts/rag/run-eval.ts"
+    "rag:eval": "tsx --conditions=react-server scripts/rag/run-eval.ts",
+    "rag:answer-eval": "tsx --conditions=react-server scripts/rag/run-answer-eval.ts"
   },
   "dependencies": {
     "@mistralai/mistralai": "^2.4.1",
