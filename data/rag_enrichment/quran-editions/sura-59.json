@@ -45,50 +45,9 @@
       ],
       "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
       "source_segment_start": 0,
-      "source_segment_end": 0,
+      "source_segment_end": 2,
       "page_start": 1,
       "page_end": 1,
-      "review_status": "draft"
-    },
-    {
-      "id": "s24",
-      "title": "59:24 wording revised between the 1989 and 1992 editions",
-      "summary": "The English wording of 59:24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He is the One GOD; the Creator, the Initiator, the Designer. To Him belong the most beautiful names. Glorifyin...\". 1992 final reading begins \"He is the One GOD; the Creator, the Initiator, the Designer. To Him belong the most beautiful names. Glorifyin...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
-      "section_kind": "translation-evolution",
-      "concepts": [
-        {
-          "id": "translation-evolution",
-          "relation": "described",
-          "explicit": true
-        },
-        {
-          "id": "quran-editions",
-          "relation": "described",
-          "explicit": true
-        }
-      ],
-      "user_terms": [
-        "59:24",
-        "Quran 59:24",
-        "sura 59 verse 24",
-        "59:24",
-        "translation change",
-        "earlier translation",
-        "edition difference"
-      ],
-      "related_questions": [
-        "How did the translation of 59:24 change between 1989 and 1992?",
-        "What is the final 1992 wording of 59:24?",
-        "Did Rashad Khalifa revise 59:24 in the final edition?"
-      ],
-      "quran_references": [
-        "59:24"
-      ],
-      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
-      "source_segment_start": 79,
-      "source_segment_end": 79,
-      "page_start": 24,
-      "page_end": 24,
       "review_status": "draft"
     }
   ]

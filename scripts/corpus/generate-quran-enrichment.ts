@@ -86,12 +86,35 @@ function cleanSnippet(value: string | undefined): string {
     : cleaned;
 }
 
+function normalizedReading(value: string | undefined): string {
+  if (!value) return '';
+  return value
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line && !/^[-_\s,.]+$/.test(line) && !/^Sura \d+:/.test(line))
+    .join(' ')
+    .replace(/^\d+\.\s*/, '')
+    .replace(/[*±†‡]/g, '')
+    .replace(/[^a-z0-9 ]/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
 function isQualifying(record: ComparisonRecord): boolean {
-  const changeClass = record.change_class?.['1989_to_1992'];
   const presence = record.presence ?? {};
   const presenceAnomaly =
     presence['1992'] === false || presence['1989'] === false || presence['1981'] === false;
-  return changeClass === 'substantial-revision' || presenceAnomaly;
+  if (presenceAnomaly) return true;
+
+  if (record.change_class?.['1989_to_1992'] !== 'substantial-revision') return false;
+
+  // The machine change classes fire on footnote markers and OCR noise, so a
+  // revision only qualifies when the normalized readings genuinely differ.
+  const before = normalizedReading(record.edition_1989?.candidate_text);
+  const after = normalizedReading(record.edition_1992?.final_english);
+  if (!before || !after) return true;
+  return before !== after;
 }
 
 function hasPresenceAnomaly(record: ComparisonRecord): boolean {
@@ -157,8 +180,10 @@ function locateVerseSegments(
   const indices: number[] = [];
   const pages: number[] = [];
 
+  // Match verse segments from every edition so the section span covers the
+  // 1992 final wording alongside the interleaved 1989 and 1981 renderings.
   segments.forEach((segment, index) => {
-    if (segment.label !== 'verse-1992') return;
+    if (!segment.label?.startsWith('verse-')) return;
     const segStart = Number(segment.start);
     const segEnd = Number(segment.end);
     if (!Number.isFinite(segStart) || !Number.isFinite(segEnd)) return;
@@ -169,12 +194,12 @@ function locateVerseSegments(
   });
 
   if (indices.length === 0) {
-    // Verses absent from the 1992 edition (removed passages): anchor to the
-    // nearest preceding verse so the section still resolves to canonical text.
+    // Verses absent from every edition's segments: anchor to the nearest
+    // preceding verse so the section still resolves to canonical text.
     let bestIndex: number | null = null;
     let bestVerse = -1;
     segments.forEach((segment, index) => {
-      if (segment.label !== 'verse-1992') return;
+      if (!segment.label?.startsWith('verse-')) return;
       const segEnd = Number(segment.end);
       if (Number.isFinite(segEnd) && segEnd <= startVerse && segEnd > bestVerse) {
         bestVerse = segEnd;

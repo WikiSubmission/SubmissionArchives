@@ -163,10 +163,23 @@ function hashSections(
 ): HashedSection[] {
   return drafts.map((draft) => {
     const embedInput = buildEnrichmentEmbeddingInput(record, metadata, draft);
+    // Locators and review status are stored on the row but excluded from the
+    // embedding input, so they must participate in the change hash or edits
+    // to them would never reach the database.
+    const storedFields = [
+      draft.sourceSegmentStart,
+      draft.sourceSegmentEnd,
+      draft.startTime,
+      draft.endTime,
+      draft.pageStart,
+      draft.pageEnd,
+      draft.retrievalPriority,
+      draft.reviewStatus,
+    ].join('|');
     return {
       draft,
       embedInput,
-      hash: sha256(`${EMBED_VERSION}:enrichment:${embedInput}`),
+      hash: sha256(`${EMBED_VERSION}:enrichment:${storedFields}:${embedInput}`),
     };
   });
 }
