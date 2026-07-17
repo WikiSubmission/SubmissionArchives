@@ -1,0 +1,762 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-29",
+  "canonical_document_id": "quran/29",
+  "canonical_catalog_ids": [
+    "quran/29"
+  ],
+  "title": "29. The Spider translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s7",
+      "title": "29:7 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:7 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who believe and lead a righteous life, we will certainly remit their sins, and reward them generously fo...\". 1992 final reading begins \"Those who believe and lead a righteous life, we will certainly remit their sins, and will certainly reward the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:7",
+        "Quran 29:7",
+        "sura 29 verse 7",
+        "29:7",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:7 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:7?",
+        "Did Rashad Khalifa revise 29:7 in the final edition?"
+      ],
+      "quran_references": [
+        "29:7"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 23,
+      "source_segment_end": 23,
+      "page_start": 7,
+      "page_end": 7,
+      "review_status": "draft"
+    },
+    {
+      "id": "s9",
+      "title": "29:9 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:9 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who believed and led a righteous life, we will admit them with the righteous. Fair Weather Friends\". 1992 final reading begins \"Those who believe and lead a righteous life, we will certainly admit them with the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:9",
+        "Quran 29:9",
+        "sura 29 verse 9",
+        "29:9",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:9 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:9?",
+        "Did Rashad Khalifa revise 29:9 in the final edition?"
+      ],
+      "quran_references": [
+        "29:9"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 31,
+      "source_segment_end": 31,
+      "page_start": 9,
+      "page_end": 9,
+      "review_status": "draft"
+    },
+    {
+      "id": "s11",
+      "title": "29:11 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:11 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"G O D will surely distinguish those who believed, and He will surely expose the hypocrites.\". 1992 final reading begins \"GOD will most certainly distinguish those who believe, and He will most certainly expose the hypocrites.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:11",
+        "Quran 29:11",
+        "sura 29 verse 11",
+        "29:11",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:11 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:11?",
+        "Did Rashad Khalifa revise 29:11 in the final edition?"
+      ],
+      "quran_references": [
+        "29:11"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 38,
+      "source_segment_end": 38,
+      "page_start": 11,
+      "page_end": 11,
+      "review_status": "draft"
+    },
+    {
+      "id": "s13",
+      "title": "29:13 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:13 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"In fact, they will be burdened by their own sins, plus loads of other people’s sins for which they were respon...\". 1992 final reading begins \"In fact, they will carry their own sins, in addition to loads of other people's sins for which they were respo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:13",
+        "Quran 29:13",
+        "sura 29 verse 13",
+        "29:13",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:13 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:13?",
+        "Did Rashad Khalifa revise 29:13 in the final edition?"
+      ],
+      "quran_references": [
+        "29:13"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 44,
+      "source_segment_end": 44,
+      "page_start": 13,
+      "page_end": 13,
+      "review_status": "draft"
+    },
+    {
+      "id": "s15",
+      "title": "29:15 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:15 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We saved him and those in the ark, and we made it a sign for all the people. Abraham\". 1992 final reading begins \"We saved him and those who accompanied him in the ark, and we set it up as a lesson for all the people.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:15",
+        "Quran 29:15",
+        "sura 29 verse 15",
+        "29:15",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:15 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:15?",
+        "Did Rashad Khalifa revise 29:15 in the final edition?"
+      ],
+      "quran_references": [
+        "29:15"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 56,
+      "source_segment_end": 56,
+      "page_start": 15,
+      "page_end": 15,
+      "review_status": "draft"
+    },
+    {
+      "id": "s21-22",
+      "title": "29:21-22 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:21-22 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He will then condemn to retribution whomever He wills, and will shower His mercy upon whomever He wills; to Hi...\". 1992 final reading begins \"He condemns to retribution whomever He wills, and showers His mercy upon whomever He wills. Ultimately, to Him...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:21-22",
+        "Quran 29:21-22",
+        "sura 29 verse 21",
+        "29:21",
+        "29:22",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:21-22 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:21-22?",
+        "Did Rashad Khalifa revise 29:21-22 in the final edition?"
+      ],
+      "quran_references": [
+        "29:21",
+        "29:22"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 84,
+      "source_segment_end": 87,
+      "page_start": 21,
+      "page_end": 22,
+      "review_status": "draft"
+    },
+    {
+      "id": "s24",
+      "title": "29:24 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The only response from his people was their saying, “Kill him, or burn him.” But GOD saved him from the fire....\". 1992 final reading begins \"The only response from his people was their saying, \"Kill him, or burn him.\" But GOD saved him from the fire....\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:24",
+        "Quran 29:24",
+        "sura 29 verse 24",
+        "29:24",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:24 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:24?",
+        "Did Rashad Khalifa revise 29:24 in the final edition?"
+      ],
+      "quran_references": [
+        "29:24"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 94,
+      "source_segment_end": 94,
+      "page_start": 24,
+      "page_end": 24,
+      "review_status": "draft"
+    },
+    {
+      "id": "s30",
+      "title": "29:30 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:30 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “My Lord, give me victory over the wicked people.” 3 1884\". 1992 final reading begins \"He said, \"My Lord, grant me victory over these wicked people.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:30",
+        "Quran 29:30",
+        "sura 29 verse 30",
+        "29:30",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:30 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:30?",
+        "Did Rashad Khalifa revise 29:30 in the final edition?"
+      ],
+      "quran_references": [
+        "29:30"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 117,
+      "source_segment_end": 117,
+      "page_start": 30,
+      "page_end": 30,
+      "review_status": "draft"
+    },
+    {
+      "id": "s39",
+      "title": "29:39 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:39 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Also Qaaroon, Pharaoh, and Hamaan; Moses went to them with clear signs, but they turned arrogant on earth. The...\". 1992 final reading begins \"Also Qãroon, Pharaoh, and Hãmãn; Moses went to them with clear signs. But they continued to commit tyranny on...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:39",
+        "Quran 29:39",
+        "sura 29 verse 39",
+        "29:39",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:39 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:39?",
+        "Did Rashad Khalifa revise 29:39 in the final edition?"
+      ],
+      "quran_references": [
+        "29:39"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 149,
+      "source_segment_end": 149,
+      "page_start": 39,
+      "page_end": 39,
+      "review_status": "draft"
+    },
+    {
+      "id": "s44",
+      "title": "29:44 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:44 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD created the heavens and the earth, truthfully. This is a sign for the believers. The Contact Prayers (Sala...\". 1992 final reading begins \"GOD created the heavens and the earth, truthfully. This provides a sufficient proof for the believers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:44",
+        "Quran 29:44",
+        "sura 29 verse 44",
+        "29:44",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:44 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:44?",
+        "Did Rashad Khalifa revise 29:44 in the final edition?"
+      ],
+      "quran_references": [
+        "29:44"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 174,
+      "source_segment_end": 174,
+      "page_start": 44,
+      "page_end": 44,
+      "review_status": "draft"
+    },
+    {
+      "id": "s45-46",
+      "title": "29:45-46 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 29:45-46 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:45-46",
+        "Quran 29:45-46",
+        "sura 29 verse 45",
+        "29:45",
+        "29:46",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 29:45-46 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 29:45-46 missing from the 1992 edition?",
+        "What happened to 29:45-46 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "29:45",
+        "29:46"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 178,
+      "source_segment_end": 185,
+      "page_start": 45,
+      "page_end": 46,
+      "review_status": "draft"
+    },
+    {
+      "id": "s47",
+      "title": "29:47 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:47 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We have revealed to you this scripture, and those whom we blessed with the previous scripture will believe in...\". 1992 final reading begins \"We have revealed to you this scripture, and those whom we blessed with the previous scripture will believe in...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:47",
+        "Quran 29:47",
+        "sura 29 verse 47",
+        "29:47",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:47 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:47?",
+        "Did Rashad Khalifa revise 29:47 in the final edition?"
+      ],
+      "quran_references": [
+        "29:47"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 189,
+      "source_segment_end": 189,
+      "page_start": 47,
+      "page_end": 47,
+      "review_status": "draft"
+    },
+    {
+      "id": "s50-51",
+      "title": "29:50-51 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 29:50-51 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:50-51",
+        "Quran 29:50-51",
+        "sura 29 verse 50",
+        "29:50",
+        "29:51",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 29:50-51 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 29:50-51 missing from the 1992 edition?",
+        "What happened to 29:50-51 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "29:50",
+        "29:51"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 201,
+      "source_segment_end": 207,
+      "page_start": 50,
+      "page_end": 51,
+      "review_status": "draft"
+    },
+    {
+      "id": "s53",
+      "title": "29:53 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They challenge you to bring the retribution! If it were not for a predetermined appointment, the retribution w...\". 1992 final reading begins \"They challenge you to bring the retribution! If it were not for a predetermined appointment, the retribution w...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:53",
+        "Quran 29:53",
+        "sura 29 verse 53",
+        "29:53",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:53 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:53?",
+        "Did Rashad Khalifa revise 29:53 in the final edition?"
+      ],
+      "quran_references": [
+        "29:53"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 215,
+      "source_segment_end": 215,
+      "page_start": 53,
+      "page_end": 53,
+      "review_status": "draft"
+    },
+    {
+      "id": "s55-56",
+      "title": "29:55-56 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:55-56 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The day will come when the retribution will overwhelm them, from above them and from beneath their feet. He wi...\". 1992 final reading begins \"The day will come when the retribution overwhelms them, from above them and from beneath their feet; He will s...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:55-56",
+        "Quran 29:55-56",
+        "sura 29 verse 55",
+        "29:55",
+        "29:56",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:55-56 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:55-56?",
+        "Did Rashad Khalifa revise 29:55-56 in the final edition?"
+      ],
+      "quran_references": [
+        "29:55",
+        "29:56"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 224,
+      "source_segment_end": 228,
+      "page_start": 55,
+      "page_end": 56,
+      "review_status": "draft"
+    },
+    {
+      "id": "s59-60",
+      "title": "29:59-60 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:59-60 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are the ones who are steadfast, and in their Lord they trust.\". 1992 final reading begins \"They are the ones who steadfastly persevere, and trust in their Lord.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:59-60",
+        "Quran 29:59-60",
+        "sura 29 verse 59",
+        "29:59",
+        "29:60",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:59-60 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:59-60?",
+        "Did Rashad Khalifa revise 29:59-60 in the final edition?"
+      ],
+      "quran_references": [
+        "29:59",
+        "29:60"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 239,
+      "source_segment_end": 242,
+      "page_start": 59,
+      "page_end": 60,
+      "review_status": "draft"
+    },
+    {
+      "id": "s67",
+      "title": "29:67 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 29:67 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:67",
+        "Quran 29:67",
+        "sura 29 verse 67",
+        "29:67",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 29:67 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 29:67 missing from the 1992 edition?",
+        "What happened to 29:67 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "29:67"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 268,
+      "source_segment_end": 268,
+      "page_start": 67,
+      "page_end": 67,
+      "review_status": "draft"
+    },
+    {
+      "id": "s69",
+      "title": "29:69 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 29:69 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who strive in our cause, we will surely guide them in our paths. Most assuredly, G O D is with th...\". 1992 final reading begins \"As for those who strive in our cause, we will surely guide them in our paths. Most assuredly, GOD is with the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "29:69",
+        "Quran 29:69",
+        "sura 29 verse 69",
+        "29:69",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 29:69 change between 1989 and 1992?",
+        "What is the final 1992 wording of 29:69?",
+        "Did Rashad Khalifa revise 29:69 in the final edition?"
+      ],
+      "quran_references": [
+        "29:69"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 275,
+      "source_segment_end": 275,
+      "page_start": 69,
+      "page_end": 69,
+      "review_status": "draft"
+    }
+  ]
+}

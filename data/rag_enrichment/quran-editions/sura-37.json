@@ -1,0 +1,1385 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-37",
+  "canonical_document_id": "quran/37",
+  "canonical_catalog_ids": [
+    "quran/37"
+  ],
+  "title": "37. The Arrangers translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s6-7",
+      "title": "37:6-7 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 37:6-7 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:6-7",
+        "Quran 37:6-7",
+        "sura 37 verse 6",
+        "37:6",
+        "37:7",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 37:6-7 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 37:6-7 missing from the 1992 edition?",
+        "What happened to 37:6-7 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "37:6",
+        "37:7"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 16,
+      "source_segment_end": 21,
+      "page_start": 6,
+      "page_end": 7,
+      "review_status": "draft"
+    },
+    {
+      "id": "s9",
+      "title": "37:9 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:9 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are doomed; they have incurred an eternal retribution.\". 1992 final reading begins \"They have been condemned; they have incurred an eternal retribution.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:9",
+        "Quran 37:9",
+        "sura 37 verse 9",
+        "37:9",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:9 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:9?",
+        "Did Rashad Khalifa revise 37:9 in the final edition?"
+      ],
+      "quran_references": [
+        "37:9"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 28,
+      "source_segment_end": 28,
+      "page_start": 9,
+      "page_end": 9,
+      "review_status": "draft"
+    },
+    {
+      "id": "s18",
+      "title": "37:18 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:18 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “Yes, you will be forced.”\". 1992 final reading begins \"Say, \"Yes, you will be forcibly summoned.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:18",
+        "Quran 37:18",
+        "sura 37 verse 18",
+        "37:18",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:18 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:18?",
+        "Did Rashad Khalifa revise 37:18 in the final edition?"
+      ],
+      "quran_references": [
+        "37:18"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 55,
+      "source_segment_end": 55,
+      "page_start": 18,
+      "page_end": 18,
+      "review_status": "draft"
+    },
+    {
+      "id": "s24",
+      "title": "37:24 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Stop them, and ask them: 1 2099\". 1992 final reading begins \"Stop them, and ask them:\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:24",
+        "Quran 37:24",
+        "sura 37 verse 24",
+        "37:24",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:24 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:24?",
+        "Did Rashad Khalifa revise 37:24 in the final edition?"
+      ],
+      "quran_references": [
+        "37:24"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 73,
+      "source_segment_end": 73,
+      "page_start": 24,
+      "page_end": 24,
+      "review_status": "draft"
+    },
+    {
+      "id": "s26",
+      "title": "37:26 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:26 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will be, on that day, totally submitting. Mutual Blaming\". 1992 final reading begins \"They will be, on that day, totally submitting.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:26",
+        "Quran 37:26",
+        "sura 37 verse 26",
+        "37:26",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:26 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:26?",
+        "Did Rashad Khalifa revise 37:26 in the final edition?"
+      ],
+      "quran_references": [
+        "37:26"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 79,
+      "source_segment_end": 79,
+      "page_start": 26,
+      "page_end": 26,
+      "review_status": "draft"
+    },
+    {
+      "id": "s30-34",
+      "title": "37:30-34 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:30-34 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“We never had any power over you; it is you who were transgressors.\". 1992 final reading begins \"\"We never had any power over you; it is you who were wicked.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:30-34",
+        "Quran 37:30-34",
+        "sura 37 verse 30",
+        "37:30",
+        "37:31",
+        "37:32",
+        "37:33",
+        "37:34",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:30-34 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:30-34?",
+        "Did Rashad Khalifa revise 37:30-34 in the final edition?"
+      ],
+      "quran_references": [
+        "37:30",
+        "37:31",
+        "37:32",
+        "37:33",
+        "37:34"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 93,
+      "source_segment_end": 105,
+      "page_start": 30,
+      "page_end": 34,
+      "review_status": "draft"
+    },
+    {
+      "id": "s48",
+      "title": "37:48 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"With them will be beautiful companions.\". 1992 final reading begins \"With them will be wonderful companions.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:48",
+        "Quran 37:48",
+        "sura 37 verse 48",
+        "37:48",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:48 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:48?",
+        "Did Rashad Khalifa revise 37:48 in the final edition?"
+      ],
+      "quran_references": [
+        "37:48"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 148,
+      "source_segment_end": 148,
+      "page_start": 48,
+      "page_end": 48,
+      "review_status": "draft"
+    },
+    {
+      "id": "s50-51",
+      "title": "37:50-51 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:50-51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will confer with one another.\". 1992 final reading begins \"They will come to each other, and confer with one another.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:50-51",
+        "Quran 37:50-51",
+        "sura 37 verse 50",
+        "37:50",
+        "37:51",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:50-51 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:50-51?",
+        "Did Rashad Khalifa revise 37:50-51 in the final edition?"
+      ],
+      "quran_references": [
+        "37:50",
+        "37:51"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 155,
+      "source_segment_end": 161,
+      "page_start": 50,
+      "page_end": 51,
+      "review_status": "draft"
+    },
+    {
+      "id": "s53-54",
+      "title": "37:53-54 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:53-54 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“ ‘After we die and turn into dust and bones, we get resurrected?’ ”\". 1992 final reading begins \"\" 'After we die and turn into dust and bones, do we get called to account?' \"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:53-54",
+        "Quran 37:53-54",
+        "sura 37 verse 53",
+        "37:53",
+        "37:54",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:53-54 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:53-54?",
+        "Did Rashad Khalifa revise 37:53-54 in the final edition?"
+      ],
+      "quran_references": [
+        "37:53",
+        "37:54"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 169,
+      "source_segment_end": 173,
+      "page_start": 53,
+      "page_end": 54,
+      "review_status": "draft"
+    },
+    {
+      "id": "s58",
+      "title": "37:58 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 37:58 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:58",
+        "Quran 37:58",
+        "sura 37 verse 58",
+        "37:58",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 37:58 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 37:58 missing from the 1992 edition?",
+        "What happened to 37:58 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "37:58"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 190,
+      "source_segment_end": 190,
+      "page_start": 58,
+      "page_end": 58,
+      "review_status": "draft"
+    },
+    {
+      "id": "s59",
+      "title": "37:59 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:59 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“only the first death, then we never are requited?”\". 1992 final reading begins \"\"only the first death, and we never receive any requital?\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:59",
+        "Quran 37:59",
+        "sura 37 verse 59",
+        "37:59",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:59 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:59?",
+        "Did Rashad Khalifa revise 37:59 in the final edition?"
+      ],
+      "quran_references": [
+        "37:59"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 194,
+      "source_segment_end": 194,
+      "page_start": 59,
+      "page_end": 59,
+      "review_status": "draft"
+    },
+    {
+      "id": "s67",
+      "title": "37:67 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:67 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Then top it with a hellish drink.\". 1992 final reading begins \"Then they will top it with a hellish drink.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:67",
+        "Quran 37:67",
+        "sura 37 verse 67",
+        "37:67",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:67 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:67?",
+        "Did Rashad Khalifa revise 37:67 in the final edition?"
+      ],
+      "quran_references": [
+        "37:67"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 220,
+      "source_segment_end": 220,
+      "page_start": 67,
+      "page_end": 67,
+      "review_status": "draft"
+    },
+    {
+      "id": "s77",
+      "title": "37:77 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:77 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We made his progeny the survivors.\". 1992 final reading begins \"We made his companions the survivors.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:77",
+        "Quran 37:77",
+        "sura 37 verse 77",
+        "37:77",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:77 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:77?",
+        "Did Rashad Khalifa revise 37:77 in the final edition?"
+      ],
+      "quran_references": [
+        "37:77"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 256,
+      "source_segment_end": 256,
+      "page_start": 77,
+      "page_end": 77,
+      "review_status": "draft"
+    },
+    {
+      "id": "s80",
+      "title": "37:80 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:80 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:80",
+        "Quran 37:80",
+        "sura 37 verse 80",
+        "37:80",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:80 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:80?",
+        "Did Rashad Khalifa revise 37:80 in the final edition?"
+      ],
+      "quran_references": [
+        "37:80"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 265,
+      "source_segment_end": 265,
+      "page_start": 80,
+      "page_end": 80,
+      "review_status": "draft"
+    },
+    {
+      "id": "s82",
+      "title": "37:82 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:82 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We drowned all the others. Abraham\". 1992 final reading begins \"We drowned all the others.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:82",
+        "Quran 37:82",
+        "sura 37 verse 82",
+        "37:82",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:82 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:82?",
+        "Did Rashad Khalifa revise 37:82 in the final edition?"
+      ],
+      "quran_references": [
+        "37:82"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 271,
+      "source_segment_end": 271,
+      "page_start": 82,
+      "page_end": 82,
+      "review_status": "draft"
+    },
+    {
+      "id": "s86",
+      "title": "37:86 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:86 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Is it these fabricated gods besides GOD that you want?\". 1992 final reading begins \"\"Is it these fabricated gods, instead of GOD, that you want?\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:86",
+        "Quran 37:86",
+        "sura 37 verse 86",
+        "37:86",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:86 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:86?",
+        "Did Rashad Khalifa revise 37:86 in the final edition?"
+      ],
+      "quran_references": [
+        "37:86"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 285,
+      "source_segment_end": 285,
+      "page_start": 86,
+      "page_end": 86,
+      "review_status": "draft"
+    },
+    {
+      "id": "s89",
+      "title": "37:89 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He gave up: “I am tired of this!”\". 1992 final reading begins \"Then he gave up and said, \"I am tired of this!\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:89",
+        "Quran 37:89",
+        "sura 37 verse 89",
+        "37:89",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:89 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:89?",
+        "Did Rashad Khalifa revise 37:89 in the final edition?"
+      ],
+      "quran_references": [
+        "37:89"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 294,
+      "source_segment_end": 294,
+      "page_start": 89,
+      "page_end": 89,
+      "review_status": "draft"
+    },
+    {
+      "id": "s93",
+      "title": "37:93 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:93 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He then destroyed them completely\". 1992 final reading begins \"He then destroyed them.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:93",
+        "Quran 37:93",
+        "sura 37 verse 93",
+        "37:93",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:93 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:93?",
+        "Did Rashad Khalifa revise 37:93 in the final edition?"
+      ],
+      "quran_references": [
+        "37:93"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 306,
+      "source_segment_end": 306,
+      "page_start": 93,
+      "page_end": 93,
+      "review_status": "draft"
+    },
+    {
+      "id": "s101",
+      "title": "37:101 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 37:101 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:101",
+        "Quran 37:101",
+        "sura 37 verse 101",
+        "37:101",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 37:101 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 37:101 missing from the 1992 edition?",
+        "What happened to 37:101 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "37:101"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 330,
+      "source_segment_end": 330,
+      "page_start": 101,
+      "page_end": 101,
+      "review_status": "draft"
+    },
+    {
+      "id": "s105-106",
+      "title": "37:105-106 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:105-106 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“You have believed your own dream.” We thus reward the pious.\". 1992 final reading begins \"\"You have believed the dream.\" We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:105-106",
+        "Quran 37:105-106",
+        "sura 37 verse 105",
+        "37:105",
+        "37:106",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:105-106 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:105-106?",
+        "Did Rashad Khalifa revise 37:105-106 in the final edition?"
+      ],
+      "quran_references": [
+        "37:105",
+        "37:106"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 346,
+      "source_segment_end": 349,
+      "page_start": 105,
+      "page_end": 106,
+      "review_status": "draft"
+    },
+    {
+      "id": "s113",
+      "title": "37:113 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:113 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We blessed him and Isaac. Among their descendants, some are right eous, and some are transgressors. Moses and...\". 1992 final reading begins \"We blessed him and Isaac. Among their descendants, some are righteous, and some are wicked transgressors.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:113",
+        "Quran 37:113",
+        "sura 37 verse 113",
+        "37:113",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:113 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:113?",
+        "Did Rashad Khalifa revise 37:113 in the final edition?"
+      ],
+      "quran_references": [
+        "37:113"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 371,
+      "source_segment_end": 371,
+      "page_start": 113,
+      "page_end": 113,
+      "review_status": "draft"
+    },
+    {
+      "id": "s121",
+      "title": "37:121 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:121 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:121",
+        "Quran 37:121",
+        "sura 37 verse 121",
+        "37:121",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:121 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:121?",
+        "Did Rashad Khalifa revise 37:121 in the final edition?"
+      ],
+      "quran_references": [
+        "37:121"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 398,
+      "source_segment_end": 398,
+      "page_start": 121,
+      "page_end": 121,
+      "review_status": "draft"
+    },
+    {
+      "id": "s127",
+      "title": "37:127 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:127 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They disbelieved him. Consequently, they had to pay.\". 1992 final reading begins \"They disbelieved him. Consequently, they had to be called to account.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:127",
+        "Quran 37:127",
+        "sura 37 verse 127",
+        "37:127",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:127 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:127?",
+        "Did Rashad Khalifa revise 37:127 in the final edition?"
+      ],
+      "quran_references": [
+        "37:127"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 419,
+      "source_segment_end": 419,
+      "page_start": 127,
+      "page_end": 127,
+      "review_status": "draft"
+    },
+    {
+      "id": "s131",
+      "title": "37:131 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:131 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We thus reward the pious.\". 1992 final reading begins \"We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:131",
+        "Quran 37:131",
+        "sura 37 verse 131",
+        "37:131",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:131 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:131?",
+        "Did Rashad Khalifa revise 37:131 in the final edition?"
+      ],
+      "quran_references": [
+        "37:131"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 431,
+      "source_segment_end": 431,
+      "page_start": 131,
+      "page_end": 131,
+      "review_status": "draft"
+    },
+    {
+      "id": "s138",
+      "title": "37:138 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:138 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And by night. Do you understand? Jonah\". 1992 final reading begins \"And by night. Would you understand?\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:138",
+        "Quran 37:138",
+        "sura 37 verse 138",
+        "37:138",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:138 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:138?",
+        "Did Rashad Khalifa revise 37:138 in the final edition?"
+      ],
+      "quran_references": [
+        "37:138"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 455,
+      "source_segment_end": 455,
+      "page_start": 138,
+      "page_end": 138,
+      "review_status": "draft"
+    },
+    {
+      "id": "s141-142",
+      "title": "37:141-142 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:141-142 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He rebelled, and joined the losers.\". 1992 final reading begins \"He rebelled and thus, he joined the losers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:141-142",
+        "Quran 37:141-142",
+        "sura 37 verse 141",
+        "37:141",
+        "37:142",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:141-142 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:141-142?",
+        "Did Rashad Khalifa revise 37:141-142 in the final edition?"
+      ],
+      "quran_references": [
+        "37:141",
+        "37:142"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 467,
+      "source_segment_end": 470,
+      "page_start": 141,
+      "page_end": 142,
+      "review_status": "draft"
+    },
+    {
+      "id": "s149",
+      "title": "37:149 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:149 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Ask them, “Does your Lord have daughters, while you have sons?”\". 1992 final reading begins \"Ask them if your Lord has daughters, while they have sons!\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:149",
+        "Quran 37:149",
+        "sura 37 verse 149",
+        "37:149",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:149 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:149?",
+        "Did Rashad Khalifa revise 37:149 in the final edition?"
+      ],
+      "quran_references": [
+        "37:149"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 492,
+      "source_segment_end": 492,
+      "page_start": 149,
+      "page_end": 149,
+      "review_status": "draft"
+    },
+    {
+      "id": "s151",
+      "title": "37:151 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:151 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, they blaspheme when they say—\". 1992 final reading begins \"Indeed, they grossly blaspheme when they say—\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:151",
+        "Quran 37:151",
+        "sura 37 verse 151",
+        "37:151",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:151 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:151?",
+        "Did Rashad Khalifa revise 37:151 in the final edition?"
+      ],
+      "quran_references": [
+        "37:151"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 499,
+      "source_segment_end": 499,
+      "page_start": 151,
+      "page_end": 151,
+      "review_status": "draft"
+    },
+    {
+      "id": "s156",
+      "title": "37:156 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:156 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do you have solid proof?\". 1992 final reading begins \"Do you have any proof?\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:156",
+        "Quran 37:156",
+        "sura 37 verse 156",
+        "37:156",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:156 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:156?",
+        "Did Rashad Khalifa revise 37:156 in the final edition?"
+      ],
+      "quran_references": [
+        "37:156"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 515,
+      "source_segment_end": 515,
+      "page_start": 156,
+      "page_end": 156,
+      "review_status": "draft"
+    },
+    {
+      "id": "s164",
+      "title": "37:164 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 37:164 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:164",
+        "Quran 37:164",
+        "sura 37 verse 164",
+        "37:164",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 37:164 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 37:164 missing from the 1992 edition?",
+        "What happened to 37:164 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "37:164"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 540,
+      "source_segment_end": 540,
+      "page_start": 164,
+      "page_end": 164,
+      "review_status": "draft"
+    },
+    {
+      "id": "s166",
+      "title": "37:166 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:166 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We have duly glorified (our Lord). Following The Parents\". 1992 final reading begins \"We have duly glorified (our Lord).\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:166",
+        "Quran 37:166",
+        "sura 37 verse 166",
+        "37:166",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:166 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:166?",
+        "Did Rashad Khalifa revise 37:166 in the final edition?"
+      ],
+      "quran_references": [
+        "37:166"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 546,
+      "source_segment_end": 546,
+      "page_start": 166,
+      "page_end": 166,
+      "review_status": "draft"
+    },
+    {
+      "id": "s177",
+      "title": "37:177 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:177 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When it hits, they will be sorry— they have been warned.\". 1992 final reading begins \"When it hits them one day, it will be a miserable day; they have been sufficiently warned.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:177",
+        "Quran 37:177",
+        "sura 37 verse 177",
+        "37:177",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:177 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:177?",
+        "Did Rashad Khalifa revise 37:177 in the final edition?"
+      ],
+      "quran_references": [
+        "37:177"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 581,
+      "source_segment_end": 581,
+      "page_start": 177,
+      "page_end": 177,
+      "review_status": "draft"
+    },
+    {
+      "id": "s182",
+      "title": "37:182 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 37:182 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Praise be to GOD, Lord of the universe. \\ ____________________________________;_________ _____________________...\". 1992 final reading begins \"Praise be to GOD, Lord of the universe.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "37:182",
+        "Quran 37:182",
+        "sura 37 verse 182",
+        "37:182",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 37:182 change between 1989 and 1992?",
+        "What is the final 1992 wording of 37:182?",
+        "Did Rashad Khalifa revise 37:182 in the final edition?"
+      ],
+      "quran_references": [
+        "37:182"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 596,
+      "source_segment_end": 596,
+      "page_start": 182,
+      "page_end": 182,
+      "review_status": "draft"
+    }
+  ]
+}

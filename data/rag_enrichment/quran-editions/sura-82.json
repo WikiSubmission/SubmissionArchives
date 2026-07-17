@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-82",
+  "canonical_document_id": "quran/82",
+  "canonical_catalog_ids": [
+    "quran/82"
+  ],
+  "title": "82. The Shattering translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s5",
+      "title": "82:5 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 82:5 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Every soul will find out what caused it to advance, and what caused it to regress. Reflect on God’s Creations\". 1992 final reading begins \"Every soul will find out what caused it to advance, and what caused it to regress.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "82:5",
+        "Quran 82:5",
+        "sura 82 verse 5",
+        "82:5",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 82:5 change between 1989 and 1992?",
+        "What is the final 1992 wording of 82:5?",
+        "Did Rashad Khalifa revise 82:5 in the final edition?"
+      ],
+      "quran_references": [
+        "82:5"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 12,
+      "source_segment_end": 12,
+      "page_start": 5,
+      "page_end": 5,
+      "review_status": "draft"
+    },
+    {
+      "id": "s17-19",
+      "title": "82:17-19 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 82:17-19 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "82:17-19",
+        "Quran 82:17-19",
+        "sura 82 verse 17",
+        "82:17",
+        "82:18",
+        "82:19",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 82:17-19 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 82:17-19 missing from the 1992 edition?",
+        "What happened to 82:17-19 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "82:17",
+        "82:18",
+        "82:19"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 50,
+      "source_segment_end": 56,
+      "page_start": 17,
+      "page_end": 19,
+      "review_status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-48",
+  "canonical_document_id": "quran/48",
+  "canonical_catalog_ids": [
+    "quran/48"
+  ],
+  "title": "48. Victory translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s1-2",
+      "title": "48:1-2 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 48:1-2 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We granted you (O Messenger) a great victory.\". 1992 final reading begins \"We have bestowed upon you (O Messenger) a great victory.±\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "48:1-2",
+        "Quran 48:1-2",
+        "sura 48 verse 1",
+        "48:1",
+        "48:2",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 48:1-2 change between 1989 and 1992?",
+        "What is the final 1992 wording of 48:1-2?",
+        "Did Rashad Khalifa revise 48:1-2 in the final edition?"
+      ],
+      "quran_references": [
+        "48:1",
+        "48:2"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 0,
+      "source_segment_end": 4,
+      "page_start": 1,
+      "page_end": 2,
+      "review_status": "draft"
+    },
+    {
+      "id": "s6",
+      "title": "48:6 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 48:6 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And He will requite the hypocrite men and women and the idol worshiping men and women, for they have harbored...\". 1992 final reading begins \"And He will requite the hypocrite men and women and the idol worshiping men and women, for they have harbored...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "48:6",
+        "Quran 48:6",
+        "sura 48 verse 6",
+        "48:6",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 48:6 change between 1989 and 1992?",
+        "What is the final 1992 wording of 48:6?",
+        "Did Rashad Khalifa revise 48:6 in the final edition?"
+      ],
+      "quran_references": [
+        "48:6"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 16,
+      "source_segment_end": 16,
+      "page_start": 6,
+      "page_end": 6,
+      "review_status": "draft"
+    },
+    {
+      "id": "s11-12",
+      "title": "48:11-12 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 48:11-12 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The Arabs who stay behind will say, “We have been preoccupied with our money and our families, so ask forgiven...\". 1992 final reading begins \"The sedentary Arabs who stay behind will say, \"We have been preoccupied with our money and our families, so as...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "48:11-12",
+        "Quran 48:11-12",
+        "sura 48 verse 11",
+        "48:11",
+        "48:12",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 48:11-12 change between 1989 and 1992?",
+        "What is the final 1992 wording of 48:11-12?",
+        "Did Rashad Khalifa revise 48:11-12 in the final edition?"
+      ],
+      "quran_references": [
+        "48:11",
+        "48:12"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 33,
+      "source_segment_end": 36,
+      "page_start": 11,
+      "page_end": 12,
+      "review_status": "draft"
+    },
+    {
+      "id": "s17",
+      "title": "48:17 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 48:17 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The blind is not to be blamed, the crippled is not to be blamed, and the sick is not to be blamed. Whoever obe...\". 1992 final reading begins \"The blind is not to be blamed, the crippled is not to be blamed, and the sick is not to be blamed. Those who o...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "48:17",
+        "Quran 48:17",
+        "sura 48 verse 17",
+        "48:17",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 48:17 change between 1989 and 1992?",
+        "What is the final 1992 wording of 48:17?",
+        "Did Rashad Khalifa revise 48:17 in the final edition?"
+      ],
+      "quran_references": [
+        "48:17"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 52,
+      "source_segment_end": 52,
+      "page_start": 17,
+      "page_end": 17,
+      "review_status": "draft"
+    },
+    {
+      "id": "s22-24",
+      "title": "48:22-24 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 48:22-24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Indeed, if the disbelievers fought you, they would turn around and flee. They will have no Lord, nor a helper.\". 1992 final reading begins \"If the disbelievers ever fought you, they would turn around and flee. They have no Lord and Master; they have...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "48:22-24",
+        "Quran 48:22-24",
+        "sura 48 verse 22",
+        "48:22",
+        "48:23",
+        "48:24",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 48:22-24 change between 1989 and 1992?",
+        "What is the final 1992 wording of 48:22-24?",
+        "Did Rashad Khalifa revise 48:22-24 in the final edition?"
+      ],
+      "quran_references": [
+        "48:22",
+        "48:23",
+        "48:24"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 68,
+      "source_segment_end": 74,
+      "page_start": 22,
+      "page_end": 24,
+      "review_status": "draft"
+    },
+    {
+      "id": "s28",
+      "title": "48:28 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 48:28 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "48:28",
+        "Quran 48:28",
+        "sura 48 verse 28",
+        "48:28",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 48:28 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 48:28 missing from the 1992 edition?",
+        "What happened to 48:28 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "48:28"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 87,
+      "source_segment_end": 87,
+      "page_start": 28,
+      "page_end": 28,
+      "review_status": "draft"
+    }
+  ]
+}

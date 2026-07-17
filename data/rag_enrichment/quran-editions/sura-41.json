@@ -1,0 +1,555 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-41",
+  "canonical_document_id": "quran/41",
+  "canonical_catalog_ids": [
+    "quran/41"
+  ],
+  "title": "41. Detailed translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s3",
+      "title": "41:3 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"A scripture whose verses have been precisely designed, in an Arabic Quran, for people who know.\". 1992 final reading begins \"A scripture whose verses provide the complete details, in an Arabic Quran, for people who know.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:3",
+        "Quran 41:3",
+        "sura 41 verse 3",
+        "41:3",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:3 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:3?",
+        "Did Rashad Khalifa revise 41:3 in the final edition?"
+      ],
+      "quran_references": [
+        "41:3"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 8,
+      "source_segment_end": 8,
+      "page_start": 3,
+      "page_end": 3,
+      "review_status": "draft"
+    },
+    {
+      "id": "s9-10",
+      "title": "41:9-10 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:9-10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “You are disbelieving in the One who created the earth in two days,* and you set up idols to rival Him, t...\". 1992 final reading begins \"Say, \"You disbelieve in the One who created the earth in two days,± and you set up idols to rank with Him, tho...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:9-10",
+        "Quran 41:9-10",
+        "sura 41 verse 9",
+        "41:9",
+        "41:10",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:9-10 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:9-10?",
+        "Did Rashad Khalifa revise 41:9-10 in the final edition?"
+      ],
+      "quran_references": [
+        "41:9",
+        "41:10"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 30,
+      "source_segment_end": 35,
+      "page_start": 9,
+      "page_end": 10,
+      "review_status": "draft"
+    },
+    {
+      "id": "s16",
+      "title": "41:16 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:16 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Consequently, we sent upon them violent wind, for a few miserable days to afflict them with a humiliating retr...\". 1992 final reading begins \"Consequently, we sent upon them violent wind, for a few miserable days. We thus afflicted them with humiliatin...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:16",
+        "Quran 41:16",
+        "sura 41 verse 16",
+        "41:16",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:16 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:16?",
+        "Did Rashad Khalifa revise 41:16 in the final edition?"
+      ],
+      "quran_references": [
+        "41:16"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 61,
+      "source_segment_end": 61,
+      "page_start": 16,
+      "page_end": 16,
+      "review_status": "draft"
+    },
+    {
+      "id": "s18",
+      "title": "41:18 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:18 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And we saved those who believed and led a righteous life.\". 1992 final reading begins \"We always save those who believe and lead a righteous life.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:18",
+        "Quran 41:18",
+        "sura 41 verse 18",
+        "41:18",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:18 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:18?",
+        "Did Rashad Khalifa revise 41:18 in the final edition?"
+      ],
+      "quran_references": [
+        "41:18"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 67,
+      "source_segment_end": 67,
+      "page_start": 18,
+      "page_end": 18,
+      "review_status": "draft"
+    },
+    {
+      "id": "s21",
+      "title": "41:21 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:21 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will say to their skins, “Why did you bear witness against us?” They will reply, “GOD made us speak up; H...\". 1992 final reading begins \"They will say to their skins, \"Why did you bear witness against us?\" They will reply, \"GOD made us speak up; H...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:21",
+        "Quran 41:21",
+        "sura 41 verse 21",
+        "41:21",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:21 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:21?",
+        "Did Rashad Khalifa revise 41:21 in the final edition?"
+      ],
+      "quran_references": [
+        "41:21"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 79,
+      "source_segment_end": 79,
+      "page_start": 21,
+      "page_end": 21,
+      "review_status": "draft"
+    },
+    {
+      "id": "s23",
+      "title": "41:23 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:23 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Such thinking about your Lord is what caused your fall, and thus you became losers.\". 1992 final reading begins \"This kind of thinking about your Lord will cause you to fall, and then you become losers.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:23",
+        "Quran 41:23",
+        "sura 41 verse 23",
+        "41:23",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:23 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:23?",
+        "Did Rashad Khalifa revise 41:23 in the final edition?"
+      ],
+      "quran_references": [
+        "41:23"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 88,
+      "source_segment_end": 88,
+      "page_start": 23,
+      "page_end": 23,
+      "review_status": "draft"
+    },
+    {
+      "id": "s27-28",
+      "title": "41:27-28 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:27-28 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Consequently, we will afflict these disbelievers with a severe retribution. We simply requite them for their e...\". 1992 final reading begins \"We will certainly afflict these disbelievers with a severe retribution. We will certainly requite them for the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:27-28",
+        "Quran 41:27-28",
+        "sura 41 verse 27",
+        "41:27",
+        "41:28",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:27-28 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:27-28?",
+        "Did Rashad Khalifa revise 41:27-28 in the final edition?"
+      ],
+      "quran_references": [
+        "41:27",
+        "41:28"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 102,
+      "source_segment_end": 105,
+      "page_start": 27,
+      "page_end": 28,
+      "review_status": "draft"
+    },
+    {
+      "id": "s35",
+      "title": "41:35 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"None can attain this except one who steadfastly perseveres. None can attain this except one who is extremely f...\". 1992 final reading begins \"None can attain this except those who steadfastly persevere. None can attain this except those who are extreme...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:35",
+        "Quran 41:35",
+        "sura 41 verse 35",
+        "41:35",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:35 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:35?",
+        "Did Rashad Khalifa revise 41:35 in the final edition?"
+      ],
+      "quran_references": [
+        "41:35"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 132,
+      "source_segment_end": 132,
+      "page_start": 35,
+      "page_end": 35,
+      "review_status": "draft"
+    },
+    {
+      "id": "s36",
+      "title": "41:36 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 41:36 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:36",
+        "Quran 41:36",
+        "sura 41 verse 36",
+        "41:36",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 41:36 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 41:36 missing from the 1992 edition?",
+        "What happened to 41:36 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "41:36"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 136,
+      "source_segment_end": 136,
+      "page_start": 36,
+      "page_end": 36,
+      "review_status": "draft"
+    },
+    {
+      "id": "s40-42",
+      "title": "41:40-42 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 41:40-42 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:40-42",
+        "Quran 41:40-42",
+        "sura 41 verse 40",
+        "41:40",
+        "41:41",
+        "41:42",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 41:40-42 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 41:40-42 missing from the 1992 edition?",
+        "What happened to 41:40-42 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "41:40",
+        "41:41",
+        "41:42"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 150,
+      "source_segment_end": 159,
+      "page_start": 40,
+      "page_end": 42,
+      "review_status": "draft"
+    },
+    {
+      "id": "s44",
+      "title": "41:44 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 41:44 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:44",
+        "Quran 41:44",
+        "sura 41 verse 44",
+        "41:44",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 41:44 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 41:44 missing from the 1992 edition?",
+        "What happened to 41:44 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "41:44"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 171,
+      "source_segment_end": 171,
+      "page_start": 44,
+      "page_end": 44,
+      "review_status": "draft"
+    },
+    {
+      "id": "s48",
+      "title": "41:48 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 41:48 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:48",
+        "Quran 41:48",
+        "sura 41 verse 48",
+        "41:48",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 41:48 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 41:48 missing from the 1992 edition?",
+        "What happened to 41:48 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "41:48"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 188,
+      "source_segment_end": 188,
+      "page_start": 48,
+      "page_end": 48,
+      "review_status": "draft"
+    },
+    {
+      "id": "s52",
+      "title": "41:52 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 41:52 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “What if this is from GOD, and you reject it? Who is farther astray than one who opposes this?” The Great...\". 1992 final reading begins \"Proclaim: \"What if this is truly from GOD, then you decide to reject it? Who are farther astray than those who...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "41:52",
+        "Quran 41:52",
+        "sura 41 verse 52",
+        "41:52",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 41:52 change between 1989 and 1992?",
+        "What is the final 1992 wording of 41:52?",
+        "Did Rashad Khalifa revise 41:52 in the final edition?"
+      ],
+      "quran_references": [
+        "41:52"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 203,
+      "source_segment_end": 203,
+      "page_start": 52,
+      "page_end": 52,
+      "review_status": "draft"
+    }
+  ]
+}

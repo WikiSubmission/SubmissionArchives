@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-105",
+  "canonical_document_id": "quran/105",
+  "canonical_catalog_ids": [
+    "quran/105"
+  ],
+  "title": "105. The Elephant translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s5",
+      "title": "105:5 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 105:5 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He made them like chewed up hay. X 2694\". 1992 final reading begins \"He made them like chewed up hay.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "105:5",
+        "Quran 105:5",
+        "sura 105 verse 5",
+        "105:5",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 105:5 change between 1989 and 1992?",
+        "What is the final 1992 wording of 105:5?",
+        "Did Rashad Khalifa revise 105:5 in the final edition?"
+      ],
+      "quran_references": [
+        "105:5"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 12,
+      "source_segment_end": 12,
+      "page_start": 5,
+      "page_end": 5,
+      "review_status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-46",
+  "canonical_document_id": "quran/46",
+  "canonical_catalog_ids": [
+    "quran/46"
+  ],
+  "title": "46. The Dunes translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s4",
+      "title": "46:4 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 46:4 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “Consider the idols you set up besides GOD. Show me what on earth did they create. Do they own part of th...\". 1992 final reading begins \"Say, \"Consider the idols you have set up beside GOD. Show me what on earth did they create. Do they own part o...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "46:4",
+        "Quran 46:4",
+        "sura 46 verse 4",
+        "46:4",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 46:4 change between 1989 and 1992?",
+        "What is the final 1992 wording of 46:4?",
+        "Did Rashad Khalifa revise 46:4 in the final edition?"
+      ],
+      "quran_references": [
+        "46:4"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 10,
+      "source_segment_end": 10,
+      "page_start": 4,
+      "page_end": 4,
+      "review_status": "draft"
+    },
+    {
+      "id": "s12",
+      "title": "46:12 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 46:12 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Before this, the book of Moses provided guidance and mercy. And this is a confirming Arabic scripture, to warn...\". 1992 final reading begins \"Before this, the book of Moses provided guidance and mercy. This too is a scripture that confirms, in Arabic,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "46:12",
+        "Quran 46:12",
+        "sura 46 verse 12",
+        "46:12",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 46:12 change between 1989 and 1992?",
+        "What is the final 1992 wording of 46:12?",
+        "Did Rashad Khalifa revise 46:12 in the final edition?"
+      ],
+      "quran_references": [
+        "46:12"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 46,
+      "source_segment_end": 46,
+      "page_start": 12,
+      "page_end": 12,
+      "review_status": "draft"
+    },
+    {
+      "id": "s13-15",
+      "title": "46:13-15 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 46:13-15 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "46:13-15",
+        "Quran 46:13-15",
+        "sura 46 verse 13",
+        "46:13",
+        "46:14",
+        "46:15",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 46:13-15 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 46:13-15 missing from the 1992 edition?",
+        "What happened to 46:13-15 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "46:13",
+        "46:14",
+        "46:15"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 51,
+      "source_segment_end": 59,
+      "page_start": 13,
+      "page_end": 15,
+      "review_status": "draft"
+    },
+    {
+      "id": "s21",
+      "title": "46:21 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 46:21 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Recall that the brother of ‘Aad warned his people at the dunes, the same warning delivered before him and afte...\". 1992 final reading begins \"Recall that the brother of 'Ãd warned his people at the dunes—numerous warnings were also delivered before him...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "46:21",
+        "Quran 46:21",
+        "sura 46 verse 21",
+        "46:21",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 46:21 change between 1989 and 1992?",
+        "What is the final 1992 wording of 46:21?",
+        "Did Rashad Khalifa revise 46:21 in the final edition?"
+      ],
+      "quran_references": [
+        "46:21"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 82,
+      "source_segment_end": 82,
+      "page_start": 21,
+      "page_end": 21,
+      "review_status": "draft"
+    },
+    {
+      "id": "s26-28",
+      "title": "46:26-28 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 46:26-28 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We had established them in the same way as we established you, and pro vided them with hearing, eyes, and mind...\". 1992 final reading begins \"We had established them in the same way as we established you, and provided them with hearing, eyes, and minds...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "46:26-28",
+        "Quran 46:26-28",
+        "sura 46 verse 26",
+        "46:26",
+        "46:27",
+        "46:28",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 46:26-28 change between 1989 and 1992?",
+        "What is the final 1992 wording of 46:26-28?",
+        "Did Rashad Khalifa revise 46:26-28 in the final edition?"
+      ],
+      "quran_references": [
+        "46:26",
+        "46:27",
+        "46:28"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 100,
+      "source_segment_end": 106,
+      "page_start": 26,
+      "page_end": 28,
+      "review_status": "draft"
+    },
+    {
+      "id": "s30",
+      "title": "46:30 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 46:30 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “O our people, we have heard a book, revealed after Moses, that confirms all previous scriptures. I...\". 1992 final reading begins \"They said, \"O our people, we have heard a book that was revealed after Moses, and confirms the previous script...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "46:30",
+        "Quran 46:30",
+        "sura 46 verse 30",
+        "46:30",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 46:30 change between 1989 and 1992?",
+        "What is the final 1992 wording of 46:30?",
+        "Did Rashad Khalifa revise 46:30 in the final edition?"
+      ],
+      "quran_references": [
+        "46:30"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 118,
+      "source_segment_end": 118,
+      "page_start": 30,
+      "page_end": 30,
+      "review_status": "draft"
+    },
+    {
+      "id": "s32-33",
+      "title": "46:32-33 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 46:32-33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Whoever fails to respond to G O D ’s call cannot escape, and will find no help against Him. They are far astra...\". 1992 final reading begins \"Those who fail to respond to GOD's call cannot escape, and will have no Lord other than Him; they have gone fa...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "46:32-33",
+        "Quran 46:32-33",
+        "sura 46 verse 32",
+        "46:32",
+        "46:33",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 46:32-33 change between 1989 and 1992?",
+        "What is the final 1992 wording of 46:32-33?",
+        "Did Rashad Khalifa revise 46:32-33 in the final edition?"
+      ],
+      "quran_references": [
+        "46:32",
+        "46:33"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 126,
+      "source_segment_end": 130,
+      "page_start": 32,
+      "page_end": 33,
+      "review_status": "draft"
+    }
+  ]
+}

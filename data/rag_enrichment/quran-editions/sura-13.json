@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-13",
+  "canonical_document_id": "quran/13",
+  "canonical_catalog_ids": [
+    "quran/13"
+  ],
+  "title": "13. The Thunder translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s1",
+      "title": "13:1 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 13:1 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:1",
+        "Quran 13:1",
+        "sura 13 verse 1",
+        "13:1",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 13:1 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 13:1 missing from the 1992 edition?",
+        "What happened to 13:1 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "13:1"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 0,
+      "source_segment_end": 0,
+      "page_start": 1,
+      "page_end": 1,
+      "review_status": "draft"
+    },
+    {
+      "id": "s3",
+      "title": "13:3 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 13:3 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:3",
+        "Quran 13:3",
+        "sura 13 verse 3",
+        "13:3",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 13:3 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 13:3 missing from the 1992 edition?",
+        "What happened to 13:3 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "13:3"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 10,
+      "source_segment_end": 10,
+      "page_start": 3,
+      "page_end": 3,
+      "review_status": "draft"
+    },
+    {
+      "id": "s4",
+      "title": "13:4 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 13:4 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"On earth, there are adjacent lots that produce orchards of grapes, crops, palm trees—dioecious and non-dioecio...\". 1992 final reading begins \"On earth, there are adjacent lots that produce orchards of grapes, crops, palm trees—dioecious and non-dioecio...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:4",
+        "Quran 13:4",
+        "sura 13 verse 4",
+        "13:4",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 13:4 change between 1989 and 1992?",
+        "What is the final 1992 wording of 13:4?",
+        "Did Rashad Khalifa revise 13:4 in the final edition?"
+      ],
+      "quran_references": [
+        "13:4"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 14,
+      "source_segment_end": 14,
+      "page_start": 4,
+      "page_end": 4,
+      "review_status": "draft"
+    },
+    {
+      "id": "s8-14",
+      "title": "13:8-14 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 13:8-14 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:8-14",
+        "Quran 13:8-14",
+        "sura 13 verse 8",
+        "13:8",
+        "13:9",
+        "13:10",
+        "13:11",
+        "13:12",
+        "13:13",
+        "13:14",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 13:8-14 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 13:8-14 missing from the 1992 edition?",
+        "What happened to 13:8-14 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "13:8",
+        "13:9",
+        "13:10",
+        "13:11",
+        "13:12",
+        "13:13",
+        "13:14"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 29,
+      "source_segment_end": 49,
+      "page_start": 8,
+      "page_end": 14,
+      "review_status": "draft"
+    },
+    {
+      "id": "s16-29",
+      "title": "13:16-29 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 13:16-29 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:16-29",
+        "Quran 13:16-29",
+        "sura 13 verse 16",
+        "13:16",
+        "13:17",
+        "13:18",
+        "13:19",
+        "13:20",
+        "13:21",
+        "13:22",
+        "13:23",
+        "13:24",
+        "13:25",
+        "13:26",
+        "13:27",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 13:16-29 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 13:16-29 missing from the 1992 edition?",
+        "What happened to 13:16-29 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "13:16",
+        "13:17",
+        "13:18",
+        "13:19",
+        "13:20",
+        "13:21",
+        "13:22",
+        "13:23",
+        "13:24",
+        "13:25",
+        "13:26",
+        "13:27",
+        "13:28",
+        "13:29"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 58,
+      "source_segment_end": 107,
+      "page_start": 16,
+      "page_end": 29,
+      "review_status": "draft"
+    },
+    {
+      "id": "s33",
+      "title": "13:33 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 13:33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Is there any equal to the One who controls every single soul? Yet, they set up idols to rival GOD. Say, “Name...\". 1992 final reading begins \"Is there any equal to the One who controls every single soul? Yet, they set up idols to rival GOD. Say, \"Name...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:33",
+        "Quran 13:33",
+        "sura 13 verse 33",
+        "13:33",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 13:33 change between 1989 and 1992?",
+        "What is the final 1992 wording of 13:33?",
+        "Did Rashad Khalifa revise 13:33 in the final edition?"
+      ],
+      "quran_references": [
+        "13:33"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 128,
+      "source_segment_end": 128,
+      "page_start": 33,
+      "page_end": 33,
+      "review_status": "draft"
+    },
+    {
+      "id": "s36-37",
+      "title": "13:36-37 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 13:36-37 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who received the scripture rejoice in what was revealed to you. Others reject parts of it. Say, “I am si...\". 1992 final reading begins \"Those who received the scripture rejoice in what was revealed to you; some others may reject parts of it. Say,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:36-37",
+        "Quran 13:36-37",
+        "sura 13 verse 36",
+        "13:36",
+        "13:37",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 13:36-37 change between 1989 and 1992?",
+        "What is the final 1992 wording of 13:36-37?",
+        "Did Rashad Khalifa revise 13:36-37 in the final edition?"
+      ],
+      "quran_references": [
+        "13:36",
+        "13:37"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 140,
+      "source_segment_end": 145,
+      "page_start": 36,
+      "page_end": 37,
+      "review_status": "draft"
+    },
+    {
+      "id": "s39",
+      "title": "13:39 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 13:39 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:39",
+        "Quran 13:39",
+        "sura 13 verse 39",
+        "13:39",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 13:39 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 13:39 missing from the 1992 edition?",
+        "What happened to 13:39 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "13:39"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 155,
+      "source_segment_end": 155,
+      "page_start": 39,
+      "page_end": 39,
+      "review_status": "draft"
+    },
+    {
+      "id": "s41",
+      "title": "13:41 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 13:41 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:41",
+        "Quran 13:41",
+        "sura 13 verse 41",
+        "13:41",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 13:41 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 13:41 missing from the 1992 edition?",
+        "What happened to 13:41 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "13:41"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 161,
+      "source_segment_end": 161,
+      "page_start": 41,
+      "page_end": 41,
+      "review_status": "draft"
+    },
+    {
+      "id": "s43",
+      "title": "13:43 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 13:43 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who disbelieved will say, “You are not a messenger!” Say, “GOD suffices as a witness between me and you,...\". 1992 final reading begins \"Those who disbelieved will say, \"You are not a messenger!\" Say, \"GOD suffices as a witness between me and you,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "13:43",
+        "Quran 13:43",
+        "sura 13 verse 43",
+        "13:43",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 13:43 change between 1989 and 1992?",
+        "What is the final 1992 wording of 13:43?",
+        "Did Rashad Khalifa revise 13:43 in the final edition?"
+      ],
+      "quran_references": [
+        "13:43"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 167,
+      "source_segment_end": 167,
+      "page_start": 43,
+      "page_end": 43,
+      "review_status": "draft"
+    }
+  ]
+}

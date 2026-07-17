@@ -1,0 +1,842 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-11",
+  "canonical_document_id": "quran/11",
+  "canonical_catalog_ids": [
+    "quran/11"
+  ],
+  "title": "11. Hood translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s1",
+      "title": "11:1 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:1 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"A.L.R. (This is) a scripture whose verses have been perfected, then elucidated.* It comes from a Most Wise, Mo...\". 1992 final reading begins \"A.L.R. This is a scripture whose verses have been perfected, then elucidated.± It comes from a Most Wise, Most...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:1",
+        "Quran 11:1",
+        "sura 11 verse 1",
+        "11:1",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:1 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:1?",
+        "Did Rashad Khalifa revise 11:1 in the final edition?"
+      ],
+      "quran_references": [
+        "11:1"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 0,
+      "source_segment_end": 0,
+      "page_start": 1,
+      "page_end": 1,
+      "review_status": "draft"
+    },
+    {
+      "id": "s7",
+      "title": "11:7 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:7 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He is the One who created the heavens and the earth in six days—* * and His throne was on water—* * in order t...\". 1992 final reading begins \"He is the One who created the heavens and the earth in six days—±and His (earthly) domain was completely cover...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:7",
+        "Quran 11:7",
+        "sura 11 verse 7",
+        "11:7",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:7 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:7?",
+        "Did Rashad Khalifa revise 11:7 in the final edition?"
+      ],
+      "quran_references": [
+        "11:7"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 25,
+      "source_segment_end": 25,
+      "page_start": 7,
+      "page_end": 7,
+      "review_status": "draft"
+    },
+    {
+      "id": "s10-11",
+      "title": "11:10-11 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 11:10-11 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:10-11",
+        "Quran 11:10-11",
+        "sura 11 verse 10",
+        "11:10",
+        "11:11",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 11:10-11 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 11:10-11 missing from the 1992 edition?",
+        "What happened to 11:10-11 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "11:10",
+        "11:11"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 36,
+      "source_segment_end": 39,
+      "page_start": 10,
+      "page_end": 11,
+      "review_status": "draft"
+    },
+    {
+      "id": "s17",
+      "title": "11:17 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:17 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who attain a solid proof from their Lord, reported by a wit ness from Him,** and before it, the b...\". 1992 final reading begins \"As for those who are given solid proof± from their Lord, reported by a witness from Him, and before it, the bo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:17",
+        "Quran 11:17",
+        "sura 11 verse 17",
+        "11:17",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:17 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:17?",
+        "Did Rashad Khalifa revise 11:17 in the final edition?"
+      ],
+      "quran_references": [
+        "11:17"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 64,
+      "source_segment_end": 64,
+      "page_start": 17,
+      "page_end": 17,
+      "review_status": "draft"
+    },
+    {
+      "id": "s18",
+      "title": "11:18 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 11:18 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:18",
+        "Quran 11:18",
+        "sura 11 verse 18",
+        "11:18",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 11:18 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 11:18 missing from the 1992 edition?",
+        "What happened to 11:18 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "11:18"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 69,
+      "source_segment_end": 69,
+      "page_start": 18,
+      "page_end": 18,
+      "review_status": "draft"
+    },
+    {
+      "id": "s20-23",
+      "title": "11:20-23 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 11:20-23 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:20-23",
+        "Quran 11:20-23",
+        "sura 11 verse 20",
+        "11:20",
+        "11:21",
+        "11:22",
+        "11:23",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 11:20-23 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 11:20-23 missing from the 1992 edition?",
+        "What happened to 11:20-23 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "11:20",
+        "11:21",
+        "11:22",
+        "11:23"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 78,
+      "source_segment_end": 91,
+      "page_start": 20,
+      "page_end": 23,
+      "review_status": "draft"
+    },
+    {
+      "id": "s24",
+      "title": "11:24 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:24 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The two groups are like the blind and deaf, compared to the seer and hearer. Are they the same? Would you not...\". 1992 final reading begins \"The example of these two groups is like the blind and deaf, compared to the seer and hearer. Are they equal? W...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:24",
+        "Quran 11:24",
+        "sura 11 verse 24",
+        "11:24",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:24 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:24?",
+        "Did Rashad Khalifa revise 11:24 in the final edition?"
+      ],
+      "quran_references": [
+        "11:24"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 94,
+      "source_segment_end": 94,
+      "page_start": 24,
+      "page_end": 24,
+      "review_status": "draft"
+    },
+    {
+      "id": "s40",
+      "title": "11:40 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:40 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When our judgment came, and the pot boiled over, we said, “Carry on it a pair of each kind,* together with you...\". 1992 final reading begins \"When our judgment came, and the atmosphere boiled over, we said, \"Carry on it a pair of each kind,± together w...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:40",
+        "Quran 11:40",
+        "sura 11 verse 40",
+        "11:40",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:40 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:40?",
+        "Did Rashad Khalifa revise 11:40 in the final edition?"
+      ],
+      "quran_references": [
+        "11:40"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 148,
+      "source_segment_end": 148,
+      "page_start": 40,
+      "page_end": 40,
+      "review_status": "draft"
+    },
+    {
+      "id": "s68",
+      "title": "11:68 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:68 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"It was as if they never lived there. Indeed, Thamoud have rejected their Lord; Thamoud have perished. Abraham...\". 1992 final reading begins \"It was as if they never lived there. Indeed, Thamûd have rejected their Lord. Absolutely, Thamûd have incurred...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:68",
+        "Quran 11:68",
+        "sura 11 verse 68",
+        "11:68",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:68 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:68?",
+        "Did Rashad Khalifa revise 11:68 in the final edition?"
+      ],
+      "quran_references": [
+        "11:68"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 246,
+      "source_segment_end": 246,
+      "page_start": 68,
+      "page_end": 68,
+      "review_status": "draft"
+    },
+    {
+      "id": "s76",
+      "title": "11:76 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:76 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“O Abraham, refrain from this. Your Lord’s judgment has been issued; they have incurred unavoidable retributio...\". 1992 final reading begins \"\"O Abraham, refrain from this. Your Lord's judgment has been issued; they have incurred unavoidable retributio...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:76",
+        "Quran 11:76",
+        "sura 11 verse 76",
+        "11:76",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:76 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:76?",
+        "Did Rashad Khalifa revise 11:76 in the final edition?"
+      ],
+      "quran_references": [
+        "11:76"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 273,
+      "source_segment_end": 273,
+      "page_start": 76,
+      "page_end": 76,
+      "review_status": "draft"
+    },
+    {
+      "id": "s81",
+      "title": "11:81 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:81 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"(The angels) said, “O Lot, we are your Lord’s messengers. These people cannot touch you. You shall leave with...\". 1992 final reading begins \"(The angels) said, \"O Lot, we are your Lord's messengers, and these people cannot touch you. You shall leave w...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:81",
+        "Quran 11:81",
+        "sura 11 verse 81",
+        "11:81",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:81 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:81?",
+        "Did Rashad Khalifa revise 11:81 in the final edition?"
+      ],
+      "quran_references": [
+        "11:81"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 291,
+      "source_segment_end": 291,
+      "page_start": 81,
+      "page_end": 81,
+      "review_status": "draft"
+    },
+    {
+      "id": "s83",
+      "title": "11:83 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:83 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Such rocks were marked by your Lord to strike the transgressors. Shu'aib\". 1992 final reading begins \"Such rocks were designated by your Lord to strike the transgressors.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:83",
+        "Quran 11:83",
+        "sura 11 verse 83",
+        "11:83",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:83 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:83?",
+        "Did Rashad Khalifa revise 11:83 in the final edition?"
+      ],
+      "quran_references": [
+        "11:83"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 298,
+      "source_segment_end": 298,
+      "page_start": 83,
+      "page_end": 83,
+      "review_status": "draft"
+    },
+    {
+      "id": "s89",
+      "title": "11:89 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“And, O my people, do not be provoked by your opposition to me into incurring the same disasters as the people...\". 1992 final reading begins \"\"And, O my people, do not be provoked by your opposition to me into incurring the same disasters as the people...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:89",
+        "Quran 11:89",
+        "sura 11 verse 89",
+        "11:89",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:89 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:89?",
+        "Did Rashad Khalifa revise 11:89 in the final edition?"
+      ],
+      "quran_references": [
+        "11:89"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 318,
+      "source_segment_end": 318,
+      "page_start": 89,
+      "page_end": 89,
+      "review_status": "draft"
+    },
+    {
+      "id": "s92",
+      "title": "11:92 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:92 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “O my people, is my tribe more powerful in your eyes than GOD? Is this why you have been heedless of...\". 1992 final reading begins \"He said, \"O my people, does my tribe command a greater respect than GOD? Is this why you have been heedless of...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:92",
+        "Quran 11:92",
+        "sura 11 verse 92",
+        "11:92",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:92 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:92?",
+        "Did Rashad Khalifa revise 11:92 in the final edition?"
+      ],
+      "quran_references": [
+        "11:92"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 327,
+      "source_segment_end": 327,
+      "page_start": 92,
+      "page_end": 92,
+      "review_status": "draft"
+    },
+    {
+      "id": "s106",
+      "title": "11:106 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:106 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who transgressed, they will be in Hell, wherein they sigh and wail.\". 1992 final reading begins \"As for the miserable ones, they will be in Hell, wherein they sigh and wail.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:106",
+        "Quran 11:106",
+        "sura 11 verse 106",
+        "11:106",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:106 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:106?",
+        "Did Rashad Khalifa revise 11:106 in the final edition?"
+      ],
+      "quran_references": [
+        "11:106"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 374,
+      "source_segment_end": 374,
+      "page_start": 106,
+      "page_end": 106,
+      "review_status": "draft"
+    },
+    {
+      "id": "s112",
+      "title": "11:112 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 11:112 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:112",
+        "Quran 11:112",
+        "sura 11 verse 112",
+        "11:112",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 11:112 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 11:112 missing from the 1992 edition?",
+        "What happened to 11:112 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "11:112"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 394,
+      "source_segment_end": 394,
+      "page_start": 112,
+      "page_end": 112,
+      "review_status": "draft"
+    },
+    {
+      "id": "s113",
+      "title": "11:113 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 11:113 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do not join those who transgress, lest you incur Hell, and find no allies to help you against GOD, then end up...\". 1992 final reading begins \"Do not lean towards those who have transgressed, lest you incur Hell, and find no allies to help you against G...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:113",
+        "Quran 11:113",
+        "sura 11 verse 113",
+        "11:113",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 11:113 change between 1989 and 1992?",
+        "What is the final 1992 wording of 11:113?",
+        "Did Rashad Khalifa revise 11:113 in the final edition?"
+      ],
+      "quran_references": [
+        "11:113"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 398,
+      "source_segment_end": 398,
+      "page_start": 113,
+      "page_end": 113,
+      "review_status": "draft"
+    },
+    {
+      "id": "s114",
+      "title": "11:114 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 11:114 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:114",
+        "Quran 11:114",
+        "sura 11 verse 114",
+        "11:114",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 11:114 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 11:114 missing from the 1992 edition?",
+        "What happened to 11:114 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "11:114"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 402,
+      "source_segment_end": 402,
+      "page_start": 114,
+      "page_end": 114,
+      "review_status": "draft"
+    },
+    {
+      "id": "s116",
+      "title": "11:116 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 11:116 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:116",
+        "Quran 11:116",
+        "sura 11 verse 116",
+        "11:116",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 11:116 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 11:116 missing from the 1992 edition?",
+        "What happened to 11:116 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "11:116"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 409,
+      "source_segment_end": 409,
+      "page_start": 116,
+      "page_end": 116,
+      "review_status": "draft"
+    },
+    {
+      "id": "s123",
+      "title": "11:123 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 11:123 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "11:123",
+        "Quran 11:123",
+        "sura 11 verse 123",
+        "11:123",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 11:123 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 11:123 missing from the 1992 edition?",
+        "What happened to 11:123 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "11:123"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 434,
+      "source_segment_end": 434,
+      "page_start": 123,
+      "page_end": 123,
+      "review_status": "draft"
+    }
+  ]
+}

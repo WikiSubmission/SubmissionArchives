@@ -1,0 +1,922 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-28",
+  "canonical_document_id": "quran/28",
+  "canonical_catalog_ids": [
+    "quran/28"
+  ],
+  "title": "28. The History translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s6",
+      "title": "28:6 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:6 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And to establish them on earth, and to give Pharaoh, Hamaan, and their troops a taste of the suffering they ha...\". 1992 final reading begins \"And to establish them on earth, and to give Pharaoh, Hãmãn, and their troops a taste of their own medicine.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:6",
+        "Quran 28:6",
+        "sura 28 verse 6",
+        "28:6",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:6 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:6?",
+        "Did Rashad Khalifa revise 28:6 in the final edition?"
+      ],
+      "quran_references": [
+        "28:6"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 21,
+      "source_segment_end": 21,
+      "page_start": 6,
+      "page_end": 6,
+      "review_status": "draft"
+    },
+    {
+      "id": "s11",
+      "title": "28:11 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:11 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"She said to his sister, “Trace his path.” She watched him from afar, while they did not perceive. The Infant R...\". 1992 final reading begins \"She said to his sister, \"Trace his path.\" She watched him from afar, while they did not perceive.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:11",
+        "Quran 28:11",
+        "sura 28 verse 11",
+        "28:11",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:11 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:11?",
+        "Did Rashad Khalifa revise 28:11 in the final edition?"
+      ],
+      "quran_references": [
+        "28:11"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 40,
+      "source_segment_end": 40,
+      "page_start": 11,
+      "page_end": 11,
+      "review_status": "draft"
+    },
+    {
+      "id": "s14",
+      "title": "28:14 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:14 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When he reached maturity and strength, we endowed him with wisdom and knowledge. We thus reward the righteous....\". 1992 final reading begins \"When he reached maturity and strength, we endowed him with wisdom and knowledge. We thus reward the righteous.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:14",
+        "Quran 28:14",
+        "sura 28 verse 14",
+        "28:14",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:14 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:14?",
+        "Did Rashad Khalifa revise 28:14 in the final edition?"
+      ],
+      "quran_references": [
+        "28:14"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 51,
+      "source_segment_end": 51,
+      "page_start": 14,
+      "page_end": 14,
+      "review_status": "draft"
+    },
+    {
+      "id": "s27",
+      "title": "28:27 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:27 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “I wish that you marry one of my two daughters, in return for working for me for eight pilgrimages; i...\". 1992 final reading begins \"He said, \"I wish to offer one of my two daughters for you to marry, in return for working for me for eight pil...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:27",
+        "Quran 28:27",
+        "sura 28 verse 27",
+        "28:27",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:27 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:27?",
+        "Did Rashad Khalifa revise 28:27 in the final edition?"
+      ],
+      "quran_references": [
+        "28:27"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 97,
+      "source_segment_end": 97,
+      "page_start": 27,
+      "page_end": 27,
+      "review_status": "draft"
+    },
+    {
+      "id": "s34",
+      "title": "28:34 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:34 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Also, my brother Aaron is more eloquent than I. Send him with me as a helper who will believe me. I fear lest...\". 1992 final reading begins \"Also, my brother Aaron is more eloquent than I. Send him with me as a helper to confirm and strengthen me. I f...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:34",
+        "Quran 28:34",
+        "sura 28 verse 34",
+        "28:34",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:34 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:34?",
+        "Did Rashad Khalifa revise 28:34 in the final edition?"
+      ],
+      "quran_references": [
+        "28:34"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 122,
+      "source_segment_end": 122,
+      "page_start": 34,
+      "page_end": 34,
+      "review_status": "draft"
+    },
+    {
+      "id": "s36",
+      "title": "28:36 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:36 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When Moses went to them with our revelations, perfectly clear, they said, “This is fabricated magic. We have n...\". 1992 final reading begins \"When Moses went to them with our proofs, clear and profound, they said, \"This is fabricated magic. We have nev...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:36",
+        "Quran 28:36",
+        "sura 28 verse 36",
+        "28:36",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:36 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:36?",
+        "Did Rashad Khalifa revise 28:36 in the final edition?"
+      ],
+      "quran_references": [
+        "28:36"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 129,
+      "source_segment_end": 129,
+      "page_start": 36,
+      "page_end": 36,
+      "review_status": "draft"
+    },
+    {
+      "id": "s38",
+      "title": "28:38 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:38 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Pharaoh said, “O you elders, I have not known of any god for you other than me. Therefore, fire the adobe, O H...\". 1992 final reading begins \"Pharaoh said, \"O you elders, I have not known of any god for you other than me. Therefore, fire the adobe, O H...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:38",
+        "Quran 28:38",
+        "sura 28 verse 38",
+        "28:38",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:38 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:38?",
+        "Did Rashad Khalifa revise 28:38 in the final edition?"
+      ],
+      "quran_references": [
+        "28:38"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 136,
+      "source_segment_end": 136,
+      "page_start": 38,
+      "page_end": 38,
+      "review_status": "draft"
+    },
+    {
+      "id": "s44",
+      "title": "28:44 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:44 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You were not present on the west side, when we issued the command to Moses; you were not a witness.\". 1992 final reading begins \"You were not present on the slope of the western mount, when we issued the command to Moses; you were not a wi...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:44",
+        "Quran 28:44",
+        "sura 28 verse 44",
+        "28:44",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:44 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:44?",
+        "Did Rashad Khalifa revise 28:44 in the final edition?"
+      ],
+      "quran_references": [
+        "28:44"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 157,
+      "source_segment_end": 157,
+      "page_start": 44,
+      "page_end": 44,
+      "review_status": "draft"
+    },
+    {
+      "id": "s47-49",
+      "title": "28:47-49 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:47-49 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Thus, they cannot say, when a disaster strikes them as a consequence of their own deeds, “Our Lord, had You se...\". 1992 final reading begins \"Thus, they cannot say, when a disaster strikes them as a consequence of their own deeds, \"Our Lord, had You se...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:47-49",
+        "Quran 28:47-49",
+        "sura 28 verse 47",
+        "28:47",
+        "28:48",
+        "28:49",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:47-49 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:47-49?",
+        "Did Rashad Khalifa revise 28:47-49 in the final edition?"
+      ],
+      "quran_references": [
+        "28:47",
+        "28:48",
+        "28:49"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 168,
+      "source_segment_end": 178,
+      "page_start": 47,
+      "page_end": 49,
+      "review_status": "draft"
+    },
+    {
+      "id": "s50",
+      "title": "28:50 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 28:50 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:50",
+        "Quran 28:50",
+        "sura 28 verse 50",
+        "28:50",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 28:50 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 28:50 missing from the 1992 edition?",
+        "What happened to 28:50 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "28:50"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 182,
+      "source_segment_end": 182,
+      "page_start": 50,
+      "page_end": 50,
+      "review_status": "draft"
+    },
+    {
+      "id": "s53",
+      "title": "28:53 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When it is recited to them, they will say, “We believe in it. This is the truth from our Lord. Even before we...\". 1992 final reading begins \"When it is recited to them, they will say, \"We believe in it. This is the truth from our Lord. Even before we...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:53",
+        "Quran 28:53",
+        "sura 28 verse 53",
+        "28:53",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:53 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:53?",
+        "Did Rashad Khalifa revise 28:53 in the final edition?"
+      ],
+      "quran_references": [
+        "28:53"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 194,
+      "source_segment_end": 194,
+      "page_start": 53,
+      "page_end": 53,
+      "review_status": "draft"
+    },
+    {
+      "id": "s56",
+      "title": "28:56 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 28:56 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:56",
+        "Quran 28:56",
+        "sura 28 verse 56",
+        "28:56",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 28:56 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 28:56 missing from the 1992 edition?",
+        "What happened to 28:56 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "28:56"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 206,
+      "source_segment_end": 206,
+      "page_start": 56,
+      "page_end": 56,
+      "review_status": "draft"
+    },
+    {
+      "id": "s60",
+      "title": "28:60 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 28:60 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:60",
+        "Quran 28:60",
+        "sura 28 verse 60",
+        "28:60",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 28:60 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 28:60 missing from the 1992 edition?",
+        "What happened to 28:60 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "28:60"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 220,
+      "source_segment_end": 220,
+      "page_start": 60,
+      "page_end": 60,
+      "review_status": "draft"
+    },
+    {
+      "id": "s61",
+      "title": "28:61 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:61 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Is one whom we promised a good promise that will surely come to pass, equal to one whom we provide with the ma...\". 1992 final reading begins \"Is one whom we promised a good promise that will surely come to pass, equal to one whom we provide with the te...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:61",
+        "Quran 28:61",
+        "sura 28 verse 61",
+        "28:61",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:61 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:61?",
+        "Did Rashad Khalifa revise 28:61 in the final edition?"
+      ],
+      "quran_references": [
+        "28:61"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 223,
+      "source_segment_end": 223,
+      "page_start": 61,
+      "page_end": 61,
+      "review_status": "draft"
+    },
+    {
+      "id": "s64",
+      "title": "28:64 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:64 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"It will be said, “Call upon your idols (to help you).” They will call upon them, but they will not respond. Th...\". 1992 final reading begins \"It will be said, \"Call upon your idols (to help you).\" They will call upon them, but they will not respond. Th...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:64",
+        "Quran 28:64",
+        "sura 28 verse 64",
+        "28:64",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:64 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:64?",
+        "Did Rashad Khalifa revise 28:64 in the final edition?"
+      ],
+      "quran_references": [
+        "28:64"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 234,
+      "source_segment_end": 234,
+      "page_start": 64,
+      "page_end": 64,
+      "review_status": "draft"
+    },
+    {
+      "id": "s67",
+      "title": "28:67 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:67 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The one who repented, believed, and led a righteous life will end up with the winners. God Redeems the True Be...\". 1992 final reading begins \"As for those who repent, believe, and lead a righteous life, they will end up with the winners.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:67",
+        "Quran 28:67",
+        "sura 28 verse 67",
+        "28:67",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:67 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:67?",
+        "Did Rashad Khalifa revise 28:67 in the final edition?"
+      ],
+      "quran_references": [
+        "28:67"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 245,
+      "source_segment_end": 245,
+      "page_start": 67,
+      "page_end": 67,
+      "review_status": "draft"
+    },
+    {
+      "id": "s71",
+      "title": "28:71 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:71 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “What if GOD made the night continuous, until the Day of Resurrection? Which god, other than GOD, can bri...\". 1992 final reading begins \"Say, \"What if GOD made the night perpetual, until the Day of Resurrection? Which god, other than GOD, can prov...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:71",
+        "Quran 28:71",
+        "sura 28 verse 71",
+        "28:71",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:71 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:71?",
+        "Did Rashad Khalifa revise 28:71 in the final edition?"
+      ],
+      "quran_references": [
+        "28:71"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 258,
+      "source_segment_end": 258,
+      "page_start": 71,
+      "page_end": 71,
+      "review_status": "draft"
+    },
+    {
+      "id": "s73-74",
+      "title": "28:73-74 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:73-74 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"It is mercy from Him that He created for you the night and the day in order to rest (during the night), then s...\". 1992 final reading begins \"It is mercy from Him that He created for you the night and the day in order to rest (during the night), then s...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:73-74",
+        "Quran 28:73-74",
+        "sura 28 verse 73",
+        "28:73",
+        "28:74",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:73-74 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:73-74?",
+        "Did Rashad Khalifa revise 28:73-74 in the final edition?"
+      ],
+      "quran_references": [
+        "28:73",
+        "28:74"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 265,
+      "source_segment_end": 269,
+      "page_start": 73,
+      "page_end": 74,
+      "review_status": "draft"
+    },
+    {
+      "id": "s79",
+      "title": "28:79 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:79 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"One day, he came out to his people in full splendor. Those who preferred this worldly life said, “Oh, we wish...\". 1992 final reading begins \"One day, he came out to his people in full splendor. Those who preferred this worldly life said, \"Oh, we wish...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:79",
+        "Quran 28:79",
+        "sura 28 verse 79",
+        "28:79",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:79 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:79?",
+        "Did Rashad Khalifa revise 28:79 in the final edition?"
+      ],
+      "quran_references": [
+        "28:79"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 289,
+      "source_segment_end": 289,
+      "page_start": 79,
+      "page_end": 79,
+      "review_status": "draft"
+    },
+    {
+      "id": "s82",
+      "title": "28:82 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:82 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who were envious of him the day before said, “Now we realize thal GOD is the One who provides for whomev...\". 1992 final reading begins \"Those who were envious of him the day before said, \"Now we realize that GOD is the One who provides for whomev...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:82",
+        "Quran 28:82",
+        "sura 28 verse 82",
+        "28:82",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:82 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:82?",
+        "Did Rashad Khalifa revise 28:82 in the final edition?"
+      ],
+      "quran_references": [
+        "28:82"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 301,
+      "source_segment_end": 301,
+      "page_start": 82,
+      "page_end": 82,
+      "review_status": "draft"
+    },
+    {
+      "id": "s86",
+      "title": "28:86 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:86 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You did not hope to have this scripture come your way; but this is a mercy from your Lord. Do not be of any he...\". 1992 final reading begins \"You never expected this scripture to come your way; but this is a mercy from your Lord. Therefore, you shall n...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:86",
+        "Quran 28:86",
+        "sura 28 verse 86",
+        "28:86",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:86 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:86?",
+        "Did Rashad Khalifa revise 28:86 in the final edition?"
+      ],
+      "quran_references": [
+        "28:86"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 315,
+      "source_segment_end": 315,
+      "page_start": 86,
+      "page_end": 86,
+      "review_status": "draft"
+    },
+    {
+      "id": "s88",
+      "title": "28:88 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 28:88 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall not worship besides GOD any other god. There is no other god besides Him. Everything perishes except...\". 1992 final reading begins \"You shall not worship beside GOD any other god. There is no other god beside Him. Everything perishes except H...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "28:88",
+        "Quran 28:88",
+        "sura 28 verse 88",
+        "28:88",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 28:88 change between 1989 and 1992?",
+        "What is the final 1992 wording of 28:88?",
+        "Did Rashad Khalifa revise 28:88 in the final edition?"
+      ],
+      "quran_references": [
+        "28:88"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 321,
+      "source_segment_end": 321,
+      "page_start": 88,
+      "page_end": 88,
+      "review_status": "draft"
+    }
+  ]
+}

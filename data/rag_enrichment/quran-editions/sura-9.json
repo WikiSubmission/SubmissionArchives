@@ -1,0 +1,1746 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-9",
+  "canonical_document_id": "quran/9",
+  "canonical_catalog_ids": [
+    "quran/9"
+  ],
+  "title": "9. Ultimatum translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s3",
+      "title": "9:3 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And a proclamation is herein issued from GOD and His messenger to all the people on the great day of pilgrimag...\". 1992 final reading begins \"A proclamation is herein issued from GOD and His messenger to all the people on the great day of pilgrimage, t...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:3",
+        "Quran 9:3",
+        "sura 9 verse 3",
+        "9:3",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:3 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:3?",
+        "Did Rashad Khalifa revise 9:3 in the final edition?"
+      ],
+      "quran_references": [
+        "9:3"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 11,
+      "source_segment_end": 11,
+      "page_start": 3,
+      "page_end": 3,
+      "review_status": "draft"
+    },
+    {
+      "id": "s7",
+      "title": "9:7 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:7 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"How can the idol worshipers demand any pledge from G O D and from His messenger? Exempted are those who did en...\". 1992 final reading begins \"How can the idol worshipers demand any pledge from GOD and from His messenger? Exempted are those who have sig...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:7",
+        "Quran 9:7",
+        "sura 9 verse 7",
+        "9:7",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:7 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:7?",
+        "Did Rashad Khalifa revise 9:7 in the final edition?"
+      ],
+      "quran_references": [
+        "9:7"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 23,
+      "source_segment_end": 23,
+      "page_start": 7,
+      "page_end": 7,
+      "review_status": "draft"
+    },
+    {
+      "id": "s10",
+      "title": "9:10 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They never observe any rights of relationship with a believer, nor any covenant; these are the real transgress...\". 1992 final reading begins \"They never observe any rights of kinship towards any believer, nor do they uphold their covenants; these are t...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:10",
+        "Quran 9:10",
+        "sura 9 verse 10",
+        "9:10",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:10 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:10?",
+        "Did Rashad Khalifa revise 9:10 in the final edition?"
+      ],
+      "quran_references": [
+        "9:10"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 32,
+      "source_segment_end": 32,
+      "page_start": 10,
+      "page_end": 10,
+      "review_status": "draft"
+    },
+    {
+      "id": "s15",
+      "title": "9:15 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:15 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He will also remove the rage of the believers. GOD redeems whomever He wills. GOD Omniscient, Most Wise. The I...\". 1992 final reading begins \"He will also remove the rage from the believers' hearts. GOD redeems whomever He wills. GOD is Omniscient, Mos...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:15",
+        "Quran 9:15",
+        "sura 9 verse 15",
+        "9:15",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:15 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:15?",
+        "Did Rashad Khalifa revise 9:15 in the final edition?"
+      ],
+      "quran_references": [
+        "9:15"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 49,
+      "source_segment_end": 49,
+      "page_start": 15,
+      "page_end": 15,
+      "review_status": "draft"
+    },
+    {
+      "id": "s17",
+      "title": "9:17 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:17 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The idol worshipers are not to frequent the mosques of GOD, while confessing their disbelief. Their works are...\". 1992 final reading begins \"The idol worshipers are not to frequent the masjids of GOD, while confessing their disbelief. These have nulli...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:17",
+        "Quran 9:17",
+        "sura 9 verse 17",
+        "9:17",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:17 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:17?",
+        "Did Rashad Khalifa revise 9:17 in the final edition?"
+      ],
+      "quran_references": [
+        "9:17"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 56,
+      "source_segment_end": 56,
+      "page_start": 17,
+      "page_end": 17,
+      "review_status": "draft"
+    },
+    {
+      "id": "s22",
+      "title": "9:22 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:22 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Eternally they abide therein. GOD possesses a great recompense. If You Have to Make a Choice\". 1992 final reading begins \"Eternally they abide therein. GOD possesses a great recompense.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:22",
+        "Quran 9:22",
+        "sura 9 verse 22",
+        "9:22",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:22 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:22?",
+        "Did Rashad Khalifa revise 9:22 in the final edition?"
+      ],
+      "quran_references": [
+        "9:22"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 76,
+      "source_segment_end": 76,
+      "page_start": 22,
+      "page_end": 22,
+      "review_status": "draft"
+    },
+    {
+      "id": "s23",
+      "title": "9:23 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:23 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:23",
+        "Quran 9:23",
+        "sura 9 verse 23",
+        "9:23",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:23 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:23 missing from the 1992 edition?",
+        "What happened to 9:23 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:23"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 80,
+      "source_segment_end": 80,
+      "page_start": 23,
+      "page_end": 23,
+      "review_status": "draft"
+    },
+    {
+      "id": "s29",
+      "title": "9:29 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall fight back against those who do not believe in GOD, nor in the Last Day, and they do not prohibit wh...\". 1992 final reading begins \"You shall fight back against those who do not believe in GOD, nor in the Last Day, nor do they prohibit what G...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:29",
+        "Quran 9:29",
+        "sura 9 verse 29",
+        "9:29",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:29 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:29?",
+        "Did Rashad Khalifa revise 9:29 in the final edition?"
+      ],
+      "quran_references": [
+        "9:29"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 102,
+      "source_segment_end": 102,
+      "page_start": 29,
+      "page_end": 29,
+      "review_status": "draft"
+    },
+    {
+      "id": "s31",
+      "title": "9:31 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:31 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:31",
+        "Quran 9:31",
+        "sura 9 verse 31",
+        "9:31",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:31 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:31 missing from the 1992 edition?",
+        "What happened to 9:31 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:31"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 112,
+      "source_segment_end": 112,
+      "page_start": 31,
+      "page_end": 31,
+      "review_status": "draft"
+    },
+    {
+      "id": "s33",
+      "title": "9:33 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He is the One who sent His messenger* with the guidance and the religion of truth, and will make it dominate a...\". 1992 final reading begins \"He is the One who sent His messenger± with the guidance and the religion of truth, and will make it dominate a...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:33",
+        "Quran 9:33",
+        "sura 9 verse 33",
+        "9:33",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:33 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:33?",
+        "Did Rashad Khalifa revise 9:33 in the final edition?"
+      ],
+      "quran_references": [
+        "9:33"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 121,
+      "source_segment_end": 121,
+      "page_start": 33,
+      "page_end": 33,
+      "review_status": "draft"
+    },
+    {
+      "id": "s34",
+      "title": "9:34 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:34 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:34",
+        "Quran 9:34",
+        "sura 9 verse 34",
+        "9:34",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:34 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:34 missing from the 1992 edition?",
+        "What happened to 9:34 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:34"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 128,
+      "source_segment_end": 128,
+      "page_start": 34,
+      "page_end": 34,
+      "review_status": "draft"
+    },
+    {
+      "id": "s36",
+      "title": "9:36 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:36 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:36",
+        "Quran 9:36",
+        "sura 9 verse 36",
+        "9:36",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:36 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:36 missing from the 1992 edition?",
+        "What happened to 9:36 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:36"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 136,
+      "source_segment_end": 136,
+      "page_start": 36,
+      "page_end": 36,
+      "review_status": "draft"
+    },
+    {
+      "id": "s40-45",
+      "title": "9:40-45 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:40-45 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:40-45",
+        "Quran 9:40-45",
+        "sura 9 verse 40",
+        "9:40",
+        "9:41",
+        "9:42",
+        "9:43",
+        "9:44",
+        "9:45",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:40-45 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:40-45 missing from the 1992 edition?",
+        "What happened to 9:40-45 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:40",
+        "9:41",
+        "9:42",
+        "9:43",
+        "9:44",
+        "9:45"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 159,
+      "source_segment_end": 177,
+      "page_start": 40,
+      "page_end": 45,
+      "review_status": "draft"
+    },
+    {
+      "id": "s48",
+      "title": "9:48 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:48 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They sought to spread chaos among you in the past, and confounded matters for you. However, the truth ultimate...\". 1992 final reading begins \"They sought to spread confusion among you in the past, and confounded the matters for you. However, the truth...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:48",
+        "Quran 9:48",
+        "sura 9 verse 48",
+        "9:48",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:48 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:48?",
+        "Did Rashad Khalifa revise 9:48 in the final edition?"
+      ],
+      "quran_references": [
+        "9:48"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 186,
+      "source_segment_end": 186,
+      "page_start": 48,
+      "page_end": 48,
+      "review_status": "draft"
+    },
+    {
+      "id": "s51-52",
+      "title": "9:51-52 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:51-52 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:51-52",
+        "Quran 9:51-52",
+        "sura 9 verse 51",
+        "9:51",
+        "9:52",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:51-52 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:51-52 missing from the 1992 edition?",
+        "What happened to 9:51-52 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:51",
+        "9:52"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 195,
+      "source_segment_end": 198,
+      "page_start": 51,
+      "page_end": 52,
+      "review_status": "draft"
+    },
+    {
+      "id": "s53",
+      "title": "9:53 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Say, “Spend, willingly or unwillingly. Nothing will be accepted from you, for you are evil people.” Rejectors...\". 1992 final reading begins \"Say, \"Spend, willingly or unwillingly. Nothing will be accepted from you, for you are evil people.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:53",
+        "Quran 9:53",
+        "sura 9 verse 53",
+        "9:53",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:53 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:53?",
+        "Did Rashad Khalifa revise 9:53 in the final edition?"
+      ],
+      "quran_references": [
+        "9:53"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 201,
+      "source_segment_end": 201,
+      "page_start": 53,
+      "page_end": 53,
+      "review_status": "draft"
+    },
+    {
+      "id": "s55",
+      "title": "9:55 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:55 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:55",
+        "Quran 9:55",
+        "sura 9 verse 55",
+        "9:55",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:55 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:55 missing from the 1992 edition?",
+        "What happened to 9:55 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:55"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 211,
+      "source_segment_end": 211,
+      "page_start": 55,
+      "page_end": 55,
+      "review_status": "draft"
+    },
+    {
+      "id": "s59",
+      "title": "9:59 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:59 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They should be satisfied with what GOD and His messenger have given them. They should have said, “GOD suffices...\". 1992 final reading begins \"They should be satisfied with what GOD and His messenger have given them. They should have said, \"GOD suffices...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:59",
+        "Quran 9:59",
+        "sura 9 verse 59",
+        "9:59",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:59 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:59?",
+        "Did Rashad Khalifa revise 9:59 in the final edition?"
+      ],
+      "quran_references": [
+        "9:59"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 224,
+      "source_segment_end": 224,
+      "page_start": 59,
+      "page_end": 59,
+      "review_status": "draft"
+    },
+    {
+      "id": "s60-61",
+      "title": "9:60-61 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:60-61 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:60-61",
+        "Quran 9:60-61",
+        "sura 9 verse 60",
+        "9:60",
+        "9:61",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:60-61 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:60-61 missing from the 1992 edition?",
+        "What happened to 9:60-61 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:60",
+        "9:61"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 228,
+      "source_segment_end": 233,
+      "page_start": 60,
+      "page_end": 61,
+      "review_status": "draft"
+    },
+    {
+      "id": "s62",
+      "title": "9:62 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:62 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They swear by GOD to you, to please you, when GOD and His messenger are more worthy of pleasing, if they are r...\". 1992 final reading begins \"They swear by GOD to you, to please you, when GOD and His messenger are more worthy of pleasing, if they are r...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:62",
+        "Quran 9:62",
+        "sura 9 verse 62",
+        "9:62",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:62 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:62?",
+        "Did Rashad Khalifa revise 9:62 in the final edition?"
+      ],
+      "quran_references": [
+        "9:62"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 236,
+      "source_segment_end": 236,
+      "page_start": 62,
+      "page_end": 62,
+      "review_status": "draft"
+    },
+    {
+      "id": "s64-66",
+      "title": "9:64-66 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:64-66 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:64-66",
+        "Quran 9:64-66",
+        "sura 9 verse 64",
+        "9:64",
+        "9:65",
+        "9:66",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:64-66 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:64-66 missing from the 1992 edition?",
+        "What happened to 9:64-66 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:64",
+        "9:65",
+        "9:66"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 245,
+      "source_segment_end": 252,
+      "page_start": 64,
+      "page_end": 66,
+      "review_status": "draft"
+    },
+    {
+      "id": "s69",
+      "title": "9:69 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:69 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:69",
+        "Quran 9:69",
+        "sura 9 verse 69",
+        "9:69",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:69 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:69 missing from the 1992 edition?",
+        "What happened to 9:69 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:69"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 263,
+      "source_segment_end": 263,
+      "page_start": 69,
+      "page_end": 69,
+      "review_status": "draft"
+    },
+    {
+      "id": "s71-77",
+      "title": "9:71-77 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:71-77 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:71-77",
+        "Quran 9:71-77",
+        "sura 9 verse 71",
+        "9:71",
+        "9:72",
+        "9:73",
+        "9:74",
+        "9:75",
+        "9:76",
+        "9:77",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:71-77 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:71-77 missing from the 1992 edition?",
+        "What happened to 9:71-77 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:71",
+        "9:72",
+        "9:73",
+        "9:74",
+        "9:75",
+        "9:76",
+        "9:77"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 273,
+      "source_segment_end": 294,
+      "page_start": 71,
+      "page_end": 77,
+      "review_status": "draft"
+    },
+    {
+      "id": "s78",
+      "title": "9:78 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:78 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Did they not know that GOD knows their secrets, as well as their declarations; that GOD is the Knower of all s...\". 1992 final reading begins \"Do they not realize that GOD knows their secrets, and their conspiracies, and that GOD is the Knower of all se...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:78",
+        "Quran 9:78",
+        "sura 9 verse 78",
+        "9:78",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:78 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:78?",
+        "Did Rashad Khalifa revise 9:78 in the final edition?"
+      ],
+      "quran_references": [
+        "9:78"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 297,
+      "source_segment_end": 297,
+      "page_start": 78,
+      "page_end": 78,
+      "review_status": "draft"
+    },
+    {
+      "id": "s80",
+      "title": "9:80 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:80 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:80",
+        "Quran 9:80",
+        "sura 9 verse 80",
+        "9:80",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:80 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:80 missing from the 1992 edition?",
+        "What happened to 9:80 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:80"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 304,
+      "source_segment_end": 304,
+      "page_start": 80,
+      "page_end": 80,
+      "review_status": "draft"
+    },
+    {
+      "id": "s82",
+      "title": "9:82 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:82 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Let them laugh a little and cry a lot. This is the requital for their sins.\". 1992 final reading begins \"Let them laugh a little, and cry a lot. This is the requital for the sins they have earned.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:82",
+        "Quran 9:82",
+        "sura 9 verse 82",
+        "9:82",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:82 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:82?",
+        "Did Rashad Khalifa revise 9:82 in the final edition?"
+      ],
+      "quran_references": [
+        "9:82"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 315,
+      "source_segment_end": 315,
+      "page_start": 82,
+      "page_end": 82,
+      "review_status": "draft"
+    },
+    {
+      "id": "s85",
+      "title": "9:85 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:85 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do not be impressed by their money or children; GOD punishes them therewith in this world, then their souls de...\". 1992 final reading begins \"Do not be impressed by their money or their children; GOD causes these to be sources of misery for them in thi...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:85",
+        "Quran 9:85",
+        "sura 9 verse 85",
+        "9:85",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:85 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:85?",
+        "Did Rashad Khalifa revise 9:85 in the final edition?"
+      ],
+      "quran_references": [
+        "9:85"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 325,
+      "source_segment_end": 325,
+      "page_start": 85,
+      "page_end": 85,
+      "review_status": "draft"
+    },
+    {
+      "id": "s87",
+      "title": "9:87 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:87 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They chose to be with the sedentary. Consequently, their hearts were sealed. Thus, they cannot comprehend. Tru...\". 1992 final reading begins \"They chose to be with the sedentary. Consequently, their hearts were sealed, and thus, they cannot comprehend.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:87",
+        "Quran 9:87",
+        "sura 9 verse 87",
+        "9:87",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:87 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:87?",
+        "Did Rashad Khalifa revise 9:87 in the final edition?"
+      ],
+      "quran_references": [
+        "9:87"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 331,
+      "source_segment_end": 331,
+      "page_start": 87,
+      "page_end": 87,
+      "review_status": "draft"
+    },
+    {
+      "id": "s93",
+      "title": "9:93 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:93 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The blame is on those who ask your permission to stay behind, even though they have no excuse. They have chose...\". 1992 final reading begins \"The blame is on those who ask your permission to stay behind, even though they have no excuse. They have chose...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:93",
+        "Quran 9:93",
+        "sura 9 verse 93",
+        "9:93",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:93 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:93?",
+        "Did Rashad Khalifa revise 9:93 in the final edition?"
+      ],
+      "quran_references": [
+        "9:93"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 351,
+      "source_segment_end": 351,
+      "page_start": 93,
+      "page_end": 93,
+      "review_status": "draft"
+    },
+    {
+      "id": "s95",
+      "title": "9:95 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:95 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will swear by GOD to you, after you come back, that you may disregard them. Do disregard them. They are c...\". 1992 final reading begins \"They will swear by GOD to you, when you return to them, that you may disregard them. Do disregard them. They a...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:95",
+        "Quran 9:95",
+        "sura 9 verse 95",
+        "9:95",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:95 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:95?",
+        "Did Rashad Khalifa revise 9:95 in the final edition?"
+      ],
+      "quran_references": [
+        "9:95"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 359,
+      "source_segment_end": 359,
+      "page_start": 95,
+      "page_end": 95,
+      "review_status": "draft"
+    },
+    {
+      "id": "s98-99",
+      "title": "9:98-99 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:98-99 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:98-99",
+        "Quran 9:98-99",
+        "sura 9 verse 98",
+        "9:98",
+        "9:99",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:98-99 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:98-99 missing from the 1992 edition?",
+        "What happened to 9:98-99 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:98",
+        "9:99"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 370,
+      "source_segment_end": 373,
+      "page_start": 98,
+      "page_end": 99,
+      "review_status": "draft"
+    },
+    {
+      "id": "s102",
+      "title": "9:102 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:102 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:102",
+        "Quran 9:102",
+        "sura 9 verse 102",
+        "9:102",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:102 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:102 missing from the 1992 edition?",
+        "What happened to 9:102 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:102"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 384,
+      "source_segment_end": 384,
+      "page_start": 102,
+      "page_end": 102,
+      "review_status": "draft"
+    },
+    {
+      "id": "s106",
+      "title": "9:106 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:106 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Others are waiting for G O D ’s judgment; He may punish them, or He may redeem them. GOD is Omniscient, Most W...\". 1992 final reading begins \"Others are waiting for GOD's decision; He may punish them, or He may redeem them. GOD is Omniscient, Most Wise...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:106",
+        "Quran 9:106",
+        "sura 9 verse 106",
+        "9:106",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:106 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:106?",
+        "Did Rashad Khalifa revise 9:106 in the final edition?"
+      ],
+      "quran_references": [
+        "9:106"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 397,
+      "source_segment_end": 397,
+      "page_start": 106,
+      "page_end": 106,
+      "review_status": "draft"
+    },
+    {
+      "id": "s111",
+      "title": "9:111 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:111 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:111",
+        "Quran 9:111",
+        "sura 9 verse 111",
+        "9:111",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:111 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:111 missing from the 1992 edition?",
+        "What happened to 9:111 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:111"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 420,
+      "source_segment_end": 420,
+      "page_start": 111,
+      "page_end": 111,
+      "review_status": "draft"
+    },
+    {
+      "id": "s112",
+      "title": "9:112 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:112 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are repenters, worshipers, praisers, meditators, bowing and prostrating, advocators of righteousness and...\". 1992 final reading begins \"They are the repenters, the worshipers, the praisers, the meditators, the bowing and prostrating, the advocato...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:112",
+        "Quran 9:112",
+        "sura 9 verse 112",
+        "9:112",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:112 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:112?",
+        "Did Rashad Khalifa revise 9:112 in the final edition?"
+      ],
+      "quran_references": [
+        "9:112"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 426,
+      "source_segment_end": 426,
+      "page_start": 112,
+      "page_end": 112,
+      "review_status": "draft"
+    },
+    {
+      "id": "s114-117",
+      "title": "9:114-117 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:114-117 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:114-117",
+        "Quran 9:114-117",
+        "sura 9 verse 114",
+        "9:114",
+        "9:115",
+        "9:116",
+        "9:117",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:114-117 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:114-117 missing from the 1992 edition?",
+        "What happened to 9:114-117 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:114",
+        "9:115",
+        "9:116",
+        "9:117"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 435,
+      "source_segment_end": 444,
+      "page_start": 114,
+      "page_end": 117,
+      "review_status": "draft"
+    },
+    {
+      "id": "s119-120",
+      "title": "9:119-120 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:119-120 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:119-120",
+        "Quran 9:119-120",
+        "sura 9 verse 119",
+        "9:119",
+        "9:120",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:119-120 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:119-120 missing from the 1992 edition?",
+        "What happened to 9:119-120 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:119",
+        "9:120"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 451,
+      "source_segment_end": 454,
+      "page_start": 119,
+      "page_end": 120,
+      "review_status": "draft"
+    },
+    {
+      "id": "s121",
+      "title": "9:121 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 9:121 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Nor do they incur any expense, small or large, nor do they cross any valley, without having it written down fo...\". 1992 final reading begins \"Nor do they incur any expense, small or large, nor do they cross any valley, without having the credit written...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:121",
+        "Quran 9:121",
+        "sura 9 verse 121",
+        "9:121",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 9:121 change between 1989 and 1992?",
+        "What is the final 1992 wording of 9:121?",
+        "Did Rashad Khalifa revise 9:121 in the final edition?"
+      ],
+      "quran_references": [
+        "9:121"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 457,
+      "source_segment_end": 457,
+      "page_start": 121,
+      "page_end": 121,
+      "review_status": "draft"
+    },
+    {
+      "id": "s122",
+      "title": "9:122 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:122 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:122",
+        "Quran 9:122",
+        "sura 9 verse 122",
+        "9:122",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:122 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:122 missing from the 1992 edition?",
+        "What happened to 9:122 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:122"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 461,
+      "source_segment_end": 461,
+      "page_start": 122,
+      "page_end": 122,
+      "review_status": "draft"
+    },
+    {
+      "id": "s128-129",
+      "title": "9:128-129 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 9:128-129 (1981: present, 1989: absent, 1992: absent). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:128-129",
+        "Quran 9:128-129",
+        "sura 9 verse 128",
+        "9:128",
+        "9:129",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 9:128-129 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 9:128-129 missing from the 1992 edition?",
+        "What happened to 9:128-129 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "9:128",
+        "9:129"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 482,
+      "source_segment_end": 482,
+      "page_start": 127,
+      "page_end": 127,
+      "review_status": "draft"
+    },
+    {
+      "id": "s128-129-dossier",
+      "title": "Sura 9:128-129 across the 1981, 1989, and 1992 editions",
+      "summary": "This dossier tracks Rashad Khalifa's changing treatment of the two passages. It describes edition history and does not independently adjudicate the passages' Quranic status. Edition sequence: 1981: present as numbered verses in main text; 1989: removed from main text and classified by rashad as false insertions; 1992: absent from final verse dataset.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "false-insertions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "9:128",
+        "9:129",
+        "Quran 9:128-129",
+        "sura 9 last two verses",
+        "two verses of sura 9",
+        "false verses",
+        "false insertions",
+        "removed verses",
+        "ends at 9:127"
+      ],
+      "related_questions": [
+        "Why does Sura 9 end at verse 127 in the 1992 edition?",
+        "What did Rashad Khalifa conclude about Quran 9:128 and 9:129?",
+        "When were the last two verses of Sura 9 removed from the translation?"
+      ],
+      "quran_references": [
+        "9:127",
+        "9:128",
+        "9:129"
+      ],
+      "retrieval_note": "High-interest edition question. The 1992 main text ends at 9:127; the 1981 edition prints the passages and the 1989 edition classifies them as false insertions.",
+      "source_segment_start": 482,
+      "source_segment_end": 482,
+      "page_start": 127,
+      "page_end": 127,
+      "review_status": "draft"
+    }
+  ]
+}

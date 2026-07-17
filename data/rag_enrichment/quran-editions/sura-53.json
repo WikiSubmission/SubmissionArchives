@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-53",
+  "canonical_document_id": "quran/53",
+  "canonical_catalog_ids": [
+    "quran/53"
+  ],
+  "title": "53. The Stars translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s1-9",
+      "title": "53:1-9 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 53:1-9 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "53:1-9",
+        "Quran 53:1-9",
+        "sura 53 verse 1",
+        "53:1",
+        "53:2",
+        "53:3",
+        "53:4",
+        "53:5",
+        "53:6",
+        "53:7",
+        "53:8",
+        "53:9",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 53:1-9 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 53:1-9 missing from the 1992 edition?",
+        "What happened to 53:1-9 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "53:1",
+        "53:2",
+        "53:3",
+        "53:4",
+        "53:5",
+        "53:6",
+        "53:7",
+        "53:8",
+        "53:9"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 0,
+      "source_segment_end": 41,
+      "page_start": 1,
+      "page_end": 9,
+      "review_status": "draft"
+    },
+    {
+      "id": "s11-41",
+      "title": "53:11-41 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 53:11-41 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "53:11-41",
+        "Quran 53:11-41",
+        "sura 53 verse 11",
+        "53:11",
+        "53:12",
+        "53:13",
+        "53:14",
+        "53:15",
+        "53:16",
+        "53:17",
+        "53:18",
+        "53:19",
+        "53:20",
+        "53:21",
+        "53:22",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 53:11-41 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 53:11-41 missing from the 1992 edition?",
+        "What happened to 53:11-41 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "53:11",
+        "53:12",
+        "53:13",
+        "53:14",
+        "53:15",
+        "53:16",
+        "53:17",
+        "53:18",
+        "53:19",
+        "53:20",
+        "53:21",
+        "53:22",
+        "53:23",
+        "53:24",
+        "53:25",
+        "53:26",
+        "53:27",
+        "53:28",
+        "53:29",
+        "53:30",
+        "53:31",
+        "53:32",
+        "53:33",
+        "53:34",
+        "53:35",
+        "53:36",
+        "53:37",
+        "53:38",
+        "53:39",
+        "53:40",
+        "53:41"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 51,
+      "source_segment_end": 164,
+      "page_start": 11,
+      "page_end": 41,
+      "review_status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,1557 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-4",
+  "canonical_document_id": "quran/4",
+  "canonical_catalog_ids": [
+    "quran/4"
+  ],
+  "title": "4. The Women translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s2",
+      "title": "4:2 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:2 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall hand over to the orphans their rightful properties. Do not substitute the bad for the good, nor shal...\". 1992 final reading begins \"You shall hand over to the orphans their rightful properties. Do not substitute the bad for the good, and do n...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:2",
+        "Quran 4:2",
+        "sura 4 verse 2",
+        "4:2",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:2 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:2?",
+        "Did Rashad Khalifa revise 4:2 in the final edition?"
+      ],
+      "quran_references": [
+        "4:2"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 5,
+      "source_segment_end": 5,
+      "page_start": 2,
+      "page_end": 2,
+      "review_status": "draft"
+    },
+    {
+      "id": "s3",
+      "title": "4:3 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 4:3 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:3",
+        "Quran 4:3",
+        "sura 4 verse 3",
+        "4:3",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 4:3 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 4:3 missing from the 1992 edition?",
+        "What happened to 4:3 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "4:3"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 10,
+      "source_segment_end": 10,
+      "page_start": 3,
+      "page_end": 3,
+      "review_status": "draft"
+    },
+    {
+      "id": "s4",
+      "title": "4:4 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:4 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall give the women their due dowries, fully. If they willingly forfeit anything, then you may accept it...\". 1992 final reading begins \"You shall give the women their due dowries, equitably. If they willingly forfeit anything, then you may accept...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:4",
+        "Quran 4:4",
+        "sura 4 verse 4",
+        "4:4",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:4 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:4?",
+        "Did Rashad Khalifa revise 4:4 in the final edition?"
+      ],
+      "quran_references": [
+        "4:4"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 17,
+      "source_segment_end": 17,
+      "page_start": 4,
+      "page_end": 4,
+      "review_status": "draft"
+    },
+    {
+      "id": "s10-11",
+      "title": "4:10-11 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:10-11 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who consume the orphans’ properties unjustly, eat fire into their bellies, and incur Hell. If No Will Is...\". 1992 final reading begins \"Those who consume the orphans' properties unjustly, eat fire into their bellies, and will suffer in Hell.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:10-11",
+        "Quran 4:10-11",
+        "sura 4 verse 10",
+        "4:10",
+        "4:11",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:10-11 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:10-11?",
+        "Did Rashad Khalifa revise 4:10-11 in the final edition?"
+      ],
+      "quran_references": [
+        "4:10",
+        "4:11"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 37,
+      "source_segment_end": 41,
+      "page_start": 10,
+      "page_end": 11,
+      "review_status": "draft"
+    },
+    {
+      "id": "s15-16",
+      "title": "4:15-16 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 4:15-16 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:15-16",
+        "Quran 4:15-16",
+        "sura 4 verse 15",
+        "4:15",
+        "4:16",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 4:15-16 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 4:15-16 missing from the 1992 edition?",
+        "What happened to 4:15-16 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "4:15",
+        "4:16"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 62,
+      "source_segment_end": 70,
+      "page_start": 15,
+      "page_end": 16,
+      "review_status": "draft"
+    },
+    {
+      "id": "s21-22",
+      "title": "4:21-22 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:21-22 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"How could you take it back, after you have been intimate with each other, and after they have taken from you a...\". 1992 final reading begins \"How could you take it back, after you have been intimate with each other, and they had taken from you a solemn...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:21-22",
+        "Quran 4:21-22",
+        "sura 4 verse 21",
+        "4:21",
+        "4:22",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:21-22 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:21-22?",
+        "Did Rashad Khalifa revise 4:21-22 in the final edition?"
+      ],
+      "quran_references": [
+        "4:21",
+        "4:22"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 92,
+      "source_segment_end": 96,
+      "page_start": 21,
+      "page_end": 22,
+      "review_status": "draft"
+    },
+    {
+      "id": "s31",
+      "title": "4:31 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:31 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"If you refrain from committing gross sins, as you are commanded, we will remit your sins, and admit you an hon...\". 1992 final reading begins \"If you refrain from committing the gross sins that are prohibited for you, we will remit your sins, and admit...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:31",
+        "Quran 4:31",
+        "sura 4 verse 31",
+        "4:31",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:31 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:31?",
+        "Did Rashad Khalifa revise 4:31 in the final edition?"
+      ],
+      "quran_references": [
+        "4:31"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 138,
+      "source_segment_end": 138,
+      "page_start": 31,
+      "page_end": 31,
+      "review_status": "draft"
+    },
+    {
+      "id": "s33",
+      "title": "4:33 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:33 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"For each of you, we have designated shares from the inheritance left by the parents and the relatives, includi...\". 1992 final reading begins \"For each of you, we have designated shares from the inheritance left by the parents and the relatives. Also th...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:33",
+        "Quran 4:33",
+        "sura 4 verse 33",
+        "4:33",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:33 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:33?",
+        "Did Rashad Khalifa revise 4:33 in the final edition?"
+      ],
+      "quran_references": [
+        "4:33"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 148,
+      "source_segment_end": 148,
+      "page_start": 33,
+      "page_end": 33,
+      "review_status": "draft"
+    },
+    {
+      "id": "s35",
+      "title": "4:35 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 4:35 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:35",
+        "Quran 4:35",
+        "sura 4 verse 35",
+        "4:35",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 4:35 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 4:35 missing from the 1992 edition?",
+        "What happened to 4:35 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "4:35"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 160,
+      "source_segment_end": 160,
+      "page_start": 35,
+      "page_end": 35,
+      "review_status": "draft"
+    },
+    {
+      "id": "s42",
+      "title": "4:42 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:42 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"On that day, those who disbelieved and disobeyed the messenger will wish that they were level with the ground,...\". 1992 final reading begins \"On that day, those who disbelieved and disobeyed the messenger will wish that they were level with the ground;...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:42",
+        "Quran 4:42",
+        "sura 4 verse 42",
+        "4:42",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:42 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:42?",
+        "Did Rashad Khalifa revise 4:42 in the final edition?"
+      ],
+      "quran_references": [
+        "4:42"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 185,
+      "source_segment_end": 185,
+      "page_start": 42,
+      "page_end": 42,
+      "review_status": "draft"
+    },
+    {
+      "id": "s45",
+      "title": "4:45 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD knows best who your enemies are, and GOD suffices as Lord and Maste GOD is the best Supporter.\". 1992 final reading begins \"GOD knows best who your enemies are. GOD is the only Lord and Master. GOD is the only Supporter.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:45",
+        "Quran 4:45",
+        "sura 4 verse 45",
+        "4:45",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:45 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:45?",
+        "Did Rashad Khalifa revise 4:45 in the final edition?"
+      ],
+      "quran_references": [
+        "4:45"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 197,
+      "source_segment_end": 197,
+      "page_start": 45,
+      "page_end": 45,
+      "review_status": "draft"
+    },
+    {
+      "id": "s47",
+      "title": "4:47 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:47 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O you who received previous scripture, you shall believe in what we have revealed herein, confirming what you...\". 1992 final reading begins \"O you who received the scripture, you shall believe in what we reveal herein, confirming what you have, before...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:47",
+        "Quran 4:47",
+        "sura 4 verse 47",
+        "4:47",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:47 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:47?",
+        "Did Rashad Khalifa revise 4:47 in the final edition?"
+      ],
+      "quran_references": [
+        "4:47"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 206,
+      "source_segment_end": 206,
+      "page_start": 47,
+      "page_end": 47,
+      "review_status": "draft"
+    },
+    {
+      "id": "s50",
+      "title": "4:50 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:50 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Note how they fabricate lies about GOD; this alone is a gross offense.\". 1992 final reading begins \"Note how they fabricate lies about GOD; what a gross offense this is!\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:50",
+        "Quran 4:50",
+        "sura 4 verse 50",
+        "4:50",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:50 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:50?",
+        "Did Rashad Khalifa revise 4:50 in the final edition?"
+      ],
+      "quran_references": [
+        "4:50"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 222,
+      "source_segment_end": 222,
+      "page_start": 50,
+      "page_end": 50,
+      "review_status": "draft"
+    },
+    {
+      "id": "s53",
+      "title": "4:53 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do they own a share of the kingship? If they do, they will not give the people as much as a grain.\". 1992 final reading begins \"Do they own a share of the sovereignty? If they did, they would not give the people as much as a grain.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:53",
+        "Quran 4:53",
+        "sura 4 verse 53",
+        "4:53",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:53 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:53?",
+        "Did Rashad Khalifa revise 4:53 in the final edition?"
+      ],
+      "quran_references": [
+        "4:53"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 233,
+      "source_segment_end": 233,
+      "page_start": 53,
+      "page_end": 53,
+      "review_status": "draft"
+    },
+    {
+      "id": "s55",
+      "title": "4:55 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:55 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Some of them believed therein, and some of them repelled there from; Hell suffices them as a retribution.\". 1992 final reading begins \"Some of them believed therein, and some of them repelled therefrom; Hell is the only just retribution for thes...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:55",
+        "Quran 4:55",
+        "sura 4 verse 55",
+        "4:55",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:55 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:55?",
+        "Did Rashad Khalifa revise 4:55 in the final edition?"
+      ],
+      "quran_references": [
+        "4:55"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 239,
+      "source_segment_end": 239,
+      "page_start": 55,
+      "page_end": 55,
+      "review_status": "draft"
+    },
+    {
+      "id": "s63-64",
+      "title": "4:63-64 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:63-64 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"G O D is fully aware of their inner most intentions. You shall ignore them, enlighten them, and give them good...\". 1992 final reading begins \"GOD is fully aware of their innermost intentions. You shall ignore them, enlighten them, and give them good ad...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:63-64",
+        "Quran 4:63-64",
+        "sura 4 verse 63",
+        "4:63",
+        "4:64",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:63-64 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:63-64?",
+        "Did Rashad Khalifa revise 4:63-64 in the final edition?"
+      ],
+      "quran_references": [
+        "4:63",
+        "4:64"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 273,
+      "source_segment_end": 277,
+      "page_start": 63,
+      "page_end": 64,
+      "review_status": "draft"
+    },
+    {
+      "id": "s66-69",
+      "title": "4:66-69 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 4:66-69 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:66-69",
+        "Quran 4:66-69",
+        "sura 4 verse 66",
+        "4:66",
+        "4:67",
+        "4:68",
+        "4:69",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 4:66-69 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 4:66-69 missing from the 1992 edition?",
+        "What happened to 4:66-69 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "4:66",
+        "4:67",
+        "4:68",
+        "4:69"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 287,
+      "source_segment_end": 298,
+      "page_start": 66,
+      "page_end": 69,
+      "review_status": "draft"
+    },
+    {
+      "id": "s72",
+      "title": "4:72 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:72 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, there is always the one who drags his feet, then, if a setbacl befalls you, he says, “GOD has blessed...\". 1992 final reading begins \"Surely, there are those among you who would drag their feet, then, if a setback afflicts you, they would say,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:72",
+        "Quran 4:72",
+        "sura 4 verse 72",
+        "4:72",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:72 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:72?",
+        "Did Rashad Khalifa revise 4:72 in the final edition?"
+      ],
+      "quran_references": [
+        "4:72"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 309,
+      "source_segment_end": 309,
+      "page_start": 72,
+      "page_end": 72,
+      "review_status": "draft"
+    },
+    {
+      "id": "s80",
+      "title": "4:80 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 4:80 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:80",
+        "Quran 4:80",
+        "sura 4 verse 80",
+        "4:80",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 4:80 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 4:80 missing from the 1992 edition?",
+        "What happened to 4:80 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "4:80"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 342,
+      "source_segment_end": 342,
+      "page_start": 80,
+      "page_end": 80,
+      "review_status": "draft"
+    },
+    {
+      "id": "s89",
+      "title": "4:89 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They wish that you disbelieve as they have disbelieved, then you become equal. Do not consider them friends, u...\". 1992 final reading begins \"They wish that you disbelieve as they have disbelieved, then you become equal. Do not consider them friends, u...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:89",
+        "Quran 4:89",
+        "sura 4 verse 89",
+        "4:89",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:89 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:89?",
+        "Did Rashad Khalifa revise 4:89 in the final edition?"
+      ],
+      "quran_references": [
+        "4:89"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 384,
+      "source_segment_end": 384,
+      "page_start": 89,
+      "page_end": 89,
+      "review_status": "draft"
+    },
+    {
+      "id": "s91",
+      "title": "4:91 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:91 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You will find others who wish to make peace with you, and also with their people. However, as soon as war erup...\". 1992 final reading begins \"You will find others who wish to make peace with you, and also with their people. However, as soon as war erup...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:91",
+        "Quran 4:91",
+        "sura 4 verse 91",
+        "4:91",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:91 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:91?",
+        "Did Rashad Khalifa revise 4:91 in the final edition?"
+      ],
+      "quran_references": [
+        "4:91"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 392,
+      "source_segment_end": 392,
+      "page_start": 91,
+      "page_end": 91,
+      "review_status": "draft"
+    },
+    {
+      "id": "s95",
+      "title": "4:95 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:95 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Not equal are the sedentary among the believers who are not handicapped, and those who strive in the cause of...\". 1992 final reading begins \"Not equal are the sedentary among the believers who are not handicapped, and those who strive in the cause of...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:95",
+        "Quran 4:95",
+        "sura 4 verse 95",
+        "4:95",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:95 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:95?",
+        "Did Rashad Khalifa revise 4:95 in the final edition?"
+      ],
+      "quran_references": [
+        "4:95"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 411,
+      "source_segment_end": 411,
+      "page_start": 95,
+      "page_end": 95,
+      "review_status": "draft"
+    },
+    {
+      "id": "s98",
+      "title": "4:98 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:98 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Exempted are the weak men, women, and children who do not possess the means, nor can find a way out.\". 1992 final reading begins \"Exempted are the weak men, women, and children who do not possess the strength, nor the means to find a way ou...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:98",
+        "Quran 4:98",
+        "sura 4 verse 98",
+        "4:98",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:98 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:98?",
+        "Did Rashad Khalifa revise 4:98 in the final edition?"
+      ],
+      "quran_references": [
+        "4:98"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 423,
+      "source_segment_end": 423,
+      "page_start": 98,
+      "page_end": 98,
+      "review_status": "draft"
+    },
+    {
+      "id": "s100",
+      "title": "4:100 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:100 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Anyone who emigrates in the cause of GOD will find on earth great bounties and richness. Anyone who gives up h...\". 1992 final reading begins \"Anyone who emigrates in the cause of GOD will find on earth great bounties and richness. Anyone who gives up h...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:100",
+        "Quran 4:100",
+        "sura 4 verse 100",
+        "4:100",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:100 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:100?",
+        "Did Rashad Khalifa revise 4:100 in the final edition?"
+      ],
+      "quran_references": [
+        "4:100"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 429,
+      "source_segment_end": 429,
+      "page_start": 100,
+      "page_end": 100,
+      "review_status": "draft"
+    },
+    {
+      "id": "s106",
+      "title": "4:106 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:106 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall implore GOD for forgiveness. GOD is Forgiver, Most Merciful. Do Not Defend the Transgressors\". 1992 final reading begins \"You shall implore GOD for forgiveness. GOD is Forgiver, Most Merciful.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:106",
+        "Quran 4:106",
+        "sura 4 verse 106",
+        "4:106",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:106 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:106?",
+        "Did Rashad Khalifa revise 4:106 in the final edition?"
+      ],
+      "quran_references": [
+        "4:106"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 453,
+      "source_segment_end": 453,
+      "page_start": 106,
+      "page_end": 106,
+      "review_status": "draft"
+    },
+    {
+      "id": "s111",
+      "title": "4:111 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:111 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Anyone who earns a sin, earns it against his own soul. GOD is Omniscient, Most Wise.\". 1992 final reading begins \"Anyone who earns a sin, earns it to the detriment of his own soul. GOD is Omniscient, Most Wise.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:111",
+        "Quran 4:111",
+        "sura 4 verse 111",
+        "4:111",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:111 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:111?",
+        "Did Rashad Khalifa revise 4:111 in the final edition?"
+      ],
+      "quran_references": [
+        "4:111"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 471,
+      "source_segment_end": 471,
+      "page_start": 111,
+      "page_end": 111,
+      "review_status": "draft"
+    },
+    {
+      "id": "s115-116",
+      "title": "4:115-116 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 4:115-116 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:115-116",
+        "Quran 4:115-116",
+        "sura 4 verse 115",
+        "4:115",
+        "4:116",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 4:115-116 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 4:115-116 missing from the 1992 edition?",
+        "What happened to 4:115-116 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "4:115",
+        "4:116"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 483,
+      "source_segment_end": 489,
+      "page_start": 115,
+      "page_end": 116,
+      "review_status": "draft"
+    },
+    {
+      "id": "s122",
+      "title": "4:122 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:122 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who believe and lead a righteous life, we will admit them into gardens with flowing streams, wher...\". 1992 final reading begins \"As for those who believe and lead a righteous life, we will admit them into gardens with flowing streams, wher...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:122",
+        "Quran 4:122",
+        "sura 4 verse 122",
+        "4:122",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:122 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:122?",
+        "Did Rashad Khalifa revise 4:122 in the final edition?"
+      ],
+      "quran_references": [
+        "4:122"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 512,
+      "source_segment_end": 512,
+      "page_start": 122,
+      "page_end": 122,
+      "review_status": "draft"
+    },
+    {
+      "id": "s124-125",
+      "title": "4:124-125 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:124-125 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who lead a righteous life, male or female, while believ ing, they enter Paradise, and never suffe...\". 1992 final reading begins \"As for those who lead a righteous life, male or female, while believing, they enter Paradise; without the slig...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:124-125",
+        "Quran 4:124-125",
+        "sura 4 verse 124",
+        "4:124",
+        "4:125",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:124-125 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:124-125?",
+        "Did Rashad Khalifa revise 4:124-125 in the final edition?"
+      ],
+      "quran_references": [
+        "4:124",
+        "4:125"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 519,
+      "source_segment_end": 523,
+      "page_start": 124,
+      "page_end": 125,
+      "review_status": "draft"
+    },
+    {
+      "id": "s132",
+      "title": "4:132 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:132 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"To GOD belongs everything in the heavens and the earth, and GOD suffices as guardian.\". 1992 final reading begins \"To GOD belongs everything in the heavens and the earth, and GOD is the only Protector.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:132",
+        "Quran 4:132",
+        "sura 4 verse 132",
+        "4:132",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:132 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:132?",
+        "Did Rashad Khalifa revise 4:132 in the final edition?"
+      ],
+      "quran_references": [
+        "4:132"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 554,
+      "source_segment_end": 554,
+      "page_start": 132,
+      "page_end": 132,
+      "review_status": "draft"
+    },
+    {
+      "id": "s134",
+      "title": "4:134 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:134 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"If one is seeking the materials of this life, GOD possesses both the materials of this world and the Hereafter...\". 1992 final reading begins \"Anyone who seeks the materials of this world should know that GOD possesses both the materials of this world a...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:134",
+        "Quran 4:134",
+        "sura 4 verse 134",
+        "4:134",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:134 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:134?",
+        "Did Rashad Khalifa revise 4:134 in the final edition?"
+      ],
+      "quran_references": [
+        "4:134"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 560,
+      "source_segment_end": 560,
+      "page_start": 134,
+      "page_end": 134,
+      "review_status": "draft"
+    },
+    {
+      "id": "s141",
+      "title": "4:141 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 4:141 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:141",
+        "Quran 4:141",
+        "sura 4 verse 141",
+        "4:141",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 4:141 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 4:141 missing from the 1992 edition?",
+        "What happened to 4:141 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "4:141"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 586,
+      "source_segment_end": 586,
+      "page_start": 141,
+      "page_end": 141,
+      "review_status": "draft"
+    },
+    {
+      "id": "s143-145",
+      "title": "4:143-145 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:143-145 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Wavering in between, they neither belong to these, nor to those. Whomever GOD misleads, you will never find a...\". 1992 final reading begins \"They waver in between, neither belonging to this group, nor that group. Whomever GOD sends astray, you will ne...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:143-145",
+        "Quran 4:143-145",
+        "sura 4 verse 143",
+        "4:143",
+        "4:144",
+        "4:145",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:143-145 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:143-145?",
+        "Did Rashad Khalifa revise 4:143-145 in the final edition?"
+      ],
+      "quran_references": [
+        "4:143",
+        "4:144",
+        "4:145"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 593,
+      "source_segment_end": 600,
+      "page_start": 143,
+      "page_end": 145,
+      "review_status": "draft"
+    },
+    {
+      "id": "s148-149",
+      "title": "4:148-149 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:148-149 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"GOD does not like the utterance of bad language, unless one is forced by oppression. GOD is Hearer, Knower.\". 1992 final reading begins \"GOD does not like the utterance of bad language, unless one is treated with gross injustice. GOD is Hearer, Kn...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:148-149",
+        "Quran 4:148-149",
+        "sura 4 verse 148",
+        "4:148",
+        "4:149",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:148-149 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:148-149?",
+        "Did Rashad Khalifa revise 4:148-149 in the final edition?"
+      ],
+      "quran_references": [
+        "4:148",
+        "4:149"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 611,
+      "source_segment_end": 616,
+      "page_start": 148,
+      "page_end": 149,
+      "review_status": "draft"
+    },
+    {
+      "id": "s156",
+      "title": "4:156 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:156 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"(They are condemned) for disbelieving and uttering about Mary a gross lie. Crucifying “the Body” of Jesus*\". 1992 final reading begins \"(They are condemned) for disbelieving and uttering about Mary a gross lie.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:156",
+        "Quran 4:156",
+        "sura 4 verse 156",
+        "4:156",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:156 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:156?",
+        "Did Rashad Khalifa revise 4:156 in the final edition?"
+      ],
+      "quran_references": [
+        "4:156"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 648,
+      "source_segment_end": 648,
+      "page_start": 156,
+      "page_end": 156,
+      "review_status": "draft"
+    },
+    {
+      "id": "s160",
+      "title": "4:160 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:160 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Due to these transgressions, we enjoined the Jews from good foods that used to be lawful for them, and for rep...\". 1992 final reading begins \"Due to their transgressions, we prohibited for the Jews good foods that used to be lawful for them; also for c...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:160",
+        "Quran 4:160",
+        "sura 4 verse 160",
+        "4:160",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:160 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:160?",
+        "Did Rashad Khalifa revise 4:160 in the final edition?"
+      ],
+      "quran_references": [
+        "4:160"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 669,
+      "source_segment_end": 669,
+      "page_start": 160,
+      "page_end": 160,
+      "review_status": "draft"
+    },
+    {
+      "id": "s171-172",
+      "title": "4:171-172 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 4:171-172 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O people of the scripture, do not transgress the limits of your religion, and do not say about GOD other than...\". 1992 final reading begins \"O people of the scripture, do not transgress the limits of your religion, and do not say about GOD except the...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "4:171-172",
+        "Quran 4:171-172",
+        "sura 4 verse 171",
+        "4:171",
+        "4:172",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 4:171-172 change between 1989 and 1992?",
+        "What is the final 1992 wording of 4:171-172?",
+        "Did Rashad Khalifa revise 4:171-172 in the final edition?"
+      ],
+      "quran_references": [
+        "4:171",
+        "4:172"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 707,
+      "source_segment_end": 713,
+      "page_start": 171,
+      "page_end": 172,
+      "review_status": "draft"
+    }
+  ]
+}

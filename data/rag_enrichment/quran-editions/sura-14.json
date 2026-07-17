@@ -1,0 +1,618 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-14",
+  "canonical_document_id": "quran/14",
+  "canonical_catalog_ids": [
+    "quran/14"
+  ],
+  "title": "14. Abraham translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s1",
+      "title": "14:1 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:1 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:1",
+        "Quran 14:1",
+        "sura 14 verse 1",
+        "14:1",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:1 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:1 missing from the 1992 edition?",
+        "What happened to 14:1 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:1"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 0,
+      "source_segment_end": 0,
+      "page_start": 1,
+      "page_end": 1,
+      "review_status": "draft"
+    },
+    {
+      "id": "s3",
+      "title": "14:3 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 14:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They are the ones who give priority to this life over the Hereafter, repel from the way of GOD, and seek to ma...\". 1992 final reading begins \"They are the ones who give priority to this life over the Hereafter, repel from the way of GOD, and seek to ma...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:3",
+        "Quran 14:3",
+        "sura 14 verse 3",
+        "14:3",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 14:3 change between 1989 and 1992?",
+        "What is the final 1992 wording of 14:3?",
+        "Did Rashad Khalifa revise 14:3 in the final edition?"
+      ],
+      "quran_references": [
+        "14:3"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 10,
+      "source_segment_end": 10,
+      "page_start": 3,
+      "page_end": 3,
+      "review_status": "draft"
+    },
+    {
+      "id": "s4",
+      "title": "14:4 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:4 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:4",
+        "Quran 14:4",
+        "sura 14 verse 4",
+        "14:4",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:4 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:4 missing from the 1992 edition?",
+        "What happened to 14:4 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:4"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 15,
+      "source_segment_end": 15,
+      "page_start": 4,
+      "page_end": 4,
+      "review_status": "draft"
+    },
+    {
+      "id": "s7",
+      "title": "14:7 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:7 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:7",
+        "Quran 14:7",
+        "sura 14 verse 7",
+        "14:7",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:7 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:7 missing from the 1992 edition?",
+        "What happened to 14:7 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:7"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 31,
+      "source_segment_end": 31,
+      "page_start": 7,
+      "page_end": 7,
+      "review_status": "draft"
+    },
+    {
+      "id": "s8",
+      "title": "14:8 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 14:8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Moses said, “If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.” Humans C...\". 1992 final reading begins \"Moses said, \"If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:8",
+        "Quran 14:8",
+        "sura 14 verse 8",
+        "14:8",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 14:8 change between 1989 and 1992?",
+        "What is the final 1992 wording of 14:8?",
+        "Did Rashad Khalifa revise 14:8 in the final edition?"
+      ],
+      "quran_references": [
+        "14:8"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 34,
+      "source_segment_end": 34,
+      "page_start": 8,
+      "page_end": 8,
+      "review_status": "draft"
+    },
+    {
+      "id": "s10",
+      "title": "14:10 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:10 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:10",
+        "Quran 14:10",
+        "sura 14 verse 10",
+        "14:10",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:10 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:10 missing from the 1992 edition?",
+        "What happened to 14:10 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:10"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 42,
+      "source_segment_end": 42,
+      "page_start": 10,
+      "page_end": 10,
+      "review_status": "draft"
+    },
+    {
+      "id": "s15",
+      "title": "14:15 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 14:15 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They have challenged (us), and consequently, every stubborn tyrant has perished.\". 1992 final reading begins \"They issued a challenge, and consequently, every stubborn tyrant ended up doomed.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:15",
+        "Quran 14:15",
+        "sura 14 verse 15",
+        "14:15",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 14:15 change between 1989 and 1992?",
+        "What is the final 1992 wording of 14:15?",
+        "Did Rashad Khalifa revise 14:15 in the final edition?"
+      ],
+      "quran_references": [
+        "14:15"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 58,
+      "source_segment_end": 58,
+      "page_start": 15,
+      "page_end": 15,
+      "review_status": "draft"
+    },
+    {
+      "id": "s20",
+      "title": "14:20 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 14:20 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"This is not too difficult for GOD. On the Day of Resurrection\". 1992 final reading begins \"This is not too difficult for GOD.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:20",
+        "Quran 14:20",
+        "sura 14 verse 20",
+        "14:20",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 14:20 change between 1989 and 1992?",
+        "What is the final 1992 wording of 14:20?",
+        "Did Rashad Khalifa revise 14:20 in the final edition?"
+      ],
+      "quran_references": [
+        "14:20"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 77,
+      "source_segment_end": 77,
+      "page_start": 20,
+      "page_end": 20,
+      "review_status": "draft"
+    },
+    {
+      "id": "s21-24",
+      "title": "14:21-24 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:21-24 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:21-24",
+        "Quran 14:21-24",
+        "sura 14 verse 21",
+        "14:21",
+        "14:22",
+        "14:23",
+        "14:24",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:21-24 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:21-24 missing from the 1992 edition?",
+        "What happened to 14:21-24 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:21",
+        "14:22",
+        "14:23",
+        "14:24"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 81,
+      "source_segment_end": 100,
+      "page_start": 21,
+      "page_end": 24,
+      "review_status": "draft"
+    },
+    {
+      "id": "s26-28",
+      "title": "14:26-28 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:26-28 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:26-28",
+        "Quran 14:26-28",
+        "sura 14 verse 26",
+        "14:26",
+        "14:27",
+        "14:28",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:26-28 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:26-28 missing from the 1992 edition?",
+        "What happened to 14:26-28 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:26",
+        "14:27",
+        "14:28"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 106,
+      "source_segment_end": 115,
+      "page_start": 26,
+      "page_end": 28,
+      "review_status": "draft"
+    },
+    {
+      "id": "s29",
+      "title": "14:29 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 14:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Hell is their destiny, wherein they burn; what a miserable end! Idol Worship: The Mother of All Evil\". 1992 final reading begins \"Hell is their destiny, wherein they burn; what a miserable end!\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:29",
+        "Quran 14:29",
+        "sura 14 verse 29",
+        "14:29",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 14:29 change between 1989 and 1992?",
+        "What is the final 1992 wording of 14:29?",
+        "Did Rashad Khalifa revise 14:29 in the final edition?"
+      ],
+      "quran_references": [
+        "14:29"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 120,
+      "source_segment_end": 120,
+      "page_start": 29,
+      "page_end": 29,
+      "review_status": "draft"
+    },
+    {
+      "id": "s31-34",
+      "title": "14:31-34 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:31-34 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:31-34",
+        "Quran 14:31-34",
+        "sura 14 verse 31",
+        "14:31",
+        "14:32",
+        "14:33",
+        "14:34",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:31-34 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:31-34 missing from the 1992 edition?",
+        "What happened to 14:31-34 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:31",
+        "14:32",
+        "14:33",
+        "14:34"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 128,
+      "source_segment_end": 138,
+      "page_start": 31,
+      "page_end": 34,
+      "review_status": "draft"
+    },
+    {
+      "id": "s43-46",
+      "title": "14:43-46 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 14:43-46 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As they rush (out of the graves), their faces will be looking upward, their eyes will not even blink, and thei...\". 1992 final reading begins \"As they rush (out of the graves), their faces will be looking upward, their eyes will not even blink, and thei...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:43-46",
+        "Quran 14:43-46",
+        "sura 14 verse 43",
+        "14:43",
+        "14:44",
+        "14:45",
+        "14:46",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 14:43-46 change between 1989 and 1992?",
+        "What is the final 1992 wording of 14:43-46?",
+        "Did Rashad Khalifa revise 14:43-46 in the final edition?"
+      ],
+      "quran_references": [
+        "14:43",
+        "14:44",
+        "14:45",
+        "14:46"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 171,
+      "source_segment_end": 185,
+      "page_start": 43,
+      "page_end": 46,
+      "review_status": "draft"
+    },
+    {
+      "id": "s47-51",
+      "title": "14:47-51 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 14:47-51 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "14:47-51",
+        "Quran 14:47-51",
+        "sura 14 verse 47",
+        "14:47",
+        "14:48",
+        "14:49",
+        "14:50",
+        "14:51",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 14:47-51 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 14:47-51 missing from the 1992 edition?",
+        "What happened to 14:47-51 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "14:47",
+        "14:48",
+        "14:49",
+        "14:50",
+        "14:51"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 190,
+      "source_segment_end": 211,
+      "page_start": 47,
+      "page_end": 51,
+      "review_status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-75",
+  "canonical_document_id": "quran/75",
+  "canonical_catalog_ids": [
+    "quran/75"
+  ],
+  "title": "75. Resurrection translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s4",
+      "title": "75:4 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 75:4 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "75:4",
+        "Quran 75:4",
+        "sura 75 verse 4",
+        "75:4",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 75:4 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 75:4 missing from the 1992 edition?",
+        "What happened to 75:4 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "75:4"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 9,
+      "source_segment_end": 9,
+      "page_start": 4,
+      "page_end": 4,
+      "review_status": "draft"
+    },
+    {
+      "id": "s29",
+      "title": "75:29 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 75:29 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Each leg will lay motionless next to tb“\". 1992 final reading begins \"Each leg will lay motionless next to the other leg.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "75:29",
+        "Quran 75:29",
+        "sura 75 verse 29",
+        "75:29",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 75:29 change between 1989 and 1992?",
+        "What is the final 1992 wording of 75:29?",
+        "Did Rashad Khalifa revise 75:29 in the final edition?"
+      ],
+      "quran_references": [
+        "75:29"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 90,
+      "source_segment_end": 90,
+      "page_start": 29,
+      "page_end": 29,
+      "review_status": "draft"
+    }
+  ]
+}

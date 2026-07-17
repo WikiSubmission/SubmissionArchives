@@ -1,0 +1,1694 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-7",
+  "canonical_document_id": "quran/7",
+  "canonical_catalog_ids": [
+    "quran/7"
+  ],
+  "title": "7. The Purgatory translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s3",
+      "title": "7:3 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall follow what is revealed to you from your Lord, and do not follow any other sources besides it. Rarel...\". 1992 final reading begins \"You shall all follow what is revealed to you from your Lord; do not follow any idols besides Him. Rarely do yo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:3",
+        "Quran 7:3",
+        "sura 7 verse 3",
+        "7:3",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:3 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:3?",
+        "Did Rashad Khalifa revise 7:3 in the final edition?"
+      ],
+      "quran_references": [
+        "7:3"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 10,
+      "source_segment_end": 10,
+      "page_start": 3,
+      "page_end": 3,
+      "review_status": "draft"
+    },
+    {
+      "id": "s5",
+      "title": "7:5 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:5 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Their utterance when our retribu tion came to them was: “Indeed, we have been wicked.”\". 1992 final reading begins \"Their utterance when our retribution came to them was: \"Indeed, we have been transgressors.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:5",
+        "Quran 7:5",
+        "sura 7 verse 5",
+        "7:5",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:5 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:5?",
+        "Did Rashad Khalifa revise 7:5 in the final edition?"
+      ],
+      "quran_references": [
+        "7:5"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 17,
+      "source_segment_end": 17,
+      "page_start": 5,
+      "page_end": 5,
+      "review_status": "draft"
+    },
+    {
+      "id": "s17",
+      "title": "7:17 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:17 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“I will come to them from their front, and from their back, and from their right, and from their left, and You...\". 1992 final reading begins \"\"I will come to them from before them, and from behind them, and from their right, and from their left, and Yo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:17",
+        "Quran 7:17",
+        "sura 7 verse 17",
+        "7:17",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:17 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:17?",
+        "Did Rashad Khalifa revise 7:17 in the final edition?"
+      ],
+      "quran_references": [
+        "7:17"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 65,
+      "source_segment_end": 65,
+      "page_start": 17,
+      "page_end": 17,
+      "review_status": "draft"
+    },
+    {
+      "id": "s22",
+      "title": "7:22 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:22 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He thus duped them with lies. As soon as they tasted the tree, their bodies became visible to them, and they t...\". 1992 final reading begins \"He thus duped them with lies. As soon as they tasted the tree, their bodies became visible to them, and they t...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:22",
+        "Quran 7:22",
+        "sura 7 verse 22",
+        "7:22",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:22 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:22?",
+        "Did Rashad Khalifa revise 7:22 in the final edition?"
+      ],
+      "quran_references": [
+        "7:22"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 85,
+      "source_segment_end": 85,
+      "page_start": 22,
+      "page_end": 22,
+      "review_status": "draft"
+    },
+    {
+      "id": "s26",
+      "title": "7:26 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:26 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:26",
+        "Quran 7:26",
+        "sura 7 verse 26",
+        "7:26",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:26 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:26 missing from the 1992 edition?",
+        "What happened to 7:26 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:26"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 101,
+      "source_segment_end": 101,
+      "page_start": 26,
+      "page_end": 26,
+      "review_status": "draft"
+    },
+    {
+      "id": "s31",
+      "title": "7:31 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:31 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"O children of Adam, you shall be clean and dress nicely when you go to the mosque. You shall eat and drink mod...\". 1992 final reading begins \"O children of Adam, you shall be clean and dress nicely when you go to the masjid. And eat and drink moderatel...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:31",
+        "Quran 7:31",
+        "sura 7 verse 31",
+        "7:31",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:31 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:31?",
+        "Did Rashad Khalifa revise 7:31 in the final edition?"
+      ],
+      "quran_references": [
+        "7:31"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 122,
+      "source_segment_end": 122,
+      "page_start": 31,
+      "page_end": 31,
+      "review_status": "draft"
+    },
+    {
+      "id": "s36",
+      "title": "7:36 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:36 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who reject our revela tions, and are too arrogant to accept them, they are destined for Hell; the...\". 1992 final reading begins \"As for those who reject our revelations, and are too arrogant to uphold them, they have incurred Hell, wherein...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:36",
+        "Quran 7:36",
+        "sura 7 verse 36",
+        "7:36",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:36 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:36?",
+        "Did Rashad Khalifa revise 7:36 in the final edition?"
+      ],
+      "quran_references": [
+        "7:36"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 145,
+      "source_segment_end": 145,
+      "page_start": 36,
+      "page_end": 36,
+      "review_status": "draft"
+    },
+    {
+      "id": "s39",
+      "title": "7:39 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:39 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The previous one said to the later one, “Since you had an advantage over us, taste the retribution for your ow...\". 1992 final reading begins \"The ancestral group will say to the later group, \"Since you had an advantage over us, taste the retribution fo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:39",
+        "Quran 7:39",
+        "sura 7 verse 39",
+        "7:39",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:39 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:39?",
+        "Did Rashad Khalifa revise 7:39 in the final edition?"
+      ],
+      "quran_references": [
+        "7:39"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 159,
+      "source_segment_end": 159,
+      "page_start": 39,
+      "page_end": 39,
+      "review_status": "draft"
+    },
+    {
+      "id": "s44-45",
+      "title": "7:44-45 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:44-45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The dwellers of Paradise called the dwellers of Hell: “We have found our Lord’s promise to be the truth, have...\". 1992 final reading begins \"The dwellers of Paradise will call the dwellers of Hell: \"We have found our Lord's promise to be the truth, ha...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:44-45",
+        "Quran 7:44-45",
+        "sura 7 verse 44",
+        "7:44",
+        "7:45",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:44-45 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:44-45?",
+        "Did Rashad Khalifa revise 7:44-45 in the final edition?"
+      ],
+      "quran_references": [
+        "7:44",
+        "7:45"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 182,
+      "source_segment_end": 186,
+      "page_start": 44,
+      "page_end": 45,
+      "review_status": "draft"
+    },
+    {
+      "id": "s50",
+      "title": "7:50 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:50 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The dwellers of Hell called on the dwellers of Paradise: “Let some of your water flow towards us, or some of G...\". 1992 final reading begins \"The dwellers of Hell will call on the dwellers of Paradise: \"Let some of your water, or some of GOD's provisio...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:50",
+        "Quran 7:50",
+        "sura 7 verse 50",
+        "7:50",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:50 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:50?",
+        "Did Rashad Khalifa revise 7:50 in the final edition?"
+      ],
+      "quran_references": [
+        "7:50"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 212,
+      "source_segment_end": 212,
+      "page_start": 50,
+      "page_end": 50,
+      "review_status": "draft"
+    },
+    {
+      "id": "s53",
+      "title": "7:53 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Are they waiting until all (the prophecies herein) are fulfilled? The day such fulfillment comes to pass, thos...\". 1992 final reading begins \"Are they waiting until all (prophecies) are fulfilled? The day such fulfillment comes to pass, those who disre...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:53",
+        "Quran 7:53",
+        "sura 7 verse 53",
+        "7:53",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:53 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:53?",
+        "Did Rashad Khalifa revise 7:53 in the final edition?"
+      ],
+      "quran_references": [
+        "7:53"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 226,
+      "source_segment_end": 226,
+      "page_start": 53,
+      "page_end": 53,
+      "review_status": "draft"
+    },
+    {
+      "id": "s57",
+      "title": "7:57 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:57 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He is the One who sends the wind with good omen, as a mercy from His hands. Once they gather heavy clouds, we...\". 1992 final reading begins \"He is the One who sends the wind with good omen, as a mercy from His hands. Once they gather heavy clouds, we...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:57",
+        "Quran 7:57",
+        "sura 7 verse 57",
+        "7:57",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:57 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:57?",
+        "Did Rashad Khalifa revise 7:57 in the final edition?"
+      ],
+      "quran_references": [
+        "7:57"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 241,
+      "source_segment_end": 241,
+      "page_start": 57,
+      "page_end": 57,
+      "review_status": "draft"
+    },
+    {
+      "id": "s65",
+      "title": "7:65 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:65 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:65",
+        "Quran 7:65",
+        "sura 7 verse 65",
+        "7:65",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:65 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:65 missing from the 1992 edition?",
+        "What happened to 7:65 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:65"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 269,
+      "source_segment_end": 269,
+      "page_start": 65,
+      "page_end": 65,
+      "review_status": "draft"
+    },
+    {
+      "id": "s71",
+      "title": "7:71 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:71 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He said, “You have incurred condemnation and wrath from your Lord. Do you argue with me in defense of innovati...\". 1992 final reading begins \"He said, \"You have incurred condemnation and wrath from your Lord. Do you argue with me in defense of innovati...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:71",
+        "Quran 7:71",
+        "sura 7 verse 71",
+        "7:71",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:71 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:71?",
+        "Did Rashad Khalifa revise 7:71 in the final edition?"
+      ],
+      "quran_references": [
+        "7:71"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 290,
+      "source_segment_end": 290,
+      "page_start": 71,
+      "page_end": 71,
+      "review_status": "draft"
+    },
+    {
+      "id": "s74-76",
+      "title": "7:74-76 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:74-76 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Recall that He made you inheritors after ‘Aad, and established you on earth, building mansions in its valleys...\". 1992 final reading begins \"\"Recall that He made you inheritors after 'Ãd, and established you on earth, building mansions in its valleys,...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:74-76",
+        "Quran 7:74-76",
+        "sura 7 verse 74",
+        "7:74",
+        "7:75",
+        "7:76",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:74-76 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:74-76?",
+        "Did Rashad Khalifa revise 7:74-76 in the final edition?"
+      ],
+      "quran_references": [
+        "7:74",
+        "7:75",
+        "7:76"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 302,
+      "source_segment_end": 309,
+      "page_start": 74,
+      "page_end": 76,
+      "review_status": "draft"
+    },
+    {
+      "id": "s84",
+      "title": "7:84 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:84 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We showered them with a certain shower; note the consequences for the guilty. Shu‘aib: Cheating, Dishonesty Co...\". 1992 final reading begins \"We showered them with a certain shower; note the consequences for the guilty.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:84",
+        "Quran 7:84",
+        "sura 7 verse 84",
+        "7:84",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:84 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:84?",
+        "Did Rashad Khalifa revise 7:84 in the final edition?"
+      ],
+      "quran_references": [
+        "7:84"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 336,
+      "source_segment_end": 336,
+      "page_start": 84,
+      "page_end": 84,
+      "review_status": "draft"
+    },
+    {
+      "id": "s87",
+      "title": "7:87 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:87 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Now that some of you have believed in the message I brought, and some have disbelieved, wait until GOD issues...\". 1992 final reading begins \"\"Now that some of you have believed in what I was sent with, and some have disbelieved, wait until GOD issues...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:87",
+        "Quran 7:87",
+        "sura 7 verse 87",
+        "7:87",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:87 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:87?",
+        "Did Rashad Khalifa revise 7:87 in the final edition?"
+      ],
+      "quran_references": [
+        "7:87"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 348,
+      "source_segment_end": 348,
+      "page_start": 87,
+      "page_end": 87,
+      "review_status": "draft"
+    },
+    {
+      "id": "s102",
+      "title": "7:102 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:102 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We found that most of them do not fulfill their covenants; we found most of them wicked.* Moses\". 1992 final reading begins \"We found that most of them disregard their covenant; we found most of them wicked.±\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:102",
+        "Quran 7:102",
+        "sura 7 verse 102",
+        "7:102",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:102 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:102?",
+        "Did Rashad Khalifa revise 7:102 in the final edition?"
+      ],
+      "quran_references": [
+        "7:102"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 398,
+      "source_segment_end": 398,
+      "page_start": 102,
+      "page_end": 102,
+      "review_status": "draft"
+    },
+    {
+      "id": "s117",
+      "title": "7:117 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:117 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We then inspired Moses: “Throw down your staff,” whereupon it swallowed whatever they fabricated. The Truth Re...\". 1992 final reading begins \"We then inspired Moses: \"Throw down your staff,\" whereupon it swallowed whatever they fabricated.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:117",
+        "Quran 7:117",
+        "sura 7 verse 117",
+        "7:117",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:117 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:117?",
+        "Did Rashad Khalifa revise 7:117 in the final edition?"
+      ],
+      "quran_references": [
+        "7:117"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 448,
+      "source_segment_end": 448,
+      "page_start": 117,
+      "page_end": 117,
+      "review_status": "draft"
+    },
+    {
+      "id": "s125",
+      "title": "7:125 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:125 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “We ultimately return to our Lord.\". 1992 final reading begins \"They said, \"We will then return to our Lord.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:125",
+        "Quran 7:125",
+        "sura 7 verse 125",
+        "7:125",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:125 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:125?",
+        "Did Rashad Khalifa revise 7:125 in the final edition?"
+      ],
+      "quran_references": [
+        "7:125"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 474,
+      "source_segment_end": 474,
+      "page_start": 125,
+      "page_end": 125,
+      "review_status": "draft"
+    },
+    {
+      "id": "s128",
+      "title": "7:128 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:128 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Moses said to his people, “Seek GOD’s help, and steadfastly persevere. The earth belongs to GOD, and He grants...\". 1992 final reading begins \"Moses said to his people, \"Seek GOD's help, and steadfastly persevere. The earth belongs to GOD, and He grants...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:128",
+        "Quran 7:128",
+        "sura 7 verse 128",
+        "7:128",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:128 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:128?",
+        "Did Rashad Khalifa revise 7:128 in the final edition?"
+      ],
+      "quran_references": [
+        "7:128"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 483,
+      "source_segment_end": 483,
+      "page_start": 128,
+      "page_end": 128,
+      "review_status": "draft"
+    },
+    {
+      "id": "s132",
+      "title": "7:132 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:132 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They said, “No matter what kind of miracle you show us, to bewitch us, we will not believe.” The Warnings Go U...\". 1992 final reading begins \"They said, \"No matter what kind of sign you show us, to dupe us with your magic, we will not believe.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:132",
+        "Quran 7:132",
+        "sura 7 verse 132",
+        "7:132",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:132 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:132?",
+        "Did Rashad Khalifa revise 7:132 in the final edition?"
+      ],
+      "quran_references": [
+        "7:132"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 497,
+      "source_segment_end": 497,
+      "page_start": 132,
+      "page_end": 132,
+      "review_status": "draft"
+    },
+    {
+      "id": "s135",
+      "title": "7:135 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:135 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Yet, when we relieved the plague for any length of time, they violated their pledge. The Inevitable Retributio...\". 1992 final reading begins \"Yet, when we relieved the plague for any length of time, they violated their pledge.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:135",
+        "Quran 7:135",
+        "sura 7 verse 135",
+        "7:135",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:135 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:135?",
+        "Did Rashad Khalifa revise 7:135 in the final edition?"
+      ],
+      "quran_references": [
+        "7:135"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 508,
+      "source_segment_end": 508,
+      "page_start": 135,
+      "page_end": 135,
+      "review_status": "draft"
+    },
+    {
+      "id": "s140-141",
+      "title": "7:140-141 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:140-141 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Shall I seek for you other than GOD to be your god, when He has blessed you more than anyone else in the worl...\". 1992 final reading begins \"\"Shall I seek for you other than GOD to be your god, when He has blessed you more than anyone else in the worl...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:140-141",
+        "Quran 7:140-141",
+        "sura 7 verse 140",
+        "7:140",
+        "7:141",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:140-141 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:140-141?",
+        "Did Rashad Khalifa revise 7:140-141 in the final edition?"
+      ],
+      "quran_references": [
+        "7:140",
+        "7:141"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 527,
+      "source_segment_end": 531,
+      "page_start": 140,
+      "page_end": 141,
+      "review_status": "draft"
+    },
+    {
+      "id": "s143",
+      "title": "7:143 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:143 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When Moses came at our appointee time, and his Lord spoke with him, he said, “My Lord, let me look and see You...\". 1992 final reading begins \"When Moses came at our appointed time, and his Lord spoke with him, he said, \"My Lord, let me look and see You...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:143",
+        "Quran 7:143",
+        "sura 7 verse 143",
+        "7:143",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:143 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:143?",
+        "Did Rashad Khalifa revise 7:143 in the final edition?"
+      ],
+      "quran_references": [
+        "7:143"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 543,
+      "source_segment_end": 543,
+      "page_start": 143,
+      "page_end": 143,
+      "review_status": "draft"
+    },
+    {
+      "id": "s145",
+      "title": "7:145 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:145 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We wrote for him on the tablets all kinds of enlightenments and details: “You shall uphold these teachings str...\". 1992 final reading begins \"We wrote for him on the tablets all kinds of enlightenments and details of everything: \"You shall uphold these...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:145",
+        "Quran 7:145",
+        "sura 7 verse 145",
+        "7:145",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:145 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:145?",
+        "Did Rashad Khalifa revise 7:145 in the final edition?"
+      ],
+      "quran_references": [
+        "7:145"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 551,
+      "source_segment_end": 551,
+      "page_start": 145,
+      "page_end": 145,
+      "review_status": "draft"
+    },
+    {
+      "id": "s147",
+      "title": "7:147 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:147 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Those who reject our revelations and the meeting of the Hereafter, their works are in vain. Do they not pay fo...\". 1992 final reading begins \"Those who reject our revelations and the meeting of the Hereafter, their works are nullified. Are they requite...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:147",
+        "Quran 7:147",
+        "sura 7 verse 147",
+        "7:147",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:147 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:147?",
+        "Did Rashad Khalifa revise 7:147 in the final edition?"
+      ],
+      "quran_references": [
+        "7:147"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 560,
+      "source_segment_end": 560,
+      "page_start": 147,
+      "page_end": 147,
+      "review_status": "draft"
+    },
+    {
+      "id": "s149",
+      "title": "7:149 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:149 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Finally, when they regretted their action, and realized that they had gone astray, they said, “Unless our Lord...\". 1992 final reading begins \"Finally, when they regretted their action, and realized that they had gone astray, they said, \"Unless our Lord...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:149",
+        "Quran 7:149",
+        "sura 7 verse 149",
+        "7:149",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:149 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:149?",
+        "Did Rashad Khalifa revise 7:149 in the final edition?"
+      ],
+      "quran_references": [
+        "7:149"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 570,
+      "source_segment_end": 570,
+      "page_start": 149,
+      "page_end": 149,
+      "review_status": "draft"
+    },
+    {
+      "id": "s151",
+      "title": "7:151 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:151 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"(Moses) said, “My Lord, forgive me and my brother, and admit us into Your mercy. You are the Most Merciful of...\". 1992 final reading begins \"(Moses) said, \"My Lord, forgive me and my brother, and admit us into Your mercy. Of all the merciful ones, You...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:151",
+        "Quran 7:151",
+        "sura 7 verse 151",
+        "7:151",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:151 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:151?",
+        "Did Rashad Khalifa revise 7:151 in the final edition?"
+      ],
+      "quran_references": [
+        "7:151"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 576,
+      "source_segment_end": 576,
+      "page_start": 151,
+      "page_end": 151,
+      "review_status": "draft"
+    },
+    {
+      "id": "s162",
+      "title": "7:162 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:162 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"But the evil ones among them substituted other commands for the commands given to them. Consequently, we sent...\". 1992 final reading begins \"But the evil ones among them substituted other commands for the commands given to them. Consequently, we sent...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:162",
+        "Quran 7:162",
+        "sura 7 verse 162",
+        "7:162",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:162 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:162?",
+        "Did Rashad Khalifa revise 7:162 in the final edition?"
+      ],
+      "quran_references": [
+        "7:162"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 628,
+      "source_segment_end": 628,
+      "page_start": 162,
+      "page_end": 162,
+      "review_status": "draft"
+    },
+    {
+      "id": "s172",
+      "title": "7:172 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:172 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:172",
+        "Quran 7:172",
+        "sura 7 verse 172",
+        "7:172",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:172 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:172 missing from the 1992 edition?",
+        "What happened to 7:172 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:172"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 672,
+      "source_segment_end": 672,
+      "page_start": 172,
+      "page_end": 172,
+      "review_status": "draft"
+    },
+    {
+      "id": "s173",
+      "title": "7:173 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:173 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Nor can you say, “It was our parents who practiced idolatry, and we simply followed in their footsteps. Will Y...\". 1992 final reading begins \"Nor can you say, \"It was our parents who practiced idolatry, and we simply followed in their footsteps. Will Y...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:173",
+        "Quran 7:173",
+        "sura 7 verse 173",
+        "7:173",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:173 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:173?",
+        "Did Rashad Khalifa revise 7:173 in the final edition?"
+      ],
+      "quran_references": [
+        "7:173"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 679,
+      "source_segment_end": 679,
+      "page_start": 173,
+      "page_end": 173,
+      "review_status": "draft"
+    },
+    {
+      "id": "s174-177",
+      "title": "7:174-177 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:174-177 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:174-177",
+        "Quran 7:174-177",
+        "sura 7 verse 174",
+        "7:174",
+        "7:175",
+        "7:176",
+        "7:177",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:174-177 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:174-177 missing from the 1992 edition?",
+        "What happened to 7:174-177 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:174",
+        "7:175",
+        "7:176",
+        "7:177"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 683,
+      "source_segment_end": 694,
+      "page_start": 174,
+      "page_end": 177,
+      "review_status": "draft"
+    },
+    {
+      "id": "s179",
+      "title": "7:179 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:179 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We have committed to Hell multitudes of jinns and humans. They have minds with which they do not understand, e...\". 1992 final reading begins \"We have committed to Hell multitudes of jinns and humans. They have minds with which they do not understand, e...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:179",
+        "Quran 7:179",
+        "sura 7 verse 179",
+        "7:179",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:179 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:179?",
+        "Did Rashad Khalifa revise 7:179 in the final edition?"
+      ],
+      "quran_references": [
+        "7:179"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 701,
+      "source_segment_end": 701,
+      "page_start": 179,
+      "page_end": 179,
+      "review_status": "draft"
+    },
+    {
+      "id": "s180",
+      "title": "7:180 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:180 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:180",
+        "Quran 7:180",
+        "sura 7 verse 180",
+        "7:180",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:180 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:180 missing from the 1992 edition?",
+        "What happened to 7:180 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:180"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 706,
+      "source_segment_end": 706,
+      "page_start": 180,
+      "page_end": 180,
+      "review_status": "draft"
+    },
+    {
+      "id": "s182-183",
+      "title": "7:182-183 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:182-183 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"As for those who reject our revelations, we lead them on whence they never know.\". 1992 final reading begins \"As for those who reject our revelations, we lead them on without them ever realizing it.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:182-183",
+        "Quran 7:182-183",
+        "sura 7 verse 182",
+        "7:182",
+        "7:183",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:182-183 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:182-183?",
+        "Did Rashad Khalifa revise 7:182-183 in the final edition?"
+      ],
+      "quran_references": [
+        "7:182",
+        "7:183"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 713,
+      "source_segment_end": 716,
+      "page_start": 182,
+      "page_end": 183,
+      "review_status": "draft"
+    },
+    {
+      "id": "s185",
+      "title": "7:185 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:185 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:185",
+        "Quran 7:185",
+        "sura 7 verse 185",
+        "7:185",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:185 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:185 missing from the 1992 edition?",
+        "What happened to 7:185 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:185"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 722,
+      "source_segment_end": 722,
+      "page_start": 185,
+      "page_end": 185,
+      "review_status": "draft"
+    },
+    {
+      "id": "s187",
+      "title": "7:187 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 7:187 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They ask you (O Muhammad) about the end of the world (the Hour),* and when it will come to pass. Say, “The kno...\". 1992 final reading begins \"They ask you about the end of the world (the Hour),± and when it will come to pass. Say, \"The knowledge thereo...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:187",
+        "Quran 7:187",
+        "sura 7 verse 187",
+        "7:187",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 7:187 change between 1989 and 1992?",
+        "What is the final 1992 wording of 7:187?",
+        "Did Rashad Khalifa revise 7:187 in the final edition?"
+      ],
+      "quran_references": [
+        "7:187"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 729,
+      "source_segment_end": 729,
+      "page_start": 187,
+      "page_end": 187,
+      "review_status": "draft"
+    },
+    {
+      "id": "s189-196",
+      "title": "7:189-196 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:189-196 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:189-196",
+        "Quran 7:189-196",
+        "sura 7 verse 189",
+        "7:189",
+        "7:190",
+        "7:191",
+        "7:192",
+        "7:193",
+        "7:194",
+        "7:195",
+        "7:196",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:189-196 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:189-196 missing from the 1992 edition?",
+        "What happened to 7:189-196 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:189",
+        "7:190",
+        "7:191",
+        "7:192",
+        "7:193",
+        "7:194",
+        "7:195",
+        "7:196"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 741,
+      "source_segment_end": 771,
+      "page_start": 189,
+      "page_end": 196,
+      "review_status": "draft"
+    },
+    {
+      "id": "s198-203",
+      "title": "7:198-203 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 7:198-203 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "7:198-203",
+        "Quran 7:198-203",
+        "sura 7 verse 198",
+        "7:198",
+        "7:199",
+        "7:200",
+        "7:201",
+        "7:202",
+        "7:203",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 7:198-203 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 7:198-203 missing from the 1992 edition?",
+        "What happened to 7:198-203 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "7:198",
+        "7:199",
+        "7:200",
+        "7:201",
+        "7:202",
+        "7:203"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 779,
+      "source_segment_end": 794,
+      "page_start": 198,
+      "page_end": 203,
+      "review_status": "draft"
+    }
+  ]
+}

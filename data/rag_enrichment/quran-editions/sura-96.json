@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-96",
+  "canonical_document_id": "quran/96",
+  "canonical_catalog_ids": [
+    "quran/96"
+  ],
+  "title": "96. The Embryo translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s1-19",
+      "title": "96:1-19 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 96:1-19 (1981: absent, 1989: absent, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "96:1-19",
+        "Quran 96:1-19",
+        "sura 96 verse 1",
+        "96:1",
+        "96:2",
+        "96:3",
+        "96:4",
+        "96:5",
+        "96:6",
+        "96:7",
+        "96:8",
+        "96:9",
+        "96:10",
+        "96:11",
+        "96:12",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 96:1-19 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 96:1-19 missing from the 1992 edition?",
+        "What happened to 96:1-19 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "96:1",
+        "96:2",
+        "96:3",
+        "96:4",
+        "96:5",
+        "96:6",
+        "96:7",
+        "96:8",
+        "96:9",
+        "96:10",
+        "96:11",
+        "96:12",
+        "96:13",
+        "96:14",
+        "96:15",
+        "96:16",
+        "96:17",
+        "96:18",
+        "96:19"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 0,
+      "source_segment_end": 74,
+      "page_start": 1,
+      "page_end": 19,
+      "review_status": "draft"
+    }
+  ]
+}

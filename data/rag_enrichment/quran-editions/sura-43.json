@@ -1,0 +1,885 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-43",
+  "canonical_document_id": "quran/43",
+  "canonical_catalog_ids": [
+    "quran/43"
+  ],
+  "title": "43. The Ornaments translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s6",
+      "title": "43:6 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:6 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Many a prophet we have sent to the previous generations.\". 1992 final reading begins \"We have sent many a prophet to the previous generations.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:6",
+        "Quran 43:6",
+        "sura 43 verse 6",
+        "43:6",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:6 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:6?",
+        "Did Rashad Khalifa revise 43:6 in the final edition?"
+      ],
+      "quran_references": [
+        "43:6"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 23,
+      "source_segment_end": 23,
+      "page_start": 6,
+      "page_end": 6,
+      "review_status": "draft"
+    },
+    {
+      "id": "s25",
+      "title": "43:25 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:25 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, we requited them; note the consequences for the rejectors.\". 1992 final reading begins \"Consequently, we requited them. Note the consequences for the rejectors.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:25",
+        "Quran 43:25",
+        "sura 43 verse 25",
+        "43:25",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:25 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:25?",
+        "Did Rashad Khalifa revise 43:25 in the final edition?"
+      ],
+      "quran_references": [
+        "43:25"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 101,
+      "source_segment_end": 101,
+      "page_start": 25,
+      "page_end": 25,
+      "review_status": "draft"
+    },
+    {
+      "id": "s28",
+      "title": "43:28 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:28 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"After him, He made this example (of Abraham) an everlasting lesson for subsequent generations, that they may r...\". 1992 final reading begins \"This example (of Abraham) was rendered an everlasting lesson for subsequent generations; perhaps they redeem t...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:28",
+        "Quran 43:28",
+        "sura 43 verse 28",
+        "43:28",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:28 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:28?",
+        "Did Rashad Khalifa revise 43:28 in the final edition?"
+      ],
+      "quran_references": [
+        "43:28"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 111,
+      "source_segment_end": 111,
+      "page_start": 28,
+      "page_end": 28,
+      "review_status": "draft"
+    },
+    {
+      "id": "s30",
+      "title": "43:30 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:30 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When the truth came to them, they said, “This is magic, and we are disbelievers therein.” Muhammad Ridiculed\". 1992 final reading begins \"When the truth came to them, they said, \"This is magic, and we are disbelievers therein.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:30",
+        "Quran 43:30",
+        "sura 43 verse 30",
+        "43:30",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:30 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:30?",
+        "Did Rashad Khalifa revise 43:30 in the final edition?"
+      ],
+      "quran_references": [
+        "43:30"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 118,
+      "source_segment_end": 118,
+      "page_start": 30,
+      "page_end": 30,
+      "review_status": "draft"
+    },
+    {
+      "id": "s32",
+      "title": "43:32 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:32 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Are they the ones who assign your Lord’s mercy? We have assigned their shares in this life, raising some of th...\". 1992 final reading begins \"Are they the ones who assign your Lord's mercy? We have assigned their shares in this life, raising some of th...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:32",
+        "Quran 43:32",
+        "sura 43 verse 32",
+        "43:32",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:32 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:32?",
+        "Did Rashad Khalifa revise 43:32 in the final edition?"
+      ],
+      "quran_references": [
+        "43:32"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 127,
+      "source_segment_end": 127,
+      "page_start": 32,
+      "page_end": 32,
+      "review_status": "draft"
+    },
+    {
+      "id": "s35",
+      "title": "43:35 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:35 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And many vanities. All these are the temporary materials of this lowly life. The Hereafter, at your Lord, is f...\". 1992 final reading begins \"Also many ornaments. All these are the temporary materials of this lowly life. The Hereafter—at your Lord—is f...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:35",
+        "Quran 43:35",
+        "sura 43 verse 35",
+        "43:35",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:35 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:35?",
+        "Did Rashad Khalifa revise 43:35 in the final edition?"
+      ],
+      "quran_references": [
+        "43:35"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 139,
+      "source_segment_end": 139,
+      "page_start": 35,
+      "page_end": 35,
+      "review_status": "draft"
+    },
+    {
+      "id": "s38-40",
+      "title": "43:38-40 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:38-40 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Then, when he comes to us he will say, “Oh I wish you were as far from me as the distance between the two east...\". 1992 final reading begins \"When he comes before us he will say, \"Oh I wish you were as far from me as the two easts.± What a miserable co...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:38-40",
+        "Quran 43:38-40",
+        "sura 43 verse 38",
+        "43:38",
+        "43:39",
+        "43:40",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:38-40 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:38-40?",
+        "Did Rashad Khalifa revise 43:38-40 in the final edition?"
+      ],
+      "quran_references": [
+        "43:38",
+        "43:39",
+        "43:40"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 154,
+      "source_segment_end": 164,
+      "page_start": 38,
+      "page_end": 40,
+      "review_status": "draft"
+    },
+    {
+      "id": "s43",
+      "title": "43:43 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:43 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Therefore, you shall steadfastly uphold what we have given you; you are in the right path.\". 1992 final reading begins \"You shall steadfastly preach what is revealed to you; you are in the right path.±\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:43",
+        "Quran 43:43",
+        "sura 43 verse 43",
+        "43:43",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:43 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:43?",
+        "Did Rashad Khalifa revise 43:43 in the final edition?"
+      ],
+      "quran_references": [
+        "43:43"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 173,
+      "source_segment_end": 173,
+      "page_start": 43,
+      "page_end": 43,
+      "review_status": "draft"
+    },
+    {
+      "id": "s45",
+      "title": "43:45 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Ask all those messengers that we sent __________ before you: “Have we set up besides the Most Gracious other g...\". 1992 final reading begins \"Check the messengers we sent before you: \"Have we ever appointed any other gods—beside the Most Gracious—to be...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:45",
+        "Quran 43:45",
+        "sura 43 verse 45",
+        "43:45",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:45 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:45?",
+        "Did Rashad Khalifa revise 43:45 in the final edition?"
+      ],
+      "quran_references": [
+        "43:45"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 180,
+      "source_segment_end": 180,
+      "page_start": 45,
+      "page_end": 45,
+      "review_status": "draft"
+    },
+    {
+      "id": "s48-49",
+      "title": "43:48-49 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:48-49 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Every sign we showed them was even bigger than the previous one, and we afflicted them with the plagues, perha...\". 1992 final reading begins \"Every sign we showed them was bigger than the one before it. We afflicted them with the plagues, perhaps they...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:48-49",
+        "Quran 43:48-49",
+        "sura 43 verse 48",
+        "43:48",
+        "43:49",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:48-49 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:48-49?",
+        "Did Rashad Khalifa revise 43:48-49 in the final edition?"
+      ],
+      "quran_references": [
+        "43:48",
+        "43:49"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 191,
+      "source_segment_end": 195,
+      "page_start": 48,
+      "page_end": 49,
+      "review_status": "draft"
+    },
+    {
+      "id": "s51",
+      "title": "43:51 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:51 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Pharaoh announced to his people, “O my people, do I not possess the kingship of Egypt, and these rivers are fl...\". 1992 final reading begins \"Pharaoh announced to his people, \"O my people, do I not possess the kingship over Egypt, and these flowing riv...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:51",
+        "Quran 43:51",
+        "sura 43 verse 51",
+        "43:51",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:51 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:51?",
+        "Did Rashad Khalifa revise 43:51 in the final edition?"
+      ],
+      "quran_references": [
+        "43:51"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 201,
+      "source_segment_end": 201,
+      "page_start": 51,
+      "page_end": 51,
+      "review_status": "draft"
+    },
+    {
+      "id": "s53",
+      "title": "43:53 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:53 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"“Why does he not possess a treasure of gold, or bring the angels to work with him?”\". 1992 final reading begins \"\"How come he does not possess a treasure of gold; how come the angels do not accompany him?\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:53",
+        "Quran 43:53",
+        "sura 43 verse 53",
+        "43:53",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:53 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:53?",
+        "Did Rashad Khalifa revise 43:53 in the final edition?"
+      ],
+      "quran_references": [
+        "43:53"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 207,
+      "source_segment_end": 207,
+      "page_start": 53,
+      "page_end": 53,
+      "review_status": "draft"
+    },
+    {
+      "id": "s57",
+      "title": "43:57 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:57 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And when the son of Mary was cited as an example, your people immediately rejected it.\". 1992 final reading begins \"When the son of Mary was cited as an example, your people disregarded it.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:57",
+        "Quran 43:57",
+        "sura 43 verse 57",
+        "43:57",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:57 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:57?",
+        "Did Rashad Khalifa revise 43:57 in the final edition?"
+      ],
+      "quran_references": [
+        "43:57"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 220,
+      "source_segment_end": 220,
+      "page_start": 57,
+      "page_end": 57,
+      "review_status": "draft"
+    },
+    {
+      "id": "s59-61",
+      "title": "43:59-61 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:59-61 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He was no more than a human servant whom we blessed, and we rendered him a lesson for the Children of Israel.\". 1992 final reading begins \"He was no more than a servant whom we blessed, and we sent him as an example for the Children of Israel.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:59-61",
+        "Quran 43:59-61",
+        "sura 43 verse 59",
+        "43:59",
+        "43:60",
+        "43:61",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:59-61 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:59-61?",
+        "Did Rashad Khalifa revise 43:59-61 in the final edition?"
+      ],
+      "quran_references": [
+        "43:59",
+        "43:60",
+        "43:61"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 227,
+      "source_segment_end": 234,
+      "page_start": 59,
+      "page_end": 61,
+      "review_status": "draft"
+    },
+    {
+      "id": "s63",
+      "title": "43:63 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:63 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"When Jesus came with the miracles, he said, “I bring to you wisdom, and clarification of some matters in which...\". 1992 final reading begins \"When Jesus went with the proofs, he said, \"I bring to you wisdom, and to clarify some of the matters in which...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:63",
+        "Quran 43:63",
+        "sura 43 verse 63",
+        "43:63",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:63 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:63?",
+        "Did Rashad Khalifa revise 43:63 in the final edition?"
+      ],
+      "quran_references": [
+        "43:63"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 242,
+      "source_segment_end": 242,
+      "page_start": 63,
+      "page_end": 63,
+      "review_status": "draft"
+    },
+    {
+      "id": "s69",
+      "title": "43:69 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:69 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They believed in our revelations, and totally submitted.\". 1992 final reading begins \"They are the ones who believed in our revelations, and were submitters.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:69",
+        "Quran 43:69",
+        "sura 43 verse 69",
+        "43:69",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:69 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:69?",
+        "Did Rashad Khalifa revise 43:69 in the final edition?"
+      ],
+      "quran_references": [
+        "43:69"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 262,
+      "source_segment_end": 262,
+      "page_start": 69,
+      "page_end": 69,
+      "review_status": "draft"
+    },
+    {
+      "id": "s77",
+      "title": "43:77 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:77 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They will implore: “O Maalek, let your Lord finish us off.” He will say, “You are staying. They Hate The Truth\". 1992 final reading begins \"They will implore: \"O Mãlek, let your Lord finish us off.\" He will say, \"You are staying forever.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:77",
+        "Quran 43:77",
+        "sura 43 verse 77",
+        "43:77",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:77 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:77?",
+        "Did Rashad Khalifa revise 43:77 in the final edition?"
+      ],
+      "quran_references": [
+        "43:77"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 286,
+      "source_segment_end": 286,
+      "page_start": 77,
+      "page_end": 77,
+      "review_status": "draft"
+    },
+    {
+      "id": "s81",
+      "title": "43:81 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:81 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Proclaim: “If the Most Gracious did have a son, I would be the first to worship Him (anyway).”\". 1992 final reading begins \"Proclaim: \"If the Most Gracious did have a son, I would still be the foremost worshiper.\"\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:81",
+        "Quran 43:81",
+        "sura 43 verse 81",
+        "43:81",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:81 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:81?",
+        "Did Rashad Khalifa revise 43:81 in the final edition?"
+      ],
+      "quran_references": [
+        "43:81"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 300,
+      "source_segment_end": 300,
+      "page_start": 81,
+      "page_end": 81,
+      "review_status": "draft"
+    },
+    {
+      "id": "s84",
+      "title": "43:84 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:84 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He is the only god in the heaven and the only god on earth, and He is the Most Wise, the Omniscient.\". 1992 final reading begins \"He is the only One who is a deity in the heaven and a deity on earth. He is the Most Wise, the Omniscient.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:84",
+        "Quran 43:84",
+        "sura 43 verse 84",
+        "43:84",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:84 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:84?",
+        "Did Rashad Khalifa revise 43:84 in the final edition?"
+      ],
+      "quran_references": [
+        "43:84"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 310,
+      "source_segment_end": 310,
+      "page_start": 84,
+      "page_end": 84,
+      "review_status": "draft"
+    },
+    {
+      "id": "s86",
+      "title": "43:86 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 43:86 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:86",
+        "Quran 43:86",
+        "sura 43 verse 86",
+        "43:86",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 43:86 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 43:86 missing from the 1992 edition?",
+        "What happened to 43:86 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "43:86"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 316,
+      "source_segment_end": 316,
+      "page_start": 86,
+      "page_end": 86,
+      "review_status": "draft"
+    },
+    {
+      "id": "s89",
+      "title": "43:89 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 43:89 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Disregard them and say, “Peace;” they will surely find out. 1 2274\". 1992 final reading begins \"You shall disregard them and say, \"Peace;\" they will surely find out.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "43:89",
+        "Quran 43:89",
+        "sura 43 verse 89",
+        "43:89",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 43:89 change between 1989 and 1992?",
+        "What is the final 1992 wording of 43:89?",
+        "Did Rashad Khalifa revise 43:89 in the final edition?"
+      ],
+      "quran_references": [
+        "43:89"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 328,
+      "source_segment_end": 328,
+      "page_start": 89,
+      "page_end": 89,
+      "review_status": "draft"
+    }
+  ]
+}

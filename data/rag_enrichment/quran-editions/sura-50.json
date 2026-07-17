@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-50",
+  "canonical_document_id": "quran/50",
+  "canonical_catalog_ids": [
+    "quran/50"
+  ],
+  "title": "50. Q translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s16-18",
+      "title": "50:16-18 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 50:16-18 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "50:16-18",
+        "Quran 50:16-18",
+        "sura 50 verse 16",
+        "50:16",
+        "50:17",
+        "50:18",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 50:16-18 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 50:16-18 missing from the 1992 edition?",
+        "What happened to 50:16-18 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "50:16",
+        "50:17",
+        "50:18"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 51,
+      "source_segment_end": 57,
+      "page_start": 16,
+      "page_end": 18,
+      "review_status": "draft"
+    },
+    {
+      "id": "s45",
+      "title": "50:45 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 50:45 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"We are fully aware of everything they utter, while you have no power over them. Therefore, remind with this Qu...\". 1992 final reading begins \"We are fully aware of everything they utter, while you have no power over them. Therefore, remind with this Qu...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "50:45",
+        "Quran 50:45",
+        "sura 50 verse 45",
+        "50:45",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 50:45 change between 1989 and 1992?",
+        "What is the final 1992 wording of 50:45?",
+        "Did Rashad Khalifa revise 50:45 in the final edition?"
+      ],
+      "quran_references": [
+        "50:45"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 157,
+      "source_segment_end": 157,
+      "page_start": 45,
+      "page_end": 45,
+      "review_status": "draft"
+    }
+  ]
+}

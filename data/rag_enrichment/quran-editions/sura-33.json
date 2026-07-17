@@ -1,0 +1,635 @@
+{
+  "schema_version": "1.0-quran-editions",
+  "document_id": "quran-editions/sura-33",
+  "canonical_document_id": "quran/33",
+  "canonical_catalog_ids": [
+    "quran/33"
+  ],
+  "title": "33. The Parties translation evolution (1981/1989/1992)",
+  "source_class": "quran-edition-comparison",
+  "review_status": "draft",
+  "generation_note": "Generated from data/corpus/quran_three_edition_comparison.jsonl. Change classes are machine candidates; page-transcription extraction noise is possible. Review before approval.",
+  "sections": [
+    {
+      "id": "s3",
+      "title": "33:3 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:3 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall put your trust in GOD. GOD suffices as an advocate. Devotion to God Is Indivisible\". 1992 final reading begins \"And put your trust in GOD. GOD suffices as an advocate.\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:3",
+        "Quran 33:3",
+        "sura 33 verse 3",
+        "33:3",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:3 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:3?",
+        "Did Rashad Khalifa revise 33:3 in the final edition?"
+      ],
+      "quran_references": [
+        "33:3"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 6,
+      "source_segment_end": 6,
+      "page_start": 3,
+      "page_end": 3,
+      "review_status": "draft"
+    },
+    {
+      "id": "s5",
+      "title": "33:5 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:5 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"You shall give your adopted children names that preserve their relation ship to their genetic fathers. This is...\". 1992 final reading begins \"You shall give your adopted children names that preserve their relationship to their genetic parents. This is...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:5",
+        "Quran 33:5",
+        "sura 33 verse 5",
+        "33:5",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:5 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:5?",
+        "Did Rashad Khalifa revise 33:5 in the final edition?"
+      ],
+      "quran_references": [
+        "33:5"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 19,
+      "source_segment_end": 19,
+      "page_start": 5,
+      "page_end": 5,
+      "review_status": "draft"
+    },
+    {
+      "id": "s6",
+      "title": "33:6 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 33:6 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:6",
+        "Quran 33:6",
+        "sura 33 verse 6",
+        "33:6",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 33:6 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 33:6 missing from the 1992 edition?",
+        "What happened to 33:6 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "33:6"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 23,
+      "source_segment_end": 23,
+      "page_start": 6,
+      "page_end": 6,
+      "review_status": "draft"
+    },
+    {
+      "id": "s8",
+      "title": "33:8 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:8 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He will surely question the truthful about their truthfulness, and has prepared for the disbelievers (in this...\". 1992 final reading begins \"Subsequently, He will surely question the truthful about their truthfulness, and has prepared for the disbelie...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:8",
+        "Quran 33:8",
+        "sura 33 verse 8",
+        "33:8",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:8 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:8?",
+        "Did Rashad Khalifa revise 33:8 in the final edition?"
+      ],
+      "quran_references": [
+        "33:8"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 33,
+      "source_segment_end": 33,
+      "page_start": 8,
+      "page_end": 8,
+      "review_status": "draft"
+    },
+    {
+      "id": "s10",
+      "title": "33:10 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:10 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"They came from above you, and from beneath you. Your eyes and hearts were terrified, and you harbored unbefitt...\". 1992 final reading begins \"When they came from above you, and from beneath you, your eyes were terrified, your hearts ran out of patience...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:10",
+        "Quran 33:10",
+        "sura 33 verse 10",
+        "33:10",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:10 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:10?",
+        "Did Rashad Khalifa revise 33:10 in the final edition?"
+      ],
+      "quran_references": [
+        "33:10"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 43,
+      "source_segment_end": 43,
+      "page_start": 10,
+      "page_end": 10,
+      "review_status": "draft"
+    },
+    {
+      "id": "s21",
+      "title": "33:21 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:21 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The messenger of GOD has set up a good example for those among you who seek GOD and the Last Day, and remember...\". 1992 final reading begins \"The messenger of GOD has set up a good example for those among you who seek GOD and the Last Day, and constant...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:21",
+        "Quran 33:21",
+        "sura 33 verse 21",
+        "33:21",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:21 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:21?",
+        "Did Rashad Khalifa revise 33:21 in the final edition?"
+      ],
+      "quran_references": [
+        "33:21"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 78,
+      "source_segment_end": 78,
+      "page_start": 21,
+      "page_end": 21,
+      "review_status": "draft"
+    },
+    {
+      "id": "s27",
+      "title": "33:27 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:27 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And He made you inherit their land, their homes, their money, and lands you had never stepped on. GOD is in fu...\". 1992 final reading begins \"He made you inherit their land, their homes, their money, and lands you had never stepped on. GOD is in full c...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:27",
+        "Quran 33:27",
+        "sura 33 verse 27",
+        "33:27",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:27 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:27?",
+        "Did Rashad Khalifa revise 33:27 in the final edition?"
+      ],
+      "quran_references": [
+        "33:27"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 101,
+      "source_segment_end": 101,
+      "page_start": 27,
+      "page_end": 27,
+      "review_status": "draft"
+    },
+    {
+      "id": "s34",
+      "title": "33:34 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:34 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"And remember what is being recited in your homes of GOD’s revelations and the wisdom inherent therein. GOD is...\". 1992 final reading begins \"Remember what is being recited in your homes of GOD's revelations and the wisdom inherent therein. GOD is Subl...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:34",
+        "Quran 33:34",
+        "sura 33 verse 34",
+        "33:34",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:34 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:34?",
+        "Did Rashad Khalifa revise 33:34 in the final edition?"
+      ],
+      "quran_references": [
+        "33:34"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 133,
+      "source_segment_end": 133,
+      "page_start": 34,
+      "page_end": 34,
+      "review_status": "draft"
+    },
+    {
+      "id": "s39",
+      "title": "33:39 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:39 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"for those who deliver GOD’s messages, and who reverence Him alone. They never fear anyone but GOD. GOD is the...\". 1992 final reading begins \"Those who deliver GOD's messages, and who reverence Him alone, shall never fear anyone but GOD. GOD is the mos...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:39",
+        "Quran 33:39",
+        "sura 33 verse 39",
+        "33:39",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:39 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:39?",
+        "Did Rashad Khalifa revise 33:39 in the final edition?"
+      ],
+      "quran_references": [
+        "33:39"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 157,
+      "source_segment_end": 157,
+      "page_start": 39,
+      "page_end": 39,
+      "review_status": "draft"
+    },
+    {
+      "id": "s48-49",
+      "title": "33:48-49 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:48-49 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Do not obey the disbelievers and the hypocrites, disregard their persecu tion, and put your trust in GOD; GOD...\". 1992 final reading begins \"Do not obey the disbelievers and the hypocrites, disregard their insults, and put your trust in GOD; GOD suffi...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:48-49",
+        "Quran 33:48-49",
+        "sura 33 verse 48",
+        "33:48",
+        "33:49",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:48-49 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:48-49?",
+        "Did Rashad Khalifa revise 33:48-49 in the final edition?"
+      ],
+      "quran_references": [
+        "33:48",
+        "33:49"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 192,
+      "source_segment_end": 196,
+      "page_start": 48,
+      "page_end": 49,
+      "review_status": "draft"
+    },
+    {
+      "id": "s52",
+      "title": "33:52 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:52 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Beyond the categories described to you, you are enjoined from marrying any other women, nor can you substitute...\". 1992 final reading begins \"Beyond the categories described to you, you are enjoined from marrying any other women, nor can you substitute...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:52",
+        "Quran 33:52",
+        "sura 33 verse 52",
+        "33:52",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:52 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:52?",
+        "Did Rashad Khalifa revise 33:52 in the final edition?"
+      ],
+      "quran_references": [
+        "33:52"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 207,
+      "source_segment_end": 207,
+      "page_start": 52,
+      "page_end": 52,
+      "review_status": "draft"
+    },
+    {
+      "id": "s56",
+      "title": "33:56 edition presence differences (1981/1989/1992)",
+      "summary": "Verse presence differs across editions for 33:56 (1981: absent, 1989: present, 1992: present). Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:56",
+        "Quran 33:56",
+        "sura 33 verse 56",
+        "33:56",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "Is 33:56 present in every edition of Rashad Khalifa's Quran translation?",
+        "Why is 33:56 missing from the 1992 edition?",
+        "What happened to 33:56 across the 1981, 1989, and 1992 editions?"
+      ],
+      "quran_references": [
+        "33:56"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 226,
+      "source_segment_end": 226,
+      "page_start": 56,
+      "page_end": 56,
+      "review_status": "draft"
+    },
+    {
+      "id": "s57-59",
+      "title": "33:57-59 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:57-59 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"Surely, those who insult GOD and His messenger, GOD condemns them in this life and in the Hereafter; He has pr...\". 1992 final reading begins \"Surely, those who oppose GOD and His messenger, GOD afflicts them with a curse in this life, and in the Hereaf...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:57-59",
+        "Quran 33:57-59",
+        "sura 33 verse 57",
+        "33:57",
+        "33:58",
+        "33:59",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:57-59 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:57-59?",
+        "Did Rashad Khalifa revise 33:57-59 in the final edition?"
+      ],
+      "quran_references": [
+        "33:57",
+        "33:58",
+        "33:59"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 233,
+      "source_segment_end": 240,
+      "page_start": 57,
+      "page_end": 59,
+      "review_status": "draft"
+    },
+    {
+      "id": "s63",
+      "title": "33:63 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:63 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"The people ask you about the Hour. Say, “The knowledge thereof is with G O I For all that you know, the Hour m...\". 1992 final reading begins \"The people ask you about the Hour (end of the world). Say, \"The knowledge thereof is only with GOD. For all th...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:63",
+        "Quran 33:63",
+        "sura 33 verse 63",
+        "33:63",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:63 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:63?",
+        "Did Rashad Khalifa revise 33:63 in the final edition?"
+      ],
+      "quran_references": [
+        "33:63"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 255,
+      "source_segment_end": 255,
+      "page_start": 63,
+      "page_end": 63,
+      "review_status": "draft"
+    },
+    {
+      "id": "s71",
+      "title": "33:71 wording revised between the 1989 and 1992 editions",
+      "summary": "The English wording of 33:71 was substantially revised between the 1989 and 1992 editions. 1989 reading begins \"He will then correct your works, and forgive your sins. Those who obey GOD and His messenger have triumphed a...\". 1992 final reading begins \"He will then fix your works, and forgive your sins. Those who obey GOD and His messenger have triumphed a grea...\". Machine comparison candidate; 1981 and 1989 readings are page-transcription extractions that need review.",
+      "section_kind": "translation-evolution",
+      "concepts": [
+        {
+          "id": "translation-evolution",
+          "relation": "described",
+          "explicit": true
+        },
+        {
+          "id": "quran-editions",
+          "relation": "described",
+          "explicit": true
+        }
+      ],
+      "user_terms": [
+        "33:71",
+        "Quran 33:71",
+        "sura 33 verse 71",
+        "33:71",
+        "translation change",
+        "earlier translation",
+        "edition difference"
+      ],
+      "related_questions": [
+        "How did the translation of 33:71 change between 1989 and 1992?",
+        "What is the final 1992 wording of 33:71?",
+        "Did Rashad Khalifa revise 33:71 in the final edition?"
+      ],
+      "quran_references": [
+        "33:71"
+      ],
+      "retrieval_note": "Edition comparison metadata. Route final-wording answers to the 1992 verse text and preserve edition differences for evolution questions.",
+      "source_segment_start": 285,
+      "source_segment_end": 285,
+      "page_start": 71,
+      "page_end": 71,
+      "review_status": "draft"
+    }
+  ]
+}
