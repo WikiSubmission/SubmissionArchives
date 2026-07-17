@@ -6,11 +6,18 @@ import {
     rateLimitResponse,
 } from '@/lib/security';
 import {
-    embedQuery,
+    embedQueries,
+    emptyQueryExpansion,
+    expandArchiveQuery,
     extractDeltaText,
+    rerankArchiveChunks,
     streamChatCompletion,
 } from '@/lib/rag/mistral';
-import { retrieveChunks } from '@/lib/rag/retrieval';
+import {
+    assessRetrieval,
+    finalizeChunks,
+    retrieveChunks,
+} from '@/lib/rag/retrieval';
 import { buildSourceCards } from '@/lib/rag/sourceCards';
 import {
     ASK_SYSTEM_PROMPT,
@@ -25,6 +32,12 @@ import type {
     AskProgressStage,
     AskStreamEvent,
 } from '@/lib/rag/streamTypes';
+import type {
+    QueryExpansion,
+    RetrievalIntent,
+    RetrievalQuery,
+    RetrievalQueryKind,
+} from '@/lib/rag/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -35,21 +48,41 @@ const RATE_LIMIT_PER_MINUTE = readPositiveNumber(
     process.env.RAG_RATE_LIMIT_PER_MINUTE,
     10,
 );
-const MIN_RETRIEVAL_SCORE = readPositiveNumber(
-    process.env.RAG_MIN_RETRIEVAL_SCORE,
-    0.015,
-);
 const TOP_K_RETRIEVAL = readPositiveInteger(
     process.env.RAG_TOP_K_RETRIEVAL,
     40,
 );
+const RERANK_CANDIDATES = readPositiveInteger(
+    process.env.RAG_RERANK_CANDIDATES,
+    24,
+);
 const TOP_N_CONTEXT = readPositiveInteger(
     process.env.RAG_TOP_N_CONTEXT,
+    10,
+);
+const MAX_QUERY_VARIANTS = readPositiveInteger(
+    process.env.RAG_MAX_QUERY_VARIANTS,
     8,
 );
-const MIN_CHUNKS_REQUIRED = readPositiveInteger(
-    process.env.RAG_MIN_CHUNKS_REQUIRED,
-    3,
+const QUERY_EXPANSION_ENABLED = readBoolean(
+    process.env.RAG_QUERY_EXPANSION_ENABLED,
+    true,
+);
+const RERANK_ENABLED = readBoolean(
+    process.env.RAG_RERANK_ENABLED,
+    true,
+);
+const ENRICHMENT_ENABLED = readBoolean(
+    process.env.RAG_ENRICHMENT_ENABLED,
+    true,
+);
+const ENRICHMENT_TOP_K = readPositiveInteger(
+    process.env.RAG_ENRICHMENT_TOP_K,
+    30,
+);
+const ENRICHMENT_MAX_SECTIONS = readPositiveInteger(
+    process.env.RAG_ENRICHMENT_MAX_SECTIONS,
+    24,
 );
 const HEARTBEAT_INTERVAL_MS = 15_000;
 const REVEAL_CHUNK_SIZE = 140;
@@ -65,6 +98,13 @@ function readPositiveNumber(value: string | undefined, fallback: number): number
 function readPositiveInteger(value: string | undefined, fallback: number): number {
     const parsed = Number(value);
     return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function readBoolean(value: string | undefined, fallback: boolean): boolean {
+    if (value === undefined) return fallback;
+    if (value.toLowerCase() === 'true') return true;
+    if (value.toLowerCase() === 'false') return false;
+    return fallback;
 }
 
 function jsonError(message: string, status: number): Response {
@@ -203,6 +243,102 @@ function delay(milliseconds: number, signal: AbortSignal): Promise<void> {
     });
 }
 
+interface QuerySeed {
+    text: string;
+    kind: RetrievalQueryKind;
+    weight: number;
+}
+
+function addQuerySeed(
+    seeds: QuerySeed[],
+    seen: Set<string>,
+    text: string,
+    kind: RetrievalQueryKind,
+    weight: number,
+): void {
+    const cleaned = text.replace(/\s+/g, ' ').trim();
+    const key = cleaned.toLocaleLowerCase();
+    if (!cleaned || seen.has(key) || seeds.length >= MAX_QUERY_VARIANTS) return;
+
+    seen.add(key);
+    seeds.push({ text: cleaned, kind, weight });
+}
+
+function requestedEditionYears(question: string, expansion: QueryExpansion): number[] {
+    const years = new Set<number>(expansion.requestedEditionYears);
+    for (const match of question.matchAll(/\b(19\d{2}|20\d{2})\b/g)) {
+        years.add(Number(match[1]));
+    }
+    return [...years].filter((year) => Number.isInteger(year));
+}
+
+function inferRetrievalIntent(question: string, expansion: QueryExpansion): RetrievalIntent {
+    const normalized = question.toLocaleLowerCase();
+    const years = requestedEditionYears(question, expansion);
+
+    if (
+        expansion.intent === 'translation_evolution'
+        || /compare|difference|changed|change over time|evolution|earlier translation|previous translation/.test(normalized)
+        || years.length >= 2
+    ) {
+        return 'translation_evolution';
+    }
+
+    if (
+        expansion.intent === 'final_wording'
+        || /final wording|final translation|1992 wording|what does the final|authorized english version/.test(normalized)
+    ) {
+        return 'final_wording';
+    }
+
+    if (
+        expansion.intent === 'ritual_procedure'
+        || /how (?:do|did|should).*(?:pray|salat|ablution|wudu|fast|hajj)|contact prayer procedure|prayer units/.test(normalized)
+    ) {
+        return 'ritual_procedure';
+    }
+
+    if (
+        expansion.intent === 'historical_development'
+        || /earliest|origin|developed|development|when did|history of|first taught/.test(normalized)
+    ) {
+        return 'historical_development';
+    }
+
+    return expansion.intent || 'general';
+}
+
+function buildQuerySeeds(question: string, expansion: QueryExpansion): QuerySeed[] {
+    const seeds: QuerySeed[] = [];
+    const seen = new Set<string>();
+
+    addQuerySeed(seeds, seen, question, 'original', 1.25);
+
+    for (const term of expansion.exactTerms) {
+        addQuerySeed(seeds, seen, term, 'expanded', 1.2);
+    }
+    for (const paraphrase of expansion.paraphrases) {
+        addQuerySeed(seeds, seen, paraphrase, 'expanded', 1.05);
+    }
+    for (const concept of expansion.conceptDescriptions) {
+        addQuerySeed(seeds, seen, concept, 'expanded', 1.1);
+    }
+    for (const phrase of expansion.archivePhrases) {
+        addQuerySeed(seeds, seen, phrase, 'expanded', 1);
+    }
+    if (expansion.hypotheticalPassage) {
+        addQuerySeed(
+            seeds,
+            seen,
+            expansion.hypotheticalPassage,
+            'hyde',
+            1.1,
+        );
+    }
+
+    return seeds;
+}
+
 async function generateValidatedAnswer(
     userPrompt: string,
     supplied: ReadonlySet<string>,
@@ -252,6 +388,7 @@ async function generateValidatedAnswer(
 
         if (attempt === 0) {
             prompt = buildCorrectionPrompt(
+                userPrompt,
                 text,
                 invalidIds,
                 [...supplied],
@@ -337,52 +474,96 @@ export async function POST(request: Request): Promise<Response> {
 
                 sendStatus(
                     'embedding',
-                    'Mapping your question to the archive…',
+                    QUERY_EXPANSION_ENABLED
+                        ? 'Mapping the wording and underlying concept…'
+                        : 'Mapping your question to the archive…',
                 );
-                const embedding = await embedQuery(question);
+
+                let expansion = emptyQueryExpansion();
+                if (QUERY_EXPANSION_ENABLED) {
+                    try {
+                        expansion = await expandArchiveQuery(question);
+                    } catch {
+                        // The original query remains fully usable if expansion fails.
+                    }
+                }
+
+                const intent = inferRetrievalIntent(question, expansion);
+                const editionYears = requestedEditionYears(question, expansion);
+                const seeds = buildQuerySeeds(question, expansion);
+                const embeddings = await embedQueries(
+                    seeds.map((seed) => seed.text),
+                );
+                const retrievalQueries: RetrievalQuery[] = seeds.map(
+                    (seed, index) => ({
+                        ...seed,
+                        embedding: embeddings[index],
+                    }),
+                );
 
                 throwIfAborted(requestSignal);
                 sendStatus(
                     'retrieving',
-                    'Searching indexed passages and transcripts…',
+                    retrievalQueries.length > 1
+                        ? 'Searching canonical passages, topic indexes, paraphrases, and conceptual matches…'
+                        : 'Searching indexed passages and transcripts…',
                 );
 
-                const chunks = await retrieveChunks(
-                    question,
-                    embedding,
+                const candidates = await retrieveChunks(
+                    retrievalQueries,
                     {
                         topK: TOP_K_RETRIEVAL,
-                        topN: TOP_N_CONTEXT,
+                        topN: Math.max(RERANK_CANDIDATES, TOP_N_CONTEXT),
+                        intent,
+                        requestedEditionYears: editionYears,
+                        enrichmentEnabled: ENRICHMENT_ENABLED,
+                        enrichmentTopK: ENRICHMENT_TOP_K,
+                        enrichmentMaxSections: ENRICHMENT_MAX_SECTIONS,
                     },
                 );
 
                 throwIfAborted(requestSignal);
                 sendStatus(
                     'ranking',
-                    'Comparing the strongest pieces of evidence…',
+                    'Comparing the strongest passages in their surrounding context…',
                 );
 
+                let rankedCandidates = candidates;
+                if (RERANK_ENABLED && candidates.length > 1) {
+                    try {
+                        rankedCandidates = await rerankArchiveChunks(
+                            question,
+                            candidates,
+                            intent,
+                        );
+                    } catch {
+                        // Deterministic hybrid ranking remains available.
+                    }
+                }
+
+                const chunks = finalizeChunks(
+                    rankedCandidates,
+                    TOP_N_CONTEXT,
+                    { intent },
+                );
                 const sources = buildSourceCards(chunks);
                 send({
                     type: 'sources',
                     sources,
                 });
 
-                const topScore = chunks[0]?.fusedScore ?? 0;
-                if (
-                    chunks.length < MIN_CHUNKS_REQUIRED ||
-                    topScore < MIN_RETRIEVAL_SCORE
-                ) {
+                const retrievalStrength = assessRetrieval(chunks);
+                if (retrievalStrength === 'none' || retrievalStrength === 'weak') {
                     send({
                         type: 'notice',
                         kind:
-                            chunks.length === 0
+                            retrievalStrength === 'none'
                                 ? 'out_of_scope'
                                 : 'weak_retrieval',
                         message:
-                            chunks.length === 0
-                                ? 'Ask the Archive answers from the preserved Submission Archives corpus. I could not find relevant material for this question.'
-                                : 'I could not find sufficiently strong archive evidence for this question. Try a specific phrase, source type, or related term.',
+                            retrievalStrength === 'none'
+                                ? 'I did not retrieve a relevant passage from the preserved Submission Archives corpus for this question.'
+                                : 'I found possible related material, but the evidence was not strong enough to identify a reliable answer. This does not establish that the subject is absent from the archive.',
                     });
                     send({ type: 'done' });
                     return;
@@ -395,13 +576,15 @@ export async function POST(request: Request): Promise<Response> {
                     question,
                     chunks,
                     sources,
+                    retrievalStrength,
+                    intent,
                 );
 
                 let validatedAnswer:
                     | {
-                          text: string;
-                          citedSourceIds: string[];
-                      }
+                        text: string;
+                        citedSourceIds: string[];
+                    }
                     | null;
 
                 try {

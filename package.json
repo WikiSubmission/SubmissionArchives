@@ -25,7 +25,10 @@
     "rag:verify-embed-dim": "tsx scripts/rag/verify-embed-dim.ts",
     "rag:migrate": "tsx scripts/rag/migrate.ts",
     "rag:ingest": "tsx scripts/rag/build-and-ingest.ts",
-    "rag:verify": "tsx scripts/rag/verify.ts"
+    "rag:verify": "tsx scripts/rag/verify.ts",
+    "rag:rebuild": "npm run rag:validate-enrichment && npm run rag:migrate && npm run rag:ingest && npm run rag:verify",
+    "rag:validate-enrichment": "tsx scripts/rag/validate-enrichment.ts",
+    "rag:plan": "tsx scripts/rag/plan-ingest.ts"
   },
   "dependencies": {
     "@mistralai/mistralai": "^2.4.1",

@@ -19,21 +19,43 @@ const TYPE_LABELS: Record<string, string> = {
     book: 'Book',
 };
 
+const MATCH_LABELS: Record<SourceCardData['matchType'], string> = {
+    direct: 'Direct match',
+    conceptual: 'Conceptual match',
+    related: 'Related evidence',
+    uncertain: 'Uncertain match',
+};
+
+function formatTime(secondsValue: number): string {
+    const seconds = Math.max(0, Math.floor(secondsValue));
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = String(seconds % 60).padStart(2, '0');
+
+    return hours > 0
+        ? `${hours}:${String(minutes).padStart(2, '0')}:${remainingSeconds}`
+        : `${minutes}:${remainingSeconds}`;
+}
+
 function formatLocator(source: SourceCardData): string | null {
+    if (source.verseId) {
+        return `Verse ${source.verseId}`;
+    }
+
     if (typeof source.page === 'number' && source.page > 0) {
         return `Page ${source.page}`;
     }
 
     if (typeof source.startTime === 'number' && Number.isFinite(source.startTime)) {
-        const hours = Math.floor(source.startTime / 3600);
-        const minutes = Math.floor((source.startTime % 3600) / 60);
-        const seconds = Math.floor(source.startTime % 60)
-            .toString()
-            .padStart(2, '0');
-
-        return hours > 0
-            ? `${hours}:${minutes.toString().padStart(2, '0')}:${seconds}`
-            : `${minutes}:${seconds}`;
+        const start = formatTime(source.startTime);
+        if (
+            typeof source.endTime === 'number' &&
+            Number.isFinite(source.endTime) &&
+            source.endTime > source.startTime
+        ) {
+            return `${start}–${formatTime(source.endTime)}`;
+        }
+        return start;
     }
 
     return null;
@@ -58,10 +80,29 @@ function SourceCardContent({
             <div className={styles.sourceMeta}>
                 <span className={styles.sourceId}>{source.sourceId}</span>
                 <span>{TYPE_LABELS[source.type] || 'Resource'}</span>
+                <span aria-hidden="true">·</span>
+                <span>{MATCH_LABELS[source.matchType]}</span>
                 {locator ? (
                     <>
                         <span aria-hidden="true">·</span>
                         <span>{locator}</span>
+                    </>
+                ) : null}
+                {source.editionYear ? (
+                    <>
+                        <span aria-hidden="true">·</span>
+                        <span>{source.editionYear} edition</span>
+                    </>
+                ) : source.publicationDate ? (
+                    <>
+                        <span aria-hidden="true">·</span>
+                        <span>{source.publicationDate}</span>
+                    </>
+                ) : null}
+                {source.enrichmentGuided ? (
+                    <>
+                        <span aria-hidden="true">·</span>
+                        <span>Topic-indexed</span>
                     </>
                 ) : null}
                 {source.isRashadAuthored ? (
@@ -79,6 +120,16 @@ function SourceCardContent({
 
             {source.author && !source.isRashadAuthored ? (
                 <p className={styles.sourceAuthor}>{source.author}</p>
+            ) : null}
+
+            {source.matchedSectionTitle ? (
+                <p className={styles.sourceAuthor}>
+                    Topic index: {source.matchedSectionTitle}
+                </p>
+            ) : null}
+
+            {source.relevanceReason ? (
+                <p className={styles.sourceAuthor}>{source.relevanceReason}</p>
             ) : null}
 
             <p className={styles.sourceSnippet}>{source.snippet}</p>
