@@ -668,6 +668,7 @@ export async function POST(request: Request): Promise<Response> {
                 });
                 send({ type: 'done' });
             } catch (error: unknown) {
+                console.error('[Ask API Error]', error);
                 if (!isAbortError(error) && !requestSignal.aborted) {
                     send({
                         type: 'notice',
