@@ -88,7 +88,7 @@
       "source_segment_end": 131,
       "page_start": 2,
       "page_end": 31,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s42-43",
@@ -131,7 +131,7 @@
       "source_segment_end": 186,
       "page_start": 42,
       "page_end": 43,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s44-46",
@@ -176,7 +176,7 @@
       "source_segment_end": 198,
       "page_start": 44,
       "page_end": 46,
-      "review_status": "draft"
+      "review_status": "approved"
     }
   ]
 }

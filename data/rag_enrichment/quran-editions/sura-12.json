@@ -50,7 +50,7 @@
       "source_segment_end": 29,
       "page_start": 7,
       "page_end": 8,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s31",
@@ -91,7 +91,7 @@
       "source_segment_end": 112,
       "page_start": 31,
       "page_end": 31,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s33-35",
@@ -136,7 +136,7 @@
       "source_segment_end": 124,
       "page_start": 33,
       "page_end": 35,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s37",
@@ -177,7 +177,7 @@
       "source_segment_end": 130,
       "page_start": 37,
       "page_end": 37,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s39",
@@ -218,7 +218,7 @@
       "source_segment_end": 136,
       "page_start": 39,
       "page_end": 39,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s45",
@@ -259,7 +259,7 @@
       "source_segment_end": 161,
       "page_start": 45,
       "page_end": 45,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s47",
@@ -300,7 +300,7 @@
       "source_segment_end": 169,
       "page_start": 47,
       "page_end": 47,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s51",
@@ -341,7 +341,7 @@
       "source_segment_end": 181,
       "page_start": 51,
       "page_end": 51,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s53",
@@ -382,7 +382,7 @@
       "source_segment_end": 187,
       "page_start": 53,
       "page_end": 53,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s55",
@@ -423,7 +423,7 @@
       "source_segment_end": 195,
       "page_start": 55,
       "page_end": 55,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s59",
@@ -464,7 +464,7 @@
       "source_segment_end": 207,
       "page_start": 59,
       "page_end": 59,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s62",
@@ -505,7 +505,7 @@
       "source_segment_end": 216,
       "page_start": 62,
       "page_end": 62,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s70",
@@ -546,7 +546,7 @@
       "source_segment_end": 247,
       "page_start": 70,
       "page_end": 70,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s75",
@@ -587,7 +587,7 @@
       "source_segment_end": 262,
       "page_start": 75,
       "page_end": 75,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s77",
@@ -628,7 +628,7 @@
       "source_segment_end": 268,
       "page_start": 77,
       "page_end": 77,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s81",
@@ -669,7 +669,7 @@
       "source_segment_end": 281,
       "page_start": 81,
       "page_end": 81,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s102",
@@ -710,7 +710,7 @@
       "source_segment_end": 354,
       "page_start": 102,
       "page_end": 102,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s104",
@@ -751,7 +751,7 @@
       "source_segment_end": 363,
       "page_start": 104,
       "page_end": 104,
-      "review_status": "draft"
+      "review_status": "approved"
     }
   ]
 }

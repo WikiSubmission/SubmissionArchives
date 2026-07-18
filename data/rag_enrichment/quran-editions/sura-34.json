@@ -48,7 +48,7 @@
       "source_segment_end": 11,
       "page_start": 4,
       "page_end": 4,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s9",
@@ -89,7 +89,7 @@
       "source_segment_end": 26,
       "page_start": 9,
       "page_end": 9,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s11-12",
@@ -132,7 +132,7 @@
       "source_segment_end": 40,
       "page_start": 11,
       "page_end": 12,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s14",
@@ -173,7 +173,7 @@
       "source_segment_end": 48,
       "page_start": 14,
       "page_end": 14,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s26-27",
@@ -216,7 +216,7 @@
       "source_segment_end": 96,
       "page_start": 26,
       "page_end": 27,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s33",
@@ -257,7 +257,7 @@
       "source_segment_end": 120,
       "page_start": 33,
       "page_end": 33,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s36",
@@ -298,7 +298,7 @@
       "source_segment_end": 130,
       "page_start": 36,
       "page_end": 36,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s42",
@@ -339,7 +339,7 @@
       "source_segment_end": 149,
       "page_start": 42,
       "page_end": 42,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s45",
@@ -380,7 +380,7 @@
       "source_segment_end": 162,
       "page_start": 45,
       "page_end": 45,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s52",
@@ -421,7 +421,7 @@
       "source_segment_end": 185,
       "page_start": 52,
       "page_end": 52,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s54",
@@ -462,7 +462,7 @@
       "source_segment_end": 193,
       "page_start": 54,
       "page_end": 54,
-      "review_status": "draft"
+      "review_status": "approved"
     }
   ]
 }

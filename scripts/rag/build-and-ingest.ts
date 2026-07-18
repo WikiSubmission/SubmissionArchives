@@ -35,9 +35,11 @@ interface Summary {
   documentsProcessed: number;
   documentsSkipped: number;
   canonicalChunksEmbedded: number;
+  canonicalChunksUpdated: number;
   canonicalChunksSkipped: number;
   canonicalChunksDeleted: number;
   enrichmentSectionsEmbedded: number;
+  enrichmentSectionsUpdated: number;
   enrichmentSectionsSkipped: number;
   enrichmentSectionsDeleted: number;
   relationshipsWritten: number;
@@ -48,13 +50,40 @@ interface Summary {
 interface HashedChunk {
   draft: RagChunkDraft;
   hash: string;
+  embedHash: string;
   embedInput: string;
 }
 
 interface HashedSection {
   draft: RagEnrichmentSectionDraft;
   hash: string;
+  embedHash: string;
   embedInput: string;
+}
+
+interface ExistingRow {
+  content_hash: string;
+  embed_hash: string | null;
+}
+
+type IngestAction = 'skip' | 'columns-only' | 'embed';
+
+// Decides whether a row needs a full re-embed, a column-only update (reusing
+// the stored embedding), or nothing. embed_hash may be null on rows written
+// before migration 005; when it is null but the full content hash still
+// matches, the stored embedding is valid and only the embed_hash is backfilled.
+function classifyRow(
+  item: { hash: string; embedHash: string },
+  existing: ExistingRow | undefined,
+): IngestAction {
+  if (!existing) return 'embed';
+  if (existing.embed_hash === item.embedHash) {
+    return existing.content_hash === item.hash ? 'skip' : 'columns-only';
+  }
+  if (existing.embed_hash === null && existing.content_hash === item.hash) {
+    return 'columns-only';
+  }
+  return 'embed';
 }
 
 function isRashadAuthored(record: ArchiveRecord): boolean {
@@ -148,11 +177,10 @@ function hashChunks(
 ): HashedChunk[] {
   return drafts.map((draft) => {
     const embedInput = buildEmbeddingInput(record, metadata, draft);
-    return {
-      draft,
-      embedInput,
-      hash: sha256(`${EMBED_VERSION}:canonical:${embedInput}`),
-    };
+    const embedHash = sha256(`${EMBED_VERSION}:canonical:${embedInput}`);
+    // Canonical chunks store no metadata beyond the embedding input, so the
+    // content hash equals the embed hash.
+    return { draft, embedInput, embedHash, hash: embedHash };
   });
 }
 
@@ -163,9 +191,11 @@ function hashSections(
 ): HashedSection[] {
   return drafts.map((draft) => {
     const embedInput = buildEnrichmentEmbeddingInput(record, metadata, draft);
-    // Locators and review status are stored on the row but excluded from the
-    // embedding input, so they must participate in the change hash or edits
-    // to them would never reach the database.
+    // embedHash covers only what changes the vector. Locators, retrieval
+    // priority, and review status are stored on the row but not embedded, so
+    // they live in contentHash: a change to them updates the row (column-only)
+    // without a re-embed.
+    const embedHash = sha256(`${EMBED_VERSION}:enrichment:${embedInput}`);
     const storedFields = [
       draft.sourceSegmentStart,
       draft.sourceSegmentEnd,
@@ -179,6 +209,7 @@ function hashSections(
     return {
       draft,
       embedInput,
+      embedHash,
       hash: sha256(`${EMBED_VERSION}:enrichment:${storedFields}:${embedInput}`),
     };
   });
@@ -232,15 +263,6 @@ async function embedChanged<T extends { hash: string; embedInput: string }>(
   }
 
   return embeddingsByHash;
-}
-
-function exactHashSet(
-  expected: Array<{ key: string | number; hash: string }>,
-  existing: Array<{ key: string | number; hash: string }>,
-): boolean {
-  if (expected.length !== existing.length) return false;
-  const existingMap = new Map(existing.map((item) => [String(item.key), item.hash]));
-  return expected.every((item) => existingMap.get(String(item.key)) === item.hash);
 }
 
 async function upsertDocument(
@@ -314,17 +336,17 @@ async function upsertChunk(
   embedding: number[],
   documentId: string,
 ): Promise<void> {
-  const { draft, hash } = item;
+  const { draft, hash, embedHash } = item;
   await client.query(
     `INSERT INTO rag_chunks (
        document_id, chunk_index, chunk_kind, text, start_time, end_time,
        page, speaker, label, source_segment_start, source_segment_end,
-       edition_year, evidence_kind, verse_id, content_hash, embedding
+       edition_year, evidence_kind, verse_id, content_hash, embed_hash, embedding
      )
      VALUES (
        $1, $2, $3, $4, $5, $6,
        $7, $8, $9, $10, $11,
-       $12, $13, $14, $15, $16
+       $12, $13, $14, $15, $16, $17
      )
      ON CONFLICT (document_id, chunk_index) DO UPDATE SET
        chunk_kind = EXCLUDED.chunk_kind,
@@ -340,6 +362,7 @@ async function upsertChunk(
        evidence_kind = EXCLUDED.evidence_kind,
        verse_id = EXCLUDED.verse_id,
        content_hash = EXCLUDED.content_hash,
+       embed_hash = EXCLUDED.embed_hash,
        embedding = EXCLUDED.embedding`,
     [
       documentId,
@@ -357,7 +380,46 @@ async function upsertChunk(
       draft.evidenceKind,
       draft.verseId,
       hash,
+      embedHash,
       `[${embedding.join(',')}]`,
+    ],
+  );
+}
+
+// Updates a chunk's stored columns and hashes without re-embedding. Used when
+// the embedding input is unchanged but stored metadata changed. Canonical
+// chunks carry no such metadata today, so this is a defensive no-op path kept
+// symmetric with sections.
+async function updateChunkColumns(
+  client: PoolClient,
+  item: HashedChunk,
+  documentId: string,
+): Promise<void> {
+  const { draft, hash, embedHash } = item;
+  await client.query(
+    `UPDATE rag_chunks SET
+       chunk_kind = $3, text = $4, start_time = $5, end_time = $6,
+       page = $7, speaker = $8, label = $9, source_segment_start = $10,
+       source_segment_end = $11, edition_year = $12, evidence_kind = $13,
+       verse_id = $14, content_hash = $15, embed_hash = $16
+     WHERE document_id = $1 AND chunk_index = $2`,
+    [
+      documentId,
+      draft.chunkIndex,
+      draft.chunkKind,
+      draft.text,
+      draft.startTime,
+      draft.endTime,
+      draft.page,
+      draft.speaker,
+      draft.label,
+      draft.sourceSegmentStart,
+      draft.sourceSegmentEnd,
+      draft.editionYear,
+      draft.evidenceKind,
+      draft.verseId,
+      hash,
+      embedHash,
     ],
   );
 }
@@ -367,7 +429,7 @@ async function upsertSection(
   item: HashedSection,
   embedding: number[],
 ): Promise<void> {
-  const { draft, hash } = item;
+  const { draft, hash, embedHash } = item;
   await client.query(
     `INSERT INTO rag_enrichment_sections (
        id, enrichment_document_id, section_id, document_id, title, summary,
@@ -375,7 +437,7 @@ async function upsertSection(
        related_questions, quran_references, bible_references, entities,
        start_time, end_time, page_start, page_end,
        source_segment_start, source_segment_end, retrieval_priority,
-       retrieval_note, review_status, content_hash, embedding, updated_at
+       retrieval_note, review_status, content_hash, embed_hash, embedding, updated_at
      )
      VALUES (
        $1, $2, $3, $4, $5, $6,
@@ -383,7 +445,7 @@ async function upsertSection(
        $12, $13, $14, $15,
        $16, $17, $18, $19,
        $20, $21, $22,
-       $23, $24, $25, $26, now()
+       $23, $24, $25, $26, $27, now()
      )
      ON CONFLICT (id) DO UPDATE SET
        enrichment_document_id = EXCLUDED.enrichment_document_id,
@@ -410,6 +472,7 @@ async function upsertSection(
        retrieval_note = EXCLUDED.retrieval_note,
        review_status = EXCLUDED.review_status,
        content_hash = EXCLUDED.content_hash,
+       embed_hash = EXCLUDED.embed_hash,
        embedding = EXCLUDED.embedding,
        updated_at = now()`,
     [
@@ -438,7 +501,58 @@ async function upsertSection(
       draft.retrievalNote,
       draft.reviewStatus,
       hash,
+      embedHash,
       `[${embedding.join(',')}]`,
+    ],
+  );
+}
+
+// Updates a section's stored columns and hashes without re-embedding. Used
+// when the embedding input is unchanged but stored metadata changed (review
+// status, locators, retrieval priority, or any non-embedded field).
+async function updateSectionColumns(
+  client: PoolClient,
+  item: HashedSection,
+): Promise<void> {
+  const { draft, hash, embedHash } = item;
+  await client.query(
+    `UPDATE rag_enrichment_sections SET
+       enrichment_document_id = $2, section_id = $3, document_id = $4,
+       title = $5, summary = $6, search_text = $7, section_kind = $8,
+       claim_classification = $9, concepts = $10, user_terms = $11,
+       related_questions = $12, quran_references = $13, bible_references = $14,
+       entities = $15, start_time = $16, end_time = $17, page_start = $18,
+       page_end = $19, source_segment_start = $20, source_segment_end = $21,
+       retrieval_priority = $22, retrieval_note = $23, review_status = $24,
+       content_hash = $25, embed_hash = $26, updated_at = now()
+     WHERE id = $1`,
+    [
+      draft.id,
+      draft.enrichmentDocumentId,
+      draft.sectionId,
+      draft.documentId,
+      draft.title,
+      draft.summary,
+      draft.searchText,
+      draft.sectionKind,
+      draft.claimClassification,
+      draft.concepts,
+      draft.userTerms,
+      draft.relatedQuestions,
+      draft.quranReferences,
+      draft.bibleReferences,
+      draft.entities,
+      draft.startTime,
+      draft.endTime,
+      draft.pageStart,
+      draft.pageEnd,
+      draft.sourceSegmentStart,
+      draft.sourceSegmentEnd,
+      draft.retrievalPriority,
+      draft.retrievalNote,
+      draft.reviewStatus,
+      hash,
+      embedHash,
     ],
   );
 }
@@ -511,9 +625,11 @@ async function main(): Promise<void> {
     documentsProcessed: 0,
     documentsSkipped: 0,
     canonicalChunksEmbedded: 0,
+    canonicalChunksUpdated: 0,
     canonicalChunksSkipped: 0,
     canonicalChunksDeleted: 0,
     enrichmentSectionsEmbedded: 0,
+    enrichmentSectionsUpdated: 0,
     enrichmentSectionsSkipped: 0,
     enrichmentSectionsDeleted: 0,
     relationshipsWritten: 0,
@@ -556,12 +672,12 @@ async function main(): Promise<void> {
         'SELECT content_hash FROM rag_documents WHERE id = $1',
         [record.id],
       ),
-      pool.query<{ chunk_index: number; content_hash: string }>(
-        'SELECT chunk_index, content_hash FROM rag_chunks WHERE document_id = $1',
+      pool.query<{ chunk_index: number; content_hash: string; embed_hash: string | null }>(
+        'SELECT chunk_index, content_hash, embed_hash FROM rag_chunks WHERE document_id = $1',
         [record.id],
       ),
-      pool.query<{ id: string; content_hash: string }>(
-        'SELECT id, content_hash FROM rag_enrichment_sections WHERE document_id = $1',
+      pool.query<{ id: string; content_hash: string; embed_hash: string | null }>(
+        'SELECT id, content_hash, embed_hash FROM rag_enrichment_sections WHERE document_id = $1',
         [record.id],
       ),
     ]);
@@ -570,40 +686,42 @@ async function main(): Promise<void> {
     const existingChunks = existingChunksResult.rows;
     const existingSections = existingSectionsResult.rows;
 
-    const chunksExact = exactHashSet(
-      chunks.map((item) => ({ key: item.draft.chunkIndex, hash: item.hash })),
-      existingChunks.map((item) => ({ key: item.chunk_index, hash: item.content_hash })),
+    const existingChunkRows = new Map<number, ExistingRow>(
+      existingChunks.map((item) => [item.chunk_index, item]),
     );
-    const sectionsExact = exactHashSet(
-      sections.map((item) => ({ key: item.draft.id, hash: item.hash })),
-      existingSections.map((item) => ({ key: item.id, hash: item.content_hash })),
+    const existingSectionRows = new Map<string, ExistingRow>(
+      existingSections.map((item) => [item.id, item]),
     );
 
-    if (existingDoc?.content_hash === documentHash && chunksExact && sectionsExact) {
+    const chunkActions = chunks.map((item) => ({
+      item,
+      action: classifyRow(item, existingChunkRows.get(item.draft.chunkIndex)),
+    }));
+    const sectionActions = sections.map((item) => ({
+      item,
+      action: classifyRow(item, existingSectionRows.get(item.draft.id)),
+    }));
+
+    const chunkCounts = existingChunks.length === chunks.length
+      && chunkActions.every((a) => a.action === 'skip');
+    const sectionCounts = existingSections.length === sections.length
+      && sectionActions.every((a) => a.action === 'skip');
+
+    if (existingDoc?.content_hash === documentHash && chunkCounts && sectionCounts) {
       summary.documentsSkipped += 1;
       summary.canonicalChunksSkipped += chunks.length;
       summary.enrichmentSectionsSkipped += sections.length;
       continue;
     }
 
-    const existingChunkHashes = new Map(
-      existingChunks.map((item) => [item.chunk_index, item.content_hash]),
-    );
-    const existingSectionHashes = new Map(
-      existingSections.map((item) => [item.id, item.content_hash]),
-    );
-    const changedChunks = chunks.filter(
-      (item) => existingChunkHashes.get(item.draft.chunkIndex) !== item.hash,
-    );
-    const changedSections = sections.filter(
-      (item) => existingSectionHashes.get(item.draft.id) !== item.hash,
-    );
+    const chunksToEmbed = chunkActions.filter((a) => a.action === 'embed').map((a) => a.item);
+    const sectionsToEmbed = sectionActions.filter((a) => a.action === 'embed').map((a) => a.item);
 
     // All external embedding work finishes before the transaction begins. An API failure
     // cannot leave the document hash claiming that a partial ingest is complete.
     const [chunkEmbeddings, sectionEmbeddings] = await Promise.all([
-      embedChanged(changedChunks),
-      embedChanged(changedSections),
+      embedChanged(chunksToEmbed),
+      embedChanged(sectionsToEmbed),
     ]);
 
     const client = await pool.connect();
@@ -611,13 +729,23 @@ async function main(): Promise<void> {
       await client.query('BEGIN');
       await upsertDocument(client, record, metadata, documentHash);
 
-      for (const item of changedChunks) {
+      for (const { item, action } of chunkActions) {
+        if (action === 'skip') continue;
+        if (action === 'columns-only') {
+          await updateChunkColumns(client, item, record.id);
+          continue;
+        }
         const embedding = chunkEmbeddings.get(item.hash);
         if (!embedding) throw new Error(`Missing canonical embedding for ${record.id}:${item.draft.chunkIndex}`);
         await upsertChunk(client, item, embedding, record.id);
       }
 
-      for (const item of changedSections) {
+      for (const { item, action } of sectionActions) {
+        if (action === 'skip') continue;
+        if (action === 'columns-only') {
+          await updateSectionColumns(client, item);
+          continue;
+        }
         const embedding = sectionEmbeddings.get(item.hash);
         if (!embedding) throw new Error(`Missing enrichment embedding for ${item.draft.id}`);
         await upsertSection(client, item, embedding);
@@ -648,17 +776,25 @@ async function main(): Promise<void> {
 
       await client.query('COMMIT');
 
+      const chunkEmbedded = chunkActions.filter((a) => a.action === 'embed').length;
+      const chunkUpdated = chunkActions.filter((a) => a.action === 'columns-only').length;
+      const sectionEmbedded = sectionActions.filter((a) => a.action === 'embed').length;
+      const sectionUpdated = sectionActions.filter((a) => a.action === 'columns-only').length;
+
       summary.documentsProcessed += 1;
-      summary.canonicalChunksEmbedded += changedChunks.length;
-      summary.canonicalChunksSkipped += chunks.length - changedChunks.length;
+      summary.canonicalChunksEmbedded += chunkEmbedded;
+      summary.canonicalChunksUpdated += chunkUpdated;
+      summary.canonicalChunksSkipped += chunks.length - chunkEmbedded - chunkUpdated;
       summary.canonicalChunksDeleted += staleChunkResult.rowCount ?? 0;
-      summary.enrichmentSectionsEmbedded += changedSections.length;
-      summary.enrichmentSectionsSkipped += sections.length - changedSections.length;
+      summary.enrichmentSectionsEmbedded += sectionEmbedded;
+      summary.enrichmentSectionsUpdated += sectionUpdated;
+      summary.enrichmentSectionsSkipped += sections.length - sectionEmbedded - sectionUpdated;
       summary.enrichmentSectionsDeleted += staleSectionResult.rowCount ?? 0;
 
       console.log(
         `[${recordIndex + 1}/${records.length}] ${record.id}: `
-          + `${changedChunks.length} canonical, ${changedSections.length} enrichment embedded`,
+          + `${chunkEmbedded} canonical embedded/${chunkUpdated} updated, `
+          + `${sectionEmbedded} enrichment embedded/${sectionUpdated} updated`,
       );
     } catch (error) {
       await client.query('ROLLBACK');
@@ -702,9 +838,11 @@ async function main(): Promise<void> {
   console.log(`  Documents processed: ${summary.documentsProcessed}`);
   console.log(`  Documents skipped (exactly complete): ${summary.documentsSkipped}`);
   console.log(`  Canonical chunks embedded: ${summary.canonicalChunksEmbedded}`);
+  console.log(`  Canonical chunks updated (no re-embed): ${summary.canonicalChunksUpdated}`);
   console.log(`  Canonical chunks skipped: ${summary.canonicalChunksSkipped}`);
   console.log(`  Canonical chunks deleted: ${summary.canonicalChunksDeleted}`);
   console.log(`  Enrichment sections embedded: ${summary.enrichmentSectionsEmbedded}`);
+  console.log(`  Enrichment sections updated (no re-embed): ${summary.enrichmentSectionsUpdated}`);
   console.log(`  Enrichment sections skipped: ${summary.enrichmentSectionsSkipped}`);
   console.log(`  Enrichment sections deleted: ${summary.enrichmentSectionsDeleted}`);
   console.log(`  Relationships written: ${summary.relationshipsWritten}`);

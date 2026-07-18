@@ -48,7 +48,7 @@
       "source_segment_end": 4,
       "page_start": 1,
       "page_end": 1,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s3",
@@ -89,7 +89,7 @@
       "source_segment_end": 13,
       "page_start": 3,
       "page_end": 3,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s4",
@@ -130,7 +130,7 @@
       "source_segment_end": 18,
       "page_start": 4,
       "page_end": 4,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s7",
@@ -171,7 +171,7 @@
       "source_segment_end": 33,
       "page_start": 7,
       "page_end": 7,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s8",
@@ -212,7 +212,7 @@
       "source_segment_end": 36,
       "page_start": 8,
       "page_end": 8,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s10",
@@ -253,7 +253,7 @@
       "source_segment_end": 45,
       "page_start": 10,
       "page_end": 10,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s15",
@@ -294,7 +294,7 @@
       "source_segment_end": 60,
       "page_start": 15,
       "page_end": 15,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s21-24",
@@ -341,7 +341,7 @@
       "source_segment_end": 102,
       "page_start": 21,
       "page_end": 24,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s26-28",
@@ -386,7 +386,7 @@
       "source_segment_end": 118,
       "page_start": 26,
       "page_end": 28,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s31-34",
@@ -433,7 +433,7 @@
       "source_segment_end": 140,
       "page_start": 31,
       "page_end": 34,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s44-45",
@@ -476,7 +476,7 @@
       "source_segment_end": 183,
       "page_start": 44,
       "page_end": 45,
-      "review_status": "draft"
+      "review_status": "approved"
     },
     {
       "id": "s47-51",
@@ -525,7 +525,7 @@
       "source_segment_end": 213,
       "page_start": 47,
       "page_end": 51,
-      "review_status": "draft"
+      "review_status": "approved"
     }
   ]
 }
