@@ -133,3 +133,5 @@ scripts/debug_ocr.py
 # Enrichment review working files
 /reports/enrichment-review/packets/
 /reports/enrichment-review/gen-packets/
+# Regenerable grounding-checker output
+/reports/enrichment-review/grounding-flags.json
