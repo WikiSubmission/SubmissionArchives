@@ -59,9 +59,9 @@ export default function Header() {
                                 className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-[1.08]"
                             />
                         </span>
-                        <span className="min-w-0 leading-none">
-                            <span className="block truncate text-[0.82rem] font-bold uppercase tracking-[0.08em] text-ed-fg">Submission</span>
-                            <span className="mt-1 block truncate font-display text-[1.03rem] text-ed-fg-muted transition-colors group-hover:text-ed-accent">Archives</span>
+                        <span className="min-w-0 leading-none flex flex-col items-start">
+                            <span className="block truncate font-sans text-[0.85rem] font-black uppercase tracking-[0.08em] text-ed-fg">Submission</span>
+                            <span className="mt-0.5 block truncate bg-black/10 px-1 py-0.5 font-serif text-[0.95rem] font-medium italic uppercase tracking-tight text-ed-fg-muted transition-colors group-hover:text-ed-accent dark:bg-white/10">Archives</span>
                         </span>
                     </Link>
 
@@ -104,7 +104,7 @@ export default function Header() {
                             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                             aria-expanded={isMenuOpen}
                             aria-controls={menuId}
-                            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-fg lg:hidden"
+                            className="inline-flex min-h-11 min-w-11 rounded-full items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-fg lg:hidden"
                         >
                             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                         </button>
@@ -185,7 +185,7 @@ function HeaderIconButton({ children, label, onClick, pressed }: { children: Rea
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
+            className="inline-flex min-h-11 min-w-11 rounded-full items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
         >
             {children}
         </button>
@@ -199,7 +199,7 @@ function HeaderIconLink({ children, label, href }: { children: ReactNode; label:
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${label} (opens in a new tab)`}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
+            className="inline-flex min-h-11 min-w-11 rounded-full items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
         >
             {children}
         </a>
