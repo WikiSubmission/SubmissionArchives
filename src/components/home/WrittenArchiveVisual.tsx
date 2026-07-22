@@ -42,21 +42,21 @@ const BOOKS = [
 
 const NEWSLETTERS = [
     {
-        id: 'sp-1985-01',
-        title: 'Submitters Perspective — Jan 1985',
-        src: '/images/placeholders/newsletter.png',
-        meta: 'Issue #1 · Tucson, AZ',
-    },
-    {
         id: 'sp-1989-09',
         title: 'Submitters Perspective — Sep 1989',
-        src: '/images/placeholders/newsletter.png',
+        src: '/content/written/newsletters/thumbnails/1989_09_September.jpg',
         meta: 'Issue #57 · Tucson, AZ',
+    },
+    {
+        id: 'sp-1989-10',
+        title: 'Submitters Perspective — Oct 1989',
+        src: '/content/written/newsletters/thumbnails/1989_10_October.jpg',
+        meta: 'Issue #58 · Tucson, AZ',
     },
     {
         id: 'sp-1989-11',
         title: 'Submitters Perspective — Nov 1989',
-        src: '/images/placeholders/newsletter.png',
+        src: '/content/written/newsletters/thumbnails/1989_11_November.jpg',
         meta: 'Issue #59 · Tucson, AZ',
     },
 ] as const;
