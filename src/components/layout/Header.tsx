@@ -49,14 +49,14 @@ export default function Header() {
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
                 <div className="grid min-h-[4.5rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
                     <Link href="/" className="group inline-flex min-h-11 min-w-0 items-center gap-3" aria-label="Submission Archives home">
-                        <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-none border border-ed-rule bg-[#111111] transition-colors group-hover:border-ed-accent">
+                        <span className="relative flex shrink-0 items-center justify-center">
                             <Image
                                 src="/assets/brand/submission-archives-mark.png"
                                 alt=""
                                 width={44}
                                 height={44}
-                                preload
-                                className="h-10 w-10 object-contain p-0.5 transition-transform duration-300 group-hover:scale-[1.04]"
+                                priority
+                                className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-[1.08]"
                             />
                         </span>
                         <span className="min-w-0 leading-none">
