@@ -11,31 +11,31 @@ const BOOKS = [
     {
         id: 'quran1981',
         title: 'Quran: The Final Scripture (1981)',
-        src: '/content/written/books/thumbnails/Quran1981.png',
+        src: '/content/written/books/thumbnails/quran1981.png',
         meta: '384 pages · 1981 Edition',
     },
     {
         id: 'hard-cover-1989',
         title: 'Quran: The Final Testament (1989)',
-        src: '/content/written/books/thumbnails/Hard Cover 1989.png',
+        src: '/content/written/books/thumbnails/hard-cover-1989.png',
         meta: '760 pages · 1989 Edition',
     },
     {
         id: 'quran-hadith-islam',
         title: 'Quran, Hadith, and Islam',
-        src: '/content/written/books/thumbnails/Quran, Hadith, and Islam.png',
+        src: '/content/written/books/thumbnails/quran-hadith-islam.png',
         meta: '128 pages · Publication',
     },
     {
         id: 'miracle-of-quran-alphabets',
         title: 'Miracle of the Quran',
-        src: '/content/written/books/thumbnails/Miracle of Quran - Significance of the Mysterious Alphabets.png',
+        src: '/content/written/books/thumbnails/miracle-of-quran-alphabets.png',
         meta: '220 pages · Mathematical Study',
     },
     {
         id: 'computer-speaks',
         title: 'The Computer Speaks',
-        src: "/content/written/books/thumbnails/The Computer Speaks God's Message to the World.jpg",
+        src: "/content/written/books/thumbnails/computer-speaks.jpg",
         meta: '190 pages · Research Work',
     },
 ] as const;
