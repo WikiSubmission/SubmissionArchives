@@ -13,12 +13,15 @@ type MediaGridProps = {
 export function MediaGrid({ media, viewMode, id }: MediaGridProps) {
     if (viewMode === 'grid') {
         return (
-            <div id={id} className="grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div
+                id={id}
+                className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none sm:grid sm:grid-cols-2 sm:gap-x-5 sm:gap-y-8 sm:overflow-visible sm:pb-0 sm:snap-none lg:grid-cols-3 xl:grid-cols-4"
+            >
                 {media.map((item) => (
                     <Link
                         href={getMediaHref(item.id)}
                         key={item.id}
-                        className="block min-w-0"
+                        className="block min-w-[72vw] shrink-0 snap-start sm:min-w-0 sm:shrink"
                         aria-label={`Open ${item.displayTitle}`}
                     >
                         <MediaCard item={item} />

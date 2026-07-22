@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Play, Search } from 'lucide-react';
+import { ChevronDown, Play, Search, SlidersHorizontal } from 'lucide-react';
 import { formatMedia } from '@/lib/formatUtils';
 import { getMediaHref } from '@/lib/utils';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
@@ -87,6 +87,7 @@ function SearchContent() {
     const initialFilters = searchParams.get('filters')?.split(',') || [];
 
     const [query, setQuery] = useState(initialQuery);
+    const [filtersOpen, setFiltersOpen] = useState(false);
     const [isSearching, setIsSearching] = useState(false);
     const [results, setResults] = useState<SearchResult[]>([]);
     const [visibleCount, setVisibleCount] = useState(10);
@@ -291,31 +292,46 @@ function SearchContent() {
                         </div>
 
                         <div className="space-y-5">
-                            <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-                                <p className="archive-kicker text-ed-fg-muted">
-                                    Searchable collections
-                                </p>
-                                <p className="text-xs leading-5 text-ed-fg-muted">
-                                    Videos, two audio archives, perspectives, appendices, books, and the Qur&apos;an.
-                                </p>
-                            </div>
-                            {FILTER_ROWS.map((row) => (
-                                <div key={row.label} className="flex flex-col gap-2 sm:grid sm:grid-cols-[88px_1fr] sm:items-center">
-                                    <span className="text-xs font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
-                                        {row.label}
-                                    </span>
-                                    <div className="flex flex-wrap gap-2">
-                                        {row.items.map((item) => (
-                                            <FilterButton
-                                                key={item.key}
-                                                active={filters[item.key]}
-                                                onClick={() => toggleFilter(item.key)}
-                                                label={item.label}
-                                            />
-                                        ))}
-                                    </div>
+                            <div className="flex items-end justify-between">
+                                <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:gap-4">
+                                    <p className="archive-kicker text-ed-fg-muted">
+                                        Searchable collections
+                                    </p>
+                                    <p className="hidden text-xs leading-5 text-ed-fg-muted sm:block">
+                                        Videos, two audio archives, perspectives, appendices, books, and the Qur&apos;an.
+                                    </p>
                                 </div>
-                            ))}
+                                <button
+                                    type="button"
+                                    onClick={() => setFiltersOpen((v) => !v)}
+                                    className="inline-flex min-h-9 items-center gap-1.5 border border-ed-rule px-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-fg sm:hidden"
+                                >
+                                    <SlidersHorizontal className="h-3.5 w-3.5" />
+                                    Filters
+                                    <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${filtersOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                            </div>
+                            <div className={`${filtersOpen ? 'max-h-96' : 'max-h-0 sm:max-h-96'} overflow-hidden transition-[max-height] duration-300 ease-in-out`}>
+                                <div className="space-y-4 pb-1">
+                                    {FILTER_ROWS.map((row) => (
+                                        <div key={row.label} className="flex flex-col gap-2 sm:grid sm:grid-cols-[88px_1fr] sm:items-center">
+                                            <span className="text-xs font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
+                                                {row.label}
+                                            </span>
+                                            <div className="flex flex-wrap gap-2">
+                                                {row.items.map((item) => (
+                                                    <FilterButton
+                                                        key={item.key}
+                                                        active={filters[item.key]}
+                                                        onClick={() => toggleFilter(item.key)}
+                                                        label={item.label}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -324,7 +340,7 @@ function SearchContent() {
                             event.preventDefault();
                             void handleSearch();
                         }}
-                        className="relative order-2 lg:col-span-2"
+                        className="sticky top-[4.5rem] z-20 order-2 bg-ed-bg py-2 sm:static sm:py-0 lg:col-span-2"
                     >
                         <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ed-fg-muted" />
                         <label htmlFor="archive-search-input" className="sr-only">

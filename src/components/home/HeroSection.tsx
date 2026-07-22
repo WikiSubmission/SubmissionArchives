@@ -92,7 +92,7 @@ export function HeroSection() {
                     </Reveal>
 
                     <Reveal delay={90}>
-                        <h1 className="mt-24 font-display text-[clamp(3.6rem,9.5vw,7.75rem)] font-medium leading-[0.8] tracking-[-0.05em] text-ed-fg">
+                        <h1 className="mt-24 font-display text-[clamp(2.8rem,9.5vw,7.75rem)] font-medium leading-[0.8] tracking-[-0.05em] text-ed-fg">
                             <span className="block">Submission</span>
                             <span className="mt-5 flex items-center gap-5 font-ui text-[clamp(1.4rem,3vw,1.8rem)] font-bold uppercase leading-none tracking-[0.34em] text-ed-accent">
                                 Archives

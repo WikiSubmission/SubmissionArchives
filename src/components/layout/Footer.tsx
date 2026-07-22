@@ -8,7 +8,7 @@ import { DISCORD_URL, LEGAL_LINKS, YOUTUBE_URL } from '@/config/social';
 
 export default function Footer() {
     return (
-        <footer className="border-t border-ed-rule bg-ed-bg px-4 pb-8 pt-14 text-ed-fg sm:px-6 lg:px-10 lg:pt-20">
+        <footer className="border-t border-ed-rule bg-ed-bg px-4 pt-14 text-ed-fg sm:px-6 lg:px-10 lg:pt-20" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
             <div className="mx-auto max-w-[1440px]">
                 <div className="grid gap-12 lg:grid-cols-[1.15fr_1.85fr] lg:gap-20">
                     <div>
@@ -38,13 +38,14 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <nav aria-label="Footer" className="grid gap-10 sm:grid-cols-3">
+                    <nav aria-label="Footer" className="grid gap-0 sm:grid-cols-3 sm:gap-10">
                         {FOOTER_NAV.map((section) => (
-                            <div key={section.title}>
-                                <h2 className="border-b border-ed-rule pb-3 text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
+                            <details key={section.title} className="group border-b border-ed-rule sm:border-b-0" open>
+                                <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted sm:cursor-default sm:border-b sm:border-ed-rule sm:pb-3 sm:pt-0 [&::-webkit-details-marker]:hidden">
                                     {section.title}
-                                </h2>
-                                <ul className="mt-3">
+                                    <svg className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 sm:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6" /></svg>
+                                </summary>
+                                <ul className="pb-4 sm:mt-3 sm:pb-0">
                                     {section.links.map((link) => (
                                         <li key={link.name}>
                                             {link.href.startsWith('http') ? (
@@ -64,7 +65,7 @@ export default function Footer() {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </details>
                         ))}
                     </nav>
                 </div>

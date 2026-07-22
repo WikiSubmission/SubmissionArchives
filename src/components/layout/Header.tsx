@@ -45,7 +45,7 @@ export default function Header() {
     }, [isMenuOpen]);
 
     return (
-        <header className="sticky top-0 z-50 border-b border-ed-rule bg-ed-bg/96 text-ed-fg supports-[backdrop-filter]:bg-ed-bg/90 supports-[backdrop-filter]:backdrop-blur-md">
+        <header className={`sticky top-0 z-50 border-b border-ed-rule text-ed-fg ${isMenuOpen ? 'bg-ed-bg' : 'bg-ed-bg/96 supports-[backdrop-filter]:bg-ed-bg/90 supports-[backdrop-filter]:backdrop-blur-md'}`}>
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
                 <div className="grid min-h-[4.5rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
                     <Link href="/" className="group inline-flex min-h-11 min-w-0 items-center gap-3" aria-label="Submission Archives home">
@@ -112,53 +112,68 @@ export default function Header() {
                 </div>
             </div>
 
-            {isMenuOpen ? (
-                <div className="fixed inset-0 top-[4.5rem] z-50 lg:hidden">
-                    <button
-                        type="button"
-                        aria-label="Close navigation menu"
-                        className="absolute inset-0 bg-black/45"
-                        onClick={() => setIsMenuOpen(false)}
-                    />
-                    <div
-                        id={menuId}
-                        role="dialog"
-                        aria-modal="true"
-                        aria-label="Site navigation"
-                        className="relative ml-auto flex h-full w-[min(92vw,26rem)] flex-col border-l border-ed-rule bg-ed-bg px-5 py-6 shadow-2xl"
-                    >
-                        <nav aria-label="Mobile primary" className="flex flex-col">
-                            {PRIMARY_NAV.map((item, index) => {
-                                const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
-                                return (
-                                    <Link
-                                        key={item.name}
-                                        ref={index === 0 ? firstMenuLinkRef : undefined}
-                                        href={item.href}
-                                        aria-current={isActive ? 'page' : undefined}
-                                        className={`flex min-h-14 items-center justify-between border-b border-ed-rule text-lg ${isActive ? 'text-ed-accent' : 'text-ed-fg'}`}
-                                    >
-                                        {item.name}
-                                        <span className="font-mono text-xs text-ed-fg-muted">{String(index + 1).padStart(2, '0')}</span>
-                                    </Link>
-                                );
-                            })}
-                        </nav>
+            <div
+                className={`fixed inset-0 top-[4.5rem] z-50 lg:hidden transition-[visibility] ${isMenuOpen ? 'visible' : 'invisible'}`}
+                style={{ transitionDuration: isMenuOpen ? '0ms' : '350ms' }}
+            >
+                <button
+                    type="button"
+                    aria-label="Close navigation menu"
+                    className={`absolute inset-0 bg-black/45 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    tabIndex={isMenuOpen ? 0 : -1}
+                />
+                <div
+                    id={menuId}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Site navigation"
+                    className={`relative ml-auto flex h-full w-[min(92vw,26rem)] flex-col border-l border-ed-rule bg-ed-bg px-5 py-6 shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                    style={{ isolation: 'isolate', opacity: 1 }}
+                >
+                    <nav aria-label="Mobile primary" className="flex flex-col">
+                        {PRIMARY_NAV.map((item, index) => {
+                            const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
+                            return (
+                                <Link
+                                    key={item.name}
+                                    ref={index === 0 ? firstMenuLinkRef : undefined}
+                                    href={item.href}
+                                    aria-current={isActive ? 'page' : undefined}
+                                    className={`flex min-h-14 items-center justify-between border-b border-ed-rule text-lg transition-all duration-300 ${isActive ? 'text-ed-accent' : 'text-ed-fg'}`}
+                                    style={{
+                                        opacity: isMenuOpen ? 1 : 0,
+                                        transform: isMenuOpen ? 'translateX(0)' : 'translateX(1rem)',
+                                        transitionDelay: isMenuOpen ? `${80 + index * 40}ms` : '0ms',
+                                    }}
+                                    tabIndex={isMenuOpen ? 0 : -1}
+                                >
+                                    {item.name}
+                                    <span className="font-mono text-xs text-ed-fg-muted">{String(index + 1).padStart(2, '0')}</span>
+                                </Link>
+                            );
+                        })}
+                    </nav>
 
-                        <div className="mt-auto grid grid-cols-3 gap-2 border-t border-ed-rule pt-5">
-                            <HeaderIconButton
-                                label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
-                                onClick={toggleDarkMode}
-                                pressed={darkMode}
-                            >
-                                {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                            </HeaderIconButton>
-                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
-                            <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
-                        </div>
+                    <div
+                        className="mt-auto grid grid-cols-3 gap-2 border-t border-ed-rule pt-5 transition-opacity duration-300"
+                        style={{
+                            opacity: isMenuOpen ? 1 : 0,
+                            transitionDelay: isMenuOpen ? '280ms' : '0ms',
+                        }}
+                    >
+                        <HeaderIconButton
+                            label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
+                            onClick={toggleDarkMode}
+                            pressed={darkMode}
+                        >
+                            {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                        </HeaderIconButton>
+                        <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
+                        <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
                     </div>
                 </div>
-            ) : null}
+            </div>
         </header>
     );
 }
