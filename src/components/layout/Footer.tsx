@@ -13,13 +13,13 @@ export default function Footer() {
                 <div className="grid gap-12 lg:grid-cols-[1.15fr_1.85fr] lg:gap-20">
                     <div>
                         <Link href="/" className="group inline-flex min-h-11 items-center gap-4" aria-label="Submission Archives home">
-                            <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-none border border-ed-rule bg-[#111111]">
+                            <span className="relative flex shrink-0 items-center justify-center">
                                 <Image
                                     src="/assets/brand/submission-archives-mark.png"
                                     alt=""
                                     width={56}
                                     height={56}
-                                    className="h-12 w-12 object-contain p-1 transition-transform duration-300 group-hover:scale-[1.04]"
+                                    className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-[1.08]"
                                 />
                             </span>
                             <span>
@@ -28,7 +28,7 @@ export default function Footer() {
                             </span>
                         </Link>
 
-                        <p className="mt-7 max-w-[48ch] text-[0.94rem] leading-7 text-ed-fg-muted">
+                        <p className="mt-20 max-w-[48ch] text-[0.94rem] leading-7 text-ed-fg-muted">
                             Submission Archives preserves works related to Submission and the Messenger of the Covenant, Dr. Rashad Khalifa. Transcriptions can contain errors. Verify passages against their original recordings or scans before citing them (17:36).
                         </p>
 

@@ -61,7 +61,7 @@ export default function Header() {
                         </span>
                         <span className="min-w-0 leading-none flex flex-col items-start">
                             <span className="block truncate font-sans text-[0.85rem] font-black uppercase tracking-[0.08em] text-ed-fg">Submission</span>
-                            <span className="mt-0.5 block truncate bg-black/10 px-1 py-0.5 font-serif text-[0.95rem] font-medium italic uppercase tracking-tight text-ed-fg-muted transition-colors group-hover:text-ed-accent dark:bg-white/10">Archives</span>
+                            <span className="mt-0.5 block truncate bg-black/10 px-1 py-0.5 font-serif text-[1.19rem] font-medium italic uppercase tracking-tight text-ed-fg-muted transition-colors group-hover:text-ed-accent dark:bg-white/10">Archives</span>
                         </span>
                     </Link>
 
@@ -73,9 +73,8 @@ export default function Header() {
                                     key={item.name}
                                     href={item.href}
                                     aria-current={isActive ? 'page' : undefined}
-                                    className={`relative inline-flex min-h-11 items-center px-3 text-[0.72rem] font-semibold uppercase tracking-[0.1em] transition-colors ${
-                                        isActive ? 'text-ed-fg' : 'text-ed-fg-muted hover:text-ed-fg'
-                                    }`}
+                                    className={`relative inline-flex min-h-11 items-center px-3 text-[0.72rem] font-semibold uppercase tracking-[0.1em] transition-colors ${isActive ? 'text-ed-fg' : 'text-ed-fg-muted hover:text-ed-fg'
+                                        }`}
                                 >
                                     {item.name}
                                     <span className={`absolute inset-x-3 bottom-0 h-px bg-ed-accent transition-transform ${isActive ? 'scale-x-100' : 'scale-x-0'}`} />
