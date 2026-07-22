@@ -1,14 +1,35 @@
 [
   {
+    "id": "computer-speaks",
+    "title": "The Computer Speaks: God's Message to the World",
+    "displayTitle": "The Computer Speaks: God's Message to the World",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/computer-speaks.jpg",
+    "filename": "computer-speaks.pdf",
+    "pdfLink": "/content/written/books/computer-speaks.pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/the_computer_speaks/the_computer_speaks_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 73.66,
+      "lowConfidencePages": 94,
+      "unverifiedArabicSegments": 46
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 270
+  },
+  {
     "id": "english-meanings-of-the-quran",
     "title": "English Meanings of the Quran",
     "displayTitle": "English Meanings of the Quran",
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/English Meanings of the Quran.png",
-    "filename": "English Meanings of the Quran.pdf",
-    "pdfLink": "/content/written/books/English Meanings of the Quran.pdf",
+    "thumbnailOverride": "/content/written/books/thumbnails/english-meanings-of-the-quran.png",
+    "filename": "english-meanings-of-the-quran.pdf",
+    "pdfLink": "/content/written/books/english-meanings-of-the-quran.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_complete.json",
     "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
@@ -27,9 +48,9 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/ETERNITY - Screenplay.png",
-    "filename": "ETERNITY - Screenplay.pdf",
-    "pdfLink": "/content/written/books/ETERNITY - Screenplay.pdf",
+    "thumbnailOverride": "/content/written/books/thumbnails/eternity-screenplay.png",
+    "filename": "eternity-screenplay.pdf",
+    "pdfLink": "/content/written/books/eternity-screenplay.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/eternity_screenplay/eternity_screenplay_complete.json",
     "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
@@ -48,9 +69,9 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/Hard Cover 1989.png",
-    "filename": "Hard Cover 1989.pdf",
-    "pdfLink": "/content/written/books/Hard Cover 1989.pdf",
+    "thumbnailOverride": "/content/written/books/thumbnails/hard-cover-1989.png",
+    "filename": "hard-cover-1989.pdf",
+    "pdfLink": "/content/written/books/hard-cover-1989.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/quran/1989/Quran1989_complete.json",
     "transcriptionMethod": "The scan’s embedded English OCR and exact line/block coordinates were extracted from every page. Chapter, verse-range, subtitle, footnote, appendix, glossary, and index structures were parsed separately. Arabic Quran panels were transcribed with canonical Uthmani verse text and aligned to the exact 1989 page ranges; the scan remains authoritative for ornamental glyph forms and line wrapping.",
@@ -65,9 +86,9 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/ISLAM - Volume 1, Number 1 (April 1974).png",
-    "filename": "ISLAM - Volume 1, Number 1 (April 1974).pdf",
-    "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 1 (April 1974).pdf",
+    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-1-april-1974.png",
+    "filename": "islam-volume-1-number-1-april-1974.pdf",
+    "pdfLink": "/content/written/books/islam-volume-1-number-1-april-1974.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_1/islam_volume_1_complete.json",
     "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
@@ -86,9 +107,9 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/ISLAM - Volume 1, Number 2 (July 1974).png",
-    "filename": "ISLAM - Volume 1, Number 2 (July 1974).pdf",
-    "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 2 (July 1974).pdf",
+    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-2-july-1974.png",
+    "filename": "islam-volume-1-number-2-july-1974.pdf",
+    "pdfLink": "/content/written/books/islam-volume-1-number-2-july-1974.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_2/islam_volume_2_complete.json",
     "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
@@ -107,9 +128,9 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/ISLAM - Volume 1, Number 3 & 4 (January 1975).png",
-    "filename": "ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",
-    "pdfLink": "/content/written/books/ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",
+    "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-3-4-january-1975.png",
+    "filename": "islam-volume-1-number-3-4-january-1975.pdf",
+    "pdfLink": "/content/written/books/islam-volume-1-number-3-4-january-1975.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_3_4/islam_volume_3_4_complete.json",
     "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
@@ -128,12 +149,10 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/Miracle of Quran - Significance of the Mysterious Alphabets.png",
-    "filename": "Miracle of Quran - Significance of the Mysterious Alphabets.pdf",
-    "pdfLink": "/content/written/books/Miracle of Quran - Significance of the Mysterious Alphabets.pdf",
-    "aliases": [
-      "miracle-of-quran-significance-of-the-mysterious-alphabets"
-    ],
+    "thumbnailOverride": "/content/written/books/thumbnails/miracle-of-quran-alphabets.png",
+    "filename": "miracle-of-quran-alphabets.pdf",
+    "pdfLink": "/content/written/books/miracle-of-quran-alphabets.pdf",
+    "aliases": [],
     "transcriptionSource": "data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_complete.json",
     "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "transcriptionQuality": {
@@ -145,27 +164,25 @@
     "segmentCount": 211
   },
   {
-    "id": "quran-visual-presentation",
-    "title": "Quran - Visual Presentation of the Miracle",
-    "displayTitle": "Quran - Visual Presentation of the Miracle",
+    "id": "perpetual-miracle",
+    "title": "The Perpetual Miracle of Muhammad",
+    "displayTitle": "The Perpetual Miracle of Muhammad",
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/Quran - Visual Presentation of the Miracle.png",
-    "filename": "Quran - Visual Presentation of the Miracle.pdf",
-    "pdfLink": "/content/written/books/Quran - Visual Presentation of the Miracle.pdf",
-    "aliases": [
-      "quran-visual-presentation-of-the-miracle"
-    ],
-    "transcriptionSource": "data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_complete.json",
+    "thumbnailOverride": "/content/written/books/thumbnails/perpetual-miracle.png",
+    "filename": "perpetual-miracle.pdf",
+    "pdfLink": "/content/written/books/perpetual-miracle.pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_complete.json",
     "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "transcriptionQuality": {
-      "meanOcrConfidence": 50.93,
+      "meanOcrConfidence": 93.13,
       "lowConfidencePages": 0,
-      "unverifiedArabicSegments": 58
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 251
+    "segmentCount": 16
   },
   {
     "id": "quran-hadith-islam",
@@ -174,12 +191,10 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/Quran, Hadith, and Islam.png",
-    "filename": "Quran, Hadith, and Islam.pdf",
-    "pdfLink": "/content/written/books/Quran, Hadith, and Islam.pdf",
-    "aliases": [
-      "quran-hadith-and-islam"
-    ],
+    "thumbnailOverride": "/content/written/books/thumbnails/quran-hadith-islam.png",
+    "filename": "quran-hadith-islam.pdf",
+    "pdfLink": "/content/written/books/quran-hadith-islam.pdf",
+    "aliases": [],
     "transcriptionSource": "data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json",
     "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "transcriptionQuality": {
@@ -191,15 +206,36 @@
     "segmentCount": 92
   },
   {
+    "id": "quran-visual-presentation",
+    "title": "Quran - Visual Presentation of the Miracle",
+    "displayTitle": "Quran - Visual Presentation of the Miracle",
+    "type": "other",
+    "category": "Books",
+    "author": "Dr. Rashad Khalifa",
+    "thumbnailOverride": "/content/written/books/thumbnails/quran-visual-presentation.png",
+    "filename": "quran-visual-presentation.pdf",
+    "pdfLink": "/content/written/books/quran-visual-presentation.pdf",
+    "aliases": [],
+    "transcriptionSource": "data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_complete.json",
+    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionQuality": {
+      "meanOcrConfidence": 50.93,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 58
+    },
+    "transcriptStatus": "available",
+    "segmentCount": 251
+  },
+  {
     "id": "quran1981",
     "title": "Quran: The Final Scripture (Authorized English Version)",
     "displayTitle": "Quran: The Final Scripture (Authorized English Version)",
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/Quran1981.png",
-    "filename": "Quran1981.pdf",
-    "pdfLink": "/content/written/books/Quran1981.pdf",
+    "thumbnailOverride": "/content/written/books/thumbnails/quran1981.png",
+    "filename": "quran1981.pdf",
+    "pdfLink": "/content/written/books/quran1981.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/quran/1981/Quran1981_complete.json",
     "transcriptionMethod": "Embedded page OCR and coordinates from the scan, structural parsing, cross-edition alignment using the supplied CSVs, and targeted visual transcription for pages absent from the OCR layer.",
@@ -208,41 +244,16 @@
     "segmentCount": 554
   },
   {
-    "id": "computer-speaks",
-    "title": "The Computer Speaks: God's Message to the World",
-    "displayTitle": "The Computer Speaks: God's Message to the World",
-    "type": "other",
-    "category": "Books",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/The Computer Speaks God's Message to the World.jpg",
-    "filename": "The Computer Speaks God's Message to the World.pdf",
-    "pdfLink": "/content/written/books/The Computer Speaks God's Message to the World.pdf",
-    "aliases": [
-      "the-computer-speaks-god-s-message-to-the-world"
-    ],
-    "transcriptionSource": "data/sources/books/the_computer_speaks/the_computer_speaks_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
-    "transcriptionQuality": {
-      "meanOcrConfidence": 73.66,
-      "lowConfidencePages": 94,
-      "unverifiedArabicSegments": 46
-    },
-    "transcriptStatus": "available",
-    "segmentCount": 270
-  },
-  {
     "id": "salat-booklet",
     "title": "The Contact Prayers",
     "displayTitle": "The Contact Prayers",
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/The Contact Prayers.png",
-    "filename": "The Contact Prayers.pdf",
-    "pdfLink": "/content/written/books/The Contact Prayers.pdf",
-    "aliases": [
-      "the-contact-prayers"
-    ],
+    "thumbnailOverride": "/content/written/books/thumbnails/salat-booklet.png",
+    "filename": "salat-booklet.pdf",
+    "pdfLink": "/content/written/books/salat-booklet.pdf",
+    "aliases": [],
     "transcriptionSource": "data/sources/books/the_contact_prayers/the_contact_prayers_complete.json",
     "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "transcriptionQuality": {
@@ -252,28 +263,5 @@
     },
     "transcriptStatus": "available",
     "segmentCount": 8
-  },
-  {
-    "id": "perpetual-miracle",
-    "title": "The Perpetual Miracle of Muhammad",
-    "displayTitle": "The Perpetual Miracle of Muhammad",
-    "type": "other",
-    "category": "Books",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/The Perpetual Miracle of Muhammad.png",
-    "filename": "The Perpetual Miracle of Muhammad.pdf",
-    "pdfLink": "/content/written/books/The Perpetual Miracle of Muhammad.pdf",
-    "aliases": [
-      "the-perpetual-miracle-of-muhammad"
-    ],
-    "transcriptionSource": "data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
-    "transcriptionQuality": {
-      "meanOcrConfidence": 93.13,
-      "lowConfidencePages": 0,
-      "unverifiedArabicSegments": 0
-    },
-    "transcriptStatus": "available",
-    "segmentCount": 16
   }
 ]

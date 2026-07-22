@@ -11,12 +11,12 @@ type ExpectationCardProps = {
  */
 export function ExpectationCard({ index, title, body }: ExpectationCardProps) {
     return (
-        <div className="group -mx-3 grid grid-cols-[2.25rem_1fr] gap-3 rounded-[var(--ed-radius-md)] px-3 py-5 transition-colors duration-200 sm:py-6 hover:bg-ed-surface">
+        <div className="group -mx-3 grid grid-cols-[2.6rem_1fr] gap-3 rounded-none px-3 py-5 transition-colors duration-200 sm:py-6 hover:bg-ed-surface">
             <span
-                className="pt-1 font-mono text-[0.66rem] font-semibold tabular-nums text-ed-accent transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5"
+                className="pt-1 font-mono text-[0.68rem] font-semibold tabular-nums text-ed-accent transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5"
                 aria-hidden="true"
             >
-                {index ?? '•'}
+                {index ? `[${index}]` : '[•]'}
             </span>
             <div>
                 <h4 className="font-display text-[1.05rem] font-medium leading-6 text-ed-fg transition-colors duration-200 group-hover:text-ed-accent">

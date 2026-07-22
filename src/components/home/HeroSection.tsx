@@ -59,7 +59,7 @@ export function HeroSection() {
 
     return (
         <section className="relative border-b border-ed-rule">
-            {/* Local atmosphere: a slow-drifting lamp glow + the ghost brand mark */}
+            {/* Ambient atmosphere: slow-drifting lamp glow + ghost brand mark */}
             <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
                 <div className="animate-float-slow absolute -left-28 top-8 h-[34rem] w-[34rem] rounded-full bg-ed-accent/10 blur-3xl dark:bg-ed-accent/15" />
                 <div className="absolute -bottom-32 left-1/3 h-[26rem] w-[26rem] rounded-full bg-ed-gold/10 blur-3xl dark:bg-ed-gold/12" />
@@ -75,58 +75,40 @@ export function HeroSection() {
 
             <div className="relative mx-auto grid max-w-[1440px] gap-14 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-10 lg:pb-28 lg:pt-24">
                 <div className="max-w-3xl">
-                    <Reveal>
-                        <div className="flex items-center gap-4">
-                            <span className="grid h-12 w-12 place-items-center rounded-[var(--ed-radius-md)] border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-sm)]">
-                                <Image
-                                    src="/assets/brand/submission-archives-mark.png"
-                                    alt=""
-                                    width={30}
-                                    height={30}
-                                    className="h-[1.875rem] w-[1.875rem] object-contain opacity-85"
-                                    aria-hidden="true"
-                                />
+                    <Reveal delay={90} className="flex justify-center sm:justify-start">
+                        <h1 className="flex flex-col text-ed-fg w-fit items-center sm:items-start text-center sm:text-left">
+                            <span className="block font-sans text-[clamp(2.8rem,11vw,4.5rem)] font-black uppercase leading-[0.85] tracking-tight">
+                                Submission
                             </span>
-                            <p className="archive-kicker">A living digital archive</p>
-                        </div>
-                    </Reveal>
-
-                    <Reveal delay={90}>
-                        <h1 className="mt-24 font-display text-[clamp(2.8rem,9.5vw,7.75rem)] font-medium leading-[0.8] tracking-[-0.05em] text-ed-fg">
-                            <span className="block">Submission</span>
-                            <span className="mt-5 flex items-center gap-5 font-ui text-[clamp(1.4rem,3vw,1.8rem)] font-bold uppercase leading-none tracking-[0.34em] text-ed-accent">
+                            <span className="mt-2 block w-full bg-black/10 px-2 py-1 font-serif text-[clamp(3.2rem,13vw,5.4rem)] font-medium italic uppercase leading-[0.85] tracking-tight dark:bg-white/10">
                                 Archives
-                                <span
-                                    aria-hidden="true"
-                                    className="h-px max-w-40 flex-1 bg-gradient-to-r from-ed-accent/70 to-transparent"
-                                />
                             </span>
                         </h1>
                     </Reveal>
 
                     <Reveal delay={180}>
-                        <p className="mt-20 max-w-[54ch] text-[1.05rem] leading-8 text-ed-fg-muted sm:text-lg">
+                        <p className="mt-12 max-w-[54ch] text-[1.05rem] leading-8 text-ed-fg-muted sm:mt-20 sm:text-lg text-center sm:text-left mx-auto sm:mx-0">
                             Explore preserved recordings, Qur&apos;an editions, newsletters, books, appendices, and searchable transcripts from the Submission archive.
                         </p>
                     </Reveal>
 
                     <Reveal delay={270}>
-                        <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-                            <Link href="/search" className="archive-button archive-button-primary group px-6 sm:px-7">
+                        <div className="mt-10 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center justify-center sm:justify-start">
+                            <Link href="/search" className="archive-button archive-button-primary group px-6 sm:px-7 active:scale-[0.98]">
                                 Search the archive
                                 <ArrowRight
                                     className="h-4 w-4 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
                                     aria-hidden="true"
                                 />
                             </Link>
-                            <Link href="/videos" className="archive-button archive-button-secondary px-6 sm:px-7">
+                            <Link href="/videos" className="archive-button archive-button-secondary px-6 sm:px-7 active:scale-[0.98]">
                                 Browse recordings
                             </Link>
                         </div>
                     </Reveal>
 
                     <Reveal delay={380}>
-                        <dl className="glass-panel mt-10 grid max-w-2xl grid-cols-1 gap-y-4 rounded-[var(--ed-radius-lg)] p-5 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-ed-rule sm:p-0">
+                        <dl className="glass-panel mt-10 grid max-w-2xl grid-cols-1 gap-y-4 rounded-none p-5 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-ed-rule sm:p-0">
                             {HERO_STATS.map((stat) => (
                                 <div key={stat.label} className="sm:px-5 sm:py-4">
                                     <dt className="text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-ed-fg-muted">
@@ -145,10 +127,10 @@ export function HeroSection() {
                     {/* Halo behind the plate */}
                     <div
                         aria-hidden="true"
-                        className="absolute -inset-8 -z-10 rounded-[2.5rem] bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--ed-accent)_18%,transparent),transparent)] blur-2xl"
+                        className="absolute -inset-8 -z-10 bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--ed-accent)_18%,transparent),transparent)] blur-2xl"
                     />
                     <div ref={rootRef} {...interactionProps} className="touch-pan-y">
-                        <figure className="lift-card relative overflow-hidden rounded-[var(--ed-radius-xl)] border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-lg)]">
+                        <figure className="lift-card relative overflow-hidden rounded-none border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-lg)]">
                             <span
                                 aria-hidden="true"
                                 className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-transparent via-ed-accent/70 to-transparent"
@@ -214,7 +196,7 @@ export function HeroSection() {
                                             onClick={() => goTo(imageIndex)}
                                             aria-label={`Show ${image.label.toLowerCase()}`}
                                             aria-pressed={imageIndex === index}
-                                            className={`min-h-11 min-w-11 rounded-[var(--ed-radius-sm)] border px-3 text-xs font-semibold tabular-nums transition-all duration-200 ${
+                                            className={`min-h-11 min-w-11 rounded-none border px-3 font-mono text-xs font-semibold tabular-nums transition-all duration-200 ${
                                                 imageIndex === index
                                                     ? 'border-ed-accent bg-ed-accent/12 text-ed-accent shadow-[var(--ed-shadow-sm)]'
                                                     : 'border-ed-rule text-ed-fg-muted hover:border-ed-accent/50 hover:text-ed-fg'
@@ -250,7 +232,7 @@ function CarouselButton({
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-[var(--ed-radius-sm)] border border-ed-rule bg-ed-surface text-ed-fg-muted transition-[color,border-color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 hover:border-ed-accent/60 hover:text-ed-accent hover:shadow-[var(--ed-shadow-sm)] active:scale-95"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-none border border-ed-rule bg-ed-surface text-ed-fg-muted transition-[color,border-color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 hover:border-ed-accent/60 hover:text-ed-accent hover:shadow-[var(--ed-shadow-sm)] active:scale-95"
         >
             {children}
         </button>

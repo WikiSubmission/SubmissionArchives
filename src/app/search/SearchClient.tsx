@@ -654,9 +654,9 @@ function FilterButton({
             type="button"
             onClick={onClick}
             aria-pressed={active}
-            className={`inline-flex min-h-11 items-center rounded-lg border px-4 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${active
+            className={`inline-flex min-h-11 items-center rounded-none border px-4 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${active
                     ? 'border-ed-accent bg-ed-accent/10 text-ed-accent'
-                    : 'text-ed-fg-muted hover:border-ed-accent/50 hover:text-ed-fg'
+                    : 'border-ed-rule text-ed-fg-muted hover:border-ed-accent/50 hover:text-ed-fg'
                 }`}
         >
             {label}

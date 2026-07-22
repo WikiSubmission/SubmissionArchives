@@ -106,11 +106,11 @@
   --ed-console-accent: oklch(0.83 0.115 72);
   --ed-console-rule: color-mix(in oklch, var(--ed-console-fg) 12%, transparent);
 
-  /* Radii scale */
-  --ed-radius-sm: 0.625rem;
-  --ed-radius-md: 0.875rem;
-  --ed-radius-lg: 1.25rem;
-  --ed-radius-xl: 1.75rem;
+  /* Radii scale — Sharp Architectural Precision */
+  --ed-radius-sm: 0px;
+  --ed-radius-md: 0px;
+  --ed-radius-lg: 0px;
+  --ed-radius-xl: 0px;
 
   /* Motion scale */
   --dur-fast: 160ms;
@@ -305,9 +305,9 @@ a {
 /* The small "catalog tick" that introduces every kicker */
 .archive-kicker::before {
   content: "";
-  width: 1.5rem;
+  width: 1.25rem;
   height: 2px;
-  border-radius: 999px;
+  border-radius: 0px;
   background: linear-gradient(
     90deg,
     var(--ed-accent),
@@ -326,7 +326,7 @@ a {
   justify-content: center;
   gap: 0.65rem;
   border: 1px solid transparent;
-  border-radius: var(--ed-radius-md);
+  border-radius: 0px;
   padding: 0.8rem 1.35rem;
   font-family: var(--font-ui), sans-serif;
   font-size: 0.9rem;
@@ -377,7 +377,7 @@ a {
 .archive-input {
   min-height: 3.25rem;
   border: 1px solid var(--ed-rule);
-  border-radius: var(--ed-radius-md);
+  border-radius: 0px;
   background: var(--ed-surface);
   color: var(--ed-fg);
   font-size: 1rem;
@@ -394,7 +394,7 @@ a {
 .archive-input:focus {
   border-color: var(--ed-accent);
   outline: none;
-  box-shadow: 0 0 0 3px color-mix(in oklch, var(--ed-accent) 22%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ed-accent) 22%, transparent);
 }
 
 /* ==========================================================================
@@ -403,21 +403,21 @@ a {
 
 .soft-shell {
   border: 1px solid var(--ed-rule);
-  border-radius: var(--ed-radius-lg);
+  border-radius: 0px;
   background: color-mix(in oklch, var(--ed-surface) 80%, var(--ed-bg));
   box-shadow: var(--ed-shadow-md);
 }
 
 .soft-panel {
   border: 1px solid var(--ed-rule);
-  border-radius: var(--ed-radius-md);
+  border-radius: 0px;
   background: var(--ed-surface);
   box-shadow: var(--ed-shadow-sm);
 }
 
 .soft-pill {
   border: 1px solid var(--ed-rule);
-  border-radius: 999px;
+  border-radius: 0px;
   background: color-mix(in oklch, var(--ed-surface) 78%, var(--ed-bg));
 }
 

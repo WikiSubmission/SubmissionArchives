@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "English Meanings of the Quran",
-    "source_pdf": "English Meanings of the Quran(1).pdf",
+    "source_pdf": "english-meanings-of-the-quran.pdf",
     "pdf_page_count": 16,
     "transcription_method": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "arabic_policy": "Quranic Arabic matched to a verified Unicode Quran corpus when the printed reference/OCR supported a match. Other Arabic is retained as OCR and explicitly flagged when unverified."
@@ -4332,7 +4332,7 @@
           "words": [
             {
               "text": "Pry",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1171,
               "top": 1708,
               "width": 34,
@@ -8064,7 +8064,7 @@
           "line_num": 5,
           "text": "term “ghayril maghdibi ‘alayhim Stet gyal Ac ,” however, does not iden-",
           "script": "latin",
-          "confidence": 77.0,
+          "confidence": 77,
           "bbox_px": [
             223,
             1116,
@@ -14323,7 +14323,7 @@
           "words": [
             {
               "text": "“Bismillah”?",
-              "conf": 0.0,
+              "conf": 0,
               "left": 196,
               "top": 1452,
               "width": 172,
@@ -15077,7 +15077,7 @@
             },
             {
               "text": "“Allah”",
-              "conf": 0.0,
+              "conf": 0,
               "left": 632,
               "top": 1592,
               "width": 133,
@@ -15933,7 +15933,7 @@
             },
             {
               "text": "“Allah”.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 429,
               "top": 1780,
               "width": 137,
@@ -17796,7 +17796,7 @@
             },
             {
               "text": "“The",
-              "conf": 0.0,
+              "conf": 0,
               "left": 686,
               "top": 289,
               "width": 88,
@@ -26406,7 +26406,7 @@
           "words": [
             {
               "text": "LLLP",
-              "conf": 0.0,
+              "conf": 0,
               "left": 448,
               "top": 484,
               "width": 129,
@@ -26728,7 +26728,7 @@
             },
             {
               "text": "eNO",
-              "conf": 0.0,
+              "conf": 0,
               "left": 607,
               "top": 1048,
               "width": 211,
@@ -29629,7 +29629,7 @@
           "line_num": 12,
           "text": "reformers.”’ 12 Indeed, they are the corruptors, but they",
           "script": "latin",
-          "confidence": 86.0,
+          "confidence": 86,
           "bbox_px": [
             108,
             1130,
@@ -32350,7 +32350,7 @@
         {
           "lang": "eng+ara",
           "psm": 3,
-          "score": 0.0,
+          "score": 0,
           "eng_conf": null,
           "text_len": 0
         }
@@ -38969,7 +38969,7 @@
           "words": [
             {
               "text": "الع",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1155,
               "top": 234,
               "width": 300,
@@ -38985,7 +38985,7 @@
             },
             {
               "text": "كانت‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 912,
               "top": 244,
               "width": 167,
@@ -39151,7 +39151,7 @@
             },
             {
               "text": "cee.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1058,
               "top": 341,
               "width": 120,
@@ -39167,7 +39167,7 @@
             },
             {
               "text": "etl",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1302,
               "top": 305,
               "width": 103,
@@ -39639,7 +39639,7 @@
             },
             {
               "text": "“36s",
-              "conf": 0.0,
+              "conf": 0,
               "left": 424,
               "top": 998,
               "width": 120,
@@ -39853,7 +39853,7 @@
             },
             {
               "text": "SAN5GHl",
-              "conf": 0.0,
+              "conf": 0,
               "left": 483,
               "top": 992,
               "width": 246,
@@ -40239,7 +40239,7 @@
             },
             {
               "text": "نيه",
-              "conf": 0.0,
+              "conf": 0,
               "left": 442,
               "top": 1368,
               "width": 100,
@@ -40437,7 +40437,7 @@
             },
             {
               "text": "ied",
-              "conf": 0.0,
+              "conf": 0,
               "left": 406,
               "top": 1378,
               "width": 50,
@@ -40865,7 +40865,7 @@
             },
             {
               "text": "REA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 356,
               "top": 1563,
               "width": 149,
@@ -40897,7 +40897,7 @@
             },
             {
               "text": "rere",
-              "conf": 0.0,
+              "conf": 0,
               "left": 700,
               "top": 1556,
               "width": 155,
@@ -40929,7 +40929,7 @@
             },
             {
               "text": "ولوبأ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 946,
               "top": 1553,
               "width": 171,
@@ -41015,7 +41015,7 @@
           "words": [
             {
               "text": "s",
-              "conf": 0.0,
+              "conf": 0,
               "left": 358,
               "top": 1565,
               "width": 26,
@@ -41331,7 +41331,7 @@
             },
             {
               "text": "oS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 918,
               "top": 1628,
               "width": 23,
@@ -41567,7 +41567,7 @@
             },
             {
               "text": "ee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 396,
               "top": 1749,
               "width": 64,
@@ -46372,7 +46372,7 @@
             },
             {
               "text": ":”",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1329,
               "top": 1662,
               "width": 28,
@@ -48545,7 +48545,7 @@
             },
             {
               "text": "ماه‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1123,
               "top": 212,
               "width": 38,
@@ -48775,7 +48775,7 @@
             },
             {
               "text": "وتمطعونمَ]",
-              "conf": 0.0,
+              "conf": 0,
               "left": 501,
               "top": 215,
               "width": 222,
@@ -49043,7 +49043,7 @@
           "words": [
             {
               "text": "بوص",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1353,
               "top": 325,
               "width": 72,
@@ -49059,7 +49059,7 @@
             },
             {
               "text": "لويد",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1151,
               "top": 329,
               "width": 274,
@@ -49461,7 +49461,7 @@
             },
             {
               "text": "Nec",
-              "conf": 0.0,
+              "conf": 0,
               "left": 682,
               "top": 529,
               "width": 130,
@@ -49579,7 +49579,7 @@
           "words": [
             {
               "text": "NETS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 229,
               "top": 556,
               "width": 239,
@@ -49595,7 +49595,7 @@
             },
             {
               "text": "ELE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 502,
               "top": 528,
               "width": 87,
@@ -49729,7 +49729,7 @@
           "line_num": 3,
           "text": "2 tye € Ls وه‎ كم 127",
           "script": "latin",
-          "confidence": 43.0,
+          "confidence": 43,
           "bbox_px": [
             600,
             633,
@@ -49761,7 +49761,7 @@
             },
             {
               "text": "tye",
-              "conf": 0.0,
+              "conf": 0,
               "left": 682,
               "top": 643,
               "width": 149,
@@ -49777,7 +49777,7 @@
             },
             {
               "text": "€",
-              "conf": 0.0,
+              "conf": 0,
               "left": 918,
               "top": 633,
               "width": 21,
@@ -57669,7 +57669,7 @@
             },
             {
               "text": "eS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1331,
               "top": 708,
               "width": 112,
@@ -58563,7 +58563,7 @@
             },
             {
               "text": "ckeelfey5",
-              "conf": 0.0,
+              "conf": 0,
               "left": 677,
               "top": 941,
               "width": 138,
@@ -59661,7 +59661,7 @@
           "line_num": 13,
           "text": "1. God seals the hearts of the disbelievers, and places a veil on their hearing",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             207,
             1235,
@@ -59993,7 +59993,7 @@
           "line_num": 15,
           "text": "2. God seals the hearts and the hearing of the disbelievers, and places a veil",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             203,
             1317,
@@ -79695,7 +79695,7 @@
           "line_num": 1,
           "text": ". Dawood, N. J. 1970. The Koran. Penguin Books, Baltimore, Maryland. .م‎ 15.",
           "script": "latin",
-          "confidence": 93.0,
+          "confidence": 93,
           "bbox_px": [
             191,
             1921,
@@ -80691,7 +80691,7 @@
             },
             {
               "text": "Qur'an.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 507,
               "top": 2026,
               "width": 73,
@@ -81451,7 +81451,7 @@
             },
             {
               "text": "Al-Jumhiriyyah",
-              "conf": 0.0,
+              "conf": 0,
               "left": 731,
               "top": 2127,
               "width": 198,

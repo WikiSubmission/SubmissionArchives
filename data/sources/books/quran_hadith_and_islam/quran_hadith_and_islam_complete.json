@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Quran, Hadith, and Islam",
-    "source_pdf": "Quran, Hadith, and Islam(1).pdf",
+    "source_pdf": "quran-hadith-islam.pdf",
     "pdf_page_count": 92,
     "transcription_method": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "arabic_policy": "Quranic Arabic matched to a verified Unicode Quran corpus when the printed reference/OCR supported a match. Other Arabic is retained as OCR and explicitly flagged when unverified."
@@ -6157,7 +6157,7 @@
         {
           "text": "\"Anyone who disobeys God and His messenger will abide i n\nthe fire of hell f o r e v e r . \"\n( 72: 23 )",
           "bbox_pdf": [
-            9.0,
+            9,
             359.58,
             365.88,
             384.23
@@ -6958,7 +6958,7 @@
             },
             {
               "text": "ire",
-              "conf": 0.0,
+              "conf": 0,
               "left": 641,
               "top": 718,
               "width": 83,
@@ -7028,7 +7028,7 @@
           "words": [
             {
               "text": "coset",
-              "conf": 0.0,
+              "conf": 0,
               "left": 183,
               "top": 706,
               "width": 110,
@@ -7060,7 +7060,7 @@
             },
             {
               "text": "SY",
-              "conf": 0.0,
+              "conf": 0,
               "left": 607,
               "top": 706,
               "width": 53,
@@ -7260,7 +7260,7 @@
           "line_num": 2,
           "text": "( 72s 23 )",
           "script": "latin",
-          "confidence": 61.0,
+          "confidence": 61,
           "bbox_px": [
             529,
             1047,
@@ -7835,7 +7835,7 @@
         {
           "text": "W H E N D E L I V E R I N G G O D ' S\nM E S S A G E S ,\nm e s s e n g e r s d o not speak o n their o w n\ninitiative.",
           "bbox_pdf": [
-            30.0,
+            30,
             24.943,
             315.232,
             47.245
@@ -7963,7 +7963,7 @@
         {
           "text": "John 16:13",
           "bbox_pdf": [
-            159.0,
+            159,
             375.295,
             212.745,
             385.645
@@ -11217,7 +11217,7 @@
             },
             {
               "text": "-a¢",
-              "conf": 0.0,
+              "conf": 0,
               "left": 805,
               "top": 808,
               "width": 45,
@@ -11759,7 +11759,7 @@
           "words": [
             {
               "text": "Semi",
-              "conf": 0.0,
+              "conf": 0,
               "left": 301,
               "top": 931,
               "width": 112,
@@ -11973,7 +11973,7 @@
             },
             {
               "text": "pA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 441,
               "top": 1010,
               "width": 47,
@@ -11989,7 +11989,7 @@
             },
             {
               "text": "CS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 501,
               "top": 1001,
               "width": 56,
@@ -12318,7 +12318,7 @@
         {
           "text": "\" T h i s (Quran), i s the utterance of an honorable messenger. It\ni s not the utterance of a poet; rarely do you believe.\nNor is\nit the utterance of a soothsayer; rarely do you take heed.\nA\nrevelation from the L o r d of the universe.\nH A D H E\nE V E R\nU T T E R E D A N Y\nO T H E R RELIGIOUS U T T E R A N C E S\n(attributed to us), we would have punished h i m severely,\nthen we would have stopped the revelation to h i m (fired him)\nNone of you could have protected him against us. n(69.-40-47)",
           "bbox_pdf": [
-            36.0,
+            36,
             314.886,
             405.363,
             421.341
@@ -12625,7 +12625,7 @@
             },
             {
               "text": "وَمَاهْوَِعَو‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 351,
               "top": 459,
               "width": 138,
@@ -12743,7 +12743,7 @@
             },
             {
               "text": "cepa",
-              "conf": 0.0,
+              "conf": 0,
               "left": 345,
               "top": 546,
               "width": 680,
@@ -12813,7 +12813,7 @@
             },
             {
               "text": "yenoayr",
-              "conf": 0.0,
+              "conf": 0,
               "left": 511,
               "top": 628,
               "width": 233,
@@ -12915,7 +12915,7 @@
             },
             {
               "text": "cae",
-              "conf": 0.0,
+              "conf": 0,
               "left": 792,
               "top": 715,
               "width": 87,
@@ -12931,7 +12931,7 @@
             },
             {
               "text": "Aira",
-              "conf": 0.0,
+              "conf": 0,
               "left": 706,
               "top": 716,
               "width": 88,
@@ -12947,7 +12947,7 @@
             },
             {
               "text": "لمعيه‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 250,
               "top": 689,
               "width": 479,
@@ -13617,7 +13617,7 @@
           "bbox_normalized": [
             0.110816,
             0.903821,
-            1.0,
+            1,
             0.922925
           ],
           "words": [
@@ -14715,7 +14715,7 @@
             },
             {
               "text": "كدف‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 714,
               "top": 608,
               "width": 156,
@@ -15605,7 +15605,7 @@
         {
           "text": "- 6 -",
           "bbox_pdf": [
-            180.0,
+            180,
             44.609,
             207.56,
             57.501
@@ -15944,7 +15944,7 @@
             },
             {
               "text": "fabricate!5\t1\t2\t1\t2\t7\t779\t284\t138\t29\t94.998070\tanything5\t1\t2\t1\t2\t8\t933\t283\t77\t24\t94.998070\telse:4\t1\t2\t1\t3\t0\t269\t341\t629\t39\t-1\t5\t1\t2\t1\t3\t1\t269\t345\t39\t35\t33.005310\tas5\t1\t2\t1\t3\t2\t325\t345\t51\t24\t29.984085\ton5\t1\t2\t1\t3\t3\t360\t341\t71\t38\t40.900822\tAINA5\t1\t2\t1\t3\t4\t440\t364\t12\t9\t0.000000\t’5\t1\t2\t1\t3\t5\t830\t368\t6\t6\t95.594933\t85\t1\t2\t1\t3\t6\t888\t364\t10\t6\t89.766113\t83\t1\t2\t2\t0\t0\t165\t343\t781\t107\t-1\t4\t1\t2\t2\t1\t0\t165\t343\t781\t107\t-1\t5\t1\t2\t2\t1\t1\t887\t372\t59\t24\t90.688316\tسورة5\t1\t2\t2\t1\t2\t792\t376\t72\t20\t93.160202\tيونس5\t1\t2\t2\t1\t3\t184\t346\t125\t65\t25.031143\tASE5\t1\t2\t2\t1\t4\t314\t355\t8\t13\t82.035744\t:5\t1\t2\t2\t1\t5\t283\t357\t156\t81\t27.068130\tet5\t1\t2\t2\t1\t6\t443\t343\t250\t107\t26.139030\tmeet‏5\t1\t2\t2\t1\t7\t165\t367\t56\t47\t46.508743\tعاك3\t1\t2\t3\t0\t0\t342\t431\t579\t30\t-1\t4\t1\t2\t3\t1\t0\t342\t431\t579\t30\t-1\t5\t1\t2\t3\t1\t1\t342\t431\t22\t30\t27.098244\t-_5\t1\t2\t3\t1\t2\t457\t436\t22\t21\t44.822823\t45\t1\t2\t3\t1\t3\t631\t444\t43\t12\t34.334503\twoe5\t1\t2\t3\t1\t4\t717\t431\t97\t27\t39.800282\tsite5\t1\t2\t3\t1\t5\t841\t436\t24\t22\t3.899124\tot5\t1\t2\t3\t1\t6\t881\t434\t40\t20\t37.816921\tFe3\t1\t2\t4\t0\t0\t172\t395\t774\t178\t-1\t4\t1\t2\t4\t1\t0\t172\t395\t774\t178\t-1\t5\t1\t2\t4\t1\t1\t737\t443\t125\t73\t0.757950\tVelo5\t1\t2\t4\t1\t2\t872\t432\t74\t88\t32.146996\tred‏5\t1\t2\t4\t1\t3\t626\t429\t110\t144\t47.746475\t35\t1\t2\t4\t1\t4\t457\t423\t185\t67\t48.616405\t25\t1\t2\t4\t1\t5\t346\t416\t113\t106\t0.000000\tوالة5\t1\t2\t4\t1\t6\t172\t395\t156\t142\t40.948807\tيذ2\t1\t3\t0\t0\t0\t171\t508\t780\t184\t-1\t3\t1\t3\t1\t0\t0\t171\t508\t780\t184\t-1\t4\t1\t3\t1\t1\t0\t171\t508\t780\t184\t-1\t5\t1\t3\t1\t1\t1\t171\t527\t364\t161\t30.985756\t20-65\t1\t3\t1\t1\t2\t540\t608\t39\t35\t47.649021\t©5\t1\t3\t1\t1\t3\t571\t508\t380\t184\t18.316490\tsieges5\t1\t3\t1\t1\t4\t809\t600\t139\t31\t44.512920\tLis2\t1\t4\t0\t0\t0\t580\t645\t100\t23\t-1\t3\t1\t4\t1\t0\t0\t580\t645\t100\t23\t-1\t4\t1\t4\t1\t1\t0\t580\t645\t100\t23\t-1\t5\t1\t4\t1\t1\t1\t580\t645\t100\t23\t28.089516\t7",
-              "conf": 0.0,
+              "conf": 0,
               "left": 586,
               "top": 282,
               "width": 175,
@@ -16262,7 +16262,7 @@
             },
             {
               "text": "7",
-              "conf": 0.0,
+              "conf": 0,
               "left": 229,
               "top": 853,
               "width": 43,
@@ -16396,7 +16396,7 @@
             },
             {
               "text": "pete",
-              "conf": 0.0,
+              "conf": 0,
               "left": 745,
               "top": 926,
               "width": 108,
@@ -16450,7 +16450,7 @@
           "words": [
             {
               "text": "فلمو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 864,
               "top": 1003,
               "width": 98,
@@ -17800,7 +17800,7 @@
             },
             {
               "text": "لدان",
-              "conf": 0.0,
+              "conf": 0,
               "left": 891,
               "top": 1579,
               "width": 37,
@@ -17816,7 +17816,7 @@
             },
             {
               "text": "عدا",
-              "conf": 0.0,
+              "conf": 0,
               "left": 958,
               "top": 1571,
               "width": 190,
@@ -18480,7 +18480,7 @@
             },
             {
               "text": "IGS)‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 552,
               "top": 1727,
               "width": 334,
@@ -21390,7 +21390,7 @@
             },
             {
               "text": "te",
-              "conf": 0.0,
+              "conf": 0,
               "left": 485,
               "top": 894,
               "width": 58,
@@ -21406,7 +21406,7 @@
             },
             {
               "text": "eaicarsteas",
-              "conf": 0.0,
+              "conf": 0,
               "left": 597,
               "top": 903,
               "width": 347,
@@ -23298,7 +23298,7 @@
           "words": [
             {
               "text": "wae:‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 775,
               "top": 859,
               "width": 137,
@@ -23378,7 +23378,7 @@
             },
             {
               "text": "ويك",
-              "conf": 0.0,
+              "conf": 0,
               "left": 141,
               "top": 831,
               "width": 95,
@@ -23620,7 +23620,7 @@
           "words": [
             {
               "text": "نموا",
-              "conf": 0.0,
+              "conf": 0,
               "left": 679,
               "top": 1009,
               "width": 232,
@@ -23878,7 +23878,7 @@
         {
           "text": "-10 -",
           "bbox_pdf": [
-            198.0,
+            198,
             53.568,
             230.778,
             67.74
@@ -24565,7 +24565,7 @@
             },
             {
               "text": "محرو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 433,
               "top": 575,
               "width": 302,
@@ -24635,7 +24635,7 @@
           "words": [
             {
               "text": "azo",
-              "conf": 0.0,
+              "conf": 0,
               "left": 240,
               "top": 665,
               "width": 114,
@@ -24651,7 +24651,7 @@
             },
             {
               "text": "veya",
-              "conf": 0.0,
+              "conf": 0,
               "left": 529,
               "top": 614,
               "width": 117,
@@ -25231,7 +25231,7 @@
       "document_slug": "quran_hadith_and_islam",
       "pdf_page": 14,
       "page_size_pdf_points": [
-        405.0,
+        405,
         606.9600219726562
       ],
       "embedded_text": "- II -\n\n\n T H E C O N S E Q U E N C E O F NOT B E L I E V I N G GOD\n\n\nAs shown on Page 10, God says that Quran is C O M P L E T E ,\nP E R F E C T , A N D F U L L Y D E T A I L E D ,\n\nHis commandments are clear and strict that Y O U S H A L L\nNOT U P H O L D A N Y T H I N G E L S E BESIDE Q U R A N as a\nsource of religious guidance (see pages 7 & 8).\n\nNow, you have the total freedom to decide to believe God,\nor to reject His statements, and ignore His commandments,\nprovided you are willing (or unwilling) to accept the consequences.\n\nYou agree, no doubt, that refusing to believe God is a very\nserious offense. Just how serious is expressed i n verse 40\nof Sura 7:\n\n\n\"Surely, those who do not believe our revelations, and are\ntoo arrogant to heed them, the gates of the sky never open\nfor them, nor w i l l they ever enter Paradise until the camel\n\n 1 1passes through the needle's eye. We thus requite the guilty.\n\n Thus, i t is A P H Y S I C A L IMPOSSIBILITY for those\nwho refuse to believe God to enter P a r a d i s e .",
@@ -27875,7 +27875,7 @@
         {
           "text": "- 12 -",
           "bbox_pdf": [
-            186.0,
+            186,
             22.341,
             219.686,
             35.365
@@ -28498,7 +28498,7 @@
             },
             {
               "text": "revelation",
-              "conf": 0.0,
+              "conf": 0,
               "left": 212,
               "top": 440,
               "width": 162,
@@ -28514,7 +28514,7 @@
             },
             {
               "text": "is",
-              "conf": 0.0,
+              "conf": 0,
               "left": 388,
               "top": 441,
               "width": 29,
@@ -29280,7 +29280,7 @@
             },
             {
               "text": "te",
-              "conf": 0.0,
+              "conf": 0,
               "left": 536,
               "top": 683,
               "width": 77,
@@ -29350,7 +29350,7 @@
           "line_num": 2,
           "text": "DO مْظون‎ git Zhe",
           "script": "latin",
-          "confidence": 23.0,
+          "confidence": 23,
           "bbox_px": [
             331,
             680,
@@ -29398,7 +29398,7 @@
             },
             {
               "text": "git",
-              "conf": 0.0,
+              "conf": 0,
               "left": 485,
               "top": 680,
               "width": 193,
@@ -29576,7 +29576,7 @@
             },
             {
               "text": "Woh",
-              "conf": 0.0,
+              "conf": 0,
               "left": 623,
               "top": 897,
               "width": 100,
@@ -29722,7 +29722,7 @@
           "words": [
             {
               "text": "Jer",
-              "conf": 0.0,
+              "conf": 0,
               "left": 524,
               "top": 1014,
               "width": 59,
@@ -29738,7 +29738,7 @@
             },
             {
               "text": "gre",
-              "conf": 0.0,
+              "conf": 0,
               "left": 593,
               "top": 1018,
               "width": 62,
@@ -31401,7 +31401,7 @@
             },
             {
               "text": "actge",
-              "conf": 0.0,
+              "conf": 0,
               "left": 396,
               "top": 806,
               "width": 262,
@@ -31417,7 +31417,7 @@
             },
             {
               "text": "5p",
-              "conf": 0.0,
+              "conf": 0,
               "left": 670,
               "top": 861,
               "width": 60,
@@ -31433,7 +31433,7 @@
             },
             {
               "text": "IEG",
-              "conf": 0.0,
+              "conf": 0,
               "left": 700,
               "top": 854,
               "width": 136,
@@ -31449,7 +31449,7 @@
             },
             {
               "text": "ES",
-              "conf": 0.0,
+              "conf": 0,
               "left": 822,
               "top": 860,
               "width": 116,
@@ -31487,7 +31487,7 @@
           "words": [
             {
               "text": "“",
-              "conf": 0.0,
+              "conf": 0,
               "left": 157,
               "top": 959,
               "width": 29,
@@ -31567,7 +31567,7 @@
             },
             {
               "text": "von",
-              "conf": 0.0,
+              "conf": 0,
               "left": 554,
               "top": 955,
               "width": 123,
@@ -31685,7 +31685,7 @@
             },
             {
               "text": "SSL",
-              "conf": 0.0,
+              "conf": 0,
               "left": 701,
               "top": 986,
               "width": 242,
@@ -31825,7 +31825,7 @@
             },
             {
               "text": "weded",
-              "conf": 0.0,
+              "conf": 0,
               "left": 712,
               "top": 1428,
               "width": 16,
@@ -31959,7 +31959,7 @@
             },
             {
               "text": "2\\22",
-              "conf": 0.0,
+              "conf": 0,
               "left": 712,
               "top": 1422,
               "width": 93,
@@ -34083,7 +34083,7 @@
           "words": [
             {
               "text": "Se",
-              "conf": 0.0,
+              "conf": 0,
               "left": 190,
               "top": 1074,
               "width": 98,
@@ -34858,7 +34858,7 @@
         {
           "text": "O B E Y I N G\nT H E M E S S E N G E R\nIS\nC O N D I T I O N E D",
           "bbox_pdf": [
-            51.0,
+            51,
             111.82,
             351.61,
             123.84
@@ -34874,7 +34874,7 @@
         {
           "text": "The Q u r a n e m p h a s i z e s that obedience i s absolute when\nthe source i s G o d , w h i l e the p e r s o n a l o p i n i o n of the m e s s e n -\ng e r m a y be d e t r i m e n t a l to h i m a n d / o r\nto those who follow\nh i s p e r s o n a l o p i n i o n s :",
           "bbox_pdf": [
-            24.0,
+            24,
             151.66,
             389.205,
             202.92
@@ -35717,7 +35717,7 @@
           "words": [
             {
               "text": "Aco",
-              "conf": 0.0,
+              "conf": 0,
               "left": 170,
               "top": 642,
               "width": 167,
@@ -35733,7 +35733,7 @@
             },
             {
               "text": "ihclts;",
-              "conf": 0.0,
+              "conf": 0,
               "left": 366,
               "top": 626,
               "width": 164,
@@ -35851,7 +35851,7 @@
             },
             {
               "text": "asl",
-              "conf": 0.0,
+              "conf": 0,
               "left": 678,
               "top": 707,
               "width": 273,
@@ -35905,7 +35905,7 @@
             },
             {
               "text": "نسْتدَمَكه",
-              "conf": 0.0,
+              "conf": 0,
               "left": 361,
               "top": 776,
               "width": 163,
@@ -36475,7 +36475,7 @@
           "line_num": 2,
           "text": "what Muhammad uttered as a messenger of God, and NOT",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             82,
             402,
@@ -38109,7 +38109,7 @@
           "words": [
             {
               "text": "sles",
-              "conf": 0.0,
+              "conf": 0,
               "left": 194,
               "top": 810,
               "width": 247,
@@ -38141,7 +38141,7 @@
             },
             {
               "text": "ato",
-              "conf": 0.0,
+              "conf": 0,
               "left": 403,
               "top": 866,
               "width": 120,
@@ -38806,7 +38806,7 @@
         {
           "text": "\" H e (Muhammad) f r o w n e d and turned away, when the b l i n d\nm a n came to h i m .\nH o w do you know; he m a y be saved?\nO r ,\nhe m a y heed the m e s s a g e and benefit by such heeding.\nA s\nf o r the r i c h m a n , you ( M u h a m m a d ) gave h i m y o u r attention.\nE v e n though you cannot guarantee his s a l v a t i o n .\nBut the one\nwho c a m e to you seeking s a l v a t i o n , and s i n c e r e l y\nr e v e r e n t ,\nyou d i s r e g a r d e d h i m . Indeed, T H I S IS A R E M I N D E R ,\nf o r\nthose who choose to r e m e m b e r .\n(80:\n1-12)",
           "bbox_pdf": [
-            30.0,
+            30,
             430.86,
             393.898,
             537.59
@@ -40281,7 +40281,7 @@
           "words": [
             {
               "text": "eee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 187,
               "top": 726,
               "width": 484,
@@ -40399,7 +40399,7 @@
             },
             {
               "text": "tio",
-              "conf": 0.0,
+              "conf": 0,
               "left": 530,
               "top": 889,
               "width": 108,
@@ -40415,7 +40415,7 @@
             },
             {
               "text": "Ms",
-              "conf": 0.0,
+              "conf": 0,
               "left": 639,
               "top": 888,
               "width": 30,
@@ -40431,7 +40431,7 @@
             },
             {
               "text": "MiarL",
-              "conf": 0.0,
+              "conf": 0,
               "left": 645,
               "top": 885,
               "width": 321,
@@ -40517,7 +40517,7 @@
             },
             {
               "text": "يعية",
-              "conf": 0.0,
+              "conf": 0,
               "left": 722,
               "top": 967,
               "width": 109,
@@ -40549,7 +40549,7 @@
             },
             {
               "text": "واتاجاء",
-              "conf": 0.0,
+              "conf": 0,
               "left": 389,
               "top": 947,
               "width": 164,
@@ -40619,7 +40619,7 @@
           "words": [
             {
               "text": "AOTZ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 187,
               "top": 1054,
               "width": 205,
@@ -40635,7 +40635,7 @@
             },
             {
               "text": "AEM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 390,
               "top": 1053,
               "width": 252,
@@ -40683,7 +40683,7 @@
             },
             {
               "text": "Ze",
-              "conf": 0.0,
+              "conf": 0,
               "left": 862,
               "top": 1054,
               "width": 117,
@@ -40753,7 +40753,7 @@
             },
             {
               "text": "rasa",
-              "conf": 0.0,
+              "conf": 0,
               "left": 330,
               "top": 1126,
               "width": 130,
@@ -42550,7 +42550,7 @@
         {
           "text": "These v e r s e s c l e a r l y i n f o r m us that God does not\nsuffer\nf r o m shortage of words; that He gave us A L L T H E WORDS\nwe need i n this Q u r a n , and that we should not seek the words\nof M u h a m m a d , or anyone else, and that M u h a m m a d i s a man\nlike other men; he should not be i d o l i z e d (see end of v e r s e ) .",
           "bbox_pdf": [
-            96.0,
+            96,
             898.014,
             831.055,
             1032.696
@@ -44909,7 +44909,7 @@
         {
           "text": "\" S a y (O M u h a m m a d ) , f I a m no m o r e than a h u m a n being l i k e\ny o u .\nIt has been r e v e a l e d to me that y o u r G o d i s O N E G O D .\nT h e r e f o r e , you s h a l l o b s e r v e H i m A L O N E ,\na s k H i s f o r g i v e -\nn e s s ,\nA N D W O E T O\nT H E I D O L - W O R S H I P E R S .\nf \" (41:6)",
           "bbox_pdf": [
-            15.0,
+            15,
             375.41,
             379.482,
             429.24
@@ -47394,7 +47394,7 @@
           "words": [
             {
               "text": "هراس",
-              "conf": 0.0,
+              "conf": 0,
               "left": 663,
               "top": 432,
               "width": 114,
@@ -47410,7 +47410,7 @@
             },
             {
               "text": "توصك",
-              "conf": 0.0,
+              "conf": 0,
               "left": 388,
               "top": 400,
               "width": 209,
@@ -47662,7 +47662,7 @@
             },
             {
               "text": "مراص",
-              "conf": 0.0,
+              "conf": 0,
               "left": 791,
               "top": 490,
               "width": 118,
@@ -48970,7 +48970,7 @@
         {
           "text": "(9:\n103)",
           "bbox_pdf": [
-            30.0,
+            30,
             244.54,
             76.15,
             256.56
@@ -49085,7 +49085,7 @@
             48.84,
             419.98,
             310.77,
-            432.0
+            432
           ],
           "bbox_normalized": [
             0.120343,
@@ -50219,7 +50219,7 @@
             },
             {
               "text": "iong,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 311,
               "top": 555,
               "width": 203,
@@ -50337,7 +50337,7 @@
             },
             {
               "text": "OLE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 788,
               "top": 636,
               "width": 168,
@@ -51930,7 +51930,7 @@
         {
           "text": "Satan u s e d this v e r s e to c l a i m a s p e c i a l status for the i d o l -\ni z a t i o n of M u h a m m a d , and to c o n v i n c e the people of the\nn e c e s s i t y of Sunn a (traditions) of the prophet.",
           "bbox_pdf": [
-            21.0,
+            21,
             251.7,
             378.339,
             289.59
@@ -52173,7 +52173,7 @@
             },
             {
               "text": "كافاعو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 188,
               "top": 376,
               "width": 338,
@@ -53991,7 +53991,7 @@
           "words": [
             {
               "text": "Meisel‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 135,
               "top": 1210,
               "width": 221,
@@ -54217,7 +54217,7 @@
           "words": [
             {
               "text": "odes",
-              "conf": 0.0,
+              "conf": 0,
               "left": 138,
               "top": 1245,
               "width": 268,
@@ -54367,7 +54367,7 @@
             },
             {
               "text": "Bir",
-              "conf": 0.0,
+              "conf": 0,
               "left": 772,
               "top": 1313,
               "width": 67,
@@ -54383,7 +54383,7 @@
             },
             {
               "text": "sy",
-              "conf": 0.0,
+              "conf": 0,
               "left": 843,
               "top": 1309,
               "width": 25,
@@ -55918,7 +55918,7 @@
           "words": [
             {
               "text": "eho",
-              "conf": 0.0,
+              "conf": 0,
               "left": 523,
               "top": 881,
               "width": 215,
@@ -56138,7 +56138,7 @@
           "line_num": 1,
           "text": "\\e-,-",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             873,
             966,
@@ -56154,7 +56154,7 @@
           "words": [
             {
               "text": "\\e-,-",
-              "conf": 0.0,
+              "conf": 0,
               "left": 873,
               "top": 966,
               "width": 85,
@@ -63969,14 +63969,14 @@
         1166,
         1603
       ],
-      "ocr_eng_confidence": 90.0,
+      "ocr_eng_confidence": 90,
       "ocr_arabic_confidence": 77.79,
       "ocr_variants": [
         {
           "lang": "eng+ara",
           "psm": 3,
           "score": 105.47620076030985,
-          "eng_conf": 90.0,
+          "eng_conf": 90,
           "text_len": 3078
         }
       ],
@@ -64052,7 +64052,7 @@
         {
           "text": "I n t e r c e s s i o n i s one of Satan's m o s t effective t r i c k s to dupe\nthe people into i d o l i z i n g t h e i r p r o p h e t s a n d / o r s a i n t s .",
           "bbox_pdf": [
-            27.0,
+            27,
             124.54,
             381.183,
             149.88
@@ -65393,7 +65393,7 @@
             },
             {
               "text": "base",
-              "conf": 0.0,
+              "conf": 0,
               "left": 513,
               "top": 706,
               "width": 326,
@@ -65647,7 +65647,7 @@
           "words": [
             {
               "text": "D5",
-              "conf": 0.0,
+              "conf": 0,
               "left": 412,
               "top": 1179,
               "width": 79,
@@ -65663,7 +65663,7 @@
             },
             {
               "text": "gaiirasT:",
-              "conf": 0.0,
+              "conf": 0,
               "left": 507,
               "top": 1175,
               "width": 168,
@@ -66116,7 +66116,7 @@
           "line_num": 1,
           "text": "THE DEIFICATION OF MUHAMMAD",
           "script": "latin",
-          "confidence": 94.0,
+          "confidence": 94,
           "bbox_px": [
             186,
             253,
@@ -67708,7 +67708,7 @@
             },
             {
               "text": "siieol",
-              "conf": 0.0,
+              "conf": 0,
               "left": 622,
               "top": 977,
               "width": 340,
@@ -67792,7 +67792,7 @@
       "pdf_page": 32,
       "page_size_pdf_points": [
         413.1600036621094,
-        573.0
+        573
       ],
       "embedded_text": "- 2 9 -\n\n\n T H E D E I F I C A T I O N O F M U H A M M A D\n\n\n T H E M Y T H O F M U H A M M A D T H E I N T E R C E S S O R\n\n\n The concept of i n t e r c e s s i o n i m p l i e s that God has some\np a r t n e r s who i n t e r c e d e w i t h H i m on behalf of people.\n\n T h e r e f o r e , i n t e r c e s s i o n i s i d o l w o r s h i p , and those who\nbelieve that M u h a m m a d w i l l i n t e r c e d e on behalf of anyone\na r e i d o l i z i n g the P r o p h e t against h i s w i l l . I n t e r c e s s i o n by-\nM u h a m m a d i s p r e v a l e n t i n the Satanic i n n o v a t i o n s known as\n———H a d i t h a n d / o r Sunna.— —\n\n The Q u r a n c l e a r l y i d e n t i f i e s i n t e r c e s s i o n as i d o l w o r -\n s h i p , and d e c l a r e s a G R E A T C R I T E R I O N ; that those who\nbelieve i n i n t e r c e s s i o n cannot stand to talk about G o d alone;\nT H E Y H A V E T O M E N T I O N T H E I R I D O L S A L O N G .\n\n\n \" S a y , ' T o God belongs A L L I N T E R C E S S I O N . T o H i m b e -\n longs the d o m i n i o n of the heavens and the e a r t h , then to H i m\n\n 1you w i l l be r e t u r n e d . When G O D A L O N E i s advocated,\n the hearts of those who do not believe i n the h e r e a f t e r s h r i n k\nw i t h a v e r s i o n . But when i d o l s a r e mentioned along with H i m ,\n\n 11they become s a t i s f i e d . ( 39: 45 )",
       "embedded_blocks": [
@@ -70110,7 +70110,7 @@
             },
             {
               "text": "ens",
-              "conf": 0.0,
+              "conf": 0,
               "left": 617,
               "top": 1181,
               "width": 133,
@@ -70126,7 +70126,7 @@
             },
             {
               "text": "wO",
-              "conf": 0.0,
+              "conf": 0,
               "left": 797,
               "top": 1136,
               "width": 106,
@@ -70287,7 +70287,7 @@
         {
           "text": "M U H A M M A D\nW I L L\nN O T\nC A L L\nY O U T O\nA C C O U N T",
           "bbox_pdf": [
-            36.0,
+            36,
             90.22,
             372.299,
             102.24
@@ -71002,7 +71002,7 @@
             },
             {
               "text": "ohh",
-              "conf": 0.0,
+              "conf": 0,
               "left": 678,
               "top": 763,
               "width": 76,
@@ -73543,7 +73543,7 @@
             },
             {
               "text": "»دالوا‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 232,
               "top": 662,
               "width": 138,
@@ -73833,7 +73833,7 @@
             },
             {
               "text": "yess",
-              "conf": 0.0,
+              "conf": 0,
               "left": 855,
               "top": 932,
               "width": 188,
@@ -73871,7 +73871,7 @@
           "words": [
             {
               "text": "Po",
-              "conf": 0.0,
+              "conf": 0,
               "left": 233,
               "top": 1064,
               "width": 87,
@@ -74583,7 +74583,7 @@
             },
             {
               "text": "negative\"",
-              "conf": 0.0,
+              "conf": 0,
               "left": 789,
               "top": 375,
               "width": 151,
@@ -75411,7 +75411,7 @@
           "line_num": 1,
           "text": "wabeg",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             225,
             871,
@@ -75427,7 +75427,7 @@
           "words": [
             {
               "text": "wabeg",
-              "conf": 0.0,
+              "conf": 0,
               "left": 225,
               "top": 871,
               "width": 202,
@@ -75545,7 +75545,7 @@
             },
             {
               "text": "g",
-              "conf": 0.0,
+              "conf": 0,
               "left": 882,
               "top": 1020,
               "width": 23,
@@ -75599,7 +75599,7 @@
             },
             {
               "text": "Datta",
-              "conf": 0.0,
+              "conf": 0,
               "left": 711,
               "top": 1002,
               "width": 204,
@@ -77361,7 +77361,7 @@
             },
             {
               "text": "Fal,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 376,
               "top": 903,
               "width": 241,
@@ -78315,7 +78315,7 @@
             },
             {
               "text": "كسد",
-              "conf": 0.0,
+              "conf": 0,
               "left": 368,
               "top": 1197,
               "width": 151,
@@ -78581,7 +78581,7 @@
             60.96,
             128.98,
             345.078,
-            141.0
+            141
           ],
           "bbox_normalized": [
             0.147889,
@@ -79817,7 +79817,7 @@
             },
             {
               "text": "لاسن",
-              "conf": 0.0,
+              "conf": 0,
               "left": 685,
               "top": 752,
               "width": 50,
@@ -80469,7 +80469,7 @@
             },
             {
               "text": ".”م",
-              "conf": 0.0,
+              "conf": 0,
               "left": 121,
               "top": 837,
               "width": 54,
@@ -80689,7 +80689,7 @@
             },
             {
               "text": "oot‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 823,
               "top": 926,
               "width": 50,
@@ -80705,7 +80705,7 @@
             },
             {
               "text": "هه",
-              "conf": 0.0,
+              "conf": 0,
               "left": 787,
               "top": 915,
               "width": 27,
@@ -80877,7 +80877,7 @@
             },
             {
               "text": "١‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 866,
               "top": 1026,
               "width": 8,
@@ -80893,7 +80893,7 @@
             },
             {
               "text": "اص",
-              "conf": 0.0,
+              "conf": 0,
               "left": 808,
               "top": 1032,
               "width": 37,
@@ -83850,7 +83850,7 @@
             },
             {
               "text": "”",
-              "conf": 0.0,
+              "conf": 0,
               "left": 647,
               "top": 791,
               "width": 22,
@@ -83866,7 +83866,7 @@
             },
             {
               "text": "م",
-              "conf": 0.0,
+              "conf": 0,
               "left": 694,
               "top": 784,
               "width": 129,
@@ -84016,7 +84016,7 @@
             },
             {
               "text": "بوذ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 526,
               "top": 880,
               "width": 79,
@@ -84032,7 +84032,7 @@
             },
             {
               "text": "5203©",
-              "conf": 0.0,
+              "conf": 0,
               "left": 412,
               "top": 841,
               "width": 101,
@@ -88219,7 +88219,7 @@
             },
             {
               "text": "epee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 345,
               "top": 511,
               "width": 231,
@@ -90694,7 +90694,7 @@
         1449
       ],
       "ocr_eng_confidence": 89.83,
-      "ocr_arabic_confidence": 56.0,
+      "ocr_arabic_confidence": 56,
       "ocr_variants": [
         {
           "lang": "eng+ara",
@@ -91066,7 +91066,7 @@
           "words": [
             {
               "text": "eee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 190,
               "top": 440,
               "width": 142,
@@ -91082,7 +91082,7 @@
             },
             {
               "text": "NGS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 349,
               "top": 485,
               "width": 174,
@@ -93714,7 +93714,7 @@
           "words": [
             {
               "text": "inn)‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 604,
               "top": 654,
               "width": 161,
@@ -93896,7 +93896,7 @@
             },
             {
               "text": "D‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 905,
               "top": 737,
               "width": 48,
@@ -93972,7 +93972,7 @@
           "words": [
             {
               "text": "a",
-              "conf": 0.0,
+              "conf": 0,
               "left": 181,
               "top": 814,
               "width": 286,
@@ -95342,7 +95342,7 @@
             },
             {
               "text": "عسو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 399,
               "top": 636,
               "width": 51,
@@ -95390,7 +95390,7 @@
             },
             {
               "text": "سوراف",
-              "conf": 0.0,
+              "conf": 0,
               "left": 309,
               "top": 636,
               "width": 82,
@@ -95540,7 +95540,7 @@
             },
             {
               "text": "tc5",
-              "conf": 0.0,
+              "conf": 0,
               "left": 693,
               "top": 639,
               "width": 48,
@@ -95862,7 +95862,7 @@
             },
             {
               "text": "araeagl|",
-              "conf": 0.0,
+              "conf": 0,
               "left": 455,
               "top": 716,
               "width": 105,
@@ -96506,7 +96506,7 @@
             },
             {
               "text": "lor",
-              "conf": 0.0,
+              "conf": 0,
               "left": 573,
               "top": 978,
               "width": 51,
@@ -97091,7 +97091,7 @@
         {
           "text": "Millions of \" M u s l i m s \" today practice a form of idolatry that is similar to the\nidolatry of p r e - M u h a m m a d Q u r a i s h .",
           "bbox_pdf": [
-            36.0,
+            36,
             301.842,
             748.305,
             344.487
@@ -98596,7 +98596,7 @@
             },
             {
               "text": "حدسنم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1274,
               "top": 1392,
               "width": 82,
@@ -98612,7 +98612,7 @@
             },
             {
               "text": "عءس",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1230,
               "top": 1393,
               "width": 36,
@@ -98660,7 +98660,7 @@
             },
             {
               "text": "nate‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1046,
               "top": 1394,
               "width": 53,
@@ -98676,7 +98676,7 @@
             },
             {
               "text": "nena",
-              "conf": 0.0,
+              "conf": 0,
               "left": 985,
               "top": 1396,
               "width": 52,
@@ -99702,7 +99702,7 @@
             },
             {
               "text": "SS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1641,
               "top": 1731,
               "width": 150,
@@ -102630,7 +102630,7 @@
           "words": [
             {
               "text": "ema",
-              "conf": 0.0,
+              "conf": 0,
               "left": 211,
               "top": 807,
               "width": 112,
@@ -102646,7 +102646,7 @@
             },
             {
               "text": "re",
-              "conf": 0.0,
+              "conf": 0,
               "left": 341,
               "top": 825,
               "width": 75,
@@ -102748,7 +102748,7 @@
             },
             {
               "text": "م‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 197,
               "top": 799,
               "width": 236,
@@ -104512,7 +104512,7 @@
             32.64,
             98.98,
             369.447,
-            111.0
+            111
           ],
           "bbox_normalized": [
             0.080402,
@@ -105402,7 +105402,7 @@
           "words": [
             {
               "text": "stse‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 824,
               "top": 870,
               "width": 129,
@@ -105536,7 +105536,7 @@
           "words": [
             {
               "text": "تبكار",
-              "conf": 0.0,
+              "conf": 0,
               "left": 796,
               "top": 923,
               "width": 156,
@@ -107135,7 +107135,7 @@
             },
             {
               "text": "bow.\"",
-              "conf": 0.0,
+              "conf": 0,
               "left": 955,
               "top": 886,
               "width": 95,
@@ -107549,7 +107549,7 @@
         {
           "text": "\" O M a r y , you s h a l l obey y o u r L o r d , and you s h a l l p r o s t r a t e\nand bow down with those who bow down. M\n(3: 43)\n,m",
           "bbox_pdf": [
-            21.0,
+            21,
             201.58,
             383.312,
             226.56
@@ -108772,7 +108772,7 @@
             },
             {
               "text": "ETO",
-              "conf": 0.0,
+              "conf": 0,
               "left": 457,
               "top": 999,
               "width": 102,
@@ -108788,7 +108788,7 @@
             },
             {
               "text": "ELAE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 628,
               "top": 999,
               "width": 90,
@@ -108804,7 +108804,7 @@
             },
             {
               "text": "oii",
-              "conf": 0.0,
+              "conf": 0,
               "left": 726,
               "top": 1010,
               "width": 267,
@@ -109966,7 +109966,7 @@
             14.88,
             149.74,
             368.772,
-            216.0
+            216
           ],
           "bbox_normalized": [
             0.038331,
@@ -110027,7 +110027,7 @@
         {
           "text": "F I R S T , they have to come to s i n c e r e c o n v i c t i o n that Q u r a n\n;",
           "bbox_pdf": [
-            18.0,
+            18,
             464.5,
             373.729,
             476.52
@@ -111760,7 +111760,7 @@
             },
             {
               "text": "Quran",
-              "conf": 0.0,
+              "conf": 0,
               "left": 642,
               "top": 1233,
               "width": 97,
@@ -111776,7 +111776,7 @@
             },
             {
               "text": "is",
-              "conf": 0.0,
+              "conf": 0,
               "left": 752,
               "top": 1234,
               "width": 29,
@@ -112941,7 +112941,7 @@
             12.72,
             459.34,
             349.783,
-            498.0
+            498
           ],
           "bbox_normalized": [
             0.03347,
@@ -114589,7 +114589,7 @@
             19.56,
             495.58,
             380.49,
-            534.0
+            534
           ],
           "bbox_normalized": [
             0.048876,
@@ -116432,7 +116432,7 @@
             },
             {
               "text": "Quran",
-              "conf": 0.0,
+              "conf": 0,
               "left": 473,
               "top": 623,
               "width": 97,
@@ -116448,7 +116448,7 @@
             },
             {
               "text": "is",
-              "conf": 0.0,
+              "conf": 0,
               "left": 583,
               "top": 624,
               "width": 29,
@@ -117038,7 +117038,7 @@
           "words": [
             {
               "text": "hereon",
-              "conf": 0.0,
+              "conf": 0,
               "left": 172,
               "top": 928,
               "width": 234,
@@ -117290,7 +117290,7 @@
             },
             {
               "text": "aM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 269,
               "top": 1074,
               "width": 66,
@@ -117338,7 +117338,7 @@
             },
             {
               "text": "abies",
-              "conf": 0.0,
+              "conf": 0,
               "left": 633,
               "top": 1058,
               "width": 256,
@@ -117543,7 +117543,7 @@
           "normalized_text": "وَمَنۡ أَظۡلَمُ مِمَّن ذُكِّرَ بِـَٔایَـٰتِ رَبِّهِۦ فَأَعۡرَضَ عَنۡهَا وَنَسِیَ مَا قَدَّمَتۡ یَدَاهُۚ إِنَّا جَعَلۡنَا عَلَىٰ قُلُوبِهِمۡ أَكِنَّةً أَن یَفۡقَهُوهُ وَفِیۤ ءَاذَانِهِمۡ وَقۡرࣰاۖ وَإِن تَدۡعُهُمۡ إِلَى ٱلۡهُدَىٰ فَلَن یَهۡتَدُوۤا۟ إِذًا أَبَدࣰا",
           "status": "canonical_quran_match",
           "quran_reference": "18:57",
-          "match_score": 50.0,
+          "match_score": 50,
           "confidence": 42.18333333333333,
           "bbox_px": [
             0,
@@ -119595,7 +119595,7 @@
       "document_slug": "quran_hadith_and_islam",
       "pdf_page": 56,
       "page_size_pdf_points": [
-        420.0,
+        420,
         593.760009765625
       ],
       "embedded_text": "- 53 -\n\n\nP R O B L E M IS: T H E Y T H I N K T H E Y A R E R I G H T E O U S\n\n\n\" A n y o n e who d i s r e g a r d s the m e s s a g e of God m o s t g r a c i o u s ,\nwe appoint a d e v i l to be h i s constant c o m p a n i o n . The d e v i l s\nthen d i v e r t them f r o m the p a t h , yet m a k e t h e m T H I N K that\nthey a r e r i g h t l y g u i d e d . \" (43: 36-37)\n\n\n \" Y o u s h a l l be s t r i c t l y righteous at e v e r y m o s q u e , and w o r -\nship G o d , devoting y o u r w o r s h i p absolutely to H i m a l o n e .\n J u s t as H e c r e a t e d you i n i t i a l l y , you w i l l be r e t u r n e d . Some\nHe guides. O t h e r s a r e c o m m i t t e d to s t r a y i n g , f o r they take\nthe d e v i l s as a l l i e s i n s t e a d of G o d , and T H I N K that they a r e\n r i g h t l y g u i d e d . \" (7: 29-30)\n T h e w1o r s t l o s e r s a r e those who go a s t r a y , then T H I N K that\n they a r e r i g h t l y guided. (18: 103-104)",
@@ -119958,7 +119958,7 @@
             },
             {
               "text": "حيطا‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 424,
               "top": 341,
               "width": 181,
@@ -120044,7 +120044,7 @@
           "words": [
             {
               "text": "سد",
-              "conf": 0.0,
+              "conf": 0,
               "left": 852,
               "top": 410,
               "width": 47,
@@ -120458,7 +120458,7 @@
             },
             {
               "text": "EFA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 505,
               "top": 898,
               "width": 101,
@@ -120544,7 +120544,7 @@
           "words": [
             {
               "text": "المست",
-              "conf": 0.0,
+              "conf": 0,
               "left": 865,
               "top": 901,
               "width": 132,
@@ -120592,7 +120592,7 @@
             },
             {
               "text": "حنست",
-              "conf": 0.0,
+              "conf": 0,
               "left": 218,
               "top": 905,
               "width": 141,
@@ -120771,7 +120771,7 @@
             35.04,
             427.3,
             389.962,
-            480.0
+            480
           ],
           "bbox_normalized": [
             0.084785,
@@ -120803,7 +120803,7 @@
             35.52,
             512.98,
             316.634,
-            525.0
+            525
           ],
           "bbox_normalized": [
             0.085947,
@@ -121477,7 +121477,7 @@
             },
             {
               "text": "دعُيو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 571,
               "top": 699,
               "width": 122,
@@ -121697,7 +121697,7 @@
             },
             {
               "text": "Ciba,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 662,
               "top": 804,
               "width": 188,
@@ -126153,7 +126153,7 @@
         {
           "text": "Note the word for word s i m i l a r i t y between 25:31 shown\nabove, and 6: 112 shown on the previous page.\nCould this\nbe coincidental?",
           "bbox_pdf": [
-            12.0,
+            12,
             409.634,
             369.738,
             450.456
@@ -127012,7 +127012,7 @@
             },
             {
               "text": "اما",
-              "conf": 0.0,
+              "conf": 0,
               "left": 631,
               "top": 737,
               "width": 100,
@@ -128336,7 +128336,7 @@
         {
           "text": "\"These are God's verses; we recite them for you truthfully.\nIn which \"Hadith\" , beside God and H i s verses, do they believe in?\nWOE T O E V E R Y S I N F U L F A B R I C A T O R .\nHe hears\nGod !s verses, then insists arrogantly on his way, as if he\nnever heard them; promise him painful retribution.\nWhen he\nlearns anything from our verses, he takes i t i n vain; these\nhave deserved humiliating retribution.\nAwaiting them i s h e l l ;\nneither their earnings, nor the idols they had set up beside\nGod can help them; they have deserved t e r r i b l e retribution.\nTHIS IS T H E G U I D A N C E , and those who do not believe the\nverses of their L o r d w i l l suffer debasement, and painful\nretribution. 1'\n( 45: 6-11 )",
           "bbox_pdf": [
-            18.0,
+            18,
             321.554,
             391.551,
             482.616
@@ -128563,7 +128563,7 @@
           "words": [
             {
               "text": "SAG",
-              "conf": 0.0,
+              "conf": 0,
               "left": 190,
               "top": 380,
               "width": 204,
@@ -128579,7 +128579,7 @@
             },
             {
               "text": "AGE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 383,
               "top": 378,
               "width": 178,
@@ -128595,7 +128595,7 @@
             },
             {
               "text": "Ee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 561,
               "top": 381,
               "width": 295,
@@ -128611,7 +128611,7 @@
             },
             {
               "text": "ob",
-              "conf": 0.0,
+              "conf": 0,
               "left": 673,
               "top": 374,
               "width": 33,
@@ -129083,7 +129083,7 @@
             },
             {
               "text": "PAYLIN",
-              "conf": 0.0,
+              "conf": 0,
               "left": 287,
               "top": 717,
               "width": 148,
@@ -129169,7 +129169,7 @@
             },
             {
               "text": "pire",
-              "conf": 0.0,
+              "conf": 0,
               "left": 307,
               "top": 785,
               "width": 180,
@@ -129201,7 +129201,7 @@
             },
             {
               "text": "-—",
-              "conf": 0.0,
+              "conf": 0,
               "left": 478,
               "top": 771,
               "width": 119,
@@ -129249,7 +129249,7 @@
             },
             {
               "text": "SIGS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 752,
               "top": 782,
               "width": 130,
@@ -131081,7 +131081,7 @@
           "words": [
             {
               "text": "retribution.\"",
-              "conf": 0.0,
+              "conf": 0,
               "left": 57,
               "top": 1317,
               "width": 209,
@@ -131755,7 +131755,7 @@
         {
           "text": "- 58 -",
           "bbox_pdf": [
-            189.0,
+            189,
             37.62,
             222.856,
             49.43
@@ -132126,7 +132126,7 @@
             },
             {
               "text": "biasphaasre",
-              "conf": 0.0,
+              "conf": 0,
               "left": 175,
               "top": 258,
               "width": 206,
@@ -132314,7 +132314,7 @@
           "words": [
             {
               "text": "DARGA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 509,
               "top": 508,
               "width": 391,
@@ -132390,7 +132390,7 @@
           "line_num": 1,
           "text": "WAGEI@",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             234,
             914,
@@ -132406,7 +132406,7 @@
           "words": [
             {
               "text": "WAGEI@",
-              "conf": 0.0,
+              "conf": 0,
               "left": 234,
               "top": 914,
               "width": 223,
@@ -132610,7 +132610,7 @@
             },
             {
               "text": "رفير",
-              "conf": 0.0,
+              "conf": 0,
               "left": 441,
               "top": 1051,
               "width": 283,
@@ -132760,7 +132760,7 @@
             },
             {
               "text": "عايأيره",
-              "conf": 0.0,
+              "conf": 0,
               "left": 284,
               "top": 1095,
               "width": 187,
@@ -135594,7 +135594,7 @@
         {
           "text": "S U M M A R Y & C O N C L U S I O N S",
           "bbox_pdf": [
-            138.0,
+            138,
             220.15,
             317.956,
             231.87
@@ -135610,7 +135610,7 @@
         {
           "text": "The miracle of Quran detailed in this book ranges from\nextreme\nsimplicity to extreme intricacy. Because Quran was sent down for\nALL\npeople, its language ranges from the very simple, to the highest levels of\nlinguistic and literary excellence. This renders the message attainable by\neveryone, regardless of the level of education. The same is true wit^kjjje^\nQuran's miracle. Thus, the physical facts that make up this extraordinary\nphenomenon can be divided into SIMPLE F A C T S and INTRICATE\nF A C T S",
           "bbox_pdf": [
-            51.0,
+            51,
             244.674,
             409.172,
             335.67
@@ -157713,7 +157713,7 @@
             },
             {
               "text": "ال‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 712,
               "top": 899,
               "width": 25,
@@ -158565,7 +158565,7 @@
       "pdf_page": 69,
       "page_size_pdf_points": [
         415.20001220703125,
-        612.0
+        612
       ],
       "embedded_text": "_ 6 6 .\n\n\n G O D R E V E A L E D T H I S B O O K F U L L Y D E T A I L E D\n\n\n ( 6: 114 )\n\n\n^ f c T h e A r a b i c text of thi9 v e r s e c o n s i s t s of ^ 1 9 ^ lette r s .\n\n\n o r ^ . T h e n u m b e r of this v e r s e i s > ^ 1 9 ^ x 6.\n\n\n 4\n\n\n S\n\n 14 13 12 11 10 8\n\n\n •••• - /\n\n\n 17 16 iT\n\n\n 4», .\n (6: 114)",
       "embedded_blocks": [
@@ -159125,7 +159125,7 @@
           "words": [
             {
               "text": "Xi",
-              "conf": 0.0,
+              "conf": 0,
               "left": 78,
               "top": 427,
               "width": 46,
@@ -159141,7 +159141,7 @@
             },
             {
               "text": "The",
-              "conf": 0.0,
+              "conf": 0,
               "left": 131,
               "top": 437,
               "width": 60,
@@ -159549,7 +159549,7 @@
           "line_num": 3,
           "text": "22566",
           "script": "other",
-          "confidence": 70.0,
+          "confidence": 70,
           "bbox_px": [
             393,
             954,
@@ -159635,7 +159635,7 @@
             },
             {
               "text": "منصلا",
-              "conf": 0.0,
+              "conf": 0,
               "left": 492,
               "top": 1261,
               "width": 112,
@@ -160819,7 +160819,7 @@
         {
           "text": "The Prophet Muhammad received an order from God\nenjoining him from uttering Quranic m a t e r i a l without\nauthorization, and ordering him to adhere strictly to\nQuran and follow i t , once it i s revealed.",
           "bbox_pdf": [
-            27.0,
+            27,
             120.194,
             353.446,
             174.456
@@ -162632,7 +162632,7 @@
           "line_num": 2,
           "text": "Quran, and nothing but Quran.",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             85,
             1357,
@@ -164302,7 +164302,7 @@
           "words": [
             {
               "text": "eevee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 172,
               "top": 805,
               "width": 123,
@@ -165935,7 +165935,7 @@
           "line_num": 1,
           "text": "89 + 54 + 58 + 27 = 228 = x 12.",
           "script": "latin",
-          "confidence": 86.0,
+          "confidence": 86,
           "bbox_px": [
             106,
             588,
@@ -166235,7 +166235,7 @@
           "words": [
             {
               "text": "هوقصرةاومةالفة",
-              "conf": 0.0,
+              "conf": 0,
               "left": 635,
               "top": 962,
               "width": 363,
@@ -166267,7 +166267,7 @@
             },
             {
               "text": "[sabe‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 156,
               "top": 958,
               "width": 452,
@@ -166579,7 +166579,7 @@
           "words": [
             {
               "text": "تيون",
-              "conf": 0.0,
+              "conf": 0,
               "left": 936,
               "top": 1343,
               "width": 70,
@@ -166627,7 +166627,7 @@
             },
             {
               "text": "rs",
-              "conf": 0.0,
+              "conf": 0,
               "left": 569,
               "top": 1313,
               "width": 97,
@@ -167192,7 +167192,7 @@
             },
             {
               "text": "DSF",
-              "conf": 0.0,
+              "conf": 0,
               "left": 453,
               "top": 707,
               "width": 291,
@@ -170528,7 +170528,7 @@
             },
             {
               "text": "LaKuonseuital",
-              "conf": 0.0,
+              "conf": 0,
               "left": 191,
               "top": 1085,
               "width": 586,
@@ -170646,7 +170646,7 @@
             },
             {
               "text": "5",
-              "conf": 0.0,
+              "conf": 0,
               "left": 400,
               "top": 1184,
               "width": 56,
@@ -170662,7 +170662,7 @@
             },
             {
               "text": "ذٌكننية|‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 170,
               "top": 1146,
               "width": 201,
@@ -173962,7 +173962,7 @@
           "line_num": 2,
           "text": "do not believe in the hereafter AN INVISIBLE BARRIER.",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             137,
             2480,
@@ -174572,7 +174572,7 @@
             },
             {
               "text": "(ALONE)",
-              "conf": 0.0,
+              "conf": 0,
               "left": 759,
               "top": 2701,
               "width": 292,
@@ -174588,7 +174588,7 @@
             },
             {
               "text": "in",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1077,
               "top": 2704,
               "width": 64,
@@ -175862,7 +175862,7 @@
             },
             {
               "text": "واوا",
-              "conf": 0.0,
+              "conf": 0,
               "left": 621,
               "top": 658,
               "width": 146,
@@ -175878,7 +175878,7 @@
             },
             {
               "text": "وي‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 534,
               "top": 690,
               "width": 81,
@@ -175894,7 +175894,7 @@
             },
             {
               "text": "UM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 427,
               "top": 685,
               "width": 85,
@@ -176056,7 +176056,7 @@
             },
             {
               "text": "“8.7",
-              "conf": 0.0,
+              "conf": 0,
               "left": 418,
               "top": 944,
               "width": 87,
@@ -176072,7 +176072,7 @@
             },
             {
               "text": "دوع‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 518,
               "top": 950,
               "width": 62,
@@ -176448,7 +176448,7 @@
             },
             {
               "text": "اتسبتفع",
-              "conf": 0.0,
+              "conf": 0,
               "left": 806,
               "top": 1148,
               "width": 160,
@@ -176464,7 +176464,7 @@
             },
             {
               "text": "]لت",
-              "conf": 0.0,
+              "conf": 0,
               "left": 727,
               "top": 1148,
               "width": 67,
@@ -176480,7 +176480,7 @@
             },
             {
               "text": "موانات",
-              "conf": 0.0,
+              "conf": 0,
               "left": 581,
               "top": 1148,
               "width": 127,
@@ -176512,7 +176512,7 @@
             },
             {
               "text": "poy",
-              "conf": 0.0,
+              "conf": 0,
               "left": 265,
               "top": 1148,
               "width": 116,
@@ -176646,7 +176646,7 @@
             },
             {
               "text": "t-te",
-              "conf": 0.0,
+              "conf": 0,
               "left": 778,
               "top": 1166,
               "width": 171,
@@ -177006,7 +177006,7 @@
             },
             {
               "text": "oS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 721,
               "top": 1400,
               "width": 289,
@@ -177140,7 +177140,7 @@
           "words": [
             {
               "text": ">|",
-              "conf": 0.0,
+              "conf": 0,
               "left": 241,
               "top": 1413,
               "width": 58,
@@ -177236,7 +177236,7 @@
             },
             {
               "text": "Auer“",
-              "conf": 0.0,
+              "conf": 0,
               "left": 758,
               "top": 1407,
               "width": 45,
@@ -177609,7 +177609,7 @@
         {
           "text": "c e n t u r y A H , a p r o g r e s s i v e d e t e r i o r a t i o n of the M u s l i m U m m a h began. Since",
           "bbox_pdf": [
-            36.0,
+            36,
             352.832,
             385.786,
             362.208
@@ -181766,7 +181766,7 @@
           "line_num": 1,
           "text": "Slagt< aa ataviets",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             220,
             899,
@@ -181782,7 +181782,7 @@
           "words": [
             {
               "text": "Slagt<",
-              "conf": 0.0,
+              "conf": 0,
               "left": 220,
               "top": 905,
               "width": 256,
@@ -181798,7 +181798,7 @@
             },
             {
               "text": "aa",
-              "conf": 0.0,
+              "conf": 0,
               "left": 481,
               "top": 916,
               "width": 109,
@@ -181814,7 +181814,7 @@
             },
             {
               "text": "ataviets",
-              "conf": 0.0,
+              "conf": 0,
               "left": 596,
               "top": 899,
               "width": 285,
@@ -181890,7 +181890,7 @@
           "words": [
             {
               "text": "Sabie",
-              "conf": 0.0,
+              "conf": 0,
               "left": 187,
               "top": 923,
               "width": 265,
@@ -185141,7 +185141,7 @@
             },
             {
               "text": "Gubbaianay",
-              "conf": 0.0,
+              "conf": 0,
               "left": 636,
               "top": 672,
               "width": 381,
@@ -188030,7 +188030,7 @@
             },
             {
               "text": "GIGAG",
-              "conf": 0.0,
+              "conf": 0,
               "left": 493,
               "top": 871,
               "width": 322,
@@ -189241,7 +189241,7 @@
         {
           "text": "The M u s l i m \"scholars 1 1 declared that the Quranic law i s not\nclear ! ! ! They claimed that the adulterers are not defined\nin Quran with regard to their m a r i t a l status, and that they\nneed Hadith to clarify Quran ! ! !",
           "bbox_pdf": [
-            12.0,
+            12,
             228.674,
             371.719,
             282.216
@@ -192414,7 +192414,7 @@
             },
             {
               "text": "!",
-              "conf": 0.0,
+              "conf": 0,
               "left": 379,
               "top": 1582,
               "width": 6,
@@ -192430,7 +192430,7 @@
             },
             {
               "text": "{1",
-              "conf": 0.0,
+              "conf": 0,
               "left": 398,
               "top": 1582,
               "width": 23,
@@ -192477,7 +192477,7 @@
       "pdf_page": 85,
       "page_size_pdf_points": [
         436.0799865722656,
-        600.0
+        600
       ],
       "embedded_text": "-82 -\n\n\n O B E Y G O D A N D O B E Y T H E M E S S E N G E R\n\n\nSatan succeeded in duping millions of Muslims into believing that obeying\nG o d means obeying the Q u r a n , while o b e y i n g the messenger\nmeans obeying H a d i t h .\n\n\n What helped in popularizing this Satanic trick was the general ignorance of\nQuran among the Muslim masses, and their failure to heed the divine com\nmandments that Quran shall be the O N L Y S O U R C E of jurisprudence\nand/or religious guidance.\n\n\n Only a little thinking leads us to realize that Q u r a n came to us through\nMuhammad's mouth, and DID N O T C O M E T O U S F R O M G O D\nD I R E C T L Y . Hence the commandment that we shall obey the messenger\n ...for he utters the words of G o d .\n\n\n All previous scriptures have stated the same Quranic truth that: \"Whoever\n obeys the messenger is obeying G o d . \" Since the messenger obviously is not\n G o d , the commandment clearly means obeying the words of G o d uttered by\n the messenger.\n\n\n The knowledgable and fortunate believers, therefore,\n realize that Hadith & Sunna are Satanic fabrications aimed\n at diverting people from the path of God.",
       "embedded_blocks": [
@@ -192548,7 +192548,7 @@
         {
           "text": "Only a little thinking leads us to realize that Q u r a n came to us through\nMuhammad's\nmouth, and DID N O T C O M E\nT O\nU S\nF R O M\nG O D\nD I R E C T L Y . Hence the commandment that we shall obey the messenger\n...for he utters the words of G o d .",
           "bbox_pdf": [
-            54.0,
+            54,
             327.15,
             408.199,
             373.851
@@ -194869,7 +194869,7 @@
       "pdf_page": 86,
       "page_size_pdf_points": [
         397.9200134277344,
-        582.0
+        582
       ],
       "embedded_text": "- S 3 -\n\n\n M U H A M M A D ' S HADITHS A R E N O T M U H A M M A D ' S\n\n\n Instead, they are the Hadiths (narrations) of men and women who never\nsaw the Prophet; in fact, the grandparents of their grandparents never saw the\nProphet.\n\n\n It is well known that the first book of Hadith is that of Bukhary, who was\nborn more than 200 years after the death of Muhammad. When Bukhary\nwrote his book of Hadiths, he used to visit the people whom he knew as\nsources. After verifying that his source is \"truthful,\" and known as a man or\nwoman of righteousness, Bukhary would ask, \"Do you know a Hadith?\" The\nperson would answer, \"Yes,\" then proceed to narrate the \"Hadith'\" as\nfollows:\n\"I heard my father, may God bless his soul, say that he heard his older brother,\nmay God bless his soul, say that he was sitting with his grandmother, may\nGod bless her soul, and she told him that she was having dinner one day with\nher great uncle, may God bless his soul, when he stated that his maternal\ngrandfather knew Imam Ahmad ibn Muhammad al-Amawy, who mentioned\nthat his grandfather heard from his oldest uncle that he met the great\ncompanion of the Prophet Omar ibn Khaled Al-Yamany, and he told him that\n the Prophet, peace be upon him, said,' '\"\n\n\n Thus, the Hadith is simply a narration by Bukhary's source, claiming that\n he or she heard something about the Prophet across eight generations of the\n dead.\n\n\n On the other hand, we now possess irrefutable physical evidence\n that Quran is the infallible word of God, and that it was uttered by the Prophet\n Muhammad. Therefore, we obey the messenger by obeying Quran; nothing\n but Quran.",
       "embedded_blocks": [
@@ -196387,7 +196387,7 @@
           "line_num": 4,
           "text": "sources. After verifying that his source is “truthful,” and known as a man or",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             49,
             691,
@@ -200587,7 +200587,7 @@
           "words": [
             {
               "text": ";",
-              "conf": 0.0,
+              "conf": 0,
               "left": 101,
               "top": 693,
               "width": 3,
@@ -205101,7 +205101,7 @@
           "words": [
             {
               "text": "إكتيم|",
-              "conf": 0.0,
+              "conf": 0,
               "left": 154,
               "top": 507,
               "width": 143,
@@ -205251,7 +205251,7 @@
             },
             {
               "text": "posal",
-              "conf": 0.0,
+              "conf": 0,
               "left": 220,
               "top": 593,
               "width": 365,
@@ -205315,7 +205315,7 @@
             },
             {
               "text": "ealOE|",
-              "conf": 0.0,
+              "conf": 0,
               "left": 810,
               "top": 608,
               "width": 147,
@@ -210784,7 +210784,7 @@
             },
             {
               "text": "religious",
-              "conf": 0.0,
+              "conf": 0,
               "left": 344,
               "top": 1311,
               "width": 177,
@@ -213678,7 +213678,7 @@
           "line_num": 1,
           "text": "_",
           "script": "other",
-          "confidence": 59.0,
+          "confidence": 59,
           "bbox_px": [
             1070,
             1189,

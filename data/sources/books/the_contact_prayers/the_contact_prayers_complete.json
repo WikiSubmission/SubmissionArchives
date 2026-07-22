@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "The Contact Prayers",
-    "source_pdf": "The Contact Prayers.pdf",
+    "source_pdf": "salat-booklet.pdf",
     "pdf_page_count": 8,
     "transcription_method": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "arabic_policy": "Quranic Arabic matched to a verified Unicode Quran corpus when the printed reference/OCR supported a match. Other Arabic is retained as OCR and explicitly flagged when unverified."
@@ -8083,7 +8083,7 @@
           "text": "Following any sexual activity that results in a climax (orgasm/ejaculation), one\nmust bathe or take a shower (4:43).",
           "bbox_pdf": [
             70.944,
-            508.0,
+            508,
             527.525,
             540.943
           ],
@@ -20591,7 +20591,7 @@
           "line_num": 5,
           "text": "3. AR RAHMAANIR RAHEEM.",
           "script": "latin",
-          "confidence": 94.0,
+          "confidence": 94,
           "bbox_px": [
             250,
             474,
@@ -26357,7 +26357,7 @@
           "words": [
             {
               "text": "A’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 220,
               "top": 618,
               "width": 29,
@@ -26373,7 +26373,7 @@
             },
             {
               "text": "laa”",
-              "conf": 0.0,
+              "conf": 0,
               "left": 252,
               "top": 622,
               "width": 58,

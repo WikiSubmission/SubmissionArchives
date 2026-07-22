@@ -14,7 +14,7 @@ export function CtaLink({ href, label }: { href: string; label: string }) {
             </span>
             <span
                 aria-hidden="true"
-                className="grid h-8 w-8 place-items-center rounded-full border border-ed-rule text-ed-fg transition-all duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 group-hover:border-ed-accent group-hover:bg-ed-accent group-hover:text-ed-bg"
+                className="grid h-8 w-8 place-items-center rounded-none border border-ed-rule text-ed-fg transition-all duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 group-hover:border-ed-accent group-hover:bg-ed-accent group-hover:text-ed-bg"
             >
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </span>

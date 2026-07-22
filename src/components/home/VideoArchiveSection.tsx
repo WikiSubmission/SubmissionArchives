@@ -114,7 +114,7 @@ export function VideoArchiveSection() {
 
             <Reveal delay={160} className="min-w-0">
                 <div ref={rootRef} {...interactionProps} className="touch-pan-y">
-                    <div className="lift-card relative overflow-hidden rounded-[var(--ed-radius-lg)] border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-md)]">
+                    <div className="lift-card relative overflow-hidden rounded-none border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-md)]">
                         <span
                             aria-hidden="true"
                             className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-transparent via-ed-accent/60 to-transparent"
@@ -160,7 +160,7 @@ export function VideoArchiveSection() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
                             <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
-                                <span className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur-md transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-110 group-hover:border-ed-console-accent group-hover:bg-ed-console-accent group-hover:text-ed-console">
+                                <span className="inline-flex h-12 w-12 items-center justify-center rounded-none border border-white/25 bg-white/10 text-white backdrop-blur-md transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 group-hover:border-ed-console-accent group-hover:bg-ed-console-accent group-hover:text-ed-console">
                                     <Play className="ml-0.5 h-5 w-5 fill-current" aria-hidden="true" />
                                 </span>
                                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.17em] text-ed-console-accent">
@@ -184,7 +184,7 @@ export function VideoArchiveSection() {
                                         itemIndex === index ? 'ring-2 ring-inset ring-ed-accent' : 'hover:bg-ed-surface'
                                     }`}
                                 >
-                                    <span className="relative block aspect-video overflow-hidden rounded-[3px] bg-ed-console">
+                                    <span className="relative block aspect-video overflow-hidden rounded-none bg-ed-console">
                                         <Image
                                             src={item.src}
                                             alt=""
@@ -225,7 +225,7 @@ function ControlButton({
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-[var(--ed-radius-sm)] border border-ed-rule bg-ed-surface text-ed-fg-muted transition-[color,border-color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 hover:border-ed-accent/60 hover:text-ed-accent hover:shadow-[var(--ed-shadow-sm)] active:scale-95"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-none border border-ed-rule bg-ed-surface text-ed-fg-muted transition-[color,border-color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 hover:border-ed-accent/60 hover:text-ed-accent hover:shadow-[var(--ed-shadow-sm)] active:scale-95"
         >
             {children}
         </button>

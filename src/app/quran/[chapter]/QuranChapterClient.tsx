@@ -323,7 +323,7 @@ export default function QuranChapterClient({ chapter, prev, next, initialVerse, 
                                 value={query}
                                 onChange={(event) => setQuery(event.target.value)}
                                 placeholder="Search within this sura..."
-                                className="archive-input w-full rounded-full py-3 pl-11 pr-4 shadow-sm transition-shadow focus:shadow-[var(--ed-shadow-md)]"
+                                className="archive-input w-full rounded-none py-3 pl-11 pr-4 shadow-sm transition-shadow focus:shadow-[var(--ed-shadow-md)]"
                             />
                         </div>
                         <p aria-live="polite" className="h-5 pt-2 text-xs text-ed-fg-muted">

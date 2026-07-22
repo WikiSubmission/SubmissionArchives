@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "ETERNITY - Screenplay",
-    "source_pdf": "ETERNITY - Screenplay(1).pdf",
+    "source_pdf": "eternity-screenplay.pdf",
     "pdf_page_count": 94,
     "transcription_method": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "arabic_policy": "Quranic Arabic matched to a verified Unicode Quran corpus when the printed reference/OCR supported a match. Other Arabic is retained as OCR and explicitly flagged when unverified."
@@ -1276,7 +1276,7 @@
             },
             {
               "text": "BAND",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1402,
               "top": 683,
               "width": 78,
@@ -10768,7 +10768,7 @@
             },
             {
               "text": "tne",
-              "conf": 0.0,
+              "conf": 0,
               "left": 554,
               "top": 329,
               "width": 103,
@@ -13196,7 +13196,7 @@
           "line_num": 1,
           "text": "(1858 + 1885)",
           "script": "other",
-          "confidence": 88.0,
+          "confidence": 88,
           "bbox_px": [
             702,
             1476,
@@ -13266,7 +13266,7 @@
           "line_num": 1,
           "text": "KARKEKEKEEKKEKREKEKEEREKEKUEKREKRUEEEREEKEEERER",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             425,
             1553,
@@ -13282,7 +13282,7 @@
           "words": [
             {
               "text": "KARKEKEKEEKKEKREKEKEEREKEKUEKREKRUEEEREEKEEERER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 425,
               "top": 1553,
               "width": 809,
@@ -16905,7 +16905,7 @@
           "words": [
             {
               "text": "'",
-              "conf": 0.0,
+              "conf": 0,
               "left": 474,
               "top": 1123,
               "width": 3,
@@ -19510,7 +19510,7 @@
           "words": [
             {
               "text": "newspapers.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 199,
               "top": 365,
               "width": 206,
@@ -22838,7 +22838,7 @@
           "line_num": 8,
           "text": "ten chapters, and was passed down",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             485,
             1971,
@@ -23721,7 +23721,7 @@
           "words": [
             {
               "text": "\\",
-              "conf": 0.0,
+              "conf": 0,
               "left": 217,
               "top": 227,
               "width": 30,
@@ -28128,14 +28128,14 @@
         1667,
         2358
       ],
-      "ocr_eng_confidence": 93.0,
+      "ocr_eng_confidence": 93,
       "ocr_arabic_confidence": null,
       "ocr_variants": [
         {
           "lang": "eng+ara",
           "psm": 3,
           "score": 109.21292179724641,
-          "eng_conf": 93.0,
+          "eng_conf": 93,
           "text_len": 1946
         }
       ],
@@ -31314,7 +31314,7 @@
           "line_num": 1,
           "text": "STAMFORD",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             1315,
             1447,
@@ -31330,7 +31330,7 @@
           "words": [
             {
               "text": "STAMFORD",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1315,
               "top": 1447,
               "width": 153,
@@ -37189,7 +37189,7 @@
           "line_num": 1,
           "text": "REKKEKEKKEEEKERAKIEN",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             637,
             2139,
@@ -37205,7 +37205,7 @@
           "words": [
             {
               "text": "REKKEKEKKEEEKERAKIEN",
-              "conf": 0.0,
+              "conf": 0,
               "left": 637,
               "top": 2139,
               "width": 359,
@@ -37428,7 +37428,7 @@
             },
             {
               "text": "<<",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1100,
               "top": 107,
               "width": 18,
@@ -39438,7 +39438,7 @@
           "words": [
             {
               "text": "particulars",
-              "conf": 0.0,
+              "conf": 0,
               "left": 97,
               "top": 1068,
               "width": 206,
@@ -43087,7 +43087,7 @@
           "words": [
             {
               "text": "COMMITTEE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 684,
               "top": 558,
               "width": 173,
@@ -50244,7 +50244,7 @@
             },
             {
               "text": "ج4",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1317,
               "top": 1771,
               "width": 13,
@@ -50340,7 +50340,7 @@
             },
             {
               "text": "أ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1199,
               "top": 1777,
               "width": 9,
@@ -50852,7 +50852,7 @@
             },
             {
               "text": "KERRIER‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 412,
               "top": 1777,
               "width": 203,
@@ -50868,7 +50868,7 @@
             },
             {
               "text": "EHR",
-              "conf": 0.0,
+              "conf": 0,
               "left": 335,
               "top": 1771,
               "width": 49,
@@ -50884,7 +50884,7 @@
             },
             {
               "text": "POERERKE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 199,
               "top": 1775,
               "width": 165,
@@ -52255,7 +52255,7 @@
           "words": [
             {
               "text": "OOORARRERKKKKKE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 207,
               "top": 351,
               "width": 280,
@@ -52271,7 +52271,7 @@
             },
             {
               "text": "KEKKEKKREKKKEKEKKKEKER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 493,
               "top": 345,
               "width": 322,
@@ -52287,7 +52287,7 @@
             },
             {
               "text": "EKER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 824,
               "top": 351,
               "width": 67,
@@ -52399,7 +52399,7 @@
             },
             {
               "text": "AK",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1014,
               "top": 351,
               "width": 31,
@@ -52415,7 +52415,7 @@
             },
             {
               "text": "KEKEEKREREKREKEEREEREREKE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1055,
               "top": 345,
               "width": 397,
@@ -60701,7 +60701,7 @@
             },
             {
               "text": "Rit+Seventy*Six.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 586,
               "top": 508,
               "width": 303,
@@ -60739,7 +60739,7 @@
           "words": [
             {
               "text": "RiteSeventy-Six",
-              "conf": 0.0,
+              "conf": 0,
               "left": 204,
               "top": 587,
               "width": 282,
@@ -61065,7 +61065,7 @@
             },
             {
               "text": "color-coded",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1104,
               "top": 622,
               "width": 211,
@@ -85804,7 +85804,7 @@
           "line_num": 5,
           "text": "| low over the plane of the solar system,",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             1036,
             1646,
@@ -86168,7 +86168,7 @@
             },
             {
               "text": "SYSTEM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 679,
               "top": 2066,
               "width": 114,
@@ -86957,7 +86957,7 @@
             },
             {
               "text": "4,378,247,0195\t1\t4\t1\t1\t4\t780\t737\t129\t30\t88.751404\tMILFS,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 494,
               "top": 740,
               "width": 264,
@@ -98498,7 +98498,7 @@
             },
             {
               "text": "iittle",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1067,
               "top": 2162,
               "width": 112,
@@ -99597,7 +99597,7 @@
           "line_num": 2,
           "text": "(Wiping his mouth with a",
           "script": "latin",
-          "confidence": 92.0,
+          "confidence": 92,
           "bbox_px": [
             575,
             684,
@@ -100205,7 +100205,7 @@
           "line_num": 5,
           "text": "I dot",
           "script": "latin",
-          "confidence": 92.0,
+          "confidence": 92,
           "bbox_px": [
             493,
             1031,
@@ -107807,7 +107807,7 @@
             },
             {
               "text": "Un",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1025,
               "top": 611,
               "width": 22,
@@ -111266,7 +111266,7 @@
             },
             {
               "text": "ETFRNITY",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1265,
               "top": 144,
               "width": 150,
@@ -119461,7 +119461,7 @@
           "line_num": 2,
           "text": "We are heading for a black hole.",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             486,
             2087,
@@ -134025,7 +134025,7 @@
           "line_num": 2,
           "text": "Israelites camping in Sinai.",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             200,
             972,
@@ -137492,7 +137492,7 @@
           "line_num": 2,
           "text": "good new. Aaron will take my",
           "script": "latin",
-          "confidence": 89.0,
+          "confidence": 89,
           "bbox_px": [
             489,
             507,
@@ -146662,7 +146662,7 @@
           "words": [
             {
               "text": "“",
-              "conf": 0.0,
+              "conf": 0,
               "left": 606,
               "top": 244,
               "width": 12,
@@ -159109,7 +159109,7 @@
             },
             {
               "text": "a",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1302,
               "top": 322,
               "width": 16,
@@ -159125,7 +159125,7 @@
             },
             {
               "text": "sea",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1341,
               "top": 322,
               "width": 54,
@@ -167345,7 +167345,7 @@
           "line_num": 2,
           "text": "yes, Sir.",
           "script": "latin",
-          "confidence": 80.0,
+          "confidence": 80,
           "bbox_px": [
             492,
             318,
@@ -167399,7 +167399,7 @@
           "line_num": 1,
           "text": "She puts on her head set, then fiddles with a number of buttons",
           "script": "latin",
-          "confidence": 92.0,
+          "confidence": 92,
           "bbox_px": [
             200,
             395,
@@ -169415,7 +169415,7 @@
             },
             {
               "text": "SHFAPD",
-              "conf": 0.0,
+              "conf": 0,
               "left": 857,
               "top": 1207,
               "width": 115,
@@ -169593,7 +169593,7 @@
           "words": [
             {
               "text": "«..uh...let",
-              "conf": 0.0,
+              "conf": 0,
               "left": 494,
               "top": 1320,
               "width": 206,
@@ -171199,7 +171199,7 @@
           "words": [
             {
               "text": "Eternity",
-              "conf": 0.0,
+              "conf": 0,
               "left": 196,
               "top": 2194,
               "width": 189,
@@ -177769,7 +177769,7 @@
             },
             {
               "text": "ANDERSON",
-              "conf": 0.0,
+              "conf": 0,
               "left": 797,
               "top": 1300,
               "width": 151,
@@ -185081,7 +185081,7 @@
           "line_num": 1,
           "text": "(Looking at Mu~One-Nine)",
           "script": "latin",
-          "confidence": 89.0,
+          "confidence": 89,
           "bbox_px": [
             596,
             765,
@@ -189074,7 +189074,7 @@
           "line_num": 8,
           "text": "coat your spaceship with a",
           "script": "latin",
-          "confidence": 81.0,
+          "confidence": 81,
           "bbox_px": [
             489,
             992,
@@ -189552,7 +189552,7 @@
           "line_num": 3,
           "text": "who grants such authorizations?",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             485,
             1219,
@@ -192459,7 +192459,7 @@
             },
             {
               "text": "87,AR2,912,4655\t1\t5\t1\t2\t7\t1011\t784\t98\t24\t83.453445\tLIGHT5\t1\t5\t1\t2\t8\t1126\t777\t130\t33\t64.247803\tYFARS,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 706,
               "top": 781,
               "width": 283,
@@ -193913,7 +193913,7 @@
           "line_num": 6,
           "text": "the speed of thinking and telling",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             488,
             1430,
@@ -195710,7 +195710,7 @@
           "line_num": 1,
           "text": "MYJ~ONF—NINE,",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             730,
             391,
@@ -195726,7 +195726,7 @@
           "words": [
             {
               "text": "MYJ~ONF—NINE,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 730,
               "top": 391,
               "width": 211,
@@ -204966,7 +204966,7 @@
             },
             {
               "text": "Gumb",
-              "conf": 0.0,
+              "conf": 0,
               "left": 894,
               "top": 1046,
               "width": 78,
@@ -213936,7 +213936,7 @@
           "line_num": 1,
           "text": "INT. SPACESHIP - CONTROL ROOM",
           "script": "latin",
-          "confidence": 93.0,
+          "confidence": 93,
           "bbox_px": [
             197,
             1701,
@@ -218806,7 +218806,7 @@
             },
             {
               "text": "KEKE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 531,
               "top": 1185,
               "width": 52,
@@ -218822,7 +218822,7 @@
             },
             {
               "text": "EEK",
-              "conf": 0.0,
+              "conf": 0,
               "left": 611,
               "top": 1190,
               "width": 48,
@@ -218838,7 +218838,7 @@
             },
             {
               "text": "EEE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 669,
               "top": 1190,
               "width": 68,
@@ -218854,7 +218854,7 @@
             },
             {
               "text": "KEEEEKERKEKKKKERKKEEKKKKEKEEKEKKEEKKKK",
-              "conf": 0.0,
+              "conf": 0,
               "left": 743,
               "top": 1189,
               "width": 707,
@@ -218946,7 +218946,7 @@
             },
             {
               "text": "EERE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 495,
               "top": 1343,
               "width": 67,
@@ -218962,7 +218962,7 @@
             },
             {
               "text": "KEKEREKREEKEREE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 590,
               "top": 1337,
               "width": 262,
@@ -218978,7 +218978,7 @@
             },
             {
               "text": "EKER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 859,
               "top": 1342,
               "width": 68,
@@ -218994,7 +218994,7 @@
             },
             {
               "text": "EERE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 937,
               "top": 1342,
               "width": 67,
@@ -219010,7 +219010,7 @@
             },
             {
               "text": "KEK",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1011,
               "top": 1342,
               "width": 51,
@@ -219026,7 +219026,7 @@
             },
             {
               "text": "EKEKEREKEKEKEKEKKEKEKE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1068,
               "top": 1341,
               "width": 381,
@@ -220631,7 +220631,7 @@
           "words": [
             {
               "text": "created.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 198,
               "top": 738,
               "width": 175,
@@ -220647,7 +220647,7 @@
             },
             {
               "text": ":",
-              "conf": 0.0,
+              "conf": 0,
               "left": 366,
               "top": 734,
               "width": 15,
@@ -223945,7 +223945,7 @@
             },
             {
               "text": "ANGELS’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 312,
               "top": 1739,
               "width": 129,
@@ -224143,7 +224143,7 @@
             },
             {
               "text": "direction",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1163,
               "top": 1817,
               "width": 170,
@@ -226560,7 +226560,7 @@
             },
             {
               "text": "MICHARL",
-              "conf": 0.0,
+              "conf": 0,
               "left": 758,
               "top": 585,
               "width": 135,
@@ -237406,7 +237406,7 @@
             },
             {
               "text": "angels’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1067,
               "top": 1393,
               "width": 129,
@@ -238140,7 +238140,7 @@
           "line_num": 3,
           "text": "tail streaking across the universes like a falling ster, 211 the",
           "script": "latin",
-          "confidence": 87.0,
+          "confidence": 87,
           "bbox_px": [
             198,
             1623,
@@ -238440,7 +238440,7 @@
           "line_num": 1,
           "text": "EXT. THE SOLAR SYSTEM",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             197,
             1776,
@@ -254808,14 +254808,14 @@
         1667,
         2358
       ],
-      "ocr_eng_confidence": 91.0,
+      "ocr_eng_confidence": 91,
       "ocr_arabic_confidence": null,
       "ocr_variants": [
         {
           "lang": "eng+ara",
           "psm": 3,
           "score": 107.80702149137227,
-          "eng_conf": 91.0,
+          "eng_conf": 91,
           "text_len": 2214
         }
       ],
@@ -257174,7 +257174,7 @@
             },
             {
               "text": "Starie}",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1339,
               "top": 1181,
               "width": 130,
@@ -272269,7 +272269,7 @@
             },
             {
               "text": "revealing",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1051,
               "top": 669,
               "width": 167,
@@ -275758,7 +275758,7 @@
             },
             {
               "text": "ETERNITY",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1268,
               "top": 157,
               "width": 150,
@@ -281159,7 +281159,7 @@
           "line_num": 3,
           "text": "about Satan's statements. He swore",
           "script": "latin",
-          "confidence": 93.0,
+          "confidence": 93,
           "bbox_px": [
             491,
             455,
@@ -282115,7 +282115,7 @@
           "line_num": 2,
           "text": "and independent brains. I tend to",
           "script": "latin",
-          "confidence": 93.0,
+          "confidence": 93,
           "bbox_px": [
             490,
             920,
@@ -283075,7 +283075,7 @@
           "line_num": 1,
           "text": "Immediately, their bodies shrink with an aweful vacuum sound, as",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             200,
             1302,
@@ -284957,7 +284957,7 @@
             },
             {
               "text": "but",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1124,
               "top": 1996,
               "width": 56,
@@ -287156,7 +287156,7 @@
           "line_num": 1,
           "text": "EXT, HYPERSPACE",
           "script": "latin",
-          "confidence": 88.0,
+          "confidence": 88,
           "bbox_px": [
             199,
             1029,
@@ -287590,7 +287590,7 @@
           "line_num": 3,
           "text": "of the Paradise Planet, zooming by the camera to make Adam and",
           "script": "latin",
-          "confidence": 94.0,
+          "confidence": 94,
           "bbox_px": [
             197,
             1177,
@@ -288752,7 +288752,7 @@
             },
             {
               "text": "ANGELS’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 312,
               "top": 1646,
               "width": 129,
@@ -291259,7 +291259,7 @@
           "line_num": 1,
           "text": "Additional bubbles of light come in through’ the top, and carry",
           "script": "latin",
-          "confidence": 92.0,
+          "confidence": 92,
           "bbox_px": [
             196,
             547,
@@ -298042,7 +298042,7 @@
           "line_num": 3,
           "text": "direction.",
           "script": "latin",
-          "confidence": 71.0,
+          "confidence": 71,
           "bbox_px": [
             492,
             1798,
@@ -318993,7 +318993,7 @@
           "line_num": 1,
           "text": "If I am to prove my competence 25 ©",
           "script": "latin",
-          "confidence": 92.0,
+          "confidence": 92,
           "bbox_px": [
             493,
             1093,
@@ -327931,7 +327931,7 @@
           "line_num": 3,
           "text": "the family car are in bad shape, bleeding all over the car's",
           "script": "latin",
-          "confidence": 94.0,
+          "confidence": 94,
           "bbox_px": [
             200,
             350,
@@ -328349,7 +328349,7 @@
           "line_num": 2,
           "text": "PARAMEDICS work on the family car's passengers,then carry the",
           "script": "latin",
-          "confidence": 94.0,
+          "confidence": 94,
           "bbox_px": [
             199,
             507,
@@ -339469,7 +339469,7 @@
           "line_num": 4,
           "text": "scriptures a bad name. There is a",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             516,
             1237,
@@ -341534,7 +341534,7 @@
             },
             {
               "text": "FTRRNITY",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1261,
               "top": 121,
               "width": 149,
@@ -346247,7 +346247,7 @@
             },
             {
               "text": "ETRRNYITY",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1260,
               "top": 138,
               "width": 150,
@@ -348363,7 +348363,7 @@
             },
             {
               "text": "BROADCASTING",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1144,
               "top": 1085,
               "width": 227,
@@ -354506,7 +354506,7 @@
             },
             {
               "text": "preacher's",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1046,
               "top": 1497,
               "width": 192,
@@ -355332,7 +355332,7 @@
             },
             {
               "text": "HUSBAND.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 292,
               "top": 1842,
               "width": 149,
@@ -357373,7 +357373,7 @@
           "line_num": 1,
           "text": "PREACHER",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             764,
             687,
@@ -357389,7 +357389,7 @@
           "words": [
             {
               "text": "PREACHER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 764,
               "top": 687,
               "width": 153,
@@ -366385,7 +366385,7 @@
           "line_num": 1,
           "text": "He is angry and flying at incredible speed, Camera 700105 AWAY to",
           "script": "latin",
-          "confidence": 89.0,
+          "confidence": 89,
           "bbox_px": [
             202,
             263,
@@ -369211,7 +369211,7 @@
             },
             {
               "text": "innermost",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1013,
               "top": 1375,
               "width": 168,
@@ -392332,7 +392332,7 @@
             },
             {
               "text": "confirm",
-              "conf": 0.0,
+              "conf": 0,
               "left": 589,
               "top": 1235,
               "width": 135,
@@ -402668,7 +402668,7 @@
           "line_num": 1,
           "text": "Kathleen Sheard flips a number of switches and checks her",
           "script": "latin",
-          "confidence": 84.0,
+          "confidence": 84,
           "bbox_px": [
             200,
             1913,
@@ -402684,7 +402684,7 @@
           "words": [
             {
               "text": "Kathleen",
-              "conf": 0.0,
+              "conf": 0,
               "left": 200,
               "top": 1914,
               "width": 155,
@@ -405877,7 +405877,7 @@
           "words": [
             {
               "text": "«+H...",
-              "conf": 0.0,
+              "conf": 0,
               "left": 508,
               "top": 1458,
               "width": 341,
@@ -411074,7 +411074,7 @@
           "words": [
             {
               "text": "cotet",
-              "conf": 0.0,
+              "conf": 0,
               "left": 736,
               "top": 1669,
               "width": 46,
@@ -411198,7 +411198,7 @@
           "words": [
             {
               "text": "KHEEEKEKEKEE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 411,
               "top": 1752,
               "width": 208,
@@ -411214,7 +411214,7 @@
             },
             {
               "text": "KER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 629,
               "top": 1758,
               "width": 50,
@@ -411230,7 +411230,7 @@
             },
             {
               "text": "KER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 704,
               "top": 1758,
               "width": 50,
@@ -411246,7 +411246,7 @@
             },
             {
               "text": "EER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 761,
               "top": 1758,
               "width": 51,
@@ -411262,7 +411262,7 @@
             },
             {
               "text": "EKEKKKEKREKKEREK",
-              "conf": 0.0,
+              "conf": 0,
               "left": 817,
               "top": 1756,
               "width": 439,
@@ -411482,7 +411482,7 @@
             },
             {
               "text": "عاد",
-              "conf": 0.0,
+              "conf": 0,
               "left": 529,
               "top": 1904,
               "width": 12,
@@ -411546,7 +411546,7 @@
             },
             {
               "text": "KEE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 608,
               "top": 1912,
               "width": 51,
@@ -411562,7 +411562,7 @@
             },
             {
               "text": "KKERERER",
-              "conf": 0.0,
+              "conf": 0,
               "left": 666,
               "top": 1911,
               "width": 144,
@@ -411594,7 +411594,7 @@
             },
             {
               "text": "EEREREREREKEEEEKEKKEKE‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 855,
               "top": 1908,
               "width": 401,

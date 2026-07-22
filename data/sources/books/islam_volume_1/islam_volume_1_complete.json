@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "ISLAM - Volume 1, Number 1 (April 1974)",
-    "source_pdf": "ISLAM - Volume 1, Number 1 (April 1974).pdf",
+    "source_pdf": "islam-volume-1-number-1-april-1974.pdf",
     "pdf_page_count": 90,
     "transcription_method": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "arabic_policy": "Quranic Arabic matched to a verified Unicode Quran corpus when the printed reference/OCR supported a match. Other Arabic is retained as OCR and explicitly flagged when unverified."
@@ -12,7 +12,7 @@
       "pdf_page": 1,
       "page_size_pdf_points": [
         499.1199951171875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -283,7 +283,7 @@
           "words": [
             {
               "text": "pphanannans",
-              "conf": 0.0,
+              "conf": 0,
               "left": 478,
               "top": 876,
               "width": 372,
@@ -1738,7 +1738,7 @@
       "pdf_page": 2,
       "page_size_pdf_points": [
         477.8800048828125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -1853,7 +1853,7 @@
           "words": [
             {
               "text": "apenas",
-              "conf": 0.0,
+              "conf": 0,
               "left": 342,
               "top": 639,
               "width": 208,
@@ -1977,7 +1977,7 @@
           "words": [
             {
               "text": "edit.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 641,
               "top": 685,
               "width": 167,
@@ -2187,7 +2187,7 @@
             },
             {
               "text": "Wiley",
-              "conf": 0.0,
+              "conf": 0,
               "left": 408,
               "top": 793,
               "width": 56,
@@ -2661,7 +2661,7 @@
             },
             {
               "text": "pbdlacl‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 481,
               "top": 1121,
               "width": 118,
@@ -2753,7 +2753,7 @@
             },
             {
               "text": "WSF‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 359,
               "top": 1207,
               "width": 212,
@@ -3195,7 +3195,7 @@
           "line_num": 13,
           "text": "S453‏",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             437,
             1642,
@@ -3211,7 +3211,7 @@
           "words": [
             {
               "text": "S453‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 437,
               "top": 1642,
               "width": 115,
@@ -3258,7 +3258,7 @@
       "pdf_page": 3,
       "page_size_pdf_points": [
         498.6400146484375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -3271,7 +3271,7 @@
           "line_num": 1,
           "text": "HABA",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             416,
             553,
@@ -3287,7 +3287,7 @@
           "words": [
             {
               "text": "HABA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 416,
               "top": 553,
               "width": 408,
@@ -3443,7 +3443,7 @@
             },
             {
               "text": "]أن",
-              "conf": 0.0,
+              "conf": 0,
               "left": 594,
               "top": 724,
               "width": 114,
@@ -4423,10 +4423,10 @@
             2218
           ],
           "bbox_normalized": [
-            0.0,
+            0,
             0.917042,
             0.010737,
-            1.0
+            1
           ],
           "words": [
             {
@@ -4447,7 +4447,7 @@
             },
             {
               "text": "aad",
-              "conf": 0.0,
+              "conf": 0,
               "left": 0,
               "top": 2089,
               "width": 15,
@@ -4546,7 +4546,7 @@
       "pdf_page": 4,
       "page_size_pdf_points": [
         484.1199951171875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -4757,7 +4757,7 @@
             },
             {
               "text": "fiel¢",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1185,
               "top": 537,
               "width": 52,
@@ -5443,7 +5443,7 @@
           "line_num": 1,
           "text": "Tia is not inten «",
           "script": "latin",
-          "confidence": 64.0,
+          "confidence": 64,
           "bbox_px": [
             405,
             682,
@@ -5523,7 +5523,7 @@
             },
             {
               "text": "«",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1078,
               "top": 707,
               "width": 5,
@@ -8877,7 +8877,7 @@
             },
             {
               "text": "Quranic",
-              "conf": 0.0,
+              "conf": 0,
               "left": 353,
               "top": 1571,
               "width": 119,
@@ -9601,7 +9601,7 @@
           "words": [
             {
               "text": "-Teference",
-              "conf": 0.0,
+              "conf": 0,
               "left": 176,
               "top": 1777,
               "width": 135,
@@ -9822,7 +9822,7 @@
       "document_slug": "islam_volume_1",
       "pdf_page": 5,
       "page_size_pdf_points": [
-        612.0,
+        612,
         777.1500244140625
       ],
       "embedded_text": "",
@@ -12748,7 +12748,7 @@
             },
             {
               "text": "Quranic",
-              "conf": 0.0,
+              "conf": 0,
               "left": 724,
               "top": 1304,
               "width": 160,
@@ -13595,7 +13595,7 @@
       "pdf_page": 6,
       "page_size_pdf_points": [
         569.52001953125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -15694,7 +15694,7 @@
           "words": [
             {
               "text": "whmieraeras",
-              "conf": 0.0,
+              "conf": 0,
               "left": 809,
               "top": 1362,
               "width": 112,
@@ -15786,7 +15786,7 @@
       "pdf_page": 7,
       "page_size_pdf_points": [
         513.1799926757812,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -15808,7 +15808,7 @@
           ],
           "bbox_normalized": [
             0.214335,
-            0.0,
+            0,
             0.755045,
             0.105951
           ],
@@ -15901,7 +15901,7 @@
             },
             {
               "text": "Pritikin",
-              "conf": 0.0,
+              "conf": 0,
               "left": 839,
               "top": 192,
               "width": 154,
@@ -16417,7 +16417,7 @@
           "words": [
             {
               "text": "Phe,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 89,
               "top": 852,
               "width": 74,
@@ -16433,7 +16433,7 @@
             },
             {
               "text": "Our",
-              "conf": 0.0,
+              "conf": 0,
               "left": 194,
               "top": 850,
               "width": 68,
@@ -16481,7 +16481,7 @@
             },
             {
               "text": "..........s.c..-.<cc0deseeees.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 692,
               "top": 886,
               "width": 399,
@@ -16969,7 +16969,7 @@
             },
             {
               "text": "......0.......",
-              "conf": 0.0,
+              "conf": 0,
               "left": 819,
               "top": 1176,
               "width": 271,
@@ -17291,7 +17291,7 @@
             },
             {
               "text": "0000002022:",
-              "conf": 0.0,
+              "conf": 0,
               "left": 647,
               "top": 1369,
               "width": 433,
@@ -17565,7 +17565,7 @@
             },
             {
               "text": "................++",
-              "conf": 0.0,
+              "conf": 0,
               "left": 796,
               "top": 1672,
               "width": 215,
@@ -17715,7 +17715,7 @@
             },
             {
               "text": "................:000",
-              "conf": 0.0,
+              "conf": 0,
               "left": 808,
               "top": 1730,
               "width": 281,
@@ -17983,7 +17983,7 @@
             },
             {
               "text": "...............++",
-              "conf": 0.0,
+              "conf": 0,
               "left": 874,
               "top": 1849,
               "width": 213,
@@ -18123,7 +18123,7 @@
             },
             {
               "text": "inte",
-              "conf": 0.0,
+              "conf": 0,
               "left": 820,
               "top": 1895,
               "width": 67,
@@ -18139,7 +18139,7 @@
             },
             {
               "text": "nsnenternensences",
-              "conf": 0.0,
+              "conf": 0,
               "left": 895,
               "top": 1922,
               "width": 192,
@@ -18183,7 +18183,7 @@
       "pdf_page": 8,
       "page_size_pdf_points": [
         473.2799987792969,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -24802,7 +24802,7 @@
       "pdf_page": 9,
       "page_size_pdf_points": [
         466.2900085449219,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -25987,7 +25987,7 @@
             },
             {
               "text": "an",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1181,
               "top": 496,
               "width": 81,
@@ -26185,7 +26185,7 @@
             },
             {
               "text": "a",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1167,
               "top": 521,
               "width": 28,
@@ -32069,7 +32069,7 @@
       "pdf_page": 10,
       "page_size_pdf_points": [
         482.010009765625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -40376,7 +40376,7 @@
       "pdf_page": 11,
       "page_size_pdf_points": [
         481.5799865722656,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -43209,7 +43209,7 @@
           "words": [
             {
               "text": "إرأواته‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 436,
               "top": 773,
               "width": 78,
@@ -43241,7 +43241,7 @@
             },
             {
               "text": "Nz",
-              "conf": 0.0,
+              "conf": 0,
               "left": 603,
               "top": 778,
               "width": 54,
@@ -43257,7 +43257,7 @@
             },
             {
               "text": "‘yp",
-              "conf": 0.0,
+              "conf": 0,
               "left": 914,
               "top": 783,
               "width": 49,
@@ -43273,7 +43273,7 @@
             },
             {
               "text": "DS]",
-              "conf": 0.0,
+              "conf": 0,
               "left": 971,
               "top": 787,
               "width": 67,
@@ -43675,7 +43675,7 @@
             },
             {
               "text": "DBO",
-              "conf": 0.0,
+              "conf": 0,
               "left": 984,
               "top": 957,
               "width": 126,
@@ -43763,7 +43763,7 @@
       "pdf_page": 12,
       "page_size_pdf_points": [
         482.0299987792969,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -44092,7 +44092,7 @@
           "words": [
             {
               "text": "-",
-              "conf": 0.0,
+              "conf": 0,
               "left": 65,
               "top": 280,
               "width": 2,
@@ -45408,7 +45408,7 @@
           "words": [
             {
               "text": "OPONS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 414,
               "top": 539,
               "width": 96,
@@ -45526,7 +45526,7 @@
             },
             {
               "text": "yp",
-              "conf": 0.0,
+              "conf": 0,
               "left": 563,
               "top": 574,
               "width": 51,
@@ -45762,7 +45762,7 @@
             },
             {
               "text": "dybngtend",
-              "conf": 0.0,
+              "conf": 0,
               "left": 617,
               "top": 648,
               "width": 141,
@@ -48528,7 +48528,7 @@
           "line_num": 5,
           "text": ";portions of Jesus’ teaching — Jesus informs his close companions that his",
           "script": "latin",
-          "confidence": 88.0,
+          "confidence": 88,
           "bbox_px": [
             80,
             1347,
@@ -48544,7 +48544,7 @@
           "words": [
             {
               "text": ";portions",
-              "conf": 0.0,
+              "conf": 0,
               "left": 80,
               "top": 1350,
               "width": 115,
@@ -49406,7 +49406,7 @@
           "words": [
             {
               "text": "dace",
-              "conf": 0.0,
+              "conf": 0,
               "left": 272,
               "top": 1607,
               "width": 61,
@@ -49668,7 +49668,7 @@
             },
             {
               "text": "adnOelas",
-              "conf": 0.0,
+              "conf": 0,
               "left": 424,
               "top": 1640,
               "width": 111,
@@ -50370,7 +50370,7 @@
             },
             {
               "text": "adnBelas,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 327,
               "top": 1838,
               "width": 116,
@@ -50386,7 +50386,7 @@
             },
             {
               "text": "بعرجقة‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 459,
               "top": 1835,
               "width": 109,
@@ -50482,7 +50482,7 @@
             },
             {
               "text": "aij-",
-              "conf": 0.0,
+              "conf": 0,
               "left": 853,
               "top": 1829,
               "width": 56,
@@ -50852,7 +50852,7 @@
             },
             {
               "text": "Sokaoet",
-              "conf": 0.0,
+              "conf": 0,
               "left": 415,
               "top": 1943,
               "width": 94,
@@ -50968,7 +50968,7 @@
       "pdf_page": 13,
       "page_size_pdf_points": [
         466.1000061035156,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -55135,7 +55135,7 @@
             },
             {
               "text": "-",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1276,
               "top": 1173,
               "width": 1,
@@ -58543,7 +58543,7 @@
             },
             {
               "text": "Gay",
-              "conf": 0.0,
+              "conf": 0,
               "left": 823,
               "top": 1819,
               "width": 68,
@@ -59362,7 +59362,7 @@
       "pdf_page": 14,
       "page_size_pdf_points": [
         508.5,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -59701,7 +59701,7 @@
             },
             {
               "text": "mveipa",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1084,
               "top": 158,
               "width": 92,
@@ -59755,7 +59755,7 @@
             },
             {
               "text": "ddnBetas,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 150,
               "top": 198,
               "width": 118,
@@ -68601,7 +68601,7 @@
       "pdf_page": 15,
       "page_size_pdf_points": [
         470.0400085449219,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -68828,7 +68828,7 @@
             },
             {
               "text": "insigy:",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1205,
               "top": 224,
               "width": 72,
@@ -69684,7 +69684,7 @@
             },
             {
               "text": "وميم‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1206,
               "top": 361,
               "width": 72,
@@ -70016,7 +70016,7 @@
             },
             {
               "text": ".",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1263,
               "top": 429,
               "width": 12,
@@ -74607,7 +74607,7 @@
       "pdf_page": 16,
       "page_size_pdf_points": [
         490.92999267578125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -80930,7 +80930,7 @@
       "pdf_page": 17,
       "page_size_pdf_points": [
         538.4500122070312,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -81531,7 +81531,7 @@
             },
             {
               "text": "ele",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1149,
               "top": 209,
               "width": 46,
@@ -81547,7 +81547,7 @@
             },
             {
               "text": "tas",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1214,
               "top": 232,
               "width": 56,
@@ -81831,7 +81831,7 @@
           "words": [
             {
               "text": "tAbdullahwnste",
-              "conf": 0.0,
+              "conf": 0,
               "left": 371,
               "top": 1988,
               "width": 195,
@@ -81847,7 +81847,7 @@
             },
             {
               "text": "mmrniae",
-              "conf": 0.0,
+              "conf": 0,
               "left": 676,
               "top": 1973,
               "width": 130,
@@ -82265,7 +82265,7 @@
             },
             {
               "text": "Muha",
-              "conf": 0.0,
+              "conf": 0,
               "left": 399,
               "top": 2161,
               "width": 71,
@@ -82311,7 +82311,7 @@
       "pdf_page": 18,
       "page_size_pdf_points": [
         543.8699951171875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -82554,7 +82554,7 @@
           "bbox_normalized": [
             0.424163,
             0.092426,
-            1.0,
+            1,
             0.12083
           ],
           "words": [
@@ -82742,7 +82742,7 @@
           "bbox_normalized": [
             0.296783,
             0.15239,
-            1.0,
+            1,
             0.17899
           ],
           "words": [
@@ -82780,7 +82780,7 @@
             },
             {
               "text": "eure",
-              "conf": 0.0,
+              "conf": 0,
               "left": 726,
               "top": 352,
               "width": 39,
@@ -82828,7 +82828,7 @@
             },
             {
               "text": "واللوم‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 879,
               "top": 352,
               "width": 28,
@@ -82860,7 +82860,7 @@
             },
             {
               "text": "ais",
-              "conf": 0.0,
+              "conf": 0,
               "left": 975,
               "top": 352,
               "width": 23,
@@ -82876,7 +82876,7 @@
             },
             {
               "text": "اذاف‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1011,
               "top": 352,
               "width": 40,
@@ -82956,7 +82956,7 @@
           "bbox_normalized": [
             0.296126,
             0.172227,
-            1.0,
+            1,
             0.205591
           ],
           "words": [
@@ -82994,7 +82994,7 @@
             },
             {
               "text": "(Brena)",
-              "conf": 0.0,
+              "conf": 0,
               "left": 564,
               "top": 419,
               "width": 102,
@@ -83074,7 +83074,7 @@
             },
             {
               "text": "romnise",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1417,
               "top": 382,
               "width": 106,
@@ -83144,7 +83144,7 @@
             },
             {
               "text": "+++",
-              "conf": 0.0,
+              "conf": 0,
               "left": 688,
               "top": 491,
               "width": 39,
@@ -83160,7 +83160,7 @@
             },
             {
               "text": "++ersrcee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 741,
               "top": 486,
               "width": 328,
@@ -83176,7 +83176,7 @@
             },
             {
               "text": "rere",
-              "conf": 0.0,
+              "conf": 0,
               "left": 900,
               "top": 467,
               "width": 92,
@@ -83310,7 +83310,7 @@
           "bbox_normalized": [
             0.295469,
             0.232191,
-            1.0,
+            1,
             0.256087
           ],
           "words": [
@@ -83364,7 +83364,7 @@
             },
             {
               "text": "can",
-              "conf": 0.0,
+              "conf": 0,
               "left": 585,
               "top": 523,
               "width": 21,
@@ -83380,7 +83380,7 @@
             },
             {
               "text": "ceatieatseceis",
-              "conf": 0.0,
+              "conf": 0,
               "left": 615,
               "top": 523,
               "width": 112,
@@ -83412,7 +83412,7 @@
             },
             {
               "text": "operas",
-              "conf": 0.0,
+              "conf": 0,
               "left": 776,
               "top": 523,
               "width": 75,
@@ -83562,7 +83562,7 @@
             },
             {
               "text": "أسعورد",
-              "conf": 0.0,
+              "conf": 0,
               "left": 937,
               "top": 588,
               "width": 45,
@@ -83610,7 +83610,7 @@
             },
             {
               "text": "ولاموو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 793,
               "top": 588,
               "width": 38,
@@ -83792,7 +83792,7 @@
             },
             {
               "text": "steris",
-              "conf": 0.0,
+              "conf": 0,
               "left": 651,
               "top": 672,
               "width": 92,
@@ -84006,7 +84006,7 @@
           "bbox_normalized": [
             0.290217,
             0.31064,
-            1.0,
+            1,
             0.338142
           ],
           "words": [
@@ -84028,7 +84028,7 @@
             },
             {
               "text": "seesaw",
-              "conf": 0.0,
+              "conf": 0,
               "left": 546,
               "top": 733,
               "width": 483,
@@ -84108,7 +84108,7 @@
             },
             {
               "text": "عنزاوا",
-              "conf": 0.0,
+              "conf": 0,
               "left": 803,
               "top": 713,
               "width": 26,
@@ -84124,7 +84124,7 @@
             },
             {
               "text": "poses,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 838,
               "top": 713,
               "width": 54,
@@ -84290,7 +84290,7 @@
             },
             {
               "text": ".",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1401,
               "top": 731,
               "width": 119,
@@ -84322,7 +84322,7 @@
           "bbox_normalized": [
             0.340775,
             0.34761,
-            1.0,
+            1,
             0.381425
           ],
           "words": [
@@ -84488,13 +84488,13 @@
           "bbox_normalized": [
             0.288903,
             0.36835,
-            1.0,
+            1,
             0.3945
           ],
           "words": [
             {
               "text": "Mudikahi..-isesust",
-              "conf": 0.0,
+              "conf": 0,
               "left": 440,
               "top": 836,
               "width": 624,
@@ -84542,7 +84542,7 @@
             },
             {
               "text": "aoe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 877,
               "top": 826,
               "width": 37,
@@ -84622,7 +84622,7 @@
           "bbox_normalized": [
             0.286934,
             0.385032,
-            1.0,
+            1,
             0.41569
           ],
           "words": [
@@ -84660,7 +84660,7 @@
             },
             {
               "text": "hace",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1401,
               "top": 854,
               "width": 122,
@@ -84698,7 +84698,7 @@
           "words": [
             {
               "text": "Seabee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 437,
               "top": 955,
               "width": 64,
@@ -84762,7 +84762,7 @@
           "bbox_normalized": [
             0.309258,
             0.421551,
-            1.0,
+            1,
             0.448151
           ],
           "words": [
@@ -84832,7 +84832,7 @@
             },
             {
               "text": "ieee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 747,
               "top": 978,
               "width": 59,
@@ -84864,7 +84864,7 @@
             },
             {
               "text": "at",
-              "conf": 0.0,
+              "conf": 0,
               "left": 908,
               "top": 981,
               "width": 42,
@@ -84944,13 +84944,13 @@
           "bbox_normalized": [
             0.28562,
             0.445897,
-            1.0,
+            1,
             0.474752
           ],
           "words": [
             {
               "text": "Ai",
-              "conf": 0.0,
+              "conf": 0,
               "left": 435,
               "top": 1015,
               "width": 30,
@@ -84966,7 +84966,7 @@
             },
             {
               "text": "Nad",
-              "conf": 0.0,
+              "conf": 0,
               "left": 476,
               "top": 1016,
               "width": 65,
@@ -84982,7 +84982,7 @@
             },
             {
               "text": "s,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 561,
               "top": 1034,
               "width": 19,
@@ -85062,7 +85062,7 @@
           "bbox_normalized": [
             0.284307,
             0.46303,
-            1.0,
+            1,
             0.499549
           ],
           "words": [
@@ -85148,7 +85148,7 @@
           "bbox_normalized": [
             0.410374,
             0.480162,
-            1.0,
+            1,
             0.504959
           ],
           "words": [
@@ -85218,7 +85218,7 @@
             },
             {
               "text": "ia",
-              "conf": 0.0,
+              "conf": 0,
               "left": 812,
               "top": 1102,
               "width": 10,
@@ -85234,7 +85234,7 @@
             },
             {
               "text": "opoicee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 835,
               "top": 1088,
               "width": 58,
@@ -85250,7 +85250,7 @@
             },
             {
               "text": "lasia\\",
-              "conf": 0.0,
+              "conf": 0,
               "left": 900,
               "top": 1088,
               "width": 30,
@@ -85266,7 +85266,7 @@
             },
             {
               "text": "siseea,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 944,
               "top": 1088,
               "width": 47,
@@ -85346,7 +85346,7 @@
           "bbox_normalized": [
             0.284964,
             0.500902,
-            1.0,
+            1,
             0.528404
           ],
           "words": [
@@ -85416,7 +85416,7 @@
           "bbox_normalized": [
             0.283651,
             0.518034,
-            1.0,
+            1,
             0.55771
           ],
           "words": [
@@ -85582,7 +85582,7 @@
           "bbox_normalized": [
             0.308601,
             0.539225,
-            1.0,
+            1,
             0.572588
           ],
           "words": [
@@ -85716,7 +85716,7 @@
           "bbox_normalized": [
             0.282994,
             0.558161,
-            1.0,
+            1,
             0.586564
           ],
           "words": [
@@ -85770,7 +85770,7 @@
             },
             {
               "text": "aeueom",
-              "conf": 0.0,
+              "conf": 0,
               "left": 693,
               "top": 1281,
               "width": 92,
@@ -85802,7 +85802,7 @@
             },
             {
               "text": "c..",
-              "conf": 0.0,
+              "conf": 0,
               "left": 872,
               "top": 1251,
               "width": 38,
@@ -85850,13 +85850,13 @@
           "bbox_normalized": [
             0.281024,
             0.577096,
-            1.0,
+            1,
             0.608656
           ],
           "words": [
             {
               "text": "RigahAMOMad",
-              "conf": 0.0,
+              "conf": 0,
               "left": 428,
               "top": 1293,
               "width": 629,
@@ -85984,7 +85984,7 @@
           "bbox_normalized": [
             0.281681,
             0.596483,
-            1.0,
+            1,
             0.636159
           ],
           "words": [
@@ -86166,7 +86166,7 @@
           "bbox_normalized": [
             0.279711,
             0.637511,
-            1.0,
+            1,
             0.671326
           ],
           "words": [
@@ -86316,7 +86316,7 @@
           "bbox_normalized": [
             0.276428,
             0.654644,
-            1.0,
+            1,
             0.69477
           ],
           "words": [
@@ -86536,7 +86536,7 @@
             },
             {
               "text": "Milde",
-              "conf": 0.0,
+              "conf": 0,
               "left": 524,
               "top": 1523,
               "width": 74,
@@ -86696,7 +86696,7 @@
           "bbox_normalized": [
             0.280368,
             0.693868,
-            1.0,
+            1,
             0.726781
           ],
           "words": [
@@ -86846,7 +86846,7 @@
           "bbox_normalized": [
             0.274458,
             0.711452,
-            1.0,
+            1,
             0.748873
           ],
           "words": [
@@ -87034,7 +87034,7 @@
             },
             {
               "text": "eo",
-              "conf": 0.0,
+              "conf": 0,
               "left": 789,
               "top": 1666,
               "width": 261,
@@ -87266,7 +87266,7 @@
       "pdf_page": 19,
       "page_size_pdf_points": [
         502.989990234375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -87659,7 +87659,7 @@
           "bbox_normalized": [
             0.161817,
             0.128043,
-            1.0,
+            1,
             0.148332
           ],
           "words": [
@@ -88103,7 +88103,7 @@
             },
             {
               "text": "1963),",
-              "conf": 0.0,
+              "conf": 0,
               "left": 725,
               "top": 330,
               "width": 55,
@@ -88199,7 +88199,7 @@
           "bbox_normalized": [
             0.162527,
             0.155996,
-            1.0,
+            1,
             0.183499
           ],
           "words": [
@@ -88269,7 +88269,7 @@
             },
             {
               "text": "ponktil",
-              "conf": 0.0,
+              "conf": 0,
               "left": 498,
               "top": 346,
               "width": 103,
@@ -88579,7 +88579,7 @@
           "bbox_normalized": [
             0.163236,
             0.172678,
-            1.0,
+            1,
             0.201533
           ],
           "words": [
@@ -89023,7 +89023,7 @@
             },
             {
               "text": "jak",
-              "conf": 0.0,
+              "conf": 0,
               "left": 831,
               "top": 432,
               "width": 93,
@@ -89103,7 +89103,7 @@
           "bbox_normalized": [
             0.183109,
             0.193868,
-            1.0,
+            1,
             0.217313
           ],
           "words": [
@@ -89681,7 +89681,7 @@
           "line_num": 7,
           "text": "same meaning: . ع‎ 1 dines Isaac was never the sol le or only son of.",
           "script": "latin",
-          "confidence": 82.0,
+          "confidence": 82,
           "bbox_px": [
             257,
             474,
@@ -90039,7 +90039,7 @@
             },
             {
               "text": ":",
-              "conf": 0.0,
+              "conf": 0,
               "left": 504,
               "top": 513,
               "width": 11,
@@ -91253,7 +91253,7 @@
           "bbox_normalized": [
             0.185238,
             0.287196,
-            1.0,
+            1,
             0.304328
           ],
           "words": [
@@ -91371,7 +91371,7 @@
             },
             {
               "text": "Princtf",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1310,
               "top": 637,
               "width": 99,
@@ -91799,7 +91799,7 @@
           "bbox_normalized": [
             0.193754,
             0.316501,
-            1.0,
+            1,
             0.332732
           ],
           "words": [
@@ -92767,7 +92767,7 @@
           "bbox_normalized": [
             0.185238,
             0.357078,
-            1.0,
+            1,
             0.376014
           ],
           "words": [
@@ -93093,7 +93093,7 @@
           "bbox_normalized": [
             0.185238,
             0.369702,
-            1.0,
+            1,
             0.388638
           ],
           "words": [
@@ -93339,7 +93339,7 @@
           "bbox_normalized": [
             0.185238,
             0.382777,
-            1.0,
+            1,
             0.400812
           ],
           "words": [
@@ -93585,7 +93585,7 @@
           "bbox_normalized": [
             0.166075,
             0.39991,
-            1.0,
+            1,
             0.417493
           ],
           "words": [
@@ -94099,7 +94099,7 @@
           "bbox_normalized": [
             0.164656,
             0.447701,
-            1.0,
+            1,
             0.463931
           ],
           "words": [
@@ -97573,7 +97573,7 @@
           "line_num": 18,
           "text": "had reference primarily to a time far di i + tech cee",
           "script": "latin",
-          "confidence": 75.0,
+          "confidence": 75,
           "bbox_px": [
             265,
             1570,
@@ -99113,7 +99113,7 @@
       "pdf_page": 20,
       "page_size_pdf_points": [
         464.55999755859375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -100910,7 +100910,7 @@
             },
             {
               "text": "eebrew",
-              "conf": 0.0,
+              "conf": 0,
               "left": 522,
               "top": 552,
               "width": 63,
@@ -100990,7 +100990,7 @@
             },
             {
               "text": "متطدعف",
-              "conf": 0.0,
+              "conf": 0,
               "left": 916,
               "top": 527,
               "width": 77,
@@ -101076,7 +101076,7 @@
             },
             {
               "text": "onlts",
-              "conf": 0.0,
+              "conf": 0,
               "left": 435,
               "top": 560,
               "width": 53,
@@ -107010,7 +107010,7 @@
             },
             {
               "text": "followers,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 837,
               "top": 1502,
               "width": 122,
@@ -107456,7 +107456,7 @@
       "pdf_page": 21,
       "page_size_pdf_points": [
         491.3599853515625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -107877,7 +107877,7 @@
             },
             {
               "text": "noe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 988,
               "top": 402,
               "width": 80,
@@ -109167,7 +109167,7 @@
           "line_num": 7,
           "text": "of Christianity.",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             162,
             788,
@@ -109773,7 +109773,7 @@
       "pdf_page": 22,
       "page_size_pdf_points": [
         467.3299865722656,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -113718,7 +113718,7 @@
             },
             {
               "text": "fee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 607,
               "top": 1168,
               "width": 41,
@@ -115266,7 +115266,7 @@
             },
             {
               "text": "بوصو‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 585,
               "top": 1745,
               "width": 53,
@@ -115566,7 +115566,7 @@
             },
             {
               "text": "Pe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 819,
               "top": 1793,
               "width": 35,
@@ -115582,7 +115582,7 @@
             },
             {
               "text": "]بص‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 870,
               "top": 1801,
               "width": 47,
@@ -116106,7 +116106,7 @@
       "pdf_page": 23,
       "page_size_pdf_points": [
         514.6099853515625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -117425,7 +117425,7 @@
           "words": [
             {
               "text": "Qur’an",
-              "conf": 0.0,
+              "conf": 0,
               "left": 65,
               "top": 457,
               "width": 125,
@@ -117680,7 +117680,7 @@
       "pdf_page": 24,
       "page_size_pdf_points": [
         601.780029296875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -117827,7 +117827,7 @@
             },
             {
               "text": "é2-",
-              "conf": 0.0,
+              "conf": 0,
               "left": 701,
               "top": 186,
               "width": 41,
@@ -117951,7 +117951,7 @@
           "words": [
             {
               "text": "soo",
-              "conf": 0.0,
+              "conf": 0,
               "left": 610,
               "top": 257,
               "width": 36,
@@ -117967,7 +117967,7 @@
             },
             {
               "text": "Sortey",
-              "conf": 0.0,
+              "conf": 0,
               "left": 652,
               "top": 242,
               "width": 64,
@@ -118095,7 +118095,7 @@
           "bbox_normalized": [
             0.917507,
             0.10505,
-            1.0,
+            1,
             0.128043
           ],
           "words": [
@@ -119737,7 +119737,7 @@
           "words": [
             {
               "text": "east",
-              "conf": 0.0,
+              "conf": 0,
               "left": 560,
               "top": 803,
               "width": 96,
@@ -122059,7 +122059,7 @@
           "bbox_normalized": [
             0.960237,
             0.635708,
-            1.0,
+            1,
             0.646528
           ],
           "words": [
@@ -122221,7 +122221,7 @@
             },
             {
               "text": "ey",
-              "conf": 0.0,
+              "conf": 0,
               "left": 873,
               "top": 1498,
               "width": 32,
@@ -122323,7 +122323,7 @@
             },
             {
               "text": "aCe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 937,
               "top": 1497,
               "width": 212,
@@ -122355,7 +122355,7 @@
           "bbox_normalized": [
             0.91454,
             0.703787,
-            1.0,
+            1,
             0.717313
           ],
           "words": [
@@ -123887,7 +123887,7 @@
           "bbox_normalized": [
             0.913947,
             0.882777,
-            1.0,
+            1,
             0.903517
           ],
           "words": [
@@ -124000,14 +124000,14 @@
         1685,
         2218
       ],
-      "ocr_eng_confidence": 85.0,
+      "ocr_eng_confidence": 85,
       "ocr_arabic_confidence": 36.21,
       "ocr_variants": [
         {
           "lang": "eng+ara",
           "psm": 3,
           "score": 102.19886369143795,
-          "eng_conf": 85.0,
+          "eng_conf": 85,
           "text_len": 3200
         }
       ],
@@ -124026,7 +124026,7 @@
       "pdf_page": 25,
       "page_size_pdf_points": [
         477.5899963378906,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -125013,7 +125013,7 @@
             },
             {
               "text": "cyanea",
-              "conf": 0.0,
+              "conf": 0,
               "left": 317,
               "top": 444,
               "width": 115,
@@ -125035,7 +125035,7 @@
           "line_num": 6,
           "text": "pray",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             318,
             455,
@@ -125051,7 +125051,7 @@
           "words": [
             {
               "text": "pray",
-              "conf": 0.0,
+              "conf": 0,
               "left": 318,
               "top": 455,
               "width": 133,
@@ -125223,7 +125223,7 @@
             },
             {
               "text": "Oleic",
-              "conf": 0.0,
+              "conf": 0,
               "left": 599,
               "top": 494,
               "width": 218,
@@ -125271,7 +125271,7 @@
             },
             {
               "text": "دعن",
-              "conf": 0.0,
+              "conf": 0,
               "left": 353,
               "top": 509,
               "width": 73,
@@ -125341,7 +125341,7 @@
             },
             {
               "text": "et‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 452,
               "top": 555,
               "width": 23,
@@ -125405,7 +125405,7 @@
             },
             {
               "text": "“41Z-‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 806,
               "top": 555,
               "width": 79,
@@ -127553,7 +127553,7 @@
           "line_num": 2,
           "text": "and the Injil previously for the guidance of mankind (3:3-4).",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             164,
             1525,
@@ -127869,7 +127869,7 @@
           "words": [
             {
               "text": "biog",
-              "conf": 0.0,
+              "conf": 0,
               "left": 747,
               "top": 1907,
               "width": 123,
@@ -127885,7 +127885,7 @@
             },
             {
               "text": "يدير",
-              "conf": 0.0,
+              "conf": 0,
               "left": 629,
               "top": 1913,
               "width": 81,
@@ -128052,7 +128052,7 @@
       "pdf_page": 26,
       "page_size_pdf_points": [
         590.510009765625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -128889,7 +128889,7 @@
             },
             {
               "text": "a",
-              "conf": 0.0,
+              "conf": 0,
               "left": 988,
               "top": 343,
               "width": 173,
@@ -129365,7 +129365,7 @@
           "bbox_normalized": [
             0.903265,
             0.191163,
-            1.0,
+            1,
             0.211903
           ],
           "words": [
@@ -130159,7 +130159,7 @@
           "bbox_normalized": [
             0.989117,
             0.270514,
-            1.0,
+            1,
             0.281335
           ],
           "words": [
@@ -131543,7 +131543,7 @@
           "bbox_normalized": [
             0.912938,
             0.456267,
-            1.0,
+            1,
             0.467538
           ],
           "words": [
@@ -131919,7 +131919,7 @@
           "bbox_normalized": [
             0.914148,
             0.494139,
-            1.0,
+            1,
             0.505861
           ],
           "words": [
@@ -132471,7 +132471,7 @@
           "bbox_normalized": [
             0.907497,
             0.536069,
-            1.0,
+            1,
             0.550045
           ],
           "words": [
@@ -132675,7 +132675,7 @@
           "bbox_normalized": [
             0.866989,
             0.555005,
-            1.0,
+            1,
             0.569883
           ],
           "words": [
@@ -133019,7 +133019,7 @@
           "bbox_normalized": [
             0.868198,
             0.612263,
-            1.0,
+            1,
             0.627142
           ],
           "words": [
@@ -133309,7 +133309,7 @@
           "bbox_normalized": [
             0.869407,
             0.65239,
-            1.0,
+            1,
             0.666817
           ],
           "words": [
@@ -133733,7 +133733,7 @@
           "bbox_normalized": [
             0.87243,
             0.714608,
-            1.0,
+            1,
             0.733995
           ],
           "words": [
@@ -134566,7 +134566,7 @@
       "pdf_page": 27,
       "page_size_pdf_points": [
         482.7699890136719,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -134965,7 +134965,7 @@
             },
             {
               "text": "ot",
-              "conf": 0.0,
+              "conf": 0,
               "left": 654,
               "top": 347,
               "width": 30,
@@ -134981,7 +134981,7 @@
             },
             {
               "text": ".s",
-              "conf": 0.0,
+              "conf": 0,
               "left": 707,
               "top": 356,
               "width": 9,
@@ -136207,7 +136207,7 @@
             },
             {
               "text": "NMC",
-              "conf": 0.0,
+              "conf": 0,
               "left": 582,
               "top": 772,
               "width": 178,
@@ -136621,7 +136621,7 @@
           "words": [
             {
               "text": "OE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 580,
               "top": 910,
               "width": 52,
@@ -136637,7 +136637,7 @@
             },
             {
               "text": "Alsi",
-              "conf": 0.0,
+              "conf": 0,
               "left": 668,
               "top": 902,
               "width": 90,
@@ -138419,7 +138419,7 @@
           "words": [
             {
               "text": "whenever",
-              "conf": 0.0,
+              "conf": 0,
               "left": 67,
               "top": 1327,
               "width": 140,
@@ -140169,7 +140169,7 @@
           "words": [
             {
               "text": "9:17(twice),72(twice),75;",
-              "conf": 0.0,
+              "conf": 0,
               "left": 79,
               "top": 1792,
               "width": 329,
@@ -140993,7 +140993,7 @@
           "normalized_text": "إِذۡ قَالَتِ ٱلۡمَلَـٰۤىِٕكَةُ یَـٰمَرۡیَمُ إِنَّ ٱللَّهَ یُبَشِّرُكِ بِكَلِمَةࣲ مِّنۡهُ ٱسۡمُهُ ٱلۡمَسِیحُ عِیسَى ٱبۡنُ مَرۡیَمَ وَجِیهࣰا فِی ٱلدُّنۡیَا وَٱلۡـَٔاخِرَةِ وَمِنَ ٱلۡمُقَرَّبِینَ",
           "status": "canonical_quran_match",
           "quran_reference": "3:45",
-          "match_score": 50.0,
+          "match_score": 50,
           "confidence": 21.590000000000003,
           "bbox_px": [
             0,
@@ -141017,7 +141017,7 @@
       "pdf_page": 28,
       "page_size_pdf_points": [
         519.5900268554688,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -141784,7 +141784,7 @@
           "bbox_normalized": [
             0.98488,
             0.128043,
-            1.0,
+            1,
             0.159152
           ],
           "words": [
@@ -142192,7 +142192,7 @@
           "line_num": 1,
           "text": "gf.",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             1440,
             369,
@@ -142202,13 +142202,13 @@
           "bbox_normalized": [
             0.989691,
             0.166366,
-            1.0,
+            1,
             0.176285
           ],
           "words": [
             {
               "text": "gf.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1440,
               "top": 369,
               "width": 15,
@@ -142652,7 +142652,7 @@
           "bbox_normalized": [
             0.98488,
             0.218215,
-            1.0,
+            1,
             0.297115
           ],
           "words": [
@@ -142706,7 +142706,7 @@
             },
             {
               "text": "=",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1442,
               "top": 637,
               "width": 11,
@@ -143156,7 +143156,7 @@
           "words": [
             {
               "text": "SLAG",
-              "conf": 0.0,
+              "conf": 0,
               "left": 586,
               "top": 641,
               "width": 142,
@@ -143172,7 +143172,7 @@
             },
             {
               "text": "ACA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 762,
               "top": 644,
               "width": 141,
@@ -144002,7 +144002,7 @@
           "line_num": 1,
           "text": "GEMMA",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             478,
             903,
@@ -144018,7 +144018,7 @@
           "words": [
             {
               "text": "GEMMA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 478,
               "top": 903,
               "width": 397,
@@ -144302,7 +144302,7 @@
             },
             {
               "text": "AVR",
-              "conf": 0.0,
+              "conf": 0,
               "left": 972,
               "top": 978,
               "width": 113,
@@ -144340,7 +144340,7 @@
           "words": [
             {
               "text": "pieces",
-              "conf": 0.0,
+              "conf": 0,
               "left": 470,
               "top": 1155,
               "width": 614,
@@ -144420,7 +144420,7 @@
           "bbox_normalized": [
             0.993127,
             0.524346,
-            1.0,
+            1,
             0.603246
           ],
           "words": [
@@ -144458,7 +144458,7 @@
             },
             {
               "text": "seen",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1446,
               "top": 1203,
               "width": 9,
@@ -146182,7 +146182,7 @@
           "line_num": 6,
           "text": "of research and debate. Whatever the interpretations migh'",
           "script": "latin",
-          "confidence": 84.0,
+          "confidence": 84,
           "bbox_px": [
             256,
             1636,
@@ -147537,7 +147537,7 @@
       "pdf_page": 29,
       "page_size_pdf_points": [
         484.8699951171875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -149418,7 +149418,7 @@
           "words": [
             {
               "text": "Berrie",
-              "conf": 0.0,
+              "conf": 0,
               "left": 314,
               "top": 657,
               "width": 96,
@@ -149434,7 +149434,7 @@
             },
             {
               "text": "exe.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 431,
               "top": 666,
               "width": 24,
@@ -149466,7 +149466,7 @@
             },
             {
               "text": "SSS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 600,
               "top": 666,
               "width": 73,
@@ -149584,7 +149584,7 @@
             },
             {
               "text": "SE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 646,
               "top": 672,
               "width": 129,
@@ -149836,7 +149836,7 @@
             },
             {
               "text": "بكر",
-              "conf": 0.0,
+              "conf": 0,
               "left": 484,
               "top": 786,
               "width": 89,
@@ -149970,7 +149970,7 @@
           "words": [
             {
               "text": "Soles",
-              "conf": 0.0,
+              "conf": 0,
               "left": 309,
               "top": 793,
               "width": 574,
@@ -150254,7 +150254,7 @@
             },
             {
               "text": "NGI",
-              "conf": 0.0,
+              "conf": 0,
               "left": 524,
               "top": 861,
               "width": 63,
@@ -150270,7 +150270,7 @@
             },
             {
               "text": "OSES",
-              "conf": 0.0,
+              "conf": 0,
               "left": 594,
               "top": 857,
               "width": 77,
@@ -152588,7 +152588,7 @@
             },
             {
               "text": "ote",
-              "conf": 0.0,
+              "conf": 0,
               "left": 427,
               "top": 1502,
               "width": 39,
@@ -152604,7 +152604,7 @@
             },
             {
               "text": "we",
-              "conf": 0.0,
+              "conf": 0,
               "left": 477,
               "top": 1523,
               "width": 7,
@@ -152786,7 +152786,7 @@
             },
             {
               "text": "IIA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 641,
               "top": 1516,
               "width": 235,
@@ -154257,8 +154257,8 @@
       "document_slug": "islam_volume_1",
       "pdf_page": 30,
       "page_size_pdf_points": [
-        582.0,
-        792.0
+        582,
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -154517,7 +154517,7 @@
           "bbox_normalized": [
             0.144785,
             0.131199,
-            1.0,
+            1,
             0.146528
           ],
           "words": [
@@ -154801,7 +154801,7 @@
             },
             {
               "text": "ralse",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1323,
               "top": 329,
               "width": 66,
@@ -154957,7 +154957,7 @@
             },
             {
               "text": "اشن",
-              "conf": 0.0,
+              "conf": 0,
               "left": 728,
               "top": 360,
               "width": 112,
@@ -155021,7 +155021,7 @@
           "bbox_normalized": [
             0.38773,
             0.174482,
-            1.0,
+            1,
             0.194319
           ],
           "words": [
@@ -155333,7 +155333,7 @@
           "words": [
             {
               "text": "ee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1327,
               "top": 435,
               "width": 41,
@@ -155531,7 +155531,7 @@
           "bbox_normalized": [
             0.959509,
             0.215059,
-            1.0,
+            1,
             0.221821
           ],
           "words": [
@@ -155569,7 +155569,7 @@
           "bbox_normalized": [
             0.814724,
             0.215509,
-            1.0,
+            1,
             0.241208
           ],
           "words": [
@@ -156127,7 +156127,7 @@
             },
             {
               "text": "Virg",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1566,
               "top": 548,
               "width": 62,
@@ -156159,7 +156159,7 @@
           "bbox_normalized": [
             0.839877,
             0.268711,
-            1.0,
+            1,
             0.288097
           ],
           "words": [
@@ -156363,7 +156363,7 @@
           "bbox_normalized": [
             0.840491,
             0.286745,
-            1.0,
+            1,
             0.307935
           ],
           "words": [
@@ -156449,7 +156449,7 @@
           "bbox_normalized": [
             0.146012,
             0.298016,
-            1.0,
+            1,
             0.320108
           ],
           "words": [
@@ -156679,7 +156679,7 @@
           "bbox_normalized": [
             0.146012,
             0.309288,
-            1.0,
+            1,
             0.337241
           ],
           "words": [
@@ -157123,7 +157123,7 @@
           "bbox_normalized": [
             0.146012,
             0.355275,
-            1.0,
+            1,
             0.372858
           ],
           "words": [
@@ -157321,7 +157321,7 @@
           "bbox_normalized": [
             0.971779,
             0.366997,
-            1.0,
+            1,
             0.376916
           ],
           "words": [
@@ -157461,7 +157461,7 @@
           "bbox_normalized": [
             0.335583,
             0.37872,
-            1.0,
+            1,
             0.406222
           ],
           "words": [
@@ -157499,7 +157499,7 @@
             },
             {
               "text": "SralsGes",
-              "conf": 0.0,
+              "conf": 0,
               "left": 767,
               "top": 840,
               "width": 171,
@@ -157547,7 +157547,7 @@
           "bbox_normalized": [
             0.147853,
             0.413886,
-            1.0,
+            1,
             0.431019
           ],
           "words": [
@@ -158045,7 +158045,7 @@
           "bbox_normalized": [
             0.278528,
             0.453562,
-            1.0,
+            1,
             0.480613
           ],
           "words": [
@@ -158163,7 +158163,7 @@
           "bbox_normalized": [
             0.276074,
             0.475654,
-            1.0,
+            1,
             0.502254
           ],
           "words": [
@@ -158185,7 +158185,7 @@
             },
             {
               "text": "PMGS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 524,
               "top": 1068,
               "width": 100,
@@ -158249,7 +158249,7 @@
             },
             {
               "text": "ie5",
-              "conf": 0.0,
+              "conf": 0,
               "left": 893,
               "top": 1069,
               "width": 50,
@@ -158265,7 +158265,7 @@
             },
             {
               "text": "of",
-              "conf": 0.0,
+              "conf": 0,
               "left": 957,
               "top": 1063,
               "width": 54,
@@ -158361,7 +158361,7 @@
           "bbox_normalized": [
             0.438037,
             0.495491,
-            1.0,
+            1,
             0.51578
           ],
           "words": [
@@ -158415,7 +158415,7 @@
             },
             {
               "text": "regis",
-              "conf": 0.0,
+              "conf": 0,
               "left": 915,
               "top": 1110,
               "width": 90,
@@ -158533,7 +158533,7 @@
             },
             {
               "text": "foy-Shat",
-              "conf": 0.0,
+              "conf": 0,
               "left": 860,
               "top": 1128,
               "width": 154,
@@ -158571,7 +158571,7 @@
           "line_num": 1,
           "text": "Whenever Zachariah entered her sanctuary, he found sustenance Christianity does",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             296,
             1187,
@@ -159277,7 +159277,7 @@
           "bbox_normalized": [
             0.85092,
             0.577096,
-            1.0,
+            1,
             0.588368
           ],
           "words": [
@@ -159417,7 +159417,7 @@
           "bbox_normalized": [
             0.851534,
             0.595131,
-            1.0,
+            1,
             0.607304
           ],
           "words": [
@@ -159503,7 +159503,7 @@
           "bbox_normalized": [
             0.851534,
             0.612714,
-            1.0,
+            1,
             0.627142
           ],
           "words": [
@@ -159771,7 +159771,7 @@
           "bbox_normalized": [
             0.849693,
             0.629396,
-            1.0,
+            1,
             0.649684
           ],
           "words": [
@@ -159911,7 +159911,7 @@
           "bbox_normalized": [
             0.853374,
             0.648783,
-            1.0,
+            1,
             0.665014
           ],
           "words": [
@@ -159981,7 +159981,7 @@
           "bbox_normalized": [
             0.853988,
             0.667268,
-            1.0,
+            1,
             0.68395
           ],
           "words": [
@@ -160067,7 +160067,7 @@
           "bbox_normalized": [
             0.829448,
             0.6844,
-            1.0,
+            1,
             0.700631
           ],
           "words": [
@@ -160185,7 +160185,7 @@
           "bbox_normalized": [
             0.853374,
             0.701082,
-            1.0,
+            1,
             0.723625
           ],
           "words": [
@@ -160421,7 +160421,7 @@
           "bbox_normalized": [
             0.854601,
             0.719567,
-            1.0,
+            1,
             0.74211
           ],
           "words": [
@@ -160893,7 +160893,7 @@
           "bbox_normalized": [
             0.142945,
             0.765104,
-            1.0,
+            1,
             0.800721
           ],
           "words": [
@@ -161503,7 +161503,7 @@
           "bbox_normalized": [
             0.698773,
             0.837692,
-            1.0,
+            1,
             0.851668
           ],
           "words": [
@@ -161798,7 +161798,7 @@
       "pdf_page": 31,
       "page_size_pdf_points": [
         492.1000061035156,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -163621,7 +163621,7 @@
           "words": [
             {
               "text": "abe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 326,
               "top": 727,
               "width": 86,
@@ -163637,7 +163637,7 @@
             },
             {
               "text": "WEbo4Lakorg,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 447,
               "top": 723,
               "width": 368,
@@ -163707,7 +163707,7 @@
             },
             {
               "text": "Ue",
-              "conf": 0.0,
+              "conf": 0,
               "left": 434,
               "top": 761,
               "width": 24,
@@ -163755,7 +163755,7 @@
             },
             {
               "text": "WOLAPR",
-              "conf": 0.0,
+              "conf": 0,
               "left": 591,
               "top": 785,
               "width": 54,
@@ -168203,7 +168203,7 @@
       "pdf_page": 32,
       "page_size_pdf_points": [
         503.3900146484375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -168510,7 +168510,7 @@
           "bbox_normalized": [
             0.296454,
             0.095131,
-            1.0,
+            1,
             0.145627
           ],
           "words": [
@@ -168886,7 +168886,7 @@
           "words": [
             {
               "text": "Oe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 604,
               "top": 301,
               "width": 30,
@@ -168918,7 +168918,7 @@
             },
             {
               "text": "CLINI",
-              "conf": 0.0,
+              "conf": 0,
               "left": 778,
               "top": 293,
               "width": 128,
@@ -168950,7 +168950,7 @@
           "bbox_normalized": [
             0.205674,
             0.142471,
-            1.0,
+            1,
             0.188909
           ],
           "words": [
@@ -169394,7 +169394,7 @@
           "bbox_normalized": [
             0.188652,
             0.192516,
-            1.0,
+            1,
             0.224977
           ],
           "words": [
@@ -170004,7 +170004,7 @@
             },
             {
               "text": "eally",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1322,
               "top": 501,
               "width": 87,
@@ -170608,7 +170608,7 @@
           "bbox_normalized": [
             0.198582,
             0.27908,
-            1.0,
+            1,
             0.310189
           ],
           "words": [
@@ -170742,7 +170742,7 @@
             },
             {
               "text": "؛‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1090,
               "top": 651,
               "width": 3,
@@ -170972,7 +170972,7 @@
           "bbox_normalized": [
             0.2,
             0.312894,
-            1.0,
+            1,
             0.342651
           ],
           "words": [
@@ -173006,7 +173006,7 @@
             },
             {
               "text": "Qur'an",
-              "conf": 0.0,
+              "conf": 0,
               "left": 433,
               "top": 1117,
               "width": 89,
@@ -173242,7 +173242,7 @@
             },
             {
               "text": "سم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 859,
               "top": 1224,
               "width": 14,
@@ -173510,7 +173510,7 @@
             },
             {
               "text": "مد",
-              "conf": 0.0,
+              "conf": 0,
               "left": 715,
               "top": 1296,
               "width": 16,
@@ -173526,7 +173526,7 @@
             },
             {
               "text": "دده",
-              "conf": 0.0,
+              "conf": 0,
               "left": 668,
               "top": 1273,
               "width": 42,
@@ -173596,7 +173596,7 @@
           "words": [
             {
               "text": "ليكوو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 786,
               "top": 1279,
               "width": 263,
@@ -173874,7 +173874,7 @@
             },
             {
               "text": "(اتان4‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1070,
               "top": 1363,
               "width": 91,
@@ -174142,7 +174142,7 @@
             },
             {
               "text": "Zh",
-              "conf": 0.0,
+              "conf": 0,
               "left": 832,
               "top": 1476,
               "width": 32,
@@ -174180,7 +174180,7 @@
           "words": [
             {
               "text": "َتَحَرَلَة",
-              "conf": 0.0,
+              "conf": 0,
               "left": 708,
               "top": 1481,
               "width": 158,
@@ -174990,7 +174990,7 @@
             },
             {
               "text": "sao",
-              "conf": 0.0,
+              "conf": 0,
               "left": 368,
               "top": 1786,
               "width": 146,
@@ -175530,7 +175530,7 @@
       "pdf_page": 33,
       "page_size_pdf_points": [
         496.7699890136719,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -179055,7 +179055,7 @@
       "pdf_page": 34,
       "page_size_pdf_points": [
         547.4600219726562,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -179078,7 +179078,7 @@
           "bbox_normalized": [
             0.910633,
             0.148332,
-            1.0,
+            1,
             0.188007
           ],
           "words": [
@@ -179154,7 +179154,7 @@
           "bbox_normalized": [
             0.913894,
             0.241659,
-            1.0,
+            1,
             0.257439
           ],
           "words": [
@@ -179380,7 +179380,7 @@
           "bbox_normalized": [
             0.988911,
             0.294409,
-            1.0,
+            1,
             0.302525
           ],
           "words": [
@@ -179440,7 +179440,7 @@
             },
             {
               "text": "SBIR",
-              "conf": 0.0,
+              "conf": 0,
               "left": 622,
               "top": 661,
               "width": 584,
@@ -179488,7 +179488,7 @@
           "bbox_normalized": [
             0.960861,
             0.307935,
-            1.0,
+            1,
             0.330027
           ],
           "words": [
@@ -179542,7 +179542,7 @@
           "bbox_normalized": [
             0.960861,
             0.328674,
-            1.0,
+            1,
             0.343102
           ],
           "words": [
@@ -179864,7 +179864,7 @@
           "bbox_normalized": [
             0.960861,
             0.34761,
-            1.0,
+            1,
             0.364292
           ],
           "words": [
@@ -179988,7 +179988,7 @@
             },
             {
               "text": "Juipses",
-              "conf": 0.0,
+              "conf": 0,
               "left": 406,
               "top": 867,
               "width": 186,
@@ -180042,7 +180042,7 @@
             },
             {
               "text": "ietie",
-              "conf": 0.0,
+              "conf": 0,
               "left": 438,
               "top": 845,
               "width": 89,
@@ -180138,7 +180138,7 @@
           "bbox_normalized": [
             0.917156,
             0.388638,
-            1.0,
+            1,
             0.397656
           ],
           "words": [
@@ -180176,7 +180176,7 @@
           "bbox_normalized": [
             0.690802,
             0.421551,
-            1.0,
+            1,
             0.437331
           ],
           "words": [
@@ -180230,7 +180230,7 @@
           "bbox_normalized": [
             0.631442,
             0.426961,
-            1.0,
+            1,
             0.461677
           ],
           "words": [
@@ -180252,7 +180252,7 @@
             },
             {
               "text": "b%",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1137,
               "top": 953,
               "width": 71,
@@ -180316,7 +180316,7 @@
           "bbox_normalized": [
             0.807567,
             0.455816,
-            1.0,
+            1,
             0.470243
           ],
           "words": [
@@ -180386,7 +180386,7 @@
           "bbox_normalized": [
             0.919765,
             0.475203,
-            1.0,
+            1,
             0.488729
           ],
           "words": [
@@ -180676,7 +180676,7 @@
           "bbox_normalized": [
             0.92107,
             0.511271,
-            1.0,
+            1,
             0.524346
           ],
           "words": [
@@ -180714,7 +180714,7 @@
           "bbox_normalized": [
             0.921722,
             0.532011,
-            1.0,
+            1,
             0.54193
           ],
           "words": [
@@ -180784,7 +180784,7 @@
           "bbox_normalized": [
             0.922374,
             0.548242,
-            1.0,
+            1,
             0.559513
           ],
           "words": [
@@ -181004,7 +181004,7 @@
           "bbox_normalized": [
             0.921722,
             0.565825,
-            1.0,
+            1,
             0.579802
           ],
           "words": [
@@ -181466,7 +181466,7 @@
           "bbox_normalized": [
             0.923027,
             0.620379,
-            1.0,
+            1,
             0.633904
           ],
           "words": [
@@ -181686,7 +181686,7 @@
           "bbox_normalized": [
             0.923679,
             0.638413,
-            1.0,
+            1,
             0.649234
           ],
           "words": [
@@ -181740,7 +181740,7 @@
           "bbox_normalized": [
             0.96347,
             0.656898,
-            1.0,
+            1,
             0.667719
           ],
           "words": [
@@ -182218,7 +182218,7 @@
           "bbox_normalized": [
             0.924331,
             0.708747,
-            1.0,
+            1,
             0.726781
           ],
           "words": [
@@ -182454,7 +182454,7 @@
           "bbox_normalized": [
             0.924331,
             0.744815,
-            1.0,
+            1,
             0.757439
           ],
           "words": [
@@ -182820,7 +182820,7 @@
           "line_num": 27,
           "text": "Este",
           "script": "latin",
-          "confidence": 82.0,
+          "confidence": 82,
           "bbox_px": [
             1480,
             1733,
@@ -182830,7 +182830,7 @@
           "bbox_normalized": [
             0.965427,
             0.781335,
-            1.0,
+            1,
             0.793508
           ],
           "words": [
@@ -182922,7 +182922,7 @@
           "bbox_normalized": [
             0.924984,
             0.812894,
-            1.0,
+            1,
             0.834085
           ],
           "words": [
@@ -182976,7 +182976,7 @@
           "bbox_normalized": [
             0.924984,
             0.833634,
-            1.0,
+            1,
             0.846709
           ],
           "words": [
@@ -183330,7 +183330,7 @@
       "pdf_page": 35,
       "page_size_pdf_points": [
         493.32000732421875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -185005,7 +185005,7 @@
           "words": [
             {
               "text": "_",
-              "conf": 0.0,
+              "conf": 0,
               "left": 53,
               "top": 926,
               "width": 3,
@@ -188333,7 +188333,7 @@
           "words": [
             {
               "text": "Ab",
-              "conf": 0.0,
+              "conf": 0,
               "left": 88,
               "top": 1577,
               "width": 146,
@@ -190321,7 +190321,7 @@
       "pdf_page": 36,
       "page_size_pdf_points": [
         524.9000244140625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -190484,7 +190484,7 @@
             },
             {
               "text": "SWO)",
-              "conf": 0.0,
+              "conf": 0,
               "left": 925,
               "top": 217,
               "width": 62,
@@ -191812,7 +191812,7 @@
             },
             {
               "text": "YW",
-              "conf": 0.0,
+              "conf": 0,
               "left": 883,
               "top": 553,
               "width": 22,
@@ -191828,7 +191828,7 @@
             },
             {
               "text": "hue",
-              "conf": 0.0,
+              "conf": 0,
               "left": 927,
               "top": 557,
               "width": 36,
@@ -192077,7 +192077,7 @@
       "pdf_page": 37,
       "page_size_pdf_points": [
         483.5299987792969,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -200726,7 +200726,7 @@
             },
             {
               "text": ",",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1107,
               "top": 1967,
               "width": 20,
@@ -200770,7 +200770,7 @@
       "pdf_page": 38,
       "page_size_pdf_points": [
         445.7099914550781,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -201045,7 +201045,7 @@
             },
             {
               "text": "اموا‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 879,
               "top": 292,
               "width": 124,
@@ -203893,7 +203893,7 @@
           "line_num": 1,
           "text": "er reason for",
           "script": "latin",
-          "confidence": 90.0,
+          "confidence": 90,
           "bbox_px": [
             959,
             1150,
@@ -204231,7 +204231,7 @@
           "words": [
             {
               "text": "ولو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 863,
               "top": 1259,
               "width": 25,
@@ -205277,7 +205277,7 @@
           "bbox_normalized": [
             0.207532,
             0.733544,
-            1.0,
+            1,
             0.765555
           ],
           "words": [
@@ -205507,7 +205507,7 @@
           "bbox_normalized": [
             0.357372,
             0.760144,
-            1.0,
+            1,
             0.793057
           ],
           "words": [
@@ -205529,7 +205529,7 @@
             },
             {
               "text": "sso",
-              "conf": 0.0,
+              "conf": 0,
               "left": 606,
               "top": 1696,
               "width": 37,
@@ -205701,7 +205701,7 @@
             },
             {
               "text": "Bites",
-              "conf": 0.0,
+              "conf": 0,
               "left": 626,
               "top": 1792,
               "width": 51,
@@ -205835,7 +205835,7 @@
           "words": [
             {
               "text": "OHSS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 575,
               "top": 1803,
               "width": 141,
@@ -205851,7 +205851,7 @@
             },
             {
               "text": "aS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 782,
               "top": 1849,
               "width": 131,
@@ -206231,7 +206231,7 @@
           "bbox_normalized": [
             0.250801,
             0.848963,
-            1.0,
+            1,
             0.87917
           ],
           "words": [
@@ -206467,7 +206467,7 @@
             },
             {
               "text": "upene,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 448,
               "top": 1921,
               "width": 82,
@@ -206841,7 +206841,7 @@
           "bbox_normalized": [
             0.203526,
             0.891344,
-            1.0,
+            1,
             0.931019
           ],
           "words": [
@@ -206998,7 +206998,7 @@
       "pdf_page": 39,
       "page_size_pdf_points": [
         475.010009765625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -208729,7 +208729,7 @@
           "line_num": 7,
           "text": "be vouchsafed him in accordance with what he understood the sign to mean.",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             76,
             603,
@@ -211559,7 +211559,7 @@
           "words": [
             {
               "text": "BRA",
-              "conf": 0.0,
+              "conf": 0,
               "left": 294,
               "top": 1224,
               "width": 72,
@@ -211575,7 +211575,7 @@
             },
             {
               "text": "sec",
-              "conf": 0.0,
+              "conf": 0,
               "left": 378,
               "top": 1216,
               "width": 30,
@@ -211693,7 +211693,7 @@
           "words": [
             {
               "text": "Heals",
-              "conf": 0.0,
+              "conf": 0,
               "left": 299,
               "top": 1227,
               "width": 115,
@@ -211709,7 +211709,7 @@
             },
             {
               "text": "Sb",
-              "conf": 0.0,
+              "conf": 0,
               "left": 428,
               "top": 1239,
               "width": 34,
@@ -211789,7 +211789,7 @@
             },
             {
               "text": "et",
-              "conf": 0.0,
+              "conf": 0,
               "left": 812,
               "top": 1234,
               "width": 49,
@@ -213683,7 +213683,7 @@
           "line_num": 5,
           "text": "debt, it is incumbent upon the Muslim authorities to send such to him.",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             60,
             1712,
@@ -214421,7 +214421,7 @@
           "line_num": 8,
           "text": "of it to the next-of-kin.",
           "script": "latin",
-          "confidence": 87.0,
+          "confidence": 87,
           "bbox_px": [
             67,
             1834,
@@ -215109,7 +215109,7 @@
       "pdf_page": 40,
       "page_size_pdf_points": [
         564.75,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -218826,7 +218826,7 @@
           "bbox_normalized": [
             0.941214,
             0.404418,
-            1.0,
+            1,
             0.421551
           ],
           "words": [
@@ -219796,7 +219796,7 @@
           "line_num": 2,
           "text": "near the Muslims in harmony and peaceful coexistence. 1",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             285,
             1132,
@@ -220134,7 +220134,7 @@
             },
             {
               "text": "t%",
-              "conf": 0.0,
+              "conf": 0,
               "left": 677,
               "top": 1246,
               "width": 24,
@@ -220182,7 +220182,7 @@
             },
             {
               "text": "*",
-              "conf": 0.0,
+              "conf": 0,
               "left": 820,
               "top": 1241,
               "width": 14,
@@ -222423,8 +222423,8 @@
       "document_slug": "islam_volume_1",
       "pdf_page": 41,
       "page_size_pdf_points": [
-        477.0,
-        792.0
+        477,
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -225740,7 +225740,7 @@
       "document_slug": "islam_volume_1",
       "pdf_page": 42,
       "page_size_pdf_points": [
-        612.0,
+        612,
         673.6400146484375
       ],
       "embedded_text": "",
@@ -225802,7 +225802,7 @@
             },
             {
               "text": "يو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1509,
               "top": 272,
               "width": 15,
@@ -225958,7 +225958,7 @@
           "bbox_normalized": [
             0.924737,
             0.404346,
-            1.0,
+            1,
             0.565978
           ],
           "words": [
@@ -226012,7 +226012,7 @@
           "bbox_normalized": [
             0.929988,
             0.563858,
-            1.0,
+            1,
             0.568627
           ],
           "words": [
@@ -226050,7 +226050,7 @@
           "bbox_normalized": [
             0.94049,
             0.570747,
-            1.0,
+            1,
             0.712772
           ],
           "words": [
@@ -226116,7 +226116,7 @@
       "pdf_page": 43,
       "page_size_pdf_points": [
         502.8399963378906,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -226133,7 +226133,7 @@
         {
           "lang": "eng+ara",
           "psm": 3,
-          "score": 0.0,
+          "score": 0,
           "eng_conf": null,
           "text_len": 0
         }
@@ -226150,7 +226150,7 @@
       "pdf_page": 44,
       "page_size_pdf_points": [
         461.239990234375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -226501,7 +226501,7 @@
             },
             {
               "text": "yeguire’s",
-              "conf": 0.0,
+              "conf": 0,
               "left": 602,
               "top": 539,
               "width": 120,
@@ -226517,7 +226517,7 @@
             },
             {
               "text": "OT",
-              "conf": 0.0,
+              "conf": 0,
               "left": 737,
               "top": 546,
               "width": 93,
@@ -228429,7 +228429,7 @@
           "line_num": 1,
           "text": "اي",
           "script": "other",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             1040,
             1519,
@@ -228445,7 +228445,7 @@
           "words": [
             {
               "text": "اي",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1040,
               "top": 1519,
               "width": 17,
@@ -229039,7 +229039,7 @@
             },
             {
               "text": "do",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1005,
               "top": 1676,
               "width": 38,
@@ -229731,7 +229731,7 @@
       "pdf_page": 45,
       "page_size_pdf_points": [
         482.30999755859375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -229922,7 +229922,7 @@
           "line_num": 3,
           "text": "“fy!",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             644,
             695,
@@ -229938,7 +229938,7 @@
           "words": [
             {
               "text": "“fy!",
-              "conf": 0.0,
+              "conf": 0,
               "left": 644,
               "top": 695,
               "width": 35,
@@ -230508,7 +230508,7 @@
           "words": [
             {
               "text": "QOPI",
-              "conf": 0.0,
+              "conf": 0,
               "left": 250,
               "top": 1689,
               "width": 669,
@@ -230572,7 +230572,7 @@
             },
             {
               "text": "SLL",
-              "conf": 0.0,
+              "conf": 0,
               "left": 816,
               "top": 1685,
               "width": 104,
@@ -230686,7 +230686,7 @@
       "pdf_page": 46,
       "page_size_pdf_points": [
         593.7999877929688,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -230897,7 +230897,7 @@
             },
             {
               "text": "“41-Rahman”",
-              "conf": 0.0,
+              "conf": 0,
               "left": 523,
               "top": 350,
               "width": 187,
@@ -233847,7 +233847,7 @@
             },
             {
               "text": "seat",
-              "conf": 0.0,
+              "conf": 0,
               "left": 625,
               "top": 1113,
               "width": 155,
@@ -234093,7 +234093,7 @@
             },
             {
               "text": "indignation",
-              "conf": 0.0,
+              "conf": 0,
               "left": 892,
               "top": 1140,
               "width": 171,
@@ -234897,7 +234897,7 @@
       "pdf_page": 47,
       "page_size_pdf_points": [
         478.1300048828125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -236094,7 +236094,7 @@
             },
             {
               "text": "dees",
-              "conf": 0.0,
+              "conf": 0,
               "left": 980,
               "top": 381,
               "width": 137,
@@ -240076,7 +240076,7 @@
           "line_num": 5,
           "text": "5\t1\t9\t1\t5\t2\t81\t1406\t94\t24\t83.721443\t“Allah”5\t1\t9\t1\t5\t3\t188\t1407\t18\t23\t96.896599\tis5\t1\t9\t1\t5\t4\t219\t1411\t42\t19\t96.582680\tnot5\t1\t9\t1\t5\t5\t277\t1404\t66\t26\t96.771866\tTHE5\t1\t9\t1\t5\t6\t355\t1402\t99\t25\t96.468620\tIslamic5\t1\t9\t1\t5\t7\t467\t1407\t76\t18\t96.585793\tname5\t1\t9\t1\t5\t8\t556\t1398\t29\t24\t96.867912\tof5\t1\t9\t1\t5\t9\t594\t1396\t63\t30\t96.264221\tGod,5\t1\t9\t1\t5\t10\t671\t1403\t26\t16\t96.264221\tas5\t1\t9\t1\t5\t11\t710\t1392\t152\t31\t96.333321\terroneously5\t1\t9\t1\t5\t12\t874\t1389\t110\t26\t96.790863\tbelieved5\t1\t9\t1\t5\t13\t996\t1389\t32\t30\t95.613281\tby5\t1\t9\t1\t5\t14\t1040\t1395\t71\t16\t95.613281\tsome.4\t1\t9\t1\t6\t0\t81\t1429\t1023\t51\t-1\t5\t1\t9\t1\t6\t1\t81\t1447\t19\t25\t96.882126\tIt5\t1\t9\t1\t6\t2\t112\t1449\t17\t23\t96.882126\tis5\t1\t9\t1\t6\t3\t143\t1449\t87\t31\t96.962547\tmerely5\t1\t9\t1\t6\t4\t244\t1449\t41\t24\t96.885849\tthe5\t1\t9\t1\t6\t5\t300\t1447\t92\t25\t96.626511\tArabic5\t1\t9\t1\t6\t6\t407\t1447\t161\t28\t96.626511\tcounterpart5\t1\t9\t1\t6\t7\t584\t1440\t29\t25\t96.851212\tof5\t1\t9\t1\t6\t8\t625\t1439\t41\t24\t96.996262\tthe5\t1\t9\t1\t6\t9\t681\t1436\t100\t32\t95.999557\tEnglish5\t1\t9\t1\t6\t10\t795\t1434\t78\t24\t96.800446\twords5\t1\t9\t1\t6\t11\t888\t1432\t57\t24\t95.426430\t“the5\t1\t9\t1\t6\t12\t960\t1429\t78\t26\t96.299515\tGod.”5\t1\t9\t1\t6\t13\t1052\t1429\t52\t23\t95.598579\tThe4\t1\t9\t1\t7\t0\t81\t1466\t1023\t55\t-1\t5\t1\t9\t1\t7\t1\t81\t1490\t89\t31\t93.991913\tsyllable5\t1\t9\t1\t7\t2\t187\t1492\t58\t24\t51.835194\t“Al”5\t1\t9\t1\t7\t3\t257\t1492\t25\t23\t96.802170\tin5\t1\t9\t1\t7\t4\t297\t1491\t41\t24\t96.804482\tthe5\t1\t9\t1\t7\t5\t351\t1489\t70\t25\t96.588058\tword5\t1\t9\t1\t7\t6\t435\t1485\t109\t27\t95.502312\t“Allah”5\t1\t9\t1\t7\t7\t558\t1490\t85\t18\t96.921181\tmeans5\t1\t9\t1\t7\t8\t657\t1479\t82\t25\t96.546249\t“the.”5\t1\t9\t1\t7\t9\t752\t1479\t23\t23\t95.432808\tA5\t1\t9\t1\t7\t10\t788\t1476\t48\t33\t95.432808\tgod5\t1\t9\t1\t7\t11\t849\t1484\t28\t16\t96.270378\tor5\t1\t9\t1\t7\t12\t889\t1483\t15\t16\t96.270378\ta5\t1\t9\t1\t7\t13\t917\t1473\t66\t31\t96.685295\tdeity5\t1\t9\t1\t7\t14\t996\t1473\t18\t23\t96.685295\tis5\t1\t9\t1\t7\t15\t1028\t1466\t76\t37\t96.603661\tcalled4\t1\t9\t1\t8\t0\t84\t1509\t1020\t56\t-1\t5\t1\t9\t1\t8\t1\t84\t1532\t69\t25\t0.000000\t“lah”5\t1\t9\t1\t8\t2\t158\t1534\t24\t23\t95.742729\tin5\t1\t9\t1\t8\t3\t190\t1535\t39\t24\t96.145493\tthe5\t1\t9\t1\t8\t4\t237\t1534\t89\t25\t96.863876\tArabic5\t1\t9\t1\t8\t5\t334\t1534\t130\t31\t96.863876\tlanguage.5\t1\t9\t1\t8\t6\t473\t1530\t78\t29\t96.951607\tThus,5\t1\t9\t1\t8\t7\t560\t1528\t41\t24\t95.917816\tthe5\t1\t9\t1\t8\t8\t609\t1525\t79\t25\t95.996643\twords5\t1\t9\t1\t8\t9\t696\t1523\t57\t24\t72.094521\t“the5\t1\t9\t1\t8\t10\t761\t1520\t71\t25\t96.920807\tGod”5\t1\t9\t1\t8\t11\t840\t1518\t82\t24\t96.876724\twould5\t1\t9\t1\t8\t12\t929\t1517\t30\t24\t96.392555\tbe5\t1\t9\t1\t8\t13\t967\t1509\t137\t41\t96.722656\tequivalent4\t1\t9\t1\t9\t0\t82\t1557\t1022\t49\t-1\t5\t1\t9\t1\t9\t1\t82\t1578\t22\t19\t96.008217\tto5\t1\t9\t1\t9\t2\t114\t1575\t36\t24\t96.008217\tthe5\t1\t9\t1\t9\t3\t161\t1577\t86\t24\t93.050339\tArabic5\t1\t9\t1\t9\t4\t261\t1577\t128\t29\t9.952072\t“A/-ilah,”5\t1\t9\t1\t9\t5\t398\t1574\t82\t25\t96.827538\twhich5\t1\t9\t1\t9\t6\t493\t1574\t19\t24\t96.946114\tis5\t1\t9\t1\t9\t7\t522\t1571\t84\t26\t96.986908\trather5\t1\t9\t1\t9\t8\t616\t1561\t122\t41\t96.609360\tawkward5\t1\t9\t1\t9\t9\t749\t1557\t171\t45\t96.871765\tphonetically.5\t1\t9\t1\t9\t10\t933\t1559\t37\t24\t96.856812\tTo5\t1\t9\t1\t9\t11\t981\t1562\t123\t20\t95.990089\tovercome4\t1\t9\t1\t10\t0\t82\t1597\t1024\t53\t-1\t5\t1\t9\t1\t10\t1\t82\t1615\t42\t25\t96.577499\tthis5\t1\t9\t1\t10\t2\t137\t1619\t174\t31\t96.049942\tawkwardness,5\t1\t9\t1\t10\t3\t326\t1620\t42\t24\t96.809982\tthe5\t1\t9\t1\t10\t4\t382\t1619\t79\t24\t96.727547\tArabs5\t1\t9\t1\t10\t5\t476\t1616\t92\t32\t96.573189\tsimply5\t1\t9\t1\t10\t6\t581\t1610\t114\t35\t96.171066\tdropped5\t1\t9\t1\t10\t7\t710\t1610\t41\t24\t96.171066\tthe5\t1\t9\t1\t10\t8\t765\t1608\t70\t24\t96.804482\tletter5\t1\t9\t1\t10\t9\t849\t1604\t39\t25\t35.937767\t<j”5\t1\t9\t1\t10\t10\t903\t1603\t61\t24\t90.447815\tfrom5\t1\t9\t1\t10\t11\t983\t1597\t123\t29\t85.494308\t“Al-ilah,”4\t1\t9\t1\t11\t0\t82\t1640\t1027\t47\t-1\t5\t1\t9\t1\t11\t1\t82\t1658\t72\t25\t96.459656\twhich5\t1\t9\t1\t11\t2\t163\t1662\t70\t24\t96.586067\tmade5\t1\t9\t1\t11\t3\t243\t1662\t17\t24\t96.586067\tit5\t1\t9\t1\t11\t4\t270\t1663\t112\t24\t88.598282\t“Allah”.5\t1\t9\t1\t11\t5\t393\t1662\t55\t24\t96.264114\tThe5\t1\t9\t1\t11\t6\t458\t1659\t80\t26\t96.865532\tliteral5\t1\t9\t1\t11\t7\t549\t1655\t146\t27\t94.109352\ttranslation5\t1\t9\t1\t11\t8\t705\t1653\t28\t24\t97.009064\tof5\t1\t9\t1\t11\t9\t739\t1652\t41\t24\t96.924911\tthe5\t1\t9\t1\t11\t10\t790\t1648\t66\t26\t97.013077\tword5\t1\t9\t1\t11\t11\t867\t1644\t111\t30\t87.436874\t“Allah,”5\t1\t9\t1\t11\t12\t988\t1640\t121\t27\t96.361740\ttherefore,4\t1\t9\t1\t12\t0\t83\t1681\t1019\t56\t-1\t5\t1\t9\t1\t12\t1\t83\t1701\t73\t24\t92.485809\twould5\t1\t9\t1\t12\t2\t163\t1702\t29\t25\t92.485809\tbe5\t1\t9\t1\t12\t3\t199\t1704\t67\t24\t95.974968\t“The5\t1\t9\t1\t12\t4\t273\t1705\t79\t24\t95.808777\tGod”.5\t1\t9\t1\t12\t5\t361\t1705\t110\t32\t95.492142\tSupport5\t1\t9\t1\t12\t6\t479\t1704\t38\t24\t96.839828\tfor5\t1\t9\t1\t12\t7\t525\t1703\t41\t24\t96.936111\tthe5\t1\t9\t1\t12\t8\t574\t1702\t132\t23\t96.936111\tstatement5\t1\t9\t1\t12\t9\t715\t1696\t53\t24\t95.380516\tthat5\t1\t9\t1\t12\t10\t776\t1690\t104\t27\t74.102570\t“Allah”5\t1\t9\t1\t12\t11\t889\t1690\t18\t23\t96.249535\tis5\t1\t9\t1\t12\t12\t915\t1692\t42\t20\t96.249535\tnot5\t1\t9\t1\t12\t13\t965\t1681\t137\t30\t95.849945\tnecessarily4\t1\t9\t1\t13\t0\t86\t1721\t1021\t51\t-1\t5\t1\t9\t1\t13\t1\t86\t1739\t58\t26\t96.944237\tTHE5\t1\t9\t1\t13\t2\t153\t1743\t91\t27\t90.824677\tIslamic5\t1\t9\t1\t13\t3\t256\t1755\t72\t17\t96.943459\tname5\t1\t9\t1\t13\t4\t339\t1748\t28\t24\t96.953049\tof5\t1\t9\t1\t13\t5\t375\t1747\t57\t25\t94.712364\tGod5\t1\t9\t1\t13\t6\t444\t1754\t82\t17\t94.712364\tcomes5\t1\t9\t1\t13\t7\t538\t1745\t64\t24\t96.401184\tfrom5\t1\t9\t1\t13\t8\t614\t1742\t42\t24\t96.768105\tthe5\t1\t9\t1\t13\t9\t668\t1740\t49\t24\t96.959229\tfact5\t1\t9\t1\t13\t10\t730\t1738\t53\t24\t95.438507\tthat5\t1\t9\t1\t13\t11\t795\t1734\t32\t25\t96.605690\tall5\t1\t9\t1\t13\t12\t839\t1732\t77\t25\t96.605690\tArabs5\t1\t9\t1\t13\t13\t928\t1736\t40\t17\t96.948120\tuse5\t1\t9\t1\t13\t14\t980\t1726\t46\t25\t96.538841\tthis5\t1\t9\t1\t13\t15\t1037\t1721\t70\t28\t96.538841\tword,4\t1\t9\t1\t14\t0\t84\t1758\t1023\t63\t-1\t5\t1\t9\t1\t14\t1\t84\t1784\t118\t28\t71.949821\tTegardless5\t1\t9\t1\t14\t2\t217\t1788\t27\t23\t95.753731\tof5\t1\t9\t1\t14\t3\t257\t1788\t61\t25\t95.753731\ttheir5\t1\t9\t1\t14\t4\t333\t1790\t110\t31\t96.842026\treligion,5\t1\t9\t1\t14\t5\t461\t1794\t25\t18\t96.528831\tto5\t1\t9\t1\t14\t6\t503\t1795\t74\t17\t96.761642\tmean5\t1\t9\t1\t14\t7\t594\t1783\t63\t26\t96.533646\tGod.5\t1\t9\t1\t14\t8\t675\t1776\t177\t31\t96.555588\tAdditionally,5\t1\t9\t1\t14\t9\t870\t1773\t39\t25\t96.523766\tthe5\t1\t9\t1\t14\t10\t926\t1768\t64\t26\t96.523766\tword5\t1\t9\t1\t14\t11\t1007\t1758\t100\t44\t92.396072\t“Allah”4\t1\t9\t1\t15\t0\t84\t1808\t1015\t54\t-1\t5\t1\t9\t1\t15\t1\t84\t1820\t38\t26\t96.731262\thas5\t1\t9\t1\t15\t2\t132\t1824\t57\t26\t96.563080\tbeen5\t1\t9\t1\t15\t3\t201\t1830\t56\t23\t96.675827\tused5\t1\t9\t1\t15\t4\t269\t1830\t24\t24\t93.206520\tin5\t1\t9\t1\t15\t5\t304\t1831\t151\t31\t93.206520\tpre-Islamic5\t1\t9\t1\t15\t6\t466\t1829\t100\t25\t96.887352\tArabia.5\t1\t9\t1\t15\t7\t578\t1827\t54\t24\t91.739212\tThe5\t1\t9\t1\t15\t8\t645\t1821\t125\t34\t87.155426\tProphet’s5\t1\t9\t1\t15\t9\t782\t1818\t85\t27\t96.779518\tfather,5\t1\t9\t1\t15\t10\t880\t1815\t35\t23\t96.709007\tfor5\t1\t9\t1\t15\t11\t926\t1808\t116\t32\t96.633995\texample,5\t1\t9\t1\t15\t12\t1053\t1811\t46\t16\t96.925316\twas4\t1\t9\t1\t16\t0\t85\t1866\t993\t38\t-1\t5\t1\t9\t1\t16\t1\t85\t1866\t82\t23\t91.706268\tnamed5\t1\t9\t1\t16\t2\t179\t1869\t146\t27\t80.441498\t“‘Abdullah5\t1\t9\t1\t16\t3\t339\t1874\t106\t30\t96.646042\t(servant5\t1\t9\t1\t16\t4\t459\t1872\t28\t24\t93.292053\tof5\t1\t9\t1\t16\t5\t497\t1870\t92\t32\t92.830338\tGod).”5\t1\t9\t1\t16\t6\t1069\t1888\t9\t3\t76.487274\t:4\t1\t9\t1\t17\t0\t141\t1885\t963\t64\t-1\t5\t1\t9\t1\t17\t1\t141\t1903\t148\t46\t96.933968\tTranslating5\t1\t9\t1\t17\t2\t307\t1915\t150\t24\t89.770248\t“Bismillahir5\t1\t9\t1\t17\t3\t471\t1912\t121\t26\t91.401077\tRahmanir5\t1\t9\t1\t17\t4\t606\t1907\t99\t31\t63.330292\tRakim’5\t1\t9\t1\t17\t5\t719\t1906\t51\t23\t96.351624\tinto5\t1\t9\t1\t17\t6\t787\t1901\t43\t23\t75.188377\t“Jn5\t1\t9\t1\t17\t7\t847\t1899\t40\t23\t95.812813\tthe5\t1\t9\t1\t17\t8\t902\t1900\t71\t19\t95.995689\tname5\t1\t9\t1\t17\t9\t988\t1889\t28\t24\t95.995689\tof5\t1\t9\t1\t17\t10\t1026\t1885\t78\t46\t92.196991\tAllah,4\t1\t9\t1\t18\t0\t85\t1929\t1017\t59\t-1\t5\t1\t9\t1\t18\t1\t85\t1945\t37\t24\t69.250137\tphe5\t1\t9\t1\t18\t2\t140\t1949\t199\t37\t96.237419\tCompassionate,5\t1\t9\t1\t18\t3\t361\t1957\t41\t24\t96.793121\tthe5\t1\t9\t1\t18\t4\t419\t1934\t137\t54\t95.964783\tMerciful”5\t1\t9\t1\t18\t5\t576\t1951\t143\t27\t96.506889\tconstitutes5\t1\t9\t1\t18\t6\t739\t1953\t33\t17\t95.455727\tan5\t1\t9\t1\t18\t7\t793\t1938\t145\t31\t95.455727\tincomplete5\t1\t9\t1\t18\t8\t959\t1929\t143\t28\t95.723801\ttranslation.2\t1\t10\t0\t0\t0\t89\t2007\t1009\t56\t-1\t3\t1\t10\t1\t0\t0\t89\t2007\t1009\t56\t-1\t4\t1\t10\t1\t1\t0\t89\t2007\t1009\t56\t-1\t5\t1\t10\t1\t1\t1\t89\t2026\t62\t23\t31.484543\tISLAM5\t1\t10\t1\t1\t2\t162\t2033\t124\t28\t91.174454\t1394/1974,5\t1\t10\t1\t1\t3\t295\t2040\t41\t23\t91.320724\t1(1)5\t1\t10\t1\t1\t4\t1075\t2007\t23\t18\t83.983620\t1",
           "script": "latin",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             56,
             1414,
@@ -240092,7 +240092,7 @@
           "words": [
             {
               "text": "5\t1\t9\t1\t5\t2\t81\t1406\t94\t24\t83.721443\t“Allah”5\t1\t9\t1\t5\t3\t188\t1407\t18\t23\t96.896599\tis5\t1\t9\t1\t5\t4\t219\t1411\t42\t19\t96.582680\tnot5\t1\t9\t1\t5\t5\t277\t1404\t66\t26\t96.771866\tTHE5\t1\t9\t1\t5\t6\t355\t1402\t99\t25\t96.468620\tIslamic5\t1\t9\t1\t5\t7\t467\t1407\t76\t18\t96.585793\tname5\t1\t9\t1\t5\t8\t556\t1398\t29\t24\t96.867912\tof5\t1\t9\t1\t5\t9\t594\t1396\t63\t30\t96.264221\tGod,5\t1\t9\t1\t5\t10\t671\t1403\t26\t16\t96.264221\tas5\t1\t9\t1\t5\t11\t710\t1392\t152\t31\t96.333321\terroneously5\t1\t9\t1\t5\t12\t874\t1389\t110\t26\t96.790863\tbelieved5\t1\t9\t1\t5\t13\t996\t1389\t32\t30\t95.613281\tby5\t1\t9\t1\t5\t14\t1040\t1395\t71\t16\t95.613281\tsome.4\t1\t9\t1\t6\t0\t81\t1429\t1023\t51\t-1\t5\t1\t9\t1\t6\t1\t81\t1447\t19\t25\t96.882126\tIt5\t1\t9\t1\t6\t2\t112\t1449\t17\t23\t96.882126\tis5\t1\t9\t1\t6\t3\t143\t1449\t87\t31\t96.962547\tmerely5\t1\t9\t1\t6\t4\t244\t1449\t41\t24\t96.885849\tthe5\t1\t9\t1\t6\t5\t300\t1447\t92\t25\t96.626511\tArabic5\t1\t9\t1\t6\t6\t407\t1447\t161\t28\t96.626511\tcounterpart5\t1\t9\t1\t6\t7\t584\t1440\t29\t25\t96.851212\tof5\t1\t9\t1\t6\t8\t625\t1439\t41\t24\t96.996262\tthe5\t1\t9\t1\t6\t9\t681\t1436\t100\t32\t95.999557\tEnglish5\t1\t9\t1\t6\t10\t795\t1434\t78\t24\t96.800446\twords5\t1\t9\t1\t6\t11\t888\t1432\t57\t24\t95.426430\t“the5\t1\t9\t1\t6\t12\t960\t1429\t78\t26\t96.299515\tGod.”5\t1\t9\t1\t6\t13\t1052\t1429\t52\t23\t95.598579\tThe4\t1\t9\t1\t7\t0\t81\t1466\t1023\t55\t-1\t5\t1\t9\t1\t7\t1\t81\t1490\t89\t31\t93.991913\tsyllable5\t1\t9\t1\t7\t2\t187\t1492\t58\t24\t51.835194\t“Al”5\t1\t9\t1\t7\t3\t257\t1492\t25\t23\t96.802170\tin5\t1\t9\t1\t7\t4\t297\t1491\t41\t24\t96.804482\tthe5\t1\t9\t1\t7\t5\t351\t1489\t70\t25\t96.588058\tword5\t1\t9\t1\t7\t6\t435\t1485\t109\t27\t95.502312\t“Allah”5\t1\t9\t1\t7\t7\t558\t1490\t85\t18\t96.921181\tmeans5\t1\t9\t1\t7\t8\t657\t1479\t82\t25\t96.546249\t“the.”5\t1\t9\t1\t7\t9\t752\t1479\t23\t23\t95.432808\tA5\t1\t9\t1\t7\t10\t788\t1476\t48\t33\t95.432808\tgod5\t1\t9\t1\t7\t11\t849\t1484\t28\t16\t96.270378\tor5\t1\t9\t1\t7\t12\t889\t1483\t15\t16\t96.270378\ta5\t1\t9\t1\t7\t13\t917\t1473\t66\t31\t96.685295\tdeity5\t1\t9\t1\t7\t14\t996\t1473\t18\t23\t96.685295\tis5\t1\t9\t1\t7\t15\t1028\t1466\t76\t37\t96.603661\tcalled4\t1\t9\t1\t8\t0\t84\t1509\t1020\t56\t-1\t5\t1\t9\t1\t8\t1\t84\t1532\t69\t25\t0.000000\t“lah”5\t1\t9\t1\t8\t2\t158\t1534\t24\t23\t95.742729\tin5\t1\t9\t1\t8\t3\t190\t1535\t39\t24\t96.145493\tthe5\t1\t9\t1\t8\t4\t237\t1534\t89\t25\t96.863876\tArabic5\t1\t9\t1\t8\t5\t334\t1534\t130\t31\t96.863876\tlanguage.5\t1\t9\t1\t8\t6\t473\t1530\t78\t29\t96.951607\tThus,5\t1\t9\t1\t8\t7\t560\t1528\t41\t24\t95.917816\tthe5\t1\t9\t1\t8\t8\t609\t1525\t79\t25\t95.996643\twords5\t1\t9\t1\t8\t9\t696\t1523\t57\t24\t72.094521\t“the5\t1\t9\t1\t8\t10\t761\t1520\t71\t25\t96.920807\tGod”5\t1\t9\t1\t8\t11\t840\t1518\t82\t24\t96.876724\twould5\t1\t9\t1\t8\t12\t929\t1517\t30\t24\t96.392555\tbe5\t1\t9\t1\t8\t13\t967\t1509\t137\t41\t96.722656\tequivalent4\t1\t9\t1\t9\t0\t82\t1557\t1022\t49\t-1\t5\t1\t9\t1\t9\t1\t82\t1578\t22\t19\t96.008217\tto5\t1\t9\t1\t9\t2\t114\t1575\t36\t24\t96.008217\tthe5\t1\t9\t1\t9\t3\t161\t1577\t86\t24\t93.050339\tArabic5\t1\t9\t1\t9\t4\t261\t1577\t128\t29\t9.952072\t“A/-ilah,”5\t1\t9\t1\t9\t5\t398\t1574\t82\t25\t96.827538\twhich5\t1\t9\t1\t9\t6\t493\t1574\t19\t24\t96.946114\tis5\t1\t9\t1\t9\t7\t522\t1571\t84\t26\t96.986908\trather5\t1\t9\t1\t9\t8\t616\t1561\t122\t41\t96.609360\tawkward5\t1\t9\t1\t9\t9\t749\t1557\t171\t45\t96.871765\tphonetically.5\t1\t9\t1\t9\t10\t933\t1559\t37\t24\t96.856812\tTo5\t1\t9\t1\t9\t11\t981\t1562\t123\t20\t95.990089\tovercome4\t1\t9\t1\t10\t0\t82\t1597\t1024\t53\t-1\t5\t1\t9\t1\t10\t1\t82\t1615\t42\t25\t96.577499\tthis5\t1\t9\t1\t10\t2\t137\t1619\t174\t31\t96.049942\tawkwardness,5\t1\t9\t1\t10\t3\t326\t1620\t42\t24\t96.809982\tthe5\t1\t9\t1\t10\t4\t382\t1619\t79\t24\t96.727547\tArabs5\t1\t9\t1\t10\t5\t476\t1616\t92\t32\t96.573189\tsimply5\t1\t9\t1\t10\t6\t581\t1610\t114\t35\t96.171066\tdropped5\t1\t9\t1\t10\t7\t710\t1610\t41\t24\t96.171066\tthe5\t1\t9\t1\t10\t8\t765\t1608\t70\t24\t96.804482\tletter5\t1\t9\t1\t10\t9\t849\t1604\t39\t25\t35.937767\t<j”5\t1\t9\t1\t10\t10\t903\t1603\t61\t24\t90.447815\tfrom5\t1\t9\t1\t10\t11\t983\t1597\t123\t29\t85.494308\t“Al-ilah,”4\t1\t9\t1\t11\t0\t82\t1640\t1027\t47\t-1\t5\t1\t9\t1\t11\t1\t82\t1658\t72\t25\t96.459656\twhich5\t1\t9\t1\t11\t2\t163\t1662\t70\t24\t96.586067\tmade5\t1\t9\t1\t11\t3\t243\t1662\t17\t24\t96.586067\tit5\t1\t9\t1\t11\t4\t270\t1663\t112\t24\t88.598282\t“Allah”.5\t1\t9\t1\t11\t5\t393\t1662\t55\t24\t96.264114\tThe5\t1\t9\t1\t11\t6\t458\t1659\t80\t26\t96.865532\tliteral5\t1\t9\t1\t11\t7\t549\t1655\t146\t27\t94.109352\ttranslation5\t1\t9\t1\t11\t8\t705\t1653\t28\t24\t97.009064\tof5\t1\t9\t1\t11\t9\t739\t1652\t41\t24\t96.924911\tthe5\t1\t9\t1\t11\t10\t790\t1648\t66\t26\t97.013077\tword5\t1\t9\t1\t11\t11\t867\t1644\t111\t30\t87.436874\t“Allah,”5\t1\t9\t1\t11\t12\t988\t1640\t121\t27\t96.361740\ttherefore,4\t1\t9\t1\t12\t0\t83\t1681\t1019\t56\t-1\t5\t1\t9\t1\t12\t1\t83\t1701\t73\t24\t92.485809\twould5\t1\t9\t1\t12\t2\t163\t1702\t29\t25\t92.485809\tbe5\t1\t9\t1\t12\t3\t199\t1704\t67\t24\t95.974968\t“The5\t1\t9\t1\t12\t4\t273\t1705\t79\t24\t95.808777\tGod”.5\t1\t9\t1\t12\t5\t361\t1705\t110\t32\t95.492142\tSupport5\t1\t9\t1\t12\t6\t479\t1704\t38\t24\t96.839828\tfor5\t1\t9\t1\t12\t7\t525\t1703\t41\t24\t96.936111\tthe5\t1\t9\t1\t12\t8\t574\t1702\t132\t23\t96.936111\tstatement5\t1\t9\t1\t12\t9\t715\t1696\t53\t24\t95.380516\tthat5\t1\t9\t1\t12\t10\t776\t1690\t104\t27\t74.102570\t“Allah”5\t1\t9\t1\t12\t11\t889\t1690\t18\t23\t96.249535\tis5\t1\t9\t1\t12\t12\t915\t1692\t42\t20\t96.249535\tnot5\t1\t9\t1\t12\t13\t965\t1681\t137\t30\t95.849945\tnecessarily4\t1\t9\t1\t13\t0\t86\t1721\t1021\t51\t-1\t5\t1\t9\t1\t13\t1\t86\t1739\t58\t26\t96.944237\tTHE5\t1\t9\t1\t13\t2\t153\t1743\t91\t27\t90.824677\tIslamic5\t1\t9\t1\t13\t3\t256\t1755\t72\t17\t96.943459\tname5\t1\t9\t1\t13\t4\t339\t1748\t28\t24\t96.953049\tof5\t1\t9\t1\t13\t5\t375\t1747\t57\t25\t94.712364\tGod5\t1\t9\t1\t13\t6\t444\t1754\t82\t17\t94.712364\tcomes5\t1\t9\t1\t13\t7\t538\t1745\t64\t24\t96.401184\tfrom5\t1\t9\t1\t13\t8\t614\t1742\t42\t24\t96.768105\tthe5\t1\t9\t1\t13\t9\t668\t1740\t49\t24\t96.959229\tfact5\t1\t9\t1\t13\t10\t730\t1738\t53\t24\t95.438507\tthat5\t1\t9\t1\t13\t11\t795\t1734\t32\t25\t96.605690\tall5\t1\t9\t1\t13\t12\t839\t1732\t77\t25\t96.605690\tArabs5\t1\t9\t1\t13\t13\t928\t1736\t40\t17\t96.948120\tuse5\t1\t9\t1\t13\t14\t980\t1726\t46\t25\t96.538841\tthis5\t1\t9\t1\t13\t15\t1037\t1721\t70\t28\t96.538841\tword,4\t1\t9\t1\t14\t0\t84\t1758\t1023\t63\t-1\t5\t1\t9\t1\t14\t1\t84\t1784\t118\t28\t71.949821\tTegardless5\t1\t9\t1\t14\t2\t217\t1788\t27\t23\t95.753731\tof5\t1\t9\t1\t14\t3\t257\t1788\t61\t25\t95.753731\ttheir5\t1\t9\t1\t14\t4\t333\t1790\t110\t31\t96.842026\treligion,5\t1\t9\t1\t14\t5\t461\t1794\t25\t18\t96.528831\tto5\t1\t9\t1\t14\t6\t503\t1795\t74\t17\t96.761642\tmean5\t1\t9\t1\t14\t7\t594\t1783\t63\t26\t96.533646\tGod.5\t1\t9\t1\t14\t8\t675\t1776\t177\t31\t96.555588\tAdditionally,5\t1\t9\t1\t14\t9\t870\t1773\t39\t25\t96.523766\tthe5\t1\t9\t1\t14\t10\t926\t1768\t64\t26\t96.523766\tword5\t1\t9\t1\t14\t11\t1007\t1758\t100\t44\t92.396072\t“Allah”4\t1\t9\t1\t15\t0\t84\t1808\t1015\t54\t-1\t5\t1\t9\t1\t15\t1\t84\t1820\t38\t26\t96.731262\thas5\t1\t9\t1\t15\t2\t132\t1824\t57\t26\t96.563080\tbeen5\t1\t9\t1\t15\t3\t201\t1830\t56\t23\t96.675827\tused5\t1\t9\t1\t15\t4\t269\t1830\t24\t24\t93.206520\tin5\t1\t9\t1\t15\t5\t304\t1831\t151\t31\t93.206520\tpre-Islamic5\t1\t9\t1\t15\t6\t466\t1829\t100\t25\t96.887352\tArabia.5\t1\t9\t1\t15\t7\t578\t1827\t54\t24\t91.739212\tThe5\t1\t9\t1\t15\t8\t645\t1821\t125\t34\t87.155426\tProphet’s5\t1\t9\t1\t15\t9\t782\t1818\t85\t27\t96.779518\tfather,5\t1\t9\t1\t15\t10\t880\t1815\t35\t23\t96.709007\tfor5\t1\t9\t1\t15\t11\t926\t1808\t116\t32\t96.633995\texample,5\t1\t9\t1\t15\t12\t1053\t1811\t46\t16\t96.925316\twas4\t1\t9\t1\t16\t0\t85\t1866\t993\t38\t-1\t5\t1\t9\t1\t16\t1\t85\t1866\t82\t23\t91.706268\tnamed5\t1\t9\t1\t16\t2\t179\t1869\t146\t27\t80.441498\t“‘Abdullah5\t1\t9\t1\t16\t3\t339\t1874\t106\t30\t96.646042\t(servant5\t1\t9\t1\t16\t4\t459\t1872\t28\t24\t93.292053\tof5\t1\t9\t1\t16\t5\t497\t1870\t92\t32\t92.830338\tGod).”5\t1\t9\t1\t16\t6\t1069\t1888\t9\t3\t76.487274\t:4\t1\t9\t1\t17\t0\t141\t1885\t963\t64\t-1\t5\t1\t9\t1\t17\t1\t141\t1903\t148\t46\t96.933968\tTranslating5\t1\t9\t1\t17\t2\t307\t1915\t150\t24\t89.770248\t“Bismillahir5\t1\t9\t1\t17\t3\t471\t1912\t121\t26\t91.401077\tRahmanir5\t1\t9\t1\t17\t4\t606\t1907\t99\t31\t63.330292\tRakim’5\t1\t9\t1\t17\t5\t719\t1906\t51\t23\t96.351624\tinto5\t1\t9\t1\t17\t6\t787\t1901\t43\t23\t75.188377\t“Jn5\t1\t9\t1\t17\t7\t847\t1899\t40\t23\t95.812813\tthe5\t1\t9\t1\t17\t8\t902\t1900\t71\t19\t95.995689\tname5\t1\t9\t1\t17\t9\t988\t1889\t28\t24\t95.995689\tof5\t1\t9\t1\t17\t10\t1026\t1885\t78\t46\t92.196991\tAllah,4\t1\t9\t1\t18\t0\t85\t1929\t1017\t59\t-1\t5\t1\t9\t1\t18\t1\t85\t1945\t37\t24\t69.250137\tphe5\t1\t9\t1\t18\t2\t140\t1949\t199\t37\t96.237419\tCompassionate,5\t1\t9\t1\t18\t3\t361\t1957\t41\t24\t96.793121\tthe5\t1\t9\t1\t18\t4\t419\t1934\t137\t54\t95.964783\tMerciful”5\t1\t9\t1\t18\t5\t576\t1951\t143\t27\t96.506889\tconstitutes5\t1\t9\t1\t18\t6\t739\t1953\t33\t17\t95.455727\tan5\t1\t9\t1\t18\t7\t793\t1938\t145\t31\t95.455727\tincomplete5\t1\t9\t1\t18\t8\t959\t1929\t143\t28\t95.723801\ttranslation.2\t1\t10\t0\t0\t0\t89\t2007\t1009\t56\t-1\t3\t1\t10\t1\t0\t0\t89\t2007\t1009\t56\t-1\t4\t1\t10\t1\t1\t0\t89\t2007\t1009\t56\t-1\t5\t1\t10\t1\t1\t1\t89\t2026\t62\t23\t31.484543\tISLAM5\t1\t10\t1\t1\t2\t162\t2033\t124\t28\t91.174454\t1394/1974,5\t1\t10\t1\t1\t3\t295\t2040\t41\t23\t91.320724\t1(1)5\t1\t10\t1\t1\t4\t1075\t2007\t23\t18\t83.983620\t1",
-              "conf": 0.0,
+              "conf": 0,
               "left": 56,
               "top": 1414,
               "width": 2,
@@ -240139,7 +240139,7 @@
       "pdf_page": 48,
       "page_size_pdf_points": [
         531.8499755859375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -240672,7 +240672,7 @@
             },
             {
               "text": ".",
-              "conf": 0.0,
+              "conf": 0,
               "left": 846,
               "top": 337,
               "width": 4,
@@ -244625,7 +244625,7 @@
       "pdf_page": 49,
       "page_size_pdf_points": [
         582.22998046875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -245876,7 +245876,7 @@
       "pdf_page": 50,
       "page_size_pdf_points": [
         487.239990234375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -246441,7 +246441,7 @@
             },
             {
               "text": "s",
-              "conf": 0.0,
+              "conf": 0,
               "left": 747,
               "top": 1243,
               "width": 62,
@@ -247699,7 +247699,7 @@
           "words": [
             {
               "text": "|i",
-              "conf": 0.0,
+              "conf": 0,
               "left": 262,
               "top": 1724,
               "width": 733,
@@ -248116,7 +248116,7 @@
       "document_slug": "islam_volume_1",
       "pdf_page": 51,
       "page_size_pdf_points": [
-        612.0,
+        612,
         727.5599975585938
       ],
       "embedded_text": "",
@@ -249396,7 +249396,7 @@
             },
             {
               "text": "peices",
-              "conf": 0.0,
+              "conf": 0,
               "left": 564,
               "top": 620,
               "width": 195,
@@ -250350,7 +250350,7 @@
           "words": [
             {
               "text": "reformers.’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 144,
               "top": 956,
               "width": 256,
@@ -252749,14 +252749,14 @@
         1714,
         2038
       ],
-      "ocr_eng_confidence": 91.0,
+      "ocr_eng_confidence": 91,
       "ocr_arabic_confidence": 28.96,
       "ocr_variants": [
         {
           "lang": "eng+ara",
           "psm": 3,
           "score": 107.47563466713007,
-          "eng_conf": 91.0,
+          "eng_conf": 91,
           "text_len": 1698
         }
       ],
@@ -252772,7 +252772,7 @@
       "pdf_page": 52,
       "page_size_pdf_points": [
         515.1199951171875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -253053,7 +253053,7 @@
             },
             {
               "text": "AIG",
-              "conf": 0.0,
+              "conf": 0,
               "left": 647,
               "top": 343,
               "width": 97,
@@ -253403,7 +253403,7 @@
             },
             {
               "text": "اشههة",
-              "conf": 0.0,
+              "conf": 0,
               "left": 755,
               "top": 1206,
               "width": 116,
@@ -253521,7 +253521,7 @@
             },
             {
               "text": "لتاق",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1025,
               "top": 1348,
               "width": 78,
@@ -253537,7 +253537,7 @@
             },
             {
               "text": "eae‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 611,
               "top": 1376,
               "width": 498,
@@ -253553,7 +253553,7 @@
             },
             {
               "text": "ولط",
-              "conf": 0.0,
+              "conf": 0,
               "left": 477,
               "top": 1376,
               "width": 126,
@@ -253569,7 +253569,7 @@
             },
             {
               "text": "و",
-              "conf": 0.0,
+              "conf": 0,
               "left": 419,
               "top": 1384,
               "width": 20,
@@ -253585,7 +253585,7 @@
             },
             {
               "text": "فكي",
-              "conf": 0.0,
+              "conf": 0,
               "left": 284,
               "top": 1348,
               "width": 116,
@@ -253703,7 +253703,7 @@
             },
             {
               "text": "الله",
-              "conf": 0.0,
+              "conf": 0,
               "left": 435,
               "top": 1434,
               "width": 145,
@@ -254021,7 +254021,7 @@
             },
             {
               "text": "عوك",
-              "conf": 0.0,
+              "conf": 0,
               "left": 297,
               "top": 1738,
               "width": 154,
@@ -254101,7 +254101,7 @@
             },
             {
               "text": "re‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 862,
               "top": 1726,
               "width": 248,
@@ -254117,7 +254117,7 @@
             },
             {
               "text": "فطل",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1033,
               "top": 1721,
               "width": 81,
@@ -254133,7 +254133,7 @@
             },
             {
               "text": "f‏",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1142,
               "top": 1667,
               "width": 48,
@@ -254247,7 +254247,7 @@
       "pdf_page": 53,
       "page_size_pdf_points": [
         522.0900268554688,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -259234,7 +259234,7 @@
             },
             {
               "text": "}",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1083,
               "top": 1658,
               "width": 11,
@@ -260120,7 +260120,7 @@
       "pdf_page": 54,
       "page_size_pdf_points": [
         500.1499938964844,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -260283,7 +260283,7 @@
             },
             {
               "text": "saci",
-              "conf": 0.0,
+              "conf": 0,
               "left": 197,
               "top": 365,
               "width": 213,
@@ -260401,7 +260401,7 @@
             },
             {
               "text": "نمأم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 434,
               "top": 504,
               "width": 340,
@@ -260417,7 +260417,7 @@
             },
             {
               "text": "سايإ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 171,
               "top": 517,
               "width": 274,
@@ -260541,7 +260541,7 @@
             },
             {
               "text": "والتصجتمواصييزة",
-              "conf": 0.0,
+              "conf": 0,
               "left": 177,
               "top": 549,
               "width": 458,
@@ -260649,7 +260649,7 @@
             },
             {
               "text": "هقان",
-              "conf": 0.0,
+              "conf": 0,
               "left": 417,
               "top": 686,
               "width": 341,
@@ -260907,7 +260907,7 @@
             },
             {
               "text": "كفرتتتوةه",
-              "conf": 0.0,
+              "conf": 0,
               "left": 395,
               "top": 783,
               "width": 269,
@@ -260923,7 +260923,7 @@
             },
             {
               "text": "لإيكاة‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 191,
               "top": 757,
               "width": 174,
@@ -261143,7 +261143,7 @@
             },
             {
               "text": "iieacnn",
-              "conf": 0.0,
+              "conf": 0,
               "left": 540,
               "top": 982,
               "width": 475,
@@ -261299,7 +261299,7 @@
             },
             {
               "text": "امود",
-              "conf": 0.0,
+              "conf": 0,
               "left": 853,
               "top": 1139,
               "width": 179,
@@ -261315,7 +261315,7 @@
             },
             {
               "text": "واكك‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 663,
               "top": 1133,
               "width": 184,
@@ -261455,7 +261455,7 @@
           "words": [
             {
               "text": "pralleaty",
-              "conf": 0.0,
+              "conf": 0,
               "left": 168,
               "top": 1307,
               "width": 266,
@@ -261471,7 +261471,7 @@
             },
             {
               "text": "Resse",
-              "conf": 0.0,
+              "conf": 0,
               "left": 458,
               "top": 1307,
               "width": 131,
@@ -261487,7 +261487,7 @@
             },
             {
               "text": "8)",
-              "conf": 0.0,
+              "conf": 0,
               "left": 605,
               "top": 1308,
               "width": 40,
@@ -261503,7 +261503,7 @@
             },
             {
               "text": "SM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 648,
               "top": 1315,
               "width": 149,
@@ -261621,7 +261621,7 @@
             },
             {
               "text": "Whassup",
-              "conf": 0.0,
+              "conf": 0,
               "left": 169,
               "top": 1377,
               "width": 568,
@@ -261739,7 +261739,7 @@
             },
             {
               "text": "(Ga",
-              "conf": 0.0,
+              "conf": 0,
               "left": 349,
               "top": 1480,
               "width": 56,
@@ -262007,7 +262007,7 @@
             },
             {
               "text": "Pabst",
-              "conf": 0.0,
+              "conf": 0,
               "left": 285,
               "top": 1731,
               "width": 308,
@@ -262077,7 +262077,7 @@
           "words": [
             {
               "text": "hy)",
-              "conf": 0.0,
+              "conf": 0,
               "left": 66,
               "top": 1708,
               "width": 2,
@@ -262093,7 +262093,7 @@
             },
             {
               "text": "esis",
-              "conf": 0.0,
+              "conf": 0,
               "left": 167,
               "top": 1648,
               "width": 241,
@@ -262141,7 +262141,7 @@
             },
             {
               "text": "GAGs",
-              "conf": 0.0,
+              "conf": 0,
               "left": 573,
               "top": 1649,
               "width": 158,
@@ -262157,7 +262157,7 @@
             },
             {
               "text": "re",
-              "conf": 0.0,
+              "conf": 0,
               "left": 748,
               "top": 1656,
               "width": 45,
@@ -262303,7 +262303,7 @@
       "pdf_page": 55,
       "page_size_pdf_points": [
         588.1199951171875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -262316,7 +262316,7 @@
           "line_num": 1,
           "text": "SURA AL-BAQARAH",
           "script": "latin",
-          "confidence": 92.0,
+          "confidence": 92,
           "bbox_px": [
             270,
             164,
@@ -264158,7 +264158,7 @@
           "bbox_normalized": [
             0.885853,
             0.439585,
-            1.0,
+            1,
             0.456718
           ],
           "words": [
@@ -264244,7 +264244,7 @@
           "bbox_normalized": [
             0.884639,
             0.460325,
-            1.0,
+            1,
             0.475654
           ],
           "words": [
@@ -264330,7 +264330,7 @@
           "bbox_normalized": [
             0.92289,
             0.482417,
-            1.0,
+            1,
             0.493237
           ],
           "words": [
@@ -264384,7 +264384,7 @@
           "bbox_normalized": [
             0.885246,
             0.501353,
-            1.0,
+            1,
             0.515329
           ],
           "words": [
@@ -264620,7 +264620,7 @@
           "bbox_normalized": [
             0.885246,
             0.52119,
-            1.0,
+            1,
             0.535167
           ],
           "words": [
@@ -264904,7 +264904,7 @@
           "bbox_normalized": [
             0.885246,
             0.540577,
-            1.0,
+            1,
             0.551398
           ],
           "words": [
@@ -264974,7 +264974,7 @@
           "bbox_normalized": [
             0.884639,
             0.559964,
-            1.0,
+            1,
             0.574391
           ],
           "words": [
@@ -265028,7 +265028,7 @@
           "bbox_normalized": [
             0.885853,
             0.5789,
-            1.0,
+            1,
             0.593327
           ],
           "words": [
@@ -265082,7 +265082,7 @@
           "bbox_normalized": [
             0.884639,
             0.597836,
-            1.0,
+            1,
             0.612714
           ],
           "words": [
@@ -265404,7 +265404,7 @@
           "bbox_normalized": [
             0.883424,
             0.635257,
-            1.0,
+            1,
             0.65239
           ],
           "words": [
@@ -265640,7 +265640,7 @@
           "bbox_normalized": [
             0.882817,
             0.6578,
-            1.0,
+            1,
             0.673129
           ],
           "words": [
@@ -265876,7 +265876,7 @@
           "bbox_normalized": [
             0.88221,
             0.677187,
-            1.0,
+            1,
             0.692967
           ],
           "words": [
@@ -266112,7 +266112,7 @@
           "bbox_normalized": [
             0.88221,
             0.693417,
-            1.0,
+            1,
             0.713255
           ],
           "words": [
@@ -266332,7 +266332,7 @@
           "bbox_normalized": [
             0.88221,
             0.711452,
-            1.0,
+            1,
             0.734896
           ],
           "words": [
@@ -267336,7 +267336,7 @@
             },
             {
               "text": "Dicas",
-              "conf": 0.0,
+              "conf": 0,
               "left": 940,
               "top": 1745,
               "width": 26,
@@ -268028,7 +268028,7 @@
       "pdf_page": 56,
       "page_size_pdf_points": [
         489.2099914550781,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -268105,7 +268105,7 @@
             },
             {
               "text": "زتره",
-              "conf": 0.0,
+              "conf": 0,
               "left": 322,
               "top": 214,
               "width": 74,
@@ -268287,7 +268287,7 @@
             },
             {
               "text": "erx:",
-              "conf": 0.0,
+              "conf": 0,
               "left": 943,
               "top": 264,
               "width": 7,
@@ -269305,7 +269305,7 @@
             },
             {
               "text": "ANCE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 506,
               "top": 523,
               "width": 269,
@@ -269509,7 +269509,7 @@
           "line_num": 1,
           "text": "| es و يسح سر‎ Ao A",
           "script": "arabic",
-          "confidence": 33.0,
+          "confidence": 33,
           "bbox_px": [
             774,
             630,
@@ -275469,7 +275469,7 @@
       "pdf_page": 57,
       "page_size_pdf_points": [
         598.760009765625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -277618,7 +277618,7 @@
           "bbox_normalized": [
             0.839595,
             0.368801,
-            1.0,
+            1,
             0.3945
           ],
           "words": [
@@ -278406,7 +278406,7 @@
           "bbox_normalized": [
             0.840787,
             0.434175,
-            1.0,
+            1,
             0.454463
           ],
           "words": [
@@ -279076,7 +279076,7 @@
           "bbox_normalized": [
             0.875373,
             0.477006,
-            1.0,
+            1,
             0.487376
           ],
           "words": [
@@ -279484,7 +279484,7 @@
           "bbox_normalized": [
             0.841383,
             0.512624,
-            1.0,
+            1,
             0.527502
           ],
           "words": [
@@ -279624,7 +279624,7 @@
           "bbox_normalized": [
             0.841383,
             0.532011,
-            1.0,
+            1,
             0.546438
           ],
           "words": [
@@ -279908,7 +279908,7 @@
           "bbox_normalized": [
             0.842576,
             0.550947,
-            1.0,
+            1,
             0.565825
           ],
           "words": [
@@ -280000,7 +280000,7 @@
           "line_num": 2,
           "text": "and their vision. :",
           "script": "latin",
-          "confidence": 93.0,
+          "confidence": 93,
           "bbox_px": [
             311,
             1259,
@@ -280096,7 +280096,7 @@
           "bbox_normalized": [
             0.842576,
             0.568981,
-            1.0,
+            1,
             0.582056
           ],
           "words": [
@@ -280380,7 +280380,7 @@
           "bbox_normalized": [
             0.843172,
             0.586564,
-            1.0,
+            1,
             0.603246
           ],
           "words": [
@@ -281024,7 +281024,7 @@
           "bbox_normalized": [
             0.896243,
             0.644725,
-            1.0,
+            1,
             0.660956
           ],
           "words": [
@@ -282360,7 +282360,7 @@
             },
             {
               "text": "NC",
-              "conf": 0.0,
+              "conf": 0,
               "left": 766,
               "top": 1766,
               "width": 17,
@@ -283276,7 +283276,7 @@
             },
             {
               "text": "0",
-              "conf": 0.0,
+              "conf": 0,
               "left": 972,
               "top": 1935,
               "width": 101,
@@ -283320,7 +283320,7 @@
       "pdf_page": 58,
       "page_size_pdf_points": [
         484.20001220703125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -285821,7 +285821,7 @@
             },
             {
               "text": ";",
-              "conf": 0.0,
+              "conf": 0,
               "left": 616,
               "top": 683,
               "width": 5,
@@ -292233,7 +292233,7 @@
       "pdf_page": 59,
       "page_size_pdf_points": [
         603.989990234375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -292396,7 +292396,7 @@
           "words": [
             {
               "text": "iris",
-              "conf": 0.0,
+              "conf": 0,
               "left": 683,
               "top": 309,
               "width": 64,
@@ -292642,7 +292642,7 @@
             },
             {
               "text": "نين‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 959,
               "top": 333,
               "width": 107,
@@ -292674,7 +292674,7 @@
           "bbox_normalized": [
             0.809693,
             0.142471,
-            1.0,
+            1,
             0.193417
           ],
           "words": [
@@ -292830,7 +292830,7 @@
             },
             {
               "text": "sadividual",
-              "conf": 0.0,
+              "conf": 0,
               "left": 731,
               "top": 380,
               "width": 148,
@@ -293242,7 +293242,7 @@
           "bbox_normalized": [
             0.91844,
             0.206492,
-            1.0,
+            1,
             0.229486
           ],
           "words": [
@@ -293484,7 +293484,7 @@
             },
             {
               "text": ",",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1130,
               "top": 518,
               "width": 2,
@@ -293650,7 +293650,7 @@
             },
             {
               "text": "ٍ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1098,
               "top": 608,
               "width": 2,
@@ -293682,7 +293682,7 @@
           "bbox_normalized": [
             0.809102,
             0.261948,
-            1.0,
+            1,
             0.279531
           ],
           "words": [
@@ -293902,7 +293902,7 @@
           "bbox_normalized": [
             0.855792,
             0.286745,
-            1.0,
+            1,
             0.308386
           ],
           "words": [
@@ -294186,7 +294186,7 @@
           "bbox_normalized": [
             0.85461,
             0.307033,
-            1.0,
+            1,
             0.325518
           ],
           "words": [
@@ -294454,7 +294454,7 @@
           "bbox_normalized": [
             0.85461,
             0.326871,
-            1.0,
+            1,
             0.344454
           ],
           "words": [
@@ -295076,7 +295076,7 @@
             },
             {
               "text": "“Qur'an,”",
-              "conf": 0.0,
+              "conf": 0,
               "left": 220,
               "top": 826,
               "width": 132,
@@ -295616,7 +295616,7 @@
           "bbox_normalized": [
             0.810284,
             0.419297,
-            1.0,
+            1,
             0.435077
           ],
           "words": [
@@ -296184,7 +296184,7 @@
           "bbox_normalized": [
             0.810875,
             0.462128,
-            1.0,
+            1,
             0.477457
           ],
           "words": [
@@ -296330,7 +296330,7 @@
           "bbox_normalized": [
             0.810875,
             0.482867,
-            1.0,
+            1,
             0.498197
           ],
           "words": [
@@ -296598,7 +296598,7 @@
           "bbox_normalized": [
             0.810875,
             0.502705,
-            1.0,
+            1,
             0.518936
           ],
           "words": [
@@ -296898,7 +296898,7 @@
           "bbox_normalized": [
             0.851064,
             0.522543,
-            1.0,
+            1,
             0.536069
           ],
           "words": [
@@ -297600,7 +297600,7 @@
           "bbox_normalized": [
             0.810875,
             0.560415,
-            1.0,
+            1,
             0.577998
           ],
           "words": [
@@ -297654,7 +297654,7 @@
           "bbox_normalized": [
             0.811466,
             0.581605,
-            1.0,
+            1,
             0.598738
           ],
           "words": [
@@ -297922,7 +297922,7 @@
           "bbox_normalized": [
             0.812057,
             0.600541,
-            1.0,
+            1,
             0.620379
           ],
           "words": [
@@ -298068,7 +298068,7 @@
           "words": [
             {
               "text": "fs",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1369,
               "top": 1423,
               "width": 21,
@@ -298234,7 +298234,7 @@
           "bbox_normalized": [
             0.810875,
             0.675834,
-            1.0,
+            1,
             0.716862
           ],
           "words": [
@@ -298374,7 +298374,7 @@
           "bbox_normalized": [
             0.810875,
             0.721821,
-            1.0,
+            1,
             0.747971
           ],
           "words": [
@@ -298396,7 +298396,7 @@
             },
             {
               "text": "Xeu",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1441,
               "top": 1601,
               "width": 61,
@@ -299006,7 +299006,7 @@
           "bbox_normalized": [
             0.13948,
             0.755636,
-            1.0,
+            1,
             0.809739
           ],
           "words": [
@@ -299520,7 +299520,7 @@
           "words": [
             {
               "text": "“aNiNg",
-              "conf": 0.0,
+              "conf": 0,
               "left": 459,
               "top": 1772,
               "width": 53,
@@ -299820,7 +299820,7 @@
           "bbox_normalized": [
             0.809693,
             0.855726,
-            1.0,
+            1,
             0.875564
           ],
           "words": [
@@ -299922,7 +299922,7 @@
           "bbox_normalized": [
             0.809693,
             0.872408,
-            1.0,
+            1,
             0.901262
           ],
           "words": [
@@ -300148,7 +300148,7 @@
             },
             {
               "text": "Abtinie",
-              "conf": 0.0,
+              "conf": 0,
               "left": 735,
               "top": 1997,
               "width": 104,
@@ -300524,7 +300524,7 @@
       "pdf_page": 60,
       "page_size_pdf_points": [
         483.5299987792969,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -302443,7 +302443,7 @@
           "line_num": 4,
           "text": "the same. The plurality and difference of religions were due to the addition,",
           "script": "latin",
-          "confidence": 95.0,
+          "confidence": 95,
           "bbox_px": [
             59,
             939,
@@ -306851,7 +306851,7 @@
             },
             {
               "text": "-",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1085,
               "top": 1795,
               "width": 25,
@@ -307097,7 +307097,7 @@
             },
             {
               "text": "i",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1044,
               "top": 1836,
               "width": 65,
@@ -307629,7 +307629,7 @@
       "pdf_page": 61,
       "page_size_pdf_points": [
         607.1599731445312,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -307770,7 +307770,7 @@
           "bbox_normalized": [
             0.209877,
             0.123986,
-            1.0,
+            1,
             0.14202
           ],
           "words": [
@@ -307984,7 +307984,7 @@
           "bbox_normalized": [
             0.170488,
             0.142471,
-            1.0,
+            1,
             0.160956
           ],
           "words": [
@@ -309300,7 +309300,7 @@
           "bbox_normalized": [
             0.169312,
             0.24752,
-            1.0,
+            1,
             0.276375
           ],
           "words": [
@@ -310289,7 +310289,7 @@
       "pdf_page": 62,
       "page_size_pdf_points": [
         483.7099914550781,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -310420,7 +310420,7 @@
             },
             {
               "text": "step.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 443,
               "top": 147,
               "width": 102,
@@ -310592,7 +310592,7 @@
             },
             {
               "text": "Ix,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 470,
               "top": 214,
               "width": 82,
@@ -310678,7 +310678,7 @@
           "line_num": 2,
           "text": "يَعُدنُ©‎",
           "script": "arabic",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             812,
             318,
@@ -310694,7 +310694,7 @@
           "words": [
             {
               "text": "يَعُدنُ©‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 812,
               "top": 318,
               "width": 94,
@@ -312908,7 +312908,7 @@
             },
             {
               "text": "ec0l5",
-              "conf": 0.0,
+              "conf": 0,
               "left": 733,
               "top": 829,
               "width": 103,
@@ -314378,7 +314378,7 @@
           "words": [
             {
               "text": "Perey",
-              "conf": 0.0,
+              "conf": 0,
               "left": 306,
               "top": 1418,
               "width": 102,
@@ -314614,7 +314614,7 @@
             },
             {
               "text": "LIE",
-              "conf": 0.0,
+              "conf": 0,
               "left": 801,
               "top": 1482,
               "width": 103,
@@ -316785,14 +316785,14 @@
         1355,
         2218
       ],
-      "ocr_eng_confidence": 82.0,
+      "ocr_eng_confidence": 82,
       "ocr_arabic_confidence": 34.35,
       "ocr_variants": [
         {
           "lang": "eng+ara",
           "psm": 3,
           "score": 99.0448799806378,
-          "eng_conf": 82.0,
+          "eng_conf": 82,
           "text_len": 2837
         }
       ],
@@ -316810,7 +316810,7 @@
           "status": "ocr_unverified_arabic",
           "quran_reference": null,
           "match_score": 0,
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             0,
             0,
@@ -316833,7 +316833,7 @@
       "pdf_page": 63,
       "page_size_pdf_points": [
         597.4400024414062,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -317066,7 +317066,7 @@
             },
             {
               "text": "ادلتيَصِكا‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 779,
               "top": 227,
               "width": 124,
@@ -317082,7 +317082,7 @@
             },
             {
               "text": "S",
-              "conf": 0.0,
+              "conf": 0,
               "left": 739,
               "top": 245,
               "width": 33,
@@ -317098,7 +317098,7 @@
             },
             {
               "text": "Sess",
-              "conf": 0.0,
+              "conf": 0,
               "left": 531,
               "top": 227,
               "width": 125,
@@ -317372,7 +317372,7 @@
           "words": [
             {
               "text": "OABe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 735,
               "top": 353,
               "width": 122,
@@ -318678,7 +318678,7 @@
           "bbox_normalized": [
             0.904363,
             0.3156,
-            1.0,
+            1,
             0.335437
           ],
           "words": [
@@ -318872,7 +318872,7 @@
             },
             {
               "text": "‘hemselVeS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1501,
               "top": 730,
               "width": 170,
@@ -318910,7 +318910,7 @@
           "words": [
             {
               "text": "OS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 660,
               "top": 753,
               "width": 53,
@@ -318926,7 +318926,7 @@
             },
             {
               "text": "fPIC",
-              "conf": 0.0,
+              "conf": 0,
               "left": 718,
               "top": 769,
               "width": 134,
@@ -318942,7 +318942,7 @@
             },
             {
               "text": "ERSCL",
-              "conf": 0.0,
+              "conf": 0,
               "left": 877,
               "top": 753,
               "width": 108,
@@ -319258,7 +319258,7 @@
           "bbox_normalized": [
             0.876868,
             0.377818,
-            1.0,
+            1,
             0.395401
           ],
           "words": [
@@ -319494,7 +319494,7 @@
           "bbox_normalized": [
             0.841602,
             0.396754,
-            1.0,
+            1,
             0.417944
           ],
           "words": [
@@ -319966,7 +319966,7 @@
           "bbox_normalized": [
             0.839809,
             0.435978,
-            1.0,
+            1,
             0.456267
           ],
           "words": [
@@ -320266,7 +320266,7 @@
           "bbox_normalized": [
             0.843395,
             0.454013,
-            1.0,
+            1,
             0.477457
           ],
           "words": [
@@ -320524,7 +320524,7 @@
           "bbox_normalized": [
             0.844591,
             0.495942,
-            1.0,
+            1,
             0.512173
           ],
           "words": [
@@ -320702,7 +320702,7 @@
           "bbox_normalized": [
             0.845188,
             0.516231,
-            1.0,
+            1,
             0.528404
           ],
           "words": [
@@ -320906,7 +320906,7 @@
           "bbox_normalized": [
             0.882247,
             0.536519,
-            1.0,
+            1,
             0.547791
           ],
           "words": [
@@ -320966,7 +320966,7 @@
           "line_num": 4,
           "text": "لبوأ وفتوسوكعيوك ماو نودم انرق‎",
           "script": "arabic",
-          "confidence": 0.0,
+          "confidence": 0,
           "bbox_px": [
             484,
             1231,
@@ -320982,7 +320982,7 @@
           "words": [
             {
               "text": "لبوأ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 937,
               "top": 1238,
               "width": 139,
@@ -320998,7 +320998,7 @@
             },
             {
               "text": "وفتوسوكعيوك",
-              "conf": 0.0,
+              "conf": 0,
               "left": 776,
               "top": 1262,
               "width": 154,
@@ -321014,7 +321014,7 @@
             },
             {
               "text": "ماو",
-              "conf": 0.0,
+              "conf": 0,
               "left": 717,
               "top": 1231,
               "width": 40,
@@ -321030,7 +321030,7 @@
             },
             {
               "text": "نودم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 548,
               "top": 1248,
               "width": 230,
@@ -321046,7 +321046,7 @@
             },
             {
               "text": "انرق‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 484,
               "top": 1231,
               "width": 65,
@@ -321164,7 +321164,7 @@
           "bbox_normalized": [
             0.846384,
             0.57394,
-            1.0,
+            1,
             0.590171
           ],
           "words": [
@@ -321218,7 +321218,7 @@
           "bbox_normalized": [
             0.846981,
             0.592426,
-            1.0,
+            1,
             0.608656
           ],
           "words": [
@@ -321288,7 +321288,7 @@
           "bbox_normalized": [
             0.847579,
             0.610911,
-            1.0,
+            1,
             0.632101
           ],
           "words": [
@@ -321476,7 +321476,7 @@
             },
             {
               "text": "echaeen",
-              "conf": 0.0,
+              "conf": 0,
               "left": 988,
               "top": 1367,
               "width": 93,
@@ -321530,7 +321530,7 @@
             },
             {
               "text": "apo",
-              "conf": 0.0,
+              "conf": 0,
               "left": 856,
               "top": 1366,
               "width": 141,
@@ -321594,7 +321594,7 @@
             },
             {
               "text": "Pa",
-              "conf": 0.0,
+              "conf": 0,
               "left": 487,
               "top": 1375,
               "width": 43,
@@ -321814,7 +321814,7 @@
           "bbox_normalized": [
             0.848775,
             0.648332,
-            1.0,
+            1,
             0.679441
           ],
           "words": [
@@ -323342,7 +323342,7 @@
           "bbox_normalized": [
             0.860132,
             0.778629,
-            1.0,
+            1,
             0.810189
           ],
           "words": [
@@ -323846,7 +323846,7 @@
           "bbox_normalized": [
             0.860132,
             0.81605,
-            1.0,
+            1,
             0.832732
           ],
           "words": [
@@ -323922,7 +323922,7 @@
             },
             {
               "text": ";",
-              "conf": 0.0,
+              "conf": 0,
               "left": 441,
               "top": 1893,
               "width": 11,
@@ -323938,7 +323938,7 @@
             },
             {
               "text": "pie",
-              "conf": 0.0,
+              "conf": 0,
               "left": 473,
               "top": 1846,
               "width": 56,
@@ -324104,7 +324104,7 @@
             },
             {
               "text": "€con,",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1590,
               "top": 1851,
               "width": 82,
@@ -324334,7 +324334,7 @@
           "bbox_normalized": [
             0.864913,
             0.854824,
-            1.0,
+            1,
             0.872858
           ],
           "words": [
@@ -324356,7 +324356,7 @@
             },
             {
               "text": "%",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1601,
               "top": 1896,
               "width": 17,
@@ -324420,7 +324420,7 @@
       "pdf_page": 64,
       "page_size_pdf_points": [
         481.7900085449219,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -332695,7 +332695,7 @@
       "pdf_page": 65,
       "page_size_pdf_points": [
         473.8900146484375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -338008,7 +338008,7 @@
             },
             {
               "text": "واساورعرره‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 744,
               "top": 1511,
               "width": 107,
@@ -338024,7 +338024,7 @@
             },
             {
               "text": "et",
-              "conf": 0.0,
+              "conf": 0,
               "left": 702,
               "top": 1511,
               "width": 23,
@@ -338790,7 +338790,7 @@
             },
             {
               "text": "as",
-              "conf": 0.0,
+              "conf": 0,
               "left": 667,
               "top": 1804,
               "width": 52,
@@ -338885,7 +338885,7 @@
       "pdf_page": 66,
       "page_size_pdf_points": [
         488.17999267578125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -338914,7 +338914,7 @@
           "words": [
             {
               "text": "{tslamie",
-              "conf": 0.0,
+              "conf": 0,
               "left": 241,
               "top": 222,
               "width": 229,
@@ -341508,7 +341508,7 @@
       "pdf_page": 67,
       "page_size_pdf_points": [
         497.5,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -348487,7 +348487,7 @@
       "pdf_page": 68,
       "page_size_pdf_points": [
         486.07000732421875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -350322,7 +350322,7 @@
             },
             {
               "text": ".",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1048,
               "top": 528,
               "width": 90,
@@ -350782,7 +350782,7 @@
             },
             {
               "text": "ite",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1040,
               "top": 661,
               "width": 95,
@@ -356120,7 +356120,7 @@
       "pdf_page": 69,
       "page_size_pdf_points": [
         518.7100219726562,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -357809,7 +357809,7 @@
       "pdf_page": 70,
       "page_size_pdf_points": [
         475.7799987792969,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -362052,7 +362052,7 @@
       "pdf_page": 71,
       "page_size_pdf_points": [
         592.530029296875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -365889,7 +365889,7 @@
             },
             {
               "text": "'",
-              "conf": 0.0,
+              "conf": 0,
               "left": 801,
               "top": 1723,
               "width": 7,
@@ -366143,7 +366143,7 @@
       "pdf_page": 72,
       "page_size_pdf_points": [
         506.3900146484375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -367262,7 +367262,7 @@
       "pdf_page": 73,
       "page_size_pdf_points": [
         496.4599914550781,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -367285,7 +367285,7 @@
           "bbox_normalized": [
             0.984903,
             0.343553,
-            1.0,
+            1,
             0.353472
           ],
           "words": [
@@ -367323,7 +367323,7 @@
           "bbox_normalized": [
             0.979871,
             0.356628,
-            1.0,
+            1,
             0.36835
           ],
           "words": [
@@ -368203,7 +368203,7 @@
           "bbox_normalized": [
             0.972682,
             0.892696,
-            1.0,
+            1,
             0.908025
           ],
           "words": [
@@ -368307,7 +368307,7 @@
       "pdf_page": 74,
       "page_size_pdf_points": [
         515.739990234375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -370299,7 +370299,7 @@
       "pdf_page": 75,
       "page_size_pdf_points": [
         504.260009765625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -370321,7 +370321,7 @@
           ],
           "bbox_normalized": [
             0.385269,
-            0.0,
+            0,
             0.647309,
             0.013526
           ],
@@ -370678,7 +370678,7 @@
             },
             {
               "text": "helpetacsccssssscsssscccneccotlDiscteseneeneccorssesnmers",
-              "conf": 0.0,
+              "conf": 0,
               "left": 506,
               "top": 250,
               "width": 451,
@@ -371412,7 +371412,7 @@
             },
             {
               "text": "...م.م‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 791,
               "top": 452,
               "width": 66,
@@ -371680,7 +371680,7 @@
             },
             {
               "text": "محممم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 924,
               "top": 547,
               "width": 34,
@@ -373620,7 +373620,7 @@
             },
             {
               "text": "Aarons.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 526,
               "top": 1206,
               "width": 65,
@@ -373636,7 +373636,7 @@
             },
             {
               "text": "eeepc",
-              "conf": 0.0,
+              "conf": 0,
               "left": 689,
               "top": 1220,
               "width": 113,
@@ -373652,7 +373652,7 @@
             },
             {
               "text": "eae",
-              "conf": 0.0,
+              "conf": 0,
               "left": 860,
               "top": 1217,
               "width": 93,
@@ -374232,7 +374232,7 @@
             },
             {
               "text": "ALMa’idah",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1028,
               "top": 1389,
               "width": 123,
@@ -374378,7 +374378,7 @@
             },
             {
               "text": "MUPHET.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 475,
               "top": 1405,
               "width": 78,
@@ -374410,7 +374410,7 @@
             },
             {
               "text": ".4.02.-<+-.6csciseacdevagiebs",
-              "conf": 0.0,
+              "conf": 0,
               "left": 575,
               "top": 1416,
               "width": 380,
@@ -374662,7 +374662,7 @@
             },
             {
               "text": "ممممى.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 742,
               "top": 1553,
               "width": 39,
@@ -374764,7 +374764,7 @@
             },
             {
               "text": ".......--..-sssesssessseseseeeanesseensecsnssesnents",
-              "conf": 0.0,
+              "conf": 0,
               "left": 581,
               "top": 1616,
               "width": 375,
@@ -374818,7 +374818,7 @@
             },
             {
               "text": "........sssesssssssssssssscesonnsseesensectte",
-              "conf": 0.0,
+              "conf": 0,
               "left": 565,
               "top": 1685,
               "width": 331,
@@ -375054,7 +375054,7 @@
             },
             {
               "text": "..........-.--.-",
-              "conf": 0.0,
+              "conf": 0,
               "left": 842,
               "top": 1784,
               "width": 114,
@@ -375341,7 +375341,7 @@
       "pdf_page": 76,
       "page_size_pdf_points": [
         461.80999755859375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -376198,7 +376198,7 @@
           "words": [
             {
               "text": "oueea",
-              "conf": 0.0,
+              "conf": 0,
               "left": 845,
               "top": 407,
               "width": 31,
@@ -376734,7 +376734,7 @@
             },
             {
               "text": "Abraham's",
-              "conf": 0.0,
+              "conf": 0,
               "left": 602,
               "top": 582,
               "width": 118,
@@ -377276,7 +377276,7 @@
             },
             {
               "text": "eccccccsscsssssssseseeeee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 700,
               "top": 840,
               "width": 175,
@@ -377748,7 +377748,7 @@
             },
             {
               "text": "..................:...0:",
-              "conf": 0.0,
+              "conf": 0,
               "left": 697,
               "top": 1039,
               "width": 176,
@@ -378462,7 +378462,7 @@
           "words": [
             {
               "text": "lifezand",
-              "conf": 0.0,
+              "conf": 0,
               "left": 403,
               "top": 1285,
               "width": 81,
@@ -378478,7 +378478,7 @@
             },
             {
               "text": "death",
-              "conf": 0.0,
+              "conf": 0,
               "left": 493,
               "top": 1284,
               "width": 62,
@@ -378494,7 +378494,7 @@
             },
             {
               "text": "........-.;--c.-c-------.sonsereeeeesessieee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 567,
               "top": 1299,
               "width": 304,
@@ -379514,7 +379514,7 @@
           "words": [
             {
               "text": "CHOSEN",
-              "conf": 0.0,
+              "conf": 0,
               "left": 401,
               "top": 1619,
               "width": 75,
@@ -379530,7 +379530,7 @@
             },
             {
               "text": "MESSENGEFS",
-              "conf": 0.0,
+              "conf": 0,
               "left": 485,
               "top": 1622,
               "width": 126,
@@ -379750,7 +379750,7 @@
             },
             {
               "text": ".........-.---s:-cssssssreescreessens",
-              "conf": 0.0,
+              "conf": 0,
               "left": 576,
               "top": 1725,
               "width": 291,
@@ -380088,7 +380088,7 @@
             },
             {
               "text": "لومم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 682,
               "top": 1888,
               "width": 184,
@@ -380324,7 +380324,7 @@
             },
             {
               "text": "awe",
-              "conf": 0.0,
+              "conf": 0,
               "left": 792,
               "top": 1984,
               "width": 73,
@@ -380406,7 +380406,7 @@
       "pdf_page": 77,
       "page_size_pdf_points": [
         483.42999267578125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -380607,7 +380607,7 @@
             },
             {
               "text": "Eeaueney",
-              "conf": 0.0,
+              "conf": 0,
               "left": 279,
               "top": 143,
               "width": 104,
@@ -380909,7 +380909,7 @@
             },
             {
               "text": "Ea",
-              "conf": 0.0,
+              "conf": 0,
               "left": 988,
               "top": 279,
               "width": 84,
@@ -382515,7 +382515,7 @@
             },
             {
               "text": "...............-c:sssssescsceneeseeense",
-              "conf": 0.0,
+              "conf": 0,
               "left": 650,
               "top": 793,
               "width": 267,
@@ -382875,7 +382875,7 @@
           "words": [
             {
               "text": "and.the.earth,.._.....mvian",
-              "conf": 0.0,
+              "conf": 0,
               "left": 469,
               "top": 968,
               "width": 446,
@@ -382907,7 +382907,7 @@
             },
             {
               "text": "bali",
-              "conf": 0.0,
+              "conf": 0,
               "left": 804,
               "top": 964,
               "width": 60,
@@ -383557,7 +383557,7 @@
             },
             {
               "text": "mankind).)2",
-              "conf": 0.0,
+              "conf": 0,
               "left": 502,
               "top": 1224,
               "width": 398,
@@ -383573,7 +383573,7 @@
             },
             {
               "text": "2a",
-              "conf": 0.0,
+              "conf": 0,
               "left": 646,
               "top": 1220,
               "width": 75,
@@ -383589,7 +383589,7 @@
             },
             {
               "text": ".c",
-              "conf": 0.0,
+              "conf": 0,
               "left": 737,
               "top": 1220,
               "width": 27,
@@ -384463,7 +384463,7 @@
             },
             {
               "text": "|5936...",
-              "conf": 0.0,
+              "conf": 0,
               "left": 695,
               "top": 1558,
               "width": 219,
@@ -385233,7 +385233,7 @@
       "pdf_page": 78,
       "page_size_pdf_points": [
         485.8399963378906,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -385628,7 +385628,7 @@
             },
             {
               "text": "cece",
-              "conf": 0.0,
+              "conf": 0,
               "left": 718,
               "top": 435,
               "width": 74,
@@ -386176,7 +386176,7 @@
             },
             {
               "text": "eee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 628,
               "top": 616,
               "width": 62,
@@ -387422,7 +387422,7 @@
             },
             {
               "text": "..............:..-..",
-              "conf": 0.0,
+              "conf": 0,
               "left": 661,
               "top": 1168,
               "width": 124,
@@ -387690,7 +387690,7 @@
             },
             {
               "text": "٠...",
-              "conf": 0.0,
+              "conf": 0,
               "left": 565,
               "top": 1262,
               "width": 36,
@@ -387722,7 +387722,7 @@
             },
             {
               "text": "ممم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 662,
               "top": 1258,
               "width": 124,
@@ -388792,7 +388792,7 @@
             },
             {
               "text": "‘Muslims’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 430,
               "top": 1672,
               "width": 109,
@@ -388862,7 +388862,7 @@
             },
             {
               "text": "Abraham......c.ssscsssssesseeeseeensenereses",
-              "conf": 0.0,
+              "conf": 0,
               "left": 385,
               "top": 1705,
               "width": 400,
@@ -389756,7 +389756,7 @@
       "pdf_page": 79,
       "page_size_pdf_points": [
         512.8499755859375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -390141,7 +390141,7 @@
           "words": [
             {
               "text": "Fncluding",
-              "conf": 0.0,
+              "conf": 0,
               "left": 602,
               "top": 483,
               "width": 97,
@@ -390415,7 +390415,7 @@
             },
             {
               "text": ".......--ssssceessssseeetestnreee",
-              "conf": 0.0,
+              "conf": 0,
               "left": 789,
               "top": 608,
               "width": 272,
@@ -392049,7 +392049,7 @@
       "pdf_page": 80,
       "page_size_pdf_points": [
         494.6300048828125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -395472,7 +395472,7 @@
           "line_num": 1,
           "text": "May 23, 627",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             220,
             1546,
@@ -396856,7 +396856,7 @@
           "line_num": 1,
           "text": "ebruary 12, 637",
           "script": "latin",
-          "confidence": 94.0,
+          "confidence": 94,
           "bbox_px": [
             243,
             1877,
@@ -397028,7 +397028,7 @@
             },
             {
               "text": "Yanuary",
-              "conf": 0.0,
+              "conf": 0,
               "left": 241,
               "top": 1914,
               "width": 104,
@@ -397282,7 +397282,7 @@
       "pdf_page": 81,
       "page_size_pdf_points": [
         471.760009765625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -397304,8 +397304,8 @@
           ],
           "bbox_normalized": [
             0.990916,
-            0.0,
-            1.0,
+            0,
+            1,
             0.011271
           ],
           "words": [
@@ -404209,7 +404209,7 @@
             },
             {
               "text": "749",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1161,
               "top": 1874,
               "width": 49,
@@ -404587,7 +404587,7 @@
       "pdf_page": 82,
       "page_size_pdf_points": [
         498.57000732421875,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -405446,7 +405446,7 @@
           "line_num": 3,
           "text": "186",
           "script": "other",
-          "confidence": 97.0,
+          "confidence": 97,
           "bbox_px": [
             694,
             351,
@@ -406158,7 +406158,7 @@
           "line_num": 7,
           "text": "190",
           "script": "other",
-          "confidence": 97.0,
+          "confidence": 97,
           "bbox_px": [
             695,
             491,
@@ -407582,7 +407582,7 @@
           "line_num": 15,
           "text": "198",
           "script": "other",
-          "confidence": 97.0,
+          "confidence": 97,
           "bbox_px": [
             695,
             772,
@@ -413538,7 +413538,7 @@
       "pdf_page": 83,
       "page_size_pdf_points": [
         464.3800048828125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -413793,7 +413793,7 @@
             },
             {
               "text": "Datg’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1170,
               "top": 316,
               "width": 61,
@@ -418651,7 +418651,7 @@
           "words": [
             {
               "text": ")1304/1971",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1137,
               "top": 2024,
               "width": 143,
@@ -418711,7 +418711,7 @@
       "pdf_page": 84,
       "page_size_pdf_points": [
         485.17999267578125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -418788,7 +418788,7 @@
             },
             {
               "text": "معد‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 291,
               "top": 105,
               "width": 151,
@@ -418848,7 +418848,7 @@
           "line_num": 1,
           "text": "Race and Color in Islam by Bernard Lewis Hi",
           "script": "latin",
-          "confidence": 91.0,
+          "confidence": 91,
           "bbox_px": [
             64,
             283,
@@ -419014,7 +419014,7 @@
           "line_num": 2,
           "text": "104 re ae arper & Row, New",
           "script": "latin",
-          "confidence": 60.0,
+          "confidence": 60,
           "bbox_px": [
             80,
             328,
@@ -419030,7 +419030,7 @@
           "words": [
             {
               "text": "104",
-              "conf": 0.0,
+              "conf": 0,
               "left": 80,
               "top": 328,
               "width": 221,
@@ -421786,7 +421786,7 @@
           "words": [
             {
               "text": "ewspaper",
-              "conf": 0.0,
+              "conf": 0,
               "left": 142,
               "top": 1088,
               "width": 132,
@@ -423610,7 +423610,7 @@
             },
             {
               "text": "Mebenmad",
-              "conf": 0.0,
+              "conf": 0,
               "left": 966,
               "top": 1434,
               "width": 165,
@@ -426086,7 +426086,7 @@
       "pdf_page": 85,
       "page_size_pdf_points": [
         559.239990234375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -426179,7 +426179,7 @@
           "bbox_normalized": [
             0.227969,
             0.049143,
-            1.0,
+            1,
             0.075744
           ],
           "words": [
@@ -427115,7 +427115,7 @@
           "bbox_normalized": [
             0.185185,
             0.136159,
-            1.0,
+            1,
             0.1578
           ],
           "words": [
@@ -427361,7 +427361,7 @@
           "bbox_normalized": [
             0.185824,
             0.1578,
-            1.0,
+            1,
             0.179892
           ],
           "words": [
@@ -427591,7 +427591,7 @@
           "bbox_normalized": [
             0.186462,
             0.17899,
-            1.0,
+            1,
             0.201984
           ],
           "words": [
@@ -427821,7 +427821,7 @@
           "bbox_normalized": [
             0.187101,
             0.20018,
-            1.0,
+            1,
             0.222723
           ],
           "words": [
@@ -428495,13 +428495,13 @@
           "bbox_normalized": [
             0.001916,
             0.266907,
-            1.0,
+            1,
             0.285843
           ],
           "words": [
             {
               "text": ";",
-              "conf": 0.0,
+              "conf": 0,
               "left": 3,
               "top": 624,
               "width": 4,
@@ -428771,7 +428771,7 @@
             677
           ],
           "bbox_normalized": [
-            0.0,
+            0,
             0.287196,
             0.918902,
             0.30523
@@ -429051,7 +429051,7 @@
           "bbox_normalized": [
             0.189655,
             0.308837,
-            1.0,
+            1,
             0.32642
           ],
           "words": [
@@ -429297,7 +429297,7 @@
           "bbox_normalized": [
             0.001916,
             0.329125,
-            1.0,
+            1,
             0.353021
           ],
           "words": [
@@ -429543,7 +429543,7 @@
           "bbox_normalized": [
             0.001916,
             0.35257,
-            1.0,
+            1,
             0.369702
           ],
           "words": [
@@ -429805,7 +429805,7 @@
           "bbox_normalized": [
             0.190932,
             0.372858,
-            1.0,
+            1,
             0.38954
           ],
           "words": [
@@ -430297,7 +430297,7 @@
           "bbox_normalized": [
             0.00447,
             0.412985,
-            1.0,
+            1,
             0.430117
           ],
           "words": [
@@ -430763,7 +430763,7 @@
           "line_num": 1,
           "text": "t (Bukhari 2:21). The bulk of examples which Lewis cites of “Islamic” racism 01",
           "script": "latin",
-          "confidence": 92.0,
+          "confidence": 92,
           "bbox_px": [
             10,
             1008,
@@ -430773,7 +430773,7 @@
           "bbox_normalized": [
             0.006386,
             0.454463,
-            1.0,
+            1,
             0.474301
           ],
           "words": [
@@ -431019,7 +431019,7 @@
           "bbox_normalized": [
             0.008301,
             0.475203,
-            1.0,
+            1,
             0.492335
           ],
           "words": [
@@ -431281,7 +431281,7 @@
           "bbox_normalized": [
             0.009579,
             0.49459,
-            1.0,
+            1,
             0.515329
           ],
           "words": [
@@ -431773,7 +431773,7 @@
           "bbox_normalized": [
             0.194764,
             0.535618,
-            1.0,
+            1,
             0.559062
           ],
           "words": [
@@ -432367,7 +432367,7 @@
           "bbox_normalized": [
             0.279693,
             0.630748,
-            1.0,
+            1,
             0.643372
           ],
           "words": [
@@ -432437,7 +432437,7 @@
           "bbox_normalized": [
             0.167944,
             0.633904,
-            1.0,
+            1,
             0.66862
           ],
           "words": [
@@ -433111,7 +433111,7 @@
           "bbox_normalized": [
             0.210089,
             0.685753,
-            1.0,
+            1,
             0.708747
           ],
           "words": [
@@ -433523,7 +433523,7 @@
           "bbox_normalized": [
             0.220307,
             0.715059,
-            1.0,
+            1,
             0.738954
           ],
           "words": [
@@ -433705,7 +433705,7 @@
           "bbox_normalized": [
             0.222861,
             0.730388,
-            1.0,
+            1,
             0.754734
           ],
           "words": [
@@ -433919,7 +433919,7 @@
           "bbox_normalized": [
             0.243934,
             0.745717,
-            1.0,
+            1,
             0.771416
           ],
           "words": [
@@ -433941,7 +433941,7 @@
             },
             {
               "text": "elations",
-              "conf": 0.0,
+              "conf": 0,
               "left": 461,
               "top": 1681,
               "width": 122,
@@ -434385,7 +434385,7 @@
             },
             {
               "text": ")",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1560,
               "top": 1717,
               "width": 4,
@@ -434417,7 +434417,7 @@
           "bbox_normalized": [
             0.515326,
             0.788999,
-            1.0,
+            1,
             0.809288
           ],
           "words": [
@@ -434803,7 +434803,7 @@
             },
             {
               "text": "Men",
-              "conf": 0.0,
+              "conf": 0,
               "left": 993,
               "top": 1812,
               "width": 125,
@@ -434835,7 +434835,7 @@
             },
             {
               "text": ".",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1538,
               "top": 1810,
               "width": 26,
@@ -434867,7 +434867,7 @@
           "bbox_normalized": [
             0.280332,
             0.832732,
-            1.0,
+            1,
             0.860685
           ],
           "words": [
@@ -435371,7 +435371,7 @@
           "line_num": 2,
           "text": "numbers that could be packed ae ff",
           "script": "latin",
-          "confidence": 76.0,
+          "confidence": 76,
           "bbox_px": [
             632,
             2002,
@@ -435529,7 +435529,7 @@
       "pdf_page": 86,
       "page_size_pdf_points": [
         484.9800109863281,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -436446,7 +436446,7 @@
           "words": [
             {
               "text": ":",
-              "conf": 0.0,
+              "conf": 0,
               "left": 83,
               "top": 410,
               "width": 2,
@@ -437532,7 +437532,7 @@
           "line_num": 10,
           "text": "as the European slave trade. (See Africa and Africans by Paul Bohannan,",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             150,
             600,
@@ -438110,7 +438110,7 @@
           "line_num": 13,
           "text": "Muslims captured in war. However, the emphasis in the Qur’an",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             180,
             728,
@@ -442550,7 +442550,7 @@
       "pdf_page": 87,
       "page_size_pdf_points": [
         559.1599731445312,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -445501,7 +445501,7 @@
       "pdf_page": 88,
       "page_size_pdf_points": [
         529.8599853515625,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -445794,7 +445794,7 @@
             },
             {
               "text": "be",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1079,
               "top": 760,
               "width": 74,
@@ -448106,7 +448106,7 @@
       "pdf_page": 89,
       "page_size_pdf_points": [
         487.989990234375,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],
@@ -452281,7 +452281,7 @@
       "pdf_page": 90,
       "page_size_pdf_points": [
         494.92999267578125,
-        792.0
+        792
       ],
       "embedded_text": "",
       "embedded_blocks": [],

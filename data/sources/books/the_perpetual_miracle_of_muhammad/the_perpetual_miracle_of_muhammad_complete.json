@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "The Perpetual Miracle of Muhammad",
-    "source_pdf": "The Perpetual Miracle of Muhammad.pdf",
+    "source_pdf": "perpetual-miracle.pdf",
     "pdf_page_count": 16,
     "transcription_method": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
     "arabic_policy": "Quranic Arabic matched to a verified Unicode Quran corpus when the printed reference/OCR supported a match. Other Arabic is retained as OCR and explicitly flagged when unverified."
@@ -40563,7 +40563,7 @@
             },
             {
               "text": "as)",
-              "conf": 0.0,
+              "conf": 0,
               "left": 463,
               "top": 224,
               "width": 60,
@@ -66551,7 +66551,7 @@
             },
             {
               "text": "Qaf’",
-              "conf": 0.0,
+              "conf": 0,
               "left": 851,
               "top": 1434,
               "width": 51,
@@ -78473,7 +78473,7 @@
           "line_num": 1,
           "text": "All the numbers of all the Qur’anic initials are enclosed in the",
           "script": "latin",
-          "confidence": 96.0,
+          "confidence": 96,
           "bbox_px": [
             189,
             1342,
@@ -84796,7 +84796,7 @@
           "bbox_pdf": [
             36.024,
             546.313,
-            559.0,
+            559,
             557.961
           ],
           "bbox_normalized": [
@@ -84812,7 +84812,7 @@
           "bbox_pdf": [
             36.024,
             566.233,
-            559.0,
+            559,
             575.241
           ],
           "bbox_normalized": [
@@ -84941,7 +84941,7 @@
             35.784,
             642.224,
             416.17,
-            708.0
+            708
           ],
           "bbox_normalized": [
             0.060121,
@@ -85105,7 +85105,7 @@
             },
             {
               "text": "MUHAMMAD'S",
-              "conf": 0.0,
+              "conf": 0,
               "left": 242,
               "top": 182,
               "width": 160,
@@ -85977,7 +85977,7 @@
             },
             {
               "text": "ماأس",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1125,
               "top": 384,
               "width": 69,
@@ -86223,7 +86223,7 @@
           "words": [
             {
               "text": "{ail",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1432,
               "top": 402,
               "width": 38,
@@ -86271,7 +86271,7 @@
             },
             {
               "text": "أ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1083,
               "top": 423,
               "width": 1,
@@ -86303,7 +86303,7 @@
             },
             {
               "text": "أ",
-              "conf": 0.0,
+              "conf": 0,
               "left": 968,
               "top": 423,
               "width": 1,
@@ -86399,7 +86399,7 @@
             },
             {
               "text": "|A.LM.S§aal",
-              "conf": 0.0,
+              "conf": 0,
               "left": 324,
               "top": 402,
               "width": 85,
@@ -86677,7 +86677,7 @@
             },
             {
               "text": "سأم",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1125,
               "top": 501,
               "width": 69,
@@ -88655,7 +88655,7 @@
             },
             {
               "text": "5S:",
-              "conf": 0.0,
+              "conf": 0,
               "left": 269,
               "top": 867,
               "width": 34,
@@ -88671,7 +88671,7 @@
             },
             {
               "text": "A.LM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 313,
               "top": 867,
               "width": 41,
@@ -88907,7 +88907,7 @@
             },
             {
               "text": "|A.LM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 311,
               "top": 955,
               "width": 47,
@@ -90051,7 +90051,7 @@
             },
             {
               "text": "Sysid\\|HMASQ3=38)",
-              "conf": 0.0,
+              "conf": 0,
               "left": 251,
               "top": 1189,
               "width": 165,
@@ -90901,7 +90901,7 @@
             },
             {
               "text": "اس‎",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1067,
               "top": 1361,
               "width": 12,
@@ -90917,7 +90917,7 @@
             },
             {
               "text": "ساس",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1125,
               "top": 1361,
               "width": 69,
@@ -92435,7 +92435,7 @@
             },
             {
               "text": "ALL",
-              "conf": 0.0,
+              "conf": 0,
               "left": 387,
               "top": 1590,
               "width": 45,
@@ -92451,7 +92451,7 @@
             },
             {
               "text": "A.L.M.R",
-              "conf": 0.0,
+              "conf": 0,
               "left": 437,
               "top": 1590,
               "width": 84,
@@ -93151,7 +93151,7 @@
             },
             {
               "text": "=",
-              "conf": 0.0,
+              "conf": 0,
               "left": 260,
               "top": 1696,
               "width": 12,
@@ -93167,7 +93167,7 @@
             },
             {
               "text": "19x65.",
-              "conf": 0.0,
+              "conf": 0,
               "left": 280,
               "top": 1691,
               "width": 59,
@@ -94059,7 +94059,7 @@
             },
             {
               "text": "HLM",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1325,
               "top": 1791,
               "width": 113,
@@ -94075,7 +94075,7 @@
             },
             {
               "text": "=",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1370,
               "top": 1787,
               "width": 16,
@@ -94091,7 +94091,7 @@
             },
             {
               "text": "2166",
-              "conf": 0.0,
+              "conf": 0,
               "left": 1392,
               "top": 1791,
               "width": 44,
@@ -96648,14 +96648,14 @@
         1667,
         2358
       ],
-      "ocr_eng_confidence": 62.0,
+      "ocr_eng_confidence": 62,
       "ocr_arabic_confidence": 53.32,
       "ocr_variants": [
         {
           "lang": "eng+ara",
           "psm": 3,
           "score": 75.67204777000245,
-          "eng_conf": 62.0,
+          "eng_conf": 62,
           "text_len": 3722
         }
       ],

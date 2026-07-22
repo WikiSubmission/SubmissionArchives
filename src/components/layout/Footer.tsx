@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className="grid gap-12 lg:grid-cols-[1.15fr_1.85fr] lg:gap-20">
                     <div>
                         <Link href="/" className="group inline-flex min-h-11 items-center gap-4" aria-label="Submission Archives home">
-                            <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-ed-rule bg-[#111111]">
+                            <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-none border border-ed-rule bg-[#111111]">
                                 <Image
                                     src="/assets/brand/submission-archives-mark.png"
                                     alt=""

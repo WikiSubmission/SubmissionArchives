@@ -79,14 +79,7 @@ export default function HomePage() {
                                 </em>
                             </h2>
                         </Reveal>
-                        <Reveal delay={180} className="lg:pb-2">
-                            <p className="max-w-[38ch] text-[15px] leading-7 text-ed-fg-muted">
-                                Browse by medium, then move from a catalog record to its original recording, transcript, or scan.
-                            </p>
-                            <p className="mt-4 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-ed-fg-muted">
-                                05 collections · 01 search index
-                            </p>
-                        </Reveal>
+
                     </div>
                     <Reveal delay={260}>
                         <div className="divider-fade mt-10 lg:mt-12" aria-hidden="true" />
@@ -133,11 +126,11 @@ export default function HomePage() {
                     />
                 </div>
 
-                {/* Closing invitation — one luminous band to end the scroll */}
+                {/* Luminous Closing CTA Banner */}
                 <Reveal className="mt-24 lg:mt-32">
                     <section
                         aria-labelledby="closing-cta-title"
-                        className="relative overflow-hidden rounded-[var(--ed-radius-xl)] bg-[linear-gradient(135deg,var(--ed-accent-strong),var(--ed-accent)_55%,var(--ed-accent-soft))] px-6 py-14 text-center shadow-[var(--ed-shadow-lg)] sm:px-12 lg:py-20"
+                        className="relative overflow-hidden rounded-none border border-ed-rule bg-[linear-gradient(135deg,var(--ed-accent-strong),var(--ed-accent)_55%,var(--ed-accent-soft))] px-6 py-14 text-center shadow-[var(--ed-shadow-lg)] sm:px-12 lg:py-20"
                     >
                         <div
                             aria-hidden="true"
@@ -163,7 +156,7 @@ export default function HomePage() {
                             </p>
                             <Link
                                 href="/search"
-                                className="group mt-9 inline-flex min-h-12 items-center gap-2.5 rounded-[var(--ed-radius-md)] bg-ed-bg px-7 font-ui text-sm font-semibold text-ed-fg shadow-[var(--ed-shadow-md)] transition-all duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 hover:shadow-[var(--ed-shadow-lg)]"
+                                className="group mt-9 inline-flex min-h-12 items-center gap-2.5 rounded-none bg-ed-bg px-7 font-ui text-sm font-semibold text-ed-fg shadow-[var(--ed-shadow-md)] transition-all duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 active:translate-y-0 hover:shadow-[var(--ed-shadow-lg)]"
                             >
                                 Search the archive
                                 <ArrowRight
