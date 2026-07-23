@@ -112,3 +112,22 @@ test('media player loads YouTube and keeps transcript controls keyboard reachabl
     await expect(page.getByRole('button', { name: 'Theater', exact: true })).toBeFocused();
     await expect(page.getByLabel('Search transcript')).toBeVisible();
 });
+
+test('keyboard navigation moves through result cards and into passages', async ({ page }) => {
+    await page.goto('/search?filters=other');
+
+    const input = page.getByRole('combobox');
+    await input.fill('prayer');
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+
+    await expect(page.locator('#search-card-0')).toBeVisible();
+
+    await input.press('ArrowDown');
+    await expect(input).toHaveAttribute('aria-activedescendant', 'search-card-0');
+
+    await input.press('ArrowRight');
+    await expect(input).toHaveAttribute('aria-activedescendant', 'search-card-0-passage-0');
+
+    await input.press('Enter');
+    await expect(page).not.toHaveURL(/\/search(\?|$)/);
+});
