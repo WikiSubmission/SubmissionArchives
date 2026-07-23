@@ -199,8 +199,8 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
     };
 
     return (
-        <div className="flex h-full flex-col bg-ed-bg text-ed-fg">
-            <header className="relative z-10 flex h-14 shrink-0 flex-wrap items-center justify-between gap-2 border-b border-ed-rule bg-ed-surface px-4">
+        <div className="relative flex h-full flex-col overflow-hidden bg-ed-bg text-ed-fg">
+            <header className="relative z-10 flex h-14 shrink-0 items-center justify-between border-b border-ed-rule bg-ed-surface px-4 sm:pr-[500px]">
                 <div className="flex min-w-0 items-center gap-4">
                     <Link
                         href={backHref}
@@ -217,90 +217,6 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                         <FileText className="h-4 w-4 shrink-0 text-ed-accent" />
                         <span className="truncate">{title}</span>
                     </h1>
-                </div>
-
-                <div className="flex shrink-0 items-center gap-2">
-                    <div className="flex items-center gap-1 border-r border-ed-rule pr-3">
-                        <button
-                            type="button"
-                            onClick={() => setZoom((z) => Math.max(0.6, z - 0.1))}
-                            className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                            title="Zoom out"
-                            aria-label="Zoom out"
-                        >
-                            <Minus className="h-4 w-4" />
-                        </button>
-                        <span className="w-10 text-center text-xs text-ed-fg-muted tabular-nums">{Math.round(zoom * 100)}%</span>
-                        <button
-                            type="button"
-                            onClick={() => setZoom((z) => Math.min(2, z + 0.1))}
-                            className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                            title="Zoom in"
-                            aria-label="Zoom in"
-                        >
-                            <Plus className="h-4 w-4" />
-                        </button>
-                    </div>
-
-                    <div className="flex items-center gap-1 border-r border-ed-rule pr-3">
-                        <button
-                            type="button"
-                            onClick={() => goToPage(pageNumber - 1)}
-                            disabled={pageNumber <= 1}
-                            className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent disabled:opacity-30"
-                            title="Previous page"
-                            aria-label="Previous page"
-                        >
-                            <ChevronLeft className="h-5 w-5" />
-                        </button>
-                        <span aria-live="polite" className="text-xs text-ed-fg-muted tabular-nums">
-                            {pageNumber} / {numPages ?? '…'}
-                        </span>
-                        <button
-                            type="button"
-                            onClick={() => goToPage(pageNumber + 1)}
-                            disabled={!numPages || pageNumber >= numPages}
-                            className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent disabled:opacity-30"
-                            title="Next page"
-                            aria-label="Next page"
-                        >
-                            <ChevronRight className="h-5 w-5" />
-                        </button>
-                    </div>
-
-                    {(prevId || nextId) && (
-                        <div className="mr-1 flex items-center gap-1 border-r border-ed-rule pr-3">
-                            {prevId ? (
-                                <Link
-                                    href={`/library/${prevId}`}
-                                    className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                                    title="Previous document"
-                                    aria-label="Previous document"
-                                >
-                                    <ChevronLeft className="h-5 w-5" />
-                                </Link>
-                            ) : (
-                                <div className="w-11" />
-                            )}
-
-                            {nextId ? (
-                                <Link
-                                    href={`/library/${nextId}`}
-                                    className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                                    title="Next document"
-                                    aria-label="Next document"
-                                >
-                                    <ChevronRight className="h-5 w-5" />
-                                </Link>
-                            ) : (
-                                <div className="w-11" />
-                            )}
-                        </div>
-                    )}
-
-                    <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" className="-mx-1 flex min-h-11 items-center px-3 text-xs text-ed-fg-muted hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
-                        View Original PDF
-                    </Link>
                 </div>
             </header>
 
@@ -323,6 +239,90 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                         />
                     </Document>
                 </div>
+            </div>
+
+            <div className="z-20 flex h-[calc(3.5rem+env(safe-area-inset-bottom))] shrink-0 items-center gap-2 overflow-x-auto border-t border-ed-rule bg-ed-surface px-2 pb-[env(safe-area-inset-bottom)] scrollbar-none sm:absolute sm:right-0 sm:top-0 sm:h-14 sm:border-t-0 sm:bg-transparent sm:px-4 sm:pb-0">
+                <div className="flex items-center gap-1 border-r border-ed-rule pr-3">
+                    <button
+                        type="button"
+                        onClick={() => setZoom((z) => Math.max(0.6, z - 0.1))}
+                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                        title="Zoom out"
+                        aria-label="Zoom out"
+                    >
+                        <Minus className="h-4 w-4" />
+                    </button>
+                    <span className="w-10 text-center text-xs text-ed-fg-muted tabular-nums">{Math.round(zoom * 100)}%</span>
+                    <button
+                        type="button"
+                        onClick={() => setZoom((z) => Math.min(2, z + 0.1))}
+                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                        title="Zoom in"
+                        aria-label="Zoom in"
+                    >
+                        <Plus className="h-4 w-4" />
+                    </button>
+                </div>
+
+                <div className="flex items-center gap-1 border-r border-ed-rule pr-3">
+                    <button
+                        type="button"
+                        onClick={() => goToPage(pageNumber - 1)}
+                        disabled={pageNumber <= 1}
+                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent disabled:opacity-30"
+                        title="Previous page"
+                        aria-label="Previous page"
+                    >
+                        <ChevronLeft className="h-5 w-5" />
+                    </button>
+                    <span aria-live="polite" className="text-xs text-ed-fg-muted tabular-nums">
+                        {pageNumber} / {numPages ?? '…'}
+                    </span>
+                    <button
+                        type="button"
+                        onClick={() => goToPage(pageNumber + 1)}
+                        disabled={!numPages || pageNumber >= numPages}
+                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent disabled:opacity-30"
+                        title="Next page"
+                        aria-label="Next page"
+                    >
+                        <ChevronRight className="h-5 w-5" />
+                    </button>
+                </div>
+
+                {(prevId || nextId) && (
+                    <div className="mr-1 flex items-center gap-1 border-r border-ed-rule pr-3">
+                        {prevId ? (
+                            <Link
+                                href={`/library/${prevId}`}
+                                className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                                title="Previous document"
+                                aria-label="Previous document"
+                            >
+                                <ChevronLeft className="h-5 w-5" />
+                            </Link>
+                        ) : (
+                            <div className="w-11" />
+                        )}
+
+                        {nextId ? (
+                            <Link
+                                href={`/library/${nextId}`}
+                                className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                                title="Next document"
+                                aria-label="Next document"
+                            >
+                                <ChevronRight className="h-5 w-5" />
+                            </Link>
+                        ) : (
+                            <div className="w-11" />
+                        )}
+                    </div>
+                )}
+
+                <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" className="-mx-1 flex min-h-11 items-center px-3 text-xs text-ed-fg-muted hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
+                    View Original PDF
+                </Link>
             </div>
         </div>
     );

@@ -91,7 +91,7 @@ export default async function PDFReaderPage({ params }: Props) {
             if (asset) editions[edition] = { pdfUrl: getPublicAssetUrl(asset.pdfLink), startPage: asset.startPage };
         }
         return (
-            <main id="main-content" className="h-screen w-screen bg-ed-bg overflow-hidden flex flex-col">
+            <main id="main-content" className="h-[calc(100dvh-4.5rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
                 <LibraryReaderWrapper kind="appendix" editions={editions} defaultEdition="1992" title={book.title} backHref={backHref} />
             </main>
         );
@@ -110,7 +110,7 @@ export default async function PDFReaderPage({ params }: Props) {
     }
 
     return (
-        <main id="main-content" className="h-screen w-screen bg-ed-bg overflow-hidden flex flex-col">
+        <main id="main-content" className="h-[calc(100dvh-4.5rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
             <LibraryReaderWrapper
                 kind="pdf"
                 pdfUrl={getPublicAssetUrl(pdfLink)}
