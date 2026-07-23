@@ -116,7 +116,7 @@ export async function generateMetadata({
 
   const { displayTitle, displayDate, author } = formatMedia(item);
   const description = displayDate ? `${displayTitle}: ${displayDate}, by ${author}.` : `${displayTitle}, by ${author}.`;
-  const image = item.thumbnailOverride ? [getPublicAssetUrl(item.thumbnailOverride)] : ['/og-card.png'];
+  const image = item.thumbnailOverride ? [getPublicAssetUrl(item.thumbnailOverride)] : ['/digi.png'];
 
   return {
     title: displayTitle,

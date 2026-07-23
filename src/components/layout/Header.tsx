@@ -56,6 +56,7 @@ export default function Header() {
                                 width={44}
                                 height={44}
                                 priority
+                                loading="eager"
                                 className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-[1.08]"
                             />
                         </span>

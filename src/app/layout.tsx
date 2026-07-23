@@ -52,11 +52,11 @@ export const metadata: Metadata = {
         type: 'website',
         siteName: SITE_NAME,
         url: SITE_URL,
-        images: [{ url: '/og-card.png', width: 1200, height: 630, alt: SITE_NAME }],
+        images: [{ url: '/digi.png', width: 1200, height: 630, alt: SITE_NAME }],
     },
     twitter: {
         card: 'summary_large_image',
-        images: ['/og-card.png'],
+        images: ['/digi.png'],
     },
 };
 
