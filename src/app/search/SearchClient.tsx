@@ -10,6 +10,7 @@ import { getMediaHref } from '@/lib/utils';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
 import { searchTranscripts } from './actions';
+import { useSearchKeyboardNav } from './useSearchKeyboardNav';
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
 
 type FilterKey =
@@ -116,6 +117,90 @@ function SearchContent() {
             return bScore - aScore;
         });
     }, [results]);
+
+    const rankedRef = useRef(rankedResults);
+    const queryRef = useRef(query);
+    const expandedRef = useRef(expandedMatches);
+
+    useEffect(() => {
+        rankedRef.current = rankedResults;
+        queryRef.current = query;
+        expandedRef.current = expandedMatches;
+    });
+
+    const itemKeyFor = useCallback((cardIndex: number) => {
+        const media = rankedRef.current[cardIndex]?.media;
+        return media ? `${media.id}${media.page ? `-${media.page}` : ''}` : '';
+    }, []);
+
+    const expandCard = useCallback((cardIndex: number) => {
+        setExpandedMatches((prev) => {
+            const next = new Set(prev);
+            next.add(itemKeyFor(cardIndex));
+            return next;
+        });
+        // itemKeyFor is memoized with an empty dependency array, so its identity
+        // never changes; omitting it here keeps expandCard stable for the nav hook.
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    const collapseCard = useCallback((cardIndex: number) => {
+        setExpandedMatches((prev) => {
+            const next = new Set(prev);
+            next.delete(itemKeyFor(cardIndex));
+            return next;
+        });
+        // itemKeyFor is memoized with an empty dependency array, so its identity
+        // never changes; omitting it here keeps collapseCard stable for the nav hook.
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    const isCardExpanded = useCallback(
+        (cardIndex: number) => expandedRef.current.has(itemKeyFor(cardIndex)),
+        [itemKeyFor],
+    );
+
+    const getHref = useCallback((cardIndex: number, passageIndex: number) => {
+        const result = rankedRef.current[cardIndex];
+        if (!result) {
+            return null;
+        }
+        const index = passageIndex >= 0 ? passageIndex : 0;
+        const match = result.matches[index];
+        return match
+            ? getMatchHref(result.media, match, queryRef.current)
+            : getMediaLink(result.media, queryRef.current);
+    }, []);
+
+    const navigate = useCallback((href: string) => {
+        router.push(href);
+    }, [router]);
+
+    const navBounds = useMemo(
+        () => ({
+            cardCount: Math.min(visibleCount, rankedResults.length),
+            passageCountFor: (cardIndex: number) => rankedRef.current[cardIndex]?.matches.length ?? 0,
+        }),
+        [visibleCount, rankedResults.length],
+    );
+
+    const nav = useSearchKeyboardNav({
+        bounds: navBounds,
+        getHref,
+        navigate,
+        expandCard,
+        collapseCard,
+        isCardExpanded,
+    });
+
+    useEffect(() => {
+        nav.reset();
+    }, [results, visibleCount, nav.reset]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    useEffect(() => {
+        if (!nav.activeNodeId) {
+            return;
+        }
+        document.getElementById(nav.activeNodeId)?.scrollIntoView({ block: 'nearest' });
+    }, [nav.activeNodeId]);
 
     const totalMatches = useMemo(
         () => results.reduce((sum, result) => sum + (result.matchCount ?? result.matches.length), 0),
@@ -354,6 +439,12 @@ function SearchContent() {
                             onChange={(event) => setQuery(event.target.value)}
                             placeholder="Search the archive..."
                             className="archive-input w-full py-4 pl-12 pr-28 text-base sm:min-h-16 sm:text-lg"
+                            onKeyDown={nav.onKeyDown}
+                            role="combobox"
+                            aria-expanded={rankedResults.length > 0}
+                            aria-controls="search-results"
+                            aria-autocomplete="list"
+                            aria-activedescendant={nav.activeNodeId ?? undefined}
                         />
                         <button
                             type="submit"
@@ -392,6 +483,9 @@ function SearchContent() {
                                 <p className="text-[0.68rem] uppercase tracking-[0.24em] text-ed-fg-muted">
                                     Best matches first
                                 </p>
+                                <p className="mt-2 text-[0.62rem] uppercase tracking-[0.18em] text-ed-fg-muted [@media(pointer:coarse)]:hidden">
+                                    &uarr;&darr; navigate &middot; &rarr; passages &middot; &crarr; open
+                                </p>
                                 <p className="mt-1 font-display text-3xl text-ed-fg">
                                     {results.length} documents, {totalMatches} passages
                                 </p>
@@ -402,12 +496,15 @@ function SearchContent() {
                         </div>
                     ) : null}
 
-                    <div className="space-y-5">
+                    <div id="search-results" role="listbox" aria-label="Search results" className="space-y-5">
                         {rankedResults.slice(0, visibleCount).map((result, index) => {
                             const itemKey = `${result.media.id}${result.media.page ? `-${result.media.page}` : ''}`;
+                            const active = nav.activeCardIndex === index ? nav.activePassageIndex : null;
                             return (
                                 <SearchResultCard
                                     key={itemKey}
+                                    cardIndex={index}
+                                    active={active}
                                     result={result}
                                     query={query}
                                     rank={index + 1}
@@ -447,12 +544,16 @@ function SearchResultCard({
     rank,
     expanded,
     onToggle,
+    cardIndex,
+    active,
 }: {
     result: SearchResult;
     query: string;
     rank: number;
     expanded: boolean;
     onToggle: () => void;
+    cardIndex: number;
+    active: number | null;
 }) {
     const { media, matches } = result;
     const mediaLink = getMediaLink(media, query);
@@ -460,14 +561,23 @@ function SearchResultCard({
     const isDocument = isDocumentType(media.type);
     const visibleMatches = expanded ? matches : matches.slice(0, 2);
     const bestMatch = matches[0];
-    const bestHref = bestMatch
-        ? isDocumentType(media.type)
-            ? getDocumentMatchLink(media, bestMatch, query)
-            : `${mediaLink}?t=${Math.floor(bestMatch.start_time)}`
-        : mediaLink;
+    const bestHref = bestMatch ? getMatchHref(media, bestMatch, query) : mediaLink;
+
+    const cardActive = active === -1;
+    const cardId = `search-card-${cardIndex}`;
+    const cardTitle = media.displayTitle || media.title;
+    const bestPassageId = `search-card-${cardIndex}-passage-0`;
+    const bestPassageActive = active === 0;
 
     return (
-        <article className={`soft-shell overflow-hidden ${isDocument ? 'bg-ed-muted/20' : ''}`}>
+        <article
+            id={cardId}
+            role="group"
+            aria-label={cardTitle}
+            className={`soft-shell overflow-hidden ${isDocument ? 'bg-ed-muted/20' : ''} ${
+                cardActive ? 'ring-2 ring-ed-accent ring-offset-2 ring-offset-ed-bg' : ''
+            }`}
+        >
             <div className={`grid gap-5 p-4 sm:p-5 lg:p-6 ${isDocument ? 'lg:grid-cols-[156px_1fr]' : 'lg:grid-cols-[210px_1fr]'
                 }`}>
                 <Link
@@ -537,7 +647,12 @@ function SearchResultCard({
                     {bestMatch ? (
                         <Link
                             href={bestHref}
-                            className="my-4 block rounded-[1.35rem] border border-ed-rule bg-ed-muted/45 px-4 py-4 transition hover:border-ed-accent/50"
+                            id={bestPassageId}
+                            role="option"
+                            aria-selected={bestPassageActive}
+                            className={`my-4 block rounded-[1.35rem] border bg-ed-muted/45 px-4 py-4 transition hover:border-ed-accent/50 ${
+                                bestPassageActive ? 'border-ed-accent ring-1 ring-ed-accent' : 'border-ed-rule'
+                            }`}
                         >
                             <div className="mb-3 flex flex-wrap items-center gap-2">
                                 <span className="text-[0.62rem] uppercase tracking-[0.2em] text-ed-accent">
@@ -568,15 +683,20 @@ function SearchResultCard({
 
                     {visibleMatches.length > 1 ? (
                         <div>
-                            {visibleMatches.slice(1).map((match) => (
-                                <SearchMatchRow
-                                    key={match.id}
-                                    media={media}
-                                    mediaLink={mediaLink}
-                                    match={match}
-                                    query={query}
-                                />
-                            ))}
+                            {visibleMatches.slice(1).map((match) => {
+                                const passageIndex = matches.indexOf(match);
+                                return (
+                                    <SearchMatchRow
+                                        key={match.id}
+                                        media={media}
+                                        mediaLink={mediaLink}
+                                        match={match}
+                                        query={query}
+                                        nodeId={`search-card-${cardIndex}-passage-${passageIndex}`}
+                                        active={active === passageIndex}
+                                    />
+                                );
+                            })}
                         </div>
                     ) : null}
 
@@ -601,20 +721,27 @@ function SearchMatchRow({
     mediaLink,
     match,
     query,
+    nodeId,
+    active,
 }: {
     media: SearchResultMedia;
     mediaLink: string;
     match: SearchMatch;
     query: string;
+    nodeId: string;
+    active: boolean;
 }) {
-    const href = isDocumentType(media.type)
-        ? getDocumentMatchLink(media, match, query)
-        : `${mediaLink}?t=${Math.floor(match.start_time)}`;
+    const href = getMatchHref(media, match, query);
 
     return (
         <Link
             href={href}
-            className="group flex gap-4 border-t border-ed-rule py-4 transition first:border-t-0 first:pt-3"
+            id={nodeId}
+            role="option"
+            aria-selected={active}
+            className={`group flex gap-4 border-t py-4 transition first:border-t-0 first:pt-3 ${
+                active ? 'border-ed-accent bg-ed-accent/5' : 'border-ed-rule'
+            }`}
         >
             <span className="w-12 shrink-0 pt-0.5 text-right font-mono text-[0.72rem] font-bold tabular-nums text-ed-fg-muted transition-colors group-hover:text-ed-accent sm:w-14">
                 {getQuranVerseRef(media, match) || (isDocumentType(media.type) ? 'Text' : formatTime(match.start_time))}
@@ -811,6 +938,13 @@ function getDocumentMatchLink(media: SearchResultMedia, match: SearchMatch, quer
     const basePath = getDocumentBasePath(media);
     const queryString = params.toString();
     return queryString ? `${basePath}?${queryString}` : basePath;
+}
+
+function getMatchHref(media: SearchResultMedia, match: SearchMatch, query: string) {
+    if (isDocumentType(media.type)) {
+        return getDocumentMatchLink(media, match, query);
+    }
+    return `${getMediaLink(media, query)}?t=${Math.floor(match.start_time)}`;
 }
 
 function getThumbnailSrc(media: SearchResultMedia) {
