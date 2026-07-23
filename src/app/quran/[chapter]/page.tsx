@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import { cache } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import QuranChapterClient from './QuranChapterClient';
+import QuranChapterClientWrapper from './QuranChapterClientWrapper';
 
 export const dynamicParams = true;
 
@@ -32,11 +31,19 @@ export type QuranChapter = {
     verses: QuranVerse[];
 };
 
-const getChapters = cache((): QuranChapter[] => {
+// Module-level singleton cache: QURAN_CHAPTERS.json is ~7.5MB and static for the
+// life of the process. Parsing it once (rather than per-render via React's
+// cache(), which only dedupes within a single render) keeps build and any
+// on-demand render cheap.
+let chaptersCache: QuranChapter[] | null = null;
+
+function getChapters(): QuranChapter[] {
+    if (chaptersCache) return chaptersCache;
     const filePath = path.join(process.cwd(), 'public', 'data', 'generated_indices', 'QURAN_CHAPTERS.json');
     if (!fs.existsSync(filePath)) return [];
-    return JSON.parse(fs.readFileSync(filePath, 'utf8')) as QuranChapter[];
-});
+    chaptersCache = JSON.parse(fs.readFileSync(filePath, 'utf8')) as QuranChapter[];
+    return chaptersCache;
+}
 
 export async function generateStaticParams() {
     return getChapters().map((chapter) => ({ chapter: String(chapter.chapterNumber) }));
@@ -44,7 +51,6 @@ export async function generateStaticParams() {
 
 type Props = {
     params: Promise<{ chapter: string }>;
-    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -60,9 +66,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default async function QuranChapterPage({ params, searchParams }: Props) {
+export default async function QuranChapterPage({ params }: Props) {
     const { chapter: chapterParam } = await params;
-    const resolvedSearchParams = await searchParams;
     const chapterNumber = Number(chapterParam);
 
     const chapters = getChapters();
@@ -72,19 +77,11 @@ export default async function QuranChapterPage({ params, searchParams }: Props) 
     const prevChapter = chapters.find((c) => c.chapterNumber === chapterNumber - 1);
     const nextChapter = chapters.find((c) => c.chapterNumber === chapterNumber + 1);
 
-    const initialVerse = resolvedSearchParams?.page ? Number(resolvedSearchParams.page) : undefined;
-    const initialQuery = resolvedSearchParams?.q ? String(resolvedSearchParams.q).slice(0, 120) : '';
-    const editionParam = typeof resolvedSearchParams?.edition === 'string' ? resolvedSearchParams.edition : '';
-    const initialEdition = editionParam === '1989' || editionParam === '1981' ? editionParam : 'primary';
-
     return (
-        <QuranChapterClient
+        <QuranChapterClientWrapper
             chapter={chapter}
             prev={prevChapter ? { chapterNumber: prevChapter.chapterNumber, titleEnglish: prevChapter.titleEnglish } : undefined}
             next={nextChapter ? { chapterNumber: nextChapter.chapterNumber, titleEnglish: nextChapter.titleEnglish } : undefined}
-            initialVerse={Number.isFinite(initialVerse) && initialVerse! > 0 ? initialVerse : undefined}
-            initialQuery={initialQuery}
-            initialEdition={initialEdition}
         />
     );
 }

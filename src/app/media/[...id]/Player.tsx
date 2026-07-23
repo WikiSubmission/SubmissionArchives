@@ -7,7 +7,6 @@ import {
     Search, Copy, Check, X, LayoutTemplate, AlignLeft,
     ArrowLeft, ArrowRight, Download
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 
 import dynamic from 'next/dynamic';
@@ -310,58 +309,42 @@ export default function Player({
                         </div>
 
                         {/* THEATER MODE FEED */}
-                        <AnimatePresence>
-                            {viewMode === 'theater' && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    className="soft-shell mt-8 overflow-hidden"
-                                >
-                                    <div className="flex items-center justify-between border-b border-ed-rule px-6 py-3">
-                                        <span className="text-[10px] font-bold font-ui uppercase tracking-[0.2em] text-ed-fg-muted">Synchronized Feed</span>
-                                        <div className="flex items-center gap-2">
-                                            <span className="text-[10px] font-bold font-ui uppercase tracking-widest text-ed-fg-muted">
-                                                Active Transcript
-                                            </span>
-                                        </div>
+                        {viewMode === 'theater' && (
+                            <div className="player-fade-up soft-shell mt-8 overflow-hidden">
+                                <div className="flex items-center justify-between border-b border-ed-rule px-6 py-3">
+                                    <span className="text-[10px] font-bold font-ui uppercase tracking-[0.2em] text-ed-fg-muted">Synchronized Feed</span>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[10px] font-bold font-ui uppercase tracking-widest text-ed-fg-muted">
+                                            Active Transcript
+                                        </span>
                                     </div>
-                                    <div className="p-8 md:p-16 flex items-center justify-center min-h-[300px] bg-gradient-to-b from-ed-surface/5 to-transparent">
-                                        <AnimatePresence mode="wait">
-                                            {activeSegment ? (
-                                                <motion.p
-                                                    key={activeSegment.content}
-                                                    initial={{ opacity: 0, y: 10 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    exit={{ opacity: 0, y: -10 }}
-                                                    className="text-2xl md:text-3xl text-center leading-relaxed font-body text-ed-fg"
-                                                >
-                                                    {activeSegment.content}
-                                                </motion.p>
-                                            ) : (
-                                                <motion.p
-                                                    key="no-caption"
-                                                    className="text-ed-fg-muted/50 text-xl text-center font-ui uppercase tracking-widest"
-                                                >
-                                                    Waiting for signal...
-                                                </motion.p>
-                                            )}
-                                        </AnimatePresence>
-                                    </div>
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
+                                </div>
+                                <div className="p-8 md:p-16 flex items-center justify-center min-h-[300px] bg-gradient-to-b from-ed-surface/5 to-transparent">
+                                    {activeSegment ? (
+                                        <p
+                                            key={activeSegment.content}
+                                            className="player-caption-rise text-2xl md:text-3xl text-center leading-relaxed font-body text-ed-fg"
+                                        >
+                                            {activeSegment.content}
+                                        </p>
+                                    ) : (
+                                        <p
+                                            key="no-caption"
+                                            className="text-ed-fg-muted/50 text-xl text-center font-ui uppercase tracking-widest"
+                                        >
+                                            Waiting for signal...
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
+                        )}
 
                     </div>
 
                     {/* TRANSCRIPT COLUMN */}
-                    <AnimatePresence>
-                        {viewMode === 'transcript' && (
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: 20 }}
-                                className="soft-shell flex h-[min(70vh,560px)] min-h-[320px] flex-col overflow-hidden lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)]"
+                    {viewMode === 'transcript' && (
+                            <div
+                                className="player-fade-in soft-shell flex h-[min(70vh,560px)] min-h-[320px] flex-col overflow-hidden lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)]"
                             >
                                 {/* Header */}
                                 <div className="border-b border-ed-rule p-5 space-y-4">
@@ -478,9 +461,8 @@ export default function Player({
                                         </ol>
                                     )}
                                 </div>
-                            </motion.div>
+                            </div>
                         )}
-                    </AnimatePresence>
                 </div>
             </main>
         </div>

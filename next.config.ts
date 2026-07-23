@@ -34,6 +34,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  // Don't advertise the framework via the X-Powered-By response header.
+  poweredByHeader: false,
   experimental: {
     optimizePackageImports: ["lucide-react"],
     webVitalsAttribution: ["CLS", "LCP", "INP"],
@@ -43,6 +45,9 @@ const nextConfig: NextConfig = {
     deviceSizes: [360, 390, 640, 750, 828, 1080, 1200, 1440],
     imageSizes: [48, 64, 96, 128, 160, 192, 256, 384],
     qualities: [45, 50, 60, 65, 70, 75, 85],
+    // Source images (book covers, thumbnails) are stable, so keep optimized
+    // variants cached for ~31 days to avoid re-running sharp on every miss.
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       {
         protocol: 'https',
@@ -59,6 +64,21 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: securityHeaders,
+      },
+      {
+        // Fonts and brand assets are content-stable binaries — cache immutably.
+        source: "/:dir(fonts|assets)/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        // Archive media/PDFs rarely change; cache a day, then serve stale while
+        // revalidating so repeat visits and downloads stay fast.
+        source: "/content/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
       },
     ];
   },

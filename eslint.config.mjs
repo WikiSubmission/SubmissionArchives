@@ -16,6 +16,9 @@ const eslintConfig = defineConfig([
     "test-results/**",
     "blob-report/**",
     "next-env.d.ts",
+    // Git worktrees created under .claude are full repo copies (including build
+    // output); linting them floods results with duplicate/minified-file errors.
+    ".claude/**",
   ]),
   {
     files: ["scripts/**/*.ts"],

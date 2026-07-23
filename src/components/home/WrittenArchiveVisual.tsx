@@ -133,7 +133,6 @@ export function WrittenArchiveVisual() {
                                     src={item.src}
                                     alt={`Cover of ${item.title}`}
                                     fill
-                                    unoptimized
                                     sizes="140px"
                                     className="object-cover"
                                 />

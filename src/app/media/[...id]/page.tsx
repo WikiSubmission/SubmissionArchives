@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { cache } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { formatMedia } from '@/lib/formatUtils';
@@ -58,10 +57,20 @@ type MasterIndexItem = LocalMediaItem & {
 const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
 const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
 
-const getLocalIndex = cache((filePath: string): LocalMediaItem[] => {
+// Module-level singleton cache: these generated index files are large
+// (MASTER_INDEX.json is ~27MB) and static for the life of the process, so we
+// parse each once instead of per-render/per-request (React's cache() only
+// dedupes within a single render).
+const localIndexCache = new Map<string, LocalMediaItem[]>();
+
+function getLocalIndex(filePath: string): LocalMediaItem[] {
+  const cached = localIndexCache.get(filePath);
+  if (cached) return cached;
   if (!fs.existsSync(filePath)) return [];
-  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-});
+  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8')) as LocalMediaItem[];
+  localIndexCache.set(filePath, parsed);
+  return parsed;
+}
 
 function getVideoCatalog(masterIndex: MasterIndexItem[]) {
   const videos = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'videos.json'));
@@ -140,16 +149,10 @@ export async function generateMetadata({
 
 export default async function WatchPage({
   params,
-  searchParams
 }: {
   params: Promise<{ id: string[] }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { id } = await params;
-  const resolvedSearchParams = await searchParams;
-  const requestedTime = resolvedSearchParams?.t ? Number(resolvedSearchParams.t) : undefined;
-  const initialSeekTime = Number.isFinite(requestedTime) && requestedTime! >= 0 ? requestedTime : undefined;
-
   const key = id.map(decodeURIComponent).join('/');
   const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
@@ -214,7 +217,6 @@ export default async function WatchPage({
         next={next}
         clipStartTime={playbackWindow.startTime}
         clipEndTime={playbackWindow.endTime}
-        initialSeekTime={initialSeekTime}
         transcriptDisclaimer={transcriptDisclaimer}
       />
     </div>

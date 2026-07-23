@@ -171,7 +171,7 @@ export function HeroSection() {
                                         src={image.src}
                                         alt={image.alt}
                                         fill
-                                        preload={imageIndex === 0}
+                                        priority={imageIndex === 0}
                                         quality={70}
                                         sizes="(min-width: 1024px) 54vw, 100vw"
                                         className={`object-contain p-4 transition-[opacity,transform] duration-700 ease-out sm:p-7 ${

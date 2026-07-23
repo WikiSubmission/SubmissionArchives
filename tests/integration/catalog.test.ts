@@ -144,17 +144,22 @@ test('the 1989 Chapter 9 heading and footnotes are free of OCR rule debris', () 
 });
 
 test('legacy book slugs resolve to their current filenames', () => {
+    // The source PDFs are stored under slug-based filenames (matching each
+    // book's id + .pdf), which the catalog records verbatim in `filename` and
+    // uses to build `pdfLink`. Assert both stay in sync for the known slugs.
     const expected = new Map([
-        ['salat-booklet', 'The Contact Prayers.pdf'],
-        ['quran-hadith-islam', 'Quran, Hadith, and Islam.pdf'],
-        ['computer-speaks', "The Computer Speaks God's Message to the World.pdf"],
-        ['perpetual-miracle', 'The Perpetual Miracle of Muhammad.pdf'],
-        ['miracle-of-quran-alphabets', 'Miracle of Quran - Significance of the Mysterious Alphabets.pdf'],
-        ['quran-visual-presentation', 'Quran - Visual Presentation of the Miracle.pdf'],
+        ['salat-booklet', 'salat-booklet.pdf'],
+        ['quran-hadith-islam', 'quran-hadith-islam.pdf'],
+        ['computer-speaks', 'computer-speaks.pdf'],
+        ['perpetual-miracle', 'perpetual-miracle.pdf'],
+        ['miracle-of-quran-alphabets', 'miracle-of-quran-alphabets.pdf'],
+        ['quran-visual-presentation', 'quran-visual-presentation.pdf'],
     ]);
 
     for (const [id, filename] of expected) {
-        assert.equal(books.find((book) => book.id === id)?.filename, filename);
+        const book = books.find((candidate) => candidate.id === id);
+        assert.equal(book?.filename, filename);
+        assert.equal(book?.pdfLink, `/content/written/books/${filename}`);
     }
 });
 
