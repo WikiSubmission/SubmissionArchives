@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ChevronDown, Play, Search, SlidersHorizontal } from 'lucide-react';
@@ -122,7 +122,7 @@ function SearchContent() {
     const queryRef = useRef(query);
     const expandedRef = useRef(expandedMatches);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         rankedRef.current = rankedResults;
         queryRef.current = query;
         expandedRef.current = expandedMatches;
@@ -689,7 +689,6 @@ function SearchResultCard({
                                     <SearchMatchRow
                                         key={match.id}
                                         media={media}
-                                        mediaLink={mediaLink}
                                         match={match}
                                         query={query}
                                         nodeId={`search-card-${cardIndex}-passage-${passageIndex}`}
@@ -718,14 +717,12 @@ function SearchResultCard({
 
 function SearchMatchRow({
     media,
-    mediaLink,
     match,
     query,
     nodeId,
     active,
 }: {
     media: SearchResultMedia;
-    mediaLink: string;
     match: SearchMatch;
     query: string;
     nodeId: string;
