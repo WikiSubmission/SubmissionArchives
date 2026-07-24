@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowLeft, BookOpen } from 'lucide-react';
 import Link from 'next/link';
+import { activeChipClass, chromeButtonClassLg, IconBadge } from '@/components/home/WidgetAccents';
 
 type BlockType = {
     type: string;
@@ -21,16 +22,35 @@ type PageType = {
     printed_page_label?: string;
     page_title?: string;
     blocks?: BlockType[];
+    // Special editions (e.g. bulletins, bonus issues) were transcribed with a
+    // simpler page-level text schema instead of typed blocks.
+    plain_text?: string;
+    transcription?: string;
+    transcription_text?: string;
 };
+
+type PageTitleEntry = string | { page_number: number; title: string };
 
 type IssueType = {
     issue_id: string;
     date_label: string;
-    pages: PageType[];
+    pages?: PageType[];
     transcription?: {
         pages?: PageType[];
     };
+    page_titles?: PageTitleEntry[];
 };
+
+function getFallbackPageText(page: PageType): string {
+    return page.transcription || page.transcription_text || page.plain_text || '';
+}
+
+function getPageTitle(issue: IssueType, page: PageType, index: number): string | undefined {
+    if (page.page_title) return page.page_title;
+    const entry = issue.page_titles?.[index];
+    if (!entry) return undefined;
+    return typeof entry === 'string' ? entry : entry.title;
+}
 
 export default function NewsletterViewer({ issue, query }: { issue: IssueType; query?: string }) {
     // Function to highlight text based on query (rudimentary highlighting)
@@ -55,33 +75,35 @@ export default function NewsletterViewer({ issue, query }: { issue: IssueType; q
     return (
         <main id="main-content" className="min-h-screen bg-ed-bg text-ed-fg">
             {/* Header */}
-            <header className="sticky top-0 z-10 border-b border-ed-rule bg-ed-bg/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-4">
+            <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg/80 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-4">
+                <div className="flex min-w-0 items-center gap-3 sm:gap-4">
                     <Link
                         href="/search"
                         aria-label="Back to search"
-                        className="flex h-11 w-11 items-center justify-center rounded-full bg-ed-muted/40 text-ed-fg hover:bg-ed-accent/20 hover:text-ed-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                        className={chromeButtonClassLg}
                     >
                         <ArrowLeft size={18} />
                     </Link>
-                    <div>
-                        <h1 className="text-xl font-medium tracking-tight text-ed-fg">
+                    <div className="min-w-0">
+                        <h1 className="truncate text-lg font-medium tracking-tight text-ed-fg sm:text-xl">
                             Submitters Perspective
                         </h1>
-                        <p className="text-sm text-ed-fg-muted">{issue.date_label}</p>
+                        <p className="truncate text-xs text-ed-fg-muted sm:text-sm">{issue.date_label}</p>
                     </div>
                 </div>
-                <div>
-                    <span className="soft-pill px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-ed-accent border border-ed-accent/20 bg-ed-accent/10">
-                        <BookOpen size={14} className="inline mr-2" />
+                <div className="flex items-center gap-2">
+                    <IconBadge>
+                        <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
+                    </IconBadge>
+                    <span className={`hidden rounded-full border px-3 py-1.5 text-xs uppercase tracking-[0.2em] sm:inline-flex ${activeChipClass}`}>
                         Newsletter
                     </span>
                 </div>
             </header>
 
             {/* Content */}
-            <div className="max-w-4xl mx-auto p-6 sm:p-10 space-y-16">
-                {issue.transcription?.pages?.map((page: PageType, pIdx: number) => (
+            <div className="max-w-4xl mx-auto p-4 sm:p-10 space-y-10 sm:space-y-16">
+                {(issue.transcription?.pages ?? issue.pages ?? []).map((page: PageType, pIdx: number) => (
                     <div key={pIdx} className="space-y-12 pb-16 border-b border-ed-rule last:border-0 relative">
                         {/* Page Marker */}
                         <div className="absolute -left-12 top-0 h-full hidden lg:block">
@@ -89,6 +111,26 @@ export default function NewsletterViewer({ issue, query }: { issue: IssueType; q
                                 PAGE {page.page_number}
                             </div>
                         </div>
+
+                        {!page.blocks?.length && (() => {
+                            const pageTitle = getPageTitle(issue, page, pIdx);
+                            const fallbackText = getFallbackPageText(page);
+                            const paragraphs = fallbackText.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+                            return (
+                                <article className="space-y-6">
+                                    {pageTitle && (
+                                        <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-ed-fg">
+                                            {highlightText(pageTitle)}
+                                        </h3>
+                                    )}
+                                    <div className="space-y-5 text-lg leading-relaxed text-ed-fg/90 whitespace-pre-line">
+                                        {paragraphs.map((p, i) => (
+                                            <p key={i}>{highlightText(p)}</p>
+                                        ))}
+                                    </div>
+                                </article>
+                            );
+                        })()}
 
                         {page.blocks?.map((block: BlockType, bIdx: number) => {
                             if (block.type === 'masthead') {

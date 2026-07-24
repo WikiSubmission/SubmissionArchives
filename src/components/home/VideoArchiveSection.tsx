@@ -10,6 +10,7 @@ import { Reveal } from './Reveal';
 import { SectionCta } from './SectionCta';
 import { SectionHeading } from './SectionHeading';
 import { useAutoplayCarousel } from './useAutoplayCarousel';
+import { GlassSheen, chromeButtonClass, widgetCardClass } from './WidgetAccents';
 
 const VIDEO_SLIDES = [
     {
@@ -114,24 +115,26 @@ export function VideoArchiveSection() {
 
             <Reveal delay={160} className="min-w-0">
                 <div ref={rootRef} {...interactionProps} className="touch-pan-y">
-                    <div className="lift-card relative overflow-hidden rounded-none border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-md)]">
-                        <span
-                            aria-hidden="true"
-                            className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-transparent via-ed-accent/60 to-transparent"
-                        />
-
-                        <div className="flex min-h-14 items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-5">
-                            <div>
-                                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                                    Featured recording
-                                </p>
-                                <p className="mt-1 text-sm text-ed-fg" aria-live="polite">
-                                    {slide.category}
-                                </p>
+                    <div className={widgetCardClass}>
+                        <GlassSheen />
+                        {/* Header Bar */}
+                        <div className="flex min-h-12 items-center justify-between gap-4 border-b border-ed-rule px-4 py-2.5 sm:px-5 bg-ed-surface/50">
+                            <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-1.5" aria-hidden="true">
+                                    <span className="h-2.5 w-2.5 rounded-full border border-ed-rule bg-ed-fg-muted/30" />
+                                    <span className="h-2.5 w-2.5 rounded-full border border-ed-rule bg-ed-fg-muted/20" />
+                                    <span className="h-2.5 w-2.5 rounded-full border border-ed-rule bg-ed-fg-muted/20" />
+                                </div>
+                                <span className="h-3 w-px bg-ed-rule" aria-hidden="true" />
+                                <div>
+                                    <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                        Featured Recording · {slide.category}
+                                    </p>
+                                </div>
                             </div>
                             <div className="flex items-center gap-1.5">
                                 <ControlButton label="Previous featured video" onClick={previous}>
-                                    <ArrowLeft className="h-4 w-4" />
+                                    <ArrowLeft className="h-3.5 w-3.5" />
                                 </ControlButton>
                                 {!reducedMotion ? (
                                     <ControlButton
@@ -139,11 +142,11 @@ export function VideoArchiveSection() {
                                         onClick={() => setIsManuallyPaused((paused) => !paused)}
                                         pressed={isManuallyPaused}
                                     >
-                                        {isManuallyPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+                                        {isManuallyPaused ? <Play className="h-3.5 w-3.5" /> : <Pause className="h-3.5 w-3.5" />}
                                     </ControlButton>
                                 ) : null}
                                 <ControlButton label="Next featured video" onClick={next}>
-                                    <ArrowRight className="h-4 w-4" />
+                                    <ArrowRight className="h-3.5 w-3.5" />
                                 </ControlButton>
                             </div>
                         </div>
@@ -154,25 +157,27 @@ export function VideoArchiveSection() {
                                 src={slide.src}
                                 alt={slide.title}
                                 fill
-                                quality={65}
+                                quality={75}
                                 sizes="(min-width: 1024px) 55vw, 100vw"
                                 className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-safe:animate-[archive-media-reveal_620ms_cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                             <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
-                                <span className="inline-flex h-12 w-12 items-center justify-center rounded-none border border-white/25 bg-white/10 text-white backdrop-blur-md transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 group-hover:border-ed-console-accent group-hover:bg-ed-console-accent group-hover:text-ed-console">
+                                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-black shadow-lg">
                                     <Play className="ml-0.5 h-5 w-5 fill-current" aria-hidden="true" />
                                 </span>
-                                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.17em] text-ed-console-accent">
-                                    {slide.category}
-                                </p>
-                                <h4 className="mt-2 max-w-[20ch] font-display text-2xl leading-[1.02] text-ed-console-fg sm:text-4xl">
+                                <div className="mt-4">
+                                    <span className="inline-block rounded-full border border-white/20 bg-white/10 px-3 py-0.5 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-white/90 backdrop-blur-md">
+                                        {slide.category}
+                                    </span>
+                                </div>
+                                <h4 className="mt-2.5 max-w-[22ch] font-sans text-2xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-3xl">
                                     {slide.title}
                                 </h4>
                             </div>
                         </Link>
 
-                        <div className="grid grid-cols-3 gap-px border-t border-ed-rule bg-ed-rule sm:grid-cols-6">
+                        <div className="grid grid-cols-3 gap-1.5 p-2 border-t border-ed-rule bg-ed-surface/40 sm:grid-cols-6">
                             {VIDEO_SLIDES.map((item, itemIndex) => (
                                 <button
                                     key={item.src}
@@ -180,11 +185,11 @@ export function VideoArchiveSection() {
                                     onClick={() => goTo(itemIndex)}
                                     aria-label={`Show ${item.title}`}
                                     aria-pressed={itemIndex === index}
-                                    className={`relative min-h-20 overflow-hidden bg-ed-bg p-1 transition-colors ${
-                                        itemIndex === index ? 'ring-2 ring-inset ring-ed-accent' : 'hover:bg-ed-surface'
+                                    className={`relative min-h-16 overflow-hidden rounded-lg border transition-all ${
+                                        itemIndex === index ? 'border-ed-accent ring-1 ring-ed-accent shadow-sm shadow-ed-accent/30' : 'border-ed-rule/60 opacity-60 hover:opacity-100 hover:border-ed-fg-muted'
                                     }`}
                                 >
-                                    <span className="relative block aspect-video overflow-hidden rounded-none bg-ed-console">
+                                    <span className="relative block aspect-video overflow-hidden bg-ed-console">
                                         <Image
                                             src={item.src}
                                             alt=""
@@ -194,7 +199,7 @@ export function VideoArchiveSection() {
                                             className={`object-cover transition duration-300 ${
                                                 itemIndex === index
                                                     ? 'opacity-100'
-                                                    : 'opacity-55 grayscale hover:opacity-95 hover:grayscale-0'
+                                                    : 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0'
                                             }`}
                                         />
                                     </span>
@@ -225,7 +230,7 @@ function ControlButton({
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-none border border-ed-rule bg-ed-surface text-ed-fg-muted transition-[color,border-color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 hover:border-ed-accent/60 hover:text-ed-accent hover:shadow-[var(--ed-shadow-sm)] active:scale-95"
+            className={chromeButtonClass}
         >
             {children}
         </button>

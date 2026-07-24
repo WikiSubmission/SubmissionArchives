@@ -6,6 +6,7 @@ import { BookOpen } from 'lucide-react';
 import { useState } from 'react';
 
 import { CtaLink } from './SectionCta';
+import { IconBadge, GlassSheen, activeChipClass, inactiveChipClass, widgetCardClass } from './WidgetAccents';
 
 const BOOKS = [
     {
@@ -66,35 +67,28 @@ export function WrittenArchiveVisual() {
     const items = viewTab === 'books' ? BOOKS : NEWSLETTERS;
 
     return (
-        <div className="lift-card relative overflow-hidden rounded-none border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-md)]">
-            <span
-                aria-hidden="true"
-                className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-transparent via-ed-accent/60 to-transparent"
-            />
-
+        <div className={widgetCardClass}>
+            <GlassSheen />
             {/* Header bar */}
-            <div className="flex min-h-14 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-5">
+            <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-2.5 sm:px-5 bg-ed-surface/50">
                 <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-none border border-ed-rule bg-ed-bg text-ed-accent">
-                        <BookOpen className="h-4 w-4" aria-hidden="true" />
-                    </span>
+                    <IconBadge>
+                        <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
+                    </IconBadge>
                     <div>
-                        <p className="text-[0.66rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                            Reading room
+                        <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                            Reading Room · Written Shelf
                         </p>
-                        <p className="mt-1 text-sm text-ed-fg">From the shelf</p>
                     </div>
                 </div>
 
                 {/* View tab toggles */}
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1.5">
                     <button
                         type="button"
                         onClick={() => setViewTab('books')}
-                        className={`inline-flex min-h-8 items-center border px-3 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.08em] transition-colors ${
-                            viewTab === 'books'
-                                ? 'border-ed-accent bg-ed-accent/12 text-ed-accent'
-                                : 'border-ed-rule text-ed-fg-muted hover:text-ed-fg'
+                        className={`inline-flex min-h-7 items-center rounded-full border px-3 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
+                            viewTab === 'books' ? activeChipClass : inactiveChipClass
                         }`}
                     >
                         Books (10)
@@ -102,10 +96,8 @@ export function WrittenArchiveVisual() {
                     <button
                         type="button"
                         onClick={() => setViewTab('newsletters')}
-                        className={`inline-flex min-h-8 items-center border px-3 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.08em] transition-colors ${
-                            viewTab === 'newsletters'
-                                ? 'border-ed-accent bg-ed-accent/12 text-ed-accent'
-                                : 'border-ed-rule text-ed-fg-muted hover:text-ed-fg'
+                        className={`inline-flex min-h-7 items-center rounded-full border px-3 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
+                            viewTab === 'newsletters' ? activeChipClass : inactiveChipClass
                         }`}
                     >
                         Newsletters (64)
@@ -114,21 +106,17 @@ export function WrittenArchiveVisual() {
             </div>
 
             {/* Shelf Display */}
-            <div className="relative bg-[color-mix(in_oklch,var(--ed-surface)_68%,var(--ed-bg))] px-4 pb-0 pt-8 sm:px-6 sm:pt-10">
-                <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-10 top-0 h-40 bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--ed-gold)_16%,transparent),transparent)] blur-xl"
-                />
-                <div className="relative mx-auto flex max-w-xl items-end justify-center">
+            <div className="relative bg-ed-surface/40 px-4 pb-0 pt-8 sm:px-6 sm:pt-10">
+                <div className="relative mx-auto flex max-w-xl items-end justify-center pb-2">
                     {items.map((item, index) => (
                         <Link
                             key={item.id}
                             href={`/library/${item.id}`}
                             aria-label={`Open ${item.title}`}
-                            className="group relative -mx-2 block w-[24%] max-w-[8.5rem] origin-bottom rounded-none border border-ed-rule bg-ed-bg shadow-[0_14px_35px_color-mix(in_oklch,var(--ed-fg)_16%,transparent)] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] first:ml-0 last:mr-0 hover:z-10 hover:-translate-y-3 hover:shadow-[var(--ed-shadow-lg)]"
+                            className="group relative -mx-2 block w-[24%] max-w-[8.5rem] origin-bottom overflow-hidden rounded-xl border border-ed-rule bg-ed-bg shadow-xl transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] first:ml-0 last:mr-0 hover:z-10 hover:-translate-y-3 hover:border-ed-fg hover:shadow-2xl"
                             style={{ zIndex: index === Math.floor(items.length / 2) ? 5 : 4 - Math.abs(index - Math.floor(items.length / 2)) }}
                         >
-                            <span className="relative block aspect-[2/3] overflow-hidden rounded-none">
+                            <span className="relative block aspect-[2/3] overflow-hidden rounded-xl">
                                 <Image
                                     src={item.src}
                                     alt={`Cover of ${item.title}`}
@@ -138,20 +126,20 @@ export function WrittenArchiveVisual() {
                                 />
                                 <span
                                     aria-hidden="true"
-                                    className="absolute inset-0 bg-gradient-to-t from-black/0 to-black/0 transition-colors duration-300 group-hover:from-black/16"
+                                    className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                                 />
                             </span>
                         </Link>
                     ))}
                 </div>
                 <div
-                    className="relative mx-auto h-2 max-w-2xl border-x border-t border-ed-rule bg-gradient-to-b from-ed-surface-strong to-ed-surface"
+                    className="relative mx-auto h-2 max-w-2xl rounded-full border-x border-t border-ed-rule bg-gradient-to-b from-ed-surface-strong to-ed-surface"
                     aria-hidden="true"
                 />
             </div>
 
             {/* Footer bar */}
-            <div className="border-t border-ed-rule px-4 py-3 sm:px-5">
+            <div className="border-t border-ed-rule px-4 py-3 sm:px-5 bg-ed-surface/50">
                 <CtaLink href="/written" label="Open the full written archive" />
             </div>
         </div>

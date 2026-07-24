@@ -1,26 +1,24 @@
 'use client';
 
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { Check, ChevronLeft, ChevronRight, Copy, Search } from 'lucide-react';
+import { AlignLeft, Search, Share2, X } from 'lucide-react';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
-import type { QuranChapter, QuranVerse } from './page';
+import type { QuranChapter, QuranChapterSummary, QuranVerse } from './page';
 
 type ChapterNav = { chapterNumber: number; titleEnglish: string };
-type Edition = 'primary' | '1989' | '1981';
 
 type Props = {
     chapter: QuranChapter;
+    allChapters: QuranChapterSummary[];
     prev?: ChapterNav;
     next?: ChapterNav;
     initialVerse?: number;
     initialQuery: string;
-    initialEdition: Edition;
 };
 
-/* ---------------------------------- hooks ---------------------------------- */
+/* ---------------------------------- Hooks ---------------------------------- */
 
-/** 0 → 1 reading progress of the whole document, rAF-throttled. */
 function useReadingProgress() {
     const [progress, setProgress] = useState(0);
 
@@ -47,7 +45,6 @@ function useReadingProgress() {
     return progress;
 }
 
-/** One-shot IntersectionObserver reveal. */
 function useReveal<T extends HTMLElement>(initiallyVisible = false) {
     const ref = useRef<T | null>(null);
     const [visible, setVisible] = useState(initiallyVisible);
@@ -69,7 +66,7 @@ function useReveal<T extends HTMLElement>(initiallyVisible = false) {
                     }
                 }
             },
-            { rootMargin: '0px 0px -6% 0px', threshold: 0.04 },
+            { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
         );
         io.observe(el);
         return () => io.disconnect();
@@ -78,143 +75,37 @@ function useReveal<T extends HTMLElement>(initiallyVisible = false) {
     return { ref, visible };
 }
 
-/* ------------------------------ ornament bits ------------------------------ */
+/* ------------------------------- Main Component ---------------------------- */
 
-function OrnamentDivider({ className = '' }: { className?: string }) {
-    return (
-        <div aria-hidden="true" className={`flex items-center justify-center gap-3 text-ed-accent/70 ${className}`}>
-            <span className="h-px w-14 bg-gradient-to-r from-transparent to-ed-accent/50 sm:w-20" />
-            <span className="block h-1.5 w-1.5 rotate-45 border border-ed-accent/70 bg-ed-surface" />
-            <span className="h-px w-14 bg-gradient-to-l from-transparent to-ed-accent/50 sm:w-20" />
-        </div>
-    );
-}
-
-/* ------------------------- segmented edition control ------------------------ */
-
-type EditionOption = { value: Edition; label: string };
-
-/**
- * Tactile pill control with a measured, animated sliding thumb.
- * Used at both the chapter (md) and verse (sm) scale.
- */
-function EditionSegmentedControl({
-    options,
-    value,
-    onChange,
-    size,
-    ariaLabel,
-}: {
-    options: EditionOption[];
-    value: Edition;
-    onChange: (edition: Edition) => void;
-    size: 'md' | 'sm';
-    ariaLabel: string;
-}) {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const buttonRefs = useRef<Partial<Record<Edition, HTMLButtonElement | null>>>({});
-    const [thumb, setThumb] = useState<{ left: number; width: number; visible: boolean }>({
-        left: 0,
-        width: 0,
-        visible: false,
-    });
-
-    const measure = useCallback(() => {
-        const container = containerRef.current;
-        const active = buttonRefs.current[value];
-        if (!container || !active) {
-            setThumb((t) => ({ ...t, visible: false }));
-            return;
-        }
-        setThumb({ left: active.offsetLeft, width: active.offsetWidth, visible: true });
-    }, [value]);
-
-    useLayoutEffect(measure, [measure, options.length]);
-
-    useEffect(() => {
-        const container = containerRef.current;
-        if (!container || typeof ResizeObserver === 'undefined') return;
-        const ro = new ResizeObserver(measure);
-        ro.observe(container);
-        return () => ro.disconnect();
-    }, [measure]);
-
-    const sizing =
-        size === 'md'
-            ? { button: 'min-h-11 px-5 text-sm', thumb: 'inset-y-1 rounded-md' }
-            : { button: 'min-h-9 px-3 text-[0.65rem] font-bold uppercase tracking-widest', thumb: 'inset-y-0.5 rounded-md' };
-
-    return (
-        <div
-            ref={containerRef}
-            role="group"
-            aria-label={ariaLabel}
-            className={`relative flex w-fit max-w-full flex-wrap items-center rounded-lg border border-ed-rule bg-ed-surface p-1 shadow-[var(--ed-shadow-sm,0_1px_2px_rgba(0,0,0,0.06))] ${
-                size === 'sm' ? 'rounded-md p-0.5' : ''
-            }`}
-        >
-            {/* Sliding thumb */}
-            <span
-                aria-hidden="true"
-                className={`quran-thumb pointer-events-none absolute left-0 bg-ed-bg text-transparent shadow-md ring-1 ring-ed-rule ${sizing.thumb}`}
-                style={{
-                    width: thumb.width,
-                    transform: `translateX(${thumb.left}px)`,
-                    opacity: thumb.visible ? 1 : 0,
-                }}
-            />
-            {options.map((option) => {
-                const active = option.value === value;
-                return (
-                    <button
-                        key={option.value}
-                        ref={(el) => {
-                            buttonRefs.current[option.value] = el;
-                        }}
-                        type="button"
-                        onClick={() => onChange(option.value)}
-                        aria-pressed={active}
-                        className={`relative z-10 rounded-[inherit] font-semibold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${sizing.button} ${
-                            size === 'md' ? 'rounded-md' : 'rounded-md'
-                        } ${active ? 'text-ed-accent' : 'text-ed-fg-muted hover:text-ed-fg'}`}
-                    >
-                        {option.label}
-                    </button>
-                );
-            })}
-        </div>
-    );
-}
-
-/* ------------------------------- main component ---------------------------- */
-
-export default function QuranChapterClient({ chapter, prev, next, initialVerse, initialQuery, initialEdition }: Props) {
-    const [query, setQuery] = useState(initialQuery);
-    const has1981 = chapter.verses.some((verse) => Boolean(verse.editions?.['1981']));
-    const safeInitialEdition = initialEdition === '1981' && !has1981 ? 'primary' : initialEdition;
-    const [globalEdition, setGlobalEdition] = useState<Edition>(safeInitialEdition);
+export default function QuranChapterClient({
+    chapter,
+    allChapters,
+    initialVerse,
+    initialQuery,
+}: Props) {
+    const [sidebarOpen, setSidebarOpen] = useState(true);
+    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+    const [suraFilter, setSuraFilter] = useState('');
+    const [query] = useState(initialQuery);
     const hasScrolledToVerse = useRef(false);
     const progress = useReadingProgress();
 
     const highlightTerms = useMemo(() => getHighlightTerms(query.trim().toLowerCase()), [query]);
     const visibleVerses = useMemo(
-        () => chapter.verses.filter((verse) => Boolean(verse.english) || Boolean(verse.editions?.[globalEdition as '1989' | '1981'])),
-        [chapter.verses, globalEdition],
+        () => chapter.verses.filter((verse) => Boolean(verse.english)),
+        [chapter.verses],
     );
 
-    const matchCount = useMemo(() => {
-        if (highlightTerms.length === 0) return 0;
-        const pattern = new RegExp(
-            highlightTerms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'),
-            'i',
+    const filteredSidebarChapters = useMemo(() => {
+        const norm = suraFilter.trim().toLowerCase();
+        if (!norm) return allChapters;
+        return allChapters.filter(
+            (c) =>
+                String(c.chapterNumber).includes(norm) ||
+                c.titleEnglish.toLowerCase().includes(norm) ||
+                c.titleTransliterated.toLowerCase().includes(norm),
         );
-        return visibleVerses.filter((verse) => {
-            const edition = verse.editions?.[globalEdition as '1989' | '1981'];
-            const english = globalEdition === 'primary' ? verse.english : edition?.english ?? verse.english;
-            const subtitle = globalEdition === 'primary' ? verse.subtitle : edition?.subtitle ?? verse.subtitle;
-            return (english && pattern.test(english)) || (subtitle && pattern.test(subtitle));
-        }).length;
-    }, [highlightTerms, visibleVerses, globalEdition]);
+    }, [allChapters, suraFilter]);
 
     useEffect(() => {
         if (!initialVerse || hasScrolledToVerse.current) return;
@@ -223,315 +114,308 @@ export default function QuranChapterClient({ chapter, prev, next, initialVerse, 
         el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, [initialVerse]);
 
-    const globalOptions: EditionOption[] = useMemo(() => {
-        const options: EditionOption[] = [
-            { value: 'primary', label: 'Primary · 1992' },
-            { value: '1989', label: '1989' },
-        ];
-        if (has1981) options.push({ value: '1981', label: '1981' });
-        return options;
-    }, [has1981]);
-
     return (
-        <div className="min-h-screen bg-ed-bg font-body text-ed-fg">
-            {/* ------------------------- frosted instrument bar ------------------------ */}
-            <header className="quran-glass sticky top-[65px] z-20 flex min-h-14 shrink-0 flex-wrap items-center justify-between gap-2 border-b border-ed-rule/60 px-4">
+        <div className="min-h-screen bg-ed-bg font-body text-ed-fg antialiased">
+            {/* ------------------------- Top Header Bar ------------------------ */}
+            <header className="sticky top-[65px] z-30 flex min-h-16 shrink-0 items-center justify-between gap-4 border-b border-ed-rule bg-ed-bg/80 px-4 sm:px-8 backdrop-blur-md transition-all duration-300">
                 <div className="flex min-w-0 items-center gap-4">
-                    <Link
-                        href="/quran"
-                        className="-mx-1 flex min-h-11 items-center rounded-md px-1 text-ed-fg-muted transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                        title="Back to Qur'an"
+                    {/* Mobile menu toggle */}
+                    <button
+                        type="button"
+                        onClick={() => setMobileDrawerOpen(true)}
+                        className="inline-flex xl:hidden items-center justify-center h-10 w-10 rounded-md text-ed-fg-muted hover:text-ed-accent focus-visible:outline-none"
                     >
-                        <ChevronLeft className="h-5 w-5" />
-                        <span className="ml-1 text-sm font-medium">Back</span>
-                    </Link>
-                    <div className="h-4 w-px bg-ed-rule" />
-                    <h1 className="min-w-0 truncate font-display text-sm font-semibold tracking-wide">
-                        {chapter.chapterNumber}. {chapter.titleEnglish}
-                    </h1>
+                        <AlignLeft className="h-5 w-5" />
+                    </button>
+                    
+                    {/* Navigation Dropdowns (Placeholder matching image) */}
+                    <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-ed-fg-muted">
+                        <Link href="/quran" className="hover:text-ed-fg transition-colors">Surahs</Link>
+                        <Link href="/quran/appendices" className="hover:text-ed-fg transition-colors">Appendices</Link>
+                    </div>
                 </div>
 
-                <div className="flex shrink-0 items-center gap-1">
-                    {prev ? (
-                        <Link
-                            href={`/quran/${prev.chapterNumber}`}
-                            className="flex min-h-11 min-w-11 items-center justify-center rounded-full text-ed-fg-muted transition-all hover:-translate-x-0.5 hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                            aria-label={`Previous sura: ${prev.chapterNumber}. ${prev.titleEnglish}`}
-                            title={`${prev.chapterNumber}. ${prev.titleEnglish}`}
-                        >
-                            <ChevronLeft className="h-5 w-5" />
-                        </Link>
-                    ) : (
-                        <div className="w-11" />
-                    )}
-                    {next ? (
-                        <Link
-                            href={`/quran/${next.chapterNumber}`}
-                            className="flex min-h-11 min-w-11 items-center justify-center rounded-full text-ed-fg-muted transition-all hover:translate-x-0.5 hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                            aria-label={`Next sura: ${next.chapterNumber}. ${next.titleEnglish}`}
-                            title={`${next.chapterNumber}. ${next.titleEnglish}`}
-                        >
-                            <ChevronRight className="h-5 w-5" />
-                        </Link>
-                    ) : (
-                        <div className="w-11" />
-                    )}
+                {/* Right controls */}
+                <div className="flex shrink-0 items-center gap-2">
+                    <button className="flex h-10 w-10 items-center justify-center rounded-md border border-ed-rule text-ed-fg-muted hover:text-ed-accent">
+                        <Share2 className="h-4 w-4" />
+                    </button>
+                    
+                    {/* Sidebar Toggle */}
+                    <button 
+                        onClick={() => setSidebarOpen((prev) => !prev)}
+                        className={`hidden xl:flex h-10 w-10 items-center justify-center rounded-md border border-ed-rule transition-colors ${sidebarOpen ? 'bg-ed-accent/10 text-ed-accent border-ed-accent/30' : 'text-ed-fg-muted hover:text-ed-accent'}`}
+                        aria-label="Toggle Sidebar"
+                    >
+                        <AlignLeft className="h-4 w-4" />
+                    </button>
                 </div>
 
-                {/* Reading progress */}
+                {/* Reading Progress Line */}
                 <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 bottom-[-1px] h-0.5 origin-left bg-ed-accent/80"
+                    className="pointer-events-none absolute inset-x-0 bottom-[-1px] h-[1px] origin-left bg-ed-accent/80 transition-transform duration-150 ease-out"
                     style={{ transform: `scaleX(${progress})` }}
                 />
             </header>
 
-            <main id="main-content" className="mx-auto max-w-[820px] px-4 pb-16 sm:px-6">
-                {/* --------------------------------- hero --------------------------------- */}
-                <section className="space-y-4 pb-10 pt-12 text-center sm:pt-16">
-                    <p className="archive-kicker">
-                        Sura {chapter.chapterNumber} &middot; {visibleVerses.length} verses
-                        {chapter.revelationOrder ? <> &middot; Revelation {chapter.revelationOrder}</> : null}
-                    </p>
-                    <div className="h-4 sm:h-8" aria-hidden="true" />
-                    <h2 className="font-display text-[clamp(2.4rem,6vw,3.75rem)] leading-[1.05] tracking-tight text-ed-fg">
-                        {chapter.titleEnglish}
-                    </h2>
-                    <p className="text-sm italic tracking-wide text-ed-fg-muted">{chapter.titleTransliterated}</p>
+            <div className="mx-auto flex max-w-[1600px]">
+                {/* ------------------ Main Reading Content Area (Left) ------------------ */}
+                <main id="main-content" className="flex-1 min-w-0 px-4 py-10 sm:px-10 lg:px-16 pb-32">
+                    <div className="mx-auto max-w-[900px]">
+                        {/* Chapter Header Card (Matching image style) */}
+                        <header className="border-b border-ed-rule pb-12 mb-12">
+                            <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+                                <div className="space-y-2">
+                                    <h2 className="font-sans text-[2.5rem] font-semibold text-ed-fg tracking-tight">
+                                        {chapter.titleTransliterated}
+                                    </h2>
+                                    <p className="text-ed-accent text-lg font-medium tracking-wide">
+                                        {chapter.titleEnglish}
+                                    </p>
+                                </div>
 
-                    <div className="flex items-center justify-center gap-4 pt-1 sm:gap-6">
-                        <span aria-hidden="true" className="h-px w-10 bg-ed-rule sm:w-16" />
-                        <p dir="rtl" className="font-arabic text-4xl leading-snug text-ed-fg sm:text-[2.75rem]">
-                            {chapter.titleArabic}
-                        </p>
-                        <span aria-hidden="true" className="h-px w-10 bg-ed-rule sm:w-16" />
-                    </div>
+                                <div className="text-right space-y-3">
+                                    <h2 dir="rtl" className="font-arabic text-[3.5rem] leading-none text-ed-fg drop-shadow-sm">
+                                        {chapter.titleArabic}
+                                    </h2>
+                                    <p className="text-ed-accent text-sm font-arabic tracking-widest" dir="rtl">
+                                        {chapter.chapterNumber === 1 || chapter.revelationOrder ? 'مَكِّيَّة' : 'مَدَنِيَّة'} &middot; {visibleVerses.length} آيَات
+                                    </p>
+                                </div>
+                            </div>
 
-                    <OrnamentDivider className="pt-3" />
+                            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-6 mt-12 text-sm">
+                                <div className="space-y-1.5">
+                                    <p className="text-xs text-ed-fg-muted uppercase tracking-wider">Surah Number</p>
+                                    <p className="font-semibold text-ed-fg text-lg">{chapter.chapterNumber}</p>
+                                </div>
+                                <div className="space-y-1.5">
+                                    <p className="text-xs text-ed-fg-muted uppercase tracking-wider">Type</p>
+                                    <p className="font-semibold text-ed-fg text-base">{chapter.chapterNumber === 1 || chapter.revelationOrder ? 'Makki' : 'Madani'}</p>
+                                </div>
+                                <div className="space-y-1.5">
+                                    <p className="text-xs text-ed-fg-muted uppercase tracking-wider">Ayahs</p>
+                                    <p className="font-semibold text-ed-fg text-lg">{visibleVerses.length}</p>
+                                </div>
+                                <div className="space-y-1.5">
+                                    <p className="text-xs text-ed-fg-muted uppercase tracking-wider">Revelation Order</p>
+                                    <p className="font-semibold text-ed-fg text-lg">{chapter.revelationOrder || '-'}</p>
+                                </div>
+                                <div className="space-y-1.5 col-span-2 sm:col-span-1">
+                                    <p className="text-xs text-ed-fg-muted uppercase tracking-wider">Language</p>
+                                    <div className="flex gap-2">
+                                        <span className="rounded border border-ed-rule px-2 py-0.5 text-xs">Arabic</span>
+                                        <span className="rounded border border-ed-rule px-2 py-0.5 text-xs">English</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
 
-                    {/* Search */}
-                    <div className="mx-auto max-w-md pt-6">
-                        <div className="relative">
-                            <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
-                            <label htmlFor="quran-verse-search" className="sr-only">
-                                Search within this sura
-                            </label>
-                            <input
-                                id="quran-verse-search"
-                                name="quranVerseSearch"
-                                type="text"
-                                value={query}
-                                onChange={(event) => setQuery(event.target.value)}
-                                placeholder="Search within this sura..."
-                                className="archive-input w-full rounded-none py-3 pl-11 pr-4 shadow-sm transition-shadow focus:shadow-[var(--ed-shadow-md)]"
-                            />
+                        {/* Verses List */}
+                        <div className="space-y-6">
+                            {visibleVerses.map((verse) => (
+                                <QuranVerseCard
+                                    key={verse.verseId}
+                                    verse={verse}
+                                    highlightTerms={highlightTerms}
+                                    isTarget={initialVerse === verse.verseNumber}
+                                />
+                            ))}
                         </div>
-                        <p aria-live="polite" className="h-5 pt-2 text-xs text-ed-fg-muted">
-                            {highlightTerms.length > 0
-                                ? matchCount > 0
-                                    ? `${matchCount} ${matchCount === 1 ? 'verse' : 'verses'} matching`
-                                    : 'No verses matching'
-                                : ''}
-                        </p>
+
                     </div>
+                </main>
 
-                    {/* Global edition switch */}
-                    <div className="flex flex-col items-center gap-2 pt-1">
-                        <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-ed-fg-muted">
-                            Translation edition
-                        </span>
-                        <EditionSegmentedControl
-                            options={globalOptions}
-                            value={globalEdition}
-                            onChange={setGlobalEdition}
-                            size="md"
-                            ariaLabel="Translation edition"
-                        />
-                        {!has1981 && (
-                            <Link
-                                href="/library/quran1981"
-                                className="text-xs font-semibold text-ed-fg-muted underline decoration-ed-accent/40 underline-offset-4 transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                                title="Open the page-transcribed 1981 facsimile"
-                            >
-                                View the 1981 facsimile edition
-                            </Link>
-                        )}
+                {/* ------------------ Right Sidebar (Desktop) ------------------ */}
+                <aside
+                    className={`hidden xl:flex flex-col sticky top-[130px] h-[calc(100vh-130px)] shrink-0 border-l border-ed-rule bg-ed-bg transition-all duration-300 ease-in-out ${
+                        sidebarOpen ? 'w-[340px] opacity-100' : 'w-[0px] opacity-0 overflow-hidden border-none'
+                    }`}
+                >
+                    <div className="w-[340px] flex flex-col h-full">
+                        {/* Search Bar */}
+                        <div className="p-4 border-b border-ed-rule">
+                            <div className="relative">
+                                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
+                                <input
+                                    type="text"
+                                    value={suraFilter}
+                                    onChange={(e) => setSuraFilter(e.target.value)}
+                                    placeholder="Filter by surah..."
+                                    className="w-full rounded-md border border-ed-rule bg-ed-surface py-2.5 pl-9 pr-3 text-sm focus:border-ed-accent focus:outline-none"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Page Navigator block */}
+                        <div className="p-4 border-b border-ed-rule space-y-5">
+                            <div>
+                                <h3 className="text-sm font-semibold text-ed-fg">Surah Navigator</h3>
+                                <p className="text-xs text-ed-fg-muted mt-1">Quick jump to a surah</p>
+                            </div>
+                            <div className="flex gap-2">
+                                <input type="text" placeholder="Surah number" className="flex-1 rounded-md border border-ed-rule bg-ed-surface px-3 py-2 text-sm focus:outline-none focus:border-ed-accent" />
+                                <button className="rounded-md bg-ed-accent/90 px-4 py-2 text-sm font-medium text-[#131110] hover:bg-ed-accent transition-colors">Go</button>
+                            </div>
+                        </div>
+
+                        {/* Suras Scroll List */}
+                        <div className="flex-1 overflow-y-auto px-2 py-4 scrollbar-none space-y-1">
+                            {filteredSidebarChapters.map((item) => {
+                                const isActive = item.chapterNumber === chapter.chapterNumber;
+                                return (
+                                    <Link
+                                        key={item.chapterNumber}
+                                        href={`/quran/${item.chapterNumber}`}
+                                        className={`group flex items-center justify-between rounded-md px-4 py-3 text-sm transition-all duration-200 ${
+                                            isActive
+                                                ? 'bg-ed-surface shadow-sm'
+                                                : 'text-ed-fg-muted hover:bg-ed-surface/50 hover:text-ed-fg'
+                                        }`}
+                                    >
+                                        <span className={`font-medium ${isActive ? 'text-ed-accent' : ''}`}>
+                                            {item.titleTransliterated}
+                                        </span>
+                                        <span className={`font-mono text-xs ${isActive ? 'text-ed-accent' : 'text-ed-fg-muted/60'}`}>
+                                            {item.chapterNumber}
+                                        </span>
+                                    </Link>
+                                );
+                            })}
+                        </div>
                     </div>
-                </section>
+                </aside>
 
-                {/* -------------------------------- verses -------------------------------- */}
-                <div className="border-t border-ed-rule/70">
-                    {visibleVerses.map((verse) => (
-                        <QuranVerseCard
-                            key={verse.verseId}
-                            verse={verse}
-                            chapterNumber={chapter.chapterNumber}
-                            highlightTerms={highlightTerms}
-                            isTarget={initialVerse === verse.verseNumber}
-                            globalEdition={globalEdition}
+                {/* ------------------ Mobile Drawer (Slide-over) ------------------ */}
+                {mobileDrawerOpen && (
+                    <div className="fixed inset-0 z-50 flex xl:hidden">
+                        <div
+                            className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+                            onClick={() => setMobileDrawerOpen(false)}
                         />
-                    ))}
-                </div>
+                        <div className="relative mr-auto flex w-80 max-w-[85vw] flex-col border-r border-ed-rule bg-ed-bg shadow-2xl">
+                            <div className="flex items-center justify-between border-b border-ed-rule p-4">
+                                <span className="font-semibold">Surahs Index</span>
+                                <button
+                                    type="button"
+                                    onClick={() => setMobileDrawerOpen(false)}
+                                    className="rounded-md p-1.5 text-ed-fg-muted hover:bg-ed-surface hover:text-ed-fg"
+                                >
+                                    <X className="h-5 w-5" />
+                                </button>
+                            </div>
 
-                {/* ------------------------------ footer nav ------------------------------ */}
-                <OrnamentDivider className="mt-12" />
-                <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
-                    {prev ? (
-                        <Link href={`/quran/${prev.chapterNumber}`} className="archive-button archive-button-secondary px-4">
-                            <ChevronLeft className="h-4 w-4" /> {prev.chapterNumber}. {prev.titleEnglish}
-                        </Link>
-                    ) : (
-                        <span />
-                    )}
-                    {next ? (
-                        <Link href={`/quran/${next.chapterNumber}`} className="archive-button archive-button-secondary px-4">
-                            {next.chapterNumber}. {next.titleEnglish} <ChevronRight className="h-4 w-4" />
-                        </Link>
-                    ) : (
-                        <span />
-                    )}
-                </div>
-            </main>
+                            <div className="p-4 border-b border-ed-rule">
+                                <input
+                                    type="text"
+                                    value={suraFilter}
+                                    onChange={(e) => setSuraFilter(e.target.value)}
+                                    placeholder="Filter 114 suras..."
+                                    className="w-full rounded-md border border-ed-rule bg-ed-surface py-2 pl-3 pr-3 text-sm"
+                                />
+                            </div>
+
+                            <div className="flex-1 overflow-y-auto px-2 py-2 space-y-1">
+                                {filteredSidebarChapters.map((item) => {
+                                    const isActive = item.chapterNumber === chapter.chapterNumber;
+                                    return (
+                                        <Link
+                                            key={item.chapterNumber}
+                                            href={`/quran/${item.chapterNumber}`}
+                                            onClick={() => setMobileDrawerOpen(false)}
+                                            className={`flex items-center justify-between rounded-md px-3 py-2.5 text-sm ${
+                                                isActive ? 'bg-ed-surface text-ed-accent font-semibold' : 'text-ed-fg-muted hover:text-ed-fg'
+                                            }`}
+                                        >
+                                            <span>{item.titleTransliterated}</span>
+                                            <span className="font-mono text-xs">{item.chapterNumber}</span>
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
 
-/* -------------------------------- verse card ------------------------------- */
+/* -------------------------------- Verse Card ------------------------------- */
 
 function QuranVerseCard({
     verse,
-    chapterNumber,
     highlightTerms,
     isTarget,
-    globalEdition,
 }: {
     verse: QuranVerse;
-    chapterNumber: number;
     highlightTerms: string[];
     isTarget: boolean;
-    globalEdition: Edition;
 }) {
-    const [copied, setCopied] = useState(false);
-    const [edition, setEdition] = useState<Edition>(globalEdition);
-    const [prevGlobalEdition, setPrevGlobalEdition] = useState(globalEdition);
     const { ref, visible } = useReveal<HTMLElement>(isTarget);
-
-    if (globalEdition !== prevGlobalEdition) {
-        setEdition(globalEdition);
-        setPrevGlobalEdition(globalEdition);
-    }
-
-    const activeEnglish = edition === 'primary' ? verse.english : verse.editions?.[edition]?.english ?? verse.english;
-    const activeSubtitle = edition === 'primary' ? verse.subtitle : verse.editions?.[edition]?.subtitle ?? verse.subtitle;
-    const activeFootnote = edition === 'primary' ? verse.footnote : verse.editions?.[edition]?.footnote ?? verse.footnote;
-
-    const verseOptions: EditionOption[] = [];
-    if (verse.english) verseOptions.push({ value: 'primary', label: 'Primary' });
-    if (verse.editions?.['1989']) verseOptions.push({ value: '1989', label: '1989' });
-    if (verse.editions?.['1981']) verseOptions.push({ value: '1981', label: '1981' });
-
-    const handleCopy = async () => {
-        try {
-            await navigator.clipboard.writeText(`${verse.verseId} ${activeEnglish}`);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 1500);
-        } catch {
-            // Clipboard access can fail silently (e.g. permissions); no-op.
-        }
-    };
 
     return (
         <article
             ref={ref}
             id={`verse-${verse.verseNumber}`}
-            className={`quran-reveal group scroll-mt-40 border-b border-ed-rule/70 transition-colors duration-500 ${
-                visible ? 'is-visible' : ''
-            } ${isTarget ? 'bg-ed-accent/[0.06] shadow-[inset_0_0_0_1px_var(--ed-accent)]/10' : ''}`}
+            className={`group scroll-mt-32 border-b border-ed-rule py-10 transition-all duration-700 ease-out
+                ${visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'} 
+                ${isTarget ? 'bg-ed-accent/5' : ''}`}
         >
-            <div className="space-y-6 px-1 py-10 sm:px-3 sm:py-12">
-                {/* Subtitle — ornamented sectional heading (cross-fades with edition) */}
-                {activeSubtitle ? (
-                    <div key={`sub-${edition}`} className="quran-edition-swap flex items-center justify-center gap-3 pt-2">
-                        <span aria-hidden="true" className="h-px w-8 bg-ed-accent/40" />
-                        <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-ed-accent">
-                            <HighlightedText text={activeSubtitle} terms={highlightTerms} />
-                        </p>
-                        <span aria-hidden="true" className="h-px w-8 bg-ed-accent/40" />
-                    </div>
-                ) : null}
+            {verse.subtitle && (
+                <div className="mb-10 flex items-center justify-center gap-4">
+                    <span aria-hidden="true" className="h-[1px] w-12 bg-ed-accent/30" />
+                    <h3 className="text-center font-sans text-xs font-bold uppercase tracking-[0.2em] text-ed-accent">
+                        <HighlightedText text={verse.subtitle} terms={highlightTerms} />
+                    </h3>
+                    <span aria-hidden="true" className="h-[1px] w-12 bg-ed-accent/30" />
+                </div>
+            )}
 
-                {/* Meta row — medallion, per-verse edition, copy */}
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                    <div className="flex items-center gap-2.5">
-                        <span
-                            aria-hidden="true"
-                            className="block h-1.5 w-1.5 rotate-45 border border-ed-accent/60 bg-ed-accent/20"
-                        />
-                        <span className="inline-flex items-center gap-1 rounded-full border border-ed-accent/30 bg-ed-surface/70 px-3.5 py-1.5 font-mono text-xs font-semibold tracking-wider text-ed-accent shadow-sm">
-                            {chapterNumber}
-                            <span className="text-ed-accent/50">:</span>
-                            {verse.verseNumber}
-                        </span>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                        {verseOptions.length > 1 && (
-                            <EditionSegmentedControl
-                                options={verseOptions}
-                                value={edition}
-                                onChange={setEdition}
-                                size="sm"
-                                ariaLabel={`Edition for verse ${verse.verseNumber}`}
-                            />
-                        )}
-                        <button
-                            type="button"
-                            onClick={handleCopy}
-                            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent sm:h-9 sm:w-9 ${
-                                copied
-                                    ? 'border-ed-accent/50 bg-ed-accent/10 text-ed-accent'
-                                    : 'border-ed-rule text-ed-fg-muted hover:border-ed-accent/50 hover:bg-ed-surface hover:text-ed-accent sm:opacity-0 sm:group-hover:opacity-100'
-                            }`}
-                            aria-label={copied ? 'Copied' : 'Copy verse'}
-                            title="Copy verse"
-                        >
-                            {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
-                        </button>
-                        <span aria-live="polite" className="sr-only">
-                            {copied ? 'Copied' : ''}
-                        </span>
-                    </div>
+            <div className="flex gap-4 sm:gap-8 lg:gap-12 items-start">
+                {/* Ornate Medallion */}
+                <div className="relative mt-2 flex h-12 w-12 shrink-0 items-center justify-center">
+                    <svg className="absolute inset-0 h-full w-full text-ed-accent/50 transition-colors group-hover:text-ed-accent/80" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27 1L33 8.5L42 7.5L45 16L53 20L49 27L53 34L45 38L42 46.5L33 45.5L27 53L21 45.5L12 46.5L9 38L1 34L5 27L1 20L9 16L12 7.5L21 8.5L27 1Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+                        <circle cx="27" cy="27" r="18" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.5"/>
+                    </svg>
+                    <span className="relative z-10 font-sans text-xs font-medium text-ed-fg-muted group-hover:text-ed-fg">
+                        {verse.verseNumber}
+                    </span>
                 </div>
 
-                {/* Arabic — the dominant voice */}
-                {verse.arabic ? (
-                    <p dir="rtl" className="font-arabic text-right text-[1.9rem] leading-[2.3] text-ed-fg sm:text-[2.15rem]">
-                        {verse.arabic}
-                    </p>
-                ) : null}
+                {/* Right-aligned text content */}
+                <div className="flex-1 flex flex-col space-y-6">
+                    {verse.arabic && (
+                        <p dir="rtl" className="font-arabic text-right text-[2.2rem] sm:text-[2.6rem] leading-[2.2] text-ed-fg antialiased">
+                            {verse.arabic}
+                        </p>
+                    )}
 
-                {/* English + footnote — cross-fade on edition change */}
-                <div key={edition} className="quran-edition-swap space-y-5">
-                    <p className="max-w-[68ch] text-[1.075rem] leading-8 text-ed-fg sm:text-[1.125rem]">
-                        <HighlightedText text={activeEnglish} terms={highlightTerms} />
-                    </p>
+                    <div className="flex justify-start">
+                        <p className="max-w-[75ch] font-sans text-left text-[1.1rem] leading-8 text-ed-accent">
+                            <HighlightedText text={verse.english} terms={highlightTerms} />
+                        </p>
+                    </div>
 
-                    {activeFootnote ? (
-                        <aside className="whitespace-pre-wrap border-l-2 border-ed-accent/35 bg-ed-surface/40 py-2 pl-4 pr-3 text-sm leading-6 text-ed-fg-muted">
-                            <HighlightedText text={activeFootnote} terms={highlightTerms} />
-                        </aside>
-                    ) : null}
+                    {verse.footnote && (
+                        <div className="flex justify-start pt-2">
+                            <aside className="w-full max-w-[75ch] rounded border-l-2 border-ed-accent bg-ed-surface p-4 text-left">
+                                <p className="font-sans text-sm leading-7 text-ed-fg-muted">
+                                    <HighlightedText text={verse.footnote} terms={highlightTerms} />
+                                </p>
+                            </aside>
+                        </div>
+                    )}
                 </div>
             </div>
         </article>
     );
 }
 
-/* ------------------------------ search highlight --------------------------- */
-
 function HighlightedText({ text, terms }: { text: string; terms: string[] }) {
     if (terms.length === 0 || !text) return <>{text}</>;
-
     const pattern = terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
     const regex = new RegExp(`(${pattern})`, 'gi');
     const parts = text.split(regex);

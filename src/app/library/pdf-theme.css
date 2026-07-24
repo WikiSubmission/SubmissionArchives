@@ -20,6 +20,7 @@
 .rpv-search__highlight {
     background-color: rgba(251, 191, 36, 0.5) !important;
     outline: 1px solid rgba(251, 191, 36, 0.8);
+    border-radius: 3px;
 }
 
 /* Scrollbar customization for the sidebar */

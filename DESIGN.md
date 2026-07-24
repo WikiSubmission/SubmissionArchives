@@ -10,6 +10,7 @@ Submission Archives is a trust-first digital heritage archive for researchers, r
 DESIGN_VARIANCE: 6
 MOTION_INTENSITY: 4
 VISUAL_DENSITY: 4
+COLOR_SCHEME: monochrome
 ```
 
 - **Variance 6:** Use asymmetric editorial grids and distinct section structures. Preserve predictable navigation and reading order.
@@ -28,16 +29,16 @@ VISUAL_DENSITY: 4
 
 ### Color
 
-The `--ed-*` variables are the single source of truth.
+The `--ed-*` variables are the single source of truth. The palette is strictly monochromatic black and white.
 
-- `--ed-bg`: warm paper or near-black archive room.
-- `--ed-surface`: raised paper, catalog card, or reading surface.
-- `--ed-fg`: ink.
-- `--ed-fg-muted`: secondary catalog information.
-- `--ed-rule`: dividers, frames, and archival structure.
-- `--ed-accent`: terracotta or warm gold used sparingly for state and emphasis.
+- `--ed-bg`: pure white (#fafafa) in light, near-black (#0a0a0a) in dark.
+- `--ed-surface`: slight off-white or slightly lighter dark.
+- `--ed-fg`: near-black ink in light, near-white in dark.
+- `--ed-fg-muted`: neutral gray.
+- `--ed-rule`: subtle dividers in neutral gray.
+- `--ed-accent`: foreground tone — black in light, white in dark. Used sparingly for state and emphasis.
 
-Never add unrelated purple, cyan, or neon gradients.
+Never add colored hues, gradients, amber, gold, terracotta, or neon tones.
 
 ### Typography
 

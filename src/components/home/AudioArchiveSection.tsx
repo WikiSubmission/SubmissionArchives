@@ -8,6 +8,7 @@ import { ExpectationCard } from './ExpectationCard';
 import { Reveal } from './Reveal';
 import { CtaLink, SectionCta } from './SectionCta';
 import { SectionHeading } from './SectionHeading';
+import { IconBadge, GlassSheen, activeChipClass, inactiveChipClass, widgetCardClass } from './WidgetAccents';
 
 type AudioClip = {
     id: string;
@@ -127,122 +128,88 @@ export function AudioArchiveSection() {
             </div>
 
             <Reveal delay={160} className="min-w-0 lg:order-1">
-                <div className="lift-card relative overflow-hidden rounded-none border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-md)]">
-                    <span
-                        aria-hidden="true"
-                        className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-transparent via-ed-accent/60 to-transparent"
-                    />
-
+                <div className={widgetCardClass}>
+                    <GlassSheen />
                     {/* Header bar */}
-                    <div className="flex min-h-14 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-5">
+                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-2.5 sm:px-5 bg-ed-surface/50">
                         <div className="flex items-center gap-3">
-                            <span className="inline-flex h-9 w-9 items-center justify-center rounded-none border border-ed-rule bg-ed-bg text-ed-accent">
-                                <Headphones className="h-4 w-4" aria-hidden="true" />
-                            </span>
+                            <IconBadge>
+                                <Headphones className="h-3.5 w-3.5" aria-hidden="true" />
+                            </IconBadge>
                             <div>
-                                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                                    Listening desk
-                                </p>
-                                <p className="mt-0.5 text-xs font-medium text-ed-fg">
-                                    Transcript-linked audio
+                                <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                    Listening Desk · Transcript-Linked
                                 </p>
                             </div>
                         </div>
 
-                        {/* Collection Filter Buttons */}
-                        <div className="flex items-center gap-1">
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    setCategoryFilter('all');
-                                    setSelected(0);
-                                }}
-                                className={`inline-flex min-h-7 items-center border px-2.5 font-mono text-[0.62rem] font-semibold uppercase tracking-[0.06em] transition-colors ${
-                                    categoryFilter === 'all'
-                                        ? 'border-ed-accent bg-ed-accent/12 text-ed-accent'
-                                        : 'border-ed-rule text-ed-fg-muted hover:text-ed-fg'
-                                }`}
-                            >
-                                All
-                            </button>
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    setCategoryFilter('quran-study');
-                                    setSelected(0);
-                                }}
-                                className={`inline-flex min-h-7 items-center border px-2.5 font-mono text-[0.62rem] font-semibold uppercase tracking-[0.06em] transition-colors ${
-                                    categoryFilter === 'quran-study'
-                                        ? 'border-ed-accent bg-ed-accent/12 text-ed-accent'
-                                        : 'border-ed-rule text-ed-fg-muted hover:text-ed-fg'
-                                }`}
-                            >
-                                Qur&apos;an Studies
-                            </button>
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    setCategoryFilter('messenger-audio');
-                                    setSelected(0);
-                                }}
-                                className={`inline-flex min-h-7 items-center border px-2.5 font-mono text-[0.62rem] font-semibold uppercase tracking-[0.06em] transition-colors ${
-                                    categoryFilter === 'messenger-audio'
-                                        ? 'border-ed-accent bg-ed-accent/12 text-ed-accent'
-                                        : 'border-ed-rule text-ed-fg-muted hover:text-ed-fg'
-                                }`}
-                            >
-                                Messenger
-                            </button>
+                        {/* Collection Filter Pill Buttons */}
+                        <div className="flex items-center gap-1.5">
+                            {(['all', 'quran-study', 'messenger-audio'] as const).map((filter) => (
+                                <button
+                                    key={filter}
+                                    type="button"
+                                    onClick={() => {
+                                        setCategoryFilter(filter);
+                                        setSelected(0);
+                                    }}
+                                    className={`inline-flex min-h-7 items-center rounded-full border px-3 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
+                                        categoryFilter === filter ? activeChipClass : inactiveChipClass
+                                    }`}
+                                >
+                                    {filter === 'all' ? 'All' : filter === 'quran-study' ? "Qur'an Studies" : 'Messenger'}
+                                </button>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Dark Console Player / Vault */}
-                    <div className="bg-ed-console px-4 py-5 text-ed-console-fg sm:px-6 sm:py-7">
+                    {/* Dark Console Player / Widget */}
+                    <div className="bg-ed-console p-5 text-ed-console-fg sm:p-6">
                         {/* Top provenance metadata */}
                         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-console-rule pb-3 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.15em] text-ed-console-muted">
-                            <span className="text-ed-console-accent">[{clip.catalogNo}]</span>
+                            <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-white">[{clip.catalogNo}]</span>
                             <span>{clip.speaker}</span>
                             <span>{clip.date}</span>
                         </div>
 
-                        <div className="mt-5 grid gap-5 sm:grid-cols-[9rem_1fr] sm:items-center">
-                            <div className="relative aspect-square overflow-hidden rounded-none border border-ed-console-rule bg-ed-console-raised">
+                        <div className="mt-5 grid gap-5 sm:grid-cols-[8.5rem_1fr] sm:items-center">
+                            <div className="relative aspect-square overflow-hidden rounded-xl border border-white/10 bg-ed-console-raised shadow-md">
                                 <Image
                                     key={clip.thumbnail}
                                     src={clip.thumbnail}
                                     alt=""
                                     fill
-                                    quality={60}
+                                    quality={70}
                                     sizes="144px"
                                     className="object-cover motion-safe:animate-[archive-media-reveal_520ms_cubic-bezier(0.16,1,0.3,1)]"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                                 <button
                                     type="button"
                                     onClick={() => setIsPlaying((p) => !p)}
-                                    className="absolute bottom-3 left-3 inline-flex h-11 w-11 items-center justify-center rounded-none border border-white/25 bg-black/50 text-white backdrop-blur-sm transition-all hover:scale-105 hover:border-ed-console-accent hover:bg-ed-console-accent hover:text-ed-console"
+                                    className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-black/60 text-white backdrop-blur-md transition-all hover:scale-110 hover:bg-white hover:text-black shadow-md"
                                     aria-label={isPlaying ? 'Pause audio demo' : 'Play audio demo'}
                                 >
                                     {isPlaying ? (
-                                        <Pause className="h-5 w-5 fill-current" />
+                                        <Pause className="h-4 w-4 fill-current" />
                                     ) : (
-                                        <Play className="ml-0.5 h-5 w-5 fill-current" />
+                                        <Play className="ml-0.5 h-4 w-4 fill-current" />
                                     )}
                                 </button>
                             </div>
 
                             <div className="min-w-0">
                                 <div className="flex items-center gap-2">
-                                    <span className="inline-flex items-center gap-1 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-ed-console-accent">
-                                        <Volume2 size={13} className={isPlaying ? 'animate-pulse text-ed-console-accent' : ''} />
+                                    <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-white">
+                                        <Volume2 size={12} className={isPlaying ? 'animate-pulse text-white' : ''} />
                                         {isPlaying ? 'Now Playing' : clip.label}
                                     </span>
                                 </div>
-                                <h4 className="mt-2 font-display text-xl leading-[1.05] text-ed-console-fg sm:text-2xl">
+                                <h4 className="mt-2.5 font-sans text-xl font-extrabold leading-[1.1] tracking-tight text-ed-console-fg sm:text-2xl">
                                     {clip.title}
                                 </h4>
-                                <div className="mt-3 border-l-2 border-ed-console-accent/60 pl-3">
-                                    <p className="font-mono text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-ed-console-accent">
+                                <div className="mt-3 rounded-lg border border-white/10 bg-white/[0.03] p-3 backdrop-blur-sm">
+                                    <p className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-white/80">
                                         Synchronized Passage [{clip.time}]
                                     </p>
                                     <p className="mt-1 text-xs leading-relaxed text-ed-console-muted">
@@ -253,19 +220,19 @@ export function AudioArchiveSection() {
                         </div>
 
                         {/* Interactive Waveform Bar */}
-                        <div className="mt-6 border-t border-ed-console-rule pt-4">
-                            <div className="flex h-14 items-center gap-[3px] overflow-hidden" aria-hidden="true">
+                        <div className="mt-5 border-t border-ed-console-rule pt-4">
+                            <div className="flex h-12 items-center gap-[3px] overflow-hidden" aria-hidden="true">
                                 {WAVEFORM.map((height, barIndex) => {
                                     const isActive = isPlaying && barIndex % 4 === (selected * 3) % 4;
                                     return (
                                         <span
                                             key={`${clip.id}-${barIndex}`}
-                                            className={`block min-w-[3px] flex-1 rounded-none transition-all duration-300 ${
+                                            className={`block min-w-[3px] flex-1 rounded-full transition-all duration-300 ${
                                                 isActive
-                                                    ? 'bg-ed-console-accent'
+                                                    ? 'bg-ed-accent'
                                                     : barIndex < 18
-                                                    ? 'bg-ed-console-accent/70'
-                                                    : 'bg-ed-console-rule'
+                                                    ? 'bg-white/60'
+                                                    : 'bg-white/15'
                                             }`}
                                             style={{
                                                 height: isPlaying ? `${Math.min(100, height * (isActive ? 1.25 : 0.85))}%` : `${height}%`,
@@ -275,15 +242,15 @@ export function AudioArchiveSection() {
                                     );
                                 })}
                             </div>
-                            <div className="mt-2 flex items-center justify-between font-mono text-xs tabular-nums text-ed-console-muted">
-                                <span>Timestamp match</span>
-                                <span className="text-ed-console-accent">{clip.time}</span>
+                            <div className="mt-2 flex items-center justify-between font-mono text-[0.7rem] tabular-nums text-ed-console-muted">
+                                <span>Timestamp Match</span>
+                                <span className="font-semibold text-white">{clip.time}</span>
                             </div>
                         </div>
                     </div>
 
                     {/* Clip Selector List */}
-                    <div className="divide-y divide-ed-rule">
+                    <div className="space-y-1 p-2 bg-ed-surface/40">
                         {filteredClips.map((item, itemIndex) => (
                             <button
                                 key={item.id}
@@ -293,24 +260,24 @@ export function AudioArchiveSection() {
                                     setIsPlaying(true);
                                 }}
                                 aria-pressed={itemIndex === selected}
-                                className={`grid min-h-20 w-full grid-cols-[3.25rem_1fr_auto] items-center gap-3 border-l-2 px-4 py-3 text-left transition-colors sm:px-5 ${
+                                className={`grid w-full grid-cols-[2.75rem_1fr_auto] items-center gap-3 rounded-xl border p-2.5 text-left transition-all ${
                                     itemIndex === selected
-                                        ? 'border-ed-accent bg-ed-accent/8 text-ed-fg'
-                                        : 'border-transparent bg-ed-surface text-ed-fg-muted hover:bg-ed-bg hover:text-ed-fg'
+                                        ? 'border-ed-accent/50 bg-ed-accent/10 text-ed-fg shadow-sm shadow-ed-accent/20'
+                                        : 'border-transparent text-ed-fg-muted hover:border-ed-rule hover:bg-ed-surface/50 hover:text-ed-fg'
                                 }`}
                             >
-                                <span className="relative aspect-square overflow-hidden rounded-none border border-ed-rule bg-ed-bg">
+                                <span className="relative aspect-square overflow-hidden rounded-lg border border-ed-rule bg-ed-bg">
                                     <Image src={item.thumbnail} alt="" fill quality={45} sizes="52px" className="object-cover" />
                                 </span>
                                 <span className="min-w-0">
-                                    <span className="block font-mono text-[0.64rem] font-semibold uppercase tracking-[0.13em] text-ed-accent">
+                                    <span className="block font-mono text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
                                         [{item.catalogNo}] {item.label}
                                     </span>
-                                    <span className="mt-1 block truncate text-sm font-medium text-current">
+                                    <span className="mt-0.5 block truncate font-sans text-xs font-semibold text-current">
                                         {item.title}
                                     </span>
                                 </span>
-                                <span className="font-mono text-xs tabular-nums text-ed-fg-muted">
+                                <span className="font-mono text-xs tabular-nums text-ed-fg-muted px-2">
                                     {item.time}
                                 </span>
                             </button>
@@ -318,7 +285,7 @@ export function AudioArchiveSection() {
                     </div>
 
                     {/* Footer CTA link */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule px-4 py-3 sm:px-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule px-4 py-3 sm:px-5 bg-ed-surface/50">
                         <CtaLink href={clip.href} label={`Listen to ${clip.label}`} />
                         <span className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
                             80+ recordings available

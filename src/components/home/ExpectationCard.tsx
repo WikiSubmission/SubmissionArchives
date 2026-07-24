@@ -11,21 +11,21 @@ type ExpectationCardProps = {
  */
 export function ExpectationCard({ index, title, body }: ExpectationCardProps) {
     return (
-        <div className="group -mx-3 grid grid-cols-[2.6rem_1fr] gap-3 rounded-none px-3 py-5 transition-colors duration-200 sm:py-6 hover:bg-ed-surface">
-            <span
-                className="pt-1 font-mono text-[0.68rem] font-semibold tabular-nums text-ed-accent transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5"
-                aria-hidden="true"
-            >
-                {index ? `[${index}]` : '[•]'}
-            </span>
-            <div>
-                <h4 className="font-display text-[1.05rem] font-medium leading-6 text-ed-fg transition-colors duration-200 group-hover:text-ed-accent">
+        <div className="group rounded-xl border border-ed-rule/60 bg-ed-surface/30 p-4 sm:p-5 transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface/70 hover:shadow-md backdrop-blur-sm">
+            <div className="flex items-center gap-2">
+                <span
+                    className="inline-flex items-center rounded-full border border-ed-rule bg-ed-surface/60 px-2.5 py-0.5 font-mono text-[0.68rem] font-semibold text-ed-fg-muted transition-colors group-hover:border-ed-fg-muted/40 group-hover:text-ed-fg"
+                    aria-hidden="true"
+                >
+                    {index ? index : '•'}
+                </span>
+                <h4 className="font-sans text-[0.98rem] font-semibold leading-snug text-ed-fg">
                     {title}
                 </h4>
-                <p className="mt-2 text-[0.82rem] leading-6 text-ed-fg-muted">
-                    {body}
-                </p>
             </div>
+            <p className="mt-2.5 text-[0.84rem] leading-6 text-ed-fg-muted">
+                {body}
+            </p>
         </div>
     );
 }

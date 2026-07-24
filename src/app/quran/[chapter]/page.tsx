@@ -15,10 +15,6 @@ export type QuranVerse = {
     english: string;
     subtitle?: string;
     footnote?: string;
-    editions?: {
-        '1989'?: { english: string; subtitle?: string; footnote?: string; pdfPage?: number; printedPage?: number };
-        '1981'?: { english: string; subtitle?: string; footnote?: string; pdfPage?: number; printedPage?: number };
-    };
 };
 
 export type QuranChapter = {
@@ -31,10 +27,14 @@ export type QuranChapter = {
     verses: QuranVerse[];
 };
 
-// Module-level singleton cache: QURAN_CHAPTERS.json is ~7.5MB and static for the
-// life of the process. Parsing it once (rather than per-render via React's
-// cache(), which only dedupes within a single render) keeps build and any
-// on-demand render cheap.
+export type QuranChapterSummary = {
+    chapterNumber: number;
+    titleEnglish: string;
+    titleTransliterated: string;
+    titleArabic: string;
+    verseCount: number;
+};
+
 let chaptersCache: QuranChapter[] | null = null;
 
 function getChapters(): QuranChapter[] {
@@ -59,9 +59,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const chapter = chapters.find((c) => c.chapterNumber === Number(chapterParam));
     if (!chapter) return { title: 'Sura Not Found' };
 
-    const description = `Sura ${chapter.chapterNumber}, ${chapter.titleEnglish} (${chapter.titleTransliterated}): ${chapter.verseCount} verses, with English translation, footnotes, and subtitles.`;
+    const description = `Sura ${chapter.chapterNumber}, ${chapter.titleEnglish} (${chapter.titleTransliterated}): ${chapter.verseCount} verses, with English translation, footnotes, and subtitles by Dr. Rashad Khalifa (1992 Edition).`;
     return {
-        title: `${chapter.chapterNumber}. ${chapter.titleEnglish}`,
+        title: `${chapter.chapterNumber}. ${chapter.titleEnglish} | Submission Archives`,
         description,
     };
 }
@@ -77,9 +77,18 @@ export default async function QuranChapterPage({ params }: Props) {
     const prevChapter = chapters.find((c) => c.chapterNumber === chapterNumber - 1);
     const nextChapter = chapters.find((c) => c.chapterNumber === chapterNumber + 1);
 
+    const allChapterSummaries: QuranChapterSummary[] = chapters.map((c) => ({
+        chapterNumber: c.chapterNumber,
+        titleEnglish: c.titleEnglish,
+        titleTransliterated: c.titleTransliterated,
+        titleArabic: c.titleArabic,
+        verseCount: c.verseCount,
+    }));
+
     return (
         <QuranChapterClientWrapper
             chapter={chapter}
+            allChapters={allChapterSummaries}
             prev={prevChapter ? { chapterNumber: prevChapter.chapterNumber, titleEnglish: prevChapter.titleEnglish } : undefined}
             next={nextChapter ? { chapterNumber: nextChapter.chapterNumber, titleEnglish: nextChapter.titleEnglish } : undefined}
         />

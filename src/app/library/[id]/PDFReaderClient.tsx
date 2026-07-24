@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight, FileText, Minus, Plus } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, ExternalLink, FileText, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { Document, Page, pdfjs } from 'react-pdf';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 import type { PageCallback } from 'react-pdf/dist/shared/types.js';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
+import { IconBadge, chromeButtonClassLg, dockPillClass, toolbarButtonClass } from '@/components/home/WidgetAccents';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 
@@ -198,29 +199,138 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
         setPageNumber(Math.min(Math.max(1, next), numPages));
     };
 
+    // Built once and rendered twice below: inline in the header on desktop,
+    // and as a floating dock bar on mobile, so the two never drift apart.
+    const toolbar = (
+        <>
+            <div className="flex items-center gap-0.5">
+                <button
+                    type="button"
+                    onClick={() => setZoom((z) => Math.max(0.6, z - 0.1))}
+                    className={toolbarButtonClass}
+                    title="Zoom out"
+                    aria-label="Zoom out"
+                >
+                    <Minus className="h-4 w-4" />
+                </button>
+                <span className="w-11 text-center text-xs text-ed-fg-muted tabular-nums">{Math.round(zoom * 100)}%</span>
+                <button
+                    type="button"
+                    onClick={() => setZoom((z) => Math.min(2, z + 0.1))}
+                    className={toolbarButtonClass}
+                    title="Zoom in"
+                    aria-label="Zoom in"
+                >
+                    <Plus className="h-4 w-4" />
+                </button>
+            </div>
+
+            <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
+
+            <div className="flex items-center gap-0.5">
+                <button
+                    type="button"
+                    onClick={() => goToPage(pageNumber - 1)}
+                    disabled={pageNumber <= 1}
+                    className={toolbarButtonClass}
+                    title="Previous page"
+                    aria-label="Previous page"
+                >
+                    <ChevronLeft className="h-5 w-5" />
+                </button>
+                <span aria-live="polite" className={dockPillClass}>
+                    {pageNumber} / {numPages ?? '…'}
+                </span>
+                <button
+                    type="button"
+                    onClick={() => goToPage(pageNumber + 1)}
+                    disabled={!numPages || pageNumber >= numPages}
+                    className={toolbarButtonClass}
+                    title="Next page"
+                    aria-label="Next page"
+                >
+                    <ChevronRight className="h-5 w-5" />
+                </button>
+            </div>
+
+            {(prevId || nextId) && (
+                <>
+                    <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
+                    <div className="flex items-center gap-0.5">
+                        {prevId ? (
+                            <Link
+                                href={`/library/${prevId}`}
+                                className={toolbarButtonClass}
+                                title="Previous document"
+                                aria-label="Previous document"
+                            >
+                                <ChevronsLeft className="h-4 w-4" />
+                            </Link>
+                        ) : (
+                            <div className="min-h-11 min-w-11" />
+                        )}
+                        {nextId ? (
+                            <Link
+                                href={`/library/${nextId}`}
+                                className={toolbarButtonClass}
+                                title="Next document"
+                                aria-label="Next document"
+                            >
+                                <ChevronsRight className="h-4 w-4" />
+                            </Link>
+                        ) : (
+                            <div className="min-h-11 min-w-11" />
+                        )}
+                    </div>
+                </>
+            )}
+
+            <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
+
+            <Link
+                href={pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={toolbarButtonClass}
+                title="View original PDF"
+                aria-label="View original PDF"
+            >
+                <ExternalLink className="h-4 w-4" />
+            </Link>
+        </>
+    );
+
     return (
         <div className="relative flex h-full flex-col overflow-hidden bg-ed-bg text-ed-fg">
-            <header className="relative z-10 flex h-14 shrink-0 items-center justify-between border-b border-ed-rule bg-ed-surface px-4 sm:pr-[500px]">
-                <div className="flex min-w-0 items-center gap-4">
+            <header className="relative z-10 flex h-14 shrink-0 items-center gap-3 border-b border-ed-rule bg-ed-surface/90 backdrop-blur-xl px-3 sm:px-4">
+                <div className="flex min-w-0 flex-1 items-center gap-3">
                     <Link
                         href={backHref}
-                        className="-mx-1 flex min-h-11 items-center px-1 text-ed-fg-muted transition-colors hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                        className={chromeButtonClassLg}
                         title="Back to Search"
+                        aria-label="Back to search"
                     >
                         <ChevronLeft className="h-5 w-5" />
-                        <span className="ml-1 text-sm font-medium">Back</span>
+                        <span className="ml-1 hidden text-sm font-medium sm:inline">Back</span>
                     </Link>
 
-                    <div className="h-4 w-px bg-ed-rule" />
+                    <div className="hidden h-4 w-px bg-ed-rule sm:block" />
 
                     <h1 className="flex min-w-0 items-center gap-2 truncate text-sm font-semibold">
-                        <FileText className="h-4 w-4 shrink-0 text-ed-accent" />
+                        <IconBadge size="sm">
+                            <FileText className="h-3.5 w-3.5" />
+                        </IconBadge>
                         <span className="truncate">{title}</span>
                     </h1>
                 </div>
+
+                {/* Toolbar: inline on desktop; mirrored as a floating dock below on mobile */}
+                <div className="hidden shrink-0 items-center gap-0.5 rounded-2xl border border-ed-rule bg-ed-surface/70 p-1 shadow-sm sm:flex">
+                    {toolbar}
+                </div>
             </header>
 
-            <div ref={containerRef} className="min-h-0 flex-1 overflow-auto bg-ed-viewer-bg py-6">
+            <div ref={containerRef} className="min-h-0 flex-1 overflow-auto overscroll-contain bg-ed-viewer-bg px-2 py-4 pb-28 sm:px-0 sm:py-6 sm:pb-6">
                 <div className="flex justify-center">
                     <Document
                         file={pdfUrl}
@@ -241,88 +351,11 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                 </div>
             </div>
 
-            <div className="z-20 flex h-[calc(3.5rem+env(safe-area-inset-bottom))] shrink-0 items-center gap-2 overflow-x-auto border-t border-ed-rule bg-ed-surface px-2 pb-[env(safe-area-inset-bottom)] scrollbar-none sm:absolute sm:right-0 sm:top-0 sm:h-14 sm:border-t-0 sm:bg-transparent sm:px-4 sm:pb-0">
-                <div className="flex items-center gap-1 border-r border-ed-rule pr-3">
-                    <button
-                        type="button"
-                        onClick={() => setZoom((z) => Math.max(0.6, z - 0.1))}
-                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                        title="Zoom out"
-                        aria-label="Zoom out"
-                    >
-                        <Minus className="h-4 w-4" />
-                    </button>
-                    <span className="w-10 text-center text-xs text-ed-fg-muted tabular-nums">{Math.round(zoom * 100)}%</span>
-                    <button
-                        type="button"
-                        onClick={() => setZoom((z) => Math.min(2, z + 0.1))}
-                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                        title="Zoom in"
-                        aria-label="Zoom in"
-                    >
-                        <Plus className="h-4 w-4" />
-                    </button>
+            {/* Floating dock toolbar — mobile only. Mirrors the desktop header toolbar. */}
+            <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] sm:hidden">
+                <div className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-2xl border border-ed-rule bg-ed-surface/90 p-1 shadow-2xl shadow-ed-accent/10 backdrop-blur-xl">
+                    {toolbar}
                 </div>
-
-                <div className="flex items-center gap-1 border-r border-ed-rule pr-3">
-                    <button
-                        type="button"
-                        onClick={() => goToPage(pageNumber - 1)}
-                        disabled={pageNumber <= 1}
-                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent disabled:opacity-30"
-                        title="Previous page"
-                        aria-label="Previous page"
-                    >
-                        <ChevronLeft className="h-5 w-5" />
-                    </button>
-                    <span aria-live="polite" className="text-xs text-ed-fg-muted tabular-nums">
-                        {pageNumber} / {numPages ?? '…'}
-                    </span>
-                    <button
-                        type="button"
-                        onClick={() => goToPage(pageNumber + 1)}
-                        disabled={!numPages || pageNumber >= numPages}
-                        className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent disabled:opacity-30"
-                        title="Next page"
-                        aria-label="Next page"
-                    >
-                        <ChevronRight className="h-5 w-5" />
-                    </button>
-                </div>
-
-                {(prevId || nextId) && (
-                    <div className="mr-1 flex items-center gap-1 border-r border-ed-rule pr-3">
-                        {prevId ? (
-                            <Link
-                                href={`/library/${prevId}`}
-                                className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                                title="Previous document"
-                                aria-label="Previous document"
-                            >
-                                <ChevronLeft className="h-5 w-5" />
-                            </Link>
-                        ) : (
-                            <div className="w-11" />
-                        )}
-
-                        {nextId ? (
-                            <Link
-                                href={`/library/${nextId}`}
-                                className="flex min-h-11 min-w-11 items-center justify-center rounded-sm text-ed-fg-muted transition-colors hover:bg-ed-bg hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                                title="Next document"
-                                aria-label="Next document"
-                            >
-                                <ChevronRight className="h-5 w-5" />
-                            </Link>
-                        ) : (
-                            <div className="w-11" />
-                        )}
-                    </div>
-                )}
-
-                <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" className="-mx-1 flex min-h-11 items-center px-3 text-xs text-ed-fg-muted hover:text-ed-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
-                    View Original PDF
-                </Link>
             </div>
         </div>
     );

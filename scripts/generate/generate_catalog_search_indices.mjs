@@ -276,14 +276,23 @@ function getThumbnailLink(thumbnailDir, publicBase, pdfFilename) {
   return undefined;
 }
 
-function getNewsletterThumbnailLink(year, monthNumber, monthName) {
+// Special editions (e.g. the May 1988 Bulletin, the January 1990 Special
+// Bonus Issue) share their year/month/monthName with a regular issue but have
+// no scanned PDF of their own. Deriving a filename from year/month/monthName
+// for them would resolve to the regular issue's file, so only regular
+// editions get a filesystem-derived link.
+const REGULAR_EDITION_TYPES = new Set(['regular_issue', 'regular']);
+
+function getNewsletterThumbnailLink(year, monthNumber, monthName, editionType) {
+  if (editionType && !REGULAR_EDITION_TYPES.has(editionType)) return undefined;
   const thumbnailName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.jpg`;
   return fs.existsSync(path.join(NEWSLETTER_THUMB_DIR, thumbnailName))
     ? `/content/written/newsletters/thumbnails/${thumbnailName}`
     : undefined;
 }
 
-function getNewsletterPdfLink(year, monthNumber, monthName) {
+function getNewsletterPdfLink(year, monthNumber, monthName, editionType) {
+  if (editionType && !REGULAR_EDITION_TYPES.has(editionType)) return undefined;
   const pdfName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.pdf`;
   return fs.existsSync(path.join(NEWSLETTER_PDF_DIR, pdfName))
     ? `/content/written/newsletters/pdfs/${pdfName}`
@@ -575,8 +584,8 @@ function buildNewsletterIndex() {
       fullDate: `${issue.year}-${monthStr}-01`,
       year: issue.year,
       filename: issue.source_file,
-      pdfLink: getNewsletterPdfLink(issue.year, issue.month_number, issue.month_name) || '',
-      thumbnailOverride: getNewsletterThumbnailLink(issue.year, issue.month_number, issue.month_name),
+      pdfLink: getNewsletterPdfLink(issue.year, issue.month_number, issue.month_name, issue.edition_type) || '',
+      thumbnailOverride: getNewsletterThumbnailLink(issue.year, issue.month_number, issue.month_name, issue.edition_type),
       aliases: [id],
       transcriptStatus: segments.length > 0 ? 'available' : 'missing',
       segments: segments,

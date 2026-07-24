@@ -4,6 +4,7 @@ import { BookMarked } from 'lucide-react';
 import { useState } from 'react';
 
 import { CtaLink } from './SectionCta';
+import { IconBadge, GlassSheen, activeChipClass, inactiveChipClass, widgetCardClass } from './WidgetAccents';
 
 const SAMPLE_VERSES = [
     {
@@ -35,43 +36,36 @@ export function QuranEditionsVisual() {
     const activeVerse = SAMPLE_VERSES[selectedVerseIndex];
 
     return (
-        <div className="lift-card relative overflow-hidden rounded-none border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-md)]">
-            <span
-                aria-hidden="true"
-                className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-transparent via-ed-accent/60 to-transparent"
-            />
-
+        <div className={widgetCardClass}>
+            <GlassSheen />
             {/* Header bar */}
-            <div className="flex min-h-14 items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-5">
+            <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-2.5 sm:px-5 bg-ed-surface/50">
                 <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-none border border-ed-rule bg-ed-bg text-ed-accent">
-                        <BookMarked className="h-4 w-4" aria-hidden="true" />
-                    </span>
+                    <IconBadge>
+                        <BookMarked className="h-3.5 w-3.5" aria-hidden="true" />
+                    </IconBadge>
                     <div>
-                        <p className="text-[0.66rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                            Verse study
+                        <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                            Verse Study · {activeVerse.sura}
                         </p>
-                        <p className="mt-1 text-sm text-ed-fg">{activeVerse.sura}</p>
                     </div>
                 </div>
-                <span className="font-mono text-xs font-semibold tabular-nums text-ed-accent">
+                <span className="rounded-full border border-ed-rule bg-ed-surface/60 px-3 py-0.5 font-mono text-xs font-semibold tabular-nums text-ed-fg">
                     [{activeVerse.ref}]
                 </span>
             </div>
 
-            <div className="px-4 py-6 sm:px-6 sm:py-8">
+            <div className="px-4 py-5 sm:px-6 sm:py-6">
                 {/* Verse Selector Buttons */}
-                <div className="flex flex-wrap items-center justify-between gap-3 pb-2">
-                    <div className="flex flex-wrap items-center gap-2">
+                <div className="flex flex-wrap items-center justify-between gap-3 pb-3">
+                    <div className="flex flex-wrap items-center gap-1.5">
                         {SAMPLE_VERSES.map((v, index) => (
                             <button
                                 key={v.ref}
                                 type="button"
                                 onClick={() => setSelectedVerseIndex(index)}
-                                className={`inline-flex min-h-8 items-center border px-3 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.08em] transition-colors ${
-                                    index === selectedVerseIndex
-                                        ? 'border-ed-accent bg-ed-accent/12 text-ed-accent'
-                                        : 'border-ed-rule text-ed-fg-muted hover:border-ed-accent/50 hover:text-ed-fg'
+                                className={`inline-flex min-h-7 items-center rounded-full border px-3 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
+                                    index === selectedVerseIndex ? activeChipClass : inactiveChipClass
                                 }`}
                             >
                                 {v.ref}
@@ -84,10 +78,10 @@ export function QuranEditionsVisual() {
                                 key={ed}
                                 type="button"
                                 onClick={() => setActiveEditionIndex(index)}
-                                className={`inline-flex min-h-7 items-center border px-2.5 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.06em] transition-colors ${
+                                className={`inline-flex min-h-6 items-center rounded-full border px-2.5 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.06em] transition-all duration-200 ${
                                     index === activeEditionIndex
-                                        ? 'border-ed-accent/40 bg-ed-accent/10 text-ed-accent'
-                                        : 'border-ed-rule text-ed-fg-muted hover:text-ed-fg'
+                                        ? 'border-ed-accent/40 bg-ed-accent/10 text-ed-accent font-bold'
+                                        : 'border-ed-rule/60 text-ed-fg-muted hover:text-ed-fg'
                                 }`}
                             >
                                 {ed}
@@ -97,47 +91,43 @@ export function QuranEditionsVisual() {
                 </div>
 
                 {/* Verse Display Panel */}
-                <div className="relative mt-4 overflow-hidden rounded-none border border-ed-rule bg-ed-bg px-5 py-7 sm:px-7">
-                    <div
-                        aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_130%_at_50%_0%,color-mix(in_oklch,var(--ed-gold)_12%,transparent),transparent_60%)]"
-                    />
+                <div className="relative mt-2 overflow-hidden rounded-xl border border-ed-rule bg-ed-bg/90 p-5 sm:p-6 shadow-inner">
                     <p
                         dir="rtl"
                         lang="ar"
                         className="relative text-center font-arabic text-[clamp(1.7rem,3.8vw,2.4rem)] leading-[2] text-ed-fg"
                     >
-                        <span aria-hidden="true" className="mx-2 text-[0.6em] text-ed-accent">﴿</span>
+                        <span aria-hidden="true" className="mx-2 text-[0.6em] text-ed-fg-muted">﴿</span>
                         {activeVerse.arabic}
-                        <span aria-hidden="true" className="mx-2 text-[0.6em] text-ed-accent">﴾</span>
+                        <span aria-hidden="true" className="mx-2 text-[0.6em] text-ed-fg-muted">﴾</span>
                     </p>
 
-                    <div className="relative mt-6 flex gap-4 border-t border-ed-rule/60 pt-5">
+                    <div className="relative mt-5 flex gap-4 border-t border-ed-rule/60 pt-4">
                         <span
                             aria-hidden="true"
-                            className="w-[3px] shrink-0 rounded-none bg-gradient-to-b from-ed-accent to-ed-accent-soft"
+                            className="w-1 shrink-0 rounded-full bg-ed-fg"
                         />
                         <div>
-                            <p className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-ed-accent">
+                            <p className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
                                 Translation ({activeVerse.editions[activeEditionIndex]})
                             </p>
-                            <p className="mt-1 font-display text-base leading-8 text-ed-fg sm:text-lg">
+                            <p className="mt-1 font-sans text-sm font-semibold leading-7 text-ed-fg sm:text-base">
                                 {activeVerse.translation}
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <p className="mt-5 max-w-[52ch] text-xs leading-6 text-ed-fg-muted">
-                    Every verse carries its Arabic text, three English editions, and the subtitles and footnotes recorded by Dr. Rashad Khalifa.
+                <p className="mt-4 max-w-[52ch] font-sans text-xs leading-5 text-ed-fg-muted">
+                    Every verse carries its Arabic text, English translation, subtitles, and footnotes recorded by Dr. Rashad Khalifa.
                 </p>
             </div>
 
             {/* Footer bar */}
-            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule px-4 py-3 sm:px-5">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule px-4 py-3 sm:px-5 bg-ed-surface/50">
                 <CtaLink href={`/quran/${activeVerse.ref.split(':')[0]}`} label={`Read ${activeVerse.sura}`} />
                 <span className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
-                    114 suras · 3 editions
+                    114 suras
                 </span>
             </div>
         </div>

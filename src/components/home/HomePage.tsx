@@ -127,36 +127,33 @@ export default function HomePage() {
                 </div>
 
                 {/* Luminous Closing CTA Banner */}
-                <Reveal className="mt-24 lg:mt-32">
+                <Reveal className="mt-20 lg:mt-28">
                     <section
                         aria-labelledby="closing-cta-title"
-                        className="relative overflow-hidden rounded-none border border-ed-rule bg-[linear-gradient(135deg,var(--ed-accent-strong),var(--ed-accent)_55%,var(--ed-accent-soft))] px-6 py-14 text-center shadow-[var(--ed-shadow-lg)] sm:px-12 lg:py-20"
+                        className="relative overflow-hidden rounded-2xl border border-ed-rule-strong bg-ed-fg px-6 py-14 text-center shadow-2xl sm:px-12 lg:py-18"
                     >
                         <div
                             aria-hidden="true"
-                            className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_80%_at_50%_0%,oklch(1_0_0/0.16),transparent_65%)]"
-                        />
-                        <div
-                            aria-hidden="true"
-                            className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
-                            style={{ backgroundImage: 'var(--ed-grain)' }}
+                            className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_80%_at_50%_0%,rgba(255,255,255,0.08),transparent_65%)]"
                         />
                         <div className="relative">
-                            <p className="font-ui text-[0.72rem] font-bold uppercase tracking-[0.2em] text-ed-bg/80">
-                                Begin anywhere
-                            </p>
+                            <div className="mx-auto w-fit">
+                                <span className="inline-block rounded-full border border-ed-bg/20 bg-ed-bg/10 px-3.5 py-1 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ed-bg/90 backdrop-blur-md">
+                                    Begin Anywhere
+                                </span>
+                            </div>
                             <h2
                                 id="closing-cta-title"
-                                className="mx-auto mt-5 max-w-[16ch] font-display text-[clamp(2.5rem,6vw,4.5rem)] font-medium leading-[0.95] tracking-[-0.03em] text-ed-bg"
+                                className="mx-auto mt-6 max-w-[18ch] font-sans text-[clamp(2.4rem,5.5vw,4.2rem)] font-extrabold leading-[1] tracking-tight text-ed-bg"
                             >
                                 Start with a single search.
                             </h2>
-                            <p className="mx-auto mt-5 max-w-[46ch] text-[15px] leading-7 text-ed-bg/85">
+                            <p className="mx-auto mt-4 max-w-[46ch] font-sans text-[0.98rem] leading-7 text-ed-bg/85">
                                 One query reaches every recording, transcript, newsletter, book, and verse in the collection.
                             </p>
                             <Link
                                 href="/search"
-                                className="group mt-9 inline-flex min-h-12 items-center gap-2.5 rounded-none bg-ed-bg px-7 font-ui text-sm font-semibold text-ed-fg shadow-[var(--ed-shadow-md)] transition-all duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 active:translate-y-0 hover:shadow-[var(--ed-shadow-lg)]"
+                                className="group mt-8 inline-flex min-h-12 items-center gap-2.5 rounded-full bg-ed-bg px-8 font-sans text-sm font-semibold text-ed-fg shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
                             >
                                 Search the archive
                                 <ArrowRight

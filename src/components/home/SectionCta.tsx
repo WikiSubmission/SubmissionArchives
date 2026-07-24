@@ -8,16 +8,9 @@ import { ArrowRight } from 'lucide-react';
  */
 export function CtaLink({ href, label }: { href: string; label: string }) {
     return (
-        <Link href={href} className="group inline-flex min-h-11 items-center gap-3">
-            <span className="link-sweep text-sm font-semibold text-ed-fg transition-colors group-hover:text-ed-accent">
-                {label}
-            </span>
-            <span
-                aria-hidden="true"
-                className="grid h-8 w-8 place-items-center rounded-none border border-ed-rule text-ed-fg transition-all duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105 group-hover:border-ed-accent group-hover:bg-ed-accent group-hover:text-ed-bg"
-            >
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </span>
+        <Link href={href} className="group inline-flex min-h-10 items-center gap-2.5 rounded-full border border-ed-rule bg-ed-surface/60 px-4 py-2 text-xs font-mono font-semibold uppercase tracking-wider text-ed-fg backdrop-blur-md transition-all duration-200 hover:border-ed-fg hover:bg-ed-fg hover:text-ed-bg shadow-sm active:scale-95">
+            <span>{label}</span>
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
         </Link>
     );
 }

@@ -123,7 +123,7 @@ export default function WrittenArchivePage() {
                                             src={issue.thumbnailOverride}
                                             alt={`Cover of ${issue.title}`}
                                             fill
-                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                            className="object-cover object-right transition-transform duration-300 group-hover:scale-105"
                                             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                                         />
                                     ) : (

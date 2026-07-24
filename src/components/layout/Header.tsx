@@ -45,75 +45,77 @@ export default function Header() {
     }, [isMenuOpen]);
 
     return (
-        <header className={`sticky top-0 z-50 border-b border-ed-rule text-ed-fg ${isMenuOpen ? 'bg-ed-bg' : 'bg-ed-bg/96 supports-[backdrop-filter]:bg-ed-bg/90 supports-[backdrop-filter]:backdrop-blur-md'}`}>
-            <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
-                <div className="grid min-h-[4.5rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
-                    <Link href="/" className="group inline-flex min-h-11 min-w-0 items-center gap-3" aria-label="Submission Archives home">
-                        <span className="relative flex shrink-0 items-center justify-center">
+        <header className="sticky top-0 z-50 text-ed-fg px-3 sm:px-6 py-2.5">
+            <div className={`mx-auto max-w-5xl rounded-3xl sm:rounded-full border border-ed-rule-strong/50 dark:border-white/15 backdrop-blur-2xl shadow-[0_10px_30px_-5px_rgba(0,0,0,0.08)] dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.4)] transition-all duration-300 ${isMenuOpen ? 'bg-ed-bg' : 'bg-ed-surface/90 dark:bg-ed-surface/60 hover:border-ed-rule-strong dark:hover:border-white/25'}`}>
+                <div className="px-4 sm:px-6">
+                    <div className="grid min-h-[3.75rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+                        <Link href="/" className="group inline-flex min-h-11 min-w-0 items-center gap-3" aria-label="Submission Archives home">
                             <Image
                                 src="/assets/brand/submission-archives-mark.png"
                                 alt=""
-                                width={44}
-                                height={44}
+                                width={36}
+                                height={36}
                                 priority
                                 loading="eager"
-                                className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-[1.08]"
+                                className="h-8 w-8 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
                             />
-                        </span>
-                        <span className="min-w-0 leading-none flex flex-col items-start">
-                            <span className="block truncate font-sans text-[0.85rem] font-black uppercase tracking-[0.08em] text-ed-fg">Submission</span>
-                            <span className="mt-0.5 block truncate bg-black/10 px-1 py-0.5 font-serif text-[1.19rem] font-medium italic uppercase tracking-tight text-ed-fg-muted transition-colors group-hover:text-ed-accent dark:bg-white/10">Archives</span>
-                        </span>
-                    </Link>
+                            <span className="min-w-0 leading-none flex flex-col items-start">
+                                <span className="block truncate font-sans text-[0.88rem] font-extrabold uppercase tracking-[0.1em] text-ed-fg group-hover:text-ed-accent transition-colors">Submission</span>
+                                <span className="mt-0.5 block truncate font-mono text-[0.7rem] font-medium uppercase tracking-[0.15em] text-ed-fg-muted">Archives</span>
+                            </span>
+                        </Link>
 
-                    <nav aria-label="Primary" className="hidden items-stretch lg:flex">
-                        {PRIMARY_NAV.map((item) => {
-                            const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
-                            return (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    aria-current={isActive ? 'page' : undefined}
-                                    className={`relative inline-flex min-h-11 items-center px-3 text-[0.72rem] font-semibold uppercase tracking-[0.1em] transition-colors ${isActive ? 'text-ed-fg' : 'text-ed-fg-muted hover:text-ed-fg'
+                        <nav aria-label="Primary" className="hidden items-center rounded-full border border-ed-rule/80 dark:border-white/10 bg-black/5 dark:bg-black/40 p-1.5 backdrop-blur-xl shadow-inner lg:flex gap-1">
+                            {PRIMARY_NAV.map((item) => {
+                                const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        aria-current={isActive ? 'page' : undefined}
+                                        className={`relative inline-flex min-h-8 items-center rounded-full px-4 text-[0.68rem] font-mono font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
+                                            isActive
+                                                ? 'bg-ed-fg text-ed-bg shadow-md font-bold'
+                                                : 'text-ed-fg-muted hover:bg-black/10 dark:hover:bg-white/10 hover:text-ed-fg'
                                         }`}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                );
+                            })}
+                        </nav>
+
+                        <div className="flex items-center justify-end gap-2">
+                            <div className="hidden items-center gap-1 rounded-full border border-ed-rule/80 dark:border-white/10 bg-black/5 dark:bg-black/40 p-1 backdrop-blur-xl shadow-inner lg:flex">
+                                <HeaderIconButton
+                                    label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
+                                    onClick={toggleDarkMode}
+                                    pressed={darkMode}
                                 >
-                                    {item.name}
-                                    <span className={`absolute inset-x-3 bottom-0 h-px bg-ed-accent transition-transform ${isActive ? 'scale-x-100' : 'scale-x-0'}`} />
-                                </Link>
-                            );
-                        })}
-                    </nav>
+                                    {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                                </HeaderIconButton>
+                                <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
+                                <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
+                            </div>
 
-                    <div className="flex items-center justify-end gap-2">
-                        <div className="hidden items-center gap-1 lg:flex">
-                            <HeaderIconButton
-                                label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
-                                onClick={toggleDarkMode}
-                                pressed={darkMode}
+                            <button
+                                ref={menuButtonRef}
+                                type="button"
+                                onClick={() => setIsMenuOpen((open) => !open)}
+                                aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                                aria-expanded={isMenuOpen}
+                                aria-controls={menuId}
+                                className="inline-flex min-h-9 min-w-9 rounded-full items-center justify-center border border-ed-rule-strong/60 dark:border-white/15 bg-black/5 dark:bg-black/40 text-ed-fg-muted transition-all duration-200 hover:border-ed-fg hover:text-ed-fg backdrop-blur-xl lg:hidden"
                             >
-                                {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                            </HeaderIconButton>
-                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}><Youtube className="h-4 w-4" /></HeaderIconLink>
-                            <HeaderIconLink label="Discord" href={DISCORD_URL}><MessageCircle className="h-4 w-4" /></HeaderIconLink>
+                                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                            </button>
                         </div>
-
-                        <button
-                            ref={menuButtonRef}
-                            type="button"
-                            onClick={() => setIsMenuOpen((open) => !open)}
-                            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-                            aria-expanded={isMenuOpen}
-                            aria-controls={menuId}
-                            className="inline-flex min-h-11 min-w-11 rounded-full items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-fg lg:hidden"
-                        >
-                            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                        </button>
                     </div>
                 </div>
             </div>
 
             <div
-                className={`fixed inset-0 top-[4.5rem] z-50 lg:hidden transition-[visibility] ${isMenuOpen ? 'visible' : 'invisible'}`}
+                className={`fixed inset-x-0 bottom-0 top-[4.5rem] z-50 lg:hidden transition-[visibility] ${isMenuOpen ? 'visible' : 'invisible'}`}
                 style={{ transitionDuration: isMenuOpen ? '0ms' : '350ms' }}
             >
                 <button
@@ -185,7 +187,7 @@ function HeaderIconButton({ children, label, onClick, pressed }: { children: Rea
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="inline-flex min-h-11 min-w-11 rounded-full items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-ed-fg-muted transition-all duration-200 hover:bg-black/10 dark:hover:bg-white/10 hover:text-ed-fg"
         >
             {children}
         </button>
@@ -199,7 +201,7 @@ function HeaderIconLink({ children, label, href }: { children: ReactNode; label:
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${label} (opens in a new tab)`}
-            className="inline-flex min-h-11 min-w-11 rounded-full items-center justify-center border border-ed-rule text-ed-fg-muted transition-colors hover:border-ed-accent/50 hover:text-ed-accent"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-ed-fg-muted transition-all duration-200 hover:bg-black/10 dark:hover:bg-white/10 hover:text-ed-fg"
         >
             {children}
         </a>

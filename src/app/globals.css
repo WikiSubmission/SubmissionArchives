@@ -11,43 +11,43 @@
 
 :root,
 [data-theme="light"] {
-  /* Surfaces & ink — warm parchment under warm ink */
-  --ed-bg: oklch(0.938 0.021 80);
-  --ed-fg: oklch(0.235 0.014 62);
-  --ed-fg-muted: oklch(0.475 0.026 66);
-  --ed-rule: color-mix(in oklch, var(--ed-fg) 16%, transparent);
-  --ed-rule-strong: color-mix(in oklch, var(--ed-fg) 30%, transparent);
-  --ed-surface: oklch(0.963 0.015 81);
-  --ed-surface-strong: oklch(0.982 0.01 82);
+  /* Surfaces & ink — clean monochrome light */
+  --ed-bg: #fafafa;
+  --ed-fg: #0a0a0a;
+  --ed-fg-muted: #737373;
+  --ed-rule: rgba(0, 0, 0, 0.08);
+  --ed-rule-strong: rgba(0, 0, 0, 0.16);
+  --ed-surface: #f5f5f5;
+  --ed-surface-strong: #ebebeb;
 
-  /* Accent — copper amber, with a gold companion for gradient work */
-  --ed-accent: oklch(0.555 0.155 44);
-  --ed-accent-strong: oklch(0.485 0.16 40);
-  --ed-accent-soft: oklch(0.7 0.12 50);
-  --ed-gold: oklch(0.74 0.115 78);
+  /* Accent — monochrome: accent = foreground */
+  --ed-accent: #171717;
+  --ed-accent-strong: #0a0a0a;
+  --ed-accent-soft: #525252;
+  --ed-gold: #a3a3a3;
 
-  /* Ambient light — the "reading lamp" washes behind the page */
-  --ed-ambient-1: color-mix(in oklch, var(--ed-accent) 13%, transparent);
-  --ed-ambient-2: color-mix(in oklch, var(--ed-gold) 15%, transparent);
-  --ed-ambient-3: color-mix(in oklch, var(--ed-accent-soft) 11%, transparent);
-  --ed-grain-opacity: 0.05;
+  /* Ambient light — nearly invisible neutral washes */
+  --ed-ambient-1: rgba(0, 0, 0, 0.02);
+  --ed-ambient-2: rgba(0, 0, 0, 0.015);
+  --ed-ambient-3: rgba(0, 0, 0, 0.01);
+  --ed-grain-opacity: 0.02;
   --ed-grain-blend: multiply;
 
-  /* Elevation — layered ambient + contact shadows */
-  --ed-shadow: color-mix(in oklch, var(--ed-fg) 8%, transparent);
+  /* Elevation — pure neutral shadows */
+  --ed-shadow: rgba(0, 0, 0, 0.06);
   --ed-shadow-sm:
-    0 1px 2px color-mix(in oklch, var(--ed-fg) 5%, transparent),
-    0 3px 10px -2px color-mix(in oklch, var(--ed-fg) 5%, transparent);
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 3px 10px -2px rgba(0, 0, 0, 0.04);
   --ed-shadow-md:
-    0 2px 6px color-mix(in oklch, var(--ed-fg) 5%, transparent),
-    0 18px 44px -14px color-mix(in oklch, var(--ed-fg) 16%, transparent);
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    0 18px 44px -14px rgba(0, 0, 0, 0.1);
   --ed-shadow-lg:
-    0 4px 14px color-mix(in oklch, var(--ed-fg) 6%, transparent),
-    0 36px 90px -24px color-mix(in oklch, var(--ed-fg) 24%, transparent);
-  --ed-shadow-glow: 0 10px 34px -10px color-mix(in oklch, var(--ed-accent) 45%, transparent);
+    0 4px 14px rgba(0, 0, 0, 0.05),
+    0 36px 90px -24px rgba(0, 0, 0, 0.16);
+  --ed-shadow-glow: 0 10px 34px -10px rgba(0, 0, 0, 0.12);
 
-  /* Viewer + shadcn bridges (unchanged contract) */
-  --ed-viewer-bg: oklch(0.86 0.022 78);
+  /* Viewer + shadcn bridges */
+  --ed-viewer-bg: #f0f0f0;
   --background: var(--ed-bg);
   --foreground: var(--ed-fg);
   --border: var(--ed-rule);
@@ -57,29 +57,29 @@
 
 .dark,
 [data-theme="dark"] {
-  /* Surfaces & ink — deep warm charcoal, luminous cream */
-  --ed-bg: oklch(0.175 0.008 60);
-  --ed-fg: oklch(0.945 0.02 78);
-  --ed-fg-muted: oklch(0.75 0.03 70);
-  --ed-rule: color-mix(in oklch, var(--ed-fg) 14%, transparent);
-  --ed-rule-strong: color-mix(in oklch, var(--ed-fg) 26%, transparent);
-  --ed-surface: oklch(0.22 0.01 62);
-  --ed-surface-strong: oklch(0.26 0.012 64);
+  /* Surfaces & ink — pure monochrome dark */
+  --ed-bg: #0a0a0a;
+  --ed-fg: #fafafa;
+  --ed-fg-muted: #a1a1aa;
+  --ed-rule: rgba(255, 255, 255, 0.08);
+  --ed-rule-strong: rgba(255, 255, 255, 0.16);
+  --ed-surface: #171717;
+  --ed-surface-strong: #262626;
 
-  /* Accent — luminous gold-amber that carries light in the dark */
-  --ed-accent: oklch(0.81 0.115 68);
-  --ed-accent-strong: oklch(0.875 0.1 76);
-  --ed-accent-soft: oklch(0.6 0.13 38);
-  --ed-gold: oklch(0.865 0.1 86);
+  /* Accent — monochrome: accent = foreground (white) */
+  --ed-accent: #fafafa;
+  --ed-accent-strong: #e5e5e5;
+  --ed-accent-soft: #a1a1aa;
+  --ed-gold: #71717a;
 
-  /* Ambient light — stronger, slower-burning in the vault */
-  --ed-ambient-1: color-mix(in oklch, var(--ed-accent) 20%, transparent);
-  --ed-ambient-2: color-mix(in oklch, var(--ed-gold) 13%, transparent);
-  --ed-ambient-3: color-mix(in oklch, var(--ed-accent-soft) 16%, transparent);
-  --ed-grain-opacity: 0.07;
+  /* Ambient light — nearly invisible neutral washes */
+  --ed-ambient-1: rgba(255, 255, 255, 0.015);
+  --ed-ambient-2: rgba(255, 255, 255, 0.01);
+  --ed-ambient-3: rgba(255, 255, 255, 0.008);
+  --ed-grain-opacity: 0.03;
   --ed-grain-blend: overlay;
 
-  /* Elevation — deeper contact shadows + accent halos */
+  /* Elevation — deep neutral shadows */
   --ed-shadow: rgba(0, 0, 0, 0.34);
   --ed-shadow-sm:
     0 1px 2px rgba(0, 0, 0, 0.45),
@@ -90,27 +90,26 @@
   --ed-shadow-lg:
     0 6px 18px rgba(0, 0, 0, 0.42),
     0 40px 100px -24px rgba(0, 0, 0, 0.68);
-  --ed-shadow-glow: 0 10px 40px -8px color-mix(in oklch, var(--ed-accent) 40%, transparent);
+  --ed-shadow-glow: 0 10px 40px -8px rgba(255, 255, 255, 0.06);
 
-  --ed-viewer-bg: oklch(0.18 0.005 70);
+  --ed-viewer-bg: #111111;
 }
 
 /* Shared tokens — identical in both themes */
 :root {
-  /* Console ("device") panels — the dark listening/screening rooms
-     that stay dark in both themes, as a deliberate contrast moment */
-  --ed-console: oklch(0.205 0.009 58);
-  --ed-console-raised: oklch(0.255 0.011 60);
-  --ed-console-fg: oklch(0.94 0.02 78);
-  --ed-console-muted: oklch(0.775 0.028 70);
-  --ed-console-accent: oklch(0.83 0.115 72);
-  --ed-console-rule: color-mix(in oklch, var(--ed-console-fg) 12%, transparent);
+  /* Console ("device") panels — dark listening/screening rooms */
+  --ed-console: #111111;
+  --ed-console-raised: #1a1a1a;
+  --ed-console-fg: #fafafa;
+  --ed-console-muted: #71717a;
+  --ed-console-accent: #e5e5e5;
+  --ed-console-rule: rgba(255, 255, 255, 0.08);
 
-  /* Radii scale — Sharp Architectural Precision */
-  --ed-radius-sm: 0px;
-  --ed-radius-md: 0px;
-  --ed-radius-lg: 0px;
-  --ed-radius-xl: 0px;
+  /* Radii scale — Modern Enterprise Sleek Radii */
+  --ed-radius-sm: 8px;
+  --ed-radius-md: 14px;
+  --ed-radius-lg: 20px;
+  --ed-radius-xl: 28px;
 
   /* Motion scale */
   --dur-fast: 160ms;
@@ -145,13 +144,13 @@
   --color-ed-console-muted: var(--ed-console-muted);
   --color-ed-console-accent: var(--ed-console-accent);
   --color-ed-console-rule: var(--ed-console-rule);
-  --font-sans: var(--font-libre-franklin);
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: var(--font-inter), var(--font-libre-franklin), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
   --font-serif: var(--font-local-superior);
-  --font-display: var(--font-local-superior);
+  --font-display: var(--font-inter), var(--font-local-superior), sans-serif;
   --font-arabic: var(--font-amiri);
-  --font-body: var(--font-libre-franklin);
-  --font-ui: var(--font-libre-franklin);
+  --font-body: var(--font-inter), var(--font-libre-franklin), sans-serif;
+  --font-ui: var(--font-inter), sans-serif;
   --ease-spring-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -168,7 +167,6 @@
 
 html {
   max-width: 100%;
-  overflow-x: clip;
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
   padding-top: env(safe-area-inset-top);
@@ -186,7 +184,6 @@ html {
 body {
   min-height: 100%;
   max-width: 100%;
-  overflow-x: clip;
   background: var(--ed-bg);
   color: var(--ed-fg);
   font-family: var(--font-libre-franklin), ui-sans-serif, system-ui, sans-serif;
@@ -292,27 +289,30 @@ a {
 .archive-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  color: var(--ed-accent);
-  font-family: var(--font-ui), sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  line-height: 1.2;
+  gap: 0.5rem;
+  color: var(--ed-fg-muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1;
   text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--ed-rule);
+  background: color-mix(in oklch, var(--ed-surface) 60%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-/* The small "catalog tick" that introduces every kicker */
 .archive-kicker::before {
   content: "";
-  width: 1.25rem;
-  height: 2px;
-  border-radius: 0px;
-  background: linear-gradient(
-    90deg,
-    var(--ed-accent),
-    color-mix(in oklch, var(--ed-accent) 20%, transparent)
-  );
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--ed-fg);
+  box-shadow: 0 0 8px var(--ed-fg);
 }
 
 /* ==========================================================================
@@ -321,120 +321,156 @@ a {
 
 .archive-button {
   display: inline-flex;
-  min-height: 3rem;
+  min-height: 2.85rem;
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
   border: 1px solid transparent;
-  border-radius: 0px;
-  padding: 0.8rem 1.35rem;
-  font-family: var(--font-ui), sans-serif;
-  font-size: 0.9rem;
-  font-weight: 650;
-  letter-spacing: 0.01em;
+  border-radius: 9999px;
+  padding: 0.7rem 1.4rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1.2;
   transition:
     color var(--dur-fast) var(--ease-spring-out),
     background-color var(--dur-fast) var(--ease-spring-out),
     border-color var(--dur-fast) var(--ease-spring-out),
     box-shadow var(--dur-med) var(--ease-spring-out),
-    transform var(--dur-med) var(--ease-spring-pop);
+    transform var(--dur-fast) var(--ease-spring-out);
 }
 
 .archive-button:hover {
-  transform: translateY(-2px);
+  transform: scale(1.02);
 }
 
 .archive-button:active {
-  transform: translateY(0);
+  transform: scale(0.98);
 }
 
 .archive-button-primary {
   background: var(--ed-fg);
   color: var(--ed-bg);
-  box-shadow: var(--ed-shadow-sm);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .archive-button-primary:hover {
-  background: var(--ed-accent);
-  color: var(--ed-bg);
-  box-shadow: var(--ed-shadow-glow);
+  background: var(--ed-fg);
+  opacity: 0.9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 .archive-button-secondary {
   border-color: var(--ed-rule-strong);
-  background: color-mix(in oklch, var(--ed-surface) 55%, transparent);
+  background: color-mix(in oklch, var(--ed-surface) 60%, transparent);
   color: var(--ed-fg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .archive-button-secondary:hover {
-  border-color: color-mix(in oklch, var(--ed-accent) 60%, var(--ed-rule));
+  border-color: var(--ed-fg);
   background: var(--ed-surface);
-  color: var(--ed-accent);
+  color: var(--ed-fg);
   box-shadow: var(--ed-shadow-sm);
 }
 
 .archive-input {
-  min-height: 3.25rem;
+  min-height: 3rem;
   border: 1px solid var(--ed-rule);
-  border-radius: 0px;
+  border-radius: 14px;
   background: var(--ed-surface);
   color: var(--ed-fg);
-  font-size: 1rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.95rem;
   line-height: 1.4;
+  padding: 0.75rem 1rem;
   transition:
     border-color var(--dur-fast) var(--ease-spring-out),
     box-shadow var(--dur-fast) var(--ease-spring-out);
 }
 
 .archive-input::placeholder {
-  color: color-mix(in oklch, var(--ed-fg-muted) 76%, transparent);
+  color: var(--ed-fg-muted);
 }
 
 .archive-input:focus {
-  border-color: var(--ed-accent);
+  border-color: var(--ed-fg);
   outline: none;
-  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ed-accent) 22%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ed-fg) 20%, transparent);
 }
 
 /* ==========================================================================
-   Surfaces
+   Surfaces & Enterprise Cards
    ========================================================================== */
 
 .soft-shell {
   border: 1px solid var(--ed-rule);
-  border-radius: 0px;
-  background: color-mix(in oklch, var(--ed-surface) 80%, var(--ed-bg));
+  border-radius: 20px;
+  background: color-mix(in oklch, var(--ed-surface) 75%, var(--ed-bg));
   box-shadow: var(--ed-shadow-md);
 }
 
 .soft-panel {
   border: 1px solid var(--ed-rule);
-  border-radius: 0px;
+  border-radius: 16px;
   background: var(--ed-surface);
   box-shadow: var(--ed-shadow-sm);
 }
 
 .soft-pill {
   border: 1px solid var(--ed-rule);
-  border-radius: 0px;
+  border-radius: 9999px;
   background: color-mix(in oklch, var(--ed-surface) 78%, var(--ed-bg));
 }
 
-/* Frosted surface — reads as vellum in light, glass in dark.
-   Best used floating over the ambient glows (e.g. hero stat strip). */
 .glass-panel {
-  border: 1px solid color-mix(in oklch, var(--ed-fg) 10%, transparent);
-  background: color-mix(in oklch, var(--ed-surface-strong) 62%, transparent);
-  -webkit-backdrop-filter: blur(14px) saturate(1.2);
-  backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid var(--ed-rule-strong);
+  background: color-mix(in oklch, var(--ed-surface) 65%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  backdrop-filter: blur(16px) saturate(1.2);
+  border-radius: 20px;
   box-shadow:
-    inset 0 1px 0 color-mix(in oklch, var(--ed-fg) 6%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
     var(--ed-shadow-md);
 }
 
-/* Hover elevation for cards and media consoles */
+/* Cooldock Widget style — macOS smart widget look */
+.cooldock-widget {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: color-mix(in oklch, var(--ed-surface) 65%, transparent);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  backdrop-filter: blur(24px) saturate(1.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 12px 32px -8px rgba(0, 0, 0, 0.4);
+  transition:
+    transform var(--dur-med) var(--ease-spring-out),
+    box-shadow var(--dur-med) var(--ease-spring-out),
+    border-color var(--dur-fast) var(--ease-spring-out),
+    background-color var(--dur-fast) var(--ease-spring-out);
+}
+
+@media (hover: hover) {
+  .cooldock-widget:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 20px 48px -10px rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* Enterprise Card with high refinement and dock.cool feel */
 .lift-card {
+  border-radius: 20px;
+  border: 1px solid var(--ed-rule);
+  background: var(--ed-surface);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    var(--ed-shadow-md);
   transition:
     transform var(--dur-med) var(--ease-spring-out),
     box-shadow var(--dur-med) var(--ease-spring-out),
@@ -443,10 +479,33 @@ a {
 
 @media (hover: hover) {
   .lift-card:hover {
-    transform: translateY(-4px);
-    border-color: color-mix(in oklch, var(--ed-accent) 34%, var(--ed-rule));
-    box-shadow: var(--ed-shadow-lg);
+    transform: translateY(-3px);
+    border-color: var(--ed-rule-strong);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      var(--ed-shadow-lg);
   }
+}
+
+/* ==========================================================================
+   Search Highlight Badges & Timeline Connectors (Matching Search Upgrade UI)
+   ========================================================================== */
+
+.search-term-highlight {
+  background-color: #3a2c0f;
+  color: #fcd34d;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+:root[data-theme="light"] .search-term-highlight {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
 }
 
 /* Animated underline that sweeps in from the left */

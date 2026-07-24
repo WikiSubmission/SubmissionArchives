@@ -56,30 +56,30 @@ export function MediaCard({ item }: { item: Media }) {
     const thumbnailSrc = getThumbnailSrc(item);
 
     return (
-        <article className="media-card-shell group flex h-full flex-col border-t border-ed-rule pt-3">
-            <div className="relative aspect-video overflow-hidden border border-ed-rule bg-ed-surface">
+        <article className="media-card-shell group relative flex h-full flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-3.5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)]">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40">
                 <Image
                     src={thumbnailSrc}
                     alt=""
                     fill
-                    quality={60}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.025]"
+                    quality={90}
+                    sizes="(max-width: 640px) 100vw, 480px"
+                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.04]"
                 />
                 {item.duration_seconds ? (
-                    <span className="absolute bottom-2 right-2 bg-[#111111]/88 px-2 py-1 font-mono text-xs font-medium tabular-nums text-white">
+                    <span className="absolute bottom-2.5 right-2.5 rounded-full border border-white/15 bg-black/75 px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums text-white/90 backdrop-blur-xl shadow-sm">
                         {formatDuration(item.duration_seconds)}
                     </span>
                 ) : null}
             </div>
 
-            <div className="flex flex-1 flex-col py-4">
-                <h3 className="line-clamp-2 font-display text-[1.15rem] font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+            <div className="flex flex-1 flex-col pt-3.5 pb-1 px-1">
+                <h3 className="line-clamp-2 font-sans text-base font-semibold leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
                     {item.displayTitle}
                 </h3>
-                <p className="mt-2 line-clamp-1 text-xs leading-5 text-ed-fg-muted">
+                <p className="mt-2 line-clamp-1 font-mono text-xs font-medium text-ed-fg-muted">
                     {item.author}
-                    {item.displayDate ? <><span aria-hidden="true"> · </span>{item.displayDate}</> : null}
+                    {item.displayDate ? <><span aria-hidden="true" className="opacity-50"> · </span>{item.displayDate}</> : null}
                 </p>
             </div>
         </article>
@@ -90,30 +90,30 @@ export function MediaList({ item }: { item: Media }) {
     const thumbnailSrc = getThumbnailSrc(item);
 
     return (
-        <article className="group grid gap-4 border-t border-ed-rule py-4 sm:grid-cols-[12rem_1fr] sm:items-center">
-            <div className="relative aspect-video overflow-hidden border border-ed-rule bg-ed-surface">
+        <article className="group relative grid gap-4 overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-3.5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)] sm:grid-cols-[13rem_1fr] sm:items-center">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40">
                 <Image
                     src={thumbnailSrc}
                     alt=""
                     fill
-                    quality={60}
-                    sizes="(max-width: 640px) 100vw, 192px"
-                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.025]"
+                    quality={90}
+                    sizes="(max-width: 640px) 100vw, 360px"
+                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.04]"
                 />
                 {item.duration_seconds ? (
-                    <span className="absolute bottom-2 right-2 bg-[#111111]/88 px-2 py-1 font-mono text-xs font-medium tabular-nums text-white">
+                    <span className="absolute bottom-2.5 right-2.5 rounded-full border border-white/15 bg-black/75 px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums text-white/90 backdrop-blur-xl shadow-sm">
                         {formatDuration(item.duration_seconds)}
                     </span>
                 ) : null}
             </div>
 
-            <div className="min-w-0">
-                <h3 className="line-clamp-2 font-display text-xl font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+            <div className="min-w-0 pr-2 py-1">
+                <h3 className="line-clamp-2 font-sans text-lg font-semibold leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
                     {item.displayTitle}
                 </h3>
-                <p className="mt-2 line-clamp-1 text-xs leading-5 text-ed-fg-muted">
+                <p className="mt-2 line-clamp-1 font-mono text-xs font-medium text-ed-fg-muted">
                     {item.author}
-                    {item.displayDate ? <><span aria-hidden="true"> · </span>{item.displayDate}</> : null}
+                    {item.displayDate ? <><span aria-hidden="true" className="opacity-50"> · </span>{item.displayDate}</> : null}
                 </p>
             </div>
         </article>

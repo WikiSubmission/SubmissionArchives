@@ -172,7 +172,22 @@ function searchMasterIndex(
     return results;
 }
 
+const EXCLUDED_QURAN_EDITION_IDS = new Set([
+    'hard-cover-1989',
+    'quran1981',
+    'english-meanings-of-the-quran',
+]);
+
 function isMasterItemAllowed(item: MasterIndexItem, filters: string[]) {
+    // Exclude older or alternate Qur'an translation edition books so search only uses the primary 1992 Qur'an edition
+    if (
+        EXCLUDED_QURAN_EDITION_IDS.has(item.id) ||
+        item.editionYear === 1989 ||
+        item.editionYear === 1981
+    ) {
+        return false;
+    }
+
     if (filters.length === 0) return true;
 
     return filters.some((filter) => {

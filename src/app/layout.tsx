@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
-import { Amiri, Libre_Franklin } from 'next/font/google';
+import { Amiri, Inter, JetBrains_Mono, Libre_Franklin } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import { WebVitals } from '@/components/analytics/WebVitals';
@@ -10,6 +10,18 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/config/site';
 
 import './globals.css';
+
+const inter = Inter({
+    variable: '--font-inter',
+    subsets: ['latin'],
+    display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+    variable: '--font-jetbrains-mono',
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 const libreFranklin = Libre_Franklin({
     variable: '--font-libre-franklin',
@@ -63,8 +75,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
     colorScheme: 'dark light',
     themeColor: [
-        { media: '(prefers-color-scheme: dark)', color: '#191817' },
-        { media: '(prefers-color-scheme: light)', color: '#eee8dc' },
+        { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+        { media: '(prefers-color-scheme: light)', color: '#fafafa' },
     ],
 };
 
@@ -86,7 +98,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             <head>
                 <script dangerouslySetInnerHTML={{ __html: themeBootstrapScript }} />
             </head>
-            <body className={`${libreFranklin.variable} ${amiri.variable} ${superiorSerif.variable} antialiased`}>
+            <body className={`${inter.variable} ${jetbrainsMono.variable} ${libreFranklin.variable} ${amiri.variable} ${superiorSerif.variable} antialiased`}>
                 <a
                     href="#main-content"
                     className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ed-fg focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-ed-bg"
