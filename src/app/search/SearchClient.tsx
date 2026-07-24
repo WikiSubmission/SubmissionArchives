@@ -453,19 +453,19 @@ function SearchContent() {
                                         <button
                                             type="button"
                                             onClick={() => setQuery('')}
-                                            className="absolute right-12 top-1/2 -translate-y-1/2 p-1 text-ed-fg-muted hover:text-ed-fg"
+                                            className="absolute right-[4.5rem] top-1/2 -translate-y-1/2 p-1 text-ed-fg-muted hover:text-ed-fg"
                                             aria-label="Clear search query"
                                         >
                                             <X className="h-4 w-4" />
                                         </button>
                                     ) : null}
+                                    <button
+                                        type="submit"
+                                        className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-xl bg-ed-fg px-4 py-1.5 text-xs font-bold text-ed-bg transition-colors hover:bg-ed-accent"
+                                    >
+                                        Search
+                                    </button>
                                 </div>
-                                <button
-                                    type="submit"
-                                    className="archive-button archive-button-primary shrink-0 px-5 text-sm"
-                                >
-                                    Search
-                                </button>
 
                                 {/* Source Filter Segmented Pill Group */}
                                 <div className="overflow-x-auto pb-1 sm:pb-0">

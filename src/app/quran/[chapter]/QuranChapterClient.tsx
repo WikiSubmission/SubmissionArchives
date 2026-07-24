@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { AlignLeft, Search, Share2, X } from 'lucide-react';
+import { AlignLeft, Copy, Search, Share2, X } from 'lucide-react';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
 import type { QuranChapter, QuranChapterSummary, QuranVerse } from './page';
 
@@ -184,7 +184,7 @@ export default function QuranChapterClient({
                                     <h2 dir="rtl" className="font-arabic text-[3.5rem] leading-none text-ed-fg drop-shadow-sm">
                                         {chapter.titleArabic}
                                     </h2>
-                                    <p className="text-ed-accent text-sm font-arabic tracking-widest" dir="rtl">
+                                    <p className="text-ed-accent text-sm font-arabic tracking-widest">
                                         {chapter.chapterNumber === 1 || chapter.revelationOrder ? 'مَكِّيَّة' : 'مَدَنِيَّة'} &middot; {visibleVerses.length} آيَات
                                     </p>
                                 </div>
@@ -216,6 +216,19 @@ export default function QuranChapterClient({
                                 </div>
                             </div>
                         </header>
+
+                        {/* Search Within Sura Input */}
+                        <div className="relative mb-8 max-w-md">
+                            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
+                            <input
+                                type="text"
+                                value={query}
+                                onChange={(e) => setSuraFilter(e.target.value)}
+                                placeholder="Search within this sura..."
+                                aria-label="Search within this sura"
+                                className="w-full rounded-xl border border-ed-rule bg-ed-surface py-2.5 pl-10 pr-4 text-sm text-ed-fg placeholder:text-ed-fg-muted focus:border-ed-accent focus:outline-none"
+                            />
+                        </div>
 
                         {/* Verses List */}
                         <div className="space-y-6">
@@ -402,6 +415,18 @@ function QuranVerseCard({
                         <p className="max-w-[75ch] font-sans text-left text-[1.1rem] leading-8 text-ed-accent">
                             <HighlightedText text={verse.english} terms={highlightTerms} />
                         </p>
+                    </div>
+
+                    <div className="flex items-center gap-2 pt-1">
+                        <button
+                            type="button"
+                            aria-label="Copy verse"
+                            onClick={() => navigator.clipboard?.writeText?.(`${verse.verseId}: ${verse.english}`)}
+                            className="inline-flex items-center gap-1.5 rounded-md border border-ed-rule bg-ed-surface px-2.5 py-1 font-mono text-[0.68rem] text-ed-fg-muted hover:text-ed-fg transition-colors"
+                        >
+                            <Copy className="h-3 w-3" />
+                            Copy verse
+                        </button>
                     </div>
 
                     {verse.footnote && (
