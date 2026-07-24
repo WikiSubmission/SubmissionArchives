@@ -123,6 +123,7 @@ export default function QuranChapterClient({
                     <button
                         type="button"
                         onClick={() => setMobileDrawerOpen(true)}
+                        aria-label="Open surah navigation"
                         className="inline-flex xl:hidden items-center justify-center h-10 w-10 rounded-md text-ed-fg-muted hover:text-ed-accent focus-visible:outline-none"
                     >
                         <AlignLeft className="h-5 w-5" />
@@ -137,7 +138,11 @@ export default function QuranChapterClient({
 
                 {/* Right controls */}
                 <div className="flex shrink-0 items-center gap-2">
-                    <button className="flex h-10 w-10 items-center justify-center rounded-md border border-ed-rule text-ed-fg-muted hover:text-ed-accent">
+                    <button
+                        type="button"
+                        aria-label="Share chapter"
+                        className="flex h-10 w-10 items-center justify-center rounded-md border border-ed-rule text-ed-fg-muted hover:text-ed-accent"
+                    >
                         <Share2 className="h-4 w-4" />
                     </button>
                     
@@ -167,11 +172,11 @@ export default function QuranChapterClient({
                         <header className="border-b border-ed-rule pb-12 mb-12">
                             <div className="flex flex-col md:flex-row justify-between items-start gap-8">
                                 <div className="space-y-2">
-                                    <h2 className="font-sans text-[2.5rem] font-semibold text-ed-fg tracking-tight">
-                                        {chapter.titleTransliterated}
-                                    </h2>
+                                    <h1 className="font-sans text-[2.5rem] font-semibold text-ed-fg tracking-tight">
+                                        {chapter.chapterNumber}. {chapter.titleEnglish}
+                                    </h1>
                                     <p className="text-ed-accent text-lg font-medium tracking-wide">
-                                        {chapter.titleEnglish}
+                                        {chapter.titleTransliterated}
                                     </p>
                                 </div>
 

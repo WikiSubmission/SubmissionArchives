@@ -115,7 +115,7 @@ export function HeroSection() {
                     </Reveal>
 
                     <Reveal delay={320}>
-                        <dl className="mt-10 grid max-w-2xl grid-cols-1 gap-2.5 sm:grid-cols-3">
+                        <div role="region" aria-label="Archive highlights" className="mt-10 grid max-w-2xl grid-cols-1 gap-2.5 sm:grid-cols-3">
                             {HERO_STATS.map((stat) => (
                                 <div
                                     key={stat.label}
@@ -126,16 +126,16 @@ export function HeroSection() {
                                         <stat.Icon className="h-3.5 w-3.5" />
                                     </IconBadge>
                                     <div className="min-w-0">
-                                        <dt className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                        <span className="block font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
                                             {stat.label}
-                                        </dt>
-                                        <dd className="mt-0.5 truncate font-sans text-sm font-semibold leading-snug text-ed-fg">
+                                        </span>
+                                        <span className="mt-0.5 block truncate font-sans text-sm font-semibold leading-snug text-ed-fg">
                                             {stat.value}
-                                        </dd>
+                                        </span>
                                     </div>
                                 </div>
                             ))}
-                        </dl>
+                        </div>
                     </Reveal>
                 </div>
 

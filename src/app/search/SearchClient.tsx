@@ -440,6 +440,7 @@ function SearchContent() {
                                         value={query}
                                         onChange={(event) => setQuery(event.target.value)}
                                         placeholder="Search transcripts, perspectives, appendices..."
+                                        aria-label="Search transcripts, perspectives, appendices"
                                         className="archive-input w-full py-2.5 pl-11 pr-24 text-sm sm:text-base rounded-2xl border border-ed-rule/60 dark:border-white/10 bg-ed-bg/60 dark:bg-black/40 text-ed-fg backdrop-blur-xl focus:border-ed-fg dark:focus:border-white/30 transition-all"
                                         onKeyDown={nav.onKeyDown}
                                         role="combobox"
@@ -459,6 +460,12 @@ function SearchContent() {
                                         </button>
                                     ) : null}
                                 </div>
+                                <button
+                                    type="submit"
+                                    className="archive-button archive-button-primary shrink-0 px-5 text-sm"
+                                >
+                                    Search
+                                </button>
 
                                 {/* Source Filter Segmented Pill Group */}
                                 <div className="overflow-x-auto pb-1 sm:pb-0">

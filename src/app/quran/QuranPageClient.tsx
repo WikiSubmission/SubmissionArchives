@@ -2,11 +2,9 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { BookOpen, Search, Grid as GridIcon, List as ListIcon, ChevronRight, X } from 'lucide-react';
+import { Search, Grid as GridIcon, List as ListIcon, ChevronRight, X } from 'lucide-react';
+import { ReactBitsParticles } from '@/components/react-bits/ParticlesBackground';
 import type { QuranChapterSummary } from './page';
-
-const ROSETTE_PATH =
-    'M27 1L33 8.5L42 7.5L45 16L53 20L49 27L53 34L45 38L42 46.5L33 45.5L27 53L21 45.5L12 46.5L9 38L1 34L5 27L1 20L9 16L12 7.5L21 8.5L27 1Z';
 
 export default function QuranPageClient({ chapters }: { chapters: QuranChapterSummary[] }) {
     const [query, setQuery] = useState('');
@@ -26,33 +24,33 @@ export default function QuranPageClient({ chapters }: { chapters: QuranChapterSu
         <div className="min-h-screen bg-ed-bg font-sans text-ed-fg selection:bg-ed-accent/30">
             {/* ----------------- Hero ----------------- */}
             <div className="relative overflow-hidden border-b border-ed-rule">
+                {/* React Bits Animated Background */}
+                <ReactBitsParticles
+                    particleCount={75}
+                    speed={0.4}
+                    particleColors={['#fbbf24', '#f59e0b', '#d97706', '#ffffff']}
+                    particleBaseSize={2.2}
+                    moveParticlesOnHover={true}
+                />
+
                 <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
                     <div className="absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-ed-accent/[0.07] blur-[110px]" />
-                    {/* Signature motif: a single manuscript-medallion watermark, referenced nowhere else on the page */}
-                    <svg
-                        viewBox="0 0 54 54"
-                        className="absolute -right-16 -top-16 h-[420px] w-[420px] text-ed-accent/[0.06] sm:h-[520px] sm:w-[520px]"
-                        fill="none"
-                    >
-                        <path d={ROSETTE_PATH} stroke="currentColor" strokeWidth="0.6" strokeLinejoin="round" />
-                    </svg>
                 </div>
 
-                <div className="relative mx-auto max-w-[1200px] px-5 py-14 sm:px-8 sm:py-20 lg:py-24">
-                    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-ed-accent">
+                <div className="relative mx-auto max-w-[1200px] px-5 py-16 sm:px-8 sm:py-24 lg:py-28">
+                    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-ed-accent">
                         Scripture
                     </p>
-                    <h1 className="mt-4 font-serif text-[clamp(2.75rem,9vw,4.75rem)] leading-[0.95] tracking-tight text-ed-fg">
+                    <h1 className="mt-6 font-serif text-[clamp(2.75rem,9vw,5rem)] leading-[1.05] tracking-tight text-ed-fg sm:mt-7">
                         The Qur&apos;an
                     </h1>
-                    <p className="mt-4 max-w-[50ch] text-base leading-relaxed text-ed-fg-muted sm:text-lg">
+                    <p className="mt-6 max-w-[50ch] text-base leading-relaxed text-ed-fg-muted sm:mt-7 sm:text-lg">
                         114 surahs, with Arabic text, English translation, transliteration, and footnotes.
                     </p>
                     <Link
                         href="/quran/appendices"
-                        className="mt-7 inline-flex items-center gap-2 rounded-full border border-ed-rule px-5 py-2.5 text-sm font-medium text-ed-accent transition-colors hover:border-ed-accent/50 hover:bg-ed-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent/50"
+                        className="mt-9 inline-flex items-center rounded-full border border-ed-rule px-5 py-2.5 text-sm font-medium text-ed-accent transition-colors hover:border-ed-accent/50 hover:bg-ed-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent/50"
                     >
-                        <BookOpen className="h-4 w-4" />
                         Read appendices
                     </Link>
                 </div>
