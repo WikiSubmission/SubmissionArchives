@@ -4,8 +4,12 @@ import type { Metadata } from 'next';
 import { ArrowUpRight, Newspaper } from 'lucide-react';
 
 import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
+import bookSpineColors from '../../../public/data/generated_indices/BOOK_SPINE_COLORS.json';
 import { getNewsletterIssues } from '@/lib/newsletterCatalog';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
+import { Book3DCover } from '@/components/written/Book3DCover';
+import { FALLBACK_SPINE_COLOR } from '@/components/written/bookSpineStyle';
+import { Reveal } from '@/components/home/Reveal';
 
 export const revalidate = 3600;
 
@@ -69,32 +73,18 @@ export default function WrittenArchivePage() {
                     </div>
                     
                     <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                        {books.map((book) => (
-                            <Link key={book.id} href={`/library/${book.id}`} className="group flex flex-col gap-3">
-                                <div className="relative aspect-[2/3] w-full overflow-hidden rounded-md border border-ed-rule bg-ed-surface transition-colors group-hover:border-ed-accent">
-                                    {book.thumbnailOverride ? (
-                                        <Image
-                                            src={getPublicAssetUrl(book.thumbnailOverride)}
-                                            alt={`Cover of ${book.title}`}
-                                            fill
-                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                                        />
-                                    ) : (
-                                        <div className="flex h-full w-full items-center justify-center bg-ed-surface text-ed-fg-muted">
-                                            <span className="font-serif text-sm">No Cover</span>
-                                        </div>
-                                    )}
-                                </div>
-                                <div>
-                                    <h3 className="font-serif text-sm font-medium text-ed-fg group-hover:text-ed-accent line-clamp-2">
-                                        {book.title}
-                                    </h3>
-                                    {book.author && (
-                                        <p className="mt-1 text-xs text-ed-fg-muted">{book.author}</p>
-                                    )}
-                                </div>
-                            </Link>
+                        {books.map((book, index) => (
+                            <Reveal key={book.id} delay={index * 60}>
+                                <Book3DCover
+                                    href={`/library/${book.id}`}
+                                    coverSrc={book.thumbnailOverride ? getPublicAssetUrl(book.thumbnailOverride) : null}
+                                    coverAlt={`Cover of ${book.title}`}
+                                    title={book.title}
+                                    author={book.author}
+                                    spineColor={(bookSpineColors as Record<string, string>)[book.id] ?? FALLBACK_SPINE_COLOR}
+                                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                                />
+                            </Reveal>
                         ))}
                     </div>
                 </section>
