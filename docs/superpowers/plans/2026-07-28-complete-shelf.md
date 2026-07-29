@@ -1,5 +1,7 @@
 # Complete Shelf Implementation Plan
 
+> **Status: superseded on 2026-07-29.** Replaced by `docs/superpowers/specs/2026-07-29-book-3d-covers-design.md`, a lighter CSS-transform treatment of the same grid. This plan is kept for reference only and should not be executed.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Replace the 2D thumbnail grid in the "Books & Publications" section of `/written` with a warm editorial 3D shelf (React Three Fiber) built on the site's 13 real books, browsable by drag/wheel/keys/markers and inspectable in a pulled-forward orbit view.

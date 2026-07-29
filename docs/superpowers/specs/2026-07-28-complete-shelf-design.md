@@ -2,6 +2,8 @@
 
 Date: 2026-07-28
 
+> **Status: superseded on 2026-07-29.** Replaced by `docs/superpowers/specs/2026-07-29-book-3d-covers-design.md`, a lighter CSS-transform treatment of the same grid. This document is kept for reference only.
+
 ## Summary
 
 Recreate Mint's "The Complete Shelf" experience (https://play.mint.gg/complete-shelf, https://github.com/mintdotgg/mint-playground/tree/main/experiences/complete-shelf) as an original Three.js build for this project. Replaces the current 2D thumbnail grid in the "Books & Publications" section of `/written` with a warm editorial 3D shelf, built on the site's real 13 books (real cover art, titles, authors, PDF links), not a generated asset pack. The "Submitters Perspectives" newsletter grid on the same page is untouched.
