@@ -554,8 +554,22 @@ function SearchContent() {
                         {/* Search Results List */}
                         <div id="search-results" role="listbox" aria-label="Search results" className="space-y-6">
                             {isSearching ? (
-                                <div className="lift-card rounded-2xl p-12 text-center font-mono text-xs uppercase tracking-widest text-ed-fg-muted">
-                                    Searching the archive...
+                                <div aria-live="polite" className="space-y-4">
+                                    <span className="sr-only">Searching the archive...</span>
+                                    {Array.from({ length: 3 }).map((_, index) => (
+                                        <div
+                                            key={index}
+                                            aria-hidden="true"
+                                            className="soft-shell flex animate-pulse gap-4 rounded-2xl p-5"
+                                        >
+                                            <div className="h-16 w-16 shrink-0 rounded-xl bg-ed-muted sm:h-20 sm:w-20" />
+                                            <div className="flex-1 space-y-3 py-1">
+                                                <div className="h-4 w-2/3 rounded bg-ed-muted" />
+                                                <div className="h-3 w-full rounded bg-ed-muted" />
+                                                <div className="h-3 w-1/2 rounded bg-ed-muted" />
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             ) : null}
 
