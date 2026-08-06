@@ -1,0 +1,576 @@
+{
+  "id": "micah",
+  "name": "Micah",
+  "hebrewTitle": "מִיכָה",
+  "category": "Prophets",
+  "chapterCount": 7,
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "verseCount": 16,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "דְּבַר־יְהֹוָ֣ה ׀ אֲשֶׁ֣ר הָיָ֗ה אֶל־מִיכָה֙ הַמֹּ֣רַשְׁתִּ֔י בִּימֵ֥י יוֹתָ֛ם אָחָ֥ז יְחִזְקִיָּ֖ה מַלְכֵ֣י יְהוּדָ֑ה אֲשֶׁר־חָזָ֥ה עַל־שֹׁמְר֖וֹן וִירֽוּשָׁלָֽ͏ִם׃",
+          "english": "The word of GOD that came to Micah the Morashtite, who prophesied concerning Samaria and Jerusalem in the reigns of Kings Jotham, Ahaz, and Hezekiah of Judah."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "שִׁמְעוּ֙ עַמִּ֣ים כֻּלָּ֔ם הַקְשִׁ֖יבִי אֶ֣רֶץ וּמְלֹאָ֑הּ וִיהִי֩ אֲדֹנָ֨י יֱהֹוִ֤ה בָּכֶם֙ לְעֵ֔ד אֲדֹנָ֖י מֵהֵיכַ֥ל קׇדְשֽׁוֹ׃",
+          "english": "Listen, all you peoples,Give heed, O earth, and all it holds;And let the Sovereign GOD be your accuser—The Sovereign from the holy abode."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "כִּֽי־הִנֵּ֥ה יְהֹוָ֖ה יֹצֵ֣א מִמְּקוֹמ֑וֹ וְיָרַ֥ד וְדָרַ֖ךְ עַל־[בָּ֥מֳתֵי] (במותי) אָֽרֶץ׃",
+          "english": "For lo! GOD Is coming forth from the heavenlyathe heavenly Lit. “His.” dwelling-place—To come down and strideUpon the heights of the earth."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "וְנָמַ֤סּוּ הֶֽהָרִים֙ תַּחְתָּ֔יו וְהָעֲמָקִ֖ים יִתְבַּקָּ֑עוּ כַּדּוֹנַג֙ מִפְּנֵ֣י הָאֵ֔שׁ כְּמַ֖יִם מֻגָּרִ֥ים בְּמוֹרָֽד׃",
+          "english": "The mountains shall melt underfootAnd the valleys burst open—Like wax before fire,Like water cascading down a slope."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "בְּפֶ֤שַׁע יַֽעֲקֹב֙ כׇּל־זֹ֔את וּבְחַטֹּ֖אות בֵּ֣ית יִשְׂרָאֵ֑ל מִֽי־פֶ֣שַׁע יַעֲקֹ֗ב הֲלוֹא֙ שֹֽׁמְר֔וֹן וּמִי֙ בָּמ֣וֹת יְהוּדָ֔ה הֲל֖וֹא יְרוּשָׁלָֽ͏ִם׃",
+          "english": "All this is for the transgression of Jacob,And for the sins of the House of Israel.What is the transgression of JacobBut Samaria,And what the shrinesbshrines Emendation yields “sins.” of JudahBut Jerusalem?"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "וְשַׂמְתִּ֥י שֹׁמְר֛וֹן לְעִ֥י הַשָּׂדֶ֖ה לְמַטָּ֣עֵי כָ֑רֶם וְהִגַּרְתִּ֤י לַגַּי֙ אֲבָנֶ֔יהָ וִיסֹדֶ֖יהָ אֲגַלֶּֽה׃",
+          "english": "So I will turn SamariaInto a ruin in open country,Into ground for planting vineyards;For I will tumble her stones into the valleyAnd lay her foundations bare."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וְכׇל־פְּסִילֶ֣יהָ יֻכַּ֗תּוּ וְכׇל־אֶתְנַנֶּ֙יהָ֙ יִשָּׂרְפ֣וּ בָאֵ֔שׁ וְכׇל־עֲצַבֶּ֖יהָ אָשִׂ֣ים שְׁמָמָ֑ה כִּ֠י מֵאֶתְנַ֤ן זוֹנָה֙ קִבָּ֔צָה וְעַד־אֶתְנַ֥ן זוֹנָ֖ה יָשֽׁוּבוּ׃",
+          "english": "All her sculptured images shall be smashed,And all her prostitute’s wealthcher prostitute’s wealth I.e., the bounty of offerings dedicated to idols. be burned,And I will make a waste heap of all her idols,For they were amassed from fees for prostitution,And they shall become prostitute’s fees again."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "עַל־זֹאת֙ אֶסְפְּדָ֣ה וְאֵילִ֔ילָה אֵילְכָ֥ה (שילל) [שׁוֹלָ֖ל] וְעָר֑וֹם אֶעֱשֶׂ֤ה מִסְפֵּד֙ כַּתַּנִּ֔ים וְאֵ֖בֶל כִּבְנ֥וֹת יַעֲנָֽה׃",
+          "english": "Because of this I will lament and wail;I will go stripped and naked!I will lament as sadly as the jackals,As mournfully as the ostriches."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "כִּ֥י אֲנוּשָׁ֖ה מַכּוֹתֶ֑יהָ כִּי־בָ֙אָה֙ עַד־יְהוּדָ֔ה נָגַ֛ע עַד־שַׁ֥עַר עַמִּ֖י עַד־יְרוּשָׁלָֽ͏ִם׃",
+          "english": "For the nation’sdthe nation’s Heb. “her.” wound is incurable,It has reached Judah,It has spread to the gate of my people,To Jerusalem."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "בְּגַת֙ אַל־תַּגִּ֔ידוּ בָּכ֖וֹ אַל־תִּבְכּ֑וּ בְּבֵ֣ית לְעַפְרָ֔ה עָפָ֖ר (התפלשתי) [הִתְפַּלָּֽשִׁי]׃",
+          "english": "eMeaning of much of vv. 10–13 uncertain. They may refer to the transfer of part of western Judah to Philistine rule by Sennacherib of Assyria in the year 701 BCE. Tell it not in Gath,Refrain from weeping;fTell it not … weeping So that enemies may not gloat; cf. 2 Sam. 1.20. In Beth-leaphrah,Strew dustgdust Heb. ʻaphar, a play on Beth-leaphrah; vv. 10–15 contain several similar puns. over your [head]."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "עִבְרִ֥י לָכֶ֛ם יוֹשֶׁ֥בֶת שָׁפִ֖יר עֶרְיָה־בֹ֑שֶׁת לֹ֤א יָֽצְאָה֙ יוֹשֶׁ֣בֶת צַֽאֲנָ֔ן מִסְפַּד֙ בֵּ֣ית הָאֵ֔צֶל יִקַּ֥ח מִכֶּ֖ם עֶמְדָּתֽוֹ׃",
+          "english": "Pass on, inhabitants of Shaphir!Did not the inhabitants of ZaananHave to go forth naked in shame?There is lamentation in Beth-ezel—It will withdraw its support from you."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "כִּֽי־חָ֥לָֽה לְט֖וֹב יוֹשֶׁ֣בֶת מָר֑וֹת כִּֽי־יָ֤רַד רָע֙ מֵאֵ֣ת יְהֹוָ֔ה לְשַׁ֖עַר יְרוּשָׁלָֽ͏ִם׃",
+          "english": "Though the inhabitants of MarothHoped for good,Yet disaster from GOD descendedUpon the gate of Jerusalem."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "רְתֹ֧ם הַמֶּרְכָּבָ֛ה לָרֶ֖כֶשׁ יוֹשֶׁ֣בֶת לָכִ֑ישׁ רֵאשִׁ֨ית חַטָּ֥את הִיא֙ לְבַת־צִיּ֔וֹן כִּי־בָ֥ךְ נִמְצְא֖וּ פִּשְׁעֵ֥י יִשְׂרָאֵֽל׃",
+          "english": "Hitch the steeds to the chariot,Inhabitant of Lachish!It is the beginningOf Fair Zion’s guilt;Israel’s transgressionsCan be traced to you!"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "לָכֵן֙ תִּתְּנִ֣י שִׁלּוּחִ֔ים עַ֖ל מוֹרֶ֣שֶׁת גַּ֑ת בָּתֵּ֤י אַכְזִיב֙ לְאַכְזָ֔ב לְמַלְכֵ֖י יִשְׂרָאֵֽל׃",
+          "english": "Truly, you must give a farewell giftTo Moresheth-gath.The houses of Achzib arehThe houses of Achzib are Emendation yields “Fair Achzib is.” To the kings of IsraelLike a spring that fails."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "עֹ֗ד הַיֹּרֵשׁ֙ אָ֣בִי לָ֔ךְ יוֹשֶׁ֖בֶת מָֽרֵשָׁ֑ה עַד־עֲדֻלָּ֥ם יָב֖וֹא כְּב֥וֹד יִשְׂרָאֵֽל׃",
+          "english": "A dispossessor will I bring to youWho dwell in Mareshah;At Adullam the gloryOf Israel shall set."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "קׇרְחִ֣י וָגֹ֔זִּי עַל־בְּנֵ֖י תַּעֲנוּגָ֑יִךְ הַרְחִ֤בִי קׇרְחָתֵךְ֙ כַּנֶּ֔שֶׁר כִּ֥י גָל֖וּ מִמֵּֽךְ׃",
+          "english": "Shear off your hair and make yourself baldimake yourself bald A common rite of mourning; cf. Jer. 7.29. For the children you once delighted in;Make yourself as bald as a vulture,For they have been banished from you."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "verseCount": 13,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ה֧וֹי חֹֽשְׁבֵי־אָ֛וֶן וּפֹ֥עֲלֵי רָ֖ע עַל־מִשְׁכְּבוֹתָ֑ם בְּא֤וֹר הַבֹּ֙קֶר֙ יַעֲשׂ֔וּהָ כִּ֥י יֶשׁ־לְאֵ֖ל יָדָֽם׃",
+          "english": "Ah, those who plan iniquityAnd design evil on their beds;When morning dawns, they do it,For they have the power."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "וְחָמְד֤וּ שָׂדוֹת֙ וְגָזָ֔לוּ וּבָתִּ֖ים וְנָשָׂ֑אוּ וְעָֽשְׁקוּ֙ גֶּ֣בֶר וּבֵית֔וֹ וְאִ֖ישׁ וְנַחֲלָתֽוֹ׃",
+          "english": "They covet fields, and seize them;Houses, and take them away.They defraud men of their homes,And people of their land."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "לָכֵ֗ן כֹּ֚ה אָמַ֣ר יְהֹוָ֔ה הִנְנִ֥י חֹשֵׁ֛ב עַל־הַמִּשְׁפָּחָ֥ה הַזֹּ֖את רָעָ֑ה אֲ֠שֶׁ֠ר לֹֽא־תָמִ֨ישׁוּ מִשָּׁ֜ם צַוְּארֹֽתֵיכֶ֗ם וְלֹ֤א תֵֽלְכוּ֙ רוֹמָ֔ה כִּ֛י עֵ֥ת רָעָ֖ה הִֽיא׃",
+          "english": "Assuredly, thus said GOD: I am planning such a misfortune against this clan that you will not be able to free your necks from it. You will not be able to walk erect; it will be such a time of disaster."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "בַּיּ֨וֹם הַה֜וּא יִשָּׂ֧א עֲלֵיכֶ֣ם מָשָׁ֗ל וְנָהָ֨ה נְהִ֤י נִֽהְיָה֙ אָמַר֙ שָׁד֣וֹד נְשַׁדֻּ֔נוּ חֵ֥לֶק עַמִּ֖י יָמִ֑יר אֵ֚יךְ יָמִ֣ישׁ לִ֔י לְשׁוֹבֵ֥ב שָׂדֵ֖ינוּ יְחַלֵּֽק׃",
+          "english": "In that day,One shall recite a poem about you,And utter a bitter lament,And shall say:“My people’s portion changes hands;How it slips away from me!Our field is allotted to a rebel.arebel Emendation yields “ravager.” We are utterly ravaged.”bMy people’s portion … ravaged Meaning of Heb. uncertain."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "לָכֵן֙ לֹֽא־יִֽהְיֶ֣ה לְךָ֔ מַשְׁלִ֥יךְ חֶ֖בֶל בְּגוֹרָ֑ל בִּקְהַ֖ל יְהֹוָֽה׃",
+          "english": "Truly, none of youShall cast a lot cordccast a lot cord On a piece of land, thus acquiring title to it; cf. Josh. 18.6 and Ps. 16.6. In the assembly of GOD!"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "אַל־תַּטִּ֖פוּ יַטִּיפ֑וּן לֹֽא־יַטִּ֣פוּ לָאֵ֔לֶּה לֹ֥א יִסַּ֖ג כְּלִמּֽוֹת׃",
+          "english": "“Stop preaching!” they preach.“That’s no way to preach;Shame shall not overtake [us]."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "הֶאָמ֣וּר בֵּֽית־יַעֲקֹ֗ב הֲקָצַר֙ ר֣וּחַ יְהֹוָ֔ה אִם־אֵ֖לֶּה מַעֲלָלָ֑יו הֲל֤וֹא דְבָרַי֙ יֵיטִ֔יבוּ עִ֖ם הַיָּשָׁ֥ר הֹלֵֽךְ׃",
+          "english": "Is the House of Jacob condemned?dShame … condemned Meaning of Heb. uncertain. Is GOD’s patience short?Has such been the practice?”To be sure, My words are friendlyTo those who walk in rectitude;"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "וְאֶתְמ֗וּל עַמִּי֙ לְאוֹיֵ֣ב יְקוֹמֵ֔ם מִמּ֣וּל שַׂלְמָ֔ה אֶ֖דֶר תַּפְשִׁט֑וּן מֵעֹבְרִ֣ים בֶּ֔טַח שׁוּבֵ֖י מִלְחָמָֽה׃",
+          "english": "But an enemy arises againstean enemy arises against Meaning of Heb. uncertain; emendation yields “you arise as enemies against.” My people.You strip the mantle with the cloakfwith the cloak Meaning of Heb. uncertain; emendation yields “off peaceful folk.” Off such as pass unsuspecting,Who are turned away from war.gWho are turned away from war Meaning of Heb. uncertain."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "נְשֵׁ֤י עַמִּי֙ תְּגָ֣רְשׁ֔וּן מִבֵּ֖ית תַּֽעֲנֻגֶ֑יהָ מֵעַל֙ עֹֽלָלֶ֔יהָ תִּקְח֥וּ הֲדָרִ֖י לְעוֹלָֽם׃",
+          "english": "You drive the women of My people awayFrom their pleasant homes;You deprive their infantsOf My glory forever."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "ק֣וּמוּ וּלְכ֔וּ כִּ֥י לֹא־זֹ֖את הַמְּנוּחָ֑ה בַּעֲב֥וּר טָמְאָ֛ה תְּחַבֵּ֖ל וְחֶ֥בֶל נִמְרָֽץ׃",
+          "english": "Up and depart!This is no resting placeBecause of [your] defilement.Terrible destruction shall befall.hBecause of … befall Meaning of Heb. uncertain."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "לוּ־אִ֞ישׁ הֹלֵ֥ךְ ר֙וּחַ֙ וָשֶׁ֣קֶר כִּזֵּ֔ב אַטִּ֣ף לְךָ֔ לַיַּ֖יִן וְלַשֵּׁכָ֑ר וְהָיָ֥ה מַטִּ֖יף הָעָ֥ם הַזֶּֽה׃",
+          "english": "If someone were to go about utteringWindy, baseless falsehoods:“I’ll preach to you in favor of wine and liquor”—That would be a preacher [acceptable] to this people."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "אָסֹ֨ף אֶאֱסֹ֜ף יַעֲקֹ֣ב כֻּלָּ֗ךְ קַבֵּ֤ץ אֲקַבֵּץ֙ שְׁאֵרִ֣ית יִשְׂרָאֵ֔ל יַ֥חַד אֲשִׂימֶ֖נּוּ כְּצֹ֣אן בׇּצְרָ֑ה כְּעֵ֙דֶר֙ בְּת֣וֹךְ הַדׇּֽבְר֔וֹ תְּהִימֶ֖נָה מֵאָדָֽם׃",
+          "english": "iThis verse and the next may offer another example of the “acceptable” preaching mentioned in v. 11. I will assemble Jacob, all of you;I will bring together the remnant of Israel;I will make them all like sheep of Bozrah,jof Bozrah Emendation yields “in a fold [Arabic sīrah].” Like a flock inside its penkpen Meaning of Heb. uncertain.—They will be noisy with people."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "עָלָ֤ה הַפֹּרֵץ֙ לִפְנֵיהֶ֔ם פָּֽרְצוּ֙ וַֽיַּעֲבֹ֔רוּ שַׁ֖עַר וַיֵּ֣צְאוּ ב֑וֹ וַיַּעֲבֹ֤ר מַלְכָּם֙ לִפְנֵיהֶ֔ם וַיהֹוָ֖ה בְּרֹאשָֽׁם׃",
+          "english": "One who makes a breachGoes before them;They enlarge it to a gateAnd leave by it.Their king marches before them, GOD at their head."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "verseCount": 12,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וָאֹמַ֗ר שִׁמְעוּ־נָא֙ רָאשֵׁ֣י יַעֲקֹ֔ב וּקְצִינֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל הֲל֣וֹא לָכֶ֔ם לָדַ֖עַת אֶת־הַמִּשְׁפָּֽט׃",
+          "english": "I said:Listen, you rulers of Jacob,You chiefs of the House of Israel!For you ought to know what is right,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "שֹׂ֥נְאֵי ט֖וֹב וְאֹ֣הֲבֵי (רעה) [רָ֑ע] גֹּזְלֵ֤י עוֹרָם֙ מֵֽעֲלֵיהֶ֔ם וּשְׁאֵרָ֖ם מֵעַ֥ל עַצְמוֹתָֽם׃",
+          "english": "aSyntax of this verse and the next uncertain. But you hate good and love evil."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "וַאֲשֶׁ֣ר אָכְלוּ֮ שְׁאֵ֣ר עַמִּי֒ וְעוֹרָם֙ מֵעֲלֵיהֶ֣ם הִפְשִׁ֔יטוּ וְאֶת־עַצְמֹֽתֵיהֶ֖ם פִּצֵּ֑חוּ וּפָֽרְשׂוּ֙ כַּאֲשֶׁ֣ר בַּסִּ֔יר וּכְבָשָׂ֖ר בְּת֥וֹךְ קַלָּֽחַת׃",
+          "english": "You have devoured My people’s flesh;You have flayed the skin off them,And after tearing their skins off them,And their flesh off their bones,bAnd after tearing their skins off them, / And their flesh off their bones Moved down from v. 2 for clarity. And breaking their bones to bits,You have cut it up as intocas into Meaning of Heb. uncertain; Septuagint and Syriac read “like flesh in.” a pot,Like meat in a cauldron."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "אָ֚ז יִזְעֲק֣וּ אֶל־יְהֹוָ֔ה וְלֹ֥א יַעֲנֶ֖ה אוֹתָ֑ם וְיַסְתֵּ֨ר פָּנָ֤יו מֵהֶם֙ בָּעֵ֣ת הַהִ֔יא כַּאֲשֶׁ֥ר הֵרֵ֖עוּ מַעַלְלֵיהֶֽם׃",
+          "english": "Someday they shall cry out to GOD,But they will not be answered;At that time the divine face will be hidden,In accordance with the wrongs they have done."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "כֹּ֚ה אָמַ֣ר יְהֹוָ֔ה עַל־הַנְּבִיאִ֖ים הַמַּתְעִ֣ים אֶת־עַמִּ֑י הַנֹּשְׁכִ֤ים בְּשִׁנֵּיהֶם֙ וְקָרְא֣וּ שָׁל֔וֹם וַֽאֲשֶׁר֙ לֹא־יִתֵּ֣ן עַל־פִּיהֶ֔ם וְקִדְּשׁ֥וּ עָלָ֖יו מִלְחָמָֽה׃",
+          "english": "Thus said GOD to the prophetsWho lead My people astray,Who cry “Peace!”When they have something to chew,But launch a war on thoseWho fail to fill their mouths:"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "לָכֵ֞ן לַ֤יְלָה לָכֶם֙ מֵֽחָז֔וֹן וְחָשְׁכָ֥ה לָכֶ֖ם מִקְּסֹ֑ם וּבָ֤אָה הַשֶּׁ֙מֶשׁ֙ עַל־הַנְּבִיאִ֔ים וְקָדַ֥ר עֲלֵיהֶ֖ם הַיּֽוֹם׃",
+          "english": "Assuredly,It shall be night for youSo that you cannot prophesy,And it shall be dark for youSo that you cannot divine;The sun shall set on the prophets,And the day shall be darkened for them."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וּבֹ֣שׁוּ הַחֹזִ֗ים וְחָֽפְרוּ֙ הַקֹּ֣סְמִ֔ים וְעָט֥וּ עַל־שָׂפָ֖ם כֻּלָּ֑ם כִּ֛י אֵ֥ין מַעֲנֵ֖ה אֱלֹהִֽים׃",
+          "english": "The seers shall be shamedAnd the diviners confounded;They shall cover their upper lips,dcover their upper lips As a sign of mourning; cf. Ezek. 24.17, 22; Lev. 13.45. Because no response comes from God."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "וְאוּלָ֗ם אָנֹכִ֞י מָלֵ֤אתִי כֹ֙חַ֙ אֶת־ר֣וּחַ יְהֹוָ֔ה וּמִשְׁפָּ֖ט וּגְבוּרָ֑ה לְהַגִּ֤יד לְיַֽעֲקֹב֙ פִּשְׁע֔וֹ וּלְיִשְׂרָאֵ֖ל חַטָּאתֽוֹ׃",
+          "english": "But I,I am filled with strength by the spirit of GOD,And with judgment and courage,To declare to Jacob his transgressionsAnd to Israel his sin."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "שִׁמְעוּ־נָ֣א זֹ֗את רָאשֵׁי֙ בֵּ֣ית יַעֲקֹ֔ב וּקְצִינֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל הַֽמְתַעֲבִ֣ים מִשְׁפָּ֔ט וְאֵ֥ת כׇּל־הַיְשָׁרָ֖ה יְעַקֵּֽשׁוּ׃",
+          "english": "Hear this, you rulers of the House of Jacob,You chiefs of the House of Israel,Who detest justiceAnd make crooked all that is straight,"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "בֹּנֶ֥ה צִיּ֖וֹן בְּדָמִ֑ים וִירוּשָׁלַ֖͏ִם בְּעַוְלָֽה׃",
+          "english": "Who build Zion with crime,Jerusalem with iniquity!"
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "רָאשֶׁ֣יהָ ׀ בְּשֹׁ֣חַד יִשְׁפֹּ֗טוּ וְכֹהֲנֶ֙יהָ֙ בִּמְחִ֣יר יוֹר֔וּ וּנְבִיאֶ֖יהָ בְּכֶ֣סֶף יִקְסֹ֑מוּ וְעַל־יְהֹוָה֙ יִשָּׁעֵ֣נוּ לֵאמֹ֔ר הֲל֤וֹא יְהֹוָה֙ בְּקִרְבֵּ֔נוּ לֹֽא־תָב֥וֹא עָלֵ֖ינוּ רָעָֽה׃",
+          "english": "Her rulers judge for gifts,Her priests give rulings for a fee,And her prophets divine for pay;Yet they rely upon GOD, saying,“ GOD is in our midst;No calamity shall overtake us.”"
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "לָכֵן֙ בִּגְלַלְכֶ֔ם צִיּ֖וֹן שָׂדֶ֣ה תֵֽחָרֵ֑שׁ וִירוּשָׁלַ֙͏ִם֙ עִיִּ֣ין תִּֽהְיֶ֔ה וְהַ֥ר הַבַּ֖יִת לְבָמ֥וֹת יָֽעַר׃",
+          "english": "Assuredly, because of youZion shall be plowed as a field,Jerusalem shall become heaps of ruinsAnd the Temple Mount a shrine in the woods."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "verseCount": 14,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וְהָיָ֣ה ׀ בְּאַחֲרִ֣ית הַיָּמִ֗ים יִ֠הְיֶ֠ה הַ֣ר בֵּית־יְהֹוָ֤ה נָכוֹן֙ בְּרֹ֣אשׁ הֶהָרִ֔ים וְנִשָּׂ֥א ה֖וּא מִגְּבָע֑וֹת וְנָהֲר֥וּ עָלָ֖יו עַמִּֽים׃",
+          "english": "aCf. Isa. 2.2–4. In the days to come,The Mount of GOD’s House shall standFirm above the mountains;And it shall tower above the hills.The peoples shall gaze on it with joy,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "וְֽהָלְכ֞וּ גּוֹיִ֣ם רַבִּ֗ים וְאָֽמְרוּ֙ לְכ֣וּ ׀ וְנַעֲלֶ֣ה אֶל־הַר־יְהֹוָ֗ה וְאֶל־בֵּית֙ אֱלֹהֵ֣י יַעֲקֹ֔ב וְיוֹרֵ֙נוּ֙ מִדְּרָכָ֔יו וְנֵלְכָ֖ה בְּאֹֽרְחֹתָ֑יו כִּ֤י מִצִּיּוֹן֙ תֵּצֵ֣א תוֹרָ֔ה וּדְבַר־יְהֹוָ֖ה מִירוּשָׁלָֽ͏ִם׃",
+          "english": "And the many nations shall go and shall say:“Come,Let us go up to the Mount of GOD,To the House of the God of Jacob;That we may be instructed in God’s ways,And that we may walk in godly paths.”For instruction shall come forthbinstruction shall come forth I.e., oracles will be obtainable. from Zion,The word of GOD from Jerusalem."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "וְשָׁפַ֗ט בֵּ֚ין עַמִּ֣ים רַבִּ֔ים וְהוֹכִ֛יחַ לְגוֹיִ֥ם עֲצֻמִ֖ים עַד־רָח֑וֹק וְכִתְּת֨וּ חַרְבֹתֵיהֶ֜ם לְאִתִּ֗ים וַחֲנִיתֹֽתֵיהֶם֙ לְמַזְמֵר֔וֹת לֹֽא־יִשְׂא֞וּ גּ֤וֹי אֶל־גּוֹי֙ חֶ֔רֶב וְלֹא־יִלְמְד֥וּן ע֖וֹד מִלְחָמָֽה׃",
+          "english": "Thus [God] will judge among the many peoples,And arbitrate for the multitude of nations,However distant;And they shall beat their swords into plowsharescplowshares More exactly, the iron points with which wooden plows were tipped. And their spears into pruning hooks.Nation shall not take upSword against nation;They shall never again knowdknow Cf. Judg. 3.2. war;"
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "וְיָשְׁב֗וּ אִ֣ישׁ תַּ֧חַת גַּפְנ֛וֹ וְתַ֥חַת תְּאֵנָת֖וֹ וְאֵ֣ין מַחֲרִ֑יד כִּי־פִ֛י יְהֹוָ֥ה צְבָא֖וֹת דִּבֵּֽר׃",
+          "english": "But every family shall sitUnder its own vine and fig treeWith no one to disturb them.For it was GOD of Hosts who spoke."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "כִּ֚י כׇּל־הָ֣עַמִּ֔ים יֵלְכ֕וּ אִ֖ישׁ בְּשֵׁ֣ם אֱלֹהָ֑יו וַאֲנַ֗חְנוּ נֵלֵ֛ךְ בְּשֵׁם־יְהֹוָ֥ה אֱלֹהֵ֖ינוּ לְעוֹלָ֥ם וָעֶֽד׃",
+          "english": "Though all the peoples walkEach in the names of its gods,We will walkIn the name of the ETERNAL our GodForever and ever."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "בַּיּ֨וֹם הַה֜וּא נְאֻם־יְהֹוָ֗ה אֹֽסְפָה֙ הַצֹּ֣לֵעָ֔ה וְהַנִּדָּחָ֖ה אֲקַבֵּ֑צָה וַאֲשֶׁ֖ר הֲרֵעֹֽתִי׃",
+          "english": "In that day—declares GOD—I will assemble the lame [sheep]And will gather the outcastAnd those I have treated harshly;"
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וְשַׂמְתִּ֤י אֶת־הַצֹּֽלֵעָה֙ לִשְׁאֵרִ֔ית וְהַנַּהֲלָאָ֖ה לְג֣וֹי עָצ֑וּם וּמָלַ֨ךְ יְהֹוָ֤ה עֲלֵיהֶם֙ בְּהַ֣ר צִיּ֔וֹן מֵעַתָּ֖ה וְעַד־עוֹלָֽם׃",
+          "english": "And I will turn the lame into a remnantAnd the expelledeexpelled Meaning of Heb. uncertain; emendation yields “weaklings”; cf. Ezek. 34.4. into a populous nation.And GOD will reign over them on Mount ZionNow and for evermore."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "וְאַתָּ֣ה מִגְדַּל־עֵ֗דֶר עֹ֛פֶל בַּת־צִיּ֖וֹן עָדֶ֣יךָ תֵּאתֶ֑ה וּבָאָ֗ה הַמֶּמְשָׁלָה֙ הָרִ֣אשֹׁנָ֔ה מַמְלֶ֖כֶת לְבַ֥ת יְרוּשָׁלָֽ͏ִם׃",
+          "english": "And you, O Migdal-eder,fMigdal-eder Apparently near Bethlehem; see Gen. 35.19–21. Outpost of Fair Zion,It shall come to you:gOutpost of Fair Zion, / It shall come to you Meaning of Heb. uncertain. The former monarchy shall return—The kingship of Fair Jerusalem.hFair Jerusalem Emendation yields “the House of Israel”; cf. 5.1–2."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "עַתָּ֕ה לָ֥מָּה תָרִ֖יעִי רֵ֑עַ הֲמֶ֣לֶךְ אֵֽין־בָּ֗ךְ אִֽם־יוֹעֲצֵךְ֙ אָבָ֔ד כִּֽי־הֶחֱזִיקֵ֥ךְ חִ֖יל כַּיּוֹלֵדָֽה׃",
+          "english": "Now why do you utter such cries?Is there no king in you,Have your advisors perished,That you have been seized by writhingLike a woman in travail?"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "ח֧וּלִי וָגֹ֛חִי בַּת־צִיּ֖וֹן כַּיּֽוֹלֵדָ֑ה כִּֽי־עַתָּה֩ תֵצְאִ֨י מִקִּרְיָ֜ה וְשָׁכַ֣נְתְּ בַּשָּׂדֶ֗ה וּבָ֤את עַד־בָּבֶל֙ שָׁ֣ם תִּנָּצֵ֔לִי שָׁ֚ם יִגְאָלֵ֣ךְ יְהֹוָ֔ה מִכַּ֖ף אֹיְבָֽיִךְ׃",
+          "english": "Writhe and scream,iscream Meaning of Heb. uncertain. Fair Zion,Like a woman in travail!For now you must leave the cityAnd dwell in the country—And you will reach Babylon.There you shall be saved,There GOD will redeem youFrom the hands of your foes."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וְעַתָּ֛ה נֶאֶסְפ֥וּ עָלַ֖יִךְ גּוֹיִ֣ם רַבִּ֑ים הָאֹמְרִ֣ים תֶּחֱנָ֔ף וְתַ֥חַז בְּצִיּ֖וֹן עֵינֵֽינוּ׃",
+          "english": "Indeed, many nationsHave assembled against youWho think, “Let our eyeObscenely gazejObscenely gaze Meaning of Heb. uncertain. on Zion.”"
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "וְהֵ֗מָּה לֹ֤א יָֽדְעוּ֙ מַחְשְׁב֣וֹת יְהֹוָ֔ה וְלֹ֥א הֵבִ֖ינוּ עֲצָת֑וֹ כִּ֥י קִבְּצָ֖ם כֶּעָמִ֥יר גֹּֽרְנָה׃",
+          "english": "But they do not knowGOD’s design,They do not divine the intent:They have been gatheredLike cut grain to the threshing floor."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "ק֧וּמִי וָד֣וֹשִׁי בַת־צִיּ֗וֹן כִּֽי־קַרְנֵ֞ךְ אָשִׂ֤ים בַּרְזֶל֙ וּפַרְסֹתַ֙יִךְ֙ אָשִׂ֣ים נְחוּשָׁ֔ה וַהֲדִקּ֖וֹת עַמִּ֣ים רַבִּ֑ים וְהַחֲרַמְתִּ֤י לַֽיהֹוָה֙ בִּצְעָ֔ם וְחֵילָ֖ם לַאֲד֥וֹן כׇּל־הָאָֽרֶץ׃",
+          "english": "Up and thresh, Fair Zion!For I will give you horns of ironAnd provide you with hoofs of bronze,And you will crush the many peoples.YoukYou Heb. -ti serves here as the ending of the second-person singular feminine; cf. Judg. 5.7 and note; Jer. 2.20; etc. will devote their riches to GOD,Their wealth to the Sovereign of all the earth."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "עַתָּה֙ תִּתְגֹּדְדִ֣י בַת־גְּד֔וּד מָצ֖וֹר שָׂ֣ם עָלֵ֑ינוּ בַּשֵּׁ֙בֶט֙ יַכּ֣וּ עַֽל־הַלְּחִ֔י אֵ֖ת שֹׁפֵ֥ט יִשְׂרָאֵֽל׃",
+          "english": "Now you gash yourself in grief.lin grief Meaning of Heb. uncertain. They have laid siege to us;They strike the ruler of IsraelOn the cheek with a staff."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "verseCount": 14,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וְאַתָּ֞ה בֵּֽית־לֶ֣חֶם אֶפְרָ֗תָה צָעִיר֙ לִֽהְיוֹת֙ בְּאַלְפֵ֣י יְהוּדָ֔ה מִמְּךָ֙ לִ֣י יֵצֵ֔א לִֽהְי֥וֹת מוֹשֵׁ֖ל בְּיִשְׂרָאֵ֑ל וּמוֹצָאֹתָ֥יו מִקֶּ֖דֶם מִימֵ֥י עוֹלָֽם׃",
+          "english": "And you, O Bethlehem of Ephrath,aEphrath The clan to which the Bethlehemites belonged; see 1 Sam. 17.12; Ruth 1.2; 4.11. Least among the clans of Judah,From you one shall come forthTo rule Israel for Me—One whose origin is from of old,From ancient times."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "לָכֵ֣ן יִתְּנֵ֔ם עַד־עֵ֥ת יוֹלֵדָ֖ה יָלָ֑דָה וְיֶ֣תֶר אֶחָ֔יו יְשׁוּב֖וּן עַל־בְּנֵ֥י יִשְׂרָאֵֽל׃",
+          "english": "bMeaning of verse uncertain. Truly, [God] will leave them [helpless]Until she who is to bear has borne;chas borne I.e., has given birth to a ruler, shepherd (v. 3), to deliver Israel from the Assyrians (vv. 4–5). Then the rest of his kindredShall return to the children of Israel."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "וְעָמַ֗ד וְרָעָה֙ בְּעֹ֣ז יְהֹוָ֔ה בִּגְא֕וֹן שֵׁ֖ם יְהֹוָ֣ה אֱלֹהָ֑יו וְיָשָׁ֕בוּ כִּֽי־עַתָּ֥ה יִגְדַּ֖ל עַד־אַפְסֵי־אָֽרֶץ׃",
+          "english": "He shall stand and shepherdBy the might of GOD,By the power of the nameOf the ETERNAL his God,And they shall dwell [secure].For lo, he shall wax greatTo the ends of the earth;"
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "וְהָיָ֥ה זֶ֖ה שָׁל֑וֹם אַשּׁ֣וּר ׀ כִּֽי־יָב֣וֹא בְאַרְצֵ֗נוּ וְכִ֤י יִדְרֹךְ֙ בְּאַרְמְנוֹתֵ֔ינוּ וַהֲקֵמֹ֤נוּ עָלָיו֙ שִׁבְעָ֣ה רֹעִ֔ים וּשְׁמֹנָ֖ה נְסִיכֵ֥י אָדָֽם׃",
+          "english": "And that shall afford safety.Should Assyria invade our landAnd tread upon our fortresses,dfortresses Septuagint and Syriac read “soil”; cf. v. 5. We will set up over that nationethat nation Heb. “it.” seven shepherds,Eight princes of other nations,fother nations Lit. “human beings.”"
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "וְרָע֞וּ אֶת־אֶ֤רֶץ אַשּׁוּר֙ בַּחֶ֔רֶב וְאֶת־אֶ֥רֶץ נִמְרֹ֖ד בִּפְתָחֶ֑יהָ וְהִצִּיל֙ מֵֽאַשּׁ֔וּר כִּֽי־יָב֣וֹא בְאַרְצֵ֔נוּ וְכִ֥י יִדְרֹ֖ךְ בִּגְבוּלֵֽנוּ׃",
+          "english": "Who will shepherd Assyria’s land with swords,The land of Nimrod in its gates.gin its gates Emendation yields “with drawn blades”; cf. Ps. 37.14; 55.22. Thus he will deliver [us]From Assyria, should it invade our land,And should it trample our country."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "וְהָיָ֣ה ׀ שְׁאֵרִ֣ית יַעֲקֹ֗ב בְּקֶ֙רֶב֙ עַמִּ֣ים רַבִּ֔ים כְּטַל֙ מֵאֵ֣ת יְהֹוָ֔ה כִּרְבִיבִ֖ים עֲלֵי־עֵ֑שֶׂב אֲשֶׁ֤ר לֹֽא־יְקַוֶּה֙ לְאִ֔ישׁ וְלֹ֥א יְיַחֵ֖ל לִבְנֵ֥י אָדָֽם׃",
+          "english": "The remnant of Jacob shall be,In the midst of the many peoples,Like dew from GOD,Like droplets on grass—Which do not look to anybodyNor place their hope in mortals."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וְהָיָה֩ שְׁאֵרִ֨ית יַעֲקֹ֜ב בַּגּוֹיִ֗ם בְּקֶ֙רֶב֙ עַמִּ֣ים רַבִּ֔ים כְּאַרְיֵה֙ בְּבַהֲמ֣וֹת יַ֔עַר כִּכְפִ֖יר בְּעֶדְרֵי־צֹ֑אן אֲשֶׁ֧ר אִם־עָבַ֛ר וְרָמַ֥ס וְטָרַ֖ף וְאֵ֥ין מַצִּֽיל׃",
+          "english": "The remnant of JacobShall be among the nations,In the midst of the many peoples,Like a lion among beasts of the wild,Like a fierce lion among flocks of sheep,Which tramples wherever it goesAnd rends, with none to deliver."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "תָּרֹ֥ם יָדְךָ֖ עַל־צָרֶ֑יךָ וְכׇל־אֹיְבֶ֖יךָ יִכָּרֵֽתוּ׃",
+          "english": "Your hand shall prevail over your foes,And all your enemies shall be cut down!"
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "וְהָיָ֤ה בַיּוֹם־הַהוּא֙ נְאֻם־יְהֹוָ֔ה וְהִכְרַתִּ֥י סוּסֶ֖יךָ מִקִּרְבֶּ֑ךָ וְהַאֲבַדְתִּ֖י מַרְכְּבֹתֶֽיךָ׃",
+          "english": "In that day—declares GOD—I will destroy the horses in your midstAnd wreck your chariots."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "וְהִכְרַתִּ֖י עָרֵ֣י אַרְצֶ֑ךָ וְהָרַסְתִּ֖י כׇּל־מִבְצָרֶֽיךָ׃",
+          "english": "I will destroy the cities of your landAnd demolish all your fortresses."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וְהִכְרַתִּ֥י כְשָׁפִ֖ים מִיָּדֶ֑ךָ וּֽמְעוֹנְנִ֖ים לֹ֥א יִֽהְיוּ־לָֽךְ׃",
+          "english": "I will destroy the sorcery you practice,And you shall have no more soothsayers."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "וְהִכְרַתִּ֧י פְסִילֶ֛יךָ וּמַצֵּבוֹתֶ֖יךָ מִקִּרְבֶּ֑ךָ וְלֹא־תִשְׁתַּחֲוֶ֥ה ע֖וֹד לְמַעֲשֵׂ֥ה יָדֶֽיךָ׃",
+          "english": "I will destroy your idolsAnd the sacred pillars in your midst;And no more shall you bow downTo the work of your hands."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "וְנָתַשְׁתִּ֥י אֲשֵׁירֶ֖יךָ מִקִּרְבֶּ֑ךָ וְהִשְׁמַדְתִּ֖י עָרֶֽיךָ׃",
+          "english": "I will tear down the sacred postshsacred posts Used in worship of the goddess Asherah. in your midstAnd destroy your cities.icities Emendation yields “idols.”"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "וְעָשִׂ֜יתִי בְּאַ֧ף וּבְחֵמָ֛ה נָקָ֖ם אֶת־הַגּוֹיִ֑ם אֲשֶׁ֖ר לֹ֥א שָׁמֵֽעוּ׃",
+          "english": "In anger and wrathWill I wreak retributionOn the nationsjnations Emendation yields “arrogant.” that have not obeyed."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "verseCount": 16,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "שִׁמְעוּ־נָ֕א אֵ֥ת אֲשֶׁר־יְהֹוָ֖ה אֹמֵ֑ר ק֚וּם רִ֣יב אֶת־הֶהָרִ֔ים וְתִשְׁמַ֥עְנָה הַגְּבָע֖וֹת קוֹלֶֽךָ׃",
+          "english": "Hear what GOD is saying:Come, present [My] case before the mountains,And let the hills hear you pleading."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "שִׁמְע֤וּ הָרִים֙ אֶת־רִ֣יב יְהֹוָ֔ה וְהָאֵתָנִ֖ים מ֣וֹסְדֵי אָ֑רֶץ כִּ֣י רִ֤יב לַֽיהֹוָה֙ עִם־עַמּ֔וֹ וְעִם־יִשְׂרָאֵ֖ל יִתְוַכָּֽח׃",
+          "english": "Hear, you mountains, GOD’s case— You firmaYou firm Emendation yields “Give ear, you.” foundations of the earth!For GOD has a case against this covenanted people—A suit against Israel."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "עַמִּ֛י מֶה־עָשִׂ֥יתִי לְךָ֖ וּמָ֣ה הֶלְאֵתִ֑יךָ עֲנֵ֥ה בִֽי׃",
+          "english": "“My people!What wrong have I done you?What hardship have I caused you?Testify against Me."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "כִּ֤י הֶעֱלִתִ֙יךָ֙ מֵאֶ֣רֶץ מִצְרַ֔יִם וּמִבֵּ֥ית עֲבָדִ֖ים פְּדִיתִ֑יךָ וָאֶשְׁלַ֣ח לְפָנֶ֔יךָ אֶת־מֹשֶׁ֖ה אַהֲרֹ֥ן וּמִרְיָֽם׃",
+          "english": "In fact,I brought you up from the land of Egypt,I redeemed you from the house of bondage,And I sent before youMoses, Aaron, and Miriam."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "עַמִּ֗י זְכׇר־נָא֙ מַה־יָּעַ֗ץ בָּלָק֙ מֶ֣לֶךְ מוֹאָ֔ב וּמֶה־עָנָ֥ה אֹת֖וֹ בִּלְעָ֣ם בֶּן־בְּע֑וֹר מִן־הַשִּׁטִּים֙ עַד־הַגִּלְגָּ֔ל לְמַ֕עַן דַּ֖עַת צִדְק֥וֹת יְהֹוָֽה׃",
+          "english": "“My people,Remember what Balak king of MoabPlotted against you,And how Balaam son of BeorResponded to him.[Recall your passage]From Shittim to GilgalbFrom Shittim to Gilgal I.e., the crossing of the Jordan; see Josh. 3.1, 14–4.19.—And you will recognizeGOD’s gracious acts.”"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "בַּמָּה֙ אֲקַדֵּ֣ם יְהֹוָ֔ה אִכַּ֖ף לֵאלֹהֵ֣י מָר֑וֹם הַאֲקַדְּמֶ֣נּוּ בְעוֹל֔וֹת בַּעֲגָלִ֖ים בְּנֵ֥י שָׁנָֽה׃",
+          "english": "With what shall I approach GOD,Do homage to God on high?Shall I approach with burnt offerings,With calves a year old?"
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "הֲיִרְצֶ֤ה יְהֹוָה֙ בְּאַלְפֵ֣י אֵילִ֔ים בְּרִֽבְב֖וֹת נַחֲלֵי־שָׁ֑מֶן הַאֶתֵּ֤ן בְּכוֹרִי֙ פִּשְׁעִ֔י פְּרִ֥י בִטְנִ֖י חַטַּ֥את נַפְשִֽׁי׃",
+          "english": "Would GOD be pleased with thousands of rams,With myriads of streams of oil?Shall I give my first-born for my transgression,The fruit of my body for my sins?"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "הִגִּ֥יד לְךָ֛ אָדָ֖ם מַה־טּ֑וֹב וּמָֽה־יְהֹוָ֞ה דּוֹרֵ֣שׁ מִמְּךָ֗ כִּ֣י אִם־עֲשׂ֤וֹת מִשְׁפָּט֙ וְאַ֣הֲבַת חֶ֔סֶד וְהַצְנֵ֥עַ לֶ֖כֶת עִם־אֱלֹהֶֽיךָ׃",
+          "english": "“You have been told, O mortal, what is good,And what GOD requires of you:Only to do justiceAnd to love goodness,And to walk modestly with your God;cto walk modestly with your God Or “it is prudent to serve your God.”"
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ק֤וֹל יְהֹוָה֙ לָעִ֣יר יִקְרָ֔א וְתוּשִׁיָּ֖ה יִרְאֶ֣ה שְׁמֶ֑ךָ שִׁמְע֥וּ מַטֶּ֖ה וּמִ֥י יְעָדָֽהּ׃",
+          "english": "Then will your name achieve wisdom.”dThen will your name achieve wisdom Emendation yields “And it is worthwhile to revere God’s name.” Hark! GOD Summons the city:ethe city Apparently the capital of either the northern or southern kingdom. Hear, O scepter;For who can direct her"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "ע֗וֹד הַאִשׁ֙ בֵּ֣ית רָשָׁ֔ע אֹצְר֖וֹת רֶ֑שַׁע וְאֵיפַ֥ת רָז֖וֹן זְעוּמָֽה׃",
+          "english": "but you?fHear … but you? Meaning of Heb. uncertain. Will I overlook,goverlook Taking ʼish as from nashah “to forget”; cf. Deut. 32.18. in houses of the wicked,The granaries of wickednessAnd the accursed short ephah?hshort ephah Cf. Amos 8.4–5."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "הַאֶזְכֶּ֖ה בְּמֹ֣אזְנֵי רֶ֑שַׁע וּבְכִ֖יס אַבְנֵ֥י מִרְמָֽה׃",
+          "english": "Shall theyithey Heb. “I”; change of vocalization yields “Will I acquit them.” be acquitted despite wicked balancesAnd a bag of fraudulent weights?—"
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "אֲשֶׁ֤ר עֲשִׁירֶ֙יהָ֙ מָלְא֣וּ חָמָ֔ס וְיֹשְׁבֶ֖יהָ דִּבְּרוּ־שָׁ֑קֶר וּלְשׁוֹנָ֖ם רְמִיָּ֥ה בְּפִיהֶֽם׃",
+          "english": "jThis verse would read well after “city” in v. 9. Whose wealthy are full of lawlessness,And whose inhabitants speak treachery,With tongues of deceit in their mouths."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "וְגַם־אֲנִ֖י הֶחֱלֵ֣יתִי הַכּוֹתֶ֑ךָ הַשְׁמֵ֖ם עַל־חַטֹּאתֶֽךָ׃",
+          "english": "I, in turn, have beaten you sore,Have stunned [you] for your sins:"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "אַתָּ֤ה תֹאכַל֙ וְלֹ֣א תִשְׂבָּ֔ע וְיֶשְׁחֲךָ֖ בְּקִרְבֶּ֑ךָ וְתַסֵּג֙ וְלֹ֣א תַפְלִ֔יט וַאֲשֶׁ֥ר תְּפַלֵּ֖ט לַחֶ֥רֶב אֶתֵּֽן׃",
+          "english": "You have been eating without getting your fill,And there is a gnawing at your vitals;You have been conceiving without bearing young,kAnd there is a gnawing … bearing young Meaning of Heb. uncertain. And what you bore I would deliver to the sword."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "אַתָּ֥ה תִזְרַ֖ע וְלֹ֣א תִקְצ֑וֹר אַתָּ֤ה תִדְרֹֽךְ־זַ֙יִת֙ וְלֹא־תָס֣וּךְ שֶׁ֔מֶן וְתִיר֖וֹשׁ וְלֹ֥א תִשְׁתֶּה־יָּֽיִן׃",
+          "english": "You have been sowing, but have nothing to reap;You have trod olives, but have no oil for rubbing,And grapeslgrapes Lit. “new wine.” but have no wine to drink."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "וְיִשְׁתַּמֵּ֞ר חֻקּ֣וֹת עׇמְרִ֗י וְכֹל֙ מַעֲשֵׂ֣ה בֵית־אַחְאָ֔ב וַתֵּלְכ֖וּ בְּמֹעֲצוֹתָ֑ם לְמַ֩עַן֩ תִּתִּ֨י אֹתְךָ֜ לְשַׁמָּ֗ה וְיֹשְׁבֶ֙יהָ֙ לִשְׁרֵקָ֔ה וְחֶרְפַּ֥ת עַמִּ֖י תִּשָּֽׂאוּ׃",
+          "english": "Yet you have keptmyou have kept Heb. “is kept.” the laws of Omri,And all the practices of the House of Ahab,And have followed what they devised.Therefore I will make you an object of horrorAnd the city’snthe city’s Heb. “her”; cf. v. 9. inhabitants an object of hissing;ohissing See note at Jer. 18.16. And you shall bear the mockery of peoples.ppeoples Heb. “My people.”"
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "verseCount": 20,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "אַ֣לְלַי לִ֗י כִּ֤י הָיִ֙יתִי֙ כְּאׇסְפֵּי־קַ֔יִץ כְּעֹלְלֹ֖ת בָּצִ֑יר אֵין־אֶשְׁכּ֣וֹל לֶאֱכ֔וֹל בִּכּוּרָ֖ה אִוְּתָ֥ה נַפְשִֽׁי׃",
+          "english": "Woe is me!ame The speaker is feminine (cf. ʼElohayikh, v. 10), probably Samaria personified; cf. note at 6.16. I am become like leavings of a fig harvest,Like gleanings when the vintage is over,There is not a cluster to eat,Not a ripe fig I could desire."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "אָבַ֤ד חָסִיד֙ מִן־הָאָ֔רֶץ וְיָשָׁ֥ר בָּאָדָ֖ם אָ֑יִן כֻּלָּם֙ לְדָמִ֣ים יֶאֱרֹ֔בוּ אִ֥ישׁ אֶת־אָחִ֖יהוּ יָצ֥וּדוּ חֵֽרֶם׃",
+          "english": "The pious are vanished from the land,None upright are left among its people;All lie in wait to commit crimes,One traps the other in a net."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "עַל־הָרַ֤ע כַּפַּ֙יִם֙ לְהֵיטִ֔יב הַשַּׂ֣ר שֹׁאֵ֔ל וְהַשֹּׁפֵ֖ט בַּשִּׁלּ֑וּם וְהַגָּד֗וֹל דֹּבֵ֨ר הַוַּ֥ת נַפְשׁ֛וֹ ה֖וּא וַֽיְעַבְּתֽוּהָ׃",
+          "english": "bMeaning of verse uncertain. They are eager to do evil:The magistrate makes demands,And the judge [judges] for a fee;The rich one makes a crooked plea,And they grant it."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "טוֹבָ֣ם כְּחֵ֔דֶק יָשָׁ֖ר מִמְּסוּכָ֑ה י֤וֹם מְצַפֶּ֙יךָ֙ פְּקֻדָּתְךָ֣ בָ֔אָה עַתָּ֥ה תִהְיֶ֖ה מְבוּכָתָֽם׃",
+          "english": "The best of them is like a prickly shrub;The [most] upright, worse than a barrier of thorns.On the day you waited for,cOn the day you waited for Meaning of Heb. uncertain. your doom has come—Now their confusion shall come to pass."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "אַל־תַּאֲמִ֣ינֽוּ בְרֵ֔עַ אַֽל־תִּבְטְח֖וּ בְּאַלּ֑וּף מִשֹּׁכֶ֣בֶת חֵיקֶ֔ךָ שְׁמֹ֖ר פִּתְחֵי־פִֽיךָ׃",
+          "english": "Trust no friend,Rely on no intimate;Be guarded in speechWith her who lies in your bosom."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "כִּי־בֵן֙ מְנַבֵּ֣ל אָ֔ב בַּ֚ת קָמָ֣ה בְאִמָּ֔הּ כַּלָּ֖ה בַּחֲמֹתָ֑הּ אֹיְבֵ֥י אִ֖ישׁ אַנְשֵׁ֥י בֵיתֽוֹ׃",
+          "english": "For son spurns father,Daughter rises up against mother,Daughter-in-law against mother-in-law—A man’s own householdAre his enemies."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וַֽאֲנִי֙ בַּיהֹוָ֣ה אֲצַפֶּ֔ה אוֹחִ֖ילָה לֵאלֹהֵ֣י יִשְׁעִ֑י יִשְׁמָעֵ֖נִי אֱלֹהָֽי׃",
+          "english": "Yet I will look to GOD,I will wait for the God who saves me,My God will hear me."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "אַֽל־תִּשְׂמְחִ֤י אֹיַ֙בְתִּי֙ לִ֔י כִּ֥י נָפַ֖לְתִּי קָ֑מְתִּי כִּֽי־אֵשֵׁ֣ב בַּחֹ֔שֶׁךְ יְהֹוָ֖ה א֥וֹר לִֽי׃",
+          "english": "Do not rejoice over me,O my enemy!denemy Heb. feminine, apparently referring to Damascus. Though I have fallen, I rise again;Though I sit in darkness, GOD is my light."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "זַ֤עַף יְהֹוָה֙ אֶשָּׂ֔א כִּ֥י חָטָ֖אתִי ל֑וֹ עַד֩ אֲשֶׁ֨ר יָרִ֤יב רִיבִי֙ וְעָשָׂ֣ה מִשְׁפָּטִ֔י יוֹצִיאֵ֣נִי לָא֔וֹר אֶרְאֶ֖ה בְּצִדְקָתֽוֹ׃",
+          "english": "I must bear GOD’s anger—Against whom I have sinned,Until my cause is championedAnd my claim upheld.I will be brought out into the light;I will enjoy divine vindication."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "וְתֵרֶ֤א אֹיַ֙בְתִּי֙ וּתְכַסֶּ֣הָ בוּשָׁ֔ה הָאֹמְרָ֣ה אֵלַ֔י אַיּ֖וֹ יְהֹוָ֣ה אֱלֹהָ֑יִךְ עֵינַי֙ תִּרְאֶ֣ינָּה בָּ֔הּ עַתָּ֛ה תִּהְיֶ֥ה לְמִרְמָ֖ס כְּטִ֥יט חוּצֽוֹת׃",
+          "english": "When my enemyeenemy See note at v. 8. sees it,She shall be covered with shame,She who taunts me with “Where is this God of yours, the ETERNAL One ?”My eyes shall behold her [downfall];Lo, she shall be for tramplingLike mud in the streets."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "י֖וֹם לִבְנ֣וֹת גְּדֵרָ֑יִךְ י֥וֹם הַה֖וּא יִרְחַק־חֹֽק׃",
+          "english": "A day for mending your wallsfwalls To keep out tramplers (end of preceding verse); cf. Isa. 5.5; Ps. 80.13–14.—That is a far-off day."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "י֥וֹם הוּא֙ וְעָדֶ֣יךָ יָב֔וֹא לְמִנִּ֥י אַשּׁ֖וּר וְעָרֵ֣י מָצ֑וֹר וּלְמִנִּ֤י מָצוֹר֙ וְעַד־נָהָ֔ר וְיָ֥ם מִיָּ֖ם וְהַ֥ר הָהָֽר׃",
+          "english": "This is rather a day when to you[Tramplers] will come streamingFrom Assyria and the towns of Egypt—From [every land from] Egypt to the Euphrates,From sea to sea and from mountain to mountain—"
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "וְהָיְתָ֥ה הָאָ֛רֶץ לִשְׁמָמָ֖ה עַל־יֹשְׁבֶ֑יהָ מִפְּרִ֖י מַעַלְלֵיהֶֽם׃",
+          "english": "And yourgyour Heb. “the.” land shall become a desolation—Because of those who dwell in it—As the fruit of their misdeeds."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "רְעֵ֧ה עַמְּךָ֣ בְשִׁבְטֶ֗ךָ צֹ֚אן נַחֲלָתֶ֔ךָ שֹׁכְנִ֣י לְבָדָ֔ד יַ֖עַר בְּת֣וֹךְ כַּרְמֶ֑ל יִרְע֥וּ בָשָׁ֛ן וְגִלְעָ֖ד כִּימֵ֥י עוֹלָֽם׃",
+          "english": "Oh, shepherd Your people with Your staff,Your very own flock.May they who dwell isolatedIn a woodland surrounded by farmlandhIn a woodland surrounded by farmland I.e., the land west of the Jordan, which is represented as far less fertile than adjacent regions. GrazeiGraze Emendation yields “possess.” Bashan and GileadAs in olden days."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "כִּימֵ֥י צֵאתְךָ֖ מֵאֶ֣רֶץ מִצְרָ֑יִם אַרְאֶ֖נּוּ נִפְלָאֽוֹת׃",
+          "english": "I will show himjI will show him Emendation yields “Show us.” wondrous deedsAs in the days when You sallied forth from the land of Egypt."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "יִרְא֤וּ גוֹיִם֙ וְיֵבֹ֔שׁוּ מִכֹּ֖ל גְּבוּרָתָ֑ם יָשִׂ֤ימוּ יָד֙ עַל־פֶּ֔ה אׇזְנֵיהֶ֖ם תֶּחֱרַֽשְׁנָה׃",
+          "english": "Let nations behold and be ashamedDespite all their might;Let them put hand to mouth;Let their ears be deafened!"
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "יְלַחֲכ֤וּ עָפָר֙ כַּנָּחָ֔שׁ כְּזֹחֲלֵ֣י אֶ֔רֶץ יִרְגְּז֖וּ מִמִּסְגְּרֹֽתֵיהֶ֑ם אֶל־יְהֹוָ֤ה אֱלֹהֵ֙ינוּ֙ יִפְחָ֔דוּ וְיִֽרְא֖וּ מִמֶּֽךָּ׃",
+          "english": "Let them lick dust like snakes,Like crawling things on the ground!Let them come trembling out of their strongholdskLet them come trembling out of their strongholds Meaning of Heb. uncertain. To the ETERNAL our God;Let them fear and dread You!"
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "מִי־אֵ֣ל כָּמ֗וֹךָ נֹשֵׂ֤א עָוֺן֙ וְעֹבֵ֣ר עַל־פֶּ֔שַׁע לִשְׁאֵרִ֖ית נַחֲלָת֑וֹ לֹֽא־הֶחֱזִ֤יק לָעַד֙ אַפּ֔וֹ כִּֽי־חָפֵ֥ץ חֶ֖סֶד הֽוּא׃",
+          "english": "Who is a God like You,Forgiving iniquityAnd remitting transgression—Not staying angry foreverToward the remnant of Your own people,Because YoulYour…You Heb. 3rd person. love graciousness!"
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "יָשׁ֣וּב יְרַחֲמֵ֔נוּ יִכְבֹּ֖שׁ עֲוֺנֹתֵ֑ינוּ וְתַשְׁלִ֛יךְ בִּמְצֻל֥וֹת יָ֖ם כׇּל־חַטֹּאותָֽם׃",
+          "english": "[God] will take us back in love,QuashingmQuashing Or, perhaps, “Forgiving,” as in Akkadian kabasu. our iniquities.You will hurl all ournour Heb. “their.” sinsInto the depths of the sea."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "תִּתֵּ֤ן אֱמֶת֙ לְיַֽעֲקֹ֔ב חֶ֖סֶד לְאַבְרָהָ֑ם אֲשֶׁר־נִשְׁבַּ֥עְתָּ לַאֲבֹתֵ֖ינוּ מִ֥ימֵי קֶֽדֶם׃",
+          "english": "You will keep faith with Jacob,Loyalty to Abraham,As You promised on oath to our fathersIn days gone by."
+        }
+      ]
+    }
+  ]
+}
