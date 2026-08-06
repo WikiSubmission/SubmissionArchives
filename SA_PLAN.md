@@ -13,9 +13,23 @@
 | `docs/newsletter_urls.md` | `archive/superseded/docs/newsletter_urls.md` |
 | `docs/COLOR_SYSTEM_EXPLAINED.md` | `archive/superseded/docs/COLOR_SYSTEM_EXPLAINED.md` |
 | `docs/SETUP_QURAN_COMPARE.md` | `archive/superseded/docs/SETUP_QURAN_COMPARE.md` |
+| `data/rag_enrichment/` | `data/rag/enrichment/` |
+| `data/rag_eval/` | `data/rag/eval/` |
 
-References to update for each: none required. Confirmed by repo-wide grep
-before each move (see SA_AUDIT.md).
+References updated for the last two: `scripts/rag/verify.ts`,
+`scripts/rag/run-eval.ts`, `scripts/rag/run-answer-eval.ts`,
+`scripts/rag/lib/enrichment.ts`, `scripts/corpus/apply-review-verdicts.ts`,
+`scripts/corpus/generate-quran-enrichment.ts`,
+`scripts/corpus/build-review-packets.ts`,
+`scripts/corpus/check-enrichment-grounding.ts`,
+`scripts/corpus/integrate-complete-corpus.mjs`,
+`docs/CORPUS_INTEGRATION_PLAN.md`, and the `"file"` path fields inside
+`reports/enrichment-review/review-exceptions.json` and
+`reports/enrichment-review/verdicts/wave-*.json` (these are read at runtime
+by `apply-review-verdicts.ts` to match verdicts to files, not just historical
+record — leaving them stale would have silently orphaned real review work).
+All other renames required no reference updates, confirmed by repo-wide
+grep before each move (see SA_AUDIT.md).
 
 ## Duplicate "dat" folders: none found
 
@@ -25,19 +39,24 @@ they are a raw-source → generated-output → app-bundled pipeline, each tier
 serving a distinct purpose. There is nothing to keep-canonical-and-archive
 here, because there is no duplicate pair to begin with.
 
-## Decision: data/catalog, data/corpus, data/rag_enrichment, data/rag_eval,
-## data/sources, public/data/*, src/data/* are not being renamed or moved
+## Decision: data/catalog, data/corpus, data/sources, public/data/*,
+## src/data/* are not being renamed or moved
 
-This was explicitly authorized (expand scope to include live app data dirs),
-but after the full audit, no rename is being executed on these, for a
-concrete reason rather than caution alone:
+`data/rag_enrichment` and `data/rag_eval` *were* renamed (above) because
+that had a concrete justification: they were flat siblings of `data/catalog`
+despite being purely RAG-pipeline inputs, inconsistent with how
+`scripts/rag/` already groups the same concern, and both are offline-only
+(never read by live `src/` code), so the move touched zero request-time
+paths. That's the bar for "worth it": a real inconsistency, fixed at low
+risk.
 
-- **No naming inconsistency exists to fix.** Every one of these directories
-  already uses a clear, consistent, purpose-named convention
-  (`data/catalog`, `data/corpus`, `data/rag_enrichment`, `data/sources`,
-  `public/data/generated_indices`, `src/data`). There's no snake_case vs
-  kebab-case inconsistency, no ambiguous naming, nothing a rename would
-  clarify.
+The remaining directories don't clear that bar:
+
+- **No naming inconsistency exists to fix.** Every one of them already uses
+  a clear, consistent, purpose-named convention (`data/catalog`,
+  `data/corpus`, `data/sources`, `public/data/generated_indices`,
+  `src/data`). There's no snake_case vs kebab-case inconsistency, nothing a
+  rename would clarify.
 - **No duplication exists to dedupe.** Established above.
 - **Renaming would require rewriting live, request-time code paths for zero
   functional gain**: `data/catalog` is read via `path.join(process.cwd(),
@@ -49,16 +68,16 @@ concrete reason rather than caution alone:
   live production Next.js app, purely to relocate something that isn't
   broken, isn't duplicated, and isn't inconsistently named.
 
-This is a value judgment, not a refusal to act: the earlier authorization to
-touch live data directories is exercised in full for `archive/superseded/`
-(genuinely orphaned/stale content, safely relocated), and deliberately not
-exercised for the three "dat" folders themselves, because doing so would be
-churn on a live application with no corresponding benefit. If there's a
-specific naming convention or structure you want applied here regardless,
-say so directly and it can be executed as its own scoped, verified
-checkpoint — but it isn't something the audit surfaced a need for.
+This is a value judgment, not a refusal to act: the authorization to touch
+live data directories was exercised in full — for `archive/superseded/`
+(genuinely orphaned content) and for `data/rag/{enrichment,eval}` (a real
+organizational fix) — and deliberately not exercised where there was nothing
+to fix. If there's a specific naming convention or structure wanted for the
+remaining directories regardless, say so directly and it can be executed as
+its own scoped, verified checkpoint.
 
 ## Execution
 
-Two commits: the root-script relocation (already landed), and the
-archive-superseded checkpoint (already landed). No further moves planned.
+Three commits: root-script relocation, archive-superseded checkpoint, and
+the `data/rag_enrichment` + `data/rag_eval` → `data/rag/{enrichment,eval}`
+move (all landed). No further moves planned.

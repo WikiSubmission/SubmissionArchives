@@ -42,10 +42,29 @@ This pass ran a full explore → plan → execute → verify cycle:
 | `docs/COLOR_SYSTEM_EXPLAINED.md` | `archive/superseded/docs/COLOR_SYSTEM_EXPLAINED.md` | Describes an unrelated project (`rk-media-platform`) |
 | `docs/SETUP_QURAN_COMPARE.md` | `archive/superseded/docs/SETUP_QURAN_COMPARE.md` | Same unrelated project; references a file that doesn't exist here |
 
-Both checkpoints verified clean: `git mv` reported 100% renames with 0
-insertions/deletions, pre/post SHA-256 hashes matched exactly, and a
-repo-wide grep for every old path returned no functional stale references
-(only a generated inventory CSV that regenerates on its own).
+**Checkpoint 3 — real organizational fix, once live-data-dir scope was authorized:**
+
+| Old path | New path | Why |
+|---|---|---|
+| `data/rag_enrichment/` (169 files) | `data/rag/enrichment/` | Was a flat sibling of `data/catalog` despite being a pure RAG-pipeline input; now mirrors `scripts/rag/`'s existing grouping |
+| `data/rag_eval/` (64 files) | `data/rag/eval/` | Same reasoning |
+
+This one had every reference updated: 9 script files
+(`scripts/rag/*.ts`, `scripts/rag/lib/enrichment.ts`,
+`scripts/corpus/*.ts`, `scripts/corpus/integrate-complete-corpus.mjs`),
+`docs/CORPUS_INTEGRATION_PLAN.md`, and the `"file"` path fields inside
+`reports/enrichment-review/review-exceptions.json` and 13
+`verdicts/wave-*.json` files — the last of these matters functionally, not
+just cosmetically, since `apply-review-verdicts.ts` matches verdicts to
+files by that exact string at runtime.
+
+All three checkpoints verified clean: `git mv` reported 100% renames with 0
+insertions/deletions, pre/post SHA-256 hashes matched exactly across all
+moved files, a repo-wide grep for every old path returned no functional
+stale references (only a generated inventory CSV that regenerates on its
+own), `tsc --noEmit` showed zero new type errors, and
+`scripts/rag/plan-ingest.ts` was actually run against the new paths —
+382 documents, 1586 enrichment sections, no FileNotFoundError.
 
 ## The "multiple dat folders": there weren't any
 
@@ -66,12 +85,17 @@ None of these duplicate each other. The 13 true duplicate-hash groups found
 across the full 1,149-file scan are adjacent batch-processed thumbnails and
 intentional "latest pointer" report aliases — not stray copies of anything.
 
-Given that, `data/catalog`, `data/corpus`, `data/rag_enrichment`,
-`data/rag_eval`, `data/sources`, `public/data/*`, and `src/data/*` were
-deliberately not renamed or moved, despite having authorization to do so.
-There was no naming inconsistency or duplication for a rename to fix, and
-doing it anyway would mean rewriting live request-time code paths in a
-production app for no functional benefit. Full reasoning in SA_PLAN.md.
+`data/rag_enrichment` and `data/rag_eval` did get moved (checkpoint 3 above),
+because they were a genuine exception: a real organizational inconsistency
+(not mirroring `scripts/rag/`'s grouping), fixable at zero risk since
+neither is read by live `src/` code.
+
+`data/catalog`, `data/corpus`, `data/sources`, `public/data/*`, and
+`src/data/*` were deliberately not renamed or moved, despite having
+authorization to do so. There was no naming inconsistency or duplication for
+a rename to fix, and doing it anyway would mean rewriting live request-time
+code paths in a production app for no functional benefit. Full reasoning in
+SA_PLAN.md.
 
 ## Files whose purpose was genuinely unclear
 
@@ -97,6 +121,8 @@ production app for no functional benefit. Full reasoning in SA_PLAN.md.
 7. `refactor: relocate orphaned transcript scripts into scripts/process`
 8. `docs: add SA reorg audit, plan, and report`
 9. `chore: archive orphaned data and misplaced docs`
+10. `docs: finalize comprehensive SA audit, plan, and report`
+11. `refactor: nest rag_enrichment and rag_eval under data/rag`
 
 All work is on branch `chore/sa-reorg-audit`, created from `main` before any
 changes. Nothing has been pushed or merged.

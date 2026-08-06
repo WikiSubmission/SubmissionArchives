@@ -94,13 +94,23 @@ using `__file__`/`__dirname` resolution are location-independent.
 | `docs/newsletter_urls.md` | `archive/superseded/docs/newsletter_urls.md` | ✅ |
 | `docs/COLOR_SYSTEM_EXPLAINED.md` | `archive/superseded/docs/COLOR_SYSTEM_EXPLAINED.md` | ✅ |
 | `docs/SETUP_QURAN_COMPARE.md` | `archive/superseded/docs/SETUP_QURAN_COMPARE.md` | ✅ |
+| `data/rag_enrichment/*` (169 files) | `data/rag/enrichment/*` | ✅ |
+| `data/rag_eval/*` (64 files) | `data/rag/eval/*` | ✅ |
 
 All verified via `git mv` (100% rename, 0 insertions/deletions), pre/post
-SHA-256 match, and repo-wide grep returning no functional stale references
-(only a generated inventory CSV that will regenerate correctly).
+SHA-256 match across all 233 rag files, `tsc --noEmit` showing zero new
+errors, and `scripts/rag/plan-ingest.ts` executed end to end against the new
+paths (382 documents, 1586 enrichment sections, no FileNotFoundError).
+Every code, doc, and report reference to the old `rag_enrichment`/`rag_eval`
+paths — including the "file" fields inside
+`reports/enrichment-review/verdicts/wave-*.json`, which
+`apply-review-verdicts.ts` matches against at runtime — was updated in the
+same checkpoint.
 
 ## 6. What was deliberately not renamed, and why
 
-`data/catalog`, `data/corpus`, `data/rag_enrichment`, `data/rag_eval`,
-`data/sources`, `public/data/*`, `src/data/*` — no rename or restructuring
-was performed. See SA_PLAN.md for the reasoning.
+`data/catalog`, `data/corpus`, `data/sources`, `public/data/*`,
+`src/data/*` — no rename or restructuring was performed. See SA_PLAN.md for
+the reasoning: unlike `rag_enrichment`/`rag_eval`, none of these have an
+actual naming inconsistency or duplication to fix, and all of them are read
+by live, request-time application code.
