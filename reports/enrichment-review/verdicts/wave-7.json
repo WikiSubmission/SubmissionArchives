@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-38-certainty-1989-11-29.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-38-certainty-1989-11-29.json",
     "sections": [
       {"id": "parivash38-s01", "verdict": "approve"},
       {"id": "parivash38-s02", "verdict": "approve"},
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-39-sura-60-sura-61-rich-believer-certainty-insurance-1989-12-28.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-39-sura-60-sura-61-rich-believer-certainty-insurance-1989-12-28.json",
     "sections": [
       {"id": "parivash39-s01", "verdict": "approve"},
       {"id": "parivash39-s02", "verdict": "approve"},
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-40-sura-3-59-80-1989-12-29.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-40-sura-3-59-80-1989-12-29.json",
     "sections": [
       {"id": "parivash40-s01", "verdict": "approve"},
       {"id": "parivash40-s02", "verdict": "approve"},
@@ -35,7 +35,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-41-sura-54-al-fatihah-libertarianism.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-41-sura-54-al-fatihah-libertarianism.json",
     "sections": [
       {"id": "audio41-s01", "verdict": "approve"},
       {"id": "audio41-s02", "verdict": "approve"},
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-roxana-42-ray-caton-interview-quran-alone-finance-ritual.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-roxana-42-ray-caton-interview-quran-alone-finance-ritual.json",
     "sections": [
       {"id": "audio42-s01", "verdict": "approve"},
       {"id": "audio42-s02", "verdict": "approve"},
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-roxana-43-third-international-conference-sura-17-wisdom-insurance.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-roxana-43-third-international-conference-sura-17-wisdom-insurance.json",
     "sections": [
       {"id": "audio43-s01", "verdict": "approve"},
       {"id": "audio43-s02", "verdict": "approve"},
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-roxana-44-sura-64-sura-59-sura-70-composite.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-roxana-44-sura-64-sura-59-sura-70-composite.json",
     "sections": [
       {"id": "audio44-s01", "verdict": "approve"},
       {"id": "audio44-s02", "verdict": "approve"},
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-roxana-45-sura-40-messenger-dreams-afterlife-food.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-roxana-45-sura-40-messenger-dreams-afterlife-food.json",
     "sections": [
       {"id": "audio45-s01", "verdict": "approve"},
       {"id": "audio45-s02", "verdict": "approve"},

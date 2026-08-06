@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-30-sura-28-sura-57-insurance-rabbi-judah.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-30-sura-28-sura-57-insurance-rabbi-judah.json",
     "sections": [
       {"id": "parivash30-s01", "verdict": "approve"},
       {"id": "parivash30-s02", "verdict": "approve"},
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-31-sura-18-sura-81-adhan-salat-1989-11-04.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-31-sura-18-sura-81-adhan-salat-1989-11-04.json",
     "sections": [
       {"id": "parivash31-s01", "verdict": "approve"},
       {"id": "parivash31-s02", "verdict": "approve"},
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-32-excerpt-quran-24-55-quran-22-15-mosque-children-1989-12-28.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-32-excerpt-quran-24-55-quran-22-15-mosque-children-1989-12-28.json",
     "sections": [
       {"id": "parivash32-s01", "verdict": "approve"},
       {"id": "parivash32-s02", "verdict": "approve"},
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-33-sura-74-1989-06-02.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-33-sura-74-1989-06-02.json",
     "sections": [
       {"id": "parivash33-s01", "verdict": "approve"},
       {"id": "parivash33-s02", "verdict": "approve"},
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-34-sura-33-prayer-innovations-god-physical.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-34-sura-33-prayer-innovations-god-physical.json",
     "sections": [
       {"id": "parivash34-s01", "verdict": "approve"},
       {"id": "parivash34-s02", "verdict": "approve"},
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-35-sura-30-brewery-intercession-divine-control.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-35-sura-30-brewery-intercession-divine-control.json",
     "sections": [
       {"id": "parivash35-s01", "verdict": "approve"},
       {"id": "parivash35-s02", "verdict": "approve"},
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-36-mathematical-miracles-sura-7-deliberate-mistakes.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-36-mathematical-miracles-sura-7-deliberate-mistakes.json",
     "sections": [
       {"id": "parivash36-s01", "verdict": "approve"},
       {"id": "parivash36-s02", "verdict": "approve"},
@@ -78,7 +78,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-37-shakira-home-sura-10-68-1989-11-04.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-37-shakira-home-sura-10-68-1989-11-04.json",
     "sections": [
       {"id": "parivash37-s01", "verdict": "approve"},
       {"id": "parivash37-s02", "verdict": "approve"},

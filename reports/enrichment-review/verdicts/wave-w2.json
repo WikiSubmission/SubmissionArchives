@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/written-works/quran-visual-presentation.json",
+    "file": "data/rag/enrichment/written-works/quran-visual-presentation.json",
     "sections": [
       {
         "id": "qvp-s01",
@@ -35,7 +35,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/english-meanings-of-the-quran.json",
+    "file": "data/rag/enrichment/written-works/english-meanings-of-the-quran.json",
     "sections": [
       {
         "id": "emq-s00",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/salat-booklet.json",
+    "file": "data/rag/enrichment/written-works/salat-booklet.json",
     "sections": [
       {
         "id": "sb-s00",
@@ -81,7 +81,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/perpetual-miracle.json",
+    "file": "data/rag/enrichment/written-works/perpetual-miracle.json",
     "sections": [
       {
         "id": "pm-s00",

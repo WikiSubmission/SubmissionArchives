@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-48-parivash-home-salat-zakat-messenger-debate-1989-01-11.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-48-parivash-home-salat-zakat-messenger-debate-1989-01-11.json",
     "sections": [
       {
         "id": "audio48-s07",
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-12-community-dispute-1990-01-25.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-12-community-dispute-1990-01-25.json",
     "sections": [
       {
         "id": "behrouz12-s08",
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-13-sura-7-adam-eve-bodies-1989-12-24.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-13-sura-7-adam-eve-bodies-1989-12-24.json",
     "sections": [
       {
         "id": "behrouz13-s07",
@@ -31,7 +31,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-30-sura-28-sura-57-insurance-rabbi-judah.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-30-sura-28-sura-57-insurance-rabbi-judah.json",
     "sections": [
       {
         "id": "parivash30-s08",
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-34-sura-33-prayer-innovations-god-physical.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-34-sura-33-prayer-innovations-god-physical.json",
     "sections": [
       {
         "id": "parivash34-s07",
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-35-sura-30-brewery-intercession-divine-control.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-35-sura-30-brewery-intercession-divine-control.json",
     "sections": [
       {
         "id": "parivash35-s07",
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-38-certainty-1989-11-29.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-38-certainty-1989-11-29.json",
     "sections": [
       {
         "id": "parivash38-s08",
@@ -75,7 +75,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-39-sura-60-sura-61-rich-believer-certainty-insurance-1989-12-28.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-39-sura-60-sura-61-rich-believer-certainty-insurance-1989-12-28.json",
     "sections": [
       {
         "id": "parivash39-s08",
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-roxana-45-sura-40-messenger-dreams-afterlife-food.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-roxana-45-sura-40-messenger-dreams-afterlife-food.json",
     "sections": [
       {
         "id": "audio45-s07",
@@ -101,7 +101,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/video-program/old-message-new-messenger.json",
+    "file": "data/rag/enrichment/video-program/old-message-new-messenger.json",
     "sections": [
       {
         "id": "messenger-01-s23",

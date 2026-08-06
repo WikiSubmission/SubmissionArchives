@@ -18,7 +18,7 @@ const MASTER_INDEX_PATH = path.resolve(
   'generated_indices',
   'MASTER_INDEX.json',
 );
-const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag_enrichment');
+const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag', 'enrichment');
 const REPORT_DIR = path.resolve(process.cwd(), 'reports', 'enrichment-review');
 const MIN_TERM_LENGTH = 4;
 const FLAG_MISSING_TERMS = 3;

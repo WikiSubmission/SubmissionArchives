@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-roxana-46-sura-38-sura-9-sura-39-admission-test.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-roxana-46-sura-38-sura-9-sura-39-admission-test.json",
     "sections": [
       {
         "id": "audio46-s01",
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-roxana-47-blue-quran-introduction-al-fatihah-sura-2.json",
     "sections": [
       {
         "id": "audio47-s01",
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/zikr-55-october-23-1982.json",
+    "file": "data/rag/enrichment/audio-program/zikr-55-october-23-1982.json",
     "sections": [
       {
         "id": "audio55-s01",
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/video-program/mathematical-miracle-of-quran.json",
+    "file": "data/rag/enrichment/video-program/mathematical-miracle-of-quran.json",
     "sections": [
       {
         "id": "mathquran-01-s01",
@@ -174,7 +174,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/video-program/old-message-new-messenger.json",
+    "file": "data/rag/enrichment/video-program/old-message-new-messenger.json",
     "sections": [
       {
         "id": "messenger-01-s01",
@@ -267,7 +267,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/video-program/what-is-life-all-about.json",
+    "file": "data/rag/enrichment/video-program/what-is-life-all-about.json",
     "sections": [
       {
         "id": "life-01-s01",
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/video-program/who-is-god.json",
+    "file": "data/rag/enrichment/video-program/who-is-god.json",
     "sections": [
       {
         "id": "god-01-s01",
@@ -377,7 +377,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/video-program/witness-a-miracle-world-news-bulletin.json",
+    "file": "data/rag/enrichment/video-program/witness-a-miracle-world-news-bulletin.json",
     "sections": [
       {
         "id": "miracle-01-s01",

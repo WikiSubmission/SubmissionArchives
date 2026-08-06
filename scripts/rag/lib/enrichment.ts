@@ -97,7 +97,7 @@ interface InventoryRow {
   note: string;
 }
 
-const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag_enrichment');
+const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag', 'enrichment');
 const INVENTORY_PATH = path.resolve(process.cwd(), 'data', 'corpus', 'all_source_inventory.csv');
 const WRITTEN_RELATIONSHIPS_PATH = path.resolve(
   process.cwd(),

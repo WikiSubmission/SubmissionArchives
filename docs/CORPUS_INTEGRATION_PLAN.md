@@ -28,8 +28,8 @@ The extracted package in the repository root is currently inert. No route reads 
 | 1989 Quran source bundle | `data/sources/quran/1989/` |
 | 1992 final Quran CSVs | `data/sources/quran/1992/` |
 | Human-readable corpus guides | `docs/corpus/` |
-| Draft section enrichment | `data/rag_enrichment/<source-class>/<slug>.json` |
-| Retrieval evaluation cases | `data/rag_eval/<source-class>/<slug>.json` |
+| Draft section enrichment | `data/rag/enrichment/<source-class>/<slug>.json` |
+| Retrieval evaluation cases | `data/rag/eval/<source-class>/<slug>.json` |
 | Cross-corpus manifests and comparison data | `data/corpus/` |
 
 ## Version 2 corrections
@@ -62,7 +62,7 @@ It changes nothing.
 - copies corpus guides to `docs/corpus`
 - copies compact cross-corpus metadata to `data/corpus`
 - deduplicates enrichment and evaluation JSON by `document_id`
-- places them under `data/rag_enrichment` and `data/rag_eval`
+- places them under `data/rag/enrichment` and `data/rag/eval`
 - copies a historical Quran JSON only when its canonical destination is absent
 - does not overwrite transcript conflicts
 - creates rollback copies of any existing metadata file it changes

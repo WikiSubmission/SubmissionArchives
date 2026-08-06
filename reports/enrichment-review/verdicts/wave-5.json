@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-22-sura-39-admission-test-no-compromise.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-22-sura-39-admission-test-no-compromise.json",
     "sections": [
       {"id": "behrouz22-s01", "verdict": "approve"},
       {"id": "behrouz22-s02", "verdict": "approve"},
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-23-sura-51-protection-from-accidents.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-23-sura-51-protection-from-accidents.json",
     "sections": [
       {"id": "behrouz23-s01", "verdict": "approve"},
       {"id": "behrouz23-s02", "verdict": "approve"},
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-24-sura-55-sura-56.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-24-sura-55-sura-56.json",
     "sections": [
       {"id": "behrouz24-s01", "verdict": "approve"},
       {"id": "behrouz24-s02", "verdict": "approve"},
@@ -35,7 +35,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-25-sura-58.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-25-sura-58.json",
     "sections": [
       {"id": "behrouz25-s01", "verdict": "approve"},
       {"id": "behrouz25-s02", "verdict": "approve"},
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-26-sura-67-hamid-argument.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-26-sura-67-hamid-argument.json",
     "sections": [
       {"id": "behrouz26-s01", "verdict": "approve"},
       {"id": "behrouz26-s02", "verdict": "approve"},
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-27-sura-14-sura-17-chastity-pregnancy.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-27-sura-14-sura-17-chastity-pregnancy.json",
     "sections": [
       {"id": "behrouz27-s01", "verdict": "approve"},
       {"id": "behrouz27-s02", "verdict": "approve"},
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-28-sura-45-sura-46-code-19.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-28-sura-45-sura-46-code-19.json",
     "sections": [
       {"id": "parivash28-s01", "verdict": "approve"},
       {"id": "parivash28-s02", "verdict": "approve"},
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-parivash-29-admission-final-test-1985.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-parivash-29-admission-final-test-1985.json",
     "sections": [
       {"id": "parivash29-s01", "verdict": "approve"},
       {"id": "parivash29-s02", "verdict": "approve"},

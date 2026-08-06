@@ -18,7 +18,7 @@ const EXCEPTIONS_PATH = path.resolve(
   'enrichment-review',
   'review-exceptions.json',
 );
-const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag_enrichment');
+const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag', 'enrichment');
 
 interface Verdict {
   id: string;

@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-56-quran-alone-obeying-messenger-1982-10-29.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-56-quran-alone-obeying-messenger-1982-10-29.json",
     "sections": [
       {
         "id": "audio56-s01",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-58-sura-2-gabriel-angels-fajr-1982-11-12.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-58-sura-2-gabriel-angels-fajr-1982-11-12.json",
     "sections": [
       {
         "id": "audio58-s01",
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-59-adam-eve-garments-1982-11-19.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-59-adam-eve-garments-1982-11-19.json",
     "sections": [
       {
         "id": "audio59-s01",
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-60-abrogation-scripture-communities-quran-2-1982-11-19.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-60-abrogation-scripture-communities-quran-2-1982-11-19.json",
     "sections": [
       {
         "id": "audio60-s01",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-61-greatness-god-satan-three-strategies-mosque-1982.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-61-greatness-god-satan-three-strategies-mosque-1982.json",
     "sections": [
       {
         "id": "audio61-s01",
@@ -137,7 +137,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-63-adam-eve-qiblah-1982-12-03.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-63-adam-eve-qiblah-1982-12-03.json",
     "sections": [
       {
         "id": "audio63-s01",
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-66-greatness-god-food-prohibitions-righteousness-1982-12-10.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-66-greatness-god-food-prohibitions-righteousness-1982-12-10.json",
     "sections": [
       {
         "id": "audio66-s01",
@@ -191,7 +191,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/friday-sermon-68-adam-names-remembrance-code-19-libya-1982-12-17.json",
+    "file": "data/rag/enrichment/audio-program/friday-sermon-68-adam-names-remembrance-code-19-libya-1982-12-17.json",
     "sections": [
       {
         "id": "audio68-s01",

@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/written-works/islam-volume-1-number-1-april-1974.json",
+    "file": "data/rag/enrichment/written-works/islam-volume-1-number-1-april-1974.json",
     "sections": [
       {"id": "iv1-s01", "verdict": "approve"},
       {"id": "iv1-s02", "verdict": "approve"},
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/islam-volume-1-number-2-july-1974.json",
+    "file": "data/rag/enrichment/written-works/islam-volume-1-number-2-july-1974.json",
     "sections": [
       {"id": "iv2-s01", "verdict": "approve"},
       {"id": "iv2-s02", "verdict": "approve"},
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/islam-volume-1-number-3-4-january-1975.json",
+    "file": "data/rag/enrichment/written-works/islam-volume-1-number-3-4-january-1975.json",
     "sections": [
       {"id": "iv34-s01", "verdict": "approve"},
       {"id": "iv34-s02", "verdict": "approve"},
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/quran-hadith-islam.json",
+    "file": "data/rag/enrichment/written-works/quran-hadith-islam.json",
     "sections": [
       {"id": "qhi-s01", "verdict": "approve"},
       {"id": "qhi-s02", "verdict": "approve"},
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/eternity-screenplay.json",
+    "file": "data/rag/enrichment/written-works/eternity-screenplay.json",
     "sections": [
       {"id": "es-s01", "verdict": "approve"},
       {"id": "es-s02", "verdict": "approve"},

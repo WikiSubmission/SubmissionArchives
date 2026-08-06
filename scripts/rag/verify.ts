@@ -12,7 +12,7 @@ const MASTER_INDEX_PATH = path.resolve(
   'generated_indices',
   'MASTER_INDEX.json',
 );
-const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag_eval');
+const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag', 'eval');
 const GOLD_PROBE_COUNT = 12;
 const GOLD_PROBE_TOP_N = 20;
 const GOLD_PROBE_MIN_PASS_RATIO = 0.5;

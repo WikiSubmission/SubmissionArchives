@@ -11,8 +11,8 @@ import type {
   RetrievalOptions,
 } from '../../src/lib/rag/types';
 
-const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag_eval');
-const ENRICHMENT_DIR = path.resolve(process.cwd(), 'data', 'rag_enrichment');
+const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag', 'eval');
+const ENRICHMENT_DIR = path.resolve(process.cwd(), 'data', 'rag', 'enrichment');
 const REPORT_DIR = path.resolve(process.cwd(), 'reports', 'rag-eval');
 const EMBED_BATCH_SIZE = Number(process.env.RAG_EMBED_BATCH_SIZE) || 32;
 const RECALL_CUTOFFS = [5, 10, 24] as const;

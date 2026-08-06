@@ -11,7 +11,7 @@ import { streamChatCompletion, extractDeltaText } from '../../src/lib/rag/mistra
  * retrieval eval (run-eval.ts) does not.
  */
 
-const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag_eval');
+const EVAL_DIR = path.resolve(process.cwd(), 'data', 'rag', 'eval');
 const REPORT_DIR = path.resolve(process.cwd(), 'reports', 'rag-answer-eval');
 const DEFAULT_SAMPLE = 24;
 const JUDGE_MODEL = process.env.RAG_JUDGE_MODEL || 'mistral-large-2512';

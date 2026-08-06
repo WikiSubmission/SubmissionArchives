@@ -1,6 +1,6 @@
 [
  {
-  "file": "data/rag_enrichment/written-works/computer-speaks.json",
+  "file": "data/rag/enrichment/written-works/computer-speaks.json",
   "sections": [
    {
     "id": "cs-s01",
@@ -137,7 +137,7 @@
   ]
  },
  {
-  "file": "data/rag_enrichment/written-works/miracle-of-quran-alphabets.json",
+  "file": "data/rag/enrichment/written-works/miracle-of-quran-alphabets.json",
   "sections": [
    {
     "id": "mqa-s01",

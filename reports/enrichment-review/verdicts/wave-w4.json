@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/written-works/islam-volume-1-number-1-april-1974.json",
+    "file": "data/rag/enrichment/written-works/islam-volume-1-number-1-april-1974.json",
     "sections": [
       {
         "id": "iv1-s09",
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/islam-volume-1-number-2-july-1974.json",
+    "file": "data/rag/enrichment/written-works/islam-volume-1-number-2-july-1974.json",
     "sections": [
       {
         "id": "iv2-s08",
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/written-works/quran-visual-presentation.json",
+    "file": "data/rag/enrichment/written-works/quran-visual-presentation.json",
     "sections": [
       {
         "id": "qvp-s08",

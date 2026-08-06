@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-48-parivash-home-salat-zakat-messenger-debate-1989-01-11.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-48-parivash-home-salat-zakat-messenger-debate-1989-01-11.json",
     "sections": [
       {"id": "audio48-s01", "verdict": "approve"},
       {"id": "audio48-s02", "verdict": "approve"},
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-49-code-19-heavenly-feud-1989-11-05.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-49-code-19-heavenly-feud-1989-11-05.json",
     "sections": [
       {"id": "audio49-s01", "verdict": "approve"},
       {"id": "audio49-s02", "verdict": "approve"},
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-50-suras-92-93-94-zakat-1989-07-27.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-50-suras-92-93-94-zakat-1989-07-27.json",
     "sections": [
       {"id": "audio50-s01", "verdict": "approve"},
       {"id": "audio50-s02", "verdict": "approve"},
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-51-sura-17-59-satan-jinn-brewery-1990.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-51-sura-17-59-satan-jinn-brewery-1990.json",
     "sections": [
       {"id": "audio51-s01", "verdict": "approve"},
       {"id": "audio51-s02", "verdict": "approve"},
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-52-al-fatihah-prayer-concentration-partial-1989-05-08.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-52-al-fatihah-prayer-concentration-partial-1989-05-08.json",
     "sections": [
       {"id": "audio52-s01", "verdict": "approve"},
       {"id": "audio52-s02", "verdict": "approve"},
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-53-october-22-1982-original-al-fatihah-prelude.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-53-october-22-1982-original-al-fatihah-prelude.json",
     "sections": [
       {"id": "audio53-s01", "verdict": "approve"},
       {"id": "audio53-s02", "verdict": "approve"},
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-54-october-22-1982-sura-2-adam-angels.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-54-october-22-1982-sura-2-adam-angels.json",
     "sections": [
       {"id": "audio54-s01", "verdict": "approve"},
       {"id": "audio54-s02", "verdict": "approve"},
@@ -75,7 +75,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-57-november-5-1982-sura-2-scripture-distortion.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-57-november-5-1982-sura-2-scripture-distortion.json",
     "sections": [
       {"id": "audio57-s01", "verdict": "approve"},
       {"id": "audio57-s02", "verdict": "approve"},

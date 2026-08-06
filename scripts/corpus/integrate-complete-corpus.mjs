@@ -931,7 +931,7 @@ function stage(packageRoot, report) {
   const coverageById = new Map(coverage.map((item) => [item.documentId, item]));
 
   for (const item of enrichment.chosen) {
-    const destination = path.join(ROOT, 'data', 'rag_enrichment', `${item.documentId}.json`);
+    const destination = path.join(ROOT, 'data', 'rag', 'enrichment', `${item.documentId}.json`);
     const mapped = coverageById.get(item.documentId);
     writeNormalizedJson(
       destination,
@@ -942,7 +942,7 @@ function stage(packageRoot, report) {
   }
 
   for (const item of evaluation.chosen) {
-    const destination = path.join(ROOT, 'data', 'rag_eval', `${item.documentId}.json`);
+    const destination = path.join(ROOT, 'data', 'rag', 'eval', `${item.documentId}.json`);
     const mapped = coverageById.get(item.documentId);
     const normalized = JSON.parse(JSON.stringify(item.record.data));
     normalized.canonical_document_id = mapped?.catalogIds?.[0] || null;
@@ -951,7 +951,7 @@ function stage(packageRoot, report) {
     writeNormalizedJson(destination, normalized, stamp, operations);
   }
 
-  writeJson(path.join(ROOT, 'data', 'rag_enrichment', 'manifest.json'), {
+  writeJson(path.join(ROOT, 'data', 'rag', 'enrichment', 'manifest.json'), {
     generatedAt: new Date().toISOString(),
     reviewRule: 'All enrichment remains draft metadata and may never be quoted as canonical evidence.',
     sourcePackage: path.basename(packageRoot),
@@ -959,7 +959,7 @@ function stage(packageRoot, report) {
     duplicateCopiesRemoved: enrichment.chosen.reduce((sum, item) => sum + item.duplicateCopies, 0),
     catalogCoverage: coverage,
   });
-  operations.push({ action: 'created-or-updated', destination: 'data/rag_enrichment/manifest.json' });
+  operations.push({ action: 'created-or-updated', destination: 'data/rag/enrichment/manifest.json' });
 
   // Preserve current canonical source paths. Copy only a genuinely absent historical
   // Quran complete JSON, never overwrite a different existing transcription.
@@ -1036,9 +1036,9 @@ function verify(packageRoot) {
     errors.push(`Live code references the extracted package: ${report.packageReferencesInLiveCode.join(', ')}`);
   }
 
-  const manifest = path.join(ROOT, 'data', 'rag_enrichment', 'manifest.json');
+  const manifest = path.join(ROOT, 'data', 'rag', 'enrichment', 'manifest.json');
   if (!existsSync(manifest)) {
-    errors.push('data/rag_enrichment/manifest.json is missing; run stage first');
+    errors.push('data/rag/enrichment/manifest.json is missing; run stage first');
   }
 
   if (!ARGS.has('--skip-project-checks')) {

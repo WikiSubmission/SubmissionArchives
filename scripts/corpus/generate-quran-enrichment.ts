@@ -25,7 +25,7 @@ const COMPARISON_PATH = path.resolve(
   'quran_three_edition_comparison.jsonl',
 );
 const DOSSIER_PATH = path.resolve(process.cwd(), 'data', 'corpus', 'sura9_128_129_dossier.json');
-const OUTPUT_DIR = path.resolve(process.cwd(), 'data', 'rag_enrichment', 'quran-editions');
+const OUTPUT_DIR = path.resolve(process.cwd(), 'data', 'rag', 'enrichment', 'quran-editions');
 const SNIPPET_MAX_CHARS = 110;
 
 interface ComparisonRecord {

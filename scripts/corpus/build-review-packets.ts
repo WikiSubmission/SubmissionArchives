@@ -16,7 +16,7 @@ const MASTER_INDEX_PATH = path.resolve(
   'generated_indices',
   'MASTER_INDEX.json',
 );
-const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag_enrichment');
+const ENRICHMENT_ROOT = path.resolve(process.cwd(), 'data', 'rag', 'enrichment');
 const PACKET_DIR = path.resolve(process.cwd(), 'reports', 'enrichment-review', 'packets');
 const SPAN_MAX_CHARS = 9_000;
 const CATEGORIES = new Set(['audio-program', 'video-program', 'written-works']);
@@ -83,7 +83,7 @@ function main(): void {
       }
 
       const packet = {
-        file: `data/rag_enrichment/${category.name}/${entry}`,
+        file: `data/rag/enrichment/${category.name}/${entry}`,
         documentId: record.id,
         documentTitle: record.title,
         sections,

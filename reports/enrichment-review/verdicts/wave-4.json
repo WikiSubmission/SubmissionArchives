@@ -1,6 +1,6 @@
 [
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-14-night-of-destiny-zikr.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-14-night-of-destiny-zikr.json",
     "sections": [
       {
         "id": "behrouz14-s01",
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-15-sura-54-sura-55-sura-56-sura-51-compilation.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-15-sura-54-sura-55-sura-56-sura-51-compilation.json",
     "sections": [
       {
         "id": "behrouz15-s01",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-16-sura-64-and-partial-sura-70.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-16-sura-64-and-partial-sura-70.json",
     "sections": [
       {
         "id": "behrouz16-s01",
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-17-suras-90-91-82-83-1989-07-21.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-17-suras-90-91-82-83-1989-07-21.json",
     "sections": [
       {
         "id": "behrouz17-s01",
@@ -150,7 +150,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-18-suras-61-87-94-81-composite.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-18-suras-61-87-94-81-composite.json",
     "sections": [
       {
         "id": "behrouz18-s01",
@@ -187,7 +187,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-19-sura-2-witchcraft-blue-quran.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-19-sura-2-witchcraft-blue-quran.json",
     "sections": [
       {
         "id": "behrouz19-s01",
@@ -224,7 +224,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-20-sura-3-fear-worry-insurance.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-20-sura-3-fear-worry-insurance.json",
     "sections": [
       {
         "id": "behrouz20-s01",
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "file": "data/rag_enrichment/audio-program/quran-study-behrouz-21-sura-9-sura-56-mathematical-circle.json",
+    "file": "data/rag/enrichment/audio-program/quran-study-behrouz-21-sura-9-sura-56-mathematical-circle.json",
     "sections": [
       {
         "id": "behrouz21-s01",
