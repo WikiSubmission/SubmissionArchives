@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MessageCircle, Youtube } from 'lucide-react';
+import { ChevronDown, MessageCircle, Youtube } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 import { FOOTER_NAV } from '@/config/navigation';
@@ -41,7 +41,7 @@ export default function Footer() {
                             <details key={section.title} className="group border-b border-ed-rule/60 dark:border-white/10 sm:border-b-0" open>
                                 <summary className="flex cursor-pointer list-none items-center justify-between py-4 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted sm:cursor-default sm:border-b sm:border-ed-rule/60 dark:sm:border-white/10 sm:pb-3 sm:pt-0 [&::-webkit-details-marker]:hidden">
                                     {section.title}
-                                    <svg className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 sm:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6" /></svg>
+                                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 sm:hidden" aria-hidden="true" />
                                 </summary>
                                 <ul className="pb-4 sm:mt-3 sm:pb-0 space-y-1">
                                     {section.links.map((link) => (
