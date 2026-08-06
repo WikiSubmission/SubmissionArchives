@@ -5,7 +5,7 @@ export const PRIMARY_NAV = [
     { name: 'Videos', href: '/videos' },
     { name: 'Audios', href: '/audios' },
     { name: 'Written', href: '/written' },
-    { name: "Qur'an", href: '/quran' },
+    { name: 'Scriptures', href: '/quran' },
     { name: 'Search', href: '/search' },
 ];
 
@@ -16,7 +16,7 @@ export const FOOTER_NAV = [
             { name: 'Video library', href: '/videos' },
             { name: 'Audio library', href: '/audios' },
             { name: 'Written archive', href: '/written' },
-            { name: "Qur'an editions", href: '/quran' },
+            { name: 'Scriptures', href: '/quran' },
         ],
     },
     {

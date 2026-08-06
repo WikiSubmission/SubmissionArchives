@@ -4,11 +4,6 @@ type ExpectationCardProps = {
     body: string;
 };
 
-/**
- * Capability row: mono index, serif title, muted body. On hover the row
- * gains a soft panel wash and the title slides to the accent — a small
- * reward for scanning the list.
- */
 export function ExpectationCard({ index, title, body }: ExpectationCardProps) {
     return (
         <div className="group rounded-xl border border-ed-rule/60 bg-ed-surface/30 p-4 sm:p-5 transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface/70 hover:shadow-md backdrop-blur-sm">

@@ -90,13 +90,13 @@ export function VideoArchiveSection() {
                 <Reveal>
                     <SectionHeading numeral="I" title="Video archive" />
                 </Reveal>
-                <Reveal delay={80}>
-                    <p className="mt-6 max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
+                <Reveal delay={80} className="mt-4 sm:mt-5 lg:mt-6">
+                    <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
                         Friday sermons, instructional programs, public talks, and United Submitters International conference recordings preserved as a visual study collection.
                     </p>
                 </Reveal>
 
-                <div className="mt-8 grid gap-x-6 divide-y divide-ed-rule sm:grid-cols-2">
+                <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6">
                     {VIDEO_CAPABILITIES.map((item, itemIndex) => (
                         <Reveal key={item.title} delay={140 + itemIndex * 80}>
                             <ExpectationCard
@@ -108,7 +108,7 @@ export function VideoArchiveSection() {
                     ))}
                 </div>
 
-                <Reveal delay={140 + VIDEO_CAPABILITIES.length * 80}>
+                <Reveal delay={140 + VIDEO_CAPABILITIES.length * 80} className="mt-8 sm:mt-10">
                     <SectionCta href="/videos" label="Browse the video archive" />
                 </Reveal>
             </div>

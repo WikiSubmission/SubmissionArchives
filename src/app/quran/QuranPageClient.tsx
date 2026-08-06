@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Search, Grid as GridIcon, List as ListIcon, ChevronRight, X } from 'lucide-react';
 import { ReactBitsParticles } from '@/components/react-bits/ParticlesBackground';
+import ScriptureTabs from '@/components/layout/ScriptureTabs';
 import type { QuranChapterSummary } from './page';
 
 export default function QuranPageClient({ chapters }: { chapters: QuranChapterSummary[] }) {
@@ -41,10 +42,10 @@ export default function QuranPageClient({ chapters }: { chapters: QuranChapterSu
                     <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-ed-accent">
                         Scripture
                     </p>
-                    <h1 className="mt-6 font-serif text-[clamp(2.75rem,9vw,5rem)] leading-[1.05] tracking-tight text-ed-fg sm:mt-7">
+                    <h1 className="mt-6 font-slab text-[clamp(2.75rem,9vw,5rem)] leading-[1.05] tracking-tight text-ed-fg sm:mt-7">
                         The Qur&apos;an
                     </h1>
-                    <p className="mt-6 max-w-[50ch] text-base leading-relaxed text-ed-fg-muted sm:mt-7 sm:text-lg">
+                    <p className="mt-6 max-w-[50ch] font-slab text-base leading-relaxed text-ed-fg-muted sm:mt-7 sm:text-lg">
                         114 surahs, with Arabic text, English translation, transliteration, and footnotes.
                     </p>
                     <Link
@@ -53,6 +54,8 @@ export default function QuranPageClient({ chapters }: { chapters: QuranChapterSu
                     >
                         Read appendices
                     </Link>
+
+                    <ScriptureTabs />
                 </div>
             </div>
 

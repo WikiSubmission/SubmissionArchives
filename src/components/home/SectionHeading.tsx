@@ -19,7 +19,7 @@ export function SectionHeading({ numeral, title, className = '' }: SectionHeadin
                 >
                     SECTION {numeral}
                 </span>
-                <h3 className="font-sans text-[clamp(2.2rem,5.5vw,3.6rem)] font-extrabold leading-[0.95] tracking-tight text-ed-fg">
+                <h3 className="font-slab text-[clamp(2.2rem,5.5vw,3.6rem)] font-extrabold leading-[0.95] tracking-tight text-ed-fg">
                     {title}
                 </h3>
             </div>

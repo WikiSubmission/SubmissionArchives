@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArchiveBranch } from './ArchiveBranch';
 import { AudioArchiveSection } from './AudioArchiveSection';
 import { HeroSection } from './HeroSection';
-import { QuranEditionsVisual } from './QuranEditionsVisual';
+import { ScripturesVisual } from './ScripturesVisual';
 import { Reveal } from './Reveal';
 import { VideoArchiveSection } from './VideoArchiveSection';
 import { WrittenArchiveVisual } from './WrittenArchiveVisual';
@@ -24,18 +24,18 @@ const WRITTEN_CAPABILITIES = [
     },
 ] as const;
 
-const QURAN_CAPABILITIES = [
+const SCRIPTURE_CAPABILITIES = [
     {
-        title: 'Three parallel editions',
-        body: 'The 1981, 1989, and 1992 English editions appear beside the Arabic text.',
+        title: 'Three sacred canons',
+        body: 'The Old Testament, New Testament, and Qur\'an presented side by side.',
     },
     {
-        title: 'Subtitles and footnotes',
-        body: 'Dr. Rashad Khalifa\'s subtitles and footnotes are preserved with each verse.',
+        title: 'Original languages & translations',
+        body: 'Hebrew, Greek, and Arabic texts paired with English translations.',
     },
     {
-        title: 'Verse-level search',
-        body: 'Search within a sura or across all 114 suras at once.',
+        title: 'Verse & canon search',
+        body: 'Cross-scripture search across all books, chapters, and suras.',
     },
 ] as const;
 
@@ -64,9 +64,6 @@ export default function HomePage() {
                 className="mx-auto max-w-[1440px] px-4 pb-20 pt-16 sm:px-6 lg:px-10 lg:pb-28 lg:pt-28"
             >
                 <header>
-                    <Reveal>
-                        <p className="archive-kicker">Ways into the collection</p>
-                    </Reveal>
                     <div className="mt-7 grid gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-end lg:gap-14">
                         <Reveal delay={90}>
                             <h2
@@ -79,7 +76,6 @@ export default function HomePage() {
                                 </em>
                             </h2>
                         </Reveal>
-
                     </div>
                     <Reveal delay={260}>
                         <div className="divider-fade mt-10 lg:mt-12" aria-hidden="true" />
@@ -93,7 +89,6 @@ export default function HomePage() {
                     <div className="divider-fade" aria-hidden="true" />
                     <ArchiveBranch
                         numeral="III"
-                        kicker="Books, newsletters, appendices"
                         title="Written archive"
                         body="Books, newsletters, and appendices by Dr. Rashad Khalifa, transcribed and connected to the same research search used across the whole collection."
                         href="/written"
@@ -104,19 +99,17 @@ export default function HomePage() {
                     <div className="divider-fade" aria-hidden="true" />
                     <ArchiveBranch
                         numeral="IV"
-                        kicker="Three editions, one text"
-                        title="Qur'an editions"
-                        body="Arabic text alongside the 1981, 1989, and 1992 English editions, with subtitles, footnotes, and verse-level search for all 114 suras."
-                        href="/quran"
-                        cta="Open the Qur'an editions"
-                        details={QURAN_CAPABILITIES}
-                        visual={<QuranEditionsVisual />}
+                        title="Scriptures"
+                        body="The Old Testament, New Testament, and Qur'an side by side in Hebrew, Greek, and Arabic, paired with English translations and verse-level search."
+                        href="/scriptures"
+                        cta="Explore the Scriptures"
+                        details={SCRIPTURE_CAPABILITIES}
+                        visual={<ScripturesVisual />}
                         reverse
                     />
                     <div className="divider-fade" aria-hidden="true" />
                     <ArchiveBranch
                         numeral="V"
-                        kicker="Cross-collection search"
                         title="Search the archive"
                         body="Search names, verses, phrases, and recurring ideas across transcripts and written works. Results are ranked by exact phrases, nearby terms, and repeated evidence."
                         href="/search"
@@ -137,30 +130,24 @@ export default function HomePage() {
                             className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_80%_at_50%_0%,rgba(255,255,255,0.08),transparent_65%)]"
                         />
                         <div className="relative">
-                            <div className="mx-auto w-fit">
-                                <span className="inline-block rounded-full border border-ed-bg/20 bg-ed-bg/10 px-3.5 py-1 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ed-bg/90 backdrop-blur-md">
-                                    Begin Anywhere
-                                </span>
-                            </div>
                             <h2
                                 id="closing-cta-title"
-                                className="mx-auto mt-6 max-w-[18ch] font-sans text-[clamp(2.4rem,5.5vw,4.2rem)] font-extrabold leading-[1] tracking-tight text-ed-bg"
+                                className="mx-auto max-w-[18ch] font-sans text-[clamp(2.4rem,5.5vw,4.2rem)] font-extrabold leading-[1] tracking-tight text-ed-bg"
                             >
                                 Start with a single search.
                             </h2>
                             <p className="mx-auto mt-4 max-w-[46ch] font-sans text-[0.98rem] leading-7 text-ed-bg/85">
                                 One query reaches every recording, transcript, newsletter, book, and verse in the collection.
                             </p>
-                            <Link
-                                href="/search"
-                                className="group mt-8 inline-flex min-h-12 items-center gap-2.5 rounded-full bg-ed-bg px-8 font-sans text-sm font-semibold text-ed-fg shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
-                            >
-                                Search the archive
-                                <ArrowRight
-                                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                                    aria-hidden="true"
-                                />
-                            </Link>
+                            <div className="mt-8 flex justify-center">
+                                <Link
+                                    href="/search"
+                                    className="archive-button archive-button-primary bg-ed-bg text-ed-fg hover:bg-ed-bg/90 active:scale-[0.98]"
+                                >
+                                    Search the collection
+                                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                                </Link>
+                            </div>
                         </div>
                     </section>
                 </Reveal>

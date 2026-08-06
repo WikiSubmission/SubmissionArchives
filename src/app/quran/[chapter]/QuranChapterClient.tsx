@@ -128,7 +128,7 @@ export default function QuranChapterClient({
                     >
                         <AlignLeft className="h-5 w-5" />
                     </button>
-                    
+
                     {/* Navigation Dropdowns (Placeholder matching image) */}
                     <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-ed-fg-muted">
                         <Link href="/quran" className="hover:text-ed-fg transition-colors">Surahs</Link>
@@ -145,9 +145,9 @@ export default function QuranChapterClient({
                     >
                         <Share2 className="h-4 w-4" />
                     </button>
-                    
+
                     {/* Sidebar Toggle */}
-                    <button 
+                    <button
                         onClick={() => setSidebarOpen((prev) => !prev)}
                         className={`hidden xl:flex h-10 w-10 items-center justify-center rounded-md border border-ed-rule transition-colors ${sidebarOpen ? 'bg-ed-accent/10 text-ed-accent border-ed-accent/30' : 'text-ed-fg-muted hover:text-ed-accent'}`}
                         aria-label="Toggle Sidebar"
@@ -247,9 +247,8 @@ export default function QuranChapterClient({
 
                 {/* ------------------ Right Sidebar (Desktop) ------------------ */}
                 <aside
-                    className={`hidden xl:flex flex-col sticky top-[130px] h-[calc(100vh-130px)] shrink-0 border-l border-ed-rule bg-ed-bg transition-all duration-300 ease-in-out ${
-                        sidebarOpen ? 'w-[340px] opacity-100' : 'w-[0px] opacity-0 overflow-hidden border-none'
-                    }`}
+                    className={`hidden xl:flex flex-col sticky top-[130px] h-[calc(100vh-130px)] shrink-0 border-l border-ed-rule bg-ed-bg transition-all duration-300 ease-in-out ${sidebarOpen ? 'w-[340px] opacity-100' : 'w-[0px] opacity-0 overflow-hidden border-none'
+                        }`}
                 >
                     <div className="w-[340px] flex flex-col h-full">
                         {/* Search Bar */}
@@ -286,11 +285,10 @@ export default function QuranChapterClient({
                                     <Link
                                         key={item.chapterNumber}
                                         href={`/quran/${item.chapterNumber}`}
-                                        className={`group flex items-center justify-between rounded-md px-4 py-3 text-sm transition-all duration-200 ${
-                                            isActive
+                                        className={`group flex items-center justify-between rounded-md px-4 py-3 text-sm transition-all duration-200 ${isActive
                                                 ? 'bg-ed-surface shadow-sm'
                                                 : 'text-ed-fg-muted hover:bg-ed-surface/50 hover:text-ed-fg'
-                                        }`}
+                                            }`}
                                     >
                                         <span className={`font-medium ${isActive ? 'text-ed-accent' : ''}`}>
                                             {item.titleTransliterated}
@@ -342,9 +340,8 @@ export default function QuranChapterClient({
                                             key={item.chapterNumber}
                                             href={`/quran/${item.chapterNumber}`}
                                             onClick={() => setMobileDrawerOpen(false)}
-                                            className={`flex items-center justify-between rounded-md px-3 py-2.5 text-sm ${
-                                                isActive ? 'bg-ed-surface text-ed-accent font-semibold' : 'text-ed-fg-muted hover:text-ed-fg'
-                                            }`}
+                                            className={`flex items-center justify-between rounded-md px-3 py-2.5 text-sm ${isActive ? 'bg-ed-surface text-ed-accent font-semibold' : 'text-ed-fg-muted hover:text-ed-fg'
+                                                }`}
                                         >
                                             <span>{item.titleTransliterated}</span>
                                             <span className="font-mono text-xs">{item.chapterNumber}</span>
@@ -395,11 +392,11 @@ function QuranVerseCard({
                 {/* Ornate Medallion */}
                 <div className="relative mt-2 flex h-12 w-12 shrink-0 items-center justify-center">
                     <svg className="absolute inset-0 h-full w-full text-ed-accent/50 transition-colors group-hover:text-ed-accent/80" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27 1L33 8.5L42 7.5L45 16L53 20L49 27L53 34L45 38L42 46.5L33 45.5L27 53L21 45.5L12 46.5L9 38L1 34L5 27L1 20L9 16L12 7.5L21 8.5L27 1Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-                        <circle cx="27" cy="27" r="18" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.5"/>
+                        <path d="M27 1L33 8.5L42 7.5L45 16L53 20L49 27L53 34L45 38L42 46.5L33 45.5L27 53L21 45.5L12 46.5L9 38L1 34L5 27L1 20L9 16L12 7.5L21 8.5L27 1Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                        <circle cx="27" cy="27" r="18" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.5" />
                     </svg>
-                    <span className="relative z-10 font-sans text-xs font-medium text-ed-fg-muted group-hover:text-ed-fg">
-                        {verse.verseNumber}
+                    <span className="relative z-10 font-sans text-[0.7rem] font-medium tracking-tight text-ed-fg-muted group-hover:text-ed-fg">
+                        {verse.verseId}
                     </span>
                 </div>
 

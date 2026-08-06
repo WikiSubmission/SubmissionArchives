@@ -58,7 +58,7 @@ const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
 const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
 
 // Module-level singleton cache: these generated index files are large
-// (MASTER_INDEX.json is ~27MB) and static for the life of the process, so we
+// Force hot-reload 3
 // parse each once instead of per-render/per-request (React's cache() only
 // dedupes within a single render).
 const localIndexCache = new Map<string, LocalMediaItem[]>();
@@ -171,12 +171,12 @@ export default async function WatchPage({
   const mediaUrl = getMediaAssetUrl(item);
   const playbackWindow = getMediaPlaybackWindow(item);
 
-  // MA 70+ transcripts come from unverified auto-generated captions with no
+  // MA 72+ transcripts come from unverified auto-generated captions with no
   // reliable speaker attribution, so they should not default to a named speaker.
   // The 1987 Debate also has multiple speakers without attribution.
-  const isUnverifiedSpeakerSource = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 70) || item.id === 'video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987';
+  const isUnverifiedSpeakerSource = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 72) || item.id === 'video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987';
   const defaultSpeaker = isUnverifiedSpeakerSource ? '' : 'Dr. Rashad Khalifa';
-  const transcriptDisclaimer = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 70) ? 'MA 70-100 are NOT hand-transcribed.' : undefined;
+  const transcriptDisclaimer = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 72) ? 'MA 72-100 are NOT hand-transcribed.' : undefined;
 
   const segments: PlayerSegment[] = (masterItem?.segments || []).map((segment, index) => ({
     id: index,
@@ -222,3 +222,10 @@ export default async function WatchPage({
     </div>
   );
 }
+// force reload
+
+// force reload 2
+
+// force reload 3
+
+// force reload 4

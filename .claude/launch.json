@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "genesis-preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8934", "--directory", "C:\\Users\\Jonathan\\Desktop\\QuranTalk"],
+      "port": 8934
     }
   ]
 }

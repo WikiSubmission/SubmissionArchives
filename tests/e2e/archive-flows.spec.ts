@@ -25,6 +25,7 @@ test('written archive prioritizes books and exposes every newsletter issue', asy
     expect(bookLinks.slice(0, 10)).toEqual([
         '/library/quran1981',
         '/library/hard-cover-1989',
+        '/library/quran-revised-edition',
         '/library/quran-visual-presentation',
         '/library/miracle-of-quran-alphabets',
         '/library/quran-hadith-islam',
@@ -32,7 +33,6 @@ test('written archive prioritizes books and exposes every newsletter issue', asy
         '/library/islam-volume-1-number-2-july-1974',
         '/library/islam-volume-1-number-3-4-january-1975',
         '/library/perpetual-miracle',
-        '/library/computer-speaks',
     ]);
 
     const newsletters = page.getByRole('region', { name: 'Submitters Perspectives' });

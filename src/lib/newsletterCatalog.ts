@@ -79,11 +79,30 @@ export function getNewsletterIssues(): NewsletterIssue[] {
 }
 
 export function getNewsletterIssue(id: string): NewsletterIssue | undefined {
-    const normalized = decodeURIComponent(id);
+    const normalized = decodeURIComponent(id).trim();
     const issues = getNewsletterIssues();
-    return issues.find((issue) =>
+    
+    // Exact or direct alias match
+    const direct = issues.find((issue) =>
         issue.id === normalized || issue.aliases.includes(normalized)
     );
+    if (direct) return direct;
+
+    const cleanId = normalized.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    // Flexible match by year + month (e.g. sp-1985_02_February -> 198502 or sp1985feb)
+    return issues.find((issue) => {
+        const issueClean = issue.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (issueClean === cleanId) return true;
+
+        const monthStr = String(issue.monthSort).padStart(2, '0');
+        const ymCode = `${issue.year}${monthStr}`;
+        if (cleanId.includes(ymCode)) return true;
+
+        const monthShort = issue.date.slice(0, 3).toLowerCase();
+        const ymShort = `${issue.year}${monthShort}`;
+        return cleanId.includes(ymShort);
+    });
 }
 
 export function getAdjacentNewsletterIssues(id: string) {

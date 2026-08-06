@@ -151,6 +151,7 @@
   --font-arabic: var(--font-amiri);
   --font-body: var(--font-inter), var(--font-libre-franklin), sans-serif;
   --font-ui: var(--font-inter), sans-serif;
+  --font-slab: var(--font-roboto-slab), serif;
   --ease-spring-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -657,6 +658,8 @@ mark.pdf-search-highlight {
 .react-pdf__Page__textContent mark.pdf-search-highlight {
   color: transparent;
 }
+
+
 
 .reveal {
   opacity: 0;

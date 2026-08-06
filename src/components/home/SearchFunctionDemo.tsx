@@ -1105,21 +1105,16 @@ export default function SearchFunctionDemo() {
 
             {/* Header / Title bar */}
             <div className="flex min-h-14 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-5">
-                <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-none border border-ed-rule bg-ed-bg text-ed-accent">
-                        <Search size={15} strokeWidth={1.8} />
-                    </span>
-                    <div>
-                        <p className="text-[0.66rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                            Live archive terminal
-                        </p>
-                        <p
-                            className="mt-0.5 font-mono text-xs text-ed-fg-muted"
-                            aria-live="polite"
-                        >
-                            {statusText}
-                        </p>
-                    </div>
+                <div>
+                    <p className="text-[0.66rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
+                        Live archive terminal
+                    </p>
+                    <p
+                        className="mt-0.5 font-mono text-xs text-ed-fg-muted"
+                        aria-live="polite"
+                    >
+                        {statusText}
+                    </p>
                 </div>
                 <div className="flex items-center gap-2">
                     {/* Keyboard shortcut hint */}

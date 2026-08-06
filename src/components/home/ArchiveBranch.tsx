@@ -1,14 +1,14 @@
 import type { ReactNode } from 'react';
 
-import { DeferredSearchFunctionDemo } from './DeferredSearchFunctionDemo';
 import { ExpectationCard } from './ExpectationCard';
 import { Reveal } from './Reveal';
+import SearchFunctionDemo from './SearchFunctionDemo';
 import { SectionCta } from './SectionCta';
 import { SectionHeading } from './SectionHeading';
 
 type ArchiveBranchProps = {
     numeral: string;
-    kicker: string;
+    kicker?: string;
     title: string;
     body: string;
     href: string;
@@ -21,7 +21,6 @@ type ArchiveBranchProps = {
 
 export function ArchiveBranch({
     numeral,
-    kicker,
     title,
     body,
     href,
@@ -33,25 +32,18 @@ export function ArchiveBranch({
 }: ArchiveBranchProps) {
     if (visual) {
         return (
-            <article
-                className={`archive-section grid gap-10 lg:items-center lg:gap-16 ${
-                    reverse ? 'lg:grid-cols-[1.15fr_0.85fr]' : 'lg:grid-cols-[0.85fr_1.15fr]'
-                }`}
-            >
+            <article className="archive-section grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
                 <div className={`min-w-0 ${reverse ? 'lg:order-2' : ''}`}>
-                    <Reveal>
-                        <p className="archive-kicker mb-16">{kicker}</p>
-                    </Reveal>
                     <Reveal delay={70}>
                         <SectionHeading numeral={numeral} title={title} />
                     </Reveal>
-                    <Reveal delay={140}>
-                        <p className="mt-6 max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
+                    <Reveal delay={140} className="mt-4 sm:mt-5 lg:mt-6">
+                        <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
                             {body}
                         </p>
                     </Reveal>
 
-                    <div className="mt-8 grid gap-x-6 sm:grid-cols-2">
+                    <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6">
                         {details.map((item, itemIndex) => (
                             <Reveal key={item.title} delay={200 + itemIndex * 80}>
                                 <ExpectationCard
@@ -63,7 +55,7 @@ export function ArchiveBranch({
                         ))}
                     </div>
 
-                    <Reveal delay={200 + details.length * 80}>
+                    <Reveal delay={200 + details.length * 80} className="mt-8 sm:mt-10">
                         <SectionCta href={href} label={cta} />
                     </Reveal>
                 </div>
@@ -78,39 +70,20 @@ export function ArchiveBranch({
     return (
         <article className="archive-section">
             <div className="max-w-3xl">
-                <Reveal>
-                    <p className="archive-kicker mb-16">{kicker}</p>
-                </Reveal>
                 <Reveal delay={70}>
                     <SectionHeading numeral={numeral} title={title} />
                 </Reveal>
-                <Reveal delay={140}>
-                    <p className="mt-6 max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
+                <Reveal delay={140} className="mt-4 sm:mt-5 lg:mt-6">
+                    <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
                         {body}
                     </p>
                 </Reveal>
             </div>
 
-            <div className="mt-8 grid gap-x-8 divide-y divide-ed-rule border-y border-ed-rule sm:grid-cols-3">
-                {details.map((item, itemIndex) => (
-                    <Reveal key={item.title} delay={200 + itemIndex * 80}>
-                        <ExpectationCard
-                            index={String(itemIndex + 1).padStart(2, '0')}
-                            title={item.title}
-                            body={item.body}
-                        />
-                    </Reveal>
-                ))}
-            </div>
-
-            <Reveal delay={200 + details.length * 80}>
-                <SectionCta href={href} label={cta} />
-            </Reveal>
-
             {showSearchDemo ? (
-                <Reveal delay={120} className="mt-10 lg:mt-14">
-                    <DeferredSearchFunctionDemo />
-                </Reveal>
+                <div className="mt-12">
+                    <SearchFunctionDemo />
+                </div>
             ) : null}
         </article>
     );

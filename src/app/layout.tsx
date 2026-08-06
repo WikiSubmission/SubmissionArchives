@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
-import { Amiri, Inter, JetBrains_Mono, Libre_Franklin } from 'next/font/google';
+import { Amiri, Inter, JetBrains_Mono, Libre_Franklin, Roboto_Slab } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import { WebVitals } from '@/components/analytics/WebVitals';
@@ -33,6 +33,12 @@ const amiri = Amiri({
     weight: ['400', '700'],
     variable: '--font-amiri',
     subsets: ['arabic'],
+    display: 'swap',
+});
+
+const robotoSlab = Roboto_Slab({
+    variable: '--font-roboto-slab',
+    subsets: ['latin'],
     display: 'swap',
 });
 
@@ -98,7 +104,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             <head>
                 <script dangerouslySetInnerHTML={{ __html: themeBootstrapScript }} />
             </head>
-            <body className={`${inter.variable} ${jetbrainsMono.variable} ${libreFranklin.variable} ${amiri.variable} ${superiorSerif.variable} antialiased`}>
+            <body className={`${inter.variable} ${jetbrainsMono.variable} ${libreFranklin.variable} ${amiri.variable} ${superiorSerif.variable} ${robotoSlab.variable} antialiased`}>
                 <a
                     href="#main-content"
                     className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ed-fg focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-ed-bg"
