@@ -1,95 +1,106 @@
 # SA Audit
 
-Scope note: the original reorg objective assumed a loose collection of scripts,
-csvs, pngs, and duplicate "dat" folders. That does not match this repo's actual
-state. `scripts/`, `data/`, `reports/`, and `assets/` already have an
-established, purposeful structure from prior reorg work (see the existing
-`reports/duplicate-files.csv`, `reports/orphan-assets.csv`,
-`reports/directory-sizes.csv`, `reports/route-map.md`). Per user direction,
-this pass is scoped to loose root files and non-live data dirs, excluding
-`public/data/`, `src/data/`, and all of `src/app/` (live Next.js routes and
-in-progress feature work).
+Comprehensive pass, incorporating four parallel read-only explorations
+(scripts/, data/, public asset directories, root/reports/scratch/docs/tests)
+plus a full SHA-256 hash of every file under data/, public/data/,
+public/images/, public/content/, assets/, reports/, and src/data/ (1,149
+files).
 
-## Data directories are not duplicates
+## 1. The "multiple dat folders" premise
 
-- `data/` — raw source material feeding build/generation scripts (catalog,
-  corpus, rag_enrichment, rag_eval, sources/{bible,books,newsletters,
-  playlists,quran}, raw_transcripts).
-- `public/data/` — generated output served directly by Next.js at fixed URLs
-  (e.g. `generated_indices/MASTER_INDEX.json`, `scriptures/ot/*.json`). Live,
-  excluded from this pass.
-- `src/data/` — small app-bundled data (`quran_study_thumbnails.json`),
-  imported directly by TypeScript. Live, excluded from this pass.
+`data/`, `public/data/`, and `src/data/` are **not duplicates of each other**.
+They are three distinct tiers of one pipeline:
 
-These form a raw → generated → bundled pipeline, not duplicate copies. No
-dedup action needed.
+| Folder | Role | Live at request time? |
+|---|---|---|
+| `data/catalog/` | Hand-maintained catalog seeds (audios/videos/newsletters/appendix-editions JSON + a CSV) | **Yes** — read directly via `fs` by `src/app/audios/page.tsx`, `src/app/videos/page.tsx`, `src/app/media/[...id]/page.tsx`, `src/lib/appendixCatalog.ts`, `src/lib/newsletterCatalog.ts`. Shipped into the Docker image (`COPY --from=builder /app/data ./data`). |
+| `data/corpus/` | Cross-edition Quran comparison + written-document relationship data | Offline only — feeds `scripts/corpus/generate-quran-enrichment.ts` and `scripts/rag/lib/enrichment.ts`. Never opened by `src/` code. |
+| `data/rag_enrichment/`, `data/rag_eval/` | LLM-generated enrichment docs and eval question sets | Offline only — ingested into Postgres by `scripts/rag/build-and-ingest.ts`; the live app queries Postgres (`src/lib/rag/retrieval.ts`), never these JSON files directly. Shipped into the Docker image but never opened there — effectively dead weight in the runtime container. |
+| `data/sources/` | Raw private build inputs (Bible USFM, Quran editions, book OCR, transcripts, playlists) | **Never reaches the runtime image** — explicitly excluded via `.dockerignore` (`data/sources`), confirmed by `data/sources/README.md`'s own claim. Consumed only by offline scripts under `scripts/generate/`, `scripts/corpus/`, `scripts/process/`. |
+| `public/data/generated_indices/*` | Generated search/catalog indices (`MASTER_INDEX.json`, `BOOKS_LIST.json`, `QURAN_CHAPTERS.json`, bible book JSON) | **Yes, live** — read by `src/app/search/actions.ts`, `src/app/sitemap.ts`, `src/app/api/health/route.ts`, `src/app/written/page.tsx`, `src/app/library/[id]/*`, `src/app/quran/**`. Also served directly at fixed URLs since anything under `public/` is Next.js's static root. |
+| `public/data/scriptures/ot/*` | Generated Hebrew OT text | **Yes, live** — read by `src/app/quran/bible/[book]/page.tsx::getHebrewData()`. |
+| `src/data/quran_study_thumbnails.json` | Small app-bundled data | **Yes, live** — imported directly by TypeScript. |
 
-## Existing duplicate-file findings (pre-existing, out of scope)
+Every one of these serves a distinct, load-bearing, non-overlapping purpose.
+There is no canonical-vs-stale-copy relationship anywhere in this set —
+nothing here is a duplicate "dat" folder in the sense the original objective
+assumed.
 
-`reports/duplicate-files.csv` already documents true file-level duplicates:
-a handful of adjacent Quran appendix thumbnails that happen to hash equal, and
-matching `*_arabic_segments.csv` / `*_low_confidence_pages.csv` files shared
-across different book source folders. These are legitimate cross-references
-in existing book-processing data, not stray copies, and are left untouched.
+## 2. Hash-diff: true duplicates found (1,149 files hashed)
 
-## Reorg target: orphaned root-level scripts
+13 duplicate-hash groups exist, none across `data/`, `public/data/`, or
+`src/data/`:
 
-| Path | Size | Modified | Purpose |
-|---|---|---|---|
-| `convert_to_csv.py` | 1706 B | 2026-07-31 | Fetches a YouTube transcript and writes it to CSV under `data/sources/playlists/audio-transcripts/`. |
-| `fetch_transcripts.py` | 1032 B | 2026-07-31 | Fetches a YouTube transcript and writes a WebVTT file under `public/content/audios/messenger-audios/`. |
-| `process_csv_speakers.py` | 6493 B | 2026-08-06 | Post-processes the CSVs from `convert_to_csv.py`, splitting/normalizing speaker segments in place. |
+- 8 groups: adjacent Quran appendix thumbnails (1989/1992 editions) that
+  happen to hash equal — batch-processed images, not accidental copies.
+- 3 groups: `reports/*/latest-*.json` and `latest-*.md` files that are an
+  intentional "pointer to most recent" convention sitting alongside their
+  timestamped originals (`corpus-migration`, `rag-eval`, `rag-answer-eval`).
+- 2 groups previously documented in `reports/duplicate-files.csv`
+  (`*_arabic_segments.csv` / `*_low_confidence_pages.csv` across book
+  folders) **no longer exist on disk** — that report is partially stale
+  relative to current repo state.
 
-All three sit at repo root while every comparable script already lives under
-`scripts/` (e.g. `scripts/process/transcription_pipeline.py`,
-`scripts/process/vtt-to-json-converter.ts`, `scripts/utils/analyze-speakers.ts`).
-They form one small pipeline (fetch → convert → normalize speakers) for the
-"MA" (Messenger Audio) transcript series.
+**Conclusion: zero duplicate dat folders exist. No archive/dedup action is
+warranted or was taken on data/, public/data/, or src/data/.**
 
-### Reference graph
+## 3. Full scripts/ reference graph
 
-Repo-wide case-insensitive search for `convert_to_csv`, `fetch_transcripts`,
-`process_csv_speakers` returns **zero matches** outside the files themselves —
-no `package.json` script, no README/docs mention, no CI workflow, no other
-script imports or shells out to them.
+See prior exploration output for the complete per-file table. Summary:
 
-All file I/O inside the three scripts uses paths relative to the process's
-current working directory (`data/sources/...`, `public/content/...`), not
-`__file__`-relative paths. Moving the script files does not change these
-paths as long as they continue to be invoked from the repo root — which is
-the existing convention for every script in `scripts/`.
+- **Genuinely wired into `package.json`/CI**: `audit-assets.mjs`,
+  `generate_catalog_search_indices.mjs`, `validate_catalog.mjs`,
+  `generate_book_thumbnails.mjs`, `prepare-standalone.mjs`,
+  `verify_catalog_reproducibility.mjs`, all 8 `scripts/rag/*.ts` entry
+  points, plus `scripts/lib/archive-schema.mjs` (imported by two of the
+  above and by `tests/integration/catalog.test.ts`).
+- **Documented manual tools** (referenced in `scripts/README.md`, no
+  npm/CI wiring): `transcription_pipeline.py`, `vtt-to-json-converter.ts`,
+  `analyze-speakers.ts`.
+- **Orphans with zero references anywhere**: `build_islam_volume_bundle.mjs`,
+  `clean_quran1989_structured_csvs.py`, `extract_sefaria_hebrew.py`,
+  `inject_bible_footnotes.py`, `rename_books.js`, `update_manifests.js`,
+  `run-corpus-migration.ps1`, and most of `scripts/corpus/*.ts` (mentioned
+  only in `docs/RAG_FINALIZATION_REPORT.md` narrative text, not called by
+  anything). These are all already sensibly located within `scripts/`
+  subdirectories matching their purpose (`generate/`, `corpus/`) — orphan
+  status alone isn't a location problem, so none were relocated.
 
-**Conclusion: safe to relocate with no reference updates required beyond the
-move itself.**
+Every script using `process.cwd()`-relative paths assumes invocation from
+repo root (the established convention per `scripts/README.md`); scripts
+using `__file__`/`__dirname` resolution are location-independent.
 
-### Content hashes (pre-move baseline)
+## 4. Archived this session (see SA_REPORT.md for full rationale)
 
-```
-8ebbb9ce46647b5394c28431caa2b57177379a66f6c90d296905cb30103d9c2e  convert_to_csv.py
-0e736c9569bd712c865a1760675eb47b04d33bbeced84f9767f7e3aae3eba4a9  fetch_transcripts.py
-d9badfcab14cc94b931831a367489a83546a1e84fee6b1ce386bc426a147ec4a  process_csv_speakers.py
-```
+| Old path | New path | Reason |
+|---|---|---|
+| `data/sources/raw_transcripts/` | `archive/superseded/data/sources/raw_transcripts/` | Zero references anywhere in the repo |
+| `data/sources/newsletters/extras/` | `archive/superseded/data/sources/newsletters/extras/` | Zero references anywhere in the repo |
+| `reports/book-transcription-migration.csv` | `archive/superseded/reports/book-transcription-migration.csv` | References a deleted directory (`public/content/books/jsons/`); no generating script |
+| `docs/newsletter_urls.md` | `archive/superseded/docs/newsletter_urls.md` | Raw scrape input, zero code references |
+| `docs/COLOR_SYSTEM_EXPLAINED.md` | `archive/superseded/docs/COLOR_SYSTEM_EXPLAINED.md` | Describes an unrelated project (`rk-media-platform`) — copied in by mistake |
+| `docs/SETUP_QURAN_COMPARE.md` | `archive/superseded/docs/SETUP_QURAN_COMPARE.md` | Same unrelated project; references a `supabaseClient.ts` that doesn't exist in this repo |
 
-## Other notable state (informational only, not touched)
-
-- `scratch/books-repo/` is a nested git repository (has its own `.git`).
-  Already correctly named/located under `scratch/`; left alone.
-- `reports/` contains dated audit artifacts from an earlier reorg effort.
-  Left alone as historical record.
-
-## Final state
+## 5. Final state — all moves this session
 
 | Old path | New path | Verified |
 |---|---|---|
 | `convert_to_csv.py` | `scripts/process/convert_to_csv.py` | ✅ |
 | `fetch_transcripts.py` | `scripts/process/fetch_transcripts.py` | ✅ |
 | `process_csv_speakers.py` | `scripts/process/process_csv_speakers.py` | ✅ |
+| `data/sources/raw_transcripts/*` | `archive/superseded/data/sources/raw_transcripts/*` | ✅ |
+| `data/sources/newsletters/extras/*` | `archive/superseded/data/sources/newsletters/extras/*` | ✅ |
+| `reports/book-transcription-migration.csv` | `archive/superseded/reports/book-transcription-migration.csv` | ✅ |
+| `docs/newsletter_urls.md` | `archive/superseded/docs/newsletter_urls.md` | ✅ |
+| `docs/COLOR_SYSTEM_EXPLAINED.md` | `archive/superseded/docs/COLOR_SYSTEM_EXPLAINED.md` | ✅ |
+| `docs/SETUP_QURAN_COMPARE.md` | `archive/superseded/docs/SETUP_QURAN_COMPARE.md` | ✅ |
 
-Verification performed: `git mv` reported 100% renames with 0
-insertions/deletions; post-move SHA-256 hashes match the pre-move baseline
-exactly; `python -m py_compile` succeeds on all three; a repo-wide
-case-insensitive grep for the old filenames returns matches only in this
-audit/plan doc, none in code. Full execution was not attempted — both
-transcript scripts make live YouTube API calls and `process_csv_speakers.py`
-rewrites CSVs in place, none of which is relevant to confirming a pure file
-relocation.
+All verified via `git mv` (100% rename, 0 insertions/deletions), pre/post
+SHA-256 match, and repo-wide grep returning no functional stale references
+(only a generated inventory CSV that will regenerate correctly).
+
+## 6. What was deliberately not renamed, and why
+
+`data/catalog`, `data/corpus`, `data/rag_enrichment`, `data/rag_eval`,
+`data/sources`, `public/data/*`, `src/data/*` — no rename or restructuring
+was performed. See SA_PLAN.md for the reasoning.

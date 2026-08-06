@@ -2,21 +2,28 @@
 
 ## Summary
 
-The original objective assumed this repo was a loose collection of scripts,
+The original objective assumed `/SA` was a loose collection of scripts,
 csvs, pngs, and duplicate "dat" folders needing a ground-up reorganization.
-That premise didn't hold: `SA` is a live Next.js application (Quran/Bible
-library, mint 3D tool, audio/video archive) that already went through a prior
-reorg, evidenced by the existing structured `scripts/`, `data/`, and
-`reports/` directories and their audit artifacts.
+It's a live Next.js application (Quran/Bible library, mint 3D tool,
+audio/video archive) that already went through a prior reorg — evidenced by
+its existing structured `scripts/`, `data/`, and `reports/` directories.
 
-Given that, and per your explicit scoping answers, this pass:
+This pass ran a full explore → plan → execute → verify cycle:
 
 1. Committed all pre-existing uncommitted feature work first, as its own
-   set of commits, untouched by the reorg itself.
-2. Limited the actual reorg to loose root files and non-live data
-   directories, excluding `public/data/`, `src/data/`, and `src/app/`.
+   set of commits, untouched by the reorg.
+2. Ran four parallel explorations covering every subtree of the repo:
+   `scripts/`, `data/`, the `public/` asset directories, and
+   root/reports/scratch/docs/tests.
+3. Hashed all 1,149 files under `data/`, `public/data/`, `public/images/`,
+   `public/content/`, `assets/`, `reports/`, and `src/data/` to conclusively
+   test the "duplicate dat folders" premise.
+4. Executed two verified move checkpoints, and made an explicit,
+   reasoned decision not to execute a third.
 
 ## What moved
+
+**Checkpoint 1 — orphaned root scripts into their pipeline home:**
 
 | Old path | New path |
 |---|---|
@@ -24,48 +31,72 @@ Given that, and per your explicit scoping answers, this pass:
 | `fetch_transcripts.py` | `scripts/process/fetch_transcripts.py` |
 | `process_csv_speakers.py` | `scripts/process/process_csv_speakers.py` |
 
-All three are one small pipeline (fetch a YouTube transcript, convert to CSV,
-normalize speaker labels) for the "Messenger Audio" series. They now sit next
-to their closest siblings, `scripts/process/transcription_pipeline.py` and
-`scripts/process/vtt-to-json-converter.ts`. No other file in the repo
-referenced them by path, and their internal I/O is cwd-relative rather than
-`__file__`-relative, so no code changes were needed beyond the move — verified
-by identical pre/post SHA-256 hashes and a clean repo-wide reference grep.
+**Checkpoint 2 — genuinely orphaned/misplaced content, archived not deleted:**
 
-## What was NOT moved, and why
+| Old path | New path | Why |
+|---|---|---|
+| `data/sources/raw_transcripts/` | `archive/superseded/data/sources/raw_transcripts/` | Zero references anywhere in the repo |
+| `data/sources/newsletters/extras/` | `archive/superseded/data/sources/newsletters/extras/` | Zero references anywhere in the repo |
+| `reports/book-transcription-migration.csv` | `archive/superseded/reports/book-transcription-migration.csv` | References a directory that no longer exists; no generating script |
+| `docs/newsletter_urls.md` | `archive/superseded/docs/newsletter_urls.md` | Raw scrape input, zero code references |
+| `docs/COLOR_SYSTEM_EXPLAINED.md` | `archive/superseded/docs/COLOR_SYSTEM_EXPLAINED.md` | Describes an unrelated project (`rk-media-platform`) |
+| `docs/SETUP_QURAN_COMPARE.md` | `archive/superseded/docs/SETUP_QURAN_COMPARE.md` | Same unrelated project; references a file that doesn't exist here |
 
-- **`data/`, `public/data/`, `src/data/`** — not duplicates. They're a raw
-  source → generated output → app-bundled pipeline, each serving a distinct
-  purpose. `public/data/` is served at fixed URLs by Next.js and `src/data/`
-  is imported directly by TypeScript; neither could be renamed without
-  updating every fetch/import site across a live application, which was
-  explicitly out of scope for this pass.
-- **`reports/duplicate-files.csv` findings** — pre-existing, legitimate:
-  a few adjacent Quran appendix thumbnails that hash equal, and
-  `*_arabic_segments.csv` / `*_low_confidence_pages.csv` files intentionally
-  shared across different book folders. Not stray copies; left alone.
-- **`scratch/books-repo/`** — a nested git repository under `scratch/`.
-  Already correctly named and located; left alone.
-- **All of `src/app/`, mint feature, library reader, audio transcripts,
-  and `.agents/`** — this was in-progress feature work sitting uncommitted
-  at session start. It has been committed as its own set of five feature
-  commits, completely separate from the reorg, and was not touched, moved,
-  or renamed in any way.
+Both checkpoints verified clean: `git mv` reported 100% renames with 0
+insertions/deletions, pre/post SHA-256 hashes matched exactly, and a
+repo-wide grep for every old path returned no functional stale references
+(only a generated inventory CSV that regenerates on its own).
 
-## Commits made (in order)
+## The "multiple dat folders": there weren't any
+
+`data/`, `public/data/`, and `src/data/` were fully hashed and
+reference-graphed. They are a raw-source → generated-output → app-bundled
+pipeline, each tier serving a distinct, load-bearing purpose:
+
+- `data/catalog` — read live by three page components and two lib modules
+- `data/corpus`, `data/rag_enrichment`, `data/rag_eval` — offline pipeline
+  inputs, ingested into Postgres, never opened directly by the running app
+- `data/sources` — raw build inputs, explicitly excluded from the Docker
+  image via `.dockerignore`
+- `public/data/*` — generated indices and Hebrew scripture text, served
+  live at fixed URLs and read by six-plus page/route files
+- `src/data/*` — a small app-bundled JSON, imported directly
+
+None of these duplicate each other. The 13 true duplicate-hash groups found
+across the full 1,149-file scan are adjacent batch-processed thumbnails and
+intentional "latest pointer" report aliases — not stray copies of anything.
+
+Given that, `data/catalog`, `data/corpus`, `data/rag_enrichment`,
+`data/rag_eval`, `data/sources`, `public/data/*`, and `src/data/*` were
+deliberately not renamed or moved, despite having authorization to do so.
+There was no naming inconsistency or duplication for a rename to fix, and
+doing it anyway would mean rewriting live request-time code paths in a
+production app for no functional benefit. Full reasoning in SA_PLAN.md.
+
+## Files whose purpose was genuinely unclear
+
+- `docs/COLOR_SYSTEM_EXPLAINED.md` and `docs/SETUP_QURAN_COMPARE.md` turned
+  out to describe a different project entirely (`rk-media-platform`,
+  `submitter-perspectives/[id]/page.tsx`, a Supabase client that doesn't
+  exist anywhere in this repo) — almost certainly copied in by mistake from
+  a sibling project on the same machine. Archived rather than deleted, in
+  case that's wrong.
+- `data/sources/raw_transcripts/` (one `.srt.txt` debate transcript) and
+  `data/sources/newsletters/extras/` (two scanned bulletin issues) have no
+  code path anywhere that reads them — worth confirming with whoever added
+  them whether they were meant to feed a pipeline that was never wired up.
+
+## Commits made this session (in order)
 
 1. `feat: add Bible and Testament scripture reading pages`
 2. `feat: add mint API, 3D tool page, and supporting components`
 3. `feat: add library book reader and PDF text highlighting`
 4. `feat: add messenger audio transcripts MA70-72`
 5. `chore: add skills-lock.json`
-6. `chore: add transcript/CSV processing scripts` (baseline commit, pre-move)
+6. `chore: add transcript/CSV processing scripts` (pre-move baseline)
 7. `refactor: relocate orphaned transcript scripts into scripts/process`
+8. `docs: add SA reorg audit, plan, and report`
+9. `chore: archive orphaned data and misplaced docs`
 
 All work is on branch `chore/sa-reorg-audit`, created from `main` before any
-changes, per the Loop 0 safety net. Nothing has been pushed or merged.
-
-## Nothing unclear
-
-Every file touched had a clear, identifiable purpose. There is nothing left
-over from this pass that needs a follow-up decision.
+changes. Nothing has been pushed or merged.
