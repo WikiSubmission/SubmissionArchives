@@ -196,14 +196,14 @@
     "pdfLink": "/content/written/books/quran-hadith-islam.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Parsed from HTML source for clean section headings and text.",
     "transcriptionQuality": {
       "meanOcrConfidence": 85.64,
       "lowConfidencePages": 0,
       "unverifiedArabicSegments": 5
     },
     "transcriptStatus": "available",
-    "segmentCount": 92
+    "segmentCount": 95
   },
   {
     "id": "quran-visual-presentation",
