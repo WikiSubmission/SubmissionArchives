@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
-import SearchModeSwitcher from './SearchModeSwitcher';
+import SearchClient from './SearchClient';
 
 export const revalidate = 3600;
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function SearchPage() {
     return (
         <Suspense fallback={<SearchLoadingShell />}>
-            <SearchModeSwitcher />
+            <SearchClient />
         </Suspense>
     );
 }

@@ -118,20 +118,3 @@ scripts/debug_ocr.py
 # public/data/generated_indices/ - Contains site metadata and search indices
 # public/images/ - Static UI assets
 # public/fonts/ - Custom typography
-
-# Local retrieval traces
-/reports/rag-traces/
-
-# Eval question embedding cache
-/reports/rag-eval/question-embeddings.json
-
-# Local corpus import and rollback artifacts
-/askarchives_complete_corpus_three_quran_editions_windows*/
-/.corpus-migration-backup/
-/.corpus-migration-state.json
-
-# Enrichment review working files
-/reports/enrichment-review/packets/
-/reports/enrichment-review/gen-packets/
-# Regenerable grounding-checker output
-/reports/enrichment-review/grounding-flags.json
