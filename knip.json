@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "src/app/**/{page,layout,route,loading,error,not-found,template,default}.{ts,tsx}",
+    "src/middleware.ts",
+    "scripts/**/*.{js,mjs,ts,py,ps1}",
+    "tests/**/*.{ts,tsx}",
+    "playwright.config.ts",
+    "next.config.ts"
+  ],
+  "project": ["src/**/*.{ts,tsx}", "scripts/**/*.{js,mjs,ts}"],
+  "ignore": [
+    ".agents/**",
+    "data/**",
+    "public/**",
+    "scratch/**",
+    "archive/**",
+    ".superpowers/**"
+  ],
+  "ignoreDependencies": []
+}
