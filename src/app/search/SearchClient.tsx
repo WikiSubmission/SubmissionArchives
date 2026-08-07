@@ -546,7 +546,7 @@ function SearchContent() {
                         </div>
 
                         {errorMsg ? (
-                            <div className="soft-panel p-4 text-sm text-[#961515] dark:text-[#f6ae82] rounded-xl border border-red-500/20">
+                            <div className="fade-rise-enter soft-panel p-4 text-sm text-[#961515] dark:text-[#f6ae82] rounded-xl border border-red-500/20">
                                 {errorMsg}
                             </div>
                         ) : null}
@@ -574,7 +574,7 @@ function SearchContent() {
                             ) : null}
 
                             {!isSearching && query && results.length === 0 ? (
-                                <div className="lift-card rounded-2xl p-12 text-center">
+                                <div className="fade-rise-enter lift-card rounded-2xl p-12 text-center">
                                     <p className="font-sans text-2xl font-extrabold text-ed-fg">No matches found.</p>
                                     <p className="mt-2 text-sm text-ed-fg-muted">
                                         Try a shorter phrase, clear filter options, or search by title.

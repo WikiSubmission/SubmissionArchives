@@ -672,6 +672,35 @@ mark.pdf-search-highlight {
   transform: translateY(0);
 }
 
+/* Fade + rise entrance for content that mounts abruptly with no bridge
+   (error banners, empty states). Fires once on mount via @starting-style,
+   so nothing needs to track "was this already shown". */
+.fade-rise-enter {
+  transition: opacity var(--dur-med) var(--ease-spring-out), translate var(--dur-med) var(--ease-spring-out);
+}
+@starting-style {
+  .fade-rise-enter {
+    opacity: 0;
+    translate: 0 -0.375rem;
+  }
+}
+
+/* Same entrance, used for media cards where each newly mounted item gets a
+   small stagger via --stagger-delay. Already-settled cards keep a stable
+   key and never remount, so @starting-style only ever fires for genuinely
+   new cards -- an initial grid load and a "Load more" batch both just work. */
+.media-card-enter {
+  transition: opacity var(--dur-med) var(--ease-spring-out), translate var(--dur-med) var(--ease-spring-out);
+  transition-delay: var(--stagger-delay, 0ms);
+}
+@starting-style {
+  .media-card-enter {
+    opacity: 0;
+    translate: 0 0.5rem;
+  }
+}
+
+
 /* ------------------------------ Qur'an reader ------------------------------ */
 
 /* Frosted-glass sticky header — tinted translucent in BOTH themes */

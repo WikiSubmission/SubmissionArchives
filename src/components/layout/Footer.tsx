@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronDown, MessageCircle, Youtube } from 'lucide-react';
+import { MessageCircle, Youtube } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 import { FOOTER_NAV } from '@/config/navigation';
 import { DISCORD_URL, LEGAL_LINKS, YOUTUBE_URL } from '@/config/social';
+import { FooterAccordionSection } from './FooterAccordionSection';
 
 export default function Footer() {
     return (
@@ -38,32 +39,7 @@ export default function Footer() {
 
                     <nav aria-label="Footer" className="grid gap-0 sm:grid-cols-3 sm:gap-8">
                         {FOOTER_NAV.map((section) => (
-                            <details key={section.title} className="group border-b border-ed-rule/60 dark:border-white/10 sm:border-b-0" open>
-                                <summary className="flex cursor-pointer list-none items-center justify-between py-4 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted sm:cursor-default sm:border-b sm:border-ed-rule/60 dark:sm:border-white/10 sm:pb-3 sm:pt-0 [&::-webkit-details-marker]:hidden">
-                                    {section.title}
-                                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 sm:hidden" aria-hidden="true" />
-                                </summary>
-                                <ul className="pb-4 sm:mt-3 sm:pb-0 space-y-1">
-                                    {section.links.map((link) => (
-                                        <li key={link.name}>
-                                            {link.href.startsWith('http') ? (
-                                                <a
-                                                    href={link.href}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex min-h-9 items-center font-sans text-[0.88rem] text-ed-fg-muted transition-colors hover:text-ed-fg"
-                                                >
-                                                    {link.name}<span className="sr-only"> (opens in a new tab)</span>
-                                                </a>
-                                            ) : (
-                                                <Link href={link.href} className="inline-flex min-h-9 items-center font-sans text-[0.88rem] text-ed-fg-muted transition-colors hover:text-ed-fg">
-                                                    {link.name}
-                                                </Link>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </details>
+                            <FooterAccordionSection key={section.title} section={section} />
                         ))}
                     </nav>
                 </div>
