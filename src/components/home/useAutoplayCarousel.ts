@@ -90,6 +90,8 @@ export function useAutoplayCarousel({
     const [index, setIndex] = useState(() => Math.min(Math.max(initialIndex, 0), Math.max(count - 1, 0)));
     const [isManuallyPaused, setIsManuallyPaused] = useState(false);
     const [isInteractionPaused, setIsInteractionPaused] = useState(false);
+    const [dragOffsetPx, setDragOffsetPx] = useState(0);
+    const [isDragging, setIsDragging] = useState(false);
     const reducedMotion = useReducedMotionPreference();
     const isDocumentVisible = useDocumentVisibility();
     const isInView = useElementVisibility(rootRef, rootMargin);
@@ -152,21 +154,47 @@ export function useAutoplayCarousel({
         event.currentTarget.setPointerCapture?.(event.pointerId);
     }, []);
 
+    // Content tracks the finger 1:1 while dragging (no lag, no waiting for
+    // release) so the gesture reads as direct manipulation rather than a
+    // blind "swipeleft"-style recognizer that only reports a final result.
+    // Vertical scroll is left alone until horizontal intent is clear.
+    const onPointerMove = useCallback((event: PointerEvent<HTMLDivElement>) => {
+        const origin = swipeOriginRef.current;
+        if (!origin || origin.pointerId !== event.pointerId) return;
+
+        const deltaX = event.clientX - origin.x;
+        const deltaY = event.clientY - origin.y;
+        if (!isDragging && Math.abs(deltaX) < 10) return;
+        if (!isDragging && Math.abs(deltaX) < Math.abs(deltaY) * 1.4) return;
+
+        if (!isDragging) setIsDragging(true);
+        setDragOffsetPx(deltaX);
+    }, [isDragging]);
+
+    const settleDrag = useCallback(() => {
+        setIsDragging(false);
+        setDragOffsetPx(0);
+    }, []);
+
     const onPointerUp = useCallback((event: PointerEvent<HTMLDivElement>) => {
         const origin = swipeOriginRef.current;
         swipeOriginRef.current = null;
         setIsInteractionPaused(false);
 
-        if (!origin || origin.pointerId !== event.pointerId) return;
+        if (!origin || origin.pointerId !== event.pointerId) {
+            settleDrag();
+            return;
+        }
 
         const deltaX = origin.x - event.clientX;
         const deltaY = origin.y - event.clientY;
         const isHorizontalSwipe = Math.abs(deltaX) > 48 && Math.abs(deltaX) > Math.abs(deltaY) * 1.4;
 
+        settleDrag();
         if (!isHorizontalSwipe) return;
         if (deltaX > 0) next();
         else previous();
-    }, [next, previous]);
+    }, [next, previous, settleDrag]);
 
     return {
         rootRef,
@@ -178,14 +206,18 @@ export function useAutoplayCarousel({
         isManuallyPaused,
         setIsManuallyPaused,
         autoplayEnabled,
+        dragOffsetPx,
+        isDragging,
         interactionProps: {
             onPointerEnter,
             onPointerLeave,
             onPointerDown,
+            onPointerMove,
             onPointerUp,
             onPointerCancel: () => {
                 swipeOriginRef.current = null;
                 setIsInteractionPaused(false);
+                settleDrag();
             },
             onFocusCapture,
             onBlurCapture,

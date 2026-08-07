@@ -43,6 +43,8 @@ export function HeroSection() {
         isManuallyPaused,
         setIsManuallyPaused,
         interactionProps,
+        dragOffsetPx,
+        isDragging,
     } = useAutoplayCarousel({
         count: HERO_IMAGES.length,
         intervalMs: HERO_ROTATION_MS,
@@ -72,7 +74,7 @@ export function HeroSection() {
                             <span className="block font-sans text-[clamp(2.8rem,9vw,5.2rem)] font-black uppercase leading-[0.88] tracking-tight">
                                 Submission
                             </span>
-                            <span className="mt-2 block w-full border border-ed-fg bg-ed-surface-strong px-5 py-3 text-center font-slab text-[clamp(3rem,10vw,5.6rem)] font-black uppercase leading-none tracking-tight text-ed-fg">
+                            <span className="mt-2 block w-full border border-ed-fg bg-ed-surface-strong px-5 py-3 text-center font-slab text-[clamp(3rem,10vw,5.6rem)] font-black italic uppercase leading-none tracking-tight text-ed-fg">
                                 Archives
                             </span>
                         </h1>
@@ -136,7 +138,13 @@ export function HeroSection() {
                             </div>
                         </div>
 
-                        <div className="relative mt-3 aspect-[4/3] w-full overflow-hidden rounded-xl bg-ed-bg sm:mt-4">
+                        <div
+                            className="relative mt-3 aspect-[4/3] w-full overflow-hidden rounded-xl bg-ed-bg sm:mt-4"
+                            style={{
+                                transform: dragOffsetPx ? `translateX(${dragOffsetPx}px)` : undefined,
+                                transition: isDragging ? 'none' : 'transform 400ms cubic-bezier(0.32,0.72,0,1)',
+                            }}
+                        >
                             <Image
                                 src={activeImage.src}
                                 alt={activeImage.alt}

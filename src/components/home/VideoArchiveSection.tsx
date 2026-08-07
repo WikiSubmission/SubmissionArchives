@@ -77,6 +77,8 @@ export function VideoArchiveSection() {
         isManuallyPaused,
         setIsManuallyPaused,
         interactionProps,
+        dragOffsetPx,
+        isDragging,
     } = useAutoplayCarousel({
         count: VIDEO_SLIDES.length,
         intervalMs: ROTATION_MS,
@@ -151,7 +153,14 @@ export function VideoArchiveSection() {
                             </div>
                         </div>
 
-                        <Link href="/videos" className="group relative block aspect-video overflow-hidden bg-ed-console">
+                        <Link
+                            href="/videos"
+                            className="group relative block aspect-video overflow-hidden bg-ed-console"
+                            style={{
+                                transform: dragOffsetPx ? `translateX(${dragOffsetPx}px)` : undefined,
+                                transition: isDragging ? 'none' : 'transform 400ms cubic-bezier(0.32,0.72,0,1)',
+                            }}
+                        >
                             <Image
                                 key={slide.src}
                                 src={slide.src}
