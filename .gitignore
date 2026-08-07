@@ -118,3 +118,7 @@ scripts/debug_ocr.py
 # public/data/generated_indices/ - Contains site metadata and search indices
 # public/images/ - Static UI assets
 # public/fonts/ - Custom typography
+
+# Agents
+/.agents/
+/.claude/
