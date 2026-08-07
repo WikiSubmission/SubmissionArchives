@@ -26,23 +26,31 @@ const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
 let issueCache: NewsletterIssue[] | null = null;
 
 // Special editions (e.g. the May 1988 Bulletin, the January 1990 Special Bonus
-// Issue) share their year/month/monthName with a regular issue but have no
-// scanned PDF of their own. Deriving a filename from year/month/monthName for
-// them would resolve to the regular issue's file, so only regular editions
-// get a filesystem-derived link; special editions fall back to the
-// transcription-based viewer.
+// Issue) share their year/month/monthName with a regular issue, so deriving a
+// filename from year/month/monthName for them would resolve to the regular
+// issue's file instead of their own. Each gets its own explicit filename here.
 const REGULAR_EDITION_TYPES = new Set(['regular_issue', 'regular']);
+const SPECIAL_EDITION_ASSET_NAMES: Record<string, string> = {
+    SP1988may_bulletin: '1988_05_May_Bulletin',
+    SP1990jan_special_bonus: '1990_01_January_Bonus_Issue',
+};
 
-function getThumbnailLink(year: number, monthNumber: number, monthName: string, editionType?: string) {
-    if (editionType && !REGULAR_EDITION_TYPES.has(editionType)) return undefined;
-    const thumbnailName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.jpg`;
+function getThumbnailLink(issueId: string, year: number, monthNumber: number, monthName: string, editionType?: string) {
+    const baseName = editionType && !REGULAR_EDITION_TYPES.has(editionType)
+        ? SPECIAL_EDITION_ASSET_NAMES[issueId]
+        : `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}`;
+    if (!baseName) return undefined;
+    const thumbnailName = `${baseName}.jpg`;
     const thumbnailPath = path.join(NEWSLETTER_THUMB_DIR, thumbnailName);
     return fs.existsSync(thumbnailPath) ? `/content/written/newsletters/thumbnails/${thumbnailName}` : undefined;
 }
 
-function getPdfLink(year: number, monthNumber: number, monthName: string, editionType?: string) {
-    if (editionType && !REGULAR_EDITION_TYPES.has(editionType)) return undefined;
-    const pdfName = `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}.pdf`;
+function getPdfLink(issueId: string, year: number, monthNumber: number, monthName: string, editionType?: string) {
+    const baseName = editionType && !REGULAR_EDITION_TYPES.has(editionType)
+        ? SPECIAL_EDITION_ASSET_NAMES[issueId]
+        : `${year}_${String(monthNumber).padStart(2, '0')}_${monthName}`;
+    if (!baseName) return undefined;
+    const pdfName = `${baseName}.pdf`;
     const pdfPath = path.join(NEWSLETTER_PDF_DIR, pdfName);
     return fs.existsSync(pdfPath) ? `/content/written/newsletters/pdfs/${pdfName}` : undefined;
 }
@@ -68,8 +76,8 @@ export function getNewsletterIssues(): NewsletterIssue[] {
             monthSort: issue.month_number,
             year: issue.year,
             filename: issue.source_file,
-            pdfLink: getPdfLink(issue.year, issue.month_number, issue.month_name, issue.edition_type) || '',
-            thumbnailOverride: getThumbnailLink(issue.year, issue.month_number, issue.month_name, issue.edition_type),
+            pdfLink: getPdfLink(id, issue.year, issue.month_number, issue.month_name, issue.edition_type) || '',
+            thumbnailOverride: getThumbnailLink(id, issue.year, issue.month_number, issue.month_name, issue.edition_type),
             aliases: [id],
             jsonData: issue,
         };
