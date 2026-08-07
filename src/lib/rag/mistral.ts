@@ -67,11 +67,6 @@ export function emptyQueryExpansion(): QueryExpansion {
   };
 }
 
-export async function embedQuery(text: string): Promise<number[]> {
-  const [embedding] = await embedQueries([text]);
-  return embedding;
-}
-
 export async function embedQueries(texts: string[]): Promise<number[][]> {
   if (texts.length === 0) return [];
 

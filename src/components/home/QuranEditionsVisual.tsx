@@ -1,1 +1,0 @@
-export { ScripturesVisual as QuranEditionsVisual, ScripturesVisual } from './ScripturesVisual';

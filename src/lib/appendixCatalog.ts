@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { rowsToObjects } from '@/lib/csv';
-import { findQueryMatch } from '@/lib/search/queryMatch';
 
 export type AppendixItem = {
     id: string;
@@ -29,18 +28,6 @@ type AppendixEditionConfig = {
 type AppendixEditionManifest = {
     primaryEdition: AppendixEdition;
     editions: Record<AppendixEdition, AppendixEditionConfig>;
-};
-
-export type AppendixSearchResult = {
-    appendix: AppendixItem;
-    matches: Array<{
-        id: string;
-        content: string;
-        start_time: number;
-        score?: number;
-        kind?: string;
-        distance?: number;
-    }>;
 };
 
 const APPENDICES_DIR = path.join(process.cwd(), 'public', 'content', 'quran', 'organized_appendices');
@@ -162,34 +149,6 @@ function filenameToId(filename: string) {
         .replace(/\.pdf$/i, '')
         .replace(/^appendix[_-]0*(\d+)$/i, 'appendix-$1')
         .toLowerCase();
-}
-
-export function searchAppendixCsv(query: string, options: { proximityWindow?: number } = {}): AppendixSearchResult[] {
-    const catalog = new Map(getAppendixCatalog().map((item) => [item.id, item]));
-    const results = new Map<string, AppendixSearchResult>();
-
-    for (const row of getRows()) {
-        const appendix = catalog.get(row.id);
-        const content = row.content ?? '';
-        const queryMatch = findQueryMatch(content, query, options);
-        if (!appendix || !queryMatch.matched) continue;
-
-        const result = results.get(appendix.id) ?? { appendix, matches: [] };
-        if (result.matches.length < 12) {
-            result.matches.push({
-                id: `ap-${appendix.id}-${row.section_index}`,
-                content: queryMatch.snippet,
-                start_time: 0,
-                score: queryMatch.score,
-                kind: queryMatch.kind,
-                distance: queryMatch.distance,
-            });
-        }
-
-        results.set(appendix.id, result);
-    }
-
-    return Array.from(results.values());
 }
 
 function sortValue(id: string) {

@@ -209,5 +209,3 @@ export function ScripturesVisual() {
         </div>
     );
 }
-
-export const QuranEditionsVisual = ScripturesVisual;
