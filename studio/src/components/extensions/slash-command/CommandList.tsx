@@ -49,7 +49,7 @@ export const CommandList = forwardRef<CommandListRef, CommandListProps>((props, 
           key={item.title}
           onClick={() => selectItem(index)}
           className={`w-full text-left px-3 py-2 flex flex-col gap-0.5 transition-colors ${
-            index === selectedIndex ? 'bg-emerald-500/10 text-white' : 'text-white/70'
+            index === selectedIndex ? 'bg-ed-accent/10 text-white' : 'text-white/70'
           }`}
         >
           <span className="text-sm font-medium">{item.title}</span>

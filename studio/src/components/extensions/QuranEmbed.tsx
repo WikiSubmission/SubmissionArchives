@@ -2,6 +2,7 @@ import { mergeAttributes, Node } from '@tiptap/core'
 import { ReactNodeViewRenderer, NodeViewWrapper } from '@tiptap/react'
 import { useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
+import { useSettings } from '../../hooks/useSettings'
 
 interface Verse {
   chapter: number
@@ -11,6 +12,7 @@ interface Verse {
 }
 
 function QuranEmbedComponent({ node, updateAttributes }: any) {
+  const { settings } = useSettings()
   const verses: string = node.attrs.verses
   const showEnglish: boolean = node.attrs.showEnglish
 
@@ -35,37 +37,55 @@ function QuranEmbedComponent({ node, updateAttributes }: any) {
     }
   }, [verses])
 
+  // The global "show" setting is a ceiling: it can force arabic-only or
+  // translation-only across the whole app. The per-embed toggle button is
+  // a further override underneath that ceiling, not above it.
+  const showArabic = settings.quran.showMode !== 'translation'
+  const showTranslation = showEnglish && settings.quran.showMode !== 'arabic'
+
   return (
-    <NodeViewWrapper className="quran-embed-wrapper my-4 border border-emerald-500/30 rounded-lg p-4 bg-emerald-500/5 select-none relative group animate-embed-in">
+    <NodeViewWrapper className="quran-embed-wrapper my-4 rounded-xl border border-qv-border bg-qv-bg select-none relative group animate-embed-in overflow-hidden shadow-lg">
       <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <button
           onClick={() => updateAttributes({ showEnglish: !showEnglish })}
-          className="text-xs bg-black/50 text-white px-2 py-1 rounded"
+          className="text-xs bg-qv-fg/10 text-qv-fg px-2 py-1 rounded hover:bg-qv-fg/15 transition-colors"
         >
           Toggle English
         </button>
       </div>
 
-      {error && <div className="text-sm text-red-400 font-mono">{error}</div>}
+      <div className="px-5 py-4">
+        {error && <div className="text-sm text-red-700 font-mono">{error}</div>}
 
-      {!error && !result && <div className="text-sm text-white/40 animate-pulse">Loading {verses}...</div>}
+        {!error && !result && <div className="text-sm text-qv-muted animate-pulse">Loading {verses}...</div>}
 
-      {result &&
-        result.map((v) => (
-          <div key={`${v.chapter}:${v.verse}`} className="mb-3 last:mb-0">
-            <div className="text-right font-arabic text-2xl leading-loose text-emerald-400" dir="rtl">
-              {v.arabic} <span className="text-emerald-600/70 text-base">({v.verse})</span>
+        {result &&
+          result.map((v, i) => (
+            <div key={`${v.chapter}:${v.verse}`} className={i > 0 ? 'pt-3 mt-3 border-t border-qv-divider' : ''}>
+              <span className="inline-block px-2.5 py-0.5 rounded-full bg-qv-tint text-qv-accent text-xs font-semibold mb-1.5">
+                {v.chapter}:{v.verse}
+              </span>
+              {showArabic && (
+                <div
+                  className="font-arabic text-right leading-relaxed text-qv-fg"
+                  style={{ fontSize: settings.quran.arabicSize }}
+                  dir="rtl"
+                >
+                  {v.arabic}
+                </div>
+              )}
+              {showTranslation && (
+                <p className="font-serif leading-relaxed text-qv-fg mt-2" style={{ fontSize: settings.quran.translationSize }}>
+                  {v.english}
+                </p>
+              )}
             </div>
-            {showEnglish && (
-              <div className="text-left text-sm text-gray-400 mt-1">
-                {v.english} <span className="text-gray-600">({v.chapter}:{v.verse})</span>
-              </div>
-            )}
-          </div>
-        ))}
+          ))}
+      </div>
 
-      <div className="text-xs text-gray-500 mt-2 font-mono border-t border-emerald-500/20 pt-2">
-        Reference: {verses}
+      <div className="px-5 py-2 border-t border-qv-divider flex justify-between items-center">
+        <span className="text-[11px] tracking-wide text-qv-subtle font-medium">Reference: {verses}</span>
+        <span className="text-[10.5px] tracking-widest uppercase text-qv-muted font-semibold">SubmissionArchives</span>
       </div>
     </NodeViewWrapper>
   )

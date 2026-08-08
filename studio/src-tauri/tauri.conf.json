@@ -14,11 +14,18 @@
       {
         "title": "studio",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "visible": true,
+        "decorations": true,
+        "center": true
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["**"]
+      }
     }
   },
   "bundle": {

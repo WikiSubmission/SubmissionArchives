@@ -3,33 +3,70 @@ import StarterKit from '@tiptap/starter-kit'
 import { Markdown } from 'tiptap-markdown'
 import { parseFrontmatter, stringifyWithFrontmatter } from '../lib/frontmatter'
 import { useEffect, useRef, useState } from 'react'
-import { invoke } from '@tauri-apps/api/core'
+import { invoke, convertFileSrc } from '@tauri-apps/api/core'
+import { open } from '@tauri-apps/plugin-dialog'
+import DragHandle from '@tiptap/extension-drag-handle-react'
+import { GripVertical } from 'lucide-react'
 import { QuranEmbed } from './extensions/QuranEmbed'
+import { QuranEmbedInline } from './extensions/QuranEmbedInline'
+import { Callout } from './extensions/Callout'
+import { ArabicBlock } from './extensions/ArabicBlock'
 import { SlashCommand } from './extensions/slash-command/SlashCommand'
+import { setDefaultQuranInsertStyle } from './extensions/slash-command/items'
 import { WikiLink } from './extensions/WikiLink'
 import FrontmatterPanel from './FrontmatterPanel'
+import BacklinksPanel from './BacklinksPanel'
+import VersionHistoryModal from './VersionHistoryModal'
+import NoteMenu, { type FontFamily } from './NoteMenu'
+import { useSettings } from '../hooks/useSettings'
 
-type EditorMode = 'obsidian' | 'cabinet' | 'docs'
-
-const WELCOME_CONTENT = `
-  <h2>SubmissionArchives Studio</h2>
-  <p>This is a <strong>local-first</strong> knowledge base and scholarly writing tool.</p>
-  <quran-embed verses="1:1-2" showenglish="true"></quran-embed>
-  <p>Open or create a note from the Archive Explorer to start writing. Type <code>/quran 1:1-7</code> and press Enter to insert a verse block, or <code>[[Page Name]]</code> to link another note.</p>
-`
+type EditorMode = 'write' | 'blocks' | 'page'
 
 interface EditorProps {
-  filePath: string | null
+  archivePath: string
+  filePath: string
   onWikiLinkNavigate: (pageName: string) => void
+  onOpenFile: (path: string) => void
+  onDuplicate: () => void
+  onMove: () => void
+  onCopyPath: () => void
+  onExport: () => void
 }
 
-export default function Editor({ filePath, onWikiLinkNavigate }: EditorProps) {
-  const [mode, setMode] = useState<EditorMode>('obsidian')
+const FONT_CLASS: Record<FontFamily, string> = {
+  default: '',
+  serif: 'font-serif',
+  mono: 'font-mono',
+}
+
+export default function Editor({
+  archivePath,
+  filePath,
+  onWikiLinkNavigate,
+  onOpenFile,
+  onDuplicate,
+  onMove,
+  onCopyPath,
+  onExport,
+}: EditorProps) {
+  const { settings } = useSettings()
+  const [mode, setMode] = useState<EditorMode>('write')
   const [status, setStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
   const [frontmatter, setFrontmatter] = useState<Record<string, unknown>>({})
+  const [historyOpen, setHistoryOpen] = useState(false)
   const saveTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
   const activeFilePath = useRef<string | null>(null)
   const frontmatterRef = useRef<Record<string, unknown>>({})
+
+  const locked = Boolean(frontmatter.locked)
+  const fullWidth = Boolean(frontmatter.fullWidth)
+  const fontFamily = (frontmatter.fontFamily as FontFamily) || 'default'
+  const pdfAttachment = (frontmatter.pdfAttachment as string) || null
+  const pdfSplitView = Boolean(frontmatter.pdfSplitView) && Boolean(pdfAttachment)
+
+  useEffect(() => {
+    setDefaultQuranInsertStyle(settings.quran.insertStyle)
+  }, [settings.quran.insertStyle])
 
   const scheduleSave = (editorInstance: ReturnType<typeof useEditor>) => {
     if (!activeFilePath.current) return
@@ -43,7 +80,10 @@ export default function Editor({ filePath, onWikiLinkNavigate }: EditorProps) {
       const body = (editorInstance.storage as any).markdown.getMarkdown()
       const content = stringifyWithFrontmatter(body, frontmatterRef.current)
       invoke('write_note', { path, content })
-        .then(() => setStatus('saved'))
+        .then(() => {
+          setStatus('saved')
+          invoke('snapshot_note', { archiveRoot: archivePath, notePath: path, content }).catch(() => {})
+        })
         .catch(() => setStatus('error'))
     }, 500)
   }
@@ -52,11 +92,14 @@ export default function Editor({ filePath, onWikiLinkNavigate }: EditorProps) {
     extensions: [
       StarterKit,
       QuranEmbed,
+      QuranEmbedInline,
+      Callout,
+      ArabicBlock,
       SlashCommand,
       Markdown,
       WikiLink.configure({ onNavigate: onWikiLinkNavigate }),
     ],
-    content: WELCOME_CONTENT,
+    content: '',
     editorProps: {
       attributes: {
         class:
@@ -66,28 +109,27 @@ export default function Editor({ filePath, onWikiLinkNavigate }: EditorProps) {
     onUpdate: ({ editor: instance }) => scheduleSave(instance),
   })
 
-  useEffect(() => {
-    activeFilePath.current = filePath
-    if (!editor) return
-
-    if (!filePath) {
-      editor.commands.setContent(WELCOME_CONTENT, { emitUpdate: false })
-      frontmatterRef.current = {}
-      setFrontmatter({})
-      setStatus('idle')
-      return
-    }
-
-    invoke<string>('read_note', { path: filePath })
+  const loadNote = (path: string) => {
+    invoke<string>('read_note', { path })
       .then((raw) => {
         const { data, content } = parseFrontmatter(raw)
-        editor.commands.setContent(content, { emitUpdate: false })
+        editor?.commands.setContent(content, { emitUpdate: false })
         frontmatterRef.current = data
         setFrontmatter(data)
         setStatus('idle')
       })
       .catch(() => setStatus('error'))
+  }
+
+  useEffect(() => {
+    activeFilePath.current = filePath
+    if (!editor) return
+    loadNote(filePath)
   }, [filePath, editor])
+
+  useEffect(() => {
+    editor?.setEditable(!locked)
+  }, [locked, editor])
 
   const handleFrontmatterChange = (next: Record<string, unknown>) => {
     frontmatterRef.current = next
@@ -95,17 +137,45 @@ export default function Editor({ filePath, onWikiLinkNavigate }: EditorProps) {
     scheduleSave(editor)
   }
 
+  const handleAttachPdf = async () => {
+    const selected = await open({ multiple: false, title: 'Attach PDF', filters: [{ name: 'PDF', extensions: ['pdf'] }] })
+    if (!selected || typeof selected !== 'string') return
+    try {
+      const attached = await invoke<string>('attach_pdf_to_note', { archiveRoot: archivePath, pdfSourcePath: selected })
+      handleFrontmatterChange({ ...frontmatterRef.current, pdfAttachment: attached, pdfSplitView: true })
+    } catch (err) {
+      window.alert(String(err))
+    }
+  }
+
   return (
-    <div className="w-full h-full bg-white dark:bg-[#0f0f11] text-gray-900 dark:text-gray-100 flex flex-col relative">
+    <div className="w-full h-full bg-white dark:bg-ed-bg text-gray-900 dark:text-gray-100 flex flex-col relative">
       {/* Mode Toggle Toolbar */}
       <div className="absolute top-4 right-8 z-10 flex items-center gap-3">
-        {filePath && (
-          <span key={status} className="text-xs text-white/30 font-mono animate-fade-in">
-            {status === 'saving' ? 'Saving...' : status === 'saved' ? 'Saved' : status === 'error' ? 'Error' : ''}
-          </span>
-        )}
-        <div className="flex gap-2 bg-[#1c1c1f] p-1 rounded-lg border border-white/10 shadow-lg">
-          {(['obsidian', 'cabinet', 'docs'] as EditorMode[]).map((m) => (
+        <span key={status} className="text-xs text-white/30 font-mono animate-fade-in">
+          {status === 'saving' ? 'Saving...' : status === 'saved' ? 'Saved' : status === 'error' ? 'Error' : ''}
+        </span>
+        <div className="bg-[#1c1c1f] p-1 rounded-lg border border-ed-rule shadow-lg">
+          <NoteMenu
+            locked={locked}
+            fullWidth={fullWidth}
+            fontFamily={fontFamily}
+            hasPdfAttachment={Boolean(pdfAttachment)}
+            pdfSplitView={pdfSplitView}
+            onToggleLock={() => handleFrontmatterChange({ ...frontmatter, locked: !locked })}
+            onToggleFullWidth={() => handleFrontmatterChange({ ...frontmatter, fullWidth: !fullWidth })}
+            onSetFontFamily={(font) => handleFrontmatterChange({ ...frontmatter, fontFamily: font })}
+            onOpenHistory={() => setHistoryOpen(true)}
+            onDuplicate={onDuplicate}
+            onMove={onMove}
+            onCopyPath={onCopyPath}
+            onExport={onExport}
+            onAttachPdf={handleAttachPdf}
+            onTogglePdfSplitView={() => handleFrontmatterChange({ ...frontmatter, pdfSplitView: !pdfSplitView })}
+          />
+        </div>
+        <div className="flex gap-2 bg-[#1c1c1f] p-1 rounded-lg border border-ed-rule shadow-lg">
+          {(['write', 'blocks', 'page'] as EditorMode[]).map((m) => (
             <button
               key={m}
               onClick={() => setMode(m)}
@@ -119,20 +189,47 @@ export default function Editor({ filePath, onWikiLinkNavigate }: EditorProps) {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
-        <div
-          className={`h-full w-full mx-auto transition-all duration-300 ${
-            mode === 'docs'
-              ? 'max-w-[800px] bg-white text-black mt-8 shadow-2xl rounded-sm p-4 min-h-[1056px]'
-              : mode === 'cabinet'
-                ? 'max-w-5xl pl-16'
-                : 'max-w-3xl'
-          }`}
-        >
-          {filePath && <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />}
-          <EditorContent editor={editor} className="h-full w-full" />
+      <div className="flex-1 overflow-hidden flex">
+        {pdfSplitView && pdfAttachment && (
+          <div className="w-1/2 border-r border-ed-rule shrink-0">
+            <iframe title="Attached PDF" src={convertFileSrc(pdfAttachment)} className="w-full h-full border-0" />
+          </div>
+        )}
+
+        <div className={`overflow-y-auto ${pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'} ${FONT_CLASS[fontFamily]}`}>
+          <div
+            className={`h-full w-full mx-auto transition-all duration-300 ${
+              mode === 'page'
+                ? 'max-w-[800px] bg-white text-black mt-8 shadow-2xl rounded-sm p-4 min-h-[1056px]'
+                : mode === 'blocks'
+                  ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-16`
+                  : fullWidth
+                    ? 'max-w-none'
+                    : 'max-w-3xl'
+            }`}
+          >
+            <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
+            {mode === 'blocks' && editor && (
+              <DragHandle editor={editor}>
+                <div className="w-5 h-6 flex items-center justify-center text-white/30 hover:text-white/70 cursor-grab active:cursor-grabbing transition-colors">
+                  <GripVertical size={15} />
+                </div>
+              </DragHandle>
+            )}
+            <EditorContent editor={editor} className="h-full w-full" />
+            <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+          </div>
         </div>
       </div>
+
+      {historyOpen && (
+        <VersionHistoryModal
+          archivePath={archivePath}
+          notePath={filePath}
+          onRestored={() => loadNote(filePath)}
+          onClose={() => setHistoryOpen(false)}
+        />
+      )}
     </div>
   )
 }

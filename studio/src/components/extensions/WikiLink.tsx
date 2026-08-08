@@ -15,7 +15,7 @@ function WikiLinkComponent({ node, extension }: any) {
     <NodeViewWrapper as="span">
       <button
         onClick={() => onNavigate(pageName)}
-        className="text-emerald-400 hover:text-emerald-300 hover:underline decoration-emerald-400/40 transition-colors"
+        className="text-ed-accent hover:text-ed-accent-strong hover:underline decoration-ed-accent/40 transition-colors"
       >
         [[{pageName}]]
       </button>
