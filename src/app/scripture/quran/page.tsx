@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { cache } from 'react';
 import type { Metadata } from 'next';
-import QuranPageClient from './QuranPageClient';
+import QuranPageClient from '@/app/quran/QuranPageClient';
 
 export const revalidate = 86400;
 

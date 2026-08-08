@@ -4,21 +4,16 @@
       "declaredIn": "dependencies",
       "classification": "runtime",
       "foundIn": [
-        "src"
-      ]
-    },
-    "framer-motion": {
-      "declaredIn": "dependencies",
-      "classification": "runtime",
-      "foundIn": [
-        "src"
+        "src",
+        "config"
       ]
     },
     "lru-cache": {
       "declaredIn": "dependencies",
       "classification": "runtime",
       "foundIn": [
-        "src"
+        "src",
+        "config"
       ]
     },
     "lucide-react": {
@@ -36,11 +31,6 @@
         "src",
         "config"
       ]
-    },
-    "pdf-lib": {
-      "declaredIn": "dependencies",
-      "classification": "unused",
-      "foundIn": []
     },
     "react": {
       "declaredIn": "dependencies",
@@ -68,6 +58,11 @@
         "src"
       ]
     },
+    "server-only": {
+      "declaredIn": "dependencies",
+      "classification": "unused",
+      "foundIn": []
+    },
     "sharp": {
       "declaredIn": "dependencies",
       "classification": "script-only",
@@ -79,7 +74,8 @@
       "declaredIn": "dependencies",
       "classification": "runtime",
       "foundIn": [
-        "src"
+        "src",
+        "config"
       ]
     },
     "@axe-core/playwright": {
@@ -131,11 +127,6 @@
       "classification": "uncertain",
       "foundIn": []
     },
-    "canvas": {
-      "declaredIn": "devDependencies",
-      "classification": "unused",
-      "foundIn": []
-    },
     "eslint": {
       "declaredIn": "devDependencies",
       "classification": "development",
@@ -163,16 +154,6 @@
       "foundIn": [
         "src"
       ]
-    },
-    "tesseract.js": {
-      "declaredIn": "devDependencies",
-      "classification": "unused",
-      "foundIn": []
-    },
-    "ts-node": {
-      "declaredIn": "devDependencies",
-      "classification": "uncertain",
-      "foundIn": []
     },
     "tsx": {
       "declaredIn": "devDependencies",

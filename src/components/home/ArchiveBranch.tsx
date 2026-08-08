@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 import { ExpectationCard } from './ExpectationCard';
 import { Reveal } from './Reveal';
-import SearchFunctionDemo from './SearchFunctionDemo';
+import { DeferredSearchFunctionDemo } from './DeferredSearchFunctionDemo';
 import { SectionCta } from './SectionCta';
 import { SectionHeading } from './SectionHeading';
 
@@ -82,7 +82,7 @@ export function ArchiveBranch({
 
             {showSearchDemo ? (
                 <div className="mt-12">
-                    <SearchFunctionDemo />
+                    <DeferredSearchFunctionDemo />
                 </div>
             ) : null}
         </article>

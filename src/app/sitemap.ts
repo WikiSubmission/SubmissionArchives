@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: SITE_URL, changeFrequency: 'weekly', priority: 1 },
         { url: `${SITE_URL}/videos`, changeFrequency: 'weekly', priority: 0.8 },
         { url: `${SITE_URL}/audios`, changeFrequency: 'weekly', priority: 0.8 },
-        { url: `${SITE_URL}/quran`, changeFrequency: 'monthly', priority: 0.8 },
+        { url: `${SITE_URL}/scripture/quran`, changeFrequency: 'monthly', priority: 0.8 },
         { url: `${SITE_URL}/search`, changeFrequency: 'monthly', priority: 0.5 },
         { url: `${SITE_URL}/written`, changeFrequency: 'monthly', priority: 0.5 },
     ];
@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const quranRoutes: MetadataRoute.Sitemap = masterIndex
         .filter((item) => item.type === 'quran')
         .map((item) => ({
-            url: `${SITE_URL}/quran/${item.id.replace(/^quran\//, '')}`,
+            url: `${SITE_URL}/scripture/quran/${item.id.replace(/^quran\//, '')}`,
             changeFrequency: 'yearly',
             priority: 0.7,
         }));

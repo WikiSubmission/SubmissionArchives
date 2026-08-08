@@ -44,9 +44,9 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
             <main id="main-content" className="relative overflow-hidden">
                 <div className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
                     <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1fr_0.9fr]">
-                        <div className="relative z-10 space-y-6">
-                            <p className="archive-kicker border-l-2 border-ed-accent pl-3">Audio index</p>
-                            <h1 className="!mt-8 max-w-[16ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9] text-ed-fg">
+                        <div className="relative z-10 flex flex-col items-start gap-4">
+                            <p className="archive-kicker">Audio index</p>
+                            <h1 className="max-w-[16ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] text-ed-fg">
                                 The Audio Archives
                             </h1>
                             <p className="max-w-[62ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
@@ -64,9 +64,9 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
                         {categorizedAudios.map((section) => (
                             <section key={section.id} id={section.id} className="space-y-8">
                                 <div className="flex flex-col gap-4 border-b border-ed-rule pb-6 sm:flex-row sm:items-end sm:justify-between">
-                                    <div className="space-y-3">
-                                        <p className="archive-kicker text-ed-fg-muted">Collection</p>
-                                        <h2 className="!mt-5 font-display text-3xl text-ed-fg sm:text-4xl">
+                                    <div className="flex flex-col items-start gap-3">
+                                        <p className="archive-kicker">Collection</p>
+                                        <h2 className="font-display text-3xl text-ed-fg sm:text-4xl">
                                             {section.title}
                                         </h2>
                                         <p className="max-w-[64ch] text-base leading-7 text-ed-fg-muted">

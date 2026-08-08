@@ -956,7 +956,7 @@ function isDocumentType(type: string) {
 
 function getDocumentBasePath(media: SearchResultMedia) {
     if (media.type === 'quran') {
-        return `/quran/${media.id.replace(/^quran\//, '')}`;
+        return `/scripture/quran/${media.id.replace(/^quran\//, '')}`;
     }
     return `/library/${media.id}`;
 }

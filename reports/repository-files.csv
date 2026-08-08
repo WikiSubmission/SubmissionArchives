@@ -1,306 +1,314 @@
 path,size_bytes,extension
-.codex-dev.err.log,455,.log
-.codex-dev.out.log,610,.log
-.codex-start.err.log,0,.log
-.codex-start.out.log,564,.log
-.dockerignore,556,
-.env.example,194,.example
-.gitignore,2045,
+.dockerignore,592,
+.env.example,295,.example
+.gitignore,2199,
+DESIGN.md,7212,.md
 Dockerfile,1241,
-PRODUCT.md,3397,.md
-README.md,4651,.md
-data/catalog/appendix-editions.json,758,.json
-data/catalog/audios.json,70438,.json
-data/catalog/newsletters.json,2854939,.json
-data/catalog/quran-appendices.csv,456029,.csv
-data/catalog/videos.json,38015,.json
-data/sources/README.md,1241,.md
-data/sources/books/README.md,1478,.md
-data/sources/books/all_arabic_segments.csv,77572,.csv
-data/sources/books/all_low_confidence_pages.csv,19800,.csv
-data/sources/books/all_pages_manifest.csv,1285998,.csv
-data/sources/books/corpus_manifest.csv,1237,.csv
-data/sources/books/corpus_manifest.json,3307,.json
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_QA_report.md,1081,.md
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_arabic_segments.csv,17370,.csv
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_complete.json,2210580,.json
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_layout_transcription.txt,34147,.txt
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_low_confidence_pages.csv,247,.csv
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_page_by_page_transcription.md,35130,.md
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_pages.csv,34415,.csv
-data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_pages.jsonl,1108157,.jsonl
-data/sources/books/eternity_screenplay/eternity_screenplay_QA_report.md,1065,.md
-data/sources/books/eternity_screenplay/eternity_screenplay_arabic_segments.csv,124,.csv
-data/sources/books/eternity_screenplay/eternity_screenplay_complete.json,10898249,.json
-data/sources/books/eternity_screenplay/eternity_screenplay_layout_transcription.txt,127265,.txt
-data/sources/books/eternity_screenplay/eternity_screenplay_low_confidence_pages.csv,64,.csv
-data/sources/books/eternity_screenplay/eternity_screenplay_page_by_page_transcription.md,129650,.md
-data/sources/books/eternity_screenplay/eternity_screenplay_pages.csv,127524,.csv
-data/sources/books/eternity_screenplay/eternity_screenplay_pages.jsonl,5433718,.jsonl
-data/sources/books/islam_volume_1/islam_volume_1_QA_report.md,1052,.md
-data/sources/books/islam_volume_1/islam_volume_1_arabic_segments.csv,2954,.csv
-data/sources/books/islam_volume_1/islam_volume_1_complete.json,12436856,.json
-data/sources/books/islam_volume_1/islam_volume_1_layout_transcription.txt,139555,.txt
-data/sources/books/islam_volume_1/islam_volume_1_low_confidence_pages.csv,500,.csv
-data/sources/books/islam_volume_1/islam_volume_1_page_by_page_transcription.md,142718,.md
-data/sources/books/islam_volume_1/islam_volume_1_pages.csv,140021,.csv
-data/sources/books/islam_volume_1/islam_volume_1_pages.jsonl,6366351,.jsonl
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_QA_report.md,1147,.md
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_arabic_segments.csv,8703,.csv
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_complete.json,27833327,.json
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_layout_transcription.txt,326970,.txt
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_low_confidence_pages.csv,2516,.csv
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_page_by_page_transcription.md,336534,.md
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_pages.csv,325352,.csv
-data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_pages.jsonl,14090980,.jsonl
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_QA_report.md,1073,.md
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_arabic_segments.csv,7455,.csv
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json,6560722,.json
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_layout_transcription.txt,84383,.txt
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_low_confidence_pages.csv,64,.csv
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_page_by_page_transcription.md,87953,.md
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_pages.csv,84978,.csv
-data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_pages.jsonl,3736953,.jsonl
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_QA_report.md,1108,.md
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_arabic_segments.csv,16145,.csv
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_complete.json,16899927,.json
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_layout_transcription.txt,145690,.txt
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_low_confidence_pages.csv,64,.csv
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_page_by_page_transcription.md,160229,.md
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_pages.csv,143647,.csv
-data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_pages.jsonl,9094080,.jsonl
-data/sources/books/the_computer_speaks/the_computer_speaks_QA_report.md,1119,.md
-data/sources/books/the_computer_speaks/the_computer_speaks_arabic_segments.csv,11410,.csv
-data/sources/books/the_computer_speaks/the_computer_speaks_complete.json,31400353,.json
-data/sources/books/the_computer_speaks/the_computer_speaks_layout_transcription.txt,312803,.txt
-data/sources/books/the_computer_speaks/the_computer_speaks_low_confidence_pages.csv,4884,.csv
-data/sources/books/the_computer_speaks/the_computer_speaks_page_by_page_transcription.md,325645,.md
-data/sources/books/the_computer_speaks/the_computer_speaks_pages.csv,311985,.csv
-data/sources/books/the_computer_speaks/the_computer_speaks_pages.jsonl,15433717,.jsonl
-data/sources/books/the_contact_prayers/the_contact_prayers_QA_report.md,1056,.md
-data/sources/books/the_contact_prayers/the_contact_prayers_arabic_segments.csv,124,.csv
-data/sources/books/the_contact_prayers/the_contact_prayers_complete.json,1180486,.json
-data/sources/books/the_contact_prayers/the_contact_prayers_layout_transcription.txt,13430,.txt
-data/sources/books/the_contact_prayers/the_contact_prayers_low_confidence_pages.csv,64,.csv
-data/sources/books/the_contact_prayers/the_contact_prayers_page_by_page_transcription.md,14001,.md
-data/sources/books/the_contact_prayers/the_contact_prayers_pages.csv,13666,.csv
-data/sources/books/the_contact_prayers/the_contact_prayers_pages.jsonl,597767,.jsonl
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_QA_report.md,1086,.md
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_arabic_segments.csv,686,.csv
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_complete.json,2679129,.json
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_layout_transcription.txt,29500,.txt
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_low_confidence_pages.csv,64,.csv
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_page_by_page_transcription.md,30355,.md
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_pages.csv,29625,.csv
-data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_pages.jsonl,1376839,.jsonl
-data/sources/newsletters/extras/1988_05_May_Bulletin.jpg,120059,.jpg
-data/sources/newsletters/extras/1990_01_January_bonus_issue.jpg,203517,.jpg
-data/sources/playlists/audio-transcripts/01 - Quran Study From Azhar 1 Sura 72_19 28 & Sura 73 By Kathryn Jinns 05 26 1989.csv,194336,.csv
-data/sources/playlists/audio-transcripts/02 - Quran Study From Azhar 2 Sura 95 & Sura 96 By M Sabahi Two Verses Of Sura 9 Dropped Out To Demons.csv,214347,.csv
-data/sources/playlists/audio-transcripts/03 - Quran Study From Azhar 3 Sura 10_79 92 & Sura 23 By Rashad_s Khutba 01 19 1990 Sura 3_110 117 By.csv,269133,.csv
-data/sources/playlists/audio-transcripts/04 - Quran Study From Azhar 4 Sura 37 By Rashad Shakira Present Astroid 01 21 1990 Sura 3_118 129 By S.csv,358447,.csv
-data/sources/playlists/audio-transcripts/05 - Quran Study From Azhar 5 Sura 56_75 & Sura 57 By Lisa 02 17 1989.csv,122770,.csv
-data/sources/playlists/audio-transcripts/06 - Quran Study From Azhar 6 Sura 59 By Donna PRA Invisible Giants Hypocrites 03 10 1989.csv,186667,.csv
-data/sources/playlists/audio-transcripts/07 - Quran Study From Azhar 7 Sura 62 & Sura 63 By Kathryn God_s Religion Will Dominate In 20 To 50 Yr.csv,255527,.csv
-data/sources/playlists/audio-transcripts/08 - Quran Study From Azhar 8 Sura 65 & Sura 66 By Lori Encourage Children To Do Salat Hamid Argues 04.csv,184993,.csv
-data/sources/playlists/audio-transcripts/09 - Quran Study From Azhar 9 Sura 70 By Edip Chastity Worry Edip Wanted Rashad To Change Rich Believe.csv,223576,.csv
-data/sources/playlists/audio-transcripts/10 - Quran Study From Azhar 10 Sura 71 & Sura 72 By Afameh Chastity Jinns 05 19 1989.csv,258898,.csv
-data/sources/playlists/audio-transcripts/100 - MA 100 - Messenger Audio.csv,44373,.csv
-data/sources/playlists/audio-transcripts/11 - Quran Study From Behrouz 111 Sura 23_60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19.csv,196780,.csv
-data/sources/playlists/audio-transcripts/12 - Quran Study From Behrouz 212 Behrouz_s Khutba Edip Yuksel_s Exposure 01 25 1990.csv,270104,.csv
-data/sources/playlists/audio-transcripts/13 - Quran Study From Behrouz 313 Sura 7_12 By Rashad Adam & Eve_s Body 12 24 1989.csv,305993,.csv
-data/sources/playlists/audio-transcripts/14 - Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad.csv,51081,.csv
-data/sources/playlists/audio-transcripts/15 - Quran Study From Behrouz 515 Sura 54_23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen.csv,287399,.csv
-data/sources/playlists/audio-transcripts/16 - Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast.csv,197547,.csv
-data/sources/playlists/audio-transcripts/17 - Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7.csv,260780,.csv
-data/sources/playlists/audio-transcripts/18 - Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8.csv,245825,.csv
-data/sources/playlists/audio-transcripts/19 - Quran Study From Behrouz 919 Sura 2_89 119 Witchcraft Reverting Intro To Blue Quran No 13.csv,227317,.csv
-data/sources/playlists/audio-transcripts/20 - Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry.csv,151807,.csv
-data/sources/playlists/audio-transcripts/21 - Quran Study From Behrouz 1121 Sura 9_52 By Rashad The Hypocrites Apology To Parivash Sura 56_75 B.csv,98115,.csv
-data/sources/playlists/audio-transcripts/22 - Quran Study From Behrouz 1222 Sura 39_11 By Rashad Admission Test I Don_t Compromise With A Littl.csv,210681,.csv
-data/sources/playlists/audio-transcripts/23 - Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &.csv,171963,.csv
-data/sources/playlists/audio-transcripts/24 - Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh.csv,248102,.csv
-data/sources/playlists/audio-transcripts/25 - Quran Study From Behrouz 1525 Sura 58 By Robert.csv,137780,.csv
-data/sources/playlists/audio-transcripts/26 - Quran Study From Behrouz 1626 Sura 67 By Gatut Hamid Argues With Rashad.csv,138048,.csv
-data/sources/playlists/audio-transcripts/27 - Quran Study From Behrouz 1727 Sura 14_19 Chastity Premarital Pregnancy Sura 17_47 We Are Allowed.csv,277378,.csv
-data/sources/playlists/audio-transcripts/28 - Quran Study From Parivash 128 Sura 45_33 Parivash_s Home 19 Math.csv,158666,.csv
-data/sources/playlists/audio-transcripts/29 - Quran Study From Parivash 229 Mehri_s Questions Admission Test & Final Test Tucson 1985.csv,238508,.csv
-data/sources/playlists/audio-transcripts/30 - Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45_33 Rashad Was Told To.csv,268430,.csv
-data/sources/playlists/audio-transcripts/31 - Quran Study From Parivash 431 Sura 18_98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989.csv,207312,.csv
-data/sources/playlists/audio-transcripts/32 - Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8.csv,48613,.csv
-data/sources/playlists/audio-transcripts/33 - Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989.csv,181616,.csv
-data/sources/playlists/audio-transcripts/34 - Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal.csv,315874,.csv
-data/sources/playlists/audio-transcripts/35 - Quran Study From Parivash 835 Sura 30_25 Miracle Coming Out Of Biggest Brewery Intercession Alleg.csv,339800,.csv
-data/sources/playlists/audio-transcripts/36 - Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi.csv,181058,.csv
-data/sources/playlists/audio-transcripts/37 - Quran Study From Parivash 1037 Shakira_s Home Sura 11_68 11 04 1989.csv,354638,.csv
-data/sources/playlists/audio-transcripts/38 - Quran Study From Parivash 1138 Certainty 11 29 1989.csv,188767,.csv
-data/sources/playlists/audio-transcripts/39 - Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28.csv,305302,.csv
-data/sources/playlists/audio-transcripts/40 - Quran Study From Parivash 1340 Sura 3_59 12 29 1989.csv,127398,.csv
-data/sources/playlists/audio-transcripts/41 - Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari.csv,145075,.csv
-data/sources/playlists/audio-transcripts/42 - Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest.csv,169669,.csv
-data/sources/playlists/audio-transcripts/43 - Quran Study From Roxana 243 Third International Conference Tucson Rashad_s Speech Sura 17_39 Insu.csv,267422,.csv
-data/sources/playlists/audio-transcripts/44 - Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By.csv,236504,.csv
-data/sources/playlists/audio-transcripts/45 - Quran Study From Roxana 445 Sura 40 By Rashad Firoz_s Home Deja Vu Believers Usually 95 Yrs Old F.csv,291287,.csv
-data/sources/playlists/audio-transcripts/46 - Quran Study From Roxana 546 Sura 37_159 To 38_25 Sura 9_50 & Sura 39_11 Admission Test I Don_t Co.csv,259209,.csv
-data/sources/playlists/audio-transcripts/47 - Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2.csv,233729,.csv
-data/sources/playlists/audio-transcripts/48 - Quran Study 48 Rashad_s Speech Parivash_s Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989.csv,317334,.csv
-data/sources/playlists/audio-transcripts/49 - Quran Study 49 Speech Of Rashad Parivash_s Home 19 Math 11 05 1989.csv,109343,.csv
-data/sources/playlists/audio-transcripts/50 - Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198.csv,184456,.csv
-data/sources/playlists/audio-transcripts/51 - Quran Study 51 Sura 17_59 Rashad 1990.csv,117352,.csv
-data/sources/playlists/audio-transcripts/52 - Quran Study 5⧸8⧸89 by Linda Sura 1 & 2 partial.csv,59353,.csv
-data/sources/playlists/audio-transcripts/53 - Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original.csv,91448,.csv
-data/sources/playlists/audio-transcripts/54 - Quran Study 22 Oct 1982 By Dr Rashad Khalifa.csv,179796,.csv
-data/sources/playlists/audio-transcripts/55 - Zikr 23 Oct 1982 By Dr Rashad Khalifa.csv,10170,.csv
-data/sources/playlists/audio-transcripts/56 - Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa.csv,190100,.csv
-data/sources/playlists/audio-transcripts/57 - Quran Study 05 Nov 1982 By Dr Rashad Khalifa.csv,132835,.csv
-data/sources/playlists/audio-transcripts/58 - Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa.csv,106170,.csv
-data/sources/playlists/audio-transcripts/59 - Friday Sermon 19 Nov 1982 By Dean Mahmoud.csv,74289,.csv
-data/sources/playlists/audio-transcripts/60 - Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa.csv,130060,.csv
-data/sources/playlists/audio-transcripts/61 - Friday Sermon 1982 By Dr Rashad Khalifa.csv,222853,.csv
-data/sources/playlists/audio-transcripts/62 - Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa.csv,164793,.csv
-data/sources/playlists/audio-transcripts/63 - Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa.csv,203483,.csv
-data/sources/playlists/audio-transcripts/64 - Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa.csv,213654,.csv
-data/sources/playlists/audio-transcripts/65 - Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa.csv,205247,.csv
-data/sources/playlists/audio-transcripts/66 - Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa.csv,193956,.csv
-data/sources/playlists/audio-transcripts/67 - Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa.csv,124281,.csv
-data/sources/playlists/audio-transcripts/68 - Friday Sermon 17 Dec. 1982 By Dr. Rashad Khalifa.csv,116221,.csv
-data/sources/playlists/audio-transcripts/69 - Friday Sermon 17 Dec. 1982 By Dr. Rashad Khalifa.csv,143849,.csv
-data/sources/playlists/audio-transcripts/70 - MA 70 - Messenger Audio.csv,99448,.csv
-data/sources/playlists/audio-transcripts/71 - MA 71 - Messenger Audio.csv,26307,.csv
-data/sources/playlists/audio-transcripts/72 - MA 72 - Messenger Audio.csv,96612,.csv
-data/sources/playlists/audio-transcripts/73 - MA 73 - Messenger Audio.csv,57764,.csv
-data/sources/playlists/audio-transcripts/74 - MA 74 - Messenger Audio.csv,67735,.csv
-data/sources/playlists/audio-transcripts/75 - MA 75 - Messenger Audio.csv,89853,.csv
-data/sources/playlists/audio-transcripts/76 - MA 76 - Messenger Audio.csv,88147,.csv
-data/sources/playlists/audio-transcripts/77 - MA 77 - Messenger Audio.csv,94063,.csv
-data/sources/playlists/audio-transcripts/78 - MA 78 - Messenger Audio.csv,62125,.csv
-data/sources/playlists/audio-transcripts/79 - MA 79 - Messenger Audio.csv,53886,.csv
-data/sources/playlists/audio-transcripts/80 - MA 80 - Messenger Audio.csv,3907,.csv
-data/sources/playlists/audio-transcripts/81 - MA 81 - Messenger Audio.csv,26182,.csv
-data/sources/playlists/audio-transcripts/82 - MA 82 - Messenger Audio.csv,95083,.csv
-data/sources/playlists/audio-transcripts/83 - MA 83 - Messenger Audio.csv,57716,.csv
-data/sources/playlists/audio-transcripts/84 - MA 84 - Messenger Audio.csv,64541,.csv
-data/sources/playlists/audio-transcripts/85 - MA 85 - Messenger Audio.csv,26609,.csv
-data/sources/playlists/audio-transcripts/86 - MA 86 - Messenger Audio.csv,33103,.csv
-data/sources/playlists/audio-transcripts/87 - MA 87 - Messenger Audio.csv,33703,.csv
-data/sources/playlists/audio-transcripts/88 - MA 88 - Messenger Audio.csv,91373,.csv
-data/sources/playlists/audio-transcripts/89 - MA 89 - Messenger Audio.csv,18750,.csv
-data/sources/playlists/audio-transcripts/90 - MA 90 - Messenger Audio.csv,96632,.csv
-data/sources/playlists/audio-transcripts/91 - MA 91 - Messenger Audio.csv,11003,.csv
-data/sources/playlists/audio-transcripts/92 - MA 92 - Messenger Audio.csv,49004,.csv
-data/sources/playlists/audio-transcripts/93 - MA 93 - Messenger Audio.csv,51163,.csv
-data/sources/playlists/audio-transcripts/94 - MA 94 - Messenger Audio.csv,23618,.csv
-data/sources/playlists/audio-transcripts/95 - MA 95 - Messenger Audio.csv,88341,.csv
-data/sources/playlists/audio-transcripts/96 - MA 96 - Messenger Audio.csv,66060,.csv
-data/sources/playlists/audio-transcripts/97 - MA 97 - Messenger Audio.csv,34594,.csv
-data/sources/playlists/audio-transcripts/98 - MA 98 - Messenger Audio.csv,58707,.csv
-data/sources/playlists/audio-transcripts/99 - MA 99 - Messenger Audio.csv,67964,.csv
-data/sources/playlists/video-transcripts/01 - What is Life All About.csv,38124,.csv
-data/sources/playlists/video-transcripts/02 - Who is GOD.csv,25019,.csv
-data/sources/playlists/video-transcripts/03 - Witness a Miracle & World News Bulletin.csv,71009,.csv
-data/sources/playlists/video-transcripts/04 - Mathematical Miracle of Quran.csv,59642,.csv
-"data/sources/playlists/video-transcripts/05 - Old Message, New Messenger.csv",128529,.csv
-data/sources/playlists/video-transcripts/06 - The Great Debate Dr. Rashad Khalifa vs Dr. Abdel Rahman.csv,277048,.csv
-data/sources/playlists/video-transcripts/07 - In Defense of the Bible.csv,29977,.csv
-data/sources/playlists/video-transcripts/08 - Evolution or Creation The Final Argument by Dr. Rashad Khalifa.csv,109217,.csv
-data/sources/playlists/video-transcripts/09 - King of Chaos.csv,68774,.csv
-data/sources/playlists/video-transcripts/10 - United Submitters International Conference Explaining the Fulfillment of the Covenant (1988).csv,47745,.csv
-data/sources/playlists/video-transcripts/11 - United Submitters International Conference Final Speech by Dr. Rashad Khalifa (1989).csv,135195,.csv
-data/sources/playlists/video-transcripts/12 - City Council Al-Fatiha Recitation by Dr. Rashad Khalifa.csv,2793,.csv
-data/sources/playlists/video-transcripts/13 - Excerpts From a Radio Debate With Dr. Rashad Khalifa.csv,9069,.csv
-data/sources/playlists/video-transcripts/14 - World News Bulletin.csv,11530,.csv
-data/sources/playlists/video-transcripts/15 - The Creators Signature.csv,43981,.csv
-data/sources/playlists/video-transcripts/16 - Essentials of Submission (Islam).csv,81469,.csv
-data/sources/playlists/video-transcripts/17 - Principles of Contact Prayers Salat.csv,140663,.csv
-data/sources/playlists/video-transcripts/18 - Principles of Friday Prayer.csv,93059,.csv
-data/sources/playlists/video-transcripts/19 - Arabic Language Lessons By Dr. Rashad Khalifa.csv,170076,.csv
-data/sources/playlists/video-transcripts/20 - Friday Sermon Knowing GOD GOD is Doing Everything (06-05-1987).csv,81921,.csv
-"data/sources/playlists/video-transcripts/21 - Friday Sermon GOD is Doing Everything, Rearranging Our Priorities (07-1987 No. 2).csv",99783,.csv
-"data/sources/playlists/video-transcripts/22 - Friday Sermon Quran vs Bible Code, End of the World Revealed 2280AD (07-1987).csv",67124,.csv
-data/sources/playlists/video-transcripts/23 - Friday Sermon Universal Unity Through Devotion to GOD Alone.csv,62198,.csv
-data/sources/playlists/video-transcripts/24 - Friday Sermon The Mathematical Miracle Proves the Quran to be the Word of GOD (10-16-1987).csv,74539,.csv
-"data/sources/playlists/video-transcripts/25 - Friday Sermon Evidence is Increasing, This Life is a School for the Eternal Life (11-1987).csv",59032,.csv
-data/sources/playlists/video-transcripts/26 - Friday Sermon Quran is the Only Book in the World That is Mathematically Composed (11-1987).csv,33700,.csv
-data/sources/playlists/video-transcripts/27 - Friday Sermon More Evidence - Memorize This Supplication For Divine Protection (11-1987).csv,45850,.csv
-"data/sources/playlists/video-transcripts/28 - Friday Sermon The Muhammadans Worship Muhammad, Discoveries by Atef and Lisa (12-04-1987).csv",46493,.csv
-"data/sources/playlists/video-transcripts/29 - Friday Sermon The Power of Repentance, The Secret of Happiness (01-01-1988).csv",77956,.csv
-"data/sources/playlists/video-transcripts/30 - Friday Sermon GOD is Doing Everything, Story About Ahmed Subhy Mansour (1-22-1988).csv",67500,.csv
-"data/sources/playlists/video-transcripts/31 - Friday Sermon Our Purpose, GOD's Kingdom vs Satan's Kingdom, Abraham's Dream (03-04-1988).csv",68343,.csv
-data/sources/playlists/video-transcripts/32 - Friday Sermon Seek GOD's Kingship Over You and Everything Else Follows (03-25-1988).csv,50281,.csv
-"data/sources/playlists/video-transcripts/33 - Friday Sermon Marriage Importance of Love, Muhammad's Example (04-08-1988).csv",47985,.csv
-"data/sources/playlists/video-transcripts/34 - Friday Sermon Proclaiming Messengership, Abraham's Religion (04-15-1988).csv",63330,.csv
-data/sources/playlists/video-transcripts/35 - Friday Sermon Rashad Explains His Messengership Details (05-16-1988).csv,80086,.csv
-data/sources/playlists/video-transcripts/36 - Friday Sermon Natural Instinct Who is The Real You How to Find Perfect Happiness (05-27-1988).csv,38552,.csv
-"data/sources/playlists/video-transcripts/37 - Friday Sermon The Meaning of Life, Discovering the Miracle (07-15-1988).csv",51780,.csv
-data/sources/playlists/video-transcripts/38 - Friday Sermon Who is GOD Understanding Our Universe (08-04-1988).csv,36958,.csv
-data/sources/playlists/video-transcripts/39 - Friday Sermon Who is Your GOD Majority of Believers Are Going to Hell (10-28-1988).csv,50192,.csv
-"data/sources/playlists/video-transcripts/40 - Friday Sermon Classification of Creatures, Loving GOD, Hell is not Enough (12-09-1988).csv",54965,.csv
-data/sources/playlists/video-transcripts/41 - Friday Sermon What About Previous Generations (12-30-1988).csv,39478,.csv
-"data/sources/playlists/video-transcripts/42 - Friday Sermon Remember GOD Constantly, Submitter vs Objector (01-13-1989).csv",50007,.csv
-"data/sources/playlists/video-transcripts/43 - Friday Sermon Revelation of Quran to Revelation of Miracle, Importance of Dawn Prayer (02-03-1989).csv",54885,.csv
-"data/sources/playlists/video-transcripts/44 - Friday Sermon Original Sin, Only GOD Guides, Majority of Believers Are Going to Hell (03-03-1989).csv",54071,.csv
-"data/sources/playlists/video-transcripts/45 - Friday Sermon Purpose of Messengers, The Advent of the Pure Quran (03-17-1989).csv",58190,.csv
-data/sources/playlists/video-transcripts/46 - Friday Sermon Why Announce Messengership (08-11-1989).csv,66743,.csv
-"data/sources/playlists/video-transcripts/47 - Friday Sermon Proving Every Verse, Word, Letter, with Irrefutable Evidence (11-09-1989).csv",57243,.csv
-"data/sources/playlists/video-transcripts/48 - Friday Sermon The Heavenly Feud, The Importance of Killing the Ego (11-29-1989).csv",72520,.csv
-"data/sources/playlists/video-transcripts/49 - Friday Sermon Proving Salat al-Jummah, The Righteous Go Straight to Heaven (11-26-1989).csv",51722,.csv
-"data/sources/playlists/video-transcripts/50 - Friday Sermon Miracle of Miracles - Al-Fatiha, Proving the Five Salat (12-08-1989).csv",62611,.csv
-data/sources/playlists/video-transcripts/51 - Friday Sermon United Submitters International Conference (1989).csv,51591,.csv
-data/sources/playlists/youtube-playlist.txt,35729,.txt
-data/sources/quran/1981/Quran1981_QA_report.md,1754,.md
-data/sources/quran/1981/Quran1981_appendices.csv,955,.csv
-data/sources/quran/1981/Quran1981_chapters.csv,7644,.csv
-data/sources/quran/1981/Quran1981_complete.json,17301158,.json
-data/sources/quran/1981/Quran1981_footnotes.csv,115779,.csv
-data/sources/quran/1981/Quran1981_full_transcription.md,1213724,.md
-data/sources/quran/1981/Quran1981_manifest.json,1133,.json
-data/sources/quran/1981/Quran1981_pages.csv,2310112,.csv
-data/sources/quran/1981/Quran1981_pages_layout.jsonl,10714926,.jsonl
-data/sources/quran/1981/Quran1981_subheadings.csv,15799,.csv
-data/sources/quran/1981/Quran1981_subject_index_lines.csv,113463,.csv
-data/sources/quran/1981/Quran1981_sura_index.csv,4326,.csv
-data/sources/quran/1981/Quran1981_verse_index.csv,795213,.csv
-data/sources/quran/1981/README.md,1475,.md
-data/sources/quran/1981/build_quran1981_transcription.py,37965,.py
-data/sources/quran/1981/source-markdown/appendices-1-19.md,128342,.md
-data/sources/quran/1981/source-markdown/footnotes-and-subject-index.md,48454,.md
-data/sources/quran/1981/source-markdown/quran-complete.md,939434,.md
-data/sources/quran/1989/Quran1989_QA_report.md,2210,.md
-data/sources/quran/1989/Quran1989_appendices.csv,1520,.csv
-data/sources/quran/1989/Quran1989_appendix_contents.csv,1359,.csv
-data/sources/quran/1989/Quran1989_chapters.csv,11197,.csv
-data/sources/quran/1989/Quran1989_complete.json,40294608,.json
-data/sources/quran/1989/Quran1989_contents_suras.csv,4356,.csv
-data/sources/quran/1989/Quran1989_footnotes.csv,265638,.csv
-data/sources/quran/1989/Quran1989_full_transcription.md,3000458,.md
-data/sources/quran/1989/Quran1989_glossary_lines.csv,35645,.csv
-data/sources/quran/1989/Quran1989_manifest.json,1515,.json
-data/sources/quran/1989/Quran1989_pages.csv,4438719,.csv
-data/sources/quran/1989/Quran1989_pages_layout.jsonl,23884118,.jsonl
-data/sources/quran/1989/Quran1989_subheadings.csv,119417,.csv
-data/sources/quran/1989/Quran1989_subject_index_lines.csv,571257,.csv
-data/sources/quran/1989/Quran1989_verse_index.csv,3673332,.csv
-data/sources/quran/1989/README.md,1519,.md
-data/sources/quran/1989/build_quran1989_transcription.py,53984,.py
+PRODUCT.md,3444,.md
+README.md,4775,.md
+data/catalog/appendix-editions.json,794,.json
+data/catalog/audios.json,72162,.json
+data/catalog/newsletters.json,2656260,.json
+data/catalog/quran-appendices.csv,457299,.csv
+data/catalog/videos.json,39197,.json
+data/sources/README.md,1264,.md
+data/sources/bible/engwebu_about.htm,2453,.htm
+data/sources/bible/engwebu_usfm/00-FRTengwebu.usfm,9495,.usfm
+data/sources/bible/engwebu_usfm/02-GENengwebu.usfm,887614,.usfm
+data/sources/bible/engwebu_usfm/03-EXOengwebu.usfm,776381,.usfm
+data/sources/bible/engwebu_usfm/04-LEVengwebu.usfm,587664,.usfm
+data/sources/bible/engwebu_usfm/05-NUMengwebu.usfm,781759,.usfm
+data/sources/bible/engwebu_usfm/06-DEUengwebu.usfm,684749,.usfm
+data/sources/bible/engwebu_usfm/07-JOSengwebu.usfm,455699,.usfm
+data/sources/bible/engwebu_usfm/08-JDGengwebu.usfm,452573,.usfm
+data/sources/bible/engwebu_usfm/09-RUTengwebu.usfm,61677,.usfm
+data/sources/bible/engwebu_usfm/10-1SAengwebu.usfm,595367,.usfm
+data/sources/bible/engwebu_usfm/106-GLOengwebu.usfm,19091,.usfm
+data/sources/bible/engwebu_usfm/11-2SAengwebu.usfm,484131,.usfm
+data/sources/bible/engwebu_usfm/12-1KIengwebu.usfm,573695,.usfm
+data/sources/bible/engwebu_usfm/13-2KIengwebu.usfm,559791,.usfm
+data/sources/bible/engwebu_usfm/14-1CHengwebu.usfm,471288,.usfm
+data/sources/bible/engwebu_usfm/15-2CHengwebu.usfm,627695,.usfm
+data/sources/bible/engwebu_usfm/16-EZRengwebu.usfm,169753,.usfm
+data/sources/bible/engwebu_usfm/17-NEHengwebu.usfm,236707,.usfm
+data/sources/bible/engwebu_usfm/18-ESTengwebu.usfm,138660,.usfm
+data/sources/bible/engwebu_usfm/19-JOBengwebu.usfm,438782,.usfm
+data/sources/bible/engwebu_usfm/20-PSAengwebu.usfm,952851,.usfm
+data/sources/bible/engwebu_usfm/21-PROengwebu.usfm,364912,.usfm
+data/sources/bible/engwebu_usfm/22-ECCengwebu.usfm,136130,.usfm
+data/sources/bible/engwebu_usfm/23-SNGengwebu.usfm,62456,.usfm
+data/sources/bible/engwebu_usfm/24-ISAengwebu.usfm,910130,.usfm
+data/sources/bible/engwebu_usfm/25-JERengwebu.usfm,1059594,.usfm
+data/sources/bible/engwebu_usfm/26-LAMengwebu.usfm,88595,.usfm
+data/sources/bible/engwebu_usfm/27-EZKengwebu.usfm,955181,.usfm
+data/sources/bible/engwebu_usfm/28-DANengwebu.usfm,263795,.usfm
+data/sources/bible/engwebu_usfm/29-HOSengwebu.usfm,120756,.usfm
+data/sources/bible/engwebu_usfm/30-JOLengwebu.usfm,40613,.usfm
+data/sources/bible/engwebu_usfm/31-AMOengwebu.usfm,103781,.usfm
+data/sources/bible/engwebu_usfm/32-OBAengwebu.usfm,15914,.usfm
+data/sources/bible/engwebu_usfm/33-JONengwebu.usfm,30831,.usfm
+data/sources/bible/engwebu_usfm/34-MICengwebu.usfm,75691,.usfm
+data/sources/bible/engwebu_usfm/35-NAMengwebu.usfm,27431,.usfm
+data/sources/bible/engwebu_usfm/36-HABengwebu.usfm,34915,.usfm
+data/sources/bible/engwebu_usfm/37-ZEPengwebu.usfm,40188,.usfm
+data/sources/bible/engwebu_usfm/38-HAGengwebu.usfm,27377,.usfm
+data/sources/bible/engwebu_usfm/39-ZECengwebu.usfm,152220,.usfm
+data/sources/bible/engwebu_usfm/40-MALengwebu.usfm,40288,.usfm
+data/sources/bible/engwebu_usfm/41-TOBengwebu.usfm,39435,.usfm
+data/sources/bible/engwebu_usfm/42-JDTengwebu.usfm,62965,.usfm
+data/sources/bible/engwebu_usfm/43-ESGengwebu.usfm,44167,.usfm
+data/sources/bible/engwebu_usfm/45-WISengwebu.usfm,71275,.usfm
+data/sources/bible/engwebu_usfm/46-SIRengwebu.usfm,183356,.usfm
+data/sources/bible/engwebu_usfm/47-BARengwebu.usfm,28948,.usfm
+data/sources/bible/engwebu_usfm/52-1MAengwebu.usfm,136400,.usfm
+data/sources/bible/engwebu_usfm/53-2MAengwebu.usfm,108543,.usfm
+data/sources/bible/engwebu_usfm/54-1ESengwebu.usfm,73534,.usfm
+data/sources/bible/engwebu_usfm/55-MANengwebu.usfm,3145,.usfm
+data/sources/bible/engwebu_usfm/56-PS2engwebu.usfm,1103,.usfm
+data/sources/bible/engwebu_usfm/57-3MAengwebu.usfm,40855,.usfm
+data/sources/bible/engwebu_usfm/58-2ESengwebu.usfm,132133,.usfm
+data/sources/bible/engwebu_usfm/59-4MAengwebu.usfm,63078,.usfm
+data/sources/bible/engwebu_usfm/66-DAGengwebu.usfm,89532,.usfm
+data/sources/bible/engwebu_usfm/70-MATengwebu.usfm,623033,.usfm
+data/sources/bible/engwebu_usfm/71-MRKengwebu.usfm,379879,.usfm
+data/sources/bible/engwebu_usfm/72-LUKengwebu.usfm,653615,.usfm
+data/sources/bible/engwebu_usfm/73-JHNengwebu.usfm,506591,.usfm
+data/sources/bible/engwebu_usfm/74-ACTengwebu.usfm,596278,.usfm
+data/sources/bible/engwebu_usfm/75-ROMengwebu.usfm,243157,.usfm
+data/sources/bible/engwebu_usfm/76-1COengwebu.usfm,238700,.usfm
+data/sources/bible/engwebu_usfm/77-2COengwebu.usfm,155032,.usfm
+data/sources/bible/engwebu_usfm/78-GALengwebu.usfm,80354,.usfm
+data/sources/bible/engwebu_usfm/79-EPHengwebu.usfm,78891,.usfm
+data/sources/bible/engwebu_usfm/80-PHPengwebu.usfm,56812,.usfm
+data/sources/bible/engwebu_usfm/81-COLengwebu.usfm,50988,.usfm
+data/sources/bible/engwebu_usfm/82-1THengwebu.usfm,47096,.usfm
+data/sources/bible/engwebu_usfm/83-2THengwebu.usfm,26491,.usfm
+data/sources/bible/engwebu_usfm/84-1TIengwebu.usfm,57752,.usfm
+data/sources/bible/engwebu_usfm/85-2TIengwebu.usfm,40960,.usfm
+data/sources/bible/engwebu_usfm/86-TITengwebu.usfm,23190,.usfm
+data/sources/bible/engwebu_usfm/87-PHMengwebu.usfm,11410,.usfm
+data/sources/bible/engwebu_usfm/88-HEBengwebu.usfm,177050,.usfm
+data/sources/bible/engwebu_usfm/89-JASengwebu.usfm,58000,.usfm
+data/sources/bible/engwebu_usfm/90-1PEengwebu.usfm,61750,.usfm
+data/sources/bible/engwebu_usfm/91-2PEengwebu.usfm,38480,.usfm
+data/sources/bible/engwebu_usfm/92-1JNengwebu.usfm,62441,.usfm
+data/sources/bible/engwebu_usfm/93-2JNengwebu.usfm,7614,.usfm
+data/sources/bible/engwebu_usfm/94-3JNengwebu.usfm,7391,.usfm
+data/sources/bible/engwebu_usfm/95-JUDengwebu.usfm,15244,.usfm
+data/sources/bible/engwebu_usfm/96-REVengwebu.usfm,297585,.usfm
+data/sources/bible/engwebu_usfm/copr.htm,3325,.htm
+data/sources/bible/engwebu_usfm/gentiumplus.css,9567,.css
+data/sources/bible/engwebu_usfm/keys.asc,21921,.asc
+data/sources/bible/engwebu_usfm/signature.txt.asc,8550,.asc
+data/sources/bible/engwebu_vpl.sql,7955068,.sql
+data/sources/bible/engwebu_vpl.txt,5358606,.txt
+data/sources/bible/engwebu_vpl.xml,6119807,.xml
+data/sources/bible/haiola.css,8997,.css
+data/sources/bible/signature.txt.asc,2072,.asc
+data/sources/bible/ws_bible_footnotes_rows.csv,105789,.csv
+data/sources/books/README.md,1500,.md
+data/sources/books/corpus_manifest.json,4044,.json
+data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_complete.json,2292400,.json
+data/sources/books/eternity_screenplay/eternity_screenplay_complete.json,11309698,.json
+data/sources/books/islam_volume_1/islam_volume_1_complete.json,12889834,.json
+data/sources/books/islam_volume_2/islam_volume_2_complete.json,223863,.json
+data/sources/books/islam_volume_3_4/islam_volume_3_4_complete.json,356894,.json
+data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_complete.json,28877621,.json
+data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json,85807,.json
+data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_complete.json,17500565,.json
+data/sources/books/the_computer_speaks/the_computer_speaks_complete.json,32605782,.json
+data/sources/books/the_contact_prayers/the_contact_prayers_complete.json,1224181,.json
+data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_complete.json,2775728,.json
+data/sources/playlists/audio-transcripts/01 - Quran Study From Azhar 1 Sura 72_19 28 & Sura 73 By Kathryn Jinns 05 26 1989.csv,195197,.csv
+data/sources/playlists/audio-transcripts/02 - Quran Study From Azhar 2 Sura 95 & Sura 96 By M Sabahi Two Verses Of Sura 9 Dropped Out To Demons.csv,215300,.csv
+data/sources/playlists/audio-transcripts/03 - Quran Study From Azhar 3 Sura 10_79 92 & Sura 23 By Rashad_s Khutba 01 19 1990 Sura 3_110 117 By.csv,270499,.csv
+data/sources/playlists/audio-transcripts/04 - Quran Study From Azhar 4 Sura 37 By Rashad Shakira Present Astroid 01 21 1990 Sura 3_118 129 By S.csv,360300,.csv
+data/sources/playlists/audio-transcripts/05 - Quran Study From Azhar 5 Sura 56_75 & Sura 57 By Lisa 02 17 1989.csv,123614,.csv
+data/sources/playlists/audio-transcripts/06 - Quran Study From Azhar 6 Sura 59 By Donna PRA Invisible Giants Hypocrites 03 10 1989.csv,187644,.csv
+data/sources/playlists/audio-transcripts/07 - Quran Study From Azhar 7 Sura 62 & Sura 63 By Kathryn God_s Religion Will Dominate In 20 To 50 Yr.csv,256794,.csv
+data/sources/playlists/audio-transcripts/08 - Quran Study From Azhar 8 Sura 65 & Sura 66 By Lori Encourage Children To Do Salat Hamid Argues 04.csv,185954,.csv
+data/sources/playlists/audio-transcripts/09 - Quran Study From Azhar 9 Sura 70 By Edip Chastity Worry Edip Wanted Rashad To Change Rich Believe.csv,224757,.csv
+data/sources/playlists/audio-transcripts/10 - Quran Study From Azhar 10 Sura 71 & Sura 72 By Afameh Chastity Jinns 05 19 1989.csv,260359,.csv
+data/sources/playlists/audio-transcripts/100 - MA 100 - Messenger Audio.csv,44683,.csv
+data/sources/playlists/audio-transcripts/11 - Quran Study From Behrouz 111 Sura 23_60 88 & Sura 16 01 18 199001 23 1990 Morning Before 01 31 19.csv,197725,.csv
+data/sources/playlists/audio-transcripts/12 - Quran Study From Behrouz 212 Behrouz_s Khutba Edip Yuksel_s Exposure 01 25 1990.csv,271725,.csv
+data/sources/playlists/audio-transcripts/13 - Quran Study From Behrouz 313 Sura 7_12 By Rashad Adam & Eve_s Body 12 24 1989.csv,307794,.csv
+data/sources/playlists/audio-transcripts/14 - Quran Study From Behrouz 414 Night Of Destiny Zikr By Rashad.csv,51528,.csv
+data/sources/playlists/audio-transcripts/15 - Quran Study From Behrouz 515 Sura 54_23 By Rashad Sura 55 & Sura 56 & Sura 51 Age 40 & First Gen.csv,288996,.csv
+data/sources/playlists/audio-transcripts/16 - Quran Study From Behrouz 616 Sura 64 By Rashad Nothing Happens Except Sura 70 By Edip Worry Chast.csv,198844,.csv
+data/sources/playlists/audio-transcripts/17 - Quran Study From Behrouz 717 Sura 90 & Sura 91 By Rashad Sura 82 & Sura 83 By Edip 07 21 1989No 7.csv,262240,.csv
+data/sources/playlists/audio-transcripts/18 - Quran Study From Behrouz 818 Sura 61 & Sura 87 & Sura 94 By Rashad Sura 81 By Edip No 8.csv,247324,.csv
+data/sources/playlists/audio-transcripts/19 - Quran Study From Behrouz 919 Sura 2_89 119 Witchcraft Reverting Intro To Blue Quran No 13.csv,228612,.csv
+data/sources/playlists/audio-transcripts/20 - Quran Study From Behrouz 1020 Sura 3 By M Sabahi Insurance Fear Worry.csv,152800,.csv
+data/sources/playlists/audio-transcripts/21 - Quran Study From Behrouz 1121 Sura 9_52 By Rashad The Hypocrites Apology To Parivash Sura 56_75 B.csv,98596,.csv
+data/sources/playlists/audio-transcripts/22 - Quran Study From Behrouz 1222 Sura 39_11 By Rashad Admission Test I Don_t Compromise With A Littl.csv,211842,.csv
+data/sources/playlists/audio-transcripts/23 - Quran Study From Behrouz 1323 Sura 51 By Douglas New Era Believers Are Protected From Accidents &.csv,173008,.csv
+data/sources/playlists/audio-transcripts/24 - Quran Study From Behrouz 1424 Sura 55 By Lori Alfatehe Sura 56 By Naghmeh.csv,249692,.csv
+data/sources/playlists/audio-transcripts/25 - Quran Study From Behrouz 1525 Sura 58 By Robert.csv,138735,.csv
+data/sources/playlists/audio-transcripts/26 - Quran Study From Behrouz 1626 Sura 67 By Gatut Hamid Argues With Rashad.csv,139000,.csv
+data/sources/playlists/audio-transcripts/27 - Quran Study From Behrouz 1727 Sura 14_19 Chastity Premarital Pregnancy Sura 17_47 We Are Allowed.csv,278933,.csv
+data/sources/playlists/audio-transcripts/28 - Quran Study From Parivash 128 Sura 45_33 Parivash_s Home 19 Math.csv,159677,.csv
+data/sources/playlists/audio-transcripts/29 - Quran Study From Parivash 229 Mehri_s Questions Admission Test & Final Test Tucson 1985.csv,239974,.csv
+data/sources/playlists/audio-transcripts/30 - Quran Study From Parivash 330 Sura 28 & Sura 57 Insurance With GOD Sura 45_33 Rashad Was Told To.csv,269930,.csv
+data/sources/playlists/audio-transcripts/31 - Quran Study From Parivash 431 Sura 18_98 & Sura 81 Edip Azan & Salat By Rashad 11 04 1989.csv,208549,.csv
+data/sources/playlists/audio-transcripts/32 - Quran Study From Parivash 532 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28 8.csv,48880,.csv
+data/sources/playlists/audio-transcripts/33 - Quran Study From Parivash 633 Sura 74 Masud Sabahi 06 02 1989.csv,182914,.csv
+data/sources/playlists/audio-transcripts/34 - Quran Study From Parivash 734 Sura 33 GOD Is Physical Innovations Praying & Prostrating After Sal.csv,317711,.csv
+data/sources/playlists/audio-transcripts/35 - Quran Study From Parivash 835 Sura 30_25 Miracle Coming Out Of Biggest Brewery Intercession Alleg.csv,341726,.csv
+data/sources/playlists/audio-transcripts/36 - Quran Study From Parivash 936 After Fajr Prayer I Make Deliberate Mistakes To Destroy Idols Origi.csv,182067,.csv
+data/sources/playlists/audio-transcripts/37 - Quran Study From Parivash 1037 Shakira_s Home Sura 11_68 11 04 1989.csv,357084,.csv
+data/sources/playlists/audio-transcripts/38 - Quran Study From Parivash 1138 Certainty 11 29 1989.csv,190071,.csv
+data/sources/playlists/audio-transcripts/39 - Quran Study From Parivash 1239 Sura 60 & Sura 61 Rich Believer Certainty Insurance 114 Min 12 28.csv,307021,.csv
+data/sources/playlists/audio-transcripts/40 - Quran Study From Parivash 1340 Sura 3_59 12 29 1989.csv,128329,.csv
+data/sources/playlists/audio-transcripts/41 - Quran Study From Parivash 1441 Sura 54 By Rashad Alfateha For Anything You Wish Extreme Libertari.csv,145811,.csv
+data/sources/playlists/audio-transcripts/42 - Quran Study From Roxana 142 Interview With Rashad By Ray Caton Insurance Interest.csv,170612,.csv
+data/sources/playlists/audio-transcripts/43 - Quran Study From Roxana 243 Third International Conference Tucson Rashad_s Speech Sura 17_39 Insu.csv,268940,.csv
+data/sources/playlists/audio-transcripts/44 - Quran Study From Roxana 344 Sura 64 By Rashad Nothing Happens Angels Are Best Surgons Sura 59 By.csv,237865,.csv
+data/sources/playlists/audio-transcripts/45 - Quran Study From Roxana 445 Sura 40 By Rashad Firoz_s Home Deja Vu Believers Usually 95 Yrs Old F.csv,292826,.csv
+data/sources/playlists/audio-transcripts/46 - Quran Study From Roxana 546 Sura 37_159 To 38_25 Sura 9_50 & Sura 39_11 Admission Test I Don_t Co.csv,260629,.csv
+data/sources/playlists/audio-transcripts/47 - Quran Study From Roxana 647 Introduction To Blue Quran Sura 1 & Beginning Of Sura 2.csv,235109,.csv
+data/sources/playlists/audio-transcripts/48 - Quran Study 48 Rashad_s Speech Parivash_s Home Salat Zakat Fazeli A Muhamaden Argues 01 11 1989.csv,319102,.csv
+data/sources/playlists/audio-transcripts/49 - Quran Study 49 Speech Of Rashad Parivash_s Home 19 Math 11 05 1989.csv,110062,.csv
+data/sources/playlists/audio-transcripts/50 - Quran Study 50 Sura 92 & Sura 93 & Sura 94 By Kathryn Zakat Not Limited To Earned Money 07 27 198.csv,185503,.csv
+data/sources/playlists/audio-transcripts/51 - Quran Study 51 Sura 17_59 Rashad 1990.csv,118196,.csv
+data/sources/playlists/audio-transcripts/52 - Quran Study 5⧸8⧸89 by Linda Sura 1 & 2 partial.csv,59692,.csv
+data/sources/playlists/audio-transcripts/53 - Quran Study 22 Oct 1982 By Dr Rashad Khalifa - Original.csv,91986,.csv
+data/sources/playlists/audio-transcripts/54 - Quran Study 22 Oct 1982 By Dr Rashad Khalifa.csv,181011,.csv
+data/sources/playlists/audio-transcripts/55 - Zikr 23 Oct 1982 By Dr Rashad Khalifa.csv,10280,.csv
+data/sources/playlists/audio-transcripts/56 - Friday Sermon 29 Oct 1982 By Dr Rashad Khalifa.csv,191177,.csv
+data/sources/playlists/audio-transcripts/57 - Quran Study 05 Nov 1982 By Dr Rashad Khalifa.csv,133674,.csv
+data/sources/playlists/audio-transcripts/58 - Friday Sermon 12 Nov 1982 By Dr Rashad Khalifa.csv,106805,.csv
+data/sources/playlists/audio-transcripts/59 - Friday Sermon 19 Nov 1982 By Dean Mahmoud.csv,74738,.csv
+data/sources/playlists/audio-transcripts/60 - Friday Sermon 19 Nov 1982 By Dr Rashad Khalifa.csv,130795,.csv
+data/sources/playlists/audio-transcripts/61 - Friday Sermon 1982 By Dr Rashad Khalifa.csv,224235,.csv
+data/sources/playlists/audio-transcripts/62 - Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa.csv,165729,.csv
+data/sources/playlists/audio-transcripts/63 - Friday Sermon 03 Dec. 1982 By Dr Rashad Khalifa.csv,204699,.csv
+data/sources/playlists/audio-transcripts/64 - Friday Sermon 26 Nov 1982 By Dr Rashad Khalifa.csv,214900,.csv
+data/sources/playlists/audio-transcripts/65 - Friday Sermon 03 Dec. 1982 & 10 Dec. 1982 By Dr Rashad Khalifa.csv,206373,.csv
+data/sources/playlists/audio-transcripts/66 - Friday Sermon 10 Dec. 1982 By Dr Rashad Khalifa.csv,195094,.csv
+data/sources/playlists/audio-transcripts/67 - Friday Sermon 10 Dec. 1982 By Dr. Rashad Khalifa.csv,124986,.csv
+data/sources/playlists/audio-transcripts/68 - Friday Sermon 17 Dec. 1982 By Dr. Rashad Khalifa.csv,116915,.csv
+data/sources/playlists/audio-transcripts/69 - Friday Sermon 17 Dec. 1982 By Dr. Rashad Khalifa.csv,144665,.csv
+data/sources/playlists/audio-transcripts/70 - MA 70  —  Messenger Audio.csv,155963,.csv
+data/sources/playlists/audio-transcripts/70 - MA 70 - Messenger Audio.csv,108570,.csv
+data/sources/playlists/audio-transcripts/71 - MA 71  —  Messenger Audio.csv,124083,.csv
+data/sources/playlists/audio-transcripts/71 - MA 71 - Messenger Audio.csv,28591,.csv
+data/sources/playlists/audio-transcripts/72 - MA 72 - Messenger Audio.csv,194959,.csv
+data/sources/playlists/audio-transcripts/73 - MA 73 - Messenger Audio.csv,58174,.csv
+data/sources/playlists/audio-transcripts/74 - MA 74 - Messenger Audio.csv,68198,.csv
+data/sources/playlists/audio-transcripts/75 - MA 75 - Messenger Audio.csv,90471,.csv
+data/sources/playlists/audio-transcripts/76 - MA 76 - Messenger Audio.csv,88748,.csv
+data/sources/playlists/audio-transcripts/77 - MA 77 - Messenger Audio.csv,94709,.csv
+data/sources/playlists/audio-transcripts/78 - MA 78 - Messenger Audio.csv,62558,.csv
+data/sources/playlists/audio-transcripts/79 - MA 79 - Messenger Audio.csv,54267,.csv
+data/sources/playlists/audio-transcripts/80 - MA 80 - Messenger Audio.csv,3934,.csv
+data/sources/playlists/audio-transcripts/81 - MA 81 - Messenger Audio.csv,26372,.csv
+data/sources/playlists/audio-transcripts/82 - MA 82 - Messenger Audio.csv,95753,.csv
+data/sources/playlists/audio-transcripts/83 - MA 83 - Messenger Audio.csv,58111,.csv
+data/sources/playlists/audio-transcripts/84 - MA 84 - Messenger Audio.csv,65027,.csv
+data/sources/playlists/audio-transcripts/85 - MA 85 - Messenger Audio.csv,26787,.csv
+data/sources/playlists/audio-transcripts/86 - MA 86 - Messenger Audio.csv,33336,.csv
+data/sources/playlists/audio-transcripts/87 - MA 87 - Messenger Audio.csv,33937,.csv
+data/sources/playlists/audio-transcripts/88 - MA 88 - Messenger Audio.csv,91990,.csv
+data/sources/playlists/audio-transcripts/89 - MA 89 - Messenger Audio.csv,18876,.csv
+data/sources/playlists/audio-transcripts/90 - MA 90 - Messenger Audio.csv,97325,.csv
+data/sources/playlists/audio-transcripts/91 - MA 91 - Messenger Audio.csv,11084,.csv
+data/sources/playlists/audio-transcripts/92 - MA 92 - Messenger Audio.csv,49340,.csv
+data/sources/playlists/audio-transcripts/93 - MA 93 - Messenger Audio.csv,51499,.csv
+data/sources/playlists/audio-transcripts/94 - MA 94 - Messenger Audio.csv,23778,.csv
+data/sources/playlists/audio-transcripts/95 - MA 95 - Messenger Audio.csv,88934,.csv
+data/sources/playlists/audio-transcripts/96 - MA 96 - Messenger Audio.csv,66504,.csv
+data/sources/playlists/audio-transcripts/97 - MA 97 - Messenger Audio.csv,34867,.csv
+data/sources/playlists/audio-transcripts/98 - MA 98 - Messenger Audio.csv,59090,.csv
+data/sources/playlists/audio-transcripts/99 - MA 99 - Messenger Audio.csv,68433,.csv
+data/sources/playlists/video-transcripts/01 - What is Life All About.csv,38548,.csv
+data/sources/playlists/video-transcripts/02 - Who is GOD.csv,25310,.csv
+data/sources/playlists/video-transcripts/03 - Witness a Miracle & World News Bulletin.csv,71735,.csv
+data/sources/playlists/video-transcripts/04 - Mathematical Miracle of Quran.csv,60226,.csv
+"data/sources/playlists/video-transcripts/05 - Old Message, New Messenger.csv",129216,.csv
+data/sources/playlists/video-transcripts/06 - The Great Debate Dr. Rashad Khalifa vs Dr. Abdel Rahman.csv,279228,.csv
+data/sources/playlists/video-transcripts/07 - In Defense of the Bible.csv,30303,.csv
+data/sources/playlists/video-transcripts/08 - Evolution or Creation The Final Argument by Dr. Rashad Khalifa.csv,110152,.csv
+data/sources/playlists/video-transcripts/09 - King of Chaos.csv,69545,.csv
+data/sources/playlists/video-transcripts/10 - United Submitters International Conference Explaining the Fulfillment of the Covenant (1988).csv,48027,.csv
+data/sources/playlists/video-transcripts/11 - United Submitters International Conference Final Speech by Dr. Rashad Khalifa (1989).csv,135757,.csv
+data/sources/playlists/video-transcripts/12 - City Council Al-Fatiha Recitation by Dr. Rashad Khalifa.csv,2810,.csv
+data/sources/playlists/video-transcripts/13 - Excerpts From a Radio Debate With Dr. Rashad Khalifa.csv,9137,.csv
+data/sources/playlists/video-transcripts/14 - World News Bulletin.csv,11649,.csv
+data/sources/playlists/video-transcripts/15 - The Creators Signature.csv,44391,.csv
+data/sources/playlists/video-transcripts/16 - Essentials of Submission (Islam).csv,82281,.csv
+data/sources/playlists/video-transcripts/17 - Principles of Contact Prayers Salat.csv,141977,.csv
+data/sources/playlists/video-transcripts/18 - Principles of Friday Prayer.csv,94022,.csv
+data/sources/playlists/video-transcripts/19 - Arabic Language Lessons By Dr. Rashad Khalifa.csv,171418,.csv
+data/sources/playlists/video-transcripts/20 - Friday Sermon Knowing GOD GOD is Doing Everything (06-05-1987).csv,82458,.csv
+"data/sources/playlists/video-transcripts/21 - Friday Sermon GOD is Doing Everything, Rearranging Our Priorities (07-1987 No. 2).csv",100447,.csv
+"data/sources/playlists/video-transcripts/22 - Friday Sermon Quran vs Bible Code, End of the World Revealed 2280AD (07-1987).csv",67617,.csv
+data/sources/playlists/video-transcripts/23 - Friday Sermon Universal Unity Through Devotion to GOD Alone.csv,62611,.csv
+data/sources/playlists/video-transcripts/24 - Friday Sermon The Mathematical Miracle Proves the Quran to be the Word of GOD (10-16-1987).csv,74940,.csv
+"data/sources/playlists/video-transcripts/25 - Friday Sermon Evidence is Increasing, This Life is a School for the Eternal Life (11-1987).csv",59396,.csv
+data/sources/playlists/video-transcripts/26 - Friday Sermon Quran is the Only Book in the World That is Mathematically Composed (11-1987).csv,33842,.csv
+data/sources/playlists/video-transcripts/27 - Friday Sermon More Evidence - Memorize This Supplication For Divine Protection (11-1987).csv,46115,.csv
+"data/sources/playlists/video-transcripts/28 - Friday Sermon The Muhammadans Worship Muhammad, Discoveries by Atef and Lisa (12-04-1987).csv",46685,.csv
+"data/sources/playlists/video-transcripts/29 - Friday Sermon The Power of Repentance, The Secret of Happiness (01-01-1988).csv",78340,.csv
+"data/sources/playlists/video-transcripts/30 - Friday Sermon GOD is Doing Everything, Story About Ahmed Subhy Mansour (1-22-1988).csv",67799,.csv
+"data/sources/playlists/video-transcripts/31 - Friday Sermon Our Purpose, GOD's Kingdom vs Satan's Kingdom, Abraham's Dream (03-04-1988).csv",68659,.csv
+data/sources/playlists/video-transcripts/32 - Friday Sermon Seek GOD's Kingship Over You and Everything Else Follows (03-25-1988).csv,50509,.csv
+"data/sources/playlists/video-transcripts/33 - Friday Sermon Marriage Importance of Love, Muhammad's Example (04-08-1988).csv",48268,.csv
+"data/sources/playlists/video-transcripts/34 - Friday Sermon Proclaiming Messengership, Abraham's Religion (04-15-1988).csv",63565,.csv
+data/sources/playlists/video-transcripts/35 - Friday Sermon Rashad Explains His Messengership Details (05-16-1988).csv,80384,.csv
+data/sources/playlists/video-transcripts/36 - Friday Sermon Natural Instinct Who is The Real You How to Find Perfect Happiness (05-27-1988).csv,38735,.csv
+"data/sources/playlists/video-transcripts/37 - Friday Sermon The Meaning of Life, Discovering the Miracle (07-15-1988).csv",52134,.csv
+data/sources/playlists/video-transcripts/38 - Friday Sermon Who is GOD Understanding Our Universe (08-04-1988).csv,37124,.csv
+data/sources/playlists/video-transcripts/39 - Friday Sermon Who is Your GOD Majority of Believers Are Going to Hell (10-28-1988).csv,50520,.csv
+"data/sources/playlists/video-transcripts/40 - Friday Sermon Classification of Creatures, Loving GOD, Hell is not Enough (12-09-1988).csv",55202,.csv
+data/sources/playlists/video-transcripts/41 - Friday Sermon What About Previous Generations (12-30-1988).csv,39664,.csv
+"data/sources/playlists/video-transcripts/42 - Friday Sermon Remember GOD Constantly, Submitter vs Objector (01-13-1989).csv",50232,.csv
+"data/sources/playlists/video-transcripts/43 - Friday Sermon Revelation of Quran to Revelation of Miracle, Importance of Dawn Prayer (02-03-1989).csv",55258,.csv
+"data/sources/playlists/video-transcripts/44 - Friday Sermon Original Sin, Only GOD Guides, Majority of Believers Are Going to Hell (03-03-1989).csv",54309,.csv
+"data/sources/playlists/video-transcripts/45 - Friday Sermon Purpose of Messengers, The Advent of the Pure Quran (03-17-1989).csv",58404,.csv
+data/sources/playlists/video-transcripts/46 - Friday Sermon Why Announce Messengership (08-11-1989).csv,67065,.csv
+"data/sources/playlists/video-transcripts/47 - Friday Sermon Proving Every Verse, Word, Letter, with Irrefutable Evidence (11-09-1989).csv",57590,.csv
+"data/sources/playlists/video-transcripts/48 - Friday Sermon The Heavenly Feud, The Importance of Killing the Ego (11-29-1989).csv",72834,.csv
+"data/sources/playlists/video-transcripts/49 - Friday Sermon Proving Salat al-Jummah, The Righteous Go Straight to Heaven (11-26-1989).csv",51915,.csv
+"data/sources/playlists/video-transcripts/50 - Friday Sermon Miracle of Miracles - Al-Fatiha, Proving the Five Salat (12-08-1989).csv",62981,.csv
+data/sources/playlists/video-transcripts/51 - Friday Sermon United Submitters International Conference (1989).csv,51863,.csv
+data/sources/playlists/video-transcripts/Debate Dr Rashad Khalifa Ph D vs Sunni Scholars (1987) - Arabic.csv,478915,.csv
+data/sources/playlists/video-transcripts/Debate Dr Rashad Khalifa Ph D vs Sunni Scholars (1987).csv,211287,.csv
+data/sources/playlists/youtube-playlist.txt,36185,.txt
+data/sources/quran/1981/Quran1981_complete.json,17775542,.json
+data/sources/quran/1981/Quran1981_footnotes.csv,118835,.csv
+data/sources/quran/1981/Quran1981_subheadings.csv,16471,.csv
+data/sources/quran/1981/Quran1981_verse_index.csv,812471,.csv
+data/sources/quran/1989/Quran1989_complete.json,41503985,.json
+data/sources/quran/1989/Quran1989_footnotes.csv,266150,.csv
+data/sources/quran/1989/Quran1989_subheadings.csv,119334,.csv
+data/sources/quran/1989/Quran1989_verse_index.csv,3673391,.csv
 data/sources/quran/1992/ws_quran_chapters_rows.csv,22201,.csv
-data/sources/quran/1992/ws_quran_footnotes_rows.csv,1798142,.csv
-data/sources/quran/1992/ws_quran_index_rows.csv,192815,.csv
-data/sources/quran/1992/ws_quran_subtitles_rows.csv,551315,.csv
-data/sources/quran/1992/ws_quran_text_rows.csv,19744757,.csv
-data/sources/quran/1992/ws_quran_word_by_word_rows.csv,18710652,.csv
-docs/AUDIT_2026-07-06.md,17522,.md
-docs/COLOR_SYSTEM_EXPLAINED.md,5538,.md
-docs/SETUP_QURAN_COMPARE.md,3205,.md
-docs/newsletter_urls.md,19021,.md
+data/sources/quran/1992/ws_quran_footnotes_rows.csv,1798512,.csv
+data/sources/quran/1992/ws_quran_subtitles_rows.csv,551321,.csv
+data/sources/quran/1992/ws_quran_text_rows.csv,19744775,.csv
+docs/AUDIT_2026-07-06.md,17725,.md
+docs/superpowers/plans/2026-07-22-root-explorer.md,101304,.md
+docs/superpowers/plans/2026-07-23-search-keyboard-navigation.md,31634,.md
 docs/superpowers/specs/2026-05-13-cleanup-reorganization-design.md,2412,.md
-eslint.config.mjs,847,.mjs
+docs/superpowers/specs/2026-07-22-quran-root-explorer-design.md,6730,.md
+docs/superpowers/specs/2026-07-23-search-keyboard-navigation-design.md,6705,.md
+eslint.config.mjs,1036,.mjs
+knip.json,542,.json
 next-env.d.ts,253,.ts
-next.config.ts,3224,.ts
-package-lock.json,300896,.json
-package.json,2468,.json
-playwright.config.ts,933,.ts
+next.config.ts,4251,.ts
+package-lock.json,271321,.json
+package.json,2445,.json
+playwright.config.ts,968,.ts
 postcss.config.mjs,101,.mjs
-public/content/README.md,805,.md
+public/assets/brand/apple-touch-icon.png,19399,.png
+public/assets/brand/favicon-32.png,1864,.png
+public/assets/brand/submission-archives-mark-192.png,40827,.png
+public/assets/brand/submission-archives-mark.png,236177,.png
+public/content/README.md,816,.md
+public/content/audios/messenger-audios/MA70.en-US.vtt,82899,.vtt
+public/content/audios/messenger-audios/MA71.en-US.vtt,64979,.vtt
+public/content/audios/messenger-audios/MA72.en-US.vtt,83327,.vtt
 public/content/audios/messenger-audios/default.jpg,18739,.jpg
 public/content/audios/quran-studies/thumbnails/01-quran-study-from-azhar-1-sura-7219-28-and-sura-73-by-kathryn-jinns-05-26-1989.jpg,13551,.jpg
 public/content/audios/quran-studies/thumbnails/02-quran-study-from-azhar-2-sura-95-and-sura-96-by-m-sabahi-two-verses-of-sura-9-dropped-out-to-demons.jpg,16548,.jpg
@@ -533,6 +541,7 @@ public/content/quran/organized_appendices/1992/thumbnails/introduction.jpg,13809
 public/content/quran/organized_appendices/1992/thumbnails/proclamation.jpg,106645,.jpg
 public/content/videos/thumbnails/arabic-language-lessons-by-dr-rashad-khalifa.jpg,7506,.jpg
 public/content/videos/thumbnails/city-council-al-fatiha-recitation-by-dr-rashad-khalifa.jpg,7431,.jpg
+public/content/videos/thumbnails/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987.jpg,44869,.jpg
 public/content/videos/thumbnails/essentials-of-submission-islam.jpg,7948,.jpg
 public/content/videos/thumbnails/evolution-or-creation-the-final-argument-by-dr-rashad-khalifa.jpg,6924,.jpg
 public/content/videos/thumbnails/excerpts-from-a-radio-debate-with-dr-rashad-khalifa.jpg,11806,.jpg
@@ -578,32 +587,32 @@ public/content/videos/thumbnails/united-submitters-international-conference-fina
 public/content/videos/thumbnails/what-is-life-all-about.jpg,7323,.jpg
 public/content/videos/thumbnails/who-is-god.jpg,735844,.jpg
 public/content/videos/thumbnails/witness-a-miracle-world-news-bulletin.jpg,9556,.jpg
-public/content/written/books/ETERNITY - Screenplay.pdf,14345861,.pdf
-public/content/written/books/English Meanings of the Quran.pdf,4352310,.pdf
-public/content/written/books/Hard Cover 1989.pdf,54550101,.pdf
-"public/content/written/books/ISLAM - Volume 1, Number 1 (April 1974).pdf",18881809,.pdf
-"public/content/written/books/ISLAM - Volume 1, Number 2 (July 1974).pdf",45962071,.pdf
-"public/content/written/books/ISLAM - Volume 1, Number 3 & 4 (January 1975).pdf",68099907,.pdf
-public/content/written/books/Miracle of Quran - Significance of the Mysterious Alphabets.pdf,28987345,.pdf
-public/content/written/books/Quran - Visual Presentation of the Miracle.pdf,6308173,.pdf
-"public/content/written/books/Quran, Hadith, and Islam.pdf",15966986,.pdf
-public/content/written/books/Quran1981.pdf,98968592,.pdf
-public/content/written/books/The Computer Speaks God's Message to the World.pdf,3998367,.pdf
-public/content/written/books/The Contact Prayers.pdf,502268,.pdf
-public/content/written/books/The Perpetual Miracle of Muhammad.pdf,1601735,.pdf
-public/content/written/books/thumbnails/ETERNITY - Screenplay.png,25231,.png
-public/content/written/books/thumbnails/English Meanings of the Quran.png,148965,.png
-public/content/written/books/thumbnails/Hard Cover 1989.png,2896409,.png
-"public/content/written/books/thumbnails/ISLAM - Volume 1, Number 1 (April 1974).png",2213530,.png
-"public/content/written/books/thumbnails/ISLAM - Volume 1, Number 2 (July 1974).png",2079304,.png
-"public/content/written/books/thumbnails/ISLAM - Volume 1, Number 3 & 4 (January 1975).png",1925583,.png
-public/content/written/books/thumbnails/Miracle of Quran - Significance of the Mysterious Alphabets.png,2940843,.png
-public/content/written/books/thumbnails/Quran - Visual Presentation of the Miracle.png,2034834,.png
-"public/content/written/books/thumbnails/Quran, Hadith, and Islam.png",3089119,.png
-public/content/written/books/thumbnails/Quran1981.png,3159131,.png
-public/content/written/books/thumbnails/The Computer Speaks God's Message to the World.jpg,28983,.jpg
-public/content/written/books/thumbnails/The Contact Prayers.png,73530,.png
-public/content/written/books/thumbnails/The Perpetual Miracle of Muhammad.png,3459887,.png
+public/content/written/books/computer-speaks.pdf,3998367,.pdf
+public/content/written/books/english-meanings-of-the-quran.pdf,4352310,.pdf
+public/content/written/books/eternity-screenplay.pdf,14345861,.pdf
+public/content/written/books/hard-cover-1989.pdf,54550101,.pdf
+public/content/written/books/islam-volume-1-number-1-april-1974.pdf,18881809,.pdf
+public/content/written/books/islam-volume-1-number-2-july-1974.pdf,45962071,.pdf
+public/content/written/books/islam-volume-1-number-3-4-january-1975.pdf,68099907,.pdf
+public/content/written/books/miracle-of-quran-alphabets.pdf,28987345,.pdf
+public/content/written/books/perpetual-miracle.pdf,1601735,.pdf
+public/content/written/books/quran-hadith-islam.pdf,15966986,.pdf
+public/content/written/books/quran-visual-presentation.pdf,6308173,.pdf
+public/content/written/books/quran1981.pdf,98968592,.pdf
+public/content/written/books/salat-booklet.pdf,502268,.pdf
+public/content/written/books/thumbnails/computer-speaks.jpg,28983,.jpg
+public/content/written/books/thumbnails/english-meanings-of-the-quran.png,148965,.png
+public/content/written/books/thumbnails/eternity-screenplay.png,25231,.png
+public/content/written/books/thumbnails/hard-cover-1989.png,2896409,.png
+public/content/written/books/thumbnails/islam-volume-1-number-1-april-1974.png,2213530,.png
+public/content/written/books/thumbnails/islam-volume-1-number-2-july-1974.png,2079304,.png
+public/content/written/books/thumbnails/islam-volume-1-number-3-4-january-1975.png,1925583,.png
+public/content/written/books/thumbnails/miracle-of-quran-alphabets.png,2940843,.png
+public/content/written/books/thumbnails/perpetual-miracle.png,3459887,.png
+public/content/written/books/thumbnails/quran-hadith-islam.png,3089119,.png
+public/content/written/books/thumbnails/quran-visual-presentation.png,2034834,.png
+public/content/written/books/thumbnails/quran1981.png,3159131,.png
+public/content/written/books/thumbnails/salat-booklet.png,73530,.png
 public/content/written/newsletters/pdfs/1985_02_February.pdf,1795696,.pdf
 public/content/written/newsletters/pdfs/1985_03_March.pdf,1403063,.pdf
 public/content/written/newsletters/pdfs/1985_04_April.pdf,1617137,.pdf
@@ -644,6 +653,7 @@ public/content/written/newsletters/pdfs/1988_02_February.pdf,1409822,.pdf
 public/content/written/newsletters/pdfs/1988_03_March.pdf,1532440,.pdf
 public/content/written/newsletters/pdfs/1988_04_April.pdf,1574466,.pdf
 public/content/written/newsletters/pdfs/1988_05_May.pdf,1596368,.pdf
+public/content/written/newsletters/pdfs/1988_05_May_Bulletin.pdf,1444969,.pdf
 public/content/written/newsletters/pdfs/1988_06_June.pdf,1517016,.pdf
 public/content/written/newsletters/pdfs/1988_07_July.pdf,1433334,.pdf
 public/content/written/newsletters/pdfs/1988_08_August.pdf,1571019,.pdf
@@ -664,6 +674,7 @@ public/content/written/newsletters/pdfs/1989_10_October.pdf,210874,.pdf
 public/content/written/newsletters/pdfs/1989_11_November.pdf,1294336,.pdf
 public/content/written/newsletters/pdfs/1989_12_December.pdf,1482236,.pdf
 public/content/written/newsletters/pdfs/1990_01_January.pdf,1664779,.pdf
+public/content/written/newsletters/pdfs/1990_01_January_Bonus_Issue.pdf,201170,.pdf
 public/content/written/newsletters/pdfs/1990_02_February.pdf,1760474,.pdf
 public/content/written/newsletters/pdfs/1990_03_March.pdf,1790100,.pdf
 public/content/written/newsletters/thumbnails/1985_02_February.jpg,106631,.jpg
@@ -706,6 +717,7 @@ public/content/written/newsletters/thumbnails/1988_02_February.jpg,108447,.jpg
 public/content/written/newsletters/thumbnails/1988_03_March.jpg,124241,.jpg
 public/content/written/newsletters/thumbnails/1988_04_April.jpg,127263,.jpg
 public/content/written/newsletters/thumbnails/1988_05_May.jpg,112644,.jpg
+public/content/written/newsletters/thumbnails/1988_05_May_Bulletin.jpg,120059,.jpg
 public/content/written/newsletters/thumbnails/1988_06_June.jpg,115279,.jpg
 public/content/written/newsletters/thumbnails/1988_07_July.jpg,113701,.jpg
 public/content/written/newsletters/thumbnails/1988_08_August.jpg,109130,.jpg
@@ -726,114 +738,288 @@ public/content/written/newsletters/thumbnails/1989_10_October.jpg,195597,.jpg
 public/content/written/newsletters/thumbnails/1989_11_November.jpg,120330,.jpg
 public/content/written/newsletters/thumbnails/1989_12_December.jpg,117155,.jpg
 public/content/written/newsletters/thumbnails/1990_01_January.jpg,121533,.jpg
+public/content/written/newsletters/thumbnails/1990_01_January_Bonus_Issue.jpg,203517,.jpg
 public/content/written/newsletters/thumbnails/1990_02_February.jpg,121880,.jpg
 public/content/written/newsletters/thumbnails/1990_03_March.jpg,122470,.jpg
-public/data/generated_indices/ASSET_MANIFEST.csv,156623,.csv
-public/data/generated_indices/BOOKS_LIST.json,12287,.json
-public/data/generated_indices/CATALOG_VALIDATION.json,869,.json
-public/data/generated_indices/MASTER_INDEX.json,26222429,.json
-public/data/generated_indices/QURAN_CHAPTERS.json,7570919,.json
+public/data/generated_indices/ASSET_MANIFEST.csv,157470,.csv
+public/data/generated_indices/BIBLE_NT_BOOKS.json,4462,.json
+public/data/generated_indices/BIBLE_OT_BOOKS.json,9126,.json
+public/data/generated_indices/BOOKS_LIST.json,12747,.json
+public/data/generated_indices/CATALOG_VALIDATION.json,783,.json
+public/data/generated_indices/MASTER_INDEX.json,28352981,.json
+public/data/generated_indices/QURAN_CHAPTERS.json,7742342,.json
+public/data/generated_indices/bible/1ch.json,181544,.json
+public/data/generated_indices/bible/1co.json,83205,.json
+public/data/generated_indices/bible/1es.json,98054,.json
+public/data/generated_indices/bible/1jo.json,20976,.json
+public/data/generated_indices/bible/1ki.json,187644,.json
+public/data/generated_indices/bible/1ma.json,195259,.json
+public/data/generated_indices/bible/1pe.json,21724,.json
+public/data/generated_indices/bible/1sa.json,190733,.json
+public/data/generated_indices/bible/1th.json,16912,.json
+public/data/generated_indices/bible/1ti.json,21871,.json
+public/data/generated_indices/bible/2ch.json,202920,.json
+public/data/generated_indices/bible/2co.json,52545,.json
+public/data/generated_indices/bible/2jo.json,2816,.json
+public/data/generated_indices/bible/2ki.json,175550,.json
+public/data/generated_indices/bible/2ma.json,139569,.json
+public/data/generated_indices/bible/2pe.json,13507,.json
+public/data/generated_indices/bible/2sa.json,158062,.json
+public/data/generated_indices/bible/2th.json,9419,.json
+public/data/generated_indices/bible/2ti.json,15625,.json
+public/data/generated_indices/bible/3jo.json,2870,.json
+public/data/generated_indices/bible/3ma.json,56570,.json
+public/data/generated_indices/bible/4es.json,191619,.json
+public/data/generated_indices/bible/4ma.json,97349,.json
+public/data/generated_indices/bible/act.json,203280,.json
+public/data/generated_indices/bible/amo.json,34037,.json
+public/data/generated_indices/bible/bar.json,43272,.json
+public/data/generated_indices/bible/col.json,18371,.json
+public/data/generated_indices/bible/dan.json,89338,.json
+public/data/generated_indices/bible/deu.json,217568,.json
+public/data/generated_indices/bible/dng.json,123208,.json
+public/data/generated_indices/bible/ecc.json,45829,.json
+public/data/generated_indices/bible/eph.json,28677,.json
+public/data/generated_indices/bible/esg.json,57029,.json
+public/data/generated_indices/bible/est.json,43549,.json
+public/data/generated_indices/bible/exo.json,262405,.json
+public/data/generated_indices/bible/eze.json,302019,.json
+public/data/generated_indices/bible/ezr.json,62318,.json
+public/data/generated_indices/bible/gal.json,28284,.json
+public/data/generated_indices/bible/gen.json,312677,.json
+public/data/generated_indices/bible/hab.json,12586,.json
+public/data/generated_indices/bible/hag.json,9293,.json
+public/data/generated_indices/bible/heb.json,61382,.json
+public/data/generated_indices/bible/hos.json,43848,.json
+public/data/generated_indices/bible/isa.json,295421,.json
+public/data/generated_indices/bible/jam.json,20673,.json
+public/data/generated_indices/bible/jdg.json,144831,.json
+public/data/generated_indices/bible/jdt.json,87133,.json
+public/data/generated_indices/bible/jer.json,327751,.json
+public/data/generated_indices/bible/job.json,176389,.json
+public/data/generated_indices/bible/joe.json,16696,.json
+public/data/generated_indices/bible/joh.json,170780,.json
+public/data/generated_indices/bible/jon.json,11017,.json
+public/data/generated_indices/bible/jos.json,148386,.json
+public/data/generated_indices/bible/jud.json,5645,.json
+public/data/generated_indices/bible/lam.json,30396,.json
+public/data/generated_indices/bible/lev.json,191412,.json
+public/data/generated_indices/bible/luk.json,223587,.json
+public/data/generated_indices/bible/mal.json,14356,.json
+public/data/generated_indices/bible/mar.json,131764,.json
+public/data/generated_indices/bible/mat.json,219150,.json
+public/data/generated_indices/bible/mic.json,25003,.json
+public/data/generated_indices/bible/nah.json,10918,.json
+public/data/generated_indices/bible/neh.json,88067,.json
+public/data/generated_indices/bible/num.json,270204,.json
+public/data/generated_indices/bible/oba.json,5553,.json
+public/data/generated_indices/bible/phi.json,19887,.json
+public/data/generated_indices/bible/phm.json,4432,.json
+public/data/generated_indices/bible/prm.json,3755,.json
+public/data/generated_indices/bible/pro.json,149212,.json
+public/data/generated_indices/bible/psa.json,427005,.json
+public/data/generated_indices/bible/psx.json,1657,.json
+public/data/generated_indices/bible/rev.json,91646,.json
+public/data/generated_indices/bible/rom.json,84368,.json
+public/data/generated_indices/bible/rut.json,20317,.json
+public/data/generated_indices/bible/sir.json,252831,.json
+public/data/generated_indices/bible/sol.json,23306,.json
+public/data/generated_indices/bible/tit.json,9055,.json
+public/data/generated_indices/bible/tob.json,56791,.json
+public/data/generated_indices/bible/wis.json,94034,.json
+public/data/generated_indices/bible/zec.json,50234,.json
+public/data/generated_indices/bible/zep.json,13205,.json
+public/data/scriptures/ot/1-chronicles.json,396463,.json
+public/data/scriptures/ot/1-kings.json,444123,.json
+public/data/scriptures/ot/1-samuel.json,457207,.json
+public/data/scriptures/ot/2-chronicles.json,461897,.json
+public/data/scriptures/ot/2-kings.json,414273,.json
+public/data/scriptures/ot/2-samuel.json,383823,.json
+public/data/scriptures/ot/amos.json,76991,.json
+public/data/scriptures/ot/catalog.json,5941,.json
+public/data/scriptures/ot/daniel.json,205851,.json
+public/data/scriptures/ot/deuteronomy.json,496812,.json
+public/data/scriptures/ot/ecclesiastes.json,110727,.json
+public/data/scriptures/ot/esther.json,103850,.json
+public/data/scriptures/ot/exodus.json,581802,.json
+public/data/scriptures/ot/ezekiel.json,684486,.json
+public/data/scriptures/ot/ezra.json,137968,.json
+public/data/scriptures/ot/genesis.json,713909,.json
+public/data/scriptures/ot/habakkuk.json,28147,.json
+public/data/scriptures/ot/haggai.json,20295,.json
+public/data/scriptures/ot/hosea.json,101169,.json
+public/data/scriptures/ot/isaiah.json,654370,.json
+public/data/scriptures/ot/jeremiah.json,747491,.json
+public/data/scriptures/ot/job.json,347217,.json
+public/data/scriptures/ot/joel.json,36007,.json
+public/data/scriptures/ot/jonah.json,23921,.json
+public/data/scriptures/ot/joshua.json,345634,.json
+public/data/scriptures/ot/judges.json,341081,.json
+public/data/scriptures/ot/lamentations.json,62764,.json
+public/data/scriptures/ot/leviticus.json,417622,.json
+public/data/scriptures/ot/malachi.json,31793,.json
+public/data/scriptures/ot/micah.json,55472,.json
+public/data/scriptures/ot/nahum.json,23614,.json
+public/data/scriptures/ot/nehemiah.json,196086,.json
+public/data/scriptures/ot/numbers.json,588599,.json
+public/data/scriptures/ot/obadiah.json,11248,.json
+public/data/scriptures/ot/proverbs.json,294180,.json
+public/data/scriptures/ot/psalms.json,855316,.json
+public/data/scriptures/ot/ruth.json,45965,.json
+public/data/scriptures/ot/song-of-songs.json,51031,.json
+public/data/scriptures/ot/zechariah.json,118259,.json
+public/data/scriptures/ot/zephaniah.json,29157,.json
+public/digi.png,1695321,.png
 public/fonts/GlacialIndifference-Regular.ttf,53116,.ttf
 public/fonts/LTSuperiorSerif-Bold.otf,140076,.otf
+public/fonts/LTSuperiorSerif-Bold.woff2,75044,.woff2
 public/fonts/LTSuperiorSerif-Medium.otf,141856,.otf
+public/fonts/LTSuperiorSerif-Medium.woff2,76016,.woff2
 public/fonts/LTSuperiorSerif-Regular.otf,138364,.otf
+public/fonts/LTSuperiorSerif-Regular.woff2,72852,.woff2
 public/images/archive-photos/M1.png,2288455,.png
 public/images/archive-photos/M2.png,1274796,.png
 public/images/archive-photos/M3.png,1092269,.png
 public/images/archive-photos/M4.jpeg,119919,.jpeg
+public/images/bible/deu.jpg,574459,.jpg
+public/images/bible/exo.jpg,557310,.jpg
+public/images/bible/gen.jpg,540473,.jpg
+public/images/bible/lev.jpg,576925,.jpg
+public/images/bible/num.jpg,568199,.jpg
 public/images/placeholders/appendix.png,672815,.png
 public/images/placeholders/newsletter.png,707426,.png
+public/images/placeholders/quran.jpg,50255,.jpg
 public/images/placeholders/rashad-khalifa.png,728404,.png
 public/images/submission-archives-logo.png,71182,.png
-public/og-card.png,58791,.png
+public/og-card.png,110606,.png
+public/og-card.webp,28008,.webp
 public/submission-logo.png,228957,.png
-scripts/README.md,2284,.md
-scripts/assets/audit-assets.mjs,13157,.mjs
-scripts/assets/audit-lib.mjs,10595,.mjs
-scripts/assets/build_islam_volume_pdfs.py,2593,.py
+scripts/README.md,2287,.md
+scripts/assets/audit-assets.mjs,13525,.mjs
+scripts/assets/audit-lib.mjs,10893,.mjs
+scripts/assets/build_islam_volume_pdfs.py,2671,.py
 scripts/assets/build_readme_banner.py,9104,.py
-scripts/generate/generate_book_thumbnails.mjs,2411,.mjs
-scripts/generate/generate_catalog_search_indices.mjs,39784,.mjs
-scripts/generate/parse_1981_md_to_csv.mjs,3487,.mjs
-scripts/lib/archive-schema.d.ts,649,.ts
-scripts/lib/archive-schema.mjs,5190,.mjs
-scripts/prepare-standalone.mjs,923,.mjs
+scripts/extract_sefaria_hebrew.py,9140,.py
+scripts/generate/build-bible-index.mjs,12505,.mjs
+scripts/generate/build_islam_volume_bundle.mjs,9163,.mjs
+scripts/generate/clean_quran1989_structured_csvs.py,14022,.py
+scripts/generate/generate_book_thumbnails.mjs,2474,.mjs
+scripts/generate/generate_catalog_search_indices.mjs,43141,.mjs
+scripts/generate/parse_1981_md_to_csv.mjs,4903,.mjs
+scripts/inject_bible_footnotes.py,2667,.py
+scripts/lib/archive-schema.d.ts,674,.ts
+scripts/lib/archive-schema.mjs,5354,.mjs
+scripts/prepare-standalone.mjs,951,.mjs
+scripts/process/convert_to_csv.py,1748,.py
+scripts/process/fetch_transcripts.py,1063,.py
+scripts/process/process_csv_speakers.py,6654,.py
 scripts/process/transcription_pipeline.py,7912,.py
 scripts/process/vtt-to-json-converter.ts,16794,.ts
+scripts/rename_books.js,2410,.js
+scripts/update_manifests.js,3947,.js
 scripts/utils/analyze-speakers.ts,5835,.ts
 scripts/utils/speaker_analysis.json,28392,.json
-scripts/validate/validate_catalog.mjs,731,.mjs
-scripts/validate/verify_catalog_reproducibility.mjs,1401,.mjs
-src/app/api/health/route.ts,1215,.ts
-src/app/api/vitals/route.ts,1527,.ts
-src/app/audios/AudiosPageClient.tsx,5044,.tsx
+scripts/validate/validate_catalog.mjs,748,.mjs
+scripts/validate/verify_catalog_reproducibility.mjs,1439,.mjs
+skills-lock.json,2572,.json
+src/app/api/health/route.ts,1267,.ts
+src/app/api/mint/3d-model/route.ts,4561,.ts
+src/app/api/vitals/route.ts,1570,.ts
+src/app/audios/AudiosPageClient.tsx,4959,.tsx
 src/app/audios/loading.tsx,862,.tsx
-src/app/audios/page.tsx,1921,.tsx
-src/app/globals.css,14871,.css
+src/app/audios/page.tsx,1922,.tsx
+src/app/globals.css,22817,.css
 src/app/icon.png,228957,.png
-src/app/layout.tsx,3408,.tsx
-src/app/library/[id]/NewsletterViewer.tsx,8289,.tsx
-src/app/library/[id]/PDFReaderClient.tsx,16537,.tsx
-src/app/library/[id]/PDFReaderWrapper.tsx,783,.tsx
-src/app/library/[id]/page.tsx,4964,.tsx
-src/app/library/pdf-theme.css,1328,.css
+src/app/layout.tsx,4237,.tsx
+src/app/library/[id]/LibraryReaderWrapper.tsx,2909,.tsx
+src/app/library/[id]/NewsletterViewer.tsx,10629,.tsx
+src/app/library/[id]/PDFReaderClient.tsx,16738,.tsx
+src/app/library/[id]/PDFReaderWrapper.tsx,799,.tsx
+src/app/library/[id]/loading.tsx,1445,.tsx
+src/app/library/[id]/page.tsx,5265,.tsx
+src/app/library/[id]/read/page.tsx,5218,.tsx
+src/app/library/pdf-theme.css,1353,.css
 src/app/loading.tsx,603,.tsx
-src/app/media/[...id]/Player.tsx,28580,.tsx
-src/app/media/[...id]/PlayerWrapper.tsx,742,.tsx
-src/app/media/[...id]/loading.tsx,1260,.tsx
-src/app/media/[...id]/page.tsx,7038,.tsx
+src/app/media/[...id]/Player.tsx,29213,.tsx
+src/app/media/[...id]/PlayerWrapper.tsx,1669,.tsx
+src/app/media/[...id]/loading.tsx,1291,.tsx
+src/app/media/[...id]/page.tsx,7831,.tsx
 src/app/not-found.tsx,3277,.tsx
-src/app/page.tsx,169,.tsx
-src/app/quran/QuranPageClient.tsx,5725,.tsx
-src/app/quran/[chapter]/QuranChapterClient.tsx,17700,.tsx
-src/app/quran/[chapter]/page.tsx,3639,.tsx
-src/app/quran/appendices/AppendicesGrid.tsx,4008,.tsx
-src/app/quran/appendices/page.tsx,1902,.tsx
-src/app/quran/page.tsx,1410,.tsx
-src/app/robots.ts,322,.ts
-src/app/search/SearchClient.tsx,36586,.tsx
-src/app/search/actions.ts,6899,.ts
+src/app/page.tsx,152,.tsx
+src/app/quran/BiblePageClient.tsx,16575,.tsx
+src/app/quran/QuranPageClient.tsx,12745,.tsx
+src/app/quran/[chapter]/QuranChapterClient.tsx,24778,.tsx
+src/app/quran/[chapter]/QuranChapterClientWrapper.tsx,1340,.tsx
+src/app/quran/[chapter]/loading.tsx,1093,.tsx
+src/app/quran/[chapter]/page.tsx,3401,.tsx
+src/app/quran/appendices/AppendicesGrid.tsx,5079,.tsx
+src/app/quran/appendices/page.tsx,1943,.tsx
+src/app/quran/bible/[book]/BibleBookClient.tsx,52482,.tsx
+src/app/quran/bible/[book]/page.tsx,2760,.tsx
+src/app/quran/loading.tsx,887,.tsx
+src/app/quran/new-testament/page.tsx,845,.tsx
+src/app/quran/old-testament/page.tsx,855,.tsx
+src/app/quran/page.tsx,1455,.tsx
+src/app/robots.ts,335,.ts
+src/app/scriptures/old-testament/[book]/[chapter]/page.tsx,1115,.tsx
+src/app/search/SearchClient.tsx,48897,.tsx
+src/app/search/actions.ts,7682,.ts
 src/app/search/loading.tsx,578,.tsx
-src/app/search/page.tsx,1093,.tsx
-src/app/sitemap.ts,2425,.ts
-src/app/videos/VideosPageClient.tsx,6251,.tsx
+src/app/search/page.tsx,1125,.tsx
+src/app/search/searchNavReducer.ts,2252,.ts
+src/app/search/useSearchKeyboardNav.ts,3410,.ts
+src/app/sitemap.ts,2490,.ts
+src/app/tools/mint-3d/page.tsx,1053,.tsx
+src/app/videos/VideosPageClient.tsx,6535,.tsx
 src/app/videos/loading.tsx,1001,.tsx
-src/app/videos/page.tsx,2100,.tsx
-src/app/written/loading.tsx,844,.tsx
-src/app/written/page.tsx,12269,.tsx
-src/components/analytics/WebVitals.tsx,1014,.tsx
-src/components/home/ArchiveBranch.tsx,6215,.tsx
-src/components/home/AudioArchiveSection.tsx,8510,.tsx
-src/components/home/ExpectationCard.tsx,1562,.tsx
-src/components/home/HeroSection.tsx,9087,.tsx
-src/components/home/HomePageClient.tsx,3650,.tsx
-src/components/home/SearchFunctionDemo.tsx,18622,.tsx
-src/components/home/SectionCta.tsx,469,.tsx
-src/components/home/VideoArchiveSection.tsx,10113,.tsx
-src/components/layout/Footer.tsx,6043,.tsx
-src/components/layout/Header.tsx,10578,.tsx
-src/components/media/MediaCard.tsx,6066,.tsx
-src/components/media/MediaGrid.tsx,1210,.tsx
-src/components/media/PaginatedMediaGrid.tsx,1512,.tsx
-src/components/providers/ThemeProvider.tsx,1860,.tsx
-src/config/navigation.ts,1318,.ts
-src/config/site.ts,624,.ts
-src/config/social.ts,333,.ts
-src/data/quran_study_thumbnails.json,7478,.json
-src/lib/appendixCatalog.ts,6915,.ts
+src/app/videos/page.tsx,2101,.tsx
+src/app/written/loading.tsx,862,.tsx
+src/app/written/page.tsx,9037,.tsx
+src/components/analytics/WebVitals.tsx,1251,.tsx
+src/components/home/ArchiveBranch.tsx,3143,.tsx
+src/components/home/AudioArchiveSection.tsx,25823,.tsx
+src/components/home/DeferredSearchFunctionDemo.tsx,1563,.tsx
+src/components/home/ExpectationCard.tsx,1179,.tsx
+src/components/home/HeroSection.tsx,8402,.tsx
+src/components/home/HomePage.tsx,7552,.tsx
+src/components/home/Reveal.tsx,1898,.tsx
+src/components/home/ScripturesVisual.tsx,9223,.tsx
+src/components/home/SearchFunctionDemo.module.css,15661,.css
+src/components/home/SearchFunctionDemo.tsx,57350,.tsx
+src/components/home/SectionCta.tsx,1095,.tsx
+src/components/home/SectionHeading.tsx,1328,.tsx
+src/components/home/VideoArchiveSection.tsx,12155,.tsx
+src/components/home/WidgetAccents.tsx,4643,.tsx
+src/components/home/WrittenArchiveVisual.tsx,6658,.tsx
+src/components/home/useAutoplayCarousel.ts,7159,.ts
+src/components/layout/Footer.tsx,5056,.tsx
+src/components/layout/FooterAccordionSection.tsx,4782,.tsx
+src/components/layout/Header.tsx,12131,.tsx
+src/components/layout/ScriptureTabs.tsx,1537,.tsx
+src/components/media/MediaCard.tsx,6394,.tsx
+src/components/media/MediaGrid.tsx,1865,.tsx
+src/components/media/PaginatedMediaGrid.tsx,1718,.tsx
+src/components/mint/Mint3DModelGenerator.tsx,16580,.tsx
+src/components/providers/ThemeProvider.tsx,2787,.tsx
+src/components/react-bits/ParticlesBackground.tsx,6798,.tsx
+src/config/navigation.ts,1357,.ts
+src/config/site.ts,638,.ts
+src/config/social.ts,340,.ts
+src/data/quran_study_thumbnails.json,7532,.json
+src/lib/appendixCatalog.ts,5720,.ts
 src/lib/csv.ts,1279,.ts
 src/lib/formatUtils.ts,6485,.ts
-src/lib/mediaAssets.ts,3128,.ts
-src/lib/newsletterCatalog.ts,3421,.ts
+src/lib/mediaAssets.ts,3230,.ts
+src/lib/mint/client.ts,10784,.ts
+src/lib/newsletterCatalog.ts,5350,.ts
 src/lib/playlistOrder.ts,3206,.ts
 src/lib/search/phonetic.ts,4807,.ts
 src/lib/search/queryMatch.ts,8350,.ts
-src/lib/security.ts,1997,.ts
+src/lib/security.ts,2081,.ts
 src/lib/studyTitles.ts,4108,.ts
-src/lib/theme.ts,1656,.ts
 src/lib/transcriptUtils.ts,11832,.ts
 src/lib/utils.ts,386,.ts
-src/lib/webVitals.ts,1382,.ts
-src/types/archive.ts,1940,.ts
-src/types/media.ts,1192,.ts
+src/lib/webVitals.ts,1435,.ts
+src/types/archive.ts,2020,.ts
+src/types/media.ts,876,.ts
 tsconfig.json,784,.json

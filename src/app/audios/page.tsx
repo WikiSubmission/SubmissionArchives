@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import AudiosPageClient from './AudiosPageClient';
 import type { Media } from '@/types/media';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Audio Archives',

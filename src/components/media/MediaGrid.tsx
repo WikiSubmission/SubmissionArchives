@@ -22,6 +22,7 @@ export function MediaGrid({ media, viewMode, id }: MediaGridProps) {
                     <Link
                         href={getMediaHref(item.id)}
                         key={item.id}
+                        prefetch={false}
                         className="media-card-enter block min-w-[72vw] shrink-0 snap-start sm:min-w-0 sm:shrink"
                         style={{ '--stagger-delay': `${Math.min(index, 8) * 40}ms` } as CSSProperties}
                         aria-label={`Open ${item.displayTitle}`}
@@ -39,6 +40,7 @@ export function MediaGrid({ media, viewMode, id }: MediaGridProps) {
                 <Link
                     href={getMediaHref(item.id)}
                     key={item.id}
+                    prefetch={false}
                     className="block"
                     aria-label={`Open ${item.displayTitle}`}
                 >

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
 import { getAppendixCatalog } from '@/lib/appendixCatalog';
-import AppendicesGrid from './AppendicesGrid';
+import AppendicesGrid from '@/app/quran/appendices/AppendicesGrid';
 
 export const revalidate = 3600;
 

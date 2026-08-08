@@ -74,8 +74,13 @@ function readGeneratedIndex<T>(filename: string): T[] {
     return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T[];
 }
 
+let cachedMasterIndex: MasterIndexItem[] | null = null;
+
 function getSearchIndex() {
-    return readGeneratedIndex<MasterIndexItem>('MASTER_INDEX.json');
+    if (!cachedMasterIndex) {
+        cachedMasterIndex = readGeneratedIndex<MasterIndexItem>('MASTER_INDEX.json');
+    }
+    return cachedMasterIndex;
 }
 
 export async function searchTranscripts(query: string, typeFilters: string[], options: SearchOptions = {}) {
@@ -179,12 +184,8 @@ const EXCLUDED_QURAN_EDITION_IDS = new Set([
 ]);
 
 function isMasterItemAllowed(item: MasterIndexItem, filters: string[]) {
-    // Exclude older or alternate Qur'an translation edition books so search only uses the primary 1992 Qur'an edition
-    if (
-        EXCLUDED_QURAN_EDITION_IDS.has(item.id) ||
-        item.editionYear === 1989 ||
-        item.editionYear === 1981
-    ) {
+    // Exclude alternate Qur'an translation edition books only when explicitly filtering by 'quran' category
+    if (filters.includes('quran') && EXCLUDED_QURAN_EDITION_IDS.has(item.id)) {
         return false;
     }
 

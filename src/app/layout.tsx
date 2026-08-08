@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
+import Script from 'next/script';
 import { Amiri, Inter, JetBrains_Mono, Libre_Franklin, Roboto_Slab } from 'next/font/google';
 import localFont from 'next/font/local';
 
@@ -46,9 +47,9 @@ const superiorSerif = localFont({
     variable: '--font-local-superior',
     display: 'swap',
     src: [
-        { path: '../../public/fonts/LTSuperiorSerif-Regular.otf', weight: '400', style: 'normal' },
-        { path: '../../public/fonts/LTSuperiorSerif-Medium.otf', weight: '500', style: 'normal' },
-        { path: '../../public/fonts/LTSuperiorSerif-Bold.otf', weight: '700', style: 'normal' },
+        { path: '../../public/fonts/LTSuperiorSerif-Regular.woff2', weight: '400', style: 'normal' },
+        { path: '../../public/fonts/LTSuperiorSerif-Medium.woff2', weight: '500', style: 'normal' },
+        { path: '../../public/fonts/LTSuperiorSerif-Bold.woff2', weight: '700', style: 'normal' },
     ],
 });
 
@@ -102,7 +103,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     return (
         <html lang="en" className="dark" data-theme="dark" suppressHydrationWarning>
             <head>
-                <script dangerouslySetInnerHTML={{ __html: themeBootstrapScript }} />
+                <Script id="theme-bootstrap" strategy="beforeInteractive">
+                    {themeBootstrapScript}
+                </Script>
             </head>
             <body className={`${inter.variable} ${jetbrainsMono.variable} ${libreFranklin.variable} ${amiri.variable} ${superiorSerif.variable} ${robotoSlab.variable} antialiased`}>
                 <a

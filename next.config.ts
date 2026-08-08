@@ -37,7 +37,7 @@ const nextConfig: NextConfig = {
   // Don't advertise the framework via the X-Powered-By response header.
   poweredByHeader: false,
   experimental: {
-    optimizePackageImports: ["lucide-react"],
+    optimizePackageImports: ["lucide-react", "clsx", "tailwind-merge", "lru-cache"],
     webVitalsAttribution: ["CLS", "LCP", "INP"],
   },
   images: {
@@ -78,6 +78,7 @@ const nextConfig: NextConfig = {
         source: "/content/:path*",
         headers: [
           { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+          { key: "Accept-Ranges", value: "bytes" },
         ],
       },
     ];
@@ -104,6 +105,13 @@ const nextConfig: NextConfig = {
         destination: "/content/quran/organized_appendices/1992/:document.pdf",
         permanent: true,
       },
+      // Scripture route migration: /quran/* → /scripture/*
+      { source: "/quran", destination: "/scripture/quran", permanent: true },
+      { source: "/quran/old-testament", destination: "/scripture/old-testament", permanent: true },
+      { source: "/quran/new-testament", destination: "/scripture/new-testament", permanent: true },
+      { source: "/quran/appendices", destination: "/scripture/quran/appendices", permanent: true },
+      { source: "/quran/:chapter(\\d+)", destination: "/scripture/quran/:chapter", permanent: true },
+      { source: "/quran/bible/:book", destination: "/scripture/bible/:book", permanent: true },
     ];
   },
 };

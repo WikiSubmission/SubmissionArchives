@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, ExternalLink, FileText, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -11,10 +11,9 @@ import { IconBadge, chromeButtonClassLg, dockPillClass, toolbarButtonClass } fro
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url,
-).toString();
+if (typeof window !== 'undefined') {
+    pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
+}
 
 type Props = {
     pdfUrl: string;
@@ -114,6 +113,12 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
     const query = initialQuery.trim().toLowerCase();
     const highlightTerms = getHighlightTerms(query);
     const highlightRangesRef = useRef<Map<number, Array<[number, number]>>>(new Map());
+
+    const pdfOptions = useMemo(() => ({
+        cMapUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
+        cMapPacked: true,
+        standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+    }), []);
 
     // Fit the page to the available viewport rather than a flat width cap — a two-page
     // newsletter spread scanned as one wide landscape page otherwise renders tiny at a
@@ -334,6 +339,7 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                 <div className="flex justify-center">
                     <Document
                         file={pdfUrl}
+                        options={pdfOptions}
                         onLoadSuccess={({ numPages: loadedPages }) => setNumPages(loadedPages)}
                         loading={<div className="py-20 text-center text-sm text-ed-fg-muted">Loading document…</div>}
                         error={<div className="py-20 text-center text-sm text-ed-fg-muted">Couldn&apos;t load this document.</div>}

@@ -10,7 +10,7 @@ Command: `npm run validate:catalog`
 > submission-archives@0.1.0 validate:catalog
 > node scripts/validate/validate_catalog.mjs
 
-Validated 382 records and 113886 searchable segments.
+Validated 383 records and 116457 searchable segments.
 ```
 
 ## Production Build
@@ -19,7 +19,7 @@ Command: `npm run build`
 
 Build succeeded.
 
-`.next/` size: 783.16 MB
+`.next/` size: 999.49 MB
 
 ## Docker Image Size
 

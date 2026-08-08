@@ -57,7 +57,7 @@ export function HeroSection() {
 
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
                 <Image
-                    src="/images/symbols/sub-sign.png"
+                    src="/assets/brand/submission-archives-mark.png"
                     alt=""
                     width={500}
                     height={500}

@@ -17,5 +17,5 @@ type Props = {
 export default async function OTChapterPage({ params }: Props) {
     const { book: bookSlug } = await params;
     const code = OT_SLUG_TO_BOOK_CODE[bookSlug.toLowerCase()] || bookSlug.toLowerCase();
-    redirect(`/quran/bible/${code}`);
+    redirect(`/scripture/bible/${code}`);
 }
