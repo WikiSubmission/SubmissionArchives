@@ -2,7 +2,7 @@ import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { Markdown } from 'tiptap-markdown'
 import { parseFrontmatter, stringifyWithFrontmatter } from '../lib/frontmatter'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { invoke, convertFileSrc } from '@tauri-apps/api/core'
 import { open } from '@tauri-apps/plugin-dialog'
 import DragHandle from '@tiptap/extension-drag-handle-react'
@@ -37,6 +37,15 @@ const FONT_CLASS: Record<FontFamily, string> = {
   default: '',
   serif: 'font-serif',
   mono: 'font-mono',
+}
+
+const MODE_META: Record<
+  EditorMode,
+  { label: string; description: string }
+> = {
+  write: { label: 'Write', description: 'Markdown blocks' },
+  blocks: { label: 'Blocks', description: 'Drag & drop' },
+  page: { label: 'Page', description: 'Continuous prose' },
 }
 
 export default function Editor({
@@ -77,7 +86,8 @@ export default function Editor({
       if (!path || !editorInstance) return
 
       setStatus('saving')
-      const body = (editorInstance.storage as any).markdown.getMarkdown()
+      const storageInstance = editorInstance.storage as unknown as { markdown: { getMarkdown: () => string } }
+      const body = storageInstance.markdown.getMarkdown()
       const content = stringifyWithFrontmatter(body, frontmatterRef.current)
       invoke('write_note', { path, content })
         .then(() => {
@@ -109,23 +119,26 @@ export default function Editor({
     onUpdate: ({ editor: instance }) => scheduleSave(instance),
   })
 
-  const loadNote = (path: string) => {
-    invoke<string>('read_note', { path })
-      .then((raw) => {
-        const { data, content } = parseFrontmatter(raw)
-        editor?.commands.setContent(content, { emitUpdate: false })
-        frontmatterRef.current = data
-        setFrontmatter(data)
-        setStatus('idle')
-      })
-      .catch(() => setStatus('error'))
-  }
+  const loadNote = useCallback(
+    (path: string) => {
+      invoke<string>('read_note', { path })
+        .then((raw) => {
+          const { data, content } = parseFrontmatter(raw)
+          editor?.commands.setContent(content, { emitUpdate: false })
+          frontmatterRef.current = data
+          setFrontmatter(data)
+          setStatus('idle')
+        })
+        .catch(() => setStatus('error'))
+    },
+    [editor]
+  )
 
   useEffect(() => {
     activeFilePath.current = filePath
     if (!editor) return
     loadNote(filePath)
-  }, [filePath, editor])
+  }, [filePath, editor, loadNote])
 
   useEffect(() => {
     editor?.setEditable(!locked)
@@ -148,14 +161,39 @@ export default function Editor({
     }
   }
 
+  const statusConfig = {
+    idle: { dot: 'bg-transparent', text: 'text-white/20', label: '' },
+    saving: { dot: 'bg-amber-400', text: 'text-amber-400/80', label: 'Saving' },
+    saved: { dot: 'bg-emerald-400', text: 'text-emerald-400/80', label: 'Saved' },
+    error: { dot: 'bg-red-400', text: 'text-red-400/80', label: 'Error' },
+  }
+
+  const currentStatus = statusConfig[status]
+
   return (
-    <div className="w-full h-full bg-white dark:bg-ed-bg text-gray-900 dark:text-gray-100 flex flex-col relative">
-      {/* Mode Toggle Toolbar */}
-      <div className="absolute top-4 right-8 z-10 flex items-center gap-3">
-        <span key={status} className="text-xs text-white/30 font-mono animate-fade-in">
-          {status === 'saving' ? 'Saving...' : status === 'saved' ? 'Saved' : status === 'error' ? 'Error' : ''}
-        </span>
-        <div className="bg-[#1c1c1f] p-1 rounded-lg border border-ed-rule shadow-lg">
+    <div className="w-full h-full bg-ed-bg text-ed-fg flex flex-col relative">
+      {/* Floating Toolbar — Glass pill with layered controls */}
+      <div className="absolute top-4 right-6 z-20 flex items-center gap-3">
+        {/* Status Pill */}
+        <div
+          className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border transition-all duration-300 ${
+            status === 'idle'
+              ? 'border-transparent opacity-0'
+              : 'border-white/[0.06] bg-white/[0.03] opacity-100'
+          }`}
+        >
+          <span
+            className={`w-1.5 h-1.5 rounded-full ${currentStatus.dot} ${
+              status === 'saving' ? 'animate-status-pulse' : ''
+            }`}
+          />
+          <span className={`text-[10px] font-semibold uppercase tracking-wider ${currentStatus.text}`}>
+            {currentStatus.label}
+          </span>
+        </div>
+
+        {/* Note Menu + Mode Toggle Container */}
+        <div className="flex items-center gap-2 glass-strong rounded-xl border border-ed-rule shadow-elev-md p-1">
           <NoteMenu
             locked={locked}
             fullWidth={fullWidth}
@@ -173,36 +211,54 @@ export default function Editor({
             onAttachPdf={handleAttachPdf}
             onTogglePdfSplitView={() => handleFrontmatterChange({ ...frontmatter, pdfSplitView: !pdfSplitView })}
           />
-        </div>
-        <div className="flex gap-2 bg-[#1c1c1f] p-1 rounded-lg border border-ed-rule shadow-lg">
-          {(['write', 'blocks', 'page'] as EditorMode[]).map((m) => (
-            <button
-              key={m}
-              onClick={() => setMode(m)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md capitalize transition-colors ${
-                mode === m ? 'bg-white/10 text-white' : 'text-white/50 hover:text-white/80'
-              }`}
-            >
-              {m}
-            </button>
-          ))}
+
+          <div className="w-px h-4 bg-white/[0.08]" />
+
+          {/* Premium Segmented Mode Control */}
+          <div className="flex items-center p-0.5 bg-black/30 rounded-lg">
+            {(['write', 'blocks', 'page'] as EditorMode[]).map((m) => (
+              <button
+                key={m}
+                onClick={() => setMode(m)}
+                title={MODE_META[m].description}
+                className={`relative px-3 py-1.5 text-[11px] font-semibold rounded-md transition-all duration-200 tactile ${
+                  mode === m
+                    ? 'text-white'
+                    : 'text-white/35 hover:text-white/60'
+                }`}
+              >
+                {mode === m && (
+                  <span className="absolute inset-0 bg-white/10 rounded-md shadow-sm" />
+                )}
+                <span className="relative z-10">{MODE_META[m].label}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
       <div className="flex-1 overflow-hidden flex">
         {pdfSplitView && pdfAttachment && (
-          <div className="w-1/2 border-r border-ed-rule shrink-0">
-            <iframe title="Attached PDF" src={convertFileSrc(pdfAttachment)} className="w-full h-full border-0" />
+          <div className="w-1/2 border-r border-ed-rule shrink-0 bg-ed-surface/30">
+            <iframe
+              title="Attached PDF"
+              src={convertFileSrc(pdfAttachment)}
+              className="w-full h-full border-0"
+            />
           </div>
         )}
 
-        <div className={`overflow-y-auto ${pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'} ${FONT_CLASS[fontFamily]}`}>
+        <div
+          className={`overflow-y-auto ${
+            pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'
+          } ${FONT_CLASS[fontFamily]}`}
+        >
           <div
-            className={`h-full w-full mx-auto transition-all duration-300 ${
+            className={`h-full w-full mx-auto transition-all duration-500 ${
               mode === 'page'
-                ? 'max-w-[800px] bg-white text-black mt-8 shadow-2xl rounded-sm p-4 min-h-[1056px]'
+                ? 'max-w-[800px] bg-white text-black mt-6 page-sheet rounded-sm p-6 min-h-[1056px]'
                 : mode === 'blocks'
-                  ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-16`
+                  ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-14`
                   : fullWidth
                     ? 'max-w-none'
                     : 'max-w-3xl'
@@ -211,8 +267,8 @@ export default function Editor({
             <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
             {mode === 'blocks' && editor && (
               <DragHandle editor={editor}>
-                <div className="w-5 h-6 flex items-center justify-center text-white/30 hover:text-white/70 cursor-grab active:cursor-grabbing transition-colors">
-                  <GripVertical size={15} />
+                <div className="w-5 h-6 flex items-center justify-center text-white/20 hover:text-white/50 cursor-grab active:cursor-grabbing transition-colors rounded hover:bg-white/[0.04]">
+                  <GripVertical size={14} strokeWidth={1.5} />
                 </div>
               </DragHandle>
             )}

@@ -1,5 +1,5 @@
 import { mergeAttributes, Node } from '@tiptap/core'
-import { ReactNodeViewRenderer, NodeViewWrapper } from '@tiptap/react'
+import { ReactNodeViewRenderer, NodeViewWrapper, type NodeViewProps } from '@tiptap/react'
 import { useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
 import { useSettings } from '../../hooks/useSettings'
@@ -11,25 +11,72 @@ interface Verse {
   english: string
 }
 
-function QuranEmbedComponent({ node, updateAttributes }: any) {
+interface MarkdownSerializerState {
+  write: (content: string) => void
+  closeBlock: (node: unknown) => void
+}
+
+interface MarkdownItState {
+  bMarks: number[]
+  tShift: number[]
+  eMarks: number[]
+  src: string
+  line: number
+  push: (type: string, tag: string, nesting: number) => {
+    attrSet: (name: string, value: string) => void
+    map: number[]
+  }
+}
+
+interface MarkdownItToken {
+  attrGet: (name: string) => string | null
+}
+
+interface MarkdownItInstance {
+  block: {
+    ruler: {
+      before: (
+        beforeName: string,
+        ruleName: string,
+        fn: (state: MarkdownItState, startLine: number, endLine: number, silent: boolean) => boolean
+      ) => void
+    }
+  }
+  renderer: {
+    rules: Record<string, (tokens: MarkdownItToken[], idx: number) => string>
+  }
+}
+
+function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
   const { settings } = useSettings()
-  const verses: string = node.attrs.verses
-  const showEnglish: boolean = node.attrs.showEnglish
+  const verses = String(node.attrs.verses ?? '1:1')
+  const showEnglish = Boolean(node.attrs.showEnglish)
 
   const [result, setResult] = useState<Verse[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [prevVerses, setPrevVerses] = useState(verses)
+
+  if (verses !== prevVerses) {
+    setPrevVerses(verses)
+    setResult(null)
+    setError(null)
+  }
 
   useEffect(() => {
     let cancelled = false
-    setError(null)
-    setResult(null)
 
     invoke<Verse[]>('search_verses', { query: verses })
       .then((data) => {
-        if (!cancelled) setResult(data)
+        if (!cancelled) {
+          setResult(data)
+          setError(null)
+        }
       })
       .catch((err) => {
-        if (!cancelled) setError(String(err))
+        if (!cancelled) {
+          setError(String(err))
+          setResult(null)
+        }
       })
 
     return () => {
@@ -37,55 +84,83 @@ function QuranEmbedComponent({ node, updateAttributes }: any) {
     }
   }, [verses])
 
-  // The global "show" setting is a ceiling: it can force arabic-only or
-  // translation-only across the whole app. The per-embed toggle button is
-  // a further override underneath that ceiling, not above it.
   const showArabic = settings.quran.showMode !== 'translation'
   const showTranslation = showEnglish && settings.quran.showMode !== 'arabic'
 
   return (
-    <NodeViewWrapper className="quran-embed-wrapper my-4 rounded-xl border border-qv-border bg-qv-bg select-none relative group animate-embed-in overflow-hidden shadow-lg">
-      <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+    <NodeViewWrapper className="quran-embed-wrapper my-6 rounded-xl border border-qv-border bg-qv-bg select-none relative group animate-embed-in overflow-hidden">
+      {/* Subtle top accent line */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-qv-accent/20 to-transparent" />
+
+      {/* Hover action bar */}
+      <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200 translate-y-[-4px] group-hover:translate-y-0 z-10">
         <button
           onClick={() => updateAttributes({ showEnglish: !showEnglish })}
-          className="text-xs bg-qv-fg/10 text-qv-fg px-2 py-1 rounded hover:bg-qv-fg/15 transition-colors"
+          className="text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
         >
-          Toggle English
+          {showEnglish ? 'Hide English' : 'Show English'}
         </button>
       </div>
 
-      <div className="px-5 py-4">
-        {error && <div className="text-sm text-red-700 font-mono">{error}</div>}
+      <div className="px-6 py-5">
+        {error && (
+          <div className="text-sm text-red-700/80 font-mono bg-red-500/5 rounded-lg px-3 py-2 border border-red-500/10">
+            {error}
+          </div>
+        )}
 
-        {!error && !result && <div className="text-sm text-qv-muted animate-pulse">Loading {verses}...</div>}
+        {!error && !result && (
+          <div className="flex items-center gap-2 text-sm text-qv-muted animate-pulse">
+            <span className="w-3.5 h-3.5 border-2 border-qv-accent/20 border-t-qv-accent/50 rounded-full animate-spin" />
+            Loading {verses}...
+          </div>
+        )}
 
-        {result &&
-          result.map((v, i) => (
-            <div key={`${v.chapter}:${v.verse}`} className={i > 0 ? 'pt-3 mt-3 border-t border-qv-divider' : ''}>
-              <span className="inline-block px-2.5 py-0.5 rounded-full bg-qv-tint text-qv-accent text-xs font-semibold mb-1.5">
-                {v.chapter}:{v.verse}
-              </span>
-              {showArabic && (
-                <div
-                  className="font-arabic text-right leading-relaxed text-qv-fg"
-                  style={{ fontSize: settings.quran.arabicSize }}
-                  dir="rtl"
-                >
-                  {v.arabic}
+        {result && (
+          <div className="space-y-0">
+            {result.map((v, i) => (
+              <div
+                key={`${v.chapter}:${v.verse}`}
+                className={i > 0 ? 'pt-4 mt-4 border-t border-qv-divider' : ''}
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="inline-flex items-center justify-center min-w-[28px] h-5 px-1.5 rounded-md bg-qv-tint text-qv-accent text-[10px] font-bold tracking-wide">
+                    {v.chapter}:{v.verse}
+                  </span>
                 </div>
-              )}
-              {showTranslation && (
-                <p className="font-serif leading-relaxed text-qv-fg mt-2" style={{ fontSize: settings.quran.translationSize }}>
-                  {v.english}
-                </p>
-              )}
-            </div>
-          ))}
+
+                {showArabic && (
+                  <div
+                    className="font-arabic text-right leading-[1.8] text-qv-fg tracking-normal"
+                    style={{ fontSize: settings.quran.arabicSize }}
+                    dir="rtl"
+                  >
+                    {v.arabic}
+                  </div>
+                )}
+
+                {showTranslation && (
+                  <p
+                    className="font-serif leading-[1.7] text-qv-fg/90 mt-2"
+                    style={{ fontSize: settings.quran.translationSize }}
+                  >
+                    {v.english}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
-      <div className="px-5 py-2 border-t border-qv-divider flex justify-between items-center">
-        <span className="text-[11px] tracking-wide text-qv-subtle font-medium">Reference: {verses}</span>
-        <span className="text-[10.5px] tracking-widest uppercase text-qv-muted font-semibold">SubmissionArchives</span>
+      {/* Footer — Manuscript reference strip */}
+      <div className="px-6 py-2.5 border-t border-qv-divider flex justify-between items-center bg-qv-tint/30">
+        <span className="text-[10px] tracking-[0.08em] text-qv-subtle font-medium uppercase">
+          Reference: {verses}
+        </span>
+        <span className="text-[9px] tracking-[0.15em] uppercase text-qv-muted/70 font-semibold">
+          SubmissionArchives
+        </span>
       </div>
     </NodeViewWrapper>
   )
@@ -111,9 +186,7 @@ export const QuranEmbed = Node.create({
   },
 
   parseHTML() {
-    return [
-      { tag: 'quran-embed' },
-    ]
+    return [{ tag: 'quran-embed' }]
   },
 
   renderHTML({ HTMLAttributes }) {
@@ -127,18 +200,18 @@ export const QuranEmbed = Node.create({
   addStorage() {
     return {
       markdown: {
-        serialize(state: any, node: any) {
+        serialize(state: MarkdownSerializerState, node: { attrs: Record<string, unknown> }) {
           const verses = String(node.attrs.verses)
           const suffix = node.attrs.showEnglish === false ? ` showEnglish="false"` : ''
           state.write(`::: quran {verses="${verses}"${suffix}} :::`)
           state.closeBlock(node)
         },
         parse: {
-          setup(markdownit: any) {
+          setup(markdownit: MarkdownItInstance) {
             markdownit.block.ruler.before(
               'fence',
               'quran_embed',
-              (state: any, startLine: number, _endLine: number, silent: boolean) => {
+              (state: MarkdownItState, startLine: number, _endLine: number, silent: boolean) => {
                 const pos = state.bMarks[startLine] + state.tShift[startLine]
                 const max = state.eMarks[startLine]
                 const line = state.src.slice(pos, max).trim()
@@ -160,7 +233,7 @@ export const QuranEmbed = Node.create({
               }
             )
 
-            markdownit.renderer.rules.quran_embed = (tokens: any, idx: number) => {
+            markdownit.renderer.rules.quran_embed = (tokens: MarkdownItToken[], idx: number) => {
               const token = tokens[idx]
               const verses = token.attrGet('verses')
               const showEnglish = token.attrGet('showenglish')

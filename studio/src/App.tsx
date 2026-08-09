@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
 import { open, save } from '@tauri-apps/plugin-dialog'
@@ -23,6 +24,13 @@ import { Settings as SettingsIcon } from 'lucide-react'
 import './App.css'
 
 type SidebarTab = 'files' | 'tags' | 'search' | 'trash'
+
+const TAB_LABELS: Record<SidebarTab, string> = {
+  files: 'Files',
+  tags: 'Tags',
+  search: 'Search',
+  trash: 'Trash',
+}
 
 function App() {
   const { archivePath, setArchivePath } = useArchive()
@@ -203,32 +211,44 @@ function App() {
 
   return (
     <SettingsProvider archivePath={archivePath}>
-      <main className="h-screen w-screen bg-ed-bg text-gray-100 flex flex-col font-sans">
-        <div className="h-12 border-b border-ed-rule flex items-center gap-2 px-4 shrink-0 shadow-sm" data-tauri-drag-region>
-          <img src={logoMark} alt="" className="h-5 w-5 select-none" draggable={false} />
-          <div className="font-semibold text-sm tracking-wide text-white/80 select-none flex-1">
+      <main className="h-screen w-screen bg-ed-bg text-ed-fg flex flex-col font-sans overflow-hidden">
+        {/* Title Bar — Glassmorphism with subtle bottom glow */}
+        <div
+          className="h-12 shrink-0 glass border-b border-ed-rule flex items-center gap-3 px-4 relative z-50"
+          data-tauri-drag-region
+        >
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent pointer-events-none" />
+          <img src={logoMark} alt="" className="h-5 w-5 select-none opacity-90" draggable={false} />
+          <div className="font-semibold text-sm tracking-tight text-white/80 select-none flex-1" data-tauri-drag-region>
             SubmissionArchives Studio
           </div>
           <button
             onClick={() => setSettingsOpen(true)}
             title="Settings"
-            className="text-white/40 hover:text-white/80 transition-colors"
+            className="tactile p-1.5 rounded-md text-white/35 hover:text-white/80 hover:bg-white/[0.06]"
           >
-            <SettingsIcon size={15} />
+            <SettingsIcon size={15} strokeWidth={1.5} />
           </button>
         </div>
+
         <div className="flex-1 flex overflow-hidden">
-          <div className="w-64 border-r border-ed-rule shrink-0 bg-ed-bg/80 flex flex-col">
-            <div className="flex border-b border-ed-rule shrink-0">
+          {/* Sidebar — Layered elevation with strong glass on the tab bar */}
+          <div className="w-[260px] shrink-0 border-r border-ed-rule flex flex-col bg-ed-bg/60">
+            <div className="flex border-b border-ed-rule shrink-0 bg-ed-surface/40 backdrop-blur-xl">
               {(['files', 'tags', 'search', 'trash'] as SidebarTab[]).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setSidebarTab(tab)}
-                  className={`flex-1 py-2 text-xs font-medium uppercase tracking-wider capitalize transition-colors ${
-                    sidebarTab === tab ? 'text-white bg-white/5' : 'text-white/40 hover:text-white/70'
+                  className={`relative flex-1 py-2.5 text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 tactile ${
+                    sidebarTab === tab
+                      ? 'text-white'
+                      : 'text-white/30 hover:text-white/60'
                   }`}
                 >
-                  {tab}
+                  {sidebarTab === tab && (
+                    <span className="absolute inset-x-1 bottom-1 h-0.5 rounded-full bg-white/80 transition-all duration-300" />
+                  )}
+                  {TAB_LABELS[tab]}
                 </button>
               ))}
             </div>
@@ -253,7 +273,8 @@ function App() {
             </div>
           </div>
 
-          <div className="flex-1 relative">
+          {/* Main Content Area */}
+          <div className="flex-1 relative bg-ed-bg">
             {!activeFilePath ? (
               <HomeDashboard archivePath={archivePath} onOpenFile={handleOpenFile} />
             ) : fileKindOf(activeFilePath) !== 'markdown' ? (
@@ -273,6 +294,7 @@ function App() {
           </div>
         </div>
 
+        {/* Modals */}
         {quickSwitcherOpen && (
           <QuickSwitcher archivePath={archivePath} onOpenFile={handleOpenFile} onClose={() => setQuickSwitcherOpen(false)} />
         )}

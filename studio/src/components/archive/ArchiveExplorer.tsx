@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
 import { FilePlus } from 'lucide-react'
 import TreeNode from './TreeNode'
@@ -25,11 +25,11 @@ export default function ArchiveExplorer({
   const [error, setError] = useState<string | null>(null)
   const [icons, setIcons] = useState<Record<string, string>>({})
 
-  const refreshIcons = () => {
+  const refreshIcons = useCallback(() => {
     invoke<Record<string, string>>('read_folder_icons', { archiveRoot: archivePath })
       .then(setIcons)
       .catch(() => {})
-  }
+  }, [archivePath])
 
   useEffect(() => {
     invoke<ArchiveEntry[]>('list_directory', { path: archivePath })
@@ -39,7 +39,7 @@ export default function ArchiveExplorer({
       })
       .catch((err) => setError(String(err)))
     refreshIcons()
-  }, [archivePath, refreshToken])
+  }, [archivePath, refreshToken, refreshIcons])
 
   const handleSetIcon = async (folderPath: string) => {
     const current = icons[folderPath] ?? ''
@@ -55,16 +55,31 @@ export default function ArchiveExplorer({
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-4 flex items-center justify-between shrink-0">
-        <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Archive Explorer</span>
-        <button onClick={onNewNote} className="text-white/40 hover:text-white/80 transition-colors" title="New Note">
-          <FilePlus size={15} />
+      <div className="px-3 py-3 flex items-center justify-between shrink-0 border-b border-ed-rule/50">
+        <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/25 pl-1">
+          Archive Explorer
+        </span>
+        <button
+          onClick={onNewNote}
+          className="tactile p-1.5 rounded-md text-white/30 hover:text-white/70 hover:bg-white/[0.06]"
+          title="New Note"
+        >
+          <FilePlus size={14} strokeWidth={1.5} />
         </button>
       </div>
 
-      {error && <div className="px-4 pb-2 text-xs text-red-400 font-mono">{error}</div>}
+      {error && (
+        <div className="px-4 py-2 text-[11px] text-red-400/90 font-mono bg-red-500/5 border-b border-red-500/10">
+          {error}
+        </div>
+      )}
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto py-1">
+        {entries.length === 0 && !error && (
+          <div className="px-4 py-8 text-center">
+            <div className="text-[11px] text-white/20 font-mono">No items</div>
+          </div>
+        )}
         {entries.map((entry) => (
           <TreeNode
             key={entry.path}

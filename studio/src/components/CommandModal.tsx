@@ -1,10 +1,12 @@
-import { useEffect, useMemo, useState, type KeyboardEvent } from 'react'
+import { useMemo, useState, type KeyboardEvent } from 'react'
+import { ArrowUp, ArrowDown, CornerDownLeft } from 'lucide-react'
 
 interface CommandModalProps<T> {
   items: T[]
   getKey: (item: T) => string
   getLabel: (item: T) => string
   filterText?: (item: T) => string
+  getCategory?: (item: T) => string | undefined
   onSelect: (item: T) => void
   onClose: () => void
   placeholder: string
@@ -16,6 +18,7 @@ export default function CommandModal<T>({
   getKey,
   getLabel,
   filterText,
+  getCategory,
   onSelect,
   onClose,
   placeholder,
@@ -30,18 +33,46 @@ export default function CommandModal<T>({
     return items.filter((item) => (filterText ? filterText(item) : getLabel(item)).toLowerCase().includes(q))
   }, [items, query, filterText, getLabel])
 
-  useEffect(() => setSelectedIndex(0), [query])
+  const grouped = useMemo(() => {
+    if (!getCategory) return { '': filtered }
+    const groups: Record<string, T[]> = {}
+    filtered.forEach((item) => {
+      const cat = getCategory(item) || 'Actions'
+      if (!groups[cat]) groups[cat] = []
+      groups[cat].push(item)
+    })
+    return groups
+  }, [filtered, getCategory])
+
+  const [prevQuery, setPrevQuery] = useState(query)
+  if (query !== prevQuery) {
+    setPrevQuery(query)
+    setSelectedIndex(0)
+  }
+
+  const flatIndexToItem = (flatIdx: number): { item: T; globalIndex: number } | null => {
+    let count = 0
+    for (const cat of Object.keys(grouped)) {
+      const groupItems = grouped[cat]
+      if (flatIdx < count + groupItems.length) {
+        return { item: groupItems[flatIdx - count], globalIndex: flatIdx }
+      }
+      count += groupItems.length
+    }
+    return null
+  }
 
   const selectAt = (index: number) => {
-    const item = filtered[index]
-    if (item) {
+    const found = flatIndexToItem(index)
+    if (found) {
       onClose()
-      onSelect(item)
+      onSelect(found.item)
     }
   }
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Escape') {
+      e.preventDefault()
       onClose()
     } else if (e.key === 'ArrowDown') {
       e.preventDefault()
@@ -55,34 +86,118 @@ export default function CommandModal<T>({
     }
   }
 
+  let globalIdx = 0
+
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-start justify-center pt-32 z-50" onClick={onClose}>
+    <div
+      className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh]"
+      onClick={onClose}
+    >
+      {/* Backdrop with radial glow */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       <div
-        className="w-full max-w-lg bg-[#1c1c1f] border border-ed-rule rounded-lg shadow-2xl overflow-hidden animate-fade-in-up"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at 50% 20%, rgba(107, 52, 16, 0.08) 0%, transparent 60%)',
+        }}
+      />
+
+      <div
+        className="relative w-full max-w-[560px] glass-strong border border-ed-rule rounded-xl shadow-elev-xl overflow-hidden animate-slide-up-fade"
         onClick={(e) => e.stopPropagation()}
       >
-        <input
-          autoFocus
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder}
-          className="w-full bg-transparent px-4 py-3 text-sm text-white/90 outline-none border-b border-ed-rule placeholder:text-white/25"
-        />
-        <div className="max-h-80 overflow-y-auto py-1">
-          {filtered.length === 0 && <div className="px-4 py-3 text-sm text-white/30">{emptyMessage}</div>}
-          {filtered.map((item, index) => (
+        {/* Search Input */}
+        <div className="relative border-b border-ed-rule">
+          <input
+            autoFocus
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder={placeholder}
+            className="w-full bg-transparent px-4 py-3.5 text-sm text-white/90 outline-none placeholder:text-white/20 font-medium"
+          />
+          {query && (
             <button
-              key={getKey(item)}
-              onClick={() => selectAt(index)}
-              onMouseEnter={() => setSelectedIndex(index)}
-              className={`w-full text-left px-4 py-2 text-sm transition-colors ${
-                index === selectedIndex ? 'bg-ed-accent/10 text-white' : 'text-white/70'
-              }`}
+              onClick={() => setQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-white/20 hover:text-white/50 bg-white/[0.04] hover:bg-white/[0.08] px-1.5 py-0.5 rounded transition-colors"
             >
-              {getLabel(item)}
+              Clear
             </button>
-          ))}
+          )}
+        </div>
+
+        {/* Results */}
+        <div className="max-h-[320px] overflow-y-auto py-1">
+          {filtered.length === 0 && (
+            <div className="px-4 py-8 text-center">
+              <div className="text-sm text-white/25">{emptyMessage}</div>
+            </div>
+          )}
+
+          {Object.entries(grouped).map(([category, groupItems]) => {
+            if (groupItems.length === 0) return null
+            const showHeader = getCategory && category
+
+            return (
+              <div key={category}>
+                {showHeader && (
+                  <div className="px-4 pt-3 pb-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white/20">
+                    {category}
+                  </div>
+                )}
+                {groupItems.map((item) => {
+                  const isSelected = globalIdx === selectedIndex
+                  const currentGlobalIdx = globalIdx
+                  globalIdx++
+
+                  return (
+                    <button
+                      key={getKey(item)}
+                      onClick={() => selectAt(currentGlobalIdx)}
+                      onMouseEnter={() => setSelectedIndex(currentGlobalIdx)}
+                      className={`w-full text-left px-4 py-2 text-sm transition-all duration-100 relative group ${
+                        isSelected
+                          ? 'bg-white/[0.06] text-white'
+                          : 'text-white/60 hover:text-white/80'
+                      }`}
+                    >
+                      {isSelected && (
+                        <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-white/60" />
+                      )}
+                      <span className="relative z-10 font-medium tracking-tight">{getLabel(item)}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Keyboard Hint Bar */}
+        <div className="flex items-center justify-between px-4 py-2 border-t border-ed-rule bg-black/20">
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1 text-white/20">
+              <span className="flex items-center justify-center w-4 h-4 rounded bg-white/[0.06] border border-white/[0.06]">
+                <ArrowUp size={9} strokeWidth={2} />
+              </span>
+              <span className="flex items-center justify-center w-4 h-4 rounded bg-white/[0.06] border border-white/[0.06]">
+                <ArrowDown size={9} strokeWidth={2} />
+              </span>
+              <span className="text-[10px] font-medium ml-0.5">Navigate</span>
+            </div>
+            <div className="flex items-center gap-1 text-white/20">
+              <span className="flex items-center justify-center w-4 h-4 rounded bg-white/[0.06] border border-white/[0.06]">
+                <CornerDownLeft size={9} strokeWidth={2} />
+              </span>
+              <span className="text-[10px] font-medium ml-0.5">Select</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-1 text-white/20">
+            <span className="flex items-center justify-center h-4 px-1 rounded bg-white/[0.06] border border-white/[0.06] text-[8px] font-mono font-bold">
+              ESC
+            </span>
+            <span className="text-[10px] font-medium ml-0.5">Close</span>
+          </div>
         </div>
       </div>
     </div>
