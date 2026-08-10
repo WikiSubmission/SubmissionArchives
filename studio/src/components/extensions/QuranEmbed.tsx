@@ -95,6 +95,18 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
       {/* Hover action bar */}
       <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200 translate-y-[-4px] group-hover:translate-y-0 z-10">
         <button
+          onClick={() => {
+            if (!result) return
+            const text = result
+              .map((v) => `${v.arabic}\n${v.english} [Surah ${v.chapter}:${v.verse}]`)
+              .join('\n\n')
+            navigator.clipboard.writeText(text)
+          }}
+          className="text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
+        >
+          Copy Citation
+        </button>
+        <button
           onClick={() => updateAttributes({ showEnglish: !showEnglish })}
           className="text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
         >

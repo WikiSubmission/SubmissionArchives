@@ -18,9 +18,11 @@ import FrontmatterPanel from './FrontmatterPanel'
 import BacklinksPanel from './BacklinksPanel'
 import VersionHistoryModal from './VersionHistoryModal'
 import NoteMenu, { type FontFamily } from './NoteMenu'
+import EditorToolbar from './EditorToolbar'
+import PageModeCanvas from './PageModeCanvas'
 import { useSettings } from '../hooks/useSettings'
 
-type EditorMode = 'write' | 'blocks' | 'page'
+export type EditorMode = 'write' | 'blocks' | 'page'
 
 interface EditorProps {
   archivePath: string
@@ -31,6 +33,10 @@ interface EditorProps {
   onMove: () => void
   onCopyPath: () => void
   onExport: () => void
+  mode: EditorMode
+  onModeChange: (mode: EditorMode) => void
+  onContentChange?: (content: string) => void
+  onStatusChange?: (isSaved: boolean) => void
 }
 
 const FONT_CLASS: Record<FontFamily, string> = {
@@ -57,9 +63,12 @@ export default function Editor({
   onMove,
   onCopyPath,
   onExport,
+  mode,
+  onModeChange,
+  onContentChange,
+  onStatusChange,
 }: EditorProps) {
   const { settings } = useSettings()
-  const [mode, setMode] = useState<EditorMode>('write')
   const [status, setStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
   const [frontmatter, setFrontmatter] = useState<Record<string, unknown>>({})
   const [historyOpen, setHistoryOpen] = useState(false)
@@ -86,12 +95,15 @@ export default function Editor({
       if (!path || !editorInstance) return
 
       setStatus('saving')
+      onStatusChange?.(false)
       const storageInstance = editorInstance.storage as unknown as { markdown: { getMarkdown: () => string } }
       const body = storageInstance.markdown.getMarkdown()
+      onContentChange?.(body)
       const content = stringifyWithFrontmatter(body, frontmatterRef.current)
       invoke('write_note', { path, content })
         .then(() => {
           setStatus('saved')
+          onStatusChange?.(true)
           invoke('snapshot_note', { archiveRoot: archivePath, notePath: path, content }).catch(() => {})
         })
         .catch(() => setStatus('error'))
@@ -128,10 +140,12 @@ export default function Editor({
           frontmatterRef.current = data
           setFrontmatter(data)
           setStatus('idle')
+          onContentChange?.(content)
+          onStatusChange?.(true)
         })
         .catch(() => setStatus('error'))
     },
-    [editor]
+    [editor, onContentChange, onStatusChange]
   )
 
   useEffect(() => {
@@ -172,8 +186,8 @@ export default function Editor({
 
   return (
     <div className="w-full h-full bg-ed-bg text-ed-fg flex flex-col relative">
-      {/* Floating Toolbar — Glass pill with layered controls */}
-      <div className="absolute top-4 right-6 z-20 flex items-center gap-3">
+      {/* Floating Toolbar — Glass pill with controls for Write/Blocks mode */}
+      <div className="absolute top-3 right-6 z-20 flex items-center gap-3">
         {/* Status Pill */}
         <div
           className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border transition-all duration-300 ${
@@ -219,7 +233,7 @@ export default function Editor({
             {(['write', 'blocks', 'page'] as EditorMode[]).map((m) => (
               <button
                 key={m}
-                onClick={() => setMode(m)}
+                onClick={() => onModeChange(m)}
                 title={MODE_META[m].description}
                 className={`relative px-3 py-1.5 text-[11px] font-semibold rounded-md transition-all duration-200 tactile ${
                   mode === m
@@ -237,6 +251,10 @@ export default function Editor({
         </div>
       </div>
 
+      {/* Dedicated Rich Text Toolbar for Page Mode */}
+      {mode === 'page' && <EditorToolbar editor={editor} />}
+
+      {/* Main Document Body */}
       <div className="flex-1 overflow-hidden flex">
         {pdfSplitView && pdfAttachment && (
           <div className="w-1/2 border-r border-ed-rule shrink-0 bg-ed-surface/30">
@@ -248,34 +266,42 @@ export default function Editor({
           </div>
         )}
 
-        <div
-          className={`overflow-y-auto ${
-            pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'
-          } ${FONT_CLASS[fontFamily]}`}
-        >
+        {mode === 'page' ? (
+          <div className={`${pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'} h-full overflow-hidden`}>
+            <PageModeCanvas>
+              <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
+              <EditorContent editor={editor} className="h-full w-full" />
+              <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+            </PageModeCanvas>
+          </div>
+        ) : (
           <div
-            className={`h-full w-full mx-auto transition-all duration-500 ${
-              mode === 'page'
-                ? 'max-w-[800px] bg-white text-black mt-6 page-sheet rounded-sm p-6 min-h-[1056px]'
-                : mode === 'blocks'
+            className={`overflow-y-auto ${
+              pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'
+            } ${FONT_CLASS[fontFamily]}`}
+          >
+            <div
+              className={`h-full w-full mx-auto transition-all duration-500 ${
+                mode === 'blocks'
                   ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-14`
                   : fullWidth
                     ? 'max-w-none'
                     : 'max-w-3xl'
-            }`}
-          >
-            <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
-            {mode === 'blocks' && editor && (
-              <DragHandle editor={editor}>
-                <div className="w-5 h-6 flex items-center justify-center text-white/20 hover:text-white/50 cursor-grab active:cursor-grabbing transition-colors rounded hover:bg-white/[0.04]">
-                  <GripVertical size={14} strokeWidth={1.5} />
-                </div>
-              </DragHandle>
-            )}
-            <EditorContent editor={editor} className="h-full w-full" />
-            <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+              }`}
+            >
+              <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
+              {mode === 'blocks' && editor && (
+                <DragHandle editor={editor}>
+                  <div className="w-5 h-6 flex items-center justify-center text-white/20 hover:text-white/50 cursor-grab active:cursor-grabbing transition-colors rounded hover:bg-white/[0.04]">
+                    <GripVertical size={14} strokeWidth={1.5} />
+                  </div>
+                </DragHandle>
+              )}
+              <EditorContent editor={editor} className="h-full w-full" />
+              <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {historyOpen && (
