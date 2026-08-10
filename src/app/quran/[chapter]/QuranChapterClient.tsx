@@ -389,7 +389,7 @@ export default function QuranChapterClient({
                     Sura {chapter.chapterNumber}
                   </p>
                   <h1 className="font-serif text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                    {chapter.titleEnglish}
+                    {chapter.chapterNumber}. {chapter.titleEnglish}
                   </h1>
                   <p className="text-lg font-medium tracking-wide text-neutral-300">
                     {chapter.titleTransliterated}
@@ -471,7 +471,7 @@ export default function QuranChapterClient({
                 >
                   <CaretLeft className="h-5 w-5 text-neutral-500 transition-colors group-hover:text-white" />
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-500">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-300">
                       Previous
                     </p>
                     <p className="mt-0.5 font-medium text-neutral-300 group-hover:text-white transition-colors">
@@ -489,7 +489,7 @@ export default function QuranChapterClient({
                   className="group flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-6 py-4 transition-all hover:border-white/20 hover:bg-white/[0.05] active:scale-[0.98]"
                 >
                   <div className="text-right">
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-500">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-300">
                       Next
                     </p>
                     <p className="mt-0.5 font-medium text-neutral-300 group-hover:text-white transition-colors">
@@ -638,7 +638,7 @@ export default function QuranChapterClient({
                       <span>
                         {item.chapterNumber}. {item.titleTransliterated}
                       </span>
-                      <span className="font-mono text-xs text-neutral-500">{item.verseCount}</span>
+                      <span className="font-mono text-xs text-neutral-300">{item.verseCount}</span>
                     </Link>
                   );
                 })}
@@ -710,7 +710,7 @@ export default function QuranChapterClient({
 function MetaItem({ label, value }: { label: string; value: string }) {
   return (
     <div className="space-y-1">
-      <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-500">{label}</p>
+      <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-300">{label}</p>
       <p className="font-mono text-lg font-medium text-white">{value}</p>
     </div>
   );
@@ -853,7 +853,7 @@ function QuranVerseBlock({
               </span>
             </div>
             {verse.verseId && (
-              <span className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-neutral-300">
                 {verse.verseId}
               </span>
             )}
@@ -869,7 +869,7 @@ function QuranVerseBlock({
 
           {/* Transliteration */}
           {viewMode === 'parallel' && verse.transliterated && (
-            <p className="mt-3 text-sm italic leading-relaxed text-neutral-500">
+            <p className="mt-3 text-sm italic leading-relaxed text-neutral-300">
               {verse.transliterated}
             </p>
           )}
@@ -881,7 +881,7 @@ function QuranVerseBlock({
                 <ChatTeardropText className="h-3.5 w-3.5" />
                 Footnote {verse.verseNumber}
               </p>
-              <p className="text-sm leading-7 text-neutral-400">
+              <p className="text-sm leading-7 text-neutral-300">
                 <HighlightedText text={verse.footnote} terms={highlightTerms} />
               </p>
             </aside>

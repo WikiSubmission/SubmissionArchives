@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 const preferredBookOrder = [
     'quran1981',
     'hard-cover-1989',
+    'quran-revised-edition',
     'quran-visual-presentation',
     'miracle-of-quran-alphabets',
     'quran-hadith-islam',
