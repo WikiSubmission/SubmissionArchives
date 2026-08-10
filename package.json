@@ -9,7 +9,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit --incremental false",
     "test": "npm run test:unit",
-    "test:unit": "node --import tsx --test tests/unit/search-nav-reducer.test.ts tests/unit/search-query.test.ts tests/unit/media-assets.test.ts tests/unit/transcript-utils.test.ts tests/unit/web-vitals.test.ts tests/unit/next-config-redirects.test.ts tests/unit/mint-api.test.ts tests/integration/catalog.test.ts",
+    "test:unit": "node --import tsx --test tests/unit/search-nav-reducer.test.ts tests/unit/search-query.test.ts tests/unit/media-assets.test.ts tests/unit/transcript-utils.test.ts tests/unit/web-vitals.test.ts tests/unit/next-config-redirects.test.ts tests/integration/catalog.test.ts",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "verify:catalog": "node scripts/validate/verify_catalog_reproducibility.mjs",
