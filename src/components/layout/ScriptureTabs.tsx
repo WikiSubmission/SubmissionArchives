@@ -85,7 +85,7 @@ export default function ScriptureTabs() {
               <Icon
                 className={cn(
                   'h-4 w-4 transition-colors',
-                  isActive ? 'text-black' : 'text-neutral-500 group-hover:text-neutral-300',
+                  isActive ? 'text-black' : 'text-neutral-300 group-hover:text-white',
                 )}
                 weight={isActive ? 'fill' : 'regular'}
               />
@@ -93,7 +93,7 @@ export default function ScriptureTabs() {
               <span
                 className={cn(
                   'ml-1 rounded-full px-2 py-0.5 text-[10px] font-semibold tabular-nums',
-                  isActive ? 'bg-black/10 text-black/70' : 'bg-white/[0.06] text-neutral-500',
+                  isActive ? 'bg-black/10 text-black/70' : 'bg-white/[0.06] text-neutral-300',
                 )}
               >
                 {tab.description}
@@ -124,7 +124,7 @@ export default function ScriptureTabs() {
               <Icon
                 className={cn(
                   'h-4 w-4 transition-colors',
-                  isActive ? 'text-black' : 'text-neutral-500 group-hover:text-neutral-300',
+                  isActive ? 'text-black' : 'text-neutral-300 group-hover:text-white',
                 )}
                 weight={isActive ? 'fill' : 'regular'}
               />
@@ -132,7 +132,7 @@ export default function ScriptureTabs() {
               <span
                 className={cn(
                   'ml-1 rounded-full px-2 py-0.5 text-[10px] font-semibold tabular-nums',
-                  isActive ? 'bg-black/10 text-black/70' : 'bg-white/[0.06] text-neutral-500',
+                  isActive ? 'bg-black/10 text-black/70' : 'bg-white/[0.06] text-neutral-300',
                 )}
               >
                 {tab.description}

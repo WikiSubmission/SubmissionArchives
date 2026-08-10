@@ -76,7 +76,7 @@ export default function QuranPageClient({ chapters }: Props) {
             )}
           </div>
 
-          <span className="hidden shrink-0 font-mono text-xs tabular-nums text-neutral-500 sm:block">
+          <span className="hidden shrink-0 font-mono text-xs tabular-nums text-neutral-300 sm:block">
             {filteredChapters.length}/{chapters.length}
           </span>
 
@@ -142,7 +142,7 @@ export default function QuranPageClient({ chapters }: Props) {
                 className="group relative flex flex-col gap-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.05] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
               >
                 <div className="flex items-start justify-between gap-2">
-                  <span className="font-mono text-xs tabular-nums text-neutral-500">
+                  <span className="font-mono text-xs tabular-nums text-neutral-300">
                     {String(chapter.chapterNumber).padStart(3, '0')}
                   </span>
                   <span
