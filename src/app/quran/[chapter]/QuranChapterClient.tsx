@@ -326,7 +326,7 @@ export default function QuranChapterClient({
 
             {/* Font Size Slider */}
             <div className="hidden items-center gap-2 rounded-lg border border-white/10 px-3 py-1.5 lg:flex">
-              <TextT className="h-4 w-4 text-neutral-500" />
+              <TextT className="h-4 w-4 text-neutral-400" />
               <input
                 type="range"
                 min="0.85"
@@ -430,12 +430,12 @@ export default function QuranChapterClient({
 
             {/* ---- Search Within Sura ---- */}
             <div className="relative mb-10 max-w-md">
-              <MagnifyingGlass className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500" />
+              <MagnifyingGlass className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
               <input
                 type="text"
                 placeholder="Search within this sura..."
                 aria-label="Search within this sura"
-                className="h-12 w-full rounded-2xl border border-white/[0.08] bg-white/[0.03] pl-11 pr-4 text-sm text-white placeholder:text-neutral-500 backdrop-blur-sm transition-all focus:border-white/20 focus:bg-white/[0.06] focus:outline-none"
+                className="h-12 w-full rounded-2xl border border-white/[0.08] bg-white/[0.03] pl-11 pr-4 text-sm text-white placeholder:text-neutral-400 backdrop-blur-sm transition-all focus:border-white/20 focus:bg-white/[0.06] focus:outline-none"
               />
             </div>
 
@@ -469,7 +469,7 @@ export default function QuranChapterClient({
                   href={`/scripture/quran/${prev.chapterNumber}`}
                   className="group flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-6 py-4 transition-all hover:border-white/20 hover:bg-white/[0.05] active:scale-[0.98]"
                 >
-                  <CaretLeft className="h-5 w-5 text-neutral-500 transition-colors group-hover:text-white" />
+                  <CaretLeft className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-white" />
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-wider text-neutral-300">
                       Previous
@@ -496,7 +496,7 @@ export default function QuranChapterClient({
                       {next.chapterNumber}. {next.titleEnglish}
                     </p>
                   </div>
-                  <CaretRight className="h-5 w-5 text-neutral-500 transition-colors group-hover:text-white" />
+                  <CaretRight className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-white" />
                 </Link>
               ) : (
                 <div />
@@ -519,17 +519,17 @@ export default function QuranChapterClient({
                 <h3 className="font-serif text-sm font-semibold text-white">
                   Surah Navigator
                 </h3>
-                <p className="mt-1 text-xs text-neutral-500">Jump to any surah instantly</p>
+                <p className="mt-1 text-xs text-neutral-400">Jump to any surah instantly</p>
               </div>
 
               <div className="relative">
-                <MagnifyingGlass className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500" />
+                <MagnifyingGlass className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
                 <input
                   type="text"
                   value={suraFilter}
                   onChange={(e) => setSuraFilter(e.target.value)}
                   placeholder="Filter 114 suras..."
-                  className="h-10 w-full rounded-xl border border-white/[0.08] bg-white/[0.03] pl-10 pr-3 text-sm text-white placeholder:text-neutral-500 focus:border-white/20 focus:outline-none"
+                  className="h-10 w-full rounded-xl border border-white/[0.08] bg-white/[0.03] pl-10 pr-3 text-sm text-white placeholder:text-neutral-400 focus:border-white/20 focus:outline-none"
                 />
               </div>
 
@@ -539,7 +539,7 @@ export default function QuranChapterClient({
                   min={1}
                   max={114}
                   placeholder="#"
-                  className="h-10 flex-1 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 text-center text-sm text-white placeholder:text-neutral-500 focus:border-white/20 focus:outline-none"
+                  className="h-10 flex-1 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 text-center text-sm text-white placeholder:text-neutral-400 focus:border-white/20 focus:outline-none"
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') {
                       const n = parseInt((e.target as HTMLInputElement).value, 10);
@@ -577,7 +577,7 @@ export default function QuranChapterClient({
                     <span
                       className={cn(
                         'font-mono text-xs',
-                        isActive ? 'text-black/60' : 'text-neutral-500',
+                        isActive ? 'text-black/60' : 'text-neutral-400',
                       )}
                     >
                       {item.verseCount}
@@ -616,7 +616,7 @@ export default function QuranChapterClient({
                   value={suraFilter}
                   onChange={(e) => setSuraFilter(e.target.value)}
                   placeholder="Filter 114 suras..."
-                  className="h-10 w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 text-sm text-white placeholder:text-neutral-500 focus:border-white/20 focus:outline-none"
+                  className="h-10 w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 text-sm text-white placeholder:text-neutral-400 focus:border-white/20 focus:outline-none"
                 />
               </div>
 
