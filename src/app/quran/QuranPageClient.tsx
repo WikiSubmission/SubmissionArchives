@@ -171,7 +171,7 @@ export default function QuranPageClient({ chapters }: Props) {
                 href={`/scripture/quran/${chapter.chapterNumber}`}
                 className="group flex items-center gap-3 bg-white/[0.01] px-5 py-4 transition-colors hover:bg-white/[0.04] sm:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-inset"
               >
-                <span className="w-8 shrink-0 text-right font-mono text-sm tabular-nums text-neutral-500 transition-colors group-hover:text-white">
+                <span className="w-8 shrink-0 text-right font-mono text-sm tabular-nums text-neutral-300 transition-colors group-hover:text-white">
                   {chapter.chapterNumber}
                 </span>
 
@@ -180,23 +180,23 @@ export default function QuranPageClient({ chapters }: Props) {
                     <h2 className="truncate font-serif text-base font-medium text-white">
                       {chapter.titleTransliterated}
                     </h2>
-                    <span className="hidden truncate text-sm text-neutral-400 md:inline">
+                    <span className="hidden truncate text-sm text-neutral-300 md:inline">
                       {chapter.titleEnglish}
                     </span>
                   </div>
-                  <p className="mt-0.5 truncate text-xs text-neutral-500 md:hidden">
+                  <p className="mt-0.5 truncate text-xs text-neutral-300 md:hidden">
                     {chapter.titleEnglish} &middot; {chapter.verseCount} verses
                   </p>
                 </div>
 
                 <span
                   dir="rtl"
-                  className="hidden shrink-0 font-arabic text-lg text-neutral-400 sm:block group-hover:text-white transition-colors"
+                  className="hidden shrink-0 font-arabic text-lg text-neutral-300 sm:block group-hover:text-white transition-colors"
                 >
                   {chapter.titleArabic}
                 </span>
 
-                <span className="hidden w-20 shrink-0 text-right font-mono text-xs tabular-nums text-neutral-500 md:block">
+                <span className="hidden w-20 shrink-0 text-right font-mono text-xs tabular-nums text-neutral-300 md:block">
                   {chapter.verseCount} verses
                 </span>
               </Link>
