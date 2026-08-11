@@ -3,6 +3,8 @@ import { ReactNodeViewRenderer, NodeViewWrapper, type NodeViewProps } from '@tip
 import { useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
 import { useSettings } from '../../hooks/useSettings'
+import { Copy, Check, Eye, EyeSlash } from '@phosphor-icons/react'
+import { motion, springConfig } from '../ui/Motion'
 
 interface Verse {
   chapter: number
@@ -55,6 +57,8 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
   const [result, setResult] = useState<Verse[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [prevVerses, setPrevVerses] = useState(verses)
+  const [copied, setCopied] = useState(false)
+  const [focused, setFocused] = useState(false)
 
   if (verses !== prevVerses) {
     setPrevVerses(verses)
@@ -87,30 +91,45 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
   const showArabic = settings.quran.showMode !== 'translation'
   const showTranslation = showEnglish && settings.quran.showMode !== 'arabic'
 
+  const handleCopy = () => {
+    if (!result) return
+    const text = result
+      .map((v) => `${v.arabic}\n${v.english} [Surah ${v.chapter}:${v.verse}]`)
+      .join('\n\n')
+    navigator.clipboard.writeText(text)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
-    <NodeViewWrapper className="quran-embed-wrapper my-6 rounded-xl border border-qv-border bg-qv-bg select-none relative group animate-embed-in overflow-hidden">
+    <NodeViewWrapper
+      onClick={() => setFocused(true)}
+      onBlur={() => setFocused(false)}
+      className={`quran-embed-wrapper my-6 rounded-xl border transition-all duration-300 bg-qv-bg select-none relative group overflow-hidden ${
+        focused ? 'ring-2 ring-amber-500/40 border-amber-500/50 shadow-elev-lg' : 'border-qv-border'
+      }`}
+    >
       {/* Subtle top accent line */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-qv-accent/20 to-transparent" />
 
       {/* Hover action bar */}
-      <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200 translate-y-[-4px] group-hover:translate-y-0 z-10">
+      <div className="absolute top-3 right-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-200 translate-y-[-4px] group-hover:translate-y-0 z-10">
         <button
-          onClick={() => {
-            if (!result) return
-            const text = result
-              .map((v) => `${v.arabic}\n${v.english} [Surah ${v.chapter}:${v.verse}]`)
-              .join('\n\n')
-            navigator.clipboard.writeText(text)
-          }}
-          className="text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
+          onClick={handleCopy}
+          aria-label="Copy citation"
+          className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
         >
-          Copy Citation
+          {copied ? <Check size={12} weight="bold" className="text-emerald-600" /> : <Copy size={12} weight="bold" />}
+          <span>{copied ? 'Copied' : 'Copy'}</span>
         </button>
+
         <button
           onClick={() => updateAttributes({ showEnglish: !showEnglish })}
-          className="text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
+          aria-label="Toggle translation"
+          className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
         >
-          {showEnglish ? 'Hide English' : 'Show English'}
+          {showEnglish ? <EyeSlash size={12} weight="bold" /> : <Eye size={12} weight="bold" />}
+          <span>{showEnglish ? 'Hide English' : 'Show English'}</span>
         </button>
       </div>
 
@@ -131,8 +150,11 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
         {result && (
           <div className="space-y-0">
             {result.map((v, i) => (
-              <div
+              <motion.div
                 key={`${v.chapter}:${v.verse}`}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ...springConfig, delay: i * 0.04 }}
                 className={i > 0 ? 'pt-4 mt-4 border-t border-qv-divider' : ''}
               >
                 <div className="flex items-center gap-2 mb-2">
@@ -142,24 +164,30 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
                 </div>
 
                 {showArabic && (
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ ...springConfig, delay: i * 0.04 }}
                     className="font-arabic text-right leading-[1.8] text-qv-fg tracking-normal"
                     style={{ fontSize: settings.quran.arabicSize }}
                     dir="rtl"
                   >
                     {v.arabic}
-                  </div>
+                  </motion.div>
                 )}
 
                 {showTranslation && (
-                  <p
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ ...springConfig, delay: i * 0.04 + 0.04 }}
                     className="font-serif leading-[1.7] text-qv-fg/90 mt-2"
                     style={{ fontSize: settings.quran.translationSize }}
                   >
                     {v.english}
-                  </p>
+                  </motion.p>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         )}

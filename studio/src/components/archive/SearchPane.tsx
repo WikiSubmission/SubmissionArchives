@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Search } from 'lucide-react'
+import { MagnifyingGlass, X } from '@phosphor-icons/react'
 import { scanArchive, type NoteRecord } from '../../lib/notes'
+import { performSearch } from '../../lib/search'
 
 interface SearchPaneProps {
   archivePath: string
@@ -12,87 +13,90 @@ interface SearchResult {
   snippet: string
 }
 
-interface ParsedQuery {
-  phrases: string[]
-  words: string[]
-}
-
-/** Unquoted terms match as an AND of individual words (any order); a
- * "quoted phrase" must appear verbatim, exactly like Maktabook's search. */
-function parseQuery(raw: string): ParsedQuery {
-  const phrases: string[] = []
-  const remainder = raw.replace(/"([^"]+)"/g, (_, phrase: string) => {
-    phrases.push(phrase.toLowerCase())
-    return ' '
-  })
-  const words = remainder
-    .split(/\s+/)
-    .map((w) => w.toLowerCase())
-    .filter(Boolean)
-  return { phrases, words }
-}
-
-function matchesQuery(content: string, query: ParsedQuery): boolean {
-  const lower = content.toLowerCase()
-  return query.phrases.every((p) => lower.includes(p)) && query.words.every((w) => lower.includes(w))
-}
-
-function snippetAround(content: string, term: string): string {
-  const index = term ? content.toLowerCase().indexOf(term.toLowerCase()) : -1
-  if (index === -1) return content.slice(0, 80).trim()
-
-  const start = Math.max(0, index - 30)
-  const end = Math.min(content.length, index + term.length + 30)
-  const prefix = start > 0 ? '…' : ''
-  const suffix = end < content.length ? '…' : ''
-  return `${prefix}${content.slice(start, end).trim()}${suffix}`
-}
+const PRESET_OPERATORS = [
+  { label: 'tag:sermon', query: 'tag:sermon ' },
+  { label: 'tag:quran', query: 'tag:quran ' },
+  { label: 'path:notes/', query: 'path:notes/ ' }
+]
 
 export default function SearchPane({ archivePath, onOpenFile }: SearchPaneProps) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
 
   const runSearch = (value: string) => {
     setQuery(value)
     const trimmed = value.trim()
-    if (trimmed.length < 2) {
+    if (!trimmed) {
       setResults([])
       return
     }
 
-    const parsed = parseQuery(trimmed)
-    const snippetTerm = parsed.phrases[0] ?? parsed.words[0] ?? ''
-
+    setLoading(true)
     scanArchive(archivePath)
       .then((notes) => {
-        const matches = notes
-          .filter((note) => matchesQuery(note.content, parsed))
-          .map((note) => ({ note, snippet: snippetAround(note.content, snippetTerm) }))
+        const matches = performSearch(notes, trimmed)
         setResults(matches)
         setError(null)
       })
       .catch((err) => setError(String(err)))
+      .finally(() => setLoading(false))
+  }
+
+  const applyOperator = (op: string) => {
+    runSearch(op)
   }
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-4 shrink-0">
-        <div className="flex items-center gap-2 bg-white/5 border border-ed-rule rounded-md px-2.5 py-1.5">
-          <Search size={13} className="text-white/30 shrink-0" />
+      <div className="p-3 shrink-0 border-b border-ed-rule space-y-2">
+        <div className="flex items-center gap-2 bg-ed-surface border border-ed-rule rounded-lg px-2.5 py-1.5 focus-within:border-amber-500/50">
+          <MagnifyingGlass size={16} weight="bold" className="text-ed-fg-muted shrink-0" />
           <input
             autoFocus
             value={query}
             onChange={(e) => runSearch(e.target.value)}
-            placeholder="Search notes..."
-            className="w-full bg-transparent text-sm text-white/80 outline-none placeholder:text-white/25"
+            placeholder="Search notes (e.g. tag:sermon, path:notes/)..."
+            className="w-full bg-transparent text-xs text-ed-fg outline-none placeholder:text-ed-fg-muted font-medium"
           />
+          {query && (
+            <button
+              onClick={() => runSearch('')}
+              className="text-ed-fg-muted hover:text-ed-fg text-xs p-0.5 rounded"
+            >
+              <X size={12} weight="bold" />
+            </button>
+          )}
+        </div>
+
+        {/* Search Operator Quick Pills */}
+        <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
+          {PRESET_OPERATORS.map((op) => (
+            <button
+              key={op.label}
+              onClick={() => applyOperator(op.query)}
+              className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-ed-surface border border-ed-rule text-ed-fg-muted hover:text-amber-400 hover:border-amber-500/30 transition-all shrink-0"
+            >
+              {op.label}
+            </button>
+          ))}
         </div>
       </div>
 
-      {error && <div className="px-4 pb-2 text-xs text-red-400 font-mono">{error}</div>}
-      {query.trim().length >= 2 && results.length === 0 && !error && (
-        <div className="px-4 text-xs text-white/30">No matches.</div>
+      {error && <div className="px-4 py-2 text-xs text-red-400 font-mono">{error}</div>}
+
+      {loading && (
+        <div className="px-4 py-6 text-center text-xs text-ed-fg-muted font-mono flex items-center justify-center gap-2">
+          <span className="w-3.5 h-3.5 border-2 border-ed-rule border-t-amber-400 rounded-full animate-spin" />
+          Searching...
+        </div>
+      )}
+
+      {query.trim() && !loading && results.length === 0 && !error && (
+        <div className="px-4 py-8 text-center text-xs text-ed-fg-muted italic">
+          No matches found for "{query}".
+        </div>
       )}
 
       <div className="flex-1 overflow-y-auto">
@@ -100,10 +104,23 @@ export default function SearchPane({ archivePath, onOpenFile }: SearchPaneProps)
           <button
             key={note.path}
             onClick={() => onOpenFile(note.path)}
-            className="w-full text-left px-4 py-2 hover:bg-white/5 transition-colors border-b border-ed-rule/50"
+            className="w-full text-left px-4 py-2.5 hover:bg-ed-surface transition-colors border-b border-ed-rule/50 group"
           >
-            <div className="text-sm text-white/80 truncate">{note.name}</div>
-            <div className="text-xs text-white/35 font-mono truncate mt-0.5">{snippet}</div>
+            <div className="text-xs text-ed-fg font-semibold truncate group-hover:text-amber-400">
+              {note.name}
+            </div>
+            <div className="text-[11px] text-ed-fg-muted font-mono truncate mt-0.5">
+              {snippet}
+            </div>
+            {note.tags.length > 0 && (
+              <div className="flex items-center gap-1 mt-1">
+                {note.tags.map((t) => (
+                  <span key={t} className="text-[9px] font-mono text-amber-500/80 bg-amber-500/10 px-1 rounded">
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            )}
           </button>
         ))}
       </div>

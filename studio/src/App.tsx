@@ -24,7 +24,8 @@ import { useRecentNotes } from './hooks/useRecentNotes'
 import { SettingsProvider } from './hooks/useSettings'
 import { fileKindOf } from './lib/fileTypes'
 import logoMark from './assets/submission-archives-mark.png'
-import { Settings as SettingsIcon } from 'lucide-react'
+import { Gear as SettingsIcon } from '@phosphor-icons/react'
+import { motion, springConfig } from './components/ui/Motion'
 import './App.css'
 
 type SidebarTab = 'files' | 'tags' | 'search' | 'trash'
@@ -294,17 +295,18 @@ function App() {
           className="h-11 shrink-0 glass border-b border-ed-rule flex items-center gap-3 px-4 relative z-50 select-none"
           data-tauri-drag-region
         >
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-ed-rule-strong to-transparent pointer-events-none" />
           <img src={logoMark} alt="" className="h-5 w-5 opacity-90" draggable={false} />
-          <div className="font-semibold text-xs tracking-tight text-white/80 flex-1" data-tauri-drag-region>
+          <div className="font-bold text-xs tracking-tight text-ed-fg flex-1" data-tauri-drag-region>
             SubmissionArchives Studio
           </div>
           <button
             onClick={() => setSettingsOpen(true)}
             title="Settings"
-            className="tactile p-1.5 rounded-md text-white/35 hover:text-white/80 hover:bg-white/[0.06]"
+            aria-label="Settings"
+            className="tactile p-1.5 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface"
           >
-            <SettingsIcon size={15} strokeWidth={1.5} />
+            <SettingsIcon size={16} weight="regular" />
           </button>
         </div>
 
@@ -326,19 +328,23 @@ function App() {
           {/* Collapsible Left Sidebar (Archive Explorer) */}
           {sidebarOpen && (
             <div className="w-[250px] shrink-0 border-r border-ed-rule flex flex-col bg-ed-bg/60 z-30 animate-fade-in">
-              <div className="flex border-b border-ed-rule shrink-0 bg-ed-surface/40 backdrop-blur-xl">
+              <div className="flex border-b border-ed-rule shrink-0 bg-ed-surface/40 backdrop-blur-xl relative">
                 {(['files', 'tags', 'search', 'trash'] as SidebarTab[]).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setSidebarTab(tab)}
                     className={`relative flex-1 py-2 text-[10px] font-semibold uppercase tracking-wider transition-all duration-200 tactile ${
                       sidebarTab === tab
-                        ? 'text-white'
-                        : 'text-white/30 hover:text-white/60'
+                        ? 'text-ed-fg font-bold'
+                        : 'text-ed-fg-muted hover:text-ed-fg'
                     }`}
                   >
                     {sidebarTab === tab && (
-                      <span className="absolute inset-x-1 bottom-0.5 h-0.5 rounded-full bg-white/80 transition-all duration-300" />
+                      <motion.span
+                        layoutId="activeSidebarTabIndicator"
+                        className="absolute inset-x-1 bottom-0.5 h-0.5 rounded-full bg-amber-500"
+                        transition={springConfig}
+                      />
                     )}
                     {TAB_LABELS[tab]}
                   </button>

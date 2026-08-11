@@ -1,15 +1,15 @@
 import { type Editor } from '@tiptap/react'
 import {
-  Bold,
-  Italic,
-  Strikethrough,
+  TextB,
+  TextItalic,
+  TextStrikethrough,
   Code,
-  List,
-  ListOrdered,
-  Quote,
-  RemoveFormatting,
-  BookOpen,
-} from 'lucide-react'
+  ListBullets,
+  ListNumbers,
+  Quotes,
+  Eraser,
+  BookOpen
+} from '@phosphor-icons/react'
 
 interface EditorToolbarProps {
   editor: Editor | null
@@ -43,113 +43,121 @@ export default function EditorToolbar({ editor }: EditorToolbarProps) {
                 ? 'h3'
                 : 'p'
         }
-        className="text-xs text-white/80 bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 rounded px-2 py-1 outline-none font-medium cursor-pointer transition-colors"
+        className="text-xs text-ed-fg bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule rounded px-2 py-1 outline-none font-medium cursor-pointer transition-colors"
       >
-        <option value="p" className="bg-[#1c1c1f]">Normal text</option>
-        <option value="h1" className="bg-[#1c1c1f]">Heading 1</option>
-        <option value="h2" className="bg-[#1c1c1f]">Heading 2</option>
-        <option value="h3" className="bg-[#1c1c1f]">Heading 3</option>
+        <option value="p">Normal text</option>
+        <option value="h1">Heading 1</option>
+        <option value="h2">Heading 2</option>
+        <option value="h3">Heading 3</option>
       </select>
 
-      <div className="w-px h-4 bg-white/10 mx-1" />
+      <div className="w-px h-4 bg-ed-rule mx-1" />
 
       {/* Formatting Marks */}
       <button
         onClick={() => editor.chain().focus().toggleBold().run()}
         title="Bold (Ctrl+B)"
+        aria-label="Bold"
         className={`p-1.5 rounded transition-all ${
           editor.isActive('bold')
-            ? 'bg-white/20 text-white font-bold'
-            : 'text-white/40 hover:text-white hover:bg-white/[0.06]'
+            ? 'bg-ed-surface-strong text-ed-fg font-bold'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
-        <Bold size={14} />
+        <TextB size={16} weight={editor.isActive('bold') ? 'bold' : 'regular'} />
       </button>
 
       <button
         onClick={() => editor.chain().focus().toggleItalic().run()}
         title="Italic (Ctrl+I)"
+        aria-label="Italic"
         className={`p-1.5 rounded transition-all ${
           editor.isActive('italic')
-            ? 'bg-white/20 text-white font-bold'
-            : 'text-white/40 hover:text-white hover:bg-white/[0.06]'
+            ? 'bg-ed-surface-strong text-ed-fg font-bold'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
-        <Italic size={14} />
+        <TextItalic size={16} weight={editor.isActive('italic') ? 'bold' : 'regular'} />
       </button>
 
       <button
         onClick={() => editor.chain().focus().toggleStrike().run()}
         title="Strikethrough"
+        aria-label="Strikethrough"
         className={`p-1.5 rounded transition-all ${
           editor.isActive('strike')
-            ? 'bg-white/20 text-white font-bold'
-            : 'text-white/40 hover:text-white hover:bg-white/[0.06]'
+            ? 'bg-ed-surface-strong text-ed-fg font-bold'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
-        <Strikethrough size={14} />
+        <TextStrikethrough size={16} weight={editor.isActive('strike') ? 'bold' : 'regular'} />
       </button>
 
       <button
         onClick={() => editor.chain().focus().toggleCode().run()}
         title="Inline Code"
+        aria-label="Inline Code"
         className={`p-1.5 rounded transition-all ${
           editor.isActive('code')
-            ? 'bg-white/20 text-white font-bold'
-            : 'text-white/40 hover:text-white hover:bg-white/[0.06]'
+            ? 'bg-ed-surface-strong text-ed-fg font-bold'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
-        <Code size={14} />
+        <Code size={16} weight={editor.isActive('code') ? 'bold' : 'regular'} />
       </button>
 
-      <div className="w-px h-4 bg-white/10 mx-1" />
+      <div className="w-px h-4 bg-ed-rule mx-1" />
 
       {/* Lists & Quotes */}
       <button
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         title="Bullet List"
+        aria-label="Bullet List"
         className={`p-1.5 rounded transition-all ${
           editor.isActive('bulletList')
-            ? 'bg-white/20 text-white font-bold'
-            : 'text-white/40 hover:text-white hover:bg-white/[0.06]'
+            ? 'bg-ed-surface-strong text-ed-fg font-bold'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
-        <List size={14} />
+        <ListBullets size={16} weight={editor.isActive('bulletList') ? 'bold' : 'regular'} />
       </button>
 
       <button
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         title="Numbered List"
+        aria-label="Numbered List"
         className={`p-1.5 rounded transition-all ${
           editor.isActive('orderedList')
-            ? 'bg-white/20 text-white font-bold'
-            : 'text-white/40 hover:text-white hover:bg-white/[0.06]'
+            ? 'bg-ed-surface-strong text-ed-fg font-bold'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
-        <ListOrdered size={14} />
+        <ListNumbers size={16} weight={editor.isActive('orderedList') ? 'bold' : 'regular'} />
       </button>
 
       <button
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         title="Blockquote"
+        aria-label="Blockquote"
         className={`p-1.5 rounded transition-all ${
           editor.isActive('blockquote')
-            ? 'bg-white/20 text-white font-bold'
-            : 'text-white/40 hover:text-white hover:bg-white/[0.06]'
+            ? 'bg-ed-surface-strong text-ed-fg font-bold'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
-        <Quote size={14} />
+        <Quotes size={16} weight={editor.isActive('blockquote') ? 'fill' : 'regular'} />
       </button>
 
-      <div className="w-px h-4 bg-white/10 mx-1" />
+      <div className="w-px h-4 bg-ed-rule mx-1" />
 
       {/* Formatting Utilities & Quick Quran Insert */}
       <button
         onClick={() => editor.chain().focus().unsetAllMarks().clearNodes().run()}
         title="Clear Formatting"
-        className="p-1.5 rounded text-white/40 hover:text-white hover:bg-white/[0.06] transition-all"
+        aria-label="Clear Formatting"
+        className="p-1.5 rounded text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-all"
       >
-        <RemoveFormatting size={14} />
+        <Eraser size={16} weight="regular" />
       </button>
 
       <button
@@ -160,9 +168,10 @@ export default function EditorToolbar({ editor }: EditorToolbarProps) {
           }
         }}
         title="Insert Quran Verse (/quran)"
-        className="flex items-center gap-1 px-2 py-1 rounded bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 text-xs font-medium border border-amber-500/20 transition-all ml-auto"
+        aria-label="Insert Quran Verse"
+        className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 text-xs font-medium border border-amber-500/20 transition-all ml-auto"
       >
-        <BookOpen size={13} />
+        <BookOpen size={15} weight="bold" />
         <span>+ Quran</span>
       </button>
     </div>

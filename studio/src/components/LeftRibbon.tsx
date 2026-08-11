@@ -1,13 +1,14 @@
 import {
-  FolderTree,
-  Search,
-  FileSearch,
+  FolderOpen,
+  MagnifyingGlass,
+  MagnifyingGlassPlus,
   Command,
-  Network,
-  Settings,
-  PanelRight,
-  SquarePlus
-} from 'lucide-react'
+  ShareNetwork,
+  Gear,
+  SidebarSimple,
+  FilePlus
+} from '@phosphor-icons/react'
+import { motion, springSnappy } from './ui/Motion'
 
 interface LeftRibbonProps {
   sidebarOpen: boolean
@@ -38,80 +39,112 @@ export default function LeftRibbon({
     <aside className="w-[44px] shrink-0 border-r border-ed-rule bg-ed-bg/90 flex flex-col items-center justify-between py-2.5 z-40 select-none">
       {/* Top Actions */}
       <div className="flex flex-col items-center gap-1.5 w-full px-1">
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onToggleSidebar}
+          aria-label="Toggle Sidebar"
           title={sidebarOpen ? 'Collapse Explorer (Ctrl+B)' : 'Expand Explorer (Ctrl+B)'}
-          className={`tactile p-2 rounded-lg transition-all duration-150 ${
+          className={`tactile p-2 rounded-lg transition-colors ${
             sidebarOpen
-              ? 'text-white/90 bg-white/[0.08]'
-              : 'text-white/40 hover:text-white/80 hover:bg-white/[0.04]'
+              ? 'text-ed-fg bg-ed-surface-strong'
+              : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
           }`}
         >
-          <FolderTree size={17} strokeWidth={1.5} />
-        </button>
+          <FolderOpen size={18} weight={sidebarOpen ? 'fill' : 'regular'} />
+        </motion.button>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onNewNote}
-          title="New Note"
-          className="tactile p-2 rounded-lg text-white/40 hover:text-emerald-400 hover:bg-emerald-500/10 transition-all duration-150"
+          aria-label="New Note"
+          title="New Note (Ctrl+N)"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"
         >
-          <SquarePlus size={17} strokeWidth={1.5} />
-        </button>
+          <FilePlus size={18} weight="bold" />
+        </motion.button>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onOpenQuickSwitcher}
+          aria-label="Quick Switcher"
           title="Quick Switcher (Ctrl+O)"
-          className="tactile p-2 rounded-lg text-white/40 hover:text-white/80 hover:bg-white/[0.04] transition-all duration-150"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
         >
-          <FileSearch size={17} strokeWidth={1.5} />
-        </button>
+          <MagnifyingGlassPlus size={18} weight="regular" />
+        </motion.button>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onOpenSearch}
+          aria-label="Search Vault"
           title="Search Vault"
-          className="tactile p-2 rounded-lg text-white/40 hover:text-white/80 hover:bg-white/[0.04] transition-all duration-150"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
         >
-          <Search size={17} strokeWidth={1.5} />
-        </button>
+          <MagnifyingGlass size={18} weight="regular" />
+        </motion.button>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onOpenCommandPalette}
+          aria-label="Command Palette"
           title="Command Palette (Ctrl+P)"
-          className="tactile p-2 rounded-lg text-white/40 hover:text-white/80 hover:bg-white/[0.04] transition-all duration-150"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
         >
-          <Command size={17} strokeWidth={1.5} />
-        </button>
+          <Command size={18} weight="regular" />
+        </motion.button>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onOpenGraph}
+          aria-label="Graph View"
           title="Open Graph View"
-          className="tactile p-2 rounded-lg text-white/40 hover:text-sky-400 hover:bg-sky-500/10 transition-all duration-150"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-sky-400 hover:bg-sky-500/10 transition-colors"
         >
-          <Network size={17} strokeWidth={1.5} />
-        </button>
+          <ShareNetwork size={18} weight="regular" />
+        </motion.button>
       </div>
 
       {/* Bottom Actions */}
       <div className="flex flex-col items-center gap-1.5 w-full px-1">
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onToggleInspector}
+          aria-label="Toggle Inspector"
           title={inspectorOpen ? 'Collapse Inspector' : 'Expand Inspector (Outline & Backlinks)'}
-          className={`tactile p-2 rounded-lg transition-all duration-150 ${
+          className={`tactile p-2 rounded-lg transition-colors ${
             inspectorOpen
               ? 'text-amber-400 bg-amber-500/10'
-              : 'text-white/40 hover:text-white/80 hover:bg-white/[0.04]'
+              : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
           }`}
         >
-          <PanelRight size={17} strokeWidth={1.5} />
-        </button>
+          <SidebarSimple size={18} weight={inspectorOpen ? 'fill' : 'regular'} className="rotate-180" />
+        </motion.button>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05, y: -1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={springSnappy}
           onClick={onOpenSettings}
+          aria-label="Vault Settings"
           title="Vault Settings"
-          className="tactile p-2 rounded-lg text-white/40 hover:text-white/80 hover:bg-white/[0.04] transition-all duration-150"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
         >
-          <Settings size={17} strokeWidth={1.5} />
-        </button>
+          <Gear size={18} weight="regular" />
+        </motion.button>
       </div>
     </aside>
   )

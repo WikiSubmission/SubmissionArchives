@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
-import { FilePlus } from 'lucide-react'
+import { FilePlus } from '@phosphor-icons/react'
 import TreeNode from './TreeNode'
 import type { ArchiveEntry } from './types'
+import { EmojiPicker } from '../ui/EmojiPicker'
 
 interface ArchiveExplorerProps {
   archivePath: string
@@ -24,6 +25,7 @@ export default function ArchiveExplorer({
   const [entries, setEntries] = useState<ArchiveEntry[]>([])
   const [error, setError] = useState<string | null>(null)
   const [icons, setIcons] = useState<Record<string, string>>({})
+  const [pickerFolder, setPickerFolder] = useState<string | null>(null)
 
   const refreshIcons = useCallback(() => {
     invoke<Record<string, string>>('read_folder_icons', { archiveRoot: archivePath })
@@ -41,12 +43,18 @@ export default function ArchiveExplorer({
     refreshIcons()
   }, [archivePath, refreshToken, refreshIcons])
 
-  const handleSetIcon = async (folderPath: string) => {
-    const current = icons[folderPath] ?? ''
-    const value = window.prompt('Folder icon (emoji) — leave blank to clear:', current)
-    if (value === null) return
+  const handleOpenPicker = (folderPath: string) => {
+    setPickerFolder(folderPath)
+  }
+
+  const handleSelectIcon = async (emoji: string) => {
+    if (!pickerFolder) return
     try {
-      await invoke('set_folder_icon', { archiveRoot: archivePath, folderPath, icon: value || null })
+      await invoke('set_folder_icon', {
+        archiveRoot: archivePath,
+        folderPath: pickerFolder,
+        icon: emoji || null,
+      })
       refreshIcons()
     } catch (err) {
       setError(String(err))
@@ -54,17 +62,18 @@ export default function ArchiveExplorer({
   }
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col relative">
       <div className="px-3 py-3 flex items-center justify-between shrink-0 border-b border-ed-rule/50">
-        <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/25 pl-1">
+        <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-muted pl-1">
           Archive Explorer
         </span>
         <button
           onClick={onNewNote}
-          className="tactile p-1.5 rounded-md text-white/30 hover:text-white/70 hover:bg-white/[0.06]"
-          title="New Note"
+          className="tactile p-1.5 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface"
+          title="New Note (Ctrl+N)"
+          aria-label="New Note"
         >
-          <FilePlus size={14} strokeWidth={1.5} />
+          <FilePlus size={16} weight="bold" />
         </button>
       </div>
 
@@ -74,10 +83,20 @@ export default function ArchiveExplorer({
         </div>
       )}
 
+      {pickerFolder && (
+        <div className="absolute top-12 left-4 z-50">
+          <EmojiPicker
+            currentEmoji={icons[pickerFolder]}
+            onSelect={handleSelectIcon}
+            onClose={() => setPickerFolder(null)}
+          />
+        </div>
+      )}
+
       <div className="flex-1 overflow-y-auto py-1">
         {entries.length === 0 && !error && (
           <div className="px-4 py-8 text-center">
-            <div className="text-[11px] text-white/20 font-mono">No items</div>
+            <div className="text-[11px] text-ed-fg-muted font-mono">No items</div>
           </div>
         )}
         {entries.map((entry) => (
@@ -89,7 +108,7 @@ export default function ArchiveExplorer({
             onOpenFile={onOpenFile}
             onTrash={onTrash}
             icons={icons}
-            onSetIcon={handleSetIcon}
+            onSetIcon={handleOpenPicker}
           />
         ))}
       </div>

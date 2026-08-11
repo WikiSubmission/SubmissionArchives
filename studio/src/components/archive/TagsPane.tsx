@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { ChevronRight, ChevronDown, Hash } from 'lucide-react'
+import { CaretRight, CaretDown, Hash, Tag as TagIcon } from '@phosphor-icons/react'
 import { scanArchive, type NoteRecord } from '../../lib/notes'
+import { motion, AnimatePresence, springConfig } from '../ui/Motion'
 
 interface TagsPaneProps {
   archivePath: string
@@ -49,39 +50,70 @@ export default function TagsPane({ archivePath, onOpenFile, refreshToken }: Tags
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-4 shrink-0">
-        <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Tags</span>
+      <div className="p-4 shrink-0 border-b border-ed-rule">
+        <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ed-fg-muted">
+          <TagIcon size={14} weight="bold" />
+          <span>Tags & Taxonomy</span>
+        </div>
       </div>
 
-      {error && <div className="px-4 pb-2 text-xs text-red-400 font-mono">{error}</div>}
+      {error && <div className="px-4 py-2 text-xs text-red-400 font-mono">{error}</div>}
       {groups.length === 0 && !error && (
-        <div className="px-4 text-xs text-white/30">No tags yet. Write #like-this in a note.</div>
+        <div className="px-4 py-8 text-xs text-ed-fg-muted text-center">
+          No tags found yet. Type <code className="text-amber-400 font-mono">#tag</code> or <code className="text-amber-400 font-mono">#topic/subtopic</code> in your notes.
+        </div>
       )}
 
-      <div className="flex-1 overflow-y-auto">
-        {groups.map(({ tag, notes }) => (
-          <div key={tag}>
-            <button
-              onClick={() => toggle(tag)}
-              className="w-full flex items-center gap-1.5 px-3 py-1 text-sm text-left text-white/60 hover:text-white/90 hover:bg-white/5 transition-colors"
-            >
-              {expanded.has(tag) ? <ChevronDown size={13} className="shrink-0" /> : <ChevronRight size={13} className="shrink-0" />}
-              <Hash size={12} className="text-ed-accent/70 shrink-0" />
-              <span className="truncate">{tag}</span>
-              <span className="text-white/30 text-xs ml-auto shrink-0">{notes.length}</span>
-            </button>
-            {expanded.has(tag) &&
-              notes.map((note) => (
-                <button
-                  key={note.path}
-                  onClick={() => onOpenFile(note.path)}
-                  className="w-full text-left pl-9 pr-3 py-1 text-sm text-white/50 hover:text-white/80 hover:bg-white/5 transition-colors truncate"
-                >
-                  {note.name}
-                </button>
-              ))}
-          </div>
-        ))}
+      <div className="flex-1 overflow-y-auto py-1">
+        {groups.map(({ tag, notes }) => {
+          const isExpanded = expanded.has(tag)
+          const parts = tag.split('/')
+          const depth = parts.length - 1
+
+          return (
+            <div key={tag}>
+              <button
+                onClick={() => toggle(tag)}
+                style={{ paddingLeft: `${depth * 12 + 12}px` }}
+                className="w-full flex items-center gap-1.5 py-1.5 pr-3 text-xs text-left text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
+              >
+                {isExpanded ? (
+                  <CaretDown size={12} weight="bold" className="shrink-0 text-ed-fg-muted" />
+                ) : (
+                  <CaretRight size={12} weight="bold" className="shrink-0 text-ed-fg-muted" />
+                )}
+                <Hash size={13} weight="bold" className="text-amber-400 shrink-0" />
+                <span className="truncate font-mono font-medium">{tag}</span>
+                <span className="text-[10px] text-ed-fg-muted bg-ed-surface-strong px-1.5 py-0.5 rounded-full ml-auto shrink-0 font-mono">
+                  {notes.length}
+                </span>
+              </button>
+
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={springConfig}
+                    className="overflow-hidden"
+                  >
+                    {notes.map((note) => (
+                      <button
+                        key={note.path}
+                        onClick={() => onOpenFile(note.path)}
+                        style={{ paddingLeft: `${depth * 12 + 32}px` }}
+                        className="w-full text-left pr-3 py-1 text-xs text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors truncate font-medium"
+                      >
+                        {note.name}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

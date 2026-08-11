@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
-import { RotateCcw, Trash2 } from 'lucide-react'
+import { ArrowCounterClockwise, Trash } from '@phosphor-icons/react'
 
 interface TrashEntry {
   id: string
@@ -54,33 +54,37 @@ export default function TrashPane({ archivePath, onRestore, refreshToken }: Tras
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-4 shrink-0">
-        <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Trash</span>
+      <div className="p-4 shrink-0 border-b border-ed-rule">
+        <span className="text-xs font-bold uppercase tracking-wider text-ed-fg-muted">Trash</span>
       </div>
 
-      {error && <div className="px-4 pb-2 text-xs text-red-400 font-mono">{error}</div>}
-      {entries.length === 0 && !error && <div className="px-4 text-xs text-white/30">Trash is empty.</div>}
+      {error && <div className="px-4 py-2 text-xs text-red-400 font-mono">{error}</div>}
+      {entries.length === 0 && !error && (
+        <div className="px-4 py-8 text-xs text-ed-fg-muted text-center italic">Trash is empty.</div>
+      )}
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto py-1">
         {entries.map((entry) => (
           <div
             key={entry.id}
-            className="group flex items-center gap-1.5 px-3 py-1.5 text-sm text-white/60 hover:bg-white/5 transition-colors"
+            className="group flex items-center gap-1.5 px-3 py-1.5 text-xs text-ed-fg-muted hover:bg-ed-surface transition-colors"
           >
-            <span className="truncate flex-1">{entry.name}</span>
+            <span className="truncate flex-1 font-medium">{entry.name}</span>
             <button
               onClick={() => handleRestore(entry)}
-              title="Restore"
-              className="opacity-0 group-hover:opacity-100 text-white/40 hover:text-ed-accent transition-colors shrink-0"
+              title="Restore note"
+              aria-label="Restore"
+              className="opacity-0 group-hover:opacity-100 p-1 text-ed-fg-muted hover:text-emerald-400 transition-colors shrink-0"
             >
-              <RotateCcw size={13} />
+              <ArrowCounterClockwise size={14} weight="bold" />
             </button>
             <button
               onClick={() => handleDelete(entry)}
               title="Delete permanently"
-              className="opacity-0 group-hover:opacity-100 text-white/40 hover:text-red-400 transition-colors shrink-0"
+              aria-label="Delete permanently"
+              className="opacity-0 group-hover:opacity-100 p-1 text-ed-fg-muted hover:text-red-400 transition-colors shrink-0"
             >
-              <Trash2 size={13} />
+              <Trash size={14} weight="regular" />
             </button>
           </div>
         ))}

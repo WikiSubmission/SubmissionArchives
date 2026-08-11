@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { ListTree, Link2, Info, X, FileText, ChevronRight } from 'lucide-react'
+import { TreeStructure, LinkSimple, Info, X, FileText, CaretRight, Quotes } from '@phosphor-icons/react'
 import { scanArchive, type NoteRecord } from '../lib/notes'
 
 interface OutlineItem {
@@ -16,7 +16,7 @@ interface RightInspectorProps {
   onClose: () => void
 }
 
-type InspectorTab = 'outline' | 'backlinks' | 'info'
+type InspectorTab = 'outline' | 'backlinks' | 'footnotes' | 'info'
 
 function stemOf(path: string): string {
   const base = path.split(/[\\/]/).pop() ?? path
@@ -33,7 +33,7 @@ export default function RightInspector({
   const [activeTab, setActiveTab] = useState<InspectorTab>('outline')
   const [backlinks, setBacklinks] = useState<NoteRecord[]>([])
 
-  // Derived Headings Outline (using useMemo instead of useEffect + setState)
+  // Derived Headings Outline
   const headings = useMemo(() => {
     if (!content) return []
     const lines = content.split('\n')
@@ -50,6 +50,20 @@ export default function RightInspector({
       }
     })
     return extracted
+  }, [content])
+
+  // Derived Footnotes List
+  const footnotes = useMemo(() => {
+    if (!content) return []
+    const matches: { id: string; text: string }[] = []
+    const lines = content.split('\n')
+    lines.forEach((line) => {
+      const m = line.match(/^\[\^([^\]]+)\]:\s*(.*)$/)
+      if (m) {
+        matches.push({ id: m[1], text: m[2] })
+      }
+    })
+    return matches
   }, [content])
 
   // Scan Backlinks
@@ -90,46 +104,65 @@ export default function RightInspector({
           <button
             onClick={() => setActiveTab('outline')}
             title="Table of Contents Outline"
+            aria-label="Outline"
             className={`p-1.5 rounded-md transition-colors ${
               activeTab === 'outline'
-                ? 'text-white bg-white/[0.08]'
-                : 'text-white/35 hover:text-white/70'
+                ? 'text-ed-fg bg-ed-surface-strong'
+                : 'text-ed-fg-muted hover:text-ed-fg'
             }`}
           >
-            <ListTree size={15} strokeWidth={1.5} />
+            <TreeStructure size={16} weight="regular" />
           </button>
           <button
             onClick={() => setActiveTab('backlinks')}
             title="Linked Mentions & Backlinks"
+            aria-label="Backlinks"
             className={`p-1.5 rounded-md transition-colors relative ${
               activeTab === 'backlinks'
-                ? 'text-white bg-white/[0.08]'
-                : 'text-white/35 hover:text-white/70'
+                ? 'text-ed-fg bg-ed-surface-strong'
+                : 'text-ed-fg-muted hover:text-ed-fg'
             }`}
           >
-            <Link2 size={15} strokeWidth={1.5} />
+            <LinkSimple size={16} weight="regular" />
             {effectiveBacklinks.length > 0 && (
-              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-amber-400" />
+              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-amber-500" />
+            )}
+          </button>
+          <button
+            onClick={() => setActiveTab('footnotes')}
+            title="Footnotes Reference"
+            aria-label="Footnotes"
+            className={`p-1.5 rounded-md transition-colors relative ${
+              activeTab === 'footnotes'
+                ? 'text-ed-fg bg-ed-surface-strong'
+                : 'text-ed-fg-muted hover:text-ed-fg'
+            }`}
+          >
+            <Quotes size={16} weight="regular" />
+            {footnotes.length > 0 && (
+              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-emerald-500" />
             )}
           </button>
           <button
             onClick={() => setActiveTab('info')}
             title="Document Info & Stats"
+            aria-label="Document info"
             className={`p-1.5 rounded-md transition-colors ${
               activeTab === 'info'
-                ? 'text-white bg-white/[0.08]'
-                : 'text-white/35 hover:text-white/70'
+                ? 'text-ed-fg bg-ed-surface-strong'
+                : 'text-ed-fg-muted hover:text-ed-fg'
             }`}
           >
-            <Info size={15} strokeWidth={1.5} />
+            <Info size={16} weight="regular" />
           </button>
         </div>
 
         <button
           onClick={onClose}
-          className="p-1 rounded-md text-white/30 hover:text-white hover:bg-white/[0.06] transition-colors"
+          aria-label="Close inspector"
+          className="p-1 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
         >
-          <X size={14} />
+          <X size={14} weight="bold" />
         </button>
       </div>
 
@@ -137,11 +170,11 @@ export default function RightInspector({
       <div className="flex-1 overflow-y-auto p-3 space-y-2">
         {activeTab === 'outline' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-3 px-1">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted mb-3 px-1">
               Table of Contents ({headings.length})
             </div>
             {headings.length === 0 ? (
-              <div className="text-xs text-white/25 italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-muted italic px-1 py-4 text-center">
                 No headings found in this note. Add # H1 or ## H2 to build an outline.
               </div>
             ) : (
@@ -149,10 +182,10 @@ export default function RightInspector({
                 {headings.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-1.5 px-2 py-1 rounded-md text-xs text-white/70 hover:text-white hover:bg-white/[0.04] cursor-pointer transition-colors"
+                    className="flex items-center gap-1.5 px-2 py-1 rounded-md text-xs text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface cursor-pointer transition-colors"
                     style={{ paddingLeft: `${(item.level - 1) * 12 + 8}px` }}
                   >
-                    <ChevronRight size={11} className="text-white/30 shrink-0" />
+                    <CaretRight size={12} weight="bold" className="text-ed-fg-muted shrink-0" />
                     <span className="truncate font-medium">{item.text}</span>
                   </div>
                 ))}
@@ -163,11 +196,11 @@ export default function RightInspector({
 
         {activeTab === 'backlinks' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-3 px-1">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted mb-3 px-1">
               Backlinks ({effectiveBacklinks.length})
             </div>
             {effectiveBacklinks.length === 0 ? (
-              <div className="text-xs text-white/25 italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-muted italic px-1 py-4 text-center">
                 No notes currently link to this note via [[{filePath ? stemOf(filePath) : 'Note'}]].
               </div>
             ) : (
@@ -176,9 +209,9 @@ export default function RightInspector({
                   <button
                     key={note.path}
                     onClick={() => onOpenFile(note.path)}
-                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-left text-xs bg-white/[0.03] hover:bg-white/[0.07] border border-white/[0.04] text-amber-400/90 font-medium transition-all group"
+                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-left text-xs bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-amber-400 font-medium transition-all group"
                   >
-                    <FileText size={13} className="text-white/30 group-hover:text-white/60 shrink-0" />
+                    <FileText size={14} weight="regular" className="text-ed-fg-muted group-hover:text-ed-fg shrink-0" />
                     <span className="truncate flex-1">{note.name}</span>
                   </button>
                 ))}
@@ -187,23 +220,48 @@ export default function RightInspector({
           </div>
         )}
 
+        {activeTab === 'footnotes' && (
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted mb-3 px-1">
+              Footnotes ({footnotes.length})
+            </div>
+            {footnotes.length === 0 ? (
+              <div className="text-xs text-ed-fg-muted italic px-1 py-4 text-center">
+                No footnotes in this note. Type [^1] to add inline footnote references.
+              </div>
+            ) : (
+              <div className="space-y-2">
+                {footnotes.map((fn) => (
+                  <div
+                    key={fn.id}
+                    className="p-2 rounded-lg bg-ed-surface border border-ed-rule text-xs text-ed-fg space-y-1"
+                  >
+                    <span className="font-bold text-amber-400 font-mono">[{fn.id}]</span>
+                    <p className="text-ed-fg-muted line-clamp-3">{fn.text}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         {activeTab === 'info' && (
           <div className="space-y-3 px-1 text-xs">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-white/30">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted">
               Note Statistics
             </div>
-            <div className="bg-white/[0.03] rounded-lg p-3 border border-white/[0.04] space-y-2 text-white/60 font-mono">
+            <div className="bg-ed-surface rounded-lg p-3 border border-ed-rule space-y-2 text-ed-fg-muted font-mono">
               <div className="flex justify-between">
                 <span>Words</span>
-                <span className="text-white font-semibold">{wordCount}</span>
+                <span className="text-ed-fg font-semibold">{wordCount}</span>
               </div>
               <div className="flex justify-between">
                 <span>Characters</span>
-                <span className="text-white font-semibold">{charCount}</span>
+                <span className="text-ed-fg font-semibold">{charCount}</span>
               </div>
               <div className="flex justify-between">
                 <span>Lines</span>
-                <span className="text-white font-semibold">{lineCount}</span>
+                <span className="text-ed-fg font-semibold">{lineCount}</span>
               </div>
             </div>
           </div>

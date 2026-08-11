@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import {
-  MoreHorizontal,
+  DotsThreeVertical,
   Copy,
-  Files,
-  FolderInput,
-  Download,
-  History as HistoryIcon,
+  CopySimple,
+  FolderOpen,
+  DownloadSimple,
+  ClockCounterClockwise,
   Lock,
-  Unlock,
-  Maximize2,
-  Minimize2,
-  FileUp,
-  Columns2,
-} from 'lucide-react'
+  LockOpen,
+  ArrowsOut,
+  ArrowsIn,
+  UploadSimple,
+  Columns,
+  IconProps
+} from '@phosphor-icons/react'
 
 export type FontFamily = 'default' | 'serif' | 'mono'
 
@@ -34,13 +35,21 @@ interface NoteMenuProps {
   onTogglePdfSplitView: () => void
 }
 
-function MenuItem({ icon: Icon, label, onClick }: { icon: typeof Copy; label: string; onClick: () => void }) {
+function MenuItem({
+  icon: Icon,
+  label,
+  onClick
+}: {
+  icon: React.ComponentType<IconProps>
+  label: string
+  onClick: () => void
+}) {
   return (
     <button
       onClick={onClick}
-      className="w-full flex items-center gap-2 px-3 py-1.5 text-sm text-white/70 hover:bg-white/5 hover:text-white/90 transition-colors text-left"
+      className="w-full flex items-center gap-2 px-3 py-1.5 text-xs text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-fg transition-colors text-left"
     >
-      <Icon size={13} className="shrink-0 text-white/40" />
+      <Icon size={14} weight="regular" className="shrink-0 text-ed-fg-muted" />
       {label}
     </button>
   )
@@ -52,7 +61,7 @@ function ToggleMenuItem({
   checked,
   onClick,
 }: {
-  icon: typeof Copy
+  icon: React.ComponentType<IconProps>
   label: string
   checked: boolean
   onClick: () => void
@@ -60,13 +69,13 @@ function ToggleMenuItem({
   return (
     <button
       onClick={onClick}
-      className="w-full flex items-center justify-between gap-2 px-3 py-1.5 text-sm text-white/70 hover:bg-white/5 hover:text-white/90 transition-colors text-left"
+      className="w-full flex items-center justify-between gap-2 px-3 py-1.5 text-xs text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-fg transition-colors text-left"
     >
       <span className="flex items-center gap-2">
-        <Icon size={13} className="shrink-0 text-white/40" />
+        <Icon size={14} weight="regular" className="shrink-0 text-ed-fg-muted" />
         {label}
       </span>
-      <span className={`w-3 h-3 rounded-full border ${checked ? 'bg-ed-accent border-ed-accent' : 'border-white/20'}`} />
+      <span className={`w-3 h-3 rounded-full border ${checked ? 'bg-amber-500 border-amber-500' : 'border-ed-rule'}`} />
     </button>
   )
 }
@@ -100,23 +109,24 @@ export default function NoteMenu({
       <button
         onClick={() => setOpen((o) => !o)}
         title="Note options"
-        className="p-1.5 rounded-md text-white/50 hover:text-white/80 hover:bg-white/5 transition-colors"
+        aria-label="Note options"
+        className="p-1.5 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
       >
-        <MoreHorizontal size={14} />
+        <DotsThreeVertical size={16} weight="bold" />
       </button>
 
       {open && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
-          <div className="absolute right-0 top-full mt-1 w-56 bg-[#1c1c1f] border border-ed-rule rounded-lg shadow-2xl z-50 py-1 animate-fade-in-up">
-            <div className="flex items-center gap-1 px-2 py-1.5 border-b border-ed-rule/50">
+          <div className="absolute right-0 top-full mt-1 w-56 bg-ed-surface border border-ed-rule rounded-lg shadow-elev-lg z-50 py-1 animate-fadeInUp">
+            <div className="flex items-center gap-1 px-2 py-1.5 border-b border-ed-rule">
               {(['default', 'serif', 'mono'] as FontFamily[]).map((f) => (
                 <button
                   key={f}
                   onClick={() => onSetFontFamily(f)}
                   title={f}
                   className={`flex-1 py-1 rounded text-xs transition-colors ${
-                    fontFamily === f ? 'bg-white/10 text-white' : 'text-white/40 hover:text-white/70'
+                    fontFamily === f ? 'bg-ed-surface-strong text-ed-fg font-bold' : 'text-ed-fg-muted hover:text-ed-fg'
                   } ${f === 'serif' ? 'font-serif' : f === 'mono' ? 'font-mono' : ''}`}
                 >
                   Ag
@@ -125,31 +135,31 @@ export default function NoteMenu({
             </div>
 
             <MenuItem icon={Copy} label="Copy path" onClick={runAndClose(onCopyPath)} />
-            <MenuItem icon={Files} label="Duplicate" onClick={runAndClose(onDuplicate)} />
-            <MenuItem icon={FolderInput} label="Move to..." onClick={runAndClose(onMove)} />
-            <MenuItem icon={Download} label="Export as Markdown..." onClick={runAndClose(onExport)} />
+            <MenuItem icon={CopySimple} label="Duplicate" onClick={runAndClose(onDuplicate)} />
+            <MenuItem icon={FolderOpen} label="Move to..." onClick={runAndClose(onMove)} />
+            <MenuItem icon={DownloadSimple} label="Export as Markdown..." onClick={runAndClose(onExport)} />
 
-            <div className="border-t border-ed-rule/50 my-1" />
+            <div className="border-t border-ed-rule my-1" />
 
             <MenuItem
-              icon={FileUp}
+              icon={UploadSimple}
               label={hasPdfAttachment ? 'Replace attached PDF...' : 'Attach PDF...'}
               onClick={runAndClose(onAttachPdf)}
             />
             {hasPdfAttachment && (
-              <ToggleMenuItem icon={Columns2} label="PDF split view" checked={pdfSplitView} onClick={onTogglePdfSplitView} />
+              <ToggleMenuItem icon={Columns} label="PDF split view" checked={pdfSplitView} onClick={onTogglePdfSplitView} />
             )}
 
-            <div className="border-t border-ed-rule/50 my-1" />
+            <div className="border-t border-ed-rule my-1" />
 
             <ToggleMenuItem
-              icon={fullWidth ? Minimize2 : Maximize2}
+              icon={fullWidth ? ArrowsIn : ArrowsOut}
               label="Full width"
               checked={fullWidth}
               onClick={onToggleFullWidth}
             />
-            <ToggleMenuItem icon={locked ? Lock : Unlock} label="Lock page" checked={locked} onClick={onToggleLock} />
-            <MenuItem icon={HistoryIcon} label="Version history" onClick={runAndClose(onOpenHistory)} />
+            <ToggleMenuItem icon={locked ? Lock : LockOpen} label="Lock page" checked={locked} onClick={onToggleLock} />
+            <MenuItem icon={ClockCounterClockwise} label="Version history" onClick={runAndClose(onOpenHistory)} />
           </div>
         </>
       )}

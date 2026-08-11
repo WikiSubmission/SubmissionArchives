@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { invoke, convertFileSrc } from '@tauri-apps/api/core'
 import { open } from '@tauri-apps/plugin-dialog'
 import DragHandle from '@tiptap/extension-drag-handle-react'
-import { GripVertical } from 'lucide-react'
+import { DotsSixVertical } from '@phosphor-icons/react'
 import { QuranEmbed } from './extensions/QuranEmbed'
 import { QuranEmbedInline } from './extensions/QuranEmbedInline'
 import { Callout } from './extensions/Callout'
@@ -14,6 +14,9 @@ import { ArabicBlock } from './extensions/ArabicBlock'
 import { SlashCommand } from './extensions/slash-command/SlashCommand'
 import { setDefaultQuranInsertStyle } from './extensions/slash-command/items'
 import { WikiLink } from './extensions/WikiLink'
+import { MarkdownSyntaxHighlight } from './extensions/MarkdownSyntaxHighlight'
+import { SmartTypography } from './extensions/SmartTypography'
+import { FootnoteRef } from './extensions/Footnote'
 import FrontmatterPanel from './FrontmatterPanel'
 import BacklinksPanel from './BacklinksPanel'
 import VersionHistoryModal from './VersionHistoryModal'
@@ -21,6 +24,7 @@ import NoteMenu, { type FontFamily } from './NoteMenu'
 import EditorToolbar from './EditorToolbar'
 import PageModeCanvas from './PageModeCanvas'
 import { useSettings } from '../hooks/useSettings'
+import { motion, AnimatePresence, springConfig } from './ui/Motion'
 
 export type EditorMode = 'write' | 'blocks' | 'page'
 
@@ -100,6 +104,8 @@ export default function Editor({
       const body = storageInstance.markdown.getMarkdown()
       onContentChange?.(body)
       const content = stringifyWithFrontmatter(body, frontmatterRef.current)
+
+      // Atomic file write + recovery buffer
       invoke('write_note', { path, content })
         .then(() => {
           setStatus('saved')
@@ -119,6 +125,9 @@ export default function Editor({
       ArabicBlock,
       SlashCommand,
       Markdown,
+      FootnoteRef,
+      MarkdownSyntaxHighlight.configure({ activeMode: mode }),
+      SmartTypography.configure({ activeMode: mode }),
       WikiLink.configure({ onNavigate: onWikiLinkNavigate }),
     ],
     content: '',
@@ -130,6 +139,32 @@ export default function Editor({
     },
     onUpdate: ({ editor: instance }) => scheduleSave(instance),
   })
+
+  // Typewriter scrolling in Page mode
+  useEffect(() => {
+    if (mode !== 'page' || !editor) return
+
+    const handleSelectionUpdate = () => {
+      const { view } = editor
+      if (!view) return
+      const cursorPos = view.coordsAtPos(view.state.selection.head)
+      const editorRect = view.dom.getBoundingClientRect()
+      const targetY = editorRect.top + editorRect.height / 2
+      const scrollContainer = view.dom.closest('.overflow-y-auto')
+
+      if (scrollContainer && Math.abs(cursorPos.top - targetY) > 60) {
+        scrollContainer.scrollBy({
+          top: cursorPos.top - targetY,
+          behavior: 'smooth'
+        })
+      }
+    }
+
+    editor.on('selectionUpdate', handleSelectionUpdate)
+    return () => {
+      editor.off('selectionUpdate', handleSelectionUpdate)
+    }
+  }, [mode, editor])
 
   const loadNote = useCallback(
     (path: string) => {
@@ -176,29 +211,29 @@ export default function Editor({
   }
 
   const statusConfig = {
-    idle: { dot: 'bg-transparent', text: 'text-white/20', label: '' },
-    saving: { dot: 'bg-amber-400', text: 'text-amber-400/80', label: 'Saving' },
-    saved: { dot: 'bg-emerald-400', text: 'text-emerald-400/80', label: 'Saved' },
-    error: { dot: 'bg-red-400', text: 'text-red-400/80', label: 'Error' },
+    idle: { dot: 'bg-transparent', text: 'text-ed-fg-muted', label: '' },
+    saving: { dot: 'bg-amber-400', text: 'text-amber-400', label: 'Saving' },
+    saved: { dot: 'bg-emerald-400', text: 'text-emerald-400', label: 'Saved' },
+    error: { dot: 'bg-red-400', text: 'text-red-400', label: 'Error' },
   }
 
   const currentStatus = statusConfig[status]
 
   return (
-    <div className="w-full h-full bg-ed-bg text-ed-fg flex flex-col relative">
-      {/* Floating Toolbar — Glass pill with controls for Write/Blocks mode */}
+    <div className="w-full h-full bg-ed-bg text-ed-fg flex flex-col relative select-none">
+      {/* Floating Toolbar */}
       <div className="absolute top-3 right-6 z-20 flex items-center gap-3">
         {/* Status Pill */}
         <div
           className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border transition-all duration-300 ${
             status === 'idle'
               ? 'border-transparent opacity-0'
-              : 'border-white/[0.06] bg-white/[0.03] opacity-100'
+              : 'border-ed-rule bg-ed-surface opacity-100'
           }`}
         >
           <span
             className={`w-1.5 h-1.5 rounded-full ${currentStatus.dot} ${
-              status === 'saving' ? 'animate-status-pulse' : ''
+              status === 'saving' ? 'animate-pulse' : ''
             }`}
           />
           <span className={`text-[10px] font-semibold uppercase tracking-wider ${currentStatus.text}`}>
@@ -226,7 +261,7 @@ export default function Editor({
             onTogglePdfSplitView={() => handleFrontmatterChange({ ...frontmatter, pdfSplitView: !pdfSplitView })}
           />
 
-          <div className="w-px h-4 bg-white/[0.08]" />
+          <div className="w-px h-4 bg-ed-rule" />
 
           {/* Premium Segmented Mode Control */}
           <div className="flex items-center p-0.5 bg-black/30 rounded-lg">
@@ -235,14 +270,19 @@ export default function Editor({
                 key={m}
                 onClick={() => onModeChange(m)}
                 title={MODE_META[m].description}
+                aria-label={`${MODE_META[m].label} mode`}
                 className={`relative px-3 py-1.5 text-[11px] font-semibold rounded-md transition-all duration-200 tactile ${
                   mode === m
-                    ? 'text-white'
-                    : 'text-white/35 hover:text-white/60'
+                    ? 'text-ed-fg font-bold'
+                    : 'text-ed-fg-muted hover:text-ed-fg'
                 }`}
               >
                 {mode === m && (
-                  <span className="absolute inset-0 bg-white/10 rounded-md shadow-sm" />
+                  <motion.div
+                    layoutId="activeModeTab"
+                    className="absolute inset-0 bg-ed-surface-strong rounded-md shadow-sm border border-ed-rule"
+                    transition={springConfig}
+                  />
                 )}
                 <span className="relative z-10">{MODE_META[m].label}</span>
               </button>
@@ -254,8 +294,8 @@ export default function Editor({
       {/* Dedicated Rich Text Toolbar for Page Mode */}
       {mode === 'page' && <EditorToolbar editor={editor} />}
 
-      {/* Main Document Body */}
-      <div className="flex-1 overflow-hidden flex">
+      {/* Main Document Body with Morphing Transitions */}
+      <div className="flex-1 overflow-hidden flex relative">
         {pdfSplitView && pdfAttachment && (
           <div className="w-1/2 border-r border-ed-rule shrink-0 bg-ed-surface/30">
             <iframe
@@ -266,42 +306,53 @@ export default function Editor({
           </div>
         )}
 
-        {mode === 'page' ? (
-          <div className={`${pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'} h-full overflow-hidden`}>
-            <PageModeCanvas>
-              <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
-              <EditorContent editor={editor} className="h-full w-full" />
-              <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
-            </PageModeCanvas>
-          </div>
-        ) : (
-          <div
-            className={`overflow-y-auto ${
-              pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'
-            } ${FONT_CLASS[fontFamily]}`}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={mode}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.99 }}
+            transition={springConfig}
+            className="w-full h-full flex-1 flex overflow-hidden"
           >
-            <div
-              className={`h-full w-full mx-auto transition-all duration-500 ${
-                mode === 'blocks'
-                  ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-14`
-                  : fullWidth
-                    ? 'max-w-none'
-                    : 'max-w-3xl'
-              }`}
-            >
-              <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
-              {mode === 'blocks' && editor && (
-                <DragHandle editor={editor}>
-                  <div className="w-5 h-6 flex items-center justify-center text-white/20 hover:text-white/50 cursor-grab active:cursor-grabbing transition-colors rounded hover:bg-white/[0.04]">
-                    <GripVertical size={14} strokeWidth={1.5} />
-                  </div>
-                </DragHandle>
-              )}
-              <EditorContent editor={editor} className="h-full w-full" />
-              <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
-            </div>
-          </div>
-        )}
+            {mode === 'page' ? (
+              <div className={`${pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'} h-full overflow-hidden`}>
+                <PageModeCanvas>
+                  <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
+                  <EditorContent editor={editor} className="h-full w-full select-text" />
+                  <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+                </PageModeCanvas>
+              </div>
+            ) : (
+              <div
+                className={`overflow-y-auto select-text ${
+                  pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'
+                } ${FONT_CLASS[fontFamily]}`}
+              >
+                <div
+                  className={`h-full w-full mx-auto transition-all duration-300 ${
+                    mode === 'blocks'
+                      ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-14`
+                      : fullWidth
+                        ? 'max-w-none'
+                        : 'max-w-3xl'
+                  }`}
+                >
+                  <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
+                  {mode === 'blocks' && editor && (
+                    <DragHandle editor={editor}>
+                      <div className="w-5 h-6 flex items-center justify-center text-ed-fg-muted hover:text-ed-fg cursor-grab active:cursor-grabbing transition-colors rounded hover:bg-ed-surface">
+                        <DotsSixVertical size={16} weight="bold" />
+                      </div>
+                    </DragHandle>
+                  )}
+                  <EditorContent editor={editor} className="h-full w-full" />
+                  <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+                </div>
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       {historyOpen && (

@@ -1,39 +1,16 @@
 import { useState } from 'react'
 import { invoke } from '@tauri-apps/api/core'
 import {
-  ChevronRight,
+  CaretRight,
   Folder,
-  FileText,
-  Image,
-  FileVideo,
-  FileAudio,
-  FileSpreadsheet,
-  File as FileIcon,
-  Trash2,
-  Smile,
-} from 'lucide-react'
+  FolderOpen,
+  Trash,
+  Smiley
+} from '@phosphor-icons/react'
 import type { ArchiveEntry } from './types'
-import { fileKindOf, type FileKind } from '../../lib/fileTypes'
-
-const FILE_ICONS: Record<FileKind, typeof FileText> = {
-  markdown: FileText,
-  pdf: FileText,
-  image: Image,
-  video: FileVideo,
-  audio: FileAudio,
-  csv: FileSpreadsheet,
-  unknown: FileIcon,
-}
-
-const FILE_ICON_COLORS: Record<FileKind, string> = {
-  markdown: 'text-white/40',
-  pdf: 'text-amber-400/50',
-  image: 'text-emerald-400/50',
-  video: 'text-rose-400/50',
-  audio: 'text-violet-400/50',
-  csv: 'text-sky-400/50',
-  unknown: 'text-white/25',
-}
+import { fileKindOf, getFileIcon } from '../../lib/fileTypes'
+import { AppIcon } from '../ui/Icons'
+import { motion, AnimatePresence, springConfig } from '../ui/Motion'
 
 interface TreeNodeProps {
   entry: ArchiveEntry
@@ -86,21 +63,21 @@ export default function TreeNode({
 
   const isActive = !entry.is_dir && entry.path === activeFilePath
   const kind = entry.is_dir ? null : fileKindOf(entry.name)
-  const FileTypeIcon = kind ? FILE_ICONS[kind] : null
+  const iconName = entry.is_dir ? null : getFileIcon(entry.name)
   const customIcon = entry.is_dir ? icons[entry.path] : undefined
 
   return (
-    <div className="tree-item-enter">
+    <div>
       <div
-        className={`group relative flex items-center gap-1 pr-2 transition-all duration-150 ${
+        className={`group relative flex items-center gap-1 pr-2 transition-colors duration-150 ${
           isActive
-            ? 'bg-white/[0.06] text-ed-accent'
-            : 'text-white/50 hover:text-white/85 hover:bg-white/[0.03]'
+            ? 'bg-ed-surface-strong text-ed-fg'
+            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
         {/* Active file left accent bar */}
         {isActive && (
-          <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-ed-accent/80" />
+          <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-amber-500" />
         )}
 
         <button
@@ -114,7 +91,7 @@ export default function TreeNode({
                 expanded ? 'rotate-90' : ''
               }`}
             >
-              <ChevronRight size={12} className="text-white/30" />
+              <CaretRight size={12} weight="bold" className="text-ed-fg-muted" />
             </span>
           ) : (
             <span className="w-3 shrink-0" />
@@ -122,20 +99,34 @@ export default function TreeNode({
 
           {entry.is_dir ? (
             customIcon ? (
-              <span className="w-4 h-4 text-[12px] leading-none shrink-0 flex items-center justify-center select-none">
+              <span className="w-4 h-4 text-[13px] leading-none shrink-0 flex items-center justify-center select-none">
                 {customIcon}
               </span>
+            ) : expanded ? (
+              <FolderOpen size={16} weight="fill" className="shrink-0 text-amber-400/80" />
             ) : (
-              <Folder
-                size={14}
-                className={`shrink-0 transition-colors duration-150 ${
-                  expanded ? 'text-white/50' : 'text-white/30'
-                }`}
-              />
+              <Folder size={16} weight="regular" className="shrink-0 text-ed-fg-muted" />
             )
           ) : (
-            FileTypeIcon && (
-              <FileTypeIcon size={14} className={`shrink-0 ${FILE_ICON_COLORS[kind!]}`} />
+            iconName && (
+              <AppIcon
+                name={iconName}
+                size={16}
+                weight={isActive ? 'fill' : 'regular'}
+                className={`shrink-0 ${
+                  isActive
+                    ? 'text-amber-400'
+                    : kind === 'pdf'
+                    ? 'text-rose-400'
+                    : kind === 'image'
+                    ? 'text-emerald-400'
+                    : kind === 'audio'
+                    ? 'text-violet-400'
+                    : kind === 'video'
+                    ? 'text-sky-400'
+                    : 'text-ed-fg-muted'
+                }`}
+              />
             )
           )}
 
@@ -148,53 +139,66 @@ export default function TreeNode({
           <button
             onClick={() => onSetIcon(entry.path)}
             title="Set folder icon"
-            className="opacity-0 group-hover:opacity-100 p-1 rounded text-white/20 hover:text-white/60 hover:bg-white/[0.06] transition-all duration-150 shrink-0"
+            aria-label="Set folder icon"
+            className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface-strong transition-opacity shrink-0"
           >
-            <Smile size={11} strokeWidth={1.5} />
+            <Smiley size={14} weight="regular" />
           </button>
         ) : (
           <button
             onClick={() => onTrash(entry.path)}
             title="Move to Trash"
-            className="opacity-0 group-hover:opacity-100 p-1 rounded text-white/20 hover:text-red-400 hover:bg-red-500/10 transition-all duration-150 shrink-0"
+            aria-label="Move to trash"
+            className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-muted hover:text-red-400 hover:bg-red-500/10 transition-opacity shrink-0"
           >
-            <Trash2 size={11} strokeWidth={1.5} />
+            <Trash size={14} weight="regular" />
           </button>
         )}
       </div>
 
-      {expanded && loading && (
-        <div
-          style={{ paddingLeft: `${(depth + 1) * 14 + 14}px` }}
-          className="text-[11px] text-white/20 py-1.5 font-mono flex items-center"
-        >
-          <span className="inline-block w-3 h-3 border-2 border-white/10 border-t-white/30 rounded-full animate-spin mr-2" />
-          Loading...
-        </div>
-      )}
+      <AnimatePresence>
+        {expanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={springConfig}
+            className="overflow-hidden"
+          >
+            {loading && (
+              <div
+                style={{ paddingLeft: `${(depth + 1) * 14 + 14}px` }}
+                className="text-[11px] text-ed-fg-muted py-1.5 font-mono flex items-center"
+              >
+                <span className="inline-block w-3 h-3 border-2 border-ed-rule border-t-ed-fg-muted rounded-full animate-spin mr-2" />
+                Loading...
+              </div>
+            )}
 
-      {expanded && children && children.length === 0 && (
-        <div
-          style={{ paddingLeft: `${(depth + 1) * 14 + 14}px` }}
-          className="text-[11px] text-white/20 py-1.5 font-mono italic"
-        >
-          Empty folder
-        </div>
-      )}
+            {children && children.length === 0 && (
+              <div
+                style={{ paddingLeft: `${(depth + 1) * 14 + 14}px` }}
+                className="text-[11px] text-ed-fg-muted py-1.5 font-mono italic"
+              >
+                Empty folder
+              </div>
+            )}
 
-      {expanded &&
-        children?.map((child) => (
-          <TreeNode
-            key={child.path}
-            entry={child}
-            depth={depth + 1}
-            activeFilePath={activeFilePath}
-            onOpenFile={onOpenFile}
-            onTrash={onTrash}
-            icons={icons}
-            onSetIcon={onSetIcon}
-          />
-        ))}
+            {children?.map((child) => (
+              <TreeNode
+                key={child.path}
+                entry={child}
+                depth={depth + 1}
+                activeFilePath={activeFilePath}
+                onOpenFile={onOpenFile}
+                onTrash={onTrash}
+                icons={icons}
+                onSetIcon={onSetIcon}
+              />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

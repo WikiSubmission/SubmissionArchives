@@ -1,5 +1,6 @@
 import { useMemo, useState, type KeyboardEvent } from 'react'
-import { ArrowUp, ArrowDown, CornerDownLeft } from 'lucide-react'
+import { ArrowUp, ArrowDown, ArrowElbowDownLeft } from '@phosphor-icons/react'
+import { motion, springConfig } from './ui/Motion'
 
 interface CommandModalProps<T> {
   items: T[]
@@ -94,7 +95,12 @@ export default function CommandModal<T>({
       onClick={onClose}
     >
       {/* Backdrop with radial glow */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+      />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -102,8 +108,12 @@ export default function CommandModal<T>({
         }}
       />
 
-      <div
-        className="relative w-full max-w-[560px] glass-strong border border-ed-rule rounded-xl shadow-elev-xl overflow-hidden animate-slide-up-fade"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95, y: -8 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.98, y: -4 }}
+        transition={springConfig}
+        className="relative w-full max-w-[560px] glass-strong border border-ed-rule rounded-xl shadow-elev-xl overflow-hidden z-10"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input */}
@@ -114,12 +124,12 @@ export default function CommandModal<T>({
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
-            className="w-full bg-transparent px-4 py-3.5 text-sm text-white/90 outline-none placeholder:text-white/20 font-medium"
+            className="w-full bg-transparent px-4 py-3.5 text-sm text-ed-fg outline-none placeholder:text-ed-fg-muted font-medium"
           />
           {query && (
             <button
               onClick={() => setQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-white/20 hover:text-white/50 bg-white/[0.04] hover:bg-white/[0.08] px-1.5 py-0.5 rounded transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-ed-fg-muted hover:text-ed-fg bg-ed-surface hover:bg-ed-surface-strong px-1.5 py-0.5 rounded transition-colors"
             >
               Clear
             </button>
@@ -130,7 +140,7 @@ export default function CommandModal<T>({
         <div className="max-h-[320px] overflow-y-auto py-1">
           {filtered.length === 0 && (
             <div className="px-4 py-8 text-center">
-              <div className="text-sm text-white/25">{emptyMessage}</div>
+              <div className="text-sm text-ed-fg-muted">{emptyMessage}</div>
             </div>
           )}
 
@@ -141,7 +151,7 @@ export default function CommandModal<T>({
             return (
               <div key={category}>
                 {showHeader && (
-                  <div className="px-4 pt-3 pb-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white/20">
+                  <div className="px-4 pt-3 pb-1 text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-muted">
                     {category}
                   </div>
                 )}
@@ -157,12 +167,12 @@ export default function CommandModal<T>({
                       onMouseEnter={() => setSelectedIndex(currentGlobalIdx)}
                       className={`w-full text-left px-4 py-2 text-sm transition-all duration-100 relative group ${
                         isSelected
-                          ? 'bg-white/[0.06] text-white'
-                          : 'text-white/60 hover:text-white/80'
+                          ? 'bg-ed-surface-strong text-ed-fg'
+                          : 'text-ed-fg-muted hover:text-ed-fg'
                       }`}
                     >
                       {isSelected && (
-                        <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-white/60" />
+                        <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-amber-500" />
                       )}
                       <span className="relative z-10 font-medium tracking-tight">{getLabel(item)}</span>
                     </button>
@@ -174,32 +184,32 @@ export default function CommandModal<T>({
         </div>
 
         {/* Keyboard Hint Bar */}
-        <div className="flex items-center justify-between px-4 py-2 border-t border-ed-rule bg-black/20">
+        <div className="flex items-center justify-between px-4 py-2 border-t border-ed-rule bg-black/20 text-ed-fg-muted">
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1 text-white/20">
-              <span className="flex items-center justify-center w-4 h-4 rounded bg-white/[0.06] border border-white/[0.06]">
-                <ArrowUp size={9} strokeWidth={2} />
+            <div className="flex items-center gap-1">
+              <span className="flex items-center justify-center w-4 h-4 rounded bg-ed-surface border border-ed-rule">
+                <ArrowUp size={10} weight="bold" />
               </span>
-              <span className="flex items-center justify-center w-4 h-4 rounded bg-white/[0.06] border border-white/[0.06]">
-                <ArrowDown size={9} strokeWidth={2} />
+              <span className="flex items-center justify-center w-4 h-4 rounded bg-ed-surface border border-ed-rule">
+                <ArrowDown size={10} weight="bold" />
               </span>
               <span className="text-[10px] font-medium ml-0.5">Navigate</span>
             </div>
-            <div className="flex items-center gap-1 text-white/20">
-              <span className="flex items-center justify-center w-4 h-4 rounded bg-white/[0.06] border border-white/[0.06]">
-                <CornerDownLeft size={9} strokeWidth={2} />
+            <div className="flex items-center gap-1">
+              <span className="flex items-center justify-center w-4 h-4 rounded bg-ed-surface border border-ed-rule">
+                <ArrowElbowDownLeft size={10} weight="bold" />
               </span>
               <span className="text-[10px] font-medium ml-0.5">Select</span>
             </div>
           </div>
-          <div className="flex items-center gap-1 text-white/20">
-            <span className="flex items-center justify-center h-4 px-1 rounded bg-white/[0.06] border border-white/[0.06] text-[8px] font-mono font-bold">
+          <div className="flex items-center gap-1">
+            <span className="flex items-center justify-center h-4 px-1 rounded bg-ed-surface border border-ed-rule text-[8px] font-mono font-bold">
               ESC
             </span>
             <span className="text-[10px] font-medium ml-0.5">Close</span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

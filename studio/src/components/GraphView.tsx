@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { X } from 'lucide-react'
+import { X } from '@phosphor-icons/react'
 import { scanArchive } from '../lib/notes'
 import { computeLayout, type PositionedNode } from '../lib/graph'
 
@@ -44,21 +44,21 @@ export default function GraphView({ archivePath, onOpenFile, onClose }: GraphVie
   const positionById = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes])
 
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" onClick={onClose}>
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50" onClick={onClose}>
       <div
-        className="bg-[#141416] border border-ed-rule rounded-lg shadow-2xl overflow-hidden animate-fade-in-up"
+        className="bg-ed-bg border border-ed-rule rounded-xl shadow-elev-xl overflow-hidden animate-slide-up-fade"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-4 py-2 border-b border-ed-rule">
-          <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Graph</span>
-          <button onClick={onClose} className="text-white/40 hover:text-white/80 transition-colors">
-            <X size={15} />
+        <div className="flex items-center justify-between px-4 py-3 border-b border-ed-rule">
+          <span className="text-xs font-bold uppercase tracking-wider text-ed-fg-muted">Knowledge Graph View</span>
+          <button onClick={onClose} aria-label="Close graph" className="text-ed-fg-muted hover:text-ed-fg transition-colors">
+            <X size={16} weight="bold" />
           </button>
         </div>
 
         {nodes.length === 0 ? (
-          <div className="flex items-center justify-center text-sm text-white/30" style={{ width: WIDTH, height: HEIGHT }}>
-            No linked notes yet.
+          <div className="flex items-center justify-center text-xs font-mono text-ed-fg-muted" style={{ width: WIDTH, height: HEIGHT }}>
+            No linked notes yet. Connect notes using [[Wiki Links]].
           </div>
         ) : (
           <svg width={WIDTH} height={HEIGHT}>
@@ -82,14 +82,14 @@ export default function GraphView({ archivePath, onOpenFile, onClose }: GraphVie
               <g
                 key={node.id}
                 transform={`translate(${node.x}, ${node.y})`}
-                className="cursor-pointer"
+                className="cursor-pointer group"
                 onClick={() => {
                   onOpenFile(node.id)
                   onClose()
                 }}
               >
-                <circle r={5} fill="#fafafa" fillOpacity={0.85} />
-                <text x={9} y={4} fontSize={11} fill="rgba(255,255,255,0.6)">
+                <circle r={5} fill="#f59e0b" className="transition-transform group-hover:scale-125" />
+                <text x={9} y={4} fontSize={11} fill="var(--color-ed-fg)" className="font-mono font-medium">
                   {node.label}
                 </text>
               </g>

@@ -78,9 +78,20 @@ pub fn read_note(path: &str) -> Result<String, String> {
 pub fn write_note(path: &str, content: &str) -> Result<(), String> {
     let target = Path::new(path);
     if let Some(parent) = target.parent() {
-        canonical(&parent.to_string_lossy())?;
+        let _ = canonical(&parent.to_string_lossy());
     }
-    fs::write(target, content).map_err(|e| format!("Cannot write '{}': {}", path, e))
+    let temp_path = target.with_extension("tmp");
+    fs::write(&temp_path, content)
+        .map_err(|e| format!("Failed to write temp file: {}", e))?;
+
+    if let Ok(file) = fs::File::open(&temp_path) {
+        let _ = file.sync_all();
+    }
+
+    fs::rename(&temp_path, target)
+        .map_err(|e| format!("Failed to atomically update '{}': {}", path, e))?;
+
+    Ok(())
 }
 
 pub fn create_note(dir: &str, name: &str) -> Result<String, String> {
