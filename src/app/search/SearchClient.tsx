@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useWindowVirtualizer } from '@tanstack/react-virtual';
 import {
     BookMarked,
     ChevronDown,
@@ -19,7 +20,8 @@ import { formatMedia } from '@/lib/formatUtils';
 import { getMediaHref } from '@/lib/utils';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
-import { searchTranscripts } from './actions';
+import { hasOperators, parseAdvancedQuery } from '@/lib/search/queryParser';
+import { logSearchEvent } from '@/lib/search/analytics';
 import { useSearchKeyboardNav } from './useSearchKeyboardNav';
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
 
@@ -66,6 +68,72 @@ type SearchResult = {
     matchCount?: number;
 };
 
+type SearchResponse = {
+    results: SearchResult[];
+    total: number;
+    totalMatches: number;
+};
+
+type Suggestion = {
+    id: string;
+    title: string;
+    type: string;
+    author?: string;
+};
+
+const PAGE_SIZE = 10;
+const MIN_SUGGEST_LENGTH = 2;
+const FILTERS_KEY = 'sa-search-filters';
+const FILTER_KEYS: FilterKey[] = ['video', 'quran-study', 'messenger-audio', 'perspective', 'appendix', 'quran', 'other'];
+
+// A shared link's filters always win; localStorage is only consulted when the URL
+// says nothing. Unknown or malformed stored values are discarded rather than trusted.
+function readStoredFilters(): Record<FilterKey, boolean> | null {
+    if (typeof window === 'undefined') return null;
+    try {
+        const raw = window.localStorage.getItem(FILTERS_KEY);
+        if (!raw) return null;
+
+        const parsed: unknown = JSON.parse(raw);
+        if (typeof parsed !== 'object' || parsed === null) return null;
+
+        const record = parsed as Record<string, unknown>;
+        if (!FILTER_KEYS.every((key) => typeof record[key] === 'boolean')) return null;
+        // All-off would render an unusable page; treat it as no preference.
+        if (!FILTER_KEYS.some((key) => record[key] === true)) return null;
+
+        return Object.fromEntries(FILTER_KEYS.map((key) => [key, record[key] as boolean])) as Record<FilterKey, boolean>;
+    } catch {
+        return null;
+    }
+}
+const OPERATOR_CHIP_CLASS = 'rounded-full border border-ed-accent/30 bg-ed-accent/10 px-2.5 py-1 font-mono text-[0.68rem] text-ed-accent';
+
+function SuggestionIcon({ type }: { type: string }) {
+    if (type === 'video' || type === 'video-program' || type === 'sermon') {
+        return <Video className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+    }
+    if (type === 'quran-study' || type === 'messenger-audio' || type === 'audio') {
+        return <Headphones className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+    }
+    if (type === 'quran') {
+        return <BookMarked className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+    }
+    return <FileText className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+}
+
+function formatResult(item: SearchResult): SearchResult {
+    const formattedMedia = formatMedia(item.media);
+    return {
+        ...item,
+        media: {
+            ...item.media,
+            ...formattedMedia,
+            displayTitle: item.media.displayTitle || formattedMedia.displayTitle,
+        },
+    };
+}
+
 function SearchContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -74,50 +142,96 @@ function SearchContent() {
 
     const [query, setQuery] = useState(initialQuery);
     const [isSearching, setIsSearching] = useState(false);
+    const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [results, setResults] = useState<SearchResult[]>([]);
-    const [visibleCount, setVisibleCount] = useState(10);
+    const [total, setTotal] = useState(0);
+    const [totalMatches, setTotalMatches] = useState(0);
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const [expandedMatches, setExpandedMatches] = useState<Set<string>>(new Set());
-    const attemptedInitialQueryRef = useRef<string | null>(null);
+    const parsedQuery = useMemo(() => parseAdvancedQuery(query), [query]);
+    const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+    const [suggestOpen, setSuggestOpen] = useState(false);
+    const abortRef = useRef<AbortController | null>(null);
+    const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const suggestAbortRef = useRef<AbortController | null>(null);
+    const suggestCacheRef = useRef<Map<string, Suggestion[]>>(new Map());
+    const searchFieldRef = useRef<HTMLDivElement>(null);
+    const isFirstRunRef = useRef(true);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    const [filters, setFilters] = useState<Record<FilterKey, boolean>>({
-        video: initialFilters.length === 0
-            || initialFilters.includes('video')
-            || initialFilters.includes('sermon')
-            || initialFilters.includes('video-program'),
-        'quran-study': initialFilters.length === 0 || initialFilters.includes('quran-study'),
-        'messenger-audio': initialFilters.length === 0
-            || initialFilters.includes('messenger-audio')
-            || initialFilters.includes('audio'),
-        perspective: initialFilters.length === 0 || initialFilters.includes('perspective'),
-        appendix: initialFilters.length === 0 || initialFilters.includes('appendix'),
-        quran: initialFilters.length === 0 || initialFilters.includes('quran'),
-        other: initialFilters.length === 0 || initialFilters.includes('other'),
+    const [filters, setFilters] = useState<Record<FilterKey, boolean>>(() => {
+        // A shared link is explicit intent and outranks a stored preference.
+        if (initialFilters.length === 0) {
+            const stored = readStoredFilters();
+            if (stored) return stored;
+        }
+
+        return {
+            video: initialFilters.length === 0
+                || initialFilters.includes('video')
+                || initialFilters.includes('sermon')
+                || initialFilters.includes('video-program'),
+            'quran-study': initialFilters.length === 0 || initialFilters.includes('quran-study'),
+            'messenger-audio': initialFilters.length === 0
+                || initialFilters.includes('messenger-audio')
+                || initialFilters.includes('audio'),
+            perspective: initialFilters.length === 0 || initialFilters.includes('perspective'),
+            appendix: initialFilters.length === 0 || initialFilters.includes('appendix'),
+            quran: initialFilters.length === 0 || initialFilters.includes('quran'),
+            other: initialFilters.length === 0 || initialFilters.includes('other'),
+        };
     });
 
-    const rankedResults = useMemo(() => {
-        return [...results].sort((a, b) => {
-            const bScore = b.bestScore ?? mediaBestScore(b.matches);
-            const aScore = a.bestScore ?? mediaBestScore(a.matches);
-            return bScore - aScore;
-        });
-    }, [results]);
+    // Persist the current selection so a hard refresh without URL filters restores it.
+    useEffect(() => {
+        try {
+            window.localStorage.setItem(FILTERS_KEY, JSON.stringify(filters));
+        } catch {
+            // Private mode or a full quota — persistence is a convenience, not a requirement.
+        }
+    }, [filters]);
 
-    const rankedRef = useRef(rankedResults);
+    // The API returns globally rank-ordered pages and they are appended in order,
+    // so the rendered list is already sorted by score.
+    const resultsRef = useRef(results);
     const queryRef = useRef(query);
     const expandedRef = useRef(expandedMatches);
+    const listRef = useRef<HTMLDivElement>(null);
+    const [listOffsetTop, setListOffsetTop] = useState(0);
+
+    // The virtualizer measures against document scroll, so it needs the list's offset
+    // from the top of the page. The control card above it changes height (error banner,
+    // wrapping filter chips), so this is observed rather than measured once.
+    useEffect(() => {
+        const el = listRef.current;
+        if (!el) return;
+        const observer = new ResizeObserver(() => setListOffsetTop(el.offsetTop));
+        observer.observe(document.body);
+        return () => observer.disconnect();
+    }, []);
+
+    // Cards are variable height (match lists expand), the page itself is the scroll
+    // container, and only the mounted window is measured — so heights come from
+    // measureElement rather than a fixed estimate.
+    const virtualizer = useWindowVirtualizer({
+        count: results.length,
+        estimateSize: () => 240,
+        overscan: 6,
+        scrollMargin: listOffsetTop,
+    });
+    const virtualizerRef = useRef(virtualizer);
 
     useLayoutEffect(() => {
-        rankedRef.current = rankedResults;
+        resultsRef.current = results;
         queryRef.current = query;
         expandedRef.current = expandedMatches;
+        virtualizerRef.current = virtualizer;
     });
 
     const itemKeyFor = useCallback((cardIndex: number) => {
-        const media = rankedRef.current[cardIndex]?.media;
+        const media = resultsRef.current[cardIndex]?.media;
         return media ? `${media.id}${media.page ? `-${media.page}` : ''}` : '';
     }, []);
 
@@ -147,7 +261,7 @@ function SearchContent() {
     );
 
     const getHref = useCallback((cardIndex: number, passageIndex: number) => {
-        const result = rankedRef.current[cardIndex];
+        const result = resultsRef.current[cardIndex];
         if (!result) {
             return null;
         }
@@ -164,10 +278,10 @@ function SearchContent() {
 
     const navBounds = useMemo(
         () => ({
-            cardCount: Math.min(visibleCount, rankedResults.length),
-            passageCountFor: (cardIndex: number) => rankedRef.current[cardIndex]?.matches.length ?? 0,
+            cardCount: results.length,
+            passageCountFor: (cardIndex: number) => resultsRef.current[cardIndex]?.matches.length ?? 0,
         }),
-        [visibleCount, rankedResults.length],
+        [results.length],
     );
 
     const nav = useSearchKeyboardNav({
@@ -181,21 +295,29 @@ function SearchContent() {
 
     useEffect(() => {
         nav.reset();
-    }, [results, visibleCount, nav.reset]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [results, nav.reset]); // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
-        if (!nav.activeNodeId) {
+        const nodeId = nav.activeNodeId;
+        if (!nodeId) {
             return;
         }
-        document.getElementById(nav.activeNodeId)?.scrollIntoView({ block: 'nearest' });
-    }, [nav.activeNodeId]);
+        // The target card may be outside the rendered window, in which case its node
+        // does not exist yet — bring it into range first, then scroll to the passage
+        // on the next frame once it has mounted.
+        if (nav.activeCardIndex >= 0) {
+            virtualizerRef.current.scrollToIndex(nav.activeCardIndex, { align: 'auto' });
+        }
+        const frame = requestAnimationFrame(() => {
+            document.getElementById(nodeId)?.scrollIntoView({ block: 'nearest' });
+        });
+        return () => cancelAnimationFrame(frame);
+    }, [nav.activeNodeId, nav.activeCardIndex]);
 
-    const totalMatches = useMemo(
-        () => results.reduce((sum, result) => sum + (result.matchCount ?? result.matches.length), 0),
-        [results],
-    );
-
-    const updateURL = useCallback((
+    // Keeps the address bar shareable without pushing a history entry per keystroke
+    // or filter toggle. router.push would also trigger an RSC request on every
+    // change; the search is entirely client-driven, so there is nothing to refetch.
+    const syncUrl = useCallback((
         searchQuery: string,
         currentFilters: Record<FilterKey, boolean>
     ) => {
@@ -214,20 +336,26 @@ function SearchContent() {
         }
 
         const nextUrl = params.toString() ? `/search?${params.toString()}` : '/search';
-        router.push(nextUrl, { scroll: false });
-    }, [router]);
-
-    const handleSearch = useCallback(async () => {
-        if (!query.trim()) {
-            setResults([]);
-            setVisibleCount(10);
-            setErrorMsg(null);
-            return;
+        if (nextUrl !== `${window.location.pathname}${window.location.search}`) {
+            window.history.replaceState(null, '', nextUrl);
         }
+    }, []);
 
-        setIsSearching(true);
-        setResults([]);
-        setExpandedMatches(new Set());
+    const runQuery = useCallback(async (offset: number) => {
+        const trimmed = query.trim();
+        if (!trimmed) return;
+
+        // Supersede any in-flight request so a slow earlier response can never
+        // overwrite the results of a newer query.
+        abortRef.current?.abort();
+        const controller = new AbortController();
+        abortRef.current = controller;
+
+        if (offset === 0) {
+            setIsSearching(true);
+        } else {
+            setIsLoadingMore(true);
+        }
         setErrorMsg(null);
 
         try {
@@ -240,64 +368,183 @@ function SearchContent() {
             if (filters.quran) typeFilters.push('quran');
             if (filters.other) typeFilters.push('other');
 
-            const response = await searchTranscripts(query, typeFilters, { proximityWindow: 18 });
-            if (!response.success) {
-                throw new Error(response.error || 'Search failed');
-            }
-
-            const rawResults = (response.data || []) as SearchResult[];
-            const formattedResults = rawResults.map((item) => {
-                const formattedMedia = formatMedia(item.media);
-                return {
-                    ...item,
-                    media: {
-                        ...item.media,
-                        ...formattedMedia,
-                        displayTitle: item.media.displayTitle || formattedMedia.displayTitle,
-                    },
-                };
+            const params = new URLSearchParams({
+                q: trimmed,
+                limit: String(PAGE_SIZE),
+                offset: String(offset),
             });
-
-            setResults(formattedResults);
-            setVisibleCount(10);
-            updateURL(query, filters);
-        } catch (error) {
-            const message = error instanceof Error ? error.message : 'An unknown error occurred';
-            setErrorMsg(message);
-        } finally {
-            setIsSearching(false);
-        }
-    }, [query, filters, updateURL, setResults, setVisibleCount, setErrorMsg, setIsSearching, setExpandedMatches]);
-
-    useEffect(() => {
-        // Runs the search once per distinct URL-provided query (e.g. arriving via a
-        // shared search link), regardless of outcome. Gating on results.length === 0
-        // instead would retry forever on a legitimate zero-result search or a failed
-        // request (e.g. rate limiting), hammering the server indefinitely.
-        const timer = setTimeout(() => {
-            if (initialQuery && attemptedInitialQueryRef.current !== initialQuery && !isSearching) {
-                attemptedInitialQueryRef.current = initialQuery;
-                void handleSearch();
+            if (typeFilters.length > 0) {
+                params.set('filters', typeFilters.join(','));
             }
-        }, 0);
-        return () => clearTimeout(timer);
-    }, [handleSearch, initialQuery, isSearching]);
+
+            const startedAt = performance.now();
+            const response = await fetch(`/api/search?${params.toString()}`, { signal: controller.signal });
+            const latencyMs = performance.now() - startedAt;
+            if (!response.ok) {
+                throw new Error(
+                    response.status === 429
+                        ? 'Too many searches. Please wait a moment.'
+                        : 'Search failed. Please try again shortly.',
+                );
+            }
+
+            const payload = (await response.json()) as SearchResponse;
+            const formatted = payload.results.map(formatResult);
+
+            // Results are only swapped once the new set has arrived, so a new query
+            // never blanks the list mid-flight.
+            setResults((prev) => (offset === 0 ? formatted : [...prev, ...formatted]));
+            setTotal(payload.total);
+            setTotalMatches(payload.totalMatches);
+            if (offset === 0) {
+                setExpandedMatches(new Set());
+            }
+
+            if (offset === 0) {
+                logSearchEvent({
+                    name: 'search.query',
+                    query: trimmed,
+                    filterCount: typeFilters.length,
+                    resultCount: payload.total,
+                    latencyMs,
+                });
+            }
+        } catch (error) {
+            if (controller.signal.aborted) return;
+            setErrorMsg(error instanceof Error ? error.message : 'An unknown error occurred');
+        } finally {
+            // A superseded request must not clear the loading state its successor set.
+            if (!controller.signal.aborted) {
+                setIsSearching(false);
+                setIsLoadingMore(false);
+            }
+        }
+    }, [
+        query,
+        filters,
+        setResults,
+        setTotal,
+        setTotalMatches,
+        setErrorMsg,
+        setIsSearching,
+        setIsLoadingMore,
+        setExpandedMatches,
+    ]);
 
     useEffect(() => {
+        // A query arriving from the URL (a shared search link) runs immediately;
+        // everything after that is debounced so typing does not fire a request per key.
+        // The URL is synced at the same settle point, independent of the request
+        // outcome, so a failed or rate-limited search still leaves a shareable URL.
+        const immediate = isFirstRunRef.current;
+        isFirstRunRef.current = false;
+
         if (!query.trim()) {
-            const timer = setTimeout(() => {
+            abortRef.current?.abort();
+            debounceRef.current = setTimeout(() => {
+                syncUrl('', filters);
                 setResults([]);
+                setTotal(0);
+                setTotalMatches(0);
                 setExpandedMatches(new Set());
+                setErrorMsg(null);
+            }, 0);
+        } else {
+            debounceRef.current = setTimeout(() => {
+                syncUrl(query, filters);
+                void runQuery(0);
+            }, immediate ? 0 : 300);
+        }
+
+        return () => {
+            if (debounceRef.current) clearTimeout(debounceRef.current);
+        };
+    }, [query, filters, runQuery, syncUrl]);
+
+    useEffect(() => () => abortRef.current?.abort(), []);
+
+    // Suggestions are advisory, so failures are swallowed rather than surfaced. Results
+    // are cached per prefix, so retyping a prefix never costs a second request.
+    useEffect(() => {
+        const needle = query.trim();
+
+        if (needle.length < MIN_SUGGEST_LENGTH) {
+            suggestAbortRef.current?.abort();
+            const timer = setTimeout(() => {
+                setSuggestions([]);
+                setSuggestOpen(false);
             }, 0);
             return () => clearTimeout(timer);
         }
 
-        const timer = setTimeout(() => {
-            void handleSearch();
-        }, 300);
+        const key = needle.toLowerCase();
+        const cached = suggestCacheRef.current.get(key);
+        if (cached) {
+            const timer = setTimeout(() => {
+                setSuggestions(cached);
+                setSuggestOpen(cached.length > 0);
+            }, 0);
+            return () => clearTimeout(timer);
+        }
+
+        const timer = setTimeout(async () => {
+            suggestAbortRef.current?.abort();
+            const controller = new AbortController();
+            suggestAbortRef.current = controller;
+
+            try {
+                const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(needle)}`, {
+                    signal: controller.signal,
+                });
+                if (!response.ok) return;
+
+                const payload = (await response.json()) as { suggestions: Suggestion[] };
+                suggestCacheRef.current.set(key, payload.suggestions);
+                setSuggestions(payload.suggestions);
+                setSuggestOpen(payload.suggestions.length > 0);
+            } catch {
+                // Aborted or offline — leave whatever is on screen alone.
+            }
+        }, 200);
 
         return () => clearTimeout(timer);
-    }, [query, filters, handleSearch]);
+    }, [query, setSuggestions, setSuggestOpen]);
+
+    // Delegated so clicks are captured without threading a callback through every
+    // card, and attached as a listener rather than a JSX handler because the container
+    // is a listbox wrapper, not an interactive control.
+    useEffect(() => {
+        const el = listRef.current;
+        if (!el) return;
+
+        const onClick = (event: MouseEvent) => {
+            const row = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-media-id]');
+            const rank = Number(row?.dataset.resultRank);
+            if (!row || !Number.isFinite(rank)) return;
+
+            logSearchEvent({
+                name: 'search.click',
+                query: queryRef.current.trim(),
+                rank,
+                mediaId: row.dataset.mediaId ?? '',
+                matchKind: row.dataset.matchKind,
+            });
+        };
+
+        el.addEventListener('click', onClick);
+        return () => el.removeEventListener('click', onClick);
+    }, []);
+
+    useEffect(() => {
+        if (!suggestOpen) return;
+        const onPointerDown = (event: PointerEvent) => {
+            if (!searchFieldRef.current?.contains(event.target as Node)) {
+                setSuggestOpen(false);
+            }
+        };
+        document.addEventListener('pointerdown', onPointerDown);
+        return () => document.removeEventListener('pointerdown', onPointerDown);
+    }, [suggestOpen, setSuggestOpen]);
 
     const toggleMatches = (itemKey: string) => {
         setExpandedMatches((prev) => {
@@ -427,11 +674,15 @@ function SearchContent() {
                             <form
                                 onSubmit={(event) => {
                                     event.preventDefault();
-                                    void handleSearch();
+                                    // Submitting bypasses the debounce rather than racing it.
+                                    if (debounceRef.current) clearTimeout(debounceRef.current);
+                                    setSuggestOpen(false);
+                                    syncUrl(query, filters);
+                                    void runQuery(0);
                                 }}
                                 className="relative flex flex-col sm:flex-row sm:items-center gap-3"
                             >
-                                <div className="relative flex-1">
+                                <div ref={searchFieldRef} className="relative flex-1">
                                     <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
                                     <input
                                         id="archive-search-input"
@@ -442,9 +693,18 @@ function SearchContent() {
                                         placeholder="Search transcripts, perspectives, appendices..."
                                         aria-label="Search transcripts, perspectives, appendices"
                                         className="archive-input w-full py-2.5 pl-11 pr-24 text-sm sm:text-base rounded-2xl border border-ed-rule/60 dark:border-white/10 bg-ed-bg/60 dark:bg-black/40 text-ed-fg backdrop-blur-xl focus:border-ed-fg dark:focus:border-white/30 transition-all"
-                                        onKeyDown={nav.onKeyDown}
+                                        onKeyDown={(event) => {
+                                            // Escape dismisses the suggestion list first; only once it is
+                                            // closed does Escape fall through to exiting result navigation.
+                                            if (event.key === 'Escape' && suggestOpen) {
+                                                event.preventDefault();
+                                                setSuggestOpen(false);
+                                                return;
+                                            }
+                                            nav.onKeyDown(event);
+                                        }}
                                         role="combobox"
-                                        aria-expanded={rankedResults.length > 0}
+                                        aria-expanded={suggestOpen || results.length > 0}
                                         aria-controls="search-results"
                                         aria-autocomplete="list"
                                         aria-activedescendant={nav.activeNodeId ?? undefined}
@@ -465,6 +725,36 @@ function SearchContent() {
                                     >
                                         Search
                                     </button>
+
+                                    {suggestOpen && suggestions.length > 0 ? (
+                                        <ul
+                                            id="search-suggestions"
+                                            role="listbox"
+                                            aria-label="Title suggestions"
+                                            className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-2xl border border-ed-rule/60 dark:border-white/10 bg-ed-surface/95 shadow-lg backdrop-blur-xl"
+                                        >
+                                            {suggestions.map((suggestion, position) => (
+                                                <li key={`${suggestion.type}-${suggestion.id}`} role="option" aria-selected="false">
+                                                    <Link
+                                                        href={getMediaLink({ id: suggestion.id, title: suggestion.title, type: suggestion.type }, '')}
+                                                        onClick={() => {
+                                                            setSuggestOpen(false);
+                                                            logSearchEvent({
+                                                                name: 'search.suggest_select',
+                                                                query: query.trim(),
+                                                                suggestionId: suggestion.id,
+                                                                position,
+                                                            });
+                                                        }}
+                                                        className="flex items-center gap-2.5 px-4 py-2.5 text-left text-sm text-ed-fg transition-colors hover:bg-ed-accent/10"
+                                                    >
+                                                        <SuggestionIcon type={suggestion.type} />
+                                                        <span className="truncate">{suggestion.title}</span>
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : null}
                                 </div>
 
                                 {/* Source Filter Segmented Pill Group */}
@@ -534,10 +824,33 @@ function SearchContent() {
                                 </div>
                             </form>
 
+                            {/* Recognised query operators, so it is visible when syntax took effect */}
+                            {hasOperators(parsedQuery) ? (
+                                <div className="flex flex-wrap items-center gap-1.5" aria-label="Active query operators">
+                                    {parsedQuery.types.map((type) => (
+                                        <span key={`type-${type}`} className={OPERATOR_CHIP_CLASS}>type:{type}</span>
+                                    ))}
+                                    {parsedQuery.exclusions.map((term) => (
+                                        <span key={`not-${term}`} className={OPERATOR_CHIP_CLASS}>excluding {term}</span>
+                                    ))}
+                                    {parsedQuery.after !== undefined ? (
+                                        <span className={OPERATOR_CHIP_CLASS}>after {parsedQuery.after}</span>
+                                    ) : null}
+                                    {parsedQuery.before !== undefined ? (
+                                        <span className={OPERATOR_CHIP_CLASS}>before {parsedQuery.before}</span>
+                                    ) : null}
+                                </div>
+                            ) : null}
+
                             {/* Stats Line below search bar */}
                             <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-ed-rule/60 text-xs">
                                 <div className="flex items-center gap-2 font-sans font-bold text-ed-fg">
-                                    <span>{results.length > 0 ? `${results.length} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
+                                    <span>{total > 0 ? `${total} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
+                                    {isSearching && results.length > 0 ? (
+                                        <span aria-live="polite" className="font-mono text-[0.68rem] font-normal text-ed-fg-muted">
+                                            Updating results…
+                                        </span>
+                                    ) : null}
                                 </div>
                                 <span className="font-mono text-[0.68rem] text-ed-fg-muted">
                                     Exact phrases and nearby terms are already folded into the ranking.
@@ -552,8 +865,10 @@ function SearchContent() {
                         ) : null}
 
                         {/* Search Results List */}
-                        <div id="search-results" role="listbox" aria-label="Search results" className="space-y-6">
-                            {isSearching ? (
+                        <div ref={listRef} id="search-results" role="listbox" aria-label="Search results" className="space-y-6">
+                            {/* Skeletons only when there is nothing to keep on screen; an
+                                existing result set is dimmed and left in place instead. */}
+                            {isSearching && results.length === 0 ? (
                                 <div aria-live="polite" className="space-y-4">
                                     <span className="sr-only">Searching the archive...</span>
                                     {Array.from({ length: 3 }).map((_, index) => (
@@ -582,32 +897,59 @@ function SearchContent() {
                                 </div>
                             ) : null}
 
-                            {!isSearching && rankedResults.slice(0, visibleCount).map((result, index) => {
-                                const itemKey = `${result.media.id}${result.media.page ? `-${result.media.page}` : ''}`;
-                                const active = nav.activeCardIndex === index ? nav.activePassageIndex : null;
-                                return (
-                                    <SearchResultCard
-                                        key={itemKey}
-                                        cardIndex={index}
-                                        active={active}
-                                        result={result}
-                                        query={query}
-                                        rank={index + 1}
-                                        expanded={expandedMatches.has(itemKey)}
-                                        onToggle={() => toggleMatches(itemKey)}
-                                    />
-                                );
-                            })}
+                            {results.length > 0 ? (
+                                <div
+                                    className={`relative transition-opacity duration-200 ${isSearching ? 'opacity-50' : 'opacity-100'}`}
+                                    style={{ height: virtualizer.getTotalSize() }}
+                                >
+                                    {virtualizer.getVirtualItems().map((virtualRow) => {
+                                        const result = results[virtualRow.index];
+                                        const itemKey = `${result.media.id}${result.media.page ? `-${result.media.page}` : ''}`;
+                                        const active = nav.activeCardIndex === virtualRow.index ? nav.activePassageIndex : null;
+                                        return (
+                                            <div
+                                                key={itemKey}
+                                                data-index={virtualRow.index}
+                                                data-media-id={result.media.id}
+                                                data-result-rank={virtualRow.index}
+                                                data-match-kind={result.matches[0]?.kind}
+                                                ref={virtualizer.measureElement}
+                                                className="absolute left-0 top-0 w-full"
+                                                style={{
+                                                    transform: `translateY(${virtualRow.start - virtualizer.options.scrollMargin}px)`,
+                                                }}
+                                            >
+                                                {/* Absolute positioning drops the parent's space-y gap, so the
+                                                    gap rides along inside the measured height instead. */}
+                                                <div className="pb-6">
+                                                    <SearchResultCard
+                                                        cardIndex={virtualRow.index}
+                                                        active={active}
+                                                        result={result}
+                                                        query={query}
+                                                        rank={virtualRow.index + 1}
+                                                        expanded={expandedMatches.has(itemKey)}
+                                                        onToggle={() => toggleMatches(itemKey)}
+                                                    />
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            ) : null}
                         </div>
 
-                        {visibleCount < rankedResults.length ? (
+                        {!isSearching && results.length < total ? (
                             <div className="flex justify-center pt-4">
                                 <button
                                     type="button"
-                                    onClick={() => setVisibleCount((prev) => prev + 10)}
-                                    className="archive-button archive-button-secondary rounded-full px-8 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-ed-fg hover:border-ed-fg shadow-md"
+                                    onClick={() => void runQuery(results.length)}
+                                    disabled={isLoadingMore}
+                                    className="archive-button archive-button-secondary rounded-full px-8 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-ed-fg hover:border-ed-fg shadow-md disabled:opacity-50"
                                 >
-                                    Load More Results ({rankedResults.length - visibleCount} remaining)
+                                    {isLoadingMore
+                                        ? 'Loading…'
+                                        : `Load More Results (${total - results.length} remaining)`}
                                 </button>
                             </div>
                         ) : null}

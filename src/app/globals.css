@@ -144,12 +144,12 @@
   --color-ed-console-muted: var(--ed-console-muted);
   --color-ed-console-accent: var(--ed-console-accent);
   --color-ed-console-rule: var(--ed-console-rule);
-  --font-sans: var(--font-inter), var(--font-libre-franklin), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
   --font-serif: var(--font-local-superior);
   --font-display: var(--font-inter), var(--font-local-superior), sans-serif;
   --font-arabic: var(--font-amiri);
-  --font-body: var(--font-inter), var(--font-libre-franklin), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
   --font-ui: var(--font-inter), sans-serif;
   --font-slab: var(--font-roboto-slab), serif;
   --ease-spring-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -187,7 +187,9 @@ body {
   max-width: 100%;
   background: var(--ed-bg);
   color: var(--ed-fg);
-  font-family: var(--font-libre-franklin), ui-sans-serif, system-ui, sans-serif;
+  /* Was Libre Franklin while every token above resolved to Inter — two grotesques
+     doing one job. Body now matches the rest of the system. */
+  font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.6;
   text-rendering: optimizeLegibility;

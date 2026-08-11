@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { parseTimeParam } from '@/lib/formatUtils';
 import type { PlayerProps } from './Player';
 
 const Player = dynamic(() => import('./Player'), {
@@ -17,12 +18,8 @@ type PlayerWrapperProps = Omit<PlayerProps, 'initialSeekTime'>;
 
 function PlayerWithSeek(props: PlayerWrapperProps) {
   const searchParams = useSearchParams();
-  const rawTime = searchParams.get('t');
-  const requestedTime = rawTime !== null ? Number(rawTime) : undefined;
-  const initialSeekTime =
-    requestedTime !== undefined && Number.isFinite(requestedTime) && requestedTime >= 0
-      ? requestedTime
-      : undefined;
+  const requestedTime = parseTimeParam(searchParams.get('t'));
+  const initialSeekTime = requestedTime !== undefined && requestedTime >= 0 ? requestedTime : undefined;
 
   return <Player {...props} initialSeekTime={initialSeekTime} />;
 }

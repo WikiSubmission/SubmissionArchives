@@ -50,6 +50,8 @@ export default function VideosPage() {
         author: video.author,
         duration_seconds: video.duration_seconds,
         thumbnailOverride: video.thumbnailOverride,
+        // Needed by the card's play button to resolve a playback source.
+        youtubeId: video.youtubeId,
         sortValue: index + 1,
         displayDate: '',
     }));

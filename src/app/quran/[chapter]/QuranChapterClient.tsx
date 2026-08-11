@@ -519,7 +519,7 @@ export default function QuranChapterClient({
                 <h3 className="font-serif text-sm font-semibold text-white">
                   Surah Navigator
                 </h3>
-                <p className="mt-1 text-xs text-neutral-500">Jump to any surah instantly</p>
+                <p className="mt-1 text-xs text-neutral-400">Jump to any surah instantly</p>
               </div>
 
               <div className="relative">
@@ -577,7 +577,9 @@ export default function QuranChapterClient({
                     <span
                       className={cn(
                         'font-mono text-xs',
-                        isActive ? 'text-black/60' : 'text-neutral-500',
+                        // neutral-500 on this near-black surface is ~4.3:1, just under
+                        // the 4.5:1 needed for small text; neutral-400 clears it.
+                        isActive ? 'text-black/60' : 'text-neutral-400',
                       )}
                     >
                       {item.verseCount}

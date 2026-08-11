@@ -1,13 +1,28 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, ExternalLink, FileText, Minus, Plus } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+    ChevronLeft,
+    ChevronRight,
+    ChevronsLeft,
+    ChevronsRight,
+    ChevronsUpDown,
+    ExternalLink,
+    FileText,
+    Minus,
+    Plus,
+    RotateCw,
+    Search,
+    X,
+} from 'lucide-react';
 import Link from 'next/link';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Document, Page, Thumbnail, pdfjs } from 'react-pdf';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 import type { PageCallback } from 'react-pdf/dist/shared/types.js';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
+import { getProgress, saveProgress, shouldOfferResume } from '@/lib/readingProgress';
 import { IconBadge, chromeButtonClassLg, dockPillClass, toolbarButtonClass } from '@/components/home/WidgetAccents';
+import CiteButton from '@/components/ui/CiteButton';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 
@@ -18,6 +33,7 @@ if (typeof window !== 'undefined') {
 type Props = {
     pdfUrl: string;
     title: string;
+    documentId: string;
     initialPage: number;
     initialQuery: string;
     prevId?: string | null;
@@ -102,22 +118,86 @@ function computeHighlightRanges(items: TextItem[], terms: string[]): Map<number,
     return ranges;
 }
 
-export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQuery, prevId, nextId, backHref = '/search?filters=other' }: Props) {
+const ZOOM_KEY = 'reader-zoom';
+const ZOOM_MIN = 0.5;
+const ZOOM_MAX = 3;
+const ZOOM_STEP = 0.1;
+
+export default function PDFReaderClient({
+    pdfUrl,
+    title,
+    documentId,
+    initialPage,
+    initialQuery,
+    prevId,
+    nextId,
+    backHref = '/search?filters=other',
+}: Props) {
     const [numPages, setNumPages] = useState<number | null>(null);
     const [pageNumber, setPageNumber] = useState(Math.max(1, initialPage || 1));
     const [containerSize, setContainerSize] = useState({ width: 720, height: 800 });
     const [pageAspectRatio, setPageAspectRatio] = useState<number | null>(null);
-    const [zoom, setZoom] = useState(1);
+    const [zoom, setZoom] = useState(() => {
+        if (typeof window === 'undefined') return 1;
+        const saved = parseFloat(localStorage.getItem(ZOOM_KEY) || '1');
+        return Number.isFinite(saved) ? Math.min(Math.max(saved, ZOOM_MIN), ZOOM_MAX) : 1;
+    });
+    const [rotation, setRotation] = useState(0);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    // Arriving from a search result (?q=/?highlight=) opens the search panel, so the
+    // term and the match counter are visible instead of unexplained highlights.
+    const [searchOpen, setSearchOpen] = useState(Boolean(initialQuery));
+    const [searchQuery, setSearchQuery] = useState(initialQuery);
+    const [matchCount, setMatchCount] = useState(0);
+    const [currentMatch, setCurrentMatch] = useState(0);
+    const [isEditingPage, setIsEditingPage] = useState(false);
+    const [pageInput, setPageInput] = useState(String(Math.max(1, initialPage || 1)));
+    // Offered rather than applied: silently jumping someone past the page they linked to
+    // would be worse than asking.
+    const [resumePage, setResumePage] = useState<number | null>(null);
+
     const containerRef = useRef<HTMLDivElement>(null);
+    const searchInputRef = useRef<HTMLInputElement>(null);
+    const pageInputRef = useRef<HTMLInputElement>(null);
     const hasScrolledToMatch = useRef(false);
-    const query = initialQuery.trim().toLowerCase();
-    const highlightTerms = getHighlightTerms(query);
+    const marksRef = useRef<HTMLElement[]>([]);
     const highlightRangesRef = useRef<Map<number, Array<[number, number]>>>(new Map());
 
+    const query = searchQuery.trim().toLowerCase();
+    const highlightTerms = getHighlightTerms(query);
+
+    useEffect(() => {
+        localStorage.setItem(ZOOM_KEY, String(zoom));
+    }, [zoom]);
+
+    // Record the position once the page count is known, so a stored entry always carries
+    // enough context to judge how far through the document it is.
+    useEffect(() => {
+        if (!numPages) return;
+        saveProgress(documentId, { page: pageNumber, totalPages: numPages });
+    }, [documentId, pageNumber, numPages]);
+
+    // Only offer to resume when the reader was opened at the top, i.e. the visitor did
+    // not ask for a specific page.
+    useEffect(() => {
+        if (!documentId || (initialPage || 1) !== 1) return;
+
+        const stored = getProgress(documentId);
+        if (!shouldOfferResume(stored) || stored!.page === 1) return;
+
+        // Deferred out of the effect body: reading localStorage is the external-system
+        // part, applying it to state belongs on a later task.
+        const timer = setTimeout(() => setResumePage(stored!.page), 0);
+        return () => clearTimeout(timer);
+    }, [documentId, initialPage, setResumePage]);
+
+    // Local cmaps/fonts — copied from pdfjs-dist into /public/pdf/ via
+    // `npm run generate:pdf-assets` — keep non-Latin text rendering off unpkg,
+    // avoiding a runtime CDN dependency for reader traffic.
     const pdfOptions = useMemo(() => ({
-        cMapUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
+        cMapUrl: '/pdf/cmaps/',
         cMapPacked: true,
-        standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+        standardFontDataUrl: '/pdf/standard_fonts/',
     }), []);
 
     // Fit the page to the available viewport rather than a flat width cap — a two-page
@@ -127,7 +207,10 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
         const availableWidth = Math.max(280, containerSize.width - 32);
         const availableHeight = Math.max(280, containerSize.height - 48);
         if (!pageAspectRatio) return Math.min(availableWidth, 900);
-        return Math.min(availableWidth, availableHeight * pageAspectRatio, 1600);
+        // Rotation swaps which dimension constrains the page.
+        const isLandscape = rotation % 180 !== 0;
+        const ratio = isLandscape ? 1 / pageAspectRatio : pageAspectRatio;
+        return Math.min(availableWidth, availableHeight * ratio, 1600);
     })();
 
     // Reset the target page whenever the document or requested page changes.
@@ -136,12 +219,19 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
     const [resetKey, setResetKey] = useState({ pdfUrl, initialPage });
     if (resetKey.pdfUrl !== pdfUrl || resetKey.initialPage !== initialPage) {
         setResetKey({ pdfUrl, initialPage });
-        setPageNumber(Math.max(1, initialPage || 1));
+        const resetPage = Math.max(1, initialPage || 1);
+        setPageNumber(resetPage);
+        setPageInput(String(resetPage));
+        setRotation(0);
+        setSearchQuery(initialQuery);
+        setMatchCount(0);
+        setCurrentMatch(0);
     }
 
     // Clamp once the real page count is known, also during render rather than an effect.
     if (numPages && pageNumber > numPages) {
         setPageNumber(numPages);
+        setPageInput(String(numPages));
     }
 
     // Refs are effect-only territory (mutating one during render is unsafe), so the
@@ -160,6 +250,74 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
         observer.observe(el);
         return () => observer.disconnect();
     }, []);
+
+    const goToPage = useCallback((next: number) => {
+        if (!numPages) return;
+        const clamped = Math.min(Math.max(1, next), numPages);
+        hasScrolledToMatch.current = true;
+        setPageNumber(clamped);
+        setPageInput(String(clamped));
+    }, [numPages]);
+
+    const jumpToMatch = useCallback((direction: 'next' | 'prev') => {
+        const marks = marksRef.current;
+        if (!marks.length) return;
+        const idx = direction === 'next'
+            ? (currentMatch + 1) % marks.length
+            : (currentMatch - 1 + marks.length) % marks.length;
+        setCurrentMatch(idx);
+        marks[idx]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, [currentMatch]);
+
+    // Keyboard navigation: arrows/Home/End to page, `/` to search, +/- to zoom, R to rotate.
+    useEffect(() => {
+        const handler = (e: KeyboardEvent) => {
+            if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+                if (e.key === 'Escape') (e.target as HTMLElement).blur();
+                return;
+            }
+
+            switch (e.key) {
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    goToPage(pageNumber - 1);
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    goToPage(pageNumber + 1);
+                    break;
+                case 'Home':
+                    e.preventDefault();
+                    goToPage(1);
+                    break;
+                case 'End':
+                    e.preventDefault();
+                    goToPage(numPages ?? 1);
+                    break;
+                case '/':
+                    e.preventDefault();
+                    setSearchOpen(true);
+                    setTimeout(() => searchInputRef.current?.focus(), 50);
+                    break;
+                case '+':
+                case '=':
+                    e.preventDefault();
+                    setZoom((z) => Math.min(ZOOM_MAX, z + ZOOM_STEP));
+                    break;
+                case '-':
+                    e.preventDefault();
+                    setZoom((z) => Math.max(ZOOM_MIN, z - ZOOM_STEP));
+                    break;
+                case 'r':
+                case 'R':
+                    e.preventDefault();
+                    setRotation((r) => (r + 90) % 360);
+                    break;
+            }
+        };
+        window.addEventListener('keydown', handler);
+        return () => window.removeEventListener('keydown', handler);
+    }, [pageNumber, numPages, goToPage]);
 
     const handlePageLoadSuccess = (page: PageCallback) => {
         if (page.originalWidth && page.originalHeight) {
@@ -189,44 +347,105 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
         return result;
     };
 
-    const handlePageRenderSuccess = () => {
-        if (!query || hasScrolledToMatch.current) return;
-        hasScrolledToMatch.current = true;
+    const updateMatchState = useCallback(() => {
         requestAnimationFrame(() => {
-            const mark = containerRef.current?.querySelector('mark.pdf-search-highlight');
-            mark?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const marks = Array.from(containerRef.current?.querySelectorAll('mark.pdf-search-highlight') ?? []);
+            marksRef.current = marks as HTMLElement[];
+            setMatchCount(marks.length);
+            if (marks.length > 0 && !hasScrolledToMatch.current) {
+                hasScrolledToMatch.current = true;
+                setCurrentMatch(0);
+                marks[0]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
+    }, []);
+
+    const handlePageRenderSuccess = () => {
+        updateMatchState();
     };
 
-    const goToPage = (next: number) => {
-        if (!numPages) return;
-        hasScrolledToMatch.current = true;
-        setPageNumber(Math.min(Math.max(1, next), numPages));
+    const handlePageInputSubmit = () => {
+        const parsed = parseInt(pageInput, 10);
+        if (Number.isFinite(parsed) && parsed >= 1 && numPages && parsed <= numPages) {
+            goToPage(parsed);
+        } else {
+            setPageInput(String(pageNumber));
+        }
+        setIsEditingPage(false);
     };
+
+    const fitToWidth = () => {
+        if (!containerRef.current) return;
+        const availableWidth = containerRef.current.clientWidth - 48;
+        const baseWidth = pageAspectRatio && pageAspectRatio > 1 ? 800 : 600;
+        setZoom(Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, availableWidth / baseWidth)));
+    };
+
+    // Loading skeleton that approximates the page's real dimensions, avoiding layout shift.
+    const loadingSkeleton = (
+        <div
+            className="soft-shell animate-pulse rounded-2xl bg-ed-muted/40"
+            style={{
+                width: pageWidth,
+                height: pageAspectRatio ? pageWidth / pageAspectRatio : 600,
+            }}
+        />
+    );
 
     // Built once and rendered twice below: inline in the header on desktop,
     // and as a floating dock bar on mobile, so the two never drift apart.
     const toolbar = (
         <>
+            <button
+                type="button"
+                onClick={() => {
+                    setSearchOpen((s) => !s);
+                    if (!searchOpen) setTimeout(() => searchInputRef.current?.focus(), 50);
+                }}
+                className={toolbarButtonClass}
+                title="Search in document (/)"
+                aria-label="Search in document"
+                aria-pressed={searchOpen}
+            >
+                <Search className="h-4 w-4" />
+            </button>
+
+            <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
+
             <div className="flex items-center gap-0.5">
                 <button
                     type="button"
-                    onClick={() => setZoom((z) => Math.max(0.6, z - 0.1))}
+                    onClick={() => setZoom((z) => Math.max(ZOOM_MIN, z - ZOOM_STEP))}
                     className={toolbarButtonClass}
                     title="Zoom out"
                     aria-label="Zoom out"
                 >
                     <Minus className="h-4 w-4" />
                 </button>
-                <span className="w-11 text-center text-xs text-ed-fg-muted tabular-nums">{Math.round(zoom * 100)}%</span>
+                <span
+                    className="w-11 text-center text-xs text-ed-fg-muted tabular-nums"
+                    aria-live="polite"
+                    aria-atomic="true"
+                >
+                    {Math.round(zoom * 100)}%
+                </span>
                 <button
                     type="button"
-                    onClick={() => setZoom((z) => Math.min(2, z + 0.1))}
+                    onClick={() => setZoom((z) => Math.min(ZOOM_MAX, z + ZOOM_STEP))}
                     className={toolbarButtonClass}
                     title="Zoom in"
                     aria-label="Zoom in"
                 >
                     <Plus className="h-4 w-4" />
+                </button>
+                <button
+                    type="button"
+                    onClick={fitToWidth}
+                    className={toolbarButtonClass}
+                    title="Fit to width"
+                    aria-label="Fit to width"
+                >
+                    <ChevronsUpDown className="h-4 w-4" />
                 </button>
             </div>
 
@@ -243,9 +462,44 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                 >
                     <ChevronLeft className="h-5 w-5" />
                 </button>
-                <span aria-live="polite" className={dockPillClass}>
-                    {pageNumber} / {numPages ?? '…'}
-                </span>
+
+                {isEditingPage ? (
+                    <input
+                        ref={pageInputRef}
+                        type="text"
+                        inputMode="numeric"
+                        value={pageInput}
+                        onChange={(e) => setPageInput(e.target.value)}
+                        onBlur={handlePageInputSubmit}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') handlePageInputSubmit();
+                            if (e.key === 'Escape') {
+                                setPageInput(String(pageNumber));
+                                setIsEditingPage(false);
+                            }
+                        }}
+                        className="w-16 text-center text-xs tabular-nums bg-transparent border-b border-ed-accent text-ed-fg focus:outline-none"
+                        autoFocus
+                        aria-label="Go to page"
+                    />
+                ) : (
+                    <button
+                        type="button"
+                        onClick={() => {
+                            setIsEditingPage(true);
+                            setPageInput(String(pageNumber));
+                            setTimeout(() => pageInputRef.current?.select(), 50);
+                        }}
+                        className={dockPillClass}
+                        title="Click to enter page number"
+                        aria-label={`Page ${pageNumber} of ${numPages ?? 'unknown'}. Click to edit.`}
+                    >
+                        <span aria-live="polite">{pageNumber}</span>
+                        <span className="text-ed-fg-muted">/</span>
+                        <span>{numPages ?? '…'}</span>
+                    </button>
+                )}
+
                 <button
                     type="button"
                     onClick={() => goToPage(pageNumber + 1)}
@@ -258,6 +512,35 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                 </button>
             </div>
 
+            {matchCount > 0 && (
+                <>
+                    <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
+                    <div className="flex items-center gap-0.5">
+                        <button
+                            type="button"
+                            onClick={() => jumpToMatch('prev')}
+                            className={toolbarButtonClass}
+                            title="Previous match"
+                            aria-label="Previous match"
+                        >
+                            <ChevronLeft className="h-4 w-4" />
+                        </button>
+                        <span className="min-w-[3ch] text-center text-xs text-ed-fg-muted tabular-nums">
+                            {currentMatch + 1}/{matchCount}
+                        </span>
+                        <button
+                            type="button"
+                            onClick={() => jumpToMatch('next')}
+                            className={toolbarButtonClass}
+                            title="Next match"
+                            aria-label="Next match"
+                        >
+                            <ChevronRight className="h-4 w-4" />
+                        </button>
+                    </div>
+                </>
+            )}
+
             {(prevId || nextId) && (
                 <>
                     <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
@@ -265,6 +548,7 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                         {prevId ? (
                             <Link
                                 href={`/library/${prevId}`}
+                                prefetch
                                 className={toolbarButtonClass}
                                 title="Previous document"
                                 aria-label="Previous document"
@@ -272,11 +556,12 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                                 <ChevronsLeft className="h-4 w-4" />
                             </Link>
                         ) : (
-                            <div className="min-h-11 min-w-11" />
+                            <span className="min-h-11 min-w-11" aria-hidden="true" />
                         )}
                         {nextId ? (
                             <Link
                                 href={`/library/${nextId}`}
+                                prefetch
                                 className={toolbarButtonClass}
                                 title="Next document"
                                 aria-label="Next document"
@@ -284,11 +569,23 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                                 <ChevronsRight className="h-4 w-4" />
                             </Link>
                         ) : (
-                            <div className="min-h-11 min-w-11" />
+                            <span className="min-h-11 min-w-11" aria-hidden="true" />
                         )}
                     </div>
                 </>
             )}
+
+            <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
+
+            <button
+                type="button"
+                onClick={() => setRotation((r) => (r + 90) % 360)}
+                className={toolbarButtonClass}
+                title="Rotate (R)"
+                aria-label="Rotate page"
+            >
+                <RotateCw className="h-4 w-4" />
+            </button>
 
             <div className="mx-1 h-6 w-px shrink-0 bg-ed-rule" aria-hidden="true" />
 
@@ -302,6 +599,8 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
             >
                 <ExternalLink className="h-4 w-4" />
             </Link>
+
+            <CiteButton source={{ title, locator: `p. ${pageNumber}` }} />
         </>
     );
 
@@ -330,36 +629,156 @@ export default function PDFReaderClient({ pdfUrl, title, initialPage, initialQue
                 </div>
 
                 {/* Toolbar: inline on desktop; mirrored as a floating dock below on mobile */}
-                <div className="hidden shrink-0 items-center gap-0.5 rounded-2xl border border-ed-rule bg-ed-surface/70 p-1 shadow-sm sm:flex">
+                <div
+                    className="hidden shrink-0 items-center gap-0.5 rounded-2xl border border-ed-rule bg-ed-surface/70 p-1 shadow-sm sm:flex"
+                    role="toolbar"
+                    aria-label="Document controls"
+                >
                     {toolbar}
                 </div>
+
+                <button
+                    type="button"
+                    onClick={() => setSidebarOpen((s) => !s)}
+                    className={`${toolbarButtonClass} sm:hidden`}
+                    aria-label="Toggle thumbnail sidebar"
+                    aria-pressed={sidebarOpen}
+                >
+                    <FileText className="h-4 w-4" />
+                </button>
             </header>
 
-            <div ref={containerRef} className="min-h-0 flex-1 overflow-auto overscroll-contain bg-ed-viewer-bg px-2 py-4 pb-28 sm:px-0 sm:py-6 sm:pb-6">
-                <div className="flex justify-center">
-                    <Document
-                        file={pdfUrl}
-                        options={pdfOptions}
-                        onLoadSuccess={({ numPages: loadedPages }) => setNumPages(loadedPages)}
-                        loading={<div className="py-20 text-center text-sm text-ed-fg-muted">Loading document…</div>}
-                        error={<div className="py-20 text-center text-sm text-ed-fg-muted">Couldn&apos;t load this document.</div>}
-                    >
-                        <Page
-                            pageNumber={pageNumber}
-                            width={pageWidth * zoom}
-                            customTextRenderer={highlightRenderer}
-                            onLoadSuccess={handlePageLoadSuccess}
-                            onGetTextSuccess={handleGetTextSuccess}
-                            onRenderSuccess={handlePageRenderSuccess}
-                            className="soft-shell overflow-hidden"
+            {resumePage !== null ? (
+                <div className="flex items-center justify-between gap-3 border-b border-ed-rule bg-ed-accent/10 px-3 py-2 text-xs sm:px-4">
+                    <span className="text-ed-fg">You were last reading page {resumePage}.</span>
+                    <div className="flex items-center gap-2">
+                        <button
+                            type="button"
+                            onClick={() => {
+                                goToPage(resumePage);
+                                setResumePage(null);
+                            }}
+                            className="rounded-full border border-ed-accent/40 bg-ed-accent/15 px-3 py-1 font-semibold text-ed-accent"
+                        >
+                            Resume
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => setResumePage(null)}
+                            className="p-1 text-ed-fg-muted hover:text-ed-fg"
+                            aria-label="Dismiss resume prompt"
+                        >
+                            <X className="h-3.5 w-3.5" />
+                        </button>
+                    </div>
+                </div>
+            ) : null}
+
+            {searchOpen && (
+                <div className="border-b border-ed-rule bg-ed-surface/50 px-3 py-2 backdrop-blur-xl">
+                    <div className="mx-auto flex max-w-md items-center gap-2">
+                        <Search className="h-4 w-4 text-ed-fg-muted" aria-hidden="true" />
+                        <input
+                            ref={searchInputRef}
+                            type="search"
+                            value={searchQuery}
+                            onChange={(e) => {
+                                setSearchQuery(e.target.value);
+                                hasScrolledToMatch.current = false;
+                                setCurrentMatch(0);
+                            }}
+                            placeholder="Search in document…"
+                            className="flex-1 bg-transparent text-sm text-ed-fg placeholder:text-ed-fg-muted focus:outline-none"
+                            aria-label="Search text in document"
                         />
-                    </Document>
+                        {searchQuery && (
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setSearchQuery('');
+                                    setMatchCount(0);
+                                    setCurrentMatch(0);
+                                }}
+                                className="p-1 text-ed-fg-muted hover:text-ed-fg"
+                                aria-label="Clear search"
+                            >
+                                <X className="h-4 w-4" />
+                            </button>
+                        )}
+                        <span className="text-xs text-ed-fg-muted hidden sm:inline">
+                            Press / to focus
+                        </span>
+                    </div>
+                </div>
+            )}
+
+            <div className="flex flex-1 overflow-hidden">
+                {sidebarOpen && (
+                    <aside className="w-44 shrink-0 overflow-y-auto border-r border-ed-rule bg-ed-surface/50 p-2 backdrop-blur-xl sm:w-52 sm:p-3">
+                        <Document file={pdfUrl} options={pdfOptions}>
+                            {numPages &&
+                                Array.from({ length: numPages }, (_, i) => (
+                                    <button
+                                        key={i}
+                                        type="button"
+                                        onClick={() => goToPage(i + 1)}
+                                        className={`mb-2 w-full rounded-lg border p-1 transition-colors ${
+                                            pageNumber === i + 1
+                                                ? 'border-ed-accent bg-ed-accent/10'
+                                                : 'border-transparent hover:border-ed-rule hover:bg-ed-surface'
+                                        }`}
+                                        aria-label={`Go to page ${i + 1}`}
+                                        aria-current={pageNumber === i + 1 ? 'true' : undefined}
+                                    >
+                                        <Thumbnail
+                                            pageNumber={i + 1}
+                                            width={160}
+                                            className="rounded-md"
+                                        />
+                                        <span className="mt-1 block text-center text-[10px] text-ed-fg-muted tabular-nums">
+                                            {i + 1}
+                                        </span>
+                                    </button>
+                                ))}
+                        </Document>
+                    </aside>
+                )}
+
+                <div ref={containerRef} className="min-h-0 flex-1 overflow-auto overscroll-contain bg-ed-viewer-bg px-2 py-4 pb-28 sm:px-0 sm:py-6 sm:pb-6">
+                    <div className="flex justify-center">
+                        <Document
+                            file={pdfUrl}
+                            options={pdfOptions}
+                            onLoadSuccess={({ numPages: loadedPages }) => setNumPages(loadedPages)}
+                            loading={loadingSkeleton}
+                            error={
+                                <div className="py-20 text-center text-sm text-ed-fg-muted">
+                                    Couldn&apos;t load this document.
+                                </div>
+                            }
+                        >
+                            <Page
+                                pageNumber={pageNumber}
+                                width={pageWidth * zoom}
+                                rotate={rotation}
+                                customTextRenderer={highlightRenderer}
+                                onLoadSuccess={handlePageLoadSuccess}
+                                onGetTextSuccess={handleGetTextSuccess}
+                                onRenderSuccess={handlePageRenderSuccess}
+                                className="soft-shell overflow-hidden"
+                            />
+                        </Document>
+                    </div>
                 </div>
             </div>
 
             {/* Floating dock toolbar — mobile only. Mirrors the desktop header toolbar. */}
             <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] sm:hidden">
-                <div className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-2xl border border-ed-rule bg-ed-surface/90 p-1 shadow-2xl shadow-ed-accent/10 backdrop-blur-xl">
+                <div
+                    className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-2xl border border-ed-rule bg-ed-surface/90 p-1 shadow-2xl shadow-ed-accent/10 backdrop-blur-xl"
+                    role="toolbar"
+                    aria-label="Document controls"
+                >
                     {toolbar}
                 </div>
             </div>

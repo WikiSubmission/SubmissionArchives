@@ -8,6 +8,9 @@ import {
     ArrowLeft, ArrowRight, Download
 } from 'lucide-react';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
+import CiteButton from '@/components/ui/CiteButton';
+import { useGlobalPlayer } from '@/components/player/GlobalMediaPlayer';
+import { getMediaHref } from '@/lib/utils';
 
 import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
@@ -121,6 +124,9 @@ export default function Player({
 
     const isVideo = media.type === 'sermon' || media.type === 'video-program';
     const thumbnail = getThumbnail(media);
+    // Some records have no transcript at all. Everything transcript-shaped — the panel,
+    // the view toggle, the export button — is hidden rather than rendered empty.
+    const hasTranscript = activeSegments.length > 0;
 
     // Sanitize clip times
     const effectiveClipStartTime = Number.isFinite(clipStartTime) && clipStartTime! > 0 ? clipStartTime : undefined;
@@ -140,6 +146,44 @@ export default function Player({
         const el = document.getElementById(`seg-${activeSegments[activeSegmentIndex].segment_index ?? activeSegmentIndex}`);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, [activeSegmentIndex, autoScroll, searchQuery, activeSegments]);
+
+    // Keeps the address bar pointing at the current position so the URL is always
+    // copy-pasteable, using replaceState so playback never stacks history entries.
+    // Written at ~2s granularity: a deliberate scrub lands almost immediately while
+    // steady playback does not churn.
+    const lastSyncedTimeRef = useRef(-1);
+    useEffect(() => {
+        const seconds = Math.floor(absoluteTime);
+        if (seconds <= 0) return;
+        if (Math.abs(seconds - lastSyncedTimeRef.current) < 2) return;
+
+        lastSyncedTimeRef.current = seconds;
+        const params = new URLSearchParams(window.location.search);
+        params.set('t', String(seconds));
+        window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
+    }, [absoluteTime]);
+
+    // Hand playback off to the docked player when leaving this page mid-play, so a talk
+    // keeps going while you browse. Position is carried across; refs are read in the
+    // cleanup because state at unmount would be stale.
+    const { playTrack } = useGlobalPlayer();
+    const handoffRef = useRef({ isPlaying: false, time: 0, url: mediaUrl, title: media.displayTitle, id: media.id });
+    useEffect(() => {
+        handoffRef.current = {
+            isPlaying,
+            time: absoluteTime,
+            url: mediaUrl,
+            title: media.displayTitle,
+            id: media.id,
+        };
+    }, [isPlaying, absoluteTime, mediaUrl, media.displayTitle, media.id]);
+
+    useEffect(() => () => {
+        const { isPlaying: wasPlaying, time, url, title, id } = handoffRef.current;
+        if (wasPlaying && url) {
+            playTrack({ id, title, url, href: getMediaHref(id) }, time);
+        }
+    }, [playTrack]);
 
     const handleSegmentClick = (startTime: number) => {
         if (playerRef.current) {
@@ -200,7 +244,7 @@ export default function Player({
                             </button>
                         </div>
                     )}
-                    <div className="inline-flex rounded-lg border border-ed-rule bg-ed-surface p-1">
+                    <div className={`inline-flex rounded-lg border border-ed-rule bg-ed-surface p-1 ${hasTranscript ? '' : 'hidden'}`}>
                         <button
                             type="button"
                             onClick={() => setViewMode('transcript')}
@@ -222,7 +266,7 @@ export default function Player({
                     </div>
                 </div>
 
-                <div className={`grid gap-8 transition-all duration-500 ease-in-out ${viewMode === 'transcript' ? 'lg:grid-cols-[1fr_450px] xl:grid-cols-[1fr_500px]' : 'grid-cols-1 max-w-5xl mx-auto'}`}>
+                <div className={`grid gap-8 transition-all duration-500 ease-in-out ${viewMode === 'transcript' && hasTranscript ? 'lg:grid-cols-[1fr_450px] xl:grid-cols-[1fr_500px]' : 'grid-cols-1 max-w-5xl mx-auto'}`}>
 
                     {/* MEDIA & TITLE COLUMN */}
                     <div className="space-y-6">
@@ -292,24 +336,38 @@ export default function Player({
                         {/* Navigation and Actions */}
                         <div className="flex items-center gap-3 px-2">
                             {prev && (
-                                <Link href={`/media/${encodeURIComponent(prev.id)}`} className="soft-pill flex min-h-11 items-center gap-2 px-4 py-2 text-xs font-bold font-ui uppercase tracking-widest transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
+                                <Link href={`/media/${encodeURIComponent(prev.id)}`} prefetch className="soft-pill flex min-h-11 items-center gap-2 px-4 py-2 text-xs font-bold font-ui uppercase tracking-widest transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
                                     <ArrowLeft className="w-4 h-4" /> Prev
                                 </Link>
                             )}
                             {next && (
-                                <Link href={`/media/${encodeURIComponent(next.id)}`} className="soft-pill flex min-h-11 items-center gap-2 px-4 py-2 text-xs font-bold font-ui uppercase tracking-widest transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
+                                <Link href={`/media/${encodeURIComponent(next.id)}`} prefetch className="soft-pill flex min-h-11 items-center gap-2 px-4 py-2 text-xs font-bold font-ui uppercase tracking-widest transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
                                     Next <ArrowRight className="w-4 h-4" />
                                 </Link>
                             )}
                             <div className="ml-auto flex items-center gap-2">
-                                <button type="button" onClick={exportTranscript} aria-label="Download transcript" className="soft-pill flex min-h-11 min-w-11 items-center justify-center p-2.5 text-ed-fg-muted transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent" title="Download Transcript">
-                                    <Download className="w-5 h-5" />
-                                </button>
+                                <CiteButton
+                                    source={{
+                                        title: media.displayTitle,
+                                        author: media.author,
+                                        // displayDate is free text ("June 1989", "Archival Record"),
+                                        // so take a year only when there genuinely is one.
+                                        year: media.displayDate?.match(/\b(1[89]\d{2}|20\d{2})\b/)?.[1],
+                                        locator: absoluteTime > 0 ? formatDuration(absoluteTime) : undefined,
+                                    }}
+                                />
                             </div>
+                            {hasTranscript && (
+                                <div className="flex items-center gap-2">
+                                    <button type="button" onClick={exportTranscript} aria-label="Download transcript" className="soft-pill flex min-h-11 min-w-11 items-center justify-center p-2.5 text-ed-fg-muted transition-colors hover:text-ed-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent" title="Download Transcript">
+                                        <Download className="w-5 h-5" />
+                                    </button>
+                                </div>
+                            )}
                         </div>
 
                         {/* THEATER MODE FEED */}
-                        {viewMode === 'theater' && (
+                        {viewMode === 'theater' && hasTranscript && (
                             <div className="player-fade-up soft-shell mt-8 overflow-hidden">
                                 <div className="flex items-center justify-between border-b border-ed-rule px-6 py-3">
                                     <span className="text-[10px] font-bold font-ui uppercase tracking-[0.2em] text-ed-fg-muted">Synchronized Feed</span>
@@ -342,7 +400,7 @@ export default function Player({
                     </div>
 
                     {/* TRANSCRIPT COLUMN */}
-                    {viewMode === 'transcript' && (
+                    {viewMode === 'transcript' && hasTranscript && (
                             <div
                                 className="player-fade-in soft-shell flex h-[min(70vh,560px)] min-h-[320px] flex-col overflow-hidden lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)]"
                             >

@@ -27,7 +27,7 @@ export function MediaGrid({ media, viewMode, id }: MediaGridProps) {
                         style={{ '--stagger-delay': `${Math.min(index, 8) * 40}ms` } as CSSProperties}
                         aria-label={`Open ${item.displayTitle}`}
                     >
-                        <MediaCard item={item} />
+                        <MediaCard item={item} priority={index < 4} />
                     </Link>
                 ))}
             </div>

@@ -9,6 +9,9 @@ export default defineConfig({
     expect: {
         timeout: 15_000,
     },
+    // Screenshot baselines are platform-specific (font rasterisation differs), so they are
+    // stored per platform rather than overwriting each other.
+    snapshotPathTemplate: '{testDir}/__snapshots__/{testFileName}/{platform}/{arg}{ext}',
     reporter: process.env.CI
         ? [['github'], ['html', { open: 'never' }]]
         : [['list'], ['html', { open: 'never' }]],
@@ -26,6 +29,9 @@ export default defineConfig({
     ],
     webServer: {
         command: 'npm run start',
+        // The suite runs many searches from one IP well inside the limiter's 60s
+        // window; without this the later specs get 429s and fail spuriously.
+        env: { SEARCH_RATE_LIMIT: '1000' },
         url: 'http://127.0.0.1:3000',
         reuseExistingServer: !process.env.CI,
         timeout: 120_000,

@@ -1,7 +1,9 @@
 import Image from 'next/image';
 
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
-import { getPublicAssetUrl } from '@/lib/mediaAssets';
+import { getMediaAssetUrl, getPublicAssetUrl } from '@/lib/mediaAssets';
+import { getMediaHref } from '@/lib/utils';
+import PlayButton from '@/components/player/PlayButton';
 import type { Media } from '@/types/media';
 
 const DEFAULT_MEDIA_THUMBNAIL = '/images/placeholders/rashad-khalifa.png';
@@ -52,8 +54,20 @@ export function getThumbnailSrc(item: Media): string {
     return DEFAULT_MEDIA_THUMBNAIL;
 }
 
-export function MediaCard({ item }: { item: Media }) {
+
+// Only offer inline playback when there is actually a source to play; a few records have
+// no youtubeId and would otherwise render a button that does nothing.
+function playableTrack(item: Media) {
+    const url = item.youtubeId ? getMediaAssetUrl(item) : '';
+    if (!url) return null;
+    return { id: item.id, title: item.displayTitle, url, href: getMediaHref(item.id) };
+}
+
+// `priority` is set by the grid for the handful of cards above the fold: one of them is
+// the LCP element, and Next warns when that image lazy-loads.
+export function MediaCard({ item, priority = false }: { item: Media; priority?: boolean }) {
     const thumbnailSrc = getThumbnailSrc(item);
+    const track = playableTrack(item);
 
     return (
         <article className="media-card-shell group relative flex h-full flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-3.5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)]">
@@ -62,10 +76,14 @@ export function MediaCard({ item }: { item: Media }) {
                     src={thumbnailSrc}
                     alt=""
                     fill
-                    quality={90}
+                    priority={priority}
+                    // 75 rather than 90: at the size these render, the two are visually
+                    // indistinguishable, and 90 was costing bytes on every grid page.
+                    quality={75}
                     sizes="(max-width: 640px) 100vw, 480px"
                     className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.04]"
                 />
+                {track ? <PlayButton track={track} /> : null}
                 {item.duration_seconds ? (
                     <span className="absolute bottom-2.5 right-2.5 rounded-full border border-white/15 bg-black/75 px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums text-white/90 backdrop-blur-xl shadow-sm">
                         {formatDuration(item.duration_seconds)}
@@ -86,8 +104,9 @@ export function MediaCard({ item }: { item: Media }) {
     );
 }
 
-export function MediaList({ item }: { item: Media }) {
+export function MediaList({ item, priority = false }: { item: Media; priority?: boolean }) {
     const thumbnailSrc = getThumbnailSrc(item);
+    const track = playableTrack(item);
 
     return (
         <article className="group relative grid gap-4 overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-3.5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)] sm:grid-cols-[13rem_1fr] sm:items-center">
@@ -96,10 +115,14 @@ export function MediaList({ item }: { item: Media }) {
                     src={thumbnailSrc}
                     alt=""
                     fill
-                    quality={90}
+                    priority={priority}
+                    // 75 rather than 90: at the size these render, the two are visually
+                    // indistinguishable, and 90 was costing bytes on every grid page.
+                    quality={75}
                     sizes="(max-width: 640px) 100vw, 360px"
                     className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.04]"
                 />
+                {track ? <PlayButton track={track} /> : null}
                 {item.duration_seconds ? (
                     <span className="absolute bottom-2.5 right-2.5 rounded-full border border-white/15 bg-black/75 px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums text-white/90 backdrop-blur-xl shadow-sm">
                         {formatDuration(item.duration_seconds)}

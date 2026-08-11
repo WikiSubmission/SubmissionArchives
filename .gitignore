@@ -122,3 +122,7 @@ scripts/debug_ocr.py
 # Agents
 /.agents/
 /.claude/
+
+# Incremental-build fingerprint for generate:catalog-incremental. Machine-local
+# (derived partly from file mtimes), so it must not be committed.
+public/data/generated_indices/.index-manifest.json

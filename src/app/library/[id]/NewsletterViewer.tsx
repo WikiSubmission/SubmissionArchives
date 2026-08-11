@@ -1,9 +1,10 @@
 'use client';
 
-import React from 'react';
-import { ArrowLeft, BookOpen } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ArrowLeft, BookOpen, ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import { activeChipClass, chromeButtonClassLg, IconBadge } from '@/components/home/WidgetAccents';
+import { getHighlightTerms } from '@/lib/search/queryMatch';
 
 type BlockType = {
     type: string;
@@ -31,7 +32,7 @@ type PageType = {
 
 type PageTitleEntry = string | { page_number: number; title: string };
 
-type IssueType = {
+export type IssueType = {
     issue_id: string;
     date_label: string;
     pages?: PageType[];
@@ -52,29 +53,81 @@ function getPageTitle(issue: IssueType, page: PageType, index: number): string |
     return typeof entry === 'string' ? entry : entry.title;
 }
 
+function escapeRegExp(value: string): string {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 export default function NewsletterViewer({ issue, query }: { issue: IssueType; query?: string }) {
-    // Function to highlight text based on query (rudimentary highlighting)
-    const highlightText = (text: string) => {
-        if (!query) return text;
-        const parts = text.split(new RegExp(`(${query})`, 'gi'));
+    const trimmedQuery = (query ?? '').trim().toLowerCase();
+    const highlightTerms = useMemo(() => getHighlightTerms(trimmedQuery), [trimmedQuery]);
+    const [matchCount, setMatchCount] = useState(0);
+    const [currentMatch, setCurrentMatch] = useState(0);
+    const hasScrolledToMatch = useRef(false);
+
+    const computeMatchCount = useCallback((root: HTMLElement) => {
+        const marks = root.querySelectorAll('mark.newsletter-highlight');
+        setMatchCount(marks.length);
+        return marks;
+    }, []);
+
+    // Sanitized terms from getHighlightTerms feed a regex built from
+    // escaped literals, so this never risks a SyntaxError on user input
+    // containing regex metacharacters like "(", "*", or "?".
+    const highlightText = useCallback((text: string) => {
+        if (!highlightTerms.length) return text;
+
+        const pattern = highlightTerms.map(escapeRegExp).join('|');
+        if (!pattern) return text;
+
+        const regex = new RegExp(`(${pattern})`, 'gi');
+        const parts = text.split(regex);
+
         return (
             <>
                 {parts.map((part, i) =>
-                    part.toLowerCase() === query.toLowerCase() ? (
-                        <mark key={i} className="bg-ed-accent/30 text-ed-accent rounded px-1">
+                    part && highlightTerms.some((term) => term.toLowerCase() === part.toLowerCase()) ? (
+                        <mark key={i} className="newsletter-highlight bg-ed-accent/30 text-ed-accent rounded px-1">
                             {part}
                         </mark>
                     ) : (
-                        part
+                        <span key={i}>{part}</span>
                     )
                 )}
             </>
         );
-    };
+    }, [highlightTerms]);
+
+    useEffect(() => {
+        if (!trimmedQuery || hasScrolledToMatch.current) return;
+        const timer = setTimeout(() => {
+            const firstMark = document.querySelector('mark.newsletter-highlight');
+            if (firstMark) {
+                firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                hasScrolledToMatch.current = true;
+                const root = document.getElementById('newsletter-content');
+                if (root) computeMatchCount(root);
+            }
+        }, 100);
+        return () => clearTimeout(timer);
+    }, [trimmedQuery, computeMatchCount]);
+
+    const jumpToMatch = useCallback((direction: 'next' | 'prev') => {
+        const root = document.getElementById('newsletter-content');
+        if (!root) return;
+        const marks = Array.from(root.querySelectorAll('mark.newsletter-highlight'));
+        if (!marks.length) return;
+
+        const idx = direction === 'next'
+            ? (currentMatch + 1) % marks.length
+            : (currentMatch - 1 + marks.length) % marks.length;
+        setCurrentMatch(idx);
+        marks[idx]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, [currentMatch]);
+
+    const pages = issue.transcription?.pages ?? issue.pages ?? [];
 
     return (
         <main id="main-content" className="min-h-screen bg-ed-bg text-ed-fg">
-            {/* Header */}
             <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg/80 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-4">
                 <div className="flex min-w-0 items-center gap-3 sm:gap-4">
                     <Link
@@ -92,6 +145,29 @@ export default function NewsletterViewer({ issue, query }: { issue: IssueType; q
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
+                    {matchCount > 0 && (
+                        <div className="flex items-center gap-1 rounded-full border border-ed-rule bg-ed-surface px-2.5 py-1 text-xs">
+                            <button
+                                type="button"
+                                onClick={() => jumpToMatch('prev')}
+                                className="p-0.5 hover:text-ed-accent transition-colors"
+                                aria-label="Previous match"
+                            >
+                                <ChevronUp className="h-3.5 w-3.5" />
+                            </button>
+                            <span className="tabular-nums min-w-[3ch] text-center" aria-live="polite">
+                                {currentMatch + 1} / {matchCount}
+                            </span>
+                            <button
+                                type="button"
+                                onClick={() => jumpToMatch('next')}
+                                className="p-0.5 hover:text-ed-accent transition-colors"
+                                aria-label="Next match"
+                            >
+                                <ChevronDown className="h-3.5 w-3.5" />
+                            </button>
+                        </div>
+                    )}
                     <IconBadge>
                         <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
                     </IconBadge>
@@ -101,15 +177,22 @@ export default function NewsletterViewer({ issue, query }: { issue: IssueType; q
                 </div>
             </header>
 
-            {/* Content */}
-            <div className="max-w-4xl mx-auto p-4 sm:p-10 space-y-10 sm:space-y-16">
-                {(issue.transcription?.pages ?? issue.pages ?? []).map((page: PageType, pIdx: number) => (
-                    <div key={pIdx} className="space-y-12 pb-16 border-b border-ed-rule last:border-0 relative">
-                        {/* Page Marker */}
+            <div id="newsletter-content" className="max-w-4xl mx-auto p-4 sm:p-10 space-y-10 sm:space-y-16">
+                {pages.map((page: PageType, pIdx: number) => (
+                    <div
+                        key={pIdx}
+                        id={`page-${page.page_number}`}
+                        className="space-y-12 pb-16 border-b border-ed-rule last:border-0 relative scroll-mt-24"
+                    >
                         <div className="absolute -left-12 top-0 h-full hidden lg:block">
-                            <div className="sticky top-24 font-mono text-xs text-ed-fg-muted/40 uppercase tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>
+                            <a
+                                href={`#page-${page.page_number}`}
+                                className="sticky top-24 font-mono text-xs text-ed-fg-muted/40 uppercase tracking-widest whitespace-nowrap rotate-180 hover:text-ed-accent/60 transition-colors"
+                                style={{ writingMode: 'vertical-rl' }}
+                                aria-label={`Page ${page.page_number}`}
+                            >
                                 PAGE {page.page_number}
-                            </div>
+                            </a>
                         </div>
 
                         {!page.blocks?.length && (() => {
@@ -208,6 +291,18 @@ export default function NewsletterViewer({ issue, query }: { issue: IssueType; q
                         })}
                     </div>
                 ))}
+            </div>
+
+            <div className="fixed bottom-6 right-6 z-20">
+                <button
+                    type="button"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="rounded-full border border-ed-rule bg-ed-surface/90 p-3 shadow-lg backdrop-blur-xl hover:bg-ed-surface transition-colors"
+                    aria-label="Back to top"
+                    title="Back to top"
+                >
+                    <ChevronUp className="h-5 w-5" />
+                </button>
             </div>
         </main>
     );

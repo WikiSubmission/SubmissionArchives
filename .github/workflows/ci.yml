@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: verify-${{ github.workflow }}-${{ github.ref }}
@@ -51,6 +51,12 @@ jobs:
       - name: Verify deterministic catalog generation
         run: npm run verify:catalog
 
+      - name: Validate catalog source schemas
+        run: npm run validate:catalog-schemas
+
+      - name: Verify book thumbnails are committed
+        run: npm run verify:thumbnails
+
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
 
@@ -60,8 +66,36 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
+      # Bootstraps Linux baselines the first time they are missing. Restricted to push
+      # events on purpose: on pull_request, actions/checkout leaves a detached HEAD at the
+      # merge ref and fork PRs get a read-only token, so a push there cannot work — and a
+      # swallowed failure would leave visual assertions silently self-approving.
+      #
+      # Note this blesses whatever renders at the time. That is correct for bootstrapping,
+      # but if a route is ever added to visual.spec.ts the directory already exists, so the
+      # new snapshot will not be generated and CI will fail on the missing baseline. Adding
+      # a route means regenerating deliberately:
+      #   VISUAL=1 npx playwright test tests/e2e/visual.spec.ts --update-snapshots
+      - name: Generate visual regression baselines if missing
+        if: github.event_name == 'push'
+        run: |
+          set -euo pipefail
+          if [ ! -d "tests/e2e/__snapshots__" ]; then
+            VISUAL=1 npx playwright test tests/e2e/visual.spec.ts --update-snapshots
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add tests/e2e/__snapshots__
+            # Nothing staged is a legitimate no-op; a failing push is not, so it is not swallowed.
+            if ! git diff --staged --quiet; then
+              git commit -m "ci: commit Linux visual regression baselines"
+              git push
+            fi
+          fi
+
       - name: Run browser and accessibility tests
         run: npm run test:e2e
+        env:
+          VISUAL: '1'
 
       - name: Upload Playwright report
         if: ${{ !cancelled() }}

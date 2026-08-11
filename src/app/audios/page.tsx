@@ -45,6 +45,8 @@ export default function AudiosPage() {
         author: audio.author,
         duration_seconds: audio.duration_seconds,
         thumbnailOverride: audio.thumbnailOverride,
+        // Needed by the card's play button to resolve a playback source.
+        youtubeId: audio.youtubeId,
         sortValue: index + 1,
         displayDate: '',
     }));
