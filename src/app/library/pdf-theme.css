@@ -1,45 +1,157 @@
-/* .rpv-core__page-layer {
-    filter: invert(1) hue-rotate(180deg); - Disabled per user request
-} */
+/* ==================== PDF READER ENTERPRISE THEMES ==================== */
 
-/* Re-invert images so they look normal */
-/* Note: This is a best-effort. PDF.js renders images on a canvas separate from text layer in some modes. 
-   If images are part of the main canvas, they might be inverted. 
-   We target common image containers if possible, but pure canvas inversion affects everything.
-   For text-heavy books, full inversion is usually preferred. */
-
-/* Custom Selection Color: Amber/Gold */
-::selection {
-    background: rgba(251, 191, 36, 0.4) !important;
-    /* amber-400 with opacity */
-    color: #fff !important;
+/* Optical Theme: Sepia (Warm Paper) */
+.pdf-theme-sepia .react-pdf__Page__canvas {
+  filter: sepia(0.35) contrast(0.95) brightness(0.96);
 }
 
-/* Custom Highlight Color */
-/* Override react-pdf-viewer's default yellow */
-.rpv-search__highlight {
-    background-color: rgba(251, 191, 36, 0.5) !important;
-    outline: 1px solid rgba(251, 191, 36, 0.8);
-    border-radius: 3px;
+.pdf-theme-sepia .react-pdf__Page {
+  background-color: #f6f1e8 !important;
+  box-shadow: 0 4px 20px -2px rgba(120, 85, 40, 0.15), 0 0 0 1px rgba(160, 120, 60, 0.2) !important;
 }
 
-/* Scrollbar customization for the sidebar */
-.rpv-search__sidebar::-webkit-scrollbar {
-    width: 6px;
+/* Optical Theme: Dark / Invert (Night Mode) */
+.pdf-theme-dark .react-pdf__Page__canvas {
+  filter: invert(0.92) hue-rotate(180deg) contrast(1.1) brightness(0.9);
 }
 
-.rpv-search__sidebar::-webkit-scrollbar-track {
-    background: #18181b;
-    /* zinc-900 */
+.pdf-theme-dark .react-pdf__Page {
+  background-color: #121214 !important;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
 }
 
-.rpv-search__sidebar::-webkit-scrollbar-thumb {
-    background: #3f3f46;
-    /* zinc-700 */
-    border-radius: 3px;
+/* Optical Theme: Default (Studio White) */
+.pdf-theme-default .react-pdf__Page {
+  background-color: #ffffff;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
-.rpv-search__sidebar::-webkit-scrollbar-thumb:hover {
-    background: #52525b;
-    /* zinc-600 */
+/* ==================== TWO-PAGE SPREAD (BOOK MODE) ==================== */
+.pdf-spread-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  perspective: 1200px;
+}
+
+.pdf-spread-left {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.3), inset -12px 0 20px -8px rgba(0, 0, 0, 0.18) !important;
+}
+
+.pdf-spread-right {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3), inset 12px 0 20px -8px rgba(0, 0, 0, 0.18) !important;
+}
+
+.pdf-spread-gutter {
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  z-index: 20;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ==================== SEARCH HIGHLIGHTS ==================== */
+.pdf-search-highlight {
+  background-color: rgba(234, 179, 8, 0.45) !important;
+  color: inherit !important;
+  border-radius: 2px;
+  outline: 1px solid rgba(234, 179, 8, 0.8);
+  box-shadow: 0 0 4px rgba(234, 179, 8, 0.3);
+  transition: all 0.15s ease;
+}
+
+.pdf-search-highlight-active {
+  background-color: rgba(245, 158, 11, 0.8) !important;
+  outline: 2px solid #f59e0b !important;
+  color: #000 !important;
+}
+
+/* ==================== ENTERPRISE TOOLBAR POPOVER ==================== */
+.reader-popover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  min-width: 180px;
+  background: var(--ed-surface);
+  border: 1px solid var(--ed-rule);
+  border-radius: 0.75rem;
+  padding: 0.375rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--ed-rule-strong);
+  backdrop-filter: blur(16px);
+  z-index: 50;
+  animation: readerPopoverEnter 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes readerPopoverEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.reader-popover-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ed-fg-muted);
+  transition: all 0.12s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.reader-popover-item:hover {
+  background: var(--ed-surface-strong);
+  color: var(--ed-fg);
+}
+
+.reader-popover-item[data-active="true"] {
+  background: var(--ed-accent-subtle, rgba(234, 179, 8, 0.12));
+  color: var(--ed-accent);
+  font-weight: 600;
+}
+
+/* ==================== OUTLINE / TOC TREE ==================== */
+.pdf-toc-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--ed-fg-muted);
+  transition: all 0.15s ease;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdf-toc-item:hover {
+  background: var(--ed-surface);
+  color: var(--ed-fg);
+}
+
+.pdf-toc-item[data-active="true"] {
+  background: var(--ed-accent-subtle, rgba(234, 179, 8, 0.12));
+  color: var(--ed-accent);
+  font-weight: 600;
 }

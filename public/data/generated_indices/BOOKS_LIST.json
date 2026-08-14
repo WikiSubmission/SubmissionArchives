@@ -199,7 +199,7 @@
     "pdfLink": "/content/written/books/quran-hadith-islam.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json",
-    "transcriptionMethod": "Parsed from HTML source for clean section headings and text.",
+    "transcriptionMethod": "Parsed from the archival HTML edition; markup removed, wording unchanged.",
     "transcriptionQuality": {
       "meanOcrConfidence": 85.64,
       "lowConfidencePages": 0,

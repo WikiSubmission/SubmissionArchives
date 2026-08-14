@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 type AudioRecord = Media & {
-    audioFile?: string;
     vttFile?: string;
     segmentCount?: number;
 };

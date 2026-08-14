@@ -14,7 +14,16 @@ type EditionAsset = { pdfUrl: string; startPage?: number };
 // pre-resolved assets, rather than the server awaiting searchParams (which would
 // force dynamic rendering).
 export type ReaderData =
-    | { kind: 'newsletter-viewer'; issue: IssueType }
+    | {
+          kind: 'newsletter-viewer';
+          issue: IssueType;
+          pdfUrl?: string;
+          documentId?: string;
+          title?: string;
+          prevId?: string | null;
+          nextId?: string | null;
+          backHref?: string;
+      }
     | { kind: 'pdf'; pdfUrl: string; title: string; documentId: string; prevId?: string | null; nextId?: string | null; backHref: string }
     | { kind: 'appendix'; editions: Record<string, EditionAsset>; defaultEdition: string; title: string; documentId: string; backHref: string };
 
@@ -30,7 +39,18 @@ function ReaderWithParams(props: ReaderData) {
     const query = (searchParams.get('q') ?? searchParams.get('highlight') ?? '').slice(0, 120);
 
     if (props.kind === 'newsletter-viewer') {
-        return <NewsletterViewer issue={props.issue} query={query} />;
+        return (
+            <NewsletterViewer
+                issue={props.issue}
+                query={query}
+                pdfUrl={props.pdfUrl}
+                documentId={props.documentId}
+                title={props.title}
+                prevId={props.prevId}
+                nextId={props.nextId}
+                backHref={props.backHref}
+            />
+        );
     }
 
     const pageParam = searchParams.get('page');

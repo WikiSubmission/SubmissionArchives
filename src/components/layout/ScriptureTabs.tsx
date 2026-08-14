@@ -2,72 +2,91 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion } from 'motion/react';
 import { BookOpen, Scroll, Books, BookBookmark, Archive, Lightning } from '@phosphor-icons/react';
 
 function cn(...classes: (string | false | null | undefined)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-const tabs = [
+type TabItem = {
+  href: string;
+  label: string;
+  count: string;
+  icon: typeof BookOpen;
+  match: (path: string) => boolean;
+};
+
+const ALL_TABS: TabItem[] = [
   {
     href: '/scripture/quran',
     label: "Qur'an",
+    count: '114 Surahs',
     icon: BookOpen,
-    description: '114 Surahs',
+    match: (path) =>
+      (path === '/scripture/quran' ||
+        path === '/quran' ||
+        path.startsWith('/scripture/quran/') ||
+        path.startsWith('/quran/')) &&
+      !path.includes('/appendices'),
+  },
+  {
+    href: '/scripture/quran/appendices',
+    label: 'Appendices',
+    count: '38 Notes',
+    icon: BookBookmark,
+    match: (path) =>
+      path.includes('/scripture/quran/appendices') || path.includes('/quran/appendices'),
   },
   {
     href: '/scripture/old-testament',
     label: 'Old Testament',
+    count: '39 Books',
     icon: Scroll,
-    description: '39 Books',
-  },
-  {
-    href: '/scripture/new-testament',
-    label: 'New Testament',
-    icon: Books,
-    description: '27 Books',
-  },
-];
-
-const secondaryTabs = [
-  {
-    href: '/scripture/quran/appendices',
-    label: 'Appendices',
-    icon: BookBookmark,
-    description: '38 Notes',
+    match: (path) =>
+      (path === '/scripture/old-testament' ||
+        path === '/quran/old-testament' ||
+        path.startsWith('/scripture/old-testament/')) &&
+      !path.includes('/apocrypha'),
   },
   {
     href: '/scripture/old-testament/apocrypha',
     label: 'OT Apocrypha',
+    count: '15 Books',
     icon: Archive,
-    description: '15 Books',
+    match: (path) => path.includes('/old-testament/apocrypha'),
+  },
+  {
+    href: '/scripture/new-testament',
+    label: 'New Testament',
+    count: '27 Books',
+    icon: Books,
+    match: (path) =>
+      (path === '/scripture/new-testament' ||
+        path === '/quran/new-testament' ||
+        path.startsWith('/scripture/new-testament/')) &&
+      !path.includes('/apocrypha'),
   },
   {
     href: '/scripture/new-testament/apocrypha',
     label: 'NT Apocrypha',
+    count: 'Extra Texts',
     icon: Lightning,
-    description: 'Extra Texts',
+    match: (path) => path.includes('/new-testament/apocrypha'),
   },
 ];
 
 export default function ScriptureTabs() {
-  const pathname = usePathname();
-
-  const isAppendicesActive = pathname?.startsWith('/scripture/quran/appendices');
+  const pathname = usePathname() || '';
 
   return (
     <nav
-      className="mt-10 inline-flex flex-col gap-1.5 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-1.5 backdrop-blur-2xl shadow-xl shadow-black/40"
+      className="mt-8 w-full max-w-4xl"
       aria-label="Scripture navigation"
     >
-      {/* Row 1: Main scripture tabs */}
-      <div className="flex flex-wrap gap-1.5">
-        {tabs.map((tab) => {
-          const isActive =
-            tab.href === '/scripture/quran'
-              ? (pathname === '/scripture/quran' || pathname === '/scripture/quran/') && !isAppendicesActive
-              : pathname === tab.href || pathname?.startsWith(`${tab.href}/`);
-
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 p-1.5 rounded-2xl border border-ed-rule bg-ed-surface/80 dark:bg-white/[0.03] backdrop-blur-2xl shadow-lg">
+        {ALL_TABS.map((tab) => {
+          const isActive = tab.match(pathname);
           const Icon = tab.icon;
 
           return (
@@ -75,67 +94,47 @@ export default function ScriptureTabs() {
               key={tab.href}
               href={tab.href}
               className={cn(
-                'group relative flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-200 active:scale-[0.97]',
+                'group relative flex flex-col items-center justify-center gap-1.5 rounded-xl px-3 py-2.5 text-center transition-colors duration-200 active:scale-[0.97]',
                 isActive
-                  ? 'bg-white text-black font-semibold shadow-lg shadow-black/30'
-                  : 'text-neutral-400 hover:bg-white/[0.06] hover:text-white',
+                  ? 'text-ed-bg font-semibold'
+                  : 'text-ed-fg-muted hover:text-ed-fg',
               )}
               aria-current={isActive ? 'page' : undefined}
             >
-              <Icon
-                className={cn(
-                  'h-4 w-4 transition-colors',
-                  isActive ? 'text-black' : 'text-neutral-500 group-hover:text-neutral-300',
-                )}
-                weight={isActive ? 'fill' : 'regular'}
-              />
-              <span>{tab.label}</span>
-              <span
-                className={cn(
-                  'ml-1 rounded-full px-2 py-0.5 text-[10px] font-semibold tabular-nums',
-                  isActive ? 'bg-black/10 text-black/70' : 'bg-white/[0.06] text-neutral-500',
-                )}
-              >
-                {tab.description}
-              </span>
-            </Link>
-          );
-        })}
-      </div>
-
-      {/* Row 2: Secondary tabs — Appendices, OT Apocrypha, NT Apocrypha */}
-      <div className="flex flex-wrap gap-1.5">
-        {secondaryTabs.map((tab) => {
-          const isActive = pathname === tab.href || pathname?.startsWith(`${tab.href}/`);
-          const Icon = tab.icon;
-
-          return (
-            <Link
-              key={tab.href}
-              href={tab.href}
-              className={cn(
-                'group relative flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-200 active:scale-[0.97]',
-                isActive
-                  ? 'bg-white text-black font-semibold shadow-lg shadow-black/30'
-                  : 'text-neutral-400 hover:bg-white/[0.06] hover:text-white',
+              {isActive && (
+                <motion.div
+                  layoutId="active-scripture-tab-pill"
+                  className="absolute inset-0 rounded-xl bg-ed-fg shadow-md"
+                  transition={{
+                    type: 'spring',
+                    stiffness: 380,
+                    damping: 30,
+                  }}
+                />
               )}
-              aria-current={isActive ? 'page' : undefined}
-            >
-              <Icon
-                className={cn(
-                  'h-4 w-4 transition-colors',
-                  isActive ? 'text-black' : 'text-neutral-500 group-hover:text-neutral-300',
-                )}
-                weight={isActive ? 'fill' : 'regular'}
-              />
-              <span>{tab.label}</span>
+
+              <div className="relative z-10 flex items-center gap-1.5">
+                <Icon
+                  className={cn(
+                    'h-4 w-4 shrink-0 transition-colors duration-200',
+                    isActive ? 'text-ed-bg' : 'text-ed-fg-muted group-hover:text-ed-fg',
+                  )}
+                  weight={isActive ? 'fill' : 'regular'}
+                />
+                <span className="text-xs sm:text-sm font-semibold tracking-tight leading-tight">
+                  {tab.label}
+                </span>
+              </div>
+
               <span
                 className={cn(
-                  'ml-1 rounded-full px-2 py-0.5 text-[10px] font-semibold tabular-nums',
-                  isActive ? 'bg-black/10 text-black/70' : 'bg-white/[0.06] text-neutral-500',
+                  'relative z-10 rounded-full px-2 py-0.5 text-[10px] font-mono font-medium leading-none tabular-nums transition-colors duration-200',
+                  isActive
+                    ? 'bg-ed-bg/15 text-ed-bg'
+                    : 'bg-black/5 dark:bg-white/[0.08] text-ed-fg-muted group-hover:text-ed-fg',
                 )}
               >
-                {tab.description}
+                {tab.count}
               </span>
             </Link>
           );

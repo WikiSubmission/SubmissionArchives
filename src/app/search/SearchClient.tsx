@@ -23,6 +23,7 @@ import { getHighlightTerms } from '@/lib/search/queryMatch';
 import { hasOperators, parseAdvancedQuery } from '@/lib/search/queryParser';
 import { logSearchEvent } from '@/lib/search/analytics';
 import { useSearchKeyboardNav } from './useSearchKeyboardNav';
+import { GlassSheen } from '@/components/home/WidgetAccents';
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
 
 type FilterKey =
@@ -670,191 +671,213 @@ function SearchContent() {
                     <main className="min-w-0 flex-1 space-y-6">
                         
                         {/* Search Control Bar Header Card */}
-                        <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-4 sm:p-5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 space-y-4">
-                            <form
-                                onSubmit={(event) => {
-                                    event.preventDefault();
-                                    // Submitting bypasses the debounce rather than racing it.
-                                    if (debounceRef.current) clearTimeout(debounceRef.current);
-                                    setSuggestOpen(false);
-                                    syncUrl(query, filters);
-                                    void runQuery(0);
-                                }}
-                                className="relative flex flex-col sm:flex-row sm:items-center gap-3"
-                            >
-                                <div ref={searchFieldRef} className="relative flex-1">
-                                    <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
-                                    <input
-                                        id="archive-search-input"
-                                        name="q"
-                                        type="text"
-                                        value={query}
-                                        onChange={(event) => setQuery(event.target.value)}
-                                        placeholder="Search transcripts, perspectives, appendices..."
-                                        aria-label="Search transcripts, perspectives, appendices"
-                                        className="archive-input w-full py-2.5 pl-11 pr-24 text-sm sm:text-base rounded-2xl border border-ed-rule/60 dark:border-white/10 bg-ed-bg/60 dark:bg-black/40 text-ed-fg backdrop-blur-xl focus:border-ed-fg dark:focus:border-white/30 transition-all"
-                                        onKeyDown={(event) => {
-                                            // Escape dismisses the suggestion list first; only once it is
-                                            // closed does Escape fall through to exiting result navigation.
-                                            if (event.key === 'Escape' && suggestOpen) {
-                                                event.preventDefault();
-                                                setSuggestOpen(false);
-                                                return;
-                                            }
-                                            nav.onKeyDown(event);
-                                        }}
-                                        role="combobox"
-                                        aria-expanded={suggestOpen || results.length > 0}
-                                        aria-controls="search-results"
-                                        aria-autocomplete="list"
-                                        aria-activedescendant={nav.activeNodeId ?? undefined}
-                                    />
-                                    {query ? (
-                                        <button
-                                            type="button"
-                                            onClick={() => setQuery('')}
-                                            className="absolute right-[4.5rem] top-1/2 -translate-y-1/2 p-1 text-ed-fg-muted hover:text-ed-fg"
-                                            aria-label="Clear search query"
-                                        >
-                                            <X className="h-4 w-4" />
-                                        </button>
-                                    ) : null}
-                                    <button
-                                        type="submit"
-                                        className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-xl bg-ed-fg px-4 py-1.5 text-xs font-bold text-ed-bg transition-colors hover:bg-ed-accent"
-                                    >
-                                        Search
-                                    </button>
-
-                                    {suggestOpen && suggestions.length > 0 ? (
-                                        <ul
-                                            id="search-suggestions"
-                                            role="listbox"
-                                            aria-label="Title suggestions"
-                                            className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-2xl border border-ed-rule/60 dark:border-white/10 bg-ed-surface/95 shadow-lg backdrop-blur-xl"
-                                        >
-                                            {suggestions.map((suggestion, position) => (
-                                                <li key={`${suggestion.type}-${suggestion.id}`} role="option" aria-selected="false">
-                                                    <Link
-                                                        href={getMediaLink({ id: suggestion.id, title: suggestion.title, type: suggestion.type }, '')}
-                                                        onClick={() => {
-                                                            setSuggestOpen(false);
-                                                            logSearchEvent({
-                                                                name: 'search.suggest_select',
-                                                                query: query.trim(),
-                                                                suggestionId: suggestion.id,
-                                                                position,
-                                                            });
-                                                        }}
-                                                        className="flex items-center gap-2.5 px-4 py-2.5 text-left text-sm text-ed-fg transition-colors hover:bg-ed-accent/10"
-                                                    >
-                                                        <SuggestionIcon type={suggestion.type} />
-                                                        <span className="truncate">{suggestion.title}</span>
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    ) : null}
-                                </div>
-
-                                {/* Source Filter Segmented Pill Group */}
-                                <div className="overflow-x-auto pb-1 sm:pb-0">
-                                    <div className="relative flex items-center gap-1 p-1 rounded-full border border-ed-rule/60 dark:border-white/10 bg-ed-bg/60 dark:bg-black/40 backdrop-blur-xl overflow-hidden isolation-auto">
-                                        <button
-                                            type="button"
-                                            onClick={selectAllSources}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isAllSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <SlidersHorizontal className="h-3 w-3" />
-                                            All Sources
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectVideosCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isVideosSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <Video className="h-3 w-3" />
-                                            Videos
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectAudiosCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isAudiosSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <Headphones className="h-3 w-3" />
-                                            Audios
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectWrittenCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isWrittenSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <FileText className="h-3 w-3" />
-                                            Written
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectQuranCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isQuranSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <BookMarked className="h-3 w-3" />
-                                            Qur&apos;an
-                                        </button>
+                        <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/95 via-ed-surface/85 to-ed-surface/65 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.06)_inset] backdrop-blur-2xl transition-all duration-300">
+                            <GlassSheen />
+                            
+                            {/* Window Title Bar */}
+                            <div className="flex min-h-12 items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-6 bg-ed-surface-strong/40 select-none">
+                                <div className="flex items-center gap-3">
+                                    <div className="flex items-center gap-1.5" aria-hidden="true">
+                                        <span className="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-600/40" />
+                                        <span className="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-600/40" />
+                                        <span className="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-600/40" />
+                                    </div>
+                                    <span className="h-3.5 w-px bg-ed-rule-strong/60" aria-hidden="true" />
+                                    <div>
+                                        <p className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                            Universal Search · <span className="text-ed-fg font-bold">Cross-Corpus Index</span>
+                                        </p>
                                     </div>
                                 </div>
-                            </form>
-
-                            {/* Recognised query operators, so it is visible when syntax took effect */}
-                            {hasOperators(parsedQuery) ? (
-                                <div className="flex flex-wrap items-center gap-1.5" aria-label="Active query operators">
-                                    {parsedQuery.types.map((type) => (
-                                        <span key={`type-${type}`} className={OPERATOR_CHIP_CLASS}>type:{type}</span>
-                                    ))}
-                                    {parsedQuery.exclusions.map((term) => (
-                                        <span key={`not-${term}`} className={OPERATOR_CHIP_CLASS}>excluding {term}</span>
-                                    ))}
-                                    {parsedQuery.after !== undefined ? (
-                                        <span className={OPERATOR_CHIP_CLASS}>after {parsedQuery.after}</span>
-                                    ) : null}
-                                    {parsedQuery.before !== undefined ? (
-                                        <span className={OPERATOR_CHIP_CLASS}>before {parsedQuery.before}</span>
-                                    ) : null}
-                                </div>
-                            ) : null}
-
-                            {/* Stats Line below search bar */}
-                            <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-ed-rule/60 text-xs">
-                                <div className="flex items-center gap-2 font-sans font-bold text-ed-fg">
-                                    <span>{total > 0 ? `${total} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
-                                    {isSearching && results.length > 0 ? (
-                                        <span aria-live="polite" className="font-mono text-[0.68rem] font-normal text-ed-fg-muted">
-                                            Updating results…
-                                        </span>
-                                    ) : null}
-                                </div>
-                                <span className="font-mono text-[0.68rem] text-ed-fg-muted">
-                                    Exact phrases and nearby terms are already folded into the ranking.
+                                <span className="rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.62rem] font-bold text-ed-fg-muted uppercase tracking-wider">
+                                    Live Query
                                 </span>
+                            </div>
+
+                            <div className="p-4 sm:p-6 space-y-4">
+                                <form
+                                    onSubmit={(event) => {
+                                        event.preventDefault();
+                                        // Submitting bypasses the debounce rather than racing it.
+                                        if (debounceRef.current) clearTimeout(debounceRef.current);
+                                        setSuggestOpen(false);
+                                        syncUrl(query, filters);
+                                        void runQuery(0);
+                                    }}
+                                    className="relative flex flex-col sm:flex-row sm:items-center gap-3"
+                                >
+                                    <div ref={searchFieldRef} className="relative flex-1">
+                                        <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
+                                        <input
+                                            id="archive-search-input"
+                                            name="q"
+                                            type="text"
+                                            value={query}
+                                            onChange={(event) => setQuery(event.target.value)}
+                                            placeholder="Search transcripts, perspectives, appendices..."
+                                            aria-label="Search transcripts, perspectives, appendices"
+                                            className="archive-input w-full py-2.5 pl-11 pr-24 text-sm sm:text-base rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 text-ed-fg backdrop-blur-xl focus:border-ed-fg focus:bg-ed-surface shadow-inner transition-all"
+                                            onKeyDown={(event) => {
+                                                if (event.key === 'Escape' && suggestOpen) {
+                                                    event.preventDefault();
+                                                    setSuggestOpen(false);
+                                                    return;
+                                                }
+                                                nav.onKeyDown(event);
+                                            }}
+                                            role="combobox"
+                                            aria-expanded={suggestOpen || results.length > 0}
+                                            aria-controls="search-results"
+                                            aria-autocomplete="list"
+                                            aria-activedescendant={nav.activeNodeId ?? undefined}
+                                        />
+                                        {query ? (
+                                            <button
+                                                type="button"
+                                                onClick={() => setQuery('')}
+                                                className="absolute right-[4.75rem] top-1/2 -translate-y-1/2 p-1 text-ed-fg-muted hover:text-ed-fg"
+                                                aria-label="Clear search query"
+                                            >
+                                                <X className="h-4 w-4" />
+                                            </button>
+                                        ) : null}
+                                        <button
+                                            type="submit"
+                                            className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-xl bg-ed-fg px-4 py-1.5 text-xs font-bold text-ed-bg shadow-sm transition-all hover:bg-ed-fg/90 hover:scale-105 active:scale-95"
+                                        >
+                                            Search
+                                        </button>
+
+                                        {suggestOpen && suggestions.length > 0 ? (
+                                            <ul
+                                                id="search-suggestions"
+                                                role="listbox"
+                                                aria-label="Title suggestions"
+                                                className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-2xl border border-ed-rule-strong bg-ed-surface/95 shadow-2xl backdrop-blur-2xl"
+                                            >
+                                                {suggestions.map((suggestion, position) => (
+                                                    <li key={`${suggestion.type}-${suggestion.id}`} role="option" aria-selected="false">
+                                                        <Link
+                                                            href={getMediaLink({ id: suggestion.id, title: suggestion.title, type: suggestion.type }, '')}
+                                                            onClick={() => {
+                                                                setSuggestOpen(false);
+                                                                logSearchEvent({
+                                                                    name: 'search.suggest_select',
+                                                                    query: query.trim(),
+                                                                    suggestionId: suggestion.id,
+                                                                    position,
+                                                                });
+                                                            }}
+                                                            className="flex items-center gap-2.5 px-4 py-2.5 text-left text-sm text-ed-fg transition-colors hover:bg-ed-surface-strong"
+                                                        >
+                                                            <SuggestionIcon type={suggestion.type} />
+                                                            <span className="truncate">{suggestion.title}</span>
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        ) : null}
+                                    </div>
+
+                                    {/* Source Filter Segmented Pill Group */}
+                                    <div className="overflow-x-auto pb-1 sm:pb-0">
+                                        <div className="relative flex items-center gap-1 p-1 rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 backdrop-blur-xl overflow-hidden isolation-auto shadow-inner">
+                                            <button
+                                                type="button"
+                                                onClick={selectAllSources}
+                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
+                                                    isAllSelected
+                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
+                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
+                                                }`}
+                                            >
+                                                <SlidersHorizontal className="h-3 w-3" />
+                                                All
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={selectVideosCategory}
+                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
+                                                    isVideosSelected
+                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
+                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
+                                                }`}
+                                            >
+                                                <Video className="h-3 w-3" />
+                                                Videos
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={selectAudiosCategory}
+                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
+                                                    isAudiosSelected
+                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
+                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
+                                                }`}
+                                            >
+                                                <Headphones className="h-3 w-3" />
+                                                Audios
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={selectWrittenCategory}
+                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
+                                                    isWrittenSelected
+                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
+                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
+                                                }`}
+                                            >
+                                                <FileText className="h-3 w-3" />
+                                                Written
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={selectQuranCategory}
+                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
+                                                    isQuranSelected
+                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
+                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
+                                                }`}
+                                            >
+                                                <BookMarked className="h-3 w-3" />
+                                                Qur&apos;an
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                {/* Recognised query operators, so it is visible when syntax took effect */}
+                                {hasOperators(parsedQuery) ? (
+                                    <div className="flex flex-wrap items-center gap-1.5" aria-label="Active query operators">
+                                        {parsedQuery.types.map((type) => (
+                                            <span key={`type-${type}`} className={OPERATOR_CHIP_CLASS}>type:{type}</span>
+                                        ))}
+                                        {parsedQuery.exclusions.map((term) => (
+                                            <span key={`not-${term}`} className={OPERATOR_CHIP_CLASS}>excluding {term}</span>
+                                        ))}
+                                        {parsedQuery.after !== undefined ? (
+                                            <span className={OPERATOR_CHIP_CLASS}>after {parsedQuery.after}</span>
+                                        ) : null}
+                                        {parsedQuery.before !== undefined ? (
+                                            <span className={OPERATOR_CHIP_CLASS}>before {parsedQuery.before}</span>
+                                        ) : null}
+                                    </div>
+                                ) : null}
+
+                                {/* Stats Line below search bar */}
+                                <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-ed-rule text-xs">
+                                    <div className="flex items-center gap-2 font-sans font-bold text-ed-fg">
+                                        <span>{total > 0 ? `${total} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
+                                        {isSearching && results.length > 0 ? (
+                                            <span aria-live="polite" className="font-mono text-[0.68rem] font-normal text-ed-fg-muted">
+                                                Updating results…
+                                            </span>
+                                        ) : null}
+                                    </div>
+                                    <span className="font-mono text-[0.68rem] text-ed-fg-muted">
+                                        Exact phrases and nearby terms are already folded into the ranking.
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
@@ -1000,7 +1023,7 @@ function SearchResultCard({
             id={cardId}
             role="group"
             aria-label={cardTitle}
-            className={`group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-5 sm:p-6 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)] ${
+            className={`group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/95 via-ed-surface/80 to-ed-surface/60 p-5 sm:p-7 backdrop-blur-2xl shadow-[0_16px_40px_-12px_rgba(0,0,0,0.3),0_0_0_1px_rgba(255,255,255,0.06)_inset] transition-all duration-300 hover:border-ed-fg/40 hover:shadow-2xl hover:-translate-y-0.5 ${
                 cardActive ? 'ring-2 ring-ed-fg ring-offset-2 ring-offset-ed-bg' : ''
             }`}
         >
@@ -1009,7 +1032,7 @@ function SearchResultCard({
                 <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-4 sm:gap-6 items-start">
                     <Link
                         href={bestHref}
-                        className={`group relative overflow-hidden rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40 shadow-inner ${
+                        className={`group relative overflow-hidden rounded-2xl border border-ed-rule-strong bg-ed-surface shadow-md ${
                             isDocument ? 'aspect-[3/4] w-full max-w-[160px] mx-auto' : 'aspect-video w-full'
                         }`}
                         aria-label={`Open ${media.displayTitle || media.title}`}
@@ -1019,29 +1042,29 @@ function SearchResultCard({
                             alt={media.displayTitle || media.title}
                             fill
                             unoptimized
-                            className={`h-full w-full transition duration-500 group-hover:scale-[1.04] ${
+                            className={`h-full w-full transition duration-500 group-hover:scale-[1.05] ${
                                 media.type === 'perspective'
                                     ? 'object-cover object-right'
                                     : 'object-cover'
                             }`}
                         />
                         {!isDocument ? (
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 dark:bg-black/30 backdrop-blur-[2px] transition-opacity group-hover:bg-black/10">
-                                <div className="h-11 w-11 rounded-full border border-white/40 bg-black/70 backdrop-blur-xl flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[2px] transition-opacity group-hover:bg-black/20">
+                                <div className="h-12 w-12 rounded-2xl border border-white/40 bg-black/80 backdrop-blur-xl flex items-center justify-center text-white shadow-2xl transition-transform group-hover:scale-110">
                                     <Play className="h-4 w-4 fill-current ml-0.5" />
                                 </div>
                             </div>
                         ) : null}
                     </Link>
 
-                    <div className="min-w-0 space-y-2">
+                    <div className="min-w-0 space-y-2.5">
                         {/* Top Badges Row */}
-                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-rule/60 dark:border-white/10 pb-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-rule pb-3">
                             <div className="flex items-center gap-2">
-                                <span className="rounded-full border border-ed-rule-strong/40 dark:border-white/15 bg-black/5 dark:bg-black/40 px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg dark:text-white/90 backdrop-blur-xl">
+                                <span className="rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg shadow-sm">
                                     {String(rank).padStart(2, '0')}
                                 </span>
-                                <span className="rounded-full border border-ed-rule-strong/40 dark:border-white/15 bg-black/5 dark:bg-black/40 px-3 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg-muted dark:text-white/80 uppercase backdrop-blur-xl tracking-wider">
+                                <span className="rounded-full border border-ed-rule-strong bg-ed-surface px-3 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg-muted uppercase tracking-wider">
                                     {getMediaTypeLabel(media.type)}
                                 </span>
                                 {media.displayDate ? (
@@ -1057,7 +1080,7 @@ function SearchResultCard({
                         </div>
 
                         {/* Title & Author */}
-                        <Link href={mediaLink} className="block pt-1 group">
+                        <Link href={mediaLink} className="block pt-0.5 group">
                             <h3 className="font-sans text-xl sm:text-2xl font-bold tracking-tight text-ed-fg leading-snug group-hover:text-ed-accent transition-colors">
                                 {media.displayTitle || media.title}
                             </h3>
@@ -1077,15 +1100,15 @@ function SearchResultCard({
                         id={bestPassageId}
                         role="option"
                         aria-selected={bestPassageActive}
-                        className={`block rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/50 p-4 sm:p-5 shadow-inner backdrop-blur-xl transition hover:border-ed-fg/40 dark:hover:border-white/20 hover:bg-black/10 dark:hover:bg-black/60 ${
+                        className={`block rounded-2xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface via-ed-surface/90 to-ed-surface/70 p-4 sm:p-5 shadow-inner backdrop-blur-xl transition hover:border-ed-fg/40 hover:shadow-md ${
                             bestPassageActive ? 'ring-2 ring-ed-fg' : ''
                         }`}
                     >
                         <div className="flex items-center justify-between gap-2 mb-3">
-                            <span className="font-mono text-[0.65rem] font-bold uppercase tracking-widest text-ed-fg-muted">
-                                Best Passage
+                            <span className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
+                                Best Matching Passage
                             </span>
-                            <span className="inline-flex items-center gap-1.5 rounded-full border border-ed-rule dark:border-white/15 bg-ed-fg text-ed-bg dark:bg-black/60 dark:text-white px-3 py-1 font-mono text-xs font-semibold backdrop-blur-xl transition-all shadow-sm">
+                            <span className="inline-flex items-center gap-1.5 rounded-full bg-ed-fg text-ed-bg px-3.5 py-1 font-mono text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95">
                                 <Play className="h-3 w-3 fill-current" />
                                 {isDocumentType(media.type) ? `Open Page ${bestMatch.page || 1}` : `Play at ${formatTime(bestMatch.start_time)}`}
                             </span>
@@ -1105,12 +1128,12 @@ function SearchResultCard({
 
                 {/* PASSAGES TIMELINE */}
                 {visibleMatches.length > 1 ? (
-                    <div className="pt-2 border-t border-ed-rule/60 dark:border-white/10 space-y-3">
-                        <p className="font-mono text-[0.65rem] font-bold uppercase tracking-widest text-ed-fg-muted">
+                    <div className="pt-2 border-t border-ed-rule space-y-3">
+                        <p className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
                             Passages in this {isDocument ? 'document' : 'recording'}
                         </p>
 
-                        <div className="relative pl-6 space-y-3.5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-ed-rule dark:before:bg-white/10">
+                        <div className="relative pl-6 space-y-3.5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-ed-rule-strong">
                             {visibleMatches.slice(1).map((match) => {
                                 const passageIndex = matches.indexOf(match);
                                 return (
@@ -1135,7 +1158,7 @@ function SearchResultCard({
                             type="button"
                             onClick={onToggle}
                             aria-expanded={expanded}
-                            className="archive-button archive-button-secondary rounded-full px-5 py-2 font-mono text-xs font-semibold text-ed-fg hover:border-ed-fg dark:hover:border-white/30 flex items-center gap-2 backdrop-blur-xl"
+                            className="inline-flex items-center gap-2 rounded-xl border border-ed-rule-strong bg-ed-surface px-5 py-2 font-mono text-xs font-semibold text-ed-fg hover:border-ed-fg hover:bg-ed-surface-strong shadow-sm transition-all"
                         >
                             <span>{expanded ? 'Show fewer passages' : `Show ${matches.length - 3} more passages`}</span>
                             <ChevronDown className={`h-3.5 w-3.5 transition-transform ${expanded ? 'rotate-180' : ''}`} />
@@ -1168,12 +1191,12 @@ function SearchMatchRow({
             id={nodeId}
             role="option"
             aria-selected={active}
-            className={`group relative flex items-start justify-between gap-4 rounded-lg p-2 transition hover:bg-ed-surface/80 ${
+            className={`group relative flex items-start justify-between gap-4 rounded-xl p-2.5 transition-all hover:bg-ed-surface hover:shadow-sm ${
                 active ? 'bg-ed-surface border border-ed-fg/40' : ''
             }`}
         >
             {/* Timeline Circle Node Dot */}
-            <span className="absolute -left-[1.125rem] top-3 h-2.5 w-2.5 rounded-full border-2 border-ed-bg bg-ed-fg shadow-sm" />
+            <span className="absolute -left-[1.125rem] top-3.5 h-2.5 w-2.5 rounded-full border-2 border-ed-bg bg-ed-fg shadow-sm" />
 
             <div className="flex items-start gap-3 min-w-0 flex-1">
                 <span className="font-mono text-xs font-bold text-ed-fg shrink-0 pt-0.5">
@@ -1206,7 +1229,7 @@ function SearchMatchRow({
 function SignalBadge({ score }: { score: number }) {
     const label = score >= 100 ? 'Best match' : score >= 80 ? 'Close match' : score >= 55 ? 'Relevant' : 'Broad match';
     return (
-        <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-accent">
+        <span className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400 shadow-sm">
             {label}
         </span>
     );

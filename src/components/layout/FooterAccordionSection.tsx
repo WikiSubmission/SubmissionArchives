@@ -9,11 +9,6 @@ type FooterNavSection = {
     links: Array<{ name: string; href: string }>;
 };
 
-// Native <details> snaps open/closed instantly with no way to transition its
-// content height in CSS alone -- the browser hides non-summary children
-// outright when closed, and there's no transform equivalent for height. On
-// desktop (sm+) this section is always open and non-interactive (see the
-// sm: classes below); this animation only ever runs on mobile.
 const TOGGLE_DURATION_MS = 160;
 
 export function FooterAccordionSection({ section }: { section: FooterNavSection }) {
@@ -24,8 +19,7 @@ export function FooterAccordionSection({ section }: { section: FooterNavSection 
     const closingRef = useRef(false);
 
     const handleToggleClick = (event: React.MouseEvent<HTMLElement>) => {
-        // Desktop: the browser's own hover/focus styles are enough, and this
-        // section never closes there -- let the native click through.
+        // Desktop: always open, skip accordion animation
         if (window.matchMedia('(min-width: 640px)').matches) return;
 
         const details = detailsRef.current;
@@ -66,16 +60,16 @@ export function FooterAccordionSection({ section }: { section: FooterNavSection 
     };
 
     return (
-        <details ref={detailsRef} className="group border-b border-ed-rule/60 dark:border-white/10 sm:border-b-0" open>
+        <details ref={detailsRef} className="group border-b border-ed-rule sm:border-b-0" open>
             <summary
                 onClick={handleToggleClick}
-                className="flex cursor-pointer list-none items-center justify-between py-4 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted sm:cursor-default sm:border-b sm:border-ed-rule/60 dark:sm:border-white/10 sm:pb-3 sm:pt-0 [&::-webkit-details-marker]:hidden"
+                className="flex cursor-pointer list-none items-center justify-between py-4 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-ed-fg-muted sm:cursor-default sm:border-b sm:border-ed-rule sm:pb-3 sm:pt-0 [&::-webkit-details-marker]:hidden"
             >
                 {section.title}
-                <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 sm:hidden" aria-hidden="true" />
+                <ChevronDown className="h-4 w-4 shrink-0 text-ed-fg-muted transition-transform duration-200 group-open:rotate-180 sm:hidden" aria-hidden="true" />
             </summary>
             <div ref={contentRef} className="overflow-hidden">
-                <ul className="pb-4 sm:mt-3 sm:pb-0 space-y-1">
+                <ul className="pb-4 sm:mt-3.5 sm:pb-0 space-y-2">
                     {section.links.map((link) => (
                         <li key={link.name}>
                             {link.href.startsWith('http') ? (
@@ -83,12 +77,15 @@ export function FooterAccordionSection({ section }: { section: FooterNavSection 
                                     href={link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex min-h-9 items-center font-sans text-[0.88rem] text-ed-fg-muted transition-colors hover:text-ed-fg"
+                                    className="inline-flex min-h-8 items-center text-sm text-ed-fg-muted transition-colors duration-150 hover:text-ed-fg"
                                 >
                                     {link.name}<span className="sr-only"> (opens in a new tab)</span>
                                 </a>
                             ) : (
-                                <Link href={link.href} className="inline-flex min-h-9 items-center font-sans text-[0.88rem] text-ed-fg-muted transition-colors hover:text-ed-fg">
+                                <Link
+                                    href={link.href}
+                                    className="inline-flex min-h-8 items-center text-sm text-ed-fg-muted transition-colors duration-150 hover:text-ed-fg"
+                                >
                                     {link.name}
                                 </Link>
                             )}

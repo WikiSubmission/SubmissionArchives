@@ -194,7 +194,14 @@ function loadPlaylistSegmentsByYoutubeId() {
     if (!fs.existsSync(dir)) continue;
     for (const filename of fs.readdirSync(dir)) {
       if (!filename.toLowerCase().endsWith('.csv')) continue;
-      const isArabic = filename.toLowerCase().includes('- arabic');
+      // The Arabic-language variant of a transcript is named "<base> - Arabic.csv",
+      // paired with a base "<base>.csv" holding the English transcript (see e.g. the
+      // "Debate ... vs Sunni Scholars" pair). A substring test instead of a suffix test
+      // false-positives on any video whose own title starts with "Arabic" right after a
+      // sequence number, e.g. "19 - Arabic Language Lessons...csv" — its English
+      // narration was landing in segments_ar and leaving segments empty, which is why
+      // that record showed no searchable transcript despite one existing on disk.
+      const isArabic = /- arabic\.csv$/i.test(filename);
       const rows = readCsvRows(path.join(dir, filename));
       for (const row of rows) {
         const youtubeId = extractYoutubeIdFromLink(row.Link);
@@ -385,7 +392,6 @@ function buildAudioIndex({ includeEmpty = false } = {}, playlistIndex) {
       author: item.author,
       thumbnailOverride: item.thumbnailOverride,
       folder: item.folder,
-      audioFile: item.audioFile,
       vttFile: item.vttFile,
       primaryNumber: item.primaryNumber,
       alternateNumbers: item.alternateNumbers,
@@ -585,16 +591,28 @@ function buildNewsletterIndex() {
     }
 
     // Prefer the clean HTML edition; fall back to chunking the OCR transcription for any
-    // issue the web archive does not cover.
-    let indexedSegments = buildWebNewsletterSegments(id);
-    if (!indexedSegments) {
-      indexedSegments = [];
-      for (const segment of segments) {
-        for (const chunk of splitIntoChunks(segment.text)) {
-          indexedSegments.push({ ...segment, text: chunk, index: indexedSegments.length + 1 });
-        }
+    // issue the web archive does not cover at all, and — since the web edition sometimes
+    // omits specific pages the print edition had (order forms, ads: masjidtucson.org's
+    // SP1985aug HTML skips straight from its page 2 to the PDF's page 4, page 3 was never
+    // digitized there) — also fill in, page by page, any page present in the OCR
+    // transcription but genuinely absent from the web segments, so that content is not
+    // silently dropped just because the clean source happens to be incomplete for it.
+    const ocrChunked = [];
+    for (const segment of segments) {
+      for (const chunk of splitIntoChunks(segment.text)) {
+        ocrChunked.push({ ...segment, text: chunk });
       }
     }
+
+    let indexedSegments = buildWebNewsletterSegments(id);
+    if (!indexedSegments) {
+      indexedSegments = ocrChunked;
+    } else {
+      const webPages = new Set(indexedSegments.map((segment) => segment.page));
+      const missingPageChunks = ocrChunked.filter((segment) => !webPages.has(segment.page));
+      indexedSegments = [...indexedSegments, ...missingPageChunks];
+    }
+    indexedSegments = indexedSegments.map((segment, index) => ({ ...segment, index: index + 1 }));
 
     const monthStr = String(issue.month_number).padStart(2, '0');
     return {
@@ -1115,7 +1133,6 @@ function masterRecord(item, category) {
     filename: item.filename,
     pdfLink: item.pdfLink,
     videoFile: item.videoFile,
-    audioFile: item.audioFile,
     vttFile: item.vttFile,
     primaryNumber: item.primaryNumber,
     alternateNumbers: item.alternateNumbers,

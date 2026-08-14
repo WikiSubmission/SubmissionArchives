@@ -47,20 +47,20 @@ const VIDEO_SLIDES = [
 
 const VIDEO_CAPABILITIES = [
     {
-        title: 'Dated recordings',
-        body: 'Sermons and conference material stay connected to their historical sequence.',
+        title: '300+ Preserved Lectures',
+        body: 'Friday sermons, annual United Submitters International conference keynotes, television programs, and debates.',
     },
     {
-        title: 'Searchable speech',
-        body: 'Transcripts make spoken passages findable without scrubbing through an entire recording.',
+        title: 'Real-Time Synced Transcripts',
+        body: 'Read line-by-line speech text that follows along with audio and video playback automatically.',
     },
     {
-        title: 'Original context',
-        body: 'Each record keeps its title, source, thumbnail, and playback page together.',
+        title: 'Chapter Markers & Timestamps',
+        body: 'Jump instantly to key topics, mathematical proofs, scripture discussions, and audience Q&A sessions.',
     },
     {
-        title: 'Direct study',
-        body: 'Move from an index result to the recording and its synchronized transcript.',
+        title: 'Direct Citation Deep Links',
+        body: 'Copy and share links that open the video at the exact second of evidence for independent verification.',
     },
 ] as const;
 
@@ -119,18 +119,18 @@ export function VideoArchiveSection() {
                 <div ref={rootRef} {...interactionProps} className="touch-pan-y">
                     <div className={widgetCardClass}>
                         <GlassSheen />
-                        {/* Header Bar */}
-                        <div className="flex min-h-12 items-center justify-between gap-4 border-b border-ed-rule px-4 py-2.5 sm:px-5 bg-ed-surface/50">
+                        {/* Header Bar with Traffic Lights */}
+                        <div className="flex min-h-12 items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-6 bg-ed-surface-strong/40 select-none">
                             <div className="flex items-center gap-3">
                                 <div className="flex items-center gap-1.5" aria-hidden="true">
-                                    <span className="h-2.5 w-2.5 rounded-full border border-ed-rule bg-ed-fg-muted/30" />
-                                    <span className="h-2.5 w-2.5 rounded-full border border-ed-rule bg-ed-fg-muted/20" />
-                                    <span className="h-2.5 w-2.5 rounded-full border border-ed-rule bg-ed-fg-muted/20" />
+                                    <span className="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-600/40" />
+                                    <span className="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-600/40" />
+                                    <span className="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-600/40" />
                                 </div>
-                                <span className="h-3 w-px bg-ed-rule" aria-hidden="true" />
+                                <span className="h-3.5 w-px bg-ed-rule-strong/60" aria-hidden="true" />
                                 <div>
-                                    <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
-                                        Featured Recording · {slide.category}
+                                    <p className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                        Recording · <span className="text-ed-fg font-bold">{slide.category}</span>
                                     </p>
                                 </div>
                             </div>
@@ -166,13 +166,13 @@ export function VideoArchiveSection() {
                                 src={slide.src}
                                 alt={slide.title}
                                 fill
-                                quality={75}
+                                quality={85}
                                 sizes="(min-width: 1024px) 55vw, 100vw"
                                 className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-safe:animate-[archive-media-reveal_620ms_cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
-                                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-black shadow-lg">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+                            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                                <span className="inline-flex h-13 w-13 items-center justify-center rounded-2xl border border-white/30 bg-white/15 text-white backdrop-blur-xl transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-black shadow-2xl">
                                     <Play className="ml-0.5 h-5 w-5 fill-current" aria-hidden="true" />
                                 </span>
                                 <div className="mt-4">
@@ -180,13 +180,13 @@ export function VideoArchiveSection() {
                                         {slide.category}
                                     </span>
                                 </div>
-                                <h4 className="mt-2.5 max-w-[22ch] font-sans text-2xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-3xl">
+                                <h4 className="mt-2.5 max-w-[24ch] font-sans text-2xl font-black leading-[1.05] tracking-tight text-white sm:text-3xl">
                                     {slide.title}
                                 </h4>
                             </div>
                         </Link>
 
-                        <div className="grid grid-cols-3 gap-1.5 p-2 border-t border-ed-rule bg-ed-surface/40 sm:grid-cols-6">
+                        <div className="grid grid-cols-3 gap-2 p-3 border-t border-ed-rule bg-ed-surface/40 sm:grid-cols-6">
                             {VIDEO_SLIDES.map((item, itemIndex) => (
                                 <button
                                     key={item.src}
@@ -194,8 +194,8 @@ export function VideoArchiveSection() {
                                     onClick={() => goTo(itemIndex)}
                                     aria-label={`Show ${item.title}`}
                                     aria-pressed={itemIndex === index}
-                                    className={`relative min-h-16 overflow-hidden rounded-lg border transition-all ${
-                                        itemIndex === index ? 'border-ed-accent ring-1 ring-ed-accent shadow-sm shadow-ed-accent/30' : 'border-ed-rule/60 opacity-60 hover:opacity-100 hover:border-ed-fg-muted'
+                                    className={`relative min-h-16 overflow-hidden rounded-xl border transition-all duration-200 ${
+                                        itemIndex === index ? 'border-ed-fg ring-2 ring-ed-fg/40 shadow-md scale-[1.02]' : 'border-ed-rule-strong/60 opacity-60 hover:opacity-100 hover:border-ed-fg-muted'
                                     }`}
                                 >
                                     <span className="relative block aspect-video overflow-hidden bg-ed-console">
@@ -203,7 +203,7 @@ export function VideoArchiveSection() {
                                             src={item.src}
                                             alt=""
                                             fill
-                                            quality={45}
+                                            quality={55}
                                             sizes="140px"
                                             className={`object-cover transition duration-300 ${
                                                 itemIndex === index

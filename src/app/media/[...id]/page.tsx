@@ -1,13 +1,13 @@
-import fs from 'fs';
-import path from 'path';
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { formatMedia } from '@/lib/formatUtils';
-import { getMediaAssetUrl, getMediaPlaybackWindow, getPublicAssetUrl } from '@/lib/mediaAssets';
-import { SITE_NAME } from '@/config/site';
+import fs from "fs";
+import path from "path";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { formatMedia } from "@/lib/formatUtils";
+import { getMediaAssetUrl, getMediaPlaybackWindow, getPublicAssetUrl } from "@/lib/mediaAssets";
+import { SITE_NAME } from "@/config/site";
 export const dynamicParams = true;
 
-import PlayerWrapper from './PlayerWrapper';
+import PlayerWrapper from "./PlayerWrapper";
 
 type LocalMediaItem = {
   id: string;
@@ -17,7 +17,6 @@ type LocalMediaItem = {
   date?: string;
   created_at?: string;
   videoFile?: string;
-  audioFile?: string;
   vttFile?: string;
   thumbnailOverride?: string;
   youtubeId?: string;
@@ -54,44 +53,42 @@ type MasterIndexItem = LocalMediaItem & {
   }>;
 };
 
-const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
-const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
+const SOURCE_CATALOG_DIR = path.join(process.cwd(), "data", "catalog");
+const GENERATED_DIR = path.join(process.cwd(), "public", "data", "generated_indices");
 
-// Module-level singleton cache: these generated index files are large
-// Force hot-reload 3
-// parse each once instead of per-render/per-request (React's cache() only
-// dedupes within a single render).
+// Module-level singleton cache: these generated index files are large.
+// Parse each once instead of per-render/per-request.
 const localIndexCache = new Map<string, LocalMediaItem[]>();
 
 function getLocalIndex(filePath: string): LocalMediaItem[] {
   const cached = localIndexCache.get(filePath);
   if (cached) return cached;
   if (!fs.existsSync(filePath)) return [];
-  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8')) as LocalMediaItem[];
+  const parsed = JSON.parse(fs.readFileSync(filePath, "utf8")) as LocalMediaItem[];
   localIndexCache.set(filePath, parsed);
   return parsed;
 }
 
 function getVideoCatalog(masterIndex: MasterIndexItem[]) {
-  const videos = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'videos.json'));
+  const videos = getLocalIndex(path.join(SOURCE_CATALOG_DIR, "videos.json"));
   if (videos.length > 0) return videos;
 
   return masterIndex.filter((item) =>
-    item.type === 'video-program' || item.type === 'sermon' || item.type === 'video'
+    item.type === "video-program" || item.type === "sermon" || item.type === "video"
   ) as LocalMediaItem[];
 }
 
 function getAudioCatalog(masterIndex: MasterIndexItem[]) {
-  const audios = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'audios.json'));
+  const audios = getLocalIndex(path.join(SOURCE_CATALOG_DIR, "audios.json"));
   if (audios.length > 0) return audios;
 
   return masterIndex.filter((item) =>
-    item.type === 'quran-study' || item.type === 'messenger-audio' || item.type === 'audio'
+    item.type === "quran-study" || item.type === "messenger-audio" || item.type === "audio"
   ) as LocalMediaItem[];
 }
 
 export async function generateStaticParams() {
-  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, "MASTER_INDEX.json")) as MasterIndexItem[];
   const allMedia = [...getVideoCatalog(masterIndex), ...getAudioCatalog(masterIndex)];
   const seen = new Set<string>();
 
@@ -102,12 +99,12 @@ export async function generateStaticParams() {
       return true;
     })
     .map((item) => ({
-      id: item.id.split('/').filter(Boolean),
+      id: item.id.split("/").filter(Boolean),
     }));
 }
 
 function findCatalogItem(key: string) {
-  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, "MASTER_INDEX.json")) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
   const allAudios = getAudioCatalog(masterIndex);
   return allVideos.find((v) => v.id === key) || allAudios.find((a) => a.id === key);
@@ -119,13 +116,17 @@ export async function generateMetadata({
   params: Promise<{ id: string[] }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const key = id.map(decodeURIComponent).join('/');
+  const key = id.map(decodeURIComponent).join("/");
   const item = findCatalogItem(key);
-  if (!item) return { title: 'Not Found' };
+  if (!item) return { title: "Not Found" };
 
   const { displayTitle, displayDate, author } = formatMedia(item);
-  const description = displayDate ? `${displayTitle}: ${displayDate}, by ${author}.` : `${displayTitle}, by ${author}.`;
-  const image = item.thumbnailOverride ? [getPublicAssetUrl(item.thumbnailOverride)] : ['/digi.png'];
+  const description = displayDate
+    ? `${displayTitle}: ${displayDate}, by ${author}.`
+    : `${displayTitle}, by ${author}.`;
+  const image = item.thumbnailOverride
+    ? [getPublicAssetUrl(item.thumbnailOverride)]
+    : ["/digi.png"];
 
   return {
     title: displayTitle,
@@ -133,13 +134,13 @@ export async function generateMetadata({
     openGraph: {
       title: displayTitle,
       description,
-      type: 'video.other',
+      type: "video.other",
       siteName: SITE_NAME,
-      url: `/media/${id.join('/')}`,
+      url: `/media/${id.join("/")}`,
       images: image,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: displayTitle,
       description,
       images: image,
@@ -153,15 +154,15 @@ export default async function WatchPage({
   params: Promise<{ id: string[] }>;
 }) {
   const { id } = await params;
-  const key = id.map(decodeURIComponent).join('/');
-  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
+  const key = id.map(decodeURIComponent).join("/");
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, "MASTER_INDEX.json")) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
   const allAudios = getAudioCatalog(masterIndex);
 
-  let item = allVideos.find(v => v.id === key);
+  let item = allVideos.find((v) => v.id === key);
   let isVideo = true;
   if (!item) {
-    item = allAudios.find(a => a.id === key);
+    item = allAudios.find((a) => a.id === key);
     isVideo = false;
   }
   if (!item) notFound();
@@ -174,37 +175,48 @@ export default async function WatchPage({
   // MA 72+ transcripts come from unverified auto-generated captions with no
   // reliable speaker attribution, so they should not default to a named speaker.
   // The 1987 Debate also has multiple speakers without attribution.
-  const isUnverifiedSpeakerSource = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 72) || item.id === 'video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987';
-  const defaultSpeaker = isUnverifiedSpeakerSource ? '' : 'Dr. Rashad Khalifa';
-  const transcriptDisclaimer = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 72) ? 'MA 72-100 are NOT hand-transcribed.' : undefined;
+  const isUnverifiedSpeakerSource =
+    (item.type === "messenger-audio" && (item.primaryNumber ?? 0) >= 72) ||
+    item.id === "video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987";
+  const defaultSpeaker = isUnverifiedSpeakerSource ? "" : "Dr. Rashad Khalifa";
+  const transcriptDisclaimer =
+    item.type === "messenger-audio" && (item.primaryNumber ?? 0) >= 72
+      ? "MA 72-100 are NOT hand-transcribed."
+      : undefined;
 
-  const segments: PlayerSegment[] = (masterItem?.segments || []).map((segment, index) => ({
-    id: index,
-    start_time: segment.start ?? 0,
-    end_time: segment.end ?? segment.start ?? 0,
-    speaker: segment.speaker || defaultSpeaker,
-    content: segment.text ?? '',
-    segment_index: index + 1,
-  })).filter((segment) => segment.content);
+  const segments: PlayerSegment[] = (masterItem?.segments || [])
+    .map((segment, index) => ({
+      id: index,
+      start_time: segment.start ?? 0,
+      end_time: segment.end ?? segment.start ?? 0,
+      speaker: segment.speaker || defaultSpeaker,
+      content: segment.text ?? "",
+      segment_index: index + 1,
+    }))
+    .filter((segment) => segment.content);
 
-  const segments_ar: PlayerSegment[] = (masterItem?.segments_ar || []).map((segment, index) => ({
-    id: index,
-    start_time: segment.start ?? 0,
-    end_time: segment.end ?? segment.start ?? 0,
-    speaker: segment.speaker || defaultSpeaker,
-    content: segment.text ?? '',
-    segment_index: index + 1,
-  })).filter((segment) => segment.content);
+  const segments_ar: PlayerSegment[] = (masterItem?.segments_ar || [])
+    .map((segment, index) => ({
+      id: index,
+      start_time: segment.start ?? 0,
+      end_time: segment.end ?? segment.start ?? 0,
+      speaker: segment.speaker || defaultSpeaker,
+      content: segment.text ?? "",
+      segment_index: index + 1,
+    }))
+    .filter((segment) => segment.content);
 
   const collection = isVideo ? allVideos : allAudios;
-  const idx = collection.findIndex(m => m.id === key);
+  const idx = collection.findIndex((m) => m.id === key);
   const prevItem = idx > 0 ? collection[idx - 1] : null;
-
-
   const nextItem = idx < collection.length - 1 ? collection[idx + 1] : null;
 
-  const prev = prevItem ? { id: prevItem.id, title: formatMedia(prevItem).displayTitle } : undefined;
-  const next = nextItem ? { id: nextItem.id, title: formatMedia(nextItem).displayTitle } : undefined;
+  const prev = prevItem
+    ? { id: prevItem.id, title: formatMedia(prevItem).displayTitle }
+    : undefined;
+  const next = nextItem
+    ? { id: nextItem.id, title: formatMedia(nextItem).displayTitle }
+    : undefined;
 
   return (
     <div className="min-h-screen bg-ed-bg text-ed-fg">
@@ -222,10 +234,3 @@ export default async function WatchPage({
     </div>
   );
 }
-// force reload
-
-// force reload 2
-
-// force reload 3
-
-// force reload 4

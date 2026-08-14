@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Pause, Play, BookOpen, Volume2, Video, FileText, Search } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 import { Reveal } from './Reveal';
@@ -12,23 +12,61 @@ import { GlassSheen, chromeButtonClass } from './WidgetAccents';
 const HERO_IMAGES = [
     {
         src: '/images/archive-photos/M3.png',
-        alt: 'Rashad Khalifa archival photograph',
-        label: 'Archive plate 01',
+        alt: 'Dr. Rashad Khalifa archival photograph',
+        label: 'Archive Plate 01 · Historical Portrait',
     },
     {
         src: '/images/archive-photos/M1.png',
-        alt: 'Rashad Khalifa with others in an archival photograph',
-        label: 'Archive plate 02',
+        alt: 'Dr. Rashad Khalifa with submitters in Tucson, Arizona',
+        label: 'Archive Plate 02 · Tucson Community',
     },
     {
         src: '/images/archive-photos/M2.png',
-        alt: 'Rashad Khalifa in an archival group photograph',
-        label: 'Archive plate 03',
+        alt: 'Dr. Rashad Khalifa delivering a lecture at the annual conference',
+        label: 'Archive Plate 03 · Annual Conference',
     },
     {
         src: '/images/archive-photos/M4.jpeg',
-        alt: 'Rashad Khalifa archival scene',
-        label: 'Archive plate 04',
+        alt: 'Archival scene from Tucson mosque',
+        label: 'Archive Plate 04 · Preservation Record',
+    },
+] as const;
+
+const ARCHIVE_PORTALS = [
+    {
+        title: 'Scriptures',
+        badge: '5 Canons',
+        desc: '114 Surahs, 38 Appendices, 39 OT, 15 Apocrypha & 27 NT books',
+        href: '/scripture/quran',
+        icon: BookOpen,
+    },
+    {
+        title: 'Audio Archives',
+        badge: '600+ Audios',
+        desc: 'Friday sermons, Qur\'an studies & synchronized speech transcripts',
+        href: '/audios',
+        icon: Volume2,
+    },
+    {
+        title: 'Video Lectures',
+        badge: '300+ Videos',
+        desc: 'Historic sermons, conferences, televised programs & debates',
+        href: '/videos',
+        icon: Video,
+    },
+    {
+        title: 'Written Library',
+        badge: '74 Publications',
+        desc: '10 Published books, 64 monthly newsletters & scanned facsimiles',
+        href: '/written',
+        icon: FileText,
+    },
+    {
+        title: 'Universal Search',
+        badge: 'Deep Search',
+        desc: 'Full-text query across every transcript, newsletter & verse',
+        href: '/search',
+        icon: Search,
     },
 ] as const;
 
@@ -53,106 +91,170 @@ export function HeroSection() {
     const activeImage = HERO_IMAGES[index];
 
     return (
-        <section aria-labelledby="hero-title" className="relative overflow-hidden bg-ed-bg">
-
+        <section aria-labelledby="hero-title" className="relative overflow-hidden bg-ed-bg border-b border-ed-rule pb-12 pt-6 sm:pb-20 sm:pt-10">
+            {/* Background Ambient Glow */}
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+                <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-ed-ambient-1 blur-[140px]" />
+                <div className="absolute -left-32 top-1/2 h-[400px] w-[400px] rounded-full bg-ed-ambient-2 blur-[140px]" />
                 <Image
                     src="/assets/brand/submission-archives-mark.png"
                     alt=""
                     width={500}
                     height={500}
-                    className="absolute -right-24 -top-20 hidden w-[34rem] select-none opacity-[0.04] grayscale lg:block dark:opacity-[0.06]"
+                    className="absolute -right-24 -top-20 hidden w-[34rem] select-none opacity-[0.03] grayscale lg:block dark:opacity-[0.05]"
                     aria-hidden="true"
                 />
             </div>
 
-            <div className="relative mx-auto grid max-w-[1440px] gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-10 lg:pb-24 lg:pt-20">
-                <div className="max-w-3xl">
+            <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
+                {/* Hero Main Grid */}
+                <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
+                    <div className="max-w-2xl">
+                        <Reveal delay={80}>
+                            <div className="inline-flex items-center gap-2 rounded-full border border-ed-rule bg-ed-surface/80 px-3.5 py-1 text-xs font-mono font-medium text-ed-fg-muted backdrop-blur-md">
+                                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                                <span>Digital Preservation Archive · Est. 1980–Present</span>
+                            </div>
+                        </Reveal>
 
-                    <Reveal delay={120} className="flex justify-center sm:justify-start">
-                        <h1 id="hero-title" className="flex flex-col text-ed-fg w-fit items-center sm:items-start text-center sm:text-left">
-                            <span className="block font-sans text-[clamp(2.8rem,9vw,5.2rem)] font-black uppercase leading-[0.88] tracking-tight">
-                                Submission
-                            </span>
-                            <span className="mt-2 block w-full border border-ed-fg bg-ed-surface-strong px-5 py-3 text-center font-slab text-[clamp(3rem,10vw,5.6rem)] font-black italic uppercase leading-none tracking-tight text-ed-fg">
-                                Archives
-                            </span>
-                        </h1>
-                    </Reveal>
+                        <Reveal delay={140} className="mt-6 flex justify-center sm:justify-start">
+                            <h1 id="hero-title" className="flex flex-col text-ed-fg w-fit items-center sm:items-start text-center sm:text-left">
+                                <span className="block font-sans text-[clamp(2.8rem,8.5vw,4.8rem)] font-black uppercase leading-[0.88] tracking-tight">
+                                    Submission
+                                </span>
+                                <span className="mt-2 block w-full border border-ed-fg bg-ed-surface-strong px-5 py-2.5 text-center font-slab text-[clamp(2.9rem,9vw,5rem)] font-black italic uppercase leading-none tracking-tight text-ed-fg">
+                                    Archives
+                                </span>
+                            </h1>
+                        </Reveal>
 
-                    <Reveal delay={180} className="mt-4 sm:mt-5 lg:mt-6">
-                        <p className="max-w-[52ch] text-[1.05rem] leading-8 text-ed-fg-muted sm:text-lg text-center sm:text-left mx-auto sm:mx-0">
-                            Explore preserved recordings, Qur&apos;an editions, newsletters, books, appendices, and searchable transcripts from the Submission archive.
-                        </p>
-                    </Reveal>
+                        <Reveal delay={200} className="mt-5 sm:mt-6">
+                            <p className="max-w-[54ch] text-base leading-relaxed text-ed-fg-muted sm:text-lg text-center sm:text-left mx-auto sm:mx-0 font-sans">
+                                The comprehensive digital repository dedicated to the permanent preservation of historical audio recordings, video lectures, authorized scripture translations, and published works of Dr. Rashad Khalifa.
+                            </p>
+                        </Reveal>
 
-                    <Reveal delay={240}>
-                        <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center justify-center sm:justify-start">
-                            <Link href="/search" className="archive-button archive-button-primary group px-7 active:scale-[0.98]">
-                                Search the archive
-                                <ArrowRight
-                                    className="h-4 w-4 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
-                                    aria-hidden="true"
+                        <Reveal delay={260}>
+                            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center justify-center sm:justify-start">
+                                <Link href="/search" className="archive-button archive-button-primary group px-7 active:scale-[0.98]">
+                                    <Search className="h-4 w-4" />
+                                    Search entire archive
+                                    <ArrowRight
+                                        className="h-4 w-4 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
+                                        aria-hidden="true"
+                                    />
+                                </Link>
+                                <Link href="/scripture/quran" className="archive-button archive-button-secondary px-7 active:scale-[0.98]">
+                                    <BookOpen className="h-4 w-4" />
+                                    Open Scripture Reader
+                                </Link>
+                            </div>
+                        </Reveal>
+                    </div>
+
+                    {/* Interactive Archival Carousel */}
+                    <Reveal delay={220} className="relative">
+                        <div
+                            ref={rootRef}
+                            {...interactionProps}
+                            className="group/hero-carousel relative mx-auto w-full max-w-[44rem] overflow-hidden rounded-3xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/95 via-ed-surface/85 to-ed-surface/65 p-4 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.06)_inset] backdrop-blur-2xl transition-all duration-300 hover:border-ed-fg/40 sm:p-6"
+                        >
+                            <GlassSheen />
+                            <div className="flex items-center justify-between border-b border-ed-rule pb-3.5 select-none">
+                                <div className="flex items-center gap-3">
+                                    <div className="flex items-center gap-1.5" aria-hidden="true">
+                                        <span className="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-600/40" />
+                                        <span className="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-600/40" />
+                                        <span className="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-600/40" />
+                                    </div>
+                                    <span className="h-3.5 w-px bg-ed-rule-strong/60" aria-hidden="true" />
+                                    <span className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                        Historical Record · <span className="text-ed-fg font-bold">{activeImage.label.split('·')[1] || activeImage.label}</span>
+                                    </span>
+                                </div>
+
+                                <div className="flex items-center gap-1.5">
+                                    <CarouselButton label="Previous photograph" onClick={previous}>
+                                        <ArrowLeft className="h-3.5 w-3.5" />
+                                    </CarouselButton>
+
+                                    <CarouselButton
+                                        label={isManuallyPaused ? 'Play photo rotation' : 'Pause photo rotation'}
+                                        onClick={() => setIsManuallyPaused(!isManuallyPaused)}
+                                        pressed={isManuallyPaused}
+                                    >
+                                        {isManuallyPaused ? <Play className="h-3.5 w-3.5" /> : <Pause className="h-3.5 w-3.5" />}
+                                    </CarouselButton>
+
+                                    <CarouselButton label="Next photograph" onClick={next}>
+                                        <ArrowRight className="h-3.5 w-3.5" />
+                                    </CarouselButton>
+                                </div>
+                            </div>
+
+                            <div
+                                className="relative mt-3.5 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-ed-bg sm:mt-4 shadow-inner"
+                                style={{
+                                    transform: dragOffsetPx ? `translateX(${dragOffsetPx}px)` : undefined,
+                                    transition: isDragging ? 'none' : 'transform 400ms cubic-bezier(0.32,0.72,0,1)',
+                                }}
+                            >
+                                <Image
+                                    src={activeImage.src}
+                                    alt={activeImage.alt}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 44rem"
+                                    className="object-cover transition-opacity duration-700 ease-in-out"
+                                    priority
                                 />
-                            </Link>
-                            <Link href="/videos" className="archive-button archive-button-secondary px-7 active:scale-[0.98]">
-                                Browse recordings
-                            </Link>
+                            </div>
                         </div>
                     </Reveal>
                 </div>
 
-                <Reveal delay={200} className="relative">
-                    <div
-                        ref={rootRef}
-                        {...interactionProps}
-                        className="group/hero-carousel relative mx-auto w-full max-w-[42rem] overflow-hidden rounded-2xl border border-ed-rule bg-ed-surface/95 p-3 shadow-2xl transition-all duration-300 hover:border-ed-rule-strong sm:p-4"
-                    >
-                        <GlassSheen />
-                        <div className="flex items-center justify-between border-b border-ed-rule/70 pb-3">
-                            <div className="flex items-center gap-2">
-                                <span className="h-2.5 w-2.5 rounded-full bg-ed-fg/20" />
-                                <span className="h-2.5 w-2.5 rounded-full bg-ed-fg/20" />
-                                <span className="h-2.5 w-2.5 rounded-full bg-ed-fg/20" />
-                                <span className="ml-2 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
-                                    Historical Photographs · {activeImage.label}
-                                </span>
-                            </div>
-
-                            <div className="flex items-center gap-1.5">
-                                <CarouselButton label="Previous photo" onClick={previous}>
-                                    <ArrowLeft className="h-3.5 w-3.5" />
-                                </CarouselButton>
-
-                                <CarouselButton
-                                    label={isManuallyPaused ? 'Play photo rotation' : 'Pause photo rotation'}
-                                    onClick={() => setIsManuallyPaused(!isManuallyPaused)}
-                                    pressed={isManuallyPaused}
-                                >
-                                    {isManuallyPaused ? <Play className="h-3.5 w-3.5" /> : <Pause className="h-3.5 w-3.5" />}
-                                </CarouselButton>
-
-                                <CarouselButton label="Next photo" onClick={next}>
-                                    <ArrowRight className="h-3.5 w-3.5" />
-                                </CarouselButton>
-                            </div>
+                {/* 5 Portals Navigation Ribbon */}
+                <Reveal delay={300} className="mt-14 sm:mt-20">
+                    <div>
+                        <div className="mb-4 flex items-center justify-between">
+                            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-ed-fg-muted">
+                                Archive Portals & Sections
+                            </span>
+                            <span className="font-mono text-xs text-ed-fg-muted">
+                                Instant Access to Collections
+                            </span>
                         </div>
-
-                        <div
-                            className="relative mt-3 aspect-[4/3] w-full overflow-hidden rounded-xl bg-ed-bg sm:mt-4"
-                            style={{
-                                transform: dragOffsetPx ? `translateX(${dragOffsetPx}px)` : undefined,
-                                transition: isDragging ? 'none' : 'transform 400ms cubic-bezier(0.32,0.72,0,1)',
-                            }}
-                        >
-                            <Image
-                                src={activeImage.src}
-                                alt={activeImage.alt}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 42rem"
-                                className="object-cover transition-opacity duration-700 ease-in-out"
-                                priority
-                            />
+                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                            {ARCHIVE_PORTALS.map((portal) => {
+                                 const Icon = portal.icon;
+                                 return (
+                                     <Link
+                                         key={portal.title}
+                                         href={portal.href}
+                                         className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/90 via-ed-surface/70 to-ed-surface/50 p-5 shadow-[0_12px_28px_-10px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.05)_inset] backdrop-blur-xl transition-all duration-300 hover:border-ed-fg/40 hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]"
+                                     >
+                                         <div>
+                                             <div className="flex items-center justify-between gap-2">
+                                                 <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-ed-rule-strong/80 bg-ed-surface-strong text-ed-fg shadow-sm transition-all duration-200 group-hover:scale-105 group-hover:bg-ed-fg group-hover:text-ed-bg">
+                                                     <Icon className="h-4 w-4" />
+                                                 </span>
+                                                 <span className="rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.62rem] font-bold text-ed-fg-muted transition-colors group-hover:text-ed-fg">
+                                                     {portal.badge}
+                                                 </span>
+                                             </div>
+                                             <h2 className="mt-3.5 font-sans text-base font-bold text-ed-fg">
+                                                 {portal.title}
+                                             </h2>
+                                             <p className="mt-1.5 text-xs leading-relaxed text-ed-fg-muted line-clamp-2">
+                                                 {portal.desc}
+                                             </p>
+                                         </div>
+                                         <div className="mt-5 flex items-center gap-1 font-mono text-[0.68rem] font-semibold uppercase tracking-wider text-ed-fg-muted transition-colors group-hover:text-ed-fg">
+                                             <span>Explore portal</span>
+                                             <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1" />
+                                         </div>
+                                     </Link>
+                                 );
+                            })}
                         </div>
                     </div>
                 </Reveal>

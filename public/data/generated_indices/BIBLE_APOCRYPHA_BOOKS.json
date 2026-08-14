@@ -1,0 +1,137 @@
+[
+  {
+    "bookCode": "1-maccabees",
+    "bookName": "1 Maccabees",
+    "hebrewTitle": "ספר מקבים א",
+    "category": "Historical & Narrative",
+    "order": 1,
+    "chapterCount": 16,
+    "verseCount": 954
+  },
+  {
+    "bookCode": "2-maccabees",
+    "bookName": "2 Maccabees",
+    "hebrewTitle": "ספר מקבים ב",
+    "category": "Historical & Narrative",
+    "order": 2,
+    "chapterCount": 15,
+    "verseCount": 660
+  },
+  {
+    "bookCode": "1-maccabees-kahana",
+    "bookName": "1 Maccabees (Kahana)",
+    "hebrewTitle": "ספר מקבים א (תרגום כהנא)",
+    "category": "Historical & Narrative",
+    "order": 3,
+    "chapterCount": 16,
+    "verseCount": 923
+  },
+  {
+    "bookCode": "tobit",
+    "bookName": "Tobit",
+    "hebrewTitle": "מעשה טוביה",
+    "category": "Historical & Narrative",
+    "order": 4,
+    "chapterCount": 13,
+    "verseCount": 76
+  },
+  {
+    "bookCode": "judith",
+    "bookName": "Judith",
+    "hebrewTitle": "ספר יהודית",
+    "category": "Historical & Narrative",
+    "order": 5,
+    "chapterCount": 16,
+    "verseCount": 383
+  },
+  {
+    "bookCode": "megillat-antiochus",
+    "bookName": "Megillat Antiochus",
+    "hebrewTitle": "מגילת אנטיוכוס",
+    "category": "Historical & Narrative",
+    "order": 6,
+    "chapterCount": 1,
+    "verseCount": 79
+  },
+  {
+    "bookCode": "wisdom-of-solomon",
+    "bookName": "Wisdom of Solomon",
+    "hebrewTitle": "חכמת שלמה",
+    "category": "Wisdom & Poetry",
+    "order": 7,
+    "chapterCount": 19,
+    "verseCount": 438
+  },
+  {
+    "bookCode": "sirach",
+    "bookName": "Sirach (Ben Sira)",
+    "hebrewTitle": "בן סירא",
+    "category": "Wisdom & Poetry",
+    "order": 8,
+    "chapterCount": 51,
+    "verseCount": 1019
+  },
+  {
+    "bookCode": "psalm-151",
+    "bookName": "Psalm 151",
+    "hebrewTitle": "תהילים קנ\"א",
+    "category": "Wisdom & Poetry",
+    "order": 9,
+    "chapterCount": 1,
+    "verseCount": 10
+  },
+  {
+    "bookCode": "psalm-154",
+    "bookName": "Psalm 154",
+    "hebrewTitle": "תהלים קנ\"ד",
+    "category": "Wisdom & Poetry",
+    "order": 10,
+    "chapterCount": 1,
+    "verseCount": 20
+  },
+  {
+    "bookCode": "prayer-of-manasseh",
+    "bookName": "Prayer of Manasseh",
+    "hebrewTitle": "תְּפִלַּת מְנַשֶׁה",
+    "category": "Wisdom & Poetry",
+    "order": 11,
+    "chapterCount": 1,
+    "verseCount": 15
+  },
+  {
+    "bookCode": "jubilees",
+    "bookName": "Book of Jubilees",
+    "hebrewTitle": "ספר היובלים",
+    "category": "Pseudepigrapha & Additions",
+    "order": 12,
+    "chapterCount": 50,
+    "verseCount": 1758
+  },
+  {
+    "bookCode": "testaments-twelve-patriarchs",
+    "bookName": "Testaments of the 12 Patriarchs",
+    "hebrewTitle": "צוואות השבטים",
+    "category": "Pseudepigrapha & Additions",
+    "order": 13,
+    "chapterCount": 142,
+    "verseCount": 1002
+  },
+  {
+    "bookCode": "susanna",
+    "bookName": "Book of Susanna",
+    "hebrewTitle": "ספר שושנה",
+    "category": "Pseudepigrapha & Additions",
+    "order": 14,
+    "chapterCount": 1,
+    "verseCount": 76
+  },
+  {
+    "bookCode": "letter-of-aristeas",
+    "bookName": "Letter of Aristeas",
+    "hebrewTitle": "אגרת אריסטיאס",
+    "category": "Pseudepigrapha & Additions",
+    "order": 15,
+    "chapterCount": 1,
+    "verseCount": 322
+  }
+]

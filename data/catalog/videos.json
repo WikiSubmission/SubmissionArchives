@@ -26,17 +26,17 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=HngIrz8xHTw"
   },
   {
-    "id": "video-program/witness-a-miracle-world-news-bulletin",
-    "title": "Witness a Miracle & World News Bulletin",
-    "displayTitle": "Witness a Miracle & World News Bulletin",
+    "id": "video-program/witness-a-miracle",
+    "title": "Witness a Miracle",
+    "displayTitle": "Witness a Miracle",
     "type": "video-program",
     "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/videos/thumbnails/witness-a-miracle-world-news-bulletin.jpg",
-    "folder": "Witness_a_Miracle_World_News_Bulletin",
+    "thumbnailOverride": "/content/videos/thumbnails/witness-a-miracle.jpg",
+    "folder": "Witness_a_Miracle",
     "vttFile": "transcript.json",
-    "videoFile": "Witness a Miracle  World News Bulletin.mp4",
-    "youtubeId": "3Hn1zD5z6Cg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=3Hn1zD5z6Cg"
+    "videoFile": "Witness a Miracle.mp4",
+    "youtubeId": "cMwCbqfE7ks",
+    "youtubeUrl": "https://www.youtube.com/watch?v=cMwCbqfE7ks"
   },
   {
     "id": "video-program/mathematical-miracle-of-quran",
@@ -139,8 +139,8 @@
     "folder": "Evolution_or_Creation_The_Final_Argument_by_Dr._Rashad_Khalifa",
     "vttFile": "transcript.json",
     "videoFile": "Evolution or Creation The Final Argument by Dr. Rashad Khalifa.mp4",
-    "youtubeId": "yXOlRXDdbbo",
-    "youtubeUrl": "https://www.youtube.com/watch?v=yXOlRXDdbbo"
+    "youtubeId": "6vwJfbVseP0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=6vwJfbVseP0"
   },
   {
     "id": "video-program/king-of-chaos",

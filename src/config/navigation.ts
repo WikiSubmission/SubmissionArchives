@@ -7,34 +7,46 @@ export const PRIMARY_NAV = [
     { name: 'Written', href: '/written' },
     { name: 'Scriptures', href: '/scripture/quran' },
     { name: 'Search', href: '/search' },
+    { name: 'App', href: '/app' },
 ];
 
 export const FOOTER_NAV = [
     {
-        title: 'Archive',
+        title: 'Scripture',
         links: [
-            { name: 'Video library', href: '/videos' },
-            { name: 'Audio library', href: '/audios' },
-            { name: 'Written archive', href: '/written' },
-            { name: 'Scriptures', href: '/scripture/quran' },
+            { name: "The Qur'an", href: '/scripture/quran' },
+            { name: 'Appendices (38 Notes)', href: '/scripture/quran/appendices' },
+            { name: 'Old Testament (39 Books)', href: '/scripture/old-testament' },
+            { name: 'OT Apocrypha (15 Books)', href: '/scripture/old-testament/apocrypha' },
+            { name: 'New Testament (27 Books)', href: '/scripture/new-testament' },
         ],
     },
     {
-        title: 'Research',
+        title: 'Preserved Media',
         links: [
-            { name: 'Search the archive', href: '/search' },
-            { name: 'Video programs', href: '/videos#programs' },
-            { name: 'Friday sermons', href: '/videos#sermons' },
-            { name: 'Newsletter search', href: '/search?filters=perspective' },
+            { name: 'Video Archive', href: '/videos' },
+            { name: 'Audio Recordings', href: '/audios' },
+            { name: 'Friday Sermons', href: '/videos#sermons' },
+            { name: 'Quran Studies', href: '/audios#quran-studies' },
+            { name: 'Messenger Audios', href: '/audios#messenger-audios' },
+        ],
+    },
+    {
+        title: 'Written Library',
+        links: [
+            { name: 'Submitters Perspective', href: '/written' },
+            { name: 'Books & Publications', href: '/written#books' },
+            { name: 'Historical Editions', href: '/scripture/quran/appendices' },
+            { name: 'Global Deep Search', href: '/search' },
         ],
     },
     {
         title: 'Community',
         links: [
-            { name: 'YouTube', href: YOUTUBE_URL },
-            { name: 'Discord', href: DISCORD_URL },
-            { name: 'Quran studies', href: '/audios#quran-studies' },
-            { name: 'Messenger audios', href: '/audios#messenger-audios' },
+            { name: 'YouTube Channel', href: YOUTUBE_URL },
+            { name: 'Discord Server', href: DISCORD_URL },
+            { name: 'Preservation Principles', href: '/terms' },
+            { name: 'Privacy Policy', href: '/privacy' },
         ],
     },
 ];

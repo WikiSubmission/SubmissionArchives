@@ -26,13 +26,40 @@ export default async function PDFReaderPage({ params }: Props) {
     const payload = resolveReaderPage(id, () => `/library/${id}`);
     const { book, backHref } = payload;
 
+    if (book.type === 'newsletter' && payload.pdfLink) {
+        return (
+            <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
+                <LibraryReaderWrapper
+                    kind="pdf"
+                    documentId={id}
+                    pdfUrl={payload.pdfLink}
+                    title={book.title}
+                    prevId={payload.prevId}
+                    nextId={payload.nextId}
+                    backHref={backHref}
+                />
+            </main>
+        );
+    }
+
     if (book.type === 'newsletter' && payload.newsletterJsonData) {
-        return <LibraryReaderWrapper kind="newsletter-viewer" issue={payload.newsletterJsonData as unknown as IssueType} />;
+        return (
+            <LibraryReaderWrapper
+                kind="newsletter-viewer"
+                issue={payload.newsletterJsonData as unknown as IssueType}
+                pdfUrl={payload.pdfLink}
+                documentId={id}
+                title={book.title}
+                prevId={payload.prevId}
+                nextId={payload.nextId}
+                backHref={backHref}
+            />
+        );
     }
 
     if (book.type === 'appendix' && payload.editions && payload.defaultEdition) {
         return (
-            <main id="main-content" className="h-[calc(100dvh-4.5rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
+            <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
                 <LibraryReaderWrapper kind="appendix" documentId={id} editions={payload.editions} defaultEdition={payload.defaultEdition} title={book.title} backHref={backHref} />
             </main>
         );

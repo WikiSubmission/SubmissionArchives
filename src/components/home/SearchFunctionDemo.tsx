@@ -25,6 +25,7 @@ import { searchTranscripts } from '@/app/search/actions';
 import { formatMedia } from '@/lib/formatUtils';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import { getMediaHref } from '@/lib/utils';
+import { GlassSheen, widgetCardClass } from './WidgetAccents';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // CONSTANTS
@@ -264,20 +265,6 @@ function getThumbnailSrc(media: SearchResult['media']): string {
         return getPublicAssetUrl('/content/audios/messenger-audios/default.jpg');
     }
     return getPublicAssetUrl('/images/placeholders/rashad-khalifa.png');
-}
-
-function formatRelativeTime(date: Date): string {
-    const now = new Date();
-    const diffMs = now.getTime() - date.getTime();
-    const diffMins = Math.floor(diffMs / 60000);
-    const diffHours = Math.floor(diffMins / 60);
-    const diffDays = Math.floor(diffHours / 24);
-
-    if (diffMins < 1) return 'just now';
-    if (diffMins < 60) return `${diffMins}m ago`;
-    if (diffHours < 24) return `${diffHours}h ago`;
-    if (diffDays < 7) return `${diffDays}d ago`;
-    return date.toLocaleDateString();
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -522,33 +509,35 @@ const SearchResultCard = memo(function SearchResultCard({
             data-result-index={index}
             tabIndex={-1}
             onMouseEnter={onMouseEnter}
-            className={`group relative border p-4 transition-all duration-200 outline-none ${
+            className={`group relative rounded-2xl border p-4 sm:p-5 transition-all duration-200 outline-none ${
                 isFocused
-                    ? 'border-ed-accent bg-ed-accent/5 ring-1 ring-ed-accent'
-                    : 'border-ed-rule bg-ed-bg hover:border-ed-accent/60'
+                    ? 'border-ed-fg bg-ed-surface/90 shadow-md ring-1 ring-ed-fg'
+                    : 'border-ed-rule bg-ed-surface/40 hover:border-ed-rule-strong hover:bg-ed-surface/70'
             }`}
         >
             <div className="grid gap-4 sm:grid-cols-[auto_1fr]">
-                <span className="relative hidden aspect-video w-24 shrink-0 overflow-hidden border border-ed-rule bg-ed-surface sm:block">
+                <span className="relative hidden aspect-video w-28 shrink-0 overflow-hidden rounded-xl border border-ed-rule bg-ed-surface sm:block shadow-inner">
                     <Image
                         src={thumbnailSrc}
                         alt={`Thumbnail for ${result.media.displayTitle}`}
                         fill
                         quality={50}
-                        sizes="96px"
+                        sizes="112px"
                         loading={index < 2 ? 'eager' : 'lazy'}
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                 </span>
                 <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
-                        <span className="text-ed-accent">[{String(index + 1).padStart(2, '0')}]</span>
-                        <span className="uppercase">{result.media.type}</span>
-                        <span className="border border-ed-rule px-1.5 py-0.5 text-ed-accent">
+                        <span className="text-ed-fg">[{String(index + 1).padStart(2, '0')}]</span>
+                        <span className="rounded-md border border-ed-rule bg-ed-surface px-2 py-0.5 uppercase text-ed-fg">
+                            {result.media.type}
+                        </span>
+                        <span className="rounded-md border border-ed-rule bg-ed-surface px-2 py-0.5 text-ed-fg-muted">
                             {result.matchCount} {result.matchCount === 1 ? 'match' : 'matches'}
                         </span>
                     </div>
-                    <h4 className="mt-1 font-display text-base font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent sm:text-lg">
+                    <h4 className="mt-2 font-sans text-base font-bold leading-snug text-ed-fg transition-colors group-hover:text-ed-accent sm:text-lg">
                         <Link href={itemLink} className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent">
                             {result.media.displayTitle}
                         </Link>
@@ -556,7 +545,7 @@ const SearchResultCard = memo(function SearchResultCard({
 
                     {topMatch?.snippet ? (
                         <p
-                            className="mt-2 text-xs leading-relaxed text-ed-fg-muted"
+                            className="mt-2 text-xs leading-relaxed text-ed-fg-muted line-clamp-2"
                             dangerouslySetInnerHTML={{ __html: highlightedSnippet }}
                         />
                     ) : null}
@@ -585,12 +574,12 @@ const ErrorBanner = memo(function ErrorBanner({
         <div
             role="alert"
             aria-live="polite"
-            className="mt-4 border border-[#961515]/30 bg-[#961515]/10 p-4"
+            className="mt-4 rounded-2xl border border-red-500/20 bg-red-500/10 p-5 backdrop-blur-md"
         >
-            <div className="flex items-start gap-3">
-                <span className="text-lg" aria-hidden="true">{iconMap[error.type]}</span>
+            <div className="flex items-start gap-3.5">
+                <span className="text-xl" aria-hidden="true">{iconMap[error.type]}</span>
                 <div className="flex-1">
-                    <p className="text-sm font-semibold text-[#961515] dark:text-[#f6ae82]">
+                    <p className="text-sm font-bold text-red-600 dark:text-red-400">
                         {error.type === 'network'
                             ? 'Connection Issue'
                             : error.type === 'server'
@@ -601,14 +590,14 @@ const ErrorBanner = memo(function ErrorBanner({
                             ? 'Rate Limited'
                             : 'Search Error'}
                     </p>
-                    <p className="mt-1 text-xs text-[#961515]/80 dark:text-[#f6ae82]/80">
+                    <p className="mt-1 text-xs text-red-600/80 dark:text-red-300/80">
                         {error.message}
                     </p>
                     {error.retryable && (
                         <button
                             type="button"
                             onClick={onRetry}
-                            className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#961515] underline underline-offset-2 transition-colors hover:text-[#961515]/70 dark:text-[#f6ae82] dark:hover:text-[#f6ae82]/70"
+                            className="mt-3 inline-flex items-center gap-1.5 rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-1 text-xs font-semibold text-red-600 dark:text-red-300 transition-colors hover:bg-red-500/20"
                         >
                             Try Again
                             <ArrowRight size={12} />
@@ -622,20 +611,20 @@ const ErrorBanner = memo(function ErrorBanner({
 
 const EmptyState = memo(function EmptyState({ query }: { query: string }) {
     return (
-        <div className="border border-ed-rule bg-ed-bg py-12 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-none border border-ed-rule bg-ed-surface">
-                <Search size={24} className="text-ed-fg-muted" strokeWidth={1.5} />
+        <div className="rounded-2xl border border-ed-rule bg-ed-surface/50 p-10 text-center backdrop-blur-md">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-ed-rule bg-ed-surface shadow-sm">
+                <Search size={22} className="text-ed-fg-muted" strokeWidth={1.5} />
             </div>
-            <p className="font-display text-2xl text-ed-fg">No matches found.</p>
-            <p className="mt-2 max-w-sm mx-auto text-xs text-ed-fg-muted">
+            <p className="font-serif text-xl font-bold text-ed-fg">No matches found.</p>
+            <p className="mx-auto mt-2 max-w-sm text-xs leading-relaxed text-ed-fg-muted">
                 We couldn&apos;t find anything for &quot;<span className="font-semibold text-ed-fg">{query}</span>&quot;.
-                Try a different phrase or select one of the suggested queries below.
+                Try a different phrase or select one of the suggested query pills below.
             </p>
-            <div className="mt-4 flex justify-center gap-2">
+            <div className="mt-5 flex flex-wrap justify-center gap-2">
                 {QUICK_PROMPTS.slice(0, 3).map((prompt) => (
                     <span
                         key={prompt.label}
-                        className="inline-flex items-center rounded-none border border-ed-rule px-2.5 py-1 font-mono text-[0.65rem] text-ed-fg-muted"
+                        className="inline-flex items-center rounded-full border border-ed-rule bg-ed-surface/70 px-3 py-1 font-mono text-[0.68rem] text-ed-fg-muted"
                     >
                         {prompt.label}
                     </span>
@@ -674,14 +663,14 @@ const SearchSuggestions = memo(function SearchSuggestions({
     return (
         <div
             id="search-suggestions"
-            className="absolute left-0 right-0 top-full z-50 mt-1 border border-ed-rule bg-ed-bg shadow-lg"
+            className="absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-2xl border border-ed-rule bg-ed-surface/98 p-2 shadow-2xl backdrop-blur-2xl"
             role="listbox"
             aria-label="Search suggestions"
         >
             {showPrompts && (
-                <div className="p-2">
-                    <p className="px-2 py-1 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                        Quick searches
+                <div className="p-1">
+                    <p className="px-3 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.15em] text-ed-fg-muted">
+                        Suggested Searches
                     </p>
                     {QUICK_PROMPTS.map((prompt, i) => (
                         <button
@@ -690,8 +679,8 @@ const SearchSuggestions = memo(function SearchSuggestions({
                             role="option"
                             aria-selected={activeIndex === i}
                             onClick={() => onSelect(prompt.query)}
-                            className={`flex w-full items-center gap-2 px-2 py-2 text-left text-sm transition-colors ${
-                                activeIndex === i ? 'bg-ed-accent/10 text-ed-accent' : 'text-ed-fg hover:bg-ed-surface'
+                            className={`flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-sm transition-colors ${
+                                activeIndex === i ? 'bg-ed-fg text-ed-bg font-semibold' : 'text-ed-fg hover:bg-ed-surface-strong'
                             }`}
                         >
                             <Search size={14} className="shrink-0 text-ed-fg-muted" />
@@ -702,46 +691,28 @@ const SearchSuggestions = memo(function SearchSuggestions({
             )}
 
             {showHistory && (
-                <div className="border-t border-ed-rule p-2">
-                    <div className="flex items-center justify-between px-2 py-1">
-                        <p className="font-mono text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                            Recent searches
-                        </p>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                const event = new CustomEvent('clear-search-history');
-                                document.dispatchEvent(event);
-                            }}
-                            className="text-[0.6rem] uppercase tracking-wider text-ed-fg-muted hover:text-ed-accent"
-                        >
-                            Clear
-                        </button>
-                    </div>
+                <div className="border-t border-ed-rule/60 p-1">
+                    <p className="px-3 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.15em] text-ed-fg-muted">
+                        Recent History
+                    </p>
                     {filteredHistory.map((item, i) => (
                         <div
                             key={item.query}
-                            role="option"
-                            aria-selected={activeIndex === (showPrompts ? QUICK_PROMPTS.length : 0) + i}
-                            className={`flex items-center gap-2 px-2 py-2 transition-colors ${
-                                activeIndex === (showPrompts ? QUICK_PROMPTS.length : 0) + i
-                                    ? 'bg-ed-accent/10 text-ed-accent'
-                                    : 'text-ed-fg hover:bg-ed-surface'
+                            className={`flex items-center justify-between rounded-xl px-3 py-1.5 transition-colors ${
+                                activeIndex === (showPrompts ? QUICK_PROMPTS.length + i : i)
+                                    ? 'bg-ed-fg text-ed-bg'
+                                    : 'hover:bg-ed-surface-strong'
                             }`}
                         >
                             <button
                                 type="button"
+                                role="option"
+                                aria-selected={activeIndex === (showPrompts ? QUICK_PROMPTS.length + i : i)}
                                 onClick={() => onSelect(item.query)}
-                                className="flex flex-1 items-center gap-2 text-left text-sm"
+                                className="flex flex-1 items-center gap-2 text-left text-sm text-ed-fg"
                             >
-                                <History size={14} className="shrink-0 text-ed-fg-muted" />
-                                <span className="truncate">{item.query}</span>
-                                <span className="ml-auto shrink-0 font-mono text-[0.6rem] text-ed-fg-muted">
-                                    {formatRelativeTime(new Date(item.timestamp))}
-                                </span>
-                                <span className="shrink-0 font-mono text-[0.6rem] text-ed-accent">
-                                    {item.resultCount} results
-                                </span>
+                                <History size={13} className="shrink-0 text-ed-fg-muted" />
+                                <span>{item.query}</span>
                             </button>
                             <button
                                 type="button"
@@ -749,7 +720,7 @@ const SearchSuggestions = memo(function SearchSuggestions({
                                     e.stopPropagation();
                                     onRemoveHistory(item.query);
                                 }}
-                                className="grid h-6 w-6 place-items-center text-ed-fg-muted hover:text-ed-fg"
+                                className="grid h-6 w-6 place-items-center rounded-md text-ed-fg-muted hover:bg-ed-surface hover:text-ed-fg"
                                 aria-label={`Remove ${item.query} from history`}
                             >
                                 <X size={12} />
@@ -774,16 +745,16 @@ const SearchFiltersPanel = memo(function SearchFiltersPanel({
     if (!isOpen) return null;
 
     return (
-        <div className="mt-3 border border-ed-rule bg-ed-bg p-4">
+        <div className="mt-3 rounded-2xl border border-ed-rule bg-ed-surface/80 p-4 backdrop-blur-md shadow-sm">
             <div className="grid gap-4 sm:grid-cols-3">
                 <div>
-                    <label className="mb-1.5 block font-mono text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
+                    <label className="mb-1.5 block font-mono text-[0.62rem] font-bold uppercase tracking-[0.15em] text-ed-fg-muted">
                         Media Type
                     </label>
                     <select
                         value={filters.mediaType}
                         onChange={(e) => onChange({ mediaType: e.target.value })}
-                        className="w-full border border-ed-rule bg-ed-surface px-3 py-2 text-xs text-ed-fg outline-none focus:border-ed-accent"
+                        className="w-full rounded-xl border border-ed-rule bg-ed-surface px-3 py-2 text-xs font-medium text-ed-fg outline-none focus:border-ed-fg"
                     >
                         {MEDIA_TYPE_OPTIONS.map((opt) => (
                             <option key={opt.value} value={opt.value}>
@@ -1092,9 +1063,11 @@ export default function SearchFunctionDemo() {
 
     return (
         <section
-            className="relative overflow-hidden rounded-none border border-ed-rule bg-ed-surface shadow-[var(--ed-shadow-md)]"
+            className={widgetCardClass}
             aria-label="Live interactive search terminal"
         >
+            <GlassSheen />
+
             {/* Screen reader live region */}
             <div
                 ref={liveRegionRef}
@@ -1103,31 +1076,39 @@ export default function SearchFunctionDemo() {
                 className="sr-only"
             />
 
-            {/* Header / Title bar */}
-            <div className="flex min-h-14 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-5">
-                <div>
-                    <p className="text-[0.66rem] font-semibold uppercase tracking-[0.15em] text-ed-fg-muted">
-                        Live archive terminal
-                    </p>
-                    <p
-                        className="mt-0.5 font-mono text-xs text-ed-fg-muted"
-                        aria-live="polite"
-                    >
-                        {statusText}
-                    </p>
+            {/* Header / Title bar with Traffic Lights */}
+            <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-6 bg-ed-surface-strong/40 select-none">
+                <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1.5" aria-hidden="true">
+                        <span className="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-600/40" />
+                        <span className="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-600/40" />
+                        <span className="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-600/40" />
+                    </div>
+                    <span className="h-3.5 w-px bg-ed-rule-strong/60" aria-hidden="true" />
+                    <div>
+                        <p className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                            Universal Search · <span className="text-ed-fg font-bold">Interactive Terminal</span>
+                        </p>
+                        <p
+                            className="mt-0.5 font-mono text-[0.6rem] uppercase tracking-wider text-ed-fg-muted/80"
+                            aria-live="polite"
+                        >
+                            {statusText}
+                        </p>
+                    </div>
                 </div>
                 <div className="flex items-center gap-2">
                     {/* Keyboard shortcut hint */}
-                    <kbd className="hidden items-center gap-1 rounded-none border border-ed-rule bg-ed-bg px-1.5 py-0.5 font-mono text-[0.6rem] text-ed-fg-muted sm:inline-flex">
-                        <Keyboard size={10} />
+                    <kbd className="hidden items-center gap-1 rounded-lg border border-ed-rule-strong bg-ed-surface-strong px-2 py-0.5 font-mono text-[0.62rem] font-semibold text-ed-fg sm:inline-flex shadow-sm">
+                        <Keyboard size={11} />
                         <span>Ctrl K</span>
                     </kbd>
                     <Link
                         href={`/search${state.query ? `?q=${encodeURIComponent(state.query)}` : ''}`}
-                        className="inline-flex min-h-9 items-center gap-1.5 rounded-none border border-ed-rule bg-ed-bg px-3 text-xs font-semibold uppercase tracking-[0.08em] text-ed-fg transition-colors hover:border-ed-accent/60 hover:text-ed-accent"
+                        className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-ed-rule-strong bg-ed-surface-strong px-3.5 font-mono text-[0.68rem] font-bold text-ed-fg shadow-sm transition-all hover:bg-ed-fg hover:text-ed-bg active:scale-95"
                     >
-                        Full search page
-                        <ArrowRight size={13} />
+                        <span>Full search</span>
+                        <ArrowRight size={12} />
                     </Link>
                 </div>
             </div>
@@ -1164,17 +1145,17 @@ export default function SearchFunctionDemo() {
                             aria-autocomplete="list"
                             aria-controls="search-suggestions"
                             aria-expanded={showSuggestions}
-                            className="archive-input w-full py-3.5 pl-12 pr-32 font-body text-base sm:text-lg"
+                            className="archive-input w-full rounded-2xl py-3.5 pl-12 pr-32 font-sans text-base sm:text-lg shadow-inner bg-ed-bg/80"
                         />
-                        <div className="absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-1">
+                        <div className="absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-1.5">
                             {/* Filter toggle */}
                             <button
                                 type="button"
                                 onClick={() => setShowFilters((p) => !p)}
-                                className={`grid h-9 w-9 place-items-center rounded-none border transition-colors ${
+                                className={`grid h-9 w-9 place-items-center rounded-xl border transition-colors ${
                                     showFilters
-                                        ? 'border-ed-accent bg-ed-accent/10 text-ed-accent'
-                                        : 'border-ed-rule text-ed-fg-muted hover:text-ed-fg'
+                                        ? 'border-ed-fg bg-ed-fg text-ed-bg'
+                                        : 'border-ed-rule text-ed-fg-muted hover:border-ed-fg hover:text-ed-fg'
                                 }`}
                                 aria-label="Toggle filters"
                                 aria-pressed={showFilters}
@@ -1186,7 +1167,7 @@ export default function SearchFunctionDemo() {
                                 <button
                                     type="button"
                                     onClick={handleClear}
-                                    className="grid h-9 w-9 place-items-center text-ed-fg-muted transition-colors hover:text-ed-fg"
+                                    className="grid h-9 w-9 place-items-center rounded-xl text-ed-fg-muted transition-colors hover:bg-ed-surface hover:text-ed-fg"
                                     aria-label="Clear search input"
                                 >
                                     <X size={16} />
@@ -1195,7 +1176,7 @@ export default function SearchFunctionDemo() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="archive-button archive-button-primary min-h-9 px-4 text-xs"
+                                className="archive-button archive-button-primary min-h-9 px-4 text-xs font-bold"
                             >
                                 {isLoading ? (
                                     <Loader2 size={14} className="animate-spin" />
@@ -1226,7 +1207,7 @@ export default function SearchFunctionDemo() {
 
                 {/* Quick Prompts */}
                 <div className="mt-4 flex flex-wrap items-center gap-2">
-                    <span className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
+                    <span className="font-mono text-[0.66rem] font-bold uppercase tracking-[0.14em] text-ed-fg-muted">
                         Try query:
                     </span>
                     {QUICK_PROMPTS.map((prompt) => (
@@ -1234,10 +1215,10 @@ export default function SearchFunctionDemo() {
                             key={prompt.label}
                             type="button"
                             onClick={() => handleSuggestionSelect(prompt.query)}
-                            className={`inline-flex min-h-8 items-center gap-1.5 rounded-none border px-3 font-mono text-[0.7rem] font-semibold transition-colors ${
+                            className={`inline-flex min-h-8 items-center gap-1.5 rounded-full border px-3.5 font-mono text-[0.7rem] font-semibold transition-all duration-150 active:scale-95 ${
                                 state.query === prompt.query
-                                    ? 'border-ed-accent bg-ed-accent/12 text-ed-accent'
-                                    : 'border-ed-rule bg-ed-bg text-ed-fg-muted hover:border-ed-accent/50 hover:text-ed-fg'
+                                    ? 'border-ed-fg bg-ed-fg text-ed-bg shadow-sm'
+                                    : 'border-ed-rule bg-ed-surface/70 text-ed-fg-muted hover:border-ed-fg hover:text-ed-fg'
                             }`}
                         >
                             <prompt.icon size={12} />

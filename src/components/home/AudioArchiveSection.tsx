@@ -159,14 +159,19 @@ export function AudioArchiveSection() {
                     `}</style>
 
                     {/* Header bar */}
-                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-2.5 sm:px-5 bg-ed-surface/50">
-                        <div>
-                            <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
-                                Listening Desk · Transcript-Linked
-                            </p>
-                            <p className="mt-0.5 font-mono text-[0.58rem] uppercase tracking-[0.1em] text-ed-fg-muted/70">
-                                {filteredClips.length} of {AUDIO_CLIPS.length} recordings shown
-                            </p>
+                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-6 bg-ed-surface-strong/40 select-none">
+                        <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-1.5" aria-hidden="true">
+                                <span className="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-600/40" />
+                                <span className="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-600/40" />
+                                <span className="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-600/40" />
+                            </div>
+                            <span className="h-3.5 w-px bg-ed-rule-strong/60" aria-hidden="true" />
+                            <div>
+                                <p className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                    Listening Desk · <span className="text-ed-fg font-bold">Transcript-Linked</span>
+                                </p>
+                            </div>
                         </div>
 
                         {/* Collection Filter Pill Buttons */}

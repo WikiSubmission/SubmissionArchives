@@ -19,11 +19,17 @@ const MediaEntrySchema = z.object({
     thumbnailOverride: z.string().nullish(),
     folder: z.string().nullish(),
     vttFile: z.string().nullish(),
-    audioFile: z.string().nullish(),
     videoFile: z.string().nullish(),
     youtubeId: z.string().nullish(),
     youtubeUrl: z.string().url().nullish(),
     duration_seconds: z.number().nonnegative().nullish(),
+    // Filled in by enrich_media_years.mjs from the YouTube upload date for records whose
+    // title states no date of its own. dateSource distinguishes that from a date read
+    // directly off the title (the generator's own deriveDateFromTitle), since an upload
+    // date is not always the same fact as when something was originally recorded.
+    year: z.number().int().min(1960).max(2100).optional(),
+    fullDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    dateSource: z.enum(['youtube_upload_date']).optional(),
 });
 
 export const AudioCatalogSchema = z.array(MediaEntrySchema);

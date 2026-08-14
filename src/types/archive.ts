@@ -39,7 +39,6 @@ export interface ArchiveRecord {
     filename?: string;
     pdfLink?: string;
     videoFile?: string;
-    audioFile?: string;
     vttFile?: string;
     primaryNumber?: number;
     alternateNumbers?: string[];

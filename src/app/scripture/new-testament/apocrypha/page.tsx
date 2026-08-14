@@ -8,22 +8,22 @@ export const metadata: Metadata = {
 
 export default function NTApocryphaPage() {
     return (
-        <div className="min-h-screen bg-[#0a0a0a] font-sans text-[#f5f5f7] selection:bg-white/20">
+        <div className="min-h-screen bg-ed-bg font-sans text-ed-fg selection:bg-ed-accent/20">
             {/* Hero */}
-            <div className="relative overflow-hidden border-b border-white/[0.08]">
+            <div className="relative overflow-hidden border-b border-ed-rule">
                 <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-                    <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-white/[0.02] blur-[120px]" />
-                    <div className="absolute -left-20 bottom-0 h-[300px] w-[300px] rounded-full bg-white/[0.01] blur-[100px]" />
+                    <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-ed-ambient-1 blur-[120px]" />
+                    <div className="absolute -left-20 bottom-0 h-[300px] w-[300px] rounded-full bg-ed-ambient-2 blur-[100px]" />
                 </div>
 
                 <div className="relative mx-auto max-w-[1200px] px-5 py-20 sm:px-8 sm:py-28 lg:py-32">
-                    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-ed-fg-muted">
                         Scripture
                     </p>
-                    <h1 className="mt-6 font-serif text-[clamp(2.75rem,8vw,5rem)] leading-[1.05] tracking-tight text-white">
+                    <h1 className="mt-6 font-serif text-[clamp(2.75rem,8vw,5rem)] leading-[1.05] tracking-tight text-ed-fg">
                         NT Apocrypha
                     </h1>
-                    <p className="mt-6 max-w-[50ch] font-serif text-lg leading-relaxed text-neutral-400 sm:text-xl">
+                    <p className="mt-6 max-w-[50ch] font-serif text-lg leading-relaxed text-ed-fg-muted sm:text-xl">
                         Early Christian writings and apocryphal texts outside the canonical New Testament.
                     </p>
 
@@ -34,14 +34,14 @@ export default function NTApocryphaPage() {
             {/* Coming Soon */}
             <main className="mx-auto max-w-[1200px] px-5 py-20 sm:px-8">
                 <div className="flex flex-col items-center justify-center gap-4 py-24 text-center">
-                    <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] px-10 py-12 backdrop-blur-xl">
-                        <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
+                    <div className="rounded-2xl border border-ed-rule bg-ed-surface/60 px-10 py-12 backdrop-blur-xl">
+                        <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-ed-fg-muted">
                             Coming Soon
                         </p>
-                        <h2 className="mt-4 font-serif text-2xl text-white">
+                        <h2 className="mt-4 font-serif text-2xl text-ed-fg">
                             NT Apocrypha texts are being prepared
                         </h2>
-                        <p className="mt-3 max-w-[44ch] text-sm leading-relaxed text-neutral-400">
+                        <p className="mt-3 max-w-[44ch] text-sm leading-relaxed text-ed-fg-muted">
                             Source material for the New Testament Apocrypha will be added here. Check back soon.
                         </p>
                     </div>

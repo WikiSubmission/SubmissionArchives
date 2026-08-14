@@ -71,10 +71,15 @@ export function resolveReaderPage(id: string, backHrefResolver: (book: BookData)
 
     const backHref = backHrefResolver(book);
 
-    if (book.type === 'newsletter' && !book.pdfLink) {
+    if (book.type === 'newsletter') {
+        const adj = getAdjacentNewsletterIssues(id);
+        const pdfLink = book.pdfLink ? getPublicAssetUrl(book.pdfLink) : undefined;
         return {
             book,
             backHref,
+            pdfLink,
+            prevId: adj.prevId,
+            nextId: adj.nextId,
             newsletterJsonData: book.jsonData as Record<string, unknown> | undefined,
         };
     }
@@ -87,17 +92,6 @@ export function resolveReaderPage(id: string, backHrefResolver: (book: BookData)
         return { book, backHref, editions, defaultEdition: '1992' };
     }
 
-    let pdfLink = '';
-    let prevId: string | null = null;
-    let nextId: string | null = null;
-    if (book.type === 'other') {
-        pdfLink = book.pdfLink;
-    } else if (book.type === 'newsletter') {
-        pdfLink = book.pdfLink || '';
-        const adj = getAdjacentNewsletterIssues(id);
-        prevId = adj.prevId;
-        nextId = adj.nextId;
-    }
-
-    return { book, backHref, pdfLink: getPublicAssetUrl(pdfLink), prevId, nextId };
+    const pdfLink = book.type === 'other' ? book.pdfLink : '';
+    return { book, backHref, pdfLink: getPublicAssetUrl(pdfLink) };
 }

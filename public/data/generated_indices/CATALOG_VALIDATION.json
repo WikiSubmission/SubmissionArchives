@@ -1,11 +1,9 @@
 {
   "valid": true,
   "errors": [],
-  "warnings": [
-    "1 record(s) are clearly marked without searchable segments."
-  ],
+  "warnings": [],
   "recordCount": 383,
-  "segmentCount": 118366,
+  "segmentCount": 119252,
   "categoryCounts": {
     "Appendices": 40,
     "Books": 13,
@@ -24,12 +22,5 @@
     "quran-study": 52,
     "video-program": 52
   },
-  "recordsWithoutSegments": [
-    {
-      "id": "video-program/arabic-language-lessons-by-dr-rashad-khalifa",
-      "category": "Videos",
-      "type": "video-program",
-      "transcriptStatus": "empty"
-    }
-  ]
+  "recordsWithoutSegments": []
 }
