@@ -1,4 +1,4 @@
-import { invoke } from '@tauri-apps/api/core'
+import { safeInvoke } from './ipc'
 
 export interface NoteRecord {
   path: string
@@ -9,5 +9,5 @@ export interface NoteRecord {
 }
 
 export function scanArchive(archivePath: string): Promise<NoteRecord[]> {
-  return invoke<NoteRecord[]>('scan_archive', { root: archivePath })
+  return safeInvoke<NoteRecord[]>('scan_archive', { root: archivePath })
 }

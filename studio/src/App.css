@@ -68,7 +68,7 @@
 :root[data-theme="light"] {
   --color-ed-bg: #f5f1e8;
   --color-ed-fg: #2c2416;
-  --color-ed-fg-muted: #6b5b4f;
+  --color-ed-fg-muted: #4a3d32;
   --color-ed-rule: rgba(44, 36, 22, 0.08);
   --color-ed-rule-strong: rgba(44, 36, 22, 0.16);
   --color-ed-surface: #ede8dc;

@@ -1,4 +1,4 @@
-import { CaretLeft, CaretRight, X, Plus, FileText } from '@phosphor-icons/react'
+import { CaretLeft, CaretRight, X, Plus, FileText, Columns } from '@phosphor-icons/react'
 import { motion, springConfig } from './ui/Motion'
 
 export interface TabItem {
@@ -10,9 +10,11 @@ interface TabHeaderProps {
   tabs: TabItem[]
   activeFilePath: string | null
   archivePath: string
+  isSplit?: boolean
   onSelectTab: (path: string) => void
   onCloseTab: (path: string, e: React.MouseEvent) => void
   onNewTab: () => void
+  onToggleSplit?: () => void
   canGoBack: boolean
   canGoForward: boolean
   onGoBack: () => void
@@ -23,9 +25,11 @@ export default function TabHeader({
   tabs,
   activeFilePath,
   archivePath,
+  isSplit = false,
   onSelectTab,
   onCloseTab,
   onNewTab,
+  onToggleSplit,
   canGoBack,
   canGoForward,
   onGoBack,
@@ -115,6 +119,24 @@ export default function TabHeader({
             <Plus size={14} weight="bold" />
           </button>
         </div>
+
+        {/* Right Tab Controls: Split Screen Toggle */}
+        {onToggleSplit && (
+          <div className="flex items-center pl-1 border-l border-ed-rule/60 shrink-0">
+            <button
+              onClick={onToggleSplit}
+              title={isSplit ? 'Single Pane View (Ctrl+\\)' : 'Split Pane Right (Ctrl+\\)'}
+              aria-label="Toggle Split"
+              className={`p-1.5 rounded-md transition-colors ${
+                isSplit
+                  ? 'text-amber-400 bg-amber-500/10'
+                  : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
+              }`}
+            >
+              <Columns size={15} weight={isSplit ? 'fill' : 'regular'} />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Path Breadcrumbs Bar */}

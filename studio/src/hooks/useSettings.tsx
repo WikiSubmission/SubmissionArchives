@@ -1,8 +1,20 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
-import { invoke } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../lib/ipc'
 
 export type QuranShowMode = 'both' | 'arabic' | 'translation'
 export type QuranInsertStyle = 'block' | 'inline'
+
+export interface TransliterationSettings {
+  enabled: boolean
+  autoExpandTerms: boolean
+  diacriticModifiers: boolean
+}
+
+export interface TypographySettings {
+  uiFont: 'default' | 'jakarta' | 'system'
+  bodyFont: 'default' | 'newsreader' | 'serif' | 'mono'
+  arabicFont: 'mushaf' | 'amiri' | 'plex'
+}
 
 export interface StudioSettings {
   quran: {
@@ -11,15 +23,35 @@ export interface StudioSettings {
     arabicSize: number
     translationSize: number
   }
+  transliteration: TransliterationSettings
+  typography: TypographySettings
+  shortcuts: Record<string, string>
+  lastSeenVersion?: string
 }
 
 export const DEFAULT_SETTINGS: StudioSettings = {
   quran: { showMode: 'both', insertStyle: 'block', arabicSize: 26, translationSize: 17 },
+  transliteration: {
+    enabled: true,
+    autoExpandTerms: true,
+    diacriticModifiers: true,
+  },
+  typography: {
+    uiFont: 'default',
+    bodyFont: 'default',
+    arabicFont: 'mushaf',
+  },
+  shortcuts: {},
+  lastSeenVersion: '0.1.0',
 }
 
 function mergeSettings(partial: Partial<StudioSettings> | null | undefined): StudioSettings {
   return {
     quran: { ...DEFAULT_SETTINGS.quran, ...(partial?.quran ?? {}) },
+    transliteration: { ...DEFAULT_SETTINGS.transliteration, ...(partial?.transliteration ?? {}) },
+    typography: { ...DEFAULT_SETTINGS.typography, ...(partial?.typography ?? {}) },
+    shortcuts: { ...DEFAULT_SETTINGS.shortcuts, ...(partial?.shortcuts ?? {}) },
+    lastSeenVersion: partial?.lastSeenVersion ?? DEFAULT_SETTINGS.lastSeenVersion,
   }
 }
 

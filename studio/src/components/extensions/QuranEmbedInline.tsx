@@ -1,7 +1,7 @@
 import { mergeAttributes, Node } from '@tiptap/core'
 import { ReactNodeViewRenderer, NodeViewWrapper } from '@tiptap/react'
 import { useEffect, useState } from 'react'
-import { invoke } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../../lib/ipc'
 import { useSettings } from '../../hooks/useSettings'
 
 interface Verse {

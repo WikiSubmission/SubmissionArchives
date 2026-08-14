@@ -5,6 +5,7 @@ import {
   CopySimple,
   FolderOpen,
   DownloadSimple,
+  Package,
   ClockCounterClockwise,
   Lock,
   LockOpen,
@@ -31,6 +32,7 @@ interface NoteMenuProps {
   onMove: () => void
   onCopyPath: () => void
   onExport: () => void
+  onExportPackage?: () => void
   onAttachPdf: () => void
   onTogglePdfSplitView: () => void
 }
@@ -94,13 +96,14 @@ export default function NoteMenu({
   onMove,
   onCopyPath,
   onExport,
+  onExportPackage,
   onAttachPdf,
   onTogglePdfSplitView,
 }: NoteMenuProps) {
   const [open, setOpen] = useState(false)
 
-  const runAndClose = (fn: () => void) => () => {
-    fn()
+  const runAndClose = (fn?: () => void) => () => {
+    fn?.()
     setOpen(false)
   }
 
@@ -138,6 +141,9 @@ export default function NoteMenu({
             <MenuItem icon={CopySimple} label="Duplicate" onClick={runAndClose(onDuplicate)} />
             <MenuItem icon={FolderOpen} label="Move to..." onClick={runAndClose(onMove)} />
             <MenuItem icon={DownloadSimple} label="Export as Markdown..." onClick={runAndClose(onExport)} />
+            {onExportPackage && (
+              <MenuItem icon={Package} label="Export as Package (.sanote)..." onClick={runAndClose(onExportPackage)} />
+            )}
 
             <div className="border-t border-ed-rule my-1" />
 

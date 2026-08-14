@@ -6,7 +6,8 @@ import {
   ShareNetwork,
   Gear,
   SidebarSimple,
-  FilePlus
+  FilePlus,
+  TreeStructure
 } from '@phosphor-icons/react'
 import { motion, springSnappy } from './ui/Motion'
 
@@ -17,6 +18,7 @@ interface LeftRibbonProps {
   onOpenQuickSwitcher: () => void
   onOpenCommandPalette: () => void
   onOpenGraph: () => void
+  onOpenCanvas?: () => void
   onOpenSettings: () => void
   inspectorOpen: boolean
   onToggleInspector: () => void
@@ -30,6 +32,7 @@ export default function LeftRibbon({
   onOpenQuickSwitcher,
   onOpenCommandPalette,
   onOpenGraph,
+  onOpenCanvas,
   onOpenSettings,
   inspectorOpen,
   onToggleInspector,
@@ -54,6 +57,20 @@ export default function LeftRibbon({
         >
           <FolderOpen size={18} weight={sidebarOpen ? 'fill' : 'regular'} />
         </motion.button>
+
+        {onOpenCanvas && (
+          <motion.button
+            whileHover={{ scale: 1.05, y: -1 }}
+            whileTap={{ scale: 0.92 }}
+            transition={springSnappy}
+            onClick={onOpenCanvas}
+            aria-label="Whiteboard Canvas"
+            title="Visual Synthesis Canvas"
+            className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-amber-400 hover:bg-amber-500/10 transition-colors"
+          >
+            <TreeStructure size={18} weight="regular" />
+          </motion.button>
+        )}
 
         <motion.button
           whileHover={{ scale: 1.05, y: -1 }}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { invoke } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../../lib/ipc'
 import { ArrowCounterClockwise, Trash } from '@phosphor-icons/react'
 
 interface TrashEntry {

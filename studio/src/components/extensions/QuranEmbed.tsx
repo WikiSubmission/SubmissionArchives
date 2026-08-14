@@ -1,7 +1,7 @@
 import { mergeAttributes, Node } from '@tiptap/core'
 import { ReactNodeViewRenderer, NodeViewWrapper, type NodeViewProps } from '@tiptap/react'
 import { useEffect, useState } from 'react'
-import { invoke } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../../lib/ipc'
 import { useSettings } from '../../hooks/useSettings'
 import { Copy, Check, Eye, EyeSlash } from '@phosphor-icons/react'
 import { motion, springConfig } from '../ui/Motion'

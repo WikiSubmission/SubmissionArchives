@@ -85,7 +85,7 @@ export function performSearch(notes: NoteRecord[], rawQuery: string) {
   const fuse = createSearchIndex(filtered)
   const results = fuse.search(operator.query)
 
-  return results.map((r) => {
+  return results.map((r: { item: NoteRecord; matches?: ReadonlyArray<{ indices: ReadonlyArray<[number, number]> }> }) => {
     const match = r.matches?.[0]
     let snippet = r.item.content.slice(0, 90)
     if (match && match.indices.length > 0) {

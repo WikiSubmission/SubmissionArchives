@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { invoke } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../../lib/ipc'
 import {
   CaretRight,
   Folder,

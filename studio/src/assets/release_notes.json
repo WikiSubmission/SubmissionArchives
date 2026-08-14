@@ -1,0 +1,74 @@
+[
+  {
+    "version": "0.2.0",
+    "releaseDate": "2026-08-15",
+    "headline": "Custom Keybindings, Academic Transliteration & Scholarly Typography",
+    "summary": "This release introduces full keyboard shortcut customization, automated academic Islamic transliteration with smart diacritics, upgraded typography, and release logging.",
+    "categories": [
+      {
+        "name": "Quran & Academic Tools",
+        "badgeColor": "amber",
+        "items": [
+          {
+            "title": "Academic Diacritic Auto-Formatting",
+            "description": "Standard terms auto-expand on word completion (Quran → Qur'ān, Hadith → Ḥadīth, Tawhid → Tawḥīd). Fast inline modifiers enable typing a= for ā, h. for ḥ, s. for ṣ, d. for ḍ, t. for ṭ, z. for ẓ, etc."
+          },
+          {
+            "title": "Bidirectional Isolation & Directional Protection",
+            "description": "Enhanced Unicode isolation prevents cursor jumping and punctuation distortion when mixing Arabic and English text in paragraphs."
+          }
+        ]
+      },
+      {
+        "name": "Keyboard & Navigation",
+        "badgeColor": "sky",
+        "items": [
+          {
+            "title": "Customizable Keybindings Engine",
+            "description": "Configure any shortcut in Settings → Shortcuts with interactive key combination recording and real-time conflict detection."
+          },
+          {
+            "title": "Command Palette & Quick Switcher Integration",
+            "description": "Trigger actions and navigate notes with flexible custom key mappings."
+          }
+        ]
+      },
+      {
+        "name": "Design & Ergonomics",
+        "badgeColor": "emerald",
+        "items": [
+          {
+            "title": "WCAG AA Contrast Compliance",
+            "description": "Refined muted text tokens across light and dark reading themes for guaranteed high contrast and legibility."
+          },
+          {
+            "title": "What's New Release Log",
+            "description": "Review new features and capabilities directly from the Help and Command Palette menu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.1.0",
+    "releaseDate": "2026-08-07",
+    "headline": "Foundational Release: Offline Studio Core",
+    "summary": "Initial launch of SubmissionArchives Studio with local Markdown vaults, Rust-backed Quran search, bidirectional links, and multi-modal editor views.",
+    "categories": [
+      {
+        "name": "Editor",
+        "badgeColor": "amber",
+        "items": [
+          {
+            "title": "Multi-Modal Views",
+            "description": "Write mode for keyboard writing, Blocks mode with drag handles, and Page mode with ruler and typewriter scrolling."
+          },
+          {
+            "title": "Offline Quran Embeds",
+            "description": "Type /quran 1:1-7 to insert bilingual verses queried directly from local offline database in sub-milliseconds."
+          }
+        ]
+      }
+    ]
+  }
+]

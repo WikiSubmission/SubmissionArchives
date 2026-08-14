@@ -3,7 +3,7 @@ import StarterKit from '@tiptap/starter-kit'
 import { Markdown } from 'tiptap-markdown'
 import { parseFrontmatter, stringifyWithFrontmatter } from '../lib/frontmatter'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { invoke, convertFileSrc } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../lib/ipc'
 import { open } from '@tauri-apps/plugin-dialog'
 import DragHandle from '@tiptap/extension-drag-handle-react'
 import { DotsSixVertical } from '@phosphor-icons/react'
@@ -16,13 +16,16 @@ import { setDefaultQuranInsertStyle } from './extensions/slash-command/items'
 import { WikiLink } from './extensions/WikiLink'
 import { MarkdownSyntaxHighlight } from './extensions/MarkdownSyntaxHighlight'
 import { SmartTypography } from './extensions/SmartTypography'
+import { AcademicTransliteration } from './extensions/AcademicTransliteration'
 import { FootnoteRef } from './extensions/Footnote'
 import FrontmatterPanel from './FrontmatterPanel'
 import BacklinksPanel from './BacklinksPanel'
 import VersionHistoryModal from './VersionHistoryModal'
 import NoteMenu, { type FontFamily } from './NoteMenu'
 import EditorToolbar from './EditorToolbar'
+import EditorBubbleMenu from './EditorBubbleMenu'
 import PageModeCanvas from './PageModeCanvas'
+import PdfViewer from './pdf/PdfViewer'
 import { useSettings } from '../hooks/useSettings'
 import { motion, AnimatePresence, springConfig } from './ui/Motion'
 
@@ -37,6 +40,7 @@ interface EditorProps {
   onMove: () => void
   onCopyPath: () => void
   onExport: () => void
+  onExportPackage?: () => void
   mode: EditorMode
   onModeChange: (mode: EditorMode) => void
   onContentChange?: (content: string) => void
@@ -67,6 +71,7 @@ export default function Editor({
   onMove,
   onCopyPath,
   onExport,
+  onExportPackage,
   mode,
   onModeChange,
   onContentChange,
@@ -128,6 +133,11 @@ export default function Editor({
       FootnoteRef,
       MarkdownSyntaxHighlight.configure({ activeMode: mode }),
       SmartTypography.configure({ activeMode: mode }),
+      AcademicTransliteration.configure({
+        enabled: settings.transliteration.enabled,
+        autoExpandTerms: settings.transliteration.autoExpandTerms,
+        diacriticModifiers: settings.transliteration.diacriticModifiers,
+      }),
       WikiLink.configure({ onNavigate: onWikiLinkNavigate }),
     ],
     content: '',
@@ -257,6 +267,7 @@ export default function Editor({
             onMove={onMove}
             onCopyPath={onCopyPath}
             onExport={onExport}
+            onExportPackage={onExportPackage}
             onAttachPdf={handleAttachPdf}
             onTogglePdfSplitView={() => handleFrontmatterChange({ ...frontmatter, pdfSplitView: !pdfSplitView })}
           />
@@ -294,14 +305,37 @@ export default function Editor({
       {/* Dedicated Rich Text Toolbar for Page Mode */}
       {mode === 'page' && <EditorToolbar editor={editor} />}
 
+      {/* Floating Selection Bubble Menu */}
+      <EditorBubbleMenu editor={editor} />
+
       {/* Main Document Body with Morphing Transitions */}
       <div className="flex-1 overflow-hidden flex relative">
         {pdfSplitView && pdfAttachment && (
-          <div className="w-1/2 border-r border-ed-rule shrink-0 bg-ed-surface/30">
-            <iframe
-              title="Attached PDF"
-              src={convertFileSrc(pdfAttachment)}
-              className="w-full h-full border-0"
+          <div className="w-1/2 border-r border-ed-rule shrink-0">
+            <PdfViewer
+              archivePath={archivePath}
+              pdfPath={pdfAttachment}
+              onQuoteExcerpt={(quote, page) => {
+                if (!editor) return
+                editor
+                  .chain()
+                  .focus()
+                  .insertContent({
+                    type: 'blockquote',
+                    content: [
+                      {
+                        type: 'paragraph',
+                        content: [{ type: 'text', text: `"${quote}"` }],
+                      },
+                      {
+                        type: 'paragraph',
+                        content: [{ type: 'text', text: `— Page ${page ?? 1}` }],
+                      },
+                    ],
+                  })
+                  .run()
+              }}
+              onClose={() => handleFrontmatterChange({ ...frontmatter, pdfSplitView: false })}
             />
           </div>
         )}
