@@ -7,7 +7,7 @@ export default function QuranLoading() {
                     <div className="h-14 w-72 rounded bg-ed-muted" />
                     <div className="h-6 max-w-2xl rounded bg-ed-muted" />
                 </section>
-                <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {Array.from({ length: 12 }).map((_, index) => (
                         <div key={index} className="soft-shell h-24 animate-pulse" />
                     ))}

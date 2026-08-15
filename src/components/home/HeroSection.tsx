@@ -214,7 +214,7 @@ export function HeroSection() {
                                 Instant Access to Collections
                             </span>
                         </div>
-                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
                             {ARCHIVE_PORTALS.map((portal) => (
                                 <Link
                                     key={portal.title}

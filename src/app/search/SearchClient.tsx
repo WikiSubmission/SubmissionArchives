@@ -1029,7 +1029,7 @@ function SearchResultCard({
         >
             <div className="space-y-5">
                 {/* Main Media & Header Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-4 sm:gap-6 items-start">
+                <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-6 items-start">
                     <Link
                         href={bestHref}
                         className={`group relative overflow-hidden rounded-2xl border border-ed-rule-strong bg-ed-surface shadow-md ${
