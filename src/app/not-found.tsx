@@ -26,10 +26,10 @@ export default function NotFound() {
 
                     {/* Content */}
                     <div className="space-y-6">
-                        <h2 className="text-3xl md:text-5xl font-black font-ui uppercase tracking-tighter">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-ui uppercase leading-[1.15] tracking-tight">
                             Archival Gap Detected
                         </h2>
-                        <p className="text-xl text-ed-fg-muted font-serif italic max-w-lg mx-auto leading-relaxed">
+                        <p className="text-base sm:text-lg text-ed-fg-muted font-serif italic max-w-lg mx-auto leading-[1.65] tracking-[-0.01em]">
                             The specific record or transmission you are seeking does not exist in our current local repository. It may be indexed under a different identifier.
                         </p>
                     </div>

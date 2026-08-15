@@ -697,7 +697,7 @@ export default function Player({
               <div className="flex flex-col gap-3 px-1 pb-1">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="flex flex-col gap-1.5 min-w-0 flex-1">
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold tracking-tight text-ed-fg leading-tight">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg">
                       {media.displayTitle}
                     </h1>
                     <div className="flex flex-wrap items-center gap-2.5 text-[11px] font-ui uppercase tracking-[0.12em] text-ed-fg-muted">
@@ -899,7 +899,7 @@ export default function Player({
             {viewMode !== "theater" && (
               <>
                 <div className="flex flex-col gap-2 px-1">
-                  <h1 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-ed-fg leading-tight">
+                  <h1 className="text-2xl md:text-3xl font-display font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg">
                     {media.displayTitle}
                   </h1>
                   <div className="flex flex-wrap items-center gap-2.5 text-[11px] font-ui uppercase tracking-[0.12em] text-ed-fg-muted">
@@ -1020,7 +1020,7 @@ export default function Player({
                       <span className="inline-block text-[10px] font-bold font-ui uppercase tracking-widest text-ed-accent bg-ed-accent/10 px-2.5 py-1 rounded-md">
                         Focus Reading View
                       </span>
-                      <h1 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-ed-fg leading-tight">
+                      <h1 className="text-3xl md:text-4xl font-display font-bold leading-[1.12] tracking-[-0.025em] text-ed-fg">
                         {media.displayTitle}
                       </h1>
                       <div className="flex flex-wrap items-center gap-2.5 text-xs font-ui uppercase tracking-wider text-ed-fg-muted">

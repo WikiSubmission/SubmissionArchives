@@ -90,11 +90,11 @@ export default function AppendicesPageClient({ appendices }: Props) {
             </span>
           </div>
 
-          <h1 className="mt-5 font-serif text-[clamp(2.5rem,7vw,4.75rem)] leading-[1.05] tracking-tight text-ed-fg">
+          <h1 className="mt-5 font-serif text-[clamp(2.5rem,6.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-ed-fg">
             Appendices
           </h1>
 
-          <p className="mt-5 max-w-[56ch] font-serif text-lg leading-relaxed text-ed-fg-muted sm:text-xl">
+          <p className="mt-5 max-w-[56ch] font-serif text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
             38 explanatory works and mathematical research notes from the translated editions.
           </p>
 

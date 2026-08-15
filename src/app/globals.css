@@ -216,8 +216,30 @@ h3 {
   text-wrap: balance;
 }
 
+h1 {
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+h2 {
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+h3 {
+  letter-spacing: -0.018em;
+  line-height: 1.25;
+}
+
+h4 {
+  letter-spacing: -0.012em;
+  line-height: 1.35;
+}
+
 p {
   text-wrap: pretty;
+  letter-spacing: -0.006em;
+  line-height: 1.6;
 }
 
 img,
@@ -321,7 +343,90 @@ a {
 }
 
 /* ==========================================================================
-   Controls
+   Scroll Reveal — Subtle 200–300ms entrance with no bounce
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keyframe animations and scripture helpers */
+@keyframes archive-eq-pulse {
+  0%, 100% { transform: scaleY(0.55); }
+  50% { transform: scaleY(1); }
+}
+.archive-eq-bar--live {
+  animation: archive-eq-pulse 900ms ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.animate-slide-in-right {
+  animation: slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--ed-rule);
+  border-radius: 10px;
+}
+
+.quran-mark {
+  background: var(--ed-rule-strong);
+  color: var(--ed-fg);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .archive-eq-bar--live,
+  .animate-fade-in-up,
+  .animate-slide-in-right {
+    animation: none !important;
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Controls & Subtle Non-Bouncing Hover States
    ========================================================================== */
 
 .archive-button {
@@ -339,19 +444,19 @@ a {
   letter-spacing: -0.01em;
   line-height: 1.2;
   transition:
-    color var(--dur-fast) var(--ease-spring-out),
-    background-color var(--dur-fast) var(--ease-spring-out),
-    border-color var(--dur-fast) var(--ease-spring-out),
-    box-shadow var(--dur-med) var(--ease-spring-out),
-    transform var(--dur-fast) var(--ease-spring-out);
+    color 200ms ease-out,
+    background-color 200ms ease-out,
+    border-color 200ms ease-out,
+    box-shadow 240ms ease-out,
+    transform 200ms ease-out;
 }
 
 .archive-button:hover {
-  transform: scale(1.02);
+  transform: translateY(-1px);
 }
 
 .archive-button:active {
-  transform: scale(0.98);
+  transform: translateY(0);
 }
 
 .archive-button-primary {

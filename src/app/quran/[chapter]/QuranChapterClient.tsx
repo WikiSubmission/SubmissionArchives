@@ -400,10 +400,10 @@ export default function QuranChapterClient({
                   <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-ed-fg-muted">
                     Sura {chapter.chapterNumber}
                   </p>
-                  <h1 className="font-serif text-4xl font-semibold tracking-tight text-ed-fg sm:text-5xl">
+                  <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.12] tracking-[-0.025em] text-ed-fg">
                     {chapter.chapterNumber}. {chapter.titleEnglish}
                   </h1>
-                  <p className="text-lg font-medium tracking-wide text-ed-fg-muted">
+                  <p className="text-base sm:text-lg font-medium leading-[1.6] tracking-[-0.01em] text-ed-fg-muted">
                     {chapter.titleTransliterated}
                   </p>
                 </div>
@@ -681,45 +681,6 @@ export default function QuranChapterClient({
           <kbd className="rounded border border-ed-rule bg-ed-surface px-1.5 py-0.5 font-mono text-ed-fg">p</kbd> for chapters
         </span>
       </div>
-
-      {/* -------- Global Styles -------- */}
-      <style jsx global>{`
-        .scrollbar-thin::-webkit-scrollbar {
-          width: 5px;
-        }
-        .scrollbar-thin::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .scrollbar-thin::-webkit-scrollbar-thumb {
-          background: var(--ed-rule);
-          border-radius: 10px;
-        }
-        .quran-mark {
-          background: var(--ed-rule-strong);
-          color: var(--ed-fg);
-          padding: 0 2px;
-          border-radius: 2px;
-        }
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(12px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-fade-in-up {
-            animation: none;
-            opacity: 1;
-          }
-        }
-      `}</style>
     </div>
   );
 }

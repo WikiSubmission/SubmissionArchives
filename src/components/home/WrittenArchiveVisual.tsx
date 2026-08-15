@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
-import { GlassSheen, activeChipClass, inactiveChipClass, widgetCardClass } from './WidgetAccents';
+import { GlassSheen, widgetCardClass } from './WidgetAccents';
+import { FluidTabs } from '@/components/ui/fluid-tabs';
 
 const BOOKS = [
     {
@@ -92,27 +93,16 @@ export function WrittenArchiveVisual() {
                     </div>
                 </div>
 
-                {/* View tab toggles */}
-                <div className="flex items-center gap-1.5">
-                    <button
-                        type="button"
-                        onClick={() => setViewTab('books')}
-                        className={`inline-flex min-h-8 items-center rounded-full border px-3.5 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
-                            viewTab === 'books' ? activeChipClass : inactiveChipClass
-                        }`}
-                    >
-                        Books (10)
-                    </button>
-                    <button
-                        type="button"
-                        onClick={() => setViewTab('newsletters')}
-                        className={`inline-flex min-h-8 items-center rounded-full border px-3.5 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${
-                            viewTab === 'newsletters' ? activeChipClass : inactiveChipClass
-                        }`}
-                    >
-                        Newsletters (64)
-                    </button>
-                </div>
+                {/* View tab toggles with Watermelon FluidTabs */}
+                <FluidTabs
+                    size="sm"
+                    activeId={viewTab}
+                    onChange={(id) => setViewTab(id as 'books' | 'newsletters')}
+                    tabs={[
+                        { id: 'books', label: 'Books', count: '10' },
+                        { id: 'newsletters', label: 'Newsletters', count: '64' },
+                    ]}
+                />
             </div>
 
             {/* Shelf Display */}
@@ -123,7 +113,7 @@ export function WrittenArchiveVisual() {
                             key={item.id}
                             href={`/library/${item.id}`}
                             aria-label={`Open ${item.title}`}
-                            className="group relative -mx-2 block w-[24%] max-w-[9rem] origin-bottom overflow-hidden rounded-xl border border-ed-rule bg-ed-bg shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] first:ml-0 last:mr-0 hover:z-20 hover:-translate-y-4 hover:border-ed-fg hover:shadow-[0_20px_35px_-10px_rgba(0,0,0,0.5)]"
+                            className="group relative -mx-2 block w-[24%] max-w-[9rem] origin-bottom overflow-hidden rounded-xl border border-ed-rule bg-ed-bg shadow-2xl transition-all duration-250 ease-out first:ml-0 last:mr-0 hover:z-20 hover:-translate-y-2 hover:border-ed-fg hover:shadow-[0_16px_30px_-10px_rgba(0,0,0,0.4)]"
                             style={{ zIndex: index === Math.floor(items.length / 2) ? 5 : 4 - Math.abs(index - Math.floor(items.length / 2)) }}
                         >
                             <span className="relative block aspect-[2/3] overflow-hidden rounded-xl bg-ed-surface">

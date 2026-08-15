@@ -93,7 +93,7 @@ export function VideoArchiveSection() {
                     <SectionHeading numeral="I" title="Video archive" />
                 </Reveal>
                 <Reveal delay={80} className="mt-4 sm:mt-5 lg:mt-6">
-                    <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
+                    <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
                         Friday sermons, instructional programs, public talks, and United Submitters International conference recordings preserved as a visual study collection.
                     </p>
                 </Reveal>

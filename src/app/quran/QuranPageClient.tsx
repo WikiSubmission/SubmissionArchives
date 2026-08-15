@@ -59,10 +59,10 @@ export default function QuranPageClient({ chapters }: Props) {
           <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-ed-fg-muted">
             Scripture
           </p>
-          <h1 className="mt-6 font-serif text-[clamp(2.75rem,8vw,5rem)] leading-[1.05] tracking-tight text-ed-fg">
+          <h1 className="mt-6 font-serif text-[clamp(2.5rem,6.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-ed-fg">
             The Qur&apos;an
           </h1>
-          <p className="mt-6 max-w-[50ch] font-serif text-lg leading-relaxed text-ed-fg-muted sm:text-xl">
+          <p className="mt-6 max-w-[50ch] font-serif text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
             114 surahs, with Arabic text, English translation, transliteration, and footnotes.
           </p>
 

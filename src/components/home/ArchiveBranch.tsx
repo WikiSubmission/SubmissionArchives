@@ -38,7 +38,7 @@ export function ArchiveBranch({
                         <SectionHeading numeral={numeral} title={title} />
                     </Reveal>
                     <Reveal delay={140} className="mt-4 sm:mt-5 lg:mt-6">
-                        <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
+                        <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
                             {body}
                         </p>
                     </Reveal>
@@ -74,7 +74,7 @@ export function ArchiveBranch({
                     <SectionHeading numeral={numeral} title={title} />
                 </Reveal>
                 <Reveal delay={140} className="mt-4 sm:mt-5 lg:mt-6">
-                    <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
+                    <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
                         {body}
                     </p>
                 </Reveal>

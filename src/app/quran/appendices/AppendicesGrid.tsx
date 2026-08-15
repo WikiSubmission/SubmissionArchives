@@ -20,7 +20,7 @@ export default function AppendicesGrid({ appendices }: Props) {
                     <p className="font-mono text-xs tracking-[0.2em] text-ed-accent uppercase">
                         The Appendices
                     </p>
-                    <h2 id="appendices-grid" className="font-serif text-[clamp(2rem,4vw,3rem)] leading-none text-ed-fg">
+                    <h2 id="appendices-grid" className="font-serif text-[clamp(1.9rem,4.5vw,3rem)] font-bold leading-[1.12] tracking-[-0.025em] text-ed-fg">
                         Reference Materials
                     </h2>
                 </div>

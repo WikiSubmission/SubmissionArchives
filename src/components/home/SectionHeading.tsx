@@ -14,13 +14,13 @@ export function SectionHeading({ numeral, title, className = '' }: SectionHeadin
         <header className={`relative mt-6 ${className}`}>
             <div className="flex flex-col items-start gap-3 border-b border-ed-rule-strong/80 pb-5">
                 <span
-                    className="inline-flex items-center rounded-full border border-ed-rule-strong bg-ed-surface-strong px-3.5 py-1 font-mono text-[0.72rem] font-bold tracking-wider text-ed-fg shadow-sm"
+                    className="inline-flex items-center rounded-full border border-ed-rule-strong bg-ed-surface-strong px-3.5 py-1 font-mono text-[0.68rem] font-bold uppercase tracking-[0.14em] text-ed-fg shadow-sm"
                 >
                     SECTION {numeral}
                 </span>
-                <h3 className="font-slab text-[clamp(2.2rem,5.5vw,3.6rem)] font-black leading-[0.95] tracking-tight text-ed-fg">
+                <h2 className="font-slab text-[clamp(1.9rem,4.5vw,3.2rem)] font-bold leading-[1.12] tracking-[-0.025em] text-ed-fg">
                     {title}
-                </h3>
+                </h2>
             </div>
             <span
                 aria-hidden="true"

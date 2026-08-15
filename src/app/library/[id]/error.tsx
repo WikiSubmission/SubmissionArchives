@@ -31,10 +31,10 @@ export default function LibraryReaderError({
                     </div>
 
                     <div className="space-y-2">
-                        <h2 className="text-xl font-semibold tracking-tight text-ed-fg">
+                        <h2 className="text-lg sm:text-xl font-bold leading-[1.25] tracking-[-0.018em] text-ed-fg">
                             Couldn&apos;t load this document
                         </h2>
-                        <p className="text-sm text-ed-fg-muted leading-relaxed">
+                        <p className="text-sm text-ed-fg-muted leading-[1.6]">
                             Something went wrong while preparing the reader. This might be a temporary issue with the document or your connection.
                         </p>
                     </div>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Pause, Play, BookOpen, Volume2, Video, FileText, Search } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Pause, Play, BookOpen, Search } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 import { Reveal } from './Reveal';
@@ -38,35 +38,30 @@ const ARCHIVE_PORTALS = [
         badge: '5 Canons',
         desc: '114 Surahs, 38 Appendices, 39 OT, 15 Apocrypha & 27 NT books',
         href: '/scripture/quran',
-        icon: BookOpen,
     },
     {
         title: 'Audio Archives',
         badge: '600+ Audios',
         desc: 'Friday sermons, Qur\'an studies & synchronized speech transcripts',
         href: '/audios',
-        icon: Volume2,
     },
     {
         title: 'Video Lectures',
         badge: '300+ Videos',
         desc: 'Historic sermons, conferences, televised programs & debates',
         href: '/videos',
-        icon: Video,
     },
     {
         title: 'Written Library',
         badge: '74 Publications',
         desc: '10 Published books, 64 monthly newsletters & scanned facsimiles',
         href: '/written',
-        icon: FileText,
     },
     {
         title: 'Universal Search',
         badge: 'Deep Search',
         desc: 'Full-text query across every transcript, newsletter & verse',
         href: '/search',
-        icon: Search,
     },
 ] as const;
 
@@ -101,6 +96,8 @@ export function HeroSection() {
                     alt=""
                     width={500}
                     height={500}
+                    priority
+                    loading="eager"
                     className="absolute -right-24 -top-20 hidden w-[34rem] select-none opacity-[0.03] grayscale lg:block dark:opacity-[0.05]"
                     aria-hidden="true"
                 />
@@ -110,31 +107,24 @@ export function HeroSection() {
                 {/* Hero Main Grid */}
                 <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
                     <div className="max-w-2xl">
-                        <Reveal delay={80}>
-                            <div className="inline-flex items-center gap-2 rounded-full border border-ed-rule bg-ed-surface/80 px-3.5 py-1 text-xs font-mono font-medium text-ed-fg-muted backdrop-blur-md">
-                                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                                <span>Digital Preservation Archive · Est. 1980–Present</span>
-                            </div>
-                        </Reveal>
-
-                        <Reveal delay={140} className="mt-6 flex justify-center sm:justify-start">
+                        <Reveal delay={80} className="flex justify-center sm:justify-start">
                             <h1 id="hero-title" className="flex flex-col text-ed-fg w-fit items-center sm:items-start text-center sm:text-left">
-                                <span className="block font-sans text-[clamp(2.8rem,8.5vw,4.8rem)] font-black uppercase leading-[0.88] tracking-tight">
+                                <span className="block font-sans text-[clamp(2.5rem,7.5vw,4.5rem)] font-black uppercase leading-[0.92] tracking-[-0.035em]">
                                     Submission
                                 </span>
-                                <span className="mt-2 block w-full border border-ed-fg bg-ed-surface-strong px-5 py-2.5 text-center font-slab text-[clamp(2.9rem,9vw,5rem)] font-black italic uppercase leading-none tracking-tight text-ed-fg">
+                                <span className="mt-2 block w-full border border-ed-fg bg-ed-surface-strong px-5 py-2.5 text-center font-slab text-[clamp(2.6rem,8vw,4.75rem)] font-black italic uppercase leading-none tracking-[-0.03em] text-ed-fg">
                                     Archives
                                 </span>
                             </h1>
                         </Reveal>
 
-                        <Reveal delay={200} className="mt-5 sm:mt-6">
-                            <p className="max-w-[54ch] text-base leading-relaxed text-ed-fg-muted sm:text-lg text-center sm:text-left mx-auto sm:mx-0 font-sans">
+                        <Reveal delay={160} className="mt-5 sm:mt-6">
+                            <p className="max-w-[54ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg text-center sm:text-left mx-auto sm:mx-0 font-sans">
                                 The comprehensive digital repository dedicated to the permanent preservation of historical audio recordings, video lectures, authorized scripture translations, and published works of Dr. Rashad Khalifa.
                             </p>
                         </Reveal>
 
-                        <Reveal delay={260}>
+                        <Reveal delay={240}>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center justify-center sm:justify-start">
                                 <Link href="/search" className="archive-button archive-button-primary group px-7 active:scale-[0.98]">
                                     <Search className="h-4 w-4" />
@@ -206,6 +196,7 @@ export function HeroSection() {
                                     sizes="(max-width: 768px) 100vw, 44rem"
                                     className="object-cover transition-opacity duration-700 ease-in-out"
                                     priority
+                                    loading="eager"
                                 />
                             </div>
                         </div>
@@ -224,37 +215,31 @@ export function HeroSection() {
                             </span>
                         </div>
                         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-                            {ARCHIVE_PORTALS.map((portal) => {
-                                 const Icon = portal.icon;
-                                 return (
-                                     <Link
-                                         key={portal.title}
-                                         href={portal.href}
-                                         className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/90 via-ed-surface/70 to-ed-surface/50 p-5 shadow-[0_12px_28px_-10px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.05)_inset] backdrop-blur-xl transition-all duration-300 hover:border-ed-fg/40 hover:shadow-xl hover:-translate-y-1 active:scale-[0.98]"
-                                     >
-                                         <div>
-                                             <div className="flex items-center justify-between gap-2">
-                                                 <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-ed-rule-strong/80 bg-ed-surface-strong text-ed-fg shadow-sm transition-all duration-200 group-hover:scale-105 group-hover:bg-ed-fg group-hover:text-ed-bg">
-                                                     <Icon className="h-4 w-4" />
-                                                 </span>
-                                                 <span className="rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.62rem] font-bold text-ed-fg-muted transition-colors group-hover:text-ed-fg">
-                                                     {portal.badge}
-                                                 </span>
-                                             </div>
-                                             <h2 className="mt-3.5 font-sans text-base font-bold text-ed-fg">
-                                                 {portal.title}
-                                             </h2>
-                                             <p className="mt-1.5 text-xs leading-relaxed text-ed-fg-muted line-clamp-2">
-                                                 {portal.desc}
-                                             </p>
-                                         </div>
-                                         <div className="mt-5 flex items-center gap-1 font-mono text-[0.68rem] font-semibold uppercase tracking-wider text-ed-fg-muted transition-colors group-hover:text-ed-fg">
-                                             <span>Explore portal</span>
-                                             <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1" />
-                                         </div>
-                                     </Link>
-                                 );
-                            })}
+                            {ARCHIVE_PORTALS.map((portal) => (
+                                <Link
+                                    key={portal.title}
+                                    href={portal.href}
+                                    className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/90 via-ed-surface/70 to-ed-surface/50 p-5 shadow-[0_12px_28px_-10px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.05)_inset] backdrop-blur-xl transition-all duration-250 ease-out hover:border-ed-fg/40 hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.99]"
+                                >
+                                    <div>
+                                        <div className="flex items-center justify-between gap-2">
+                                            <span className="rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.62rem] font-bold text-ed-fg-muted transition-colors group-hover:text-ed-fg">
+                                                {portal.badge}
+                                            </span>
+                                        </div>
+                                        <h2 className="mt-3.5 font-sans text-[0.95rem] sm:text-base font-bold leading-snug tracking-[-0.015em] text-ed-fg">
+                                            {portal.title}
+                                        </h2>
+                                        <p className="mt-1.5 text-xs sm:text-[0.82rem] leading-[1.55] text-ed-fg-muted line-clamp-2">
+                                            {portal.desc}
+                                        </p>
+                                    </div>
+                                    <div className="mt-5 flex items-center gap-1 font-mono text-[0.68rem] font-semibold uppercase tracking-wider text-ed-fg-muted transition-colors group-hover:text-ed-fg">
+                                        <span>Explore portal</span>
+                                        <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1" />
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </Reveal>

@@ -81,10 +81,10 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                     <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1.1fr_0.9fr]">
                         <div className="relative z-10 flex flex-col items-start gap-4">
                             <p className="archive-kicker">Video index</p>
-                            <h1 className="max-w-[16ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] text-ed-fg">
+                            <h1 className="max-w-[16ch] font-display text-[clamp(2.5rem,6.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ed-fg">
                                 The Video Archive
                             </h1>
-                            <p className="max-w-[64ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
+                            <p className="max-w-[64ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
                                 Sermons, instructional programs, and conference recordings, organized as a preserved study collection.
                             </p>
                         </div>
@@ -102,10 +102,10 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                 <div className="flex flex-col gap-4 border-b border-ed-rule pb-6 sm:flex-row sm:items-end sm:justify-between">
                                     <div className="flex flex-col items-start gap-3">
                                         <p className="archive-kicker">Collection</p>
-                                        <h2 className="font-display text-3xl text-ed-fg sm:text-4xl">
+                                        <h2 className="font-display text-2xl font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg sm:text-3xl lg:text-4xl">
                                             {section.title}
                                         </h2>
-                                        <p className="max-w-[64ch] text-base leading-7 text-ed-fg-muted">
+                                        <p className="max-w-[64ch] text-sm sm:text-base leading-[1.6] text-ed-fg-muted">
                                             {section.description}
                                         </p>
                                     </div>

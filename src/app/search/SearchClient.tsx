@@ -780,8 +780,8 @@ function SearchContent() {
                                     </div>
 
                                     {/* Source Filter Segmented Pill Group */}
-                                    <div className="overflow-x-auto pb-1 sm:pb-0">
-                                        <div className="relative flex items-center gap-1 p-1 rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 backdrop-blur-xl overflow-hidden isolation-auto shadow-inner">
+                                    <div className="w-full overflow-x-auto scrollbar-none pb-1 sm:pb-0">
+                                        <div className="relative inline-flex min-w-full sm:min-w-0 items-center justify-start sm:justify-center gap-1 p-1 rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 backdrop-blur-xl isolation-auto shadow-inner">
                                             <button
                                                 type="button"
                                                 onClick={selectAllSources}

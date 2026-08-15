@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck, Sparkles, BookOpen, Search } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Sparkles, BookOpen, Search, Volume2 } from 'lucide-react';
 import Link from 'next/link';
 
 import { ArchiveBranch } from './ArchiveBranch';
@@ -8,6 +8,43 @@ import { ScripturesVisual } from './ScripturesVisual';
 import { Reveal } from './Reveal';
 import { VideoArchiveSection } from './VideoArchiveSection';
 import { WrittenArchiveVisual } from './WrittenArchiveVisual';
+import { CardSplitAccordion, type AccordionItemData } from '@/components/ui/card-split-accordion';
+import { FloatingDock } from '@/components/layout/FloatingDock';
+
+const PRESERVATION_PILLARS: AccordionItemData[] = [
+    {
+        id: 1,
+        title: 'Original Facsimile & First Edition Printings',
+        badge: 'Zero Transcription Error',
+        icon: <BookOpen className="h-4 w-4 text-amber-500" />,
+        content:
+            'Every book, appendix, and monthly newsletter is paired directly with high-resolution page scans of the original 1981 and 1989 First Edition printings, ensuring absolute zero transcription variance or retroactive alterations.',
+    },
+    {
+        id: 2,
+        title: 'Time-Synchronized Audio & Video Recordings',
+        badge: 'Acoustic Verification',
+        icon: <Volume2 className="h-4 w-4 text-amber-500" />,
+        content:
+            'Over 600 audio sermons and 300 videotaped lectures are synchronized line-by-line with verbatim transcripts. You can listen directly to the authentic spoken delivery at the exact millisecond of any phrase.',
+    },
+    {
+        id: 3,
+        title: 'Full Mathematical & Structural Consistency',
+        badge: 'Sura 17:36 Audit',
+        icon: <ShieldCheck className="h-4 w-4 text-amber-500" />,
+        content:
+            'All text indexes preserve the original Arabic letter counts, chapter headers, and verse alignments, allowing researcher verification through reproducible, deterministic search and indexing pipelines.',
+    },
+    {
+        id: 4,
+        title: 'Universal Cross-Canon Parallel Corpus',
+        badge: '4 Scriptural Canons',
+        icon: <Search className="h-4 w-4 text-amber-500" />,
+        content:
+            'A unified academic reading room linking the Authorized English Qur\'an, Tanakh, Greek New Testament, and Apocrypha with instant phrase cross-referencing and contextual citation tools.',
+    },
+];
 
 const WRITTEN_CAPABILITIES = [
     {
@@ -161,20 +198,20 @@ export default function HomePage() {
                         aria-labelledby="preservation-principle-title"
                         className="group relative overflow-hidden rounded-3xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/90 via-ed-surface/70 to-ed-surface/50 p-8 sm:p-12 lg:p-14 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.3),0_0_0_1px_rgba(255,255,255,0.06)_inset] backdrop-blur-2xl transition-all duration-300 hover:border-ed-fg/40"
                     >
-                        <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
-                        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+                        <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-amber-500/10 blur-3xl" />
+                        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
                             <div className="max-w-2xl space-y-4">
-                                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-                                    <ShieldCheck className="h-4 w-4 text-emerald-500" />
+                                <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+                                    <ShieldCheck className="h-4 w-4 text-amber-500" />
                                     <span>Preservation Principle · Sura 17:36</span>
                                 </div>
                                 <h3
                                     id="preservation-principle-title"
-                                    className="font-serif text-2xl font-bold tracking-tight text-ed-fg sm:text-3xl lg:text-4xl"
+                                    className="font-serif text-2xl font-bold leading-[1.2] tracking-[-0.02em] text-ed-fg sm:text-3xl lg:text-[2.25rem]"
                                 >
                                     &ldquo;You shall not accept any information, unless you verify it for yourself.&rdquo;
                                 </h3>
-                                <p className="text-sm leading-relaxed text-ed-fg-muted sm:text-base">
+                                <p className="text-sm leading-[1.65] tracking-[-0.008em] text-ed-fg-muted sm:text-base">
                                     This archive is built on the commitment to direct evidence. Every transcript is accompanied by the original recording or print facsimile so you can independently verify every word and citation.
                                 </p>
                             </div>
@@ -188,6 +225,14 @@ export default function HomePage() {
                                     <ArrowRight className="h-4 w-4" />
                                 </Link>
                             </div>
+                        </div>
+
+                        {/* Interactive Verification Pillars with Watermelon CardSplitAccordion */}
+                        <div className="mt-8 pt-8 border-t border-ed-rule">
+                            <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-widest text-ed-fg-muted">
+                                Interactive Verification Pillars
+                            </p>
+                            <CardSplitAccordion items={PRESERVATION_PILLARS} defaultOpenId={1} />
                         </div>
                     </section>
                 </Reveal>
@@ -209,11 +254,11 @@ export default function HomePage() {
                             </span>
                             <h2
                                 id="closing-cta-title"
-                                className="mt-5 mx-auto max-w-[20ch] font-sans text-[clamp(2.2rem,5.5vw,4.2rem)] font-black leading-[1.02] tracking-tight text-ed-bg"
+                                className="mt-5 mx-auto max-w-[20ch] font-sans text-[clamp(2.1rem,5vw,3.75rem)] font-black leading-[1.06] tracking-[-0.03em] text-ed-bg"
                             >
                                 Everything preserved in one place.
                             </h2>
-                            <p className="mx-auto mt-4 max-w-[50ch] font-sans text-base leading-relaxed text-ed-bg/85 sm:text-lg">
+                            <p className="mx-auto mt-4 max-w-[50ch] font-sans text-base leading-[1.65] tracking-[-0.01em] text-ed-bg/85 sm:text-lg">
                                 Search 600+ audio recordings, 300+ video lectures, 74 written works, 114 Surahs, and 81 biblical & apocryphal books in seconds.
                             </p>
                             <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
@@ -243,6 +288,9 @@ export default function HomePage() {
                     </section>
                 </Reveal>
             </section>
+
+            {/* Watermelon Floating Quick Nav Dock */}
+            <FloatingDock />
         </main>
     );
 }

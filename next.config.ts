@@ -51,7 +51,7 @@ const nextConfig: NextConfig = {
     imageSizes: [48, 64, 96, 128, 160, 192, 256, 384],
     // Every quality a component actually asks for must be listed here or the
     // request is rejected at runtime. 90 is used by MediaCard's grid thumbnails.
-    qualities: [45, 50, 60, 65, 70, 75, 85, 90],
+    qualities: [45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
     // Source images (book covers, thumbnails) are stable, so keep optimized
     // variants cached for ~31 days to avoid re-running sharp on every miss.
     minimumCacheTTL: 2678400,

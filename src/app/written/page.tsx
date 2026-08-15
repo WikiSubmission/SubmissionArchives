@@ -46,12 +46,12 @@ export default function WrittenArchivePage() {
                 <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
                     <div className="flex flex-col items-start gap-4">
                         <p className="archive-kicker">Written archive</p>
-                        <h1 className="max-w-[12ch] font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] text-ed-fg">
+                        <h1 className="max-w-[14ch] font-display text-[clamp(2.5rem,6.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ed-fg">
                             A reading room for the written record.
                         </h1>
                     </div>
                     <div className="flex flex-col items-start gap-6 lg:pb-1">
-                        <p className="max-w-[58ch] text-base leading-8 text-ed-fg-muted sm:text-lg">
+                        <p className="max-w-[58ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
                             Books, newsletters, appendices, and related documents are transcribed and connected to the same research search used by the audio, video, and Qur&apos;an collections.
                         </p>
                         <Link href="/search" className="archive-button archive-button-primary">
@@ -65,7 +65,7 @@ export default function WrittenArchivePage() {
                     <div className="mb-8 flex flex-col gap-4 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
                         <div className="flex flex-col items-start gap-3">
                             <p className="archive-kicker">Featured Works</p>
-                            <h2 id="featured-books" className="font-display text-3xl text-ed-fg sm:text-4xl">Books & Publications</h2>
+                            <h2 id="featured-books" className="font-display text-2xl font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg sm:text-3xl lg:text-4xl">Books & Publications</h2>
                         </div>
                     </div>
                     
@@ -88,11 +88,11 @@ export default function WrittenArchivePage() {
                                     )}
                                 </div>
                                 <div>
-                                    <h3 className="font-serif text-sm font-medium text-ed-fg group-hover:text-ed-accent line-clamp-2">
+                                    <h3 className="font-serif text-sm font-medium leading-snug tracking-[-0.01em] text-ed-fg group-hover:text-ed-accent line-clamp-2">
                                         {book.title}
                                     </h3>
                                     {book.author && (
-                                        <p className="mt-1 text-xs text-ed-fg-muted">{book.author}</p>
+                                        <p className="mt-1 text-xs leading-normal text-ed-fg-muted">{book.author}</p>
                                     )}
                                 </div>
                             </Link>
@@ -104,7 +104,7 @@ export default function WrittenArchivePage() {
                     <div className="mb-8 flex flex-col gap-4 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
                         <div className="flex flex-col items-start gap-3">
                             <p className="archive-kicker">Newsletter archive</p>
-                            <h2 id="submitters-perspectives" className="font-display text-3xl text-ed-fg sm:text-4xl">Submitters Perspectives</h2>
+                            <h2 id="submitters-perspectives" className="font-display text-2xl font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg sm:text-3xl lg:text-4xl">Submitters Perspectives</h2>
                         </div>
                         <div className="flex flex-col items-start gap-3 sm:items-end">
                             <p className="text-sm text-ed-fg-muted">{newsletterIssues.length} preserved issues, 1985–1990</p>

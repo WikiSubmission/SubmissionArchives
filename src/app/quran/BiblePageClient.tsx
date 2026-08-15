@@ -180,11 +180,11 @@ export default function BiblePageClient({ books, testament }: BiblePageClientPro
             </span>
           </div>
 
-          <h1 className="mt-6 font-serif text-[clamp(2.5rem,7vw,4.75rem)] leading-[1.05] tracking-tight text-ed-fg">
+          <h1 className="mt-6 font-serif text-[clamp(2.5rem,6.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-ed-fg">
             {title}
           </h1>
 
-          <p className="mt-9 sm:mt-10 max-w-[58ch] font-serif text-lg leading-relaxed text-ed-fg-muted sm:text-xl font-normal">
+          <p className="mt-6 max-w-[58ch] font-serif text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg font-normal">
             {subtitle}
           </p>
 

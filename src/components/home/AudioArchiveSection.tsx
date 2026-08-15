@@ -8,7 +8,8 @@ import { ExpectationCard } from './ExpectationCard';
 import { Reveal } from './Reveal';
 import { CtaLink, SectionCta } from './SectionCta';
 import { SectionHeading } from './SectionHeading';
-import { GlassSheen, activeChipClass, inactiveChipClass, widgetCardClass } from './WidgetAccents';
+import { GlassSheen, widgetCardClass } from './WidgetAccents';
+import { FluidTabs } from '@/components/ui/fluid-tabs';
 
 type AudioClip = {
     id: string;
@@ -115,7 +116,7 @@ export function AudioArchiveSection() {
                     <SectionHeading numeral="II" title="Audio archives" />
                 </Reveal>
                 <Reveal delay={80} className="mt-4 sm:mt-5 lg:mt-6">
-                    <p className="max-w-[62ch] text-[15px] leading-8 text-ed-fg-muted">
+                    <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
                         Qur&apos;an studies and Messenger recordings paired with searchable transcripts for close listening, quotation, and historical research.
                     </p>
                 </Reveal>
@@ -141,23 +142,6 @@ export function AudioArchiveSection() {
                 <div className={widgetCardClass}>
                     <GlassSheen />
 
-                    {/* Scoped keyframes for the equalizer bars — respects reduced motion */}
-                    <style>{`
-                        @keyframes archive-eq-pulse {
-                            0%, 100% { transform: scaleY(0.55); }
-                            50% { transform: scaleY(1); }
-                        }
-                        .archive-eq-bar--live {
-                            animation: archive-eq-pulse 900ms ease-in-out infinite;
-                            transform-origin: bottom;
-                        }
-                        @media (prefers-reduced-motion: reduce) {
-                            .archive-eq-bar--live {
-                                animation: none;
-                            }
-                        }
-                    `}</style>
-
                     {/* Header bar */}
                     <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-6 bg-ed-surface-strong/40 select-none">
                         <div className="flex items-center gap-3">
@@ -174,24 +158,20 @@ export function AudioArchiveSection() {
                             </div>
                         </div>
 
-                        {/* Collection Filter Pill Buttons */}
-                        <div className="flex items-center gap-1.5">
-                            {(['all', 'quran-study', 'messenger-audio'] as const).map((filter) => (
-                                <button
-                                    key={filter}
-                                    type="button"
-                                    onClick={() => {
-                                        setCategoryFilter(filter);
-                                        setSelected(0);
-                                    }}
-                                    aria-pressed={categoryFilter === filter}
-                                    className={`inline-flex min-h-7 items-center rounded-full border px-3 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.08em] transition-all duration-200 ${categoryFilter === filter ? activeChipClass : inactiveChipClass
-                                        }`}
-                                >
-                                    {filter === 'all' ? 'All' : filter === 'quran-study' ? "Qur'an Studies" : 'Messenger'}
-                                </button>
-                            ))}
-                        </div>
+                        {/* Collection Filter with Watermelon FluidTabs */}
+                        <FluidTabs
+                            size="sm"
+                            activeId={categoryFilter}
+                            onChange={(filter) => {
+                                setCategoryFilter(filter as 'all' | 'quran-study' | 'messenger-audio');
+                                setSelected(0);
+                            }}
+                            tabs={[
+                                { id: 'all', label: 'All' },
+                                { id: 'quran-study', label: "Qur'an Studies" },
+                                { id: 'messenger-audio', label: 'Messenger' },
+                            ]}
+                        />
                     </div>
 
                     {/* Dark Console Player / Widget */}

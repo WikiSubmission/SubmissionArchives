@@ -535,7 +535,7 @@ export default function NewsletterViewer({
                                                     {block.arabic_header}
                                                 </p>
                                             )}
-                                            <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-ed-fg">
+                                            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-extrabold leading-[1.08] tracking-[-0.03em] text-ed-fg">
                                                 {highlightText(block.title || 'MUSLIM PERSPECTIVE')}
                                             </h2>
                                             <div className="flex justify-center items-center gap-4 text-xs font-mono uppercase tracking-widest text-ed-fg-muted">
@@ -551,7 +551,7 @@ export default function NewsletterViewer({
                                     return (
                                         <article key={bIdx} id={blockId} className="space-y-6">
                                             {block.title && (
-                                                <h3 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-ed-fg">
+                                                <h3 className="text-xl sm:text-2xl font-display font-bold leading-[1.25] tracking-[-0.018em] text-ed-fg">
                                                     {highlightText(block.title)}
                                                 </h3>
                                             )}

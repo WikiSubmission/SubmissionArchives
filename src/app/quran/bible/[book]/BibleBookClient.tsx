@@ -655,7 +655,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-ed-fg-muted">
                   {book.testament} &middot; {book.category}
                 </p>
-                <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-ed-fg sm:text-5xl">
+                <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.12] tracking-[-0.025em] text-ed-fg">
                   {book.bookName}
                 </h2>
 
@@ -894,26 +894,6 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
           <kbd className="rounded border border-ed-rule bg-ed-surface px-1.5 py-0.5 font-mono text-ed-fg">p</kbd> chapters
         </span>
       </div>
-
-      {/* Global Styles */}
-      <style jsx global>{`
-        @keyframes slideInRight {
-          from { transform: translateX(100%); }
-          to { transform: translateX(0); }
-        }
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(12px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-slide-in-right { animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
-        .animate-fade-in-up { animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        .scrollbar-thin::-webkit-scrollbar { width: 5px; }
-        .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
-        .scrollbar-thin::-webkit-scrollbar-thumb { background: var(--ed-rule); border-radius: 10px; }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-slide-in-right, .animate-fade-in-up { animation: none !important; opacity: 1; }
-        }
-      `}</style>
     </div>
   );
 
