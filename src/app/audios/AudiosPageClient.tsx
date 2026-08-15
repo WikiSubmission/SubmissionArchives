@@ -66,7 +66,7 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
                                 <div className="flex flex-col gap-4 border-b border-ed-rule pb-6 sm:flex-row sm:items-end sm:justify-between">
                                     <div className="flex flex-col items-start gap-3">
                                         <p className="archive-kicker">Collection</p>
-                                        <h2 className="font-display text-2xl font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg sm:text-3xl lg:text-4xl">
+                                        <h2 className="font-display text-headline font-bold text-ed-fg">
                                             {section.title}
                                         </h2>
                                         <p className="max-w-[64ch] text-sm sm:text-base leading-[1.6] text-ed-fg-muted">

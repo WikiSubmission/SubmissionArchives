@@ -1,3 +1,5 @@
+import { Headline } from '@/components/ui/typography';
+
 type SectionHeadingProps = {
     numeral: string;
     title: string;
@@ -18,9 +20,9 @@ export function SectionHeading({ numeral, title, className = '' }: SectionHeadin
                 >
                     SECTION {numeral}
                 </span>
-                <h2 className="font-slab text-[clamp(1.9rem,4.5vw,3.2rem)] font-bold leading-[1.12] tracking-[-0.025em] text-ed-fg">
+                <Headline as="h2" className="font-slab">
                     {title}
-                </h2>
+                </Headline>
             </div>
             <span
                 aria-hidden="true"

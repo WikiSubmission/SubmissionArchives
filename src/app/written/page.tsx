@@ -65,7 +65,7 @@ export default function WrittenArchivePage() {
                     <div className="mb-8 flex flex-col gap-4 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
                         <div className="flex flex-col items-start gap-3">
                             <p className="archive-kicker">Featured Works</p>
-                            <h2 id="featured-books" className="font-display text-2xl font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg sm:text-3xl lg:text-4xl">Books & Publications</h2>
+                            <h2 id="featured-books" className="font-display text-headline font-bold text-ed-fg">Books & Publications</h2>
                         </div>
                     </div>
                     
@@ -104,7 +104,7 @@ export default function WrittenArchivePage() {
                     <div className="mb-8 flex flex-col gap-4 border-b border-ed-rule pb-5 sm:flex-row sm:items-end sm:justify-between">
                         <div className="flex flex-col items-start gap-3">
                             <p className="archive-kicker">Newsletter archive</p>
-                            <h2 id="submitters-perspectives" className="font-display text-2xl font-bold leading-[1.15] tracking-[-0.025em] text-ed-fg sm:text-3xl lg:text-4xl">Submitters Perspectives</h2>
+                            <h2 id="submitters-perspectives" className="font-display text-headline font-bold text-ed-fg">Submitters Perspectives</h2>
                         </div>
                         <div className="flex flex-col items-start gap-3 sm:items-end">
                             <p className="text-sm text-ed-fg-muted">{newsletterIssues.length} preserved issues, 1985–1990</p>
