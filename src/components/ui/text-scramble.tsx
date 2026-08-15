@@ -20,16 +20,19 @@ interface TextScrambleProps {
  */
 export function TextScramble({ text, className, id, duration = 1200, as = 'span' }: TextScrambleProps) {
     const [display, setDisplay] = useState(text);
+    const [prevText, setPrevText] = useState(text);
     const frameRef = useRef<number | undefined>(undefined);
+
+    // Keep display in sync with a changed `text` prop without an effect —
+    // same "adjust state during render" pattern Header.tsx uses for pathname.
+    if (text !== prevText) {
+        setPrevText(text);
+        setDisplay(text);
+    }
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
-
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (prefersReducedMotion) {
-            setDisplay(text);
-            return;
-        }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
         const start = performance.now();
         const scrambleWindow = duration * 0.4;

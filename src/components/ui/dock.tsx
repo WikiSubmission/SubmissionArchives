@@ -33,7 +33,7 @@ function DockIcon({
     return val - bounds.x - bounds.width / 2;
   });
 
-  const widthSync = useTransform(distance, [-120, 0, 120], [42, 58, 42]);
+  const widthSync = useTransform(distance, [-120, 0, 120], [44, 58, 44]);
   const width = useSpring(widthSync, {
     mass: 0.1,
     stiffness: 160,
