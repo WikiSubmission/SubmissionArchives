@@ -10,6 +10,7 @@ import { VideoArchiveSection } from './VideoArchiveSection';
 import { WrittenArchiveVisual } from './WrittenArchiveVisual';
 import { CardSplitAccordion, type AccordionItemData } from '@/components/ui/card-split-accordion';
 import { FloatingDock } from '@/components/layout/FloatingDock';
+import { TextScramble } from '@/components/ui/text-scramble';
 
 const PRESERVATION_PILLARS: AccordionItemData[] = [
     {
@@ -252,12 +253,12 @@ export default function HomePage() {
                                 <Sparkles className="h-3 w-3 text-amber-300" />
                                 <span>The Complete Digital Repository</span>
                             </span>
-                            <h2
+                            <TextScramble
+                                as="h2"
                                 id="closing-cta-title"
-                                className="mt-5 mx-auto max-w-[20ch] font-sans text-[clamp(2.1rem,5vw,3.75rem)] font-black leading-[1.06] tracking-[-0.03em] text-ed-bg"
-                            >
-                                Everything preserved in one place.
-                            </h2>
+                                text="Everything preserved in one place."
+                                className="mt-5 mx-auto block max-w-[20ch] font-sans text-[clamp(2.1rem,5vw,3.75rem)] font-black leading-[1.06] tracking-[-0.03em] text-ed-bg"
+                            />
                             <p className="mx-auto mt-4 max-w-[50ch] font-sans text-base leading-[1.65] tracking-[-0.01em] text-ed-bg/85 sm:text-lg">
                                 Search 600+ audio recordings, 300+ video lectures, 74 written works, 114 Surahs, and 81 biblical & apocryphal books in seconds.
                             </p>

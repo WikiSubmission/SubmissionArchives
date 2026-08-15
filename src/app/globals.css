@@ -645,6 +645,35 @@ a {
   border: 1px solid #fde68a;
 }
 
+/* Plain-text inline link underline: grows from the left on hover. Scoped to
+   a class rather than a global `a` rule so it doesn't fight the deliberate
+   hover treatments already on nav items, buttons, and card links. */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: var(--ed-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .link-underline::after {
+    transition: none;
+  }
+}
+
 /* Animated underline that sweeps in from the left */
 .link-sweep {
   padding-bottom: 2px;

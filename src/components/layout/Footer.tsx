@@ -100,7 +100,7 @@ export default function Footer() {
                                     href={link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="transition-colors hover:text-ed-fg"
+                                    className="link-underline transition-colors hover:text-ed-fg"
                                 >
                                     {link.name}<span className="sr-only"> (opens in a new tab)</span>
                                 </a>
@@ -108,7 +108,7 @@ export default function Footer() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="transition-colors hover:text-ed-fg"
+                                    className="link-underline transition-colors hover:text-ed-fg"
                                 >
                                     {link.name}
                                 </Link>
