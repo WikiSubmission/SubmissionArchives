@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
-import { Amiri, Inter, JetBrains_Mono, Roboto_Slab, Frank_Ruhl_Libre } from 'next/font/google';
+import { Amiri, Inter, JetBrains_Mono, Roboto_Slab, Frank_Ruhl_Libre, DM_Sans, Newsreader, Source_Serif_4 } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import { WebVitals } from '@/components/analytics/WebVitals';
@@ -19,6 +19,27 @@ const inter = Inter({
     variable: '--font-inter',
     subsets: ['latin'],
     display: 'swap',
+});
+
+const dmSans = DM_Sans({
+    variable: '--font-dm-sans',
+    subsets: ['latin'],
+    display: 'swap',
+    preload: false,
+});
+
+const newsreader = Newsreader({
+    variable: '--font-newsreader',
+    subsets: ['latin'],
+    display: 'swap',
+    preload: false,
+});
+
+const sourceSerif4 = Source_Serif_4({
+    variable: '--font-source-serif-4',
+    subsets: ['latin'],
+    display: 'swap',
+    preload: false,
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -116,7 +137,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
                     {themeBootstrapScript}
                 </Script>
             </head>
-            <body className={`${inter.variable} ${jetbrainsMono.variable} ${amiri.variable} ${frankRuhlLibre.variable} ${superiorSerif.variable} ${robotoSlab.variable} antialiased`}>
+            <body className={`${inter.variable} ${jetbrainsMono.variable} ${amiri.variable} ${frankRuhlLibre.variable} ${superiorSerif.variable} ${robotoSlab.variable} ${dmSans.variable} ${newsreader.variable} ${sourceSerif4.variable} antialiased`}>
                 <a
                     href="#main-content"
                     className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ed-fg focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-ed-bg"

@@ -159,4 +159,11 @@ Not a CSV change. Once ready: swap `thumbnailOverride` for a small React compone
 
 Every step verified independently (row-count integrity, byte-identical untouched rows, no cross-column bleed) and committed separately. Final check: ran `npm run generate:catalog` and confirmed the actual `MASTER_INDEX.json` the site serves reflects every fix — no mojibake, no embedded newlines, canonical speaker names present, segment counts matching.
 
-**Steps 9–11: still out of scope, as originally called out** — description authoring, TOC/entry synthesis, and the thumbnail-to-CSS component swap all need a decision or a different kind of work (editorial content, a methodology choice, front-end implementation) before they can proceed, not just "keep running the next script."
+**Steps 9–11 Status:**
+
+| Step | Status | Result |
+|---|---|---|
+| 9. Description authoring | **Done & verified** | 52 descriptions authored from `thumbnail-text.md`, `displayTitle`, and folder metadata; added to `audios.json`; metadata generation updated. |
+| 10. TOC & Paragraphs | **Done & verified** | 52 chapter sidecar JSONs generated in `data/catalog/chapters/`; attached to `MASTER_INDEX.json`; interactive Table of Contents drawer and Condensed Paragraph reading mode integrated into `Player.tsx` and verified live in browser. |
+| 11. CSS Thumbnails | **Done & verified** | `QuranStudyThumbnail.tsx` React component created using `#026634` branding, serif typography, and verbatim slide data from `quran-study-thumbnail-data.ts`. Integrated into `MediaCard.tsx` (grid and list layouts) with zero layout shift. |
+

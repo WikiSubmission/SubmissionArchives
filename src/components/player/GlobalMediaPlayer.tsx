@@ -95,8 +95,17 @@ function MediaDock({ state, dispatch }: { state: State; dispatch: (action: Actio
     if (!track || onOwnPage) return null;
 
     return (
-        <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-end px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] sm:px-4">
-            <div className="pointer-events-auto flex w-full max-w-md items-stretch gap-3 overflow-hidden rounded-2xl border border-ed-rule bg-ed-surface/95 p-2 shadow-2xl backdrop-blur-xl">
+        <div
+            className="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-end px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] sm:px-4"
+            style={{ fontFamily: "var(--font-sans, 'DM Sans', sans-serif)" }}
+        >
+            <div
+                className="pointer-events-auto flex w-full max-w-md items-stretch gap-3 overflow-hidden rounded-2xl border p-2 shadow-2xl backdrop-blur-xl"
+                style={{
+                    borderColor: 'var(--qs-border-subtle, #2A2928)',
+                    backgroundColor: 'rgba(22, 21, 20, 0.95)'
+                }}
+            >
                 {/* The frame stays visible on purpose. Everything here plays through an
                     embedded YouTube player, and YouTube's terms require the player to remain
                     visible and unobscured — a hidden, audio-only dock would breach them. */}
@@ -127,7 +136,16 @@ function MediaDock({ state, dispatch }: { state: State; dispatch: (action: Actio
                 <div className="flex min-w-0 flex-1 flex-col justify-between py-0.5">
                     <Link
                         href={track.href}
-                        className="line-clamp-2 text-xs font-semibold leading-snug text-ed-fg hover:text-ed-accent"
+                        className="line-clamp-2 text-xs font-semibold leading-snug transition-colors hover:underline"
+                        style={{
+                            color: 'var(--qs-text-primary, #F5F0EB)',
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.target as HTMLElement).style.color = 'var(--qs-accent, #C8794A)';
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.target as HTMLElement).style.color = 'var(--qs-text-primary, #F5F0EB)';
+                        }}
                     >
                         {track.title}
                     </Link>
@@ -137,7 +155,16 @@ function MediaDock({ state, dispatch }: { state: State; dispatch: (action: Actio
                             type="button"
                             onClick={() => dispatch({ type: 'toggle' })}
                             aria-label={state.isPlaying ? 'Pause' : 'Play'}
-                            className="flex h-9 w-9 items-center justify-center rounded-lg text-ed-fg-muted transition-colors hover:bg-ed-accent/10 hover:text-ed-accent"
+                            className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors"
+                            style={{ color: 'var(--qs-text-muted, #6B6560)' }}
+                            onMouseEnter={(e) => {
+                                (e.target as HTMLElement).style.backgroundColor = 'rgba(200, 121, 74, 0.1)';
+                                (e.target as HTMLElement).style.color = 'var(--qs-accent, #C8794A)';
+                            }}
+                            onMouseLeave={(e) => {
+                                (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                                (e.target as HTMLElement).style.color = 'var(--qs-text-muted, #6B6560)';
+                            }}
                         >
                             {state.isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
                         </button>
@@ -145,7 +172,16 @@ function MediaDock({ state, dispatch }: { state: State; dispatch: (action: Actio
                             type="button"
                             onClick={() => dispatch({ type: 'close' })}
                             aria-label="Close player"
-                            className="flex h-9 w-9 items-center justify-center rounded-lg text-ed-fg-muted transition-colors hover:bg-ed-accent/10 hover:text-ed-accent"
+                            className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors"
+                            style={{ color: 'var(--qs-text-muted, #6B6560)' }}
+                            onMouseEnter={(e) => {
+                                (e.target as HTMLElement).style.backgroundColor = 'rgba(200, 121, 74, 0.1)';
+                                (e.target as HTMLElement).style.color = 'var(--qs-accent, #C8794A)';
+                            }}
+                            onMouseLeave={(e) => {
+                                (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                                (e.target as HTMLElement).style.color = 'var(--qs-text-muted, #6B6560)';
+                            }}
                         >
                             <X className="h-4 w-4" />
                         </button>

@@ -6,11 +6,18 @@ import {
   Search, Copy, Check, X, BookOpen,
   ArrowLeft, ArrowRight, Download, SkipBack, SkipForward,
   Play, Pause, Gauge, Volume2, VolumeX, Share2, Link as LinkIcon,
-  ChevronUp, ChevronDown, ChevronLeft, HelpCircle, Maximize2, Columns
+  ChevronUp, ChevronDown, ChevronLeft, HelpCircle, Maximize2, Columns,
+  Bookmark, FileText, AlignLeft
 } from "lucide-react";
 import CiteButton from "@/components/ui/CiteButton";
 import { useGlobalPlayer } from "@/components/player/GlobalMediaPlayer";
 import { getMediaHref } from "@/lib/utils";
+import {
+  buildTranscriptParagraphs,
+  getActiveChapterIndex,
+  type ChapterMarker,
+} from "@/lib/transcriptParagraphs";
+import QuranStudyGoldenPlayer from "@/components/player/QuranStudyGoldenPlayer";
 
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
@@ -33,6 +40,7 @@ interface Media {
   displayTitle: string;
   displayDate: string;
   author: string;
+  description?: string;
   local_filename?: string;
   thumbnailOverride?: string;
   folder?: string;
@@ -42,6 +50,7 @@ interface Media {
   primaryNumber?: number | string;
   alternateNumbers?: string[];
   alternateNumberLabel?: string;
+  chapters?: ChapterMarker[];
 }
 
 export interface PlayerProps {
@@ -147,6 +156,35 @@ export default function Player({
   const hasTranscript = activeSegments.length > 0;
   const hasArabic = Boolean(segments_ar && segments_ar.length > 0);
 
+  /* ---------- TOC & Chapters State ---------- */
+  const [transcriptLayout, setTranscriptLayout] = useState<"lines" | "paragraphs">("lines");
+  const [showChapters, setShowChapters] = useState(false);
+
+  const hasChapters = Boolean(media.chapters && media.chapters.length > 0);
+  const chapters = useMemo(() => media.chapters || [], [media.chapters]);
+
+  const activeChapterIndex = useMemo(() => {
+    return getActiveChapterIndex(chapters, absoluteTime);
+  }, [chapters, absoluteTime]);
+
+  const activeChapter =
+    activeChapterIndex >= 0 && activeChapterIndex < chapters.length
+      ? chapters[activeChapterIndex]
+      : null;
+
+  /* ---------- Condensed Paragraphs ---------- */
+  const paragraphs = useMemo(() => {
+    return buildTranscriptParagraphs(activeSegments);
+  }, [activeSegments]);
+
+  const filteredParagraphs = useMemo(() => {
+    if (!searchQuery) return paragraphs;
+    const q = searchQuery.toLowerCase();
+    return paragraphs.filter(
+      (p) => p.text.toLowerCase().includes(q) || p.speaker.toLowerCase().includes(q)
+    );
+  }, [paragraphs, searchQuery]);
+
   /* ---------- Sanitized Clip Times ---------- */
   const effectiveClipStartTime = Number.isFinite(clipStartTime) && clipStartTime! > 0 ? clipStartTime : undefined;
   const effectiveClipEndTime = Number.isFinite(clipEndTime) && clipEndTime! > (effectiveClipStartTime || 0) ? clipEndTime : undefined;
@@ -186,12 +224,15 @@ export default function Player({
     );
   }, [activeSegments, searchQuery]);
 
+  const lastProgrammaticScrollTimeRef = useRef(0);
+
   /* ---------- Auto-scroll with User Interruption ---------- */
   useEffect(() => {
     if (!autoScroll || isUserScrolling || activeSegmentIndex === -1 || searchQuery) return;
     const segKey = getSegmentKey(activeSegments[activeSegmentIndex], activeSegmentIndex);
     const el = document.getElementById(`seg-${segKey}`);
     if (el) {
+      lastProgrammaticScrollTimeRef.current = Date.now();
       el.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, [activeSegmentIndex, autoScroll, isUserScrolling, searchQuery, activeSegments]);
@@ -201,6 +242,8 @@ export default function Player({
     const el = transcriptRef.current;
     if (!el) return;
     const onScroll = () => {
+      // Ignore programmatic smooth scrolling
+      if (Date.now() - lastProgrammaticScrollTimeRef.current < 900) return;
       setIsUserScrolling(true);
       clearTimeout(userScrollTimeoutRef.current);
       userScrollTimeoutRef.current = setTimeout(() => setIsUserScrolling(false), 2500);
@@ -1066,14 +1109,66 @@ export default function Player({
                   </div>
                 ) : null}
 
-                <div className="flex items-center justify-between">
+                <div className="flex flex-wrap items-center justify-between gap-2">
                   <div className="flex flex-col">
                     <h2 className="text-sm font-bold font-ui uppercase tracking-[0.1em] text-ed-fg">
                       Interactive Record
                     </h2>
                     <span className="text-xs text-ed-fg-muted">Select any sentence to seek</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    {hasChapters && (
+                      <button
+                        type="button"
+                        onClick={() => setShowChapters(!showChapters)}
+                        aria-pressed={showChapters}
+                        className={`inline-flex min-h-9 items-center gap-1.5 rounded-lg border border-ed-rule px-2.5 py-1.5 text-[11px] font-semibold font-ui transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
+                          showChapters
+                            ? "bg-ed-accent/15 text-ed-accent border-ed-accent/40"
+                            : "text-ed-fg-muted hover:text-ed-fg"
+                        }`}
+                        title="Table of Contents (Chapters)"
+                      >
+                        <Bookmark className="w-3.5 h-3.5" />
+                        <span>TOC ({chapters.length})</span>
+                      </button>
+                    )}
+
+                    <div className="inline-flex rounded-lg border border-ed-rule p-0.5 bg-ed-bg/50">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setTranscriptLayout("lines");
+                          setShowChapters(false);
+                        }}
+                        className={`flex h-8 px-2.5 items-center gap-1 rounded-md text-[11px] font-semibold font-ui transition-colors ${
+                          transcriptLayout === "lines" && !showChapters
+                            ? "bg-ed-surface text-ed-fg shadow-sm"
+                            : "text-ed-fg-muted hover:text-ed-fg"
+                        }`}
+                        title="Line-by-line subtitle sync"
+                      >
+                        <AlignLeft className="w-3 h-3" />
+                        <span className="hidden sm:inline">Lines</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setTranscriptLayout("paragraphs");
+                          setShowChapters(false);
+                        }}
+                        className={`flex h-8 px-2.5 items-center gap-1 rounded-md text-[11px] font-semibold font-ui transition-colors ${
+                          transcriptLayout === "paragraphs" && !showChapters
+                            ? "bg-ed-surface text-ed-fg shadow-sm"
+                            : "text-ed-fg-muted hover:text-ed-fg"
+                        }`}
+                        title="Condensed paragraph reading mode"
+                      >
+                        <FileText className="w-3 h-3" />
+                        <span className="hidden sm:inline">Paragraphs</span>
+                      </button>
+                    </div>
+
                     <button
                       type="button"
                       onClick={() => setFontSize(Math.max(0, fontSize - 1))}
@@ -1102,6 +1197,25 @@ export default function Player({
                     </button>
                   </div>
                 </div>
+
+                {/* Active Chapter Mini-Banner */}
+                {activeChapter && hasChapters && !showChapters && (
+                  <div className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-ed-surface/70 border border-ed-rule/60 text-xs backdrop-blur-sm">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-ed-accent/15 text-ed-accent text-[10px] font-bold uppercase tracking-wider font-mono">
+                        Ch. {activeChapterIndex + 1}
+                      </span>
+                      <span className="font-semibold text-ed-fg truncate">{activeChapter.title}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setShowChapters(true)}
+                      className="shrink-0 text-[11px] font-semibold text-ed-accent hover:underline ml-2 font-ui"
+                    >
+                      View TOC
+                    </button>
+                  </div>
+                )}
 
                 {/* Search Bar with Match Navigation */}
                 <div className="relative group">
@@ -1165,7 +1279,7 @@ export default function Player({
                 </div>
               </div>
 
-              {/* Segments List */}
+              {/* Transcript Scroll Container */}
               <div
                 ref={transcriptRef}
                 className={
@@ -1174,118 +1288,238 @@ export default function Player({
                     : "transcript-scroll flex-1 min-h-0 overflow-y-auto bg-ed-bg/35 p-3 scroll-smooth"
                 }
               >
-                {filteredSegments.length === 0 ? (
-                  <div className="flex flex-col items-center justify-center py-16 text-ed-fg-muted gap-2">
-                    <Search className="w-8 h-8 opacity-20" />
-                    <p className="text-sm font-ui text-center">
-                      No matches found for<br />&quot;{searchQuery}&quot;
-                    </p>
-                  </div>
-                ) : (
-                  <ol aria-label="Transcript" className={viewMode === "focus" ? "space-y-3" : "space-y-1.5"}>
-                    {filteredSegments.map((seg, i) => {
-                      const isActive = seg === activeSegment;
-                      const segKey = getSegmentKey(seg, i);
-                      return (
-                        <li
-                          key={seg.id ?? i}
-                          id={`seg-${segKey}`}
-                          aria-current={isActive ? "true" : undefined}
-                          className={`group relative rounded-[1rem] transition-all duration-200 ${
-                            isActive
-                              ? "soft-panel text-ed-fg"
-                              : "hover:bg-ed-surface/30"
-                          } ${viewMode === "focus" ? "p-1" : ""}`}
-                        >
-                          {/* Active indicator bar */}
-                          {isActive && <div className="active-segment-bar" />}
-
+                {/* 1. TABLE OF CONTENTS VIEW */}
+                {showChapters ? (
+                  <div className="p-1 space-y-3">
+                    <div className="flex items-center justify-between pb-2 border-b border-ed-rule/50 px-1">
+                      <h3 className="text-xs font-bold uppercase tracking-wider text-ed-fg-muted font-ui flex items-center gap-1.5">
+                        <Bookmark className="w-3.5 h-3.5 text-ed-accent" /> Table of Contents ({chapters.length} Chapters)
+                      </h3>
+                      <button
+                        type="button"
+                        onClick={() => setShowChapters(false)}
+                        className="text-xs font-semibold text-ed-accent hover:underline font-ui"
+                      >
+                        Back to Transcript
+                      </button>
+                    </div>
+                    <div className="space-y-2">
+                      {chapters.map((ch, idx) => {
+                        const isActive = idx === activeChapterIndex;
+                        return (
                           <button
+                            key={ch.id || idx}
                             type="button"
-                            onClick={() => handleSegmentClick(seg.start_time)}
-                            className={`w-full cursor-pointer rounded-[1rem] p-4 pl-5 pr-20 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
-                              viewMode === "focus" ? "py-4 md:py-5" : ""
+                            onClick={() => {
+                              handleSegmentClick(ch.startTime);
+                              setShowChapters(false);
+                            }}
+                            className={`w-full text-left p-3.5 rounded-2xl border transition-all duration-200 cursor-pointer ${
+                              isActive
+                                ? "bg-ed-accent/10 border-ed-accent/50 text-ed-fg shadow-sm ring-1 ring-ed-accent/30"
+                                : "border-ed-rule/40 hover:bg-ed-surface/60 hover:border-ed-rule text-ed-fg/90"
                             }`}
                           >
-                            <span className="sr-only">
-                              Play from {formatDuration(seg.start_time)}.{" "}
-                            </span>
-
-                            {/* Speaker */}
-                            {seg.speaker ? (
-                              <span className="mb-1.5 block">
-                                <span
-                                  className={`text-[10px] font-bold font-ui tracking-widest uppercase ${
-                                    isActive ? "text-ed-accent" : "text-ed-fg-muted"
-                                  }`}
-                                >
-                                  {seg.speaker}
-                                </span>
+                            <div className="flex items-center justify-between gap-2 mb-1.5">
+                              <span className={`text-xs font-bold font-mono px-2 py-0.5 rounded-full ${
+                                isActive ? "bg-ed-accent/20 text-ed-accent" : "bg-black/10 dark:bg-white/10 text-ed-fg-muted"
+                              }`}>
+                                {formatDuration(ch.startTime)}
                               </span>
-                            ) : null}
-
-                            {/* Content */}
-                            <span
-                              className={`block ${fontSizes[fontSize]} ${
-                                viewMode === "focus" ? "leading-loose" : "leading-relaxed"
-                              } font-body ${
-                                isActive ? "text-ed-fg font-medium" : "text-ed-fg/80"
-                              } ${captionLanguage === "ar" ? "font-arabic text-right" : ""}`}
-                              dir={captionLanguage === "ar" ? "rtl" : "ltr"}
-                            >
-                              <HighlightedText text={seg.content} query={searchQuery} />
-                            </span>
+                              {ch.speaker && (
+                                <span className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted px-2 py-0.5 rounded bg-black/5 dark:bg-white/5 font-ui">
+                                  {ch.speaker}
+                                </span>
+                              )}
+                            </div>
+                            <h4 className="font-semibold text-sm leading-snug text-ed-fg">
+                              {ch.title}
+                            </h4>
+                            {ch.description && (
+                              <p className="text-xs text-ed-fg-muted mt-1 leading-relaxed">
+                                {ch.description}
+                              </p>
+                            )}
                           </button>
-
-                          {/* Hover Actions (Top-Right) */}
-                          <div className="segment-actions absolute right-3 top-3">
-                            <button
-                              type="button"
-                              onClick={(e) => handleCopy(e, seg.content, seg.id ?? i)}
-                              aria-label={copiedId === (seg.id ?? i) ? "Copied" : "Copy quote"}
-                              className="relative flex h-8 w-8 items-center justify-center rounded-lg text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                              title="Copy quote (C)"
-                            >
-                              {copiedId === (seg.id ?? i) ? (
-                                <Check className="w-3.5 h-3.5 text-ed-accent" />
-                              ) : (
-                                <Copy className="w-3.5 h-3.5" />
-                              )}
-                            </button>
-                            <button
-                              type="button"
-                              onClick={(e) => handleShareAtTime(e, seg.start_time, seg.id ?? i)}
-                              aria-label={shareToastId === (seg.id ?? i) ? "Link copied" : "Share link at timestamp"}
-                              className="relative flex h-8 w-8 items-center justify-center rounded-lg text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
-                              title="Share at timestamp"
-                            >
-                              {shareToastId === (seg.id ?? i) ? (
-                                <Check className="w-3.5 h-3.5 text-ed-accent" />
-                              ) : (
-                                <Share2 className="w-3.5 h-3.5" />
-                              )}
-                              {shareToastId === (seg.id ?? i) && (
-                                <span className="share-tooltip">Link copied!</span>
-                              )}
-                            </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ) : transcriptLayout === "paragraphs" ? (
+                  /* 2. CONDENSED PARAGRAPHS VIEW */
+                  filteredParagraphs.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center py-16 text-ed-fg-muted gap-2">
+                      <Search className="w-8 h-8 opacity-20" />
+                      <p className="text-sm font-ui text-center">
+                        No matches found for<br />&quot;{searchQuery}&quot;
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {filteredParagraphs.map((para, pIdx) => {
+                        const isParaActive = absoluteTime >= para.start_time && absoluteTime <= para.end_time;
+                        return (
+                          <div
+                            key={para.id || pIdx}
+                            className={`group relative rounded-2xl p-4 transition-all duration-200 ${
+                              isParaActive
+                                ? "soft-panel text-ed-fg border border-ed-accent/30 shadow-sm"
+                                : "hover:bg-ed-surface/30 border border-transparent"
+                            }`}
+                          >
+                            {isParaActive && <div className="active-segment-bar" />}
+                            <div className="flex items-center justify-between mb-2">
+                              <span className={`text-[11px] font-bold uppercase tracking-wider font-ui ${
+                                isParaActive ? "text-ed-accent" : "text-ed-fg-muted"
+                              }`}>
+                                {para.speaker}
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => handleSegmentClick(para.start_time)}
+                                className="text-xs font-mono text-ed-fg-muted hover:text-ed-accent px-2 py-0.5 rounded hover:bg-ed-surface transition-colors cursor-pointer"
+                                title={`Seek to ${formatDuration(para.start_time)}`}
+                              >
+                                {formatDuration(para.start_time)}
+                              </button>
+                            </div>
+                            <p className={`font-body ${fontSizes[fontSize]} leading-relaxed text-ed-fg/90`}>
+                              {para.segments.map((seg, sIdx) => {
+                                const isSegActive = seg === activeSegment;
+                                return (
+                                  <span
+                                    key={seg.id ?? sIdx}
+                                    onClick={() => handleSegmentClick(seg.start_time)}
+                                    className={`cursor-pointer rounded px-0.5 transition-colors hover:bg-ed-accent/15 hover:text-ed-fg ${
+                                      isSegActive ? "bg-ed-accent/25 text-ed-accent font-medium" : ""
+                                    }`}
+                                    title={`Seek to ${formatDuration(seg.start_time)}`}
+                                  >
+                                    <HighlightedText text={seg.content} query={searchQuery} />{" "}
+                                  </span>
+                                );
+                              })}
+                            </p>
                           </div>
+                        );
+                      })}
+                    </div>
+                  )
+                ) : (
+                  /* 3. STANDARD LINE-BY-LINE SYNC VIEW */
+                  filteredSegments.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center py-16 text-ed-fg-muted gap-2">
+                      <Search className="w-8 h-8 opacity-20" />
+                      <p className="text-sm font-ui text-center">
+                        No matches found for<br />&quot;{searchQuery}&quot;
+                      </p>
+                    </div>
+                  ) : (
+                    <ol aria-label="Transcript" className={viewMode === "focus" ? "space-y-3" : "space-y-1.5"}>
+                      {filteredSegments.map((seg, i) => {
+                        const isActive = seg === activeSegment;
+                        const segKey = getSegmentKey(seg, i);
+                        return (
+                          <li
+                            key={seg.id ?? i}
+                            id={`seg-${segKey}`}
+                            aria-current={isActive ? "true" : undefined}
+                            className={`group relative rounded-[1rem] transition-all duration-200 ${
+                              isActive
+                                ? "soft-panel text-ed-fg"
+                                : "hover:bg-ed-surface/30"
+                            } ${viewMode === "focus" ? "p-1" : ""}`}
+                          >
+                            {/* Active indicator bar */}
+                            {isActive && <div className="active-segment-bar" />}
 
-                          {/* Timestamp Pill (Bottom-Right) */}
-                          <div className="absolute right-4 bottom-2.5">
                             <button
                               type="button"
                               onClick={() => handleSegmentClick(seg.start_time)}
-                              className="timestamp-pill"
-                              title="Play from here"
+                              className={`w-full cursor-pointer rounded-[1rem] p-4 pl-5 pr-20 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent ${
+                                viewMode === "focus" ? "py-4 md:py-5" : ""
+                              }`}
                             >
-                              <LinkIcon className="w-2.5 h-2.5" />
-                              {formatDuration(seg.start_time)}
+                              <span className="sr-only">
+                                Play from {formatDuration(seg.start_time)}.{" "}
+                              </span>
+
+                              {/* Speaker */}
+                              {seg.speaker ? (
+                                <span className="mb-1.5 block">
+                                  <span
+                                    className={`text-[10px] font-bold font-ui tracking-widest uppercase ${
+                                      isActive ? "text-ed-accent" : "text-ed-fg-muted"
+                                    }`}
+                                  >
+                                    {seg.speaker}
+                                  </span>
+                                </span>
+                              ) : null}
+
+                              {/* Content */}
+                              <span
+                                className={`block ${fontSizes[fontSize]} ${
+                                  viewMode === "focus" ? "leading-loose" : "leading-relaxed"
+                                } font-body ${
+                                  isActive ? "text-ed-fg font-medium" : "text-ed-fg/80"
+                                } ${captionLanguage === "ar" ? "font-arabic text-right" : ""}`}
+                                dir={captionLanguage === "ar" ? "rtl" : "ltr"}
+                              >
+                                <HighlightedText text={seg.content} query={searchQuery} />
+                              </span>
                             </button>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ol>
+
+                            {/* Hover Actions (Top-Right) */}
+                            <div className="segment-actions absolute right-3 top-3">
+                              <button
+                                type="button"
+                                onClick={(e) => handleCopy(e, seg.content, seg.id ?? i)}
+                                aria-label={copiedId === (seg.id ?? i) ? "Copied" : "Copy quote"}
+                                className="relative flex h-8 w-8 items-center justify-center rounded-lg text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                                title="Copy quote (C)"
+                              >
+                                {copiedId === (seg.id ?? i) ? (
+                                  <Check className="w-3.5 h-3.5 text-ed-accent" />
+                                ) : (
+                                  <Copy className="w-3.5 h-3.5" />
+                                )}
+                              </button>
+                              <button
+                                type="button"
+                                onClick={(e) => handleShareAtTime(e, seg.start_time, seg.id ?? i)}
+                                aria-label={shareToastId === (seg.id ?? i) ? "Link copied" : "Share link at timestamp"}
+                                className="relative flex h-8 w-8 items-center justify-center rounded-lg text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                                title="Share at timestamp"
+                              >
+                                {shareToastId === (seg.id ?? i) ? (
+                                  <Check className="w-3.5 h-3.5 text-ed-accent" />
+                                ) : (
+                                  <Share2 className="w-3.5 h-3.5" />
+                                )}
+                                {shareToastId === (seg.id ?? i) && (
+                                  <span className="share-tooltip">Link copied!</span>
+                                )}
+                              </button>
+                            </div>
+
+                            {/* Timestamp Pill (Bottom-Right) */}
+                            <div className="absolute right-4 bottom-2.5">
+                              <button
+                                type="button"
+                                onClick={() => handleSegmentClick(seg.start_time)}
+                                className="timestamp-pill"
+                                title="Play from here"
+                              >
+                                <LinkIcon className="w-2.5 h-2.5" />
+                                {formatDuration(seg.start_time)}
+                              </button>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  )
                 )}
               </div>
             </div>

@@ -1,7 +1,7 @@
 record_id,category,type,title,asset_kind,local_path,size_bytes,sha256,content_type
 video-program/what-is-life-all-about,Videos,video-program,What is Life All About?,thumbnail,content/videos/thumbnails/what-is-life-all-about.jpg,7323,016e60548d09e4752ce638a2aed30a60a07ab7a951f61a5a4cde3c4d9c44fdd5,image/jpeg
 video-program/who-is-god,Videos,video-program,Who is GOD?,thumbnail,content/videos/thumbnails/who-is-god.jpg,735844,43e9635d6428c061b7733f447db1c5cd393df7360edd142c9cfab78080d448a1,image/jpeg
-video-program/witness-a-miracle-world-news-bulletin,Videos,video-program,Witness a Miracle & World News Bulletin,thumbnail,content/videos/thumbnails/witness-a-miracle-world-news-bulletin.jpg,9556,ab90a74f477503e79a9563e5042bad1cd2cbcae7939ad806c26746c91cae9050,image/jpeg
+video-program/witness-a-miracle,Videos,video-program,Witness a Miracle,thumbnail,content/videos/thumbnails/witness-a-miracle.jpg,9556,ab90a74f477503e79a9563e5042bad1cd2cbcae7939ad806c26746c91cae9050,image/jpeg
 video-program/mathematical-miracle-of-quran,Videos,video-program,Mathematical Miracle of Quran,thumbnail,content/videos/thumbnails/mathematical-miracle-of-quran.jpg,7244,11fa4cd82f66d60085b3dd41bfcb050a09d1a9281a36728e61f94e18c1d9096c,image/jpeg
 video-program/essentials-of-submission-islam,Videos,video-program,Essentials of Submission (Islam),thumbnail,content/videos/thumbnails/essentials-of-submission-islam.jpg,7948,c5fd04c866cf2838b45e59f405c159d5f34ba3a8383fef93a8570ddfabb92914,image/jpeg
 video-program/principles-of-contact-prayers-salat,Videos,video-program,Principles of Contact Prayers Salat,thumbnail,content/videos/thumbnails/principles-of-contact-prayers-salat.jpg,5587,90011eb28a9324e3331aa99550d808841213306c7f92b6d499791c41a59dbaca,image/jpeg

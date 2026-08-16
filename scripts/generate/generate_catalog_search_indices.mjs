@@ -9,6 +9,7 @@ const GENERATED_DIR = path.join(ROOT, 'public', 'data', 'generated_indices');
 const CATALOG_DIR = path.join(ROOT, 'data', 'catalog');
 const VIDEO_LIST = path.join(CATALOG_DIR, 'videos.json');
 const AUDIO_LIST = path.join(CATALOG_DIR, 'audios.json');
+const CHAPTERS_DIR = path.join(CATALOG_DIR, 'chapters');
 const MASTER_OUTPUT = path.join(GENERATED_DIR, 'MASTER_INDEX.json');
 const ASSET_MANIFEST_OUTPUT = path.join(GENERATED_DIR, 'ASSET_MANIFEST.csv');
 const BOOKS_LIST_OUTPUT = path.join(GENERATED_DIR, 'BOOKS_LIST.json');
@@ -380,16 +381,35 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
   }).filter((item) => includeEmpty || item.segments.length > 0);
 }
 
+function loadChaptersForAudio(item) {
+  if (item.type !== 'quran-study') return undefined;
+  const match = (item.id || '').match(/^quran-study\/(\d+)/i);
+  if (!match) return undefined;
+  const num = Number(match[1]);
+  const chapterPath = path.join(CHAPTERS_DIR, `QS${String(num).padStart(2, '0')}.json`);
+  if (!fs.existsSync(chapterPath)) return undefined;
+  try {
+    const data = readJson(chapterPath);
+    return Array.isArray(data.chapters) && data.chapters.length > 0 ? data.chapters : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 function buildAudioIndex({ includeEmpty = false } = {}, playlistIndex) {
   const audios = readJson(AUDIO_LIST);
   return audios.map((item) => {
     const resolved = resolveTranscriptSegments(item, playlistIndex);
+    const chapters = loadChaptersForAudio(item);
     return {
       id: item.id,
       title: item.displayTitle || item.title,
       displayTitle: item.displayTitle || item.title,
       type: item.type,
       author: item.author,
+      date: item.date,
+      description: item.description,
+      chapters,
       thumbnailOverride: item.thumbnailOverride,
       folder: item.folder,
       vttFile: item.vttFile,
@@ -1126,6 +1146,8 @@ function masterRecord(item, category) {
     category,
     author: item.author,
     date: item.date,
+    description: item.description,
+    chapters: item.chapters,
     fullDate: item.fullDate ?? derived?.fullDate,
     year: item.year ?? derived?.year,
     thumbnailOverride: item.thumbnailOverride,

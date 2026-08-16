@@ -14,11 +14,19 @@ export interface Media {
     folder?: string;
     youtubeId?: string;
     youtubeUrl?: string;
-    youtubeStartTime?: number;
-    youtubeEndTime?: number;
     primaryNumber?: number;
     alternateNumbers?: string[];
     alternateNumberLabel?: string;
+    chapters?: Chapter[];
+}
+
+export interface Chapter {
+    id: number;
+    startTime: number;
+    endTime?: number;
+    title: string;
+    description?: string;
+    speaker?: string;
 }
 
 export interface Newsletter {

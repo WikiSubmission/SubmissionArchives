@@ -10,6 +10,11 @@ const Player = dynamic(() => import('./Player'), {
   loading: () => <PlayerLoadingSkeleton />
 });
 
+const QuranStudyGoldenPlayer = dynamic(() => import('@/components/player/QuranStudyGoldenPlayer'), {
+  ssr: false,
+  loading: () => <PlayerLoadingSkeleton />
+});
+
 // The server component is fully static (prerendered via generateStaticParams).
 // The `?t=` deep-link seek time is a client-only concern, so we read it here
 // with useSearchParams (which requires the Suspense boundary below) rather than
@@ -20,6 +25,10 @@ function PlayerWithSeek(props: PlayerWrapperProps) {
   const searchParams = useSearchParams();
   const requestedTime = parseTimeParam(searchParams.get('t'));
   const initialSeekTime = requestedTime !== undefined && requestedTime >= 0 ? requestedTime : undefined;
+
+  if (props.media.type === 'quran-study') {
+    return <QuranStudyGoldenPlayer {...props} initialSeekTime={initialSeekTime} />;
+  }
 
   return <Player {...props} initialSeekTime={initialSeekTime} />;
 }

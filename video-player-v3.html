@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advocating God Alone — Submission Archives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0F0E0D;
+      --bg-secondary: #161514;
+      --bg-tertiary: #1C1B1A;
+      --bg-elevated: #1E1D1C;
+      --border-subtle: #2A2928;
+      --border-hover: #353433;
+      --text-primary: #F5F0EB;
+      --text-secondary: #9E9690;
+      --text-muted: #6B6560;
+      --text-faint: #4A4542;
+      --accent: #C8794A;
+      --accent-hover: #D9916A;
+      --accent-soft: rgba(200, 121, 74, 0.06);
+      --accent-glow: rgba(200, 121, 74, 0.08);
+      --verse-bg: rgba(200, 121, 74, 0.04);
+      --arabic-bg: rgba(143, 184, 168, 0.04);
+      --speaker-khalifa: #C8794A;
+      --speaker-khalifa-bg: rgba(200, 121, 74, 0.05);
+      --speaker-catherine: #8FB8A8;
+      --speaker-edip: #8AA4C8;
+      --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-transcript: 'Newsreader', Georgia, serif;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    /* Background */
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.025) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.015) 0%, transparent 70%);
+    }
+
+    /* ========== NAVIGATION ========== */
+    .nav {
+      height: 60px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      position: sticky;
+      top: 0;
+      background: rgba(15, 14, 13, 0.88);
+      backdrop-filter: blur(16px) saturate(1.2);
+      z-index: 100;
+    }
+
+    .nav-brand {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .nav-brand:hover { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 28px; }
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+      padding: 4px 0;
+    }
+    .nav-link:hover { color: var(--text-secondary); }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    /* Mobile nav */
+    .nav-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 8px;
+      margin-right: -8px;
+    }
+    .nav-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: rgba(15, 14, 13, 0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 12px 28px 20px;
+      z-index: 99;
+    }
+    .nav-mobile-menu.open { display: block; }
+    .nav-mobile-menu .nav-link {
+      display: block;
+      padding: 12px 0;
+      font-size: 15px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-mobile-menu .nav-link:last-child { border-bottom: none; }
+
+    /* ========== CONTAINER ========== */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 18px; }
+      .nav { padding: 0 18px; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: flex; }
+    }
+
+    /* ========== BREADCRUMB ========== */
+    .breadcrumb {
+      margin-top: 32px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-faint);
+    }
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 6px; color: var(--border-hover); }
+
+    /* ========== VIDEO STAGE ========== */
+    .video-stage { position: relative; }
+
+    .video-player {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(160deg, #1a2e26 0%, #0f1a16 40%, #1a2520 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+    }
+
+    .video-player::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(200, 121, 74, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 65%, rgba(200, 121, 74, 0.04) 0%, transparent 40%);
+    }
+
+    .video-player::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150%;
+      height: 150%;
+      background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(200,121,74,0.02) 80deg, transparent 160deg);
+      animation: slowRotate 80s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes slowRotate {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .thumbnail-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 32px;
+      pointer-events: none;
+    }
+
+    .thumbnail-label {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .thumbnail-title {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 4.5vw, 56px);
+      line-height: 0.95;
+      color: var(--text-primary);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      max-width: 720px;
+      margin: 0 auto 12px;
+    }
+
+    .thumbnail-meta {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text-secondary);
+      letter-spacing: 0.01em;
+      font-weight: 400;
+    }
+
+    /* Play Button — positioned below text, not overlapping */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 48px;
+      z-index: 3;
+      transition: background 0.3s ease;
+    }
+    .play-overlay:hover { background: rgba(0, 0, 0, 0.1); }
+
+    .play-button {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(15, 14, 13, 0.8);
+      border: 1px solid var(--border-hover);
+      backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      pointer-events: auto;
+    }
+    .play-overlay:hover .play-button {
+      transform: scale(1.06);
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(200, 121, 74, 0.12);
+    }
+
+    .play-icon {
+      width: 0;
+      height: 0;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-left: 18px solid var(--text-primary);
+      margin-left: 3px;
+      transition: border-left-color 0.2s ease;
+    }
+    .play-overlay:hover .play-icon { border-left-color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .play-overlay { padding-bottom: 32px; }
+      .play-button { width: 64px; height: 64px; }
+      .play-icon { border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 15px solid var(--text-primary); }
+    }
+
+    /* ========== VIDEO INFO ========== */
+    .video-info {
+      margin-top: 4px;
+      padding: 28px 0 0;
+    }
+
+    .info-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .title-block { min-width: 0; flex: 1; }
+
+    .title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .title-block h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 28px);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .collapse-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease, transform 0.3s ease;
+      flex-shrink: 0;
+      margin-top: 4px;
+      min-width: 32px;
+      min-height: 32px;
+    }
+    .collapse-btn:hover { color: var(--text-secondary); }
+    .collapse-btn.collapsed { transform: rotate(-90deg); }
+
+    .meta-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .meta-item.accent { color: var(--accent); }
+    .meta-divider {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--text-faint);
+    }
+
+    .action-group {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-sans);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-height: 36px;
+    }
+    .btn:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+    }
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg-primary);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: var(--bg-primary);
+    }
+
+    @media (max-width: 640px) {
+      .action-group { width: 100%; }
+      .action-group .btn { flex: 1; }
+    }
+
+    .info-body {
+      max-height: 300px;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease, padding 0.3s ease;
+      opacity: 1;
+    }
+    .info-body.collapsed {
+      max-height: 0;
+      opacity: 0;
+      padding-top: 0;
+    }
+
+    .description {
+      color: var(--text-secondary);
+      font-family: var(--font-transcript);
+      font-size: 16px;
+      line-height: 1.65;
+      padding-top: 20px;
+      max-width: none;
+    }
+
+    @media (max-width: 768px) {
+      .description { font-size: 15px; }
+    }
+
+    /* ========== CONTENT GRID ========== */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 56px;
+      margin-top: 48px;
+      margin-bottom: 100px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* ========== SIDEBAR / TOC ========== */
+    .sidebar {
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+    }
+
+    @media (max-width: 960px) {
+      .sidebar {
+        position: relative;
+        top: auto;
+      }
+    }
+
+    .toc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+      padding: 0 4px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+
+    .toc-count {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-faint);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .toc-list { list-style: none; }
+    .toc-item { margin-bottom: 1px; }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.4;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .toc-link:hover {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+    }
+
+    .toc-link.active {
+      background: var(--accent-soft);
+      color: var(--text-primary);
+    }
+
+    .toc-link.active::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.8;
+    }
+
+    .toc-link.active .toc-time { color: var(--accent); }
+    .toc-link.active { padding-left: 24px; }
+
+    .toc-time {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-faint);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      min-width: 40px;
+      transition: color 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .toc-text {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* Mobile TOC collapse */
+    .toc-mobile-toggle {
+      display: none;
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      color: var(--text-secondary);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      min-height: 44px;
+    }
+    .toc-mobile-toggle:hover { border-color: var(--border-hover); }
+    .toc-mobile-toggle svg { transition: transform 0.3s ease; }
+    .toc-mobile-toggle.open svg { transform: rotate(180deg); }
+
+    .toc-mobile-body {
+      display: block;
+    }
+
+    @media (max-width: 960px) {
+      .toc-mobile-toggle { display: flex; }
+      .toc-mobile-body {
+        display: none;
+        max-height: 60vh;
+        overflow-y: auto;
+        padding-right: 4px;
+      }
+      .toc-mobile-body.open { display: block; }
+      .toc-header { display: none; }
+    }
+
+    /* ========== MAIN CONTENT ========== */
+    .main-content { min-width: 0; }
+
+    .section { margin-bottom: 64px; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .section-action {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--text-faint);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: color 0.2s ease;
+      min-height: 32px;
+      padding: 4px 8px;
+    }
+    .section-action:hover { color: var(--accent); }
+
+    /* ========== TRANSCRIPT ========== */
+    .transcript-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+      padding: 0 2px;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      min-width: 180px;
+      max-width: 280px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px 12px 8px 32px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      outline: none;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .search-box input::placeholder { color: var(--text-faint); }
+    .search-box input:focus {
+      border-color: var(--border-hover);
+      background: var(--bg-tertiary);
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-faint);
+      pointer-events: none;
+    }
+
+    .entry-count {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-faint);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .search-results {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+      display: none;
+    }
+    .search-results.visible { display: inline; }
+
+    /* Entries */
+    .entry {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background 0.15s ease;
+      cursor: pointer;
+    }
+    .entry:hover { background: var(--bg-secondary); }
+    .entry:last-child { border-bottom: none; }
+    .entry.hidden { display: none; }
+
+    .entry.speaker-khalifa {
+      background: var(--speaker-khalifa-bg);
+      border-bottom-color: rgba(200, 121, 74, 0.08);
+    }
+    .entry.speaker-khalifa:hover {
+      background: rgba(200, 121, 74, 0.08);
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 12px;
+      padding: 0 2px;
+    }
+
+    .entry-speaker {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-tertiary);
+      flex-shrink: 0;
+    }
+
+    .entry-speaker.khalifa {
+      color: var(--speaker-khalifa);
+      background: rgba(200, 121, 74, 0.1);
+    }
+    .entry-speaker.catherine {
+      color: var(--speaker-catherine);
+      background: rgba(143, 184, 168, 0.08);
+    }
+    .entry-speaker.edip {
+      color: var(--speaker-edip);
+      background: rgba(138, 164, 200, 0.08);
+    }
+
+    .entry-time {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-faint);
+      font-variant-numeric: tabular-nums;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+      min-height: 28px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .entry:hover .entry-time { color: var(--text-muted); }
+    .entry-time:hover {
+      background: var(--accent);
+      color: var(--bg-primary);
+    }
+
+    .entry-body {
+      padding: 0 2px;
+    }
+
+    .entry-text {
+      font-family: var(--font-transcript);
+      color: var(--text-primary);
+      font-size: 16.5px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .entry-text { font-size: 15px; }
+    }
+
+    /* Verse references — own line, subtle highlight */
+    .verse-block {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 16px;
+      background: var(--verse-bg);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+
+    .verse-block a {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .verse-block a:hover { opacity: 0.8; }
+
+    /* Arabic text — centered, subtle, own block */
+    .arabic-block {
+      display: block;
+      margin: 10px 0;
+      padding: 14px 20px;
+      background: var(--arabic-bg);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-family: 'Noto Naskh Arabic', 'Scheherazade New', 'Times New Roman', serif;
+      font-size: 20px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      direction: rtl;
+    }
+
+    @media (max-width: 768px) {
+      .arabic-block { font-size: 18px; padding: 12px 16px; }
+    }
+
+    /* Highlight search matches */
+    .highlight {
+      background: rgba(200, 121, 74, 0.25);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    /* ========== TOAST ========== */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-hover);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      z-index: 200;
+      opacity: 0;
+      transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease;
+      pointer-events: none;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ========== FOOTER ========== */
+    .page-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 36px 0;
+      text-align: center;
+      color: var(--text-faint);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    /* ========== PRINT ========== */
+    @media print {
+      .nav, .play-overlay, .action-group, .transcript-toolbar, .toc-mobile-toggle, .collapse-btn, .section-action {
+        display: none !important;
+      }
+      .video-player { aspect-ratio: auto; height: auto; padding: 40px 0; }
+      .thumbnail-content { position: static; }
+      body { background: white; color: black; }
+      .entry { border-bottom: 1px solid #ddd; break-inside: avoid; }
+      .verse-block, .arabic-block { background: #f5f5f5; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="/" class="nav-brand">Submission Archives</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link">Archive</a>
+      <a href="/quran" class="nav-link">Quran</a>
+      <a href="/audios" class="nav-link">Audio</a>
+      <a href="/videos" class="nav-link">Video</a>
+      <a href="/written" class="nav-link">Written</a>
+    </div>
+    <button class="nav-mobile-toggle" id="navMobileToggle" aria-label="Open menu" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-menu" id="navMobileMenu">
+    <a href="/" class="nav-link">Archive</a>
+    <a href="/quran" class="nav-link">Quran</a>
+    <a href="/audios" class="nav-link">Audio</a>
+    <a href="/videos" class="nav-link">Video</a>
+    <a href="/written" class="nav-link">Written</a>
+  </div>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/videos">Video</a>
+      <span>/</span>
+      <a href="/videos/quran-study">Quran Study</a>
+      <span>/</span>
+      <span style="color: var(--text-muted);">QS 01</span>
+    </nav>
+
+    <!-- Video Stage -->
+    <div class="video-stage">
+      <div class="video-player" onclick="alert('Video playback would begin here')" role="button" aria-label="Play video" tabindex="0">
+        <div class="thumbnail-content">
+          <div class="thumbnail-label">Quran Study — QS 01</div>
+          <div class="thumbnail-title">Advocating God Alone</div>
+          <div class="thumbnail-meta">Sura 72 — 73 · May 26, 1989</div>
+        </div>
+        <div class="play-overlay">
+          <div class="play-button" aria-hidden="true">
+            <div class="play-icon"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-info">
+        <div class="info-header">
+          <div class="title-block">
+            <div class="title-row">
+              <h1>Advocating God Alone</h1>
+              <button class="collapse-btn" id="collapseBtn" onclick="toggleInfo()" title="Collapse details" aria-expanded="true" aria-controls="infoBody">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="meta-row">
+              <span class="meta-item accent">Quran Study</span>
+              <div class="meta-divider"></div>
+              <span class="meta-item">May 26, 1989</span>
+              <div class="meta-divider"></div>
+              <span class="meta-item">Catherine Robinson</span>
+              <div class="meta-divider"></div>
+              <span class="meta-item">1h 19m</span>
+            </div>
+          </div>
+          <div class="action-group">
+            <button class="btn" id="copyLinkBtn" onclick="copyLink()">Copy Link</button>
+            <button class="btn btn-primary">Download Transcript</button>
+          </div>
+        </div>
+        <div class="info-body" id="infoBody">
+          <p class="description">
+            Catherine Robinson leads a study of Sura 72 (Al-Jinn) and Sura 73 (Al-Muzzammil) that expands
+            beyond verse commentary into a defense of the human messenger and the mathematical proof of
+            the Quran. Includes an extended debate on Sura 72:27's gematrical value of 1919, the nature
+            of the 19 code, and practical guidance on night prayer and meditation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+      <!-- Sidebar: Table of Contents -->
+      <aside class="sidebar" aria-label="Table of contents">
+        <button class="toc-mobile-toggle" id="tocMobileToggle" aria-expanded="false" aria-controls="tocMobileBody">
+          <span>Contents <span style="color: var(--text-faint); font-weight: 500;">— 20 topics</span></span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="toc-mobile-body" id="tocMobileBody">
+          <div class="toc-header">
+            <span class="toc-title">Contents</span>
+            <span class="toc-count">20 topics</span>
+          </div>
+          <ul class="toc-list" id="tocList">
+            <li class="toc-item"><a href="#t-00-00" class="toc-link active" data-target="t-00-00"><span class="toc-time">00:00</span><span class="toc-text">Introduction & Sura 72 Recitation</span></a></li>
+            <li class="toc-item"><a href="#t-01-25" class="toc-link" data-target="t-01-25"><span class="toc-time">01:25</span><span class="toc-text">The Servant's Message</span></a></li>
+            <li class="toc-item"><a href="#t-03-27" class="toc-link" data-target="t-03-27"><span class="toc-time">03:27</span><span class="toc-text">Fortune of the Miracle</span></a></li>
+            <li class="toc-item"><a href="#t-05-34" class="toc-link" data-target="t-05-34"><span class="toc-time">05:34</span><span class="toc-text">The Human Messenger</span></a></li>
+            <li class="toc-item"><a href="#t-06-47" class="toc-link" data-target="t-06-47"><span class="toc-time">06:47</span><span class="toc-text">Idol Worship & Hell</span></a></li>
+            <li class="toc-item"><a href="#t-08-33" class="toc-link" data-target="t-08-33"><span class="toc-time">08:33</span><span class="toc-text">Minority vs. Majority</span></a></li>
+            <li class="toc-item"><a href="#t-09-12" class="toc-link" data-target="t-09-12"><span class="toc-time">09:12</span><span class="toc-text">God Alone Knows the Future</span></a></li>
+            <li class="toc-item"><a href="#t-11-08" class="toc-link" data-target="t-11-08"><span class="toc-time">11:08</span><span class="toc-text">Specific News to Messengers</span></a></li>
+            <li class="toc-item"><a href="#t-12-47" class="toc-link" data-target="t-12-47"><span class="toc-time">12:47</span><span class="toc-text">God Counts All Things</span></a></li>
+            <li class="toc-item"><a href="#t-13-43" class="toc-link" data-target="t-13-43"><span class="toc-time">13:43</span><span class="toc-text">The Committee of Messengers</span></a></li>
+            <li class="toc-item"><a href="#t-18-17" class="toc-link" data-target="t-18-17"><span class="toc-time">18:17</span><span class="toc-text">Who Is Weaker in Power?</span></a></li>
+            <li class="toc-item"><a href="#t-22-08" class="toc-link" data-target="t-22-08"><span class="toc-time">22:08</span><span class="toc-text">19 & the Angels of Hell</span></a></li>
+            <li class="toc-item"><a href="#t-29-12" class="toc-link" data-target="t-29-12"><span class="toc-time">29:12</span><span class="toc-text">Night Prayer & Meditation</span></a></li>
+            <li class="toc-item"><a href="#t-32-31" class="toc-link" data-target="t-32-31"><span class="toc-time">32:31</span><span class="toc-text">God Is the Only Advocate</span></a></li>
+            <li class="toc-item"><a href="#t-34-41" class="toc-link" data-target="t-34-41"><span class="toc-time">34:41</span><span class="toc-text">Steadfastness & Rejectors</span></a></li>
+            <li class="toc-item"><a href="#t-39-12" class="toc-link" data-target="t-39-12"><span class="toc-time">39:12</span><span class="toc-text">Anger, Fighting & Self-Defense</span></a></li>
+            <li class="toc-item"><a href="#t-42-41" class="toc-link" data-target="t-42-41"><span class="toc-time">42:41</span><span class="toc-text">Reading What You Can</span></a></li>
+            <li class="toc-item"><a href="#t-47-43" class="toc-link" data-target="t-47-43"><span class="toc-time">47:43</span><span class="toc-text">The 1919 Proof</span></a></li>
+            <li class="toc-item"><a href="#t-52-41" class="toc-link" data-target="t-52-41"><span class="toc-time">52:41</span><span class="toc-text">End of the World</span></a></li>
+            <li class="toc-item"><a href="#t-59-41" class="toc-link" data-target="t-59-41"><span class="toc-time">59:41</span><span class="toc-text">Closing Al-Fatehah</span></a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main: Transcript -->
+      <main class="main-content">
+        <section class="section" id="transcript" aria-label="Transcript">
+          <div class="section-header">
+            <h2 class="section-title">Transcript</h2>
+            <button class="section-action" onclick="expandAll()">Expand All</button>
+          </div>
+
+          <div class="transcript-toolbar">
+            <div class="search-box">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+              <input type="text" id="searchInput" placeholder="Search transcript..." autocomplete="off">
+            </div>
+            <span class="entry-count" id="entryCount">21 shown</span>
+            <span class="search-results" id="searchResults"></span>
+          </div>
+
+          <div class="transcript-body" id="transcriptBody">
+            <article class="entry speaker-khalifa" id="t-00-00" data-speaker="khalifa">
+              <div class="entry-header">
+                <span class="entry-speaker khalifa">Dr. Khalifa</span>
+                <span class="entry-time" onclick="seekTo('00:00')" role="button" tabindex="0">00:00</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">Our teacher is Catherine. The new translation, page 573.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-00-06" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('00:06')" role="button" tabindex="0">00:06</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">And if you don't have your new translation, it's page 415 in the Quran.</p>
+                <a href="#" class="verse-block">[72:19] When GOD's servant advocated Him alone, almost all of them banded together to oppose him.</a>
+              </div>
+            </article>
+
+            <article class="entry" id="t-01-25" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('01:25')" role="button" tabindex="0">01:25</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">All of God's servants have said the same thing and say the same thing: "worship God alone." They never asked that people worship them, follow them, do as they do, act as they do, speak as they do.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-02-24" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('02:24')" role="button" tabindex="0">02:24</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">There are verses in the Quran and one in particular which says that when God alone is advocated, the hearts of the disbelievers shrink in aversion, and you can watch that happen. It is though people shrink.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-03-27" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('03:27')" role="button" tabindex="0">03:27</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">We are fortunate enough, and I mean very fortunate enough. Speaking for myself, I have no idea why I was chosen to be here in Tucson. I know how I came. I can relate that story to... But there are many of us who have the same story to tell.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-05-34" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('05:34')" role="button" tabindex="0">05:34</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">"I am a human like you. I make no superhuman claims. I have no magic." Because, however, the servants of God have been given special information and special proof, they're more vulnerable and their responsibility is even greater.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-06-47" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('06:47')" role="button" tabindex="0">06:47</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[72:23] "I'm here to deliver proclamations from God as well as His messages." Those who disobey GOD and His messenger incur the fire of Hell, wherein they abide forever. The only unforgivable sin is idol worship, the only.</a>
+              </div>
+            </article>
+
+            <article class="entry" id="t-09-12" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('09:12')" role="button" tabindex="0">09:12</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[72:25] "I do not know if what is promised to you will happen soon, or if my Lord will delay it for awhile."</a>
+                <a href="#" class="verse-block">[72:26] He is the Knower of the future; He does not reveal the future to anyone.</a>
+              </div>
+            </article>
+
+            <article class="entry" id="t-11-08" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('11:08')" role="button" tabindex="0">11:08</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[72:27] Only to a messenger that He chooses, does He reveal from the past and from the future, specific news.</a>
+              </div>
+            </article>
+
+            <article class="entry" id="t-12-47" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('12:47')" role="button" tabindex="0">12:47</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">Counting the numbers of all things always makes me think of the Khutba that Abdullah gave when he was talking about the trees and the leaves and the numbers of the leaves on trees.</p>
+              </div>
+            </article>
+
+            <article class="entry speaker-khalifa" id="t-18-17" data-speaker="khalifa">
+              <div class="entry-header">
+                <span class="entry-speaker khalifa">Dr. Khalifa</span>
+                <span class="entry-time" onclick="seekTo('18:17')" role="button" tabindex="0">18:17</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">Cause out of all of Tucson, half a million people, only about 50 people come here to this mosque to worship God alone. So, in this city, we appear to be 50 among half a million people.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-22-08" data-speaker="edip">
+              <div class="entry-header">
+                <span class="entry-speaker edip">Edip Yuksel</span>
+                <span class="entry-time" onclick="seekTo('22:08')" role="button" tabindex="0">22:08</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[74:30] Over it is nineteen.</a>
+                <a href="#" class="verse-block">[74:31] We appointed angels of Hell and those who viewed their number is a miracle from us.</a>
+              </div>
+            </article>
+
+            <article class="entry speaker-khalifa" id="t-23-25" data-speaker="khalifa">
+              <div class="entry-header">
+                <span class="entry-speaker khalifa">Dr. Khalifa</span>
+                <span class="entry-time" onclick="seekTo('23:25')" role="button" tabindex="0">23:25</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">19 is not the angels of Hell as they think. There's only one angel. As far as guarding Hell is concerned, only one angel and his name is Malek.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-29-12" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('29:12')" role="button" tabindex="0">29:12</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[73:1] O you cloaked one.</a>
+                <a href="#" class="verse-block">[73:2] Meditate during the night, except rarely.</a>
+                <a href="#" class="verse-block">[73:3] Half of it, or a little less.</a>
+              </div>
+            </article>
+
+            <article class="entry" id="t-32-31" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('32:31')" role="button" tabindex="0">32:31</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[73:9] Lord of the east and the west; there is no other god besides Him. You should choose Him as your advocate. No one and no thing does anything. And if we don't know that then we do not know God.</a>
+              </div>
+            </article>
+
+            <article class="entry" id="t-34-41" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('34:41')" role="button" tabindex="0">34:41</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[73:10] And remain steadfast in the face of their utterances, and disregard them in a nice manner. God is saying if we know that God is doing everything, we're not to falter in that belief ever, no matter what we hear.</a>
+              </div>
+            </article>
+
+            <article class="entry speaker-khalifa" id="t-39-12" data-speaker="khalifa">
+              <div class="entry-header">
+                <span class="entry-speaker khalifa">Dr. Khalifa</span>
+                <span class="entry-time" onclick="seekTo('39:12')" role="button" tabindex="0">39:12</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">Yes, of course. Yeah, Self defense is always justified. But it takes more strength to really resist getting drawn into a fight. It takes more strength to restrain yourself than to get provoked into a fist fight.</p>
+              </div>
+            </article>
+
+            <article class="entry" id="t-42-41" data-speaker="catherine">
+              <div class="entry-header">
+                <span class="entry-speaker catherine">Catherine Robinson</span>
+                <span class="entry-time" onclick="seekTo('42:41')" role="button" tabindex="0">42:41</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[73:20] Your Lord knows that you meditate two-thirds of the night, or half of it, or one-third of it... He knows that you cannot always do this. And He has pardoned you.</a>
+              </div>
+            </article>
+
+            <article class="entry speaker-khalifa" id="t-47-43" data-speaker="khalifa">
+              <div class="entry-header">
+                <span class="entry-speaker khalifa">Dr. Khalifa</span>
+                <span class="entry-time" onclick="seekTo('47:43')" role="button" tabindex="0">47:43</span>
+              </div>
+              <div class="entry-body">
+                <a href="#" class="verse-block">[72:27]</a>
+                <span class="arabic-block">إِلَّا مَنِ ارْتَضَىٰ مِن رَّسُولٍ</span>
+                <p class="entry-text">If you calculate the gematrical value of this phrase, it's 1919. And Edip Yuksel is the one who discovered that.</p>
+              </div>
+            </article>
+
+            <article class="entry speaker-khalifa" id="t-52-41" data-speaker="khalifa">
+              <div class="entry-header">
+                <span class="entry-speaker khalifa">Dr. Khalifa</span>
+                <span class="entry-time" onclick="seekTo('52:41')" role="button" tabindex="0">52:41</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">I will have an appendix entitled "end of the world." It gives you enough evidence as when the world will end. We know that the world will end in 2280. And the mathematical code.</p>
+              </div>
+            </article>
+
+            <article class="entry speaker-khalifa" id="t-59-41" data-speaker="khalifa">
+              <div class="entry-header">
+                <span class="entry-speaker khalifa">Dr. Khalifa</span>
+                <span class="entry-time" onclick="seekTo('59:41')" role="button" tabindex="0">59:41</span>
+              </div>
+              <div class="entry-body">
+                <p class="entry-text">We're gonna recite Al-Fatehah to give them a great year, coming up, and a greater year every year after that. It is a characteristic of the believers that things only get better.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="page-footer">
+      Dedicated to preserving and sharing the message of God alone.
+    </footer>
+  </div>
+
+  <script>
+    // ========== COLLAPSIBLE INFO ==========
+    function toggleInfo() {
+      const body = document.getElementById('infoBody');
+      const btn = document.getElementById('collapseBtn');
+      const isCollapsed = body.classList.toggle('collapsed');
+      btn.classList.toggle('collapsed', isCollapsed);
+      btn.setAttribute('aria-expanded', !isCollapsed);
+    }
+
+    // ========== MOBILE NAV ==========
+    const navToggle = document.getElementById('navMobileToggle');
+    const navMenu = document.getElementById('navMobileMenu');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    document.querySelectorAll('.nav-mobile-menu .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ========== MOBILE TOC COLLAPSE ==========
+    const tocToggle = document.getElementById('tocMobileToggle');
+    const tocBody = document.getElementById('tocMobileBody');
+    tocToggle.addEventListener('click', () => {
+      const isOpen = tocBody.classList.toggle('open');
+      tocToggle.classList.toggle('open', isOpen);
+      tocToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // ========== TOC CLICK + SMOOTH SCROLL ==========
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile TOC after selection
+          if (window.innerWidth <= 960) {
+            tocBody.classList.remove('open');
+            tocToggle.classList.remove('open');
+            tocToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    });
+
+    // ========== SCROLL-SYNCED TOC HIGHLIGHTING ==========
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const entries = document.querySelectorAll('.entry[id]');
+    const observerOptions = { rootMargin: '-20% 0px -60% 0px', threshold: 0 };
+
+    const observer = new IntersectionObserver((entriesObserved) => {
+      entriesObserved.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          tocLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.target === id);
+          });
+        }
+      });
+    }, observerOptions);
+
+    entries.forEach(entry => observer.observe(entry));
+
+    // ========== SEARCH ==========
+    const searchInput = document.getElementById('searchInput');
+    const entryCount = document.getElementById('entryCount');
+    const searchResults = document.getElementById('searchResults');
+    const allEntries = document.querySelectorAll('.entry');
+    let searchDebounce;
+
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(() => performSearch(e.target.value), 150);
+    });
+
+    function performSearch(query) {
+      query = query.trim().toLowerCase();
+      let visibleCount = 0;
+      let matchCount = 0;
+
+      allEntries.forEach(entry => {
+        const text = entry.textContent.toLowerCase();
+        const body = entry.querySelector('.entry-body');
+        const hasMatch = !query || text.includes(query);
+
+        entry.classList.toggle('hidden', !hasMatch);
+        if (hasMatch) visibleCount++;
+
+        // Highlight matches
+        if (hasMatch && query) {
+          matchCount += (text.match(new RegExp(query, 'g')) || []).length;
+          highlightText(body, query);
+        } else {
+          removeHighlights(body);
+        }
+      });
+
+      entryCount.textContent = visibleCount + ' shown';
+      if (query) {
+        searchResults.textContent = matchCount + ' match' + (matchCount !== 1 ? 'es' : '');
+        searchResults.classList.add('visible');
+      } else {
+        searchResults.classList.remove('visible');
+      }
+    }
+
+    function highlightText(container, query) {
+      if (!container) return;
+      removeHighlights(container);
+      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        if (node.parentElement.classList.contains('highlight')) continue;
+        textNodes.push(node);
+      }
+      textNodes.forEach(node => {
+        const text = node.textContent;
+        const regex = new RegExp('(' + escapeRegex(query) + ')', 'gi');
+        if (regex.test(text)) {
+          const span = document.createElement('span');
+          span.innerHTML = text.replace(regex, '<mark class="highlight">$1</mark>');
+          node.parentNode.replaceChild(span, node);
+        }
+      });
+    }
+
+    function removeHighlights(container) {
+      if (!container) return;
+      container.querySelectorAll('mark.highlight').forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+      });
+    }
+
+    function escapeRegex(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // ========== COPY LINK ==========
+    function copyLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Link copied to clipboard');
+      }).catch(() => {
+        showToast('Unable to copy link');
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // ========== SEEK TO TIME ==========
+    function seekTo(time) {
+      showToast('Seek to ' + time);
+    }
+
+    // ========== EXPAND ALL ==========
+    function expandAll() {
+      allEntries.forEach(entry => entry.classList.remove('hidden'));
+      searchInput.value = '';
+      searchResults.classList.remove('visible');
+      entryCount.textContent = allEntries.length + ' shown';
+      allEntries.forEach(entry => removeHighlights(entry.querySelector('.entry-body')));
+    }
+
+    // ========== KEYBOARD SHORTCUTS ==========
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.code === 'Space') {
+        e.preventDefault();
+        alert('Play/Pause video');
+      }
+      if (e.key === 'j') alert('Skip back 10s');
+      if (e.key === 'l') alert('Skip forward 10s');
+      if (e.key === 'k') alert('Play/Pause video');
+      if (e.key === '/' || e.key === 's') {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -12,6 +12,7 @@ const MediaEntrySchema = z.object({
     id: z.string().min(1),
     title: z.string().min(1),
     displayTitle: z.string().min(1).optional(),
+    description: z.string().nullish(),
     type: z.enum(['video-program', 'sermon', 'video', 'quran-study', 'messenger-audio', 'audio']),
     author: z.string().optional(),
     // These asset fields use explicit null to mean "this record has no such file", so

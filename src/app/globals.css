@@ -145,8 +145,11 @@
   --color-ed-console-accent: var(--ed-console-accent);
   --color-ed-console-rule: var(--ed-console-rule);
   --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-dm-sans: var(--font-dm-sans), var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
   --font-serif: var(--font-local-superior);
+  --font-source-serif: var(--font-source-serif-4), var(--font-local-superior), Georgia, serif;
+  --font-newsreader: var(--font-newsreader), var(--font-local-superior), Georgia, serif;
   --font-display: var(--font-inter), var(--font-local-superior), sans-serif;
   --font-arabic: var(--font-amiri);
   --font-hebrew: var(--font-hebrew), serif;
@@ -1348,4 +1351,373 @@ mark.pdf-search-highlight {
   .transcript-scroll {
     scroll-behavior: auto;
   }
+}
+
+/* ==========================================================================
+   Golden Model Quran Study Player Styles (video-player-v3.html)
+   ========================================================================== */
+
+:root {
+  --qs-bg-primary: #0F0E0D;
+  --qs-bg-secondary: #161514;
+  --qs-bg-tertiary: #1C1B1A;
+  --qs-bg-elevated: #1E1D1C;
+  --qs-border-subtle: #2A2928;
+  --qs-border-hover: #353433;
+  --qs-text-primary: #F5F0EB;
+  --qs-text-secondary: #9E9690;
+  --qs-text-muted: #6B6560;
+  --qs-text-faint: #4A4542;
+  --qs-accent: #C8794A;
+  --qs-accent-hover: #D9916A;
+  --qs-accent-soft: rgba(200, 121, 74, 0.06);
+  --qs-accent-glow: rgba(200, 121, 74, 0.12);
+  --qs-verse-bg: rgba(200, 121, 74, 0.04);
+  --qs-arabic-bg: rgba(143, 184, 168, 0.04);
+  --qs-speaker-khalifa: #C8794A;
+  --qs-speaker-khalifa-bg: rgba(200, 121, 74, 0.05);
+  --qs-speaker-catherine: #8FB8A8;
+  --qs-speaker-catherine-bg: rgba(143, 184, 168, 0.08);
+  --qs-speaker-edip: #8AA4C8;
+  --qs-speaker-edip-bg: rgba(138, 164, 200, 0.08);
+  --qs-speaker-douglas: #E0A96D;
+  --qs-speaker-douglas-bg: rgba(224, 169, 109, 0.08);
+  --qs-speaker-beth: #D48C9E;
+  --qs-speaker-beth-bg: rgba(212, 140, 158, 0.08);
+}
+
+.qs-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+@media (max-width: 768px) {
+  .qs-container {
+    padding: 0 18px;
+  }
+}
+
+.qs-video-player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(160deg, #1a2e26 0%, #0f1a16 40%, #1a2520 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--qs-border-subtle);
+}
+
+.qs-video-player::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(200, 121, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 70% 65%, rgba(200, 121, 74, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.qs-thumbnail-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 32px;
+  pointer-events: none;
+}
+
+.qs-thumbnail-label {
+  font-family: var(--font-dm-sans), var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--qs-accent);
+  margin-bottom: 16px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.qs-thumbnail-title {
+  font-family: var(--font-source-serif), var(--font-serif);
+  font-size: clamp(26px, 4.5vw, 54px);
+  line-height: 1.05;
+  color: var(--qs-text-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  max-width: 760px;
+  margin: 0 auto 12px;
+}
+
+.qs-thumbnail-meta {
+  font-family: var(--font-dm-sans), var(--font-sans);
+  font-size: 14px;
+  color: var(--qs-text-secondary);
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+.qs-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 44px;
+  z-index: 3;
+  transition: background 0.3s ease;
+}
+
+.qs-play-button {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(15, 14, 13, 0.82);
+  border: 1px solid var(--qs-border-hover);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.qs-play-button:hover {
+  transform: scale(1.06);
+  border-color: var(--qs-accent);
+  box-shadow: 0 8px 32px var(--qs-accent-glow);
+}
+
+.qs-play-icon {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 17px solid var(--qs-text-primary);
+  margin-left: 3px;
+  transition: border-left-color 0.2s ease;
+}
+
+.qs-play-button:hover .qs-play-icon {
+  border-left-color: var(--qs-accent);
+}
+
+/* 2-Column Content Grid */
+.qs-content-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
+  margin-top: 48px;
+  margin-bottom: 100px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .qs-content-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+    margin-bottom: 60px;
+  }
+}
+
+.qs-sidebar {
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+@media (max-width: 960px) {
+  .qs-sidebar {
+    position: relative;
+    top: auto;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+/* TOC Link */
+.qs-toc-link {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 7px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--qs-text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+  position: relative;
+  font-family: var(--font-dm-sans), var(--font-sans);
+}
+
+.qs-toc-link:hover {
+  background: var(--qs-bg-secondary);
+  color: var(--qs-text-secondary);
+}
+
+.qs-toc-link[data-active="true"] {
+  background: var(--qs-accent-soft);
+  color: var(--qs-text-primary);
+  padding-left: 24px;
+}
+
+.qs-toc-link[data-active="true"]::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--qs-accent);
+  opacity: 0.9;
+}
+
+.qs-toc-link[data-active="true"] .qs-toc-time {
+  color: var(--qs-accent);
+}
+
+/* Transcript Entries */
+.qs-entry {
+  padding: 16px 8px;
+  border-bottom: 1px solid var(--qs-border-subtle);
+  transition: background 0.15s ease;
+  border-radius: 6px;
+}
+
+.qs-entry:hover {
+  background: var(--qs-bg-secondary);
+}
+
+.qs-entry[data-speaker="khalifa"] {
+  background: var(--qs-speaker-khalifa-bg);
+  border-bottom-color: rgba(200, 121, 74, 0.08);
+}
+
+.qs-entry[data-speaker="khalifa"]:hover {
+  background: rgba(200, 121, 74, 0.09);
+}
+
+.qs-entry-speaker {
+  font-family: var(--font-dm-sans), var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--qs-bg-tertiary);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.qs-entry-speaker.khalifa {
+  color: var(--qs-speaker-khalifa);
+  background: rgba(200, 121, 74, 0.12);
+}
+
+.qs-entry-speaker.catherine {
+  color: var(--qs-speaker-catherine);
+  background: rgba(143, 184, 168, 0.1);
+}
+
+.qs-entry-speaker.edip {
+  color: var(--qs-speaker-edip);
+  background: rgba(138, 164, 200, 0.1);
+}
+
+.qs-entry-speaker.douglas {
+  color: var(--qs-speaker-douglas);
+  background: rgba(224, 169, 109, 0.1);
+}
+
+.qs-entry-speaker.beth {
+  color: var(--qs-speaker-beth);
+  background: rgba(212, 140, 158, 0.1);
+}
+
+.qs-entry-time {
+  font-family: var(--font-dm-sans), var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--qs-text-faint);
+  font-variant-numeric: tabular-nums;
+  padding: 3px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.qs-entry:hover .qs-entry-time {
+  color: var(--qs-text-muted);
+}
+
+.qs-entry-time:hover {
+  background: var(--qs-accent);
+  color: var(--qs-bg-primary);
+}
+
+.qs-entry-text {
+  font-family: var(--font-newsreader), Georgia, serif;
+  color: var(--qs-text-primary);
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .qs-entry-text {
+    font-size: 15px;
+  }
+}
+
+/* Verse Citation Block */
+.qs-verse-block {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 16px;
+  background: var(--qs-verse-bg);
+  border-radius: 4px;
+  font-family: var(--font-dm-sans), var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--qs-accent);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  border-left: 2px solid var(--qs-accent);
+}
+
+/* Arabic Calligraphy Block */
+.qs-arabic-block {
+  display: block;
+  margin: 12px 0;
+  padding: 14px 20px;
+  background: var(--qs-arabic-bg);
+  border-radius: 4px;
+  text-align: center;
+  font-family: var(--font-arabic), 'Noto Naskh Arabic', 'Scheherazade New', serif;
+  font-size: 22px;
+  line-height: 1.8;
+  color: var(--qs-text-secondary);
+  direction: rtl;
+}
+
+/* Highlight search matches */
+.qs-highlight {
+  background: rgba(200, 121, 74, 0.25);
+  border-radius: 2px;
+  padding: 0 2px;
+  color: inherit;
 }

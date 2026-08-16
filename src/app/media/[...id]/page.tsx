@@ -15,6 +15,7 @@ type LocalMediaItem = {
   type: string;
   folder: string;
   date?: string;
+  description?: string;
   created_at?: string;
   videoFile?: string;
   vttFile?: string;
@@ -27,6 +28,14 @@ type LocalMediaItem = {
   primaryNumber?: number;
   alternateNumbers?: string[];
   alternateNumberLabel?: string;
+  chapters?: Array<{
+    id: number;
+    startTime: number;
+    endTime?: number;
+    title: string;
+    description?: string;
+    speaker?: string;
+  }>;
 };
 
 type PlayerSegment = {
@@ -56,17 +65,38 @@ type MasterIndexItem = LocalMediaItem & {
 const SOURCE_CATALOG_DIR = path.join(process.cwd(), "data", "catalog");
 const GENERATED_DIR = path.join(process.cwd(), "public", "data", "generated_indices");
 
-// Module-level singleton cache: these generated index files are large.
-// Parse each once instead of per-render/per-request.
-const localIndexCache = new Map<string, LocalMediaItem[]>();
+// Module-level cache with mtime invalidation so updates to index files take immediate effect.
+const localIndexCache = new Map<string, { mtime: number; data: LocalMediaItem[] }>();
 
 function getLocalIndex(filePath: string): LocalMediaItem[] {
-  const cached = localIndexCache.get(filePath);
-  if (cached) return cached;
   if (!fs.existsSync(filePath)) return [];
+  const stat = fs.statSync(filePath);
+  const cached = localIndexCache.get(filePath);
+  if (cached && cached.mtime === stat.mtimeMs) return cached.data;
   const parsed = JSON.parse(fs.readFileSync(filePath, "utf8")) as LocalMediaItem[];
-  localIndexCache.set(filePath, parsed);
+  localIndexCache.set(filePath, { mtime: stat.mtimeMs, data: parsed });
   return parsed;
+}
+
+function getChaptersForItem(item: LocalMediaItem, masterItem?: MasterIndexItem) {
+  if (masterItem?.chapters && masterItem.chapters.length > 0) return masterItem.chapters;
+  if (item.chapters && item.chapters.length > 0) return item.chapters;
+  if (item.type === "quran-study") {
+    const match = (item.id || "").match(/^quran-study\/(\d+)/i);
+    if (match) {
+      const num = Number(match[1]);
+      const chapterPath = path.join(SOURCE_CATALOG_DIR, "chapters", `QS${String(num).padStart(2, "0")}.json`);
+      if (fs.existsSync(chapterPath)) {
+        try {
+          const sidecar = JSON.parse(fs.readFileSync(chapterPath, "utf8"));
+          if (Array.isArray(sidecar.chapters) && sidecar.chapters.length > 0) return sidecar.chapters;
+        } catch {
+          // ignore error
+        }
+      }
+    }
+  }
+  return undefined;
 }
 
 function getVideoCatalog(masterIndex: MasterIndexItem[]) {
@@ -121,9 +151,10 @@ export async function generateMetadata({
   if (!item) return { title: "Not Found" };
 
   const { displayTitle, displayDate, author } = formatMedia(item);
-  const description = displayDate
+  const fallbackDescription = displayDate
     ? `${displayTitle}: ${displayDate}, by ${author}.`
     : `${displayTitle}, by ${author}.`;
+  const description = item.description || fallbackDescription;
   const image = item.thumbnailOverride
     ? [getPublicAssetUrl(item.thumbnailOverride)]
     : ["/digi.png"];
@@ -221,7 +252,17 @@ export default async function WatchPage({
   return (
     <div className="min-h-screen bg-ed-bg text-ed-fg">
       <PlayerWrapper
-        media={{ ...item, displayTitle, displayDate, author, type: item.type }}
+        media={{
+          ...item,
+          chapters: getChaptersForItem(item, masterItem),
+          description: masterItem?.description || item.description,
+          duration_seconds: masterItem?.duration_seconds || item.duration_seconds,
+          primaryNumber: item.primaryNumber,
+          displayTitle,
+          displayDate,
+          author,
+          type: item.type,
+        }}
         segments={segments}
         segments_ar={segments_ar}
         mediaUrl={mediaUrl}
