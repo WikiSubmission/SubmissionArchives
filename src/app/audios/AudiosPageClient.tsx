@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import { PaginatedMediaGrid } from '@/components/media/PaginatedMediaGrid';
+import '@/components/player/quran-study-golden-player.css';
 import type { Media } from '@/types/media';
 
 type AudioSection = {
@@ -40,16 +41,17 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
     }, [initialAudios]);
 
     return (
-        <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
+        <div className="qs-golden-player audio-archive-shell min-h-screen">
+            <div className="qs-page-bg" />
             <main id="main-content" className="relative overflow-hidden">
-                <div className="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                    <header className="grid gap-10 border-y border-ed-rule py-10 sm:py-12 lg:grid-cols-[1fr_0.9fr]">
+                <div className="qs-container py-6 sm:py-8 lg:py-12">
+                    <header className="audio-archive-hero grid gap-8 lg:grid-cols-[1fr_0.9fr]">
                         <div className="relative z-10 flex flex-col items-start gap-4">
-                            <p className="archive-kicker">Audio index</p>
-                            <h1 className="max-w-[16ch] font-display text-[clamp(2.5rem,6.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ed-fg">
+                            <p className="qs-audio-kicker">Audio index</p>
+                            <h1 className="max-w-[16ch] font-display text-[clamp(2.5rem,6.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--qs-text-primary)]">
                                 The Audio Archives
                             </h1>
-                            <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
+                            <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-[var(--qs-text-secondary)] sm:text-lg">
                                 Systematic study sequences and preserved recordings, arranged for steady, focused engagement.
                             </p>
                         </div>
@@ -60,20 +62,20 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
                         </div>
                     </header>
 
-                    <div className="mt-16 space-y-20">
+                    <div className="mt-14 space-y-16">
                         {categorizedAudios.map((section) => (
-                            <section key={section.id} id={section.id} className="space-y-8">
-                                <div className="flex flex-col gap-4 border-b border-ed-rule pb-6 sm:flex-row sm:items-end sm:justify-between">
+                            <section key={section.id} id={section.id} className="audio-archive-section">
+                                <div className="audio-section-header flex flex-col gap-4 pb-5 sm:flex-row sm:items-end sm:justify-between">
                                     <div className="flex flex-col items-start gap-3">
-                                        <p className="archive-kicker">Collection</p>
-                                        <h2 className="font-display text-headline font-bold text-ed-fg">
+                                        <p className="qs-audio-kicker">Collection</p>
+                                        <h2 className="font-display text-headline font-bold text-[var(--qs-text-primary)]">
                                             {section.title}
                                         </h2>
-                                        <p className="max-w-[64ch] text-sm sm:text-base leading-[1.6] text-ed-fg-muted">
+                                        <p className="max-w-[64ch] text-sm leading-[1.6] text-[var(--qs-text-secondary)] sm:text-base">
                                             {section.description}
                                         </p>
                                     </div>
-                                    <span className="text-sm tabular-nums text-ed-fg-muted">
+                                    <span className="text-sm tabular-nums text-[var(--qs-text-muted)]">
                                         {section.audios.length} records
                                     </span>
                                 </div>
@@ -90,9 +92,9 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
 
 function StatPill({ value, label }: { value: string; label: string }) {
     return (
-        <div className="group border-l border-ed-rule pl-4 first:border-l-0 first:pl-0">
-            <span className="block font-display text-2xl text-ed-fg transition-colors group-hover:text-ed-accent">{value}</span>
-            <span className="mt-1 block text-xs font-medium uppercase tracking-[0.12em] text-ed-fg-muted">{label}</span>
+        <div className="audio-stat-pill group">
+            <span className="block font-display text-2xl text-[var(--qs-text-primary)] transition-colors group-hover:text-[var(--qs-accent)]">{value}</span>
+            <span className="mt-1 block text-[0.63rem] font-medium uppercase tracking-[0.14em] text-[var(--qs-text-muted)]">{label}</span>
         </div>
     );
 }

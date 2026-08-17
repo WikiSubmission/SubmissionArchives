@@ -3,14 +3,9 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { parseTimeParam } from '@/lib/formatUtils';
-import type { PlayerProps } from './Player';
+import type { GoldenPlayerProps } from '@/components/player/GoldenPlayer';
 
-const Player = dynamic(() => import('./Player'), {
-  ssr: false,
-  loading: () => <PlayerLoadingSkeleton />
-});
-
-const QuranStudyGoldenPlayer = dynamic(() => import('@/components/player/QuranStudyGoldenPlayer'), {
+const GoldenPlayer = dynamic(() => import('@/components/player/GoldenPlayer'), {
   ssr: false,
   loading: () => <PlayerLoadingSkeleton />
 });
@@ -19,18 +14,14 @@ const QuranStudyGoldenPlayer = dynamic(() => import('@/components/player/QuranSt
 // The `?t=` deep-link seek time is a client-only concern, so we read it here
 // with useSearchParams (which requires the Suspense boundary below) rather than
 // awaiting searchParams on the server, which would force dynamic rendering.
-type PlayerWrapperProps = Omit<PlayerProps, 'initialSeekTime'>;
+type PlayerWrapperProps = Omit<GoldenPlayerProps, 'initialSeekTime'>;
 
 function PlayerWithSeek(props: PlayerWrapperProps) {
   const searchParams = useSearchParams();
   const requestedTime = parseTimeParam(searchParams.get('t'));
   const initialSeekTime = requestedTime !== undefined && requestedTime >= 0 ? requestedTime : undefined;
 
-  if (props.media.type === 'quran-study') {
-    return <QuranStudyGoldenPlayer {...props} initialSeekTime={initialSeekTime} />;
-  }
-
-  return <Player {...props} initialSeekTime={initialSeekTime} />;
+  return <GoldenPlayer {...props} initialSeekTime={initialSeekTime} />;
 }
 
 export default function PlayerWrapper(props: PlayerWrapperProps) {
@@ -43,9 +34,9 @@ export default function PlayerWrapper(props: PlayerWrapperProps) {
 
 function PlayerLoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-ed-bg text-ed-fg">
-      <main className="mx-auto max-w-[1440px] px-4 py-10 sm:px-6 lg:px-10">
-        <div className="soft-shell h-[56vw] max-h-[640px] min-h-[220px] animate-pulse bg-neutral-900 rounded-lg" />
+    <div className="min-h-screen" style={{ background: 'var(--qs-bg-primary, #0F0E0D)' }}>
+      <main className="mx-auto max-w-[1160px] px-7 py-10">
+        <div className="h-[56vw] max-h-[640px] min-h-[220px] animate-pulse rounded-lg" style={{ background: 'var(--qs-bg-secondary, #161514)' }} />
       </main>
     </div>
   );

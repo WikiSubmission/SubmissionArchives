@@ -72,9 +72,17 @@ export function MediaCard({ item, priority = false }: { item: Media; priority?: 
     const thumbnailSrc = getThumbnailSrc(item);
     const track = playableTrack(item);
 
+    const isGoldenAudioCard = item.type === 'quran-study' || item.type === 'messenger-audio';
+
     return (
-        <article className="media-card-shell group relative flex h-full flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-3.5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)]">
-            <div className="relative aspect-video overflow-hidden rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40">
+        <article className={[
+            'media-card-shell group relative flex h-full flex-col overflow-hidden p-3.5 transition-all duration-300 hover:-translate-y-1',
+            isGoldenAudioCard ? 'qs-audio-card' : 'rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)]'
+        ].join(' ')}>
+            <div className={[
+                'relative aspect-video overflow-hidden',
+                isGoldenAudioCard ? 'rounded-[18px] border border-[var(--qs-border-subtle)] bg-black/5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)]' : 'rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40'
+            ].join(' ')}>
                 {hasCssSlide && qsNumber !== null ? (
                     <QuranStudyThumbnail qsNumber={qsNumber} />
                 ) : (
@@ -83,8 +91,6 @@ export function MediaCard({ item, priority = false }: { item: Media; priority?: 
                         alt=""
                         fill
                         priority={priority}
-                        // 75 rather than 90: at the size these render, the two are visually
-                        // indistinguishable, and 90 was costing bytes on every grid page.
                         quality={75}
                         sizes="(max-width: 640px) 100vw, 480px"
                         className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.04]"
@@ -92,17 +98,26 @@ export function MediaCard({ item, priority = false }: { item: Media; priority?: 
                 )}
                 {track ? <PlayButton track={track} /> : null}
                 {item.duration_seconds ? (
-                    <span className="absolute bottom-2.5 right-2.5 rounded-full border border-white/15 bg-black/75 px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums text-white/90 backdrop-blur-xl shadow-sm">
+                    <span className={[
+                        'absolute bottom-2.5 right-2.5 rounded-full border px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums backdrop-blur-xl shadow-sm',
+                        isGoldenAudioCard ? 'border-white/15 bg-black/75 text-white/90' : 'border-white/15 bg-black/75 text-white/90'
+                    ].join(' ')}>
                         {formatDuration(item.duration_seconds)}
                     </span>
                 ) : null}
             </div>
 
             <div className="flex flex-1 flex-col pt-3.5 pb-1 px-1">
-                <h3 className="line-clamp-2 font-sans text-base font-semibold leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+                <h3 className={[
+                    'line-clamp-2 font-sans text-base font-semibold leading-snug transition-colors',
+                    isGoldenAudioCard ? 'text-[var(--qs-text-primary)] group-hover:text-[var(--qs-accent)]' : 'text-ed-fg group-hover:text-ed-accent'
+                ].join(' ')}>
                     {item.displayTitle}
                 </h3>
-                <p className="mt-2 line-clamp-1 font-mono text-xs font-medium text-ed-fg-muted">
+                <p className={[
+                    'mt-2 line-clamp-1 font-mono text-xs font-medium',
+                    isGoldenAudioCard ? 'text-[var(--qs-text-muted)]' : 'text-ed-fg-muted'
+                ].join(' ')}>
                     {item.author}
                     {item.displayDate ? <><span aria-hidden="true" className="opacity-50"> · </span>{item.displayDate}</> : null}
                 </p>
@@ -117,9 +132,17 @@ export function MediaList({ item, priority = false }: { item: Media; priority?: 
     const thumbnailSrc = getThumbnailSrc(item);
     const track = playableTrack(item);
 
+    const isGoldenAudioCard = item.type === 'quran-study' || item.type === 'messenger-audio';
+
     return (
-        <article className="group relative grid gap-4 overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-3.5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)] sm:grid-cols-[13rem_1fr] sm:items-center">
-            <div className="relative aspect-video overflow-hidden rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40">
+        <article className={[
+            'group relative grid gap-4 overflow-hidden p-3.5 transition-all duration-300 hover:-translate-y-0.5 sm:grid-cols-[13rem_1fr] sm:items-center',
+            isGoldenAudioCard ? 'qs-audio-card-list' : 'rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)]'
+        ].join(' ')}>
+            <div className={[
+                'relative aspect-video overflow-hidden',
+                isGoldenAudioCard ? 'rounded-[18px] border border-[var(--qs-border-subtle)] bg-black/5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)]' : 'rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40'
+            ].join(' ')}>
                 {hasCssSlide && qsNumber !== null ? (
                     <QuranStudyThumbnail qsNumber={qsNumber} />
                 ) : (
@@ -128,8 +151,6 @@ export function MediaList({ item, priority = false }: { item: Media; priority?: 
                         alt=""
                         fill
                         priority={priority}
-                        // 75 rather than 90: at the size these render, the two are visually
-                        // indistinguishable, and 90 was costing bytes on every grid page.
                         quality={75}
                         sizes="(max-width: 640px) 100vw, 360px"
                         className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.04]"
@@ -137,17 +158,26 @@ export function MediaList({ item, priority = false }: { item: Media; priority?: 
                 )}
                 {track ? <PlayButton track={track} /> : null}
                 {item.duration_seconds ? (
-                    <span className="absolute bottom-2.5 right-2.5 rounded-full border border-white/15 bg-black/75 px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums text-white/90 backdrop-blur-xl shadow-sm">
+                    <span className={[
+                        'absolute bottom-2.5 right-2.5 rounded-full border px-2.5 py-0.5 font-mono text-[0.68rem] font-medium tracking-wide tabular-nums backdrop-blur-xl shadow-sm',
+                        isGoldenAudioCard ? 'border-white/15 bg-black/75 text-white/90' : 'border-white/15 bg-black/75 text-white/90'
+                    ].join(' ')}>
                         {formatDuration(item.duration_seconds)}
                     </span>
                 ) : null}
             </div>
 
             <div className="min-w-0 pr-2 py-1">
-                <h3 className="line-clamp-2 font-sans text-lg font-semibold leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+                <h3 className={[
+                    'line-clamp-2 font-sans text-lg font-semibold leading-snug transition-colors',
+                    isGoldenAudioCard ? 'text-[var(--qs-text-primary)] group-hover:text-[var(--qs-accent)]' : 'text-ed-fg group-hover:text-ed-accent'
+                ].join(' ')}>
                     {item.displayTitle}
                 </h3>
-                <p className="mt-2 line-clamp-1 font-mono text-xs font-medium text-ed-fg-muted">
+                <p className={[
+                    'mt-2 line-clamp-1 font-mono text-xs font-medium',
+                    isGoldenAudioCard ? 'text-[var(--qs-text-muted)]' : 'text-ed-fg-muted'
+                ].join(' ')}>
                     {item.author}
                     {item.displayDate ? <><span aria-hidden="true" className="opacity-50"> · </span>{item.displayDate}</> : null}
                 </p>

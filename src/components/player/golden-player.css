@@ -54,100 +54,6 @@
   --qs-radius-lg: 12px;
 }
 
-.audio-archive-shell {
-  background: var(--qs-bg-primary);
-  color: var(--qs-text-primary);
-  position: relative;
-}
-
-.audio-archive-shell .qs-page-bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 700px 420px at 82% 12%, rgba(200, 121, 74, 0.04) 0%, transparent 68%),
-    radial-gradient(ellipse 440px 320px at 12% 88%, rgba(200, 121, 74, 0.02) 0%, transparent 72%);
-}
-
-.audio-archive-hero {
-  position: relative;
-  z-index: 1;
-  padding: clamp(1.25rem, 3vw, 2.5rem);
-  border: 1px solid var(--qs-border-subtle);
-  border-radius: var(--qs-radius-lg);
-  background: linear-gradient(180deg, rgba(22, 21, 20, 0.96), rgba(15, 14, 13, 0.9));
-  box-shadow: 0 16px 48px -24px rgba(0, 0, 0, 0.8);
-}
-
-.audio-archive-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(120deg, rgba(200, 121, 74, 0.06), transparent 32%, transparent 70%, rgba(143, 184, 168, 0.03));
-  pointer-events: none;
-}
-
-.qs-audio-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-  color: var(--qs-text-muted);
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  text-transform: uppercase;
-  padding: 0.42rem 0.8rem;
-  border-radius: 9999px;
-  border: 1px solid var(--qs-border-subtle);
-  background: rgba(255, 255, 255, 0.01);
-}
-
-.audio-archive-section {
-  position: relative;
-  z-index: 1;
-}
-
-.audio-section-header {
-  border-bottom: 1px solid var(--qs-border-subtle);
-}
-
-.audio-stat-pill {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 72px;
-  padding-left: 1rem;
-  border-left: 1px solid var(--qs-border-subtle);
-}
-
-.audio-stat-pill:first-child {
-  border-left: none;
-  padding-left: 0;
-}
-
-.qs-audio-card,
-.qs-audio-card-list {
-  border: 1px solid var(--qs-border-subtle);
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(22, 21, 20, 0.96), rgba(15, 14, 13, 0.94));
-  box-shadow: 0 18px 42px -24px rgba(0, 0, 0, 0.8);
-}
-
-.qs-audio-card:hover,
-.qs-audio-card-list:hover {
-  border-color: var(--qs-border-hover);
-  box-shadow: 0 24px 52px -28px rgba(200, 121, 74, 0.18);
-}
-
-.qs-audio-card-list {
-  border-radius: 18px;
-}
-
 /* ---------- Global Reset & Base ---------- */
 .qs-golden-player * {
   box-sizing: border-box;
@@ -555,6 +461,12 @@
   margin-top: 48px;
   margin-bottom: 100px;
   align-items: start;
+}
+
+/* No sidebar variant (for media types without chapters) */
+.qs-golden-player .qs-content-grid.qs-content-grid--no-sidebar {
+  grid-template-columns: 1fr;
+  max-width: 860px;
 }
 
 @media (max-width: 960px) {

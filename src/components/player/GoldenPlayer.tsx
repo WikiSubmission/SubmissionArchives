@@ -12,7 +12,7 @@ import { getMediaHref } from "@/lib/utils";
 import { QURAN_STUDY_SLIDES } from "@/data/quran-study-thumbnail-data";
 import { type ChapterMarker } from "@/lib/transcriptParagraphs";
 import dynamic from "next/dynamic";
-import "./quran-study-golden-player.css";
+import "./golden-player.css";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -46,7 +46,7 @@ export interface MediaItem {
   chapters?: ChapterMarker[];
 }
 
-export interface QuranStudyGoldenPlayerProps {
+export interface GoldenPlayerProps {
   media: MediaItem;
   segments: Segment[];
   segments_ar?: Segment[];
@@ -109,14 +109,51 @@ function getSpeakerDisplayName(speaker: string): string {
 const ARABIC_REGEX = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
 const VERSE_CITATION_REGEX = /^\[\d+:\d+(?:-\d+)?\]/;
 
+/* ==================== TYPE-AWARE HELPERS ==================== */
+
+function getMediaTypeLabel(type: string): string {
+  switch (type) {
+    case "quran-study": return "Quran Study";
+    case "messenger-audio": return "Messenger Audio";
+    case "video-program": return "Video Program";
+    default: return type.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  }
+}
+
+function getMediaCatalogLink(type: string): { href: string; label: string } {
+  switch (type) {
+    case "quran-study": return { href: "/audios", label: "Quran Study" };
+    case "messenger-audio": return { href: "/audios", label: "Messenger Audio" };
+    case "video-program": return { href: "/videos", label: "Videos" };
+    default: return { href: "/archive", label: "Archive" };
+  }
+}
+
+function getMediaShortId(media: MediaItem): string {
+  const type = media.type;
+  const num = typeof media.primaryNumber === "number"
+    ? media.primaryNumber
+    : Number(media.primaryNumber) || 0;
+
+  if (type === "quran-study" && num > 0) return `QS ${String(num).padStart(2, "0")}`;
+  if (type === "messenger-audio" && num > 0) return `MA ${String(num).padStart(2, "0")}`;
+  // For videos, use a truncated title
+  const title = media.displayTitle || media.title;
+  return title.length > 40 ? title.slice(0, 37) + "…" : title;
+}
+
+function isVideoType(type: string): boolean {
+  return type === "video-program";
+}
+
 /* ==================== COMPONENT ==================== */
 
-export default function QuranStudyGoldenPlayer({
+export default function GoldenPlayer({
   media,
   segments,
   mediaUrl,
   initialSeekTime,
-}: QuranStudyGoldenPlayerProps) {
+}: GoldenPlayerProps) {
   /* ---------- State ---------- */
   const [isPlaying, setIsPlaying] = useState(Boolean(initialSeekTime));
   const [hasStartedPlayback, setHasStartedPlayback] = useState(Boolean(initialSeekTime));
@@ -140,13 +177,23 @@ export default function QuranStudyGoldenPlayer({
   const hasSeekedToInitial = useRef(false);
   const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
+  /* ---------- Type-Aware Derived Data ---------- */
+  const mediaType = media.type;
+  const isVideo = isVideoType(mediaType);
+  const typeLabel = getMediaTypeLabel(mediaType);
+  const catalogLink = getMediaCatalogLink(mediaType);
+  const shortId = getMediaShortId(media);
+
+  // QS-specific slide data (only for quran-study)
   const qsNum = typeof media.primaryNumber === "number" ? media.primaryNumber : Number(media.primaryNumber) || 1;
-  const slideData = QURAN_STUDY_SLIDES[qsNum];
+  const slideData = mediaType === "quran-study" ? QURAN_STUDY_SLIDES[qsNum] : null;
 
   const chapters = useMemo(() => {
     if (media.chapters && media.chapters.length > 0) return media.chapters;
     return [];
   }, [media.chapters]);
+
+  const hasChapters = chapters.length > 0;
 
   /* ---------- Search Debounce ---------- */
   useEffect(() => {
@@ -312,7 +359,8 @@ export default function QuranStudyGoldenPlayer({
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `QS_${String(qsNum).padStart(2, "0")}_transcript.txt`;
+    const filename = media.displayTitle.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+    a.download = `${filename}_transcript.txt`;
     a.click();
     URL.revokeObjectURL(url);
     showToast("Transcript downloaded");
@@ -373,9 +421,17 @@ export default function QuranStudyGoldenPlayer({
     );
   };
 
-  const stageTitle = slideData?.lines?.[1] || media.title || media.displayTitle;
-  const stageMeta = `${slideData?.lines?.[0] || media.displayDate}`;
-  const totalDurationDisplay = formatDurationHuman(duration || media.duration_seconds || 4740);
+  /* ---------- Derived Display Data ---------- */
+  const stageTitle = slideData?.lines?.[1] || media.displayTitle;
+  const stageMeta = slideData?.lines?.[0] || media.displayDate;
+  const totalDurationDisplay = formatDurationHuman(duration || media.duration_seconds || 0);
+
+  /* ---------- Thumbnail Label ---------- */
+  const thumbnailLabel = mediaType === "quran-study"
+    ? `Quran Study — QS ${String(qsNum).padStart(2, "0")}`
+    : mediaType === "messenger-audio"
+    ? `Messenger Audio — MA ${String(qsNum).padStart(2, "0")}`
+    : typeLabel;
 
   return (
     <div className="qs-golden-player min-h-screen">
@@ -393,9 +449,9 @@ export default function QuranStudyGoldenPlayer({
         <nav className="qs-breadcrumb" aria-label="Breadcrumb">
           <Link href="/archive">Catalog</Link>
           <span className="qs-breadcrumb-separator">/</span>
-          <Link href="/audios">Quran Study</Link>
+          <Link href={catalogLink.href}>{catalogLink.label}</Link>
           <span className="qs-breadcrumb-separator">/</span>
-          <span style={{ color: "var(--qs-text-muted)" }}>QS {String(qsNum).padStart(2, "0")}</span>
+          <span style={{ color: "var(--qs-text-muted)" }}>{shortId}</span>
         </nav>
 
         {/* ==================== HERO STAGE ==================== */}
@@ -403,7 +459,32 @@ export default function QuranStudyGoldenPlayer({
           <div className="qs-video-player">
             {hasStartedPlayback ? (
               <div className="relative w-full h-full flex items-center justify-center bg-black z-10">
-                {mediaUrl.includes("youtube.com") || mediaUrl.includes("youtu.be") ? (
+                {isVideo ? (
+                  /* ===== VIDEO PLAYER (YouTube / MP4) ===== */
+                  <ReactPlayer
+                    ref={playerRef}
+                    url={mediaUrl}
+                    playing={isPlaying}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    playbackRate={playbackSpeed}
+                    muted={isMuted}
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onDuration={(d: number) => setDuration(d)}
+                    onProgress={({ playedSeconds }: { playedSeconds: number }) => {
+                      setAbsoluteTime(playedSeconds);
+                    }}
+                    onReady={() => {
+                      if (initialSeekTime && !hasSeekedToInitial.current && playerRef.current) {
+                        playerRef.current.seekTo(initialSeekTime, "seconds");
+                        hasSeekedToInitial.current = true;
+                      }
+                    }}
+                  />
+                ) : mediaUrl.includes("youtube.com") || mediaUrl.includes("youtu.be") ? (
+                  /* ===== AUDIO VIA YOUTUBE (rare but possible) ===== */
                   <ReactPlayer
                     ref={playerRef}
                     url={mediaUrl}
@@ -427,6 +508,7 @@ export default function QuranStudyGoldenPlayer({
                     }}
                   />
                 ) : (
+                  /* ===== AUDIO-ONLY PLAYER WITH VISUALIZER ===== */
                   <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-b from-[#14231d] to-[#0d1612]">
                     <ReactPlayer
                       ref={playerRef}
@@ -453,7 +535,7 @@ export default function QuranStudyGoldenPlayer({
                     {/* Audio Player Visualizer & Controls */}
                     <div className="qs-audio-visualizer">
                       <div className="text-center space-y-2">
-                        <div className="qs-thumbnail-label">Quran Study — QS {String(qsNum).padStart(2, "0")}</div>
+                        <div className="qs-thumbnail-label">{thumbnailLabel}</div>
                         <h2 className="text-2xl sm:text-3xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>
                           {media.displayTitle}
                         </h2>
@@ -536,7 +618,7 @@ export default function QuranStudyGoldenPlayer({
                 )}
               </div>
             ) : (
-              /* Golden Thumbnail Slide Overlay */
+              /* ===== GOLDEN THUMBNAIL SLIDE OVERLAY (pre-play) ===== */
               <div
                 className="w-full h-full flex flex-col items-center justify-center cursor-pointer select-none"
                 onClick={() => {
@@ -545,13 +627,13 @@ export default function QuranStudyGoldenPlayer({
                 }}
               >
                 <div className="qs-thumbnail-content">
-                  <div className="qs-thumbnail-label">Quran Study — QS {String(qsNum).padStart(2, "0")}</div>
+                  <div className="qs-thumbnail-label">{thumbnailLabel}</div>
                   <h1 className="qs-thumbnail-title">{stageTitle}</h1>
                   <div className="qs-thumbnail-meta">{stageMeta}</div>
                 </div>
 
                 <div className="qs-play-overlay">
-                  <div className="qs-play-button" aria-label="Play video">
+                  <div className="qs-play-button" aria-label="Play media">
                     <div className="qs-play-icon" />
                   </div>
                 </div>
@@ -578,7 +660,7 @@ export default function QuranStudyGoldenPlayer({
                 </div>
 
                 <div className="qs-meta-row">
-                  <span className="qs-meta-item accent">Quran Study</span>
+                  <span className="qs-meta-item accent">{typeLabel}</span>
                   <span className="qs-meta-divider" />
                   <span className="qs-meta-item">{media.displayDate}</span>
                   <span className="qs-meta-divider" />
@@ -619,59 +701,121 @@ export default function QuranStudyGoldenPlayer({
             <div className={`qs-info-body ${isInfoCollapsed ? "collapsed" : ""}`}>
               <p className="qs-description">
                 {media.description ||
-                  `Quran Study session #${qsNum} exploring verse commentary, linguistic insights, and community questions regarding the Holy Quran.`}
+                  `${typeLabel} session featuring ${getSpeakerDisplayName(media.author)}. Recorded ${media.displayDate || "date unknown"}.`}
               </p>
             </div>
           </div>
         </div>
 
-        {/* ==================== 2-COLUMN CONTENT GRID ==================== */}
-        <div className="qs-content-grid">
-          {/* ========== LEFT SIDEBAR: TABLE OF CONTENTS ========== */}
-          <aside className="qs-sidebar" aria-label="Table of contents">
-            {/* Mobile TOC Accordion Toggle */}
-            <button
-              type="button"
-              onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
-              className={`qs-toc-mobile-toggle ${isMobileTocOpen ? "open" : ""}`}
-              aria-expanded={isMobileTocOpen}
-            >
-              <span>
-                Contents <span style={{ color: "var(--qs-text-faint)", fontWeight: 500 }}>— {chapters.length} topics</span>
-              </span>
-              <ChevronDown className="w-4 h-4" />
-            </button>
-
-            {/* TOC Body */}
-            <div className={`qs-toc-mobile-body ${isMobileTocOpen ? "open" : ""}`}>
-              <div className="qs-toc-header">
-                <span className="qs-toc-title">Contents</span>
-                <span className="qs-toc-count">{chapters.length} topics</span>
-              </div>
-
-              <ul className="qs-toc-list">
-                {chapters.map((ch, idx) => {
-                  const isActive = activeChapterIndex === idx;
-                  return (
-                    <li key={ch.id ?? idx} className="qs-toc-item">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          seekToTime(ch.startTime, ch.title);
-                          setIsMobileTocOpen(false);
-                        }}
-                        data-active={isActive}
-                        className="qs-toc-link"
-                      >
-                        <span className="qs-toc-time">{formatTime(ch.startTime)}</span>
-                        <span className="qs-toc-text">{ch.title}</span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
+        {/* ==================== PLAYBACK CONTROLS (video-only, below stage) ==================== */}
+        {isVideo && hasStartedPlayback && (
+          <div className="flex flex-wrap items-center justify-between gap-2 px-1 mt-4 mb-6">
+            <div className="flex items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => seekToTime(Math.max(0, absoluteTime - 10))}
+                title="Back 10s (J)"
+                className="qs-btn"
+                style={{ padding: "8px", minHeight: "36px", minWidth: "36px" }}
+              >
+                <SkipBack className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsPlaying(!isPlaying)}
+                title={isPlaying ? "Pause (Space)" : "Play (Space)"}
+                className="w-11 h-11 rounded-full bg-[var(--qs-accent)] hover:bg-[var(--qs-accent-hover)] text-[var(--qs-bg-primary)] flex items-center justify-center shadow-lg transition-transform hover:scale-105"
+              >
+                {isPlaying ? <Pause className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5 fill-current ml-0.5" />}
+              </button>
+              <button
+                type="button"
+                onClick={() => seekToTime(absoluteTime + 10)}
+                title="Forward 10s (L)"
+                className="qs-btn"
+                style={{ padding: "8px", minHeight: "36px", minWidth: "36px" }}
+              >
+                <SkipForward className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsMuted(!isMuted)}
+                title={isMuted ? "Unmute" : "Mute"}
+                className="qs-btn"
+                style={{ padding: "8px", minHeight: "36px", minWidth: "36px" }}
+              >
+                {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+              </button>
             </div>
-          </aside>
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-mono text-[var(--qs-text-muted)] tabular-nums">
+                {formatTime(absoluteTime)} / {formatTime(duration)}
+              </span>
+              <button
+                type="button"
+                onClick={() => {
+                  const speeds = [0.75, 1.0, 1.25, 1.5, 2.0];
+                  const nextIdx = (speeds.indexOf(playbackSpeed) + 1) % speeds.length;
+                  setPlaybackSpeed(speeds[nextIdx]);
+                  showToast(`${speeds[nextIdx]}x speed`);
+                }}
+                className="qs-speed-btn"
+              >
+                {playbackSpeed}x
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* ==================== 2-COLUMN CONTENT GRID ==================== */}
+        <div className={`qs-content-grid ${!hasChapters ? "qs-content-grid--no-sidebar" : ""}`}>
+          {/* ========== LEFT SIDEBAR: TABLE OF CONTENTS (only when chapters exist) ========== */}
+          {hasChapters && (
+            <aside className="qs-sidebar" aria-label="Table of contents">
+              {/* Mobile TOC Accordion Toggle */}
+              <button
+                type="button"
+                onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
+                className={`qs-toc-mobile-toggle ${isMobileTocOpen ? "open" : ""}`}
+                aria-expanded={isMobileTocOpen}
+              >
+                <span>
+                  Contents <span style={{ color: "var(--qs-text-faint)", fontWeight: 500 }}>— {chapters.length} topics</span>
+                </span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+
+              {/* TOC Body */}
+              <div className={`qs-toc-mobile-body ${isMobileTocOpen ? "open" : ""}`}>
+                <div className="qs-toc-header">
+                  <span className="qs-toc-title">Contents</span>
+                  <span className="qs-toc-count">{chapters.length} topics</span>
+                </div>
+
+                <ul className="qs-toc-list">
+                  {chapters.map((ch, idx) => {
+                    const isActive = activeChapterIndex === idx;
+                    return (
+                      <li key={ch.id ?? idx} className="qs-toc-item">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            seekToTime(ch.startTime, ch.title);
+                            setIsMobileTocOpen(false);
+                          }}
+                          data-active={isActive}
+                          className="qs-toc-link"
+                        >
+                          <span className="qs-toc-time">{formatTime(ch.startTime)}</span>
+                          <span className="qs-toc-text">{ch.title}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </aside>
+          )}
 
           {/* ========== RIGHT MAIN: TRANSCRIPT ========== */}
           <main className="qs-main-content">
@@ -724,7 +868,7 @@ export default function QuranStudyGoldenPlayer({
                   const isSegActive = activeSegmentIndex === (seg.id ?? idx);
                   const speakerSlug = getSpeakerSlug(seg.speaker);
                   const speakerDisplay = getSpeakerDisplayName(seg.speaker);
-                  const isArabic = ARABIC_REGEX.test(seg.content);
+                  const isArabicContent = ARABIC_REGEX.test(seg.content);
                   const isVerseQuote = VERSE_CITATION_REGEX.test(seg.content.trim());
 
                   return (
@@ -753,7 +897,7 @@ export default function QuranStudyGoldenPlayer({
 
                       {/* Entry Body */}
                       <div className="qs-entry-body">
-                        {isArabic ? (
+                        {isArabicContent ? (
                           <div className="qs-arabic-block">
                             {renderHighlightedContent(seg.content)}
                           </div>

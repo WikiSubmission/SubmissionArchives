@@ -17,7 +17,6 @@ import {
   getActiveChapterIndex,
   type ChapterMarker,
 } from "@/lib/transcriptParagraphs";
-import QuranStudyGoldenPlayer from "@/components/player/QuranStudyGoldenPlayer";
 
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });

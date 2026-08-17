@@ -6,7 +6,13 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useWindowVirtualizer } from '@tanstack/react-virtual';
 import {
+    AnimatePresence,
+    MotionConfig,
+    motion,
+} from 'motion/react';
+import {
     BookMarked,
+    Check,
     ChevronDown,
     FileText,
     Headphones,
@@ -584,22 +590,48 @@ function SearchContent() {
         [filters],
     );
 
-    const selectAllSources = useCallback(() => {
-        setFilters({
-            video: true,
-            'quran-study': true,
-            'messenger-audio': true,
-            perspective: true,
-            appendix: true,
-            quran: true,
-            other: true,
-        });
-    }, []);
+    const [filterOpen, setFilterOpen] = useState(false);
 
-    const selectVideosCategory = useCallback(() => {
-        if (isVideosSelected) {
-            selectAllSources();
-        } else {
+    type FilterMode = 'all' | 'videos' | 'audios' | 'written' | 'quran';
+
+    const filterOptions: Array<{
+        id: FilterMode;
+        label: string;
+        icon: typeof SlidersHorizontal;
+    }> = [
+        { id: 'all', label: 'All', icon: SlidersHorizontal },
+        { id: 'videos', label: 'Videos', icon: Video },
+        { id: 'audios', label: 'Audios', icon: Headphones },
+        { id: 'written', label: 'Written', icon: FileText },
+        { id: 'quran', label: 'Qur’an', icon: BookMarked },
+    ];
+
+    const activeFilter = useMemo<FilterMode>(() => {
+        if (isAllSelected) return 'all';
+        if (isVideosSelected) return 'videos';
+        if (isAudiosSelected) return 'audios';
+        if (isWrittenSelected) return 'written';
+        if (isQuranSelected) return 'quran';
+        return 'all';
+    }, [isAllSelected, isVideosSelected, isAudiosSelected, isWrittenSelected, isQuranSelected]);
+
+    const activeFilterOption = filterOptions.find((option) => option.id === activeFilter) ?? filterOptions[0];
+
+    const applyFilterPreset = useCallback((mode: FilterMode) => {
+        if (mode === 'all') {
+            setFilters({
+                video: true,
+                'quran-study': true,
+                'messenger-audio': true,
+                perspective: true,
+                appendix: true,
+                quran: true,
+                other: true,
+            });
+            return;
+        }
+
+        if (mode === 'videos') {
             setFilters({
                 video: true,
                 'quran-study': false,
@@ -609,13 +641,10 @@ function SearchContent() {
                 quran: false,
                 other: false,
             });
+            return;
         }
-    }, [isVideosSelected, selectAllSources]);
 
-    const selectAudiosCategory = useCallback(() => {
-        if (isAudiosSelected) {
-            selectAllSources();
-        } else {
+        if (mode === 'audios') {
             setFilters({
                 video: false,
                 'quran-study': true,
@@ -625,13 +654,10 @@ function SearchContent() {
                 quran: false,
                 other: false,
             });
+            return;
         }
-    }, [isAudiosSelected, selectAllSources]);
 
-    const selectWrittenCategory = useCallback(() => {
-        if (isWrittenSelected) {
-            selectAllSources();
-        } else {
+        if (mode === 'written') {
             setFilters({
                 video: false,
                 'quran-study': false,
@@ -641,24 +667,81 @@ function SearchContent() {
                 quran: false,
                 other: true,
             });
+            return;
         }
-    }, [isWrittenSelected, selectAllSources]);
+
+        setFilters({
+            video: false,
+            'quran-study': false,
+            'messenger-audio': false,
+            perspective: false,
+            appendix: false,
+            quran: true,
+            other: false,
+        });
+    }, []);
+
+    const selectAllSources = useCallback(() => {
+        applyFilterPreset('all');
+    }, [applyFilterPreset]);
+
+    const clearAllFilters = useCallback(() => {
+        setFilters({
+            video: false,
+            'quran-study': false,
+            'messenger-audio': false,
+            perspective: false,
+            appendix: false,
+            quran: false,
+            other: false,
+        });
+    }, []);
+
+    const selectVideosCategory = useCallback(() => {
+        if (isVideosSelected) {
+            clearAllFilters();
+        } else {
+            applyFilterPreset('videos');
+        }
+    }, [isVideosSelected, clearAllFilters, applyFilterPreset]);
+
+    const selectAudiosCategory = useCallback(() => {
+        if (isAudiosSelected) {
+            clearAllFilters();
+        } else {
+            applyFilterPreset('audios');
+        }
+    }, [isAudiosSelected, clearAllFilters, applyFilterPreset]);
+
+    const selectWrittenCategory = useCallback(() => {
+        if (isWrittenSelected) {
+            clearAllFilters();
+        } else {
+            applyFilterPreset('written');
+        }
+    }, [isWrittenSelected, clearAllFilters, applyFilterPreset]);
 
     const selectQuranCategory = useCallback(() => {
         if (isQuranSelected) {
-            selectAllSources();
+            clearAllFilters();
         } else {
-            setFilters({
-                video: false,
-                'quran-study': false,
-                'messenger-audio': false,
-                perspective: false,
-                appendix: false,
-                quran: true,
-                other: false,
-            });
+            applyFilterPreset('quran');
         }
-    }, [isQuranSelected, selectAllSources]);
+    }, [isQuranSelected, clearAllFilters, applyFilterPreset]);
+
+    const handleSearchSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+        setSuggestOpen(false);
+        syncUrl(query, filters);
+        void runQuery(0);
+    }, [query, filters, runQuery, syncUrl]);
+
+    const clearSearchQuery = useCallback(() => {
+        setQuery('');
+        setSuggestions([]);
+        setSuggestOpen(false);
+    }, []);
 
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
@@ -671,7 +754,7 @@ function SearchContent() {
                     <main className="min-w-0 flex-1 space-y-6">
                         
                         {/* Search Control Bar Header Card */}
-                        <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/95 via-ed-surface/85 to-ed-surface/65 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.06)_inset] backdrop-blur-2xl transition-all duration-300">
+                        <div className="group relative flex flex-col overflow-visible rounded-none border-0 bg-transparent shadow-none backdrop-blur-none transition-all duration-300">
                             <GlassSheen />
                             
                             {/* Window Title Bar */}
@@ -696,17 +779,10 @@ function SearchContent() {
 
                             <div className="p-4 sm:p-6 space-y-4">
                                 <form
-                                    onSubmit={(event) => {
-                                        event.preventDefault();
-                                        // Submitting bypasses the debounce rather than racing it.
-                                        if (debounceRef.current) clearTimeout(debounceRef.current);
-                                        setSuggestOpen(false);
-                                        syncUrl(query, filters);
-                                        void runQuery(0);
-                                    }}
-                                    className="relative flex flex-col sm:flex-row sm:items-center gap-3"
+                                    onSubmit={handleSearchSubmit}
+                                    className="relative flex w-full flex-col gap-3 sm:flex-row sm:items-center"
                                 >
-                                    <div ref={searchFieldRef} className="relative flex-1">
+                                    <div ref={searchFieldRef} className="relative z-20 min-w-0 flex-1">
                                         <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
                                         <input
                                             id="archive-search-input"
@@ -716,7 +792,7 @@ function SearchContent() {
                                             onChange={(event) => setQuery(event.target.value)}
                                             placeholder="Search transcripts, perspectives, appendices..."
                                             aria-label="Search transcripts, perspectives, appendices"
-                                            className="archive-input w-full py-2.5 pl-11 pr-24 text-sm sm:text-base rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 text-ed-fg backdrop-blur-xl focus:border-ed-fg focus:bg-ed-surface shadow-inner transition-all"
+                                            className="archive-input w-full py-2.5 pl-11 pr-11 text-sm sm:text-base rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 text-ed-fg backdrop-blur-xl focus:border-ed-fg focus:bg-ed-surface shadow-inner transition-all"
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Escape' && suggestOpen) {
                                                     event.preventDefault();
@@ -734,19 +810,13 @@ function SearchContent() {
                                         {query ? (
                                             <button
                                                 type="button"
-                                                onClick={() => setQuery('')}
-                                                className="absolute right-[4.75rem] top-1/2 -translate-y-1/2 p-1 text-ed-fg-muted hover:text-ed-fg"
+                                                onClick={clearSearchQuery}
+                                                className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full p-1 text-ed-fg-muted hover:text-ed-fg"
                                                 aria-label="Clear search query"
                                             >
                                                 <X className="h-4 w-4" />
                                             </button>
                                         ) : null}
-                                        <button
-                                            type="submit"
-                                            className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-xl bg-ed-fg px-4 py-1.5 text-xs font-bold text-ed-bg shadow-sm transition-all hover:bg-ed-fg/90 hover:scale-105 active:scale-95"
-                                        >
-                                            Search
-                                        </button>
 
                                         {suggestOpen && suggestions.length > 0 ? (
                                             <ul
@@ -779,69 +849,91 @@ function SearchContent() {
                                         ) : null}
                                     </div>
 
-                                    {/* Source Filter Segmented Pill Group */}
-                                    <div className="w-full overflow-x-auto scrollbar-none pb-1 sm:pb-0">
-                                        <div className="relative inline-flex min-w-full sm:min-w-0 items-center justify-start sm:justify-center gap-1 p-1 rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 backdrop-blur-xl isolation-auto shadow-inner">
-                                            <button
-                                                type="button"
-                                                onClick={selectAllSources}
-                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                    isAllSelected
-                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
-                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
-                                                }`}
-                                            >
-                                                <SlidersHorizontal className="h-3 w-3" />
-                                                All
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={selectVideosCategory}
-                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                    isVideosSelected
-                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
-                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
-                                                }`}
-                                            >
-                                                <Video className="h-3 w-3" />
-                                                Videos
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={selectAudiosCategory}
-                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                    isAudiosSelected
-                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
-                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
-                                                }`}
-                                            >
-                                                <Headphones className="h-3 w-3" />
-                                                Audios
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={selectWrittenCategory}
-                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                    isWrittenSelected
-                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
-                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
-                                                }`}
-                                            >
-                                                <FileText className="h-3 w-3" />
-                                                Written
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={selectQuranCategory}
-                                                className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                    isQuranSelected
-                                                        ? 'bg-ed-fg text-ed-bg font-bold shadow-sm [transform:translateZ(0)] relative z-10'
-                                                        : 'text-ed-fg-muted hover:text-ed-fg font-medium hover:bg-ed-surface'
-                                                }`}
-                                            >
-                                                <BookMarked className="h-3 w-3" />
-                                                Qur&apos;an
-                                            </button>
+                                    <div className="flex items-center gap-2 sm:shrink-0">
+                                        <button
+                                            type="submit"
+                                            disabled={!query.trim()}
+                                            className="inline-flex items-center justify-center rounded-xl bg-ed-fg px-4 py-2.5 text-xs font-bold text-ed-bg shadow-sm transition-all hover:bg-ed-fg/90 hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:bg-ed-muted disabled:text-ed-fg-muted disabled:hover:scale-100"
+                                            aria-label="Run search"
+                                        >
+                                            Search
+                                        </button>
+
+                                        <div className="relative flex items-center justify-end sm:justify-center">
+                                            <MotionConfig transition={{ type: 'spring', bounce: 0.25, duration: 0.7 }}>
+                                                <AnimatePresence mode="popLayout" initial={false}>
+                                                    {filterOpen ? (
+                                                        <motion.div
+                                                            key="filter-open"
+                                                            layoutId="search-filter-disclosure"
+                                                            initial={{ opacity: 0 }}
+                                                            animate={{ opacity: 1 }}
+                                                            exit={{ opacity: 0, transition: { duration: 0 } }}
+                                                            style={{ transformOrigin: '50% 100%', borderRadius: 24 }}
+                                                            className="absolute right-0 top-full z-30 mt-2 w-[240px] overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-ed-surface/95 p-1.5 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
+                                                        >
+                                                            {filterOptions.map((option, index) => {
+                                                                const Icon = option.icon;
+                                                                const isActive = activeFilter === option.id;
+
+                                                                return (
+                                                                    <motion.button
+                                                                        key={option.id}
+                                                                        type="button"
+                                                                        initial={{ opacity: 0, scale: 1.06, y: 20 }}
+                                                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                                                        whileTap={{ scale: 0.98 }}
+                                                                        transition={{ type: 'spring', stiffness: 240, damping: 20, mass: 1, delay: (index + 1) * 0.04 }}
+                                                                        onClick={() => {
+                                                                            applyFilterPreset(option.id);
+                                                                            setFilterOpen(false);
+                                                                        }}
+                                                                        className="flex w-full cursor-pointer items-center justify-between rounded-xl px-2.5 py-2.5 text-left transition-colors hover:bg-ed-surface-strong"
+                                                                    >
+                                                                        <div className="flex items-center gap-3">
+                                                                            <Icon className="h-4 w-4 text-ed-fg-muted" />
+                                                                            <span className="text-sm font-semibold tracking-tight text-ed-fg">{option.label}</span>
+                                                                        </div>
+
+                                                                        <motion.div
+                                                                            animate={{
+                                                                                backgroundColor: isActive ? 'var(--ed-fg)' : 'transparent',
+                                                                                borderColor: isActive ? 'var(--ed-fg)' : 'var(--ed-rule-strong)',
+                                                                            }}
+                                                                            className="flex h-5 w-5 items-center justify-center rounded-full border-[1.5px]"
+                                                                        >
+                                                                            <motion.div
+                                                                                animate={{ scale: isActive ? 1 : 0, opacity: isActive ? 1 : 0 }}
+                                                                                transition={{ type: 'spring', stiffness: 520, damping: 30 }}
+                                                                            >
+                                                                                <Check className="h-3 w-3 text-ed-bg" />
+                                                                            </motion.div>
+                                                                        </motion.div>
+                                                                    </motion.button>
+                                                                );
+                                                            })}
+                                                        </motion.div>
+                                                    ) : null}
+                                                </AnimatePresence>
+
+                                                <motion.button
+                                                    type="button"
+                                                    layoutId="search-filter-disclosure"
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0, transition: { duration: 0 } }}
+                                                    whileHover={{ scale: 1.02 }}
+                                                    whileTap={{ scale: 0.97 }}
+                                                    onClick={() => setFilterOpen((open) => !open)}
+                                                    className="relative z-30 inline-flex h-11 items-center gap-2 rounded-full border border-ed-rule-strong/80 bg-ed-surface/90 px-3 shadow-[0_8px_24px_-10px_rgba(0,0,0,0.35)] transition-all hover:border-ed-fg/50"
+                                                >
+                                                    <SlidersHorizontal className="h-4 w-4 text-ed-fg-muted" />
+                                                    <span className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg">
+                                                        {activeFilterOption.label}
+                                                    </span>
+                                                    <ChevronDown className={`h-3.5 w-3.5 text-ed-fg-muted transition-transform ${filterOpen ? 'rotate-180' : ''}`} />
+                                                </motion.button>
+                                            </MotionConfig>
                                         </div>
                                     </div>
                                 </form>
