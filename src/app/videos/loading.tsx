@@ -1,19 +1,85 @@
 export default function VideosLoading() {
-    return <CatalogLoadingShell titleWidth="w-56" />;
-}
-
-function CatalogLoadingShell({ titleWidth }: { titleWidth: string }) {
     return (
-        <div className="min-h-screen bg-ed-bg text-ed-fg">
-            <main className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                <section className="soft-shell grid gap-6 p-6 sm:p-8 lg:p-10">
-                    <div className="h-5 w-36 rounded-full bg-ed-muted" />
-                    <div className={`h-14 ${titleWidth} rounded bg-ed-muted`} />
-                    <div className="h-6 max-w-2xl rounded bg-ed-muted" />
-                </section>
-                <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    {Array.from({ length: 8 }).map((_, index) => (
-                        <div key={index} className="soft-shell aspect-[4/3] animate-pulse" />
+        <div className="relative min-h-screen bg-[#0F0E0D] text-[#F5F0EB] font-sans">
+            {/* Archival ambient radial glow */}
+            <div
+                aria-hidden
+                className="pointer-events-none fixed inset-0 z-0"
+                style={{
+                    background:
+                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.025) 0%, transparent 70%), ' +
+                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.015) 0%, transparent 70%)',
+                }}
+            />
+
+            <main className="relative z-[1] mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
+                {/* Breadcrumb Skeleton */}
+                <div className="mb-5 flex items-center gap-2">
+                    <div className="h-3 w-28 rounded-full bg-[#1C1B1A] animate-pulse" />
+                    <div className="h-3 w-3 rounded-full bg-[#1C1B1A]/40" />
+                    <div className="h-3 w-24 rounded-full bg-[#1C1B1A] animate-pulse" />
+                </div>
+
+                {/* Hero Header Skeleton */}
+                <header className="mb-7 flex flex-wrap items-end justify-between gap-8 border-b border-[#2A2928] pb-7">
+                    <div className="grid max-w-2xl gap-3">
+                        <div className="h-6 w-36 rounded bg-[#161514] animate-pulse" />
+                        <div className="h-11 w-72 sm:w-96 rounded bg-[#161514] animate-pulse" />
+                        <div className="h-4 w-full max-w-lg rounded bg-[#161514]/70 animate-pulse" />
+                    </div>
+
+                    <div className="flex gap-6 rounded-[8px] border border-[#2A2928] bg-[#161514] px-6 py-4">
+                        <div className="space-y-1.5">
+                            <div className="h-6 w-12 rounded bg-[#1C1B1A] animate-pulse" />
+                            <div className="h-2.5 w-16 rounded bg-[#1C1B1A]/50" />
+                        </div>
+                        <div className="border-l border-[#2A2928] pl-6 space-y-1.5">
+                            <div className="h-6 w-10 rounded bg-[#1C1B1A] animate-pulse" />
+                            <div className="h-2.5 w-14 rounded bg-[#1C1B1A]/50" />
+                        </div>
+                    </div>
+                </header>
+
+                {/* Collection Tabs Skeleton */}
+                <div className="mb-6 flex flex-wrap gap-2">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                        <div
+                            key={index}
+                            className="h-8 w-28 rounded-[4px] border border-[#2A2928] bg-[#161514] animate-pulse"
+                        />
+                    ))}
+                </div>
+
+                {/* Filter Bar Skeleton */}
+                <div className="mb-7 flex flex-wrap items-center justify-between gap-4 border-b border-[#2A2928] pb-5">
+                    <div className="h-9 w-full max-w-sm rounded-[4px] border border-[#2A2928] bg-[#161514] animate-pulse" />
+                    <div className="h-9 w-40 shrink-0 rounded-[4px] border border-[#2A2928] bg-[#161514] animate-pulse" />
+                </div>
+
+                {/* Section Header Skeleton */}
+                <div className="mb-7 flex items-center gap-4 border-b border-[#2A2928] pb-3">
+                    <div className="h-6 w-44 rounded bg-[#161514] animate-pulse" />
+                    <div className="h-px flex-1 bg-[#2A2928]" />
+                    <div className="h-3 w-16 rounded bg-[#161514]" />
+                </div>
+
+                {/* Card Grid Skeleton */}
+                <div className="grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-3">
+                    {Array.from({ length: 6 }).map((_, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514]"
+                        >
+                            <div className="aspect-video w-full bg-[#1C1B1A] animate-pulse" />
+                            <div className="p-4 space-y-3">
+                                <div className="flex justify-between">
+                                    <div className="h-3 w-20 rounded bg-[#1C1B1A] animate-pulse" />
+                                    <div className="h-3 w-12 rounded bg-[#1C1B1A]/60 animate-pulse" />
+                                </div>
+                                <div className="h-5 w-3/4 rounded bg-[#1C1B1A] animate-pulse" />
+                                <div className="h-8 w-full rounded bg-[#1C1B1A]/40 animate-pulse" />
+                            </div>
+                        </div>
                     ))}
                 </div>
             </main>

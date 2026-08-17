@@ -1,6 +1,6 @@
-# SubmissionArchives Studio - AI Context & Development Plan
+# SubmissionArchives Studio - Context & Development Plan
 
-**To the AI reading this document:** This file contains the complete architectural context, tech stack, and development roadmap for "SubmissionArchives Studio." You are tasked with helping the user continue the development of this application through the remaining phases.
+This file contains the complete architectural context, tech stack, and development roadmap for "SubmissionArchives Studio." You are tasked with helping the user continue the development of this application through the remaining phases.
 
 ## 1. Project Overview
 **SubmissionArchives Studio** is a premium, privacy-first, 100% offline desktop application for personal note-taking, journaling, and Islamic scholarly writing. It is designed as an alternative to Obsidian and Cabinet, specifically tailored to the SubmissionArchives ecosystem.
