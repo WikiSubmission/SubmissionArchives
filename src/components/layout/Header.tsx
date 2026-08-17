@@ -7,7 +7,8 @@ import { createPortal } from 'react-dom';
 import { Menu, MessageCircle, Moon, Sun, X, Youtube } from 'lucide-react';
 import { useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 
-import { motion } from 'motion/react';
+
+
 
 import { PRIMARY_NAV } from '@/config/navigation';
 import { DISCORD_URL, YOUTUBE_URL } from '@/config/social';
@@ -75,100 +76,153 @@ export default function Header() {
 
     return (
         <>
-            <header className="sticky top-0 z-[100] w-full border-b border-ed-rule bg-ed-bg/98 dark:bg-ed-bg/98 backdrop-blur-2xl text-ed-fg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.15)] dark:shadow-[0_4px_24px_-2px_rgba(0,0,0,0.4)]">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="flex h-16 items-center justify-between gap-4">
-                        {/* Brand Logo & Title */}
-                        <Link
-                            href="/"
-                            onClick={closeMenu}
-                            className="group inline-flex min-h-11 min-w-0 items-center gap-3 shrink-0"
-                            aria-label="Submission Archives home"
-                        >
-                            <Image
-                                src="/assets/brand/submission-archives-mark.png"
-                                alt=""
-                                width={36}
-                                height={36}
-                                priority
-                                loading="eager"
-                                className="h-8 w-8 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <span className="min-w-0 leading-none flex flex-col items-start">
-                                <span className="block truncate font-sans text-[0.88rem] font-extrabold uppercase tracking-[0.1em] text-ed-fg group-hover:text-ed-accent transition-colors">
-                                    Submission
-                                </span>
-                                <span className="mt-0.5 block truncate font-mono text-[0.7rem] font-medium uppercase tracking-[0.15em] text-ed-fg-muted">
-                                    Archives
-                                </span>
-                            </span>
-                        </Link>
-
-                        {/* Primary Desktop Navigation */}
-                        <nav
-                            aria-label="Primary"
-                            className="hidden items-center rounded-full border border-ed-rule/80 dark:border-white/10 bg-ed-surface/80 dark:bg-white/[0.04] p-1 backdrop-blur-xl shadow-inner lg:flex gap-0.5"
-                        >
-                            {PRIMARY_NAV.map((item) => {
-                                const isActive = isNavActive(item.href, pathname);
-                                return (
-                                    <Link
-                                        key={item.name}
-                                        href={item.href}
-                                        aria-current={isActive ? 'page' : undefined}
-                                        className={`relative inline-flex min-h-8 items-center rounded-full px-4 text-[0.72rem] font-mono font-semibold uppercase tracking-[0.08em] transition-colors duration-200 ${
-                                            isActive
-                                                ? 'text-ed-bg font-bold'
-                                                : 'text-ed-fg-muted hover:text-ed-fg'
-                                        }`}
-                                    >
-                                        {isActive && (
-                                            <motion.div
-                                                layoutId="active-header-nav-pill"
-                                                className="absolute inset-0 rounded-full bg-ed-fg shadow-sm"
-                                                transition={{
-                                                    duration: 0.24,
-                                                    ease: [0.16, 1, 0.3, 1],
-                                                }}
-                                            />
-                                        )}
-                                        <span className="relative z-10">{item.name}</span>
-                                    </Link>
-                                );
-                            })}
-                        </nav>
-
-                        {/* Right Tools & Theme Toggle */}
-                        <div className="flex items-center gap-2">
-                            <div className="hidden items-center gap-1 rounded-full border border-ed-rule/80 dark:border-white/10 bg-ed-surface/80 dark:bg-white/[0.04] p-1 backdrop-blur-xl shadow-inner sm:flex">
-                                <HeaderIconButton
-                                    label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
-                                    onClick={toggleDarkMode}
-                                    pressed={darkMode}
-                                >
-                                    {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                                </HeaderIconButton>
-                                <HeaderIconLink label="YouTube" href={YOUTUBE_URL}>
-                                    <Youtube className="h-4 w-4" />
-                                </HeaderIconLink>
-                                <HeaderIconLink label="Discord" href={DISCORD_URL}>
-                                    <MessageCircle className="h-4 w-4" />
-                                </HeaderIconLink>
-                            </div>
-
-                            {/* Mobile Menu Toggle Button */}
-                            <button
-                                ref={menuButtonRef}
-                                type="button"
-                                onClick={() => setIsMenuOpen((open) => !open)}
-                                aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-                                aria-expanded={isMenuOpen}
-                                aria-controls={menuId}
-                                className="inline-flex min-h-10 min-w-10 rounded-xl items-center justify-center border border-ed-rule-strong/60 dark:border-white/15 bg-ed-surface/80 dark:bg-white/[0.04] text-ed-fg-muted transition-all duration-200 hover:border-ed-fg hover:text-ed-fg backdrop-blur-xl lg:hidden"
+            {/* Header — matches zfsf.html nav design */}
+            <header
+                className="sticky top-0 z-[100] w-full"
+                style={{
+                    height: 60,
+                    borderBottom: '1px solid #2A2928',
+                    background: 'rgba(15, 14, 13, 0.92)',
+                    backdropFilter: 'blur(16px) saturate(1.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    boxShadow: '0 1px 0 rgba(42,41,40,0.6)',
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: 1160,
+                        margin: '0 auto',
+                        padding: '0 28px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        width: '100%',
+                    }}
+                >
+                    {/* Brand Logo & Title — placement unchanged */}
+                    <Link
+                        href="/"
+                        onClick={closeMenu}
+                        className="group inline-flex min-h-11 min-w-0 shrink-0 items-center gap-3"
+                        aria-label="Submission Archives home"
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <Image
+                            src="/assets/brand/submission-archives-mark.png"
+                            alt=""
+                            width={36}
+                            height={36}
+                            priority
+                            loading="eager"
+                            className="h-8 w-8 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <span className="min-w-0 leading-none flex flex-col items-start">
+                            <span
+                                className="block truncate group-hover:opacity-80 transition-opacity"
+                                style={{
+                                    fontFamily: "'DM Sans', -apple-system, sans-serif",
+                                    fontSize: 13,
+                                    fontWeight: 500,
+                                    letterSpacing: '0.02em',
+                                    color: '#9E9690',
+                                    textTransform: 'none',
+                                }}
                             >
-                                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                            </button>
+                                Submission Archives
+                            </span>
+                        </span>
+                    </Link>
+
+                    {/* Primary Desktop Navigation */}
+                    <nav
+                        aria-label="Primary"
+                        className="hidden lg:flex"
+                        style={{ gap: 28 }}
+                    >
+                        {PRIMARY_NAV.map((item) => {
+                            const isActive = isNavActive(item.href, pathname);
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    aria-current={isActive ? 'page' : undefined}
+                                    style={{
+                                        fontFamily: "'DM Sans', -apple-system, sans-serif",
+                                        fontSize: 13,
+                                        fontWeight: isActive ? 600 : 500,
+                                        color: isActive ? '#F5F0EB' : '#6B6560',
+                                        textDecoration: 'none',
+                                        position: 'relative',
+                                        padding: '4px 0',
+                                        transition: 'color 0.2s ease',
+                                        letterSpacing: '0.01em',
+                                    }}
+                                    className="header-nav-link"
+                                    data-active={isActive ? 'true' : 'false'}
+                                >
+                                    {item.name}
+                                    {isActive && (
+                                        <span
+                                            aria-hidden="true"
+                                            style={{
+                                                position: 'absolute',
+                                                bottom: -2,
+                                                left: 0,
+                                                width: '100%',
+                                                height: 1,
+                                                background: '#C8794A',
+                                            }}
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
+                    </nav>
+
+                    {/* Right Tools */}
+                    <div className="flex items-center gap-2">
+                        <div className="hidden items-center sm:flex" style={{ gap: 4 }}>
+                            <HeaderIconButton
+                                label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
+                                onClick={toggleDarkMode}
+                                pressed={darkMode}
+                            >
+                                {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                            </HeaderIconButton>
+                            <HeaderIconLink label="YouTube" href={YOUTUBE_URL}>
+                                <Youtube className="h-4 w-4" />
+                            </HeaderIconLink>
+                            <HeaderIconLink label="Discord" href={DISCORD_URL}>
+                                <MessageCircle className="h-4 w-4" />
+                            </HeaderIconLink>
                         </div>
+
+                        {/* Mobile Menu Toggle */}
+                        <button
+                            ref={menuButtonRef}
+                            type="button"
+                            onClick={() => setIsMenuOpen((open) => !open)}
+                            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                            aria-expanded={isMenuOpen}
+                            aria-controls={menuId}
+                            className="lg:hidden"
+                            style={{
+                                minHeight: 38,
+                                minWidth: 38,
+                                borderRadius: 6,
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                border: '1px solid #2A2928',
+                                background: 'rgba(22,21,20,0.8)',
+                                color: '#9E9690',
+                                cursor: 'pointer',
+                                transition: 'all 0.2s ease',
+                            }}
+                        >
+                            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                        </button>
                     </div>
                 </div>
             </header>
@@ -196,21 +250,36 @@ export default function Header() {
                             role="dialog"
                             aria-modal="true"
                             aria-label="Site navigation"
-                            className={`relative ml-auto flex h-full w-[min(90vw,24rem)] flex-col border-l border-ed-rule-strong/80 bg-ed-bg px-5 py-6 shadow-2xl transition-transform duration-250 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                            className={`relative ml-auto flex h-full w-[min(90vw,22rem)] flex-col px-5 py-6 shadow-2xl transition-transform duration-250 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                                 isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                             }`}
-                            style={{ isolation: 'isolate' }}
+                            style={{
+                                isolation: 'isolate',
+                                background: 'rgba(15, 14, 13, 0.97)',
+                                borderLeft: '1px solid #2A2928',
+                            }}
                         >
-                            <div className="mb-3 px-2 flex items-center justify-between">
-                                <span className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.14em] text-ed-fg-muted">
-                                    Archive Portals
+                            <div className="mb-4 px-1 flex items-center justify-between">
+                                <span style={{
+                                    fontFamily: "'DM Sans', sans-serif",
+                                    fontSize: 11,
+                                    fontWeight: 600,
+                                    letterSpacing: '0.12em',
+                                    textTransform: 'uppercase',
+                                    color: '#4A4542',
+                                }}>
+                                    Navigation
                                 </span>
-                                <span className="rounded-full border border-ed-rule bg-ed-surface px-2 py-0.5 font-mono text-[0.62rem] text-ed-fg-muted">
-                                    {PRIMARY_NAV.length} Sections
+                                <span style={{
+                                    fontSize: 11,
+                                    color: '#4A4542',
+                                    fontVariantNumeric: 'tabular-nums',
+                                }}>
+                                    {PRIMARY_NAV.length} sections
                                 </span>
                             </div>
 
-                            <nav aria-label="Mobile primary" className="flex flex-col space-y-1">
+                            <nav aria-label="Mobile primary" className="flex flex-col" style={{ gap: 2 }}>
                                 {PRIMARY_NAV.map((item, index) => {
                                     const isActive = isNavActive(item.href, pathname);
                                     return (
@@ -220,24 +289,40 @@ export default function Header() {
                                             href={item.href}
                                             onClick={closeMenu}
                                             aria-current={isActive ? 'page' : undefined}
-                                            className={`group flex min-h-[3.25rem] items-center justify-between rounded-xl px-3.5 text-base font-semibold transition-all duration-200 ${
-                                                isActive
-                                                    ? 'bg-ed-surface border border-ed-rule-strong/80 text-ed-fg font-bold shadow-sm'
-                                                    : 'text-ed-fg-muted hover:bg-ed-surface/60 hover:text-ed-fg'
-                                            }`}
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                minHeight: 48,
+                                                padding: '0 12px',
+                                                borderRadius: 6,
+                                                border: isActive ? '1px solid #353433' : '1px solid transparent',
+                                                background: isActive ? '#161514' : 'transparent',
+                                                fontFamily: "'DM Sans', sans-serif",
+                                                fontSize: 15,
+                                                fontWeight: isActive ? 600 : 500,
+                                                color: isActive ? '#F5F0EB' : '#6B6560',
+                                                textDecoration: 'none',
+                                                transition: 'all 0.2s ease',
+                                            }}
                                         >
-                                            <div className="flex items-center gap-3">
-                                                <span
-                                                    className={`inline-flex h-2 w-2 rounded-full transition-all ${
-                                                        isActive
-                                                            ? 'bg-ed-fg scale-100'
-                                                            : 'bg-transparent scale-0 group-hover:bg-ed-rule-strong group-hover:scale-75'
-                                                    }`}
-                                                    aria-hidden="true"
-                                                />
-                                                <span className="tracking-tight">{item.name}</span>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                                {isActive && (
+                                                    <span
+                                                        aria-hidden="true"
+                                                        style={{
+                                                            display: 'inline-block',
+                                                            width: 5,
+                                                            height: 5,
+                                                            borderRadius: '50%',
+                                                            background: '#C8794A',
+                                                            flexShrink: 0,
+                                                        }}
+                                                    />
+                                                )}
+                                                <span>{item.name}</span>
                                             </div>
-                                            <span className="font-mono text-[0.72rem] text-ed-fg-muted/60 group-hover:text-ed-fg-muted transition-colors">
+                                            <span style={{ fontSize: 11, color: '#4A4542', fontVariantNumeric: 'tabular-nums' }}>
                                                 {String(index + 1).padStart(2, '0')}
                                             </span>
                                         </Link>
@@ -245,10 +330,10 @@ export default function Header() {
                                 })}
                             </nav>
 
-                            <div className="mt-auto border-t border-ed-rule pt-4">
-                                <div className="flex items-center justify-between px-2">
-                                    <span className="font-mono text-[0.7rem] text-ed-fg-muted">
-                                        Theme & Social
+                            <div className="mt-auto" style={{ borderTop: '1px solid #2A2928', paddingTop: 16 }}>
+                                <div className="flex items-center justify-between px-1">
+                                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: '#6B6560' }}>
+                                        Theme &amp; Social
                                     </span>
                                     <div className="flex items-center gap-1.5">
                                         <HeaderIconButton
@@ -292,7 +377,19 @@ function HeaderIconButton({
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-ed-rule/60 bg-ed-surface/60 text-ed-fg-muted transition-all duration-200 hover:bg-ed-surface hover:text-ed-fg hover:border-ed-rule-strong"
+            style={{
+                display: 'inline-flex',
+                width: 34,
+                height: 34,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: 6,
+                border: '1px solid #2A2928',
+                background: 'transparent',
+                color: '#6B6560',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+            }}
         >
             {children}
         </button>
@@ -314,7 +411,19 @@ function HeaderIconLink({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${label} (opens in a new tab)`}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-ed-rule/60 bg-ed-surface/60 text-ed-fg-muted transition-all duration-200 hover:bg-ed-surface hover:text-ed-fg hover:border-ed-rule-strong"
+            style={{
+                display: 'inline-flex',
+                width: 34,
+                height: 34,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: 6,
+                border: '1px solid #2A2928',
+                background: 'transparent',
+                color: '#6B6560',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+            }}
         >
             {children}
         </a>

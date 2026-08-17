@@ -5,11 +5,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } fr
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useWindowVirtualizer } from '@tanstack/react-virtual';
-import {
-    AnimatePresence,
-    MotionConfig,
-    motion,
-} from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import {
     BookMarked,
     Check,
@@ -553,6 +549,19 @@ function SearchContent() {
         return () => document.removeEventListener('pointerdown', onPointerDown);
     }, [suggestOpen, setSuggestOpen]);
 
+    const [filterOpen, setFilterOpen] = useState(false);
+    const filterRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (!filterOpen) return;
+        const onPointerDown = (event: PointerEvent) => {
+            if (!filterRef.current?.contains(event.target as Node)) {
+                setFilterOpen(false);
+            }
+        };
+        document.addEventListener('pointerdown', onPointerDown);
+        return () => document.removeEventListener('pointerdown', onPointerDown);
+    }, [filterOpen]);
+
     const toggleMatches = (itemKey: string) => {
         setExpandedMatches((prev) => {
             const next = new Set(prev);
@@ -570,164 +579,44 @@ function SearchContent() {
         [filters],
     );
 
-    const isVideosSelected = useMemo(
-        () => filters.video && !filters['messenger-audio'] && !filters['quran-study'] && !filters.perspective && !filters.appendix && !filters.quran && !filters.other,
-        [filters],
-    );
 
-    const isAudiosSelected = useMemo(
-        () => (filters['messenger-audio'] || filters['quran-study']) && !filters.video && !filters.perspective && !filters.appendix && !filters.quran && !filters.other,
-        [filters],
-    );
-
-    const isWrittenSelected = useMemo(
-        () => (filters.perspective || filters.appendix || filters.other) && !filters.video && !filters['messenger-audio'] && !filters['quran-study'] && !filters.quran,
-        [filters],
-    );
-
-    const isQuranSelected = useMemo(
-        () => filters.quran && !filters.video && !filters['messenger-audio'] && !filters['quran-study'] && !filters.perspective && !filters.appendix && !filters.other,
-        [filters],
-    );
-
-    const [filterOpen, setFilterOpen] = useState(false);
-
-    type FilterMode = 'all' | 'videos' | 'audios' | 'written' | 'quran';
-
-    const filterOptions: Array<{
-        id: FilterMode;
-        label: string;
-        icon: typeof SlidersHorizontal;
-    }> = [
-        { id: 'all', label: 'All', icon: SlidersHorizontal },
-        { id: 'videos', label: 'Videos', icon: Video },
-        { id: 'audios', label: 'Audios', icon: Headphones },
-        { id: 'written', label: 'Written', icon: FileText },
-        { id: 'quran', label: 'Qur’an', icon: BookMarked },
+    // Labelled list of individual filter keys shown in the checkbox dropdown.
+    const FILTER_CHECKBOXES: Array<{ key: FilterKey; label: string; icon: typeof SlidersHorizontal }> = [
+        { key: 'video',           label: 'Videos',          icon: Video },
+        { key: 'quran-study',     label: 'Qur\u2019an Study', icon: Headphones },
+        { key: 'messenger-audio', label: 'Messenger Audio', icon: Headphones },
+        { key: 'perspective',     label: 'Perspectives',    icon: FileText },
+        { key: 'appendix',        label: 'Appendices',      icon: FileText },
+        { key: 'quran',           label: 'Qur\u2019an Text', icon: BookMarked },
+        { key: 'other',           label: 'Other',           icon: FileText },
     ];
 
-    const activeFilter = useMemo<FilterMode>(() => {
-        if (isAllSelected) return 'all';
-        if (isVideosSelected) return 'videos';
-        if (isAudiosSelected) return 'audios';
-        if (isWrittenSelected) return 'written';
-        if (isQuranSelected) return 'quran';
-        return 'all';
-    }, [isAllSelected, isVideosSelected, isAudiosSelected, isWrittenSelected, isQuranSelected]);
-
-    const activeFilterOption = filterOptions.find((option) => option.id === activeFilter) ?? filterOptions[0];
-
-    const applyFilterPreset = useCallback((mode: FilterMode) => {
-        if (mode === 'all') {
-            setFilters({
-                video: true,
-                'quran-study': true,
-                'messenger-audio': true,
-                perspective: true,
-                appendix: true,
-                quran: true,
-                other: true,
-            });
-            return;
-        }
-
-        if (mode === 'videos') {
-            setFilters({
-                video: true,
-                'quran-study': false,
-                'messenger-audio': false,
-                perspective: false,
-                appendix: false,
-                quran: false,
-                other: false,
-            });
-            return;
-        }
-
-        if (mode === 'audios') {
-            setFilters({
-                video: false,
-                'quran-study': true,
-                'messenger-audio': true,
-                perspective: false,
-                appendix: false,
-                quran: false,
-                other: false,
-            });
-            return;
-        }
-
-        if (mode === 'written') {
-            setFilters({
-                video: false,
-                'quran-study': false,
-                'messenger-audio': false,
-                perspective: true,
-                appendix: true,
-                quran: false,
-                other: true,
-            });
-            return;
-        }
-
-        setFilters({
-            video: false,
-            'quran-study': false,
-            'messenger-audio': false,
-            perspective: false,
-            appendix: false,
-            quran: true,
-            other: false,
+    const toggleFilter = useCallback((key: FilterKey) => {
+        setFilters((prev) => {
+            const next = { ...prev, [key]: !prev[key] };
+            // Never leave every filter off — revert to all-on instead.
+            if (!Object.values(next).some(Boolean)) {
+                return { video: true, 'quran-study': true, 'messenger-audio': true, perspective: true, appendix: true, quran: true, other: true };
+            }
+            return next;
         });
     }, []);
 
-    const selectAllSources = useCallback(() => {
-        applyFilterPreset('all');
-    }, [applyFilterPreset]);
-
-    const clearAllFilters = useCallback(() => {
-        setFilters({
-            video: false,
-            'quran-study': false,
-            'messenger-audio': false,
-            perspective: false,
-            appendix: false,
-            quran: false,
-            other: false,
-        });
-    }, []);
-
-    const selectVideosCategory = useCallback(() => {
-        if (isVideosSelected) {
-            clearAllFilters();
-        } else {
-            applyFilterPreset('videos');
+    const toggleAll = useCallback(() => {
+        if (isAllSelected) {
+            // Already all-on — nothing to do (all-off is disallowed).
+            return;
         }
-    }, [isVideosSelected, clearAllFilters, applyFilterPreset]);
+        setFilters({ video: true, 'quran-study': true, 'messenger-audio': true, perspective: true, appendix: true, quran: true, other: true });
+    }, [isAllSelected]);
 
-    const selectAudiosCategory = useCallback(() => {
-        if (isAudiosSelected) {
-            clearAllFilters();
-        } else {
-            applyFilterPreset('audios');
-        }
-    }, [isAudiosSelected, clearAllFilters, applyFilterPreset]);
-
-    const selectWrittenCategory = useCallback(() => {
-        if (isWrittenSelected) {
-            clearAllFilters();
-        } else {
-            applyFilterPreset('written');
-        }
-    }, [isWrittenSelected, clearAllFilters, applyFilterPreset]);
-
-    const selectQuranCategory = useCallback(() => {
-        if (isQuranSelected) {
-            clearAllFilters();
-        } else {
-            applyFilterPreset('quran');
-        }
-    }, [isQuranSelected, clearAllFilters, applyFilterPreset]);
+    // Human-readable summary for the filter button label.
+    const activeFilterLabel = useMemo(() => {
+        if (isAllSelected) return 'All';
+        const active = FILTER_CHECKBOXES.filter(({ key }) => filters[key]);
+        if (active.length === 1) return active[0].label;
+        return `${active.length} sources`;
+    }, [filters, isAllSelected]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleSearchSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -859,81 +748,95 @@ function SearchContent() {
                                             Search
                                         </button>
 
-                                        <div className="relative flex items-center justify-end sm:justify-center">
-                                            <MotionConfig transition={{ type: 'spring', bounce: 0.25, duration: 0.7 }}>
-                                                <AnimatePresence mode="popLayout" initial={false}>
-                                                    {filterOpen ? (
-                                                        <motion.div
-                                                            key="filter-open"
-                                                            layoutId="search-filter-disclosure"
-                                                            initial={{ opacity: 0 }}
-                                                            animate={{ opacity: 1 }}
-                                                            exit={{ opacity: 0, transition: { duration: 0 } }}
-                                                            style={{ transformOrigin: '50% 100%', borderRadius: 24 }}
-                                                            className="absolute right-0 top-full z-30 mt-2 w-[240px] overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-ed-surface/95 p-1.5 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
+                                        <div ref={filterRef} className="relative flex items-center justify-end sm:justify-center">
+                                            {/* Filter trigger button */}
+                                            <button
+                                                type="button"
+                                                onClick={() => setFilterOpen((o) => !o)}
+                                                className="relative z-30 inline-flex h-11 items-center gap-2 rounded-full border border-ed-rule-strong/80 bg-ed-surface/90 px-3 shadow-[0_8px_24px_-10px_rgba(0,0,0,0.35)] transition-colors hover:border-ed-fg/50 select-none"
+                                                aria-haspopup="listbox"
+                                                aria-expanded={filterOpen}
+                                                aria-label="Filter sources"
+                                            >
+                                                <SlidersHorizontal className="h-4 w-4 text-ed-fg-muted" />
+                                                <span className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg">
+                                                    {activeFilterLabel}
+                                                </span>
+                                                <ChevronDown className={`h-3.5 w-3.5 text-ed-fg-muted transition-transform duration-150 ${filterOpen ? 'rotate-180' : ''}`} />
+                                            </button>
+
+                                            {/* Multi-select checkbox dropdown */}
+                                            <AnimatePresence>
+                                                {filterOpen && (
+                                                    <motion.div
+                                                        key="filter-panel"
+                                                        initial={{ opacity: 0, scale: 0.97, y: -4 }}
+                                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                                        exit={{ opacity: 0, scale: 0.97, y: -4 }}
+                                                        transition={{ duration: 0.12, ease: 'easeOut' }}
+                                                        style={{ transformOrigin: 'top right' }}
+                                                        className="absolute right-0 top-full z-30 mt-2 w-52 overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-ed-surface/95 p-1.5 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
+                                                        role="listbox"
+                                                        aria-label="Filter sources"
+                                                        aria-multiselectable="true"
+                                                    >
+                                                        {/* All toggle */}
+                                                        <button
+                                                            type="button"
+                                                            role="option"
+                                                            aria-selected={isAllSelected}
+                                                            onClick={toggleAll}
+                                                            className="flex w-full cursor-pointer items-center justify-between rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-ed-surface-strong"
                                                         >
-                                                            {filterOptions.map((option, index) => {
-                                                                const Icon = option.icon;
-                                                                const isActive = activeFilter === option.id;
+                                                            <div className="flex items-center gap-3">
+                                                                <SlidersHorizontal className="h-4 w-4 text-ed-fg-muted" />
+                                                                <span className="text-sm font-semibold tracking-tight text-ed-fg">All</span>
+                                                            </div>
+                                                            <div
+                                                                className="flex h-5 w-5 shrink-0 items-center justify-center rounded border-[1.5px] transition-colors duration-100"
+                                                                style={{
+                                                                    backgroundColor: isAllSelected ? 'var(--ed-fg)' : 'transparent',
+                                                                    borderColor: isAllSelected ? 'var(--ed-fg)' : 'var(--color-ed-rule-strong, rgba(0,0,0,0.25))',
+                                                                }}
+                                                            >
+                                                                {isAllSelected && <Check className="h-3 w-3 text-ed-bg" />}
+                                                            </div>
+                                                        </button>
 
-                                                                return (
-                                                                    <motion.button
-                                                                        key={option.id}
-                                                                        type="button"
-                                                                        initial={{ opacity: 0, scale: 1.06, y: 20 }}
-                                                                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                                                                        whileTap={{ scale: 0.98 }}
-                                                                        transition={{ type: 'spring', stiffness: 240, damping: 20, mass: 1, delay: (index + 1) * 0.04 }}
-                                                                        onClick={() => {
-                                                                            applyFilterPreset(option.id);
-                                                                            setFilterOpen(false);
+                                                        {/* Divider */}
+                                                        <div className="mx-2.5 my-1 h-px bg-ed-rule" />
+
+                                                        {/* Individual source checkboxes */}
+                                                        {FILTER_CHECKBOXES.map(({ key, label, icon: Icon }) => {
+                                                            const checked = filters[key];
+                                                            return (
+                                                                <button
+                                                                    key={key}
+                                                                    type="button"
+                                                                    role="option"
+                                                                    aria-selected={checked}
+                                                                    onClick={() => toggleFilter(key)}
+                                                                    className="flex w-full cursor-pointer items-center justify-between rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-ed-surface-strong"
+                                                                >
+                                                                    <div className="flex items-center gap-3">
+                                                                        <Icon className="h-4 w-4 text-ed-fg-muted" />
+                                                                        <span className="text-sm font-semibold tracking-tight text-ed-fg">{label}</span>
+                                                                    </div>
+                                                                    <div
+                                                                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded border-[1.5px] transition-colors duration-100"
+                                                                        style={{
+                                                                            backgroundColor: checked ? 'var(--ed-fg)' : 'transparent',
+                                                                            borderColor: checked ? 'var(--ed-fg)' : 'var(--color-ed-rule-strong, rgba(0,0,0,0.25))',
                                                                         }}
-                                                                        className="flex w-full cursor-pointer items-center justify-between rounded-xl px-2.5 py-2.5 text-left transition-colors hover:bg-ed-surface-strong"
                                                                     >
-                                                                        <div className="flex items-center gap-3">
-                                                                            <Icon className="h-4 w-4 text-ed-fg-muted" />
-                                                                            <span className="text-sm font-semibold tracking-tight text-ed-fg">{option.label}</span>
-                                                                        </div>
-
-                                                                        <motion.div
-                                                                            animate={{
-                                                                                backgroundColor: isActive ? 'var(--ed-fg)' : 'transparent',
-                                                                                borderColor: isActive ? 'var(--ed-fg)' : 'var(--ed-rule-strong)',
-                                                                            }}
-                                                                            className="flex h-5 w-5 items-center justify-center rounded-full border-[1.5px]"
-                                                                        >
-                                                                            <motion.div
-                                                                                animate={{ scale: isActive ? 1 : 0, opacity: isActive ? 1 : 0 }}
-                                                                                transition={{ type: 'spring', stiffness: 520, damping: 30 }}
-                                                                            >
-                                                                                <Check className="h-3 w-3 text-ed-bg" />
-                                                                            </motion.div>
-                                                                        </motion.div>
-                                                                    </motion.button>
-                                                                );
-                                                            })}
-                                                        </motion.div>
-                                                    ) : null}
-                                                </AnimatePresence>
-
-                                                <motion.button
-                                                    type="button"
-                                                    layoutId="search-filter-disclosure"
-                                                    initial={{ opacity: 0 }}
-                                                    animate={{ opacity: 1 }}
-                                                    exit={{ opacity: 0, transition: { duration: 0 } }}
-                                                    whileHover={{ scale: 1.02 }}
-                                                    whileTap={{ scale: 0.97 }}
-                                                    onClick={() => setFilterOpen((open) => !open)}
-                                                    className="relative z-30 inline-flex h-11 items-center gap-2 rounded-full border border-ed-rule-strong/80 bg-ed-surface/90 px-3 shadow-[0_8px_24px_-10px_rgba(0,0,0,0.35)] transition-all hover:border-ed-fg/50"
-                                                >
-                                                    <SlidersHorizontal className="h-4 w-4 text-ed-fg-muted" />
-                                                    <span className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg">
-                                                        {activeFilterOption.label}
-                                                    </span>
-                                                    <ChevronDown className={`h-3.5 w-3.5 text-ed-fg-muted transition-transform ${filterOpen ? 'rotate-180' : ''}`} />
-                                                </motion.button>
-                                            </MotionConfig>
+                                                                        {checked && <Check className="h-3 w-3 text-ed-bg" />}
+                                                                    </div>
+                                                                </button>
+                                                            );
+                                                        })}
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
                                         </div>
                                     </div>
                                 </form>

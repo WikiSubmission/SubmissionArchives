@@ -1720,4 +1720,9 @@ mark.pdf-search-highlight {
   border-radius: 2px;
   padding: 0 2px;
   color: inherit;
-}
+}
+
+/* Header nav link hover (matches zfsf.html) */
+.header-nav-link:hover {
+  color: #9E9690 !important;
+}
