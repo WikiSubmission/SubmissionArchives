@@ -15,10 +15,17 @@ import {
     X,
 } from 'lucide-react';
 import Link from 'next/link';
-import { chromeButtonClassLg, toolbarButtonClass } from '@/components/home/WidgetAccents';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
 import CiteButton from '@/components/ui/CiteButton';
 import PDFReaderClient from './PDFReaderWrapper';
+
+const toolbarButtonClass =
+    'inline-flex min-h-11 min-w-11 items-center justify-center rounded-[6px] text-[#9E9690] transition-all hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95 disabled:pointer-events-none disabled:opacity-30';
+
+const chromeButtonClassLg =
+    'inline-flex h-11 min-w-11 items-center justify-center rounded-[6px] border border-[#2A2928] bg-[#161514] px-2.5 text-[#9E9690] transition-all hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95 disabled:pointer-events-none disabled:opacity-30';
+
+const headingFontStyle = { fontFamily: 'var(--font-source-serif), Georgia, serif' };
 
 type BlockType = {
     type: string;
@@ -127,7 +134,7 @@ export default function NewsletterViewer({
             <>
                 {parts.map((part, i) =>
                     part && highlightTerms.some((term) => term.toLowerCase() === part.toLowerCase()) ? (
-                        <mark key={i} className="newsletter-highlight bg-ed-accent/30 text-ed-accent rounded px-1">
+                        <mark key={i} className="newsletter-highlight rounded-[2px] bg-[rgba(200,121,74,0.25)] px-[2px] text-inherit">
                             {part}
                         </mark>
                     ) : (
@@ -203,16 +210,16 @@ export default function NewsletterViewer({
     // If facsimile mode is selected and pdfUrl is present, render the PDF Reader client
     if (viewKind === 'facsimile' && pdfUrl) {
         return (
-            <div className="h-screen w-screen flex flex-col bg-ed-bg overflow-hidden">
-                <div className="flex items-center justify-between px-4 py-2 bg-ed-surface border-b border-ed-rule">
+            <div className="h-screen w-screen flex flex-col bg-[#0F0E0D] overflow-hidden">
+                <div className="flex items-center justify-between px-4 py-2 bg-[#161514] border-b border-[#2A2928]">
                     <button
                         type="button"
                         onClick={() => setViewKind('text')}
-                        className="soft-pill flex items-center gap-2 px-3 py-1.5 text-xs font-semibold text-ed-accent"
+                        className="flex items-center gap-2 rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 py-1.5 text-xs font-semibold text-[#C8794A] transition-colors hover:border-[#353433] hover:bg-[#1C1B1A]"
                     >
                         <FileText className="h-3.5 w-3.5" /> Return to Editorial Transcript
                     </button>
-                    <span className="text-xs text-ed-fg-muted font-mono">{issue.date_label} Facsimile Scan</span>
+                    <span className="text-xs text-[#9E9690] font-mono">{issue.date_label} Facsimile Scan</span>
                 </div>
                 <div className="flex-1 min-h-0">
                     <PDFReaderClient
@@ -231,9 +238,9 @@ export default function NewsletterViewer({
     }
 
     return (
-        <main id="main-content" className="min-h-screen bg-ed-bg text-ed-fg relative">
+        <main id="main-content" className="min-h-screen bg-[#0F0E0D] text-[#F5F0EB] relative">
             {/* Header */}
-            <header className="sticky top-16 z-30 flex flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg/95 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-3.5">
+            <header className="sticky top-16 z-30 flex flex-wrap items-center justify-between gap-3 border-b border-[#2A2928] bg-[#0F0E0D]/95 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-3.5">
                 <div className="flex min-w-0 items-center gap-3 sm:gap-4">
                     <Link
                         href={backHref}
@@ -243,21 +250,24 @@ export default function NewsletterViewer({
                         <ArrowLeft size={18} />
                     </Link>
                     <div className="min-w-0">
-                        <h1 className="truncate text-base sm:text-lg font-bold tracking-tight text-ed-fg">
+                        <h1
+                            className="truncate text-base sm:text-lg font-bold tracking-tight text-[#F5F0EB]"
+                            style={headingFontStyle}
+                        >
                             Submitters Perspective
                         </h1>
-                        <p className="truncate text-xs font-mono text-ed-fg-muted">{issue.date_label}</p>
+                        <p className="truncate text-xs font-mono text-[#6B6560]">{issue.date_label}</p>
                     </div>
                 </div>
 
                 <div className="flex items-center gap-1.5 flex-wrap">
                     {/* In-Document Search Match Count */}
                     {matchCount > 0 && (
-                        <div className="flex items-center gap-1 rounded-full border border-ed-rule bg-ed-surface px-2.5 py-1 text-xs">
+                        <div className="flex items-center gap-1 rounded-[4px] border border-[#2A2928] bg-[#161514] px-2.5 py-1 text-xs text-[#9E9690]">
                             <button
                                 type="button"
                                 onClick={() => jumpToMatch('prev')}
-                                className="p-0.5 hover:text-ed-accent transition-colors"
+                                className="p-0.5 hover:text-[#C8794A] transition-colors"
                                 aria-label="Previous match"
                             >
                                 <ChevronUp className="h-3.5 w-3.5" />
@@ -268,7 +278,7 @@ export default function NewsletterViewer({
                             <button
                                 type="button"
                                 onClick={() => jumpToMatch('next')}
-                                className="p-0.5 hover:text-ed-accent transition-colors"
+                                className="p-0.5 hover:text-[#C8794A] transition-colors"
                                 aria-label="Next match"
                             >
                                 <ChevronDown className="h-3.5 w-3.5" />
@@ -281,7 +291,7 @@ export default function NewsletterViewer({
                         <button
                             type="button"
                             onClick={() => setDrawerOpen((s) => !s)}
-                            className={`${toolbarButtonClass} ${drawerOpen ? 'text-ed-accent bg-ed-accent/10' : ''}`}
+                            className={`${toolbarButtonClass} ${drawerOpen ? 'text-[#C8794A] bg-[#C8794A]/10' : ''}`}
                             title="Table of Contents / Articles"
                             aria-label="Table of contents"
                         >
@@ -294,7 +304,7 @@ export default function NewsletterViewer({
                         <button
                             type="button"
                             onClick={() => setShowTypePopover((s) => !s)}
-                            className={`${toolbarButtonClass} ${showTypePopover ? 'text-ed-accent bg-ed-accent/10' : ''}`}
+                            className={`${toolbarButtonClass} ${showTypePopover ? 'text-[#C8794A] bg-[#C8794A]/10' : ''}`}
                             title="Reading appearance & font size"
                             aria-label="Reading appearance"
                         >
@@ -302,34 +312,34 @@ export default function NewsletterViewer({
                         </button>
 
                         {showTypePopover && (
-                            <div className="reader-popover w-64 p-3 space-y-3">
-                                <div className="flex items-center justify-between text-xs font-mono uppercase tracking-widest text-ed-fg-muted pb-1 border-b border-ed-rule">
+                            <div className="absolute right-0 top-full z-30 mt-2 w-64 min-w-[180px] space-y-3 rounded-[8px] border border-[#2A2928] bg-[#161514] p-3 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.4)]">
+                                <div className="flex items-center justify-between text-xs font-mono uppercase tracking-widest text-[#6B6560] pb-1 border-b border-[#2A2928]">
                                     <span>Typography</span>
-                                    <button onClick={() => setShowTypePopover(false)} className="p-0.5 hover:text-ed-fg">
+                                    <button onClick={() => setShowTypePopover(false)} className="p-0.5 hover:text-[#F5F0EB]">
                                         <X className="h-3.5 w-3.5" />
                                     </button>
                                 </div>
 
                                 {/* Font Size */}
                                 <div className="space-y-1.5">
-                                    <div className="text-[11px] text-ed-fg-muted">Font Size</div>
-                                    <div className="flex items-center justify-between gap-1 bg-ed-surface-strong/60 p-1 rounded-lg">
+                                    <div className="text-[11px] text-[#6B6560]">Font Size</div>
+                                    <div className="flex items-center justify-between gap-1 bg-[#1C1B1A] p-1 rounded-[6px]">
                                         <button
                                             type="button"
                                             disabled={fontSizeIndex <= 0}
                                             onClick={() => setFontSizeIndex((i) => Math.max(0, i - 1))}
-                                            className="px-2.5 py-1 text-xs font-bold rounded hover:bg-ed-surface disabled:opacity-30"
+                                            className="px-2.5 py-1 text-xs font-bold rounded-[4px] hover:bg-[#1E1D1C] disabled:opacity-30"
                                         >
                                             A-
                                         </button>
-                                        <span className="text-[11px] font-mono text-ed-accent">
+                                        <span className="text-[11px] font-mono text-[#C8794A]">
                                             {fontLabels[fontSizeIndex]}
                                         </span>
                                         <button
                                             type="button"
                                             disabled={fontSizeIndex >= fontSizes.length - 1}
                                             onClick={() => setFontSizeIndex((i) => Math.min(fontSizes.length - 1, i + 1))}
-                                            className="px-2.5 py-1 text-xs font-bold rounded hover:bg-ed-surface disabled:opacity-30"
+                                            className="px-2.5 py-1 text-xs font-bold rounded-[4px] hover:bg-[#1E1D1C] disabled:opacity-30"
                                         >
                                             A+
                                         </button>
@@ -338,13 +348,13 @@ export default function NewsletterViewer({
 
                                 {/* Font Family */}
                                 <div className="space-y-1.5">
-                                    <div className="text-[11px] text-ed-fg-muted">Font Style</div>
+                                    <div className="text-[11px] text-[#6B6560]">Font Style</div>
                                     <div className="grid grid-cols-2 gap-1.5">
                                         <button
                                             type="button"
                                             onClick={() => setFontFamily('serif')}
-                                            className={`py-1 px-2 rounded text-xs font-serif border ${
-                                                fontFamily === 'serif' ? 'border-ed-accent bg-ed-accent/15 text-ed-accent' : 'border-ed-rule hover:bg-ed-surface'
+                                            className={`py-1 px-2 rounded-[4px] text-xs font-serif border transition-colors ${
+                                                fontFamily === 'serif' ? 'border-[#C8794A]/40 bg-[#C8794A]/10 text-[#C8794A] font-semibold' : 'border-[#2A2928] text-[#9E9690] hover:border-[#353433] hover:bg-[#1C1B1A]'
                                             }`}
                                         >
                                             Serif
@@ -352,8 +362,8 @@ export default function NewsletterViewer({
                                         <button
                                             type="button"
                                             onClick={() => setFontFamily('sans')}
-                                            className={`py-1 px-2 rounded text-xs font-sans border ${
-                                                fontFamily === 'sans' ? 'border-ed-accent bg-ed-accent/15 text-ed-accent' : 'border-ed-rule hover:bg-ed-surface'
+                                            className={`py-1 px-2 rounded-[4px] text-xs font-sans border transition-colors ${
+                                                fontFamily === 'sans' ? 'border-[#C8794A]/40 bg-[#C8794A]/10 text-[#C8794A] font-semibold' : 'border-[#2A2928] text-[#9E9690] hover:border-[#353433] hover:bg-[#1C1B1A]'
                                             }`}
                                         >
                                             Modern Sans
@@ -363,13 +373,13 @@ export default function NewsletterViewer({
 
                                 {/* Reading Width */}
                                 <div className="space-y-1.5">
-                                    <div className="text-[11px] text-ed-fg-muted">Reading Width</div>
+                                    <div className="text-[11px] text-[#6B6560]">Reading Width</div>
                                     <div className="grid grid-cols-2 gap-1.5">
                                         <button
                                             type="button"
                                             onClick={() => setReadingWidth('standard')}
-                                            className={`py-1 px-2 rounded text-xs border ${
-                                                readingWidth === 'standard' ? 'border-ed-accent bg-ed-accent/15 text-ed-accent' : 'border-ed-rule hover:bg-ed-surface'
+                                            className={`py-1 px-2 rounded-[4px] text-xs border transition-colors ${
+                                                readingWidth === 'standard' ? 'border-[#C8794A]/40 bg-[#C8794A]/10 text-[#C8794A] font-semibold' : 'border-[#2A2928] text-[#9E9690] hover:border-[#353433] hover:bg-[#1C1B1A]'
                                             }`}
                                         >
                                             Standard
@@ -377,8 +387,8 @@ export default function NewsletterViewer({
                                         <button
                                             type="button"
                                             onClick={() => setReadingWidth('wide')}
-                                            className={`py-1 px-2 rounded text-xs border ${
-                                                readingWidth === 'wide' ? 'border-ed-accent bg-ed-accent/15 text-ed-accent' : 'border-ed-rule hover:bg-ed-surface'
+                                            className={`py-1 px-2 rounded-[4px] text-xs border transition-colors ${
+                                                readingWidth === 'wide' ? 'border-[#C8794A]/40 bg-[#C8794A]/10 text-[#C8794A] font-semibold' : 'border-[#2A2928] text-[#9E9690] hover:border-[#353433] hover:bg-[#1C1B1A]'
                                             }`}
                                         >
                                             Wide
@@ -394,7 +404,7 @@ export default function NewsletterViewer({
                         <button
                             type="button"
                             onClick={() => setViewKind('facsimile')}
-                            className="soft-pill hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-ed-accent transition-colors hover:bg-ed-accent/10"
+                            className="hidden sm:flex items-center gap-1.5 rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 py-1.5 text-xs font-semibold text-[#C8794A] transition-colors hover:border-[#353433] hover:bg-[#1C1B1A]"
                             title="View original scanned PDF facsimile"
                         >
                             <FileText className="h-3.5 w-3.5" /> Facsimile PDF
@@ -403,7 +413,7 @@ export default function NewsletterViewer({
 
                     {/* Issue Prev / Next */}
                     {(prevId || nextId) && (
-                        <div className="flex items-center gap-0.5 border-l border-ed-rule pl-1.5 ml-1">
+                        <div className="flex items-center gap-0.5 border-l border-[#2A2928] pl-1.5 ml-1">
                             {prevId && (
                                 <Link
                                     href={`/library/${prevId}`}
@@ -437,12 +447,12 @@ export default function NewsletterViewer({
             <div className="flex flex-1 overflow-hidden relative">
                 {/* Article Outline Drawer */}
                 {drawerOpen && (
-                    <aside className="w-64 sm:w-72 shrink-0 border-r border-ed-rule bg-ed-surface/70 backdrop-blur-xl p-4 overflow-y-auto z-20 space-y-3">
-                        <div className="flex items-center justify-between pb-2 border-b border-ed-rule">
-                            <span className="text-xs font-mono uppercase tracking-widest text-ed-fg-muted">
+                    <aside className="w-64 sm:w-72 shrink-0 border-r border-[#2A2928] bg-[#161514]/70 backdrop-blur-xl p-4 overflow-y-auto z-20 space-y-3">
+                        <div className="flex items-center justify-between pb-2 border-b border-[#2A2928]">
+                            <span className="text-xs font-mono uppercase tracking-widest text-[#6B6560]">
                                 Issue Contents
                             </span>
-                            <button onClick={() => setDrawerOpen(false)} className="p-1 text-ed-fg-muted hover:text-ed-fg">
+                            <button onClick={() => setDrawerOpen(false)} className="p-1 text-[#6B6560] hover:text-[#F5F0EB]">
                                 <X className="h-4 w-4" />
                             </button>
                         </div>
@@ -454,11 +464,11 @@ export default function NewsletterViewer({
                                     onClick={() => {
                                         if (window.innerWidth < 768) setDrawerOpen(false);
                                     }}
-                                    className="block p-2 rounded-lg text-xs font-medium text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface-strong transition-colors"
+                                    className="block p-2 rounded-[4px] text-xs font-medium text-[#6B6560] hover:text-[#F5F0EB] hover:bg-[#1C1B1A] transition-colors"
                                 >
                                     <div className="flex items-center justify-between gap-2">
                                         <span className="truncate">{art.title}</span>
-                                        <span className="font-mono text-[10px] text-ed-accent shrink-0">
+                                        <span className="font-mono text-[10px] text-[#C8794A] shrink-0">
                                             p.{art.pageNumber}
                                         </span>
                                     </div>
@@ -473,16 +483,17 @@ export default function NewsletterViewer({
                     id="newsletter-content"
                     className={`flex-1 overflow-y-auto px-4 py-8 sm:py-12 sm:px-8 mx-auto ${
                         readingWidth === 'wide' ? 'max-w-5xl' : 'max-w-3xl'
-                    } ${fontFamily === 'serif' ? 'font-serif' : 'font-sans'} space-y-12 sm:space-y-16`}
+                    } ${fontFamily === 'sans' ? 'font-sans' : ''} space-y-12 sm:space-y-16`}
+                    style={fontFamily === 'serif' ? { fontFamily: 'var(--font-newsreader), Georgia, serif' } : undefined}
                 >
                     {pages.map((page: PageType, pIdx: number) => (
                         <div
                             key={pIdx}
                             id={`page-${page.page_number}`}
-                            className="space-y-10 pb-12 border-b border-ed-rule last:border-0 relative scroll-mt-24"
+                            className="space-y-10 pb-12 border-b border-[#2A2928] last:border-0 relative scroll-mt-24"
                         >
                             {/* Page header marker */}
-                            <div className="flex items-center justify-between text-xs font-mono text-ed-fg-muted/60 pb-2 border-b border-ed-rule/40 uppercase tracking-widest">
+                            <div className="flex items-center justify-between text-xs font-mono text-[#6B6560]/60 pb-2 border-b border-[#2A2928]/40 uppercase tracking-widest">
                                 <span>Page {page.page_number}</span>
                                 <span>{issue.date_label}</span>
                             </div>
@@ -494,11 +505,14 @@ export default function NewsletterViewer({
                                 return (
                                     <article className="space-y-6">
                                         {pageTitle && (
-                                            <h3 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-ed-fg">
+                                            <h3
+                                                className="text-2xl sm:text-3xl font-bold tracking-tight text-[#F5F0EB]"
+                                                style={headingFontStyle}
+                                            >
                                                 {highlightText(pageTitle)}
                                             </h3>
                                         )}
-                                        <div className={`space-y-5 text-ed-fg/90 whitespace-pre-line ${fontSizes[fontSizeIndex]}`}>
+                                        <div className={`space-y-5 text-[#F5F0EB]/90 whitespace-pre-line ${fontSizes[fontSizeIndex]}`}>
                                             {paragraphs.map((p, i) => {
                                                 const blockId = `p-${pIdx}-${i}`;
                                                 return (
@@ -507,7 +521,7 @@ export default function NewsletterViewer({
                                                         <button
                                                             type="button"
                                                             onClick={() => handleCopyParagraph(p, blockId)}
-                                                            className="absolute -right-8 top-1 opacity-0 group-hover:opacity-100 transition-opacity p-1 text-ed-fg-muted hover:text-ed-accent"
+                                                            className="absolute -right-8 top-1 opacity-0 group-hover:opacity-100 transition-opacity p-1 text-[#6B6560] hover:text-[#C8794A]"
                                                             title="Copy quote"
                                                         >
                                                             {copiedBlockId === blockId ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
@@ -528,19 +542,22 @@ export default function NewsletterViewer({
                                         <div
                                             key={bIdx}
                                             id={blockId}
-                                            className="text-center space-y-4 pb-8 mb-8 border-b-2 border-ed-accent/20"
+                                            className="text-center space-y-4 pb-8 mb-8 border-b-2 border-[#C8794A]/20"
                                         >
                                             {block.arabic_header && (
-                                                <p className="text-2xl text-ed-fg-muted font-arabic leading-loose">
+                                                <p className="text-2xl text-[#9E9690] font-arabic leading-loose">
                                                     {block.arabic_header}
                                                 </p>
                                             )}
-                                            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-extrabold leading-[1.08] tracking-[-0.03em] text-ed-fg">
+                                            <h2
+                                                className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.08] tracking-[-0.03em] text-[#F5F0EB]"
+                                                style={headingFontStyle}
+                                            >
                                                 {highlightText(block.title || 'MUSLIM PERSPECTIVE')}
                                             </h2>
-                                            <div className="flex justify-center items-center gap-4 text-xs font-mono uppercase tracking-widest text-ed-fg-muted">
+                                            <div className="flex justify-center items-center gap-4 text-xs font-mono uppercase tracking-widest text-[#6B6560]">
                                                 <span>{block.publisher}</span>
-                                                <span className="w-1.5 h-1.5 rounded-full bg-ed-accent/50"></span>
+                                                <span className="w-1.5 h-1.5 rounded-full bg-[#C8794A]/50"></span>
                                                 <span>{block.date}</span>
                                             </div>
                                         </div>
@@ -551,11 +568,14 @@ export default function NewsletterViewer({
                                     return (
                                         <article key={bIdx} id={blockId} className="space-y-6">
                                             {block.title && (
-                                                <h3 className="text-xl sm:text-2xl font-display font-bold leading-[1.25] tracking-[-0.018em] text-ed-fg">
+                                                <h3
+                                                    className="text-xl sm:text-2xl font-bold leading-[1.25] tracking-[-0.018em] text-[#F5F0EB]"
+                                                    style={headingFontStyle}
+                                                >
                                                     {highlightText(block.title)}
                                                 </h3>
                                             )}
-                                            <div className={`space-y-5 text-ed-fg/90 ${fontSizes[fontSizeIndex]}`}>
+                                            <div className={`space-y-5 text-[#F5F0EB]/90 ${fontSizes[fontSizeIndex]}`}>
                                                 {block.paragraphs?.map((p: string, i: number) => {
                                                     const paraId = `${blockId}-p-${i}`;
                                                     return (
@@ -564,7 +584,7 @@ export default function NewsletterViewer({
                                                             <button
                                                                 type="button"
                                                                 onClick={() => handleCopyParagraph(p, paraId)}
-                                                                className="absolute -right-8 top-1 opacity-0 group-hover:opacity-100 transition-opacity p-1 text-ed-fg-muted hover:text-ed-accent"
+                                                                className="absolute -right-8 top-1 opacity-0 group-hover:opacity-100 transition-opacity p-1 text-[#6B6560] hover:text-[#C8794A]"
                                                                 title="Copy quote"
                                                             >
                                                                 {copiedBlockId === paraId ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
@@ -582,15 +602,18 @@ export default function NewsletterViewer({
                                         <aside
                                             key={bIdx}
                                             id={blockId}
-                                            className="my-8 rounded-2xl border border-ed-accent/20 bg-ed-accent/5 p-6 sm:p-8"
+                                            className="my-8 rounded-[12px] border border-[#C8794A]/20 bg-[#C8794A]/5 p-6 sm:p-8"
                                         >
                                             {block.title && (
-                                                <h4 className="text-xl font-display font-bold tracking-tight text-ed-accent mb-4">
+                                                <h4
+                                                    className="text-xl font-bold tracking-tight text-[#C8794A] mb-4"
+                                                    style={headingFontStyle}
+                                                >
                                                     {highlightText(block.title)}
                                                 </h4>
                                             )}
                                             {block.text && (
-                                                <p className={`text-ed-fg leading-relaxed ${fontSizes[fontSizeIndex]}`}>
+                                                <p className={`text-[#F5F0EB] leading-relaxed ${fontSizes[fontSizeIndex]}`}>
                                                     {highlightText(block.text)}
                                                 </p>
                                             )}
@@ -602,11 +625,14 @@ export default function NewsletterViewer({
                                     return (
                                         <div key={bIdx} id={blockId} className="space-y-4 my-8">
                                             {block.title && (
-                                                <h4 className="text-xl font-display font-semibold tracking-tight text-ed-fg">
+                                                <h4
+                                                    className="text-xl font-semibold tracking-tight text-[#F5F0EB]"
+                                                    style={headingFontStyle}
+                                                >
                                                     {highlightText(block.title)}
                                                 </h4>
                                             )}
-                                            <ul className={`list-disc pl-6 space-y-3 text-ed-fg/90 ${fontSizes[fontSizeIndex]}`}>
+                                            <ul className={`list-disc pl-6 space-y-3 text-[#F5F0EB]/90 ${fontSizes[fontSizeIndex]}`}>
                                                 {block.items?.map((item: string, i: number) => (
                                                     <li key={i}>{highlightText(item)}</li>
                                                 ))}
@@ -627,7 +653,7 @@ export default function NewsletterViewer({
                 <button
                     type="button"
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="rounded-full border border-ed-rule bg-ed-surface/90 p-3 shadow-lg backdrop-blur-xl hover:bg-ed-surface transition-colors"
+                    className="rounded-full border border-[#2A2928] bg-[#161514]/90 p-3 shadow-lg backdrop-blur-xl hover:bg-[#1C1B1A] transition-colors"
                     aria-label="Back to top"
                     title="Back to top"
                 >

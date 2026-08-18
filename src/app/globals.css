@@ -118,6 +118,19 @@
 
   /* Film grain (SVG turbulence, tiled) */
   --ed-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+
+  /* Font aliases as plain (unlayered) declarations, not @theme tokens: Tailwind's
+     @layer theme only emits --font-sans at :root as `var(--font-inter), ...`,
+     but --font-inter itself is only defined on <body> (via next/font's variable
+     class), so it's invalid at :root and that invalidity inherits straight back
+     down — every element's `var(--font-sans)` was silently falling back to the
+     browser default. Literal family names sidestep the scope mismatch entirely
+     and match the @font-face rules next/font already injects. Custom keys like
+     --font-source-serif never even got emitted by @theme in the first place. */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-source-serif: 'Source Serif 4', Georgia, serif;
+  --font-newsreader: 'Newsreader', Georgia, serif;
 }
 
 @theme {

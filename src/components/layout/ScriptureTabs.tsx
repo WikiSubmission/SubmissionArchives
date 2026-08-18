@@ -84,7 +84,7 @@ export default function ScriptureTabs() {
       className="mt-8 w-full max-w-4xl"
       aria-label="Scripture navigation"
     >
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 p-1.5 rounded-2xl border border-ed-rule bg-ed-surface/80 dark:bg-white/[0.03] backdrop-blur-2xl shadow-lg">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 p-1.5 rounded-[8px] border border-[#2A2928] bg-[#161514] backdrop-blur-2xl shadow-lg">
         {ALL_TABS.map((tab) => {
           const isActive = tab.match(pathname);
           const Icon = tab.icon;
@@ -94,17 +94,17 @@ export default function ScriptureTabs() {
               key={tab.href}
               href={tab.href}
               className={cn(
-                'group relative flex flex-col items-center justify-center gap-1.5 rounded-xl px-3 py-2.5 text-center transition-colors duration-200 active:scale-[0.97]',
+                'group relative flex flex-col items-center justify-center gap-1.5 rounded-[6px] px-3 py-2.5 text-center transition-colors duration-200 active:scale-[0.97]',
                 isActive
-                  ? 'text-ed-bg font-semibold'
-                  : 'text-ed-fg-muted hover:text-ed-fg',
+                  ? 'text-[#C8794A] font-semibold'
+                  : 'text-[#6B6560] hover:text-[#9E9690]',
               )}
               aria-current={isActive ? 'page' : undefined}
             >
               {isActive && (
                 <motion.div
                   layoutId="active-scripture-tab-pill"
-                  className="absolute inset-0 rounded-xl bg-ed-fg shadow-md"
+                  className="absolute inset-0 rounded-[6px] border border-[#C8794A]/40 bg-[#C8794A]/[0.08] shadow-sm"
                   transition={{
                     type: 'spring',
                     stiffness: 380,
@@ -117,7 +117,7 @@ export default function ScriptureTabs() {
                 <Icon
                   className={cn(
                     'h-4 w-4 shrink-0 transition-colors duration-200',
-                    isActive ? 'text-ed-bg' : 'text-ed-fg-muted group-hover:text-ed-fg',
+                    isActive ? 'text-[#C8794A]' : 'text-[#6B6560] group-hover:text-[#9E9690]',
                   )}
                   weight={isActive ? 'fill' : 'regular'}
                 />
@@ -130,8 +130,8 @@ export default function ScriptureTabs() {
                 className={cn(
                   'relative z-10 rounded-full px-2 py-0.5 text-[10px] font-mono font-medium leading-none tabular-nums transition-colors duration-200',
                   isActive
-                    ? 'bg-ed-bg/15 text-ed-bg'
-                    : 'bg-black/5 dark:bg-white/[0.08] text-ed-fg-muted group-hover:text-ed-fg',
+                    ? 'bg-[#C8794A]/15 text-[#C8794A]'
+                    : 'bg-[#0F0E0D] text-[#6B6560] group-hover:text-[#9E9690]',
                 )}
               >
                 {tab.count}
