@@ -25,7 +25,6 @@ import { getHighlightTerms } from '@/lib/search/queryMatch';
 import { hasOperators, parseAdvancedQuery } from '@/lib/search/queryParser';
 import { logSearchEvent } from '@/lib/search/analytics';
 import { useSearchKeyboardNav } from './useSearchKeyboardNav';
-import { GlassSheen } from '@/components/home/WidgetAccents';
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
 
 type FilterKey =
@@ -110,19 +109,19 @@ function readStoredFilters(): Record<FilterKey, boolean> | null {
         return null;
     }
 }
-const OPERATOR_CHIP_CLASS = 'rounded-full border border-ed-accent/30 bg-ed-accent/10 px-2.5 py-1 font-mono text-[0.68rem] text-ed-accent';
+const OPERATOR_CHIP_CLASS = 'rounded-[4px] border border-[#C8794A]/30 bg-[#C8794A]/10 px-2.5 py-1 font-mono text-[0.68rem] text-[#C8794A]';
 
 function SuggestionIcon({ type }: { type: string }) {
     if (type === 'video' || type === 'video-program' || type === 'sermon') {
-        return <Video className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+        return <Video className="h-3.5 w-3.5 shrink-0 text-[#6B6560]" aria-hidden="true" />;
     }
     if (type === 'quran-study' || type === 'messenger-audio' || type === 'audio') {
-        return <Headphones className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+        return <Headphones className="h-3.5 w-3.5 shrink-0 text-[#6B6560]" aria-hidden="true" />;
     }
     if (type === 'quran') {
-        return <BookMarked className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+        return <BookMarked className="h-3.5 w-3.5 shrink-0 text-[#6B6560]" aria-hidden="true" />;
     }
-    return <FileText className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+    return <FileText className="h-3.5 w-3.5 shrink-0 text-[#6B6560]" aria-hidden="true" />;
 }
 
 function formatResult(item: SearchResult): SearchResult {
@@ -633,46 +632,58 @@ function SearchContent() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
-            <div className="mx-auto max-w-5xl px-3 sm:px-4 lg:px-6 py-6">
-                <div className="flex flex-col gap-6">
-                    
-                    {/* ==========================================================================
-                       MAIN SEARCH FEED
-                       ========================================================================== */}
-                    <main className="min-w-0 flex-1 space-y-6">
-                        
-                        {/* Search Control Bar Header Card */}
-                        <div className="group relative flex flex-col overflow-visible rounded-none border-0 bg-transparent shadow-none backdrop-blur-none transition-all duration-300">
-                            <GlassSheen />
-                            
-                            {/* Window Title Bar */}
-                            <div className="flex min-h-12 items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-6 bg-ed-surface-strong/40 select-none">
-                                <div className="flex items-center gap-3">
-                                    <div className="flex items-center gap-1.5" aria-hidden="true">
-                                        <span className="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-600/40" />
-                                        <span className="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-600/40" />
-                                        <span className="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-600/40" />
-                                    </div>
-                                    <span className="h-3.5 w-px bg-ed-rule-strong/60" aria-hidden="true" />
-                                    <div>
-                                        <p className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
-                                            Universal Search · <span className="text-ed-fg font-bold">Cross-Corpus Index</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span className="rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.62rem] font-bold text-ed-fg-muted uppercase tracking-wider">
-                                    Live Query
-                                </span>
-                            </div>
+        <div className="relative min-h-screen bg-[#0F0E0D] text-[#F5F0EB] font-sans antialiased selection:bg-[#C8794A]/25 selection:text-[#F5F0EB]">
+            <div
+                aria-hidden
+                className="pointer-events-none fixed inset-0 z-0"
+                style={{
+                    background:
+                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.025) 0%, transparent 70%), ' +
+                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.015) 0%, transparent 70%)',
+                }}
+            />
 
-                            <div className="p-4 sm:p-6 space-y-4">
+            <main id="main-content" className="relative z-[1] overflow-hidden">
+                <div className="mx-auto max-w-[880px] px-4 py-8 sm:px-7 lg:py-12">
+                    {/* Breadcrumb */}
+                    <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-[#4A4542]">
+                        <Link href="/" className="text-[#6B6560] transition-colors hover:text-[#C8794A]">
+                            Submission Archives
+                        </Link>
+                        <span className="text-[#353433]">/</span>
+                        <span className="text-[#6B6560]">Search</span>
+                    </nav>
+
+                    {/* Hero Header */}
+                    <header className="mb-7 border-b border-[#2A2928] pb-7">
+                        <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-[#C8794A]/15 bg-[#C8794A]/[0.06] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">
+                            <Search className="h-3 w-3" />
+                            Universal Search Index
+                        </div>
+                        <h1
+                            className="mb-3 text-[clamp(28px,3.6vw,40px)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]"
+                            style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                        >
+                            Search the Archive
+                        </h1>
+                        <p
+                            className="max-w-2xl text-[15.5px] leading-[1.6] text-[#9E9690]"
+                            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                        >
+                            Query transcripts, perspectives, and appendices across the full preserved corpus.
+                        </p>
+                    </header>
+
+                    <div className="space-y-6">
+
+                        {/* Search Control Card */}
+                        <div className="rounded-[8px] border border-[#2A2928] bg-[#161514] p-4 sm:p-6 space-y-4">
                                 <form
                                     onSubmit={handleSearchSubmit}
                                     className="relative flex w-full flex-col gap-3 sm:flex-row sm:items-center"
                                 >
                                     <div ref={searchFieldRef} className="relative z-20 min-w-0 flex-1">
-                                        <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
+                                        <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#4A4542]" />
                                         <input
                                             id="archive-search-input"
                                             name="q"
@@ -681,7 +692,7 @@ function SearchContent() {
                                             onChange={(event) => setQuery(event.target.value)}
                                             placeholder="Search transcripts, perspectives, appendices..."
                                             aria-label="Search transcripts, perspectives, appendices"
-                                            className="archive-input w-full py-2.5 pl-11 pr-11 text-sm sm:text-base rounded-2xl border border-ed-rule-strong/70 bg-ed-surface/80 text-ed-fg backdrop-blur-xl focus:border-ed-fg focus:bg-ed-surface shadow-inner transition-all"
+                                            className="w-full rounded-[4px] border border-[#2A2928] bg-[#161514] py-2.5 pl-10 pr-10 text-sm sm:text-base text-[#F5F0EB] placeholder:text-[#4A4542] outline-none transition-all focus:border-[#353433] focus:bg-[#1C1B1A]"
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Escape' && suggestOpen) {
                                                     event.preventDefault();
@@ -700,7 +711,7 @@ function SearchContent() {
                                             <button
                                                 type="button"
                                                 onClick={clearSearchQuery}
-                                                className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full p-1 text-ed-fg-muted hover:text-ed-fg"
+                                                className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-[4px] p-1 text-[#6B6560] hover:text-[#F5F0EB]"
                                                 aria-label="Clear search query"
                                             >
                                                 <X className="h-4 w-4" />
@@ -712,7 +723,7 @@ function SearchContent() {
                                                 id="search-suggestions"
                                                 role="listbox"
                                                 aria-label="Title suggestions"
-                                                className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-2xl border border-ed-rule-strong bg-ed-surface/95 shadow-2xl backdrop-blur-2xl"
+                                                className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-[8px] border border-[#2A2928] bg-[#161514] shadow-[0_16px_40px_-12px_rgba(0,0,0,0.5)]"
                                             >
                                                 {suggestions.map((suggestion, position) => (
                                                     <li key={`${suggestion.type}-${suggestion.id}`} role="option" aria-selected="false">
@@ -727,7 +738,7 @@ function SearchContent() {
                                                                     position,
                                                                 });
                                                             }}
-                                                            className="flex items-center gap-2.5 px-4 py-2.5 text-left text-sm text-ed-fg transition-colors hover:bg-ed-surface-strong"
+                                                            className="flex items-center gap-2.5 px-4 py-2.5 text-left text-sm text-[#F5F0EB] transition-colors hover:bg-[#1C1B1A]"
                                                         >
                                                             <SuggestionIcon type={suggestion.type} />
                                                             <span className="truncate">{suggestion.title}</span>
@@ -742,7 +753,7 @@ function SearchContent() {
                                         <button
                                             type="submit"
                                             disabled={!query.trim()}
-                                            className="inline-flex items-center justify-center rounded-xl bg-ed-fg px-4 py-2.5 text-xs font-bold text-ed-bg shadow-sm transition-all hover:bg-ed-fg/90 hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:bg-ed-muted disabled:text-ed-fg-muted disabled:hover:scale-100"
+                                            className="inline-flex items-center justify-center rounded-[4px] bg-[#C8794A] px-4 py-2.5 text-xs font-bold text-[#0F0E0D] transition-all hover:bg-[#D9916A] disabled:cursor-not-allowed disabled:bg-[#2A2928] disabled:text-[#6B6560]"
                                             aria-label="Run search"
                                         >
                                             Search
@@ -753,16 +764,16 @@ function SearchContent() {
                                             <button
                                                 type="button"
                                                 onClick={() => setFilterOpen((o) => !o)}
-                                                className="relative z-30 inline-flex h-11 items-center gap-2 rounded-full border border-ed-rule-strong/80 bg-ed-surface/90 px-3 shadow-[0_8px_24px_-10px_rgba(0,0,0,0.35)] transition-colors hover:border-ed-fg/50 select-none"
+                                                className="relative z-30 inline-flex h-[42px] items-center gap-2 rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 transition-colors hover:border-[#353433] select-none"
                                                 aria-haspopup="listbox"
                                                 aria-expanded={filterOpen}
                                                 aria-label="Filter sources"
                                             >
-                                                <SlidersHorizontal className="h-4 w-4 text-ed-fg-muted" />
-                                                <span className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg">
+                                                <SlidersHorizontal className="h-4 w-4 text-[#6B6560]" />
+                                                <span className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#F5F0EB]">
                                                     {activeFilterLabel}
                                                 </span>
-                                                <ChevronDown className={`h-3.5 w-3.5 text-ed-fg-muted transition-transform duration-150 ${filterOpen ? 'rotate-180' : ''}`} />
+                                                <ChevronDown className={`h-3.5 w-3.5 text-[#6B6560] transition-transform duration-150 ${filterOpen ? 'rotate-180' : ''}`} />
                                             </button>
 
                                             {/* Multi-select checkbox dropdown */}
@@ -775,7 +786,7 @@ function SearchContent() {
                                                         exit={{ opacity: 0, scale: 0.97, y: -4 }}
                                                         transition={{ duration: 0.12, ease: 'easeOut' }}
                                                         style={{ transformOrigin: 'top right' }}
-                                                        className="absolute right-0 top-full z-30 mt-2 w-52 overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-ed-surface/95 p-1.5 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
+                                                        className="absolute right-0 top-full z-30 mt-2 w-52 overflow-hidden rounded-[8px] border border-[#2A2928] bg-[#161514] p-1.5 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.5)]"
                                                         role="listbox"
                                                         aria-label="Filter sources"
                                                         aria-multiselectable="true"
@@ -786,25 +797,25 @@ function SearchContent() {
                                                             role="option"
                                                             aria-selected={isAllSelected}
                                                             onClick={toggleAll}
-                                                            className="flex w-full cursor-pointer items-center justify-between rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-ed-surface-strong"
+                                                            className={`flex w-full cursor-pointer items-center justify-between rounded-[4px] px-2.5 py-2 text-left transition-colors ${isAllSelected ? 'bg-[#C8794A]/[0.06]' : 'hover:bg-[#1C1B1A]'}`}
                                                         >
                                                             <div className="flex items-center gap-3">
-                                                                <SlidersHorizontal className="h-4 w-4 text-ed-fg-muted" />
-                                                                <span className="text-sm font-semibold tracking-tight text-ed-fg">All</span>
+                                                                <SlidersHorizontal className={`h-4 w-4 ${isAllSelected ? 'text-[#C8794A]' : 'text-[#6B6560]'}`} />
+                                                                <span className={`text-sm tracking-tight ${isAllSelected ? 'font-semibold text-[#C8794A]' : 'font-medium text-[#F5F0EB]'}`}>All</span>
                                                             </div>
                                                             <div
-                                                                className="flex h-5 w-5 shrink-0 items-center justify-center rounded border-[1.5px] transition-colors duration-100"
+                                                                className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[4px] border-[1.5px] transition-colors duration-100"
                                                                 style={{
-                                                                    backgroundColor: isAllSelected ? 'var(--ed-fg)' : 'transparent',
-                                                                    borderColor: isAllSelected ? 'var(--ed-fg)' : 'var(--color-ed-rule-strong, rgba(0,0,0,0.25))',
+                                                                    backgroundColor: isAllSelected ? '#C8794A' : 'transparent',
+                                                                    borderColor: isAllSelected ? '#C8794A' : '#2A2928',
                                                                 }}
                                                             >
-                                                                {isAllSelected && <Check className="h-3 w-3 text-ed-bg" />}
+                                                                {isAllSelected && <Check className="h-3 w-3 text-[#0F0E0D]" />}
                                                             </div>
                                                         </button>
 
                                                         {/* Divider */}
-                                                        <div className="mx-2.5 my-1 h-px bg-ed-rule" />
+                                                        <div className="mx-2.5 my-1 h-px bg-[#2A2928]" />
 
                                                         {/* Individual source checkboxes */}
                                                         {FILTER_CHECKBOXES.map(({ key, label, icon: Icon }) => {
@@ -816,20 +827,20 @@ function SearchContent() {
                                                                     role="option"
                                                                     aria-selected={checked}
                                                                     onClick={() => toggleFilter(key)}
-                                                                    className="flex w-full cursor-pointer items-center justify-between rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-ed-surface-strong"
+                                                                    className={`flex w-full cursor-pointer items-center justify-between rounded-[4px] px-2.5 py-2 text-left transition-colors ${checked ? 'bg-[#C8794A]/[0.06]' : 'hover:bg-[#1C1B1A]'}`}
                                                                 >
                                                                     <div className="flex items-center gap-3">
-                                                                        <Icon className="h-4 w-4 text-ed-fg-muted" />
-                                                                        <span className="text-sm font-semibold tracking-tight text-ed-fg">{label}</span>
+                                                                        <Icon className={`h-4 w-4 ${checked ? 'text-[#C8794A]' : 'text-[#6B6560]'}`} />
+                                                                        <span className={`text-sm tracking-tight ${checked ? 'font-semibold text-[#C8794A]' : 'font-medium text-[#F5F0EB]'}`}>{label}</span>
                                                                     </div>
                                                                     <div
-                                                                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded border-[1.5px] transition-colors duration-100"
+                                                                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[4px] border-[1.5px] transition-colors duration-100"
                                                                         style={{
-                                                                            backgroundColor: checked ? 'var(--ed-fg)' : 'transparent',
-                                                                            borderColor: checked ? 'var(--ed-fg)' : 'var(--color-ed-rule-strong, rgba(0,0,0,0.25))',
+                                                                            backgroundColor: checked ? '#C8794A' : 'transparent',
+                                                                            borderColor: checked ? '#C8794A' : '#2A2928',
                                                                         }}
                                                                     >
-                                                                        {checked && <Check className="h-3 w-3 text-ed-bg" />}
+                                                                        {checked && <Check className="h-3 w-3 text-[#0F0E0D]" />}
                                                                     </div>
                                                                 </button>
                                                             );
@@ -860,24 +871,23 @@ function SearchContent() {
                                 ) : null}
 
                                 {/* Stats Line below search bar */}
-                                <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-ed-rule text-xs">
-                                    <div className="flex items-center gap-2 font-sans font-bold text-ed-fg">
+                                <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[#2A2928] text-xs">
+                                    <div className="flex items-center gap-2 font-sans font-bold text-[#F5F0EB]">
                                         <span>{total > 0 ? `${total} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
                                         {isSearching && results.length > 0 ? (
-                                            <span aria-live="polite" className="font-mono text-[0.68rem] font-normal text-ed-fg-muted">
+                                            <span aria-live="polite" className="font-mono text-[0.68rem] font-normal text-[#6B6560]">
                                                 Updating results…
                                             </span>
                                         ) : null}
                                     </div>
-                                    <span className="font-mono text-[0.68rem] text-ed-fg-muted">
+                                    <span className="font-mono text-[0.68rem] text-[#6B6560]">
                                         Exact phrases and nearby terms are already folded into the ranking.
                                     </span>
                                 </div>
-                            </div>
                         </div>
 
                         {errorMsg ? (
-                            <div className="fade-rise-enter soft-panel p-4 text-sm text-[#961515] dark:text-[#f6ae82] rounded-xl border border-red-500/20">
+                            <div className="rounded-[8px] border border-red-500/20 bg-[#161514] p-4 text-sm text-[#f6ae82]">
                                 {errorMsg}
                             </div>
                         ) : null}
@@ -893,13 +903,13 @@ function SearchContent() {
                                         <div
                                             key={index}
                                             aria-hidden="true"
-                                            className="soft-shell flex animate-pulse gap-4 rounded-2xl p-5"
+                                            className="flex animate-pulse gap-4 rounded-[12px] border border-[#2A2928] bg-[#161514] p-5"
                                         >
-                                            <div className="h-16 w-16 shrink-0 rounded-xl bg-ed-muted sm:h-20 sm:w-20" />
+                                            <div className="h-16 w-16 shrink-0 rounded-[8px] bg-[#1C1B1A] sm:h-20 sm:w-20" />
                                             <div className="flex-1 space-y-3 py-1">
-                                                <div className="h-4 w-2/3 rounded bg-ed-muted" />
-                                                <div className="h-3 w-full rounded bg-ed-muted" />
-                                                <div className="h-3 w-1/2 rounded bg-ed-muted" />
+                                                <div className="h-4 w-2/3 rounded bg-[#1C1B1A]" />
+                                                <div className="h-3 w-full rounded bg-[#1C1B1A]" />
+                                                <div className="h-3 w-1/2 rounded bg-[#1C1B1A]" />
                                             </div>
                                         </div>
                                     ))}
@@ -907,9 +917,14 @@ function SearchContent() {
                             ) : null}
 
                             {!isSearching && query && results.length === 0 ? (
-                                <div className="fade-rise-enter lift-card rounded-2xl p-12 text-center">
-                                    <p className="font-sans text-2xl font-extrabold text-ed-fg">No matches found.</p>
-                                    <p className="mt-2 text-sm text-ed-fg-muted">
+                                <div className="rounded-[12px] border border-dashed border-[#2A2928] bg-[#161514] p-12 text-center">
+                                    <p
+                                        className="text-2xl font-semibold text-[#F5F0EB]"
+                                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                                    >
+                                        No matches found.
+                                    </p>
+                                    <p className="mt-2 text-sm text-[#6B6560]">
                                         Try a shorter phrase, clear filter options, or search by title.
                                     </p>
                                 </div>
@@ -963,7 +978,7 @@ function SearchContent() {
                                     type="button"
                                     onClick={() => void runQuery(results.length)}
                                     disabled={isLoadingMore}
-                                    className="archive-button archive-button-secondary rounded-full px-8 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-ed-fg hover:border-ed-fg shadow-md disabled:opacity-50"
+                                    className="rounded-[4px] border border-[#2A2928] bg-[#161514] px-8 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-[#9E9690] transition-colors hover:border-[#353433] hover:text-[#F5F0EB] disabled:opacity-50"
                                 >
                                     {isLoadingMore
                                         ? 'Loading…'
@@ -971,9 +986,13 @@ function SearchContent() {
                                 </button>
                             </div>
                         ) : null}
-                    </main>
+                    </div>
+
+                    <footer className="mt-16 border-t border-[#2A2928] py-9 text-center text-[12px] font-medium tracking-[0.04em] text-[#4A4542]">
+                        Dedicated to preserving and sharing the message of God alone.
+                    </footer>
                 </div>
-            </div>
+            </main>
         </div>
     );
 }
@@ -1018,8 +1037,8 @@ function SearchResultCard({
             id={cardId}
             role="group"
             aria-label={cardTitle}
-            className={`group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/95 via-ed-surface/80 to-ed-surface/60 p-5 sm:p-7 backdrop-blur-2xl shadow-[0_16px_40px_-12px_rgba(0,0,0,0.3),0_0_0_1px_rgba(255,255,255,0.06)_inset] transition-all duration-300 hover:border-ed-fg/40 hover:shadow-2xl hover:-translate-y-0.5 ${
-                cardActive ? 'ring-2 ring-ed-fg ring-offset-2 ring-offset-ed-bg' : ''
+            className={`group relative flex flex-col overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] p-5 sm:p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#353433] hover:bg-[#1C1B1A] hover:shadow-[0_8px_24px_rgba(0,0,0,0.45)] ${
+                cardActive ? 'ring-2 ring-[#C8794A] ring-offset-2 ring-offset-[#0F0E0D]' : ''
             }`}
         >
             <div className="space-y-5">
@@ -1027,7 +1046,7 @@ function SearchResultCard({
                 <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-6 items-start">
                     <Link
                         href={bestHref}
-                        className={`group relative overflow-hidden rounded-2xl border border-ed-rule-strong bg-ed-surface shadow-md ${
+                        className={`group relative overflow-hidden rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] ${
                             isDocument ? 'aspect-[3/4] w-full max-w-[160px] mx-auto' : 'aspect-video w-full'
                         }`}
                         aria-label={`Open ${media.displayTitle || media.title}`}
@@ -1044,9 +1063,9 @@ function SearchResultCard({
                             }`}
                         />
                         {!isDocument ? (
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[2px] transition-opacity group-hover:bg-black/20">
-                                <div className="h-12 w-12 rounded-2xl border border-white/40 bg-black/80 backdrop-blur-xl flex items-center justify-center text-white shadow-2xl transition-transform group-hover:scale-110">
-                                    <Play className="h-4 w-4 fill-current ml-0.5" />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[1px] transition-colors group-hover:bg-black/10">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#353433] bg-[#0F0E0D]/85 shadow-[0_4px_16px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:border-[#C8794A]">
+                                    <Play className="ml-0.5 h-4 w-4 fill-[#F5F0EB] transition-colors group-hover:fill-[#C8794A]" />
                                 </div>
                             </div>
                         ) : null}
@@ -1054,16 +1073,16 @@ function SearchResultCard({
 
                     <div className="min-w-0 space-y-2.5">
                         {/* Top Badges Row */}
-                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-rule pb-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#2A2928] pb-3">
                             <div className="flex items-center gap-2">
-                                <span className="rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg shadow-sm">
+                                <span className="rounded-[4px] border border-[#2A2928] bg-[#1C1B1A] px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-[#F5F0EB]">
                                     {String(rank).padStart(2, '0')}
                                 </span>
-                                <span className="rounded-full border border-ed-rule-strong bg-ed-surface px-3 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg-muted uppercase tracking-wider">
+                                <span className="rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 py-0.5 font-mono text-[0.68rem] font-bold text-[#9E9690] uppercase tracking-wider">
                                     {getMediaTypeLabel(media.type)}
                                 </span>
                                 {media.displayDate ? (
-                                    <span className="font-mono text-xs text-ed-fg-muted">
+                                    <span className="font-mono text-xs text-[#6B6560]">
                                         {media.displayDate}
                                     </span>
                                 ) : null}
@@ -1076,11 +1095,14 @@ function SearchResultCard({
 
                         {/* Title & Author */}
                         <Link href={mediaLink} className="block pt-0.5 group">
-                            <h3 className="font-sans text-xl sm:text-2xl font-bold tracking-tight text-ed-fg leading-snug group-hover:text-ed-accent transition-colors">
+                            <h3
+                                className="text-xl sm:text-2xl font-semibold tracking-tight text-[#F5F0EB] leading-snug transition-colors group-hover:text-[#C8794A]"
+                                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                            >
                                 {media.displayTitle || media.title}
                             </h3>
                             {media.author ? (
-                                <p className="mt-1 font-mono text-xs font-medium text-ed-fg-muted">
+                                <p className="mt-1 font-mono text-xs font-medium text-[#6B6560]">
                                     {media.author}
                                 </p>
                             ) : null}
@@ -1095,24 +1117,24 @@ function SearchResultCard({
                         id={bestPassageId}
                         role="option"
                         aria-selected={bestPassageActive}
-                        className={`block rounded-2xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface via-ed-surface/90 to-ed-surface/70 p-4 sm:p-5 shadow-inner backdrop-blur-xl transition hover:border-ed-fg/40 hover:shadow-md ${
-                            bestPassageActive ? 'ring-2 ring-ed-fg' : ''
+                        className={`block rounded-[8px] border border-[#2A2928] bg-[#1C1B1A] p-4 sm:p-5 transition hover:border-[#353433] ${
+                            bestPassageActive ? 'ring-2 ring-[#C8794A]' : ''
                         }`}
                     >
                         <div className="flex items-center justify-between gap-2 mb-3">
-                            <span className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
+                            <span className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-[#6B6560]">
                                 Best Matching Passage
                             </span>
-                            <span className="inline-flex items-center gap-1.5 rounded-full bg-ed-fg text-ed-bg px-3.5 py-1 font-mono text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95">
+                            <span className="inline-flex items-center gap-1.5 rounded-[4px] bg-[#C8794A] text-[#0F0E0D] px-3.5 py-1 font-mono text-xs font-bold transition-all hover:bg-[#D9916A]">
                                 <Play className="h-3 w-3 fill-current" />
                                 {isDocumentType(media.type) ? `Open Page ${bestMatch.page || 1}` : `Play at ${formatTime(bestMatch.start_time)}`}
                             </span>
                         </div>
 
                         <div className="flex gap-3 items-start">
-                            <span className="font-serif text-3xl leading-none text-ed-fg-muted/60 select-none">“</span>
+                            <span className="font-serif text-3xl leading-none text-[#4A4542] select-none">“</span>
                             <p
-                                className="font-sans text-sm sm:text-base leading-relaxed text-ed-fg"
+                                className="text-sm sm:text-base leading-relaxed text-[#F5F0EB]"
                                 dangerouslySetInnerHTML={{
                                     __html: highlightMatch(bestMatch.content, query),
                                 }}
@@ -1123,12 +1145,12 @@ function SearchResultCard({
 
                 {/* PASSAGES TIMELINE */}
                 {visibleMatches.length > 1 ? (
-                    <div className="pt-2 border-t border-ed-rule space-y-3">
-                        <p className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
+                    <div className="pt-2 border-t border-[#2A2928] space-y-3">
+                        <p className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-[#6B6560]">
                             Passages in this {isDocument ? 'document' : 'recording'}
                         </p>
 
-                        <div className="relative pl-6 space-y-3.5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-ed-rule-strong">
+                        <div className="relative pl-6 space-y-3.5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-[#2A2928]">
                             {visibleMatches.slice(1).map((match) => {
                                 const passageIndex = matches.indexOf(match);
                                 return (
@@ -1153,7 +1175,7 @@ function SearchResultCard({
                             type="button"
                             onClick={onToggle}
                             aria-expanded={expanded}
-                            className="inline-flex items-center gap-2 rounded-xl border border-ed-rule-strong bg-ed-surface px-5 py-2 font-mono text-xs font-semibold text-ed-fg hover:border-ed-fg hover:bg-ed-surface-strong shadow-sm transition-all"
+                            className="inline-flex items-center gap-2 rounded-[4px] border border-[#2A2928] bg-[#161514] px-5 py-2 font-mono text-xs font-semibold text-[#9E9690] transition-all hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB]"
                         >
                             <span>{expanded ? 'Show fewer passages' : `Show ${matches.length - 3} more passages`}</span>
                             <ChevronDown className={`h-3.5 w-3.5 transition-transform ${expanded ? 'rotate-180' : ''}`} />
@@ -1186,26 +1208,26 @@ function SearchMatchRow({
             id={nodeId}
             role="option"
             aria-selected={active}
-            className={`group relative flex items-start justify-between gap-4 rounded-xl p-2.5 transition-all hover:bg-ed-surface hover:shadow-sm ${
-                active ? 'bg-ed-surface border border-ed-fg/40' : ''
+            className={`group relative flex items-start justify-between gap-4 rounded-[4px] p-2.5 transition-all hover:bg-[#1C1B1A] ${
+                active ? 'bg-[#1C1B1A] border border-[#C8794A]/40' : ''
             }`}
         >
             {/* Timeline Circle Node Dot */}
-            <span className="absolute -left-[1.125rem] top-3.5 h-2.5 w-2.5 rounded-full border-2 border-ed-bg bg-ed-fg shadow-sm" />
+            <span className="absolute -left-[1.125rem] top-3.5 h-2.5 w-2.5 rounded-full border-2 border-[#0F0E0D] bg-[#C8794A]" />
 
             <div className="flex items-start gap-3 min-w-0 flex-1">
-                <span className="font-mono text-xs font-bold text-ed-fg shrink-0 pt-0.5">
+                <span className="font-mono text-xs font-bold text-[#F5F0EB] shrink-0 pt-0.5">
                     {getQuranVerseRef(media, match) || (isDocumentType(media.type) ? `Page ${match.page || 1}` : formatTime(match.start_time))}
                 </span>
                 <div className="min-w-0 flex-1">
                     {match.kind || match.label ? (
-                        <span className="block font-mono text-[0.62rem] uppercase tracking-wider text-ed-fg-muted/80 mb-0.5">
+                        <span className="block font-mono text-[0.62rem] uppercase tracking-wider text-[#6B6560] mb-0.5">
                             {match.label ? `${getContentLabelText(match.label)} · ` : ''}
                             {getMatchKindLabel(match.kind || '')}
                         </span>
                     ) : null}
                     <p
-                        className="font-sans text-xs sm:text-sm leading-relaxed text-ed-fg-muted group-hover:text-ed-fg transition-colors"
+                        className="text-xs sm:text-sm leading-relaxed text-[#9E9690] group-hover:text-[#F5F0EB] transition-colors"
                         dangerouslySetInnerHTML={{
                             __html: highlightMatch(match.content, query),
                         }}
@@ -1213,7 +1235,7 @@ function SearchMatchRow({
                 </div>
             </div>
 
-            <div className="flex items-center gap-1 shrink-0 text-ed-fg-muted group-hover:text-ed-fg">
+            <div className="flex items-center gap-1 shrink-0 text-[#6B6560] group-hover:text-[#F5F0EB]">
                 <Play className="h-3.5 w-3.5 fill-current" />
                 <ChevronDown className="h-3.5 w-3.5" />
             </div>
@@ -1224,7 +1246,7 @@ function SearchMatchRow({
 function SignalBadge({ score }: { score: number }) {
     const label = score >= 100 ? 'Best match' : score >= 80 ? 'Close match' : score >= 55 ? 'Relevant' : 'Broad match';
     return (
-        <span className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400 shadow-sm">
+        <span className="inline-flex items-center rounded-[4px] border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-emerald-400">
             {label}
         </span>
     );
@@ -1419,7 +1441,7 @@ function highlightMatch(text: string, query: string) {
         'gi',
     );
 
-    return safeText.replace(regex, '<span class="search-term-highlight">$1</span>');
+    return safeText.replace(regex, '<span class="qs-highlight">$1</span>');
 }
 
 function escapeHtml(value: string) {
