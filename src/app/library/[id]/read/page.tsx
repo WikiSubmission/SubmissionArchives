@@ -28,7 +28,7 @@ export default async function PDFReaderPage({ params }: Props) {
 
     if (book.type === 'newsletter' && payload.pdfLink) {
         return (
-            <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
+            <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-[#0F0E0D] overflow-hidden flex flex-col">
                 <LibraryReaderWrapper
                     kind="pdf"
                     documentId={id}
@@ -59,14 +59,14 @@ export default async function PDFReaderPage({ params }: Props) {
 
     if (book.type === 'appendix' && payload.editions && payload.defaultEdition) {
         return (
-            <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
+            <main id="main-content" className="h-[calc(100dvh-4rem)] w-screen bg-[#0F0E0D] overflow-hidden flex flex-col">
                 <LibraryReaderWrapper kind="appendix" documentId={id} editions={payload.editions} defaultEdition={payload.defaultEdition} title={book.title} backHref={backHref} />
             </main>
         );
     }
 
     return (
-        <main id="main-content" className="h-[calc(100dvh-4.5rem)] w-screen bg-ed-bg overflow-hidden flex flex-col">
+        <main id="main-content" className="h-[calc(100dvh-4.5rem)] w-screen bg-[#0F0E0D] overflow-hidden flex flex-col">
             <LibraryReaderWrapper
                 kind="pdf"
                 documentId={id}

@@ -20,6 +20,7 @@
     "validate:catalog": "node scripts/validate/validate_catalog.mjs",
     "validate:catalog-schemas": "node --import tsx scripts/validate/validate_catalog_schemas.ts",
     "generate:book-thumbnails": "node scripts/generate/generate_book_thumbnails.mjs",
+    "generate:newsletter-thumbnails": "node scripts/generate/generate_newsletter_thumbnails.mjs",
     "generate:apocrypha": "node scripts/generate/build-apocrypha-index.mjs",
     "generate:pdf-assets": "node scripts/generate/copy_pdf_assets.mjs",
     "generate:video-chunks": "node scripts/generate/build_video_transcript_chunks.mjs",

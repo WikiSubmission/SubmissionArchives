@@ -1,30 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import {
-    ChevronLeft,
-    ChevronRight,
-    ChevronsLeft,
-    ChevronsRight,
-    ExternalLink,
-    FileText,
-    Minus,
-    Plus,
-    RotateCw,
-    Search,
-    X,
-    Columns,
-    BookOpen,
-    Maximize,
-    Minimize,
-    Download,
-    Moon,
-    HelpCircle,
-    ListTree,
-    Layers,
-    SlidersHorizontal,
-    Check,
-} from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+
 import Link from 'next/link';
 import { Document, Page, Thumbnail, pdfjs } from 'react-pdf';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
@@ -74,21 +51,13 @@ const ZOOM_MAX = 3.0;
 const ZOOM_STEP = 0.15;
 
 const chromeButtonClassLg =
-    'inline-flex h-11 min-w-11 items-center justify-center rounded-[6px] border border-[#2A2928] bg-[#161514] px-2.5 text-[#9E9690] transition-all hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95 disabled:pointer-events-none disabled:opacity-30';
+    'inline-flex h-9 items-center justify-center rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 text-[11px] font-semibold tracking-[0.02em] text-[#9E9690] transition-colors hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:bg-[#1E1D1C] disabled:pointer-events-none disabled:opacity-30';
 
 const toolbarButtonClass =
-    'flex min-h-11 min-w-11 items-center justify-center rounded-[6px] text-[#9E9690] transition-all hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95 disabled:pointer-events-none disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#9E9690]';
+    'inline-flex min-h-9 items-center justify-center rounded-[4px] px-2.5 text-[11px] font-semibold tracking-[0.02em] text-[#9E9690] transition-colors hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:bg-[#1E1D1C] disabled:pointer-events-none disabled:opacity-30';
 
 const dockPillClass =
-    'inline-flex min-w-[3.25rem] items-center justify-center rounded-full border border-[#2A2928] bg-[#161514] px-2.5 py-1 font-mono text-xs font-semibold tabular-nums text-[#F5F0EB]';
-
-function IconBadge({ children }: { children: ReactNode }) {
-    return (
-        <span className="relative inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-[6px] border border-[#2A2928] bg-[#1C1B1A] text-[#F5F0EB]">
-            {children}
-        </span>
-    );
-}
+    'inline-flex min-w-[4.25rem] items-center justify-center rounded-[4px] border border-[#2A2928] bg-[#161514] px-2.5 py-1 text-[11px] font-semibold tabular-nums text-[#F5F0EB]';
 
 function computeHighlightRanges(items: TextItem[], terms: string[]): Map<number, Array<[number, number]>> {
     const ranges = new Map<number, Array<[number, number]>>();
@@ -351,9 +320,9 @@ export default function PDFReaderClient({
     const toggleFullscreen = useCallback(() => {
         if (!readerRootRef.current) return;
         if (!document.fullscreenElement) {
-            readerRootRef.current.requestFullscreen().catch(() => {});
+            readerRootRef.current.requestFullscreen().catch(() => { });
         } else {
-            document.exitFullscreen().catch(() => {});
+            document.exitFullscreen().catch(() => { });
         }
     }, []);
 
@@ -575,11 +544,11 @@ export default function PDFReaderClient({
                     if (!searchOpen) setTimeout(() => searchInputRef.current?.focus(), 50);
                 }}
                 className={`${toolbarButtonClass} ${searchOpen ? 'text-[#C8794A] bg-[#C8794A]/10' : ''}`}
-                title="Search in document (/)"
+                title="Search in document (Forward slash)"
                 aria-label="Search in document"
                 aria-pressed={searchOpen}
             >
-                <Search className="h-4 w-4" />
+                <span>Search</span>
             </button>
 
             <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
@@ -597,14 +566,14 @@ export default function PDFReaderClient({
                     title="Layout View Mode"
                     aria-label="Page layout mode"
                 >
-                    {layoutMode === 'single' && <FileText className="h-4 w-4" />}
-                    {layoutMode === 'spread' && <BookOpen className="h-4 w-4" />}
-                    {layoutMode === 'continuous' && <Columns className="h-4 w-4" />}
+                    {layoutMode === 'single' && <span>Single</span>}
+                    {layoutMode === 'spread' && <span>Spread</span>}
+                    {layoutMode === 'continuous' && <span>Continuous</span>}
                 </button>
 
                 {showLayoutPopover && (
                     <div className="reader-popover">
-                        <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-[#9E9690]">
+                        <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">
                             Page Layout
                         </div>
                         <button
@@ -617,9 +586,8 @@ export default function PDFReaderClient({
                             data-active={layoutMode === 'single'}
                         >
                             <span className="flex items-center gap-2">
-                                <FileText className="h-3.5 w-3.5" /> Single Page
+                                Single Page
                             </span>
-                            {layoutMode === 'single' && <Check className="h-3.5 w-3.5 text-[#C8794A]" />}
                         </button>
                         <button
                             type="button"
@@ -631,9 +599,8 @@ export default function PDFReaderClient({
                             data-active={layoutMode === 'spread'}
                         >
                             <span className="flex items-center gap-2">
-                                <BookOpen className="h-3.5 w-3.5" /> Two-Page Spread (Book)
+                                Two-Page Spread
                             </span>
-                            {layoutMode === 'spread' && <Check className="h-3.5 w-3.5 text-[#C8794A]" />}
                         </button>
                         <button
                             type="button"
@@ -645,9 +612,8 @@ export default function PDFReaderClient({
                             data-active={layoutMode === 'continuous'}
                         >
                             <span className="flex items-center gap-2">
-                                <Columns className="h-3.5 w-3.5" /> Continuous Scroll
+                                Continuous Scroll
                             </span>
-                            {layoutMode === 'continuous' && <Check className="h-3.5 w-3.5 text-[#C8794A]" />}
                         </button>
                     </div>
                 )}
@@ -663,15 +629,15 @@ export default function PDFReaderClient({
                         setShowLayoutPopover(false);
                     }}
                     className={`${toolbarButtonClass} ${showThemePopover ? 'text-[#C8794A]' : ''}`}
-                    title="Reading Filter / Theme"
+                    title="Reading appearance"
                     aria-label="Reading theme"
                 >
-                    <SlidersHorizontal className="h-4 w-4" />
+                    <span>Reading</span>
                 </button>
 
                 {showThemePopover && (
                     <div className="reader-popover">
-                        <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-[#9E9690]">
+                        <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">
                             Reading Filter
                         </div>
                         <button
@@ -684,9 +650,8 @@ export default function PDFReaderClient({
                             data-active={readingTheme === 'default'}
                         >
                             <span className="flex items-center gap-2">
-                                <span className="w-3 h-3 rounded-full bg-white border border-gray-400" /> Studio White
+                                <span className="w-3 h-3 rounded-[4px] bg-white border border-gray-400" /> Studio White
                             </span>
-                            {readingTheme === 'default' && <Check className="h-3.5 w-3.5 text-[#C8794A]" />}
                         </button>
                         <button
                             type="button"
@@ -697,10 +662,7 @@ export default function PDFReaderClient({
                             className="reader-popover-item"
                             data-active={readingTheme === 'sepia'}
                         >
-                            <span className="flex items-center gap-2">
-                                <span className="w-3 h-3 rounded-full bg-[#f6f1e8] border border-[#d8caa8]" /> Warm Sepia
-                            </span>
-                            {readingTheme === 'sepia' && <Check className="h-3.5 w-3.5 text-[#C8794A]" />}
+                            <span>Warm Sepia</span>
                         </button>
                         <button
                             type="button"
@@ -712,9 +674,8 @@ export default function PDFReaderClient({
                             data-active={readingTheme === 'dark'}
                         >
                             <span className="flex items-center gap-2">
-                                <Moon className="h-3.5 w-3.5" /> Inverted Dark
+                                Dark
                             </span>
-                            {readingTheme === 'dark' && <Check className="h-3.5 w-3.5 text-[#C8794A]" />}
                         </button>
                     </div>
                 )}
@@ -728,10 +689,10 @@ export default function PDFReaderClient({
                     type="button"
                     onClick={() => setZoom((z) => Math.max(ZOOM_MIN, z - ZOOM_STEP))}
                     className={toolbarButtonClass}
-                    title="Zoom out (-)"
+                    title="Decrease zoom"
                     aria-label="Zoom out"
                 >
-                    <Minus className="h-4 w-4" />
+                    <span>Smaller</span>
                 </button>
 
                 <button
@@ -741,7 +702,7 @@ export default function PDFReaderClient({
                         setShowLayoutPopover(false);
                         setShowThemePopover(false);
                     }}
-                    className="min-w-[54px] px-1.5 py-1 text-center text-xs font-mono font-medium text-[#9E9690] hover:text-[#F5F0EB] hover:bg-[#1C1B1A] rounded-[6px] transition-colors tabular-nums"
+                    className="min-w-[54px] px-1.5 py-1 text-center text-xs font-medium text-[#9E9690] hover:text-[#F5F0EB] hover:bg-[#1C1B1A] rounded-[4px] transition-colors tabular-nums"
                     title="Zoom options"
                     aria-label="Zoom options"
                 >
@@ -752,15 +713,15 @@ export default function PDFReaderClient({
                     type="button"
                     onClick={() => setZoom((z) => Math.min(ZOOM_MAX, z + ZOOM_STEP))}
                     className={toolbarButtonClass}
-                    title="Zoom in (+)"
+                    title="Increase zoom"
                     aria-label="Zoom in"
                 >
-                    <Plus className="h-4 w-4" />
+                    <span>Larger</span>
                 </button>
 
                 {showZoomPopover && (
                     <div className="reader-popover">
-                        <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-[#9E9690]">
+                        <div className="px-2 py-1 text-[10px] font-sans uppercase tracking-[0.12em] text-[#9E9690]">
                             Zoom Presets
                         </div>
                         <button type="button" onClick={fitToWidth} className="reader-popover-item">
@@ -782,7 +743,6 @@ export default function PDFReaderClient({
                                 data-active={Math.abs(zoom - preset) < 0.05}
                             >
                                 <span>{Math.round(preset * 100)}%</span>
-                                {Math.abs(zoom - preset) < 0.05 && <Check className="h-3.5 w-3.5 text-[#C8794A]" />}
                             </button>
                         ))}
                     </div>
@@ -798,10 +758,10 @@ export default function PDFReaderClient({
                     onClick={() => goToPage(layoutMode === 'spread' ? pageNumber - 2 : pageNumber - 1)}
                     disabled={pageNumber <= 1}
                     className={toolbarButtonClass}
-                    title="Previous page (Left Arrow / K)"
+                    title="Previous page"
                     aria-label="Previous page"
                 >
-                    <ChevronLeft className="h-5 w-5" />
+                    <span>Previous</span>
                 </button>
 
                 {isEditingPage ? (
@@ -836,8 +796,8 @@ export default function PDFReaderClient({
                         aria-label={`Page ${pageNumber} of ${numPages ?? 'unknown'}. Click to edit.`}
                     >
                         <span aria-live="polite">{pageNumber}</span>
-                        <span className="text-[#9E9690]">/</span>
-                        <span>{numPages ?? '…'}</span>
+                        <span className="text-[#6B6560]">of</span>
+                        <span>{numPages ?? 'Loading'}</span>
                     </button>
                 )}
 
@@ -846,10 +806,10 @@ export default function PDFReaderClient({
                     onClick={() => goToPage(layoutMode === 'spread' ? pageNumber + 2 : pageNumber + 1)}
                     disabled={!numPages || pageNumber >= numPages}
                     className={toolbarButtonClass}
-                    title="Next page (Right Arrow / J)"
+                    title="Next page"
                     aria-label="Next page"
                 >
-                    <ChevronRight className="h-5 w-5" />
+                    <span>Next</span>
                 </button>
             </div>
 
@@ -866,7 +826,7 @@ export default function PDFReaderClient({
                                 title="Previous document"
                                 aria-label="Previous document"
                             >
-                                <ChevronsLeft className="h-4 w-4" />
+                                <span>Previous</span>
                             </Link>
                         ) : null}
                         {nextId ? (
@@ -877,7 +837,7 @@ export default function PDFReaderClient({
                                 title="Next document"
                                 aria-label="Next document"
                             >
-                                <ChevronsRight className="h-4 w-4" />
+                                <span>Next</span>
                             </Link>
                         ) : null}
                     </div>
@@ -894,7 +854,7 @@ export default function PDFReaderClient({
                 title="Rotate 90° (R)"
                 aria-label="Rotate page"
             >
-                <RotateCw className="h-4 w-4" />
+                <span>Rotate</span>
             </button>
 
             {/* Fullscreen Toggle */}
@@ -905,7 +865,7 @@ export default function PDFReaderClient({
                 title="Toggle Fullscreen (F)"
                 aria-label="Toggle fullscreen"
             >
-                {isFullscreen ? <Minimize className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}
+                {isFullscreen ? <span>Exit full screen</span> : <span>Full screen</span>}
             </button>
 
             <div className="mx-1 h-5 w-px shrink-0 bg-[#2A2928]" aria-hidden="true" />
@@ -919,7 +879,7 @@ export default function PDFReaderClient({
                 title="Open original PDF in new tab"
                 aria-label="Open original PDF"
             >
-                <ExternalLink className="h-4 w-4" />
+                <span>Open PDF</span>
             </Link>
 
             {/* Download */}
@@ -930,7 +890,7 @@ export default function PDFReaderClient({
                 title="Download PDF"
                 aria-label="Download PDF"
             >
-                <Download className="h-4 w-4" />
+                <span>Download</span>
             </a>
 
             {/* Citation */}
@@ -944,7 +904,7 @@ export default function PDFReaderClient({
                 title="Keyboard Shortcuts (?)"
                 aria-label="Keyboard shortcuts"
             >
-                <HelpCircle className="h-4 w-4" />
+                <span>Shortcuts</span>
             </button>
         </div>
     );
@@ -955,7 +915,7 @@ export default function PDFReaderClient({
             className={`relative flex h-full flex-col overflow-hidden bg-[#0F0E0D] text-[#F5F0EB] pdf-theme-${readingTheme}`}
         >
             {/* Header */}
-            <header className="relative z-10 flex h-14 shrink-0 items-center justify-between gap-3 border-b border-[#2A2928] bg-[#161514]/90 backdrop-blur-xl px-3 sm:px-4">
+            <header className="relative z-10 flex h-[60px] shrink-0 items-center justify-between gap-3 border-b border-[#2A2928] bg-[#0F0E0D]/90 backdrop-blur-xl px-4 sm:px-7">
                 <div className="flex min-w-0 items-center gap-3">
                     <Link
                         href={backHref}
@@ -963,7 +923,7 @@ export default function PDFReaderClient({
                         title="Back"
                         aria-label="Back"
                     >
-                        <ChevronLeft className="h-5 w-5" />
+                        <span>Previous</span>
                         <span className="ml-1 hidden text-sm font-medium sm:inline">Back</span>
                     </Link>
 
@@ -977,23 +937,21 @@ export default function PDFReaderClient({
                         title="Toggle Navigation Sidebar"
                         aria-label="Toggle sidebar"
                     >
-                        <Layers className="h-4 w-4" />
+                        <span>Pages</span>
                     </button>
 
                     <h1
                         className="flex min-w-0 items-center gap-2 truncate text-sm font-semibold text-[#F5F0EB]"
                         style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                     >
-                        <IconBadge>
-                            <FileText className="h-3.5 w-3.5" />
-                        </IconBadge>
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">PDF</span>
                         <span className="truncate max-w-[280px] sm:max-w-md">{title}</span>
                     </h1>
                 </div>
 
                 {/* Desktop Toolbar */}
                 <div
-                    className="hidden shrink-0 items-center gap-0.5 rounded-[12px] border border-[#2A2928] bg-[#161514]/80 p-1 shadow-sm sm:flex"
+                    className="hidden shrink-0 items-center gap-0.5 rounded-[8px] border border-[#2A2928] bg-[#161514]/80 p-1 shadow-sm sm:flex"
                     role="toolbar"
                     aria-label="Document controls"
                 >
@@ -1008,7 +966,7 @@ export default function PDFReaderClient({
                         className={toolbarButtonClass}
                         aria-label="Search"
                     >
-                        <Search className="h-4 w-4" />
+                        <span>Search</span>
                     </button>
                     <button
                         type="button"
@@ -1016,14 +974,14 @@ export default function PDFReaderClient({
                         className={toolbarButtonClass}
                         aria-label="Sidebar"
                     >
-                        <Layers className="h-4 w-4" />
+                        <span>Pages</span>
                     </button>
                 </div>
             </header>
 
             {/* Resume reading prompt */}
             {resumePage !== null ? (
-                <div className="flex items-center justify-between gap-3 border-b border-[#2A2928] bg-[#C8794A]/10 px-3 py-2 text-xs sm:px-4">
+                <div className="flex items-center justify-between gap-3 border-b border-[#2A2928] bg-[#C8794A]/[0.05] px-4 py-2.5 text-[12px] sm:px-7">
                     <span className="text-[#F5F0EB]">You were last reading page {resumePage}.</span>
                     <div className="flex items-center gap-2">
                         <button
@@ -1032,7 +990,7 @@ export default function PDFReaderClient({
                                 goToPage(resumePage);
                                 setResumePage(null);
                             }}
-                            className="rounded-full border border-[#C8794A]/40 bg-[#C8794A]/15 px-3 py-1 font-semibold text-[#C8794A]"
+                            className="rounded-[4px] border border-[#C8794A]/40 bg-[#C8794A]/15 px-3 py-1 font-semibold text-[#C8794A]"
                         >
                             Resume
                         </button>
@@ -1042,7 +1000,7 @@ export default function PDFReaderClient({
                             className="p-1 text-[#9E9690] hover:text-[#F5F0EB]"
                             aria-label="Dismiss resume prompt"
                         >
-                            <X className="h-3.5 w-3.5" />
+                            <span>Close</span>
                         </button>
                     </div>
                 </div>
@@ -1052,7 +1010,7 @@ export default function PDFReaderClient({
             {searchOpen && (
                 <div className="border-b border-[#2A2928] bg-[#161514]/60 px-3 py-2 backdrop-blur-xl">
                     <div className="mx-auto flex max-w-xl items-center gap-2">
-                        <Search className="h-4 w-4 text-[#9E9690] shrink-0" aria-hidden="true" />
+
                         <input
                             ref={searchInputRef}
                             type="search"
@@ -1062,13 +1020,13 @@ export default function PDFReaderClient({
                                 hasScrolledToMatch.current = false;
                                 setCurrentMatch(0);
                             }}
-                            placeholder="Search keywords in document…"
+                            placeholder="Search keywords in document"
                             className="flex-1 bg-transparent text-sm text-[#F5F0EB] placeholder:text-[#9E9690] focus:outline-none"
                             aria-label="Search text in document"
                         />
 
                         {matchCount > 0 && (
-                            <div className="flex items-center gap-1 text-xs text-[#9E9690] bg-[#1C1B1A] px-2 py-0.5 rounded-[4px] font-mono">
+                            <div className="flex items-center gap-2 text-[11px] text-[#9E9690] bg-[#1C1B1A] px-2 py-1 rounded-[4px]">
                                 <span>{currentMatch + 1}/{matchCount}</span>
                                 <button
                                     type="button"
@@ -1076,7 +1034,7 @@ export default function PDFReaderClient({
                                     className="p-0.5 hover:text-[#F5F0EB]"
                                     title="Previous match"
                                 >
-                                    <ChevronLeft className="h-3.5 w-3.5" />
+                                    <span>Previous</span>
                                 </button>
                                 <button
                                     type="button"
@@ -1084,7 +1042,7 @@ export default function PDFReaderClient({
                                     className="p-0.5 hover:text-[#F5F0EB]"
                                     title="Next match"
                                 >
-                                    <ChevronRight className="h-3.5 w-3.5" />
+                                    <span>Next</span>
                                 </button>
                             </div>
                         )}
@@ -1100,10 +1058,10 @@ export default function PDFReaderClient({
                                 className="p-1 text-[#9E9690] hover:text-[#F5F0EB]"
                                 aria-label="Clear search"
                             >
-                                <X className="h-4 w-4" />
+                                <span>Close</span>
                             </button>
                         )}
-                        <span className="text-xs text-[#9E9690] hidden sm:inline font-mono">
+                        <span className="text-xs text-[#9E9690] hidden sm:inline font-sans">
                             / to focus
                         </span>
                     </div>
@@ -1120,25 +1078,23 @@ export default function PDFReaderClient({
                             <button
                                 type="button"
                                 onClick={() => setSidebarTab('thumbnails')}
-                                className={`flex-1 flex items-center justify-center gap-1.5 py-1 px-2 rounded-[4px] text-xs font-medium transition-colors ${
-                                    sidebarTab === 'thumbnails'
-                                        ? 'bg-[#161514] text-[#C8794A] font-semibold shadow-sm'
-                                        : 'text-[#9E9690] hover:text-[#F5F0EB]'
-                                }`}
+                                className={`flex-1 flex items-center justify-center gap-1.5 py-1 px-2 rounded-[4px] text-xs font-medium transition-colors ${sidebarTab === 'thumbnails'
+                                    ? 'bg-[#161514] text-[#C8794A] font-semibold shadow-sm'
+                                    : 'text-[#9E9690] hover:text-[#F5F0EB]'
+                                    }`}
                             >
-                                <Layers className="h-3.5 w-3.5" /> Pages ({numPages ?? '…'})
+                                Pages ({numPages ?? 'Loading'})
                             </button>
                             {outline.length > 0 && (
                                 <button
                                     type="button"
                                     onClick={() => setSidebarTab('outline')}
-                                    className={`flex-1 flex items-center justify-center gap-1.5 py-1 px-2 rounded-[4px] text-xs font-medium transition-colors ${
-                                        sidebarTab === 'outline'
-                                            ? 'bg-[#161514] text-[#C8794A] font-semibold shadow-sm'
-                                            : 'text-[#9E9690] hover:text-[#F5F0EB]'
-                                    }`}
+                                    className={`flex-1 flex items-center justify-center gap-1.5 py-1 px-2 rounded-[4px] text-xs font-medium transition-colors ${sidebarTab === 'outline'
+                                        ? 'bg-[#161514] text-[#C8794A] font-semibold shadow-sm'
+                                        : 'text-[#9E9690] hover:text-[#F5F0EB]'
+                                        }`}
                                 >
-                                    <ListTree className="h-3.5 w-3.5" /> Outline
+                                    Outline
                                 </button>
                             )}
                         </div>
@@ -1153,22 +1109,21 @@ export default function PDFReaderClient({
                                                 key={i}
                                                 type="button"
                                                 onClick={() => goToPage(i + 1)}
-                                                className={`mb-2.5 w-full rounded-[8px] border p-1.5 transition-all text-left group ${
-                                                    pageNumber === i + 1 || (layoutMode === 'spread' && spreadPages.includes(i + 1))
-                                                        ? 'border-[#C8794A] bg-[#C8794A]/15 shadow-md shadow-[#C8794A]/10'
-                                                        : 'border-transparent hover:border-[#2A2928] hover:bg-[#161514]'
-                                                }`}
+                                                className={`mb-2.5 w-full rounded-[8px] border p-1.5 transition-all text-left group ${pageNumber === i + 1 || (layoutMode === 'spread' && spreadPages.includes(i + 1))
+                                                    ? 'border-[#C8794A] bg-[#C8794A]/15 shadow-md shadow-[#C8794A]/10'
+                                                    : 'border-transparent hover:border-[#2A2928] hover:bg-[#161514]'
+                                                    }`}
                                                 aria-label={`Go to page ${i + 1}`}
                                                 aria-current={pageNumber === i + 1 ? 'true' : undefined}
                                             >
-                                                <div className="overflow-hidden rounded-[4px] bg-white/5 border border-white/10 flex justify-center">
+                                                <div className="overflow-hidden rounded-[4px] bg-[#1C1B1A] border border-[#2A2928] flex justify-center">
                                                     <Thumbnail
                                                         pageNumber={i + 1}
                                                         width={180}
                                                         className="rounded-md"
                                                     />
                                                 </div>
-                                                <span className="mt-1.5 block text-center text-[11px] font-mono text-[#9E9690] group-hover:text-[#F5F0EB] tabular-nums">
+                                                <span className="mt-1.5 block text-center text-[11px] text-[#6B6560] group-hover:text-[#F5F0EB] tabular-nums">
                                                     Page {i + 1}
                                                 </span>
                                             </button>
@@ -1190,7 +1145,7 @@ export default function PDFReaderClient({
                                             <div className="flex items-center justify-between gap-2">
                                                 <span className="truncate">{item.title}</span>
                                                 {item.pageNumber && (
-                                                    <span className="font-mono text-[10px] text-[#9E9690] shrink-0">
+                                                    <span className="text-[10px] text-[#6B6560] shrink-0">
                                                         p.{item.pageNumber}
                                                     </span>
                                                 )}
@@ -1206,7 +1161,7 @@ export default function PDFReaderClient({
                 {/* PDF Viewer Canvas Container */}
                 <div
                     ref={containerRef}
-                    className="min-h-0 flex-1 overflow-auto overscroll-contain bg-[#0F0E0D] px-2 py-4 pb-28 sm:px-4 sm:py-6 sm:pb-8"
+                    className="min-h-0 flex-1 overflow-auto overscroll-contain bg-[#0F0E0D] px-3 py-5 pb-24 sm:px-7 sm:py-7 sm:pb-8"
                 >
                     <Document
                         file={pdfUrl}
@@ -1230,7 +1185,7 @@ export default function PDFReaderClient({
                                     onLoadSuccess={handlePageLoadSuccess}
                                     onGetTextSuccess={handleGetTextSuccess}
                                     onRenderSuccess={handlePageRenderSuccess}
-                                    className="soft-shell overflow-hidden rounded-lg"
+                                    className="soft-shell overflow-hidden rounded-[6px]"
                                 />
                             </div>
                         )}
@@ -1247,13 +1202,12 @@ export default function PDFReaderClient({
                                             onLoadSuccess={handlePageLoadSuccess}
                                             onGetTextSuccess={handleGetTextSuccess}
                                             onRenderSuccess={handlePageRenderSuccess}
-                                            className={`overflow-hidden ${
-                                                spreadPages.length > 1 && idx === 0
-                                                    ? 'pdf-spread-left rounded-l-lg'
-                                                    : spreadPages.length > 1 && idx === 1
+                                            className={`overflow-hidden ${spreadPages.length > 1 && idx === 0
+                                                ? 'pdf-spread-left rounded-l-lg'
+                                                : spreadPages.length > 1 && idx === 1
                                                     ? 'pdf-spread-right rounded-r-lg'
-                                                    : 'soft-shell rounded-lg'
-                                            }`}
+                                                    : 'soft-shell rounded-[6px]'
+                                                }`}
                                         />
                                         {idx === 0 && spreadPages.length > 1 && (
                                             <div
@@ -1285,9 +1239,9 @@ export default function PDFReaderClient({
                                                 onLoadSuccess={i === 0 ? handlePageLoadSuccess : undefined}
                                                 onGetTextSuccess={handleGetTextSuccess}
                                                 onRenderSuccess={handlePageRenderSuccess}
-                                                className="soft-shell overflow-hidden rounded-lg"
+                                                className="soft-shell overflow-hidden rounded-[6px]"
                                             />
-                                            <span className="mt-2 text-[11px] font-mono text-[#9E9690]/60">
+                                            <span className="mt-2 text-[11px] text-[#6B6560]">
                                                 Page {i + 1} of {numPages}
                                             </span>
                                         </div>
@@ -1301,7 +1255,7 @@ export default function PDFReaderClient({
             {/* Mobile Floating Bottom Dock */}
             <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] sm:hidden">
                 <div
-                    className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-[12px] border border-[#2A2928] bg-[#161514]/90 p-1.5 shadow-2xl shadow-[#C8794A]/15 backdrop-blur-xl"
+                    className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-[8px] border border-[#2A2928] bg-[#161514]/90 p-1.5 shadow-lg backdrop-blur-xl"
                     role="toolbar"
                     aria-label="Document controls"
                 >
@@ -1311,47 +1265,47 @@ export default function PDFReaderClient({
 
             {/* Keyboard Shortcuts Help Modal */}
             {showHelpModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-                    <div className="w-full max-w-md rounded-[12px] border border-[#2A2928] bg-[#161514] p-6 shadow-2xl space-y-4">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0F0E0D]/80 backdrop-blur-sm p-4">
+                    <div className="w-full max-w-md rounded-[8px] border border-[#2A2928] bg-[#161514] p-6 shadow-xl space-y-4">
                         <div className="flex items-center justify-between">
                             <h3
                                 className="text-base font-bold text-[#F5F0EB] flex items-center gap-2"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
-                                <HelpCircle className="h-4 w-4 text-[#C8794A]" /> Keyboard Shortcuts
+                                Keyboard Shortcuts
                             </h3>
                             <button
                                 type="button"
                                 onClick={() => setShowHelpModal(false)}
                                 className="p-1 text-[#9E9690] hover:text-[#F5F0EB] rounded-[4px]"
                             >
-                                <X className="h-4 w-4" />
+                                <span>Close</span>
                             </button>
                         </div>
                         <div className="grid grid-cols-2 gap-2 text-xs">
                             <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
                                 <span className="text-[#9E9690]">Next / Prev Page</span>
-                                <kbd className="font-mono text-[#C8794A] font-bold">← / → or J / K</kbd>
+                                <kbd className="text-[#C8794A] font-semibold">Left Arrow / Right Arrow or J / K</kbd>
                             </div>
                             <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
                                 <span className="text-[#9E9690]">First / Last Page</span>
-                                <kbd className="font-mono text-[#C8794A] font-bold">Home / End</kbd>
+                                <kbd className="text-[#C8794A] font-semibold">Home / End</kbd>
                             </div>
                             <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
                                 <span className="text-[#9E9690]">Zoom In / Out</span>
-                                <kbd className="font-mono text-[#C8794A] font-bold">+ / -</kbd>
+                                <kbd className="text-[#C8794A] font-semibold">Plus / Minus</kbd>
                             </div>
                             <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
                                 <span className="text-[#9E9690]">Rotate Page</span>
-                                <kbd className="font-mono text-[#C8794A] font-bold">R</kbd>
+                                <kbd className="text-[#C8794A] font-semibold">R</kbd>
                             </div>
                             <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
                                 <span className="text-[#9E9690]">Fullscreen</span>
-                                <kbd className="font-mono text-[#C8794A] font-bold">F</kbd>
+                                <kbd className="text-[#C8794A] font-semibold">F</kbd>
                             </div>
                             <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
                                 <span className="text-[#9E9690]">Search in Document</span>
-                                <kbd className="font-mono text-[#C8794A] font-bold">/</kbd>
+                                <kbd className="text-[#C8794A] font-semibold">/</kbd>
                             </div>
                         </div>
                         <div className="text-right">
