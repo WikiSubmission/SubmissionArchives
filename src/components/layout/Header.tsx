@@ -206,20 +206,7 @@ export default function Header() {
                             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                             aria-expanded={isMenuOpen}
                             aria-controls={menuId}
-                            className="lg:hidden"
-                            style={{
-                                minHeight: 38,
-                                minWidth: 38,
-                                borderRadius: 6,
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                border: '1px solid #2A2928',
-                                background: 'rgba(22,21,20,0.8)',
-                                color: '#9E9690',
-                                cursor: 'pointer',
-                                transition: 'all 0.2s ease',
-                            }}
+                            className="inline-flex min-h-[38px] min-w-[38px] items-center justify-center rounded-[6px] border border-[#2A2928] bg-[rgba(22,21,20,0.8)] text-[#9E9690] transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95 lg:hidden"
                         >
                             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                         </button>
@@ -360,6 +347,9 @@ export default function Header() {
     );
 }
 
+const headerIconSurfaceClass =
+    'inline-flex h-[34px] w-[34px] items-center justify-center rounded-[6px] border border-[#2A2928] bg-transparent text-[#6B6560] transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95';
+
 function HeaderIconButton({
     children,
     label,
@@ -377,19 +367,7 @@ function HeaderIconButton({
             onClick={onClick}
             aria-label={label}
             aria-pressed={pressed}
-            style={{
-                display: 'inline-flex',
-                width: 34,
-                height: 34,
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 6,
-                border: '1px solid #2A2928',
-                background: 'transparent',
-                color: '#6B6560',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-            }}
+            className={headerIconSurfaceClass}
         >
             {children}
         </button>
@@ -411,19 +389,7 @@ function HeaderIconLink({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${label} (opens in a new tab)`}
-            style={{
-                display: 'inline-flex',
-                width: 34,
-                height: 34,
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 6,
-                border: '1px solid #2A2928',
-                background: 'transparent',
-                color: '#6B6560',
-                textDecoration: 'none',
-                transition: 'all 0.2s ease',
-            }}
+            className={`${headerIconSurfaceClass} no-underline`}
         >
             {children}
         </a>

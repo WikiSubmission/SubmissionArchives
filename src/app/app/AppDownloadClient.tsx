@@ -1,67 +1,131 @@
 'use client';
 
-import { useSyncExternalStore, useState, type ReactNode } from 'react';
+import { useSyncExternalStore, useState, useEffect, useCallback, type ReactNode } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import {
     Apple,
-    Clock,
-    FolderOpen,
-    GitBranch,
-    HardDrive,
-    MonitorSmartphone,
-    PenLine,
-    Search,
-    Sparkles,
+    Monitor,
     Terminal,
+    HardDrive,
     Zap,
-    Columns,
+    Search,
     LayoutGrid,
-    BookOpen,
+    GitBranch,
+    Columns,
     Layers,
     Keyboard,
-    Check,
-    ArrowUpRight,
+    Clock,
+    Download,
+    ChevronDown,
+    Command,
+    FileText,
+    Volume2,
+    Video,
+    FileCode,
+    Bookmark,
+    Compass,
 } from 'lucide-react';
-import { FluidTabs } from '@/components/ui/fluid-tabs';
-import { CardSplitAccordion, type AccordionItemData } from '@/components/ui/card-split-accordion';
 
-const STUDIO_ARCHITECTURE_ACCORDION: AccordionItemData[] = [
+/* -------------------------------------------------------------------------- */
+/* Types & Constants                                                          */
+/* -------------------------------------------------------------------------- */
+
+type Platform = 'macos' | 'windows' | 'linux';
+
+type WorkspaceTab = 'documents' | 'quran' | 'audio' | 'video' | 'written';
+
+interface ArchitecturePillar {
+    id: string;
+    title: string;
+    badge: string;
+    icon: ReactNode;
+    content: string;
+}
+
+const ARCHITECTURE_PILLARS: ArchitecturePillar[] = [
     {
         id: 'engine-1',
         title: 'Native Rust Engine & Tauri IPC Bridge',
-        badge: 'Near-Zero RAM',
-        icon: <Zap className="h-4 w-4 text-[#C8794A]" />,
+        badge: 'NON-REMOTE',
+        icon: <Zap className="h-3.5 w-3.5 text-[#C8794A]" />,
         content:
-            'Constructed on Tauri v2 and native Rust bindings, achieving instant launch in under 80ms and resting memory usage under 45MB — unlike bloated Chromium wrappers.',
+            'A desktop-native core engineered with native Rust and Tauri v2 for responsive indexing, file operations, and media access without pushing your working archive to a hosted cloud service.',
     },
     {
         id: 'engine-2',
         title: 'Local-First SQLite & Vector Search Database',
-        badge: 'Zero Cloud Lock-In',
-        icon: <HardDrive className="h-4 w-4 text-[#C8794A]" />,
+        badge: 'ONE COLLECTION',
+        icon: <HardDrive className="h-3.5 w-3.5 text-[#C8794A]" />,
         content:
-            'Your notes and transcript links are stored as open standard Markdown and SQLite on your own SSD. Full-text search and BM25 ranking execute entirely offline with zero network latency.',
+            'Structured metadata and local BM25 ranking execute entirely on your machine. Your scholarly notes and transcript indexes remain open standard Markdown and SQLite on your drive.',
     },
     {
         id: 'engine-3',
-        title: 'Arabic Diacritics & Named Surah Autocomplete',
-        badge: 'Academic Engine',
-        icon: <BookOpen className="h-4 w-4 text-[#C8794A]" />,
+        title: 'Arabic Transliteration & Named Surah Autocomplete',
+        badge: 'SEARCH LAYER',
+        icon: <Search className="h-3.5 w-3.5 text-[#C8794A]" />,
         content:
-            'Type fast shortcuts like "a=" for "ā" or "/quran Baqarah 255" to auto-insert rich scripture cards with calligraphy, verse numbers, and transliteration headers.',
+            'The search layer is optimized for Arabic script, phonetic transliteration, named surahs, and academic citation formats with sub-millisecond local fuzzy matching.',
     },
     {
         id: 'engine-4',
-        title: 'Bidirectional Wiki-Links & Interactive Canvas',
-        badge: 'Knowledge Graph',
-        icon: <GitBranch className="h-4 w-4 text-[#C8794A]" />,
+        title: 'Bidirectional Wiki Links & Interactive Canvas',
+        badge: 'KNOWLEDGE GRAPH',
+        icon: <GitBranch className="h-3.5 w-3.5 text-[#C8794A]" />,
         content:
-            'Connect sermon insights, historical newsletter articles, and personal commentary with [[Wiki-Links]]. Explore emergent theological themes on an infinite 2D spatial canvas.',
+            'Move seamlessly from a verse to a note, from a speaker to a recording, or from a theological theme to every source in the archive across a 2D relational canvas.',
     },
 ];
 
-type Platform = 'macos' | 'windows' | 'linux';
+const PLATFORM_INFO: Record<Platform, { label: string; ext: string; icon: typeof Apple }> = {
+    macos: { label: 'macOS', ext: 'Universal .dmg', icon: Apple },
+    windows: { label: 'Windows', ext: 'x64 .msi', icon: Monitor },
+    linux: { label: 'Linux', ext: '.AppImage / .deb', icon: Terminal },
+};
+
+const APP_VERSION = '0.9.0';
+
+interface PaletteAction {
+    id: string;
+    label: string;
+    hint: string;
+    icon: ReactNode;
+    run: (context: { close: () => void; showToast: (msg: string) => void }) => void;
+}
+
+const PALETTE_ACTIONS: PaletteAction[] = [
+    {
+        id: 'features',
+        label: 'Explore features',
+        hint: 'F',
+        icon: <LayoutGrid className="h-3.5 w-3.5 text-[#C8794A]" />,
+        run: ({ close }) => {
+            close();
+            document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+        },
+    },
+    {
+        id: 'top',
+        label: 'Back to top',
+        hint: 'H',
+        icon: <Compass className="h-3.5 w-3.5 text-[#C8794A]" />,
+        run: ({ close }) => {
+            close();
+            document.getElementById('top')?.scrollIntoView({ behavior: 'smooth' });
+        },
+    },
+    {
+        id: 'download',
+        label: 'Download desktop application',
+        hint: 'D',
+        icon: <Download className="h-3.5 w-3.5 text-[#C8794A]" />,
+        run: ({ close, showToast }) => {
+            close();
+            showToast('Desktop builds are in active development — coming soon.');
+        },
+    },
+];
 
 function getPlatformSnapshot(): Platform {
     if (typeof window === 'undefined' || typeof navigator === 'undefined') return 'macos';
@@ -75,856 +139,966 @@ function subscribePlatform() {
     return () => { };
 }
 
-const PLATFORM_LABEL: Record<Platform, string> = {
-    macos: 'macOS',
-    windows: 'Windows',
-    linux: 'Linux',
-};
-
-const PLATFORM_EXT: Record<Platform, string> = {
-    macos: '.dmg / Apple Silicon & Intel',
-    windows: '.msi / .exe (x64)',
-    linux: '.AppImage / .deb',
-};
-
 const fadeUp = (delay = 0) => ({
-    initial: { opacity: 0, y: 12 },
+    initial: { opacity: 0, y: 10 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: '-40px' },
-    transition: { duration: 0.26, delay, ease: [0.16, 1, 0.3, 1] as const },
+    transition: { duration: 0.32, delay, ease: [0.25, 0.1, 0.25, 1] as const },
 });
+
+/* -------------------------------------------------------------------------- */
+/* Component                                                                  */
+/* -------------------------------------------------------------------------- */
 
 export default function AppDownloadClient() {
     const platform = useSyncExternalStore<Platform>(subscribePlatform, getPlatformSnapshot, () => 'macos');
-    const [activeTab, setActiveTab] = useState<'editor' | 'canvas' | 'graph' | 'split' | 'search'>('editor');
+    const [activeWorkspaceTab, setActiveWorkspaceTab] = useState<WorkspaceTab>('documents');
+    const [openAccordionId, setOpenAccordionId] = useState<string>('engine-1');
+    const [paletteOpen, setPaletteOpen] = useState(false);
+    const [paletteQuery, setPaletteQuery] = useState('');
+    const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+    const showToast = useCallback((msg: string) => {
+        setToastMessage(msg);
+    }, []);
+
+    const closePalette = useCallback(() => {
+        setPaletteOpen(false);
+        setPaletteQuery('');
+    }, []);
+
+    useEffect(() => {
+        if (!toastMessage) return;
+        const timer = setTimeout(() => setToastMessage(null), 2400);
+        return () => clearTimeout(timer);
+    }, [toastMessage]);
+
+    useEffect(() => {
+        const isTypingTarget = (target: EventTarget | null) =>
+            target instanceof HTMLInputElement ||
+            target instanceof HTMLTextAreaElement ||
+            (target instanceof HTMLElement && target.isContentEditable);
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            const isMeta = e.metaKey || e.ctrlKey;
+            if ((isMeta && e.key.toLowerCase() === 'k') || (e.key === '/' && !isTypingTarget(e.target))) {
+                e.preventDefault();
+                setPaletteOpen((prev) => !prev);
+                setPaletteQuery('');
+            }
+            if (e.key === 'Escape') {
+                closePalette();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [closePalette]);
 
     const otherPlatforms: Platform[] = (['macos', 'windows', 'linux'] as Platform[]).filter((p) => p !== platform);
 
+    const trimmedPaletteQuery = paletteQuery.trim().toLowerCase();
+    const filteredPaletteActions = trimmedPaletteQuery
+        ? PALETTE_ACTIONS.filter((action) => action.label.toLowerCase().includes(trimmedPaletteQuery))
+        : PALETTE_ACTIONS;
+
     return (
         <div className="relative min-h-screen bg-[#0F0E0D] text-[#F5F0EB] font-sans antialiased selection:bg-[#C8794A]/25 selection:text-[#F5F0EB]">
-            {/* Ambient page glow */}
+            {/* Ambient background — matches archive pages */}
             <div
-                aria-hidden
+                aria-hidden="true"
                 className="pointer-events-none fixed inset-0 z-0"
                 style={{
                     background:
-                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.035) 0%, transparent 70%), ' +
-                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.02) 0%, transparent 70%)',
+                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.025) 0%, transparent 70%), ' +
+                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.015) 0%, transparent 70%)',
                 }}
             />
 
-            <main id="main-content" className="relative z-[1]">
-                {/* Hero Section */}
-                <section className="relative overflow-hidden pt-24 pb-16 sm:pt-32 sm:pb-24">
-                    <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+            {/* Page content only — site Header/Footer come from root layout */}
+            <main id="top" className="relative z-10">
+                {/* Hero */}
+                <section className="px-5 pt-16 pb-16 text-center sm:px-7 sm:pt-20 sm:pb-20">
+                    <div className="mx-auto max-w-[820px]">
                         <motion.div {...fadeUp(0)}>
-                            {/* App Icon Vessel */}
-                            <div className="relative mb-8 flex flex-col items-center justify-center">
-                                <motion.div
-                                    whileHover={{ scale: 1.02, y: -2 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
-                                    className="group relative cursor-pointer select-none"
-                                >
-                                    {/* Ambient Glow */}
-                                    <div
-                                        aria-hidden="true"
-                                        className="pointer-events-none absolute -inset-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(200,121,74,0.35)_0%,rgba(200,121,74,0.18)_40%,transparent_75%)] opacity-85 blur-3xl transition-all duration-700 group-hover:scale-115 group-hover:opacity-100"
-                                    />
-
-                                    {/* Pulse Ring */}
-                                    <div
-                                        aria-hidden="true"
-                                        className="pointer-events-none absolute -inset-2 rounded-[34px] border border-[#C8794A]/30 opacity-50 transition-all duration-500 group-hover:scale-105 group-hover:opacity-90 group-hover:border-[#C8794A]/60 sm:rounded-[38px]"
-                                    />
-
-                                    {/* 3D App Icon Tile */}
-                                    <div className="relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-[26px] border border-[#2A2928] bg-gradient-to-b from-[#1E1D1C] via-[#161514] to-[#121110] p-5 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.65),0_0_0_1px_rgba(255,255,255,0.08)_inset,0_0_24px_rgba(200,121,74,0.1)_inset] backdrop-blur-2xl transition-all duration-300 group-hover:border-[#C8794A]/50 group-hover:shadow-[0_30px_70px_-12px_rgba(0,0,0,0.75),0_0_0_1px_rgba(255,255,255,0.15)_inset] sm:h-32 sm:w-32 sm:rounded-[30px] sm:p-6">
-                                        {/* Specular Bevel */}
-                                        <div
-                                            aria-hidden="true"
-                                            className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-[26px] bg-gradient-to-b from-white/15 via-white/5 to-transparent sm:rounded-t-[30px]"
-                                        />
-
-                                        {/* Official Brand Emblem */}
-                                        <div className="relative h-full w-full">
-                                            <Image
-                                                src="/assets/brand/submission-archives-mark.png"
-                                                alt="Submission Archives Studio App Icon"
-                                                fill
-                                                sizes="(max-width: 640px) 112px, 128px"
-                                                className="object-contain filter drop-shadow-[0_6px_14px_rgba(0,0,0,0.5)] transition-transform duration-500 ease-out group-hover:scale-105"
-                                                priority
-                                                loading="eager"
-                                            />
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            </div>
-
-                            {/* App Identity Tag */}
-                            <div className="inline-flex items-center gap-2 rounded-full border border-[#C8794A]/20 bg-[#161514] px-3.5 py-1.5 backdrop-blur-md shadow-sm">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#C8794A] opacity-75" />
-                                    <span className="relative inline-flex h-2 w-2 rounded-full bg-[#C8794A] shadow-[0_0_8px_rgba(200,121,74,0.8)]" />
-                                </span>
-                                <span className="text-[0.72rem] font-mono font-semibold uppercase tracking-[0.14em] text-[#C8794A]">
-                                    SA Studio · Offline Scholarly Workspace
+                            <div className="inline-flex items-center gap-1.5 rounded border border-[rgba(200,121,74,0.15)] bg-[rgba(200,121,74,0.06)] px-2.5 py-1">
+                                <span className="h-1.5 w-1.5 rounded-full bg-[#C8794A]" />
+                                <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">
+                                    App Studio · Offline scholarly workspace
                                 </span>
                             </div>
 
-                            {/* Main Title */}
                             <h1
-                                className="mt-7 text-[clamp(2.5rem,5.5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.03em] text-[#F5F0EB]"
-                                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                                className="mx-auto mt-5 max-w-[720px] text-[clamp(2.75rem,5.5vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-[#F5F0EB]"
+                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
-                                Your archive, on your own disk.
+                                Your archive, <span className="text-[#C8794A]">on your own disk.</span>
                             </h1>
 
-                            {/* Lead paragraph */}
                             <p
-                                className="mx-auto mt-6 max-w-2xl text-[17px] leading-[1.65] text-[#9E9690]"
+                                className="mx-auto mt-7 max-w-[620px] text-[16.5px] leading-[1.6] text-[#9E9690]"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
-                                SubmissionArchives Studio is a high-performance desktop workspace for reading, tagging,
-                                cross-referencing, and expanding the archive. Engineered with native Rust and Tauri for
-                                complete offline privacy, academic transliteration, and visual knowledge synthesis.
+                                A local-first workspace for precise research, listening, reading, and citation. Keep the
+                                archive private, searchable, and yours — Quran references, transcripts, audio, video, and
+                                written material in one place.
                             </p>
 
-                            {/* Download & Platform CTA */}
-                            <div className="mt-10 flex flex-col items-center gap-4">
-                                <div className="flex flex-wrap items-center justify-center gap-3">
-                                    <DownloadButton platform={platform} primary />
-                                    {otherPlatforms.map((p) => (
-                                        <DownloadButton key={p} platform={p} />
-                                    ))}
-                                </div>
+                            <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+                                <PrimaryDownloadButton
+                                    platform={platform}
+                                    onClick={() =>
+                                        showToast(
+                                            'Desktop builds are in active development — standalone installers coming soon.',
+                                        )
+                                    }
+                                />
+                                {otherPlatforms.map((p) => (
+                                    <SecondaryDownloadButton
+                                        key={p}
+                                        platform={p}
+                                        onClick={() => showToast(`${PLATFORM_INFO[p].label} standalone binary coming soon.`)}
+                                    />
+                                ))}
+                            </div>
 
-                                <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-[#6B6560]">
-                                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#C8794A]" />
-                                    <span>Tauri & Rust Native</span>
-                                    <span className="hidden sm:inline">·</span>
-                                    <span>Zero Cloud Lock-in</span>
-                                    <span className="hidden sm:inline">·</span>
-                                    <span className="rounded bg-[#1C1B1A] border border-[#2A2928] px-2 py-0.5 font-semibold text-[#F5F0EB]">
-                                        Standalone Executable
+                            <div className="mt-3.5 font-mono text-[10px] tracking-wide text-[#4A4542]">
+                                Build {APP_VERSION} · Free to use · Standard sources
+                            </div>
+
+                            {/* Notice — restrained, enterprise */}
+                            <div className="mx-auto mt-7 flex max-w-[560px] items-start gap-3 rounded-lg border border-[#2A2928] bg-[#161514] px-4 py-3 text-left">
+                                <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-[#2A2928] bg-[#1C1B1A] text-[#C8794A]">
+                                    <Zap className="h-3 w-3" />
+                                </div>
+                                <div>
+                                    <strong className="block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#9E9690]">
+                                        Active development · Synchronized offline core
+                                    </strong>
+                                    <span className="mt-0.5 block text-[11px] leading-relaxed text-[#6B6560]">
+                                        The foundation is being refined around local search, scholarly citations, media
+                                        playback, and long-term archive portability.
                                     </span>
                                 </div>
-
-                                {/* Active Development Notice Card */}
-                                <div className="mt-4 mx-auto max-w-lg rounded-[8px] border border-[#2A2928] bg-[#161514] p-4 text-xs leading-relaxed text-[#9E9690] shadow-sm">
-                                    <div className="flex items-center justify-center gap-2 font-mono text-[0.72rem] font-bold uppercase tracking-wider text-[#F5F0EB] mb-1">
-                                        <Clock className="h-3.5 w-3.5 text-[#C8794A]" />
-                                        <span>Active Development · Standalone Binaries Coming Soon</span>
-                                    </div>
-                                    <p className="text-center text-[#6B6560]">
-                                        SA Studio is currently in active development. Official standalone installers for
-                                        macOS, Windows, and Linux will be downloadable directly from this page.
-                                    </p>
-                                </div>
                             </div>
                         </motion.div>
 
-                        {/* Interactive App Window Showcase */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                            className="relative mx-auto mt-16 max-w-4xl text-left sm:mt-20"
-                        >
-                            {/* Window container */}
-                            <div className="overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] shadow-2xl backdrop-blur-2xl">
+                        {/* App window showcase */}
+                        <motion.div {...fadeUp(0.08)} className="mx-auto mt-12 max-w-[940px] text-left">
+                            <div className="overflow-hidden rounded-[10px] border border-[#302E2B] bg-[#141311] shadow-[0_22px_70px_rgba(0,0,0,0.32)]">
                                 {/* Titlebar */}
-                                <div className="flex h-11 items-center justify-between border-b border-[#2A2928] px-3 sm:px-4 bg-[#1C1B1A] select-none">
-                                    <div className="flex items-center gap-2 shrink-0">
-                                        <div className="h-3 w-3 rounded-full bg-[#E06C75]/80 border border-[#E06C75]/40" />
-                                        <div className="h-3 w-3 rounded-full bg-[#E5C07B]/80 border border-[#E5C07B]/40" />
-                                        <div className="h-3 w-3 rounded-full bg-[#98C379]/80 border border-[#98C379]/40" />
+                                <div className="flex h-[37px] select-none items-center justify-between border-b border-[#2A2928] bg-[#181715] px-3.5">
+                                    <div className="flex items-center gap-1.5">
+                                        <span className="h-1.5 w-1.5 rounded-full bg-[#9D5B4B]" />
+                                        <span className="h-1.5 w-1.5 rounded-full bg-[#AA8A4B]" />
+                                        <span className="h-1.5 w-1.5 rounded-full bg-[#5E8B6E]" />
                                     </div>
-                                    <div className="flex items-center gap-2 text-[0.75rem] font-mono text-[#6B6560] truncate px-2">
-                                        <Image
-                                            src="/assets/brand/submission-archives-mark.png"
-                                            alt=""
-                                            width={16}
-                                            height={16}
-                                            className="h-4 w-4 object-contain rounded-sm shrink-0"
-                                        />
-                                        <span className="font-bold text-[#F5F0EB]">SA Studio</span>
-                                        <span className="opacity-30 hidden sm:inline">/</span>
-                                        <span className="hidden sm:inline truncate">~/Documents/SubmissionArchives-Vault</span>
+                                    <div className="truncate px-2 font-mono text-[9px] text-[#4A4542]">
+                                        SA Studio · Documents / Quran / Al-Baqarah 2:255
                                     </div>
-                                    <div className="hidden sm:flex items-center gap-2 shrink-0">
-                                        <span className="rounded-[4px] px-2 py-0.5 font-mono text-[0.68rem] bg-[#161514] border border-[#2A2928] text-[#9E9690]">
-                                            ⌘K Palette
-                                        </span>
+                                    <div className="font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                        Local
                                     </div>
                                 </div>
 
-                                {/* Showcase navigation tabs with FluidTabs */}
-                                <div className="border-b border-[#2A2928] bg-[#161514] p-2 overflow-x-auto no-scrollbar">
-                                    <FluidTabs
-                                        size="sm"
-                                        activeId={activeTab}
-                                        onChange={(id) => setActiveTab(id as 'editor' | 'canvas' | 'graph' | 'split' | 'search')}
-                                        tabs={[
-                                            { id: 'editor', label: 'Precision Editor', icon: <PenLine className="h-3.5 w-3.5" /> },
-                                            { id: 'canvas', label: 'Synthesis Canvas', icon: <LayoutGrid className="h-3.5 w-3.5" /> },
-                                            { id: 'graph', label: 'Knowledge Graph', icon: <GitBranch className="h-3.5 w-3.5" /> },
-                                            { id: 'split', label: 'Multi-Pane Split', icon: <Columns className="h-3.5 w-3.5" /> },
-                                            { id: 'search', label: 'Fuzzy Search', icon: <Search className="h-3.5 w-3.5" /> },
-                                        ]}
-                                    />
-                                </div>
+                                <div className="grid min-h-[355px] grid-cols-1 sm:grid-cols-[185px_1fr]">
+                                    {/* Sidebar */}
+                                    <aside className="border-r border-[#2A2928] bg-[#12110F] p-3.5">
+                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-[#4A4542]">
+                                            Workspace
+                                        </div>
+                                        <nav className="space-y-0.5">
+                                            <SidebarItem
+                                                active={activeWorkspaceTab === 'documents'}
+                                                onClick={() => setActiveWorkspaceTab('documents')}
+                                                label="Documents"
+                                                count="128"
+                                                icon={<FileText className="h-3 w-3" />}
+                                            />
+                                            <SidebarItem
+                                                active={activeWorkspaceTab === 'quran'}
+                                                onClick={() => setActiveWorkspaceTab('quran')}
+                                                label="Quran"
+                                                count="6,236"
+                                                icon={<Layers className="h-3 w-3" />}
+                                            />
+                                            <SidebarItem
+                                                active={activeWorkspaceTab === 'audio'}
+                                                onClick={() => setActiveWorkspaceTab('audio')}
+                                                label="Audio"
+                                                count="482"
+                                                icon={<Volume2 className="h-3 w-3" />}
+                                            />
+                                            <SidebarItem
+                                                active={activeWorkspaceTab === 'video'}
+                                                onClick={() => setActiveWorkspaceTab('video')}
+                                                label="Video"
+                                                count="96"
+                                                icon={<Video className="h-3 w-3" />}
+                                            />
+                                            <SidebarItem
+                                                active={activeWorkspaceTab === 'written'}
+                                                onClick={() => setActiveWorkspaceTab('written')}
+                                                label="Written"
+                                                count="241"
+                                                icon={<FileCode className="h-3 w-3" />}
+                                            />
+                                        </nav>
 
-                                {/* Window Content Body */}
-                                <div className="p-6 sm:p-8 min-h-[320px] bg-[#0F0E0D]">
-                                    <AnimatePresence mode="wait">
-                                        {activeTab === 'editor' && (
-                                            <motion.div
-                                                key="editor"
-                                                initial={{ opacity: 0, y: 8 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -8 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="space-y-4 font-sans"
-                                            >
-                                                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#2A2928] pb-3">
-                                                    <div className="flex items-center gap-2 font-mono text-xs text-[#6B6560]">
-                                                        <span>📁 01-Scripture-Studies</span>
-                                                        <span>/</span>
-                                                        <span className="font-semibold text-[#F5F0EB]">Ayat-al-Kursi-Exegesis.md</span>
-                                                    </div>
-                                                    <div className="flex gap-1.5 font-mono text-[0.7rem]">
-                                                        <span className="rounded-[4px] bg-[#161514] px-2 py-0.5 text-[#9E9690] border border-[#2A2928]">#theology</span>
-                                                        <span className="rounded-[4px] bg-[#161514] px-2 py-0.5 text-[#9E9690] border border-[#2A2928]">#tawhid</span>
-                                                    </div>
-                                                </div>
+                                        <div className="mx-2 my-2.5 h-px bg-[#2A2928]" />
 
-                                                <h3
-                                                    className="text-2xl font-bold text-[#F5F0EB]"
-                                                    style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-[#4A4542]">
+                                            Collections
+                                        </div>
+                                        <nav className="space-y-0.5">
+                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-[#6B6560]">
+                                                <Bookmark className="h-3 w-3 text-[#C8794A]" />
+                                                <span>Bookmarks</span>
+                                                <span className="ml-auto font-mono text-[9px] text-[#4A4542]">24</span>
+                                            </div>
+                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-[#6B6560]">
+                                                <Clock className="h-3 w-3" />
+                                                <span>Recent</span>
+                                            </div>
+                                        </nav>
+                                    </aside>
+
+                                    {/* Main pane */}
+                                    <div className="bg-[#141311] p-4 sm:p-5">
+                                        <div className="mb-4 flex items-center justify-between gap-2.5">
+                                            <div className="flex h-8 max-w-[390px] flex-1 items-center gap-2 rounded border border-[#2A2928] bg-[#191816] px-2.5 text-[10px] text-[#4A4542]">
+                                                <Search className="h-3 w-3 shrink-0" />
+                                                <span className="truncate">Search archive, Arabic, names, surahs…</span>
+                                            </div>
+                                            <div className="flex gap-1.5">
+                                                <span className="flex h-[30px] items-center rounded border border-[#2A2928] bg-[#181715] px-2.5 text-[9px] text-[#6B6560]">
+                                                    Filter
+                                                </span>
+                                                <span className="flex h-[30px] items-center rounded border border-[#2A2928] bg-[#181715] px-2.5 text-[9px] text-[#6B6560]">
+                                                    Import
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <AnimatePresence mode="wait">
+                                            {activeWorkspaceTab === 'documents' && (
+                                                <motion.div
+                                                    key="doc-view"
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0 }}
+                                                    transition={{ duration: 0.12 }}
                                                 >
-                                                    Ayat al-Kursī Exegesis (Sūrah Al-Baqarah 2:255)
-                                                </h3>
-
-                                                <p
-                                                    className="text-sm leading-relaxed text-[#9E9690]"
-                                                    style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
-                                                >
-                                                    The Verse of the Throne represents the theological pinnacle of absolute monotheism (*Tawḥīd*) in the Quranic corpus. Academic transliteration expands terms like{' '}
-                                                    <code className="px-1.5 py-0.5 rounded bg-[#161514] font-mono text-xs text-[#C8794A] border border-[#2A2928]">
-                                                        Qur&apos;ān
-                                                    </code>{' '}
-                                                    and{' '}
-                                                    <code className="px-1.5 py-0.5 rounded bg-[#161514] font-mono text-xs text-[#C8794A] border border-[#2A2928]">
-                                                        Ḥadīth
-                                                    </code>{' '}
-                                                    automatically.
-                                                </p>
-
-                                                {/* Quran Embed Box */}
-                                                <div className="rounded-[8px] border-l-2 border-l-[#C8794A] border border-[#2A2928] bg-[rgba(200,121,74,0.04)] p-4 font-mono text-xs space-y-2">
-                                                    <div className="flex items-center justify-between text-[#6B6560] text-[0.72rem]">
-                                                        <span className="font-semibold text-[#C8794A] flex items-center gap-1.5">
-                                                            <BookOpen className="h-3.5 w-3.5" />
-                                                            Sūrah Al-Baqarah (2:255)
-                                                        </span>
-                                                        <span>Verse 255</span>
+                                                    <div className="flex items-start justify-between gap-3 border-b border-[#2A2928] pb-3.5">
+                                                        <div>
+                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                                Al-Baqarah · Ayat al-Kursi
+                                                            </div>
+                                                            <h2
+                                                                className="mt-1 text-xl font-medium leading-tight text-[#F5F0EB] sm:text-2xl"
+                                                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                            >
+                                                                Ayat al-Kursi (Surah Al-Baqarah 2:255)
+                                                            </h2>
+                                                            <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                                Quran · Named Surah Search · Canonical text
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex shrink-0 gap-1.5">
+                                                            <span className="rounded-full border border-[#2A2928] px-2 py-0.5 text-[8px] text-[#6B6560]">
+                                                                Bookmark
+                                                            </span>
+                                                            <span className="rounded-full border border-[#2A2928] px-2 py-0.5 text-[8px] text-[#6B6560]">
+                                                                Open
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <p className="font-arabic text-right text-xl text-[#F5F0EB] leading-loose pt-1" dir="rtl">
-                                                        اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
-                                                    </p>
-                                                    <p
-                                                        className="text-xs text-[#9E9690] italic pt-1 border-t border-[#2A2928]"
+
+                                                    <div
+                                                        className="mt-4 border-l-2 border-[#C8794A] bg-[rgba(200,121,74,0.035)] px-3 py-2 text-[13.5px] leading-[1.55] text-[#9E9690]"
                                                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                                     >
-                                                        &ldquo;GOD: there is no god except He, the Living, the Eternal.&rdquo;
-                                                    </p>
-                                                </div>
-                                            </motion.div>
-                                        )}
+                                                        &ldquo;GOD: there is no other god besides Him, the Living, the
+                                                        Eternal.&rdquo;
+                                                    </div>
 
-                                        {activeTab === 'canvas' && (
-                                            <motion.div
-                                                key="canvas"
-                                                initial={{ opacity: 0, y: 8 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -8 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="space-y-3"
-                                            >
-                                                <div className="flex items-center justify-between border-b border-[#2A2928] pb-2 text-xs font-mono text-[#6B6560]">
-                                                    <span>Visual Synthesis Canvas · Infinite 2D Workspace</span>
-                                                    <span className="rounded bg-[#161514] border border-[#2A2928] px-2 py-0.5 text-[0.68rem] text-[#F5F0EB]">Zoom 100%</span>
-                                                </div>
-                                                <div className="relative h-52 w-full rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] p-4 overflow-hidden flex items-center justify-center gap-4">
-                                                    {/* Concept Card 1 */}
-                                                    <div className="w-48 p-3 rounded-[8px] border border-[#2A2928] bg-[#161514] shadow-md text-xs space-y-1">
-                                                        <div className="font-bold text-[#F5F0EB] flex items-center justify-between">
-                                                            <span>Surah Al-Kahf (18:1-10)</span>
-                                                        </div>
-                                                        <p className="text-[11px] text-[#6B6560]">Core theme of faith & preservation.</p>
+                                                    <div
+                                                        className="mt-3.5 border border-[#2A2928] bg-[rgba(143,184,168,0.025)] p-3 text-right text-lg leading-loose text-[#F5F0EB]"
+                                                        dir="rtl"
+                                                        style={{ fontFamily: 'Georgia, serif' }}
+                                                    >
+                                                        اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
                                                     </div>
-                                                    <span className="text-[#C8794A] font-mono">──▶</span>
-                                                    {/* I'rab Syntax Diagram Card */}
-                                                    <div className="w-56 p-3 rounded-[8px] border border-[#2A2928] bg-[#161514] shadow-md text-xs space-y-1.5">
-                                                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#C8794A]">
-                                                            I‘rāb Syntax Tree
-                                                        </span>
-                                                        <div className="flex items-center gap-1.5">
-                                                            <span className="px-1.5 py-0.5 rounded bg-[#1C1B1A] border border-[#2A2928] font-mono text-[10px] text-[#F5F0EB]">Allāhu</span>
-                                                            <span className="text-[10px] text-[#9E9690]">Mubtada&apos; (Subject)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p className="text-xs font-mono text-[#6B6560] text-center">
-                                                    Spatial note arrangement, verse cards, and Arabic grammar diagramming.
-                                                </p>
-                                            </motion.div>
-                                        )}
 
-                                        {activeTab === 'graph' && (
-                                            <motion.div
-                                                key="graph"
-                                                initial={{ opacity: 0, y: 8 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -8 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="flex flex-col items-center justify-center py-4 text-center"
-                                            >
-                                                <div className="relative flex h-48 w-full items-center justify-center rounded-[8px] border border-[#2A2928] bg-[#161514] overflow-hidden">
-                                                    <div className="relative h-32 w-72">
-                                                        <div className="absolute left-1/2 top-1/2 h-[1px] w-24 -translate-x-12 -translate-y-6 rotate-45 bg-[#353433]" />
-                                                        <div className="absolute left-1/2 top-1/2 h-[1px] w-28 -translate-x-14 translate-y-4 -rotate-30 bg-[#353433]" />
-                                                        <div className="absolute left-1/2 top-1/2 h-[1px] w-20 -translate-x-4 -translate-y-8 -rotate-60 bg-[#353433]" />
+                                                    <div className="mt-4 space-y-2">
+                                                        <div className="h-1.5 w-[92%] rounded-full bg-[#24221F]" />
+                                                        <div className="h-1.5 w-[78%] rounded-full bg-[#24221F]" />
+                                                        <div className="h-1.5 w-[66%] rounded-full bg-[#24221F]" />
+                                                    </div>
+                                                </motion.div>
+                                            )}
 
-                                                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-1.5 rounded-[4px] border border-[#C8794A]/40 bg-[#C8794A]/10 px-3 py-1 text-xs font-bold text-[#C8794A] shadow-md">
-                                                            <GitBranch className="h-3 w-3" />
-                                                            <span>Quran 2:255</span>
-                                                        </div>
-                                                        <div className="absolute left-4 top-4 rounded-[4px] border border-[#2A2928] bg-[#1C1B1A] px-2.5 py-1 text-[0.7rem] font-mono text-[#F5F0EB]">
-                                                            Tawḥīd Study
-                                                        </div>
-                                                        <div className="absolute right-6 top-6 rounded-[4px] border border-[#2A2928] bg-[#1C1B1A] px-2.5 py-1 text-[0.7rem] font-mono text-[#F5F0EB]">
-                                                            Appendix 1
-                                                        </div>
-                                                        <div className="absolute left-10 bottom-3 rounded-[4px] border border-[#2A2928] bg-[#1C1B1A] px-2.5 py-1 text-[0.7rem] font-mono text-[#F5F0EB]">
-                                                            Audio #44
+                                            {activeWorkspaceTab === 'quran' && (
+                                                <motion.div
+                                                    key="quran-view"
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0 }}
+                                                    transition={{ duration: 0.12 }}
+                                                >
+                                                    <div className="flex items-start justify-between gap-3 border-b border-[#2A2928] pb-3.5">
+                                                        <div>
+                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                                Surah Index · 114 Chapters
+                                                            </div>
+                                                            <h2
+                                                                className="mt-1 text-xl font-medium leading-tight text-[#F5F0EB] sm:text-2xl"
+                                                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                            >
+                                                                Browse by Surah
+                                                            </h2>
+                                                            <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                                Arabic · English · Transliteration
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <p className="mt-3 text-xs font-mono text-[#6B6560]">
-                                                    Interactive 2D Force-Directed Graph · Trace connections between any verse, audio, or note
-                                                </p>
-                                            </motion.div>
-                                        )}
 
-                                        {activeTab === 'split' && (
-                                            <motion.div
-                                                key="split"
-                                                initial={{ opacity: 0, y: 8 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -8 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="space-y-3"
-                                            >
-                                                <div className="flex items-center justify-between border-b border-[#2A2928] pb-2 text-xs font-mono text-[#6B6560]">
-                                                    <span>Multi-Pane Workspace · Side-by-Side Comparison</span>
-                                                    <kbd className="rounded bg-[#161514] px-1.5 py-0.5 text-[0.65rem] border border-[#2A2928] text-[#F5F0EB]">Ctrl+\</kbd>
-                                                </div>
-                                                <div className="grid grid-cols-2 gap-3 h-48">
-                                                    <div className="p-3.5 rounded-[8px] border border-[#2A2928] bg-[#161514] space-y-2">
-                                                        <span className="text-xs font-semibold text-[#F5F0EB] block">Note: Surah Kahf Analysis</span>
-                                                        <p className="text-xs text-[#6B6560]">Primary commentary and cross-references...</p>
+                                                    <div className="mt-3.5 space-y-1.5">
+                                                        {[
+                                                            { n: 1, name: 'Al-Fatihah', meaning: 'The Opening', verses: 7 },
+                                                            { n: 2, name: 'Al-Baqarah', meaning: 'The Cow', verses: 286 },
+                                                            { n: 36, name: 'Ya Seen', meaning: 'Ya Seen', verses: 83 },
+                                                            { n: 112, name: 'Al-Ikhlas', meaning: 'Sincerity', verses: 4 },
+                                                        ].map((surah) => (
+                                                            <div
+                                                                key={surah.n}
+                                                                className="flex items-center gap-2.5 rounded border border-[#2A2928] bg-[#191816] px-2.5 py-1.5"
+                                                            >
+                                                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#2A2928] font-mono text-[8px] text-[#6B6560]">
+                                                                    {surah.n}
+                                                                </span>
+                                                                <span className="text-[11px] font-medium text-[#F5F0EB]">{surah.name}</span>
+                                                                <span className="text-[9px] text-[#6B6560]">{surah.meaning}</span>
+                                                                <span className="ml-auto font-mono text-[8px] text-[#4A4542]">
+                                                                    {surah.verses} verses
+                                                                </span>
+                                                            </div>
+                                                        ))}
                                                     </div>
-                                                    <div className="p-3.5 rounded-[8px] border border-[#2A2928] bg-[#161514] space-y-2">
-                                                        <span className="text-xs font-semibold text-[#F5F0EB] block">Reference: Historical Print</span>
-                                                        <p className="text-xs text-[#6B6560]">Integrated PDF viewer & quote capture drawer...</p>
-                                                    </div>
-                                                </div>
-                                            </motion.div>
-                                        )}
+                                                </motion.div>
+                                            )}
 
-                                        {activeTab === 'search' && (
-                                            <motion.div
-                                                key="search"
-                                                initial={{ opacity: 0, y: 8 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -8 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="space-y-3"
-                                            >
-                                                <div className="relative flex items-center rounded-[8px] border border-[#2A2928] bg-[#161514] px-3.5 py-2.5 shadow-inner">
-                                                    <Search className="h-4 w-4 text-[#6B6560] mr-2.5" />
-                                                    <input
-                                                        type="text"
-                                                        readOnly
-                                                        value="> Kahf 1-10"
-                                                        className="w-full bg-transparent font-mono text-xs text-[#F5F0EB] outline-none"
-                                                    />
-                                                    <span className="rounded bg-[#1C1B1A] px-2 py-0.5 text-[0.65rem] font-mono text-[#C8794A] border border-[#2A2928]">
-                                                        Instant 1ms
-                                                    </span>
-                                                </div>
-                                                <div className="space-y-1.5 font-mono text-xs">
-                                                    <div className="flex items-center justify-between rounded-[6px] bg-[#1C1B1A] p-2.5 text-[#F5F0EB] font-medium border border-[#2A2928]">
-                                                        <span>📖 Sūrah Al-Kahf (18:1-10)</span>
-                                                        <span className="text-[0.7rem] text-[#6B6560]">Insert Verse ↵</span>
+                                            {activeWorkspaceTab === 'audio' && (
+                                                <motion.div
+                                                    key="audio-view"
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0 }}
+                                                    transition={{ duration: 0.12 }}
+                                                    className="space-y-3"
+                                                >
+                                                    <div className="border-b border-[#2A2928] pb-3.5">
+                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                            Audio Session Index · Master Tapes
+                                                        </div>
+                                                        <h2
+                                                            className="mt-1 text-xl font-medium text-[#F5F0EB]"
+                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                        >
+                                                            QS 01 · Advocating God Alone
+                                                        </h2>
+                                                        <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                            Speaker: Dr. Rashad Khalifa · Duration: 1:19:42 · Masjid Tucson
+                                                            (1987–1990)
+                                                        </div>
                                                     </div>
-                                                    <div className="flex items-center justify-between rounded-[6px] p-2.5 text-[#6B6560] hover:bg-[#161514]">
-                                                        <span>📄 Notes/Surah-Kahf-Study.md</span>
-                                                        <span className="text-[0.7rem]">Open</span>
+                                                    <div className="space-y-2 rounded-md border border-[#2A2928] bg-[#161514] p-3">
+                                                        <div className="flex items-center justify-between font-mono text-[10px] text-[#4A4542]">
+                                                            <span>Digitized Analog Master</span>
+                                                            <span className="text-[#C8794A]">Normalized FLAC/MP3</span>
+                                                        </div>
+                                                        <div className="h-1 rounded-full bg-[#24221F]">
+                                                            <div className="h-full w-1/3 rounded-full bg-[#C8794A]" />
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
+                                                </motion.div>
+                                            )}
+
+                                            {activeWorkspaceTab === 'video' && (
+                                                <motion.div
+                                                    key="video-view"
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0 }}
+                                                    transition={{ duration: 0.12 }}
+                                                    className="space-y-3"
+                                                >
+                                                    <div className="border-b border-[#2A2928] pb-3.5">
+                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                            Video Archival Preservations
+                                                        </div>
+                                                        <h2
+                                                            className="mt-1 text-xl font-medium text-[#F5F0EB]"
+                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                        >
+                                                            Tape #04 · The Great Debate
+                                                        </h2>
+                                                        <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                            Historical recording · Complete unedited digital restoration
+                                                        </div>
+                                                    </div>
+                                                    <div className="rounded-md border border-[#2A2928] bg-[#161514] p-3 font-mono text-[11px] text-[#6B6560]">
+                                                        Chapter markers, synchronized transcript segments, and verse
+                                                        citations linked.
+                                                    </div>
+                                                </motion.div>
+                                            )}
+
+                                            {activeWorkspaceTab === 'written' && (
+                                                <motion.div
+                                                    key="written-view"
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0 }}
+                                                    transition={{ duration: 0.12 }}
+                                                    className="space-y-3"
+                                                >
+                                                    <div className="border-b border-[#2A2928] pb-3.5">
+                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                            Written Materials · Research Notes
+                                                        </div>
+                                                        <h2
+                                                            className="mt-1 text-xl font-medium text-[#F5F0EB]"
+                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                        >
+                                                            Scholarly annotations & source documents
+                                                        </h2>
+                                                        <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                            Markdown · PDF · Cross-referenced citations
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-2">
+                                                        <div className="h-1.5 w-[88%] rounded-full bg-[#24221F]" />
+                                                        <div className="h-1.5 w-[72%] rounded-full bg-[#24221F]" />
+                                                        <div className="h-1.5 w-[60%] rounded-full bg-[#24221F]" />
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
+                                </div>
+
+                                {/* Proof strip */}
+                                <div className="grid grid-cols-1 border-t border-[#2A2928] bg-[#12110F] sm:grid-cols-3">
+                                    <div className="border-b border-[#2A2928] p-5 sm:border-b-0 sm:border-r">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2A2928] bg-[#181715] text-[#9E9690]">
+                                            <FileText className="h-3 w-3" />
+                                        </div>
+                                        <h3 className="text-[11px] font-semibold text-[#F5F0EB]">Plain Markdown Files</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-[#4A4542]">
+                                            Scholarly notes remain readable and portable outside the app.
+                                        </p>
+                                    </div>
+                                    <div className="border-b border-[#2A2928] p-5 sm:border-b-0 sm:border-r">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2A2928] bg-[#181715] text-[#9E9690]">
+                                            <Search className="h-3 w-3" />
+                                        </div>
+                                        <h3 className="text-[11px] font-semibold text-[#F5F0EB]">Instant Native Search</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-[#4A4542]">
+                                            Search Arabic, English, speakers, surahs, and imported material locally.
+                                        </p>
+                                    </div>
+                                    <div className="p-5">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2A2928] bg-[#181715] text-[#9E9690]">
+                                            <GitBranch className="h-3 w-3" />
+                                        </div>
+                                        <h3 className="text-[11px] font-semibold text-[#F5F0EB]">Living Knowledge Graph</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-[#4A4542]">
+                                            Connect verses, people, topics, recordings, and citations as the archive grows.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
                     </div>
                 </section>
 
-                {/* Local-First Architecture Strip */}
-                <section className="border-y border-[#2A2928] bg-[#161514] backdrop-blur-sm">
-                    <motion.div {...fadeUp()} className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 py-14 sm:grid-cols-3 sm:px-6">
-                        <StripItem
-                            icon={<HardDrive className="h-5 w-5 text-[#C8794A]" />}
-                            title="Plain Markdown Files"
-                            body="Your archive lives in a folder on your drive. Open it in Obsidian, VS Code, or any text editor anytime — zero proprietary lock-in."
-                        />
-                        <StripItem
-                            icon={<Zap className="h-5 w-5 text-[#C8794A]" />}
-                            title="Instant Native Speed"
-                            body="Engineered with Rust and Tauri for near-zero startup time, tiny memory footprint, and complete offline independence."
-                        />
-                        <StripItem
-                            icon={<GitBranch className="h-5 w-5 text-[#C8794A]" />}
-                            title="Living Knowledge Graph"
-                            body="Explore connections between verses, historical audios, transcripts, and notes as a navigable visual network."
-                        />
-                    </motion.div>
-                </section>
-
-                {/* Bento Features Grid */}
-                <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-                    <motion.div {...fadeUp()} className="text-center">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-[#2A2928] bg-[#161514] px-3.5 py-1 text-[0.72rem] font-mono font-medium uppercase tracking-[0.14em] text-[#9E9690] shadow-sm">
-                            <Sparkles className="h-3 w-3 text-[#C8794A]" />
-                            <span>Built for Scholarly Depth & Research Speed</span>
-                        </div>
-                        <h2
-                            className="mt-4 text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-[-0.025em] text-[#F5F0EB]"
-                            style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                        >
-                            Everything you need to study and expand the archive
-                        </h2>
-                        <p
-                            className="mx-auto mt-4 max-w-2xl text-[16.5px] leading-[1.65] text-[#9E9690]"
-                            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
-                        >
-                            Purpose-built capabilities designed specifically for precision research, cross-referencing, and visual synthesis.
-                        </p>
-                    </motion.div>
-
-                    {/* Bento Grid */}
-                    <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
-                        {/* Bento 1: Academic Transliteration & Quran Engine */}
-                        <motion.div {...fadeUp(0.05)} className="md:col-span-2">
-                            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] p-7 shadow-sm transition-all duration-300 hover:border-[#353433] hover:bg-[#1C1B1A]">
-                                <div className="space-y-3">
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#1C1B1A] border border-[#2A2928] text-[#C8794A] shadow-sm">
-                                            <BookOpen className="h-5 w-5" />
-                                        </div>
-                                        <span className="rounded-full border border-[#2A2928] bg-[#1C1B1A] px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wider text-[#6B6560]">
-                                            Transliteration & Exegesis
-                                        </span>
-                                    </div>
-                                    <h3
-                                        className="text-xl sm:text-2xl font-bold leading-[1.25] text-[#F5F0EB]"
-                                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                    >
-                                        Academic Arabic Transliteration & Named Surah Search
-                                    </h3>
-                                    <p className="text-sm leading-[1.6] text-[#9E9690] max-w-xl">
-                                        Automatic academic transliteration expands terms like{' '}
-                                        <code className="rounded bg-[#1C1B1A] px-1.5 py-0.5 font-mono text-xs text-[#C8794A] border border-[#2A2928]">Quran</code> to{' '}
-                                        <code className="font-mono text-xs text-[#F5F0EB]">Qur&apos;ān</code> and supports fast diacritics (
-                                        <code className="font-mono text-xs text-[#F5F0EB]">a=</code> &rarr;{' '}
-                                        <code className="font-mono text-xs text-[#F5F0EB]">ā</code>,{' '}
-                                        <code className="font-mono text-xs text-[#F5F0EB]">h.</code> &rarr;{' '}
-                                        <code className="font-mono text-xs text-[#F5F0EB]">ḥ</code>). Type{' '}
-                                        <code className="rounded bg-[#1C1B1A] px-1.5 py-0.5 font-mono text-xs text-[#C8794A] border border-[#2A2928]">/quran Baqarah 255</code> to insert rich calligraphy cards.
-                                    </p>
-                                </div>
-
-                                <div className="mt-6 rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] p-4 font-mono text-xs">
-                                    <div className="flex items-center justify-between border-b border-[#2A2928] pb-2 mb-2 text-[0.7rem] text-[#6B6560]">
-                                        <span>Live Transliteration & Diacritics Active</span>
-                                        <span className="text-[#C8794A] font-semibold flex items-center gap-1">
-                                            <Check className="h-3 w-3" /> Auto-Formatted
-                                        </span>
-                                    </div>
-                                    <p className="font-sans text-sm text-[#F5F0EB] leading-relaxed">
-                                        Studying the theological significance of <span className="underline decoration-[#C8794A]/50 font-medium">Tawḥīd</span> and <span className="underline decoration-[#C8794A]/50 font-medium">Sharīʿah</span> principles across the Meccan revelations.
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* Bento 2: Visual Synthesis Canvas */}
-                        <motion.div {...fadeUp(0.1)} className="md:col-span-1">
-                            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] p-7 shadow-sm transition-all duration-300 hover:border-[#353433] hover:bg-[#1C1B1A]">
-                                <div className="space-y-3">
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#1C1B1A] border border-[#2A2928] text-[#C8794A] shadow-sm">
-                                            <LayoutGrid className="h-5 w-5" />
-                                        </div>
-                                        <span className="rounded-full border border-[#2A2928] bg-[#1C1B1A] px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wider text-[#6B6560]">
-                                            Spatial Canvas
-                                        </span>
-                                    </div>
-                                    <h3
-                                        className="text-lg sm:text-xl font-bold leading-[1.25] text-[#F5F0EB]"
-                                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                    >
-                                        Visual Whiteboard & I‘rāb Trees
-                                    </h3>
-                                    <p className="text-sm leading-[1.6] text-[#9E9690]">
-                                        Brainstorm ideas on an infinite 2D canvas with Quran verse cards, note embeds, and Arabic grammar sentence trees.
-                                    </p>
-                                </div>
-
-                                <div className="mt-6 rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] p-3 text-xs font-mono text-[#6B6560]">
-                                    <div className="flex items-center justify-between">
-                                        <span>Curved Relational Connectors</span>
-                                        <span className="text-[#C8794A] font-semibold">2D Infinite</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* Bento 3: Multi-Pane & PDF Research */}
-                        <motion.div {...fadeUp(0.15)} className="md:col-span-1">
-                            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] p-7 shadow-sm transition-all duration-300 hover:border-[#353433] hover:bg-[#1C1B1A]">
-                                <div className="space-y-3">
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#1C1B1A] border border-[#2A2928] text-[#C8794A] shadow-sm">
-                                            <Columns className="h-5 w-5" />
-                                        </div>
-                                        <span className="rounded-full border border-[#2A2928] bg-[#1C1B1A] px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wider text-[#6B6560]">
-                                            Multi-Pane
-                                        </span>
-                                    </div>
-                                    <h3
-                                        className="text-lg sm:text-xl font-bold leading-[1.25] text-[#F5F0EB]"
-                                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                    >
-                                        Split View & PDF Capture
-                                    </h3>
-                                    <p className="text-sm leading-[1.6] text-[#9E9690]">
-                                        Compare notes side-by-side or open attached research PDFs to highlight passages and capture citations directly into your notes.
-                                    </p>
-                                </div>
-
-                                <div className="mt-6 rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] p-3 font-mono text-xs">
-                                    <div className="flex items-center justify-between text-[#F5F0EB]">
-                                        <span>Quote-to-Note Drawer</span>
-                                        <kbd className="text-[10px] bg-[#1C1B1A] px-1.5 py-0.5 rounded border border-[#2A2928]">Ctrl+\</kbd>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* Bento 4: Universal Multi-Source Importer */}
-                        <motion.div {...fadeUp(0.2)} className="md:col-span-1">
-                            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] p-7 shadow-sm transition-all duration-300 hover:border-[#353433] hover:bg-[#1C1B1A]">
-                                <div className="space-y-3">
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#1C1B1A] border border-[#2A2928] text-[#C8794A] shadow-sm">
-                                            <Layers className="h-5 w-5" />
-                                        </div>
-                                        <span className="rounded-full border border-[#2A2928] bg-[#1C1B1A] px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wider text-[#6B6560]">
-                                            Interoperability
-                                        </span>
-                                    </div>
-                                    <h3
-                                        className="text-lg sm:text-xl font-bold leading-[1.25] text-[#F5F0EB]"
-                                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                    >
-                                        Universal Import Wizard
-                                    </h3>
-                                    <p className="text-sm leading-[1.6] text-[#9E9690]">
-                                        Import Word/Google Docs (<code className="font-mono text-xs text-[#C8794A]">.docx</code>), Notion exports with UUID hash cleanup, Obsidian vaults, or distributable <code className="font-mono text-xs text-[#C8794A]">.sanote</code> packages.
-                                    </p>
-                                </div>
-
-                                <div className="mt-6 rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] p-3 font-mono text-[0.72rem] text-[#6B6560] space-y-1">
-                                    <div>✓ Word (.docx) native XML parser</div>
-                                    <div>✓ Notion 32-char UUID cleaner</div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* Bento 5: Raycast Keyboard-First Design */}
-                        <motion.div {...fadeUp(0.25)} className="md:col-span-1">
-                            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] p-7 shadow-sm transition-all duration-300 hover:border-[#353433] hover:bg-[#1C1B1A]">
-                                <div className="space-y-3">
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#1C1B1A] border border-[#2A2928] text-[#C8794A] shadow-sm">
-                                            <Keyboard className="h-5 w-5" />
-                                        </div>
-                                        <span className="rounded-full border border-[#2A2928] bg-[#1C1B1A] px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wider text-[#6B6560]">
-                                            Raycast Engine
-                                        </span>
-                                    </div>
-                                    <h3
-                                        className="text-lg sm:text-xl font-bold leading-[1.25] text-[#F5F0EB]"
-                                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                    >
-                                        Customizable Keybindings
-                                    </h3>
-                                    <p className="text-sm leading-[1.6] text-[#9E9690]">
-                                        Full keybinding customization with conflict detection, quick switcher, and command palette navigation.
-                                    </p>
-                                </div>
-
-                                <div className="mt-6 flex items-center justify-around rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] p-3 font-mono text-xs">
-                                    <div className="flex flex-col items-center gap-1">
-                                        <kbd className="rounded border border-[#2A2928] bg-[#161514] px-2 py-1 font-bold text-[#F5F0EB] shadow-sm">⌘P</kbd>
-                                        <span className="text-[0.65rem] text-[#6B6560]">Palette</span>
-                                    </div>
-                                    <div className="flex flex-col items-center gap-1">
-                                        <kbd className="rounded border border-[#2A2928] bg-[#161514] px-2 py-1 font-bold text-[#F5F0EB] shadow-sm">⌘O</kbd>
-                                        <span className="text-[0.65rem] text-[#6B6560]">Quick Open</span>
-                                    </div>
-                                    <div className="flex flex-col items-center gap-1">
-                                        <kbd className="rounded border border-[#2A2928] bg-[#161514] px-2 py-1 font-bold text-[#F5F0EB] shadow-sm">⌘,</kbd>
-                                        <span className="text-[0.65rem] text-[#6B6560]">Settings</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-
-                    {/* Architecture Deep Dive with CardSplitAccordion */}
-                    <div className="mt-16 mx-auto max-w-4xl">
-                        <div className="mb-6 text-center">
-                            <h3
-                                className="text-xl font-bold text-[#F5F0EB] sm:text-2xl"
-                                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                            >
-                                Core Engine Architecture
-                            </h3>
-                            <p className="mt-2 text-sm text-[#9E9690]">
-                                Click any architectural pillar to inspect its technical implementation
-                            </p>
-                        </div>
-                        <CardSplitAccordion items={STUDIO_ARCHITECTURE_ACCORDION} defaultOpenId="engine-1" />
-                    </div>
-                </section>
-
-                {/* Setup Steps Section */}
-                <section className="border-t border-[#2A2928] bg-[#161514] py-20 sm:py-28">
-                    <div className="mx-auto max-w-6xl px-4 sm:px-6">
-                        <motion.div {...fadeUp()} className="text-center">
-                            <div className="inline-flex items-center gap-2 rounded-full border border-[#2A2928] bg-[#1C1B1A] px-3.5 py-1 text-[0.72rem] font-mono font-medium uppercase tracking-[0.14em] text-[#9E9690] shadow-sm">
-                                <span>Zero-Configuration Onboarding</span>
+                {/* Features */}
+                <section id="features" className="border-t border-[rgba(255,255,255,0.055)] py-20 px-5 sm:px-7 sm:py-24">
+                    <div className="mx-auto max-w-5xl">
+                        <motion.div {...fadeUp(0)} className="mb-10 text-center">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                                Capabilities
                             </div>
                             <h2
-                                className="mt-4 text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-[-0.025em] text-[#F5F0EB]"
-                                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                                className="mt-2 text-3xl font-medium text-[#F5F0EB] sm:text-4xl"
+                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                            >
+                                Everything you need to study and expand the archive
+                            </h2>
+                            <p
+                                className="mx-auto mt-2 max-w-xl text-[14px] text-[#6B6560]"
+                                style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                            >
+                                Purpose-built capabilities for careful research, cross-reference, listening, annotation,
+                                and preservation.
+                            </p>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+                            <motion.article
+                                {...fadeUp(0.04)}
+                                className="relative min-h-[200px] rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)] sm:col-span-2 lg:col-span-2"
+                            >
+                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                    Translation + Search
+                                </span>
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                    <Search className="h-3.5 w-3.5" />
+                                </div>
+                                <h3
+                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Academic Arabic Translation & Named Surah Search
+                                </h3>
+                                <p className="mt-1.5 max-w-lg text-[11px] leading-[1.55] text-[#6B6560]">
+                                    Search canonical Quran text alongside English translation, Arabic phrases, named
+                                    surahs, verse references, and your own scholarly annotations.
+                                </p>
+                                <div className="mt-4 rounded border border-[#2A2928] bg-[#141311] p-2.5 font-mono text-[8px] text-[#4A4542]">
+                                    <div className="mb-1.5 flex justify-between">
+                                        <span>Live translation · 2:255</span>
+                                        <span className="text-[#C8794A]">Quran</span>
+                                    </div>
+                                    <div className="h-1 w-full rounded-full bg-[#25221F]" />
+                                    <div className="mt-1 h-1 w-[65%] rounded-full bg-[#25221F]" />
+                                </div>
+                            </motion.article>
+
+                            <motion.article
+                                {...fadeUp(0.08)}
+                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                            >
+                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                    Visual Workspace
+                                </span>
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                    <LayoutGrid className="h-3.5 w-3.5" />
+                                </div>
+                                <h3
+                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Visual Whiteboard & Idea Trees
+                                </h3>
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                    Connect notes, verses, people, and topics visually without losing source context.
+                                </p>
+                            </motion.article>
+
+                            <motion.article
+                                {...fadeUp(0.12)}
+                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                            >
+                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                    Viewer
+                                </span>
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                    <Columns className="h-3.5 w-3.5" />
+                                </div>
+                                <h3
+                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Split View & PDF Capture
+                                </h3>
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                    Compare source material with notes and capture useful passages.
+                                </p>
+                            </motion.article>
+
+                            <motion.article
+                                {...fadeUp(0.16)}
+                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                            >
+                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                    Import
+                                </span>
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                    <Download className="h-3.5 w-3.5" />
+                                </div>
+                                <h3
+                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Universal Import Wizard
+                                </h3>
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                    Bring in Markdown, PDFs, audio, video, and existing collections without rebuilding the
+                                    archive.
+                                </p>
+                            </motion.article>
+
+                            <motion.article
+                                {...fadeUp(0.2)}
+                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                            >
+                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                    Customizable
+                                </span>
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                    <Keyboard className="h-3.5 w-3.5" />
+                                </div>
+                                <h3
+                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Customizable Keybindings
+                                </h3>
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                    Keep navigation fast and keyboard-first, especially during research sessions.
+                                </p>
+                            </motion.article>
+                        </div>
+
+                        {/* Architecture */}
+                        <div className="mt-16 text-center">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                                Core engine architecture
+                            </div>
+                            <p
+                                className="mx-auto mt-1 max-w-xl text-[14px] text-[#6B6560]"
+                                style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                            >
+                                Local-first primitives keep the archive useful even when the network disappears.
+                            </p>
+
+                            <div className="mx-auto mt-7 max-w-2xl overflow-hidden rounded-lg border border-[#2A2928] text-left">
+                                {ARCHITECTURE_PILLARS.map((item, idx) => {
+                                    const isOpen = openAccordionId === item.id;
+                                    return (
+                                        <div
+                                            key={item.id}
+                                            className={idx !== ARCHITECTURE_PILLARS.length - 1 ? 'border-b border-[#2A2928]' : ''}
+                                        >
+                                            <button
+                                                type="button"
+                                                onClick={() => setOpenAccordionId(isOpen ? '' : item.id)}
+                                                className="flex w-full items-center gap-2.5 bg-[#151412] px-3.5 py-3 text-left transition-colors hover:bg-[#1A1816]"
+                                            >
+                                                <span className="flex h-5 w-5 items-center justify-center rounded border border-[#2A2928] text-[#C8794A]">
+                                                    {item.icon}
+                                                </span>
+                                                <span className="text-[10px] font-semibold text-[#9E9690]">{item.title}</span>
+                                                <span className="rounded-full border border-[#2A2928] px-1.5 py-0.5 font-mono text-[7px] text-[#4A4542]">
+                                                    {item.badge}
+                                                </span>
+                                                <ChevronDown
+                                                    className={`ml-auto h-3 w-3 text-[#4A4542] transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#9E9690]' : ''
+                                                        }`}
+                                                />
+                                            </button>
+                                            {isOpen && (
+                                                <div className="bg-[#151412] px-11 pb-3.5 text-[10px] leading-[1.55] text-[#6B6560]">
+                                                    {item.content}
+                                                </div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Workflow */}
+                <section className="border-t border-[rgba(255,255,255,0.055)] py-20 px-5 sm:px-7 sm:py-24">
+                    <div className="mx-auto max-w-5xl">
+                        <motion.div {...fadeUp(0)} className="mb-10 text-center">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                                Zero configuration onboarding
+                            </div>
+                            <h2
+                                className="mt-2 text-3xl font-medium text-[#F5F0EB] sm:text-4xl"
+                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
                                 Up and running in seconds
                             </h2>
                             <p
-                                className="mx-auto mt-4 max-w-2xl text-[16.5px] leading-[1.65] text-[#9E9690]"
+                                className="mx-auto mt-2 max-w-xl text-[14px] text-[#6B6560]"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
-                                No accounts to create, no cloud telemetry. Three simple steps to a complete local workspace.
+                                No accounts to create. Point the app at your archive, let it index, and start working
+                                locally.
                             </p>
                         </motion.div>
 
-                        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
-                            <StepCard
-                                number="01"
-                                badge="Install Binary"
-                                title="Download the Native App"
-                                body="Grab the lightweight standalone executable for macOS, Windows, or Linux. Starts up instantly with near-zero memory footprint."
-                                visual={
-                                    <div className="flex items-center justify-between text-[#F5F0EB]">
-                                        <span className="font-semibold font-mono text-xs">SA-Studio-v1.0{PLATFORM_EXT[platform].split(' ')[0]}</span>
-                                        <span className="text-[0.65rem] font-mono text-[#C8794A] font-bold bg-[#C8794A]/10 border border-[#C8794A]/20 px-1.5 py-0.5 rounded">Standalone</span>
-                                    </div>
-                                }
-                            />
-                            <StepCard
-                                number="02"
-                                badge="Workspace Selection"
-                                title="Choose Your Archive"
-                                body="Point the app at any directory on your computer, or 1-click launch a pre-populated study archive with complete scriptures and notes."
-                                visual={
-                                    <div className="flex items-center gap-2 font-mono text-xs text-[#6B6560]">
-                                        <FolderOpen className="h-4 w-4 text-[#C8794A]" />
-                                        <span>~/Documents/SubmissionArchives-Vault</span>
-                                    </div>
-                                }
-                            />
-                            <StepCard
-                                number="03"
-                                badge="Ready to Research"
-                                title="Explore & Interconnect"
-                                body="Use keyboard shortcuts to create wiki-links, inspect scripture cross-references, or expand the infinite visual knowledge canvas."
-                                visual={
-                                    <div className="flex items-center gap-1.5 font-mono text-xs text-[#6B6560]">
-                                        <kbd className="rounded border border-[#2A2928] bg-[#161514] px-1.5 py-0.5 text-[10px] text-[#F5F0EB]">⌘K</kbd>
-                                        <span>Command Palette & Live Search</span>
-                                    </div>
-                                }
-                            />
+                        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+                            <article className="rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.015)] p-5">
+                                <span className="inline-block rounded border border-[rgba(200,121,74,0.25)] px-1.5 py-0.5 font-mono text-[9px] text-[#C8794A]">
+                                    01 · INSTALL
+                                </span>
+                                <h3
+                                    className="mt-4 text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Download the Native App
+                                </h3>
+                                <p className="mt-1 text-[10px] leading-[1.55] text-[#6B6560]">
+                                    Choose your platform and install the desktop client. Your archive stays where you put
+                                    it.
+                                </p>
+                            </article>
+                            <article className="rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.015)] p-5">
+                                <span className="inline-block rounded border border-[rgba(200,121,74,0.25)] px-1.5 py-0.5 font-mono text-[9px] text-[#C8794A]">
+                                    02 · OPEN
+                                </span>
+                                <h3
+                                    className="mt-4 text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Choose Your Archive
+                                </h3>
+                                <p className="mt-1 text-[10px] leading-[1.55] text-[#6B6560]">
+                                    Open an existing collection or start a new local workspace. Indexing happens on your
+                                    machine.
+                                </p>
+                            </article>
+                            <article className="rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.015)] p-5">
+                                <span className="inline-block rounded border border-[rgba(200,121,74,0.25)] px-1.5 py-0.5 font-mono text-[9px] text-[#C8794A]">
+                                    03 · EXPLORE
+                                </span>
+                                <h3
+                                    className="mt-4 text-lg font-medium text-[#F5F0EB]"
+                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                >
+                                    Explore & Interconnect
+                                </h3>
+                                <p className="mt-1 text-[10px] leading-[1.55] text-[#6B6560]">
+                                    Search, read, listen, annotate, and connect the sources that matter to your research.
+                                </p>
+                            </article>
+                        </div>
+
+                        <div className="mt-8 flex items-center gap-2.5 rounded-lg border border-[#2A2928] bg-[#151412] px-3.5 py-2.5 font-mono text-[10px] text-[#4A4542]">
+                            <Command className="h-3.5 w-3.5 text-[#C8794A]" />
+                            <strong className="font-medium text-[#9E9690]">Tip:</strong>
+                            <span>
+                                Press / anywhere to search · Press Ctrl+K to open command palette · All data remains local.
+                            </span>
                         </div>
                     </div>
                 </section>
 
-                {/* Bottom CTA Banner */}
-                <section className="border-t border-[#2A2928] bg-[#0F0E0D] py-16 sm:py-20">
-                    <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-                        <motion.div {...fadeUp()}>
-                            <div className="space-y-4">
-                                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-[#2A2928] bg-[#161514] shadow-md">
-                                    <Image
-                                        src="/assets/brand/submission-archives-mark.png"
-                                        alt="SA Studio Mark"
-                                        width={28}
-                                        height={28}
-                                        className="object-contain"
+                {/* Final CTA */}
+                <section
+                    className="border-t border-[rgba(255,255,255,0.055)] px-5 py-24 text-center sm:px-7 sm:py-28"
+                    style={{
+                        background:
+                            'radial-gradient(ellipse 550px 230px at 50% 55%, rgba(200,121,74,0.035) 0%, transparent 70%)',
+                    }}
+                >
+                    <div className="mx-auto max-w-3xl">
+                        <motion.div {...fadeUp(0)}>
+                            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[13px] border border-[#353433] bg-[#181715]">
+                                <Image
+                                    src="/assets/brand/submission-archives-mark.png"
+                                    alt="Submission Archives"
+                                    width={36}
+                                    height={36}
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                                Public offline-ready build
+                            </div>
+                            <h2
+                                className="mt-2 text-3xl font-medium text-[#F5F0EB] sm:text-4xl"
+                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                            >
+                                Ready to explore the archive offline?
+                            </h2>
+                            <p
+                                className="mx-auto mt-2 max-w-lg text-[14px] text-[#6B6560]"
+                                style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                            >
+                                We are preparing the final polished release. The desktop app will download, index, search,
+                                and study the archive entirely locally.
+                            </p>
+                            <div className="mt-7 flex flex-wrap items-center justify-center gap-2">
+                                <PrimaryDownloadButton
+                                    platform={platform}
+                                    onClick={() =>
+                                        showToast(
+                                            'Desktop builds are in active development — standalone installers coming soon.',
+                                        )
+                                    }
+                                />
+                                {otherPlatforms.map((p) => (
+                                    <SecondaryDownloadButton
+                                        key={p}
+                                        platform={p}
+                                        onClick={() => showToast(`${PLATFORM_INFO[p].label} standalone binary coming soon.`)}
                                     />
-                                </div>
-                                <div className="inline-flex items-center gap-2 rounded-full border border-[#2A2928] bg-[#161514] px-3.5 py-1 text-[0.7rem] font-mono font-bold uppercase tracking-wider text-[#C8794A] shadow-sm">
-                                    <Clock className="h-3 w-3 text-[#C8794A]" />
-                                    <span>Public Release Coming Soon</span>
-                                </div>
-                                <h3
-                                    className="text-2xl font-bold leading-[1.25] text-[#F5F0EB] sm:text-3xl"
-                                    style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                >
-                                    Ready to explore the archive offline?
-                                </h3>
-                                <p
-                                    className="text-sm leading-[1.6] text-[#9E9690] sm:text-base"
-                                    style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
-                                >
-                                    We are putting the final polish on SA Studio desktop binaries. Standalone installers will be available to download right here once ready.
-                                </p>
-                                <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-                                    <DownloadButton platform={platform} primary />
-                                    {otherPlatforms.map((p) => (
-                                        <DownloadButton key={p} platform={p} />
-                                    ))}
-                                </div>
+                                ))}
                             </div>
                         </motion.div>
                     </div>
                 </section>
             </main>
+
+            {/* Command palette */}
+            <AnimatePresence>
+                {paletteOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={closePalette}
+                        className="fixed inset-0 z-50 flex items-start justify-center bg-black/60 p-4 pt-[13vh] backdrop-blur-sm"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Command palette"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.98, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.98, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full max-w-[560px] overflow-hidden rounded-[10px] border border-[#353433] bg-[#171614] shadow-[0_30px_90px_rgba(0,0,0,0.6)]"
+                        >
+                            <div className="flex h-12 items-center gap-2.5 border-b border-[#2A2928] px-4">
+                                <Search className="h-4 w-4 text-[#4A4542]" />
+                                <input
+                                    type="text"
+                                    autoFocus
+                                    placeholder="Search archive or jump to a section…"
+                                    value={paletteQuery}
+                                    onChange={(e) => setPaletteQuery(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter' && filteredPaletteActions.length > 0) {
+                                            filteredPaletteActions[0].run({ close: closePalette, showToast });
+                                        }
+                                    }}
+                                    className="w-full bg-transparent text-[13px] text-[#F5F0EB] outline-none placeholder:text-[#4A4542]"
+                                />
+                            </div>
+                            <div className="space-y-0.5 p-2">
+                                {filteredPaletteActions.length === 0 ? (
+                                    <div className="p-3 text-center text-[11px] text-[#6B6560]">
+                                        No matches for &ldquo;{paletteQuery}&rdquo;
+                                    </div>
+                                ) : (
+                                    filteredPaletteActions.map((action) => (
+                                        <button
+                                            key={action.id}
+                                            type="button"
+                                            onClick={() => action.run({ close: closePalette, showToast })}
+                                            className="flex w-full items-center gap-2.5 rounded-md p-2.5 text-[11px] text-[#9E9690] hover:bg-[#211F1D] hover:text-[#F5F0EB]"
+                                        >
+                                            {action.icon}
+                                            <span>{action.label}</span>
+                                            <span className="ml-auto font-mono text-[9px] text-[#4A4542]">{action.hint}</span>
+                                        </button>
+                                    ))
+                                )}
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Toast */}
+            <AnimatePresence>
+                {toastMessage && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 12 }}
+                        className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-md border border-[#353433] bg-[#1E1D1C] px-4 py-2.5 text-[11px] font-medium text-[#F5F0EB] shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
+                    >
+                        {toastMessage}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
 
-function DownloadButton({ platform, primary }: { platform: Platform; primary?: boolean }) {
-    const Icon = platform === 'macos' ? Apple : platform === 'windows' ? MonitorSmartphone : Terminal;
-    const label = `Download for ${PLATFORM_LABEL[platform]}`;
+/* -------------------------------------------------------------------------- */
+/* Subcomponents                                                              */
+/* -------------------------------------------------------------------------- */
 
-    if (primary) {
-        return (
-            <a
-                href="#"
-                aria-disabled="true"
-                onClick={(e) => e.preventDefault()}
-                className="group relative inline-flex h-12 shrink-0 select-none items-center justify-center gap-3 whitespace-nowrap rounded-[8px] bg-[#C8794A] px-6 text-sm font-semibold text-[#0F0E0D] shadow-md transition-all hover:bg-[#D9916A] active:scale-[0.98] outline-none cursor-default"
-            >
-                <Icon className="h-4 w-4" />
-                <span>{label}</span>
-                <span className="rounded bg-[#0F0E0D]/20 text-[#0F0E0D] border border-black/15 px-2 py-0.5 text-[0.68rem] font-mono font-bold tracking-wider uppercase">
-                    Coming Soon
-                </span>
-            </a>
-        );
-    }
-
-    return (
-        <a
-            href="#"
-            aria-disabled="true"
-            onClick={(e) => e.preventDefault()}
-            className="inline-flex h-12 shrink-0 select-none items-center justify-center gap-2.5 whitespace-nowrap rounded-[8px] border border-[#2A2928] bg-[#161514] px-5 text-sm font-medium text-[#9E9690] transition-all hover:border-[#353433] hover:text-[#F5F0EB] hover:bg-[#1C1B1A] active:scale-[0.98] outline-none cursor-default"
-        >
-            <Icon className="h-4 w-4" />
-            <span>{PLATFORM_LABEL[platform]}</span>
-            <span className="text-[0.68rem] font-mono text-[#6B6560]">(Soon)</span>
-        </a>
-    );
-}
-
-function StepCard({
-    number,
-    badge,
-    title,
-    body,
-    visual,
+function SidebarItem({
+    active,
+    onClick,
+    label,
+    count,
+    icon,
 }: {
-    number: string;
-    badge: string;
-    title: string;
-    body: string;
-    visual: ReactNode;
+    active: boolean;
+    onClick: () => void;
+    label: string;
+    count: string;
+    icon: ReactNode;
 }) {
     return (
-        <motion.div {...fadeUp(0.05)} className="relative">
-            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] p-7 shadow-sm transition-all duration-300 hover:border-[#353433] hover:bg-[#1C1B1A]">
-                <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                        <span className="flex h-8 w-8 items-center justify-center rounded-[6px] bg-[#1C1B1A] border border-[#2A2928] font-mono text-xs font-bold text-[#C8794A] shadow-sm">
-                            {number}
-                        </span>
-                        <span className="rounded-full border border-[#2A2928] bg-[#1C1B1A] px-2.5 py-0.5 font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6560]">
-                            {badge}
-                        </span>
-                    </div>
-                    <h3
-                        className="text-xl font-bold text-[#F5F0EB]"
-                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                    >
-                        {title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-[#9E9690]">
-                        {body}
-                    </p>
-                </div>
-
-                <div className="mt-6 rounded-[8px] border border-[#2A2928] bg-[#0F0E0D] p-3.5 shadow-inner">
-                    {visual}
-                </div>
-            </div>
-        </motion.div>
+        <button
+            type="button"
+            onClick={onClick}
+            className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-[10px] transition-colors ${active
+                    ? 'bg-[rgba(200,121,74,0.08)] font-medium text-[#F5F0EB]'
+                    : 'text-[#6B6560] hover:bg-[#1B1917] hover:text-[#9E9690]'
+                }`}
+        >
+            <span className={active ? 'text-[#C8794A]' : 'text-[#4A4542]'}>{icon}</span>
+            <span>{label}</span>
+            <span className="ml-auto font-mono text-[9px] text-[#4A4542]">{count}</span>
+        </button>
     );
 }
 
-function StripItem({ icon, title, body }: { icon: ReactNode; title: string; body: string }) {
+function PrimaryDownloadButton({
+    platform,
+    onClick,
+}: {
+    platform: Platform;
+    onClick: () => void;
+}) {
+    const Icon = PLATFORM_INFO[platform].icon;
+    const label = `Download for ${PLATFORM_INFO[platform].label}`;
+
     return (
-        <div className="flex flex-col items-center text-center sm:items-start sm:text-left gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#1C1B1A] border border-[#2A2928] text-[#C8794A] shadow-sm">
-                {icon}
-            </div>
-            <h3
-                className="text-base font-semibold text-[#F5F0EB]"
-                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-            >
-                {title}
-            </h3>
-            <p className="text-sm leading-relaxed text-[#9E9690]">{body}</p>
-        </div>
+        <button
+            type="button"
+            onClick={onClick}
+            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-[#F5F0EB] bg-[#F5F0EB] px-4 text-[12px] font-semibold text-[#151311] transition-transform hover:-translate-y-0.5 hover:bg-white active:translate-y-0"
+        >
+            <Icon className="h-3.5 w-3.5 shrink-0" />
+            <span>{label}</span>
+            <small className="border-l border-[#151311]/40 pl-2 font-mono text-[9px] opacity-75">v{APP_VERSION}</small>
+        </button>
+    );
+}
+
+function SecondaryDownloadButton({
+    platform,
+    onClick,
+}: {
+    platform: Platform;
+    onClick: () => void;
+}) {
+    const Icon = PLATFORM_INFO[platform].icon;
+
+    return (
+        <button
+            type="button"
+            onClick={onClick}
+            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-[#2A2928] bg-transparent px-4 text-[12px] font-semibold text-[#9E9690] transition-all hover:-translate-y-0.5 hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:translate-y-0"
+        >
+            <Icon className="h-3.5 w-3.5 shrink-0" />
+            <span>{PLATFORM_INFO[platform].label}</span>
+        </button>
     );
 }

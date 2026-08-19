@@ -6,23 +6,24 @@ type ExpectationCardProps = {
 
 export function ExpectationCard({ index, title, body }: ExpectationCardProps) {
     return (
-        <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-ed-rule-strong/80 bg-gradient-to-b from-ed-surface/90 via-ed-surface/70 to-ed-surface/50 p-5 sm:p-6 shadow-[0_12px_28px_-10px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.05)_inset] backdrop-blur-xl transition-all duration-250 ease-out hover:border-ed-fg/40 hover:shadow-xl hover:-translate-y-0.5">
+        <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-[#2A2928] bg-gradient-to-b from-[#161514] via-[#161514]/90 to-[#121110] p-5 sm:p-6 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.5)] transition-all duration-200 ease-out hover:border-[#353433] hover:bg-[#1C1B1A] hover:-translate-y-0.5">
             <div>
                 <div className="flex items-center gap-2.5">
                     <span
-                        className="inline-flex h-6 min-w-6 items-center justify-center rounded-full border border-ed-rule-strong bg-ed-surface-strong px-2 font-mono text-[0.68rem] font-bold text-ed-fg shadow-sm transition-colors group-hover:bg-ed-fg group-hover:text-ed-bg"
+                        className="inline-flex h-5 min-w-5 items-center justify-center rounded-md border border-[#2A2928] bg-[#1C1B1A] px-1.5 font-mono text-[0.68rem] font-bold text-[#C8794A] transition-colors group-hover:border-[#C8794A]/40 group-hover:text-[#D9916A]"
                         aria-hidden="true"
                     >
                         {index ? index : '•'}
                     </span>
-                    <h4 className="font-sans text-[0.95rem] font-bold leading-snug tracking-[-0.015em] text-ed-fg">
+                    <h4 className="font-sans text-[0.95rem] font-semibold leading-snug tracking-[-0.01em] text-[#F5F0EB]">
                         {title}
                     </h4>
                 </div>
-                <p className="mt-2.5 text-xs sm:text-[0.84rem] leading-[1.6] text-ed-fg-muted">
+                <p className="mt-2.5 text-xs sm:text-[0.84rem] leading-[1.65] text-[#9E9690]">
                     {body}
                 </p>
             </div>
         </div>
     );
 }
+

@@ -14,7 +14,7 @@ export default function Footer() {
             {/* Subtle top ambient glow */}
             <div className="pointer-events-none absolute -top-24 left-1/2 h-48 w-96 -translate-x-1/2 rounded-full bg-[#C8794A]/5 blur-3xl" />
 
-            <div className="relative mx-auto max-w-[1400px] px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+            <div className="relative mx-auto max-w-[1160px] px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
                 {/* Main Grid: Brand Identity & Nav Columns */}
                 <div className="grid gap-12 lg:grid-cols-[1.15fr_1.85fr] lg:gap-20">
                     {/* Left: Brand Identity & Verification */}

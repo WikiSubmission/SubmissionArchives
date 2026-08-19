@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import AppDownloadClient from './AppDownloadClient';
 
 export const metadata: Metadata = {
-    title: 'SA Studio Desktop Workspace — Submission Archives',
+    title: 'Submission Archives — Local Scholarly Workspace',
     description:
-        'SubmissionArchives Studio — a high-performance, local-first desktop workspace built with native Rust and Tauri for offline research, exegesis, and knowledge synthesis.',
+        'Submission Archives Studio — a local-first scholarly workspace for studying and expanding the archive. Private, searchable, and offline-ready.',
 };
 
 export default function AppPage() {

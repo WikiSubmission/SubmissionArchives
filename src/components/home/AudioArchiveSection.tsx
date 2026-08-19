@@ -1,394 +1,489 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Pause, Play, Quote, Volume2 } from 'lucide-react';
-import { useState } from 'react';
-
-import { ExpectationCard } from './ExpectationCard';
+import Link from 'next/link';
+import { Play, Pause, ArrowRight } from 'lucide-react';
 import { Reveal } from './Reveal';
-import { CtaLink, SectionCta } from './SectionCta';
-import { SectionHeading } from './SectionHeading';
 import { GlassSheen, widgetCardClass } from './WidgetAccents';
-import { FluidTabs } from '@/components/ui/fluid-tabs';
+import QuranStudyThumbnail from '@/components/media/QuranStudyThumbnail';
 
-type AudioClip = {
+type AudioCategory = 'quran-study' | 'messenger';
+
+interface TranscriptLine {
+    time: string;
+    seconds: number;
+    text: string;
+    speaker: string;
+}
+
+interface AudioTrack {
     id: string;
     catalogNo: string;
-    category: 'quran-study' | 'messenger-audio';
-    label: string;
+    qsNumber?: number;
+    category: AudioCategory;
+    categoryLabel: string;
     title: string;
-    date: string;
-    thumbnail: string;
-    excerpt: string;
-    time: string;
     speaker: string;
+    date: string;
+    duration: string;
+    thumbnail?: string;
+    summary: string;
+    transcriptLines: TranscriptLine[];
     href: string;
-};
+}
 
-const AUDIO_CLIPS: readonly AudioClip[] = [
+const FEATURED_TRACKS: AudioTrack[] = [
     {
         id: 'qs01',
         catalogNo: 'QS-01',
+        qsNumber: 1,
         category: 'quran-study',
-        label: 'Qur\'an Study 01',
-        title: 'Sura 72–73, Jinns and Night Prayer',
-        date: 'May 26, 1989',
-        thumbnail: '/content/audios/quran-studies/thumbnails/01-quran-study-from-azhar-1-sura-7219-28-and-sura-73-by-kathryn-jinns-05-26-1989.jpg',
-        excerpt: 'When God\'s servant advocated Him alone, they almost crowded around him in solid groups.',
-        time: '18:42',
+        categoryLabel: 'Qur\'an Study Sequence',
+        title: 'Sura 72–73: Jinns and the Night Prayer',
         speaker: 'Dr. Rashad Khalifa',
+        date: 'May 26, 1989',
+        duration: '18:42',
+        summary: 'Detailed verse-by-verse exposition of Chapter 72 (The Jinns) and Chapter 73 (The Enwrapped One), focusing on the nature of unseen entities, God alone worship, and the institution of nightly prayer.',
+        transcriptLines: [
+            { time: '00:15', seconds: 15, speaker: 'Dr. Khalifa', text: 'When God\'s servant advocated Him alone, they almost crowded around him in solid groups.' },
+            { time: '04:22', seconds: 262, speaker: 'Dr. Khalifa', text: 'The places of worship belong to God alone; do not call on anyone else beside God.' },
+            { time: '09:40', seconds: 580, speaker: 'Dr. Khalifa', text: 'Sura 73 tells us to meditate during the night, except a little. It gives the soul its nourishment.' },
+            { time: '14:10', seconds: 850, speaker: 'Dr. Khalifa', text: 'Your Lord knows that you stand up during two-thirds of the night, or half of it, or one-third.' },
+        ],
         href: '/audios/quran-studies/01-quran-study',
     },
     {
         id: 'qs07',
         catalogNo: 'QS-07',
+        qsNumber: 7,
         category: 'quran-study',
-        label: 'Qur\'an Study 07',
-        title: 'Sura 62–63 and God\'s Religion Will Dominate',
-        date: 'June 1989',
-        thumbnail: '/content/audios/quran-studies/thumbnails/07-quran-study-from-azhar-7-sura-62-and-sura-63-by-kathryn-gods-religion-will-dominate-in-20-to-50-yr.jpg',
-        excerpt: 'The recording can be followed beside its searchable transcript and revisited by exact timestamp.',
-        time: '31:06',
+        categoryLabel: 'Qur\'an Study Sequence',
+        title: 'Sura 62–63: Friday Prayer & Hypocrites',
         speaker: 'Dr. Rashad Khalifa',
+        date: 'March 24, 1989',
+        duration: '22:15',
+        summary: 'Exposition of Friday congregational obligations, avoiding commercial distraction, and recognizing the psychological markers of hypocrisy described in Sura 63.',
+        transcriptLines: [
+            { time: '01:05', seconds: 65, speaker: 'Dr. Khalifa', text: 'O you who believe, when the call to prayer is announced on Friday, you shall hasten to the commemoration of God.' },
+            { time: '06:30', seconds: 390, speaker: 'Dr. Khalifa', text: 'Drop all business; this is better for you if you only knew.' },
+            { time: '12:18', seconds: 738, speaker: 'Dr. Khalifa', text: 'When the hypocrites come to you, they say: "We bear witness that you are God\'s messenger." But God knows.' },
+            { time: '18:05', seconds: 1085, speaker: 'Dr. Khalifa', text: 'Do not let your wealth or your children distract you from commemorating God.' },
+        ],
         href: '/audios/quran-studies/07-quran-study',
     },
     {
-        id: 'messenger-audio',
-        catalogNo: 'MSG-AUD',
-        category: 'messenger-audio',
-        label: 'Messenger Audio',
-        title: 'Historical talks and preserved recordings',
-        date: '1980–1989 Archive',
-        thumbnail: '/content/audios/messenger-audios/default.jpg',
-        excerpt: 'The Messenger Audio collection preserves talks with titles, source context, and synchronized text where available.',
-        time: 'Archive',
+        id: 'ma-1988-unity',
+        catalogNo: 'MA-88-04',
+        category: 'messenger',
+        categoryLabel: 'Messenger Audio Archive',
+        title: 'Devotion to God Alone — The Great Commandment',
         speaker: 'Dr. Rashad Khalifa',
-        href: '/audios/messenger-audios',
+        date: 'October 1988',
+        duration: '31:40',
+        thumbnail: '/content/audios/messenger-audio/thumbnails/26-08-31-89-submission-the-religion-of-abraham-purification-and-salat.webp',
+        summary: 'A definitive theological talk delivered in Tucson, Arizona examining the unity of the First Commandment across the Torah, the Gospel of Jesus, and the Holy Qur\'an.',
+        transcriptLines: [
+            { time: '00:45', seconds: 45, speaker: 'Dr. Khalifa', text: 'Hear O Israel, the Lord our God, the Lord is One. This is Deuteronomy 6:4.' },
+            { time: '08:12', seconds: 492, speaker: 'Dr. Khalifa', text: 'And Jesus answered in Mark 12:29: The first of all commandments is: Hear O Israel, the Lord our God is One.' },
+            { time: '15:35', seconds: 935, speaker: 'Dr. Khalifa', text: 'And in the Qur\'an, Sura 3:18: God bears witness that there is no god except He, and so do the angels and those who possess knowledge.' },
+            { time: '24:50', seconds: 1490, speaker: 'Dr. Khalifa', text: 'Submission to God is not a name of a club; it is the universal religion of Abraham.' },
+        ],
+        href: '/audios/messenger-audio/submission-the-religion-of-abraham',
     },
-] as const;
+    {
+        id: 'ma-1989-azhar',
+        catalogNo: 'MA-89-11',
+        category: 'messenger',
+        categoryLabel: 'Messenger Audio Archive',
+        title: 'Historical Debate with Azhar Scholars (Cairo)',
+        speaker: 'Dr. Rashad Khalifa',
+        date: 'March 1989',
+        duration: '45:10',
+        thumbnail: '/content/audios/quran-studies/thumbnails/14-quran-study-from-azhar-14-sura-84-and-sura-85-by-kathryn-quran-is-all-we-need.jpg',
+        summary: 'Direct dialogue with scholars regarding the sufficiency of the Qur\'an, the rejection of fabricated traditions, and physical mathematical evidence.',
+        transcriptLines: [
+            { time: '01:20', seconds: 80, speaker: 'Dr. Khalifa', text: 'The Qur\'an tells us in Sura 6:114: Shall I seek other than God as a source of law, when He revealed this book fully detailed?' },
+            { time: '11:05', seconds: 665, speaker: 'Dr. Khalifa', text: 'God\'s word is complete in truth and justice; nothing can abrogate His words.' },
+            { time: '22:40', seconds: 1360, speaker: 'Dr. Khalifa', text: 'We present the physical manuscript counts so that anyone can count for themselves.' },
+            { time: '36:15', seconds: 2175, speaker: 'Dr. Khalifa', text: 'Truth stands clear from falsehood. We invite everyone to verify.' },
+        ],
+        href: '/audios/messenger-audio/quran-is-all-we-need',
+    },
+];
 
-const AUDIO_CAPABILITIES = [
+const NOTABLE_EXCERPTS = [
     {
-        title: 'Read while listening',
-        body: 'Synchronized transcripts keep the active passage beside the recording.',
+        quote: 'The places of worship belong to God alone; therefore, do not call on anyone else beside God.',
+        source: 'Sura 72:18 · QS-01 Master Tape',
+        timestamp: '04:22',
     },
     {
-        title: 'Return by timestamp',
-        body: 'Search results and transcript rows open the recording at the relevant moment.',
+        quote: 'Hear, O Israel, the Lord our God, the Lord is One. And you shall love the Lord your God with all your heart.',
+        source: 'Deut 6:4 / Mark 12:29 · MA-88-04 Lecture',
+        timestamp: '08:12',
     },
     {
-        title: 'Two audio collections',
-        body: 'Qur\'an studies and Messenger Audios remain distinct while sharing one interface.',
+        quote: 'Shall I seek other than God as a lawmaker, when He has revealed to you this book fully detailed?',
+        source: 'Sura 6:114 · Azhar Dialogue 1989',
+        timestamp: '01:20',
     },
-    {
-        title: 'Quote with caution',
-        body: 'Transcripts support research, while the original recording remains the source of record.',
-    },
-] as const;
-
-const WAVEFORM = [34, 58, 42, 78, 54, 92, 63, 46, 72, 39, 84, 56, 68, 44, 88, 61, 36, 75, 52, 94, 66, 47, 81, 59, 38, 73, 49, 86, 62, 43, 79, 55] as const;
-const WAVEFORM_MARKER = 18;
+];
 
 export function AudioArchiveSection() {
-    const [selected, setSelected] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [categoryFilter, setCategoryFilter] = useState<'all' | 'quran-study' | 'messenger-audio'>('all');
+    const [activeTab, setActiveTab] = useState<AudioCategory>('quran-study');
+    const [selectedTrackId, setSelectedTrackId] = useState<string>(FEATURED_TRACKS[0].id);
+    const [isPlaying, setIsPlaying] = useState<boolean>(false);
+    const [activeLineIndex, setActiveLineIndex] = useState<number>(0);
+    const [playbackSpeed, setPlaybackSpeed] = useState<string>('1.0x');
+    const [isHovered, setIsHovered] = useState<boolean>(false);
 
-    const filteredClips = AUDIO_CLIPS.filter(
-        (c) => categoryFilter === 'all' || c.category === categoryFilter
-    );
+    const filteredTracks = FEATURED_TRACKS.filter((t) => t.category === activeTab);
+    const activeTrack = FEATURED_TRACKS.find((t) => t.id === selectedTrackId) ?? filteredTracks[0];
+    const currentLine = activeTrack.transcriptLines[activeLineIndex] ?? activeTrack.transcriptLines[0];
 
-    const selectedIndex = filteredClips.length > 0 ? Math.min(selected, filteredClips.length - 1) : -1;
-    const clip = selectedIndex >= 0 ? filteredClips[selectedIndex] : null;
+    // Automatic cycling through audio tracks every 7 seconds
+    useEffect(() => {
+        if (isHovered || isPlaying || filteredTracks.length <= 1) return;
 
-    const goToOffset = (offset: number) => {
-        if (filteredClips.length === 0) return;
-        setSelected((s) => {
-            const base = s >= 0 && s < filteredClips.length ? s : 0;
-            return (base + offset + filteredClips.length) % filteredClips.length;
-        });
-    };
+        const interval = setInterval(() => {
+            setSelectedTrackId((prevId) => {
+                const currentIndex = filteredTracks.findIndex((t) => t.id === prevId);
+                const nextIndex = (currentIndex + 1) % filteredTracks.length;
+                return filteredTracks[nextIndex].id;
+            });
+            setActiveLineIndex(0);
+        }, 7000);
+
+        return () => clearInterval(interval);
+    }, [isHovered, isPlaying, filteredTracks]);
 
     return (
-        <article className="archive-section grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-            <div className="min-w-0 lg:order-2 lg:pt-5">
+        <article
+            className="space-y-8"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            {/* Header & Description */}
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
                 <Reveal>
-                    <SectionHeading numeral="II" title="Audio archives" />
+                    <div>
+                        <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                            Audio Archives
+                        </h2>
+                        <div className="mt-2 h-[2px] w-20 bg-[#C8794A]" />
+                    </div>
                 </Reveal>
-                <Reveal delay={80} className="mt-4 sm:mt-5 lg:mt-6">
-                    <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
-                        Qur&apos;an studies and Messenger recordings paired with searchable transcripts for close listening, quotation, and historical research.
+                <Reveal delay={80}>
+                    <p
+                        className="text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                    >
+                        Digitized original cassette masters, verse-by-verse Qur&apos;an study sessions, and spoken messenger archives with real-time synchronized teleprompter transcripts.
                     </p>
-                </Reveal>
-
-                <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6">
-                    {AUDIO_CAPABILITIES.map((item, itemIndex) => (
-                        <Reveal key={item.title} delay={140 + itemIndex * 80}>
-                            <ExpectationCard
-                                index={String(itemIndex + 1).padStart(2, '0')}
-                                title={item.title}
-                                body={item.body}
-                            />
-                        </Reveal>
-                    ))}
-                </div>
-
-                <Reveal delay={140 + AUDIO_CAPABILITIES.length * 80} className="mt-8 sm:mt-10">
-                    <SectionCta href="/audios" label="Browse the audio archives" />
                 </Reveal>
             </div>
 
-            <Reveal delay={160} className="min-w-0 lg:order-1">
+            {/* Collection Category Switcher */}
+            <div className="flex flex-wrap items-center gap-2">
+                <button
+                    type="button"
+                    onClick={() => {
+                        setActiveTab('quran-study');
+                        setSelectedTrackId('qs01');
+                        setActiveLineIndex(0);
+                    }}
+                    className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
+                        activeTab === 'quran-study'
+                            ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
+                            : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                    }`}
+                >
+                    Qur&apos;an Study Sequences (QS-01–20)
+                </button>
+                <button
+                    type="button"
+                    onClick={() => {
+                        setActiveTab('messenger');
+                        setSelectedTrackId('ma-1988-unity');
+                        setActiveLineIndex(0);
+                    }}
+                    className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
+                        activeTab === 'messenger'
+                            ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
+                            : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                    }`}
+                >
+                    Messenger Audio Archives (1980–1990)
+                </button>
+            </div>
+
+            {/* Master Tape Listening Console */}
+            <Reveal delay={120}>
                 <div className={widgetCardClass}>
                     <GlassSheen />
 
-                    {/* Header bar */}
-                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-4 border-b border-ed-rule px-4 py-3 sm:px-6 bg-ed-surface-strong/40 select-none">
+                    {/* Console Header Bar */}
+                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6 select-none">
                         <div className="flex items-center gap-3">
-                            <div className="flex items-center gap-1.5" aria-hidden="true">
-                                <span className="h-3 w-3 rounded-full bg-rose-500/80 border border-rose-600/40" />
-                                <span className="h-3 w-3 rounded-full bg-amber-500/80 border border-amber-600/40" />
-                                <span className="h-3 w-3 rounded-full bg-emerald-500/80 border border-emerald-600/40" />
-                            </div>
-                            <span className="h-3.5 w-px bg-ed-rule-strong/60" aria-hidden="true" />
-                            <div>
-                                <p className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
-                                    Listening Desk · <span className="text-ed-fg font-bold">Transcript-Linked</span>
-                                </p>
-                            </div>
+                            <span className="flex h-6 items-center rounded bg-[#C8794A]/20 px-2 font-mono text-xs font-bold text-[#C8794A] border border-[#C8794A]/30">
+                                {activeTrack.catalogNo}
+                            </span>
+                            <span className="font-sans text-xs font-medium text-[#9E9690]">
+                                {activeTrack.categoryLabel}
+                            </span>
+                            <span className="text-[#6B6560]" aria-hidden="true">·</span>
+                            <span className="font-sans text-xs text-[#6B6560]">
+                                Masjid Tucson Master Vault
+                            </span>
                         </div>
 
-                        {/* Collection Filter with Watermelon FluidTabs */}
-                        <FluidTabs
-                            size="sm"
-                            activeId={categoryFilter}
-                            onChange={(filter) => {
-                                setCategoryFilter(filter as 'all' | 'quran-study' | 'messenger-audio');
-                                setSelected(0);
-                            }}
-                            tabs={[
-                                { id: 'all', label: 'All' },
-                                { id: 'quran-study', label: "Qur'an Studies" },
-                                { id: 'messenger-audio', label: 'Messenger' },
-                            ]}
-                        />
+                        <div className="flex items-center gap-3 font-sans text-xs text-[#6B6560]">
+                            <span>Speaker: <strong className="text-[#F5F0EB]">{activeTrack.speaker}</strong></span>
+                            <span aria-hidden="true">·</span>
+                            <span>{activeTrack.date}</span>
+                        </div>
                     </div>
 
-                    {/* Dark Console Player / Widget */}
-                    <div className="bg-ed-console p-5 text-ed-console-fg sm:p-6">
-                        <span role="status" aria-live="polite" className="sr-only">
-                            {clip && isPlaying ? `Now previewing ${clip.title}` : ''}
-                        </span>
-
-                        {clip ? (
-                            <>
-                                {/* Top provenance metadata */}
-                                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 border-b border-ed-console-rule pb-3 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.15em] text-ed-console-muted">
-                                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-white">
-                                        [{clip.catalogNo}]
-                                    </span>
-                                    <span className="text-white/20" aria-hidden="true">·</span>
-                                    <span>{clip.speaker}</span>
-                                    <span className="text-white/20" aria-hidden="true">·</span>
-                                    <span className="ml-auto">{clip.date}</span>
-                                </div>
-
-                                <div className="mt-5 grid gap-5 sm:grid-cols-[8.5rem_1fr] sm:items-center">
-                                    <div className="relative aspect-square overflow-hidden rounded-xl border border-white/10 bg-ed-console-raised shadow-md">
+                    {/* Console Body: Left Player Deck & Right Teleprompter Transcript */}
+                    <div className="grid gap-0 lg:grid-cols-[1.1fr_1.3fr]">
+                        {/* Player Deck (Left) - Enhanced Room Utilization */}
+                        <div className="p-6 sm:p-8 bg-[#121110] border-b border-[#2A2928] lg:border-b-0 lg:border-r flex flex-col justify-between">
+                            <div>
+                                {/* High-Impact CSS/Image Thumbnail */}
+                                <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-[#2A2928] bg-[#090909] shadow-xl">
+                                    {activeTrack.qsNumber ? (
+                                        <QuranStudyThumbnail qsNumber={activeTrack.qsNumber} />
+                                    ) : activeTrack.thumbnail ? (
                                         <Image
-                                            key={clip.thumbnail}
-                                            src={clip.thumbnail}
-                                            alt=""
+                                            src={activeTrack.thumbnail}
+                                            alt={activeTrack.title}
                                             fill
-                                            quality={70}
-                                            sizes="144px"
-                                            className="object-cover motion-safe:animate-[archive-media-reveal_520ms_cubic-bezier(0.16,1,0.3,1)]"
+                                            quality={80}
+                                            sizes="(min-width: 1024px) 50vw, 100vw"
+                                            className="object-cover"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                                        <span className="absolute right-2 top-2 rounded-full border border-white/15 bg-black/50 px-2 py-0.5 font-mono text-[0.55rem] font-semibold uppercase tracking-[0.1em] text-white/90 backdrop-blur-sm">
-                                            {clip.time}
-                                        </span>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsPlaying((p) => !p)}
-                                            aria-pressed={isPlaying}
-                                            className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-black/60 text-white backdrop-blur-md transition-all hover:scale-110 hover:bg-white hover:text-black shadow-md"
-                                            aria-label={isPlaying ? `Pause ${clip.title}` : `Preview ${clip.title}`}
-                                        >
-                                            {isPlaying ? (
-                                                <Pause className="h-4 w-4 fill-current" />
-                                            ) : (
-                                                <Play className="ml-0.5 h-4 w-4 fill-current" />
-                                            )}
-                                        </button>
-                                    </div>
-
-                                    <div className="flex flex-col gap-3.5 min-w-0">
-                                        <div className="flex items-center gap-2">
-                                            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-white">
-                                                <Volume2 size={12} className={isPlaying ? 'animate-pulse text-white' : ''} />
-                                                {isPlaying ? 'Now Previewing' : clip.label}
-                                            </span>
+                                    ) : (
+                                        <div className="flex h-full w-full items-center justify-center bg-[#161514] text-[#9E9690] font-sans text-xs">
+                                            Audio Master Archive
                                         </div>
-                                        <h4 className="font-sans text-xl font-extrabold leading-[1.15] tracking-tight text-ed-console-fg sm:text-2xl">
-                                            {clip.title}
-                                        </h4>
-                                        <div className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm">
-                                            <Quote className="pointer-events-none absolute -top-1.5 left-2 h-8 w-8 text-white/[0.06]" aria-hidden="true" />
-                                            <p className="relative font-mono text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-white/80">
-                                                Synchronized Passage · {clip.time}
-                                            </p>
-                                            <p className="relative mt-1.5 font-serif text-[0.95rem] italic leading-relaxed text-ed-console-fg/90">
-                                                &ldquo;{clip.excerpt}&rdquo;
-                                            </p>
-                                        </div>
-                                    </div>
+                                    )}
                                 </div>
 
-                                {/* Transport controls + Interactive Waveform */}
-                                <div className="mt-5 border-t border-ed-console-rule pt-4">
-                                    <div className="flex items-center justify-between gap-3">
-                                        <div className="flex items-center gap-1.5">
-                                            <button
-                                                type="button"
-                                                onClick={() => goToOffset(-1)}
-                                                disabled={filteredClips.length < 2}
-                                                aria-label="Previous recording"
-                                                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-ed-console-muted transition-colors hover:border-white/25 hover:text-white disabled:opacity-30 disabled:hover:border-white/10 disabled:hover:text-ed-console-muted"
-                                            >
-                                                <ChevronLeft className="h-3.5 w-3.5" />
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={() => setIsPlaying((p) => !p)}
-                                                aria-pressed={isPlaying}
-                                                aria-label={isPlaying ? 'Pause preview' : 'Play preview'}
-                                                className="inline-flex h-7 items-center gap-1.5 rounded-full border border-white/10 px-2.5 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.1em] text-ed-console-muted transition-colors hover:border-white/25 hover:text-white"
-                                            >
-                                                {isPlaying ? (
-                                                    <Pause className="h-3 w-3 fill-current" />
-                                                ) : (
-                                                    <Play className="h-3 w-3 fill-current" />
-                                                )}
-                                                {isPlaying ? 'Pause' : 'Play'}
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={() => goToOffset(1)}
-                                                disabled={filteredClips.length < 2}
-                                                aria-label="Next recording"
-                                                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-ed-console-muted transition-colors hover:border-white/25 hover:text-white disabled:opacity-30 disabled:hover:border-white/10 disabled:hover:text-ed-console-muted"
-                                            >
-                                                <ChevronRight className="h-3.5 w-3.5" />
-                                            </button>
-                                        </div>
-                                        <div className="flex items-center gap-1.5 font-mono text-[0.68rem] tabular-nums text-ed-console-muted">
-                                            <span className="uppercase tracking-[0.1em]">Timestamp Match</span>
-                                            <span className="font-semibold text-white">{clip.time}</span>
-                                        </div>
+                                <div className="mt-5">
+                                    <h3 className="font-serif text-lg font-semibold leading-snug text-[#F5F0EB] sm:text-xl">
+                                        {activeTrack.title}
+                                    </h3>
+                                    <p className="mt-1 font-sans text-xs text-[#9E9690]">
+                                        Analog Tape Remaster · {activeTrack.duration} · Speaker: {activeTrack.speaker}
+                                    </p>
+                                </div>
+
+                                {/* Simulated Tactile Waveform Bars */}
+                                <div className="mt-5 rounded-xl border border-[#2A2928] bg-[#0F0E0D] p-4">
+                                    <div className="flex items-center justify-between pb-2 text-xs font-sans text-[#6B6560]">
+                                        <span>Current Cue: <strong className="text-[#C8794A] font-mono">{currentLine.time}</strong></span>
+                                        <span>Total: <strong className="font-mono text-[#9E9690]">{activeTrack.duration}</strong></span>
                                     </div>
 
-                                    <div className="relative mt-3 flex h-12 items-center gap-[3px] overflow-hidden" aria-hidden="true">
-                                        {WAVEFORM.map((height, barIndex) => {
-                                            const isPlayed = barIndex < WAVEFORM_MARKER;
-                                            const isLive = isPlaying && isPlayed;
+                                    {/* Waveform graphic */}
+                                    <div className="flex h-12 items-center gap-[3px] py-1">
+                                        {Array.from({ length: 44 }).map((_, i) => {
+                                            const heightPercent = 20 + Math.sin(i * 0.45) * 35 + ((i * 17) % 45);
+                                            const isPast = i < 18;
                                             return (
-                                                <span
-                                                    key={`${clip.id}-${barIndex}`}
-                                                    className={`archive-eq-bar block min-w-[3px] flex-1 rounded-full transition-colors duration-300 ${isLive ? 'archive-eq-bar--live bg-ed-accent' : isPlayed ? 'bg-white/60' : 'bg-white/15'
-                                                        }`}
+                                                <div
+                                                    key={i}
+                                                    className="flex-1 rounded-full transition-all duration-300"
                                                     style={{
-                                                        height: `${height}%`,
-                                                        opacity: isPlayed ? 0.95 : 0.4,
-                                                        animationDelay: isLive ? `${(barIndex % 6) * 90}ms` : undefined,
+                                                        height: `${Math.max(15, Math.min(100, heightPercent))}%`,
+                                                        backgroundColor: isPast ? '#C8794A' : '#2A2928',
+                                                        opacity: isPast ? 0.95 : 0.45,
                                                     }}
                                                 />
                                             );
                                         })}
-                                        <span
-                                            className="pointer-events-none absolute top-0 h-full w-px bg-ed-accent/90"
-                                            style={{ left: `${(WAVEFORM_MARKER / WAVEFORM.length) * 100}%` }}
-                                        />
+                                    </div>
+
+                                    {/* Playback Control Bar */}
+                                    <div className="mt-3 flex items-center justify-between pt-3 border-t border-[#1C1B1A]">
+                                        <div className="flex items-center gap-2">
+                                            <button
+                                                type="button"
+                                                onClick={() => setIsPlaying(!isPlaying)}
+                                                className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C8794A] text-[#0F0E0D] shadow-md transition-all hover:bg-[#D9916A] hover:scale-105 active:scale-95"
+                                                aria-label={isPlaying ? 'Pause audio preview' : 'Play audio preview'}
+                                            >
+                                                {isPlaying ? (
+                                                    <Pause className="h-3.5 w-3.5 fill-current" />
+                                                ) : (
+                                                    <Play className="ml-0.5 h-3.5 w-3.5 fill-current" />
+                                                )}
+                                            </button>
+                                            <span className="font-sans text-xs text-[#F5F0EB]">
+                                                {isPlaying ? 'Auditioning Stream' : 'Ready to Audition'}
+                                            </span>
+                                        </div>
+
+                                        {/* Speed Controls */}
+                                        <div className="flex items-center gap-1">
+                                            {['1.0x', '1.25x', '1.5x'].map((spd) => (
+                                                <button
+                                                    key={spd}
+                                                    type="button"
+                                                    onClick={() => setPlaybackSpeed(spd)}
+                                                    className={`rounded px-2 py-0.5 font-mono text-[0.65rem] font-semibold transition-colors ${
+                                                        playbackSpeed === spd
+                                                            ? 'border border-[#C8794A]/60 bg-[#C8794A]/20 text-[#F5F0EB]'
+                                                            : 'text-[#6B6560] hover:text-[#9E9690]'
+                                                    }`}
+                                                >
+                                                    {spd}
+                                                </button>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </>
-                        ) : (
-                            <div className="rounded-xl border border-dashed border-white/10 p-8 text-center">
-                                <p className="font-mono text-xs uppercase tracking-[0.12em] text-ed-console-muted">
-                                    No recordings match this filter yet.
-                                </p>
-                            </div>
-                        )}
-                    </div>
 
-                    {/* Clip Selector List */}
-                    <div className="bg-ed-surface/40 p-2">
-                        {filteredClips.length > 0 && (
-                            <p className="px-2.5 pb-1.5 pt-1 font-mono text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted/70">
-                                In this collection
-                            </p>
-                        )}
-                        <div className="space-y-1">
-                            {filteredClips.map((item, itemIndex) => {
-                                const isActive = itemIndex === selectedIndex;
-                                return (
-                                    <button
-                                        key={item.id}
-                                        type="button"
-                                        onClick={() => {
-                                            setSelected(itemIndex);
-                                            setIsPlaying(true);
-                                        }}
-                                        aria-pressed={isActive}
-                                        aria-label={`${item.label}, ${item.title}, ${item.time}`}
-                                        className={`grid w-full grid-cols-[2.75rem_1fr_auto] items-center gap-3 rounded-xl border p-2.5 text-left transition-all ${isActive
-                                                ? 'border-ed-accent/50 bg-ed-accent/10 text-ed-fg shadow-sm shadow-ed-accent/20'
-                                                : 'border-transparent text-ed-fg-muted hover:border-ed-rule hover:bg-ed-surface/50 hover:text-ed-fg'
-                                            }`}
+                                {/* Rich Track Summary Description Below Waveform */}
+                                <div className="mt-4 rounded-xl border border-[#2A2928]/60 bg-[#161514]/40 p-3.5">
+                                    <p
+                                        className="text-xs leading-relaxed text-[#9E9690]"
+                                        style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                     >
-                                        <span className="relative aspect-square overflow-hidden rounded-lg border border-ed-rule bg-ed-bg">
-                                            <Image src={item.thumbnail} alt="" fill quality={45} sizes="52px" className="object-cover" />
-                                            {isActive && isPlaying && (
-                                                <span className="absolute inset-0 flex items-center justify-center gap-[2px] bg-black/50">
-                                                    {[0, 1, 2].map((i) => (
-                                                        <span
-                                                            key={i}
-                                                            className="archive-eq-bar archive-eq-bar--live w-[2.5px] rounded-full bg-white"
-                                                            style={{ height: '55%', animationDelay: `${i * 120}ms` }}
-                                                        />
-                                                    ))}
+                                        {activeTrack.summary}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Launch Player Button */}
+                            <div className="mt-6">
+                                <Link
+                                    href={activeTrack.href}
+                                    className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#C8794A] bg-[#C8794A] px-5 py-2.5 font-sans text-xs font-semibold text-[#0F0E0D] shadow-lg transition-all hover:bg-[#D9916A] hover:scale-[1.01]"
+                                >
+                                    <span>Launch Dedicated Audio Suite</span>
+                                    <ArrowRight className="h-3.5 w-3.5" />
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Synchronized Teleprompter Transcript (Right) */}
+                        <div className="flex flex-col justify-between bg-[#161514] p-6 sm:p-8">
+                            <div>
+                                <div className="flex items-center justify-between pb-3 border-b border-[#2A2928]">
+                                    <span className="font-sans text-xs font-semibold text-[#F5F0EB]">
+                                        Synchronized Transcript
+                                    </span>
+                                    <span className="font-sans text-xs text-[#6B6560]">
+                                        Click line to seek
+                                    </span>
+                                </div>
+
+                                {/* Interactive Transcript Lines */}
+                                <div className="mt-4 space-y-3">
+                                    {activeTrack.transcriptLines.map((line, lIdx) => {
+                                        const isLineActive = lIdx === activeLineIndex;
+                                        return (
+                                            <button
+                                                key={line.text}
+                                                type="button"
+                                                onClick={() => setActiveLineIndex(lIdx)}
+                                                className={`group flex w-full items-start gap-3.5 rounded-xl border p-3.5 text-left transition-all duration-200 ${
+                                                    isLineActive
+                                                        ? 'border-[#C8794A]/60 bg-[#C8794A]/10 text-[#F5F0EB] shadow-md'
+                                                        : 'border-[#2A2928]/60 bg-[#121110]/50 text-[#9E9690] hover:border-[#353433] hover:bg-[#121110] hover:text-[#F5F0EB]'
+                                                }`}
+                                            >
+                                                <span className={`inline-flex h-6 min-w-12 items-center justify-center rounded font-mono text-xs font-semibold shrink-0 ${
+                                                    isLineActive
+                                                        ? 'bg-[#C8794A] text-[#0F0E0D]'
+                                                        : 'border border-[#2A2928] bg-[#161514] text-[#C8794A]'
+                                                }`}>
+                                                    {line.time}
                                                 </span>
-                                            )}
-                                        </span>
-                                        <span className="min-w-0">
-                                            <span className="flex items-center gap-1.5 font-mono text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
-                                                [{item.catalogNo}] {item.label}
-                                                <span className="rounded-full border border-ed-rule px-1.5 py-px text-[0.55rem] font-semibold normal-case tracking-normal text-ed-fg-muted/80">
-                                                    {item.category === 'quran-study' ? "Qur'an" : 'Messenger'}
-                                                </span>
-                                            </span>
-                                            <span className="mt-0.5 block truncate font-sans text-xs font-semibold text-current">
-                                                {item.title}
-                                            </span>
-                                        </span>
-                                        <span className="px-2 font-mono text-xs tabular-nums text-ed-fg-muted">
-                                            {item.time}
-                                        </span>
-                                    </button>
-                                );
-                            })}
+                                                <div className="min-w-0">
+                                                    <p
+                                                        className="text-xs leading-relaxed sm:text-sm italic"
+                                                        style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                                                    >
+                                                        &ldquo;{line.text}&rdquo;
+                                                    </p>
+                                                    <span className="mt-1 block font-sans text-[0.7rem] text-[#6B6560]">
+                                                        Speaker: {line.speaker}
+                                                    </span>
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            {/* Other Tracks in Category */}
+                            <div className="mt-6 pt-4 border-t border-[#2A2928]">
+                                <span className="block font-sans text-[0.7rem] font-semibold text-[#6B6560] mb-2">
+                                    More Tapes in this Collection
+                                </span>
+                                <div className="flex flex-wrap gap-2">
+                                    {filteredTracks.map((trk) => (
+                                        <button
+                                            key={trk.id}
+                                            type="button"
+                                            onClick={() => {
+                                                setSelectedTrackId(trk.id);
+                                                setActiveLineIndex(0);
+                                            }}
+                                            className={`rounded-md px-3 py-1 font-sans text-xs transition-all ${
+                                                trk.id === activeTrack.id
+                                                    ? 'border border-[#C8794A] bg-[#C8794A]/20 text-[#F5F0EB] font-bold'
+                                                    : 'border border-[#2A2928] bg-[#121110] text-[#9E9690] hover:text-[#F5F0EB]'
+                                            }`}
+                                        >
+                                            {trk.catalogNo} · {trk.title.split(':')[0]}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Footer CTA link */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule px-4 py-3 sm:px-5 bg-ed-surface/50">
-                        <CtaLink href={clip?.href ?? '/audios'} label={clip ? `Listen to ${clip.label}` : 'Browse the archives'} />
-                        <span className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
-                            80+ recordings available
+                    {/* Console Footer Callout */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6">
+                        <Link
+                            href="/audios"
+                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-[#F5F0EB] hover:text-[#C8794A] transition-colors"
+                        >
+                            <span>Explore all 600+ master tapes and studies</span>
+                            <ArrowRight className="h-3.5 w-3.5 text-[#C8794A]" />
+                        </Link>
+                        <span className="font-sans text-xs text-[#6B6560]">
+                            Line-by-Line Timestamp Matching System
                         </span>
                     </div>
                 </div>
             </Reveal>
+
+            {/* Direct Spoken Evidence Quotes Shelf */}
+            <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
+                {NOTABLE_EXCERPTS.map((item, idx) => (
+                    <Reveal key={item.source} delay={160 + idx * 80}>
+                        <div className="group flex h-full flex-col justify-between rounded-xl border border-[#2A2928] bg-[#161514] p-5 shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A]">
+                            <div>
+                                <p
+                                    className="text-xs sm:text-sm leading-relaxed text-[#F5F0EB] italic"
+                                    style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                                >
+                                    &ldquo;{item.quote}&rdquo;
+                                </p>
+                            </div>
+                            <div className="mt-4 pt-3 border-t border-[#2A2928] flex items-center justify-between font-sans text-xs text-[#9E9690]">
+                                <span>{item.source}</span>
+                                <span className="text-[#C8794A] font-mono font-semibold">{item.timestamp}</span>
+                            </div>
+                        </div>
+                    </Reveal>
+                ))}
+            </div>
         </article>
     );
 }

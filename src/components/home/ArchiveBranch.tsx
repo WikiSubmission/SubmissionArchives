@@ -7,7 +7,7 @@ import { SectionCta } from './SectionCta';
 import { SectionHeading } from './SectionHeading';
 
 type ArchiveBranchProps = {
-    numeral: string;
+    numeral?: string;
     kicker?: string;
     title: string;
     body: string;
@@ -20,7 +20,6 @@ type ArchiveBranchProps = {
 };
 
 export function ArchiveBranch({
-    numeral,
     title,
     body,
     href,
@@ -33,17 +32,20 @@ export function ArchiveBranch({
     if (visual) {
         return (
             <article className="archive-section grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-                <div className={`min-w-0 ${reverse ? 'lg:order-2' : ''}`}>
+                <div className={`min-w-0 ${reverse ? 'lg:order-2' : ''} lg:pt-5`}>
                     <Reveal delay={70}>
-                        <SectionHeading numeral={numeral} title={title} />
+                        <SectionHeading title={title} />
                     </Reveal>
                     <Reveal delay={140} className="mt-4 sm:mt-5 lg:mt-6">
-                        <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
+                        <p
+                            className="max-w-[62ch] text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                        >
                             {body}
                         </p>
                     </Reveal>
 
-                    <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6">
+                    <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5">
                         {details.map((item, itemIndex) => (
                             <Reveal key={item.title} delay={200 + itemIndex * 80}>
                                 <ExpectationCard
@@ -71,20 +73,24 @@ export function ArchiveBranch({
         <article className="archive-section">
             <div className="max-w-3xl">
                 <Reveal delay={70}>
-                    <SectionHeading numeral={numeral} title={title} />
+                    <SectionHeading title={title} />
                 </Reveal>
                 <Reveal delay={140} className="mt-4 sm:mt-5 lg:mt-6">
-                    <p className="max-w-[62ch] text-base leading-[1.65] tracking-[-0.01em] text-ed-fg-muted sm:text-lg">
+                    <p
+                        className="max-w-[62ch] text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                    >
                         {body}
                     </p>
                 </Reveal>
             </div>
 
             {showSearchDemo ? (
-                <div className="mt-12">
+                <div className="mt-10">
                     <DeferredSearchFunctionDemo />
                 </div>
             ) : null}
         </article>
     );
 }
+
