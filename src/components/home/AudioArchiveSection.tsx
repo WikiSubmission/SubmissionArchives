@@ -165,23 +165,21 @@ export function AudioArchiveSection() {
             onMouseLeave={() => setIsHovered(false)}
         >
             {/* Header & Description */}
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div>
                 <Reveal>
-                    <div>
-                        <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
-                            Audio Archives
-                        </h2>
-                        <div className="mt-2 h-[2px] w-20 bg-[#C8794A]" />
-                    </div>
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                        Audio Archives
+                    </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         Digitized original cassette masters, verse-by-verse Qur&apos;an study sessions, and spoken messenger archives with real-time synchronized teleprompter transcripts.
                     </p>
                 </Reveal>
+                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
             </div>
 
             {/* Collection Category Switcher */}

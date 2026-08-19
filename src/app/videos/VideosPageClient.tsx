@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { Media } from '@/types/media';
+import { getMediaHref } from '@/lib/utils';
 
 type VideoSection = {
     id: string;
@@ -414,7 +415,7 @@ function VideoCard({ video }: { video: Media }) {
 
     return (
         <a
-            href={`/videos/${video.id}`}
+            href={getMediaHref(video.id)}
             className="group relative flex flex-col overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] transition-all duration-[280ms] ease-out hover:-translate-y-0.5 hover:border-[#353433] hover:bg-[#1C1B1A] hover:shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
         >
             {/* 16:9 Thumbnail Stage */}

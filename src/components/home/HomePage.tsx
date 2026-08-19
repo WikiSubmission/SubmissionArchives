@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck, BookOpen, Search, Volume2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { HeroSection } from './HeroSection';
@@ -16,7 +16,6 @@ const PRESERVATION_PILLARS: AccordionItemData[] = [
         id: 1,
         title: 'Original Facsimile & First Edition Printings',
         badge: 'Zero Transcription Error',
-        icon: <BookOpen className="h-4 w-4 text-[#C8794A]" />,
         content:
             'Every book, appendix, and monthly newsletter is paired directly with high-resolution page scans of the original 1981 and 1989 First Edition printings, ensuring absolute zero transcription variance or retroactive alterations.',
     },
@@ -24,7 +23,6 @@ const PRESERVATION_PILLARS: AccordionItemData[] = [
         id: 2,
         title: 'Time-Synchronized Audio & Video Recordings',
         badge: 'Acoustic Verification',
-        icon: <Volume2 className="h-4 w-4 text-[#C8794A]" />,
         content:
             'Over 600 audio sermons and 300 videotaped lectures are synchronized line-by-line with verbatim transcripts. You can listen directly to the authentic spoken delivery at the exact millisecond of any phrase.',
     },
@@ -32,7 +30,6 @@ const PRESERVATION_PILLARS: AccordionItemData[] = [
         id: 3,
         title: 'Full Mathematical & Structural Consistency',
         badge: 'Sura 17:36 Audit',
-        icon: <ShieldCheck className="h-4 w-4 text-[#C8794A]" />,
         content:
             'All text indexes preserve the original Arabic letter counts, chapter headers, and verse alignments, allowing researcher verification through reproducible, deterministic search and indexing pipelines.',
     },
@@ -40,7 +37,6 @@ const PRESERVATION_PILLARS: AccordionItemData[] = [
         id: 4,
         title: 'Universal Cross-Canon Parallel Corpus',
         badge: '4 Scriptural Canons',
-        icon: <Search className="h-4 w-4 text-[#C8794A]" />,
         content:
             'A unified academic reading room linking the Authorized English Qur\'an, Tanakh, Greek New Testament, and Apocrypha with instant phrase cross-referencing and contextual citation tools.',
     },

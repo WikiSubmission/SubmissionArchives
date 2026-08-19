@@ -41,7 +41,7 @@ export default function Footer() {
                                 >
                                     Submission Archives
                                 </span>
-                                <span className="mt-0.5 flex items-center gap-1.5 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#6B6560]">
+                                <span className="mt-0.5 flex items-center gap-1.5 font-sans text-[0.68rem] font-semibold text-[#6B6560]">
                                     <span className="h-1.5 w-1.5 rounded-full bg-[#C8794A]" />
                                     Digital Preservation Project
                                 </span>

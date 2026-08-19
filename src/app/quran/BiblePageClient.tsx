@@ -187,7 +187,6 @@ export default function BiblePageClient({ books, testament }: BiblePageClientPro
             <div className="max-w-[640px]">
               <div className="mb-3.5 flex flex-wrap items-center gap-3">
                 <div className="inline-flex items-center gap-1.5 rounded-[4px] border border-[#C8794A]/15 bg-[#C8794A]/[0.06] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">
-                  <BookOpen className="h-3 w-3" />
                   Scripture Collection
                 </div>
                 <span className="inline-flex items-center gap-1.5 rounded-[4px] border border-[#2A2928] bg-[#161514] px-2.5 py-1 text-[11px] font-medium text-[#6B6560]">

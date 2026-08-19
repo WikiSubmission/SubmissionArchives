@@ -154,23 +154,21 @@ export function VideoArchiveSection() {
             onMouseLeave={() => setIsHovered(false)}
         >
             {/* Header & Description */}
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div>
                 <Reveal>
-                    <div>
-                        <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
-                            Video Archive
-                        </h2>
-                        <div className="mt-2 h-[2px] w-20 bg-[#C8794A]" />
-                    </div>
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                        Video Archive
+                    </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         Friday sermons, instructional programs, television debates, and annual conference recordings preserved in a chapter-indexed screening theater.
                     </p>
                 </Reveal>
+                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
             </div>
 
             {/* Category Filter Pills */}
@@ -304,7 +302,7 @@ export function VideoArchiveSection() {
                                                         : 'border-transparent text-[#9E9690] hover:border-[#2A2928] hover:bg-[#121110] hover:text-[#F5F0EB]'
                                                 }`}
                                             >
-                                                <span className={`inline-flex h-6 min-w-12 items-center justify-center rounded font-mono text-xs font-semibold ${
+                                                <span className={`inline-flex h-6 min-w-12 items-center justify-center rounded font-sans text-xs font-semibold ${
                                                     isChapActive
                                                         ? 'bg-[#C8794A] text-[#0F0E0D]'
                                                         : 'border border-[#2A2928] bg-[#121110] text-[#C8794A]'

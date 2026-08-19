@@ -79,7 +79,6 @@ export default function QuranPageClient({ chapters }: Props) {
           <header className="mb-8 flex flex-wrap items-end justify-between gap-8 border-b border-[#2A2928] pb-8">
             <div className="max-w-[640px]">
               <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-[#C8794A]/15 bg-[#C8794A]/[0.06] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">
-                <BookOpen className="h-3 w-3" weight="fill" />
                 Scripture Index
               </div>
               <h1

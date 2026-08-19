@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, CornerDownLeft } from 'lucide-react';
+import { ArrowRight, Search, X } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { GlassSheen, widgetCardClass } from './WidgetAccents';
 
@@ -197,23 +197,21 @@ export function SearchSection() {
             onMouseLeave={() => setIsHovered(false)}
         >
             {/* Header & Description */}
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div>
                 <Reveal>
-                    <div>
-                        <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
-                            Universal Search Engine
-                        </h2>
-                        <div className="mt-2 h-[2px] w-20 bg-[#C8794A]" />
-                    </div>
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                        Universal Search Engine
+                    </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         Query across all recorded sermons, conference talks, newsletter issues, books, appendices, and scripture verses simultaneously with instant direct jump links.
                     </p>
                 </Reveal>
+                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
             </div>
 
             {/* Omnisearch Command Console */}
@@ -223,18 +221,36 @@ export function SearchSection() {
 
                     {/* Search Bar Header */}
                     <div className="border-b border-[#2A2928] bg-[#161514] p-4 sm:p-6">
-                        <div className="relative flex items-center">
-                            <input
-                                type="text"
-                                value={customQuery}
-                                onChange={(e) => setCustomQuery(e.target.value)}
-                                placeholder="Search all audio transcripts, video chapters, books, and verses..."
-                                className="w-full rounded-xl border border-[#2A2928] bg-[#0E0D0C] py-3.5 px-4 font-sans text-sm text-[#F5F0EB] placeholder:text-[#6B6560] focus:border-[#C8794A] focus:outline-none focus:ring-1 focus:ring-[#C8794A]"
-                            />
-                            <div className="absolute right-3 flex items-center gap-2">
-                                <span className="hidden sm:inline-flex items-center gap-1 rounded border border-[#2A2928] bg-[#161514] px-2 py-1 font-sans text-xs text-[#6B6560]">
-                                    <CornerDownLeft className="h-3 w-3" />
-                                    <span>Ctrl + K</span>
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                            <div className="relative min-w-0 flex-1">
+                                <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6B6560]" />
+                                <input
+                                    type="text"
+                                    value={customQuery}
+                                    onChange={(e) => setCustomQuery(e.target.value)}
+                                    placeholder="Search transcripts, perspectives, appendices..."
+                                    className="w-full rounded-[4px] border border-[#2A2928] bg-[#0E0D0C] py-2.5 pl-10 pr-10 font-sans text-sm text-[#F5F0EB] placeholder:text-[#6B6560] focus:border-[#C8794A] focus:outline-none focus:ring-1 focus:ring-[#C8794A]"
+                                />
+                                {customQuery ? (
+                                    <button
+                                        type="button"
+                                        onClick={() => setCustomQuery('')}
+                                        aria-label="Clear search query"
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6B6560] hover:text-[#F5F0EB]"
+                                    >
+                                        <X className="h-4 w-4" />
+                                    </button>
+                                ) : null}
+                            </div>
+                            <div className="flex items-center gap-2 sm:shrink-0">
+                                <button
+                                    type="button"
+                                    className="inline-flex items-center justify-center rounded-[4px] bg-[#C8794A] px-4 py-2.5 font-sans text-xs font-bold text-[#0F0E0D] transition-all hover:bg-[#D9916A]"
+                                >
+                                    Search
+                                </button>
+                                <span className="hidden sm:inline-flex items-center gap-1 rounded-[4px] border border-[#2A2928] bg-[#161514] px-2 py-2.5 font-sans text-xs text-[#6B6560]">
+                                    Ctrl + K
                                 </span>
                             </div>
                         </div>
@@ -301,38 +317,56 @@ export function SearchSection() {
                     </div>
 
                     {/* Search Results Deck */}
-                    <div className="divide-y divide-[#2A2928] bg-[#0E0D0C] p-2 sm:p-4">
-                        {filteredResults.map((result) => (
-                            <Link
+                    <div className="space-y-3 bg-[#0E0D0C] p-3 sm:p-4">
+                        {filteredResults.map((result, idx) => (
+                            <div
                                 key={result.id}
-                                href={result.href}
-                                className="group flex flex-col gap-2 rounded-xl p-4 transition-all duration-200 hover:bg-[#161514] sm:flex-row sm:items-center sm:justify-between"
+                                className="rounded-[12px] border border-[#2A2928] bg-[#161514] p-4 sm:p-5 transition-all duration-200 hover:border-[#353433]"
                             >
-                                <div className="space-y-1.5 min-w-0 flex-1 pr-4">
+                                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#2A2928] pb-3">
                                     <div className="flex items-center gap-2">
-                                        <span className="rounded-full border border-[#2A2928] bg-[#121110] px-2.5 py-0.5 font-sans text-xs text-[#9E9690]">
+                                        <span className="rounded-[4px] border border-[#2A2928] bg-[#121110] px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-[#F5F0EB]">
+                                            {String(idx + 1).padStart(2, '0')}
+                                        </span>
+                                        <span className="rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 py-0.5 font-sans text-[0.68rem] font-bold text-[#9E9690]">
                                             {result.corpusLabel}
                                         </span>
-                                        <span className="font-sans text-xs text-[#C8794A] font-semibold">
-                                            [{result.targetLocation}]
-                                        </span>
                                     </div>
+                                    <span className="font-sans text-xs font-semibold text-[#C8794A]">
+                                        [{result.targetLocation}]
+                                    </span>
+                                </div>
 
-                                    <h4 className="font-serif text-base font-medium text-[#F5F0EB] group-hover:text-[#D9916A] transition-colors">
+                                <Link href={result.href} className="group block pt-3">
+                                    <h4 className="font-serif text-lg font-semibold leading-snug text-[#F5F0EB] transition-colors group-hover:text-[#D9916A] sm:text-xl">
                                         {result.title}
                                     </h4>
+                                </Link>
 
-                                    <p
-                                        className="text-xs leading-relaxed text-[#9E9690] italic"
-                                        dangerouslySetInnerHTML={{ __html: result.highlight }}
-                                    />
-                                </div>
-
-                                <div className="shrink-0 flex items-center gap-1 font-sans text-xs text-[#6B6560] group-hover:text-[#F5F0EB] transition-colors">
-                                    <span>Direct Jump</span>
-                                    <ArrowRight className="h-3.5 w-3.5 text-[#C8794A] transition-transform group-hover:translate-x-1" />
-                                </div>
-                            </Link>
+                                <Link
+                                    href={result.href}
+                                    className="group mt-3 block rounded-[8px] border border-[#2A2928] bg-[#0E0D0C] p-4 transition hover:border-[#353433]"
+                                >
+                                    <div className="mb-2 flex items-center justify-between gap-2">
+                                        <span className="font-sans text-[0.68rem] font-bold uppercase tracking-widest text-[#6B6560]">
+                                            Best Matching Passage
+                                        </span>
+                                        <span className="inline-flex items-center gap-1.5 rounded-[4px] bg-[#C8794A] px-3 py-1 font-sans text-xs font-bold text-[#0F0E0D] transition-transform group-hover:translate-x-0.5">
+                                            Direct Jump
+                                            <ArrowRight className="h-3 w-3" />
+                                        </span>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <span className="select-none font-serif text-2xl leading-none text-[#4A4542]" aria-hidden="true">
+                                            &ldquo;
+                                        </span>
+                                        <p
+                                            className="text-sm leading-relaxed text-[#9E9690]"
+                                            dangerouslySetInnerHTML={{ __html: result.highlight }}
+                                        />
+                                    </div>
+                                </Link>
+                            </div>
                         ))}
                     </div>
 

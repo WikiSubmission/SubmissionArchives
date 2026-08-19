@@ -447,7 +447,7 @@ export default function GoldenPlayer({
       <div className="qs-container py-6">
         {/* Breadcrumb */}
         <nav className="qs-breadcrumb" aria-label="Breadcrumb">
-          <Link href="/archive">Catalog</Link>
+          <Link href="/">Submission Archives</Link>
           <span className="qs-breadcrumb-separator">/</span>
           <Link href={catalogLink.href}>{catalogLink.label}</Link>
           <span className="qs-breadcrumb-separator">/</span>

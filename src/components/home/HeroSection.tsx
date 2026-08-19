@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Pause, Play, BookOpen, Search } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 import { Reveal } from './Reveal';
@@ -96,45 +96,18 @@ export function HeroSection() {
                             <div className="mt-8 flex flex-wrap items-center gap-3">
                                 <Link
                                     href="/search"
-                                    className="inline-flex h-11 items-center gap-2 rounded-lg border border-[#C8794A] bg-[#C8794A] px-6 text-xs font-mono font-bold uppercase tracking-wider text-[#0F0E0D] shadow-md transition-all duration-200 hover:bg-[#D9916A] hover:scale-[1.02] active:scale-[0.98]"
+                                    className="inline-flex h-11 items-center gap-2 rounded-lg border border-[#C8794A] bg-[#C8794A] px-6 font-sans text-sm font-semibold text-[#0F0E0D] shadow-md transition-all duration-200 hover:bg-[#D9916A] hover:scale-[1.02] active:scale-[0.98]"
                                 >
-                                    <Search className="h-4 w-4" />
                                     <span>Search Entire Corpus</span>
                                     <span className="opacity-60 text-[10px]">/</span>
                                 </Link>
                                 <Link
                                     href="/scripture/quran"
-                                    className="inline-flex h-11 items-center gap-2 rounded-lg border border-[#2A2928] bg-[#161514] px-5 text-xs font-mono font-semibold uppercase tracking-wider text-[#F5F0EB] shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A] hover:scale-[1.02] active:scale-[0.98]"
+                                    className="inline-flex h-11 items-center gap-2 rounded-lg border border-[#2A2928] bg-[#161514] px-5 font-sans text-sm font-semibold text-[#F5F0EB] shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A] hover:scale-[1.02] active:scale-[0.98]"
                                 >
-                                    <BookOpen className="h-4 w-4 text-[#C8794A]" />
                                     <span>Open Scripture Reader</span>
                                     <ArrowRight className="h-3.5 w-3.5 opacity-60" />
                                 </Link>
-                            </div>
-                        </Reveal>
-
-                        {/* Stats Row */}
-                        <Reveal delay={320}>
-                            <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-[#2A2928] pt-6 sm:gap-8">
-                                <div>
-                                    <strong className="block font-serif text-2xl font-medium text-[#F5F0EB] sm:text-3xl">600+</strong>
-                                    <span className="block font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6560]">Audio Recordings</span>
-                                </div>
-                                <div className="h-8 w-px bg-[#2A2928]" aria-hidden="true" />
-                                <div>
-                                    <strong className="block font-serif text-2xl font-medium text-[#F5F0EB] sm:text-3xl">300+</strong>
-                                    <span className="block font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6560]">Video Programs</span>
-                                </div>
-                                <div className="h-8 w-px bg-[#2A2928]" aria-hidden="true" />
-                                <div>
-                                    <strong className="block font-serif text-2xl font-medium text-[#F5F0EB] sm:text-3xl">74</strong>
-                                    <span className="block font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6560]">Written Works</span>
-                                </div>
-                                <div className="h-8 w-px bg-[#2A2928]" aria-hidden="true" />
-                                <div>
-                                    <strong className="block font-serif text-2xl font-medium text-[#F5F0EB] sm:text-3xl">114</strong>
-                                    <span className="block font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6560]">Qur&apos;an Surahs</span>
-                                </div>
                             </div>
                         </Reveal>
                     </div>
