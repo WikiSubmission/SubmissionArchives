@@ -208,19 +208,19 @@ export function WrittenLibrarySection() {
             {/* Header & Description */}
             <div>
                 <Reveal>
-                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg">
                         Written Library & Facsimiles
                     </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-ed-fg-secondary sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         Authorized scripture translations, published research monographs, and monthly bulletins preserved in high-resolution original print facsimiles with searchable OCR.
                     </p>
                 </Reveal>
-                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
+                <div className="mt-4 h-[2px] w-20 bg-ed-accent" />
             </div>
 
             {/* Category Selector Tabs */}
@@ -233,8 +233,8 @@ export function WrittenLibrarySection() {
                     }}
                     className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                         activeTab === 'books'
-                            ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
-                            : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                            ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
+                            : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
                     }`}
                 >
                     Published Books & Monographs (10 Works)
@@ -247,8 +247,8 @@ export function WrittenLibrarySection() {
                     }}
                     className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                         activeTab === 'newsletters'
-                            ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
-                            : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                            ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
+                            : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
                     }`}
                 >
                     Submitters Perspective Monthly Bulletins (1985–1990)
@@ -261,35 +261,35 @@ export function WrittenLibrarySection() {
                     <GlassSheen />
 
                     {/* Workstation Header Bar */}
-                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6 select-none">
+                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-surface px-4 py-3 sm:px-6 select-none">
                         <div className="flex items-center gap-3">
-                            <span className="font-sans text-xs font-semibold text-[#C8794A]">
+                            <span className="font-sans text-xs font-semibold text-ed-accent">
                                 {activeWork.badge}
                             </span>
-                            <span className="text-[#6B6560]" aria-hidden="true">·</span>
-                            <span className="font-sans text-xs text-[#9E9690]">
+                            <span className="text-ed-fg-faint" aria-hidden="true">·</span>
+                            <span className="font-sans text-xs text-ed-fg-secondary">
                                 {activeWork.edition}
                             </span>
-                            <span className="text-[#6B6560]" aria-hidden="true">·</span>
-                            <span className="font-sans text-xs text-[#6B6560]">
+                            <span className="text-ed-fg-faint" aria-hidden="true">·</span>
+                            <span className="font-sans text-xs text-ed-fg-muted">
                                 {activeWork.publisher}
                             </span>
                         </div>
 
-                        <div className="flex items-center gap-3 font-sans text-xs text-[#6B6560]">
+                        <div className="flex items-center gap-3 font-sans text-xs text-ed-fg-muted">
                             <span>Published {activeWork.year}</span>
                             <span aria-hidden="true">·</span>
-                            <span className="font-semibold text-[#F5F0EB]">{activeWork.pages} Pages</span>
+                            <span className="font-semibold text-ed-fg">{activeWork.pages} Pages</span>
                         </div>
                     </div>
 
                     {/* Dual Workstation Body: Full Uncropped Book Showcase (Left) + Side-by-Side Facsimile & OCR Text (Right) */}
                     <div className="grid gap-0 lg:grid-cols-[0.85fr_1.35fr]">
                         {/* Book Profile & Uncropped Cover Showcase (Left) */}
-                        <div className="flex flex-col justify-between border-b border-[#2A2928] bg-[#121110] p-6 sm:p-8 lg:border-b-0 lg:border-r">
+                        <div className="flex flex-col justify-between border-b border-ed-rule bg-ed-bg p-6 sm:p-8 lg:border-b-0 lg:border-r">
                             <div>
                                 {/* Uncropped Full Image Display with Aspect Containment */}
-                                <div className="relative mx-auto aspect-[3/4] w-48 overflow-hidden rounded-xl border border-[#2A2928] bg-[#0A0908] p-2 shadow-2xl transition-transform duration-500 hover:scale-[1.02] sm:w-56">
+                                <div className="relative mx-auto aspect-[3/4] w-48 overflow-hidden rounded-xl border border-ed-rule bg-ed-surface p-2 shadow-xl transition-transform duration-500 hover:scale-[1.02] sm:w-56">
                                     <Image
                                         key={activeWork.coverSrc}
                                         src={activeWork.coverSrc}
@@ -302,21 +302,21 @@ export function WrittenLibrarySection() {
                                 </div>
 
                                 <div className="mt-6 text-center sm:text-left">
-                                    <h3 className="font-serif text-xl font-semibold leading-snug text-[#F5F0EB]">
+                                    <h3 className="font-serif text-xl font-semibold leading-snug text-ed-fg">
                                         {activeWork.title}
                                     </h3>
-                                    <p className="mt-1 font-sans text-xs text-[#9E9690]">
+                                    <p className="mt-1 font-sans text-xs text-ed-fg-secondary">
                                         {activeWork.edition} · {activeWork.pages} Preserved Pages
                                     </p>
-                                    <p className="mt-2 text-xs leading-relaxed text-[#6B6560]">
+                                    <p className="mt-2 text-xs leading-relaxed text-ed-fg-muted">
                                         Original archival copy scanned at 600 DPI to preserve typography, layout, and footnotes with 100% faithful accuracy.
                                     </p>
                                 </div>
                             </div>
 
                             {/* Book Selection Strip */}
-                            <div className="mt-6 pt-4 border-t border-[#2A2928]">
-                                <span className="block font-sans text-[0.7rem] font-semibold text-[#6B6560] mb-2">
+                            <div className="mt-6 pt-4 border-t border-ed-rule">
+                                <span className="block font-sans text-[0.7rem] font-semibold text-ed-fg-muted mb-2">
                                     Browse Works in this Category
                                 </span>
                                 <div className="flex flex-wrap gap-2">
@@ -327,8 +327,8 @@ export function WrittenLibrarySection() {
                                             onClick={() => setSelectedWorkId(work.id)}
                                             className={`rounded-md px-3 py-1 font-sans text-xs transition-all ${
                                                 work.id === activeWork.id
-                                                    ? 'border border-[#C8794A] bg-[#C8794A]/20 text-[#F5F0EB] font-bold'
-                                                    : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:text-[#F5F0EB]'
+                                                    ? 'border border-ed-accent bg-ed-accent/20 text-ed-accent dark:text-ed-fg font-bold'
+                                                    : 'border border-ed-rule bg-ed-surface text-ed-fg-secondary hover:text-ed-fg'
                                             }`}
                                         >
                                             {work.title.split('(')[0]}
@@ -339,13 +339,13 @@ export function WrittenLibrarySection() {
                         </div>
 
                         {/* Side-by-Side Facsimile & OCR Text Preview (Right) */}
-                        <div className="flex flex-col justify-between bg-[#161514] p-6 sm:p-8">
+                        <div className="flex flex-col justify-between bg-ed-surface p-6 sm:p-8">
                             <div>
-                                <div className="flex items-center justify-between pb-3 border-b border-[#2A2928]">
-                                    <span className="font-sans text-xs font-semibold text-[#F5F0EB]">
+                                <div className="flex items-center justify-between pb-3 border-b border-ed-rule">
+                                    <span className="font-sans text-xs font-semibold text-ed-fg">
                                         Facsimile Scan & Synced OCR
                                     </span>
-                                    <span className="font-sans text-xs text-[#6B6560]">
+                                    <span className="font-sans text-xs text-ed-fg-muted">
                                         {activeWork.facsimilePageNo}
                                     </span>
                                 </div>
@@ -353,12 +353,12 @@ export function WrittenLibrarySection() {
                                 {/* Side-by-Side Panel */}
                                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
                                     {/* Left: Uncropped Facsimile Scan Thumbnail */}
-                                    <div className="rounded-xl border border-[#2A2928] bg-[#0E0D0C] p-4 flex flex-col justify-between">
+                                    <div className="rounded-xl border border-ed-rule bg-ed-bg p-4 flex flex-col justify-between">
                                         <div>
-                                            <span className="block font-sans text-xs font-semibold text-[#C8794A] mb-2">
+                                            <span className="block font-sans text-xs font-semibold text-ed-accent mb-2">
                                                 Archival Facsimile Page
                                             </span>
-                                            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border border-[#2A2928] bg-[#161514] p-1">
+                                            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border border-ed-rule bg-ed-surface p-1">
                                                 <Image
                                                     src={activeWork.facsimilePageSrc}
                                                     alt="Facsimile page scan"
@@ -369,45 +369,45 @@ export function WrittenLibrarySection() {
                                                 />
                                             </div>
                                         </div>
-                                        <span className="mt-3 block text-center font-sans text-xs text-[#6B6560]">
+                                        <span className="mt-3 block text-center font-sans text-xs text-ed-fg-muted">
                                             First Edition Master Facsimile
                                         </span>
                                     </div>
 
                                     {/* Right: Searchable OCR Text */}
-                                    <div className="rounded-xl border border-[#2A2928] bg-[#11100F] p-4 flex flex-col justify-between">
+                                    <div className="rounded-xl border border-ed-rule bg-ed-bg p-4 flex flex-col justify-between">
                                         <div>
-                                            <span className="block font-sans text-xs font-semibold text-[#C8794A] mb-2">
+                                            <span className="block font-sans text-xs font-semibold text-ed-accent mb-2">
                                                 Searchable Clean OCR
                                             </span>
-                                            <h4 className="font-serif text-sm font-semibold text-[#F5F0EB]">
+                                            <h4 className="font-serif text-sm font-semibold text-ed-fg">
                                                 {activeWork.ocrSample.heading}
                                             </h4>
                                             <p
-                                                className="mt-2 text-xs leading-relaxed text-[#9E9690] whitespace-pre-line italic"
+                                                className="mt-2 text-xs leading-relaxed text-ed-fg-secondary whitespace-pre-line italic"
                                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                             >
                                                 &ldquo;{activeWork.ocrSample.text}&rdquo;
                                             </p>
                                             {activeWork.ocrSample.footnote && (
-                                                <p className="mt-3 pt-2 border-t border-[#2A2928] font-sans text-xs text-[#6B6560] leading-normal">
+                                                <p className="mt-3 pt-2 border-t border-ed-rule font-sans text-xs text-ed-fg-muted leading-normal">
                                                     {activeWork.ocrSample.footnote}
                                                 </p>
                                             )}
                                         </div>
-                                        <div className="mt-3 flex items-center justify-between font-sans text-xs text-[#6B6560]">
+                                        <div className="mt-3 flex items-center justify-between font-sans text-xs text-ed-fg-muted">
                                             <span>Full-text indexed</span>
-                                            <span className="text-[#C8794A]">Ready to copy</span>
+                                            <span className="text-ed-accent">Ready to copy</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Action Button */}
-                            <div className="mt-6 pt-4 border-t border-[#2A2928]">
+                            <div className="mt-6 pt-4 border-t border-ed-rule">
                                 <Link
                                     href={activeWork.href}
-                                    className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#C8794A] bg-[#C8794A] px-5 py-2.5 font-sans text-xs font-semibold text-[#0F0E0D] shadow-lg transition-all hover:bg-[#D9916A] hover:scale-[1.01]"
+                                    className="flex w-full items-center justify-center gap-2 rounded-lg border border-ed-accent bg-ed-accent px-5 py-2.5 font-sans text-xs font-semibold text-white dark:text-[#0F0E0D] shadow-lg transition-all hover:opacity-90 hover:scale-[1.01]"
                                 >
                                     <span>Open Complete Written Library & Facsimiles</span>
                                     <ArrowRight className="h-3.5 w-3.5" />
@@ -417,15 +417,15 @@ export function WrittenLibrarySection() {
                     </div>
 
                     {/* Workstation Footer Callout */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule bg-ed-surface px-4 py-3 sm:px-6">
                         <Link
                             href="/written"
-                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-[#F5F0EB] hover:text-[#C8794A] transition-colors"
+                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-ed-fg hover:text-ed-accent transition-colors"
                         >
                             <span>Explore all 74 written publications & newsletters</span>
-                            <ArrowRight className="h-3.5 w-3.5 text-[#C8794A]" />
+                            <ArrowRight className="h-3.5 w-3.5 text-ed-accent" />
                         </Link>
-                        <span className="font-sans text-xs text-[#6B6560]">
+                        <span className="font-sans text-xs text-ed-fg-muted">
                             600 DPI Zero-Error Facsimile Preservation
                         </span>
                     </div>
@@ -436,12 +436,12 @@ export function WrittenLibrarySection() {
             <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
                 {WRITTEN_HIGHLIGHTS.map((item, idx) => (
                     <Reveal key={item.title} delay={160 + idx * 80}>
-                        <div className="flex h-full flex-col justify-between rounded-xl border border-[#2A2928] bg-[#161514] p-5 shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A]">
+                        <div className="flex h-full flex-col justify-between rounded-xl border border-ed-rule bg-ed-surface p-5 shadow-sm transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong">
                             <div>
-                                <h4 className="font-sans text-sm font-semibold text-[#F5F0EB]">
+                                <h4 className="font-sans text-sm font-semibold text-ed-fg">
                                     {item.title}
                                 </h4>
-                                <p className="mt-2 text-xs leading-[1.6] text-[#9E9690]">
+                                <p className="mt-2 text-xs leading-[1.6] text-ed-fg-secondary">
                                     {item.description}
                                 </p>
                             </div>

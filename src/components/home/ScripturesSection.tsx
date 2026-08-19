@@ -153,19 +153,19 @@ export function ScripturesSection() {
             {/* Header & Description */}
             <div>
                 <Reveal>
-                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg">
                         Scriptures & Appendices Vault
                     </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-ed-fg-secondary sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         The Qur&apos;an (114 Surahs with Arabic, English, Transliteration, Footnotes & 3 View Modes), 38 Appendices, Old Testament, Apocrypha, and New Testament presented with verse-by-verse precision.
                     </p>
                 </Reveal>
-                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
+                <div className="mt-4 h-[2px] w-20 bg-ed-accent" />
             </div>
 
             {/* 5 Canon Switcher Pills */}
@@ -177,8 +177,8 @@ export function ScripturesSection() {
                         onClick={() => setActiveCanon(canon.id)}
                         className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                             activeCanon === canon.id
-                                ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
-                                : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                                ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
+                                : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
                         }`}
                     >
                         {canon.label}
@@ -192,26 +192,26 @@ export function ScripturesSection() {
                     <GlassSheen />
 
                     {/* Window Header Bar */}
-                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6 select-none">
+                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-surface px-4 py-3 sm:px-6 select-none">
                         <div className="flex items-center gap-3">
-                            <span className="font-sans text-xs font-semibold text-[#C8794A]">
+                            <span className="font-sans text-xs font-semibold text-ed-accent">
                                 {activeSample.canonLabel}
                             </span>
-                            <span className="text-[#6B6560]" aria-hidden="true">·</span>
-                            <span className="font-sans text-xs text-[#F5F0EB]">
+                            <span className="text-ed-fg-faint" aria-hidden="true">·</span>
+                            <span className="font-sans text-xs text-ed-fg">
                                 {activeSample.bookTitle}
                             </span>
                         </div>
 
                         {/* Tri-Mode Reader View Toggles */}
-                        <div className="flex items-center gap-1 rounded-lg border border-[#2A2928] bg-[#121110] p-1">
+                        <div className="flex items-center gap-1 rounded-lg border border-ed-rule bg-ed-bg p-1">
                             <button
                                 type="button"
                                 onClick={() => setReadingMode('reading')}
                                 className={`rounded px-3 py-1 font-sans text-xs font-medium transition-colors ${
                                     readingMode === 'reading'
-                                        ? 'bg-[#C8794A] text-[#0F0E0D] font-semibold'
-                                        : 'text-[#9E9690] hover:text-[#F5F0EB]'
+                                        ? 'bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold'
+                                        : 'text-ed-fg-muted hover:text-ed-fg'
                                 }`}
                             >
                                 Reading View
@@ -221,8 +221,8 @@ export function ScripturesSection() {
                                 onClick={() => setReadingMode('bilingual')}
                                 className={`rounded px-3 py-1 font-sans text-xs font-medium transition-colors ${
                                     readingMode === 'bilingual'
-                                        ? 'bg-[#C8794A] text-[#0F0E0D] font-semibold'
-                                        : 'text-[#9E9690] hover:text-[#F5F0EB]'
+                                        ? 'bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold'
+                                        : 'text-ed-fg-muted hover:text-ed-fg'
                                 }`}
                             >
                                 Bilingual Parallel
@@ -232,8 +232,8 @@ export function ScripturesSection() {
                                 onClick={() => setReadingMode('study')}
                                 className={`rounded px-3 py-1 font-sans text-xs font-medium transition-colors ${
                                     readingMode === 'study'
-                                        ? 'bg-[#C8794A] text-[#0F0E0D] font-semibold'
-                                        : 'text-[#9E9690] hover:text-[#F5F0EB]'
+                                        ? 'bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold'
+                                        : 'text-ed-fg-muted hover:text-ed-fg'
                                 }`}
                             >
                                 Focus Study
@@ -242,15 +242,15 @@ export function ScripturesSection() {
                     </div>
 
                     {/* Workstation Verse Chamber */}
-                    <div className="p-6 sm:p-10 bg-[#121110]">
+                    <div className="p-6 sm:p-10 bg-ed-bg">
                         {/* Reference Badge & Copy Action */}
-                        <div className="flex items-center justify-between pb-4 border-b border-[#2A2928]">
+                        <div className="flex items-center justify-between pb-4 border-b border-ed-rule">
                             <div className="flex items-center gap-2">
-                                <span className="font-sans text-xs font-semibold text-[#C8794A]">
+                                <span className="font-sans text-xs font-semibold text-ed-accent">
                                     [{activeSample.reference}]
                                 </span>
-                                <span className="text-[#6B6560]" aria-hidden="true">·</span>
-                                <span className="font-sans text-xs text-[#9E9690]">
+                                <span className="text-ed-fg-faint" aria-hidden="true">·</span>
+                                <span className="font-sans text-xs text-ed-fg-muted">
                                     Language: {activeSample.originalLang}
                                 </span>
                             </div>
@@ -258,7 +258,7 @@ export function ScripturesSection() {
                             <button
                                 type="button"
                                 onClick={copyCitation}
-                                className="inline-flex items-center rounded-md border border-[#2A2928] bg-[#161514] px-3 py-1 font-sans text-xs text-[#9E9690] hover:border-[#C8794A] hover:text-[#F5F0EB] transition-colors"
+                                className="inline-flex items-center rounded-md border border-ed-rule bg-ed-surface px-3 py-1 font-sans text-xs text-ed-fg-secondary hover:border-ed-rule-strong hover:text-ed-fg transition-colors"
                             >
                                 {copied ? 'Citation Copied' : 'Copy Verse Citation'}
                             </button>
@@ -268,12 +268,12 @@ export function ScripturesSection() {
                         <div className="mt-8 space-y-6">
                             {/* Original Script (if in bilingual or study mode) */}
                             {readingMode !== 'reading' && activeSample.originalScript && (
-                                <div className="rounded-xl border border-[#2A2928] bg-[#0E0D0C] p-6 text-center">
-                                    <span className="block font-sans text-xs font-semibold text-[#C8794A] mb-3">
+                                <div className="rounded-xl border border-ed-rule bg-ed-surface p-6 text-center">
+                                    <span className="block font-sans text-xs font-semibold text-ed-accent mb-3">
                                         {activeSample.originalLang} Text
                                     </span>
                                     <p
-                                        className="text-2xl sm:text-3xl lg:text-4xl text-[#F5F0EB] leading-relaxed select-text"
+                                        className="text-2xl sm:text-3xl lg:text-4xl text-ed-fg leading-relaxed select-text"
                                         style={{
                                             fontFamily: activeSample.canonId === 'quran' || activeSample.canonId === 'appendices'
                                                 ? 'var(--font-amiri), serif'
@@ -286,7 +286,7 @@ export function ScripturesSection() {
                                         {activeSample.originalScript}
                                     </p>
                                     {activeSample.transliteration && (
-                                        <p className="mt-3 font-serif text-sm italic text-[#9E9690] sm:text-base">
+                                        <p className="mt-3 font-serif text-sm italic text-ed-fg-secondary sm:text-base">
                                             {activeSample.transliteration}
                                         </p>
                                     )}
@@ -294,19 +294,19 @@ export function ScripturesSection() {
                             )}
 
                             {/* English Authorized Translation */}
-                            <div className="rounded-xl border border-[#2A2928] bg-[#161514] p-6 sm:p-8">
-                                <span className="block font-sans text-xs font-semibold text-[#C8794A] mb-2">
+                            <div className="rounded-xl border border-ed-rule bg-ed-surface p-6 sm:p-8">
+                                <span className="block font-sans text-xs font-semibold text-ed-accent mb-2">
                                     Authorized English Translation
                                 </span>
                                 <p
-                                    className="text-lg sm:text-xl lg:text-2xl font-serif italic leading-relaxed text-[#F5F0EB]"
+                                    className="text-lg sm:text-xl lg:text-2xl font-serif italic leading-relaxed text-ed-fg"
                                 >
                                     &ldquo;{activeSample.translation}&rdquo;
                                 </p>
 
                                 {activeSample.footnote && (
-                                    <div className="mt-4 pt-4 border-t border-[#2A2928]">
-                                        <p className="text-xs sm:text-sm text-[#9E9690] leading-relaxed" style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}>
+                                    <div className="mt-4 pt-4 border-t border-ed-rule">
+                                        <p className="text-xs sm:text-sm text-ed-fg-secondary leading-relaxed" style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}>
                                             {activeSample.footnote}
                                         </p>
                                     </div>
@@ -315,11 +315,11 @@ export function ScripturesSection() {
 
                             {/* Focus Study Breakdown (in study mode) */}
                             {readingMode === 'study' && activeSample.morphologyNotes && (
-                                <div className="rounded-xl border border-[#C8794A]/30 bg-[#C8794A]/5 p-5">
-                                    <span className="block font-sans text-xs font-semibold text-[#C8794A] mb-2">
+                                <div className="rounded-xl border border-ed-accent/30 bg-ed-accent/10 p-5">
+                                    <span className="block font-sans text-xs font-semibold text-ed-accent mb-2">
                                         Scholarly Cross-Reference & Morphological Root Analysis
                                     </span>
-                                    <p className="font-sans text-xs text-[#F5F0EB] leading-relaxed">
+                                    <p className="font-sans text-xs text-ed-fg leading-relaxed">
                                         {activeSample.morphologyNotes}
                                     </p>
                                 </div>
@@ -330,7 +330,7 @@ export function ScripturesSection() {
                         <div className="mt-8">
                             <Link
                                 href={activeSample.href}
-                                className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#C8794A] bg-[#C8794A] px-5 py-3 font-sans text-sm font-semibold text-[#0F0E0D] shadow-lg transition-all hover:bg-[#D9916A] hover:scale-[1.01]"
+                                className="flex w-full items-center justify-center gap-2 rounded-lg border border-ed-accent bg-ed-accent px-5 py-3 font-sans text-sm font-semibold text-white dark:text-[#0F0E0D] shadow-lg transition-all hover:opacity-90 hover:scale-[1.01]"
                             >
                                 <span>Launch Scripture Reader for {activeSample.canonLabel}</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -339,15 +339,15 @@ export function ScripturesSection() {
                     </div>
 
                     {/* Window Footer */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule bg-ed-surface px-4 py-3 sm:px-6">
                         <Link
                             href="/scripture/quran"
-                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-[#F5F0EB] hover:text-[#C8794A] transition-colors"
+                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-ed-fg hover:text-ed-accent transition-colors"
                         >
                             <span>Open 114 Surahs, 38 Appendices & Multi-Canon Reader</span>
-                            <ArrowRight className="h-3.5 w-3.5 text-[#C8794A]" />
+                            <ArrowRight className="h-3.5 w-3.5 text-ed-accent" />
                         </Link>
-                        <span className="font-sans text-xs text-[#6B6560]">
+                        <span className="font-sans text-xs text-ed-fg-muted">
                             Verse-by-Verse Bilingual Engine
                         </span>
                     </div>
@@ -358,12 +358,12 @@ export function ScripturesSection() {
             <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
                 {SCRIPTURE_HIGHLIGHTS.map((item, idx) => (
                     <Reveal key={item.title} delay={160 + idx * 80}>
-                        <div className="flex h-full flex-col justify-between rounded-xl border border-[#2A2928] bg-[#161514] p-5 shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A]">
+                        <div className="flex h-full flex-col justify-between rounded-xl border border-ed-rule bg-ed-surface p-5 shadow-sm transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong">
                             <div>
-                                <h4 className="font-sans text-sm font-semibold text-[#F5F0EB]">
+                                <h4 className="font-sans text-sm font-semibold text-ed-fg">
                                     {item.title}
                                 </h4>
-                                <p className="mt-2 text-xs leading-[1.6] text-[#9E9690]">
+                                <p className="mt-2 text-xs leading-[1.6] text-ed-fg-secondary">
                                     {item.description}
                                 </p>
                             </div>

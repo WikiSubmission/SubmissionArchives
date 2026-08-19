@@ -34,9 +34,9 @@ export default function PlayerWrapper(props: PlayerWrapperProps) {
 
 function PlayerLoadingSkeleton() {
   return (
-    <div className="min-h-screen" style={{ background: 'var(--qs-bg-primary, #0F0E0D)' }}>
+    <div className="min-h-screen bg-ed-bg">
       <main className="mx-auto max-w-[1160px] px-7 py-10">
-        <div className="h-[56vw] max-h-[640px] min-h-[220px] animate-pulse rounded-lg" style={{ background: 'var(--qs-bg-secondary, #161514)' }} />
+        <div className="h-[56vw] max-h-[640px] min-h-[220px] animate-pulse rounded-lg border border-ed-rule bg-ed-surface" />
       </main>
     </div>
   );

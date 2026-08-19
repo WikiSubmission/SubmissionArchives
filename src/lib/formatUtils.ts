@@ -101,12 +101,13 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
     // Title: Date in Title
     // --- Sermons & Video Programs (Mapped from Playlist) ---
     else if (item.type === 'sermon' || item.type === 'video-program') {
-        // Clean the input title to match the map keys (filename without extension)
-        const cleanName = rawTitle.replace(/\.(mp4|mp3)$/i, '');
+        // Look up the curated order by catalog id. Keying on the title used to
+        // break every time a display title was edited; ids are stable.
+        const curatedOrder = item.id ? PLAYLIST_ORDER[item.id] : undefined;
 
-        if (PLAYLIST_ORDER[cleanName]) {
-            sortValue = PLAYLIST_ORDER[cleanName];
-            displayTitle = cleanName;
+        if (curatedOrder !== undefined) {
+            sortValue = curatedOrder;
+            displayTitle = rawTitle.replace(/\.(mp4|mp3)$/i, '');
         } else {
             // Fallback for unmapped items (shouldn't happen for the main playlist, but useful for others)
             displayTitle = rawTitle

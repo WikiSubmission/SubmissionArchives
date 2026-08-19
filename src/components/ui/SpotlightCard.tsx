@@ -49,7 +49,7 @@ export function SpotlightCard({
                 stiffness: 450,
                 damping: 30,
             }}
-            className={`group relative overflow-hidden rounded-[8px] border border-[#2A2928] bg-[#161514] p-5 sm:p-6 transition-all duration-[280ms] ease-out hover:border-[#353433] hover:bg-[#1C1B1A] hover:shadow-[0_8px_24px_rgba(0,0,0,0.45)] ${className}`}
+            className={`group relative overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-5 sm:p-6 transition-all duration-[280ms] ease-out hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md ${className}`}
         >
             {/* Dynamic Cursor Spotlight Radial Layer */}
             <div
@@ -66,7 +66,7 @@ export function SpotlightCard({
                     <div
                         className="h-full w-full"
                         style={{
-                            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(200,121,74,0.08), transparent 70%)`,
+                            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, var(--ed-accent-soft), transparent 70%)`,
                         }}
                     />
                 )}
@@ -81,7 +81,7 @@ export function SpotlightCard({
         return (
             <Link
                 href={href}
-                className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8794A] rounded-[8px]"
+                className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent rounded-[8px]"
             >
                 {content}
             </Link>

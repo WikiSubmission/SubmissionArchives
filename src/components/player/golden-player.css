@@ -9,26 +9,26 @@
 /* ---------- CSS Custom Properties (Design Tokens) ---------- */
 :root {
   /* Backgrounds */
-  --qs-bg-primary: #0F0E0D;
-  --qs-bg-secondary: #161514;
-  --qs-bg-tertiary: #1C1B1A;
-  --qs-bg-elevated: #1E1D1C;
+  --qs-bg-primary: var(--ed-bg);
+  --qs-bg-secondary: var(--ed-surface);
+  --qs-bg-tertiary: var(--ed-surface-strong);
+  --qs-bg-elevated: var(--ed-surface-raised);
 
   /* Borders */
-  --qs-border-subtle: #2A2928;
-  --qs-border-hover: #353433;
+  --qs-border-subtle: var(--ed-rule);
+  --qs-border-hover: var(--ed-rule-strong);
 
   /* Text */
-  --qs-text-primary: #F5F0EB;
-  --qs-text-secondary: #9E9690;
-  --qs-text-muted: #6B6560;
-  --qs-text-faint: #4A4542;
+  --qs-text-primary: var(--ed-fg);
+  --qs-text-secondary: var(--ed-fg-secondary);
+  --qs-text-muted: var(--ed-fg-muted);
+  --qs-text-faint: var(--ed-fg-faint);
 
   /* Accent — Terracotta/Copper */
-  --qs-accent: #C8794A;
-  --qs-accent-hover: #D9916A;
-  --qs-accent-soft: rgba(200, 121, 74, 0.06);
-  --qs-accent-glow: rgba(200, 121, 74, 0.08);
+  --qs-accent: var(--ed-accent);
+  --qs-accent-hover: var(--ed-accent-strong);
+  --qs-accent-soft: var(--ed-accent-soft);
+  --qs-accent-glow: var(--ed-accent-glow);
 
   /* Content blocks */
   --qs-verse-bg: rgba(200, 121, 74, 0.04);

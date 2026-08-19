@@ -51,13 +51,13 @@ const ZOOM_MAX = 3.0;
 const ZOOM_STEP = 0.15;
 
 const chromeButtonClassLg =
-    'inline-flex h-9 items-center justify-center rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 text-[11px] font-semibold tracking-[0.02em] text-[#9E9690] transition-colors hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:bg-[#1E1D1C] disabled:pointer-events-none disabled:opacity-30';
+    'inline-flex h-9 items-center justify-center rounded-[4px] border border-ed-rule bg-ed-surface px-3 text-[11px] font-semibold tracking-[0.02em] text-ed-fg-muted transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg active:bg-ed-surface-raised disabled:pointer-events-none disabled:opacity-30';
 
 const toolbarButtonClass =
-    'inline-flex min-h-9 items-center justify-center rounded-[4px] px-2.5 text-[11px] font-semibold tracking-[0.02em] text-[#9E9690] transition-colors hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:bg-[#1E1D1C] disabled:pointer-events-none disabled:opacity-30';
+    'inline-flex min-h-9 items-center justify-center rounded-[4px] px-2.5 text-[11px] font-semibold tracking-[0.02em] text-ed-fg-muted transition-colors hover:bg-ed-surface-strong hover:text-ed-fg active:bg-ed-surface-raised disabled:pointer-events-none disabled:opacity-30';
 
 const dockPillClass =
-    'inline-flex min-w-[4.25rem] items-center justify-center rounded-[4px] border border-[#2A2928] bg-[#161514] px-2.5 py-1 text-[11px] font-semibold tabular-nums text-[#F5F0EB]';
+    'inline-flex min-w-[4.25rem] items-center justify-center rounded-[4px] border border-ed-rule bg-ed-surface px-2.5 py-1 text-[11px] font-semibold tabular-nums text-ed-fg';
 
 function computeHighlightRanges(items: TextItem[], terms: string[]): Map<number, Array<[number, number]>> {
     const ranges = new Map<number, Array<[number, number]>>();
@@ -912,10 +912,10 @@ export default function PDFReaderClient({
     return (
         <div
             ref={readerRootRef}
-            className={`relative flex h-full flex-col overflow-hidden bg-[#0F0E0D] text-[#F5F0EB] pdf-theme-${readingTheme}`}
+            className={`relative flex h-full flex-col overflow-hidden bg-ed-bg text-ed-fg pdf-theme-${readingTheme}`}
         >
             {/* Header */}
-            <header className="relative z-10 flex h-[60px] shrink-0 items-center justify-between gap-3 border-b border-[#2A2928] bg-[#0F0E0D]/90 backdrop-blur-xl px-4 sm:px-7">
+            <header className="relative z-10 flex h-[60px] shrink-0 items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg/90 backdrop-blur-xl px-4 sm:px-7">
                 <div className="flex min-w-0 items-center gap-3">
                     <Link
                         href={backHref}
@@ -927,13 +927,13 @@ export default function PDFReaderClient({
                         <span className="ml-1 hidden text-sm font-medium sm:inline">Back</span>
                     </Link>
 
-                    <div className="hidden h-4 w-px bg-[#2A2928] sm:block" />
+                    <div className="hidden h-4 w-px bg-ed-rule sm:block" />
 
                     {/* Sidebar Toggle Button */}
                     <button
                         type="button"
                         onClick={() => setSidebarOpen((s) => !s)}
-                        className={`${toolbarButtonClass} ${sidebarOpen ? 'text-[#C8794A] bg-[#C8794A]/10' : ''}`}
+                        className={`${toolbarButtonClass} ${sidebarOpen ? 'text-ed-accent bg-ed-accent-soft' : ''}`}
                         title="Toggle Navigation Sidebar"
                         aria-label="Toggle sidebar"
                     >
@@ -1161,7 +1161,7 @@ export default function PDFReaderClient({
                 {/* PDF Viewer Canvas Container */}
                 <div
                     ref={containerRef}
-                    className="min-h-0 flex-1 overflow-auto overscroll-contain bg-[#0F0E0D] px-3 py-5 pb-24 sm:px-7 sm:py-7 sm:pb-8"
+                    className="min-h-0 flex-1 overflow-auto overscroll-contain bg-ed-bg px-3 py-5 pb-24 sm:px-7 sm:py-7 sm:pb-8"
                 >
                     <Document
                         file={pdfUrl}
@@ -1169,7 +1169,7 @@ export default function PDFReaderClient({
                         onLoadSuccess={handleDocumentLoadSuccess}
                         loading={loadingSkeleton}
                         error={
-                            <div className="py-24 text-center text-sm text-[#9E9690]">
+                            <div className="py-24 text-center text-sm text-ed-fg-muted">
                                 Couldn&apos;t load this document.
                             </div>
                         }
@@ -1241,7 +1241,7 @@ export default function PDFReaderClient({
                                                 onRenderSuccess={handlePageRenderSuccess}
                                                 className="soft-shell overflow-hidden rounded-[6px]"
                                             />
-                                            <span className="mt-2 text-[11px] text-[#6B6560]">
+                                            <span className="mt-2 text-[11px] text-ed-fg-muted">
                                                 Page {i + 1} of {numPages}
                                             </span>
                                         </div>
@@ -1255,7 +1255,7 @@ export default function PDFReaderClient({
             {/* Mobile Floating Bottom Dock */}
             <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] sm:hidden">
                 <div
-                    className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-[8px] border border-[#2A2928] bg-[#161514]/90 p-1.5 shadow-lg backdrop-blur-xl"
+                    className="scrollbar-none pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-center gap-0.5 overflow-x-auto rounded-[8px] border border-ed-rule bg-ed-surface/90 p-1.5 shadow-lg backdrop-blur-xl"
                     role="toolbar"
                     aria-label="Document controls"
                 >
@@ -1265,11 +1265,11 @@ export default function PDFReaderClient({
 
             {/* Keyboard Shortcuts Help Modal */}
             {showHelpModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0F0E0D]/80 backdrop-blur-sm p-4">
-                    <div className="w-full max-w-md rounded-[8px] border border-[#2A2928] bg-[#161514] p-6 shadow-xl space-y-4">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+                    <div className="w-full max-w-md rounded-[8px] border border-ed-rule bg-ed-surface p-6 shadow-2xl space-y-4">
                         <div className="flex items-center justify-between">
                             <h3
-                                className="text-base font-bold text-[#F5F0EB] flex items-center gap-2"
+                                className="text-base font-bold text-ed-fg flex items-center gap-2"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
                                 Keyboard Shortcuts
@@ -1277,42 +1277,42 @@ export default function PDFReaderClient({
                             <button
                                 type="button"
                                 onClick={() => setShowHelpModal(false)}
-                                className="p-1 text-[#9E9690] hover:text-[#F5F0EB] rounded-[4px]"
+                                className="p-1 text-ed-fg-muted hover:text-ed-fg rounded-[4px]"
                             >
                                 <span>Close</span>
                             </button>
                         </div>
                         <div className="grid grid-cols-2 gap-2 text-xs">
-                            <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
-                                <span className="text-[#9E9690]">Next / Prev Page</span>
-                                <kbd className="text-[#C8794A] font-semibold">Left Arrow / Right Arrow or J / K</kbd>
+                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
+                                <span className="text-ed-fg-secondary">Next / Prev Page</span>
+                                <kbd className="text-ed-accent font-semibold">Left Arrow / Right Arrow or J / K</kbd>
                             </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
-                                <span className="text-[#9E9690]">First / Last Page</span>
-                                <kbd className="text-[#C8794A] font-semibold">Home / End</kbd>
+                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
+                                <span className="text-ed-fg-secondary">First / Last Page</span>
+                                <kbd className="text-ed-accent font-semibold">Home / End</kbd>
                             </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
-                                <span className="text-[#9E9690]">Zoom In / Out</span>
-                                <kbd className="text-[#C8794A] font-semibold">Plus / Minus</kbd>
+                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
+                                <span className="text-ed-fg-secondary">Zoom In / Out</span>
+                                <kbd className="text-ed-accent font-semibold">Plus / Minus</kbd>
                             </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
-                                <span className="text-[#9E9690]">Rotate Page</span>
-                                <kbd className="text-[#C8794A] font-semibold">R</kbd>
+                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
+                                <span className="text-ed-fg-secondary">Rotate Page</span>
+                                <kbd className="text-ed-accent font-semibold">R</kbd>
                             </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
-                                <span className="text-[#9E9690]">Fullscreen</span>
-                                <kbd className="text-[#C8794A] font-semibold">F</kbd>
+                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
+                                <span className="text-ed-fg-secondary">Fullscreen</span>
+                                <kbd className="text-ed-accent font-semibold">F</kbd>
                             </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-[#1C1B1A]/50">
-                                <span className="text-[#9E9690]">Search in Document</span>
-                                <kbd className="text-[#C8794A] font-semibold">/</kbd>
+                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
+                                <span className="text-ed-fg-secondary">Search in Document</span>
+                                <kbd className="text-ed-accent font-semibold">/</kbd>
                             </div>
                         </div>
                         <div className="text-right">
                             <button
                                 type="button"
                                 onClick={() => setShowHelpModal(false)}
-                                className="px-4 py-1.5 rounded-[4px] bg-[#C8794A] text-[#0F0E0D] font-semibold text-xs hover:bg-[#D9916A]"
+                                className="px-4 py-1.5 rounded-[4px] bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold text-xs transition-all hover:opacity-90"
                             >
                                 Got it
                             </button>

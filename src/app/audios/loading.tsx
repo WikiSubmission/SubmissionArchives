@@ -1,15 +1,25 @@
 export default function AudiosLoading() {
     return (
         <div className="min-h-screen bg-ed-bg text-ed-fg">
-            <main className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
-                <section className="soft-shell grid gap-6 p-6 sm:p-8 lg:p-10">
-                    <div className="h-5 w-32 rounded-full bg-ed-muted" />
-                    <div className="h-14 w-64 rounded bg-ed-muted" />
-                    <div className="h-6 max-w-2xl rounded bg-ed-muted" />
-                </section>
-                <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <main className="mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12 animate-pulse">
+                {/* Header skeleton */}
+                <div className="mb-8 space-y-3">
+                    <div className="h-4 w-28 rounded bg-ed-surface-strong" />
+                    <div className="h-8 w-64 rounded bg-ed-surface-strong" />
+                    <div className="h-4 max-w-xl rounded bg-ed-surface-strong" />
+                </div>
+
+                {/* Tabs skeleton */}
+                <div className="mb-6 flex gap-2">
+                    <div className="h-8 w-24 rounded bg-ed-surface-strong" />
+                    <div className="h-8 w-28 rounded bg-ed-surface-strong" />
+                    <div className="h-8 w-32 rounded bg-ed-surface-strong" />
+                </div>
+
+                {/* Grid skeleton */}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {Array.from({ length: 8 }).map((_, index) => (
-                        <div key={index} className="soft-shell aspect-[4/3] animate-pulse" />
+                        <div key={index} className="h-64 rounded-lg border border-ed-rule bg-ed-surface" />
                     ))}
                 </div>
             </main>

@@ -150,46 +150,46 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
     };
 
     return (
-        <div className="relative min-h-screen bg-[#0F0E0D] text-[#F5F0EB] font-sans antialiased selection:bg-[#C8794A]/25 selection:text-[#F5F0EB]">
+        <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
             {/* Ambient page glow */}
             <div
                 aria-hidden
                 className="pointer-events-none fixed inset-0 z-0"
                 style={{
                     background:
-                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.025) 0%, transparent 70%), ' +
-                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.015) 0%, transparent 70%)',
+                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(184,98,51,0.025) 0%, transparent 70%), ' +
+                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(184,98,51,0.015) 0%, transparent 70%)',
                 }}
             />
 
             <main id="main-content" className="relative z-[1] overflow-hidden">
                 <div className="mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
                     {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-[#4A4542]">
-                        <a href="/" className="text-[#6B6560] transition-colors hover:text-[#C8794A]">
+                    <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-ed-fg-muted">
+                        <a href="/" className="text-ed-fg-muted transition-colors hover:text-ed-accent">
                             Submission Archives
                         </a>
-                        <span className="text-[#353433]">/</span>
-                        <span className="text-[#6B6560]">Video Archives</span>
+                        <span className="text-ed-fg-faint">/</span>
+                        <span className="text-ed-fg-secondary">Video Archives</span>
                     </nav>
 
                     {/* Hero Header */}
-                    <header className="mb-7 flex flex-wrap items-end justify-between gap-8 border-b border-[#2A2928] pb-7">
+                    <header className="mb-7 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-7">
                         <div className="max-w-[640px]">
-                            <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-[#C8794A]/15 bg-[#C8794A]/[0.06] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">
+                            <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
                                 <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
                                     <circle cx="12" cy="12" r="10" />
                                 </svg>
                                 Video Archive Index
                             </div>
                             <h1
-                                className="mb-3 text-[clamp(32px,4.2vw,46px)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]"
+                                className="mb-3 text-[clamp(32px,4.2vw,46px)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
                                 The Video Archives
                             </h1>
                             <p
-                                className="text-[16.5px] leading-[1.6] text-[#9E9690]"
+                                className="text-[16.5px] leading-[1.6] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
                                 Systematic study sequences and preserved recordings, arranged for steady, focused engagement.
@@ -197,20 +197,20 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                             </p>
                         </div>
 
-                        <div className="flex flex-shrink-0 gap-6 rounded-[8px] border border-[#2A2928] bg-[#161514] px-6 py-4">
+                        <div className="flex flex-shrink-0 gap-6 rounded-[8px] border border-ed-rule bg-ed-surface px-6 py-4 shadow-sm">
                             <div className="flex flex-col">
-                                <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#F5F0EB]">
+                                <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
                                     {initialVideos.length}
                                 </span>
-                                <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B6560]">
+                                <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
                                     Video Records
                                 </span>
                             </div>
-                            <div className="flex flex-col border-l border-[#2A2928] pl-6">
-                                <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#F5F0EB]">
+                            <div className="flex flex-col border-l border-ed-rule pl-6">
+                                <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
                                     {baseSections.length}
                                 </span>
-                                <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#6B6560]">
+                                <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
                                     Collections
                                 </span>
                             </div>
@@ -224,15 +224,15 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                             aria-selected={activeTab === 'all'}
                             onClick={() => setActiveTab('all')}
                             className={`inline-flex items-center gap-2 whitespace-nowrap rounded-[4px] border px-4 py-[7px] text-[13px] font-medium transition-all duration-200 ${activeTab === 'all'
-                                ? 'border-[#C8794A] bg-[#C8794A]/[0.06] font-semibold text-[#C8794A]'
-                                : 'border-[#2A2928] bg-[#161514] text-[#6B6560] hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#9E9690]'
+                                ? 'border-ed-accent bg-ed-accent-soft font-semibold text-ed-accent'
+                                : 'border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg'
                                 }`}
                         >
                             <span>All Records</span>
                             <span
                                 className={`rounded-[10px] px-1.5 py-0.5 text-[11px] ${activeTab === 'all'
-                                    ? 'bg-[#C8794A] font-bold text-[#0F0E0D]'
-                                    : 'bg-[#0F0E0D] text-inherit opacity-85'
+                                    ? 'bg-ed-accent font-bold text-white dark:text-[#0F0E0D]'
+                                    : 'bg-ed-bg text-inherit opacity-85'
                                     }`}
                             >
                                 {initialVideos.length}
@@ -248,15 +248,15 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                     aria-selected={isActive}
                                     onClick={() => setActiveTab(section.id)}
                                     className={`inline-flex items-center gap-2 whitespace-nowrap rounded-[4px] border px-4 py-[7px] text-[13px] font-medium transition-all duration-200 ${isActive
-                                        ? 'border-[#C8794A] bg-[#C8794A]/[0.06] font-semibold text-[#C8794A]'
-                                        : 'border-[#2A2928] bg-[#161514] text-[#6B6560] hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#9E9690]'
+                                        ? 'border-ed-accent bg-ed-accent-soft font-semibold text-ed-accent'
+                                        : 'border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg'
                                         }`}
                                 >
                                     <span>{section.title}</span>
                                     <span
                                         className={`rounded-[10px] px-1.5 py-0.5 text-[11px] ${isActive
-                                            ? 'bg-[#C8794A] font-bold text-[#0F0E0D]'
-                                            : 'bg-[#0F0E0D] text-inherit opacity-85'
+                                            ? 'bg-ed-accent font-bold text-white dark:text-[#0F0E0D]'
+                                            : 'bg-ed-bg text-inherit opacity-85'
                                             }`}
                                     >
                                         {section.videos.length}
@@ -267,11 +267,11 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                     </div>
 
                     {/* Filter Bar */}
-                    <div className="mb-7 flex flex-wrap items-center justify-between gap-4 border-b border-[#2A2928] pb-5">
+                    <div className="mb-7 flex flex-wrap items-center justify-between gap-4 border-b border-ed-rule pb-5">
                         <div className="flex min-w-[280px] flex-1 flex-wrap items-center gap-3">
                             <div className="relative max-w-[360px] flex-1">
                                 <svg
-                                    className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-[#4A4542]"
+                                    className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-ed-fg-muted"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
@@ -285,7 +285,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     placeholder="Search title, speaker, or topic..."
-                                    className="w-full rounded-[4px] border border-[#2A2928] bg-[#161514] py-2 pl-8 pr-3 text-[13px] font-medium text-[#F5F0EB] placeholder:text-[#4A4542] outline-none transition-all focus:border-[#353433] focus:bg-[#1C1B1A]"
+                                    className="w-full rounded-[4px] border border-ed-rule bg-ed-surface py-2 pl-8 pr-3 text-[13px] font-medium text-ed-fg placeholder:text-ed-fg-muted outline-none transition-all focus:border-ed-rule-strong focus:bg-ed-surface-strong"
                                 />
                             </div>
 
@@ -294,7 +294,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                     value={speakerFilter}
                                     onChange={(e) => setSpeakerFilter(e.target.value)}
                                     aria-label="Filter by speaker"
-                                    className="cursor-pointer rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 py-2 text-[12.5px] font-medium text-[#9E9690] outline-none transition-all hover:border-[#353433] hover:text-[#F5F0EB]"
+                                    className="cursor-pointer rounded-[4px] border border-ed-rule bg-ed-surface px-3 py-2 text-[12.5px] font-medium text-ed-fg-muted outline-none transition-all hover:border-ed-rule-strong hover:text-ed-fg"
                                 >
                                     <option value="all">All Speakers</option>
                                     {speakerList.map((speaker) => (
@@ -311,13 +311,13 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                 value={sortBy}
                                 onChange={(e) => setSortBy(e.target.value as SortOption)}
                                 aria-label="Sort videos"
-                                className="cursor-pointer rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 py-2 text-[12.5px] font-medium text-[#9E9690] outline-none transition-all hover:border-[#353433] hover:text-[#F5F0EB]"
+                                className="cursor-pointer rounded-[4px] border border-ed-rule bg-ed-surface px-3 py-2 text-[12.5px] font-medium text-ed-fg-muted outline-none transition-all hover:border-ed-rule-strong hover:text-ed-fg"
                             >
                                 <option value="featured">Sort: Featured Order</option>
                                 <option value="title-asc">Sort: Title A–Z</option>
                                 <option value="title-desc">Sort: Title Z–A</option>
                             </select>
-                            <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-[#6B6560]">
+                            <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-ed-fg-muted">
                                 {totalShown} shown
                             </span>
                         </div>
@@ -325,9 +325,9 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
                     {/* Empty State */}
                     {totalShown === 0 && (
-                        <div className="mb-16 rounded-[12px] border border-dashed border-[#2A2928] bg-[#161514] px-6 py-16 text-center">
+                        <div className="mb-16 rounded-[12px] border border-dashed border-ed-rule bg-ed-surface px-6 py-16 text-center shadow-sm">
                             <svg
-                                className="mx-auto mb-3 h-10 w-10 text-[#6B6560]"
+                                className="mx-auto mb-3 h-10 w-10 text-ed-fg-muted"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -337,17 +337,17 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                 <path d="m21 21-4.35-4.35" />
                             </svg>
                             <h3
-                                className="text-[20px] font-semibold text-[#F5F0EB]"
+                                className="text-[20px] font-semibold text-ed-fg"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
                                 No video records found
                             </h3>
-                            <p className="mx-auto mt-2 max-w-md text-[14px] text-[#6B6560]">
+                            <p className="mx-auto mt-2 max-w-md text-[14px] text-ed-fg-muted">
                                 No recordings match your current search criteria. Try clearing your query or selecting a different filter.
                             </p>
                             <button
                                 onClick={resetFilters}
-                                className="mt-4 inline-flex items-center gap-2 rounded-[4px] border border-[#C8794A] bg-[#C8794A]/10 px-4 py-2 text-[13px] font-semibold text-[#C8794A] transition-colors hover:bg-[#C8794A]/20"
+                                className="mt-4 inline-flex items-center gap-2 rounded-[4px] border border-ed-accent bg-ed-accent-soft px-4 py-2 text-[13px] font-semibold text-ed-accent transition-colors hover:opacity-90"
                             >
                                 Reset All Filters
                             </button>
@@ -361,15 +361,15 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
                         return (
                             <section key={section.id} id={section.id} className="mb-14">
-                                <div className="mb-7 flex items-center gap-4 border-b border-[#2A2928] pb-3">
+                                <div className="mb-7 flex items-center gap-4 border-b border-ed-rule pb-3">
                                     <h2
-                                        className="whitespace-nowrap text-[22px] font-semibold tracking-[-0.01em] text-[#F5F0EB]"
+                                        className="whitespace-nowrap text-[22px] font-semibold tracking-[-0.01em] text-ed-fg"
                                         style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                                     >
                                         {section.title}
                                     </h2>
-                                    <div className="h-px flex-1 bg-[#2A2928]" />
-                                    <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-[#6B6560]">
+                                    <div className="h-px flex-1 bg-ed-rule" />
+                                    <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-ed-fg-muted">
                                         {section.videos.length} {section.videos.length === 1 ? 'record' : 'records'}
                                     </span>
                                 </div>
@@ -386,7 +386,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                                             onClick={() =>
                                                 setExpandedSections((prev) => ({ ...prev, [section.id]: !expanded }))
                                             }
-                                            className="rounded-[4px] border border-[#2A2928] bg-[#161514] px-4 py-2 text-[12px] font-semibold text-[#9E9690] transition-colors hover:border-[#353433] hover:text-[#F5F0EB]"
+                                            className="rounded-[4px] border border-ed-rule bg-ed-surface px-4 py-2 text-[12px] font-semibold text-ed-fg-muted transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg"
                                         >
                                             {expanded ? 'Show fewer' : `Show all ${section.videos.length}`}
                                         </button>
@@ -396,7 +396,7 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
                         );
                     })}
 
-                    <footer className="mt-16 border-t border-[#2A2928] py-9 text-center text-[12px] font-medium tracking-[0.04em] text-[#4A4542]">
+                    <footer className="mt-16 border-t border-ed-rule py-9 text-center text-[12px] font-medium tracking-[0.04em] text-ed-fg-muted">
                         Dedicated to preserving and sharing the message of God alone.
                     </footer>
                 </div>
@@ -416,7 +416,7 @@ function VideoCard({ video }: { video: Media }) {
     return (
         <a
             href={getMediaHref(video.id)}
-            className="group relative flex flex-col overflow-hidden rounded-[12px] border border-[#2A2928] bg-[#161514] transition-all duration-[280ms] ease-out hover:-translate-y-0.5 hover:border-[#353433] hover:bg-[#1C1B1A] hover:shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
+            className="group relative flex flex-col overflow-hidden rounded-[12px] border border-ed-rule bg-ed-surface transition-all duration-[280ms] ease-out hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md"
         >
             {/* 16:9 Thumbnail Stage */}
             <div
@@ -437,16 +437,16 @@ function VideoCard({ video }: { video: Media }) {
                             className="absolute inset-0"
                             style={{
                                 background:
-                                    'radial-gradient(circle at 30% 40%, rgba(200,121,74,0.06) 0%, transparent 50%), ' +
-                                    'radial-gradient(circle at 70% 65%, rgba(200,121,74,0.03) 0%, transparent 40%)',
+                                    'radial-gradient(circle at 30% 40%, rgba(184,98,51,0.06) 0%, transparent 50%), ' +
+                                    'radial-gradient(circle at 70% 65%, rgba(184,98,51,0.03) 0%, transparent 40%)',
                             }}
                         />
                         <div className="relative z-[2] flex h-full flex-col items-center justify-center p-5 text-center">
-                            <span className="mb-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#C8794A] opacity-90">
+                            <span className="mb-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-ed-accent opacity-90">
                                 {speaker}
                             </span>
                             <span
-                                className="line-clamp-2 text-[clamp(18px,2.5vw,22px)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#F5F0EB]"
+                                className="line-clamp-2 text-[clamp(18px,2.5vw,22px)] font-semibold leading-[1.1] tracking-[-0.02em] text-white"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
                                 {displayTitle}
@@ -457,15 +457,15 @@ function VideoCard({ video }: { video: Media }) {
 
                 {/* Duration Badge */}
                 {duration && (
-                    <span className="absolute bottom-2 right-2 z-[3] rounded-[4px] border border-white/5 bg-[#0F0E0D]/85 px-1.5 py-0.5 text-[11px] font-medium font-mono tabular-nums text-[#F5F0EB] backdrop-blur-sm">
+                    <span className="absolute bottom-2 right-2 z-[3] rounded-[4px] border border-white/10 bg-black/75 px-1.5 py-0.5 text-[11px] font-medium font-mono tabular-nums text-white backdrop-blur-sm">
                         {duration}
                     </span>
                 )}
 
                 {/* Hover Play Button */}
                 <div className="absolute inset-0 z-[2] flex items-end justify-center pb-4 transition-colors duration-300 group-hover:bg-black/15">
-                    <span className="flex h-12 w-12 scale-90 items-center justify-center rounded-full border border-[#353433] bg-[#0F0E0D]/85 opacity-0 shadow-[0_4px_16px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 ease-out group-hover:scale-100 group-hover:border-[#C8794A] group-hover:opacity-100">
-                        <span className="ml-0.5 h-0 w-0 border-y-[8px] border-l-[13px] border-y-transparent border-l-[#F5F0EB] transition-colors group-hover:border-l-[#C8794A]" />
+                    <span className="flex h-12 w-12 scale-90 items-center justify-center rounded-full border border-ed-rule bg-ed-bg/85 opacity-0 shadow-lg backdrop-blur-md transition-all duration-300 ease-out group-hover:scale-100 group-hover:border-ed-accent group-hover:opacity-100">
+                        <span className="ml-0.5 h-0 w-0 border-y-[8px] border-l-[13px] border-y-transparent border-l-ed-fg transition-colors group-hover:border-l-ed-accent" />
                     </span>
                 </div>
             </div>
@@ -474,16 +474,16 @@ function VideoCard({ video }: { video: Media }) {
             <div className="flex flex-1 flex-col justify-between p-[16px_18px_18px]">
                 <div>
                     <div className="mb-2 flex items-center justify-between">
-                        <span className="text-[11.5px] font-medium tracking-[0.02em] text-[#6B6560]">
+                        <span className="text-[11.5px] font-medium tracking-[0.02em] text-ed-fg-muted">
                             {video.displayDate || 'Preserved Recording'}
                         </span>
-                        <span className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#4A4542]">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.08em] text-ed-fg-muted">
                             {video.type ?? 'Video'}
                         </span>
                     </div>
 
                     <h3
-                        className="mb-1.5 line-clamp-2 text-[16.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#F5F0EB]"
+                        className="mb-1.5 line-clamp-2 text-[16.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-ed-fg"
                         style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                     >
                         {displayTitle}
@@ -493,12 +493,12 @@ function VideoCard({ video }: { video: Media }) {
                     <div className="mb-3.5 mt-2 flex items-center gap-1.5 flex-wrap">
                         <span
                             className={`rounded-[4px] px-2 py-0.5 text-[11px] font-semibold ${isDrKhalifa
-                                ? 'border border-[#C8794A]/20 bg-[#C8794A]/[0.05] text-[#C8794A]'
+                                ? 'border border-ed-accent/20 bg-ed-accent-soft text-ed-accent'
                                 : isCatherine
                                     ? 'bg-[#8FB8A8]/[0.08] text-[#8FB8A8]'
                                     : isEdip
                                         ? 'bg-[#8AA4C8]/[0.08] text-[#8AA4C8]'
-                                        : 'bg-[#1C1B1A] text-[#9E9690]'
+                                        : 'bg-ed-surface-strong text-ed-fg-muted'
                                 }`}
                         >
                             {speaker}
@@ -506,8 +506,8 @@ function VideoCard({ video }: { video: Media }) {
                     </div>
                 </div>
 
-                <div className="mt-auto flex items-center justify-between border-t border-[#2A2928] pt-3 gap-2">
-                    <span className="flex flex-1 items-center justify-center gap-1.5 rounded-[4px] border border-[#2A2928] bg-transparent py-[7px] px-3 text-[12px] font-semibold text-[#9E9690] transition-all group-hover:border-[#353433] group-hover:bg-[#1E1D1C] group-hover:text-[#F5F0EB]">
+                <div className="mt-auto flex items-center justify-between border-t border-ed-rule pt-3 gap-2">
+                    <span className="flex flex-1 items-center justify-center gap-1.5 rounded-[4px] border border-ed-rule bg-transparent py-[7px] px-3 text-[12px] font-semibold text-ed-fg-muted transition-all group-hover:border-ed-rule-strong group-hover:bg-ed-surface-strong group-hover:text-ed-fg">
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
                             <polygon points="6 3 20 12 6 21 6 3" />
                         </svg>

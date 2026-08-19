@@ -10,23 +10,23 @@
 */
 
 :root {
-  --archive-bg-primary: #0F0E0D;
-  --archive-bg-secondary: #161514;
-  --archive-bg-tertiary: #1C1B1A;
-  --archive-bg-elevated: #1E1D1C;
+  --archive-bg-primary: var(--ed-bg, #0F0E0D);
+  --archive-bg-secondary: var(--ed-surface, #161514);
+  --archive-bg-tertiary: var(--ed-surface-strong, #1C1B1A);
+  --archive-bg-elevated: var(--ed-surface-raised, #222120);
 
-  --archive-border: #2A2928;
-  --archive-border-hover: #353433;
+  --archive-border: var(--ed-rule, #2A2928);
+  --archive-border-hover: var(--ed-rule-strong, #353433);
 
-  --archive-text-primary: #F5F0EB;
-  --archive-text-secondary: #9E9690;
-  --archive-text-muted: #6B6560;
-  --archive-text-faint: #4A4542;
+  --archive-text-primary: var(--ed-fg, #F5F0EB);
+  --archive-text-secondary: var(--ed-fg-secondary, #9E9690);
+  --archive-text-muted: var(--ed-fg-muted, #6B6560);
+  --archive-text-faint: var(--ed-fg-faint, #4A4542);
 
-  --archive-accent: #C8794A;
-  --archive-accent-hover: #D9916A;
-  --archive-accent-soft: rgba(200, 121, 74, 0.06);
-  --archive-accent-glow: rgba(200, 121, 74, 0.08);
+  --archive-accent: var(--ed-accent, #C8794A);
+  --archive-accent-hover: var(--ed-accent-hover, #D9916A);
+  --archive-accent-soft: var(--ed-accent-soft, rgba(200, 121, 74, 0.08));
+  --archive-accent-glow: var(--ed-accent-glow, rgba(200, 121, 74, 0.12));
 
   --archive-radius-sm: 4px;
   --archive-radius-md: 8px;

@@ -25,61 +25,61 @@ const SECTIONS = [
 
 export default function PrivacyPolicyPage() {
     return (
-        <div className="relative min-h-screen bg-[#0F0E0D] text-[#F5F0EB] font-sans antialiased selection:bg-[#C8794A]/25 selection:text-[#F5F0EB]">
+        <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
             <div
                 aria-hidden
                 className="pointer-events-none fixed inset-0 z-0"
                 style={{
                     background:
-                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.025) 0%, transparent 70%), ' +
-                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.015) 0%, transparent 70%)',
+                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(184,98,51,0.025) 0%, transparent 70%), ' +
+                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(184,98,51,0.015) 0%, transparent 70%)',
                 }}
             />
 
             <main id="main-content" className="relative z-[1] overflow-hidden">
                 <div className="mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
-                    <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-[#4A4542]">
-                        <Link href="/" className="text-[#6B6560] transition-colors hover:text-[#C8794A]">
+                    <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-ed-fg-muted">
+                        <Link href="/" className="text-ed-fg-muted transition-colors hover:text-ed-accent">
                             Submission Archives
                         </Link>
-                        <span className="text-[#353433]">/</span>
-                        <span className="text-[#6B6560]">Privacy Policy</span>
+                        <span className="text-ed-fg-faint">/</span>
+                        <span className="text-ed-fg-secondary">Privacy Policy</span>
                     </nav>
 
-                    <header className="mb-10 max-w-[720px] border-b border-[#2A2928] pb-8">
-                        <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-[#C8794A]/15 bg-[#C8794A]/[0.06] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">
+                    <header className="mb-10 max-w-[720px] border-b border-ed-rule pb-8">
+                        <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
                             <Lock className="h-3 w-3" />
                             Legal
                         </div>
                         <h1
-                            className="text-[32px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#F5F0EB] sm:text-[40px]"
+                            className="text-[32px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg sm:text-[40px]"
                             style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                         >
                             Privacy Policy
                         </h1>
                         <p
-                            className="mt-3 text-[15px] leading-[1.6] text-[#9E9690]"
+                            className="mt-3 text-[15px] leading-[1.6] text-ed-fg-secondary"
                             style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                         >
                             Submission Archives is a free, account-free digital preservation project. This page explains,
                             plainly, what little data the site touches and why.
                         </p>
-                        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.1em] text-[#4A4542]">
+                        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.1em] text-ed-fg-muted">
                             Last updated: {LAST_UPDATED}
                         </p>
                     </header>
 
                     <div className="grid gap-12 lg:grid-cols-[220px_1fr]">
                         <nav aria-label="On this page" className="lg:sticky lg:top-24 lg:h-fit">
-                            <div className="mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                            <div className="mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
                                 On This Page
                             </div>
-                            <ul className="space-y-2 border-l border-[#2A2928] pl-4">
+                            <ul className="space-y-2 border-l border-ed-rule pl-4">
                                 {SECTIONS.map((section) => (
                                     <li key={section.id}>
                                         <a
                                             href={`#${section.id}`}
-                                            className="text-[13px] text-[#6B6560] transition-colors hover:text-[#C8794A]"
+                                            className="text-[13px] text-ed-fg-muted transition-colors hover:text-ed-accent"
                                         >
                                             {section.label}
                                         </a>
@@ -89,7 +89,7 @@ export default function PrivacyPolicyPage() {
                         </nav>
 
                         <div
-                            className="max-w-[68ch] space-y-10 text-[15px] leading-[1.7] text-[#9E9690] [&_a]:text-[#C8794A] [&_a]:transition-colors [&_a:hover]:text-[#D9916A] [&_h2]:mb-3.5 [&_h2]:mt-0 [&_h2]:text-[22px] [&_h2]:font-semibold [&_h2]:text-[#F5F0EB] [&_p]:mb-3.5 [&_ul]:mb-3.5 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5"
+                            className="max-w-[68ch] space-y-10 text-[15px] leading-[1.7] text-ed-fg-secondary [&_a]:text-ed-accent [&_a]:transition-colors [&_a:hover]:opacity-80 [&_h2]:mb-3.5 [&_h2]:mt-0 [&_h2]:text-[22px] [&_h2]:font-semibold [&_h2]:text-ed-fg [&_p]:mb-3.5 [&_ul]:mb-3.5 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5"
                             style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                         >
                             <section id="information-we-collect">
@@ -104,17 +104,17 @@ export default function PrivacyPolicyPage() {
                                 <p>What the site does collect is limited to anonymous, aggregate diagnostics:</p>
                                 <ul>
                                     <li>
-                                        <strong className="text-[#F5F0EB]">Performance metrics.</strong> Standard web
+                                        <strong className="text-ed-fg">Performance metrics.</strong> Standard web
                                         performance measurements (load speed, responsiveness) tied to the page path you
                                         visited — never the search terms or query parameters in the URL.
                                     </li>
                                     <li>
-                                        <strong className="text-[#F5F0EB]">Error reports.</strong> If something breaks,
+                                        <strong className="text-ed-fg">Error reports.</strong> If something breaks,
                                         the browser sends us the error message and the page path so we can fix it. Query
                                         strings are deliberately excluded, since they can contain what you searched for.
                                     </li>
                                     <li>
-                                        <strong className="text-[#F5F0EB]">Anonymous search analytics.</strong> Query
+                                        <strong className="text-ed-fg">Anonymous search analytics.</strong> Query
                                         text, result counts, and which result was clicked — used only to improve search
                                         relevance. Nothing here is linked to you or your device.
                                     </li>
@@ -127,8 +127,8 @@ export default function PrivacyPolicyPage() {
 
                             <section id="cookies">
                                 <h2 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}>Cookies</h2>
-                                <div className="mb-3.5 rounded-[8px] border border-[#2A2928] bg-[#161514] p-4 text-[14px] text-[#9E9690]">
-                                    <strong className="text-[#F5F0EB]">Submission Archives does not set cookies.</strong>{' '}
+                                <div className="mb-3.5 rounded-[8px] border border-ed-rule bg-ed-surface p-4 text-[14px] text-ed-fg-secondary shadow-sm">
+                                    <strong className="text-ed-fg">Submission Archives does not set cookies.</strong>{' '}
                                     There is no cookie banner because there is nothing to consent to.
                                 </div>
                                 <p>

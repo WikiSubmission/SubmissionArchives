@@ -167,19 +167,19 @@ export function AudioArchiveSection() {
             {/* Header & Description */}
             <div>
                 <Reveal>
-                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg">
                         Audio Archives
                     </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-ed-fg-secondary sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         Digitized original cassette masters, verse-by-verse Qur&apos;an study sessions, and spoken messenger archives with real-time synchronized teleprompter transcripts.
                     </p>
                 </Reveal>
-                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
+                <div className="mt-4 h-[2px] w-20 bg-ed-accent" />
             </div>
 
             {/* Collection Category Switcher */}
@@ -193,8 +193,8 @@ export function AudioArchiveSection() {
                     }}
                     className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                         activeTab === 'quran-study'
-                            ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
-                            : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                            ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
+                            : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
                     }`}
                 >
                     Qur&apos;an Study Sequences (QS-01–20)
@@ -208,8 +208,8 @@ export function AudioArchiveSection() {
                     }}
                     className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                         activeTab === 'messenger'
-                            ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
-                            : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                            ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
+                            : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
                     }`}
                 >
                     Messenger Audio Archives (1980–1990)
@@ -222,22 +222,22 @@ export function AudioArchiveSection() {
                     <GlassSheen />
 
                     {/* Console Header Bar */}
-                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6 select-none">
+                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-surface px-4 py-3 sm:px-6 select-none">
                         <div className="flex items-center gap-3">
-                            <span className="flex h-6 items-center rounded bg-[#C8794A]/20 px-2 font-mono text-xs font-bold text-[#C8794A] border border-[#C8794A]/30">
+                            <span className="flex h-6 items-center rounded bg-ed-accent/15 px-2 font-mono text-xs font-bold text-ed-accent border border-ed-accent/30">
                                 {activeTrack.catalogNo}
                             </span>
-                            <span className="font-sans text-xs font-medium text-[#9E9690]">
+                            <span className="font-sans text-xs font-medium text-ed-fg-secondary">
                                 {activeTrack.categoryLabel}
                             </span>
-                            <span className="text-[#6B6560]" aria-hidden="true">·</span>
-                            <span className="font-sans text-xs text-[#6B6560]">
+                            <span className="text-ed-fg-faint" aria-hidden="true">·</span>
+                            <span className="font-sans text-xs text-ed-fg-muted">
                                 Masjid Tucson Master Vault
                             </span>
                         </div>
 
-                        <div className="flex items-center gap-3 font-sans text-xs text-[#6B6560]">
-                            <span>Speaker: <strong className="text-[#F5F0EB]">{activeTrack.speaker}</strong></span>
+                        <div className="flex items-center gap-3 font-sans text-xs text-ed-fg-muted">
+                            <span>Speaker: <strong className="text-ed-fg">{activeTrack.speaker}</strong></span>
                             <span aria-hidden="true">·</span>
                             <span>{activeTrack.date}</span>
                         </div>
@@ -246,10 +246,10 @@ export function AudioArchiveSection() {
                     {/* Console Body: Left Player Deck & Right Teleprompter Transcript */}
                     <div className="grid gap-0 lg:grid-cols-[1.1fr_1.3fr]">
                         {/* Player Deck (Left) - Enhanced Room Utilization */}
-                        <div className="p-6 sm:p-8 bg-[#121110] border-b border-[#2A2928] lg:border-b-0 lg:border-r flex flex-col justify-between">
+                        <div className="p-6 sm:p-8 bg-ed-bg border-b border-ed-rule lg:border-b-0 lg:border-r flex flex-col justify-between">
                             <div>
                                 {/* High-Impact CSS/Image Thumbnail */}
-                                <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-[#2A2928] bg-[#090909] shadow-xl">
+                                <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-ed-rule bg-ed-surface shadow-md">
                                     {activeTrack.qsNumber ? (
                                         <QuranStudyThumbnail qsNumber={activeTrack.qsNumber} />
                                     ) : activeTrack.thumbnail ? (
@@ -262,41 +262,41 @@ export function AudioArchiveSection() {
                                             className="object-cover"
                                         />
                                     ) : (
-                                        <div className="flex h-full w-full items-center justify-center bg-[#161514] text-[#9E9690] font-sans text-xs">
+                                        <div className="flex h-full w-full items-center justify-center bg-ed-surface text-ed-fg-muted font-sans text-xs">
                                             Audio Master Archive
                                         </div>
                                     )}
                                 </div>
 
                                 <div className="mt-5">
-                                    <h3 className="font-serif text-lg font-semibold leading-snug text-[#F5F0EB] sm:text-xl">
+                                    <h3 className="font-serif text-lg font-semibold leading-snug text-ed-fg sm:text-xl">
                                         {activeTrack.title}
                                     </h3>
-                                    <p className="mt-1 font-sans text-xs text-[#9E9690]">
+                                    <p className="mt-1 font-sans text-xs text-ed-fg-secondary">
                                         Analog Tape Remaster · {activeTrack.duration} · Speaker: {activeTrack.speaker}
                                     </p>
                                 </div>
 
                                 {/* Simulated Tactile Waveform Bars */}
-                                <div className="mt-5 rounded-xl border border-[#2A2928] bg-[#0F0E0D] p-4">
-                                    <div className="flex items-center justify-between pb-2 text-xs font-sans text-[#6B6560]">
-                                        <span>Current Cue: <strong className="text-[#C8794A] font-mono">{currentLine.time}</strong></span>
-                                        <span>Total: <strong className="font-mono text-[#9E9690]">{activeTrack.duration}</strong></span>
+                                <div className="mt-5 rounded-xl border border-ed-rule bg-ed-surface p-4">
+                                    <div className="flex items-center justify-between pb-2 text-xs font-sans text-ed-fg-muted">
+                                        <span>Current Cue: <strong className="text-ed-accent font-mono">{currentLine.time}</strong></span>
+                                        <span>Total: <strong className="font-mono text-ed-fg-secondary">{activeTrack.duration}</strong></span>
                                     </div>
 
                                     {/* Waveform graphic */}
                                     <div className="flex h-12 items-center gap-[3px] py-1">
                                         {Array.from({ length: 44 }).map((_, i) => {
-                                            const heightPercent = 20 + Math.sin(i * 0.45) * 35 + ((i * 17) % 45);
+                                            const heightPercent = Math.round(Math.max(15, Math.min(100, 20 + Math.sin(i * 0.45) * 35 + ((i * 17) % 45))));
                                             const isPast = i < 18;
                                             return (
                                                 <div
                                                     key={i}
                                                     className="flex-1 rounded-full transition-all duration-300"
                                                     style={{
-                                                        height: `${Math.max(15, Math.min(100, heightPercent))}%`,
-                                                        backgroundColor: isPast ? '#C8794A' : '#2A2928',
-                                                        opacity: isPast ? 0.95 : 0.45,
+                                                        height: `${heightPercent}%`,
+                                                        backgroundColor: isPast ? 'var(--ed-accent)' : 'var(--ed-rule-strong)',
+                                                        opacity: isPast ? 0.95 : 0.5,
                                                     }}
                                                 />
                                             );
@@ -304,12 +304,12 @@ export function AudioArchiveSection() {
                                     </div>
 
                                     {/* Playback Control Bar */}
-                                    <div className="mt-3 flex items-center justify-between pt-3 border-t border-[#1C1B1A]">
+                                    <div className="mt-3 flex items-center justify-between pt-3 border-t border-ed-rule">
                                         <div className="flex items-center gap-2">
                                             <button
                                                 type="button"
                                                 onClick={() => setIsPlaying(!isPlaying)}
-                                                className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C8794A] text-[#0F0E0D] shadow-md transition-all hover:bg-[#D9916A] hover:scale-105 active:scale-95"
+                                                className="flex h-8 w-8 items-center justify-center rounded-lg bg-ed-accent text-white dark:text-[#0F0E0D] shadow-md transition-all hover:opacity-90 hover:scale-105 active:scale-95"
                                                 aria-label={isPlaying ? 'Pause audio preview' : 'Play audio preview'}
                                             >
                                                 {isPlaying ? (
@@ -318,7 +318,7 @@ export function AudioArchiveSection() {
                                                     <Play className="ml-0.5 h-3.5 w-3.5 fill-current" />
                                                 )}
                                             </button>
-                                            <span className="font-sans text-xs text-[#F5F0EB]">
+                                            <span className="font-sans text-xs text-ed-fg font-medium">
                                                 {isPlaying ? 'Auditioning Stream' : 'Ready to Audition'}
                                             </span>
                                         </div>
@@ -332,8 +332,8 @@ export function AudioArchiveSection() {
                                                     onClick={() => setPlaybackSpeed(spd)}
                                                     className={`rounded px-2 py-0.5 font-mono text-[0.65rem] font-semibold transition-colors ${
                                                         playbackSpeed === spd
-                                                            ? 'border border-[#C8794A]/60 bg-[#C8794A]/20 text-[#F5F0EB]'
-                                                            : 'text-[#6B6560] hover:text-[#9E9690]'
+                                                            ? 'border border-ed-accent/60 bg-ed-accent/20 text-ed-accent dark:text-ed-fg'
+                                                            : 'text-ed-fg-muted hover:text-ed-fg'
                                                     }`}
                                                 >
                                                     {spd}
@@ -344,9 +344,9 @@ export function AudioArchiveSection() {
                                 </div>
 
                                 {/* Rich Track Summary Description Below Waveform */}
-                                <div className="mt-4 rounded-xl border border-[#2A2928]/60 bg-[#161514]/40 p-3.5">
+                                <div className="mt-4 rounded-xl border border-ed-rule bg-ed-surface/50 p-3.5">
                                     <p
-                                        className="text-xs leading-relaxed text-[#9E9690]"
+                                        className="text-xs leading-relaxed text-ed-fg-secondary"
                                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                     >
                                         {activeTrack.summary}
@@ -358,7 +358,7 @@ export function AudioArchiveSection() {
                             <div className="mt-6">
                                 <Link
                                     href={activeTrack.href}
-                                    className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#C8794A] bg-[#C8794A] px-5 py-2.5 font-sans text-xs font-semibold text-[#0F0E0D] shadow-lg transition-all hover:bg-[#D9916A] hover:scale-[1.01]"
+                                    className="flex w-full items-center justify-center gap-2 rounded-lg border border-ed-accent bg-ed-accent px-5 py-2.5 font-sans text-xs font-semibold text-white dark:text-[#0F0E0D] shadow-md transition-all hover:opacity-90 hover:scale-[1.01]"
                                 >
                                     <span>Launch Dedicated Audio Suite</span>
                                     <ArrowRight className="h-3.5 w-3.5" />
@@ -367,13 +367,13 @@ export function AudioArchiveSection() {
                         </div>
 
                         {/* Synchronized Teleprompter Transcript (Right) */}
-                        <div className="flex flex-col justify-between bg-[#161514] p-6 sm:p-8">
+                        <div className="flex flex-col justify-between bg-ed-surface p-6 sm:p-8">
                             <div>
-                                <div className="flex items-center justify-between pb-3 border-b border-[#2A2928]">
-                                    <span className="font-sans text-xs font-semibold text-[#F5F0EB]">
+                                <div className="flex items-center justify-between pb-3 border-b border-ed-rule">
+                                    <span className="font-sans text-xs font-semibold text-ed-fg">
                                         Synchronized Transcript
                                     </span>
-                                    <span className="font-sans text-xs text-[#6B6560]">
+                                    <span className="font-sans text-xs text-ed-fg-muted">
                                         Click line to seek
                                     </span>
                                 </div>
@@ -389,14 +389,14 @@ export function AudioArchiveSection() {
                                                 onClick={() => setActiveLineIndex(lIdx)}
                                                 className={`group flex w-full items-start gap-3.5 rounded-xl border p-3.5 text-left transition-all duration-200 ${
                                                     isLineActive
-                                                        ? 'border-[#C8794A]/60 bg-[#C8794A]/10 text-[#F5F0EB] shadow-md'
-                                                        : 'border-[#2A2928]/60 bg-[#121110]/50 text-[#9E9690] hover:border-[#353433] hover:bg-[#121110] hover:text-[#F5F0EB]'
+                                                        ? 'border-ed-accent/60 bg-ed-accent/10 text-ed-fg shadow-sm'
+                                                        : 'border-ed-rule bg-ed-bg/60 text-ed-fg-secondary hover:border-ed-rule-strong hover:bg-ed-bg hover:text-ed-fg'
                                                 }`}
                                             >
                                                 <span className={`inline-flex h-6 min-w-12 items-center justify-center rounded font-mono text-xs font-semibold shrink-0 ${
                                                     isLineActive
-                                                        ? 'bg-[#C8794A] text-[#0F0E0D]'
-                                                        : 'border border-[#2A2928] bg-[#161514] text-[#C8794A]'
+                                                        ? 'bg-ed-accent text-white dark:text-[#0F0E0D]'
+                                                        : 'border border-ed-rule bg-ed-surface text-ed-accent'
                                                 }`}>
                                                     {line.time}
                                                 </span>
@@ -407,7 +407,7 @@ export function AudioArchiveSection() {
                                                     >
                                                         &ldquo;{line.text}&rdquo;
                                                     </p>
-                                                    <span className="mt-1 block font-sans text-[0.7rem] text-[#6B6560]">
+                                                    <span className="mt-1 block font-sans text-[0.7rem] text-ed-fg-muted">
                                                         Speaker: {line.speaker}
                                                     </span>
                                                 </div>
@@ -418,8 +418,8 @@ export function AudioArchiveSection() {
                             </div>
 
                             {/* Other Tracks in Category */}
-                            <div className="mt-6 pt-4 border-t border-[#2A2928]">
-                                <span className="block font-sans text-[0.7rem] font-semibold text-[#6B6560] mb-2">
+                            <div className="mt-6 pt-4 border-t border-ed-rule">
+                                <span className="block font-sans text-[0.7rem] font-semibold text-ed-fg-muted mb-2">
                                     More Tapes in this Collection
                                 </span>
                                 <div className="flex flex-wrap gap-2">
@@ -433,8 +433,8 @@ export function AudioArchiveSection() {
                                             }}
                                             className={`rounded-md px-3 py-1 font-sans text-xs transition-all ${
                                                 trk.id === activeTrack.id
-                                                    ? 'border border-[#C8794A] bg-[#C8794A]/20 text-[#F5F0EB] font-bold'
-                                                    : 'border border-[#2A2928] bg-[#121110] text-[#9E9690] hover:text-[#F5F0EB]'
+                                                    ? 'border border-ed-accent bg-ed-accent/20 text-ed-accent dark:text-ed-fg font-bold'
+                                                    : 'border border-ed-rule bg-ed-bg text-ed-fg-secondary hover:text-ed-fg'
                                             }`}
                                         >
                                             {trk.catalogNo} · {trk.title.split(':')[0]}
@@ -446,15 +446,15 @@ export function AudioArchiveSection() {
                     </div>
 
                     {/* Console Footer Callout */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule bg-ed-surface px-4 py-3 sm:px-6">
                         <Link
                             href="/audios"
-                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-[#F5F0EB] hover:text-[#C8794A] transition-colors"
+                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-ed-fg hover:text-ed-accent transition-colors"
                         >
                             <span>Explore all 600+ master tapes and studies</span>
-                            <ArrowRight className="h-3.5 w-3.5 text-[#C8794A]" />
+                            <ArrowRight className="h-3.5 w-3.5 text-ed-accent" />
                         </Link>
-                        <span className="font-sans text-xs text-[#6B6560]">
+                        <span className="font-sans text-xs text-ed-fg-muted">
                             Line-by-Line Timestamp Matching System
                         </span>
                     </div>
@@ -465,18 +465,18 @@ export function AudioArchiveSection() {
             <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
                 {NOTABLE_EXCERPTS.map((item, idx) => (
                     <Reveal key={item.source} delay={160 + idx * 80}>
-                        <div className="group flex h-full flex-col justify-between rounded-xl border border-[#2A2928] bg-[#161514] p-5 shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A]">
+                        <div className="group flex h-full flex-col justify-between rounded-xl border border-ed-rule bg-ed-surface p-5 shadow-sm transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong">
                             <div>
                                 <p
-                                    className="text-xs sm:text-sm leading-relaxed text-[#F5F0EB] italic"
+                                    className="text-xs sm:text-sm leading-relaxed text-ed-fg italic"
                                     style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                 >
                                     &ldquo;{item.quote}&rdquo;
                                 </p>
                             </div>
-                            <div className="mt-4 pt-3 border-t border-[#2A2928] flex items-center justify-between font-sans text-xs text-[#9E9690]">
+                            <div className="mt-4 pt-3 border-t border-ed-rule flex items-center justify-between font-sans text-xs text-ed-fg-muted">
                                 <span>{item.source}</span>
-                                <span className="text-[#C8794A] font-mono font-semibold">{item.timestamp}</span>
+                                <span className="text-ed-accent font-mono font-semibold">{item.timestamp}</span>
                             </div>
                         </div>
                     </Reveal>

@@ -156,19 +156,19 @@ export function VideoArchiveSection() {
             {/* Header & Description */}
             <div>
                 <Reveal>
-                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg">
                         Video Archive
                     </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-ed-fg-secondary sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         Friday sermons, instructional programs, television debates, and annual conference recordings preserved in a chapter-indexed screening theater.
                     </p>
                 </Reveal>
-                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
+                <div className="mt-4 h-[2px] w-20 bg-ed-accent" />
             </div>
 
             {/* Category Filter Pills */}
@@ -197,8 +197,8 @@ export function VideoArchiveSection() {
                         }}
                         className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                             activeCategory === cat.id
-                                ? 'border border-[#C8794A] bg-[#C8794A]/15 text-[#F5F0EB] shadow-sm'
-                                : 'border border-[#2A2928] bg-[#161514] text-[#9E9690] hover:border-[#353433] hover:text-[#F5F0EB]'
+                                ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
+                                : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
                         }`}
                     >
                         {cat.label}
@@ -212,32 +212,32 @@ export function VideoArchiveSection() {
                     <GlassSheen />
 
                     {/* Window Title Bar */}
-                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6 select-none">
+                    <div className="flex min-h-12 flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-surface px-4 py-3 sm:px-6 select-none">
                         <div className="flex items-center gap-3">
-                            <span className="font-sans text-xs font-semibold text-[#C8794A]">
+                            <span className="font-sans text-xs font-semibold text-ed-accent">
                                 {activeVideo.categoryLabel}
                             </span>
-                            <span className="text-[#6B6560]" aria-hidden="true">·</span>
-                            <span className="font-sans text-xs text-[#9E9690]">
+                            <span className="text-ed-fg-faint" aria-hidden="true">·</span>
+                            <span className="font-sans text-xs text-ed-fg-muted">
                                 {activeVideo.masterFormat}
                             </span>
                         </div>
 
-                        <div className="flex items-center gap-2 font-mono text-xs text-[#6B6560]">
+                        <div className="flex items-center gap-2 font-mono text-xs text-ed-fg-muted">
                             <span>{activeVideo.date}</span>
                             <span aria-hidden="true">·</span>
-                            <span className="font-semibold text-[#F5F0EB]">{activeVideo.duration}</span>
+                            <span className="font-semibold text-ed-fg">{activeVideo.duration}</span>
                         </div>
                     </div>
 
                     {/* Theater Main Grid: Unobstructed Video Stage (Left) + Interactive Chapter Timeline (Right) */}
                     <div className="grid gap-0 lg:grid-cols-[1.35fr_0.85fr]">
                         {/* Video Stage Frame & Information */}
-                        <div className="flex flex-col justify-between bg-[#0E0D0C]">
+                        <div className="flex flex-col justify-between bg-ed-bg">
                             {/* Unobstructed High-Visibility Thumbnail Stage */}
                             <Link
                                 href={activeVideo.href}
-                                className="group relative block aspect-video w-full overflow-hidden bg-[#000]"
+                                className="group relative block aspect-video w-full overflow-hidden bg-black"
                                 aria-label={`Open ${activeVideo.title}`}
                             >
                                 <Image
@@ -253,12 +253,12 @@ export function VideoArchiveSection() {
                             </Link>
 
                             {/* Clean Details Panel Below Thumbnail */}
-                            <div className="p-6 sm:p-7 border-t border-[#2A2928] bg-[#121110]">
-                                <h3 className="font-serif text-xl font-semibold leading-snug tracking-tight text-[#F5F0EB] sm:text-2xl">
+                            <div className="p-6 sm:p-7 border-t border-ed-rule bg-ed-surface/50">
+                                <h3 className="font-serif text-xl font-semibold leading-snug tracking-tight text-ed-fg sm:text-2xl">
                                     {activeVideo.title}
                                 </h3>
                                 <p
-                                    className="mt-2 text-xs leading-relaxed text-[#9E9690] sm:text-sm"
+                                    className="mt-2 text-xs leading-relaxed text-ed-fg-secondary sm:text-sm"
                                     style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                 >
                                     {activeVideo.summary}
@@ -267,7 +267,7 @@ export function VideoArchiveSection() {
                                 <div className="mt-5">
                                     <Link
                                         href={activeVideo.href}
-                                        className="inline-flex items-center gap-2 rounded-lg border border-[#C8794A] bg-[#C8794A] px-4 py-2 font-sans text-xs font-semibold text-[#0F0E0D] shadow-md transition-all hover:bg-[#D9916A]"
+                                        className="inline-flex items-center gap-2 rounded-lg border border-ed-accent bg-ed-accent px-4 py-2 font-sans text-xs font-semibold text-white dark:text-[#0F0E0D] shadow-md transition-all hover:opacity-90"
                                     >
                                         <span>Watch Full Video Presentation</span>
                                         <ArrowRight className="h-3.5 w-3.5" />
@@ -277,13 +277,13 @@ export function VideoArchiveSection() {
                         </div>
 
                         {/* Interactive Chapter Timeline Sidebar */}
-                        <div className="flex flex-col justify-between border-t border-[#2A2928] bg-[#161514] p-4 sm:p-5 lg:border-l lg:border-t-0">
+                        <div className="flex flex-col justify-between border-t border-ed-rule bg-ed-surface p-4 sm:p-5 lg:border-l lg:border-t-0">
                             <div>
-                                <div className="flex items-center justify-between pb-3 border-b border-[#2A2928]">
-                                    <span className="font-sans text-xs font-semibold text-[#F5F0EB]">
+                                <div className="flex items-center justify-between pb-3 border-b border-ed-rule">
+                                    <span className="font-sans text-xs font-semibold text-ed-fg">
                                         Chapter Markers
                                     </span>
-                                    <span className="font-mono text-xs text-[#6B6560]">
+                                    <span className="font-mono text-xs text-ed-fg-muted">
                                         {activeVideo.chapters.length} Segments
                                     </span>
                                 </div>
@@ -298,14 +298,14 @@ export function VideoArchiveSection() {
                                                 onClick={() => setActiveChapterIndex(cIdx)}
                                                 className={`flex w-full items-start gap-3 rounded-lg border p-2.5 text-left transition-all duration-200 ${
                                                     isChapActive
-                                                        ? 'border-[#C8794A]/50 bg-[#C8794A]/10 text-[#F5F0EB] shadow-sm'
-                                                        : 'border-transparent text-[#9E9690] hover:border-[#2A2928] hover:bg-[#121110] hover:text-[#F5F0EB]'
+                                                        ? 'border-ed-accent/50 bg-ed-accent/10 text-ed-fg shadow-sm'
+                                                        : 'border-transparent text-ed-fg-secondary hover:border-ed-rule hover:bg-ed-bg hover:text-ed-fg'
                                                 }`}
                                             >
                                                 <span className={`inline-flex h-6 min-w-12 items-center justify-center rounded font-sans text-xs font-semibold ${
                                                     isChapActive
-                                                        ? 'bg-[#C8794A] text-[#0F0E0D]'
-                                                        : 'border border-[#2A2928] bg-[#121110] text-[#C8794A]'
+                                                        ? 'bg-ed-accent text-white dark:text-[#0F0E0D]'
+                                                        : 'border border-ed-rule bg-ed-bg text-ed-accent'
                                                 }`}>
                                                     {chap.time}
                                                 </span>
@@ -313,7 +313,7 @@ export function VideoArchiveSection() {
                                                     <span className="block truncate font-sans text-xs font-semibold">
                                                         {chap.title}
                                                     </span>
-                                                    <span className="block font-sans text-[0.7rem] text-[#6B6560]">
+                                                    <span className="block font-sans text-[0.7rem] text-ed-fg-muted">
                                                         Verified segment at {chap.seconds}s
                                                     </span>
                                                 </div>
@@ -324,8 +324,8 @@ export function VideoArchiveSection() {
                             </div>
 
                             {/* Program Switcher Strip */}
-                            <div className="mt-4 pt-4 border-t border-[#2A2928]">
-                                <span className="block font-sans text-[0.7rem] font-semibold text-[#6B6560] mb-2">
+                            <div className="mt-4 pt-4 border-t border-ed-rule">
+                                <span className="block font-sans text-[0.7rem] font-semibold text-ed-fg-muted mb-2">
                                     Featured in this category
                                 </span>
                                 <div className="grid grid-cols-4 gap-2">
@@ -340,8 +340,8 @@ export function VideoArchiveSection() {
                                             aria-label={`Select ${item.title}`}
                                             className={`relative aspect-video overflow-hidden rounded-md border transition-all ${
                                                 item.id === activeVideo.id
-                                                    ? 'border-[#C8794A] ring-1 ring-[#C8794A]/60'
-                                                    : 'border-[#2A2928] opacity-50 hover:opacity-100'
+                                                    ? 'border-ed-accent ring-1 ring-ed-accent/60'
+                                                    : 'border-ed-rule opacity-60 hover:opacity-100'
                                             }`}
                                         >
                                             <Image
@@ -360,15 +360,15 @@ export function VideoArchiveSection() {
                     </div>
 
                     {/* Footer Callout Strip */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule bg-ed-surface px-4 py-3 sm:px-6">
                         <Link
                             href="/videos"
-                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-[#F5F0EB] hover:text-[#C8794A] transition-colors"
+                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-ed-fg hover:text-ed-accent transition-colors"
                         >
                             <span>Browse all 300+ preserved video recordings</span>
-                            <ArrowRight className="h-3.5 w-3.5 text-[#C8794A]" />
+                            <ArrowRight className="h-3.5 w-3.5 text-ed-accent" />
                         </Link>
-                        <span className="font-sans text-xs text-[#6B6560]">
+                        <span className="font-sans text-xs text-ed-fg-muted">
                             Original Master Collection
                         </span>
                     </div>
@@ -379,12 +379,12 @@ export function VideoArchiveSection() {
             <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
                 {PRESERVATION_HIGHLIGHTS.map((item, idx) => (
                     <Reveal key={item.title} delay={160 + idx * 80}>
-                        <div className="flex h-full flex-col justify-between rounded-xl border border-[#2A2928] bg-[#161514] p-5 shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A]">
+                        <div className="flex h-full flex-col justify-between rounded-xl border border-ed-rule bg-ed-surface p-5 shadow-sm transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong">
                             <div>
-                                <h4 className="font-sans text-sm font-semibold text-[#F5F0EB]">
+                                <h4 className="font-sans text-sm font-semibold text-ed-fg">
                                     {item.title}
                                 </h4>
-                                <p className="mt-2 text-xs leading-[1.6] text-[#9E9690]">
+                                <p className="mt-2 text-xs leading-[1.6] text-ed-fg-secondary">
                                     {item.description}
                                 </p>
                             </div>

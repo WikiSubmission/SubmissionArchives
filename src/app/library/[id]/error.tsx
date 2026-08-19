@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertCircle, RefreshCw, Home } from 'lucide-react';
 import Link from 'next/link';
 
 export default function LibraryReaderError({
@@ -16,54 +16,52 @@ export default function LibraryReaderError({
     }, [error]);
 
     return (
-        <div className="h-screen w-screen bg-ed-bg text-ed-fg flex flex-col">
-            <div className="flex h-14 shrink-0 items-center justify-between border-b border-ed-rule bg-ed-surface/90 px-3 py-3 sm:px-4">
-                <div className="flex items-center gap-3">
-                    <div className="h-11 w-11 rounded-xl bg-ed-muted/50" />
-                    <div className="h-4 w-28 rounded bg-ed-muted/50 sm:w-40" />
+        <div className="min-h-screen w-full bg-ed-bg text-ed-fg flex flex-col justify-center items-center p-4 sm:p-6">
+            <div className="max-w-md w-full text-center space-y-6 rounded-lg border border-ed-rule bg-ed-surface p-6 sm:p-8 shadow-sm">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-ed-accent-soft border border-ed-accent/20 text-ed-accent">
+                    <AlertCircle className="h-6 w-6" aria-hidden="true" />
                 </div>
-            </div>
 
-            <div className="flex flex-1 items-center justify-center p-4 sm:p-6">
-                <div className="max-w-md w-full text-center space-y-6">
-                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10 border border-red-500/20">
-                        <AlertTriangle className="h-8 w-8 text-red-400" aria-hidden="true" />
+                <div className="space-y-2">
+                    <h2
+                        className="text-xl sm:text-2xl font-semibold leading-tight text-ed-fg"
+                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                    >
+                        Couldn&apos;t load this document
+                    </h2>
+                    <p
+                        className="text-sm text-ed-fg-secondary leading-relaxed"
+                        style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                    >
+                        Something went wrong while preparing the reader. This might be a temporary issue with the document asset.
+                    </p>
+                </div>
+
+                {process.env.NODE_ENV === 'development' && error.message && (
+                    <div className="rounded border border-ed-rule bg-ed-surface-strong p-3 text-left font-mono text-[11px] text-ed-accent break-all">
+                        {error.message}
+                        {error.digest && (
+                            <div className="mt-1 text-[9px] text-ed-fg-muted">Digest: {error.digest}</div>
+                        )}
                     </div>
+                )}
 
-                    <div className="space-y-2">
-                        <h2 className="text-lg sm:text-xl font-bold leading-[1.25] tracking-[-0.018em] text-ed-fg">
-                            Couldn&apos;t load this document
-                        </h2>
-                        <p className="text-sm text-ed-fg-muted leading-[1.6]">
-                            Something went wrong while preparing the reader. This might be a temporary issue with the document or your connection.
-                        </p>
-                    </div>
-
-                    {process.env.NODE_ENV === 'development' && (
-                        <div className="rounded-xl border border-ed-rule bg-ed-surface/50 p-4 text-left">
-                            <p className="text-xs font-mono text-red-400 break-all">{error.message}</p>
-                            {error.digest && (
-                                <p className="mt-1 text-xs font-mono text-ed-fg-muted">Digest: {error.digest}</p>
-                            )}
-                        </div>
-                    )}
-
-                    <div className="flex items-center justify-center gap-3">
-                        <button
-                            onClick={reset}
-                            className="inline-flex items-center gap-2 rounded-xl border border-ed-rule bg-ed-surface px-4 py-2.5 text-sm font-medium text-ed-fg hover:bg-ed-surface/80 transition-colors"
-                        >
-                            <RefreshCw className="h-4 w-4" />
-                            Try again
-                        </button>
-                        <Link
-                            href="/search"
-                            className="inline-flex items-center gap-2 rounded-xl border border-ed-rule bg-ed-surface px-4 py-2.5 text-sm font-medium text-ed-fg hover:bg-ed-surface/80 transition-colors"
-                        >
-                            <Home className="h-4 w-4" />
-                            Back to search
-                        </Link>
-                    </div>
+                <div className="flex items-center justify-center gap-2.5 pt-2">
+                    <button
+                        type="button"
+                        onClick={reset}
+                        className="inline-flex items-center gap-2 rounded border border-ed-fg bg-ed-fg px-4 py-2 text-xs font-semibold text-ed-bg transition-all hover:opacity-90 active:scale-[0.98]"
+                    >
+                        <RefreshCw className="h-3.5 w-3.5" />
+                        <span>Try again</span>
+                    </button>
+                    <Link
+                        href="/search"
+                        className="inline-flex items-center gap-2 rounded border border-ed-rule bg-ed-surface-strong px-4 py-2 text-xs font-semibold text-ed-fg-secondary transition-all hover:border-ed-rule-strong hover:text-ed-fg active:scale-[0.98]"
+                    >
+                        <Home className="h-3.5 w-3.5" />
+                        <span>Back to search</span>
+                    </Link>
                 </div>
             </div>
         </div>

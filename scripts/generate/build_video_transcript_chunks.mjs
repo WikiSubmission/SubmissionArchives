@@ -150,7 +150,17 @@ function main() {
     const videos = JSON.parse(fs.readFileSync(VIDEOS_CATALOG, 'utf8'));
     const byYoutubeId = new Map(videos.map((v) => [v.youtubeId, v]));
 
-    const files = fs.readdirSync(TRANSCRIPTS_DIR).filter((f) => /^\d+ - /.test(f));
+    const files = fs.readdirSync(TRANSCRIPTS_DIR).filter(
+        (f) =>
+            f.endsWith('.csv') &&
+            // Guard: a "<n> - Foo_updated.csv" alongside "<n> - Foo.csv" would emit
+            // a second set of chunks with colliding ids for the same video.
+            !f.endsWith('_updated.csv') &&
+            // The Arabic transcript shares its youtubeId with the English one, so
+            // indexing both would collide. Index the English transcript only.
+            !f.includes(' - Arabic.') &&
+            (/^\d+ - /.test(f) || f.startsWith('Debate ')),
+    );
     const allChunks = [];
     let skipped = [];
 

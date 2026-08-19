@@ -48,7 +48,7 @@ const ARCHITECTURE_PILLARS: ArchitecturePillar[] = [
         id: 'engine-1',
         title: 'Native Rust Engine & Tauri IPC Bridge',
         badge: 'NON-REMOTE',
-        icon: <Zap className="h-3.5 w-3.5 text-[#C8794A]" />,
+        icon: <Zap className="h-3.5 w-3.5 text-ed-accent" />,
         content:
             'A desktop-native core engineered with native Rust and Tauri v2 for responsive indexing, file operations, and media access without pushing your working archive to a hosted cloud service.',
     },
@@ -56,7 +56,7 @@ const ARCHITECTURE_PILLARS: ArchitecturePillar[] = [
         id: 'engine-2',
         title: 'Local-First SQLite & Vector Search Database',
         badge: 'ONE COLLECTION',
-        icon: <HardDrive className="h-3.5 w-3.5 text-[#C8794A]" />,
+        icon: <HardDrive className="h-3.5 w-3.5 text-ed-accent" />,
         content:
             'Structured metadata and local BM25 ranking execute entirely on your machine. Your scholarly notes and transcript indexes remain open standard Markdown and SQLite on your drive.',
     },
@@ -64,7 +64,7 @@ const ARCHITECTURE_PILLARS: ArchitecturePillar[] = [
         id: 'engine-3',
         title: 'Arabic Transliteration & Named Surah Autocomplete',
         badge: 'SEARCH LAYER',
-        icon: <Search className="h-3.5 w-3.5 text-[#C8794A]" />,
+        icon: <Search className="h-3.5 w-3.5 text-ed-accent" />,
         content:
             'The search layer is optimized for Arabic script, phonetic transliteration, named surahs, and academic citation formats with sub-millisecond local fuzzy matching.',
     },
@@ -72,7 +72,7 @@ const ARCHITECTURE_PILLARS: ArchitecturePillar[] = [
         id: 'engine-4',
         title: 'Bidirectional Wiki Links & Interactive Canvas',
         badge: 'KNOWLEDGE GRAPH',
-        icon: <GitBranch className="h-3.5 w-3.5 text-[#C8794A]" />,
+        icon: <GitBranch className="h-3.5 w-3.5 text-ed-accent" />,
         content:
             'Move seamlessly from a verse to a note, from a speaker to a recording, or from a theological theme to every source in the archive across a 2D relational canvas.',
     },
@@ -99,7 +99,7 @@ const PALETTE_ACTIONS: PaletteAction[] = [
         id: 'features',
         label: 'Explore features',
         hint: 'F',
-        icon: <LayoutGrid className="h-3.5 w-3.5 text-[#C8794A]" />,
+        icon: <LayoutGrid className="h-3.5 w-3.5 text-ed-accent" />,
         run: ({ close }) => {
             close();
             document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
@@ -109,7 +109,7 @@ const PALETTE_ACTIONS: PaletteAction[] = [
         id: 'top',
         label: 'Back to top',
         hint: 'H',
-        icon: <Compass className="h-3.5 w-3.5 text-[#C8794A]" />,
+        icon: <Compass className="h-3.5 w-3.5 text-ed-accent" />,
         run: ({ close }) => {
             close();
             document.getElementById('top')?.scrollIntoView({ behavior: 'smooth' });
@@ -119,7 +119,7 @@ const PALETTE_ACTIONS: PaletteAction[] = [
         id: 'download',
         label: 'Download desktop application',
         hint: 'D',
-        icon: <Download className="h-3.5 w-3.5 text-[#C8794A]" />,
+        icon: <Download className="h-3.5 w-3.5 text-ed-accent" />,
         run: ({ close, showToast }) => {
             close();
             showToast('Desktop builds are in active development — coming soon.');
@@ -203,40 +203,40 @@ export default function AppDownloadClient() {
         : PALETTE_ACTIONS;
 
     return (
-        <div className="relative min-h-screen bg-[#0F0E0D] text-[#F5F0EB] font-sans antialiased selection:bg-[#C8794A]/25 selection:text-[#F5F0EB]">
-            {/* Ambient background — matches archive pages */}
+        <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
+            {/* Ambient background */}
             <div
                 aria-hidden="true"
                 className="pointer-events-none fixed inset-0 z-0"
                 style={{
                     background:
-                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(200,121,74,0.025) 0%, transparent 70%), ' +
-                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(200,121,74,0.015) 0%, transparent 70%)',
+                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(184,98,51,0.025) 0%, transparent 70%), ' +
+                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(184,98,51,0.015) 0%, transparent 70%)',
                 }}
             />
 
-            {/* Page content only — site Header/Footer come from root layout */}
+            {/* Page content */}
             <main id="top" className="relative z-10">
                 {/* Hero */}
                 <section className="px-5 pt-16 pb-16 text-center sm:px-7 sm:pt-20 sm:pb-20">
                     <div className="mx-auto max-w-[820px]">
                         <motion.div {...fadeUp(0)}>
-                            <div className="inline-flex items-center gap-1.5 rounded border border-[rgba(200,121,74,0.15)] bg-[rgba(200,121,74,0.06)] px-2.5 py-1">
-                                <span className="h-1.5 w-1.5 rounded-full bg-[#C8794A]" />
-                                <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">
+                            <div className="inline-flex items-center gap-1.5 rounded border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1">
+                                <span className="h-1.5 w-1.5 rounded-full bg-ed-accent" />
+                                <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
                                     App Studio · Offline scholarly workspace
                                 </span>
                             </div>
 
                             <h1
-                                className="mx-auto mt-5 max-w-[720px] text-[clamp(2.75rem,5.5vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-[#F5F0EB]"
+                                className="mx-auto mt-5 max-w-[720px] text-[clamp(2.75rem,5.5vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-ed-fg"
                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
-                                Your archive, <span className="text-[#C8794A]">on your own disk.</span>
+                                Your archive, <span className="text-ed-accent">on your own disk.</span>
                             </h1>
 
                             <p
-                                className="mx-auto mt-7 max-w-[620px] text-[16.5px] leading-[1.6] text-[#9E9690]"
+                                className="mx-auto mt-7 max-w-[620px] text-[16.5px] leading-[1.6] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
                                 A local-first workspace for precise research, listening, reading, and citation. Keep the
@@ -262,20 +262,20 @@ export default function AppDownloadClient() {
                                 ))}
                             </div>
 
-                            <div className="mt-3.5 font-mono text-[10px] tracking-wide text-[#4A4542]">
+                            <div className="mt-3.5 font-mono text-[10px] tracking-wide text-ed-fg-muted">
                                 Build {APP_VERSION} · Free to use · Standard sources
                             </div>
 
-                            {/* Notice — restrained, enterprise */}
-                            <div className="mx-auto mt-7 flex max-w-[560px] items-start gap-3 rounded-lg border border-[#2A2928] bg-[#161514] px-4 py-3 text-left">
-                                <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-[#2A2928] bg-[#1C1B1A] text-[#C8794A]">
+                            {/* Notice */}
+                            <div className="mx-auto mt-7 flex max-w-[560px] items-start gap-3 rounded-lg border border-ed-rule bg-ed-surface px-4 py-3 text-left shadow-sm">
+                                <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-accent">
                                     <Zap className="h-3 w-3" />
                                 </div>
                                 <div>
-                                    <strong className="block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#9E9690]">
+                                    <strong className="block text-[10px] font-semibold uppercase tracking-[0.08em] text-ed-fg">
                                         Active development · Synchronized offline core
                                     </strong>
-                                    <span className="mt-0.5 block text-[11px] leading-relaxed text-[#6B6560]">
+                                    <span className="mt-0.5 block text-[11px] leading-relaxed text-ed-fg-muted">
                                         The foundation is being refined around local search, scholarly citations, media
                                         playback, and long-term archive portability.
                                     </span>
@@ -285,26 +285,26 @@ export default function AppDownloadClient() {
 
                         {/* App window showcase */}
                         <motion.div {...fadeUp(0.08)} className="mx-auto mt-12 max-w-[940px] text-left">
-                            <div className="overflow-hidden rounded-[10px] border border-[#302E2B] bg-[#141311] shadow-[0_22px_70px_rgba(0,0,0,0.32)]">
+                            <div className="overflow-hidden rounded-[10px] border border-ed-rule-strong bg-ed-surface shadow-2xl">
                                 {/* Titlebar */}
-                                <div className="flex h-[37px] select-none items-center justify-between border-b border-[#2A2928] bg-[#181715] px-3.5">
+                                <div className="flex h-[37px] select-none items-center justify-between border-b border-ed-rule bg-ed-surface-strong px-3.5">
                                     <div className="flex items-center gap-1.5">
                                         <span className="h-1.5 w-1.5 rounded-full bg-[#9D5B4B]" />
                                         <span className="h-1.5 w-1.5 rounded-full bg-[#AA8A4B]" />
                                         <span className="h-1.5 w-1.5 rounded-full bg-[#5E8B6E]" />
                                     </div>
-                                    <div className="truncate px-2 font-mono text-[9px] text-[#4A4542]">
+                                    <div className="truncate px-2 font-mono text-[9px] text-ed-fg-muted">
                                         SA Studio · Documents / Quran / Al-Baqarah 2:255
                                     </div>
-                                    <div className="font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                    <div className="font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
                                         Local
                                     </div>
                                 </div>
 
                                 <div className="grid min-h-[355px] grid-cols-1 sm:grid-cols-[185px_1fr]">
                                     {/* Sidebar */}
-                                    <aside className="border-r border-[#2A2928] bg-[#12110F] p-3.5">
-                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-[#4A4542]">
+                                    <aside className="border-r border-ed-rule bg-ed-bg/50 p-3.5">
+                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-ed-fg-muted">
                                             Workspace
                                         </div>
                                         <nav className="space-y-0.5">
@@ -345,18 +345,18 @@ export default function AppDownloadClient() {
                                             />
                                         </nav>
 
-                                        <div className="mx-2 my-2.5 h-px bg-[#2A2928]" />
+                                        <div className="mx-2 my-2.5 h-px bg-ed-rule" />
 
-                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-[#4A4542]">
+                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-ed-fg-muted">
                                             Collections
                                         </div>
                                         <nav className="space-y-0.5">
-                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-[#6B6560]">
-                                                <Bookmark className="h-3 w-3 text-[#C8794A]" />
+                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-ed-fg-muted">
+                                                <Bookmark className="h-3 w-3 text-ed-accent" />
                                                 <span>Bookmarks</span>
-                                                <span className="ml-auto font-mono text-[9px] text-[#4A4542]">24</span>
+                                                <span className="ml-auto font-mono text-[9px] text-ed-fg-muted">24</span>
                                             </div>
-                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-[#6B6560]">
+                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-ed-fg-muted">
                                                 <Clock className="h-3 w-3" />
                                                 <span>Recent</span>
                                             </div>
@@ -364,17 +364,17 @@ export default function AppDownloadClient() {
                                     </aside>
 
                                     {/* Main pane */}
-                                    <div className="bg-[#141311] p-4 sm:p-5">
+                                    <div className="bg-ed-surface p-4 sm:p-5">
                                         <div className="mb-4 flex items-center justify-between gap-2.5">
-                                            <div className="flex h-8 max-w-[390px] flex-1 items-center gap-2 rounded border border-[#2A2928] bg-[#191816] px-2.5 text-[10px] text-[#4A4542]">
+                                            <div className="flex h-8 max-w-[390px] flex-1 items-center gap-2 rounded border border-ed-rule bg-ed-surface-strong px-2.5 text-[10px] text-ed-fg-muted">
                                                 <Search className="h-3 w-3 shrink-0" />
                                                 <span className="truncate">Search archive, Arabic, names, surahs…</span>
                                             </div>
                                             <div className="flex gap-1.5">
-                                                <span className="flex h-[30px] items-center rounded border border-[#2A2928] bg-[#181715] px-2.5 text-[9px] text-[#6B6560]">
+                                                <span className="flex h-[30px] items-center rounded border border-ed-rule bg-ed-surface-strong px-2.5 text-[9px] text-ed-fg-muted">
                                                     Filter
                                                 </span>
-                                                <span className="flex h-[30px] items-center rounded border border-[#2A2928] bg-[#181715] px-2.5 text-[9px] text-[#6B6560]">
+                                                <span className="flex h-[30px] items-center rounded border border-ed-rule bg-ed-surface-strong px-2.5 text-[9px] text-ed-fg-muted">
                                                     Import
                                                 </span>
                                             </div>
@@ -389,33 +389,33 @@ export default function AppDownloadClient() {
                                                     exit={{ opacity: 0 }}
                                                     transition={{ duration: 0.12 }}
                                                 >
-                                                    <div className="flex items-start justify-between gap-3 border-b border-[#2A2928] pb-3.5">
+                                                    <div className="flex items-start justify-between gap-3 border-b border-ed-rule pb-3.5">
                                                         <div>
-                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
                                                                 Al-Baqarah · Ayat al-Kursi
                                                             </div>
                                                             <h2
-                                                                className="mt-1 text-xl font-medium leading-tight text-[#F5F0EB] sm:text-2xl"
+                                                                className="mt-1 text-xl font-medium leading-tight text-ed-fg sm:text-2xl"
                                                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                                             >
                                                                 Ayat al-Kursi (Surah Al-Baqarah 2:255)
                                                             </h2>
-                                                            <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                            <div className="mt-1 text-[9px] text-ed-fg-muted">
                                                                 Quran · Named Surah Search · Canonical text
                                                             </div>
                                                         </div>
                                                         <div className="flex shrink-0 gap-1.5">
-                                                            <span className="rounded-full border border-[#2A2928] px-2 py-0.5 text-[8px] text-[#6B6560]">
+                                                            <span className="rounded-full border border-ed-rule px-2 py-0.5 text-[8px] text-ed-fg-muted">
                                                                 Bookmark
                                                             </span>
-                                                            <span className="rounded-full border border-[#2A2928] px-2 py-0.5 text-[8px] text-[#6B6560]">
+                                                            <span className="rounded-full border border-ed-rule px-2 py-0.5 text-[8px] text-ed-fg-muted">
                                                                 Open
                                                             </span>
                                                         </div>
                                                     </div>
 
                                                     <div
-                                                        className="mt-4 border-l-2 border-[#C8794A] bg-[rgba(200,121,74,0.035)] px-3 py-2 text-[13.5px] leading-[1.55] text-[#9E9690]"
+                                                        className="mt-4 border-l-2 border-ed-accent bg-ed-accent-soft px-3 py-2 text-[13.5px] leading-[1.55] text-ed-fg-secondary"
                                                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                                                     >
                                                         &ldquo;GOD: there is no other god besides Him, the Living, the
@@ -423,7 +423,7 @@ export default function AppDownloadClient() {
                                                     </div>
 
                                                     <div
-                                                        className="mt-3.5 border border-[#2A2928] bg-[rgba(143,184,168,0.025)] p-3 text-right text-lg leading-loose text-[#F5F0EB]"
+                                                        className="mt-3.5 border border-ed-rule bg-ed-surface-strong p-3 text-right text-lg leading-loose text-ed-fg"
                                                         dir="rtl"
                                                         style={{ fontFamily: 'Georgia, serif' }}
                                                     >
@@ -431,9 +431,9 @@ export default function AppDownloadClient() {
                                                     </div>
 
                                                     <div className="mt-4 space-y-2">
-                                                        <div className="h-1.5 w-[92%] rounded-full bg-[#24221F]" />
-                                                        <div className="h-1.5 w-[78%] rounded-full bg-[#24221F]" />
-                                                        <div className="h-1.5 w-[66%] rounded-full bg-[#24221F]" />
+                                                        <div className="h-1.5 w-[92%] rounded-full bg-ed-surface-strong" />
+                                                        <div className="h-1.5 w-[78%] rounded-full bg-ed-surface-strong" />
+                                                        <div className="h-1.5 w-[66%] rounded-full bg-ed-surface-strong" />
                                                     </div>
                                                 </motion.div>
                                             )}
@@ -446,18 +446,18 @@ export default function AppDownloadClient() {
                                                     exit={{ opacity: 0 }}
                                                     transition={{ duration: 0.12 }}
                                                 >
-                                                    <div className="flex items-start justify-between gap-3 border-b border-[#2A2928] pb-3.5">
+                                                    <div className="flex items-start justify-between gap-3 border-b border-ed-rule pb-3.5">
                                                         <div>
-                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
                                                                 Surah Index · 114 Chapters
                                                             </div>
                                                             <h2
-                                                                className="mt-1 text-xl font-medium leading-tight text-[#F5F0EB] sm:text-2xl"
+                                                                className="mt-1 text-xl font-medium leading-tight text-ed-fg sm:text-2xl"
                                                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                                             >
                                                                 Browse by Surah
                                                             </h2>
-                                                            <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                            <div className="mt-1 text-[9px] text-ed-fg-muted">
                                                                 Arabic · English · Transliteration
                                                             </div>
                                                         </div>
@@ -472,14 +472,14 @@ export default function AppDownloadClient() {
                                                         ].map((surah) => (
                                                             <div
                                                                 key={surah.n}
-                                                                className="flex items-center gap-2.5 rounded border border-[#2A2928] bg-[#191816] px-2.5 py-1.5"
+                                                                className="flex items-center gap-2.5 rounded border border-ed-rule bg-ed-surface-strong px-2.5 py-1.5"
                                                             >
-                                                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#2A2928] font-mono text-[8px] text-[#6B6560]">
+                                                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-ed-rule font-mono text-[8px] text-ed-fg-muted">
                                                                     {surah.n}
                                                                 </span>
-                                                                <span className="text-[11px] font-medium text-[#F5F0EB]">{surah.name}</span>
-                                                                <span className="text-[9px] text-[#6B6560]">{surah.meaning}</span>
-                                                                <span className="ml-auto font-mono text-[8px] text-[#4A4542]">
+                                                                <span className="text-[11px] font-medium text-ed-fg">{surah.name}</span>
+                                                                <span className="text-[9px] text-ed-fg-muted">{surah.meaning}</span>
+                                                                <span className="ml-auto font-mono text-[8px] text-ed-fg-muted">
                                                                     {surah.verses} verses
                                                                 </span>
                                                             </div>
@@ -497,28 +497,28 @@ export default function AppDownloadClient() {
                                                     transition={{ duration: 0.12 }}
                                                     className="space-y-3"
                                                 >
-                                                    <div className="border-b border-[#2A2928] pb-3.5">
-                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                    <div className="border-b border-ed-rule pb-3.5">
+                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
                                                             Audio Session Index · Master Tapes
                                                         </div>
                                                         <h2
-                                                            className="mt-1 text-xl font-medium text-[#F5F0EB]"
+                                                            className="mt-1 text-xl font-medium text-ed-fg"
                                                             style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                                         >
                                                             QS 01 · Advocating God Alone
                                                         </h2>
-                                                        <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                        <div className="mt-1 text-[9px] text-ed-fg-muted">
                                                             Speaker: Dr. Rashad Khalifa · Duration: 1:19:42 · Masjid Tucson
                                                             (1987–1990)
                                                         </div>
                                                     </div>
-                                                    <div className="space-y-2 rounded-md border border-[#2A2928] bg-[#161514] p-3">
-                                                        <div className="flex items-center justify-between font-mono text-[10px] text-[#4A4542]">
+                                                    <div className="space-y-2 rounded-md border border-ed-rule bg-ed-surface-strong p-3">
+                                                        <div className="flex items-center justify-between font-mono text-[10px] text-ed-fg-muted">
                                                             <span>Digitized Analog Master</span>
-                                                            <span className="text-[#C8794A]">Normalized FLAC/MP3</span>
+                                                            <span className="text-ed-accent">Normalized FLAC/MP3</span>
                                                         </div>
-                                                        <div className="h-1 rounded-full bg-[#24221F]">
-                                                            <div className="h-full w-1/3 rounded-full bg-[#C8794A]" />
+                                                        <div className="h-1 rounded-full bg-ed-rule">
+                                                            <div className="h-full w-1/3 rounded-full bg-ed-accent" />
                                                         </div>
                                                     </div>
                                                 </motion.div>
@@ -533,21 +533,21 @@ export default function AppDownloadClient() {
                                                     transition={{ duration: 0.12 }}
                                                     className="space-y-3"
                                                 >
-                                                    <div className="border-b border-[#2A2928] pb-3.5">
-                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                    <div className="border-b border-ed-rule pb-3.5">
+                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
                                                             Video Archival Preservations
                                                         </div>
                                                         <h2
-                                                            className="mt-1 text-xl font-medium text-[#F5F0EB]"
+                                                            className="mt-1 text-xl font-medium text-ed-fg"
                                                             style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                                         >
                                                             Tape #04 · The Great Debate
                                                         </h2>
-                                                        <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                        <div className="mt-1 text-[9px] text-ed-fg-muted">
                                                             Historical recording · Complete unedited digital restoration
                                                         </div>
                                                     </div>
-                                                    <div className="rounded-md border border-[#2A2928] bg-[#161514] p-3 font-mono text-[11px] text-[#6B6560]">
+                                                    <div className="rounded-md border border-ed-rule bg-ed-surface-strong p-3 font-mono text-[11px] text-ed-fg-muted">
                                                         Chapter markers, synchronized transcript segments, and verse
                                                         citations linked.
                                                     </div>
@@ -563,24 +563,24 @@ export default function AppDownloadClient() {
                                                     transition={{ duration: 0.12 }}
                                                     className="space-y-3"
                                                 >
-                                                    <div className="border-b border-[#2A2928] pb-3.5">
-                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-[#C8794A]">
+                                                    <div className="border-b border-ed-rule pb-3.5">
+                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
                                                             Written Materials · Research Notes
                                                         </div>
                                                         <h2
-                                                            className="mt-1 text-xl font-medium text-[#F5F0EB]"
+                                                            className="mt-1 text-xl font-medium text-ed-fg"
                                                             style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                                         >
                                                             Scholarly annotations & source documents
                                                         </h2>
-                                                        <div className="mt-1 text-[9px] text-[#4A4542]">
+                                                        <div className="mt-1 text-[9px] text-ed-fg-muted">
                                                             Markdown · PDF · Cross-referenced citations
                                                         </div>
                                                     </div>
                                                     <div className="space-y-2">
-                                                        <div className="h-1.5 w-[88%] rounded-full bg-[#24221F]" />
-                                                        <div className="h-1.5 w-[72%] rounded-full bg-[#24221F]" />
-                                                        <div className="h-1.5 w-[60%] rounded-full bg-[#24221F]" />
+                                                        <div className="h-1.5 w-[88%] rounded-full bg-ed-surface-strong" />
+                                                        <div className="h-1.5 w-[72%] rounded-full bg-ed-surface-strong" />
+                                                        <div className="h-1.5 w-[60%] rounded-full bg-ed-surface-strong" />
                                                     </div>
                                                 </motion.div>
                                             )}
@@ -589,31 +589,31 @@ export default function AppDownloadClient() {
                                 </div>
 
                                 {/* Proof strip */}
-                                <div className="grid grid-cols-1 border-t border-[#2A2928] bg-[#12110F] sm:grid-cols-3">
-                                    <div className="border-b border-[#2A2928] p-5 sm:border-b-0 sm:border-r">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2A2928] bg-[#181715] text-[#9E9690]">
+                                <div className="grid grid-cols-1 border-t border-ed-rule bg-ed-bg/50 sm:grid-cols-3">
+                                    <div className="border-b border-ed-rule p-5 sm:border-b-0 sm:border-r">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-fg-muted">
                                             <FileText className="h-3 w-3" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-[#F5F0EB]">Plain Markdown Files</h3>
-                                        <p className="mt-1 text-[10px] leading-normal text-[#4A4542]">
+                                        <h3 className="text-[11px] font-semibold text-ed-fg">Plain Markdown Files</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
                                             Scholarly notes remain readable and portable outside the app.
                                         </p>
                                     </div>
-                                    <div className="border-b border-[#2A2928] p-5 sm:border-b-0 sm:border-r">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2A2928] bg-[#181715] text-[#9E9690]">
+                                    <div className="border-b border-ed-rule p-5 sm:border-b-0 sm:border-r">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-fg-muted">
                                             <Search className="h-3 w-3" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-[#F5F0EB]">Instant Native Search</h3>
-                                        <p className="mt-1 text-[10px] leading-normal text-[#4A4542]">
+                                        <h3 className="text-[11px] font-semibold text-ed-fg">Instant Native Search</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
                                             Search Arabic, English, speakers, surahs, and imported material locally.
                                         </p>
                                     </div>
                                     <div className="p-5">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2A2928] bg-[#181715] text-[#9E9690]">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-fg-muted">
                                             <GitBranch className="h-3 w-3" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-[#F5F0EB]">Living Knowledge Graph</h3>
-                                        <p className="mt-1 text-[10px] leading-normal text-[#4A4542]">
+                                        <h3 className="text-[11px] font-semibold text-ed-fg">Living Knowledge Graph</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
                                             Connect verses, people, topics, recordings, and citations as the archive grows.
                                         </p>
                                     </div>
@@ -624,20 +624,20 @@ export default function AppDownloadClient() {
                 </section>
 
                 {/* Features */}
-                <section id="features" className="border-t border-[rgba(255,255,255,0.055)] py-20 px-5 sm:px-7 sm:py-24">
+                <section id="features" className="border-t border-ed-rule py-20 px-5 sm:px-7 sm:py-24">
                     <div className="mx-auto max-w-5xl">
                         <motion.div {...fadeUp(0)} className="mb-10 text-center">
-                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
                                 Capabilities
                             </div>
                             <h2
-                                className="mt-2 text-3xl font-medium text-[#F5F0EB] sm:text-4xl"
+                                className="mt-2 text-3xl font-medium text-ed-fg sm:text-4xl"
                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
                                 Everything you need to study and expand the archive
                             </h2>
                             <p
-                                className="mx-auto mt-2 max-w-xl text-[14px] text-[#6B6560]"
+                                className="mx-auto mt-2 max-w-xl text-[14px] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
                                 Purpose-built capabilities for careful research, cross-reference, listening, annotation,
@@ -648,93 +648,93 @@ export default function AppDownloadClient() {
                         <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
                             <motion.article
                                 {...fadeUp(0.04)}
-                                className="relative min-h-[200px] rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)] sm:col-span-2 lg:col-span-2"
+                                className="relative min-h-[200px] rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm sm:col-span-2 lg:col-span-2"
                             >
-                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
                                     Translation + Search
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
                                     <Search className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
-                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Academic Arabic Translation & Named Surah Search
                                 </h3>
-                                <p className="mt-1.5 max-w-lg text-[11px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1.5 max-w-lg text-[11px] leading-[1.55] text-ed-fg-secondary">
                                     Search canonical Quran text alongside English translation, Arabic phrases, named
                                     surahs, verse references, and your own scholarly annotations.
                                 </p>
-                                <div className="mt-4 rounded border border-[#2A2928] bg-[#141311] p-2.5 font-mono text-[8px] text-[#4A4542]">
+                                <div className="mt-4 rounded border border-ed-rule bg-ed-bg p-2.5 font-mono text-[8px] text-ed-fg-muted">
                                     <div className="mb-1.5 flex justify-between">
                                         <span>Live translation · 2:255</span>
-                                        <span className="text-[#C8794A]">Quran</span>
+                                        <span className="text-ed-accent">Quran</span>
                                     </div>
-                                    <div className="h-1 w-full rounded-full bg-[#25221F]" />
-                                    <div className="mt-1 h-1 w-[65%] rounded-full bg-[#25221F]" />
+                                    <div className="h-1 w-full rounded-full bg-ed-surface-strong" />
+                                    <div className="mt-1 h-1 w-[65%] rounded-full bg-ed-surface-strong" />
                                 </div>
                             </motion.article>
 
                             <motion.article
                                 {...fadeUp(0.08)}
-                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                                className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
-                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
                                     Visual Workspace
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
                                     <LayoutGrid className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
-                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Visual Whiteboard & Idea Trees
                                 </h3>
-                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
                                     Connect notes, verses, people, and topics visually without losing source context.
                                 </p>
                             </motion.article>
 
                             <motion.article
                                 {...fadeUp(0.12)}
-                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                                className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
-                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
                                     Viewer
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
                                     <Columns className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
-                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Split View & PDF Capture
                                 </h3>
-                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
                                     Compare source material with notes and capture useful passages.
                                 </p>
                             </motion.article>
 
                             <motion.article
                                 {...fadeUp(0.16)}
-                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                                className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
-                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
                                     Import
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
                                     <Download className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
-                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Universal Import Wizard
                                 </h3>
-                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
                                     Bring in Markdown, PDFs, audio, video, and existing collections without rebuilding the
                                     archive.
                                 </p>
@@ -742,21 +742,21 @@ export default function AppDownloadClient() {
 
                             <motion.article
                                 {...fadeUp(0.2)}
-                                className="relative rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.018)] p-5 transition-colors hover:border-[#353433] hover:bg-[rgba(255,255,255,0.026)]"
+                                className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
-                                <span className="absolute right-4 top-4 rounded-full border border-[#2A2928] px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-[#4A4542]">
+                                <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
                                     Customizable
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-[#2A2928] bg-[#191816] text-[#9E9690]">
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
                                     <Keyboard className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
-                                    className="text-lg font-medium text-[#F5F0EB]"
+                                    className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Customizable Keybindings
                                 </h3>
-                                <p className="mt-1.5 text-[11px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
                                     Keep navigation fast and keyboard-first, especially during research sessions.
                                 </p>
                             </motion.article>
@@ -764,43 +764,43 @@ export default function AppDownloadClient() {
 
                         {/* Architecture */}
                         <div className="mt-16 text-center">
-                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
                                 Core engine architecture
                             </div>
                             <p
-                                className="mx-auto mt-1 max-w-xl text-[14px] text-[#6B6560]"
+                                className="mx-auto mt-1 max-w-xl text-[14px] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
                                 Local-first primitives keep the archive useful even when the network disappears.
                             </p>
 
-                            <div className="mx-auto mt-7 max-w-2xl overflow-hidden rounded-lg border border-[#2A2928] text-left">
+                            <div className="mx-auto mt-7 max-w-2xl overflow-hidden rounded-lg border border-ed-rule text-left shadow-sm">
                                 {ARCHITECTURE_PILLARS.map((item, idx) => {
                                     const isOpen = openAccordionId === item.id;
                                     return (
                                         <div
                                             key={item.id}
-                                            className={idx !== ARCHITECTURE_PILLARS.length - 1 ? 'border-b border-[#2A2928]' : ''}
+                                            className={idx !== ARCHITECTURE_PILLARS.length - 1 ? 'border-b border-ed-rule' : ''}
                                         >
                                             <button
                                                 type="button"
                                                 onClick={() => setOpenAccordionId(isOpen ? '' : item.id)}
-                                                className="flex w-full items-center gap-2.5 bg-[#151412] px-3.5 py-3 text-left transition-colors hover:bg-[#1A1816]"
+                                                className="flex w-full items-center gap-2.5 bg-ed-surface px-3.5 py-3 text-left transition-colors hover:bg-ed-surface-strong"
                                             >
-                                                <span className="flex h-5 w-5 items-center justify-center rounded border border-[#2A2928] text-[#C8794A]">
+                                                <span className="flex h-5 w-5 items-center justify-center rounded border border-ed-rule text-ed-accent">
                                                     {item.icon}
                                                 </span>
-                                                <span className="text-[10px] font-semibold text-[#9E9690]">{item.title}</span>
-                                                <span className="rounded-full border border-[#2A2928] px-1.5 py-0.5 font-mono text-[7px] text-[#4A4542]">
+                                                <span className="text-[10px] font-semibold text-ed-fg">{item.title}</span>
+                                                <span className="rounded-full border border-ed-rule px-1.5 py-0.5 font-mono text-[7px] text-ed-fg-muted">
                                                     {item.badge}
                                                 </span>
                                                 <ChevronDown
-                                                    className={`ml-auto h-3 w-3 text-[#4A4542] transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#9E9690]' : ''
+                                                    className={`ml-auto h-3 w-3 text-ed-fg-muted transition-transform duration-200 ${isOpen ? 'rotate-180 text-ed-fg' : ''
                                                         }`}
                                                 />
                                             </button>
                                             {isOpen && (
-                                                <div className="bg-[#151412] px-11 pb-3.5 text-[10px] leading-[1.55] text-[#6B6560]">
+                                                <div className="bg-ed-surface px-11 pb-3.5 text-[10px] leading-[1.55] text-ed-fg-secondary">
                                                     {item.content}
                                                 </div>
                                             )}
@@ -813,20 +813,20 @@ export default function AppDownloadClient() {
                 </section>
 
                 {/* Workflow */}
-                <section className="border-t border-[rgba(255,255,255,0.055)] py-20 px-5 sm:px-7 sm:py-24">
+                <section className="border-t border-ed-rule py-20 px-5 sm:px-7 sm:py-24">
                     <div className="mx-auto max-w-5xl">
                         <motion.div {...fadeUp(0)} className="mb-10 text-center">
-                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
                                 Zero configuration onboarding
                             </div>
                             <h2
-                                className="mt-2 text-3xl font-medium text-[#F5F0EB] sm:text-4xl"
+                                className="mt-2 text-3xl font-medium text-ed-fg sm:text-4xl"
                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
                                 Up and running in seconds
                             </h2>
                             <p
-                                className="mx-auto mt-2 max-w-xl text-[14px] text-[#6B6560]"
+                                className="mx-auto mt-2 max-w-xl text-[14px] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
                                 No accounts to create. Point the app at your archive, let it index, and start working
@@ -835,55 +835,55 @@ export default function AppDownloadClient() {
                         </motion.div>
 
                         <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-                            <article className="rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.015)] p-5">
-                                <span className="inline-block rounded border border-[rgba(200,121,74,0.25)] px-1.5 py-0.5 font-mono text-[9px] text-[#C8794A]">
+                            <article className="rounded-lg border border-ed-rule bg-ed-surface p-5 shadow-sm">
+                                <span className="inline-block rounded border border-ed-accent/25 bg-ed-accent-soft px-1.5 py-0.5 font-mono text-[9px] text-ed-accent">
                                     01 · INSTALL
                                 </span>
                                 <h3
-                                    className="mt-4 text-lg font-medium text-[#F5F0EB]"
+                                    className="mt-4 text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Download the Native App
                                 </h3>
-                                <p className="mt-1 text-[10px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1 text-[10px] leading-[1.55] text-ed-fg-secondary">
                                     Choose your platform and install the desktop client. Your archive stays where you put
                                     it.
                                 </p>
                             </article>
-                            <article className="rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.015)] p-5">
-                                <span className="inline-block rounded border border-[rgba(200,121,74,0.25)] px-1.5 py-0.5 font-mono text-[9px] text-[#C8794A]">
+                            <article className="rounded-lg border border-ed-rule bg-ed-surface p-5 shadow-sm">
+                                <span className="inline-block rounded border border-ed-accent/25 bg-ed-accent-soft px-1.5 py-0.5 font-mono text-[9px] text-ed-accent">
                                     02 · OPEN
                                 </span>
                                 <h3
-                                    className="mt-4 text-lg font-medium text-[#F5F0EB]"
+                                    className="mt-4 text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Choose Your Archive
                                 </h3>
-                                <p className="mt-1 text-[10px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1 text-[10px] leading-[1.55] text-ed-fg-secondary">
                                     Open an existing collection or start a new local workspace. Indexing happens on your
                                     machine.
                                 </p>
                             </article>
-                            <article className="rounded-lg border border-[#2A2928] bg-[rgba(255,255,255,0.015)] p-5">
-                                <span className="inline-block rounded border border-[rgba(200,121,74,0.25)] px-1.5 py-0.5 font-mono text-[9px] text-[#C8794A]">
+                            <article className="rounded-lg border border-ed-rule bg-ed-surface p-5 shadow-sm">
+                                <span className="inline-block rounded border border-ed-accent/25 bg-ed-accent-soft px-1.5 py-0.5 font-mono text-[9px] text-ed-accent">
                                     03 · EXPLORE
                                 </span>
                                 <h3
-                                    className="mt-4 text-lg font-medium text-[#F5F0EB]"
+                                    className="mt-4 text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
                                     Explore & Interconnect
                                 </h3>
-                                <p className="mt-1 text-[10px] leading-[1.55] text-[#6B6560]">
+                                <p className="mt-1 text-[10px] leading-[1.55] text-ed-fg-secondary">
                                     Search, read, listen, annotate, and connect the sources that matter to your research.
                                 </p>
                             </article>
                         </div>
 
-                        <div className="mt-8 flex items-center gap-2.5 rounded-lg border border-[#2A2928] bg-[#151412] px-3.5 py-2.5 font-mono text-[10px] text-[#4A4542]">
-                            <Command className="h-3.5 w-3.5 text-[#C8794A]" />
-                            <strong className="font-medium text-[#9E9690]">Tip:</strong>
+                        <div className="mt-8 flex items-center gap-2.5 rounded-lg border border-ed-rule bg-ed-surface px-3.5 py-2.5 font-mono text-[10px] text-ed-fg-muted shadow-sm">
+                            <Command className="h-3.5 w-3.5 text-ed-accent" />
+                            <strong className="font-medium text-ed-fg">Tip:</strong>
                             <span>
                                 Press / anywhere to search · Press Ctrl+K to open command palette · All data remains local.
                             </span>
@@ -893,15 +893,15 @@ export default function AppDownloadClient() {
 
                 {/* Final CTA */}
                 <section
-                    className="border-t border-[rgba(255,255,255,0.055)] px-5 py-24 text-center sm:px-7 sm:py-28"
+                    className="border-t border-ed-rule px-5 py-24 text-center sm:px-7 sm:py-28"
                     style={{
                         background:
-                            'radial-gradient(ellipse 550px 230px at 50% 55%, rgba(200,121,74,0.035) 0%, transparent 70%)',
+                            'radial-gradient(ellipse 550px 230px at 50% 55%, rgba(184,98,51,0.035) 0%, transparent 70%)',
                     }}
                 >
                     <div className="mx-auto max-w-3xl">
                         <motion.div {...fadeUp(0)}>
-                            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[13px] border border-[#353433] bg-[#181715]">
+                            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[13px] border border-ed-rule-strong bg-ed-surface shadow-sm">
                                 <Image
                                     src="/assets/brand/submission-archives-mark.png"
                                     alt="Submission Archives"
@@ -910,17 +910,17 @@ export default function AppDownloadClient() {
                                     className="object-contain"
                                 />
                             </div>
-                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#4A4542]">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
                                 Public offline-ready build
                             </div>
                             <h2
-                                className="mt-2 text-3xl font-medium text-[#F5F0EB] sm:text-4xl"
+                                className="mt-2 text-3xl font-medium text-ed-fg sm:text-4xl"
                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
                                 Ready to explore the archive offline?
                             </h2>
                             <p
-                                className="mx-auto mt-2 max-w-lg text-[14px] text-[#6B6560]"
+                                className="mx-auto mt-2 max-w-lg text-[14px] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
                                 We are preparing the final polished release. The desktop app will download, index, search,
@@ -966,10 +966,10 @@ export default function AppDownloadClient() {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.98, opacity: 0 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="w-full max-w-[560px] overflow-hidden rounded-[10px] border border-[#353433] bg-[#171614] shadow-[0_30px_90px_rgba(0,0,0,0.6)]"
+                            className="w-full max-w-[560px] overflow-hidden rounded-[10px] border border-ed-rule-strong bg-ed-surface shadow-2xl"
                         >
-                            <div className="flex h-12 items-center gap-2.5 border-b border-[#2A2928] px-4">
-                                <Search className="h-4 w-4 text-[#4A4542]" />
+                            <div className="flex h-12 items-center gap-2.5 border-b border-ed-rule px-4">
+                                <Search className="h-4 w-4 text-ed-fg-muted" />
                                 <input
                                     type="text"
                                     autoFocus
@@ -981,12 +981,12 @@ export default function AppDownloadClient() {
                                             filteredPaletteActions[0].run({ close: closePalette, showToast });
                                         }
                                     }}
-                                    className="w-full bg-transparent text-[13px] text-[#F5F0EB] outline-none placeholder:text-[#4A4542]"
+                                    className="w-full bg-transparent text-[13px] text-ed-fg outline-none placeholder:text-ed-fg-muted"
                                 />
                             </div>
                             <div className="space-y-0.5 p-2">
                                 {filteredPaletteActions.length === 0 ? (
-                                    <div className="p-3 text-center text-[11px] text-[#6B6560]">
+                                    <div className="p-3 text-center text-[11px] text-ed-fg-muted">
                                         No matches for &ldquo;{paletteQuery}&rdquo;
                                     </div>
                                 ) : (
@@ -995,11 +995,11 @@ export default function AppDownloadClient() {
                                             key={action.id}
                                             type="button"
                                             onClick={() => action.run({ close: closePalette, showToast })}
-                                            className="flex w-full items-center gap-2.5 rounded-md p-2.5 text-[11px] text-[#9E9690] hover:bg-[#211F1D] hover:text-[#F5F0EB]"
+                                            className="flex w-full items-center gap-2.5 rounded-md p-2.5 text-[11px] text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-fg"
                                         >
                                             {action.icon}
                                             <span>{action.label}</span>
-                                            <span className="ml-auto font-mono text-[9px] text-[#4A4542]">{action.hint}</span>
+                                            <span className="ml-auto font-mono text-[9px] text-ed-fg-muted">{action.hint}</span>
                                         </button>
                                     ))
                                 )}
@@ -1016,7 +1016,7 @@ export default function AppDownloadClient() {
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 12 }}
-                        className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-md border border-[#353433] bg-[#1E1D1C] px-4 py-2.5 text-[11px] font-medium text-[#F5F0EB] shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
+                        className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-md border border-ed-rule-strong bg-ed-surface-strong px-4 py-2.5 text-[11px] font-medium text-ed-fg shadow-2xl"
                     >
                         {toastMessage}
                     </motion.div>
@@ -1048,13 +1048,13 @@ function SidebarItem({
             type="button"
             onClick={onClick}
             className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-[10px] transition-colors ${active
-                    ? 'bg-[rgba(200,121,74,0.08)] font-medium text-[#F5F0EB]'
-                    : 'text-[#6B6560] hover:bg-[#1B1917] hover:text-[#9E9690]'
+                    ? 'bg-ed-accent-soft font-medium text-ed-fg'
+                    : 'text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-fg'
                 }`}
         >
-            <span className={active ? 'text-[#C8794A]' : 'text-[#4A4542]'}>{icon}</span>
+            <span className={active ? 'text-ed-accent' : 'text-ed-fg-muted'}>{icon}</span>
             <span>{label}</span>
-            <span className="ml-auto font-mono text-[9px] text-[#4A4542]">{count}</span>
+            <span className="ml-auto font-mono text-[9px] text-ed-fg-muted">{count}</span>
         </button>
     );
 }
@@ -1073,11 +1073,11 @@ function PrimaryDownloadButton({
         <button
             type="button"
             onClick={onClick}
-            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-[#F5F0EB] bg-[#F5F0EB] px-4 text-[12px] font-semibold text-[#151311] transition-transform hover:-translate-y-0.5 hover:bg-white active:translate-y-0"
+            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-ed-fg bg-ed-fg px-4 text-[12px] font-semibold text-ed-bg transition-transform hover:-translate-y-0.5 hover:opacity-90 active:translate-y-0"
         >
             <Icon className="h-3.5 w-3.5 shrink-0" />
             <span>{label}</span>
-            <small className="border-l border-[#151311]/40 pl-2 font-mono text-[9px] opacity-75">v{APP_VERSION}</small>
+            <small className="border-l border-ed-bg/40 pl-2 font-mono text-[9px] opacity-75">v{APP_VERSION}</small>
         </button>
     );
 }
@@ -1095,7 +1095,7 @@ function SecondaryDownloadButton({
         <button
             type="button"
             onClick={onClick}
-            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-[#2A2928] bg-transparent px-4 text-[12px] font-semibold text-[#9E9690] transition-all hover:-translate-y-0.5 hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:translate-y-0"
+            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-ed-rule bg-ed-surface px-4 text-[12px] font-semibold text-ed-fg-muted transition-all hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg active:translate-y-0"
         >
             <Icon className="h-3.5 w-3.5 shrink-0" />
             <span>{PLATFORM_INFO[platform].label}</span>

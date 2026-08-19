@@ -3,107 +3,159 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ==========================================================================
-   Design tokens — "Illuminated Archive" (light) · "Midnight Vault" (dark)
-   Same `--ed-*` contract as before, extended with elevation, radii,
-   ambient light, grain, and a motion scale. Both themes ship together;
-   the existing .dark / [data-theme] switch flips between them.
+   Design tokens — "Illuminated Archival Paper" (light) · "Midnight Obsidian" (dark)
+   Comprehensive design token contract supporting both light & dark modes with
+   warm, scholarly aesthetics and high-contrast legibility.
    ========================================================================== */
 
 :root,
 [data-theme="light"] {
-  /* Surfaces & ink — clean monochrome light */
-  --ed-bg: #fafafa;
-  --ed-fg: #0a0a0a;
-  --ed-fg-muted: #737373;
-  --ed-rule: rgba(0, 0, 0, 0.08);
-  --ed-rule-strong: rgba(0, 0, 0, 0.16);
-  --ed-surface: #f5f5f5;
-  --ed-surface-strong: #ebebeb;
+  /* Surfaces & ink — Warm Archival Ivory Paper */
+  --ed-bg: #FBF9F5;
+  --ed-bg-secondary: #F2ECE3;
+  --ed-bg-tertiary: #E6DFD4;
+  --ed-surface: #F2ECE3;
+  --ed-surface-strong: #E6DFD4;
+  --ed-surface-raised: #FFFFFF;
 
-  /* Accent — monochrome: accent = foreground */
-  --ed-accent: #171717;
-  --ed-accent-strong: #0a0a0a;
-  --ed-accent-soft: #525252;
-  --ed-gold: #a3a3a3;
+  --ed-fg: #1C1A18;
+  --ed-fg-secondary: #524B45;
+  --ed-fg-muted: #736B63;
+  --ed-fg-faint: #9C9389;
 
-  /* Ambient light — nearly invisible neutral washes */
-  --ed-ambient-1: rgba(0, 0, 0, 0.02);
-  --ed-ambient-2: rgba(0, 0, 0, 0.015);
-  --ed-ambient-3: rgba(0, 0, 0, 0.01);
-  --ed-grain-opacity: 0.02;
+  --ed-rule: #E5DFD5;
+  --ed-rule-subtle: rgba(40, 30, 20, 0.06);
+  --ed-rule-strong: #D5CCC0;
+
+  /* Accent — Warm archival terracotta */
+  --ed-accent: #B86233;
+  --ed-accent-strong: #9E4F24;
+  --ed-accent-soft: rgba(184, 98, 51, 0.09);
+  --ed-accent-glow: rgba(184, 98, 51, 0.12);
+  --ed-gold: #9C7A3C;
+
+  /* Ambient light — warm archival washes */
+  --ed-ambient-1: rgba(184, 98, 51, 0.03);
+  --ed-ambient-2: rgba(90, 80, 70, 0.02);
+  --ed-ambient-3: rgba(184, 98, 51, 0.02);
+  --ed-grain-opacity: 0.025;
   --ed-grain-blend: multiply;
 
-  /* Elevation — pure neutral shadows */
-  --ed-shadow: rgba(0, 0, 0, 0.06);
+  /* Elevation — soft warm parchment shadows */
+  --ed-shadow: rgba(30, 25, 20, 0.06);
   --ed-shadow-sm:
-    0 1px 2px rgba(0, 0, 0, 0.04),
-    0 3px 10px -2px rgba(0, 0, 0, 0.04);
+    0 1px 3px rgba(30, 25, 20, 0.05),
+    0 2px 8px -2px rgba(30, 25, 20, 0.04);
   --ed-shadow-md:
-    0 2px 6px rgba(0, 0, 0, 0.04),
-    0 18px 44px -14px rgba(0, 0, 0, 0.1);
+    0 3px 10px rgba(30, 25, 20, 0.06),
+    0 12px 30px -8px rgba(30, 25, 20, 0.08);
   --ed-shadow-lg:
-    0 4px 14px rgba(0, 0, 0, 0.05),
-    0 36px 90px -24px rgba(0, 0, 0, 0.16);
-  --ed-shadow-glow: 0 10px 34px -10px rgba(0, 0, 0, 0.12);
+    0 6px 20px rgba(30, 25, 20, 0.07),
+    0 24px 60px -16px rgba(30, 25, 20, 0.12);
+  --ed-shadow-glow: 0 10px 34px -10px rgba(184, 98, 51, 0.15);
 
-  /* Viewer + shadcn bridges */
-  --ed-viewer-bg: #f0f0f0;
+  /* Viewer + shadcn + archive bridges */
+  --ed-viewer-bg: #F0EAE1;
   --background: var(--ed-bg);
   --foreground: var(--ed-fg);
   --border: var(--ed-rule);
   --muted: var(--ed-surface);
   --muted-foreground: var(--ed-fg-muted);
+
+  --archive-bg-primary: #FBF9F5;
+  --archive-bg-secondary: #F2ECE3;
+  --archive-bg-tertiary: #E6DFD4;
+  --archive-bg-elevated: #FFFFFF;
+  --archive-border: #E5DFD5;
+  --archive-border-hover: #D5CCC0;
+  --archive-text-primary: #1C1A18;
+  --archive-text-secondary: #524B45;
+  --archive-text-muted: #736B63;
+  --archive-text-faint: #9C9389;
+  --archive-accent: #B86233;
+  --archive-accent-hover: #9E4F24;
+  --archive-accent-soft: rgba(184, 98, 51, 0.09);
+  --archive-accent-glow: rgba(184, 98, 51, 0.12);
 }
 
 .dark,
 [data-theme="dark"] {
-  /* Surfaces & ink — pure monochrome dark */
-  --ed-bg: #0a0a0a;
-  --ed-fg: #fafafa;
-  --ed-fg-muted: #a1a1aa;
-  --ed-rule: rgba(255, 255, 255, 0.08);
-  --ed-rule-strong: rgba(255, 255, 255, 0.16);
-  --ed-surface: #171717;
-  --ed-surface-strong: #262626;
+  /* Surfaces & ink — Midnight Warm Obsidian */
+  --ed-bg: #0F0E0D;
+  --ed-bg-secondary: #161514;
+  --ed-bg-tertiary: #1C1B1A;
+  --ed-surface: #161514;
+  --ed-surface-strong: #1C1B1A;
+  --ed-surface-raised: #222120;
 
-  /* Accent — monochrome: accent = foreground (white) */
-  --ed-accent: #fafafa;
-  --ed-accent-strong: #e5e5e5;
-  --ed-accent-soft: #a1a1aa;
-  --ed-gold: #71717a;
+  --ed-fg: #F5F0EB;
+  --ed-fg-secondary: #9E9690;
+  --ed-fg-muted: #6B6560;
+  --ed-fg-faint: #4A4542;
 
-  /* Ambient light — nearly invisible neutral washes */
-  --ed-ambient-1: rgba(255, 255, 255, 0.015);
-  --ed-ambient-2: rgba(255, 255, 255, 0.01);
-  --ed-ambient-3: rgba(255, 255, 255, 0.008);
+  --ed-rule: #2A2928;
+  --ed-rule-subtle: rgba(255, 255, 255, 0.04);
+  --ed-rule-strong: #353433;
+
+  /* Accent — Copper Terracotta */
+  --ed-accent: #C8794A;
+  --ed-accent-strong: #D9916A;
+  --ed-accent-soft: rgba(200, 121, 74, 0.08);
+  --ed-accent-glow: rgba(200, 121, 74, 0.12);
+  --ed-gold: #D4AF37;
+
+  /* Ambient light — deep obsidian washes */
+  --ed-ambient-1: rgba(200, 121, 74, 0.04);
+  --ed-ambient-2: rgba(255, 255, 255, 0.015);
+  --ed-ambient-3: rgba(200, 121, 74, 0.02);
   --ed-grain-opacity: 0.03;
   --ed-grain-blend: overlay;
 
   /* Elevation — deep neutral shadows */
-  --ed-shadow: rgba(0, 0, 0, 0.34);
+  --ed-shadow: rgba(0, 0, 0, 0.4);
   --ed-shadow-sm:
-    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.45),
     0 3px 12px -2px rgba(0, 0, 0, 0.4);
   --ed-shadow-md:
-    0 2px 8px rgba(0, 0, 0, 0.4),
-    0 20px 52px -14px rgba(0, 0, 0, 0.6);
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    0 20px 48px -12px rgba(0, 0, 0, 0.6);
   --ed-shadow-lg:
-    0 6px 18px rgba(0, 0, 0, 0.42),
-    0 40px 100px -24px rgba(0, 0, 0, 0.68);
-  --ed-shadow-glow: 0 10px 40px -8px rgba(255, 255, 255, 0.06);
+    0 8px 24px rgba(0, 0, 0, 0.55),
+    0 36px 80px -20px rgba(0, 0, 0, 0.7);
+  --ed-shadow-glow: 0 10px 40px -8px rgba(200, 121, 74, 0.15);
 
   --ed-viewer-bg: #111111;
+  --background: var(--ed-bg);
+  --foreground: var(--ed-fg);
+  --border: var(--ed-rule);
+  --muted: var(--ed-surface);
+  --muted-foreground: var(--ed-fg-muted);
+
+  --archive-bg-primary: #0F0E0D;
+  --archive-bg-secondary: #161514;
+  --archive-bg-tertiary: #1C1B1A;
+  --archive-bg-elevated: #222120;
+  --archive-border: #2A2928;
+  --archive-border-hover: #353433;
+  --archive-text-primary: #F5F0EB;
+  --archive-text-secondary: #9E9690;
+  --archive-text-muted: #6B6560;
+  --archive-text-faint: #4A4542;
+  --archive-accent: #C8794A;
+  --archive-accent-hover: #D9916A;
+  --archive-accent-soft: rgba(200, 121, 74, 0.08);
+  --archive-accent-glow: rgba(200, 121, 74, 0.12);
 }
 
 /* Shared tokens — identical in both themes */
 :root {
-  /* Console ("device") panels — dark listening/screening rooms */
-  --ed-console: #111111;
-  --ed-console-raised: #1a1a1a;
-  --ed-console-fg: #fafafa;
-  --ed-console-muted: #71717a;
-  --ed-console-accent: #e5e5e5;
-  --ed-console-rule: rgba(255, 255, 255, 0.08);
+  /* Console ("device") panels */
+  --ed-console: var(--ed-surface);
+  --ed-console-raised: var(--ed-surface-strong);
+  --ed-console-fg: var(--ed-fg);
+  --ed-console-muted: var(--ed-fg-muted);
+  --ed-console-accent: var(--ed-accent);
+  --ed-console-rule: var(--ed-rule);
 
   /* Radii scale — Modern Enterprise Sleek Radii */
   --ed-radius-sm: 8px;
@@ -119,14 +171,6 @@
   /* Film grain (SVG turbulence, tiled) */
   --ed-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
 
-  /* Font aliases as plain (unlayered) declarations, not @theme tokens: Tailwind's
-     @layer theme only emits --font-sans at :root as `var(--font-inter), ...`,
-     but --font-inter itself is only defined on <body> (via next/font's variable
-     class), so it's invalid at :root and that invalidity inherits straight back
-     down — every element's `var(--font-sans)` was silently falling back to the
-     browser default. Literal family names sidestep the scope mismatch entirely
-     and match the @font-face rules next/font already injects. Custom keys like
-     --font-source-serif never even got emitted by @theme in the first place. */
   --font-sans: 'DM Sans', 'Inter', system-ui, sans-serif;
   --font-serif: 'Source Serif 4', Georgia, serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
@@ -141,12 +185,18 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-ed-bg: var(--ed-bg);
+  --color-ed-bg-secondary: var(--ed-bg-secondary);
+  --color-ed-bg-tertiary: var(--ed-bg-tertiary);
   --color-ed-fg: var(--ed-fg);
+  --color-ed-fg-secondary: var(--ed-fg-secondary);
   --color-ed-fg-muted: var(--ed-fg-muted);
+  --color-ed-fg-faint: var(--ed-fg-faint);
   --color-ed-rule: var(--ed-rule);
+  --color-ed-rule-subtle: var(--ed-rule-subtle);
   --color-ed-rule-strong: var(--ed-rule-strong);
   --color-ed-surface: var(--ed-surface);
   --color-ed-surface-strong: var(--ed-surface-strong);
+  --color-ed-surface-raised: var(--ed-surface-raised);
   --color-ed-accent: var(--ed-accent);
   --color-ed-accent-strong: var(--ed-accent-strong);
   --color-ed-accent-soft: var(--ed-accent-soft);

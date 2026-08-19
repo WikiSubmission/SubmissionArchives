@@ -76,17 +76,18 @@ export default function Header() {
 
     return (
         <>
-            {/* Header — matches zfsf.html nav design */}
+            {/* Header — matches modern archival layout */}
             <header
                 className="sticky top-0 z-[100] w-full"
                 style={{
                     height: 60,
-                    borderBottom: '1px solid #2A2928',
-                    background: 'rgba(15, 14, 13, 0.92)',
+                    borderBottom: '1px solid var(--ed-rule)',
+                    background: 'color-mix(in srgb, var(--ed-bg) 90%, transparent)',
                     backdropFilter: 'blur(16px) saturate(1.2)',
+                    WebkitBackdropFilter: 'blur(16px) saturate(1.2)',
                     display: 'flex',
                     alignItems: 'center',
-                    boxShadow: '0 1px 0 rgba(42,41,40,0.6)',
+                    boxShadow: '0 1px 2px var(--ed-shadow)',
                 }}
             >
                 <div
@@ -125,7 +126,7 @@ export default function Header() {
                                     fontSize: 13,
                                     fontWeight: 500,
                                     letterSpacing: '0.02em',
-                                    color: '#9E9690',
+                                    color: 'var(--ed-fg-muted)',
                                     textTransform: 'none',
                                 }}
                             >
@@ -151,14 +152,14 @@ export default function Header() {
                                         fontFamily: "'DM Sans', -apple-system, sans-serif",
                                         fontSize: 13,
                                         fontWeight: isActive ? 600 : 500,
-                                        color: isActive ? '#F5F0EB' : '#6B6560',
+                                        color: isActive ? 'var(--ed-fg)' : 'var(--ed-fg-muted)',
                                         textDecoration: 'none',
                                         position: 'relative',
                                         padding: '4px 0',
                                         transition: 'color 0.2s ease',
                                         letterSpacing: '0.01em',
                                     }}
-                                    className="header-nav-link"
+                                    className="header-nav-link hover:text-ed-fg"
                                     data-active={isActive ? 'true' : 'false'}
                                 >
                                     {item.name}
@@ -170,8 +171,8 @@ export default function Header() {
                                                 bottom: -2,
                                                 left: 0,
                                                 width: '100%',
-                                                height: 1,
-                                                background: '#C8794A',
+                                                height: 1.5,
+                                                background: 'var(--ed-accent)',
                                             }}
                                         />
                                     )}
@@ -206,7 +207,7 @@ export default function Header() {
                             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                             aria-expanded={isMenuOpen}
                             aria-controls={menuId}
-                            className="inline-flex min-h-[38px] min-w-[38px] items-center justify-center rounded-[6px] border border-[#2A2928] bg-[rgba(22,21,20,0.8)] text-[#9E9690] transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95 lg:hidden"
+                            className="inline-flex min-h-[38px] min-w-[38px] items-center justify-center rounded-[6px] border border-ed-rule bg-ed-surface/80 text-ed-fg-muted transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg active:scale-95 lg:hidden"
                         >
                             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                         </button>
@@ -226,7 +227,7 @@ export default function Header() {
                         <div
                             aria-hidden="true"
                             onClick={closeMenu}
-                            className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-250 ${
+                            className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-250 ${
                                 isMenuOpen ? 'opacity-100' : 'opacity-0'
                             }`}
                         />
@@ -242,8 +243,8 @@ export default function Header() {
                             }`}
                             style={{
                                 isolation: 'isolate',
-                                background: 'rgba(15, 14, 13, 0.97)',
-                                borderLeft: '1px solid #2A2928',
+                                background: 'color-mix(in srgb, var(--ed-bg) 96%, transparent)',
+                                borderLeft: '1px solid var(--ed-rule)',
                             }}
                         >
                             <div className="mb-4 px-1 flex items-center justify-between">
@@ -253,13 +254,13 @@ export default function Header() {
                                     fontWeight: 600,
                                     letterSpacing: '0.12em',
                                     textTransform: 'uppercase',
-                                    color: '#4A4542',
+                                    color: 'var(--ed-fg-faint)',
                                 }}>
                                     Navigation
                                 </span>
                                 <span style={{
                                     fontSize: 11,
-                                    color: '#4A4542',
+                                    color: 'var(--ed-fg-faint)',
                                     fontVariantNumeric: 'tabular-nums',
                                 }}>
                                     {PRIMARY_NAV.length} sections
@@ -283,12 +284,12 @@ export default function Header() {
                                                 minHeight: 48,
                                                 padding: '0 12px',
                                                 borderRadius: 6,
-                                                border: isActive ? '1px solid #353433' : '1px solid transparent',
-                                                background: isActive ? '#161514' : 'transparent',
+                                                border: isActive ? '1px solid var(--ed-rule-strong)' : '1px solid transparent',
+                                                background: isActive ? 'var(--ed-surface)' : 'transparent',
                                                 fontFamily: "'DM Sans', sans-serif",
                                                 fontSize: 15,
                                                 fontWeight: isActive ? 600 : 500,
-                                                color: isActive ? '#F5F0EB' : '#6B6560',
+                                                color: isActive ? 'var(--ed-fg)' : 'var(--ed-fg-muted)',
                                                 textDecoration: 'none',
                                                 transition: 'all 0.2s ease',
                                             }}
@@ -302,14 +303,14 @@ export default function Header() {
                                                             width: 5,
                                                             height: 5,
                                                             borderRadius: '50%',
-                                                            background: '#C8794A',
+                                                            background: 'var(--ed-accent)',
                                                             flexShrink: 0,
                                                         }}
                                                     />
                                                 )}
                                                 <span>{item.name}</span>
                                             </div>
-                                            <span style={{ fontSize: 11, color: '#4A4542', fontVariantNumeric: 'tabular-nums' }}>
+                                            <span style={{ fontSize: 11, color: 'var(--ed-fg-faint)', fontVariantNumeric: 'tabular-nums' }}>
                                                 {String(index + 1).padStart(2, '0')}
                                             </span>
                                         </Link>
@@ -317,9 +318,9 @@ export default function Header() {
                                 })}
                             </nav>
 
-                            <div className="mt-auto" style={{ borderTop: '1px solid #2A2928', paddingTop: 16 }}>
+                            <div className="mt-auto" style={{ borderTop: '1px solid var(--ed-rule)', paddingTop: 16 }}>
                                 <div className="flex items-center justify-between px-1">
-                                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: '#6B6560' }}>
+                                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: 'var(--ed-fg-muted)' }}>
                                         Theme &amp; Social
                                     </span>
                                     <div className="flex items-center gap-1.5">
@@ -348,7 +349,7 @@ export default function Header() {
 }
 
 const headerIconSurfaceClass =
-    'inline-flex h-[34px] w-[34px] items-center justify-center rounded-[6px] border border-[#2A2928] bg-transparent text-[#6B6560] transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A] hover:text-[#F5F0EB] active:scale-95';
+    'inline-flex h-[34px] w-[34px] items-center justify-center rounded-[6px] border border-ed-rule bg-transparent text-ed-fg-muted transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface hover:text-ed-fg active:scale-95';
 
 function HeaderIconButton({
     children,

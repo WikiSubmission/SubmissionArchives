@@ -29,7 +29,7 @@ const PRESET_QUERIES: Record<string, { query: string; label: string; results: Se
                 corpusLabel: 'Audio Master Tape',
                 title: 'QS-01: Sura 72–73 Jinns and Night Prayer',
                 targetLocation: 'Timestamp 04:22',
-                highlight: 'The places of worship belong to <mark class="bg-[#C8794A]/25 text-[#F5F0EB] px-1 rounded">God alone</mark>; do not call on anyone else beside God.',
+                highlight: 'The places of worship belong to <mark class="bg-ed-accent/20 text-ed-accent dark:text-ed-fg px-1 rounded font-semibold">God alone</mark>; do not call on anyone else beside God.',
                 href: '/audios/quran-studies/01-quran-study',
             },
             {
@@ -38,7 +38,7 @@ const PRESET_QUERIES: Record<string, { query: string; label: string; results: Se
                 corpusLabel: 'Qur\'an Verse',
                 title: 'Sura 39: The Groups (Az-Zumar) · Verse 45',
                 targetLocation: 'Verse 39:45',
-                highlight: 'When <mark class="bg-[#C8794A]/25 text-[#F5F0EB] px-1 rounded">God alone</mark> is mentioned, the hearts of those who do not believe in the Hereafter shrink with aversion.',
+                highlight: 'When <mark class="bg-ed-accent/20 text-ed-accent dark:text-ed-fg px-1 rounded font-semibold">God alone</mark> is mentioned, the hearts of those who do not believe in the Hereafter shrink with aversion.',
                 href: '/scripture/quran',
             },
             {
@@ -47,7 +47,7 @@ const PRESET_QUERIES: Record<string, { query: string; label: string; results: Se
                 corpusLabel: 'Published Book',
                 title: 'Quran, Hadith, and Islam (1982)',
                 targetLocation: 'Chapter 1 · Page 12',
-                highlight: 'True Submission is absolute devotion to <mark class="bg-[#C8794A]/25 text-[#F5F0EB] px-1 rounded">God alone</mark>, without idols, saints, or fabricated human traditions.',
+                highlight: 'True Submission is absolute devotion to <mark class="bg-ed-accent/20 text-ed-accent dark:text-ed-fg px-1 rounded font-semibold">God alone</mark>, without idols, saints, or fabricated human traditions.',
                 href: '/written',
             },
             {
@@ -56,7 +56,7 @@ const PRESET_QUERIES: Record<string, { query: string; label: string; results: Se
                 corpusLabel: 'Video Lecture',
                 title: 'What is Life All About?',
                 targetLocation: 'Chapter Marker 39:10',
-                highlight: 'One God, one message across all eras uniting Abraham, Moses, Jesus, and Muhammad in devotion to <mark class="bg-[#C8794A]/25 text-[#F5F0EB] px-1 rounded">God alone</mark>.',
+                highlight: 'One God, one message across all eras uniting Abraham, Moses, Jesus, and Muhammad in devotion to <mark class="bg-ed-accent/20 text-ed-accent dark:text-ed-fg px-1 rounded font-semibold">God alone</mark>.',
                 href: '/videos',
             },
         ],
@@ -71,7 +71,7 @@ const PRESET_QUERIES: Record<string, { query: string; label: string; results: Se
                 corpusLabel: 'Instructional Video',
                 title: 'The Great Debate: Dr. Rashad Khalifa vs Dr. Abdel Rahman',
                 targetLocation: 'Chapter Marker 55:30',
-                highlight: 'The 19-based letter counts in the initialed Surahs provide a <mark class="bg-[#C8794A]/25 text-[#F5F0EB] px-1 rounded">mathematical miracle</mark> impossible to imitate.',
+                highlight: 'The 19-based letter counts in the initialed Surahs provide a <mark class="bg-ed-accent/20 text-ed-accent dark:text-ed-fg px-1 rounded font-semibold">mathematical miracle</mark> impossible to imitate.',
                 href: '/videos',
             },
             {
@@ -104,7 +104,7 @@ const PRESET_QUERIES: Record<string, { query: string; label: string; results: Se
                 corpusLabel: 'Qur\'an Verse',
                 title: 'Sura 3: The Family of Imran (Al-Imran) · Verse 81',
                 targetLocation: 'Verse 3:81',
-                highlight: 'God took a <mark class="bg-[#C8794A]/25 text-[#F5F0EB] px-1 rounded">covenant from the prophets</mark>: "I have given you the scripture and wisdom. Afterwards, a messenger will come to confirm..."',
+                highlight: 'God took a <mark class="bg-ed-accent/20 text-ed-accent dark:text-ed-fg px-1 rounded font-semibold">covenant from the prophets</mark>: "I have given you the scripture and wisdom. Afterwards, a messenger will come to confirm..."',
                 href: '/scripture/quran',
             },
             {
@@ -128,7 +128,7 @@ const PRESET_QUERIES: Record<string, { query: string; label: string; results: Se
                 corpusLabel: 'Video Lecture',
                 title: 'What is Life All About?',
                 targetLocation: 'Chapter Marker 26:45',
-                highlight: 'Instruction and theological basis for the five daily <mark class="bg-[#C8794A]/25 text-[#F5F0EB] px-1 rounded">contact prayers (Salat)</mark> preserved since Abraham.',
+                highlight: 'Instruction and theological basis for the five daily <mark class="bg-ed-accent/20 text-ed-accent dark:text-ed-fg px-1 rounded font-semibold">contact prayers (Salat)</mark> preserved since Abraham.',
                 href: '/videos',
             },
             {
@@ -199,19 +199,19 @@ export function SearchSection() {
             {/* Header & Description */}
             <div>
                 <Reveal>
-                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#F5F0EB]">
+                    <h2 className="font-serif text-[clamp(1.85rem,3.6vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg">
                         Universal Search Engine
                     </h2>
                 </Reveal>
                 <Reveal delay={80}>
                     <p
-                        className="mt-3 max-w-3xl text-base leading-[1.65] text-[#9E9690] sm:text-lg"
+                        className="mt-3 max-w-3xl text-base leading-[1.65] text-ed-fg-secondary sm:text-lg"
                         style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                     >
                         Query across all recorded sermons, conference talks, newsletter issues, books, appendices, and scripture verses simultaneously with instant direct jump links.
                     </p>
                 </Reveal>
-                <div className="mt-4 h-[2px] w-20 bg-[#C8794A]" />
+                <div className="mt-4 h-[2px] w-20 bg-ed-accent" />
             </div>
 
             {/* Omnisearch Command Console */}
@@ -220,23 +220,23 @@ export function SearchSection() {
                     <GlassSheen />
 
                     {/* Search Bar Header */}
-                    <div className="border-b border-[#2A2928] bg-[#161514] p-4 sm:p-6">
+                    <div className="border-b border-ed-rule bg-ed-surface p-4 sm:p-6">
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
                             <div className="relative min-w-0 flex-1">
-                                <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6B6560]" />
+                                <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
                                 <input
                                     type="text"
                                     value={customQuery}
                                     onChange={(e) => setCustomQuery(e.target.value)}
                                     placeholder="Search transcripts, perspectives, appendices..."
-                                    className="w-full rounded-[4px] border border-[#2A2928] bg-[#0E0D0C] py-2.5 pl-10 pr-10 font-sans text-sm text-[#F5F0EB] placeholder:text-[#6B6560] focus:border-[#C8794A] focus:outline-none focus:ring-1 focus:ring-[#C8794A]"
+                                    className="w-full rounded-[4px] border border-ed-rule bg-ed-bg py-2.5 pl-10 pr-10 font-sans text-sm text-ed-fg placeholder:text-ed-fg-muted focus:border-ed-accent focus:outline-none focus:ring-1 focus:ring-ed-accent"
                                 />
                                 {customQuery ? (
                                     <button
                                         type="button"
                                         onClick={() => setCustomQuery('')}
                                         aria-label="Clear search query"
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6B6560] hover:text-[#F5F0EB]"
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-ed-fg-muted hover:text-ed-fg"
                                     >
                                         <X className="h-4 w-4" />
                                     </button>
@@ -245,11 +245,11 @@ export function SearchSection() {
                             <div className="flex items-center gap-2 sm:shrink-0">
                                 <button
                                     type="button"
-                                    className="inline-flex items-center justify-center rounded-[4px] bg-[#C8794A] px-4 py-2.5 font-sans text-xs font-bold text-[#0F0E0D] transition-all hover:bg-[#D9916A]"
+                                    className="inline-flex items-center justify-center rounded-[4px] bg-ed-accent px-4 py-2.5 font-sans text-xs font-bold text-white dark:text-[#0F0E0D] transition-all hover:opacity-90"
                                 >
                                     Search
                                 </button>
-                                <span className="hidden sm:inline-flex items-center gap-1 rounded-[4px] border border-[#2A2928] bg-[#161514] px-2 py-2.5 font-sans text-xs text-[#6B6560]">
+                                <span className="hidden sm:inline-flex items-center gap-1 rounded-[4px] border border-ed-rule bg-ed-surface px-2 py-2.5 font-sans text-xs text-ed-fg-muted">
                                     Ctrl + K
                                 </span>
                             </div>
@@ -257,7 +257,7 @@ export function SearchSection() {
 
                         {/* Interactive Query Playground Pills */}
                         <div className="mt-4 flex flex-wrap items-center gap-2">
-                            <span className="font-sans text-xs font-semibold text-[#6B6560] mr-1">
+                            <span className="font-sans text-xs font-semibold text-ed-fg-muted mr-1">
                                 Try Research Queries:
                             </span>
                             {PRESET_KEYS.map((key) => {
@@ -272,8 +272,8 @@ export function SearchSection() {
                                         }}
                                         className={`rounded-md px-3 py-1 font-sans text-xs transition-all ${
                                             selectedPresetKey === key
-                                                ? 'border border-[#C8794A] bg-[#C8794A]/20 text-[#F5F0EB] font-bold shadow-sm'
-                                                : 'border border-[#2A2928] bg-[#121110] text-[#9E9690] hover:text-[#F5F0EB]'
+                                                ? 'border border-ed-accent bg-ed-accent/20 text-ed-accent dark:text-ed-fg font-bold shadow-sm'
+                                                : 'border border-ed-rule bg-ed-bg text-ed-fg-secondary hover:text-ed-fg'
                                         }`}
                                     >
                                         {preset.label}
@@ -284,9 +284,9 @@ export function SearchSection() {
                     </div>
 
                     {/* Filter Strip */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#2A2928] bg-[#121110] px-4 py-2.5 sm:px-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg px-4 py-2.5 sm:px-6">
                         <div className="flex flex-wrap items-center gap-1.5">
-                            <span className="font-sans text-xs font-semibold text-[#6B6560] mr-1">Filter:</span>
+                            <span className="font-sans text-xs font-semibold text-ed-fg-muted mr-1">Filter:</span>
                             {(
                                 [
                                     { id: 'all', label: 'All Corpi' },
@@ -302,8 +302,8 @@ export function SearchSection() {
                                     onClick={() => setActiveCorpusFilter(filter.id)}
                                     className={`rounded px-2.5 py-0.5 font-sans text-xs transition-colors ${
                                         activeCorpusFilter === filter.id
-                                            ? 'bg-[#C8794A]/20 text-[#C8794A] font-bold border border-[#C8794A]/40'
-                                            : 'text-[#6B6560] hover:text-[#9E9690]'
+                                            ? 'bg-ed-accent/20 text-ed-accent font-bold border border-ed-accent/40'
+                                            : 'text-ed-fg-muted hover:text-ed-fg'
                                     }`}
                                 >
                                     {filter.label}
@@ -311,57 +311,57 @@ export function SearchSection() {
                             ))}
                         </div>
 
-                        <span className="font-sans text-xs text-[#6B6560]">
+                        <span className="font-sans text-xs text-ed-fg-muted">
                             Showing {filteredResults.length} Verified Citations
                         </span>
                     </div>
 
                     {/* Search Results Deck */}
-                    <div className="space-y-3 bg-[#0E0D0C] p-3 sm:p-4">
+                    <div className="space-y-3 bg-ed-bg p-3 sm:p-4">
                         {filteredResults.map((result, idx) => (
                             <div
                                 key={result.id}
-                                className="rounded-[12px] border border-[#2A2928] bg-[#161514] p-4 sm:p-5 transition-all duration-200 hover:border-[#353433]"
+                                className="rounded-[12px] border border-ed-rule bg-ed-surface p-4 sm:p-5 transition-all duration-200 hover:border-ed-rule-strong"
                             >
-                                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#2A2928] pb-3">
+                                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-rule pb-3">
                                     <div className="flex items-center gap-2">
-                                        <span className="rounded-[4px] border border-[#2A2928] bg-[#121110] px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-[#F5F0EB]">
+                                        <span className="rounded-[4px] border border-ed-rule bg-ed-bg px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg">
                                             {String(idx + 1).padStart(2, '0')}
                                         </span>
-                                        <span className="rounded-[4px] border border-[#2A2928] bg-[#161514] px-3 py-0.5 font-sans text-[0.68rem] font-bold text-[#9E9690]">
+                                        <span className="rounded-[4px] border border-ed-rule bg-ed-surface px-3 py-0.5 font-sans text-[0.68rem] font-bold text-ed-fg-muted">
                                             {result.corpusLabel}
                                         </span>
                                     </div>
-                                    <span className="font-sans text-xs font-semibold text-[#C8794A]">
+                                    <span className="font-sans text-xs font-semibold text-ed-accent">
                                         [{result.targetLocation}]
                                     </span>
                                 </div>
 
                                 <Link href={result.href} className="group block pt-3">
-                                    <h4 className="font-serif text-lg font-semibold leading-snug text-[#F5F0EB] transition-colors group-hover:text-[#D9916A] sm:text-xl">
+                                    <h4 className="font-serif text-lg font-semibold leading-snug text-ed-fg transition-colors group-hover:text-ed-accent sm:text-xl">
                                         {result.title}
                                     </h4>
                                 </Link>
 
                                 <Link
                                     href={result.href}
-                                    className="group mt-3 block rounded-[8px] border border-[#2A2928] bg-[#0E0D0C] p-4 transition hover:border-[#353433]"
+                                    className="group mt-3 block rounded-[8px] border border-ed-rule bg-ed-bg p-4 transition hover:border-ed-rule-strong"
                                 >
                                     <div className="mb-2 flex items-center justify-between gap-2">
-                                        <span className="font-sans text-[0.68rem] font-bold uppercase tracking-widest text-[#6B6560]">
+                                        <span className="font-sans text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
                                             Best Matching Passage
                                         </span>
-                                        <span className="inline-flex items-center gap-1.5 rounded-[4px] bg-[#C8794A] px-3 py-1 font-sans text-xs font-bold text-[#0F0E0D] transition-transform group-hover:translate-x-0.5">
+                                        <span className="inline-flex items-center gap-1.5 rounded-[4px] bg-ed-accent px-3 py-1 font-sans text-xs font-bold text-white dark:text-[#0F0E0D] transition-transform group-hover:translate-x-0.5">
                                             Direct Jump
                                             <ArrowRight className="h-3 w-3" />
                                         </span>
                                     </div>
                                     <div className="flex items-start gap-2">
-                                        <span className="select-none font-serif text-2xl leading-none text-[#4A4542]" aria-hidden="true">
+                                        <span className="select-none font-serif text-2xl leading-none text-ed-fg-muted" aria-hidden="true">
                                             &ldquo;
                                         </span>
                                         <p
-                                            className="text-sm leading-relaxed text-[#9E9690]"
+                                            className="text-sm leading-relaxed text-ed-fg-secondary"
                                             dangerouslySetInnerHTML={{ __html: result.highlight }}
                                         />
                                     </div>
@@ -371,15 +371,15 @@ export function SearchSection() {
                     </div>
 
                     {/* Console Footer Callout */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#2A2928] bg-[#161514] px-4 py-3 sm:px-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-ed-rule bg-ed-surface px-4 py-3 sm:px-6">
                         <Link
                             href="/search"
-                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-[#F5F0EB] hover:text-[#C8794A] transition-colors"
+                            className="inline-flex items-center gap-2 font-sans text-xs font-semibold text-ed-fg hover:text-ed-accent transition-colors"
                         >
                             <span>Launch Full-Screen Universal Search Console</span>
-                            <ArrowRight className="h-3.5 w-3.5 text-[#C8794A]" />
+                            <ArrowRight className="h-3.5 w-3.5 text-ed-accent" />
                         </Link>
-                        <span className="font-sans text-xs text-[#6B6560]">
+                        <span className="font-sans text-xs text-ed-fg-muted">
                             Instant Multi-Corpus Evidence Retrieval
                         </span>
                     </div>
@@ -390,12 +390,12 @@ export function SearchSection() {
             <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
                 {SEARCH_HIGHLIGHTS.map((item, idx) => (
                     <Reveal key={item.title} delay={160 + idx * 80}>
-                        <div className="flex h-full flex-col justify-between rounded-xl border border-[#2A2928] bg-[#161514] p-5 shadow-sm transition-all duration-200 hover:border-[#353433] hover:bg-[#1C1B1A]">
+                        <div className="flex h-full flex-col justify-between rounded-xl border border-ed-rule bg-ed-surface p-5 shadow-sm transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong">
                             <div>
-                                <h4 className="font-sans text-sm font-semibold text-[#F5F0EB]">
+                                <h4 className="font-sans text-sm font-semibold text-ed-fg">
                                     {item.title}
                                 </h4>
-                                <p className="mt-2 text-xs leading-[1.6] text-[#9E9690]">
+                                <p className="mt-2 text-xs leading-[1.6] text-ed-fg-secondary">
                                     {item.description}
                                 </p>
                             </div>
