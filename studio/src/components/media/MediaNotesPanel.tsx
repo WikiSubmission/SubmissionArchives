@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { convertFileSrc } from '@tauri-apps/api/core'
 import { open as openDialog } from '@tauri-apps/plugin-dialog'
-import { CaretLeft, ListMagnifyingGlass, PushPin, PushPinSlash, Quotes } from '@phosphor-icons/react'
+import { CaretLeft, CaretRight, ListMagnifyingGlass, PushPin, PushPinSlash, Quotes } from '@phosphor-icons/react'
 import {
   findActiveChapterIndex,
   findActiveCueIndex,
@@ -174,6 +174,14 @@ export default function MediaNotesPanel() {
     [activeItem, currentTime]
   )
 
+  const currentIndex = useMemo(() => {
+    if (!selected) return -1
+    return catalog.findIndex((candidate) => candidate.id === selected.id)
+  }, [catalog, selected])
+
+  const prevItem = currentIndex > 0 ? catalog[currentIndex - 1] : null
+  const nextItem = currentIndex >= 0 && currentIndex < catalog.length - 1 ? catalog[currentIndex + 1] : null
+
   const quoteCue = useCallback(
     (cue: TranscriptCue) => {
       const item = selectedRef.current
@@ -249,8 +257,17 @@ export default function MediaNotesPanel() {
       {/* Header */}
       <div className="flex items-center gap-1.5 border-b border-ed-rule px-2.5 py-2">
         {selected && pickerOpen && (
-          <button onClick={() => setPickerOpen(false)} className="st-media-icon" title="Back to the player">
+          <button onClick={() => setPickerOpen(false)} className="st-media-icon" title="Back to current playback">
             <CaretLeft size={12} weight="bold" />
+          </button>
+        )}
+        {selected && !pickerOpen && (
+          <button
+            onClick={() => setPickerOpen(true)}
+            className="st-media-icon text-ed-accent hover:text-ed-fg"
+            title="Back to library / browse all lectures"
+          >
+            <CaretLeft size={13} weight="bold" />
           </button>
         )}
         <div className="min-w-0 flex-1">
@@ -275,7 +292,7 @@ export default function MediaNotesPanel() {
           {pinnedToNote ? <PushPin size={13} /> : <PushPinSlash size={13} />}
         </button>
         {selected && !pickerOpen && (
-          <button onClick={() => setPickerOpen(true)} className="st-media-icon" title="Choose another lecture">
+          <button onClick={() => setPickerOpen(true)} className="st-media-icon" title="Browse / choose another lecture">
             <ListMagnifyingGlass size={13} />
           </button>
         )}
@@ -332,9 +349,34 @@ export default function MediaNotesPanel() {
                 title="Quote the cue now playing (Ctrl+Shift+Q)"
               >
                 <Quotes size={12} />
-                Quote cue
+                Quote
               </button>
-              <span className="ml-auto truncate text-[10px] text-ed-fg-faint">{activeItem.author}</span>
+              <button
+                onClick={() => setPickerOpen(true)}
+                className="st-media-chip"
+                title="Browse all indexed audios and videos"
+              >
+                <ListMagnifyingGlass size={12} />
+                Browse all
+              </button>
+              <div className="ml-auto flex items-center gap-1">
+                <button
+                  onClick={() => prevItem && selectItem(prevItem)}
+                  disabled={!prevItem}
+                  className="st-media-icon disabled:opacity-30"
+                  title={prevItem ? `Previous: ${prevItem.displayTitle}` : 'No previous lecture'}
+                >
+                  <CaretLeft size={12} weight="bold" />
+                </button>
+                <button
+                  onClick={() => nextItem && selectItem(nextItem)}
+                  disabled={!nextItem}
+                  className="st-media-icon disabled:opacity-30"
+                  title={nextItem ? `Next: ${nextItem.displayTitle}` : 'No next lecture'}
+                >
+                  <CaretRight size={12} weight="bold" />
+                </button>
+              </div>
             </div>
           </>
         )

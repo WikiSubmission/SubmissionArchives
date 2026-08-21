@@ -25,7 +25,16 @@ interface CueRowProps {
 const CueRow = memo(function CueRow({ cue, active, onSeek, onQuote, onCopy }: CueRowProps) {
   return (
     <div
-      className={`group border-l-2 px-2.5 py-2 transition-colors ${
+      role="button"
+      tabIndex={0}
+      onClick={() => onSeek(cue.startTime)}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          onSeek(cue.startTime)
+        }
+      }}
+      className={`group cursor-pointer border-l-2 px-2.5 py-2 transition-colors select-text ${
         active
           ? 'border-ed-accent bg-ed-accent/10'
           : 'border-transparent hover:border-ed-rule-strong hover:bg-ed-surface/60'
@@ -33,7 +42,11 @@ const CueRow = memo(function CueRow({ cue, active, onSeek, onQuote, onCopy }: Cu
     >
       <div className="flex items-center gap-2">
         <button
-          onClick={() => onSeek(cue.startTime)}
+          type="button"
+          onClick={(event) => {
+            event.stopPropagation()
+            onSeek(cue.startTime)
+          }}
           title={`Jump to ${formatSeconds(cue.startTime)}`}
           className={`font-mono text-[10px] font-semibold tabular-nums transition-colors ${
             active ? 'text-ed-accent' : 'text-ed-fg-faint hover:text-ed-accent'
@@ -47,17 +60,33 @@ const CueRow = memo(function CueRow({ cue, active, onSeek, onQuote, onCopy }: Cu
           </span>
         )}
         <span className="ml-auto flex items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100">
-          <button onClick={() => onQuote(cue)} className="st-media-icon" title="Insert as blockquote citation">
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation()
+              onQuote(cue)
+            }}
+            className="st-media-icon"
+            title="Insert as blockquote citation"
+          >
             <Quotes size={12} />
           </button>
-          <button onClick={() => onCopy(cue)} className="st-media-icon" title="Copy cue text">
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation()
+              onCopy(cue)
+            }}
+            className="st-media-icon"
+            title="Copy cue text"
+          >
             <Copy size={12} />
           </button>
         </span>
       </div>
       <p
         className={`mt-1 text-[12.5px] leading-relaxed ${
-          active ? 'text-ed-fg' : 'text-ed-fg-secondary group-hover:text-ed-fg'
+          active ? 'text-ed-fg font-medium' : 'text-ed-fg-secondary group-hover:text-ed-fg'
         }`}
       >
         {cue.text}
@@ -92,7 +121,7 @@ export default function TranscriptTeleprompter({
   const heightsRef = useRef<number[]>([])
   const [measureVersion, setMeasureVersion] = useState(0)
   const measureFrameRef = useRef<number | null>(null)
-  const programmaticScrollRef = useRef(false)
+  const lastProgrammaticScrollRef = useRef(0)
 
   const visibleCues = useMemo(() => {
     const needle = query.trim().toLowerCase()
@@ -189,9 +218,16 @@ export default function TranscriptTeleprompter({
     if (!element) return
     const target = Math.max(0, (offsets[activeViewIndex] ?? 0) - element.clientHeight / 3)
     if (Math.abs(element.scrollTop - target) < 24) return
-    programmaticScrollRef.current = true
+    lastProgrammaticScrollRef.current = Date.now()
     element.scrollTo({ top: target, behavior: 'smooth' })
   }, [activeViewIndex, autoScroll, offsets])
+
+  const scrollToActive = useCallback(() => {
+    if (activeViewIndex < 0 || !scrollRef.current) return
+    const target = Math.max(0, (offsets[activeViewIndex] ?? 0) - scrollRef.current.clientHeight / 3)
+    lastProgrammaticScrollRef.current = Date.now()
+    scrollRef.current.scrollTo({ top: target, behavior: 'smooth' })
+  }, [activeViewIndex, offsets])
 
   const handleCopy = useCallback((cue: TranscriptCue) => {
     void navigator.clipboard
@@ -202,6 +238,14 @@ export default function TranscriptTeleprompter({
       })
       .catch(() => setCopiedId(null))
   }, [])
+
+  const handleSeekAndSync = useCallback(
+    (seconds: number) => {
+      onSeek(seconds)
+      setAutoScroll(true)
+    },
+    [onSeek]
+  )
 
   const rows = []
   for (let index = startIndex; index < endIndex; index += 1) {
@@ -216,7 +260,7 @@ export default function TranscriptTeleprompter({
         <CueRow
           cue={cue}
           active={cue.id === activeCueId}
-          onSeek={onSeek}
+          onSeek={handleSeekAndSync}
           onQuote={onQuote}
           onCopy={handleCopy}
         />
@@ -225,7 +269,7 @@ export default function TranscriptTeleprompter({
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
+    <div className="relative flex min-h-0 flex-1 flex-col">
       {/* Transcript toolbar */}
       <div className="flex items-center gap-1.5 border-b border-ed-rule px-2.5 py-1.5">
         <div className="relative flex-1">
@@ -242,6 +286,7 @@ export default function TranscriptTeleprompter({
           />
           {query && (
             <button
+              type="button"
               onClick={() => setQuery('')}
               className="absolute right-1.5 top-1/2 -translate-y-1/2 text-ed-fg-faint hover:text-ed-fg"
               aria-label="Clear transcript search"
@@ -251,11 +296,17 @@ export default function TranscriptTeleprompter({
           )}
         </div>
         <button
-          onClick={() => setAutoScroll((value) => !value)}
-          title={autoScroll ? 'Auto-scroll on — click to browse freely' : 'Auto-scroll off'}
-          className={`st-media-icon ${autoScroll ? 'st-media-icon-primary' : ''}`}
+          type="button"
+          onClick={() => {
+            const next = !autoScroll
+            setAutoScroll(next)
+            if (next) scrollToActive()
+          }}
+          title={autoScroll ? 'Auto-track active (scrolling manually pauses tracking)' : 'Auto-track paused — click to sync'}
+          className={`st-media-icon flex items-center gap-1 px-1.5 ${autoScroll ? 'st-media-icon-primary' : 'text-ed-fg-muted hover:text-ed-fg'}`}
         >
-          <ArrowsInLineVertical size={13} />
+          <ArrowsInLineVertical size={13} weight={autoScroll ? 'bold' : 'regular'} />
+          <span className="text-[10px] font-medium">{autoScroll ? 'Tracking' : 'Sync'}</span>
         </button>
         <span className="min-w-[3.5rem] text-right text-[10px] tabular-nums text-ed-fg-faint">
           {query ? `${visibleCues.length}/${cues.length}` : `${cues.length} cues`}
@@ -267,11 +318,17 @@ export default function TranscriptTeleprompter({
         ref={scrollRef}
         onScroll={(event) => {
           setScrollTop(event.currentTarget.scrollTop)
-          // A real drag means the reader took over; a smooth programmatic scroll
-          // fires the same event, so only user scrolls release auto-scroll.
-          if (programmaticScrollRef.current) programmaticScrollRef.current = false
+          // A user drag / scroll releases auto-scroll; programmatic scroll within threshold does not.
+          if (Date.now() - lastProgrammaticScrollRef.current > 700) {
+            if (autoScroll) setAutoScroll(false)
+          }
         }}
-        onWheel={() => setAutoScroll(false)}
+        onWheel={() => {
+          if (autoScroll) setAutoScroll(false)
+        }}
+        onTouchMove={() => {
+          if (autoScroll) setAutoScroll(false)
+        }}
         className="relative min-h-0 flex-1 overflow-y-auto scrollbar-thin"
       >
         {loading ? (
@@ -288,6 +345,24 @@ export default function TranscriptTeleprompter({
           <div style={{ height: totalHeight, position: 'relative' }}>{rows}</div>
         )}
       </div>
+
+      {/* Floating Sync Pill when auto-track is disengaged */}
+      {!autoScroll && activeCueId != null && activeViewIndex >= 0 && (
+        <div className="pointer-events-none absolute bottom-3 left-0 right-0 z-20 flex justify-center">
+          <button
+            type="button"
+            onClick={() => {
+              setAutoScroll(true)
+              scrollToActive()
+            }}
+            className="pointer-events-auto flex items-center gap-1.5 rounded-full bg-ed-accent px-3 py-1.5 text-[11px] font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+            title="Resume transcript auto-tracking"
+          >
+            <ArrowsInLineVertical size={13} weight="bold" />
+            <span>Sync to playback</span>
+          </button>
+        </div>
+      )}
 
       {copiedId != null && (
         <div className="border-t border-ed-rule px-2.5 py-1 text-[10px] text-ed-success">Cue copied to clipboard</div>

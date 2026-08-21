@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   Search, X, Download, SkipBack, SkipForward,
   Play, Pause, Volume2, VolumeX, Share2, ChevronDown,
+  Locate, LocateFixed, ArrowLeft, ChevronLeft, ChevronRight,
 } from "lucide-react";
 import { useGlobalPlayer } from "@/components/player/GlobalMediaPlayer";
 import { getMediaHref } from "@/lib/utils";
@@ -163,6 +164,8 @@ export default function GoldenPlayer({
   segments: englishSegments,
   segments_ar: arabicSegments,
   mediaUrl,
+  prev,
+  next,
   initialSeekTime,
   initialTranscriptLang,
 }: GoldenPlayerProps) {
@@ -183,7 +186,7 @@ export default function GoldenPlayer({
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const [isUserScrolling, setIsUserScrolling] = useState(false);
+  const [autoTrack, setAutoTrack] = useState(true);
 
   /* ---------- Transcript Language ---------- */
   const hasArabicTranscript = (arabicSegments?.length ?? 0) > 0;
@@ -194,7 +197,6 @@ export default function GoldenPlayer({
   const playerRef = useRef<any>(null);
   const transcriptRef = useRef<HTMLDivElement>(null);
   const toastTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  const userScrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const lastProgrammaticScrollRef = useRef(0);
   const hasSeekedToInitial = useRef(false);
   const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -298,7 +300,7 @@ export default function GoldenPlayer({
 
   /* ---------- Auto-scroll tracking ---------- */
   useEffect(() => {
-    if (isUserScrolling || activeSegmentIndex === -1 || debouncedSearch) return;
+    if (!autoTrack || activeSegmentIndex === -1 || debouncedSearch) return;
     const seg = segments[activeSegmentIndex];
     if (!seg) return;
     const el = document.getElementById(`entry-${seg.id ?? activeSegmentIndex}`);
@@ -306,21 +308,42 @@ export default function GoldenPlayer({
       lastProgrammaticScrollRef.current = Date.now();
       el.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-  }, [activeSegmentIndex, isUserScrolling, debouncedSearch, segments]);
+  }, [activeSegmentIndex, autoTrack, debouncedSearch, segments]);
 
-  /* ---------- User Scroll Detection ---------- */
+  /* ---------- User Scroll Detection (disengages auto-track) ---------- */
   useEffect(() => {
-    const el = transcriptRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      if (Date.now() - lastProgrammaticScrollRef.current < 900) return;
-      setIsUserScrolling(true);
-      clearTimeout(userScrollTimeoutRef.current);
-      userScrollTimeoutRef.current = setTimeout(() => setIsUserScrolling(false), 2500);
+    const handleUserScroll = () => {
+      // Ignore programmatic smooth scrolling
+      if (Date.now() - lastProgrammaticScrollRef.current < 850) return;
+      setAutoTrack(false);
     };
-    el.addEventListener("scroll", onScroll);
-    return () => el.removeEventListener("scroll", onScroll);
+
+    window.addEventListener("wheel", handleUserScroll, { passive: true });
+    window.addEventListener("touchmove", handleUserScroll, { passive: true });
+    window.addEventListener("scroll", handleUserScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("wheel", handleUserScroll);
+      window.removeEventListener("touchmove", handleUserScroll);
+      window.removeEventListener("scroll", handleUserScroll);
+    };
   }, []);
+
+  /* ---------- Sync To Active Cue ---------- */
+  const syncToActive = useCallback(() => {
+    setAutoTrack(true);
+    if (activeSegmentIndex !== -1) {
+      const seg = segments[activeSegmentIndex];
+      if (seg) {
+        const el = document.getElementById(`entry-${seg.id ?? activeSegmentIndex}`);
+        if (el) {
+          lastProgrammaticScrollRef.current = Date.now();
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }
+    }
+    showToast("Transcript synced to playback");
+  }, [activeSegmentIndex, segments, showToast]);
 
   /* ---------- URL Timestamp Sync ---------- */
   const lastSyncedTimeRef = useRef(-1);
@@ -488,14 +511,58 @@ export default function GoldenPlayer({
 
       {/* Main Container */}
       <div className="qs-container py-6">
-        {/* Breadcrumb */}
-        <nav className="qs-breadcrumb" aria-label="Breadcrumb">
-          <Link href="/">Submission Archives</Link>
-          <span className="qs-breadcrumb-separator">/</span>
-          <Link href={catalogLink.href}>{catalogLink.label}</Link>
-          <span className="qs-breadcrumb-separator">/</span>
-          <span style={{ color: "var(--qs-text-muted)" }}>{shortId}</span>
-        </nav>
+        {/* Top Navigation & Breadcrumbs */}
+        <div className="qs-top-nav">
+          <div className="flex items-center gap-3 flex-wrap">
+            <Link href={catalogLink.href} className="qs-back-btn" title={`Back to ${catalogLink.label}`}>
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to {catalogLink.label}</span>
+            </Link>
+
+            <nav className="qs-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <span className="qs-breadcrumb-separator">/</span>
+              <Link href={catalogLink.href}>{catalogLink.label}</Link>
+              <span className="qs-breadcrumb-separator">/</span>
+              <span style={{ color: "var(--qs-text-muted)" }}>{shortId}</span>
+            </nav>
+          </div>
+
+          {(prev || next) && (
+            <div className="qs-prev-next-nav">
+              {prev ? (
+                <Link
+                  href={getMediaHref(prev.id)}
+                  className="qs-nav-arrow-btn"
+                  title={`Previous: ${prev.title}`}
+                >
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Prev</span>
+                </Link>
+              ) : (
+                <span className="qs-nav-arrow-btn disabled" aria-disabled="true">
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Prev</span>
+                </span>
+              )}
+              {next ? (
+                <Link
+                  href={getMediaHref(next.id)}
+                  className="qs-nav-arrow-btn"
+                  title={`Next: ${next.title}`}
+                >
+                  <span className="hidden sm:inline">Next</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </Link>
+              ) : (
+                <span className="qs-nav-arrow-btn disabled" aria-disabled="true">
+                  <span className="hidden sm:inline">Next</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </span>
+              )}
+            </div>
+          )}
+        </div>
 
         {/* ==================== HERO STAGE ==================== */}
         <div className="qs-video-stage">
@@ -905,6 +972,28 @@ export default function GoldenPlayer({
                       ))}
                     </div>
                   )}
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (autoTrack) {
+                        setAutoTrack(false);
+                        showToast("Auto-track paused");
+                      } else {
+                        syncToActive();
+                      }
+                    }}
+                    className={`qs-autotrack-btn ${autoTrack ? "active" : ""}`}
+                    title={
+                      autoTrack
+                        ? "Auto-track active (scrolling manually pauses tracking)"
+                        : "Auto-track paused — click to sync"
+                    }
+                  >
+                    {autoTrack ? <LocateFixed className="w-3.5 h-3.5" /> : <Locate className="w-3.5 h-3.5" />}
+                    <span>{autoTrack ? "Tracking" : "Sync"}</span>
+                  </button>
+
                   <span className="qs-entry-count">{filteredSegments.length} shown</span>
                   {debouncedSearch.trim() && (
                     <span className="qs-search-results visible">{matchCount} {matchCount === 1 ? "match" : "matches"}</span>
@@ -935,6 +1024,19 @@ export default function GoldenPlayer({
                       id={`entry-${seg.id ?? idx}`}
                       data-speaker={speakerSlug}
                       data-active={isSegActive}
+                      role="button"
+                      tabIndex={0}
+                      onClick={() => {
+                        seekToTime(seg.start_time);
+                        setAutoTrack(true);
+                      }}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          seekToTime(seg.start_time);
+                          setAutoTrack(true);
+                        }
+                      }}
                       className="qs-entry"
                     >
                       {/* Entry Header: Speaker + Timestamp */}
@@ -945,7 +1047,11 @@ export default function GoldenPlayer({
 
                         <button
                           type="button"
-                          onClick={() => seekToTime(seg.start_time)}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            seekToTime(seg.start_time);
+                            setAutoTrack(true);
+                          }}
                           className="qs-entry-time"
                           title={`Seek to ${formatTime(seg.start_time)}`}
                         >
@@ -979,9 +1085,60 @@ export default function GoldenPlayer({
                   </div>
                 )}
               </div>
+
+              {/* Floating Sync Button when user scrolls away and playback is active */}
+              {!autoTrack && hasStartedPlayback && activeSegmentIndex !== -1 && (
+                <div className="qs-floating-sync-wrap">
+                  <button
+                    type="button"
+                    onClick={syncToActive}
+                    className="qs-floating-sync-btn"
+                    title="Sync transcript with current playback position"
+                  >
+                    <LocateFixed className="w-4 h-4" />
+                    <span>Sync to playback ({formatTime(absoluteTime)})</span>
+                  </button>
+                </div>
+              )}
             </section>
           </main>
         </div>
+
+        {/* Bottom Adjacent Media Browser */}
+        {(prev || next) && (
+          <div className="qs-adjacent-media-grid">
+            {prev ? (
+              <Link href={getMediaHref(prev.id)} className="qs-adjacent-card prev">
+                <div className="qs-adjacent-direction">
+                  <ChevronLeft className="w-4 h-4" />
+                  <span>Previous</span>
+                </div>
+                <div className="qs-adjacent-title">{prev.title}</div>
+              </Link>
+            ) : (
+              <div className="qs-adjacent-card-placeholder" />
+            )}
+
+            <Link href={catalogLink.href} className="qs-adjacent-card center">
+              <div className="qs-adjacent-direction">
+                <span>Browse All</span>
+              </div>
+              <div className="qs-adjacent-title">{catalogLink.label}</div>
+            </Link>
+
+            {next ? (
+              <Link href={getMediaHref(next.id)} className="qs-adjacent-card next">
+                <div className="qs-adjacent-direction">
+                  <span>Next</span>
+                  <ChevronRight className="w-4 h-4" />
+                </div>
+                <div className="qs-adjacent-title">{next.title}</div>
+              </Link>
+            ) : (
+              <div className="qs-adjacent-card-placeholder" />
+            )}
+          </div>
+        )}
 
         {/* Footer */}
         <footer className="qs-page-footer">
