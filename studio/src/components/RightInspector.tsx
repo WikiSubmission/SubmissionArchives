@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
-import { TreeStructure, LinkSimple, Info, X, FileText, Quotes } from '@phosphor-icons/react'
+import { TreeStructure, LinkSimple, Info, X, FileText, Quotes, VideoCamera } from '@phosphor-icons/react'
 import { scanArchive, type NoteRecord } from '../lib/notes'
+import MediaNotesPanel from './media/MediaNotesPanel'
 
 interface OutlineItem {
   level: number
@@ -8,15 +9,17 @@ interface OutlineItem {
   line: number
 }
 
+export type InspectorTab = 'outline' | 'backlinks' | 'footnotes' | 'media' | 'info'
+
 interface RightInspectorProps {
   archivePath: string
   filePath: string | null
   content: string
+  activeTab: InspectorTab
+  onTabChange: (tab: InspectorTab) => void
   onOpenFile: (path: string) => void
   onClose: () => void
 }
-
-type InspectorTab = 'outline' | 'backlinks' | 'footnotes' | 'info'
 
 function stemOf(path: string): string {
   const base = path.split(/[\\/]/).pop() ?? path
@@ -27,10 +30,11 @@ export default function RightInspector({
   archivePath,
   filePath,
   content,
+  activeTab,
+  onTabChange,
   onOpenFile,
   onClose,
 }: RightInspectorProps) {
-  const [activeTab, setActiveTab] = useState<InspectorTab>('outline')
   const [backlinks, setBacklinks] = useState<NoteRecord[]>([])
 
   // Derived Headings Outline
@@ -102,7 +106,7 @@ export default function RightInspector({
       <div className="h-10 border-b border-ed-rule flex items-center justify-between px-3 bg-ed-surface/30">
         <div className="flex items-center gap-1">
           <button
-            onClick={() => setActiveTab('outline')}
+            onClick={() => onTabChange('outline')}
             title="Table of Contents Outline"
             aria-label="Outline"
             className={`p-1.5 rounded-md transition-colors ${
@@ -114,7 +118,7 @@ export default function RightInspector({
             <TreeStructure size={16} weight="regular" />
           </button>
           <button
-            onClick={() => setActiveTab('backlinks')}
+            onClick={() => onTabChange('backlinks')}
             title="Linked Mentions & Backlinks"
             aria-label="Backlinks"
             className={`p-1.5 rounded-md transition-colors relative ${
@@ -129,7 +133,7 @@ export default function RightInspector({
             )}
           </button>
           <button
-            onClick={() => setActiveTab('footnotes')}
+            onClick={() => onTabChange('footnotes')}
             title="Footnotes Reference"
             aria-label="Footnotes"
             className={`p-1.5 rounded-md transition-colors relative ${
@@ -144,7 +148,19 @@ export default function RightInspector({
             )}
           </button>
           <button
-            onClick={() => setActiveTab('info')}
+            onClick={() => onTabChange('media')}
+            title="Media Notes: watch or listen while you write"
+            aria-label="Media notes"
+            className={`p-1.5 rounded-md transition-colors ${
+              activeTab === 'media'
+                ? 'text-ed-fg bg-ed-surface-strong'
+                : 'text-ed-fg-secondary hover:text-ed-fg'
+            }`}
+          >
+            <VideoCamera size={16} weight="regular" />
+          </button>
+          <button
+            onClick={() => onTabChange('info')}
             title="Document Info & Stats"
             aria-label="Document info"
             className={`p-1.5 rounded-md transition-colors ${
@@ -166,7 +182,13 @@ export default function RightInspector({
         </button>
       </div>
 
-      {/* Tab Content */}
+      {/* Tab Content — the media panel manages its own scroll regions, so it
+          sits outside the padded scroller the text tabs share. */}
+      {activeTab === 'media' ? (
+        <div className="flex min-h-0 flex-1 flex-col">
+          <MediaNotesPanel />
+        </div>
+      ) : (
       <div className="flex-1 overflow-y-auto p-2.5 space-y-3 scrollbar-thin">
         {activeTab === 'outline' && (
           <div>
@@ -281,6 +303,7 @@ export default function RightInspector({
           </div>
         )}
       </div>
+      )}
     </aside>
   )
 }

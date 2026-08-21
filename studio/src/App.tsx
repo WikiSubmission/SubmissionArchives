@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState, useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { safeInvoke as invoke } from './lib/ipc'
 import { open, save } from '@tauri-apps/plugin-dialog'
 import Editor, { type EditorMode } from './components/Editor'
@@ -19,7 +19,7 @@ import WorkspaceLayout from './components/workspace/WorkspaceLayout'
 import PaneSwitcher, { type PaneVisibility } from './components/workspace/PaneSwitcher'
 import LeftRibbon from './components/LeftRibbon'
 import TabHeader, { type TabItem } from './components/TabHeader'
-import RightInspector from './components/RightInspector'
+import RightInspector, { type InspectorTab } from './components/RightInspector'
 import StatusBar from './components/StatusBar'
 import { useArchive } from './hooks/useArchive'
 import { useTheme } from './hooks/useTheme'
@@ -30,6 +30,7 @@ import { SettingsProvider, useSettings } from './hooks/useSettings'
 import { useShortcuts } from './hooks/useShortcuts'
 import { useWhatsNew } from './hooks/useWhatsNew'
 import { fileKindOf } from './lib/fileTypes'
+import { mediaBus } from './lib/mediaBus'
 import logoMark from './assets/submission-archives-mark.png'
 import { Gear as SettingsIcon, Moon, Sparkle, Sun } from '@phosphor-icons/react'
 import './App.css'
@@ -54,6 +55,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   const [editorOpen, setEditorOpen] = useState(true)
   const [inspectorOpen, setInspectorOpen] = useState(false)
   const [sidebarTab, setSidebarTab] = useState<SidebarTab>('files')
+  const [inspectorTab, setInspectorTab] = useState<InspectorTab>('outline')
   const [editorMode, setEditorMode] = useState<EditorMode>('write')
   const [currentContent, setCurrentContent] = useState('')
   const [isSaved, setIsSaved] = useState(true)
@@ -90,6 +92,17 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
     }
     setEditorOpen(visible || (!sidebarOpen && !inspectorOpen))
   }, [inspectorOpen, sidebarOpen])
+
+  /* Media Notes needs roughly 440px to seat a player, a chapter rail and a
+     legible transcript, where the text tabs are comfortable at 280px. The panel
+     asks for the extra width; the drag handle still overrides it. */
+  const openMediaNotes = useCallback(() => {
+    setInspectorTab('media')
+    setInspectorOpen(true)
+    setEditorOpen(true)
+  }, [])
+
+  useEffect(() => mediaBus.on('reveal_panel', openMediaNotes), [openMediaNotes])
 
   const handleOpenFile = useCallback(
     (path: string) => {
@@ -313,6 +326,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
     'view.open-canvas': () => setCanvasOpen(true),
     'view.toggle-split': handleToggleSplit,
     'view.open-settings': () => setSettingsOpen(true),
+    'media.open-panel': openMediaNotes,
   })
 
   const commands: PaletteCommand[] = [
@@ -330,6 +344,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
     { id: 'open-canvas', label: 'View: Visual Synthesis Canvas', run: () => setCanvasOpen(true) },
     { id: 'toggle-split', label: 'View: Split Pane Right', run: handleToggleSplit },
     { id: 'open-settings', label: 'Open vault settings', run: () => setSettingsOpen(true) },
+    { id: 'open-media-notes', label: 'View: Media Notes (watch & cite lectures)', run: openMediaNotes },
     { id: 'whats-new', label: "Help: What's New", run: () => whatsNew.open() },
     { id: 'import-wizard', label: 'Import: Launch Universal Import Wizard', run: () => setImportWizardOpen(true) },
     { id: 'import-files', label: 'Import individual files...', run: handleImportFiles },
@@ -424,6 +439,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
         explorerOpen={sidebarOpen}
         editorOpen={editorOpen}
         inspectorOpen={inspectorOpen}
+        inspectorWide={inspectorTab === 'media'}
         splitState={splitState}
         activeFilePath={activeFilePath}
         renderPane={renderEditorPane}
@@ -439,6 +455,8 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
             onOpenCommandPalette={() => setCommandPaletteOpen(true)}
             onOpenGraph={() => setGraphOpen(true)}
             onOpenCanvas={() => setCanvasOpen(true)}
+            onOpenMediaNotes={openMediaNotes}
+            mediaNotesOpen={inspectorOpen && inspectorTab === 'media'}
             onOpenSettings={() => setSettingsOpen(true)}
             inspectorOpen={inspectorOpen}
             onToggleInspector={() => setPaneVisible('inspector', !inspectorOpen)}
@@ -462,6 +480,8 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
             archivePath={archivePath}
             filePath={activeFilePath}
             content={currentContent}
+            activeTab={inspectorTab}
+            onTabChange={setInspectorTab}
             onOpenFile={handleOpenFile}
             onClose={() => setPaneVisible('inspector', false)}
           />

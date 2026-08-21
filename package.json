@@ -9,11 +9,11 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit --incremental false",
     "test": "npm run test:unit",
-    "test:unit": "node --import tsx --test tests/unit/search-nav-reducer.test.ts tests/unit/search-query.test.ts tests/unit/search-query-parser.test.ts tests/unit/media-time.test.ts tests/unit/media-assets.test.ts tests/unit/transcript-utils.test.ts tests/unit/web-vitals.test.ts tests/unit/next-config-redirects.test.ts tests/unit/rate-limit.test.ts tests/integration/catalog.test.ts",
+    "test:unit": "node --import tsx --test tests/unit/search-nav-reducer.test.ts tests/unit/search-query.test.ts tests/unit/search-query-parser.test.ts tests/unit/media-time.test.ts tests/unit/media-assets.test.ts tests/unit/transcript-utils.test.ts tests/unit/studio-media-notes.test.ts tests/unit/web-vitals.test.ts tests/unit/next-config-redirects.test.ts tests/unit/rate-limit.test.ts tests/integration/catalog.test.ts",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "verify:catalog": "node scripts/validate/verify_catalog_reproducibility.mjs",
-    "verify:deploy": "npm ci --dry-run && npm run lint && npm run typecheck && npm test && npm run verify:catalog && npm run validate:catalog-schemas && npm run validate:speakers && npm run enrich:audio-catalog && npm run validate:book-previews && npm run verify:thumbnails && npm audit --omit=dev --audit-level=high && npm run build",
+    "verify:deploy": "npm ci --dry-run && npm run lint && npm run typecheck && npm test && npm run verify:catalog && npm run verify:studio-media && npm run validate:catalog-schemas && npm run validate:speakers && npm run enrich:audio-catalog && npm run validate:book-previews && npm run verify:thumbnails && npm audit --omit=dev --audit-level=high && npm run build",
     "analyze": "next experimental-analyze --output",
     "generate:catalog": "node scripts/generate/generate_catalog_search_indices.mjs",
     "generate:catalog-incremental": "node scripts/generate/generate_catalog_search_indices.mjs --incremental",
@@ -35,7 +35,9 @@
     "audit:assets": "node scripts/assets/audit-assets.mjs",
     "ocr:books": "node scripts/generate/ocr_books_gemini.mjs",
     "ocr:monitor": "node scripts/generate/monitor_ocr.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate:studio-media": "node scripts/generate/build_studio_media_index.mjs",
+    "verify:studio-media": "node scripts/generate/build_studio_media_index.mjs --check"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

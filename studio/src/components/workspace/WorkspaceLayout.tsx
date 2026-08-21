@@ -9,6 +9,10 @@ const EXPLORER_MAX_SIZE = 34
 const INSPECTOR_DEFAULT_SIZE = 22
 const INSPECTOR_MIN_SIZE = 14
 const INSPECTOR_MAX_SIZE = 40
+/** Media Notes seats a player, a chapter rail and a transcript; below this it
+ * stops being readable, so the panel is widened to it on first switch. */
+const INSPECTOR_MEDIA_MIN_PX = 440
+const INSPECTOR_MEDIA_MAX_SIZE = 62
 
 /** Keeps a collapsible panel in step with the React flag that owns it.
  *
@@ -32,12 +36,38 @@ function useCollapsiblePanel(open: boolean) {
   return panelRef
 }
 
+/** Grows the inspector to a pixel floor without taking its width over: the
+ * researcher's own drag still wins, because the widening only runs on the
+ * transition into a wide tab and only when the panel is currently narrower. */
+function useMinimumPanelWidth(
+  panelRef: React.RefObject<ImperativePanelHandle | null>,
+  groupRef: React.RefObject<HTMLDivElement | null>,
+  active: boolean,
+  minimumPx: number
+) {
+  useEffect(() => {
+    if (!active) return
+    const panel = panelRef.current
+    const group = groupRef.current
+    if (!panel || !group || panel.isCollapsed()) return
+
+    const groupWidth = group.clientWidth
+    if (!groupWidth) return
+    const currentPx = (panel.getSize() / 100) * groupWidth
+    if (currentPx >= minimumPx) return
+
+    panel.resize(Math.min(INSPECTOR_MEDIA_MAX_SIZE, (minimumPx / groupWidth) * 100))
+  }, [active, minimumPx, groupRef, panelRef])
+}
+
 export interface WorkspaceLayoutProps {
   /** Distinguishes one archive's saved pane sizes from another's. */
   layoutKey: string
   explorerOpen: boolean
   editorOpen: boolean
   inspectorOpen: boolean
+  /** The active inspector tab needs the wider layout (Media Notes). */
+  inspectorWide?: boolean
   ribbon: ReactNode
   explorer: ReactNode
   inspector: ReactNode
@@ -59,6 +89,7 @@ export default function WorkspaceLayout({
   explorerOpen,
   editorOpen,
   inspectorOpen,
+  inspectorWide = false,
   ribbon,
   explorer,
   inspector,
@@ -70,6 +101,8 @@ export default function WorkspaceLayout({
 }: WorkspaceLayoutProps) {
   const explorerRef = useCollapsiblePanel(explorerOpen)
   const inspectorRef = useCollapsiblePanel(inspectorOpen)
+  const groupRef = useRef<HTMLDivElement>(null)
+  useMinimumPanelWidth(inspectorRef, groupRef, inspectorWide && inspectorOpen, INSPECTOR_MEDIA_MIN_PX)
 
   const isSplit = Boolean(splitState?.secondPane)
 
@@ -77,6 +110,9 @@ export default function WorkspaceLayout({
     <div className="relative flex flex-1 overflow-hidden">
       {ribbon}
 
+      {/* PanelGroup's own ref is its imperative handle, not a DOM node, so the
+          pixel measurement the wide inspector needs comes from this wrapper. */}
+      <div ref={groupRef} className="flex min-w-0 flex-1">
       <PanelGroup direction="horizontal" autoSaveId={`sa-studio-workspace:${layoutKey}`} className="flex-1">
         <Panel
           id="explorer"
@@ -135,7 +171,7 @@ export default function WorkspaceLayout({
           order={3}
           defaultSize={INSPECTOR_DEFAULT_SIZE}
           minSize={INSPECTOR_MIN_SIZE}
-          maxSize={INSPECTOR_MAX_SIZE}
+          maxSize={inspectorWide ? INSPECTOR_MEDIA_MAX_SIZE : INSPECTOR_MAX_SIZE}
           collapsible
           collapsedSize={0}
           className="min-w-0 overflow-hidden"
@@ -143,6 +179,7 @@ export default function WorkspaceLayout({
           <div className="flex h-full flex-col border-l border-ed-rule bg-ed-bg-secondary">{inspector}</div>
         </Panel>
       </PanelGroup>
+      </div>
     </div>
   )
 }

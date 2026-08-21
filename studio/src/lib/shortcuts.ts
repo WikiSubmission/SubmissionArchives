@@ -1,7 +1,7 @@
 export interface CommandDefinition {
   id: string
   label: string
-  category: 'Navigation' | 'Editor' | 'Vault' | 'Quran' | 'View'
+  category: 'Navigation' | 'Editor' | 'Vault' | 'Quran' | 'View' | 'Media'
   defaultKeys: {
     windows: string
     mac: string
@@ -102,6 +102,27 @@ export const SYSTEM_COMMANDS: CommandDefinition[] = [
     category: 'View',
     defaultKeys: { windows: 'Ctrl+Shift+C', mac: 'Cmd+Shift+C' },
     description: 'Arrange notes spatially on the whiteboard canvas',
+  },
+  {
+    id: 'media.open-panel',
+    label: 'Open Media Notes',
+    category: 'Media',
+    defaultKeys: { windows: 'Ctrl+Shift+M', mac: 'Cmd+Shift+M' },
+    description: 'Watch or listen to an archived lecture beside the note',
+  },
+  {
+    id: 'media.quote-cue',
+    label: 'Quote Playing Cue',
+    category: 'Media',
+    defaultKeys: { windows: 'Ctrl+Shift+Q', mac: 'Cmd+Shift+Q' },
+    description: 'Insert the cue now playing as an academic blockquote',
+  },
+  {
+    id: 'media.insert-timestamp',
+    label: 'Insert Media Timestamp',
+    category: 'Media',
+    defaultKeys: { windows: 'Ctrl+Shift+T', mac: 'Cmd+Shift+T' },
+    description: 'Drop a clickable timestamp deep link at the cursor',
   },
 ]
 

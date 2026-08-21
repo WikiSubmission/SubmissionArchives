@@ -18,6 +18,7 @@ import { MarkdownSyntaxHighlight } from './extensions/MarkdownSyntaxHighlight'
 import { SmartTypography } from './extensions/SmartTypography'
 import { AcademicTransliteration } from './extensions/AcademicTransliteration'
 import { FootnoteRef } from './extensions/Footnote'
+import { MediaTimestamp } from './extensions/MediaTimestampExtension'
 import FrontmatterPanel from './FrontmatterPanel'
 import BacklinksPanel from './BacklinksPanel'
 import VersionHistoryModal from './VersionHistoryModal'
@@ -28,6 +29,14 @@ import PageModeCanvas from './PageModeCanvas'
 import PdfViewer from './pdf/PdfViewer'
 import { useSettings } from '../hooks/useSettings'
 import { motion, AnimatePresence, springConfig } from './ui/Motion'
+import {
+  clearActiveEditor,
+  getActiveEditor,
+  mediaBus,
+  setActiveEditor,
+  type NoteMediaPayload,
+  type PersistMediaPayload,
+} from '../lib/mediaBus'
 
 export type EditorMode = 'write' | 'blocks' | 'page'
 
@@ -131,6 +140,7 @@ export default function Editor({
       SlashCommand,
       Markdown,
       FootnoteRef,
+      MediaTimestamp,
       MarkdownSyntaxHighlight.configure({ activeMode: mode }),
       SmartTypography.configure({ activeMode: mode }),
       AcademicTransliteration.configure({
@@ -149,6 +159,21 @@ export default function Editor({
     },
     onUpdate: ({ editor: instance }) => scheduleSave(instance),
   })
+
+  /* The media panel inserts citations into whichever pane the researcher last
+     touched, so each editor claims the "active" slot on mount and on focus.
+     Mount matters as much as focus: quoting the very first cue after opening a
+     note should not require clicking into the prose first. */
+  useEffect(() => {
+    if (!editor) return
+    setActiveEditor(editor)
+    const claim = () => setActiveEditor(editor)
+    editor.on('focus', claim)
+    return () => {
+      editor.off('focus', claim)
+      clearActiveEditor(editor)
+    }
+  }, [editor])
 
   // Typewriter scrolling in Page mode
   useEffect(() => {
@@ -176,6 +201,18 @@ export default function Editor({
     }
   }, [mode, editor])
 
+  /** `media:` / `media_timestamp:` in a note's frontmatter bind it to a lecture,
+   * so opening the note should bring the panel with it. */
+  const announceMedia = useCallback((data: Record<string, unknown>) => {
+    const mediaId = typeof data.media === 'string' && data.media.trim() ? data.media.trim() : null
+    const rawTimestamp = data.media_timestamp
+    const timestamp = typeof rawTimestamp === 'number' ? rawTimestamp : Number(rawTimestamp)
+    mediaBus.emit<NoteMediaPayload>('note_media', {
+      mediaId,
+      timestamp: Number.isFinite(timestamp) && timestamp > 0 ? timestamp : undefined,
+    })
+  }, [])
+
   const loadNote = useCallback(
     (path: string) => {
       invoke<string>('read_note', { path })
@@ -187,10 +224,11 @@ export default function Editor({
           setStatus('idle')
           onContentChange?.(content)
           onStatusChange?.(true)
+          announceMedia(data)
         })
         .catch(() => setStatus('error'))
     },
-    [editor, onContentChange, onStatusChange]
+    [announceMedia, editor, onContentChange, onStatusChange]
   )
 
   useEffect(() => {
@@ -202,6 +240,41 @@ export default function Editor({
   useEffect(() => {
     editor?.setEditable(!locked)
   }, [locked, editor])
+
+  /* The panel writes the playhead back into frontmatter so a note reopens where
+     the lecture was left. In a split view only the pane the researcher is
+     working in should take the binding, hence the active-editor guard. */
+  useEffect(() => {
+    if (!editor) return
+
+    const offRequest = mediaBus.on('request_note_media', () => {
+      if (getActiveEditor() !== editor) return
+      announceMedia(frontmatterRef.current)
+    })
+
+    const offPersist = mediaBus.on<PersistMediaPayload>('persist_media', (payload) => {
+      if (!payload?.mediaId || getActiveEditor() !== editor) return
+      const current = frontmatterRef.current
+      const currentTimestamp = Number(current.media_timestamp)
+      const sameMedia = current.media === payload.mediaId
+      const negligibleMove =
+        sameMedia && Number.isFinite(currentTimestamp) && Math.abs(currentTimestamp - payload.timestamp) < 5
+      if (negligibleMove) return
+
+      const next = { ...current, media: payload.mediaId, media_timestamp: payload.timestamp }
+      frontmatterRef.current = next
+      setFrontmatter(next)
+      scheduleSave(editor)
+    })
+
+    return () => {
+      offRequest()
+      offPersist()
+    }
+    // scheduleSave is recreated every render by design; the effect only needs a
+    // stable editor identity to keep one subscription per pane.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [announceMedia, editor])
 
   const handleFrontmatterChange = (next: Record<string, unknown>) => {
     frontmatterRef.current = next

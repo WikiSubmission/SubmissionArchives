@@ -169,3 +169,35 @@ Studio no longer has its own look. It adopts the archive's finalised design syst
 - [ ] **Arabic font choice is a single option.** Offering more means shipping the font files, not adding entries to a list — same shape of blocker as the translation-edition item in Phase 6.
 - [ ] **`SplitPane.tsx` is now only a type.** `WorkspaceLayout` renders the split itself; the file still exports `SplitPaneState`, which the app uses. The component body is dead and should be deleted once nothing imports it.
 - [ ] **Alpha-on-alpha surfaces.** A few panels stack translucent backgrounds (`bg-ed-bg-secondary/30` over a translucent parent). It renders fine but makes contrast unpredictable to reason about; flattening them to solid tokens is a small follow-up.
+
+### Phase 8: Video & Media Notes (COMPLETED 2026-08-21)
+
+A researcher can now watch or listen to an archived lecture inside Studio, beside the note being written, and cite it without leaving the keyboard. The panel lives in the right inspector as a fifth tab (`VideoCamera`, `Ctrl+Shift+M`).
+
+**Where the data comes from**
+- ✅ **[`scripts/generate/build_studio_media_index.mjs`](../scripts/generate/build_studio_media_index.mjs)** (`npm run generate:studio-media`) projects `data/catalog/{videos,audios}.json`, the `data/catalog/chapters/` sidecars, and the transcripts inside `MASTER_INDEX.json` into `studio/public/media/`. Studio is a separate Vite/Tauri app and cannot read the Next.js `public/` tree at runtime, and MASTER_INDEX is 31 MB, so neither could simply be imported.
+- ✅ **One catalog, 151 transcripts, fetched not bundled.** `catalog.json` (~0.9 MB, every record plus its chapters) loads once; each `transcripts/<slug>.json` (~7.5 MB total) is pulled only when its lecture is opened. Cues are stored columnar — `[start, end, text, speakerIndex]` against an interned speaker table — which roughly halves the transcript payload versus MASTER_INDEX's object-per-cue form.
+- ✅ **Speaker attribution rules are mirrored, not re-decided.** MA 72+ and the 1987 debate keep their unattributed cues unattributed, exactly as `src/app/media/[...id]/page.tsx` does; defaulting them to the record author would silently attribute other voices to Dr. Khalifa.
+- ✅ `npm run verify:studio-media` fails if the generated index is missing or has drifted from the catalog, and runs as part of `verify:deploy`.
+
+**The panel**
+- ✅ **[`MediaNotesPanel.tsx`](src/components/media/MediaNotesPanel.tsx)** composes the selector, player, chapter rail and transcript, and owns the record/playhead state.
+- ✅ **[`MediaSearchSelector.tsx`](src/components/media/MediaSearchSelector.tsx)** — Fuse.js over title, speakers, author and chapter titles, doubling as a reference parser: `sa://media/<id>?t=`, a submissionarchives.com `/media/` URL, a YouTube `watch`/`youtu.be` link, a bare catalog id, or a short code (`QS-01`, `MA 72`) all resolve to the same record. Recents come first when the box is empty.
+- ✅ **[`TranscriptTeleprompter.tsx`](src/components/media/TranscriptTeleprompter.tsx)** — windowed list with measured row heights, because transcripts reach ~1,700 cues and the clock republishes four times a second; only ~25 rows are ever in the DOM. Auto-scroll keeps the spoken cue a third of the way down and releases on the first wheel event. A find box filters cues in place.
+- ✅ **[`ChapterTimelineStrip.tsx`](src/components/media/ChapterTimelineStrip.tsx)** — chapter pills that scroll the active chapter into view and seek on click.
+
+**Citations, both directions**
+- ✅ **Quote a cue** (row button or `Ctrl+Shift+Q` for the cue now playing) inserts the archive's academic blockquote: the cue in quotation marks, then `— *Speaker, [01:39](sa://media/<id>?t=99)*`. `Ctrl+Shift+T` drops the bare timestamp inline.
+- ✅ **[`MediaTimestampExtension.ts`](src/components/extensions/MediaTimestampExtension.ts)** renders those links as clickable badges and clicking one seeks the player — switching records first if the badge names a different lecture, so one note can cite several talks. It is a node, not a styled Link mark: StarterKit's Link runs hrefs through `isAllowedUri`, which does not know the `sa://` scheme and would drop it. Its markdown-it rule is registered *before* `link` for the same reason, and it serializes back byte-for-byte, so notes stay plain Markdown outside Studio.
+- ✅ **[`mediaBus.ts`](src/lib/mediaBus.ts)** carries seeks, the clock, the frontmatter binding and citations between panel and editor. The panel and the editor are siblings in the layout, and the TipTap node views have no React context to reach for, so props were not an option. It also holds the active-editor registry — each pane claims the slot on mount and on focus, so a citation lands in the pane the researcher is actually working in.
+- ✅ **Frontmatter binding.** `media:` and `media_timestamp:` in a note bind it to a lecture; opening the note loads that record at that second, and the panel writes the playhead back (throttled to 5 s, and once more on unmount) so the note reopens where the lecture was left. A pin toggle in the panel header stops it following the note when that is not wanted.
+
+**Decisions worth knowing**
+- **Playback is YouTube-first because the catalog is.** Every one of the 151 records resolves to a `youtubeId` and none to a local file — the same constraint `src/lib/mediaAssets.ts` states on the web. The HTML5 engine is therefore the *secondary* path, not the primary one the spec assumed: a researcher can attach a local MP4/MP3 per record (Tauri dialog + `convertFileSrc`), which makes that record play offline and switches the engine automatically. Attachments live in `localStorage`, not in the note, so notes stay portable between machines. Without a connection and without an attachment, the transcript, chapters and citation tools all still work; only the audio does not.
+- **The panel widens the inspector rather than the inspector knowing about media.** Switching to the tab raises the panel to a 440 px floor once; the drag handle still wins afterwards, and the pixel measurement comes from a wrapper div because `PanelGroup`'s ref is its imperative handle, not a DOM node.
+- **The catalog is 151 records, not the 300+ the spec estimated.** MASTER_INDEX holds 382 entries, but 231 of them are written works (perspectives, appendices, Quran chapters) with no playable media.
+
+**Not done in this pass**
+- [ ] **Thumbnails are not shipped.** The catalog carries each record's `thumbnailOverride` path, but the images live in the Next.js `public/content/` tree; copying them would add another asset set to the bundle for a 440 px column that reads fine without them.
+- [ ] **Arabic transcripts are indexed but unused.** One record has `segments_ar`; the generator carries it through as `cuesAr` and the panel does not yet offer the toggle.
+- [ ] **`studio/public/media/` is committed** (~8.5 MB), matching how `public/data/generated_indices/` is handled. If that becomes unwelcome in git, the generator is the thing to run at build time instead.

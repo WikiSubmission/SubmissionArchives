@@ -7,7 +7,8 @@ import {
   Gear,
   SidebarSimple,
   FilePlus,
-  TreeStructure
+  TreeStructure,
+  VideoCamera,
 } from '@phosphor-icons/react'
 import { motion, springSnappy } from './ui/Motion'
 
@@ -19,6 +20,8 @@ interface LeftRibbonProps {
   onOpenCommandPalette: () => void
   onOpenGraph: () => void
   onOpenCanvas?: () => void
+  onOpenMediaNotes?: () => void
+  mediaNotesOpen?: boolean
   onOpenSettings: () => void
   inspectorOpen: boolean
   onToggleInspector: () => void
@@ -33,6 +36,8 @@ export default function LeftRibbon({
   onOpenCommandPalette,
   onOpenGraph,
   onOpenCanvas,
+  onOpenMediaNotes,
+  mediaNotesOpen,
   onOpenSettings,
   inspectorOpen,
   onToggleInspector,
@@ -131,6 +136,24 @@ export default function LeftRibbon({
         >
           <ShareNetwork size={18} weight="regular" />
         </motion.button>
+
+        {onOpenMediaNotes && (
+          <motion.button
+            whileHover={{ scale: 1.05, y: -1 }}
+            whileTap={{ scale: 0.92 }}
+            transition={springSnappy}
+            onClick={onOpenMediaNotes}
+            aria-label="Media Notes"
+            title="Media Notes: Watch & Cite Lectures (Ctrl+Shift+M)"
+            className={`tactile p-2 rounded-lg transition-colors ${
+              mediaNotesOpen
+                ? 'text-ed-accent bg-ed-accent-soft border border-ed-accent/25 shadow-xs'
+                : 'text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent-soft'
+            }`}
+          >
+            <VideoCamera size={18} weight={mediaNotesOpen ? 'fill' : 'regular'} />
+          </motion.button>
+        )}
       </div>
 
       {/* Bottom Actions */}
