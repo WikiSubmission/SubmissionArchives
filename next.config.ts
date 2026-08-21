@@ -119,6 +119,7 @@ const nextConfig: NextConfig = {
       { source: "/quran/appendices", destination: "/scripture/quran/appendices", permanent: true },
       { source: "/quran/:chapter(\\d+)", destination: "/scripture/quran/:chapter", permanent: true },
       { source: "/quran/bible/:book", destination: "/scripture/bible/:book", permanent: true },
+      { source: "/scriptures/:path*", destination: "/scripture/:path*", permanent: true },
     ];
   },
 };

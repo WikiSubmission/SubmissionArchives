@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import Link from 'next/link';
 import type { Media } from '@/types/media';
 import { getMediaHref } from '@/lib/utils';
 
@@ -164,15 +165,6 @@ export default function VideosPageClient({ initialVideos }: { initialVideos: Med
 
             <main id="main-content" className="relative z-[1] overflow-hidden">
                 <div className="mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
-                    {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-ed-fg-muted">
-                        <a href="/" className="text-ed-fg-muted transition-colors hover:text-ed-accent">
-                            Submission Archives
-                        </a>
-                        <span className="text-ed-fg-faint">/</span>
-                        <span className="text-ed-fg-secondary">Video Archives</span>
-                    </nav>
-
                     {/* Hero Header */}
                     <header className="mb-7 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-7">
                         <div className="max-w-[640px]">
@@ -414,7 +406,7 @@ function VideoCard({ video }: { video: Media }) {
     const isEdip = speaker.toLowerCase().includes('edip');
 
     return (
-        <a
+        <Link
             href={getMediaHref(video.id)}
             className="group relative flex flex-col overflow-hidden rounded-[12px] border border-ed-rule bg-ed-surface transition-all duration-[280ms] ease-out hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md"
         >
@@ -424,6 +416,7 @@ function VideoCard({ video }: { video: Media }) {
                 style={{ background: 'linear-gradient(160deg, #1a2e26 0%, #0f1a16 40%, #1a2520 100%)' }}
             >
                 {video.thumbnailOverride ? (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                         src={video.thumbnailOverride}
                         alt={displayTitle}
@@ -515,6 +508,6 @@ function VideoCard({ video }: { video: Media }) {
                     </span>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }

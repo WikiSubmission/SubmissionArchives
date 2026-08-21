@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ScriptureTabs from '@/components/layout/ScriptureTabs';
 
 export const metadata: Metadata = {
@@ -24,9 +25,9 @@ export default function NTApocryphaPage() {
                 <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-7 lg:py-12">
                     {/* Breadcrumb */}
                     <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-ed-fg-muted">
-                        <a href="/" className="text-ed-fg-muted transition-colors hover:text-ed-accent">
+                        <Link href="/" className="text-ed-fg-muted transition-colors hover:text-ed-accent">
                             Submission Archives
-                        </a>
+                        </Link>
                         <span className="text-ed-fg-faint">/</span>
                         <span className="text-ed-fg-secondary">NT Apocrypha</span>
                     </nav>

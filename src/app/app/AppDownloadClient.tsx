@@ -7,23 +7,15 @@ import {
     Apple,
     Monitor,
     Terminal,
-    HardDrive,
     Zap,
     Search,
     LayoutGrid,
     GitBranch,
     Columns,
-    Layers,
-    Keyboard,
-    Clock,
     Download,
     ChevronDown,
     Command,
     FileText,
-    Volume2,
-    Video,
-    FileCode,
-    Bookmark,
     Compass,
 } from 'lucide-react';
 
@@ -1060,34 +1052,6 @@ export default function AppDownloadClient() {
 /* Subcomponents                                                              */
 /* -------------------------------------------------------------------------- */
 
-function SidebarItem({
-    active,
-    onClick,
-    label,
-    count,
-    icon,
-}: {
-    active: boolean;
-    onClick: () => void;
-    label: string;
-    count: string;
-    icon: ReactNode;
-}) {
-    return (
-        <button
-            type="button"
-            onClick={onClick}
-            className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-[10px] transition-colors ${active
-                    ? 'bg-ed-accent-soft font-medium text-ed-fg'
-                    : 'text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-fg'
-                }`}
-        >
-            <span className={active ? 'text-ed-accent' : 'text-ed-fg-muted'}>{icon}</span>
-            <span>{label}</span>
-            <span className="ml-auto font-mono text-[9px] text-ed-fg-muted">{count}</span>
-        </button>
-    );
-}
 
 function PrimaryDownloadButton({
     platform,

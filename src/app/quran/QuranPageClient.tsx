@@ -66,15 +66,6 @@ export default function QuranPageClient({ chapters }: Props) {
 
       <main id="main-content" className="relative z-[1] overflow-hidden">
         <div className="mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
-          {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-ed-fg-muted">
-            <a href="/" className="text-ed-fg-muted transition-colors hover:text-ed-accent">
-              Submission Archives
-            </a>
-            <span className="text-ed-fg-faint">/</span>
-            <span className="text-ed-fg-secondary">The Qur&apos;an</span>
-          </nav>
-
           {/* Hero Header */}
           <header className="mb-8 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-8">
             <div className="max-w-[640px]">

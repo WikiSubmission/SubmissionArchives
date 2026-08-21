@@ -13,13 +13,6 @@ export default function WrittenLoading() {
             />
 
             <main className="relative z-[1] mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
-                {/* Breadcrumb Skeleton */}
-                <div className="mb-5 flex items-center gap-2">
-                    <div className="h-3 w-28 rounded-full bg-ed-surface-strong animate-pulse" />
-                    <div className="h-3 w-3 rounded-full bg-ed-surface-strong/40" />
-                    <div className="h-3 w-24 rounded-full bg-ed-surface-strong animate-pulse" />
-                </div>
-
                 {/* Hero Header Skeleton */}
                 <header className="mb-8 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-8">
                     <div className="grid max-w-2xl gap-3">

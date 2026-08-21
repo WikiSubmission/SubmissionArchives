@@ -2,7 +2,6 @@
 
 import { useMemo, useState, useCallback } from 'react';
 import Link from 'next/link';
-import '@/components/player/quran-study-golden-player.css';
 import type { Media } from '@/types/media';
 import PlayButton from '@/components/player/PlayButton';
 import { getMediaAssetUrl, getPublicAssetUrl } from '@/lib/mediaAssets';
@@ -10,6 +9,7 @@ import { getMediaHref } from '@/lib/utils';
 import QuranStudyThumbnail from '@/components/media/QuranStudyThumbnail';
 import { QURAN_STUDY_SLIDES } from '@/data/quran-study-thumbnail-data';
 import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
+import './audios.css';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -290,13 +290,6 @@ export default function AudiosPageClient({ initialAudios }: { initialAudios: Med
             <div className="qs-page-bg" />
 
             <main className="qs-container" style={{ paddingTop: 32 }}>
-                {/* Breadcrumb */}
-                <nav className="qs-breadcrumb" aria-label="Breadcrumb">
-                    <Link href="/">Submission Archives</Link>
-                    <span className="qs-breadcrumb-separator">/</span>
-                    <span style={{ color: 'var(--qs-text-muted)' }}>Audio Archives</span>
-                </nav>
-
                 {/* Hero Header */}
                 <header className="aa-hero-header">
                     <div className="aa-hero-text">

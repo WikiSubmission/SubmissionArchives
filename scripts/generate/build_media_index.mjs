@@ -651,6 +651,7 @@ below are parsed from the recording dates stated in their own titles.
 ${mdTable(messengerAudios, audioColumns)}
 `;
 
+    fs.mkdirSync(path.dirname(OUT_MD), { recursive: true });
     fs.writeFileSync(OUT_MD, md, 'utf8');
 }
 
