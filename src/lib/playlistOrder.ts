@@ -43,7 +43,11 @@ export const PLAYLIST_ORDER: Record<string, number> = {
     "video-program/friday-sermon-rashad-explains-his-messengership-details-05161988": 27, // Friday Sermon: Rashad Explains His Messengership Details (05/16/1988)
     "video-program/friday-sermon-natural-instinct-who-is-the-real-you-how-to-find-perfect-happiness-05271988": 28, // Friday Sermon: Natural Instinct - Who is The Real You? How to Find Perfect Happiness (05/27/1988)
     "video-program/friday-sermon-the-meaning-of-life-discovering-the-miracle-07151988": 29, // Friday Sermon: The Meaning of Life, Discovering the Miracle (07/15/1988)
-    "video-program/friday-sermon-who-is-god-understanding-our-universe-1988-08-04": 30, // Friday Sermon: Who is GOD? Understanding Our Universe (08/04/1988)
+    // Slot 30 was "Friday Sermon: Who is GOD? Understanding Our Universe (08/04/1988)".
+    // It was the same recording as "Who is GOD?" at 1.5, proven by a flat timestamp
+    // offset, so it was merged into that entry and its 08/04/1988 dating moved there.
+    // The gap in the sequence is left as-is: these values only need to sort, and
+    // renumbering 31 onward would churn every line below for no gain.
     "video-program/friday-sermon-who-is-your-god-majority-of-believers-are-going-to-hell-10281988": 31, // Friday Sermon: Who is Your GOD? Majority of Believers Are Going to Hell (10/28/1988)
     "video-program/friday-sermon-classification-of-creatures-loving-god-hell-is-not-enough-12091988": 32, // Friday Sermon: Classification of Creatures, Loving GOD, Hell is not Enough (12/09/1988)
     "video-program/friday-sermon-what-about-previous-generations-12301988": 33, // Friday Sermon: What About Previous Generations? (12/30/1988)

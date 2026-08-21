@@ -51,16 +51,16 @@ export default function TagsPane({ archivePath, onOpenFile, refreshToken }: Tags
   return (
     <div className="h-full flex flex-col">
       <div className="p-4 shrink-0 border-b border-ed-rule">
-        <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ed-fg-muted">
+        <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ed-fg-secondary">
           <TagIcon size={14} weight="bold" />
           <span>Tags & Taxonomy</span>
         </div>
       </div>
 
-      {error && <div className="px-4 py-2 text-xs text-red-400 font-mono">{error}</div>}
+      {error && <div className="px-4 py-2 text-xs text-ed-danger font-mono">{error}</div>}
       {groups.length === 0 && !error && (
-        <div className="px-4 py-8 text-xs text-ed-fg-muted text-center">
-          No tags found yet. Type <code className="text-amber-400 font-mono">#tag</code> or <code className="text-amber-400 font-mono">#topic/subtopic</code> in your notes.
+        <div className="px-4 py-8 text-xs text-ed-fg-secondary text-center">
+          No tags found yet. Type <code className="text-ed-accent font-mono">#tag</code> or <code className="text-ed-accent font-mono">#topic/subtopic</code> in your notes.
         </div>
       )}
 
@@ -75,16 +75,16 @@ export default function TagsPane({ archivePath, onOpenFile, refreshToken }: Tags
               <button
                 onClick={() => toggle(tag)}
                 style={{ paddingLeft: `${depth * 12 + 12}px` }}
-                className="w-full flex items-center gap-1.5 py-1.5 pr-3 text-xs text-left text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
+                className="w-full flex items-center gap-1.5 py-1.5 pr-3 text-xs text-left text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface transition-colors"
               >
                 {isExpanded ? (
-                  <CaretDown size={12} weight="bold" className="shrink-0 text-ed-fg-muted" />
+                  <CaretDown size={12} weight="bold" className="shrink-0 text-ed-fg-secondary" />
                 ) : (
-                  <CaretRight size={12} weight="bold" className="shrink-0 text-ed-fg-muted" />
+                  <CaretRight size={12} weight="bold" className="shrink-0 text-ed-fg-secondary" />
                 )}
-                <Hash size={13} weight="bold" className="text-amber-400 shrink-0" />
+                <Hash size={13} weight="bold" className="text-ed-accent shrink-0" />
                 <span className="truncate font-mono font-medium">{tag}</span>
-                <span className="text-[10px] text-ed-fg-muted bg-ed-surface-strong px-1.5 py-0.5 rounded-full ml-auto shrink-0 font-mono">
+                <span className="text-[10px] text-ed-fg-secondary bg-ed-surface-strong px-1.5 py-0.5 rounded-full ml-auto shrink-0 font-mono">
                   {notes.length}
                 </span>
               </button>
@@ -103,7 +103,7 @@ export default function TagsPane({ archivePath, onOpenFile, refreshToken }: Tags
                         key={note.path}
                         onClick={() => onOpenFile(note.path)}
                         style={{ paddingLeft: `${depth * 12 + 32}px` }}
-                        className="w-full text-left pr-3 py-1 text-xs text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors truncate font-medium"
+                        className="w-full text-left pr-3 py-1 text-xs text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface transition-colors truncate font-medium"
                       >
                         {note.name}
                       </button>

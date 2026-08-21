@@ -2,8 +2,8 @@
   "valid": true,
   "errors": [],
   "warnings": [],
-  "recordCount": 383,
-  "segmentCount": 122397,
+  "recordCount": 382,
+  "segmentCount": 122225,
   "categoryCounts": {
     "Appendices": 40,
     "Books": 13,
@@ -11,7 +11,7 @@
     "Quran": 114,
     "Quran Studies": 52,
     "Submitter Perspectives": 64,
-    "Videos": 52
+    "Videos": 51
   },
   "typeCounts": {
     "appendix": 40,
@@ -20,7 +20,7 @@
     "perspective": 64,
     "quran": 114,
     "quran-study": 52,
-    "video-program": 52
+    "video-program": 51
   },
   "recordsWithoutSegments": []
 }

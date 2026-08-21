@@ -6,7 +6,6 @@ import {
   Search, X, Download, SkipBack, SkipForward,
   Play, Pause, Volume2, VolumeX, Share2, ChevronDown,
 } from "lucide-react";
-import CiteButton from "@/components/ui/CiteButton";
 import { useGlobalPlayer } from "@/components/player/GlobalMediaPlayer";
 import { getMediaHref } from "@/lib/utils";
 import { QURAN_STUDY_SLIDES } from "@/data/quran-study-thumbnail-data";
@@ -56,6 +55,7 @@ export interface GoldenPlayerProps {
   clipStartTime?: number;
   clipEndTime?: number;
   initialSeekTime?: number;
+  initialTranscriptLang?: TranscriptLang;
   transcriptDisclaimer?: string;
 }
 
@@ -89,6 +89,9 @@ function escapeRegex(str: string): string {
 function getSpeakerSlug(speaker: string): string {
   const s = speaker.toLowerCase();
   if (s.includes("khalifa") || s.includes("rashad")) return "khalifa";
+  // The 1987 debate attributes by side rather than by individual, so the opposing
+  // party needs its own colour for the exchange to be readable as an exchange.
+  if (s.includes("sunni scholar")) return "scholars";
   if (s.includes("catherine") || s.includes("robinson")) return "catherine";
   if (s.includes("edip") || s.includes("yuksel")) return "edip";
   if (s.includes("douglas")) return "douglas";
@@ -105,6 +108,13 @@ function getSpeakerDisplayName(speaker: string): string {
   if (slug === "beth") return "Beth";
   return speaker || "Speaker";
 }
+
+type TranscriptLang = "en" | "ar";
+
+const TRANSCRIPT_LANG_LABELS: Record<TranscriptLang, string> = {
+  en: "English",
+  ar: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629",
+};
 
 const ARABIC_REGEX = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
 const VERSE_CITATION_REGEX = /^\[\d+:\d+(?:-\d+)?\]/;
@@ -150,11 +160,18 @@ function isVideoType(type: string): boolean {
 
 export default function GoldenPlayer({
   media,
-  segments,
+  segments: englishSegments,
+  segments_ar: arabicSegments,
   mediaUrl,
   initialSeekTime,
+  initialTranscriptLang,
 }: GoldenPlayerProps) {
   /* ---------- State ---------- */
+  // A record carries a second segment list only when the source playlist has an
+  // "<title> - Arabic.csv" companion transcript, as the 1987 Sunni Scholars debate
+  // does: one recording, captioned twice. The toggle below picks which of the two
+  // the transcript panel reads from, so the pair stays a single catalog entry.
+  const [transcriptLang, setTranscriptLang] = useState<TranscriptLang>(initialTranscriptLang ?? "en");
   const [isPlaying, setIsPlaying] = useState(Boolean(initialSeekTime));
   const [hasStartedPlayback, setHasStartedPlayback] = useState(Boolean(initialSeekTime));
   const [absoluteTime, setAbsoluteTime] = useState(initialSeekTime ?? 0);
@@ -167,6 +184,11 @@ export default function GoldenPlayer({
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isUserScrolling, setIsUserScrolling] = useState(false);
+
+  /* ---------- Transcript Language ---------- */
+  const hasArabicTranscript = (arabicSegments?.length ?? 0) > 0;
+  const isArabicTranscript = hasArabicTranscript && transcriptLang === "ar";
+  const segments = isArabicTranscript ? (arabicSegments as Segment[]) : englishSegments;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const playerRef = useRef<any>(null);
@@ -351,6 +373,26 @@ export default function GoldenPlayer({
     });
   };
 
+  // Search matches and the "N shown" count are language-specific, so a query typed
+  // against one transcript is meaningless against the other and is cleared on switch.
+  //
+  // The choice is mirrored into `?lang=` so a reader can link someone to the Arabic
+  // side of a bilingual record. replaceState rather than push: switching language is
+  // not a navigation, and the back button should still leave the page.
+  const switchTranscriptLang = useCallback((lang: TranscriptLang) => {
+    setTranscriptLang(lang);
+    setSearchQuery("");
+    setDebouncedSearch("");
+    const url = new URL(window.location.href);
+    if (lang === "en") {
+      url.searchParams.delete("lang");
+    } else {
+      url.searchParams.set("lang", lang);
+    }
+    window.history.replaceState(null, "", url.toString());
+    showToast(`${TRANSCRIPT_LANG_LABELS[lang]} transcript`);
+  }, [showToast]);
+
   const downloadTranscript = () => {
     const text = segments
       .map((s) => `[${formatTime(s.start_time)}] ${getSpeakerDisplayName(s.speaker)}: ${s.content}`)
@@ -360,7 +402,8 @@ export default function GoldenPlayer({
     const a = document.createElement("a");
     a.href = url;
     const filename = media.displayTitle.replace(/[^a-z0-9]/gi, "_").toLowerCase();
-    a.download = `${filename}_transcript.txt`;
+    const langSuffix = hasArabicTranscript ? `_${transcriptLang}` : "";
+    a.download = `${filename}_transcript${langSuffix}.txt`;
     a.click();
     URL.revokeObjectURL(url);
     showToast("Transcript downloaded");
@@ -681,15 +724,6 @@ export default function GoldenPlayer({
                   <span>Copy Link</span>
                 </button>
 
-                <CiteButton
-                  source={{
-                    title: media.displayTitle,
-                    author: media.author,
-                    year: media.displayDate ? media.displayDate.match(/\d{4}/)?.[0] : undefined,
-                    locator: formatTime(absoluteTime),
-                  }}
-                />
-
                 <button type="button" onClick={downloadTranscript} className="qs-btn qs-btn-primary">
                   <Download className="w-3.5 h-3.5" />
                   <span>Download Transcript</span>
@@ -855,6 +889,22 @@ export default function GoldenPlayer({
                 </div>
 
                 <div className="flex items-center gap-3">
+                  {hasArabicTranscript && (
+                    <div className="qs-lang-toggle" role="group" aria-label="Transcript language">
+                      {(["en", "ar"] as const).map((lang) => (
+                        <button
+                          key={lang}
+                          type="button"
+                          lang={lang}
+                          onClick={() => switchTranscriptLang(lang)}
+                          aria-pressed={transcriptLang === lang}
+                          className="qs-lang-btn"
+                        >
+                          {TRANSCRIPT_LANG_LABELS[lang]}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                   <span className="qs-entry-count">{filteredSegments.length} shown</span>
                   {debouncedSearch.trim() && (
                     <span className="qs-search-results visible">{matchCount} {matchCount === 1 ? "match" : "matches"}</span>
@@ -863,12 +913,20 @@ export default function GoldenPlayer({
               </div>
 
               {/* Transcript Entries List */}
-              <div ref={transcriptRef}>
+              <div
+                ref={transcriptRef}
+                lang={isArabicTranscript ? "ar" : undefined}
+                dir={isArabicTranscript ? "rtl" : undefined}
+              >
                 {filteredSegments.map((seg, idx) => {
                   const isSegActive = activeSegmentIndex === (seg.id ?? idx);
                   const speakerSlug = getSpeakerSlug(seg.speaker);
                   const speakerDisplay = getSpeakerDisplayName(seg.speaker);
-                  const isArabicContent = ARABIC_REGEX.test(seg.content);
+                  // `qs-arabic-block` is a centred, tinted quotation frame, right for a
+                  // short Arabic citation sitting inside English prose. In an all-Arabic
+                  // transcript every row would match, turning the whole panel into a
+                  // column of boxes, so there it renders as ordinary RTL body text.
+                  const isArabicContent = !isArabicTranscript && ARABIC_REGEX.test(seg.content);
                   const isVerseQuote = VERSE_CITATION_REGEX.test(seg.content.trim());
 
                   return (
@@ -906,7 +964,7 @@ export default function GoldenPlayer({
                             {renderHighlightedContent(seg.content)}
                           </div>
                         ) : (
-                          <p className="qs-entry-text">
+                          <p className={`qs-entry-text ${isArabicTranscript ? "qs-entry-text-ar" : ""}`}>
                             {renderHighlightedContent(seg.content)}
                           </p>
                         )}

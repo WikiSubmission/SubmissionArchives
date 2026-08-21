@@ -169,7 +169,7 @@ export default function EditorToolbar({ editor }: EditorToolbarProps) {
         }}
         title="Insert Quran Verse (/quran)"
         aria-label="Insert Quran Verse"
-        className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 text-xs font-medium border border-amber-500/20 transition-all ml-auto"
+        className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-ed-accent-soft text-ed-accent hover:bg-ed-accent-soft text-xs font-medium border border-ed-accent/25 transition-all ml-auto"
       >
         <BookOpen size={15} weight="bold" />
         <span>+ Quran</span>

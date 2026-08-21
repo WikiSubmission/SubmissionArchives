@@ -48,7 +48,7 @@ interface EditorProps {
 }
 
 const FONT_CLASS: Record<FontFamily, string> = {
-  default: '',
+  default: 'font-body',
   serif: 'font-serif',
   mono: 'font-mono',
 }
@@ -222,9 +222,9 @@ export default function Editor({
 
   const statusConfig = {
     idle: { dot: 'bg-transparent', text: 'text-ed-fg-muted', label: '' },
-    saving: { dot: 'bg-amber-400', text: 'text-amber-400', label: 'Saving' },
-    saved: { dot: 'bg-emerald-400', text: 'text-emerald-400', label: 'Saved' },
-    error: { dot: 'bg-red-400', text: 'text-red-400', label: 'Error' },
+    saving: { dot: 'bg-ed-accent', text: 'text-ed-accent', label: 'Saving' },
+    saved: { dot: 'bg-ed-success', text: 'text-ed-success', label: 'Saved' },
+    error: { dot: 'bg-ed-danger', text: 'text-ed-danger', label: 'Error' },
   }
 
   const currentStatus = statusConfig[status]
@@ -252,7 +252,7 @@ export default function Editor({
         </div>
 
         {/* Note Menu + Mode Toggle Container */}
-        <div className="flex items-center gap-2 glass-strong rounded-xl border border-ed-rule shadow-elev-md p-1">
+        <div className="flex items-center gap-2 glass-strong rounded-xl border border-ed-rule shadow-ed-md p-1">
           <NoteMenu
             locked={locked}
             fullWidth={fullWidth}
@@ -275,7 +275,7 @@ export default function Editor({
           <div className="w-px h-4 bg-ed-rule" />
 
           {/* Premium Segmented Mode Control */}
-          <div className="flex items-center p-0.5 bg-black/30 rounded-lg">
+          <div className="flex items-center p-0.5 bg-ed-surface rounded-lg">
             {(['write', 'blocks', 'page'] as EditorMode[]).map((m) => (
               <button
                 key={m}

@@ -18,18 +18,18 @@ export default function StatusBar({
   isSaved = true,
 }: StatusBarProps) {
   return (
-    <footer className="h-6 shrink-0 border-t border-ed-rule bg-ed-bg/95 flex items-center justify-between px-3 text-[11px] text-ed-fg-muted font-mono select-none z-30">
+    <footer className="h-6 shrink-0 border-t border-ed-rule bg-ed-bg/95 flex items-center justify-between px-3 text-[11px] text-ed-fg-secondary font-mono select-none z-30">
       {/* Left side metrics */}
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-1 hover:text-ed-fg transition-colors cursor-default" title="Word & Character count">
-          <FileText size={12} weight="regular" className="text-ed-fg-muted" />
+          <FileText size={12} weight="regular" className="text-ed-fg-secondary" />
           <span>{wordCount} words</span>
           <span className="text-ed-rule-strong">•</span>
           <span>{charCount} chars</span>
         </div>
 
         <div className="flex items-center gap-1 hover:text-ed-fg transition-colors cursor-default" title="Incoming Backlinks">
-          <LinkSimple size={12} weight="bold" className="text-amber-400" />
+          <LinkSimple size={12} weight="bold" className="text-ed-accent" />
           <span>{backlinksCount} {backlinksCount === 1 ? 'backlink' : 'backlinks'}</span>
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function StatusBar({
               className={`px-1.5 py-0.2 rounded capitalize transition-all ${
                 editorMode === mode
                   ? 'bg-ed-surface-strong text-ed-fg font-medium'
-                  : 'text-ed-fg-muted hover:text-ed-fg'
+                  : 'text-ed-fg-secondary hover:text-ed-fg'
               }`}
             >
               {mode}
@@ -55,8 +55,8 @@ export default function StatusBar({
 
         {/* Save Status */}
         <div className="flex items-center gap-1 text-[10px]">
-          <CheckCircle size={12} weight="fill" className={isSaved ? 'text-emerald-400' : 'text-amber-400'} />
-          <span className={isSaved ? 'text-emerald-400 font-semibold' : 'text-amber-400 font-semibold'}>
+          <CheckCircle size={12} weight="fill" className={isSaved ? 'text-ed-success' : 'text-ed-accent'} />
+          <span className={isSaved ? 'text-ed-success font-semibold' : 'text-ed-accent font-semibold'}>
             {isSaved ? 'Saved' : 'Unsaved'}
           </span>
         </div>

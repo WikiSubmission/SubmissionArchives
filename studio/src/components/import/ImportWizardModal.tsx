@@ -128,15 +128,15 @@ export default function ImportWizardModal({ archivePath, onImportCompleted, onCl
   }
 
   return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 p-4" onClick={onClose}>
+    <div className="fixed inset-0 bg-ed-scrim backdrop-blur-md flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div
-        className="w-full max-w-2xl bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-elev-xl overflow-hidden flex flex-col max-h-[85vh] animate-slide-up-fade"
+        className="w-full max-w-2xl bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-ed-lg overflow-hidden flex flex-col max-h-[85vh] animate-slide-up-fade"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}
         <div className="px-6 py-4 border-b border-ed-rule flex items-center justify-between bg-ed-surface/50 shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+            <div className="w-8 h-8 rounded-lg bg-ed-accent-soft border border-ed-accent/25 flex items-center justify-center text-ed-accent">
               <DownloadSimple size={18} weight="bold" />
             </div>
             <div>
@@ -172,16 +172,16 @@ export default function ImportWizardModal({ archivePath, onImportCompleted, onCl
                       onClick={() => setSelectedSource(opt.id)}
                       className={`p-4 rounded-xl border text-left transition-all relative flex flex-col justify-between ${
                         isSelected
-                          ? 'bg-ed-surface-strong border-amber-500 shadow-elev-sm'
+                          ? 'bg-ed-surface-strong border-ed-accent shadow-ed-sm'
                           : 'bg-ed-surface/40 border-ed-rule hover:border-ed-rule-strong hover:bg-ed-surface/60'
                       }`}
                     >
                       <div>
                         <div className="flex items-center justify-between mb-2">
-                          <div className={`p-2 rounded-lg ${isSelected ? 'bg-amber-500 text-black' : 'bg-ed-surface text-ed-fg-muted'}`}>
+                          <div className={`p-2 rounded-lg ${isSelected ? 'bg-ed-accent text-ed-on-accent' : 'bg-ed-surface text-ed-fg-muted'}`}>
                             <Icon size={18} weight={isSelected ? 'bold' : 'regular'} />
                           </div>
-                          <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                          <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded-full bg-ed-accent-soft text-ed-accent border border-ed-accent/25">
                             {opt.badge}
                           </span>
                         </div>
@@ -202,7 +202,7 @@ export default function ImportWizardModal({ archivePath, onImportCompleted, onCl
 
           {status === 'processing' && (
             <div className="py-16 flex flex-col items-center justify-center text-center space-y-3">
-              <span className="w-8 h-8 border-2 border-amber-500/20 border-t-amber-500 rounded-full animate-spin" />
+              <span className="w-8 h-8 border-2 border-ed-accent/25 border-t-ed-accent rounded-full animate-spin" />
               <h3 className="text-sm font-bold text-ed-fg">Converting & Ingesting Files...</h3>
               <p className="text-xs text-ed-fg-muted max-w-sm">
                 Parsing document structure, extracting media attachments, and normalizing Markdown formatting.
@@ -212,7 +212,7 @@ export default function ImportWizardModal({ archivePath, onImportCompleted, onCl
 
           {status === 'success' && (
             <div className="py-8 flex flex-col items-center justify-center text-center space-y-4 animate-slide-up-fade">
-              <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <div className="w-12 h-12 rounded-full bg-ed-success-soft border border-ed-success/25 flex items-center justify-center text-ed-success">
                 <CheckCircle size={28} weight="fill" />
               </div>
               <div>
@@ -225,7 +225,7 @@ export default function ImportWizardModal({ archivePath, onImportCompleted, onCl
               <div className="w-full max-h-48 overflow-y-auto bg-ed-surface/50 border border-ed-rule rounded-xl p-3 text-left space-y-1">
                 {importedFiles.map((f) => (
                   <div key={f} className="text-[11px] font-mono text-ed-fg-muted flex items-center gap-2 truncate">
-                    <FileText size={14} weight="regular" className="text-amber-400 shrink-0" />
+                    <FileText size={14} weight="regular" className="text-ed-accent shrink-0" />
                     <span className="truncate">{f.split(/[\\/]/).pop()}</span>
                   </div>
                 ))}
@@ -234,7 +234,7 @@ export default function ImportWizardModal({ archivePath, onImportCompleted, onCl
           )}
 
           {status === 'error' && (
-            <div className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl space-y-2 text-rose-300 text-xs">
+            <div className="p-4 bg-ed-danger-soft border border-ed-danger/25 rounded-xl space-y-2 text-ed-danger text-xs">
               <div className="font-bold flex items-center gap-1.5">
                 <WarningCircle size={16} weight="bold" />
                 <span>Import Failed</span>
@@ -256,7 +256,7 @@ export default function ImportWizardModal({ archivePath, onImportCompleted, onCl
           {status === 'idle' && (
             <button
               onClick={handleStartImport}
-              className="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-black text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+              className="px-4 py-2 rounded-lg bg-ed-accent hover:bg-ed-accent-strong text-ed-on-accent text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
             >
               <span>Select & Import</span>
               <ArrowRight size={13} weight="bold" />

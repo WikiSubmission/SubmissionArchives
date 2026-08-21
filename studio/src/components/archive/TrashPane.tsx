@@ -55,26 +55,26 @@ export default function TrashPane({ archivePath, onRestore, refreshToken }: Tras
   return (
     <div className="h-full flex flex-col">
       <div className="p-4 shrink-0 border-b border-ed-rule">
-        <span className="text-xs font-bold uppercase tracking-wider text-ed-fg-muted">Trash</span>
+        <span className="text-xs font-bold uppercase tracking-wider text-ed-fg-secondary">Trash</span>
       </div>
 
-      {error && <div className="px-4 py-2 text-xs text-red-400 font-mono">{error}</div>}
+      {error && <div className="px-4 py-2 text-xs text-ed-danger font-mono">{error}</div>}
       {entries.length === 0 && !error && (
-        <div className="px-4 py-8 text-xs text-ed-fg-muted text-center italic">Trash is empty.</div>
+        <div className="px-4 py-8 text-xs text-ed-fg-secondary text-center italic">Trash is empty.</div>
       )}
 
       <div className="flex-1 overflow-y-auto py-1">
         {entries.map((entry) => (
           <div
             key={entry.id}
-            className="group flex items-center gap-1.5 px-3 py-1.5 text-xs text-ed-fg-muted hover:bg-ed-surface transition-colors"
+            className="group flex items-center gap-1.5 px-3 py-1.5 text-xs text-ed-fg-secondary hover:bg-ed-surface transition-colors"
           >
             <span className="truncate flex-1 font-medium">{entry.name}</span>
             <button
               onClick={() => handleRestore(entry)}
               title="Restore note"
               aria-label="Restore"
-              className="opacity-0 group-hover:opacity-100 p-1 text-ed-fg-muted hover:text-emerald-400 transition-colors shrink-0"
+              className="opacity-0 group-hover:opacity-100 p-1 text-ed-fg-secondary hover:text-ed-success transition-colors shrink-0"
             >
               <ArrowCounterClockwise size={14} weight="bold" />
             </button>
@@ -82,7 +82,7 @@ export default function TrashPane({ archivePath, onRestore, refreshToken }: Tras
               onClick={() => handleDelete(entry)}
               title="Delete permanently"
               aria-label="Delete permanently"
-              className="opacity-0 group-hover:opacity-100 p-1 text-ed-fg-muted hover:text-red-400 transition-colors shrink-0"
+              className="opacity-0 group-hover:opacity-100 p-1 text-ed-fg-secondary hover:text-ed-danger transition-colors shrink-0"
             >
               <Trash size={14} weight="regular" />
             </button>

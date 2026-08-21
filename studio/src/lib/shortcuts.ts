@@ -73,6 +73,36 @@ export const SYSTEM_COMMANDS: CommandDefinition[] = [
     defaultKeys: { windows: 'Ctrl+,', mac: 'Cmd+,' },
     description: 'Configure appearance, Quran, and shortcuts',
   },
+  {
+    id: 'view.toggle-editor',
+    label: 'Toggle Editor Pane',
+    category: 'View',
+    defaultKeys: { windows: 'Ctrl+\\', mac: 'Cmd+\\' },
+    description: 'Hide the editor to read the inspector full width',
+  },
+  {
+    id: 'view.toggle-appearance',
+    label: 'Toggle Light / Dark',
+    category: 'View',
+    defaultKeys: { windows: 'Ctrl+Shift+D', mac: 'Cmd+Shift+D' },
+    description: 'Switch between the paper and obsidian themes',
+  },
+  // These two were already wired up in App.tsx but never registered here, so
+  // their keys did nothing — useShortcuts only walks SYSTEM_COMMANDS.
+  {
+    id: 'view.toggle-split',
+    label: 'Split Editor Pane',
+    category: 'View',
+    defaultKeys: { windows: 'Ctrl+Shift+S', mac: 'Cmd+Shift+S' },
+    description: 'Show two notes side by side in the editor pane',
+  },
+  {
+    id: 'view.open-canvas',
+    label: 'Open Visual Synthesis Canvas',
+    category: 'View',
+    defaultKeys: { windows: 'Ctrl+Shift+C', mac: 'Cmd+Shift+C' },
+    description: 'Arrange notes spatially on the whiteboard canvas',
+  },
 ]
 
 const IS_MAC = typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform)

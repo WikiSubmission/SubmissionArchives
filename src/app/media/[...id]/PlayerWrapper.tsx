@@ -11,17 +11,27 @@ const GoldenPlayer = dynamic(() => import('@/components/player/GoldenPlayer'), {
 });
 
 // The server component is fully static (prerendered via generateStaticParams).
-// The `?t=` deep-link seek time is a client-only concern, so we read it here
-// with useSearchParams (which requires the Suspense boundary below) rather than
-// awaiting searchParams on the server, which would force dynamic rendering.
-type PlayerWrapperProps = Omit<GoldenPlayerProps, 'initialSeekTime'>;
+// The `?t=` deep-link seek time and `?lang=` transcript language are client-only
+// concerns, so we read them here with useSearchParams (which requires the Suspense
+// boundary below) rather than awaiting searchParams on the server, which would force
+// dynamic rendering.
+type PlayerWrapperProps = Omit<GoldenPlayerProps, 'initialSeekTime' | 'initialTranscriptLang'>;
 
 function PlayerWithSeek(props: PlayerWrapperProps) {
   const searchParams = useSearchParams();
   const requestedTime = parseTimeParam(searchParams.get('t'));
   const initialSeekTime = requestedTime !== undefined && requestedTime >= 0 ? requestedTime : undefined;
+  // Only 'ar' is honoured; anything else falls through to the English default, so a
+  // stray or stale value cannot leave the transcript panel empty.
+  const initialTranscriptLang = searchParams.get('lang') === 'ar' ? 'ar' : undefined;
 
-  return <GoldenPlayer {...props} initialSeekTime={initialSeekTime} />;
+  return (
+    <GoldenPlayer
+      {...props}
+      initialSeekTime={initialSeekTime}
+      initialTranscriptLang={initialTranscriptLang}
+    />
+  );
 }
 
 export default function PlayerWrapper(props: PlayerWrapperProps) {

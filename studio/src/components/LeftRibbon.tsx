@@ -39,7 +39,7 @@ export default function LeftRibbon({
   onNewNote
 }: LeftRibbonProps) {
   return (
-    <aside className="w-[44px] shrink-0 border-r border-ed-rule bg-ed-bg/90 flex flex-col items-center justify-between py-2.5 z-40 select-none">
+    <aside className="z-40 flex w-11 shrink-0 select-none flex-col items-center justify-between border-r border-ed-rule bg-ed-bg-secondary py-2.5">
       {/* Top Actions */}
       <div className="flex flex-col items-center gap-1.5 w-full px-1">
         <motion.button
@@ -66,7 +66,7 @@ export default function LeftRibbon({
             onClick={onOpenCanvas}
             aria-label="Whiteboard Canvas"
             title="Visual Synthesis Canvas"
-            className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-amber-400 hover:bg-amber-500/10 transition-colors"
+            className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent-soft transition-colors"
           >
             <TreeStructure size={18} weight="regular" />
           </motion.button>
@@ -79,7 +79,7 @@ export default function LeftRibbon({
           onClick={onNewNote}
           aria-label="New Note"
           title="New Note (Ctrl+N)"
-          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent-soft transition-colors"
         >
           <FilePlus size={18} weight="bold" />
         </motion.button>
@@ -127,7 +127,7 @@ export default function LeftRibbon({
           onClick={onOpenGraph}
           aria-label="Graph View"
           title="Open Graph View"
-          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-sky-400 hover:bg-sky-500/10 transition-colors"
+          className="tactile p-2 rounded-lg text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent-soft transition-colors"
         >
           <ShareNetwork size={18} weight="regular" />
         </motion.button>
@@ -144,7 +144,7 @@ export default function LeftRibbon({
           title={inspectorOpen ? 'Collapse Inspector' : 'Expand Inspector (Outline & Backlinks)'}
           className={`tactile p-2 rounded-lg transition-colors ${
             inspectorOpen
-              ? 'text-amber-400 bg-amber-500/10'
+              ? 'text-ed-accent bg-ed-accent-soft'
               : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
           }`}
         >

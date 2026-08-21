@@ -21,9 +21,9 @@ interface PdfViewerProps {
 }
 
 const HIGHLIGHT_COLORS: { id: PdfHighlight['color']; bg: string; border: string; label: string }[] = [
-  { id: 'amber', bg: 'bg-amber-500/20 text-amber-300', border: 'border-amber-500/40', label: 'Amber' },
-  { id: 'emerald', bg: 'bg-emerald-500/20 text-emerald-300', border: 'border-emerald-500/40', label: 'Green' },
-  { id: 'rose', bg: 'bg-rose-500/20 text-rose-300', border: 'border-rose-500/40', label: 'Rose' },
+  { id: 'amber', bg: 'bg-ed-accent-soft text-ed-accent', border: 'border-ed-accent/45', label: 'Amber' },
+  { id: 'emerald', bg: 'bg-ed-success-soft text-ed-success', border: 'border-ed-success/45', label: 'Green' },
+  { id: 'rose', bg: 'bg-ed-danger-soft text-ed-danger', border: 'border-ed-danger/45', label: 'Rose' },
   { id: 'cyan', bg: 'bg-cyan-500/20 text-cyan-300', border: 'border-cyan-500/40', label: 'Cyan' },
 ]
 
@@ -77,7 +77,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
       {/* Top PDF Control Bar */}
       <div className="h-10 px-3 border-b border-ed-rule flex items-center justify-between bg-ed-surface/40 shrink-0 gap-2">
         <div className="flex items-center gap-2 min-w-0">
-          <BookmarkSimple size={15} weight="fill" className="text-amber-400 shrink-0" />
+          <BookmarkSimple size={15} weight="fill" className="text-ed-accent shrink-0" />
           <span className="text-xs font-semibold text-ed-fg truncate max-w-[220px]" title={fileName}>
             {fileName}
           </span>
@@ -90,7 +90,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
             aria-label="Capture excerpt"
             className={`px-2 py-1 rounded-md text-[11px] font-semibold flex items-center gap-1 transition-all ${
               isAddingExcerpt
-                ? 'bg-amber-500 text-black'
+                ? 'bg-ed-accent text-ed-on-accent'
                 : 'bg-ed-surface hover:bg-ed-surface-strong text-ed-fg border border-ed-rule'
             }`}
           >
@@ -104,13 +104,13 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
             aria-label="Toggle Highlights"
             className={`p-1.5 rounded-md transition-colors relative ${
               showAnnotations
-                ? 'text-amber-400 bg-amber-500/10'
+                ? 'text-ed-accent bg-ed-accent-soft'
                 : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
             }`}
           >
             <Highlighter size={16} weight={showAnnotations ? 'fill' : 'regular'} />
             {highlights.length > 0 && (
-              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-amber-500" />
+              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-ed-accent" />
             )}
           </button>
 
@@ -132,7 +132,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
         <div className="p-3 bg-ed-surface/90 border-b border-ed-rule flex flex-col gap-2 shrink-0 animate-slide-up-fade">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold text-ed-fg uppercase tracking-wider flex items-center gap-1">
-              <Quotes size={14} weight="bold" className="text-amber-400" />
+              <Quotes size={14} weight="bold" className="text-ed-accent" />
               Capture Excerpt & Citation
             </span>
             <div className="flex items-center gap-1">
@@ -153,7 +153,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
             value={newExcerpt}
             onChange={(e) => setNewExcerpt(e.target.value)}
             placeholder="Paste or type excerpt passage from this PDF page..."
-            className="w-full bg-ed-bg border border-ed-rule rounded-lg p-2 text-xs text-ed-fg placeholder:text-ed-fg-muted outline-none focus:border-amber-500/50 resize-none font-sans"
+            className="w-full bg-ed-bg border border-ed-rule rounded-lg p-2 text-xs text-ed-fg placeholder:text-ed-fg-muted outline-none focus:border-ed-accent/50 resize-none font-sans"
           />
 
           <div className="flex items-center justify-between pt-1">
@@ -165,13 +165,13 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
                   title={c.label}
                   className={`w-4 h-4 rounded-full border transition-transform ${
                     c.id === 'amber'
-                      ? 'bg-amber-400'
+                      ? 'bg-ed-accent'
                       : c.id === 'emerald'
-                      ? 'bg-emerald-400'
+                      ? 'bg-ed-success'
                       : c.id === 'rose'
-                      ? 'bg-rose-400'
+                      ? 'bg-ed-danger'
                       : 'bg-cyan-400'
-                  } ${selectedColor === c.id ? 'scale-125 ring-2 ring-amber-500/50 border-white' : 'border-transparent'}`}
+                  } ${selectedColor === c.id ? 'scale-125 ring-2 ring-ed-accent/50 border-ed-fg' : 'border-transparent'}`}
                 />
               ))}
             </div>
@@ -185,7 +185,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
                     handleAddHighlight()
                   }}
                   disabled={!newExcerpt.trim()}
-                  className="px-3 py-1 rounded-md bg-amber-500 hover:bg-amber-600 disabled:opacity-30 text-black text-xs font-bold transition-all shadow-sm flex items-center gap-1"
+                  className="px-3 py-1 rounded-md bg-ed-accent hover:bg-ed-accent-strong disabled:opacity-30 text-ed-on-accent text-xs font-bold transition-all shadow-sm flex items-center gap-1"
                 >
                   <Quotes size={12} weight="bold" />
                   <span>Insert into Note</span>
@@ -239,7 +239,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
                     className="p-2.5 rounded-lg bg-ed-surface/60 border border-ed-rule space-y-1.5 group hover:border-ed-rule-strong transition-all"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono font-semibold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded">
+                      <span className="text-[10px] font-mono font-semibold text-ed-accent bg-ed-accent-soft px-1.5 py-0.5 rounded">
                         Page {hl.pageNumber}
                       </span>
 
@@ -250,7 +250,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
                           className="p-1 rounded text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface"
                         >
                           {copiedId === hl.id ? (
-                            <Check size={12} weight="bold" className="text-emerald-400" />
+                            <Check size={12} weight="bold" className="text-ed-success" />
                           ) : (
                             <Copy size={12} weight="bold" />
                           )}
@@ -260,7 +260,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
                           <button
                             onClick={() => onQuoteExcerpt(hl.text, hl.pageNumber)}
                             title="Quote into Active Note"
-                            className="p-1 rounded text-ed-fg-muted hover:text-amber-400 hover:bg-ed-surface"
+                            className="p-1 rounded text-ed-fg-muted hover:text-ed-accent hover:bg-ed-surface"
                           >
                             <CaretRight size={12} weight="bold" />
                           </button>
@@ -269,7 +269,7 @@ export default function PdfViewer({ archivePath, pdfPath, onQuoteExcerpt, onClos
                         <button
                           onClick={() => handleDeleteHighlight(hl.id)}
                           title="Delete Highlight"
-                          className="p-1 rounded text-ed-fg-muted hover:text-rose-400 hover:bg-ed-surface"
+                          className="p-1 rounded text-ed-fg-muted hover:text-ed-danger hover:bg-ed-surface"
                         >
                           <Trash size={12} weight="bold" />
                         </button>

@@ -58,7 +58,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         left: `${coords.left}px`,
         transform: 'translateX(-50%)',
       }}
-      className="flex items-center gap-0.5 p-1 glass-strong rounded-xl border border-ed-rule shadow-elev-xl z-50 animate-slide-up-fade select-none"
+      className="flex items-center gap-0.5 p-1 glass-strong rounded-xl border border-ed-rule shadow-ed-lg z-50 animate-slide-up-fade select-none"
     >
       <button
         onMouseDown={(e) => {
@@ -67,7 +67,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('bold')
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Bold (Ctrl+B)"
@@ -82,7 +82,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('italic')
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Italic (Ctrl+I)"
@@ -97,7 +97,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('strike')
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Strikethrough"
@@ -112,7 +112,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('code')
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Inline Code"
@@ -129,7 +129,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('heading', { level: 1 })
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Heading 1"
@@ -144,7 +144,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('heading', { level: 2 })
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Heading 2"
@@ -159,7 +159,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('heading', { level: 3 })
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Heading 3"
@@ -174,7 +174,7 @@ export default function EditorBubbleMenu({ editor }: EditorBubbleMenuProps) {
         }}
         className={`p-1.5 rounded-lg text-xs transition-colors ${
           editor.isActive('blockquote')
-            ? 'bg-amber-500 text-black font-bold'
+            ? 'bg-ed-accent text-ed-on-accent font-bold'
             : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
         }`}
         title="Blockquote"

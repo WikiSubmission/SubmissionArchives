@@ -44,7 +44,7 @@ export function BlockActions({ editor, blockPos }: BlockActionsProps) {
   }
 
   return (
-    <div className="flex items-center gap-0.5 p-1 glass-strong border border-ed-rule rounded-lg shadow-elev-md z-40">
+    <div className="flex items-center gap-0.5 p-1 glass-strong border border-ed-rule rounded-lg shadow-ed-md z-40">
       <div className="p-1 text-ed-fg-muted cursor-grab active:cursor-grabbing hover:text-ed-fg">
         <DotsSixVertical size={16} weight="bold" />
       </div>
@@ -84,7 +84,7 @@ export function BlockActions({ editor, blockPos }: BlockActionsProps) {
         onClick={insertQuran}
         title="Turn into Quran Embed"
         aria-label="Quran embed"
-        className="p-1 rounded text-amber-400 hover:bg-amber-500/10 transition-colors"
+        className="p-1 rounded text-ed-accent hover:bg-ed-accent-soft transition-colors"
       >
         <BookOpen size={15} weight="bold" />
       </button>
@@ -93,7 +93,7 @@ export function BlockActions({ editor, blockPos }: BlockActionsProps) {
         onClick={insertCallout}
         title="Turn into Callout"
         aria-label="Callout"
-        className="p-1 rounded text-sky-400 hover:bg-sky-500/10 transition-colors"
+        className="p-1 rounded text-ed-accent hover:bg-ed-accent-soft transition-colors"
       >
         <Info size={15} weight="bold" />
       </button>
@@ -113,7 +113,7 @@ export function BlockActions({ editor, blockPos }: BlockActionsProps) {
         onClick={deleteBlock}
         title="Delete Block"
         aria-label="Delete block"
-        className="p-1 rounded text-ed-fg-muted hover:text-red-400 hover:bg-red-500/10 transition-colors"
+        className="p-1 rounded text-ed-fg-muted hover:text-ed-danger hover:bg-ed-danger-soft transition-colors"
       >
         <Trash size={15} weight="regular" />
       </button>

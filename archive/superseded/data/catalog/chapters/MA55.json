@@ -1,0 +1,59 @@
+{
+  "id": "messenger-audio/55 Zikr 23 Oct 1982 By Dr Rashad Khalifa",
+  "maNumber": 55,
+  "title": "MA 55 — Zikr (Dr. Rashad Khalifa, 10/23/1982)",
+  "totalDuration": 1304,
+  "chapterCount": 6,
+  "source": "authored from the transcript, 2026-08-19",
+  "note": "A guided remembrance session, not a lecture. Most of its 21 minutes are the congregation repeating a single phrase, so the chapters mark which invocation is being held rather than topics under discussion. The long gaps between captions are the practice itself, not missing transcription.",
+  "chapters": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 62,
+      "title": "Opening Recitation: Suras 113, 114 and 1",
+      "description": "The session opens with the two suras of refuge recited in full, Al-Falaq and An-Nas, seeking refuge from the evils of darkness, of the troublemakers, of the envious, and of the sneaky whisperers who whisper into the chests of the people, be they of the jinns or the people. Al-Fatiha follows in full.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 2,
+      "startTime": 62,
+      "endTime": 86,
+      "title": "The Instruction: Travel to the Seventh Heaven",
+      "description": "Khalifa asks God to accept the prayers, the zikr and whatever is in their hearts, then gives the instruction that frames the whole session: close the eyes, concentrate, travel across the billion trillion galaxies and cross the seven universes to the seventh heaven, and there announce to the angels that there is no god except Allah, the one God.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 3,
+      "startTime": 86,
+      "endTime": 446,
+      "title": "La Elaha Ella Allah",
+      "description": "The first extended remembrance, on the declaration that there is no god except the One God. The captions record the phrase being taken up and repeated by the congregation, with brief audible asides between participants. Roughly six minutes.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 4,
+      "startTime": 446,
+      "endTime": 648,
+      "title": "Renewed Instruction and Continued Remembrance",
+      "description": "Khalifa breaks in over the whispering to repeat the instruction: as we whisper the declaration, try again to let your soul go across the seventh heaven. Concentrate, and do not let anything distract you. The remembrance then continues for a further three minutes.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 5,
+      "startTime": 648,
+      "endTime": 978,
+      "title": "Allah, Qayyum",
+      "description": "The remembrance moves from the full declaration to the divine name alone, and then to Qayyum, the Absolute and Eternal King, each held for several minutes.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 6,
+      "startTime": 978,
+      "endTime": 1304,
+      "title": "Subhan Allah and Closing",
+      "description": "The final movement, on Subhan Allah, God be glorified, held for around three minutes and closing with Alhamdu Lillah, God be praised.",
+      "speaker": "Dr. Khalifa"
+    }
+  ]
+}

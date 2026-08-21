@@ -44,9 +44,9 @@ export default function GraphView({ archivePath, onOpenFile, onClose }: GraphVie
   const positionById = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes])
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50" onClick={onClose}>
+    <div className="fixed inset-0 bg-ed-scrim backdrop-blur-sm flex items-center justify-center z-50" onClick={onClose}>
       <div
-        className="bg-ed-bg border border-ed-rule rounded-xl shadow-elev-xl overflow-hidden animate-slide-up-fade"
+        className="bg-ed-bg border border-ed-rule rounded-xl shadow-ed-lg overflow-hidden animate-slide-up-fade"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-4 py-3 border-b border-ed-rule">
@@ -88,7 +88,7 @@ export default function GraphView({ archivePath, onOpenFile, onClose }: GraphVie
                   onClose()
                 }}
               >
-                <circle r={5} fill="#f59e0b" className="transition-transform group-hover:scale-125" />
+                <circle r={5} fill="var(--ed-accent)" className="transition-transform group-hover:scale-125" />
                 <text x={9} y={4} fontSize={11} fill="var(--color-ed-fg)" className="font-mono font-medium">
                   {node.label}
                 </text>

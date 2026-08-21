@@ -59,7 +59,7 @@ export default function TabHeader({
             disabled={!canGoBack}
             title="Navigate Back"
             aria-label="Navigate Back"
-            className="p-1 rounded text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface disabled:opacity-20 disabled:hover:bg-transparent transition-all"
+            className="p-1 rounded text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface disabled:opacity-20 disabled:hover:bg-transparent transition-all"
           >
             <CaretLeft size={14} weight="bold" />
           </button>
@@ -68,7 +68,7 @@ export default function TabHeader({
             disabled={!canGoForward}
             title="Navigate Forward"
             aria-label="Navigate Forward"
-            className="p-1 rounded text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface disabled:opacity-20 disabled:hover:bg-transparent transition-all"
+            className="p-1 rounded text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface disabled:opacity-20 disabled:hover:bg-transparent transition-all"
           >
             <CaretRight size={14} weight="bold" />
           </button>
@@ -84,24 +84,24 @@ export default function TabHeader({
                 onClick={() => onSelectTab(tab.path)}
                 className={`group relative flex items-center gap-2 h-7 px-2.5 rounded-md text-xs font-medium cursor-pointer transition-all duration-150 max-w-[180px] shrink-0 border ${
                   isActive
-                    ? 'bg-ed-surface-strong text-ed-fg border-ed-rule shadow-elev-sm'
-                    : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface border-transparent'
+                    ? 'bg-ed-surface-strong text-ed-fg border-ed-rule shadow-ed-sm'
+                    : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface border-transparent'
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="activeTabIndicator"
-                    className="absolute inset-0 rounded-md border border-amber-500/30 pointer-events-none"
+                    className="absolute inset-0 rounded-md border border-ed-accent/35 pointer-events-none"
                     transition={springConfig}
                   />
                 )}
-                <FileText size={14} weight={isActive ? 'fill' : 'regular'} className={isActive ? 'text-amber-400' : 'text-ed-fg-muted'} />
+                <FileText size={14} weight={isActive ? 'fill' : 'regular'} className={isActive ? 'text-ed-accent' : 'text-ed-fg-secondary'} />
                 <span className="truncate flex-1 tracking-tight">{tab.name}</span>
                 {tabs.length > 1 && (
                   <button
                     onClick={(e) => onCloseTab(tab.path, e)}
                     aria-label="Close tab"
-                    className="opacity-0 group-hover:opacity-100 p-0.5 rounded hover:bg-ed-surface-strong text-ed-fg-muted hover:text-ed-fg transition-all"
+                    className="opacity-0 group-hover:opacity-100 p-0.5 rounded hover:bg-ed-surface-strong text-ed-fg-secondary hover:text-ed-fg transition-all"
                   >
                     <X size={12} weight="bold" />
                   </button>
@@ -114,7 +114,7 @@ export default function TabHeader({
             onClick={onNewTab}
             title="New Note (Ctrl+N)"
             aria-label="New Note"
-            className="p-1 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors shrink-0"
+            className="p-1 rounded-md text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface transition-colors shrink-0"
           >
             <Plus size={14} weight="bold" />
           </button>
@@ -129,8 +129,8 @@ export default function TabHeader({
               aria-label="Toggle Split"
               className={`p-1.5 rounded-md transition-colors ${
                 isSplit
-                  ? 'text-amber-400 bg-amber-500/10'
-                  : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
+                  ? 'text-ed-accent bg-ed-accent-soft'
+                  : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
               }`}
             >
               <Columns size={15} weight={isSplit ? 'fill' : 'regular'} />
@@ -141,7 +141,7 @@ export default function TabHeader({
 
       {/* Path Breadcrumbs Bar */}
       {breadcrumbs.length > 0 && (
-        <div className="h-6 flex items-center px-4 gap-1.5 text-[11px] font-mono text-ed-fg-muted overflow-x-auto no-scrollbar">
+        <div className="h-6 flex items-center px-4 gap-1.5 text-[11px] font-mono text-ed-fg-secondary overflow-x-auto no-scrollbar">
           {breadcrumbs.map((part, index) => (
             <div key={index} className="flex items-center gap-1.5 shrink-0">
               {index > 0 && <span className="text-ed-rule-strong">/</span>}

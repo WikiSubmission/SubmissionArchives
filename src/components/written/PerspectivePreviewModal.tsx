@@ -250,6 +250,17 @@ export default function PerspectivePreviewModal({
                                     </span>
                                 </div>
 
+                                {/* Recurring departments (the masthead, the subscription and
+                                    order pages, the mailing panel) are filtered out upstream,
+                                    so an issue can legitimately have few entries. Saying so
+                                    beats showing an unexplained short list. */}
+                                {articles.length === 0 && (
+                                    <p className="rounded-lg border border-dashed border-ed-rule px-3.5 py-3 text-[13px] text-ed-fg-secondary">
+                                        No article headings could be read from this issue&apos;s scan. Open the
+                                        full issue to browse its {pageCount} pages.
+                                    </p>
+                                )}
+
                                 <div className="space-y-3">
                                     {articles.map((art, idx) => (
                                         <div

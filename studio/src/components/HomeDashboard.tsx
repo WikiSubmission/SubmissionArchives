@@ -43,17 +43,17 @@ export default function HomeDashboard({ archivePath, onOpenFile }: HomeDashboard
         <h1 className="text-xl font-bold text-ed-fg tracking-tight">
           Peace be upon you!
         </h1>
-        <p className="text-xs text-ed-fg-muted mt-1.5 leading-relaxed text-center font-medium">
+        <p className="text-xs text-ed-fg-secondary mt-1.5 leading-relaxed text-center font-medium">
           Open or create a note from the Archive Explorer to start writing. Type{' '}
-          <code className="text-amber-400 font-mono text-[11px] bg-ed-surface px-1 py-0.5 rounded border border-ed-rule">/quran 1:1-7</code>{' '}
+          <code className="text-ed-accent font-mono text-[11px] bg-ed-surface px-1 py-0.5 rounded border border-ed-rule">/quran 1:1-7</code>{' '}
           to insert a verse, or{' '}
-          <code className="text-amber-400 font-mono text-[11px] bg-ed-surface px-1 py-0.5 rounded border border-ed-rule">[[Page Name]]</code>{' '}
+          <code className="text-ed-accent font-mono text-[11px] bg-ed-surface px-1 py-0.5 rounded border border-ed-rule">[[Page Name]]</code>{' '}
           to link another note.
         </p>
 
         {recents.length > 0 && (
           <div className="w-full mt-10">
-            <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-muted mb-2 pl-1">
+            <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-secondary mb-2 pl-1">
               <ClockCounterClockwise size={13} weight="bold" />
               Recently visited
             </div>
@@ -67,12 +67,12 @@ export default function HomeDashboard({ archivePath, onOpenFile }: HomeDashboard
                   <FileText
                     size={16}
                     weight="regular"
-                    className="text-ed-fg-muted group-hover:text-ed-fg transition-colors shrink-0"
+                    className="text-ed-fg-secondary group-hover:text-ed-fg transition-colors shrink-0"
                   />
-                  <span className="text-xs text-ed-fg-muted group-hover:text-ed-fg truncate flex-1 font-medium tracking-tight transition-colors">
+                  <span className="text-xs text-ed-fg-secondary group-hover:text-ed-fg truncate flex-1 font-medium tracking-tight transition-colors">
                     {entry.name}
                   </span>
-                  <span className="text-[10px] text-ed-fg-muted font-mono shrink-0 transition-colors">
+                  <span className="text-[10px] text-ed-fg-secondary font-mono shrink-0 transition-colors">
                     {formatRelativeTime(entry.openedAt)}
                   </span>
                 </button>

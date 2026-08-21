@@ -8,6 +8,15 @@ import { z } from 'zod';
 // the app does not read, and failing a build over a field nobody consumes would train
 // people to distrust the check.
 
+const ChapterSchema = z.object({
+    id: z.number(),
+    startTime: z.number(),
+    endTime: z.number().optional(),
+    title: z.string(),
+    description: z.string().optional(),
+    speaker: z.string().optional(),
+});
+
 const MediaEntrySchema = z.object({
     id: z.string().min(1),
     title: z.string().min(1),
@@ -24,6 +33,7 @@ const MediaEntrySchema = z.object({
     youtubeId: z.string().nullish(),
     youtubeUrl: z.string().url().nullish(),
     duration_seconds: z.number().nonnegative().nullish(),
+    chapters: z.array(ChapterSchema).optional(),
     // Filled in by enrich_media_years.mjs from the YouTube upload date for records whose
     // title states no date of its own. dateSource distinguishes that from a date read
     // directly off the title (the generator's own deriveDateFromTitle), since an upload

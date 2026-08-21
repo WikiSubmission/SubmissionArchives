@@ -59,7 +59,7 @@ export function EmojiPicker({ onSelect, onClose, currentEmoji }: EmojiPickerProp
   }, [search])
 
   return (
-    <div className="glass-strong rounded-xl p-3 shadow-elev-lg w-64 border border-ed-rule z-50 animate-fadeInUp">
+    <div className="glass-strong rounded-xl p-3 shadow-ed-lg w-64 border border-ed-rule z-50 animate-fadeInUp">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-medium text-ed-fg-muted uppercase tracking-wider">Choose Icon</span>
         <button
@@ -108,7 +108,7 @@ export function EmojiPicker({ onSelect, onClose, currentEmoji }: EmojiPickerProp
             onSelect('')
             onClose()
           }}
-          className="text-xs text-red-400 hover:underline"
+          className="text-xs text-ed-danger hover:underline"
         >
           Remove Custom Icon
         </button>

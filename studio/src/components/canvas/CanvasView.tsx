@@ -58,11 +58,11 @@ const DEFAULT_CANVAS: CanvasData = {
       color: 'emerald',
       irabSentence: 'الله لا إله إلا هو',
       irabTokens: [
-        { word: 'اللَّهُ', role: 'Mubtada (Subject)', color: '#3b82f6' },
-        { word: 'لَا', role: 'Nafiyah lil-Jins (Negation)', color: '#ef4444' },
-        { word: 'إِلَٰهَ', role: 'Ism La (Noun of Negation)', color: '#f59e0b' },
-        { word: 'إِلَّا', role: 'Adat Hasr (Restriction)', color: '#8b5cf6' },
-        { word: 'هُوَ', role: 'Badal / Khabar', color: '#10b981' },
+        { word: 'اللَّهُ', role: 'Mubtada (Subject)', color: 'var(--ed-cat-1)' },
+        { word: 'لَا', role: 'Nafiyah lil-Jins (Negation)', color: 'var(--ed-cat-2)' },
+        { word: 'إِلَٰهَ', role: 'Ism La (Noun of Negation)', color: 'var(--ed-cat-3)' },
+        { word: 'إِلَّا', role: 'Adat Hasr (Restriction)', color: 'var(--ed-cat-4)' },
+        { word: 'هُوَ', role: 'Badal / Khabar', color: 'var(--ed-cat-5)' },
       ],
     },
   ],
@@ -238,10 +238,10 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
       color: 'emerald',
       irabSentence: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
       irabTokens: [
-        { word: 'الْحَمْدُ', role: 'Mubtada (Marfu‘)', color: '#3b82f6' },
-        { word: 'لِلَّهِ', role: 'Jar wa Majrur (Shibh Jumlah)', color: '#10b981' },
-        { word: 'رَبِّ', role: 'Na‘t / Sifah (Majrur)', color: '#f59e0b' },
-        { word: 'الْعَالَمِينَ', role: 'Mudaf Ilayh (Majrur bil-Ya)', color: '#8b5cf6' },
+        { word: 'الْحَمْدُ', role: 'Mubtada (Marfu‘)', color: 'var(--ed-cat-1)' },
+        { word: 'لِلَّهِ', role: 'Jar wa Majrur (Shibh Jumlah)', color: 'var(--ed-cat-5)' },
+        { word: 'رَبِّ', role: 'Na‘t / Sifah (Majrur)', color: 'var(--ed-cat-3)' },
+        { word: 'الْعَالَمِينَ', role: 'Mudaf Ilayh (Majrur bil-Ya)', color: 'var(--ed-cat-4)' },
       ],
     }
     setData((prev) => ({ ...prev, nodes: [...prev.nodes, newNode] }))
@@ -261,14 +261,14 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
 
   return (
     <div
-      className="fixed inset-0 bg-black/75 backdrop-blur-md flex flex-col z-50 select-none animate-fadeIn"
+      className="fixed inset-0 bg-ed-scrim backdrop-blur-md flex flex-col z-50 select-none animate-fadeIn"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
       {/* Top Floating Control Bar */}
       <div className="h-12 border-b border-ed-rule glass px-4 flex items-center justify-between shrink-0 z-20">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+          <div className="p-1.5 rounded-lg bg-ed-accent-soft text-ed-accent border border-ed-accent/25">
             <TreeStructure size={18} weight="bold" />
           </div>
           <div>
@@ -284,7 +284,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
             title="Add Concept Note"
             className="px-2.5 py-1.5 rounded-lg bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-xs font-semibold text-ed-fg flex items-center gap-1.5 transition-colors"
           >
-            <Article size={14} weight="bold" className="text-amber-400" />
+            <Article size={14} weight="bold" className="text-ed-accent" />
             <span>Note Card</span>
           </button>
 
@@ -293,7 +293,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
             title="Add Quran Verse Card"
             className="px-2.5 py-1.5 rounded-lg bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-xs font-semibold text-ed-fg flex items-center gap-1.5 transition-colors"
           >
-            <BookOpen size={14} weight="bold" className="text-emerald-400" />
+            <BookOpen size={14} weight="bold" className="text-ed-success" />
             <span>Quran Card</span>
           </button>
 
@@ -302,7 +302,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
             title="Add Vault Note Card"
             className="px-2.5 py-1.5 rounded-lg bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-xs font-semibold text-ed-fg flex items-center gap-1.5 transition-colors"
           >
-            <FolderOpen size={14} weight="bold" className="text-amber-400" />
+            <FolderOpen size={14} weight="bold" className="text-ed-accent" />
             <span>Vault Note</span>
           </button>
 
@@ -321,7 +321,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
             <button
               onClick={handleDeleteSelected}
               title="Delete Selected Card"
-              className="p-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/30 transition-colors"
+              className="p-1.5 rounded-lg bg-ed-danger-soft hover:bg-ed-danger-soft text-ed-danger border border-ed-danger/35 transition-colors"
             >
               <Trash size={15} weight="bold" />
             </button>
@@ -372,9 +372,9 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
         ref={containerRef}
         onMouseDown={handleMouseDownBackground}
         onWheel={handleWheel}
-        className="flex-1 overflow-hidden relative canvas-surface bg-[#121110] cursor-grab active:cursor-grabbing"
+        className="flex-1 overflow-hidden relative canvas-surface bg-ed-viewer-bg cursor-grab active:cursor-grabbing"
         style={{
-          backgroundImage: `radial-gradient(circle, #332d27 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, var(--ed-rule-strong) 1px, transparent 1px)`,
           backgroundSize: `${24 * zoom}px ${24 * zoom}px`,
           backgroundPosition: `${pan.x}px ${pan.y}px`,
         }}
@@ -399,7 +399,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                 markerHeight="6"
                 orient="auto-start-reverse"
               >
-                <path d="M 0 1 L 10 5 L 0 9 z" fill="#e5a93c" />
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ed-accent)" />
               </marker>
             </defs>
 
@@ -420,7 +420,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                 <g key={edge.id}>
                   <path
                     d={pathData}
-                    stroke="#e5a93c"
+                    stroke="var(--ed-accent)"
                     strokeWidth="2"
                     fill="none"
                     strokeDasharray="4 2"
@@ -431,11 +431,11 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                     <text
                       x={(startX + endX) / 2}
                       y={(startY + endY) / 2 - 8}
-                      fill="#e5a93c"
+                      fill="var(--ed-accent)"
                       fontSize="10"
                       fontFamily="monospace"
                       textAnchor="middle"
-                      className="bg-black px-1"
+                      className="bg-ed-bg px-1"
                     >
                       {edge.label}
                     </text>
@@ -457,21 +457,21 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                   transform: `translate(${node.x}px, ${node.y}px)`,
                   width: `${node.width}px`,
                 }}
-                className={`absolute pointer-events-auto rounded-xl border p-3.5 transition-shadow select-none shadow-elev-lg backdrop-blur-md ${
+                className={`absolute pointer-events-auto rounded-xl border p-3.5 transition-shadow select-none shadow-ed-lg backdrop-blur-md ${
                   isSelected
-                    ? 'ring-2 ring-amber-400 border-amber-400/80 shadow-elev-xl'
-                    : 'border-ed-rule-strong hover:border-amber-500/50'
+                    ? 'ring-2 ring-ed-accent border-ed-accent/80 shadow-ed-lg'
+                    : 'border-ed-rule-strong hover:border-ed-accent/50'
                 } ${
                   node.type === 'quran'
-                    ? 'bg-[#1e1b18]/95 border-amber-500/30'
+                    ? 'bg-ed-surface-raised border-ed-accent/35'
                     : node.type === 'irab'
-                    ? 'bg-[#151c18]/95 border-emerald-500/30'
-                    : 'bg-ed-surface/95'
+                    ? 'bg-ed-surface-raised border-ed-success/35'
+                    : 'bg-ed-surface-raised'
                 }`}
               >
                 {/* Node Header */}
                 <div className="flex items-center justify-between pb-2 border-b border-ed-rule/60 mb-2">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-ed-accent flex items-center gap-1">
                     {node.type === 'quran' && <BookOpen size={12} weight="fill" />}
                     {node.type === 'irab' && <Sparkle size={12} weight="fill" />}
                     {node.type === 'file' && <FolderOpen size={12} weight="fill" />}
@@ -492,7 +492,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                         onOpenFile(node.file!)
                       }}
                       title="Open note in editor"
-                      className="p-1 rounded text-ed-fg-muted hover:text-amber-400 hover:bg-ed-surface transition-colors"
+                      className="p-1 rounded text-ed-fg-muted hover:text-ed-accent hover:bg-ed-surface transition-colors"
                     >
                       <ArrowSquareOut size={13} weight="bold" />
                     </button>
@@ -502,7 +502,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                 {/* Node Content */}
                 {node.type === 'quran' && (
                   <div className="space-y-2">
-                    <p className="text-base text-right font-serif leading-relaxed text-amber-100/90 font-amiri" dir="rtl">
+                    <p className="text-base text-right font-serif leading-relaxed text-ed-accent/90 font-amiri" dir="rtl">
                       {node.quranArabic}
                     </p>
                     <p className="text-xs text-ed-fg-muted font-sans leading-normal border-t border-ed-rule/30 pt-1.5">
@@ -521,7 +521,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
 
                 {node.type === 'irab' && (
                   <div className="space-y-2.5">
-                    <div className="text-base font-serif text-right text-emerald-300 font-amiri" dir="rtl">
+                    <div className="text-base font-serif text-right text-ed-success font-amiri" dir="rtl">
                       {node.irabSentence}
                     </div>
 
@@ -529,7 +529,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                       {node.irabTokens?.map((tok, i) => (
                         <div
                           key={i}
-                          className="px-2 py-1 rounded-md bg-black/40 border border-ed-rule/40 text-right flex flex-col items-center gap-0.5"
+                          className="px-2 py-1 rounded-md bg-ed-surface/60 border border-ed-rule/40 text-right flex flex-col items-center gap-0.5"
                         >
                           <span className="text-xs font-serif font-bold text-ed-fg">{tok.word}</span>
                           <span
@@ -567,16 +567,16 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
       {/* Add Quran Verse Card Modal */}
       {verseInputOpen && (
         <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-ed-scrim backdrop-blur-sm flex items-center justify-center z-50 p-4"
           onClick={() => setVerseInputOpen(false)}
         >
           <div
-            className="w-full max-w-sm bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-elev-xl p-5 space-y-4 animate-slide-up-fade"
+            className="w-full max-w-sm bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-ed-lg p-5 space-y-4 animate-slide-up-fade"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
               <h3 className="text-xs font-bold text-ed-fg uppercase tracking-wider flex items-center gap-1.5">
-                <BookOpen size={15} weight="bold" className="text-emerald-400" />
+                <BookOpen size={15} weight="bold" className="text-ed-success" />
                 Add Verse Card to Canvas
               </h3>
               <button onClick={() => setVerseInputOpen(false)} className="text-ed-fg-muted hover:text-ed-fg">
@@ -592,7 +592,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                 onChange={(e) => setVerseQuery(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleAddQuranCard()}
                 placeholder="e.g. Baqarah 255, 18:1-5, or Ikhlas"
-                className="w-full bg-ed-surface border border-ed-rule rounded-xl px-3 py-2 text-xs text-ed-fg outline-none focus:border-amber-500/50"
+                className="w-full bg-ed-surface border border-ed-rule rounded-xl px-3 py-2 text-xs text-ed-fg outline-none focus:border-ed-accent/50"
               />
               <p className="text-[10px] text-ed-fg-muted font-mono">
                 Accepts Surah names or numeric references.
@@ -609,7 +609,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
               <button
                 onClick={handleAddQuranCard}
                 disabled={verseLoading || !verseQuery.trim()}
-                className="px-4 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 disabled:opacity-40 text-black text-xs font-bold transition-all shadow-sm flex items-center gap-1"
+                className="px-4 py-1.5 rounded-lg bg-ed-accent hover:bg-ed-accent-strong disabled:opacity-40 text-ed-on-accent text-xs font-bold transition-all shadow-sm flex items-center gap-1"
               >
                 <span>Add Card</span>
                 <ArrowRight size={13} weight="bold" />
@@ -622,16 +622,16 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
       {/* Add Vault Note Card Modal */}
       {notePickerOpen && (
         <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-ed-scrim backdrop-blur-sm flex items-center justify-center z-50 p-4"
           onClick={() => setNotePickerOpen(false)}
         >
           <div
-            className="w-full max-w-md bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-elev-xl p-5 space-y-4 animate-slide-up-fade"
+            className="w-full max-w-md bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-ed-lg p-5 space-y-4 animate-slide-up-fade"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
               <h3 className="text-xs font-bold text-ed-fg uppercase tracking-wider flex items-center gap-1.5">
-                <FolderOpen size={15} weight="bold" className="text-amber-400" />
+                <FolderOpen size={15} weight="bold" className="text-ed-accent" />
                 Add Note to Canvas
               </h3>
               <button onClick={() => setNotePickerOpen(false)} className="text-ed-fg-muted hover:text-ed-fg">
@@ -650,7 +650,7 @@ export default function CanvasView({ archivePath, onOpenFile, onClose }: CanvasV
                     className="w-full text-left p-2.5 rounded-xl bg-ed-surface/50 hover:bg-ed-surface-strong border border-ed-rule flex items-center justify-between group transition-colors"
                   >
                     <span className="text-xs font-semibold text-ed-fg truncate">{note.name}</span>
-                    <ArrowRight size={13} weight="bold" className="text-ed-fg-muted group-hover:text-amber-400 shrink-0" />
+                    <ArrowRight size={13} weight="bold" className="text-ed-fg-muted group-hover:text-ed-accent shrink-0" />
                   </button>
                 ))
               )}

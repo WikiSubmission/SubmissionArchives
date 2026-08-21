@@ -72,12 +72,12 @@ export default function TreeNode({
         className={`group relative flex items-center gap-1 pr-2 transition-colors duration-150 ${
           isActive
             ? 'bg-ed-surface-strong text-ed-fg'
-            : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
+            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
         }`}
       >
         {/* Active file left accent bar */}
         {isActive && (
-          <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-amber-500" />
+          <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-ed-accent" />
         )}
 
         <button
@@ -91,7 +91,7 @@ export default function TreeNode({
                 expanded ? 'rotate-90' : ''
               }`}
             >
-              <CaretRight size={12} weight="bold" className="text-ed-fg-muted" />
+              <CaretRight size={12} weight="bold" className="text-ed-fg-secondary" />
             </span>
           ) : (
             <span className="w-3 shrink-0" />
@@ -103,9 +103,9 @@ export default function TreeNode({
                 {customIcon}
               </span>
             ) : expanded ? (
-              <FolderOpen size={16} weight="fill" className="shrink-0 text-amber-400/80" />
+              <FolderOpen size={16} weight="fill" className="shrink-0 text-ed-accent/80" />
             ) : (
-              <Folder size={16} weight="regular" className="shrink-0 text-ed-fg-muted" />
+              <Folder size={16} weight="regular" className="shrink-0 text-ed-fg-secondary" />
             )
           ) : (
             iconName && (
@@ -115,16 +115,16 @@ export default function TreeNode({
                 weight={isActive ? 'fill' : 'regular'}
                 className={`shrink-0 ${
                   isActive
-                    ? 'text-amber-400'
+                    ? 'text-ed-accent'
                     : kind === 'pdf'
-                    ? 'text-rose-400'
+                    ? 'text-ed-danger'
                     : kind === 'image'
-                    ? 'text-emerald-400'
+                    ? 'text-ed-success'
                     : kind === 'audio'
-                    ? 'text-violet-400'
+                    ? 'text-ed-accent'
                     : kind === 'video'
-                    ? 'text-sky-400'
-                    : 'text-ed-fg-muted'
+                    ? 'text-ed-accent'
+                    : 'text-ed-fg-secondary'
                 }`}
               />
             )
@@ -140,7 +140,7 @@ export default function TreeNode({
             onClick={() => onSetIcon(entry.path)}
             title="Set folder icon"
             aria-label="Set folder icon"
-            className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface-strong transition-opacity shrink-0"
+            className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface-strong transition-opacity shrink-0"
           >
             <Smiley size={14} weight="regular" />
           </button>
@@ -149,7 +149,7 @@ export default function TreeNode({
             onClick={() => onTrash(entry.path)}
             title="Move to Trash"
             aria-label="Move to trash"
-            className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-muted hover:text-red-400 hover:bg-red-500/10 transition-opacity shrink-0"
+            className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-secondary hover:text-ed-danger hover:bg-ed-danger-soft transition-opacity shrink-0"
           >
             <Trash size={14} weight="regular" />
           </button>
@@ -168,7 +168,7 @@ export default function TreeNode({
             {loading && (
               <div
                 style={{ paddingLeft: `${(depth + 1) * 14 + 14}px` }}
-                className="text-[11px] text-ed-fg-muted py-1.5 font-mono flex items-center"
+                className="text-[11px] text-ed-fg-secondary py-1.5 font-mono flex items-center"
               >
                 <span className="inline-block w-3 h-3 border-2 border-ed-rule border-t-ed-fg-muted rounded-full animate-spin mr-2" />
                 Loading...
@@ -178,7 +178,7 @@ export default function TreeNode({
             {children && children.length === 0 && (
               <div
                 style={{ paddingLeft: `${(depth + 1) * 14 + 14}px` }}
-                className="text-[11px] text-ed-fg-muted py-1.5 font-mono italic"
+                className="text-[11px] text-ed-fg-secondary py-1.5 font-mono italic"
               >
                 Empty folder
               </div>

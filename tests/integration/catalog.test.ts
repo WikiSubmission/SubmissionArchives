@@ -29,7 +29,9 @@ test('the generated archive satisfies the canonical runtime contract', () => {
     const report = validateArchiveRecords(records, { publicDir });
 
     assert.equal(report.valid, true, report.errors.join('\n'));
-    assert.equal(report.recordCount, 383);
+    // 382 not 383 since "Friday Sermon: Who is GOD? Understanding Our Universe
+    // (08/04/1988)" was merged into "Who is GOD?", the same recording published twice.
+    assert.equal(report.recordCount, 382);
     const categoryCounts = report.categoryCounts as Record<string, number>;
     assert.equal(categoryCounts.Quran, 114);
     assert.equal(categoryCounts.Books, 13);

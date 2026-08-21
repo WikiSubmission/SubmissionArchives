@@ -50,7 +50,7 @@ function parseCsv(content: string): string[][] {
 
 function CsvTable({ content }: { content: string }) {
   const rows = parseCsv(content)
-  if (rows.length === 0) return <div className="text-sm text-white/30 p-8">Empty file.</div>
+  if (rows.length === 0) return <div className="text-sm text-ed-fg-secondary p-8">Empty file.</div>
 
   const [header, ...body] = rows
   return (
@@ -59,7 +59,7 @@ function CsvTable({ content }: { content: string }) {
         <thead>
           <tr>
             {header.map((cell, i) => (
-              <th key={i} className="border border-ed-rule px-3 py-1.5 text-left text-white/70 bg-white/5 font-medium">
+              <th key={i} className="border border-ed-rule px-3 py-1.5 text-left text-ed-fg-secondary bg-ed-surface-strong/40 font-medium">
                 {cell}
               </th>
             ))}
@@ -69,7 +69,7 @@ function CsvTable({ content }: { content: string }) {
           {body.map((row, r) => (
             <tr key={r}>
               {row.map((cell, c) => (
-                <td key={c} className="border border-ed-rule px-3 py-1.5 text-white/60">
+                <td key={c} className="border border-ed-rule px-3 py-1.5 text-ed-fg-secondary">
                   {cell}
                 </td>
               ))}
@@ -110,7 +110,7 @@ export default function FileViewer({ filePath }: FileViewerProps) {
 
   if (kind === 'video') {
     return (
-      <div className="h-full w-full flex items-center justify-center p-8 bg-black">
+      <div className="h-full w-full flex items-center justify-center p-8 bg-ed-viewer-bg">
         <video controls src={convertFileSrc(filePath)} className="max-w-full max-h-full" />
       </div>
     )
@@ -125,18 +125,18 @@ export default function FileViewer({ filePath }: FileViewerProps) {
   }
 
   if (kind === 'csv') {
-    if (textError) return <div className="p-8 text-sm text-red-400 font-mono">{textError}</div>
-    if (textContent === null) return <div className="p-8 text-sm text-white/30">Loading...</div>
+    if (textError) return <div className="p-8 text-sm text-ed-danger font-mono">{textError}</div>
+    if (textContent === null) return <div className="p-8 text-sm text-ed-fg-secondary">Loading...</div>
     return <CsvTable content={textContent} />
   }
 
   if (textError) {
     return (
-      <div className="h-full w-full flex items-center justify-center text-sm text-white/30">
+      <div className="h-full w-full flex items-center justify-center text-sm text-ed-fg-secondary">
         Preview not available for this file type.
       </div>
     )
   }
-  if (textContent === null) return <div className="p-8 text-sm text-white/30">Loading...</div>
-  return <pre className="p-8 text-sm text-white/70 font-mono whitespace-pre-wrap overflow-auto h-full">{textContent}</pre>
+  if (textContent === null) return <div className="p-8 text-sm text-ed-fg-secondary">Loading...</div>
+  return <pre className="p-8 text-sm text-ed-fg-secondary font-mono whitespace-pre-wrap overflow-auto h-full">{textContent}</pre>
 }

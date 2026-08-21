@@ -36,12 +36,12 @@ function defaultValueForType(type: FieldType): unknown {
 }
 
 function getIconForType(key: string, type: FieldType) {
-  if (key.toLowerCase() === 'tags') return <Tag size={14} weight="bold" className="text-amber-400" />
+  if (key.toLowerCase() === 'tags') return <Tag size={14} weight="bold" className="text-ed-accent" />
   switch (type) {
     case 'date':
-      return <Calendar size={14} weight="regular" className="text-sky-400" />
+      return <Calendar size={14} weight="regular" className="text-ed-accent" />
     case 'number':
-      return <Hash size={14} weight="bold" className="text-emerald-400" />
+      return <Hash size={14} weight="bold" className="text-ed-success" />
     case 'checkbox':
       return <CheckSquare size={14} weight="regular" className="text-purple-400" />
     default:
@@ -110,12 +110,12 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
                       value.map((item, idx) => (
                         <span
                           key={idx}
-                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-amber-500/10 border border-amber-500/20 text-amber-300 font-medium"
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-ed-accent-soft border border-ed-accent/25 text-ed-accent font-medium"
                         >
                           {String(item)}
                           <button
                             onClick={() => removeTag(key, idx)}
-                            className="hover:text-red-400 transition-colors"
+                            className="hover:text-ed-danger transition-colors"
                           >
                             <X size={10} weight="bold" />
                           </button>
@@ -137,7 +137,7 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
                     type="checkbox"
                     checked={Boolean(value)}
                     onChange={(e) => onChange({ ...data, [key]: e.target.checked })}
-                    className="accent-amber-400 cursor-pointer mt-1"
+                    className="accent-ed-accent cursor-pointer mt-1"
                   />
                 ) : type === 'number' ? (
                   <input
@@ -167,7 +167,7 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
               {/* Remove Property Action */}
               <button
                 onClick={() => removeField(key)}
-                className="opacity-0 group-hover:opacity-100 text-ed-fg-muted hover:text-red-400 transition-opacity p-0.5"
+                className="opacity-0 group-hover:opacity-100 text-ed-fg-muted hover:text-ed-danger transition-opacity p-0.5"
               >
                 <X size={13} weight="bold" />
               </button>
@@ -199,7 +199,7 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
             </select>
             <button
               onClick={addField}
-              className="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 text-xs font-semibold hover:bg-amber-500/30 transition-colors"
+              className="px-2.5 py-1 rounded bg-ed-accent-soft text-ed-accent text-xs font-semibold hover:bg-ed-accent-soft transition-colors"
             >
               Add
             </button>
@@ -213,7 +213,7 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
         ) : (
           <button
             onClick={() => setShowAddRow(true)}
-            className="flex items-center gap-1.5 text-xs text-ed-fg-muted hover:text-amber-400 transition-colors font-semibold pt-1 px-1"
+            className="flex items-center gap-1.5 text-xs text-ed-fg-muted hover:text-ed-accent transition-colors font-semibold pt-1 px-1"
           >
             <Plus size={14} weight="bold" />
             <span>Add property</span>

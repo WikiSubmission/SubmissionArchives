@@ -366,6 +366,7 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
       displayTitle: item.displayTitle || item.title,
       type: item.type,
       author: item.author,
+      description: item.description,
       thumbnailOverride: item.thumbnailOverride,
       folder: item.folder,
       videoFile: item.videoFile,
@@ -374,6 +375,11 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
       youtubeUrl: item.youtubeUrl,
       youtubeStartTime: item.youtubeStartTime,
       youtubeEndTime: item.youtubeEndTime,
+      duration_seconds: item.duration_seconds,
+      date: item.date,
+      year: item.year,
+      fullDate: item.fullDate,
+      ...(item.chapters && item.chapters.length > 0 ? { chapters: item.chapters } : {}),
       transcriptStatus: resolved.segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
       segments: resolved.segments,
       segments_ar: resolved.segments_ar,
@@ -381,12 +387,19 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
   }).filter((item) => includeEmpty || item.segments.length > 0);
 }
 
+// Chapter sidecars are keyed by the record's short id: QS01..QS52 for the Quran Studies,
+// MA53..MA100 for the Messenger Audios. Both id families open with a zero-padded number,
+// so one lookup serves both. This was hardcoded to quran-study, which is why Messenger
+// Audio chapters never reached the index even once their sidecars existed.
+const CHAPTER_SIDECAR_PREFIX = { 'quran-study': 'QS', 'messenger-audio': 'MA' };
+
 function loadChaptersForAudio(item) {
-  if (item.type !== 'quran-study') return undefined;
-  const match = (item.id || '').match(/^quran-study\/(\d+)/i);
+  const prefix = CHAPTER_SIDECAR_PREFIX[item.type];
+  if (!prefix) return undefined;
+  const match = (item.id || '').match(/^[a-z-]+\/(\d+)/i);
   if (!match) return undefined;
   const num = Number(match[1]);
-  const chapterPath = path.join(CHAPTERS_DIR, `QS${String(num).padStart(2, '0')}.json`);
+  const chapterPath = path.join(CHAPTERS_DIR, `${prefix}${String(num).padStart(2, '0')}.json`);
   if (!fs.existsSync(chapterPath)) return undefined;
   try {
     const data = readJson(chapterPath);
@@ -400,7 +413,13 @@ function buildAudioIndex({ includeEmpty = false } = {}, playlistIndex) {
   const audios = readJson(AUDIO_LIST);
   return audios.map((item) => {
     const resolved = resolveTranscriptSegments(item, playlistIndex);
-    const chapters = loadChaptersForAudio(item);
+    // Transcript-derived chapters win. enrich_audio_catalog.mjs harvests them out of the
+    // CSV's TOC Time / TOC Title columns, where each entry is anchored to a caption row,
+    // and writes them onto the catalog item. The sidecar JSON in data/catalog/chapters is
+    // the older mechanism and remains only as a fallback for records not yet converted.
+    const chapters = (item.chapters && item.chapters.length > 0)
+      ? item.chapters
+      : loadChaptersForAudio(item);
     return {
       id: item.id,
       title: item.displayTitle || item.title,

@@ -8,15 +8,31 @@ import {
   X,
   Sun,
   Moon,
+  Desktop,
   ShieldCheck,
   Translate,
   ArrowCounterClockwise,
   WarningCircle,
   IconProps
 } from '@phosphor-icons/react'
-import { useSettings, type QuranShowMode, type QuranInsertStyle } from '../hooks/useSettings'
+import {
+  useSettings,
+  type QuranShowMode,
+  type QuranInsertStyle,
+  type UiFont,
+  type BodyFont,
+  type ArabicFont,
+} from '../hooks/useSettings'
+import { useAppearance, type Appearance } from '../hooks/useAppearance'
+import { TYPOGRAPHY_OPTIONS } from '../hooks/useTypography'
 import { SYSTEM_COMMANDS, getDefaultShortcut, normalizeKeyboardEvent } from '../lib/shortcuts'
 import { safeInvoke as invoke } from '../lib/ipc'
+
+const APPEARANCE_OPTIONS: { value: Appearance; label: string; icon: typeof Sun }[] = [
+  { value: 'light', label: 'Paper', icon: Sun },
+  { value: 'dark', label: 'Obsidian', icon: Moon },
+  { value: 'system', label: 'System', icon: Desktop },
+]
 
 type SettingsSection = 'general' | 'appearance' | 'quran' | 'transliteration' | 'shortcuts' | 'import'
 
@@ -34,7 +50,7 @@ function SettingRow({ label, description, children }: { label: string; descripti
     <div className="flex items-center justify-between gap-4 py-2.5 border-b border-ed-rule last:border-0">
       <div className="min-w-0">
         <div className="text-xs font-semibold text-ed-fg">{label}</div>
-        <div className="text-[11px] text-ed-fg-muted truncate">{description}</div>
+        <div className="text-[11px] text-ed-fg-secondary truncate">{description}</div>
       </div>
       <div className="shrink-0">{children}</div>
     </div>
@@ -46,11 +62,11 @@ function SettingToggle({ checked, onChange }: { checked: boolean; onChange: (v: 
     <button
       onClick={() => onChange(!checked)}
       className={`w-9 h-5 rounded-full p-0.5 transition-colors ${
-        checked ? 'bg-amber-500' : 'bg-ed-surface-strong border border-ed-rule'
+        checked ? 'bg-ed-accent' : 'bg-ed-surface-strong border border-ed-rule'
       }`}
     >
       <div
-        className={`w-4 h-4 rounded-full bg-white transition-transform ${
+        className={`w-4 h-4 rounded-full bg-ed-surface-raised transition-transform ${
           checked ? 'translate-x-4' : 'translate-x-0'
         }`}
       />
@@ -107,8 +123,8 @@ export default function SettingsModal({
   onClose,
 }: SettingsModalProps) {
   const { settings, updateSettings } = useSettings()
+  const appearance = useAppearance()
   const [section, setSection] = useState<SettingsSection>('general')
-  const [themeMode, setThemeMode] = useState<'dark' | 'light' | 'system'>('dark')
   const [healthResult, setHealthResult] = useState<string | null>(null)
   const [recordingCmdId, setRecordingCmdId] = useState<string | null>(null)
   const [shortcutConflict, setShortcutConflict] = useState<string | null>(null)
@@ -157,15 +173,6 @@ export default function SettingsModal({
     return () => window.removeEventListener('keydown', handleKeyDown, true)
   }, [recordingCmdId, settings.shortcuts, updateSettings])
 
-  const applyTheme = (theme: 'dark' | 'light' | 'system') => {
-    setThemeMode(theme)
-    if (theme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light')
-    } else {
-      document.documentElement.removeAttribute('data-theme')
-    }
-  }
-
   const runHealthCheck = async () => {
     try {
       const res = await invoke<{ total_notes: number; broken_links: unknown[]; empty_notes: unknown[] }>('check_vault_health', {
@@ -201,9 +208,9 @@ export default function SettingsModal({
   ]
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={onClose}>
+    <div className="fixed inset-0 bg-ed-scrim backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div
-        className="w-full max-w-2xl h-[560px] bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-elev-xl overflow-hidden flex animate-slide-up-fade"
+        className="w-full max-w-2xl h-[560px] bg-ed-bg border border-ed-rule-strong rounded-2xl shadow-ed-lg overflow-hidden flex animate-slide-up-fade"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Navigation Sidebar */}
@@ -213,7 +220,7 @@ export default function SettingsModal({
               key={id}
               onClick={() => setSection(id)}
               className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-left transition-colors ${
-                section === id ? 'bg-ed-surface-strong text-ed-fg font-bold' : 'text-ed-fg-muted hover:text-ed-fg'
+                section === id ? 'bg-ed-surface-strong text-ed-fg font-bold' : 'text-ed-fg-secondary hover:text-ed-fg'
               }`}
             >
               <Icon size={16} weight={section === id ? 'fill' : 'regular'} />
@@ -226,7 +233,7 @@ export default function SettingsModal({
         <div className="flex-1 overflow-y-auto p-6 flex flex-col">
           <div className="flex items-center justify-between mb-6 border-b border-ed-rule pb-3 shrink-0">
             <h2 className="text-sm font-bold text-ed-fg uppercase tracking-wider">{section}</h2>
-            <button onClick={onClose} aria-label="Close settings" className="text-ed-fg-muted hover:text-ed-fg transition-colors">
+            <button onClick={onClose} aria-label="Close settings" className="text-ed-fg-secondary hover:text-ed-fg transition-colors">
               <X size={16} weight="bold" />
             </button>
           </div>
@@ -249,7 +256,7 @@ export default function SettingsModal({
                 >
                   <button
                     onClick={runHealthCheck}
-                    className="text-xs px-3 py-1.5 rounded-md bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/20 font-semibold transition-colors flex items-center gap-1.5"
+                    className="text-xs px-3 py-1.5 rounded-md bg-ed-accent-soft hover:bg-ed-accent-soft text-ed-accent border border-ed-accent/25 font-semibold transition-colors flex items-center gap-1.5"
                   >
                     <ShieldCheck size={14} weight="bold" /> Run Check
                   </button>
@@ -265,25 +272,85 @@ export default function SettingsModal({
 
             {section === 'appearance' && (
               <div className="space-y-1">
-                <SettingRow label="Color Theme" description="Choose visual interface theme">
-                  <div className="flex items-center gap-1 bg-ed-surface p-1 rounded-lg border border-ed-rule">
-                    <button
-                      onClick={() => applyTheme('dark')}
-                      className={`flex items-center gap-1 px-2.5 py-1 rounded text-xs font-medium transition-all ${
-                        themeMode === 'dark' ? 'bg-ed-surface-strong text-ed-fg font-bold' : 'text-ed-fg-muted'
-                      }`}
-                    >
-                      <Moon size={13} weight="bold" /> Dark (Midnight Vault)
-                    </button>
-                    <button
-                      onClick={() => applyTheme('light')}
-                      className={`flex items-center gap-1 px-2.5 py-1 rounded text-xs font-medium transition-all ${
-                        themeMode === 'light' ? 'bg-amber-500 text-white font-bold' : 'text-ed-fg-muted'
-                      }`}
-                    >
-                      <Sun size={13} weight="bold" /> Light (Reading Room)
-                    </button>
+                <SettingRow
+                  label="Color Theme"
+                  description="The same two palettes the web archive uses. Stored per machine, not in the vault."
+                >
+                  <div className="flex items-center gap-1 rounded-md border border-ed-rule bg-ed-surface p-1">
+                    {APPEARANCE_OPTIONS.map(({ value, label, icon: Icon }) => (
+                      <button
+                        key={value}
+                        onClick={() => appearance.setAppearance(value)}
+                        className={`flex items-center gap-1.5 rounded-sm px-2.5 py-1 text-xs transition-colors ${
+                          appearance.appearance === value
+                            ? 'bg-ed-accent font-medium text-ed-on-accent'
+                            : 'text-ed-fg-secondary hover:text-ed-fg'
+                        }`}
+                      >
+                        <Icon size={13} weight="regular" /> {label}
+                      </button>
+                    ))}
                   </div>
+                </SettingRow>
+
+                <SettingRow label="Interface font" description="Navigation, labels, buttons, and panel chrome">
+                  <select
+                    value={settings.typography.uiFont}
+                    onChange={(e) =>
+                      updateSettings((prev) => ({
+                        ...prev,
+                        typography: { ...prev.typography, uiFont: e.target.value as UiFont },
+                      }))
+                    }
+                    className={SELECT_CLASS}
+                  >
+                    {TYPOGRAPHY_OPTIONS.uiFont.map((o) => (
+                      <option key={o.value} value={o.value}>
+                        {o.label}
+                      </option>
+                    ))}
+                  </select>
+                </SettingRow>
+
+                <SettingRow label="Body font" description="Long-form prose in the editor and readers">
+                  <select
+                    value={settings.typography.bodyFont}
+                    onChange={(e) =>
+                      updateSettings((prev) => ({
+                        ...prev,
+                        typography: { ...prev.typography, bodyFont: e.target.value as BodyFont },
+                      }))
+                    }
+                    className={SELECT_CLASS}
+                  >
+                    {TYPOGRAPHY_OPTIONS.bodyFont.map((o) => (
+                      <option key={o.value} value={o.value}>
+                        {o.label}
+                      </option>
+                    ))}
+                  </select>
+                </SettingRow>
+
+                <SettingRow
+                  label="Arabic font"
+                  description="Amiri is the only Arabic face bundled; adding another means shipping the file, not just an option"
+                >
+                  <select
+                    value={settings.typography.arabicFont}
+                    onChange={(e) =>
+                      updateSettings((prev) => ({
+                        ...prev,
+                        typography: { ...prev.typography, arabicFont: e.target.value as ArabicFont },
+                      }))
+                    }
+                    className={SELECT_CLASS}
+                  >
+                    {TYPOGRAPHY_OPTIONS.arabicFont.map((o) => (
+                      <option key={o.value} value={o.value}>
+                        {o.label}
+                      </option>
+                    ))}
+                  </select>
                 </SettingRow>
               </div>
             )}
@@ -388,7 +455,7 @@ export default function SettingsModal({
                     {Object.keys(settings.shortcuts).length > 0 && (
                       <button
                         onClick={resetAllShortcuts}
-                        className="text-[11px] text-amber-400 hover:underline flex items-center gap-1"
+                        className="text-[11px] text-ed-accent hover:underline flex items-center gap-1"
                       >
                         <ArrowCounterClockwise size={12} weight="bold" /> Reset all
                       </button>
@@ -396,7 +463,7 @@ export default function SettingsModal({
                   </div>
 
                   {shortcutConflict && (
-                    <div className="mb-3 p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs text-amber-400 flex items-center gap-2">
+                    <div className="mb-3 p-2 rounded-lg bg-ed-accent-soft border border-ed-accent/25 text-xs text-ed-accent flex items-center gap-2">
                       <WarningCircle size={14} weight="bold" />
                       <span>{shortcutConflict}</span>
                     </div>
@@ -417,12 +484,12 @@ export default function SettingsModal({
                             <div className="font-semibold text-ed-fg flex items-center gap-2">
                               <span>{cmd.label}</span>
                               {isOverridden && (
-                                <span className="text-[9px] font-mono px-1 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                                <span className="text-[9px] font-mono px-1 py-0.2 rounded bg-ed-accent-soft text-ed-accent border border-ed-accent/25">
                                   custom
                                 </span>
                               )}
                             </div>
-                            <div className="text-[11px] text-ed-fg-muted truncate">{cmd.description}</div>
+                            <div className="text-[11px] text-ed-fg-secondary truncate">{cmd.description}</div>
                           </div>
 
                           <div className="flex items-center gap-2 shrink-0">
@@ -433,8 +500,8 @@ export default function SettingsModal({
                               }}
                               className={`px-2.5 py-1 rounded text-xs font-mono border transition-all ${
                                 isRecording
-                                  ? 'bg-amber-500 text-black border-amber-400 font-bold animate-pulse'
-                                  : 'bg-ed-surface-strong text-ed-fg border-ed-rule hover:border-amber-500/40'
+                                  ? 'bg-ed-accent text-ed-on-accent border-ed-accent font-bold animate-pulse'
+                                  : 'bg-ed-surface-strong text-ed-fg border-ed-rule hover:border-ed-accent/45'
                               }`}
                             >
                               {isRecording ? 'Press keys...' : boundKey}
@@ -445,7 +512,7 @@ export default function SettingsModal({
                                 onClick={() => resetShortcut(cmd.id)}
                                 title="Reset to default"
                                 aria-label="Reset to default"
-                                className="p-1 rounded text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface"
+                                className="p-1 rounded text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface"
                               >
                                 <ArrowCounterClockwise size={13} weight="bold" />
                               </button>
@@ -463,7 +530,7 @@ export default function SettingsModal({
                     {SLASH_SHORTCUTS.map(({ keys, label }) => (
                       <div key={label} className="flex items-center justify-between py-1 text-xs gap-4">
                         <span className="text-ed-fg font-medium">{label}</span>
-                        <kbd className="text-xs font-mono bg-ed-surface border border-ed-rule rounded px-2 py-0.5 text-ed-fg-muted shrink-0">
+                        <kbd className="text-xs font-mono bg-ed-surface border border-ed-rule rounded px-2 py-0.5 text-ed-fg-secondary shrink-0">
                           {keys}
                         </kbd>
                       </div>
@@ -481,18 +548,18 @@ export default function SettingsModal({
                       onClose()
                       onOpenImportWizard()
                     }}
-                    className="w-full text-left p-4 rounded-xl bg-amber-500/10 hover:bg-amber-500/15 border border-amber-500/30 text-xs transition-all group"
+                    className="w-full text-left p-4 rounded-xl bg-ed-accent-soft hover:bg-ed-accent-soft border border-ed-accent/35 text-xs transition-all group"
                   >
                     <div className="flex items-center justify-between">
-                      <div className="font-bold text-amber-300 flex items-center gap-1.5">
+                      <div className="font-bold text-ed-accent flex items-center gap-1.5">
                         <DownloadSimple size={16} weight="bold" />
                         <span>Launch Universal Import Wizard</span>
                       </div>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-semibold">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-ed-accent-soft text-ed-accent font-semibold">
                         Word • Notion • Obsidian
                       </span>
                     </div>
-                    <div className="text-[11px] text-ed-fg-muted mt-1 leading-relaxed">
+                    <div className="text-[11px] text-ed-fg-secondary mt-1 leading-relaxed">
                       Convert .docx files, clean Notion 32-character UUID hashes, and migrate Obsidian vaults with complete attachment extraction.
                     </div>
                   </button>
@@ -503,14 +570,14 @@ export default function SettingsModal({
                   className="w-full text-left px-4 py-3 rounded-xl bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-xs text-ed-fg transition-colors"
                 >
                   <div className="font-bold">Import individual files...</div>
-                  <div className="text-[11px] text-ed-fg-muted mt-0.5">Word (.docx), Markdown (.md), and Studio packages (.sanote).</div>
+                  <div className="text-[11px] text-ed-fg-secondary mt-0.5">Word (.docx), Markdown (.md), and Studio packages (.sanote).</div>
                 </button>
                 <button
                   onClick={onImportZip}
                   className="w-full text-left px-4 py-3 rounded-xl bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-xs text-ed-fg transition-colors"
                 >
                   <div className="font-bold">Import ZIP archive...</div>
-                  <div className="text-[11px] text-ed-fg-muted mt-0.5">Extracted into the archive, preserving folder structure and cleaning Notion hashes.</div>
+                  <div className="text-[11px] text-ed-fg-secondary mt-0.5">Extracted into the archive, preserving folder structure and cleaning Notion hashes.</div>
                 </button>
               </div>
             )}

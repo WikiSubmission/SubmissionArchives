@@ -85,6 +85,109 @@ function cleanText(text?: string | null): string {
         .trim();
 }
 
+/**
+ * Is this heading a real article, or furniture that appears in most issues?
+ *
+ * The preview modal presents its heading list as a table of contents, so anything that is
+ * not an article actively misleads. Measured across all 64 issues, the extracted headings
+ * included masthead text ("WHO ARE WE?", "MASJID TUCSON"), mailing-panel fragments
+ * ("NONPROFIT ORG.", "U.S.POSTAGE", "TUCSON, ARIZONA"), the publication's own name in
+ * three spellings, order forms and adverts ("SUBSCRIBE TODAY", "TAPE CASSETTES",
+ * "ISLAMIC EDUCATION COURSE ORDER FORM"), bare section labels ("EDITORIAL"), letter
+ * salutations ("Dear Reader") and stray fragments ("TOTAL", "PROPHETS").
+ *
+ * Rules rather than a list of every string, so a spelling not seen yet is still caught:
+ * the mailing panel and the advert blocks are recognised by shape.
+ */
+const MASTHEAD_HEADINGS = [
+    'muslim perspective', 'submitters perspective', 'submission perspective',
+    'masthead', 'who are we', 'who are we?', 'masjid tucson',
+    'masjid tucson mailing panel', 'united submitters international',
+    'nonprofit org', 'nonprofit org.', 'non-profit org', 'us postage', 'u.s.postage',
+    'tucson arizona', 'tucson, arizona', 'permit no', 'bulk rate', 'address correction requested',
+];
+
+// Bare labels that name a department rather than a piece of writing.
+const SECTION_LABELS = [
+    'editorial', 'editorials', 'for your information', 'contents', 'table of contents',
+    'in this issue', 'coming in the next issue', 'announcements', 'notices',
+    'letters', 'letters to the editor', 'total', 'prophets', 'index',
+];
+
+// Commerce: order forms, price lists, product adverts. Shape-based, since these are
+// worded a dozen different ways across the run.
+const COMMERCE_PATTERNS = [
+    /\border form\b/i,
+    /\bsubscri(be|ption|ber)\b/i,
+    /\bnow available\b/i,
+    /\bnew products?\b/i,
+    /\btape cassettes?\b/i,
+    /\baudio cassettes?\b/i,
+    /\bbooks?\s*\/\s*audio\b/i,
+    /\bprice list\b/i,
+    /\bislamic productions?\b/i,
+    /\bislamic education (course|program)\b/i,
+    /\bnew outstanding books\b/i,
+    /\bmost comprehensive islamic education\b/i,
+    /^\s*\$?\d+[.,]\d{2}\s*$/,
+];
+
+const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+export function isBoilerplateHeading(rawTitle: string): boolean {
+    const title = cleanText(rawTitle);
+    if (!title) return true;
+    const n = norm(title);
+    if (!n) return true;
+
+    if (MASTHEAD_HEADINGS.includes(n) || SECTION_LABELS.includes(n)) return true;
+    if (COMMERCE_PATTERNS.some((re) => re.test(title))) return true;
+
+    // Letter salutations: "Dear Reader", "Dear Muslim Prisoner:"
+    if (/^dear\b/i.test(title)) return true;
+
+    // Mailing panel and postal furniture.
+    if (/\b(nonprofit|non-profit|postage|bulk rate|zip code)\b/i.test(title)) return true;
+    if (/\bpermit\s*#?\s*\d/i.test(title)) return true;
+
+    // The Basmala heads many pages; it is not an article.
+    if (/^in the name of god\b/i.test(title)) return true;
+
+    // A bare place name or single generic word carries no editorial information.
+    if (!/\s/.test(n) && n.length <= 12 && !/\d/.test(n)) return true;
+
+    // Column-break fragments. Only true conjunctions, never "The"/"To"/"In": real
+    // headlines open with those ("TO SAVE THE MUSLIM UMMAH", "THE MUSLIM PRISONER"), and
+    // an earlier version of this rule silently deleted them. Fragments that merely repeat
+    // part of another headline are handled by dedupeContainedHeadings instead.
+    if (/^(of|and|or|nor|but)\s/i.test(title)) return true;
+    // A heading left hanging on a conjunction is the first half of a split headline.
+    if (/\s(and|or|of|for|with|the|to)$/i.test(title.replace(/[.,;:]$/, ''))) return true;
+
+    // A pure invocation is not a headline.
+    if (/^(allahu akbar|in shaa allah|bismillah|alhamdulillah|subhan allah)[.!]?$/i.test(title)) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Drops headings contained inside a longer heading from the same issue, keeping the longer
+ * one. The extractor emits both the full headline and a fragment of it when a headline
+ * spans columns, e.g. "TO SAVE THE MUSLIM UMMAH" alongside "TO SAVE THE MUSLIM UMMAH: WE
+ * MUST RETURN TO OBEYING THE PROPHET".
+ */
+export function dedupeContainedHeadings(
+    articles: NewsletterArticleSummary[],
+): NewsletterArticleSummary[] {
+    const keyed = articles.map((a) => ({ article: a, n: norm(a.title) }));
+    return keyed
+        .filter(({ n }, i) => !keyed.some((other, j) =>
+            j !== i && other.n.length > n.length && other.n.includes(n)))
+        .map(({ article }) => article);
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function extractNewsletterSummary(issue: any): NewsletterSummaryData {
     const pages = issue.pages || issue.transcription?.pages || [];
@@ -116,9 +219,7 @@ export function extractNewsletterSummary(issue: any): NewsletterSummaryData {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             blocksList.forEach((block: any) => {
                 const title = cleanText(block.title);
-                if (!title || ['MUSLIM PERSPECTIVE', 'SUBMITTERS PERSPECTIVE', 'SUBMISSION PERSPECTIVE', 'MASTHEAD'].includes(title.toUpperCase())) {
-                    return;
-                }
+                if (!title || isBoilerplateHeading(title)) return;
 
                 const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]/g, '');
                 if (seenTitles.has(normalizedTitle)) return;
@@ -177,7 +278,7 @@ export function extractNewsletterSummary(issue: any): NewsletterSummaryData {
                 const pTitles = page.page_title.split(/\s*[\/|;]\s*/);
                 pTitles.forEach((t: string) => {
                     const cleanT = cleanText(t);
-                    if (!cleanT) return;
+                    if (!cleanT || isBoilerplateHeading(cleanT)) return;
                     const normalizedTitle = cleanT.toLowerCase().replace(/[^a-z0-9]/g, '');
                     if (seenTitles.has(normalizedTitle)) return;
                     seenTitles.add(normalizedTitle);
@@ -200,7 +301,8 @@ export function extractNewsletterSummary(issue: any): NewsletterSummaryData {
                     .filter((l: string) => l.length > 3 && !l.startsWith('http') && !l.startsWith('Masjid') && !l.startsWith('United Submitters'));
 
                 const headingCandidates = lines.filter((l: string) => l.length < 90 && (l === l.toUpperCase() || /^[A-Z][a-z]+(\s+[A-Z][a-z]+)*/.test(l)));
-                const mainHeading = headingCandidates[0] || `Articles & Insights (Page ${pageNum})`;
+                const usable = headingCandidates.filter((l: string) => !isBoilerplateHeading(l));
+                const mainHeading = usable[0] || `Articles & Insights (Page ${pageNum})`;
 
                 const normalizedTitle = mainHeading.toLowerCase().replace(/[^a-z0-9]/g, '');
                 if (!seenTitles.has(normalizedTitle)) {
@@ -221,13 +323,13 @@ export function extractNewsletterSummary(issue: any): NewsletterSummaryData {
     });
 
     // If still no articles, fallback to issue.page_titles
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (articles.length === 0 && Array.isArray(issue.page_titles)) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         issue.page_titles.forEach((pt: any, idx: number) => {
             if (!pt) return;
             const pNum = typeof pt === 'object' && pt.page_number ? pt.page_number : idx + 1;
             const pTitle = typeof pt === 'object' && pt.title ? pt.title : String(pt);
+            if (isBoilerplateHeading(pTitle)) return;
             articles.push({
                 page: pNum,
                 title: pTitle,
@@ -244,7 +346,9 @@ export function extractNewsletterSummary(issue: any): NewsletterSummaryData {
         writers: Array.from(writersSet).filter(Boolean),
         hijriDate: hijriDate || undefined,
         pageCount,
-        articles,
+        // Containment dedupe runs last, once every path has contributed, because a
+        // headline and its column-break fragment can arrive from different pages.
+        articles: dedupeContainedHeadings(articles),
         versesReferenced: Array.from(verseMatches).slice(0, 10),
     };
 }

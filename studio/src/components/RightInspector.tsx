@@ -97,7 +97,7 @@ export default function RightInspector({
   const lineCount = content ? content.split('\n').length : 0
 
   return (
-    <aside className="w-[280px] shrink-0 border-l border-ed-rule bg-ed-bg/80 backdrop-blur-xl flex flex-col h-full select-none z-30">
+    <aside className="flex h-full w-full min-w-0 select-none flex-col">
       {/* Header & Tabs */}
       <div className="h-10 border-b border-ed-rule flex items-center justify-between px-3 bg-ed-surface/30">
         <div className="flex items-center gap-1">
@@ -108,7 +108,7 @@ export default function RightInspector({
             className={`p-1.5 rounded-md transition-colors ${
               activeTab === 'outline'
                 ? 'text-ed-fg bg-ed-surface-strong'
-                : 'text-ed-fg-muted hover:text-ed-fg'
+                : 'text-ed-fg-secondary hover:text-ed-fg'
             }`}
           >
             <TreeStructure size={16} weight="regular" />
@@ -120,12 +120,12 @@ export default function RightInspector({
             className={`p-1.5 rounded-md transition-colors relative ${
               activeTab === 'backlinks'
                 ? 'text-ed-fg bg-ed-surface-strong'
-                : 'text-ed-fg-muted hover:text-ed-fg'
+                : 'text-ed-fg-secondary hover:text-ed-fg'
             }`}
           >
             <LinkSimple size={16} weight="regular" />
             {effectiveBacklinks.length > 0 && (
-              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-amber-500" />
+              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-ed-accent" />
             )}
           </button>
           <button
@@ -135,12 +135,12 @@ export default function RightInspector({
             className={`p-1.5 rounded-md transition-colors relative ${
               activeTab === 'footnotes'
                 ? 'text-ed-fg bg-ed-surface-strong'
-                : 'text-ed-fg-muted hover:text-ed-fg'
+                : 'text-ed-fg-secondary hover:text-ed-fg'
             }`}
           >
             <Quotes size={16} weight="regular" />
             {footnotes.length > 0 && (
-              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-ed-success" />
             )}
           </button>
           <button
@@ -150,7 +150,7 @@ export default function RightInspector({
             className={`p-1.5 rounded-md transition-colors ${
               activeTab === 'info'
                 ? 'text-ed-fg bg-ed-surface-strong'
-                : 'text-ed-fg-muted hover:text-ed-fg'
+                : 'text-ed-fg-secondary hover:text-ed-fg'
             }`}
           >
             <Info size={16} weight="regular" />
@@ -160,7 +160,7 @@ export default function RightInspector({
         <button
           onClick={onClose}
           aria-label="Close inspector"
-          className="p-1 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface transition-colors"
+          className="p-1 rounded-md text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface transition-colors"
         >
           <X size={14} weight="bold" />
         </button>
@@ -170,11 +170,11 @@ export default function RightInspector({
       <div className="flex-1 overflow-y-auto p-3 space-y-2">
         {activeTab === 'outline' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted mb-3 px-1">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-secondary mb-3 px-1">
               Table of Contents ({headings.length})
             </div>
             {headings.length === 0 ? (
-              <div className="text-xs text-ed-fg-muted italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-secondary italic px-1 py-4 text-center">
                 No headings found in this note. Add # H1 or ## H2 to build an outline.
               </div>
             ) : (
@@ -182,10 +182,10 @@ export default function RightInspector({
                 {headings.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-1.5 px-2 py-1 rounded-md text-xs text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface cursor-pointer transition-colors"
+                    className="flex items-center gap-1.5 px-2 py-1 rounded-md text-xs text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface cursor-pointer transition-colors"
                     style={{ paddingLeft: `${(item.level - 1) * 12 + 8}px` }}
                   >
-                    <CaretRight size={12} weight="bold" className="text-ed-fg-muted shrink-0" />
+                    <CaretRight size={12} weight="bold" className="text-ed-fg-secondary shrink-0" />
                     <span className="truncate font-medium">{item.text}</span>
                   </div>
                 ))}
@@ -196,11 +196,11 @@ export default function RightInspector({
 
         {activeTab === 'backlinks' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted mb-3 px-1">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-secondary mb-3 px-1">
               Backlinks ({effectiveBacklinks.length})
             </div>
             {effectiveBacklinks.length === 0 ? (
-              <div className="text-xs text-ed-fg-muted italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-secondary italic px-1 py-4 text-center">
                 No notes currently link to this note via [[{filePath ? stemOf(filePath) : 'Note'}]].
               </div>
             ) : (
@@ -209,9 +209,9 @@ export default function RightInspector({
                   <button
                     key={note.path}
                     onClick={() => onOpenFile(note.path)}
-                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-left text-xs bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-amber-400 font-medium transition-all group"
+                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-left text-xs bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-ed-accent font-medium transition-all group"
                   >
-                    <FileText size={14} weight="regular" className="text-ed-fg-muted group-hover:text-ed-fg shrink-0" />
+                    <FileText size={14} weight="regular" className="text-ed-fg-secondary group-hover:text-ed-fg shrink-0" />
                     <span className="truncate flex-1">{note.name}</span>
                   </button>
                 ))}
@@ -222,11 +222,11 @@ export default function RightInspector({
 
         {activeTab === 'footnotes' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted mb-3 px-1">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-secondary mb-3 px-1">
               Footnotes ({footnotes.length})
             </div>
             {footnotes.length === 0 ? (
-              <div className="text-xs text-ed-fg-muted italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-secondary italic px-1 py-4 text-center">
                 No footnotes in this note. Type [^1] to add inline footnote references.
               </div>
             ) : (
@@ -236,8 +236,8 @@ export default function RightInspector({
                     key={fn.id}
                     className="p-2 rounded-lg bg-ed-surface border border-ed-rule text-xs text-ed-fg space-y-1"
                   >
-                    <span className="font-bold text-amber-400 font-mono">[{fn.id}]</span>
-                    <p className="text-ed-fg-muted line-clamp-3">{fn.text}</p>
+                    <span className="font-bold text-ed-accent font-mono">[{fn.id}]</span>
+                    <p className="text-ed-fg-secondary line-clamp-3">{fn.text}</p>
                   </div>
                 ))}
               </div>
@@ -247,10 +247,10 @@ export default function RightInspector({
 
         {activeTab === 'info' && (
           <div className="space-y-3 px-1 text-xs">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-muted">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-secondary">
               Note Statistics
             </div>
-            <div className="bg-ed-surface rounded-lg p-3 border border-ed-rule space-y-2 text-ed-fg-muted font-mono">
+            <div className="bg-ed-surface rounded-lg p-3 border border-ed-rule space-y-2 text-ed-fg-secondary font-mono">
               <div className="flex justify-between">
                 <span>Words</span>
                 <span className="text-ed-fg font-semibold">{wordCount}</span>

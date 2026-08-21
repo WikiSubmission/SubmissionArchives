@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import type { Metadata } from 'next';
-import { ArrowUpRight, BookOpen } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
 import { getNewsletterIssues } from '@/lib/newsletterCatalog';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import SubmittersPerspectiveGrid from '@/components/written/SubmittersPerspectiveGrid';
+import BooksGrid from '@/components/written/BooksGrid';
+import { getBookPreviews, type BookSummaryItem } from '@/lib/bookPreviews';
 
 export const revalidate = 86400;
 
@@ -42,6 +43,17 @@ export default function WrittenArchivePage() {
         });
 
     const newsletterIssues = getNewsletterIssues();
+    const bookPreviews = getBookPreviews();
+    // Only the fields the modal renders cross to the client; the full records carry
+    // transcript segments that would bloat the payload for no benefit.
+    const bookSummaries: BookSummaryItem[] = books.map((book) => ({
+        id: book.id,
+        title: book.title,
+        displayTitle: book.displayTitle,
+        author: book.author,
+        thumbnailOverride: book.thumbnailOverride ? getPublicAssetUrl(book.thumbnailOverride) : undefined,
+        transcriptionMethod: book.transcriptionMethod,
+    }));
 
     return (
         <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
@@ -134,58 +146,7 @@ export default function WrittenArchivePage() {
                             </span>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                            {books.map((book) => (
-                                <Link
-                                    key={book.id}
-                                    href={`/library/${book.id}`}
-                                    className="group relative flex flex-col overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-3 transition-all duration-[280ms] ease-out hover:-translate-y-1 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md"
-                                >
-                                    {/* Cover Aspect Ratio 2:3 */}
-                                    <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[4px] border border-ed-rule bg-ed-bg">
-                                        {book.thumbnailOverride ? (
-                                            <Image
-                                                src={getPublicAssetUrl(book.thumbnailOverride)}
-                                                alt={`Cover of ${book.title}`}
-                                                fill
-                                                className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                                                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                                            />
-                                        ) : (
-                                            <div className="flex h-full w-full flex-col items-center justify-center p-3 text-center text-ed-fg-muted">
-                                                <BookOpen className="mb-2 h-6 w-6 opacity-40" />
-                                                <span
-                                                    className="text-xs font-semibold text-ed-fg"
-                                                    style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                                >
-                                                    {book.title}
-                                                </span>
-                                            </div>
-                                        )}
-                                    </div>
-
-                                    {/* Book Details */}
-                                    <div className="mt-3 flex flex-1 flex-col justify-between">
-                                        <div>
-                                            <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-ed-accent">
-                                                {book.author ?? 'Dr. Rashad Khalifa'}
-                                            </span>
-                                            <h3
-                                                className="line-clamp-2 text-[14.5px] font-semibold leading-[1.3] text-ed-fg transition-colors group-hover:text-ed-accent"
-                                                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                                            >
-                                                {book.title}
-                                            </h3>
-                                        </div>
-
-                                        <div className="mt-3 flex items-center justify-between border-t border-ed-rule pt-2 text-[11px] font-medium text-ed-fg-muted group-hover:text-ed-fg">
-                                            <span>Open Work</span>
-                                            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
+                        <BooksGrid books={bookSummaries} previews={bookPreviews} />
                     </section>
 
                     {/* Section 2: Submitters Perspectives Newsletters */}

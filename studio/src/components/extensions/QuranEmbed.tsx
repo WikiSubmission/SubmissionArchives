@@ -106,7 +106,7 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
       onClick={() => setFocused(true)}
       onBlur={() => setFocused(false)}
       className={`quran-embed-wrapper my-6 rounded-xl border transition-all duration-300 bg-qv-bg select-none relative group overflow-hidden ${
-        focused ? 'ring-2 ring-amber-500/40 border-amber-500/50 shadow-elev-lg' : 'border-qv-border'
+        focused ? 'ring-2 ring-ed-accent/40 border-ed-accent/50 shadow-ed-lg' : 'border-qv-border'
       }`}
     >
       {/* Subtle top accent line */}
@@ -119,7 +119,7 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
           aria-label="Copy citation"
           className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider bg-qv-fg/8 text-qv-fg/70 hover:bg-qv-fg/12 hover:text-qv-fg px-2.5 py-1 rounded-md transition-all duration-150 border border-qv-fg/5"
         >
-          {copied ? <Check size={12} weight="bold" className="text-emerald-600" /> : <Copy size={12} weight="bold" />}
+          {copied ? <Check size={12} weight="bold" className="text-ed-success" /> : <Copy size={12} weight="bold" />}
           <span>{copied ? 'Copied' : 'Copy'}</span>
         </button>
 
@@ -135,7 +135,7 @@ function QuranEmbedComponent({ node, updateAttributes }: NodeViewProps) {
 
       <div className="px-6 py-5">
         {error && (
-          <div className="text-sm text-red-700/80 font-mono bg-red-500/5 rounded-lg px-3 py-2 border border-red-500/10">
+          <div className="rounded-md border border-qv-border bg-qv-tint px-3 py-2 font-mono text-sm text-qv-accent">
             {error}
           </div>
         )}

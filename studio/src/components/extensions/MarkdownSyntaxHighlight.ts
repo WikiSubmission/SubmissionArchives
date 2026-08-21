@@ -62,7 +62,7 @@ function buildDecorations(doc: any, mode?: string): DecorationSet {
       const to = from + match[0].length
       decorations.push(
         Decoration.inline(from, to, {
-          class: 'md-syntax-bold font-bold text-amber-300/90'
+          class: 'md-syntax-bold font-bold text-ed-accent/90'
         })
       )
     }
@@ -75,7 +75,7 @@ function buildDecorations(doc: any, mode?: string): DecorationSet {
       const to = from + match[0].length
       decorations.push(
         Decoration.inline(from, to, {
-          class: 'md-syntax-italic italic text-amber-200/80'
+          class: 'md-syntax-italic italic text-ed-accent/80'
         })
       )
     }
@@ -87,7 +87,7 @@ function buildDecorations(doc: any, mode?: string): DecorationSet {
       const to = from + match[0].length
       decorations.push(
         Decoration.inline(from, to, {
-          class: 'md-syntax-code font-mono text-emerald-300/90 bg-emerald-950/40 px-1 rounded'
+          class: 'md-syntax-code font-mono text-ed-success/90 bg-ed-success-soft/40 px-1 rounded'
         })
       )
     }
@@ -100,7 +100,7 @@ function buildDecorations(doc: any, mode?: string): DecorationSet {
         const to = from + match[1].length
         decorations.push(
           Decoration.inline(from, to, {
-            class: 'md-syntax-heading font-mono font-bold text-amber-500/80'
+            class: 'md-syntax-heading font-mono font-bold text-ed-accent/80'
           })
         )
       }

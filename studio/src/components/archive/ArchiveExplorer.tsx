@@ -64,12 +64,12 @@ export default function ArchiveExplorer({
   return (
     <div className="h-full flex flex-col relative">
       <div className="px-3 py-3 flex items-center justify-between shrink-0 border-b border-ed-rule/50">
-        <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-muted pl-1">
+        <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-secondary pl-1">
           Archive Explorer
         </span>
         <button
           onClick={onNewNote}
-          className="tactile p-1.5 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface"
+          className="tactile p-1.5 rounded-md text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface"
           title="New Note (Ctrl+N)"
           aria-label="New Note"
         >
@@ -78,7 +78,7 @@ export default function ArchiveExplorer({
       </div>
 
       {error && (
-        <div className="px-4 py-2 text-[11px] text-red-400/90 font-mono bg-red-500/5 border-b border-red-500/10">
+        <div className="px-4 py-2 text-[11px] text-ed-danger/90 font-mono bg-ed-danger/5 border-b border-ed-danger/15">
           {error}
         </div>
       )}
@@ -96,7 +96,7 @@ export default function ArchiveExplorer({
       <div className="flex-1 overflow-y-auto py-1">
         {entries.length === 0 && !error && (
           <div className="px-4 py-8 text-center">
-            <div className="text-[11px] text-ed-fg-muted font-mono">No items</div>
+            <div className="text-[11px] text-ed-fg-secondary font-mono">No items</div>
           </div>
         )}
         {entries.map((entry) => (

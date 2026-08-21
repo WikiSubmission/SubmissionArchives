@@ -5,9 +5,9 @@ import React from 'react'
 
 const CALLOUT_META: Record<string, { icon: React.ComponentType<IconProps>; className: string }> = {
   note: { icon: Info, className: 'border-ed-rule bg-ed-surface' },
-  tip: { icon: Sparkle, className: 'border-emerald-500/30 bg-emerald-500/5 text-emerald-300' },
-  warning: { icon: Warning, className: 'border-amber-500/30 bg-amber-500/5 text-amber-300' },
-  important: { icon: Star, className: 'border-red-500/30 bg-red-500/5 text-red-300' },
+  tip: { icon: Sparkle, className: 'border-ed-success/35 bg-ed-success/5 text-ed-success' },
+  warning: { icon: Warning, className: 'border-ed-accent/35 bg-ed-accent/5 text-ed-accent' },
+  important: { icon: Star, className: 'border-ed-danger/35 bg-ed-danger/5 text-ed-danger' },
 }
 
 function CalloutComponent({ node, updateAttributes }: any) {

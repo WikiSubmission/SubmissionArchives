@@ -81,11 +81,22 @@ function getLocalIndex(filePath: string): LocalMediaItem[] {
 function getChaptersForItem(item: LocalMediaItem, masterItem?: MasterIndexItem) {
   if (masterItem?.chapters && masterItem.chapters.length > 0) return masterItem.chapters;
   if (item.chapters && item.chapters.length > 0) return item.chapters;
-  if (item.type === "quran-study") {
-    const match = (item.id || "").match(/^quran-study\/(\d+)/i);
+  // Chapter sidecars live in data/catalog/chapters, keyed by the record's short id:
+  // QS01..QS52 for the Quran Studies, MA53..MA100 for the Messenger Audios. Both id
+  // families begin with a zero-padded number, so one lookup serves both. Previously this
+  // was hardcoded to quran-study, which is why Messenger Audio chapters had nowhere to go.
+  const SIDECAR_PREFIX: Record<string, string> = {
+    "quran-study": "QS",
+    "messenger-audio": "MA",
+  };
+  const prefix = SIDECAR_PREFIX[item.type];
+  if (prefix) {
+    const match = (item.id || "").match(/^[a-z-]+\/(\d+)/i);
     if (match) {
       const num = Number(match[1]);
-      const chapterPath = path.join(SOURCE_CATALOG_DIR, "chapters", `QS${String(num).padStart(2, "0")}.json`);
+      const chapterPath = path.join(
+        SOURCE_CATALOG_DIR, "chapters", `${prefix}${String(num).padStart(2, "0")}.json`,
+      );
       if (fs.existsSync(chapterPath)) {
         try {
           const sidecar = JSON.parse(fs.readFileSync(chapterPath, "utf8"));
@@ -205,7 +216,13 @@ export default async function WatchPage({
 
   // MA 72+ transcripts come from unverified auto-generated captions with no
   // reliable speaker attribution, so they should not default to a named speaker.
-  // The 1987 Debate also has multiple speakers without attribution.
+  //
+  // The 1987 Debate is listed for a different reason. Its rows are now attributed
+  // (Dr. Rashad Khalifa vs Sunni Scholars, see docs/TRANSCRIPT_REVIEW_2026-08-19.md
+  // Parts D and F), but 101 rows are deliberately left blank because neither the text
+  // nor the audio can settle who is speaking. Those rows must stay blank rather than
+  // inherit the record author, since defaulting them to Khalifa would silently attribute
+  // the scholars' interjections to him.
   const isUnverifiedSpeakerSource =
     (item.type === "messenger-audio" && (item.primaryNumber ?? 0) >= 72) ||
     item.id === "video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987";

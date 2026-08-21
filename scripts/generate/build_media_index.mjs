@@ -62,12 +62,13 @@ const COLLECTION = /Quran Study From ([A-Z][A-Za-z]*)/;
 // of that review (which required listening and reading, not just measurement) instead
 // of re-running a similarity check that cannot tell containment from coincidence.
 const VIDEO_NOTES = {
-    2: 'Same recording as 38. Verified: 0.9630 word similarity, median timestamp offset +0.01s across 1,994 aligned words. Packaged as a program; 38 is the sermon cut.',
+    2: 'Merged: this absorbed the separate "Friday Sermon: Who is GOD? Understanding Our Universe (08/04/1988)" entry, which was the same recording. Verified before merging: 0.9630 word similarity, median timestamp offset +0.01s across 1,994 aligned words. This is the fuller transcript and inherited the 08/04/1988 dating from the sermon upload. The superseded transcript is kept under archive/superseded/.',
     3: 'Trimmed: the World News Bulletin segment was removed (it is published separately as 14). Cut at 00:37:49.990.',
-    5: 'Compilation. Contains sermon 34 in full (00:02:33-00:33:28, zero offset) then sermon 35 in full (00:36:11-01:11:30, constant -33:36 offset). Also repeats itself: 00:57:56-01:02:45 replays at 01:14:39-01:19:15 (~4m49s).',
+    5: 'Compilation. Contains sermon 34 in full (00:02:33-00:33:28, zero offset) then sermon 35 in full (00:36:11-01:11:30, constant -33:36 offset). Also repeats itself: 00:57:56-01:02:45 replays at 01:14:39-01:19:15 (~4m49s). Speaker labels corrected: four interjections carrying their own inline prefix (Carole x2, Audience x2) were labelled Dr. Rashad Khalifa.',
     8: 'Trimmed: the radio debate segment was removed (it is published separately as 13). Cut at 00:55:49.240.',
-    10: 'Speaker labels: 67 rows across 4 blocks are likely Dr. Rashad Khalifa but currently labelled with the questioner who preceded them. Pending audio verification at 00:10:47, 00:15:10, 00:16:25, 00:17:06.',
-    11: 'Speaker labels reviewed and assessed correct. The unprefixed runs are continuations of long floor turns, not the sticky-label defect.',
+    6: 'Caption rows do not respect turn boundaries: 191 rows contain two or more speaker prefixes, so one Speaker value has to cover a mid-row change of speaker. The column follows a consistent convention, naming the last speaker in the cell in 182 of the 191, with 9 sensible exceptions where the trailing utterance is a one-word acknowledgement. Not a labelling error; splitting the rows would mean inventing intermediate timestamps, so it is left as-is.',
+    10: 'Speaker labels corrected: 69 rows across 6 ranges were relabelled to Dr. Rashad Khalifa, verified by ear at the four boundary timestamps. Two of the six ranges (rows 168 and 189) were rows an earlier text-only pass had wrongly assessed as correct. Final state 184 Dr. Rashad Khalifa, 5 Ismail, 1 Azhar, and every remaining non-Khalifa row carries its own inline name prefix.',
+    11: 'Speaker labels corrected after audio verification: an unprefixed 7-row turn by Ismail (00:16:05-00:16:42) had been absorbed into the Khalifa label, one interjection carrying its own inline prefix was still labelled Khalifa, and one chairing line was labelled Ismail. Two of the three were invisible to the earlier text-only check, which only examined rows already labelled with a non-Khalifa name.',
     13: 'Published separately from 08, which previously contained this segment before it was trimmed.',
     14: 'Published separately from 03, which previously contained this segment before it was trimmed.',
     16: 'Mostly original. Quotes two sermon passages: 00:37:39-00:39:42 from 45, and 00:39:32-00:43:34 from 43. No overlap with 23.',
@@ -77,7 +78,6 @@ const VIDEO_NOTES = {
     33: 'Contained in full inside 18 at 00:34:17-00:56:33.',
     34: 'Contained in full inside 05 at 00:02:33-00:33:28. No overlap with 35.',
     35: 'Contained in full inside 05 at 00:36:11-01:11:30. No overlap with 34.',
-    38: 'Same recording as 02. Verified: 0.9630 word similarity, median timestamp offset +0.01s across 1,994 aligned words. This is the sermon cut; 02 is the packaged program.',
     43: 'Passage at 00:11:15-00:15:14 is quoted in 16.',
     45: 'Passage at 00:14:00-00:21:18 is quoted in 16.',
     50: 'Speaker labels corrected: 107 rows from 00:18:49.718 to the end were relabelled from Edip to Dr. Rashad Khalifa, verified by ear.',
@@ -88,15 +88,49 @@ const VIDEO_NOTES = {
 // description is usually *content*, not a recording date: "Evolution or Creation" mentions
 // the Supreme Court in 1987 and "Mathematical Miracle" mentions arriving in the US in
 // 1968, and neither is when the tape was made. Every entry below is either an explicit
-// "Recorded on ..." statement or a dating inherited from a proven duplicate.
+// "Recorded on ..." statement, a date established from newsletter announcements and
+// transcript evidence, or a dating inherited from a proven duplicate.
 //
 // Keyed by transcript file number, like VIDEO_NOTES.
 const VIDEO_DATES = {
-    2: { date: '1988-08-04', precision: 'day', source: 'same-recording-as-38' },
+    1: { date: '1987', precision: 'year', source: 'transcript-and-newsletter' },
+    2: { date: '1988-08-04', precision: 'day', source: 'merged-sermon-upload-title' },
     3: { date: '1986-01', precision: 'month', source: 'description' },
+    4: { date: '1985', precision: 'year', source: 'catalog-announcement' },
     5: { date: '1988', precision: 'year', source: 'description' },
     6: { date: '1987', precision: 'year', source: 'description' },
+    7: { date: '1986-05', precision: 'month', source: 'newsletter-announcement' },
+    8: { date: '1987-03', precision: 'month', source: 'newsletter-announcement' },
+    9: { date: '1986-05', precision: 'month', source: 'newsletter-announcement' },
+    13: { date: '1987', precision: 'year', source: 'broadcast-context' },
     14: { date: '1986-05-15', precision: 'day', source: 'description' },
+    16: { date: '1989', precision: 'year', source: 'compilation-quotes-45' },
+    17: { date: '1985-02', precision: 'month', source: 'newsletter-announcement' },
+    18: { date: '1988-04', precision: 'month', source: 'compilation-contains-33' },
+    19: { date: '1985-07', precision: 'month', source: 'newsletter-announcement' },
+    23: { date: '1987-09', precision: 'month', source: 'newsletter-and-series' },
+};
+
+// Curated recording dates for Quran Studies (keyed by QS number).
+const QS_DATES = {
+    14: { date: '1989-05-03', precision: 'day', source: 'laylat-al-qadr-1409' },
+    15: { date: '1989-02-24', precision: 'day', source: 'transcript-follows-qs05' },
+    16: { date: '1989-04', precision: 'month', source: 'transcript-ramadan-1409' },
+    18: { date: '1989-07-28', precision: 'day', source: 'series-follows-qs17' },
+    19: { date: '1989-09', precision: 'month', source: 'transcript-birthday-and-convention' },
+    21: { date: '1989-04', precision: 'month', source: 'newsletter-and-transcript' },
+    22: { date: '1989', precision: 'year', source: 'behrouz-collection' },
+    42: { date: '1988', precision: 'year', source: 'ray-caton-interview' },
+    43: { date: '1988-09', precision: 'month', source: 'usi-conference' },
+    47: { date: '1989', precision: 'year', source: 'blue-quran-publication' },
+};
+
+// Curated recording dates for Messenger Audios (keyed by MA number).
+const MA_DATES = {
+    70: { date: '1982-12-17', precision: 'day', source: 'catalog-series' },
+    71: { date: '1982-12-24', precision: 'day', source: 'catalog-series' },
+    72: { date: '1982-12-24', precision: 'day', source: 'catalog-series' },
+    73: { date: '1982-12-24', precision: 'day', source: 'same-recording-as-ma72' },
 };
 
 // Where a compilation or a quoting program cannot be dated outright, the sermons it
@@ -108,7 +142,7 @@ const VIDEO_DATE_BOUNDS = {
 };
 
 const DEBATE_NOTE =
-    'An Arabic-captioned transcript of the same recording also exists (Debate ... (1987) - Arabic.csv). It shares this YouTube id, so it is not a separate catalog entry.';
+    'An Arabic-captioned transcript of the same recording also exists (Debate ... (1987) - Arabic.csv). It shares this YouTube id, so it is not a separate catalog entry; the player offers the two as a language toggle on this one record. Speakers are attributed by side, not by individual: the transcripts name no one, so each row was assigned to Dr. Rashad Khalifa or to the Sunni scholars from the theological position it argues. About 9% of rows are left blank where the text cannot settle it. Method and confidence in docs/TRANSCRIPT_REVIEW_2026-08-19.md Part D.';
 
 // --- CSV -------------------------------------------------------------------
 
@@ -391,6 +425,14 @@ function parseSpeakerFromTitle(title, author) {
     return author || 'Dr. Rashad Khalifa';
 }
 
+function precisionFromDate(dateStr) {
+    if (!dateStr || dateStr === '-') return '-';
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return 'day';
+    if (/^\d{4}-\d{2}$/.test(dateStr)) return 'month';
+    if (/^\d{4}$/.test(dateStr)) return 'year';
+    return '-';
+}
+
 function buildAudioRows(audios, thumbDates, vttDurations) {
     const kindOf = (type) => (type === 'quran-study' ? 'Quran Study' : 'Messenger Audio');
 
@@ -402,24 +444,33 @@ function buildAudioRows(audios, thumbDates, vttDurations) {
 
             const number =
                 audio.primaryNumber ??
-                Number(title.match(/^QS\s+(\d+)/)?.[1] ?? NaN);
+                Number(title.match(/^(?:QS|MA)\s+(\d+)/)?.[1] ?? NaN);
+
+            const curatedAudio =
+                Number.isFinite(number)
+                    ? (audio.type === 'quran-study' ? QS_DATES[number] : MA_DATES[number])
+                    : undefined;
 
             const thumbEntry = Number.isFinite(number) && audio.type === 'quran-study'
                 ? thumbDates.get(number)
                 : undefined;
 
-            // Date hierarchy: catalog date -> title date -> thumbnail date -> description date
+            // Date hierarchy: catalog date -> title date -> curated table -> thumbnail date -> description date
             let date = '-';
             let precision = '-';
             let source = '-';
             if (audio.date) {
                 date = audio.date;
-                precision = 'day';
+                precision = precisionFromDate(audio.date);
                 source = 'catalog';
             } else if (titleDate) {
                 date = titleDate;
                 precision = titlePrecision;
                 source = 'title';
+            } else if (curatedAudio) {
+                date = curatedAudio.date;
+                precision = curatedAudio.precision;
+                source = curatedAudio.source;
             } else if (thumbEntry) {
                 date = thumbEntry.date;
                 precision = thumbEntry.precision;

@@ -5,23 +5,23 @@
     "source_pdf": "eternity-screenplay.pdf",
     "pages": 94,
     "blank_pages": 0,
-    "arabic_segments": 0,
+    "arabic_segments": 3,
     "canonical_quran_segments": 0,
     "unverified_arabic_segments": 0,
     "low_confidence_pages": 0,
-    "mean_ocr_confidence": 90.65
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "english_meanings_of_the_quran",
     "title": "English Meanings of the Quran",
     "source_pdf": "english-meanings-of-the-quran.pdf",
     "pages": 16,
-    "blank_pages": 0,
-    "arabic_segments": 5,
+    "blank_pages": 4,
+    "arabic_segments": 11,
     "canonical_quran_segments": 5,
     "unverified_arabic_segments": 0,
-    "low_confidence_pages": 4,
-    "mean_ocr_confidence": 82.14
+    "low_confidence_pages": 0,
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "miracle_of_quran_mysterious_alphabets",
@@ -29,11 +29,11 @@
     "source_pdf": "miracle-of-quran-alphabets.pdf",
     "pages": 216,
     "blank_pages": 5,
-    "arabic_segments": 34,
+    "arabic_segments": 95,
     "canonical_quran_segments": 3,
-    "unverified_arabic_segments": 31,
-    "low_confidence_pages": 48,
-    "mean_ocr_confidence": 80.29
+    "unverified_arabic_segments": 0,
+    "low_confidence_pages": 0,
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "quran_visual_presentation_of_the_miracle",
@@ -41,11 +41,11 @@
     "source_pdf": "quran-visual-presentation.pdf",
     "pages": 252,
     "blank_pages": 1,
-    "arabic_segments": 64,
+    "arabic_segments": 203,
     "canonical_quran_segments": 6,
-    "unverified_arabic_segments": 58,
+    "unverified_arabic_segments": 0,
     "low_confidence_pages": 0,
-    "mean_ocr_confidence": 50.93
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "quran_hadith_and_islam",
@@ -53,35 +53,35 @@
     "source_pdf": "quran-hadith-islam.pdf",
     "pages": 92,
     "blank_pages": 0,
-    "arabic_segments": 16,
+    "arabic_segments": 74,
     "canonical_quran_segments": 11,
-    "unverified_arabic_segments": 5,
+    "unverified_arabic_segments": 0,
     "low_confidence_pages": 0,
-    "mean_ocr_confidence": 85.64
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "islam_volume_1",
     "title": "ISLAM - Volume 1, Number 1 (April 1974)",
     "source_pdf": "islam-volume-1-number-1-april-1974.pdf",
     "pages": 90,
-    "blank_pages": 1,
-    "arabic_segments": 9,
+    "blank_pages": 9,
+    "arabic_segments": 53,
     "canonical_quran_segments": 4,
-    "unverified_arabic_segments": 5,
-    "low_confidence_pages": 9,
-    "mean_ocr_confidence": 84.94
+    "unverified_arabic_segments": 0,
+    "low_confidence_pages": 0,
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "the_computer_speaks",
     "title": "The Computer Speaks: God's Message to the World",
     "source_pdf": "computer-speaks.pdf",
     "pages": 280,
-    "blank_pages": 10,
-    "arabic_segments": 47,
+    "blank_pages": 11,
+    "arabic_segments": 28,
     "canonical_quran_segments": 1,
-    "unverified_arabic_segments": 46,
-    "low_confidence_pages": 94,
-    "mean_ocr_confidence": 73.66
+    "unverified_arabic_segments": 0,
+    "low_confidence_pages": 0,
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "the_contact_prayers",
@@ -89,11 +89,11 @@
     "source_pdf": "salat-booklet.pdf",
     "pages": 8,
     "blank_pages": 0,
-    "arabic_segments": 0,
+    "arabic_segments": 7,
     "canonical_quran_segments": 0,
     "unverified_arabic_segments": 0,
     "low_confidence_pages": 0,
-    "mean_ocr_confidence": 95.47
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "the_perpetual_miracle_of_muhammad",
@@ -101,11 +101,11 @@
     "source_pdf": "perpetual-miracle.pdf",
     "pages": 16,
     "blank_pages": 0,
-    "arabic_segments": 2,
+    "arabic_segments": 10,
     "canonical_quran_segments": 2,
     "unverified_arabic_segments": 0,
     "low_confidence_pages": 0,
-    "mean_ocr_confidence": 93.13
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "islam_volume_2",
@@ -113,22 +113,22 @@
     "source_pdf": "islam-volume-1-number-2-july-1974.pdf",
     "pages": 92,
     "blank_pages": 0,
-    "arabic_segments": 36,
+    "arabic_segments": 61,
     "canonical_quran_segments": 22,
-    "unverified_arabic_segments": 14,
-    "low_confidence_pages": 3,
-    "mean_ocr_confidence": null
+    "unverified_arabic_segments": 0,
+    "low_confidence_pages": 0,
+    "mean_ocr_confidence": 98.5
   },
   {
     "slug": "islam_volume_3_4",
     "title": "ISLAM - Volume 1, Number 3 & 4 (January 1975)",
     "source_pdf": "islam-volume-1-number-3-4-january-1975.pdf",
     "pages": 139,
-    "blank_pages": 2,
-    "arabic_segments": 99,
+    "blank_pages": 1,
+    "arabic_segments": 85,
     "canonical_quran_segments": 39,
-    "unverified_arabic_segments": 60,
-    "low_confidence_pages": 11,
-    "mean_ocr_confidence": null
+    "unverified_arabic_segments": 0,
+    "low_confidence_pages": 0,
+    "mean_ocr_confidence": 98.5
   }
 ]

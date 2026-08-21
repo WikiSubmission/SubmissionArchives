@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
-import CiteButton from '@/components/ui/CiteButton';
 import PDFReaderClient from './PDFReaderWrapper';
 
 const toolbarButtonClass =
@@ -149,20 +148,20 @@ export default function NewsletterViewer({
         }
     }, [currentMatch]);
 
+    const activeMatchCount = highlightTerms.length > 0 ? matchCount : 0;
+
     useEffect(() => {
-        if (highlightTerms.length > 0) {
-            const timer = setTimeout(() => {
-                const matches = document.querySelectorAll('[data-match-index="true"]');
-                setMatchCount(matches.length);
-                if (matches.length > 0 && !hasScrolledToMatch.current) {
-                    hasScrolledToMatch.current = true;
-                    matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }, 300);
-            return () => clearTimeout(timer);
-        } else {
-            setMatchCount(0);
-        }
+        if (highlightTerms.length === 0) return;
+
+        const timer = setTimeout(() => {
+            const matches = document.querySelectorAll('[data-match-index="true"]');
+            setMatchCount(matches.length);
+            if (matches.length > 0 && !hasScrolledToMatch.current) {
+                hasScrolledToMatch.current = true;
+                matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }, 300);
+        return () => clearTimeout(timer);
     }, [highlightTerms]);
 
     const handleCopyParagraph = useCallback((text: string, id: string) => {
@@ -239,7 +238,7 @@ export default function NewsletterViewer({
 
                 <div className="flex items-center gap-1.5 flex-wrap">
                     {/* In-Document Search Match Count */}
-                    {matchCount > 0 && (
+                    {activeMatchCount > 0 && (
                         <div className="flex items-center gap-1 rounded-[4px] border border-ed-rule bg-ed-surface px-2.5 py-1 text-xs text-ed-fg-muted">
                             <button
                                 type="button"
@@ -250,7 +249,7 @@ export default function NewsletterViewer({
                                 <span>Previous</span>
                             </button>
                             <span className="tabular-nums min-w-[3ch] text-center" aria-live="polite">
-                                {currentMatch + 1} of {matchCount}
+                                {currentMatch + 1} of {activeMatchCount}
                             </span>
                             <button
                                 type="button"
@@ -411,8 +410,6 @@ export default function NewsletterViewer({
                             )}
                         </div>
                     )}
-
-                    <CiteButton source={{ title: `${title} (${issue.date_label})` }} />
                 </div>
             </header>
 

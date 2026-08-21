@@ -10,10 +10,35 @@ export interface TransliterationSettings {
   diacriticModifiers: boolean
 }
 
+export type UiFont = 'dm-sans' | 'system'
+export type BodyFont = 'newsreader' | 'source-serif' | 'dm-sans' | 'mono'
+export type ArabicFont = 'amiri'
+
 export interface TypographySettings {
-  uiFont: 'default' | 'jakarta' | 'system'
-  bodyFont: 'default' | 'newsreader' | 'serif' | 'mono'
-  arabicFont: 'mushaf' | 'amiri' | 'plex'
+  uiFont: UiFont
+  bodyFont: BodyFont
+  arabicFont: ArabicFont
+}
+
+/** Vaults written before the typography settings were wired up hold names for
+ * fonts Studio never bundled. Map them onto what is actually available rather
+ * than letting them resolve to nothing. */
+const LEGACY_FONTS: Record<string, string> = {
+  jakarta: 'dm-sans',
+  serif: 'source-serif',
+  mushaf: 'amiri',
+  plex: 'amiri',
+}
+/* 'default' is deliberately absent: it meant "whatever the app picks", and the
+   app now picks a different face per role. Letting it fall through to each
+   field's own fallback preserves that meaning; mapping it to one family would
+   freeze old vaults onto the UI sans for body prose. */
+
+function migrateFont<T extends string>(value: string | undefined, allowed: readonly T[], fallback: T): T {
+  if (value && (allowed as readonly string[]).includes(value)) return value as T
+  const mapped = value ? LEGACY_FONTS[value] : undefined
+  if (mapped && (allowed as readonly string[]).includes(mapped)) return mapped as T
+  return fallback
 }
 
 export interface StudioSettings {
@@ -37,9 +62,10 @@ export const DEFAULT_SETTINGS: StudioSettings = {
     diacriticModifiers: true,
   },
   typography: {
-    uiFont: 'default',
-    bodyFont: 'default',
-    arabicFont: 'mushaf',
+    uiFont: 'dm-sans',
+    // Long-form prose is Newsreader in the archive; the UI sans stays for chrome.
+    bodyFont: 'newsreader',
+    arabicFont: 'amiri',
   },
   shortcuts: {},
   lastSeenVersion: '0.1.0',
@@ -49,7 +75,15 @@ function mergeSettings(partial: Partial<StudioSettings> | null | undefined): Stu
   return {
     quran: { ...DEFAULT_SETTINGS.quran, ...(partial?.quran ?? {}) },
     transliteration: { ...DEFAULT_SETTINGS.transliteration, ...(partial?.transliteration ?? {}) },
-    typography: { ...DEFAULT_SETTINGS.typography, ...(partial?.typography ?? {}) },
+    typography: {
+      uiFont: migrateFont(partial?.typography?.uiFont, ['dm-sans', 'system'] as const, 'dm-sans'),
+      bodyFont: migrateFont(
+        partial?.typography?.bodyFont,
+        ['newsreader', 'source-serif', 'dm-sans', 'mono'] as const,
+        'newsreader'
+      ),
+      arabicFont: migrateFont(partial?.typography?.arabicFont, ['amiri'] as const, 'amiri'),
+    },
     shortcuts: { ...DEFAULT_SETTINGS.shortcuts, ...(partial?.shortcuts ?? {}) },
     lastSeenVersion: partial?.lastSeenVersion ?? DEFAULT_SETTINGS.lastSeenVersion,
   }

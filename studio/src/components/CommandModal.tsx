@@ -99,7 +99,7 @@ export default function CommandModal<T>({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-ed-scrim backdrop-blur-sm"
       />
       <div
         className="absolute inset-0 pointer-events-none"
@@ -113,7 +113,7 @@ export default function CommandModal<T>({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.98, y: -4 }}
         transition={springConfig}
-        className="relative w-full max-w-[560px] glass-strong border border-ed-rule rounded-xl shadow-elev-xl overflow-hidden z-10"
+        className="relative w-full max-w-[560px] glass-strong border border-ed-rule rounded-xl shadow-ed-lg overflow-hidden z-10"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input */}
@@ -124,12 +124,12 @@ export default function CommandModal<T>({
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
-            className="w-full bg-transparent px-4 py-3.5 text-sm text-ed-fg outline-none placeholder:text-ed-fg-muted font-medium"
+            className="w-full bg-transparent px-4 py-3.5 text-sm text-ed-fg outline-none placeholder:text-ed-fg-secondary font-medium"
           />
           {query && (
             <button
               onClick={() => setQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-ed-fg-muted hover:text-ed-fg bg-ed-surface hover:bg-ed-surface-strong px-1.5 py-0.5 rounded transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-ed-fg-secondary hover:text-ed-fg bg-ed-surface hover:bg-ed-surface-strong px-1.5 py-0.5 rounded transition-colors"
             >
               Clear
             </button>
@@ -140,7 +140,7 @@ export default function CommandModal<T>({
         <div className="max-h-[320px] overflow-y-auto py-1">
           {filtered.length === 0 && (
             <div className="px-4 py-8 text-center">
-              <div className="text-sm text-ed-fg-muted">{emptyMessage}</div>
+              <div className="text-sm text-ed-fg-secondary">{emptyMessage}</div>
             </div>
           )}
 
@@ -151,7 +151,7 @@ export default function CommandModal<T>({
             return (
               <div key={category}>
                 {showHeader && (
-                  <div className="px-4 pt-3 pb-1 text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-muted">
+                  <div className="px-4 pt-3 pb-1 text-[10px] font-bold uppercase tracking-[0.12em] text-ed-fg-secondary">
                     {category}
                   </div>
                 )}
@@ -168,11 +168,11 @@ export default function CommandModal<T>({
                       className={`w-full text-left px-4 py-2 text-sm transition-all duration-100 relative group ${
                         isSelected
                           ? 'bg-ed-surface-strong text-ed-fg'
-                          : 'text-ed-fg-muted hover:text-ed-fg'
+                          : 'text-ed-fg-secondary hover:text-ed-fg'
                       }`}
                     >
                       {isSelected && (
-                        <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-amber-500" />
+                        <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-ed-accent" />
                       )}
                       <span className="relative z-10 font-medium tracking-tight">{getLabel(item)}</span>
                     </button>
@@ -184,7 +184,7 @@ export default function CommandModal<T>({
         </div>
 
         {/* Keyboard Hint Bar */}
-        <div className="flex items-center justify-between px-4 py-2 border-t border-ed-rule bg-black/20 text-ed-fg-muted">
+        <div className="flex items-center justify-between px-4 py-2 border-t border-ed-rule bg-ed-surface/50 text-ed-fg-secondary">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1">
               <span className="flex items-center justify-center w-4 h-4 rounded bg-ed-surface border border-ed-rule">

@@ -39,7 +39,7 @@ export const FootnoteRef = Node.create<FootnoteOptions>({
   },
 
   renderHTML({ HTMLAttributes }) {
-    return ['sup', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes, { class: 'footnote-ref text-amber-400 cursor-pointer font-bold select-none px-0.5 hover:underline' }), `[${HTMLAttributes['data-footnote-id'] || '1'}]`]
+    return ['sup', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes, { class: 'footnote-ref text-ed-accent cursor-pointer font-bold select-none px-0.5 hover:underline' }), `[${HTMLAttributes['data-footnote-id'] || '1'}]`]
   },
 
   addCommands() {

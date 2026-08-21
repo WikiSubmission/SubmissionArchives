@@ -38,6 +38,8 @@
   --qs-speaker-khalifa: #C8794A;
   --qs-speaker-khalifa-bg: rgba(200, 121, 74, 0.05);
   --qs-speaker-catherine: #8FB8A8;
+  --qs-speaker-scholars: #8A9A7B;
+  --qs-speaker-scholars-bg: rgba(138, 154, 123, 0.05);
   --qs-speaker-edip: #8AA4C8;
   --qs-speaker-douglas: #B8A08F;
   --qs-speaker-beth: #A08FB8;
@@ -745,6 +747,44 @@
   pointer-events: none;
 }
 
+/* ---------- Transcript Language Toggle ---------- */
+/* Shown only for records that carry a paired Arabic transcript. */
+.qs-golden-player .qs-lang-toggle {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--qs-border-subtle);
+  border-radius: var(--qs-radius-sm);
+  background: var(--qs-bg-secondary);
+  overflow: hidden;
+}
+
+.qs-golden-player .qs-lang-btn {
+  padding: 5px 11px;
+  min-height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--qs-text-faint);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.qs-golden-player .qs-lang-btn + .qs-lang-btn {
+  border-left: 1px solid var(--qs-border-subtle);
+}
+
+.qs-golden-player .qs-lang-btn:hover {
+  color: var(--qs-text-primary);
+}
+
+.qs-golden-player .qs-lang-btn[aria-pressed='true'] {
+  background: var(--qs-bg-tertiary);
+  color: var(--qs-text-primary);
+}
+
 .qs-golden-player .qs-entry-count {
   font-size: 12px;
   font-weight: 500;
@@ -787,6 +827,10 @@
 }
 
 /* Speaker-specific entry backgrounds */
+.qs-golden-player .qs-entry[data-speaker="scholars"] {
+  background: var(--qs-speaker-scholars-bg);
+}
+
 .qs-golden-player .qs-entry[data-speaker="khalifa"] {
   background: var(--qs-speaker-khalifa-bg);
   border-bottom-color: rgba(200, 121, 74, 0.08);
@@ -822,6 +866,11 @@
 .qs-golden-player .qs-entry-speaker.khalifa {
   color: var(--qs-speaker-khalifa);
   background: rgba(200, 121, 74, 0.1);
+}
+
+.qs-golden-player .qs-entry-speaker.scholars {
+  color: var(--qs-speaker-scholars);
+  background: rgba(138, 154, 123, 0.1);
 }
 
 .qs-golden-player .qs-entry-speaker.catherine {
@@ -887,6 +936,22 @@
 @media (max-width: 768px) {
   .qs-golden-player .qs-entry-text {
     font-size: 15px;
+  }
+}
+
+/* Body text of an all-Arabic transcript. Larger than the Latin body size because
+   Arabic script needs more height for the same legibility, and flush right rather
+   than centred so it reads as prose instead of as a series of quotations. */
+.qs-golden-player .qs-entry-text-ar {
+  font-family: var(--font-arabic);
+  font-size: 19px;
+  line-height: 1.95;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .qs-golden-player .qs-entry-text-ar {
+    font-size: 17px;
   }
 }
 

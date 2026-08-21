@@ -5,10 +5,7 @@ import { open, save } from '@tauri-apps/plugin-dialog'
 import Editor, { type EditorMode } from './components/Editor'
 import WelcomeScreen from './components/WelcomeScreen'
 import HomeDashboard from './components/HomeDashboard'
-import ArchiveExplorer from './components/archive/ArchiveExplorer'
-import TagsPane from './components/archive/TagsPane'
-import SearchPane from './components/archive/SearchPane'
-import TrashPane from './components/archive/TrashPane'
+import ExplorerPanel, { type SidebarTab } from './components/workspace/ExplorerPanel'
 import QuickSwitcher from './components/QuickSwitcher'
 import CommandPalette, { type PaletteCommand } from './components/CommandPalette'
 import GraphView from './components/GraphView'
@@ -17,31 +14,25 @@ import SettingsModal from './components/SettingsModal'
 import WhatsNewModal from './components/WhatsNewModal'
 import ImportWizardModal from './components/import/ImportWizardModal'
 import CanvasView from './components/canvas/CanvasView'
-import { SplitPane, type SplitPaneState } from './components/SplitPane'
+import type { SplitPaneState } from './components/workspace/splitPaneState'
+import WorkspaceLayout from './components/workspace/WorkspaceLayout'
+import PaneSwitcher, { type PaneVisibility } from './components/workspace/PaneSwitcher'
 import LeftRibbon from './components/LeftRibbon'
 import TabHeader, { type TabItem } from './components/TabHeader'
 import RightInspector from './components/RightInspector'
 import StatusBar from './components/StatusBar'
 import { useArchive } from './hooks/useArchive'
 import { useTheme } from './hooks/useTheme'
+import { useAppearance } from './hooks/useAppearance'
+import { useTypography } from './hooks/useTypography'
 import { useRecentNotes } from './hooks/useRecentNotes'
-import { SettingsProvider } from './hooks/useSettings'
+import { SettingsProvider, useSettings } from './hooks/useSettings'
 import { useShortcuts } from './hooks/useShortcuts'
 import { useWhatsNew } from './hooks/useWhatsNew'
 import { fileKindOf } from './lib/fileTypes'
 import logoMark from './assets/submission-archives-mark.png'
-import { Gear as SettingsIcon, Sparkle } from '@phosphor-icons/react'
-import { motion, springConfig } from './components/ui/Motion'
+import { Gear as SettingsIcon, Moon, Sparkle, Sun } from '@phosphor-icons/react'
 import './App.css'
-
-type SidebarTab = 'files' | 'tags' | 'search' | 'trash'
-
-const TAB_LABELS: Record<SidebarTab, string> = {
-  files: 'Files',
-  tags: 'Tags',
-  search: 'Search',
-  trash: 'Trash',
-}
 
 function stemOf(path: string): string {
   const base = path.split(/[\\/]/).pop() ?? path
@@ -60,6 +51,7 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   const [historyPointer, setHistoryPointer] = useState(-1)
 
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [editorOpen, setEditorOpen] = useState(true)
   const [inspectorOpen, setInspectorOpen] = useState(false)
   const [sidebarTab, setSidebarTab] = useState<SidebarTab>('files')
   const [editorMode, setEditorMode] = useState<EditorMode>('write')
@@ -76,8 +68,28 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   const [importWizardOpen, setImportWizardOpen] = useState(false)
   const { recordOpen } = useRecentNotes(archivePath)
   const whatsNew = useWhatsNew()
+  const appearance = useAppearance()
+  const { settings } = useSettings()
 
+  useTypography(settings.typography)
   useTheme(archivePath)
+
+  /* The editor is the pane that has to survive: hiding it is only meaningful
+     while something else is on screen to read, so turning off the last visible
+     pane turns the editor back on rather than leaving an empty workspace. */
+  const setPaneVisible = useCallback((pane: keyof PaneVisibility, visible: boolean) => {
+    if (pane === 'explorer') {
+      setSidebarOpen(visible)
+      if (!visible) setEditorOpen(true)
+      return
+    }
+    if (pane === 'inspector') {
+      setInspectorOpen(visible)
+      if (!visible) setEditorOpen(true)
+      return
+    }
+    setEditorOpen(visible || (!sidebarOpen && !inspectorOpen))
+  }, [inspectorOpen, sidebarOpen])
 
   const handleOpenFile = useCallback(
     (path: string) => {
@@ -291,8 +303,10 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   useShortcuts({
     'app.quick-switcher': () => setQuickSwitcherOpen(true),
     'app.command-palette': () => setCommandPaletteOpen(true),
-    'view.toggle-sidebar': () => setSidebarOpen((s) => !s),
-    'view.toggle-inspector': () => setInspectorOpen((i) => !i),
+    'view.toggle-sidebar': () => setPaneVisible('explorer', !sidebarOpen),
+    'view.toggle-inspector': () => setPaneVisible('inspector', !inspectorOpen),
+    'view.toggle-editor': () => setPaneVisible('editor', !editorOpen),
+    'view.toggle-appearance': appearance.toggle,
     'vault.new-note': handleNewNote,
     'editor.cycle-mode': () => setEditorMode((m) => (m === 'write' ? 'blocks' : m === 'blocks' ? 'page' : 'write')),
     'view.open-graph': () => setGraphOpen(true),
@@ -304,8 +318,10 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   const commands: PaletteCommand[] = [
     { id: 'quick-switcher', label: 'Quick switcher: Jump to note', run: () => setQuickSwitcherOpen(true) },
     { id: 'new-note', label: 'New note', run: handleNewNote },
-    { id: 'toggle-sidebar', label: 'Toggle Sidebar Explorer', run: () => setSidebarOpen((s) => !s) },
-    { id: 'toggle-inspector', label: 'Toggle Inspector (Outline & Backlinks)', run: () => setInspectorOpen((i) => !i) },
+    { id: 'toggle-sidebar', label: 'Toggle Sidebar Explorer', run: () => setPaneVisible('explorer', !sidebarOpen) },
+    { id: 'toggle-inspector', label: 'Toggle Inspector (Outline & Backlinks)', run: () => setPaneVisible('inspector', !inspectorOpen) },
+    { id: 'toggle-editor', label: 'Toggle Editor pane', run: () => setPaneVisible('editor', !editorOpen) },
+    { id: 'toggle-appearance', label: `Appearance: switch to ${appearance.resolved === 'dark' ? 'light' : 'dark'}`, run: appearance.toggle },
     { id: 'open-files', label: 'View: Files', run: () => { setSidebarTab('files'); setSidebarOpen(true) } },
     { id: 'open-tags', label: 'View: Tags', run: () => { setSidebarTab('tags'); setSidebarOpen(true) } },
     { id: 'open-search', label: 'View: Search', run: () => { setSidebarTab('search'); setSidebarOpen(true) } },
@@ -359,23 +375,36 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   }
 
   return (
-    <main className="h-screen w-screen bg-ed-bg text-ed-fg flex flex-col font-sans overflow-hidden">
-      {/* Title Bar */}
-      <div
-        className="h-11 shrink-0 glass border-b border-ed-rule flex items-center gap-3 px-4 relative z-50 select-none"
+    <main className="flex h-screen w-screen flex-col overflow-hidden bg-ed-bg font-sans text-ed-fg">
+      {/* Title bar */}
+      <header
+        className="relative z-50 flex h-10 shrink-0 select-none items-center gap-3 border-b border-ed-rule bg-ed-bg-secondary px-3"
         data-tauri-drag-region
       >
-        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-ed-rule-strong to-transparent pointer-events-none" />
-        <img src={logoMark} alt="" className="h-5 w-5 opacity-90" draggable={false} />
-        <div className="font-bold text-xs tracking-tight text-ed-fg flex-1" data-tauri-drag-region>
+        <img src={logoMark} alt="" className="h-4 w-4" draggable={false} />
+        <div className="flex-1 truncate text-xs font-medium tracking-tight text-ed-fg" data-tauri-drag-region>
           SubmissionArchives Studio
         </div>
+
+        <PaneSwitcher
+          visibility={{ explorer: sidebarOpen, editor: editorOpen, inspector: inspectorOpen }}
+          onChange={setPaneVisible}
+        />
+
+        <button
+          onClick={appearance.toggle}
+          title={appearance.resolved === 'dark' ? 'Switch to paper (Ctrl+Shift+D)' : 'Switch to obsidian (Ctrl+Shift+D)'}
+          aria-label="Toggle light and dark theme"
+          className="tactile rounded-sm p-1.5 text-ed-fg-muted hover:bg-ed-surface hover:text-ed-fg"
+        >
+          {appearance.resolved === 'dark' ? <Sun size={16} weight="regular" /> : <Moon size={16} weight="regular" />}
+        </button>
 
         <button
           onClick={() => whatsNew.open()}
           title="What's New"
           aria-label="What's New"
-          className="tactile p-1.5 rounded-md text-ed-fg-muted hover:text-amber-400 hover:bg-ed-surface"
+          className="tactile rounded-sm p-1.5 text-ed-fg-muted hover:bg-ed-surface hover:text-ed-accent"
         >
           <Sparkle size={16} weight="regular" />
         </button>
@@ -384,78 +413,61 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
           onClick={() => setSettingsOpen(true)}
           title="Settings"
           aria-label="Settings"
-          className="tactile p-1.5 rounded-md text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface"
+          className="tactile rounded-sm p-1.5 text-ed-fg-muted hover:bg-ed-surface hover:text-ed-fg"
         >
           <SettingsIcon size={16} weight="regular" />
         </button>
-      </div>
+      </header>
 
-      <div className="flex-1 flex overflow-hidden relative">
-        {/* Far Left Vertical Ribbon */}
-        <LeftRibbon
-          sidebarOpen={sidebarOpen}
-          onToggleSidebar={() => setSidebarOpen((s) => !s)}
-          onOpenSearch={() => { setSidebarTab('search'); setSidebarOpen(true) }}
-          onOpenQuickSwitcher={() => setQuickSwitcherOpen(true)}
-          onOpenCommandPalette={() => setCommandPaletteOpen(true)}
-          onOpenGraph={() => setGraphOpen(true)}
-          onOpenCanvas={() => setCanvasOpen(true)}
-          onOpenSettings={() => setSettingsOpen(true)}
-          inspectorOpen={inspectorOpen}
-          onToggleInspector={() => setInspectorOpen((i) => !i)}
-          onNewNote={handleNewNote}
-        />
-
-        {/* Collapsible Left Sidebar (Archive Explorer) */}
-        {sidebarOpen && (
-          <div className="w-[250px] shrink-0 border-r border-ed-rule flex flex-col bg-ed-bg/60 z-30 animate-fade-in">
-            <div className="flex border-b border-ed-rule shrink-0 bg-ed-surface/40 backdrop-blur-xl relative">
-              {(['files', 'tags', 'search', 'trash'] as SidebarTab[]).map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setSidebarTab(tab)}
-                  className={`relative flex-1 py-2 text-[10px] font-semibold uppercase tracking-wider transition-all duration-200 tactile ${
-                    sidebarTab === tab
-                      ? 'text-ed-fg font-bold'
-                      : 'text-ed-fg-muted hover:text-ed-fg'
-                  }`}
-                >
-                  {sidebarTab === tab && (
-                    <motion.span
-                      layoutId="activeSidebarTabIndicator"
-                      className="absolute inset-x-1 bottom-0.5 h-0.5 rounded-full bg-amber-500"
-                      transition={springConfig}
-                    />
-                  )}
-                  {TAB_LABELS[tab]}
-                </button>
-              ))}
-            </div>
-            <div className="flex-1 overflow-hidden">
-              {sidebarTab === 'files' && (
-                <ArchiveExplorer
-                  archivePath={archivePath}
-                  activeFilePath={activeFilePath}
-                  onOpenFile={handleOpenFile}
-                  onNewNote={handleNewNote}
-                  onTrash={handleTrash}
-                  refreshToken={refreshToken}
-                />
-              )}
-              {sidebarTab === 'tags' && (
-                <TagsPane archivePath={archivePath} onOpenFile={handleOpenFile} refreshToken={refreshToken} />
-              )}
-              {sidebarTab === 'search' && <SearchPane archivePath={archivePath} onOpenFile={handleOpenFile} />}
-              {sidebarTab === 'trash' && (
-                <TrashPane archivePath={archivePath} onRestore={handleOpenFile} refreshToken={refreshToken} />
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Main Workspace Center Area */}
-        <div className="flex-1 flex flex-col min-w-0 bg-ed-bg relative">
-          {openTabs.length > 0 && (
+      <WorkspaceLayout
+        layoutKey={archivePath}
+        explorerOpen={sidebarOpen}
+        editorOpen={editorOpen}
+        inspectorOpen={inspectorOpen}
+        splitState={splitState}
+        activeFilePath={activeFilePath}
+        renderPane={renderEditorPane}
+        ribbon={
+          <LeftRibbon
+            sidebarOpen={sidebarOpen}
+            onToggleSidebar={() => setPaneVisible('explorer', !sidebarOpen)}
+            onOpenSearch={() => {
+              setSidebarTab('search')
+              setPaneVisible('explorer', true)
+            }}
+            onOpenQuickSwitcher={() => setQuickSwitcherOpen(true)}
+            onOpenCommandPalette={() => setCommandPaletteOpen(true)}
+            onOpenGraph={() => setGraphOpen(true)}
+            onOpenCanvas={() => setCanvasOpen(true)}
+            onOpenSettings={() => setSettingsOpen(true)}
+            inspectorOpen={inspectorOpen}
+            onToggleInspector={() => setPaneVisible('inspector', !inspectorOpen)}
+            onNewNote={handleNewNote}
+          />
+        }
+        explorer={
+          <ExplorerPanel
+            archivePath={archivePath}
+            activeFilePath={activeFilePath}
+            activeTab={sidebarTab}
+            onTabChange={setSidebarTab}
+            onOpenFile={handleOpenFile}
+            onNewNote={handleNewNote}
+            onTrash={handleTrash}
+            refreshToken={refreshToken}
+          />
+        }
+        inspector={
+          <RightInspector
+            archivePath={archivePath}
+            filePath={activeFilePath}
+            content={currentContent}
+            onOpenFile={handleOpenFile}
+            onClose={() => setPaneVisible('inspector', false)}
+          />
+        }
+        tabHeader={
+          openTabs.length > 0 ? (
             <TabHeader
               tabs={openTabs}
               activeFilePath={activeFilePath}
@@ -470,19 +482,10 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
               onGoBack={handleGoBack}
               onGoForward={handleGoForward}
             />
-          )}
-
-          {/* Editor or Split View Body */}
-          <div className="flex-1 overflow-hidden relative">
-            <SplitPane
-              splitState={splitState}
-              activeFilePath={activeFilePath}
-              renderPane={renderEditorPane}
-            />
-          </div>
-
-          {/* Bottom Status Bar */}
-          {activeFilePath && fileKindOf(activeFilePath) === 'markdown' && (
+          ) : null
+        }
+        statusBar={
+          activeFilePath && fileKindOf(activeFilePath) === 'markdown' ? (
             <StatusBar
               wordCount={wordCount}
               charCount={charCount}
@@ -491,20 +494,9 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
               onModeChange={setEditorMode}
               isSaved={isSaved}
             />
-          )}
-        </div>
-
-        {/* Collapsible Far Right Inspector */}
-        {inspectorOpen && (
-          <RightInspector
-            archivePath={archivePath}
-            filePath={activeFilePath}
-            content={currentContent}
-            onOpenFile={handleOpenFile}
-            onClose={() => setInspectorOpen(false)}
-          />
-        )}
-      </div>
+          ) : null
+        }
+      />
 
       {/* Modals */}
       {quickSwitcherOpen && (

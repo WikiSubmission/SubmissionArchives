@@ -44,7 +44,7 @@ export const CommandList = forwardRef<CommandListRef, CommandListProps>((props, 
   }
 
   return (
-    <div className="glass-strong border border-ed-rule rounded-xl shadow-elev-xl overflow-hidden min-w-[260px] py-1 max-h-[300px] overflow-y-auto animate-fadeInUp">
+    <div className="glass-strong border border-ed-rule rounded-xl shadow-ed-lg overflow-hidden min-w-[260px] py-1 max-h-[300px] overflow-y-auto animate-fadeInUp">
       {props.items.map((item, index) => (
         <button
           key={`${item.title}-${index}`}
@@ -54,7 +54,7 @@ export const CommandList = forwardRef<CommandListRef, CommandListProps>((props, 
           }`}
         >
           {item.icon ? (
-            <AppIcon name={item.icon} size={18} weight="bold" className="shrink-0 text-amber-400" />
+            <AppIcon name={item.icon} size={18} weight="bold" className="shrink-0 text-ed-accent" />
           ) : (
             <div className="w-[18px]" />
           )}

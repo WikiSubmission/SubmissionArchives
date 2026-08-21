@@ -8,7 +8,6 @@ import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 import type { PageCallback } from 'react-pdf/dist/shared/types.js';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
 import { getProgress, saveProgress, shouldOfferResume } from '@/lib/readingProgress';
-import CiteButton from '@/components/ui/CiteButton';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import '../pdf-theme.css';
@@ -892,9 +891,6 @@ export default function PDFReaderClient({
             >
                 <span>Download</span>
             </a>
-
-            {/* Citation */}
-            <CiteButton source={{ title, locator: `p. ${pageNumber}` }} />
 
             {/* Help / Shortcuts */}
             <button
