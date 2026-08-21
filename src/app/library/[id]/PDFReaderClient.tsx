@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Document, Page, Thumbnail, pdfjs } from 'react-pdf';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 import type { PageCallback } from 'react-pdf/dist/shared/types.js';
@@ -126,12 +127,25 @@ export default function PDFReaderClient({
     initialQuery,
     prevId,
     nextId,
-    backHref = '/search?filters=other',
+    backHref = '/written#books',
 }: Props) {
+    const router = useRouter();
     const [numPages, setNumPages] = useState<number | null>(null);
     const [pageNumber, setPageNumber] = useState(Math.max(1, initialPage || 1));
     const [containerSize, setContainerSize] = useState({ width: 720, height: 800 });
     const [pageAspectRatio, setPageAspectRatio] = useState<number | null>(null);
+
+    const handleBack = useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault();
+            if (typeof window !== 'undefined' && window.history.length > 1) {
+                router.back();
+            } else {
+                router.push(backHref);
+            }
+        },
+        [router, backHref]
+    );
 
     // Persisted preferences
     const [zoom, setZoom] = useState(() => {
@@ -915,12 +929,12 @@ export default function PDFReaderClient({
                 <div className="flex min-w-0 items-center gap-3">
                     <Link
                         href={backHref}
+                        onClick={handleBack}
                         className={chromeButtonClassLg}
                         title="Back"
                         aria-label="Back"
                     >
-                        <span>Previous</span>
-                        <span className="ml-1 hidden text-sm font-medium sm:inline">Back</span>
+                        Back
                     </Link>
 
                     <div className="hidden h-4 w-px bg-ed-rule sm:block" />

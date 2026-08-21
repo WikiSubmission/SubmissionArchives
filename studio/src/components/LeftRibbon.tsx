@@ -39,9 +39,9 @@ export default function LeftRibbon({
   onNewNote
 }: LeftRibbonProps) {
   return (
-    <aside className="z-40 flex w-11 shrink-0 select-none flex-col items-center justify-between border-r border-ed-rule bg-ed-bg-secondary py-2.5">
+    <aside className="z-40 flex w-12 shrink-0 select-none flex-col items-center justify-between border-r border-ed-rule bg-ed-bg-secondary/90 backdrop-blur-md py-3">
       {/* Top Actions */}
-      <div className="flex flex-col items-center gap-1.5 w-full px-1">
+      <div className="flex flex-col items-center gap-1 w-full px-1.5">
         <motion.button
           whileHover={{ scale: 1.05, y: -1 }}
           whileTap={{ scale: 0.92 }}
@@ -49,9 +49,9 @@ export default function LeftRibbon({
           onClick={onToggleSidebar}
           aria-label="Toggle Sidebar"
           title={sidebarOpen ? 'Collapse Explorer (Ctrl+B)' : 'Expand Explorer (Ctrl+B)'}
-          className={`tactile p-2 rounded-lg transition-colors ${
+          className={`p-2 rounded-[7px] transition-all ${
             sidebarOpen
-              ? 'text-ed-fg bg-ed-surface-strong'
+              ? 'text-ed-accent bg-ed-accent-soft border border-ed-accent/25 shadow-xs'
               : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface'
           }`}
         >

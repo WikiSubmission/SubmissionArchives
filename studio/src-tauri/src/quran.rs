@@ -155,22 +155,54 @@ fn verses() -> &'static Vec<Verse> {
     })
 }
 
-fn normalize_name(s: &str) -> String {
-    let mut normalized = s.to_lowercase();
-    for prefix in &["al-", "an-", "ar-", "as-", "at-", "az-", "ash-", "adh-", "ali "] {
-        if let Some(rest) = normalized.strip_prefix(prefix) {
-            normalized = rest.to_string();
+fn strip_common_prefixes(s: &str) -> &str {
+    let mut curr = s.trim();
+    for _ in 0..3 {
+        let lower = curr.to_lowercase();
+        let mut matched = false;
+        for prefix in &[
+            "qur'an", "qur'ān", "quran", "qurān", "surah", "sūrah", "surat", "sūrat", "chapter", "ayah", "āyah",
+            "al-", "an-", "ar-", "as-", "at-", "az-", "ash-", "adh-", "ali "
+        ] {
+            if lower.starts_with(prefix) {
+                curr = curr[prefix.len()..].trim_start_matches(|c: char| c == ':' || c == '-' || c.is_whitespace());
+                matched = true;
+                break;
+            }
+        }
+        if !matched {
             break;
         }
     }
-    normalized
-        .replace(['\'', '`', '-', ' ', '’', 'ʿ', 'ʾ'], "")
-        .trim()
-        .to_string()
+    curr
+}
+
+fn normalize_name(s: &str) -> String {
+    let stripped = strip_common_prefixes(s).to_lowercase();
+    stripped
+        .chars()
+        .map(|c| match c {
+            'ā' | 'á' | 'à' | 'â' | 'ã' | 'ä' => 'a',
+            'ī' | 'í' | 'ì' | 'î' | 'ï' => 'i',
+            'ū' | 'ú' | 'ù' | 'û' | 'ü' => 'u',
+            'ḥ' => 'h',
+            'ṣ' => 's',
+            'ḍ' => 'd',
+            'ṭ' => 't',
+            'ẓ' => 'z',
+            'ḏ' => 'd',
+            'ġ' => 'g',
+            'ḫ' => 'k',
+            'ṯ' => 't',
+            '’' | '‘' | 'ʿ' | 'ʾ' | '\'' | '`' | '-' | ' ' | ':' => '\0',
+            other => other,
+        })
+        .filter(|&c| c != '\0')
+        .collect()
 }
 
 fn resolve_chapter(input: &str) -> Result<&'static SurahMeta, String> {
-    let input_trimmed = input.trim();
+    let input_trimmed = strip_common_prefixes(input).trim();
     if let Ok(num) = input_trimmed.parse::<u32>() {
         if let Some(meta) = SURAHS.iter().find(|s| s.number == num) {
             return Ok(meta);
@@ -190,7 +222,7 @@ fn resolve_chapter(input: &str) -> Result<&'static SurahMeta, String> {
         }
     }
 
-    Err(format!("Could not recognize Surah '{}'", input_trimmed))
+    Err(format!("Could not recognize Surah '{}'", input.trim()))
 }
 
 fn parse_range(spec: &str, max_verses: u32) -> Result<(u32, u32), String> {

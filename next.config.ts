@@ -42,7 +42,7 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   experimental: {
-    optimizePackageImports: ["lucide-react", "clsx", "tailwind-merge", "lru-cache"],
+    optimizePackageImports: ["lucide-react", "clsx", "tailwind-merge", "lru-cache", "framer-motion"],
     webVitalsAttribution: ["CLS", "LCP", "INP"],
   },
   images: {
@@ -50,8 +50,8 @@ const nextConfig: NextConfig = {
     deviceSizes: [360, 390, 640, 750, 828, 1080, 1200, 1440],
     imageSizes: [48, 64, 96, 128, 160, 192, 256, 384],
     // Every quality a component actually asks for must be listed here or the
-    // request is rejected at runtime. 90 is used by MediaCard's grid thumbnails.
-    qualities: [45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+    // request is rejected at runtime. 40 is used by small preview strips, 80 & 90 by cards.
+    qualities: [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
     // Source images (book covers, thumbnails) are stable, so keep optimized
     // variants cached for ~31 days to avoid re-running sharp on every miss.
     minimumCacheTTL: 2678400,

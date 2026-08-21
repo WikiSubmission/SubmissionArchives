@@ -789,23 +789,45 @@ function slugifyBookName(value) {
 function buildBookSegments(transcription) {
   if (!transcription) return [];
 
-  const pageSegments = (transcription.pages || [])
-    .map((page, index) => ({
-      start: 0,
-      end: 0,
-      text: normalizeSearchText([
+  const rawSegments = (transcription.pages || [])
+    .map((page, index) => {
+      const texts = [
+        page.page_title,
+        page.transcription_text,
+        page.arabic_text,
+        ...(page.sections?.map((s) => s.content) || []),
         page.transcribed_text,
         page.transcription,
-        page.transcription_text,
         page.reading_text,
         page.content,
-      ]),
-      page: Number(page.pdf_page ?? page.page_number ?? index + 1),
-      label: 'page',
-    }))
+      ];
+      return {
+        start: 0,
+        end: 0,
+        text: normalizeSearchText(texts),
+        page: Number(page.pdf_page ?? page.page_number ?? index + 1),
+        label: page.page_title ? `page - ${page.page_title}` : 'page',
+      };
+    })
     .filter((segment) => segment.text);
 
-  if (pageSegments.length > 0) return pageSegments;
+  if (rawSegments.length > 0) {
+    const chunkedSegments = [];
+    for (const segment of rawSegments) {
+      const chunks = splitIntoChunks(segment.text);
+      for (const chunk of chunks) {
+        chunkedSegments.push({
+          start: 0,
+          end: 0,
+          text: chunk,
+          page: segment.page,
+          index: chunkedSegments.length + 1,
+          label: segment.label,
+        });
+      }
+    }
+    return chunkedSegments;
+  }
 
   return (transcription.sections || [])
     .map((section, index) => ({

@@ -9,7 +9,16 @@ export interface SlashCommandItem {
   command: (props: { editor: Editor; range: Range }) => void
 }
 
-const QURAN_TRIGGER = /^quran\b\s*/i
+function normalizeQuery(str: string): string {
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // remove combining diacritical marks (ā->a, ū->u, etc.)
+    .replace(/[ʻʼʽʾʿ'`’‘]/g, '')     // remove hamza, ayn, and quotes
+    .trim()
+}
+
+const QURAN_TRIGGER_REGEX = /^(?:qur['’ʼʻʿʾ\-]?a[n̄n]|s[uū]rah|s[uū]rat|[aā]yah|[aā]y[aā]t)\b[:\s]*/i
+const DIRECT_VERSE_REGEX = /^(?:\d+:\d+(?:-\d+)?|\d+\s+\d+(?:-\d+)?)$/
 const INSERT_STYLE_OVERRIDE = /^(inline|block)\b\s*/i
 const CALLOUT_TYPES = ['note', 'tip', 'warning', 'important'] as const
 
@@ -40,21 +49,41 @@ function calloutCommand(type: string): SlashCommandItem {
 export function getSlashCommandItems(query: string): SlashCommandItem[] {
   const trimmed = query.trimStart()
   const lower = trimmed.toLowerCase()
+  const normalized = normalizeQuery(trimmed).toLowerCase()
   const items: SlashCommandItem[] = []
 
-  // Quran commands
-  if (QURAN_TRIGGER.test(trimmed) || 'quran'.startsWith(lower)) {
-    const afterTrigger = trimmed.replace(QURAN_TRIGGER, '').trim()
+  // Check if query is a Quran command (e.g. /quran 1:1, /Qur'ān 1:1, /surah 2:255, /1:1)
+  const isDirectVerse = DIRECT_VERSE_REGEX.test(trimmed)
+  const isQuranTrigger =
+    isDirectVerse ||
+    QURAN_TRIGGER_REGEX.test(trimmed) ||
+    normalized.startsWith('quran') ||
+    normalized.startsWith('surah') ||
+    normalized.startsWith('ayah') ||
+    'quran'.startsWith(normalized) ||
+    'surah'.startsWith(normalized)
+
+  if (isQuranTrigger) {
+    let afterTrigger = isDirectVerse
+      ? trimmed
+      : trimmed.replace(QURAN_TRIGGER_REGEX, '').trim()
+
+    // If still prefixed by normalized term (e.g. "Qur'ān: 1:1" -> "1:1")
+    if (!isDirectVerse && afterTrigger === trimmed && /^(?:quran|surah|ayah)\b/i.test(normalized)) {
+      afterTrigger = trimmed.replace(/^[^\s:]+[:\s]*/, '').trim()
+    }
+
     const styleOverride = INSERT_STYLE_OVERRIDE.exec(afterTrigger)?.[1]?.toLowerCase() as
       | 'block'
       | 'inline'
       | undefined
-    const ref = afterTrigger.replace(INSERT_STYLE_OVERRIDE, '').trim()
+    let ref = afterTrigger.replace(INSERT_STYLE_OVERRIDE, '').trim()
+    ref = ref.replace(/^[:\s]+/, '').trim()
     const style = styleOverride ?? defaultQuranInsertStyle
 
     items.push({
       title: `Quran Verse${style === 'inline' ? ' (inline)' : ''}`,
-      description: ref ? `Insert ${ref}` : 'e.g. 1:1-7, 2:255 — or "inline 2:255" to override style',
+      description: ref ? `Insert ${ref}` : 'e.g. 1:1-7, 2:255, Baqarah 255 — or "inline 2:255" to override style',
       category: 'Quran',
       icon: 'book',
       command: ({ editor, range }) => {

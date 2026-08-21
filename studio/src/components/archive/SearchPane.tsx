@@ -93,29 +93,41 @@ export default function SearchPane({ archivePath, onOpenFile }: SearchPaneProps)
         </div>
       )}
 
+      {query.trim() && !loading && (
+        <div className="st-sidebar-header border-b border-ed-rule/40">
+          <span className="st-sidebar-title">Results</span>
+          <span className="st-sidebar-count">{results.length} {results.length === 1 ? 'match' : 'matches'}</span>
+        </div>
+      )}
+
       {query.trim() && !loading && results.length === 0 && !error && (
-        <div className="px-4 py-8 text-center text-xs text-ed-fg-secondary italic">
+        <div className="px-4 py-8 text-center text-xs text-ed-fg-faint italic">
           No matches found for "{query}".
         </div>
       )}
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto p-1.5 space-y-1 scrollbar-thin">
         {results.map(({ note, snippet }) => (
           <button
             key={note.path}
             onClick={() => onOpenFile(note.path)}
-            className="w-full text-left px-4 py-2.5 hover:bg-ed-surface transition-colors border-b border-ed-rule/50 group"
+            className="w-full text-left px-3 py-2 rounded-[6px] bg-ed-surface/40 hover:bg-ed-surface-raised border border-ed-rule/60 hover:border-ed-rule-strong transition-all group"
           >
-            <div className="text-xs text-ed-fg font-semibold truncate group-hover:text-ed-accent">
-              {note.name}
+            <div className="flex items-center justify-between gap-2">
+              <div className="text-xs text-ed-fg font-semibold truncate group-hover:text-ed-accent">
+                {note.name}
+              </div>
+              <span className="text-[9px] font-mono text-ed-fg-faint uppercase px-1 rounded bg-ed-surface border border-ed-rule">
+                MD
+              </span>
             </div>
-            <div className="text-[11px] text-ed-fg-secondary font-mono truncate mt-0.5">
+            <div className="text-[11px] text-ed-fg-secondary font-mono truncate mt-1 leading-normal">
               {snippet}
             </div>
             {note.tags.length > 0 && (
-              <div className="flex items-center gap-1 mt-1">
+              <div className="flex items-center gap-1 mt-1.5 flex-wrap">
                 {note.tags.map((t) => (
-                  <span key={t} className="text-[9px] font-mono text-ed-accent/80 bg-ed-accent-soft px-1 rounded">
+                  <span key={t} className="text-[9px] font-mono text-ed-accent bg-ed-accent-soft px-1.5 py-0.5 rounded border border-ed-accent/20">
                     #{t}
                   </span>
                 ))}

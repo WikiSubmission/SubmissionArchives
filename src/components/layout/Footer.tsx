@@ -14,34 +14,34 @@ export default function Footer() {
             {/* Subtle top ambient glow */}
             <div className="pointer-events-none absolute -top-24 left-1/2 h-48 w-96 -translate-x-1/2 rounded-full bg-ed-accent/5 blur-3xl" />
 
-            <div className="relative mx-auto max-w-[1160px] px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+            <div className="relative mx-auto max-w-[1160px] px-5 py-10 sm:px-8 sm:py-12 lg:py-14">
                 {/* Main Grid: Brand Identity & Nav Columns */}
-                <div className="grid gap-12 lg:grid-cols-[1.15fr_1.85fr] lg:gap-20">
+                <div className="grid gap-8 lg:grid-cols-[1fr_1.75fr] lg:gap-12">
                     {/* Left: Brand Identity & Verification */}
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         <Link
                             href="/"
-                            className="group inline-flex items-center gap-4"
+                            className="group inline-flex items-center gap-3.5"
                             aria-label="Submission Archives home"
                         >
                             {/* Brand Mark Tile */}
-                            <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-[8px] border border-ed-rule bg-gradient-to-b from-ed-surface-strong via-ed-surface to-ed-surface p-2 shadow-md ring-1 ring-black/5 dark:ring-white/5 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg">
+                            <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-[7px] border border-ed-rule bg-gradient-to-b from-ed-surface-strong via-ed-surface to-ed-surface p-1.5 shadow-sm ring-1 ring-black/5 dark:ring-white/5 transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
                                 <Image
                                     src="/assets/brand/submission-archives-mark.png"
                                     alt="Submission Archives"
-                                    width={44}
-                                    height={44}
-                                    className="h-8 w-8 object-contain"
+                                    width={36}
+                                    height={36}
+                                    className="h-7 w-7 object-contain"
                                 />
                             </div>
                             <div>
                                 <span
-                                    className="block text-xl font-semibold tracking-tight text-ed-fg transition-colors group-hover:text-ed-accent"
+                                    className="block text-lg font-semibold tracking-tight text-ed-fg transition-colors group-hover:text-ed-accent"
                                     style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                                 >
                                     Submission Archives
                                 </span>
-                                <span className="mt-0.5 flex items-center gap-1.5 font-sans text-[0.68rem] font-semibold text-ed-fg-muted">
+                                <span className="mt-0.5 flex items-center gap-1.5 font-sans text-[0.65rem] font-semibold text-ed-fg-muted">
                                     <span className="h-1.5 w-1.5 rounded-full bg-ed-accent" />
                                     Digital Preservation Project
                                 </span>
@@ -49,45 +49,45 @@ export default function Footer() {
                         </Link>
 
                         <p
-                            className="max-w-[48ch] text-sm leading-relaxed text-ed-fg-secondary"
+                            className="max-w-[42ch] text-xs leading-relaxed text-ed-fg-secondary"
                             style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                         >
                             Dedicated to the permanent digital preservation of historical audio recordings, video lectures, authorized scripture translations, and written works related to Submission and Dr. Rashad Khalifa.
                         </p>
 
                         {/* Verification Principle Card */}
-                        <div className="rounded-[8px] border border-ed-rule bg-ed-surface p-4 text-xs leading-relaxed text-ed-fg-secondary shadow-sm">
-                            <div className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-ed-fg mb-1.5">
-                                <ShieldCheck className="h-4 w-4 text-ed-accent" />
+                        <div className="rounded-[6px] border border-ed-rule bg-ed-surface/70 p-3 text-[11px] leading-relaxed text-ed-fg-secondary shadow-xs">
+                            <div className="flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-ed-fg mb-1">
+                                <ShieldCheck className="h-3.5 w-3.5 text-ed-accent" />
                                 <span>Verification Principle (17:36)</span>
                             </div>
                             Transcriptions and OCR copies may contain automated errors. Always verify citations directly against original audio recordings and printed facsimiles.
                         </div>
 
                         {/* Social & Studio App Links */}
-                        <div className="flex flex-wrap items-center gap-2.5 pt-1">
+                        <div className="flex flex-wrap items-center gap-2 pt-0.5">
                             <Link
                                 href="/app"
-                                className="inline-flex items-center gap-2 rounded-[4px] border border-ed-accent bg-ed-accent px-3.5 py-2 text-xs font-semibold text-white dark:text-[#0F0E0D] shadow-sm transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
+                                className="inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent bg-ed-accent px-3 py-1.5 text-xs font-semibold text-white dark:text-[#0F0E0D] shadow-xs transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
                             >
                                 <Laptop className="h-3.5 w-3.5" />
                                 <span>SA Studio App</span>
                             </Link>
 
                             <FooterSocialLink href={YOUTUBE_URL} label="YouTube Archive">
-                                <Youtube className="h-4 w-4" />
+                                <Youtube className="h-3.5 w-3.5" />
                                 <span>YouTube</span>
                             </FooterSocialLink>
 
                             <FooterSocialLink href={DISCORD_URL} label="Discord Community">
-                                <MessageCircle className="h-4 w-4" />
+                                <MessageCircle className="h-3.5 w-3.5" />
                                 <span>Discord</span>
                             </FooterSocialLink>
                         </div>
                     </div>
 
                     {/* Right: 4-Column Navigation */}
-                    <nav aria-label="Footer Navigation" className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    <nav aria-label="Footer Navigation" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {FOOTER_NAV.map((section) => (
                             <FooterAccordionSection key={section.title} section={section} />
                         ))}
@@ -95,8 +95,8 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar: Copyright, Legal Links, Back To Top */}
-                <div className="mt-16 flex flex-col-reverse items-start justify-between gap-6 border-t border-ed-rule pt-8 sm:flex-row sm:items-center">
-                    <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-ed-fg-muted">
+                <div className="mt-10 flex flex-col-reverse items-start justify-between gap-4 border-t border-ed-rule pt-6 sm:flex-row sm:items-center">
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 font-mono text-[11px] text-ed-fg-muted">
                         <span>© {new Date().getFullYear()} Submission Archives</span>
                         <span className="hidden sm:inline text-ed-fg-faint">&middot;</span>
                         {LEGAL_LINKS.map((link) => (

@@ -22,7 +22,9 @@ export async function generateStaticParams() {
 }
 
 function backHrefFor(book: BookData) {
-    return `/search?filters=${book.type === 'newsletter' ? 'perspective' : book.type}`;
+    if (book.type === 'newsletter') return '/written#newsletters';
+    if (book.type === 'appendix') return '/written#appendices';
+    return '/written#books';
 }
 
 export default async function PDFReaderPage({ params }: Props) {

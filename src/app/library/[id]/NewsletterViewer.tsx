@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
 import PDFReaderClient from './PDFReaderWrapper';
 
@@ -82,13 +83,26 @@ export default function NewsletterViewer({
     title = 'Submitters Perspective',
     prevId,
     nextId,
-    backHref = '/search?filters=perspective',
+    backHref = '/written#newsletters',
 }: Props) {
+    const router = useRouter();
     const trimmedQuery = (query ?? '').trim().toLowerCase();
     const highlightTerms = useMemo(() => getHighlightTerms(trimmedQuery), [trimmedQuery]);
     const [matchCount, setMatchCount] = useState(0);
     const [currentMatch, setCurrentMatch] = useState(0);
     const hasScrolledToMatch = useRef(false);
+
+    const handleBack = useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault();
+            if (typeof window !== 'undefined' && window.history.length > 1) {
+                router.back();
+            } else {
+                router.push(backHref);
+            }
+        },
+        [router, backHref]
+    );
 
     // Reading options state
     const [viewKind, setViewKind] = useState<'text' | 'facsimile'>('text');
@@ -224,7 +238,14 @@ export default function NewsletterViewer({
             {/* Header */}
             <header className="sticky top-16 z-30 flex flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg/95 px-4 py-3 backdrop-blur-xl sm:px-7 sm:py-3.5">
                 <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-                    <Link href={backHref} aria-label="Back to search" className={chromeButtonClassLg}>Back</Link>
+                    <Link
+                        href={backHref}
+                        onClick={handleBack}
+                        aria-label="Back"
+                        className={chromeButtonClassLg}
+                    >
+                        Back
+                    </Link>
                     <div className="min-w-0">
                         <h1
                             className="truncate text-base sm:text-lg font-semibold tracking-tight text-ed-fg"

@@ -33,7 +33,7 @@ import {
 
 type Platform = 'macos' | 'windows' | 'linux';
 
-type WorkspaceTab = 'documents' | 'quran' | 'audio' | 'video' | 'written';
+type WorkspaceTab = 'editor' | 'quran' | 'canvas' | 'split' | 'inspector';
 
 interface ArchitecturePillar {
     id: string;
@@ -46,35 +46,35 @@ interface ArchitecturePillar {
 const ARCHITECTURE_PILLARS: ArchitecturePillar[] = [
     {
         id: 'engine-1',
-        title: 'Native Rust Engine & Tauri IPC Bridge',
-        badge: 'NON-REMOTE',
+        title: 'Native Rust Core & Tauri v2 IPC Bridge',
+        badge: '100% LOCAL',
         icon: <Zap className="h-3.5 w-3.5 text-ed-accent" />,
         content:
-            'A desktop-native core engineered with native Rust and Tauri v2 for responsive indexing, file operations, and media access without pushing your working archive to a hosted cloud service.',
+            'Engineered with a native Rust core and Tauri v2 for instant startup, local file system manipulation, and offline audio/video streaming without sending notes or telemetry to any external cloud.',
     },
     {
         id: 'engine-2',
-        title: 'Local-First SQLite & Vector Search Database',
-        badge: 'ONE COLLECTION',
-        icon: <HardDrive className="h-3.5 w-3.5 text-ed-accent" />,
+        title: 'TipTap ProseMirror Scholarly Editor',
+        badge: 'EXTENSIBLE',
+        icon: <FileText className="h-3.5 w-3.5 text-ed-accent" />,
         content:
-            'Structured metadata and local BM25 ranking execute entirely on your machine. Your scholarly notes and transcript indexes remain open standard Markdown and SQLite on your drive.',
+            'A rich markdown workspace featuring custom inline & block Quran embeds, bidirectional [[WikiLinks]], academic footnotes [^1], callout blocks, and slash commands (/quran, /callout).',
     },
     {
         id: 'engine-3',
-        title: 'Arabic Transliteration & Named Surah Autocomplete',
-        badge: 'SEARCH LAYER',
+        title: 'Local Fuse.js & BM25 Proximity Search',
+        badge: 'SUB-MS SEARCH',
         icon: <Search className="h-3.5 w-3.5 text-ed-accent" />,
         content:
-            'The search layer is optimized for Arabic script, phonetic transliteration, named surahs, and academic citation formats with sub-millisecond local fuzzy matching.',
+            'Instant local search across note bodies, YAML frontmatter, hierarchical #tags, named surahs, and Arabic transliterations with real-time fuzzy matching.',
     },
     {
         id: 'engine-4',
-        title: 'Bidirectional Wiki Links & Interactive Canvas',
-        badge: 'KNOWLEDGE GRAPH',
+        title: '2D Visual Synthesis Canvas & Idea Trees',
+        badge: 'VISUAL GRAPH',
         icon: <GitBranch className="h-3.5 w-3.5 text-ed-accent" />,
         content:
-            'Move seamlessly from a verse to a note, from a speaker to a recording, or from a theological theme to every source in the archive across a 2D relational canvas.',
+            'Freeform infinite canvas to visually map complex theological themes, connect scripture verses with debate transcripts, and construct living idea trees.',
     },
 ];
 
@@ -97,7 +97,7 @@ interface PaletteAction {
 const PALETTE_ACTIONS: PaletteAction[] = [
     {
         id: 'features',
-        label: 'Explore features',
+        label: 'Explore studio features',
         hint: 'F',
         icon: <LayoutGrid className="h-3.5 w-3.5 text-ed-accent" />,
         run: ({ close }) => {
@@ -117,7 +117,7 @@ const PALETTE_ACTIONS: PaletteAction[] = [
     },
     {
         id: 'download',
-        label: 'Download desktop application',
+        label: 'Download SA Studio desktop',
         hint: 'D',
         icon: <Download className="h-3.5 w-3.5 text-ed-accent" />,
         run: ({ close, showToast }) => {
@@ -152,7 +152,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function AppDownloadClient() {
     const platform = useSyncExternalStore<Platform>(subscribePlatform, getPlatformSnapshot, () => 'macos');
-    const [activeWorkspaceTab, setActiveWorkspaceTab] = useState<WorkspaceTab>('documents');
+    const [activeWorkspaceTab, setActiveWorkspaceTab] = useState<WorkspaceTab>('editor');
     const [openAccordionId, setOpenAccordionId] = useState<string>('engine-1');
     const [paletteOpen, setPaletteOpen] = useState(false);
     const [paletteQuery, setPaletteQuery] = useState('');
@@ -219,29 +219,55 @@ export default function AppDownloadClient() {
             <main id="top" className="relative z-10">
                 {/* Hero */}
                 <section className="px-5 pt-16 pb-16 text-center sm:px-7 sm:pt-20 sm:pb-20">
-                    <div className="mx-auto max-w-[820px]">
-                        <motion.div {...fadeUp(0)}>
-                            <div className="inline-flex items-center gap-1.5 rounded border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1">
-                                <span className="h-1.5 w-1.5 rounded-full bg-ed-accent" />
-                                <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
-                                    App Studio · Offline scholarly workspace
-                                </span>
-                            </div>
+                    <div className="mx-auto max-w-[840px]">
+                        <motion.div {...fadeUp(0)} className="flex flex-col items-center text-center">
+                            {/* Stylized App Icon Button */}
+                            <motion.button
+                                type="button"
+                                whileHover={{ scale: 1.06, y: -3 }}
+                                whileTap={{ scale: 0.96 }}
+                                transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                                className="group relative mb-6 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                                onClick={() => {
+                                    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                aria-label="Explore SA Studio Features"
+                            >
+                                {/* Ambient Glow Aura */}
+                                <div
+                                    aria-hidden="true"
+                                    className="absolute -inset-2 rounded-[28px] bg-gradient-to-br from-ed-accent/40 via-ed-accent/15 to-transparent blur-xl opacity-70 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"
+                                />
+
+                                {/* Glassmorphic Squircle App Icon Shell */}
+                                <div className="relative flex h-[72px] w-[72px] sm:h-20 sm:w-20 items-center justify-center rounded-[22px] border border-ed-accent/35 bg-gradient-to-b from-ed-surface via-ed-surface/90 to-ed-bg p-3.5 shadow-[0_12px_32px_-4px_rgba(184,98,51,0.28)] ring-1 ring-white/15 backdrop-blur-xl transition-all duration-300 group-hover:border-ed-accent/60 group-hover:shadow-[0_16px_40px_-4px_rgba(184,98,51,0.45)]">
+                                    {/* Top Specular Sheen Line */}
+                                    <div className="pointer-events-none absolute inset-x-3 top-0 h-px bg-gradient-to-r from-transparent via-white/50 dark:via-white/20 to-transparent" />
+
+                                    <Image
+                                        src="/assets/brand/submission-archives-mark.png"
+                                        alt="WikiSubmission Studio App Logo"
+                                        width={64}
+                                        height={64}
+                                        priority
+                                        className="h-11 w-11 sm:h-12 sm:w-12 object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                </div>
+                            </motion.button>
 
                             <h1
-                                className="mx-auto mt-5 max-w-[720px] text-[clamp(2.75rem,5.5vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-ed-fg"
+                                className="mx-auto max-w-[760px] text-[clamp(2.75rem,5.5vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-ed-fg"
                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
-                                Your archive, <span className="text-ed-accent">on your own disk.</span>
+                                Your entire archive, <span className="text-ed-accent">on your own machine.</span>
                             </h1>
 
                             <p
-                                className="mx-auto mt-7 max-w-[620px] text-[16.5px] leading-[1.6] text-ed-fg-secondary"
+                                className="mx-auto mt-7 max-w-[660px] text-[16.5px] leading-[1.6] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
-                                A local-first workspace for precise research, listening, reading, and citation. Keep the
-                                archive private, searchable, and yours — Quran references, transcripts, audio, video, and
-                                written material in one place.
+                                A local-first research studio engineered for scholarly writing, Quran scripture embedding,
+                                bidirectional knowledge links, synchronized audio/video study, and visual idea synthesis.
                             </p>
 
                             <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
@@ -263,358 +289,364 @@ export default function AppDownloadClient() {
                             </div>
 
                             <div className="mt-3.5 font-mono text-[10px] tracking-wide text-ed-fg-muted">
-                                Build {APP_VERSION} · Free to use · Standard sources
+                                Build {APP_VERSION} · Local SQLite & Markdown · 100% Offline Capable
                             </div>
 
                             {/* Notice */}
-                            <div className="mx-auto mt-7 flex max-w-[560px] items-start gap-3 rounded-lg border border-ed-rule bg-ed-surface px-4 py-3 text-left shadow-sm">
+                            <div className="mx-auto mt-7 flex max-w-[580px] items-start gap-3 rounded-lg border border-ed-rule bg-ed-surface px-4 py-3 text-left shadow-sm">
                                 <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-accent">
                                     <Zap className="h-3 w-3" />
                                 </div>
                                 <div>
                                     <strong className="block text-[10px] font-semibold uppercase tracking-[0.08em] text-ed-fg">
-                                        Active development · Synchronized offline core
+                                        Editorial UI · Native Rust Desktop Engine
                                     </strong>
                                     <span className="mt-0.5 block text-[11px] leading-relaxed text-ed-fg-muted">
-                                        The foundation is being refined around local search, scholarly citations, media
-                                        playback, and long-term archive portability.
+                                        Featuring the Golden Player-inspired sidebar, interactive Quran verse cards, visual canvas,
+                                        split view, and full local search indexing.
                                     </span>
                                 </div>
                             </div>
                         </motion.div>
 
                         {/* App window showcase */}
-                        <motion.div {...fadeUp(0.08)} className="mx-auto mt-12 max-w-[940px] text-left">
+                        <motion.div {...fadeUp(0.08)} className="mx-auto mt-12 max-w-[980px] text-left">
                             <div className="overflow-hidden rounded-[10px] border border-ed-rule-strong bg-ed-surface shadow-2xl">
                                 {/* Titlebar */}
-                                <div className="flex h-[37px] select-none items-center justify-between border-b border-ed-rule bg-ed-surface-strong px-3.5">
+                                <div className="flex h-[38px] select-none items-center justify-between border-b border-ed-rule bg-ed-surface-strong px-3.5">
                                     <div className="flex items-center gap-1.5">
-                                        <span className="h-1.5 w-1.5 rounded-full bg-[#9D5B4B]" />
-                                        <span className="h-1.5 w-1.5 rounded-full bg-[#AA8A4B]" />
-                                        <span className="h-1.5 w-1.5 rounded-full bg-[#5E8B6E]" />
+                                        <span className="h-2 w-2 rounded-full bg-[#9D5B4B]" />
+                                        <span className="h-2 w-2 rounded-full bg-[#AA8A4B]" />
+                                        <span className="h-2 w-2 rounded-full bg-[#5E8B6E]" />
                                     </div>
-                                    <div className="truncate px-2 font-mono text-[9px] text-ed-fg-muted">
-                                        SA Studio · Documents / Quran / Al-Baqarah 2:255
+                                    <div className="truncate px-2 font-mono text-[10px] text-ed-fg-muted">
+                                        SA Studio · notes / monotheism_continuity.md
                                     </div>
-                                    <div className="font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
-                                        Local
+                                    <div className="flex items-center gap-2">
+                                        <span className="rounded bg-ed-accent-soft px-1.5 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-accent border border-ed-accent/20">
+                                            Saved
+                                        </span>
+                                        <span className="font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
+                                            Local Vault
+                                        </span>
                                     </div>
                                 </div>
 
-                                <div className="grid min-h-[355px] grid-cols-1 sm:grid-cols-[185px_1fr]">
-                                    {/* Sidebar */}
-                                    <aside className="border-r border-ed-rule bg-ed-bg/50 p-3.5">
-                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-ed-fg-muted">
-                                            Workspace
-                                        </div>
-                                        <nav className="space-y-0.5">
-                                            <SidebarItem
-                                                active={activeWorkspaceTab === 'documents'}
-                                                onClick={() => setActiveWorkspaceTab('documents')}
-                                                label="Documents"
-                                                count="128"
-                                                icon={<FileText className="h-3 w-3" />}
-                                            />
-                                            <SidebarItem
-                                                active={activeWorkspaceTab === 'quran'}
-                                                onClick={() => setActiveWorkspaceTab('quran')}
-                                                label="Quran"
-                                                count="6,236"
-                                                icon={<Layers className="h-3 w-3" />}
-                                            />
-                                            <SidebarItem
-                                                active={activeWorkspaceTab === 'audio'}
-                                                onClick={() => setActiveWorkspaceTab('audio')}
-                                                label="Audio"
-                                                count="482"
-                                                icon={<Volume2 className="h-3 w-3" />}
-                                            />
-                                            <SidebarItem
-                                                active={activeWorkspaceTab === 'video'}
-                                                onClick={() => setActiveWorkspaceTab('video')}
-                                                label="Video"
-                                                count="96"
-                                                icon={<Video className="h-3 w-3" />}
-                                            />
-                                            <SidebarItem
-                                                active={activeWorkspaceTab === 'written'}
-                                                onClick={() => setActiveWorkspaceTab('written')}
-                                                label="Written"
-                                                count="241"
-                                                icon={<FileCode className="h-3 w-3" />}
-                                            />
-                                        </nav>
-
-                                        <div className="mx-2 my-2.5 h-px bg-ed-rule" />
-
-                                        <div className="px-2 pb-2 text-[8px] font-semibold uppercase tracking-[0.13em] text-ed-fg-muted">
-                                            Collections
-                                        </div>
-                                        <nav className="space-y-0.5">
-                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-ed-fg-muted">
-                                                <Bookmark className="h-3 w-3 text-ed-accent" />
-                                                <span>Bookmarks</span>
-                                                <span className="ml-auto font-mono text-[9px] text-ed-fg-muted">24</span>
+                                <div className="grid min-h-[420px] grid-cols-1 sm:grid-cols-[230px_1fr]">
+                                    {/* Sidebar matching SA Studio's Golden Player layout */}
+                                    <aside className="border-r border-ed-rule bg-ed-bg-secondary/60 p-2.5 flex flex-col justify-between">
+                                        <div>
+                                            {/* Segmented top switcher */}
+                                            <div className="flex items-center p-0.5 rounded-[6px] bg-ed-surface border border-ed-rule mb-3">
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('editor')}
+                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
+                                                        activeWorkspaceTab === 'editor'
+                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-muted hover:text-ed-fg'
+                                                    }`}
+                                                >
+                                                    Files
+                                                </button>
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('quran')}
+                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
+                                                        activeWorkspaceTab === 'quran'
+                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-muted hover:text-ed-fg'
+                                                    }`}
+                                                >
+                                                    Tags
+                                                </button>
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('canvas')}
+                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
+                                                        activeWorkspaceTab === 'canvas'
+                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-muted hover:text-ed-fg'
+                                                    }`}
+                                                >
+                                                    Canvas
+                                                </button>
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('split')}
+                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
+                                                        activeWorkspaceTab === 'split'
+                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-muted hover:text-ed-fg'
+                                                    }`}
+                                                >
+                                                    Split
+                                                </button>
                                             </div>
-                                            <div className="flex cursor-default items-center gap-2 rounded px-2 py-1.5 text-[10px] text-ed-fg-muted">
-                                                <Clock className="h-3 w-3" />
-                                                <span>Recent</span>
+
+                                            {/* Explorer Header */}
+                                            <div className="flex items-center justify-between px-1.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
+                                                <span>Explorer</span>
+                                                <span className="font-mono text-[9px] text-ed-fg-faint">18 items</span>
                                             </div>
-                                        </nav>
+
+                                            {/* File List Items with Active Glow */}
+                                            <nav className="space-y-0.5 mt-1.5">
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('editor')}
+                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
+                                                        activeWorkspaceTab === 'editor'
+                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
+                                                    }`}
+                                                >
+                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                                                        activeWorkspaceTab === 'editor'
+                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
+                                                            : 'bg-transparent'
+                                                    }`} />
+                                                    <span className="truncate flex-1">monotheism_continuity.md</span>
+                                                </button>
+
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('quran')}
+                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
+                                                        activeWorkspaceTab === 'quran'
+                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
+                                                    }`}
+                                                >
+                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                                                        activeWorkspaceTab === 'quran'
+                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
+                                                            : 'bg-transparent'
+                                                    }`} />
+                                                    <span className="truncate flex-1">quran_2_255_exegesis.md</span>
+                                                </button>
+
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('canvas')}
+                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
+                                                        activeWorkspaceTab === 'canvas'
+                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
+                                                    }`}
+                                                >
+                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                                                        activeWorkspaceTab === 'canvas'
+                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
+                                                            : 'bg-transparent'
+                                                    }`} />
+                                                    <span className="truncate flex-1">messengers_timeline.canvas</span>
+                                                    <span className="text-[8px] font-mono uppercase px-1 rounded bg-ed-surface text-ed-accent border border-ed-rule">
+                                                        2D
+                                                    </span>
+                                                </button>
+
+                                                <button
+                                                    onClick={() => setActiveWorkspaceTab('split')}
+                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
+                                                        activeWorkspaceTab === 'split'
+                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
+                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
+                                                    }`}
+                                                >
+                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                                                        activeWorkspaceTab === 'split'
+                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
+                                                            : 'bg-transparent'
+                                                    }`} />
+                                                    <span className="truncate flex-1">1987_debate_transcript.pdf</span>
+                                                    <span className="text-[8px] font-mono uppercase px-1 rounded bg-ed-surface text-ed-danger border border-ed-rule">
+                                                        PDF
+                                                    </span>
+                                                </button>
+                                            </nav>
+                                        </div>
+
+                                        {/* Bottom Status / Vault */}
+                                        <div className="pt-2 border-t border-ed-rule/60 flex items-center justify-between text-[9px] font-mono text-ed-fg-faint px-1">
+                                            <span>4,120 words</span>
+                                            <span>UTF-8</span>
+                                        </div>
                                     </aside>
 
-                                    {/* Main pane */}
-                                    <div className="bg-ed-surface p-4 sm:p-5">
-                                        <div className="mb-4 flex items-center justify-between gap-2.5">
-                                            <div className="flex h-8 max-w-[390px] flex-1 items-center gap-2 rounded border border-ed-rule bg-ed-surface-strong px-2.5 text-[10px] text-ed-fg-muted">
-                                                <Search className="h-3 w-3 shrink-0" />
-                                                <span className="truncate">Search archive, Arabic, names, surahs…</span>
+                                    {/* Main Editor Pane */}
+                                    <div className="bg-ed-surface p-4 sm:p-5 flex flex-col justify-between">
+                                        <div>
+                                            <div className="mb-3 flex items-center justify-between gap-2.5 border-b border-ed-rule/60 pb-2.5">
+                                                <div className="flex items-center gap-2 text-xs text-ed-fg-muted font-mono">
+                                                    <span className="text-ed-accent font-semibold">[[WikiLink]]</span>
+                                                    <span>·</span>
+                                                    <span>/quran command</span>
+                                                    <span>·</span>
+                                                    <span>[^1] footnotes</span>
+                                                </div>
+                                                <div className="flex gap-1.5">
+                                                    <span className="flex h-6 items-center rounded border border-ed-rule bg-ed-surface-strong px-2 text-[9px] text-ed-fg-muted">
+                                                        Outline (5)
+                                                    </span>
+                                                    <span className="flex h-6 items-center rounded border border-ed-rule bg-ed-surface-strong px-2 text-[9px] text-ed-accent font-mono">
+                                                        Ctrl+\ Split
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div className="flex gap-1.5">
-                                                <span className="flex h-[30px] items-center rounded border border-ed-rule bg-ed-surface-strong px-2.5 text-[9px] text-ed-fg-muted">
-                                                    Filter
-                                                </span>
-                                                <span className="flex h-[30px] items-center rounded border border-ed-rule bg-ed-surface-strong px-2.5 text-[9px] text-ed-fg-muted">
-                                                    Import
-                                                </span>
-                                            </div>
+
+                                            <AnimatePresence mode="wait">
+                                                {activeWorkspaceTab === 'editor' && (
+                                                    <motion.div
+                                                        key="editor-view"
+                                                        initial={{ opacity: 0 }}
+                                                        animate={{ opacity: 1 }}
+                                                        exit={{ opacity: 0 }}
+                                                        transition={{ duration: 0.12 }}
+                                                    >
+                                                        <h2
+                                                            className="text-xl font-semibold leading-tight text-ed-fg sm:text-2xl"
+                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                        >
+                                                            The Continuum of Absolute Monotheism
+                                                        </h2>
+                                                        <p className="mt-1 text-[11px] text-ed-fg-muted">
+                                                            Cross-referencing [[Quran Study Sessions]] and historical debate notes.
+                                                        </p>
+
+                                                        {/* Quran Embed Card inside Note */}
+                                                        <div className="mt-4 rounded-lg border border-ed-accent/30 bg-ed-accent-soft p-3.5 space-y-2">
+                                                            <div className="flex items-center justify-between text-[10px] font-mono">
+                                                                <span className="font-bold text-ed-accent uppercase tracking-wider">Quran Embed · 2:255</span>
+                                                                <span className="text-ed-fg-muted">Ayat al-Kursi</span>
+                                                            </div>
+                                                            <div
+                                                                className="text-right text-base leading-loose text-ed-fg"
+                                                                dir="rtl"
+                                                                style={{ fontFamily: 'Amiri, Georgia, serif' }}
+                                                            >
+                                                                اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
+                                                            </div>
+                                                            <p
+                                                                className="text-xs leading-relaxed text-ed-fg-secondary italic"
+                                                                style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                                                            >
+                                                                &ldquo;GOD: there is no other god besides Him, the Living, the Eternal.&rdquo;
+                                                            </p>
+                                                        </div>
+
+                                                        <p
+                                                            className="mt-3.5 text-[13px] leading-relaxed text-ed-fg-secondary"
+                                                            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                                                        >
+                                                            As established in [[One Message From All Messengers]], scripture confirms that the
+                                                            unifying criteria of all divine revelations remains the uncompromised worship of God alone[^1].
+                                                        </p>
+                                                    </motion.div>
+                                                )}
+
+                                                {activeWorkspaceTab === 'quran' && (
+                                                    <motion.div
+                                                        key="quran-tab"
+                                                        initial={{ opacity: 0 }}
+                                                        animate={{ opacity: 1 }}
+                                                        exit={{ opacity: 0 }}
+                                                        transition={{ duration: 0.12 }}
+                                                        className="space-y-3"
+                                                    >
+                                                        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-ed-accent">
+                                                            Hierarchical #Tags & Taxonomy
+                                                        </div>
+                                                        <div className="space-y-1.5">
+                                                            {[
+                                                                { tag: '#theology/monotheism', count: 42 },
+                                                                { tag: '#scripture/quran-embeds', count: 128 },
+                                                                { tag: '#debates/1987-sunni-scholars', count: 19 },
+                                                                { tag: '#historical/newsletters', count: 86 },
+                                                            ].map((t) => (
+                                                                <div key={t.tag} className="flex items-center justify-between p-2.5 rounded-[6px] bg-ed-surface-strong border border-ed-rule text-xs">
+                                                                    <span className="font-mono text-ed-accent font-medium">{t.tag}</span>
+                                                                    <span className="font-mono text-[10px] text-ed-fg-muted">{t.count} notes</span>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+
+                                                {activeWorkspaceTab === 'canvas' && (
+                                                    <motion.div
+                                                        key="canvas-tab"
+                                                        initial={{ opacity: 0 }}
+                                                        animate={{ opacity: 1 }}
+                                                        exit={{ opacity: 0 }}
+                                                        transition={{ duration: 0.12 }}
+                                                        className="space-y-3"
+                                                    >
+                                                        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-ed-accent">
+                                                            2D Visual Synthesis Canvas
+                                                        </div>
+                                                        <div className="rounded-lg border border-dashed border-ed-rule-strong bg-ed-bg/50 p-6 text-center space-y-2">
+                                                            <GitBranch className="h-8 w-8 text-ed-accent mx-auto" />
+                                                            <div className="text-xs font-semibold text-ed-fg">Relational Concept Graph</div>
+                                                            <p className="text-[11px] text-ed-fg-muted max-w-sm mx-auto">
+                                                                Freely arrange notes, verse nodes, media clips, and citation arrows on an infinite spatial plane.
+                                                            </p>
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+
+                                                {activeWorkspaceTab === 'split' && (
+                                                    <motion.div
+                                                        key="split-tab"
+                                                        initial={{ opacity: 0 }}
+                                                        animate={{ opacity: 1 }}
+                                                        exit={{ opacity: 0 }}
+                                                        transition={{ duration: 0.12 }}
+                                                        className="grid grid-cols-2 gap-3"
+                                                    >
+                                                        <div className="p-3 rounded border border-ed-rule bg-ed-bg/60 text-xs space-y-1">
+                                                            <div className="font-mono text-[9px] text-ed-accent font-bold">PANE 1 · MARKDOWN NOTE</div>
+                                                            <div className="font-semibold text-ed-fg">monotheism_continuity.md</div>
+                                                            <p className="text-[10px] text-ed-fg-secondary">Active writing buffer...</p>
+                                                        </div>
+                                                        <div className="p-3 rounded border border-ed-rule bg-ed-bg/60 text-xs space-y-1">
+                                                            <div className="font-mono text-[9px] text-ed-danger font-bold">PANE 2 · PDF VIEWER</div>
+                                                            <div className="font-semibold text-ed-fg">1987_debate_transcript.pdf</div>
+                                                            <p className="text-[10px] text-ed-fg-secondary">Page 14 of 48 · Excerpt capture active</p>
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
                                         </div>
 
-                                        <AnimatePresence mode="wait">
-                                            {activeWorkspaceTab === 'documents' && (
-                                                <motion.div
-                                                    key="doc-view"
-                                                    initial={{ opacity: 0 }}
-                                                    animate={{ opacity: 1 }}
-                                                    exit={{ opacity: 0 }}
-                                                    transition={{ duration: 0.12 }}
-                                                >
-                                                    <div className="flex items-start justify-between gap-3 border-b border-ed-rule pb-3.5">
-                                                        <div>
-                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
-                                                                Al-Baqarah · Ayat al-Kursi
-                                                            </div>
-                                                            <h2
-                                                                className="mt-1 text-xl font-medium leading-tight text-ed-fg sm:text-2xl"
-                                                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
-                                                            >
-                                                                Ayat al-Kursi (Surah Al-Baqarah 2:255)
-                                                            </h2>
-                                                            <div className="mt-1 text-[9px] text-ed-fg-muted">
-                                                                Quran · Named Surah Search · Canonical text
-                                                            </div>
-                                                        </div>
-                                                        <div className="flex shrink-0 gap-1.5">
-                                                            <span className="rounded-full border border-ed-rule px-2 py-0.5 text-[8px] text-ed-fg-muted">
-                                                                Bookmark
-                                                            </span>
-                                                            <span className="rounded-full border border-ed-rule px-2 py-0.5 text-[8px] text-ed-fg-muted">
-                                                                Open
-                                                            </span>
-                                                        </div>
-                                                    </div>
-
-                                                    <div
-                                                        className="mt-4 border-l-2 border-ed-accent bg-ed-accent-soft px-3 py-2 text-[13.5px] leading-[1.55] text-ed-fg-secondary"
-                                                        style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
-                                                    >
-                                                        &ldquo;GOD: there is no other god besides Him, the Living, the
-                                                        Eternal.&rdquo;
-                                                    </div>
-
-                                                    <div
-                                                        className="mt-3.5 border border-ed-rule bg-ed-surface-strong p-3 text-right text-lg leading-loose text-ed-fg"
-                                                        dir="rtl"
-                                                        style={{ fontFamily: 'Georgia, serif' }}
-                                                    >
-                                                        اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
-                                                    </div>
-
-                                                    <div className="mt-4 space-y-2">
-                                                        <div className="h-1.5 w-[92%] rounded-full bg-ed-surface-strong" />
-                                                        <div className="h-1.5 w-[78%] rounded-full bg-ed-surface-strong" />
-                                                        <div className="h-1.5 w-[66%] rounded-full bg-ed-surface-strong" />
-                                                    </div>
-                                                </motion.div>
-                                            )}
-
-                                            {activeWorkspaceTab === 'quran' && (
-                                                <motion.div
-                                                    key="quran-view"
-                                                    initial={{ opacity: 0 }}
-                                                    animate={{ opacity: 1 }}
-                                                    exit={{ opacity: 0 }}
-                                                    transition={{ duration: 0.12 }}
-                                                >
-                                                    <div className="flex items-start justify-between gap-3 border-b border-ed-rule pb-3.5">
-                                                        <div>
-                                                            <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
-                                                                Surah Index · 114 Chapters
-                                                            </div>
-                                                            <h2
-                                                                className="mt-1 text-xl font-medium leading-tight text-ed-fg sm:text-2xl"
-                                                                style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
-                                                            >
-                                                                Browse by Surah
-                                                            </h2>
-                                                            <div className="mt-1 text-[9px] text-ed-fg-muted">
-                                                                Arabic · English · Transliteration
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="mt-3.5 space-y-1.5">
-                                                        {[
-                                                            { n: 1, name: 'Al-Fatihah', meaning: 'The Opening', verses: 7 },
-                                                            { n: 2, name: 'Al-Baqarah', meaning: 'The Cow', verses: 286 },
-                                                            { n: 36, name: 'Ya Seen', meaning: 'Ya Seen', verses: 83 },
-                                                            { n: 112, name: 'Al-Ikhlas', meaning: 'Sincerity', verses: 4 },
-                                                        ].map((surah) => (
-                                                            <div
-                                                                key={surah.n}
-                                                                className="flex items-center gap-2.5 rounded border border-ed-rule bg-ed-surface-strong px-2.5 py-1.5"
-                                                            >
-                                                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-ed-rule font-mono text-[8px] text-ed-fg-muted">
-                                                                    {surah.n}
-                                                                </span>
-                                                                <span className="text-[11px] font-medium text-ed-fg">{surah.name}</span>
-                                                                <span className="text-[9px] text-ed-fg-muted">{surah.meaning}</span>
-                                                                <span className="ml-auto font-mono text-[8px] text-ed-fg-muted">
-                                                                    {surah.verses} verses
-                                                                </span>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                </motion.div>
-                                            )}
-
-                                            {activeWorkspaceTab === 'audio' && (
-                                                <motion.div
-                                                    key="audio-view"
-                                                    initial={{ opacity: 0 }}
-                                                    animate={{ opacity: 1 }}
-                                                    exit={{ opacity: 0 }}
-                                                    transition={{ duration: 0.12 }}
-                                                    className="space-y-3"
-                                                >
-                                                    <div className="border-b border-ed-rule pb-3.5">
-                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
-                                                            Audio Session Index · Master Tapes
-                                                        </div>
-                                                        <h2
-                                                            className="mt-1 text-xl font-medium text-ed-fg"
-                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
-                                                        >
-                                                            QS 01 · Advocating God Alone
-                                                        </h2>
-                                                        <div className="mt-1 text-[9px] text-ed-fg-muted">
-                                                            Speaker: Dr. Rashad Khalifa · Duration: 1:19:42 · Masjid Tucson
-                                                            (1987–1990)
-                                                        </div>
-                                                    </div>
-                                                    <div className="space-y-2 rounded-md border border-ed-rule bg-ed-surface-strong p-3">
-                                                        <div className="flex items-center justify-between font-mono text-[10px] text-ed-fg-muted">
-                                                            <span>Digitized Analog Master</span>
-                                                            <span className="text-ed-accent">Normalized FLAC/MP3</span>
-                                                        </div>
-                                                        <div className="h-1 rounded-full bg-ed-rule">
-                                                            <div className="h-full w-1/3 rounded-full bg-ed-accent" />
-                                                        </div>
-                                                    </div>
-                                                </motion.div>
-                                            )}
-
-                                            {activeWorkspaceTab === 'video' && (
-                                                <motion.div
-                                                    key="video-view"
-                                                    initial={{ opacity: 0 }}
-                                                    animate={{ opacity: 1 }}
-                                                    exit={{ opacity: 0 }}
-                                                    transition={{ duration: 0.12 }}
-                                                    className="space-y-3"
-                                                >
-                                                    <div className="border-b border-ed-rule pb-3.5">
-                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
-                                                            Video Archival Preservations
-                                                        </div>
-                                                        <h2
-                                                            className="mt-1 text-xl font-medium text-ed-fg"
-                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
-                                                        >
-                                                            Tape #04 · The Great Debate
-                                                        </h2>
-                                                        <div className="mt-1 text-[9px] text-ed-fg-muted">
-                                                            Historical recording · Complete unedited digital restoration
-                                                        </div>
-                                                    </div>
-                                                    <div className="rounded-md border border-ed-rule bg-ed-surface-strong p-3 font-mono text-[11px] text-ed-fg-muted">
-                                                        Chapter markers, synchronized transcript segments, and verse
-                                                        citations linked.
-                                                    </div>
-                                                </motion.div>
-                                            )}
-
-                                            {activeWorkspaceTab === 'written' && (
-                                                <motion.div
-                                                    key="written-view"
-                                                    initial={{ opacity: 0 }}
-                                                    animate={{ opacity: 1 }}
-                                                    exit={{ opacity: 0 }}
-                                                    transition={{ duration: 0.12 }}
-                                                    className="space-y-3"
-                                                >
-                                                    <div className="border-b border-ed-rule pb-3.5">
-                                                        <div className="text-[8px] font-bold uppercase tracking-[0.13em] text-ed-accent">
-                                                            Written Materials · Research Notes
-                                                        </div>
-                                                        <h2
-                                                            className="mt-1 text-xl font-medium text-ed-fg"
-                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
-                                                        >
-                                                            Scholarly annotations & source documents
-                                                        </h2>
-                                                        <div className="mt-1 text-[9px] text-ed-fg-muted">
-                                                            Markdown · PDF · Cross-referenced citations
-                                                        </div>
-                                                    </div>
-                                                    <div className="space-y-2">
-                                                        <div className="h-1.5 w-[88%] rounded-full bg-ed-surface-strong" />
-                                                        <div className="h-1.5 w-[72%] rounded-full bg-ed-surface-strong" />
-                                                        <div className="h-1.5 w-[60%] rounded-full bg-ed-surface-strong" />
-                                                    </div>
-                                                </motion.div>
-                                            )}
-                                        </AnimatePresence>
+                                        {/* Bottom Slash Hint */}
+                                        <div className="mt-4 pt-2.5 border-t border-ed-rule/60 flex items-center justify-between text-[10px] text-ed-fg-muted">
+                                            <span>Type <code className="text-ed-accent font-mono">/quran</code> to insert verse or <code className="text-ed-accent font-mono">[[</code> to link notes</span>
+                                            <span className="font-mono text-[9px]">Ctrl+P Commands</span>
+                                        </div>
                                     </div>
                                 </div>
 
                                 {/* Proof strip */}
                                 <div className="grid grid-cols-1 border-t border-ed-rule bg-ed-bg/50 sm:grid-cols-3">
                                     <div className="border-b border-ed-rule p-5 sm:border-b-0 sm:border-r">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-fg-muted">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-accent">
                                             <FileText className="h-3 w-3" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-ed-fg">Plain Markdown Files</h3>
+                                        <h3 className="text-[11px] font-semibold text-ed-fg">Plain Markdown & Frontmatter</h3>
                                         <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
-                                            Scholarly notes remain readable and portable outside the app.
+                                            Your notes remain open standard Markdown on your disk. No proprietary databases or vendor lock-in.
                                         </p>
                                     </div>
                                     <div className="border-b border-ed-rule p-5 sm:border-b-0 sm:border-r">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-fg-muted">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-accent">
                                             <Search className="h-3 w-3" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-ed-fg">Instant Native Search</h3>
+                                        <h3 className="text-[11px] font-semibold text-ed-fg">Sub-Millisecond Local Search</h3>
                                         <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
-                                            Search Arabic, English, speakers, surahs, and imported material locally.
+                                            Instant offline query across note bodies, tags, surah names, and Arabic transliterations.
                                         </p>
                                     </div>
                                     <div className="p-5">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-fg-muted">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-accent">
                                             <GitBranch className="h-3 w-3" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-ed-fg">Living Knowledge Graph</h3>
+                                        <h3 className="text-[11px] font-semibold text-ed-fg">Bidirectional [[WikiLinks]] & Canvas</h3>
                                         <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
-                                            Connect verses, people, topics, recordings, and citations as the archive grows.
+                                            Interconnect concepts across scripture, debates, and periodicals on a spatial visual graph.
                                         </p>
                                     </div>
                                 </div>
@@ -634,14 +666,13 @@ export default function AppDownloadClient() {
                                 className="mt-2 text-3xl font-medium text-ed-fg sm:text-4xl"
                                 style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                             >
-                                Everything you need to study and expand the archive
+                                Everything you need to study, write, and synthesize
                             </h2>
                             <p
                                 className="mx-auto mt-2 max-w-xl text-[14px] text-ed-fg-secondary"
                                 style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
                             >
-                                Purpose-built capabilities for careful research, cross-reference, listening, annotation,
-                                and preservation.
+                                Purpose-built tools for scripture exegesis, bidirectional research, audio/video synchronization, and spatial concept mapping.
                             </p>
                         </motion.div>
 
@@ -650,26 +681,26 @@ export default function AppDownloadClient() {
                                 {...fadeUp(0.04)}
                                 className="relative min-h-[200px] rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm sm:col-span-2 lg:col-span-2"
                             >
-                                <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
-                                    Translation + Search
+                                <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-accent">
+                                    Scripture Embeds
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
-                                    <Search className="h-3.5 w-3.5" />
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-accent">
+                                    <FileText className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
                                     className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
-                                    Academic Arabic Translation & Named Surah Search
+                                    Rich TipTap Editor & Custom Quran Embeds
                                 </h3>
                                 <p className="mt-1.5 max-w-lg text-[11px] leading-[1.55] text-ed-fg-secondary">
-                                    Search canonical Quran text alongside English translation, Arabic phrases, named
-                                    surahs, verse references, and your own scholarly annotations.
+                                    Insert canonical Quran verses with Arabic text, authorized English translation, and footnotes
+                                    via slash command <code className="text-ed-accent font-mono">/quran</code> or direct citation <code className="text-ed-accent font-mono">[2:255]</code>.
                                 </p>
                                 <div className="mt-4 rounded border border-ed-rule bg-ed-bg p-2.5 font-mono text-[8px] text-ed-fg-muted">
                                     <div className="mb-1.5 flex justify-between">
-                                        <span>Live translation · 2:255</span>
-                                        <span className="text-ed-accent">Quran</span>
+                                        <span>Inline Verse Card · Surah Al-Baqarah 2:255</span>
+                                        <span className="text-ed-accent">TipTap Node</span>
                                     </div>
                                     <div className="h-1 w-full rounded-full bg-ed-surface-strong" />
                                     <div className="mt-1 h-1 w-[65%] rounded-full bg-ed-surface-strong" />
@@ -681,19 +712,19 @@ export default function AppDownloadClient() {
                                 className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
                                 <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
-                                    Visual Workspace
+                                    Graph
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
-                                    <LayoutGrid className="h-3.5 w-3.5" />
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-accent">
+                                    <GitBranch className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
                                     className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
-                                    Visual Whiteboard & Idea Trees
+                                    Bidirectional [[WikiLinks]]
                                 </h3>
                                 <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
-                                    Connect notes, verses, people, and topics visually without losing source context.
+                                    Interlink research notes with auto-completing bracket syntax and browse automatic backlink references.
                                 </p>
                             </motion.article>
 
@@ -702,19 +733,19 @@ export default function AppDownloadClient() {
                                 className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
                                 <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
-                                    Viewer
+                                    Spatial
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
-                                    <Columns className="h-3.5 w-3.5" />
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-accent">
+                                    <LayoutGrid className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
                                     className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
-                                    Split View & PDF Capture
+                                    Visual Synthesis Canvas
                                 </h3>
                                 <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
-                                    Compare source material with notes and capture useful passages.
+                                    Map scripture themes, historical timelines, and concept nodes across an infinite 2D canvas.
                                 </p>
                             </motion.article>
 
@@ -723,20 +754,19 @@ export default function AppDownloadClient() {
                                 className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
                                 <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
-                                    Import
+                                    Multi-View
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
-                                    <Download className="h-3.5 w-3.5" />
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-accent">
+                                    <Columns className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
                                     className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
-                                    Universal Import Wizard
+                                    Split View Research
                                 </h3>
                                 <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
-                                    Bring in Markdown, PDFs, audio, video, and existing collections without rebuilding the
-                                    archive.
+                                    Read historical PDFs or debate transcripts side-by-side with your active markdown document.
                                 </p>
                             </motion.article>
 
@@ -745,19 +775,19 @@ export default function AppDownloadClient() {
                                 className="relative rounded-lg border border-ed-rule bg-ed-surface p-5 transition-colors hover:border-ed-rule-strong hover:bg-ed-surface-strong shadow-sm"
                             >
                                 <span className="absolute right-4 top-4 rounded-full border border-ed-rule px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
-                                    Customizable
+                                    Portability
                                 </span>
-                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-fg-muted">
-                                    <Keyboard className="h-3.5 w-3.5" />
+                                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded border border-ed-rule bg-ed-surface-strong text-ed-accent">
+                                    <Download className="h-3.5 w-3.5" />
                                 </div>
                                 <h3
                                     className="text-lg font-medium text-ed-fg"
                                     style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                 >
-                                    Customizable Keybindings
+                                    Import Wizard & Version History
                                 </h3>
                                 <p className="mt-1.5 text-[11px] leading-[1.55] text-ed-fg-secondary">
-                                    Keep navigation fast and keyboard-first, especially during research sessions.
+                                    Migrate markdown vaults from Obsidian or Logseq, import PDFs, and restore point-in-time note snapshots.
                                 </p>
                             </motion.article>
                         </div>

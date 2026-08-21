@@ -1,4 +1,5 @@
 import { invoke } from '@tauri-apps/api/core'
+import { searchVersesCanonical } from './quranData'
 
 export const isTauriEnvironment = () => {
   return typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window
@@ -135,15 +136,9 @@ export async function safeInvoke<T>(cmd: string, args: Record<string, unknown> =
     }
 
     case 'search_verses': {
-      // Return representative verse data for web fallback
-      return [
-        {
-          chapter: 2,
-          verse: 255,
-          arabic: 'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ',
-          english: 'GOD: there is no god except He, the Living, the Eternal.',
-        },
-      ] as T
+      const q = (args.query as string) || '1:1'
+      const verses = searchVersesCanonical(q)
+      return verses as T
     }
 
     case 'read_settings': {

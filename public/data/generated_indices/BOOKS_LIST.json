@@ -18,7 +18,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 269
+    "segmentCount": 567
   },
   {
     "id": "english-meanings-of-the-quran",
@@ -39,7 +39,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 12
+    "segmentCount": 26
   },
   {
     "id": "eternity-screenplay",
@@ -60,7 +60,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 94
+    "segmentCount": 175
   },
   {
     "id": "hard-cover-1989",
@@ -77,7 +77,7 @@
     "transcriptionMethod": "The scan’s embedded English OCR and exact line/block coordinates were extracted from every page. Chapter, verse-range, subtitle, footnote, appendix, glossary, and index structures were parsed separately. Arabic Quran panels were transcribed with canonical Uthmani verse text and aligned to the exact 1989 page ranges; the scan remains authoritative for ornamental glyph forms and line wrapping.",
     "editionYear": 1989,
     "transcriptStatus": "available",
-    "segmentCount": 746
+    "segmentCount": 1682
   },
   {
     "id": "islam-volume-1-number-1-april-1974",
@@ -99,7 +99,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 81
+    "segmentCount": 213
   },
   {
     "id": "islam-volume-1-number-2-july-1974",
@@ -121,7 +121,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 92
+    "segmentCount": 239
   },
   {
     "id": "islam-volume-1-number-3-4-january-1975",
@@ -143,7 +143,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 138
+    "segmentCount": 325
   },
   {
     "id": "miracle-of-quran-alphabets",
@@ -164,7 +164,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 211
+    "segmentCount": 361
   },
   {
     "id": "perpetual-miracle",
@@ -185,7 +185,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 16
+    "segmentCount": 45
   },
   {
     "id": "quran-hadith-islam",
@@ -206,7 +206,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 92
+    "segmentCount": 160
   },
   {
     "id": "quran-visual-presentation",
@@ -227,7 +227,7 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 251
+    "segmentCount": 288
   },
   {
     "id": "quran1981",
@@ -244,7 +244,7 @@
     "transcriptionMethod": "Embedded page OCR and coordinates from the scan, structural parsing, cross-edition alignment using the supplied CSVs, and targeted visual transcription for pages absent from the OCR layer.",
     "editionYear": 1981,
     "transcriptStatus": "available",
-    "segmentCount": 554
+    "segmentCount": 1433
   },
   {
     "id": "salat-booklet",
@@ -265,6 +265,6 @@
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 8
+    "segmentCount": 18
   }
 ]

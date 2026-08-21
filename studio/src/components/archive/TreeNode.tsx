@@ -69,21 +69,16 @@ export default function TreeNode({
   return (
     <div>
       <div
-        className={`group relative flex items-center gap-1 pr-2 transition-colors duration-150 ${
+        className={`group relative flex items-center gap-1 mx-1 my-0.5 px-2 py-1 rounded-[6px] transition-all duration-150 ${
           isActive
-            ? 'bg-ed-surface-strong text-ed-fg'
-            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
+            ? 'bg-ed-surface-raised text-ed-fg font-medium shadow-xs border border-ed-rule-strong'
+            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface/80 border border-transparent'
         }`}
       >
-        {/* Active file left accent bar */}
-        {isActive && (
-          <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r-full bg-ed-accent" />
-        )}
-
         <button
           onClick={toggle}
-          style={{ paddingLeft: `${depth * 14 + 10}px` }}
-          className="flex-1 min-w-0 flex items-center gap-1.5 py-[5px] text-[13px] text-left tactile"
+          style={{ paddingLeft: `${depth * 14}px` }}
+          className="flex-1 min-w-0 flex items-center gap-2 text-left cursor-pointer select-none"
         >
           {entry.is_dir ? (
             <span
@@ -91,10 +86,12 @@ export default function TreeNode({
                 expanded ? 'rotate-90' : ''
               }`}
             >
-              <CaretRight size={12} weight="bold" className="text-ed-fg-secondary" />
+              <CaretRight size={12} weight="bold" className="text-ed-fg-muted" />
             </span>
+          ) : isActive ? (
+            <span className="w-1.5 h-1.5 rounded-full bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)] shrink-0 ml-1 mr-0.5" />
           ) : (
-            <span className="w-3 shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-transparent shrink-0 ml-1 mr-0.5" />
           )}
 
           {entry.is_dir ? (
@@ -103,20 +100,18 @@ export default function TreeNode({
                 {customIcon}
               </span>
             ) : expanded ? (
-              <FolderOpen size={16} weight="fill" className="shrink-0 text-ed-accent/80" />
+              <FolderOpen size={16} weight="fill" className="shrink-0 text-ed-accent/90" />
             ) : (
-              <Folder size={16} weight="regular" className="shrink-0 text-ed-fg-secondary" />
+              <Folder size={16} weight="regular" className="shrink-0 text-ed-fg-muted" />
             )
           ) : (
-            iconName && (
+            iconName && !isActive && (
               <AppIcon
                 name={iconName}
-                size={16}
-                weight={isActive ? 'fill' : 'regular'}
+                size={15}
+                weight="regular"
                 className={`shrink-0 ${
-                  isActive
-                    ? 'text-ed-accent'
-                    : kind === 'pdf'
+                  kind === 'pdf'
                     ? 'text-ed-danger'
                     : kind === 'image'
                     ? 'text-ed-success'
@@ -124,16 +119,23 @@ export default function TreeNode({
                     ? 'text-ed-accent'
                     : kind === 'video'
                     ? 'text-ed-accent'
-                    : 'text-ed-fg-secondary'
+                    : 'text-ed-fg-faint'
                 }`}
               />
             )
           )}
 
-          <span className="truncate font-medium tracking-tight">
+          <span className={`truncate text-[13px] tracking-tight ${isActive ? 'text-ed-fg font-semibold' : 'text-ed-fg-secondary group-hover:text-ed-fg'}`}>
             {entry.is_dir || kind !== 'markdown' ? entry.name : entry.name.replace(/\.md$/, '')}
           </span>
         </button>
+
+        {/* Small file badge for non-markdown files */}
+        {!entry.is_dir && kind && kind !== 'markdown' && (
+          <span className="text-[9px] font-mono uppercase px-1 py-0.5 rounded bg-ed-surface text-ed-fg-faint border border-ed-rule shrink-0">
+            {kind}
+          </span>
+        )}
 
         {entry.is_dir ? (
           <button

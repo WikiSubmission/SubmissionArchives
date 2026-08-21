@@ -680,3 +680,95 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ==========================================================================
+   Golden Player Inspired Sidebar & Explorer Styling
+   ========================================================================== */
+
+.st-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 14px 8px 14px;
+}
+
+.st-sidebar-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ed-fg-muted);
+  font-family: var(--font-sans);
+}
+
+.st-sidebar-count {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ed-fg-faint);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-sans);
+}
+
+.st-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  margin: 1px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ed-fg-secondary);
+  transition: all 0.15s cubic-bezier(0.2, 0, 0, 1);
+  position: relative;
+  text-align: left;
+  user-select: none;
+}
+
+.st-sidebar-item:hover {
+  background: var(--ed-surface);
+  color: var(--ed-fg);
+}
+
+.st-sidebar-item[data-active="true"] {
+  background: var(--ed-surface-raised);
+  color: var(--ed-fg);
+  font-weight: 600;
+  box-shadow: 0 1px 3px var(--ed-shadow), inset 0 0 0 1px var(--ed-rule-strong);
+}
+
+.st-active-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ed-accent);
+  box-shadow: 0 0 8px var(--ed-accent-glow);
+  flex-shrink: 0;
+}
+
+.st-badge-code {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: var(--ed-surface);
+  border: 1px solid var(--ed-rule);
+  color: var(--ed-fg-faint);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.st-sidebar-item:hover .st-badge-code {
+  color: var(--ed-fg-muted);
+  border-color: var(--ed-rule-strong);
+}
+
+.st-sidebar-item[data-active="true"] .st-badge-code {
+  background: var(--ed-accent-soft);
+  border-color: rgba(184, 98, 51, 0.35);
+  color: var(--ed-accent);
+}
+

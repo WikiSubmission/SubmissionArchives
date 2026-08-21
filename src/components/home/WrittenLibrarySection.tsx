@@ -21,6 +21,7 @@ interface WrittenWork {
     coverSrc: string;
     facsimilePageSrc: string;
     facsimilePageNo: string;
+    aspectRatio: string;
     ocrSample: {
         heading: string;
         text: string;
@@ -36,12 +37,13 @@ const FEATURED_WRITINGS: WrittenWork[] = [
         title: 'Quran: Visual Presentation of the Miracle',
         edition: 'Physical Mathematical Proofs',
         year: '1982',
-        pages: 260,
+        pages: 252,
         badge: 'Mathematical Miracle',
         publisher: 'Islamic Productions · Tucson',
         coverSrc: '/content/written/books/thumbnails/quran-visual-presentation.png',
         facsimilePageSrc: '/content/written/books/thumbnails/quran-visual-presentation.png',
-        facsimilePageNo: 'Chapter 1',
+        facsimilePageNo: 'Title Page & Ch 1',
+        aspectRatio: '2/3',
         ocrSample: {
             heading: 'Physical Verification of Sura 74:30',
             text: 'Every Quranic initial, word count, and verse arrangement is mathematically locked to the prime number 19.\n\nVisual tables and computer-verified counts prove that no human could have authored or preserved this intricate structural composition.',
@@ -55,12 +57,13 @@ const FEATURED_WRITINGS: WrittenWork[] = [
         title: 'Quran: The Final Scripture (1981)',
         edition: 'Authorized First Edition',
         year: '1981',
-        pages: 736,
+        pages: 554,
         badge: 'Authorized Translation',
         publisher: 'Islamic Productions · Tucson, Arizona',
         coverSrc: '/content/written/books/thumbnails/quran1981.png',
         facsimilePageSrc: '/content/written/books/thumbnails/quran1981.png',
-        facsimilePageNo: 'Page 1',
+        facsimilePageNo: 'Page 1 · Sura 1:1-7',
+        aspectRatio: '905/1397',
         ocrSample: {
             heading: 'Sura 1: The Key (Al-Fãtehah)',
             text: '1. In the name of God, Most Gracious, Most Merciful.\n2. Praise be to God, Lord of the universe.\n3. Most Gracious, Most Merciful.\n4. Master of the Day of Judgment.\n5. You alone we worship; You alone we ask for help.\n6. Guide us in the right path;\n7. the path of those whom You blessed; not of those who have incurred wrath, nor the strayers.',
@@ -74,14 +77,15 @@ const FEATURED_WRITINGS: WrittenWork[] = [
         title: 'Quran: The Final Testament (1989)',
         edition: 'Deluxe Authorized Edition with 38 Appendices',
         year: '1989',
-        pages: 760,
+        pages: 746,
         badge: 'Deluxe Testament',
         publisher: 'Universal Unity · Fremont, California',
         coverSrc: '/content/written/books/thumbnails/hard-cover-1989.png',
         facsimilePageSrc: '/content/written/books/thumbnails/hard-cover-1989.png',
-        facsimilePageNo: 'Preface',
+        facsimilePageNo: 'Introduction & Appendices',
+        aspectRatio: '984/1448',
         ocrSample: {
-            heading: 'Introduction: God\'s Message to the World',
+            heading: "Introduction: God's Message to the World",
             text: 'The Quran is the final scripture from the Creator of the universe. Unlike previous scriptures which were corrupted over time, God Himself pledged to preserve the Quran intact (15:9).\n\nIn this modern scientific era, God has revealed an intricate mathematical composition built into the very fabric of the Arabic text, proving beyond doubt its divine origin.',
             footnote: 'Verified against original 7th-century Tashkent and Topkapi manuscripts.',
         },
@@ -93,12 +97,13 @@ const FEATURED_WRITINGS: WrittenWork[] = [
         title: 'Quran, Hadith, and Islam',
         edition: 'Landmark Theological Treatise',
         year: '1982',
-        pages: 128,
+        pages: 92,
         badge: 'Theological Treatise',
         publisher: 'Islamic Productions · Tucson',
         coverSrc: '/content/written/books/thumbnails/quran-hadith-islam.png',
         facsimilePageSrc: '/content/written/books/thumbnails/quran-hadith-islam.png',
         facsimilePageNo: 'Chapter 1',
+        aspectRatio: '2/3',
         ocrSample: {
             heading: 'The Great Criterion: God Alone',
             text: 'Is the Quran complete, perfect, and fully detailed? Or do we need secondary human hearsay attributed centuries after the Prophet?\n\n"Shall I seek other than God as a lawmaker, when He has revealed to you this book fully detailed?" (6:114).\n\nTrue Islam is absolute devotion to God alone, without idols or fabricated human traditions.',
@@ -108,18 +113,19 @@ const FEATURED_WRITINGS: WrittenWork[] = [
     {
         id: 'miracle-alphabets',
         category: 'books',
-        title: 'Visual Presentation of the Miracle (Alphabets)',
+        title: 'Miracle of the Quran (Mysterious Alphabets)',
         edition: 'Comprehensive Graphic Monograph',
         year: '1982',
-        pages: 220,
+        pages: 216,
         badge: 'Mathematical Miracle',
         publisher: 'Islamic Productions · Tucson',
         coverSrc: '/content/written/books/thumbnails/miracle-of-quran-alphabets.png',
         facsimilePageSrc: '/content/written/books/thumbnails/miracle-of-quran-alphabets.png',
-        facsimilePageNo: 'Section 2',
+        facsimilePageNo: 'Chapter 19 Letter Analysis',
+        aspectRatio: '1046/1504',
         ocrSample: {
             heading: 'The Intricate Letter Counts of Sura Maryam (19)',
-            text: 'Sura 19 begins with the five initials K.H.Y.A.\'S. (Kaf, Ha, Ya, \'Ayn, Sad).\n\nThe total frequency of these five letters in this specific chapter adds up to exactly 798 (19 × 42).\n\nNo human could compose a meaningful theological chapter while maintaining such intricate physical constraints.',
+            text: "Sura 19 begins with the five initials K.H.Y.A.'S. (Kaf, Ha, Ya, 'Ayn, Sad).\n\nThe total frequency of these five letters in this specific chapter adds up to exactly 798 (19 × 42).\n\nNo human could compose a meaningful theological chapter while maintaining such intricate physical constraints.",
         },
         href: '/written',
     },
@@ -135,6 +141,7 @@ const FEATURED_WRITINGS: WrittenWork[] = [
         coverSrc: '/content/written/newsletters/thumbnails/1989_09_September.jpg',
         facsimilePageSrc: '/content/written/newsletters/thumbnails/1989_09_September.jpg',
         facsimilePageNo: 'Issue 57 · Page 1',
+        aspectRatio: '17/22',
         ocrSample: {
             heading: '1989 Annual Conference Highlights',
             text: 'Submitters from across North America, Europe, Africa, and Asia gathered in Tucson, Arizona for the landmark 1989 United Submitters International conference.\n\nKey presentations examined the global propagation of monotheism, local study groups, and the distribution of the authorized English translation.',
@@ -153,9 +160,48 @@ const FEATURED_WRITINGS: WrittenWork[] = [
         coverSrc: '/content/written/newsletters/thumbnails/1989_10_October.jpg',
         facsimilePageSrc: '/content/written/newsletters/thumbnails/1989_10_October.jpg',
         facsimilePageNo: 'Issue 58 · Page 1',
+        aspectRatio: '17/22',
         ocrSample: {
-            heading: 'The Pure Religion: Sura 39:3',
-            text: 'Absolute devotion is due to God alone. Those who set up idols beside Him say, "We idolize them only to bring us closer to God."\n\nGod will judge them regarding their disputes. God does not guide any liar, disbeliever.',
+            heading: 'The Mathematical Miracle & Pure Monotheism',
+            text: 'Detailed research articles explaining the structural safeguards of scripture and the importance of adhering to the practices of worship delivered through Abraham.',
+        },
+        href: '/written',
+    },
+    {
+        id: 'sp-1989-11',
+        category: 'newsletters',
+        title: 'Submitters Perspective — November 1989',
+        edition: 'Monthly Research Bulletin #59',
+        year: 'Nov 1989',
+        pages: 4,
+        badge: 'Monthly Bulletin',
+        publisher: 'Masjid Tucson Community',
+        coverSrc: '/content/written/newsletters/thumbnails/1989_11_November.jpg',
+        facsimilePageSrc: '/content/written/newsletters/thumbnails/1989_11_November.jpg',
+        facsimilePageNo: 'Issue 59 · Page 1',
+        aspectRatio: '17/22',
+        ocrSample: {
+            heading: 'Preservation of the Friday Prayer',
+            text: 'Scriptural analysis of the Friday congregational prayer (Salat al-Jumu‘ah), congregational unity, and historical continuity.',
+        },
+        href: '/written',
+    },
+    {
+        id: 'sp-1989-12',
+        category: 'newsletters',
+        title: 'Submitters Perspective — December 1989',
+        edition: 'Monthly Research Bulletin #60',
+        year: 'Dec 1989',
+        pages: 4,
+        badge: 'Monthly Bulletin',
+        publisher: 'Masjid Tucson Community',
+        coverSrc: '/content/written/newsletters/thumbnails/1989_12_December.jpg',
+        facsimilePageSrc: '/content/written/newsletters/thumbnails/1989_12_December.jpg',
+        facsimilePageNo: 'Issue 60 · Page 1',
+        aspectRatio: '17/22',
+        ocrSample: {
+            heading: 'Year-End Review & Propagation Milestones',
+            text: 'Summary of worldwide translation distribution, scripture indexing, and milestones achieved during the 1989 calendar year.',
         },
         href: '/written',
     },
@@ -289,15 +335,18 @@ export function WrittenLibrarySection() {
                         <div className="flex flex-col justify-between border-b border-ed-rule bg-ed-bg p-6 sm:p-8 lg:border-b-0 lg:border-r">
                             <div>
                                 {/* Uncropped Full Image Display with Aspect Containment */}
-                                <div className="relative mx-auto aspect-[3/4] w-48 overflow-hidden rounded-xl border border-ed-rule bg-ed-surface p-2 shadow-xl transition-transform duration-500 hover:scale-[1.02] sm:w-56">
+                                <div 
+                                    style={{ aspectRatio: activeWork.aspectRatio }}
+                                    className="relative mx-auto w-44 sm:w-52 overflow-hidden rounded-xl border border-ed-rule bg-ed-surface shadow-xl transition-transform duration-500 hover:scale-[1.02]"
+                                >
                                     <Image
                                         key={activeWork.coverSrc}
                                         src={activeWork.coverSrc}
                                         alt={activeWork.title}
                                         fill
                                         quality={90}
-                                        sizes="240px"
-                                        className="object-contain p-1 drop-shadow-md"
+                                        sizes="(min-width: 640px) 208px, 176px"
+                                        className="object-cover drop-shadow-md"
                                     />
                                 </div>
 
@@ -358,14 +407,17 @@ export function WrittenLibrarySection() {
                                             <span className="block font-sans text-xs font-semibold text-ed-accent mb-2">
                                                 Archival Facsimile Page
                                             </span>
-                                            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border border-ed-rule bg-ed-surface p-1">
+                                            <div 
+                                                style={{ aspectRatio: activeWork.aspectRatio }}
+                                                className="relative w-full max-w-[200px] mx-auto overflow-hidden rounded-lg border border-ed-rule bg-ed-surface shadow-sm"
+                                            >
                                                 <Image
                                                     src={activeWork.facsimilePageSrc}
                                                     alt="Facsimile page scan"
                                                     fill
                                                     quality={80}
                                                     sizes="200px"
-                                                    className="object-contain opacity-90 sepia-[0.1]"
+                                                    className="object-cover opacity-90 sepia-[0.1]"
                                                 />
                                             </div>
                                         </div>

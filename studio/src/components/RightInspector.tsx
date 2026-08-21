@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { TreeStructure, LinkSimple, Info, X, FileText, CaretRight, Quotes } from '@phosphor-icons/react'
+import { TreeStructure, LinkSimple, Info, X, FileText, Quotes } from '@phosphor-icons/react'
 import { scanArchive, type NoteRecord } from '../lib/notes'
 
 interface OutlineItem {
@@ -167,26 +167,32 @@ export default function RightInspector({
       </div>
 
       {/* Tab Content */}
-      <div className="flex-1 overflow-y-auto p-3 space-y-2">
+      <div className="flex-1 overflow-y-auto p-2.5 space-y-3 scrollbar-thin">
         {activeTab === 'outline' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-secondary mb-3 px-1">
-              Table of Contents ({headings.length})
+            <div className="st-sidebar-header">
+              <span className="st-sidebar-title">Contents</span>
+              <span className="st-sidebar-count">{headings.length} {headings.length === 1 ? 'topic' : 'topics'}</span>
             </div>
+
             {headings.length === 0 ? (
-              <div className="text-xs text-ed-fg-secondary italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-faint italic px-3 py-6 text-center">
                 No headings found in this note. Add # H1 or ## H2 to build an outline.
               </div>
             ) : (
-              <div className="space-y-1">
+              <div className="space-y-0.5 mt-1">
                 {headings.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-1.5 px-2 py-1 rounded-md text-xs text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface cursor-pointer transition-colors"
-                    style={{ paddingLeft: `${(item.level - 1) * 12 + 8}px` }}
+                    className="flex items-baseline gap-2.5 px-2.5 py-1.5 rounded-[6px] text-xs text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface cursor-pointer transition-all duration-150 group"
+                    style={{ paddingLeft: `${(item.level - 1) * 10 + 10}px` }}
                   >
-                    <CaretRight size={12} weight="bold" className="text-ed-fg-secondary shrink-0" />
-                    <span className="truncate font-medium">{item.text}</span>
+                    <span className="text-[10px] font-mono font-semibold text-ed-fg-faint group-hover:text-ed-accent transition-colors tabular-nums shrink-0 min-w-[24px]">
+                      H{item.level}
+                    </span>
+                    <span className="truncate font-medium text-[13px] text-ed-fg-secondary group-hover:text-ed-fg">
+                      {item.text}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -196,23 +202,25 @@ export default function RightInspector({
 
         {activeTab === 'backlinks' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-secondary mb-3 px-1">
-              Backlinks ({effectiveBacklinks.length})
+            <div className="st-sidebar-header">
+              <span className="st-sidebar-title">Backlinks</span>
+              <span className="st-sidebar-count">{effectiveBacklinks.length} linked</span>
             </div>
+
             {effectiveBacklinks.length === 0 ? (
-              <div className="text-xs text-ed-fg-secondary italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-faint italic px-3 py-6 text-center">
                 No notes currently link to this note via [[{filePath ? stemOf(filePath) : 'Note'}]].
               </div>
             ) : (
-              <div className="space-y-1">
+              <div className="space-y-1 mt-1">
                 {effectiveBacklinks.map((note) => (
                   <button
                     key={note.path}
                     onClick={() => onOpenFile(note.path)}
-                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-left text-xs bg-ed-surface hover:bg-ed-surface-strong border border-ed-rule text-ed-accent font-medium transition-all group"
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-[6px] text-left text-xs bg-ed-surface/70 hover:bg-ed-surface-raised border border-ed-rule hover:border-ed-rule-strong text-ed-fg transition-all group"
                   >
-                    <FileText size={14} weight="regular" className="text-ed-fg-secondary group-hover:text-ed-fg shrink-0" />
-                    <span className="truncate flex-1">{note.name}</span>
+                    <FileText size={14} weight="regular" className="text-ed-accent shrink-0" />
+                    <span className="truncate flex-1 font-medium text-[12px]">{note.name}</span>
                   </button>
                 ))}
               </div>
@@ -222,22 +230,28 @@ export default function RightInspector({
 
         {activeTab === 'footnotes' && (
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-ed-fg-secondary mb-3 px-1">
-              Footnotes ({footnotes.length})
+            <div className="st-sidebar-header">
+              <span className="st-sidebar-title">Footnotes</span>
+              <span className="st-sidebar-count">{footnotes.length} refs</span>
             </div>
+
             {footnotes.length === 0 ? (
-              <div className="text-xs text-ed-fg-secondary italic px-1 py-4 text-center">
+              <div className="text-xs text-ed-fg-faint italic px-3 py-6 text-center">
                 No footnotes in this note. Type [^1] to add inline footnote references.
               </div>
             ) : (
-              <div className="space-y-2">
+              <div className="space-y-1.5 mt-1">
                 {footnotes.map((fn) => (
                   <div
                     key={fn.id}
-                    className="p-2 rounded-lg bg-ed-surface border border-ed-rule text-xs text-ed-fg space-y-1"
+                    className="p-2.5 rounded-[6px] bg-ed-surface/60 border border-ed-rule text-xs space-y-1"
                   >
-                    <span className="font-bold text-ed-accent font-mono">[{fn.id}]</span>
-                    <p className="text-ed-fg-secondary line-clamp-3">{fn.text}</p>
+                    <div className="font-mono text-[10px] font-bold text-ed-accent">
+                      [^{fn.id}]
+                    </div>
+                    <p className="text-ed-fg-secondary text-[11px] leading-relaxed line-clamp-3">
+                      {fn.text}
+                    </p>
                   </div>
                 ))}
               </div>

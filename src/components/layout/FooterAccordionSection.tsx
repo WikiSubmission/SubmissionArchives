@@ -63,13 +63,13 @@ export function FooterAccordionSection({ section }: { section: FooterNavSection 
         <details ref={detailsRef} className="group border-b border-ed-rule sm:border-b-0" open>
             <summary
                 onClick={handleToggleClick}
-                className="flex cursor-pointer list-none items-center justify-between py-4 font-sans text-xs font-semibold text-ed-fg-muted sm:cursor-default sm:border-b sm:border-ed-rule sm:pb-3 sm:pt-0 [&::-webkit-details-marker]:hidden"
+                className="flex cursor-pointer list-none items-center justify-between py-2.5 font-sans text-xs font-semibold uppercase tracking-wider text-ed-fg sm:cursor-default sm:border-b sm:border-ed-rule sm:pb-2.5 sm:pt-0 [&::-webkit-details-marker]:hidden"
             >
                 {section.title}
-                <ChevronDown className="h-4 w-4 shrink-0 text-ed-fg-muted transition-transform duration-200 group-open:rotate-180 sm:hidden" aria-hidden="true" />
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted transition-transform duration-200 group-open:rotate-180 sm:hidden" aria-hidden="true" />
             </summary>
             <div ref={contentRef} className="overflow-hidden">
-                <ul className="pb-4 sm:mt-3.5 sm:pb-0 space-y-2">
+                <ul className="pb-2.5 sm:mt-2.5 sm:pb-0 space-y-1">
                     {section.links.map((link) => (
                         <li key={link.name}>
                             {link.href.startsWith('http') ? (
@@ -77,14 +77,14 @@ export function FooterAccordionSection({ section }: { section: FooterNavSection 
                                     href={link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex min-h-8 items-center text-sm text-ed-fg-muted transition-colors duration-150 hover:text-ed-fg"
+                                    className="inline-flex py-1 text-xs text-ed-fg-secondary transition-colors duration-150 hover:text-ed-fg"
                                 >
                                     {link.name}<span className="sr-only"> (opens in a new tab)</span>
                                 </a>
                             ) : (
                                 <Link
                                     href={link.href}
-                                    className="inline-flex min-h-8 items-center text-sm text-ed-fg-muted transition-colors duration-150 hover:text-ed-fg"
+                                    className="inline-flex py-1 text-xs text-ed-fg-secondary transition-colors duration-150 hover:text-ed-fg"
                                 >
                                     {link.name}
                                 </Link>

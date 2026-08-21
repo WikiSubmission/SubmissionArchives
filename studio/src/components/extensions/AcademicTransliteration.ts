@@ -52,8 +52,8 @@ export const AcademicTransliteration = Extension.create<AcademicTransliterationO
 
     if (this.options.autoExpandTerms !== false) {
       for (const [term, replacement] of Object.entries(TERM_MAP)) {
-        // Matches word boundary followed by the term and trailing space
-        const pattern = new RegExp(`\\b${term}\\s$`, 'i')
+        // Matches term after word boundary, not preceded by a slash command trigger '/' or '\'
+        const pattern = new RegExp(`(?<![/\\\\])\\b${term}\\s$`, 'i')
         rules.push(
           textInputRule({
             find: pattern,

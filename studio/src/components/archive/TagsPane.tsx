@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { CaretRight, CaretDown, Hash, Tag as TagIcon } from '@phosphor-icons/react'
+import { CaretRight, CaretDown, Hash } from '@phosphor-icons/react'
 import { scanArchive, type NoteRecord } from '../../lib/notes'
 import { motion, AnimatePresence, springConfig } from '../ui/Motion'
 
@@ -50,17 +50,15 @@ export default function TagsPane({ archivePath, onOpenFile, refreshToken }: Tags
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-4 shrink-0 border-b border-ed-rule">
-        <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ed-fg-secondary">
-          <TagIcon size={14} weight="bold" />
-          <span>Tags & Taxonomy</span>
-        </div>
+      <div className="st-sidebar-header border-b border-ed-rule/60">
+        <span className="st-sidebar-title">Tags & Taxonomy</span>
+        <span className="st-sidebar-count">{groups.length} {groups.length === 1 ? 'tag' : 'tags'}</span>
       </div>
 
       {error && <div className="px-4 py-2 text-xs text-ed-danger font-mono">{error}</div>}
       {groups.length === 0 && !error && (
-        <div className="px-4 py-8 text-xs text-ed-fg-secondary text-center">
-          No tags found yet. Type <code className="text-ed-accent font-mono">#tag</code> or <code className="text-ed-accent font-mono">#topic/subtopic</code> in your notes.
+        <div className="px-4 py-8 text-xs text-ed-fg-faint text-center italic">
+          No tags found yet. Type <code className="text-ed-accent font-mono">#tag</code> in your notes.
         </div>
       )}
 

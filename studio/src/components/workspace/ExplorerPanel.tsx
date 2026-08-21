@@ -1,3 +1,4 @@
+import { Folder, Tag, MagnifyingGlass, Trash } from '@phosphor-icons/react'
 import ArchiveExplorer from '../archive/ArchiveExplorer'
 import TagsPane from '../archive/TagsPane'
 import SearchPane from '../archive/SearchPane'
@@ -8,11 +9,11 @@ export type SidebarTab = 'files' | 'tags' | 'search' | 'trash'
 
 export const SIDEBAR_TABS: SidebarTab[] = ['files', 'tags', 'search', 'trash']
 
-const TAB_LABELS: Record<SidebarTab, string> = {
-  files: 'Files',
-  tags: 'Tags',
-  search: 'Search',
-  trash: 'Trash',
+const TAB_CONFIG: Record<SidebarTab, { label: string; icon: React.ElementType }> = {
+  files: { label: 'Files', icon: Folder },
+  tags: { label: 'Tags', icon: Tag },
+  search: { label: 'Search', icon: MagnifyingGlass },
+  trash: { label: 'Trash', icon: Trash },
 }
 
 interface ExplorerPanelProps {
@@ -38,27 +39,39 @@ export default function ExplorerPanel({
 }: ExplorerPanelProps) {
   return (
     <>
-      <div className="flex shrink-0 border-b border-ed-rule" role="tablist">
-        {SIDEBAR_TABS.map((tab) => (
-          <button
-            key={tab}
-            role="tab"
-            aria-selected={activeTab === tab}
-            onClick={() => onTabChange(tab)}
-            className={`relative flex-1 py-2 text-label uppercase transition-colors ${
-              activeTab === tab ? 'text-ed-fg' : 'text-ed-fg-secondary hover:text-ed-fg'
-            }`}
-          >
-            {activeTab === tab && (
-              <motion.span
-                layoutId="activeSidebarTabIndicator"
-                className="absolute inset-x-0 bottom-0 h-0.5 bg-ed-accent"
-                transition={springConfig}
-              />
-            )}
-            {TAB_LABELS[tab]}
-          </button>
-        ))}
+      {/* Segmented Top Tab Switcher */}
+      <div className="p-2 shrink-0 border-b border-ed-rule bg-ed-bg-secondary/70 backdrop-blur-sm" role="tablist">
+        <div className="flex items-center p-0.5 rounded-[7px] bg-ed-surface border border-ed-rule">
+          {SIDEBAR_TABS.map((tab) => {
+            const { label, icon: Icon } = TAB_CONFIG[tab]
+            const isActive = activeTab === tab
+            return (
+              <button
+                key={tab}
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => onTabChange(tab)}
+                className={`relative flex-1 flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-[5px] text-[11px] font-semibold tracking-wide transition-all duration-150 ${
+                  isActive
+                    ? 'text-ed-fg font-medium shadow-sm'
+                    : 'text-ed-fg-muted hover:text-ed-fg hover:bg-ed-surface-strong/50'
+                }`}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="activeSidebarTabPill"
+                    className="absolute inset-0 rounded-[5px] bg-ed-surface-raised border border-ed-rule-strong shadow-xs"
+                    transition={springConfig}
+                  />
+                )}
+                <span className="relative z-10 flex items-center gap-1.5">
+                  <Icon size={13} weight={isActive ? 'fill' : 'regular'} className={isActive ? 'text-ed-accent' : ''} />
+                  <span>{label}</span>
+                </span>
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       <div className="flex-1 overflow-hidden">

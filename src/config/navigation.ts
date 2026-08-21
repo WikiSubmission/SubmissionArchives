@@ -15,10 +15,10 @@ export const FOOTER_NAV = [
         title: 'Scripture',
         links: [
             { name: "The Qur'an", href: '/scripture/quran' },
-            { name: 'Appendices (38 Notes)', href: '/scripture/quran/appendices' },
-            { name: 'Old Testament (39 Books)', href: '/scripture/old-testament' },
-            { name: 'OT Apocrypha (15 Books)', href: '/scripture/old-testament/apocrypha' },
-            { name: 'New Testament (27 Books)', href: '/scripture/new-testament' },
+            { name: 'Appendices', href: '/scripture/quran/appendices' },
+            { name: 'Old Testament', href: '/scripture/old-testament' },
+            { name: 'OT Apocrypha', href: '/scripture/old-testament/apocrypha' },
+            { name: 'New Testament', href: '/scripture/new-testament' },
         ],
     },
     {
