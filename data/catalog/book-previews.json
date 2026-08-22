@@ -1,51 +1,862 @@
 {
-  "islam-volume-1-number-1-april-1974": {
-    "description": "This inaugural issue of the journal Islam presents a collection of scholarly articles and devotional excerpts intended to articulate an Islamic perspective on theology, history, and scripture. The contributors examine the historical and spiritual foundations of the faith, with a particular focus on the Qur’an as the ultimate reference for all religious inquiry. The volume includes an analysis of biblical prophecies concerning Muhammad, a defense against historical claims regarding the spread of Islam by force, and a discussion on the compatibility of Christian beliefs with Qur’anic teachings. Furthermore, the journal features linguistic commentary on the Qur’an, explorations of Sufi aphorisms and invocations, and a series of chronological conversion tables for the Islamic calendar. Throughout the text, the authors emphasize the unity of religious belief and the necessity of maintaining piety, while critiquing external interpretations of Islamic history and social practices.",
-    "pageCount": 89,
+  "computer-speaks": {
+    "description": "This work presents a series of mathematical analyses of the Quran, which the author argues provide physical, verifiable evidence of a divine code based on the number 19. He asserts that this numerical pattern confirms the Quran as a perfectly preserved message from God and serves as a proof of its authenticity. The text is organized into a series of \"physical facts,\" each detailing specific counts of alphabet letters, words, and chapter structures that align with multiples of 19. He presents these findings to demonstrate that the Quranic initials—mysterious letters prefixed to certain chapters—are not merely ornamental but are integral to a complex, divinely orchestrated system. The author further discusses the historical implications of these findings, including his calculations regarding the end of the world, and provides extensive appendices that address theological topics such as the nature of God, the role of the Prophet, and the relationship between the Quran and previous scriptures.",
+    "pageCount": 279,
     "toc": [
       {
-        "title": "The Bible’s Preview of Muhammad",
-        "page": 8
+        "title": "PROLOGUE",
+        "page": 5
       },
       {
-        "title": "The Qur’an and Christianity",
-        "page": 21
+        "title": "PHYSICAL FACT NO. (( 1 ))",
+        "page": 10
       },
       {
-        "title": "English Meanings of the Qur’an : 1",
-        "page": 44
+        "title": "FIRST QURANIC REVELATION CONSISTED OF << 19 >> WORDS",
+        "page": 11
       },
       {
-        "title": "Islam: Its Mission in the World 1. Unity of Religious Belief",
+        "title": "PHYSICAL FACT NO. (( 3 ))",
+        "page": 12
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 4 ))",
+        "page": 13
+      },
+      {
+        "title": "FIRST CHAPTER REVEALED",
+        "page": 16
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 6 ))",
+        "page": 19
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 10 ))",
+        "page": 26
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 11 ))",
+        "page": 27
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 13 ))",
+        "page": 41
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 14 ))",
+        "page": 55
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 15 ))",
         "page": 60
       },
       {
-        "title": "Islamic Concentrates: The Aphorisms of Salamah Al-Radi",
-        "page": 66
-      },
-      {
-        "title": "The Invocations of ‘Abdullah Ansari",
-        "page": 70
-      },
-      {
-        "title": "Index to the Qur’an",
+        "title": "PHYSICAL FACT NO. (( 16 ))",
         "page": 75
       },
       {
-        "title": "The Islamic Calendar Conversion Table",
-        "page": 81
+        "title": "PHYSICAL FACT NO. (( 17 ))",
+        "page": 85
+      },
+      {
+        "title": "PHYSICAL FACT NO. 18",
+        "page": 113
+      },
+      {
+        "title": "PHYSICAL FACT NO. 19",
+        "page": 119
+      },
+      {
+        "title": "PHYSICAL FACT NO. 20",
+        "page": 126
+      },
+      {
+        "title": "PHYSICAL FACT NO. 21",
+        "page": 140
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 27 )) THE QURANIC INITIALS ALIF (A), LAAM (L), RAA (R)",
+        "page": 161
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 28 ))",
+        "page": 174
+      },
+      {
+        "title": "PHYSICAL FACT NO. (( 29 ))",
+        "page": 176
+      },
+      {
+        "title": "PHYSICAL FACT NO. 30",
+        "page": 182
+      },
+      {
+        "title": "PHYSICAL FACT NO. 31",
+        "page": 185
+      },
+      {
+        "title": "SUMMARY AND CONCLUSIONS",
+        "page": 202
+      },
+      {
+        "title": "EPILOGUE",
+        "page": 205
+      },
+      {
+        "title": "LESSONS FROM QURAN",
+        "page": 215
+      },
+      {
+        "title": "APPENDIX I Secret Quranic Proof Unveiled: An Historical Landmark",
+        "page": 217
+      },
+      {
+        "title": "APPENDIX 2: We Made the Quran Easy to Memorize",
+        "page": 230
+      },
+      {
+        "title": "APPENDIX 3: Why was the Quran Revealed in Arabic?",
+        "page": 232
+      },
+      {
+        "title": "APPENDIX 4 Heaven and Hell",
+        "page": 234
+      },
+      {
+        "title": "APPENDIX 5 Greatness of God",
+        "page": 235
+      },
+      {
+        "title": "APPENDIX 6 Why Were We Created?",
+        "page": 236
+      },
+      {
+        "title": "APPENDIX 7: The Myth of Intercession",
+        "page": 238
+      },
+      {
+        "title": "APPENDIX 8 - Abraham: Founder of Islam",
+        "page": 239
+      },
+      {
+        "title": "APPENDIX 10 The Day of Resurrection",
+        "page": 241
+      },
+      {
+        "title": "APPENDIX 11 Role of the Prophet",
+        "page": 245
+      },
+      {
+        "title": "APPENDIX 12 Predestination",
+        "page": 249
+      },
+      {
+        "title": "APPENDIX 13 Dietary Prohibitions",
+        "page": 250
+      },
+      {
+        "title": "APPENDIX 14 - Death",
+        "page": 251
+      },
+      {
+        "title": "APPENDIX 15 Quran: All You Need",
+        "page": 252
+      },
+      {
+        "title": "APPENDIX 16: Hadith and the Quran's Secret Code",
+        "page": 253
+      },
+      {
+        "title": "APPENDIX 17 Quran: Unlike Any Other Book",
+        "page": 255
+      },
+      {
+        "title": "APPENDIX 18 - Satan: Fallen Angel",
+        "page": 256
+      },
+      {
+        "title": "APPENDIX 19 The Bible's Preview of Muhammad",
+        "page": 258
       }
     ],
     "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 8,
-      "droppedUnverifiable": 1
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 44,
+      "droppedUnverifiable": 0
+    }
+  },
+  "english-meanings-of-the-quran": {
+    "description": "This text provides an English translation and theological commentary on selected portions of the Quran, specifically focusing on Sura Al-Fatihah and the opening verses of Sura Al-Baqarah. The author, Rashad Khalifa, presents his work as the first English rendering of the Quranic meanings by a Muslim Arab, intended to clarify fundamental Islamic principles for a contemporary audience. He argues that the Quran possesses a unique linguistic efficiency and a mathematical structure that serves as evidence of its divine origin. Through a combination of verse-by-verse translation and analytical commentary, he explores themes such as the nature of God, the necessity of belief in the hereafter, and the importance of daily prayer. The author further incorporates findings from computerized studies of the text, claiming that the frequency of specific letters and the arrangement of suras demonstrate a divinely ordained system that transcends human capability.",
+    "pageCount": 16,
+    "toc": [
+      {
+        "title": "English Meanings of the Qur'an : 1",
+        "page": 1
+      },
+      {
+        "title": "Surah Al-Fatihah",
+        "page": 2
+      },
+      {
+        "title": "COMMENTARY",
+        "page": 5
+      },
+      {
+        "title": "Sura Al-Baqarah (The Heifer) 2:1-29",
+        "page": 6
+      },
+      {
+        "title": "Surah Al-Baqarah",
+        "page": 7
+      },
+      {
+        "title": "Sura Al-Baqarah (2)",
+        "page": 13
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 6,
+      "droppedUnverifiable": 0
+    }
+  },
+  "eternity-screenplay": {
+    "description": "This screenplay by Dr. Rashad Khalifa explores a complex narrative spanning human history, theology, and science fiction. The plot begins in 1985 with the discovery of a time capsule containing a mathematical code, which leads to the identification of a lost will belonging to a pioneer named Barclay Leland Stamford. As the narrative progresses, the focus shifts to a futuristic space odyssey aboard the spacecraft Eternity, commanded by Virgil Moss. The crew, accompanied by advanced robots, travels through hyperspace and encounters celestial entities, including angels and Satan. The author presents a theological framework in which he argues that God created seven universes and that humanity is undergoing a probationary test on Earth. The screenplay interweaves these cosmic events with scenes of human suffering, religious conflict, and political tension on Earth, ultimately suggesting a struggle between divine protection and satanic influence.",
+    "pageCount": 94,
+    "toc": [
+      {
+        "title": "ETERNITY - Screenplay",
+        "page": 1
+      },
+      {
+        "title": "Page 1 - ETERNITY",
+        "page": 4
+      },
+      {
+        "title": "Page 7 - ETERNITY",
+        "page": 10
+      },
+      {
+        "title": "Page 22 - ETERNITY",
+        "page": 25
+      },
+      {
+        "title": "Page 42 - ETERNITY",
+        "page": 45
+      },
+      {
+        "title": "Page 67 - ETERNITY",
+        "page": 70
+      },
+      {
+        "title": "Page 89 - ETERNITY",
+        "page": 92
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 7,
+      "droppedUnverifiable": 0
+    }
+  },
+  "islam-volume-1-number-1-april-1974": {
+    "description": "This inaugural issue of the journal Islam presents a collection of scholarly articles and devotional excerpts intended to articulate an Islamic perspective on theology, history, and scripture. The contributors examine the historical and spiritual foundations of the faith, with a particular focus on the Qur’an as the ultimate reference for all religious inquiry. The volume includes an analysis of biblical prophecies concerning Muhammad, a defense against historical claims regarding the spread of Islam by force, and a discussion on the compatibility of Christian beliefs with Qur’anic teachings. Furthermore, the journal features linguistic commentary on the Qur’an, explorations of Sufi aphorisms and invocations, and a series of chronological conversion tables for the Islamic calendar. Throughout the text, the authors emphasize the unity of religious belief and the necessity of maintaining piety, while critiquing external interpretations of Islamic history and social practices.",
+    "pageCount": 90,
+    "toc": [
+      {
+        "title": "The Bible's Preview of Muhammad",
+        "page": 8
+      },
+      {
+        "title": "The Qur'an and Christianity",
+        "page": 22
+      },
+      {
+        "title": "ISLAM: Was It Spread by the Sword?",
+        "page": 35
+      },
+      {
+        "title": "English Meanings of the Qur'an : 1",
+        "page": 46
+      },
+      {
+        "title": "Islam: Its Mission in the World",
+        "page": 63
+      },
+      {
+        "title": "THE APHORISMS OF SALĀMAH AL-RĀḌI",
+        "page": 69
+      },
+      {
+        "title": "The Invocations of ‘Abdullāh Anṣārī : 1",
+        "page": 70
+      },
+      {
+        "title": "Index to the Qur'an: 1",
+        "page": 74
+      },
+      {
+        "title": "The Islamic Calendar Conversion Table : 1",
+        "page": 80
+      },
+      {
+        "title": "Book Review",
+        "page": 84
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 10,
+      "droppedUnverifiable": 0
+    }
+  },
+  "islam-volume-1-number-2-july-1974": {
+    "description": "This issue of the journal Islam serves as an international platform for theological discourse, focusing on the preservation and interpretation of the Qur'an. The publication features articles that examine the mission of Islam in the modern world, emphasizing the necessity of reconciling religious sentiment with reason. Dr. Rashad Khalifa presents a series of mathematical analyses of the Qur'anic initials, arguing that these patterns provide empirical evidence of the text's divine preservation. Other contributors explore the Islamic perspective on racial equality, the historical origins of Islamic jurisprudence, and the spiritual insights found in Sufi aphorisms and invocations. The volume also includes a translation of the second chapter of the Qur'an, a guide to the Islamic calendar, and a critical review of contemporary apocalyptic literature, all presented within the framework of promoting a unified understanding of God's message to humanity.",
+    "pageCount": 92,
+    "toc": [
+      {
+        "title": "Islam: Its Mission in the World",
+        "page": 8
+      },
+      {
+        "title": "God's Message to Humanity: The Ultimate Proof of Authenticity",
+        "page": 14
+      },
+      {
+        "title": "Race, Racism and Islam",
+        "page": 29
+      },
+      {
+        "title": "English Meanings of the Qur'an : 2",
+        "page": 43
+      },
+      {
+        "title": "The Origin of Islamic Jurisprudence",
+        "page": 61
+      },
+      {
+        "title": "Islamic Concentrates: The Aphorisms of Salāmah Al-Rāḍī : 2",
+        "page": 65
+      },
+      {
+        "title": "The Invocations of 'Abdullāh Anṣārī : 2",
+        "page": 68
+      },
+      {
+        "title": "Index to the Qur'an : 2",
+        "page": 74
+      },
+      {
+        "title": "The Islamic Calendar Conversion Table : 2",
+        "page": 78
+      },
+      {
+        "title": "Book Review",
+        "page": 83
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 10,
+      "droppedUnverifiable": 0
+    }
+  },
+  "islam-volume-1-number-3-4-january-1975": {
+    "description": "This issue of the journal ISLAM serves as a platform for diverse scholarly and theological contributions aimed at articulating an Islamic perspective on contemporary and historical issues. The volume is organized into a series of thematic articles, followed by a section titled Islamic Concentrates, which offers aphorisms, invocations, and reference tools. Dr. Rashad Khalifa presents arguments regarding the mathematical design of the Qur'an, while other contributors examine the historical authenticity of the Gospel of Barnabas, the status of Jerusalem in Islamic thought, and the political implications of the Third International Theory. The volume also includes a critical analysis of the falsification of Hadith, in which Muhammad 'Ajjaj Al-Khatib argues that political and sectarian divisions historically motivated the fabrication of traditions. The journal concludes with educational resources, including an index to the Qur'an and a calendar conversion table, intended to support the study of Islamic texts.",
+    "pageCount": 139,
+    "toc": [
+      {
+        "title": "ERRATUM God’s Message to Humanity: The Ultimate Proof of Authenticity",
+        "page": 7
+      },
+      {
+        "title": "THE ITALIAN \"BARNABAS\"",
+        "page": 8
+      },
+      {
+        "title": "The Muslims and Jerusalem",
+        "page": 15
+      },
+      {
+        "title": "Islam & The Third International Theory",
+        "page": 18
+      },
+      {
+        "title": "Propagation of Islam: The Basic Principles",
+        "page": 26
+      },
+      {
+        "title": "ISLAM: Its Mission in the World",
+        "page": 34
+      },
+      {
+        "title": "The Falsification of Hadith: History and Development",
+        "page": 40
+      },
+      {
+        "title": "English Meanings of the Qur'an : 3",
+        "page": 86
+      },
+      {
+        "title": "1395/1975: An Historical Year",
+        "page": 103
+      },
+      {
+        "title": "The Aphorisms of Salāmah Al-Rāḍī: 3",
+        "page": 107
+      },
+      {
+        "title": "The Invocations of ʿAbdullāh Anṣārī : 3",
+        "page": 113
+      },
+      {
+        "title": "Index to the Qur'an : 3",
+        "page": 119
+      },
+      {
+        "title": "The Islamic Calendar Conversion Table : 3",
+        "page": 127
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 13,
+      "droppedUnverifiable": 0
+    }
+  },
+  "miracle-of-quran-alphabets": {
+    "description": "This study investigates the significance of the mysterious alphabets, or Qur'anic initials, that prefix twenty-nine chapters of the Qur'an. The author presents a mathematical analysis of these letters, arguing that their frequency and distribution within the text demonstrate a divine, non-human origin for the scripture. He details a four-year research project utilizing computer-aided calculations to determine the absolute frequency, percentage, and per-verse occurrence of these initials across all 114 suras. The work is organized by specific initial sets, with each chapter dedicated to the statistical results of a particular letter or combination, such as Qaf, Nun, Sad, and various multi-letter groupings. He presents evidence suggesting that these initials correlate with the chronological and recorded sequences of the suras, asserting that the mathematical balance observed is beyond the capacity of any human author. The text concludes by framing these findings as a perpetual, verifiable miracle intended to provide scientific reassurance to believers and skeptics alike.",
+    "pageCount": 216,
+    "toc": [
+      {
+        "title": "About the Author",
+        "page": 9
+      },
+      {
+        "title": "Introduction",
+        "page": 12
+      },
+      {
+        "title": "Prologue",
+        "page": 17
+      },
+      {
+        "title": "Chapter 1: Prerequisite Information About The Qur'an",
+        "page": 22
+      },
+      {
+        "title": "Chapter 2: The Qur'anic Initials",
+        "page": 33
+      },
+      {
+        "title": "Chapter 3: Review of the Literature",
+        "page": 37
+      },
+      {
+        "title": "Chapter 4: Development of this Research",
+        "page": 45
+      },
+      {
+        "title": "Chapter 5: Methods of Calculation",
+        "page": 47
+      },
+      {
+        "title": "Chapter 6 RESULTS, OBSERVATIONS, AND DISCUSSION",
+        "page": 74
+      },
+      {
+        "title": "Chapter 7 SUMMARY AND CONCLUSION",
+        "page": 197
+      },
+      {
+        "title": "Addendum",
+        "page": 209
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 11,
+      "droppedUnverifiable": 0
+    }
+  },
+  "perpetual-miracle": {
+    "description": "This text presents a theological argument for the divine origin of the Qur'an based on a mathematical system centered on the number 19. The author posits that the Qur'an contains a perpetual miracle, manifested through a complex numerical structure that remains consistent across the entire text. He argues that the basmala, the opening verse of the Qur'an, serves as the key to this system, as its letter count and the frequency of its constituent words throughout the scripture are multiples of 19. He further contends that this mathematical design extends to the mysterious initials found at the beginning of certain suras, suggesting that their specific distribution and frequency provide empirical, verifiable proof of the text's preservation and authorship by God. The author asserts that these findings are physical facts, independent of linguistic interpretation, and intended for all of humanity.",
+    "pageCount": 16,
+    "toc": [
+      {
+        "title": "THE PERPETUAL MIRACLE OF MUHAMMAD (peace be upon him)",
+        "page": 1
+      },
+      {
+        "title": "If all the humans and all jinn",
+        "page": 2
+      },
+      {
+        "title": "None of us witnessed Moses when he turned his staff into a serpent",
+        "page": 3
+      },
+      {
+        "title": "as Pharaoh, the magicians, and the Israelites witnessed the miracles of Moses",
+        "page": 4
+      },
+      {
+        "title": "Abdul-Baqi, and published by the People's Press",
+        "page": 5
+      },
+      {
+        "title": "This is of course what all the non-Muslims claim",
+        "page": 6
+      },
+      {
+        "title": "THE ONLY POSSIBLE EXPLANATION LEFT is that a SUPER BEING did write the Qur'an",
+        "page": 7
+      },
+      {
+        "title": "person will have the number 19 imposed on him",
+        "page": 8
+      },
+      {
+        "title": "A historical fact that supports the identification of the number 19",
+        "page": 9
+      },
+      {
+        "title": "overwhelming. Thus, the greater portion of this physical, touchable, examinable",
+        "page": 10
+      },
+      {
+        "title": "WHO WOULD KNOW THE ONLY SURAS WHICH CONTAIN EQUAL NUMBERS OF THE LETTER QAF",
+        "page": 11
+      },
+      {
+        "title": "beginning of the only 2 suras which contain 57 Qafs each",
+        "page": 12
+      },
+      {
+        "title": "Moving on the other Qur’anic initials, let us look at the letter Nun",
+        "page": 13
+      },
+      {
+        "title": "Thus, every generation of human beings will receive and witness Muhammad's perpetual miracle",
+        "page": 14
+      },
+      {
+        "title": "this interlocking system, and see how it is complete beyond human ability",
+        "page": 15
+      },
+      {
+        "title": "THE QUR'AN MUHAMMAD'S PERPETUAL MIRACLE",
+        "page": 16
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 16,
+      "droppedUnverifiable": 0
+    }
+  },
+  "quran-hadith-islam": {
+    "description": "This work presents a theological argument for the doctrine of Quran-alone Islam, asserting that the Quran is the complete, perfect, and sole source of religious guidance for Muslims. The author contends that the reliance on Hadith and Sunna—traditions attributed to the Prophet Muhammad—constitutes a form of idolatry and a direct violation of divine commandments. He argues that Muhammad was strictly forbidden from uttering any religious instructions outside of the Quranic revelation and that the prophet's role was limited to the delivery of the scripture. The text is organized into short, thematic sections that combine Quranic citations with the author's commentary, emphasizing that historical religious practices, such as Salat and Hajj, were established through Abraham rather than through the later traditions of Hadith. The author further presents numerical evidence based on the number 19 to support his claims regarding the Quran's divine preservation and structural integrity, ultimately calling for a return to monotheistic worship centered exclusively on the Quran.",
+    "pageCount": 92,
+    "toc": [
+      {
+        "title": "PREFACE",
+        "page": 3
+      },
+      {
+        "title": "NO SALVATION WITHOUT OBEYING THE MESSENGER",
+        "page": 4
+      },
+      {
+        "title": "MUHAMMAD REPRESENTED BY QURAN ALONE",
+        "page": 6
+      },
+      {
+        "title": "MUHAMMAD FORBIDDEN FROM UTTERING ANY RELIGIOUS INSTRUCTIONS OTHER THAN QURAN",
+        "page": 7
+      },
+      {
+        "title": "ONE GOD / ONE SOURCE",
+        "page": 10
+      },
+      {
+        "title": "QURAN: AN EXTRAORDINARY BOOK",
+        "page": 12
+      },
+      {
+        "title": "THE CONSEQUENCE OF NOT BELIEVING GOD",
+        "page": 14
+      },
+      {
+        "title": "IMPORTANT CRITERION OF DIVINE REVELATION",
+        "page": 15
+      },
+      {
+        "title": "OBEYING THE MESSENGER IS CONDITIONED",
+        "page": 17
+      },
+      {
+        "title": "THE IDOLIZATION OF MUHAMMAD",
+        "page": 21
+      },
+      {
+        "title": "DOES GOD HATE MUHAMMAD ???",
+        "page": 26
+      },
+      {
+        "title": "THE MYTH OF INTERCESSION",
+        "page": 30
+      },
+      {
+        "title": "THE DEIFICATION OF MUHAMMAD",
+        "page": 31
+      },
+      {
+        "title": "SOLE FUNCTION OF THE PROPHET: DELIVER QURAN",
+        "page": 35
+      },
+      {
+        "title": "THE FOLLOWERS OF HADITH & SUNNA DO NOT FOLLOW THEIR OWN TEACHINGS",
+        "page": 37
+      },
+      {
+        "title": "ISLAM IS THE RELIGION OF ABRAHAM",
+        "page": 42
+      },
+      {
+        "title": "ALL RELIGIOUS PRACTICES IN ISLAM (SALAT ZAKAT FASTING HAJJ) CAME TO US THROUGH ABRAHAM",
+        "page": 48
+      },
+      {
+        "title": "QURAN: THE ONLY LEGITIMATE \"HADITH\"",
+        "page": 60
+      },
+      {
+        "title": "THE PHYSICAL EVIDENCE",
+        "page": 62
+      },
+      {
+        "title": "QURAN: ONLY SOURCE OF GUIDANCE (6: 19)",
+        "page": 67
+      },
+      {
+        "title": "QURAN CONTAINS ALL THE EXAMPLES WE NEED",
+        "page": 73
+      },
+      {
+        "title": "HADITH & SUNNA vs GOD'S LAW",
+        "page": 84
+      },
+      {
+        "title": "THE GREAT DISASTER",
+        "page": 88
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 23,
+      "droppedUnverifiable": 0
+    }
+  },
+  "quran-visual-presentation": {
+    "description": "This work presents a mathematical analysis of the Quran, arguing that a hidden numerical code based on the number 19 serves as physical evidence of its divine origin. The author contends that this secret remained concealed for 1,400 years until its unveiling through modern computation. He presents a series of fifty-two physical facts, detailing how the frequency of specific letters, words, and verse counts across various chapters consistently align with multiples of 19. He argues that this pattern extends to the Quranic initials, the opening statement, and the distribution of divine names. The text is organized as a catalog of these mathematical observations, providing lists of chapter and verse occurrences to support his claims regarding the structural integrity and miraculous nature of the scripture.",
+    "pageCount": 252,
+    "toc": [
+      {
+        "title": "PREFACE",
+        "page": 3
+      },
+      {
+        "title": "INTRODUCTION",
+        "page": 5
+      },
+      {
+        "title": "THE SECRET REMAINED HIDDEN FOR 1400 YEARS",
+        "page": 9
+      },
+      {
+        "title": "Chapter 74 (The Hidden Secret)",
+        "page": 10
+      },
+      {
+        "title": "Verse 74:31 gives five objectives for the number 19",
+        "page": 11
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (1)",
+        "page": 13
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (2)",
+        "page": 14
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (3)",
+        "page": 15
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (4)",
+        "page": 16
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (5)",
+        "page": 17
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (6)",
+        "page": 18
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (7)",
+        "page": 20
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (8)",
+        "page": 21
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (9)",
+        "page": 22
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (10)",
+        "page": 23
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (11)",
+        "page": 24
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (12)",
+        "page": 25
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (13)",
+        "page": 26
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (14)",
+        "page": 27
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (15)",
+        "page": 28
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (16)",
+        "page": 29
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (17)",
+        "page": 30
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (18)",
+        "page": 31
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (19)",
+        "page": 32
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (20)",
+        "page": 33
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (21)",
+        "page": 36
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (22)",
+        "page": 40
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (23)",
+        "page": 46
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (24)",
+        "page": 50
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (25)",
+        "page": 56
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (26)",
+        "page": 62
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (27)",
+        "page": 88
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (28)",
+        "page": 94
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (29)",
+        "page": 102
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (30)",
+        "page": 122
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (31)",
+        "page": 130
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (32)",
+        "page": 138
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (33)",
+        "page": 186
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (34)",
+        "page": 202
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (35)",
+        "page": 226
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (36)",
+        "page": 232
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (37)",
+        "page": 236
+      },
+      {
+        "title": "PHYSICAL FACT NUMBER (38)",
+        "page": 238
+      },
+      {
+        "title": "SUMMARY & CONCLUSIONS",
+        "page": 249
+      }
+    ],
+    "generated": {
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 44,
+      "droppedUnverifiable": 0
     }
   },
   "salat-booklet": {
     "description": "Rashad Khalifa presents a guide to the daily Contact Prayers, or Salat, arguing that these practices originate from the religion of Abraham as established in the Quran. He asserts that modern Islamic traditions have deviated from the original divine instructions and seeks to restore the correct methodology through a step-by-step manual. The text details the necessary preparations, including the Azaan and the ritual ablution, before outlining the physical movements and recitations required for each prayer unit. Khalifa emphasizes the importance of the opening chapter of the Quran, known as The Key, as a unifying recitation for all believers. The work further explains the variations in prayer units for different times of the day, the protocols for group and congregational worship, and the specific requirements for the Friday prayer.",
     "pageCount": 8,
     "toc": [
+      {
+        "title": "The Contact Prayers",
+        "page": 1
+      },
+      {
+        "title": "Abraham: Original Source of the Contact Prayers",
+        "page": 2
+      },
       {
         "title": "The Correct Azaan",
         "page": 3
@@ -59,7 +870,7 @@
         "page": 4
       },
       {
-        "title": "Reciting “The Key”",
+        "title": "Reciting \"The Key\"",
         "page": 5
       },
       {
@@ -67,1773 +878,18 @@
         "page": 6
       },
       {
-        "title": "The Sitting Position",
-        "page": 6
-      },
-      {
-        "title": "The Noon Prayer",
-        "page": 7
-      },
-      {
-        "title": "The Afternoon Prayer",
+        "title": "The Daily Prayers (Dawn, Noon, Afternoon, Sunset, Night)",
         "page": 7
       },
       {
         "title": "The Group Prayer",
         "page": 8
-      },
-      {
-        "title": "The Friday Prayer",
-        "page": 8
       }
     ],
     "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 10,
-      "droppedUnverifiable": 1
-    }
-  },
-  "computer-speaks": {
-    "description": "This work presents a series of mathematical analyses of the Quran, which the author argues provide physical, verifiable evidence of a divine code based on the number 19. He asserts that this numerical pattern confirms the Quran as a perfectly preserved message from God and serves as a proof of its authenticity. The text is organized into a series of \"physical facts,\" each detailing specific counts of alphabet letters, words, and chapter structures that align with multiples of 19. He presents these findings to demonstrate that the Quranic initials—mysterious letters prefixed to certain chapters—are not merely ornamental but are integral to a complex, divinely orchestrated system. The author further discusses the historical implications of these findings, including his calculations regarding the end of the world, and provides extensive appendices that address theological topics such as the nature of God, the role of the Prophet, and the relationship between the Quran and previous scriptures.",
-    "pageCount": 270,
-    "toc": [
-      {
-        "title": "PROLOGUE",
-        "page": 5
-      },
-      {
-        "title": "PAGE 58",
-        "page": 9
-      },
-      {
-        "title": "PAGE 90",
-        "page": 13
-      },
-      {
-        "title": "PAGE 10",
-        "page": 14
-      },
-      {
-        "title": "PAGE 11",
-        "page": 15
-      },
-      {
-        "title": "PAGE 12",
-        "page": 16
-      },
-      {
-        "title": "PAGE 13",
-        "page": 17
-      },
-      {
-        "title": "PAGE 14",
-        "page": 18
-      },
-      {
-        "title": "PAGE 148",
-        "page": 18
-      },
-      {
-        "title": "PAGE 15",
-        "page": 19
-      },
-      {
-        "title": "PAGE 123",
-        "page": 19
-      },
-      {
-        "title": "PAGE 16",
-        "page": 20
-      },
-      {
-        "title": "PAGE 19",
-        "page": 23
-      },
-      {
-        "title": "PAGE 20",
-        "page": 24
-      },
-      {
-        "title": "PAGE 21",
-        "page": 25
-      },
-      {
-        "title": "PAGE 22",
-        "page": 26
-      },
-      {
-        "title": "PAGE 23",
-        "page": 27
-      },
-      {
-        "title": "PAGE 24",
-        "page": 28
-      },
-      {
-        "title": "PAGE 25",
-        "page": 29
-      },
-      {
-        "title": "PAGE 26",
-        "page": 30
-      },
-      {
-        "title": "PAGE 29",
-        "page": 33
-      },
-      {
-        "title": "PAGE 36",
-        "page": 34
-      },
-      {
-        "title": "PAGE 31",
-        "page": 35
-      },
-      {
-        "title": "PAGE 32",
-        "page": 36
-      },
-      {
-        "title": "PAGE 17",
-        "page": 38
-      },
-      {
-        "title": "PAGE 18",
-        "page": 38
-      },
-      {
-        "title": "PAGE 35",
-        "page": 39
-      },
-      {
-        "title": "PAGE 39",
-        "page": 43
-      },
-      {
-        "title": "PAGE 40",
-        "page": 44
-      },
-      {
-        "title": "PAGE 41",
-        "page": 45
-      },
-      {
-        "title": "PAGE 42",
-        "page": 46
-      },
-      {
-        "title": "PAGE 43",
-        "page": 47
-      },
-      {
-        "title": "PAGE 27",
-        "page": 48
-      },
-      {
-        "title": "PAGE 44",
-        "page": 48
-      },
-      {
-        "title": "PAGE 28",
-        "page": 49
-      },
-      {
-        "title": "PAGE 45",
-        "page": 49
-      },
-      {
-        "title": "PAGE 46",
-        "page": 50
-      },
-      {
-        "title": "PAGE 38",
-        "page": 51
-      },
-      {
-        "title": "PAGE 83",
-        "page": 52
-      },
-      {
-        "title": "PAGE 49",
-        "page": 53
-      },
-      {
-        "title": "PAGE 33",
-        "page": 54
-      },
-      {
-        "title": "PAGE 34",
-        "page": 55
-      },
-      {
-        "title": "PAGE 51",
-        "page": 55
-      },
-      {
-        "title": "PAGE 52",
-        "page": 56
-      },
-      {
-        "title": "PAGE 37",
-        "page": 57
-      },
-      {
-        "title": "PAGE 53",
-        "page": 57
-      },
-      {
-        "title": "PAGE 54",
-        "page": 58
-      },
-      {
-        "title": "PAGE 55",
-        "page": 59
-      },
-      {
-        "title": "PAGE 56",
-        "page": 60
-      },
-      {
-        "title": "PAGE 48",
-        "page": 61
-      },
-      {
-        "title": "PAGE 59",
-        "page": 63
-      },
-      {
-        "title": "PAGE 60",
-        "page": 64
-      },
-      {
-        "title": "PAGE 61",
-        "page": 65
-      },
-      {
-        "title": "PAGE 62",
-        "page": 66
-      },
-      {
-        "title": "PAGE 63",
-        "page": 67
-      },
-      {
-        "title": "PAGE 47",
-        "page": 68
-      },
-      {
-        "title": "PAGE 64",
-        "page": 68
-      },
-      {
-        "title": "PAGE 65",
-        "page": 69
-      },
-      {
-        "title": "PAGE 66",
-        "page": 70
-      },
-      {
-        "title": "PAGE 85",
-        "page": 72
-      },
-      {
-        "title": "PAGE 57",
-        "page": 78
-      },
-      {
-        "title": "PAGE 67",
-        "page": 88
-      },
-      {
-        "title": "PAGE 68",
-        "page": 88
-      },
-      {
-        "title": "CONCLUSION AND COMMENTS ON PHYSICAL FACTS 9, 10, 11, & 12",
-        "page": 95
-      },
-      {
-        "title": "PAGE 92",
-        "page": 96
-      },
-      {
-        "title": "PAGE 93",
-        "page": 97
-      },
-      {
-        "title": "PAGE 94",
-        "page": 98
-      },
-      {
-        "title": "PAGE 95",
-        "page": 99
-      },
-      {
-        "title": "PAGE 96",
-        "page": 100
-      },
-      {
-        "title": "PAGE 99",
-        "page": 103
-      },
-      {
-        "title": "PAGE 161",
-        "page": 105
-      },
-      {
-        "title": "PAGE 102",
-        "page": 106
-      },
-      {
-        "title": "PAGE 103",
-        "page": 107
-      },
-      {
-        "title": "EPILOGUE",
-        "page": 107
-      },
-      {
-        "title": "THE QURANIC INITIALS",
-        "page": 108
-      },
-      {
-        "title": "THE QURANIC INITIALS <CONT’D>",
-        "page": 109
-      },
-      {
-        "title": "PAGE 168",
-        "page": 112
-      },
-      {
-        "title": "PAGE 118",
-        "page": 114
-      },
-      {
-        "title": "TABLE 12",
-        "page": 117
-      },
-      {
-        "title": "TABLE 12 (Continued)",
-        "page": 118
-      },
-      {
-        "title": "PAGE 115",
-        "page": 119
-      },
-      {
-        "title": "PAGE 116",
-        "page": 119
-      },
-      {
-        "title": "PAGE 117",
-        "page": 121
-      },
-      {
-        "title": "PAGE 119",
-        "page": 123
-      },
-      {
-        "title": "PAGE 97",
-        "page": 124
-      },
-      {
-        "title": "PAGE 120",
-        "page": 124
-      },
-      {
-        "title": "PAGE 121",
-        "page": 125
-      },
-      {
-        "title": "PAGE 122",
-        "page": 126
-      },
-      {
-        "title": "PAGE 124",
-        "page": 128
-      },
-      {
-        "title": "PAGE 125",
-        "page": 129
-      },
-      {
-        "title": "PAGE 126",
-        "page": 130
-      },
-      {
-        "title": "PAGE 127",
-        "page": 131
-      },
-      {
-        "title": "PAGE 138",
-        "page": 131
-      },
-      {
-        "title": "PAGE 128",
-        "page": 132
-      },
-      {
-        "title": "PAGE 129",
-        "page": 133
-      },
-      {
-        "title": "PAGE 82",
-        "page": 134
-      },
-      {
-        "title": "PAGE 130",
-        "page": 134
-      },
-      {
-        "title": "PAGE 131",
-        "page": 135
-      },
-      {
-        "title": "PAGE 132",
-        "page": 136
-      },
-      {
-        "title": "PAGE 133",
-        "page": 137
-      },
-      {
-        "title": "PAGE 134",
-        "page": 138
-      },
-      {
-        "title": "PAGE 135",
-        "page": 139
-      },
-      {
-        "title": "PAGE 136",
-        "page": 140
-      },
-      {
-        "title": "PAGE 137",
-        "page": 141
-      },
-      {
-        "title": "PAGE 139",
-        "page": 143
-      },
-      {
-        "title": "PAGE 140",
-        "page": 144
-      },
-      {
-        "title": "PAGE 153",
-        "page": 144
-      },
-      {
-        "title": "PAGE 141",
-        "page": 145
-      },
-      {
-        "title": "PAGE 142",
-        "page": 146
-      },
-      {
-        "title": "PAGE 143",
-        "page": 147
-      },
-      {
-        "title": "PAGE 144",
-        "page": 148
-      },
-      {
-        "title": "PAGE 145",
-        "page": 149
-      },
-      {
-        "title": "PAGE 146",
-        "page": 150
-      },
-      {
-        "title": "PAGE 147",
-        "page": 151
-      },
-      {
-        "title": "PAGE 149",
-        "page": 153
-      },
-      {
-        "title": "PAGE 151",
-        "page": 155
-      },
-      {
-        "title": "PAGE 152",
-        "page": 156
-      },
-      {
-        "title": "PAGE 154",
-        "page": 158
-      },
-      {
-        "title": "PAGE 156",
-        "page": 160
-      },
-      {
-        "title": "PAGE 157",
-        "page": 161
-      },
-      {
-        "title": "PAGE 159",
-        "page": 163
-      },
-      {
-        "title": "PAGE 160",
-        "page": 164
-      },
-      {
-        "title": "PAGE 162",
-        "page": 166
-      },
-      {
-        "title": "PAGE 163",
-        "page": 167
-      },
-      {
-        "title": "PAGE 164",
-        "page": 168
-      },
-      {
-        "title": "PAGE 165",
-        "page": 169
-      },
-      {
-        "title": "PAGE 166",
-        "page": 170
-      },
-      {
-        "title": "PAGE 167",
-        "page": 171
-      },
-      {
-        "title": "PAGE 169",
-        "page": 173
-      },
-      {
-        "title": "PAGE 176",
-        "page": 174
-      },
-      {
-        "title": "PAGE 171",
-        "page": 175
-      },
-      {
-        "title": "PAGE 172",
-        "page": 176
-      },
-      {
-        "title": "PAGE 173",
-        "page": 177
-      },
-      {
-        "title": "PAGE 174",
-        "page": 178
-      },
-      {
-        "title": "PAGE 175",
-        "page": 179
-      },
-      {
-        "title": "PAGE 177",
-        "page": 181
-      },
-      {
-        "title": "PAGE 178",
-        "page": 182
-      },
-      {
-        "title": "PAGE 179",
-        "page": 183
-      },
-      {
-        "title": "PAGE 181",
-        "page": 185
-      },
-      {
-        "title": "PAGE 182",
-        "page": 186
-      },
-      {
-        "title": "PAGE 184",
-        "page": 188
-      },
-      {
-        "title": "PAGE 185",
-        "page": 188
-      },
-      {
-        "title": "PAGE 186",
-        "page": 190
-      },
-      {
-        "title": "PAGE 188",
-        "page": 192
-      },
-      {
-        "title": "PAGE 79",
-        "page": 194
-      },
-      {
-        "title": "PAGE 191",
-        "page": 195
-      },
-      {
-        "title": "PAGE 192",
-        "page": 196
-      },
-      {
-        "title": "PAGE 193",
-        "page": 197
-      },
-      {
-        "title": "PAGE 194",
-        "page": 198
-      },
-      {
-        "title": "PAGE 195",
-        "page": 199
-      },
-      {
-        "title": "PAGE 196",
-        "page": 200
-      },
-      {
-        "title": "PAGE 197",
-        "page": 201
-      },
-      {
-        "title": "SUMMARY AND CONCLUSIONS",
-        "page": 202
-      },
-      {
-        "title": "PAGE 199",
-        "page": 203
-      },
-      {
-        "title": "PAGE 208",
-        "page": 204
-      },
-      {
-        "title": "LIST OF THE ARABIC ALPHABETS AND THEIR NUMERICAL VALUES",
-        "page": 208
-      },
-      {
-        "title": "PAGE 205",
-        "page": 209
-      },
-      {
-        "title": "PAGE 206",
-        "page": 210
-      },
-      {
-        "title": "PAGE 209",
-        "page": 213
-      },
-      {
-        "title": "LESSONS FROM QURAN",
-        "page": 215
-      },
-      {
-        "title": "APPENDIX 2",
-        "page": 230
-      },
-      {
-        "title": "APPENDIX 3",
-        "page": 232
-      },
-      {
-        "title": "APPENDIX 4",
-        "page": 234
-      },
-      {
-        "title": "APPENDIX 5",
-        "page": 235
-      },
-      {
-        "title": "APPENDIX 6",
-        "page": 236
-      },
-      {
-        "title": "APPENDIX 7",
-        "page": 238
-      },
-      {
-        "title": "APPENDIX 8",
-        "page": 239
-      },
-      {
-        "title": "APPENDIX 1",
-        "page": 240
-      },
-      {
-        "title": "APPENDIX 9",
-        "page": 240
-      },
-      {
-        "title": "APPENDIX 10",
-        "page": 241
-      },
-      {
-        "title": "PAGE 50",
-        "page": 245
-      },
-      {
-        "title": "APPENDIX 11",
-        "page": 245
-      },
-      {
-        "title": "APPENDIX 12",
-        "page": 249
-      },
-      {
-        "title": "APPENDIX 14",
-        "page": 251
-      },
-      {
-        "title": "APPENDIX 15",
-        "page": 252
-      },
-      {
-        "title": "APPENDIX 16",
-        "page": 253
-      },
-      {
-        "title": "APPENDIX 17",
-        "page": 255
-      },
-      {
-        "title": "APPENDIX 18",
-        "page": 256
-      },
-      {
-        "title": "APPENDIX 19",
-        "page": 258
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 179,
-      "droppedUnverifiable": 43
-    }
-  },
-  "english-meanings-of-the-quran": {
-    "description": "This text provides an English translation and theological commentary on selected portions of the Quran, specifically focusing on Sura Al-Fatihah and the opening verses of Sura Al-Baqarah. The author, Rashad Khalifa, presents his work as the first English rendering of the Quranic meanings by a Muslim Arab, intended to clarify fundamental Islamic principles for a contemporary audience. He argues that the Quran possesses a unique linguistic efficiency and a mathematical structure that serves as evidence of its divine origin. Through a combination of verse-by-verse translation and analytical commentary, he explores themes such as the nature of God, the necessity of belief in the hereafter, and the importance of daily prayer. The author further incorporates findings from computerized studies of the text, claiming that the frequency of specific letters and the arrangement of suras demonstrate a divinely ordained system that transcends human capability.",
-    "pageCount": 16,
-    "toc": [
-      {
-        "title": "Sura Al-Fatihah (The Opener)",
-        "page": 1
-      },
-      {
-        "title": "Al-Fatihah (The Opener)",
-        "page": 1
-      },
-      {
-        "title": "COMMENTARY",
-        "page": 5
-      },
-      {
-        "title": "Sura Al-Baqarah (The Heifer)",
-        "page": 6
-      },
-      {
-        "title": "Al-Baqarah (The Heifer)",
-        "page": 6
-      },
-      {
-        "title": "SURA AL-BAQARAH 2:19-25",
-        "page": 10
-      },
-      {
-        "title": "SURA AL-BAQARAH 2:27-29",
-        "page": 12
-      },
-      {
-        "title": "Linguistic Efficiency of the Qur’an",
-        "page": 14
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 8,
+      "model": "gemini-vision-ocr-verified",
+      "verifiedEntries": 9,
       "droppedUnverifiable": 0
-    }
-  },
-  "eternity-screenplay": {
-    "description": "This screenplay by Dr. Rashad Khalifa explores a complex narrative spanning human history, theology, and science fiction. The plot begins in 1985 with the discovery of a time capsule containing a mathematical code, which leads to the identification of a lost will belonging to a pioneer named Barclay Leland Stamford. As the narrative progresses, the focus shifts to a futuristic space odyssey aboard the spacecraft Eternity, commanded by Virgil Moss. The crew, accompanied by advanced robots, travels through hyperspace and encounters celestial entities, including angels and Satan. The author presents a theological framework in which he argues that God created seven universes and that humanity is undergoing a probationary test on Earth. The screenplay interweaves these cosmic events with scenes of human suffering, religious conflict, and political tension on Earth, ultimately suggesting a struggle between divine protection and satanic influence.",
-    "pageCount": 94,
-    "toc": [
-      {
-        "title": "EXT. STREET - DAY",
-        "page": 2
-      },
-      {
-        "title": "Page 7 - ETERNITY",
-        "page": 8
-      },
-      {
-        "title": "Page 8 - ETERNITY",
-        "page": 9
-      },
-      {
-        "title": "Page 9 - ETERNITY",
-        "page": 10
-      },
-      {
-        "title": "Page 10 - ETERNITY",
-        "page": 11
-      },
-      {
-        "title": "Page 12 - ETERNITY",
-        "page": 13
-      },
-      {
-        "title": "Page 13 - ETERNITY",
-        "page": 14
-      },
-      {
-        "title": "Page 14 - ETERNITY",
-        "page": 15
-      },
-      {
-        "title": "Page 15 - ETERNITY",
-        "page": 16
-      },
-      {
-        "title": "Page 16 - ETERNITY",
-        "page": 17
-      },
-      {
-        "title": "Page 17 - ETERNITY",
-        "page": 18
-      },
-      {
-        "title": "Page 18 - ETERNITY",
-        "page": 19
-      },
-      {
-        "title": "Page 19 - ETERNITY",
-        "page": 20
-      },
-      {
-        "title": "Page 26 - ETERNITY",
-        "page": 21
-      },
-      {
-        "title": "Page 21 - ETERNITY",
-        "page": 22
-      },
-      {
-        "title": "Page 22 - ETERNITY",
-        "page": 23
-      },
-      {
-        "title": "Page 23 - ETERNITY",
-        "page": 24
-      },
-      {
-        "title": "Page 24 - ETERNITY",
-        "page": 25
-      },
-      {
-        "title": "Page 25 - ETERNITY",
-        "page": 26
-      },
-      {
-        "title": "Page 27 - ETERNITY",
-        "page": 28
-      },
-      {
-        "title": "Page 28 - ETERNITY",
-        "page": 29
-      },
-      {
-        "title": "Page 29 - ETERNITY",
-        "page": 30
-      },
-      {
-        "title": "Page 36 - ETERNITY",
-        "page": 31
-      },
-      {
-        "title": "Page 31 - ETERNITY",
-        "page": 32
-      },
-      {
-        "title": "Page 33 - ETERNITY",
-        "page": 34
-      },
-      {
-        "title": "Page 34 - ETERNITY",
-        "page": 35
-      },
-      {
-        "title": "Page 35 - ETERNITY",
-        "page": 36
-      },
-      {
-        "title": "Page 37 - ETERNITY",
-        "page": 38
-      },
-      {
-        "title": "Page 38 - ETERNITY",
-        "page": 39
-      },
-      {
-        "title": "Page 3 - ETERNITY",
-        "page": 40
-      },
-      {
-        "title": "Page 45 - ETERNITY",
-        "page": 46
-      },
-      {
-        "title": "Page 46 - ETERNITY",
-        "page": 47
-      },
-      {
-        "title": "Page 47 - ETERNITY",
-        "page": 48
-      },
-      {
-        "title": "Page 48 - ETERNITY",
-        "page": 49
-      },
-      {
-        "title": "Page 49 - ETERNITY",
-        "page": 50
-      },
-      {
-        "title": "Page 54 - ETERNITY",
-        "page": 55
-      },
-      {
-        "title": "Page 55 - ETERNITY",
-        "page": 56
-      },
-      {
-        "title": "Page 56 - ETERNITY",
-        "page": 57
-      },
-      {
-        "title": "Page 57 - ETERNITY",
-        "page": 58
-      },
-      {
-        "title": "Page 61 - ETERNITY",
-        "page": 62
-      },
-      {
-        "title": "Page 63 - ETERNITY",
-        "page": 64
-      },
-      {
-        "title": "Page 64 - ETERNITY",
-        "page": 65
-      },
-      {
-        "title": "Page 65 - ETERNITY",
-        "page": 66
-      },
-      {
-        "title": "Page 66 - ETERNITY",
-        "page": 67
-      },
-      {
-        "title": "Page 67 - ETERNITY",
-        "page": 68
-      },
-      {
-        "title": "Page 68 - ETERNITY",
-        "page": 69
-      },
-      {
-        "title": "Page 69 - ETERNITY",
-        "page": 70
-      },
-      {
-        "title": "Page 70 - ETERNITY",
-        "page": 71
-      },
-      {
-        "title": "Page 71 - ETERNITY",
-        "page": 72
-      },
-      {
-        "title": "Page 73 - ETERNITY",
-        "page": 74
-      },
-      {
-        "title": "Page 74 - ETERNITY",
-        "page": 75
-      },
-      {
-        "title": "Page 75 - ETERNITY",
-        "page": 76
-      },
-      {
-        "title": "Page 76 - ETERNITY",
-        "page": 77
-      },
-      {
-        "title": "Page 77 - ETERNITY",
-        "page": 78
-      },
-      {
-        "title": "Page 78 - ETERNITY",
-        "page": 79
-      },
-      {
-        "title": "Page 80 - ETERNITY",
-        "page": 81
-      },
-      {
-        "title": "Page 82 - ETERNITY",
-        "page": 83
-      },
-      {
-        "title": "Page 84 - ETERNITY",
-        "page": 85
-      },
-      {
-        "title": "Page 85 - ETERNITY",
-        "page": 86
-      },
-      {
-        "title": "Page 89 - ETERNITY",
-        "page": 90
-      },
-      {
-        "title": "Page 92 - ETERNITY",
-        "page": 93
-      },
-      {
-        "title": "Page 93 - ETERNITY",
-        "page": 94
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 62,
-      "droppedUnverifiable": 31
-    }
-  },
-  "islam-volume-1-number-2-july-1974": {
-    "description": "This issue of the journal Islam serves as an international platform for theological discourse, focusing on the preservation and interpretation of the Qur'an. The publication features articles that examine the mission of Islam in the modern world, emphasizing the necessity of reconciling religious sentiment with reason. Dr. Rashad Khalifa presents a series of mathematical analyses of the Qur'anic initials, arguing that these patterns provide empirical evidence of the text's divine preservation. Other contributors explore the Islamic perspective on racial equality, the historical origins of Islamic jurisprudence, and the spiritual insights found in Sufi aphorisms and invocations. The volume also includes a translation of the second chapter of the Qur'an, a guide to the Islamic calendar, and a critical review of contemporary apocalyptic literature, all presented within the framework of promoting a unified understanding of God's message to humanity.",
-    "pageCount": 84,
-    "toc": [
-      {
-        "title": "Islam: Its Mission in the World",
-        "page": 8
-      },
-      {
-        "title": "God's Message to Humanity",
-        "page": 14
-      },
-      {
-        "title": "Race, Racism and Islam",
-        "page": 29
-      },
-      {
-        "title": "English Meanings of the Qur'an",
-        "page": 43
-      },
-      {
-        "title": "The Origin of Islamic Jurisprudence",
-        "page": 61
-      },
-      {
-        "title": "Islamic Concentrates: The Aphorisms of Salamah Al-Radi",
-        "page": 65
-      },
-      {
-        "title": "The Invocations of 'Abdullah Ansari",
-        "page": 68
-      },
-      {
-        "title": "Index to the Qur'an",
-        "page": 74
-      },
-      {
-        "title": "The Islamic Calendar Conversion Table",
-        "page": 78
-      },
-      {
-        "title": "Book Review",
-        "page": 83
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 10,
-      "droppedUnverifiable": 0
-    }
-  },
-  "islam-volume-1-number-3-4-january-1975": {
-    "description": "This issue of the journal ISLAM serves as a platform for diverse scholarly and theological contributions aimed at articulating an Islamic perspective on contemporary and historical issues. The volume is organized into a series of thematic articles, followed by a section titled Islamic Concentrates, which offers aphorisms, invocations, and reference tools. Dr. Rashad Khalifa presents arguments regarding the mathematical design of the Qur'an, while other contributors examine the historical authenticity of the Gospel of Barnabas, the status of Jerusalem in Islamic thought, and the political implications of the Third International Theory. The volume also includes a critical analysis of the falsification of Hadith, in which Muhammad 'Ajjaj Al-Khatib argues that political and sectarian divisions historically motivated the fabrication of traditions. The journal concludes with educational resources, including an index to the Qur'an and a calendar conversion table, intended to support the study of Islamic texts.",
-    "pageCount": 137,
-    "toc": [
-      {
-        "title": "Erratum (God's Message to Humanity)",
-        "page": 7
-      },
-      {
-        "title": "The Italian \"Barnabas\": Fact or Fiction?",
-        "page": 8
-      },
-      {
-        "title": "The Muslims and Jerusalem",
-        "page": 15
-      },
-      {
-        "title": "The Third International Theory",
-        "page": 18
-      },
-      {
-        "title": "Propagation of Islam: The Basic Principles",
-        "page": 26
-      },
-      {
-        "title": "Islam: Its Mission in the World",
-        "page": 34
-      },
-      {
-        "title": "The Falsification of Hadith",
-        "page": 40
-      },
-      {
-        "title": "English Meanings of the Qur'an",
-        "page": 86
-      },
-      {
-        "title": "Islamic Concentrates: The Aphorisms of Salamah Al-Radi",
-        "page": 107
-      },
-      {
-        "title": "The Invocations of 'Abdullah Ansari",
-        "page": 112
-      },
-      {
-        "title": "Index to the Qur'an",
-        "page": 119
-      },
-      {
-        "title": "The Islamic Calendar Conversion Table",
-        "page": 127
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 12,
-      "droppedUnverifiable": 0
-    }
-  },
-  "miracle-of-quran-alphabets": {
-    "description": "This study investigates the significance of the mysterious alphabets, or Qur'anic initials, that prefix twenty-nine chapters of the Qur'an. The author presents a mathematical analysis of these letters, arguing that their frequency and distribution within the text demonstrate a divine, non-human origin for the scripture. He details a four-year research project utilizing computer-aided calculations to determine the absolute frequency, percentage, and per-verse occurrence of these initials across all 114 suras. The work is organized by specific initial sets, with each chapter dedicated to the statistical results of a particular letter or combination, such as Qaf, Nun, Sad, and various multi-letter groupings. He presents evidence suggesting that these initials correlate with the chronological and recorded sequences of the suras, asserting that the mathematical balance observed is beyond the capacity of any human author. The text concludes by framing these findings as a perpetual, verifiable miracle intended to provide scientific reassurance to believers and skeptics alike.",
-    "pageCount": 211,
-    "toc": [
-      {
-        "title": "Introduction by Sulayman Shahid Mufassir",
-        "page": 5
-      },
-      {
-        "title": "Conclusion",
-        "page": 12
-      },
-      {
-        "title": "The Qur’anic Initials",
-        "page": 15
-      },
-      {
-        "title": "Prologue",
-        "page": 17
-      },
-      {
-        "title": "Prerequisite Information about the Qur’an",
-        "page": 22
-      },
-      {
-        "title": "Review of the Literature",
-        "page": 37
-      },
-      {
-        "title": "Development of this Research",
-        "page": 45
-      },
-      {
-        "title": "Methods of Calculation",
-        "page": 47
-      },
-      {
-        "title": "Results, Observations, and Discussion",
-        "page": 74
-      },
-      {
-        "title": "Addendum",
-        "page": 209
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 10,
-      "droppedUnverifiable": 0
-    }
-  },
-  "quran-hadith-islam": {
-    "description": "This work presents a theological argument for the doctrine of Quran-alone Islam, asserting that the Quran is the complete, perfect, and sole source of religious guidance for Muslims. The author contends that the reliance on Hadith and Sunna—traditions attributed to the Prophet Muhammad—constitutes a form of idolatry and a direct violation of divine commandments. He argues that Muhammad was strictly forbidden from uttering any religious instructions outside of the Quranic revelation and that the prophet's role was limited to the delivery of the scripture. The text is organized into short, thematic sections that combine Quranic citations with the author's commentary, emphasizing that historical religious practices, such as Salat and Hajj, were established through Abraham rather than through the later traditions of Hadith. The author further presents numerical evidence based on the number 19 to support his claims regarding the Quran's divine preservation and structural integrity, ultimately calling for a return to monotheistic worship centered exclusively on the Quran.",
-    "pageCount": 95,
-    "toc": [
-      {
-        "title": "Preface",
-        "page": 3
-      },
-      {
-        "title": "NO SALVATION WITHOUT OBEYING THE MESSENGER",
-        "page": 4
-      },
-      {
-        "title": "WHEN DELIVERING GOD'S MESSAGES",
-        "page": 5
-      },
-      {
-        "title": "MUHAMMAD REPRESENTED BY QURAN ALONE",
-        "page": 6
-      },
-      {
-        "title": "MUHAMMAD FORBIDDEN FROM UTTERING ANY RELIGIOUS INSTRUCTIONS OTHER THAN QURAN",
-        "page": 7
-      },
-      {
-        "title": "MUHAMMAD ORDERED NEVER TO DEVIATE FROM QURAN. DEVIATION MEANT SEVERE PUNISHMENT",
-        "page": 8
-      },
-      {
-        "title": "ONE GOD / ONE SOURCE",
-        "page": 10
-      },
-      {
-        "title": "QURAN: AN EXTRAORDINARY BOOK",
-        "page": 12
-      },
-      {
-        "title": "DO YOU BELIEVE GOD OR NOT?",
-        "page": 13
-      },
-      {
-        "title": "THE CONSEQUENCE OF NOT BELIEVING GOD",
-        "page": 14
-      },
-      {
-        "title": "IMPORTANT CRITERION OF DIVINE REVELATION",
-        "page": 15
-      },
-      {
-        "title": "HADITH & SUNNA = 100% CONJECTURE",
-        "page": 16
-      },
-      {
-        "title": "QURAN: VISUAL PRESENTATION OF THE MIRACLE",
-        "page": 16
-      },
-      {
-        "title": "OBEYING THE MESSENGER IS CONDITIONED",
-        "page": 17
-      },
-      {
-        "title": "THE IDOLIZATION OF MUHAMMAD",
-        "page": 21
-      },
-      {
-        "title": "QURAN: YOU SHALL NOT IDOLIZE MUHAMMAD",
-        "page": 22
-      },
-      {
-        "title": "THE ABUSE OF QURAN",
-        "page": 23
-      },
-      {
-        "title": "DOES GOD HATE MUHAMMAD ???",
-        "page": 26
-      },
-      {
-        "title": "THE TRUE LOVE OF MUHAMMAD",
-        "page": 27
-      },
-      {
-        "title": "MUHAMMAD DOES NOT KNOW THE FUTURE",
-        "page": 28
-      },
-      {
-        "title": "THE MYTH OF INTERCESSION",
-        "page": 30
-      },
-      {
-        "title": "THE DEIFICATION OF MUHAMMAD",
-        "page": 31
-      },
-      {
-        "title": "MUHAMMAD WILL NOT CALL YOU TO ACCOUNT",
-        "page": 33
-      },
-      {
-        "title": "FUNCTION OF EVERY MESSENGER",
-        "page": 34
-      },
-      {
-        "title": "SOLE FUNCTION OF THE PROPHET: DELIVER QURAN",
-        "page": 35
-      },
-      {
-        "title": "MUHAMMAD DOES NOT EXPLAIN, INTERPRET, OR ANTICIPATE QURAN; JUST DELIVER & FOLLOW",
-        "page": 36
-      },
-      {
-        "title": "THE FOLLOWERS OF HADITH & SUNNA DO NOT FOLLOW THEIR OWN TEACHINGS",
-        "page": 37
-      },
-      {
-        "title": "INCREDIBLE FACT: THEY DO NOT FOLLOW THEIR OWN TEACHINGS",
-        "page": 38
-      },
-      {
-        "title": "THEIR FAVORITE QUESTION",
-        "page": 40
-      },
-      {
-        "title": "ABRAHAM: THE FOUNDER OF ISLAM",
-        "page": 41
-      },
-      {
-        "title": "ISLAM IS THE RELIGION OF ABRAHAM",
-        "page": 42
-      },
-      {
-        "title": "MUHAMMAD WAS A FOLLOWER OF ABRAHAM",
-        "page": 43
-      },
-      {
-        "title": "SALAT PRACTICED BY MUHAMMAD'S OPPONENTS",
-        "page": 44
-      },
-      {
-        "title": "SACRED MONTHS OBSERVED BEFORE MUHAMMAD",
-        "page": 45
-      },
-      {
-        "title": "TODAY'S IDOLATERS vs QURAISH'S IDOLATERS",
-        "page": 46
-      },
-      {
-        "title": "\"YOU SHALL KEEP THE OBSERVANCE OF SALAT\"",
-        "page": 47
-      },
-      {
-        "title": "ALL RELIGIOUS PRACTICES IN ISLAM (SALAT ZAKAT FASTING HAJJ) CAME TO US THROUGH ABRAHAM",
-        "page": 48
-      },
-      {
-        "title": "ABRAHAM: FIRST (and last) RECIPIENT OF SPECIFIC RELIGIOUS PRACTICES",
-        "page": 49
-      },
-      {
-        "title": "SALAT PRAYERS OBSERVED BEFORE MUHAMMAD",
-        "page": 50
-      },
-      {
-        "title": "SALAT & ZAKAT CAME TO US VIA ABRAHAM",
-        "page": 51
-      },
-      {
-        "title": "FASTING CAME TO US VIA ABRAHAM (then modified in Quran)",
-        "page": 52
-      },
-      {
-        "title": "HAJJ CAME TO US VIA ABRAHAM",
-        "page": 53
-      },
-      {
-        "title": "THEY STILL INSIST",
-        "page": 54
-      },
-      {
-        "title": "TWO UNFORTUNATE FACTS OF LIFE",
-        "page": 55
-      },
-      {
-        "title": "PROBLEM IS: THEY THINK THEY ARE RIGHTEOUS",
-        "page": 56
-      },
-      {
-        "title": "UNAWARE OF THEIR IDOL WORSHIP",
-        "page": 57
-      },
-      {
-        "title": "THE IMPORTANCE OF \"HADITH & SUNNA\"",
-        "page": 58
-      },
-      {
-        "title": "ONE AUTHENTIC \"HADITH\"",
-        "page": 59
-      },
-      {
-        "title": "QURAN: THE ONLY LEGITIMATE \"HADITH\"",
-        "page": 60
-      },
-      {
-        "title": "THE PHYSICAL EVIDENCE",
-        "page": 62
-      },
-      {
-        "title": "SUMMARY & CONCLUSIONS",
-        "page": 64
-      },
-      {
-        "title": "THE SIMPLE FACTS",
-        "page": 65
-      },
-      {
-        "title": "THE INTRICATE FACTS",
-        "page": 67
-      },
-      {
-        "title": "CONCLUSION: THE PHYSICAL EVIDENCE PRESENTED HERE PROVES",
-        "page": 70
-      },
-      {
-        "title": "QURAN: ONLY SOURCE OF GUIDANCE (6:19)",
-        "page": 71
-      },
-      {
-        "title": "WE LEFT NOTHING OUT OF THIS BOOK (QURAN) (6:38)",
-        "page": 72
-      },
-      {
-        "title": "GOD REVEALED THIS BOOK FULLY DETAILED (6:114)",
-        "page": 73
-      },
-      {
-        "title": "MUHAMMAD FORBIDDEN FROM ANTICIPATING QURAN",
-        "page": 75
-      },
-      {
-        "title": "MUHAMMAD FORBIDDEN FROM EXPLAINING QURAN",
-        "page": 76
-      },
-      {
-        "title": "QURAN CONTAINS ALL THE EXAMPLES WE NEED",
-        "page": 77
-      },
-      {
-        "title": "HADITH: WHERE THEY FIND ANYTHING THEY WISH",
-        "page": 78
-      },
-      {
-        "title": "GUARANTEED VICTORY",
-        "page": 80
-      },
-      {
-        "title": "WHY THEN ARE THE MUSLIMS DEFEATED ?",
-        "page": 81
-      },
-      {
-        "title": "HISTORICAL FACTS",
-        "page": 82
-      },
-      {
-        "title": "HADITH CAUSED DEVIATION FROM QURAN!",
-        "page": 84
-      },
-      {
-        "title": "HADITH & SUNNA vs GOD'S LAW",
-        "page": 87
-      },
-      {
-        "title": "OBEY GOD AND OBEY THE MESSENGER",
-        "page": 88
-      },
-      {
-        "title": "MUHAMMAD'S HADITHS ARE NOT MUHAMMAD'S",
-        "page": 89
-      },
-      {
-        "title": "OBEYING HADITH IS NOT OBEYING THE MESSENGER",
-        "page": 90
-      },
-      {
-        "title": "THE GREAT DISASTER",
-        "page": 91
-      },
-      {
-        "title": "THE GREAT CRITERION",
-        "page": 93
-      },
-      {
-        "title": "CLARIFICATION: WHY ARE WE HERE?",
-        "page": 94
-      },
-      {
-        "title": "FINALLY: MOST IMPORTANT QUESTION",
-        "page": 95
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 73,
-      "droppedUnverifiable": 0
-    }
-  },
-  "perpetual-miracle": {
-    "description": "This text presents a theological argument for the divine origin of the Qur'an based on a mathematical system centered on the number 19. The author posits that the Qur'an contains a perpetual miracle, manifested through a complex numerical structure that remains consistent across the entire text. He argues that the basmala, the opening verse of the Qur'an, serves as the key to this system, as its letter count and the frequency of its constituent words throughout the scripture are multiples of 19. He further contends that this mathematical design extends to the mysterious initials found at the beginning of certain suras, suggesting that their specific distribution and frequency provide empirical, verifiable proof of the text's preservation and authorship by God. The author asserts that these findings are physical facts, independent of linguistic interpretation, and intended for all of humanity.",
-    "pageCount": 16,
-    "toc": [
-      {
-        "title": "THE PERPETUAL MIRACLE OF MUHAMMAD (peace be upon him)",
-        "page": 1
-      },
-      {
-        "title": "None of us witnessed Moses when he turned his staff into a serpent",
-        "page": 3
-      },
-      {
-        "title": "Abdul-Baqi, and published by the People's Press of Cairo, Egypt",
-        "page": 5
-      },
-      {
-        "title": "person will have the number 19 imposed on him",
-        "page": 8
-      },
-      {
-        "title": "beginning of the only 2 suras which contain 57 Qafs each",
-        "page": 12
-      },
-      {
-        "title": "Moving on the other Qur’anic initials, let us look at the letter Nun",
-        "page": 13
-      },
-      {
-        "title": "this interlocking system, and see how it is complete beyond human ability",
-        "page": 15
-      },
-      {
-        "title": "THE QUR’AN MUHAMMAD’S PERPETUAL MIRACLE",
-        "page": 16
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 8,
-      "droppedUnverifiable": 0
-    }
-  },
-  "quran-visual-presentation": {
-    "description": "This work presents a mathematical analysis of the Quran, arguing that a hidden numerical code based on the number 19 serves as physical evidence of its divine origin. The author contends that this secret remained concealed for 1,400 years until its unveiling through modern computation. He presents a series of fifty-two physical facts, detailing how the frequency of specific letters, words, and verse counts across various chapters consistently align with multiples of 19. He argues that this pattern extends to the Quranic initials, the opening statement, and the distribution of divine names. The text is organized as a catalog of these mathematical observations, providing lists of chapter and verse occurrences to support his claims regarding the structural integrity and miraculous nature of the scripture.",
-    "pageCount": 251,
-    "toc": [
-      {
-        "title": "PREFACE",
-        "page": 3
-      },
-      {
-        "title": "INTRODUCTION",
-        "page": 5
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (5)",
-        "page": 17
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (6)",
-        "page": 18
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (7)",
-        "page": 21
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (8)",
-        "page": 24
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (9)",
-        "page": 25
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (1)",
-        "page": 27
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (11)",
-        "page": 27
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (13)",
-        "page": 30
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (14)",
-        "page": 31
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (15)",
-        "page": 32
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (16)",
-        "page": 33
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (17)",
-        "page": 68
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (18)",
-        "page": 70
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (19)",
-        "page": 73
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (2)",
-        "page": 75
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (20)",
-        "page": 75
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (22)",
-        "page": 80
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (23)",
-        "page": 85
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (24)",
-        "page": 87
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (26)",
-        "page": 92
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (27)",
-        "page": 93
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (28)",
-        "page": 95
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (29)",
-        "page": 97
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (3)",
-        "page": 123
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (30)",
-        "page": 123
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (31)",
-        "page": 127
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (32)",
-        "page": 153
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (33)",
-        "page": 154
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (34)",
-        "page": 155
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (35)",
-        "page": 157
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (36)",
-        "page": 162
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (37)",
-        "page": 167
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (38)",
-        "page": 197
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (39)",
-        "page": 205
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (40)",
-        "page": 211
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (41)",
-        "page": 214
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (43)",
-        "page": 218
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (44)",
-        "page": 219
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (45)",
-        "page": 223
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (46)",
-        "page": 228
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (47)",
-        "page": 231
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (48)",
-        "page": 233
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (49)",
-        "page": 236
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (50)",
-        "page": 237
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (51)",
-        "page": 243
-      },
-      {
-        "title": "PHYSICAL FACT NUMBER (52)",
-        "page": 245
-      },
-      {
-        "title": "SUMMARY & CONCLUSIONS",
-        "page": 249
-      }
-    ],
-    "generated": {
-      "model": "gemini-3.1-flash-lite",
-      "verifiedEntries": 49,
-      "droppedUnverifiable": 6
     }
   }
 }
