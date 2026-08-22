@@ -63,21 +63,6 @@
     "segmentCount": 175
   },
   {
-    "id": "hard-cover-1989",
-    "title": "hard-cover-1989",
-    "displayTitle": "hard-cover-1989",
-    "type": "other",
-    "category": "Books",
-    "author": "Dr. Rashad Khalifa",
-    "year": 1989,
-    "thumbnailOverride": "/content/written/books/thumbnails/hard-cover-1989.png",
-    "filename": "hard-cover-1989.pdf",
-    "pdfLink": "/content/written/books/hard-cover-1989.pdf",
-    "aliases": [],
-    "transcriptStatus": "missing",
-    "segmentCount": 0
-  },
-  {
     "id": "islam-volume-1-number-1-april-1974",
     "title": "ISLAM - Volume 1, Number 1 (April 1974)",
     "displayTitle": "ISLAM - Volume 1, Number 1 (April 1974)",
@@ -226,20 +211,6 @@
     },
     "transcriptStatus": "available",
     "segmentCount": 288
-  },
-  {
-    "id": "quran1981",
-    "title": "quran1981",
-    "displayTitle": "quran1981",
-    "type": "other",
-    "category": "Books",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/quran1981.png",
-    "filename": "quran1981.pdf",
-    "pdfLink": "/content/written/books/quran1981.pdf",
-    "aliases": [],
-    "transcriptStatus": "missing",
-    "segmentCount": 0
   },
   {
     "id": "salat-booklet",

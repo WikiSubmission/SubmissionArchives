@@ -439,8 +439,6 @@ function searchMasterIndex(parsed: ParsedQuery, filters: string[], proximityWind
 }
 
 const EXCLUDED_QURAN_EDITION_IDS = new Set([
-    'hard-cover-1989',
-    'quran1981',
     'english-meanings-of-the-quran',
 ]);
 

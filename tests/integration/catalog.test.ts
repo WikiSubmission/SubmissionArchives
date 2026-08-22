@@ -28,12 +28,11 @@ test('the generated archive satisfies the canonical runtime contract', () => {
     const report = validateArchiveRecords(records, { publicDir });
 
     assert.equal(report.valid, true, report.errors.join('\n'));
-    // 382 not 383 since "Friday Sermon: Who is GOD? Understanding Our Universe
-    // (08/04/1988)" was merged into "Who is GOD?", the same recording published twice.
-    assert.equal(report.recordCount, 382);
+    // 380 not 382 after removing 1981 and 1989 scan-only Quran editions.
+    assert.equal(report.recordCount, 380);
     const categoryCounts = report.categoryCounts as Record<string, number>;
     assert.equal(categoryCounts.Quran, 114);
-    assert.equal(categoryCounts.Books, 13);
+    assert.equal(categoryCounts.Books, 11);
     assert.equal(categoryCounts['Submitter Perspectives'], 64);
 });
 
@@ -74,9 +73,9 @@ test('book summaries resolve to real PDFs and match master records', () => {
         .map((book) => book.id)
         .sort();
 
-    assert.equal(books.length, 13);
+    assert.equal(books.length, 11);
     assert.equal(books.filter((book) => book.transcriptStatus === 'available').length, 11);
-    assert.deepEqual(scanOnlyBookIds, ['hard-cover-1989', 'quran1981']);
+    assert.deepEqual(scanOnlyBookIds, []);
 
     for (const book of books) {
         assert.equal(fs.existsSync(path.join(publicDir, book.pdfLink.replace(/^\//, ''))), true, book.pdfLink);
