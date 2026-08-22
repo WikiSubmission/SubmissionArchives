@@ -140,3 +140,16 @@ export function insertMediaTimestamp(editor: Editor, item: MediaItem, seconds: n
   editor.chain().focus().insertContent(markdown).run()
   return true
 }
+
+export interface MediaTimestampAttributes {
+  label: string
+  seconds: number
+  mediaId: string | null
+}
+
+export function serializeMediaTimestamp(attrs: MediaTimestampAttributes): string {
+  const target = attrs.mediaId
+    ? `sa://media/${attrs.mediaId}?t=${Math.floor(attrs.seconds)}`
+    : `#t=${Math.floor(attrs.seconds)}`
+  return `[${attrs.label}](${target})`
+}

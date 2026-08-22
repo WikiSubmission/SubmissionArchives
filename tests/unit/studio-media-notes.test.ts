@@ -11,8 +11,7 @@ import {
     type MediaItem,
     type TranscriptCue,
 } from '../../studio/src/lib/mediaCatalog';
-import { buildMediaQuoteMarkdown, mediaDeepLink } from '../../studio/src/lib/mediaBus';
-import { serializeMediaTimestamp } from '../../studio/src/components/extensions/MediaTimestampExtension';
+import { buildMediaQuoteMarkdown, mediaDeepLink, serializeMediaTimestamp } from '../../studio/src/lib/mediaBus';
 
 const ITEMS: MediaItem[] = [
     {

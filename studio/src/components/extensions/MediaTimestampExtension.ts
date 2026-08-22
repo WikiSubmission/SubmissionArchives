@@ -13,14 +13,14 @@ import { parseTimestamp } from '../../lib/mediaCatalog'
  * Markdown outside Studio.
  */
 
+import {
+  serializeMediaTimestamp,
+  type MediaTimestampAttributes,
+} from '../../lib/mediaBus'
+export { serializeMediaTimestamp, type MediaTimestampAttributes }
+
 /** `[01:39](sa://media/...?t=99)` or the local `[01:39](#t=99)` shorthand. */
 const TIMESTAMP_PATTERN = /\[(\d{1,3}:\d{2}(?::\d{2})?)\]\((sa:\/\/media\/[^)\s]+|#t=[\d.]+)\)/
-
-export interface MediaTimestampAttributes {
-  label: string
-  seconds: number
-  mediaId: string | null
-}
 
 function parseTarget(label: string, target: string): MediaTimestampAttributes {
   const fromLabel = parseTimestamp(label) ?? 0
@@ -43,13 +43,6 @@ function parseTarget(label: string, target: string): MediaTimestampAttributes {
   }
 
   return { label, seconds: fromQuery ?? fromLabel, mediaId: mediaId || null }
-}
-
-export function serializeMediaTimestamp(attrs: MediaTimestampAttributes): string {
-  const target = attrs.mediaId
-    ? `sa://media/${attrs.mediaId}?t=${Math.floor(attrs.seconds)}`
-    : `#t=${Math.floor(attrs.seconds)}`
-  return `[${attrs.label}](${target})`
 }
 
 export const MediaTimestamp = Node.create({
