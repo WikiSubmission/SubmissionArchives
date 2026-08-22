@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ArrowRight, Search, X } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { GlassSheen, widgetCardClass } from './WidgetAccents';
@@ -162,6 +163,7 @@ const SEARCH_HIGHLIGHTS = [
 ];
 
 export function SearchSection() {
+    const router = useRouter();
     const [selectedPresetKey, setSelectedPresetKey] = useState<string>('god_alone');
     const [activeCorpusFilter, setActiveCorpusFilter] = useState<CorpusFilter>('all');
     const [customQuery, setCustomQuery] = useState<string>('God alone');
@@ -221,7 +223,15 @@ export function SearchSection() {
 
                     {/* Search Bar Header */}
                     <div className="border-b border-ed-rule bg-ed-surface p-4 sm:p-6">
-                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                if (customQuery.trim()) {
+                                    router.push(`/search?q=${encodeURIComponent(customQuery.trim())}`);
+                                }
+                            }}
+                            className="flex flex-col gap-2 sm:flex-row sm:items-center"
+                        >
                             <div className="relative min-w-0 flex-1">
                                 <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
                                 <input
@@ -244,8 +254,8 @@ export function SearchSection() {
                             </div>
                             <div className="flex items-center gap-2 sm:shrink-0">
                                 <button
-                                    type="button"
-                                    className="inline-flex items-center justify-center rounded-[4px] bg-ed-accent px-4 py-2.5 font-sans text-xs font-bold text-white dark:text-[#0F0E0D] transition-all hover:opacity-90"
+                                    type="submit"
+                                    className="inline-flex items-center justify-center rounded-[4px] bg-ed-accent px-4 py-2.5 font-sans text-xs font-bold text-white dark:text-[#0F0E0D] transition-all hover:opacity-90 cursor-pointer"
                                 >
                                     Search
                                 </button>
@@ -253,7 +263,7 @@ export function SearchSection() {
                                     Ctrl + K
                                 </span>
                             </div>
-                        </div>
+                        </form>
 
                         {/* Interactive Query Playground Pills */}
                         <div className="mt-4 flex flex-wrap items-center gap-2">

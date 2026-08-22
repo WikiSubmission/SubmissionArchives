@@ -86,30 +86,16 @@ type Suggestion = {
 
 const PAGE_SIZE = 10;
 const MIN_SUGGEST_LENGTH = 2;
-const FILTERS_KEY = 'sa-search-filters';
-const FILTER_KEYS: FilterKey[] = ['video', 'quran-study', 'messenger-audio', 'perspective', 'appendix', 'quran', 'other'];
+const ALL_FILTERS_DEFAULT: Record<FilterKey, boolean> = {
+    video: true,
+    'quran-study': true,
+    'messenger-audio': true,
+    perspective: true,
+    appendix: true,
+    quran: true,
+    other: true,
+};
 
-// A shared link's filters always win; localStorage is only consulted when the URL
-// says nothing. Unknown or malformed stored values are discarded rather than trusted.
-function readStoredFilters(): Record<FilterKey, boolean> | null {
-    if (typeof window === 'undefined') return null;
-    try {
-        const raw = window.localStorage.getItem(FILTERS_KEY);
-        if (!raw) return null;
-
-        const parsed: unknown = JSON.parse(raw);
-        if (typeof parsed !== 'object' || parsed === null) return null;
-
-        const record = parsed as Record<string, unknown>;
-        if (!FILTER_KEYS.every((key) => typeof record[key] === 'boolean')) return null;
-        // All-off would render an unusable page; treat it as no preference.
-        if (!FILTER_KEYS.some((key) => record[key] === true)) return null;
-
-        return Object.fromEntries(FILTER_KEYS.map((key) => [key, record[key] as boolean])) as Record<FilterKey, boolean>;
-    } catch {
-        return null;
-    }
-}
 const OPERATOR_CHIP_CLASS = 'rounded-[4px] border border-ed-accent/30 bg-ed-accent-soft px-2.5 py-1 font-mono text-[0.68rem] text-ed-accent';
 
 function SuggestionIcon({ type }: { type: string }) {
@@ -164,37 +150,25 @@ function SearchContent() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     const [filters, setFilters] = useState<Record<FilterKey, boolean>>(() => {
-        // A shared link is explicit intent and outranks a stored preference.
         if (initialFilters.length === 0) {
-            const stored = readStoredFilters();
-            if (stored) return stored;
+            return { ...ALL_FILTERS_DEFAULT };
         }
 
         return {
-            video: initialFilters.length === 0
-                || initialFilters.includes('video')
+            video: initialFilters.includes('video')
                 || initialFilters.includes('sermon')
                 || initialFilters.includes('video-program'),
-            'quran-study': initialFilters.length === 0 || initialFilters.includes('quran-study'),
-            'messenger-audio': initialFilters.length === 0
-                || initialFilters.includes('messenger-audio')
+            'quran-study': initialFilters.includes('quran-study'),
+            'messenger-audio': initialFilters.includes('messenger-audio')
                 || initialFilters.includes('audio'),
-            perspective: initialFilters.length === 0 || initialFilters.includes('perspective'),
-            appendix: initialFilters.length === 0 || initialFilters.includes('appendix'),
-            quran: initialFilters.length === 0 || initialFilters.includes('quran'),
-            other: initialFilters.length === 0 || initialFilters.includes('other'),
+            perspective: initialFilters.includes('perspective'),
+            appendix: initialFilters.includes('appendix'),
+            quran: initialFilters.includes('quran'),
+            other: initialFilters.includes('other'),
         };
     });
-
-    // Persist the current selection so a hard refresh without URL filters restores it.
-    useEffect(() => {
-        try {
-            window.localStorage.setItem(FILTERS_KEY, JSON.stringify(filters));
-        } catch {
-            // Private mode or a full quota — persistence is a convenience, not a requirement.
-        }
-    }, [filters]);
 
     // The API returns globally rank-ordered pages and they are appended in order,
     // so the rendered list is already sorted by score.
