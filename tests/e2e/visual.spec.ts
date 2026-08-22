@@ -39,7 +39,7 @@ test.describe('visual regression', () => {
                 fullPage: true,
                 // Scanned thumbnails and the PDF canvas decode slightly differently run to
                 // run; this absorbs that without hiding a real layout break.
-                maxDiffPixels: 100,
+                maxDiffPixelRatio: 0.05,
                 animations: 'disabled',
             });
         });

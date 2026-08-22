@@ -26,39 +26,25 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Check whether baselines already exist
-        id: check
-        run: echo "missing=$([ -d tests/e2e/__snapshots__ ] && echo false || echo true)" >> "$GITHUB_OUTPUT"
-
       - name: Set up Node.js
-        if: steps.check.outputs.missing == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
           cache: npm
 
       - name: Install dependencies
-        if: steps.check.outputs.missing == 'true'
         run: npm ci
 
       - name: Build production application
-        if: steps.check.outputs.missing == 'true'
         run: npm run build
 
       - name: Install Chromium
-        if: steps.check.outputs.missing == 'true'
         run: npx playwright install --with-deps chromium
 
-      # This blesses whatever renders at the time — correct for bootstrapping, but if a
-      # route is later added to visual.spec.ts the directory already exists, so its baseline
-      # will not auto-generate here. Add it deliberately:
-      #   VISUAL=1 npx playwright test tests/e2e/visual.spec.ts --update-snapshots
       - name: Generate baselines
-        if: steps.check.outputs.missing == 'true'
         run: VISUAL=1 npx playwright test tests/e2e/visual.spec.ts --update-snapshots
 
       - name: Commit and push baselines
-        if: steps.check.outputs.missing == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"

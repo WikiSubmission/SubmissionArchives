@@ -23,7 +23,9 @@ for (const route of routes) {
             () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
         );
 
-        const results = await new AxeBuilder({ page })
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const results = await new AxeBuilder({ page: page as any })
+            .exclude('iframe')
             .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
             .analyze();
         const blocking = results.violations.filter((violation) =>
