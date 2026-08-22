@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Ben Sira",
+    "lang": "English",
+    "bytes": 93890,
+    "path": "data\\sources\\apocrypha\\ben-sira\\english.json"
+  },
+  {
+    "title": "Ben Sira",
+    "lang": "Hebrew",
+    "bytes": 85791,
+    "path": "data\\sources\\apocrypha\\ben-sira\\hebrew.json"
+  },
+  {
+    "title": "Book of Jubilees",
+    "lang": "English",
+    "bytes": 294628,
+    "path": "data\\sources\\apocrypha\\book-of-jubilees\\english.json"
+  },
+  {
+    "title": "Book of Jubilees",
+    "lang": "Hebrew",
+    "bytes": 167351,
+    "path": "data\\sources\\apocrypha\\book-of-jubilees\\hebrew.json"
+  },
+  {
+    "title": "Book of Judith",
+    "lang": "English",
+    "bytes": 65393,
+    "path": "data\\sources\\apocrypha\\book-of-judith\\english.json"
+  },
+  {
+    "title": "Book of Judith",
+    "lang": "Hebrew",
+    "bytes": 40331,
+    "path": "data\\sources\\apocrypha\\book-of-judith\\hebrew.json"
+  },
+  {
+    "title": "Book of Tobit",
+    "lang": "English",
+    "bytes": 41899,
+    "path": "data\\sources\\apocrypha\\book-of-tobit\\english.json"
+  },
+  {
+    "title": "Book of Tobit",
+    "lang": "Hebrew",
+    "bytes": 23438,
+    "path": "data\\sources\\apocrypha\\book-of-tobit\\hebrew.json"
+  },
+  {
+    "title": "Letter of Aristeas",
+    "lang": "English",
+    "bytes": 111440,
+    "path": "data\\sources\\apocrypha\\letter-of-aristeas\\english.json"
+  },
+  {
+    "title": "Letter of Aristeas",
+    "lang": "Hebrew",
+    "bytes": 63182,
+    "path": "data\\sources\\apocrypha\\letter-of-aristeas\\hebrew.json"
+  },
+  {
+    "title": "Megillat Antiochus",
+    "lang": "English",
+    "bytes": 14656,
+    "path": "data\\sources\\apocrypha\\megillat-antiochus\\english.json"
+  },
+  {
+    "title": "Megillat Antiochus",
+    "lang": "Hebrew",
+    "bytes": 11969,
+    "path": "data\\sources\\apocrypha\\megillat-antiochus\\hebrew.json"
+  },
+  {
+    "title": "Prayer of Manasseh",
+    "lang": "English",
+    "bytes": 2910,
+    "path": "data\\sources\\apocrypha\\prayer-of-manasseh\\english.json"
+  },
+  {
+    "title": "Prayer of Manasseh",
+    "lang": "Hebrew",
+    "bytes": 2928,
+    "path": "data\\sources\\apocrypha\\prayer-of-manasseh\\hebrew.json"
+  },
+  {
+    "title": "Psalm 151",
+    "lang": "English",
+    "bytes": 1215,
+    "path": "data\\sources\\apocrypha\\psalm-151\\english.json"
+  },
+  {
+    "title": "Psalm 151",
+    "lang": "Hebrew",
+    "bytes": 1258,
+    "path": "data\\sources\\apocrypha\\psalm-151\\hebrew.json"
+  },
+  {
+    "title": "Psalm 154",
+    "lang": "English",
+    "bytes": 2425,
+    "path": "data\\sources\\apocrypha\\psalm-154\\english.json"
+  },
+  {
+    "title": "Psalm 154",
+    "lang": "Hebrew",
+    "bytes": 2169,
+    "path": "data\\sources\\apocrypha\\psalm-154\\hebrew.json"
+  },
+  {
+    "title": "The Book of Maccabees I",
+    "lang": "English",
+    "bytes": 142121,
+    "path": "data\\sources\\apocrypha\\the-book-of-maccabees-i\\english.json"
+  },
+  {
+    "title": "The Book of Maccabees I",
+    "lang": "Hebrew",
+    "bytes": 89199,
+    "path": "data\\sources\\apocrypha\\the-book-of-maccabees-i\\hebrew.json"
+  },
+  {
+    "title": "The Book of Maccabees I (Kahana Translation)",
+    "lang": "English",
+    "bytes": 2454,
+    "path": "data\\sources\\apocrypha\\the-book-of-maccabees-i-kahana-translation\\english.json"
+  },
+  {
+    "title": "The Book of Maccabees I (Kahana Translation)",
+    "lang": "Hebrew",
+    "bytes": 79812,
+    "path": "data\\sources\\apocrypha\\the-book-of-maccabees-i-kahana-translation\\hebrew.json"
+  },
+  {
+    "title": "The Book of Maccabees II",
+    "lang": "English",
+    "bytes": 17866,
+    "path": "data\\sources\\apocrypha\\the-book-of-maccabees-ii\\english.json"
+  },
+  {
+    "title": "The Book of Maccabees II",
+    "lang": "Hebrew",
+    "bytes": 65556,
+    "path": "data\\sources\\apocrypha\\the-book-of-maccabees-ii\\hebrew.json"
+  },
+  {
+    "title": "The Book of Susanna",
+    "lang": "English",
+    "bytes": 9844,
+    "path": "data\\sources\\apocrypha\\the-book-of-susanna\\english.json"
+  },
+  {
+    "title": "The Book of Susanna",
+    "lang": "Hebrew",
+    "bytes": 6458,
+    "path": "data\\sources\\apocrypha\\the-book-of-susanna\\hebrew.json"
+  },
+  {
+    "title": "The Testaments of the Twelve Patriarchs",
+    "lang": "English",
+    "bytes": 164682,
+    "path": "data\\sources\\apocrypha\\the-testaments-of-the-twelve-patriarchs\\english.json"
+  },
+  {
+    "title": "The Testaments of the Twelve Patriarchs",
+    "lang": "Hebrew",
+    "bytes": 101522,
+    "path": "data\\sources\\apocrypha\\the-testaments-of-the-twelve-patriarchs\\hebrew.json"
+  },
+  {
+    "title": "The Wisdom of Solomon",
+    "lang": "English",
+    "bytes": 3793,
+    "path": "data\\sources\\apocrypha\\the-wisdom-of-solomon\\english.json"
+  },
+  {
+    "title": "The Wisdom of Solomon",
+    "lang": "Hebrew",
+    "bytes": 57338,
+    "path": "data\\sources\\apocrypha\\the-wisdom-of-solomon\\hebrew.json"
+  }
+]

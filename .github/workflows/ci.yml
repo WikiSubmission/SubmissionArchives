@@ -6,16 +6,76 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  contents: read
-
 concurrency:
   group: verify-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  verify:
+  # Runs first and alone so the repo-write token in this workflow is confined to a job
+  # that never runs `npm ci` (and therefore never runs a third-party package's lifecycle
+  # script) unless it genuinely needs to bootstrap missing baselines. On pull_request this
+  # job is a no-op by design — checkout is skipped for forks anyway, and `needs:` below
+  # still lets `verify` proceed once a skipped job reports success.
+  prepare-visual-baselines:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Check whether baselines already exist
+        id: check
+        run: echo "missing=$([ -d tests/e2e/__snapshots__ ] && echo false || echo true)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Node.js
+        if: steps.check.outputs.missing == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22.x
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.check.outputs.missing == 'true'
+        run: npm ci
+
+      - name: Build production application
+        if: steps.check.outputs.missing == 'true'
+        run: npm run build
+
+      - name: Install Chromium
+        if: steps.check.outputs.missing == 'true'
+        run: npx playwright install --with-deps chromium
+
+      # This blesses whatever renders at the time — correct for bootstrapping, but if a
+      # route is later added to visual.spec.ts the directory already exists, so its baseline
+      # will not auto-generate here. Add it deliberately:
+      #   VISUAL=1 npx playwright test tests/e2e/visual.spec.ts --update-snapshots
+      - name: Generate baselines
+        if: steps.check.outputs.missing == 'true'
+        run: VISUAL=1 npx playwright test tests/e2e/visual.spec.ts --update-snapshots
+
+      - name: Commit and push baselines
+        if: steps.check.outputs.missing == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tests/e2e/__snapshots__
+          # Nothing staged is a legitimate no-op; a failing push is not, so it is not swallowed
+          # — a swallowed failure here would leave visual assertions silently self-approving.
+          if ! git diff --staged --quiet; then
+            git commit -m "ci: commit Linux visual regression baselines"
+            git push
+          fi
+
+  verify:
+    needs: prepare-visual-baselines
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
     timeout-minutes: 45
 
     steps:
@@ -51,6 +111,12 @@ jobs:
       - name: Verify deterministic catalog generation
         run: npm run verify:catalog
 
+      - name: Validate catalog source schemas
+        run: npm run validate:catalog-schemas
+
+      - name: Verify book thumbnails are committed
+        run: npm run verify:thumbnails
+
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
 
@@ -62,6 +128,8 @@ jobs:
 
       - name: Run browser and accessibility tests
         run: npm run test:e2e
+        env:
+          VISUAL: '1'
 
       - name: Upload Playwright report
         if: ${{ !cancelled() }}

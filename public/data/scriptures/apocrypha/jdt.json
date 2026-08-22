@@ -1,0 +1,2020 @@
+{
+  "id": "judith",
+  "name": "Judith",
+  "hebrewTitle": "ספר יהודית",
+  "category": "Historical & Narrative",
+  "chapterCount": 16,
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "verseCount": 16,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וַיְהִי בִּשְׁנַת שְׁתֵּים עֶשְׂרֵה לַמֶּלֶךְ נְבוּכַדְנֶצַּר אֲשֶׁר יָשַׁב בְּנִינְוֵה עִיר הַגְּדוֹלָה לֵאלֹהִים וְיִמְלֹךְ אַרְפַּכְשַׁד מֶלֶךְ מָדַי בְּאַחְמְתָא הַבִּירָה הִיא אֶקְבַּתָּנָה:",
+          "english": "And it came to pass in the twelfth year of King Nebuchadnezzar who dwelt in Nineveh the Great City of God, that Arpachshad King of Media reigned in Achmata the Capital City, which is also called Ekbatana."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "וַיַּקֵּף אֶת הָעִיר חוֹמוֹת אַבְנֵי־מַחְצֵב שָׁלוֹשׁ אַמּוֹת רָחְבָּן וְשֵׁשׁ אַמּוֹת קוֹמָתָן:",
+          "english": "And he surrounded the city with walls of hewn stone, three cubits wide and six cubits high."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "וְקוֹמַת הַחוֹמוֹת שִׁבְעִים אַמָּה וְעָבְיָן חֲמִשִּׁים:",
+          "english": "And the height of the walls were seventy cubits and the thickness thereof, fifty cubits."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "וּמִגְדָּלִים עָשָׂה עַל שַׁעֲרֵי הָעִיר מְאַת אַמָּה גָּבְהָם וְשִׁשִּׁים אַמָּה יְסוֹדָם:",
+          "english": "And he made towers over the gates of the city, one hundred cubits high and their foundation was sixty cubits."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "וְקוֹמַת הַשְּׁעָרִים עָשָׂה שִׁבְעִים אַמָּה וְרָחְבָּם אַרְבָּעִים לָתֵת רֶוַח לְרֹב צְבָאָיו לָצֵאת וְלַעֲרֹךְ חֵיל הָרוֹכְבִים אֶת חֵיל הָרַגְלִים:",
+          "english": "And the height of the gates he made were seventy cubits, and their width, forty cubits, to make space for the multitude of their hosts, to go out and array the charioteers with the infantry."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "וַיְהִי בַּיָּמִים הָהֵם וַיַּעַשׂ נְבוּכַדְנֶצַּר מִלְחָמָה אֶת אַרְפַּכְשַׁד בָּעֲרָבָה הַגְּדוֹלָה אֲשֶׁר עַל גְּבוּלֵי רְעוּ:",
+          "english": "And it came to pass in those days, that Nebuchadnezzar made war with Arpachshad in the great plain which stretches unto the border of Reu."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וְכָל יוֹשְׁבֵי הֶהָרִים וְכָל הָעַמִּים אֲשֶׁר עַל שְׂפַת נַהֲרֵי פְּרָת חִדֶּקֶל וְגִיחוֹן וְגַם אַרְיוֹךְ מֶלֶךְ עֵילָם וְעַם רַב מִבְּנֵי גִּלְעָד בָּאוּ לְעֶזְרָתוֹ:",
+          "english": "And all of the inhabitants of the mountains and all of the people who were on the banks of the rivers Euphrates, Hidekel and Gihon and also Arioch King of Elam and many people of the Children of Gilead came to his aid."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "וְיִשְׁלַח נְבוּכַדְנֶצַּר מֶלֶךְ אֲשׁוּר מַלְאָכִים לִקְרֹא לְיוֹשְׁבֵי פָרָס וּלְכָל יוֹשְׁבֵי מַעֲרָב וְהֵם קִילִיקִיָא וְדַמֶּשֶׂק וְהַלְּבָנוֹן וְהַכַּרְמֶל וְהַגִּלְעָד וְהַגָּלִיל וּשְׂדֵה יִזְרְעֶאל:",
+          "english": "And Nebuchadnezzar the King of Assyria sent emissaries to call the inhabitants of Persia, and to all those who dwell in the west, which consisted of: Cilicia, Damascus, Lebanon, Carmel, Gilead, the Galilee and the Valley of Jezreel."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "וּלְיוֹשְׁבֵי שֹׁמְרוֹן וְעָרֶיהָ וְאֶל הַגּוֹיִם מֵעֵבֶר לְיַרְדֵּן וְעַד יְרוּשָׁלַיִם וּלְכָל יוֹשְׁבֵי גֹּשֶׁן וְאֶרֶץ מִצְרַיִם עַד הָרֵי קֵדָר:",
+          "english": "And the inhabitants of Samaria and her cities, and the nations on the other side of the Jordan unto Jerusalem, and all of the inhabitants of Goshen and the Land of Egypt unto the mountains of Kedar."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "וַיְמָאֲנוּ כָּל־גּוֹיֵי הָאֲרָצוֹת הָאֵלֶּה לִשְׁמֹעַ בְּקוֹל מֶלֶךְ אַשּׁוּר וְלֹא בָּאוּ לְעֶזְרָתוֹ בַּמִּלְחָמָה כִּי לֹא־יָרְאוּ מִפָּנָיו וְיָשִׁיבוּ אֶת־מַלְאָכָיו בְּחֶרְפָּה וָבוּז לְאַרְצָם:",
+          "english": "And all of the nations of those lands refused to hearken to the voice of the King of Assyria and they did not come to his aid in battle, for they were not afraid of him. And they rebuffed his ambassadors with disgrace and scorn to their land."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וַתִּבְעַר חֲמַת נְבוּכַדְנֶצַּר בְּכָל הָאֲרָצוֹת הָאֵלֶּה וַיִּשָּׁבַע בְּכִסְּאוֹ וּבְמַלְכוּתוֹ לְהִנָּקֵם בָּהֵן וּלְהַשְׁחִית כָּל־גְּבוּלֵי קִילִיקִיָא דַּמֶּשֶׂק וַאֲרָם:",
+          "english": "And the wrath of Nebuchadnezzar burned throughout all of these lands, and he swore on his throne and his kingdom to take vengeance on them, and to destroy all of the borders of Cilicia, Damascus and Aram."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "וּלְהַכּוֹת לְפִי־חֶרֶב כָּל יוֹשְׁבֵי עַמּוֹן וּמוֹאָב וְכָל אֶרֶץ יְהוּדָה וּמִצְרָיִם וְכֹל אֲשֶׁר בֵּין שְׁנֵי הַיַּמִּים בַּתָּוֶךְ:",
+          "english": "And to slay by the sword all of the inhabitants of Ammon and Moab, and all of the land of Judah and Egypt and all who are between the two seas in middle."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "וַיְהִי בִּשְׁנַת שְׁבַע־עֶשְׂרֵה לְמׇלְכוֹ וַיֵּצֵא עִם־כָּל־חֵילוֹ לִקְרַאת אַרְפַּכְשַׁד לַמִּלְחָמָה וַתֶּחֱזַק יָדוֹ וַיַּךְ אֶת־עַמּוֹ וְאֶת־רִכְבּוֹ וּפָרָשָׁיו לְפִי־חָרֶב:",
+          "english": "And it came to pass in the seventeenth year of his reign, that he went forth with all of his host toward Arpachshad for battle, and his hand overcame, and he slew his people and his chariots and his horsemen by the sword."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "וְאַחֲרֵי קַחְתּוֹ אֶת־כָּל־הֶעָרִים בָּא גַם לְאַחְמְתָא וְיִכְבֹּשׁ אֶת־הַמִּגְדָּלִים וַיַשֵּׁם אֶת־חוּצוֹת הָעִיר וְכָל תִּפְאַרְתָּהּ הָפַךְ לְחָרְבָה:",
+          "english": "And after he took all of the cities, he also came to Achmata, and he conquered the towers and made the streets of the city desolate, and all of its glory turned into waste."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "וְיִרְדֹּף אַחֲרֵי אַרְפַּכְשַׁד וַיַּדְבֵּק אוֹתוֹ בְּהַר רְעוּ וְיוֹרֵהוּ בְּחִצָּיו וַיְמִיתֵהוּ:",
+          "english": "And he was in hot pursuit of Arpachshad near the Mountains of Reu, and he shot him with his arrows and smote him."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "וְאַחֲרֵי־כֵן שָׁב עִם כָּל חֲיָלֵי צְבָאָיו לְנִינְוֵה וַיֵּשֶׁב שָׁם שָׂמֵחַ וְטוֹב לֵב וַיַּעַשׂ לָהֶם מִשְׁתֶּה עֶשְׂרִים וּמְאַת יוֹם:",
+          "english": "And afterwards he returned with all of the soldiers of his host to Nineveh, and he dwelt there happy and of good cheer, and he made for them a feast for one hundred and twenty days."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "verseCount": 29,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ויהי בשנת שמונה עשרה למלכו, בעשרים ושנים יום לחודש הראשון, ויערימו סוד בבית המלך לעשות נקמה בכל הגוים ההם כאשר דיבר.",
+          "english": "And it came to pass in the eighteenth year of his reign, in the twenty second day of the first month, that he convened a council in the palace to take vengeance against all of these nations as he had spoken."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "ויקרא המלך לכל שריו ועבדיו, ויגד להם את עצתו, ויספר להם את רשעת כל הגוים האלה.",
+          "english": "And the King called for all of his officers and his servants, and he told them his plan, and recounted to them the wickedness of all of these nations."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ויהי באומרם כולם להשמיד ולאבד את כל הגויים אשר לא שמעו בקול המלך, ויקרא לראש שרי צבאיו ולמשנהו להלופרנש, ויאמר אליו.",
+          "english": "And it came to pass when they were all saying to wipe out and destroy all of the nations that did not hearken to the voice of the King, that the King called his General and Viceroy Holofernes, and he said to him:"
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "כה אמר נבוכדנצר הגדול מלך כל הארץ.",
+          "english": "So said Nebuchadnezzar the Great, King over all the land."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "מהר ובחר לך חיל רגלי גיבורי כוח שנים עשר ריבוא, ופרשים שנים עשר אלף.",
+          "english": "Make haste and select for yourself one hundred and twenty thousand Elite Infantry and twelve thousand Cavalry."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "וצא למלחמה על כל הארצות אשר מים למלכותי, ואשר לא שמעו לקולי.",
+          "english": "And go out to war against all of the lands that are from the sea unto my Kingdom, and who have not hearkened to my voice."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ואמרת אליהם: ארצכם ומימיכם לי הם.",
+          "english": "And you shall say to them: \"Your lands and your seas are mine\"."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "הנה יצאתי באפי ובחמתי לקראתכם, וכיסיתי את עין ארצכם בהמון צבאותיי, ולהם אתננה לשלל.",
+          "english": "Behold I have gone forth with my anger and my wrath toward you, and have covered the appearance of your land with the multitude of my hosts, and I shall give it to them as spoil."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "הבקעות והנחלים ימלאו חלליכם, והנהרות יעכרו מפגרי מתיכם, וניפצתי את השבויים עד כנפות הארץ.",
+          "english": "The valleys and the streams shall be full of your slain, and the rivers shall be fouled from the corpses of your dead, and I shall scatter the captives unto the outskirts of the Earth."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "אתה תלך לפני ופרצת על כל גבולי ארצותם. והיה כי ייכנעו ועמדו תחת ידיך עד יום פוקדי עליהם.",
+          "english": "You shall go before me and burst forth over all the borders of their land. And it shall be, they will be subdued under your hand until the day of my visitation upon them."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וכי יתייצבו לפניך, והחרמת אותם לפי חרב, עינך לא תחוס עליהם, וכל הארץ תהי לבז.",
+          "english": "And should they take a stand against you, than you shall obliterate them by the sword. Your eye should not take pity on them, and all of the land shall become plunder."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "ועתה בי נשבעתי ובמלכותי, אם לא בידי אעשה כאשר דברתי.",
+          "english": "And now, by myself I have sworn, and by my Kingdom, that it is in my power to do as I have spoken."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "לכן מהר ועשה כאשר צוותיך, אל תפל דבר ממצוותי, ואחֵר לא תאחֵר.",
+          "english": "Therefore hasten and do as I have commanded you, fulfill my commands to the letter, and verily do not delay!"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "ויצא הלופרנש מאת פני המלך, וישמע את כל שרי החיל וכל פקידי ארץ ארם, ויפקוד את אנשי צבאו, כולם גיבורי חיל כאשר צווה המלך.",
+          "english": "And Holofernes departed from the presence of the King. And he informed all of the officers of the Army and all of the commanders of the Land of Aram. And he commanded the men of his Host, all of them them valiant warriors, as the King had commanded."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "ויהיו פקודיהם למספרם שנים עשר ריבוא איש רגלי, ופרשים נושאי קשת שנים עשר אלף.",
+          "english": "And their command was one hundred and twenty thousand infantry and twelve thousand horsemen equipped with bows."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "ויערוך אותם כמשפט, ויעברו לפניו, וגמלים וחמורים עימהם עד אין מספר נושאים את כליהם, וגם צאן ובקר מקנה רב מאד.",
+          "english": "And he arrayed them as was the custom, and they passed before him. There were innumerable amounts of camels and donkeys with them, carrying their baggage. Also an exceeding amount of flocks of sheep and herds of cattle."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "וגם בר ואוכל להחיות כל ההמון הזה, וכסף וזהב רב מאוצר המלך.",
+          "english": "And also grain and provisions to sustain all of this great multitude, and an abundance of gold and silver from the treasury of the King."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "ויסע עם כל החיל הזה וסוס ורכב ופרשים לפני המשנה, ויכסו את עין הארץ, וילכו ימה.",
+          "english": "And he traveled with this entire army; horse, chariot and rider before the Viceroy, and they covered the appearance of the land, and went towards the sea."
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "וגם ערב נסע אתם כארבה וכחול על פני האדמה אשר לא יספר מרוב.",
+          "english": "And also camp followers traveled with them like locusts and like sand over the face of the of the earth, which were innumerable."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "וייסע מנינוה דרך שלשת ימים, עד ערבות בקתילש. ויחן תחת ההר משמאל לקיליקיא.",
+          "english": "And he traveled from Nineveh a journey of three days, until the plains of Bectileth and he encamped under the mountains to the north of Cilicia."
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "ומשם נסע עם כל מחנהו ורכבו ופרשיו על ההרים.",
+          "english": "And from there he traveled with all of his camp, and his chariots and horsemen into the highlands."
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "ויהפוך את פוט ולוד ויַשחת כל בני תרשיש ואת בני ישמעאל היושבים בקצה המדבר מנגב לחילון.",
+          "english": "And he overturned Put and Lud and destroyed all of the Children of Tarshish, and the Children of Ishmael who dwell at the edge of the desert, south of Cheleon."
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "ויעבר את נהר פרת, וילך פדנה ארם, ויהרוס כל עיר מבצר מנחל ארנון ועד הים.",
+          "english": "And he crossed the Euphrates River and went to Padan Aram, and destroyed all the fortified cities from the Brook of Arnon unto the Sea."
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "ויכבוש את כל גבולי קיליקיא, וכל המתייצבים לפניו הכה לפי חרב. ויבוא עד הרי יפת אשר מנגב לארץ ערב.",
+          "english": "And he conquered all of the borders of Cilicia, and all those who stood before him he slew by the sword. And he came to the mountains of Japheth which are opposite the land of Arabia."
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "ויסובב כל יושבי מדין, ויצת אש באוהליהם, וישחת את מגרשיהם.",
+          "english": "And he surrounded all of the inhabitants of Midian, and set fire to their tents, and destroyed their pastureland."
+        },
+        {
+          "verseNumber": 26,
+          "hebrew": "ויהי בעת הקציר וירד לדמשק, ויבער את קָמַת העיר, ויחרם כל צאן ובקר.",
+          "english": "And it came to pass at the time of the harvest, that he went down to Damascus and burned the standing grain of the city, and eradicated all of the sheep and cattle."
+        },
+        {
+          "verseNumber": 27,
+          "hebrew": "את העיר שללו ויבוזו ואת שדותיה השחיתו, וכל איש בחור הכו לפי חרב.",
+          "english": "The city, they plundered and looted, and its fields, they destroyed.  And every man of fighting age, they slew by the sword."
+        },
+        {
+          "verseNumber": 28,
+          "hebrew": "ותיפול אימתו על כל יושבי חבל הים, ועל יושבי צור וצידון ועקן וימנה.",
+          "english": "And his dread fell over all the inhabitants of the coastal region, upon the inhabitants of Tyre and Sidon, Acco and Jamnia."
+        },
+        {
+          "verseNumber": 29,
+          "hebrew": "וגם יושבי אשדוד ואשקלון יראו וחרדו מפניו.",
+          "english": "And also the inhabitants of Ashdod and Ashkelon were afraid, and trembled before him."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "verseCount": 11,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וְיִשְׁלְחוּ אֵלָיו מַלְאָכִים לִקְרֹא לוֹ לְשָׁלוֹם וַיֹּאמְרוּ:",
+          "english": "And they sent envoys  to him to sue for peace and they said:"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "עֲבָדִים אֲנַחְנוּ לַמֶּלֶךְ הָאַדִּיר נְבוּכַדְנֶצַּר:",
+          "english": "Servants are we, to the noble King Nebuchadnezzar."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "הִנֵּה נָפַלְנוּ לְפָנֶיךָ אַרְצָה עֲשֵׂה עִמָּנוּ כַּאֲשֶׁר יִיטַב בְּעֵינֶיךָ:",
+          "english": "Behold we have fallen before you to the ground, do with us as you see fit."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "כֹּל אֲשֶׁר לָנוּ לְךָ הוּא חַוֹּתֵינוּ וְעָרֵינוּ שָׂדֵינוּ וּמִקְנֵנוּ גְּדֵרוֹתֵינוּ וְאָהֳלֵנוּ לְפָנֶיךָ הֵם לַעֲשׂוֹת בָּהֶם כְּפִי אַוַּת נַפְשְׁךָ:",
+          "english": "All that is ours is yours. Our farmsteads and cities, our cattle and sheep folds and our tents are before you, to do with as you please."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "כָּל־הֶעָרִים וְיֹשְׁבֵיהֶם בְּיָדְךָ נִתָּנוּ בֹּא־נָא אֵלֵינוּ וּרְדֵה־בָנוּ כַּטּוֹב בְּעֵינֶיךָ:",
+          "english": "All of the cities and their inhabitants are given into your hands, please come to us and go down with us as you please."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "וַיְהִי בְּדַבְּרָם אֵלָיו כַּדְּבָרִים הָאֵלֶּה וַיֵּרֶד עִם־חֵילוֹ מִן־הָהָר אֵלֵיהֶם אֶל מוּל שְׂפַת הַיָּם וַיִּתֵּן מִשְׁמָר בְּכָל עִיר מִבְצָר וְאֵת־מֵיטַב הָעָם בָּחַר לְאַנְשֵׁי צְבָאוֹ:",
+          "english": "And it came to pass when they spoke to him in these manner of words, that he went down with his army from the highlands towards them, toward the banks of the sea, and he placed a garrison in every fortified city, and the best of the people, he drafted as auxiliaries."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וְכָל הָאָרֶץ מִסָּבִיב בָּאוּ לִקְרָאתוֹ וַיַאַסְפֻהוּ בַחֲלִילִים וּבְתֻפִּים וּבִמְחֹלוֹת:",
+          "english": "And all of the land all around went forth towards him with flutes and drums and dances."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "וְהוּא הִשְׁחִית כָּל־גְּבוּלֵי הָאָרֶץ וַיַּכְרֵת אֶת אֲשֵׁרֵיהֶם:",
+          "english": "But he destroyed all of the borders of the land and cut down their Asherah Poles."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "כִּי כֵן גָּמַר בְּלִבּוֹ לְהַשְׁמִיד כָּל־אֱלֹהֵי הָאֲרָצוֹת לְבַעֲבוּר כָּל־הָעַמִּים יִשְׁתַּחֲווּ לִנְבוּכַדְנֶצַּר וְכָל לָשׁוֹן תִּקְרָא בִשְׁמוֹ:",
+          "english": "For so he set out in his heart to wipe out all of the gods of the lands, in order that all of the peoples will bow down to Nebuchadnezzar, and every tongue will call his name."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "מִשָּׁם נָסַע לִקְרַאת יִזְרְעֶאל קָרוֹב לְדוֹתָן נֹכַח הָרֵי הַמָּצוֹר אֲשֶׁר לִיהוּדָה:",
+          "english": "From there he traveled towards Jezreel near Dothan, opposite the fortified mountains of Judah."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וַיַּחַן אֶת־מַחֲנֵהוּ בֵּין יָגְבֳּהָה וּבֵין עִיר הַשִּׁטִּים וַיֵּשֶׁב שָׁם חוֹדֶשׁ יָמִים עַד הֵאָסֵף כָּל־רְכוּשׁ הַמַּחֲנוֹת:",
+          "english": "And he camped his encampment between Jogbehah and Ebel-Shittim, and he dwelt there a full month until all the forage was gathered to the camps."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "verseCount": 18,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וַיְהִי כִשְׁמֹעַ בְּנֵי־יִשְׂרָאֵל אֲשֶׁר בְּאֶרֶץ יְהוּדָה אֵת כָּל אֲשֶׁר עָשָׂה הַלוֹפֶרְנֵשׂ שַׂר־צְבָא אֲרָם לְכָל־הָעַמִּים מִסָּבִיב:",
+          "english": "Now the children of Israel, who lived in Judea, heard all that Holofernes the chief captain of Nebuchadnezzar king of the Assyrians had done to the nations,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "כִּי הֶחֱרִיב אֶת־בָּתֵּי אֱלֹהֵיהֶם וַיָּבֹז אוֹתָם וְיִּירְאוּ בִּמְאֹד מְאֹד:",
+          "english": "and in what way he had pillaged all their temples and brought them to nothing."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "כִּי אָמְרוּ פֶּן־יַעֲשֶׂה לִירוּשָׁלַיִם וּלְבֵית יְיָ כַּאֲשֶׁר עָשָׂה לְכָל הַגּוֹיִם:",
+          "english": "Therefore they were exceedingly afraid of him, and were troubled for Jerusalem and for the temple of the Lord their God."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "כִּי לֹא אָרְכוּ הַיָּמִים אֲשֶׁר שָׁבוּ מִן־הַגּוֹלָה וְכִי הִתְאַסְּפוּ כָּל אַנְשֵׁי יְהוּדָה לְחַטֵּא אֶת־כְּלֵי הַקּוֹדֶשׁ וְאֵת הַמִּזְבֵּחַ:",
+          "english": "For they were newly-returned from the captivity, and all the people of Judea had only recently gathered together; and the vessels and the altar and the house had been sanctified after the profanation."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "וַיִּשְׁלְחוּ אֲנָשִׁים אֶל גְּבוּלֵי שֹׁמְרוֹן וְאֶל הֶעָרִים בֵּית־חֹרוֹן בַּלְמוֹן יְרִיחוֹ חוֹבָה וְיַעְזֵר וְאֶל עֵמֶק שָׁלֵם וְיָשִׂימוּ מַצָּב עַל כָּל־רָאשֵׁי הֶהָרִים הַגְּבוֹהִים:",
+          "english": "Therefore they sent into all the coasts of Samaria and the villages, and to Bethoron and Belmen and Jericho, and to Choba and Esora, and to the valley of Salem;"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "וַיִּבְנוּ חֹמוֹת לְכָל עָרֵי הַפְּרָזִי וַיִקְצְרוּ אֶת־קְצִיר הָאָרֶץ וַיִּתְּנוּ אֹכֶל בְּכָל הֶעָרִים:",
+          "english": "and they captured for themselves in advance all the tops of the high mountains, and fortified the villages which were in them, and stored up food as provisions for war, for their fields had been recently reaped."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וְאֶלְיָקִים הָיָה כֹּהֵן הַגָּדוֹל בָּעֵת הַהִיא בִּירוּשָׁלָיִם:",
+          "english": "Also, Joacim the high priest, who was in those days in Jerusalem,"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "וַיִּשְׁלַח סְפָרִים אֶל יֹשְׁבֵי בְתוּל וּבֵית שֶׁמֶשׁ אֲשֶׁר עַל פְּנֵי יִזְרְעֶאל קָרוֹב לְעַרְבוֹת דּוֹתָיִם:",
+          "english": "wrote to those who lived in Bethulia and Betomestham, which is opposite Esdraelon toward the open country near Dothaim,"
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "וַיְצַוֵּם לִשְׁמֹר אֵת מַעֲלוֹת הֶהָרִים אֲשֶׁר עַל דֶּרֶךְ יְהוּדָה:",
+          "english": "charging them to hold the passages of the hill country;"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "כִּי אָמַר אִם שָׁמֹר תִּשְׁמְרוּ אֶת־הֶהָרִים הָהֵם וַעֲצַרְתֶּם בִּמְתֵי מְעָט אֶת־הָאוֹיֵב מִבְּקֹעַ בָּאָרֶץ כִּי צַר הַדֶּרֶךְ לִשְׁנֵי אֲנָשִׁים עֲבוֹר יָחַד:",
+          "english": "for through them there was an entrance into Judea, and it was easy to stop those who would come up, because the passage was narrow, for two men at the most."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וַיַּעֲשׂוּ בְנֵי־יִשְׂרָאֵל כְּכֹל אֲשֶׁר צִוָּה אֹתָם אֶלְיָקִים וְזִקְנֵי הָעָם אֲשֶׁר בִּירוּשָׁלָיִם:",
+          "english": "And the children of Israel did as Joacim the high priest had commanded them, with the elders of all the people of Israel, who lived at Jerusalem."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "וְכָל־הָעָם צָעֲקוּ אֶל יְיָ בְּכָל לְבָבָם וַיַּעְנוּ אֶת־נַפְשׁוֹתָם הֵם וּנְשֵׁיהֶם וְטַפָּם וְאֶת־נֶפֶשׁ בְּהֶמְתָם:",
+          "english": "Then every man cried to God with great fervor, and they humbled their souls with great vehemence,"
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "מִשָּׂכִיר וְעַד בֶּן־נֵכָר וְעַד־עֶבֶד־אִישׁ מִקְנַת כֶּסֶף חָגְרוּ שַׂק עַל־מָתְנֵיהֶם:",
+          "english": "and both they and their wives and their children, and their cattle, and every stranger and hired hand, and their servants bought with money, put sackcloth on their loins."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "כָּל יוֹשְׁבֵי יְרוּשָׁלַיִם אֲנָשִׁים וְנָשִׁים וְטַף נָפְלוּ עַל פְּנֵיהֶם לִפְנֵי הֵיכַל יְיָ וַיִזְרְקוּ אֵפֶר עַל רֹאשָׁם וַיִּפְרְשׂוּ שַׂק עַל הַמִּזְבֵּחַ:",
+          "english": "Thus every man, and the women and little children, and the inhabitants of Jerusalem, fell before the temple and cast ashes upon their heads and spread out their sackcloth before the face of the Lord; they also put sackcloth around the altar."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "וְיִתְחַנְּנוּ אֶל־יְיָ אֱלֹהֵי יִשְׂרָאֵל וַיֹּאמְרוּ אָנָּא יְיָ אַל תִּתֵּן אֶת־נָשֵׁינוּ וְטַפֵּינוּ לְשָׁלָל אֶת־עָרֵי נַחֲלָתֵנוּ לְשַׁמָּה וְאֵת מִקְדָּשְׁךָ לְטֻמְּאָה וּלְשִׁמְצָה לְשַׂמֵּחַ בָּם גּוֹיִים:",
+          "english": "And they cried to the God of Israel, all with one consent earnestly, so that he would not give over their children as prey and their wives for a spoil and the cities of their inheritance to destruction and the sanctuary to profanation and reproach, for the nations to rejoice over them."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "וְיַרְא יְיָ אֶת־עָנְיָם וַיִשְׁמַע אֶת צַעֲקָתָם:",
+          "english": "So God heard their prayers and looked upon their afflictions;"
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "וְכָל־אַנְשֵׁי יְהוּדָה וִירוּשָׁלַיִם לֹא אָכְלוּ וְלֹא שָׁתוּ יָמִים רַבִּים:",
+          "english": "for the people fasted many days in all Judea and Jerusalem before the sanctuary of the Lord Almighty."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "וְגַם אֶלְיָקִים הַכֹּהֵן הַגָּדוֹל וְכָל־הַכֹּהֲנִים הַמְּשָׁרְתִים אֶת־פְּנֵי יְיָ לְבוּשֵׁי־שַׂק וָאֵפֶר עַל רֹאשָׁם הִקְרִיבוּ עֹלוֹת וּזְבָחִים וְאֶת־נִדְרֵי הָעָם וְאֶת־נִדְבוֹתֵיהֶם וַיִתְפַּלְּלוּ לַיְיָ אֱלֹהִים לַעֲשׂת חֶסֶד עִם עַמּוֹ יִשְׂרָאֵל:",
+          "english": "And Joacim the high priest, and all the priests who stood before the Lord and those who ministered to the Lord, had their loins dressed with sackcloth, and offered the daily burnt offerings with the vows and free gifts of the people, and had ashes on their liturgical headdresses; and they cried to the Lord with all their power, so that he would look upon all the house of Israel graciously."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "verseCount": 22,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וְיֻגַּד לְהֹלוֹפֶרְנֵשׂ שַׂר צְבָא אַשּׁוּר לֵאמֹר:",
+          "english": "Then was it declared to Holofernes, the chief captain of the army of Assur,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "הֵן בְּנֵי־יִשְׂרָאֵל אָסְפוּ חָיִל וַחֲמוּשִׁים הֵם לְהִתְיַצֵּב לְפָנֶיךָ:",
+          "english": "that the children of Israel had prepared for war"
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "וְגַם שָׂמוּ מַצָּב עַל רָאשֵׁי הֶהָרִים לְשִׂטְנְךָ בַדָּרֶךְ וּמוֹקְשִׁים שָׁתוּ עֲלֵי־נְתִיבוֹת:",
+          "english": "and had shut up the passages of the hill country and had fortified all the tops of the high hills and had laid impediments in the open plains."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "וַיִּחַר אַפּוֹ וַיִּקְרָא לְשָׂרֵי עַמּוֹן וּמוֹאָב וּלְכָל הַפְּקִידִים אֲשֶׁר עַל חֶבֶל הַיָּם וַיֹּאמֶר אֲלֵיהֶם:",
+          "english": "Because of this, he was very angry, and he called all the princes of Moab and the captains of Ammon and all the governors of the sea coast,"
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "הַגִּידוּ־לִי אַנְשֵׁי כְנַעַן מִי־הָעָם הַזֶּה הַיּוֹשֵׁב בֶּהָרִים מֶה־עָרֵיהֶם וּמַה־כּוֹחָם מִי־מַלְכָּם וּמֶה־חֵילָם וּמִי־הֵם רָאשֵׁי צְבָאָם:",
+          "english": "and he said to them, \"Tell me now, you sons of Canaan, who is this people, who dwell in the hill country, and which cities do they inhabit, and what is the multitude of their army, and wherein is their power and strength, and what king or captain of their army is set over them,"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "עַל־מֶה פָּנוּ עֹרֶף כִּי לֹא־בָאוּ לִקְרָאתִי מִכָּל־יוֹשְׁבֵי חֶבֶל הַיָּם:",
+          "english": "and why are they resolved not to come and meet me, more so than all the inhabitants of the west?\""
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "וְיַעַן אַכְיוֹר רֹאשׁ צְבָא בְּנֵי־עַמּוֹן וַיֹּאמַר:",
+          "english": "Then Achior, the captain of all the sons of Ammon, said,"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "יִשְׁמַע־נָא אֲדוֹנִי אֶת דִּבְרֵי עַבְדּוֹ וְהִגַּדְתִּי־לָךְ אֶת מִשְׁפַּט הָעָם הַזֶּה הַיּוֹשֵׁב בֵּין הֶהָרִים וּדְבַר־שֶׁקֶר לֹא־יֵצֵא מִפִּי־עַבְדֶּךָ:",
+          "english": "\"Let my lord now hear a word from the mouth of your servant and I will declare to you the truth concerning this people, who dwell near you and inhabit the hill countries, and no lie will come out of the mouth of your servant."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "הִנֵּה הָעָם הַזֶּה יָצָא מֵאֶרֶץ כַּשְׂדִּים וַיֵּלְכוּ לָגוּר בְּפַדַּן־אֲרָם יַעַן כִּי לֹא אָבוּ לַעֲבֹד אֶת־אֱלֹהֵי אֲבוֹתָם בְּאֶרֶץ כַּשְׂדִּים:",
+          "english": "This people is descended from the Chaldeans, and they resided temporarily and until recently in Mesopotamia, because they would not follow the gods of their fathers, who were in the land of Chaldea."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "וַיַּעַזְבוּ אֶת־חֻקּוֹת אֲבוֹתֵיהֶם לָלֶכֶת לַעֲבוֹד אֶת־יְיָ אֱלֹהֵי הַשָּׁמַיִם אֲשֶׁר הִכִּירוּ וְיַעַן כִּי־גֹּרְשׁוּ מִשָּׁם נִמְלְטוּ פַּדֶּנָה־אֲרָם וַיָּגוּרוּ־שָׁם יָמִים רַבִּים:",
+          "english": "For they left the way of their ancestors and worshipped the God of heaven, the God they knew; so they cast them out from the face of their gods, and they fled into Mesopotamia and lodged there for many days."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וַיְהִי כַּאֲשֶׁר צִוָּה אֱלֹהֵיהֶם אוֹתָם לָצֵאת מֵאֶרֶץ מְגוּרֵיהֶם לָלֶכֶת אַרְצָה כְּנַעַן וַיֵּשְׁבוּ שָׁם וַיְהִי לָהֶם רְכוּשׁ רַב בְּכֶסֶף וּבְזָהָב וּבְמִקְנֶה:",
+          "english": "Then their God commanded them to depart from the place where they lived and to go into the land of Canaan; there they lived and were increased with gold and silver and with very much cattle."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "וַיְהִי כִּי־חָזַק הָרָעָב בָּאָרֶץ וַיֵּרְדוּ מִצְרָיְמָה וַיִּרְבּוּ וַיַּעַצְמוּ־שָׁם בִּמְאֹד מְאֹד עַד אֲשֶׁר לֹא יִסָּפְרוּ מֵרֹב:",
+          "english": "But when a famine covered all the land of Canaan, they went down into Egypt and lodged there; meanwhile they were nourished and became a great multitude there, so that one could not number their nation."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "וַיְהִי כִּי־הִכְבִּיד מֶלֶךְ מִצְרַיִם אֶת־עֻלּוּ עַל הָעָם הַזֶּה וַיִתְחַכֵּם־לוֹ לַעֲשׂוֹתָם לַעֲבָדִים:",
+          "english": "Therefore the king of Egypt rose up against them, and he dealt subtly with them and brought them low with labor in brick and made them slaves."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "וַיִּצְעֲקוּ אֶל יְיָ אֱלֹהֵיהֶם וַיְנַגַּע אֶת־כָּל־אֶרֶץ מִצְרַיִם נְגָעִים גְּדוֹלִים אֲשֶׁר לֹא־יָכְלוּ לְהֵרָפֵא וַיְגָרְשׁוּ הַמִּצְרִים אֹתָם:",
+          "english": "Then they cried to their God and he smote all the land of Egypt with incurable plagues, so the Egyptians cast them out of their sight."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "וַיְיָ הוֹבִישׁ אֶת־מֵי־יַם־סוּף לִפְנֵיהֶם וַיּוֹלִיכֵם אֶל הַר סִינַי וּלְקָדֵשׁ בַּרְנֵעַ וַיּוֹרֶשׁ אֶת כָּל יוֹשְׁבֵי הַמִּדְבָּר לִפְנֵיהֶם וַיֵּשְׁבוּ בְּאֶרֶץ הָאֱמוֹרִי וַיַּחֲרִימוּ כָל־בְּנֵי־חֶשְׁבּוֹן:",
+          "english": "And God dried the Red Sea before them and brought them to mount Sinai and Kadesh-Barnea, and cast out all who lived in the wilderness. So they lived in the land of the Amorites, and by their strength they destroyed all those who were of Esebon,"
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "אַחֲרֵי־כֵן עָבְרוּ אֶת־הֲיַרְדֵּן וַיִּרְשׁוּ אֶת־כָּל־אֶרֶץ הָהָר וַיְגָרְשׁוּ אֶת־כָּל יוֹשְׁבֵי כְנָעַן וְאֶת־הַפְּרִיזִי וְאֶת־הַיְבוּסִי וְאֶת־הַגִּרְגָּשִׁי וְכָל ישְׁבֵי שְׁכֶם וַיֵּשְׁבוּ־שָׁם יָמִים רַבִּים:",
+          "english": "and passing over the Jordan they possessed all the hill country. And they cast out before them the Canaanite, the Pherezite, the Jebusite, and the Sychemite, and all the Gergesites, and they lived in that country for many days."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "וְכָל עֵת אֲשֶׁר לֹא־חָטְאוּ לֵאלֹהֵיהֶם הֵיטֵב הֵיטִיב עִמָּהֶם כִּי יְיָ שׂוֹנֵא כָל־עָוֶל הָיָה בְּעֶזְרָם:",
+          "english": "While they did not sin before their God, they prospered, because the God who hates iniquity was with them."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "וַיְהִי כִּי־סָרוּ מִן הַדֶּרֶךְ אֲשֶׁר צִוָּה אוֹתָם לָלֶכֶת בָּהּ וַיִּמְשְׁלוּ בָהֶם אוֹיְבֵיהֶם וַייָ הִשְׁלִיךְ אוֹתָם אֶל אֶרֶץ אֲחֶרֶת וַיִּהְיוּ לַעֲבָדִים:",
+          "english": "But when they departed from the way which he appointed for them, they were destroyed in many battles very badly and were led captive into a land which was not their own,"
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "מִקְדַּשׁ אֱלֹהֵיהֶם הוּרַד לָאָרֶץ וְכָל־עָרֵיהֶם נָפְלוּ בְּיַד אוֹיְבֵיהֶם:",
+          "english": "and the temple of their God was cast to the ground, and their cities were taken by the enemies."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "אַךְ עַתָּה כִּי־שָׁבוּ אֶל יְיָ אֱלֹהֵיהֶם וְיָשׁוּבוּ גַּם מֵאֶרֶץ שִׁבְיָם אֶל עִיר קָדְשֵׁיהֶם אֶל יְרוּשָׁלָיִם וַיִּרְשׁוּ אֶת־אֶרֶץ הָהָר אֲשֶׁר הָיְתָה שְׁמָמָה מֵאֵין יוֹשֵׁב:",
+          "english": "But now are they returned to their God and have returned from the places where they were scattered and have possessed Jerusalem, where their sanctuary is, and are seated in the hill country, for it had been desolate."
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "לָכֵן יִדְרֹשׁ נָא אֲדוֹנִי לָעָם הַזֶּה לָדַעַת אִם יֵשׁ־בּוֹ עָוֹן. כִּי אִם־חָטָא לֵאלֹהָיו עָלֹה נַעֲלֶה וְנוּכַל לָהֶם:",
+          "english": "Now therefore, my lord and governor, if there is any ignorance in this people and they sin against their God, let us consider that this will be their ruin, and let us go up and we will overcome them."
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "אוּלָם אִם לֹא־חָטְאוּ לוֹ עָבֹר יַעֲבֹר אֲדוֹנִי כִּי־יְיָ אֱלֹהֵיהֶם יִלָּחֵם לָהֶם וְהָיִינוּ לְחֶרְפָּה לְכָל־הָאָרֶץ:",
+          "english": "But if there is no iniquity in their nation, let my lord now pass by, lest their Lord defend them and their God be for them, and we become a reproach before all the world."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "verseCount": 28,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וִיהִי כַּאֲשֶׁר כִּלָּה אַכְיוֹר לְדַבֵּר וַתִּבְעַר־בּוֹ חֲמַת כָּל־הַנִּצָּבִים מִסָּבִיב לָאֹהֶל:",
+          "english": "And when Achior had finished these sayings, all the people standing around the tent murmured;"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "וְשָׂרֵי נְבוּכַדְנֶצַּר וְרָאשֵׁי מוֹאָב וְיוֹשְׁבֵי הַיָּם בִּקְּשׁוּ לְשַׁלַּח יָדָם בּוֹ לַהֲמִיתוֹ וְיֹאמְרוּ:",
+          "english": "and the chief men of Holofernes, and all who lived by the seaside and in Moab, were saying that he should kill him."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "הֲיָרֹא נִירָא לַעֲלוֹת אֶל בְּנֵי־יִשְׂרָאֵל וּלְהִלָּחֵם בָּם וְאִם יֵשׁ כֹּח וּגְבוּרָה בָּהֶם לַעֲרֹךְ מַעֲרָכָה לִקְרָאתֵנוּ:",
+          "english": "For they said, \"We will not be afraid of the faces of the children of Israel, for we see that they are a people who have no strength or power for a strong battle."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "לָכֵן עָלֹה נַעֲלֶה אֲלֵיהֶם אֲדוֹנִי הֹלוֹפֶרְנֵשׂ וְכֹל הָעָם יִהְיֶה לָנוּ לְשָׁלָל:",
+          "english": "Now therefore, lord Holofernes, we will go up and they will be a prey to be devoured by all your army.\""
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "וַיְהִי כִּי שָׁקְטָה תְּלוּנַת כָּל־הַנִּצָּבִים וַיֹּאמֶר הֹלוֹפֶרְנֵשׂ רֹאשׁ צְבָא אַשּׁוּר לְעֵינֵי פְּקִידֵי מוֹאָב וּלְעֵינֵי כָל־בְּנֵי־נֵכָר לְאַכְיוֹר לֵאמֹר:",
+          "english": "And when the tumult of men who were around the council were quiet, Holofernes, the chief captain of the army of Assur, said to Achior and all the Moabites in front of all the company of the other nations:"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "מִי אַתָּה אַכְיוֹר שְׂכִיר אֶפְרַיִם לְהִתְנַבֵּא לְעַם יְרוּשָׁלַיִם לֵאמֹר כִּי לֹא־נוּכַל לָהֶם וְכִי אֱלֹהֵיהֶם נִלְחָם לָמוֹ הֲיֵשׁ אֱלוֹהַּ בִּלְתִּי נְבוּכַדְנֶצַּר:",
+          "english": "And who are you, Achior and the hired hands of Ephraim, that you would prophesy against us as today and would say that we should not make war with the people of Israel because their God will defend them? And who is God but Nebuchadnezzar?"
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "הוּא יִשְׁלַח אֶת־חֵילוֹ עֲלֵיהֶם וְיַשְׁמִידֵם מֵעַל־פְּנֵי־הָאֲדָמָה וֵאלֹהֵיהֶם לֹא יַצִּילֵם מִיָּדֵנוּ:",
+          "english": "He will send his power and will destroy them from the face of the earth and their God will not deliver them;"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "וַאֲנַחְנוּ עַבְדֵי נְבוּכַדְנֶצַּר נְכַלֵּם כֻּלָּם כְּאִישׁ אֶחָד וְלֹא־יִתְיַצְּבוּ לִפְנֵי שַׁעֲטַת הַסּוּסִים אֲשֶׁר נִשְׁלַח לָבוֹא עֲלֵיהֶם:",
+          "english": "but we, his servants, will destroy them as if they were one man; for they are not able to withstand the power of our horses."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "כָּל־הַרְרֵיהֶם נַשְׁכִּיר מִדָּם וְכָל־שַׁדְמוֹתֵיהֶם יִמְלְאוּ פִגְרֵי מֵתֵיהֶם כִּי לֹא יַעַמְדוּ לְפָנֵינוּ וְכָל־הָעָם כָּלֹה יִכְלֶה:",
+          "english": "For with them, we will tread them under foot, and their mountains will be drunken with their blood and their fields will be filled with their dead bodies and their footsteps will not be able to stand before us, for they will utterly perish,"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "כִּי כֹה אָמַר נְבוּכַדְנֶצַּר מֶלֶךְ כָּל־הָאָרֶץ אַל־יִפֹּל דָּבָר מִכֹּל אֲשֶׁר דִּבַּרְתִּי:",
+          "english": "as king Nebuchadnezzar, lord of all the earth, has said. And he said, 'None of my words will be in vain.'"
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "וְאַתָּה אַכְיוֹר שְׂכִיר עַמּוֹנִי יַעַן כִּי הִתְנַבֵּאתָ הַיּוֹם לְבָשְׁתֶּךָ לֹא תִּרְאֶה פָּנַי עַד יוֹם הִנָּקְמִי בְּגֹרְשֵׁי מִצְרָיִם:",
+          "english": "And you, Achior, a hired hand of Ammon, who has spoken these words on the day of your iniquity, will see my face no more from this day forward, until I take vengeance on this nation which came out of Egypt."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "וְהָיָה בְּשׁוּבִי מֵרְדוֹף אַחֲרֵיהֶם וְנָפַלְתָּ בְּתוֹךְ חַלְלֵיהֶם בְּמַדְקְרוֹת חֶרֶב צְבָאִי:",
+          "english": "And then the sword of my army and the multitude of those who serve me will pass through your sides, and you will fall among their slain, when I return."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "וְעַתָּה אֲצַוֶּה אֶת־עֲבָדַי לַהֲבִיאֲךָ אֶל אַחַד הַמְּקוֹמוֹת עַל הֶהָרִים אֲשֶׁר נַעֲלֶה שָׁמָּה:",
+          "english": "Now therefore, my servants will bring you back into the hill country and will set you in one of the cities of the passages;"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "וְאִם תֹּאמַר בִּלְבָבְךָ כִּי לֹא־יִפְּלוּ תַחַת יָדִי גַּם פָּנֶיךָ לֹא־יִפּוֹלוּן כִּי לֹא־תָמוּת כִּי אִם עִמָּהֶם:",
+          "english": "and you will not perish, until you are destroyed with them. And if you persuade yourself in your mind that they will be taken, do not let your countenance fall;"
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "כֹּה דִּבַּרְתִּי אַף־אָנִי וּדְבָרַי לֹא יָשׁוּבוּ רֵיקָם:",
+          "english": "I have spoken it and none of my words will be in vain.\""
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "וַיְצַו הֹלוֹפֶרְנֵשׂ אֶת־עֲבָדָיו אֲשֶׁר אִתּוֹ בָּאֹהֶל לִתְפֹּס אֶת אַכְיוֹר וְלַהֲבִיאֵהוּ אֶל־בְּתוּל לָתֵת אוֹתוֹ בְּיַד בְּנֵי־יִשְׂרָאֵל:",
+          "english": "Then Holofernes commanded his servants, who served in his tent, to take Achior and bring him to Bethulia and deliver him into the hands of the children of Israel."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "וַיֹּאחֲזוּ אוֹתוֹ וְיוֹלִיכוּהוּ מִחוּץ לַמַּחֲנֶה וַיַּעֲלוּהוּ מִן־הָעֲרָבָה אֶל אַחַד הֶהָרִים מְקוֹם בְּאֵרוֹת מַיִם מִתַּחַת לִבְתוּל:",
+          "english": "So his servants took him and brought him out of the camp into the plain, and they went from the midst of the plain into the hill country, and they came to the fountains which were under Bethulia."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "וַיְהִי כִּרְאוֹת אַנְשֵׁי הָעִיר אוֹתָם מֵרֹאשׁ הָהָר וַיֵּצְאוּ מִן־הָעִיר וּקְלָעִים בְּיָדָם וַיְקַלְעוּ בַּאֲבָנִים לְעָצְרָם מֵעֲלוֹת אֲלֵיהֶם:",
+          "english": "And when the men of the city saw them, they took up their weapons and went out of the city to the top of the hill, and every man who was armed with a sling kept them from coming up by casting stones against them."
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "וַיִרְאוּ אַנְשֵׁי הֹלוֹפֶרְנֵשׂ וַיֵּרְדוּ מִן־הָהָר וַיֶאֶסְרוּ אֶת־אַכְיוֹר בַּחֲבָלִים וַיַּשְׁלִיכֻהוּ לְרֶגֶל הָהָר וַיָּשׁוּבוּ לַאֲדוֹנֵיהֶם:",
+          "english": "Nevertheless, having gotten secretly under the hill, they bound Achior and threw him down, and they left him at the foot of the hill and returned to their lord."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "וַיֵּרְדוּ בְּנֵי־יִשְׂרָאֵל אֵלָיו מִן־הָהָר וַיִּפַתְּחוּ אֶת־מוֹסְרוֹתָיו וַיְבִאֻהוּ הָעִירָה וַיַעֲמִידוּהוּ לִפְנֵי רָאשֵׁי הָעִיר:",
+          "english": "But the Israelites descended from their city and came to him, and they freed him and brought him to Bethulia, and presented him to the governors of the city,"
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "וְרָאשֵׁי בְּתוּל הָיוּ בָּעֵת הַהִיא עֻזִּיָּה בֶּן־מִיכָה לְמַטֵּה שִׁמְעוֹן וְכַבְּרִי בֶּן־עָתְנִיאֵל וְכַרְמִי בֶּן־מַלְכִּיאֵל:",
+          "english": "who were in those days Uzziah the son of Micah of the tribe of Simeon, and Chabris the son of Gothoniel, and Charmis the son of Melchiel."
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "וַיִּקְרְאוּ לְכֹל זִקְנֵי הָעִיר וַיִּתְקַבְּצוּ כָּל־אַנְשֵׁי הָעִיר אֲנָשִׁים וְנָשִׁים וָטָף וַיַּעֲמִידוּ אֶת־אַכְיוֹר בְּקֶרֶב כָּל־הָעָם:",
+          "english": "And they called together all the elders of the city, and all their youth ran together, and their women, to the assembly, and they set Achior in the midst of all their people."
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "וַיִּשְׁאָלֵהוּ עֻזִּיָּה לֵאמֹר מַה־זֹּאת וְעַל־מַה־זֹּאת:",
+          "english": "Then Uzziah asked him what had happened."
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "וַיְסַפֵּר לָהֶם אַכְיוֹר כֹּל אֲשֶׁר שָׁמַע מִפִּי הֹלוֹפֶרְנֵשׂ וְאַנְשֵׁי סוֹדוֹ וְאֵת אֲשֶׁר דִּבֶּר בְּצַוָּאר עָתָק נֶגֶד כָּל־בֵּית־יִשְׂרָאֵל:",
+          "english": "And he answered and declared to them the words of the council of Holofernes, and all the words which he had spoken in the midst of the princes of Assur, and whatsoever Holofernes had spoken proudly against the house of Israel."
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "וַיְהִי כְּכַלּוֹתוֹ לְדַבֵּר וַיִּפְּלוּ כָל־הָעָם עַל פְּנֵיהֶם וַיִתְפַּלְּלוּ אֶל יְיָ וַיֹּאמְרוּ:",
+          "english": "Then the people fell down and worshipped God, and cried to God saying,"
+        },
+        {
+          "verseNumber": 26,
+          "hebrew": "אָנָּא יְיָ אֱלֹהֵי הַשָּׁמַיִם הַבִּיטָה וּרְאֵה אֶת־גְּאוֹן הָעָם הַלָּזֶה וְרַחֵם עַל שִׁפְלַת עַמְּךָ יִשְׂרָאֵל אֲשֶׁר לְךָ הִתְקַדָּשׁוּ:",
+          "english": "O Lord God of heaven, behold their pride and pity the low estate of our nation and look upon the face of those who are sanctified for you this day."
+        },
+        {
+          "verseNumber": 27,
+          "hebrew": "וְאַחֲרֵי כֵן דִּבְּרוּ עַל לֵב אַכְיוֹר וַיְהַלְלוּ אוֹתוֹ וְעֻזִּיָּה אָסַף אוֹתוֹ אֶל בֵּיתוֹ וַיַּעַשׂ מִשְׁתֶּה לוֹ וּלְזִקְנֵי הָעָם:",
+          "english": "Then they comforted Achior and praised him greatly. And Uzziah took him out of the assembly to his house and made a feast for the elders."
+        },
+        {
+          "verseNumber": 28,
+          "hebrew": "וְכָל הַלַּיְלָה הַהוּא הִתְפַּלְּלוּ אֶל יְיָ לָתֵת לָהֶם יְשׁוּעָה וְרַחֲמִים:",
+          "english": "And they called on the God of Israel all that night for help."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "verseCount": 35,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ויהי ממחרת ויצו הלופרנש את אנשי צבאו את כל החיל אשר בא לעזרתו ללכוד את מעלות ההרים ולעלות לקראת בתול למלחמה עם ישראל:",
+          "english": "The next day Holofernes commanded all his army and all his people who had arrived take his side that they should remove their camp from opposite Bethulia and capture in advance the ascents of the hill country in order to make war against the children of Israel."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "ויהיו פקודיהם מאה ושבעים אלף איש רגלי ופרשים שנים עשר אלף מלבד ערב עד אין מספר:",
+          "english": "Then their strong men removed their camps on that day; and the army of the men of war was one hundred seventy thousand foot soldiers, and twelve thousand horsemen, besides the baggage and the other men who were afoot among them, a very great multitude."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ויסעו כולם ויחנו בשפלה קרוב לבתול אצל בארות המים ורוחב מחניהם מדותן ועד בלמה והאורך מבתול עד בואך כימונה מול יזרעאל:",
+          "english": "And they camped in the valley near Bethulia, by the spring, and they spread themselves in width across Dothaim even to Belmaim, and in length from Bethulia to Cynamon, which is opposite Esdraelon."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ויהי כראות בני ישראל את החיל הנורא הזה וייבהלו מאוד ויאמרו איש אל אחיו:",
+          "english": "Now the children of Israel, when they saw the multitude of them, were greatly troubled, and everyone said to his neighbor,"
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "הנה העם הזה יכסה את עין כל הארץ וכל ההרים והגבעות והשפלות לא יוכלו מלט משאם:",
+          "english": "\"Now these men will wipe clean the face of the earth, for neither the high mountains, nor the valleys, nor the hills, are able to bear their weight.\""
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "ויחגרו איש איש את חרבו וישימו אש על המגדלים להאיר ויהיו כצופים כל הלילה ההוא:",
+          "english": "Then every man took up his weapons of war, and when they had kindled fires on their towers, they remained and watched all that night."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ויהי ממחרת ויוצא הלופרנש את כל פרשיו לעיני אנשי בתול וילך לתור את מבואי העיר:",
+          "english": "But on the second day, Holofernes brought forth all his horsemen in the sight of the children of Israel, who were in Bethulia, and viewed the passages up to the city;"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "ויפגע בבארות המים ויקחם וישם עליהם משמר מאנשי מלחמתו וישב אל המחנה:",
+          "english": "and he went to the origins of their waters and captured them, and he set garrisons of men of war over them, and he himself returned toward his people."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ויקרבו אליו גם נציבי אדום ומואב ויושבי חבל הים ויאמרו:",
+          "english": "Then they came to him, all the chiefs of the children of Esau and all the governors of the people of Moab and the captains of the sea coast, and they said,"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "כי ישמע אדוני את דברי עבדיו והוסר כל מכשול מאנשי צבאו:",
+          "english": "Let our lord now hear a word, so that there will not be a loss among your army."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "לא על חנית ורומח יבטחו בני ישראל במלחמה כי אם על ההרים הגבוהים אשר הם יושבים עליהם כי מי יעלה אליהם על ראשי הצורים ההם:",
+          "english": "For this people of the children of Israel do not trust in their spears, but in the height of the mountains where they dwell, for it is not easy to come up to the tops of their mountains."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "ועתה אדוני אל תערוך מערכה לקראתם ואיש לא ייפול ממנו כי כולם יעמדו תחתיהם ולא יצאו מן המחנה:",
+          "english": "Now therefore, my lord, do not fight against them in battle array and not so much as one man among your people will perish. Remain in your camp and keep all the men of your army there,"
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "רק צו את אנשיך ללכוד את מימי בארותם אשר ייזלו להם מרגלי ההרים:",
+          "english": "and let us your servants take hold of the springs of water, which issue forth at the foot of the mountain."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "כי הבארות ההם ישקו את כל יושבי בתול והיה כי יכלאו מימיהם אז כל העם יגווע בצמא או יתנו את העיר בידנו:",
+          "english": "For all the inhabitants of Bethulia have their water there; so thirst will kill them and they will give up their city,"
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "ואנחנו נעלה ונירש את ההרים הקרובים לחנות על העיר לבל יצא איש ממנה וכל יושביה כלה יכלו ברעב עם נשיהם וטפם:",
+          "english": "and we and our people will go up to the tops of the mountains nearby and will camp on them to watch so that none can go out of the city. So they and their wives and their children will be consumed with fiery thirst,"
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "כי בטרם תקרב חרב אליהם יפלו בביתם וברחובות העיר ואתה אדוני תנקם בהם על מרים ועל ערפם הקשה:",
+          "english": "as if it were a sword brought against them, and so they will be overthrown in the streets where they dwell. Thus will you render them an evil reward, because they rebelled and did not meet your person peaceably."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "וייטב הדבר בעיני כל עבדיו ויעשו כן:",
+          "english": "And these words pleased Holofernes and all his servants, and he decided to do as they had said."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "ותצא מחנה מואב וחמשת אלפים מבני אשור ויפוצו על פני השפלה לשמור את עיינות המים ואת בארות בני ישראל:",
+          "english": "So the camp of the children of Ammon departed, and with them five thousand of the Assyrians, and they pitched camp in the valley and captured the waters and the origins of the waters of the children of Israel."
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "ואנשי אדום ומואב עלו על ההרים ויחנו מנגד לדותן ומהם נפוצו נגבה ומזרחה מול רבלה על נהר מכמור קרוב לחושי:",
+          "english": "Then the children of Esau went up with the children of Ammon and camped in the hill country opposite Dothaim. And they sent some of them toward the south and toward the east opposite Ekrebel, near Chusi upon the brook Mochmur;"
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "ומחנה אשור שטו בערבה ויכסו את כל הארץ ולרוב אוהליהם ומקניהם אין מספר:",
+          "english": "and the rest of the army of the Assyrians camped in the plain and covered the face of the whole land; and their tents and carriages were pitched for a very great multitude."
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "ותצר לבני ישראל מאוד מאוד ויקראו אל יי אלוהיהם כי האויבים הקיפו את כל העיר מסביב ואין מקום להימלט על נפשותם:",
+          "english": "Then the children of Israel cried to the Lord their God, because their heart failed, for all their enemies had surrounded them and there was no way to escape out from among them."
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "והמוני אשור לבדם חנו מסביב דרך שלשים וארבעה יום עם חיל רגלי רכב ופרשים אשר להם:",
+          "english": "Thus all the company of Assur remained around them, both their foot soldiers, chariots, and horsemen, for thirty-four days,"
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "והמים היו הלוך וחסור ליושבי בתול כי אזלו מכל בור וכלי ולא נותרו להם לרוות צימאונם עוד יום אחד וימודו את המים במשורה:",
+          "english": "so that all their vessels of water ran dry for all the inhabitants of Bethulia and the cisterns were emptied. And they did not have enough water to drink their fill for even one day, for they rationed their water."
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "והנשים והילדים שכבו עולפי צמא בחוצות ובפתחי השערים כי לא עצרו כוח לעמוד על רגליהם:",
+          "english": "Therefore their young children lost heart, and their women and young men fainted for thirst and fell down in the streets of the city and by the passageways of the gates; and there was no longer any strength in them."
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "ויתקבצו כל העם מנער ועד זקן אל עוזיה ראש העיר ויקראו בקול גדול באזני הזקנים ויאמרו:",
+          "english": "Then all the people assembled before Uzziah and the chiefs of the city, including young men and women and children, and they cried with a loud voice and said before all the elders,"
+        },
+        {
+          "verseNumber": 26,
+          "hebrew": "ישפוט יי בינינו וביניכם כי הבאתם עלינו את הצרה הזאת יען כי מיאנתם לדבר אל אנשי אשור לשלום:",
+          "english": "God be judge between us and you, for you have done us great injury in that you have not made peace with the children of Assur."
+        },
+        {
+          "verseNumber": 27,
+          "hebrew": "ראו כי עתה אפסה כל עזרה ממנו ויי הסגירנו בידם למות ברעב ובמגפה לעיניהם:",
+          "english": "For now we have no helper, but God has sold us into their hands, so that we should be thrown down before them with thirst and great destruction."
+        },
+        {
+          "verseNumber": 28,
+          "hebrew": "הבה קראו להם עוד עתה ותנו את העיר ביד הלופרנש ואנשיו לבוז אותה:",
+          "english": "Now therefore call them to you and deliver the whole city for a spoil to the people of Holofernes and to all his army."
+        },
+        {
+          "verseNumber": 29,
+          "hebrew": "כי טוב לנו היות להם לשלל ולעבדים ונחיה ממותנו בצמא:",
+          "english": "For it is better for us to be made a spoil for them than to die of thirst;"
+        },
+        {
+          "verseNumber": 30,
+          "hebrew": "ולמה נראה ברע אשר ימצא את נשינו וטפנו כי ימקו לעינינו:",
+          "english": "for we will be his servants, so that our souls may live and we will not see the death of our infants before our eyes, nor the dying of our wives or our children."
+        },
+        {
+          "verseNumber": 31,
+          "hebrew": "העידונו בכם היום את השמים ואת הארץ ואת יי אלוהי אבותינו אשר ידו קשתה עלינו על עווננו ועוונות אבותינו כי לא כדת עשיתם לנו כיום הזה:",
+          "english": "We present as witness against you: the heaven and the earth, and our God and Lord of our fathers, who punishes us according to our sins and the sins of our fathers, so that he will not allow what we have described to happen on this day."
+        },
+        {
+          "verseNumber": 32,
+          "hebrew": "וישאו כל העם את קולם ויבכו בכי גדול ויצעקו אל יי:",
+          "english": "Then there was great weeping in the midst of the assembly, all with one consent; and they cried to the Lord God with a loud voice."
+        },
+        {
+          "verseNumber": 33,
+          "hebrew": "ויקם עוזיה ויאמר הירגעו אחי ועמדו עוד חמשת ימים אולי יעשה יי חסד לנו ולא לנצח יעזבנו:",
+          "english": "Then Uzziah said to them, \"Brethren, be courageous. Let us endure yet five days, in that period of time the Lord our God may turn his mercy toward us, for he will not forsake us utterly."
+        },
+        {
+          "verseNumber": 34,
+          "hebrew": "והיה כי יעברו חמשת ימים וכל עזרה נדחה ממנו ועשיתי כאשר דברתם ועתה לכו לשלום:",
+          "english": "And if these days pass and no help comes to us, I will do according to your word.\""
+        },
+        {
+          "verseNumber": 35,
+          "hebrew": "וישובו על החומות ועל המגדלים ואת נשיהם ואת טפם שלחו הביתה ותהי צרה גדולה בקרב העיר:",
+          "english": "And he dispersed the people, each to their own posts; and they went to the walls and towers of their city, and sent the women and children into their houses; and they were brought very low in the city."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "verseCount": 34,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ואישה אלמנה הייתה בימים ההם בעיר בתול ושמה יהודית בת מררי בן עוץ בן יוסף בן עוזיאל בן חלקיהו בן חנניה בן גדעון בן רפאל בן אחיטוב בן עלי בן אהליהב בן נתנאל בן שמואל בן שאלתיאל:",
+          "english": "Now at that time Judith heard about this; she was the daughter of Merari, the son of Ox, the son of Joseph, the son of Ozel, the son of Elcia, the son of Ananiah, the son of Gedeon, the son of Raphaim, the son of Acitho, the son of Eliu, the son of Eliab, the son of Nathanael, the son of Samael, the son of Salasadal, the son of Israel."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "ושם בעלה מנשה והוא היה ממשפחתה ומבית אביה וימת בימי קציר שעורים:",
+          "english": "And Manasseh was her husband, of her tribe and kindred, who died during the barley harvest."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "כי בהיותו בשדה עם הקוצרים הכהו השמש וייפול למשכב ויחל וימות בבתול ויקבר בשדה בין דותן ובין בלמה:",
+          "english": "For as he stood overseeing those who bound sheaves in the field, the heat affected his head, and he fell on his bed, and died in the city of Bethulia; and they buried him with his fathers in the field between Dothaim and Balamo."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ותישאר יהודית לבדה ותשב בימי אלמנותה שלוש שנים וארבעה ירחים:",
+          "english": "So Judith was a widow in her house three years and four months."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "ותעש לה חדר קטן בעליית ביתה ותשב שם חגורת שק ותצם יום יום בבגדי אלמנותה מלבד שבתות יי ומלבד ראשי החודשים ומועדי בני ישראל:",
+          "english": "And she made her a tent on the top of her house; and she put sackcloth on her loins and wore her widow's clothing. And she fasted all the days of her widowhood, except for the eves of the sabbaths and the sabbaths, and the eves of the new moons and the new moons, and the feasts and solemn days of the house of Israel."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "והיא הייתה יפת תואר ויפת מראה ובעלה השאיר לה כסף וזהב ועבדים ושפחות וצאן ובקר ועבודה רבה:",
+          "english": "She also had a graceful temperament and was very beautiful to behold. And her husband Manasseh had left her gold and silver, and menservants and maidservants, and cattle and lands, and she remained with them."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ותלך בדרכי יי ולא מצא בה איש ערות דבר:",
+          "english": "And there was no one who spoke an ill word about her, for she feared God greatly."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "ויהי כשמע יהודית את דברי העם מתאוננים רע באזני עוזיה על דבר המים אשר חסרו להם:",
+          "english": "Now she heard the evil words of the people against the governor and that they fainted for lack of water;"
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ואת אשר נשבע להם עוזיה לאמור כי בעוד חמשת ימים תינתן העיר ביד אשור:",
+          "english": "for Judith had heard all the words that Uzziah had spoken to them and that he had sworn to deliver the city to the Assyrians after five days."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "ותשלח את אמתה המושלת בכל אשר לה לקרוא לעוזיה ולזקני העיר לכברי ולכרמי ויבאו אליה:",
+          "english": "So then she sent her woman servant, who was in charge of everything that she had, to call Uzziah and Chabris and Charmis, the elders of the city."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "ותאמר אליהם שמענו נא ראשי בתול לא כן הדבר אשר דברתם היום אל העם וכי נשבעתם לתת את העיר ביד האויב אם יי לא יעמד לנו בעוד חמשת ימים:",
+          "english": "And they came to her, and she said to them, \"Hear me now, you governors of the inhabitants of Bethulia; for your words which you spoke before the people this day are not right, concerning this oath which you made and pronounced between God and yourselves, and your promise to deliver the city to our enemies, unless within these days the Lord turns to help you."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "מי אתם כי תנסו את יי התחת אלוהים אתם לשפוט בינו ובין העם:",
+          "english": "And now who are you to have tempted God this day, and to stand among the children of men instead of God?"
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "הן חקרי לב האדם לא תבינו והגיונותיו לא נגלו לכם ואיך תמצאו חקר בורא כל ואת אשר יעץ עלינו:",
+          "english": "And now test the Lord Almighty, but you will never know anything. For you cannot find the depth of the heart of man, neither can you perceive the things which he thinks; so then how can you search out God, who has made all these things, and know his mind or comprehend his purpose?"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "אל נא אחי תרעו ואל תקציפו את יי:",
+          "english": "No, my brethren, do not provoke the Lord our God to anger."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "כי אם לא יושיענו בימים חמשה היבצר ממנו להצילנו ביום יבחר או לכלותנו לעיני צרינו:",
+          "english": "For if he will not help us within these five days, he has power to defend us when he will, even every day, or to destroy us before our enemies."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "לכן אל תתייעצו על צפוני שדי כי לא בן אדם הוא להיבהל או לבוא במשפט אתו:",
+          "english": "Do not bind the plans of the Lord our God; for God is not like man as if he could be threatened; neither is he like the son of man so that he would be wavering."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "הלא נדע כי אין בנו שבט או משפחה או עיר אשר לבבכם פונה היום מעם יי אלוהינו ללכת אחרי אלוהים אחרים מעשה ידי אדם כאשר עשו אבותינו בימי קדם ויפלו בחרב אויבנו ויהיו לבז ולמשיסה בגוים:",
+          "english": "Therefore let us wait for salvation from him and call upon him to help us, and he will hear our voice, if it pleases him. For there arose none in our age, neither is there any now in these days, neither tribe, nor family, nor people, nor city among us, who worship gods made with hands, as has happened in past times. For this reason our fathers were given to the sword and as a spoil and had a great fall before our enemies."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "אנחנו ידענו כולנו כי אין אלוהים זולתו לכן לו לבדו נייחל כי בוז לא יבוז לנו ולזרענו:",
+          "english": "But we know no other God, therefore we trust that he will not despise us, nor any of our nation."
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "כי אם נלכדנו לא ייזכר עוד יהודה ומקדשנו יהיה לבז ויי ידרוש טומאתו מידנו:",
+          "english": "For if we are overcome, then all Judea will lie waste and our sanctuary will be pillaged; and he will place the blame for the profanation of it at our mouth;"
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "צרת אחינו ושבית ארצנו והריסת נחלתנו ביד אויבינו ישיב יי על ראשנו בארץ הגוים אשר נעבד:",
+          "english": "and the slaughter of our brethren and the captivity of the country and the desolation of our inheritance, he will blame on our heads among the Gentiles, wherever we will be in captivity;"
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "כי לבוז ולחרפה נהיה לכל אשר ירדו בנו:",
+          "english": "and we will be an offence and a reproach to all those who possess us."
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "ולא לטוב לנו תחשב שפלותנו כי אם למשל ולשנינה:",
+          "english": "For our servitude will not be directed towards our benefit, but the Lord our God will turn it to our dishonor."
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "לכן אחי נהי נא לנס מתנוסס בקרב אחינו כי רוחם נשען עלינו על בית יי ועל המקדש ועל המזבח:",
+          "english": "Now therefore, O brethren, let us show an example to our brethren, because their hearts depend on us, and the sanctuary and the house and the altar rest on us."
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "ונתנה תודה לאלוהים בנסותו אותנו כאשר ניסה את אבותינו את אברהם ואת יצחק ואת יעקב בפדן ארם בשומרו את צאן לבן אחי אמו:",
+          "english": "Moreover, let us give thanks to the Lord our God, who tests us, even as he did our fathers. Remember the things he did to Abraham, and how he tested Isaac, and what happened to Jacob in Mesopotamia of Syria, when he kept the sheep of Laban his mother's brother."
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "כי כמו באש בחנם יי לדעת חקרי לבבכם וכן ינסה אותנו לא לכלות כי אם להוכיח את אשר יאהב:",
+          "english": "For he has not tested us in the fire, as he did them for the examination of their hearts, neither has he taken vengeance on us; but the Lord does scourge those who come near to him, to admonish them.\""
+        },
+        {
+          "verseNumber": 26,
+          "hebrew": "ויען עוזיה ויאמר כנים דבריך ואין בהם נפתל ועיקש:",
+          "english": "Then Uzziah said to her, \"All that you have spoken, you have spoken with a good heart and there is no one who can refute your words."
+        },
+        {
+          "verseNumber": 27,
+          "hebrew": "גם לא מיום או מיומיים נודעה חכמתך כי אם מיום הולדך נפלאת בשערים ולבבך שלם עם יי:",
+          "english": "For this is not the first day that your wisdom has been manifested; but from the beginning of your days all the people have known your understanding, because the disposition of your heart has been good."
+        },
+        {
+          "verseNumber": 28,
+          "hebrew": "אך כל העם צחה צמא נקהלו עלי ויפצרו בי לעשות כאשר דברתי וגם נשבענו להם ואת שבועתנו לא נפר:",
+          "english": "But the people were very thirsty; and they compelled us to do to them as we have spoken and to bring an oath on ourselves, which we will not break."
+        },
+        {
+          "verseNumber": 29,
+          "hebrew": "ועתה יען כי אישה יראת אלוהים את העתירי אל יי בעדנו ויתן לנו מטר למלאות את בורותינו מים ולא נגווע בצמא:",
+          "english": "Now therefore pray for us, because you are a godly woman, and then the Lord will send us rain to fill our cisterns and we will faint no more.\""
+        },
+        {
+          "verseNumber": 30,
+          "hebrew": "ותאמר יהודית שמעוני אחי הנה יזמתי לעשות דבר אשר לא יסוף זכרו לדור ודור:",
+          "english": "Then Judith said to them, \"Listen to me and I will do something which will be remembered throughout all generations among the children of our nation."
+        },
+        {
+          "verseNumber": 31,
+          "hebrew": "עמדו הלילה פתח שער העיר ואני אצא עם העומדת לפני ויי אלוהים פקוד יפקוד אותנו בידי בעוד מועד אשר אמרתם למסור את העיר:",
+          "english": "You will watch this night at the gate, and I will go forth with my woman servant; and, within the days that you have promised to deliver the city to our enemies, the Lord will visit Israel by my hand."
+        },
+        {
+          "verseNumber": 32,
+          "hebrew": "רק אל תחקרו לדעת את אשר עם לבבי כי לא אענה אתכם דבר עד אשר אם עשיתי את אשר יעצתי לעשות:",
+          "english": "But do not ask me what I will do, for I will not reveal it to you until the things that I do are completed.\""
+        },
+        {
+          "verseNumber": 33,
+          "hebrew": "ויען עוזיה וזקני העיר ויאמרו לכי לשלום ויי אלוהים ילך לפניך לעשות נקמה באויבינו:",
+          "english": "Then Uzziah and the princes said to her, \"Go in peace, and may the Lord God go before you to take vengeance on our enemies.\""
+        },
+        {
+          "verseNumber": 34,
+          "hebrew": "ויצאו מביתה ויפנו לאנשי המלחמה:",
+          "english": "So they returned from the tent and went to their posts."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "verseCount": 17,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ויהי בעת הקריב את מנחת הערב בירושלים ותשם יהודית את שקה על בשרה ותזרוק אפר על ראשה ותיפול על פניה לפני יי ותתחנן ותאמר:",
+          "english": "Judith fell upon her face and put ashes on her head and uncovered the sackcloth she was wearing; and, about the time that the incense of that evening was offered in Jerusalem in the house of the Lord, Judith cried with a loud voice, and said,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "אל אלוהי אבי שמעון אתה נתת חרב בידו להנקם בבני נכר על אשר חיללו את אחותו הבתולה:",
+          "english": "O Lord God of my father Simeon, to whom you gave a sword to take vengeance on the strangers, who loosened the girdle of a maid to defile her, and uncovered the thigh to her shame, and polluted her virginity to her reproach; for you said, 'It will not be so,' and yet they did so."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ועל כן המתה שריהם מתבוססים בדם על ערשם ופקדת עוון השרים על עבדיהם:",
+          "english": "Therefore you gave their rulers to be slain, so that they dyed their bed in blood, being deceived, and you struck the servants with their lords"
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ראשיהם הורדת מכיסאם ונשיהם ובניהם נתת לשבי ולבזה ביד עבדיך אשר אהבת יען כי קראו לך לנקום את נקמת חרפתם:",
+          "english": "and the lords upon their thrones; and you have given their wives for a prey and their daughters to be captives and all their spoils to be divided among your dear children, who were moved with your zeal and abhorred the pollution of their blood and called upon you for aid."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "שמע נא גם עתה את אמתך האלמנה:",
+          "english": "O God, my God, hear me also for I am a widow."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "הן קדם ואחור מידך המה ועת הזאת ועת העתיד לך נגלות כל מחשבותיך יכונו וכי תגזור אומר ויקום לך:",
+          "english": "And you have wrought not only those things, but also the things which happened before and which followed afterwards; you have thought about the things which are now and which are to come. Yes, the things you established were ready at hand, and they said, 'Lo, we are here,' for all your ways are prepared and your judgments are in your foreknowledge."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ועתה השקיפה נא וראה את המוני אשור המתפארים על רכבם ועל פרשיהם ובוטחים בכוח חיל הרגלים אשר להם:",
+          "english": "For, behold, the Assyrians are multiplied in their power; they are exalted with horse and man; they glory in the strength of their foot soldiers;"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "הנשענים על חנית וחץ על קשת ועל קלע ולא יכירו כי אתה לבדך תשבית מלחמות ויי שמך:",
+          "english": "they trust in shield and spear and bow and sling; and they do not know that you are the Lord who breaks the battles: the Lord is your name."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "שבור נא את גאון עוזם בכוחך הגדול ונפץ עצמותם בזעם אפך:",
+          "english": "Throw down their strength in your power and bring down their force in your wrath;"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "כי באו לחלל את מקדשך ולטמא את משכן כבודך ולנתץ את קרנות מזבחך:",
+          "english": "for they have resolved to defile your sanctuary and to pollute the tabernacle where your glorious name rests and to cast down with sword the horn of your altar."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "ראה נא את גאוותם ושפוך חמתך על קדקודם הרהב בנפשי הרוח אשר לבשתני:",
+          "english": "Behold their pride and send your wrath upon their heads; give into my hand, the hand of a widow, the power that I have conceived."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "תן מרמה בלשוני לסכל עצת עבד אל אדוניו ועצת אדון אל עבדיו ונגדעו קרנותם ביד אישה:",
+          "english": "Strike, by the deceit of my lips, the servant with the prince, and the prince with the servant; break down their stateliness by the hand of a woman."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "הן לא ברוב המון תגבר ולא ביד כבירים תעוז:",
+          "english": "For your power is not found in numbers, nor your might in strong men;"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "כי אתה יי פודה ענווים ועוזר דלים זוקף כפופים וסומך נופלים:",
+          "english": "for you are a God of the afflicted, a helper of the oppressed, an upholder of the weak, a protector of the forlorn, a savior of those who are without hope."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "ועתה יי אלוהי השמים ואלוהי הארץ יוצר הימים ומלך כל היצורים שמע לקול תחינתי:",
+          "english": "I pray to you, I beg you, O God of my father and God of the inheritance of Israel, Lord of the heavens and the earth, Creator of the waters, King of every creature, hear my prayer;"
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "תהי נא מילתי להם לפוקה למוקש ולנגוע על הרע אשר יזמו לעשת לעם בריתך ועל בית קודשך ועל הר ציון נחלת בניך:",
+          "english": "and make my speech and deceit to be their wound and stripe, who have resolved cruel things against your covenant and your hallowed house, and against the top of Zion and the house of the possession of your children;"
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "הראה לעיני עמך ולעיני כל משפחות האדמה כי לך יי הכוח והגבורה וכי אין צור זולתי אלוהינו:",
+          "english": "and so make every nation and tribe acknowledge that you are the God of all power and might, and that there is no other who protects the people of Israel but you."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "verseCount": 25,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ויהי ככלותה להתחנן ותקם ותקרא לאמתה ותרד אל ביתה אשר ישבה שם בימי שבת ומועד ותסר את שקה ואת בדי אלמנותה מעליה:",
+          "english": "Now after this, she ceased to cry to the God of Israel, and she completed all these words. She rose where she had fallen down and called her maid; and she went down into the house in which she lived on the sabbath days and on her feast days, and she pulled off the sackcloth which she had on, and put off the garments of her widowhood,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "ותרחץ את בשרה במים ותסך נפשה בשמן ותיטב את ראשה:",
+          "english": "and washed her body all over with water, and anointed herself with precious ointment, and braided the hair of her head"
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ותשם צניפה על ראשה ותלבש בגדי חמודות כאשר עשתה בימי מנשה בעלה:",
+          "english": "and put a headdress on it, and put on her garments of gladness, which she used to wear during the life of Manasseh her husband."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ותשם נעלים ברגליה וצמידים וטבעות על ידיה ונזמים באוזניה ותעד כל עדיה למען מצוא חן בעיני כל רואיה:",
+          "english": "And she put sandals on her feet, and she put on her bracelets and her chains and her rings and her earrings and all her ornaments, and she decked herself out boldly, to allure the eyes of all men who might see her."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "ותיקח נאד יין וכד שמן ושק קמח ולחם ותאנים ותיתן לאמתה ותלכנה מול שער העיר:",
+          "english": "Then she gave her maid a bottle of wine and a cruse of oil, and filled a bag with parched grain and lumps of figs and with fine bread; so she folded all these things together and laid them upon her. Thus they went forth to the gate of the city of Bethulia,"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "ותמצא את עוזיה ואת הזקנים עומדים בשער:",
+          "english": "and they found standing there Uzziah and the elders of the city, Chabris and Charmis."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ויהי בראותם את תואר פניה ואת בגדיה החמודות וישתוממו על יופייה ויאמרו לה:",
+          "english": "And when they saw her, that her countenance was altered and her apparel was changed, they wondered at her beauty very greatly and said to her,"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "ייתן יי אלוהי אבותינו את חינך בעיני רואיך ויצליח את דרכך לכבוד ישראל וירושלים וישתחוו ליי:",
+          "english": "May God, the God of our fathers, give you favor and accomplish your endeavors to the glory of the children of Israel and to the exaltation of Jerusalem. Then they worshipped God."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ותאמר פתחו לי את שער העיר לצאת ולעשות כאשר דברתי אליכם:",
+          "english": "And she said to them, \"Command the gates of the city to be opened for me, so that I may go forth to accomplish the things that you have discussed with me.\""
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "ויצוו את השומרים לפתוח את השער ויעשו כן:",
+          "english": "So they commanded the young men to open it for her, as she had said. And when they had done so,"
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "ותצא יהודית עם אמתה ואנשי העיר הביטו אחריה עד רדתה מן ההר אל השפלה ולא יספו עוד לראותה:",
+          "english": "Judith went out, she and her maid with her; and the men of the city looked after her, until she had gone down the mountain and had passed the valley and they could see her no more."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "ויהי בלכתה בשפלה ותפגע בנציבי אשור הראשונים וישאלוה ויאמרו לה למי את אי מזה באת ואנה תלכי:",
+          "english": "Thus they went straight ahead in the valley, and the first watch of the Assyrians met her and captured her; and they asked her, \"Of what people are you? And where have you come from? And where are you going?\""
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "ותען ותאמר עברית אנכי וברחתי כי ראה אנכי את כל העם נופל תחת ידיכם:",
+          "english": "And she said, \"I am a woman of the Hebrews, and I have fled from them, for they will be given over to you to be consumed."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "ואמרתי אלכה נא אל הלופרנש שר צבא אשור לדבר אליו דברי אמת:",
+          "english": "And I am going before Holofernes the chief captain of your army, to declare words of truth;"
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "והוריתי אותו את הדרך אשר ילך בה לרשת מהר את כל ארץ ההר ולא ייפול מכל מחנהו איש אחד:",
+          "english": "and I will show him a way, by which he can go and win all the hill country, without losing the body or life of any of his men.\""
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "ויהי בשמעם את הדברים האלה וישימו את עיניהם עליה וישתוממו על יופייה ויאמרו אליה:",
+          "english": "Now when the men heard her words and beheld her countenance, they wondered greatly at her beauty and said to her,"
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "הנה הצלת את נפשך כי מהרת לבא אל אדונינו ועתה בואי נא ונשלחה אנשים אתך להביאך לפניו:",
+          "english": "You have saved your life because you have hurried to come down to the presence of our lord. Now therefore come to his tent, and some of us will conduct you, until they have delivered you to his hands."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "והיה כי תעמדי לפניו אל תיראי ואמרי לו כאשר עם לבבך וייטב לך:",
+          "english": "And when you stand before him, do not be afraid in your heart, but reveal to him what you have said, and he will treat you well."
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "ויבחרו מאה איש לשלוח אתה ואת אמתה ויביאוה לפני אהל הלופרנש:",
+          "english": "Then they chose from among them a hundred men to accompany her and her maid; and they brought her to the tent of Holofernes."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "ויהי בהוודע הדבר ויתקבצו מכל המחנה ויקיפוה לראותה בטרם תבוא האהלה וישתאו כולם על יופייה ועל בני ישראל:",
+          "english": "Then a crowd began to assemble from throughout all the camp, for the news of her arrival had spread among the tents, and they gathered around her as she stood outside the tent of Holofernes, until they had told him about her. And they wondered at her beauty and admired the children of Israel because of her,"
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "ויאמרו איש אל אחיו לא נכון הוא לבזות את העם הזה כי נשים יפות להם:",
+          "english": "and each one said to his neighbor, \"Who could despise this people, who have such women among them?"
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "אך לא יותר מהם איש כי אם יישארו והזנו את כל הארץ:",
+          "english": "Surely it is not good for one man among them to be left, who, being set free, might deceive the whole earth.\""
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "ויבאו מאנשי הלופרנש וסריסיו ויוליכה פתח האהל:",
+          "english": "And those who lay near Holofernes went out, and they and all his servants brought her into the tent."
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "והוא סרוח על ערשו במכסה ארגמן וזהב מעולפת על אבני יקר ויקום ויבוא לקראתה ולפידים ביד הסריסים להאיר:",
+          "english": "Now Holofernes rested on his bed under a canopy, which was woven with purple and gold and emeralds and precious stones. So they informed him about her; and he came out in front of his tent with silver lamps going before him."
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "והיה בעמדה לפניו ויתפלאו כולם על יפי מראה והיא נפלה על פניה ותשתחו:",
+          "english": "And when Judith was presented before him and his servants, they all marveled at the beauty of her countenance; and she fell down upon her face and did him reverence, and his servants lifted her up."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 11,
+      "verseCount": 30,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ויצו הלופרנש להקים אתה ויאמר אליה התחזקי בתי ואל תיראי:",
+          "english": "Then Holofernes said to her, \"Woman, be of good comfort; fear not in your heart."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "כי לא הריעותי לאיש אשר נשאו לבו לעבוד את נבוכדנצר אדון כל הארץ:",
+          "english": "For I have never hurt any who were willing to serve Nebuchadnezzar, the king of all the earth."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ולולא לבוז הייתי בעיני עמך היושב בהרים כי עתה לא הרימותי את חרבי עליהם ועתה את עוון מרדם ישאו:",
+          "english": "Now therefore, if your people who dwell in the mountains had not treated me heedlessly, I would not have lifted up my spear against them, but they have done these things to themselves."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ועתה הגידי לי על מה ברחת ומדוע באת אלינו הלא לטוב לך עשית זאת:",
+          "english": "But now tell me how you have fled from them and come to us; for you have reached safety,"
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "לכן אל תיראי כי לא תמותי לא הלילה ולא לעולם:",
+          "english": "so be of good comfort; you will live this night and hereafter."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "לא ירע לך איש והיית אך שמחה ככל עבדי המלך:",
+          "english": "For none will hurt you, but they will treat you well, as they do the servants of king Nebuchadnezzar my lord.\""
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ותען יהודית ותאמר הסכת ושמע את דברי שפחתך כי לא אכזב וכי תעשה כאשר איעצך יצליח אלוהים דרכך ולא תחטא:",
+          "english": "Then Judith said to him, \"Receive the words of your servant and permit your handmaid to speak in your presence, and I will declare no lie to my lord this night. And if you will follow the words of your handmaid, God will bring something perfectly to pass by you, and my lord will not fail in his purposes."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "כי חי המלך נבוכדנצר בחכמתו אשר בחר בך לעשות משפטים בעמי הארץ אם לא בידך גם הבהמות והחיות ועופות השמים יסורו למשמעתו ולמשמעת כל ביתו:",
+          "english": "As Nebuchadnezzar king of all the earth lives, and as his power lives, he has sent you for the upholding of every living thing; for not only men will serve him by you, but also the beasts of the field, and the cattle and the birds of the air, will live by your power under Nebuchadnezzar and all his house."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ידענו כי איש אתה אשר רוח בו וחכמתך נודעת בכל הארץ כי לך עצה ותושייה וגם כח וגבורה במלחמה:",
+          "english": "For we have heard of your wisdom and your policies, and it is reported across all the earth, that you alone are excellent in all the kingdom, and mighty in knowledge, and wonderful in feats of war."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "גם שמענו את אשר הגיד לך אכיור כי אספוהו אותו אנשי בתול ויספר להם את כל אשר דבר לך:",
+          "english": "Now as concerning the matter which Achior spoke about in your council, we have heard his words; for the men of Bethulia saved him, and he declared to them all that he had spoken to you."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "לכן אדוני השר אל תשליך דבריו אחריך כי נכונים המה:",
+          "english": "Therefore, O lord and governor, respect not his word, but store it in your heart, for it is true;"
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "לא יאנה לעמנו כל רע וכל כלי יוצר עליהם לא יצלח אם לא חטאו לאלוהיהם:",
+          "english": "for our nation will not be punished, nor can sword prevail against them, unless they sin against their God."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "ועתה פן יתום לריק כוחך דע כי המוות בעקבם וחבלי חטאתם יתמכו:",
+          "english": "And now, so that my lord will not be defeated and frustrated in his purpose, even death has now fallen upon them and their sin has overtaken them,"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "כי יכעיסו את יי אלוהיהם ומעשים אשר לא יעשו יהגו בלבבם:",
+          "english": "and therefore they will provoke their God to anger whenever they do what is not right to be done."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "הן אפסה להם כל צדה ומים אין להם לשתות ועתה הם חושבים לשלח יד בכל בהמה ולאכול כל דבר אשר לא יאכל:",
+          "english": "For their food stores fail them and their water supply is scant, and they have decided to lay hands on their cattle, and have resolved to consume all those things which God has forbidden them to eat by his laws."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "גם שלחו מלאכים לזקני ירושלים ויבקשו מהם לתת למו יד לאכול את ראשית פרי האדמה ומעשרות תירוש ויצהר אשר קודש הם לכוהנים בירושלים המשרתים את פני יי:",
+          "english": "And they are resolved to use up the first fruits and the tenths of wine and oil, which they had sanctified and which are reserved for the priests who serve in Jerusalem before the face of our God,"
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "ואשר צוו עליהם לבל תיגע בו יד וגם יושבי ירושלים עשו כן:",
+          "english": "the things it is not lawful for any of the people so much as to touch with their hands. For they have sent an envoy to Jerusalem, because those who dwell there have also done the same, to bring them a license from the senate."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "והיה כי יחטאו ויעברו את מצות יי ונתנו בידך לכלותם כלה ונחרצה בעצם היום ההוא:",
+          "english": "Now when they bring them word, they will immediately do it, and they will be given to you to be destroyed the same day."
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "ואני שפחתך כי ידעתי זאת נמלטתי ויי שלחני לעשות אתך דבר אשר תהום כל הארץ עליו:",
+          "english": "Therefore I, your handmaid, knowing all this, have fled from their presence; and God has sent me to work things with you, things at which all the earth will be astonished, whosoever hears it."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "אמנם אף כי באתי אליך עתה את האלוהים אני יראה ואת חוקותיו אשמור יומם ולילה:",
+          "english": "For your servant is religious and serves the God of heaven day and night."
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "ואני אבקש ממך לתת לצאת כל לילה ולילה מן המחנה אל הערבה להשתחות ליי:",
+          "english": "Therefore, my lord, I will remain with you now, and your servant will go out by night into the valley, and I will pray to God,"
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "והיה כי יגלה לי עת פשעם ובאתי והגדתי לך ויצאת עם כל המחנה ולא יתייצב איש לפניך:",
+          "english": "and he will tell me when they have committed their sins. And I will return and reveal it to you. Then you will go forth with all your army, and there will be none among them who will withstand you."
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "ואנחך דרך ארץ יהודה עד בואך ירושלימה ואת כיסאך אקים בקרב העיר:",
+          "english": "And I will lead you through the midst of Judea, until you come against Jerusalem, and I will set your throne in the midst thereof;"
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "ולכדת את כל העם כצאן אשר אין להם רועה ולא יחרץ לך כלב לשונו:",
+          "english": "and you will drive them as sheep which have no shepherd, and a dog will not so much as open his mouth at you;"
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "אלה הדברים אשר נודעו לי ואני באתי להגיד לך:",
+          "english": "for these things were told to me according to my foreknowledge, and they were declared to me, and I am sent to tell you.\""
+        },
+        {
+          "verseNumber": 26,
+          "hebrew": "וייטבו דבריה בעיני הלופרנש ובעיני עבדיו ויתמהו על שכל מליה ויאמרו:",
+          "english": "Then her words pleased Holofernes and all his servants; and they marveled at her wisdom and said,"
+        },
+        {
+          "verseNumber": 27,
+          "hebrew": "אכן אין כמוה אישה מקצה הארץ ועד קצה גם בחכמה וגם ביופי:",
+          "english": "There is no other such woman from one end of the earth to the other, both for beauty of face and wisdom of words."
+        },
+        {
+          "verseNumber": 28,
+          "hebrew": "ויאמר הלופרנש מאת יי הייתה זאת כי שלחך לפני העם לתת כוח בידי לאבד ולהשחית את אויבי אדוני:",
+          "english": "Likewise Holofernes said to her, \"God has done well to send you before the sons of your people, so that strength might be in our hands and destruction be on those who regard my lord lightly."
+        },
+        {
+          "verseNumber": 29,
+          "hebrew": "הנה יפת תואר ואשת שכל את וכי תעשי כאשר דברת והיה יי לי לאלוהים:",
+          "english": "And now you are both beautiful in your countenance and clever in your words; surely if you do as you have spoken, your God will be my God,"
+        },
+        {
+          "verseNumber": 30,
+          "hebrew": "ואת תשבי בית המלך ושמך יהולל בכל הארץ:",
+          "english": "and you will dwell in the house of king Nebuchadnezzar and will be renowned throughout the whole earth.\""
+        }
+      ]
+    },
+    {
+      "chapterNumber": 12,
+      "verseCount": 20,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ויצו להביאה בחדר משמרת כלי כספו לשבת שם ולתת לה לאכול ולשתות מעל שלחנו:",
+          "english": "Then he commanded them to bring her in to where his plate was set; and he directed them to prepare for her from his own meats and that she should drink from his own wine."
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "ותאמר יהודית אל נא אדוני כי אם אוכל מלחמך וחטאתי לאלוהים הנה הבאתי את לחמי אתי:",
+          "english": "And Judith said, \"I will not eat of it, lest there be an offence, but provision will be made for me from the things which I have brought.\""
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ויאמר הלופרנש ואם כילית לאכול את אשר בידך מאין תיקחי כי אין איש מעמך אתנו במחנה:",
+          "english": "Then Holofernes said to her, \"If your provisions should fail, how should we give you the like? For there are none among us from your nation.\""
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ותען יהודית ותאמר חי נפשך אדוני אם לא יבצע יי את מעשהו בטרם כיליתי לאכול את אשר בידי:",
+          "english": "Then Judith said to him, \"As your soul lives, my lord, your handmaid will not use up those things which I have before the Lord works by my hand the things he has determined.\""
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "ויביאו אנשי הולופרנש אותה החדרה ותשכב ותישן עד חצי הלילה:",
+          "english": "Then the servants of Holofernes brought her into the tent, and she slept until midnight,"
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "ותקם ותשלח אל הולופרנש לצוות את אנשיו לתיתה לצאת עם אמתה מחוץ למחנה להשתחות ליי:",
+          "english": "and she arose when it was toward the morning watch. And she sent to Holofernes, saying, \"Let my lord now command that your handmaid may go forth to prayer.\""
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ויצו את עבדיו לאמור אל תעצרו אותה לצאת ותשב שלושת ימים במחנה:",
+          "english": "Then Holofernes commanded his guard not to prevent her; thus she resided in the camp for three days,"
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "ותצא כל לילה ולילה אל הערבה אשר לפני בתול ותרחץ ותתפלל אל יי להצליח דרכה ולפדות את עמה ואחרי כן שבה האהלה ותצום עד הערב:",
+          "english": "and went out in the night into the valley of Bethulia and washed herself in a spring of water by the camp. And when she came out, she beseeched the Lord God of Israel to direct her way in order to accomplish the raising up of the children of her people. So she came in clean and remained in the tent until she ate her meat in the evening."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ויהי ביום הרביעי ויעש הולופרנש משתה לאנשי ביתו ואת פקידי הצבא לא קרא ויאמר אל בגוא סריסו לאמור:",
+          "english": "And on the fourth day, Holofernes made a feast for his own servants only, and he called none of the officers to the banquet. Then he said to Bagoas the eunuch, who was in charge of all that he had,"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "לך נא אל האישה העבריה אשר אתך ופתה אותה לבא אל המשתה אשר עשיתי:",
+          "english": "\"Go now and persuade this Hebrew woman who is with you that she should come to us, and eat and drink with us."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "כי חרפה היא לנו לשבת עם אישה יפה מבלי דעת איש אותה הלא נהיה לשחוק בעיניה:",
+          "english": "For, see, it will be a shame upon our person, if we let such a woman go without having had her company; for if we do not draw her to us, she will laugh at us in scorn.\""
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "ויצא בגוא מאת פני הולופרנש ויבוא אליה ויאמר:",
+          "english": "Then Bagoas went from the presence of Holofernes, and he came to her and said,"
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "היפה בנשים אל נא תמנעי מבוא אל אדוני לאכול ולשתות עמו ולהיטיב את לבבך:",
+          "english": "\"Let not this fair gentlewoman fear to approach my lord and to be honored in his presence, and to drink wine and be merry with us,"
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "כי לכבדך הוא מבקש כאחת השרות אשר בבית נבוכדנצר:",
+          "english": "and to become this day like one of the daughters of the Assyrians, who serve in the house of Nebuchadnezzar.\""
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "ותען יהודית ותאמר מי אנכי להמרות את פי אדוני את הטוב עיניו אעשה והיה לי לכבוד ולתפארת עד יום מותי:",
+          "english": "Then Judith said to him, \"Who am I now, that I should contradict my lord? Surely whatever pleases him I will do without hesitation, and it will be my joy until the day of my death.\""
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "ותקם ותלבש את בגדיה החמודות ותשם כל עדיה עליה ותלך:",
+          "english": "So she arose, and she decked herself out with her apparel and all her woman's attire."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "ואמתה הלכה לפניה לפרוש את הכרים אשר נתן לה בגוא לשבת עליהם:",
+          "english": "And her maid went and laid soft skins on the ground for her opposite Holofernes, which she had received from Bagoas for her daily use, so that she might sit and eat upon them."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "ויהי בשבתה ותבער בו אש התאווה ונפשו שוקקה כי חשק בה מיום בואה אל המחנה ויאמר אליה שתי נא בתי והיטיבי לבך:",
+          "english": "Now when Judith came in and sat down with Holofernes, his heart was inflamed with her, and his mind was stirred up, and he greatly desired her company; for he had been waiting for sometime to deceive her, even from the day that he had first seen her. Then Holofernes said to her, \"Drink now and be merry with us.\""
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "ותאמר יהודית אשתה כדברך כי מיום היוולדי לא ניכבדתי כזאת ותאכל ותשת את אשר הכינה לה אמתה:",
+          "english": "So Judith said, \"I will drink now, my lord, because my life is exalted in me this day more than all the days since I was born.\" Then she took and ate and drank before him the things which her maid had prepared."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "וישמח הלופרנש לקראתה והוא שותה שכור כאשר לא שתה כל ימיו:",
+          "english": "And Holofernes took great delight in her, and he drank more wine than he had drunk at any time in one day since he was born."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 13,
+      "verseCount": 30,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ויהי באישון לילה ויפנו עבדיו איש איש לאוהלו ולחדר משכבו:",
+          "english": "Now when evening had arrived, his servants hurried to depart, and Bagoas shut his tent from the outside and dismissed the waiters from the presence of his lord; and they went to their beds,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "כי עייפים היו מרוב המשתה ובגוא סגר את הדלת מאחריו ויצא:",
+          "english": "for they were all weary because the feast had been long."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ותישאר יהודית לבדה באוהל עם הלופרנש והוא שכור מיין וייפול על מיטתו ויירדם:",
+          "english": "And Judith was left alone in the tent with Holofernes lying by himself on his bed, for he was filled with wine."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ותאמר אל אמתה שבי לך פה מחוץ לאוהל עד בואי אליך לצאת ולהתפלל כאשר הסכנתי לעשות:",
+          "english": "Now Judith had commanded her maid to stand outside her bedroom and to wait for her to go forth, as she did daily; for she said she would go forth to her prayers,"
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "וגם לבגוא אמרה כי תצא גם הלילה:",
+          "english": "and she spoke to Bagoas towards the same purpose."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "ויהי כי יצאו כולם ולא נשאר איש באוהל למקטון ועד גדול ותיגש אל המיטה אשר הוא שכב עליה ותתפלל בלבה ותאמר:",
+          "english": "So everyone left and no one was left in the bedroom, neither little nor great. Then Judith, standing by his bed, said in her heart:"
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "אל אלוהים אשר בידך הכוח והגבורה הבט נא וראה את מעשה ידי שפחתך להרים קרן ירושלים:",
+          "english": "\"O Lord God of all power, look at this time upon the works of my hands for the exaltation of Jerusalem."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "הנה קרבה עת פדות עם נחלתך כי תושיעני ימינך לתת נקמה בגוים אשר קמו עלינו:",
+          "english": "For now is the time to help your inheritance and to execute your purposes for the destruction of the enemies who have risen against us.\""
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ותיגש אל העמוד אשר בראש המיטה ותיקח את חרב הלופרנש מעליו:",
+          "english": "Then she went to the pillar of the bed, which was at Holofernes' head, and took down his broadsword from there."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "ותשלח את ידה ותיקחהו בציצית ראשו ותאמר יי אלוהים חזקני נא ואמצני אך הפעם:",
+          "english": "And she approached his bed, and took hold of the hair of his head, and said, \"Strengthen me, O Lord God of Israel, this day.\""
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "ותך בחוזקה פעמים על צווארו ותכרות את ראשו ותגל נבלתו מעל המיטה ותיקח היריעה מעל העמוד ותצא:",
+          "english": "And she twice struck his neck with all her might, and she took his head away from him. And she tumbled his body down from the bed, and pulled down the canopy from the pillars; and, soon after, she went out"
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "ותיתן את ראש הלופרנש לאמתה ותצווה לתתו אל השק:",
+          "english": "and gave the head of Holofernes to her maid. And she put it in her bag of meat,"
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "ותצאן שתיהן מן המחנה כדרכן לצאת להתפלל ותעבורנה את הערבה ותעלינה ההרה ותבאנה לפני שערי בתול:",
+          "english": "so these two went together, according to their custom, to prayer; and when they passed the camp, they circled the valley and went up the mountain of Bethulia and came to its gates."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "ותקרא יהודית מרחוק אל שומרי השער לאמור:",
+          "english": "Then Judith said, from far off to the watchmen at the gate,"
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "פתחו לי את השער כי יי אלוהינו אתנו להראות לישראל את ידו ולצריו את זרועו כאשר החל לעשת ביום הזה:",
+          "english": "\"Open, open the gate now! God, our God, is with us to show his power yet in Jerusalem and his forces against the enemy, as he has truly done on this day!\""
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "ויהי כשמוע אנשי העיר את קולה וינהרו אל פתח השער ויקראו לזקני העיר:",
+          "english": "Now when the men of her city heard her voice, they hurried down to the gate of their city and they called the elders of the city."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "וקטן וגדול התאספו לראותה כי כפלא הייתה בעיניהם ויפתחו את השער ויאספוה העירה:",
+          "english": "And then they ran all together, both small and great, for it was surprising to them that she had returned. So they opened the gate and received them;"
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "וידליקו אש להאיר וכל העם הקיפו אותה מסביב:",
+          "english": "and they made a fire for a light, and they stood all around them."
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "ותישא יהודית את קולה ותאמר:",
+          "english": "Then she said to them with a loud voice,"
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "הודו ליי והללו לשמו כי לא הסיר חסדו מעל בית ישראל ומחץ פאת צרינו בידי הלילה:",
+          "english": "\"Praise, praise God, praise God, I say, for he has not taken away his mercy from the house of Israel, but has destroyed our enemies by my hands this night.\""
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "ותיקח את ראש הלופרנש מן השק ותראהו את העם ותאמר:",
+          "english": "So she took the head out of the bag and showed it and said to them,"
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "הנה זה ראש הלופרנש שר צבא אשור וזאת היריעה אשר שכב אחריה והוא שכור וביד אישה הרגו אלוהים:",
+          "english": "\"Behold the head of Holofernes, the chief captain of the army of Assur, and behold the canopy where he had lain in his drunkenness; and the Lord has struck him by the hand of a woman."
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "חי יי אשר הצליח דרכי כי רק במראי הטיתי את לבבו וידו לא נגעה בי לרעה:",
+          "english": "As the Lord lives, who has preserved me in the path that I took, my attractiveness has deceived him to his destruction, and yet he did not commit sin with me, to defile and shame me.\""
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "ויחרד כל העם על המראה ויקדו וישתחוו ליי:",
+          "english": "Then all the people were wonderfully astonished, and bowed themselves and worshipped God,"
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "ויאמרו ברוך יי אשר מגן צרנו בידנו כיום הזה:",
+          "english": "and said with one accord, \"Blessed are you, O our God, who has this day brought to nothing the enemies of your people!\""
+        },
+        {
+          "verseNumber": 26,
+          "hebrew": "ועוזיה אמר אל יהודית ברוכה את בתי ליי אל עליון וברוך טעמך מכל בנות הארץ:",
+          "english": "Then Uzziah said to her, \"O daughter, blessed are you of the most high God above all the women upon the earth;"
+        },
+        {
+          "verseNumber": 27,
+          "hebrew": "ברוך יי אלוהים עושה שמים וארץ אשר ידו הייתה אתך לכרות ראש שונאנו:",
+          "english": "and blessed is the Lord God, who has created the heavens and the earth, who guided you in cutting off the head of the chief of our enemies."
+        },
+        {
+          "verseNumber": 28,
+          "hebrew": "לא ישכח חסדך לנצח מלבב כל המהללים חסדי יי:",
+          "english": "Because of this, your resoluteness will not depart from the heart of men, who will remember the power of God for ever."
+        },
+        {
+          "verseNumber": 29,
+          "hebrew": "ויי יזכור אותך לטובה כי בנפשך פדית את עמו מיד מבקשי נפשם ולבבך תמים עם יי:",
+          "english": "And may God turn these things to your benefit as a perpetual praise, to assist you in good things because you have not withheld your life during the affliction of our nation, but have revenged our ruin, walking a straight path before our God.\""
+        },
+        {
+          "verseNumber": 30,
+          "hebrew": "ויאמר כל העם אמן ואמן:",
+          "english": "And all the people said, \"Amen! Amen!\""
+        }
+      ]
+    },
+    {
+      "chapterNumber": 14,
+      "verseCount": 24,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ותאמר יהודית אל זקני העיר שמעוני אחי קחו את הראש הזה והוקיעו אותו על ראש החומה:",
+          "english": "Then Judith said to them, \"Hear me now, my brethren! Take this head and hang it on the highest place of your walls!"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "והיה באור הבוקר והשמש יצא על הארץ ויצאתם כולכם חגורים מן העיר ושרי החיל בראשכם כמו לרדת מן ההר אל מחנה אשור אך ירד אל תרדו:",
+          "english": "And so, as soon as morning appears and the sun shines upon the earth, everyone must take his weapons and go forth, every valiant man out of the city, and with a captain set over them, as though you were going down into the field toward the watch of the Assyrians; but do not go down."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "והיה כי יראו אנשי אשור יחגרו את חרבם וירוצו אל המחנה להעיר את שריהם משנתם:",
+          "english": "Then they will take their armour and go into their camp and call for the captains of the army of Assur;"
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "וכי יבאו שרי הצבא אל אוהל הלופרנש וימצאהו מת ימוג לבם בקרבם וינוסו לפניכם:",
+          "english": "and they will run to the tent of Holofernes, but will not find him; then fear will fall upon them, and they will flee before your face."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "אז תרדפו אחריהם עם כל יושבי אפיקי הארץ והכיתם אותם לפי חרב:",
+          "english": "So then you, and all who inhabit the coast of Israel, will pursue them and overthrow them as they go."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "אך בטרם תעשו זאת קראו לי לאכיור העמוני למען יראה בעיניו את מחרף ישראל אשר שלחו לשחתנו:",
+          "english": "But before you do these things, call Achior the Ammonite to me, so that he may see and know him who despised the house of Israel and who sent him to us as if to his death.\""
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ויהי כי הביאו אותו מבית עוזיה וירא את ראש הלופרנש ביד איש מן הניצבים וייפול על פניו ויתעלף:",
+          "english": "Then they called Achior out of the house of Uzziah; and when he arrived and saw the head of Holofernes in a man's hand in the assembly of the people, he fell down on his face and fainted."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "ויהי כי הקימוהו ורוחו שב אליו וייפול שנית לרגלי יהודית ויאמר:",
+          "english": "But when they had revived him, he fell at Judith's feet and reverenced her and said,"
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ברוכה את בכל אוהלי יהודה ובכל הגוים אשר ישמעון את שמעך:",
+          "english": "\"Blessed are you in all the tents of Judah and in all nations, who when they hear your name will be astonished."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "ועתה ספרי נא לי את אשר עשית בימי שבתך עימהם:",
+          "english": "Now therefore tell me all the things which you have done in these days.\""
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "ותספר לו יהודית את כל הנעשה מיום צאתה עד עתה בדברה אליו:",
+          "english": "Then Judith declared to him in the midst of the people all that she had done, from the day that she went forth until that hour when she spoke to them."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "וישמע העם וישאו את קולם וירונו בקרב כל העיר:",
+          "english": "And when she had finished speaking, the people shouted with a loud voice and made a joyful noise in their city."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "וירא אכיור את אשר עשה יי לישראל ויאמן ביי וימול את בשר ערלתו ויבא בקהל ישראל הוא וזרעו אחריו עד היום הזה:",
+          "english": "And when Achior had seen all that the God of Israel had done, he believed in God greatly; and he circumcised the flesh of his foreskin and was joined to the house of Israel unto this day."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "ויהי באשמורת הבוקר ויוקיעו את ראש הלופרנש על החומה ויחגרו איש את חרבו ויצאו מן העיר אל מורד ההר:",
+          "english": "And as soon as morning arose, they hung the head of Holofernes on the wall, and every man took his weapons, and they went forth by bands to the straits of the mountain."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "ויראו אנשי אשור ויגידו לפקידים והפקידים קראו לכל ראשי הצבא וילכו אל אוהל הלופרנש:",
+          "english": "But when the Assyrians saw them, they sent word to their leaders, who went to their captains and tribunes, and to every one of their rulers. So they came to Holofernes' tent,"
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "ויאמרו לבן משק ביתו מהר והער את אדונינו כי העברים האלה ערבו את לבם לרדת לקראתנו ועתה נכלם כאיש אחד:",
+          "english": "and said to him who had the charge of all his things, \"Awaken our lord now, for the slaves have been so bold as to come down against us in battle, so that they may be utterly destroyed.\""
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "ויגש בגוא אל דלת האהל וידפוק כי אמר בלבו הנה יהודית עמו בחדר:",
+          "english": "Then Bagoas went in and knocked at the door of the tent; for he thought that he had slept with Judith."
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "וירא כי אין קול ואין קשב ויפתח הדלת ויבא החדרה:",
+          "english": "But, because no one answered, he opened it and went into the bedroom;"
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "ויהי כי סר לראות וימצאהו מת על קרקע האהל וראשו כרות ויזעק זעקה גדולה ומרה ויקרע את בגדיו:",
+          "english": "and he found him cast upon the floor dead, and his head had been taken from him. Therefore he cried with a loud voice, with weeping and sighing and a mighty cry, and he tore his garments."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "ויבא בחדר יהודית לראות ואיננה וירץ אל העם החוצה ויקרא:",
+          "english": "After this, he went into the tent where Judith lodged, and when he did not find her, he dashed out to the people and cried,"
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "הנה העבדים האלה התל התלו בנו ואישה עברית אחת נתנה את כל בית נבוכדנצר לשמצה:",
+          "english": "These slaves have dealt treacherously; one woman of the Hebrews has brought shame on the house of king Nebuchadnezzar;"
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "הנה הלופרנש נופל מת ארצה וראשו אין:",
+          "english": "for, behold, Holofernes lies on the ground without a head!"
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "וישמעו שרי אשור ויקרעו את בגדיהם ולבם חרד:",
+          "english": "When the captains of the Assyrians' army heard these words, they tore their coats, and their minds were exceptionally troubled;"
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "ויהי קול המולה גדולה בכל המחנה ויעל עד לב השמים:",
+          "english": "and there was a cry and a very great noise throughout the camp."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 15,
+      "verseCount": 17,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "וגם האנשים אשר היו באוהליהם שמעו את הדבר ותפעם רוחם וימת לבם בקרבם:",
+          "english": "And when those who were in the tents heard, they were astonished at what had happened. And fear and trembling fell upon them,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "וירוצו נבוכים הנה והנה בהר ובשפלה ולא ידעו איש את אחיו והחונים על ההרים מסביב לבתול נסו לנפשם כי אנשי ישראל בעורפם:",
+          "english": "so that there was no man who dared to remain in the sight of his neighbor, but rushing out all together, they fled in every direction of the plain and of the hill country. Those who had camped in the mountains surrounding Bethulia also fled away. Then the children of Israel, every one who was a warrior among them, rushed out upon them."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "ועוזיה שלח מלאכים לכל ערי ישראל הקרובים להודיעם את כל אשר נעשה ולצוות עליהם לרדוף אחרי אויביהם ולכלותם:",
+          "english": "Then Uzziah sent to Betomasthem and to Bebai and Chobai and Cola and to all the coasts of Israel, to declare all that had happened and to tell them that all should rush forth upon their enemies to destroy them."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "ויהי כשומעם ויקומו כולם ויפלו עליהם וירדפום עד חובה:",
+          "english": "Now when the children of Israel heard it, they all fell upon them with one consent and slew them all the way to Chobai;"
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "וגם יושבי ירושלים וגלעד והגליל וכל יושבי ההר בשמעם את הדבר נקהלו ויכו בהם מכה רבה וידלקו אחריהם עד גבולי דמשק:",
+          "english": "and those who came from Jerusalem and from all the hill country did likewise, for men had told them what had happened in the camp of their enemies, and those who were in Galaad and in Galilee chased them with a great slaughter, until they were past Damascus and its borders."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "והנותרים בבתול יצאו וישוסו את מחנה אשור וימצאו שלל רב מאד:",
+          "english": "And the remnant who lived at Bethulia fell upon the camp of Assur and pillaged them, and they were greatly enriched."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "ויהי כי שבו בני ישראל מן המלחמה ויקחו את יתר הפליטה ואת המלקוח אשר בכל הערים והחוות בהר ובשפלה ויאספו שלל עד אין מספר:",
+          "english": "And the children of Israel who had returned from the slaughter took what remained; and the villages and the cities, which were in the mountains and on the plain, obtained many spoils, for their number was very great."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "ויבא יהויקים הכהן הגדול וזקני בני ישראל מירושלים לראות את כל הטוב אשר עשה יי לישראל ולשחר את פני יהודית ולברכה:",
+          "english": "Then Joacim the high priest and the elders of the children of Israel who lived in Jerusalem came to behold the good things that God had done for Israel, and to see Judith and greet her."
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "ויהי בבואם אליה ויהללו ויברכו אותה פה אחד ויאמרו אליה:",
+          "english": "And when they came to her, they blessed her with one accord and said to her,"
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "צבית תפארת ירושלים את גברת ישראל וצפירת תפארה לכל עמנו:",
+          "english": "\"You are the exaltation of Jerusalem, you are the great glory of Israel, you are the great rejoicing of our nation."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "כי גדולות פעלת בידך לטובת עמך ישראל ורוח אלוהים צלחה עליך:",
+          "english": "You have done all these things by your hand. You have done much good to Israel, and God is pleased with it;"
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "ברוכה את ליי לדור ודור ויאמר כל העם אמן:",
+          "english": "you will be blessed by the Almighty Lord for evermore.\" And all the people said, \"Amen!\""
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "והעם מקבצים עוד את השלל ויהיו שלושים יום מאספים אותו:",
+          "english": "And the people despoiled the camp for the space of thirty days."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "ויתנו ליהודית את אוהל הלופרנש ואת כל כלי כספו ואת מטתו ואת כל כלי ביתו ותשם בעגלות ועל הפרדים:",
+          "english": "And they gave the tent of Holofernes to Judith, and all his plates and beds and vessels and all his belongings; and she took it and laid it on her mule; and she prepared her cart and laid them on it."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "וכל נשי בני ישראל אשר באו לראותה יצאו לקראתה בשירים ובמחולות להללה ולברכה:",
+          "english": "Then all the women of Israel ran together to see her, and they blessed her and made a dance among them for her;"
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "ותיקח יהודית ענפי זיתים ותחלקם לנשים אשר אתה ותעשינו מהם עטרות לראשה ולראש רעותה:",
+          "english": "and she took branches in her hand and gave some also to the women who were with her. And they put a garland of olive upon her and on her maid who was with her;"
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "ותלך במחול לפני הנשים וכל אנשי ישראל חגורי חרב ועטורי ענפים הלכו אחריהן הולכים וחוגגים בשירים ובזמירות:",
+          "english": "and she went before all the people in the dance, leading all the women; and all the men of Israel followed in their amour with garlands, and with songs in their mouths."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 16,
+      "verseCount": 27,
+      "verses": [
+        {
+          "verseNumber": 1,
+          "hebrew": "ותשר יהודית את השירה הזאת לעד בבני ישראל וכל העם ענו אחריה:",
+          "english": "Then Judith began to sing this thanksgiving for all Israel, and all the people sang after her this song of praise. And Judith said,"
+        },
+        {
+          "verseNumber": 2,
+          "hebrew": "פצחו רנה לאלוה ותנו תוף זמרו לו בנבל וכינור הודו ליי קראו בשמו:",
+          "english": "\"Begin to my God with timbrels; sing to my Lord with cymbals; tune to him a new psalm; exalt him and call upon his name."
+        },
+        {
+          "verseNumber": 3,
+          "hebrew": "יי אדנינו משבית קרבות בקרב עריו הכין תחנות ומכפימו הציל שפחת עמו:",
+          "english": "For God breaks the battles. For among the camps, in the midst of the people, he has delivered me out of the hands of those who persecuted me."
+        },
+        {
+          "verseNumber": 4,
+          "hebrew": "מהרי צפון ירד אשור המוני חייליו עד אין מספר גיבוריו הובישו נחלי מים פרשיו כיסו הר ובקעה:",
+          "english": "Assur came out of the mountains from the north, he came with ten thousands of his army, their great number stopped the torrents and their horsemen covered the hills."
+        },
+        {
+          "verseNumber": 5,
+          "hebrew": "אמר צורר אצית ארצם מבחר בחוריהם תאכל חרבי עולל ויונק אנפץ ארצה עלמות ובתולות אקח מלקוח:",
+          "english": "He bragged that he would burn up my borders, and kill my young men with the sword, and dash the infants against the ground, and make my young children as a prey, and my virgins as a spoil."
+        },
+        {
+          "verseNumber": 6,
+          "hebrew": "לא יעץ ככה קנאת שדי ביד אישה רעץ קמיו:",
+          "english": "But the Almighty Lord has disappointed them by the hand of a woman."
+        },
+        {
+          "verseNumber": 7,
+          "hebrew": "לא נפל אדיר ביד כביר לא פגעו איש רום קומה בת מררי הרגתהו ביפי מראה נפל שדוד:",
+          "english": "For the mighty one did not fall by the young men, neither did the sons of the Titans strike him, nor did lofty giants set upon him; but Judith the daughter of Merari weakened him with the beauty of her countenance."
+        },
+        {
+          "verseNumber": 8,
+          "hebrew": "שמלת אבל פשטה להקים אומללי ישראל:",
+          "english": "For she put off the garment of her widowhood, for the exaltation of those who were oppressed in Israel,"
+        },
+        {
+          "verseNumber": 9,
+          "hebrew": "סכה פניה תמרוקים שערה העטתה בשבכה ותלבש בוץ לעוקבו:",
+          "english": "and anointed her face with ointment, and bound her hair in a headdress, and put on a linen garment, to deceive him."
+        },
+        {
+          "verseNumber": 10,
+          "hebrew": "עיניו עוורה בנעליה ותלהט ביופייה לבבו ובשלח קצצה ראשו:",
+          "english": "Her sandals ravished his eyes; her beauty took his mind prisoner; and the broadsword passed through his neck."
+        },
+        {
+          "verseNumber": 11,
+          "hebrew": "פרס חרד על רוחה ומדי רגז על כוחה וחלושי עמי הריעו תרועה:",
+          "english": "The Persians quaked at her boldness; and the Medes were daunted by her hardiness. Then my afflicted shouted for joy and my weak ones cried aloud. But they were astonished; these lifted up their voices, but they were overthrown."
+        },
+        {
+          "verseNumber": 12,
+          "hebrew": "נערים ועלמות כליותם דקרו וחרבם הפילה חללים בנוסם בחרב עם שדי נפלו כולמו:",
+          "english": "The sons of the gentlewomen have pierced them through and wounded them as fugitives' children; they perished by the battle of the Lord."
+        },
+        {
+          "verseNumber": 13,
+          "hebrew": "אשירה ליי כי גאה גאה נאדר בכוח ונאדר בגבורה:",
+          "english": "I will sing to the Lord a new song. O Lord, you are great and glorious, wonderful in strength, and invincible."
+        },
+        {
+          "verseNumber": 14,
+          "hebrew": "לו יכרע כל ברך הוא צווה ויעמד שלח רוחו ויהי מי נגדו יקום יתייצב:",
+          "english": "Let all creatures serve you. For you spoke and they were made; you sent forth your spirit and it created them; and there is none who can resist your voice."
+        },
+        {
+          "verseNumber": 15,
+          "hebrew": "הרים ונהרים מפניו ירעשון צורים וכפים כדונג ימסון וליודעיו ימשוך חסד ורחמים:",
+          "english": "For the mountains will be moved from their foundations with the waters; the rocks will melt like wax at your presence. Yet you are merciful to those who fear you."
+        },
+        {
+          "verseNumber": 16,
+          "hebrew": "לא בעולות מחים וחלב מראים אך ביראת יי ירצה איש:",
+          "english": "For all sacrifice is too little to be a sweet fragrance for you and all the fat is not sufficient for your burnt offering, but he who fears the Lord is great at all times."
+        },
+        {
+          "verseNumber": 17,
+          "hebrew": "אוי לך גוי נבל כי תעשוק את עמי גמולך ישלם כי יבקע יום נקם:",
+          "english": "Woe to the nations who rise up against my kindred! The Lord Almighty will take vengeance upon them on the Day of Judgment"
+        },
+        {
+          "verseNumber": 18,
+          "hebrew": "בשרך ינגע בחרחור וכליותיך תאכל רימה ונצח עיניך ידמעון:",
+          "english": "by putting fire and worms in their flesh; and they will feel them and will weep for ever.\""
+        },
+        {
+          "verseNumber": 19,
+          "hebrew": "ויהי בבואם ירושלימה וישתחוו ליי ויתקדשו ויקריבו עולות וזבחים כאשר נדרו:",
+          "english": "Now as soon as they entered into Jerusalem, they worshipped the Lord; and as soon as the people were purified, they offered their burnt offerings and their free offerings and their gifts."
+        },
+        {
+          "verseNumber": 20,
+          "hebrew": "ויהודית לקחה כל כלי הלופרנש אשר נתנו לה ואת יריעת מיטתו ותחרימם ליי:",
+          "english": "Judith also dedicated all the belongings of Holofernes, which the people had given her, and she gave the canopy, which she had taken out of his bedroom, as a gift to the Lord."
+        },
+        {
+          "verseNumber": 21,
+          "hebrew": "וישמחו כל העם לפני יי בירושלים שלושה חודשים ויהודית עימהם:",
+          "english": "So the people continued feasting in Jerusalem before the sanctuary for the space of three months; and Judith remained with them."
+        },
+        {
+          "verseNumber": 22,
+          "hebrew": "ואחרי כן פנה כל העם איש איש לביתו ויהודית שבה אל בתול ויגדל שמה בכל הארץ:",
+          "english": "After this time, every one returned to his own inheritance. And Judith went to Bethulia and remained in her own possession; and during her time she was held in honor throughout the country."
+        },
+        {
+          "verseNumber": 23,
+          "hebrew": "ורבים היו המבקשים אותה לאישה ותמאן ולא הייתה עוד לאיש אחרי מות מנשה בעלה:",
+          "english": "And many desired her, but none knew her all the days of her life, after Manasseh her husband was dead and was gathered to his people."
+        },
+        {
+          "verseNumber": 24,
+          "hebrew": "ותשב בביתה עד עת זקנתה ויהיו שני חייה חמש שנים ומאת שנה:",
+          "english": "But she increased more and more in honor; and she grew old in her husband's house, reaching the age of one hundred five years;"
+        },
+        {
+          "verseNumber": 25,
+          "hebrew": "ואת אמתה שלחה לחופשי ותמות בבתול ותקבר בקבר מנשה בעלה:",
+          "english": "and she made her woman servant free. So she died in Bethulia, and they buried her in the cave of her husband Manasseh."
+        },
+        {
+          "verseNumber": 26,
+          "hebrew": "ויבכו אותה כל בית ישראל שבעת ימים ותעזוב כל אשר לה לגואליה ולגואלי אישה:",
+          "english": "And the house of Israel lamented for her seven days. And before she died, she distributed her goods to all those who were the nearest kindred of Manasseh her husband and to those who were the nearest of her kindred."
+        },
+        {
+          "verseNumber": 27,
+          "hebrew": "וחרב לא עברה עוד בארץ כל ימי חייה וגם שנים רבות אחרי מותה:",
+          "english": "And there was no one who made the children of Israel afraid again during the days of Judith, nor for a long time after her death."
+        }
+      ]
+    }
+  ]
+}

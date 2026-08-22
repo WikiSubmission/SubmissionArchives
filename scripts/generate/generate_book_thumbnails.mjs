@@ -35,16 +35,44 @@ async function renderFirstPage(pdfPath, outPath) {
   fs.writeFileSync(outPath, canvas.toBuffer('image/jpeg', 90));
 }
 
+function findThumbnail(baseName) {
+  return ['.jpg', '.png'].find((extension) =>
+    fs.existsSync(path.join(THUMB_DIR, `${baseName}${extension}`)),
+  );
+}
+
+function listBooks() {
+  return fs.readdirSync(BOOKS_DIR).filter((filename) => filename.toLowerCase().endsWith('.pdf'));
+}
+
+// --check renders nothing and just reports drift, so CI can fail on a book that
+// was added without a committed thumbnail without paying to rasterise every PDF.
+function check() {
+  const missing = listBooks()
+    .map((pdf) => pdf.replace(/\.pdf$/i, ''))
+    .filter((baseName) => !findThumbnail(baseName));
+
+  if (missing.length > 0) {
+    console.error(`Missing book thumbnails (${missing.length}):`);
+    for (const baseName of missing) console.error(`  - ${baseName}`);
+    console.error('\nRun `npm run generate:book-thumbnails` and commit the results.');
+    process.exit(1);
+  }
+
+  console.log(`All ${listBooks().length} book thumbnails present.`);
+}
+
 async function main() {
+  if (process.argv.includes('--check')) {
+    check();
+    return;
+  }
+
   fs.mkdirSync(THUMB_DIR, { recursive: true });
 
-  const books = fs.readdirSync(BOOKS_DIR).filter((filename) => filename.toLowerCase().endsWith('.pdf'));
-
-  for (const pdf of books) {
+  for (const pdf of listBooks()) {
     const baseName = pdf.replace(/\.pdf$/i, '');
-    const existingThumbnail = ['.jpg', '.png'].find((extension) =>
-      fs.existsSync(path.join(THUMB_DIR, `${baseName}${extension}`)),
-    );
+    const existingThumbnail = findThumbnail(baseName);
     if (existingThumbnail) {
       console.log('skip (thumbnail exists):', `${baseName}${existingThumbnail}`);
       continue;

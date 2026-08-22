@@ -4,8 +4,11 @@ import Image from 'next/image';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useWindowVirtualizer } from '@tanstack/react-virtual';
+import { AnimatePresence, motion } from 'motion/react';
 import {
     BookMarked,
+    Check,
     ChevronDown,
     FileText,
     Headphones,
@@ -19,9 +22,11 @@ import { formatMedia } from '@/lib/formatUtils';
 import { getMediaHref } from '@/lib/utils';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import { getHighlightTerms } from '@/lib/search/queryMatch';
-import { searchTranscripts } from './actions';
+import { hasOperators, parseAdvancedQuery } from '@/lib/search/queryParser';
+import { logSearchEvent } from '@/lib/search/analytics';
 import { useSearchKeyboardNav } from './useSearchKeyboardNav';
-import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
+import QuranStudyThumbnail from '@/components/media/QuranStudyThumbnail';
+import { QURAN_STUDY_SLIDES } from '@/data/quran-study-thumbnail-data';
 
 type FilterKey =
     | 'video'
@@ -66,6 +71,58 @@ type SearchResult = {
     matchCount?: number;
 };
 
+type SearchResponse = {
+    results: SearchResult[];
+    total: number;
+    totalMatches: number;
+};
+
+type Suggestion = {
+    id: string;
+    title: string;
+    type: string;
+    author?: string;
+};
+
+const PAGE_SIZE = 10;
+const MIN_SUGGEST_LENGTH = 2;
+const ALL_FILTERS_DEFAULT: Record<FilterKey, boolean> = {
+    video: true,
+    'quran-study': true,
+    'messenger-audio': true,
+    perspective: true,
+    appendix: true,
+    quran: true,
+    other: true,
+};
+
+const OPERATOR_CHIP_CLASS = 'rounded-[4px] border border-ed-accent/30 bg-ed-accent-soft px-2.5 py-1 font-mono text-[0.68rem] text-ed-accent';
+
+function SuggestionIcon({ type }: { type: string }) {
+    if (type === 'video' || type === 'video-program' || type === 'sermon') {
+        return <Video className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+    }
+    if (type === 'quran-study' || type === 'messenger-audio' || type === 'audio') {
+        return <Headphones className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+    }
+    if (type === 'quran') {
+        return <BookMarked className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+    }
+    return <FileText className="h-3.5 w-3.5 shrink-0 text-ed-fg-muted" aria-hidden="true" />;
+}
+
+function formatResult(item: SearchResult): SearchResult {
+    const formattedMedia = formatMedia(item.media);
+    return {
+        ...item,
+        media: {
+            ...item.media,
+            ...formattedMedia,
+            displayTitle: item.media.displayTitle || formattedMedia.displayTitle,
+        },
+    };
+}
+
 function SearchContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -74,50 +131,84 @@ function SearchContent() {
 
     const [query, setQuery] = useState(initialQuery);
     const [isSearching, setIsSearching] = useState(false);
+    const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [results, setResults] = useState<SearchResult[]>([]);
-    const [visibleCount, setVisibleCount] = useState(10);
+    const [total, setTotal] = useState(0);
+    const [totalMatches, setTotalMatches] = useState(0);
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const [expandedMatches, setExpandedMatches] = useState<Set<string>>(new Set());
-    const attemptedInitialQueryRef = useRef<string | null>(null);
+    const parsedQuery = useMemo(() => parseAdvancedQuery(query), [query]);
+    const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+    const [suggestOpen, setSuggestOpen] = useState(false);
+    const abortRef = useRef<AbortController | null>(null);
+    const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const suggestAbortRef = useRef<AbortController | null>(null);
+    const suggestCacheRef = useRef<Map<string, Suggestion[]>>(new Map());
+    const searchFieldRef = useRef<HTMLDivElement>(null);
+    const isFirstRunRef = useRef(true);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    const [filters, setFilters] = useState<Record<FilterKey, boolean>>({
-        video: initialFilters.length === 0
-            || initialFilters.includes('video')
-            || initialFilters.includes('sermon')
-            || initialFilters.includes('video-program'),
-        'quran-study': initialFilters.length === 0 || initialFilters.includes('quran-study'),
-        'messenger-audio': initialFilters.length === 0
-            || initialFilters.includes('messenger-audio')
-            || initialFilters.includes('audio'),
-        perspective: initialFilters.length === 0 || initialFilters.includes('perspective'),
-        appendix: initialFilters.length === 0 || initialFilters.includes('appendix'),
-        quran: initialFilters.length === 0 || initialFilters.includes('quran'),
-        other: initialFilters.length === 0 || initialFilters.includes('other'),
+
+    const [filters, setFilters] = useState<Record<FilterKey, boolean>>(() => {
+        if (initialFilters.length === 0) {
+            return { ...ALL_FILTERS_DEFAULT };
+        }
+
+        return {
+            video: initialFilters.includes('video')
+                || initialFilters.includes('sermon')
+                || initialFilters.includes('video-program'),
+            'quran-study': initialFilters.includes('quran-study'),
+            'messenger-audio': initialFilters.includes('messenger-audio')
+                || initialFilters.includes('audio'),
+            perspective: initialFilters.includes('perspective'),
+            appendix: initialFilters.includes('appendix'),
+            quran: initialFilters.includes('quran'),
+            other: initialFilters.includes('other'),
+        };
     });
 
-    const rankedResults = useMemo(() => {
-        return [...results].sort((a, b) => {
-            const bScore = b.bestScore ?? mediaBestScore(b.matches);
-            const aScore = a.bestScore ?? mediaBestScore(a.matches);
-            return bScore - aScore;
-        });
-    }, [results]);
-
-    const rankedRef = useRef(rankedResults);
+    // The API returns globally rank-ordered pages and they are appended in order,
+    // so the rendered list is already sorted by score.
+    const resultsRef = useRef(results);
     const queryRef = useRef(query);
     const expandedRef = useRef(expandedMatches);
+    const listRef = useRef<HTMLDivElement>(null);
+    const [listOffsetTop, setListOffsetTop] = useState(0);
+
+    // The virtualizer measures against document scroll, so it needs the list's offset
+    // from the top of the page. The control card above it changes height (error banner,
+    // wrapping filter chips), so this is observed rather than measured once.
+    useEffect(() => {
+        const el = listRef.current;
+        if (!el) return;
+        const observer = new ResizeObserver(() => setListOffsetTop(el.offsetTop));
+        observer.observe(document.body);
+        return () => observer.disconnect();
+    }, []);
+
+    // Cards are variable height (match lists expand), the page itself is the scroll
+    // container, and only the mounted window is measured — so heights come from
+    // measureElement rather than a fixed estimate.
+    const virtualizer = useWindowVirtualizer({
+        count: results.length,
+        estimateSize: () => 240,
+        overscan: 6,
+        scrollMargin: listOffsetTop,
+    });
+    const virtualizerRef = useRef(virtualizer);
 
     useLayoutEffect(() => {
-        rankedRef.current = rankedResults;
+        resultsRef.current = results;
         queryRef.current = query;
         expandedRef.current = expandedMatches;
+        virtualizerRef.current = virtualizer;
     });
 
     const itemKeyFor = useCallback((cardIndex: number) => {
-        const media = rankedRef.current[cardIndex]?.media;
+        const media = resultsRef.current[cardIndex]?.media;
         return media ? `${media.id}${media.page ? `-${media.page}` : ''}` : '';
     }, []);
 
@@ -147,7 +238,7 @@ function SearchContent() {
     );
 
     const getHref = useCallback((cardIndex: number, passageIndex: number) => {
-        const result = rankedRef.current[cardIndex];
+        const result = resultsRef.current[cardIndex];
         if (!result) {
             return null;
         }
@@ -164,10 +255,10 @@ function SearchContent() {
 
     const navBounds = useMemo(
         () => ({
-            cardCount: Math.min(visibleCount, rankedResults.length),
-            passageCountFor: (cardIndex: number) => rankedRef.current[cardIndex]?.matches.length ?? 0,
+            cardCount: results.length,
+            passageCountFor: (cardIndex: number) => resultsRef.current[cardIndex]?.matches.length ?? 0,
         }),
-        [visibleCount, rankedResults.length],
+        [results.length],
     );
 
     const nav = useSearchKeyboardNav({
@@ -181,21 +272,29 @@ function SearchContent() {
 
     useEffect(() => {
         nav.reset();
-    }, [results, visibleCount, nav.reset]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [results, nav.reset]); // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
-        if (!nav.activeNodeId) {
+        const nodeId = nav.activeNodeId;
+        if (!nodeId) {
             return;
         }
-        document.getElementById(nav.activeNodeId)?.scrollIntoView({ block: 'nearest' });
-    }, [nav.activeNodeId]);
+        // The target card may be outside the rendered window, in which case its node
+        // does not exist yet — bring it into range first, then scroll to the passage
+        // on the next frame once it has mounted.
+        if (nav.activeCardIndex >= 0) {
+            virtualizerRef.current.scrollToIndex(nav.activeCardIndex, { align: 'auto' });
+        }
+        const frame = requestAnimationFrame(() => {
+            document.getElementById(nodeId)?.scrollIntoView({ block: 'nearest' });
+        });
+        return () => cancelAnimationFrame(frame);
+    }, [nav.activeNodeId, nav.activeCardIndex]);
 
-    const totalMatches = useMemo(
-        () => results.reduce((sum, result) => sum + (result.matchCount ?? result.matches.length), 0),
-        [results],
-    );
-
-    const updateURL = useCallback((
+    // Keeps the address bar shareable without pushing a history entry per keystroke
+    // or filter toggle. router.push would also trigger an RSC request on every
+    // change; the search is entirely client-driven, so there is nothing to refetch.
+    const syncUrl = useCallback((
         searchQuery: string,
         currentFilters: Record<FilterKey, boolean>
     ) => {
@@ -214,20 +313,26 @@ function SearchContent() {
         }
 
         const nextUrl = params.toString() ? `/search?${params.toString()}` : '/search';
-        router.push(nextUrl, { scroll: false });
-    }, [router]);
-
-    const handleSearch = useCallback(async () => {
-        if (!query.trim()) {
-            setResults([]);
-            setVisibleCount(10);
-            setErrorMsg(null);
-            return;
+        if (nextUrl !== `${window.location.pathname}${window.location.search}`) {
+            window.history.replaceState(null, '', nextUrl);
         }
+    }, []);
 
-        setIsSearching(true);
-        setResults([]);
-        setExpandedMatches(new Set());
+    const runQuery = useCallback(async (offset: number) => {
+        const trimmed = query.trim();
+        if (!trimmed) return;
+
+        // Supersede any in-flight request so a slow earlier response can never
+        // overwrite the results of a newer query.
+        abortRef.current?.abort();
+        const controller = new AbortController();
+        abortRef.current = controller;
+
+        if (offset === 0) {
+            setIsSearching(true);
+        } else {
+            setIsLoadingMore(true);
+        }
         setErrorMsg(null);
 
         try {
@@ -240,64 +345,196 @@ function SearchContent() {
             if (filters.quran) typeFilters.push('quran');
             if (filters.other) typeFilters.push('other');
 
-            const response = await searchTranscripts(query, typeFilters, { proximityWindow: 18 });
-            if (!response.success) {
-                throw new Error(response.error || 'Search failed');
-            }
-
-            const rawResults = (response.data || []) as SearchResult[];
-            const formattedResults = rawResults.map((item) => {
-                const formattedMedia = formatMedia(item.media);
-                return {
-                    ...item,
-                    media: {
-                        ...item.media,
-                        ...formattedMedia,
-                        displayTitle: item.media.displayTitle || formattedMedia.displayTitle,
-                    },
-                };
+            const params = new URLSearchParams({
+                q: trimmed,
+                limit: String(PAGE_SIZE),
+                offset: String(offset),
             });
-
-            setResults(formattedResults);
-            setVisibleCount(10);
-            updateURL(query, filters);
-        } catch (error) {
-            const message = error instanceof Error ? error.message : 'An unknown error occurred';
-            setErrorMsg(message);
-        } finally {
-            setIsSearching(false);
-        }
-    }, [query, filters, updateURL, setResults, setVisibleCount, setErrorMsg, setIsSearching, setExpandedMatches]);
-
-    useEffect(() => {
-        // Runs the search once per distinct URL-provided query (e.g. arriving via a
-        // shared search link), regardless of outcome. Gating on results.length === 0
-        // instead would retry forever on a legitimate zero-result search or a failed
-        // request (e.g. rate limiting), hammering the server indefinitely.
-        const timer = setTimeout(() => {
-            if (initialQuery && attemptedInitialQueryRef.current !== initialQuery && !isSearching) {
-                attemptedInitialQueryRef.current = initialQuery;
-                void handleSearch();
+            if (typeFilters.length > 0) {
+                params.set('filters', typeFilters.join(','));
             }
-        }, 0);
-        return () => clearTimeout(timer);
-    }, [handleSearch, initialQuery, isSearching]);
+
+            const startedAt = performance.now();
+            const response = await fetch(`/api/search?${params.toString()}`, { signal: controller.signal });
+            const latencyMs = performance.now() - startedAt;
+            if (!response.ok) {
+                throw new Error(
+                    response.status === 429
+                        ? 'Too many searches. Please wait a moment.'
+                        : 'Search failed. Please try again shortly.',
+                );
+            }
+
+            const payload = (await response.json()) as SearchResponse;
+            const formatted = payload.results.map(formatResult);
+
+            // Results are only swapped once the new set has arrived, so a new query
+            // never blanks the list mid-flight.
+            setResults((prev) => (offset === 0 ? formatted : [...prev, ...formatted]));
+            setTotal(payload.total);
+            setTotalMatches(payload.totalMatches);
+            if (offset === 0) {
+                setExpandedMatches(new Set());
+            }
+
+            if (offset === 0) {
+                logSearchEvent({
+                    name: 'search.query',
+                    query: trimmed,
+                    filterCount: typeFilters.length,
+                    resultCount: payload.total,
+                    latencyMs,
+                });
+            }
+        } catch (error) {
+            if (controller.signal.aborted) return;
+            setErrorMsg(error instanceof Error ? error.message : 'An unknown error occurred');
+        } finally {
+            // A superseded request must not clear the loading state its successor set.
+            if (!controller.signal.aborted) {
+                setIsSearching(false);
+                setIsLoadingMore(false);
+            }
+        }
+    }, [
+        query,
+        filters,
+        setResults,
+        setTotal,
+        setTotalMatches,
+        setErrorMsg,
+        setIsSearching,
+        setIsLoadingMore,
+        setExpandedMatches,
+    ]);
 
     useEffect(() => {
+        // A query arriving from the URL (a shared search link) runs immediately;
+        // everything after that is debounced so typing does not fire a request per key.
+        // The URL is synced at the same settle point, independent of the request
+        // outcome, so a failed or rate-limited search still leaves a shareable URL.
+        const immediate = isFirstRunRef.current;
+        isFirstRunRef.current = false;
+
         if (!query.trim()) {
-            const timer = setTimeout(() => {
+            abortRef.current?.abort();
+            debounceRef.current = setTimeout(() => {
+                syncUrl('', filters);
                 setResults([]);
+                setTotal(0);
+                setTotalMatches(0);
                 setExpandedMatches(new Set());
+                setErrorMsg(null);
+            }, 0);
+        } else {
+            debounceRef.current = setTimeout(() => {
+                syncUrl(query, filters);
+                void runQuery(0);
+            }, immediate ? 0 : 300);
+        }
+
+        return () => {
+            if (debounceRef.current) clearTimeout(debounceRef.current);
+        };
+    }, [query, filters, runQuery, syncUrl]);
+
+    useEffect(() => () => abortRef.current?.abort(), []);
+
+    // Suggestions are advisory, so failures are swallowed rather than surfaced. Results
+    // are cached per prefix, so retyping a prefix never costs a second request.
+    useEffect(() => {
+        const needle = query.trim();
+
+        if (needle.length < MIN_SUGGEST_LENGTH) {
+            suggestAbortRef.current?.abort();
+            const timer = setTimeout(() => {
+                setSuggestions([]);
+                setSuggestOpen(false);
             }, 0);
             return () => clearTimeout(timer);
         }
 
-        const timer = setTimeout(() => {
-            void handleSearch();
-        }, 300);
+        const key = needle.toLowerCase();
+        const cached = suggestCacheRef.current.get(key);
+        if (cached) {
+            const timer = setTimeout(() => {
+                setSuggestions(cached);
+                setSuggestOpen(cached.length > 0);
+            }, 0);
+            return () => clearTimeout(timer);
+        }
+
+        const timer = setTimeout(async () => {
+            suggestAbortRef.current?.abort();
+            const controller = new AbortController();
+            suggestAbortRef.current = controller;
+
+            try {
+                const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(needle)}`, {
+                    signal: controller.signal,
+                });
+                if (!response.ok) return;
+
+                const payload = (await response.json()) as { suggestions: Suggestion[] };
+                suggestCacheRef.current.set(key, payload.suggestions);
+                setSuggestions(payload.suggestions);
+                setSuggestOpen(payload.suggestions.length > 0);
+            } catch {
+                // Aborted or offline — leave whatever is on screen alone.
+            }
+        }, 200);
 
         return () => clearTimeout(timer);
-    }, [query, filters, handleSearch]);
+    }, [query, setSuggestions, setSuggestOpen]);
+
+    // Delegated so clicks are captured without threading a callback through every
+    // card, and attached as a listener rather than a JSX handler because the container
+    // is a listbox wrapper, not an interactive control.
+    useEffect(() => {
+        const el = listRef.current;
+        if (!el) return;
+
+        const onClick = (event: MouseEvent) => {
+            const row = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-media-id]');
+            const rank = Number(row?.dataset.resultRank);
+            if (!row || !Number.isFinite(rank)) return;
+
+            logSearchEvent({
+                name: 'search.click',
+                query: queryRef.current.trim(),
+                rank,
+                mediaId: row.dataset.mediaId ?? '',
+                matchKind: row.dataset.matchKind,
+            });
+        };
+
+        el.addEventListener('click', onClick);
+        return () => el.removeEventListener('click', onClick);
+    }, []);
+
+    useEffect(() => {
+        if (!suggestOpen) return;
+        const onPointerDown = (event: PointerEvent) => {
+            if (!searchFieldRef.current?.contains(event.target as Node)) {
+                setSuggestOpen(false);
+            }
+        };
+        document.addEventListener('pointerdown', onPointerDown);
+        return () => document.removeEventListener('pointerdown', onPointerDown);
+    }, [suggestOpen, setSuggestOpen]);
+
+    const [filterOpen, setFilterOpen] = useState(false);
+    const filterRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (!filterOpen) return;
+        const onPointerDown = (event: PointerEvent) => {
+            if (!filterRef.current?.contains(event.target as Node)) {
+                setFilterOpen(false);
+            }
+        };
+        document.addEventListener('pointerdown', onPointerDown);
+        return () => document.removeEventListener('pointerdown', onPointerDown);
+    }, [filterOpen]);
 
     const toggleMatches = (itemKey: string) => {
         setExpandedMatches((prev) => {
@@ -316,257 +553,329 @@ function SearchContent() {
         [filters],
     );
 
-    const isVideosSelected = useMemo(
-        () => filters.video && !filters['messenger-audio'] && !filters['quran-study'] && !filters.perspective && !filters.appendix && !filters.quran && !filters.other,
-        [filters],
-    );
 
-    const isAudiosSelected = useMemo(
-        () => (filters['messenger-audio'] || filters['quran-study']) && !filters.video && !filters.perspective && !filters.appendix && !filters.quran && !filters.other,
-        [filters],
-    );
+    // Labelled list of individual filter keys shown in the checkbox dropdown.
+    const FILTER_CHECKBOXES: Array<{ key: FilterKey; label: string; icon: typeof SlidersHorizontal }> = [
+        { key: 'video',           label: 'Videos',          icon: Video },
+        { key: 'quran-study',     label: 'Qur\u2019an Study', icon: Headphones },
+        { key: 'messenger-audio', label: 'Messenger Audio', icon: Headphones },
+        { key: 'perspective',     label: 'Perspectives',    icon: FileText },
+        { key: 'appendix',        label: 'Appendices',      icon: FileText },
+        { key: 'quran',           label: 'Qur\u2019an Text', icon: BookMarked },
+        { key: 'other',           label: 'Other',           icon: FileText },
+    ];
 
-    const isWrittenSelected = useMemo(
-        () => (filters.perspective || filters.appendix || filters.other) && !filters.video && !filters['messenger-audio'] && !filters['quran-study'] && !filters.quran,
-        [filters],
-    );
-
-    const isQuranSelected = useMemo(
-        () => filters.quran && !filters.video && !filters['messenger-audio'] && !filters['quran-study'] && !filters.perspective && !filters.appendix && !filters.other,
-        [filters],
-    );
-
-    const selectAllSources = useCallback(() => {
-        setFilters({
-            video: true,
-            'quran-study': true,
-            'messenger-audio': true,
-            perspective: true,
-            appendix: true,
-            quran: true,
-            other: true,
+    const toggleFilter = useCallback((key: FilterKey) => {
+        setFilters((prev) => {
+            const next = { ...prev, [key]: !prev[key] };
+            // Never leave every filter off — revert to all-on instead.
+            if (!Object.values(next).some(Boolean)) {
+                return { video: true, 'quran-study': true, 'messenger-audio': true, perspective: true, appendix: true, quran: true, other: true };
+            }
+            return next;
         });
     }, []);
 
-    const selectVideosCategory = useCallback(() => {
-        if (isVideosSelected) {
-            selectAllSources();
-        } else {
-            setFilters({
-                video: true,
-                'quran-study': false,
-                'messenger-audio': false,
-                perspective: false,
-                appendix: false,
-                quran: false,
-                other: false,
-            });
+    const toggleAll = useCallback(() => {
+        if (isAllSelected) {
+            // Already all-on — nothing to do (all-off is disallowed).
+            return;
         }
-    }, [isVideosSelected, selectAllSources]);
+        setFilters({ video: true, 'quran-study': true, 'messenger-audio': true, perspective: true, appendix: true, quran: true, other: true });
+    }, [isAllSelected]);
 
-    const selectAudiosCategory = useCallback(() => {
-        if (isAudiosSelected) {
-            selectAllSources();
-        } else {
-            setFilters({
-                video: false,
-                'quran-study': true,
-                'messenger-audio': true,
-                perspective: false,
-                appendix: false,
-                quran: false,
-                other: false,
-            });
-        }
-    }, [isAudiosSelected, selectAllSources]);
+    // Human-readable summary for the filter button label.
+    const activeFilterLabel = useMemo(() => {
+        if (isAllSelected) return 'All';
+        const active = FILTER_CHECKBOXES.filter(({ key }) => filters[key]);
+        if (active.length === 1) return active[0].label;
+        return `${active.length} sources`;
+    }, [filters, isAllSelected]); // eslint-disable-line react-hooks/exhaustive-deps
 
-    const selectWrittenCategory = useCallback(() => {
-        if (isWrittenSelected) {
-            selectAllSources();
-        } else {
-            setFilters({
-                video: false,
-                'quran-study': false,
-                'messenger-audio': false,
-                perspective: true,
-                appendix: true,
-                quran: false,
-                other: true,
-            });
-        }
-    }, [isWrittenSelected, selectAllSources]);
+    const handleSearchSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+        setSuggestOpen(false);
+        syncUrl(query, filters);
+        void runQuery(0);
+    }, [query, filters, runQuery, syncUrl]);
 
-    const selectQuranCategory = useCallback(() => {
-        if (isQuranSelected) {
-            selectAllSources();
-        } else {
-            setFilters({
-                video: false,
-                'quran-study': false,
-                'messenger-audio': false,
-                perspective: false,
-                appendix: false,
-                quran: true,
-                other: false,
-            });
-        }
-    }, [isQuranSelected, selectAllSources]);
+    const clearSearchQuery = useCallback(() => {
+        setQuery('');
+        setSuggestions([]);
+        setSuggestOpen(false);
+    }, []);
 
     return (
-        <div className="min-h-screen bg-ed-bg text-ed-fg font-body">
-            <div className="mx-auto max-w-5xl px-3 sm:px-4 lg:px-6 py-6">
-                <div className="flex flex-col gap-6">
-                    
-                    {/* ==========================================================================
-                       MAIN SEARCH FEED
-                       ========================================================================== */}
-                    <main className="min-w-0 flex-1 space-y-6">
-                        
-                        {/* Search Control Bar Header Card */}
-                        <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-4 sm:p-5 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 space-y-4">
-                            <form
-                                onSubmit={(event) => {
-                                    event.preventDefault();
-                                    void handleSearch();
-                                }}
-                                className="relative flex flex-col sm:flex-row sm:items-center gap-3"
-                            >
-                                <div className="relative flex-1">
-                                    <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
-                                    <input
-                                        id="archive-search-input"
-                                        name="q"
-                                        type="text"
-                                        value={query}
-                                        onChange={(event) => setQuery(event.target.value)}
-                                        placeholder="Search transcripts, perspectives, appendices..."
-                                        aria-label="Search transcripts, perspectives, appendices"
-                                        className="archive-input w-full py-2.5 pl-11 pr-24 text-sm sm:text-base rounded-2xl border border-ed-rule/60 dark:border-white/10 bg-ed-bg/60 dark:bg-black/40 text-ed-fg backdrop-blur-xl focus:border-ed-fg dark:focus:border-white/30 transition-all"
-                                        onKeyDown={nav.onKeyDown}
-                                        role="combobox"
-                                        aria-expanded={rankedResults.length > 0}
-                                        aria-controls="search-results"
-                                        aria-autocomplete="list"
-                                        aria-activedescendant={nav.activeNodeId ?? undefined}
-                                    />
-                                    {query ? (
-                                        <button
-                                            type="button"
-                                            onClick={() => setQuery('')}
-                                            className="absolute right-[4.5rem] top-1/2 -translate-y-1/2 p-1 text-ed-fg-muted hover:text-ed-fg"
-                                            aria-label="Clear search query"
-                                        >
-                                            <X className="h-4 w-4" />
-                                        </button>
-                                    ) : null}
-                                    <button
-                                        type="submit"
-                                        className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-xl bg-ed-fg px-4 py-1.5 text-xs font-bold text-ed-bg transition-colors hover:bg-ed-accent"
-                                    >
-                                        Search
-                                    </button>
-                                </div>
+        <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
+            <div
+                aria-hidden
+                className="pointer-events-none fixed inset-0 z-0"
+                style={{
+                    background:
+                        'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(184,98,51,0.025) 0%, transparent 70%), ' +
+                        'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(184,98,51,0.015) 0%, transparent 70%)',
+                }}
+            />
 
-                                {/* Source Filter Segmented Pill Group */}
-                                <div className="overflow-x-auto pb-1 sm:pb-0">
-                                    <div className="relative flex items-center gap-1 p-1 rounded-full border border-ed-rule/60 dark:border-white/10 bg-ed-bg/60 dark:bg-black/40 backdrop-blur-xl overflow-hidden isolation-auto">
-                                        <button
-                                            type="button"
-                                            onClick={selectAllSources}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isAllSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <SlidersHorizontal className="h-3 w-3" />
-                                            All Sources
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectVideosCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isVideosSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <Video className="h-3 w-3" />
-                                            Videos
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectAudiosCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isAudiosSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <Headphones className="h-3 w-3" />
-                                            Audios
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectWrittenCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isWrittenSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <FileText className="h-3 w-3" />
-                                            Written
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={selectQuranCategory}
-                                            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[0.68rem] tracking-wider transition-all shrink-0 ${
-                                                isQuranSelected
-                                                    ? 'bg-ed-fg text-ed-bg font-bold [transform:translateZ(0)] relative z-10'
-                                                    : 'text-ed-fg-muted hover:text-ed-fg font-medium'
-                                            }`}
-                                        >
-                                            <BookMarked className="h-3 w-3" />
-                                            Qur&apos;an
-                                        </button>
+            <main id="main-content" className="relative z-[1] overflow-hidden">
+                <div className="mx-auto max-w-[880px] px-4 py-8 sm:px-7 lg:py-12">
+                    {/* Hero Header */}
+                    <header className="mb-7 border-b border-ed-rule pb-7">
+                        <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
+                            <Search className="h-3 w-3" />
+                            Universal Search Index
+                        </div>
+                        <h1
+                            className="mb-3 text-[clamp(28px,3.6vw,40px)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg"
+                            style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                        >
+                            Search the Archive
+                        </h1>
+                        <p
+                            className="max-w-2xl text-[15.5px] leading-[1.6] text-ed-fg-secondary"
+                            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                        >
+                            Query transcripts, perspectives, and appendices across the full preserved corpus.
+                        </p>
+                    </header>
+
+                    <div className="space-y-6">
+
+                        {/* Search Control Card */}
+                        <div className="rounded-[8px] border border-ed-rule bg-ed-surface p-4 sm:p-6 space-y-4 shadow-sm">
+                                <form
+                                    onSubmit={handleSearchSubmit}
+                                    className="relative flex w-full flex-col gap-3 sm:flex-row sm:items-center"
+                                >
+                                    <div ref={searchFieldRef} className="relative z-20 min-w-0 flex-1">
+                                        <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
+                                        <input
+                                            id="archive-search-input"
+                                            name="q"
+                                            type="text"
+                                            value={query}
+                                            onChange={(event) => setQuery(event.target.value)}
+                                            placeholder="Search transcripts, perspectives, appendices..."
+                                            aria-label="Search transcripts, perspectives, appendices"
+                                            className="w-full rounded-[4px] border border-ed-rule bg-ed-surface py-2.5 pl-10 pr-10 text-sm sm:text-base text-ed-fg placeholder:text-ed-fg-muted outline-none transition-all focus:border-ed-rule-strong focus:bg-ed-surface-strong"
+                                            onKeyDown={(event) => {
+                                                if (event.key === 'Escape' && suggestOpen) {
+                                                    event.preventDefault();
+                                                    setSuggestOpen(false);
+                                                    return;
+                                                }
+                                                nav.onKeyDown(event);
+                                            }}
+                                            role="combobox"
+                                            aria-expanded={suggestOpen || results.length > 0}
+                                            aria-controls="search-results"
+                                            aria-autocomplete="list"
+                                            aria-activedescendant={nav.activeNodeId ?? undefined}
+                                        />
+                                        {query ? (
+                                            <button
+                                                type="button"
+                                                onClick={clearSearchQuery}
+                                                className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-[4px] p-1 text-ed-fg-muted hover:text-ed-fg"
+                                                aria-label="Clear search query"
+                                            >
+                                                <X className="h-4 w-4" />
+                                            </button>
+                                        ) : null}
+
+                                        {suggestOpen && suggestions.length > 0 ? (
+                                            <ul
+                                                id="search-suggestions"
+                                                role="listbox"
+                                                aria-label="Title suggestions"
+                                                className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface shadow-2xl"
+                                            >
+                                                {suggestions.map((suggestion, position) => (
+                                                    <li key={`${suggestion.type}-${suggestion.id}`} role="option" aria-selected="false">
+                                                        <Link
+                                                            href={getMediaLink({ id: suggestion.id, title: suggestion.title, type: suggestion.type }, '')}
+                                                            onClick={() => {
+                                                                setSuggestOpen(false);
+                                                                logSearchEvent({
+                                                                    name: 'search.suggest_select',
+                                                                    query: query.trim(),
+                                                                    suggestionId: suggestion.id,
+                                                                    position,
+                                                                });
+                                                            }}
+                                                            className="flex items-center gap-2.5 px-4 py-2.5 text-left text-sm text-ed-fg transition-colors hover:bg-ed-surface-strong"
+                                                        >
+                                                            <SuggestionIcon type={suggestion.type} />
+                                                            <span className="truncate">{suggestion.title}</span>
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        ) : null}
                                     </div>
-                                </div>
-                            </form>
 
-                            {/* Stats Line below search bar */}
-                            <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-ed-rule/60 text-xs">
-                                <div className="flex items-center gap-2 font-sans font-bold text-ed-fg">
-                                    <span>{results.length > 0 ? `${results.length} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
+                                    <div className="flex items-center gap-2 sm:shrink-0">
+                                        <button
+                                            type="submit"
+                                            disabled={!query.trim()}
+                                            className="inline-flex items-center justify-center rounded-[4px] bg-ed-accent px-4 py-2.5 text-xs font-bold text-white dark:text-[#0F0E0D] transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:bg-ed-surface-strong disabled:text-ed-fg-muted"
+                                            aria-label="Run search"
+                                        >
+                                            Search
+                                        </button>
+
+                                        <div ref={filterRef} className="relative flex items-center justify-end sm:justify-center">
+                                            {/* Filter trigger button */}
+                                            <button
+                                                type="button"
+                                                onClick={() => setFilterOpen((o) => !o)}
+                                                className="relative z-30 inline-flex h-[42px] items-center gap-2 rounded-[4px] border border-ed-rule bg-ed-surface px-3 transition-colors hover:border-ed-rule-strong select-none"
+                                                aria-haspopup="listbox"
+                                                aria-expanded={filterOpen}
+                                                aria-label="Filter sources"
+                                            >
+                                                <SlidersHorizontal className="h-4 w-4 text-ed-fg-muted" />
+                                                <span className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ed-fg">
+                                                    {activeFilterLabel}
+                                                </span>
+                                                <ChevronDown className={`h-3.5 w-3.5 text-ed-fg-muted transition-transform duration-150 ${filterOpen ? 'rotate-180' : ''}`} />
+                                            </button>
+
+                                            {/* Multi-select checkbox dropdown */}
+                                            <AnimatePresence>
+                                                {filterOpen && (
+                                                    <motion.div
+                                                        key="filter-panel"
+                                                        initial={{ opacity: 0, scale: 0.97, y: -4 }}
+                                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                                        exit={{ opacity: 0, scale: 0.97, y: -4 }}
+                                                        transition={{ duration: 0.12, ease: 'easeOut' }}
+                                                        style={{ transformOrigin: 'top right' }}
+                                                        className="absolute right-0 top-full z-30 mt-2 w-52 overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-1.5 shadow-2xl"
+                                                        role="listbox"
+                                                        aria-label="Filter sources"
+                                                        aria-multiselectable="true"
+                                                    >
+                                                        {/* All toggle */}
+                                                        <button
+                                                            type="button"
+                                                            role="option"
+                                                            aria-selected={isAllSelected}
+                                                            onClick={toggleAll}
+                                                            className={`flex w-full cursor-pointer items-center justify-between rounded-[4px] px-2.5 py-2 text-left transition-colors ${isAllSelected ? 'bg-ed-accent-soft' : 'hover:bg-ed-surface-strong'}`}
+                                                        >
+                                                            <div className="flex items-center gap-3">
+                                                                <SlidersHorizontal className={`h-4 w-4 ${isAllSelected ? 'text-ed-accent' : 'text-ed-fg-muted'}`} />
+                                                                <span className={`text-sm tracking-tight ${isAllSelected ? 'font-semibold text-ed-accent' : 'font-medium text-ed-fg'}`}>All</span>
+                                                            </div>
+                                                            <div
+                                                                className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[4px] border-[1.5px] transition-colors duration-100"
+                                                                style={{
+                                                                    backgroundColor: isAllSelected ? 'var(--ed-accent)' : 'transparent',
+                                                                    borderColor: isAllSelected ? 'var(--ed-accent)' : 'var(--ed-rule)',
+                                                                }}
+                                                            >
+                                                                {isAllSelected && <Check className="h-3 w-3 text-white dark:text-[#0F0E0D]" />}
+                                                            </div>
+                                                        </button>
+
+                                                        {/* Divider */}
+                                                        <div className="mx-2.5 my-1 h-px bg-ed-rule" />
+
+                                                        {/* Individual source checkboxes */}
+                                                        {FILTER_CHECKBOXES.map(({ key, label, icon: Icon }) => {
+                                                            const checked = filters[key];
+                                                            return (
+                                                                <button
+                                                                    key={key}
+                                                                    type="button"
+                                                                    role="option"
+                                                                    aria-selected={checked}
+                                                                    onClick={() => toggleFilter(key)}
+                                                                    className={`flex w-full cursor-pointer items-center justify-between rounded-[4px] px-2.5 py-2 text-left transition-colors ${checked ? 'bg-ed-accent-soft' : 'hover:bg-ed-surface-strong'}`}
+                                                                >
+                                                                    <div className="flex items-center gap-3">
+                                                                        <Icon className={`h-4 w-4 ${checked ? 'text-ed-accent' : 'text-ed-fg-muted'}`} />
+                                                                        <span className={`text-sm tracking-tight ${checked ? 'font-semibold text-ed-accent' : 'font-medium text-ed-fg'}`}>{label}</span>
+                                                                    </div>
+                                                                    <div
+                                                                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[4px] border-[1.5px] transition-colors duration-100"
+                                                                        style={{
+                                                                            backgroundColor: checked ? 'var(--ed-accent)' : 'transparent',
+                                                                            borderColor: checked ? 'var(--ed-accent)' : 'var(--ed-rule)',
+                                                                        }}
+                                                                    >
+                                                                        {checked && <Check className="h-3 w-3 text-white dark:text-[#0F0E0D]" />}
+                                                                    </div>
+                                                                </button>
+                                                            );
+                                                        })}
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                {/* Recognised query operators, so it is visible when syntax took effect */}
+                                {hasOperators(parsedQuery) ? (
+                                    <div className="flex flex-wrap items-center gap-1.5" aria-label="Active query operators">
+                                        {parsedQuery.types.map((type) => (
+                                            <span key={`type-${type}`} className={OPERATOR_CHIP_CLASS}>type:{type}</span>
+                                        ))}
+                                        {parsedQuery.exclusions.map((term) => (
+                                            <span key={`not-${term}`} className={OPERATOR_CHIP_CLASS}>excluding {term}</span>
+                                        ))}
+                                        {parsedQuery.after !== undefined ? (
+                                            <span className={OPERATOR_CHIP_CLASS}>after {parsedQuery.after}</span>
+                                        ) : null}
+                                        {parsedQuery.before !== undefined ? (
+                                            <span className={OPERATOR_CHIP_CLASS}>before {parsedQuery.before}</span>
+                                        ) : null}
+                                    </div>
+                                ) : null}
+
+                                {/* Stats Line below search bar */}
+                                <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-ed-rule text-xs">
+                                    <div className="flex items-center gap-2 font-sans font-bold text-ed-fg">
+                                        <span>{total > 0 ? `${total} documents, ${totalMatches} passages` : 'Search Preserved Archive'}</span>
+                                        {isSearching && results.length > 0 ? (
+                                            <span aria-live="polite" className="font-mono text-[0.68rem] font-normal text-ed-fg-muted">
+                                                Updating results…
+                                            </span>
+                                        ) : null}
+                                    </div>
+                                    <span className="font-mono text-[0.68rem] text-ed-fg-muted">
+                                        Exact phrases and nearby terms are already folded into the ranking.
+                                    </span>
                                 </div>
-                                <span className="font-mono text-[0.68rem] text-ed-fg-muted">
-                                    Exact phrases and nearby terms are already folded into the ranking.
-                                </span>
-                            </div>
                         </div>
 
                         {errorMsg ? (
-                            <div className="fade-rise-enter soft-panel p-4 text-sm text-[#961515] dark:text-[#f6ae82] rounded-xl border border-red-500/20">
+                            <div className="rounded-[8px] border border-red-500/20 bg-ed-surface p-4 text-sm text-red-600 dark:text-[#f6ae82]">
                                 {errorMsg}
                             </div>
                         ) : null}
 
                         {/* Search Results List */}
-                        <div id="search-results" role="listbox" aria-label="Search results" className="space-y-6">
-                            {isSearching ? (
+                        <div ref={listRef} id="search-results" role="listbox" aria-label="Search results" className="space-y-6">
+                            {/* Skeletons only when there is nothing to keep on screen; an
+                                existing result set is dimmed and left in place instead. */}
+                            {isSearching && results.length === 0 ? (
                                 <div aria-live="polite" className="space-y-4">
                                     <span className="sr-only">Searching the archive...</span>
                                     {Array.from({ length: 3 }).map((_, index) => (
                                         <div
                                             key={index}
                                             aria-hidden="true"
-                                            className="soft-shell flex animate-pulse gap-4 rounded-2xl p-5"
+                                            className="flex animate-pulse gap-4 rounded-[12px] border border-ed-rule bg-ed-surface p-5 shadow-sm"
                                         >
-                                            <div className="h-16 w-16 shrink-0 rounded-xl bg-ed-muted sm:h-20 sm:w-20" />
+                                            <div className="h-16 w-16 shrink-0 rounded-[8px] bg-ed-surface-strong sm:h-20 sm:w-20" />
                                             <div className="flex-1 space-y-3 py-1">
-                                                <div className="h-4 w-2/3 rounded bg-ed-muted" />
-                                                <div className="h-3 w-full rounded bg-ed-muted" />
-                                                <div className="h-3 w-1/2 rounded bg-ed-muted" />
+                                                <div className="h-4 w-2/3 rounded bg-ed-surface-strong" />
+                                                <div className="h-3 w-full rounded bg-ed-surface-strong" />
+                                                <div className="h-3 w-1/2 rounded bg-ed-surface-strong" />
                                             </div>
                                         </div>
                                     ))}
@@ -574,46 +883,82 @@ function SearchContent() {
                             ) : null}
 
                             {!isSearching && query && results.length === 0 ? (
-                                <div className="fade-rise-enter lift-card rounded-2xl p-12 text-center">
-                                    <p className="font-sans text-2xl font-extrabold text-ed-fg">No matches found.</p>
+                                <div className="rounded-[12px] border border-dashed border-ed-rule bg-ed-surface p-12 text-center shadow-sm">
+                                    <p
+                                        className="text-2xl font-semibold text-ed-fg"
+                                        style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                                    >
+                                        No matches found.
+                                    </p>
                                     <p className="mt-2 text-sm text-ed-fg-muted">
                                         Try a shorter phrase, clear filter options, or search by title.
                                     </p>
                                 </div>
                             ) : null}
 
-                            {!isSearching && rankedResults.slice(0, visibleCount).map((result, index) => {
-                                const itemKey = `${result.media.id}${result.media.page ? `-${result.media.page}` : ''}`;
-                                const active = nav.activeCardIndex === index ? nav.activePassageIndex : null;
-                                return (
-                                    <SearchResultCard
-                                        key={itemKey}
-                                        cardIndex={index}
-                                        active={active}
-                                        result={result}
-                                        query={query}
-                                        rank={index + 1}
-                                        expanded={expandedMatches.has(itemKey)}
-                                        onToggle={() => toggleMatches(itemKey)}
-                                    />
-                                );
-                            })}
+                            {results.length > 0 ? (
+                                <div
+                                    className={`relative transition-opacity duration-200 ${isSearching ? 'opacity-50' : 'opacity-100'}`}
+                                    style={{ height: virtualizer.getTotalSize() }}
+                                >
+                                    {virtualizer.getVirtualItems().map((virtualRow) => {
+                                        const result = results[virtualRow.index];
+                                        const itemKey = `${result.media.id}${result.media.page ? `-${result.media.page}` : ''}`;
+                                        const active = nav.activeCardIndex === virtualRow.index ? nav.activePassageIndex : null;
+                                        return (
+                                            <div
+                                                key={itemKey}
+                                                data-index={virtualRow.index}
+                                                data-media-id={result.media.id}
+                                                data-result-rank={virtualRow.index}
+                                                data-match-kind={result.matches[0]?.kind}
+                                                ref={virtualizer.measureElement}
+                                                className="absolute left-0 top-0 w-full"
+                                                style={{
+                                                    transform: `translateY(${virtualRow.start - virtualizer.options.scrollMargin}px)`,
+                                                }}
+                                            >
+                                                {/* Absolute positioning drops the parent's space-y gap, so the
+                                                    gap rides along inside the measured height instead. */}
+                                                <div className="pb-6">
+                                                    <SearchResultCard
+                                                        cardIndex={virtualRow.index}
+                                                        active={active}
+                                                        result={result}
+                                                        query={query}
+                                                        rank={virtualRow.index + 1}
+                                                        expanded={expandedMatches.has(itemKey)}
+                                                        onToggle={() => toggleMatches(itemKey)}
+                                                    />
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            ) : null}
                         </div>
 
-                        {visibleCount < rankedResults.length ? (
+                        {!isSearching && results.length < total ? (
                             <div className="flex justify-center pt-4">
                                 <button
                                     type="button"
-                                    onClick={() => setVisibleCount((prev) => prev + 10)}
-                                    className="archive-button archive-button-secondary rounded-full px-8 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-ed-fg hover:border-ed-fg shadow-md"
+                                    onClick={() => void runQuery(results.length)}
+                                    disabled={isLoadingMore}
+                                    className="rounded-[4px] border border-ed-rule bg-ed-surface px-8 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-ed-fg-muted transition-colors hover:border-ed-rule-strong hover:text-ed-fg disabled:opacity-50"
                                 >
-                                    Load More Results ({rankedResults.length - visibleCount} remaining)
+                                    {isLoadingMore
+                                        ? 'Loading…'
+                                        : `Load More Results (${total - results.length} remaining)`}
                                 </button>
                             </div>
                         ) : null}
-                    </main>
+                    </div>
+
+                    <footer className="mt-16 border-t border-ed-rule py-9 text-center text-[12px] font-medium tracking-[0.04em] text-ed-fg-muted">
+                        Dedicated to preserving and sharing the message of God alone.
+                    </footer>
                 </div>
-            </div>
+            </main>
         </div>
     );
 }
@@ -653,53 +998,69 @@ function SearchResultCard({
     const bestPassageId = `search-card-${cardIndex}-passage-0`;
     const bestPassageActive = active === 0;
 
+    const qsNumber = media.type === 'quran-study'
+        ? (typeof media.primaryNumber === 'number' && Number.isFinite(media.primaryNumber)
+            ? media.primaryNumber
+            : (() => {
+                const idMatch = media.id.match(/^quran-study\/(\d+)/i);
+                if (idMatch) return Number(idMatch[1]);
+                const titleMatch = (media.displayTitle ?? media.title ?? '').match(/^(?:QS\s*)?(\d{1,3})\b/i);
+                return titleMatch ? Number(titleMatch[1]) : null;
+            })())
+        : null;
+    const hasCssSlide = qsNumber !== null && Boolean(QURAN_STUDY_SLIDES[qsNumber]);
+
     return (
         <article
             id={cardId}
             role="group"
             aria-label={cardTitle}
-            className={`group relative flex flex-col overflow-hidden rounded-3xl border border-ed-rule-strong/40 dark:border-white/10 bg-ed-surface/90 dark:bg-ed-surface/50 p-5 sm:p-6 backdrop-blur-2xl shadow-md dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.35)] transition-all duration-300 hover:border-ed-rule-strong dark:hover:border-white/20 hover:bg-ed-surface dark:hover:bg-ed-surface/70 hover:shadow-lg dark:hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.5)] ${
-                cardActive ? 'ring-2 ring-ed-fg ring-offset-2 ring-offset-ed-bg' : ''
+            className={`group relative flex flex-col overflow-hidden rounded-[12px] border border-ed-rule bg-ed-surface p-5 sm:p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md ${
+                cardActive ? 'ring-2 ring-ed-accent ring-offset-2 ring-offset-ed-bg' : ''
             }`}
         >
             <div className="space-y-5">
                 {/* Main Media & Header Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-4 sm:gap-6 items-start">
+                <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-6 items-start">
                     <Link
                         href={bestHref}
-                        className={`group relative overflow-hidden rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/40 shadow-inner ${
+                        className={`group relative overflow-hidden rounded-[8px] border border-ed-rule bg-ed-bg ${
                             isDocument ? 'aspect-[3/4] w-full max-w-[160px] mx-auto' : 'aspect-video w-full'
                         }`}
                         aria-label={`Open ${media.displayTitle || media.title}`}
                     >
-                        <Image
-                            src={thumbnailSrc}
-                            alt={media.displayTitle || media.title}
-                            fill
-                            unoptimized
-                            className={`h-full w-full transition duration-500 group-hover:scale-[1.04] ${
-                                media.type === 'perspective'
-                                    ? 'object-cover object-right'
-                                    : 'object-cover'
-                            }`}
-                        />
+                        {hasCssSlide && qsNumber !== null ? (
+                            <QuranStudyThumbnail qsNumber={qsNumber} />
+                        ) : (
+                            <Image
+                                src={thumbnailSrc}
+                                alt={media.displayTitle || media.title}
+                                fill
+                                unoptimized
+                                className={`h-full w-full transition duration-500 group-hover:scale-[1.05] ${
+                                    media.type === 'perspective'
+                                        ? 'object-cover object-right'
+                                        : 'object-cover'
+                                }`}
+                            />
+                        )}
                         {!isDocument ? (
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 dark:bg-black/30 backdrop-blur-[2px] transition-opacity group-hover:bg-black/10">
-                                <div className="h-11 w-11 rounded-full border border-white/40 bg-black/70 backdrop-blur-xl flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
-                                    <Play className="h-4 w-4 fill-current ml-0.5" />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[1px] transition-colors group-hover:bg-black/10">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-ed-rule bg-ed-bg/85 shadow-lg backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:border-ed-accent">
+                                    <Play className="ml-0.5 h-4 w-4 fill-ed-fg transition-colors group-hover:fill-ed-accent" />
                                 </div>
                             </div>
                         ) : null}
                     </Link>
 
-                    <div className="min-w-0 space-y-2">
+                    <div className="min-w-0 space-y-2.5">
                         {/* Top Badges Row */}
-                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-rule/60 dark:border-white/10 pb-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-ed-rule pb-3">
                             <div className="flex items-center gap-2">
-                                <span className="rounded-full border border-ed-rule-strong/40 dark:border-white/15 bg-black/5 dark:bg-black/40 px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg dark:text-white/90 backdrop-blur-xl">
+                                <span className="rounded-[4px] border border-ed-rule bg-ed-surface-strong px-2.5 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg">
                                     {String(rank).padStart(2, '0')}
                                 </span>
-                                <span className="rounded-full border border-ed-rule-strong/40 dark:border-white/15 bg-black/5 dark:bg-black/40 px-3 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg-muted dark:text-white/80 uppercase backdrop-blur-xl tracking-wider">
+                                <span className="rounded-[4px] border border-ed-rule bg-ed-surface px-3 py-0.5 font-mono text-[0.68rem] font-bold text-ed-fg-muted uppercase tracking-wider">
                                     {getMediaTypeLabel(media.type)}
                                 </span>
                                 {media.displayDate ? (
@@ -715,8 +1076,11 @@ function SearchResultCard({
                         </div>
 
                         {/* Title & Author */}
-                        <Link href={mediaLink} className="block pt-1 group">
-                            <h3 className="font-sans text-xl sm:text-2xl font-bold tracking-tight text-ed-fg leading-snug group-hover:text-ed-accent transition-colors">
+                        <Link href={mediaLink} className="block pt-0.5 group">
+                            <h3
+                                className="text-xl sm:text-2xl font-semibold tracking-tight text-ed-fg leading-snug transition-colors group-hover:text-ed-accent"
+                                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                            >
                                 {media.displayTitle || media.title}
                             </h3>
                             {media.author ? (
@@ -735,24 +1099,24 @@ function SearchResultCard({
                         id={bestPassageId}
                         role="option"
                         aria-selected={bestPassageActive}
-                        className={`block rounded-2xl border border-ed-rule-strong/40 dark:border-white/10 bg-black/5 dark:bg-black/50 p-4 sm:p-5 shadow-inner backdrop-blur-xl transition hover:border-ed-fg/40 dark:hover:border-white/20 hover:bg-black/10 dark:hover:bg-black/60 ${
-                            bestPassageActive ? 'ring-2 ring-ed-fg' : ''
+                        className={`block rounded-[8px] border border-ed-rule bg-ed-surface-strong p-4 sm:p-5 transition hover:border-ed-rule-strong ${
+                            bestPassageActive ? 'ring-2 ring-ed-accent' : ''
                         }`}
                     >
                         <div className="flex items-center justify-between gap-2 mb-3">
-                            <span className="font-mono text-[0.65rem] font-bold uppercase tracking-widest text-ed-fg-muted">
-                                Best Passage
+                            <span className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
+                                Best Matching Passage
                             </span>
-                            <span className="inline-flex items-center gap-1.5 rounded-full border border-ed-rule dark:border-white/15 bg-ed-fg text-ed-bg dark:bg-black/60 dark:text-white px-3 py-1 font-mono text-xs font-semibold backdrop-blur-xl transition-all shadow-sm">
+                            <span className="inline-flex items-center gap-1.5 rounded-[4px] bg-ed-accent text-white dark:text-[#0F0E0D] px-3.5 py-1 font-mono text-xs font-bold transition-all hover:opacity-90">
                                 <Play className="h-3 w-3 fill-current" />
                                 {isDocumentType(media.type) ? `Open Page ${bestMatch.page || 1}` : `Play at ${formatTime(bestMatch.start_time)}`}
                             </span>
                         </div>
 
                         <div className="flex gap-3 items-start">
-                            <span className="font-serif text-3xl leading-none text-ed-fg-muted/60 select-none">“</span>
+                            <span className="font-serif text-3xl leading-none text-ed-fg-muted select-none">“</span>
                             <p
-                                className="font-sans text-sm sm:text-base leading-relaxed text-ed-fg"
+                                className="text-sm sm:text-base leading-relaxed text-ed-fg"
                                 dangerouslySetInnerHTML={{
                                     __html: highlightMatch(bestMatch.content, query),
                                 }}
@@ -763,12 +1127,12 @@ function SearchResultCard({
 
                 {/* PASSAGES TIMELINE */}
                 {visibleMatches.length > 1 ? (
-                    <div className="pt-2 border-t border-ed-rule/60 dark:border-white/10 space-y-3">
-                        <p className="font-mono text-[0.65rem] font-bold uppercase tracking-widest text-ed-fg-muted">
+                    <div className="pt-2 border-t border-ed-rule space-y-3">
+                        <p className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
                             Passages in this {isDocument ? 'document' : 'recording'}
                         </p>
 
-                        <div className="relative pl-6 space-y-3.5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-ed-rule dark:before:bg-white/10">
+                        <div className="relative pl-6 space-y-3.5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-ed-rule">
                             {visibleMatches.slice(1).map((match) => {
                                 const passageIndex = matches.indexOf(match);
                                 return (
@@ -793,7 +1157,7 @@ function SearchResultCard({
                             type="button"
                             onClick={onToggle}
                             aria-expanded={expanded}
-                            className="archive-button archive-button-secondary rounded-full px-5 py-2 font-mono text-xs font-semibold text-ed-fg hover:border-ed-fg dark:hover:border-white/30 flex items-center gap-2 backdrop-blur-xl"
+                            className="inline-flex items-center gap-2 rounded-[4px] border border-ed-rule bg-ed-surface px-5 py-2 font-mono text-xs font-semibold text-ed-fg-muted transition-all hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg"
                         >
                             <span>{expanded ? 'Show fewer passages' : `Show ${matches.length - 3} more passages`}</span>
                             <ChevronDown className={`h-3.5 w-3.5 transition-transform ${expanded ? 'rotate-180' : ''}`} />
@@ -826,12 +1190,12 @@ function SearchMatchRow({
             id={nodeId}
             role="option"
             aria-selected={active}
-            className={`group relative flex items-start justify-between gap-4 rounded-lg p-2 transition hover:bg-ed-surface/80 ${
-                active ? 'bg-ed-surface border border-ed-fg/40' : ''
+            className={`group relative flex items-start justify-between gap-4 rounded-[4px] p-2.5 transition-all hover:bg-ed-surface-strong ${
+                active ? 'bg-ed-surface-strong border border-ed-accent/40' : ''
             }`}
         >
             {/* Timeline Circle Node Dot */}
-            <span className="absolute -left-[1.125rem] top-3 h-2.5 w-2.5 rounded-full border-2 border-ed-bg bg-ed-fg shadow-sm" />
+            <span className="absolute -left-[1.125rem] top-3.5 h-2.5 w-2.5 rounded-full border-2 border-ed-surface bg-ed-accent" />
 
             <div className="flex items-start gap-3 min-w-0 flex-1">
                 <span className="font-mono text-xs font-bold text-ed-fg shrink-0 pt-0.5">
@@ -839,13 +1203,13 @@ function SearchMatchRow({
                 </span>
                 <div className="min-w-0 flex-1">
                     {match.kind || match.label ? (
-                        <span className="block font-mono text-[0.62rem] uppercase tracking-wider text-ed-fg-muted/80 mb-0.5">
+                        <span className="block font-mono text-[0.62rem] uppercase tracking-wider text-ed-fg-muted mb-0.5">
                             {match.label ? `${getContentLabelText(match.label)} · ` : ''}
                             {getMatchKindLabel(match.kind || '')}
                         </span>
                     ) : null}
                     <p
-                        className="font-sans text-xs sm:text-sm leading-relaxed text-ed-fg-muted group-hover:text-ed-fg transition-colors"
+                        className="text-xs sm:text-sm leading-relaxed text-ed-fg-secondary group-hover:text-ed-fg transition-colors"
                         dangerouslySetInnerHTML={{
                             __html: highlightMatch(match.content, query),
                         }}
@@ -864,7 +1228,7 @@ function SearchMatchRow({
 function SignalBadge({ score }: { score: number }) {
     const label = score >= 100 ? 'Best match' : score >= 80 ? 'Close match' : score >= 55 ? 'Relevant' : 'Broad match';
     return (
-        <span className="soft-pill border-ed-accent/40 bg-ed-accent/10 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-ed-accent">
+        <span className="inline-flex items-center rounded-[4px] border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-emerald-400">
             {label}
         </span>
     );
@@ -1019,18 +1383,8 @@ function getThumbnailSrc(media: SearchResultMedia) {
         return '/images/placeholders/appendix.png';
     }
 
-    if (media.type === 'other') {
+    if (media.type === 'other' || media.type === 'quran-study') {
         return '/images/placeholders/rashad-khalifa.png';
-    }
-
-    if (media.type === 'quran-study') {
-        const match =
-            (media.title || '').match(/^(\d+)\)/) || (media.id || '').match(/quran-study-v2\/(\d+)/);
-        if (match) {
-            const studyNumber = Number(match[1]);
-            return (quranStudyThumbnails as Record<string, string>)[String(studyNumber)]
-                || '/images/placeholders/rashad-khalifa.png';
-        }
     }
 
     return '/images/placeholders/rashad-khalifa.png';
@@ -1059,7 +1413,7 @@ function highlightMatch(text: string, query: string) {
         'gi',
     );
 
-    return safeText.replace(regex, '<span class="search-term-highlight">$1</span>');
+    return safeText.replace(regex, '<span class="qs-highlight">$1</span>');
 }
 
 function escapeHtml(value: string) {

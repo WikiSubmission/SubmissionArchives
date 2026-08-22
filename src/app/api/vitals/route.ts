@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { checkRateLimit, getClientIp, rateLimitResponse } from '@/lib/security';
 import { parseWebVitalMetric } from '@/lib/webVitals';
+import { logger } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 
@@ -29,9 +30,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ ok: false, error: 'Invalid metric.' }, { status: 400 });
         }
 
-        if (process.env.NODE_ENV === 'production') {
-            console.info('[web-vitals]', metric);
-        }
+        logger.info({ event: 'web-vital', ...metric }, 'web vital');
     } catch {
         return NextResponse.json({ ok: false, error: 'Invalid JSON.' }, { status: 400 });
     }

@@ -36,15 +36,22 @@ const nextConfig: NextConfig = {
   output: "standalone",
   // Don't advertise the framework via the X-Powered-By response header.
   poweredByHeader: false,
+  turbopack: {
+    // Pin the workspace root. Turbopack otherwise infers it and can land on
+    // src/app, where next/package.json is not resolvable, failing the build.
+    root: __dirname,
+  },
   experimental: {
-    optimizePackageImports: ["lucide-react", "clsx", "tailwind-merge", "lru-cache"],
+    optimizePackageImports: ["lucide-react", "clsx", "tailwind-merge", "lru-cache", "framer-motion"],
     webVitalsAttribution: ["CLS", "LCP", "INP"],
   },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 390, 640, 750, 828, 1080, 1200, 1440],
     imageSizes: [48, 64, 96, 128, 160, 192, 256, 384],
-    qualities: [45, 50, 60, 65, 70, 75, 85],
+    // Every quality a component actually asks for must be listed here or the
+    // request is rejected at runtime. 40 is used by small preview strips, 80 & 90 by cards.
+    qualities: [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
     // Source images (book covers, thumbnails) are stable, so keep optimized
     // variants cached for ~31 days to avoid re-running sharp on every miss.
     minimumCacheTTL: 2678400,
@@ -112,6 +119,7 @@ const nextConfig: NextConfig = {
       { source: "/quran/appendices", destination: "/scripture/quran/appendices", permanent: true },
       { source: "/quran/:chapter(\\d+)", destination: "/scripture/quran/:chapter", permanent: true },
       { source: "/quran/bible/:book", destination: "/scripture/bible/:book", permanent: true },
+      { source: "/scriptures/:path*", destination: "/scripture/:path*", permanent: true },
     ];
   },
 };

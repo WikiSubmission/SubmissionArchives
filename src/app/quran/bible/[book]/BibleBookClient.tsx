@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'motion/react';
+import { useToast } from '@/components/ui/Toast';
 import {
   BookOpen,
   CaretDown,
@@ -217,6 +219,7 @@ function useKeyPress(targetKey: string, callback: () => void) {
 
 export default function BibleBookClient({ book, hebrewData }: Props) {
   const router = useRouter();
+  const toast = useToast();
   const [selectedChapterNum, setSelectedChapterNum] = useState(1);
   const [navOpen, setNavOpen] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('reading');
@@ -393,30 +396,43 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
       const text = `${book.bookName} ${selectedChapterNum}:${verse.verseNumber}\n\n${verse.text}`;
       navigator.clipboard?.writeText(text);
       setCopiedId(`${selectedChapterNum}-${verse.verseNumber}`);
+      toast.success(`Copied ${book.bookName} ${selectedChapterNum}:${verse.verseNumber}`);
       setTimeout(() => setCopiedId(null), 2000);
     },
-    [book.bookName, selectedChapterNum],
+    [book.bookName, selectedChapterNum, toast],
   );
 
   const handleShare = useCallback(
     (verseNum: number) => {
       const url = `${window.location.origin}/scripture/bible/${book.bookCode.toLowerCase()}?ch=${selectedChapterNum}#v${verseNum}`;
       navigator.clipboard?.writeText(url);
+      toast.success(`Link to ${book.bookName} ${selectedChapterNum}:${verseNum} copied`);
     },
-    [book.bookCode, selectedChapterNum],
+    [book.bookCode, book.bookName, selectedChapterNum, toast],
   );
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] font-sans text-[#f5f5f7] antialiased selection:bg-white/20">
+    <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
+      {/* Ambient page glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 z-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 600px 400px at 85% 10%, rgba(184,98,51,0.025) 0%, transparent 70%), ' +
+            'radial-gradient(ellipse 400px 300px at 15% 90%, rgba(184,98,51,0.015) 0%, transparent 70%)',
+        }}
+      />
+
       {/* ==================== Sticky Header ==================== */}
-      <div className="sticky top-0 z-40 border-b border-white/[0.08] bg-[#0a0a0a]/80 backdrop-blur-2xl">
+      <div className="sticky top-16 z-30 border-b border-ed-rule bg-ed-bg/95 backdrop-blur-2xl">
         <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-3 px-4 sm:px-8">
           {/* Left */}
           <div className="flex min-w-0 items-center gap-3">
             <button
               type="button"
               onClick={() => setNavOpen(true)}
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 text-neutral-400 transition-all hover:border-white/20 hover:text-white active:scale-[0.95] lg:hidden"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[4px] border border-ed-rule text-ed-fg-muted transition-all hover:border-ed-rule-strong hover:text-ed-fg active:scale-[0.95] lg:hidden"
               aria-label="Open book navigator"
             >
               <List className="h-5 w-5" />
@@ -425,24 +441,27 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
             <button
               type="button"
               onClick={() => setNavOpen(true)}
-              className="inline-flex min-w-0 items-center gap-1.5 rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold text-neutral-300 transition-colors hover:bg-white/[0.03] lg:hidden"
+              className="inline-flex min-w-0 items-center gap-1.5 rounded-[4px] border border-ed-rule px-4 py-2 text-sm font-semibold text-ed-fg transition-colors hover:bg-ed-surface-strong lg:hidden"
             >
               <span className="truncate">
                 {book.bookName} {currentChapter?.chapterNumber}
               </span>
-              <CaretDown className="h-4 w-4 shrink-0 text-neutral-500" />
+              <CaretDown className="h-4 w-4 shrink-0 text-ed-fg-muted" />
             </button>
 
             <div className="hidden min-w-0 items-baseline gap-3 lg:flex">
-              <span className="truncate font-serif text-lg font-semibold text-white">
+              <span
+                className="truncate text-lg font-semibold text-ed-fg"
+                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+              >
                 {book.bookName}
               </span>
-              <span className="font-mono text-sm text-neutral-500">
+              <span className="font-mono text-sm text-ed-fg-muted">
                 chapter {currentChapter?.chapterNumber}
               </span>
             </div>
 
-            <div className="ml-4 hidden h-6 w-px bg-white/10 md:block" />
+            <div className="ml-4 hidden h-6 w-px bg-ed-rule md:block" />
 
             {/* Prev/Next Chapter */}
             <div className="hidden items-center gap-2 md:flex">
@@ -457,7 +476,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                       router.push(`/scripture/bible/${prevTarget.bookCode}`);
                     }
                   }}
-                  className="flex h-9 items-center gap-1 rounded-lg border border-white/10 px-3 text-xs font-medium text-neutral-400 transition-all hover:border-white/20 hover:text-white active:scale-[0.97]"
+                  className="flex h-9 items-center gap-1 rounded-[4px] border border-ed-rule px-3 text-xs font-medium text-ed-fg-muted transition-all hover:border-ed-rule-strong hover:text-ed-fg active:scale-[0.97]"
                   title="Previous chapter (p)"
                 >
                   <CaretLeft className="h-3.5 w-3.5" />
@@ -475,7 +494,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                       router.push(`/scripture/bible/${nextTarget.bookCode}`);
                     }
                   }}
-                  className="flex h-9 items-center gap-1 rounded-lg border border-white/10 px-3 text-xs font-medium text-neutral-400 transition-all hover:border-white/20 hover:text-white active:scale-[0.97]"
+                  className="flex h-9 items-center gap-1 rounded-[4px] border border-ed-rule px-3 text-xs font-medium text-ed-fg-muted transition-all hover:border-ed-rule-strong hover:text-ed-fg active:scale-[0.97]"
                   title="Next chapter (n)"
                 >
                   <span className="max-w-[80px] truncate">{nextTarget.label}</span>
@@ -488,7 +507,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
           {/* Right Controls */}
           <div className="flex shrink-0 items-center gap-2">
             {/* View Mode */}
-            <div className="hidden items-center rounded-lg border border-white/10 p-0.5 md:flex">
+            <div className="hidden items-center rounded-[4px] border border-ed-rule bg-ed-surface/80 p-0.5 md:flex">
               {([
                 { key: 'reading', icon: BookOpen, label: 'Reading' },
                 ...(canParallel ? [{ key: 'parallel' as const, icon: Columns, label: 'Parallel' }] : []),
@@ -502,20 +521,27 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                   aria-label={label}
                   title={label}
                   className={cn(
-                    'flex h-8 w-8 items-center justify-center rounded-md transition-all active:scale-[0.95]',
+                    'relative flex h-8 w-8 items-center justify-center rounded-[4px] transition-colors active:scale-[0.95]',
                     viewMode === key
-                      ? 'bg-white text-black font-semibold shadow-sm'
-                      : 'text-neutral-400 hover:text-white',
+                      ? 'text-ed-accent font-semibold'
+                      : 'text-ed-fg-muted hover:text-ed-fg',
                   )}
                 >
-                  <Icon className="h-4 w-4" weight={viewMode === key ? 'fill' : 'regular'} />
+                  {viewMode === key && (
+                    <motion.div
+                      layoutId="active-bible-viewmode-pill"
+                      className="absolute inset-0 rounded-[4px] border border-ed-accent/40 bg-ed-accent-soft shadow-sm"
+                      transition={{ type: 'spring', stiffness: 450, damping: 35 }}
+                    />
+                  )}
+                  <Icon className="relative z-10 h-4 w-4" weight={viewMode === key ? 'fill' : 'regular'} />
                 </button>
               ))}
             </div>
 
             {/* Font Size */}
-            <div className="hidden items-center gap-2 rounded-lg border border-white/10 px-3 py-1.5 lg:flex">
-              <TextT className="h-4 w-4 text-neutral-500" />
+            <div className="hidden items-center gap-2 rounded-[4px] border border-ed-rule bg-ed-surface/60 px-3 py-1.5 lg:flex">
+              <TextT className="h-4 w-4 text-ed-fg-muted" />
               <input
                 type="range"
                 min="0.85"
@@ -524,7 +550,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                 value={fontScale}
                 onChange={(e) => setFontScale(parseFloat(e.target.value))}
                 aria-label="Font size"
-                className="h-1 w-20 cursor-pointer appearance-none rounded-full bg-white/10 accent-white"
+                className="h-1 w-20 cursor-pointer appearance-none rounded-full bg-ed-rule accent-ed-accent"
               />
             </div>
 
@@ -532,10 +558,10 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
               type="button"
               onClick={() => setSidebarOpen((o) => !o)}
               className={cn(
-                'hidden h-10 w-10 items-center justify-center rounded-xl border transition-all active:scale-[0.95] lg:inline-flex',
+                'hidden h-10 w-10 items-center justify-center rounded-[4px] border transition-all active:scale-[0.95] lg:inline-flex',
                 sidebarOpen
-                  ? 'border-white/20 bg-white/10 text-white'
-                  : 'border-white/10 text-neutral-400 hover:text-white',
+                  ? 'border-ed-accent/40 bg-ed-accent-soft text-ed-accent'
+                  : 'border-ed-rule text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg',
               )}
               title={sidebarOpen ? 'Collapse navigator' : 'Open navigator'}
               aria-label={sidebarOpen ? 'Collapse navigator' : 'Open navigator'}
@@ -552,15 +578,20 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
           <button
             aria-label="Close navigator"
             onClick={() => setNavOpen(false)}
-            className="absolute inset-0 bg-black/80 backdrop-blur-md"
+            className="absolute inset-0 bg-black/60 backdrop-blur-md"
           />
-          <div className="absolute inset-y-0 right-0 flex w-[88vw] max-w-[420px] animate-slide-in-right flex-col border-l border-white/[0.08] bg-[#0d0d0d] shadow-2xl">
-            <div className="flex items-center justify-between border-b border-white/[0.08] px-5 py-4">
-              <span className="font-serif text-base font-semibold text-white">Book Navigator</span>
+          <div className="absolute inset-y-0 right-0 flex w-[88vw] max-w-[420px] animate-slide-in-right flex-col border-l border-ed-rule bg-ed-bg shadow-2xl">
+            <div className="flex items-center justify-between border-b border-ed-rule px-5 py-4">
+              <span
+                className="text-base font-semibold text-ed-fg"
+                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+              >
+                Book Navigator
+              </span>
               <button
                 type="button"
                 onClick={() => setNavOpen(false)}
-                className="flex h-10 w-10 items-center justify-center rounded-xl text-neutral-400 transition-colors hover:bg-white/[0.05] hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-[4px] text-ed-fg-muted transition-colors hover:bg-ed-surface-strong hover:text-ed-fg"
                 aria-label="Close"
               >
                 <X className="h-5 w-5" />
@@ -575,26 +606,26 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                 }}
                 className="relative mb-4"
               >
-                <MagnifyingGlass className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500" />
+                <MagnifyingGlass className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
                 <input
                   type="text"
                   value={sidebarFilter}
                   onChange={(e) => setSidebarFilter(e.target.value)}
                   placeholder="Search verse or book (e.g. Gen 2:3)..."
-                  className="h-12 w-full rounded-xl border border-white/[0.08] bg-white/[0.03] pl-10 pr-3 text-sm text-white placeholder:text-neutral-500 focus:border-white/20 focus:outline-none"
+                  className="h-12 w-full rounded-[4px] border border-ed-rule bg-ed-surface/70 pl-10 pr-3 text-sm text-ed-fg placeholder:text-ed-fg-muted focus:border-ed-rule-strong focus:bg-ed-surface-strong focus:outline-none"
                 />
               </form>
 
               <div className="mb-4">
-                <div className="grid grid-cols-2 gap-1 rounded-xl border border-white/[0.08] bg-white/[0.02] p-1 text-xs font-semibold">
+                <div className="grid grid-cols-2 gap-1 rounded-[4px] border border-ed-rule bg-ed-surface p-1 text-xs font-semibold">
                   <button
                     type="button"
                     onClick={() => setSelectedTestament('old')}
                     className={cn(
-                      'rounded-lg py-2.5 transition-colors',
+                      'rounded-[4px] border py-2.5 transition-colors',
                       selectedTestament === 'old'
-                        ? 'bg-white text-black font-semibold'
-                        : 'text-neutral-400 hover:text-white',
+                        ? 'border-ed-accent/40 bg-ed-accent-soft text-ed-accent font-semibold'
+                        : 'border-transparent text-ed-fg-muted hover:text-ed-fg',
                     )}
                   >
                     Old Testament
@@ -603,10 +634,10 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                     type="button"
                     onClick={() => setSelectedTestament('new')}
                     className={cn(
-                      'rounded-lg py-2.5 transition-colors',
+                      'rounded-[4px] border py-2.5 transition-colors',
                       selectedTestament === 'new'
-                        ? 'bg-white text-black font-semibold'
-                        : 'text-neutral-400 hover:text-white',
+                        ? 'border-ed-accent/40 bg-ed-accent-soft text-ed-accent font-semibold'
+                        : 'border-transparent text-ed-fg-muted hover:text-ed-fg',
                     )}
                   >
                     New Testament
@@ -629,26 +660,40 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
       >
         <div className="mx-auto max-w-[1400px] px-4 sm:px-8">
           <main className="mx-auto w-full max-w-[780px] py-10 sm:py-14">
-            <article className="space-y-10">
+            <AnimatePresence mode="wait">
+              <motion.article
+                key={`${book.bookCode}-${currentChapter?.chapterNumber}-${viewMode}`}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                className="space-y-10"
+              >
               {/* Title Block */}
               <div className="animate-fade-in-up text-center">
-                <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
+                <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-ed-fg-muted">
                   {book.testament} &middot; {book.category}
                 </p>
-                <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                <h2
+                  className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.12] tracking-[-0.025em] text-ed-fg"
+                  style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+                >
                   {book.bookName}
                 </h2>
 
-                <div className="mx-auto mt-6 flex w-full max-w-[240px] items-center gap-4 text-white/10">
+                <div className="mx-auto mt-6 flex w-full max-w-[240px] items-center gap-4 text-ed-rule">
                   <span className="h-px flex-1 bg-current" />
-                  <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0 text-white/40">
+                  <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0 text-ed-fg-muted">
                     <path d="M7 0L8.5 5.5L14 7L8.5 8.5L7 14L5.5 8.5L0 7L5.5 5.5Z" fill="currentColor" />
                   </svg>
                   <span className="h-px flex-1 bg-current" />
                 </div>
 
                 {currentChapter?.subheading && (
-                  <h3 className="mt-5 font-serif text-lg italic tracking-wide text-neutral-400 sm:text-xl">
+                  <h3
+                    className="mt-5 text-lg italic tracking-wide text-ed-fg-muted sm:text-xl"
+                    style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                  >
                     {currentChapter.subheading}
                   </h3>
                 )}
@@ -685,8 +730,8 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
 
               {/* Bottom Footnotes */}
               {viewMode === 'reading' && currentChapter?.verses.some((v) => v.footnote) && (
-                <div className="mt-16 border-t border-white/[0.08] pt-10">
-                  <h4 className="mb-6 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400">
+                <div className="mt-16 border-t border-ed-rule pt-10">
+                  <h4 className="mb-6 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-ed-fg-muted">
                     Footnotes
                   </h4>
                   <div className="space-y-3">
@@ -695,12 +740,12 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                       .map((v) => (
                         <div
                           key={v.verseNumber}
-                          className="flex items-start gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] p-4 text-xs"
+                          className="flex items-start gap-3 rounded-[8px] border border-ed-rule bg-ed-surface/50 p-4 text-xs"
                         >
-                          <span className="mt-0.5 shrink-0 font-mono text-[11px] font-bold text-neutral-300">
+                          <span className="mt-0.5 shrink-0 font-mono text-[11px] font-bold text-ed-fg">
                             {currentChapter.chapterNumber}:{v.verseNumber}
                           </span>
-                          <p className="leading-relaxed text-neutral-400">{v.footnote}</p>
+                          <p className="leading-relaxed text-ed-fg-muted">{v.footnote}</p>
                         </div>
                       ))}
                   </div>
@@ -708,7 +753,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
               )}
 
               {/* Chapter Nav */}
-              <div className="mt-16 flex items-center justify-between gap-4 border-t border-white/[0.08] pt-10 text-sm">
+              <div className="mt-16 flex items-center justify-between gap-4 border-t border-ed-rule pt-10 text-sm">
                 {prevTarget ? (
                   <button
                     type="button"
@@ -720,9 +765,9 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                         router.push(`/scripture/bible/${prevTarget.bookCode}`);
                       }
                     }}
-                    className="group inline-flex h-12 items-center gap-2 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 font-semibold text-neutral-300 shadow-sm transition-all hover:border-white/20 hover:bg-white/[0.05] hover:text-white active:scale-[0.98]"
+                    className="group inline-flex h-12 items-center gap-2 rounded-[8px] border border-ed-rule bg-ed-surface/70 px-5 font-semibold text-ed-fg shadow-sm transition-all hover:border-ed-rule-strong hover:bg-ed-surface-strong active:scale-[0.98]"
                   >
-                    <CaretLeft className="h-4 w-4 text-neutral-500 transition-colors group-hover:text-white" />
+                    <CaretLeft className="h-4 w-4 text-ed-fg-muted transition-colors group-hover:text-ed-fg" />
                     <span>{prevTarget.label}</span>
                   </button>
                 ) : (
@@ -740,50 +785,58 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                         router.push(`/scripture/bible/${nextTarget.bookCode}`);
                       }
                     }}
-                    className="group ml-auto inline-flex h-12 items-center gap-2 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 font-semibold text-neutral-300 shadow-sm transition-all hover:border-white/20 hover:bg-white/[0.05] hover:text-white active:scale-[0.98]"
+                    className="group ml-auto inline-flex h-12 items-center gap-2 rounded-[8px] border border-ed-rule bg-ed-surface/70 px-5 font-semibold text-ed-fg shadow-sm transition-all hover:border-ed-rule-strong hover:bg-ed-surface-strong active:scale-[0.98]"
                   >
                     <span>{nextTarget.label}</span>
-                    <CaretRight className="h-4 w-4 text-neutral-500 transition-colors group-hover:text-white" />
+                    <CaretRight className="h-4 w-4 text-ed-fg-muted transition-colors group-hover:text-ed-fg" />
                   </button>
                 )}
               </div>
-            </article>
-          </main>
-        </div>
+            </motion.article>
+          </AnimatePresence>
+        </main>
       </div>
+    </div>
 
       {/* ==================== Desktop Sidebar ==================== */}
       <aside
         className={cn(
-          'fixed right-0 top-16 z-30 hidden h-[calc(100vh-4rem)] w-[400px] flex-col border-l border-white/[0.08] bg-[#0a0a0a]/95 backdrop-blur-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex',
+          'fixed right-0 top-16 z-30 hidden h-[calc(100vh-4rem)] w-[400px] flex-col border-l border-ed-rule bg-ed-bg/95 backdrop-blur-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex',
           sidebarOpen ? 'translate-x-0' : 'translate-x-full',
         )}
       >
         <div className="flex h-full flex-col">
-          <div className="space-y-4 border-b border-white/[0.08] p-5">
+          <div className="space-y-4 border-b border-ed-rule p-5">
             <div>
-              <h3 className="font-serif text-sm font-semibold text-white">Book Navigator</h3>
-              <p className="mt-1 text-xs text-neutral-500">Jump to a book or chapter</p>
+              <h3
+                className="text-sm font-semibold text-ed-fg"
+                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
+              >
+                Book Navigator
+              </h3>
+              <p className="mt-1 text-xs text-ed-fg-muted">Jump to a book or chapter</p>
             </div>
 
             <form onSubmit={handleVerseSearchSubmit} className="relative">
-              <MagnifyingGlass className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500" />
+              <MagnifyingGlass className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ed-fg-muted" />
               <input
                 type="text"
                 value={sidebarFilter}
                 onChange={(e) => setSidebarFilter(e.target.value)}
                 placeholder="Search verse (e.g. Gen 2:3)..."
-                className="h-11 w-full rounded-xl border border-white/[0.08] bg-white/[0.03] py-2.5 pl-10 pr-3 text-sm text-white placeholder:text-neutral-500 focus:border-white/20 focus:outline-none"
+                className="h-11 w-full rounded-[4px] border border-ed-rule bg-ed-surface/70 py-2.5 pl-10 pr-3 text-sm text-ed-fg placeholder:text-ed-fg-muted focus:border-ed-rule-strong focus:bg-ed-surface-strong focus:outline-none"
               />
             </form>
 
-            <div className="grid grid-cols-2 gap-1 rounded-xl border border-white/[0.08] bg-white/[0.02] p-1 text-xs font-semibold">
+            <div className="grid grid-cols-2 gap-1 rounded-[4px] border border-ed-rule bg-ed-surface p-1 text-xs font-semibold">
               <button
                 type="button"
                 onClick={() => setSelectedTestament('old')}
                 className={cn(
-                  'rounded-lg py-2 transition-colors',
-                  selectedTestament === 'old' ? 'bg-white text-black font-semibold' : 'text-neutral-400 hover:text-white',
+                  'rounded-[4px] border py-2 transition-colors',
+                  selectedTestament === 'old'
+                    ? 'border-ed-accent/40 bg-ed-accent-soft text-ed-accent font-semibold'
+                    : 'border-transparent text-ed-fg-muted hover:text-ed-fg',
                 )}
               >
                 Old Testament
@@ -792,8 +845,10 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                 type="button"
                 onClick={() => setSelectedTestament('new')}
                 className={cn(
-                  'rounded-lg py-2 transition-colors',
-                  selectedTestament === 'new' ? 'bg-white text-black font-semibold' : 'text-neutral-400 hover:text-white',
+                  'rounded-[4px] border py-2 transition-colors',
+                  selectedTestament === 'new'
+                    ? 'border-ed-accent/40 bg-ed-accent-soft text-ed-accent font-semibold'
+                    : 'border-transparent text-ed-fg-muted hover:text-ed-fg',
                 )}
               >
                 New Testament
@@ -819,18 +874,18 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                 value={jumpInput}
                 onChange={(e) => setJumpInput(e.target.value)}
                 placeholder="Chapter #"
-                className="h-11 flex-1 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 text-sm text-white placeholder:text-neutral-500 focus:border-white/20 focus:outline-none"
+                className="h-11 flex-1 rounded-[4px] border border-ed-rule bg-ed-surface/70 px-3 text-sm text-ed-fg placeholder:text-ed-fg-muted focus:border-ed-rule-strong focus:bg-ed-surface-strong focus:outline-none"
               />
               <button
                 type="submit"
-                className="h-11 rounded-xl bg-white px-5 text-sm font-semibold text-black transition-opacity hover:opacity-90 active:scale-[0.96]"
+                className="h-11 rounded-[4px] border border-ed-accent bg-ed-accent-soft px-5 text-sm font-semibold text-ed-accent transition-colors hover:bg-ed-accent-soft/80 active:scale-[0.96]"
               >
                 Go
               </button>
             </form>
           </div>
 
-          <div className="flex-1 overflow-y-auto px-3 py-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+          <div className="flex-1 overflow-y-auto px-3 py-4 scrollbar-thin scrollbar-thumb-ed-rule scrollbar-track-transparent">
             {renderBookAccordion(false)}
           </div>
         </div>
@@ -841,7 +896,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
         type="button"
         onClick={() => setSidebarOpen((o) => !o)}
         className={cn(
-          'fixed top-1/2 z-40 hidden h-16 w-7 -translate-y-1/2 items-center justify-center rounded-l-xl border border-r-0 border-white/[0.08] bg-[#111] text-neutral-400 shadow-xl transition-[right] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-white lg:flex',
+          'fixed top-1/2 z-40 hidden h-16 w-7 -translate-y-1/2 items-center justify-center rounded-l-[8px] border border-r-0 border-ed-rule bg-ed-surface text-ed-fg-muted shadow-xl transition-[right] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-ed-fg lg:flex',
           sidebarOpen ? 'right-[400px]' : 'right-0',
         )}
         title={sidebarOpen ? 'Collapse navigator' : 'Open navigator'}
@@ -854,7 +909,7 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
       <button
         type="button"
         onClick={() => setNavOpen(true)}
-        className="fixed bottom-6 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-105 active:scale-95 lg:hidden"
+        className="fixed bottom-6 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-ed-accent text-white shadow-2xl transition-transform hover:scale-105 hover:opacity-90 active:scale-95 lg:hidden"
         title="Open book navigator"
         aria-label="Open book navigator"
       >
@@ -862,37 +917,17 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
       </button>
 
       {/* Keyboard Hints */}
-      <div className="fixed bottom-6 left-6 z-40 hidden items-center gap-3 rounded-full border border-white/[0.08] bg-[#0d0d0d]/90 px-4 py-2 text-[11px] text-neutral-400 backdrop-blur-md lg:flex">
+      <div className="fixed bottom-6 left-6 z-40 hidden items-center gap-3 rounded-full border border-ed-rule bg-ed-bg/90 px-4 py-2 text-[11px] text-ed-fg-muted backdrop-blur-md lg:flex shadow-sm">
         <span>
-          <kbd className="rounded border border-white/10 px-1.5 py-0.5 font-mono text-white">j</kbd>{' '}
-          <kbd className="rounded border border-white/10 px-1.5 py-0.5 font-mono text-white">k</kbd> verses
+          <kbd className="rounded border border-ed-rule bg-ed-surface px-1.5 py-0.5 font-mono text-ed-fg">j</kbd>{' '}
+          <kbd className="rounded border border-ed-rule bg-ed-surface px-1.5 py-0.5 font-mono text-ed-fg">k</kbd> verses
         </span>
-        <span className="h-3 w-px bg-white/10" />
+        <span className="h-3 w-px bg-ed-rule" />
         <span>
-          <kbd className="rounded border border-white/10 px-1.5 py-0.5 font-mono text-white">n</kbd>{' '}
-          <kbd className="rounded border border-white/10 px-1.5 py-0.5 font-mono text-white">p</kbd> chapters
+          <kbd className="rounded border border-ed-rule bg-ed-surface px-1.5 py-0.5 font-mono text-ed-fg">n</kbd>{' '}
+          <kbd className="rounded border border-ed-rule bg-ed-surface px-1.5 py-0.5 font-mono text-ed-fg">p</kbd> chapters
         </span>
       </div>
-
-      {/* Global Styles */}
-      <style jsx global>{`
-        @keyframes slideInRight {
-          from { transform: translateX(100%); }
-          to { transform: translateX(0); }
-        }
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(12px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-slide-in-right { animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
-        .animate-fade-in-up { animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        .scrollbar-thin::-webkit-scrollbar { width: 5px; }
-        .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
-        .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 10px; }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-slide-in-right, .animate-fade-in-up { animation: none !important; opacity: 1; }
-        }
-      `}</style>
     </div>
   );
 
@@ -911,14 +946,14 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                 type="button"
                 onClick={() => setExpandedBookCode(isExpanded ? null : b.code)}
                 className={cn(
-                  'flex min-h-[44px] w-full items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-left text-sm transition-colors active:scale-[0.99]',
+                  'flex min-h-[44px] w-full items-center justify-between gap-2 rounded-[4px] px-3 py-2.5 text-left text-sm transition-colors active:scale-[0.99]',
                   isCurrentBook
-                    ? 'bg-white/[0.08] font-semibold text-white'
-                    : 'text-neutral-400 hover:bg-white/[0.03] hover:text-white',
+                    ? 'bg-ed-surface-strong font-semibold text-ed-fg'
+                    : 'text-ed-fg-muted hover:bg-ed-surface-strong/60 hover:text-ed-fg',
                 )}
               >
                 <span className="truncate">{b.name}</span>
-                <span className="flex shrink-0 items-center gap-2 font-mono text-[11px] font-normal text-neutral-500">
+                <span className="flex shrink-0 items-center gap-2 font-mono text-[11px] font-normal text-ed-fg-muted">
                   {b.chapters}
                   <CaretDown
                     className={cn('h-3.5 w-3.5 transition-transform', isExpanded && 'rotate-180')}
@@ -939,10 +974,10 @@ export default function BibleBookClient({ book, hebrewData }: Props) {
                           if (closeOnNavigate) setNavOpen(false);
                         }}
                         className={cn(
-                          'flex h-11 min-w-[44px] items-center justify-center rounded-xl font-mono text-xs font-medium transition-all active:scale-[0.95]',
+                          'flex h-11 min-w-[44px] items-center justify-center rounded-[4px] border font-mono text-xs font-medium transition-all active:scale-[0.95]',
                           isSelectedCh
-                            ? 'bg-white text-black shadow-sm font-semibold'
-                            : 'bg-white/[0.03] text-neutral-400 hover:bg-white/[0.06] hover:text-white',
+                            ? 'border-ed-accent/40 bg-ed-accent-soft text-ed-accent shadow-sm font-semibold'
+                            : 'border-ed-rule bg-ed-surface/60 text-ed-fg-muted hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg',
                         )}
                       >
                         {chNum}
@@ -1008,15 +1043,15 @@ function BibleVerseBlock({
         onSetActive(null);
       }}
       className={cn(
-        'group relative scroll-mt-32 rounded-2xl border border-transparent py-6 transition-all duration-300 sm:px-4',
-        isActive && 'bg-white/[0.02]',
-        hovered && 'bg-white/[0.02]',
+        'group relative scroll-mt-32 rounded-[12px] border border-transparent py-6 transition-all duration-300 sm:px-4',
+        isActive && 'bg-ed-surface/40',
+        hovered && 'bg-ed-surface/40',
       )}
     >
       {/* Floating Toolbar */}
       <div
         className={cn(
-          'absolute -top-3 right-4 z-10 flex items-center gap-1 rounded-xl border border-white/10 bg-[#111]/95 p-1 shadow-xl backdrop-blur-2xl transition-all duration-200',
+          'absolute -top-3 right-4 z-10 flex items-center gap-1 rounded-[8px] border border-ed-rule bg-ed-surface/95 p-1 shadow-lg backdrop-blur-2xl transition-all duration-200',
           hovered || isActive ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0 pointer-events-none',
         )}
       >
@@ -1051,7 +1086,7 @@ function BibleVerseBlock({
             <p
               dir="rtl"
               lang="he"
-              className="text-right font-serif leading-[2.2] text-white"
+              className="text-right font-serif leading-[2.2] text-ed-fg"
               style={{ fontSize: hebrewSize }}
             >
               {hebrewText}
@@ -1062,23 +1097,23 @@ function BibleVerseBlock({
         {/* English */}
         <div className="flex-1">
           <p
-            className="font-serif leading-[1.9] text-neutral-300"
-            style={{ fontSize: englishSize }}
+            className="leading-[1.9] text-ed-fg"
+            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif', fontSize: englishSize }}
           >
             {isFirst && viewMode === 'reading' ? (
               <>
-                <b className="float-left mr-4 mt-1 select-none font-sans text-5xl font-bold leading-[0.85] text-white sm:text-6xl">
+                <b className="float-left mr-4 mt-1 select-none font-sans text-5xl font-bold leading-[0.85] text-ed-fg sm:text-6xl">
                   {chapterNum}
                 </b>
                 {renderVerseText(verse.text)}
               </>
             ) : (
               <>
-                <sup className="mr-[0.35em] select-none align-super font-mono text-[0.65rem] font-bold tracking-wide text-neutral-500">
+                <sup className="mr-[0.35em] select-none align-super font-mono text-[0.65rem] font-bold tracking-wide text-ed-fg-muted">
                   {chapterNum}:{verse.verseNumber}
-                  {verse.footnote && <span className="ml-0.5 text-white">*</span>}
+                  {verse.footnote && <span className="ml-0.5 text-ed-fg">*</span>}
                 </sup>
-                {'\u2004'}
+                {' '}
                 {renderVerseText(verse.text)}
               </>
             )}
@@ -1086,12 +1121,12 @@ function BibleVerseBlock({
 
           {/* Inline footnote */}
           {verse.footnote && showFootnote && viewMode !== 'reading' && (
-            <aside className="mt-4 rounded-xl border-l-2 border-white/40 bg-white/[0.03] p-4">
-              <p className="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-neutral-300">
+            <aside className="mt-4 rounded-[8px] border-l-2 border-ed-accent bg-ed-surface/70 p-4">
+              <p className="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-ed-fg">
                 <ChatTeardropText className="h-3.5 w-3.5" />
                 Footnote {chapterNum}:{verse.verseNumber}
               </p>
-              <p className="text-sm leading-6 text-neutral-400">{verse.footnote}</p>
+              <p className="text-sm leading-6 text-ed-fg-muted">{verse.footnote}</p>
             </aside>
           )}
         </div>
@@ -1118,10 +1153,10 @@ function ToolbarBtn({
       aria-label={label}
       title={label}
       className={cn(
-        'flex h-8 w-8 items-center justify-center rounded-lg transition-all active:scale-[0.95]',
+        'flex h-8 w-8 items-center justify-center rounded-[4px] transition-all active:scale-[0.95]',
         active
-          ? 'bg-white text-black'
-          : 'text-neutral-400 hover:bg-white/10 hover:text-white',
+          ? 'bg-ed-accent-soft text-ed-accent'
+          : 'text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-fg',
       )}
     >
       <Icon className="h-3.5 w-3.5" weight={active ? 'fill' : 'regular'} />

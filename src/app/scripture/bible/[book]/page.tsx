@@ -26,6 +26,17 @@ function getBookData(bookSlug: string): BibleBookDetail | null {
 
 function getHebrewData(bookSlug: string): HebrewBookData | null {
     const code = bookSlug.toLowerCase();
+
+    // Check Apocrypha parallel Hebrew dataset
+    const apocryphaPath = path.join(process.cwd(), 'public', 'data', 'scriptures', 'apocrypha', `${code}.json`);
+    if (fs.existsSync(apocryphaPath)) {
+        try {
+            return JSON.parse(fs.readFileSync(apocryphaPath, 'utf8')) as HebrewBookData;
+        } catch {
+            // continue to OT lookup
+        }
+    }
+
     const filename = BOOK_CODE_TO_OT_SLUG[code];
     if (!filename) return null;
     const filePath = path.join(process.cwd(), 'public', 'data', 'scriptures', 'ot', `${filename}.json`);

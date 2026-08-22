@@ -1,45 +1,292 @@
-/* .rpv-core__page-layer {
-    filter: invert(1) hue-rotate(180deg); - Disabled per user request
-} */
+/* ==================== SUBMISSION ARCHIVES — PDF READER THEME ==================== */
+/*
+  Visual language matched to the Audio Archives HTML:
+  - Warm near-black surfaces
+  - Warm ivory typography
+  - Burnt-teracotta accent
+  - DM Sans for interface text
+  - Source Serif 4 / Newsreader for editorial content
+  - Restrained borders, shadows, radii, and motion
+*/
 
-/* Re-invert images so they look normal */
-/* Note: This is a best-effort. PDF.js renders images on a canvas separate from text layer in some modes. 
-   If images are part of the main canvas, they might be inverted. 
-   We target common image containers if possible, but pure canvas inversion affects everything.
-   For text-heavy books, full inversion is usually preferred. */
+:root {
+  --archive-bg-primary: var(--ed-bg, #0F0E0D);
+  --archive-bg-secondary: var(--ed-surface, #161514);
+  --archive-bg-tertiary: var(--ed-surface-strong, #1C1B1A);
+  --archive-bg-elevated: var(--ed-surface-raised, #222120);
 
-/* Custom Selection Color: Amber/Gold */
-::selection {
-    background: rgba(251, 191, 36, 0.4) !important;
-    /* amber-400 with opacity */
-    color: #fff !important;
+  --archive-border: var(--ed-rule, #2A2928);
+  --archive-border-hover: var(--ed-rule-strong, #353433);
+
+  --archive-text-primary: var(--ed-fg, #F5F0EB);
+  --archive-text-secondary: var(--ed-fg-secondary, #9E9690);
+  --archive-text-muted: var(--ed-fg-muted, #6B6560);
+  --archive-text-faint: var(--ed-fg-faint, #4A4542);
+
+  --archive-accent: var(--ed-accent, #C8794A);
+  --archive-accent-hover: var(--ed-accent-hover, #D9916A);
+  --archive-accent-soft: var(--ed-accent-soft, rgba(200, 121, 74, 0.08));
+  --archive-accent-glow: var(--ed-accent-glow, rgba(200, 121, 74, 0.12));
+
+  --archive-radius-sm: 4px;
+  --archive-radius-md: 8px;
+  --archive-radius-lg: 12px;
+
+  --archive-font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --archive-font-serif: 'Source Serif 4', Georgia, serif;
+  --archive-font-editorial: 'Newsreader', Georgia, serif;
 }
 
-/* Custom Highlight Color */
-/* Override react-pdf-viewer's default yellow */
-.rpv-search__highlight {
-    background-color: rgba(251, 191, 36, 0.5) !important;
-    outline: 1px solid rgba(251, 191, 36, 0.8);
-    border-radius: 3px;
+/* ==================== PDF OPTICAL THEMES ==================== */
+
+/* Sepia — warm paper, restrained to the archive palette */
+.pdf-theme-sepia .react-pdf__Page__canvas {
+  filter: sepia(0.22) contrast(0.97) brightness(0.98);
 }
 
-/* Scrollbar customization for the sidebar */
-.rpv-search__sidebar::-webkit-scrollbar {
-    width: 6px;
+.pdf-theme-sepia .react-pdf__Page {
+  background-color: #F1E9DD !important;
+  box-shadow:
+    0 4px 20px -2px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(200, 121, 74, 0.16) !important;
 }
 
-.rpv-search__sidebar::-webkit-scrollbar-track {
-    background: #18181b;
-    /* zinc-900 */
+/* Dark — primary Submission Archives reading environment */
+.pdf-theme-dark .react-pdf__Page__canvas {
+  filter: invert(0.90) hue-rotate(180deg) contrast(1.02) brightness(0.90);
 }
 
-.rpv-search__sidebar::-webkit-scrollbar-thumb {
-    background: #3f3f46;
-    /* zinc-700 */
-    border-radius: 3px;
+.pdf-theme-dark .react-pdf__Page {
+  background-color: var(--archive-bg-primary) !important;
+  box-shadow:
+    0 4px 24px -2px rgba(0, 0, 0, 0.60),
+    0 0 0 1px var(--archive-border) !important;
 }
 
-.rpv-search__sidebar::-webkit-scrollbar-thumb:hover {
-    background: #52525b;
-    /* zinc-600 */
+/* Default — studio paper, still visually compatible with the archive */
+.pdf-theme-default .react-pdf__Page {
+  background-color: #F5F0EB;
+  box-shadow:
+    0 4px 24px -2px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(42, 41, 40, 0.18);
+}
+
+/* ==================== TWO-PAGE SPREAD (BOOK MODE) ==================== */
+
+.pdf-spread-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  perspective: 1200px;
+}
+
+.pdf-spread-left {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  box-shadow:
+    -4px 4px 20px rgba(0, 0, 0, 0.30),
+    inset -12px 0 20px -8px rgba(0, 0, 0, 0.18) !important;
+}
+
+.pdf-spread-right {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  box-shadow:
+    4px 4px 20px rgba(0, 0, 0, 0.30),
+    inset 12px 0 20px -8px rgba(0, 0, 0, 0.18) !important;
+}
+
+.pdf-spread-gutter {
+  width: 2px;
+  background: linear-gradient(to bottom,
+      rgba(42, 41, 40, 0.55),
+      rgba(15, 14, 13, 0.85),
+      rgba(42, 41, 40, 0.55));
+  z-index: 20;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.50);
+}
+
+/* ==================== SEARCH HIGHLIGHTS ==================== */
+
+/* Replaces the previous bright yellow with the archive's terracotta accent. */
+.pdf-search-highlight {
+  background-color: rgba(200, 121, 74, 0.24) !important;
+  color: inherit !important;
+  border-radius: var(--archive-radius-sm);
+  outline: 1px solid rgba(200, 121, 74, 0.48);
+  box-shadow: 0 0 4px rgba(200, 121, 74, 0.14);
+  transition: all 0.15s ease;
+}
+
+.pdf-search-highlight-active {
+  background-color: rgba(200, 121, 74, 0.58) !important;
+  outline: 2px solid var(--archive-accent) !important;
+  color: var(--archive-bg-primary) !important;
+  box-shadow: 0 0 10px rgba(200, 121, 74, 0.20);
+}
+
+/* ==================== READER TOOLBAR / POPOVER ==================== */
+
+.reader-popover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  min-width: 180px;
+
+  background: rgba(30, 29, 28, 0.96);
+  border: 1px solid var(--archive-border);
+  border-radius: var(--archive-radius-md);
+  padding: 0.375rem;
+
+  box-shadow:
+    0 10px 30px -5px rgba(0, 0, 0, 0.45),
+    0 0 0 1px var(--archive-border);
+
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+
+  z-index: 50;
+  animation: readerPopoverEnter 0.15s cubic-bezier(0.2, 0, 0, 1);
+  font-family: var(--archive-font-sans);
+}
+
+@keyframes readerPopoverEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.reader-popover-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--archive-radius-sm);
+
+  font-family: var(--archive-font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--archive-text-muted);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.reader-popover-item:hover {
+  background: var(--archive-bg-tertiary);
+  color: var(--archive-text-primary);
+}
+
+.reader-popover-item[data-active="true"] {
+  background: var(--archive-accent-soft);
+  color: var(--archive-accent);
+  font-weight: 600;
+}
+
+/* ==================== OUTLINE / TOC TREE ==================== */
+
+.pdf-toc-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--archive-radius-sm);
+
+  font-family: var(--archive-font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--archive-text-muted);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdf-toc-item:hover {
+  background: var(--archive-bg-secondary);
+  color: var(--archive-text-primary);
+}
+
+.pdf-toc-item[data-active="true"] {
+  background: var(--archive-accent-soft);
+  color: var(--archive-accent);
+  font-weight: 600;
+  box-shadow: inset 2px 0 0 var(--archive-accent);
+}
+
+/* ==================== READER TYPE POLISH ==================== */
+
+/*
+  Apply these classes where the PDF reader exposes its own text/UI.
+  They intentionally mirror the HTML archive's three-font hierarchy.
+*/
+
+.pdf-reader-ui,
+.pdf-reader-ui button,
+.pdf-reader-ui input,
+.pdf-reader-ui select {
+  font-family: var(--archive-font-sans);
+}
+
+.pdf-reader-title,
+.pdf-reader-heading {
+  font-family: var(--archive-font-serif);
+  color: var(--archive-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.pdf-reader-body,
+.pdf-reader-description {
+  font-family: var(--archive-font-editorial);
+  color: var(--archive-text-secondary);
+  line-height: 1.6;
+}
+
+/* ==================== ACCESSIBLE FOCUS ==================== */
+
+.reader-popover-item:focus-visible,
+.pdf-toc-item:focus-visible {
+  outline: 1px solid var(--archive-accent);
+  outline-offset: 2px;
+}
+
+/* ==================== REDUCED MOTION ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reader-popover,
+  .reader-popover-item,
+  .pdf-toc-item,
+  .pdf-search-highlight {
+    animation: none !important;
+    transition: none !important;
+  }
 }

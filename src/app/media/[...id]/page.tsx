@@ -1,13 +1,13 @@
-import fs from 'fs';
-import path from 'path';
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { formatMedia } from '@/lib/formatUtils';
-import { getMediaAssetUrl, getMediaPlaybackWindow, getPublicAssetUrl } from '@/lib/mediaAssets';
-import { SITE_NAME } from '@/config/site';
+import fs from "fs";
+import path from "path";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { formatMedia } from "@/lib/formatUtils";
+import { getMediaAssetUrl, getMediaPlaybackWindow, getPublicAssetUrl } from "@/lib/mediaAssets";
+import { SITE_NAME } from "@/config/site";
 export const dynamicParams = true;
 
-import PlayerWrapper from './PlayerWrapper';
+import PlayerWrapper from "./PlayerWrapper";
 
 type LocalMediaItem = {
   id: string;
@@ -15,9 +15,9 @@ type LocalMediaItem = {
   type: string;
   folder: string;
   date?: string;
+  description?: string;
   created_at?: string;
   videoFile?: string;
-  audioFile?: string;
   vttFile?: string;
   thumbnailOverride?: string;
   youtubeId?: string;
@@ -28,6 +28,14 @@ type LocalMediaItem = {
   primaryNumber?: number;
   alternateNumbers?: string[];
   alternateNumberLabel?: string;
+  chapters?: Array<{
+    id: number;
+    startTime: number;
+    endTime?: number;
+    title: string;
+    description?: string;
+    speaker?: string;
+  }>;
 };
 
 type PlayerSegment = {
@@ -54,44 +62,74 @@ type MasterIndexItem = LocalMediaItem & {
   }>;
 };
 
-const SOURCE_CATALOG_DIR = path.join(process.cwd(), 'data', 'catalog');
-const GENERATED_DIR = path.join(process.cwd(), 'public', 'data', 'generated_indices');
+const SOURCE_CATALOG_DIR = path.join(process.cwd(), "data", "catalog");
+const GENERATED_DIR = path.join(process.cwd(), "public", "data", "generated_indices");
 
-// Module-level singleton cache: these generated index files are large
-// Force hot-reload 3
-// parse each once instead of per-render/per-request (React's cache() only
-// dedupes within a single render).
-const localIndexCache = new Map<string, LocalMediaItem[]>();
+// Module-level cache with mtime invalidation so updates to index files take immediate effect.
+const localIndexCache = new Map<string, { mtime: number; data: LocalMediaItem[] }>();
 
 function getLocalIndex(filePath: string): LocalMediaItem[] {
-  const cached = localIndexCache.get(filePath);
-  if (cached) return cached;
   if (!fs.existsSync(filePath)) return [];
-  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8')) as LocalMediaItem[];
-  localIndexCache.set(filePath, parsed);
+  const stat = fs.statSync(filePath);
+  const cached = localIndexCache.get(filePath);
+  if (cached && cached.mtime === stat.mtimeMs) return cached.data;
+  const parsed = JSON.parse(fs.readFileSync(filePath, "utf8")) as LocalMediaItem[];
+  localIndexCache.set(filePath, { mtime: stat.mtimeMs, data: parsed });
   return parsed;
 }
 
+function getChaptersForItem(item: LocalMediaItem, masterItem?: MasterIndexItem) {
+  if (masterItem?.chapters && masterItem.chapters.length > 0) return masterItem.chapters;
+  if (item.chapters && item.chapters.length > 0) return item.chapters;
+  // Chapter sidecars live in data/catalog/chapters, keyed by the record's short id:
+  // QS01..QS52 for the Quran Studies, MA53..MA100 for the Messenger Audios. Both id
+  // families begin with a zero-padded number, so one lookup serves both. Previously this
+  // was hardcoded to quran-study, which is why Messenger Audio chapters had nowhere to go.
+  const SIDECAR_PREFIX: Record<string, string> = {
+    "quran-study": "QS",
+    "messenger-audio": "MA",
+  };
+  const prefix = SIDECAR_PREFIX[item.type];
+  if (prefix) {
+    const match = (item.id || "").match(/^[a-z-]+\/(\d+)/i);
+    if (match) {
+      const num = Number(match[1]);
+      const chapterPath = path.join(
+        SOURCE_CATALOG_DIR, "chapters", `${prefix}${String(num).padStart(2, "0")}.json`,
+      );
+      if (fs.existsSync(chapterPath)) {
+        try {
+          const sidecar = JSON.parse(fs.readFileSync(chapterPath, "utf8"));
+          if (Array.isArray(sidecar.chapters) && sidecar.chapters.length > 0) return sidecar.chapters;
+        } catch {
+          // ignore error
+        }
+      }
+    }
+  }
+  return undefined;
+}
+
 function getVideoCatalog(masterIndex: MasterIndexItem[]) {
-  const videos = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'videos.json'));
+  const videos = getLocalIndex(path.join(SOURCE_CATALOG_DIR, "videos.json"));
   if (videos.length > 0) return videos;
 
   return masterIndex.filter((item) =>
-    item.type === 'video-program' || item.type === 'sermon' || item.type === 'video'
+    item.type === "video-program" || item.type === "sermon" || item.type === "video"
   ) as LocalMediaItem[];
 }
 
 function getAudioCatalog(masterIndex: MasterIndexItem[]) {
-  const audios = getLocalIndex(path.join(SOURCE_CATALOG_DIR, 'audios.json'));
+  const audios = getLocalIndex(path.join(SOURCE_CATALOG_DIR, "audios.json"));
   if (audios.length > 0) return audios;
 
   return masterIndex.filter((item) =>
-    item.type === 'quran-study' || item.type === 'messenger-audio' || item.type === 'audio'
+    item.type === "quran-study" || item.type === "messenger-audio" || item.type === "audio"
   ) as LocalMediaItem[];
 }
 
 export async function generateStaticParams() {
-  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, "MASTER_INDEX.json")) as MasterIndexItem[];
   const allMedia = [...getVideoCatalog(masterIndex), ...getAudioCatalog(masterIndex)];
   const seen = new Set<string>();
 
@@ -102,12 +140,12 @@ export async function generateStaticParams() {
       return true;
     })
     .map((item) => ({
-      id: item.id.split('/').filter(Boolean),
+      id: item.id.split("/").filter(Boolean),
     }));
 }
 
 function findCatalogItem(key: string) {
-  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, "MASTER_INDEX.json")) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
   const allAudios = getAudioCatalog(masterIndex);
   return allVideos.find((v) => v.id === key) || allAudios.find((a) => a.id === key);
@@ -119,13 +157,18 @@ export async function generateMetadata({
   params: Promise<{ id: string[] }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const key = id.map(decodeURIComponent).join('/');
+  const key = id.map(decodeURIComponent).join("/");
   const item = findCatalogItem(key);
-  if (!item) return { title: 'Not Found' };
+  if (!item) return { title: "Not Found" };
 
   const { displayTitle, displayDate, author } = formatMedia(item);
-  const description = displayDate ? `${displayTitle}: ${displayDate}, by ${author}.` : `${displayTitle}, by ${author}.`;
-  const image = item.thumbnailOverride ? [getPublicAssetUrl(item.thumbnailOverride)] : ['/digi.png'];
+  const fallbackDescription = displayDate
+    ? `${displayTitle}: ${displayDate}, by ${author}.`
+    : `${displayTitle}, by ${author}.`;
+  const description = item.description || fallbackDescription;
+  const image = item.thumbnailOverride
+    ? [getPublicAssetUrl(item.thumbnailOverride)]
+    : ["/digi.png"];
 
   return {
     title: displayTitle,
@@ -133,13 +176,13 @@ export async function generateMetadata({
     openGraph: {
       title: displayTitle,
       description,
-      type: 'video.other',
+      type: "video.other",
       siteName: SITE_NAME,
-      url: `/media/${id.join('/')}`,
+      url: `/media/${id.join("/")}`,
       images: image,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: displayTitle,
       description,
       images: image,
@@ -153,15 +196,15 @@ export default async function WatchPage({
   params: Promise<{ id: string[] }>;
 }) {
   const { id } = await params;
-  const key = id.map(decodeURIComponent).join('/');
-  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, 'MASTER_INDEX.json')) as MasterIndexItem[];
+  const key = id.map(decodeURIComponent).join("/");
+  const masterIndex = getLocalIndex(path.join(GENERATED_DIR, "MASTER_INDEX.json")) as MasterIndexItem[];
   const allVideos = getVideoCatalog(masterIndex);
   const allAudios = getAudioCatalog(masterIndex);
 
-  let item = allVideos.find(v => v.id === key);
+  let item = allVideos.find((v) => v.id === key);
   let isVideo = true;
   if (!item) {
-    item = allAudios.find(a => a.id === key);
+    item = allAudios.find((a) => a.id === key);
     isVideo = false;
   }
   if (!item) notFound();
@@ -173,43 +216,70 @@ export default async function WatchPage({
 
   // MA 72+ transcripts come from unverified auto-generated captions with no
   // reliable speaker attribution, so they should not default to a named speaker.
-  // The 1987 Debate also has multiple speakers without attribution.
-  const isUnverifiedSpeakerSource = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 72) || item.id === 'video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987';
-  const defaultSpeaker = isUnverifiedSpeakerSource ? '' : 'Dr. Rashad Khalifa';
-  const transcriptDisclaimer = (item.type === 'messenger-audio' && (item.primaryNumber ?? 0) >= 72) ? 'MA 72-100 are NOT hand-transcribed.' : undefined;
+  //
+  // The 1987 Debate is listed for a different reason. Its rows are now attributed
+  // (Dr. Rashad Khalifa vs Sunni Scholars, see docs/TRANSCRIPT_REVIEW_2026-08-19.md
+  // Parts D and F), but 101 rows are deliberately left blank because neither the text
+  // nor the audio can settle who is speaking. Those rows must stay blank rather than
+  // inherit the record author, since defaulting them to Khalifa would silently attribute
+  // the scholars' interjections to him.
+  const isUnverifiedSpeakerSource =
+    (item.type === "messenger-audio" && (item.primaryNumber ?? 0) >= 72) ||
+    item.id === "video-program/debate-dr-rashad-khalifa-ph-d-vs-sunni-scholars-1987";
+  const defaultSpeaker = isUnverifiedSpeakerSource ? "" : "Dr. Rashad Khalifa";
+  const transcriptDisclaimer =
+    item.type === "messenger-audio" && (item.primaryNumber ?? 0) >= 72
+      ? "MA 72-100 are NOT hand-transcribed."
+      : undefined;
 
-  const segments: PlayerSegment[] = (masterItem?.segments || []).map((segment, index) => ({
-    id: index,
-    start_time: segment.start ?? 0,
-    end_time: segment.end ?? segment.start ?? 0,
-    speaker: segment.speaker || defaultSpeaker,
-    content: segment.text ?? '',
-    segment_index: index + 1,
-  })).filter((segment) => segment.content);
+  const segments: PlayerSegment[] = (masterItem?.segments || [])
+    .map((segment, index) => ({
+      id: index,
+      start_time: segment.start ?? 0,
+      end_time: segment.end ?? segment.start ?? 0,
+      speaker: segment.speaker || defaultSpeaker,
+      content: segment.text ?? "",
+      segment_index: index + 1,
+    }))
+    .filter((segment) => segment.content);
 
-  const segments_ar: PlayerSegment[] = (masterItem?.segments_ar || []).map((segment, index) => ({
-    id: index,
-    start_time: segment.start ?? 0,
-    end_time: segment.end ?? segment.start ?? 0,
-    speaker: segment.speaker || defaultSpeaker,
-    content: segment.text ?? '',
-    segment_index: index + 1,
-  })).filter((segment) => segment.content);
+  const segments_ar: PlayerSegment[] = (masterItem?.segments_ar || [])
+    .map((segment, index) => ({
+      id: index,
+      start_time: segment.start ?? 0,
+      end_time: segment.end ?? segment.start ?? 0,
+      speaker: segment.speaker || defaultSpeaker,
+      content: segment.text ?? "",
+      segment_index: index + 1,
+    }))
+    .filter((segment) => segment.content);
 
   const collection = isVideo ? allVideos : allAudios;
-  const idx = collection.findIndex(m => m.id === key);
+  const idx = collection.findIndex((m) => m.id === key);
   const prevItem = idx > 0 ? collection[idx - 1] : null;
-
-
   const nextItem = idx < collection.length - 1 ? collection[idx + 1] : null;
 
-  const prev = prevItem ? { id: prevItem.id, title: formatMedia(prevItem).displayTitle } : undefined;
-  const next = nextItem ? { id: nextItem.id, title: formatMedia(nextItem).displayTitle } : undefined;
+  const prev = prevItem
+    ? { id: prevItem.id, title: formatMedia(prevItem).displayTitle }
+    : undefined;
+  const next = nextItem
+    ? { id: nextItem.id, title: formatMedia(nextItem).displayTitle }
+    : undefined;
 
   return (
     <div className="min-h-screen bg-ed-bg text-ed-fg">
       <PlayerWrapper
-        media={{ ...item, displayTitle, displayDate, author, type: item.type }}
+        media={{
+          ...item,
+          chapters: getChaptersForItem(item, masterItem),
+          description: masterItem?.description || item.description,
+          duration_seconds: masterItem?.duration_seconds || item.duration_seconds,
+          primaryNumber: item.primaryNumber,
+          displayTitle,
+          displayDate,
+          author,
+          type: item.type,
+        }}
         segments={segments}
         segments_ar={segments_ar}
         mediaUrl={mediaUrl}
@@ -222,10 +292,3 @@ export default async function WatchPage({
     </div>
   );
 }
-// force reload
-
-// force reload 2
-
-// force reload 3
-
-// force reload 4

@@ -10,6 +10,7 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@tailwindcss/vite": "^4.3.3",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-dialog": "^2.7.2",
@@ -22,10 +23,12 @@
     "@tiptap/starter-kit": "^3.29.2",
     "@tiptap/suggestion": "^3.29.2",
     "clsx": "^2.1.1",
+    "framer-motion": "^13.1.0",
+    "fuse.js": "^7.5.0",
     "js-yaml": "^4.3.1",
-    "lucide-react": "^1.30.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-resizable-panels": "^3.0.6",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.3",
     "tippy.js": "^6.3.7",

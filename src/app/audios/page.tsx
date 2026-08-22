@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 type AudioRecord = Media & {
-    audioFile?: string;
     vttFile?: string;
     segmentCount?: number;
 };
@@ -45,8 +44,12 @@ export default function AudiosPage() {
         author: audio.author,
         duration_seconds: audio.duration_seconds,
         thumbnailOverride: audio.thumbnailOverride,
+        youtubeId: audio.youtubeId,
+        primaryNumber: audio.primaryNumber,
+        alternateNumbers: audio.alternateNumbers,
+        alternateNumberLabel: audio.alternateNumberLabel,
         sortValue: index + 1,
-        displayDate: '',
+        displayDate: audio.displayDate ?? '',
     }));
 
     return <AudiosPageClient initialAudios={audios} />;

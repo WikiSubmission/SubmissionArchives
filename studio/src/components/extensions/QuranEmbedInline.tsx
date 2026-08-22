@@ -1,7 +1,7 @@
 import { mergeAttributes, Node } from '@tiptap/core'
 import { ReactNodeViewRenderer, NodeViewWrapper } from '@tiptap/react'
 import { useEffect, useState } from 'react'
-import { invoke } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../../lib/ipc'
 import { useSettings } from '../../hooks/useSettings'
 
 interface Verse {
@@ -37,7 +37,7 @@ function QuranEmbedInlineComponent({ node }: any) {
 
   if (error) {
     return (
-      <NodeViewWrapper as="span" className="text-red-400 text-xs font-mono">
+      <NodeViewWrapper as="span" className="text-ed-danger text-xs font-mono">
         {error}
       </NodeViewWrapper>
     )
@@ -45,7 +45,7 @@ function QuranEmbedInlineComponent({ node }: any) {
 
   if (!result) {
     return (
-      <NodeViewWrapper as="span" className="text-white/30 text-xs">
+      <NodeViewWrapper as="span" className="text-ed-fg-faint text-xs">
         Loading {verses}...
       </NodeViewWrapper>
     )

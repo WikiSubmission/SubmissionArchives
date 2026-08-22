@@ -29,6 +29,7 @@ export function useRecentNotes(archivePath: string) {
   }, [archivePath])
 
   const recordOpen = (path: string) => {
+    if (!path || typeof path !== 'string') return
     const name = (path.split(/[\\/]/).pop() ?? path).replace(/\.md$/, '')
     const next = [{ path, name, openedAt: Date.now() }, ...recents.filter((r) => r.path !== path)].slice(
       0,

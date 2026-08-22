@@ -1,0 +1,137 @@
+{
+  "id": "quran-study/03 Quran Study From Azhar 3 Sura 10;79 92 & Sura 23 By Rashad's Khutba 01 19 1990 Sura 3;110 117 By",
+  "qsNumber": 3,
+  "title": "QS 03 — Sura 10:79–92 & Sura 23 (Rashad Khutba, 01/19/1990)",
+  "totalDuration": 5501.951,
+  "chapterCount": 16,
+  "chapters": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 351.6,
+      "title": "Introduction & Opening Recitation",
+      "description": "Opening discussion and study for QS 03 — Sura 10:79–92 & Sura 23 (Rashad Khutba, 01/19/1990).",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 2,
+      "startTime": 344.5,
+      "endTime": 697.5,
+      "title": "Study of Sura 10:90",
+      "description": "Continuation of Quranic study and questions at 5:44.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 3,
+      "startTime": 688.8,
+      "endTime": 1038.4,
+      "title": "Study of Sura 10:91",
+      "description": "Continuation of Quranic study and questions at 11:28.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 4,
+      "startTime": 1034.6,
+      "endTime": 1385.2,
+      "title": "Study of Sura 10:92",
+      "description": "Continuation of Quranic study and questions at 17:14.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 5,
+      "startTime": 1384.3,
+      "endTime": 1731.7,
+      "title": "Study of Sura 23:9",
+      "description": "Continuation of Quranic study and questions at 23:04.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 6,
+      "startTime": 1730.8,
+      "endTime": 2087.4,
+      "title": "Study of Sura 23:14",
+      "description": "Continuation of Quranic study and questions at 28:50.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 7,
+      "startTime": 2081.3,
+      "endTime": 2431.8,
+      "title": "Study of Sura 23:14",
+      "description": "Continuation of Quranic study and questions at 34:41.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 8,
+      "startTime": 2425.5,
+      "endTime": 2776.5,
+      "title": "Study of Sura 23:14",
+      "description": "Continuation of Quranic study and questions at 40:25.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 9,
+      "startTime": 2774.5,
+      "endTime": 3120,
+      "title": "Study of Sura 23:14",
+      "description": "Continuation of Quranic study and questions at 46:14.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 10,
+      "startTime": 3118.9,
+      "endTime": 3471.9,
+      "title": "Study of Sura 33:7",
+      "description": "Continuation of Quranic study and questions at 51:58.",
+      "speaker": "A man"
+    },
+    {
+      "id": 11,
+      "startTime": 3464.4,
+      "endTime": 3813.1,
+      "title": "Study of Sura 33:7",
+      "description": "Continuation of Quranic study and questions at 57:44.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 12,
+      "startTime": 3811.5,
+      "endTime": 4164.3,
+      "title": "Study of Sura 3:112",
+      "description": "Continuation of Quranic study and questions at 1:03:31.",
+      "speaker": "Dr. Mahmoud Sabahi"
+    },
+    {
+      "id": 13,
+      "startTime": 4157.2,
+      "endTime": 4508.9,
+      "title": "Study of Sura 3:103",
+      "description": "Continuation of Quranic study and questions at 1:09:17.",
+      "speaker": "Dr. Mahmoud Sabahi"
+    },
+    {
+      "id": 14,
+      "startTime": 4501.4,
+      "endTime": 4848.4,
+      "title": "Study of Sura 3:112",
+      "description": "Continuation of Quranic study and questions at 1:15:01.",
+      "speaker": "Dr. Mahmoud Sabahi"
+    },
+    {
+      "id": 15,
+      "startTime": 4847.5,
+      "endTime": 5198.7,
+      "title": "Study of Sura 3:114",
+      "description": "Continuation of Quranic study and questions at 1:20:47.",
+      "speaker": "Dr. Mahmoud Sabahi"
+    },
+    {
+      "id": 16,
+      "startTime": 5191.6,
+      "endTime": 5502,
+      "title": "Study of Sura 3:117",
+      "description": "Continuation of Quranic study and questions at 1:26:31.",
+      "speaker": "Dr. Mahmoud Sabahi"
+    }
+  ]
+}

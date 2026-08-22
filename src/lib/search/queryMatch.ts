@@ -167,6 +167,46 @@ export function findQueryMatch(
     };
 }
 
+// The tokens a text must contain for findQueryMatch to have any chance of matching:
+// every meaningful term, plus every meaningful word of every quoted phrase. Used to
+// pre-filter candidate segments against an inverted index. It lives here, beside the
+// matching rules it mirrors, so the two cannot drift apart.
+//
+// Stopwords and single characters are omitted deliberately — they are not indexed (they
+// appear nearly everywhere, so they filter almost nothing), and leaving them out keeps
+// this a necessary-but-not-sufficient condition, which is exactly what a pre-filter needs.
+export function getRequiredTokens(query: string): string[] {
+    const parsed = parseSearchQuery(query);
+    const tokens = new Set<string>(parsed.terms);
+
+    for (const phrase of parsed.phrases) {
+        for (const token of tokenizeSearchText(phrase)) {
+            if (token.value.length > 1 && !STOPWORDS.has(token.value)) {
+                tokens.add(token.value);
+            }
+        }
+    }
+
+    return Array.from(tokens);
+}
+
+// Same rules as getRequiredTokens applies when reading a query, so an index built with
+// this will line up with what that asks for.
+export function tokenizeForIndex(text: string): string[] {
+    const normalized = text.toLowerCase().replace(/['’]/g, '');
+    const tokens: string[] = [];
+    const regex = /[a-z0-9]+/g;
+    let match: RegExpExecArray | null;
+
+    while ((match = regex.exec(normalized)) !== null) {
+        if (match[0].length > 1 && !STOPWORDS.has(match[0])) {
+            tokens.push(match[0]);
+        }
+    }
+
+    return tokens;
+}
+
 export function getHighlightTerms(query: string) {
     return parseSearchQuery(query).highlightTerms;
 }

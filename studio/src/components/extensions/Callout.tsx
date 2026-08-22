@@ -1,12 +1,13 @@
 import { mergeAttributes, Node } from '@tiptap/core'
 import { NodeViewWrapper, NodeViewContent, ReactNodeViewRenderer } from '@tiptap/react'
-import { Info, Lightbulb, TriangleAlert, Star } from 'lucide-react'
+import { Info, Sparkle, Warning, Star, IconProps } from '@phosphor-icons/react'
+import React from 'react'
 
-const CALLOUT_META: Record<string, { icon: typeof Info; className: string }> = {
-  note: { icon: Info, className: 'border-white/25 bg-white/5' },
-  tip: { icon: Lightbulb, className: 'border-ed-accent/30 bg-ed-accent/5' },
-  warning: { icon: TriangleAlert, className: 'border-amber-500/30 bg-amber-500/5' },
-  important: { icon: Star, className: 'border-red-500/30 bg-red-500/5' },
+const CALLOUT_META: Record<string, { icon: React.ComponentType<IconProps>; className: string }> = {
+  note: { icon: Info, className: 'border-ed-rule bg-ed-surface' },
+  tip: { icon: Sparkle, className: 'border-ed-success/35 bg-ed-success/5 text-ed-success' },
+  warning: { icon: Warning, className: 'border-ed-accent/35 bg-ed-accent/5 text-ed-accent' },
+  important: { icon: Star, className: 'border-ed-danger/35 bg-ed-danger/5 text-ed-danger' },
 }
 
 function CalloutComponent({ node, updateAttributes }: any) {
@@ -18,16 +19,16 @@ function CalloutComponent({ node, updateAttributes }: any) {
 
   return (
     <NodeViewWrapper className={`callout-wrapper my-3 border-l-2 rounded-r-md pl-4 pr-3 py-2 ${meta.className}`}>
-      <div className="flex items-center gap-2 text-sm font-semibold text-white/80 mb-1 select-none" contentEditable={false}>
-        <Icon size={15} className="shrink-0" />
+      <div className="flex items-center gap-2 text-xs font-bold text-ed-fg mb-1 select-none" contentEditable={false}>
+        <Icon size={16} weight="bold" className="shrink-0" />
         <input
           value={title}
           placeholder={placeholder}
           onChange={(e) => updateAttributes({ title: e.target.value })}
-          className="bg-transparent outline-none flex-1 placeholder:text-white/40"
+          className="bg-transparent outline-none flex-1 placeholder:text-ed-fg-muted font-semibold"
         />
       </div>
-      <NodeViewContent className="text-sm text-white/70 [&_p]:my-1" />
+      <NodeViewContent className="text-xs text-ed-fg-muted [&_p]:my-1" />
     </NodeViewWrapper>
   )
 }
@@ -77,9 +78,6 @@ export const Callout = Node.create({
           })
         },
         parse: {
-          // Callouts are just blockquotes whose first line is "[!type] Title" — markdown-it's
-          // own blockquote rule already handles the tricky '>' line-continuation parsing, so
-          // this only needs a post-pass that reclassifies the token pair and strips that header line.
           setup(markdownit: any) {
             markdownit.core.ruler.push('callout', (state: any) => {
               const tokens = state.tokens
@@ -101,12 +99,6 @@ export const Callout = Node.create({
                   continue
                 }
 
-                // A blockquote's consecutive non-blank lines merge into ONE paragraph
-                // with soft breaks — only a blank line inside the '>' block starts a new
-                // paragraph. So the "[!type] Title" marker is only ever the FIRST LINE of
-                // that first paragraph, not the whole thing; body text on the very next
-                // line (the common case — no blank line after the marker) rides along in
-                // the same inline token and must be split back out, not matched against.
                 const raw = inline.content
                 const newlineIndex = raw.indexOf('\n')
                 const firstLine = newlineIndex === -1 ? raw : raw.slice(0, newlineIndex)

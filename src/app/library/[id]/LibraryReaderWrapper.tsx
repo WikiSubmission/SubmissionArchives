@@ -2,7 +2,7 @@
 
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import NewsletterViewer from './NewsletterViewer';
+import NewsletterViewer, { type IssueType } from './NewsletterViewer';
 import PDFReaderClient from './PDFReaderWrapper';
 
 type EditionAsset = { pdfUrl: string; startPage?: number };
@@ -14,20 +14,43 @@ type EditionAsset = { pdfUrl: string; startPage?: number };
 // pre-resolved assets, rather than the server awaiting searchParams (which would
 // force dynamic rendering).
 export type ReaderData =
-    | { kind: 'newsletter-viewer'; issue: Record<string, unknown> }
-    | { kind: 'pdf'; pdfUrl: string; title: string; prevId?: string | null; nextId?: string | null; backHref: string }
-    | { kind: 'appendix'; editions: Record<string, EditionAsset>; defaultEdition: string; title: string; backHref: string };
+    | {
+          kind: 'newsletter-viewer';
+          issue: IssueType;
+          pdfUrl?: string;
+          documentId?: string;
+          title?: string;
+          prevId?: string | null;
+          nextId?: string | null;
+          backHref?: string;
+      }
+    | { kind: 'pdf'; pdfUrl: string; title: string; documentId: string; prevId?: string | null; nextId?: string | null; backHref: string }
+    | { kind: 'appendix'; editions: Record<string, EditionAsset>; defaultEdition: string; title: string; documentId: string; backHref: string };
 
 const MAX_PAGE = 10000;
 
 function ReaderWithParams(props: ReaderData) {
     const searchParams = useSearchParams();
 
-    const query = (searchParams.get('q') ?? '').slice(0, 120);
+    // `highlight` is the documented deep-link name; `q` is the form the search page
+    // has always emitted. Both are accepted so existing links keep working.
+    // Defensive truncation: URL params have practical length limits across
+    // browsers, and 120 chars comfortably covers multi-word scholarly queries.
+    const query = (searchParams.get('q') ?? searchParams.get('highlight') ?? '').slice(0, 120);
 
     if (props.kind === 'newsletter-viewer') {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        return <NewsletterViewer issue={props.issue as any} query={query} />;
+        return (
+            <NewsletterViewer
+                issue={props.issue}
+                query={query}
+                pdfUrl={props.pdfUrl}
+                documentId={props.documentId}
+                title={props.title}
+                prevId={props.prevId}
+                nextId={props.nextId}
+                backHref={props.backHref}
+            />
+        );
     }
 
     const pageParam = searchParams.get('page');
@@ -44,6 +67,7 @@ function ReaderWithParams(props: ReaderData) {
             <PDFReaderClient
                 pdfUrl={asset.pdfUrl}
                 title={props.title}
+                documentId={props.documentId}
                 initialPage={initialPage}
                 initialQuery={query}
                 backHref={props.backHref}
@@ -55,6 +79,7 @@ function ReaderWithParams(props: ReaderData) {
         <PDFReaderClient
             pdfUrl={props.pdfUrl}
             title={props.title}
+            documentId={props.documentId}
             initialPage={pageFromUrl ?? 1}
             initialQuery={query}
             prevId={props.prevId}

@@ -9,6 +9,7 @@ const GENERATED_DIR = path.join(ROOT, 'public', 'data', 'generated_indices');
 const CATALOG_DIR = path.join(ROOT, 'data', 'catalog');
 const VIDEO_LIST = path.join(CATALOG_DIR, 'videos.json');
 const AUDIO_LIST = path.join(CATALOG_DIR, 'audios.json');
+const CHAPTERS_DIR = path.join(CATALOG_DIR, 'chapters');
 const MASTER_OUTPUT = path.join(GENERATED_DIR, 'MASTER_INDEX.json');
 const ASSET_MANIFEST_OUTPUT = path.join(GENERATED_DIR, 'ASSET_MANIFEST.csv');
 const BOOKS_LIST_OUTPUT = path.join(GENERATED_DIR, 'BOOKS_LIST.json');
@@ -20,6 +21,7 @@ const APPENDIX_CSV = path.join(CATALOG_DIR, 'quran-appendices.csv');
 const APPENDIX_EDITION_MANIFEST = readJson(path.join(CATALOG_DIR, 'appendix-editions.json'));
 const NEWSLETTER_DIR = path.join(ROOT, 'public', 'content', 'written', 'newsletters');
 const NEWSLETTER_CATALOG = path.join(CATALOG_DIR, 'newsletters.json');
+const SP_WEB_SEGMENTS = path.join(ROOT, 'data', 'sources', 'sp-web-segments.json');
 const NEWSLETTER_THUMB_DIR = path.join(NEWSLETTER_DIR, 'thumbnails');
 const NEWSLETTER_PDF_DIR = path.join(NEWSLETTER_DIR, 'pdfs');
 const SOURCE_DATA_DIR = path.join(ROOT, 'data', 'sources');
@@ -193,7 +195,14 @@ function loadPlaylistSegmentsByYoutubeId() {
     if (!fs.existsSync(dir)) continue;
     for (const filename of fs.readdirSync(dir)) {
       if (!filename.toLowerCase().endsWith('.csv')) continue;
-      const isArabic = filename.toLowerCase().includes('- arabic');
+      // The Arabic-language variant of a transcript is named "<base> - Arabic.csv",
+      // paired with a base "<base>.csv" holding the English transcript (see e.g. the
+      // "Debate ... vs Sunni Scholars" pair). A substring test instead of a suffix test
+      // false-positives on any video whose own title starts with "Arabic" right after a
+      // sequence number, e.g. "19 - Arabic Language Lessons...csv" — its English
+      // narration was landing in segments_ar and leaving segments empty, which is why
+      // that record showed no searchable transcript despite one existing on disk.
+      const isArabic = /- arabic\.csv$/i.test(filename);
       const rows = readCsvRows(path.join(dir, filename));
       for (const row of rows) {
         const youtubeId = extractYoutubeIdFromLink(row.Link);
@@ -357,6 +366,7 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
       displayTitle: item.displayTitle || item.title,
       type: item.type,
       author: item.author,
+      description: item.description,
       thumbnailOverride: item.thumbnailOverride,
       folder: item.folder,
       videoFile: item.videoFile,
@@ -365,6 +375,11 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
       youtubeUrl: item.youtubeUrl,
       youtubeStartTime: item.youtubeStartTime,
       youtubeEndTime: item.youtubeEndTime,
+      duration_seconds: item.duration_seconds,
+      date: item.date,
+      year: item.year,
+      fullDate: item.fullDate,
+      ...(item.chapters && item.chapters.length > 0 ? { chapters: item.chapters } : {}),
       transcriptStatus: resolved.segments.length > 0 ? 'available' : item.youtubeId ? 'empty' : 'missing',
       segments: resolved.segments,
       segments_ar: resolved.segments_ar,
@@ -372,19 +387,50 @@ function buildVideoIndex({ includeEmpty = false } = {}, playlistIndex) {
   }).filter((item) => includeEmpty || item.segments.length > 0);
 }
 
+// Chapter sidecars are keyed by the record's short id: QS01..QS52 for the Quran Studies,
+// MA53..MA100 for the Messenger Audios. Both id families open with a zero-padded number,
+// so one lookup serves both. This was hardcoded to quran-study, which is why Messenger
+// Audio chapters never reached the index even once their sidecars existed.
+const CHAPTER_SIDECAR_PREFIX = { 'quran-study': 'QS', 'messenger-audio': 'MA' };
+
+function loadChaptersForAudio(item) {
+  const prefix = CHAPTER_SIDECAR_PREFIX[item.type];
+  if (!prefix) return undefined;
+  const match = (item.id || '').match(/^[a-z-]+\/(\d+)/i);
+  if (!match) return undefined;
+  const num = Number(match[1]);
+  const chapterPath = path.join(CHAPTERS_DIR, `${prefix}${String(num).padStart(2, '0')}.json`);
+  if (!fs.existsSync(chapterPath)) return undefined;
+  try {
+    const data = readJson(chapterPath);
+    return Array.isArray(data.chapters) && data.chapters.length > 0 ? data.chapters : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 function buildAudioIndex({ includeEmpty = false } = {}, playlistIndex) {
   const audios = readJson(AUDIO_LIST);
   return audios.map((item) => {
     const resolved = resolveTranscriptSegments(item, playlistIndex);
+    // Transcript-derived chapters win. enrich_audio_catalog.mjs harvests them out of the
+    // CSV's TOC Time / TOC Title columns, where each entry is anchored to a caption row,
+    // and writes them onto the catalog item. The sidecar JSON in data/catalog/chapters is
+    // the older mechanism and remains only as a fallback for records not yet converted.
+    const chapters = (item.chapters && item.chapters.length > 0)
+      ? item.chapters
+      : loadChaptersForAudio(item);
     return {
       id: item.id,
       title: item.displayTitle || item.title,
       displayTitle: item.displayTitle || item.title,
       type: item.type,
       author: item.author,
+      date: item.date,
+      description: item.description,
+      chapters,
       thumbnailOverride: item.thumbnailOverride,
       folder: item.folder,
-      audioFile: item.audioFile,
       vttFile: item.vttFile,
       primaryNumber: item.primaryNumber,
       alternateNumbers: item.alternateNumbers,
@@ -583,6 +629,30 @@ function buildNewsletterIndex() {
       });
     }
 
+    // Prefer the clean HTML edition; fall back to chunking the OCR transcription for any
+    // issue the web archive does not cover at all, and — since the web edition sometimes
+    // omits specific pages the print edition had (order forms, ads: masjidtucson.org's
+    // SP1985aug HTML skips straight from its page 2 to the PDF's page 4, page 3 was never
+    // digitized there) — also fill in, page by page, any page present in the OCR
+    // transcription but genuinely absent from the web segments, so that content is not
+    // silently dropped just because the clean source happens to be incomplete for it.
+    const ocrChunked = [];
+    for (const segment of segments) {
+      for (const chunk of splitIntoChunks(segment.text)) {
+        ocrChunked.push({ ...segment, text: chunk });
+      }
+    }
+
+    let indexedSegments = buildWebNewsletterSegments(id);
+    if (!indexedSegments) {
+      indexedSegments = ocrChunked;
+    } else {
+      const webPages = new Set(indexedSegments.map((segment) => segment.page));
+      const missingPageChunks = ocrChunked.filter((segment) => !webPages.has(segment.page));
+      indexedSegments = [...indexedSegments, ...missingPageChunks];
+    }
+    indexedSegments = indexedSegments.map((segment, index) => ({ ...segment, index: index + 1 }));
+
     const monthStr = String(issue.month_number).padStart(2, '0');
     return {
       id: id,
@@ -597,10 +667,105 @@ function buildNewsletterIndex() {
       pdfLink: getNewsletterPdfLink(id, issue.year, issue.month_number, issue.month_name, issue.edition_type) || '',
       thumbnailOverride: getNewsletterThumbnailLink(id, issue.year, issue.month_number, issue.month_name, issue.edition_type),
       aliases: [id],
-      transcriptStatus: segments.length > 0 ? 'available' : 'missing',
-      segments: segments,
+      transcriptStatus: indexedSegments.length > 0 ? 'available' : 'missing',
+      segments: indexedSegments,
     };
   });
+}
+
+// Newsletter transcriptions were indexed one segment per page: 48 of 64 issues had a
+// single segment over 3,000 characters, the worst 15,749. At that size the proximity
+// ranker cannot tell a tight phrase from two words at opposite ends of an issue, and an
+// issue can only ever surface as many distinct passages as it has pages.
+//
+// The fix is to divide, never to substitute. The HTML editions on masjidtucson.org were
+// evaluated as a replacement source and rejected: they are abridged, carrying as little as
+// 38% of the transcribed text for some issues, so adopting them would have deleted
+// searchable content from the archive. These page transcriptions stay the source of truth
+// and are split on paragraph and then sentence boundaries. No wording changes.
+const SEGMENT_TARGET_CHARS = 900;
+const SEGMENT_MIN_CHARS = 300;
+
+function splitIntoChunks(text) {
+  if (text.length <= SEGMENT_TARGET_CHARS) return [text];
+
+  const pieces = [];
+  for (const paragraph of text.split(/\n{2,}/)) {
+    if (paragraph.length <= SEGMENT_TARGET_CHARS) {
+      pieces.push(paragraph);
+      continue;
+    }
+    // Sentence-ish boundaries: a terminator followed by whitespace and a capital.
+    let buffer = '';
+    for (const sentence of paragraph.split(/(?<=[.!?])[ ]+(?=[A-Z"'])/)) {
+      if (buffer && (buffer + ' ' + sentence).length > SEGMENT_TARGET_CHARS) {
+        pieces.push(buffer);
+        buffer = sentence;
+      } else {
+        buffer = buffer ? buffer + ' ' + sentence : sentence;
+      }
+    }
+    if (buffer) pieces.push(buffer);
+  }
+
+  // Fold runts back into their neighbour so chunking never strands a fragment.
+  const merged = [];
+  for (const piece of pieces) {
+    const trimmed = piece.trim();
+    if (!trimmed) continue;
+    if (merged.length > 0 && trimmed.length < SEGMENT_MIN_CHARS) {
+      merged[merged.length - 1] = merged[merged.length - 1] + ' ' + trimmed;
+    } else {
+      merged.push(trimmed);
+    }
+  }
+  return merged.length > 0 ? merged : [text];
+}
+
+// The scanned PDFs are poorly OCR'd. A single page of SP1989dec yields "Monthly Bulletin
+// or United Submitters International", "acceptable to G<?>", "LLAH" for "ALLAH", and the
+// masthead transcribed twice - once cleanly, once as raw OCR. That noise inflated the
+// character counts and, worse, is unsearchable gibberish sitting in the index.
+//
+// The HTML editions on masjidtucson.org carry the same published text, correctly. Checked
+// against every article title in the catalog, they contain all editorial content; the 21%
+// of titles they omit are advertisements, order forms and mailing panels. They are
+// therefore the search source of choice, and they arrive with real article and paragraph
+// boundaries instead of one segment per page. Wording is untouched - only markup is
+// removed and the division differs. The PDF transcription remains what the reader displays.
+let webSegmentCache = null;
+
+function getWebSegmentsById() {
+  if (webSegmentCache) return webSegmentCache;
+  webSegmentCache = new Map();
+  if (fs.existsSync(SP_WEB_SEGMENTS)) {
+    const parsed = JSON.parse(fs.readFileSync(SP_WEB_SEGMENTS, 'utf8'));
+    for (const issue of parsed.issues || []) {
+      webSegmentCache.set(issue.issue_id, issue.segments || []);
+    }
+  }
+  return webSegmentCache;
+}
+
+function buildWebNewsletterSegments(issueId) {
+  const source = getWebSegmentsById().get(issueId);
+  if (!source || source.length === 0) return null;
+
+  const segments = [];
+  for (const entry of source) {
+    const text = normalizeSearchText([entry.text || '']);
+    if (!text) continue;
+    segments.push({
+      start: 0,
+      end: 0,
+      text,
+      page: entry.page_number,
+      index: segments.length + 1,
+      htmlTag: entry.type,
+      label: entry.article || undefined,
+    });
+  }
+  return segments.length > 0 ? segments : null;
 }
 
 const LEGACY_BOOK_IDS = new Map([
@@ -624,23 +789,45 @@ function slugifyBookName(value) {
 function buildBookSegments(transcription) {
   if (!transcription) return [];
 
-  const pageSegments = (transcription.pages || [])
-    .map((page, index) => ({
-      start: 0,
-      end: 0,
-      text: normalizeSearchText([
+  const rawSegments = (transcription.pages || [])
+    .map((page, index) => {
+      const texts = [
+        page.page_title,
+        page.transcription_text,
+        page.arabic_text,
+        ...(page.sections?.map((s) => s.content) || []),
         page.transcribed_text,
         page.transcription,
-        page.transcription_text,
         page.reading_text,
         page.content,
-      ]),
-      page: Number(page.pdf_page ?? page.page_number ?? index + 1),
-      label: 'page',
-    }))
+      ];
+      return {
+        start: 0,
+        end: 0,
+        text: normalizeSearchText(texts),
+        page: Number(page.pdf_page ?? page.page_number ?? index + 1),
+        label: page.page_title ? `page - ${page.page_title}` : 'page',
+      };
+    })
     .filter((segment) => segment.text);
 
-  if (pageSegments.length > 0) return pageSegments;
+  if (rawSegments.length > 0) {
+    const chunkedSegments = [];
+    for (const segment of rawSegments) {
+      const chunks = splitIntoChunks(segment.text);
+      for (const chunk of chunks) {
+        chunkedSegments.push({
+          start: 0,
+          end: 0,
+          text: chunk,
+          page: segment.page,
+          index: chunkedSegments.length + 1,
+          label: segment.label,
+        });
+      }
+    }
+    return chunkedSegments;
+  }
 
   return (transcription.sections || [])
     .map((section, index) => ({
@@ -661,11 +848,6 @@ function canonicalBookSourceKey(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
-}
-
-function bookSourceFiles(transcription) {
-  const metadata = transcription?.metadata || transcription?.manifest || {};
-  return metadata.source_files || (metadata.source_file ? [metadata.source_file] : metadata.source_pdf ? [metadata.source_pdf] : []);
 }
 
 function loadBookTranscriptions() {
@@ -689,23 +871,6 @@ function loadBookTranscriptions() {
           lowConfidencePages: entry.low_confidence_pages,
           unverifiedArabicSegments: entry.unverified_arabic_segments,
         },
-      });
-    }
-  }
-
-  // The two historical Quran volumes are also books in the public catalog.
-  // Their complete page transcriptions provide full-text PDF search even where
-  // an edition does not contain safe verse-level boundaries (notably 1981).
-  for (const edition of ['1981', '1989']) {
-    const completePath = path.join(QURAN_DIR, edition, `Quran${edition}_complete.json`);
-    if (!fs.existsSync(completePath)) continue;
-    const data = readJson(completePath);
-    for (const sourceFile of bookSourceFiles(data)) {
-      transcriptionBySourceFile.set(canonicalBookSourceKey(sourceFile), {
-        data,
-        source: path.relative(ROOT, completePath).replace(/\\/g, '/'),
-        method: data.manifest?.method,
-        editionYear: Number(data.manifest?.edition_year) || Number(edition),
       });
     }
   }
@@ -764,68 +929,6 @@ function buildQuranIndex() {
     return { quranMasterItems: [], quranChapters: [] };
   }
 
-  function loadEdition(dirName) {
-    if (dirName !== '1989' && dirName !== '1981') return new Map();
-    const editionDir = path.join(QURAN_DIR, dirName);
-    const t = readCsvRows(path.join(editionDir, `Quran${dirName}_verse_index.csv`)).map((row) => ({
-      verse_id: row.verse_id,
-      english: row[`english_${dirName}`],
-    }));
-    const f = readCsvRows(path.join(editionDir, `Quran${dirName}_footnotes.csv`)).flatMap((row) => {
-      const ref = row.verse_reference || row.verse_id;
-      const match = ref?.match(/^(\d+):(\d+)(?:-(\d+))?$/);
-      if (!match) return [];
-      const chapter = Number(match[1]);
-      const start = Number(match[2]);
-      let end = Number(match[3] || match[2]);
-      if (end < start && match[3]) {
-        const magnitude = 10 ** match[3].length;
-        end = Math.floor(start / magnitude) * magnitude + end;
-        if (end < start) end += magnitude;
-      }
-      return Array.from({ length: end - start + 1 }, (_, index) => ({
-        verse_id: `${chapter}:${start + index}`,
-        english: row.text,
-      }));
-    });
-    const s = readCsvRows(path.join(editionDir, `Quran${dirName}_subheadings.csv`)).map((row) => ({
-      verse_id: row.verse_id || (row.chapter_number && row.placement_before_verse
-        ? `${row.chapter_number}:${row.placement_before_verse}`
-        : ''),
-      english: row.text,
-    }));
-
-    const fMap = new Map();
-    for (const row of f) {
-      if (row.verse_id && row.english) fMap.set(row.verse_id, row.english.replace(/^±\d+:\d+(-\d+)?\s*/, '').trim());
-    }
-    const sMap = new Map();
-    for (const row of s) {
-      if (row.verse_id && row.english) sMap.set(row.verse_id, row.english.replace(/\*+$/, '').trim());
-    }
-    const vMap = new Map();
-    for (const row of t) {
-      if (row.verse_id && row.english) {
-        vMap.set(row.verse_id, {
-          english: row.english.replace(/±/g, '').trim(),
-          subtitle: sMap.get(row.verse_id) || undefined,
-          footnote: fMap.get(row.verse_id) || undefined,
-        });
-      }
-    }
-    return vMap;
-  }
-
-  const ed1989 = loadEdition('1989');
-  const ed1981 = loadEdition('1981');
-  const expectedVerseIds = textRows
-    .filter((row) => Number(row.chapter_number) > 0 && Number(row.verse_number) > 0)
-    .map((row) => row.verse_id);
-  const missing1989VerseIds = expectedVerseIds.filter((verseId) => !ed1989.has(verseId));
-  if (missing1989VerseIds.length > 0) {
-    throw new Error(`1989 Quran edition is missing ${missing1989VerseIds.length} numbered verses (first: ${missing1989VerseIds.slice(0, 5).join(', ')})`);
-  }
-
   const footnoteByVerseId = new Map();
   for (const row of footnoteRows) {
     if (!row.verse_id || !row.english) continue;
@@ -853,12 +956,7 @@ function buildQuranIndex() {
       english: (row.english || '').replace(/±/g, '').trim(),
       subtitle: subtitleByVerseId.get(row.verse_id) || undefined,
       footnote: footnoteByVerseId.get(row.verse_id) || undefined,
-      editions: {},
     };
-
-    if (ed1989.has(row.verse_id)) verse.editions['1989'] = ed1989.get(row.verse_id);
-    if (ed1981.has(row.verse_id)) verse.editions['1981'] = ed1981.get(row.verse_id);
-    if (Object.keys(verse.editions).length === 0) delete verse.editions;
 
     const list = versesByChapter.get(chapterNumber) ?? [];
     list.push(verse);
@@ -866,40 +964,6 @@ function buildQuranIndex() {
   }
   for (const list of versesByChapter.values()) {
     list.sort((a, b) => a.verseNumber - b.verseNumber);
-  }
-
-  // Ensure verses present in historical editions but missing in 1992 (e.g. 9:128, 9:129) are added
-  for (const edition of [{ year: '1989', ed: ed1989 }, { year: '1981', ed: ed1981 }]) {
-    for (const [verseId, edVerse] of edition.ed) {
-      const match = verseId.match(/^(\d+):(\d+)$/);
-      if (!match) continue;
-      const chapterNumber = Number(match[1]);
-      const verseNumber = Number(match[2]);
-      if (!chapterNumber || !verseNumber) continue;
-      
-      let list = versesByChapter.get(chapterNumber);
-      if (!list) {
-        list = [];
-        versesByChapter.set(chapterNumber, list);
-      }
-      
-      let verse = list.find(v => v.verseNumber === verseNumber);
-      if (!verse) {
-        verse = {
-          verseNumber,
-          verseId,
-          english: '',
-          editions: {}
-        };
-        list.push(verse);
-        // Resort if we added a new verse
-        list.sort((a, b) => a.verseNumber - b.verseNumber);
-      }
-      
-      if (!verse.editions[edition.year]) {
-        verse.editions[edition.year] = edVerse;
-      }
-    }
   }
 
   const quranChapters = [];
@@ -936,18 +1000,6 @@ function buildQuranIndex() {
       if (verse.footnote) {
         segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.footnote, page: verse.verseNumber, label: 'footnote-1992' });
       }
-
-      if (verse.editions?.['1989']) {
-        if (verse.editions['1989'].subtitle) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].subtitle, page: verse.verseNumber, label: 'heading-1989' });
-        if (verse.editions['1989'].english) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].english, page: verse.verseNumber, label: 'verse-1989' });
-        if (verse.editions['1989'].footnote) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1989'].footnote, page: verse.verseNumber, label: 'footnote-1989' });
-      }
-
-      if (verse.editions?.['1981']) {
-        if (verse.editions['1981'].subtitle) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1981'].subtitle, page: verse.verseNumber, label: 'heading-1981' });
-        if (verse.editions['1981'].english) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1981'].english, page: verse.verseNumber, label: 'verse-1981' });
-        if (verse.editions['1981'].footnote) segments.push({ start: verse.verseNumber, end: verse.verseNumber, text: verse.editions['1981'].footnote, page: verse.verseNumber, label: 'footnote-1981' });
-      }
     }
 
     quranMasterItems.push({
@@ -965,7 +1017,33 @@ function buildQuranIndex() {
   return { quranMasterItems, quranChapters };
 }
 
+
+// Many audio and video titles state their date explicitly — "…(Kathryn Jinns, 05/26/1989)".
+// Reading that is derivation, not guessing, so those records get a year they previously
+// lacked (only newsletters had one). Requires an unambiguous MM/DD/YYYY, or a bare 4-digit
+// year in the archive's era; anything less certain is left undated rather than invented.
+const TITLE_FULL_DATE = /\b(0?[1-9]|1[0-2])[/-](0?[1-9]|[12]\d|3[01])[/-](19[6-9]\d|20[0-2]\d)\b/;
+const TITLE_YEAR_ONLY = /\b(19[6-9]\d|20[0-2]\d)\b/;
+
+function deriveDateFromTitle(item) {
+  const title = item.displayTitle || item.title || '';
+
+  const full = title.match(TITLE_FULL_DATE);
+  if (full) {
+    const [, month, day, year] = full;
+    return {
+      year: Number(year),
+      fullDate: `${year}-${String(Number(month)).padStart(2, '0')}-${String(Number(day)).padStart(2, '0')}`,
+    };
+  }
+
+  const yearOnly = title.match(TITLE_YEAR_ONLY);
+  return yearOnly ? { year: Number(yearOnly[1]), fullDate: undefined } : null;
+}
+
 function masterRecord(item, category) {
+  const derived = item.year === undefined && item.fullDate === undefined ? deriveDateFromTitle(item) : null;
+
   return {
     id: item.id,
     title: item.title,
@@ -974,14 +1052,15 @@ function masterRecord(item, category) {
     category,
     author: item.author,
     date: item.date,
-    fullDate: item.fullDate,
-    year: item.year,
+    description: item.description,
+    chapters: item.chapters,
+    fullDate: item.fullDate ?? derived?.fullDate,
+    year: item.year ?? derived?.year,
     thumbnailOverride: item.thumbnailOverride,
     folder: item.folder,
     filename: item.filename,
     pdfLink: item.pdfLink,
     videoFile: item.videoFile,
-    audioFile: item.audioFile,
     vttFile: item.vttFile,
     primaryNumber: item.primaryNumber,
     alternateNumbers: item.alternateNumbers,
@@ -1051,7 +1130,70 @@ async function buildAssetManifest(masterIndex) {
   return assets;
 }
 
+
+// --- incremental short-circuit ---------------------------------------------------
+// The builders each read whole source trees, so there is no per-entry seam to skip
+// without restructuring all of them — and `verify:catalog` depends on this script
+// reproducing byte-identical output, which makes that refactor risky. Instead
+// `--incremental` fingerprints the inputs and skips the run entirely when nothing has
+// changed, which is the common case (CI runs where the catalog was untouched).
+// A missing or unreadable manifest always means a full rebuild.
+const INDEX_MANIFEST = path.join(GENERATED_DIR, '.index-manifest.json');
+
+function fingerprintSources() {
+  const hash = crypto.createHash('sha256');
+
+  const catalogDir = path.join(ROOT, 'data', 'catalog');
+  if (fs.existsSync(catalogDir)) {
+    for (const name of fs.readdirSync(catalogDir).sort()) {
+      const file = path.join(catalogDir, name);
+      if (fs.statSync(file).isFile()) {
+        hash.update(name);
+        hash.update(fs.readFileSync(file));
+      }
+    }
+  }
+
+  // Content trees are far too large to hash by content; name + size + mtime is enough
+  // to notice an added, removed, or edited asset.
+  const walk = (dir) => {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+      } else {
+        const stat = fs.statSync(full);
+        hash.update(`${path.relative(ROOT, full)}:${stat.size}:${stat.mtimeMs}`);
+      }
+    }
+  };
+  walk(path.join(ROOT, 'public', 'content'));
+
+  return hash.digest('hex');
+}
+
+function outputsPresent() {
+  return [MASTER_OUTPUT, BOOKS_LIST_OUTPUT, VALIDATION_OUTPUT, QURAN_CHAPTERS_OUTPUT, ASSET_MANIFEST_OUTPUT]
+    .every((file) => fs.existsSync(file));
+}
+
 async function main() {
+  const incremental = process.argv.includes('--incremental');
+  const fingerprint = fingerprintSources();
+
+  if (incremental && outputsPresent()) {
+    try {
+      const previous = JSON.parse(fs.readFileSync(INDEX_MANIFEST, 'utf8'));
+      if (previous.fingerprint === fingerprint) {
+        console.log('Catalog sources unchanged — skipping regeneration.');
+        return;
+      }
+    } catch {
+      // No manifest, or an unreadable one: fall through to a full rebuild.
+    }
+  }
+
   const playlistIndex = loadPlaylistSegmentsByYoutubeId();
   const fullVideoIndex = buildVideoIndex({ includeEmpty: true }, playlistIndex);
   const fullAudioIndex = buildAudioIndex({ includeEmpty: true }, playlistIndex);
@@ -1111,6 +1253,9 @@ async function main() {
   console.log(`Wrote ${booksList.length} book records to ${path.relative(ROOT, BOOKS_LIST_OUTPUT)}`);
   console.log(`Wrote ${assetManifest.length} asset rows to ${path.relative(ROOT, ASSET_MANIFEST_OUTPUT)}`);
   console.log(`Wrote ${quranChapters.length} Quran chapters to ${path.relative(ROOT, QURAN_CHAPTERS_OUTPUT)}`);
+  fs.writeFileSync(INDEX_MANIFEST, `${JSON.stringify({ fingerprint, generatedAt: null }, null, 2)}
+`);
+
   for (const warning of validationReport.warnings) console.warn(`Warning: ${warning}`);
 }
 

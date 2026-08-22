@@ -37,6 +37,7 @@ Thumbs.db
 /reprocess_temp_fix/
 /recovery_output/
 /scratch/
+/reports/
 /.playwright-mcp/
 
 # Debug Logs & Temp Files
@@ -122,3 +123,7 @@ scripts/debug_ocr.py
 # Agents
 /.agents/
 /.claude/
+
+# Incremental-build fingerprint for generate:catalog-incremental. Machine-local
+# (derived partly from file mtimes), so it must not be committed.
+public/data/generated_indices/.index-manifest.json

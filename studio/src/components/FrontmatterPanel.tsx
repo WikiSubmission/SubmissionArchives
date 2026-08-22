@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Plus, X, Tag, Calendar, Hash, CheckSquare, Type, SlidersHorizontal } from 'lucide-react'
+import { Plus, X, Tag, Calendar, Hash, CheckSquare, TextT, SlidersHorizontal } from '@phosphor-icons/react'
 
 interface FrontmatterPanelProps {
   data: Record<string, unknown>
@@ -36,16 +36,16 @@ function defaultValueForType(type: FieldType): unknown {
 }
 
 function getIconForType(key: string, type: FieldType) {
-  if (key.toLowerCase() === 'tags') return <Tag size={13} className="text-amber-400/70" />
+  if (key.toLowerCase() === 'tags') return <Tag size={14} weight="bold" className="text-ed-accent" />
   switch (type) {
     case 'date':
-      return <Calendar size={13} className="text-sky-400/70" />
+      return <Calendar size={14} weight="regular" className="text-ed-accent" />
     case 'number':
-      return <Hash size={13} className="text-emerald-400/70" />
+      return <Hash size={14} weight="bold" className="text-ed-success" />
     case 'checkbox':
-      return <CheckSquare size={13} className="text-purple-400/70" />
+      return <CheckSquare size={14} weight="regular" className="text-purple-400" />
     default:
-      return <Type size={13} className="text-white/40" />
+      return <TextT size={14} weight="regular" className="text-ed-fg-muted" />
   }
 }
 
@@ -82,10 +82,10 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-8 pt-4 pb-4 mb-4 border-b border-white/[0.06] select-none">
+    <div className="max-w-3xl mx-auto px-8 pt-4 pb-4 mb-4 border-b border-ed-rule select-none">
       {/* Property Section Header */}
-      <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-white/30 mb-2.5">
-        <SlidersHorizontal size={13} strokeWidth={1.5} />
+      <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-ed-fg-muted mb-2.5">
+        <SlidersHorizontal size={14} weight="bold" />
         <span>Properties</span>
       </div>
 
@@ -95,11 +95,11 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
           const type = inferType(value)
 
           return (
-            <div key={key} className="flex items-start gap-3 py-1 group rounded-md hover:bg-white/[0.02] px-1.5 transition-colors">
+            <div key={key} className="flex items-start gap-3 py-1 group rounded-md hover:bg-ed-surface px-1.5 transition-colors">
               {/* Property Icon & Key Label */}
               <div className="flex items-center gap-2 w-32 shrink-0 pt-0.5">
                 {getIconForType(key, type)}
-                <span className="text-xs text-white/50 font-medium truncate">{key}</span>
+                <span className="text-xs text-ed-fg-muted font-medium truncate">{key}</span>
               </div>
 
               {/* Property Value Input */}
@@ -110,14 +110,14 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
                       value.map((item, idx) => (
                         <span
                           key={idx}
-                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-amber-500/10 border border-amber-500/20 text-amber-300 font-medium"
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-ed-accent-soft border border-ed-accent/25 text-ed-accent font-medium"
                         >
                           {String(item)}
                           <button
                             onClick={() => removeTag(key, idx)}
-                            className="hover:text-red-400 transition-colors"
+                            className="hover:text-ed-danger transition-colors"
                           >
-                            <X size={10} />
+                            <X size={10} weight="bold" />
                           </button>
                         </span>
                       ))}
@@ -129,7 +129,7 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
                           ;(e.target as HTMLInputElement).value = ''
                         }
                       }}
-                      className="text-xs text-white/60 bg-transparent outline-none border-b border-transparent focus:border-white/20 px-1 py-0.5 w-20 placeholder:text-white/20"
+                      className="text-xs text-ed-fg font-medium bg-transparent outline-none border-b border-transparent focus:border-ed-rule-strong px-1 py-0.5 w-20 placeholder:text-ed-fg-muted"
                     />
                   </div>
                 ) : type === 'checkbox' ? (
@@ -137,7 +137,7 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
                     type="checkbox"
                     checked={Boolean(value)}
                     onChange={(e) => onChange({ ...data, [key]: e.target.checked })}
-                    className="accent-amber-400 cursor-pointer mt-1"
+                    className="accent-ed-accent cursor-pointer mt-1"
                   />
                 ) : type === 'number' ? (
                   <input
@@ -146,20 +146,20 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
                     onBlur={(e) =>
                       onChange({ ...data, [key]: e.target.value === '' ? 0 : Number(e.target.value) })
                     }
-                    className="w-full bg-transparent text-xs text-white/80 outline-none border-b border-transparent focus:border-white/20 py-0.5 font-mono"
+                    className="w-full bg-transparent text-xs text-ed-fg outline-none border-b border-transparent focus:border-ed-rule-strong py-0.5 font-mono"
                   />
                 ) : type === 'date' ? (
                   <input
                     type="date"
                     defaultValue={String(value)}
                     onChange={(e) => onChange({ ...data, [key]: e.target.value })}
-                    className="bg-transparent text-xs text-white/80 outline-none border-b border-transparent focus:border-white/20 py-0.5 [color-scheme:dark] font-mono"
+                    className="bg-transparent text-xs text-ed-fg outline-none border-b border-transparent focus:border-ed-rule-strong py-0.5 font-mono"
                   />
                 ) : (
                   <input
                     defaultValue={String(value ?? '')}
                     onBlur={(e) => onChange({ ...data, [key]: e.target.value })}
-                    className="w-full bg-transparent text-xs text-white/80 outline-none border-b border-transparent focus:border-white/20 py-0.5"
+                    className="w-full bg-transparent text-xs text-ed-fg outline-none border-b border-transparent focus:border-ed-rule-strong py-0.5"
                   />
                 )}
               </div>
@@ -167,9 +167,9 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
               {/* Remove Property Action */}
               <button
                 onClick={() => removeField(key)}
-                className="opacity-0 group-hover:opacity-100 text-white/30 hover:text-red-400 transition-opacity p-0.5"
+                className="opacity-0 group-hover:opacity-100 text-ed-fg-muted hover:text-ed-danger transition-opacity p-0.5"
               >
-                <X size={13} />
+                <X size={13} weight="bold" />
               </button>
             </div>
           )
@@ -184,12 +184,12 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
               onKeyDown={(e) => e.key === 'Enter' && addField()}
               placeholder="Property name"
               autoFocus
-              className="text-xs text-white/70 bg-white/[0.04] outline-none rounded px-2 py-1 border border-white/10 w-32 placeholder:text-white/20"
+              className="text-xs text-ed-fg bg-ed-surface outline-none rounded px-2 py-1 border border-ed-rule w-32 placeholder:text-ed-fg-muted"
             />
             <select
               value={newType}
               onChange={(e) => setNewType(e.target.value as FieldType)}
-              className="text-xs text-white/60 bg-[#1c1c1f] outline-none rounded px-2 py-1 border border-white/10"
+              className="text-xs text-ed-fg bg-ed-surface outline-none rounded px-2 py-1 border border-ed-rule"
             >
               <option value="text">Text</option>
               <option value="list">Tag List</option>
@@ -199,13 +199,13 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
             </select>
             <button
               onClick={addField}
-              className="px-2 py-1 rounded bg-amber-500/20 text-amber-300 text-xs font-medium hover:bg-amber-500/30 transition-colors"
+              className="px-2.5 py-1 rounded bg-ed-accent-soft text-ed-accent text-xs font-semibold hover:bg-ed-accent-soft transition-colors"
             >
               Add
             </button>
             <button
               onClick={() => setShowAddRow(false)}
-              className="text-xs text-white/30 hover:text-white transition-colors"
+              className="text-xs text-ed-fg-muted hover:text-ed-fg transition-colors"
             >
               Cancel
             </button>
@@ -213,9 +213,9 @@ export default function FrontmatterPanel({ data, onChange }: FrontmatterPanelPro
         ) : (
           <button
             onClick={() => setShowAddRow(true)}
-            className="flex items-center gap-1.5 text-xs text-white/30 hover:text-amber-400 transition-colors font-medium pt-1 px-1"
+            className="flex items-center gap-1.5 text-xs text-ed-fg-muted hover:text-ed-accent transition-colors font-semibold pt-1 px-1"
           >
-            <Plus size={13} />
+            <Plus size={14} weight="bold" />
             <span>Add property</span>
           </button>
         )}

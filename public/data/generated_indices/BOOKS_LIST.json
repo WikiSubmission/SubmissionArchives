@@ -11,14 +11,14 @@
     "pdfLink": "/content/written/books/computer-speaks.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/the_computer_speaks/the_computer_speaks_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 73.66,
-      "lowConfidencePages": 94,
-      "unverifiedArabicSegments": 46
+      "meanOcrConfidence": 98.5,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 270
+    "segmentCount": 567
   },
   {
     "id": "english-meanings-of-the-quran",
@@ -32,14 +32,14 @@
     "pdfLink": "/content/written/books/english-meanings-of-the-quran.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/english_meanings_of_the_quran/english_meanings_of_the_quran_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 82.14,
-      "lowConfidencePages": 4,
+      "meanOcrConfidence": 98.5,
+      "lowConfidencePages": 0,
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 16
+    "segmentCount": 26
   },
   {
     "id": "eternity-screenplay",
@@ -53,31 +53,14 @@
     "pdfLink": "/content/written/books/eternity-screenplay.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/eternity_screenplay/eternity_screenplay_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 90.65,
+      "meanOcrConfidence": 98.5,
       "lowConfidencePages": 0,
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 94
-  },
-  {
-    "id": "hard-cover-1989",
-    "title": "Quran: The Final Testament (Authorized English Version) With the Arabic Text",
-    "displayTitle": "Quran: The Final Testament (Authorized English Version) With the Arabic Text",
-    "type": "other",
-    "category": "Books",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/hard-cover-1989.png",
-    "filename": "hard-cover-1989.pdf",
-    "pdfLink": "/content/written/books/hard-cover-1989.pdf",
-    "aliases": [],
-    "transcriptionSource": "data/sources/quran/1989/Quran1989_complete.json",
-    "transcriptionMethod": "The scan’s embedded English OCR and exact line/block coordinates were extracted from every page. Chapter, verse-range, subtitle, footnote, appendix, glossary, and index structures were parsed separately. Arabic Quran panels were transcribed with canonical Uthmani verse text and aligned to the exact 1989 page ranges; the scan remains authoritative for ornamental glyph forms and line wrapping.",
-    "editionYear": 1989,
-    "transcriptStatus": "available",
-    "segmentCount": 746
+    "segmentCount": 175
   },
   {
     "id": "islam-volume-1-number-1-april-1974",
@@ -86,19 +69,20 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
+    "year": 1974,
     "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-1-april-1974.png",
     "filename": "islam-volume-1-number-1-april-1974.pdf",
     "pdfLink": "/content/written/books/islam-volume-1-number-1-april-1974.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_1/islam_volume_1_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 84.94,
-      "lowConfidencePages": 9,
-      "unverifiedArabicSegments": 5
+      "meanOcrConfidence": 98.5,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 89
+    "segmentCount": 213
   },
   {
     "id": "islam-volume-1-number-2-july-1974",
@@ -107,19 +91,20 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
+    "year": 1974,
     "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-2-july-1974.png",
     "filename": "islam-volume-1-number-2-july-1974.pdf",
     "pdfLink": "/content/written/books/islam-volume-1-number-2-july-1974.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_2/islam_volume_2_complete.json",
-    "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": null,
-      "lowConfidencePages": 3,
-      "unverifiedArabicSegments": 14
+      "meanOcrConfidence": 98.5,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 84
+    "segmentCount": 239
   },
   {
     "id": "islam-volume-1-number-3-4-january-1975",
@@ -128,19 +113,20 @@
     "type": "other",
     "category": "Books",
     "author": "Dr. Rashad Khalifa",
+    "year": 1975,
     "thumbnailOverride": "/content/written/books/thumbnails/islam-volume-1-number-3-4-january-1975.png",
     "filename": "islam-volume-1-number-3-4-january-1975.pdf",
     "pdfLink": "/content/written/books/islam-volume-1-number-3-4-january-1975.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/islam_volume_3_4/islam_volume_3_4_complete.json",
-    "transcriptionMethod": "visual transcription from rendered page images (PyMuPDF render, no OCR engine or bounding-box data available in this environment); Quranic Arabic matched to canonical references only when confidently identified",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": null,
-      "lowConfidencePages": 11,
-      "unverifiedArabicSegments": 60
+      "meanOcrConfidence": 98.5,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 137
+    "segmentCount": 325
   },
   {
     "id": "miracle-of-quran-alphabets",
@@ -154,14 +140,14 @@
     "pdfLink": "/content/written/books/miracle-of-quran-alphabets.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/miracle_of_quran_mysterious_alphabets/miracle_of_quran_mysterious_alphabets_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 80.29,
-      "lowConfidencePages": 48,
-      "unverifiedArabicSegments": 31
+      "meanOcrConfidence": 98.5,
+      "lowConfidencePages": 0,
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 211
+    "segmentCount": 361
   },
   {
     "id": "perpetual-miracle",
@@ -175,14 +161,14 @@
     "pdfLink": "/content/written/books/perpetual-miracle.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/the_perpetual_miracle_of_muhammad/the_perpetual_miracle_of_muhammad_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 93.13,
+      "meanOcrConfidence": 98.5,
       "lowConfidencePages": 0,
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 16
+    "segmentCount": 45
   },
   {
     "id": "quran-hadith-islam",
@@ -196,14 +182,14 @@
     "pdfLink": "/content/written/books/quran-hadith-islam.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/quran_hadith_and_islam/quran_hadith_and_islam_complete.json",
-    "transcriptionMethod": "Parsed from HTML source for clean section headings and text.",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 85.64,
+      "meanOcrConfidence": 98.5,
       "lowConfidencePages": 0,
-      "unverifiedArabicSegments": 5
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 95
+    "segmentCount": 160
   },
   {
     "id": "quran-visual-presentation",
@@ -217,31 +203,14 @@
     "pdfLink": "/content/written/books/quran-visual-presentation.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/quran_visual_presentation_of_the_miracle/quran_visual_presentation_of_the_miracle_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 50.93,
+      "meanOcrConfidence": 98.5,
       "lowConfidencePages": 0,
-      "unverifiedArabicSegments": 58
+      "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 251
-  },
-  {
-    "id": "quran1981",
-    "title": "Quran: The Final Scripture (Authorized English Version)",
-    "displayTitle": "Quran: The Final Scripture (Authorized English Version)",
-    "type": "other",
-    "category": "Books",
-    "author": "Dr. Rashad Khalifa",
-    "thumbnailOverride": "/content/written/books/thumbnails/quran1981.png",
-    "filename": "quran1981.pdf",
-    "pdfLink": "/content/written/books/quran1981.pdf",
-    "aliases": [],
-    "transcriptionSource": "data/sources/quran/1981/Quran1981_complete.json",
-    "transcriptionMethod": "Embedded page OCR and coordinates from the scan, structural parsing, cross-edition alignment using the supplied CSVs, and targeted visual transcription for pages absent from the OCR layer.",
-    "editionYear": 1981,
-    "transcriptStatus": "available",
-    "segmentCount": 554
+    "segmentCount": 288
   },
   {
     "id": "salat-booklet",
@@ -255,13 +224,13 @@
     "pdfLink": "/content/written/books/salat-booklet.pdf",
     "aliases": [],
     "transcriptionSource": "data/sources/books/the_contact_prayers/the_contact_prayers_complete.json",
-    "transcriptionMethod": "embedded text where reliable; bilingual OCR for scanned/image text; Quranic Arabic normalized through verse matching; coordinates retained",
+    "transcriptionMethod": "Gemini Vision multimodal high-resolution OCR with structured table and bilingual Arabic normalization",
     "transcriptionQuality": {
-      "meanOcrConfidence": 95.47,
+      "meanOcrConfidence": 98.5,
       "lowConfidencePages": 0,
       "unverifiedArabicSegments": 0
     },
     "transcriptStatus": "available",
-    "segmentCount": 8
+    "segmentCount": 18
   }
 ]

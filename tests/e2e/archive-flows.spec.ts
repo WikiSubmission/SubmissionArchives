@@ -22,9 +22,7 @@ test('written archive prioritizes books and exposes every newsletter issue', asy
         links.map((link) => link.getAttribute('href')),
     );
 
-    expect(bookLinks.slice(0, 10)).toEqual([
-        '/library/quran1981',
-        '/library/hard-cover-1989',
+    expect(bookLinks.slice(0, 8)).toEqual([
         '/library/quran-visual-presentation',
         '/library/miracle-of-quran-alphabets',
         '/library/quran-hadith-islam',

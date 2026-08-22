@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
 import type { SlashCommandItem } from './items'
+import { AppIcon } from '../../ui/Icons'
 
 interface CommandListProps {
   items: SlashCommandItem[]
@@ -43,17 +44,24 @@ export const CommandList = forwardRef<CommandListRef, CommandListProps>((props, 
   }
 
   return (
-    <div className="bg-[#1c1c1f] border border-white/10 rounded-lg shadow-2xl overflow-hidden min-w-[240px] py-1 animate-fade-in-up">
+    <div className="glass-strong border border-ed-rule rounded-xl shadow-ed-lg overflow-hidden min-w-[260px] py-1 max-h-[300px] overflow-y-auto animate-fadeInUp">
       {props.items.map((item, index) => (
         <button
-          key={item.title}
+          key={`${item.title}-${index}`}
           onClick={() => selectItem(index)}
-          className={`w-full text-left px-3 py-2 flex flex-col gap-0.5 transition-colors ${
-            index === selectedIndex ? 'bg-ed-accent/10 text-white' : 'text-white/70'
+          className={`w-full text-left px-3 py-2 flex items-center gap-2.5 transition-colors ${
+            index === selectedIndex ? 'bg-ed-surface-strong text-ed-fg' : 'text-ed-fg-muted hover:text-ed-fg'
           }`}
         >
-          <span className="text-sm font-medium">{item.title}</span>
-          <span className="text-xs text-white/40 font-mono">{item.description}</span>
+          {item.icon ? (
+            <AppIcon name={item.icon} size={18} weight="bold" className="shrink-0 text-ed-accent" />
+          ) : (
+            <div className="w-[18px]" />
+          )}
+          <div className="flex flex-col gap-0.5 truncate">
+            <span className="text-xs font-semibold tracking-tight">{item.title}</span>
+            <span className="text-[10px] text-ed-fg-muted font-mono truncate">{item.description}</span>
+          </div>
         </button>
       ))}
     </div>

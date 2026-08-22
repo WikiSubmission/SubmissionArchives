@@ -1,0 +1,57 @@
+{
+  "id": "quran-study/52 Quran Study 5889 by Linda Sura 1 & 2 partial",
+  "qsNumber": 52,
+  "title": "QS 52 — Sura 1–2 (Partial) (Linda)",
+  "totalDuration": 1075.358,
+  "chapterCount": 6,
+  "chapters": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 182.7,
+      "title": "Introduction & Opening Recitation",
+      "description": "Opening discussion and study for QS 52 — Sura 1–2 (Partial) (Linda).",
+      "speaker": "Catherine"
+    },
+    {
+      "id": 2,
+      "startTime": 180.3,
+      "endTime": 363.2,
+      "title": "Discussion with Dr. Khalifa",
+      "description": "Continuation of Quranic study and questions at 3:00.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 3,
+      "startTime": 361.3,
+      "endTime": 545,
+      "title": "Discussion & Reflections (3:00)",
+      "description": "Continuation of Quranic study and questions at 6:01.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 4,
+      "startTime": 543,
+      "endTime": 726.6,
+      "title": "Study of Sura 2:239",
+      "description": "Continuation of Quranic study and questions at 9:03.",
+      "speaker": "Iman"
+    },
+    {
+      "id": 5,
+      "startTime": 724.5,
+      "endTime": 906.7,
+      "title": "Study of Sura 2:239",
+      "description": "Continuation of Quranic study and questions at 12:04.",
+      "speaker": "Edip"
+    },
+    {
+      "id": 6,
+      "startTime": 904,
+      "endTime": 1075.4,
+      "title": "Study of Sura 112:1",
+      "description": "Continuation of Quranic study and questions at 15:04.",
+      "speaker": "Dr. Khalifa"
+    }
+  ]
+}

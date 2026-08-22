@@ -3,10 +3,10 @@ import StarterKit from '@tiptap/starter-kit'
 import { Markdown } from 'tiptap-markdown'
 import { parseFrontmatter, stringifyWithFrontmatter } from '../lib/frontmatter'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { invoke, convertFileSrc } from '@tauri-apps/api/core'
+import { safeInvoke as invoke } from '../lib/ipc'
 import { open } from '@tauri-apps/plugin-dialog'
 import DragHandle from '@tiptap/extension-drag-handle-react'
-import { GripVertical } from 'lucide-react'
+import { DotsSixVertical } from '@phosphor-icons/react'
 import { QuranEmbed } from './extensions/QuranEmbed'
 import { QuranEmbedInline } from './extensions/QuranEmbedInline'
 import { Callout } from './extensions/Callout'
@@ -14,13 +14,29 @@ import { ArabicBlock } from './extensions/ArabicBlock'
 import { SlashCommand } from './extensions/slash-command/SlashCommand'
 import { setDefaultQuranInsertStyle } from './extensions/slash-command/items'
 import { WikiLink } from './extensions/WikiLink'
+import { MarkdownSyntaxHighlight } from './extensions/MarkdownSyntaxHighlight'
+import { SmartTypography } from './extensions/SmartTypography'
+import { AcademicTransliteration } from './extensions/AcademicTransliteration'
+import { FootnoteRef } from './extensions/Footnote'
+import { MediaTimestamp } from './extensions/MediaTimestampExtension'
 import FrontmatterPanel from './FrontmatterPanel'
 import BacklinksPanel from './BacklinksPanel'
 import VersionHistoryModal from './VersionHistoryModal'
 import NoteMenu, { type FontFamily } from './NoteMenu'
 import EditorToolbar from './EditorToolbar'
+import EditorBubbleMenu from './EditorBubbleMenu'
 import PageModeCanvas from './PageModeCanvas'
+import PdfViewer from './pdf/PdfViewer'
 import { useSettings } from '../hooks/useSettings'
+import { motion, AnimatePresence, springConfig } from './ui/Motion'
+import {
+  clearActiveEditor,
+  getActiveEditor,
+  mediaBus,
+  setActiveEditor,
+  type NoteMediaPayload,
+  type PersistMediaPayload,
+} from '../lib/mediaBus'
 
 export type EditorMode = 'write' | 'blocks' | 'page'
 
@@ -33,6 +49,7 @@ interface EditorProps {
   onMove: () => void
   onCopyPath: () => void
   onExport: () => void
+  onExportPackage?: () => void
   mode: EditorMode
   onModeChange: (mode: EditorMode) => void
   onContentChange?: (content: string) => void
@@ -40,7 +57,7 @@ interface EditorProps {
 }
 
 const FONT_CLASS: Record<FontFamily, string> = {
-  default: '',
+  default: 'font-body',
   serif: 'font-serif',
   mono: 'font-mono',
 }
@@ -63,6 +80,7 @@ export default function Editor({
   onMove,
   onCopyPath,
   onExport,
+  onExportPackage,
   mode,
   onModeChange,
   onContentChange,
@@ -100,6 +118,8 @@ export default function Editor({
       const body = storageInstance.markdown.getMarkdown()
       onContentChange?.(body)
       const content = stringifyWithFrontmatter(body, frontmatterRef.current)
+
+      // Atomic file write + recovery buffer
       invoke('write_note', { path, content })
         .then(() => {
           setStatus('saved')
@@ -119,6 +139,15 @@ export default function Editor({
       ArabicBlock,
       SlashCommand,
       Markdown,
+      FootnoteRef,
+      MediaTimestamp,
+      MarkdownSyntaxHighlight.configure({ activeMode: mode }),
+      SmartTypography.configure({ activeMode: mode }),
+      AcademicTransliteration.configure({
+        enabled: settings.transliteration.enabled,
+        autoExpandTerms: settings.transliteration.autoExpandTerms,
+        diacriticModifiers: settings.transliteration.diacriticModifiers,
+      }),
       WikiLink.configure({ onNavigate: onWikiLinkNavigate }),
     ],
     content: '',
@@ -131,6 +160,59 @@ export default function Editor({
     onUpdate: ({ editor: instance }) => scheduleSave(instance),
   })
 
+  /* The media panel inserts citations into whichever pane the researcher last
+     touched, so each editor claims the "active" slot on mount and on focus.
+     Mount matters as much as focus: quoting the very first cue after opening a
+     note should not require clicking into the prose first. */
+  useEffect(() => {
+    if (!editor) return
+    setActiveEditor(editor)
+    const claim = () => setActiveEditor(editor)
+    editor.on('focus', claim)
+    return () => {
+      editor.off('focus', claim)
+      clearActiveEditor(editor)
+    }
+  }, [editor])
+
+  // Typewriter scrolling in Page mode
+  useEffect(() => {
+    if (mode !== 'page' || !editor) return
+
+    const handleSelectionUpdate = () => {
+      const { view } = editor
+      if (!view) return
+      const cursorPos = view.coordsAtPos(view.state.selection.head)
+      const editorRect = view.dom.getBoundingClientRect()
+      const targetY = editorRect.top + editorRect.height / 2
+      const scrollContainer = view.dom.closest('.overflow-y-auto')
+
+      if (scrollContainer && Math.abs(cursorPos.top - targetY) > 60) {
+        scrollContainer.scrollBy({
+          top: cursorPos.top - targetY,
+          behavior: 'smooth'
+        })
+      }
+    }
+
+    editor.on('selectionUpdate', handleSelectionUpdate)
+    return () => {
+      editor.off('selectionUpdate', handleSelectionUpdate)
+    }
+  }, [mode, editor])
+
+  /** `media:` / `media_timestamp:` in a note's frontmatter bind it to a lecture,
+   * so opening the note should bring the panel with it. */
+  const announceMedia = useCallback((data: Record<string, unknown>) => {
+    const mediaId = typeof data.media === 'string' && data.media.trim() ? data.media.trim() : null
+    const rawTimestamp = data.media_timestamp
+    const timestamp = typeof rawTimestamp === 'number' ? rawTimestamp : Number(rawTimestamp)
+    mediaBus.emit<NoteMediaPayload>('note_media', {
+      mediaId,
+      timestamp: Number.isFinite(timestamp) && timestamp > 0 ? timestamp : undefined,
+    })
+  }, [])
+
   const loadNote = useCallback(
     (path: string) => {
       invoke<string>('read_note', { path })
@@ -142,10 +224,11 @@ export default function Editor({
           setStatus('idle')
           onContentChange?.(content)
           onStatusChange?.(true)
+          announceMedia(data)
         })
         .catch(() => setStatus('error'))
     },
-    [editor, onContentChange, onStatusChange]
+    [announceMedia, editor, onContentChange, onStatusChange]
   )
 
   useEffect(() => {
@@ -157,6 +240,41 @@ export default function Editor({
   useEffect(() => {
     editor?.setEditable(!locked)
   }, [locked, editor])
+
+  /* The panel writes the playhead back into frontmatter so a note reopens where
+     the lecture was left. In a split view only the pane the researcher is
+     working in should take the binding, hence the active-editor guard. */
+  useEffect(() => {
+    if (!editor) return
+
+    const offRequest = mediaBus.on('request_note_media', () => {
+      if (getActiveEditor() !== editor) return
+      announceMedia(frontmatterRef.current)
+    })
+
+    const offPersist = mediaBus.on<PersistMediaPayload>('persist_media', (payload) => {
+      if (!payload?.mediaId || getActiveEditor() !== editor) return
+      const current = frontmatterRef.current
+      const currentTimestamp = Number(current.media_timestamp)
+      const sameMedia = current.media === payload.mediaId
+      const negligibleMove =
+        sameMedia && Number.isFinite(currentTimestamp) && Math.abs(currentTimestamp - payload.timestamp) < 5
+      if (negligibleMove) return
+
+      const next = { ...current, media: payload.mediaId, media_timestamp: payload.timestamp }
+      frontmatterRef.current = next
+      setFrontmatter(next)
+      scheduleSave(editor)
+    })
+
+    return () => {
+      offRequest()
+      offPersist()
+    }
+    // scheduleSave is recreated every render by design; the effect only needs a
+    // stable editor identity to keep one subscription per pane.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [announceMedia, editor])
 
   const handleFrontmatterChange = (next: Record<string, unknown>) => {
     frontmatterRef.current = next
@@ -176,29 +294,29 @@ export default function Editor({
   }
 
   const statusConfig = {
-    idle: { dot: 'bg-transparent', text: 'text-white/20', label: '' },
-    saving: { dot: 'bg-amber-400', text: 'text-amber-400/80', label: 'Saving' },
-    saved: { dot: 'bg-emerald-400', text: 'text-emerald-400/80', label: 'Saved' },
-    error: { dot: 'bg-red-400', text: 'text-red-400/80', label: 'Error' },
+    idle: { dot: 'bg-transparent', text: 'text-ed-fg-muted', label: '' },
+    saving: { dot: 'bg-ed-accent', text: 'text-ed-accent', label: 'Saving' },
+    saved: { dot: 'bg-ed-success', text: 'text-ed-success', label: 'Saved' },
+    error: { dot: 'bg-ed-danger', text: 'text-ed-danger', label: 'Error' },
   }
 
   const currentStatus = statusConfig[status]
 
   return (
-    <div className="w-full h-full bg-ed-bg text-ed-fg flex flex-col relative">
-      {/* Floating Toolbar — Glass pill with controls for Write/Blocks mode */}
+    <div className="w-full h-full bg-ed-bg text-ed-fg flex flex-col relative select-none">
+      {/* Floating Toolbar */}
       <div className="absolute top-3 right-6 z-20 flex items-center gap-3">
         {/* Status Pill */}
         <div
           className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border transition-all duration-300 ${
             status === 'idle'
               ? 'border-transparent opacity-0'
-              : 'border-white/[0.06] bg-white/[0.03] opacity-100'
+              : 'border-ed-rule bg-ed-surface opacity-100'
           }`}
         >
           <span
             className={`w-1.5 h-1.5 rounded-full ${currentStatus.dot} ${
-              status === 'saving' ? 'animate-status-pulse' : ''
+              status === 'saving' ? 'animate-pulse' : ''
             }`}
           />
           <span className={`text-[10px] font-semibold uppercase tracking-wider ${currentStatus.text}`}>
@@ -207,7 +325,7 @@ export default function Editor({
         </div>
 
         {/* Note Menu + Mode Toggle Container */}
-        <div className="flex items-center gap-2 glass-strong rounded-xl border border-ed-rule shadow-elev-md p-1">
+        <div className="flex items-center gap-2 glass-strong rounded-xl border border-ed-rule shadow-ed-md p-1">
           <NoteMenu
             locked={locked}
             fullWidth={fullWidth}
@@ -222,27 +340,33 @@ export default function Editor({
             onMove={onMove}
             onCopyPath={onCopyPath}
             onExport={onExport}
+            onExportPackage={onExportPackage}
             onAttachPdf={handleAttachPdf}
             onTogglePdfSplitView={() => handleFrontmatterChange({ ...frontmatter, pdfSplitView: !pdfSplitView })}
           />
 
-          <div className="w-px h-4 bg-white/[0.08]" />
+          <div className="w-px h-4 bg-ed-rule" />
 
           {/* Premium Segmented Mode Control */}
-          <div className="flex items-center p-0.5 bg-black/30 rounded-lg">
+          <div className="flex items-center p-0.5 bg-ed-surface rounded-lg">
             {(['write', 'blocks', 'page'] as EditorMode[]).map((m) => (
               <button
                 key={m}
                 onClick={() => onModeChange(m)}
                 title={MODE_META[m].description}
+                aria-label={`${MODE_META[m].label} mode`}
                 className={`relative px-3 py-1.5 text-[11px] font-semibold rounded-md transition-all duration-200 tactile ${
                   mode === m
-                    ? 'text-white'
-                    : 'text-white/35 hover:text-white/60'
+                    ? 'text-ed-fg font-bold'
+                    : 'text-ed-fg-muted hover:text-ed-fg'
                 }`}
               >
                 {mode === m && (
-                  <span className="absolute inset-0 bg-white/10 rounded-md shadow-sm" />
+                  <motion.div
+                    layoutId="activeModeTab"
+                    className="absolute inset-0 bg-ed-surface-strong rounded-md shadow-sm border border-ed-rule"
+                    transition={springConfig}
+                  />
                 )}
                 <span className="relative z-10">{MODE_META[m].label}</span>
               </button>
@@ -254,54 +378,88 @@ export default function Editor({
       {/* Dedicated Rich Text Toolbar for Page Mode */}
       {mode === 'page' && <EditorToolbar editor={editor} />}
 
-      {/* Main Document Body */}
-      <div className="flex-1 overflow-hidden flex">
+      {/* Floating Selection Bubble Menu */}
+      <EditorBubbleMenu editor={editor} />
+
+      {/* Main Document Body with Morphing Transitions */}
+      <div className="flex-1 overflow-hidden flex relative">
         {pdfSplitView && pdfAttachment && (
-          <div className="w-1/2 border-r border-ed-rule shrink-0 bg-ed-surface/30">
-            <iframe
-              title="Attached PDF"
-              src={convertFileSrc(pdfAttachment)}
-              className="w-full h-full border-0"
+          <div className="w-1/2 border-r border-ed-rule shrink-0">
+            <PdfViewer
+              archivePath={archivePath}
+              pdfPath={pdfAttachment}
+              onQuoteExcerpt={(quote, page) => {
+                if (!editor) return
+                editor
+                  .chain()
+                  .focus()
+                  .insertContent({
+                    type: 'blockquote',
+                    content: [
+                      {
+                        type: 'paragraph',
+                        content: [{ type: 'text', text: `"${quote}"` }],
+                      },
+                      {
+                        type: 'paragraph',
+                        content: [{ type: 'text', text: `— Page ${page ?? 1}` }],
+                      },
+                    ],
+                  })
+                  .run()
+              }}
+              onClose={() => handleFrontmatterChange({ ...frontmatter, pdfSplitView: false })}
             />
           </div>
         )}
 
-        {mode === 'page' ? (
-          <div className={`${pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'} h-full overflow-hidden`}>
-            <PageModeCanvas>
-              <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
-              <EditorContent editor={editor} className="h-full w-full" />
-              <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
-            </PageModeCanvas>
-          </div>
-        ) : (
-          <div
-            className={`overflow-y-auto ${
-              pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'
-            } ${FONT_CLASS[fontFamily]}`}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={mode}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.99 }}
+            transition={springConfig}
+            className="w-full h-full flex-1 flex overflow-hidden"
           >
-            <div
-              className={`h-full w-full mx-auto transition-all duration-500 ${
-                mode === 'blocks'
-                  ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-14`
-                  : fullWidth
-                    ? 'max-w-none'
-                    : 'max-w-3xl'
-              }`}
-            >
-              <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
-              {mode === 'blocks' && editor && (
-                <DragHandle editor={editor}>
-                  <div className="w-5 h-6 flex items-center justify-center text-white/20 hover:text-white/50 cursor-grab active:cursor-grabbing transition-colors rounded hover:bg-white/[0.04]">
-                    <GripVertical size={14} strokeWidth={1.5} />
-                  </div>
-                </DragHandle>
-              )}
-              <EditorContent editor={editor} className="h-full w-full" />
-              <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
-            </div>
-          </div>
-        )}
+            {mode === 'page' ? (
+              <div className={`${pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'} h-full overflow-hidden`}>
+                <PageModeCanvas>
+                  <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
+                  <EditorContent editor={editor} className="h-full w-full select-text" />
+                  <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+                </PageModeCanvas>
+              </div>
+            ) : (
+              <div
+                className={`overflow-y-auto select-text ${
+                  pdfSplitView && pdfAttachment ? 'w-1/2' : 'flex-1'
+                } ${FONT_CLASS[fontFamily]}`}
+              >
+                <div
+                  className={`h-full w-full mx-auto transition-all duration-300 ${
+                    mode === 'blocks'
+                      ? `${fullWidth ? 'max-w-none' : 'max-w-5xl'} pl-14`
+                      : fullWidth
+                        ? 'max-w-none'
+                        : 'max-w-3xl'
+                  }`}
+                >
+                  <FrontmatterPanel data={frontmatter} onChange={handleFrontmatterChange} />
+                  {mode === 'blocks' && editor && (
+                    <DragHandle editor={editor}>
+                      <div className="w-5 h-6 flex items-center justify-center text-ed-fg-muted hover:text-ed-fg cursor-grab active:cursor-grabbing transition-colors rounded hover:bg-ed-surface">
+                        <DotsSixVertical size={16} weight="bold" />
+                      </div>
+                    </DragHandle>
+                  )}
+                  <EditorContent editor={editor} className="h-full w-full" />
+                  <BacklinksPanel archivePath={archivePath} filePath={filePath} onOpenFile={onOpenFile} />
+                </div>
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       {historyOpen && (

@@ -1,0 +1,105 @@
+{
+  "id": "quran-study/51 Quran Study 51 Sura 17;59 Rashad 1990",
+  "qsNumber": 51,
+  "title": "QS 51 — Sura 17:59 (Rashad, 1990)",
+  "totalDuration": 2837.225,
+  "chapterCount": 12,
+  "chapters": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 238.4,
+      "title": "Introduction & Opening Recitation",
+      "description": "Opening discussion and study for QS 51 — Sura 17:59 (Rashad, 1990).",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 2,
+      "startTime": 237.8,
+      "endTime": 480.8,
+      "title": "Study of Sura 39:21",
+      "description": "Continuation of Quranic study and questions at 3:57.",
+      "speaker": "A man"
+    },
+    {
+      "id": 3,
+      "startTime": 477.3,
+      "endTime": 719.1,
+      "title": "Study of Sura 4:76",
+      "description": "Continuation of Quranic study and questions at 7:57.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 4,
+      "startTime": 713.9,
+      "endTime": 959.6,
+      "title": "Study of Sura 4:76",
+      "description": "Continuation of Quranic study and questions at 11:53.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 5,
+      "startTime": 951.9,
+      "endTime": 1194.5,
+      "title": "Study of Sura 36:47",
+      "description": "Continuation of Quranic study and questions at 15:51.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 6,
+      "startTime": 1192.7,
+      "endTime": 1435.2,
+      "title": "Study of Sura 36:47",
+      "description": "Continuation of Quranic study and questions at 19:52.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 7,
+      "startTime": 1434.6,
+      "endTime": 1674.1,
+      "title": "Study of Sura 36:47",
+      "description": "Continuation of Quranic study and questions at 23:54.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 8,
+      "startTime": 1671.7,
+      "endTime": 1911.7,
+      "title": "Study of Sura 36:47",
+      "description": "Continuation of Quranic study and questions at 27:51.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 9,
+      "startTime": 1910.6,
+      "endTime": 2150,
+      "title": "Study of Sura 21:79",
+      "description": "Continuation of Quranic study and questions at 31:50.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 10,
+      "startTime": 2148.5,
+      "endTime": 2390.5,
+      "title": "Study of Sura 1:7",
+      "description": "Continuation of Quranic study and questions at 35:48.",
+      "speaker": "A man"
+    },
+    {
+      "id": 11,
+      "startTime": 2386,
+      "endTime": 2642.4,
+      "title": "Study of Sura 1:7",
+      "description": "Continuation of Quranic study and questions at 39:46.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 12,
+      "startTime": 2636.3,
+      "endTime": 2837.2,
+      "title": "Study of Sura 17:60",
+      "description": "Continuation of Quranic study and questions at 43:56.",
+      "speaker": "A man"
+    }
+  ]
+}

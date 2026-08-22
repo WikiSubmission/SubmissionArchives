@@ -10,7 +10,7 @@ Submission Archives is a trust-first digital heritage archive for researchers, r
 DESIGN_VARIANCE: 6
 MOTION_INTENSITY: 4
 VISUAL_DENSITY: 4
-COLOR_SCHEME: monochrome
+COLOR_SCHEME: warm dark (archival)
 ```
 
 - **Variance 6:** Use asymmetric editorial grids and distinct section structures. Preserve predictable navigation and reading order.
@@ -29,21 +29,26 @@ COLOR_SCHEME: monochrome
 
 ### Color
 
-The `--ed-*` variables are the single source of truth. The palette is strictly monochromatic black and white.
+The archive/reading surfaces (Audio, Video, Written, Scripture, App) share one fixed warm dark palette, applied via literal hex values rather than a light/dark toggle — these pages read the same regardless of the site's theme setting. The palette originates from `htmls/zfsf.html` and is mirrored in `globals.css` as the `--qs-*` tokens.
 
-- `--ed-bg`: pure white (#fafafa) in light, near-black (#0a0a0a) in dark.
-- `--ed-surface`: slight off-white or slightly lighter dark.
-- `--ed-fg`: near-black ink in light, near-white in dark.
-- `--ed-fg-muted`: neutral gray.
-- `--ed-rule`: subtle dividers in neutral gray.
-- `--ed-accent`: foreground tone — black in light, white in dark. Used sparingly for state and emphasis.
+- Page background: `#0F0E0D`
+- Card/surface background: `#161514`
+- Elevated surface (hover state): `#1C1B1A` / `#1E1D1C`
+- Border, subtle: `#2A2928`
+- Border, hover: `#353433`
+- Text, primary: `#F5F0EB`
+- Text, secondary: `#9E9690`
+- Text, muted: `#6B6560`
+- Text, faint: `#4A4542`
+- Accent (terracotta): `#C8794A`, hover `#D9916A`
 
-Never add colored hues, gradients, amber, gold, terracotta, or neon tones.
+Older parts of the app (search, some homepage sections) still use the strictly monochrome `--ed-*` token set. Don't mix the two systems in one component: pages under the archive/reader surfaces use the literal hex palette above, not `--ed-*` classes.
 
 ### Typography
 
-- **Superior Serif:** titles, editorial display, archival identity.
-- **Libre Franklin:** navigation, labels, controls, body copy.
+- **Source Serif 4** (`var(--font-source-serif)`): titles, hero headings, editorial display.
+- **Newsreader** (`var(--font-newsreader)`): lead paragraphs, descriptive copy, transcript body text.
+- **DM Sans / Inter** (`font-sans`, the site default): navigation, labels, controls, buttons, UI chrome.
 - **Amiri:** Arabic content.
 - **System monospace:** timestamps, counters, references, technical identifiers only.
 
@@ -51,8 +56,8 @@ Do not use the serif as a blanket “premium” effect. It belongs to titles and
 
 ### Shape
 
-- Prefer straight rules, restrained radii, and framed media.
-- Small controls may be square or lightly rounded.
+- Prefer small, sharp radii: `4px` for buttons/pills/badges, `8px` for cards and boxes, `12px` for larger panels. Avoid the large `rounded-xl`/`rounded-2xl` treatment used in the older monochrome system.
+- Prefer straight rules and framed media over floating shadows.
 - Avoid pill-shaped containers for every label.
 - Avoid stacking rounded cards inside rounded cards.
 

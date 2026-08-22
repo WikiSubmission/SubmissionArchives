@@ -1,0 +1,89 @@
+{
+  "id": "quran-study/49 Quran Study 49 Speech Of Rashad Parivash's Home 19 Math 11 05 1989",
+  "qsNumber": 49,
+  "title": "QS 49 — Rashad’s Speech & 19 Mathematics (Parivash’s Home, 11/05/1989)",
+  "totalDuration": 2444.859,
+  "chapterCount": 10,
+  "chapters": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 247.4,
+      "title": "Introduction & Opening Recitation",
+      "description": "Opening discussion and study for QS 49 — Rashad’s Speech & 19 Mathematics (Parivash’s Home, 11/05/1989).",
+      "speaker": "Behrouz"
+    },
+    {
+      "id": 2,
+      "startTime": 245.8,
+      "endTime": 495,
+      "title": "Discussion with Dr. Khalifa",
+      "description": "Continuation of Quranic study and questions at 4:05.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 3,
+      "startTime": 490.7,
+      "endTime": 744.3,
+      "title": "Study of Sura 46:10",
+      "description": "Continuation of Quranic study and questions at 8:10.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 4,
+      "startTime": 738.6,
+      "endTime": 985.9,
+      "title": "Study of Sura 46:10",
+      "description": "Continuation of Quranic study and questions at 12:18.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 5,
+      "startTime": 983.2,
+      "endTime": 1236.1,
+      "title": "Study of Sura 35:14",
+      "description": "Continuation of Quranic study and questions at 16:23.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 6,
+      "startTime": 1234.1,
+      "endTime": 1481.8,
+      "title": "Study of Sura 35:14",
+      "description": "Continuation of Quranic study and questions at 20:34.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 7,
+      "startTime": 1479.8,
+      "endTime": 1730.8,
+      "title": "Study of Sura 55:6",
+      "description": "Continuation of Quranic study and questions at 24:39.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 8,
+      "startTime": 1728.4,
+      "endTime": 1979.4,
+      "title": "Study of Sura 55:6",
+      "description": "Continuation of Quranic study and questions at 28:48.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 9,
+      "startTime": 1973.7,
+      "endTime": 2227.4,
+      "title": "Study of Sura 55:6",
+      "description": "Continuation of Quranic study and questions at 32:53.",
+      "speaker": "Dr. Khalifa"
+    },
+    {
+      "id": 10,
+      "startTime": 2222.9,
+      "endTime": 2444.9,
+      "title": "Study of Sura 55:6",
+      "description": "Continuation of Quranic study and questions at 37:02.",
+      "speaker": "Dr. Khalifa"
+    }
+  ]
+}

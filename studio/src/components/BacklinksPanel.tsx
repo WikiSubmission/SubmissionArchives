@@ -38,7 +38,7 @@ export default function BacklinksPanel({ archivePath, filePath, onOpenFile }: Ba
 
   return (
     <div className="max-w-3xl mx-auto px-8 pt-6 pb-8 mt-6 border-t border-ed-rule">
-      <div className="text-xs font-semibold uppercase tracking-wider text-white/30 mb-3">
+      <div className="text-xs font-semibold uppercase tracking-wider text-ed-fg-secondary mb-3">
         Linked mentions ({backlinks.length})
       </div>
       <div className="space-y-1.5">

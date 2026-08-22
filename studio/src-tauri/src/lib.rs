@@ -1,10 +1,14 @@
 mod archive;
+mod citations;
+mod health;
 mod history;
 mod import;
 mod notes;
 mod quran;
 
 use archive::{Entry, TrashEntry};
+use citations::Citation;
+use health::HealthReport;
 use history::HistoryEntry;
 use notes::NoteRecord;
 use quran::Verse;
@@ -129,6 +133,31 @@ fn write_settings(archive_root: &str, json: &str) -> Result<(), String> {
     archive::write_settings(archive_root, json)
 }
 
+#[tauri::command]
+fn read_citations(archive_root: &str) -> Result<Vec<Citation>, String> {
+    citations::read_citations(archive_root)
+}
+
+#[tauri::command]
+fn write_citation(archive_root: &str, citation: Citation) -> Result<(), String> {
+    citations::write_citation(archive_root, citation)
+}
+
+#[tauri::command]
+fn check_vault_health(archive_root: &str) -> Result<HealthReport, String> {
+    health::check_vault_health(archive_root)
+}
+
+#[tauri::command]
+fn export_sanote(archive_root: &str, note_path: &str, destination_path: &str) -> Result<(), String> {
+    import::export_sanote(archive_root, note_path, destination_path)
+}
+
+#[tauri::command]
+fn import_sanote(archive_root: &str, sanote_path: &str) -> Result<String, String> {
+    import::import_sanote(archive_root, sanote_path)
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -154,11 +183,16 @@ pub fn run() {
             restore_note_version,
             import_files,
             import_zip,
+            export_sanote,
+            import_sanote,
             attach_pdf_to_note,
             read_folder_icons,
             set_folder_icon,
             read_settings,
-            write_settings
+            write_settings,
+            read_citations,
+            write_citation,
+            check_vault_health
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

@@ -101,12 +101,13 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
     // Title: Date in Title
     // --- Sermons & Video Programs (Mapped from Playlist) ---
     else if (item.type === 'sermon' || item.type === 'video-program') {
-        // Clean the input title to match the map keys (filename without extension)
-        const cleanName = rawTitle.replace(/\.(mp4|mp3)$/i, '');
+        // Look up the curated order by catalog id. Keying on the title used to
+        // break every time a display title was edited; ids are stable.
+        const curatedOrder = item.id ? PLAYLIST_ORDER[item.id] : undefined;
 
-        if (PLAYLIST_ORDER[cleanName]) {
-            sortValue = PLAYLIST_ORDER[cleanName];
-            displayTitle = cleanName;
+        if (curatedOrder !== undefined) {
+            sortValue = curatedOrder;
+            displayTitle = rawTitle.replace(/\.(mp4|mp3)$/i, '');
         } else {
             // Fallback for unmapped items (shouldn't happen for the main playlist, but useful for others)
             displayTitle = rawTitle
@@ -158,4 +159,24 @@ export function formatMedia(item: { title: string; date?: string; type: string; 
         author,
         sortValue
     };
+}
+
+// Parses the `?t=` deep-link seek position. Accepts plain seconds ("342") and
+// human-readable spans ("5m42s", "1h2m3s", "90s"). Returns undefined for anything
+// unparseable so a malformed link simply starts playback at the beginning.
+export function parseTimeParam(raw: string | null | undefined): number | undefined {
+    if (!raw) return undefined;
+
+    const value = raw.trim().toLowerCase();
+    if (!value) return undefined;
+
+    if (/^\d+(?:\.\d+)?$/.test(value)) {
+        const seconds = Number(value);
+        return Number.isFinite(seconds) ? seconds : undefined;
+    }
+
+    const match = value.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
+    if (!match || (!match[1] && !match[2] && !match[3])) return undefined;
+
+    return Number(match[1] ?? 0) * 3600 + Number(match[2] ?? 0) * 60 + Number(match[3] ?? 0);
 }

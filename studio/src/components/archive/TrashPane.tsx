@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { invoke } from '@tauri-apps/api/core'
-import { RotateCcw, Trash2 } from 'lucide-react'
+import { safeInvoke as invoke } from '../../lib/ipc'
+import { ArrowCounterClockwise, Trash } from '@phosphor-icons/react'
 
 interface TrashEntry {
   id: string
@@ -54,34 +54,41 @@ export default function TrashPane({ archivePath, onRestore, refreshToken }: Tras
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-4 shrink-0">
-        <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Trash</span>
+      <div className="st-sidebar-header border-b border-ed-rule/60">
+        <span className="st-sidebar-title">Trash</span>
+        <span className="st-sidebar-count">{entries.length} {entries.length === 1 ? 'item' : 'items'}</span>
       </div>
 
-      {error && <div className="px-4 pb-2 text-xs text-red-400 font-mono">{error}</div>}
-      {entries.length === 0 && !error && <div className="px-4 text-xs text-white/30">Trash is empty.</div>}
+      {error && <div className="px-4 py-2 text-xs text-ed-danger font-mono">{error}</div>}
+      {entries.length === 0 && !error && (
+        <div className="px-4 py-8 text-xs text-ed-fg-faint text-center italic">Trash is empty.</div>
+      )}
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto p-1.5 space-y-1 scrollbar-thin">
         {entries.map((entry) => (
           <div
             key={entry.id}
-            className="group flex items-center gap-1.5 px-3 py-1.5 text-sm text-white/60 hover:bg-white/5 transition-colors"
+            className="group flex items-center justify-between gap-2 px-3 py-2 rounded-[6px] bg-ed-surface/40 hover:bg-ed-surface-raised border border-ed-rule/60 hover:border-ed-rule-strong text-xs text-ed-fg transition-all"
           >
-            <span className="truncate flex-1">{entry.name}</span>
-            <button
-              onClick={() => handleRestore(entry)}
-              title="Restore"
-              className="opacity-0 group-hover:opacity-100 text-white/40 hover:text-ed-accent transition-colors shrink-0"
-            >
-              <RotateCcw size={13} />
-            </button>
-            <button
-              onClick={() => handleDelete(entry)}
-              title="Delete permanently"
-              className="opacity-0 group-hover:opacity-100 text-white/40 hover:text-red-400 transition-colors shrink-0"
-            >
-              <Trash2 size={13} />
-            </button>
+            <span className="truncate flex-1 font-medium text-[13px] text-ed-fg-secondary group-hover:text-ed-fg">{entry.name}</span>
+            <div className="flex items-center gap-1 shrink-0">
+              <button
+                onClick={() => handleRestore(entry)}
+                title="Restore note"
+                aria-label="Restore"
+                className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-muted hover:text-ed-success hover:bg-ed-success-soft transition-all"
+              >
+                <ArrowCounterClockwise size={14} weight="bold" />
+              </button>
+              <button
+                onClick={() => handleDelete(entry)}
+                title="Delete permanently"
+                aria-label="Delete permanently"
+                className="opacity-0 group-hover:opacity-100 p-1 rounded text-ed-fg-muted hover:text-ed-danger hover:bg-ed-danger-soft transition-all"
+              >
+                <Trash size={14} weight="regular" />
+              </button>
+            </div>
           </div>
         ))}
       </div>
