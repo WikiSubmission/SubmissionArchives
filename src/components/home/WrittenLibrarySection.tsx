@@ -240,7 +240,7 @@ export function WrittenLibrarySection() {
                     className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                         activeTab === 'books'
                             ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
-                            : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
+                            : 'border border-ed-rule bg-ed-surface text-ed-fg-secondary hover:border-ed-rule-strong hover:text-ed-fg'
                     }`}
                 >
                     Published Books & Monographs (10 Works)
@@ -254,7 +254,7 @@ export function WrittenLibrarySection() {
                     className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                         activeTab === 'newsletters'
                             ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
-                            : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
+                            : 'border border-ed-rule bg-ed-surface text-ed-fg-secondary hover:border-ed-rule-strong hover:text-ed-fg'
                     }`}
                 >
                     Submitters Perspective Monthly Bulletins (1985–1990)

@@ -178,7 +178,7 @@ export function ScripturesSection() {
                         className={`rounded-lg px-4 py-1.5 font-sans text-xs font-semibold transition-all duration-200 ${
                             activeCanon === canon.id
                                 ? 'border border-ed-accent bg-ed-accent-soft text-ed-accent dark:text-ed-fg shadow-sm'
-                                : 'border border-ed-rule bg-ed-surface text-ed-fg-muted hover:border-ed-rule-strong hover:text-ed-fg'
+                                : 'border border-ed-rule bg-ed-surface text-ed-fg-secondary hover:border-ed-rule-strong hover:text-ed-fg'
                         }`}
                     >
                         {canon.label}
@@ -211,7 +211,7 @@ export function ScripturesSection() {
                                 className={`rounded px-3 py-1 font-sans text-xs font-medium transition-colors ${
                                     readingMode === 'reading'
                                         ? 'bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold'
-                                        : 'text-ed-fg-muted hover:text-ed-fg'
+                                        : 'text-ed-fg-secondary hover:text-ed-fg'
                                 }`}
                             >
                                 Reading View
@@ -222,7 +222,7 @@ export function ScripturesSection() {
                                 className={`rounded px-3 py-1 font-sans text-xs font-medium transition-colors ${
                                     readingMode === 'bilingual'
                                         ? 'bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold'
-                                        : 'text-ed-fg-muted hover:text-ed-fg'
+                                        : 'text-ed-fg-secondary hover:text-ed-fg'
                                 }`}
                             >
                                 Bilingual Parallel
@@ -233,7 +233,7 @@ export function ScripturesSection() {
                                 className={`rounded px-3 py-1 font-sans text-xs font-medium transition-colors ${
                                     readingMode === 'study'
                                         ? 'bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold'
-                                        : 'text-ed-fg-muted hover:text-ed-fg'
+                                        : 'text-ed-fg-secondary hover:text-ed-fg'
                                 }`}
                             >
                                 Focus Study

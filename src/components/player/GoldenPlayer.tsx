@@ -176,7 +176,7 @@ export default function GoldenPlayer({
   // the transcript panel reads from, so the pair stays a single catalog entry.
   const [transcriptLang, setTranscriptLang] = useState<TranscriptLang>(initialTranscriptLang ?? "en");
   const [isPlaying, setIsPlaying] = useState(Boolean(initialSeekTime));
-  const [hasStartedPlayback, setHasStartedPlayback] = useState(Boolean(initialSeekTime));
+  const [hasStartedPlayback, setHasStartedPlayback] = useState(true);
   const [absoluteTime, setAbsoluteTime] = useState(initialSeekTime ?? 0);
   const [duration, setDuration] = useState(media.duration_seconds || 0);
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
@@ -738,12 +738,12 @@ export default function GoldenPlayer({
               >
                 <div className="qs-thumbnail-content">
                   <div className="qs-thumbnail-label">{thumbnailLabel}</div>
-                  <h1 className="qs-thumbnail-title">{stageTitle}</h1>
+                  <div className="qs-thumbnail-title">{stageTitle}</div>
                   <div className="qs-thumbnail-meta">{stageMeta}</div>
                 </div>
 
                 <div className="qs-play-overlay">
-                  <div className="qs-play-button" aria-label="Play media">
+                  <div className="qs-play-button" aria-hidden="true">
                     <div className="qs-play-icon" />
                   </div>
                 </div>
@@ -923,7 +923,23 @@ export default function GoldenPlayer({
             <section className="qs-section" aria-label="Transcript">
               {/* Section Header */}
               <div className="qs-section-header">
-                <h2 className="qs-section-title">Transcript</h2>
+                <div className="flex items-center gap-3">
+                  <h2 className="qs-section-title">Transcript</h2>
+                  <div className="flex items-center gap-1 rounded border border-[var(--qs-border-subtle)] bg-[var(--qs-bg-surface)] p-0.5" role="group" aria-label="Viewing mode">
+                    <button
+                      type="button"
+                      className="px-2.5 py-1 text-xs font-semibold rounded bg-[var(--qs-accent)] text-[var(--qs-bg-primary)] transition-colors"
+                    >
+                      Transcript
+                    </button>
+                    <button
+                      type="button"
+                      className="px-2.5 py-1 text-xs font-semibold rounded text-[var(--qs-text-secondary)] hover:text-[var(--qs-text-primary)] transition-colors"
+                    >
+                      Theater
+                    </button>
+                  </div>
+                </div>
                 <button type="button" onClick={expandAll} className="qs-section-action">
                   Expand All
                 </button>
@@ -936,6 +952,7 @@ export default function GoldenPlayer({
                   <input
                     id="qsSearchInput"
                     type="text"
+                    aria-label="Search transcript"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search transcript..."
@@ -1024,18 +1041,9 @@ export default function GoldenPlayer({
                       id={`entry-${seg.id ?? idx}`}
                       data-speaker={speakerSlug}
                       data-active={isSegActive}
-                      role="button"
-                      tabIndex={0}
                       onClick={() => {
                         seekToTime(seg.start_time);
                         setAutoTrack(true);
-                      }}
-                      onKeyDown={(event) => {
-                        if (event.key === "Enter" || event.key === " ") {
-                          event.preventDefault();
-                          seekToTime(seg.start_time);
-                          setAutoTrack(true);
-                        }
                       }}
                       className="qs-entry"
                     >

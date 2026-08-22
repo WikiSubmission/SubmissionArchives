@@ -296,7 +296,7 @@ export function SearchSection() {
                     {/* Filter Strip */}
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg px-4 py-2.5 sm:px-6">
                         <div className="flex flex-wrap items-center gap-1.5">
-                            <span className="font-sans text-xs font-semibold text-ed-fg-muted mr-1">Filter:</span>
+                            <span className="font-sans text-xs font-semibold text-ed-fg-secondary mr-1">Filter:</span>
                             {(
                                 [
                                     { id: 'all', label: 'All Corpi' },
@@ -313,7 +313,7 @@ export function SearchSection() {
                                     className={`rounded px-2.5 py-0.5 font-sans text-xs transition-colors ${
                                         activeCorpusFilter === filter.id
                                             ? 'bg-ed-accent/20 text-ed-accent font-bold border border-ed-accent/40'
-                                            : 'text-ed-fg-muted hover:text-ed-fg'
+                                            : 'text-ed-fg-secondary hover:text-ed-fg font-medium'
                                     }`}
                                 >
                                     {filter.label}
@@ -321,7 +321,7 @@ export function SearchSection() {
                             ))}
                         </div>
 
-                        <span className="font-sans text-xs text-ed-fg-muted">
+                        <span className="font-sans text-xs text-ed-fg-secondary">
                             Showing {filteredResults.length} Verified Citations
                         </span>
                     </div>

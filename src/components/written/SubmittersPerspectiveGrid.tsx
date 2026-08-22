@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Newspaper, ArrowUpRight, Info } from 'lucide-react';
@@ -19,14 +20,13 @@ export default function SubmittersPerspectiveGrid({ issues }: Props) {
                 {issues.map((issue) => {
                     const articlesCount = issue.summary?.articles.length || 0;
                     return (
-                        <button
+                        <Link
                             key={issue.id}
-                            type="button"
-                            onClick={() => setSelectedIssue(issue)}
-                            className="group relative flex flex-col overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-3 text-left transition-all duration-[280ms] ease-out hover:-translate-y-1 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                            href={`/library/${issue.id}`}
+                            className="group relative flex flex-col overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-3 text-left transition-all duration-[280ms] ease-out hover:-translate-y-1 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md"
                         >
                             {/* Cover Aspect Ratio 17:22 */}
-                            <div className="relative aspect-[17/22] w-full overflow-hidden rounded-[4px] border border-ed-rule bg-ed-bg">
+                            <div className="relative aspect-[17/22] w-full overflow-hidden rounded-[4px] border border-ed-rule bg-ed-bg block">
                                 {issue.thumbnailOverride ? (
                                     <Image
                                         src={issue.thumbnailOverride}
@@ -41,14 +41,6 @@ export default function SubmittersPerspectiveGrid({ issues }: Props) {
                                         <span className="sr-only">No cover available</span>
                                     </div>
                                 )}
-
-                                {/* Overlay preview badge on hover */}
-                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                                    <div className="rounded-full bg-ed-bg/90 backdrop-blur-sm px-3 py-1.5 text-[11px] font-semibold text-ed-fg shadow-lg flex items-center gap-1.5">
-                                        <Info className="w-3.5 h-3.5 text-ed-accent" />
-                                        <span>Preview Summary</span>
-                                    </div>
-                                </div>
                             </div>
 
                             {/* Newsletter Details */}
@@ -59,25 +51,39 @@ export default function SubmittersPerspectiveGrid({ issues }: Props) {
                                             {issue.date}
                                         </span>
                                         {articlesCount > 0 && (
-                                            <span className="text-[9px] font-medium font-mono text-ed-accent">
-                                                {articlesCount} {articlesCount === 1 ? 'topic' : 'topics'}
+                                            <span className="text-[10px] text-ed-fg-muted">
+                                                {articlesCount} articles
                                             </span>
                                         )}
                                     </div>
                                     <h3
-                                        className="line-clamp-2 text-[14px] font-semibold leading-[1.3] text-ed-fg transition-colors group-hover:text-ed-accent"
+                                        className="line-clamp-1 text-[13.5px] font-semibold text-ed-fg transition-colors group-hover:text-ed-accent"
                                         style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                                     >
                                         {issue.title}
                                     </h3>
                                 </div>
 
-                                <div className="mt-3 flex items-center justify-between border-t border-ed-rule pt-2 text-[11px] font-medium text-ed-fg-muted group-hover:text-ed-fg">
-                                    <span>Summary &amp; Articles</span>
-                                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-ed-accent" />
+                                <div className="mt-3 flex items-center justify-between border-t border-ed-rule pt-2">
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            setSelectedIssue(issue);
+                                        }}
+                                        className="inline-flex items-center gap-1 text-[11px] font-medium text-ed-fg-secondary hover:text-ed-accent transition-colors"
+                                    >
+                                        <Info className="h-3 w-3" />
+                                        <span>Preview</span>
+                                    </button>
+                                    <span className="inline-flex items-center gap-1 text-[11px] font-medium text-ed-fg-muted group-hover:text-ed-fg transition-colors">
+                                        <span>Read</span>
+                                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                    </span>
                                 </div>
                             </div>
-                        </button>
+                        </Link>
                     );
                 })}
             </div>

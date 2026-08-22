@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { X } from 'lucide-react';
 import { Document, Page, Thumbnail, pdfjs } from 'react-pdf';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 import type { PageCallback } from 'react-pdf/dist/shared/types.js';
@@ -177,6 +178,8 @@ export default function PDFReaderClient({
     const [showLayoutPopover, setShowLayoutPopover] = useState(false);
     const [showThemePopover, setShowThemePopover] = useState(false);
     const [showHelpModal, setShowHelpModal] = useState(false);
+    const [showCiteModal, setShowCiteModal] = useState(false);
+    const [citationStyle, setCitationStyle] = useState<'permalink' | 'apa' | 'mla' | 'chicago'>('permalink');
 
     // Search state
     const [searchOpen, setSearchOpen] = useState(Boolean(initialQuery));
@@ -219,6 +222,23 @@ export default function PDFReaderClient({
         if (!numPages) return;
         saveProgress(documentId, { page: pageNumber, totalPages: numPages });
     }, [documentId, pageNumber, numPages]);
+
+    useEffect(() => {
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                if (showCiteModal) {
+                    setShowCiteModal(false);
+                    return;
+                }
+                if (showHelpModal) {
+                    setShowHelpModal(false);
+                    return;
+                }
+            }
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return () => window.removeEventListener('keydown', onKeyDown);
+    }, [showCiteModal, showHelpModal]);
 
     // Offer resume if opened at page 1
     useEffect(() => {
@@ -809,7 +829,7 @@ export default function PDFReaderClient({
                         aria-label={`Page ${pageNumber} of ${numPages ?? 'unknown'}. Click to edit.`}
                     >
                         <span aria-live="polite">{pageNumber}</span>
-                        <span className="text-[#6B6560]">of</span>
+                        <span className="text-[#A8A099]">of</span>
                         <span>{numPages ?? 'Loading'}</span>
                     </button>
                 )}
@@ -916,6 +936,17 @@ export default function PDFReaderClient({
             >
                 <span>Shortcuts</span>
             </button>
+
+            {/* Cite Button */}
+            <button
+                type="button"
+                onClick={() => setShowCiteModal(true)}
+                className={toolbarButtonClass}
+                title="Cite this page"
+                aria-label="Cite"
+            >
+                <span>Cite</span>
+            </button>
         </div>
     );
 
@@ -926,7 +957,7 @@ export default function PDFReaderClient({
         >
             {/* Header */}
             <header className="relative z-10 flex h-[60px] shrink-0 items-center justify-between gap-3 border-b border-ed-rule bg-ed-bg/90 backdrop-blur-xl px-4 sm:px-7">
-                <div className="flex min-w-0 items-center gap-3">
+                <div className="flex shrink-0 items-center gap-3">
                     <Link
                         href={backHref}
                         onClick={handleBack}
@@ -951,17 +982,17 @@ export default function PDFReaderClient({
                     </button>
 
                     <h1
-                        className="flex min-w-0 items-center gap-2 truncate text-sm font-semibold text-[#F5F0EB]"
+                        className="flex items-center gap-2 text-sm font-semibold text-[#F5F0EB]"
                         style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                     >
-                        <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">PDF</span>
-                        <span className="truncate max-w-[280px] sm:max-w-md">{title}</span>
+                        <span aria-hidden="true" className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#C8794A]">PDF</span>
+                        <span className="truncate max-w-[180px] sm:max-w-[260px] md:max-w-[340px] lg:max-w-md">{title}</span>
                     </h1>
                 </div>
 
                 {/* Desktop Toolbar */}
                 <div
-                    className="hidden shrink-0 items-center gap-0.5 rounded-[8px] border border-[#2A2928] bg-[#161514]/80 p-1 shadow-sm sm:flex"
+                    className="hidden min-w-0 items-center gap-0.5 rounded-[8px] border border-[#2A2928] bg-[#161514]/80 p-1 shadow-sm overflow-x-auto sm:flex"
                     role="toolbar"
                     aria-label="Document controls"
                 >
@@ -1133,7 +1164,7 @@ export default function PDFReaderClient({
                                                         className="rounded-md"
                                                     />
                                                 </div>
-                                                <span className="mt-1.5 block text-center text-[11px] text-[#6B6560] group-hover:text-[#F5F0EB] tabular-nums">
+                                                <span className="mt-1.5 block text-center text-[11px] text-[#A8A099] group-hover:text-[#F5F0EB] tabular-nums">
                                                     Page {i + 1}
                                                 </span>
                                             </button>
@@ -1155,7 +1186,7 @@ export default function PDFReaderClient({
                                             <div className="flex items-center justify-between gap-2">
                                                 <span className="truncate">{item.title}</span>
                                                 {item.pageNumber && (
-                                                    <span className="text-[10px] text-[#6B6560] shrink-0">
+                                                    <span className="text-[10px] text-[#A8A099] shrink-0">
                                                         p.{item.pageNumber}
                                                     </span>
                                                 )}
@@ -1273,58 +1304,110 @@ export default function PDFReaderClient({
                 </div>
             </div>
 
-            {/* Keyboard Shortcuts Help Modal */}
+            {/* Help / Shortcuts Modal */}
             {showHelpModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+                <div
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Keyboard shortcuts"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4"
+                    onClick={(e) => {
+                        if (e.target === e.currentTarget) setShowHelpModal(false);
+                    }}
+                >
                     <div className="w-full max-w-md rounded-[8px] border border-ed-rule bg-ed-surface p-6 shadow-2xl space-y-4">
-                        <div className="flex items-center justify-between">
-                            <h3
-                                className="text-base font-bold text-ed-fg flex items-center gap-2"
-                                style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
-                            >
-                                Keyboard Shortcuts
-                            </h3>
+                        <div className="flex items-center justify-between border-b border-ed-rule pb-3">
+                            <h2 className="text-sm font-semibold uppercase tracking-wider text-ed-fg">Keyboard Shortcuts</h2>
                             <button
                                 type="button"
                                 onClick={() => setShowHelpModal(false)}
-                                className="p-1 text-ed-fg-muted hover:text-ed-fg rounded-[4px]"
+                                className="text-ed-fg-secondary hover:text-ed-fg"
+                                aria-label="Close"
                             >
-                                <span>Close</span>
+                                <X className="h-4 w-4" />
                             </button>
                         </div>
-                        <div className="grid grid-cols-2 gap-2 text-xs">
+                        <div className="space-y-2 text-xs">
                             <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
                                 <span className="text-ed-fg-secondary">Next / Prev Page</span>
-                                <kbd className="text-ed-accent font-semibold">Left Arrow / Right Arrow or J / K</kbd>
+                                <kbd className="text-ed-accent font-semibold">Right / Left Arrow</kbd>
                             </div>
                             <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
                                 <span className="text-ed-fg-secondary">First / Last Page</span>
                                 <kbd className="text-ed-accent font-semibold">Home / End</kbd>
                             </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
-                                <span className="text-ed-fg-secondary">Zoom In / Out</span>
-                                <kbd className="text-ed-accent font-semibold">Plus / Minus</kbd>
-                            </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
-                                <span className="text-ed-fg-secondary">Rotate Page</span>
-                                <kbd className="text-ed-accent font-semibold">R</kbd>
-                            </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
-                                <span className="text-ed-fg-secondary">Fullscreen</span>
-                                <kbd className="text-ed-accent font-semibold">F</kbd>
-                            </div>
-                            <div className="flex justify-between p-2 rounded-[8px] bg-ed-surface-strong">
-                                <span className="text-ed-fg-secondary">Search in Document</span>
-                                <kbd className="text-ed-accent font-semibold">/</kbd>
-                            </div>
                         </div>
-                        <div className="text-right">
+                    </div>
+                </div>
+            )}
+
+            {/* Citation Modal */}
+            {showCiteModal && (
+                <div
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Copy a citation"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4"
+                    onClick={(e) => {
+                        if (e.target === e.currentTarget) setShowCiteModal(false);
+                    }}
+                >
+                    <div className="w-full max-w-lg rounded-[8px] border border-ed-rule bg-ed-surface p-6 shadow-2xl space-y-4">
+                        <div className="flex items-center justify-between border-b border-ed-rule pb-3">
+                            <h2 className="text-sm font-semibold uppercase tracking-wider text-ed-fg">Copy a citation</h2>
                             <button
                                 type="button"
-                                onClick={() => setShowHelpModal(false)}
-                                className="px-4 py-1.5 rounded-[4px] bg-ed-accent text-white dark:text-[#0F0E0D] font-semibold text-xs transition-all hover:opacity-90"
+                                onClick={() => setShowCiteModal(false)}
+                                className="text-ed-fg-secondary hover:text-ed-fg"
+                                aria-label="Close"
                             >
-                                Got it
+                                <X className="h-4 w-4" />
+                            </button>
+                        </div>
+
+                        {/* Style Selector Tabs */}
+                        <div className="flex items-center gap-1 rounded-[4px] border border-ed-rule bg-ed-bg p-1">
+                            {(['permalink', 'apa', 'mla', 'chicago'] as const).map((style) => (
+                                <button
+                                    key={style}
+                                    type="button"
+                                    onClick={() => setCitationStyle(style)}
+                                    className={`rounded px-3 py-1 text-xs font-semibold uppercase transition-colors ${
+                                        citationStyle === style
+                                            ? 'bg-ed-accent text-white dark:text-[#0F0E0D]'
+                                            : 'text-ed-fg-secondary hover:text-ed-fg'
+                                    }`}
+                                >
+                                    {style === 'permalink' ? 'Permalink' : style.toUpperCase()}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Citation Text */}
+                        <div className="rounded-[4px] border border-ed-rule bg-ed-bg p-4 text-xs font-mono text-ed-fg break-all select-all">
+                            {citationStyle === 'permalink' && `${typeof window !== 'undefined' ? window.location.origin : ''}/library/${documentId}?page=${pageNumber}`}
+                            {citationStyle === 'apa' && `Khalifa, R. (1982). ${title}. Submission Archives, p. ${pageNumber}.`}
+                            {citationStyle === 'mla' && `Khalifa, Rashad. ${title}. Submission Archives, 1982, p. ${pageNumber}.`}
+                            {citationStyle === 'chicago' && `Khalifa, Rashad. "${title}." Submission Archives (1982): p. ${pageNumber}.`}
+                        </div>
+
+                        <div className="flex justify-end gap-2">
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    const text =
+                                        citationStyle === 'permalink'
+                                            ? `${typeof window !== 'undefined' ? window.location.origin : ''}/library/${documentId}?page=${pageNumber}`
+                                            : citationStyle === 'apa'
+                                            ? `Khalifa, R. (1982). ${title}. Submission Archives, p. ${pageNumber}.`
+                                            : citationStyle === 'mla'
+                                            ? `Khalifa, Rashad. ${title}. Submission Archives, 1982, p. ${pageNumber}.`
+                                            : `Khalifa, Rashad. "${title}." Submission Archives (1982): p. ${pageNumber}.`;
+                                    navigator.clipboard?.writeText(text);
+                                }}
+                                className="inline-flex items-center gap-1.5 rounded-[4px] bg-ed-accent px-4 py-2 text-xs font-semibold text-white dark:text-[#0F0E0D] hover:opacity-90"
+                            >
+                                Copy
                             </button>
                         </div>
                     </div>

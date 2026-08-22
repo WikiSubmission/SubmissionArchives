@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, BookOpen, Info } from 'lucide-react';
@@ -21,13 +22,12 @@ export default function BooksGrid({ books, previews }: Props) {
                     const preview = previews[book.id];
                     const sections = preview?.toc?.length ?? 0;
                     return (
-                        <button
+                        <Link
                             key={book.id}
-                            type="button"
-                            onClick={() => setSelected(book)}
-                            className="group relative flex flex-col overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-3 text-left transition-all duration-[280ms] ease-out hover:-translate-y-1 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ed-accent"
+                            href={`/library/${book.id}`}
+                            className="group relative flex flex-col overflow-hidden rounded-[8px] border border-ed-rule bg-ed-surface p-3 text-left transition-all duration-[280ms] ease-out hover:-translate-y-1 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:shadow-md"
                         >
-                            <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[4px] border border-ed-rule bg-ed-bg">
+                            <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[4px] border border-ed-rule bg-ed-bg block">
                                 {book.thumbnailOverride ? (
                                     <Image
                                         src={book.thumbnailOverride}
@@ -69,12 +69,26 @@ export default function BooksGrid({ books, previews }: Props) {
                                     </h3>
                                 </div>
 
-                                <div className="mt-3 flex items-center justify-between border-t border-ed-rule pt-2 text-[11px] font-medium text-ed-fg-muted group-hover:text-ed-fg">
-                                    <span>Preview Contents</span>
-                                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                <div className="mt-3 flex items-center justify-between border-t border-ed-rule pt-2">
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            setSelected(book);
+                                        }}
+                                        className="inline-flex items-center gap-1 text-[11px] font-medium text-ed-fg-secondary hover:text-ed-accent transition-colors"
+                                    >
+                                        <Info className="h-3 w-3" />
+                                        <span>Preview</span>
+                                    </button>
+                                    <span className="inline-flex items-center gap-1 text-[11px] font-medium text-ed-fg-muted group-hover:text-ed-fg transition-colors">
+                                        <span>Read</span>
+                                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                    </span>
                                 </div>
                             </div>
-                        </button>
+                        </Link>
                     );
                 })}
             </div>

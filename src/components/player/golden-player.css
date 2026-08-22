@@ -567,14 +567,14 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   font-family: var(--font-sans);
 }
 
 .qs-golden-player .qs-toc-count {
   font-size: 11px;
   font-weight: 500;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   font-variant-numeric: tabular-nums;
   font-family: var(--font-sans);
 }
@@ -596,7 +596,7 @@
   padding: 7px 12px;
   border-radius: var(--qs-radius-sm);
   text-decoration: none;
-  color: var(--qs-text-muted);
+  color: var(--qs-text-secondary);
   font-size: 13px;
   font-weight: 500;
   line-height: 1.4;
@@ -612,7 +612,7 @@
 
 .qs-golden-player .qs-toc-link:hover {
   background: var(--qs-bg-secondary);
-  color: var(--qs-text-secondary);
+  color: var(--qs-text-primary);
 }
 
 .qs-golden-player .qs-toc-link[data-active="true"] {
@@ -644,7 +644,7 @@
 .qs-golden-player .qs-toc-time {
   font-size: 11px;
   font-weight: 600;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   letter-spacing: 0.02em;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
@@ -745,7 +745,7 @@
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.06em;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   background: none;
   border: none;
   cursor: pointer;
@@ -792,7 +792,7 @@
 }
 
 .qs-golden-player .qs-search-box input::placeholder {
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
 }
 
 .qs-golden-player .qs-search-box input:focus {
@@ -805,7 +805,7 @@
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   pointer-events: none;
 }
 
@@ -830,7 +830,7 @@
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   transition: color 0.2s ease, background 0.2s ease;
 }
 
@@ -850,7 +850,7 @@
 .qs-golden-player .qs-entry-count {
   font-size: 12px;
   font-weight: 500;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   font-variant-numeric: tabular-nums;
   font-family: var(--font-sans);
 }
@@ -874,6 +874,7 @@
   border-bottom: 1px solid var(--qs-border-subtle);
   transition: background 0.15s ease;
   cursor: pointer;
+  color: var(--qs-text-primary);
 }
 
 .qs-golden-player .qs-entry:hover {
@@ -926,40 +927,40 @@
 
 /* Speaker color variants */
 .qs-golden-player .qs-entry-speaker.khalifa {
-  color: var(--qs-speaker-khalifa);
-  background: rgba(200, 121, 74, 0.1);
+  color: var(--qs-speaker-khalifa, #E08552);
+  background: rgba(224, 133, 82, 0.12);
 }
 
 .qs-golden-player .qs-entry-speaker.scholars {
-  color: var(--qs-speaker-scholars);
-  background: rgba(138, 154, 123, 0.1);
+  color: var(--qs-speaker-scholars, #A3C293);
+  background: rgba(163, 194, 147, 0.12);
 }
 
 .qs-golden-player .qs-entry-speaker.catherine {
-  color: var(--qs-speaker-catherine);
-  background: rgba(143, 184, 168, 0.08);
+  color: var(--qs-speaker-catherine, #A0D4C0);
+  background: rgba(160, 212, 192, 0.12);
 }
 
 .qs-golden-player .qs-entry-speaker.edip {
-  color: var(--qs-speaker-edip);
-  background: rgba(138, 164, 200, 0.08);
+  color: var(--qs-speaker-edip, #A4C2EB);
+  background: rgba(164, 194, 235, 0.12);
 }
 
 .qs-golden-player .qs-entry-speaker.douglas {
-  color: var(--qs-speaker-douglas);
-  background: rgba(184, 160, 143, 0.08);
+  color: var(--qs-speaker-douglas, #D9BAA2);
+  background: rgba(217, 186, 162, 0.12);
 }
 
 .qs-golden-player .qs-entry-speaker.beth {
-  color: var(--qs-speaker-beth);
-  background: rgba(160, 143, 184, 0.08);
+  color: var(--qs-speaker-beth, #CCAAD9);
+  background: rgba(204, 170, 217, 0.12);
 }
 
 .qs-golden-player .qs-entry-time {
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 500;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   font-variant-numeric: tabular-nums;
   padding: 4px 10px;
   border-radius: var(--qs-radius-sm);
@@ -1104,7 +1105,7 @@
   border-top: 1px solid var(--qs-border-subtle);
   padding: 36px 0;
   text-align: center;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.04em;

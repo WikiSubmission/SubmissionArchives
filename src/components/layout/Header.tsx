@@ -120,13 +120,13 @@ export default function Header() {
                         />
                         <span className="min-w-0 leading-none flex flex-col items-start">
                             <span
-                                className="block truncate group-hover:opacity-80 transition-opacity"
+                                className="block truncate group-hover:text-ed-accent transition-colors"
                                 style={{
                                     fontFamily: "'DM Sans', -apple-system, sans-serif",
                                     fontSize: 13,
-                                    fontWeight: 500,
+                                    fontWeight: 600,
                                     letterSpacing: '0.02em',
-                                    color: 'var(--ed-fg-muted)',
+                                    color: 'var(--ed-fg)',
                                     textTransform: 'none',
                                 }}
                             >
@@ -152,7 +152,7 @@ export default function Header() {
                                         fontFamily: "'DM Sans', -apple-system, sans-serif",
                                         fontSize: 13,
                                         fontWeight: isActive ? 600 : 500,
-                                        color: isActive ? 'var(--ed-fg)' : 'var(--ed-fg-muted)',
+                                        color: isActive ? 'var(--ed-fg)' : 'var(--ed-fg-secondary)',
                                         textDecoration: 'none',
                                         position: 'relative',
                                         padding: '4px 0',

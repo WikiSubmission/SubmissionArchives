@@ -119,7 +119,7 @@ export default function WrittenArchivePage() {
                     </header>
 
                     {/* Section 1: Books & Publications */}
-                    <section aria-labelledby="featured-books" className="mb-16">
+                    <section aria-label="Books & Publications" aria-labelledby="featured-books" className="mb-16">
                         <div className="mb-7 flex items-center gap-4 border-b border-ed-rule pb-3">
                             <h2
                                 id="featured-books"
@@ -138,7 +138,7 @@ export default function WrittenArchivePage() {
                     </section>
 
                     {/* Section 2: Submitters Perspectives Newsletters */}
-                    <section aria-labelledby="submitters-perspectives" className="mb-16">
+                    <section aria-label="Submitters Perspectives" className="mb-16">
                         <div className="mb-7 flex flex-wrap items-center justify-between gap-4 border-b border-ed-rule pb-3">
                             <div className="flex items-center gap-4 flex-1">
                                 <h2
@@ -146,7 +146,7 @@ export default function WrittenArchivePage() {
                                     className="whitespace-nowrap text-[22px] font-semibold tracking-[-0.01em] text-ed-fg"
                                     style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                                 >
-                                    Submitters Perspective
+                                    Submitters Perspectives
                                 </h2>
                                 <div className="h-px flex-1 bg-ed-rule" />
                                 <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-ed-fg-muted">
@@ -156,9 +156,10 @@ export default function WrittenArchivePage() {
 
                             <Link
                                 href="/search?filters=perspective"
+                                aria-label="Search the newsletters"
                                 className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-ed-accent transition-colors hover:opacity-90"
                             >
-                                Search All Issues
+                                Search the newsletters
                                 <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
                             </Link>
                         </div>

@@ -19,20 +19,20 @@
   --ed-surface-raised: #FFFFFF;
 
   --ed-fg: #1C1A18;
-  --ed-fg-secondary: #524B45;
-  --ed-fg-muted: #736B63;
-  --ed-fg-faint: #9C9389;
+  --ed-fg-secondary: #3D3732;
+  --ed-fg-muted: #575049;
+  --ed-fg-faint: #756D65;
 
   --ed-rule: #E5DFD5;
   --ed-rule-subtle: rgba(40, 30, 20, 0.06);
   --ed-rule-strong: #D5CCC0;
 
   /* Accent — Warm archival terracotta */
-  --ed-accent: #B86233;
-  --ed-accent-strong: #9E4F24;
-  --ed-accent-soft: rgba(184, 98, 51, 0.09);
-  --ed-accent-glow: rgba(184, 98, 51, 0.12);
-  --ed-gold: #9C7A3C;
+  --ed-accent: #A85324;
+  --ed-accent-strong: #8F4219;
+  --ed-accent-soft: rgba(168, 83, 36, 0.09);
+  --ed-accent-glow: rgba(168, 83, 36, 0.14);
+  --ed-gold: #8C6A2E;
 
   /* Ambient light — warm archival washes */
   --ed-ambient-1: rgba(184, 98, 51, 0.03);
@@ -69,13 +69,13 @@
   --archive-border: #E5DFD5;
   --archive-border-hover: #D5CCC0;
   --archive-text-primary: #1C1A18;
-  --archive-text-secondary: #524B45;
-  --archive-text-muted: #736B63;
-  --archive-text-faint: #9C9389;
-  --archive-accent: #B86233;
-  --archive-accent-hover: #9E4F24;
-  --archive-accent-soft: rgba(184, 98, 51, 0.09);
-  --archive-accent-glow: rgba(184, 98, 51, 0.12);
+  --archive-text-secondary: #3D3732;
+  --archive-text-muted: #575049;
+  --archive-text-faint: #756D65;
+  --archive-accent: #A85324;
+  --archive-accent-hover: #8F4219;
+  --archive-accent-soft: rgba(168, 83, 36, 0.09);
+  --archive-accent-glow: rgba(168, 83, 36, 0.14);
 }
 
 .dark,
@@ -89,20 +89,20 @@
   --ed-surface-raised: #222120;
 
   --ed-fg: #F5F0EB;
-  --ed-fg-secondary: #9E9690;
-  --ed-fg-muted: #6B6560;
-  --ed-fg-faint: #4A4542;
+  --ed-fg-secondary: #D4CDC6;
+  --ed-fg-muted: #A8A099;
+  --ed-fg-faint: #7D7670;
 
   --ed-rule: #2A2928;
   --ed-rule-subtle: rgba(255, 255, 255, 0.04);
   --ed-rule-strong: #353433;
 
   /* Accent — Copper Terracotta */
-  --ed-accent: #C8794A;
-  --ed-accent-strong: #D9916A;
-  --ed-accent-soft: rgba(200, 121, 74, 0.08);
-  --ed-accent-glow: rgba(200, 121, 74, 0.12);
-  --ed-gold: #D4AF37;
+  --ed-accent: #E08552;
+  --ed-accent-strong: #F29A66;
+  --ed-accent-soft: rgba(224, 133, 82, 0.14);
+  --ed-accent-glow: rgba(224, 133, 82, 0.2);
+  --ed-gold: #D6AA58;
 
   /* Ambient light — deep obsidian washes */
   --ed-ambient-1: rgba(200, 121, 74, 0.04);
@@ -1715,7 +1715,7 @@ mark.pdf-search-highlight {
   font-family: var(--font-dm-sans), var(--font-sans);
   font-size: 12px;
   font-weight: 500;
-  color: var(--qs-text-faint);
+  color: var(--qs-text-secondary);
   font-variant-numeric: tabular-nums;
   padding: 3px 8px;
   border-radius: 4px;
@@ -1728,7 +1728,7 @@ mark.pdf-search-highlight {
 }
 
 .qs-entry:hover .qs-entry-time {
-  color: var(--qs-text-muted);
+  color: var(--qs-text-primary);
 }
 
 .qs-entry-time:hover {

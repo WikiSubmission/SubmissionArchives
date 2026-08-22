@@ -146,7 +146,7 @@ function FooterSocialLink({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${label} (opens in a new tab)`}
-            className="inline-flex items-center gap-2 rounded-[4px] border border-ed-rule bg-ed-surface px-3.5 py-2 text-xs font-medium text-ed-fg-muted transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg hover:scale-[1.02] active:scale-[0.98]"
+            className="inline-flex items-center gap-2 rounded-[4px] border border-ed-rule bg-ed-surface px-3.5 py-2 text-xs font-medium text-ed-fg-secondary transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg hover:scale-[1.02] active:scale-[0.98]"
         >
             {children}
         </a>

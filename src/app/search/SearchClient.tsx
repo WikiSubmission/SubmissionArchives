@@ -720,7 +720,6 @@ function SearchContent() {
                                             type="submit"
                                             disabled={!query.trim()}
                                             className="inline-flex items-center justify-center rounded-[4px] bg-ed-accent px-4 py-2.5 text-xs font-bold text-white dark:text-[#0F0E0D] transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:bg-ed-surface-strong disabled:text-ed-fg-muted"
-                                            aria-label="Run search"
                                         >
                                             Search
                                         </button>
@@ -1105,7 +1104,7 @@ function SearchResultCard({
                     >
                         <div className="flex items-center justify-between gap-2 mb-3">
                             <span className="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-ed-fg-muted">
-                                Best Matching Passage
+                                Best passage
                             </span>
                             <span className="inline-flex items-center gap-1.5 rounded-[4px] bg-ed-accent text-white dark:text-[#0F0E0D] px-3.5 py-1 font-mono text-xs font-bold transition-all hover:opacity-90">
                                 <Play className="h-3 w-3 fill-current" />

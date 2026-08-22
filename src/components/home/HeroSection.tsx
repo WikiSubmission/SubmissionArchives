@@ -98,14 +98,14 @@ export function HeroSection() {
                                     href="/search"
                                     className="inline-flex h-11 items-center gap-2 rounded-lg border border-ed-accent bg-ed-accent px-6 font-sans text-sm font-semibold text-white dark:text-[#0F0E0D] shadow-md transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
                                 >
-                                    <span>Search Entire Corpus</span>
-                                    <span className="opacity-60 text-[10px]">/</span>
+                                    <span>Search the archive</span>
+                                    <span aria-hidden="true" className="opacity-60 text-[10px]">/</span>
                                 </Link>
                                 <Link
-                                    href="/scripture/quran"
+                                    href="/videos"
                                     className="inline-flex h-11 items-center gap-2 rounded-lg border border-ed-rule bg-ed-surface px-5 font-sans text-sm font-semibold text-ed-fg shadow-sm transition-all duration-200 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:scale-[1.02] active:scale-[0.98]"
                                 >
-                                    <span>Open Scripture Reader</span>
+                                    <span>Browse recordings</span>
                                     <ArrowRight className="h-3.5 w-3.5 opacity-60" />
                                 </Link>
                             </div>
