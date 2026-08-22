@@ -1,0 +1,69 @@
+name: Visual baselines
+
+# Regenerates the Linux screenshot baselines the verification workflow asserts against,
+# and commits them. Manual on purpose: running this on every push would let a real
+# layout break overwrite its own baseline and report green, and the visual suite would
+# then be asserting nothing. Run it after an intentional UI change, then let the
+# resulting commit go through verification like any other.
+#
+# It also lives in its own workflow so the repo-write token stays out of the workflow
+# that runs on pull requests.
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: visual-baselines-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production application
+        run: npm run build
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Regenerate baselines
+        run: VISUAL=1 npx playwright test tests/e2e/visual.spec.ts --update-snapshots
+
+      - name: Commit and push baselines
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tests/e2e/__snapshots__
+          # Nothing staged is a legitimate no-op; a failing push is not, so it is not
+          # swallowed. A swallowed failure would leave the branch asserting against
+          # baselines that were silently never updated.
+          if ! git diff --staged --quiet; then
+            git commit -m "ci: refresh Linux visual regression baselines"
+            git push
+          else
+            echo "Baselines already match this build."
+          fi
+
+      - name: Upload Playwright report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: visual-baseline-report
+          path: playwright-report/
+          retention-days: 14
