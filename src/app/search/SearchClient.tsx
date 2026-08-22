@@ -25,7 +25,8 @@ import { getHighlightTerms } from '@/lib/search/queryMatch';
 import { hasOperators, parseAdvancedQuery } from '@/lib/search/queryParser';
 import { logSearchEvent } from '@/lib/search/analytics';
 import { useSearchKeyboardNav } from './useSearchKeyboardNav';
-import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
+import QuranStudyThumbnail from '@/components/media/QuranStudyThumbnail';
+import { QURAN_STUDY_SLIDES } from '@/data/quran-study-thumbnail-data';
 
 type FilterKey =
     | 'video'
@@ -645,15 +646,6 @@ function SearchContent() {
 
             <main id="main-content" className="relative z-[1] overflow-hidden">
                 <div className="mx-auto max-w-[880px] px-4 py-8 sm:px-7 lg:py-12">
-                    {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-[12px] font-medium text-ed-fg-muted">
-                        <Link href="/" className="text-ed-fg-muted transition-colors hover:text-ed-accent">
-                            Submission Archives
-                        </Link>
-                        <span className="text-ed-fg-faint">/</span>
-                        <span className="text-ed-fg-secondary">Search</span>
-                    </nav>
-
                     {/* Hero Header */}
                     <header className="mb-7 border-b border-ed-rule pb-7">
                         <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
@@ -1032,6 +1024,18 @@ function SearchResultCard({
     const bestPassageId = `search-card-${cardIndex}-passage-0`;
     const bestPassageActive = active === 0;
 
+    const qsNumber = media.type === 'quran-study'
+        ? (typeof media.primaryNumber === 'number' && Number.isFinite(media.primaryNumber)
+            ? media.primaryNumber
+            : (() => {
+                const idMatch = media.id.match(/^quran-study\/(\d+)/i);
+                if (idMatch) return Number(idMatch[1]);
+                const titleMatch = (media.displayTitle ?? media.title ?? '').match(/^(?:QS\s*)?(\d{1,3})\b/i);
+                return titleMatch ? Number(titleMatch[1]) : null;
+            })())
+        : null;
+    const hasCssSlide = qsNumber !== null && Boolean(QURAN_STUDY_SLIDES[qsNumber]);
+
     return (
         <article
             id={cardId}
@@ -1051,17 +1055,21 @@ function SearchResultCard({
                         }`}
                         aria-label={`Open ${media.displayTitle || media.title}`}
                     >
-                        <Image
-                            src={thumbnailSrc}
-                            alt={media.displayTitle || media.title}
-                            fill
-                            unoptimized
-                            className={`h-full w-full transition duration-500 group-hover:scale-[1.05] ${
-                                media.type === 'perspective'
-                                    ? 'object-cover object-right'
-                                    : 'object-cover'
-                            }`}
-                        />
+                        {hasCssSlide && qsNumber !== null ? (
+                            <QuranStudyThumbnail qsNumber={qsNumber} />
+                        ) : (
+                            <Image
+                                src={thumbnailSrc}
+                                alt={media.displayTitle || media.title}
+                                fill
+                                unoptimized
+                                className={`h-full w-full transition duration-500 group-hover:scale-[1.05] ${
+                                    media.type === 'perspective'
+                                        ? 'object-cover object-right'
+                                        : 'object-cover'
+                                }`}
+                            />
+                        )}
                         {!isDocument ? (
                             <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[1px] transition-colors group-hover:bg-black/10">
                                 <div className="flex h-12 w-12 items-center justify-center rounded-full border border-ed-rule bg-ed-bg/85 shadow-lg backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:border-ed-accent">
@@ -1401,18 +1409,8 @@ function getThumbnailSrc(media: SearchResultMedia) {
         return '/images/placeholders/appendix.png';
     }
 
-    if (media.type === 'other') {
+    if (media.type === 'other' || media.type === 'quran-study') {
         return '/images/placeholders/rashad-khalifa.png';
-    }
-
-    if (media.type === 'quran-study') {
-        const match =
-            (media.title || '').match(/^(\d+)\)/) || (media.id || '').match(/quran-study-v2\/(\d+)/);
-        if (match) {
-            const studyNumber = Number(match[1]);
-            return (quranStudyThumbnails as Record<string, string>)[String(studyNumber)]
-                || '/images/placeholders/rashad-khalifa.png';
-        }
     }
 
     return '/images/placeholders/rashad-khalifa.png';

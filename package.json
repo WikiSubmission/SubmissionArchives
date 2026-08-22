@@ -35,6 +35,8 @@
     "audit:assets": "node scripts/assets/audit-assets.mjs",
     "ocr:books": "node scripts/generate/ocr_books_gemini.mjs",
     "ocr:monitor": "node scripts/generate/monitor_ocr.mjs",
+    "generate:bible": "node scripts/generate/build-bible-index.mjs",
+    "generate:sp-segments": "node scripts/generate/build_sp_web_segments.mjs",
     "prepare": "husky",
     "generate:studio-media": "node scripts/generate/build_studio_media_index.mjs",
     "verify:studio-media": "node scripts/generate/build_studio_media_index.mjs --check"

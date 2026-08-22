@@ -1,9 +1,11 @@
 {
   "valid": true,
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    "3 record(s) are clearly marked without searchable segments."
+  ],
   "recordCount": 382,
-  "segmentCount": 125193,
+  "segmentCount": 105998,
   "categoryCounts": {
     "Appendices": 40,
     "Books": 13,
@@ -22,5 +24,24 @@
     "quran-study": 52,
     "video-program": 51
   },
-  "recordsWithoutSegments": []
+  "recordsWithoutSegments": [
+    {
+      "id": "messenger-audio/70 Messenger Audio",
+      "category": "Messenger Audios",
+      "type": "messenger-audio",
+      "transcriptStatus": "empty"
+    },
+    {
+      "id": "hard-cover-1989",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
+    },
+    {
+      "id": "quran1981",
+      "category": "Books",
+      "type": "other",
+      "transcriptStatus": "missing"
+    }
+  ]
 }

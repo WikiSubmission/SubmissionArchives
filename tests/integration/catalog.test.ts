@@ -21,7 +21,6 @@ const quranChapters = readJson<Array<{
     verses: Array<{
         verseNumber: number;
         english: string;
-        editions?: { '1981'?: { english: string }; '1989'?: { english: string } };
     }>;
 }>>(path.join(generatedDir, 'QURAN_CHAPTERS.json'));
 
@@ -36,6 +35,11 @@ test('the generated archive satisfies the canonical runtime contract', () => {
     assert.equal(categoryCounts.Quran, 114);
     assert.equal(categoryCounts.Books, 13);
     assert.equal(categoryCounts['Submitter Perspectives'], 64);
+});
+
+test('Quran chapters index contains all 114 chapters', () => {
+    assert.equal(quranChapters.length, 114);
+    assert.equal(quranChapters.every((c) => c.verses.length > 0), true);
 });
 
 test('every newsletter is searchable', () => {
@@ -71,8 +75,8 @@ test('book summaries resolve to real PDFs and match master records', () => {
         .sort();
 
     assert.equal(books.length, 13);
-    assert.equal(books.filter((book) => book.transcriptStatus === 'available').length, 13);
-    assert.deepEqual(scanOnlyBookIds, []);
+    assert.equal(books.filter((book) => book.transcriptStatus === 'available').length, 11);
+    assert.deepEqual(scanOnlyBookIds, ['hard-cover-1989', 'quran1981']);
 
     for (const book of books) {
         assert.equal(fs.existsSync(path.join(publicDir, book.pdfLink.replace(/^\//, ''))), true, book.pdfLink);
@@ -82,67 +86,20 @@ test('book summaries resolve to real PDFs and match master records', () => {
     }
 });
 
-test('canonical transcription sources take precedence for every book', () => {
+test('canonical transcription sources take precedence for every searchable book', () => {
     const searchableBooks = books.filter((book) => book.transcriptStatus === 'available');
-    assert.equal(searchableBooks.every((book) => book.transcriptionSource?.startsWith('data/sources/')), true);
+    assert.equal(searchableBooks.length, 11);
+    assert.equal(searchableBooks.every((book) => book.transcriptionSource?.startsWith('data/sources/books/')), true);
     assert.match(books.find((book) => book.id === 'quran-hadith-islam')?.transcriptionSource ?? '', /data\/sources\/books/);
-    assert.match(books.find((book) => book.id === 'quran1981')?.transcriptionSource ?? '', /data\/sources\/quran\/1981/);
-    assert.match(books.find((book) => book.id === 'hard-cover-1989')?.transcriptionSource ?? '', /data\/sources\/quran\/1989/);
 });
 
-test('the complete 1981 page transcription is searchable', () => {
-    const quran1981 = records.find((record) => record.id === 'quran1981');
-    assert.ok(quran1981, 'Missing 1981 Quran book record');
-    assert.equal(quran1981.segmentCount > 500, true);
-    assert.equal(
-        quran1981.segments.some((segment) => findQueryMatch(segment.text, 'authorized english version').matched),
-        true,
-    );
-});
-
-test('Quran search contains complete, edition-labeled 1992 and 1989 verse text', () => {
+test('Quran search contains complete 1992 verse text with no historical verse labels', () => {
     const quranRecords = records.filter((record) => record.type === 'quran');
     const labels = quranRecords.flatMap((record) => record.segments.map((segment) => segment.label));
 
     assert.equal(labels.filter((label) => label === 'verse-1992').length, 6234);
-    assert.equal(labels.filter((label) => label === 'verse-1989').length, 6234);
-});
-
-test('the 1981 edition preserves Chapter 9 verses 128 and 129', () => {
-    const chapter9 = quranChapters.find((chapter) => chapter.chapterNumber === 9);
-    assert.ok(chapter9, 'Missing Quran Chapter 9');
-
-    for (const verseNumber of [128, 129]) {
-        const targetVerse: {
-            verseNumber: number;
-            english: string;
-            editions?: { '1981'?: { english: string }; '1989'?: { english: string } };
-        } | undefined = chapter9.verses.find((candidate) => candidate.verseNumber === verseNumber);
-        assert.ok(targetVerse, `Missing 9:${verseNumber}`);
-        assert.equal(targetVerse.english, '', `9:${verseNumber} should not be attributed to the primary edition`);
-        assert.ok(targetVerse.editions?.['1981']?.english, `Missing 1981 text for 9:${verseNumber}`);
-        assert.equal(targetVerse.editions?.['1989'], undefined, `9:${verseNumber} should not be attributed to the 1989 edition`);
-    }
-
-    const quranRecords = records.filter((record) => record.type === 'quran');
-    const verse1981Count = quranRecords
-        .flatMap((record) => record.segments)
-        .filter((segment) => segment.label === 'verse-1981').length;
-    assert.equal(verse1981Count, 6236);
-});
-
-test('the 1989 Chapter 9 heading and footnotes are free of OCR rule debris', () => {
-    const chapter9 = quranChapters.find((chapter) => chapter.chapterNumber === 9);
-    assert.ok(chapter9, 'Missing Quran Chapter 9');
-    const verse1 = chapter9.verses.find((verse) => verse.verseNumber === 1);
-    assert.ok(verse1?.editions?.['1989'], 'Missing 1989 text for 9:1');
-
-    const edition = verse1.editions['1989'] as { subtitle?: string; footnote?: string };
-    assert.equal(edition.subtitle, 'No Basmalah');
-    assert.doesNotMatch(edition.subtitle, /_{3,}|-{5,}|✓/);
-    assert.match(edition.footnote ?? '', /absence of (the )?Basmalah/i);
-    assert.match(edition.footnote ?? '', /& \*?9:127/);
-    assert.doesNotMatch(edition.footnote ?? '', /repre sents/);
+    assert.equal(labels.filter((label) => label === 'verse-1989').length, 0);
+    assert.equal(labels.filter((label) => label === 'verse-1981').length, 0);
 });
 
 test('legacy book slugs resolve to their current filenames', () => {

@@ -229,9 +229,17 @@ async function processBook(bookManifest, options) {
   console.log(`Model: ${options.model} | Concurrency: ${options.concurrency}`);
   console.log(`========================================================`);
 
-  const standardFontsPath = path.join(ROOT, 'node_modules', 'pdfjs-dist', 'standard_fonts').replace(/\\/g, '/') + '/';
+  const standardFontDataUrl = path.resolve(ROOT, 'node_modules/pdfjs-dist/standard_fonts') + '/';
+  const cMapUrl = path.resolve(ROOT, 'node_modules/pdfjs-dist/cmaps') + '/';
+  const wasmUrl = path.resolve(ROOT, 'node_modules/pdfjs-dist/wasm') + '/';
   const data = new Uint8Array(fs.readFileSync(pdfPath));
-  const pdf = await getDocument({ data, standardFontDataUrl: standardFontsPath }).promise;
+  const pdf = await getDocument({
+    data,
+    standardFontDataUrl,
+    cMapUrl,
+    cMapPacked: true,
+    wasmUrl,
+  }).promise;
 
   const startPage = options.startPage || 1;
   const endPage = options.endPage || totalPages;

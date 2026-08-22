@@ -8,7 +8,6 @@ import { getMediaAssetUrl, getPublicAssetUrl } from '@/lib/mediaAssets';
 import { getMediaHref } from '@/lib/utils';
 import QuranStudyThumbnail from '@/components/media/QuranStudyThumbnail';
 import { QURAN_STUDY_SLIDES } from '@/data/quran-study-thumbnail-data';
-import quranStudyThumbnails from '@/data/quran_study_thumbnails.json';
 import './audios.css';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -40,14 +39,6 @@ function getQsNumber(item: Media): number | null {
 
 function getThumbnailSrc(item: Media): string | null {
     if (item.thumbnailOverride) return getPublicAssetUrl(item.thumbnailOverride);
-    if (item.type === 'quran-study') {
-        const n = getQsNumber(item);
-        if (n !== null) {
-            const t = (quranStudyThumbnails as Record<string, string>)[String(n)];
-            if (t) return getPublicAssetUrl(t);
-        }
-    }
-    // Messenger audio has a gradient thumbnail — no image src needed
     return null;
 }
 

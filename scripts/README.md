@@ -20,12 +20,4 @@ npm run generate:catalog
 
 ## Books and Quran
 
-The public PDFs in `public/content/written/books` are matched to canonical transcriptions by a normalized source filename. Copy-number suffixes such as `(1)` are ignored, allowing the corpus source names to match the readable archive PDFs without renaming either artifact. The 1981 and 1989 complete Quran JSON files are also used as page-level book transcriptions; the 1989 verse index additionally powers the edition switcher in the Quran reader.
-
-## Transcript Tooling
-
-`process/transcription_pipeline.py` downloads audio via `yt-dlp` and runs local ASR (Whisper/Canary/Parakeet) to produce VTT transcripts for catalog items that have no playlist CSV coverage.
-
-`process/vtt-to-json-converter.ts` converts raw VTT files in a `temp_vtt/` working directory into speaker-attributed JSON, including CP437 mojibake recovery for Arabic text.
-
-`utils/analyze-speakers.ts` scans a `temp_vtt/` directory and reports detected speaker-label patterns, useful when tuning the normalization rules in `vtt-to-json-converter.ts`.
+The public PDFs in `public/content/written/books` are matched to canonical transcriptions in `data/sources/books` by a normalized source filename. Copy-number suffixes such as `(1)` are ignored, allowing the corpus source names to match the readable archive PDFs without renaming either artifact. Quran search is powered by the canonical 1992 edition under `data/sources/quran/1992`. Historical 1981 and 1989 Quran editions are preserved as visual PDF scans in `public/content/written/books` for visual facsimile reading.

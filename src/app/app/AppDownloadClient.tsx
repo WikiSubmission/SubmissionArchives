@@ -8,24 +8,62 @@ import {
     Monitor,
     Terminal,
     Zap,
-    Search,
-    LayoutGrid,
-    GitBranch,
-    Columns,
     Download,
     ChevronDown,
     Command,
     FileText,
     Compass,
+    Search,
+    GitBranch,
+    LayoutGrid,
+    Columns,
 } from 'lucide-react';
+import {
+    FolderOpen as PhFolderOpen,
+    Folder as PhFolder,
+    Tag as PhTag,
+    MagnifyingGlass as PhMagnifyingGlass,
+    Trash as PhTrash,
+    TreeStructure as PhTreeStructure,
+    FilePlus as PhFilePlus,
+    MagnifyingGlassPlus as PhMagnifyingGlassPlus,
+    Command as PhCommand,
+    ShareNetwork as PhShareNetwork,
+    VideoCamera as PhVideoCamera,
+    SidebarSimple as PhSidebarSimple,
+    Gear as PhGear,
+    Funnel as PhFunnel,
+    CaretLeft as PhCaretLeft,
+    CaretRight as PhCaretRight,
+    FileText as PhFileText,
+    Plus as PhPlus,
+    Columns as PhColumns,
+    Sun as PhSun,
+    Sparkle as PhSparkle,
+    ArrowsOut as PhArrowsOut,
+    SlidersHorizontal as PhSlidersHorizontal,
+    TextT as PhTextT,
+    Hash as PhHash,
+    TextB as PhTextB,
+    TextItalic as PhTextItalic,
+    TextStrikethrough as PhTextStrikethrough,
+    Code as PhCode,
+    TextHOne as PhTextHOne,
+    TextHTwo as PhTextHTwo,
+    TextHThree as PhTextHThree,
+    Quotes as PhQuotes,
+    Play as PhPlay,
+    LinkSimple as PhLinkSimple,
+    CheckCircle as PhCheckCircle,
+    Info as PhInfo,
+    Copy as PhCopy,
+} from '@phosphor-icons/react';
 
 /* -------------------------------------------------------------------------- */
 /* Types & Constants                                                          */
 /* -------------------------------------------------------------------------- */
 
 type Platform = 'macos' | 'windows' | 'linux';
-
-type WorkspaceTab = 'editor' | 'quran' | 'canvas' | 'split' | 'inspector';
 
 interface ArchitecturePillar {
     id: string;
@@ -144,7 +182,8 @@ const fadeUp = (delay = 0) => ({
 
 export default function AppDownloadClient() {
     const platform = useSyncExternalStore<Platform>(subscribePlatform, getPlatformSnapshot, () => 'macos');
-    const [activeWorkspaceTab, setActiveWorkspaceTab] = useState<WorkspaceTab>('editor');
+    const [showInspector, setShowInspector] = useState(true);
+    const [mobileStudioTab, setMobileStudioTab] = useState<'editor' | 'explorer' | 'inspector'>('editor');
     const [openAccordionId, setOpenAccordionId] = useState<string>('engine-1');
     const [paletteOpen, setPaletteOpen] = useState(false);
     const [paletteQuery, setPaletteQuery] = useState('');
@@ -300,345 +339,633 @@ export default function AppDownloadClient() {
                                 </div>
                             </div>
                         </motion.div>
+                    </div>
 
-                        {/* App window showcase */}
-                        <motion.div {...fadeUp(0.08)} className="mx-auto mt-12 max-w-[980px] text-left">
-                            <div className="overflow-hidden rounded-[10px] border border-ed-rule-strong bg-ed-surface shadow-2xl">
-                                {/* Titlebar */}
-                                <div className="flex h-[38px] select-none items-center justify-between border-b border-ed-rule bg-ed-surface-strong px-3.5">
+                    {/* App window showcase — Widescreen SA Studio UI (Expansive 4-Column Layout) */}
+                    <div className="mx-auto mt-12 w-full max-w-[1400px] px-2 sm:px-4 lg:px-6">
+                        <motion.div {...fadeUp(0.08)} className="text-left">
+                            <div className="overflow-hidden rounded-[14px] border border-[#2e2620] bg-[#0c0a09] shadow-[0_28px_72px_-12px_rgba(0,0,0,0.8)] ring-1 ring-white/5">
+                                {/* Native App Titlebar */}
+                                <div className="flex h-[40px] select-none items-center justify-between border-b border-[#241f1b] bg-[#120f0d] px-4">
+                                    <div className="flex items-center gap-3">
+                                        <div className="flex items-center gap-1.5">
+                                            <span className="h-2.5 w-2.5 rounded-full bg-[#9D5B4B]/80 hover:bg-[#9D5B4B] transition-colors cursor-pointer" />
+                                            <span className="h-2.5 w-2.5 rounded-full bg-[#AA8A4B]/80 hover:bg-[#AA8A4B] transition-colors cursor-pointer" />
+                                            <span className="h-2.5 w-2.5 rounded-full bg-[#5E8B6E]/80 hover:bg-[#5E8B6E] transition-colors cursor-pointer" />
+                                        </div>
+                                        <span className="font-mono text-[11.5px] font-medium text-[#c5beb5] tracking-wide">
+                                            SubmissionArchives Studio
+                                        </span>
+                                    </div>
+
+                                    {/* Interactive Window Utility Controls */}
                                     <div className="flex items-center gap-1.5">
-                                        <span className="h-2 w-2 rounded-full bg-[#9D5B4B]" />
-                                        <span className="h-2 w-2 rounded-full bg-[#AA8A4B]" />
-                                        <span className="h-2 w-2 rounded-full bg-[#5E8B6E]" />
-                                    </div>
-                                    <div className="truncate px-2 font-mono text-[10px] text-ed-fg-muted">
-                                        SA Studio · notes / monotheism_continuity.md
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <span className="rounded bg-ed-accent-soft px-1.5 py-0.5 font-mono text-[8px] uppercase tracking-wider text-ed-accent border border-ed-accent/20">
-                                            Saved
-                                        </span>
-                                        <span className="font-mono text-[8px] uppercase tracking-wider text-ed-fg-muted">
-                                            Local Vault
-                                        </span>
+                                        <button
+                                            type="button"
+                                            onClick={() => setShowInspector((prev) => !prev)}
+                                            title={showInspector ? 'Hide Video Inspector' : 'Show Video Inspector'}
+                                            className={`flex items-center gap-1.5 rounded px-2.5 py-1 font-mono text-[10.5px] transition-colors shadow-xs ${
+                                                showInspector
+                                                    ? 'bg-[#2a1d15] text-[#d87c46] border border-[#b86233]/40'
+                                                    : 'text-[#8f857d] hover:text-[#e4ded9] hover:bg-white/5 border border-transparent'
+                                            }`}
+                                        >
+                                            <PhColumns size={13} weight={showInspector ? 'fill' : 'regular'} />
+                                            <span className="hidden sm:inline">{showInspector ? 'Split Inspector Active' : 'Toggle Inspector'}</span>
+                                        </button>
+                                        <span className="h-3.5 w-px bg-[#241f1b]" />
+                                        <button type="button" className="p-1.5 text-[#8f857d] hover:text-[#e4ded9] hover:bg-white/5 rounded transition-colors" title="Theme">
+                                            <PhSun size={14} weight="regular" />
+                                        </button>
+                                        <button type="button" className="p-1.5 text-[#8f857d] hover:text-[#e4ded9] hover:bg-white/5 rounded transition-colors" title="Assistant">
+                                            <PhSparkle size={14} weight="regular" />
+                                        </button>
+                                        <button type="button" className="p-1.5 text-[#8f857d] hover:text-[#e4ded9] hover:bg-white/5 rounded transition-colors" title="Settings">
+                                            <PhGear size={14} weight="regular" />
+                                        </button>
+                                        <button type="button" className="p-1.5 text-[#8f857d] hover:text-[#e4ded9] hover:bg-white/5 rounded transition-colors" title="Fullscreen">
+                                            <PhArrowsOut size={14} weight="regular" />
+                                        </button>
                                     </div>
                                 </div>
 
-                                <div className="grid min-h-[420px] grid-cols-1 sm:grid-cols-[230px_1fr]">
-                                    {/* Sidebar matching SA Studio's Golden Player layout */}
-                                    <aside className="border-r border-ed-rule bg-ed-bg-secondary/60 p-2.5 flex flex-col justify-between">
+                                {/* Mobile Navigation Tabs Bar (Visible on < lg screens) */}
+                                <div className="flex lg:hidden items-center border-b border-[#241f1b] bg-[#16120f] p-1.5 gap-1 select-none">
+                                    <button
+                                        type="button"
+                                        onClick={() => setMobileStudioTab('editor')}
+                                        className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded text-[11px] font-medium transition-all ${
+                                            mobileStudioTab === 'editor'
+                                                ? 'bg-[#2a1d15] text-[#d87c46] border border-[#b86233]/40 shadow-xs font-semibold'
+                                                : 'text-[#8f857d] hover:text-[#e4ded9]'
+                                        }`}
+                                    >
+                                        <PhFileText size={13} weight={mobileStudioTab === 'editor' ? 'fill' : 'regular'} />
+                                        <span>Document Editor</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setMobileStudioTab('explorer')}
+                                        className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded text-[11px] font-medium transition-all ${
+                                            mobileStudioTab === 'explorer'
+                                                ? 'bg-[#2a1d15] text-[#d87c46] border border-[#b86233]/40 shadow-xs font-semibold'
+                                                : 'text-[#8f857d] hover:text-[#e4ded9]'
+                                        }`}
+                                    >
+                                        <PhFolder size={13} weight={mobileStudioTab === 'explorer' ? 'fill' : 'regular'} />
+                                        <span>Vault Explorer</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setMobileStudioTab('inspector')}
+                                        className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded text-[11px] font-medium transition-all ${
+                                            mobileStudioTab === 'inspector'
+                                                ? 'bg-[#2a1d15] text-[#d87c46] border border-[#b86233]/40 shadow-xs font-semibold'
+                                                : 'text-[#8f857d] hover:text-[#e4ded9]'
+                                        }`}
+                                    >
+                                        <PhVideoCamera size={13} weight={mobileStudioTab === 'inspector' ? 'fill' : 'regular'} />
+                                        <span>Media Study</span>
+                                    </button>
+                                </div>
+
+                                {/* Main Application Shell Layout — Full 4-Column Studio Architecture */}
+                                <div className={`grid min-h-[580px] sm:min-h-[640px] grid-cols-1 overflow-x-auto ${
+                                    showInspector
+                                        ? 'lg:grid-cols-[48px_210px_1fr_390px] xl:grid-cols-[48px_230px_1fr_420px]'
+                                        : 'lg:grid-cols-[48px_230px_1fr]'
+                                }`}>
+                                    {/* 1. Left Ribbon (Icon Bar) matching studio/src/components/LeftRibbon.tsx */}
+                                    <aside
+                                        aria-label="Ribbon"
+                                        className={`border-r border-[#241f1b] bg-[#0c0a09] py-3 flex-col justify-between items-center select-none ${
+                                            mobileStudioTab === 'explorer' ? 'flex w-[48px] shrink-0' : 'hidden lg:flex'
+                                        }`}
+                                    >
+                                        <div className="flex flex-col items-center gap-1.5 w-full px-1.5">
+                                            <button
+                                                type="button"
+                                                title="Vault Explorer (Ctrl+B)"
+                                                className="p-2 rounded-[7px] bg-[#b86233]/20 text-[#d87c46] border border-[#b86233]/35 shadow-xs transition-all"
+                                            >
+                                                <PhFolderOpen size={18} weight="fill" />
+                                            </button>
+                                            <button type="button" title="Visual Synthesis Canvas" className="p-2 rounded-lg text-[#786f66] hover:text-[#d87c46] hover:bg-[#b86233]/15 transition-colors">
+                                                <PhTreeStructure size={18} weight="regular" />
+                                            </button>
+                                            <button type="button" title="New Note (Ctrl+N)" className="p-2 rounded-lg text-[#786f66] hover:text-[#d87c46] hover:bg-[#b86233]/15 transition-colors">
+                                                <PhFilePlus size={18} weight="bold" />
+                                            </button>
+                                            <button type="button" title="Quick Switcher (Ctrl+O)" className="p-2 rounded-lg text-[#786f66] hover:text-[#e4ded9] hover:bg-white/5 transition-colors">
+                                                <PhMagnifyingGlassPlus size={18} weight="regular" />
+                                            </button>
+                                            <button type="button" title="Search Vault" className="p-2 rounded-lg text-[#786f66] hover:text-[#e4ded9] hover:bg-white/5 transition-colors">
+                                                <PhMagnifyingGlass size={18} weight="regular" />
+                                            </button>
+                                            <button type="button" title="Command Palette (Ctrl+P)" className="p-2 rounded-lg text-[#786f66] hover:text-[#e4ded9] hover:bg-white/5 transition-colors">
+                                                <PhCommand size={18} weight="regular" />
+                                            </button>
+                                            <button type="button" title="Graph View" className="p-2 rounded-lg text-[#786f66] hover:text-[#d87c46] hover:bg-[#b86233]/15 transition-colors">
+                                                <PhShareNetwork size={18} weight="regular" />
+                                            </button>
+                                            <button
+                                                type="button"
+                                                title="Media Notes: Watch & Cite Lectures (Ctrl+Shift+M)"
+                                                className="p-2 rounded-lg text-[#d87c46] bg-[#2a1d15] border border-[#b86233]/35 shadow-xs transition-colors"
+                                            >
+                                                <PhVideoCamera size={18} weight="fill" />
+                                            </button>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1.5 w-full px-1">
+                                            <button type="button" title="Toggle Inspector" className="p-2 rounded-lg text-[#786f66] hover:text-[#e4ded9] hover:bg-white/5 transition-colors">
+                                                <PhSidebarSimple size={18} weight="regular" className="rotate-180" />
+                                            </button>
+                                            <button type="button" title="Vault Settings" className="p-2 rounded-lg text-[#786f66] hover:text-[#e4ded9] hover:bg-white/5 transition-colors">
+                                                <PhGear size={18} weight="regular" />
+                                            </button>
+                                        </div>
+                                    </aside>
+
+                                    {/* 2. Explorer Sidebar matching studio/src/components/workspace/ExplorerPanel.tsx & ArchiveExplorer.tsx */}
+                                    <aside
+                                        aria-label="Explorer"
+                                        className={`border-r border-[#241f1b] bg-[#12100e] p-2.5 flex-col justify-between select-none ${
+                                            mobileStudioTab === 'explorer' ? 'flex flex-1 min-w-0' : 'hidden sm:flex'
+                                        }`}
+                                    >
                                         <div>
-                                            {/* Segmented top switcher */}
-                                            <div className="flex items-center p-0.5 rounded-[6px] bg-ed-surface border border-ed-rule mb-3">
+                                            {/* Segmented Top Switcher: Files | Tags | Search | Trash */}
+                                            <div className="flex items-center p-0.5 rounded-[7px] bg-[#181411] border border-[#26201b] mb-3">
                                                 <button
-                                                    onClick={() => setActiveWorkspaceTab('editor')}
-                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
-                                                        activeWorkspaceTab === 'editor'
-                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-muted hover:text-ed-fg'
-                                                    }`}
+                                                    type="button"
+                                                    className="flex-1 flex items-center justify-center gap-1.5 py-1 text-[11px] font-semibold rounded-[5px] bg-[#241a14] text-[#d87c46] border border-[#b86233]/30 shadow-xs transition-all"
                                                 >
-                                                    Files
+                                                    <PhFolder size={13} weight="fill" className="text-[#d87c46]" />
+                                                    <span>Files</span>
                                                 </button>
                                                 <button
-                                                    onClick={() => setActiveWorkspaceTab('quran')}
-                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
-                                                        activeWorkspaceTab === 'quran'
-                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-muted hover:text-ed-fg'
-                                                    }`}
+                                                    type="button"
+                                                    className="flex-1 flex items-center justify-center gap-1.5 py-1 text-[11px] font-medium text-[#786f66] hover:text-[#d5cec7] rounded-[5px] transition-all"
                                                 >
-                                                    Tags
+                                                    <PhTag size={13} weight="regular" />
+                                                    <span>Tags</span>
                                                 </button>
                                                 <button
-                                                    onClick={() => setActiveWorkspaceTab('canvas')}
-                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
-                                                        activeWorkspaceTab === 'canvas'
-                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-muted hover:text-ed-fg'
-                                                    }`}
+                                                    type="button"
+                                                    className="flex-1 flex items-center justify-center gap-1.5 py-1 text-[11px] font-medium text-[#786f66] hover:text-[#d5cec7] rounded-[5px] transition-all"
                                                 >
-                                                    Canvas
+                                                    <PhMagnifyingGlass size={13} weight="regular" />
+                                                    <span>Search</span>
                                                 </button>
                                                 <button
-                                                    onClick={() => setActiveWorkspaceTab('split')}
-                                                    className={`flex-1 py-1 text-[10px] font-semibold rounded-[4px] transition-all ${
-                                                        activeWorkspaceTab === 'split'
-                                                            ? 'bg-ed-surface-raised text-ed-fg shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-muted hover:text-ed-fg'
-                                                    }`}
+                                                    type="button"
+                                                    className="flex-1 flex items-center justify-center gap-1.5 py-1 text-[11px] font-medium text-[#786f66] hover:text-[#d5cec7] rounded-[5px] transition-all"
                                                 >
-                                                    Split
+                                                    <PhTrash size={13} weight="regular" />
+                                                    <span>Trash</span>
                                                 </button>
                                             </div>
 
-                                            {/* Explorer Header */}
-                                            <div className="flex items-center justify-between px-1.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-ed-fg-muted">
-                                                <span>Explorer</span>
-                                                <span className="font-mono text-[9px] text-ed-fg-faint">18 items</span>
+                                            {/* Explorer Header matching Golden TOC header */}
+                                            <div className="flex items-center justify-between px-1.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#786f66]">
+                                                <div className="flex items-center gap-1.5">
+                                                    <span>Explorer</span>
+                                                    <span className="font-mono text-[9px] text-[#5e564e] lowercase font-normal">3 items</span>
+                                                </div>
+                                                <div className="flex items-center gap-1 text-[#786f66]">
+                                                    <button type="button" title="Filter Files" className="p-1 hover:text-[#e4ded9] rounded hover:bg-white/5 transition-colors">
+                                                        <PhFunnel size={14} weight="regular" />
+                                                    </button>
+                                                    <button type="button" title="New Note" className="p-1 hover:text-[#e4ded9] rounded hover:bg-white/5 transition-colors">
+                                                        <PhFilePlus size={14} weight="bold" />
+                                                    </button>
+                                                </div>
                                             </div>
 
-                                            {/* File List Items with Active Glow */}
-                                            <nav className="space-y-0.5 mt-1.5">
+                                            {/* Faithful Tree Items */}
+                                            <nav className="space-y-1 mt-2">
                                                 <button
-                                                    onClick={() => setActiveWorkspaceTab('editor')}
-                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
-                                                        activeWorkspaceTab === 'editor'
-                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
-                                                    }`}
+                                                    type="button"
+                                                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs text-[#8f857d] hover:text-[#e4ded9] hover:bg-white/5 transition-all"
                                                 >
-                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-                                                        activeWorkspaceTab === 'editor'
-                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
-                                                            : 'bg-transparent'
-                                                    }`} />
-                                                    <span className="truncate flex-1">monotheism_continuity.md</span>
+                                                    <PhFileText size={14} weight="regular" className="opacity-60 shrink-0" />
+                                                    <span className="truncate flex-1 font-mono text-[11.5px]">welcome</span>
                                                 </button>
 
                                                 <button
-                                                    onClick={() => setActiveWorkspaceTab('quran')}
-                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
-                                                        activeWorkspaceTab === 'quran'
-                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
-                                                    }`}
+                                                    type="button"
+                                                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs bg-[#261d17] text-[#f5efe8] font-medium border border-[#b86233]/30 shadow-xs transition-all"
                                                 >
-                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-                                                        activeWorkspaceTab === 'quran'
-                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
-                                                            : 'bg-transparent'
-                                                    }`} />
-                                                    <span className="truncate flex-1">quran_2_255_exegesis.md</span>
+                                                    <PhFileText size={14} weight="fill" className="text-[#d87c46] shrink-0" />
+                                                    <span className="truncate flex-1 text-[12px] text-[#f2ede7]">Ayat al-Kursi Exegesis</span>
                                                 </button>
 
                                                 <button
-                                                    onClick={() => setActiveWorkspaceTab('canvas')}
-                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
-                                                        activeWorkspaceTab === 'canvas'
-                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
-                                                    }`}
+                                                    type="button"
+                                                    className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs text-[#8f857d] hover:text-[#e4ded9] hover:bg-white/5 transition-all"
                                                 >
-                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-                                                        activeWorkspaceTab === 'canvas'
-                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
-                                                            : 'bg-transparent'
-                                                    }`} />
-                                                    <span className="truncate flex-1">messengers_timeline.canvas</span>
-                                                    <span className="text-[8px] font-mono uppercase px-1 rounded bg-ed-surface text-ed-accent border border-ed-rule">
-                                                        2D
-                                                    </span>
-                                                </button>
-
-                                                <button
-                                                    onClick={() => setActiveWorkspaceTab('split')}
-                                                    className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-[6px] text-left text-xs transition-all ${
-                                                        activeWorkspaceTab === 'split'
-                                                            ? 'bg-ed-surface-raised text-ed-fg font-semibold shadow-xs border border-ed-rule-strong'
-                                                            : 'text-ed-fg-secondary hover:text-ed-fg hover:bg-ed-surface'
-                                                    }`}
-                                                >
-                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-                                                        activeWorkspaceTab === 'split'
-                                                            ? 'bg-ed-accent shadow-[0_0_8px_var(--ed-accent-glow)]'
-                                                            : 'bg-transparent'
-                                                    }`} />
-                                                    <span className="truncate flex-1">1987_debate_transcript.pdf</span>
-                                                    <span className="text-[8px] font-mono uppercase px-1 rounded bg-ed-surface text-ed-danger border border-ed-rule">
-                                                        PDF
-                                                    </span>
+                                                    <PhFileText size={14} weight="regular" className="opacity-60 shrink-0" />
+                                                    <span className="truncate flex-1 font-mono text-[11.5px]">Surah Al-Kahf Study</span>
                                                 </button>
                                             </nav>
                                         </div>
 
-                                        {/* Bottom Status / Vault */}
-                                        <div className="pt-2 border-t border-ed-rule/60 flex items-center justify-between text-[9px] font-mono text-ed-fg-faint px-1">
-                                            <span>4,120 words</span>
-                                            <span>UTF-8</span>
+                                        {/* Bottom Sidebar Status */}
+                                        <div className="pt-2 border-t border-[#241f1b] flex items-center justify-between text-[9.5px] font-mono text-[#5e564e] px-1">
+                                            <span>vault / notes</span>
+                                            <span>3 files</span>
                                         </div>
                                     </aside>
 
-                                    {/* Main Editor Pane */}
-                                    <div className="bg-ed-surface p-4 sm:p-5 flex flex-col justify-between">
+                                    {/* 3. Center Editor Canvas matching studio/src/components/TabHeader.tsx & FrontmatterPanel.tsx */}
+                                    <div className={`flex-col justify-between bg-[#0f0d0b] border-r border-[#241f1b] ${
+                                        mobileStudioTab === 'editor' ? 'flex w-full' : 'hidden lg:flex'
+                                    }`}>
                                         <div>
-                                            <div className="mb-3 flex items-center justify-between gap-2.5 border-b border-ed-rule/60 pb-2.5">
-                                                <div className="flex items-center gap-2 text-xs text-ed-fg-muted font-mono">
-                                                    <span className="text-ed-accent font-semibold">[[WikiLink]]</span>
-                                                    <span>·</span>
-                                                    <span>/quran command</span>
-                                                    <span>·</span>
-                                                    <span>[^1] footnotes</span>
+                                            {/* Tabs Bar */}
+                                            <div className="flex items-center justify-between border-b border-[#241f1b] bg-[#120f0d] px-2 pt-1.5">
+                                                <div className="flex items-center gap-1 overflow-x-auto">
+                                                    <div className="flex items-center text-[#786f66] mr-1">
+                                                        <button type="button" title="Navigate Back" className="p-1 hover:text-[#e4ded9] cursor-pointer">
+                                                            <PhCaretLeft size={14} weight="bold" />
+                                                        </button>
+                                                        <button type="button" title="Navigate Forward" className="p-1 hover:text-[#e4ded9] cursor-pointer">
+                                                            <PhCaretRight size={14} weight="bold" />
+                                                        </button>
+                                                    </div>
+
+                                                    {/* Tab: welcome.md */}
+                                                    <div className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-mono text-[#786f66] hover:text-[#e4ded9] cursor-pointer">
+                                                        <PhFileText size={13} weight="regular" className="opacity-60" />
+                                                        <span>welcome.md</span>
+                                                    </div>
+
+                                                    {/* Tab: Ayat al-Kursi Exegesis (Active) */}
+                                                    <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-t-[4px] bg-[#1c1815] text-[#f2ede7] border-t-2 border-[#b86233] text-[11.5px] font-medium shadow-xs">
+                                                        <PhFileText size={13} weight="fill" className="text-[#d87c46]" />
+                                                        <span>Ayat al-Kursi Exege...</span>
+                                                    </div>
+
+                                                    {/* Tab: Surah Al-Kahf Study */}
+                                                    <div className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-mono text-[#786f66] hover:text-[#e4ded9] cursor-pointer">
+                                                        <PhFileText size={13} weight="regular" className="opacity-60" />
+                                                        <span>Surah Al-Kahf Stud...</span>
+                                                    </div>
+
+                                                    <div className="px-2 py-1 text-[#786f66] hover:text-[#e4ded9] cursor-pointer" title="New Note (Ctrl+N)">
+                                                        <PhPlus size={13} weight="bold" />
+                                                    </div>
                                                 </div>
-                                                <div className="flex gap-1.5">
-                                                    <span className="flex h-6 items-center rounded border border-ed-rule bg-ed-surface-strong px-2 text-[9px] text-ed-fg-muted">
-                                                        Outline (5)
+
+                                                {/* Top Right Editor Modes */}
+                                                <div className="flex items-center p-0.5 rounded-[4px] bg-[#181411] border border-[#26201b]">
+                                                    <span className="px-2 py-0.5 text-[10px] font-semibold rounded bg-[#241a14] text-[#d87c46]">
+                                                        Write
                                                     </span>
-                                                    <span className="flex h-6 items-center rounded border border-ed-rule bg-ed-surface-strong px-2 text-[9px] text-ed-accent font-mono">
-                                                        Ctrl+\ Split
+                                                    <span className="px-2 py-0.5 text-[10px] font-medium text-[#786f66]">
+                                                        Blocks
+                                                    </span>
+                                                    <span className="px-2 py-0.5 text-[10px] font-medium text-[#786f66]">
+                                                        Page
                                                     </span>
                                                 </div>
                                             </div>
 
-                                            <AnimatePresence mode="wait">
-                                                {activeWorkspaceTab === 'editor' && (
-                                                    <motion.div
-                                                        key="editor-view"
-                                                        initial={{ opacity: 0 }}
-                                                        animate={{ opacity: 1 }}
-                                                        exit={{ opacity: 0 }}
-                                                        transition={{ duration: 0.12 }}
-                                                    >
-                                                        <h2
-                                                            className="text-xl font-semibold leading-tight text-ed-fg sm:text-2xl"
-                                                            style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                            {/* File Breadcrumb */}
+                                            <div className="flex items-center justify-between px-5 py-2 border-b border-[#241f1b]/50 text-[10.5px] font-mono text-[#786f66]">
+                                                <div className="flex items-center gap-1.5">
+                                                    <span>c:</span>
+                                                    <span>/</span>
+                                                    <span>vault</span>
+                                                    <span>/</span>
+                                                    <span className="text-[#d5cec7] font-semibold">Ayat al-Kursi Exegesis.md</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Properties Collapsible Header matching FrontmatterPanel.tsx */}
+                                            <div className="px-5 pt-3.5 pb-2">
+                                                <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.14em] text-[#786f66] pb-1.5 border-b border-[#241f1b]/40">
+                                                    <div className="flex items-center gap-1.5">
+                                                        <PhSlidersHorizontal size={14} weight="regular" />
+                                                        <span>PROPERTIES</span>
+                                                    </div>
+                                                    <span className="rounded bg-emerald-950/60 px-1.5 py-0.5 font-mono text-[8.5px] font-semibold uppercase tracking-wider text-emerald-400 border border-emerald-800/40 flex items-center gap-1">
+                                                        <PhCheckCircle size={10} weight="fill" className="text-emerald-400" />
+                                                        Saved
+                                                    </span>
+                                                </div>
+
+                                                <div className="mt-2 space-y-1 font-mono text-[10.5px]">
+                                                    <div className="flex items-center gap-3 text-[#8f857d]">
+                                                        <span className="w-20 text-[9.5px] text-[#786f66] uppercase flex items-center gap-1">
+                                                            <PhTextT size={13} weight="regular" className="text-ed-fg-muted" />
+                                                            media
+                                                        </span>
+                                                        <span className="text-[#d87c46] bg-[#241a14] px-1.5 py-0.5 rounded border border-[#b86233]/25 truncate">
+                                                            video-program/what-is-life-all-about
+                                                        </span>
+                                                    </div>
+                                                    <div className="flex items-center gap-3 text-[#8f857d]">
+                                                        <span className="w-20 text-[9.5px] text-[#786f66] uppercase flex items-center gap-1">
+                                                            <PhHash size={13} weight="bold" className="text-emerald-400" />
+                                                            timestamp
+                                                        </span>
+                                                        <span className="text-[#e4ded9] font-semibold">240</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Note Content Body */}
+                                            <div className="px-5 py-3 max-w-xl">
+                                                {/* Document Title */}
+                                                <h2
+                                                    className="text-xl sm:text-2xl font-bold leading-tight text-[#f7f2eb] tracking-[-0.01em]"
+                                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                >
+                                                    Ayat al-Kursi Exegesis (2:255)
+                                                </h2>
+
+                                                <p
+                                                    className="mt-2 text-[13px] leading-relaxed text-[#c5beb5]"
+                                                    style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                                                >
+                                                    The Verse of the Throne represents the pinnacle of theological monotheism (<em className="text-[#e4ded9]">Tawhid</em>) in the Quranic corpus.
+                                                </p>
+
+                                                {/* Quote Callout Box */}
+                                                <div className="mt-3 rounded-r-[6px] border-l-2 border-[#b86233] bg-[#181411] px-3.5 py-2 text-[12.5px] italic text-[#ded7ce]">
+                                                    &ldquo;GOD: there is no god except He, the Living, the Eternal.&rdquo; — <span className="underline decoration-dotted decoration-[#b86233] underline-offset-2 not-italic text-[#d87c46]">Surah Al-Baqarah</span>, Verse 255
+                                                </div>
+
+                                                {/* Syntactic Breakdown */}
+                                                <h3
+                                                    className="mt-4 text-[14px] font-semibold text-[#f2ede7]"
+                                                    style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
+                                                >
+                                                    Syntactic Breakdown
+                                                </h3>
+
+                                                <div className="mt-1.5 space-y-1 text-[12px] text-[#c5beb5] leading-relaxed">
+                                                    <p><strong className="text-[#f5efe8]">Allāhu:</strong> <em>Mubtada&apos;</em> (Subject) in the nominative case.</p>
+                                                    <p><strong className="text-[#f5efe8]">Lā ilāha illā Huwa:</strong> Negative particle of absolute category (<em>Lā an-Nāfiyah lil-Jins</em>) followed by the exception particle (<em>Illā</em>).</p>
+                                                </div>
+
+                                                {/* Floating Bubble Formatting Toolbar matching studio/src/components/EditorBubbleMenu.tsx */}
+                                                <div className="mt-3 inline-flex items-center gap-1 max-w-full overflow-x-auto no-scrollbar rounded-xl border border-[#3b3129] bg-[#1a1614]/95 p-1 shadow-xl text-[10.5px] font-mono text-[#d5cec7] backdrop-blur-md">
+                                                    <button type="button" title="Bold (Ctrl+B)" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhTextB size={13} weight="bold" />
+                                                    </button>
+                                                    <button type="button" title="Italic (Ctrl+I)" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhTextItalic size={13} weight="bold" />
+                                                    </button>
+                                                    <button type="button" title="Strikethrough" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhTextStrikethrough size={13} weight="bold" />
+                                                    </button>
+                                                    <button type="button" title="Inline Code" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhCode size={13} weight="bold" />
+                                                    </button>
+                                                    <span className="h-3.5 w-px bg-[#3b3129] shrink-0" />
+                                                    <button type="button" title="Heading 1" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhTextHOne size={13} weight="bold" />
+                                                    </button>
+                                                    <button type="button" title="Heading 2" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhTextHTwo size={13} weight="bold" />
+                                                    </button>
+                                                    <button type="button" title="Heading 3" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhTextHThree size={13} weight="bold" />
+                                                    </button>
+                                                    <button type="button" title="Blockquote" className="p-1 rounded hover:bg-white/10 hover:text-white transition-colors shrink-0">
+                                                        <PhQuotes size={13} weight="bold" />
+                                                    </button>
+                                                </div>
+
+                                                {/* Interactive Quran Embed Card Component */}
+                                                <div className="mt-4 rounded-xl border border-[#e5dfd5] bg-[#fbfaf6] p-3.5 sm:p-4 text-[#1c1917] shadow-xl overflow-hidden">
+                                                    <div className="flex items-center justify-between gap-2">
+                                                        <span className="rounded bg-[#f5ecdf] px-2 py-0.5 font-mono text-[10px] font-bold text-[#9b4e1e] shrink-0">
+                                                            1:1
+                                                        </span>
+                                                        <div
+                                                            className="text-right text-[17px] sm:text-[20px] leading-relaxed font-semibold text-[#1c1917]"
+                                                            dir="rtl"
+                                                            style={{ fontFamily: 'Amiri, Georgia, serif' }}
                                                         >
-                                                            The Continuum of Absolute Monotheism
-                                                        </h2>
-                                                        <p className="mt-1 text-[11px] text-ed-fg-muted">
-                                                            Cross-referencing [[Quran Study Sessions]] and historical debate notes.
-                                                        </p>
-
-                                                        {/* Quran Embed Card inside Note */}
-                                                        <div className="mt-4 rounded-lg border border-ed-accent/30 bg-ed-accent-soft p-3.5 space-y-2">
-                                                            <div className="flex items-center justify-between text-[10px] font-mono">
-                                                                <span className="font-bold text-ed-accent uppercase tracking-wider">Quran Embed · 2:255</span>
-                                                                <span className="text-ed-fg-muted">Ayat al-Kursi</span>
-                                                            </div>
-                                                            <div
-                                                                className="text-right text-base leading-loose text-ed-fg"
-                                                                dir="rtl"
-                                                                style={{ fontFamily: 'Amiri, Georgia, serif' }}
-                                                            >
-                                                                اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
-                                                            </div>
-                                                            <p
-                                                                className="text-xs leading-relaxed text-ed-fg-secondary italic"
-                                                                style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
-                                                            >
-                                                                &ldquo;GOD: there is no other god besides Him, the Living, the Eternal.&rdquo;
-                                                            </p>
+                                                            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
                                                         </div>
-
-                                                        <p
-                                                            className="mt-3.5 text-[13px] leading-relaxed text-ed-fg-secondary"
-                                                            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
-                                                        >
-                                                            As established in [[One Message From All Messengers]], scripture confirms that the
-                                                            unifying criteria of all divine revelations remains the uncompromised worship of God alone[^1].
-                                                        </p>
-                                                    </motion.div>
-                                                )}
-
-                                                {activeWorkspaceTab === 'quran' && (
-                                                    <motion.div
-                                                        key="quran-tab"
-                                                        initial={{ opacity: 0 }}
-                                                        animate={{ opacity: 1 }}
-                                                        exit={{ opacity: 0 }}
-                                                        transition={{ duration: 0.12 }}
-                                                        className="space-y-3"
+                                                    </div>
+                                                    <p
+                                                        className="mt-2 text-[13.5px] leading-relaxed text-[#292524]"
+                                                        style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}
                                                     >
-                                                        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-ed-accent">
-                                                            Hierarchical #Tags & Taxonomy
-                                                        </div>
-                                                        <div className="space-y-1.5">
-                                                            {[
-                                                                { tag: '#theology/monotheism', count: 42 },
-                                                                { tag: '#scripture/quran-embeds', count: 128 },
-                                                                { tag: '#debates/1987-sunni-scholars', count: 19 },
-                                                                { tag: '#historical/newsletters', count: 86 },
-                                                            ].map((t) => (
-                                                                <div key={t.tag} className="flex items-center justify-between p-2.5 rounded-[6px] bg-ed-surface-strong border border-ed-rule text-xs">
-                                                                    <span className="font-mono text-ed-accent font-medium">{t.tag}</span>
-                                                                    <span className="font-mono text-[10px] text-ed-fg-muted">{t.count} notes</span>
-                                                                </div>
-                                                            ))}
-                                                        </div>
-                                                    </motion.div>
-                                                )}
-
-                                                {activeWorkspaceTab === 'canvas' && (
-                                                    <motion.div
-                                                        key="canvas-tab"
-                                                        initial={{ opacity: 0 }}
-                                                        animate={{ opacity: 1 }}
-                                                        exit={{ opacity: 0 }}
-                                                        transition={{ duration: 0.12 }}
-                                                        className="space-y-3"
-                                                    >
-                                                        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-ed-accent">
-                                                            2D Visual Synthesis Canvas
-                                                        </div>
-                                                        <div className="rounded-lg border border-dashed border-ed-rule-strong bg-ed-bg/50 p-6 text-center space-y-2">
-                                                            <GitBranch className="h-8 w-8 text-ed-accent mx-auto" />
-                                                            <div className="text-xs font-semibold text-ed-fg">Relational Concept Graph</div>
-                                                            <p className="text-[11px] text-ed-fg-muted max-w-sm mx-auto">
-                                                                Freely arrange notes, verse nodes, media clips, and citation arrows on an infinite spatial plane.
-                                                            </p>
-                                                        </div>
-                                                    </motion.div>
-                                                )}
-
-                                                {activeWorkspaceTab === 'split' && (
-                                                    <motion.div
-                                                        key="split-tab"
-                                                        initial={{ opacity: 0 }}
-                                                        animate={{ opacity: 1 }}
-                                                        exit={{ opacity: 0 }}
-                                                        transition={{ duration: 0.12 }}
-                                                        className="grid grid-cols-2 gap-3"
-                                                    >
-                                                        <div className="p-3 rounded border border-ed-rule bg-ed-bg/60 text-xs space-y-1">
-                                                            <div className="font-mono text-[9px] text-ed-accent font-bold">PANE 1 · MARKDOWN NOTE</div>
-                                                            <div className="font-semibold text-ed-fg">monotheism_continuity.md</div>
-                                                            <p className="text-[10px] text-ed-fg-secondary">Active writing buffer...</p>
-                                                        </div>
-                                                        <div className="p-3 rounded border border-ed-rule bg-ed-bg/60 text-xs space-y-1">
-                                                            <div className="font-mono text-[9px] text-ed-danger font-bold">PANE 2 · PDF VIEWER</div>
-                                                            <div className="font-semibold text-ed-fg">1987_debate_transcript.pdf</div>
-                                                            <p className="text-[10px] text-ed-fg-secondary">Page 14 of 48 · Excerpt capture active</p>
-                                                        </div>
-                                                    </motion.div>
-                                                )}
-                                            </AnimatePresence>
+                                                        In the name of GOD, Most Gracious, Most Merciful.
+                                                    </p>
+                                                    <div className="mt-3 flex items-center justify-between border-t border-[#ede7dc] pt-2 font-mono text-[8.5px] text-[#78716c] tracking-wider">
+                                                        <span>REFERENCE: 1:1</span>
+                                                        <span className="uppercase tracking-widest">SUBMISSIONARCHIVES</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
-                                        {/* Bottom Slash Hint */}
-                                        <div className="mt-4 pt-2.5 border-t border-ed-rule/60 flex items-center justify-between text-[10px] text-ed-fg-muted">
-                                            <span>Type <code className="text-ed-accent font-mono">/quran</code> to insert verse or <code className="text-ed-accent font-mono">[[</code> to link notes</span>
-                                            <span className="font-mono text-[9px]">Ctrl+P Commands</span>
+                                        {/* Bottom Status Bar matching studio/src/components/StatusBar.tsx */}
+                                        <div className="flex items-center justify-between border-t border-[#241f1b] bg-[#0c0a09] px-4 py-1.5 font-mono text-[10px] text-[#786f66] select-none">
+                                            <div className="flex items-center gap-3">
+                                                <div className="flex items-center gap-1 text-[#8f857d]">
+                                                    <PhFileText size={12} weight="regular" className="text-[#786f66]" />
+                                                    <span>72 words</span>
+                                                    <span className="text-[#403831]">•</span>
+                                                    <span>487 chars</span>
+                                                </div>
+                                                <div className="flex items-center gap-1 text-[#8f857d]">
+                                                    <PhLinkSimple size={12} weight="bold" className="text-[#d87c46]" />
+                                                    <span>0 backlinks</span>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                <div className="flex items-center bg-[#181411] p-0.5 rounded border border-[#241f1b] text-[9.5px]">
+                                                    <span className="px-1.5 py-0.5 rounded bg-[#241a14] text-[#d87c46] font-semibold">Write</span>
+                                                    <span className="px-1.5 py-0.5 text-[#786f66]">Blocks</span>
+                                                    <span className="px-1.5 py-0.5 text-[#786f66]">Page</span>
+                                                </div>
+                                                <div className="flex items-center gap-1 text-emerald-400 font-semibold">
+                                                    <PhCheckCircle size={12} weight="fill" className="text-emerald-400" />
+                                                    <span>Saved</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    {/* 4. Right-Side Bar: Video Player & Synchronized Transcript Inspector matching studio/src/components/media/ */}
+                                    {showInspector && (
+                                        <aside
+                                            aria-label="Media Study Inspector"
+                                            className={`flex-col justify-between bg-[#120f0d] p-3 text-xs select-none ${
+                                                mobileStudioTab === 'inspector' ? 'flex w-full' : 'hidden lg:flex'
+                                            }`}
+                                        >
+                                            <div>
+                                                {/* Video Header & Controls Strip matching MediaNotesPanel.tsx */}
+                                                <div className="mb-2 flex items-center justify-between border-b border-[#241f1b] pb-2">
+                                                    <div className="flex items-center gap-1.5">
+                                                        <PhCaretLeft size={13} weight="bold" className="text-[#786f66] hover:text-[#e4ded9] cursor-pointer" />
+                                                        <PhCaretRight size={13} weight="bold" className="text-[#786f66] hover:text-[#e4ded9] cursor-pointer" />
+                                                        <div className="ml-1">
+                                                            <div className="font-semibold text-[#f5efe8] text-[12px] truncate max-w-[150px]">What Is Life All About?</div>
+                                                            <div className="font-mono text-[9.5px] text-[#786f66]">Video Program · 23:26</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex items-center gap-1 text-[#786f66]">
+                                                        <button type="button" title="Quote active cue" className="p-1 hover:text-[#e4ded9] transition-colors">
+                                                            <PhQuotes size={13} weight="regular" />
+                                                        </button>
+                                                        <button type="button" title="Media notes" className="p-1 text-[#d87c46] bg-[#2a1d15] rounded border border-[#b86233]/30">
+                                                            <PhVideoCamera size={13} weight="fill" />
+                                                        </button>
+                                                        <button type="button" title="Inspector info" className="p-1 hover:text-[#e4ded9] transition-colors">
+                                                            <PhInfo size={13} weight="regular" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                {/* Video Player Frame matching GoldenVideoPlayer.tsx */}
+                                                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#2e2620] bg-black shadow-md">
+                                                    <Image
+                                                        src="/content/videos/thumbnails/what-is-life-all-about.png"
+                                                        alt="Dr. Rashad Khalifa - What Is Life All About"
+                                                        fill
+                                                        className="object-cover"
+                                                        sizes="380px"
+                                                    />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20 flex flex-col justify-between p-2 text-[10px] font-mono text-white">
+                                                        <div className="flex items-center justify-between text-[9px] text-white/80">
+                                                            <span>Dr. Rashad Khalifa</span>
+                                                            <span className="rounded bg-black/60 px-1 py-0.5 border border-white/10 font-bold">1080p</span>
+                                                        </div>
+                                                        <div className="flex items-center justify-between">
+                                                            <div className="flex items-center gap-1.5">
+                                                                <PhPlay size={12} weight="fill" className="text-[#d87c46] cursor-pointer" />
+                                                                <span className="text-[10px]">04:16 / 23:26</span>
+                                                            </div>
+                                                            <div className="flex items-center gap-1">
+                                                                <span className="rounded bg-black/70 px-1 py-0.5 text-[9px] border border-white/10">1x</span>
+                                                                <span className="rounded bg-[#2a1d15] text-[#d87c46] px-1.5 py-0.5 text-[9px] font-bold border border-[#b86233]/40 cursor-pointer">Stamp</span>
+                                                                <span className="rounded bg-white/10 text-white px-1.5 py-0.5 text-[9px] cursor-pointer">Attach</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Chapters Carousel Strip matching ChapterTimelineStrip.tsx */}
+                                                <div className="mt-2.5">
+                                                    <div className="flex items-center justify-between text-[9px] font-semibold uppercase tracking-[0.14em] text-[#786f66] mb-1">
+                                                        <span>Chapters</span>
+                                                        <span className="font-mono text-[#5e564e]">23</span>
+                                                    </div>
+                                                    <div className="flex gap-1.5 overflow-x-auto text-[9px] font-mono text-[#8f857d] pb-1">
+                                                        <span className="shrink-0 rounded bg-[#1c1815] px-2 py-0.5 border border-[#b86233]/30 text-[#d87c46]">
+                                                            07:45 A Dot Against Infinity
+                                                        </span>
+                                                        <span className="shrink-0 rounded bg-[#1c1815] px-2 py-0.5 border border-[#241f1b]">
+                                                            09:23 Not Vague Talk
+                                                        </span>
+                                                        <span className="shrink-0 rounded bg-[#1c1815] px-2 py-0.5 border border-[#241f1b]">
+                                                            18:18 Five Daily Prayers
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                {/* Transcript Search Bar matching TranscriptTeleprompter.tsx */}
+                                                <div className="mt-2.5 flex items-center justify-between rounded bg-[#181411] border border-[#241f1b] px-2.5 py-1 text-[10.5px]">
+                                                    <div className="flex items-center gap-1.5 text-[#786f66]">
+                                                        <PhMagnifyingGlass size={13} weight="regular" />
+                                                        <span className="text-[11px]">Find in transcript</span>
+                                                    </div>
+                                                    <span className="font-mono text-[8.5px] text-[#d87c46] bg-[#241a14] px-1.5 py-0.5 rounded border border-[#b86233]/20">
+                                                        Tracking 219 cues
+                                                    </span>
+                                                </div>
+
+                                                {/* Synchronized Transcript Cues Stream matching TranscriptTeleprompter.tsx */}
+                                                <div className="mt-2 space-y-1 max-h-[190px] overflow-y-auto pr-1 text-[11px] font-sans">
+                                                    <div className="p-1.5 text-[#786f66] rounded hover:bg-white/5 cursor-pointer">
+                                                        <span className="font-mono text-[9px] text-[#5e564e] block">04:00 · DR. RASHAD KHALIFA</span>
+                                                        average person and ask him or her &quot;what did you feed your self today? What did you
+                                                    </div>
+
+                                                    <div className="p-1.5 text-[#786f66] rounded hover:bg-white/5 cursor-pointer">
+                                                        <span className="font-mono text-[9px] text-[#5e564e] block">04:10 · DR. RASHAD KHALIFA</span>
+                                                        feed your body today?&quot; And they will tell you &quot;I gave my body breakfast,
+                                                    </div>
+
+                                                    {/* Active Highlighted Cue (Screenshot 2 & TranscriptTeleprompter.tsx) */}
+                                                    <div className="p-2 rounded bg-[#2a1d15] border-l-2 border-[#d87c46] text-[#f5efe8] shadow-xs">
+                                                        <div className="flex items-center justify-between">
+                                                            <span className="font-mono text-[9px] text-[#d87c46] font-bold block">04:15 · DR. RASHAD KHALIFA</span>
+                                                            <div className="flex items-center gap-1 text-[#786f66]">
+                                                                <span className="p-0.5 hover:text-[#d87c46] cursor-pointer" title="Insert citation">
+                                                                    <PhQuotes size={11} weight="regular" />
+                                                                </span>
+                                                                <span className="p-0.5 hover:text-[#e4ded9] cursor-pointer" title="Copy text">
+                                                                    <PhCopy size={11} weight="regular" />
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <p className="mt-1 text-[11px] leading-relaxed text-[#f5efe8]">
+                                                            lunch, dinner, numerous snacks.&quot; But they gave nothing to the real person,
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="p-1.5 text-[#786f66] rounded hover:bg-white/5 cursor-pointer">
+                                                        <span className="font-mono text-[9px] text-[#5e564e] block">04:22 · DR. RASHAD KHALIFA</span>
+                                                        to themselves. What did they feed themselves? We nourish the babies. When we are born,
+                                                    </div>
+
+                                                    <div className="p-1.5 text-[#786f66] rounded hover:bg-white/5 cursor-pointer">
+                                                        <span className="font-mono text-[9px] text-[#5e564e] block">04:31 · DR. RASHAD KHALIFA</span>
+                                                        we give the baby milk and so on. And then, the baby grows,
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Bottom Inspector Actions */}
+                                            <div className="pt-2 border-t border-[#241f1b] flex items-center justify-between text-[10px] font-mono text-[#8f857d]">
+                                                <div className="flex items-center gap-1 text-[#d87c46] cursor-pointer hover:underline">
+                                                    <PhQuotes size={13} weight="regular" />
+                                                    <span>Quote Cue</span>
+                                                </div>
+                                                <span className="text-[#5e564e]">219 cues tracked</span>
+                                            </div>
+                                        </aside>
+                                    )}
                                 </div>
 
                                 {/* Proof strip */}
-                                <div className="grid grid-cols-1 border-t border-ed-rule bg-ed-bg/50 sm:grid-cols-3">
-                                    <div className="border-b border-ed-rule p-5 sm:border-b-0 sm:border-r">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-accent">
-                                            <FileText className="h-3 w-3" />
+                                <div className="grid grid-cols-1 border-t border-[#241f1b] bg-[#0c0a09] sm:grid-cols-3">
+                                    <div className="border-b border-[#241f1b] p-5 sm:border-b-0 sm:border-r">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2e2620] bg-[#181411] text-[#d87c46]">
+                                            <PhFileText size={14} weight="bold" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-ed-fg">Plain Markdown & Frontmatter</h3>
-                                        <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
-                                            Your notes remain open standard Markdown on your disk. No proprietary databases or vendor lock-in.
+                                        <h3 className="text-[11px] font-semibold text-[#f5efe8]">Plain Markdown & Frontmatter</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-[#8f857d]">
+                                            Your notes remain open standard Markdown on your disk with YAML frontmatter. No proprietary databases or vendor lock-in.
                                         </p>
                                     </div>
-                                    <div className="border-b border-ed-rule p-5 sm:border-b-0 sm:border-r">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-accent">
-                                            <Search className="h-3 w-3" />
+                                    <div className="border-b border-[#241f1b] p-5 sm:border-b-0 sm:border-r">
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2e2620] bg-[#181411] text-[#d87c46]">
+                                            <PhMagnifyingGlass size={14} weight="bold" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-ed-fg">Sub-Millisecond Local Search</h3>
-                                        <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
+                                        <h3 className="text-[11px] font-semibold text-[#f5efe8]">Sub-Millisecond Local Search</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-[#8f857d]">
                                             Instant offline query across note bodies, tags, surah names, and Arabic transliterations.
                                         </p>
                                     </div>
                                     <div className="p-5">
-                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-ed-rule bg-ed-surface text-ed-accent">
-                                            <GitBranch className="h-3 w-3" />
+                                        <div className="mb-2 flex h-6 w-6 items-center justify-center rounded border border-[#2e2620] bg-[#181411] text-[#d87c46]">
+                                            <PhTreeStructure size={14} weight="bold" />
                                         </div>
-                                        <h3 className="text-[11px] font-semibold text-ed-fg">Bidirectional [[WikiLinks]] & Canvas</h3>
-                                        <p className="mt-1 text-[10px] leading-normal text-ed-fg-muted">
-                                            Interconnect concepts across scripture, debates, and periodicals on a spatial visual graph.
+                                        <h3 className="text-[11px] font-semibold text-[#f5efe8]">Bidirectional [[WikiLinks]] & Split Study</h3>
+                                        <p className="mt-1 text-[10px] leading-normal text-[#8f857d]">
+                                            Interconnect concepts across scripture, debates, and video lectures with synchronized transcript tracking.
                                         </p>
                                     </div>
                                 </div>
@@ -1067,11 +1394,11 @@ function PrimaryDownloadButton({
         <button
             type="button"
             onClick={onClick}
-            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-ed-fg bg-ed-fg px-4 text-[12px] font-semibold text-ed-bg transition-transform hover:-translate-y-0.5 hover:opacity-90 active:translate-y-0"
+            className="inline-flex w-full sm:w-auto min-h-[44px] items-center justify-center gap-2 rounded border border-ed-fg bg-ed-fg px-5 py-2 text-[12px] font-semibold text-ed-bg transition-transform hover:-translate-y-0.5 hover:opacity-90 active:translate-y-0 shadow-sm"
         >
-            <Icon className="h-3.5 w-3.5 shrink-0" />
+            <Icon className="h-4 w-4 shrink-0" />
             <span>{label}</span>
-            <small className="border-l border-ed-bg/40 pl-2 font-mono text-[9px] opacity-75">v{APP_VERSION}</small>
+            <small className="border-l border-ed-bg/40 pl-2 font-mono text-[9.5px] opacity-75">v{APP_VERSION}</small>
         </button>
     );
 }
@@ -1089,9 +1416,9 @@ function SecondaryDownloadButton({
         <button
             type="button"
             onClick={onClick}
-            className="inline-flex min-h-[38px] items-center gap-2 rounded border border-ed-rule bg-ed-surface px-4 text-[12px] font-semibold text-ed-fg-muted transition-all hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg active:translate-y-0"
+            className="inline-flex w-full sm:w-auto min-h-[44px] items-center justify-center gap-2 rounded border border-ed-rule bg-ed-surface px-4 py-2 text-[12px] font-semibold text-ed-fg-muted transition-all hover:-translate-y-0.5 hover:border-ed-rule-strong hover:bg-ed-surface-strong hover:text-ed-fg active:translate-y-0 shadow-sm"
         >
-            <Icon className="h-3.5 w-3.5 shrink-0" />
+            <Icon className="h-4 w-4 shrink-0" />
             <span>{PLATFORM_INFO[platform].label}</span>
         </button>
     );
