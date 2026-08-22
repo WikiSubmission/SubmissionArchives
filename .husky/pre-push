@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 echo "Checking that package-lock.json matches package.json..."
-npm ci --dry-run || {
+npm ci --dry-run --ignore-scripts || {
   echo ""
   echo "Push blocked: package-lock.json is out of sync with package.json."
   echo "Run npm install to regenerate the lock file, then commit both files."
