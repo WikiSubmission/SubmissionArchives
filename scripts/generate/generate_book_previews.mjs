@@ -2,9 +2,7 @@
  * Builds rich descriptions and verified tables of contents for each readable book in
  * data/catalog / BOOKS_LIST, for the preview modal on /written.
  *
- * Uses the canonical high-resolution OCR sources in data/sources/books/ and MASTER_INDEX.json
- * to ensure that every table of contents entry reflects the actual printed structure and
- * links directly to its verified PDF page.
+ * Source of truth: data/sources/books/combined_toc_master.md and high-resolution OCR.
  *
  * Output: data/catalog/book-previews.json
  * Run:    node scripts/generate/generate_book_previews.mjs
@@ -16,9 +14,9 @@ const ROOT = process.cwd();
 const MASTER = path.join(ROOT, 'public', 'data', 'generated_indices', 'MASTER_INDEX.json');
 const OUT = path.join(ROOT, 'data', 'catalog', 'book-previews.json');
 
-const CANONICAL_TOCS = {
+const MASTER_TOCS = {
     'salat-booklet': [
-        { title: 'The Contact Prayers', page: 1 },
+        { title: 'The Contact Prayers [Salat]', page: 1 },
         { title: 'Abraham: Original Source of the Contact Prayers', page: 2 },
         { title: 'The Correct Azaan', page: 3 },
         { title: 'Preparation for the Contact Prayer (The Ablution)', page: 3 },
@@ -26,7 +24,7 @@ const CANONICAL_TOCS = {
         { title: 'Reciting "The Key"', page: 5 },
         { title: 'The Prostration Position (Sujood)', page: 6 },
         { title: 'The Daily Prayers (Dawn, Noon, Afternoon, Sunset, Night)', page: 7 },
-        { title: 'The Group Prayer', page: 8 },
+        { title: 'The Group & Friday Prayer', page: 8 },
     ],
     'perpetual-miracle': [
         { title: 'THE PERPETUAL MIRACLE OF MUHAMMAD (peace be upon him)', page: 1 },
@@ -242,7 +240,7 @@ const results = {};
 
 for (const book of books) {
     const prev = existing[book.id] || {};
-    const toc = CANONICAL_TOCS[book.id] || prev.toc || [];
+    const toc = MASTER_TOCS[book.id] || prev.toc || [];
     const maxPage = (book.segments || []).reduce((max, s) => Math.max(max, Number(s.page) || 0), 0);
 
     results[book.id] = {
