@@ -56,6 +56,10 @@ jobs:
           if ! git diff --staged --quiet; then
             git commit -m "ci: refresh Linux visual regression baselines"
             git push
+            # GitHub does not start a workflow run for a push made with GITHUB_TOKEN, so
+            # this commit will not verify itself. Dispatch "Repository verification"
+            # against main to check the refreshed baselines actually hold.
+            echo "::notice::Baselines refreshed. Dispatch the Repository verification workflow to check them."
           else
             echo "Baselines already match this build."
           fi

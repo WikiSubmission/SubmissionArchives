@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  # A push made with GITHUB_TOKEN does not start a workflow run, so the baseline commit
+  # the visual-baselines workflow pushes cannot verify itself. Dispatch this to check it.
+  workflow_dispatch:
 
 concurrency:
   group: verify-${{ github.workflow }}-${{ github.ref }}
