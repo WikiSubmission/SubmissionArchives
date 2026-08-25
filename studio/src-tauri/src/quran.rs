@@ -15,7 +15,19 @@ pub struct Verse {
 pub struct SurahMeta {
     pub number: u32,
     pub name: &'static str,
+    /// Kept only so the table below stays readable at a glance. The figure the
+    /// range check actually uses comes from `total_verses`, which reads the
+    /// generated chapter table: this column claimed 129 for chapter 9 where the
+    /// data has 127, so `search_verses("9:128")` used to fail with an unhelpful
+    /// "No verses found" instead of explaining the numbering.
     pub total_verses: u32,
+}
+
+/// The authoritative verse count, from `qurancode`'s generated chapter table.
+/// Falls back to the literal above only if that table cannot be read, which
+/// would mean the bundled assets are broken.
+fn total_verses(meta: &SurahMeta) -> u32 {
+    crate::qurancode::chapter_verse_count(meta.number).unwrap_or(meta.total_verses)
 }
 
 pub static SURAHS: &[SurahMeta] = &[
@@ -292,7 +304,7 @@ pub fn search_verses(query: &str) -> Result<Vec<Verse>, String> {
             (meta, "")
         };
 
-        let (start, end) = parse_range(verse_spec, chapter_meta.total_verses)?;
+        let (start, end) = parse_range(verse_spec, total_verses(chapter_meta))?;
 
         let mut matches: Vec<Verse> = all
             .iter()
@@ -350,6 +362,34 @@ mod tests {
         let results = search_verses("Ikhlas").unwrap();
         assert_eq!(results.len(), 4);
         assert_eq!(results[0].chapter, 112);
+    }
+
+    #[test]
+    fn chapter_nine_ends_at_127_with_a_useful_error() {
+        // 9:128-129 are absent from this numbering. The old hardcoded table
+        // claimed 129 verses, so the range check passed and the lookup then
+        // failed with "No verses found", which explains nothing.
+        let err = search_verses("9:128").unwrap_err();
+        assert!(err.contains("exceeds total verses"), "got: {}", err);
+        assert!(err.contains("127"), "the error should name the real count, got: {}", err);
+        assert_eq!(search_verses("9:127").unwrap().len(), 1);
+    }
+
+    #[test]
+    fn verse_counts_agree_with_the_generated_chapter_table() {
+        for meta in SURAHS {
+            let generated = crate::qurancode::chapter_verse_count(meta.number)
+                .expect("every chapter must be in the generated table");
+            if meta.number == 9 {
+                assert_eq!(generated, 127, "chapter 9 carries 127 verses in this numbering");
+            } else {
+                assert_eq!(
+                    generated, meta.total_verses,
+                    "chapter {} disagrees between the literal table and the generated one",
+                    meta.number
+                );
+            }
+        }
     }
 
     #[test]

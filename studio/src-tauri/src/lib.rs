@@ -5,6 +5,7 @@ mod history;
 mod import;
 mod notes;
 mod quran;
+mod qurancode;
 
 use archive::{Entry, TrashEntry};
 use citations::Citation;
@@ -12,6 +13,11 @@ use health::HealthReport;
 use history::HistoryEntry;
 use notes::NoteRecord;
 use quran::Verse;
+use qurancode::{
+    ChapterView, Counts, LetterStat, Metadata, Modifiers, NumberTarget, RootInfo, Scope,
+    SearchOptions, SearchResult, SelectionValue, SimilarityMethod, ToggleInput, ValueResult,
+    VerseView, WordInfo,
+};
 
 #[tauri::command]
 fn search_verses(query: &str) -> Result<Vec<Verse>, String> {
@@ -158,6 +164,117 @@ fn import_sanote(archive_root: &str, sanote_path: &str) -> Result<String, String
     import::import_sanote(archive_root, sanote_path)
 }
 
+#[tauri::command]
+fn qc_metadata() -> Result<Metadata, String> {
+    qurancode::metadata()
+}
+
+#[tauri::command]
+fn qc_get_verse(
+    chapter: u32,
+    verse: u32,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+) -> Result<VerseView, String> {
+    qurancode::get_verse(chapter, verse, mode, toggles)
+}
+
+#[tauri::command]
+fn qc_count(
+    scope: Option<Scope>,
+    toggles: Option<ToggleInput>,
+    value_system: Option<String>,
+) -> Result<Vec<Counts>, String> {
+    qurancode::count(scope, toggles, value_system)
+}
+
+#[tauri::command]
+fn qc_compute_value(
+    scope: Option<Scope>,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+    value_system: String,
+    modifiers: Option<Modifiers>,
+) -> Result<ValueResult, String> {
+    qurancode::compute_value(scope, mode, toggles, value_system, modifiers)
+}
+
+#[tauri::command]
+fn qc_letter_frequency(
+    scope: Option<Scope>,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+) -> Result<Vec<LetterStat>, String> {
+    qurancode::letter_frequency(scope, mode, toggles)
+}
+
+#[tauri::command]
+fn qc_find_text(query: String, options: Option<SearchOptions>) -> Result<SearchResult, String> {
+    qurancode::find_text(query, options)
+}
+
+#[tauri::command]
+fn qc_similarity(
+    chapter: u32,
+    verse: u32,
+    method: Option<SimilarityMethod>,
+    threshold: Option<f32>,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+    limit: Option<usize>,
+) -> Result<SearchResult, String> {
+    qurancode::find_similar(chapter, verse, method, threshold, mode, toggles, limit)
+}
+
+#[tauri::command]
+#[allow(clippy::too_many_arguments)]
+fn qc_find_by_number(
+    target: i64,
+    quantity: Option<NumberTarget>,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+    value_system: Option<String>,
+    scope: Option<Scope>,
+    limit: Option<usize>,
+) -> Result<SearchResult, String> {
+    qurancode::find_by_number(target, quantity, mode, toggles, value_system, scope, limit)
+}
+
+#[tauri::command]
+fn qc_word_info(
+    chapter: u32,
+    verse: u32,
+    position: u32,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+) -> Result<WordInfo, String> {
+    qurancode::word_info(chapter, verse, position, mode, toggles)
+}
+
+#[tauri::command]
+fn qc_get_chapter(
+    chapter: u32,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+) -> Result<ChapterView, String> {
+    qurancode::get_chapter(chapter, mode, toggles)
+}
+
+#[tauri::command]
+fn qc_value_of_text(
+    text: String,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+    value_system: Option<String>,
+) -> Result<SelectionValue, String> {
+    qurancode::value_of_text(text, mode, toggles, value_system)
+}
+
+#[tauri::command]
+fn qc_roots() -> Vec<RootInfo> {
+    qurancode::root_list()
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -192,7 +309,19 @@ pub fn run() {
             write_settings,
             read_citations,
             write_citation,
-            check_vault_health
+            check_vault_health,
+            qc_metadata,
+            qc_get_verse,
+            qc_count,
+            qc_letter_frequency,
+            qc_compute_value,
+            qc_find_text,
+            qc_similarity,
+            qc_find_by_number,
+            qc_word_info,
+            qc_roots,
+            qc_get_chapter,
+            qc_value_of_text
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
