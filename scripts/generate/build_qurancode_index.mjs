@@ -44,6 +44,7 @@ const ROOT = process.cwd()
 const WORDS_CSV = path.join(ROOT, 'data', 'sources', 'quran', 'words', 'ws_quran_words_roots_uthmani.csv')
 const TEXT_CSV = path.join(ROOT, 'data', 'sources', 'quran', '1992', 'ws_quran_text_rows.csv')
 const CHAPTERS_CSV = path.join(ROOT, 'data', 'sources', 'quran', '1992', 'ws_quran_chapters_rows.csv')
+const METADATA_SOURCE = path.join(ROOT, 'data', 'sources', 'quran', 'metadata', 'quran-metadata.txt')
 const OUT_DIR = path.join(ROOT, 'studio', 'src-tauri', 'assets', 'qurancode')
 const VALUE_DIR = path.join(OUT_DIR, 'value_systems')
 
@@ -537,6 +538,189 @@ function buildFixtures(words) {
   return fixtures
 }
 
+/* ── the traditional divisions ─────────────────────────────────────────
+ *
+ * Tanzil's `quran-metadata.txt`, CC-BY, which is the only part of this corpus
+ * that arrives as a boundary list rather than as text. Each record is the
+ * *start* of a division; the end is the verse before the next one starts, and
+ * the last division of each kind ends at 114:6.
+ *
+ * The numbering question turned out to be smaller than expected. Tanzil is on
+ * the 6,236-verse Hafs numbering and we are on 6,234, and sura 9 is the only
+ * chapter where the two disagree: 129 verses there against our 127. No boundary
+ * of any kind lands past 9:127, so nothing needs remapping and the assertion
+ * below holds every boundary to a verse that exists in our numbering. What does
+ * differ is the *content* of whichever page, bowing and quarter spans 9:127 to
+ * 10:1: it holds two fewer verses here than in a Hafs mushaf. That is inherent
+ * to the two numberings rather than a defect in the import, and the affected
+ * divisions are reported at generation so the difference is on the record.
+ */
+const DIVISION_KINDS = ['part', 'group', 'quarter', 'station', 'bowing', 'page']
+
+/** How many of each kind there must be. A short read is a truncated file, not a
+ * smaller Quran, so these are invariants rather than statistics. */
+const DIVISION_COUNTS = {
+  part: 30,
+  group: 60,
+  quarter: 240,
+  station: 7,
+  bowing: 556,
+  page: 604,
+}
+
+function parseMetadata(text) {
+  const kinds = new Set([...DIVISION_KINDS, 'chapter', 'prostration'])
+  const rows = {}
+  for (const k of kinds) rows[k] = []
+  let current = null
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.replace(/^﻿/, '')
+    if (line.startsWith('//')) {
+      const head = line.slice(2).trim().split(/\s+/)[0]
+      if (kinds.has(head)) current = head
+      continue
+    }
+    if (!line.trim() || !current) continue
+    rows[current].push(line.split('\t').map((c) => c.trim()))
+  }
+  return rows
+}
+
+/** Turns a list of start addresses into inclusive ranges over our verse order.
+ * `order` is every `chapter:verse` in reading order, so an end is found by index
+ * rather than by arithmetic on verse numbers, which would be wrong at a chapter
+ * boundary. */
+function toRanges(kind, starts, order, index) {
+  const ranges = []
+  for (let i = 0; i < starts.length; i++) {
+    const [, ch, v] = starts[i].map(Number)
+    const key = `${ch}:${v}`
+    const at = index.get(key)
+    assert(at !== undefined,
+      `${kind} ${i + 1} starts at ${key}, which is not a verse in this numbering`)
+    let endAt = order.length - 1
+    if (i + 1 < starts.length) {
+      const [, nc, nv] = starts[i + 1].map(Number)
+      const next = index.get(`${nc}:${nv}`)
+      assert(next !== undefined,
+        `${kind} ${i + 2} starts at ${nc}:${nv}, which is not a verse in this numbering`)
+      assert(next > at, `${kind} ${i + 2} starts at or before ${kind} ${i + 1}`)
+      endAt = next - 1
+    }
+    const [ec, ev] = order[endAt].split(':').map(Number)
+    ranges.push({
+      kind,
+      number: i + 1,
+      start_chapter: ch,
+      start_verse: v,
+      end_chapter: ec,
+      end_verse: ev,
+      verses: endAt - at + 1,
+    })
+  }
+  return ranges
+}
+
+function buildDivisions(canonical, chapters) {
+  const text = fs.readFileSync(METADATA_SOURCE, 'utf8')
+  const rows = parseMetadata(text)
+
+  /* Reading order, taken from the words table rather than rebuilt from the
+   * chapter table, so the divisions are indexed against the same verse list
+   * every other figure in this module counts over. */
+  const order = []
+  const index = new Map()
+  for (const w of canonical) {
+    const key = `${w.chapter}:${w.verse}`
+    if (!index.has(key)) {
+      index.set(key, order.length)
+      order.push(key)
+    }
+  }
+  assert(order.length === 6234, `reading order has ${order.length} verses, expected 6234`)
+
+  /* Tanzil and our numbering must differ in exactly one place. If a second
+   * chapter ever disagrees, the boundaries can no longer be trusted unmapped
+   * and this import needs rewriting rather than patching. */
+  const disagree = rows.chapter
+    .map((r) => [Number(r[0]), Number(r[1])])
+    .filter(([n, verses]) => {
+      /* The chapter CSV yields strings, so both sides are coerced. Comparing a
+       * string to a number here silently reported zero disagreements, which is
+       * the failure mode this whole assertion exists to catch. */
+      const ours = chapters.find((c) => Number(c.chapter_number) === n)
+      assert(ours, `Tanzil has sura ${n} but our chapter table does not`)
+      return Number(ours.chapter_verses) !== verses
+    })
+  assert(disagree.length === 1 && disagree[0][0] === 9,
+    `Tanzil disagrees with our verse counts on ${disagree.map(([n]) => n).join(', ')}, expected only sura 9`)
+
+  const divisions = []
+  for (const kind of DIVISION_KINDS) {
+    const ranges = toRanges(kind, rows[kind], order, index)
+    assert(ranges.length === DIVISION_COUNTS[kind],
+      `${kind}: ${ranges.length} rows, expected ${DIVISION_COUNTS[kind]}`)
+    /* Each kind has to tile the corpus exactly. A gap would silently drop
+     * verses from a scoped count and an overlap would double them, and neither
+     * shows up as a wrong-looking number. */
+    const covered = ranges.reduce((a, r) => a + r.verses, 0)
+    assert(covered === order.length,
+      `${kind} ranges cover ${covered} verses, expected ${order.length}`)
+    divisions.push(...ranges)
+  }
+
+  /* The chapter table carries its own bowing count, so the two sources can be
+   * checked against each other rather than trusted separately. */
+  const bowingsPerChapter = new Map()
+  for (const r of rows.bowing) {
+    const ch = Number(r[1])
+    bowingsPerChapter.set(ch, (bowingsPerChapter.get(ch) ?? 0) + 1)
+  }
+  for (const r of rows.chapter) {
+    const n = Number(r[0])
+    const declared = Number(r[8])
+    const counted = bowingsPerChapter.get(n) ?? 0
+    assert(declared === counted,
+      `sura ${n} declares ${declared} bowings, ${counted} rows start in it`)
+  }
+
+  /* Revelation place, the one chapter-level field this file has that our own
+   * chapter table does not. Makkah or Medina, never blank. */
+  const place = new Map()
+  for (const r of rows.chapter) {
+    const p = r[6]
+    assert(p === 'Makkah' || p === 'Medina', `sura ${r[0]} has revelation place '${p}'`)
+    place.set(Number(r[0]), p)
+  }
+  assert(place.size === 114, `revelation place for ${place.size} suras, expected 114`)
+
+  const prostrations = rows.prostration.map((r) => ({
+    chapter: Number(r[1]),
+    verse: Number(r[2]),
+    type: r[3],
+  }))
+  assert(prostrations.length === 15, `${prostrations.length} prostrations, expected 15`)
+  for (const p of prostrations) {
+    assert(index.has(`${p.chapter}:${p.verse}`),
+      `prostration at ${p.chapter}:${p.verse} is not a verse in this numbering`)
+    assert(p.type === 'Recommended' || p.type === 'Obligatory',
+      `prostration at ${p.chapter}:${p.verse} has type '${p.type}'`)
+  }
+
+  /* Which divisions hold fewer verses than a Hafs mushaf would give them,
+   * because 9:128 and 9:129 are absent here. Reported rather than corrected:
+   * the two verses are not in either dataset (§2.4) and inventing them to make
+   * a page count match would be worse than saying which page differs. */
+  const straddling = divisions.filter(
+    (d) =>
+      (d.start_chapter < 9 || (d.start_chapter === 9 && d.start_verse <= 127)) &&
+      (d.end_chapter > 9 || (d.end_chapter === 9 && d.end_verse === 127)) &&
+      !(d.start_chapter === 9 && d.end_chapter === 9 && d.end_verse < 127)
+  )
+
+  return { divisions, place, prostrations, straddling }
+}
+
 /* ── segmentation ─────────────────────────────────────────────────────── */
 function buildSegments(canonical) {
   const segments = []
@@ -644,7 +828,17 @@ const TOGGLE_LABELS = {
  * account)."), which silently split a row in two and cost the Rust side a word.
  * Every cell is flattened here rather than at each call site, and the width
  * guard turns a future one into a build failure instead of an off-by-one. */
-const cell = (value) => String(value).replace(/[\t\r\n]+/g, ' ').trim()
+const cell = (value) => {
+  /* `undefined` and `null` stringify to text that looks like data and parses as
+   * a value, so a Map keyed by number and read with a string key emitted a whole
+   * column of the literal word "undefined" and nothing complained. Twice. The
+   * guard belongs at the writer, which every cell passes through. */
+  if (value === undefined || value === null) {
+    failures.push('a cell was undefined or null; a lookup returned nothing')
+    return ''
+  }
+  return String(value).replace(/[\t\r\n]+/g, ' ').trim()
+}
 
 const tsv = (rows) => {
   const width = rows[0].length
@@ -677,6 +871,10 @@ function build() {
   assert(chapters.length === 114, `chapter table: ${chapters.length} rows, expected 114`)
   const verseSum = chapters.reduce((a, c) => a + Number(c.chapter_verses), 0)
   assert(verseSum === 6234, `sum(chapter_verses) = ${verseSum}, expected 6234`)
+
+  /* After the chapter table, because the import checks its boundaries against
+   * our own verse counts rather than trusting Tanzil's. */
+  const div = buildDivisions(canonical, chapters)
 
   const english = new Map()
   for (const row of readCsv(TEXT_CSV)) {
@@ -713,12 +911,25 @@ function build() {
   /* `initials` is empty for the 85 suras that carry none, which is a fact about
    * them rather than missing data, so the column is present on every row. */
   files['chapters.tsv'] = tsv([
-    ['chapter', 'verses', 'revelation_order', 'name_arabic', 'name_english', 'name_transliterated', 'initials'],
+    ['chapter', 'verses', 'revelation_order', 'revelation_place', 'name_arabic', 'name_english', 'name_transliterated', 'initials'],
     ...chapters.map((c) => [
       c.chapter_number, c.chapter_verses, c.revelation_order,
+      div.place.get(Number(c.chapter_number)),
       c.title_arabic, c.title_english, c.title_transliterated,
       INITIALS[c.chapter_number] ?? '',
     ]),
+  ])
+
+  files['divisions.tsv'] = tsv([
+    ['kind', 'number', 'start_chapter', 'start_verse', 'end_chapter', 'end_verse', 'verses'],
+    ...div.divisions.map((d) => [
+      d.kind, d.number, d.start_chapter, d.start_verse, d.end_chapter, d.end_verse, d.verses,
+    ]),
+  ])
+
+  files['prostrations.tsv'] = tsv([
+    ['chapter', 'verse', 'type'],
+    ...div.prostrations.map((p) => [p.chapter, p.verse, p.type]),
   ])
 
   files['roots.tsv'] = tsv([
@@ -801,6 +1012,16 @@ function build() {
     `  ${canonical.length.toLocaleString('en-US')} words, ${roots.length.toLocaleString('en-US')} roots, full coverage.`,
     '- **English translation and chapter table** Dr. Rashad Khalifa, 1992 Authorized English Version,',
     '  `data/sources/quran/1992/`.',
+    '- **Traditional divisions, revelation place and prostration verses**',
+    '  Tanzil.net Quran metadata v1.0.2, (C) 2008-2011, licensed CC-BY.',
+    '  `data/sources/quran/metadata/quran-metadata.txt`.',
+    `  ${DIVISION_COUNTS.part} parts, ${DIVISION_COUNTS.group} groups, ${DIVISION_COUNTS.quarter} quarters,`,
+    `  ${DIVISION_COUNTS.station} stations, ${DIVISION_COUNTS.bowing} bowings, ${DIVISION_COUNTS.page} pages,`,
+    `  ${div.prostrations.length} prostration verses.`,
+    '  Tanzil numbers 6,236 verses where this corpus numbers 6,234, and sura 9 is the only',
+    '  chapter where the two disagree. No division boundary lands past 9:127, so nothing is',
+    `  remapped; ${div.straddling.length} divisions, one of each kind, simply hold two fewer verses here than a`,
+    '  Hafs mushaf gives them.',
     '',
     '## Derived here, not imported',
     '',
@@ -819,7 +1040,7 @@ function build() {
   const valueFiles = Object.fromEntries(
     VALUE_SYSTEMS.map((v) => [`${v.id}.json`, JSON.stringify(v, null, 2) + '\n']))
 
-  return { files, valueFiles, fixtures, seg, canonical, basmalah, roots, alphabet }
+  return { files, valueFiles, fixtures, seg, div, canonical, basmalah, roots, alphabet }
 }
 
 /* ── main ─────────────────────────────────────────────────────────────── */
@@ -873,6 +1094,11 @@ function main() {
 
   console.log(`${TAG} wrote ${Object.keys(files).length + Object.keys(valueFiles).length} files, ${(bytes / 1e6).toFixed(2)} MB`)
   console.log(`${TAG} corpus 114 / 6,234 / ${built.canonical.length.toLocaleString('en-US')} words / ${built.roots.length.toLocaleString('en-US')} roots`)
+  console.log(
+    `${TAG} divisions ${built.div.divisions.length} across ${DIVISION_KINDS.length} kinds, ` +
+    `${built.div.prostrations.length} prostrations, ` +
+    `${built.div.straddling.length} spanning the absent 9:128-129`
+  )
   console.log(`${TAG} segmentation ${(seg.rate * 100).toFixed(2)}% (${seg.aligned.toLocaleString('en-US')} of ${seg.rooted.toLocaleString('en-US')}), ${seg.unaligned.length} unaligned`)
   console.log(`${TAG} fixtures ${verified.length} verified, ${gaps.length} known gaps:`)
   for (const g of gaps) console.log(`${TAG}   ${g.id}: computed ${g.actual}, published ${g.expected}`)

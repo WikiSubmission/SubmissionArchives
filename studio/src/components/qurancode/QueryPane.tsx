@@ -44,6 +44,16 @@ export const AGGREGATE_PRESETS: { label: string; hint: string; query: AggregateQ
     },
   },
   {
+    label: 'Makkan suras',
+    hint: 'Every word revealed at Makkah, against the Medinan remainder.',
+    query: { revelation_place: 'Makkah' },
+  },
+  {
+    label: 'The fifteen verses of prostration',
+    hint: 'Selected by kind rather than by address.',
+    query: { prostration: true },
+  },
+  {
     label: 'Sura numbers 9 to 27',
     hint: 'Nineteen suras, their numbers summing to 342, 19 x 18.',
     query: { from: [9, 1], to: [27, 93] },
@@ -387,6 +397,42 @@ export default function QueryPane({
                 onChange={(to) => onAggregateChange({ ...aggregate, to })}
               />
             </div>
+          </Field>
+
+          <Field label="Revealed at">
+            <Chips
+              options={[
+                ['any', 'Anywhere'],
+                ['Makkah', 'Makkah'],
+                ['Medina', 'Medina'],
+              ]}
+              value={aggregate.revelation_place ?? 'any'}
+              onChange={(v) =>
+                onAggregateChange({
+                  ...aggregate,
+                  revelation_place: v === 'any' ? undefined : v,
+                })
+              }
+            />
+          </Field>
+
+          <Field label="Prostration">
+            <Chips
+              options={[
+                ['any', 'Any verse'],
+                ['yes', 'Only these'],
+                ['no', 'Exclude'],
+              ]}
+              value={
+                aggregate.prostration === undefined ? 'any' : aggregate.prostration ? 'yes' : 'no'
+              }
+              onChange={(v) =>
+                onAggregateChange({
+                  ...aggregate,
+                  prostration: v === 'any' ? undefined : v === 'yes',
+                })
+              }
+            />
           </Field>
 
           <Field label="Quranic Initials">

@@ -218,6 +218,18 @@ export default function VerseBrowser({
                 <span className="rounded border border-qv-border/60 bg-qv-bg px-2 py-0.5 font-mono text-[11px] font-bold tracking-wider text-qv-accent">
                   {verse.chapter}:{verse.verse}
                 </span>
+                {/* Where this verse sits in the mushaf. Shown on the verse
+                    because that is where the question occurs to a reader, and
+                    absent for the unnumbered Basmalahs, which have no address
+                    and so belong to no division. */}
+                {verse.divisions && (
+                  <span className="hidden items-baseline gap-1.5 font-mono text-[9.5px] tabular-nums text-qv-muted sm:flex">
+                    <span title="Page">p{verse.divisions.page}</span>
+                    <span title="Part (juz')">j{verse.divisions.part}</span>
+                    <span title="Group (hizb)">h{verse.divisions.group}</span>
+                    <span title="Bowing (ruku')">r{verse.divisions.bowing}</span>
+                  </span>
+                )}
                 <span className="flex-1" />
                 {actions}
               </header>

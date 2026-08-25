@@ -76,6 +76,8 @@ export interface VerseView {
   english: string
   words: WordView[]
   provenance: Provenance
+  /** The part, group, quarter, station, bowing and page this verse sits in. */
+  divisions: VerseDivisions | null
 }
 
 export interface ChapterView {
@@ -122,10 +124,40 @@ export interface ToggleInfo {
   default: boolean
 }
 
+/** The six ways a mushaf is divided. Lowercase because these are the wire
+ * values the Rust side deserializes. */
+export type DivisionKind = 'part' | 'group' | 'quarter' | 'station' | 'bowing' | 'page'
+
+/** One division picked by kind and number. A division is an address *range*,
+ * which is why it cannot be expressed by `Scope`'s chapter/verse/word fields. */
+export interface DivisionRef {
+  kind: DivisionKind
+  number: number
+}
+
+export interface DivisionKindInfo {
+  id: DivisionKind
+  label: string
+  count: number
+}
+
+/** Which division of each kind a verse sits in. Absent for the 112 unnumbered
+ * Basmalahs, which have no address and so belong to no division. */
+export interface VerseDivisions {
+  part: number
+  group: number
+  quarter: number
+  station: number
+  bowing: number
+  page: number
+}
+
 export interface ChapterInfo {
   number: number
   verses: number
   revelation_order: number
+  /** `Makkah` or `Medina`, from Tanzil. Never blank. */
+  revelation_place: string
   name_arabic: string
   name_english: string
   name_transliterated: string
@@ -229,6 +261,10 @@ export interface Metadata {
   value_systems: ValueSystemInfo[]
   default_mode: string
   corpus: Counts
+  /** The six kinds and how many of each, so no component hardcodes that a
+   * mushaf has 604 pages. */
+  divisions: DivisionKindInfo[]
+  prostrations: number
 }
 
 export interface Scope {
@@ -236,6 +272,9 @@ export interface Scope {
   verse?: number | null
   word?: number | null
   include_basmalah?: boolean | null
+  /** One traditional division. An address range rather than a prefix, so it
+   * cannot be said with the fields above. */
+  division?: DivisionRef
 }
 
 /* ── calls ───────────────────────────────────────────────────────────── */
@@ -376,6 +415,10 @@ export interface AggregateQuery {
   from_word?: number
   to_word?: number
   verse_number?: number
+  /** `Makkah` or `Medina`. */
+  revelation_place?: string
+  /** True keeps only the fifteen verses of prostration, false excludes them. */
+  prostration?: boolean
   /** True keeps only suras carrying Quranic Initials, false only those with
    * none. A property of the sura, so it cannot be a text filter. */
   initialed?: boolean

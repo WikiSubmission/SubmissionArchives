@@ -31,6 +31,7 @@ import {
   type Aggregate,
   type AggregateQuery,
   type ChapterInfo,
+  type DivisionRef,
   type Counts,
   type LetterStat,
   type Metadata,
@@ -63,6 +64,7 @@ export interface QuranCodeState {
   divisor: number
   toggles: Toggles | null
   includeBasmalah: boolean
+  division: DivisionRef | null
 
   verseView: VerseView | null
   chapterView: ChapterView | null
@@ -111,6 +113,7 @@ export interface QuranCodeState {
   clearResults: () => void
   lookupWordRoot: (position: number) => void
   setIncludeBasmalah: (on: boolean) => void
+  setDivision: (d: DivisionRef | null) => void
   setReading: (mode: 'verse' | 'chapter') => void
   measureSelection: (text: string) => void
   clearSelection: () => void
@@ -137,6 +140,7 @@ export function useQuranCode(): QuranCodeState {
   const [divisor, setDivisor] = useState(19)
   const [toggles, setToggles] = useState<Toggles | null>(null)
   const [includeBasmalah, setIncludeBasmalah] = useState(false)
+  const [division, setDivision] = useState<DivisionRef | null>(null)
 
   const [queryTab, setQueryTab] = useState<QueryTab>('text')
   const [textQuery, setTextQuery] = useState<TextQuery>({
@@ -421,13 +425,17 @@ export function useQuranCode(): QuranCodeState {
     [chapter, verse, mode, toggles]
   )
 
+  /* A division narrows whatever level is active rather than replacing it, which
+     is what makes "this page, inside this sura" expressible. The scope label the
+     backend returns says which combination produced a figure. */
   const scope: Scope = useMemo(() => {
     const base: Scope = { include_basmalah: includeBasmalah }
+    if (division) base.division = division
     if (level === 'corpus') return base
     if (level === 'chapter') return { ...base, chapter }
     if (level === 'verse') return { ...base, chapter, verse }
     return { ...base, chapter, verse, word: word ?? 1 }
-  }, [level, chapter, verse, word, includeBasmalah])
+  }, [level, chapter, verse, word, includeBasmalah, division])
 
   /* One token per fetch. A stale reply from a slower call must never paint over
      a newer one, which is easy to hit by flipping a toggle during a corpus
@@ -487,6 +495,7 @@ export function useQuranCode(): QuranCodeState {
     divisor,
     toggles,
     includeBasmalah,
+    division,
     verseView,
     chapterView,
     reading,
@@ -532,6 +541,7 @@ export function useQuranCode(): QuranCodeState {
     clearResults,
     lookupWordRoot,
     setIncludeBasmalah,
+    setDivision,
     setReading,
     measureSelection,
     clearSelection,

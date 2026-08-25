@@ -31,6 +31,8 @@ const WORDS_TSV: &str = include_str!("../assets/qurancode/words.tsv");
 const VERSES_TSV: &str = include_str!("../assets/qurancode/verses.tsv");
 const CHAPTERS_TSV: &str = include_str!("../assets/qurancode/chapters.tsv");
 const ROOTS_TSV: &str = include_str!("../assets/qurancode/roots.tsv");
+const DIVISIONS_TSV: &str = include_str!("../assets/qurancode/divisions.tsv");
+const PROSTRATIONS_TSV: &str = include_str!("../assets/qurancode/prostrations.tsv");
 const TEXT_MODES_JSON: &str = include_str!("../assets/qurancode/text_modes.json");
 const ABJAD_STANDARD_JSON: &str =
     include_str!("../assets/qurancode/value_systems/abjad_standard.json");
@@ -439,6 +441,10 @@ pub struct Chapter {
     pub number: u32,
     pub verses: u32,
     pub revelation_order: u32,
+    /// `Makkah` or `Medina`, from Tanzil. Never blank, and asserted so at
+    /// generation. Makkan against Medinan is a standard partition in this
+    /// literature and the chapter table had no way to express it before.
+    pub revelation_place: &'static str,
     pub name_arabic: &'static str,
     pub name_english: &'static str,
     pub name_transliterated: &'static str,
@@ -494,10 +500,11 @@ pub fn chapters() -> &'static Vec<Chapter> {
                     number: field(&r, 0).parse().ok()?,
                     verses: field(&r, 1).parse().ok()?,
                     revelation_order: field(&r, 2).parse().ok()?,
-                    name_arabic: field(&r, 3),
-                    name_english: field(&r, 4),
-                    name_transliterated: field(&r, 5),
-                    initials: field(&r, 6),
+                    revelation_place: field(&r, 3),
+                    name_arabic: field(&r, 4),
+                    name_english: field(&r, 5),
+                    name_transliterated: field(&r, 6),
+                    initials: field(&r, 7),
                 })
             })
             .collect()
@@ -536,6 +543,236 @@ fn english() -> &'static HashMap<(u32, u32), &'static str> {
         }
         map
     })
+}
+
+/* ── the traditional divisions ─────────────────────────────────────────── */
+
+/// The six ways a mushaf is divided, from Tanzil's metadata under CC-BY.
+///
+/// A Copy enum rather than a string because it lives inside `Scope`, which is
+/// `Copy` so that every query can take one by value. The lowercase names are
+/// the wire format the frontend sends.
+#[derive(Deserialize, Serialize, Clone, Copy, PartialEq, Eq, Hash, Debug)]
+#[serde(rename_all = "lowercase")]
+pub enum DivisionKind {
+    Part,
+    Group,
+    Quarter,
+    Station,
+    Bowing,
+    Page,
+}
+
+impl DivisionKind {
+    pub const ALL: [DivisionKind; 6] = [
+        DivisionKind::Part,
+        DivisionKind::Group,
+        DivisionKind::Quarter,
+        DivisionKind::Station,
+        DivisionKind::Bowing,
+        DivisionKind::Page,
+    ];
+
+    fn from_tsv(s: &str) -> Option<DivisionKind> {
+        match s {
+            "part" => Some(DivisionKind::Part),
+            "group" => Some(DivisionKind::Group),
+            "quarter" => Some(DivisionKind::Quarter),
+            "station" => Some(DivisionKind::Station),
+            "bowing" => Some(DivisionKind::Bowing),
+            "page" => Some(DivisionKind::Page),
+            _ => None,
+        }
+    }
+
+    pub fn id(&self) -> &'static str {
+        match self {
+            DivisionKind::Part => "part",
+            DivisionKind::Group => "group",
+            DivisionKind::Quarter => "quarter",
+            DivisionKind::Station => "station",
+            DivisionKind::Bowing => "bowing",
+            DivisionKind::Page => "page",
+        }
+    }
+
+    /// The name a reader would use. Juz', hizb and so on are the Arabic terms,
+    /// but the surface is in English and the plan's own §6 mapping uses these.
+    pub fn label(&self) -> &'static str {
+        match self {
+            DivisionKind::Part => "Part (juz')",
+            DivisionKind::Group => "Group (hizb)",
+            DivisionKind::Quarter => "Quarter",
+            DivisionKind::Station => "Station (manzil)",
+            DivisionKind::Bowing => "Bowing (ruku')",
+            DivisionKind::Page => "Page",
+        }
+    }
+
+    /// Which slot of `VerseDivisions` this kind occupies. Resolving the kind to
+    /// an index once turns the per-word test into an array read.
+    fn slot(&self) -> usize {
+        match self {
+            DivisionKind::Part => 0,
+            DivisionKind::Group => 1,
+            DivisionKind::Quarter => 2,
+            DivisionKind::Station => 3,
+            DivisionKind::Bowing => 4,
+            DivisionKind::Page => 5,
+        }
+    }
+}
+
+/// One division, as an inclusive range of addresses.
+pub struct Division {
+    pub kind: DivisionKind,
+    pub number: u32,
+    pub start: (u32, u32),
+    pub end: (u32, u32),
+    pub verses: u32,
+}
+
+/// Which division of each kind a verse belongs to, indexed by
+/// `DivisionKind::slot`. Every verse belongs to exactly one of each, because the
+/// generator asserts that each kind tiles the corpus.
+#[derive(Clone, Copy, Default, Serialize, Debug)]
+pub struct VerseDivisions {
+    pub part: u32,
+    pub group: u32,
+    pub quarter: u32,
+    pub station: u32,
+    pub bowing: u32,
+    pub page: u32,
+}
+
+impl VerseDivisions {
+    fn at(&self, slot: usize) -> u32 {
+        match slot {
+            0 => self.part,
+            1 => self.group,
+            2 => self.quarter,
+            3 => self.station,
+            4 => self.bowing,
+            5 => self.page,
+            _ => 0,
+        }
+    }
+
+    fn set(&mut self, slot: usize, n: u32) {
+        match slot {
+            0 => self.part = n,
+            1 => self.group = n,
+            2 => self.quarter = n,
+            3 => self.station = n,
+            4 => self.bowing = n,
+            5 => self.page = n,
+            _ => {}
+        }
+    }
+}
+
+static DIVISIONS: OnceLock<Vec<Division>> = OnceLock::new();
+
+pub fn divisions() -> &'static Vec<Division> {
+    DIVISIONS.get_or_init(|| {
+        tsv_rows(DIVISIONS_TSV)
+            .filter_map(|r| {
+                Some(Division {
+                    kind: DivisionKind::from_tsv(field(&r, 0))?,
+                    number: field(&r, 1).parse().ok()?,
+                    start: (field(&r, 2).parse().ok()?, field(&r, 3).parse().ok()?),
+                    end: (field(&r, 4).parse().ok()?, field(&r, 5).parse().ok()?),
+                    verses: field(&r, 6).parse().ok()?,
+                })
+            })
+            .collect()
+    })
+}
+
+static VERSE_DIVISIONS: OnceLock<HashMap<(u32, u32), VerseDivisions>> = OnceLock::new();
+
+/// Every verse's division numbers, built once by walking each range.
+///
+/// Inverted from the range list rather than searched per query: a scoped count
+/// asks "is this word's verse in division N" once per word, 77,401 times, and a
+/// linear scan over 1,497 ranges each time would dominate the fold it is meant
+/// to filter.
+pub fn verse_divisions() -> &'static HashMap<(u32, u32), VerseDivisions> {
+    VERSE_DIVISIONS.get_or_init(|| {
+        let order: Vec<(u32, u32)> = {
+            let mut seen: Vec<(u32, u32)> = Vec::with_capacity(6234);
+            for w in words() {
+                if w.canonical && seen.last() != Some(&(w.chapter, w.verse)) {
+                    seen.push((w.chapter, w.verse));
+                }
+            }
+            seen
+        };
+        let position: HashMap<(u32, u32), usize> =
+            order.iter().enumerate().map(|(i, a)| (*a, i)).collect();
+
+        let mut map: HashMap<(u32, u32), VerseDivisions> = order
+            .iter()
+            .map(|a| (*a, VerseDivisions::default()))
+            .collect();
+
+        for d in divisions() {
+            let slot = d.kind.slot();
+            let (Some(&from), Some(&to)) = (position.get(&d.start), position.get(&d.end)) else {
+                continue;
+            };
+            for a in &order[from..=to] {
+                if let Some(v) = map.get_mut(a) {
+                    v.set(slot, d.number);
+                }
+            }
+        }
+        map
+    })
+}
+
+/// The divisions a verse belongs to, or `None` if the address is not a verse.
+/// The 112 unnumbered Basmalah groups have no address of their own, so they
+/// answer `None`: they sit inside the page and part their sura opens, but they
+/// are not verses and a division that counted them would double-count the
+/// Basmalah at 1:1.
+pub fn divisions_of(chapter: u32, verse: u32) -> Option<VerseDivisions> {
+    verse_divisions().get(&(chapter, verse)).copied()
+}
+
+#[derive(Deserialize, Clone, Copy, Debug)]
+pub struct DivisionRef {
+    pub kind: DivisionKind,
+    pub number: u32,
+}
+
+pub struct Prostration {
+    pub chapter: u32,
+    pub verse: u32,
+    /// `Recommended` or `Obligatory`, as Tanzil records it.
+    pub kind: &'static str,
+}
+
+static PROSTRATIONS: OnceLock<Vec<Prostration>> = OnceLock::new();
+
+pub fn prostrations() -> &'static Vec<Prostration> {
+    PROSTRATIONS.get_or_init(|| {
+        tsv_rows(PROSTRATIONS_TSV)
+            .filter_map(|r| {
+                Some(Prostration {
+                    chapter: field(&r, 0).parse().ok()?,
+                    verse: field(&r, 1).parse().ok()?,
+                    kind: field(&r, 2),
+                })
+            })
+            .collect()
+    })
+}
+
+fn is_prostration(chapter: u32, verse: u32) -> bool {
+    prostrations()
+        .iter()
+        .any(|p| p.chapter == chapter && p.verse == verse)
 }
 
 /* ── value systems ─────────────────────────────────────────────────────── */
@@ -634,12 +871,26 @@ pub struct Scope {
     /// canonical verses alone leaves lam short by exactly 4 and mim by exactly
     /// 3 in every one of the six ALM suras, which is precisely one Basmalah.
     pub include_basmalah: Option<bool>,
+    /// One traditional division, which is an address *range* rather than an
+    /// address prefix and so cannot be expressed by the fields above. Counting
+    /// a page or a part is what §6 lists as the five remaining scopes; this is
+    /// all five, because the kind is a parameter rather than five fields.
+    pub division: Option<DivisionRef>,
 }
 
 impl Scope {
     fn matches(&self, w: &Word) -> bool {
         if !w.canonical && !self.include_basmalah.unwrap_or(false) {
             return false;
+        }
+        if let Some(d) = self.division {
+            /* An unnumbered Basmalah has no address, so it belongs to no
+               division. Including it in a page count would attribute four words
+               to a page the mushaf does not put them on. */
+            match divisions_of(w.chapter, w.verse) {
+                Some(v) if v.at(d.kind.slot()) == d.number => {}
+                _ => return false,
+            }
         }
         if let Some(c) = self.chapter {
             if w.chapter != c {
@@ -660,11 +911,19 @@ impl Scope {
     }
 
     fn label(&self) -> String {
-        match (self.chapter, self.verse, self.word) {
+        let base = match (self.chapter, self.verse, self.word) {
             (Some(c), Some(v), Some(w)) => format!("{}:{}:{}", c, v, w),
             (Some(c), Some(v), None) => format!("{}:{}", c, v),
             (Some(c), None, None) => format!("chapter {}", c),
             _ => "corpus".to_string(),
+        };
+        match self.division {
+            /* The division goes in the label rather than replacing it, because
+               a page intersected with a chapter is a different scope from
+               either and a figure has to say which one it answers. */
+            Some(d) if base == "corpus" => format!("{} {}", d.kind.id(), d.number),
+            Some(d) => format!("{}, {} {}", base, d.kind.id(), d.number),
+            None => base,
         }
     }
 
@@ -731,6 +990,10 @@ pub struct VerseView {
     pub verse: u32,
     pub english: String,
     pub words: Vec<WordView>,
+    /// Which part, group, quarter, station, bowing and page this verse sits in.
+    /// Carried on the verse rather than fetched separately because a reader who
+    /// wants to know is looking at the verse when the question occurs to them.
+    pub divisions: Option<VerseDivisions>,
     pub provenance: Provenance,
 }
 
@@ -757,6 +1020,7 @@ pub struct ChapterInfo {
     pub number: u32,
     pub verses: u32,
     pub revelation_order: u32,
+    pub revelation_place: &'static str,
     pub name_arabic: &'static str,
     pub name_english: &'static str,
     pub name_transliterated: &'static str,
@@ -779,8 +1043,20 @@ pub struct Metadata {
     pub toggles: Vec<ToggleInfo>,
     pub chapters: Vec<ChapterInfo>,
     pub value_systems: Vec<ValueSystemInfo>,
+    /// The six division kinds and how many of each there are, so the UI builds
+    /// its pickers from the data instead of hardcoding that a mushaf has 604
+    /// pages.
+    pub divisions: Vec<DivisionKindInfo>,
+    pub prostrations: usize,
     pub default_mode: String,
     pub corpus: Counts,
+}
+
+#[derive(Serialize, Clone, Debug)]
+pub struct DivisionKindInfo {
+    pub id: String,
+    pub label: String,
+    pub count: usize,
 }
 
 /* ── the queries ───────────────────────────────────────────────────────── */
@@ -898,6 +1174,7 @@ pub fn metadata() -> Result<Metadata, String> {
                 number: c.number,
                 verses: c.verses,
                 revelation_order: c.revelation_order,
+                revelation_place: c.revelation_place,
                 name_arabic: c.name_arabic,
                 name_english: c.name_english,
                 name_transliterated: c.name_transliterated,
@@ -915,6 +1192,15 @@ pub fn metadata() -> Result<Metadata, String> {
             })
             .collect(),
         presets: presets(),
+        divisions: DivisionKind::ALL
+            .iter()
+            .map(|k| DivisionKindInfo {
+                id: k.id().to_string(),
+                label: k.label().to_string(),
+                count: divisions().iter().filter(|d| d.kind == *k).count(),
+            })
+            .collect(),
+        prostrations: prostrations().len(),
         default_mode: DEFAULT_MODE.to_string(),
         corpus,
     })
@@ -974,6 +1260,7 @@ pub fn get_verse(
                 }
             })
             .collect(),
+        divisions: divisions_of(chapter, verse),
         provenance: provenance(cfg, mode, &scope, toggles, None),
     })
 }
@@ -2236,6 +2523,7 @@ pub fn get_chapter(
                     }
                 })
                 .collect(),
+            divisions: divisions_of(chapter, verse),
             provenance: provenance(cfg, mode, &scope, toggles, None),
         }
     };
@@ -2394,6 +2682,13 @@ pub struct AggregateQuery {
     /// only those carrying none. The initials are a property of the sura, not
     /// of the word, so this cannot be expressed as a text filter.
     pub initialed: Option<bool>,
+    /// `Makkah` or `Medina`. Matched case-insensitively because it arrives from
+    /// a UI control rather than from the data.
+    pub revelation_place: Option<String>,
+    /// `Some(true)` keeps only verses of prostration, `Some(false)` excludes
+    /// them. Fifteen verses, so the false case is nearly the whole corpus and
+    /// exists mainly to make the pair symmetrical.
+    pub prostration: Option<bool>,
     /// Only verses carrying this number, in every chapter at once. This is the
     /// cross-cutting selection behind "every verse numbered 19".
     pub verse_number: Option<u32>,
@@ -2517,6 +2812,17 @@ pub fn aggregate(
         .filter(|s| !s.is_empty())
         .map(|s| fold_word(cfg, s, mode, &toggles).chars().collect());
 
+    /* Resolved to a set of sura numbers before the loop rather than looked up
+       per word: revelation place is a property of the sura, so scanning the
+       chapter table 77,401 times would be 77,401 scans of the same 114 rows. */
+    let place_filter: Option<HashSet<u32>> = q.revelation_place.as_deref().map(|p| {
+        chapters()
+            .iter()
+            .filter(|c| c.revelation_place.eq_ignore_ascii_case(p))
+            .map(|c| c.number)
+            .collect()
+    });
+
     let mut buf = String::with_capacity(32);
     let mut chapters: HashSet<u32> = HashSet::new();
     let mut verses: HashSet<(u32, u32)> = HashSet::new();
@@ -2560,6 +2866,16 @@ pub fn aggregate(
         if let Some(want) = q.initialed {
             let has = chapter_initials(w.chapter).is_some_and(|i| !i.is_empty());
             if has != want {
+                continue;
+            }
+        }
+        if let Some(set) = &place_filter {
+            if !set.contains(&w.chapter) {
+                continue;
+            }
+        }
+        if let Some(want) = q.prostration {
+            if is_prostration(w.chapter, w.verse) != want {
                 continue;
             }
         }
@@ -2710,6 +3026,16 @@ fn describe_selector(q: &AggregateQuery) -> String {
             "initialed suras".to_string()
         } else {
             "un-initialed suras".to_string()
+        });
+    }
+    if let Some(place) = &q.revelation_place {
+        parts.push(format!("{} suras", place));
+    }
+    if let Some(on) = q.prostration {
+        parts.push(if on {
+            "verses of prostration".to_string()
+        } else {
+            "excluding verses of prostration".to_string()
         });
     }
     if let Some(list) = &q.chapters {
@@ -4176,6 +4502,232 @@ mod tests {
         );
         assert_eq!(6234 + 112, 6346, "19 x 334");
         assert!(with_basmalahs.provenance.include_basmalah);
+    }
+
+
+    /* ── the traditional divisions ─────────────────────────────────────── */
+
+    /// Each kind has to tile the corpus: every verse in exactly one division,
+    /// no gaps and no overlaps. A gap would silently drop verses from a scoped
+    /// count and an overlap would double them, and neither shows up as a
+    /// wrong-looking number on screen.
+    #[test]
+    fn every_division_kind_tiles_the_corpus() {
+        let per_verse = verse_divisions();
+        assert_eq!(per_verse.len(), 6234, "one entry per numbered verse");
+
+        for kind in DivisionKind::ALL {
+            let ranges: Vec<&Division> = divisions().iter().filter(|d| d.kind == kind).collect();
+            assert!(!ranges.is_empty(), "{} has no ranges", kind.id());
+
+            let declared: u32 = ranges.iter().map(|d| d.verses).sum();
+            assert_eq!(
+                declared, 6234,
+                "{} ranges declare {} verses",
+                kind.id(),
+                declared
+            );
+
+            /* Numbered 1..n with no repeats, because the UI offers the number
+               as a stepper and a hole in the sequence would be a dead step. */
+            let mut numbers: Vec<u32> = ranges.iter().map(|d| d.number).collect();
+            numbers.sort_unstable();
+            assert_eq!(
+                numbers,
+                (1..=ranges.len() as u32).collect::<Vec<_>>(),
+                "{} numbering",
+                kind.id()
+            );
+
+            /* And every verse actually resolves to one of them. */
+            let slot = kind.slot();
+            let assigned = per_verse.values().filter(|v| v.at(slot) > 0).count();
+            assert_eq!(
+                assigned,
+                6234,
+                "{} leaves {} verses unassigned",
+                kind.id(),
+                6234 - assigned
+            );
+        }
+    }
+
+    #[test]
+    fn the_divisions_are_the_counts_a_mushaf_has() {
+        let n = |k: DivisionKind| divisions().iter().filter(|d| d.kind == k).count();
+        assert_eq!(n(DivisionKind::Part), 30, "juz'");
+        assert_eq!(n(DivisionKind::Group), 60, "hizb");
+        assert_eq!(n(DivisionKind::Quarter), 240);
+        assert_eq!(n(DivisionKind::Station), 7, "manzil");
+        assert_eq!(n(DivisionKind::Bowing), 556, "ruku'");
+        assert_eq!(n(DivisionKind::Page), 604);
+        assert_eq!(prostrations().len(), 15);
+    }
+
+    /// The first part opens the book and the last closes it, which is the cheap
+    /// check that the ranges were built in reading order rather than sorted by
+    /// address.
+    #[test]
+    fn the_first_and_last_division_bracket_the_corpus() {
+        let part = |n: u32| {
+            divisions()
+                .iter()
+                .find(|d| d.kind == DivisionKind::Part && d.number == n)
+                .unwrap()
+        };
+        assert_eq!(part(1).start, (1, 1));
+        assert_eq!(part(30).end, (114, 6));
+        assert_eq!(divisions_of(1, 1).unwrap().part, 1);
+        assert_eq!(divisions_of(1, 1).unwrap().page, 1);
+        assert_eq!(divisions_of(114, 6).unwrap().part, 30);
+    }
+
+    /// A scoped count over a division has to agree with the same count taken
+    /// over the division's address range by hand. This is the property that
+    /// makes `Scope::division` trustworthy, because the two paths share no code.
+    #[test]
+    fn counting_a_division_agrees_with_counting_its_range() {
+        let page = divisions()
+            .iter()
+            .find(|d| d.kind == DivisionKind::Page && d.number == 2)
+            .unwrap();
+
+        let by_division = count(
+            Some(Scope {
+                division: Some(DivisionRef {
+                    kind: DivisionKind::Page,
+                    number: 2,
+                }),
+                ..Scope::default()
+            }),
+            None,
+            None,
+        )
+        .unwrap();
+        let by_range = aggregate(
+            Some(AggregateQuery {
+                from: Some(page.start),
+                to: Some(page.end),
+                ..Default::default()
+            }),
+            None,
+            None,
+            None,
+            None,
+        )
+        .unwrap();
+
+        let s29 = by_division
+            .iter()
+            .find(|c| c.provenance.text_mode == "simplified29")
+            .unwrap();
+        assert_eq!(s29.words, by_range.occurrences, "words on page 2");
+        assert_eq!(s29.letters as i64, by_range.letters, "letters on page 2");
+        assert_eq!(s29.verses, by_range.verses, "verses on page 2");
+        assert!(
+            s29.provenance.scope.contains("page 2"),
+            "the division belongs in the scope label: {}",
+            s29.provenance.scope
+        );
+    }
+
+    /// An unnumbered Basmalah has no address, so it belongs to no division.
+    /// Letting it into a page count would put four words on a page the mushaf
+    /// does not print them on, and would also make the Basmalah at 1:1 count
+    /// twice on page 1.
+    #[test]
+    fn an_unnumbered_basmalah_belongs_to_no_division() {
+        assert!(divisions_of(2, 0).is_none(), "sura 2's Basmalah has no verse number");
+        let scope = Scope {
+            division: Some(DivisionRef {
+                kind: DivisionKind::Page,
+                number: 2,
+            }),
+            include_basmalah: Some(true),
+            ..Scope::default()
+        };
+        let without = Scope {
+            include_basmalah: None,
+            ..scope
+        };
+        let a = count(Some(scope), None, None).unwrap();
+        let b = count(Some(without), None, None).unwrap();
+        assert_eq!(
+            a[0].words, b[0].words,
+            "asking for Basmalahs cannot add words to a page"
+        );
+    }
+
+    /// Makkan against Medinan, the partition the chapter table could not express
+    /// before this import.
+    #[test]
+    fn revelation_place_partitions_the_suras() {
+        let makkah = agg(AggregateQuery {
+            revelation_place: Some("Makkah".to_string()),
+            ..Default::default()
+        });
+        let medina = agg(AggregateQuery {
+            revelation_place: Some("medina".to_string()),
+            ..Default::default()
+        });
+        assert_eq!(makkah.chapters + medina.chapters, 114);
+        assert_eq!(
+            makkah.occurrences + medina.occurrences,
+            77_401,
+            "and between them every word"
+        );
+        assert!(makkah.selector.contains("Makkah"), "{}", makkah.selector);
+        assert!(
+            chapters().iter().all(|c| c.revelation_place == "Makkah"
+                || c.revelation_place == "Medina"),
+            "never blank"
+        );
+    }
+
+    #[test]
+    fn the_fifteen_verses_of_prostration_are_selectable() {
+        let a = agg(AggregateQuery {
+            prostration: Some(true),
+            ..Default::default()
+        });
+        assert_eq!(a.verses, 15);
+        let rest = agg(AggregateQuery {
+            prostration: Some(false),
+            ..Default::default()
+        });
+        assert_eq!(a.verses + rest.verses, 6234);
+        assert!(prostrations()
+            .iter()
+            .all(|p| p.kind == "Recommended" || p.kind == "Obligatory"));
+    }
+
+    /// The metadata carries the division counts so the UI never hardcodes that
+    /// a mushaf has 604 pages, the same rule §9c set for the corpus totals.
+    #[test]
+    fn the_metadata_declares_the_divisions() {
+        let m = metadata().unwrap();
+        assert_eq!(m.divisions.len(), 6);
+        let page = m.divisions.iter().find(|d| d.id == "page").unwrap();
+        assert_eq!(page.count, 604);
+        assert!(page.label.contains("Page"));
+        assert_eq!(m.prostrations, 15);
+        assert!(m.chapters.iter().all(|c| !c.revelation_place.is_empty()));
+    }
+
+    /// A verse carries its own divisions, so a reader looking at 2:255 can see
+    /// which part and page it sits on without a second query.
+    #[test]
+    fn a_verse_carries_the_divisions_it_sits_in() {
+        let v = get_verse(2, 255, None, None).unwrap();
+        let d = v.divisions.expect("a numbered verse has divisions");
+        assert!(d.part >= 1 && d.part <= 30);
+        assert!(d.page >= 1 && d.page <= 604);
+        assert!(d.bowing >= 1 && d.bowing <= 556);
+        assert_eq!(
+            d.part,
+            divisions_of(2, 255).unwrap().part,
+            "the same answer either way"
+        );
     }
 
 }

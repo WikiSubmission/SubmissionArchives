@@ -315,6 +315,10 @@ export default function QuranCodeSurface() {
               }}
               reading={qc.reading}
               onReadingChange={qc.setReading}
+              divisionKinds={qc.metadata.divisions}
+              division={qc.division}
+              onDivisionChange={qc.setDivision}
+              verseDivisions={qc.verseView?.divisions ?? null}
               view={view}
               hasResults={Boolean(qc.results)}
               hasTotals={Boolean(qc.aggregate)}

@@ -1,115 +1,115 @@
-chapter	verses	revelation_order	name_arabic	name_english	name_transliterated	initials
-1	7	5	الفاتحة	The Key	Al-Fãtehah	
-2	286	87	البقرة	The Heifer	Al-Baqarah	الم
-3	200	89	آل عمران	The Amramites	Ãli-'Imrãn	الم
-4	176	92	النساء	The Women	Al-Nesa'	
-5	120	112	المائدة	The Feast	Al-Ma'edah	
-6	165	55	الأنعام	The Livestock	Al-An'am	
-7	206	39	الأعراف	The Purgatory	Al-A'araf	المص
-8	75	88	الأنفال	The Spoils of War	Al-Anfal	
-9	127	113	براءة	Ultimatum	Bara'ah	
-10	109	51	يونس	Jonah	Younus	الر
-11	123	52	هود	Hood	Hud	الر
-12	111	53	يوسف	Joseph	Yousuf	الر
-13	43	96	الرعد	The Thunder	Al-Ra'ad	المر
-14	52	72	إبراهيم	Abraham	Ibrahîm	الر
-15	99	54	الحجر	The Hijr Valley	Al-Hijr	الر
-16	128	70	النّحل	The Bee	Al-Nahl	
-17	111	50	بني إسرءيل	The Children of Israel	Banî Israel	
-18	110	69	الكهف	The Cave	Al-Kahf	
-19	98	44	مريم	Mary	Maryam	كهيعص
-20	135	45	طه	T-H	TãHã	طه
-21	112	73	الأنبياء	The Prophets	Al-Anbyã’	
-22	78	103	الحج	The Pilgrimage	Al-Hajj	
-23	118	74	المؤمنون	The Believers	Al-Mu’minûn	
-24	64	102	النّور	The Light	Al-Noor	
-25	77	42	الفرقان	The Statute Book	Al-Furqãn	
-26	227	47	الشعراء	The Poets	Al-Shu‘arã’	طسم
-27	93	48	النّمل	The Ant	Al-Naml	طس
-28	88	49	القصص	The History	Al-Qasas	طسم
-29	69	85	العنكبوت	The Spider	Al-‘Ankaboot	الم
-30	60	84	الروم	The Romans	Al-Room	الم
-31	34	57	لقمان	Luqmaan	Luqmãn	الم
-32	30	75	السجدة	Prostration	Al-Sajdah	الم
-33	73	90	الأحزاب	The Parties	Al-Ahzãb	
-34	54	58	سبإ	Sheba	Saba’	
-35	45	43	فاطر	Initiator	Fãter	
-36	83	41	يس	Y-S	YãSîn	يس
-37	182	56	الصّافات	The Arrangers	Al-Sãffãt	
-38	88	38	ص	S	Saad	ص
-39	75	59	الزُّمر	The Throngs	Al-Zumar	
-40	85	60	غافر	Forgiver	Ghãfer	حم
-41	54	61	فصلت	Detailed	Fussilat	حم
-42	53	62	الشورى	Consultation	Al-Shoorã	حمعسق
-43	89	63	الزخرف	The Ornaments	Al-Zukhruf	حم
-44	59	64	الدّخان	The Smoke	Al-Dukhãn	حم
-45	37	65	الجاثية	The Kneeling	Al-Jãtheyah	حم
-46	35	66	الأحقاف	The Dunes	Al-Ahqãf	حم
-47	38	95	محمد	Muhammed	Muḥammad	
-48	29	111	الفتح	Victory	Al-Fatt-h	
-49	18	106	الحجرات	The Walls	Al-Hujurãt	
-50	45	34	ق	Q	Qãf	ق
-51	60	67	الذاريات	Driver of the Winds	Al-Dhãreyãt	
-52	49	76	الطور	Mount Sinai	Al-Toor	
-53	62	23	النّجم	The Stars	Al-Najm	
-54	55	37	القمر	The Moon	Al-Qamar	
-55	78	97	الرحمن	The Gracious	Al-Rahmaan	
-56	96	46	الواقعة	The Inevitable	Al-Waaqe‘ah	
-57	29	94	الحديد	Iron	Al-Hadeed	
-58	22	105	المجادلة	The Debate	Al-Mujaadalah	
-59	24	101	الحشر	The Exodus	Al-Hashr	
-60	13	91	الممتحنة	The Test	Al-Mumtahanah	
-61	14	109	الصف	The Column	Al-Suff	
-62	11	110	الجمعة	Friday	Al-Jumu‘ah	
-63	11	104	المنافقون	The Hypocrites	Al-Munaafeqoon	
-64	18	108	التغابن	Mutual Blaming	Al-Taghaabun	
-65	12	99	الطلاق	Divorce	Al-Talaaq	
-66	12	107	التحريم	Prohibition	Al-Tahreem	
-67	30	77	الملك	Kingship	Al-Mulk	
-68	52	2	القلم	The Pen	Al-Qalam	ن
-69	52	78	الحاقة	Incontestable	Al-Haaqqah	
-70	44	79	المعارج	The Heights	Al-Ma‘aarej	
-71	28	71	نوح	Noah	Nuh	
-72	28	40	الجن	Jinns	Al-Jinn	
-73	20	3	المزمل	Cloaked	Al-Muzzammil	
-74	56	4	المدثر	The Hidden Secret	Al-Muddath-thir	
-75	40	31	القيامة	Resurrection	Al-Qeyaamah	
-76	31	98	الانسان	The Human	Al-Insaan	
-77	50	33	المرسلات	Dispatched	Al-Mursalaat	
-78	40	80	النبأ	The Event	Al-Naba’	
-79	46	81	النازعات	The Snatchers	Al-Naaze‘aat	
-80	42	24	عبس	He Frowned	Abasa	
-81	29	7	التكوير	The Rolling	Al-Takweer	
-82	19	82	الانفطار	The Shattering	Al-Infitaar	
-83	36	86	المطففين	The Cheaters	Al-Mutaffifeen	
-84	25	83	الانشقاق	The Rupture	Al-Inshiqaaq	
-85	22	27	البروج	The Galaxies	Al-Burooj	
-86	17	36	الطارق	The Bright Star	Al-Taareq	
-87	19	8	الأعلى	The Most High	Al-A‘alaa	
-88	26	68	الغاشية	Overwhelming	Al-Ghaasheyah	
-89	30	10	الفجر	Dawn	Al-Fajr	
-90	20	35	البلد	The Town	Al-Balad	
-91	15	26	الشمس	The Sun	Al-Shams	
-92	21	9	الليل	The Night	Al-Layl	
-93	11	11	الضحى	The Forenoon	Al-Duhaa	
-94	8	12	الشرح	Cooling the Temper	Al-Sharrhh	
-95	8	28	التين	The Fig	Al-Teen	
-96	19	1	العلق	The Embryo	Al-‘Alaq	
-97	5	25	القدر	The Destiny	Al-Qadr	
-98	8	100	البينة	The Proof	Al-Bayyinah	
-99	8	93	الزلزلة	The Quake	Al-Zalzalah	
-100	11	14	العاديات	The Gallopers	Al-‘Aadeyaat	
-101	11	30	القارعة	The Shocker	Al-Qaare‘ah	
-102	8	16	التكاثر	Hoarding	Al-Takaathur	
-103	3	13	العصر	The Afternoon	Al-‘Asr	
-104	9	32	الهمزة	The Backbiter	Al-Humazah	
-105	5	19	الفيل	The Elephant	Al-Feel	
-106	4	29	قريش	Quraish Tribe	The Quraish Tribe	
-107	7	17	الماعون	Charity	Al-Maa‘oon	
-108	3	15	الكوثر	Bounty	Al-Kawthar	
-109	6	18	الكافرون	The Disbelievers	Al-Kaaferoon	
-110	3	114	النّصر	Triumph	Al-Nassr	
-111	5	6	المسد	Thorns	Al-Masad	
-112	4	22	الإخلاص	Absoluteness	Al-Ikhlaas	
-113	5	20	الفلق	Daybreak	Al-Falaq	
-114	6	21	الناس	People	Al-Naas	
+chapter	verses	revelation_order	revelation_place	name_arabic	name_english	name_transliterated	initials
+1	7	5	Makkah	الفاتحة	The Key	Al-Fãtehah	
+2	286	87	Medina	البقرة	The Heifer	Al-Baqarah	الم
+3	200	89	Medina	آل عمران	The Amramites	Ãli-'Imrãn	الم
+4	176	92	Medina	النساء	The Women	Al-Nesa'	
+5	120	112	Medina	المائدة	The Feast	Al-Ma'edah	
+6	165	55	Makkah	الأنعام	The Livestock	Al-An'am	
+7	206	39	Makkah	الأعراف	The Purgatory	Al-A'araf	المص
+8	75	88	Medina	الأنفال	The Spoils of War	Al-Anfal	
+9	127	113	Medina	براءة	Ultimatum	Bara'ah	
+10	109	51	Makkah	يونس	Jonah	Younus	الر
+11	123	52	Makkah	هود	Hood	Hud	الر
+12	111	53	Makkah	يوسف	Joseph	Yousuf	الر
+13	43	96	Medina	الرعد	The Thunder	Al-Ra'ad	المر
+14	52	72	Makkah	إبراهيم	Abraham	Ibrahîm	الر
+15	99	54	Makkah	الحجر	The Hijr Valley	Al-Hijr	الر
+16	128	70	Makkah	النّحل	The Bee	Al-Nahl	
+17	111	50	Makkah	بني إسرءيل	The Children of Israel	Banî Israel	
+18	110	69	Makkah	الكهف	The Cave	Al-Kahf	
+19	98	44	Makkah	مريم	Mary	Maryam	كهيعص
+20	135	45	Makkah	طه	T-H	TãHã	طه
+21	112	73	Makkah	الأنبياء	The Prophets	Al-Anbyã’	
+22	78	103	Medina	الحج	The Pilgrimage	Al-Hajj	
+23	118	74	Makkah	المؤمنون	The Believers	Al-Mu’minûn	
+24	64	102	Medina	النّور	The Light	Al-Noor	
+25	77	42	Makkah	الفرقان	The Statute Book	Al-Furqãn	
+26	227	47	Makkah	الشعراء	The Poets	Al-Shu‘arã’	طسم
+27	93	48	Makkah	النّمل	The Ant	Al-Naml	طس
+28	88	49	Makkah	القصص	The History	Al-Qasas	طسم
+29	69	85	Makkah	العنكبوت	The Spider	Al-‘Ankaboot	الم
+30	60	84	Makkah	الروم	The Romans	Al-Room	الم
+31	34	57	Makkah	لقمان	Luqmaan	Luqmãn	الم
+32	30	75	Makkah	السجدة	Prostration	Al-Sajdah	الم
+33	73	90	Medina	الأحزاب	The Parties	Al-Ahzãb	
+34	54	58	Makkah	سبإ	Sheba	Saba’	
+35	45	43	Makkah	فاطر	Initiator	Fãter	
+36	83	41	Makkah	يس	Y-S	YãSîn	يس
+37	182	56	Makkah	الصّافات	The Arrangers	Al-Sãffãt	
+38	88	38	Makkah	ص	S	Saad	ص
+39	75	59	Makkah	الزُّمر	The Throngs	Al-Zumar	
+40	85	60	Makkah	غافر	Forgiver	Ghãfer	حم
+41	54	61	Makkah	فصلت	Detailed	Fussilat	حم
+42	53	62	Makkah	الشورى	Consultation	Al-Shoorã	حمعسق
+43	89	63	Makkah	الزخرف	The Ornaments	Al-Zukhruf	حم
+44	59	64	Makkah	الدّخان	The Smoke	Al-Dukhãn	حم
+45	37	65	Makkah	الجاثية	The Kneeling	Al-Jãtheyah	حم
+46	35	66	Makkah	الأحقاف	The Dunes	Al-Ahqãf	حم
+47	38	95	Medina	محمد	Muhammed	Muḥammad	
+48	29	111	Medina	الفتح	Victory	Al-Fatt-h	
+49	18	106	Medina	الحجرات	The Walls	Al-Hujurãt	
+50	45	34	Makkah	ق	Q	Qãf	ق
+51	60	67	Makkah	الذاريات	Driver of the Winds	Al-Dhãreyãt	
+52	49	76	Makkah	الطور	Mount Sinai	Al-Toor	
+53	62	23	Makkah	النّجم	The Stars	Al-Najm	
+54	55	37	Makkah	القمر	The Moon	Al-Qamar	
+55	78	97	Medina	الرحمن	The Gracious	Al-Rahmaan	
+56	96	46	Makkah	الواقعة	The Inevitable	Al-Waaqe‘ah	
+57	29	94	Medina	الحديد	Iron	Al-Hadeed	
+58	22	105	Medina	المجادلة	The Debate	Al-Mujaadalah	
+59	24	101	Medina	الحشر	The Exodus	Al-Hashr	
+60	13	91	Medina	الممتحنة	The Test	Al-Mumtahanah	
+61	14	109	Medina	الصف	The Column	Al-Suff	
+62	11	110	Medina	الجمعة	Friday	Al-Jumu‘ah	
+63	11	104	Medina	المنافقون	The Hypocrites	Al-Munaafeqoon	
+64	18	108	Medina	التغابن	Mutual Blaming	Al-Taghaabun	
+65	12	99	Medina	الطلاق	Divorce	Al-Talaaq	
+66	12	107	Medina	التحريم	Prohibition	Al-Tahreem	
+67	30	77	Makkah	الملك	Kingship	Al-Mulk	
+68	52	2	Makkah	القلم	The Pen	Al-Qalam	ن
+69	52	78	Makkah	الحاقة	Incontestable	Al-Haaqqah	
+70	44	79	Makkah	المعارج	The Heights	Al-Ma‘aarej	
+71	28	71	Makkah	نوح	Noah	Nuh	
+72	28	40	Makkah	الجن	Jinns	Al-Jinn	
+73	20	3	Makkah	المزمل	Cloaked	Al-Muzzammil	
+74	56	4	Makkah	المدثر	The Hidden Secret	Al-Muddath-thir	
+75	40	31	Makkah	القيامة	Resurrection	Al-Qeyaamah	
+76	31	98	Medina	الانسان	The Human	Al-Insaan	
+77	50	33	Makkah	المرسلات	Dispatched	Al-Mursalaat	
+78	40	80	Makkah	النبأ	The Event	Al-Naba’	
+79	46	81	Makkah	النازعات	The Snatchers	Al-Naaze‘aat	
+80	42	24	Makkah	عبس	He Frowned	Abasa	
+81	29	7	Makkah	التكوير	The Rolling	Al-Takweer	
+82	19	82	Makkah	الانفطار	The Shattering	Al-Infitaar	
+83	36	86	Makkah	المطففين	The Cheaters	Al-Mutaffifeen	
+84	25	83	Makkah	الانشقاق	The Rupture	Al-Inshiqaaq	
+85	22	27	Makkah	البروج	The Galaxies	Al-Burooj	
+86	17	36	Makkah	الطارق	The Bright Star	Al-Taareq	
+87	19	8	Makkah	الأعلى	The Most High	Al-A‘alaa	
+88	26	68	Makkah	الغاشية	Overwhelming	Al-Ghaasheyah	
+89	30	10	Makkah	الفجر	Dawn	Al-Fajr	
+90	20	35	Makkah	البلد	The Town	Al-Balad	
+91	15	26	Makkah	الشمس	The Sun	Al-Shams	
+92	21	9	Makkah	الليل	The Night	Al-Layl	
+93	11	11	Makkah	الضحى	The Forenoon	Al-Duhaa	
+94	8	12	Makkah	الشرح	Cooling the Temper	Al-Sharrhh	
+95	8	28	Makkah	التين	The Fig	Al-Teen	
+96	19	1	Makkah	العلق	The Embryo	Al-‘Alaq	
+97	5	25	Makkah	القدر	The Destiny	Al-Qadr	
+98	8	100	Medina	البينة	The Proof	Al-Bayyinah	
+99	8	93	Medina	الزلزلة	The Quake	Al-Zalzalah	
+100	11	14	Makkah	العاديات	The Gallopers	Al-‘Aadeyaat	
+101	11	30	Makkah	القارعة	The Shocker	Al-Qaare‘ah	
+102	8	16	Makkah	التكاثر	Hoarding	Al-Takaathur	
+103	3	13	Makkah	العصر	The Afternoon	Al-‘Asr	
+104	9	32	Makkah	الهمزة	The Backbiter	Al-Humazah	
+105	5	19	Makkah	الفيل	The Elephant	Al-Feel	
+106	4	29	Makkah	قريش	Quraish Tribe	The Quraish Tribe	
+107	7	17	Makkah	الماعون	Charity	Al-Maa‘oon	
+108	3	15	Makkah	الكوثر	Bounty	Al-Kawthar	
+109	6	18	Makkah	الكافرون	The Disbelievers	Al-Kaaferoon	
+110	3	114	Medina	النّصر	Triumph	Al-Nassr	
+111	5	6	Makkah	المسد	Thorns	Al-Masad	
+112	4	22	Makkah	الإخلاص	Absoluteness	Al-Ikhlaas	
+113	5	20	Makkah	الفلق	Daybreak	Al-Falaq	
+114	6	21	Makkah	الناس	People	Al-Naas	

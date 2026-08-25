@@ -1,5 +1,5 @@
 import { BookOpen, CaretLeft, CaretRight, ListMagnifyingGlass, Sigma } from '@phosphor-icons/react'
-import type { ChapterInfo } from '../../lib/quranCode'
+import type { ChapterInfo, DivisionKindInfo, DivisionRef, VerseDivisions } from '../../lib/quranCode'
 import type { ScopeLevel } from '../../hooks/useQuranCode'
 
 interface ScopeBarProps {
@@ -15,6 +15,12 @@ interface ScopeBarProps {
   onLevelChange: (level: ScopeLevel) => void
   reading: 'verse' | 'chapter'
   onReadingChange: (reading: 'verse' | 'chapter') => void
+  divisionKinds: DivisionKindInfo[]
+  division: DivisionRef | null
+  onDivisionChange: (d: DivisionRef | null) => void
+  /** Which divisions the verse on screen sits in, so picking one starts from
+   * where the reader already is rather than from number 1. */
+  verseDivisions: VerseDivisions | null
   view: View
   hasResults: boolean
   hasTotals: boolean
@@ -51,6 +57,10 @@ export default function ScopeBar({
   onLevelChange,
   reading,
   onReadingChange,
+  divisionKinds,
+  division,
+  onDivisionChange,
+  verseDivisions,
   view,
   hasResults,
   hasTotals,
@@ -120,6 +130,42 @@ export default function ScopeBar({
             </button>
           )
         })}
+      </div>
+
+      {/* Part, group, quarter, station, bowing and page. One picker with the
+          kind as a parameter rather than five controls, and the number defaults
+          to whichever division the verse on screen is already in, so choosing
+          "page" answers a question about where the reader is standing. */}
+      <div className="flex items-center gap-1">
+        <select
+          aria-label="Division kind"
+          value={division?.kind ?? ''}
+          onChange={(e) => {
+            const kind = e.target.value as DivisionRef['kind'] | ''
+            if (!kind) return onDivisionChange(null)
+            onDivisionChange({ kind, number: verseDivisions?.[kind] ?? 1 })
+          }}
+          className="h-[24px] cursor-pointer rounded-md border border-ed-rule bg-ed-surface px-1.5 font-mono text-[10px] text-ed-fg-secondary outline-none transition-colors hover:border-ed-rule-strong focus:border-ed-accent"
+        >
+          <option value="">No division</option>
+          {divisionKinds.map((k) => (
+            <option key={k.id} value={k.id}>
+              {k.label}
+            </option>
+          ))}
+        </select>
+        {division && (
+          <Stepper
+            label="#"
+            value={division.number}
+            onStep={(delta) => {
+              const max =
+                divisionKinds.find((k) => k.id === division.kind)?.count ?? division.number
+              const next = Math.min(max, Math.max(1, division.number + delta))
+              onDivisionChange({ ...division, number: next })
+            }}
+          />
+        )}
       </div>
 
       {/* Reading, results and totals share the pane, so the switch belongs
