@@ -163,6 +163,25 @@ export async function safeInvoke<T>(cmd: string, args: Record<string, unknown> =
       return [] as T
     }
 
+    /* The research corpus is bundled into the Rust binary with include_str!,
+       so there is nothing for the browser preview to read. Failing by name
+       beats returning null and letting the surface crash on a missing field. */
+    case 'qc_metadata':
+    case 'qc_get_verse':
+    case 'qc_count':
+    case 'qc_letter_frequency':
+    case 'qc_compute_value':
+    case 'qc_find_text':
+    case 'qc_similarity':
+    case 'qc_find_by_number':
+    case 'qc_word_info':
+    case 'qc_roots':
+    case 'qc_get_chapter':
+    case 'qc_value_of_text':
+      throw new Error(
+        `${cmd} needs the desktop build: the QuranCode corpus is bundled into the Tauri binary.`
+      )
+
     default:
       return null as T
   }

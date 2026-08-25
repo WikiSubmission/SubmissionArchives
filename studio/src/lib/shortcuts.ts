@@ -1,7 +1,7 @@
 export interface CommandDefinition {
   id: string
   label: string
-  category: 'Navigation' | 'Editor' | 'Vault' | 'Quran' | 'View' | 'Media'
+  category: 'Navigation' | 'Editor' | 'Vault' | 'Quran' | 'View' | 'Media' | 'Research'
   defaultKeys: {
     windows: string
     mac: string
@@ -116,6 +116,21 @@ export const SYSTEM_COMMANDS: CommandDefinition[] = [
     category: 'Media',
     defaultKeys: { windows: 'Ctrl+Shift+Q', mac: 'Cmd+Shift+Q' },
     description: 'Insert the cue now playing as an academic blockquote',
+  },
+  {
+    id: 'research.open-qurancode',
+    label: 'Open QuranCode',
+    category: 'Research',
+    // Ctrl+Shift+Q is already the media cue-quote binding, so this takes K.
+    defaultKeys: { windows: 'Ctrl+Shift+K', mac: 'Cmd+Shift+K' },
+    description: 'Numeric and similarity research over the Quran corpus',
+  },
+  {
+    id: 'research.cite-finding',
+    label: 'Cite QuranCode Finding',
+    category: 'Research',
+    defaultKeys: { windows: 'Ctrl+Shift+V', mac: 'Cmd+Shift+V' },
+    description: 'Insert the current figure into the note as a re-checkable block',
   },
   {
     id: 'media.insert-timestamp',

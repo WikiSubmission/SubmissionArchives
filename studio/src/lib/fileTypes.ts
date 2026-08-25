@@ -1,6 +1,13 @@
 import { IconMap } from '../components/ui/Icons'
 
-export type FileKind = 'markdown' | 'image' | 'pdf' | 'video' | 'audio' | 'csv' | 'unknown'
+export type FileKind = 'markdown' | 'image' | 'pdf' | 'video' | 'audio' | 'csv' | 'qurancode' | 'unknown'
+
+/** The QuranCode surface opens as a tab on a sentinel path so it inherits the
+ * tab strip, the history stack, the split view and per-archive pane sizes. It
+ * is not a file, and everything that reads `fileKindOf` needs to know that:
+ * the editor, the autosave and the word-count status bar all stay out of its
+ * way on the strength of this one branch. */
+export const QC_TAB_PATH = 'qc://workspace'
 
 const IMAGE_EXTENSIONS = new Set(['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'bmp'])
 const VIDEO_EXTENSIONS = new Set(['mp4', 'webm', 'mov', 'mkv'])
@@ -13,6 +20,7 @@ export function extensionOf(path: string): string {
 }
 
 export function fileKindOf(path: string): FileKind {
+  if (path === QC_TAB_PATH) return 'qurancode'
   const ext = extensionOf(path)
   if (ext === 'md' || ext === 'markdown') return 'markdown'
   if (ext === 'pdf') return 'pdf'

@@ -14,6 +14,8 @@ import SettingsModal from './components/SettingsModal'
 import WhatsNewModal from './components/WhatsNewModal'
 import ImportWizardModal from './components/import/ImportWizardModal'
 import CanvasView from './components/canvas/CanvasView'
+import QuranCodeSurface from './components/qurancode/QuranCodeSurface'
+import { citeCurrentFinding } from './lib/quranCodeBus'
 import type { SplitPaneState } from './components/workspace/splitPaneState'
 import WorkspaceLayout from './components/workspace/WorkspaceLayout'
 import PaneSwitcher, { type PaneVisibility } from './components/workspace/PaneSwitcher'
@@ -29,13 +31,16 @@ import { useRecentNotes } from './hooks/useRecentNotes'
 import { SettingsProvider, useSettings } from './hooks/useSettings'
 import { useShortcuts } from './hooks/useShortcuts'
 import { useWhatsNew } from './hooks/useWhatsNew'
-import { fileKindOf } from './lib/fileTypes'
+import { fileKindOf, QC_TAB_PATH } from './lib/fileTypes'
 import { mediaBus } from './lib/mediaBus'
 import logoMark from './assets/submission-archives-mark.png'
 import { Gear as SettingsIcon, Moon, Sparkle, Sun } from '@phosphor-icons/react'
 import './App.css'
 
 function stemOf(path: string): string {
+  // The surface is not a file, so its sentinel would otherwise show in the
+  // tab strip as the meaningless last segment of `qc://workspace`.
+  if (path === QC_TAB_PATH) return 'QuranCode'
   const base = path.split(/[\\/]/).pop() ?? path
   return base
 }
@@ -107,7 +112,8 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   const handleOpenFile = useCallback(
     (path: string) => {
       if (!path || typeof path !== 'string') return
-      recordOpen(path)
+      // The surface is not a note, so it never enters the recent-notes list.
+      if (path !== QC_TAB_PATH) recordOpen(path)
       setActiveFilePath(path)
 
       // Add to tabs if not present
@@ -126,6 +132,12 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
     },
     [historyPointer, recordOpen]
   )
+
+  /* QuranCode opens as a tab rather than a modal or an inspector pane, which is
+     what gives it split-view against the note being written, a place in the
+     history stack and per-archive pane sizes. `handleOpenFile` does the rest:
+     the sentinel is just another tab as far as the tab strip is concerned. */
+  const openQuranCode = useCallback(() => handleOpenFile(QC_TAB_PATH), [handleOpenFile])
 
   const handleCloseTab = (path: string, e: React.MouseEvent) => {
     e.stopPropagation()
@@ -327,6 +339,10 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
     'view.toggle-split': handleToggleSplit,
     'view.open-settings': () => setSettingsOpen(true),
     'media.open-panel': openMediaNotes,
+    'research.open-qurancode': openQuranCode,
+    'research.cite-finding': () => {
+      if (!citeCurrentFinding()) openQuranCode()
+    },
   })
 
   const commands: PaletteCommand[] = [
@@ -345,6 +361,14 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
     { id: 'toggle-split', label: 'View: Split Pane Right', run: handleToggleSplit },
     { id: 'open-settings', label: 'Open vault settings', run: () => setSettingsOpen(true) },
     { id: 'open-media-notes', label: 'View: Media Notes (watch & cite lectures)', run: openMediaNotes },
+    { id: 'open-qurancode', label: 'Open QuranCode: numeric & similarity research', run: openQuranCode },
+    {
+      id: 'cite-qurancode',
+      label: 'Cite the current QuranCode figure into this note',
+      run: () => {
+        if (!citeCurrentFinding()) openQuranCode()
+      },
+    },
     { id: 'whats-new', label: "Help: What's New", run: () => whatsNew.open() },
     { id: 'import-wizard', label: 'Import: Launch Universal Import Wizard', run: () => setImportWizardOpen(true) },
     { id: 'import-files', label: 'Import individual files...', run: handleImportFiles },
@@ -364,6 +388,9 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
   const charCount = currentContent ? currentContent.length : 0
 
   const renderEditorPane = (path: string | null) => {
+    if (path === QC_TAB_PATH) {
+      return <QuranCodeSurface />
+    }
     if (!path) {
       return <HomeDashboard archivePath={archivePath} onOpenFile={handleOpenFile} />
     }
@@ -457,6 +484,8 @@ function StudioWorkspace({ archivePath, setArchivePath }: StudioWorkspaceProps) 
             onOpenCanvas={() => setCanvasOpen(true)}
             onOpenMediaNotes={openMediaNotes}
             mediaNotesOpen={inspectorOpen && inspectorTab === 'media'}
+            onOpenQuranCode={openQuranCode}
+            quranCodeOpen={activeFilePath === QC_TAB_PATH}
             onOpenSettings={() => setSettingsOpen(true)}
             inspectorOpen={inspectorOpen}
             onToggleInspector={() => setPaneVisible('inspector', !inspectorOpen)}

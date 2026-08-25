@@ -1,4 +1,5 @@
-import { CaretLeft, CaretRight, X, Plus, FileText, Columns } from '@phosphor-icons/react'
+import { CaretLeft, CaretRight, X, Plus, FileText, Columns, MathOperations } from '@phosphor-icons/react'
+import { QC_TAB_PATH } from '../lib/fileTypes'
 import { motion, springConfig } from './ui/Motion'
 
 export interface TabItem {
@@ -38,6 +39,9 @@ export default function TabHeader({
   // Extract relative breadcrumbs for active file
   const getBreadcrumbs = () => {
     if (!activeFilePath) return []
+    // The surface has no path inside the archive, so a breadcrumb trail of one
+    // sentinel segment would be noise.
+    if (activeFilePath === QC_TAB_PATH) return []
     let rel = activeFilePath
     if (activeFilePath.startsWith(archivePath)) {
       rel = activeFilePath.slice(archivePath.length).replace(/^[\\/]+/, '')
@@ -95,7 +99,11 @@ export default function TabHeader({
                     transition={springConfig}
                   />
                 )}
-                <FileText size={14} weight={isActive ? 'fill' : 'regular'} className={isActive ? 'text-ed-accent' : 'text-ed-fg-secondary'} />
+                {tab.path === QC_TAB_PATH ? (
+                  <MathOperations size={14} weight={isActive ? 'bold' : 'regular'} className={isActive ? 'text-ed-accent' : 'text-ed-fg-secondary'} />
+                ) : (
+                  <FileText size={14} weight={isActive ? 'fill' : 'regular'} className={isActive ? 'text-ed-accent' : 'text-ed-fg-secondary'} />
+                )}
                 <span className="truncate flex-1 tracking-tight">{tab.name}</span>
                 {tabs.length > 1 && (
                   <button

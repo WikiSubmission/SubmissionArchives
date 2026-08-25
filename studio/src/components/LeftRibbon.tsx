@@ -9,6 +9,7 @@ import {
   FilePlus,
   TreeStructure,
   VideoCamera,
+  MathOperations,
 } from '@phosphor-icons/react'
 import { motion, springSnappy } from './ui/Motion'
 
@@ -22,6 +23,8 @@ interface LeftRibbonProps {
   onOpenCanvas?: () => void
   onOpenMediaNotes?: () => void
   mediaNotesOpen?: boolean
+  onOpenQuranCode?: () => void
+  quranCodeOpen?: boolean
   onOpenSettings: () => void
   inspectorOpen: boolean
   onToggleInspector: () => void
@@ -38,6 +41,8 @@ export default function LeftRibbon({
   onOpenCanvas,
   onOpenMediaNotes,
   mediaNotesOpen,
+  onOpenQuranCode,
+  quranCodeOpen,
   onOpenSettings,
   inspectorOpen,
   onToggleInspector,
@@ -152,6 +157,27 @@ export default function LeftRibbon({
             }`}
           >
             <VideoCamera size={18} weight={mediaNotesOpen ? 'fill' : 'regular'} />
+          </motion.button>
+        )}
+
+        {/* QuranCode closes the group, directly under Media Notes: the two are
+            the research surfaces, and they share an active-state treatment so
+            they read as siblings rather than as unrelated tools. */}
+        {onOpenQuranCode && (
+          <motion.button
+            whileHover={{ scale: 1.05, y: -1 }}
+            whileTap={{ scale: 0.92 }}
+            transition={springSnappy}
+            onClick={onOpenQuranCode}
+            aria-label="QuranCode"
+            title="QuranCode: numeric & similarity research (Ctrl+Shift+K)"
+            className={`tactile p-2 rounded-lg transition-colors ${
+              quranCodeOpen
+                ? 'text-ed-accent bg-ed-accent-soft border border-ed-accent/25 shadow-xs'
+                : 'text-ed-fg-muted hover:text-ed-accent hover:bg-ed-accent-soft'
+            }`}
+          >
+            <MathOperations size={18} weight={quranCodeOpen ? 'fill' : 'regular'} />
           </motion.button>
         )}
       </div>
