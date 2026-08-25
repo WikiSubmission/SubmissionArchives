@@ -626,6 +626,7 @@ impl DivisionKind {
 }
 
 /// One division, as an inclusive range of addresses.
+#[allow(dead_code)]
 pub struct Division {
     pub kind: DivisionKind,
     pub number: u32,
@@ -748,6 +749,7 @@ pub struct DivisionRef {
     pub number: u32,
 }
 
+#[allow(dead_code)]
 pub struct Prostration {
     pub chapter: u32,
     pub verse: u32,

@@ -178,6 +178,9 @@ export async function safeInvoke<T>(cmd: string, args: Record<string, unknown> =
     case 'qc_roots':
     case 'qc_get_chapter':
     case 'qc_value_of_text':
+    case 'qc_aggregate':
+    case 'qc_ledger':
+    case 'qc_claims':
       throw new Error(
         `${cmd} needs the desktop build: the QuranCode corpus is bundled into the Tauri binary.`
       )
