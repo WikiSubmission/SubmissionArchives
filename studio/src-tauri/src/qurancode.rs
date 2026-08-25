@@ -34,6 +34,8 @@ const ROOTS_TSV: &str = include_str!("../assets/qurancode/roots.tsv");
 const TEXT_MODES_JSON: &str = include_str!("../assets/qurancode/text_modes.json");
 const ABJAD_STANDARD_JSON: &str =
     include_str!("../assets/qurancode/value_systems/abjad_standard.json");
+const ABJAD_MAGHRIBI_JSON: &str =
+    include_str!("../assets/qurancode/value_systems/abjad_maghribi.json");
 const COUNTS_ONLY_JSON: &str = include_str!("../assets/qurancode/value_systems/counts_only.json");
 
 /* ── the bundled configuration ─────────────────────────────────────────── */
@@ -549,7 +551,7 @@ static VALUE_SYSTEMS: OnceLock<Vec<ValueSystem>> = OnceLock::new();
 
 pub fn value_systems() -> &'static Vec<ValueSystem> {
     VALUE_SYSTEMS.get_or_init(|| {
-        [ABJAD_STANDARD_JSON, COUNTS_ONLY_JSON]
+        [ABJAD_STANDARD_JSON, ABJAD_MAGHRIBI_JSON, COUNTS_ONLY_JSON]
             .iter()
             .filter_map(|json| serde_json::from_str::<RawValueSystem>(json).ok())
             .map(|raw| ValueSystem {
@@ -2343,6 +2345,24 @@ pub fn value_of_text(
 mod tests {
     use super::*;
 
+    /// The two classical orderings agree up to nun and diverge after it, which
+    /// is the whole reason both are bundled: a value quoted without naming its
+    /// ordering is ambiguous between them.
+    #[test]
+    fn the_two_abjad_orderings_agree_early_and_diverge_late() {
+        let std = find_value_system("abjad_standard").unwrap();
+        let mag = find_value_system("abjad_maghribi").unwrap();
+        let v = |sys: &ValueSystem, c: char| sys.values[(c as u32 - BLOCK_LO) as usize];
+
+        for c in "ابجدهوزحطيكلمن".chars() {
+            assert_eq!(v(std, c), v(mag, c), "{} should agree in both orderings", c);
+        }
+        assert_eq!((v(std, 'ص'), v(mag, 'ص')), (90, 60));
+        assert_eq!((v(std, 'س'), v(mag, 'س')), (60, 300));
+        assert_eq!((v(std, 'ش'), v(mag, 'ش')), (300, 1000));
+        assert_eq!((v(std, 'غ'), v(mag, 'غ')), (1000, 900));
+    }
+
     fn cfg() -> &'static Config {
         config().expect("bundled text_modes.json must parse")
     }
@@ -2408,7 +2428,7 @@ mod tests {
     }
 
     #[test]
-    fn al_fatiha_reproduces_the_primalogy_basis() {
+    fn al_fatiha_reproduces_the_published_counts() {
         let scope = Scope {
             chapter: Some(1),
             ..Scope::default()

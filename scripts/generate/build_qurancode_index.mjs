@@ -248,7 +248,7 @@ function buildFixtures(words) {
   const fatihaLetters = fatiha.map((w) => foldWord(w.uthmani, 'simplified29')).join('')
   add('fatiha_verses', 'simplified29', 'Al-Fatiha verses', 7, new Set(fatiha.map((w) => w.verse)).size)
   add('fatiha_words', 'simplified29', 'Al-Fatiha words', 29, fatiha.length)
-  add('fatiha_letters', 'simplified29', 'Al-Fatiha letters (Primalogy basis)', 139, fatihaLetters.length)
+  add('fatiha_letters', 'simplified29', 'Al-Fatiha letters', 139, fatihaLetters.length)
 
   const corpusLetters = canonical.map((w) => foldWord(w.uthmani, 'simplified29')).join('')
   add('corpus_chapters', 'simplified29', 'corpus chapters', 114, new Set(canonical.map((w) => w.chapter)).size)
@@ -375,6 +375,16 @@ const ABJAD_STANDARD = {
   'ظ': 900, 'غ': 1000,
 }
 
+/* The Western ordering, which diverges from the Eastern one after ن: the
+ * s/sh/d/z group is permuted, so ص takes 60 where the Eastern order gives it
+ * 90. Both are classical; a value quoted without saying which is ambiguous. */
+const ABJAD_MAGHRIBI = {
+  'ا': 1, 'ء': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9,
+  'ي': 10, 'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'ص': 60, 'ع': 70, 'ف': 80, 'ض': 90,
+  'ق': 100, 'ر': 200, 'س': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ظ': 800,
+  'غ': 900, 'ش': 1000,
+}
+
 const VALUE_SYSTEMS = [
   {
     id: 'abjad_standard',
@@ -385,6 +395,14 @@ const VALUE_SYSTEMS = [
     letter_values: ABJAD_STANDARD,
   },
   {
+    id: 'abjad_maghribi',
+    name: 'Abjad Maghribi',
+    author: 'classical (Western ordering)',
+    text_mode: 'simplified29',
+    note: 'The Western ordering. Diverges from the standard after nun; sad is 60, not 90.',
+    letter_values: ABJAD_MAGHRIBI,
+  },
+  {
     id: 'counts_only',
     name: 'None (counts only)',
     author: null,
@@ -392,15 +410,6 @@ const VALUE_SYSTEMS = [
     note: 'No valuation. Every letter scores zero, so the readout shows counts alone.',
     letter_values: Object.fromEntries(Object.keys(ABJAD_STANDARD).map((k) => [k, 0])),
   },
-]
-
-/* Primalogy is deliberately absent. It is the system the module most wants,
- * and its table is Ali Adams' own assignment of primes across the 29 letters,
- * which is not reproducible from the published description alone. Inventing
- * numbers for it would put fabricated values behind a real author's name.
- * Bundle the table when it can be sourced; the loader already accepts it. */
-const UNBUNDLED = [
-  { id: 'primalogy', name: 'Primalogy', author: 'Ali Adams', reason: 'letter-value table not yet sourced' },
 ]
 
 /* The toggle row's copy. The ids come from the shared fold module; the wording
@@ -639,7 +648,6 @@ function main() {
   console.log(`${TAG} segmentation ${(seg.rate * 100).toFixed(2)}% (${seg.aligned.toLocaleString('en-US')} of ${seg.rooted.toLocaleString('en-US')}), ${seg.unaligned.length} unaligned`)
   console.log(`${TAG} fixtures ${verified.length} verified, ${gaps.length} known gaps:`)
   for (const g of gaps) console.log(`${TAG}   ${g.id}: computed ${g.actual}, published ${g.expected}`)
-  for (const v of UNBUNDLED) console.log(`${TAG} value system not bundled: ${v.name} (${v.reason})`)
 }
 
 main()

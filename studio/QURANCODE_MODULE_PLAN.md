@@ -67,7 +67,7 @@ Both are already on Khalifa's numbering: 6,234 verses, `sum(chapter_verses) = 62
 
 QuranCode's feature list names its text modes: **`Simplified29`**, `Simplified30`, `WawSimplified29`, `ShaddasSimplified29`. These are letter-set normalizations, and every count in the app is relative to one. The old app's Statistics header confirms the mechanism directly: under the mode name sits **a row of per-mark checkboxes**, one of them tooltipped *"Hamza above horizontal line as letter"*, alongside a `base < 10 >` radix control and a `/ < 19 >` divisor control. Whether a given hamza or mark form counts as a letter is a **toggle**, not a fixed property of the mode.
 
-**Simplified29 reproduces Primalogy's basis exactly.** Fold the words CSV's Uthmani column: drop all marks including the silent and superscript diacritics, the tatweel and the stray hyphen; fold `أ إ آ ٱ` to `ا`, `ؤ` to `و`, `ئ` to `ي`, `ة` to `ه`, `ى` to `ي`. The result is exactly 29 distinct letters:
+**Simplified29 reproduces the 29-letter basis exactly.** Fold the words CSV's Uthmani column: drop all marks including the silent and superscript diacritics, the tatweel and the stray hyphen; fold `أ إ آ ٱ` to `ا`, `ؤ` to `و`, `ئ` to `ي`, `ة` to `ه`, `ى` to `ي`. The result is exactly 29 distinct letters:
 
 ```
 ء ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي
@@ -118,7 +118,7 @@ Sizing the table this implies: across the six الم suras the deficit is **1,12
 
 `text_modes.json` therefore carries an `alif_overrides` map, empty today, keyed on the word form. The cheapest way to populate it is to **diff QuranCode's own Simplified29 letter stream against ours word by word** and record the disagreements, which the open-source decision (§0.5) makes straightforward. Until it is populated, alif-dependent totals ship labelled unverified.
 
-**Architectural conclusion.** There is no single true letter count. Simplified29 is fully verified against Primalogy's basis. The published-figures mode is verified for every unambiguous letter and unresolved for alif. `text_mode` plus its per-mark toggles is therefore a first-class, switchable axis of the whole module, and no number may ever be displayed without the mode, the toggles, and the verification state that produced it. This is §2.2 and §5.6, and it is the single most important design decision in this plan.
+**Architectural conclusion.** There is no single true letter count. Simplified29 is fully verified against the 29-letter basis. The published-figures mode is verified for every unambiguous letter and unresolved for alif. `text_mode` plus its per-mark toggles is therefore a first-class, switchable axis of the whole module, and no number may ever be displayed without the mode, the toggles, and the verification state that produced it. This is §2.2 and §5.6, and it is the single most important design decision in this plan.
 
 ### 0.4 What the repo still does not have
 
@@ -221,7 +221,7 @@ A nested `PanelGroup`: the pattern `WorkspaceLayout` already uses for splits:
 │  Simplified29│                                │                  │
 │  ─────────── │                                │  Letter freq     │
 │  value system│                                │  ا 12  ل 9  …    │
-│  Primalogy   │                                │                  │
+│  Abjad std   │                                │                  │
 └──────────────┴────────────────────────────────┴──────────────────┘
 ```
 
@@ -268,7 +268,7 @@ One scan produces everything, the `scan_archive` philosophy applied to scripture
   },
   "simplified29": {
     "label": "Simplified 29",
-    "description": "29-letter alphabet. Reproduces Primalogy's basis: Al-Fatiha 7/29/139.",
+    "description": "29-letter alphabet. Al-Fatiha 7/29/139.",
     "drop":  ["064B-0655", "0670", "0640", "06D6-06ED", "002D"],
     "fold":  { "0671":"0627", "0622":"0627", "0623":"0627", "0625":"0627",
                "0624":"0648", "0626":"064A", "0629":"0647", "0649":"064A" },
@@ -442,16 +442,16 @@ One JSON file per system in `assets/qurancode/value_systems/`. A system **declar
 
 ```json
 {
-  "id": "primalogy",
-  "name": "Primalogy",
-  "author": "Ali Adams",
+  "id": "abjad_standard",
+  "name": "Abjad standard",
+  "author": "classical (hisab al-jummal)",
   "text_mode": "simplified29",
-  "note": "Prime-number system derived from Al-Fatiha (7 verses, 29 words, 139 letters).",
-  "letter_values": { "ء": 1, "ا": 2, "ب": 3, "…": 0 }
+  "note": "The classical Arabic gematria order. Hamza carriers take the value of their seat.",
+  "letter_values": { "ا": 1, "ء": 1, "ب": 2, "…": 0 }
 }
 ```
 
-Ship: `primalogy`, `abjad_standard`, `abjad_kabir`. Load user systems from `<archive>/.studio/value_systems/*.json`, the archive already owns `settings.json`, `theme.css` and folder icons, so this is the established shape and needs no new Rust plumbing beyond a directory read. Live editing with persistence (a QuranCode feature) is 9g.
+Ship: `abjad_standard`, `abjad_maghribi`, `counts_only`. Load user systems from `<archive>/.studio/value_systems/*.json`, the archive already owns `settings.json`, `theme.css` and folder icons, so this is the established shape and needs no new Rust plumbing beyond a directory read. Live editing with persistence (a QuranCode feature) is 9g.
 
 ### 4.2 The 19 modifiers
 
@@ -470,7 +470,7 @@ pub struct ValueModifiers {
 
 **UX consequence, and it is the big one for modernization.** The old app exposes these as 19 checkboxes plus an `L W V S Cs #` / `S H C P G Q V B` matrix: a combinatorial space of ~500 k configurations with no indication which are meaningful. Any conclusion is reachable by clicking enough boxes.
 
-The module therefore ships **named presets first** ("Simple value", "Value + letter positions", "Primalogy standard"), with the raw matrix behind a "Custom…" disclosure that is honest about what it is: a search over half a million combinations. When a custom combination is active, the readout says so, and every copied figure carries the full modifier set. Progressive disclosure here is not tidiness; it is the difference between a research instrument and a slot machine.
+The module therefore ships **named presets first** ("Simple value", "Value + letter positions", "Abjad standard"), with the raw matrix behind a "Custom…" disclosure that is honest about what it is: a search over half a million combinations. When a custom combination is active, the readout says so, and every copied figure carries the full modifier set. Progressive disclosure here is not tidiness; it is the difference between a research instrument and a slot machine.
 
 ---
 
@@ -549,7 +549,7 @@ Against the screenshot's nine simultaneous dense panels:
 `Ctrl+Shift+V` (or a row button) inserts the active finding at the cursor of whichever pane holds the active-editor slot, `mediaBus`'s registry mechanism, reused. Serialization follows the established directive form so notes stay portable Markdown outside Studio:
 
 ```
-::: qcvalue {ref="33:33" system="primalogy" mode="simplified29" value="1368"} :::
+::: qcvalue {ref="33:33" system="abjad_standard" mode="simplified29" value="1368"} :::
 ```
 
 A `QuranCodeFinding` Tiptap node renders it, recomputes on load, and **flags a mismatch loudly** if the stored value no longer reproduces, a note that silently drifts from its own data is worse than no note. This answers the superseded plan's open question about `/qcvalue`: yes, and the recompute-and-verify behaviour is the reason it is worth doing rather than pasting a number.
@@ -618,7 +618,7 @@ Emits into `studio/src-tauri/assets/qurancode/`, 7.9 MB: `words.tsv`, `verses.ts
 **Two departures from the plan as written, both deliberate.**
 
 - **No `letters.bin`.** The fold depends on the active text mode *and* the user's mark toggles, both of which are runtime state, so a prebuilt letter index would have to be rebuilt the moment a checkbox moved. Rust builds it per mode behind a `OnceLock`, the way `quran.rs` already indexes the bundled CSV. Emitting a binary blob from a JS generator and parsing it in Rust would have been a format contract bought for nothing.
-- **Primalogy is not bundled.** Its table is Ali Adams' own assignment of primes across the 29 letters and is not reproducible from the published description. Shipping invented numbers under a real author's name is worse than shipping without the system, so `abjad_standard` and `counts_only` go out and the loader already accepts Primalogy when the table can be sourced.
+- **Primalogy is out of scope, and the earlier reason for that was wrong.** This plan previously said the table was not reproducible from the published description. It is: QuranCode generates it as `Simplified29_Alphabet_Primes`, the 29 letters in alphabet order valued at the primes including 1 (`ء`=1, `ا`=2, `ب`=3, `ت`=5 … `ي`=107), and the table ships in that repo's `Server/Values/Offline/` under GPL-3.0. It is excluded because the module's subject is Code 19 arithmetic over counts and classical gematria, not prime valuation. `abjad_standard`, `abjad_maghribi` and `counts_only` ship.
 
 The generator **refuses to write** on any failed invariant rather than emitting a degraded dataset, and `--check` fails CI on file drift as well as on fixture drift.
 *Accepted:* **31 fixtures verified, 7 known gaps.** Al-Fatiha 7 / 29 / 139. Corpus 114 / 6,234 / 77,401 words / 325,273 letters / 29 distinct letters. ح+م = 2,147, ص = 152, ق = 114, ن = 133, ط = 28 and 27, س = 48, ه+ة = 175 and 251, ي in sura 19 = 343, all twelve lam and mim fixtures exact, الم grand total 19,874. 1,782 roots with 30 words uncovered, those being the initial-letter groups. Segmentation 98.84%, 76,472 of 77,371.
@@ -663,7 +663,7 @@ The seven gaps are the six alif counts and ي in sura 36 (241 computed against 2
 
 *Accepted:* a bare value agrees with `qc_count` for the same scope, which is the property that keeps the two engines honest. Each modifier's contribution is asserted exactly — `letter_number_in_word` adds each word's triangular number, `chapter_number` adds the chapter once per letter. The breakdown is capped at 400 rows so a corpus request cannot return 325,273. The active modifier set travels in the result and into any copied figure.
 
-**Primalogy is still not bundled**, for the reason given in 9a. `abjad_standard` and `counts_only` ship; the loader accepts Primalogy the moment its table can be sourced.
+**Primalogy is out of scope**, for the reason restated in 9a. `abjad_standard`, `abjad_maghribi` and `counts_only` ship.
 
 **9e, Search. ✅ SHIPPED.**
 `qc_find_text` (exact, proximity, root, with location and wordness filters and `-`/`+` term sigils), `qc_similarity` (Levenshtein, four methods), `qc_find_by_number`, `qc_word_info` and `qc_roots`. Frontend: `QueryPane` with four tabs and a windowed `ResultsList`.
@@ -705,7 +705,7 @@ The alif calibration (§8 Q4) is independent of the phase order and can land in 
 
 **Q4, populate `alif_overrides`.** No longer a research question. The rule is per word: a hamza that reads as an alif in one word reads as one in every occurrence of that word and its derivatives (§0.3). The table needs roughly 39% of a 2,907-occurrence hamza pool to resolve to alif across the six الم suras, spanning 948 distinct forms there and 3,749 corpus-wide. The cheapest way to populate it is a word-by-word diff of QuranCode's own Simplified29 letter stream against ours. The sura-30 lam discrepancy is already resolved and the ya residual in sura 36 is four letters, so alif is the only one left. **Not blocking**; 9a shipped with the gaps encoded rather than hidden.
 
-**Q5, is `qc_*` reachable from the editor without the surface?** A `/qcvalue 1:1 primalogy` slash command is a natural extension of the existing directive machinery. Recommendation: **not before 9f.** The surface has to teach what a value *is* before a slash command can be used responsibly.
+**Q5, is `qc_*` reachable from the editor without the surface?** A `/qcvalue 1:1 abjad_standard` slash command is a natural extension of the existing directive machinery. Recommendation: **not before 9f.** The surface has to teach what a value *is* before a slash command can be used responsibly.
 
 ---
 

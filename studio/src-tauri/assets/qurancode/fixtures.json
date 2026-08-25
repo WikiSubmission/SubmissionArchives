@@ -24,7 +24,7 @@
     {
       "id": "fatiha_letters",
       "mode": "simplified29",
-      "description": "Al-Fatiha letters (Primalogy basis)",
+      "description": "Al-Fatiha letters",
       "expected": 139,
       "actual": 139,
       "pass": true,

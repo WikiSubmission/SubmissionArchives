@@ -7,8 +7,8 @@
  * Two things here are not obvious and are load-bearing:
  *
  * 1. The folds are per text mode, not global. There is no single true letter
- *    count. Simplified29 collapses the script to a 29-letter alphabet, which
- *    reproduces Primalogy's basis (Al-Fatiha 7/29/139). The published-figures
+ *    count. Simplified29 collapses the script to a 29-letter alphabet and
+ *    reproduces Al-Fatiha at 7/29/139. The published-figures
  *    mode folds only alef wasla and teh marbuta, which is what Dr. Khalifa's
  *    Appendix 1 counts turn out to require.
  *
