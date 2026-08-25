@@ -8,6 +8,7 @@ import { open } from '@tauri-apps/plugin-dialog'
 import DragHandle from '@tiptap/extension-drag-handle-react'
 import { DotsSixVertical } from '@phosphor-icons/react'
 import { QuranEmbed } from './extensions/QuranEmbed'
+import { QuranCodeFinding } from './extensions/QuranCodeFinding'
 import { QuranEmbedInline } from './extensions/QuranEmbedInline'
 import { Callout } from './extensions/Callout'
 import { ArabicBlock } from './extensions/ArabicBlock'
@@ -134,6 +135,7 @@ export default function Editor({
     extensions: [
       StarterKit,
       QuranEmbed,
+      QuranCodeFinding,
       QuranEmbedInline,
       Callout,
       ArabicBlock,
