@@ -1,0 +1,1199 @@
+<title>QuranCode Surface</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Source+Serif+4:opsz,wght@8..60,400..700&family=JetBrains+Mono:wght@400;500;700&family=Amiri:wght@400;700&display=swap">
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   Tokens are Studio's own, copied name-for-name from studio/src/App.css:
+   "Illuminated Archival Paper" (light) and "Midnight Obsidian" (dark),
+   plus the Quran embed's --qv-* "Ink on Parchment" sub-brand.
+   Nothing here is invented for the mockup.
+   ═══════════════════════════════════════════════════════════════════ */
+:root {
+  --ed-bg: #FBF9F5;           --ed-bg-secondary: #F2ECE3;   --ed-bg-tertiary: #E6DFD4;
+  --ed-surface: #F2ECE3;      --ed-surface-strong: #E6DFD4; --ed-surface-raised: #FFFFFF;
+  --ed-fg: #1C1A18;           --ed-fg-secondary: #524B45;   --ed-fg-muted: #736B63;  --ed-fg-faint: #9C9389;
+  --ed-rule: #E5DFD5;         --ed-rule-strong: #D5CCC0;
+  --ed-accent: #B86233;       --ed-accent-strong: #9E4F24;
+  --ed-accent-soft: rgba(184,98,51,.09);
+  --ed-gold: #9C7A3C;         --ed-gold-soft: rgba(156,122,60,.12);
+  --ed-success: #3F6B4A;      --ed-success-soft: rgba(63,107,74,.10);
+  --ed-danger: #A33B2A;       --ed-danger-soft: rgba(163,59,42,.10);
+  --ed-on-accent: #FFFFFF;
+  --ed-shadow-sm: 0 1px 2px rgba(30,25,20,.06);
+  --ed-shadow-md: 0 2px 6px rgba(30,25,20,.07), 0 8px 22px -14px rgba(30,25,20,.14);
+  --ed-shadow-lg: 0 4px 14px rgba(30,25,20,.08), 0 18px 44px -22px rgba(30,25,20,.20);
+  --ed-cat-1:#2F5D7C; --ed-cat-2:#A33B2A; --ed-cat-3:#B07D2B; --ed-cat-4:#6B4E8C; --ed-cat-5:#3F6B4A;
+
+  /* Quran embed, light theme: framed inset, no elevation */
+  --qv-bg:#F7F2E8; --qv-fg:#1A1715; --qv-muted:rgba(26,23,21,.65); --qv-subtle:rgba(26,23,21,.5);
+  --qv-accent:#6B3410; --qv-border:rgba(107,52,16,.28); --qv-tint:rgba(107,52,16,.05);
+  --qv-tint-strong:rgba(107,52,16,.16); --qv-divider:rgba(26,23,21,.08); --qv-shadow:none;
+
+  --font-sans:"DM Sans","Inter",system-ui,sans-serif;
+  --font-serif:"Source Serif 4",Georgia,serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,monospace;
+  --font-arabic:"Amiri",serif;
+
+  --r-sm:4px; --r-md:6px; --r-lg:8px; --r-xl:12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ed-bg:#0F0E0D; --ed-bg-secondary:#161514; --ed-bg-tertiary:#1C1B1A;
+    --ed-surface:#161514; --ed-surface-strong:#1C1B1A; --ed-surface-raised:#222120;
+    --ed-fg:#F5F0EB; --ed-fg-secondary:#9E9690; --ed-fg-muted:#6B6560; --ed-fg-faint:#4A4542;
+    --ed-rule:#2A2928; --ed-rule-strong:#353433;
+    --ed-accent:#C8794A; --ed-accent-strong:#D9916A; --ed-accent-soft:rgba(200,121,74,.10);
+    --ed-gold:#D4AF37; --ed-gold-soft:rgba(212,175,55,.14);
+    --ed-success:#7FA981; --ed-success-soft:rgba(127,169,129,.12);
+    --ed-danger:#E0715C; --ed-danger-soft:rgba(224,113,92,.12);
+    --ed-on-accent:#1C1A18;
+    --ed-shadow-sm:0 1px 2px rgba(0,0,0,.4);
+    --ed-shadow-md:0 2px 8px rgba(0,0,0,.45), 0 10px 28px -16px rgba(0,0,0,.6);
+    --ed-shadow-lg:0 6px 18px rgba(0,0,0,.5), 0 22px 52px -24px rgba(0,0,0,.7);
+    --ed-cat-1:#6E9DBF; --ed-cat-2:#E0715C; --ed-cat-3:#D9AE55; --ed-cat-4:#A88CC4; --ed-cat-5:#7FA981;
+    /* Quran embed, dark theme: parchment card floating above the chrome */
+    --qv-bg:#FBF8F1; --qv-border:rgba(107,52,16,.18); --qv-tint:rgba(107,52,16,.07);
+    --qv-shadow:var(--ed-shadow-md);
+  }
+}
+:root[data-theme="dark"] {
+  --ed-bg:#0F0E0D; --ed-bg-secondary:#161514; --ed-bg-tertiary:#1C1B1A;
+  --ed-surface:#161514; --ed-surface-strong:#1C1B1A; --ed-surface-raised:#222120;
+  --ed-fg:#F5F0EB; --ed-fg-secondary:#9E9690; --ed-fg-muted:#6B6560; --ed-fg-faint:#4A4542;
+  --ed-rule:#2A2928; --ed-rule-strong:#353433;
+  --ed-accent:#C8794A; --ed-accent-strong:#D9916A; --ed-accent-soft:rgba(200,121,74,.10);
+  --ed-gold:#D4AF37; --ed-gold-soft:rgba(212,175,55,.14);
+  --ed-success:#7FA981; --ed-success-soft:rgba(127,169,129,.12);
+  --ed-danger:#E0715C; --ed-danger-soft:rgba(224,113,92,.12);
+  --ed-on-accent:#1C1A18;
+  --ed-shadow-sm:0 1px 2px rgba(0,0,0,.4);
+  --ed-shadow-md:0 2px 8px rgba(0,0,0,.45), 0 10px 28px -16px rgba(0,0,0,.6);
+  --ed-shadow-lg:0 6px 18px rgba(0,0,0,.5), 0 22px 52px -24px rgba(0,0,0,.7);
+  --ed-cat-1:#6E9DBF; --ed-cat-2:#E0715C; --ed-cat-3:#D9AE55; --ed-cat-4:#A88CC4; --ed-cat-5:#7FA981;
+  --qv-bg:#FBF8F1; --qv-border:rgba(107,52,16,.18); --qv-tint:rgba(107,52,16,.07);
+  --qv-shadow:var(--ed-shadow-md);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ed-bg-tertiary); color:var(--ed-fg-secondary);
+  font-family:var(--font-sans); font-size:14px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding:clamp(.75rem,2.5vw,2rem);
+}
+
+/* ── page head ───────────────────────────────────────────────── */
+.head{max-width:1560px;margin:0 auto clamp(1rem,2vw,1.75rem);display:flex;flex-direction:column;gap:.6rem}
+.kicker{
+  font-family:var(--font-mono);font-size:.66rem;font-weight:500;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ed-fg-muted);display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:baseline
+}
+.kicker .dot{color:var(--ed-rule-strong)}
+h1{
+  font-family:var(--font-serif);font-weight:600;font-size:clamp(1.4rem,3.2vw,2.05rem);
+  line-height:1.1;letter-spacing:-.02em;color:var(--ed-fg);margin:0;text-wrap:balance
+}
+.sub{max-width:74ch;margin:0;color:var(--ed-fg-secondary);font-size:.95rem}
+.headctl{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.25rem}
+.hbtn{
+  font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.06em;
+  padding:.4rem .7rem;border-radius:var(--r-md);cursor:pointer;
+  border:1px solid var(--ed-rule-strong);background:var(--ed-surface-raised);color:var(--ed-fg-secondary)
+}
+.hbtn:hover{border-color:var(--ed-accent);color:var(--ed-accent)}
+.hbtn[aria-pressed="true"]{background:var(--ed-accent);border-color:var(--ed-accent);color:var(--ed-on-accent)}
+.hbtn:focus-visible{outline:2px solid var(--ed-accent);outline-offset:2px}
+
+/* ── the app frame ───────────────────────────────────────────── */
+.app{
+  max-width:1560px;margin:0 auto;height:min(880px,88vh);min-height:620px;
+  display:flex;flex-direction:column;overflow:hidden;
+  background:var(--ed-bg);border:1px solid var(--ed-rule-strong);
+  border-radius:var(--r-xl);box-shadow:var(--ed-shadow-lg)
+}
+
+/* title bar */
+.titlebar{
+  height:40px;flex-shrink:0;display:flex;align-items:center;gap:.75rem;padding:0 .75rem;
+  background:var(--ed-bg-secondary);border-bottom:1px solid var(--ed-rule)
+}
+.mark{width:16px;height:16px;border-radius:3px;background:var(--ed-accent);flex-shrink:0;
+  display:grid;place-items:center;color:var(--ed-on-accent);font-family:var(--font-serif);font-size:10px;font-weight:700}
+.title{flex:1;font-size:12px;font-weight:500;letter-spacing:-.01em;color:var(--ed-fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tbtn{
+  width:26px;height:26px;display:grid;place-items:center;border:0;background:transparent;
+  color:var(--ed-fg-muted);border-radius:var(--r-sm);cursor:pointer
+}
+.tbtn:hover{background:var(--ed-surface-strong);color:var(--ed-fg)}
+.tbtn:focus-visible{outline:2px solid var(--ed-accent);outline-offset:1px}
+.panepips{display:flex;gap:2px;padding:3px;background:var(--ed-surface-strong);border-radius:var(--r-sm);border:1px solid var(--ed-rule)}
+.pip{width:9px;height:13px;border-radius:2px;background:var(--ed-rule-strong)}
+.pip.on{background:var(--ed-accent)}
+
+.frame{flex:1;display:flex;min-height:0}
+
+/* ── left ribbon ─────────────────────────────────────────────── */
+.ribbon{
+  width:48px;flex-shrink:0;display:flex;flex-direction:column;justify-content:space-between;
+  align-items:center;padding:12px 0;gap:8px;
+  background:var(--ed-bg-secondary);border-right:1px solid var(--ed-rule)
+}
+.rgroup{display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;padding:0 6px}
+.ricon{
+  width:34px;height:34px;display:grid;place-items:center;border:1px solid transparent;
+  background:transparent;color:var(--ed-fg-muted);border-radius:7px;cursor:pointer;position:relative;
+  transition:color .14s, background .14s, border-color .14s
+}
+.ricon:hover{color:var(--ed-accent);background:var(--ed-accent-soft)}
+.ricon:focus-visible{outline:2px solid var(--ed-accent);outline-offset:1px}
+.ricon.active{color:var(--ed-accent);background:var(--ed-accent-soft);border-color:color-mix(in srgb,var(--ed-accent) 25%,transparent);box-shadow:var(--ed-shadow-sm)}
+.ricon svg{width:18px;height:18px;display:block}
+.rdivider{width:20px;height:1px;background:var(--ed-rule-strong);margin:3px 0}
+
+/* the annotation layer */
+.annot .ricon.isnew{outline:1.5px dashed var(--ed-accent);outline-offset:3px}
+.newpill{
+  position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);
+  font-family:var(--font-mono);font-size:.6rem;font-weight:700;letter-spacing:.11em;
+  padding:.2rem .4rem;border-radius:3px;background:var(--ed-accent);color:var(--ed-on-accent);
+  white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .16s;z-index:30
+}
+.annot .newpill{opacity:1}
+
+/* ── editor region ───────────────────────────────────────────── */
+.region{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--ed-bg)}
+
+.tabstrip{
+  height:34px;flex-shrink:0;display:flex;align-items:stretch;
+  background:var(--ed-bg-secondary);border-bottom:1px solid var(--ed-rule);overflow:hidden
+}
+.tab{
+  display:flex;align-items:center;gap:.4rem;padding:0 .7rem;font-size:11.5px;
+  color:var(--ed-fg-muted);border-right:1px solid var(--ed-rule);cursor:pointer;white-space:nowrap;
+  background:transparent;border-top:0;border-bottom:0;border-left:0;font-family:inherit
+}
+.tab:hover{color:var(--ed-fg-secondary)}
+.tab.on{background:var(--ed-bg);color:var(--ed-fg);box-shadow:inset 0 2px 0 var(--ed-accent)}
+.tab svg{width:12px;height:12px;flex-shrink:0}
+.tab .x{margin-left:.15rem;color:var(--ed-fg-faint);font-size:13px;line-height:1}
+.tabspacer{flex:1;border-bottom:1px solid transparent}
+
+/* ── three-pane surface ──────────────────────────────────────── */
+.surface{flex:1;display:grid;grid-template-columns:250px 1fr 336px;min-height:0}
+.pane{display:flex;flex-direction:column;min-height:0;min-width:0}
+.pane.q{border-right:1px solid var(--ed-rule);background:var(--ed-bg-secondary)}
+.pane.r{border-left:1px solid var(--ed-rule);background:var(--ed-bg-secondary)}
+.gutter{position:relative}
+.gutter::after{content:"";position:absolute;inset-block:0;width:3px;background:transparent}
+
+.paneScroll{flex:1;overflow-y:auto;overflow-x:hidden;padding:.75rem}
+.paneScroll::-webkit-scrollbar{width:9px}
+.paneScroll::-webkit-scrollbar-thumb{background:var(--ed-rule-strong);border-radius:99px;border:3px solid var(--ed-bg-secondary)}
+
+.paneFoot{flex-shrink:0;border-top:1px solid var(--ed-rule);padding:.6rem .7rem;display:flex;flex-direction:column;gap:.55rem;background:var(--ed-surface)}
+
+/* segmented tabs */
+.seg{
+  display:flex;padding:2px;gap:2px;border-radius:7px;
+  background:var(--ed-surface);border:1px solid var(--ed-rule);margin-bottom:.75rem
+}
+.seg button{
+  flex:1;border:1px solid transparent;background:transparent;cursor:pointer;
+  border-radius:5px;padding:.35rem .1rem;font-family:inherit;
+  font-size:10.5px;font-weight:600;letter-spacing:.02em;color:var(--ed-fg-muted)
+}
+.seg button:hover{color:var(--ed-fg-secondary)}
+.seg button[aria-selected="true"]{
+  background:var(--ed-surface-raised);border-color:var(--ed-rule-strong);
+  color:var(--ed-fg);box-shadow:var(--ed-shadow-sm)
+}
+.seg button:focus-visible{outline:2px solid var(--ed-accent);outline-offset:1px}
+
+/* form atoms */
+.field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.7rem}
+.label{font-family:var(--font-mono);font-size:.62rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ed-fg-muted)}
+.input,.select{
+  font-family:var(--font-mono);font-size:12px;padding:.4rem .5rem;border-radius:var(--r-md);
+  border:1px solid var(--ed-rule-strong);background:var(--ed-surface-raised);color:var(--ed-fg);width:100%
+}
+.input:focus,.select:focus{outline:2px solid var(--ed-accent);outline-offset:-1px;border-color:var(--ed-accent)}
+.input[dir="rtl"]{font-family:var(--font-arabic);font-size:17px;line-height:1.7}
+.chiprow{display:flex;flex-wrap:wrap;gap:.25rem}
+.tog{
+  font-family:var(--font-mono);font-size:.64rem;letter-spacing:.03em;padding:.28rem .45rem;
+  border-radius:var(--r-sm);border:1px solid var(--ed-rule-strong);
+  background:var(--ed-surface-raised);color:var(--ed-fg-secondary);cursor:pointer
+}
+.tog[aria-pressed="true"]{background:var(--ed-accent-soft);border-color:color-mix(in srgb,var(--ed-accent) 40%,transparent);color:var(--ed-accent);font-weight:600}
+.tog:focus-visible{outline:2px solid var(--ed-accent);outline-offset:1px}
+.run{
+  width:100%;margin-top:.2rem;padding:.45rem;border-radius:var(--r-md);cursor:pointer;
+  background:var(--ed-accent);border:1px solid var(--ed-accent-strong);color:var(--ed-on-accent);
+  font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.09em
+}
+.run:hover{background:var(--ed-accent-strong)}
+.run:focus-visible{outline:2px solid var(--ed-accent);outline-offset:2px}
+.hint{font-size:11px;line-height:1.45;color:var(--ed-fg-muted);margin:.1rem 0 0}
+
+/* scope bar */
+.scopebar{
+  flex-shrink:0;display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;
+  padding:.5rem .75rem;border-bottom:1px solid var(--ed-rule);background:var(--ed-bg-secondary)
+}
+.stepper{display:flex;align-items:stretch;border:1px solid var(--ed-rule-strong);border-radius:var(--r-md);overflow:hidden;background:var(--ed-surface-raised)}
+.stepper .k{font-family:var(--font-mono);font-size:.6rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ed-fg-muted);padding:.3rem .45rem;background:var(--ed-surface);border-right:1px solid var(--ed-rule)}
+.stepper .v{font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--ed-fg);padding:.3rem .5rem;font-variant-numeric:tabular-nums;min-width:2.4rem;text-align:center}
+.stepper .a{border:0;background:transparent;color:var(--ed-fg-muted);cursor:pointer;padding:0 .35rem;font-size:11px;font-family:var(--font-mono)}
+.stepper .a:hover{background:var(--ed-surface-strong);color:var(--ed-accent)}
+.stepper .a:focus-visible{outline:2px solid var(--ed-accent);outline-offset:-2px}
+.scopename{font-family:var(--font-serif);font-size:13px;color:var(--ed-fg-secondary);margin-inline-start:.3rem}
+.scopename b{color:var(--ed-fg);font-weight:600}
+.scopespacer{flex:1}
+
+/* verse card, --qv-* sub-brand */
+.centre{flex:1;overflow-y:auto;padding:1.1rem;display:flex;flex-direction:column;gap:1rem}
+.centre::-webkit-scrollbar{width:9px}
+.centre::-webkit-scrollbar-thumb{background:var(--ed-rule-strong);border-radius:99px;border:3px solid var(--ed-bg)}
+.card{
+  background:var(--qv-bg);border:1px solid var(--qv-border);border-radius:var(--r-xl);
+  box-shadow:var(--qv-shadow);overflow:hidden;position:relative
+}
+.card::before{content:"";position:absolute;inset-inline:0;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--qv-accent) 22%,transparent),transparent)}
+.cardhead{
+  display:flex;align-items:center;gap:.5rem;padding:.55rem .9rem;
+  border-bottom:1px solid var(--qv-divider);background:var(--qv-tint)
+}
+.ref{font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.08em;color:var(--qv-accent)}
+.cardhead .sp{flex:1}
+.qbtn{
+  font-family:var(--font-mono);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  padding:.22rem .45rem;border-radius:var(--r-sm);cursor:pointer;
+  border:1px solid var(--qv-border);background:transparent;color:var(--qv-muted)
+}
+.qbtn:hover{background:var(--qv-tint-strong);color:var(--qv-fg)}
+.qbtn:focus-visible{outline:2px solid var(--qv-accent);outline-offset:1px}
+.arabic{
+  font-family:var(--font-arabic);direction:rtl;text-align:right;color:var(--qv-fg);
+  font-size:clamp(19px,2.1vw,25px);line-height:2.15;padding:1rem .9rem .4rem;
+  display:flex;flex-wrap:wrap;gap:0 .38em;justify-content:flex-start
+}
+.w{
+  cursor:pointer;border-radius:3px;padding:0 .06em;position:relative;
+  transition:background .12s,color .12s;text-decoration:none;color:inherit
+}
+.w:hover{background:var(--qv-tint-strong)}
+.w.sel{background:color-mix(in srgb,var(--qv-accent) 20%,transparent);box-shadow:0 1.5px 0 var(--qv-accent)}
+.w:focus-visible{outline:2px solid var(--qv-accent);outline-offset:1px}
+.english{
+  font-family:var(--font-serif);font-size:14.5px;line-height:1.62;color:var(--qv-fg);
+  padding:.35rem .9rem 1rem;border-top:1px solid var(--qv-divider);margin-top:.5rem
+}
+.english .n{font-family:var(--font-mono);font-size:.62rem;color:var(--qv-subtle);vertical-align:.35em;margin-inline-end:.15em}
+
+/* provenance strip */
+.prov{
+  display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;
+  padding:.5rem .9rem;border-top:1px solid var(--qv-divider);background:var(--qv-tint)
+}
+.pchip{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.05em;
+  padding:.2rem .42rem;border-radius:3px;border:1px solid var(--qv-border);
+  color:var(--qv-muted);background:transparent;white-space:nowrap
+}
+.pchip b{color:var(--qv-fg);font-weight:600}
+.pchip.ok{border-color:color-mix(in srgb,var(--ed-success) 45%,transparent);color:var(--ed-success);background:var(--ed-success-soft)}
+.pchip.warn{border-color:color-mix(in srgb,var(--ed-danger) 45%,transparent);color:var(--ed-danger);background:var(--ed-danger-soft)}
+
+/* word grid */
+.gridhead{
+  display:flex;align-items:baseline;gap:.5rem;
+  font-family:var(--font-mono);font-size:.62rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ed-fg-muted)
+}
+.gridhead .sp{flex:1;height:1px;background:var(--ed-rule);align-self:center}
+.wordgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:.4rem}
+.wcell{
+  border:1px solid var(--ed-rule);border-radius:var(--r-md);background:var(--ed-surface-raised);
+  padding:.4rem .45rem;display:flex;flex-direction:column;gap:.1rem;cursor:pointer;text-align:right;
+  font-family:inherit;position:relative;transition:border-color .12s,box-shadow .12s
+}
+.wcell:hover{border-color:var(--ed-accent);box-shadow:var(--ed-shadow-sm);z-index:5}
+.wcell.sel{border-color:var(--ed-accent);background:var(--ed-accent-soft)}
+.wcell:focus-visible{outline:2px solid var(--ed-accent);outline-offset:1px}
+.wcell .idx{font-family:var(--font-mono);font-size:.55rem;color:var(--ed-fg-faint);text-align:left;font-variant-numeric:tabular-nums}
+.wcell .ar{font-family:var(--font-arabic);font-size:17px;line-height:1.55;color:var(--ed-fg);direction:rtl}
+.wcell .tr{font-family:var(--font-mono);font-size:.58rem;color:var(--ed-fg-muted);direction:ltr;text-align:left;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wcell .rt{font-family:var(--font-arabic);font-size:12.5px;color:var(--ed-cat-1);direction:rtl;letter-spacing:.12em}
+
+/* hover card */
+.hover{
+  position:fixed;z-index:60;min-width:210px;max-width:280px;pointer-events:none;opacity:0;
+  transform:translateY(4px);transition:opacity .13s,transform .13s;
+  background:var(--ed-surface-raised);border:1px solid var(--ed-rule-strong);
+  border-radius:var(--r-lg);box-shadow:var(--ed-shadow-lg);padding:.6rem .7rem;
+  display:flex;flex-direction:column;gap:.3rem
+}
+.hover.on{opacity:1;transform:translateY(0)}
+.hover .hAr{font-family:var(--font-arabic);font-size:21px;color:var(--ed-fg);direction:rtl;text-align:right;line-height:1.5}
+.hover .hTr{font-family:var(--font-mono);font-size:.68rem;color:var(--ed-accent)}
+.hover .hEn{font-family:var(--font-serif);font-size:13px;color:var(--ed-fg-secondary);line-height:1.45}
+.hover .hRow{display:flex;gap:.4rem;align-items:baseline;font-family:var(--font-mono);font-size:.62rem;color:var(--ed-fg-muted);
+  padding-top:.3rem;border-top:1px solid var(--ed-rule)}
+.hover .hRow b{color:var(--ed-fg);font-weight:600}
+.hover .seg3{font-family:var(--font-arabic);font-size:16px;direction:rtl;letter-spacing:.06em}
+.hover .seg3 .pfx{color:var(--ed-cat-4)}
+.hover .seg3 .stm{color:var(--ed-fg);font-weight:700}
+.hover .seg3 .sfx{color:var(--ed-cat-3)}
+
+/* ── readout pane ────────────────────────────────────────────── */
+.rblock{display:flex;flex-direction:column;gap:.4rem;margin-bottom:.9rem}
+.rhead{
+  display:flex;align-items:baseline;gap:.4rem;
+  font-family:var(--font-mono);font-size:.62rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ed-fg-muted)
+}
+.rhead .sp{flex:1;height:1px;background:var(--ed-rule);align-self:center}
+.numrow{
+  display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;
+  padding:.24rem 0;border-bottom:1px solid var(--ed-rule)
+}
+.numrow:last-child{border-bottom:0}
+.numrow .k{font-size:12px;color:var(--ed-fg-secondary)}
+.numrow .v{font-family:var(--font-mono);font-size:13px;font-weight:600;color:var(--ed-fg);font-variant-numeric:tabular-nums}
+.numrow .v.gold{color:var(--ed-gold)}
+.numrow.big .v{font-size:16px}
+.compare{display:grid;grid-template-columns:1fr auto auto;gap:.3rem .55rem;align-items:baseline}
+.compare .ch{font-family:var(--font-mono);font-size:.58rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ed-fg-muted);text-align:right}
+.compare .cl{font-size:12px;color:var(--ed-fg-secondary)}
+.compare .cv{font-family:var(--font-mono);font-size:12.5px;font-weight:600;color:var(--ed-fg);text-align:right;font-variant-numeric:tabular-nums}
+.compare .cv.unv{color:var(--ed-fg-muted);text-decoration:underline dotted var(--ed-danger);text-underline-offset:3px;cursor:help}
+
+.marks{display:flex;flex-direction:column;gap:.15rem}
+.mark-t{
+  display:flex;align-items:center;gap:.45rem;padding:.24rem .3rem;border-radius:var(--r-sm);
+  border:0;background:transparent;cursor:pointer;text-align:left;width:100%;font-family:inherit
+}
+.mark-t:hover{background:var(--ed-surface-strong)}
+.mark-t:focus-visible{outline:2px solid var(--ed-accent);outline-offset:0}
+.box{
+  width:14px;height:14px;flex-shrink:0;border-radius:3px;border:1.5px solid var(--ed-rule-strong);
+  background:var(--ed-surface-raised);display:grid;place-items:center;color:transparent;font-size:10px;font-weight:700
+}
+.mark-t[aria-pressed="true"] .box{background:var(--ed-accent);border-color:var(--ed-accent);color:var(--ed-on-accent)}
+.mark-t .gl{font-family:var(--font-arabic);font-size:16px;color:var(--ed-fg);width:1.3em;text-align:center;flex-shrink:0}
+.mark-t .tx{font-size:11px;color:var(--ed-fg-secondary);line-height:1.3}
+.mark-t[aria-pressed="true"] .tx{color:var(--ed-fg)}
+
+.ltable{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:11px}
+.ltable th{
+  font-size:.56rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ed-fg-muted);
+  text-align:right;padding:.2rem .3rem;border-bottom:1px solid var(--ed-rule-strong)
+}
+.ltable th:nth-child(2){text-align:center}
+.ltable td{padding:.18rem .3rem;text-align:right;font-variant-numeric:tabular-nums;color:var(--ed-fg-secondary);border-bottom:1px solid var(--ed-rule)}
+.ltable td.g{font-family:var(--font-arabic);font-size:15px;text-align:center;color:var(--ed-fg)}
+.ltable td.f{color:var(--ed-fg);font-weight:600;position:relative}
+.ltable tbody tr:hover td{background:var(--ed-surface-strong)}
+.bar{position:absolute;inset-block:2px;right:0;background:var(--ed-accent-soft);border-radius:2px;z-index:0}
+.ltable td.f span{position:relative;z-index:1}
+
+/* status bar */
+.statusbar{
+  height:26px;flex-shrink:0;display:flex;align-items:center;gap:.9rem;padding:0 .75rem;
+  background:var(--ed-bg-secondary);border-top:1px solid var(--ed-rule);
+  font-family:var(--font-mono);font-size:10.5px;color:var(--ed-fg-muted)
+}
+.statusbar .sp{flex:1}
+.statusbar b{color:var(--ed-fg-secondary);font-weight:500}
+
+/* notes below the frame */
+.notes{max-width:1560px;margin:clamp(1rem,2.5vw,2rem) auto 0;display:grid;gap:.9rem;
+  grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.note{
+  background:var(--ed-surface-raised);border:1px solid var(--ed-rule);border-radius:var(--r-lg);
+  padding:.8rem .9rem;display:flex;flex-direction:column;gap:.35rem
+}
+.note h3{font-family:var(--font-serif);font-size:.95rem;font-weight:600;color:var(--ed-fg);margin:0}
+.note .n{font-family:var(--font-mono);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ed-accent)}
+.note p{margin:0;font-size:12.5px;line-height:1.5;color:var(--ed-fg-secondary)}
+.note code{font-family:var(--font-mono);font-size:.85em;background:var(--ed-surface);
+  border:1px solid var(--ed-rule);border-radius:3px;padding:0 .25em;color:var(--ed-fg)}
+
+@media (max-width:1180px){
+  .surface{grid-template-columns:224px 1fr;grid-template-rows:1fr auto}
+  .pane.r{grid-column:1/-1;border-left:0;border-top:1px solid var(--ed-rule);max-height:300px}
+  .app{height:auto;min-height:0}
+  .surface{min-height:560px}
+}
+@media (max-width:760px){
+  .surface{grid-template-columns:1fr;grid-template-rows:auto 1fr auto}
+  .pane.q{border-right:0;border-bottom:1px solid var(--ed-rule)}
+  .pane.q .paneScroll{max-height:210px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="head">
+  <div class="kicker">
+    <span>SubmissionArchives Studio</span><span class="dot">/</span>
+    <span>Phase 9 mockup</span><span class="dot">/</span>
+    <span>Every figure below is computed live from 33:33</span>
+  </div>
+  <h1>QuranCode as a new ribbon surface</h1>
+  <p class="sub">
+    The new entry sits in the left ribbon directly under Media Notes and opens a three-pane research surface
+    in the editor region, so it splits against a note instead of covering one. The toggles, the scope stepper
+    and the word grid are all wired: the readout recomputes from the real pointed Uthmani text of 33:33.
+  </p>
+  <div class="headctl">
+    <button class="hbtn" id="btnTheme" type="button">Toggle obsidian / paper</button>
+    <button class="hbtn" id="btnAnnot" type="button" aria-pressed="true">Annotations</button>
+    <span class="kicker" style="letter-spacing:.08em">Hover any word for its gloss, root and derived segmentation</span>
+  </div>
+</div>
+
+<div class="app" id="app">
+
+  <!-- ── title bar ────────────────────────────────────────────── -->
+  <div class="titlebar">
+    <span class="mark">S</span>
+    <span class="title">SubmissionArchives Studio &nbsp;&mdash;&nbsp; Archive / Research</span>
+    <span class="panepips" title="Pane switcher">
+      <span class="pip"></span><span class="pip on"></span><span class="pip on"></span>
+    </span>
+    <button class="tbtn" type="button" title="Appearance" id="btnTheme2" aria-label="Toggle appearance">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="4"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.5 4.5l1.4 1.4M14.1 14.1l1.4 1.4M15.5 4.5l-1.4 1.4M5.9 14.1l-1.4 1.4"/></svg>
+    </button>
+    <button class="tbtn" type="button" title="Settings" aria-label="Settings">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="2.6"/><path d="M10 3.2v1.6M10 15.2v1.6M3.2 10h1.6M15.2 10h1.6M5.2 5.2l1.1 1.1M13.7 13.7l1.1 1.1M14.8 5.2l-1.1 1.1M6.3 13.7l-1.1 1.1"/></svg>
+    </button>
+  </div>
+
+  <div class="frame">
+
+    <!-- ── left ribbon ────────────────────────────────────────── -->
+    <nav class="ribbon annot" id="ribbon" aria-label="Studio ribbon">
+      <div class="rgroup">
+        <button class="ricon" type="button" title="Explorer (Ctrl+B)" aria-label="Explorer">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M2.5 5.5h5l1.5 2h8.5v7h-15z"/></svg>
+        </button>
+        <button class="ricon" type="button" title="Visual Synthesis Canvas" aria-label="Canvas">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="4" r="2"/><circle cx="4.5" cy="15.5" r="2"/><circle cx="15.5" cy="15.5" r="2"/><path d="M10 6v3.5M10 9.5H5.2M10 9.5h4.6M4.5 9.5v4M15.5 9.5v4"/></svg>
+        </button>
+        <button class="ricon" type="button" title="New note (Ctrl+N)" aria-label="New note">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M11 2.5H5v15h10V6.5z"/><path d="M11 2.5v4h4"/><path d="M10 10v4M8 12h4"/></svg>
+        </button>
+        <button class="ricon" type="button" title="Quick switcher (Ctrl+O)" aria-label="Quick switcher">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8.5" cy="8.5" r="5"/><path d="M12.4 12.4L17 17M6.5 8.5h4M8.5 6.5v4"/></svg>
+        </button>
+        <button class="ricon" type="button" title="Search vault" aria-label="Search vault">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8.5" cy="8.5" r="5"/><path d="M12.4 12.4L17 17"/></svg>
+        </button>
+        <button class="ricon" type="button" title="Command palette (Ctrl+P)" aria-label="Command palette">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="7" width="6" height="6" rx="1"/><path d="M7 5.5a2 2 0 1 0-2 2h2zM13 5.5a2 2 0 1 1 2 2h-2zM7 14.5a2 2 0 1 1-2-2h2zM13 14.5a2 2 0 1 0 2-2h-2z"/></svg>
+        </button>
+        <button class="ricon" type="button" title="Graph view (Ctrl+G)" aria-label="Graph view">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="4.5" cy="6" r="1.8"/><circle cx="15.5" cy="5" r="1.8"/><circle cx="10" cy="14.5" r="1.8"/><path d="M6.2 6.6l2.4 6.4M13.9 6l-2.6 7M6.2 5.6L13.7 5"/></svg>
+        </button>
+        <button class="ricon" type="button" title="Media Notes (Ctrl+Shift+M)" aria-label="Media Notes">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="2.5" y="5.5" width="10" height="9" rx="1.5"/><path d="M12.5 9l5-2.5v7L12.5 11z"/></svg>
+        </button>
+
+        <!-- the new entry -->
+        <button class="ricon active isnew" type="button" title="QuranCode: numeric &amp; similarity research (Ctrl+Shift+K)" aria-label="QuranCode">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <path d="M3 6h4M5 4v4"/>
+            <path d="M12.2 4.4l3.6 3.6M15.8 4.4l-3.6 3.6"/>
+            <path d="M3 14.6h4"/><circle cx="5" cy="12.2" r=".9" fill="currentColor" stroke="none"/><circle cx="5" cy="17" r=".9" fill="currentColor" stroke="none"/>
+            <path d="M12 13h4M12 16.2h4"/>
+          </svg>
+          <span class="newpill">NEW &nbsp;·&nbsp; Ctrl+Shift+K</span>
+        </button>
+      </div>
+
+      <div class="rgroup">
+        <div class="rdivider"></div>
+        <button class="ricon" type="button" title="Inspector" aria-label="Inspector">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="3.5" width="15" height="13" rx="1.5"/><path d="M12.5 3.5v13"/></svg>
+        </button>
+        <button class="ricon" type="button" title="Vault settings" aria-label="Vault settings">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="2.6"/><path d="M10 3.2v1.6M10 15.2v1.6M3.2 10h1.6M15.2 10h1.6M5.2 5.2l1.1 1.1M13.7 13.7l1.1 1.1M14.8 5.2l-1.1 1.1M6.3 13.7l-1.1 1.1"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ── editor region ──────────────────────────────────────── -->
+    <div class="region">
+
+      <div class="tabstrip" role="tablist" aria-label="Open tabs">
+        <button class="tab" type="button" role="tab" aria-selected="false">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M11.5 2.5H5v15h10V6z"/><path d="M11.5 2.5V6h3.5"/></svg>
+          Ayat al-Kursi Exegesis.md <span class="x">&times;</span>
+        </button>
+        <button class="tab on" type="button" role="tab" aria-selected="true">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3 6h4M5 4v4"/><path d="M12.2 4.4l3.6 3.6M15.8 4.4l-3.6 3.6"/><path d="M3 14.6h4"/><path d="M12 13h4M12 16.2h4"/></svg>
+          QuranCode <span class="x">&times;</span>
+        </button>
+        <div class="tabspacer"></div>
+      </div>
+
+      <div class="surface">
+
+        <!-- ══ QUERY PANE ══════════════════════════════════════ -->
+        <section class="pane q" aria-label="Query">
+          <div class="paneScroll">
+            <div class="seg" role="tablist" aria-label="Query kind">
+              <button type="button" role="tab" data-q="text" aria-selected="false">Text</button>
+              <button type="button" role="tab" data-q="num" aria-selected="true">Numbers</button>
+              <button type="button" role="tab" data-q="sim" aria-selected="false">Similar</button>
+              <button type="button" role="tab" data-q="freq" aria-selected="false">Freq</button>
+              <button type="button" role="tab" data-q="root" aria-selected="false">Root</button>
+            </div>
+            <div id="qbody"></div>
+          </div>
+
+          <!-- mode selectors live in the footer: they are part of every question, not a setting -->
+          <div class="paneFoot">
+            <div class="field" style="margin:0">
+              <span class="label">Text mode</span>
+              <select class="select" id="mode">
+                <option value="s29">Simplified 29 &mdash; verified</option>
+                <option value="ap1">Appendix 1 (published)</option>
+                <option value="orig">Original Uthmani &mdash; display only</option>
+              </select>
+            </div>
+            <div class="field" style="margin:0">
+              <span class="label">Value system</span>
+              <select class="select" id="vsys">
+                <option value="abjad">Abjad standard</option>
+                <option value="none">None (counts only)</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ TEXT PANE ═══════════════════════════════════════ -->
+        <section class="pane gutter" aria-label="Text">
+          <div class="scopebar">
+            <div class="stepper">
+              <span class="k">Ch</span><button class="a" type="button" data-step="ch,-1" aria-label="Previous chapter">&lsaquo;</button><span class="v" id="vCh">33</span><button class="a" type="button" data-step="ch,1" aria-label="Next chapter">&rsaquo;</button>
+            </div>
+            <div class="stepper">
+              <span class="k">V</span><button class="a" type="button" data-step="v,-1" aria-label="Previous verse">&lsaquo;</button><span class="v" id="vV">33</span><button class="a" type="button" data-step="v,1" aria-label="Next verse">&rsaquo;</button>
+            </div>
+            <div class="stepper">
+              <span class="k">W</span><button class="a" type="button" data-step="w,-1" aria-label="Previous word">&lsaquo;</button><span class="v" id="vW">&mdash;</span><button class="a" type="button" data-step="w,1" aria-label="Next word">&rsaquo;</button>
+            </div>
+            <span class="scopename"><b>Al-Ahzab</b> &nbsp;73 verses &nbsp;&middot;&nbsp; revealed 90th</span>
+            <span class="scopespacer"></span>
+            <select class="select" style="width:auto;font-size:11px;padding:.28rem .4rem" aria-label="Scope">
+              <option>Scope: verse</option><option>Scope: chapter</option><option>Scope: word</option>
+              <option>Scope: letter</option><option disabled>Scope: page (9g)</option><option disabled>Scope: bowing (9g)</option>
+            </select>
+          </div>
+
+          <div class="centre">
+            <div class="card">
+              <div class="cardhead">
+                <span class="ref" id="cardRef">33:33</span>
+                <span class="sp"></span>
+                <button class="qbtn" type="button">Cite &rarr; note</button>
+                <button class="qbtn" type="button">Copy</button>
+              </div>
+              <div class="arabic" id="arabic" dir="rtl"></div>
+              <p class="english"><span class="n">33</span>You shall settle down in your homes, and do not mingle with the people excessively, like you used to do in the days of ignorance. You shall observe the Contact Prayers, and give the obligatory charity, and obey GOD and His messenger. GOD wishes to remove all unholiness from you, O you who live around the Sacred Shrine, and to purify you completely.</p>
+              <div class="prov" id="prov"></div>
+            </div>
+
+            <div class="gridhead"><span>Word by word</span><span class="sp"></span><span id="gridCount">25 words</span></div>
+            <div class="wordgrid" id="grid"></div>
+          </div>
+        </section>
+
+        <!-- ══ READOUT PANE ════════════════════════════════════ -->
+        <section class="pane r" aria-label="Readout">
+          <div class="paneScroll">
+
+            <div class="rblock">
+              <div class="rhead"><span>Statistics</span><span class="sp"></span></div>
+              <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+                <div class="stepper"><span class="k">base</span><button class="a" type="button">&lsaquo;</button><span class="v">10</span><button class="a" type="button">&rsaquo;</button></div>
+                <div class="stepper"><span class="k">&divide;</span><button class="a" type="button" data-div="-1">&lsaquo;</button><span class="v" id="vDiv">19</span><button class="a" type="button" data-div="1">&rsaquo;</button></div>
+              </div>
+            </div>
+
+            <div class="rblock">
+              <div class="rhead"><span>Counts as letter</span><span class="sp"></span></div>
+              <div class="marks" id="marks"></div>
+              <p class="hint" id="markNote"></p>
+            </div>
+
+            <div class="rblock" id="counts"></div>
+
+            <div class="rblock">
+              <div class="rhead"><span>Modes side by side</span><span class="sp"></span></div>
+              <div class="compare" id="compare"></div>
+              <p class="hint" id="cmpNote"></p>
+            </div>
+
+            <div class="rblock">
+              <div class="rhead"><span>Letter frequency</span><span class="sp"></span><span id="freqScope"></span></div>
+              <table class="ltable">
+                <thead><tr><th>#</th><th>L</th><th>Freq</th><th>&Sigma;Pos</th><th>&Sigma;&Delta;</th></tr></thead>
+                <tbody id="ltable"></tbody>
+              </table>
+            </div>
+
+            <div class="rblock">
+              <div class="rhead"><span>Chapter 33 context</span><span class="sp"></span></div>
+              <div class="numrow"><span class="k">Verses</span><span class="v">73</span></div>
+              <div class="numrow"><span class="k">Words</span><span class="v">1,287</span></div>
+              <div class="numrow"><span class="k">Letters</span><span class="v">5,659</span></div>
+              <div class="numrow"><span class="k">Unique letters</span><span class="v">29</span></div>
+              <div class="numrow"><span class="k">Abjad value</span><span class="v">377,385</span></div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+      <div class="statusbar">
+        <span>Simplified&nbsp;29</span>
+        <span>Abjad standard</span>
+        <span>scope <b id="sbScope">33:33</b></span>
+        <span class="sp"></span>
+        <span>corpus <b>114 / 6,234 / 77,401 / 325,273</b></span>
+        <span>roots <b>1,782</b></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hover" id="hover" role="tooltip" aria-hidden="true"></div>
+
+<div class="notes">
+  <div class="note">
+    <span class="n">Placement</span>
+    <h3>Ninth ribbon entry, then a tab</h3>
+    <p>The icon closes the top ribbon group under Media Notes. Clicking it opens a tab on the sentinel path <code>qc://workspace</code>, so <code>Ctrl+\</code> puts the surface in one half and the note in the other, and pane sizes persist per archive with no new code.</p>
+  </div>
+  <div class="note">
+    <span class="n">Mode selectors</span>
+    <h3>In the footer, not in settings</h3>
+    <p>Text mode and value system sit permanently at the base of the query pane. There is no single true letter count, so the mode is part of every question asked rather than a preference buried elsewhere.</p>
+  </div>
+  <div class="note">
+    <span class="n">Toggles</span>
+    <h3>Hamza is a checkbox, not a constant</h3>
+    <p>The four toggles mirror the old app's checkbox row, driven by data in <code>text_modes.json</code>. Flip them and every figure in the readout recomputes. Nothing in Rust knows what a hamza is.</p>
+  </div>
+  <div class="note">
+    <span class="n">Provenance</span>
+    <h3>No number without its convention</h3>
+    <p>The strip under the verse carries mode, value system, scope and verification state. Where a mode has an unresolved rule, the affected figure is marked rather than presented as authoritative.</p>
+  </div>
+  <div class="note">
+    <span class="n">Colour</span>
+    <h3>Gold means the number, terracotta means you</h3>
+    <p>The accent marks selection. <code>--ed-gold</code> marks a numeric property such as divisibility. In a tool whose whole subject is divisibility, conflating the two would make every hit look like a click.</p>
+  </div>
+  <div class="note">
+    <span class="n">Segmentation</span>
+    <h3>Prefix, stem and suffix, derived</h3>
+    <p>Hover cards show the word split by walking its root through the consonant skeleton. That aligns 98.84% of rooted words with no morphology file imported, giving 156 prefix and 198 suffix forms as data.</p>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ══════════════════════════════════════════════════════════════════
+   Real data: verse 33:33 from the words-and-roots dataset. Pointed
+   Uthmani, gloss, transliteration and root exactly as supplied. The
+   folds and the Abjad table below are the same ones the plan
+   specifies, so every number this page shows is computed, not typed.
+   ══════════════════════════════════════════════════════════════════ */
+const WORDS = [
+ ["وَقَرْنَ","waqarna","ق ر ر","And stay / settle [you all]"],
+ ["فِى","fī","ف ي","in"],
+ ["بُيُوتِكُنَّ","buyūtikunna","ب ي ت","your homes"],
+ ["وَلَا","walā","ل ا","and (do) not"],
+ ["تَبَرَّجْنَ","tabarrajna","ب ر ج","you [all] display yourselves (mingle)"],
+ ["تَبَرُّجَ","tabarruja","ب ر ج","(as) you displayed (mingled in)"],
+ ["ٱلْجَـٰهِلِيَّةِ","l-jāhiliyati","ج ه ل","the days of ignorance (of)"],
+ ["ٱلْأُولَىٰ","l-ūlā","ا و ل","the former."],
+ ["وَأَقِمْنَ","wa-aqim'na","ق و م","And observe [you all]"],
+ ["ٱلصَّلَوٰةَ","l-ṣalata","و ص ل","the Contact Prayer (Salat)"],
+ ["وَءَاتِينَ","waātīna","ا ت ي","and give [you all]"],
+ ["ٱلزَّكَوٰةَ","l-zakata","ز ك و","the obligatory charity (Zakat)"],
+ ["وَأَطِعْنَ","wa-aṭiʿ'na","ط و ع","and obey [you all]"],
+ ["ٱللَّهَ","l-laha","ا ل ه","God"],
+ ["وَرَسُولَهُۥٓ","warasūlahu","ر س ل","and His messenger."],
+ ["إِنَّمَا","innamā","ا ن ن م","Only"],
+ ["يُرِيدُ","yurīdu","ر و د","[He] wishes"],
+ ["ٱللَّهُ","l-lahu","ا ل ه","God"],
+ ["لِيُذْهِبَ","liyudh'hiba","ذ ه ب","that He may remove"],
+ ["عَنكُمُ","ʿankumu","ع ن","from you [all]"],
+ ["ٱلرِّجْسَ","l-rij'sa","ر ج س","the impurity / unholiness,"],
+ ["أَهْلَ","ahla","ا ه ل","(O) People (of)"],
+ ["ٱلْبَيْتِ","l-bayti","ب ي ت","the House!"],
+ ["وَيُطَهِّرَكُمْ","wayuṭahhirakum","ط ه ر","And He purifies you [all]"],
+ ["تَطْهِيرًا","taṭhīran","ط ه ر","a purification."]
+];
+
+/* Abjad standard (hisab al-jummal). Hamza carriers and alif maqsura take the
+   value of the letter they are written on, which is standard practice. */
+const ABJAD = {"ا":1,"ء":1,"أ":1,"إ":1,"آ":1,"ب":2,"ج":3,"د":4,"ه":5,"ة":5,"و":6,"ؤ":6,
+ "ز":7,"ح":8,"ط":9,"ي":10,"ى":10,"ئ":10,"ك":20,"ل":30,"م":40,"ن":50,"س":60,
+ "ع":70,"ف":80,"ص":90,"ق":100,"ر":200,"ش":300,"ت":400,"ث":500,"خ":600,
+ "ذ":700,"ض":800,"ظ":900,"غ":1000};
+
+/* Per-mode folds, straight out of text_modes.json. Simplified 29 collapses to
+   a 29-letter alphabet. The published-figures mode keeps the hamza carriers and
+   alif maqsura distinct, folding only the two things the fixtures proved:
+   alef wasla and teh marbuta. */
+const FOLDS = {
+  s29:  {"آ":"ا","أ":"ا","إ":"ا","ٱ":"ا","ؤ":"و","ئ":"ي","ى":"ي","ة":"ه"},
+  ap1:  {"ٱ":"ا","ة":"ه"},
+  orig: {}
+};
+const ALIF_CLASS = new Set(["ا","أ","إ","آ","ٱ","ٰ"]);
+
+/* The per-mark toggle row. `cps` maps each governed codepoint to what it
+   becomes when the toggle is on; off means the codepoint is dropped. Nothing
+   below this line knows what a hamza is. */
+const MARKS = [
+  {id:"hamza",  glyph:"ء", label:"Hamza above horizontal line as letter", on:true,  cps:{"ء":"ء"}},
+  {id:"supalef",glyph:"ٰ", label:"Superscript alef as letter",            on:false, cps:{"ٰ":"ا"}},
+  {id:"small",  glyph:"ۥ", label:"Small waw / yeh as letter",             on:false, cps:{"ۥ":"و","ۦ":"ي"}},
+  {id:"silent", glyph:"۟", label:"Count letters marked silent",           on:true,  cps:{}}
+];
+
+const DROP = /[\u064B-\u0650\u0652-\u0655\u0640\u06D6-\u06DE\u06E0-\u06E4\u06E7-\u06ED\u002D\u0020]/;
+const SHADDA = "\u0651";
+const SILENT = "\u06DF";
+const IS_LETTER = /[\u0621-\u063A\u0641-\u064A]/;
+
+function foldWord(uthmani, marks, mode){
+  const fold = FOLDS[mode];
+  const silentOn = marks.find(m => m.id === "silent").on;
+  const chars = [...uthmani];
+  let out = "";
+  for (let i = 0; i < chars.length; i++){
+    const ch = chars[i];
+    if (ch === SHADDA) continue;
+    if (!silentOn && chars[i+1] === SILENT) continue;   // letter marked silent
+    if (ch === SILENT) continue;
+    let governed = false, mapped = null;
+    for (const m of marks) if (m.cps[ch] !== undefined){ governed = true; if (m.on) mapped = m.cps[ch]; break; }
+    if (governed){
+      if (mapped !== null){ const v = fold[mapped] !== undefined ? fold[mapped] : mapped; if (IS_LETTER.test(v)) out += v; }
+      continue;
+    }
+    if (DROP.test(ch)) continue;
+    const v = fold[ch] !== undefined ? fold[ch] : ch;
+    if (IS_LETTER.test(v)) out += v;
+  }
+  return out;
+}
+
+const digitSum = n => String(n).split("").reduce((a,d)=>a+(+d),0);
+const digitalRoot = n => { while (n > 9) n = digitSum(n); return n; };
+const fmt = n => n.toLocaleString("en-US");
+
+/* ── state ───────────────────────────────────────────────────── */
+const state = { marks: MARKS.map(m => ({...m})), mode:"s29", vsys:"abjad", word:null, div:19, query:"num" };
+
+/* ── compute ─────────────────────────────────────────────────── */
+function compute(mode){
+  mode = mode || state.mode;
+  const rows = state.word === null ? WORDS : [WORDS[state.word]];
+  const folded = rows.map(w => foldWord(w[0], state.marks, mode));
+  const stream = folded.join("");
+  const freq = new Map(), pos = new Map();
+  [...stream].forEach((c,i) => {
+    freq.set(c,(freq.get(c)||0)+1);
+    if (!pos.has(c)) pos.set(c,[]);
+    pos.get(c).push(i+1);
+  });
+  const value = state.vsys === "none" ? 0 : [...stream].reduce((a,c)=>a+(ABJAD[c]||0),0);
+  const table = [...pos].map(([c,ps]) => ({
+    c, freq: ps.length,
+    sumPos: ps.reduce((a,b)=>a+b,0),
+    sumDelta: ps.slice(1).reduce((a,p,i)=>a+(p-ps[i]),0)
+  })).sort((a,b)=> b.freq-a.freq || a.c.localeCompare(b.c));
+  return { words: rows.length, letters: stream.length, unique: freq.size, value, folded, table,
+           alif: [...stream].filter(c => ALIF_CLASS.has(c)).length,
+           digitSum: digitSum(value), digitalRoot: digitalRoot(value) };
+}
+
+/* ── render: readout ─────────────────────────────────────────── */
+function renderCounts(r){
+  if (state.mode === "orig"){
+    document.getElementById("counts").innerHTML =
+        '<div class="rhead"><span>Scope counts</span><span class="sp"></span></div>'
+      + '<p class="hint">Original Uthmani is declared <code>countable: false</code>. It is the reading text, '
+      + 'not a counting basis: every mark in it is a rendering decision by the mushaf, so totals taken over it '
+      + 'would not reproduce any published figure. Pick a countable mode to see numbers.</p>';
+    document.getElementById("compare").innerHTML = "";
+    document.getElementById("cmpNote").textContent = "";
+    document.getElementById("ltable").innerHTML = "";
+    document.getElementById("freqScope").textContent = "—";
+    return;
+  }
+  const divisible = state.vsys !== "none" && r.value % state.div === 0;
+  const lettersDiv = r.letters % state.div === 0;
+  const rows = [
+    ["Chapters", "1", false],
+    ["Verses", "1", false],
+    ["Words", fmt(r.words), false],
+    ["Letters", fmt(r.letters), lettersDiv],
+    ["Unique letters", fmt(r.unique), false],
+    ["Alif class", fmt(r.alif), false]
+  ];
+  let html = '<div class="rhead"><span>Scope counts</span><span class="sp"></span></div>';
+  for (const [k,v,gold] of rows)
+    html += `<div class="numrow"><span class="k">${k}</span><span class="v${gold?" gold":""}">${v}</span></div>`;
+  if (state.vsys !== "none"){
+    html += `<div class="numrow big"><span class="k">Abjad value</span><span class="v${divisible?" gold":""}">${fmt(r.value)}</span></div>`;
+    html += `<div class="numrow"><span class="k">Digit sum</span><span class="v">${r.digitSum}</span></div>`;
+    html += `<div class="numrow"><span class="k">Digital root</span><span class="v">${r.digitalRoot}</span></div>`;
+    html += `<div class="numrow"><span class="k">&divide; ${state.div}</span><span class="v${divisible?" gold":""}">`
+         +  (divisible ? `${fmt(r.value/state.div)} &times; ${state.div}` : (r.value/state.div).toFixed(2))
+         +  `</span></div>`;
+  }
+  document.getElementById("counts").innerHTML = html;
+}
+
+function renderCompare(){
+  if (state.mode === "orig") return;
+  const a = compute("s29"), b = compute("ap1");
+  const cells = [
+    ["Letters",       a.letters, b.letters, false],
+    ["Unique letters",a.unique,  b.unique,  false],
+    ["Alif class",    a.alif,    b.alif,    true],
+    ["Abjad value",   a.value,   b.value,   true]
+  ];
+  let html = '<span></span><span class="ch">Simp&nbsp;29</span><span class="ch">App&nbsp;1</span>';
+  for (const [k,x,y,alifSensitive] of cells){
+    html += `<span class="cl">${k}</span><span class="cv">${fmt(x)}</span>`
+         +  `<span class="cv${alifSensitive?" unv":""}"`
+         +  (alifSensitive ? ' title="Appendix-1 alif rule is unresolved: no subset of 13 mark classes reproduces the published counts for the six ALM suras. Treat alif-dependent figures as unverified."' : "")
+         +  `>${fmt(y)}</span>`;
+  }
+  document.getElementById("compare").innerHTML = html;
+  document.getElementById("cmpNote").innerHTML =
+      'At verse scale the two modes agree on how many letters there are and differ on '
+    + '<em>which</em>: Simplified&nbsp;29 folds the hamza carriers and alif maqsura into alif and yeh, '
+    + 'Appendix&nbsp;1 keeps them apart. The divergence that matters is in aggregate alif totals, which is '
+    + 'why alif-dependent figures are <span style="text-decoration:underline dotted var(--ed-danger);text-underline-offset:3px">marked unverified</span>.';
+}
+
+function renderTable(r){
+  if (state.mode === "orig") return;
+  const max = r.table.length ? r.table[0].freq : 1;
+  document.getElementById("ltable").innerHTML = r.table.map((t,i) =>
+    `<tr><td>${i+1}</td><td class="g">${t.c}</td>`
+    + `<td class="f"><span class="bar" style="width:${(t.freq/max*100).toFixed(1)}%"></span><span>${t.freq}</span></td>`
+    + `<td>${fmt(t.sumPos)}</td><td>${t.sumDelta || "–"}</td></tr>`).join("");
+  document.getElementById("freqScope").textContent = r.table.length + " of 29";
+}
+
+function renderMarks(){
+  const rows = state.word === null ? WORDS : [WORDS[state.word]];
+  const present = { supalef:0, small:0, hamza:0, silent:0 };
+  for (const w of rows) for (const ch of w[0]){
+    if (ch === "\u0670") present.supalef++;
+    else if (ch === "\u06E5" || ch === "\u06E6") present.small++;
+    else if (ch === "\u0621") present.hamza++;
+    else if (ch === "\u06DF") present.silent++;
+  }
+  const inert = Object.entries(present).filter(([,n]) => n === 0)
+    .map(([k]) => ({supalef:"superscript alef",small:"small waw / yeh",hamza:"hamza",silent:"silent marks"})[k]);
+  document.getElementById("markNote").innerHTML = inert.length
+    ? 'No ' + inert.join(", ") + ' in this scope, so ' + (inert.length > 1 ? 'those toggles' : 'that toggle') + ' changes nothing here.'
+    : 'All four mark classes occur in this scope.';
+  document.getElementById("marks").innerHTML = state.marks.map(m =>
+    `<button class="mark-t" type="button" data-mark="${m.id}" aria-pressed="${m.on}">`
+    + `<span class="box" aria-hidden="true">✓</span>`
+    + `<span class="gl" aria-hidden="true">${m.glyph}</span>`
+    + `<span class="tx">${m.label}</span></button>`).join("");
+}
+
+/* ── render: text pane ───────────────────────────────────────── */
+function renderVerse(r){
+  document.getElementById("arabic").innerHTML = WORDS.map((w,i) =>
+    `<span class="w${state.word===i?" sel":""}" data-w="${i}" tabindex="0" role="button">${w[0]}</span>`).join("");
+  document.getElementById("grid").innerHTML = WORDS.map((w,i) =>
+    `<button class="wcell${state.word===i?" sel":""}" type="button" data-w="${i}">`
+    + `<span class="idx">${i+1}</span><span class="ar">${w[0]}</span>`
+    + `<span class="tr">${w[1]}</span><span class="rt">${w[2]}</span></button>`).join("");
+  const modeName = {s29:"Simplified 29", ap1:"Appendix 1", orig:"Original Uthmani"}[state.mode];
+  const verified = state.mode === "s29";
+  const scope = state.word === null ? "33:33" : `33:33:${state.word+1}`;
+  document.getElementById("prov").innerHTML =
+      `<span class="pchip">mode <b>${modeName}</b></span>`
+    + `<span class="pchip">system <b>${state.vsys==="abjad"?"Abjad standard":"none"}</b></span>`
+    + `<span class="pchip">scope <b>${scope}</b></span>`
+    + (state.mode === "orig" ? "" : `<span class="pchip">letters <b>${fmt(r.letters)}</b></span>`)
+    + (state.mode === "orig"
+        ? `<span class="pchip warn">display only · not a counting basis</span>`
+        : verified
+          ? `<span class="pchip ok">verified · Al-Fatiha 7/29/139</span>`
+          : `<span class="pchip warn">alif rule unresolved</span>`);
+  document.getElementById("cardRef").textContent = scope;
+  document.getElementById("sbScope").textContent = scope;
+  document.getElementById("vW").innerHTML = state.word === null ? "&mdash;" : String(state.word+1);
+  document.getElementById("gridCount").textContent = WORDS.length + " words";
+}
+
+/* ── query pane bodies ───────────────────────────────────────── */
+const QUERY = {
+  text: `
+    <div class="field"><span class="label">Find in Arabic</span>
+      <input class="input" dir="rtl" value="أهل البيت" aria-label="Arabic query"></div>
+    <div class="field"><span class="label">Match</span>
+      <div class="chiprow">
+        <button class="tog" type="button" aria-pressed="true">Exact</button>
+        <button class="tog" type="button" aria-pressed="false">Proximity</button>
+        <button class="tog" type="button" aria-pressed="false">Root</button>
+      </div></div>
+    <div class="field"><span class="label">Position in word</span>
+      <div class="chiprow">
+        <button class="tog" type="button" aria-pressed="true">Anywhere</button>
+        <button class="tog" type="button" aria-pressed="false">Start</button>
+        <button class="tog" type="button" aria-pressed="false">Middle</button>
+        <button class="tog" type="button" aria-pressed="false">End</button>
+      </div></div>
+    <div class="field"><span class="label">Wordness</span>
+      <div class="chiprow">
+        <button class="tog" type="button" aria-pressed="true">Whole word</button>
+        <button class="tog" type="button" aria-pressed="false">Part of word</button>
+      </div></div>
+    <button class="run" type="button">Search corpus</button>
+    <p class="hint">Prefix a word with <code>-</code> to exclude it, <code>+</code> to require it.</p>`,
+  num: `
+    <div class="field"><span class="label">Target value</span>
+      <input class="input" value="6795" aria-label="Target value"></div>
+    <div class="field"><span class="label">Search over</span>
+      <select class="select" aria-label="Range"><option>Verses</option><option>Words</option><option>Word ranges</option><option>Chapters</option><option>Chapter verses</option></select></div>
+    <div class="field"><span class="label">Group by</span>
+      <div class="chiprow">
+        <button class="tog" type="button" aria-pressed="true">Value</button>
+        <button class="tog" type="button" aria-pressed="false">Letters</button>
+        <button class="tog" type="button" aria-pressed="false">Words</button>
+        <button class="tog" type="button" aria-pressed="false">Unique</button>
+      </div></div>
+    <div class="field"><span class="label">Modifier preset</span>
+      <select class="select" aria-label="Modifier preset">
+        <option>Simple value</option>
+        <option>Value + letter positions</option>
+        <option>Primalogy standard</option>
+        <option>Custom… (19 modifiers)</option>
+      </select></div>
+    <button class="run" type="button">Find matches</button>
+    <p class="hint">The custom matrix spans roughly 500,000 combinations. Presets come first on purpose.</p>`,
+  sim: `
+    <div class="field"><span class="label">Method</span>
+      <div class="chiprow">
+        <button class="tog" type="button" aria-pressed="true">Similar text</button>
+        <button class="tog" type="button" aria-pressed="false">Similar words</button>
+        <button class="tog" type="button" aria-pressed="false">Same start</button>
+        <button class="tog" type="button" aria-pressed="false">Same end</button>
+      </div></div>
+    <div class="field"><span class="label">Threshold</span>
+      <input class="input" type="range" min="50" max="100" value="82" aria-label="Similarity threshold"></div>
+    <div class="field"><span class="label">Source</span>
+      <select class="select" aria-label="Source"><option>Current verse (33:33)</option><option>All verses</option></select></div>
+    <button class="run" type="button">Find similar</button>
+    <p class="hint">Levenshtein over the folded letter stream, so similarity respects the active text mode.</p>`,
+  freq: `
+    <div class="field"><span class="label">Letters</span>
+      <input class="input" dir="rtl" value="ا ل م" aria-label="Letters"></div>
+    <div class="field"><span class="label">Duplicates</span>
+      <div class="chiprow">
+        <button class="tog" type="button" aria-pressed="true">Count duplicates</button>
+        <button class="tog" type="button" aria-pressed="false">Unique only</button>
+      </div></div>
+    <div class="field"><span class="label">Scope</span>
+      <select class="select" aria-label="Frequency scope"><option>Whole corpus</option><option>Chapter 33</option><option>Verse 33:33</option></select></div>
+    <button class="run" type="button">Sum frequencies</button>
+    <p class="hint">Initial-letter counts add the sura’s unnumbered Basmalah, which is what the published figures do.</p>`,
+  root: `
+    <div class="field"><span class="label">Root</span>
+      <input class="input" dir="rtl" value="ط ه ر" aria-label="Root"></div>
+    <div class="field"><span class="label">Roots in this verse</span>
+      <div class="chiprow" id="rootchips"></div></div>
+    <button class="run" type="button">Show all occurrences</button>
+    <p class="hint">1,782 roots, every word covered. Ctrl+Click any word in the text pane to jump to its root family.</p>`
+};
+
+function renderQuery(){
+  document.getElementById("qbody").innerHTML = QUERY[state.query];
+  if (state.query === "root"){
+    const seen = [];
+    for (const w of WORDS) if (w[2] && !seen.includes(w[2])) seen.push(w[2]);
+    document.getElementById("rootchips").innerHTML = seen.map((r,i) =>
+      `<button class="tog" type="button" aria-pressed="${i===0?"true":"false"}" dir="rtl" style="font-family:var(--font-arabic);font-size:14px;letter-spacing:.1em">${r}</button>`).join("");
+  }
+}
+
+/* ── paint everything ────────────────────────────────────────── */
+function paint(){
+  const r = compute();
+  renderMarks();
+  renderCounts(r);
+  renderCompare();
+  renderTable(r);
+  renderVerse(r);
+}
+
+/* ── events ──────────────────────────────────────────────────── */
+document.addEventListener("click", e => {
+  const mk = e.target.closest("[data-mark]");
+  if (mk){
+    const m = state.marks.find(x => x.id === mk.dataset.mark);
+    m.on = !m.on;
+    paint();
+    return;
+  }
+  const w = e.target.closest("[data-w]");
+  if (w){
+    const i = +w.dataset.w;
+    state.word = state.word === i ? null : i;
+    paint();
+    return;
+  }
+  const q = e.target.closest("[data-q]");
+  if (q){
+    state.query = q.dataset.q;
+    for (const b of document.querySelectorAll("[data-q]"))
+      b.setAttribute("aria-selected", String(b === q));
+    renderQuery();
+    return;
+  }
+  const d = e.target.closest("[data-div]");
+  if (d){
+    const primes = [7,11,13,17,19,23,29];
+    let i = primes.indexOf(state.div);
+    i = Math.min(primes.length - 1, Math.max(0, i + (+d.dataset.div)));
+    state.div = primes[i];
+    document.getElementById("vDiv").textContent = state.div;
+    paint();
+    return;
+  }
+  const st = e.target.closest("[data-step]");
+  if (st){
+    const [which, delta] = st.dataset.step.split(",");
+    if (which === "w"){
+      const next = state.word === null ? (+delta > 0 ? 0 : WORDS.length - 1)
+                                       : state.word + (+delta);
+      state.word = next < 0 || next >= WORDS.length ? null : next;
+      paint();
+    }
+    return;
+  }
+  const tog = e.target.closest(".tog");
+  if (tog){
+    const row = tog.parentElement;
+    const single = row.querySelectorAll('[aria-pressed]').length > 1 && !row.id;
+    if (single) for (const b of row.querySelectorAll(".tog")) b.setAttribute("aria-pressed","false");
+    tog.setAttribute("aria-pressed","true");
+  }
+});
+
+document.getElementById("mode").addEventListener("change", e => { state.mode = e.target.value; paint(); });
+document.getElementById("vsys").addEventListener("change", e => { state.vsys = e.target.value; paint(); });
+
+/* hover card, with the derived segmentation */
+const hover = document.getElementById("hover");
+const WEAK = new Set(["و","ي","ا","ء"]);   /* weak radicals */
+function segmentWord(uthmani, root){
+  const sk = [];
+  for (const ch of uthmani){
+    if (ch === SHADDA){ if (sk.length) sk[sk.length-1].dbl = true; continue; }
+    if (DROP.test(ch) || ch === "ٰ" || ch === SILENT) continue;
+    const f = FOLDS.s29[ch];
+    sk.push({ch: f !== undefined ? f : ch, dbl:false});
+  }
+  const rads = root.split(/\s+/).filter(Boolean);
+  let i = 0, used = -1, skipped = 0;
+  const hits = [];
+  for (const rad of rads){
+    const alts = WEAK.has(rad) ? WEAK : new Set([rad]);
+    if (used >= 0 && sk[used].dbl && alts.has(sk[used].ch)){ hits.push(used); used = -1; continue; }
+    let found = -1;
+    for (let j = i; j < sk.length; j++) if (alts.has(sk[j].ch)){ found = j; break; }
+    if (found < 0){ if (WEAK.has(rad) && skipped === 0){ skipped++; continue; } return null; }
+    hits.push(found); used = found; i = found + 1;
+  }
+  if (!hits.length) return null;
+  const a = Math.min(...hits), b = Math.max(...hits);
+  const s = sk.map(x => x.ch).join("");
+  return { pfx: s.slice(0,a), stm: s.slice(a,b+1), sfx: s.slice(b+1) };
+}
+function showHover(el, i){
+  const [ar, tr, root, en] = WORDS[i];
+  const seg = segmentWord(ar, root);
+  const folded = foldWord(ar, state.marks, state.mode);
+  hover.innerHTML =
+      `<span class="hAr">${ar}</span>`
+    + `<span class="hTr">${tr}</span>`
+    + `<span class="hEn">${en}</span>`
+    + `<span class="hRow">root <b dir="rtl" style="font-family:var(--font-arabic);font-size:15px;letter-spacing:.1em">${root}</b></span>`
+    + (seg
+        ? `<span class="hRow">segments <span class="seg3">`
+          + (seg.pfx ? `<span class="pfx">${seg.pfx}</span>` : "")
+          + `<span class="stm">${seg.stm}</span>`
+          + (seg.sfx ? `<span class="sfx">${seg.sfx}</span>` : "")
+          + `</span></span>`
+        : `<span class="hRow">segments <b>exception table</b></span>`)
+    + `<span class="hRow">letters <b>${folded.length}</b> &nbsp; value <b>${fmt([...folded].reduce((a,c)=>a+(ABJAD[c]||0),0))}</b></span>`;
+  const rect = el.getBoundingClientRect();
+  hover.classList.add("on");
+  hover.setAttribute("aria-hidden","false");
+  const hb = hover.getBoundingClientRect();
+  let left = rect.left + rect.width/2 - hb.width/2;
+  left = Math.max(8, Math.min(left, window.innerWidth - hb.width - 8));
+  let top = rect.top - hb.height - 8;
+  if (top < 8) top = rect.bottom + 8;
+  hover.style.left = left + "px";
+  hover.style.top = top + "px";
+}
+document.addEventListener("pointerover", e => {
+  const el = e.target.closest("[data-w]");
+  if (el) showHover(el, +el.dataset.w);
+});
+document.addEventListener("pointerout", e => {
+  if (e.target.closest("[data-w]")){
+    hover.classList.remove("on");
+    hover.setAttribute("aria-hidden","true");
+  }
+});
+document.addEventListener("focusin", e => {
+  const el = e.target.closest("[data-w]");
+  if (el) showHover(el, +el.dataset.w);
+});
+
+/* page chrome controls */
+function toggleTheme(){
+  const root = document.documentElement;
+  const dark = getComputedStyle(root).getPropertyValue("--ed-bg").trim().toLowerCase() === "#0f0e0d";
+  root.setAttribute("data-theme", dark ? "light" : "dark");
+}
+document.getElementById("btnTheme").addEventListener("click", toggleTheme);
+document.getElementById("btnTheme2").addEventListener("click", toggleTheme);
+document.getElementById("btnAnnot").addEventListener("click", e => {
+  const on = e.currentTarget.getAttribute("aria-pressed") !== "true";
+  e.currentTarget.setAttribute("aria-pressed", String(on));
+  document.getElementById("ribbon").classList.toggle("annot", on);
+});
+
+renderQuery();
+paint();
+</script>
