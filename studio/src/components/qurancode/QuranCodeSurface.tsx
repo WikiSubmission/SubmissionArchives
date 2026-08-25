@@ -22,6 +22,7 @@ import ChapterList from './ChapterList'
 import QueryPane from './QueryPane'
 import ResultsList from './ResultsList'
 import AggregatePane from './AggregatePane'
+import LedgerPane from './LedgerPane'
 
 /**
  * The QuranCode research surface: query, text, readout.
@@ -42,7 +43,7 @@ export default function QuranCodeSurface() {
   /* The centre pane is either reading or answering, never both. A search
      switches it to results; opening a hit switches it back, which is what makes
      a result feel like a place to go rather than a list to squint at. */
-  const [view, setView] = useState<'read' | 'results' | 'totals'>('read')
+  const [view, setView] = useState<'read' | 'results' | 'totals' | 'ledger'>('read')
   const [bottomTab, setBottomTab] = useState<BottomTab>('words')
 
   /** How many times each governed mark occurs in the verse on screen, so a
@@ -324,7 +325,9 @@ export default function QuranCodeSurface() {
               hasTotals={Boolean(qc.aggregate)}
               onViewChange={setView}
             />
-            {view === 'totals' ? (
+            {view === 'ledger' ? (
+              <LedgerPane />
+            ) : view === 'totals' ? (
               <AggregatePane
                 result={qc.aggregate}
                 error={qc.aggregateError}

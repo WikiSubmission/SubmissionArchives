@@ -1,4 +1,4 @@
-import { BookOpen, CaretLeft, CaretRight, ListMagnifyingGlass, Sigma } from '@phosphor-icons/react'
+import { BookOpen, CaretLeft, CaretRight, ListMagnifyingGlass, SealCheck, Sigma } from '@phosphor-icons/react'
 import type { ChapterInfo, DivisionKindInfo, DivisionRef, VerseDivisions } from '../../lib/quranCode'
 import type { ScopeLevel } from '../../hooks/useQuranCode'
 
@@ -36,12 +36,16 @@ interface ScopeBarProps {
  * picker, and the divisions are disabled with the phase that brings them named,
  * rather than hidden as if they were never coming.
  */
-type View = 'read' | 'results' | 'totals'
+type View = 'read' | 'results' | 'totals' | 'ledger'
 
 const VIEWS = [
   ['read', 'Read', BookOpen],
   ['results', 'Results', ListMagnifyingGlass],
   ['totals', 'Totals', Sigma],
+  /* Always available, unlike the other two: what the module cannot reproduce is
+     not a result of anything the researcher just did, and hiding it behind a
+     query would make it feel like an optional disclosure. */
+  ['ledger', 'Ledger', SealCheck],
 ] as const
 
 export default function ScopeBar({
@@ -168,19 +172,20 @@ export default function ScopeBar({
         )}
       </div>
 
-      {/* Reading, results and totals share the pane, so the switch belongs
-          where the rest of the navigation is rather than floating over the
-          content. A view appears only once it has something to show, which is
-          why the buttons are filtered rather than disabled: a control that can
-          never do anything yet is noise, not affordance. */}
-      {(hasResults || hasTotals) && (
-        <div
-          role="group"
-          aria-label="View mode"
-          className="flex items-center rounded-md border border-ed-rule bg-ed-surface p-0.5"
-        >
-          {VIEWS.filter(
-            ([id]) => id === 'read' || (id === 'results' ? hasResults : hasTotals)
+      {/* The four views share the pane, so the switch belongs where the rest of
+          the navigation is rather than floating over the content. Results and
+          totals appear only once they have something to show, which is why the
+          list is filtered rather than disabled: a control that can never do
+          anything yet is noise, not affordance. The ledger is always there,
+          because what the module cannot reproduce is not a result of anything
+          the researcher just did. */}
+      <div
+        role="group"
+        aria-label="View mode"
+        className="flex items-center rounded-md border border-ed-rule bg-ed-surface p-0.5"
+      >
+          {VIEWS.filter(([id]) =>
+            id === 'results' ? hasResults : id === 'totals' ? hasTotals : true
           ).map(([id, label, Icon]) => {
             const active = view === id
             return (
@@ -201,8 +206,7 @@ export default function ScopeBar({
               </button>
             )
           })}
-        </div>
-      )}
+      </div>
 
       {/* Scope selector */}
       <select

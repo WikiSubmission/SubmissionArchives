@@ -14,7 +14,7 @@ use history::HistoryEntry;
 use notes::NoteRecord;
 use quran::Verse;
 use qurancode::{
-    Aggregate, AggregateQuery, ChapterView, Counts, LetterStat, Metadata, Modifiers,
+    Aggregate, AggregateQuery, ChapterView, Counts, Ledger, LetterStat, Metadata, Modifiers,
     NumberTarget, RootInfo, Scope,
     SearchOptions, SearchResult, SelectionValue, SimilarityMethod, ToggleInput, ValueResult,
     VerseView, WordInfo,
@@ -283,6 +283,11 @@ fn qc_aggregate(
 }
 
 #[tauri::command]
+fn qc_ledger() -> Result<Ledger, String> {
+    qurancode::ledger()
+}
+
+#[tauri::command]
 fn qc_roots() -> Vec<RootInfo> {
     qurancode::root_list()
 }
@@ -334,7 +339,8 @@ pub fn run() {
             qc_roots,
             qc_get_chapter,
             qc_value_of_text,
-            qc_aggregate
+            qc_aggregate,
+            qc_ledger
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

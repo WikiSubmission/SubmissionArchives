@@ -33,6 +33,7 @@ const CHAPTERS_TSV: &str = include_str!("../assets/qurancode/chapters.tsv");
 const ROOTS_TSV: &str = include_str!("../assets/qurancode/roots.tsv");
 const DIVISIONS_TSV: &str = include_str!("../assets/qurancode/divisions.tsv");
 const PROSTRATIONS_TSV: &str = include_str!("../assets/qurancode/prostrations.tsv");
+const FIXTURES_JSON: &str = include_str!("../assets/qurancode/fixtures.json");
 const TEXT_MODES_JSON: &str = include_str!("../assets/qurancode/text_modes.json");
 const ABJAD_STANDARD_JSON: &str =
     include_str!("../assets/qurancode/value_systems/abjad_standard.json");
@@ -2644,6 +2645,63 @@ pub fn value_of_text(
     })
 }
 
+/* ── the fixture ledger ────────────────────────────────────────────────── */
+
+/// One published figure, what this corpus computes for it, and whether the two
+/// agree.
+///
+/// The ledger is bundled rather than recomputed because the generator already
+/// refuses to write a dataset that fails a `verified` fixture, so every entry
+/// marked verified is true of the very bytes the binary was built from. What
+/// the surface adds is that a reader can see the list, including the entries
+/// that do *not* reproduce, without reading the build log.
+#[derive(Deserialize, Serialize, Clone, Debug)]
+pub struct Fixture {
+    pub id: String,
+    pub mode: String,
+    pub description: String,
+    pub expected: i64,
+    pub actual: i64,
+    pub pass: bool,
+    /// `verified` or `known_gap`.
+    pub status: String,
+}
+
+#[derive(Deserialize)]
+struct RawLedger {
+    fixtures: Vec<Fixture>,
+}
+
+#[derive(Serialize, Clone, Debug)]
+pub struct Ledger {
+    pub fixtures: Vec<Fixture>,
+    pub verified: usize,
+    pub known_gaps: usize,
+    /// The summed absolute difference between computed and published across
+    /// every gap. The count of gaps is a poor measure on its own, because
+    /// adding a fixture that nearly reproduces raises it; this is the number
+    /// that has to go down.
+    pub distance: i64,
+}
+
+pub fn ledger() -> Result<Ledger, String> {
+    let raw: RawLedger =
+        serde_json::from_str(FIXTURES_JSON).map_err(|e| format!("fixtures.json: {}", e))?;
+    let verified = raw.fixtures.iter().filter(|f| f.status == "verified").count();
+    let distance = raw
+        .fixtures
+        .iter()
+        .filter(|f| f.status != "verified")
+        .map(|f| (f.actual - f.expected).abs())
+        .sum();
+    Ok(Ledger {
+        known_gaps: raw.fixtures.len() - verified,
+        verified,
+        distance,
+        fixtures: raw.fixtures,
+    })
+}
+
 /* ── aggregation ───────────────────────────────────────────────────────── */
 
 /// Which word instances an aggregate runs over.
@@ -4811,6 +4869,65 @@ mod tests {
             divisions_of(2, 255).unwrap().part,
             "the same answer either way"
         );
+    }
+
+
+    /* ── the fixture ledger ────────────────────────────────────────────── */
+
+    /// The ledger has to agree with the dataset it was generated from, and the
+    /// generator refuses to write when a `verified` fixture drifts. This is the
+    /// other half of that guarantee: every entry marked verified must actually
+    /// have matched, so a hand-edited fixtures.json cannot claim a figure the
+    /// build never checked.
+    #[test]
+    fn every_verified_fixture_actually_matched() {
+        let l = ledger().unwrap();
+        assert!(l.verified > 0);
+        for f in &l.fixtures {
+            if f.status == "verified" {
+                assert_eq!(
+                    f.expected, f.actual,
+                    "{} is marked verified but computed {} against {}",
+                    f.id, f.actual, f.expected
+                );
+                assert!(f.pass, "{} is marked verified but pass is false", f.id);
+            } else {
+                assert_ne!(
+                    f.expected, f.actual,
+                    "{} is a known gap but the two figures agree",
+                    f.id
+                );
+            }
+        }
+    }
+
+    /// Simplified 29 carries no gaps, which is why it is the default mode. The
+    /// generator asserts it too; asserted here as well because the ledger is
+    /// what the UI reads, and a mode the UI presents as authoritative has to be.
+    #[test]
+    fn the_default_mode_carries_no_gaps_in_the_ledger() {
+        let l = ledger().unwrap();
+        let gaps: Vec<&str> = l
+            .fixtures
+            .iter()
+            .filter(|f| f.mode == DEFAULT_MODE && f.status != "verified")
+            .map(|f| f.id.as_str())
+            .collect();
+        assert!(gaps.is_empty(), "{} has gaps: {:?}", DEFAULT_MODE, gaps);
+    }
+
+    /// The distance is the metric that matters, and it is a lot smaller than it
+    /// was. Bounded rather than pinned so that better source data improves the
+    /// suite instead of breaking it.
+    #[test]
+    fn the_distance_to_the_published_figures_is_small() {
+        let l = ledger().unwrap();
+        assert!(
+            l.distance <= 120,
+            "distance to published figures is {}, was 2,123 before the alif fold",
+            l.distance
+        );
+        assert!(l.known_gaps > 0, "hiding a gap is worse than having one");
     }
 
 }

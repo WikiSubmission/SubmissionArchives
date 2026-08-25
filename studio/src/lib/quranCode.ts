@@ -473,7 +473,34 @@ export const qcAggregate = (
     divisor,
   })
 
+/* ── the fixture ledger ────────────────────────────────────────────────── */
+
+/** One published figure, what this corpus computes for it, and whether they
+ * agree. The generator refuses to write a dataset where a `verified` entry
+ * drifts, so a verified row is true of the bytes in this binary. */
+export interface Fixture {
+  id: string
+  mode: string
+  description: string
+  expected: number
+  actual: number
+  pass: boolean
+  status: 'verified' | 'known_gap'
+}
+
+export interface Ledger {
+  fixtures: Fixture[]
+  verified: number
+  known_gaps: number
+  /** Summed absolute difference across the gaps. The count alone is a poor
+   * measure, because a fixture that nearly reproduces raises it. */
+  distance: number
+}
+
+export const qcLedger = () => invoke<Ledger>('qc_ledger')
+
 export const qcRoots = () => invoke<RootInfo[]>('qc_roots')
+
 
 
 /* ── formatting ──────────────────────────────────────────────────────── */
