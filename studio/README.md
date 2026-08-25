@@ -9,7 +9,7 @@ A privacy-first, 100% offline desktop application and scientific workstation for
 - **100% Offline & Local-First:** All notes, research corpora, media notes, and calculations reside entirely on your local filesystem as portable Markdown (`.md`) and asset files. No accounts, no cloud sync lock-in, no telemetry.
 - **Native Performance:** Powered by **Tauri v2** with a Rust backend handling high-speed corpus indexing, file system operations, and heavy arithmetic off the UI thread.
 - **Scholarly Quran Embeds (`/quran`):** Instant bilingual (Uthmani Arabic & English translation) verse cards embedded directly into prose using portable directives (`::: quran {verses="..."} :::`).
-- **Integrated QuranCode Research Suite:** Enterprise-grade corpus analysis surface featuring multi-mode letter/word frequency statistics, gematria/abjad calculations, 14-modifier formula engines, root indexing (1,782 roots), and Levenshtein similarity search with reproducible citations.
+- **Integrated QuranCode Research Suite:** Corpus analysis over a verified 77,401-word Uthmani text: multi-mode letter and word frequency, classical abjad valuation, a 14-modifier value engine, 1,782 roots, similarity search, aggregation over arbitrary sets of word instances, the six traditional mushaf divisions, and a public ledger of which published figures it does and does not reproduce.
 - **Multi-Modal Prose Editor:** Fluidly switch between **Write** (keyboard-first Markdown), **Blocks** (drag-and-drop block manipulation), and **Page** (paginated WYSIWYG manuscript sheet).
 
 ---
@@ -37,14 +37,36 @@ A privacy-first, 100% offline desktop application and scientific workstation for
 - **Recomputable Findings (`::: qcvalue :::`):** Research findings cite their exact computational parameters and automatically verify reproducibility upon note reload.
 
 ### 2. QuranCode Research Surface
-- **Multi-Text Modes:** Compare counts side-by-side across Uthmani (standard), Simplified 29, Cleaned 28, and historical reference fixtures with transparent gap indicators.
-- **Scientific Gematria & Calculation Engine:** Abjad systems (Standard 28, 29-letter, Historical) paired with customizable letter/word/verse/chapter position and distance modifiers.
-- **Corpus Query Engine:**
-  - **Text:** Exact or proximity Arabic search with word boundary and positioning filters.
-  - **Numbers:** Find verses matching exact target values, letter counts, or word counts.
-  - **Similar:** Ranked Levenshtein similarity over the folded letter stream.
-  - **Roots:** Full dictionary of 1,782 roots covering the entire corpus.
-- **Letter Frequency Analysis:** Complete tabular frequency breakdown, sum of positions ($\Sigma\text{Pos}$), and sum of consecutive distances ($\Sigma\Delta$).
+
+There is no single true letter count, so nothing in this surface shows a number
+without the convention that produced it. Every figure carries its text mode, its
+mark toggles, its scope and the mode's verification state.
+
+- **Text modes:** Simplified 29 (verified end to end, and held to zero known gaps
+  by a build invariant) and Appendix 1 (published figures) counted side by side,
+  with Original Uthmani available for reading and declared uncountable. Four mark
+  toggles decide what a letter is, and they travel with every count.
+- **Valuation:** classical abjad in both the Eastern and Western orderings, plus a
+  counts-only system, and a 14-modifier engine over letter, word, verse and
+  chapter position and distance.
+- **Query:** exact and proximity Arabic search, target-number search, ranked
+  Levenshtein similarity, and a dictionary of 1,782 roots. Everything a query
+  compares against is the folded stream, so a search obeys the active text mode
+  exactly as a count does.
+- **Totals over a set:** occurrence counts, verses and suras touched, and sums of
+  verse numbers, sura numbers and word positions, each tested against a divisor
+  and shown with its remainder rather than only when it divides. Selection is by
+  predicate rather than by scope alone: a span between two word addresses, every
+  verse carrying one number across all 114 suras, initialed or un-initialed
+  suras, Makkan or Medinan, the verses of prostration.
+- **Traditional divisions:** 30 parts, 60 groups, 240 quarters, 7 stations, 556
+  bowings and 604 pages from Tanzil's metadata under CC-BY, usable as a counting
+  scope and shown on every verse.
+- **Letter frequency:** frequency, sum of positions and sum of consecutive
+  distances per letter.
+- **The ledger:** 66 published figures this corpus reproduces exactly and 16 it
+  does not, in one list with the disagreements first, set against a catalogue of
+  the 138 arithmetic claims the appendices make.
 
 ### 3. Media Notes, PDFs & Canvas
 - **Media Notes:** Local audio/video playback with timestamped note synchronization and transcript teleprompter.
