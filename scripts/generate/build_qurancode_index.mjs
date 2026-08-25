@@ -45,6 +45,7 @@ const WORDS_CSV = path.join(ROOT, 'data', 'sources', 'quran', 'words', 'ws_quran
 const TEXT_CSV = path.join(ROOT, 'data', 'sources', 'quran', '1992', 'ws_quran_text_rows.csv')
 const CHAPTERS_CSV = path.join(ROOT, 'data', 'sources', 'quran', '1992', 'ws_quran_chapters_rows.csv')
 const METADATA_SOURCE = path.join(ROOT, 'data', 'sources', 'quran', 'metadata', 'quran-metadata.txt')
+const APPENDICES_CSV = path.join(ROOT, 'data', 'catalog', 'quran-appendices.csv')
 const OUT_DIR = path.join(ROOT, 'studio', 'src-tauri', 'assets', 'qurancode')
 const VALUE_DIR = path.join(OUT_DIR, 'value_systems')
 
@@ -295,8 +296,11 @@ const ALLAH_FORM = 'لله'
 function buildFixtures(words) {
   const canonical = words.filter((w) => w.verse > 0)
   const fixtures = []
-  const add = (id, mode, description, expected, actual, status = 'verified') =>
-    fixtures.push({ id, mode, description, expected, actual, pass: expected === actual, status })
+  /* `source` cites where the published figure comes from, so a reader of the
+   * ledger can go and check the claim rather than taking our restatement of it.
+   * A fixture without one is a property of the corpus rather than a quotation. */
+  const add = (id, mode, description, expected, actual, status = 'verified', source = '') =>
+    fixtures.push({ id, mode, description, expected, actual, pass: expected === actual, status, source })
 
   /* ── Simplified 29: the mode's own basis ── */
   const fatiha = canonical.filter((w) => w.chapter === 1)
@@ -314,15 +318,15 @@ function buildFixtures(words) {
 
   /* ── published-figures mode: the unambiguous letters ── */
   const hm = [40, 41, 42, 43, 44, 45, 46].reduce((a, c) => a + countIn(words, c, 'حم'), 0)
-  add('hm_2147', 'khalifa_appendix1', 'ح + م across suras 40-46 (19x113)', 2147, hm)
+  add('hm_2147', 'khalifa_appendix1', 'ح + م across suras 40-46 (19x113)', 2147, hm, 'verified', 'appendix-1 s58')
 
   const sad = [7, 19, 38].reduce((a, c) => a + countIn(words, c, 'ص'), 0)
-  add('sad_152', 'khalifa_appendix1', 'ص across suras 7, 19, 38 (19x8)', 152, sad)
+  add('sad_152', 'khalifa_appendix1', 'ص across suras 7, 19, 38 (19x8)', 152, sad, 'verified', 'appendix-1 s46')
 
   const qaf = [42, 50].reduce((a, c) => a + countIn(words, c, 'ق'), 0)
-  add('qaf_114', 'khalifa_appendix1', 'ق in suras 42 and 50 (19x6)', 114, qaf)
+  add('qaf_114', 'khalifa_appendix1', 'ق in suras 42 and 50 (19x6)', 114, qaf, 'verified', 'appendix-1 s33')
 
-  add('nun_133', 'khalifa_appendix1', 'ن in sura 68 (19x7), initial spelled نون', 133, countIn(words, 68, 'ن'))
+  add('nun_133', 'khalifa_appendix1', 'ن in sura 68 (19x7), initial spelled نون', 133, countIn(words, 68, 'ن'), 'verified', 'appendix-1 s42')
   add('ta_20_28', 'khalifa_appendix1', 'ط in sura 20', 28, countIn(words, 20, 'ط'))
   add('ta_27_27', 'khalifa_appendix1', 'ط in sura 27', 27, countIn(words, 27, 'ط'))
   add('sin_36_48', 'khalifa_appendix1', 'س in sura 36', 48, countIn(words, 36, 'س'))
@@ -377,6 +381,29 @@ function buildFixtures(words) {
   add('alm_total_19874', 'khalifa_appendix1',
     'الم counted across the six suras (19x1046)', 19874, almComputed,
     almComputed === 19874 ? 'verified' : 'known_gap')
+
+  /* The six per-sura الم totals are deliberately *not* fixtures. Each is
+   * alif + lam + mim for one sura, and all three components are already pinned
+   * below, so a per-sura total would re-measure the same alif residual under a
+   * second name. That inflates the distance metric without adding information,
+   * and the distance is the number this module is trying to drive down. The
+   * grand total is a fixture because it is the figure Appendix 1 leads with.
+   */
+  /* Sura 42 carries its initials across two verses, حم then عسق, and the
+   * published 209 is the second set alone: 98 + 54 + 57. The first set is
+   * counted with the other six حم suras instead, which is why the sura appears
+   * in two different published figures and neither is the sum of all five
+   * letters. */
+  add('asq_42_209', 'khalifa_appendix1', 'عسق in sura 42 (19x11)', 209,
+    countIn(words, 42, 'عسق'), 'verified', 'appendix-1 s65')
+  add('ayn_42_98', 'khalifa_appendix1', 'ع in sura 42', 98, countIn(words, 42, 'ع'),
+    'verified', 'appendix-1 s65')
+  add('seen_42_54', 'khalifa_appendix1', 'س in sura 42', 54, countIn(words, 42, 'س'),
+    'verified', 'appendix-1 s65')
+  add('qaf_42_57', 'khalifa_appendix1', 'ق in sura 42', 57, countIn(words, 42, 'ق'),
+    'verified', 'appendix-1 s38')
+  add('qaf_50_57', 'khalifa_appendix1', 'ق in sura 50', 57, countIn(words, 50, 'ق'),
+    'verified', 'appendix-1 s38')
 
   /* The other four initial groups, now that alif is in range. Sura 15 lands
    * exactly; the rest carry the same single-digit residual as the alif counts,
@@ -554,6 +581,58 @@ function buildFixtures(words) {
     lastRevelation.filter((w) => w.verse === 1).map((w) => foldWord(w.uthmani, 'simplified29')).join('').length)
 
   return fixtures
+}
+
+/* ── the published claims ──────────────────────────────────────────────
+ *
+ * Every "N (19 x M)" in the appendices, extracted rather than transcribed.
+ *
+ * The point is not to check them automatically. Most need a selector that only
+ * exists in the surrounding prose, and a tool that guessed at one would produce
+ * a number nobody asked for. The point is to have the *list*, so that "which
+ * published claims can this module reproduce" has an answer with a denominator
+ * instead of being a matter of whoever last read the appendices.
+ *
+ * A claim is only kept when the arithmetic it states is actually true, so a
+ * typo in the source text is dropped here rather than becoming a fixture that
+ * can never pass.
+ */
+const CLAIM_RE = /([\d,]{2,9})\s*[([]?\s*(?:is\s+|=\s*)?19\s*[x×*]\s*([\d,]{1,7})/g
+
+function extractClaims() {
+  if (!fs.existsSync(APPENDICES_CSV)) {
+    assert(false, `${APPENDICES_CSV} is missing; the claim catalogue cannot be built`)
+    return []
+  }
+  const rows = readCsv(APPENDICES_CSV)
+  const claims = []
+  const seen = new Set()
+  for (const r of rows) {
+    const text = (r.content || '').replace(/\s+/g, ' ')
+    for (const m of text.matchAll(CLAIM_RE)) {
+      const total = Number(m[1].replace(/,/g, ''))
+      const multiplier = Number(m[2].replace(/,/g, ''))
+      /* The source states the arithmetic; if it does not hold, the text has a
+       * typo and the claim is not a claim about the corpus. */
+      if (total !== 19 * multiplier) continue
+      const key = `${r.id}|${total}`
+      if (seen.has(key)) continue
+      seen.add(key)
+      claims.push({
+        appendix: r.id,
+        section: Number(r.section_index),
+        total,
+        multiplier,
+        /* Enough surrounding words to tell what was being counted, which is the
+         * part a reader needs in order to decide whether it is checkable. */
+        context: text.slice(Math.max(0, m.index - 150), m.index + m[0].length).trim(),
+      })
+    }
+  }
+  claims.sort((a, b) => a.appendix.localeCompare(b.appendix) || a.section - b.section)
+  assert(claims.length > 100,
+    `only ${claims.length} published claims extracted, expected well over 100`)
+  return claims
 }
 
 /* ── the traditional divisions ─────────────────────────────────────────
@@ -893,6 +972,7 @@ function build() {
   /* After the chapter table, because the import checks its boundaries against
    * our own verse counts rather than trusting Tanzil's. */
   const div = buildDivisions(canonical, chapters)
+  const claims = extractClaims()
 
   const english = new Map()
   for (const row of readCsv(TEXT_CSV)) {
@@ -943,6 +1023,11 @@ function build() {
     ...div.divisions.map((d) => [
       d.kind, d.number, d.start_chapter, d.start_verse, d.end_chapter, d.end_verse, d.verses,
     ]),
+  ])
+
+  files['appendix_claims.tsv'] = tsv([
+    ['appendix', 'section', 'total', 'multiplier', 'context'],
+    ...claims.map((c) => [c.appendix, c.section, c.total, c.multiplier, c.context]),
   ])
 
   files['prostrations.tsv'] = tsv([
@@ -1057,7 +1142,7 @@ function build() {
   const valueFiles = Object.fromEntries(
     VALUE_SYSTEMS.map((v) => [`${v.id}.json`, JSON.stringify(v, null, 2) + '\n']))
 
-  return { files, valueFiles, fixtures, seg, div, canonical, basmalah, roots, alphabet }
+  return { files, valueFiles, fixtures, seg, div, claims, canonical, basmalah, roots, alphabet }
 }
 
 /* ── main ─────────────────────────────────────────────────────────────── */
@@ -1111,6 +1196,10 @@ function main() {
 
   console.log(`${TAG} wrote ${Object.keys(files).length + Object.keys(valueFiles).length} files, ${(bytes / 1e6).toFixed(2)} MB`)
   console.log(`${TAG} corpus 114 / 6,234 / ${built.canonical.length.toLocaleString('en-US')} words / ${built.roots.length.toLocaleString('en-US')} roots`)
+  console.log(
+    `${TAG} claims ${built.claims.length} extracted from the appendices, ` +
+    `${built.fixtures.filter((f) => f.source).length} fixtures cite one`
+  )
   console.log(
     `${TAG} divisions ${built.div.divisions.length} across ${DIVISION_KINDS.length} kinds, ` +
     `${built.div.prostrations.length} prostrations, ` +

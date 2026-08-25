@@ -770,6 +770,21 @@ Sura 15's alif-lam-ra lands exactly. The rest sit within single digits with sign
 
 **Superscript alef stays a toggle, with the reproducing setting as its default.** Turning it on over-counts alif under the published mode. It remains available because it is a question a researcher may reasonably ask, and the readout already says which toggles produced a figure.
 
+**9l, The claim catalogue. ✅ SHIPPED.**
+Every "N is 19 × M" in the appendices, extracted at generation into `appendix_claims.tsv`, exposed as `qc_claims`, and rendered as the ledger's second tab. 138 claims across ten appendices, 66 fixtures verified, 9 of them citing the appendix and section they quote.
+
+**The point is the denominator, not the automation.** Sixty-six checked figures sounds like completeness until you know the appendices make 138 arithmetic claims. Most of the rest are not automatically checkable: the selector lives in the surrounding prose, and a tool that guessed at one would produce a number nobody asked for. So the catalogue records the claim, its stated multiplication, and 150 characters of surrounding context, marks the ones a fixture actually covers, and leaves the rest visibly unchecked. That is the same argument §5.6 makes about showing the gaps, applied one level up.
+
+**A claim is only kept when its own arithmetic holds.** The extractor drops any "N is 19 × M" where N is not 19 × M, because that is a typo in the source text rather than a claim about the corpus, and turning it into a fixture would create one that can never pass. A test asserts the property over the whole catalogue.
+
+**Fixtures now cite their source.** `add()` takes an optional `appendix-1 s67`, the ledger carries it, and the pane shows it in place of the internal fixture id. A published figure a reader cannot trace back is a restatement they have to trust; a citation makes it a claim they can go and check. Fixtures without a source are properties of the corpus rather than quotations, and the empty field says so.
+
+**Five more figures reproduce exactly**, all from sura 42 and sura 50, which the earlier passes had skipped: عسق in sura 42 at 209 (19 × 11), and its components ع 98, س 54 and ق 57, plus ق in sura 50 at 57. Sura 42 appears in two different published figures and neither is the sum of all five of its initials, because حم is counted with the other six حم suras and عسق on its own — a distinction the first attempt at this fixture got wrong, computing 562 against a published 209 before the generator refused to write it.
+
+**Six fixtures were deliberately *not* added.** The per-sura الم totals (9,899, 5,662, 1,672, 1,254, 817, 570) are each alif + lam + mim for one sura, and all three components are already pinned. Adding the totals would have re-measured the same alif residual under a second name, inflating the distance from 88 to 117 without adding a single piece of information. The distance is the number this module is trying to drive down, so a fixture that only makes it look worse is a fixture that should not exist. The grand total stays, because it is the figure Appendix 1 leads with.
+
+*Accepted:* 138 claims extracted with every stated multiplication true, both the checked and unchecked halves non-empty (all-checked would mean the extractor only finds what we already test; none-checked would mean the citations are not wired), the ledger and the catalogue agreeing on the count, and 66 verified fixtures against 16 open gaps at a total distance of 88.
+
 **9g, Extended modes. PARTLY OUTSTANDING, and no longer data-gated.** The division metadata landed in 9j, so the five remaining scopes are done and the five remaining value modifiers are now ordinary work rather than blocked work. What is left: Simplified30 and the Waw/Shadda modes as `text_modes.json` entries, the five division-keyed value modifiers, radix conversion, and live value-system editing. All four are small and independent.
 
 Word-part segmentation is not here: it is generated data, so it landed in 9a and has been queryable since 9b.

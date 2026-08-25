@@ -34,6 +34,7 @@ const ROOTS_TSV: &str = include_str!("../assets/qurancode/roots.tsv");
 const DIVISIONS_TSV: &str = include_str!("../assets/qurancode/divisions.tsv");
 const PROSTRATIONS_TSV: &str = include_str!("../assets/qurancode/prostrations.tsv");
 const FIXTURES_JSON: &str = include_str!("../assets/qurancode/fixtures.json");
+const CLAIMS_TSV: &str = include_str!("../assets/qurancode/appendix_claims.tsv");
 const TEXT_MODES_JSON: &str = include_str!("../assets/qurancode/text_modes.json");
 const ABJAD_STANDARD_JSON: &str =
     include_str!("../assets/qurancode/value_systems/abjad_standard.json");
@@ -2665,6 +2666,62 @@ pub struct Fixture {
     pub pass: bool,
     /// `verified` or `known_gap`.
     pub status: String,
+    /// Where the published figure comes from, as `appendix-1 s67`. Empty when
+    /// the fixture is a property of the corpus rather than a quotation, such as
+    /// the 6,234 verse count.
+    #[serde(default)]
+    pub source: String,
+}
+
+/// One "N is 19 x M" from the appendices, extracted rather than transcribed.
+///
+/// Bundled so that "which published claims can this module reproduce" has a
+/// denominator. Most are not automatically checkable, because the selector
+/// lives in the surrounding prose and a tool that guessed at one would produce
+/// a number nobody asked for. The catalogue makes the unchecked ones visible
+/// instead of leaving the checked ones to look like the whole set.
+#[derive(Serialize, Clone, Debug)]
+pub struct Claim {
+    pub appendix: String,
+    pub section: u32,
+    pub total: i64,
+    pub multiplier: i64,
+    pub context: String,
+    /// True when some fixture cites this appendix and asserts this total, so
+    /// the claim is one the build actually checks.
+    pub checked: bool,
+}
+
+pub fn claims() -> Result<Vec<Claim>, String> {
+    let checked: HashSet<(String, i64)> = ledger()?
+        .fixtures
+        .iter()
+        .filter(|f| !f.source.is_empty())
+        .map(|f| {
+            let appendix = f
+                .source
+                .split_whitespace()
+                .next()
+                .unwrap_or("")
+                .to_string();
+            (appendix, f.expected)
+        })
+        .collect();
+
+    Ok(tsv_rows(CLAIMS_TSV)
+        .filter_map(|r| {
+            let appendix = field(&r, 0).to_string();
+            let total: i64 = field(&r, 2).parse().ok()?;
+            Some(Claim {
+                checked: checked.contains(&(appendix.clone(), total)),
+                appendix,
+                section: field(&r, 1).parse().ok()?,
+                total,
+                multiplier: field(&r, 3).parse().ok()?,
+                context: field(&r, 4).to_string(),
+            })
+        })
+        .collect())
 }
 
 #[derive(Deserialize)]
@@ -2682,6 +2739,9 @@ pub struct Ledger {
     /// adding a fixture that nearly reproduces raises it; this is the number
     /// that has to go down.
     pub distance: i64,
+    /// How many "N is 19 x M" claims the appendices make in total, so the
+    /// verified count has a denominator rather than standing alone.
+    pub claims: usize,
 }
 
 pub fn ledger() -> Result<Ledger, String> {
@@ -2698,6 +2758,7 @@ pub fn ledger() -> Result<Ledger, String> {
         known_gaps: raw.fixtures.len() - verified,
         verified,
         distance,
+        claims: CLAIMS_TSV.lines().skip(1).filter(|l| !l.is_empty()).count(),
         fixtures: raw.fixtures,
     })
 }
@@ -4928,6 +4989,50 @@ mod tests {
             l.distance
         );
         assert!(l.known_gaps > 0, "hiding a gap is worse than having one");
+    }
+
+
+    /* ── the published claims ──────────────────────────────────────────── */
+
+    /// The catalogue is only worth having if the arithmetic it records is real,
+    /// so the extractor drops any claim whose stated multiplication does not
+    /// hold. A typo in the source text must not become a fixture that can never
+    /// pass.
+    #[test]
+    fn every_extracted_claim_states_true_arithmetic() {
+        let cs = claims().unwrap();
+        assert!(cs.len() > 100, "only {} claims extracted", cs.len());
+        for c in &cs {
+            assert_eq!(
+                c.total,
+                19 * c.multiplier,
+                "{} s{} claims {} is 19 x {}",
+                c.appendix,
+                c.section,
+                c.total,
+                c.multiplier
+            );
+            assert!(!c.context.is_empty(), "a claim without its context is unusable");
+        }
+    }
+
+    /// Some claims are checked and most are not, and both halves have to be
+    /// non-empty for the catalogue to mean anything: all-checked would mean the
+    /// extractor is only finding what we already test, none-checked would mean
+    /// the citations are not wired up.
+    #[test]
+    fn the_catalogue_gives_the_verified_count_a_denominator() {
+        let cs = claims().unwrap();
+        let checked = cs.iter().filter(|c| c.checked).count();
+        assert!(checked > 0, "no claim is marked as checked");
+        assert!(checked < cs.len(), "every claim cannot already be checked");
+
+        let l = ledger().unwrap();
+        assert_eq!(l.claims, cs.len(), "the ledger and the catalogue must agree");
+        assert!(
+            l.fixtures.iter().any(|f| !f.source.is_empty()),
+            "at least one fixture has to cite where its figure came from"
+        );
     }
 
 }

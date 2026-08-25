@@ -486,6 +486,22 @@ export interface Fixture {
   actual: number
   pass: boolean
   status: 'verified' | 'known_gap'
+  /** Where the published figure comes from, as `appendix-1 s67`. Empty when the
+   * fixture is a property of the corpus rather than a quotation. */
+  source: string
+}
+
+/** One "N is 19 x M" from the appendices, extracted rather than transcribed.
+ * Most are not automatically checkable, because the selector lives in the
+ * surrounding prose. The catalogue makes the unchecked ones visible instead of
+ * letting the checked ones look like the whole set. */
+export interface Claim {
+  appendix: string
+  section: number
+  total: number
+  multiplier: number
+  context: string
+  checked: boolean
 }
 
 export interface Ledger {
@@ -495,9 +511,13 @@ export interface Ledger {
   /** Summed absolute difference across the gaps. The count alone is a poor
    * measure, because a fixture that nearly reproduces raises it. */
   distance: number
+  /** How many claims the appendices make, so the verified count has a
+   * denominator rather than standing alone. */
+  claims: number
 }
 
 export const qcLedger = () => invoke<Ledger>('qc_ledger')
+export const qcClaims = () => invoke<Claim[]>('qc_claims')
 
 export const qcRoots = () => invoke<RootInfo[]>('qc_roots')
 
