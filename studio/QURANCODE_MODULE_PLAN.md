@@ -740,6 +740,36 @@ Tanzil's `quran-metadata.txt` under CC-BY, imported as `divisions.tsv` and `pros
 
 *Accepted:* 30 parts, 60 groups, 240 quarters, 7 stations, 556 bowings, 604 pages, 15 verses of prostration, 1,497 ranges in all. Part 1 opens at 1:1 and part 30 ends at 114:6. A scoped count over page 2 agrees with the same count taken over page 2's address range through the aggregate path, which shares no code with it. Makkan and Medinan suras partition all 114 and between them every one of the 77,401 words. The prostration verses partition against the remaining 6,219. The metadata carries the kind counts so no component hardcodes that a mushaf has 604 pages, and every verse now reports its own page, part, group, quarter, station and bowing.
 
+**9k, The alif class. ✅ SHIPPED, and §8 Q4 is answered rather than deferred.**
+Six characters added to one fold table. Three new Rust tests, seven new fixtures, and the total distance between what this module computes and what Appendix 1 published falls from 2,123 to 88.
+
+**Q4 was wrong, and it was wrong in a way worth recording.** This plan asserted for three revisions that the alif rule "is per word, not per class, which is why no toggle subset fitted", sized a per-word override table at 3,749 forms corpus-wide, and left `alif_overrides` as the hook for it. None of that was needed. The rule is per class. The class was simply wrong: the published-figures mode was folding alef wasla to alef and stopping there, so أ, إ, آ and both bare hamzas were being counted as their own letters instead of as alif, while the superscript alef *was* being counted as alif when the published figures do not count it. Six fold entries and one default, and the gap closes.
+
+The reason no toggle subset fitted is now obvious in hindsight. The toggles govern four mark classes and none of them is a hamza-carrying alef, so no combination of them could ever have reached the answer. The search had been run over the wrong space.
+
+**What the numbers do.**
+
+| figure | before | after | published |
+|---|---|---|---|
+| الم grand total, six suras | 18,745 | 19,875 | 19,874 |
+| alif, sura 2 | 3,915 | 4,504 | 4,502 |
+| المر, sura 13 | 1,301 | 1,487 | 1,482 |
+| المص, sura 7 | 4,531 | 5,312 | 5,320 |
+| الر, sura 15 | — | 912 | 912 |
+| total distance, all fixtures | 2,123 | 88 | — |
+
+Sura 15's alif-lam-ra lands exactly. The rest sit within single digits with signs going both ways, which is the signature of an orthographic difference between our word-level source and the text Appendix 1 was counted from, not of a rule still missing. Of the 88 remaining, 64 is alif-adjacent across twelve fixtures, 19 is the sura-96 letter total, 4 is the ya residual in sura 36 and 1 is the first-revelation word count.
+
+**Nothing else moved, and a test says so.** Folding the hamza-carrying alifs is safe precisely because no published initial count involves them: ح+م 2,147, ص 152, ق 114, ن 133, ه 175 and 251, ل 3,202 and م 2,195 all still reproduce exactly. That is asserted directly rather than left to be rediscovered by whoever next touches the fold.
+
+**Two fixtures were measuring nothing, and one of them was the headline.** `alm_total_19874` added up the *published* column of the الم table and asserted the published total. That is arithmetic on a table, not a check on a corpus, and it passed happily throughout the period when our own الم count was short by 1,129. It now counts letters, and the table's internal consistency is a separate fixture under its own name. `basmalah_occurrences_114` had the same shape and was rewritten in 9i to match the four-word phrase in the text.
+
+**The gap count is the wrong metric and the generator now prints the right one.** Adding a fixture that nearly reproduces *raises* the number of known gaps, which made this phase look like a regression by that measure while closing 96% of the actual distance. The generator reports the summed absolute distance alongside the count, and each gap prints its signed difference.
+
+**`alif_overrides` is gone**, along with the phase that was going to fill it. The predicted ordered-replacement fold from QuranCode's own `Server/Rules/*.txt` was not needed either: those files carry nine context rules at the top, but our source text does not use the tatweel-plus-hamza representation those rules normalize, so the per-codepoint table is sufficient. A rewrite of the fold into an ordered pipeline would have been machinery bought for nothing, and the 256-entry table that gives a 13 ms corpus fold stays.
+
+**Superscript alef stays a toggle, with the reproducing setting as its default.** Turning it on over-counts alif under the published mode. It remains available because it is a question a researcher may reasonably ask, and the readout already says which toggles produced a figure.
+
 **9g, Extended modes. PARTLY OUTSTANDING, and no longer data-gated.** The division metadata landed in 9j, so the five remaining scopes are done and the five remaining value modifiers are now ordinary work rather than blocked work. What is left: Simplified30 and the Waw/Shadda modes as `text_modes.json` entries, the five division-keyed value modifiers, radix conversion, and live value-system editing. All four are small and independent.
 
 Word-part segmentation is not here: it is generated data, so it landed in 9a and has been queryable since 9b.
@@ -756,7 +786,7 @@ The alif calibration (§8 Q4) is independent of the phase order and can land in 
 
 **Q3, which mode is default?** `simplified29` is verified end to end. `khalifa_appendix1` matches the figures researchers here will actually cite, and has three open gaps (§0.3). Recommendation: **default `simplified29`**, with Appendix-1 always shown beside it in the readout. Comparison as the default view makes the choice low-stakes.
 
-**Q4, populate `alif_overrides`.** No longer a research question. The rule is per word: a hamza that reads as an alif in one word reads as one in every occurrence of that word and its derivatives (§0.3). The table needs roughly 39% of a 2,907-occurrence hamza pool to resolve to alif across the six الم suras, spanning 948 distinct forms there and 3,749 corpus-wide. The cheapest way to populate it is a word-by-word diff of QuranCode's own Simplified29 letter stream against ours. The sura-30 lam discrepancy is already resolved and the ya residual in sura 36 is four letters, so alif is the only one left. **Not blocking**; 9a shipped with the gaps encoded rather than hidden.
+**Q4, the alif gap. ANSWERED, and the earlier answer was wrong.** Not a per-word table: a per-class one, with the class mis-specified. The published mode folded alef wasla to alef and stopped, so أ, إ, آ and both bare hamzas counted as their own letters rather than as alif, while the superscript alef counted as alif when the published figures do not count it. Six fold entries closed it. The الم grand total went from 18,745 to 19,875 against a published 19,874, sura 15's alif-lam-ra landed exactly, and the total distance across all fixtures fell from 2,123 to 88. No toggle subset could ever have fitted, because the toggles govern four mark classes and none of them is a hamza-carrying alef; the search had been run over the wrong space. `alif_overrides` is deleted. See 9k.
 
 **Q5, is `qc_*` reachable from the editor without the surface?** A `/qcvalue 1:1 abjad_standard` slash command is a natural extension of the existing directive machinery. Recommendation: **not before 9f.** The surface has to teach what a value *is* before a slash command can be used responsibly.
 

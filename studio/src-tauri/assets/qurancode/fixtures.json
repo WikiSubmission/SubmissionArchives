@@ -1,7 +1,7 @@
 {
   "generated_from": "ws_quran_words_roots_uthmani.csv",
-  "verified": 60,
-  "known_gaps": 11,
+  "verified": 61,
+  "known_gaps": 16,
   "fixtures": [
     {
       "id": "fatiha_verses",
@@ -195,9 +195,9 @@
     {
       "id": "alif_2",
       "mode": "khalifa_appendix1",
-      "description": "ا in sura 2 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "description": "ا in sura 2, every written form of alef",
       "expected": 4502,
-      "actual": 3915,
+      "actual": 4504,
       "pass": false,
       "status": "known_gap"
     },
@@ -222,9 +222,9 @@
     {
       "id": "alif_3",
       "mode": "khalifa_appendix1",
-      "description": "ا in sura 3 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "description": "ا in sura 3, every written form of alef",
       "expected": 2521,
-      "actual": 2204,
+      "actual": 2511,
       "pass": false,
       "status": "known_gap"
     },
@@ -249,9 +249,9 @@
     {
       "id": "alif_29",
       "mode": "khalifa_appendix1",
-      "description": "ا in sura 29 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "description": "ا in sura 29, every written form of alef",
       "expected": 774,
-      "actual": 671,
+      "actual": 771,
       "pass": false,
       "status": "known_gap"
     },
@@ -276,9 +276,9 @@
     {
       "id": "alif_30",
       "mode": "khalifa_appendix1",
-      "description": "ا in sura 30 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "description": "ا in sura 30, every written form of alef",
       "expected": 543,
-      "actual": 483,
+      "actual": 542,
       "pass": false,
       "status": "known_gap"
     },
@@ -303,9 +303,9 @@
     {
       "id": "alif_31",
       "mode": "khalifa_appendix1",
-      "description": "ا in sura 31 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "description": "ا in sura 31, every written form of alef",
       "expected": 347,
-      "actual": 314,
+      "actual": 353,
       "pass": false,
       "status": "known_gap"
     },
@@ -330,20 +330,92 @@
     {
       "id": "alif_32",
       "mode": "khalifa_appendix1",
-      "description": "ا in sura 32 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "description": "ا in sura 32, every written form of alef",
       "expected": 257,
-      "actual": 229,
+      "actual": 264,
       "pass": false,
       "status": "known_gap"
     },
     {
-      "id": "alm_total_19874",
+      "id": "alm_published_table_sums_to_19874",
       "mode": "khalifa_appendix1",
-      "description": "الم grand total across the six suras (19x1046)",
+      "description": "the published الم table is internally consistent",
       "expected": 19874,
       "actual": 19874,
       "pass": true,
       "status": "verified"
+    },
+    {
+      "id": "alm_total_19874",
+      "mode": "khalifa_appendix1",
+      "description": "الم counted across the six suras (19x1046)",
+      "expected": 19874,
+      "actual": 19875,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alr_10",
+      "mode": "khalifa_appendix1",
+      "description": "الر in sura 10",
+      "expected": 2489,
+      "actual": 2493,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alr_11",
+      "mode": "khalifa_appendix1",
+      "description": "الر in sura 11",
+      "expected": 2489,
+      "actual": 2493,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alr_12",
+      "mode": "khalifa_appendix1",
+      "description": "الر in sura 12",
+      "expected": 2375,
+      "actual": 2384,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alr_14",
+      "mode": "khalifa_appendix1",
+      "description": "الر in sura 14",
+      "expected": 1197,
+      "actual": 1201,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alr_15",
+      "mode": "khalifa_appendix1",
+      "description": "الر in sura 15",
+      "expected": 912,
+      "actual": 912,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "almr_13",
+      "mode": "khalifa_appendix1",
+      "description": "المر in sura 13",
+      "expected": 1482,
+      "actual": 1487,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alms_7",
+      "mode": "khalifa_appendix1",
+      "description": "المص in sura 7",
+      "expected": 5320,
+      "actual": 5312,
+      "pass": false,
+      "status": "known_gap"
     },
     {
       "id": "allah_2698",
@@ -452,24 +524,6 @@
       "actual": 2791,
       "pass": true,
       "status": "verified"
-    },
-    {
-      "id": "almr_13_1482",
-      "mode": "khalifa_appendix1",
-      "description": "المر in sura 13 (19x78), alif deficit 181",
-      "expected": 1482,
-      "actual": 1301,
-      "pass": false,
-      "status": "known_gap"
-    },
-    {
-      "id": "alms_7_5320",
-      "mode": "khalifa_appendix1",
-      "description": "المص in sura 7 (19x280), alif deficit 789",
-      "expected": 5320,
-      "actual": 4531,
-      "pass": false,
-      "status": "known_gap"
     },
     {
       "id": "initialed_suras_29",

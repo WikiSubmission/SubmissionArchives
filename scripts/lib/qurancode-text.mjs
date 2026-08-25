@@ -70,10 +70,33 @@ export const TEXT_MODES = {
   khalifa_appendix1: {
     label: 'Appendix 1 (published)',
     countable: true,
-    /* Only two folds, and both are forced by the fixtures rather than chosen:
-     * ه + ة reproduces the published ha counts for suras 19 and 20 exactly,
-     * and alef wasla has to read as an alef for the alif counts to be in range. */
-    fold: { [CP.ALEF_WASLA]: CP.ALEF, [CP.TEH_MARBUTA]: 'ه' },
+    /* Every fold here is forced by a fixture rather than chosen.
+     *
+     * ه + ة reproduces the published ha counts for suras 19 and 20 exactly.
+     *
+     * The alif class is every written form of alef, hamza included. This was
+     * the whole of the alif gap, and it was not the per-word rule §8 Q4
+     * assumed: the mode simply was not folding the hamza-carrying alifs, and
+     * it was counting the superscript alef, which the published figures do not.
+     * Fold أ إ آ ٱ and the two bare hamzas to alef, leave the superscript alef
+     * to its toggle (off by default), and the الم grand total goes from 18,745
+     * to 19,875 against a published 19,874. Sura 15's alif-lam-ra lands exactly.
+     * The residuals that remain are single-digit and mixed-sign, which is what
+     * an orthographic difference between two source texts looks like rather
+     * than a rule still missing.
+     *
+     * Turning the superscript alef toggle on over-counts alif under this mode.
+     * The toggle stays available because it is a question a researcher may want
+     * to ask, but its default is the reproducing setting. */
+    fold: {
+      [CP.ALEF_WASLA]: CP.ALEF,
+      [CP.ALEF_HAMZA]: CP.ALEF,
+      [CP.ALEF_HAMZA_LOW]: CP.ALEF,
+      [CP.ALEF_MADDA]: CP.ALEF,
+      [CP.HAMZA]: CP.ALEF,
+      [CP.HAMZA_ABOVE]: CP.ALEF,
+      [CP.TEH_MARBUTA]: 'ه',
+    },
     includeSuraBasmalahInInitials: true,
   },
   original: {

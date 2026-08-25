@@ -356,22 +356,41 @@ function buildFixtures(words) {
     almMim += published.mim
     almAlif += published.alif
 
-    /* Alif is the open problem. Counting ا + ٱ + ٰ leaves a deficit against the
-     * published figure in every sura, and no subset of the thirteen mark
-     * classes closes it: the rule is per word, not per class. The qurantalk
-     * documentation confirms the shape, a hamza that counts as an alif for one
-     * word counts as one for every occurrence of that word and its
-     * derivatives, which is a lookup table this generator does not yet have. */
-    const alifMarks = DEFAULT_MARKS.map((m) => (m.id === 'superscript_alef' ? { ...m, on: true } : m))
-    const stream = words.filter((w) => w.chapter === c)
-      .map((w) => foldWord(w.uthmani, 'khalifa_appendix1', alifMarks)).join('')
-    let alif = 0
-    for (const ch of stream) if (ch === CP.ALEF) alif++
-    add(`alif_${c}`, 'khalifa_appendix1', `ا in sura ${c} (ا + ٱ + ٰ, no per-word overrides yet)`,
-      published.alif, alif, 'known_gap')
+    /* Alif was the open problem and is now a characterised residual. The mode
+     * folds every written form of alef, hamza included, and does not count the
+     * superscript alef; see the fold in `qurancode-text.mjs`. What is left per
+     * sura is +2, -10, -3, -2, +6, +7 against deficits that used to be 587,
+     * 317, 103, 61, 33 and 28. Mixed signs and single digits, so it is an
+     * orthographic difference between our source and the text Appendix 1 was
+     * counted from, not a rule still missing. */
+    const alif = countIn(words, c, CP.ALEF)
+    add(`alif_${c}`, 'khalifa_appendix1', `ا in sura ${c}, every written form of alef`,
+      published.alif, alif, published.alif === alif ? 'verified' : 'known_gap')
   }
+  /* Measured, not restated. This used to add up the *published* column and
+   * assert the published total, which is arithmetic on a table rather than a
+   * check on the corpus: it passed throughout the period when our own alif
+   * counts were short by 1,129. It now counts the letters. */
+  const almComputed = [2, 3, 29, 30, 31, 32].reduce((a, c) => a + countIn(words, c, 'الم'), 0)
+  add('alm_published_table_sums_to_19874', 'khalifa_appendix1',
+    'the published الم table is internally consistent', 19874, almAlif + almLam + almMim)
   add('alm_total_19874', 'khalifa_appendix1',
-    'الم grand total across the six suras (19x1046)', 19874, almAlif + almLam + almMim)
+    'الم counted across the six suras (19x1046)', 19874, almComputed,
+    almComputed === 19874 ? 'verified' : 'known_gap')
+
+  /* The other four initial groups, now that alif is in range. Sura 15 lands
+   * exactly; the rest carry the same single-digit residual as the alif counts,
+   * and each is recorded with its own computed value. */
+  const GROUPS = [
+    ['alr_10', 10, 'الر', 2489], ['alr_11', 11, 'الر', 2489], ['alr_12', 12, 'الر', 2375],
+    ['alr_14', 14, 'الر', 1197], ['alr_15', 15, 'الر', 912],
+    ['almr_13', 13, 'المر', 1482], ['alms_7', 7, 'المص', 5320],
+  ]
+  for (const [id, chapter, letters, published] of GROUPS) {
+    const got = countIn(words, chapter, letters)
+    add(id, 'khalifa_appendix1', `${letters} in sura ${chapter}`, published, got,
+      published === got ? 'verified' : 'known_gap')
+  }
 
   /* ── aggregation: the arguments Appendix 1 is actually built from ──
    *
@@ -431,14 +450,13 @@ function buildFixtures(words) {
   /* The two remaining initial groups. Every letter but alif reproduces to the
    * unit; the alif deficit is the entire distance to the published total, which
    * is the same single defect recorded above for the six الم suras. */
+  /* The non-alif half of the two four-letter groups, kept as its own fixture
+   * because it reproduced exactly even while alif was short by 1,129, and it is
+   * what localised the gap to a single letter class. */
   add('almr_13_without_alif_877', 'khalifa_appendix1',
     'ل + م + ر in sura 13, the published figures minus alif', 877, countIn(words, 13, 'لمر'))
   add('alms_7_without_alif_2791', 'khalifa_appendix1',
     'ل + م + ص in sura 7, the published figures minus alif', 2791, countIn(words, 7, 'لمص'))
-  add('almr_13_1482', 'khalifa_appendix1',
-    'المر in sura 13 (19x78), alif deficit 181', 1482, countIn(words, 13, 'المر'), 'known_gap')
-  add('alms_7_5320', 'khalifa_appendix1',
-    'المص in sura 7 (19x280), alif deficit 789', 5320, countIn(words, 7, 'المص'), 'known_gap')
 
   /* ── the Quranic Initials, and the Simple Facts that follow from them ──
    *
@@ -980,7 +998,6 @@ function build() {
      * in every occurrence of that word and its derivatives. That is a lookup
      * keyed on the word form, which no toggle can express, so it lives here.
      * Empty until the table is calibrated against QuranCode's own output. */
-    alif_overrides: {},
     /* Everything that is not a letter under any mode: short vowels, tanween,
      * sukun, the maddah, the tatweel, the waqf marks and the source's own two
      * junk characters. Emitted rather than restated in Rust, so the fold has a
@@ -1100,8 +1117,15 @@ function main() {
     `${built.div.straddling.length} spanning the absent 9:128-129`
   )
   console.log(`${TAG} segmentation ${(seg.rate * 100).toFixed(2)}% (${seg.aligned.toLocaleString('en-US')} of ${seg.rooted.toLocaleString('en-US')}), ${seg.unaligned.length} unaligned`)
-  console.log(`${TAG} fixtures ${verified.length} verified, ${gaps.length} known gaps:`)
-  for (const g of gaps) console.log(`${TAG}   ${g.id}: computed ${g.actual}, published ${g.expected}`)
+  /* The count of gaps is a poor measure on its own, because adding a fixture
+   * that nearly reproduces raises it. The total absolute distance between what
+   * we compute and what was published is the number that has to go down. */
+  const distance = gaps.reduce((a, g) => a + Math.abs(Number(g.actual) - Number(g.expected)), 0)
+  console.log(`${TAG} fixtures ${verified.length} verified, ${gaps.length} known gaps, distance ${distance}`)
+  for (const g of gaps) {
+    const d = Number(g.actual) - Number(g.expected)
+    console.log(`${TAG}   ${g.id}: computed ${g.actual}, published ${g.expected} (${d > 0 ? '+' : ''}${d})`)
+  }
 }
 
 main()

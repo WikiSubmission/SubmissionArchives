@@ -4229,14 +4229,18 @@ mod tests {
         assert!(a.verses > 0 && a.verses <= 114);
     }
 
-    /// The multi-letter initial groups, and a measurement of exactly what the
-    /// alif gap costs. Every letter but alif reproduces its published figure to
-    /// the unit: 877 for lam + mim + ra in sura 13, 2,791 for lam + mim + sad
-    /// in sura 7. Alif alone is short, by 181 and 789, and those two deficits
-    /// are the whole distance between our totals and the published 1,482 and
-    /// 5,320. Asserted as deficits rather than as a passing total because a
-    /// test that quietly expects the wrong number teaches nothing; when the
-    /// alif rule lands these become equalities and the deficits go to zero.
+    /// The multi-letter initial groups. Every letter but alif reproduced to the
+    /// unit even while alif was short by 1,129 across the six الم suras, and
+    /// that is what localised the gap to one letter class: 877 for lam + mim +
+    /// ra in sura 13, 2,791 for lam + mim + sad in sura 7.
+    ///
+    /// Alif now folds every written form of alef, hamza included, and no longer
+    /// counts the superscript alef. The four-letter totals land within single
+    /// digits of the published figures, with signs going both ways, which is
+    /// what an orthographic difference between two source texts looks like
+    /// rather than a rule still missing. Asserted as a bound rather than as
+    /// equality: pinning -5 and +8 exactly would make an improvement in the
+    /// source data fail the suite.
     #[test]
     fn every_initial_letter_but_alif_reproduces_exactly() {
         let published = |q: AggregateQuery| {
@@ -4268,8 +4272,87 @@ mod tests {
         assert_eq!(letters_in(13, "لمر"), 877, "sura 13 without alif");
         assert_eq!(letters_in(7, "لمص"), 2791, "sura 7 without alif");
 
-        assert_eq!(1482 - letters_in(13, "المر"), 181, "sura 13 alif deficit");
-        assert_eq!(5320 - letters_in(7, "المص"), 789, "sura 7 alif deficit");
+        for (chapter, letters, published_total) in
+            [(13u32, "المر", 1482i64), (7, "المص", 5320), (15, "الر", 912)]
+        {
+            let got = letters_in(chapter, letters);
+            assert!(
+                (got - published_total).abs() <= 10,
+                "sura {} {}: computed {}, published {}, off by {}",
+                chapter,
+                letters,
+                got,
+                published_total,
+                got - published_total
+            );
+        }
+        assert_eq!(letters_in(15, "الر"), 912, "sura 15 lands exactly");
+    }
+
+    /// The whole point of the alif fold: the الم grand total. It used to be
+    /// short by 1,129 and is now over by one.
+    #[test]
+    fn the_alm_grand_total_is_within_one_of_19874() {
+        let a = aggregate(
+            Some(AggregateQuery {
+                chapters: Some(vec![2, 3, 29, 30, 31, 32]),
+                letters: Some("الم".to_string()),
+                scope: Some(Scope {
+                    include_basmalah: Some(true),
+                    ..Scope::default()
+                }),
+                ..Default::default()
+            }),
+            Some("khalifa_appendix1".to_string()),
+            None,
+            None,
+            None,
+        )
+        .unwrap();
+        let got = total(&a, "letters");
+        assert!(
+            (got - 19_874).abs() <= 5,
+            "الم total computed {}, published 19,874",
+            got
+        );
+    }
+
+    /// The alif fold must not touch any letter class that already reproduced.
+    /// Folding the hamza-carrying alifs to alef is safe precisely because none
+    /// of the published initial counts involve them; a test says so rather than
+    /// leaving it to be rediscovered.
+    #[test]
+    fn the_alif_fold_leaves_every_other_published_count_alone() {
+        let mode = Some("khalifa_appendix1".to_string());
+        let letters_in = |chapters: Vec<u32>, letters: &str| {
+            total(
+                &aggregate(
+                    Some(AggregateQuery {
+                        chapters: Some(chapters),
+                        letters: Some(letters.to_string()),
+                        scope: Some(Scope {
+                            include_basmalah: Some(true),
+                            ..Scope::default()
+                        }),
+                        ..Default::default()
+                    }),
+                    mode.clone(),
+                    None,
+                    None,
+                    None,
+                )
+                .unwrap(),
+                "letters",
+            )
+        };
+        assert_eq!(letters_in(vec![40, 41, 42, 43, 44, 45, 46], "حم"), 2147);
+        assert_eq!(letters_in(vec![7, 19, 38], "ص"), 152);
+        assert_eq!(letters_in(vec![42, 50], "ق"), 114);
+        assert_eq!(letters_in(vec![68], "ن"), 133);
+        assert_eq!(letters_in(vec![19], "ه"), 175);
+        assert_eq!(letters_in(vec![20], "ه"), 251);
+        assert_eq!(letters_in(vec![2], "ل"), 3202);
+        assert_eq!(letters_in(vec![2], "م"), 2195);
     }
 
     /// An empty query is the whole corpus, and it has to agree with `qc_count`

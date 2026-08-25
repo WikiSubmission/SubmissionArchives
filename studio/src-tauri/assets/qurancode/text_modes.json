@@ -56,6 +56,11 @@
       "countable": true,
       "fold": {
         "ٱ": "ا",
+        "أ": "ا",
+        "إ": "ا",
+        "آ": "ا",
+        "ء": "ا",
+        "ٔ": "ا",
         "ة": "ه"
       },
       "include_sura_basmalah_in_initials": true,
@@ -82,21 +87,27 @@
         "mim_31",
         "lam_32",
         "mim_32",
-        "alm_total_19874",
+        "alm_published_table_sums_to_19874",
+        "alr_15",
         "qaf_in_verse_19s_76",
         "almr_13_without_alif_877",
         "alms_7_without_alif_2791"
       ],
       "known_gaps": [
         "ya_36_237: computed 241, published 237",
-        "alif_2: computed 3915, published 4502",
-        "alif_3: computed 2204, published 2521",
-        "alif_29: computed 671, published 774",
-        "alif_30: computed 483, published 543",
-        "alif_31: computed 314, published 347",
-        "alif_32: computed 229, published 257",
-        "almr_13_1482: computed 1301, published 1482",
-        "alms_7_5320: computed 4531, published 5320",
+        "alif_2: computed 4504, published 4502",
+        "alif_3: computed 2511, published 2521",
+        "alif_29: computed 771, published 774",
+        "alif_30: computed 542, published 543",
+        "alif_31: computed 353, published 347",
+        "alif_32: computed 264, published 257",
+        "alm_total_19874: computed 19875, published 19874",
+        "alr_10: computed 2493, published 2489",
+        "alr_11: computed 2493, published 2489",
+        "alr_12: computed 2384, published 2375",
+        "alr_14: computed 1201, published 1197",
+        "almr_13: computed 1487, published 1482",
+        "alms_7: computed 5312, published 5320",
         "first_revelation_words_19: computed 20, published 19",
         "sura_96_letters_304: computed 285, published 304"
       ]
@@ -143,7 +154,6 @@
       "drops_letter_before": "06DF"
     }
   ],
-  "alif_overrides": {},
   "always_drop": [
     "0020",
     "002D",
