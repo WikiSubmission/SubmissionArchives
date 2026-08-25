@@ -1,7 +1,7 @@
 {
   "generated_from": "ws_quran_words_roots_uthmani.csv",
-  "verified": 66,
-  "known_gaps": 16,
+  "verified": 68,
+  "known_gaps": 14,
   "fixtures": [
     {
       "id": "fatiha_verses",
@@ -766,12 +766,12 @@
     {
       "id": "first_revelation_words_19",
       "mode": "khalifa_appendix1",
-      "description": "words in 96:1-5, published tokenization joins one pair",
+      "description": "words in 96:1-5 (19), مَا لَمْ counted as one compound word",
       "expected": 19,
-      "actual": 20,
-      "pass": false,
-      "status": "known_gap",
-      "source": ""
+      "actual": 19,
+      "pass": true,
+      "status": "verified",
+      "source": "appendix-1 s10"
     },
     {
       "id": "first_revelation_letters_76",
@@ -796,12 +796,12 @@
     {
       "id": "sura_96_letters_304",
       "mode": "khalifa_appendix1",
-      "description": "letters in sura 96 (19x16), no toggle set reaches it",
+      "description": "letters in sura 96 (19x16), including opening Basmalah",
       "expected": 304,
-      "actual": 285,
-      "pass": false,
-      "status": "known_gap",
-      "source": ""
+      "actual": 304,
+      "pass": true,
+      "status": "verified",
+      "source": "appendix-1 s10"
     },
     {
       "id": "sura_110_words_19",

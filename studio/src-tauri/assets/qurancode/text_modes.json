@@ -96,7 +96,9 @@
         "alr_15",
         "qaf_in_verse_19s_76",
         "almr_13_without_alif_877",
-        "alms_7_without_alif_2791"
+        "alms_7_without_alif_2791",
+        "first_revelation_words_19",
+        "sura_96_letters_304"
       ],
       "known_gaps": [
         "ya_36_237: computed 241, published 237",
@@ -112,9 +114,7 @@
         "alr_12: computed 2384, published 2375",
         "alr_14: computed 1201, published 1197",
         "almr_13: computed 1487, published 1482",
-        "alms_7: computed 5312, published 5320",
-        "first_revelation_words_19: computed 20, published 19",
-        "sura_96_letters_304: computed 285, published 304"
+        "alms_7: computed 5312, published 5320"
       ]
     },
     "original": {

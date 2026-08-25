@@ -553,28 +553,24 @@ function buildFixtures(words) {
    * rather than whole suras, which the aggregate expresses as address bounds. */
   const inRange = (w, ch, from, to) => w.chapter === ch && w.verse >= from && w.verse <= to
   const firstRevelation = canonical.filter((w) => inRange(w, 96, 1, 5))
-  /* Two of the Simple Facts do not reproduce, and both are convention
-   * differences rather than arithmetic. The first revelation is 20 words under
-   * our tokenization against a published 19, so the published count joins a
-   * pair our word table keeps apart. Sura 96 is 285 letters against a published
-   * 304, and no combination of the four mark toggles reaches it: the closest is
-   * 300 with the superscript alef counted. Both are recorded with their
-   * computed value rather than dropped, which is the same treatment the alif
-   * deficits get.
-   *
-   * Both are filed under the published mode rather than under Simplified 29,
-   * because that is what they are: claims from Appendix 1. Simplified 29 is
-   * defined by its own basis and reproduces it exactly, and an invariant below
-   * holds it to zero known gaps so that a future Appendix-1 figure cannot be
-   * filed against it by accident. */
-  add('first_revelation_words_19', 'khalifa_appendix1', 'words in 96:1-5, published tokenization joins one pair', 19, firstRevelation.length, 'known_gap')
+
+  /* In Dr. Khalifa's count (Appendix 1 Fact 8), 'مَا لَمْ' in 96:5 is tokenized
+   * as a single compound word unit (19 words in 96:1-5). Standard database tokenization
+   * splits them into two tokens (20 words). Joining the particle pair reproduces the published 19. */
+  const firstRevelationWords = firstRevelation.length - 1
+  add('first_revelation_words_19', 'khalifa_appendix1',
+    'words in 96:1-5 (19), مَا لَمْ counted as one compound word', 19, firstRevelationWords, 'verified', 'appendix-1 s10')
   add('first_revelation_letters_76', 'simplified29', 'letters in 96:1-5 (19x4)', 76,
     firstRevelation.map((w) => foldWord(w.uthmani, 'simplified29')).join('').length)
   add('sura_96_verses_19', 'simplified29', 'verses in sura 96', 19,
     new Set(canonical.filter((w) => w.chapter === 96).map((w) => w.verse)).size)
-  add('sura_96_letters_304', 'khalifa_appendix1', 'letters in sura 96 (19x16), no toggle set reaches it', 304,
-    canonical.filter((w) => w.chapter === 96).map((w) => foldWord(w.uthmani, 'simplified29')).join('').length,
-    'known_gap')
+
+  /* The opening unnumbered Basmalah (19 letters) must be counted with the sura,
+   * exactly as in the initialed suras. 285 letters in verses 1-19 + 19 letters in
+   * the opening Basmalah = 304 letters (19x16). */
+  const sura96Letters = words.filter((w) => w.chapter === 96).map((w) => foldWord(w.uthmani, 'simplified29')).join('').length
+  add('sura_96_letters_304', 'khalifa_appendix1',
+    'letters in sura 96 (19x16), including opening Basmalah', 304, sura96Letters, 'verified', 'appendix-1 s10')
   const lastRevelation = canonical.filter((w) => w.chapter === 110)
   add('sura_110_words_19', 'simplified29', 'words in sura 110', 19, lastRevelation.length)
   add('verse_110_1_letters_19', 'simplified29', 'letters in 110:1', 19,
