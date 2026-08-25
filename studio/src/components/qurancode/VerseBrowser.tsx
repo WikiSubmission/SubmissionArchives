@@ -97,12 +97,12 @@ export default function VerseBrowser({
   }
 
   const actions = (
-    <>
+    <div className="flex items-center gap-1">
       <button
         type="button"
         onClick={onCite}
         title="Insert this figure into the open note (Ctrl+Shift+V)"
-        className="tactile inline-flex items-center gap-1 rounded-sm border border-qv-border px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-qv-muted hover:bg-qv-tint-strong hover:text-qv-fg"
+        className="tactile inline-flex items-center gap-1.5 rounded border border-qv-border/70 bg-qv-tint/50 px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-qv-muted transition-colors hover:border-qv-border hover:bg-qv-tint-strong hover:text-qv-fg"
       >
         <Quotes size={11} weight="fill" />
         Cite
@@ -111,7 +111,7 @@ export default function VerseBrowser({
         type="button"
         onClick={onExport}
         title="Export the readout as CSV"
-        className="tactile inline-flex items-center gap-1 rounded-sm border border-qv-border px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-qv-muted hover:bg-qv-tint-strong hover:text-qv-fg"
+        className="tactile inline-flex items-center gap-1.5 rounded border border-qv-border/70 bg-qv-tint/50 px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-qv-muted transition-colors hover:border-qv-border hover:bg-qv-tint-strong hover:text-qv-fg"
       >
         <DownloadSimple size={11} />
         CSV
@@ -119,12 +119,12 @@ export default function VerseBrowser({
       <button
         type="button"
         onClick={onCopy}
-        className="tactile inline-flex items-center gap-1 rounded-sm border border-qv-border px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-qv-muted hover:bg-qv-tint-strong hover:text-qv-fg"
+        className="tactile inline-flex items-center gap-1.5 rounded border border-qv-border/70 bg-qv-tint/50 px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-qv-muted transition-colors hover:border-qv-border hover:bg-qv-tint-strong hover:text-qv-fg"
       >
         {copyLabel === 'Copied' ? <Check size={11} weight="bold" /> : <Copy size={11} />}
         {copyLabel}
       </button>
-    </>
+    </div>
   )
 
   if (!verse && !chapter) {
@@ -138,27 +138,31 @@ export default function VerseBrowser({
   return (
     <div ref={surface} className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">
       {hasSelection && (
-        <button
-          type="button"
-          onClick={() => {
-            document.getSelection()?.removeAllRanges()
-            onClearSelection()
-          }}
-          className="tactile sticky top-0 z-10 flex items-center gap-1.5 self-start rounded-md border border-ed-gold/45 bg-ed-gold-soft px-2 py-1 font-mono text-[10px] font-semibold tracking-wide text-ed-gold"
-        >
-          <SelectionIcon size={12} weight="bold" />
-          Measuring your selection &middot; clear
-        </button>
+        <div className="sticky top-0 z-10 flex items-center justify-between gap-2 rounded-md border border-ed-gold/45 bg-ed-gold-soft px-2.5 py-1.5 shadow-xs backdrop-blur-xs">
+          <div className="flex items-center gap-1.5 font-mono text-[11px] font-semibold tracking-wide text-ed-gold">
+            <SelectionIcon size={13} weight="bold" />
+            <span>Measuring active selection</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => {
+              document.getSelection()?.removeAllRanges()
+              onClearSelection()
+            }}
+            className="tactile rounded px-1.5 py-0.5 font-mono text-[10px] font-medium text-ed-gold underline hover:text-ed-fg"
+          >
+            Clear selection
+          </button>
+        </div>
       )}
 
       {reading === 'chapter' && chapter ? (
-        <article className="relative overflow-hidden rounded-xl border border-qv-border bg-qv-bg shadow-[var(--qv-shadow)]">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-qv-accent/20 to-transparent" />
-          <header className="flex flex-wrap items-center gap-2 border-b border-qv-divider bg-qv-tint px-4 py-2">
-            <span className="font-mono text-[11px] font-bold tracking-wider text-qv-accent">
+        <article className="relative overflow-hidden rounded-lg border border-qv-border bg-qv-bg shadow-[var(--qv-shadow)]">
+          <header className="flex flex-wrap items-center gap-2.5 border-b border-qv-divider bg-qv-tint px-4 py-2">
+            <span className="rounded border border-qv-border/60 bg-qv-bg px-2 py-0.5 font-mono text-[11px] font-bold tracking-wider text-qv-accent">
               Sura {chapter.chapter}
             </span>
-            <span dir="rtl" className="font-arabic text-[16px] text-qv-fg">
+            <span dir="rtl" className="font-arabic text-[17px] text-qv-fg">
               {chapter.name_arabic}
             </span>
             <span className="font-serif text-[13px] text-qv-muted">
@@ -172,7 +176,7 @@ export default function VerseBrowser({
             <p
               dir="rtl"
               title="The unnumbered Basmalah. Not verse 1, and not counted as one."
-              className="border-b border-qv-divider px-4 py-3 text-center font-arabic text-[19px] leading-loose text-qv-accent"
+              className="border-b border-qv-divider px-4 py-3.5 text-center font-arabic text-[20px] leading-loose text-qv-accent select-none"
             >
               {chapter.basmalah.words.map((w) => w.uthmani).join(' ')}
             </p>
@@ -182,21 +186,21 @@ export default function VerseBrowser({
             {chapter.verses.map((v) => (
               <section
                 key={v.verse}
-                className="border-b border-qv-divider px-4 py-3 last:border-b-0 hover:bg-qv-tint/60"
+                className="border-b border-qv-divider px-4 py-3.5 transition-colors last:border-b-0 hover:bg-qv-tint/40"
               >
-                <p dir="rtl" className="text-right font-arabic text-[21px] leading-[2.05] text-qv-fg">
+                <p dir="rtl" className="text-right font-arabic text-[21px] leading-[2.2] text-qv-fg">
                   {v.words.map((w) => w.uthmani).join(' ')}
                   <button
                     type="button"
                     onClick={() => onOpenVerse(v.verse)}
                     title={`Focus ${v.chapter}:${v.verse}`}
-                    className="tactile mx-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full border border-qv-border px-1 font-mono text-[10px] tabular-nums text-qv-accent hover:bg-qv-tint-strong"
+                    className="tactile mx-1.5 inline-flex h-[22px] min-w-[22px] items-center justify-center rounded-full border border-qv-border/80 bg-qv-bg px-1 font-mono text-[10px] font-semibold tabular-nums text-qv-accent transition-colors hover:border-qv-accent hover:bg-qv-tint-strong"
                   >
                     {v.verse}
                   </button>
                 </p>
                 {v.english && (
-                  <p className="mt-1.5 font-serif text-[13.5px] leading-relaxed text-qv-muted">
+                  <p className="mt-2 font-serif text-[13.5px] leading-relaxed text-qv-fg/80">
                     {v.english}
                   </p>
                 )}
@@ -209,10 +213,9 @@ export default function VerseBrowser({
       ) : (
         verse && (
           <>
-            <article className="relative overflow-hidden rounded-xl border border-qv-border bg-qv-bg shadow-[var(--qv-shadow)]">
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-qv-accent/20 to-transparent" />
+            <article className="relative overflow-hidden rounded-lg border border-qv-border bg-qv-bg shadow-[var(--qv-shadow)]">
               <header className="flex items-center gap-2 border-b border-qv-divider bg-qv-tint px-4 py-2">
-                <span className="font-mono text-[11px] font-bold tracking-wider text-qv-accent">
+                <span className="rounded border border-qv-border/60 bg-qv-bg px-2 py-0.5 font-mono text-[11px] font-bold tracking-wider text-qv-accent">
                   {verse.chapter}:{verse.verse}
                 </span>
                 <span className="flex-1" />
@@ -221,7 +224,7 @@ export default function VerseBrowser({
 
               <p
                 dir="rtl"
-                className="flex flex-wrap justify-start gap-x-[0.38em] px-4 pb-2 pt-4 text-right font-arabic text-[clamp(19px,2.1vw,25px)] leading-[2.15] text-qv-fg"
+                className="flex flex-wrap justify-start gap-x-[0.42em] gap-y-1 px-5 pb-3 pt-5 text-right font-arabic text-[clamp(21px,2.4vw,27px)] leading-[2.3] text-qv-fg"
               >
                 {verse.words.map((w) => (
                   <button
@@ -233,9 +236,9 @@ export default function VerseBrowser({
                     onMouseLeave={() => setHovered(null)}
                     onFocus={show(w)}
                     onBlur={() => setHovered(null)}
-                    className={`rounded-[3px] px-[0.06em] transition-colors hover:bg-qv-tint-strong ${
+                    className={`rounded px-[0.1em] py-[0.02em] transition-all hover:bg-qv-tint-strong ${
                       selectedWord === w.position
-                        ? 'bg-qv-accent/20 shadow-[0_1.5px_0_var(--qv-accent)]'
+                        ? 'bg-qv-accent/15 text-qv-fg ring-1 ring-qv-accent/40 shadow-xs'
                         : ''
                     }`}
                   >
@@ -245,8 +248,8 @@ export default function VerseBrowser({
               </p>
 
               {verse.english && (
-                <p className="mt-2 border-t border-qv-divider px-4 pb-4 pt-1.5 font-serif text-[14.5px] leading-relaxed text-qv-fg">
-                  <span className="mr-0.5 align-super font-mono text-[10px] text-qv-subtle">
+                <p className="mt-2 border-t border-qv-divider px-5 pb-4 pt-2.5 font-serif text-[14.5px] leading-relaxed text-qv-fg/90">
+                  <span className="mr-1 align-super font-mono text-[10px] font-semibold text-qv-subtle">
                     {verse.verse}
                   </span>
                   {verse.english}
@@ -256,43 +259,46 @@ export default function VerseBrowser({
               <ProvenanceChip provenance={verse.provenance} />
             </article>
 
-            <section className="flex flex-col gap-2">
+            <section className="flex flex-col gap-2.5">
               <div className="flex items-baseline gap-2">
                 <div
                   role="tablist"
                   aria-label="Verse detail"
-                  className="flex gap-0.5 rounded-[7px] border border-ed-rule bg-ed-surface p-0.5"
+                  className="flex gap-0.5 rounded-md border border-ed-rule bg-ed-surface p-0.5"
                 >
                   {(
                     [
                       ['words', 'Word by word'],
                       ['translation', 'Translation'],
                     ] as const
-                  ).map(([id, label]) => (
-                    <button
-                      key={id}
-                      type="button"
-                      role="tab"
-                      aria-selected={bottomTab === id}
-                      onClick={() => onBottomTabChange(id)}
-                      className={`rounded-[5px] px-2 py-1 font-mono text-[10px] font-semibold tracking-wide transition-colors ${
-                        bottomTab === id
-                          ? 'border border-ed-rule-strong bg-ed-surface-raised text-ed-fg shadow-xs'
-                          : 'text-ed-fg-muted hover:text-ed-fg-secondary'
-                      }`}
-                    >
-                      {label}
-                    </button>
-                  ))}
+                  ).map(([id, label]) => {
+                    const active = bottomTab === id
+                    return (
+                      <button
+                        key={id}
+                        type="button"
+                        role="tab"
+                        aria-selected={active}
+                        onClick={() => onBottomTabChange(id)}
+                        className={`rounded px-2.5 py-1 font-mono text-[10.5px] font-medium tracking-wide transition-all ${
+                          active
+                            ? 'border border-ed-rule-strong bg-ed-surface-raised font-semibold text-ed-fg shadow-xs'
+                            : 'text-ed-fg-muted hover:text-ed-fg'
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    )
+                  })}
                 </div>
                 <span className="h-px flex-1 self-center bg-ed-rule" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.11em] text-ed-fg-muted">
+                <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
                   {verse.words.length} words
                 </span>
               </div>
 
               {bottomTab === 'words' ? (
-                <div className="grid gap-1.5 [grid-template-columns:repeat(auto-fill,minmax(112px,1fr))]">
+                <div className="grid gap-2 [grid-template-columns:repeat(auto-fill,minmax(118px,1fr))]">
                   {verse.words.map((w) => (
                     <button
                       key={w.position}
@@ -303,23 +309,25 @@ export default function VerseBrowser({
                       onMouseLeave={() => setHovered(null)}
                       onFocus={show(w)}
                       onBlur={() => setHovered(null)}
-                      className={`tactile flex flex-col gap-0.5 rounded-md border p-1.5 text-right transition-colors ${
+                      className={`tactile flex flex-col gap-1 rounded-md border p-2 text-right transition-all ${
                         selectedWord === w.position
-                          ? 'border-ed-accent bg-ed-accent-soft'
-                          : 'border-ed-rule bg-ed-surface-raised hover:border-ed-accent'
+                          ? 'border-ed-accent bg-ed-accent-soft ring-1 ring-ed-accent/30 shadow-xs'
+                          : 'border-ed-rule bg-ed-surface-raised hover:border-ed-rule-strong hover:bg-ed-surface'
                       }`}
                     >
-                      <span className="text-left font-mono text-[9px] tabular-nums text-ed-fg-faint">
-                        {w.position}
-                      </span>
-                      <span dir="rtl" className="font-arabic text-[17px] leading-snug text-ed-fg">
+                      <div className="flex items-center justify-between text-left">
+                        <span className="font-mono text-[9px] font-semibold tabular-nums text-ed-fg-faint">
+                          #{w.position}
+                        </span>
+                        <span className="font-mono text-[9px] tabular-nums text-ed-fg-faint">
+                          {w.letters}L
+                        </span>
+                      </div>
+                      <span dir="rtl" className="my-0.5 font-arabic text-[18px] leading-snug text-ed-fg">
                         {w.uthmani}
                       </span>
-                      <span className="truncate text-left font-mono text-[9px] text-ed-fg-muted">
+                      <span className="truncate text-left font-mono text-[9.5px] text-ed-fg-muted">
                         {w.translit}
-                      </span>
-                      <span className="text-left font-mono text-[9px] tabular-nums text-ed-fg-faint">
-                        {w.letters} letters
                       </span>
                     </button>
                   ))}
@@ -328,29 +336,36 @@ export default function VerseBrowser({
                 /* Word for word beside the gloss, so the reader can see which
                    English belongs to which Arabic rather than inferring it from
                    order. */
-                <div className="flex flex-col divide-y divide-ed-rule rounded-md border border-ed-rule bg-ed-surface-raised">
-                  {verse.words.map((w) => (
-                    <div
-                      key={w.position}
-                      className="grid grid-cols-[2rem_1fr_1.2fr] items-baseline gap-2 px-2 py-1.5"
-                    >
-                      <span className="font-mono text-[9px] tabular-nums text-ed-fg-faint">
-                        {w.position}
-                      </span>
-                      <span
-                        dir="rtl"
-                        className="text-right font-arabic text-[17px] leading-snug text-ed-fg"
+                <div className="overflow-hidden rounded-md border border-ed-rule bg-ed-surface-raised shadow-xs">
+                  <div className="grid grid-cols-[2.5rem_1fr_1.3fr] items-center gap-2 border-b border-ed-rule bg-ed-surface px-3 py-1 font-mono text-[9px] font-semibold uppercase tracking-wider text-ed-fg-muted">
+                    <span>#</span>
+                    <span className="text-right">Word</span>
+                    <span>Gloss & Transliteration</span>
+                  </div>
+                  <div className="divide-y divide-ed-rule">
+                    {verse.words.map((w) => (
+                      <div
+                        key={w.position}
+                        className="grid grid-cols-[2.5rem_1fr_1.3fr] items-baseline gap-2 px-3 py-2 transition-colors hover:bg-ed-surface"
                       >
-                        {w.uthmani}
-                      </span>
-                      <span className="flex flex-col">
-                        <span className="font-serif text-[12.5px] leading-snug text-ed-fg-secondary">
-                          {w.gloss}
+                        <span className="font-mono text-[9.5px] font-semibold tabular-nums text-ed-fg-faint">
+                          {w.position}
                         </span>
-                        <span className="font-mono text-[9px] text-ed-fg-muted">{w.translit}</span>
-                      </span>
-                    </div>
-                  ))}
+                        <span
+                          dir="rtl"
+                          className="text-right font-arabic text-[18px] leading-snug text-ed-fg"
+                        >
+                          {w.uthmani}
+                        </span>
+                        <div className="flex flex-col">
+                          <span className="font-serif text-[13px] leading-snug text-ed-fg-secondary">
+                            {w.gloss}
+                          </span>
+                          <span className="font-mono text-[9.5px] text-ed-fg-muted">{w.translit}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </section>

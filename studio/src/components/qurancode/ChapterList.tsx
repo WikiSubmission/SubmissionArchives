@@ -35,21 +35,21 @@ export default function ChapterList({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="relative shrink-0 p-2">
+      <div className="relative shrink-0 p-2.5">
         <MagnifyingGlass
           size={13}
-          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ed-fg-muted"
+          className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-ed-fg-muted"
         />
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Filter chapters"
+          placeholder="Filter surahs…"
           aria-label="Filter chapters"
-          className="w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised py-1.5 pl-7 pr-2 text-[12px] text-ed-fg placeholder:text-ed-fg-faint"
+          className="h-[30px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised pl-8 pr-2.5 font-mono text-[11px] text-ed-fg shadow-xs outline-none transition-colors placeholder:font-sans placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
         />
       </div>
 
-      <ul className="min-h-0 flex-1 overflow-y-auto px-1.5 pb-1.5">
+      <ul className="min-h-0 flex-1 overflow-y-auto px-1.5 pb-2">
         {filtered.map((c) => {
           const isActive = c.number === active
           return (
@@ -58,23 +58,25 @@ export default function ChapterList({
                 type="button"
                 onClick={() => onSelect(c.number)}
                 aria-current={isActive}
-                className={`tactile flex w-full items-baseline gap-2 rounded-sm px-1.5 py-1 text-left transition-colors ${
+                className={`tactile flex w-full items-baseline gap-2 rounded px-2 py-1 text-left transition-all ${
                   isActive
-                    ? 'bg-ed-accent-soft text-ed-fg'
-                    : 'text-ed-fg-secondary hover:bg-ed-surface-strong hover:text-ed-fg'
+                    ? 'border-l-2 border-ed-accent bg-ed-accent-soft font-semibold text-ed-fg shadow-xs'
+                    : 'text-ed-fg-secondary hover:bg-ed-surface hover:text-ed-fg'
                 }`}
               >
                 <span
-                  className={`w-6 shrink-0 text-right font-mono text-[10px] tabular-nums ${
+                  className={`w-5 shrink-0 text-right font-mono text-[10px] font-semibold tabular-nums ${
                     isActive ? 'text-ed-accent' : 'text-ed-fg-faint'
                   }`}
                 >
                   {c.number}
                 </span>
                 <span className="min-w-0 flex-1 truncate text-[12px]">{c.name_transliterated}</span>
-                <span className="shrink-0 font-arabic text-[13px] text-ed-fg-muted">{c.name_arabic}</span>
-                <span className="w-6 shrink-0 text-right font-mono text-[10px] tabular-nums text-ed-fg-faint">
-                  {c.verses}
+                <span dir="rtl" className="shrink-0 font-arabic text-[14px] text-ed-fg-muted">
+                  {c.name_arabic}
+                </span>
+                <span className="w-7 shrink-0 text-right font-mono text-[9.5px] tabular-nums text-ed-fg-faint">
+                  {c.verses}v
                 </span>
               </button>
             </li>
@@ -82,7 +84,9 @@ export default function ChapterList({
         })}
 
         {filtered.length === 0 && (
-          <li className="px-2 py-3 text-[11px] text-ed-fg-muted">No chapter matches “{query}”.</li>
+          <li className="px-3 py-4 text-center font-mono text-[11px] text-ed-fg-muted">
+            No surah matches “{query}”.
+          </li>
         )}
       </ul>
     </div>

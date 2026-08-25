@@ -337,22 +337,34 @@ export default function QuranCodeSurface() {
 
       {/* The corpus figures are never hardcoded in the UI; they come from
           qc_metadata, which computes them from the bundled data. */}
-      <footer className="flex h-6 shrink-0 items-center gap-4 border-t border-ed-rule bg-ed-bg-secondary px-3 font-mono text-[10px] text-ed-fg-muted">
-        <span>{qc.metadata.modes.find((m) => m.id === qc.mode)?.label}</span>
-        <span>scope <b className="font-medium text-ed-fg-secondary">{qc.scope.chapter ? qc.counts[0]?.provenance.scope : 'corpus'}</b></span>
+      <footer className="flex h-[26px] shrink-0 items-center gap-3 border-t border-ed-rule bg-ed-surface px-3 font-mono text-[9.5px] text-ed-fg-muted select-none">
+        <span className="flex items-center gap-1">
+          <span className="h-1.5 w-1.5 rounded-full bg-ed-accent" />
+          <span className="font-semibold text-ed-fg-secondary">
+            {qc.metadata.modes.find((m) => m.id === qc.mode)?.label}
+          </span>
+        </span>
+        <span className="text-ed-fg-faint">|</span>
+        <span>
+          scope:{' '}
+          <b className="font-semibold text-ed-fg-secondary">
+            {qc.scope.chapter ? qc.counts[0]?.provenance.scope : 'corpus'}
+          </b>
+        </span>
         <span className="flex-1" />
         {qc.results && (
-          <span>
+          <span className="rounded border border-ed-rule bg-ed-surface-raised px-1.5 py-0.5 font-semibold text-ed-fg-secondary shadow-2xs">
             {fmt(qc.results.total)} hit{qc.results.total === 1 ? '' : 's'}
           </span>
         )}
-        {qc.error && <span className="text-ed-danger">{qc.error}</span>}
+        {qc.error && <span className="font-semibold text-ed-danger">{qc.error}</span>}
+        <span className="text-ed-fg-faint">|</span>
         <span>
-          corpus{' '}
-          <b className="font-medium text-ed-fg-secondary">
-            {qc.metadata.corpus.chapters} / {qc.metadata.corpus.verses.toLocaleString('en-US')} /{' '}
-            {qc.metadata.corpus.words.toLocaleString('en-US')} /{' '}
-            {qc.metadata.corpus.letters.toLocaleString('en-US')}
+          corpus:{' '}
+          <b className="font-semibold tabular-nums text-ed-fg-secondary">
+            {qc.metadata.corpus.chapters} ch · {qc.metadata.corpus.verses.toLocaleString('en-US')} v ·{' '}
+            {qc.metadata.corpus.words.toLocaleString('en-US')} w ·{' '}
+            {qc.metadata.corpus.letters.toLocaleString('en-US')} L
           </b>
         </span>
       </footer>
@@ -362,7 +374,7 @@ export default function QuranCodeSurface() {
 
 function Centered({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-3 bg-ed-bg p-8 text-sm text-ed-fg-muted">
+    <div className="flex h-full flex-col items-center justify-center gap-3 bg-ed-bg p-8 font-mono text-[12px] text-ed-fg-muted">
       {children}
     </div>
   )

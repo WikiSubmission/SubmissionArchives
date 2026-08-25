@@ -47,19 +47,21 @@ export default function ScopeBar({
   onViewChange,
 }: ScopeBarProps) {
   return (
-    <div className="flex shrink-0 flex-wrap items-center gap-1.5 border-b border-ed-rule bg-ed-bg-secondary px-3 py-2">
-      <Stepper label="Ch" value={chapter} onStep={onStepChapter} />
-      <Stepper label="V" value={verse} onStep={onStepVerse} />
-      <Stepper label="W" value={word ?? '—'} onStep={onStepWord} />
+    <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-ed-rule bg-ed-bg-secondary px-3 py-1.5 min-h-[38px]">
+      <div className="flex items-center gap-1.5">
+        <Stepper label="Ch" value={chapter} onStep={onStepChapter} />
+        <Stepper label="V" value={verse} onStep={onStepVerse} />
+        <Stepper label="W" value={word ?? '—'} onStep={onStepWord} />
+      </div>
 
       {activeChapter && (
-        <span className="ml-1 truncate font-serif text-[13px] text-ed-fg-secondary">
-          <b className="font-semibold text-ed-fg">{activeChapter.name_transliterated}</b>
-          <span className="mx-1.5 text-ed-fg-faint">·</span>
-          {activeChapter.verses} verses
-          <span className="mx-1.5 text-ed-fg-faint">·</span>
-          revealed {ordinal(activeChapter.revelation_order)}
-        </span>
+        <div className="ml-1 flex items-center gap-1.5 truncate font-serif text-[12.5px] text-ed-fg-secondary">
+          <span className="font-semibold text-ed-fg">{activeChapter.name_transliterated}</span>
+          <span className="text-ed-fg-faint">·</span>
+          <span className="font-mono text-[11px] tabular-nums text-ed-fg-muted">{activeChapter.verses} verses</span>
+          <span className="text-ed-fg-faint">·</span>
+          <span className="font-mono text-[11px] text-ed-fg-muted">rev. {ordinal(activeChapter.revelation_order)}</span>
+        </div>
       )}
 
       <span className="flex-1" />
@@ -67,62 +69,77 @@ export default function ScopeBar({
       {/* Whether the pane shows one verse or the whole sura. Separate from the
           counting scope, because a researcher often wants to read the sura
           while still counting a single verse. */}
-      <div className="flex overflow-hidden rounded-md border border-ed-rule-strong">
+      <div
+        role="group"
+        aria-label="Reading scope"
+        className="flex items-center rounded-md border border-ed-rule bg-ed-surface p-0.5"
+      >
         {(
           [
             ['verse', 'Verse'],
             ['chapter', 'Sura'],
           ] as const
-        ).map(([id, label]) => (
-          <button
-            key={id}
-            type="button"
-            aria-pressed={reading === id}
-            onClick={() => onReadingChange(id)}
-            title={id === 'chapter' ? 'Read the whole sura' : 'Read one verse at a time'}
-            className={`tactile px-2 py-1 font-mono text-[10px] tracking-wide transition-colors ${
-              reading === id
-                ? 'bg-ed-accent-soft font-semibold text-ed-accent'
-                : 'bg-ed-surface-raised text-ed-fg-muted hover:text-ed-fg'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
+        ).map(([id, label]) => {
+          const active = reading === id
+          return (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={active}
+              onClick={() => onReadingChange(id)}
+              title={id === 'chapter' ? 'Read the whole sura' : 'Read one verse at a time'}
+              className={`tactile rounded px-2 py-0.5 font-mono text-[10px] font-medium tracking-wide transition-all ${
+                active
+                  ? 'border border-ed-rule-strong bg-ed-surface-raised font-semibold text-ed-accent shadow-xs'
+                  : 'text-ed-fg-muted hover:text-ed-fg'
+              }`}
+            >
+              {label}
+            </button>
+          )
+        })}
       </div>
 
       {/* Reading and results share the pane, so the switch belongs where the
           rest of the navigation is rather than floating over the content. */}
       {hasResults && (
-        <div className="flex overflow-hidden rounded-md border border-ed-rule-strong">
+        <div
+          role="group"
+          aria-label="View mode"
+          className="flex items-center rounded-md border border-ed-rule bg-ed-surface p-0.5"
+        >
           {([
             ['read', 'Read', BookOpen],
             ['results', 'Results', ListMagnifyingGlass],
-          ] as const).map(([id, label, Icon]) => (
-            <button
-              key={id}
-              type="button"
-              aria-pressed={view === id}
-              onClick={() => onViewChange(id)}
-              title={label}
-              className={`tactile flex items-center gap-1 px-2 py-1 font-mono text-[10px] tracking-wide transition-colors ${
-                view === id
-                  ? 'bg-ed-accent-soft font-semibold text-ed-accent'
-                  : 'bg-ed-surface-raised text-ed-fg-muted hover:text-ed-fg'
-              }`}
-            >
-              <Icon size={11} weight={view === id ? 'fill' : 'regular'} />
-              {label}
-            </button>
-          ))}
+          ] as const).map(([id, label, Icon]) => {
+            const active = view === id
+            return (
+              <button
+                key={id}
+                type="button"
+                aria-pressed={active}
+                onClick={() => onViewChange(id)}
+                title={label}
+                className={`tactile flex items-center gap-1 rounded px-2 py-0.5 font-mono text-[10px] font-medium tracking-wide transition-all ${
+                  active
+                    ? 'border border-ed-rule-strong bg-ed-surface-raised font-semibold text-ed-accent shadow-xs'
+                    : 'text-ed-fg-muted hover:text-ed-fg'
+                }`}
+              >
+                <Icon size={11} weight={active ? 'fill' : 'regular'} />
+                {label}
+              </button>
+            )
+          })}
         </div>
       )}
 
+      {/* Scope selector */}
       <select
         aria-label="Scope"
         value={level}
         onChange={(e) => onLevelChange(e.target.value as ScopeLevel)}
-        className="rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2 py-1 font-mono text-[11px] text-ed-fg"
+        className="h-[26px] rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2 font-mono text-[11px] font-medium text-ed-fg shadow-xs outline-none transition-colors focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
       >
         <option value="corpus">Scope: corpus</option>
         <option value="chapter">Scope: chapter</option>
@@ -148,28 +165,28 @@ function Stepper({
   onStep: (delta: number) => void
 }) {
   return (
-    <div className="flex items-stretch overflow-hidden rounded-md border border-ed-rule-strong bg-ed-surface-raised">
-      <span className="border-r border-ed-rule bg-ed-surface px-1.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-ed-fg-muted">
+    <div className="flex h-[26px] items-stretch overflow-hidden rounded-md border border-ed-rule-strong bg-ed-surface-raised shadow-xs">
+      <span className="flex items-center border-r border-ed-rule bg-ed-surface px-1.5 font-mono text-[9.5px] font-semibold uppercase tracking-wider text-ed-fg-muted select-none">
         {label}
       </span>
       <button
         type="button"
         aria-label={`Previous ${label}`}
         onClick={() => onStep(-1)}
-        className="tactile px-1.5 text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-accent"
+        className="tactile flex items-center px-1 text-ed-fg-muted transition-colors hover:bg-ed-surface-strong hover:text-ed-accent active:bg-ed-surface"
       >
-        <CaretLeft size={11} weight="bold" />
+        <CaretLeft size={10} weight="bold" />
       </button>
-      <span className="min-w-[2.4rem] px-1 py-1 text-center font-mono text-[12px] font-semibold tabular-nums text-ed-fg">
+      <span className="flex min-w-[2.2rem] items-center justify-center px-1 font-mono text-[11px] font-semibold tabular-nums text-ed-fg select-none">
         {value}
       </span>
       <button
         type="button"
         aria-label={`Next ${label}`}
         onClick={() => onStep(1)}
-        className="tactile px-1.5 text-ed-fg-muted hover:bg-ed-surface-strong hover:text-ed-accent"
+        className="tactile flex items-center px-1 text-ed-fg-muted transition-colors hover:bg-ed-surface-strong hover:text-ed-accent active:bg-ed-surface"
       >
-        <CaretRight size={11} weight="bold" />
+        <CaretRight size={10} weight="bold" />
       </button>
     </div>
   )

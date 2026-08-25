@@ -32,7 +32,7 @@ export default function MarkToggleRow({ specs, toggles, occurrences, onToggle }:
   const inert = specs.filter((s) => occurrences?.[s.id] === 0)
 
   return (
-    <div className="flex flex-col gap-0.5">
+    <div className="flex flex-col gap-1">
       {specs.map((spec) => {
         const on = toggles[spec.id]
         const count = occurrences?.[spec.id]
@@ -44,14 +44,14 @@ export default function MarkToggleRow({ specs, toggles, occurrences, onToggle }:
             onClick={() => onToggle(spec.id)}
             title={
               count === 0
-                ? `${spec.label}. No such mark in this scope, so this changes nothing here.`
+                ? `${spec.label}. No such mark in this scope; changes nothing here.`
                 : spec.label
             }
-            className="tactile flex w-full items-center gap-2 rounded-sm px-1.5 py-1 text-left transition-colors hover:bg-ed-surface-strong"
+            className="tactile flex w-full items-center gap-2 rounded px-2 py-1 text-left transition-colors hover:bg-ed-surface"
           >
             <span
               aria-hidden
-              className={`grid h-3.5 w-3.5 shrink-0 place-items-center rounded-[3px] border ${
+              className={`grid h-3.5 w-3.5 shrink-0 place-items-center rounded border transition-colors ${
                 on
                   ? 'border-ed-accent bg-ed-accent text-ed-on-accent'
                   : 'border-ed-rule-strong bg-ed-surface-raised text-transparent'
@@ -59,27 +59,28 @@ export default function MarkToggleRow({ specs, toggles, occurrences, onToggle }:
             >
               <Check size={9} weight="bold" />
             </span>
-            <span aria-hidden className="w-4 shrink-0 text-center font-arabic text-base text-ed-fg">
+            <span aria-hidden className="w-4 shrink-0 text-center font-arabic text-[16px] leading-none text-ed-fg">
               {GLYPH[spec.id] ?? '·'}
             </span>
             <span
               className={`flex-1 text-[11px] leading-tight ${
-                on ? 'text-ed-fg' : 'text-ed-fg-secondary'
+                on ? 'font-medium text-ed-fg' : 'text-ed-fg-secondary'
               }`}
             >
               {spec.label}
             </span>
             {count !== undefined && (
-              <span className="shrink-0 font-mono text-[10px] tabular-nums text-ed-fg-muted">{count}</span>
+              <span className="shrink-0 font-mono text-[9.5px] font-semibold tabular-nums text-ed-fg-muted">
+                {count}
+              </span>
             )}
           </button>
         )
       })}
 
       {inert.length > 0 && (
-        <p className="mt-1 px-1.5 text-[11px] leading-snug text-ed-fg-muted">
-          No {inert.map((s) => s.label.replace(/ as letter$/i, '').toLowerCase()).join(', ')} in this
-          scope, so {inert.length > 1 ? 'those toggles change' : 'that toggle changes'} nothing here.
+        <p className="mt-0.5 px-2 text-[10.5px] leading-snug text-ed-fg-muted">
+          No {inert.map((s) => s.label.replace(/ as letter$/i, '').toLowerCase()).join(', ')} in scope.
         </p>
       )}
     </div>

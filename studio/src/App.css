@@ -101,6 +101,7 @@
   --ed-accent-soft: rgba(184, 98, 51, 0.09);
   --ed-accent-glow: rgba(184, 98, 51, 0.12);
   --ed-gold: #9C7A3C;
+  --ed-gold-soft: rgba(156, 122, 60, 0.10);
 
   /* Status — warm-harmonised, not stock Tailwind hues */
   --ed-success: #3F6B4A;
@@ -183,6 +184,7 @@
   --ed-accent-soft: rgba(200, 121, 74, 0.08);
   --ed-accent-glow: rgba(200, 121, 74, 0.12);
   --ed-gold: #D4AF37;
+  --ed-gold-soft: rgba(212, 175, 55, 0.12);
 
   --ed-success: #7FA981;
   --ed-success-soft: rgba(127, 169, 129, 0.12);
@@ -269,7 +271,7 @@
   --font-newsreader: "Newsreader", Georgia, serif;
   --font-body: var(--ed-body-font);
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  --font-arabic: "Amiri", serif;
+  --font-arabic: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Traditional Arabic", serif;
 
   /* Shape */
   --radius-xs: 2px;
@@ -299,6 +301,7 @@
   --color-ed-accent-strong: var(--ed-accent-strong);
   --color-ed-accent-soft: var(--ed-accent-soft);
   --color-ed-gold: var(--ed-gold);
+  --color-ed-gold-soft: var(--ed-gold-soft);
   --color-ed-success: var(--ed-success);
   --color-ed-success-soft: var(--ed-success-soft);
   --color-ed-danger: var(--ed-danger);
@@ -351,6 +354,15 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Arabic Script Precision Rendering ── */
+[dir="rtl"],
+.font-arabic {
+  font-feature-settings: "kern" 1, "liga" 1, "mkmk" 1, "mark" 1;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  letter-spacing: normal !important;
 }
 /* ── Keyframes ── */
 @keyframes fade-in-up {

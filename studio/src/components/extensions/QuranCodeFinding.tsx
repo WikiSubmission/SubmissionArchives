@@ -109,41 +109,41 @@ function FindingView({ node }: NodeViewProps) {
 
   return (
     <NodeViewWrapper
-      className={`my-4 overflow-hidden rounded-lg border bg-ed-surface-raised ${
+      className={`my-3 overflow-hidden rounded-md border bg-ed-surface-raised shadow-2xs ${
         drifted ? 'border-ed-danger' : 'border-ed-rule'
       }`}
       data-qc-finding
     >
-      <div className="flex items-baseline gap-2 border-b border-ed-rule bg-ed-surface px-3 py-1.5">
-        <span className="font-mono text-[11px] font-bold tracking-wider text-ed-accent">
+      <div className="flex items-center gap-2 border-b border-ed-rule bg-ed-surface px-3 py-1.5">
+        <span className="rounded border border-ed-accent/30 bg-ed-accent-soft px-1.5 py-0.5 font-mono text-[10.5px] font-bold text-ed-accent shadow-2xs">
           {attrs.ref}
         </span>
         <span className="flex-1" />
-        <span className="font-mono text-[10px] uppercase tracking-wider text-ed-fg-muted">
+        <span className="font-mono text-[9.5px] uppercase tracking-wider text-ed-fg-muted">
           {attrs.mode}
           {attrs.system && attrs.system !== 'none' ? ` · ${attrs.system}` : ''}
         </span>
       </div>
 
-      <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1 px-3 py-2.5">
+      <div className="flex flex-wrap items-baseline gap-x-6 gap-y-1 px-3.5 py-2.5">
         <Figure label="Value" value={fmt(stored)} big />
         <Figure label="Letters" value={fmt(Number(attrs.letters ?? 0))} />
         <Figure label="Words" value={fmt(Number(attrs.words ?? 0))} />
       </div>
 
       {attrs.modifiers && (
-        <p className="px-3 pb-1.5 font-mono text-[10px] text-ed-fg-muted">
+        <p className="border-t border-ed-rule/60 px-3.5 py-1 font-mono text-[9.5px] text-ed-fg-muted">
           modifiers: {attrs.modifiers.split(',').join(', ')}
         </p>
       )}
 
       <div className="flex flex-wrap items-center gap-2 border-t border-ed-rule bg-ed-surface px-3 py-1.5">
         {status === 'checking' && (
-          <Badge tone="muted">checking against the corpus…</Badge>
+          <Badge tone="muted">checking against corpus…</Badge>
         )}
         {status === 'agrees' && (
           <Badge tone="ok">
-            <CheckCircle size={11} weight="fill" /> recomputed, still {fmt(stored)}
+            <CheckCircle size={11} weight="fill" /> recomputed, matches {fmt(stored)}
           </Badge>
         )}
         {drifted && (
@@ -156,7 +156,7 @@ function FindingView({ node }: NodeViewProps) {
         )}
         {unverified && (
           <Badge tone="danger">
-            <Warning size={11} weight="fill" /> mode has an unresolved rule
+            <Warning size={11} weight="fill" /> mode has unresolved rule
           </Badge>
         )}
       </div>
@@ -167,11 +167,11 @@ function FindingView({ node }: NodeViewProps) {
 function Figure({ label, value, big }: { label: string; value: string; big?: boolean }) {
   return (
     <span className="flex flex-col">
-      <span className="font-mono text-[9px] uppercase tracking-[0.11em] text-ed-fg-muted">
+      <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
         {label}
       </span>
       <span
-        className={`font-mono font-semibold tabular-nums text-ed-fg ${big ? 'text-[19px]' : 'text-[14px]'}`}
+        className={`font-mono font-bold tabular-nums text-ed-fg ${big ? 'text-[18px] text-ed-gold' : 'text-[13.5px]'}`}
       >
         {value}
       </span>
@@ -187,13 +187,13 @@ function Badge({
   children: React.ReactNode
 }) {
   const styles = {
-    ok: 'border-ed-success/45 bg-ed-success-soft text-ed-success',
-    danger: 'border-ed-danger/45 bg-ed-danger-soft text-ed-danger',
-    muted: 'border-ed-rule text-ed-fg-muted',
+    ok: 'border-ed-success/40 bg-ed-success-soft text-ed-success',
+    danger: 'border-ed-danger/40 bg-ed-danger-soft text-ed-danger',
+    muted: 'border-ed-rule bg-ed-surface text-ed-fg-muted',
   }[tone]
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-sm border px-1.5 py-0.5 font-mono text-[10px] tracking-wide ${styles}`}
+      className={`inline-flex items-center gap-1 rounded border px-1.5 py-0.5 font-mono text-[9.5px] font-medium tracking-wide shadow-2xs ${styles}`}
     >
       {children}
     </span>

@@ -76,7 +76,7 @@ export default function QueryPane({
 }: QueryPaneProps) {
   return (
     <form
-      className="flex flex-col gap-2.5 p-2.5"
+      className="flex flex-col gap-3 p-3"
       onSubmit={(e) => {
         e.preventDefault()
         onRun()
@@ -85,7 +85,7 @@ export default function QueryPane({
       <div
         role="tablist"
         aria-label="Query kind"
-        className="flex gap-0.5 rounded-[7px] border border-ed-rule bg-ed-surface p-0.5"
+        className="flex h-[30px] gap-0.5 rounded-md border border-ed-rule bg-ed-surface p-0.5"
       >
         {TABS.map((t) => {
           const active = tab === t.id
@@ -96,7 +96,7 @@ export default function QueryPane({
               role="tab"
               aria-selected={active}
               onClick={() => onTabChange(t.id)}
-              className={`relative flex-1 rounded-[5px] px-1 py-1.5 text-[10.5px] font-semibold tracking-wide transition-colors ${
+              className={`relative flex flex-1 items-center justify-center rounded px-1 font-mono text-[10px] font-semibold uppercase tracking-wider transition-colors ${
                 active ? 'text-ed-fg' : 'text-ed-fg-muted hover:text-ed-fg-secondary'
               }`}
             >
@@ -104,7 +104,7 @@ export default function QueryPane({
                 <motion.span
                   layoutId="qcQueryTab"
                   transition={springConfig}
-                  className="absolute inset-0 rounded-[5px] border border-ed-rule-strong bg-ed-surface-raised shadow-xs"
+                  className="absolute inset-0 rounded border border-ed-rule-strong bg-ed-surface-raised shadow-xs"
                 />
               )}
               <span className="relative z-10">{t.label}</span>
@@ -114,7 +114,7 @@ export default function QueryPane({
       </div>
 
       {tab === 'text' && (
-        <>
+        <div className="flex flex-col gap-2.5">
           <Field label="Find in Arabic">
             <input
               dir="rtl"
@@ -122,7 +122,7 @@ export default function QueryPane({
               onChange={(e) => onTextChange({ ...text, query: e.target.value })}
               placeholder="أهل البيت"
               aria-label="Arabic query"
-              className="w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2 py-1.5 font-arabic text-[17px] leading-relaxed text-ed-fg"
+              className="h-[34px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-arabic text-[18px] text-ed-fg shadow-xs outline-none transition-colors placeholder:font-arabic placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
             />
           </Field>
           <Field label="Match">
@@ -158,15 +158,14 @@ export default function QueryPane({
             />
           </Field>
           <Hint>
-            Prefix a term with <code className="font-mono">-</code> to exclude it or{' '}
-            <code className="font-mono">+</code> to require it. The query is folded the same way the
-            corpus is, so it obeys the active text mode.
+            Prefix a term with <code className="rounded border border-ed-rule bg-ed-surface px-1 py-0.5 font-mono text-[9.5px] text-ed-fg-secondary">-</code> to exclude or{' '}
+            <code className="rounded border border-ed-rule bg-ed-surface px-1 py-0.5 font-mono text-[9.5px] text-ed-fg-secondary">+</code> to require. Folds per active text mode.
           </Hint>
-        </>
+        </div>
       )}
 
       {tab === 'numbers' && (
-        <>
+        <div className="flex flex-col gap-2.5">
           <Field label="Target">
             <input
               inputMode="numeric"
@@ -174,10 +173,10 @@ export default function QueryPane({
               onChange={(e) => onNumbersChange({ ...numbers, target: e.target.value })}
               placeholder="6795"
               aria-label="Target number"
-              className="w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2 py-1.5 font-mono text-[13px] tabular-nums text-ed-fg"
+              className="h-[32px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-mono text-[12.5px] font-semibold tabular-nums text-ed-fg shadow-xs outline-none transition-colors placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
             />
           </Field>
-          <Field label="Of">
+          <Field label="Quantity">
             <Chips
               options={[
                 ['value', 'Value'],
@@ -190,47 +189,46 @@ export default function QueryPane({
             />
           </Field>
           <Hint>
-            Finds every verse whose figure equals the target. Searching by value uses the value
-            system and modifier preset selected below.
+            Finds every verse matching the target value using the active value system and modifiers.
           </Hint>
-        </>
+        </div>
       )}
 
       {tab === 'similar' && (
-        <>
+        <div className="flex flex-col gap-2.5">
           <Field label="Method">
             <Chips
               options={[
                 ['similar_text', 'Similar text'],
                 ['similar_words', 'Similar words'],
-                ['similar_start', 'Same opening'],
-                ['similar_end', 'Same ending'],
+                ['similar_start', 'Same start'],
+                ['similar_end', 'Same end'],
               ]}
               value={similar.method}
               onChange={(m) => onSimilarChange({ ...similar, method: m as SimilarityMethod })}
             />
           </Field>
           <Field label={`Threshold · ${Math.round(similar.threshold * 100)}%`}>
-            <input
-              type="range"
-              min={50}
-              max={100}
-              value={Math.round(similar.threshold * 100)}
-              onChange={(e) => onSimilarChange({ ...similar, threshold: Number(e.target.value) / 100 })}
-              aria-label="Similarity threshold"
-              className="w-full accent-[var(--ed-accent)]"
-            />
+            <div className="flex items-center gap-2 pt-1">
+              <input
+                type="range"
+                min={50}
+                max={100}
+                value={Math.round(similar.threshold * 100)}
+                onChange={(e) => onSimilarChange({ ...similar, threshold: Number(e.target.value) / 100 })}
+                aria-label="Similarity threshold"
+                className="h-1.5 w-full cursor-pointer appearance-none rounded-full bg-ed-rule-strong accent-[var(--ed-accent)]"
+              />
+            </div>
           </Field>
           <Hint>
-            Compared against <b className="text-ed-fg-secondary">{scopeLabel}</b> over the folded
-            letter stream, so similarity respects the active text mode. Levenshtein distance,
-            ranked.
+            Ranked Levenshtein similarity against <b className="font-mono text-ed-fg-secondary">{scopeLabel}</b> over the folded letter stream.
           </Hint>
-        </>
+        </div>
       )}
 
       {tab === 'root' && (
-        <>
+        <div className="flex flex-col gap-2.5">
           <Field label="Root">
             <input
               dir="rtl"
@@ -238,20 +236,19 @@ export default function QueryPane({
               onChange={(e) => onRootChange(e.target.value)}
               placeholder="ط ه ر"
               aria-label="Root"
-              className="w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2 py-1.5 font-arabic text-[17px] tracking-[0.1em] text-ed-fg"
+              className="h-[34px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-arabic text-[18px] text-ed-fg shadow-xs outline-none transition-colors placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
             />
           </Field>
           <Hint>
-            1,782 roots, every word covered. Spaces are optional. Click any word in the text pane to
-            load its root here.
+            1,782 roots covered. Spaces optional. Click any word in reading view to load its root.
           </Hint>
-        </>
+        </div>
       )}
 
       <button
         type="submit"
         disabled={busy}
-        className="tactile flex w-full items-center justify-center gap-1.5 rounded-md border border-ed-accent-strong bg-ed-accent px-2 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.09em] text-ed-on-accent transition-colors hover:bg-ed-accent-strong disabled:opacity-60"
+        className="tactile flex h-[32px] w-full items-center justify-center gap-1.5 rounded-md border border-ed-accent-strong bg-ed-accent px-3 font-mono text-[11px] font-bold uppercase tracking-[0.08em] text-ed-on-accent shadow-xs transition-colors hover:bg-ed-accent-strong disabled:opacity-60"
       >
         <MagnifyingGlass size={13} weight="bold" />
         {busy ? 'Searching…' : 'Search'}
@@ -263,7 +260,7 @@ export default function QueryPane({
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="flex flex-col gap-1">
-      <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.11em] text-ed-fg-muted">
+      <span className="font-mono text-[9.5px] font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
         {label}
       </span>
       {children}
@@ -287,23 +284,26 @@ function Chips({
   const [focused, setFocused] = useState<string | null>(null)
   return (
     <div className="flex flex-wrap gap-1">
-      {options.map(([id, label]) => (
-        <button
-          key={id}
-          type="button"
-          aria-pressed={value === id}
-          onClick={() => onChange(id)}
-          onFocus={() => setFocused(id)}
-          onBlur={() => setFocused(null)}
-          className={`tactile rounded-sm border px-1.5 py-1 font-mono text-[10px] tracking-wide transition-colors ${
-            value === id
-              ? 'border-ed-accent/40 bg-ed-accent-soft font-semibold text-ed-accent'
-              : 'border-ed-rule-strong bg-ed-surface-raised text-ed-fg-secondary hover:border-ed-accent'
-          } ${focused === id ? 'ring-1 ring-ed-accent/40' : ''}`}
-        >
-          {label}
-        </button>
-      ))}
+      {options.map(([id, label]) => {
+        const active = value === id
+        return (
+          <button
+            key={id}
+            type="button"
+            aria-pressed={active}
+            onClick={() => onChange(id)}
+            onFocus={() => setFocused(id)}
+            onBlur={() => setFocused(null)}
+            className={`tactile rounded px-2 py-0.5 font-mono text-[10px] font-medium tracking-wide transition-all ${
+              active
+                ? 'border border-ed-accent/50 bg-ed-accent-soft font-semibold text-ed-accent shadow-2xs'
+                : 'border border-ed-rule bg-ed-surface-raised text-ed-fg-secondary hover:border-ed-rule-strong hover:text-ed-fg'
+            } ${focused === id ? 'ring-1 ring-ed-accent/40' : ''}`}
+          >
+            {label}
+          </button>
+        )
+      })}
     </div>
   )
 }

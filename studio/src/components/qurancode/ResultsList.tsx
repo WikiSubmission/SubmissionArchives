@@ -12,7 +12,10 @@ interface ResultsListProps {
 /** Row height in pixels. Fixed rather than measured because every row is the
  * same two lines of Arabic over one line of English, which is what makes a
  * plain windowing calculation exact instead of an estimate. */
-const ROW_HEIGHT = 84
+/* Fixed because the list is virtualized by absolute offset. Sized for the
+   three stacked lines plus padding, with a little headroom: at exactly the
+   computed height a longer wrap clips instead of scrolling. */
+const ROW_HEIGHT = 88
 const OVERSCAN = 6
 
 /**
@@ -62,23 +65,23 @@ export default function ResultsList({ result, error, busy, onOpen }: ResultsList
 
   if (!result) {
     return (
-      <div className="flex flex-1 items-center justify-center p-8 text-center text-[12px] text-ed-fg-muted">
-        {busy ? 'Searching…' : 'Run a query to see results here.'}
+      <div className="flex flex-1 items-center justify-center p-8 text-center font-mono text-[11.5px] text-ed-fg-muted">
+        {busy ? 'Searching corpus…' : 'Run a query to view search results.'}
       </div>
     )
   }
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="flex shrink-0 items-baseline gap-2 border-b border-ed-rule px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.11em] text-ed-fg-muted">
-        <span>
+      <div className="flex shrink-0 items-baseline gap-2 border-b border-ed-rule bg-ed-bg-secondary px-3.5 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-ed-fg-muted">
+        <span className="font-semibold text-ed-fg-secondary">
           {fmt(result.total)} {result.total === 1 ? 'verse' : 'verses'}
         </span>
         {result.truncated && (
-          <span className="text-ed-gold">showing the first {fmt(result.hits.length)}</span>
+          <span className="text-ed-gold font-medium">showing first {fmt(result.hits.length)}</span>
         )}
         <span className="flex-1" />
-        <span>{result.provenance.text_mode_label}</span>
+        <span className="text-ed-fg-faint">{result.provenance.text_mode_label}</span>
       </div>
 
       <div
@@ -87,7 +90,7 @@ export default function ResultsList({ result, error, busy, onOpen }: ResultsList
         className={`min-h-0 flex-1 overflow-y-auto ${busy ? 'opacity-60' : ''}`}
       >
         {hits.length === 0 ? (
-          <p className="p-6 text-center text-[12px] text-ed-fg-muted">
+          <p className="p-8 text-center font-mono text-[11.5px] text-ed-fg-muted">
             Nothing in the corpus matches under this text mode.
           </p>
         ) : (
@@ -100,18 +103,18 @@ export default function ResultsList({ result, error, busy, onOpen }: ResultsList
                   type="button"
                   onClick={() => onOpen(hit.chapter, hit.verse)}
                   style={{ position: 'absolute', top: index * ROW_HEIGHT, height: ROW_HEIGHT }}
-                  className="tactile flex w-full flex-col gap-0.5 border-b border-ed-rule px-3 py-1.5 text-left transition-colors hover:bg-ed-surface-strong"
+                  className="tactile flex w-full flex-col justify-center gap-1 border-b border-ed-rule px-4 py-2 text-left transition-colors hover:bg-ed-surface"
                 >
-                  <span className="flex items-baseline gap-2">
-                    <span className="font-mono text-[10px] font-bold tracking-wider text-ed-accent">
+                  <div className="flex items-baseline gap-2">
+                    <span className="rounded border border-ed-accent/30 bg-ed-accent-soft px-1.5 py-0.5 font-mono text-[10px] font-bold text-ed-accent shadow-2xs">
                       {hit.chapter}:{hit.verse}
                     </span>
-                    <span className="font-mono text-[9px] tabular-nums text-ed-fg-faint">
+                    <span className="font-mono text-[9.5px] tabular-nums text-ed-fg-faint">
                       {hit.words}w · {hit.letters}L
                     </span>
                     {hit.score < 1 && (
-                      <span className="font-mono text-[9px] tabular-nums text-ed-gold">
-                        {Math.round(hit.score * 100)}%
+                      <span className="rounded bg-ed-gold-soft px-1 font-mono text-[9px] font-semibold tabular-nums text-ed-gold">
+                        {Math.round(hit.score * 100)}% match
                       </span>
                     )}
                     {hit.matches.length > 0 && (
@@ -119,14 +122,14 @@ export default function ResultsList({ result, error, busy, onOpen }: ResultsList
                         {hit.matches.length} match{hit.matches.length === 1 ? '' : 'es'}
                       </span>
                     )}
-                  </span>
+                  </div>
                   <span
                     dir="rtl"
-                    className="line-clamp-1 text-right font-arabic text-[15px] leading-snug text-ed-fg"
+                    className="line-clamp-1 text-right font-arabic text-[17px] leading-snug text-ed-fg"
                   >
                     {hit.arabic}
                   </span>
-                  <span className="line-clamp-1 font-serif text-[11.5px] leading-snug text-ed-fg-secondary">
+                  <span className="line-clamp-1 font-serif text-[12.5px] leading-snug text-ed-fg-secondary">
                     {hit.english}
                   </span>
                 </button>

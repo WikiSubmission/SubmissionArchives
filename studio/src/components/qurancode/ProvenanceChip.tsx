@@ -17,7 +17,7 @@ export default function ProvenanceChip({ provenance }: { provenance: Provenance 
   const unverified = provenance.known_gaps.length > 0
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5 px-4 py-2.5 border-t border-qv-divider bg-qv-tint">
+    <div className="flex flex-wrap items-center gap-1.5 border-t border-qv-divider bg-qv-tint px-4 py-2">
       <Chip label="mode" value={provenance.text_mode_label} />
       {provenance.value_system && <Chip label="system" value={provenance.value_system} />}
       <Chip label="scope" value={provenance.scope} />
@@ -27,14 +27,14 @@ export default function ProvenanceChip({ provenance }: { provenance: Provenance 
       {unverified ? (
         <span
           title={provenance.known_gaps.join('\n')}
-          className="inline-flex items-center gap-1 rounded-sm border border-ed-danger/45 bg-ed-danger-soft px-1.5 py-0.5 font-mono text-[10px] tracking-wide text-ed-danger"
+          className="inline-flex items-center gap-1 rounded border border-ed-danger/45 bg-ed-danger-soft px-2 py-0.5 font-mono text-[9.5px] font-semibold tracking-wide text-ed-danger shadow-2xs"
         >
           <Warning size={11} weight="fill" />
           unverified &middot; {provenance.known_gaps.length} open{' '}
           {provenance.known_gaps.length === 1 ? 'gap' : 'gaps'}
         </span>
       ) : (
-        <span className="inline-flex items-center gap-1 rounded-sm border border-ed-success/45 bg-ed-success-soft px-1.5 py-0.5 font-mono text-[10px] tracking-wide text-ed-success">
+        <span className="inline-flex items-center gap-1 rounded border border-ed-success/45 bg-ed-success-soft px-2 py-0.5 font-mono text-[9.5px] font-semibold tracking-wide text-ed-success shadow-2xs">
           <SealCheck size={11} weight="fill" />
           verified &middot; {provenance.verified.length} fixtures
         </span>
@@ -45,8 +45,9 @@ export default function ProvenanceChip({ provenance }: { provenance: Provenance 
 
 function Chip({ label, value }: { label: string; value: string }) {
   return (
-    <span className="rounded-sm border border-qv-border px-1.5 py-0.5 font-mono text-[10px] tracking-wide text-qv-muted">
-      {label} <b className="font-semibold text-qv-fg">{value}</b>
+    <span className="inline-flex items-center gap-1 rounded border border-qv-border/60 bg-qv-bg/70 px-2 py-0.5 font-mono text-[9.5px] text-qv-muted shadow-2xs">
+      <span>{label}</span>
+      <b className="font-semibold text-qv-fg">{value}</b>
     </span>
   )
 }

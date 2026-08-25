@@ -32,21 +32,23 @@ export default function WordHoverCard({ word, anchor }: { word: WordView; anchor
       ref={ref}
       role="tooltip"
       style={{ left: pos?.left ?? -9999, top: pos?.top ?? -9999, opacity: pos ? 1 : 0 }}
-      className="pointer-events-none fixed z-[70] flex max-w-[280px] min-w-[210px] flex-col gap-1 rounded-lg border border-ed-rule-strong bg-ed-surface-raised p-2.5 shadow-ed-lg transition-opacity"
+      className="pointer-events-none fixed z-[70] flex max-w-[280px] min-w-[210px] flex-col gap-1 rounded-md border border-ed-rule-strong bg-ed-surface-raised p-3 shadow-ed-md transition-opacity"
     >
-      <span dir="rtl" className="text-right font-arabic text-[21px] leading-snug text-ed-fg">
+      <span dir="rtl" className="text-right font-arabic text-[22px] leading-none text-ed-fg">
         {word.uthmani}
       </span>
-      <span className="font-mono text-[11px] text-ed-accent">{word.translit}</span>
+      <span className="font-mono text-[11px] font-semibold text-ed-accent">{word.translit}</span>
       <span className="font-serif text-[13px] leading-snug text-ed-fg-secondary">{word.gloss}</span>
 
-      <span className="flex items-baseline gap-1.5 border-t border-ed-rule pt-1.5 font-mono text-[10px] text-ed-fg-muted">
-        counted as
-        <b dir="rtl" className="font-arabic text-[15px] tracking-wider text-ed-fg">
-          {word.folded}
-        </b>
-        <span className="tabular-nums">({word.letters})</span>
-      </span>
+      <div className="mt-1 flex items-baseline justify-between border-t border-ed-rule pt-2 font-mono text-[10px] text-ed-fg-muted">
+        <span>folded stream:</span>
+        <div className="flex items-baseline gap-1">
+          <span dir="rtl" className="font-arabic text-[16px] font-medium text-ed-fg">
+            {word.folded}
+          </span>
+          <span className="tabular-nums text-ed-fg-faint">({word.letters}L)</span>
+        </div>
+      </div>
     </div>,
     document.body
   )
