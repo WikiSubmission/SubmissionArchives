@@ -1,0 +1,156 @@
+{
+  "modes": {
+    "simplified29": {
+      "label": "Simplified 29",
+      "countable": true,
+      "fold": {
+        "آ": "ا",
+        "أ": "ا",
+        "إ": "ا",
+        "ٱ": "ا",
+        "ؤ": "و",
+        "ئ": "ي",
+        "ى": "ي",
+        "ة": "ه"
+      },
+      "verified": [
+        "fatiha_verses",
+        "fatiha_words",
+        "fatiha_letters",
+        "corpus_chapters",
+        "corpus_verses",
+        "corpus_words",
+        "corpus_letters",
+        "alphabet_is_29"
+      ],
+      "known_gaps": []
+    },
+    "khalifa_appendix1": {
+      "label": "Appendix 1 (published)",
+      "countable": true,
+      "fold": {
+        "ٱ": "ا",
+        "ة": "ه"
+      },
+      "include_sura_basmalah_in_initials": true,
+      "verified": [
+        "hm_2147",
+        "sad_152",
+        "qaf_114",
+        "nun_133",
+        "ta_20_28",
+        "ta_27_27",
+        "sin_36_48",
+        "ha_19_175",
+        "ha_20_251",
+        "ya_19_343",
+        "lam_2",
+        "mim_2",
+        "lam_3",
+        "mim_3",
+        "lam_29",
+        "mim_29",
+        "lam_30",
+        "mim_30",
+        "lam_31",
+        "mim_31",
+        "lam_32",
+        "mim_32",
+        "alm_total_19874"
+      ],
+      "known_gaps": [
+        "ya_36_237: computed 241, published 237",
+        "alif_2: computed 3915, published 4502",
+        "alif_3: computed 2204, published 2521",
+        "alif_29: computed 671, published 774",
+        "alif_30: computed 483, published 543",
+        "alif_31: computed 314, published 347",
+        "alif_32: computed 229, published 257"
+      ]
+    },
+    "original": {
+      "label": "Original (Uthmani)",
+      "countable": false,
+      "fold": {},
+      "verified": [],
+      "known_gaps": []
+    }
+  },
+  "toggles": [
+    {
+      "id": "hamza_on_line",
+      "default": true,
+      "label": "Hamza above horizontal line as letter",
+      "map": {
+        "0621": "0621"
+      }
+    },
+    {
+      "id": "superscript_alef",
+      "default": false,
+      "label": "Superscript alef as letter",
+      "map": {
+        "0670": "0627"
+      }
+    },
+    {
+      "id": "small_waw_yeh",
+      "default": false,
+      "label": "Small waw / yeh as letter",
+      "map": {
+        "06E5": "0648",
+        "06E6": "064A"
+      }
+    },
+    {
+      "id": "silent_marked",
+      "default": true,
+      "label": "Count letters marked silent",
+      "map": {},
+      "drops_letter_before": "06DF"
+    }
+  ],
+  "alif_overrides": {},
+  "always_drop": [
+    "0020",
+    "002D",
+    "0640",
+    "064B",
+    "064C",
+    "064D",
+    "064E",
+    "064F",
+    "0650",
+    "0652",
+    "0653",
+    "0655",
+    "06D6",
+    "06D7",
+    "06D8",
+    "06D9",
+    "06DA",
+    "06DB",
+    "06DC",
+    "06DD",
+    "06DE",
+    "06E0",
+    "06E1",
+    "06E2",
+    "06E3",
+    "06E4",
+    "06E7",
+    "06E8",
+    "06E9",
+    "06EA",
+    "06EB",
+    "06EC",
+    "06ED"
+  ],
+  "structural": {
+    "shadda": "0651",
+    "silent": "06DF"
+  },
+  "alphabet": {
+    "simplified29": "ءابتثجحخدذرزسشصضطظعغفقكلمنهوي"
+  }
+}

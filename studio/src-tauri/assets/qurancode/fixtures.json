@@ -1,0 +1,349 @@
+{
+  "generated_from": "ws_quran_words_roots_uthmani.csv",
+  "verified": 31,
+  "known_gaps": 7,
+  "fixtures": [
+    {
+      "id": "fatiha_verses",
+      "mode": "simplified29",
+      "description": "Al-Fatiha verses",
+      "expected": 7,
+      "actual": 7,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "fatiha_words",
+      "mode": "simplified29",
+      "description": "Al-Fatiha words",
+      "expected": 29,
+      "actual": 29,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "fatiha_letters",
+      "mode": "simplified29",
+      "description": "Al-Fatiha letters (Primalogy basis)",
+      "expected": 139,
+      "actual": 139,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "corpus_chapters",
+      "mode": "simplified29",
+      "description": "corpus chapters",
+      "expected": 114,
+      "actual": 114,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "corpus_verses",
+      "mode": "simplified29",
+      "description": "corpus verses",
+      "expected": 6234,
+      "actual": 6234,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "corpus_words",
+      "mode": "simplified29",
+      "description": "corpus words",
+      "expected": 77401,
+      "actual": 77401,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "corpus_letters",
+      "mode": "simplified29",
+      "description": "corpus letters",
+      "expected": 325273,
+      "actual": 325273,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alphabet_is_29",
+      "mode": "simplified29",
+      "description": "distinct letters in the fold",
+      "expected": 29,
+      "actual": 29,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "hm_2147",
+      "mode": "khalifa_appendix1",
+      "description": "ح + م across suras 40-46 (19x113)",
+      "expected": 2147,
+      "actual": 2147,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "sad_152",
+      "mode": "khalifa_appendix1",
+      "description": "ص across suras 7, 19, 38 (19x8)",
+      "expected": 152,
+      "actual": 152,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "qaf_114",
+      "mode": "khalifa_appendix1",
+      "description": "ق in suras 42 and 50 (19x6)",
+      "expected": 114,
+      "actual": 114,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "nun_133",
+      "mode": "khalifa_appendix1",
+      "description": "ن in sura 68 (19x7), initial spelled نون",
+      "expected": 133,
+      "actual": 133,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "ta_20_28",
+      "mode": "khalifa_appendix1",
+      "description": "ط in sura 20",
+      "expected": 28,
+      "actual": 28,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "ta_27_27",
+      "mode": "khalifa_appendix1",
+      "description": "ط in sura 27",
+      "expected": 27,
+      "actual": 27,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "sin_36_48",
+      "mode": "khalifa_appendix1",
+      "description": "س in sura 36",
+      "expected": 48,
+      "actual": 48,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "ha_19_175",
+      "mode": "khalifa_appendix1",
+      "description": "ه + ة in sura 19",
+      "expected": 175,
+      "actual": 175,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "ha_20_251",
+      "mode": "khalifa_appendix1",
+      "description": "ه + ة in sura 20",
+      "expected": 251,
+      "actual": 251,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "ya_19_343",
+      "mode": "khalifa_appendix1",
+      "description": "ي + ى + small yeh in sura 19",
+      "expected": 343,
+      "actual": 343,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "ya_36_237",
+      "mode": "khalifa_appendix1",
+      "description": "ي + ى + small yeh in sura 36",
+      "expected": 237,
+      "actual": 241,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "lam_2",
+      "mode": "khalifa_appendix1",
+      "description": "ل in sura 2",
+      "expected": 3202,
+      "actual": 3202,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "mim_2",
+      "mode": "khalifa_appendix1",
+      "description": "م in sura 2",
+      "expected": 2195,
+      "actual": 2195,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alif_2",
+      "mode": "khalifa_appendix1",
+      "description": "ا in sura 2 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "expected": 4502,
+      "actual": 3915,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "lam_3",
+      "mode": "khalifa_appendix1",
+      "description": "ل in sura 3",
+      "expected": 1892,
+      "actual": 1892,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "mim_3",
+      "mode": "khalifa_appendix1",
+      "description": "م in sura 3",
+      "expected": 1249,
+      "actual": 1249,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alif_3",
+      "mode": "khalifa_appendix1",
+      "description": "ا in sura 3 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "expected": 2521,
+      "actual": 2204,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "lam_29",
+      "mode": "khalifa_appendix1",
+      "description": "ل in sura 29",
+      "expected": 554,
+      "actual": 554,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "mim_29",
+      "mode": "khalifa_appendix1",
+      "description": "م in sura 29",
+      "expected": 344,
+      "actual": 344,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alif_29",
+      "mode": "khalifa_appendix1",
+      "description": "ا in sura 29 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "expected": 774,
+      "actual": 671,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "lam_30",
+      "mode": "khalifa_appendix1",
+      "description": "ل in sura 30",
+      "expected": 394,
+      "actual": 394,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "mim_30",
+      "mode": "khalifa_appendix1",
+      "description": "م in sura 30",
+      "expected": 317,
+      "actual": 317,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alif_30",
+      "mode": "khalifa_appendix1",
+      "description": "ا in sura 30 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "expected": 543,
+      "actual": 483,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "lam_31",
+      "mode": "khalifa_appendix1",
+      "description": "ل in sura 31",
+      "expected": 297,
+      "actual": 297,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "mim_31",
+      "mode": "khalifa_appendix1",
+      "description": "م in sura 31",
+      "expected": 173,
+      "actual": 173,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alif_31",
+      "mode": "khalifa_appendix1",
+      "description": "ا in sura 31 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "expected": 347,
+      "actual": 314,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "lam_32",
+      "mode": "khalifa_appendix1",
+      "description": "ل in sura 32",
+      "expected": 155,
+      "actual": 155,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "mim_32",
+      "mode": "khalifa_appendix1",
+      "description": "م in sura 32",
+      "expected": 158,
+      "actual": 158,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alif_32",
+      "mode": "khalifa_appendix1",
+      "description": "ا in sura 32 (ا + ٱ + ٰ, no per-word overrides yet)",
+      "expected": 257,
+      "actual": 229,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alm_total_19874",
+      "mode": "khalifa_appendix1",
+      "description": "الم grand total across the six suras (19x1046)",
+      "expected": 19874,
+      "actual": 19874,
+      "pass": true,
+      "status": "verified"
+    }
+  ]
+}
