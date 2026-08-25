@@ -44,6 +44,21 @@ export const AGGREGATE_PRESETS: { label: string; hint: string; query: AggregateQ
     },
   },
   {
+    label: 'Sura numbers 9 to 27',
+    hint: 'Nineteen suras, their numbers summing to 342, 19 x 18.',
+    query: { from: [9, 1], to: [27, 93] },
+  },
+  {
+    label: 'The 29 initialed suras',
+    hint: 'Their numbers sum to 822; plus the 14 sets that is 836, 19 x 44.',
+    query: { initialed: true },
+  },
+  {
+    label: 'Un-initialed suras between 2 and 68',
+    hint: '38 of them, 19 x 2.',
+    query: { initialed: false, from: [3, 1], to: [67, 30] },
+  },
+  {
     label: 'Alif Lam Mim, the six suras',
     hint: '19,874, 19 x 1,046 as published. Ours is short by the alif deficit.',
     query: {
@@ -372,6 +387,23 @@ export default function QueryPane({
                 onChange={(to) => onAggregateChange({ ...aggregate, to })}
               />
             </div>
+          </Field>
+
+          <Field label="Quranic Initials">
+            <Chips
+              options={[
+                ['any', 'Any sura'],
+                ['yes', 'Initialed'],
+                ['no', 'Un-initialed'],
+              ]}
+              value={aggregate.initialed === undefined ? 'any' : aggregate.initialed ? 'yes' : 'no'}
+              onChange={(v) =>
+                onAggregateChange({
+                  ...aggregate,
+                  initialed: v === 'any' ? undefined : v === 'yes',
+                })
+              }
+            />
           </Field>
 
           <label className="flex cursor-pointer items-center gap-2 font-mono text-[10px] text-ed-fg-secondary">

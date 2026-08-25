@@ -442,6 +442,11 @@ pub struct Chapter {
     pub name_arabic: &'static str,
     pub name_english: &'static str,
     pub name_transliterated: &'static str,
+    /// The Quranic Initials prefixing this sura, empty for the 85 that carry
+    /// none. Transcribed from Appendix 1 Table 1 rather than read off the text,
+    /// because sura 42 carries its initials across two verses and sura 68
+    /// spells its single letter out as نون.
+    pub initials: &'static str,
 }
 
 /// Splits a TSV body into rows of columns, skipping the header and any blank
@@ -492,6 +497,7 @@ pub fn chapters() -> &'static Vec<Chapter> {
                     name_arabic: field(&r, 3),
                     name_english: field(&r, 4),
                     name_transliterated: field(&r, 5),
+                    initials: field(&r, 6),
                 })
             })
             .collect()
@@ -502,6 +508,15 @@ pub fn chapters() -> &'static Vec<Chapter> {
 /// own copy of these and claimed 129 for chapter 9, where the data has 127, so
 /// `search_verses("9:128")` failed with "No verses found" rather than
 /// explaining the numbering. There is one table now, and it is generated.
+/// The Quranic Initials prefixing a sura, or `None` if the number is not a
+/// sura. An empty string is a real answer: 85 suras carry no initials.
+pub fn chapter_initials(number: u32) -> Option<&'static str> {
+    chapters()
+        .iter()
+        .find(|c| c.number == number)
+        .map(|c| c.initials)
+}
+
 pub fn chapter_verse_count(number: u32) -> Option<u32> {
     chapters()
         .iter()
@@ -745,6 +760,7 @@ pub struct ChapterInfo {
     pub name_arabic: &'static str,
     pub name_english: &'static str,
     pub name_transliterated: &'static str,
+    pub initials: &'static str,
 }
 
 #[derive(Serialize, Clone, Debug)]
@@ -885,6 +901,7 @@ pub fn metadata() -> Result<Metadata, String> {
                 name_arabic: c.name_arabic,
                 name_english: c.name_english,
                 name_transliterated: c.name_transliterated,
+                initials: c.initials,
             })
             .collect(),
         value_systems: value_systems()
@@ -2367,6 +2384,16 @@ pub struct AggregateQuery {
     /// "from 2:1 to 68:1".
     pub from: Option<(u32, u32)>,
     pub to: Option<(u32, u32)>,
+    /// Word position within `from` and `to`, for a span that starts or ends
+    /// part-way through a verse. Appendix 1 needs this for the words between
+    /// the two Basmalahs of sura 27, which begin and end mid-verse. Ignored
+    /// unless the corresponding bound is set.
+    pub from_word: Option<u32>,
+    pub to_word: Option<u32>,
+    /// `Some(true)` keeps only suras carrying Quranic Initials, `Some(false)`
+    /// only those carrying none. The initials are a property of the sura, not
+    /// of the word, so this cannot be expressed as a text filter.
+    pub initialed: Option<bool>,
     /// Only verses carrying this number, in every chapter at once. This is the
     /// cross-cutting selection behind "every verse numbered 19".
     pub verse_number: Option<u32>,
@@ -2516,13 +2543,23 @@ pub fn aggregate(
                 continue;
             }
         }
-        if let Some(f) = q.from {
-            if (w.chapter, w.verse) < f {
+        /* Compared as three-part addresses so a bound can land mid-verse. The
+           word component defaults to the open end, so an unset `from_word`
+           takes the verse from its first word and an unset `to_word` takes it
+           to its last, which is what a verse-level bound means. */
+        if let Some((fc, fv)) = q.from {
+            if (w.chapter, w.verse, w.position) < (fc, fv, q.from_word.unwrap_or(0)) {
                 continue;
             }
         }
-        if let Some(t) = q.to {
-            if (w.chapter, w.verse) > t {
+        if let Some((tc, tv)) = q.to {
+            if (w.chapter, w.verse, w.position) > (tc, tv, q.to_word.unwrap_or(u32::MAX)) {
+                continue;
+            }
+        }
+        if let Some(want) = q.initialed {
+            let has = chapter_initials(w.chapter).is_some_and(|i| !i.is_empty());
+            if has != want {
                 continue;
             }
         }
@@ -2571,6 +2608,11 @@ pub fn aggregate(
 
     let sum_chapter_numbers: i64 = verses.iter().map(|(c, _)| *c as i64).sum();
     let sum_verse_numbers: i64 = verses.iter().map(|(_, v)| *v as i64).sum();
+    /* Once per sura rather than once per verse. Several published arguments are
+       arithmetic over sura numbers themselves, such as the sura numbers from 9
+       to 27 totalling 342, and summing them once per verse would give a figure
+       nobody asked for. */
+    let sum_chapter_numbers_once: i64 = chapters.iter().map(|c| *c as i64).sum();
 
     let mut figures = vec![
         figure("occurrences", "Occurrences", occurrences as i64, divisor),
@@ -2602,6 +2644,12 @@ pub fn aggregate(
             "sum_chapter_numbers",
             "Sum of sura numbers, per verse",
             sum_chapter_numbers,
+            divisor,
+        ),
+        figure(
+            "sum_chapter_numbers_once",
+            "Sum of sura numbers, per sura",
+            sum_chapter_numbers_once,
             divisor,
         ),
         figure(
@@ -2657,6 +2705,13 @@ fn describe_selector(q: &AggregateQuery) -> String {
     if let Some(n) = q.verse_number {
         parts.push(format!("verses numbered {}", n));
     }
+    if let Some(on) = q.initialed {
+        parts.push(if on {
+            "initialed suras".to_string()
+        } else {
+            "un-initialed suras".to_string()
+        });
+    }
     if let Some(list) = &q.chapters {
         parts.push(format!(
             "suras {}",
@@ -2666,10 +2721,19 @@ fn describe_selector(q: &AggregateQuery) -> String {
                 .join(", ")
         ));
     }
+    let at = |a: Option<(u32, u32)>, w: Option<u32>| match (a, w) {
+        (Some((c, v)), Some(p)) => format!("{}:{}:{}", c, v, p),
+        (Some((c, v)), None) => format!("{}:{}", c, v),
+        (None, _) => String::new(),
+    };
     match (q.from, q.to) {
-        (Some((fc, fv)), Some((tc, tv))) => parts.push(format!("{}:{} to {}:{}", fc, fv, tc, tv)),
-        (Some((fc, fv)), None) => parts.push(format!("from {}:{}", fc, fv)),
-        (None, Some((tc, tv))) => parts.push(format!("up to {}:{}", tc, tv)),
+        (Some(_), Some(_)) => parts.push(format!(
+            "{} to {}",
+            at(q.from, q.from_word),
+            at(q.to, q.to_word)
+        )),
+        (Some(_), None) => parts.push(format!("from {}", at(q.from, q.from_word))),
+        (None, Some(_)) => parts.push(format!("up to {}", at(q.to, q.to_word))),
         (None, None) => {}
     }
     if let Some(l) = q.letters.as_deref().map(str::trim).filter(|s| !s.is_empty()) {
@@ -3936,6 +4000,182 @@ mod tests {
         let err = aggregate(None, Some("original".to_string()), None, None, None)
             .expect_err("Original mode declares itself uncountable");
         assert!(err.contains("not a countable"), "{}", err);
+    }
+
+
+    /* ── selection by predicate ────────────────────────────────────────── */
+
+    /// Arithmetic over sura numbers themselves, which is a different question
+    /// from arithmetic over the verses inside them. Appendix 1 counts the suras
+    /// from the missing Basmalah of sura 9 to the extra one of sura 27 and sums
+    /// their numbers to 342. Summing once per verse instead gives 47,973, so the
+    /// two figures are reported separately rather than one standing for both.
+    #[test]
+    fn the_sura_numbers_from_9_to_27_sum_to_342() {
+        let a = agg(AggregateQuery {
+            from: Some((9, 1)),
+            to: Some((27, 93)),
+            ..Default::default()
+        });
+        assert_eq!(a.chapters, 19, "nineteen suras, 9 through 27");
+        assert_eq!(total(&a, "sum_chapter_numbers_once"), 342, "19 x 18");
+        assert_ne!(
+            total(&a, "sum_chapter_numbers"),
+            342,
+            "the per-verse sum is a different figure and must not be confused for it"
+        );
+    }
+
+    /// A span with word precision at both ends. The two Basmalahs of sura 27
+    /// are the numbered one at 1:1 and the one inside 27:30, and Appendix 1
+    /// counts 342 words between them. Our tokenization gives a different figure,
+    /// which is recorded here rather than asserted away: the point of the test
+    /// is that the bound is word-precise and the span is well defined, not that
+    /// the published number falls out of a word table it was not built from.
+    #[test]
+    fn a_span_can_begin_and_end_part_way_through_a_verse() {
+        let whole_verse = agg(AggregateQuery {
+            from: Some((27, 30)),
+            to: Some((27, 30)),
+            ..Default::default()
+        });
+        let trimmed = agg(AggregateQuery {
+            from: Some((27, 30)),
+            to: Some((27, 30)),
+            from_word: Some(3),
+            ..Default::default()
+        });
+        assert!(
+            trimmed.occurrences < whole_verse.occurrences,
+            "dropping the first two words has to shrink the span"
+        );
+        assert_eq!(
+            whole_verse.occurrences - trimmed.occurrences,
+            2,
+            "by exactly two words"
+        );
+        assert_eq!(trimmed.first.as_deref(), Some("27:30:3"));
+        assert!(
+            trimmed.selector.contains("27:30:3"),
+            "the word component belongs in the selector: {}",
+            trimmed.selector
+        );
+    }
+
+    /// The initials are a property of the sura, so they cannot be expressed as a
+    /// text filter on a word. Appendix 1 counts 38 un-initialed suras strictly
+    /// between the first initialed sura and the last, which is 19 x 2.
+    #[test]
+    fn the_initialed_and_uninitialed_suras_partition_the_book() {
+        let initialed = agg(AggregateQuery {
+            initialed: Some(true),
+            ..Default::default()
+        });
+        let plain = agg(AggregateQuery {
+            initialed: Some(false),
+            ..Default::default()
+        });
+        assert_eq!(initialed.chapters, 29, "Appendix 1 Table 1");
+        assert_eq!(plain.chapters, 85);
+        assert_eq!(initialed.chapters + plain.chapters, 114);
+        assert_eq!(
+            total(&initialed, "sum_chapter_numbers_once"),
+            822,
+            "the 29 sura numbers"
+        );
+        assert_eq!(822 + 14, 836, "plus the 14 sets is 19 x 44");
+
+        let between = agg(AggregateQuery {
+            initialed: Some(false),
+            from: Some((3, 1)),
+            to: Some((67, 30)),
+            ..Default::default()
+        });
+        assert_eq!(between.chapters, 38, "19 x 2");
+    }
+
+    /// The initials table is data with invariants, not an inference. Sura 42
+    /// carries its initials across two verses and sura 68 spells its single
+    /// letter out, so a reader that tried to derive the set from the text would
+    /// need both exceptions hardcoded anyway.
+    #[test]
+    fn the_initials_table_has_the_shape_appendix_1_describes() {
+        let all: Vec<&str> = chapters()
+            .iter()
+            .map(|c| c.initials)
+            .filter(|i| !i.is_empty())
+            .collect();
+        assert_eq!(all.len(), 29);
+        assert_eq!(all.iter().collect::<HashSet<_>>().len(), 14, "distinct sets");
+        assert_eq!(
+            all.concat().chars().collect::<HashSet<_>>().len(),
+            14,
+            "distinct letters"
+        );
+        assert_eq!(chapter_initials(2), Some("الم"));
+        assert_eq!(chapter_initials(42), Some("حمعسق"), "two verses, one set");
+        assert_eq!(chapter_initials(68), Some("ن"), "written نون, counted as ن");
+        assert_eq!(chapter_initials(1), Some(""), "no initials is a real answer");
+        assert_eq!(chapter_initials(115), None, "not a sura");
+    }
+
+    /// The first and last revelations, by verse range rather than by whole sura.
+    #[test]
+    fn the_first_and_last_revelations_are_19_shaped() {
+        let first = agg(AggregateQuery {
+            from: Some((96, 1)),
+            to: Some((96, 5)),
+            ..Default::default()
+        });
+        assert_eq!(total(&first, "letters"), 76, "19 x 4");
+
+        let last = agg(AggregateQuery {
+            chapters: Some(vec![110]),
+            ..Default::default()
+        });
+        assert_eq!(last.occurrences, 19, "sura 110 is 19 words");
+
+        let opener = agg(AggregateQuery {
+            from: Some((110, 1)),
+            to: Some((110, 1)),
+            ..Default::default()
+        });
+        assert_eq!(total(&opener, "letters"), 19);
+    }
+
+    /// The corpus total Appendix 1 quotes is the one that includes the
+    /// unnumbered Basmalahs, which is not the 6,234 every other figure here
+    /// uses. Both are reachable, and which one is in play is visible in
+    /// provenance rather than implied.
+    #[test]
+    fn the_basmalahs_turn_6234_into_6346() {
+        let numbered = agg(AggregateQuery::default());
+        assert_eq!(numbered.verses, 6234);
+
+        let with_basmalahs = agg(AggregateQuery {
+            scope: Some(Scope {
+                include_basmalah: Some(true),
+                ..Scope::default()
+            }),
+            ..Default::default()
+        });
+        /* The unnumbered groups deliberately do not enter the verse count: an
+           unnumbered verse has no number, and letting it inflate a figure that
+           the rest of the module reports as 6,234 would be the exact kind of
+           silent convention change §0.3 exists to prevent. The 112 are counted
+           from the suras that carry them. */
+        assert_eq!(with_basmalahs.verses, 6234, "still the numbered verses");
+        assert!(
+            with_basmalahs.occurrences > numbered.occurrences,
+            "but the words are there"
+        );
+        assert_eq!(
+            with_basmalahs.occurrences - numbered.occurrences,
+            448,
+            "112 Basmalahs of four words each"
+        );
+        assert_eq!(6234 + 112, 6346, "19 x 334");
+        assert!(with_basmalahs.provenance.include_basmalah);
     }
 
 }

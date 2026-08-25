@@ -129,6 +129,9 @@ export interface ChapterInfo {
   name_arabic: string
   name_english: string
   name_transliterated: string
+  /** The Quranic Initials prefixing this sura, empty for the 85 that carry
+   * none. Empty is a fact about the sura, not missing data. */
+  initials: string
 }
 
 export interface ValueSystemInfo {
@@ -368,7 +371,14 @@ export interface AggregateQuery {
   root_id?: number
   from?: [number, number]
   to?: [number, number]
+  /** Word position inside `from` / `to`, for a span that begins or ends
+   * part-way through a verse. Ignored unless the matching bound is set. */
+  from_word?: number
+  to_word?: number
   verse_number?: number
+  /** True keeps only suras carrying Quranic Initials, false only those with
+   * none. A property of the sura, so it cannot be a text filter. */
+  initialed?: boolean
   chapters?: number[]
   /** Letters to count inside the selected words. Absent counts them all. */
   letters?: string

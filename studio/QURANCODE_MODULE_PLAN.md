@@ -706,6 +706,23 @@ The seven gaps are the six alif counts and ي in sura 36 (241 computed against 2
 
 **Fixtures: 43 verified, 9 known gaps**, up from 31 and 7. All nine gaps are alif, or the four-letter ya residual in sura 36.
 
+**9i, Selection by predicate. ✅ SHIPPED.**
+Word-precise span bounds, an initials predicate, a per-sura number sum, and the Quranic Initials as generated data. Six new Rust tests, seventeen new fixtures.
+
+**`Scope` was the wrong shape for most of these questions and stays as it is.** A scope is a contiguous address prefix: this chapter, this verse, this word. Appendix 1 selects sets that are not prefixes — every verse numbered 19 across all 114 suras, the un-initialed suras between two initialed ones, the words between two positions inside different verses. Those predicates live on `AggregateQuery` rather than on `Scope`, because widening `Scope` would have changed the meaning of every existing count that takes one.
+
+**The Quranic Initials are a table, not an inference.** They could in principle be read off the opening verse of each sura, except that sura 42 carries its initials across two verses and sura 68 spells its single letter out as نون. A reader that tried to derive the set would need both exceptions hardcoded anyway, so `chapters.tsv` gains an `initials` column transcribed from Table 1, with four invariants asserted at generation: 29 suras, 14 distinct sets, 14 distinct letters, and sura numbers summing to 822. An empty string is a real answer for the 85 suras that carry none.
+
+**Two sums over sura numbers, for the same reason there are two over verse numbers.** Summing once per sura gives 342 for suras 9 to 27, which is 19 × 18 and the published figure. Summing once per verse gives 47,973. Both are reported and labelled; neither stands in for the other.
+
+**Simplified 29 having no known gaps is now an invariant rather than a habit.** It is the mode a figure is offered under when the researcher has expressed no preference, so a published claim filed against it by accident would quietly make the default unauthoritative. The generator refuses to write if any `simplified29` fixture is a known gap, which caught exactly that mistake while this phase was being written.
+
+*Accepted:* sura numbers 9 through 27 summing to 342 over 19 suras, with the per-verse sum asserted to differ; a span that begins at 27:30:3 and reports its word component in the selector; the initialed and un-initialed suras partitioning the book at 29 and 85, their numbers summing to 822, and 38 un-initialed suras strictly between 2 and 68 (19 × 2); 96:1-5 at 76 letters (19 × 4), sura 110 at 19 words, 110:1 at 19 letters; 6,234 numbered verses plus 112 unnumbered Basmalahs of four words each, which is the 6,346 (19 × 334) Appendix 1 quotes.
+
+**Fixtures: 60 verified, 11 known gaps.** Of the seventeen added, fifteen pass. The two that do not are Simple Facts 8 and 12, and both are convention differences rather than arithmetic: the first revelation is 20 words under our tokenization against a published 19, so the published count joins a pair the word table keeps apart, and sura 96 is 285 letters against a published 304, which no combination of the four mark toggles reaches — the closest is 300 with the superscript alef counted. Both are recorded with their computed value, under the published mode where they belong.
+
+**Still outstanding from Appendix 1's Simple Facts:** number 7, the 342 words between the two Basmalahs of sura 27, needs the published tokenization rather than a word-precise bound, which the bound now provides but the word table does not match. Numbers 11 and 18 are structural statements about sura ordering rather than counts. Number 19, the thirty numbers the Quran mentions summing to 162,146, needs a table of numbers-as-mentioned that no dataset here carries.
+
 **9g, Extended modes. OUTSTANDING, and data-gated.** Simplified30 and the Waw/Shadda modes are `text_modes.json` entries and could land today; the division metadata (page, station, part, group, quarter, bowing) has to be imported from `quran-metadata.txt` first, and it gates both the five remaining scopes and the five remaining value modifiers. Radix conversion and live value-system editing are small and independent.
 
 Word-part segmentation is not here: it is generated data, so it landed in 9a and has been queryable since 9b.

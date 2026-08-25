@@ -1,7 +1,7 @@
 {
   "generated_from": "ws_quran_words_roots_uthmani.csv",
-  "verified": 43,
-  "known_gaps": 9,
+  "verified": 60,
+  "known_gaps": 11,
   "fixtures": [
     {
       "id": "fatiha_verses",
@@ -470,6 +470,177 @@
       "actual": 4531,
       "pass": false,
       "status": "known_gap"
+    },
+    {
+      "id": "initialed_suras_29",
+      "mode": "simplified29",
+      "description": "suras carrying Quranic Initials",
+      "expected": 29,
+      "actual": 29,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "initial_sets_14",
+      "mode": "simplified29",
+      "description": "distinct sets of initials",
+      "expected": 14,
+      "actual": 14,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "initial_letters_14",
+      "mode": "simplified29",
+      "description": "distinct letters used as initials",
+      "expected": 14,
+      "actual": 14,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "initial_sura_numbers_822",
+      "mode": "simplified29",
+      "description": "sum of the 29 initialed sura numbers",
+      "expected": 822,
+      "actual": 822,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "initial_sura_numbers_plus_sets_836",
+      "mode": "simplified29",
+      "description": "that sum plus the 14 sets (19x44)",
+      "expected": 836,
+      "actual": 836,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "initials_metadata_57",
+      "mode": "simplified29",
+      "description": "14 letters + 14 sets + 29 suras (19x3)",
+      "expected": 57,
+      "actual": 57,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "uninitialed_between_2_and_68_38",
+      "mode": "simplified29",
+      "description": "un-initialed suras strictly between 2 and 68 (19x2)",
+      "expected": 38,
+      "actual": 38,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "sura_numbers_9_to_27_342",
+      "mode": "simplified29",
+      "description": "sum of the sura numbers from 9 to 27 (19x18)",
+      "expected": 342,
+      "actual": 342,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "suras_9_to_27_span_19",
+      "mode": "simplified29",
+      "description": "suras from 9 to 27 inclusive",
+      "expected": 19,
+      "actual": 19,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "unnumbered_basmalahs_112",
+      "mode": "simplified29",
+      "description": "suras opening with an unnumbered Basmalah",
+      "expected": 112,
+      "actual": 112,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "verses_with_basmalahs_6346",
+      "mode": "simplified29",
+      "description": "numbered verses plus unnumbered Basmalahs (19x334)",
+      "expected": 6346,
+      "actual": 6346,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "basmalah_in_numbered_verses_2",
+      "mode": "simplified29",
+      "description": "the Basmalah inside a numbered verse: 1:1 and 27:30",
+      "expected": 2,
+      "actual": 2,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "basmalah_occurrences_114",
+      "mode": "simplified29",
+      "description": "the Basmalah in full: the 112 unnumbered plus 1:1 and 27:30 (19x6)",
+      "expected": 114,
+      "actual": 114,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "first_revelation_words_19",
+      "mode": "khalifa_appendix1",
+      "description": "words in 96:1-5, published tokenization joins one pair",
+      "expected": 19,
+      "actual": 20,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "first_revelation_letters_76",
+      "mode": "simplified29",
+      "description": "letters in 96:1-5 (19x4)",
+      "expected": 76,
+      "actual": 76,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "sura_96_verses_19",
+      "mode": "simplified29",
+      "description": "verses in sura 96",
+      "expected": 19,
+      "actual": 19,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "sura_96_letters_304",
+      "mode": "khalifa_appendix1",
+      "description": "letters in sura 96 (19x16), no toggle set reaches it",
+      "expected": 304,
+      "actual": 285,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "sura_110_words_19",
+      "mode": "simplified29",
+      "description": "words in sura 110",
+      "expected": 19,
+      "actual": 19,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "verse_110_1_letters_19",
+      "mode": "simplified29",
+      "description": "letters in 110:1",
+      "expected": 19,
+      "actual": 19,
+      "pass": true,
+      "status": "verified"
     }
   ]
 }

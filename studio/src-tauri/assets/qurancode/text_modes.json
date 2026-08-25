@@ -30,7 +30,24 @@
         "allah_verse_number_sum_per_occurrence",
         "allah_in_initial_span_2641",
         "allah_outside_initial_span_57",
-        "verses_in_initial_span_5263"
+        "verses_in_initial_span_5263",
+        "initialed_suras_29",
+        "initial_sets_14",
+        "initial_letters_14",
+        "initial_sura_numbers_822",
+        "initial_sura_numbers_plus_sets_836",
+        "initials_metadata_57",
+        "uninitialed_between_2_and_68_38",
+        "sura_numbers_9_to_27_342",
+        "suras_9_to_27_span_19",
+        "unnumbered_basmalahs_112",
+        "verses_with_basmalahs_6346",
+        "basmalah_in_numbered_verses_2",
+        "basmalah_occurrences_114",
+        "first_revelation_letters_76",
+        "sura_96_verses_19",
+        "sura_110_words_19",
+        "verse_110_1_letters_19"
       ],
       "known_gaps": []
     },
@@ -79,7 +96,9 @@
         "alif_31: computed 314, published 347",
         "alif_32: computed 229, published 257",
         "almr_13_1482: computed 1301, published 1482",
-        "alms_7_5320: computed 4531, published 5320"
+        "alms_7_5320: computed 4531, published 5320",
+        "first_revelation_words_19: computed 20, published 19",
+        "sura_96_letters_304: computed 285, published 304"
       ]
     },
     "original": {

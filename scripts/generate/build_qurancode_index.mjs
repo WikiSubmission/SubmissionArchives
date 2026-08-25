@@ -237,6 +237,52 @@ function countIn(words, chapter, chars, mode = 'khalifa_appendix1') {
   return n
 }
 
+/* ── the Quranic Initials ──────────────────────────────────────────────
+ *
+ * The 29 initialed suras and the letters that prefix them, transcribed from
+ * Table 1 of Appendix 1. This is a *list*, not a derivation: the initials are
+ * the opening verse of the sura and could in principle be read off the text,
+ * but sura 42 carries its initials across two verses and sura 68 spells its
+ * single letter out as نون, so a reader that tried to infer the set would need
+ * both exceptions hardcoded anyway. A table with its invariants asserted is
+ * more honest than an inference with two special cases.
+ *
+ * Four facts fall out of it and are checked below, because the table is only
+ * worth having if it is the same table the published arguments used: 29 suras,
+ * 14 distinct sets, 14 distinct letters, and sura numbers summing to 822.
+ */
+const INITIALS = {
+  2: 'الم',
+  3: 'الم',
+  7: 'المص',
+  10: 'الر',
+  11: 'الر',
+  12: 'الر',
+  13: 'المر',
+  14: 'الر',
+  15: 'الر',
+  19: 'كهيعص',
+  20: 'طه',
+  26: 'طسم',
+  27: 'طس',
+  28: 'طسم',
+  29: 'الم',
+  30: 'الم',
+  31: 'الم',
+  32: 'الم',
+  36: 'يس',
+  38: 'ص',
+  40: 'حم',
+  41: 'حم',
+  42: 'حمعسق',
+  43: 'حم',
+  44: 'حم',
+  45: 'حم',
+  46: 'حم',
+  50: 'ق',
+  68: 'ن',
+}
+
 /* The divine name as Appendix 1 counts it. The root on its own also covers the
  * generic noun and the form on its own also covers unrelated words, so the
  * selector is the intersection; `allah_root_only_2844` and
@@ -393,6 +439,101 @@ function buildFixtures(words) {
   add('alms_7_5320', 'khalifa_appendix1',
     'المص in sura 7 (19x280), alif deficit 789', 5320, countIn(words, 7, 'المص'), 'known_gap')
 
+  /* ── the Quranic Initials, and the Simple Facts that follow from them ──
+   *
+   * These are arithmetic over the initials table rather than counts over the
+   * text, which is exactly why the table has to be data with its invariants
+   * asserted: an argument built on a miscounted list of 29 suras would be
+   * wrong in a way no letter fold could catch.
+   */
+  const initialed = Object.keys(INITIALS).map(Number).sort((a, b) => a - b)
+  const sets = new Set(Object.values(INITIALS))
+  const initialLetters = new Set(Object.values(INITIALS).join(''))
+  add('initialed_suras_29', 'simplified29', 'suras carrying Quranic Initials', 29, initialed.length)
+  add('initial_sets_14', 'simplified29', 'distinct sets of initials', 14, sets.size)
+  add('initial_letters_14', 'simplified29', 'distinct letters used as initials', 14, initialLetters.size)
+  add('initial_sura_numbers_822', 'simplified29',
+    'sum of the 29 initialed sura numbers', 822, initialed.reduce((a, c) => a + c, 0))
+  add('initial_sura_numbers_plus_sets_836', 'simplified29',
+    'that sum plus the 14 sets (19x44)', 836, initialed.reduce((a, c) => a + c, 0) + sets.size)
+  add('initials_metadata_57', 'simplified29',
+    '14 letters + 14 sets + 29 suras (19x3)', 57, initialLetters.size + sets.size + initialed.length)
+  add('uninitialed_between_2_and_68_38', 'simplified29',
+    'un-initialed suras strictly between 2 and 68 (19x2)', 38,
+    Array.from({ length: 65 }, (_, i) => i + 3).filter((c) => !(c in INITIALS)).length)
+
+  /* Sura numbers 9 to 27 inclusive: from the missing Basmalah to the extra
+   * one. Arithmetic over sura numbers themselves, which is why the aggregate
+   * reports a per-sura number sum as well as a per-verse one. */
+  add('sura_numbers_9_to_27_342', 'simplified29',
+    'sum of the sura numbers from 9 to 27 (19x18)', 342,
+    Array.from({ length: 19 }, (_, i) => i + 9).reduce((a, c) => a + c, 0))
+  add('suras_9_to_27_span_19', 'simplified29',
+    'suras from 9 to 27 inclusive', 19, 27 - 9 + 1)
+
+  /* The corpus total that includes the unnumbered Basmalahs, which is the basis
+   * Appendix 1 quotes rather than the 6,234 every other figure here uses. */
+  const numbered = new Set(canonical.map((w) => `${w.chapter}:${w.verse}`)).size
+  const unnumbered = new Set(
+    words.filter((w) => w.verse === 0).map((w) => `${w.chapter}:0`)
+  ).size
+  add('unnumbered_basmalahs_112', 'simplified29', 'suras opening with an unnumbered Basmalah', 112, unnumbered)
+  add('verses_with_basmalahs_6346', 'simplified29',
+    'numbered verses plus unnumbered Basmalahs (19x334)', 6346, numbered + unnumbered)
+  /* Measured, not asserted. The 112 unnumbered groups are rows in the word
+   * table; the other two are the phrase appearing inside a numbered verse, at
+   * 1:1 and inside 27:30, and those are found by matching the folded four-word
+   * sequence rather than by adding two to a total. */
+  const BASMALAH = ['بسم', 'الله', 'الرحمن', 'الرحيم']
+  const verseWords = new Map()
+  for (const w of canonical) {
+    const key = `${w.chapter}:${w.verse}`
+    if (!verseWords.has(key)) verseWords.set(key, [])
+    verseWords.get(key).push(foldWord(w.uthmani, 'simplified29'))
+  }
+  let numberedBasmalahs = 0
+  for (const forms of verseWords.values()) {
+    for (let i = 0; i + BASMALAH.length <= forms.length; i++) {
+      if (BASMALAH.every((f, k) => forms[i + k] === f)) numberedBasmalahs++
+    }
+  }
+  add('basmalah_in_numbered_verses_2', 'simplified29',
+    'the Basmalah inside a numbered verse: 1:1 and 27:30', 2, numberedBasmalahs)
+  add('basmalah_occurrences_114', 'simplified29',
+    'the Basmalah in full: the 112 unnumbered plus 1:1 and 27:30 (19x6)', 114,
+    unnumbered + numberedBasmalahs)
+
+  /* The first and last revelations, by word and letter count. Verse ranges
+   * rather than whole suras, which the aggregate expresses as address bounds. */
+  const inRange = (w, ch, from, to) => w.chapter === ch && w.verse >= from && w.verse <= to
+  const firstRevelation = canonical.filter((w) => inRange(w, 96, 1, 5))
+  /* Two of the Simple Facts do not reproduce, and both are convention
+   * differences rather than arithmetic. The first revelation is 20 words under
+   * our tokenization against a published 19, so the published count joins a
+   * pair our word table keeps apart. Sura 96 is 285 letters against a published
+   * 304, and no combination of the four mark toggles reaches it: the closest is
+   * 300 with the superscript alef counted. Both are recorded with their
+   * computed value rather than dropped, which is the same treatment the alif
+   * deficits get.
+   *
+   * Both are filed under the published mode rather than under Simplified 29,
+   * because that is what they are: claims from Appendix 1. Simplified 29 is
+   * defined by its own basis and reproduces it exactly, and an invariant below
+   * holds it to zero known gaps so that a future Appendix-1 figure cannot be
+   * filed against it by accident. */
+  add('first_revelation_words_19', 'khalifa_appendix1', 'words in 96:1-5, published tokenization joins one pair', 19, firstRevelation.length, 'known_gap')
+  add('first_revelation_letters_76', 'simplified29', 'letters in 96:1-5 (19x4)', 76,
+    firstRevelation.map((w) => foldWord(w.uthmani, 'simplified29')).join('').length)
+  add('sura_96_verses_19', 'simplified29', 'verses in sura 96', 19,
+    new Set(canonical.filter((w) => w.chapter === 96).map((w) => w.verse)).size)
+  add('sura_96_letters_304', 'khalifa_appendix1', 'letters in sura 96 (19x16), no toggle set reaches it', 304,
+    canonical.filter((w) => w.chapter === 96).map((w) => foldWord(w.uthmani, 'simplified29')).join('').length,
+    'known_gap')
+  const lastRevelation = canonical.filter((w) => w.chapter === 110)
+  add('sura_110_words_19', 'simplified29', 'words in sura 110', 19, lastRevelation.length)
+  add('verse_110_1_letters_19', 'simplified29', 'letters in 110:1', 19,
+    lastRevelation.filter((w) => w.verse === 1).map((w) => foldWord(w.uthmani, 'simplified29')).join('').length)
+
   return fixtures
 }
 
@@ -521,6 +662,15 @@ function build() {
   const { words, fillerCount, rawCount } = loadWords()
   const { canonical, basmalah, roots, alphabet } = verifyCorpus(words, fillerCount, rawCount)
   const fixtures = buildFixtures(words)
+
+  /* Simplified 29 is the default mode precisely because nothing about it is
+   * unverified, and the UI leans on that: it is the mode a figure is offered
+   * under when the researcher has expressed no preference. A published figure
+   * filed against it by accident would quietly make the default mode
+   * unauthoritative, so the property is an invariant rather than a habit. */
+  const s29Gaps = fixtures.filter((f) => f.mode === 'simplified29' && f.status === 'known_gap')
+  assert(s29Gaps.length === 0,
+    `simplified29 must have no known gaps, found: ${s29Gaps.map((f) => f.id).join(', ')}`)
   const seg = buildSegments(canonical)
 
   const chapters = readCsv(CHAPTERS_CSV)
@@ -560,11 +710,14 @@ function build() {
     }),
   ])
 
+  /* `initials` is empty for the 85 suras that carry none, which is a fact about
+   * them rather than missing data, so the column is present on every row. */
   files['chapters.tsv'] = tsv([
-    ['chapter', 'verses', 'revelation_order', 'name_arabic', 'name_english', 'name_transliterated'],
+    ['chapter', 'verses', 'revelation_order', 'name_arabic', 'name_english', 'name_transliterated', 'initials'],
     ...chapters.map((c) => [
       c.chapter_number, c.chapter_verses, c.revelation_order,
       c.title_arabic, c.title_english, c.title_transliterated,
+      INITIALS[c.chapter_number] ?? '',
     ]),
   ])
 

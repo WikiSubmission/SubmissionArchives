@@ -71,6 +71,18 @@ export default function ScopeBar({
           <span className="font-mono text-[11px] tabular-nums text-ed-fg-muted">{activeChapter.verses} verses</span>
           <span className="text-ed-fg-faint">·</span>
           <span className="font-mono text-[11px] text-ed-fg-muted">rev. {ordinal(activeChapter.revelation_order)}</span>
+          {/* One of the 29. Shown beside the sura because whether a sura is
+              initialed is the first thing that matters about it in this
+              literature, and it is otherwise invisible in the reader. */}
+          {activeChapter.initials && (
+            <span
+              dir="rtl"
+              title="Quranic Initials"
+              className="rounded border border-ed-accent/30 bg-ed-accent-soft px-1.5 font-arabic text-[14px] leading-tight text-ed-accent"
+            >
+              {activeChapter.initials}
+            </span>
+          )}
         </div>
       )}
 
