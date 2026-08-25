@@ -1,7 +1,7 @@
 {
   "generated_from": "ws_quran_words_roots_uthmani.csv",
-  "verified": 31,
-  "known_gaps": 7,
+  "verified": 43,
+  "known_gaps": 9,
   "fixtures": [
     {
       "id": "fatiha_verses",
@@ -344,6 +344,132 @@
       "actual": 19874,
       "pass": true,
       "status": "verified"
+    },
+    {
+      "id": "allah_2698",
+      "mode": "simplified29",
+      "description": "occurrences of the divine name (19x142)",
+      "expected": 2698,
+      "actual": 2698,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "allah_root_only_2844",
+      "mode": "simplified29",
+      "description": "root 56 alone, which also catches the generic noun",
+      "expected": 2844,
+      "actual": 2844,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "allah_form_only_2726",
+      "mode": "simplified29",
+      "description": "the definite form alone, which also catches ضلالة and اللهم",
+      "expected": 2726,
+      "actual": 2726,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "allah_verses_1820",
+      "mode": "simplified29",
+      "description": "distinct verses carrying the divine name",
+      "expected": 1820,
+      "actual": 1820,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "allah_verse_number_sum_118123",
+      "mode": "simplified29",
+      "description": "sum of those verse numbers, each verse once (19x6217)",
+      "expected": 118123,
+      "actual": 118123,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "allah_verse_number_sum_per_occurrence",
+      "mode": "simplified29",
+      "description": "the same sum counted once per occurrence, which is not a multiple of 19",
+      "expected": 182034,
+      "actual": 182034,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "allah_in_initial_span_2641",
+      "mode": "simplified29",
+      "description": "the divine name from the first initial (2:1) to the last (68:1) (19x139)",
+      "expected": 2641,
+      "actual": 2641,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "allah_outside_initial_span_57",
+      "mode": "simplified29",
+      "description": "and outside that span (19x3)",
+      "expected": 57,
+      "actual": 57,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "verses_in_initial_span_5263",
+      "mode": "simplified29",
+      "description": "verses from the first initial to the last (19x277)",
+      "expected": 5263,
+      "actual": 5263,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "qaf_in_verse_19s_76",
+      "mode": "khalifa_appendix1",
+      "description": "ق in every verse numbered 19 (19x4)",
+      "expected": 76,
+      "actual": 76,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "almr_13_without_alif_877",
+      "mode": "khalifa_appendix1",
+      "description": "ل + م + ر in sura 13, the published figures minus alif",
+      "expected": 877,
+      "actual": 877,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "alms_7_without_alif_2791",
+      "mode": "khalifa_appendix1",
+      "description": "ل + م + ص in sura 7, the published figures minus alif",
+      "expected": 2791,
+      "actual": 2791,
+      "pass": true,
+      "status": "verified"
+    },
+    {
+      "id": "almr_13_1482",
+      "mode": "khalifa_appendix1",
+      "description": "المر in sura 13 (19x78), alif deficit 181",
+      "expected": 1482,
+      "actual": 1301,
+      "pass": false,
+      "status": "known_gap"
+    },
+    {
+      "id": "alms_7_5320",
+      "mode": "khalifa_appendix1",
+      "description": "المص in sura 7 (19x280), alif deficit 789",
+      "expected": 5320,
+      "actual": 4531,
+      "pass": false,
+      "status": "known_gap"
     }
   ]
 }

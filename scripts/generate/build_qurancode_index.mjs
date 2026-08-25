@@ -237,6 +237,14 @@ function countIn(words, chapter, chars, mode = 'khalifa_appendix1') {
   return n
 }
 
+/* The divine name as Appendix 1 counts it. The root on its own also covers the
+ * generic noun and the form on its own also covers unrelated words, so the
+ * selector is the intersection; `allah_root_only_2844` and
+ * `allah_form_only_2726` pin both halves so a change to either data source
+ * shows up as a failure rather than as a quietly different total. */
+const ALLAH_ROOT = 'ا ل ه'
+const ALLAH_FORM = 'لله'
+
 function buildFixtures(words) {
   const canonical = words.filter((w) => w.verse > 0)
   const fixtures = []
@@ -317,6 +325,73 @@ function buildFixtures(words) {
   }
   add('alm_total_19874', 'khalifa_appendix1',
     'الم grand total across the six suras (19x1046)', 19874, almAlif + almLam + almMim)
+
+  /* ── aggregation: the arguments Appendix 1 is actually built from ──
+   *
+   * Everything above counts letters inside one contiguous scope. These count a
+   * set of word instances scattered across the corpus and then total something
+   * about them, which is the move nearly every published argument makes. They
+   * live here rather than only in the Rust tests so that `verify:qurancode`
+   * fails on drift in the words table or the roots table, not just on drift in
+   * the fold.
+   *
+   * The divine name is root 56 intersected with the definite form. Neither
+   * filter alone gives the published figure: the root also catches إله and
+   * آلهة, the generic noun, at 2,844, and the string also catches ٱللَّهُمَّ,
+   * which carries a different root, along with ضَلَـٰلَة and كَلَـٰلَة, at 2,726.
+   */
+  const divineName = canonical.filter(
+    (w) => w.roots.includes(ALLAH_ROOT) && foldWord(w.uthmani, 'simplified29').includes(ALLAH_FORM)
+  )
+  const divineVerses = [...new Set(divineName.map((w) => `${w.chapter}:${w.verse}`))]
+  const inSpan = (w, [fc, fv], [tc, tv]) =>
+    (w.chapter > fc || (w.chapter === fc && w.verse >= fv)) &&
+    (w.chapter < tc || (w.chapter === tc && w.verse <= tv))
+
+  add('allah_2698', 'simplified29', 'occurrences of the divine name (19x142)', 2698, divineName.length)
+  add('allah_root_only_2844', 'simplified29',
+    'root 56 alone, which also catches the generic noun', 2844,
+    canonical.filter((w) => w.roots.includes(ALLAH_ROOT)).length)
+  add('allah_form_only_2726', 'simplified29',
+    'the definite form alone, which also catches ضلالة and اللهم', 2726,
+    canonical.filter((w) => foldWord(w.uthmani, 'simplified29').includes(ALLAH_FORM)).length)
+  add('allah_verses_1820', 'simplified29',
+    'distinct verses carrying the divine name', 1820, divineVerses.length)
+  add('allah_verse_number_sum_118123', 'simplified29',
+    'sum of those verse numbers, each verse once (19x6217)', 118123,
+    divineVerses.reduce((a, ref) => a + Number(ref.split(':')[1]), 0))
+  add('allah_verse_number_sum_per_occurrence', 'simplified29',
+    'the same sum counted once per occurrence, which is not a multiple of 19', 182034,
+    divineName.reduce((a, w) => a + w.verse, 0))
+  add('allah_in_initial_span_2641', 'simplified29',
+    'the divine name from the first initial (2:1) to the last (68:1) (19x139)', 2641,
+    divineName.filter((w) => inSpan(w, [2, 1], [68, 1])).length)
+  add('allah_outside_initial_span_57', 'simplified29',
+    'and outside that span (19x3)', 57,
+    divineName.filter((w) => !inSpan(w, [2, 1], [68, 1])).length)
+  add('verses_in_initial_span_5263', 'simplified29',
+    'verses from the first initial to the last (19x277)', 5263,
+    [...new Set(canonical.filter((w) => inSpan(w, [2, 1], [68, 1])).map((w) => `${w.chapter}:${w.verse}`))].length)
+
+  /* A cross-cutting selection: one verse number, every chapter at once. */
+  const qafInVerse19 = words
+    .filter((w) => w.verse === 19)
+    .map((w) => foldWord(w.uthmani, 'khalifa_appendix1')).join('')
+  add('qaf_in_verse_19s_76', 'khalifa_appendix1',
+    'ق in every verse numbered 19 (19x4)', 76,
+    [...qafInVerse19].filter((c) => c === 'ق').length)
+
+  /* The two remaining initial groups. Every letter but alif reproduces to the
+   * unit; the alif deficit is the entire distance to the published total, which
+   * is the same single defect recorded above for the six الم suras. */
+  add('almr_13_without_alif_877', 'khalifa_appendix1',
+    'ل + م + ر in sura 13, the published figures minus alif', 877, countIn(words, 13, 'لمر'))
+  add('alms_7_without_alif_2791', 'khalifa_appendix1',
+    'ل + م + ص in sura 7, the published figures minus alif', 2791, countIn(words, 7, 'لمص'))
+  add('almr_13_1482', 'khalifa_appendix1',
+    'المر in sura 13 (19x78), alif deficit 181', 1482, countIn(words, 13, 'المر'), 'known_gap')
+  add('alms_7_5320', 'khalifa_appendix1',
+    'المص in sura 7 (19x280), alif deficit 789', 5320, countIn(words, 7, 'المص'), 'known_gap')
 
   return fixtures
 }

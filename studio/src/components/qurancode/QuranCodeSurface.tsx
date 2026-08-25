@@ -21,6 +21,7 @@ import ModeSelectors from './ModeSelectors'
 import ChapterList from './ChapterList'
 import QueryPane from './QueryPane'
 import ResultsList from './ResultsList'
+import AggregatePane from './AggregatePane'
 
 /**
  * The QuranCode research surface: query, text, readout.
@@ -41,7 +42,7 @@ export default function QuranCodeSurface() {
   /* The centre pane is either reading or answering, never both. A search
      switches it to results; opening a hit switches it back, which is what makes
      a result feel like a place to go rather than a list to squint at. */
-  const [view, setView] = useState<'read' | 'results'>('read')
+  const [view, setView] = useState<'read' | 'results' | 'totals'>('read')
   const [bottomTab, setBottomTab] = useState<BottomTab>('words')
 
   /** How many times each governed mark occurs in the verse on screen, so a
@@ -59,7 +60,38 @@ export default function QuranCodeSurface() {
     } satisfies Partial<Record<ToggleId, number>>
   }, [qc.verseView])
 
+  /* An aggregate answers a different question from the scope counts, so the
+     copy button has to follow whatever is on screen rather than always quoting
+     the scope. Copying a total without its selector would strip the half of the
+     figure that makes it checkable. */
+  const aggregateCitation = useCallback(() => {
+    const a = qc.aggregate
+    if (!a) return ''
+    const lines = a.figures
+      .filter((f) => f.total !== 0)
+      .map(
+        (f) =>
+          `${f.label}: ${fmt(f.total)}` +
+          (f.exact ? ` = ${fmt(f.quotient)} x ${a.divisor}` : ` (not divisible by ${a.divisor}, r ${f.remainder})`)
+      )
+    return [
+      `Selected: ${a.selector}`,
+      `Mode: ${a.provenance.text_mode_label}${a.provenance.known_gaps.length ? ' (unverified)' : ''}`,
+      ...lines,
+    ].join('\n')
+  }, [qc.aggregate])
+
   const handleCopy = useCallback(() => {
+    if (view === 'totals' && qc.aggregate) {
+      navigator.clipboard.writeText(aggregateCitation()).then(
+        () => {
+          setCopyLabel('Copied')
+          setTimeout(() => setCopyLabel('Copy'), 1600)
+        },
+        () => setCopyLabel('Copy failed')
+      )
+      return
+    }
     const primary = qc.counts.find((c) => c.provenance.text_mode === qc.mode) ?? qc.counts[0]
     if (!primary) return
     navigator.clipboard.writeText(citationOf(primary, qc.divisor)).then(
@@ -69,9 +101,14 @@ export default function QuranCodeSurface() {
       },
       () => setCopyLabel('Copy failed')
     )
-  }, [qc.counts, qc.mode, qc.divisor])
+  }, [qc.counts, qc.mode, qc.divisor, qc.aggregate, view, aggregateCitation])
 
   const runSearch = useCallback(() => {
+    if (qc.queryTab === 'totals') {
+      setView('totals')
+      qc.runAggregate()
+      return
+    }
     setView('results')
     qc.runSearch()
   }, [qc])
@@ -91,6 +128,17 @@ export default function QuranCodeSurface() {
      block in the note rather than in whichever pane mounted first. When no pane
      is editable the figure goes to the clipboard instead of vanishing. */
   const citeFinding = useCallback(() => {
+    /* An aggregate is a table of figures, not a single value, so it cannot be a
+       recomputable finding node without inventing a second directive. It goes
+       in as prose with its selector attached, and the node stays reserved for
+       the one-value case it can actually re-verify on load. */
+    if (view === 'totals' && qc.aggregate) {
+      navigator.clipboard.writeText(aggregateCitation()).then(() => {
+        setCopyLabel('Totals copied')
+        setTimeout(() => setCopyLabel('Copy'), 2200)
+      })
+      return
+    }
     const primary = qc.counts.find((c) => c.provenance.text_mode === qc.mode) ?? qc.counts[0]
     if (!primary) return
     const attrs = qc.value
@@ -106,7 +154,7 @@ export default function QuranCodeSurface() {
       setCopyLabel('No note open, copied')
       setTimeout(() => setCopyLabel('Copy'), 2200)
     })
-  }, [qc.counts, qc.value, qc.mode])
+  }, [qc.counts, qc.value, qc.mode, qc.aggregate, view, aggregateCitation])
 
   /** Exports whatever the readout is showing. Local file write through the
    * dialog plugin the archive picker already uses, so nothing leaves the
@@ -211,6 +259,8 @@ export default function QuranCodeSurface() {
                 onSimilarChange={qc.setSimilarQuery}
                 onRootChange={qc.setRootQuery}
                 onRun={runSearch}
+                aggregate={qc.aggregateQuery}
+                onAggregateChange={qc.setAggregateQuery}
               />
               <div className="border-t border-ed-rule">
                 <ChapterList
@@ -267,9 +317,19 @@ export default function QuranCodeSurface() {
               onReadingChange={qc.setReading}
               view={view}
               hasResults={Boolean(qc.results)}
+              hasTotals={Boolean(qc.aggregate)}
               onViewChange={setView}
             />
-            {view === 'results' ? (
+            {view === 'totals' ? (
+              <AggregatePane
+                result={qc.aggregate}
+                error={qc.aggregateError}
+                busy={qc.aggregating}
+                onCite={citeFinding}
+                onCopy={handleCopy}
+                copyLabel={copyLabel}
+              />
+            ) : view === 'results' ? (
               <ResultsList
                 result={qc.results}
                 error={qc.searchError}

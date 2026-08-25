@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { MagnifyingGlass } from '@phosphor-icons/react'
 import { motion, springConfig } from '../ui/Motion'
 import type {
+  AggregateQuery,
   MatchKind,
   MatchLocation,
   NumberTarget,
@@ -9,7 +10,49 @@ import type {
   Wordness,
 } from '../../lib/quranCode'
 
-export type QueryTab = 'text' | 'numbers' | 'similar' | 'root'
+export type QueryTab = 'text' | 'numbers' | 'similar' | 'root' | 'totals'
+
+/** The published arguments, as queries.
+ *
+ * These are not shortcuts. Each one is a claim from Appendix 1 restated as
+ * something the engine can be asked, so a reader can run the argument rather
+ * than take the number on trust, and can then edit the query and watch the
+ * figure move. The first is the one the whole appendix opens with. */
+export const AGGREGATE_PRESETS: { label: string; hint: string; query: AggregateQuery }[] = [
+  {
+    label: 'The divine name',
+    hint: '2,698 occurrences, 19 x 142. Verse numbers sum to 118,123, 19 x 6,217.',
+    query: { text: 'لله', root_id: 56 },
+  },
+  {
+    label: 'Divine name, first initial to last',
+    hint: '2,641 inside 2:1 to 68:1, 19 x 139, leaving 57 outside, 19 x 3.',
+    query: { text: 'لله', root_id: 56, from: [2, 1], to: [68, 1] },
+  },
+  {
+    label: 'Qaf in every verse 19',
+    hint: '76 across the whole corpus, 19 x 4.',
+    query: { verse_number: 19, letters: 'ق' },
+  },
+  {
+    label: 'Ha and Mim, suras 40 to 46',
+    hint: '2,147, 19 x 113. Needs the published text mode.',
+    query: {
+      chapters: [40, 41, 42, 43, 44, 45, 46],
+      letters: 'حم',
+      scope: { include_basmalah: true },
+    },
+  },
+  {
+    label: 'Alif Lam Mim, the six suras',
+    hint: '19,874, 19 x 1,046 as published. Ours is short by the alif deficit.',
+    query: {
+      chapters: [2, 3, 29, 30, 31, 32],
+      letters: 'الم',
+      scope: { include_basmalah: true },
+    },
+  },
+]
 
 export interface TextQuery {
   query: string
@@ -42,6 +85,8 @@ interface QueryPaneProps {
   onSimilarChange: (next: SimilarQuery) => void
   onRootChange: (next: string) => void
   onRun: () => void
+  aggregate: AggregateQuery
+  onAggregateChange: (next: AggregateQuery) => void
 }
 
 const TABS: { id: QueryTab; label: string }[] = [
@@ -49,6 +94,7 @@ const TABS: { id: QueryTab; label: string }[] = [
   { id: 'numbers', label: 'Numbers' },
   { id: 'similar', label: 'Similar' },
   { id: 'root', label: 'Root' },
+  { id: 'totals', label: 'Totals' },
 ]
 
 /**
@@ -73,6 +119,8 @@ export default function QueryPane({
   onSimilarChange,
   onRootChange,
   onRun,
+  aggregate,
+  onAggregateChange,
 }: QueryPaneProps) {
   return (
     <form
@@ -227,6 +275,128 @@ export default function QueryPane({
         </div>
       )}
 
+      {tab === 'totals' && (
+        <div className="flex flex-col gap-2.5">
+          <Field label="Published arguments">
+            {/* Presets first, raw fields behind them, for the same reason the
+                value calculator does it: the useful region of this query space
+                is tiny and undiscoverable, and a reader who has never built one
+                learns more from running a known claim than from an empty form. */}
+            <div className="flex flex-col gap-1">
+              {AGGREGATE_PRESETS.map((p) => (
+                <button
+                  key={p.label}
+                  type="button"
+                  title={p.hint}
+                  onClick={() => onAggregateChange(p.query)}
+                  className="tactile flex flex-col gap-0.5 rounded-md border border-ed-rule bg-ed-surface-raised px-2 py-1.5 text-left transition-colors hover:border-ed-accent hover:bg-ed-surface-strong"
+                >
+                  <span className="font-serif text-[12px] font-semibold text-ed-fg">{p.label}</span>
+                  <span className="font-mono text-[9.5px] leading-snug text-ed-fg-muted">{p.hint}</span>
+                </button>
+              ))}
+            </div>
+          </Field>
+
+          <Field label="Word contains">
+            <input
+              dir="rtl"
+              value={aggregate.text ?? ''}
+              onChange={(e) => onAggregateChange({ ...aggregate, text: e.target.value })}
+              placeholder="لله"
+              aria-label="Folded form the word must contain"
+              className="h-[34px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-arabic text-[18px] text-ed-fg shadow-xs outline-none transition-colors placeholder:font-arabic placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
+            />
+          </Field>
+
+          <div className="grid grid-cols-2 gap-2">
+            <Field label="Root #">
+              <NumberField
+                value={aggregate.root_id}
+                placeholder="56"
+                label="Root id"
+                onChange={(root_id) => onAggregateChange({ ...aggregate, root_id })}
+              />
+            </Field>
+            <Field label="Verse no.">
+              <NumberField
+                value={aggregate.verse_number}
+                placeholder="19"
+                label="Verse number, every chapter"
+                onChange={(verse_number) => onAggregateChange({ ...aggregate, verse_number })}
+              />
+            </Field>
+          </div>
+
+          <Field label="Count only these letters">
+            <input
+              dir="rtl"
+              value={aggregate.letters ?? ''}
+              onChange={(e) => onAggregateChange({ ...aggregate, letters: e.target.value })}
+              placeholder="الم"
+              aria-label="Letters to count"
+              className="h-[30px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-arabic text-[16px] text-ed-fg shadow-xs outline-none transition-colors placeholder:font-arabic placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
+            />
+          </Field>
+
+          <Field label="Suras">
+            <input
+              value={(aggregate.chapters ?? []).join(', ')}
+              onChange={(e) =>
+                onAggregateChange({
+                  ...aggregate,
+                  chapters: e.target.value
+                    .split(/[^0-9]+/)
+                    .map(Number)
+                    .filter((n) => n >= 1 && n <= 114),
+                })
+              }
+              placeholder="40, 41, 42"
+              aria-label="Sura numbers"
+              className="h-[30px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-mono text-[12px] tabular-nums text-ed-fg shadow-xs outline-none transition-colors placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
+            />
+          </Field>
+
+          <Field label="From / to (sura:verse)">
+            <div className="grid grid-cols-2 gap-2">
+              <AddressField
+                value={aggregate.from}
+                placeholder="2:1"
+                label="Span start"
+                onChange={(from) => onAggregateChange({ ...aggregate, from })}
+              />
+              <AddressField
+                value={aggregate.to}
+                placeholder="68:1"
+                label="Span end"
+                onChange={(to) => onAggregateChange({ ...aggregate, to })}
+              />
+            </div>
+          </Field>
+
+          <label className="flex cursor-pointer items-center gap-2 font-mono text-[10px] text-ed-fg-secondary">
+            <input
+              type="checkbox"
+              checked={aggregate.scope?.include_basmalah ?? false}
+              onChange={(e) =>
+                onAggregateChange({
+                  ...aggregate,
+                  scope: { ...aggregate.scope, include_basmalah: e.target.checked },
+                })
+              }
+              className="accent-ed-accent"
+            />
+            Include the unnumbered Basmalahs
+          </label>
+
+          <Hint>
+            Filters intersect. Every total is tested against the divisor in the
+            readout, and both readings of the verse-number sum are shown because
+            the phrase is ambiguous between them.
+          </Hint>
+        </div>
+      )}
+
       {tab === 'root' && (
         <div className="flex flex-col gap-2.5">
           <Field label="Root">
@@ -265,6 +435,65 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
       </span>
       {children}
     </label>
+  )
+}
+
+/** A number input that reports `undefined` for empty rather than 0, because a
+ * cleared field means "do not filter on this" and zero would mean "sura 0". */
+function NumberField({
+  value,
+  placeholder,
+  label,
+  onChange,
+}: {
+  value: number | undefined
+  placeholder: string
+  label: string
+  onChange: (next: number | undefined) => void
+}) {
+  return (
+    <input
+      inputMode="numeric"
+      value={value ?? ''}
+      placeholder={placeholder}
+      aria-label={label}
+      onChange={(e) => {
+        const n = Number(e.target.value.replace(/[^0-9]/g, ''))
+        onChange(e.target.value.trim() === '' || !Number.isFinite(n) || n <= 0 ? undefined : n)
+      }}
+      className="h-[30px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-mono text-[12px] tabular-nums text-ed-fg shadow-xs outline-none transition-colors placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
+    />
+  )
+}
+
+/** A `sura:verse` pair. Typed as one field because that is how a researcher
+ * writes an address, and split on the colon rather than offering two boxes. */
+function AddressField({
+  value,
+  placeholder,
+  label,
+  onChange,
+}: {
+  value: [number, number] | undefined
+  placeholder: string
+  label: string
+  onChange: (next: [number, number] | undefined) => void
+}) {
+  return (
+    <input
+      value={value ? `${value[0]}:${value[1]}` : ''}
+      placeholder={placeholder}
+      aria-label={label}
+      onChange={(e) => {
+        const parts = e.target.value.split(':').map((x) => Number(x.replace(/[^0-9]/g, '')))
+        onChange(
+          parts.length === 2 && parts.every((n) => Number.isFinite(n) && n > 0)
+            ? [parts[0], parts[1]]
+            : undefined
+        )
+      }}
+      className="h-[30px] w-full rounded-md border border-ed-rule-strong bg-ed-surface-raised px-2.5 font-mono text-[12px] tabular-nums text-ed-fg shadow-xs outline-none transition-colors placeholder:text-ed-fg-faint focus:border-ed-accent focus:ring-1 focus:ring-ed-accent"
+    />
   )
 }
 

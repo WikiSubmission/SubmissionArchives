@@ -356,7 +356,72 @@ export const qcFindByNumber = (
 export const qcWordInfo = (chapter: number, verse: number, position: number, mode?: string, toggles?: Toggles) =>
   invoke<WordInfo>('qc_word_info', { chapter, verse, position, mode, toggles })
 
+/* ── aggregation ───────────────────────────────────────────────────────── */
+
+/** Which word instances an aggregate runs over. Fields intersect, and an empty
+ * query is the whole corpus. `Scope` alone cannot express a span that crosses
+ * chapters or a verse number taken across every chapter at once, which is what
+ * the published arguments actually select. */
+export interface AggregateQuery {
+  text?: string
+  whole_word?: boolean
+  root_id?: number
+  from?: [number, number]
+  to?: [number, number]
+  verse_number?: number
+  chapters?: number[]
+  /** Letters to count inside the selected words. Absent counts them all. */
+  letters?: string
+  scope?: Scope
+}
+
+/** One total with its divisibility test already applied. The readout renders a
+ * row per figure, so no figure can reach the screen without its remainder. */
+export interface Figure {
+  id: string
+  label: string
+  total: number
+  exact: boolean
+  quotient: number
+  remainder: number
+  digit_sum: number
+  digital_root: number
+}
+
+export interface Aggregate {
+  provenance: Provenance
+  divisor: number
+  /** What was selected, in words. Provenance says how it was counted; a figure
+   * needs both before anyone else can check it. */
+  selector: string
+  occurrences: number
+  verses: number
+  chapters: number
+  letters: number
+  value: number | null
+  first: string | null
+  last: string | null
+  examples: string[]
+  figures: Figure[]
+}
+
+export const qcAggregate = (
+  query: AggregateQuery,
+  mode?: string,
+  toggles?: Toggles,
+  valueSystem?: string,
+  divisor?: number
+) =>
+  invoke<Aggregate>('qc_aggregate', {
+    query,
+    mode,
+    toggles,
+    valueSystem: valueSystem === 'none' ? undefined : valueSystem,
+    divisor,
+  })
+
 export const qcRoots = () => invoke<RootInfo[]>('qc_roots')
+
 
 /* ── formatting ──────────────────────────────────────────────────────── */
 

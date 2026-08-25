@@ -21,7 +21,16 @@
         "corpus_verses",
         "corpus_words",
         "corpus_letters",
-        "alphabet_is_29"
+        "alphabet_is_29",
+        "allah_2698",
+        "allah_root_only_2844",
+        "allah_form_only_2726",
+        "allah_verses_1820",
+        "allah_verse_number_sum_118123",
+        "allah_verse_number_sum_per_occurrence",
+        "allah_in_initial_span_2641",
+        "allah_outside_initial_span_57",
+        "verses_in_initial_span_5263"
       ],
       "known_gaps": []
     },
@@ -56,7 +65,10 @@
         "mim_31",
         "lam_32",
         "mim_32",
-        "alm_total_19874"
+        "alm_total_19874",
+        "qaf_in_verse_19s_76",
+        "almr_13_without_alif_877",
+        "alms_7_without_alif_2791"
       ],
       "known_gaps": [
         "ya_36_237: computed 241, published 237",
@@ -65,7 +77,9 @@
         "alif_29: computed 671, published 774",
         "alif_30: computed 483, published 543",
         "alif_31: computed 314, published 347",
-        "alif_32: computed 229, published 257"
+        "alif_32: computed 229, published 257",
+        "almr_13_1482: computed 1301, published 1482",
+        "alms_7_5320: computed 4531, published 5320"
       ]
     },
     "original": {

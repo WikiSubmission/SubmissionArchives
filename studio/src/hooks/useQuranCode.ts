@@ -16,6 +16,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   NO_MODIFIERS,
+  qcAggregate,
   qcComputeValue,
   qcFindByNumber,
   qcFindText,
@@ -27,6 +28,8 @@ import {
   qcGetVerse,
   qcLetterFrequency,
   qcMetadata,
+  type Aggregate,
+  type AggregateQuery,
   type ChapterInfo,
   type Counts,
   type LetterStat,
@@ -79,6 +82,10 @@ export interface QuranCodeState {
   results: SearchResult | null
   searchError: string | null
   searching: boolean
+  aggregateQuery: AggregateQuery
+  aggregate: Aggregate | null
+  aggregateError: string | null
+  aggregating: boolean
   activeChapter: ChapterInfo | null
   scope: Scope
   busy: boolean
@@ -99,6 +106,8 @@ export interface QuranCodeState {
   setSimilarQuery: (q: SimilarQuery) => void
   setRootQuery: (q: string) => void
   runSearch: () => void
+  setAggregateQuery: (q: AggregateQuery) => void
+  runAggregate: () => void
   clearResults: () => void
   lookupWordRoot: (position: number) => void
   setIncludeBasmalah: (on: boolean) => void
@@ -145,6 +154,10 @@ export function useQuranCode(): QuranCodeState {
   const [results, setResults] = useState<SearchResult | null>(null)
   const [searchError, setSearchError] = useState<string | null>(null)
   const [searching, setSearching] = useState(false)
+  const [aggregateQuery, setAggregateQuery] = useState<AggregateQuery>({})
+  const [aggregate, setAggregate] = useState<Aggregate | null>(null)
+  const [aggregateError, setAggregateError] = useState<string | null>(null)
+  const [aggregating, setAggregating] = useState(false)
 
   const [preset, setPresetRaw] = useState('simple_value')
   const [modifiers, setModifiers] = useState<Modifiers>(NO_MODIFIERS)
@@ -258,6 +271,56 @@ export function useQuranCode(): QuranCodeState {
     setModifiers((current) => ({ ...current, [id]: !current[id] }))
     setPresetRaw('custom')
   }, [])
+
+  /* An aggregate is a question about a set, so like a search it runs when
+     asked rather than on every scope change. It carries the divisor because the
+     divisibility test is part of the answer, not a display option. */
+  const aggregateToken = useRef(0)
+  const aggregateRan = useRef(false)
+
+  const runAggregate = useCallback(() => {
+    if (!toggles) return
+    aggregateRan.current = true
+    const mine = ++aggregateToken.current
+    setAggregating(true)
+    setAggregateError(null)
+    qcAggregate(aggregateQuery, mode, toggles, valueSystem, divisor)
+      .then(
+        (a) => {
+          if (mine !== aggregateToken.current) return
+          setAggregate(a)
+        },
+        (e) => {
+          if (mine !== aggregateToken.current) return
+          setAggregateError(String(e))
+          setAggregate(null)
+        }
+      )
+      .finally(() => {
+        if (mine === aggregateToken.current) setAggregating(false)
+      })
+  }, [aggregateQuery, mode, toggles, valueSystem, divisor])
+
+  /* A live aggregate answers under the mode, toggles, value system and divisor
+     that were active when it ran, so a later change to any of them would leave
+     a stale number on screen claiming a convention it was not computed under.
+     Rerunning is cheaper than explaining that, and clearing it would throw away
+     the researcher's query.
+
+     Keyed on the convention alone. Editing the query must not refire, because
+     a half-typed selector is not a question, and the effect watches a string
+     rather than the values so a new but equal `toggles` object cannot trigger a
+     spurious run. */
+  const convention = `${mode}|${valueSystem}|${divisor}|${JSON.stringify(toggles)}`
+  const lastConvention = useRef(convention)
+  useEffect(() => {
+    if (!aggregateRan.current || lastConvention.current === convention) {
+      lastConvention.current = convention
+      return
+    }
+    lastConvention.current = convention
+    runAggregate()
+  }, [convention, runAggregate])
 
   /* Search results are their own request, not part of the scope effect: a
      query is something the researcher runs, and refiring it on every verse step
@@ -441,6 +504,10 @@ export function useQuranCode(): QuranCodeState {
     results,
     searchError,
     searching,
+    aggregateQuery,
+    aggregate,
+    aggregateError,
+    aggregating,
     activeChapter,
     scope,
     busy,
@@ -460,6 +527,8 @@ export function useQuranCode(): QuranCodeState {
     setSimilarQuery,
     setRootQuery,
     runSearch,
+    setAggregateQuery,
+    runAggregate,
     clearResults,
     lookupWordRoot,
     setIncludeBasmalah,

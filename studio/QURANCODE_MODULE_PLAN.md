@@ -687,6 +687,25 @@ The seven gaps are the six alif counts and ي in sura 36 (241 computed against 2
 
 **Not done in this pass:** translations, subtitles and footnotes in the verse browser. The English is there; the other fourteen languages and the per-verse sidecars are a `verses.tsv` column change plus a picker, and they belong with the reader work rather than with citation.
 
+**9h, Aggregation over a set. ✅ SHIPPED.**
+`qc_aggregate` in [src-tauri/src/qurancode.rs](src-tauri/src/qurancode.rs), `AggregatePane` and a fifth `Totals` tab in `QueryPane`, plus twelve new fixtures in the generator and nine new Rust tests.
+
+**This is the capability the module was missing, and the reason it was missing is worth stating.** Everything before 9h counts letters inside one contiguous scope: a chapter, a verse, a word. Almost no published 19-based argument has that shape. They select a *set* of word instances scattered across the corpus and then total something about the set. The engine could reproduce the initial-letter counts because those happen to be per-sura letter counts; it could not reproduce the argument Appendix 1 actually opens with, which is the divine name.
+
+**Every filter intersects, and the divine name is why.** `root_id` alone gives 2,844, because root 56 also covers إله and آلهة, the generic noun. The folded string لله alone gives 2,726, because it also catches ٱللَّهُمَّ, which carries a different root, along with ضَلَـٰلَة and كَلَـٰلَة. The intersection gives 2,698, which is 19 × 142 and the published figure. Both wrong answers are pinned as fixtures (`allah_root_only_2844`, `allah_form_only_2726`) so that a change to the words table or the roots table fails the build rather than quietly moving the total.
+
+**Two verse-number sums are reported, not one.** "The numbers of all the verses where the word God occurs" is ambiguous between summing each distinct verse once and summing it once per occurrence. Those are 118,123 and 182,034. The first is 19 × 6,217 and the second is not a multiple of 19 at all. A tool that silently picked one would let a reader believe a figure they had not asked for, so both are named, both are shown, and both are fixtures.
+
+**Selection is a first-class part of a figure.** Provenance already carried the counting convention. It cannot carry the question, so `Aggregate` also returns a `selector` string restating what was selected, and the copy path emits both. A total without its selector is not checkable by anyone else, which is the same argument §5.6 makes about the mode.
+
+**Divisibility travels with every total rather than being a display option.** `Figure` carries the total, the quotient, the remainder, the digit sum and the digital root, and the pane renders a row per figure. Adding a figure needs no frontend change, and no figure can reach the screen without its remainder beside it. Multiples of the divisor are marked; misses are shown rather than filtered, which is the difference between an instrument and an advocate.
+
+*Accepted:* the divine name at 2,698 (19 × 142); its verse numbers at 118,123 (19 × 6,217) over 1,820 distinct verses; 2,641 (19 × 139) inside the span from the first Quranic Initial at 2:1 to the last at 68:1 and 57 (19 × 3) outside, the two summing back to 2,698; 5,263 verses (19 × 277) in that span; ق in every verse numbered 19 at 76 (19 × 4), which no scope can express because it is a predicate across all 114 chapters. An empty query agrees with `qc_count` on words, letters, verses and chapters, which is the property that keeps the two engines honest. The divisor is a parameter, and `Original` mode is refused rather than answered.
+
+**What it also measured.** The two remaining initial groups reproduce every letter but alif *exactly*: ل + م + ر in sura 13 is 877 against a published 877, and ل + م + ص in sura 7 is 2,791 against a published 2,791. The totals miss 1,482 and 5,320 by 181 and 789, and those two deficits are entirely alif. Taken with the six الم suras, alif is now the only letter in the published mode that does not reproduce, which makes the fold rewrite (9i) the highest-value work remaining rather than one option among several. The deficits are asserted as deficits, not as passing totals: a test that quietly expects the wrong number teaches nothing, and when the alif rule lands these become equalities.
+
+**Fixtures: 43 verified, 9 known gaps**, up from 31 and 7. All nine gaps are alif, or the four-letter ya residual in sura 36.
+
 **9g, Extended modes. OUTSTANDING, and data-gated.** Simplified30 and the Waw/Shadda modes are `text_modes.json` entries and could land today; the division metadata (page, station, part, group, quarter, bowing) has to be imported from `quran-metadata.txt` first, and it gates both the five remaining scopes and the five remaining value modifiers. Radix conversion and live value-system editing are small and independent.
 
 Word-part segmentation is not here: it is generated data, so it landed in 9a and has been queryable since 9b.

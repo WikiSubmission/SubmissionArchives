@@ -2339,6 +2339,349 @@ pub fn value_of_text(
     })
 }
 
+/* ── aggregation ───────────────────────────────────────────────────────── */
+
+/// Which word instances an aggregate runs over.
+///
+/// `Scope` cannot express the questions this module exists to answer. The
+/// published arguments select a *set* of word instances scattered across the
+/// corpus and then total something about them: how many there are, how many
+/// verses they touch, what their verse numbers add up to. Every field here
+/// narrows that set, they intersect rather than union, and an empty query is
+/// the whole corpus.
+#[derive(Deserialize, Clone, Debug, Default)]
+#[serde(default)]
+pub struct AggregateQuery {
+    /// Matched against the word's folded form, so a selection obeys the active
+    /// text mode exactly as a count does.
+    pub text: Option<String>,
+    /// Match the whole folded word when true, any part of it otherwise.
+    pub whole_word: Option<bool>,
+    /// Restricts to words carrying this root. Intersecting a root with `text`
+    /// is what separates a proper name from its homographs: the divine name is
+    /// root 56 *and* contains لله, where اللهم carries a different root and
+    /// ضلالة a different root again. Either filter alone overcounts.
+    pub root_id: Option<u32>,
+    /// Inclusive `(chapter, verse)` bounds, compared as addresses so a span
+    /// crosses chapters. Separate from `scope`, which has no way to say
+    /// "from 2:1 to 68:1".
+    pub from: Option<(u32, u32)>,
+    pub to: Option<(u32, u32)>,
+    /// Only verses carrying this number, in every chapter at once. This is the
+    /// cross-cutting selection behind "every verse numbered 19".
+    pub verse_number: Option<u32>,
+    /// An explicit chapter set, for an argument about a group of suras that is
+    /// not a contiguous range.
+    pub chapters: Option<Vec<u32>>,
+    /// Letters to count inside the selected words. Absent counts every letter,
+    /// which is what lets one command answer both "how many occurrences" and
+    /// "how many times does ق appear in them".
+    pub letters: Option<String>,
+    /// Everything `Scope` already means.
+    pub scope: Option<Scope>,
+}
+
+/// One total, with the divisibility test already applied.
+///
+/// The UI renders a row per figure rather than a fixed set of fields, so adding
+/// a figure here needs no frontend change, and no figure can reach the screen
+/// without its remainder beside it.
+#[derive(Serialize, Clone, Debug)]
+pub struct Figure {
+    pub id: String,
+    pub label: String,
+    pub total: i64,
+    pub exact: bool,
+    pub quotient: i64,
+    pub remainder: i64,
+    pub digit_sum: i64,
+    pub digital_root: i64,
+}
+
+fn figure(id: &str, label: &str, total: i64, divisor: i64) -> Figure {
+    let d = if divisor == 0 { 1 } else { divisor };
+    Figure {
+        id: id.to_string(),
+        label: label.to_string(),
+        total,
+        exact: total % d == 0,
+        quotient: total / d,
+        remainder: total % d,
+        digit_sum: digit_sum(total),
+        digital_root: digital_root(total),
+    }
+}
+
+#[derive(Serialize, Clone, Debug)]
+pub struct Aggregate {
+    pub provenance: Provenance,
+    pub divisor: i64,
+    pub selector: String,
+    pub occurrences: usize,
+    pub verses: usize,
+    pub chapters: usize,
+    pub letters: i64,
+    pub value: Option<i64>,
+    pub first: Option<String>,
+    pub last: Option<String>,
+    /// The opening addresses of the match set, so a figure can be spot-checked
+    /// without re-running the query as a search.
+    pub examples: Vec<String>,
+    pub figures: Vec<Figure>,
+}
+
+const EXAMPLE_CAP: usize = 24;
+
+/// Totals a selected set of word instances and tests each total for
+/// divisibility.
+///
+/// Two sums over verse numbers are reported, not one. "The numbers of the
+/// verses where the word occurs" is ambiguous between summing each distinct
+/// verse once and summing it once per occurrence, and the two differ by a lot:
+/// for the divine name they are 118,123 and 182,034. A tool that silently
+/// picked one would let a reader believe a figure they never asked for, so both
+/// are named and both are shown.
+///
+/// The 112 unnumbered Basmalah groups are excluded from every verse count and
+/// every number sum even when the scope includes them, because an unnumbered
+/// verse has no number to contribute. They still contribute occurrences and
+/// letters, which is what the published initial counts need.
+pub fn aggregate(
+    query: Option<AggregateQuery>,
+    mode: Option<String>,
+    toggles: Option<ToggleInput>,
+    value_system: Option<String>,
+    divisor: Option<i64>,
+) -> Result<Aggregate, String> {
+    let cfg = config()?;
+    let q = query.unwrap_or_default();
+    let mode = cfg.mode(mode.as_deref().unwrap_or(DEFAULT_MODE))?;
+    if !mode.countable {
+        return Err(format!("{} is not a countable text mode", mode.label));
+    }
+    let toggles = Toggles::resolve(cfg, toggles);
+    let system = match value_system.as_deref() {
+        Some(id) if id != "none" => Some(find_value_system(id)?),
+        _ => None,
+    };
+    let divisor = divisor.unwrap_or(19).max(1);
+    let scope = q.scope.unwrap_or_default();
+
+    let needle = q
+        .text
+        .as_deref()
+        .map(str::trim)
+        .filter(|s| !s.is_empty())
+        .map(|s| fold_word(cfg, s, mode, &toggles));
+    if let Some(n) = &needle {
+        if n.is_empty() {
+            return Err("Nothing in that query survives this text mode".to_string());
+        }
+    }
+    let wordness = if q.whole_word.unwrap_or(false) {
+        Wordness::WholeWord
+    } else {
+        Wordness::PartOfWord
+    };
+    let letter_filter: Option<Vec<char>> = q
+        .letters
+        .as_deref()
+        .map(str::trim)
+        .filter(|s| !s.is_empty())
+        .map(|s| fold_word(cfg, s, mode, &toggles).chars().collect());
+
+    let mut buf = String::with_capacity(32);
+    let mut chapters: HashSet<u32> = HashSet::new();
+    let mut verses: HashSet<(u32, u32)> = HashSet::new();
+    let mut occurrences = 0usize;
+    let mut letters = 0i64;
+    let mut value = 0i64;
+    let mut sum_positions = 0i64;
+    let mut sum_verse_per_occurrence = 0i64;
+    let mut first: Option<(u32, u32, u32)> = None;
+    let mut last: Option<(u32, u32, u32)> = None;
+    let mut examples: Vec<String> = Vec::new();
+
+    for w in words() {
+        if !scope.matches(w) {
+            continue;
+        }
+        if let Some(n) = q.verse_number {
+            if w.verse != n {
+                continue;
+            }
+        }
+        if let Some(list) = &q.chapters {
+            if !list.contains(&w.chapter) {
+                continue;
+            }
+        }
+        if let Some(f) = q.from {
+            if (w.chapter, w.verse) < f {
+                continue;
+            }
+        }
+        if let Some(t) = q.to {
+            if (w.chapter, w.verse) > t {
+                continue;
+            }
+        }
+        if let Some(rid) = q.root_id {
+            let wanted = rid.to_string();
+            if !w.root_ids.split(',').any(|id| id == wanted) {
+                continue;
+            }
+        }
+
+        fold_into(cfg, w.uthmani, mode, &toggles, &mut buf);
+        if let Some(n) = &needle {
+            if !located(&buf, n, MatchLocation::Anywhere, wordness) {
+                continue;
+            }
+        }
+
+        occurrences += 1;
+        chapters.insert(w.chapter);
+        let at = (w.chapter, w.verse, w.position);
+        if first.is_none() {
+            first = Some(at);
+        }
+        last = Some(at);
+        if examples.len() < EXAMPLE_CAP {
+            examples.push(format!("{}:{}:{}", w.chapter, w.verse, w.position));
+        }
+        sum_positions += w.position as i64;
+        if w.canonical {
+            verses.insert((w.chapter, w.verse));
+            sum_verse_per_occurrence += w.verse as i64;
+        }
+
+        for c in buf.chars() {
+            if let Some(set) = &letter_filter {
+                if !set.contains(&c) {
+                    continue;
+                }
+            }
+            letters += 1;
+            if let Some(sys) = system {
+                value += sys.values[(c as u32 - BLOCK_LO) as usize];
+            }
+        }
+    }
+
+    let sum_chapter_numbers: i64 = verses.iter().map(|(c, _)| *c as i64).sum();
+    let sum_verse_numbers: i64 = verses.iter().map(|(_, v)| *v as i64).sum();
+
+    let mut figures = vec![
+        figure("occurrences", "Occurrences", occurrences as i64, divisor),
+        figure("verses", "Verses touched", verses.len() as i64, divisor),
+        figure("chapters", "Suras touched", chapters.len() as i64, divisor),
+        figure(
+            "letters",
+            if letter_filter.is_some() {
+                "Letters matched"
+            } else {
+                "Letters"
+            },
+            letters,
+            divisor,
+        ),
+        figure(
+            "sum_verse_numbers",
+            "Sum of verse numbers, per verse",
+            sum_verse_numbers,
+            divisor,
+        ),
+        figure(
+            "sum_verse_numbers_per_occurrence",
+            "Sum of verse numbers, per occurrence",
+            sum_verse_per_occurrence,
+            divisor,
+        ),
+        figure(
+            "sum_chapter_numbers",
+            "Sum of sura numbers, per verse",
+            sum_chapter_numbers,
+            divisor,
+        ),
+        figure(
+            "sum_addresses",
+            "Sum of sura + verse, per verse",
+            sum_chapter_numbers + sum_verse_numbers,
+            divisor,
+        ),
+        figure(
+            "sum_word_positions",
+            "Sum of word positions",
+            sum_positions,
+            divisor,
+        ),
+    ];
+    if system.is_some() {
+        figures.push(figure("value", "Value", value, divisor));
+    }
+
+    let addr = |a: Option<(u32, u32, u32)>| a.map(|(c, v, p)| format!("{}:{}:{}", c, v, p));
+
+    Ok(Aggregate {
+        provenance: provenance(cfg, mode, &scope, toggles, system.map(|s| s.id.as_str())),
+        divisor,
+        selector: describe_selector(&q),
+        occurrences,
+        verses: verses.len(),
+        chapters: chapters.len(),
+        letters,
+        value: system.map(|_| value),
+        first: addr(first),
+        last: addr(last),
+        examples,
+        figures,
+    })
+}
+
+/// A one-line restatement of what was selected, so a copied figure carries the
+/// question as well as the answer. Provenance covers the counting convention;
+/// this covers the selection, and a figure needs both to be checkable.
+fn describe_selector(q: &AggregateQuery) -> String {
+    let mut parts: Vec<String> = Vec::new();
+    if let Some(t) = q.text.as_deref().map(str::trim).filter(|s| !s.is_empty()) {
+        parts.push(if q.whole_word.unwrap_or(false) {
+            format!("word \"{}\"", t)
+        } else {
+            format!("containing \"{}\"", t)
+        });
+    }
+    if let Some(r) = q.root_id {
+        parts.push(format!("root #{}", r));
+    }
+    if let Some(n) = q.verse_number {
+        parts.push(format!("verses numbered {}", n));
+    }
+    if let Some(list) = &q.chapters {
+        parts.push(format!(
+            "suras {}",
+            list.iter()
+                .map(|c| c.to_string())
+                .collect::<Vec<_>>()
+                .join(", ")
+        ));
+    }
+    match (q.from, q.to) {
+        (Some((fc, fv)), Some((tc, tv))) => parts.push(format!("{}:{} to {}:{}", fc, fv, tc, tv)),
+        (Some((fc, fv)), None) => parts.push(format!("from {}:{}", fc, fv)),
+        (None, Some((tc, tv))) => parts.push(format!("up to {}:{}", tc, tv)),
+        (None, None) => {}
+    }
+    if let Some(l) = q.letters.as_deref().map(str::trim).filter(|s| !s.is_empty()) {
+        parts.push(format!("counting {}", l));
+    }
+    if parts.is_empty() {
+        "every word in scope".to_string()
+    } else {
+        parts.join(", ")
+    }
+}
+
 /* ── tests ─────────────────────────────────────────────────────────────── */
 
 #[cfg(test)]
@@ -3388,4 +3731,211 @@ mod tests {
             budget
         );
     }
+
+    /* ── aggregation ───────────────────────────────────────────────────── */
+
+    /// The divine name, as Appendix 1 counts it: root 56 intersected with the
+    /// definite form. Neither filter alone gives the published figure. The root
+    /// alone also catches إله and آلهة, the generic noun, at 2,844. The string
+    /// alone also catches ٱللَّهُمَّ (a different root) and ضَلَـٰلَة and كَلَـٰلَة,
+    /// at 2,726. Together they are 2,698.
+    fn divine_name() -> AggregateQuery {
+        AggregateQuery {
+            text: Some("لله".to_string()),
+            root_id: Some(56),
+            ..Default::default()
+        }
+    }
+
+    fn agg(q: AggregateQuery) -> Aggregate {
+        aggregate(Some(q), None, None, None, None).expect("aggregate must run")
+    }
+
+    fn total(a: &Aggregate, id: &str) -> i64 {
+        a.figures
+            .iter()
+            .find(|f| f.id == id)
+            .unwrap_or_else(|| panic!("no figure '{}'", id))
+            .total
+    }
+
+    #[test]
+    fn the_divine_name_occurs_2698_times() {
+        let a = agg(divine_name());
+        assert_eq!(a.occurrences, 2698, "Appendix 1: 19 x 142");
+        let f = a.figures.iter().find(|f| f.id == "occurrences").unwrap();
+        assert!(f.exact, "2698 is a multiple of 19");
+        assert_eq!(f.quotient, 142);
+        assert_eq!(f.remainder, 0);
+    }
+
+    /// Either filter on its own overcounts, which is the whole reason the query
+    /// intersects them. If this test ever passes with one of them removed, the
+    /// root data or the fold has changed underneath us.
+    #[test]
+    fn neither_filter_alone_reaches_the_published_figure() {
+        let root_only = agg(AggregateQuery {
+            root_id: Some(56),
+            ..Default::default()
+        });
+        let text_only = agg(AggregateQuery {
+            text: Some("لله".to_string()),
+            ..Default::default()
+        });
+        assert_eq!(root_only.occurrences, 2844, "root 56 also catches إله");
+        assert_eq!(text_only.occurrences, 2726, "the string also catches ضلالة");
+    }
+
+    /// The second Appendix 1 figure, and the reason two verse-number sums are
+    /// reported rather than one: the per-verse sum is the published 118,123 and
+    /// the per-occurrence sum is 182,034, which is not a multiple of 19.
+    #[test]
+    fn the_verse_numbers_of_the_divine_name_sum_to_118123() {
+        let a = agg(divine_name());
+        assert_eq!(total(&a, "sum_verse_numbers"), 118_123, "19 x 6217");
+        assert_eq!(118_123 % 19, 0);
+        assert_eq!(total(&a, "sum_verse_numbers_per_occurrence"), 182_034);
+        assert_ne!(182_034 % 19, 0, "the ambiguity is not harmless");
+        assert_eq!(a.verses, 1820);
+    }
+
+    /// From the first Quranic Initial to the last, and the complement. Both are
+    /// multiples of 19 and they add back to the whole, which is what makes the
+    /// address bounds worth having as a first-class filter.
+    #[test]
+    fn the_span_between_the_first_and_last_initial_splits_2698_into_multiples() {
+        let inside = agg(AggregateQuery {
+            from: Some((2, 1)),
+            to: Some((68, 1)),
+            ..divine_name()
+        });
+        assert_eq!(inside.occurrences, 2641, "Appendix 1: 19 x 139");
+        assert_eq!(2641 % 19, 0);
+
+        let before = agg(AggregateQuery {
+            to: Some((1, 999)),
+            ..divine_name()
+        });
+        let after = agg(AggregateQuery {
+            from: Some((68, 2)),
+            ..divine_name()
+        });
+        assert_eq!(before.occurrences + after.occurrences, 57, "19 x 3");
+        assert_eq!(inside.occurrences + before.occurrences + after.occurrences, 2698);
+    }
+
+    /// A cross-cutting selection: every verse carrying one number, in every
+    /// chapter at once. No scope can express this, which is why the predicate
+    /// lives on the query rather than on `Scope`.
+    #[test]
+    fn qaf_in_every_verse_numbered_19_totals_76() {
+        let a = agg(AggregateQuery {
+            verse_number: Some(19),
+            letters: Some("ق".to_string()),
+            ..Default::default()
+        });
+        assert_eq!(total(&a, "letters"), 76, "Appendix 1: 19 x 4");
+        assert_eq!(76 % 19, 0);
+        assert!(a.verses > 0 && a.verses <= 114);
+    }
+
+    /// The multi-letter initial groups, and a measurement of exactly what the
+    /// alif gap costs. Every letter but alif reproduces its published figure to
+    /// the unit: 877 for lam + mim + ra in sura 13, 2,791 for lam + mim + sad
+    /// in sura 7. Alif alone is short, by 181 and 789, and those two deficits
+    /// are the whole distance between our totals and the published 1,482 and
+    /// 5,320. Asserted as deficits rather than as a passing total because a
+    /// test that quietly expects the wrong number teaches nothing; when the
+    /// alif rule lands these become equalities and the deficits go to zero.
+    #[test]
+    fn every_initial_letter_but_alif_reproduces_exactly() {
+        let published = |q: AggregateQuery| {
+            aggregate(
+                Some(q),
+                Some("khalifa_appendix1".to_string()),
+                None,
+                None,
+                None,
+            )
+            .unwrap()
+        };
+        let with_basmalah = Scope {
+            include_basmalah: Some(true),
+            ..Scope::default()
+        };
+        let letters_in = |chapter: u32, letters: &str| {
+            total(
+                &published(AggregateQuery {
+                    chapters: Some(vec![chapter]),
+                    letters: Some(letters.to_string()),
+                    scope: Some(with_basmalah),
+                    ..Default::default()
+                }),
+                "letters",
+            )
+        };
+
+        assert_eq!(letters_in(13, "لمر"), 877, "sura 13 without alif");
+        assert_eq!(letters_in(7, "لمص"), 2791, "sura 7 without alif");
+
+        assert_eq!(1482 - letters_in(13, "المر"), 181, "sura 13 alif deficit");
+        assert_eq!(5320 - letters_in(7, "المص"), 789, "sura 7 alif deficit");
+    }
+
+    /// An empty query is the whole corpus, and it has to agree with `qc_count`
+    /// for the same scope. Two engines that disagree on the same question are
+    /// worse than one engine, so this is the property that keeps them honest.
+    #[test]
+    fn an_empty_aggregate_agrees_with_the_counter() {
+        let a = agg(AggregateQuery::default());
+        let counts = count(None, None, None).unwrap();
+        let s29 = counts
+            .iter()
+            .find(|c| c.provenance.text_mode == "simplified29")
+            .unwrap();
+        assert_eq!(a.occurrences, s29.words);
+        assert_eq!(a.letters, s29.letters as i64);
+        assert_eq!(a.verses, s29.verses);
+        assert_eq!(a.chapters, s29.chapters);
+    }
+
+    /// The selector travels with the figure. Provenance says how it was
+    /// counted; this says what was counted, and a number needs both before it
+    /// can be checked by anyone else.
+    #[test]
+    fn the_aggregate_states_what_it_selected() {
+        let a = agg(AggregateQuery {
+            from: Some((2, 1)),
+            to: Some((68, 1)),
+            ..divine_name()
+        });
+        assert!(a.selector.contains("root #56"), "{}", a.selector);
+        assert!(a.selector.contains("2:1 to 68:1"), "{}", a.selector);
+        assert_eq!(
+            a.first.as_deref(),
+            Some("2:7:2"),
+            "khatama ALLAHu, the second word of 2:7"
+        );
+        assert!(!a.examples.is_empty() && a.examples.len() <= 24);
+        assert_eq!(agg(AggregateQuery::default()).selector, "every word in scope");
+    }
+
+    /// The divisor is a parameter, not a constant. 19 is the default because it
+    /// is what the literature is about, but a figure that is only ever tested
+    /// against one number cannot be falsified against another.
+    #[test]
+    fn the_divisor_is_a_parameter() {
+        let a = aggregate(Some(divine_name()), None, None, None, Some(7)).unwrap();
+        let f = a.figures.iter().find(|f| f.id == "occurrences").unwrap();
+        assert_eq!(a.divisor, 7);
+        assert_eq!((f.total, f.exact, f.remainder), (2698, false, 2698 % 7));
+    }
+
+    #[test]
+    fn an_uncountable_mode_is_refused_rather_than_answered() {
+        let err = aggregate(None, Some("original".to_string()), None, None, None)
+            .expect_err("Original mode declares itself uncountable");
+        assert!(err.contains("not a countable"), "{}", err);
+    }
+
 }

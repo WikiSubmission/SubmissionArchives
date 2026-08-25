@@ -1,4 +1,4 @@
-import { BookOpen, CaretLeft, CaretRight, ListMagnifyingGlass } from '@phosphor-icons/react'
+import { BookOpen, CaretLeft, CaretRight, ListMagnifyingGlass, Sigma } from '@phosphor-icons/react'
 import type { ChapterInfo } from '../../lib/quranCode'
 import type { ScopeLevel } from '../../hooks/useQuranCode'
 
@@ -15,9 +15,10 @@ interface ScopeBarProps {
   onLevelChange: (level: ScopeLevel) => void
   reading: 'verse' | 'chapter'
   onReadingChange: (reading: 'verse' | 'chapter') => void
-  view: 'read' | 'results'
+  view: View
   hasResults: boolean
-  onViewChange: (view: 'read' | 'results') => void
+  hasTotals: boolean
+  onViewChange: (view: View) => void
 }
 
 /**
@@ -29,6 +30,14 @@ interface ScopeBarProps {
  * picker, and the divisions are disabled with the phase that brings them named,
  * rather than hidden as if they were never coming.
  */
+type View = 'read' | 'results' | 'totals'
+
+const VIEWS = [
+  ['read', 'Read', BookOpen],
+  ['results', 'Results', ListMagnifyingGlass],
+  ['totals', 'Totals', Sigma],
+] as const
+
 export default function ScopeBar({
   chapter,
   verse,
@@ -44,6 +53,7 @@ export default function ScopeBar({
   onReadingChange,
   view,
   hasResults,
+  hasTotals,
   onViewChange,
 }: ScopeBarProps) {
   return (
@@ -100,18 +110,20 @@ export default function ScopeBar({
         })}
       </div>
 
-      {/* Reading and results share the pane, so the switch belongs where the
-          rest of the navigation is rather than floating over the content. */}
-      {hasResults && (
+      {/* Reading, results and totals share the pane, so the switch belongs
+          where the rest of the navigation is rather than floating over the
+          content. A view appears only once it has something to show, which is
+          why the buttons are filtered rather than disabled: a control that can
+          never do anything yet is noise, not affordance. */}
+      {(hasResults || hasTotals) && (
         <div
           role="group"
           aria-label="View mode"
           className="flex items-center rounded-md border border-ed-rule bg-ed-surface p-0.5"
         >
-          {([
-            ['read', 'Read', BookOpen],
-            ['results', 'Results', ListMagnifyingGlass],
-          ] as const).map(([id, label, Icon]) => {
+          {VIEWS.filter(
+            ([id]) => id === 'read' || (id === 'results' ? hasResults : hasTotals)
+          ).map(([id, label, Icon]) => {
             const active = view === id
             return (
               <button
