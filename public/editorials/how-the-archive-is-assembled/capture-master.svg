@@ -1,84 +1,252 @@
 <svg id="fig-master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="master-title master-desc">
-  <title id="master-title">Preservation master</title>
-  <desc id="master-desc">A page scan retained exactly as the original survives: the sheet sits skewed on the platen, its uneven paper edge, age spotting and binding-gutter shadow all left in place, and the ink is captured at its faded density.</desc>
+  <title id="master-title">Preservation Master Capture</title>
+  <desc id="master-desc">A precision technical plate of the preservation master: uncorrected 600 DPI scan sitting 2.60 degrees off square against the platen datum, with paper foxing, deckle edge, and binding gutter shadow retained exactly as the artifact survives.</desc>
 
   <defs>
+    <!-- Technical Blueprint Grids -->
+    <pattern id="master-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#DDD4C4" stroke-width="0.75" opacity="0.6"/>
+      <circle cx="0" cy="0" r="1" fill="#C0B4A0" opacity="0.75"/>
+    </pattern>
+    <pattern id="master-subgrid" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#E6DFD4" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+
+    <!-- Drop Shadow for Paper on Platen Glass -->
+    <filter id="platen-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="3" dy="6" stdDeviation="8" flood-color="#2D251E" flood-opacity="0.12"/>
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#2D251E" flood-opacity="0.08"/>
+    </filter>
+
+    <!-- Gutter Gradient -->
+    <linearGradient id="gutter-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#736554" stop-opacity="0.65"/>
+      <stop offset="25%" stop-color="#9E8D77" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#C2B29A" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#E2D6C3" stop-opacity="0"/>
+    </linearGradient>
+
     <style>
-      #fig-master .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #6E6459; }
-      #fig-master .val { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #A85324; }
-      #fig-master .plate { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 4px; fill: #8C8175; }
-      #fig-master .leader { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
-      #fig-master .pin { fill: #A85324; }
+      #fig-master text { font-family: 'DM Sans', var(--font-dm-sans), -apple-system, sans-serif; }
+      #fig-master .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      #fig-master .plate-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; fill: #A85324; }
+      #fig-master .lbl { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; fill: #1C1A18; text-transform: uppercase; }
+      #fig-master .desc { font-size: 10px; font-weight: 500; fill: #575049; }
+      #fig-master .val { font-size: 13px; font-weight: 700; fill: #A85324; }
+      #fig-master .leader { stroke: #A85324; stroke-width: 1.25; stroke-dasharray: 4 3; fill: none; }
+      #fig-master .pin { fill: #A85324; stroke: #FAF7F2; stroke-width: 1.5; }
+      #fig-master .datum-line { stroke: #8C8175; stroke-width: 1.25; stroke-dasharray: 6 4; fill: none; }
     </style>
   </defs>
 
-  <rect width="1200" height="900" fill="#E5DDD0"/>
+  <!-- Background Base Canvas -->
+  <rect width="1200" height="900" fill="#F4EFE6"/>
+  <rect width="1200" height="900" fill="url(#master-subgrid)"/>
+  <rect width="1200" height="900" fill="url(#master-grid)"/>
 
-  <!-- Platen reference edge: the page is measurably off-square against it. -->
-  <path d="M150 128 H760" stroke="#A79B8B" stroke-width="1.5" stroke-dasharray="5 5"/>
-  <path d="M232 128 A 84 84 0 0 1 236 108" stroke="#A85324" stroke-width="2" fill="none"/>
-  <text class="val" x="252" y="118">2.6°</text>
+  <!-- Outer Blueprint Border & Document Header -->
+  <rect x="24" y="24" width="1152" height="852" fill="none" stroke="#CFC5B4" stroke-width="1.5"/>
+  <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#E5DDD0" stroke-width="1"/>
 
-  <!-- THE SHEET, left exactly as it sits: skewed, uneven edge, aged. -->
-  <g transform="rotate(-2.6 430 470)">
-    <!-- Uneven deckle edge down the right side. -->
-    <path d="M170 140 H690 L694 200 L688 262 L696 324 L690 386 L694 448 L687 510 L695 572 L689 634 L693 696 L690 758 V812 H170 Z"
-          fill="#E8DFCF" stroke="#C6B9A5" stroke-width="2"/>
-
-    <!-- Binding gutter: the shadow a bound spine throws across the page. -->
-    <rect x="170" y="140" width="26" height="672" fill="#C9BCA6" opacity="0.55"/>
-    <rect x="196" y="140" width="20" height="672" fill="#D3C7B3" opacity="0.45"/>
-    <rect x="216" y="140" width="16" height="672" fill="#DDD2C0" opacity="0.35"/>
-
-    <!-- Ink at its surviving density, not lifted. -->
-    <g fill="#9A8F7E">
-      <rect x="268" y="212" width="372" height="11"/>
-      <rect x="268" y="248" width="340" height="11"/>
-      <rect x="268" y="284" width="386" height="11"/>
-      <rect x="268" y="320" width="228" height="11"/>
-      <rect x="268" y="392" width="372" height="11"/>
-      <rect x="268" y="428" width="356" height="11"/>
-      <rect x="268" y="464" width="378" height="11"/>
-      <rect x="268" y="500" width="196" height="11"/>
-      <rect x="268" y="572" width="372" height="11"/>
-      <rect x="268" y="608" width="310" height="11"/>
-      <rect x="268" y="644" width="366" height="11"/>
-      <rect x="268" y="680" width="150" height="11"/>
-    </g>
-
-    <!-- Foxing and handling marks. -->
-    <g fill="#B08A5E" opacity="0.4">
-      <ellipse cx="602" cy="188" rx="17" ry="12"/>
-      <ellipse cx="628" cy="206" rx="9" ry="7"/>
-      <ellipse cx="318" cy="536" rx="13" ry="9"/>
-      <ellipse cx="560" cy="726" rx="21" ry="14"/>
-      <ellipse cx="590" cy="742" rx="10" ry="8"/>
-      <ellipse cx="252" cy="358" rx="8" ry="11"/>
-    </g>
-
-    <!-- A short tear at the foot of the fore-edge. -->
-    <path d="M690 758 L668 774 L690 786" fill="none" stroke="#C6B9A5" stroke-width="2"/>
+  <g transform="translate(44, 48)">
+    <text class="mono plate-title" x="0" y="0">PLATE 02-A · PRESERVATION MASTER</text>
+    <text class="mono" x="0" y="14" font-size="9" letter-spacing="1" fill="#756D65">RAW ARTEFACT RECOVERY · SKEWED PLATEN CAPTURE · UNMODIFIED DENSITY</text>
+    <text class="mono" x="1112" y="0" font-size="9" letter-spacing="1.2" fill="#756D65" text-anchor="end">STATUS: UNTOUCHED MASTER</text>
+    <line x1="0" y1="24" x2="1112" y2="24" stroke="#D5CCC0" stroke-width="1"/>
   </g>
 
-  <!-- CALLOUTS -->
-  <g>
-    <path class="leader" d="M700 196 H812"/>
-    <circle class="pin" cx="700" cy="196" r="4"/>
-    <text class="lbl" x="828" y="203">DECKLE EDGE KEPT</text>
 
-    <path class="leader" d="M622 214 L760 300 H812"/>
-    <circle class="pin" cx="622" cy="214" r="4"/>
-    <text class="lbl" x="828" y="307">FOXING NOT REMOVED</text>
+  <!-- ========================================================================= -->
+  <!-- SCANNER PLATEN WORKBENCH & METRIC GRADUATION SCALES                       -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 96)">
+    <!-- Platen Glass Recessed Frame -->
+    <rect x="0" y="0" width="700" height="720" rx="4" fill="#292522" stroke="#181615" stroke-width="2"/>
+    <rect x="18" y="18" width="664" height="684" fill="#3D3732" stroke="#4F4740" stroke-width="1"/>
 
-    <path class="leader" d="M212 452 L400 862"/>
-    <circle class="pin" cx="212" cy="452" r="4"/>
-    <text class="lbl" x="416" y="869">GUTTER SHADOW</text>
+    <!-- Platen Millimeter Scales (Top & Left) -->
+    <g stroke="#9E9080" stroke-width="1">
+      <!-- Top Axis Ticks (Every 20px = 10mm) -->
+      <line x1="20" y1="18" x2="20" y2="26"/><line x1="60" y1="18" x2="60" y2="26"/><line x1="100" y1="18" x2="100" y2="26"/>
+      <line x1="140" y1="18" x2="140" y2="26"/><line x1="180" y1="18" x2="180" y2="26"/><line x1="220" y1="18" x2="220" y2="26"/>
+      <line x1="260" y1="18" x2="260" y2="26"/><line x1="300" y1="18" x2="300" y2="26"/><line x1="340" y1="18" x2="340" y2="26"/>
+      <line x1="380" y1="18" x2="380" y2="26"/><line x1="420" y1="18" x2="420" y2="26"/><line x1="460" y1="18" x2="460" y2="26"/>
+      <line x1="500" y1="18" x2="500" y2="26"/><line x1="540" y1="18" x2="540" y2="26"/><line x1="580" y1="18" x2="580" y2="26"/>
+      <line x1="620" y1="18" x2="620" y2="26"/><line x1="660" y1="18" x2="660" y2="26"/>
+      <!-- Left Axis Ticks -->
+      <line x1="18" y1="20" x2="26" y2="20"/><line x1="18" y1="60" x2="26" y2="60"/><line x1="18" y1="100" x2="26" y2="100"/>
+      <line x1="18" y1="140" x2="26" y2="140"/><line x1="18" y1="180" x2="26" y2="180"/><line x1="18" y1="220" x2="26" y2="220"/>
+      <line x1="18" y1="260" x2="26" y2="260"/><line x1="18" y1="300" x2="26" y2="300"/><line x1="18" y1="340" x2="26" y2="340"/>
+      <line x1="18" y1="380" x2="26" y2="380"/><line x1="18" y1="420" x2="26" y2="420"/><line x1="18" y1="460" x2="26" y2="460"/>
+      <line x1="18" y1="500" x2="26" y2="500"/><line x1="18" y1="540" x2="26" y2="540"/><line x1="18" y1="580" x2="26" y2="580"/>
+      <line x1="18" y1="620" x2="26" y2="620"/><line x1="18" y1="660" x2="26" y2="660"/>
+    </g>
 
-    <path class="leader" d="M640 470 H812"/>
-    <circle class="pin" cx="640" cy="470" r="4"/>
-    <text class="lbl" x="828" y="477">INK AT SURVIVING</text>
-    <text class="lbl" x="828" y="507">DENSITY</text>
+    <!-- Horizontal Datum Platen Reference Line (True 0.00° Horizontal) -->
+    <line class="datum-line" x1="40" y1="90" x2="640" y2="90"/>
+    <text class="mono" x="50" y="82" font-size="9" font-weight="600" fill="#C9BDAE">PLATEN DATUM: 0.00° HORIZONTAL</text>
+
+    <!-- SKEW PROTRACTOR MEASUREMENT ARC -->
+    <g transform="translate(180, 90)">
+      <path d="M 160 0 A 160 160 0 0 0 159.8 -18" fill="none" stroke="#A85324" stroke-width="2"/>
+      <line x1="0" y1="0" x2="220" y2="-24" stroke="#A85324" stroke-width="1.5" stroke-dasharray="3 2"/>
+      <!-- Degree Readout Chip -->
+      <g transform="translate(230, -32)">
+        <rect x="0" y="0" width="76" height="22" rx="3" fill="#A85324"/>
+        <text class="mono" x="38" y="15" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">θ = -2.60°</text>
+      </g>
+    </g>
+
+    <!-- ======================================================================= -->
+    <!-- THE PRESERVED SHEET (Skewed -2.60° with Deckle Edge, Foxing & Gutter)   -->
+    <!-- ======================================================================= -->
+    <g transform="translate(110, 110) rotate(-2.60 240 280)" filter="url(#platen-shadow)">
+      <!-- Manuscript Parchment Page with Deckle Uneven Edge -->
+      <path d="M 0 0 
+               H 460 
+               L 464 40 L 458 90 L 466 140 L 460 190 L 465 240 L 457 290 L 467 340 L 459 390 L 466 440 L 461 490 L 465 540 L 440 540
+               H 0 Z" 
+            fill="#EFE6D5" stroke="#C8BDAA" stroke-width="1.5"/>
+
+      <!-- Binding Gutter Shadow Gradient on Left Edge -->
+      <rect x="0" y="0" width="70" height="540" fill="url(#gutter-gradient)"/>
+
+      <!-- Surviving Faded Ink Typography Lines -->
+      <g fill="#7A6D5E">
+        <!-- Title Heading -->
+        <rect x="80" y="44" width="220" height="12" rx="1.5"/>
+        <!-- Paragraph 1 -->
+        <rect x="80" y="74" width="340" height="7" rx="1"/>
+        <rect x="80" y="88" width="320" height="7" rx="1"/>
+        <rect x="80" y="102" width="346" height="7" rx="1"/>
+        <rect x="80" y="116" width="310" height="7" rx="1"/>
+        <rect x="80" y="130" width="220" height="7" rx="1"/>
+
+        <!-- Section Header -->
+        <rect x="80" y="160" width="180" height="10" rx="1.5"/>
+
+        <!-- Paragraph 2 -->
+        <rect x="80" y="184" width="338" height="7" rx="1"/>
+        <rect x="80" y="198" width="344" height="7" rx="1"/>
+        <rect x="80" y="212" width="326" height="7" rx="1"/>
+        <rect x="80" y="226" width="350" height="7" rx="1"/>
+        <rect x="80" y="240" width="190" height="7" rx="1"/>
+
+        <!-- Paragraph 3 -->
+        <rect x="80" y="270" width="340" height="7" rx="1"/>
+        <rect x="80" y="284" width="316" height="7" rx="1"/>
+        <rect x="80" y="298" width="342" height="7" rx="1"/>
+        <rect x="80" y="312" width="260" height="7" rx="1"/>
+
+        <!-- Paragraph 4 -->
+        <rect x="80" y="342" width="344" height="7" rx="1"/>
+        <rect x="80" y="356" width="330" height="7" rx="1"/>
+        <rect x="80" y="370" width="348" height="7" rx="1"/>
+        <rect x="80" y="384" width="170" height="7" rx="1"/>
+
+        <!-- Footnote Block -->
+        <line x1="80" y1="430" x2="160" y2="430" stroke="#7A6D5E" stroke-width="1.2"/>
+        <rect x="80" y="444" width="280" height="5" rx="1"/>
+        <rect x="80" y="456" width="240" height="5" rx="1"/>
+      </g>
+
+      <!-- Natural Foxing & Oxidation Marks -->
+      <g fill="#A88152" opacity="0.45">
+        <ellipse cx="380" cy="60" rx="16" ry="11"/>
+        <ellipse cx="410" cy="80" rx="8" ry="6"/>
+        <ellipse cx="140" cy="240" rx="14" ry="10"/>
+        <ellipse cx="370" cy="420" rx="22" ry="15"/>
+        <ellipse cx="395" cy="445" rx="11" ry="8"/>
+        <ellipse cx="60" cy="360" rx="12" ry="9"/>
+      </g>
+
+      <!-- Corner Notch / Paper Handling Tear -->
+      <path d="M 460 480 L 442 494 L 460 508" fill="none" stroke="#B8AA94" stroke-width="1.5"/>
+
+      <!-- Macbeth Color Calibration Target Strip (Attached to platen border) -->
+      <g transform="translate(474, 120)">
+        <rect x="0" y="0" width="16" height="240" fill="#FAF5ED" stroke="#B8A892" stroke-width="1"/>
+        <rect x="2" y="4" width="12" height="26" fill="#735244"/>
+        <rect x="2" y="34" width="12" height="26" fill="#C2957D"/>
+        <rect x="2" y="64" width="12" height="26" fill="#62718B"/>
+        <rect x="2" y="94" width="12" height="26" fill="#576C43"/>
+        <rect x="2" y="124" width="12" height="26" fill="#E0A32E"/>
+        <rect x="2" y="154" width="12" height="26" fill="#D1453B"/>
+        <rect x="2" y="184" width="12" height="26" fill="#2E2C2A"/>
+        <rect x="2" y="214" width="12" height="22" fill="#FFFFFF"/>
+      </g>
+    </g>
   </g>
 
-  <text class="plate" x="60" y="862">PRESERVATION MASTER</text>
+
+  <!-- ========================================================================= -->
+  <!-- RIGHT PANEL: HIGH-PRECISION TECHNICAL SPECIFICATION CARDS                 -->
+  <!-- ========================================================================= -->
+  <g transform="translate(790, 96)">
+    <!-- Card 1: Optical Density Analysis -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="370" height="120" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="120" rx="2" fill="#A85324"/>
+      <text class="lbl" x="18" y="24">SURVIVING INK DENSITY</text>
+      <text class="val" x="18" y="44">D_max = 1.12 · UNCROPPED</text>
+      <text class="desc" x="18" y="66">Ink captured at its natural aged optical density</text>
+      <text class="desc" x="18" y="82">without artificial digital contrast boosting.</text>
+      
+      <!-- Visual Densitometer Step Scale -->
+      <g transform="translate(18, 92)">
+        <rect x="0" y="0" width="28" height="14" fill="#EFE6D5" stroke="#CFC4B0"/>
+        <rect x="28" y="0" width="28" height="14" fill="#D2C7B4" stroke="#CFC4B0"/>
+        <rect x="56" y="0" width="28" height="14" fill="#B5A994" stroke="#CFC4B0"/>
+        <rect x="84" y="0" width="28" height="14" fill="#948772" stroke="#CFC4B0"/>
+        <rect x="112" y="0" width="28" height="14" fill="#756955" stroke="#CFC4B0"/>
+        <text class="mono" x="150" y="11" font-size="8.5" fill="#756D65">STEP DENSITY WEDGE</text>
+      </g>
+    </g>
+
+    <!-- Card 2: Skew & Alignment Geometry -->
+    <g transform="translate(0, 140)">
+      <rect x="0" y="0" width="370" height="120" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="120" rx="2" fill="#A85324"/>
+      <text class="lbl" x="18" y="24">ROTATION &amp; PLATEN GEOMETRY</text>
+      <text class="val" x="18" y="44">Δθ = -2.60° (NATURAL SKEW)</text>
+      <text class="desc" x="18" y="66">Retained precisely as the artifact rested on the</text>
+      <text class="desc" x="18" y="82">scanner glass to preserve binding geometry.</text>
+      <text class="mono" x="18" y="104" font-size="8.5" font-weight="700" fill="#A85324">NO ROTATION RE-INTERPOLATION APPLIED</text>
+    </g>
+
+    <!-- Card 3: Artifact Physical Evidence -->
+    <g transform="translate(0, 280)">
+      <rect x="0" y="0" width="370" height="130" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="130" rx="2" fill="#A85324"/>
+      <text class="lbl" x="18" y="24">PHYSICAL EVIDENCE MARKS</text>
+      <text class="desc" x="18" y="46">✓ Deckle fore-edge profile retained</text>
+      <text class="desc" x="18" y="64">✓ Binding spine gutter shadow preserved</text>
+      <text class="desc" x="18" y="82">✓ Cellulose foxing &amp; age spotting intact</text>
+      <text class="desc" x="18" y="100">✓ Page edge handling crease &amp; notch recorded</text>
+      <text class="mono" x="18" y="118" font-size="8" fill="#756D65">ALL MARKS REMAIN AUDITABLE EVIDENCE</text>
+    </g>
+
+    <!-- Card 4: Hardware Sensor Specifications -->
+    <g transform="translate(0, 430)">
+      <rect x="0" y="0" width="370" height="170" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="170" rx="2" fill="#756D65"/>
+      <text class="lbl" x="18" y="24">CAPTURE PROFILE DATA</text>
+      <g transform="translate(18, 38)">
+        <text class="mono" x="0" y="14" font-size="9" fill="#756D65">SENSOR: <tspan font-weight="700" fill="#1C1A18">Tri-Linear CCD Sensor Array</tspan></text>
+        <text class="mono" x="0" y="32" font-size="9" fill="#756D65">OPTICAL DPI: <tspan font-weight="700" fill="#1C1A18">600 DPI (True Optical)</tspan></text>
+        <text class="mono" x="0" y="50" font-size="9" fill="#756D65">CHANNELS: <tspan font-weight="700" fill="#1C1A18">16-bit Linear Raw Grayscale</tspan></text>
+        <text class="mono" x="0" y="68" font-size="9" fill="#756D65">COMPRESSION: <tspan font-weight="700" fill="#1C1A18">None · Uncompressed TIFF</tspan></text>
+        <text class="mono" x="0" y="86" font-size="9" fill="#756D65">RESTRICTION: <tspan font-weight="700" fill="#A85324">Preservation Storage Only</tspan></text>
+        <text class="mono" x="0" y="104" font-size="9" fill="#756D65">DELIVERY: <tspan font-weight="700" fill="#A85324">Never Directly Served to Web</tspan></text>
+      </g>
+    </g>
+
+    <!-- Card 5: Core Preservation Rule Banner -->
+    <g transform="translate(0, 620)">
+      <rect x="0" y="0" width="370" height="80" rx="4" fill="#FAF5EE" stroke="#A85324" stroke-width="1.25"/>
+      <text class="mono" x="18" y="24" font-size="9.5" font-weight="700" fill="#A85324">RULE OF NON-INTERPRETATION</text>
+      <text class="desc" x="18" y="44">"Restoration is interpretation. An untouched master</text>
+      <text class="desc" x="18" y="60">ensures judgments remain auditable forever."</text>
+    </g>
+  </g>
 </svg>

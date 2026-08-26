@@ -1,19 +1,28 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 export interface PullQuoteProps {
     children: ReactNode;
     attribution?: string;
 }
 
-/** A sentence lifted out of the flow. Not a decoration: use it for the claim
- *  the section turns on. */
+/**
+ * Minimalist provenance rule / pullquote plate.
+ * Clean, typography-focused, without unnecessary symbols or quotes.
+ */
 export function PullQuote({ children, attribution }: PullQuoteProps) {
     return (
-        <blockquote className="editorial-pullquote editorial-breakout">
-            {children}
-            {attribution ? <cite className="editorial-pullquote-attribution">{attribution}</cite> : null}
-        </blockquote>
+        <div className="editorial-callout-plate editorial-breakout">
+            <blockquote className="editorial-callout-quote">
+                {children}
+            </blockquote>
+            {attribution ? (
+                <div className="editorial-callout-attribution">
+                    {attribution}
+                </div>
+            ) : null}
+        </div>
     );
 }
 
@@ -39,16 +48,24 @@ export interface VerseProps {
 }
 
 /**
- * A Quranic citation that links back into the scripture reader, so a reader can
- * verify the quotation in context rather than taking the editorial's word.
+ * Minimalist scripture citation block.
+ * Contains only the verse text and a clean reference link to Quran X:Y.
  */
 export function Verse({ children, chapter, verses }: VerseProps) {
     return (
-        <div className="editorial-verse">
-            <div className="editorial-verse-text">{children}</div>
-            <Link className="editorial-verse-reference" href={`/scripture/quran/${chapter}`}>
-                Quran {chapter}:{verses}
-            </Link>
+        <div className="editorial-verse-card editorial-breakout">
+            <div className="editorial-verse-body">
+                {children}
+            </div>
+            <div className="editorial-verse-footer">
+                <Link
+                    className="editorial-verse-link"
+                    href={`/scripture/quran/${chapter}`}
+                >
+                    Quran {chapter}:{verses}
+                    <ArrowUpRight className="h-3 w-3" aria-hidden="true" />
+                </Link>
+            </div>
         </div>
     );
 }
@@ -76,7 +93,7 @@ export function Notes({ children }: NotesProps) {
     return (
         <section className="editorial-notes" aria-labelledby="editorial-notes-title">
             <h2 className="editorial-notes-title" id="editorial-notes-title">
-                Notes
+                Notes &amp; Citations
             </h2>
             {children}
         </section>
@@ -94,7 +111,7 @@ export function Note({ id, children }: NoteProps) {
             <a className="editorial-note-index" href={`#ref-${id}`} aria-label={`Back to reference ${id}`}>
                 {id}
             </a>
-            <div>{children}</div>
+            <div className="editorial-note-content">{children}</div>
         </div>
     );
 }

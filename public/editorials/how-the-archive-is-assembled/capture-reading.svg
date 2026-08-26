@@ -1,84 +1,240 @@
 <svg id="fig-reading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="reading-title reading-desc">
-  <title id="reading-title">Reading copy</title>
-  <desc id="reading-desc">The same page derived for reading: squared to the platen, cropped to the text block, and the ink lifted to a legible density. A ghosted outline marks the extent of the master it was derived from, which is kept unchanged alongside it.</desc>
+  <title id="reading-title">Reading Copy Derivation</title>
+  <desc id="reading-desc">A technical schematic of the derived reading copy: digitally deskewed to 0.00 degrees, cropped to the clean text block with dimension marks, and contrast-normalized for optimum legibility while retaining the unmodified master in parallel.</desc>
 
   <defs>
+    <!-- Blueprint Grids -->
+    <pattern id="read-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#DDD4C4" stroke-width="0.75" opacity="0.6"/>
+      <circle cx="0" cy="0" r="1" fill="#C0B4A0" opacity="0.75"/>
+    </pattern>
+    <pattern id="read-subgrid" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#E6DFD4" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+
+    <!-- Reading Sheet Drop Shadow -->
+    <filter id="sheet-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1C1A18" flood-opacity="0.1"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1C1A18" flood-opacity="0.06"/>
+    </filter>
+
     <style>
-      #fig-reading .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #6E6459; }
-      #fig-reading .val { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #A85324; }
-      #fig-reading .plate { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 4px; fill: #8C8175; }
-      #fig-reading .leader { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
-      #fig-reading .pin { fill: #A85324; }
+      #fig-reading text { font-family: 'DM Sans', var(--font-dm-sans), -apple-system, sans-serif; }
+      #fig-reading .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      #fig-reading .plate-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; fill: #A85324; }
+      #fig-reading .lbl { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; fill: #1C1A18; text-transform: uppercase; }
+      #fig-reading .desc { font-size: 10px; font-weight: 500; fill: #575049; }
+      #fig-reading .val { font-size: 13px; font-weight: 700; fill: #A85324; }
+      #fig-reading .crop-mark { stroke: #A85324; stroke-width: 1.75; fill: none; }
+      #fig-reading .ghost-edge { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; opacity: 0.6; }
+      #fig-reading .datum-line { stroke: #8C8175; stroke-width: 1.25; stroke-dasharray: 6 4; fill: none; }
     </style>
   </defs>
 
-  <rect width="1200" height="900" fill="#E5DDD0"/>
+  <!-- Background Base Canvas -->
+  <rect width="1200" height="900" fill="#F4EFE6"/>
+  <rect width="1200" height="900" fill="url(#read-subgrid)"/>
+  <rect width="1200" height="900" fill="url(#read-grid)"/>
 
-  <!-- Now square to the platen: the angle has gone to zero. -->
-  <path d="M150 128 H760" stroke="#A79B8B" stroke-width="1.5" stroke-dasharray="5 5"/>
-  <text class="val" x="252" y="118">0.0°</text>
+  <!-- Outer Blueprint Border & Header -->
+  <rect x="24" y="24" width="1152" height="852" fill="none" stroke="#CFC5B4" stroke-width="1.5"/>
+  <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#E5DDD0" stroke-width="1"/>
 
-  <!-- Ghost of the master this copy was derived from, kept to scale. -->
-  <g transform="rotate(-2.6 430 470)" opacity="0.34">
-    <path d="M170 140 H690 L694 200 L688 262 L696 324 L690 386 L694 448 L687 510 L695 572 L689 634 L693 696 L690 758 V812 H170 Z"
-          fill="none" stroke="#A79B8B" stroke-width="2" stroke-dasharray="7 6"/>
+  <g transform="translate(44, 48)">
+    <text class="mono plate-title" x="0" y="0">PLATE 02-B · READING COPY (DERIVED)</text>
+    <text class="mono" x="0" y="14" font-size="9" letter-spacing="1" fill="#756D65">ALGORITHMIC DERIVATION · DESKEWED · CROPPED TO TEXT BLOCK · CONTRAST NORMALIZED</text>
+    <text class="mono" x="1112" y="0" font-size="9" letter-spacing="1.2" fill="#756D65" text-anchor="end">STATUS: DERIVED ACCESS COPY</text>
+    <line x1="0" y1="24" x2="1112" y2="24" stroke="#D5CCC0" stroke-width="1"/>
   </g>
 
-  <!-- Crop marks: what the reading copy trims away. -->
-  <g stroke="#A85324" stroke-width="2" fill="none">
-    <path d="M244 190 V162 H272"/>
-    <path d="M660 190 V162 H632"/>
-    <path d="M244 748 V776 H272"/>
-    <path d="M660 748 V776 H632"/>
+
+  <!-- ========================================================================= -->
+  <!-- SCANNER PLATEN WORKBENCH WITH DESKEWED & CROPPED READING SHEET           -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 96)">
+    <!-- Platen Glass Recessed Frame -->
+    <rect x="0" y="0" width="700" height="720" rx="4" fill="#292522" stroke="#181615" stroke-width="2"/>
+    <rect x="18" y="18" width="664" height="684" fill="#3D3732" stroke="#4F4740" stroke-width="1"/>
+
+    <!-- Platen Millimeter Scales -->
+    <g stroke="#9E9080" stroke-width="1">
+      <!-- Top Axis Ticks -->
+      <line x1="20" y1="18" x2="20" y2="26"/><line x1="60" y1="18" x2="60" y2="26"/><line x1="100" y1="18" x2="100" y2="26"/>
+      <line x1="140" y1="18" x2="140" y2="26"/><line x1="180" y1="18" x2="180" y2="26"/><line x1="220" y1="18" x2="220" y2="26"/>
+      <line x1="260" y1="18" x2="260" y2="26"/><line x1="300" y1="18" x2="300" y2="26"/><line x1="340" y1="18" x2="340" y2="26"/>
+      <line x1="380" y1="18" x2="380" y2="26"/><line x1="420" y1="18" x2="420" y2="26"/><line x1="460" y1="18" x2="460" y2="26"/>
+      <line x1="500" y1="18" x2="500" y2="26"/><line x1="540" y1="18" x2="540" y2="26"/><line x1="580" y1="18" x2="580" y2="26"/>
+      <line x1="620" y1="18" x2="620" y2="26"/><line x1="660" y1="18" x2="660" y2="26"/>
+      <!-- Left Axis Ticks -->
+      <line x1="18" y1="20" x2="26" y2="20"/><line x1="18" y1="60" x2="26" y2="60"/><line x1="18" y1="100" x2="26" y2="100"/>
+      <line x1="18" y1="140" x2="26" y2="140"/><line x1="18" y1="180" x2="26" y2="180"/><line x1="18" y1="220" x2="26" y2="220"/>
+      <line x1="18" y1="260" x2="26" y2="260"/><line x1="18" y1="300" x2="26" y2="300"/><line x1="18" y1="340" x2="26" y2="340"/>
+      <line x1="18" y1="380" x2="26" y2="380"/><line x1="18" y1="420" x2="26" y2="420"/><line x1="18" y1="460" x2="26" y2="460"/>
+      <line x1="18" y1="500" x2="26" y2="500"/><line x1="18" y1="540" x2="26" y2="540"/><line x1="18" y1="580" x2="26" y2="580"/>
+      <line x1="18" y1="620" x2="26" y2="620"/><line x1="18" y1="660" x2="26" y2="660"/>
+    </g>
+
+    <!-- Horizontal Datum Platen Reference Line (True 0.00° Horizontal) -->
+    <line class="datum-line" x1="40" y1="90" x2="640" y2="90"/>
+    <text class="mono" x="50" y="82" font-size="9" font-weight="600" fill="#C9BDAE">PLATEN DATUM: 0.00° (ALIGNED)</text>
+
+    <!-- DESKEW CONFIRMATION BADGE -->
+    <g transform="translate(410, 58)">
+      <rect x="0" y="0" width="110" height="22" rx="3" fill="#A85324"/>
+      <text class="mono" x="55" y="15" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">θ = 0.00° SQUARED</text>
+    </g>
+
+    <!-- GHOSTED OUTLINE OF ORIGINAL UNCORRECTED MASTER (Rotated -2.60°) -->
+    <g transform="translate(110, 110) rotate(-2.60 240 280)">
+      <path class="ghost-edge" 
+            d="M 0 0 H 460 L 464 40 L 458 90 L 466 140 L 460 190 L 465 240 L 457 290 L 467 340 L 459 390 L 466 440 L 461 490 L 465 540 L 440 540 H 0 Z"/>
+      <text class="mono" x="230" y="-12" font-size="8.5" fill="#A79B8B" text-anchor="middle">GHOSTED EXTENT OF MASTER ARTEFACT</text>
+    </g>
+
+    <!-- CROP MARKS (Corner Precision Brackets around reading block) -->
+    <g class="crop-mark">
+      <!-- Top-Left -->
+      <path d="M 130 140 H 155 M 140 130 V 155"/>
+      <!-- Top-Right -->
+      <path d="M 550 140 H 525 M 540 130 V 155"/>
+      <!-- Bottom-Left -->
+      <path d="M 130 620 H 155 M 140 630 V 605"/>
+      <!-- Bottom-Right -->
+      <path d="M 550 620 H 525 M 540 630 V 605"/>
+    </g>
+
+    <!-- ======================================================================= -->
+    <!-- THE DERIVED READING SHEET (Deskewed 0.00°, Cropped, High-Contrast Ink) -->
+    <!-- ======================================================================= -->
+    <g transform="translate(150, 150)" filter="url(#sheet-shadow)">
+      <!-- Pure Clean White/Ivory Sheet -->
+      <rect x="0" y="0" width="380" height="460" rx="2" fill="#FFFFFF" stroke="#D5CCC0" stroke-width="1.25"/>
+
+      <!-- High-Contrast Clean Typography Block -->
+      <g fill="#1C1A18">
+        <!-- Title Heading -->
+        <rect x="36" y="36" width="200" height="12" rx="1"/>
+        <!-- Subtitle/Lead -->
+        <rect x="36" y="56" width="280" height="6" rx="0.75" fill="#A85324"/>
+        <rect x="36" y="66" width="240" height="6" rx="0.75" fill="#A85324"/>
+
+        <!-- Divider Line -->
+        <line x1="36" y1="84" x2="344" y2="84" stroke="#EFE9DF" stroke-width="1"/>
+
+        <!-- Paragraph 1 -->
+        <rect x="36" y="98" width="308" height="6" rx="0.75"/>
+        <rect x="36" y="110" width="292" height="6" rx="0.75"/>
+        <rect x="36" y="122" width="304" height="6" rx="0.75"/>
+        <rect x="36" y="134" width="280" height="6" rx="0.75"/>
+        <rect x="36" y="146" width="190" height="6" rx="0.75"/>
+
+        <!-- Section 2 Heading -->
+        <rect x="36" y="172" width="160" height="9" rx="1"/>
+
+        <!-- Paragraph 2 -->
+        <rect x="36" y="192" width="304" height="6" rx="0.75"/>
+        <rect x="36" y="204" width="310" height="6" rx="0.75"/>
+        <rect x="36" y="216" width="288" height="6" rx="0.75"/>
+        <rect x="36" y="228" width="306" height="6" rx="0.75"/>
+        <rect x="36" y="240" width="170" height="6" rx="0.75"/>
+
+        <!-- Paragraph 3 -->
+        <rect x="36" y="266" width="308" height="6" rx="0.75"/>
+        <rect x="36" y="278" width="284" height="6" rx="0.75"/>
+        <rect x="36" y="290" width="304" height="6" rx="0.75"/>
+        <rect x="36" y="302" width="240" height="6" rx="0.75"/>
+
+        <!-- Paragraph 4 -->
+        <rect x="36" y="328" width="306" height="6" rx="0.75"/>
+        <rect x="36" y="340" width="296" height="6" rx="0.75"/>
+        <rect x="36" y="352" width="310" height="6" rx="0.75"/>
+        <rect x="36" y="364" width="150" height="6" rx="0.75"/>
+
+        <!-- Footnotes Divider & Clean Footnotes -->
+        <line x1="36" y1="394" x2="110" y2="394" stroke="#D5CCC0" stroke-width="1"/>
+        <rect x="36" y="406" width="260" height="5" rx="0.75" fill="#756D65"/>
+        <rect x="36" y="416" width="220" height="5" rx="0.75" fill="#756D65"/>
+      </g>
+    </g>
   </g>
 
-  <!-- THE DERIVED SHEET: squared, cropped to the text block, ink lifted. -->
-  <rect x="252" y="170" width="400" height="598" fill="#FBF8F3" stroke="#CFC4B2" stroke-width="2"/>
 
-  <g fill="#4A443C">
-    <rect x="292" y="222" width="320" height="11"/>
-    <rect x="292" y="258" width="292" height="11"/>
-    <rect x="292" y="294" width="332" height="11"/>
-    <rect x="292" y="330" width="196" height="11"/>
-    <rect x="292" y="396" width="320" height="11"/>
-    <rect x="292" y="432" width="306" height="11"/>
-    <rect x="292" y="468" width="326" height="11"/>
-    <rect x="292" y="504" width="168" height="11"/>
-    <rect x="292" y="570" width="320" height="11"/>
-    <rect x="292" y="606" width="266" height="11"/>
-    <rect x="292" y="642" width="314" height="11"/>
-    <rect x="292" y="678" width="128" height="11"/>
+  <!-- ========================================================================= -->
+  <!-- RIGHT PANEL: DERIVATION METRICS & TONE CURVE TRANSFORM ANALYSIS           -->
+  <!-- ========================================================================= -->
+  <g transform="translate(790, 96)">
+    <!-- Card 1: Optical Density Lifted -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="370" height="120" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="120" rx="2" fill="#A85324"/>
+      <text class="lbl" x="18" y="24">ENHANCED READING DENSITY</text>
+      <text class="val" x="18" y="44">D_max = 1.85 · NORMALIZED</text>
+      <text class="desc" x="18" y="66">Contrast expanded to full dynamic range</text>
+      <text class="desc" x="18" y="82">for maximum reading clarity on digital screens.</text>
+      
+      <!-- Side-by-side density contrast chip -->
+      <g transform="translate(18, 92)">
+        <rect x="0" y="0" width="40" height="14" fill="#7A6D5E" stroke="#D0C6B4"/>
+        <text class="mono" x="20" y="11" font-size="7.5" fill="#FFFFFF" text-anchor="middle">MASTER</text>
+        <rect x="44" y="0" width="40" height="14" fill="#1C1A18"/>
+        <text class="mono" x="64" y="11" font-size="7.5" fill="#FFFFFF" text-anchor="middle">READING</text>
+        <text class="mono" x="96" y="11" font-size="8.5" fill="#A85324">+65% CONTRAST LIFT</text>
+      </g>
+    </g>
+
+    <!-- Card 2: Tone Curve Transfer Function (Mini Graph) -->
+    <g transform="translate(0, 140)">
+      <rect x="0" y="0" width="370" height="130" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="130" rx="2" fill="#A85324"/>
+      <text class="lbl" x="18" y="24">TONE RE-MAPPING FUNCTION</text>
+      
+      <!-- Mini S-Curve Graph -->
+      <g transform="translate(18, 38)">
+        <!-- Grid Box -->
+        <rect x="0" y="0" width="80" height="70" fill="#FFFFFF" stroke="#D8CEC0"/>
+        <line x1="0" y1="70" x2="80" y2="0" stroke="#DDD4C6" stroke-width="1" stroke-dasharray="2 2"/>
+        <!-- S-Curve -->
+        <path d="M 0 70 Q 25 65 40 35 T 80 0" fill="none" stroke="#A85324" stroke-width="2.5"/>
+        <!-- Text beside graph -->
+        <text class="mono" x="94" y="16" font-size="8.5" font-weight="700" fill="#1C1A18">SIGMOID EXPANSION</text>
+        <text class="desc" x="94" y="32">Highlights pinned to 255</text>
+        <text class="desc" x="94" y="48">Gutter shadows suppressed</text>
+        <text class="desc" x="94" y="64">Ink density boosted to 0</text>
+      </g>
+    </g>
+
+    <!-- Card 3: Geometric Transformation Log -->
+    <g transform="translate(0, 290)">
+      <rect x="0" y="0" width="370" height="130" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="130" rx="2" fill="#756D65"/>
+      <text class="lbl" x="18" y="24">GEOMETRIC TRANSFORM LOG</text>
+      <g transform="translate(18, 38)">
+        <text class="mono" x="0" y="14" font-size="9" fill="#756D65">ROTATION: <tspan font-weight="700" fill="#A85324">+2.60° (Deskew to platen)</tspan></text>
+        <text class="mono" x="0" y="32" font-size="9" fill="#756D65">CROP ORIGIN: <tspan font-weight="700" fill="#1C1A18">X: 24.5mm, Y: 18.0mm</tspan></text>
+        <text class="mono" x="0" y="50" font-size="9" fill="#756D65">TRIMMED AREA: <tspan font-weight="700" fill="#1C1A18">Deckle Edge &amp; Gutter Shadow</tspan></text>
+        <text class="mono" x="0" y="68" font-size="9" fill="#756D65">OUTPUT SIZE: <tspan font-weight="700" fill="#1C1A18">148 × 210 mm (Standard A5)</tspan></text>
+      </g>
+    </g>
+
+    <!-- Card 4: Web Delivery Profile -->
+    <g transform="translate(0, 440)">
+      <rect x="0" y="0" width="370" height="160" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="5" height="160" rx="2" fill="#756D65"/>
+      <text class="lbl" x="18" y="24">PUBLIC DELIVERY SPECIFICATION</text>
+      <g transform="translate(18, 38)">
+        <text class="mono" x="0" y="14" font-size="9" fill="#756D65">TARGET FORMAT: <tspan font-weight="700" fill="#1C1A18">WebP / AVIF (Lossless/High-Q)</tspan></text>
+        <text class="mono" x="0" y="32" font-size="9" fill="#756D65">COLOR PROFILE: <tspan font-weight="700" fill="#1C1A18">sRGB IEC61966-2.1</tspan></text>
+        <text class="mono" x="0" y="50" font-size="9" fill="#756D65">AUDIT TRAIL: <tspan font-weight="700" fill="#1C1A18">Full transformation script logged</tspan></text>
+        <text class="mono" x="0" y="68" font-size="9" fill="#756D65">REVERSIBILITY: <tspan font-weight="700" fill="#A85324">100% Reversible via Master</tspan></text>
+      </g>
+    </g>
+
+    <!-- Card 5: Core Preservation Rule Banner -->
+    <g transform="translate(0, 620)">
+      <rect x="0" y="0" width="370" height="80" rx="4" fill="#FAF5EE" stroke="#A85324" stroke-width="1.25"/>
+      <text class="mono" x="18" y="24" font-size="9.5" font-weight="700" fill="#A85324">PROVENANCE PARALLEL PRINCIPLE</text>
+      <text class="desc" x="18" y="44">"Any correction applied to the reading copy is a transformation</text>
+      <text class="desc" x="18" y="60">that can be described, repeated, and reversed."</text>
+    </g>
   </g>
-
-  <!-- Density scale: the same ink, read off two different copies. -->
-  <g transform="translate(828 560)">
-    <text class="lbl" x="0" y="0">DENSITY</text>
-    <rect x="0" y="22" width="52" height="26" fill="#9A8F7E" stroke="#C6B9A5" stroke-width="1.5"/>
-    <rect x="52" y="22" width="52" height="26" fill="#4A443C" stroke="#C6B9A5" stroke-width="1.5"/>
-    <text class="lbl" x="0" y="76" font-size="17" letter-spacing="1.6">MASTER</text>
-    <text class="lbl" x="112" y="76" font-size="17" letter-spacing="1.6">READING</text>
-  </g>
-
-  <!-- CALLOUTS -->
-  <g>
-    <path class="leader" d="M652 200 H812"/>
-    <circle class="pin" cx="652" cy="200" r="4"/>
-    <text class="lbl" x="828" y="207">CROPPED TO THE</text>
-    <text class="lbl" x="828" y="237">TEXT BLOCK</text>
-
-    <path class="leader" d="M612 300 H812"/>
-    <circle class="pin" cx="612" cy="300" r="4"/>
-    <text class="lbl" x="828" y="307">DESKEWED, SQUARE</text>
-    <text class="lbl" x="828" y="337">TO THE PLATEN</text>
-
-    <path class="leader" d="M624 468 H812"/>
-    <circle class="pin" cx="624" cy="468" r="4"/>
-    <text class="lbl" x="828" y="475">CONTRAST LIFTED</text>
-
-    <path class="leader" d="M196 372 L120 372 V846 H236"/>
-    <circle class="pin" cx="196" cy="372" r="4"/>
-    <text class="lbl" x="252" y="853">MASTER RETAINED, UNCHANGED</text>
-  </g>
-
-  <text class="plate" x="60" y="122">READING COPY</text>
 </svg>

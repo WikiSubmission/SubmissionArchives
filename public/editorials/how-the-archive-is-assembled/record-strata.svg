@@ -1,200 +1,415 @@
 <svg id="fig-strata" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1140" width="1400" height="1140" role="img" aria-labelledby="strata-title strata-desc">
-  <title id="strata-title">The strata of one archived item</title>
-  <desc id="strata-desc">An exploded view of the six artefacts one item leaves behind: the source object, the preservation master captured from it, the reading copy derived from that master, the transcript set down from the reading copy with its method recorded, the segment index that binds each passage to a locator, and the search result a reader is finally shown. An evidence path runs back up the stack, because every result can be traced to the object it came from.</desc>
+  <title id="strata-title">The Strata of One Archived Item</title>
+  <desc id="strata-desc">An exploded isometric projection of the six artefacts one archived item leaves behind: the source physical object, the preservation master, the reading copy, the transcript, the segment index, and the search result. A continuous evidence path runs back up the stack, allowing complete provenance verification.</desc>
 
   <defs>
+    <!-- Blueprint Grids -->
+    <pattern id="strata-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#DDD4C4" stroke-width="0.75" opacity="0.6"/>
+      <circle cx="0" cy="0" r="1" fill="#C0B4A0" opacity="0.75"/>
+    </pattern>
+    <pattern id="strata-subgrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#E6DFD4" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+
+    <!-- Isometric Plate Drop Shadow -->
+    <filter id="iso-shadow" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#261E16" flood-opacity="0.14"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#261E16" flood-opacity="0.08"/>
+    </filter>
+
+    <!-- Glow for Evidence Path -->
+    <filter id="laser-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
     <style>
-      #fig-strata .name  { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 25px; font-weight: 500; letter-spacing: 2.8px; fill: #4A443C; }
-      #fig-strata .note  { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; letter-spacing: 0.4px; fill: #8C8175; }
-      #fig-strata .tag   { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 500; letter-spacing: 2.4px; }
-      #fig-strata .stage { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 2.6px; fill: #A85324; }
-      #fig-strata .cap   { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 500; letter-spacing: 3px; fill: #8C8175; }
-      #fig-strata .lead  { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
-      #fig-strata .pin   { fill: #A85324; }
-      #fig-strata .face  { stroke: #A79B8B; stroke-width: 2; }
-      #fig-strata .side  { stroke: #A79B8B; stroke-width: 2; }
-      #fig-strata .brace { stroke: #C9A184; stroke-width: 2; fill: none; }
+      #fig-strata text { font-family: 'DM Sans', var(--font-dm-sans), -apple-system, sans-serif; }
+      #fig-strata .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      #fig-strata .strata-title { font-size: 15px; font-weight: 700; letter-spacing: 2px; fill: #1C1A18; text-transform: uppercase; }
+      #fig-strata .strata-desc { font-size: 12.5px; font-weight: 500; fill: #575049; }
+      #fig-strata .strata-tag { font-size: 9.5px; font-weight: 700; letter-spacing: 1.2px; }
+      #fig-strata .stage-num { font-size: 13px; font-weight: 700; letter-spacing: 1.8px; fill: #A85324; }
+      #fig-strata .lead-line { stroke: #A79B8B; stroke-width: 1.25; stroke-dasharray: 4 3; fill: none; }
+      #fig-strata .pin-dot { fill: #A85324; stroke: #FAF7F2; stroke-width: 1.5; }
+      #fig-strata .iso-top { stroke: #C8BDAA; stroke-width: 1.5; }
+      #fig-strata .iso-edge { stroke: #A79B8B; stroke-width: 1.5; }
     </style>
   </defs>
 
-  <rect width="1400" height="1140" fill="#E5DDD0"/>
+  <!-- Background Canvas -->
+  <rect width="1400" height="1140" fill="#F4EFE6"/>
+  <rect width="1400" height="1140" fill="url(#strata-subgrid)"/>
+  <rect width="1400" height="1140" fill="url(#strata-grid)"/>
 
-  <!-- ══════════ 01 · SOURCE OBJECT ══════════ -->
-  <g>
-    <path class="side" d="M760 190 L600 270 L600 286 L760 206 Z" fill="#CFC2AC"/>
-    <path class="side" d="M360 150 L600 270 L600 286 L360 166 Z" fill="#DCD1BD"/>
-    <path class="face" d="M520 70 L760 190 L600 270 L360 150 Z" fill="#EFE9DE"/>
-    <g transform="matrix(2.4 1.2 -1.6 0.8 520 70)">
-      <rect x="16" y="22" width="17" height="56" fill="#B3A897"/>
-      <rect x="35" y="18" width="14" height="60" fill="#C6B9A5"/>
-      <rect x="51" y="24" width="19" height="54" fill="#9A8F7E"/>
-      <rect x="72" y="20" width="13" height="58" fill="#C6B9A5"/>
-      <rect x="51" y="24" width="19" height="7" fill="#A85324"/>
-    </g>
-    <path class="lead" d="M700 224 H852"/>
-    <circle class="pin" cx="700" cy="224" r="4"/>
+  <!-- Blueprint Outer Border & Metadata Header -->
+  <rect x="28" y="28" width="1344" height="1084" fill="none" stroke="#CFC5B4" stroke-width="1.5"/>
+  <rect x="32" y="32" width="1336" height="1076" fill="none" stroke="#E5DDD0" stroke-width="1"/>
+
+  <g transform="translate(52, 54)">
+    <text class="mono" x="0" y="0" font-size="11" font-weight="700" letter-spacing="2" fill="#A85324">SUBMISSION ARCHIVES · SYSTEM ARTEFACT STRATA</text>
+    <text class="mono" x="0" y="16" font-size="9.5" letter-spacing="1" fill="#756D65">EXPLODED ISOMETRIC PROJECTION · 6 DISCRETE RETENTION LAYERS · FULL PROVENANCE TRACE</text>
+    <text class="mono" x="1296" y="0" font-size="9.5" letter-spacing="1.5" fill="#756D65" text-anchor="end">AXONOMETRIC 30° / 30°</text>
+    <line x1="0" y1="26" x2="1296" y2="26" stroke="#D5CCC0" stroke-width="1"/>
   </g>
 
-  <!-- ══════════ 02 · PRESERVATION MASTER ══════════ -->
-  <g>
-    <path class="side" d="M760 340 L600 420 L600 436 L760 356 Z" fill="#CFC2AC"/>
-    <path class="side" d="M360 300 L600 420 L600 436 L360 316 Z" fill="#DCD1BD"/>
-    <path class="face" d="M520 220 L760 340 L600 420 L360 300 Z" fill="#E8DFCF"/>
-    <g transform="matrix(2.4 1.2 -1.6 0.8 520 220)">
-      <rect x="16" y="16" width="68" height="68" fill="#DFD4C0"/>
-      <rect x="16" y="16" width="6" height="68" fill="#C4B6A0"/>
-      <g fill="#9A8F7E">
-        <rect x="28" y="26" width="46" height="4"/><rect x="28" y="36" width="40" height="4"/>
-        <rect x="28" y="46" width="48" height="4"/><rect x="28" y="56" width="26" height="4"/>
-        <rect x="28" y="66" width="44" height="4"/>
+
+  <!-- ========================================================================= -->
+  <!-- LEFT PANEL: PIPELINE STAGE BRACKETS & VERTICAL LASER EVIDENCE PATH       -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 0)">
+    <!-- Stage Brackets -->
+    <!-- 01 ACQUIRE -->
+    <g transform="translate(180, 200)">
+      <path d="M 28 -28 H 0 V 28 H 28" fill="none" stroke="#C9A184" stroke-width="1.75"/>
+      <text class="stage-num" x="-14" y="5" text-anchor="end">01 ACQUIRE</text>
+      <text class="mono" x="-14" y="20" font-size="8.5" fill="#756D65" text-anchor="end">PRIMARY INTAKE</text>
+    </g>
+
+    <!-- 02 DIGITISE -->
+    <g transform="translate(180, 430)">
+      <path d="M 28 -80 H 0 V 80 H 28" fill="none" stroke="#C9A184" stroke-width="1.75"/>
+      <text class="stage-num" x="-14" y="-6" text-anchor="end">02 DIGITISE</text>
+      <text class="mono" x="-14" y="9" font-size="8.5" fill="#756D65" text-anchor="end">NON-DESTRUCTIVE</text>
+      <text class="mono" x="-14" y="22" font-size="8.5" fill="#756D65" text-anchor="end">MASTER + READING</text>
+    </g>
+
+    <!-- 03 TRANSCRIBE -->
+    <g transform="translate(180, 680)">
+      <path d="M 28 -28 H 0 V 28 H 28" fill="none" stroke="#C9A184" stroke-width="1.75"/>
+      <text class="stage-num" x="-14" y="5" text-anchor="end">03 TRANSCRIBE</text>
+      <text class="mono" x="-14" y="20" font-size="8.5" fill="#756D65" text-anchor="end">DUAL-PASS VERIFIED</text>
+    </g>
+
+    <!-- 04 INDEX -->
+    <g transform="translate(180, 910)">
+      <path d="M 28 -80 H 0 V 80 H 28" fill="none" stroke="#C9A184" stroke-width="1.75"/>
+      <text class="stage-num" x="-14" y="-6" text-anchor="end">04 INDEX</text>
+      <text class="mono" x="-14" y="9" font-size="8.5" fill="#756D65" text-anchor="end">SEGMENT LOCATORS</text>
+      <text class="mono" x="-14" y="22" font-size="8.5" fill="#756D65" text-anchor="end">PUBLIC EVIDENCE</text>
+    </g>
+
+    <!-- Vertical Evidence Laser Path Line -->
+    <g transform="translate(250, 0)">
+      <!-- Pulsing Glow Line -->
+      <line x1="0" y1="990" x2="0" y2="175" stroke="#A85324" stroke-width="3" stroke-dasharray="10 6" filter="url(#laser-glow)"/>
+      <line x1="0" y1="990" x2="0" y2="175" stroke="#F6D7C3" stroke-width="1.2"/>
+
+      <!-- Upward Arrow Head (Ground Truth Anchor) -->
+      <path d="M -8 190 L 0 170 L 8 190" fill="none" stroke="#A85324" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Horizontal Strata Tie-Ins -->
+      <g stroke="#A85324" stroke-width="1.5">
+        <!-- 01 -->
+        <line x1="0" y1="200" x2="90" y2="200"/>
+        <circle cx="0" cy="200" r="4" fill="#A85324"/>
+        <!-- 02 -->
+        <line x1="0" y1="350" x2="90" y2="350"/>
+        <circle cx="0" cy="350" r="4" fill="#A85324"/>
+        <!-- 03 -->
+        <line x1="0" y1="500" x2="90" y2="500"/>
+        <circle cx="0" cy="500" r="4" fill="#A85324"/>
+        <!-- 04 -->
+        <line x1="0" y1="650" x2="90" y2="650"/>
+        <circle cx="0" cy="650" r="4" fill="#A85324"/>
+        <!-- 05 -->
+        <line x1="0" y1="800" x2="90" y2="800"/>
+        <circle cx="0" cy="800" r="4" fill="#A85324"/>
+        <!-- 06 -->
+        <line x1="0" y1="950" x2="90" y2="950"/>
+        <circle cx="0" cy="950" r="4" fill="#A85324"/>
       </g>
-      <ellipse cx="72" cy="24" rx="5" ry="4" fill="#B08A5E" opacity="0.5"/>
-      <ellipse cx="36" cy="74" rx="6" ry="4" fill="#B08A5E" opacity="0.45"/>
+
+      <!-- Label at Bottom -->
+      <rect x="-60" y="1010" width="120" height="28" rx="3" fill="#A85324"/>
+      <text class="mono" x="0" y="1028" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">EVIDENCE TRACE</text>
     </g>
-    <path class="lead" d="M700 374 H852"/>
-    <circle class="pin" cx="700" cy="374" r="4"/>
   </g>
 
-  <!-- ══════════ 03 · READING COPY ══════════ -->
-  <g>
-    <path class="side" d="M760 490 L600 570 L600 586 L760 506 Z" fill="#D8CBB6"/>
-    <path class="side" d="M360 450 L600 570 L600 586 L360 466 Z" fill="#E6DBC8"/>
-    <path class="face" d="M520 370 L760 490 L600 570 L360 450 Z" fill="#F7F3EB"/>
-    <g transform="matrix(2.4 1.2 -1.6 0.8 520 370)">
-      <rect x="22" y="20" width="56" height="60" fill="#FBF8F3"/>
-      <g fill="#4A443C">
-        <rect x="30" y="30" width="40" height="4"/><rect x="30" y="40" width="34" height="4"/>
-        <rect x="30" y="50" width="42" height="4"/><rect x="30" y="60" width="22" height="4"/>
-        <rect x="30" y="70" width="38" height="4"/>
+
+  <!-- ========================================================================= -->
+  <!-- ISOMETRIC STACK OF 6 STRATA (CENTER CANVAS)                               -->
+  <!-- ========================================================================= -->
+
+  <!-- ══════════ LAYER 01: SOURCE OBJECT ══════════ -->
+  <g id="layer-01" transform="translate(560, 110)" filter="url(#iso-shadow)">
+    <!-- Isometric Top Surface -->
+    <path class="iso-top" d="M 0 -70 L 220 50 L 0 170 L -220 50 Z" fill="#EDE4D6"/>
+    <!-- Isometric Right Side Extrusion -->
+    <path class="iso-edge" d="M 220 50 L 0 170 L 0 190 L 220 70 Z" fill="#C5B8A4"/>
+    <!-- Isometric Left Side Extrusion -->
+    <path class="iso-edge" d="M -220 50 L 0 170 L 0 190 L -220 70 Z" fill="#D8CCBA"/>
+
+    <!-- Rich Realistic Detail: Bound Hardcover Book lying on plate -->
+    <g transform="translate(0, 48)">
+      <!-- Isometric Book Cover -->
+      <path d="M -30 -70 L 110 5 L -30 80 L -170 5 Z" fill="#3D3732" stroke="#262320" stroke-width="1.5"/>
+      <path d="M 110 5 L -30 80 L -30 94 L 110 19 Z" fill="#2B2622"/>
+      <path d="M -170 5 L -30 80 L -30 94 L -170 19 Z" fill="#332E29"/>
+      <!-- Gold Foil Embossed Lettering on Book Spine/Cover -->
+      <path d="M -40 -35 L 60 20" stroke="#D6AA58" stroke-width="2"/>
+      <path d="M -50 -15 L 50 40" stroke="#D6AA58" stroke-width="1.5"/>
+      <!-- Physical Accession Tag with Lanyard -->
+      <path d="M 70 -10 Q 110 -30 140 -20" fill="none" stroke="#A85324" stroke-width="1.5" stroke-dasharray="3 2"/>
+      <rect x="120" y="-36" width="60" height="24" rx="2" fill="#FAF5EE" stroke="#A85324" stroke-width="1.25"/>
+      <text class="mono" x="150" y="-21" font-size="7.5" font-weight="700" fill="#A85324" text-anchor="middle">SA-1982-MT</text>
+    </g>
+
+    <!-- Annotation Lead-out -->
+    <line class="lead-line" x1="120" y1="120" x2="260" y2="90"/>
+    <circle class="pin-dot" cx="120" cy="120" r="4.5"/>
+  </g>
+
+  <!-- ══════════ LAYER 02: PRESERVATION MASTER ══════════ -->
+  <g id="layer-02" transform="translate(560, 260)" filter="url(#iso-shadow)">
+    <!-- Isometric Top Surface -->
+    <path class="iso-top" d="M 0 -70 L 220 50 L 0 170 L -220 50 Z" fill="#E4D9C8"/>
+    <!-- Extrusions -->
+    <path class="iso-edge" d="M 220 50 L 0 170 L 0 190 L 220 70 Z" fill="#C2B49E"/>
+    <path class="iso-edge" d="M -220 50 L 0 170 L 0 190 L -220 70 Z" fill="#D4C6B2"/>
+
+    <!-- Surface: Raw Skewed Scan Page with Color Chart & Foxing -->
+    <g transform="translate(0, 48) rotate(-2 0 0)">
+      <!-- Uncropped Sheet -->
+      <path d="M -40 -65 L 105 10 L -35 85 L -180 10 Z" fill="#ECE1CD" stroke="#B8A892" stroke-width="1.25"/>
+      <!-- Gutter Shadow -->
+      <path d="M -180 10 L -160 -1 L -15 74 L -35 85 Z" fill="#8E7E6A" opacity="0.4"/>
+      <!-- Raw Text Rows -->
+      <g fill="#7A6E5E">
+        <path d="M -120 10 L -40 -35 L -36 -32 L -116 13 Z"/>
+        <path d="M -110 20 L -30 -25 L -26 -22 L -106 23 Z"/>
+        <path d="M -100 30 L -20 -15 L -16 -12 L -96 33 Z"/>
+        <path d="M -90 40 L -30 6 L -26 9 L -86 43 Z"/>
+      </g>
+      <!-- Macbeth Color Target Strip at Edge -->
+      <g transform="translate(30, 2)">
+        <rect x="0" y="0" width="12" height="6" fill="#735244"/>
+        <rect x="14" y="7" width="12" height="6" fill="#C2957D"/>
+        <rect x="28" y="14" width="12" height="6" fill="#62718B"/>
+        <rect x="42" y="21" width="12" height="6" fill="#E0A32E"/>
+      </g>
+      <!-- Natural Foxing Spot -->
+      <ellipse cx="40" cy="-30" rx="10" ry="5" fill="#B08A5E" opacity="0.45"/>
+    </g>
+
+    <!-- Annotation Lead-out -->
+    <line class="lead-line" x1="120" y1="120" x2="260" y2="90"/>
+    <circle class="pin-dot" cx="120" cy="120" r="4.5"/>
+  </g>
+
+  <!-- ══════════ LAYER 03: READING COPY ══════════ -->
+  <g id="layer-03" transform="translate(560, 410)" filter="url(#iso-shadow)">
+    <!-- Isometric Top Surface -->
+    <path class="iso-top" d="M 0 -70 L 220 50 L 0 170 L -220 50 Z" fill="#F6F1E8"/>
+    <!-- Extrusions -->
+    <path class="iso-edge" d="M 220 50 L 0 170 L 0 190 L 220 70 Z" fill="#D0C4B0"/>
+    <path class="iso-edge" d="M -220 50 L 0 170 L 0 190 L -220 70 Z" fill="#DFD4C2"/>
+
+    <!-- Surface: Deskewed, Cropped White Reading Sheet with Crop Marks -->
+    <g transform="translate(0, 48)">
+      <path d="M -30 -60 L 100 10 L -30 80 L -160 10 Z" fill="#FFFFFF" stroke="#D5CCC0" stroke-width="1.5"/>
+      <!-- High Contrast Crisp Text Block -->
+      <g fill="#2B2620">
+        <path d="M -120 10 L -40 -35 L -36 -32 L -116 13 Z"/>
+        <path d="M -110 20 L -30 -25 L -26 -22 L -106 23 Z"/>
+        <path d="M -100 30 L -20 -15 L -16 -12 L -96 33 Z"/>
+        <path d="M -90 40 L -10 0 L -6 3 L -86 43 Z"/>
+        <path d="M -80 50 L -20 16 L -16 19 L -76 53 Z"/>
+      </g>
+      <!-- Isometric Crop Marks (Corner Brackets) -->
+      <path d="M -30 -72 L -30 -60 L -16 -68" fill="none" stroke="#A85324" stroke-width="1.5"/>
+      <path d="M 112 3 L 100 10 L 92 -3" fill="none" stroke="#A85324" stroke-width="1.5"/>
+      <path d="M -30 92 L -30 80 L -44 72" fill="none" stroke="#A85324" stroke-width="1.5"/>
+      <path d="M -172 3 L -160 10 L -152 -3" fill="none" stroke="#A85324" stroke-width="1.5"/>
+    </g>
+
+    <!-- Annotation Lead-out -->
+    <line class="lead-line" x1="120" y1="120" x2="260" y2="90"/>
+    <circle class="pin-dot" cx="120" cy="120" r="4.5"/>
+  </g>
+
+  <!-- ══════════ LAYER 04: TRANSCRIPT ══════════ -->
+  <g id="layer-04" transform="translate(560, 560)" filter="url(#iso-shadow)">
+    <!-- Isometric Top Surface -->
+    <path class="iso-top" d="M 0 -70 L 220 50 L 0 170 L -220 50 Z" fill="#FAF6EF"/>
+    <!-- Extrusions -->
+    <path class="iso-edge" d="M 220 50 L 0 170 L 0 190 L 220 70 Z" fill="#D5CABA"/>
+    <path class="iso-edge" d="M -220 50 L 0 170 L 0 190 L -220 70 Z" fill="#E4DACB"/>
+
+    <!-- Surface: Monospace Structured Text Buffer with Proofing Tags -->
+    <g transform="translate(0, 48)">
+      <path d="M -30 -60 L 100 10 L -30 80 L -160 10 Z" fill="#1C1A18" stroke="#38332C" stroke-width="1.5"/>
+      <!-- Colored Syntax Lines -->
+      <g fill="#D6AA58">
+        <path d="M -130 10 L -80 -18 L -76 -16 L -126 12 Z"/>
+        <path d="M -120 20 L -60 -14 L -56 -12 L -116 22 Z"/>
+      </g>
+      <g fill="#FAF5EE">
+        <path d="M -110 30 L -10 -25 L -6 -23 L -106 32 Z"/>
+        <path d="M -100 40 L 20 -26 L 24 -24 L -96 42 Z"/>
+        <path d="M -90 50 L 40 -20 L 44 -18 L -86 52 Z"/>
+      </g>
+      <!-- Checked Stamp Badge -->
+      <g transform="translate(-10, 40)">
+        <path d="M 0 -15 L 40 5 L 0 25 L -40 5 Z" fill="#A85324"/>
+        <path d="M -12 2 L -4 8 L 12 -4" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
       </g>
     </g>
-    <path class="lead" d="M700 524 H852"/>
-    <circle class="pin" cx="700" cy="524" r="4"/>
+
+    <!-- Annotation Lead-out -->
+    <line class="lead-line" x1="120" y1="120" x2="260" y2="90"/>
+    <circle class="pin-dot" cx="120" cy="120" r="4.5"/>
   </g>
 
-  <!-- ══════════ 04 · TRANSCRIPT ══════════ -->
-  <g>
-    <path class="side" d="M760 640 L600 720 L600 736 L760 656 Z" fill="#D8CBB6"/>
-    <path class="side" d="M360 600 L600 720 L600 736 L360 616 Z" fill="#E6DBC8"/>
-    <path class="face" d="M520 520 L760 640 L600 720 L360 600 Z" fill="#F7F3EB"/>
-    <g transform="matrix(2.4 1.2 -1.6 0.8 520 520)">
-      <g fill="#4A443C">
-        <rect x="14" y="24" width="64" height="4"/><rect x="14" y="34" width="72" height="4"/>
-        <rect x="14" y="44" width="58" height="4"/><rect x="14" y="54" width="70" height="4"/>
-        <rect x="14" y="64" width="40" height="4"/>
+  <!-- ══════════ LAYER 05: SEGMENT INDEX ══════════ -->
+  <g id="layer-05" transform="translate(560, 710)" filter="url(#iso-shadow)">
+    <!-- Isometric Top Surface -->
+    <path class="iso-top" d="M 0 -70 L 220 50 L 0 170 L -220 50 Z" fill="#F4EDE2"/>
+    <!-- Extrusions -->
+    <path class="iso-edge" d="M 220 50 L 0 170 L 0 190 L 220 70 Z" fill="#CFC3B0"/>
+    <path class="iso-edge" d="M -220 50 L 0 170 L 0 190 L -220 70 Z" fill="#DED2C0"/>
+
+    <!-- Surface: Granular Chunk Database Matrix with B-Tree Pointers -->
+    <g transform="translate(0, 48)">
+      <!-- Chunk 1 -->
+      <path d="M -80 -40 L -10 -5 L -40 10 L -110 -25 Z" fill="#FFFFFF" stroke="#C4B8A6" stroke-width="1"/>
+      <path d="M -100 -22 L -30 12 L -40 17 L -110 -17 Z" fill="#9E9280"/>
+
+      <!-- Chunk 2 (Target Hit) -->
+      <path d="M -20 -10 L 50 25 L 20 40 L -50 5 Z" fill="#FFFFFF" stroke="#A85324" stroke-width="2"/>
+      <path d="M -40 8 L 30 42 L 20 47 L -50 13 Z" fill="#A85324"/>
+
+      <!-- Chunk 3 -->
+      <path d="M 40 20 L 110 55 L 80 70 L 10 35 Z" fill="#FFFFFF" stroke="#C4B8A6" stroke-width="1"/>
+      <path d="M 20 38 L 90 72 L 80 77 L 10 43 Z" fill="#9E9280"/>
+    </g>
+
+    <!-- Annotation Lead-out -->
+    <line class="lead-line" x1="120" y1="120" x2="260" y2="90"/>
+    <circle class="pin-dot" cx="120" cy="120" r="4.5"/>
+  </g>
+
+  <!-- ══════════ LAYER 06: SEARCH RESULT ══════════ -->
+  <g id="layer-06" transform="translate(560, 860)" filter="url(#iso-shadow)">
+    <!-- Isometric Top Surface -->
+    <path class="iso-top" d="M 0 -70 L 220 50 L 0 170 L -220 50 Z" fill="#FAF6EE"/>
+    <!-- Extrusions -->
+    <path class="iso-edge" d="M 220 50 L 0 170 L 0 190 L 220 70 Z" fill="#D5CABA"/>
+    <path class="iso-edge" d="M -220 50 L 0 170 L 0 190 L -220 70 Z" fill="#E4DACB"/>
+
+    <!-- Surface: High-End UI Search Result Card with Match Pinpoint -->
+    <g transform="translate(0, 48)">
+      <path d="M -30 -60 L 120 15 L -10 85 L -160 10 Z" fill="#FFFFFF" stroke="#A85324" stroke-width="2"/>
+      <!-- Header bar of the UI card -->
+      <path d="M -30 -60 L 120 15 L 100 25 L -50 -50 Z" fill="#F4EDE2"/>
+      
+      <!-- Query Text Line with Terracotta Highlight Box -->
+      <path d="M -120 10 L -40 -35 L -36 -32 L -116 13 Z" fill="#3D3732"/>
+      <path d="M -80 30 L 0 -15 L 20 -4 L -60 41 Z" fill="#A85324" fill-opacity="0.2" stroke="#A85324" stroke-width="1.25"/>
+      <path d="M -70 30 L 10 -15 L 14 -12 L -66 33 Z" fill="#A85324"/>
+      <path d="M -50 45 L 30 -2 L 34 1 L -46 48 Z" fill="#3D3732"/>
+
+      <!-- Direct Verification Icon / Fingerprint -->
+      <circle cx="70" cy="40" r="10" fill="#A85324"/>
+      <path d="M 66 40 L 69 43 L 75 37" fill="none" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round"/>
+    </g>
+
+    <!-- Annotation Lead-out -->
+    <line class="lead-line" x1="120" y1="120" x2="260" y2="90"/>
+    <circle class="pin-dot" cx="120" cy="120" r="4.5"/>
+  </g>
+
+
+  <!-- ========================================================================= -->
+  <!-- RIGHT PANEL: TECHNICAL STRATA METADATA CARDS                             -->
+  <!-- ========================================================================= -->
+  <g transform="translate(860, 0)">
+    <!-- 01 · SOURCE OBJECT -->
+    <g transform="translate(0, 164)">
+      <rect x="0" y="0" width="460" height="92" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="6" height="92" rx="2" fill="#A85324"/>
+      <text class="strata-title" x="20" y="26">01 · SOURCE OBJECT</text>
+      <g transform="translate(370, 14)">
+        <rect x="0" y="0" width="70" height="20" rx="3" fill="#C9A184" opacity="0.35"/>
+        <text class="strata-tag" x="35" y="14" fill="#6E4424" text-anchor="middle">HELD</text>
       </g>
-      <rect x="14" y="76" width="34" height="9" fill="#A85324"/>
+      <text class="strata-desc" x="20" y="48">The physical artifact (book, tape, video) logged with origin,</text>
+      <text class="strata-desc" x="20" y="66">provenance history, and accession condition metadata.</text>
+      <text class="mono" x="20" y="82" font-size="8.5" fill="#A85324">CHAIN STATUS: PHYSICAL WITNESS PRESERVED</text>
     </g>
-    <path class="lead" d="M700 674 H852"/>
-    <circle class="pin" cx="700" cy="674" r="4"/>
-  </g>
 
-  <!-- ══════════ 05 · SEGMENT INDEX ══════════ -->
-  <g>
-    <path class="side" d="M760 790 L600 870 L600 886 L760 806 Z" fill="#D8CBB6"/>
-    <path class="side" d="M360 750 L600 870 L600 886 L360 766 Z" fill="#E6DBC8"/>
-    <path class="face" d="M520 670 L760 790 L600 870 L360 750 Z" fill="#F2ECE1"/>
-    <g transform="matrix(2.4 1.2 -1.6 0.8 520 670)">
-      <g>
-        <rect x="14" y="20" width="72" height="13" fill="#FBF8F3"/>
-        <rect x="18" y="24" width="40" height="5" fill="#B3A897"/>
-        <rect x="66" y="23" width="16" height="7" fill="#D6C9B4"/>
-
-        <rect x="14" y="38" width="72" height="13" fill="#FBF8F3"/>
-        <rect x="18" y="42" width="48" height="5" fill="#B3A897"/>
-        <rect x="66" y="41" width="16" height="7" fill="#D6C9B4"/>
-
-        <rect x="14" y="56" width="72" height="13" fill="#FFFFFF"/>
-        <rect x="18" y="60" width="44" height="5" fill="#4A443C"/>
-        <rect x="66" y="59" width="16" height="7" fill="#A85324"/>
-
-        <rect x="14" y="74" width="72" height="13" fill="#FBF8F3"/>
-        <rect x="18" y="78" width="34" height="5" fill="#B3A897"/>
-        <rect x="66" y="77" width="16" height="7" fill="#D6C9B4"/>
+    <!-- 02 · PRESERVATION MASTER -->
+    <g transform="translate(0, 314)">
+      <rect x="0" y="0" width="460" height="92" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="6" height="92" rx="2" fill="#A85324"/>
+      <text class="strata-title" x="20" y="26">02 · PRESERVATION MASTER</text>
+      <g transform="translate(370, 14)">
+        <rect x="0" y="0" width="70" height="20" rx="3" fill="#C9A184" opacity="0.35"/>
+        <text class="strata-tag" x="35" y="14" fill="#6E4424" text-anchor="middle">HELD</text>
       </g>
+      <text class="strata-desc" x="20" y="48">Raw 600 DPI capture holding paper grain, skew, and foxing.</text>
+      <text class="strata-desc" x="20" y="66">Captured once, never digitally modified or 'improved'.</text>
+      <text class="mono" x="20" y="82" font-size="8.5" fill="#A85324">FORMAT: 16-BIT UNCOMPRESSED TIFF · NO NOISE FILTER</text>
     </g>
-    <path class="lead" d="M700 824 H852"/>
-    <circle class="pin" cx="700" cy="824" r="4"/>
-  </g>
 
-  <!-- ══════════ 06 · SEARCH RESULT ══════════ -->
-  <g>
-    <path class="side" d="M760 940 L600 1020 L600 1036 L760 956 Z" fill="#D8CBB6"/>
-    <path class="side" d="M360 900 L600 1020 L600 1036 L360 916 Z" fill="#E6DBC8"/>
-    <path class="face" d="M520 820 L760 940 L600 1020 L360 900 Z" fill="#FBF8F3"/>
-    <g transform="matrix(2.4 1.2 -1.6 0.8 520 820)">
-      <rect x="14" y="30" width="72" height="34" fill="#FFFFFF"/>
-      <rect x="14" y="30" width="72" height="34" fill="#A85324" opacity="0.1"/>
-      <rect x="20" y="38" width="46" height="5" fill="#4A443C"/>
-      <rect x="20" y="48" width="58" height="5" fill="#A85324"/>
-      <rect x="20" y="56" width="30" height="4" fill="#B3A897"/>
+    <!-- 03 · READING COPY -->
+    <g transform="translate(0, 464)">
+      <rect x="0" y="0" width="460" height="92" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="6" height="92" rx="2" fill="#756D65"/>
+      <text class="strata-title" x="20" y="26">03 · READING COPY</text>
+      <g transform="translate(370, 14)">
+        <rect x="0" y="0" width="70" height="20" rx="3" fill="#B3A897" opacity="0.3"/>
+        <text class="strata-tag" x="35" y="14" fill="#4A443C" text-anchor="middle">DERIVED</text>
+      </g>
+      <text class="strata-desc" x="20" y="48">Derived copy deskewed to platen, cropped to text block,</text>
+      <text class="strata-desc" x="20" y="66">and contrast-lifted strictly for reading comfort.</text>
+      <text class="mono" x="20" y="82" font-size="8.5" fill="#756D65">TRANSFORM: REVERSIBLE VIA MASTER SCAN</text>
     </g>
-    <path class="lead" d="M700 974 H852"/>
-    <circle class="pin" cx="700" cy="974" r="4"/>
-  </g>
 
-  <!-- ══════════ THE EVIDENCE PATH ══════════ -->
-  <!-- Every result can be walked back up the stack to the object it came from.
-       Ticks meet each plate at its left corner. -->
-  <g>
-    <path d="M300 900 V136" stroke="#A85324" stroke-width="2.5" fill="none" stroke-dasharray="9 7"/>
-    <path d="M290 152 L300 128 L310 152" stroke="#A85324" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <g stroke="#A85324" stroke-width="2" opacity="0.75">
-      <path d="M300 150 H360"/><path d="M300 300 H360"/><path d="M300 450 H360"/>
-      <path d="M300 600 H360"/><path d="M300 750 H360"/><path d="M300 900 H360"/>
+    <!-- 04 · TRANSCRIPT -->
+    <g transform="translate(0, 614)">
+      <rect x="0" y="0" width="460" height="92" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="6" height="92" rx="2" fill="#756D65"/>
+      <text class="strata-title" x="20" y="26">04 · TRANSCRIPT</text>
+      <g transform="translate(370, 14)">
+        <rect x="0" y="0" width="70" height="20" rx="3" fill="#B3A897" opacity="0.3"/>
+        <text class="strata-tag" x="35" y="14" fill="#4A443C" text-anchor="middle">DERIVED</text>
+      </g>
+      <text class="strata-desc" x="20" y="48">Text transcription with recorded method (Manual Checked,</text>
+      <text class="strata-desc" x="20" y="66">Assisted, or Machine) and uncorrected historical spelling.</text>
+      <text class="mono" x="20" y="82" font-size="8.5" fill="#756D65">METHOD ATTESTATION: PUBLICLY DECLARED</text>
     </g>
-    <text class="cap" x="300" y="962" fill="#A85324" text-anchor="middle">EVIDENCE PATH</text>
+
+    <!-- 05 · SEGMENT INDEX -->
+    <g transform="translate(0, 764)">
+      <rect x="0" y="0" width="460" height="92" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="6" height="92" rx="2" fill="#756D65"/>
+      <text class="strata-title" x="20" y="26">05 · SEGMENT INDEX</text>
+      <g transform="translate(370, 14)">
+        <rect x="0" y="0" width="70" height="20" rx="3" fill="#B3A897" opacity="0.3"/>
+        <text class="strata-tag" x="35" y="14" fill="#4A443C" text-anchor="middle">DERIVED</text>
+      </g>
+      <text class="strata-desc" x="20" y="48">Fine-grained token index binding each passage to exact</text>
+      <text class="strata-desc" x="20" y="66">page/paragraph numbers or millisecond media timestamps.</text>
+      <text class="mono" x="20" y="82" font-size="8.5" fill="#756D65">INDEX GRANULARITY: ATOMIC PARAGRAPH LEVEL</text>
+    </g>
+
+    <!-- 06 · SEARCH RESULT -->
+    <g transform="translate(0, 914)">
+      <rect x="0" y="0" width="460" height="92" rx="4" fill="#FAF7F2" stroke="#D8CEC0" stroke-width="1.25"/>
+      <rect x="0" y="0" width="6" height="92" rx="2" fill="#A85324"/>
+      <text class="strata-title" x="20" y="26">06 · SEARCH RESULT</text>
+      <g transform="translate(370, 14)">
+        <rect x="0" y="0" width="70" height="20" rx="3" fill="#A85324"/>
+        <text class="strata-tag" x="35" y="14" fill="#FFFFFF" text-anchor="middle">SERVED</text>
+      </g>
+      <text class="strata-desc" x="20" y="48">The instant findable snippet presented to the reader, linked</text>
+      <text class="strata-desc" x="20" y="66">with one-click verification directly to the raw preservation scan.</text>
+      <text class="mono" x="20" y="82" font-size="8.5" fill="#A85324">VERIFIABILITY: 100% TRACEABLE TO STRATUM 01</text>
+    </g>
   </g>
-
-  <!-- ══════════ PIPELINE STAGE BRACKETS ══════════ -->
-  <!-- Bracketed against the tick rows, which do not overlap the way the
-       projected plates do. -->
-  <g>
-    <path class="brace" d="M262 130 H244 V170 H262"/>
-    <text class="stage" x="228" y="157" text-anchor="end">01 ACQUIRE</text>
-
-    <path class="brace" d="M262 280 H244 V470 H262"/>
-    <text class="stage" x="228" y="382" text-anchor="end">02 DIGITISE</text>
-
-    <path class="brace" d="M262 580 H244 V620 H262"/>
-    <text class="stage" x="228" y="607" text-anchor="end">03 TRANSCRIBE</text>
-
-    <path class="brace" d="M262 730 H244 V920 H262"/>
-    <text class="stage" x="228" y="832" text-anchor="end">04 INDEX</text>
-  </g>
-
-  <!-- ══════════ LABELS ══════════ -->
-  <g>
-    <text class="name" x="868" y="216">SOURCE OBJECT</text>
-    <text class="note" x="868" y="248">The physical item, logged with its origin</text>
-    <rect x="868" y="266" width="66" height="24" fill="#C9A184" opacity="0.3"/>
-    <text class="tag" x="880" y="283" fill="#8A5B33">HELD</text>
-
-    <text class="name" x="868" y="366">PRESERVATION MASTER</text>
-    <text class="note" x="868" y="398">Captured once, never corrected</text>
-    <rect x="868" y="416" width="66" height="24" fill="#C9A184" opacity="0.3"/>
-    <text class="tag" x="880" y="433" fill="#8A5B33">HELD</text>
-
-    <text class="name" x="868" y="516">READING COPY</text>
-    <text class="note" x="868" y="548">Deskewed, cropped, contrast lifted</text>
-    <rect x="868" y="566" width="92" height="24" fill="#B3A897" opacity="0.28"/>
-    <text class="tag" x="880" y="583" fill="#6E6459">DERIVED</text>
-
-    <text class="name" x="868" y="666">TRANSCRIPT</text>
-    <text class="note" x="868" y="698">Method recorded and shown to the reader</text>
-    <rect x="868" y="716" width="92" height="24" fill="#B3A897" opacity="0.28"/>
-    <text class="tag" x="880" y="733" fill="#6E6459">DERIVED</text>
-
-    <text class="name" x="868" y="816">SEGMENT INDEX</text>
-    <text class="note" x="868" y="848">Each passage bound to a page or timestamp</text>
-    <rect x="868" y="866" width="92" height="24" fill="#B3A897" opacity="0.28"/>
-    <text class="tag" x="880" y="883" fill="#6E6459">DERIVED</text>
-
-    <text class="name" x="868" y="966">SEARCH RESULT</text>
-    <text class="note" x="868" y="998">What the reader is shown, and can verify</text>
-    <rect x="868" y="1016" width="92" height="24" fill="#C9A184" opacity="0.3"/>
-    <text class="tag" x="880" y="1033" fill="#8A5B33">SERVED</text>
-  </g>
-
-  <text class="cap" x="60" y="62">ONE ITEM, SIX RETAINED ARTEFACTS</text>
 </svg>

@@ -59,15 +59,15 @@ export default async function EditorialPage({ params }: EditorialPageProps) {
 
     return (
         <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
-            <main id="main-content" className="mx-auto max-w-[1560px] px-4 py-8 sm:px-7 lg:py-12">
+            <main id="main-content" className="mx-auto max-w-[1560px] px-3 py-6 sm:px-7 lg:py-12">
                 <div className="grid grid-cols-1 gap-x-10 lg:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] xl:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_minmax(0,13rem)]">
                     {/* Sidebar: sections of this editorial */}
-                    <aside className="mb-10 lg:sticky lg:top-[84px] lg:mb-0 lg:max-h-[calc(100dvh-108px)] lg:self-start lg:overflow-y-auto lg:pb-6">
+                    <aside className="mb-8 lg:sticky lg:top-[84px] lg:mb-0 lg:max-h-[calc(100dvh-108px)] lg:self-start lg:overflow-y-auto lg:pb-6">
                         <Link
-                            href="/written#archive-editorials"
-                            className="mb-6 inline-flex items-center gap-1.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-muted transition-colors hover:text-ed-accent"
+                            href="/editorials"
+                            className="mb-5 inline-flex items-center gap-1.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint transition-colors hover:text-ed-accent"
                         >
-                            <ChevronLeft className="h-3 w-3" aria-hidden="true" />
+                            <ChevronLeft className="h-3.5 w-3.5" aria-hidden="true" />
                             Archive Editorials
                         </Link>
                         <EditorialToc headings={editorial.headings} />
@@ -75,7 +75,7 @@ export default async function EditorialPage({ params }: EditorialPageProps) {
 
                     {/* The reading sheet */}
                     <div className="min-w-0">
-                        <div className="mx-auto max-w-[64rem] rounded-[4px] border border-ed-rule bg-ed-surface-raised px-5 py-8 sm:px-10 sm:py-12">
+                        <div className="mx-auto max-w-[64rem] rounded-[6px] border border-ed-rule bg-ed-surface-raised px-4 py-7 sm:px-10 sm:py-12 shadow-sm">
                             <EditorialReader header={<EditorialHeader editorial={editorial} />}>
                                 <EditorialBody />
                             </EditorialReader>
@@ -83,7 +83,7 @@ export default async function EditorialPage({ params }: EditorialPageProps) {
                     </div>
 
                     {/* Provenance and neighbours */}
-                    <aside className="mt-10 lg:col-span-2 xl:sticky xl:top-[84px] xl:col-span-1 xl:mt-0 xl:self-start">
+                    <aside className="mt-8 lg:col-span-2 xl:sticky xl:top-[84px] xl:col-span-1 xl:mt-0 xl:self-start">
                         <EditorialAside editorial={editorial} neighbours={neighbours} />
                     </aside>
                 </div>

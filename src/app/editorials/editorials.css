@@ -1,5 +1,5 @@
 /* ============================================================
-   Archive Editorials reading surface.
+   Archive Editorials reading surface — Inspired by Making Software.
 
    A narrow justified measure inside a wider frame, so figures can
    break the column without breaking the text block. Reading
@@ -9,9 +9,9 @@
 
 .editorial-prose {
     /* The measure body copy is set to; break-out elements opt past it. */
-    --editorial-measure: 36rem;
+    --editorial-measure: 38rem;
     --editorial-body-size: 16.5px;
-    --editorial-body-leading: 1.78;
+    --editorial-body-leading: 1.8;
     --editorial-align: justify;
 
     color: var(--ed-fg-secondary);
@@ -21,16 +21,17 @@
 }
 
 .editorial-prose[data-measure='wide'] {
-    --editorial-measure: 44rem;
+    --editorial-measure: 46rem;
 }
 
 .editorial-prose[data-size='s'] {
     --editorial-body-size: 15px;
+    --editorial-body-leading: 1.75;
 }
 
 .editorial-prose[data-size='l'] {
     --editorial-body-size: 18.5px;
-    --editorial-body-leading: 1.72;
+    --editorial-body-leading: 1.74;
 }
 
 .editorial-prose[data-align='start'] {
@@ -45,10 +46,8 @@
 }
 
 .editorial-prose > p {
-    margin-block: 1.15em;
+    margin-block: 1.25em;
     text-align: var(--editorial-align);
-    /* Never break a word across lines; justification stretches the spaces
-       instead, as the reference reading surfaces do. */
     hyphens: manual;
     text-wrap: pretty;
 }
@@ -57,10 +56,11 @@
     margin-block-start: 0;
 }
 
-/* The standfirst paragraph, set one step larger than the body. */
+/* The standfirst paragraph, set one step larger than the body with subtle illumination. */
 .editorial-prose > .editorial-lead > p {
-    margin-block: 1.15em;
-    font-size: 1.08em;
+    margin-block: 1.35em;
+    font-size: 1.12em;
+    line-height: 1.7;
     color: var(--ed-fg);
     text-align: var(--editorial-align);
     hyphens: manual;
@@ -71,30 +71,33 @@
 .editorial-prose > h3 {
     font-family: var(--font-source-serif), Georgia, serif;
     color: var(--ed-fg);
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 6.5rem;
     text-wrap: balance;
 }
 
 .editorial-prose > h2 {
-    margin-block: 2.6em 0.9em;
-    font-size: 1.42em;
+    margin-block: 3.2em 0.9em;
+    font-size: clamp(23px, 2.8vw, 27px);
     font-weight: 600;
-    letter-spacing: -0.012em;
+    letter-spacing: -0.02em;
     line-height: 1.25;
+    position: relative;
+    padding-bottom: 0.45em;
+    border-bottom: 1px solid var(--ed-rule);
 }
 
 .editorial-prose > h3 {
-    margin-block: 2em 0.7em;
-    font-size: 1.12em;
+    margin-block: 2.4em 0.8em;
+    font-size: clamp(18px, 2.2vw, 20px);
     font-weight: 600;
-    letter-spacing: -0.006em;
+    letter-spacing: -0.01em;
     line-height: 1.35;
 }
 
 .editorial-prose > ul,
 .editorial-prose > ol {
-    margin-block: 1.15em;
-    padding-inline-start: 1.35em;
+    margin-block: 1.3em;
+    padding-inline-start: 1.4em;
 }
 
 .editorial-prose > ul {
@@ -108,12 +111,13 @@
 .editorial-prose > ul > li::before {
     content: '';
     position: absolute;
-    inset-inline-start: -1.05em;
-    inset-block-start: 0.72em;
-    width: 4px;
-    height: 4px;
+    inset-inline-start: -1.15em;
+    inset-block-start: 0.76em;
+    width: 5px;
+    height: 5px;
+    border-radius: 1px;
     background: var(--ed-accent);
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .editorial-prose > ol {
@@ -121,11 +125,14 @@
 }
 
 .editorial-prose li {
-    margin-block: 0.4em;
+    margin-block: 0.5em;
 }
 
 .editorial-prose > ol > li::marker {
-    color: var(--ed-fg-muted);
+    color: var(--ed-accent);
+    font-family: var(--font-dm-sans), ui-monospace, sans-serif;
+    font-weight: 700;
+    font-size: 0.95em;
     font-variant-numeric: tabular-nums;
 }
 
@@ -135,10 +142,12 @@
 }
 
 .editorial-prose > blockquote {
-    margin-block: 1.7em;
-    padding-inline-start: 1.15em;
-    border-inline-start: 2px solid var(--ed-rule-strong);
-    color: var(--ed-fg-muted);
+    margin-block: 2em;
+    padding: 1em 1.4em;
+    border: 1px solid var(--ed-rule);
+    background: var(--ed-surface);
+    border-radius: 4px;
+    color: var(--ed-fg-secondary);
     font-style: italic;
 }
 
@@ -146,8 +155,8 @@
     color: var(--ed-accent);
     text-decoration: underline;
     text-decoration-color: color-mix(in srgb, var(--ed-accent) 45%, transparent);
-    text-underline-offset: 2px;
-    transition: color 150ms ease;
+    text-underline-offset: 3px;
+    transition: color 150ms ease, text-decoration-color 150ms ease;
 }
 
 .editorial-prose a:hover {
@@ -156,26 +165,25 @@
 }
 
 .editorial-prose code {
-    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-weight: 500;
-    font-size: 0.86em;
+    font-size: 0.85em;
     background: var(--ed-surface-strong);
     border: 1px solid var(--ed-rule);
-    border-radius: 3px;
-    padding: 0.1em 0.34em;
+    border-radius: 4px;
+    padding: 0.15em 0.4em;
+    color: var(--ed-accent-strong);
 }
 
-/* A short centred rule, not a full-width divider. */
+/* A precision technical rule divider */
 .editorial-prose > hr {
-    max-width: 2.5rem;
-    margin-block: 2.6em;
+    max-width: 4rem;
+    margin-block: 3em;
     border: 0;
-    border-top: 1px solid var(--ed-rule-strong);
+    border-top: 2px solid var(--ed-accent);
+    opacity: 0.45;
 }
 
-/* The standfirst sits in a centred masthead but takes the body's measure and
-   alignment, so it lines up with the prose beneath it and the reading-settings
-   toggle governs both. */
 .editorial-standfirst {
     max-width: var(--editorial-measure);
     font-style: italic;
@@ -184,29 +192,36 @@
     text-wrap: pretty;
 }
 
-/* --- Break-out elements ------------------------------------- */
+/* --- Break-out elements (Technical Plates) ------------------- */
 
 .editorial-breakout {
-    max-width: min(100%, 44rem);
+    max-width: min(100%, 54rem);
     width: 100%;
 }
 
 .editorial-figure {
-    margin-block: 2.4em;
+    margin-block: 2.8em;
 }
 
+/* Blueprint Plate Frame with Corner Crosshairs and Hover Glow */
 .editorial-figure-frame {
     display: block;
+    position: relative;
     width: 100%;
     padding: 0;
-    border: 1px solid transparent;
+    border: 1px solid var(--ed-rule);
     background: var(--ed-viewer-bg);
+    border-radius: 6px;
+    overflow: hidden;
     cursor: zoom-in;
-    transition: border-color 250ms ease;
+    box-shadow: var(--ed-shadow-sm);
+    transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
 .editorial-figure-frame:hover {
-    border-color: var(--ed-rule-strong);
+    border-color: var(--ed-accent);
+    box-shadow: 0 8px 24px -6px rgba(168, 83, 36, 0.16), var(--ed-shadow-md);
+    transform: translateY(-1px);
 }
 
 .editorial-figure-frame:focus-visible {
@@ -214,7 +229,81 @@
     outline-offset: 3px;
 }
 
-/* --- Enlarged view ------------------------------------------ */
+.editorial-figure img,
+.editorial-figure svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Technical Blueprint Caption */
+.editorial-caption {
+    margin-block-start: 0.85em;
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: var(--ed-fg-muted);
+    line-height: 1.6;
+}
+
+.editorial-caption strong {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ed-accent);
+    margin-inline-end: 0.4em;
+}
+
+.editorial-figure-group {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .editorial-figure-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .editorial-figure-group > .editorial-figure:only-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .editorial-figure-group {
+        grid-auto-flow: column;
+        grid-auto-columns: 90%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 0.5rem;
+        gap: 0.85rem;
+    }
+
+    .editorial-figure-group::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .editorial-figure-group::-webkit-scrollbar-track {
+        background: var(--ed-surface);
+        border-radius: 2px;
+    }
+
+    .editorial-figure-group::-webkit-scrollbar-thumb {
+        background: var(--ed-rule-strong);
+        border-radius: 2px;
+    }
+
+    .editorial-figure-group > .editorial-figure {
+        scroll-snap-align: center;
+        margin-block: 0;
+    }
+}
+
+/* --- Enlarged Lightbox View --------------------------------- */
 
 .editorial-lightbox {
     position: fixed;
@@ -224,50 +313,56 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4.5rem 1.5rem 2.5rem;
-    /* The page stays legible behind the plate, but recedes. */
-    background: color-mix(in srgb, var(--ed-bg) 82%, transparent);
-    backdrop-filter: blur(7px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1rem, 3vw, 1.5rem) 2rem;
+    background: color-mix(in srgb, var(--ed-bg) 90%, transparent);
+    backdrop-filter: blur(14px);
     cursor: zoom-out;
-    animation: editorial-lightbox-in 180ms ease-out;
+    animation: editorial-lightbox-in 200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes editorial-lightbox-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .editorial-lightbox-exit {
     position: absolute;
     top: 1.25rem;
     right: 1.5rem;
-    min-height: 44px;
-    padding: 0 0.75rem;
-    border: 0;
-    background: transparent;
-    color: var(--ed-fg-muted);
+    min-height: 38px;
+    padding: 0 0.9rem;
+    border: 1px solid var(--ed-rule);
+    border-radius: 4px;
+    background: var(--ed-surface-raised);
+    color: var(--ed-fg);
     font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
     font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: color 150ms ease;
+    box-shadow: var(--ed-shadow-sm);
+    transition: all 150ms ease;
 }
 
 .editorial-lightbox-exit:hover {
+    border-color: var(--ed-accent);
     color: var(--ed-accent);
+    background: var(--ed-accent-soft);
 }
 
 .editorial-lightbox-figure {
     margin: 0;
-    max-width: min(96rem, 100%);
+    max-width: min(98rem, 100%);
     cursor: default;
 }
 
 .editorial-lightbox-plate {
     background: var(--ed-viewer-bg);
-    border: 1px solid var(--ed-rule);
+    border: 1px solid var(--ed-rule-strong);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--ed-shadow-lg);
 }
 
 .editorial-lightbox-plate img,
@@ -275,11 +370,10 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: calc(100dvh - 12rem);
+    max-height: calc(100dvh - 9rem);
     object-fit: contain;
 }
 
-/* The reference caption style: a figure number, then the description. */
 .editorial-lightbox-caption {
     margin-block-start: 1.1em;
     font-family: var(--font-newsreader), Georgia, serif;
@@ -290,184 +384,193 @@
 }
 
 .editorial-lightbox-caption em {
-    font-style: italic;
-    color: var(--ed-fg-muted);
+    font-family: var(--font-dm-sans), sans-serif;
+    font-weight: 700;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-style: normal;
+    color: var(--ed-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {
     .editorial-lightbox { animation: none; }
 }
 
-.editorial-figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
+/* ============================================================
+   MINIMALIST CALLOUT / PROVENANCE PLATE
+   ============================================================ */
 
-.editorial-caption {
-    margin-block-start: 0.85em;
-    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
-    font-weight: 500;
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--ed-fg-muted);
-    line-height: 1.6;
-}
-
-.editorial-figure-group {
-    display: grid;
-    gap: 0.75rem;
-    align-items: start;
-}
-
-@media (min-width: 768px) {
-    .editorial-figure-group {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    /* A lone figure spans the full width rather than sitting half-empty. */
-    .editorial-figure-group > .editorial-figure:only-child {
-        grid-column: span 2;
-    }
-}
-
-@media (max-width: 767px) {
-    .editorial-figure-group {
-        grid-auto-flow: column;
-        grid-auto-columns: 100%;
-        overflow-x: auto;
-        scroll-snap-type: x proximity;
-        scrollbar-width: none;
-    }
-
-    .editorial-figure-group::-webkit-scrollbar {
-        display: none;
-    }
-
-    .editorial-figure-group > .editorial-figure {
-        scroll-snap-align: start;
-        margin-block: 0;
-    }
-}
-
-.editorial-pullquote {
-    max-width: 44rem;
+.editorial-callout-plate {
     margin-block: 2.8em;
-    padding-block: 1.4em;
-    border-block: 1px solid var(--ed-rule);
-    font-family: var(--font-source-serif), Georgia, serif;
-    font-size: 1.32em;
-    line-height: 1.45;
-    letter-spacing: -0.01em;
+    padding: clamp(1.4rem, 3.5vw, 2rem) clamp(1.2rem, 3vw, 2.2rem);
+    border: 1px solid var(--ed-rule);
+    background: var(--ed-surface);
+    border-radius: 6px;
+    box-shadow: var(--ed-shadow-sm);
     text-align: center;
-    text-wrap: balance;
-    color: var(--ed-fg);
 }
 
-.editorial-pullquote-attribution {
-    display: block;
-    margin-block-start: 0.9em;
-    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+.editorial-callout-quote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: var(--font-source-serif), Georgia, serif;
+    font-size: clamp(18px, 2.4vw, 22px);
     font-weight: 500;
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
+    line-height: 1.45;
+    letter-spacing: -0.015em;
+    color: var(--ed-fg);
+    text-wrap: balance;
+}
+
+.editorial-callout-attribution {
+    margin-top: 0.85rem;
+    font-family: var(--font-dm-sans), ui-monospace, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--ed-fg-muted);
 }
 
-/* --- Scripture citations ------------------------------------ */
+/* ============================================================
+   MINIMALIST SCRIPTURE CARD (Quran X:Y)
+   ============================================================ */
 
-.editorial-verse {
-    margin-block: 2em;
-    padding: 1.15em 1.35em;
+.editorial-verse-card {
+    margin-block: 2.6em;
+    padding: clamp(1.2rem, 3vw, 1.6rem);
     border: 1px solid var(--ed-rule);
-    border-inline-start: 2px solid var(--ed-accent);
     background: var(--ed-surface);
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: var(--ed-shadow-sm);
 }
 
-.editorial-verse-text {
+.editorial-verse-body {
     font-family: var(--font-newsreader), Georgia, serif;
-    font-size: 1.02em;
-    line-height: 1.7;
+    font-size: clamp(16.5px, 2.1vw, 18px);
+    line-height: 1.72;
     color: var(--ed-fg);
+    font-style: italic;
 }
 
-.editorial-verse-reference {
+.editorial-verse-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.85rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--ed-rule);
+}
+
+.editorial-verse-link {
     display: inline-flex;
-    margin-block-start: 0.7em;
-    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
-    font-weight: 500;
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-dm-sans), ui-monospace, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
     color: var(--ed-accent);
     text-decoration: none;
+    transition: color 150ms ease;
 }
 
-.editorial-verse-reference:hover {
+.editorial-verse-link:hover {
+    color: var(--ed-accent-strong);
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 2px;
 }
 
-/* --- Footnotes ---------------------------------------------- */
+/* --- Footnotes & Citations ----------------------------------- */
 
 .editorial-ref {
-    font-family: var(--font-source-serif), Georgia, serif;
-    font-size: 0.62em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight: 700;
+    font-size: 0.72em;
     vertical-align: super;
-    line-height: 0;
-    margin-inline-start: 0.12em;
+    line-height: 1;
+    margin-inline-start: 0.2em;
+    padding: 0.12em 0.35em;
+    border-radius: 3px;
     text-decoration: none;
     color: var(--ed-accent);
+    background: var(--ed-accent-soft);
+    border: 1px solid color-mix(in srgb, var(--ed-accent) 20%, transparent);
+    scroll-margin-top: 7rem;
+    transition: all 150ms ease;
+}
+
+.editorial-ref:hover {
+    background: var(--ed-accent);
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .editorial-notes {
     max-width: var(--editorial-measure);
-    margin-block-start: 3.5em;
-    padding-block-start: 1.6em;
+    margin-block-start: 3.8em;
+    padding-block-start: 1.8em;
     border-block-start: 1px solid var(--ed-rule);
 }
 
 .editorial-notes-title {
     font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
-    font-weight: 500;
-    font-size: 10.5px;
-    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ed-fg-muted);
-    margin-block-end: 1em;
+    color: var(--ed-accent);
+    margin-block-end: 1.2em;
 }
 
 .editorial-note {
     display: grid;
-    grid-template-columns: 1.9rem 1fr;
+    grid-template-columns: 2.2rem 1fr;
     gap: 0.5rem;
-    margin-block: 0.75em;
-    margin-inline: -0.35em;
-    padding: 0.15em 0.35em;
-    border-radius: 3px;
-    font-size: 0.86em;
+    margin-block: 0.85em;
+    margin-inline: -0.4em;
+    padding: 0.45em 0.6em;
+    border-radius: 4px;
+    font-size: 0.88em;
     line-height: 1.65;
     color: var(--ed-fg-muted);
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 7rem;
     transition: background-color 400ms ease;
 }
 
 .editorial-note-index {
-    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
-    font-weight: 500;
-    font-size: 10.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight: 700;
+    font-size: 11px;
     color: var(--ed-accent);
-    padding-block-start: 0.35em;
+    height: 1.8em;
+    width: 1.8em;
+    border-radius: 3px;
+    background: var(--ed-accent-soft);
+    text-decoration: none;
+    transition: all 150ms ease;
 }
 
-/* Jumping to a note flashes it, so the reader lands on the right line. */
+.editorial-note-index:hover {
+    background: var(--ed-accent);
+    color: #FFFFFF;
+}
+
 .editorial-note:target {
     background: var(--ed-accent-soft);
+    animation: editorial-note-flash 1.5s ease-out;
+}
+
+@keyframes editorial-note-flash {
+    0% { background: color-mix(in srgb, var(--ed-accent) 25%, transparent); }
+    100% { background: var(--ed-accent-soft); }
 }
 
 /* --- Sidebar table of contents ------------------------------- */
@@ -475,36 +578,39 @@
 .editorial-toc-link {
     display: block;
     position: relative;
-    padding: 0.34rem 0 0.34rem 0.85rem;
+    padding: 0.4rem 0 0.4rem 0.95rem;
     font-size: 12.5px;
     line-height: 1.45;
     color: var(--ed-fg-muted);
     text-decoration: none;
     border-inline-start: 1px solid var(--ed-rule);
-    transition: color 150ms ease, border-color 150ms ease;
+    transition: color 150ms ease, border-color 150ms ease, transform 150ms ease;
 }
 
 .editorial-toc-link:hover {
     color: var(--ed-fg);
     border-inline-start-color: var(--ed-rule-strong);
+    transform: translateX(2px);
 }
 
 .editorial-toc-link[data-level='2'] {
     font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
-    font-weight: 500;
-    font-size: 10.5px;
-    letter-spacing: 0.07em;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 .editorial-toc-link[data-level='3'] {
     font-family: var(--font-newsreader), Georgia, serif;
-    padding-inline-start: 1.6rem;
+    padding-inline-start: 1.75rem;
 }
 
 .editorial-toc-link[data-active='true'] {
     color: var(--ed-accent);
+    font-weight: 600;
     border-inline-start-color: var(--ed-accent);
+    background: linear-gradient(90deg, var(--ed-accent-soft) 0%, transparent 100%);
 }
 
 @media (prefers-reduced-motion: reduce) {

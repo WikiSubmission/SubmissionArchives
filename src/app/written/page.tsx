@@ -1,14 +1,12 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BookOpen } from 'lucide-react';
 
 import booksData from '../../../public/data/generated_indices/BOOKS_LIST.json';
 import { getNewsletterIssues } from '@/lib/newsletterCatalog';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import SubmittersPerspectiveGrid from '@/components/written/SubmittersPerspectiveGrid';
 import BooksGrid from '@/components/written/BooksGrid';
-import EditorialsSection from '@/components/editorials/EditorialsSection';
-import { getEditorials } from '@/lib/editorials';
 import { getBookPreviews, type BookSummaryItem } from '@/lib/bookPreviews';
 
 export const revalidate = 86400;
@@ -43,7 +41,7 @@ export default function WrittenArchivePage() {
 
     const newsletterIssues = getNewsletterIssues();
     const bookPreviews = getBookPreviews();
-    const editorials = getEditorials();
+
     // Only the fields the modal renders cross to the client; the full records carry
     // transcript segments that would bloat the payload for no benefit.
     const bookSummaries: BookSummaryItem[] = books.map((book) => ({
@@ -92,29 +90,38 @@ export default function WrittenArchivePage() {
                         </div>
 
                         <div className="flex flex-wrap items-center gap-4">
-                            <div className="flex flex-shrink-0 gap-6 rounded-[8px] border border-ed-rule bg-ed-surface px-6 py-4 shadow-sm">
+                            <Link
+                                href="/editorials"
+                                className="inline-flex items-center gap-2 rounded-[6px] border border-ed-accent/30 bg-ed-accent px-4 py-2.5 text-[13px] font-semibold text-white shadow-sm transition-all hover:bg-ed-accent-strong hover:shadow-md"
+                            >
+                                <BookOpen className="h-4 w-4" aria-hidden="true" />
+                                See SA Editorials
+                                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                            </Link>
+
+                            <div className="flex flex-shrink-0 gap-6 rounded-[8px] border border-ed-rule bg-ed-surface px-6 py-3.5 shadow-sm">
                                 <div className="flex flex-col">
-                                    <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
+                                    <span className="text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
                                         {books.length}
                                     </span>
-                                    <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
-                                        Books & Monographs
+                                    <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
+                                        Books
                                     </span>
                                 </div>
                                 <div className="flex flex-col border-l border-ed-rule pl-6">
-                                    <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
+                                    <span className="text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
                                         {newsletterIssues.length}
                                     </span>
-                                    <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
+                                    <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
                                         Newsletters
                                     </span>
                                 </div>
                                 <div className="flex flex-col border-l border-ed-rule pl-6">
-                                    <span className="text-[24px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
+                                    <span className="text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
                                         1974–90
                                     </span>
-                                    <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
-                                        Preserved Era
+                                    <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
+                                        Era
                                     </span>
                                 </div>
                             </div>
@@ -129,7 +136,7 @@ export default function WrittenArchivePage() {
                                 className="whitespace-nowrap text-[22px] font-semibold tracking-[-0.01em] text-ed-fg"
                                 style={{ fontFamily: 'var(--font-source-serif), Georgia, serif' }}
                             >
-                                Books & Publications
+                                Books &amp; Publications
                             </h2>
                             <div className="h-px flex-1 bg-ed-rule" />
                             <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-ed-fg-muted">
@@ -169,9 +176,6 @@ export default function WrittenArchivePage() {
 
                         <SubmittersPerspectiveGrid issues={newsletterIssues} />
                     </section>
-
-                    {/* Section 3: Archive Editorials */}
-                    <EditorialsSection editorials={editorials} />
 
                     {/* Page Footer */}
                     <footer className="mt-16 border-t border-ed-rule py-9 text-center text-[12px] font-medium tracking-[0.04em] text-ed-fg-muted">

@@ -1,118 +1,323 @@
 <svg id="fig-index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 780" width="1600" height="780" role="img" aria-labelledby="index-title index-desc">
-  <title id="index-title">The indexing path</title>
-  <desc id="index-desc">A query resolves to a ranked list of segments; the chosen segment carries a locator, a page and paragraph for print or a timestamp for a recording; and that locator resolves to the scan or the moment in the recording that the result was drawn from.</desc>
+  <title id="index-title">The Indexing and Evidence Resolution Path</title>
+  <desc id="index-desc">A full technical flow demonstrating how a user query resolves through ranked inverted index segments, branches into atomic print locators or audio timecodes, and resolves directly to verifiable raw evidence (scanned pages or recorded audio waveforms).</desc>
 
   <defs>
+    <!-- Technical Blueprint Grids -->
+    <pattern id="index-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#DDD4C4" stroke-width="0.75" opacity="0.6"/>
+      <circle cx="0" cy="0" r="1" fill="#C0B4A0" opacity="0.75"/>
+    </pattern>
+    <pattern id="index-subgrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#E6DFD4" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+
+    <!-- Arrowhead Markers -->
+    <marker id="arrow-neutral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#8C8175"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#A85324"/>
+    </marker>
+
+    <!-- Card Shadow Filter -->
+    <filter id="node-shadow" x="-8%" y="-8%" width="116%" height="118%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#2D251E" flood-opacity="0.09"/>
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#2D251E" flood-opacity="0.06"/>
+    </filter>
+
     <style>
-      #fig-index .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 500; letter-spacing: 2.6px; fill: #8C8175; }
-      #fig-index .stage { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 3.4px; fill: #6E6459; }
-      #fig-index .mono { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 1.2px; fill: #4A443C; }
-      #fig-index .accent { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; letter-spacing: 1.6px; fill: #A85324; }
-      #fig-index .card { fill: #FBF8F3; stroke: #CFC4B2; stroke-width: 2; }
-      #fig-index .flow { stroke: #A79B8B; stroke-width: 2; fill: none; marker-end: url(#tip); }
-      #fig-index .flowA { stroke: #A85324; stroke-width: 2.5; fill: none; marker-end: url(#tipA); }
+      #fig-index text { font-family: 'DM Sans', var(--font-dm-sans), -apple-system, sans-serif; }
+      #fig-index .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      #fig-index .stage-title { font-size: 12px; font-weight: 700; letter-spacing: 2px; fill: #1C1A18; text-transform: uppercase; }
+      #fig-index .stage-sub { font-size: 9.5px; font-weight: 600; letter-spacing: 1px; fill: #756D65; }
+      #fig-index .card-bg { fill: #FAF7F2; stroke: #D8CEC0; stroke-width: 1.25; }
+      #fig-index .flow-line { stroke: #8C8175; stroke-width: 1.5; fill: none; marker-end: url(#arrow-neutral); }
+      #fig-index .flow-active { stroke: #A85324; stroke-width: 2.25; fill: none; marker-end: url(#arrow-accent); }
     </style>
-    <marker id="tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#A79B8B"/>
-    </marker>
-    <marker id="tipA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#A85324"/>
-    </marker>
   </defs>
 
-  <rect width="1600" height="780" fill="#E5DDD0"/>
+  <!-- Background Base Canvas -->
+  <rect width="1600" height="780" fill="#F4EFE6"/>
+  <rect width="1600" height="780" fill="url(#index-subgrid)"/>
+  <rect width="1600" height="780" fill="url(#index-grid)"/>
 
-  <!-- ===== 1. QUERY ===== -->
-  <g>
-    <rect class="card" x="56" y="322" width="286" height="80" rx="4"/>
-    <circle cx="96" cy="362" r="12" fill="none" stroke="#8C8175" stroke-width="2.5"/>
-    <path d="M105 371 L118 384" stroke="#8C8175" stroke-width="2.5" stroke-linecap="round"/>
-    <text class="mono" x="136" y="370">preservation master</text>
-    <rect x="318" y="346" width="2" height="32" fill="#A85324"/>
+  <!-- Outer Blueprint Border & Document Header -->
+  <rect x="28" y="28" width="1544" height="724" fill="none" stroke="#CFC5B4" stroke-width="1.5"/>
+  <rect x="32" y="32" width="1536" height="716" fill="none" stroke="#E5DDD0" stroke-width="1"/>
+
+  <g transform="translate(52, 54)">
+    <text class="mono" x="0" y="0" font-size="11" font-weight="700" letter-spacing="2" fill="#A85324">SUBMISSION ARCHIVES · QUERY-TO-EVIDENCE RESOLUTION GRAPH</text>
+    <text class="mono" x="0" y="16" font-size="9.5" letter-spacing="1" fill="#756D65">FOUR-STAGE DETERMINISTIC TRACE: QUERY → RANKED SEGMENTS → ATOMIC LOCATOR → PRIMARY EVIDENCE</text>
+    <text class="mono" x="1496" y="0" font-size="9.5" letter-spacing="1.2" fill="#756D65" text-anchor="end">PIPELINE STAGE: 04 INDEX</text>
+    <line x1="0" y1="26" x2="1496" y2="26" stroke="#D5CCC0" stroke-width="1"/>
   </g>
-  <text class="stage" x="56" y="452">QUERY</text>
 
-  <path class="flow" d="M352 362 H418"/>
 
-  <!-- ===== 2. RANKED SEGMENTS ===== -->
-  <g>
-    <!-- Rank 1 -->
-    <rect class="card" x="436" y="272" width="360" height="54" rx="3"/>
-    <rect x="460" y="294" width="196" height="9" fill="#B3A897"/>
-    <rect x="700" y="292" width="72" height="12" fill="#D6C9B4"/>
-    <rect x="700" y="292" width="66" height="12" fill="#B3A897"/>
+  <!-- ========================================================================= -->
+  <!-- 01 · QUERY INPUT CONSOLE (LEFT NODE)                                      -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 240)">
+    <!-- Stage Header -->
+    <text class="stage-title" x="0" y="-18">01 · QUERY DISPATCH</text>
+    <text class="mono stage-sub" x="0" y="-4">FULL-TEXT SEARCH ENGINE</text>
 
-    <!-- Rank 2: the segment the reader opens -->
-    <rect x="436" y="336" width="360" height="54" rx="3" fill="#FBF8F3" stroke="#A85324" stroke-width="2.5"/>
-    <rect x="460" y="358" width="214" height="9" fill="#4A443C"/>
-    <rect x="700" y="356" width="72" height="12" fill="#E6D5C2"/>
-    <rect x="700" y="356" width="58" height="12" fill="#A85324"/>
+    <!-- Query Input Terminal Card -->
+    <rect class="card-bg" x="0" y="10" width="280" height="180" rx="5" filter="url(#node-shadow)"/>
+    <rect x="0" y="10" width="280" height="28" rx="5" fill="#EDE4D6" stroke="#D8CEC0" stroke-width="1"/>
+    <text class="mono" x="14" y="29" font-size="9" font-weight="700" fill="#575049">SEARCH CONSOLE · API V2</text>
 
-    <!-- Rank 3 -->
-    <rect class="card" x="436" y="400" width="360" height="54" rx="3"/>
-    <rect x="460" y="422" width="158" height="9" fill="#B3A897"/>
-    <rect x="700" y="420" width="72" height="12" fill="#D6C9B4"/>
-    <rect x="700" y="420" width="34" height="12" fill="#B3A897"/>
+    <!-- Search Input Field -->
+    <g transform="translate(16, 52)">
+      <rect x="0" y="0" width="248" height="42" rx="4" fill="#FFFFFF" stroke="#A85324" stroke-width="1.75"/>
+      <!-- Magnifying Glass Icon -->
+      <circle cx="20" cy="21" r="6" fill="none" stroke="#A85324" stroke-width="1.75"/>
+      <line x1="24" y1="25" x2="30" y2="31" stroke="#A85324" stroke-width="1.75" stroke-linecap="round"/>
+      <!-- Input Text & Cursor -->
+      <text class="mono" x="40" y="26" font-size="11.5" font-weight="700" fill="#1C1A18">preservation master</text>
+      <rect x="194" y="12" width="2.5" height="18" fill="#A85324"/>
+    </g>
+
+    <!-- Query Metatags -->
+    <g transform="translate(16, 108)">
+      <rect x="0" y="0" width="76" height="20" rx="3" fill="#EAE2D4"/>
+      <text class="mono" x="38" y="13" font-size="8" font-weight="600" fill="#575049" text-anchor="middle">MODE: HYBRID</text>
+      
+      <rect x="82" y="0" width="82" height="20" rx="3" fill="#FAF2E8" stroke="#D0C4B2"/>
+      <text class="mono" x="123" y="13" font-size="8" font-weight="600" fill="#A85324" text-anchor="middle">CORPUS: CHECKED</text>
+    </g>
+
+    <!-- Query Info Line -->
+    <text class="mono" x="16" y="152" font-size="8.5" fill="#756D65">TOKEN HASH: <tspan font-weight="700" fill="#1C1A18">0x88F2B94A</tspan></text>
+    <text class="mono" x="16" y="166" font-size="8.5" fill="#756D65">LATENCY: <tspan font-weight="700" fill="#1C1A18">1.42 ms (INDEXED)</tspan></text>
   </g>
-  <text class="stage" x="436" y="512">RANKED SEGMENTS</text>
-  <text class="lbl" x="700" y="252" font-size="16" letter-spacing="2">RELEVANCE</text>
 
-  <!-- Branch: the same segment resolves by page or by timestamp. -->
-  <path class="flowA" d="M806 363 H846 Q866 363 866 343 V236 Q866 216 886 216 H926"/>
-  <path class="flowA" d="M806 363 H846 Q866 363 866 383 V490 Q866 510 886 510 H926"/>
+  <!-- Flow Connector 1 -> 2 -->
+  <line class="flow-active" x1="340" y1="330" x2="420" y2="330"/>
 
-  <!-- ===== 3. SEGMENT LOCATOR ===== -->
-  <g>
-    <!-- Print -->
-    <rect class="card" x="944" y="168" width="268" height="96" rx="4"/>
-    <text class="lbl" x="968" y="204" font-size="16" letter-spacing="2.4">PRINT</text>
-    <text class="accent" x="968" y="240">PAGE 214 · ¶ 3</text>
 
-    <!-- Recording -->
-    <rect class="card" x="944" y="462" width="268" height="96" rx="4"/>
-    <text class="lbl" x="968" y="498" font-size="16" letter-spacing="2.4">AUDIO / VIDEO</text>
-    <text class="accent" x="968" y="534">00:14:32 — 00:14:51</text>
+  <!-- ========================================================================= -->
+  <!-- 02 · RANKED SEGMENTS (SECOND NODE)                                        -->
+  <!-- ========================================================================= -->
+  <g transform="translate(430, 160)">
+    <!-- Stage Header -->
+    <text class="stage-title" x="0" y="-18">02 · RANKED SEGMENTS</text>
+    <text class="mono stage-sub" x="0" y="-4">INVERTED BM25 + DENSE VECTOR INDEX</text>
+
+    <rect class="card-bg" x="0" y="10" width="340" height="340" rx="5" filter="url(#node-shadow)"/>
+    <rect x="0" y="10" width="340" height="28" rx="5" fill="#EDE4D6" stroke="#D8CEC0" stroke-width="1"/>
+    <text class="mono" x="14" y="29" font-size="9" font-weight="700" fill="#575049">MATCHED CANDIDATE MATRIX</text>
+    <text class="mono" x="326" y="29" font-size="9" fill="#756D65" text-anchor="end">3 HITS</text>
+
+    <!-- Rank 1 Card -->
+    <g transform="translate(14, 50)">
+      <rect x="0" y="0" width="312" height="66" rx="4" fill="#FAF8F5" stroke="#DDD4C6"/>
+      <text class="mono" x="12" y="18" font-size="9" font-weight="700" fill="#756D65">01 · SEGMENT_0092</text>
+      <text class="mono" x="12" y="34" font-size="9" fill="#3D3732">"...physical master copy on shelf..."</text>
+      <!-- Score Meter -->
+      <rect x="12" y="44" width="200" height="6" rx="2" fill="#E5DDD0"/>
+      <rect x="12" y="44" width="168" height="6" rx="2" fill="#B3A897"/>
+      <text class="mono" x="220" y="50" font-size="8.5" font-weight="600" fill="#756D65">84.2%</text>
+    </g>
+
+    <!-- Rank 2 Card (ACTIVE CHOSEN SEGMENT) -->
+    <g transform="translate(14, 126)">
+      <rect x="0" y="0" width="312" height="82" rx="4" fill="#FFFFFF" stroke="#A85324" stroke-width="2"/>
+      <rect x="0" y="0" width="5" height="82" rx="2" fill="#A85324"/>
+      
+      <text class="mono" x="14" y="18" font-size="9.5" font-weight="700" fill="#A85324">02 · SEGMENT_0214 [SELECTED]</text>
+      <rect x="236" y="8" width="64" height="18" rx="3" fill="#A85324"/>
+      <text class="mono" x="268" y="20" font-size="7.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">PRIMARY</text>
+
+      <text class="mono" x="14" y="36" font-size="9" font-weight="600" fill="#1C1A18">"...the untouched preservation master..."</text>
+      
+      <!-- Score Meter (High Confidence) -->
+      <rect x="14" y="48" width="200" height="7" rx="2" fill="#FAF2E8"/>
+      <rect x="14" y="48" width="196" height="7" rx="2" fill="#A85324"/>
+      <text class="mono" x="220" y="55" font-size="9" font-weight="700" fill="#A85324">98.4% MATCH</text>
+      <text class="mono" x="14" y="70" font-size="8" fill="#756D65">LOCATOR TYPE: DUAL (PRINT + RECORDING)</text>
+    </g>
+
+    <!-- Rank 3 Card -->
+    <g transform="translate(14, 218)">
+      <rect x="0" y="0" width="312" height="66" rx="4" fill="#FAF8F5" stroke="#DDD4C6"/>
+      <text class="mono" x="12" y="18" font-size="9" font-weight="700" fill="#756D65">03 · SEGMENT_0411</text>
+      <text class="mono" x="12" y="34" font-size="9" fill="#3D3732">"...indexing the master transcripts..."</text>
+      <!-- Score Meter -->
+      <rect x="12" y="44" width="200" height="6" rx="2" fill="#E5DDD0"/>
+      <rect x="12" y="44" width="142" height="6" rx="2" fill="#B3A897"/>
+      <text class="mono" x="220" y="50" font-size="8.5" font-weight="600" fill="#756D65">71.5%</text>
+    </g>
+
+    <!-- Rank Status Bar -->
+    <g transform="translate(14, 296)">
+      <rect x="0" y="0" width="312" height="26" rx="3" fill="#FAF5EE" stroke="#D5CCC0"/>
+      <text class="mono" x="156" y="17" font-size="8.5" font-weight="600" fill="#A85324" text-anchor="middle">✓ ATOMIC RESOLUTION CONFIRMED</text>
+    </g>
   </g>
-  <text class="stage" x="944" y="622">SEGMENT</text>
 
-  <path class="flow" d="M1222 216 H1288"/>
-  <path class="flow" d="M1222 510 H1288"/>
+  <!-- Flow Connector 2 -> 3 (Branching to Print & Audio/Video) -->
+  <path class="flow-active" d="M 770 290 H 830 Q 850 290 850 210 H 890"/>
+  <path class="flow-active" d="M 770 290 H 830 Q 850 290 850 490 H 890"/>
 
-  <!-- ===== 4. EVIDENCE ===== -->
-  <g>
-    <!-- The scan itself, with the matched line struck in accent. -->
-    <rect class="card" x="1306" y="96" width="236" height="240" rx="3"/>
-    <g fill="#B3A897">
-      <rect x="1334" y="130" width="180" height="8"/>
-      <rect x="1334" y="156" width="160" height="8"/>
-      <rect x="1334" y="208" width="180" height="8"/>
-      <rect x="1334" y="234" width="140" height="8"/>
-      <rect x="1334" y="260" width="176" height="8"/>
-    </g>
-    <rect x="1326" y="174" width="196" height="22" fill="#A85324" opacity="0.16"/>
-    <rect x="1334" y="182" width="172" height="8" fill="#A85324"/>
-    <text class="lbl" x="1334" y="312" font-size="16" letter-spacing="2">P. 214</text>
 
-    <!-- The waveform, with the segment marked out. -->
-    <rect class="card" x="1306" y="428" width="236" height="164" rx="3"/>
-    <rect x="1380" y="440" width="64" height="140" fill="#A85324" opacity="0.14"/>
-    <g fill="#B3A897">
-      <rect x="1330" y="498" width="5" height="24"/><rect x="1341" y="486" width="5" height="48"/>
-      <rect x="1352" y="492" width="5" height="36"/><rect x="1363" y="478" width="5" height="64"/>
-      <rect x="1374" y="496" width="5" height="28"/>
+  <!-- ========================================================================= -->
+  <!-- 03 · SEGMENT LOCATORS (BRANCHING NODE)                                    -->
+  <!-- ========================================================================= -->
+  
+  <!-- 3A · PRINT SEGMENT LOCATOR -->
+  <g transform="translate(900, 130)">
+    <!-- Stage Header -->
+    <text class="stage-title" x="0" y="-18">03-A · PRINT LOCATOR</text>
+    <text class="mono stage-sub" x="0" y="-4">SPATIAL PAGINATION ANCHOR</text>
+
+    <rect class="card-bg" x="0" y="10" width="280" height="150" rx="5" filter="url(#node-shadow)"/>
+    <rect x="0" y="10" width="280" height="26" rx="5" fill="#EDE4D6" stroke="#D8CEC0" stroke-width="1"/>
+    <text class="mono" x="12" y="27" font-size="9" font-weight="700" fill="#575049">ATOMIC PHYSICAL COORDINATE</text>
+
+    <g transform="translate(16, 48)">
+      <text class="mono" x="0" y="14" font-size="9.5" fill="#756D65">VOLUME: <tspan font-weight="700" fill="#1C1A18">First Edition (1982)</tspan></text>
+      <text class="mono" x="0" y="34" font-size="13" font-weight="700" fill="#A85324">PAGE 214 · PARAGRAPH 3</text>
+      <text class="mono" x="0" y="54" font-size="9" fill="#756D65">LINE RANGE: <tspan font-weight="700" fill="#1C1A18">Lines 14–19</tspan></text>
+      <text class="mono" x="0" y="72" font-size="8.5" fill="#756D65">BOUNDING BOX: <tspan font-weight="700" fill="#1C1A18">[X:80, Y:270, W:340, H:60]</tspan></text>
     </g>
-    <g fill="#A85324">
-      <rect x="1385" y="470" width="5" height="80"/><rect x="1396" y="452" width="5" height="116"/>
-      <rect x="1407" y="482" width="5" height="56"/><rect x="1418" y="462" width="5" height="96"/>
-      <rect x="1429" y="490" width="5" height="40"/>
-    </g>
-    <g fill="#B3A897">
-      <rect x="1445" y="484" width="5" height="52"/><rect x="1456" y="494" width="5" height="32"/>
-      <rect x="1467" y="474" width="5" height="72"/><rect x="1478" y="490" width="5" height="40"/>
-      <rect x="1489" y="500" width="5" height="20"/><rect x="1500" y="488" width="5" height="44"/>
-      <rect x="1511" y="496" width="5" height="28"/>
-    </g>
-    <text class="lbl" x="1334" y="572" font-size="16" letter-spacing="2">00:14:32</text>
   </g>
-  <text class="stage" x="1306" y="668">EVIDENCE</text>
+
+  <!-- 3B · AUDIO / VIDEO SEGMENT LOCATOR -->
+  <g transform="translate(900, 420)">
+    <!-- Stage Header -->
+    <text class="stage-title" x="0" y="-18">03-B · MEDIA LOCATOR</text>
+    <text class="mono stage-sub" x="0" y="-4">TEMPORAL TIMECODE ANCHOR</text>
+
+    <rect class="card-bg" x="0" y="10" width="280" height="150" rx="5" filter="url(#node-shadow)"/>
+    <rect x="0" y="10" width="280" height="26" rx="5" fill="#EDE4D6" stroke="#D8CEC0" stroke-width="1"/>
+    <text class="mono" x="12" y="27" font-size="9" font-weight="700" fill="#575049">EXACT MEDIA TIMECODE</text>
+
+    <g transform="translate(16, 48)">
+      <text class="mono" x="0" y="14" font-size="9.5" fill="#756D65">TAPE ID: <tspan font-weight="700" fill="#1C1A18">CASSETTE-1985-T07</tspan></text>
+      <text class="mono" x="0" y="34" font-size="12" font-weight="700" fill="#A85324">00:14:32.400 → 00:14:51.200</text>
+      <text class="mono" x="0" y="54" font-size="9" fill="#756D65">DURATION: <tspan font-weight="700" fill="#1C1A18">18.80 seconds</tspan></text>
+      <text class="mono" x="0" y="72" font-size="8.5" fill="#756D65">SAMPLE OFFSET: <tspan font-weight="700" fill="#1C1A18">Frame 697,536 (48kHz)</tspan></text>
+    </g>
+  </g>
+
+  <!-- Flow Connector 3 -> 4 -->
+  <line class="flow-active" x1="1180" y1="210" x2="1250" y2="210"/>
+  <line class="flow-active" x1="1180" y1="490" x2="1250" y2="490"/>
+
+
+  <!-- ========================================================================= -->
+  <!-- 04 · PRIMARY EVIDENCE ARTEFACTS (DESTINATION NODES)                       -->
+  <!-- ========================================================================= -->
+
+  <!-- 4A · VERIFIED SCAN EVIDENCE CARD -->
+  <g transform="translate(1260, 90)">
+    <!-- Stage Header -->
+    <text class="stage-title" x="0" y="-18">04-A · PRIMARY SCAN EVIDENCE</text>
+    <text class="mono stage-sub" x="0" y="-4">600 DPI RAW PRESERVATION MASTER</text>
+
+    <rect class="card-bg" x="0" y="10" width="280" height="230" rx="5" filter="url(#node-shadow)"/>
+    <rect x="0" y="10" width="280" height="26" rx="5" fill="#EDE4D6" stroke="#D8CEC0" stroke-width="1"/>
+    <text class="mono" x="12" y="27" font-size="9" font-weight="700" fill="#575049">RAW MASTER FACSIMILE</text>
+    <text class="mono" x="268" y="27" font-size="8.5" font-weight="700" fill="#A85324" text-anchor="end">P. 214</text>
+
+    <!-- Mini Master Scan Sheet Facsimile -->
+    <g transform="translate(20, 48)">
+      <rect x="0" y="0" width="240" height="150" rx="2" fill="#EFE6D5" stroke="#C8BDAA" stroke-width="1"/>
+      <rect x="0" y="0" width="16" height="150" fill="#8E7E6A" opacity="0.35"/>
+      
+      <!-- Generic lines -->
+      <g fill="#7A6D5E">
+        <rect x="26" y="14" width="180" height="4"/>
+        <rect x="26" y="24" width="160" height="4"/>
+        <rect x="26" y="34" width="170" height="4"/>
+        <rect x="26" y="44" width="120" height="4"/>
+      </g>
+
+      <!-- HIGHLIGHTED TARGET EVIDENCE PARAGRAPH -->
+      <rect x="22" y="58" width="196" height="34" rx="2" fill="#A85324" fill-opacity="0.18" stroke="#A85324" stroke-width="1.25"/>
+      <g fill="#A85324">
+        <rect x="26" y="64" width="188" height="5"/>
+        <rect x="26" y="74" width="176" height="5"/>
+        <rect x="26" y="84" width="130" height="5"/>
+      </g>
+
+      <!-- Remaining lines -->
+      <g fill="#7A6D5E">
+        <rect x="26" y="102" width="180" height="4"/>
+        <rect x="26" y="112" width="150" height="4"/>
+        <rect x="26" y="122" width="174" height="4"/>
+      </g>
+    </g>
+
+    <!-- Verification Badge -->
+    <g transform="translate(20, 208)">
+      <text class="mono" x="0" y="18" font-size="8.5" font-weight="700" fill="#A85324">✓ HASH: e4b7...910a (AUDITED)</text>
+    </g>
+  </g>
+
+  <!-- 4B · VERIFIED AUDIO WAVEFORM EVIDENCE CARD -->
+  <g transform="translate(1260, 380)">
+    <!-- Stage Header -->
+    <text class="stage-title" x="0" y="-18">04-B · PRIMARY AUDIO EVIDENCE</text>
+    <text class="mono stage-sub" x="0" y="-4">UNMODIFIED 96kHz 24-BIT MASTER</text>
+
+    <rect class="card-bg" x="0" y="10" width="280" height="230" rx="5" filter="url(#node-shadow)"/>
+    <rect x="0" y="10" width="280" height="26" rx="5" fill="#EDE4D6" stroke="#D8CEC0" stroke-width="1"/>
+    <text class="mono" x="12" y="27" font-size="9" font-weight="700" fill="#575049">AUDIO WAVEFORM ENVELOPE</text>
+    <text class="mono" x="268" y="27" font-size="8.5" font-weight="700" fill="#A85324" text-anchor="end">00:14:32</text>
+
+    <!-- Waveform Oscilloscope Visualizer -->
+    <g transform="translate(20, 48)">
+      <rect x="0" y="0" width="240" height="150" rx="2" fill="#201C18" stroke="#3D362E" stroke-width="1"/>
+      <line x1="0" y1="75" x2="240" y2="75" stroke="#4A4137" stroke-width="1" stroke-dasharray="2 2"/>
+
+      <!-- Highlight Window for Matched Segment -->
+      <rect x="80" y="6" width="90" height="138" rx="2" fill="#A85324" fill-opacity="0.25" stroke="#A85324" stroke-width="1.25"/>
+
+      <!-- Pre-Segment Waveform Bars -->
+      <g fill="#7A6D5E">
+        <rect x="10" y="65" width="4" height="20"/><rect x="18" y="55" width="4" height="40"/>
+        <rect x="26" y="60" width="4" height="30"/><rect x="34" y="45" width="4" height="60"/>
+        <rect x="42" y="58" width="4" height="34"/><rect x="50" y="40" width="4" height="70"/>
+        <rect x="58" y="52" width="4" height="46"/><rect x="66" y="62" width="4" height="26"/>
+        <rect x="74" y="50" width="4" height="50"/>
+      </g>
+
+      <!-- ACTIVE HIGHLIGHTED SEGMENT WAVEFORM BARS -->
+      <g fill="#A85324">
+        <rect x="84" y="30" width="5" height="90"/><rect x="92" y="16" width="5" height="118"/>
+        <rect x="100" y="24" width="5" height="102"/><rect x="108" y="10" width="5" height="130"/>
+        <rect x="116" y="28" width="5" height="94"/><rect x="124" y="18" width="5" height="114"/>
+        <rect x="132" y="36" width="5" height="78"/><rect x="140" y="14" width="5" height="122"/>
+        <rect x="148" y="26" width="5" height="98"/><rect x="156" y="42" width="5" height="66"/>
+        <rect x="164" y="32" width="5" height="86"/>
+      </g>
+
+      <!-- Post-Segment Waveform Bars -->
+      <g fill="#7A6D5E">
+        <rect x="174" y="54" width="4" height="42"/><rect x="182" y="60" width="4" height="30"/>
+        <rect x="190" y="48" width="4" height="54"/><rect x="198" y="62" width="4" height="26"/>
+        <rect x="206" y="50" width="4" height="50"/><rect x="214" y="66" width="4" height="18"/>
+        <rect x="222" y="56" width="4" height="38"/>
+      </g>
+    </g>
+
+    <!-- Verification Badge -->
+    <g transform="translate(20, 208)">
+      <text class="mono" x="0" y="18" font-size="8.5" font-weight="700" fill="#A85324">✓ TIME-ALIGNED WITH MASTER TAPE</text>
+    </g>
+  </g>
+
+
+  <!-- ========================================================================= -->
+  <!-- BOTTOM STATUS BANNER                                                      -->
+  <!-- ========================================================================= -->
+  <g transform="translate(52, 690)">
+    <rect x="0" y="0" width="1496" height="36" rx="3" fill="#EDE6DA" stroke="#D5CCC0" stroke-width="1"/>
+    <circle cx="20" cy="18" r="5" fill="#A85324"/>
+    <text class="mono" x="34" y="22" font-size="9.5" font-weight="700" fill="#1C1A18">CORE PROVENANCE RULE:</text>
+    <text class="mono" x="220" y="22" font-size="9.5" fill="#575049">"A query never returns a document in general — it resolves to the exact page scan or audio timestamp evidence behind it."</text>
+    <text class="mono" x="1476" y="22" font-size="9" font-weight="700" fill="#A85324" text-anchor="end">100% AUDITABLE EVIDENCE</text>
+  </g>
 </svg>

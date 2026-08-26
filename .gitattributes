@@ -1,0 +1,24 @@
+# Set default behavior to automatically normalize line endings
+* text=auto eol=lf
+
+# Force lockfile and configs to LF
+package-lock.json text eol=lf
+package.json text eol=lf
+tsconfig.json text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+*.mdx text eol=lf
+*.svg text eol=lf
+*.json text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.pdf binary
