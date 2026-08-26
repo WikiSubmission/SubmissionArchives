@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="thumb-deedat-title">
+  <title id="thumb-deedat-title">The Rise &amp; Fall of Ahmed Deedat</title>
+
+  <defs>
+    <linearGradient id="bg-grad-deedat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1814"/>
+      <stop offset="60%" stop-color="#14110E"/>
+      <stop offset="100%" stop-color="#0A0807"/>
+    </linearGradient>
+
+    <linearGradient id="gold-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2A468"/>
+      <stop offset="50%" stop-color="#D97738"/>
+      <stop offset="100%" stop-color="#9C4416"/>
+    </linearGradient>
+
+    <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .thumb-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .thumb-serif { font-family: 'Source Serif Pro', Georgia, serif; }
+      .thumb-sans { font-family: 'DM Sans', -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  
+  <rect width="800" height="600" fill="url(#bg-grad-deedat)"/>
+
+  
+  <g opacity="0.1" stroke="#FAF5EE" stroke-width="0.5">
+    <circle cx="400" cy="270" r="160" fill="none" stroke-dasharray="4 4"/>
+    <circle cx="400" cy="270" r="220" fill="none"/>
+    <line x1="400" y1="40" x2="400" y2="500"/>
+    <line x1="180" y1="270" x2="620" y2="270"/>
+  </g>
+
+  
+  <g stroke="#D97738" stroke-width="1.25" opacity="0.6">
+    <path d="M 30 20 L 30 40 M 20 30 L 40 30"/>
+    <path d="M 770 20 L 770 40 M 760 30 L 780 30"/>
+    <path d="M 30 570 L 30 590 M 20 580 L 40 580"/>
+    <path d="M 770 570 L 770 590 M 760 580 L 780 580"/>
+  </g>
+
+  
+  <g transform="translate(400, 270)">
+    
+    <text class="thumb-serif" x="0" y="80" font-size="220" font-weight="700" fill="#FAF5EE" fill-opacity="0.04" text-anchor="middle" letter-spacing="-8">19</text>
+
+    
+    
+    <line x1="0" y1="-90" x2="0" y2="90" stroke="#A8A096" stroke-width="2.5" opacity="0.7"/>
+    <circle cx="0" cy="-90" r="6" fill="#D97738" filter="url(#glow-gold)"/>
+
+    
+    <line x1="-150" y1="-50" x2="150" y2="-10" stroke="url(#gold-accent)" stroke-width="3" filter="url(#glow-gold)"/>
+
+    
+    <line x1="-150" y1="-50" x2="-180" y2="20" stroke="#A8A096" stroke-width="1" opacity="0.6"/>
+    <line x1="-150" y1="-50" x2="-120" y2="20" stroke="#A8A096" stroke-width="1" opacity="0.6"/>
+    <path d="M -190 20 Q -150 40 -110 20 Z" fill="#FAF5EE" fill-opacity="0.12" stroke="#FAF5EE" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text class="thumb-mono" x="-150" y="12" font-size="8" font-weight="700" fill="#D97738" text-anchor="middle">PROCLAMATION</text>
+
+    
+    <line x1="150" y1="-10" x2="120" y2="60" stroke="#A8A096" stroke-width="1" opacity="0.6"/>
+    <line x1="150" y1="-10" x2="180" y2="60" stroke="#A8A096" stroke-width="1" opacity="0.6"/>
+    <path d="M 110 60 Q 150 80 190 60 Z" fill="#D97738" fill-opacity="0.25" stroke="#D97738" stroke-width="2"/>
+    <text class="thumb-mono" x="150" y="52" font-size="8" font-weight="700" fill="#FFA366" text-anchor="middle">RETRIBUTION</text>
+
+    
+    <rect x="-42" y="100" width="84" height="20" rx="3" fill="#1C1814" stroke="#D97738" stroke-width="1"/>
+    <text class="thumb-mono" x="0" y="113" font-size="8.5" font-weight="700" fill="#D97738" text-anchor="middle">Q. 74:11–29</text>
+  </g>
+
+  
+  <g transform="translate(48, 58)">
+    <rect x="0" y="0" width="105" height="22" rx="3" fill="#D97738" fill-opacity="0.15" stroke="#D97738" stroke-opacity="0.4"/>
+    <text class="thumb-mono" x="52" y="15" font-size="9" font-weight="700" fill="#D97738" letter-spacing="1.5" text-anchor="middle">MONOGRAPH 02</text>
+    <text class="thumb-sans" x="0" y="44" font-size="11" font-weight="600" fill="#A8A096" letter-spacing="2">HISTORICAL PROFILE</text>
+  </g>
+
+  
+  <g transform="translate(48, 532)">
+    <text class="thumb-serif" x="0" y="0" font-size="24" font-weight="600" fill="#FAF5EE" letter-spacing="-0.5">The Rise &amp; Fall of Ahmed Deedat</text>
+    <text class="thumb-mono" x="0" y="24" font-size="10.5" fill="#A8A096" letter-spacing="1">QURAN 74:11–29 PROPHECY · PROCLAMATION &amp; COMPROMISE</text>
+    <text class="thumb-mono" x="704" y="24" font-size="10.5" font-weight="700" fill="#D97738" letter-spacing="1.5" text-anchor="end">VIEW ↗</text>
+  </g>
+</svg>

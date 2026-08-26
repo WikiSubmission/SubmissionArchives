@@ -1,0 +1,161 @@
+<svg id="fig-hero-gaddafi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Gaddafi: The Downfall Marked by 19</title>
+  <desc id="hero-desc">An archival historical timeline and scriptural analysis: Muammar Gaddafi's early interaction with the 19-based miracle, tyrannical deviation, and the numerical markers of his eventual downfall.</desc>
+
+  <defs>
+    
+    <pattern id="gaddafi-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#DCD3C4" stroke-width="0.75" opacity="0.65"/>
+      <circle cx="0" cy="0" r="1" fill="#C4B9A7" opacity="0.8"/>
+    </pattern>
+    <pattern id="gaddafi-subgrid" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#E3DBD0" stroke-width="0.35" opacity="0.5"/>
+    </pattern>
+
+    <filter id="gaddafi-shadow" x="-5%" y="-5%" width="112%" height="114%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2D251E" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#2D251E" flood-opacity="0.06"/>
+    </filter>
+
+    <style>
+      #fig-hero-gaddafi text { font-family: 'DM Sans', var(--font-dm-sans), -apple-system, sans-serif; }
+      #fig-hero-gaddafi .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      #fig-hero-gaddafi .card-bg { fill: #FAF7F2; stroke: #D8CEC0; stroke-width: 1.25; }
+      #fig-hero-gaddafi .sec-title { font-size: 13px; font-weight: 700; letter-spacing: 2px; fill: #3D3732; text-transform: uppercase; }
+      #fig-hero-gaddafi .badge-txt { font-size: 8.5px; font-weight: 700; letter-spacing: 1px; fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  
+  <rect width="1200" height="900" fill="#F4EFE6"/>
+  <rect width="1200" height="900" fill="url(#gaddafi-subgrid)"/>
+  <rect width="1200" height="900" fill="url(#gaddafi-grid)"/>
+
+  
+  <rect x="24" y="24" width="1152" height="852" fill="none" stroke="#CFC5B4" stroke-width="1.5"/>
+  <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#E5DDD0" stroke-width="1"/>
+
+  <g transform="translate(44, 48)">
+    <text class="mono" x="0" y="0" font-size="10.5" font-weight="700" letter-spacing="1.5" fill="#A85324">SUBMISSION ARCHIVES · GEOPOLITICAL &amp; SCRIPTURAL RETRIBUTION</text>
+    <text class="mono" x="0" y="14" font-size="9" letter-spacing="1" fill="#756D65">CASE STUDY: MUAMMAR GADDAFI (1942–2011) · TYRANNY, THE NINETEEN SIGN &amp; DIVINE RECKONING</text>
+    <text class="mono" x="1112" y="0" font-size="9" letter-spacing="1.2" fill="#756D65" text-anchor="end">STATUS: HISTORICAL RECORD</text>
+    <line x1="0" y1="24" x2="1112" y2="24" stroke="#D5CCC0" stroke-width="1"/>
+  </g>
+
+  
+  <g transform="translate(60, 96)">
+    
+    <rect class="card-bg" x="0" y="0" width="1080" height="340" rx="6" filter="url(#gaddafi-shadow)"/>
+    <rect x="0" y="0" width="1080" height="42" rx="6" fill="#EDE6DA" stroke="#D8CEC0" stroke-width="1"/>
+    <rect x="18" y="10" width="28" height="22" rx="3" fill="#A85324"/>
+    <text class="badge-txt" x="32" y="25" text-anchor="middle">01</text>
+    <text class="sec-title" x="56" y="26">CHRONOLOGY: FROM EARLY EXPOSURE TO ULTIMATE DOWNFALL</text>
+    <text class="mono" x="1060" y="26" font-size="9.5" fill="#756D65" text-anchor="end">TIMELINE OF RETRIBUTION</text>
+
+    
+    <g transform="translate(40, 70)">
+      
+      <line x1="0" y1="120" x2="1000" y2="120" stroke="#CFC5B4" stroke-width="2"/>
+      <line x1="0" y1="120" x2="480" y2="120" stroke="#A85324" stroke-width="3"/>
+      <line x1="480" y1="120" x2="1000" y2="120" stroke="#756D65" stroke-width="3" stroke-dasharray="6 4"/>
+
+      
+      <g transform="translate(60, 120)">
+        <circle cx="0" cy="0" r="7" fill="#FAF7F2" stroke="#A85324" stroke-width="3"/>
+        <line x1="0" y1="-10" x2="0" y2="-50" stroke="#A85324" stroke-width="1.5"/>
+        <rect x="-70" y="-100" width="140" height="46" rx="3" fill="#FFFFFF" stroke="#D5CCC0"/>
+        <text class="mono" x="0" y="-84" font-size="8.5" font-weight="700" fill="#A85324" text-anchor="middle">SEP 1, 1969</text>
+        <text class="mono" x="0" y="-68" font-size="8" fill="#1C1A18" text-anchor="middle">Coup &amp; Seizure of Power</text>
+        <text class="mono" x="0" y="24" font-size="7.5" fill="#756D65" text-anchor="middle">42-Year Rule Begins</text>
+      </g>
+
+      
+      <g transform="translate(320, 120)">
+        <circle cx="0" cy="0" r="9" fill="#A85324"/>
+        <line x1="0" y1="10" x2="0" y2="50" stroke="#A85324" stroke-width="1.5"/>
+        <rect x="-85" y="56" width="170" height="52" rx="3" fill="#FFFFFF" stroke="#A85324" stroke-width="1.5"/>
+        <text class="mono" x="0" y="74" font-size="9" font-weight="700" fill="#A85324" text-anchor="middle">1978 – 1982: 19 AWARENESS</text>
+        <text class="mono" x="0" y="90" font-size="8" fill="#1C1A18" text-anchor="middle">Early Interest &amp; Printing</text>
+        <text class="mono" x="0" y="-18" font-size="7.5" font-weight="600" fill="#A85324" text-anchor="middle">RECEPTION OF SIGNS</text>
+      </g>
+
+      
+      <g transform="translate(600, 120)">
+        <circle cx="0" cy="0" r="7" fill="#FAF7F2" stroke="#756D65" stroke-width="3"/>
+        <line x1="0" y1="-10" x2="0" y2="-50" stroke="#756D65" stroke-width="1.5"/>
+        <rect x="-80" y="-100" width="160" height="46" rx="3" fill="#FFFFFF" stroke="#D5CCC0"/>
+        <text class="mono" x="0" y="-84" font-size="8.5" font-weight="700" fill="#756D65" text-anchor="middle">1985 – 1990</text>
+        <text class="mono" x="0" y="-68" font-size="8" fill="#1C1A18" text-anchor="middle">Cult of Personality</text>
+        <text class="mono" x="0" y="24" font-size="7.5" fill="#756D65" text-anchor="middle">Subversion of Religion</text>
+      </g>
+
+      
+      <g transform="translate(880, 120)">
+        <circle cx="0" cy="0" r="7" fill="#FAF7F2" stroke="#A85324" stroke-width="3"/>
+        <line x1="0" y1="10" x2="0" y2="50" stroke="#A85324" stroke-width="1.5"/>
+        <rect x="-80" y="56" width="160" height="46" rx="3" fill="#FFFFFF" stroke="#D5CCC0"/>
+        <text class="mono" x="0" y="74" font-size="8.5" font-weight="700" fill="#A85324" text-anchor="middle">OCT 20, 2011</text>
+        <text class="mono" x="0" y="90" font-size="8" fill="#1C1A18" text-anchor="middle">Capture &amp; Demise in Sirte</text>
+        <text class="mono" x="0" y="-18" font-size="7.5" fill="#756D65" text-anchor="middle">Pharaoh's Fate Reenacted</text>
+      </g>
+    </g>
+
+    
+    
+    <g transform="translate(0, 364)">
+      <rect class="card-bg" x="0" y="0" width="526" height="340" rx="6" filter="url(#gaddafi-shadow)"/>
+      <rect x="0" y="0" width="526" height="42" rx="6" fill="#EDE6DA" stroke="#D8CEC0" stroke-width="1"/>
+      <text class="sec-title" x="20" y="26">SCRIPTURAL ARCHETYPE: THE PHARAOH PARADIGM</text>
+      
+      <g transform="translate(20, 60)">
+        
+        <rect x="0" y="0" width="486" height="66" rx="3" fill="#FFFFFF" stroke="#E5DDD0"/>
+        <text class="mono" x="14" y="22" font-size="9" font-weight="700" fill="#A85324">QURAN 79:17–25 · TYRANNICAL EXALTATION</text>
+        <text class="mono" x="14" y="38" font-size="8.5" fill="#3D3732">"Go to Pharaoh, for he has transgressed... He proclaimed:</text>
+        <text class="mono" x="14" y="52" font-size="8.5" fill="#3D3732">'I am your highest lord.' So God seized him with retribution."</text>
+
+        
+        <rect x="0" y="76" width="486" height="66" rx="3" fill="#FFFFFF" stroke="#E5DDD0"/>
+        <text class="mono" x="14" y="98" font-size="9" font-weight="700" fill="#756D65">QURAN 44:25–29 · THE ABANDONED WEALTH</text>
+        <text class="mono" x="14" y="114" font-size="8.5" fill="#3D3732">"How many gardens and springs did they leave behind?</text>
+        <text class="mono" x="14" y="128" font-size="8.5" fill="#3D3732">Neither heaven nor earth wept for them, nor were they reprieved."</text>
+
+        
+        <rect x="0" y="152" width="486" height="66" rx="3" fill="#FFFFFF" stroke="#A85324" stroke-width="1.25"/>
+        <text class="mono" x="14" y="174" font-size="9" font-weight="700" fill="#A85324">QURAN 10:92 · PRESERVED AS A SIGN FOR POSTERITY</text>
+        <text class="mono" x="14" y="190" font-size="8.5" font-weight="600" fill="#1C1A18">"Today, We preserve your body, that you may be a sign</text>
+        <text class="mono" x="14" y="204" font-size="8.5" font-weight="600" fill="#1C1A18">for future generations." (Fulfillment in Sirte drainpipe)</text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(554, 364)">
+      <rect class="card-bg" x="0" y="0" width="526" height="340" rx="6" filter="url(#gaddafi-shadow)"/>
+      <rect x="0" y="0" width="526" height="42" rx="6" fill="#EDE6DA" stroke="#D8CEC0" stroke-width="1"/>
+      <text class="sec-title" x="20" y="26">ARCHIVAL RECORD &amp; HISTORICAL CONTEXT</text>
+
+      <g transform="translate(20, 60)">
+        
+        <rect x="0" y="0" width="486" height="74" rx="3" fill="#FFFFFF" stroke="#E5DDD0"/>
+        <text class="mono" x="14" y="20" font-size="9" font-weight="700" fill="#A85324">EARLY LIBYAN CORRESPONDENCE (1979–1982)</text>
+        <text class="mono" x="14" y="36" font-size="8.5" fill="#756D65">Masjid Tucson Historical Archives</text>
+        <text class="mono" x="14" y="50" font-size="8" fill="#3D3732">Documentation of initial discussions and subsequent deviation.</text>
+        <text class="mono" x="14" y="64" font-size="8" fill="#A85324">Status: Primary Historical Witness</text>
+
+        
+        <rect x="0" y="86" width="486" height="74" rx="3" fill="#FFFFFF" stroke="#E5DDD0"/>
+        <text class="mono" x="14" y="106" font-size="9" font-weight="700" fill="#1C1A18">THE 'GREEN BOOK' VS THE FINAL TESTAMENT</text>
+        <text class="mono" x="14" y="122" font-size="8.5" fill="#756D65">Contrast Between Man-Made Dogma &amp; Divine Law</text>
+        <text class="mono" x="14" y="136" font-size="8" fill="#3D3732">The catastrophic consequence of replacing God's word with human philosophy.</text>
+        <text class="mono" x="14" y="150" font-size="8" fill="#756D65">Format: Research Monograph Record</text>
+
+        
+        <g transform="translate(0, 172)">
+          <rect x="0" y="0" width="486" height="46" rx="3" fill="#FAF5EE" stroke="#D5CCC0"/>
+          <text class="mono" x="14" y="20" font-size="8.5" font-weight="700" fill="#A85324">ARCHIVAL MANDATE</text>
+          <text class="mono" x="14" y="34" font-size="8" fill="#575049">Preserving the immutable lesson of history: tyrants rise and fall under God's law.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

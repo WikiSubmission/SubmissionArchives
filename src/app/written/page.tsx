@@ -88,17 +88,7 @@ export default function WrittenArchivePage() {
                                 newsletters. Transcribed and indexed for systematic study and verse verification.
                             </p>
                         </div>
-
                         <div className="flex flex-wrap items-center gap-4">
-                            <Link
-                                href="/editorials"
-                                className="inline-flex items-center gap-2 rounded-[6px] border border-ed-accent/30 bg-ed-accent px-4 py-2.5 text-[13px] font-semibold text-white shadow-sm transition-all hover:bg-ed-accent-strong hover:shadow-md"
-                            >
-                                <BookOpen className="h-4 w-4" aria-hidden="true" />
-                                See SA Editorials
-                                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                            </Link>
-
                             <div className="flex flex-shrink-0 gap-6 rounded-[8px] border border-ed-rule bg-ed-surface px-6 py-3.5 shadow-sm">
                                 <div className="flex flex-col">
                                     <span className="text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
@@ -125,6 +115,14 @@ export default function WrittenArchivePage() {
                                     </span>
                                 </div>
                             </div>
+
+                            <Link
+                                href="/editorials"
+                                className="inline-flex items-center gap-1.5 rounded-[6px] border border-ed-accent/30 bg-ed-accent px-4 py-2.5 text-[13px] font-semibold text-white shadow-sm transition-all hover:bg-ed-accent-strong hover:shadow-md"
+                            >
+                                See SA Editorials
+                                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                            </Link>
                         </div>
                     </header>
 

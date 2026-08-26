@@ -3,7 +3,7 @@
   <desc id="hero-desc">A technical schematic of the archival pipeline: 01 Acquisition of primary artifacts, 02 High-fidelity non-destructive digitisation, 03 Dual-pass transcription and verification, and 04 Granular segment indexing with immutable evidence locators.</desc>
 
   <defs>
-    <!-- Background Technical Grid Pattern -->
+    
     <pattern id="tech-grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#DCD3C4" stroke-width="0.75" opacity="0.65"/>
       <circle cx="0" cy="0" r="1" fill="#C4B9A7" opacity="0.8"/>
@@ -12,7 +12,7 @@
       <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#E3DBD0" stroke-width="0.35" opacity="0.5"/>
     </pattern>
 
-    <!-- Scan Beam Gradient -->
+    
     <linearGradient id="laser-beam" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#A85324" stop-opacity="0.85"/>
       <stop offset="25%" stop-color="#A85324" stop-opacity="0.35"/>
@@ -24,7 +24,7 @@
       <stop offset="100%" stop-color="#C9A184" stop-opacity="0.2"/>
     </linearGradient>
 
-    <!-- Drop Shadows & Highlights -->
+    
     <filter id="plate-shadow" x="-6%" y="-6%" width="112%" height="116%" filterUnits="userSpaceOnUse">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2D251E" flood-opacity="0.08"/>
       <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#2D251E" flood-opacity="0.06"/>
@@ -48,16 +48,16 @@
     </style>
   </defs>
 
-  <!-- Base Canvas -->
+  
   <rect width="1200" height="900" fill="#F4EFE6"/>
   <rect width="1200" height="900" fill="url(#sub-grid)"/>
   <rect width="1200" height="900" fill="url(#tech-grid)"/>
 
-  <!-- Outer Technical Blueprint Border with Precision Scales -->
+  
   <rect x="24" y="24" width="1152" height="852" fill="none" stroke="#CFC5B4" stroke-width="1.5"/>
   <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#E5DDD0" stroke-width="1"/>
 
-  <!-- Blueprint Header / Document Spec Bar -->
+  
   <g transform="translate(42, 42)">
     <text class="mono" x="0" y="0" font-size="10.5" font-weight="600" letter-spacing="1.5" fill="#A85324">SUBMISSION ARCHIVES · TECHNICAL SPECIFICATION</text>
     <text class="mono" x="0" y="14" font-size="9" letter-spacing="1" fill="#756D65">DOC: SA-ENG-PIPE-2026-V4 · REVISION: PRODUCTION · STATUS: AUDITED</text>
@@ -65,64 +65,63 @@
     <line x1="0" y1="24" x2="1116" y2="24" stroke="#D5CCC0" stroke-width="1"/>
   </g>
 
-  <!-- Outer Coordinate Crosshairs & Metric Ticks -->
+  
   <g class="reg-mark">
-    <!-- Top & Bottom Corners -->
+    
     <path d="M 18 24 H 30 M 24 18 V 30"/>
     <path d="M 1170 24 H 1182 M 1176 18 V 30"/>
     <path d="M 18 876 H 30 M 24 870 V 882"/>
     <path d="M 1170 876 H 1182 M 1176 870 V 882"/>
-    <!-- Center Dividing Grid Crosses -->
+    
     <path d="M 594 450 H 606 M 600 444 V 456"/>
     <line x1="600" y1="80" x2="600" y2="860" stroke="#D8CEC0" stroke-width="1" stroke-dasharray="6 4"/>
     <line x1="42" y1="466" x2="1158" y2="466" stroke="#D8CEC0" stroke-width="1" stroke-dasharray="6 4"/>
   </g>
 
-
-  <!-- ========================================================================= -->
-  <!-- 01 · ACQUISITION                                                         -->
-  <!-- ========================================================================= -->
+  
+  
+  
   <g transform="translate(48, 86)">
-    <!-- Quadrant Container -->
+    
     <rect class="card-bg" x="0" y="0" width="536" height="364" rx="6" filter="url(#plate-shadow)"/>
     
-    <!-- Plate Header -->
+    
     <rect x="0" y="0" width="536" height="48" rx="6" fill="#EDE6DA" stroke="#D8CEC0" stroke-width="1"/>
     <rect x="18" y="12" width="28" height="24" rx="3" fill="#A85324"/>
     <text class="badge-txt" x="32" y="27" text-anchor="middle">01</text>
     <text class="sec-title" x="56" y="27">ACQUISITION &amp; INTAKE</text>
     <text class="mono" x="518" y="27" font-size="9.5" fill="#756D65" text-anchor="end">STAGE 01 · PROVENANCE</text>
 
-    <!-- Technical Drawing Area -->
+    
     <g transform="translate(24, 68)">
-      <!-- Isometric Archive Shelf Base -->
+      
       <path d="M 20 220 L 260 220 L 320 180 L 80 180 Z" fill="#E4DCD0" stroke="#C8BCA8" stroke-width="1.25"/>
       <line x1="20" y1="220" x2="20" y2="236" stroke="#C8BCA8" stroke-width="1.25"/>
       <line x1="260" y1="220" x2="260" y2="236" stroke="#C8BCA8" stroke-width="1.25"/>
       <line x1="320" y1="180" x2="320" y2="196" stroke="#C8BCA8" stroke-width="1.25"/>
       <path d="M 20 236 L 260 236 L 320 196" fill="none" stroke="#C8BCA8" stroke-width="1.25"/>
 
-      <!-- Surrounding Shelved Volumes (Retained in background) -->
-      <!-- Volume A -->
+      
+      
       <path d="M 38 70 L 64 70 L 64 214 L 38 214 Z" fill="#D2C7B6" stroke="#B8AA96" stroke-width="1.25"/>
       <path d="M 64 70 L 96 46 L 96 190 L 64 214 Z" fill="#C4B8A4" stroke="#B8AA96" stroke-width="1.25"/>
       <path d="M 38 70 L 70 46 L 96 46 L 64 70 Z" fill="#DFD6C8" stroke="#B8AA96" stroke-width="1.25"/>
       <line x1="44" y1="90" x2="58" y2="90" stroke="#9E907E" stroke-width="1.5"/>
 
-      <!-- Volume B -->
+      
       <path d="M 72 56 L 102 56 L 102 214 L 72 214 Z" fill="#D9CFBF" stroke="#B8AA96" stroke-width="1.25"/>
       <path d="M 102 56 L 134 32 L 134 190 L 102 214 Z" fill="#CBC0AE" stroke="#B8AA96" stroke-width="1.25"/>
       <path d="M 72 56 L 104 32 L 134 32 L 102 56 Z" fill="#E8DFC0" stroke="#B8AA96" stroke-width="1.25"/>
 
-      <!-- TARGET PRIMARY SOURCE VOLUME (Illuminated / Active Extraction) -->
+      
       <g transform="translate(118, 14)" filter="url(#soft-shadow)">
-        <!-- Book Spine -->
+        
         <path d="M 0 24 L 36 24 L 36 200 L 0 200 Z" fill="#FDFBF7" stroke="#A85324" stroke-width="2"/>
-        <!-- Book Top Edge -->
+        
         <path d="M 0 24 L 42 -6 L 78 -6 L 36 24 Z" fill="#FAF5EC" stroke="#A85324" stroke-width="1.5"/>
-        <!-- Book Cover Fore-edge -->
+        
         <path d="M 36 24 L 78 -6 L 78 170 L 36 200 Z" fill="#F0E6D6" stroke="#A85324" stroke-width="1.5"/>
-        <!-- Gold foil spine ribs & title -->
+        
         <line x1="6" y1="44" x2="30" y2="44" stroke="#C9A184" stroke-width="2"/>
         <line x1="6" y1="48" x2="30" y2="48" stroke="#C9A184" stroke-width="1"/>
         <rect x="8" y="70" width="20" height="54" fill="#A85324" rx="1.5"/>
@@ -130,13 +129,13 @@
         <line x1="6" y1="168" x2="30" y2="168" stroke="#C9A184" stroke-width="1"/>
         <line x1="6" y1="172" x2="30" y2="172" stroke="#C9A184" stroke-width="2"/>
 
-        <!-- Physical Accession Tag & Lanyard Ribbon -->
+        
         <path d="M 18 -6 Q 22 -32 54 -36" fill="none" stroke="#A85324" stroke-width="1.5" stroke-dasharray="3 2"/>
         <g transform="translate(54, -58)">
           <rect x="0" y="0" width="86" height="42" rx="3" fill="#FFFFFF" stroke="#A85324" stroke-width="1.5"/>
           <text class="mono" x="8" y="14" font-size="7.5" font-weight="700" fill="#A85324">ACCESSION #</text>
           <text class="mono" x="8" y="25" font-size="9" font-weight="700" fill="#2A241F">SA-1982-MT-04</text>
-          <!-- Mini Barcode -->
+          
           <line x1="8" y1="31" x2="8" y2="37" stroke="#2A241F" stroke-width="1.5"/>
           <line x1="12" y1="31" x2="12" y2="37" stroke="#2A241F" stroke-width="1"/>
           <line x1="15" y1="31" x2="15" y2="37" stroke="#2A241F" stroke-width="2.5"/>
@@ -147,21 +146,21 @@
         </g>
       </g>
 
-      <!-- Provenance Data Spec Card (Right Side) -->
+      
       <g transform="translate(262, 28)">
         <rect class="card-inner" x="0" y="0" width="216" height="196" rx="4" filter="url(#soft-shadow)"/>
         <rect x="0" y="0" width="216" height="24" fill="#F4EDE2" rx="4"/>
         <text class="mono" x="12" y="16" font-size="8.5" font-weight="700" fill="#575049">PROVENANCE LOG SHEET</text>
         
-        <!-- Field 1: Source -->
+        
         <text class="tech-lbl" x="12" y="44">SOURCE RECORD</text>
         <text class="mono" x="12" y="58" font-size="10.5" font-weight="600" fill="#1C1A18">Original 1982 First Edition</text>
         
-        <!-- Field 2: Integrity -->
+        
         <text class="tech-lbl" x="12" y="82">PHYSICAL CONDITION</text>
         <text class="mono" x="12" y="96" font-size="10.5" font-weight="600" fill="#1C1A18">Deckle Edge · Acid Foxing</text>
 
-        <!-- Field 3: Status Tag -->
+        
         <text class="tech-lbl" x="12" y="120">CLASSIFICATION</text>
         <g transform="translate(12, 128)">
           <rect x="0" y="0" width="76" height="20" rx="3" fill="#A85324"/>
@@ -170,7 +169,7 @@
           <text class="mono" x="125" y="13" font-size="8.5" font-weight="600" fill="#756D65" text-anchor="middle">UNMODIFIED</text>
         </g>
 
-        <!-- Provenance Stamp -->
+        
         <g transform="translate(12, 160)">
           <rect x="0" y="0" width="192" height="24" rx="2" fill="#FAF5EE" stroke="#D5CCC0" stroke-width="1" stroke-dasharray="3 2"/>
           <text class="mono" x="96" y="16" font-size="9" font-weight="600" fill="#A85324" text-anchor="middle">✓ PROVENANCE CHAIN ATTESTED</text>
@@ -179,47 +178,46 @@
     </g>
   </g>
 
-
-  <!-- ========================================================================= -->
-  <!-- 02 · DIGITISATION                                                        -->
-  <!-- ========================================================================= -->
+  
+  
+  
   <g transform="translate(616, 86)">
-    <!-- Quadrant Container -->
+    
     <rect class="card-bg" x="0" y="0" width="536" height="364" rx="6" filter="url(#plate-shadow)"/>
     
-    <!-- Plate Header -->
+    
     <rect x="0" y="0" width="536" height="48" rx="6" fill="#EDE6DA" stroke="#D8CEC0" stroke-width="1"/>
     <rect x="18" y="12" width="28" height="24" rx="3" fill="#A85324"/>
     <text class="badge-txt" x="32" y="27" text-anchor="middle">02</text>
     <text class="sec-title" x="56" y="27">HIGH-RESOLUTION CAPTURE</text>
     <text class="mono" x="518" y="27" font-size="9.5" fill="#756D65" text-anchor="end">STAGE 02 · ZERO INTERPRETATION</text>
 
-    <!-- Technical Drawing Area -->
+    
     <g transform="translate(24, 68)">
-      <!-- Optical Flatbed Scanner Bed Frame -->
+      
       <rect x="10" y="10" width="270" height="226" rx="4" fill="#2D2824" stroke="#1A1816" stroke-width="2"/>
       <rect x="22" y="22" width="246" height="202" fill="#423C36" stroke="#524C44" stroke-width="1"/>
 
-      <!-- Platen Glass Millimeter Measurement Rulers -->
+      
       <g stroke="#8A7E72" stroke-width="1">
-        <!-- Top X Axis Ticks -->
+        
         <line x1="30" y1="22" x2="30" y2="28"/><line x1="50" y1="22" x2="50" y2="26"/><line x1="70" y1="22" x2="70" y2="28"/>
         <line x1="90" y1="22" x2="90" y2="26"/><line x1="110" y1="22" x2="110" y2="28"/><line x1="130" y1="22" x2="130" y2="26"/>
         <line x1="150" y1="22" x2="150" y2="28"/><line x1="170" y1="22" x2="170" y2="26"/><line x1="190" y1="22" x2="190" y2="28"/>
         <line x1="210" y1="22" x2="210" y2="26"/><line x1="230" y1="22" x2="230" y2="28"/><line x1="250" y1="22" x2="250" y2="26"/>
-        <!-- Left Y Axis Ticks -->
+        
         <line x1="22" y1="30" x2="28" y2="30"/><line x1="22" y1="50" x2="26" y2="50"/><line x1="22" y1="70" x2="28" y2="70"/>
         <line x1="22" y1="90" x2="26" y2="90"/><line x1="22" y1="110" x2="28" y2="110"/><line x1="22" y1="130" x2="26" y2="130"/>
         <line x1="22" y1="150" x2="28" y2="150"/><line x1="22" y1="170" x2="26" y2="170"/><line x1="22" y1="190" x2="28" y2="190"/>
         <line x1="22" y1="210" x2="26" y2="210"/>
       </g>
 
-      <!-- The Physical Manuscript Sheet on the Platen Glass (Natural Skew & Tone) -->
+      
       <g transform="translate(48, 38) rotate(2.4 80 85)">
         <rect x="0" y="0" width="154" height="170" fill="#E8DEC9" stroke="#C2B49E" stroke-width="1.25"/>
-        <!-- Binding gutter shadow on left side of page -->
+        
         <rect x="0" y="0" width="16" height="170" fill="#A89A84" opacity="0.45"/>
-        <!-- Simulated Surviving Text Block -->
+        
         <g fill="#7A6F62">
           <rect x="28" y="24" width="102" height="5" rx="1"/>
           <rect x="28" y="34" width="94" height="5" rx="1"/>
@@ -233,48 +231,48 @@
           <rect x="28" y="126" width="88" height="5" rx="1"/>
           <rect x="28" y="136" width="104" height="5" rx="1"/>
         </g>
-        <!-- Foxing Spots -->
+        
         <circle cx="120" cy="40" r="4" fill="#B08A5E" opacity="0.4"/>
         <circle cx="36" cy="148" r="5" fill="#B08A5E" opacity="0.35"/>
       </g>
 
-      <!-- Traversing Optical Linear Sensor Bar (In Action) -->
+      
       <g transform="translate(18, 92)">
-        <!-- Laser Sweep Projection Cone -->
+        
         <rect x="4" y="16" width="246" height="42" fill="url(#laser-beam)"/>
-        <!-- Solid High-Intensity Scan Line -->
+        
         <line x1="4" y1="16" x2="250" y2="16" stroke="url(#scan-glow)" stroke-width="3.5"/>
-        <!-- Linear CCD Carrier Carriage -->
+        
         <rect x="0" y="0" width="254" height="16" rx="2" fill="#1C1A18" stroke="#A85324" stroke-width="1.5"/>
-        <!-- LED Sensor Emitters -->
+        
         <circle cx="20" cy="8" r="2.5" fill="#A85324"/><circle cx="50" cy="8" r="2.5" fill="#A85324"/>
         <circle cx="80" cy="8" r="2.5" fill="#A85324"/><circle cx="110" cy="8" r="2.5" fill="#A85324"/>
         <circle cx="140" cy="8" r="2.5" fill="#A85324"/><circle cx="170" cy="8" r="2.5" fill="#A85324"/>
         <circle cx="200" cy="8" r="2.5" fill="#A85324"/><circle cx="230" cy="8" r="2.5" fill="#A85324"/>
       </g>
 
-      <!-- Optical Sensor Readout & Calibration Target (Right Side) -->
+      
       <g transform="translate(294, 18)">
         <rect class="card-inner" x="0" y="0" width="194" height="212" rx="4" filter="url(#soft-shadow)"/>
         <rect x="0" y="0" width="194" height="24" fill="#F4EDE2" rx="4"/>
         <text class="mono" x="12" y="16" font-size="8.5" font-weight="700" fill="#575049">OPTICAL SENSOR METRICS</text>
 
-        <!-- Parameter 1 -->
+        
         <text class="tech-lbl" x="12" y="44">OPTICAL RESOLUTION</text>
         <text class="mono" x="12" y="58" font-size="11" font-weight="700" fill="#A85324">600 DPI · TRUE OPTICAL</text>
 
-        <!-- Parameter 2 -->
+        
         <text class="tech-lbl" x="12" y="80">BIT DEPTH / CHANNEL</text>
         <text class="mono" x="12" y="94" font-size="10.5" font-weight="600" fill="#1C1A18">16-bit Linear Raw (Uncompressed)</text>
 
-        <!-- Parameter 3 -->
+        
         <text class="tech-lbl" x="12" y="116">FILTERING APPLIED</text>
         <g transform="translate(12, 124)">
           <rect x="0" y="0" width="170" height="22" rx="3" fill="#FAF3EB" stroke="#A85324" stroke-width="1"/>
           <text class="mono" x="85" y="15" font-size="9" font-weight="700" fill="#A85324" text-anchor="middle">NONE · 0.00% FILTERING</text>
         </g>
 
-        <!-- Color Calibration Swatch (Macbeth Mini) -->
+        
         <text class="tech-lbl" x="12" y="164">CALIBRATION TARGET</text>
         <g transform="translate(12, 172)">
           <rect x="0" y="0" width="26" height="18" fill="#735244"/>
@@ -288,30 +286,29 @@
     </g>
   </g>
 
-
-  <!-- ========================================================================= -->
-  <!-- 03 · TRANSCRIPTION                                                       -->
-  <!-- ========================================================================= -->
+  
+  
+  
   <g transform="translate(48, 486)">
-    <!-- Quadrant Container -->
+    
     <rect class="card-bg" x="0" y="0" width="536" height="364" rx="6" filter="url(#plate-shadow)"/>
     
-    <!-- Plate Header -->
+    
     <rect x="0" y="0" width="536" height="48" rx="6" fill="#EDE6DA" stroke="#D8CEC0" stroke-width="1"/>
     <rect x="18" y="12" width="28" height="24" rx="3" fill="#A85324"/>
     <text class="badge-txt" x="32" y="27" text-anchor="middle">03</text>
     <text class="sec-title" x="56" y="27">DUAL-PASS TRANSCRIPTION</text>
     <text class="mono" x="518" y="27" font-size="9.5" fill="#756D65" text-anchor="end">STAGE 03 · VERIFIABLE</text>
 
-    <!-- Technical Drawing Area: Dual OCR & Human Verification Split Pane -->
+    
     <g transform="translate(24, 68)">
-      <!-- Left Sub-Pane: Raw Scan Segment with OCR Bounding Boxes -->
+      
       <g transform="translate(0, 10)">
         <rect class="card-inner" x="0" y="0" width="220" height="220" rx="4" filter="url(#soft-shadow)"/>
         <rect x="0" y="0" width="220" height="24" fill="#F0EAE1" rx="4"/>
         <text class="mono" x="10" y="16" font-size="8.5" font-weight="700" fill="#575049">OCR GLYPH BOUNDING MATRIX</text>
         
-        <!-- Bounding Box Line 1 -->
+        
         <g transform="translate(14, 38)">
           <rect x="0" y="0" width="34" height="18" fill="#A85324" fill-opacity="0.12" stroke="#A85324" stroke-width="1.2"/>
           <text class="mono" x="17" y="13" font-size="9" font-weight="700" fill="#A85324" text-anchor="middle">God</text>
@@ -326,7 +323,7 @@
           <text class="mono" x="150" y="13" font-size="9" fill="#3D3732" text-anchor="middle">sufficient</text>
         </g>
 
-        <!-- Bounding Box Line 2 with Low Confidence Alert & Inspection -->
+        
         <g transform="translate(14, 68)">
           <rect x="0" y="0" width="26" height="18" fill="#EFE8DD" stroke="#C4B8A6" stroke-width="1"/>
           <text class="mono" x="13" y="13" font-size="9" fill="#3D3732" text-anchor="middle">for</text>
@@ -334,7 +331,7 @@
           <rect x="30" y="0" width="32" height="18" fill="#EFE8DD" stroke="#C4B8A6" stroke-width="1"/>
           <text class="mono" x="46" y="13" font-size="9" fill="#3D3732" text-anchor="middle">the</text>
 
-          <!-- Uncertain glyph target with indicator -->
+          
           <rect x="66" y="0" width="60" height="18" fill="#E8A87C" fill-opacity="0.25" stroke="#A85324" stroke-width="1.5" stroke-dasharray="2 2"/>
           <text class="mono" x="96" y="13" font-size="9" font-weight="700" fill="#A85324" text-anchor="middle">believer</text>
 
@@ -342,7 +339,7 @@
           <text class="mono" x="157" y="13" font-size="9" fill="#3D3732" text-anchor="middle">today.</text>
         </g>
 
-        <!-- OCR Confidence Meter -->
+        
         <g transform="translate(14, 104)">
           <text class="tech-lbl" x="0" y="10">OCR ENGINE CONFIDENCE</text>
           <rect x="0" y="16" width="192" height="10" rx="3" fill="#E5DDD0"/>
@@ -350,7 +347,7 @@
           <text class="mono" x="192" y="38" font-size="9" font-weight="700" fill="#A85324" text-anchor="end">98.8% PASS RATE</text>
         </g>
 
-        <!-- Flag Notification -->
+        
         <g transform="translate(14, 154)">
           <rect x="0" y="0" width="192" height="48" rx="3" fill="#FAF5EE" stroke="#D5CCC0"/>
           <circle cx="18" cy="18" r="6" fill="#A85324"/>
@@ -361,18 +358,18 @@
         </g>
       </g>
 
-      <!-- Center Flow Connector Indicator -->
+      
       <g transform="translate(230, 110)">
         <path d="M 0 10 H 22 M 16 4 L 22 10 L 16 16" stroke="#A85324" stroke-width="2" fill="none" stroke-linecap="round"/>
       </g>
 
-      <!-- Right Sub-Pane: Human Verified & Structured Markdown Output -->
+      
       <g transform="translate(260, 10)">
         <rect class="card-inner" x="0" y="0" width="226" height="220" rx="4" filter="url(#soft-shadow)"/>
         <rect x="0" y="0" width="226" height="24" fill="#F4EDE2" rx="4"/>
         <text class="mono" x="10" y="16" font-size="8.5" font-weight="700" fill="#575049">CHECKED CORPUS RECORD</text>
 
-        <!-- Monospace Output Code View -->
+        
         <g transform="translate(12, 36)">
           <rect x="0" y="0" width="202" height="134" rx="3" fill="#1E1B18"/>
           <text class="mono" x="10" y="20" font-size="8" fill="#A89F91">---</text>
@@ -385,7 +382,7 @@
           <rect x="110" y="99" width="4" height="10" fill="#A85324"/>
         </g>
 
-        <!-- Verified Checkmark Stamp -->
+        
         <g transform="translate(12, 180)">
           <rect x="0" y="0" width="202" height="26" rx="3" fill="#FAF5EE" stroke="#A85324" stroke-width="1.25"/>
           <path d="M 14 13 L 20 18 L 30 8" fill="none" stroke="#A85324" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -395,30 +392,29 @@
     </g>
   </g>
 
-
-  <!-- ========================================================================= -->
-  <!-- 04 · INDEXING                                                            -->
-  <!-- ========================================================================= -->
+  
+  
+  
   <g transform="translate(616, 486)">
-    <!-- Quadrant Container -->
+    
     <rect class="card-bg" x="0" y="0" width="536" height="364" rx="6" filter="url(#plate-shadow)"/>
     
-    <!-- Plate Header -->
+    
     <rect x="0" y="0" width="536" height="48" rx="6" fill="#EDE6DA" stroke="#D8CEC0" stroke-width="1"/>
     <rect x="18" y="12" width="28" height="24" rx="3" fill="#A85324"/>
     <text class="badge-txt" x="32" y="27" text-anchor="middle">04</text>
     <text class="sec-title" x="56" y="27">INDEXING &amp; CITABILITY</text>
     <text class="mono" x="518" y="27" font-size="9.5" fill="#756D65" text-anchor="end">STAGE 04 · PROVABLE</text>
 
-    <!-- Technical Drawing Area -->
+    
     <g transform="translate(24, 68)">
-      <!-- Left Sub-Pane: Granular Segment B-Tree Matrix -->
+      
       <g transform="translate(0, 10)">
         <rect class="card-inner" x="0" y="0" width="220" height="220" rx="4" filter="url(#soft-shadow)"/>
         <rect x="0" y="0" width="220" height="24" fill="#F0EAE1" rx="4"/>
         <text class="mono" x="10" y="16" font-size="8.5" font-weight="700" fill="#575049">INVERTED SEGMENT LOCATORS</text>
 
-        <!-- Segment Row 1 -->
+        
         <g transform="translate(10, 36)">
           <rect x="0" y="0" width="200" height="36" rx="3" fill="#FAF7F2" stroke="#DDD4C6"/>
           <text class="mono" x="10" y="15" font-size="8.5" font-weight="600" fill="#756D65">SEGMENT_0213 · P. 213 §2</text>
@@ -426,18 +422,18 @@
           <circle cx="188" cy="18" r="4" fill="#CFC4B4"/>
         </g>
 
-        <!-- Segment Row 2 (Matched / Target Hit) -->
+        
         <g transform="translate(10, 78)">
           <rect x="0" y="0" width="200" height="42" rx="3" fill="#FFFFFF" stroke="#A85324" stroke-width="1.75"/>
           <rect x="0" y="0" width="4" height="42" rx="1" fill="#A85324"/>
           <text class="mono" x="10" y="16" font-size="9" font-weight="700" fill="#A85324">SEGMENT_0214 · P. 214 §3</text>
           <text class="mono" x="10" y="30" font-size="8" font-weight="600" fill="#1C1A18">"God alone is sufficient..."</text>
-          <!-- Score Chip -->
+          
           <rect x="154" y="8" width="38" height="16" rx="2" fill="#A85324"/>
           <text class="badge-txt" x="173" y="20" font-size="7.5" text-anchor="middle">MATCH</text>
         </g>
 
-        <!-- Segment Row 3 -->
+        
         <g transform="translate(10, 126)">
           <rect x="0" y="0" width="200" height="36" rx="3" fill="#FAF7F2" stroke="#DDD4C6"/>
           <text class="mono" x="10" y="15" font-size="8.5" font-weight="600" fill="#756D65">SEGMENT_0215 · P. 215 §1</text>
@@ -445,7 +441,7 @@
           <circle cx="188" cy="18" r="4" fill="#CFC4B4"/>
         </g>
 
-        <!-- Index Pointer Path -->
+        
         <g transform="translate(10, 172)">
           <rect x="0" y="0" width="200" height="36" rx="3" fill="#F4ECE0" stroke="#D8CDBD"/>
           <text class="mono" x="10" y="14" font-size="8" font-weight="700" fill="#575049">AUDIO / VIDEO TIMECODE</text>
@@ -453,33 +449,33 @@
         </g>
       </g>
 
-      <!-- Center Flow Connector Indicator -->
+      
       <g transform="translate(230, 110)">
         <path d="M 0 10 H 22 M 16 4 L 22 10 L 16 16" stroke="#A85324" stroke-width="2" fill="none" stroke-linecap="round"/>
       </g>
 
-      <!-- Right Sub-Pane: Exact Evidence Resolution Modal -->
+      
       <g transform="translate(260, 10)">
         <rect class="card-inner" x="0" y="0" width="226" height="220" rx="4" filter="url(#soft-shadow)"/>
         <rect x="0" y="0" width="226" height="24" fill="#F4EDE2" rx="4"/>
         <text class="mono" x="10" y="16" font-size="8.5" font-weight="700" fill="#575049">EVIDENCE RESOLUTION MODAL</text>
 
-        <!-- Search Result Card Preview -->
+        
         <g transform="translate(12, 34)">
           <rect x="0" y="0" width="202" height="174" rx="4" fill="#FAF8F5" stroke="#D8CEC0" stroke-width="1"/>
           
-          <!-- Query Bubble -->
+          
           <rect x="10" y="10" width="182" height="26" rx="3" fill="#FFFFFF" stroke="#D0C6B4"/>
           <circle cx="22" cy="23" r="4" fill="none" stroke="#756D65" stroke-width="1.5"/>
           <line x1="25" y1="26" x2="29" y2="30" stroke="#756D65" stroke-width="1.5"/>
           <text class="mono" x="36" y="27" font-size="9" font-weight="600" fill="#1C1A18">"God alone"</text>
           <text class="mono" x="184" y="26" font-size="7.5" fill="#A85324" text-anchor="end">1 result</text>
 
-          <!-- Resolved Document Snippet with Highlight -->
+          
           <g transform="translate(10, 44)">
             <rect x="0" y="0" width="182" height="74" rx="3" fill="#FFFFFF" stroke="#E5DDD0"/>
             <text class="mono" x="8" y="16" font-size="8" font-weight="700" fill="#A85324">SOURCE SCAN: PAGE 214</text>
-            <!-- Highlight Box on Matched Term -->
+            
             <rect x="8" y="22" width="58" height="14" rx="1.5" fill="#A85324" fill-opacity="0.15" stroke="#A85324" stroke-width="0.75"/>
             <text class="mono" x="12" y="32" font-size="8.5" font-weight="700" fill="#A85324">God alone</text>
             <text class="mono" x="70" y="32" font-size="8.5" fill="#2D2824">is sufficient for...</text>
@@ -489,7 +485,7 @@
             <text class="mono" x="8" y="66" font-size="7.5" fill="#756D65">Capture: 600 DPI Raw TIFF</text>
           </g>
 
-          <!-- Inspect Master Evidence Button -->
+          
           <g transform="translate(10, 126)">
             <rect x="0" y="0" width="182" height="36" rx="3" fill="#A85324"/>
             <text class="mono" x="91" y="16" font-size="8.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">OPEN MASTER SCAN</text>

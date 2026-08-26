@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="hero-assassination-title">
+  <title id="hero-assassination-title">The Chronological and Numerical Coordinates of Rashad Khalifa's Martyrdom</title>
+  <defs>
+    <radialGradient id="bg-assassination-hero" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#241914"/>
+      <stop offset="60%" stop-color="#140E0A"/>
+      <stop offset="100%" stop-color="#080504"/>
+    </radialGradient>
+    <filter id="glow-hero-assassination" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .hero-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .hero-serif { font-family: 'Source Serif Pro', Georgia, serif; }
+      .hero-sans { font-family: 'DM Sans', -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg-assassination-hero)"/>
+  <g opacity="0.1" stroke="#FAF5EE" stroke-width="0.75">
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="675" x2="1200" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+  </g>
+  <g transform="translate(80, 80)">
+    <text class="hero-mono" x="0" y="0" font-size="11" font-weight="700" fill="#D97738" letter-spacing="2">MONOGRAPH 07 · FORENSIC TIMELINE SPECIFICATION</text>
+    <text class="hero-serif" x="0" y="32" font-size="28" font-weight="600" fill="#FAF5EE">The Mathematical Coordinates of January 31, 1990</text>
+    <text class="hero-mono" x="0" y="56" font-size="12" fill="#A8A096">THE MARTYRDOM OF RASHAD KHALIFA · PROPHETIC TIMELINES AND ARCHIVAL FORENSICS</text>
+  </g>
+  <g transform="translate(600, 480)">
+    <rect x="-480" y="-180" width="280" height="340" rx="6" fill="#140E0A" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.3"/>
+    <text class="hero-mono" x="-340" y="-150" font-size="11" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="1.5">TIMELINE COORDINATE A</text>
+    <text class="hero-serif" x="-340" y="-105" font-size="24" font-weight="600" fill="#FAF5EE" text-anchor="middle">Birth &amp; Proclamation</text>
+    <g fill="#A8A096" font-size="12" class="hero-sans">
+      <text x="-450" y="-55">• Born Nov 19, 1935 (19th day)</text>
+      <text x="-450" y="-30">• 1974: Discovery of Code 19</text>
+      <text x="-450" y="-5">• 1980: The Ultimate Miracle</text>
+      <text x="-450" y="20">• 1982: Proclamation of Message</text>
+    </g>
+    <rect x="-430" y="65" width="180" height="30" rx="3" fill="#241914" stroke="#FFA366" stroke-width="1"/>
+    <text class="hero-mono" x="-340" y="84" font-size="9" font-weight="700" fill="#FFA366" text-anchor="middle">19-Based Milestones</text>
+
+    <path d="M -200 -10 L -120 -10" stroke="#FAF5EE" stroke-width="2" stroke-opacity="0.5"/>
+
+    <rect x="-140" y="-200" width="280" height="380" rx="6" fill="#1E140C" stroke="#D97738" stroke-width="2" filter="url(#glow-hero-assassination)"/>
+    <text class="hero-mono" x="0" y="-170" font-size="11" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="1.5">MOMENT OF MARTYRDOM</text>
+    <text class="hero-serif" x="0" y="-115" font-size="30" font-weight="700" fill="#FAF5EE" text-anchor="middle">Jan 31, 1990</text>
+    <text class="hero-mono" x="0" y="-85" font-size="10" font-weight="700" fill="#D97738" letter-spacing="1.5" text-anchor="middle">MASJID TUCSON (04:30 AM)</text>
+    <g fill="#FAF5EE" font-size="12" class="hero-sans">
+      <text x="-115" y="-40">• 54 solar years (19,796 days)</text>
+      <text x="-115" y="-15">• Fulfills Q. 3:181, 2:87 precedent</text>
+      <text x="-115" y="10">• Culmination of the translation</text>
+      <text x="-115" y="35">• Perpetrators later convicted</text>
+    </g>
+    <rect x="-110" y="75" width="220" height="34" rx="3" fill="#080504" stroke="#D97738" stroke-width="1.25"/>
+    <text class="hero-mono" x="0" y="96" font-size="9.5" font-weight="700" fill="#FFA366" text-anchor="middle">FATE OF EXTREMISM EXPOSED</text>
+
+    <path d="M 140 -10 L 200 -10" stroke="#FAF5EE" stroke-width="2" stroke-opacity="0.5"/>
+
+    <rect x="200" y="-180" width="280" height="340" rx="6" fill="#140E0A" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.3"/>
+    <text class="hero-mono" x="340" y="-150" font-size="11" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="1.5">TIMELINE COORDINATE C</text>
+    <text class="hero-serif" x="340" y="-105" font-size="24" font-weight="600" fill="#FAF5EE" text-anchor="middle">The Living Archive</text>
+    <g fill="#A8A096" font-size="12" class="hero-sans">
+      <text x="230" y="-55">• Complete Final Testament preserved</text>
+      <text x="230" y="-30">• 100+ audio &amp; video lectures digitized</text>
+      <text x="230" y="-5">• Global dissemination via SA</text>
+      <text x="230" y="20">• Evidence intact for posterity</text>
+    </g>
+    <rect x="250" y="65" width="180" height="30" rx="3" fill="#241914" stroke="#FFA366" stroke-width="1"/>
+    <text class="hero-mono" x="340" y="84" font-size="9" font-weight="700" fill="#FFA366" text-anchor="middle">Preservation Triumph</text>
+  </g>
+  <g transform="translate(80, 840)">
+    <text class="hero-mono" x="0" y="0" font-size="10.5" fill="#756D65">SUBMISSION ARCHIVES EDITORIAL SCHEMATICS · MONOGRAPH 07 · ARCHIVAL FORENSICS</text>
+  </g>
+</svg>

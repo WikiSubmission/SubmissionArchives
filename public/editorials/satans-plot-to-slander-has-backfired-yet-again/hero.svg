@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="hero-slander-title">
+  <title id="hero-slander-title">Satan's Plot to Slander Has Backfired — Scriptural Matrix (Quran 22:52-55)</title>
+  <defs>
+    <radialGradient id="bg-slander-hero" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#241914"/>
+      <stop offset="60%" stop-color="#140E0A"/>
+      <stop offset="100%" stop-color="#080504"/>
+    </radialGradient>
+    <linearGradient id="glow-laser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E6652E" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFA366" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#E6652E" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .hero-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .hero-serif { font-family: 'Source Serif Pro', Georgia, serif; }
+      .hero-sans { font-family: 'DM Sans', -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg-slander-hero)"/>
+  <g opacity="0.1" stroke="#FAF5EE" stroke-width="0.75">
+    <line x1="100" y1="0" x2="100" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="1100" y1="0" x2="1100" y2="900"/>
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="675" x2="1200" y2="675"/>
+  </g>
+  <g transform="translate(80, 80)">
+    <text class="hero-mono" x="0" y="0" font-size="11" font-weight="700" fill="#D97738" letter-spacing="2">MONOGRAPH 05 · SCHEMATIC SPECIFICATION</text>
+    <text class="hero-serif" x="0" y="32" font-size="28" font-weight="600" fill="#FAF5EE">The Scriptural Mechanics of Slander and Divine Vindication</text>
+    <text class="hero-mono" x="0" y="56" font-size="12" fill="#A8A096">SURAT AL-HAJJ (22:52–55) · THE ARCHIVAL RECOVERY OF PROPHETIC TESTIMONIES</text>
+  </g>
+  <g transform="translate(600, 480)">
+    <rect x="-480" y="-180" width="280" height="320" rx="6" fill="#140E0A" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.3"/>
+    <text class="hero-mono" x="-340" y="-150" font-size="11" font-weight="700" fill="#E6652E" text-anchor="middle" letter-spacing="1.5">STAGE 1: DEVIL'S FABRICATION</text>
+    <text class="hero-sans" x="-340" y="-120" font-size="13" fill="#A8A096" text-anchor="middle">Whispering into aspirations</text>
+    <path d="M -440 -80 L -240 -80 M -440 -50 L -270 -50 M -440 -20 L -250 -20 M -440 10 L -290 10" stroke="#E6652E" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="4 4"/>
+    <rect x="-420" y="40" width="160" height="30" rx="3" fill="#241914" stroke="#E6652E" stroke-width="1"/>
+    <text class="hero-mono" x="-340" y="60" font-size="9" font-weight="700" fill="#FFA366" text-anchor="middle">Slander / Insinuations</text>
+    <text class="hero-mono" x="-340" y="110" font-size="10" fill="#756D65" text-anchor="middle">Q. 22:52 (Part A)</text>
+
+    <path d="M -200 -20 L -120 -20" stroke="#FAF5EE" stroke-width="2" stroke-opacity="0.5" marker-end="url(#arrow)"/>
+
+    <rect x="-140" y="-200" width="280" height="360" rx="6" fill="#1A120D" stroke="#D97738" stroke-width="2" filter="url(#glow-filter)"/>
+    <text class="hero-mono" x="0" y="-170" font-size="11" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="1.5">STAGE 2: DIVINE NULLIFICATION</text>
+    <text class="hero-sans" x="0" y="-140" font-size="13" fill="#FAF5EE" text-anchor="middle">God abrogates what Satan casts</text>
+    <circle cx="0" cy="-40" r="50" fill="#241914" stroke="#FFA366" stroke-width="2"/>
+    <text class="hero-serif" x="0" y="-30" font-size="28" font-weight="700" fill="#FFA366" text-anchor="middle">22:52</text>
+    <text class="hero-mono" x="0" y="45" font-size="10" font-weight="700" fill="#D97738" letter-spacing="1.5" text-anchor="middle">فَيَنسَخُ اللَّهُ مَا يُلْقِي الشَّيْطَانُ</text>
+    <rect x="-100" y="70" width="200" height="34" rx="3" fill="#140E0A" stroke="#D97738" stroke-width="1"/>
+    <text class="hero-mono" x="0" y="92" font-size="9.5" font-weight="700" fill="#FAF5EE" text-anchor="middle">ABROGATION &amp; PURIFICATION</text>
+    <text class="hero-mono" x="0" y="135" font-size="10" fill="#A8A096" text-anchor="middle">Q. 22:52 (Part B)</text>
+
+    <path d="M 140 -20 L 200 -20" stroke="#FAF5EE" stroke-width="2" stroke-opacity="0.5"/>
+
+    <rect x="200" y="-180" width="280" height="320" rx="6" fill="#140E0A" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.3"/>
+    <text class="hero-mono" x="340" y="-150" font-size="11" font-weight="700" fill="#FAF5EE" text-anchor="middle" letter-spacing="1.5">STAGE 3: SOLID CONFIRMATION</text>
+    <text class="hero-sans" x="340" y="-120" font-size="13" fill="#A8A096" text-anchor="middle">God solidifies His revelations</text>
+    <path d="M 240 -80 L 440 -80 M 240 -50 L 440 -50 M 240 -20 L 440 -20 M 240 10 L 440 10" stroke="#FAF5EE" stroke-width="2" stroke-opacity="0.7"/>
+    <rect x="260" y="40" width="160" height="30" rx="3" fill="#241914" stroke="#FAF5EE" stroke-width="1" stroke-opacity="0.6"/>
+    <text class="hero-mono" x="340" y="60" font-size="9" font-weight="700" fill="#FAF5EE" text-anchor="middle">The Truth Is Proven</text>
+    <text class="hero-mono" x="340" y="110" font-size="10" fill="#756D65" text-anchor="middle">Q. 22:53–54</text>
+  </g>
+  <g transform="translate(80, 840)">
+    <text class="hero-mono" x="0" y="0" font-size="10.5" fill="#756D65">SUBMISSION ARCHIVES EDITORIAL SCHEMATICS · MONOGRAPH 05 · LICENSED RESEARCH RECORD</text>
+  </g>
+</svg>

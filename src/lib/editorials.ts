@@ -37,27 +37,19 @@ const editorialFrontmatterSchema = z.object({
             caption: z.string().optional(),
         })
         .optional(),
+    thumbnail: z
+        .object({
+            src: z.string().min(1),
+            alt: z.string().min(1),
+            width: z.number().int().positive().default(800),
+            height: z.number().int().positive().default(600),
+        })
+        .optional(),
     draft: z.boolean().default(false),
 });
 
-export type EditorialFrontmatter = z.infer<typeof editorialFrontmatterSchema>;
-
-export type EditorialHeading = {
-    id: string;
-    text: string;
-    /** 2 for a top-level section, 3 for a subsection. */
-    level: 2 | 3;
-};
-
-export type EditorialSummary = EditorialFrontmatter & {
-    slug: string;
-    wordCount: number;
-    readingMinutes: number;
-};
-
-export type Editorial = EditorialSummary & {
-    headings: EditorialHeading[];
-};
+export * from './editorialTypes';
+import { formatEditorialDate, type Editorial, type EditorialHeading, type EditorialSummary, type EditorialFrontmatter } from './editorialTypes';
 
 const WORDS_PER_MINUTE = 220;
 
@@ -218,14 +210,4 @@ export function getEditorialNeighbours(slug: string): EditorialNeighbours {
         next: editorials[index - 1] ?? null,
         previous: editorials[index + 1] ?? null,
     };
-}
-
-export function formatEditorialDate(isoDate: string): string {
-    const [year, month, day] = isoDate.split('-').map(Number);
-    return new Date(Date.UTC(year, month - 1, day)).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        timeZone: 'UTC',
-    });
 }

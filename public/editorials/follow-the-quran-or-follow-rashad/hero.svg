@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="hero-follow-title">
+  <title id="hero-follow-title">Resolving the False Dilemma: Quranic Supremacy and the Messenger's Function</title>
+  <defs>
+    <radialGradient id="bg-follow-hero" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#241914"/>
+      <stop offset="60%" stop-color="#140E0A"/>
+      <stop offset="100%" stop-color="#080504"/>
+    </radialGradient>
+    <filter id="glow-hero-follow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .hero-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .hero-serif { font-family: 'Source Serif Pro', Georgia, serif; }
+      .hero-sans { font-family: 'DM Sans', -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg-follow-hero)"/>
+  <g opacity="0.1" stroke="#FAF5EE" stroke-width="0.75">
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="675" x2="1200" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+  </g>
+  <g transform="translate(80, 80)">
+    <text class="hero-mono" x="0" y="0" font-size="11" font-weight="700" fill="#D97738" letter-spacing="2">MONOGRAPH 10 · THEOLOGICAL ARCHITECTURE SPECIFICATION</text>
+    <text class="hero-serif" x="0" y="32" font-size="28" font-weight="600" fill="#FAF5EE">The False Dichotomy: Scriptural Primacy &amp; The Messenger's Role</text>
+    <text class="hero-mono" x="0" y="56" font-size="12" fill="#A8A096">RESOLVING THE POLARIZATION BETWEEN FOLLOWING SCRIPTURE ALONE AND OBEYING DIVINE PROCLAMATION</text>
+  </g>
+  <g transform="translate(600, 480)">
+    <rect x="-480" y="-180" width="420" height="340" rx="6" fill="#140E0A" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.3"/>
+    <text class="hero-mono" x="-270" y="-150" font-size="11" font-weight="700" fill="#E6652E" text-anchor="middle" letter-spacing="1.5">FALSE DILEMMA FALLACY</text>
+    <text class="hero-serif" x="-270" y="-95" font-size="26" font-weight="600" fill="#A8A096" text-anchor="middle">"Pitting One Against Other"</text>
+    <g fill="#756D65" font-size="12" class="hero-sans">
+      <text x="-440" y="-40">• Framing obedience to messenger as idolatry</text>
+      <text x="-440" y="-15">• Discarding verified mathematical facts</text>
+      <text x="-440" y="10">• Treating the messenger as an independent legislator</text>
+      <text x="-440" y="35">• Creating sectarian division between followers</text>
+    </g>
+    <rect x="-420" y="75" width="300" height="30" rx="3" fill="#241914" stroke="#E6652E" stroke-width="1"/>
+    <text class="hero-mono" x="-270" y="94" font-size="9.5" font-weight="700" fill="#FFA366" text-anchor="middle">Artificially Polarized Framing</text>
+
+    <path d="M -40 -10 L 40 -10 M 25 -25 L 40 -10 L 25 5" stroke="#FFA366" stroke-width="3" fill="none" filter="url(#glow-hero-follow)"/>
+
+    <rect x="60" y="-180" width="420" height="340" rx="6" fill="#1E140C" stroke="#D97738" stroke-width="2" filter="url(#glow-hero-follow)"/>
+    <text class="hero-mono" x="270" y="-150" font-size="11" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="1.5">QURANIC UNIFIED HARMONY</text>
+    <text class="hero-serif" x="270" y="-95" font-size="26" font-weight="700" fill="#FAF5EE" text-anchor="middle">The Messenger Points to Quran</text>
+    <g fill="#A8A096" font-size="12" class="hero-sans">
+      <text x="100" y="-40">• The messenger's sole message is: Follow Quran Alone</text>
+      <text x="100" y="-15">• Obeying the messenger = Obeying the message delivered</text>
+      <text x="100" y="10">• Sole function is deliver and clarify (Q. 5:99, 16:44)</text>
+      <text x="100" y="35">• No personality cult; the text remains the sole authority</text>
+    </g>
+    <rect x="120" y="75" width="300" height="30" rx="3" fill="#080504" stroke="#D97738" stroke-width="1.25"/>
+    <text class="hero-mono" x="270" y="94" font-size="9.5" font-weight="700" fill="#FFA366" text-anchor="middle">Absolute Scriptural Supremacy</text>
+  </g>
+  <g transform="translate(80, 840)">
+    <text class="hero-mono" x="0" y="0" font-size="10.5" fill="#756D65">SUBMISSION ARCHIVES EDITORIAL SCHEMATICS · MONOGRAPH 10 · THEOLOGICAL SYNTHESIS</text>
+  </g>
+</svg>

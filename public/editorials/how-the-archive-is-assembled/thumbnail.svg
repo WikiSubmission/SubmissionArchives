@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="thumb-title thumb-desc">
+  <title id="thumb-title">How the Archive Is Assembled</title>
+  <desc id="thumb-desc">A technical schematic illustrating the four-stage archival pipeline: Acquisition, Digitisation, Transcription, and Indexing.</desc>
+
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bg-rad" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#1C1814"/>
+      <stop offset="55%" stop-color="#120F0C"/>
+      <stop offset="100%" stop-color="#0A0807"/>
+    </radialGradient>
+
+    <!-- Glowing Central Pipeline Beam -->
+    <linearGradient id="beam-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA366"/>
+      <stop offset="45%" stop-color="#E6652E"/>
+      <stop offset="85%" stop-color="#D97738"/>
+      <stop offset="100%" stop-color="#C2B28A"/>
+    </linearGradient>
+
+    <!-- Stage 1 Plate Gradients -->
+    <linearGradient id="parchment-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9CCA8"/>
+      <stop offset="50%" stop-color="#C2B28A"/>
+      <stop offset="100%" stop-color="#8F7E56"/>
+    </linearGradient>
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8DCC0"/>
+      <stop offset="100%" stop-color="#D9CCA8"/>
+    </linearGradient>
+    <linearGradient id="derived-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2B28A"/>
+      <stop offset="100%" stop-color="#A8986E"/>
+    </linearGradient>
+
+    <!-- Stage 2 Glass Gradient -->
+    <linearGradient id="glass-dig" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF5EE" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#FAF5EE" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <!-- Stage 3 Glass Gradient -->
+    <linearGradient id="glass-trans" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97738" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#D97738" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <!-- Stage 4 Glass Gradient -->
+    <linearGradient id="glass-idx" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA366" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FFA366" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="plate-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+
+    <style>
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .font-serif { font-family: 'Source Serif Pro', Georgia, serif; }
+      .font-sans { font-family: 'DM Sans', -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="600" fill="url(#bg-rad)"/>
+
+  <!-- Technical Architectural Background Grid -->
+  <g opacity="0.08" stroke="#FAF5EE" stroke-width="0.5" aria-hidden="true">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="400" y1="275" x2="800" y2="510" stroke-dasharray="4 4"/>
+    <line x1="400" y1="275" x2="0" y2="510" stroke-dasharray="4 4"/>
+    <line x1="400" y1="275" x2="400" y2="40" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Corner Framing Reticles -->
+  <g stroke="#D97738" stroke-width="0.8" opacity="0.5" aria-hidden="true">
+    <path d="M 28 20 L 28 36 M 20 28 L 36 28"/>
+    <path d="M 772 20 L 772 36 M 764 28 L 780 28"/>
+    <path d="M 28 564 L 28 580 M 20 572 L 36 572"/>
+    <path d="M 772 564 L 772 580 M 764 572 L 780 572"/>
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(48, 48)">
+    <rect x="0" y="0" width="124" height="22" rx="3" fill="#D97738" fill-opacity="0.15" stroke="#D97738" stroke-opacity="0.5" stroke-width="1"/>
+    <text class="font-mono" x="62" y="14.5" font-size="9" font-weight="700" fill="#FFA366" letter-spacing="1.5" text-anchor="middle">MONOGRAPH 01</text>
+    <text class="font-sans" x="0" y="42" font-size="10.5" font-weight="700" fill="#C2B28A" letter-spacing="2.5">MASJID TUCSON · 1974–1990</text>
+    <text class="font-mono" x="704" y="15" font-size="9.5" fill="#A8A096" letter-spacing="1.2" text-anchor="end">4 STAGES · AUDITED</text>
+  </g>
+
+  <!-- Central Isometric Architecture Canvas -->
+  <g transform="translate(400, 275)">
+
+    <!-- Vertical Central Pipeline Beam -->
+    <line x1="0" y1="-215" x2="0" y2="135" stroke="url(#beam-grad)" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="0" cy="-215" r="7" fill="#FFA366" filter="url(#glow)"/>
+    <circle cx="0" cy="-215" r="3" fill="#FFFFFF"/>
+    <circle cx="0" cy="135" r="7" fill="#D9CCA8" filter="url(#glow)"/>
+    <circle cx="0" cy="135" r="3" fill="#1C1814"/>
+
+    <!-- ==========================================
+         STAGE 4: INDEXING (Rendered 1st -> Back Layer)
+         ========================================== -->
+    <g transform="translate(0, -135)" filter="url(#plate-shadow)">
+      <path d="M 0 -76 L 160 0 L 0 76 L -160 0 Z" fill="url(#glass-idx)" stroke="#FFA366" stroke-width="1.75" stroke-opacity="0.75"/>
+      
+      <ellipse cx="0" cy="0" rx="56" ry="26" fill="#FFA366" fill-opacity="0.12" stroke="#FFA366" stroke-width="0.75" filter="url(#glow)"/>
+      <ellipse cx="0" cy="0" rx="34" ry="16" fill="#FFA366" fill-opacity="0.15" stroke="#FFA366" stroke-width="0.75"/>
+      <circle cx="0" cy="0" r="7.5" fill="#FFA366" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+      
+      <!-- Granular Indexing Query Chips -->
+      <g transform="translate(-74, -36)">
+        <rect x="0" y="0" width="46" height="18" rx="2" fill="#14110F" stroke="#FFA366" stroke-width="0.85"/>
+        <text class="font-mono" x="23" y="12" font-size="8" font-weight="700" fill="#FFA366" text-anchor="middle">P. 47</text>
+      </g>
+      <g transform="translate(28, -36)">
+        <rect x="0" y="0" width="58" height="18" rx="2" fill="#14110F" stroke="#FFA366" stroke-width="0.85"/>
+        <text class="font-mono" x="29" y="12" font-size="8" font-weight="700" fill="#FFA366" text-anchor="middle">00:14:23</text>
+      </g>
+
+      <!-- Stage 4 Callout Badge (Left) -->
+      <g transform="translate(-195, -7)">
+        <line x1="25" y1="7" x2="0" y2="7" stroke="#FFA366" stroke-width="1.25"/>
+        <rect x="-145" y="-8" width="145" height="30" rx="3" fill="#14110F" stroke="#FFA366" stroke-width="1"/>
+        <text class="font-mono" x="-10" y="4" font-size="9" font-weight="700" fill="#FFA366" text-anchor="end">4. INDEXING</text>
+        <text class="font-mono" x="-10" y="15" font-size="7.5" fill="#D97738" text-anchor="end" letter-spacing="0.5">PAGE · TIMESTAMP · QUERY</text>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         STAGE 3: TRANSCRIPTION (Rendered 2nd)
+         ========================================== -->
+    <g transform="translate(0, -45)" filter="url(#plate-shadow)">
+      <path d="M 0 -76 L 160 0 L 0 76 L -160 0 Z" fill="url(#glass-trans)" stroke="#E6652E" stroke-width="1.25" stroke-opacity="0.6"/>
+      
+      <!-- Tier 1: Manual -->
+      <g transform="translate(0, -20)">
+        <rect x="-58" y="-6.5" width="116" height="13" rx="2" fill="#E6652E" fill-opacity="0.4" stroke="#E6652E" stroke-width="0.75"/>
+        <text class="font-mono" x="-4" y="2.5" font-size="7.5" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="0.5">MANUAL</text>
+        <path d="M 39 -1.5 L 42 1.5 L 47 -3.5 M 44 -1.5 L 47 1.5 L 52 -3.5" stroke="#FFA366" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- Tier 2: Assisted -->
+      <g transform="translate(0, 0)">
+        <rect x="-58" y="-6.5" width="116" height="13" rx="2" fill="#E6652E" fill-opacity="0.22" stroke="#E6652E" stroke-width="0.75"/>
+        <text class="font-mono" x="-4" y="2.5" font-size="7.5" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="0.5">ASSISTED</text>
+        <path d="M 43 -1.5 L 46 1.5 L 51 -3.5" stroke="#FFA366" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- Tier 3: Unreviewed -->
+      <g transform="translate(0, 20)">
+        <rect x="-58" y="-6.5" width="116" height="13" rx="2" fill="#14110F" fill-opacity="0.6" stroke="#E6652E" stroke-width="0.75" stroke-dasharray="3 2"/>
+        <text class="font-mono" x="-4" y="2.5" font-size="7.5" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="0.5">UNREVIEWED</text>
+        <circle cx="47" cy="0" r="3" stroke="#FFA366" stroke-width="0.9" fill="none"/>
+      </g>
+
+      <!-- 17:36 Quranic Verification Seal Badge -->
+      <g transform="translate(0, 46)">
+        <rect x="-38" y="-6" width="76" height="12" rx="2" fill="#14110F" stroke="#E6652E" stroke-width="0.75" stroke-opacity="0.8"/>
+        <text class="font-mono" x="0" y="3" font-size="7" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="0.8">17:36 VERIFY</text>
+      </g>
+
+      <!-- Stage 3 Callout Badge (Right) -->
+      <g transform="translate(195, -7)">
+        <line x1="-25" y1="7" x2="0" y2="7" stroke="#E6652E" stroke-width="1.25"/>
+        <rect x="0" y="-8" width="145" height="30" rx="3" fill="#14110F" stroke="#E6652E" stroke-width="1"/>
+        <text class="font-mono" x="10" y="4" font-size="9" font-weight="700" fill="#FFA366">3. TRANSCRIPTION</text>
+        <text class="font-mono" x="10" y="15" font-size="7.5" fill="#D97738" letter-spacing="0.5">3 METHODS · LABELLED</text>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         STAGE 2: DIGITISATION (Rendered 3rd)
+         ========================================== -->
+    <g transform="translate(0, 45)" filter="url(#plate-shadow)">
+      <path d="M 0 -76 L 160 0 L 0 76 L -160 0 Z" fill="url(#glass-dig)" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.45"/>
+      
+      <!-- Coordinate Scan Alignment Grid Overlay -->
+      <g stroke="#FAF5EE" stroke-width="0.5" stroke-opacity="0.18">
+        <line x1="-80" y1="-38" x2="80" y2="38"/>
+        <line x1="-40" y1="-19" x2="120" y2="57"/>
+        <line x1="-120" y1="-57" x2="40" y2="19"/>
+        <line x1="80" y1="-38" x2="-80" y2="38"/>
+        <line x1="40" y1="-19" x2="-120" y2="57"/>
+        <line x1="120" y1="-57" x2="-40" y2="19"/>
+      </g>
+
+      <!-- Preservation Master: Skewed & Raw (2.6deg) -->
+      <g transform="rotate(2.6)">
+        <rect x="-42" y="-23" width="36" height="46" rx="1" fill="#D9CCA8" fill-opacity="0.16" stroke="#D9CCA8" stroke-width="0.75" stroke-dasharray="2 1"/>
+        <line x1="-36" y1="-15" x2="-12" y2="-15" stroke="#D9CCA8" stroke-width="0.6" stroke-opacity="0.5"/>
+        <line x1="-36" y1="-8" x2="-16" y2="-8" stroke="#D9CCA8" stroke-width="0.6" stroke-opacity="0.5"/>
+        <line x1="-36" y1="-1" x2="-10" y2="-1" stroke="#D9CCA8" stroke-width="0.6" stroke-opacity="0.5"/>
+        <line x1="-36" y1="6" x2="-18" y2="6" stroke="#D9CCA8" stroke-width="0.6" stroke-opacity="0.5"/>
+        <line x1="-36" y1="13" x2="-14" y2="13" stroke="#D9CCA8" stroke-width="0.6" stroke-opacity="0.5"/>
+      </g>
+
+      <!-- Reading Copy: Deskewed, Cropped, Clean Borders -->
+      <g transform="translate(6, -23)">
+        <rect x="0" y="0" width="36" height="46" rx="1" fill="#FAF5EE" fill-opacity="0.12" stroke="#FAF5EE" stroke-width="0.9"/>
+        <!-- Reading Copy Text Block -->
+        <line x1="6" y1="8" x2="30" y2="8" stroke="#FAF5EE" stroke-width="0.75" stroke-opacity="0.7"/>
+        <line x1="6" y1="15" x2="26" y2="15" stroke="#FAF5EE" stroke-width="0.75" stroke-opacity="0.7"/>
+        <line x1="6" y1="22" x2="30" y2="22" stroke="#FAF5EE" stroke-width="0.75" stroke-opacity="0.7"/>
+        <line x1="6" y1="29" x2="24" y2="29" stroke="#FAF5EE" stroke-width="0.75" stroke-opacity="0.7"/>
+        <!-- Platen Corner Crop Marks -->
+        <path d="M -3 3 L 0 3 M 3 -3 L 3 0" stroke="#FAF5EE" stroke-width="0.6" stroke-opacity="0.6"/>
+        <path d="M 39 3 L 36 3 M 33 -3 L 33 0" stroke="#FAF5EE" stroke-width="0.6" stroke-opacity="0.6"/>
+        <path d="M -3 43 L 0 43 M 3 49 L 3 46" stroke="#FAF5EE" stroke-width="0.6" stroke-opacity="0.6"/>
+        <path d="M 39 43 L 36 43 M 33 49 L 33 46" stroke="#FAF5EE" stroke-width="0.6" stroke-opacity="0.6"/>
+      </g>
+
+      <!-- Stage 2 Callout Badge (Left) -->
+      <g transform="translate(-195, -7)">
+        <line x1="25" y1="7" x2="0" y2="7" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.6"/>
+        <rect x="-145" y="-8" width="145" height="30" rx="3" fill="#14110F" stroke="#FAF5EE" stroke-width="1" stroke-opacity="0.6"/>
+        <text class="font-mono" x="-10" y="4" font-size="9" font-weight="700" fill="#FAF5EE" text-anchor="end">2. DIGITISATION</text>
+        <text class="font-mono" x="-10" y="15" font-size="7.5" fill="#A8A096" text-anchor="end" letter-spacing="0.5">MASTER · READING COPY</text>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         STAGE 1: ACQUISITION (Rendered 4th -> Front Layer)
+         ========================================== -->
+    <g transform="translate(0, 135)" filter="url(#plate-shadow)">
+      <path d="M 0 -76 L 160 0 L 0 76 L -160 0 Z" fill="url(#parchment-grad)" stroke="#5C4D30" stroke-width="1.5"/>
+      <path d="M 0 -76 L 0 76 L -160 0 Z" fill="url(#primary-grad)" opacity="0.75"/>
+      <path d="M 0 -76 L 160 0 L 0 76 Z" fill="url(#derived-grad)" opacity="0.75"/>
+      <path d="M -160 0 L 0 76 L 0 88 L -160 12 Z" fill="#3A3020"/>
+      <path d="M 0 76 L 160 0 L 160 12 L 0 88 Z" fill="#2A2216"/>
+
+      <!-- Primary Manuscript Stack (Print / Newsletters) -->
+      <g transform="translate(-38, -16)">
+        <rect x="0" y="0" width="28" height="36" rx="1" fill="#3A3020" stroke="#5C4D30" stroke-width="1"/>
+        <rect x="3" y="-4" width="28" height="36" rx="1" fill="#4A3F2D" stroke="#5C4D30" stroke-width="1"/>
+        <rect x="6" y="-8" width="28" height="36" rx="1" fill="url(#parchment-grad)" stroke="#5C4D30" stroke-width="1"/>
+        <line x1="10" y1="-2" x2="30" y2="-2" stroke="#5C4D30" stroke-width="0.8"/>
+        <line x1="10" y1="3" x2="28" y2="3" stroke="#5C4D30" stroke-width="0.8"/>
+        <line x1="10" y1="8" x2="30" y2="8" stroke="#5C4D30" stroke-width="0.8"/>
+        <line x1="10" y1="13" x2="26" y2="13" stroke="#5C4D30" stroke-width="0.8"/>
+      </g>
+
+      <!-- Cassette Recording / Media Spool (Audio & Video Formats) -->
+      <g transform="translate(10, -18)">
+        <rect x="0" y="0" width="34" height="22" rx="2" fill="#251F17" stroke="#8F7E56" stroke-width="1"/>
+        <rect x="4" y="4" width="26" height="9" rx="1" fill="#14110F" stroke="#5C4D30" stroke-width="0.6"/>
+        <circle cx="10" cy="8.5" r="2.5" fill="#8F7E56"/>
+        <circle cx="24" cy="8.5" r="2.5" fill="#8F7E56"/>
+        <line x1="8" y1="17" x2="26" y2="17" stroke="#5C4D30" stroke-width="0.8"/>
+      </g>
+
+      <!-- Stage 1 Callout Badge (Right) -->
+      <g transform="translate(195, -7)">
+        <line x1="-25" y1="7" x2="0" y2="7" stroke="#C2B28A" stroke-width="1.25"/>
+        <rect x="0" y="-8" width="145" height="30" rx="3" fill="#14110F" stroke="#C2B28A" stroke-width="1"/>
+        <text class="font-mono" x="10" y="4" font-size="9" font-weight="700" fill="#EBDDB8">1. ACQUISITION</text>
+        <text class="font-mono" x="10" y="15" font-size="7.5" fill="#A8986E" letter-spacing="0.5">PRIMARY · DERIVED</text>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         METHODOLOGICAL EXCLUSION CONSTRAINTS
+         ========================================== -->
+    <g transform="translate(0, 218)" opacity="0.85">
+      <!-- Tag 1 -->
+      <rect x="-162" y="0" width="76" height="16" rx="2" fill="#14110F" stroke="#A8A096" stroke-width="0.75" stroke-dasharray="2 2"/>
+      <text class="font-mono" x="-124" y="11" font-size="7.5" fill="#C2B28A" text-anchor="middle" letter-spacing="0.4">NO RECONSTRUCTION</text>
+      <!-- Tag 2 -->
+      <rect x="-80" y="0" width="74" height="16" rx="2" fill="#14110F" stroke="#A8A096" stroke-width="0.75" stroke-dasharray="2 2"/>
+      <text class="font-mono" x="-43" y="11" font-size="7.5" fill="#C2B28A" text-anchor="middle" letter-spacing="0.4">NO INFERENCE</text>
+      <!-- Tag 3 -->
+      <rect x="2" y="0" width="76" height="16" rx="2" fill="#14110F" stroke="#A8A096" stroke-width="0.75" stroke-dasharray="2 2"/>
+      <text class="font-mono" x="40" y="11" font-size="7.5" fill="#C2B28A" text-anchor="middle" letter-spacing="0.4">NO ATTRIBUTION</text>
+      <!-- Tag 4 -->
+      <rect x="84" y="0" width="76" height="16" rx="2" fill="#14110F" stroke="#A8A096" stroke-width="0.75" stroke-dasharray="2 2"/>
+      <text class="font-mono" x="122" y="11" font-size="7.5" fill="#C2B28A" text-anchor="middle" letter-spacing="0.4">NO SUMMARY</text>
+    </g>
+
+  </g>
+
+  <!-- Footer Section -->
+  <g transform="translate(48, 545)">
+    <text class="font-serif" x="0" y="0" font-size="22" font-weight="600" fill="#FAF5EE" letter-spacing="-0.3">How the Archive Is Assembled</text>
+    <text class="font-mono" x="0" y="20" font-size="9.5" fill="#A8A096" letter-spacing="0.6">4-STAGE PRESERVATION MATRIX · DETERMINISTIC PROVENANCE</text>
+    <text class="font-mono" x="704" y="10" font-size="10.5" font-weight="700" fill="#FFA366" letter-spacing="1.5" text-anchor="end">VIEW ↗</text>
+  </g>
+</svg>

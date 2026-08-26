@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="hero-moradi-title">
+  <title id="hero-moradi-title">Methodological Deconstruction of Academic Counter-Studies on Code 19</title>
+  <defs>
+    <radialGradient id="bg-moradi-hero" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#241E14"/>
+      <stop offset="60%" stop-color="#14100B"/>
+      <stop offset="100%" stop-color="#080604"/>
+    </radialGradient>
+    <filter id="glow-hero-moradi" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .hero-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .hero-serif { font-family: 'Source Serif Pro', Georgia, serif; }
+      .hero-sans { font-family: 'DM Sans', -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg-moradi-hero)"/>
+  <g opacity="0.1" stroke="#FAF5EE" stroke-width="0.75">
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="675" x2="1200" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+  </g>
+  <g transform="translate(80, 80)">
+    <text class="hero-mono" x="0" y="0" font-size="11" font-weight="700" fill="#D97738" letter-spacing="2">MONOGRAPH 08 · STATISTICAL AUDIT SPECIFICATION</text>
+    <text class="hero-serif" x="0" y="32" font-size="28" font-weight="600" fill="#FAF5EE">Methodological Analysis: Exposing Flawed Assumptions in Moradi &amp; Alizadeh</text>
+    <text class="hero-mono" x="0" y="56" font-size="12" fill="#A8A096">SAMPLING BIAS · ARBITRARY BASELINE COMPARISONS · RIGOROUS PROBABILITY AUDIT</text>
+  </g>
+  <g transform="translate(600, 480)">
+    <rect x="-480" y="-180" width="420" height="340" rx="6" fill="#14100B" stroke="#FAF5EE" stroke-width="1.25" stroke-opacity="0.3"/>
+    <text class="hero-mono" x="-270" y="-150" font-size="11" font-weight="700" fill="#E6652E" text-anchor="middle" letter-spacing="1.5">FLAWED STUDY ASSUMPTIONS</text>
+    <text class="hero-serif" x="-270" y="-95" font-size="28" font-weight="600" fill="#A8A096" text-anchor="middle">Arbitrary Constraints</text>
+    <g fill="#756D65" font-size="12" class="hero-sans">
+      <text x="-440" y="-40">• Ignores holistic interconnected letter counts</text>
+      <text x="-440" y="-15">• Tests isolated subsets without global constraints</text>
+      <text x="-440" y="10">• Uses post-hoc sampling to manufacture false baselines</text>
+      <text x="-440" y="35">• Conflates simple division with multi-tier lock systems</text>
+    </g>
+    <rect x="-420" y="75" width="300" height="30" rx="3" fill="#241E14" stroke="#E6652E" stroke-width="1"/>
+    <text class="hero-mono" x="-270" y="94" font-size="9.5" font-weight="700" fill="#FFA366" text-anchor="middle">Methodological Gerrymandering</text>
+
+    <path d="M -40 -10 L 40 -10 M 25 -25 L 40 -10 L 25 5" stroke="#FFA366" stroke-width="3" fill="none" filter="url(#glow-hero-moradi)"/>
+
+    <rect x="60" y="-180" width="420" height="340" rx="6" fill="#1E140C" stroke="#D97738" stroke-width="2" filter="url(#glow-hero-moradi)"/>
+    <text class="hero-mono" x="270" y="-150" font-size="11" font-weight="700" fill="#FFA366" text-anchor="middle" letter-spacing="1.5">CORRECT SCIENTIFIC AUDIT</text>
+    <text class="hero-serif" x="270" y="-95" font-size="28" font-weight="700" fill="#FAF5EE" text-anchor="middle">Holistic Interlocking Proof</text>
+    <g fill="#A8A096" font-size="12" class="hero-sans">
+      <text x="100" y="-40">• Basmalah letters: 19 letters (19 × 1)</text>
+      <text x="100" y="-15">• Total Quranic chapters: 114 (19 × 6)</text>
+      <text x="100" y="10">• Initialed surah letters: simultaneous multiples across 29 surahs</text>
+      <text x="100" y="35">• Joint probability exceeds P &lt; 10^-12 (undeniable design)</text>
+    </g>
+    <rect x="120" y="75" width="300" height="30" rx="3" fill="#080604" stroke="#D97738" stroke-width="1.25"/>
+    <text class="hero-mono" x="270" y="94" font-size="9.5" font-weight="700" fill="#FFA366" text-anchor="middle">Mathematically Impossible by Chance</text>
+  </g>
+  <g transform="translate(80, 840)">
+    <text class="hero-mono" x="0" y="0" font-size="10.5" fill="#756D65">SUBMISSION ARCHIVES EDITORIAL SCHEMATICS · MONOGRAPH 08 · STATISTICAL PROBABILITY AUDIT</text>
+  </g>
+</svg>

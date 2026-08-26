@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="thumb-maher-title">
+  <title id="thumb-maher-title">Maher Omar Amin &amp; The Two False Verses</title>
+
+  <defs>
+    <linearGradient id="bg-grad-maher" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1816"/>
+      <stop offset="60%" stop-color="#12100E"/>
+      <stop offset="100%" stop-color="#080706"/>
+    </linearGradient>
+
+    <linearGradient id="excision-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6652E"/>
+      <stop offset="100%" stop-color="#A83210"/>
+    </linearGradient>
+
+    <filter id="glow-excision" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .thumb-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .thumb-serif { font-family: 'Source Serif Pro', Georgia, serif; }
+      .thumb-sans { font-family: 'DM Sans', -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  
+  <rect width="800" height="600" fill="url(#bg-grad-maher)"/>
+
+  
+  <g opacity="0.1" stroke="#FAF5EE" stroke-width="0.5">
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="260" y1="0" x2="260" y2="600"/>
+    <line x1="540" y1="0" x2="540" y2="600"/>
+  </g>
+
+  
+  <g stroke="#D97738" stroke-width="1.25" opacity="0.6">
+    <path d="M 30 20 L 30 40 M 20 30 L 40 30"/>
+    <path d="M 770 20 L 770 40 M 760 30 L 780 30"/>
+    <path d="M 30 570 L 30 590 M 20 580 L 40 580"/>
+    <path d="M 770 570 L 770 590 M 760 580 L 780 580"/>
+  </g>
+
+  
+  <g transform="translate(400, 270)">
+    
+    <rect x="-180" y="-120" width="360" height="240" rx="4" fill="#FAF5EE" fill-opacity="0.06" stroke="#FAF5EE" stroke-width="1.5" stroke-opacity="0.25"/>
+    
+    
+    <g fill="#FAF5EE" fill-opacity="0.2">
+      <rect x="-150" y="-90" width="300" height="6" rx="2"/>
+      <rect x="-150" y="-70" width="280" height="6" rx="2"/>
+      <rect x="-150" y="-50" width="300" height="6" rx="2"/>
+      <rect x="-150" y="-30" width="260" height="6" rx="2"/>
+      <rect x="-150" y="-10" width="290" height="6" rx="2"/>
+      <rect x="-150" y="10" width="270" height="6" rx="2"/>
+    </g>
+
+    
+    <g transform="translate(0, 50)">
+      <rect x="-160" y="-8" width="320" height="52" rx="3" fill="#D97738" fill-opacity="0.15" stroke="url(#excision-glow)" stroke-width="2" stroke-dasharray="6 4" filter="url(#glow-excision)"/>
+      <line x1="-140" y1="12" x2="60" y2="12" stroke="#E6652E" stroke-width="3" opacity="0.6"/>
+      <line x1="-140" y1="28" x2="10" y2="28" stroke="#E6652E" stroke-width="3" opacity="0.6"/>
+      
+      
+      <rect x="80" y="4" width="70" height="28" rx="3" fill="#1A1816" stroke="#E6652E" stroke-width="1.25"/>
+      <text class="thumb-mono" x="115" y="16" font-size="7.5" font-weight="700" fill="#E6652E" text-anchor="middle">EXCISED</text>
+      <text class="thumb-mono" x="115" y="26" font-size="7" fill="#A8A096" text-anchor="middle">9:128–129</text>
+    </g>
+
+    
+    <g transform="translate(0, -50)">
+      <text class="thumb-mono" x="0" y="0" font-size="12" font-weight="700" fill="#FAF5EE" opacity="0.8" letter-spacing="3" text-anchor="middle">TOTAL: 6,346 VERSES</text>
+      <text class="thumb-mono" x="0" y="16" font-size="9.5" font-weight="700" fill="#D97738" letter-spacing="2" text-anchor="middle">19 × 334 (EXACT MULTIPLE)</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(48, 58)">
+    <rect x="0" y="0" width="105" height="22" rx="3" fill="#D97738" fill-opacity="0.15" stroke="#D97738" stroke-opacity="0.4"/>
+    <text class="thumb-mono" x="52" y="15" font-size="9" font-weight="700" fill="#D97738" letter-spacing="1.5" text-anchor="middle">MONOGRAPH 03</text>
+    <text class="thumb-sans" x="0" y="44" font-size="11" font-weight="600" fill="#A8A096" letter-spacing="2">TEXTUAL PURIFICATION</text>
+  </g>
+
+  
+  <g transform="translate(48, 532)">
+    <text class="thumb-serif" x="0" y="0" font-size="24" font-weight="600" fill="#FAF5EE" letter-spacing="-0.5">Maher Omar Amin &amp; The Two False Verses</text>
+    <text class="thumb-mono" x="0" y="24" font-size="10.5" fill="#A8A096" letter-spacing="1">MATHEMATICAL PURIFICATION · HADITH WITNESSES · 6,346 TOTAL</text>
+    <text class="thumb-mono" x="704" y="24" font-size="10.5" font-weight="700" fill="#D97738" letter-spacing="1.5" text-anchor="end">VIEW ↗</text>
+  </g>
+</svg>

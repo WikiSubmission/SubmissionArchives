@@ -1,18 +1,20 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowLeft, BookOpen, Layers } from 'lucide-react';
+import { Layers } from 'lucide-react';
 
 import EditorialCard from '@/components/editorials/EditorialCard';
 import { getEditorials } from '@/lib/editorials';
 
 export const metadata: Metadata = {
-    title: 'Archive Editorials — Submission Archives',
+    title: 'Archive Research Editorials',
     description:
-        'Long-form research editorials, preservation methodologies, historical context, and readings of the preserved archive.',
+        'Long-form research notes, preservation methodologies, and technical accounts of how the Submission Archives historical record is acquired, digitized, transcribed, and indexed.',
 };
 
 export default function EditorialsIndexPage() {
     const editorials = getEditorials();
+    const pinnedSlug = 'how-the-archive-is-assembled';
+    const pinnedEditorial = editorials.find((e) => e.slug === pinnedSlug);
+    const chronologicalEditorials = editorials.filter((e) => e.slug !== pinnedSlug);
 
     return (
         <div className="relative min-h-screen bg-ed-bg text-ed-fg font-sans antialiased selection:bg-ed-accent-soft selection:text-ed-fg">
@@ -28,22 +30,10 @@ export default function EditorialsIndexPage() {
             />
 
             <main id="main-content" className="relative z-[1] mx-auto max-w-[1160px] px-4 py-8 sm:px-7 lg:py-12">
-                {/* Back to Written Archive link */}
-                <div className="mb-6">
-                    <Link
-                        href="/written"
-                        className="inline-flex items-center gap-1.5 font-sans font-medium text-[11px] uppercase tracking-[0.12em] text-ed-fg-muted transition-colors hover:text-ed-accent"
-                    >
-                        <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
-                        Back to Written Archives
-                    </Link>
-                </div>
-
                 {/* Hero Header */}
                 <header className="mb-10 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-8">
                     <div className="max-w-[640px]">
                         <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
-                            <BookOpen className="h-3 w-3" aria-hidden="true" />
                             Archive Research Editorials
                         </div>
                         <h1
@@ -111,13 +101,38 @@ export default function EditorialsIndexPage() {
                         </p>
                     </div>
                 ) : (
-                    <ul className="list-none border-t border-ed-rule">
-                        {editorials.map((editorial, index) => (
-                            <li key={editorial.slug}>
-                                <EditorialCard editorial={editorial} index={index + 1} headingLevel={3} />
-                            </li>
-                        ))}
-                    </ul>
+                    <div className="space-y-6">
+                        {/* Pinned Foundational Article */}
+                        {pinnedEditorial ? (
+                            <section aria-label="Pinned Editorial">
+                                <ul className="list-none">
+                                    <li>
+                                        <EditorialCard
+                                            editorial={pinnedEditorial}
+                                            index={1}
+                                            headingLevel={3}
+                                            isPinned={true}
+                                        />
+                                    </li>
+                                </ul>
+                            </section>
+                        ) : null}
+
+                        {/* Chronological Research Articles */}
+                        <section aria-label="Research Monographs">
+                            <ul className="list-none border-t border-ed-rule">
+                                {chronologicalEditorials.map((editorial, index) => (
+                                    <li key={editorial.slug}>
+                                        <EditorialCard
+                                            editorial={editorial}
+                                            index={index + 2}
+                                            headingLevel={3}
+                                        />
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    </div>
                 )}
 
                 <footer className="mt-20 border-t border-ed-rule py-9 text-center text-[12px] font-medium tracking-[0.04em] text-ed-fg-muted">

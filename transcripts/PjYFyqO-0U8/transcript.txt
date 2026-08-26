@@ -1,0 +1,113 @@
+In the name of God, Most Gracious, Most Merciful. Peace be upon you guys.
+
+[00:02] So after Rashad Khalifa's passing, uh some submitters have discovered that the four words of the Bismillah as counted by Rashad occur in exactly 1919 verses.
+
+[00:14] So when you count all the verses that have any of the four words of the Bismillah, you find out that they exist in 1919 verses. And the purpose of this video is to go ahead and demonstrate this for everybody to see, God willing.
+
+[00:27] But first, let's establish some things first. So, these are the counts of the four words of the Bismillah as Rashad had counted them. And uh when you notice, each one of them is a multiple of 19.
+
+[00:38] But when you sum up the occurrences of each of the of the four words, you get, and I'm going to go ahead and use the Excel function to do this. Okay, you get 2888.
+
+[00:49] Now, when you already have a multiple of 19 and you add another multiple of 19 to it sequentially, you already expect a multiple of 19. So, we already expect this number to be a multiple of 19. That's just a mathematical property. When you add when you sum up any two numbers that are a multiple of 19, you're going to have a number that's also a multiple of 19, right?
+
+[01:09] But what's interesting about this number is it's not just a multiple of 19. It's a it's a multiple of 19 twice. So, it's 19 * 19 * 8. So, it's not just a mathematical property as we would expect, but it indicates that this is a an actually significant finding.
+
+[01:26] And I also want to point out that the number eight um is also significant because 19 is the eighth prime number. Now, when you also look at the multipliers, what we find out is that the sum of these themselves is also a multiple of 19.
+
+[01:41] So, I'm just going to go ahead, God willing, and and write these multipliers, and then we're going to sum these up. And then we're going to divide by 19. And what we find out again is it's actually 19 * 8 as well.
+
+[01:58] Now, again, this is not a mathematical property. So, there's no reason to expect the sum of the multipliers themselves to also be a multiple of 19, and more specifically, a multiple of 19 * 8, the other uh significant multiplier. And again, 8 is the uh 19 is the eighth uh prime number.
+
+[02:18] When you count all the verses in the Quran that have uh any of the four words of the Bismillah, you find out that they occur in 1919 verses. Now, Rashad did not know this. It was noted after his passing.
+
+[02:33] And what's interesting is, uh, you know, Rashad, uh, you know, how the Quran says the messenger is not holding back any news. When you look at Appendix 1, Appendix 2, and Appendix 24, it looks like Rashad just throws every multiple of 19 he could find at you, like, uh, you know, kind of just throwing everything including the kitchen sink at you.
+
+[02:52] So, if this major finding was not uh uh pointed out or discussed by Rashad, we can know with confidence that he did not know this. And what's interesting is, um, uh, God willing, we will verify this here. I have previously verified this, and this is just more for a demonstration in case anybody uh does not have the means or the time to see for themselves, God willing.
+
+[03:15] I also want to add that this type of alignment where things come together like this, as if perfect pieces of a puzzle, don't just happen by coincidence, right? This indicates uh deliberate design, especially since this finding specifically, um, was discovered after Rashad's passing.
+
+[03:33] So, that means the way that Rashad had counted uh the the four words of the Bismillah is the correct way, the divinely ordained way, the intentional way. And it leads to things come together like this, as if perfect pieces of a puzzle, aligning together, indicating uh divine intentionality behind these counts. Even things that Rashad did not know have have come together uh after he had passed.
+
+[03:58] Okay, so let's, God willing, uh start verifying this point here. So, I just have four empty uh uh Excel sheets right here, and we're just going to we're just going to start with uh Rahman. What's interesting about Rahman is that uh it's not in the two false verses of 9:129 and 129.
+
+[04:16] So, what we're going to see here is uh we don't have to delete an occurrence of it because uh, you know, it exists throughout the Quran as a multiple of 19, and it's not in the false verses, so the false verses do not corrupt this count.
+
+[04:29] So, the the way that we are going to uh to use this is we're just going to go and search up Quran root search. And it's this specific website here. Now, this is not a submitter website. It's from Islamicity, and I assume that this is a Sunni website.
+
+[04:44] So, we're just going to go ahead and and use the the way that uh, you know, the way that they calculate things, and we'll and we'll see that they do in fact conform with uh Rashad's count. So, the first word is Rahman, and and both Rahman and Raheem come from the same root word. So, Ra, and then Ha, and then Meem.
+
+[05:04] And then we're going to search that root word. And for those who are not familiar with this, God willing, I will walk you through how this works. So, uh we kind of read it from right to left. So, it begins with the actual root word that we just typed up, the chapter number it's in, uh the name of the chapter, the the city it was revealed as in Mecca or Medina, the verse number, the actual text of the verse, and uh so over here it has the the actual word.
+
+[05:30] And more specifically, the the the other column that is uh very important to point out is this similar column, which which gives you the counts of how many of that word is seen here. So, um there's also another thing I want to point out is when you scroll all the way down, uh for example, uh you have Al-Rahman, for example, here, and it tells you there's 112 occurrences of this.
+
+[05:51] But it's that verse zero, and it's part of the Bismillah Al-Rahman Al-Raheem. So, we're counting the Al-Rahman within the Quran, uh not within the unnumbered verses. And in fact, even this website recognizes the distinction in the counts. Uh it did not include this with the count that uh that we're counting.
+
+[06:10] Now, uh Raheem is also part of that that word, and and we'll come back to to this one later. But the the the so the count that we're looking for, the Rahman count, is over here. So, and and notice there's 57 uh of these counts here.
+
+[06:26] And what's interesting is that it looks like the a lot of them occur in chapter 19. Uh uh the Rahman in chapter 19 as well. So, God willing, we'll just copy and paste uh the the Al-Rahman counts here. And again, we're only counting uh Rahman. Uh we're not counting um uh, you know, anything that's not Rahman.
+
+[06:47] So, and we're not counting Raheem either, even though it's part of the same root. We'll count that soon, God willing. So, let's count, so let's just copy and paste all of this. Okay. Okay. So, um, I should add a column here, and we should start deleting some of these things. So, I should add a row here.
+
+[07:17] Okay. So, we have the root word, uh we have the actual name. So, I'm we don't need the root word, so we'll just go ahead and delete this. Uh this is the uh chapter number. We don't need the name of the chapter or where or when it was revealed, so we'll delete that. This is the verse number. And this is the actual text of the of the verse, which we don't need. Uh and this is the uh we don't need that column. This is the significant column here. Uh and then the actual word we're looking for.
+
+[07:46] Okay. So, we see here that it exists in uh 57 times. And if I go ahead and just highlight all the occurrences, Excel will verify for me that they are in uh that there's 57 occurrences of Rahman.
+
+[08:01] Now, since there's no false verse here, uh we don't have to uh delete anything here, since this is these are all verses of the Quran. Okay. So, next is the occurrence of Raheem. So, we're going to do the same exercise, and since it has the same root word, uh we we don't have to go back and and type it out again.
+
+[08:20] So, we already counted the Rahman, which occurs 57 times. And what we see here is is Raheem as well, occurring uh 95 times. And also another variant, uh Rahman, uh occurring 20 times. And 95 + 20 is 115 times. So, it's just up by one from 114, and obviously the reason is because of the false verse.
+
+[08:43] But anyway, let's go ahead and just post and post those into our into our spreadsheet. 19 and 20. So, again, we're only counting the name of God, uh as in uh Raheem here. So, let's go ahead and post them here. And God willing, we'll remove the ones we don't the columns we don't need. Don't need whether it was in Mecca or Medina. So, we have the chapter, we have the verse. We don't need the the content of the verse, and we don't need this part.
+
+[09:18] Okay, so let's also copy and paste. Okay. So, these are the occurrences of uh of Raheem in the Quran, as they're counted. So, as we see here, uh they they occur 115 times. Um, but one verse here does not belong, 9:128, and this is a false verse.
+
+[09:44] So, that makes our counts 114, again, as we showed here. So, next is the Ism count. So, uh we can just go back here and uh type in the the root word for Ism. And the uh root of Ism is uh Sa, Meem, and Waw.
+
+[10:07] Right? So, we see here the occurrences of Ism, and uh the one uh so here is the Ism that Rashad had counted. Uh and and if you notice here, it occurred 19 times. So, let's go ahead and copy this into our spreadsheet.
+
+[10:28] So, God willing, it's right here. Okay. And uh these are not in the false verses, so uh there's nothing else to do here. is the word Allah, which is going to be obviously the biggest one.
+
+[11:00] So, we'll put it here in the root search. So, the root of Allah is Alif, Lam, and Ha. Now, since it includes the uh the the so like it's the root, so it so it's also going to include Ilah, which means uh lowercase God. But we're only looking for Allah.
+
+[11:18] So, God willing, we will count these uh soon, but I just wanted to uh demonstrate to you um uh a very easy and visual way, God willing, so you can see that the the count is correct. So, if we just click on Allah, uh even a so so Quran Corpus is from the University of Leeds, and it it kind of did the same thing. So, when I searched up the root for Allah, it uh tells me that it exists uh 2,699 times as the proper noun Allah.
+
+[11:49] Now, uh we uh if you remember our count here at the beginning was uh uh 2698, so it's down by one, and that's because there is an extra Allah at the end of chapter 9 in verse 129. So, we subtract one and we get that number. So, that that verifies that this is the correct count of God.
+
+[12:09] But we're doing more than that. We're trying to verify the number of verses the four words of the Bismillah occur in. So, what we'll do here, God willing, is we will uh copy and paste all the occurrences of Allah. Uh I also want to add that uh up here it has uh Allah, and it tells you the the first occurrence is verse 2:7.
+
+[12:29] But that's just because of the of the vowel marking. So, it includes all of them in the same. But there is also another vowel marking, Allahi. And let me give an example of of what that looks like. It's going to be somewhere down here. And for example, we see here that the first occurrence of Allahi with this downwards vowel marking is in uh chapter 1, verse 1, right?
+
+[12:59] Uh which is the which is one of the only uh two places where the Bismillah is an actual verse of the chapter. The other place is in chapter 27, which has two Bismillahs, and uh it also has one uh uh within the chapter where Solomon writes Bismillah to uh to Queen Sheba.
+
+[13:19] So, okay, so we're just going to copy and paste all the occurrences of Allah, God willing, into that's into that spreadsheet. And uh the reason why I'm not going to skip past this video, so you can kind of follow along and see what I'm doing. And so that we can verify that I copied and pasted it correctly and all of that.
+
+[13:38] So, let's go ahead. And and you're encouraged to do this yourself, obviously. But it's also just scroll all the way down until the last occurrence. Okay. Okay. So, last occurrence would be right here. Uh we we should note that uh this word here, Allahumma, does not mean Allah, right? It means our Lord. And even this website recognizes that there's five occurrences separate from that one.
+
+[14:18] I also want to add that down here, we have the verse zeros. So, this is the the Bismillahs that are not chapter one because it's not because it's actually part of the Quran. So, even this website recognizes that distinction. Okay, so we'll copy and paste this. God willing. Okay. So, we'll just delete the ones that we have deleted before. We don't need where it's revealed and the name of the chapter. We don't need the content of the verse, and we don't need this column as well.
+
+[15:03] Okay, and we should also insert as we did before. Okay, and let's also copy and paste these. Okay, so these are the occurrences of all the of the words uh of Allah. Okay, so as we see here, uh we can just count them all so you can see for yourself.
+
+[15:24] So, it's it's probably going to it is going to be, God willing, 2699. But because of the one false verse, it would be 26 uh uh So, okay, so that's because the the first column was numbered, but it tells you here the count is 2699. So, uh the so we we verified that the the correct count is one verse, one count less because of chapter 9:129, so it becomes 2698.
+
+[15:54] Okay, so now to calculate the counts of of each of these words, we should uh God willing, combine them together and see the number of verses they occur in. So, let's go ahead and begin with the counts of the word Allah. Copy this. Paste it here. Also do Ism. Okay. We'll do Raheem. And Rahman.
+
+[16:54] Okay. So, uh we have all of these counts here. So, what what we're going to do, God willing, is uh we're going to sort them out first and combine them. So, God willing, we'll copy this chapter here. Post it here. We'll copy this verse here. Okay, so now we have the chapter and the verse numbers together. And what I want to do is I want to sort them uh from smallest to largest.
+
+[17:20] And okay, so it's going to ask you to expand the selection. And expanding it means that we're also going to include this to be tied with with the with this. So, like when it sorts these in order, it will keep this column with the verse numbers with the chapter numbers. Right? So, here they are sorted.
+
+[17:38] So, now because this is sorted and and we took this column with it, uh this column is no longer relevant. So, we're just going to ignore that column there. We're just going to move to the right. Okay. So, now we have the chapter and the verse numbers sorted in order.
+
+[17:56] Okay, so uh now we have to combine these so we can be able to uh remove the duplicates of them, God willing. So, uh there is a special Excel function that can allow us to uh to do this. So, by the so we click on the click and then and, and then I'm going to add a space here so that there's a space between the verses. Oops, I have to do that one correctly. Uh equals and then a space, and then another and, and then the next value.
+
+[18:26] Okay. So, we're left with uh so these are the chapter and verse numbers. So, we're just going to uh combine them for all the verses we have here. Okay. So, now we have the combined column where uh the chapter and verse numbers are combined. Uh the next thing to do is uh to remove the duplicates.
+
+[18:53] So, we'll go ahead and paste. And what I'm going to do actually is I'm going to paste the um the values. And the reason I'm going to paste the values is because it lacks the formula within it. So, it's it's not going to mess with with anything, God willing. And so, um, now that the values are pasted, uh there is an Excel function within the data where it allows you to remove duplicates.
+
+[19:18] So, God willing, we'll remove the duplicates of column L. So, and you know, here's an example of of a duplicate. We have verse 1:1, and we have verse 1:1, and we have verse 1:1, right? So, we're just going to go ahead and and you're going to see it in action, God willing. So, as it removes here, uh we have uh we have uh so like we're also going to going to include the the first row as well.
+
+[19:42] But we'll do the count in just a second. But you see here how 1:1 is uh only one time. So, we don't have duplicates here. So, God willing, let's count uh what we have here. Let's just scroll all the way down and count what we have. Okay. So, we end up with 1921 of them.
+
+[20:08] So, there's 1921 occurrences of of verses that contain at least one of the four words of the Bismillah. So, in in other words, there are 1921 verses that have any of the four words of the Bismillah, right?
+
+[20:26] So, but this includes the two false verses, which we did not uh remove. So, all so if we take away two from from this number, we are left with 1919. So, in other words, when we take out the two false verses, the Quran uh has, the real Quran has 1919 verses that contain each of the four words of the Bismillah.
+
+[20:52] This was discovered after Rashad's passing. And so, you know, and you know, Rashad posts as much as as many multiples of 19 as he as as not just him, but anybody he he knows finds um in his appendices. And the fact he did not post this indicates he doesn't know it. And things coming together like this, as if perfect pieces of a puzzle, when you take out the two false verses, it just shows you the uh the uh the uh divine intentionality behind these counts. That it wasn't just an off way count that Rashad had just decided things to to to be kind of that way when when they when they, you know, he took these perfect pieces of a puzzle aligning together like that, including this finding, which is very significant. I had not previously known about this until very recently. And praise God, we have been able to verify it. All praise be to God alone. All praise be to God, the Lord of the universe.

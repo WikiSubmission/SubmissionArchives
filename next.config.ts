@@ -46,6 +46,7 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   experimental: {
+    cpus: 4,
     optimizePackageImports: ["lucide-react", "clsx", "tailwind-merge", "lru-cache", "framer-motion"],
     webVitalsAttribution: ["CLS", "LCP", "INP"],
   },
