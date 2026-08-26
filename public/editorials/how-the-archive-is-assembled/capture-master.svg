@@ -1,0 +1,84 @@
+<svg id="fig-master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="master-title master-desc">
+  <title id="master-title">Preservation master</title>
+  <desc id="master-desc">A page scan retained exactly as the original survives: the sheet sits skewed on the platen, its uneven paper edge, age spotting and binding-gutter shadow all left in place, and the ink is captured at its faded density.</desc>
+
+  <defs>
+    <style>
+      #fig-master .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #6E6459; }
+      #fig-master .val { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #A85324; }
+      #fig-master .plate { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 4px; fill: #8C8175; }
+      #fig-master .leader { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
+      #fig-master .pin { fill: #A85324; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="#E5DDD0"/>
+
+  <!-- Platen reference edge: the page is measurably off-square against it. -->
+  <path d="M150 128 H760" stroke="#A79B8B" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M232 128 A 84 84 0 0 1 236 108" stroke="#A85324" stroke-width="2" fill="none"/>
+  <text class="val" x="252" y="118">2.6°</text>
+
+  <!-- THE SHEET, left exactly as it sits: skewed, uneven edge, aged. -->
+  <g transform="rotate(-2.6 430 470)">
+    <!-- Uneven deckle edge down the right side. -->
+    <path d="M170 140 H690 L694 200 L688 262 L696 324 L690 386 L694 448 L687 510 L695 572 L689 634 L693 696 L690 758 V812 H170 Z"
+          fill="#E8DFCF" stroke="#C6B9A5" stroke-width="2"/>
+
+    <!-- Binding gutter: the shadow a bound spine throws across the page. -->
+    <rect x="170" y="140" width="26" height="672" fill="#C9BCA6" opacity="0.55"/>
+    <rect x="196" y="140" width="20" height="672" fill="#D3C7B3" opacity="0.45"/>
+    <rect x="216" y="140" width="16" height="672" fill="#DDD2C0" opacity="0.35"/>
+
+    <!-- Ink at its surviving density, not lifted. -->
+    <g fill="#9A8F7E">
+      <rect x="268" y="212" width="372" height="11"/>
+      <rect x="268" y="248" width="340" height="11"/>
+      <rect x="268" y="284" width="386" height="11"/>
+      <rect x="268" y="320" width="228" height="11"/>
+      <rect x="268" y="392" width="372" height="11"/>
+      <rect x="268" y="428" width="356" height="11"/>
+      <rect x="268" y="464" width="378" height="11"/>
+      <rect x="268" y="500" width="196" height="11"/>
+      <rect x="268" y="572" width="372" height="11"/>
+      <rect x="268" y="608" width="310" height="11"/>
+      <rect x="268" y="644" width="366" height="11"/>
+      <rect x="268" y="680" width="150" height="11"/>
+    </g>
+
+    <!-- Foxing and handling marks. -->
+    <g fill="#B08A5E" opacity="0.4">
+      <ellipse cx="602" cy="188" rx="17" ry="12"/>
+      <ellipse cx="628" cy="206" rx="9" ry="7"/>
+      <ellipse cx="318" cy="536" rx="13" ry="9"/>
+      <ellipse cx="560" cy="726" rx="21" ry="14"/>
+      <ellipse cx="590" cy="742" rx="10" ry="8"/>
+      <ellipse cx="252" cy="358" rx="8" ry="11"/>
+    </g>
+
+    <!-- A short tear at the foot of the fore-edge. -->
+    <path d="M690 758 L668 774 L690 786" fill="none" stroke="#C6B9A5" stroke-width="2"/>
+  </g>
+
+  <!-- CALLOUTS -->
+  <g>
+    <path class="leader" d="M700 196 H812"/>
+    <circle class="pin" cx="700" cy="196" r="4"/>
+    <text class="lbl" x="828" y="203">DECKLE EDGE KEPT</text>
+
+    <path class="leader" d="M622 214 L760 300 H812"/>
+    <circle class="pin" cx="622" cy="214" r="4"/>
+    <text class="lbl" x="828" y="307">FOXING NOT REMOVED</text>
+
+    <path class="leader" d="M212 452 L400 862"/>
+    <circle class="pin" cx="212" cy="452" r="4"/>
+    <text class="lbl" x="416" y="869">GUTTER SHADOW</text>
+
+    <path class="leader" d="M640 470 H812"/>
+    <circle class="pin" cx="640" cy="470" r="4"/>
+    <text class="lbl" x="828" y="477">INK AT SURVIVING</text>
+    <text class="lbl" x="828" y="507">DENSITY</text>
+  </g>
+
+  <text class="plate" x="60" y="862">PRESERVATION MASTER</text>
+</svg>

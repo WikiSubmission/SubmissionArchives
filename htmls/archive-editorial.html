@@ -1,0 +1,1770 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How the archive is assembled — Archive Editorials</title>
+<meta name="description" content="A walkthrough of the preservation pipeline behind Submission Archives.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   1. PALETTE
+   Light is the base; dark overrides the same tokens. Flip the theme with the
+   data-theme attribute on <html>, or with the header toggle.
+   ========================================================================== */
+:root {
+  --ed-bg:            #FBF9F5;
+  --ed-surface:       #F2ECE3;
+  --ed-surface-strong:#E6DFD4;
+  --ed-surface-raised:#FFFFFF;
+
+  --ed-fg:            #1C1A18;
+  --ed-fg-secondary:  #3D3732;
+  --ed-fg-muted:      #575049;
+  --ed-fg-faint:      #756D65;
+
+  --ed-rule:          #E5DFD5;
+  --ed-rule-strong:   #D5CCC0;
+
+  --ed-accent:        #A85324;
+  --ed-accent-strong: #8F4219;
+  --ed-accent-soft:   rgba(168, 83, 36, 0.09);
+
+  --ed-viewer-bg:     #F0EAE1;
+
+  --font-sans:   'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif:  'Source Serif 4', Georgia, serif;
+  --font-body:   'Newsreader', Georgia, serif;
+  --font-label:  'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --header-height: 60px;
+}
+
+[data-theme="dark"] {
+  --ed-bg:            #0F0E0D;
+  --ed-surface:       #161514;
+  --ed-surface-strong:#1C1B1A;
+  --ed-surface-raised:#222120;
+
+  --ed-fg:            #F5F0EB;
+  --ed-fg-secondary:  #D4CDC6;
+  --ed-fg-muted:      #A8A099;
+  --ed-fg-faint:      #7D7670;
+
+  --ed-rule:          #2A2928;
+  --ed-rule-strong:   #353433;
+
+  --ed-accent:        #E08552;
+  --ed-accent-strong: #F29A66;
+  --ed-accent-soft:   rgba(224, 133, 82, 0.14);
+
+  --ed-viewer-bg:     #111111;
+}
+
+/* ==========================================================================
+   2. RESET AND PAGE
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ed-bg);
+  color: var(--ed-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--ed-accent-soft); color: var(--ed-fg); }
+
+img, svg { max-width: 100%; }
+
+/* ==========================================================================
+   3. SITE HEADER
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: var(--header-height);
+  background: var(--ed-bg);
+  border-bottom: 1px solid var(--ed-rule);
+}
+
+.site-header-inner {
+  max-width: 1560px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 300ms ease;
+}
+
+.brand:hover img { transform: scale(1.05); }
+
+.brand-name {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ed-fg);
+  transition: color 200ms ease;
+}
+
+.brand:hover .brand-name { color: var(--ed-accent); }
+
+.site-nav { display: flex; gap: 28px; }
+
+.site-nav a {
+  position: relative;
+  padding: 4px 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ed-fg-secondary);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.site-nav a:hover { color: var(--ed-fg); }
+
+.site-nav a[aria-current="page"] { color: var(--ed-fg); font-weight: 600; }
+
+.site-nav a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1.5px;
+  background: var(--ed-accent);
+}
+
+.header-actions { display: flex; gap: 8px; }
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--ed-rule);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ed-fg-secondary);
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.icon-button:hover { color: var(--ed-fg); border-color: var(--ed-rule-strong); }
+
+@media (max-width: 1023px) {
+  .site-nav { display: none; }
+}
+
+/* ==========================================================================
+   4. PAGE LAYOUT
+   Sidebar (table of contents) / reading sheet / provenance rail.
+   ========================================================================== */
+.editorial-main {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 48px 28px;
+}
+
+.editorial-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr) minmax(0, 13rem);
+  column-gap: 40px;
+}
+
+.editorial-sidebar {
+  position: sticky;
+  /* Clears the 60px site header, keeping the same 24px visual gap. */
+  top: 84px;
+  align-self: start;
+  max-height: calc(100dvh - 108px);
+  overflow-y: auto;
+  padding-bottom: 24px;
+}
+
+.editorial-rail {
+  position: sticky;
+  top: 84px;
+  align-self: start;
+}
+
+.editorial-sheet-column { min-width: 0; }
+
+.editorial-sheet {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 48px 40px;
+  border: 1px solid var(--ed-rule);
+  border-radius: 4px;
+  background: var(--ed-surface-raised);
+}
+
+@media (max-width: 1279px) {
+  .editorial-layout { grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); }
+  .editorial-rail { position: static; grid-column: span 2; margin-top: 40px; }
+}
+
+@media (max-width: 1023px) {
+  .editorial-layout { grid-template-columns: minmax(0, 1fr); }
+  .editorial-sidebar { position: static; max-height: none; margin-bottom: 40px; }
+  .editorial-rail { grid-column: span 1; }
+  .editorial-main { padding: 32px 16px; }
+  .editorial-sheet { padding: 32px 20px; }
+}
+
+/* --- Back link and sidebar heading --------------------------------------- */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ed-fg-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.back-link:hover { color: var(--ed-accent); }
+
+.sidebar-title {
+  margin: 0 0 12px;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ed-fg-faint);
+}
+
+.editorial-toc { list-style: none; margin: 0; padding: 0; }
+
+.editorial-toc-link {
+  display: block;
+  padding: 0.34rem 0 0.34rem 0.85rem;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ed-fg-muted);
+  text-decoration: none;
+  border-inline-start: 1px solid var(--ed-rule);
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.editorial-toc-link:hover { color: var(--ed-fg); border-inline-start-color: var(--ed-rule-strong); }
+
+.editorial-toc-link[data-level='2'] {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.editorial-toc-link[data-level='3'] {
+  font-family: var(--font-body);
+  padding-inline-start: 1.6rem;
+}
+
+.editorial-toc-link[data-active='true'] { color: var(--ed-accent); border-inline-start-color: var(--ed-accent); }
+
+/* --- Reading settings bar ------------------------------------------------- */
+.settings-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--ed-rule);
+}
+
+.settings-anchor { position: relative; }
+
+.settings-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ed-fg-muted);
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.settings-trigger:hover { color: var(--ed-fg); border-color: var(--ed-rule); }
+
+.settings-panel {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  z-index: 20;
+  width: 15rem;
+  padding: 16px;
+  border: 1px solid var(--ed-rule);
+  border-radius: 8px;
+  background: var(--ed-surface-raised);
+}
+
+.settings-panel[hidden] { display: none; }
+
+.settings-row { margin-bottom: 12px; }
+.settings-row:last-child { margin-bottom: 0; }
+
+.settings-label {
+  margin: 0 0 6px;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ed-fg-faint);
+}
+
+.settings-options { display: flex; gap: 4px; }
+
+.settings-options button {
+  flex: 1;
+  padding: 8px 4px;
+  border: 1px solid var(--ed-rule);
+  border-radius: 4px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ed-fg-muted);
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+
+.settings-options button:hover { color: var(--ed-fg); }
+
+.settings-options button[aria-pressed='true'] {
+  border-color: var(--ed-accent);
+  background: var(--ed-accent-soft);
+  color: var(--ed-accent);
+}
+
+/* --- Provenance rail ------------------------------------------------------ */
+.reading-progress { display: flex; align-items: flex-start; gap: 8px; }
+
+.reading-progress-value {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  color: var(--ed-fg-faint);
+}
+
+.reading-progress-track {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 64px;
+  margin-top: 4px;
+  background: var(--ed-rule);
+}
+
+.reading-progress-bar {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform: scaleY(0);
+  transform-origin: top;
+  background: var(--ed-accent);
+}
+
+.rail-meta {
+  margin: 32px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--ed-rule);
+}
+
+.rail-meta dt {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ed-fg-faint);
+}
+
+.rail-meta dd {
+  margin: 2px 0 12px;
+  font-size: 11px;
+  color: var(--ed-fg-secondary);
+}
+
+.rail-meta dd:last-child { margin-bottom: 0; }
+
+/* ==========================================================================
+   5. THE READING SHEET
+   A narrow justified measure inside a wider frame, so figures can break the
+   column without breaking the text block.
+   ========================================================================== */
+.editorial-prose {
+  --editorial-measure: 36rem;
+  --editorial-body-size: 16.5px;
+  --editorial-body-leading: 1.78;
+  --editorial-align: justify;
+
+  color: var(--ed-fg-secondary);
+  font-family: var(--font-body);
+  font-size: var(--editorial-body-size);
+  line-height: var(--editorial-body-leading);
+}
+
+.editorial-prose[data-measure='wide'] { --editorial-measure: 44rem; }
+.editorial-prose[data-size='s']       { --editorial-body-size: 15px; }
+.editorial-prose[data-size='l']       { --editorial-body-size: 18.5px; --editorial-body-leading: 1.72; }
+.editorial-prose[data-align='start']  { --editorial-align: start; }
+
+/* Every direct child sits at the measure; break-out elements widen below. */
+.editorial-prose > * {
+  max-width: var(--editorial-measure);
+  margin-inline: auto;
+}
+
+.editorial-prose > p {
+  margin-block: 1.15em;
+  text-align: var(--editorial-align);
+  /* Never break a word across lines; justification stretches the spaces. */
+  hyphens: manual;
+  text-wrap: pretty;
+}
+
+.editorial-prose > .editorial-lead > p {
+  margin-block: 1.15em;
+  font-size: 1.08em;
+  color: var(--ed-fg);
+  text-align: var(--editorial-align);
+  hyphens: manual;
+  text-wrap: pretty;
+}
+
+.editorial-prose > h2,
+.editorial-prose > h3 {
+  font-family: var(--font-serif);
+  color: var(--ed-fg);
+  scroll-margin-top: 6rem;
+  text-wrap: balance;
+}
+
+.editorial-prose > h2 {
+  margin-block: 2.6em 0.9em;
+  font-size: 1.42em;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+}
+
+.editorial-prose > h3 {
+  margin-block: 2em 0.7em;
+  font-size: 1.12em;
+  font-weight: 600;
+  letter-spacing: -0.006em;
+  line-height: 1.35;
+}
+
+.editorial-prose > ul,
+.editorial-prose > ol {
+  margin-block: 1.15em;
+  padding-inline-start: 1.35em;
+}
+
+.editorial-prose > ul { list-style: none; }
+.editorial-prose > ul > li { position: relative; }
+
+.editorial-prose > ul > li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: -1.05em;
+  inset-block-start: 0.72em;
+  width: 4px;
+  height: 4px;
+  background: var(--ed-accent);
+  opacity: 0.7;
+}
+
+.editorial-prose > ol { list-style: decimal; }
+.editorial-prose li { margin-block: 0.4em; }
+
+.editorial-prose > ol > li::marker {
+  color: var(--ed-fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.editorial-prose strong { color: var(--ed-fg); font-weight: 600; }
+
+.editorial-prose a {
+  color: var(--ed-accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ed-accent) 45%, transparent);
+  text-underline-offset: 2px;
+  transition: color 150ms ease;
+}
+
+.editorial-prose a:hover { color: var(--ed-accent-strong); text-decoration-color: currentColor; }
+
+/* A short centred rule, not a full-width divider. */
+.editorial-prose > hr {
+  max-width: 2.5rem;
+  margin-block: 2.6em;
+  border: 0;
+  border-top: 1px solid var(--ed-rule-strong);
+}
+
+/* --- Masthead ------------------------------------------------------------- */
+.editorial-masthead { margin-bottom: 40px; text-align: center; }
+
+.editorial-masthead-meta {
+  margin: 0;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ed-fg-faint);
+}
+
+.editorial-masthead-meta span { margin: 0 8px; color: var(--ed-rule-strong); }
+
+.editorial-title {
+  max-width: 22ch;
+  margin: 20px auto 0;
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 3.6vw, 42px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--ed-fg);
+}
+
+.editorial-standfirst {
+  max-width: var(--editorial-measure);
+  margin: 16px auto 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ed-fg-muted);
+  /* Takes the body's measure and alignment, so it lines up with the prose
+     beneath it and the reading-settings toggle governs both. */
+  font-style: italic;
+  text-align: var(--editorial-align);
+  hyphens: manual;
+  text-wrap: pretty;
+}
+
+.editorial-masthead-rule {
+  width: 40px;
+  height: 1px;
+  margin: 32px auto 0;
+  background: var(--ed-rule-strong);
+}
+
+/* --- Break-out elements --------------------------------------------------- */
+.editorial-breakout { max-width: min(100%, 44rem); width: 100%; }
+
+.editorial-figure { margin-block: 2.4em; }
+
+.editorial-figure-frame {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid transparent;
+  background: var(--ed-viewer-bg);
+  cursor: zoom-in;
+  transition: border-color 250ms ease;
+}
+
+.editorial-figure-frame:hover { border-color: var(--ed-rule-strong); }
+
+.editorial-figure-frame:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+/* --- Enlarged view ------------------------------------------- */
+
+.editorial-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem 1.5rem 2.5rem;
+  /* The page stays legible behind the plate, but recedes. */
+  background: color-mix(in srgb, var(--ed-bg) 82%, transparent);
+  backdrop-filter: blur(7px);
+  cursor: zoom-out;
+}
+
+.editorial-lightbox[hidden] { display: none; }
+
+.editorial-lightbox-exit {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--ed-fg-muted);
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.editorial-lightbox-exit:hover { color: var(--ed-accent); }
+
+.editorial-lightbox-figure {
+  margin: 0;
+  max-width: min(96rem, 100%);
+  cursor: default;
+}
+
+.editorial-lightbox-plate {
+  background: var(--ed-viewer-bg);
+  border: 1px solid var(--ed-rule);
+}
+
+.editorial-lightbox-plate svg,
+.editorial-lightbox-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 12rem);
+}
+
+/* The reference caption style: a figure number, then the description. */
+.editorial-lightbox-caption {
+  margin-block-start: 1.1em;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--ed-fg-secondary);
+}
+
+.editorial-lightbox-caption em { font-style: italic; color: var(--ed-fg-muted); }
+
+.editorial-figure img,
+.editorial-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.editorial-caption {
+  margin-block-start: 0.85em;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--ed-fg-muted);
+  line-height: 1.6;
+}
+
+.editorial-figure-group { display: grid; gap: 0.75rem; align-items: start; }
+
+@media (min-width: 768px) {
+  .editorial-figure-group { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .editorial-figure-group > .editorial-figure:only-child { grid-column: span 2; }
+}
+
+@media (max-width: 767px) {
+  .editorial-figure-group {
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+  .editorial-figure-group::-webkit-scrollbar { display: none; }
+  .editorial-figure-group > .editorial-figure { scroll-snap-align: start; margin-block: 0; }
+}
+
+.editorial-pullquote {
+  max-width: 44rem;
+  margin-block: 2.8em;
+  margin-inline: auto;
+  padding-block: 1.4em;
+  padding-inline: 0;
+  border-block: 1px solid var(--ed-rule);
+  font-family: var(--font-serif);
+  font-size: 1.32em;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--ed-fg);
+}
+
+.editorial-pullquote-attribution {
+  display: block;
+  margin-block-start: 0.9em;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10.5px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-fg-muted);
+}
+
+/* --- Scripture citation --------------------------------------------------- */
+.editorial-verse {
+  margin-block: 2em;
+  padding: 1.15em 1.35em;
+  border: 1px solid var(--ed-rule);
+  border-inline-start: 2px solid var(--ed-accent);
+  border-radius: 4px;
+  background: var(--ed-surface);
+}
+
+.editorial-verse-text {
+  font-family: var(--font-body);
+  font-size: 1.02em;
+  line-height: 1.7;
+  color: var(--ed-fg);
+}
+
+.editorial-verse-reference {
+  display: inline-flex;
+  margin-block-start: 0.7em;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-accent);
+  text-decoration: none;
+}
+
+.editorial-verse-reference:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* --- Footnotes ------------------------------------------------------------ */
+.editorial-ref {
+  font-family: var(--font-serif);
+  font-size: 0.62em;
+  vertical-align: super;
+  line-height: 0;
+  margin-inline-start: 0.12em;
+  text-decoration: none;
+  color: var(--ed-accent);
+}
+
+.editorial-notes {
+  max-width: var(--editorial-measure);
+  margin-block-start: 3.5em;
+  padding-block-start: 1.6em;
+  border-block-start: 1px solid var(--ed-rule);
+}
+
+.editorial-notes-title {
+  margin: 0 0 1em;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-fg-muted);
+}
+
+.editorial-note {
+  display: grid;
+  grid-template-columns: 1.9rem 1fr;
+  gap: 0.5rem;
+  margin-block: 0.75em;
+  margin-inline: -0.35em;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.86em;
+  line-height: 1.65;
+  color: var(--ed-fg-muted);
+  scroll-margin-top: 6rem;
+  transition: background-color 400ms ease;
+}
+
+.editorial-note-index {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 10.5px;
+  color: var(--ed-accent);
+  padding-block-start: 0.35em;
+  text-decoration: none;
+}
+
+/* Jumping to a note flashes it, so the reader lands on the right line. */
+.editorial-note:target { background: var(--ed-accent-soft); }
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+.editorial-footer {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 36px 28px;
+  border-top: 1px solid var(--ed-rule);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ed-fg-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==========================================================================
+     SITE HEADER
+     ========================================================================== -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="#" aria-label="Submission Archives home">
+      <img src="data:image/png;base64,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" alt="">
+      <span class="brand-name">Submission Archives</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#">Home</a>
+      <a href="#">Videos</a>
+      <a href="#">Audios</a>
+      <a href="#" aria-current="page">Written</a>
+      <a href="#">Scriptures</a>
+      <a href="#">Search</a>
+      <a href="#">App</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" type="button" id="theme-toggle" aria-label="Toggle light and dark theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/>
+        </svg>
+      </button>
+      <button class="icon-button" type="button" aria-label="YouTube channel">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="5" width="20" height="14" rx="3"/>
+          <path d="M10 9l5 3-5 3z"/>
+        </svg>
+      </button>
+      <button class="icon-button" type="button" aria-label="Discord server">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==========================================================================
+     PAGE
+     ========================================================================== -->
+<main class="editorial-main">
+  <div class="editorial-layout">
+
+    <!-- ---------- SIDEBAR: sections of this editorial ---------- -->
+    <aside class="editorial-sidebar">
+      <a class="back-link" href="#">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        Archive Editorials
+      </a>
+
+      <nav aria-label="Sections in this editorial">
+        <p class="sidebar-title">In this editorial</p>
+        <ul class="editorial-toc">
+          <li><a class="editorial-toc-link" href="#acquisition" data-level="2" data-active="true">Acquisition</a></li>
+          <li><a class="editorial-toc-link" href="#digitisation" data-level="2" data-active="false">Digitisation</a></li>
+          <li><a class="editorial-toc-link" href="#why-the-untouched-master-matters" data-level="3" data-active="false">Why the untouched master matters</a></li>
+          <li><a class="editorial-toc-link" href="#transcription" data-level="2" data-active="false">Transcription</a></li>
+          <li><a class="editorial-toc-link" href="#indexing" data-level="2" data-active="false">Indexing</a></li>
+          <li><a class="editorial-toc-link" href="#what-is-deliberately-not-done" data-level="2" data-active="false">What is deliberately not done</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ---------- THE READING SHEET ---------- -->
+    <div class="editorial-sheet-column">
+      <div class="editorial-sheet">
+
+        <div class="settings-bar">
+          <div class="settings-anchor">
+            <button class="settings-trigger" type="button" id="settings-trigger" aria-expanded="false" aria-controls="settings-panel">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M3 6h11M18 6h3M3 12h4M11 12h10M3 18h11M18 18h3"/>
+                <circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="16" cy="18" r="2"/>
+              </svg>
+              <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Reading settings</span>
+            </button>
+
+            <div class="settings-panel" id="settings-panel" role="group" aria-label="Reading settings" hidden>
+              <div class="settings-row">
+                <p class="settings-label">Type size</p>
+                <div class="settings-options" data-setting="size">
+                  <button type="button" data-value="s" aria-pressed="false">Small</button>
+                  <button type="button" data-value="m" aria-pressed="true">Medium</button>
+                  <button type="button" data-value="l" aria-pressed="false">Large</button>
+                </div>
+              </div>
+              <div class="settings-row">
+                <p class="settings-label">Measure</p>
+                <div class="settings-options" data-setting="measure">
+                  <button type="button" data-value="normal" aria-pressed="true">Narrow</button>
+                  <button type="button" data-value="wide" aria-pressed="false">Wide</button>
+                </div>
+              </div>
+              <div class="settings-row">
+                <p class="settings-label">Alignment</p>
+                <div class="settings-options" data-setting="align">
+                  <button type="button" data-value="justify" aria-pressed="true">Justified</button>
+                  <button type="button" data-value="start" aria-pressed="false">Ragged</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------- ARTICLE ---------- -->
+        <article class="editorial-prose" id="editorial" data-size="m" data-measure="normal" data-align="justify">
+
+          <header class="editorial-masthead editorial-breakout">
+            <p class="editorial-masthead-meta">
+              851 words<span>|</span>Submission Archives<span>|</span><time datetime="2026-08-25">August 25, 2026</time>
+            </p>
+            <h1 class="editorial-title">How the archive is assembled</h1>
+            <p class="editorial-standfirst">Every recording, scan, and transcript in Submission Archives passes through the same four stages before it is published. This is what happens to a document between the shelf and the search index.</p>
+            <div class="editorial-masthead-rule"></div>
+          </header>
+
+          <figure class="editorial-figure editorial-breakout">
+            <button type="button" class="editorial-figure-frame" data-editorial-figure>
+              <svg id="fig-strata" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1140" role="img" aria-labelledby="strata-title strata-desc">
+  <title id="strata-title">The strata of one archived item</title>
+  <desc id="strata-desc">An exploded view of the six artefacts one item leaves behind: the source object, the preservation master captured from it, the reading copy derived from that master, the transcript set down from the reading copy with its method recorded, the segment index that binds each passage to a locator, and the search result a reader is finally shown. An evidence path runs back up the stack, because every result can be traced to the object it came from.</desc>
+
+  <defs>
+    <style>
+      #fig-strata .name  { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 25px; font-weight: 500; letter-spacing: 2.8px; fill: #4A443C; }
+      #fig-strata .note  { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; letter-spacing: 0.4px; fill: #8C8175; }
+      #fig-strata .tag   { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 500; letter-spacing: 2.4px; }
+      #fig-strata .stage { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 2.6px; fill: #A85324; }
+      #fig-strata .cap   { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 500; letter-spacing: 3px; fill: #8C8175; }
+      #fig-strata .lead  { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
+      #fig-strata .pin   { fill: #A85324; }
+      #fig-strata .face  { stroke: #A79B8B; stroke-width: 2; }
+      #fig-strata .side  { stroke: #A79B8B; stroke-width: 2; }
+      #fig-strata .brace { stroke: #C9A184; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1140" fill="#E5DDD0"/>
+
+  <!-- ══════════ 01 · SOURCE OBJECT ══════════ -->
+  <g>
+    <path class="side" d="M760 190 L600 270 L600 286 L760 206 Z" fill="#CFC2AC"/>
+    <path class="side" d="M360 150 L600 270 L600 286 L360 166 Z" fill="#DCD1BD"/>
+    <path class="face" d="M520 70 L760 190 L600 270 L360 150 Z" fill="#EFE9DE"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 70)">
+      <rect x="16" y="22" width="17" height="56" fill="#B3A897"/>
+      <rect x="35" y="18" width="14" height="60" fill="#C6B9A5"/>
+      <rect x="51" y="24" width="19" height="54" fill="#9A8F7E"/>
+      <rect x="72" y="20" width="13" height="58" fill="#C6B9A5"/>
+      <rect x="51" y="24" width="19" height="7" fill="#A85324"/>
+    </g>
+    <path class="lead" d="M700 224 H852"/>
+    <circle class="pin" cx="700" cy="224" r="4"/>
+  </g>
+
+  <!-- ══════════ 02 · PRESERVATION MASTER ══════════ -->
+  <g>
+    <path class="side" d="M760 340 L600 420 L600 436 L760 356 Z" fill="#CFC2AC"/>
+    <path class="side" d="M360 300 L600 420 L600 436 L360 316 Z" fill="#DCD1BD"/>
+    <path class="face" d="M520 220 L760 340 L600 420 L360 300 Z" fill="#E8DFCF"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 220)">
+      <rect x="16" y="16" width="68" height="68" fill="#DFD4C0"/>
+      <rect x="16" y="16" width="6" height="68" fill="#C4B6A0"/>
+      <g fill="#9A8F7E">
+        <rect x="28" y="26" width="46" height="4"/><rect x="28" y="36" width="40" height="4"/>
+        <rect x="28" y="46" width="48" height="4"/><rect x="28" y="56" width="26" height="4"/>
+        <rect x="28" y="66" width="44" height="4"/>
+      </g>
+      <ellipse cx="72" cy="24" rx="5" ry="4" fill="#B08A5E" opacity="0.5"/>
+      <ellipse cx="36" cy="74" rx="6" ry="4" fill="#B08A5E" opacity="0.45"/>
+    </g>
+    <path class="lead" d="M700 374 H852"/>
+    <circle class="pin" cx="700" cy="374" r="4"/>
+  </g>
+
+  <!-- ══════════ 03 · READING COPY ══════════ -->
+  <g>
+    <path class="side" d="M760 490 L600 570 L600 586 L760 506 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 450 L600 570 L600 586 L360 466 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 370 L760 490 L600 570 L360 450 Z" fill="#F7F3EB"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 370)">
+      <rect x="22" y="20" width="56" height="60" fill="#FBF8F3"/>
+      <g fill="#4A443C">
+        <rect x="30" y="30" width="40" height="4"/><rect x="30" y="40" width="34" height="4"/>
+        <rect x="30" y="50" width="42" height="4"/><rect x="30" y="60" width="22" height="4"/>
+        <rect x="30" y="70" width="38" height="4"/>
+      </g>
+    </g>
+    <path class="lead" d="M700 524 H852"/>
+    <circle class="pin" cx="700" cy="524" r="4"/>
+  </g>
+
+  <!-- ══════════ 04 · TRANSCRIPT ══════════ -->
+  <g>
+    <path class="side" d="M760 640 L600 720 L600 736 L760 656 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 600 L600 720 L600 736 L360 616 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 520 L760 640 L600 720 L360 600 Z" fill="#F7F3EB"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 520)">
+      <g fill="#4A443C">
+        <rect x="14" y="24" width="64" height="4"/><rect x="14" y="34" width="72" height="4"/>
+        <rect x="14" y="44" width="58" height="4"/><rect x="14" y="54" width="70" height="4"/>
+        <rect x="14" y="64" width="40" height="4"/>
+      </g>
+      <rect x="14" y="76" width="34" height="9" fill="#A85324"/>
+    </g>
+    <path class="lead" d="M700 674 H852"/>
+    <circle class="pin" cx="700" cy="674" r="4"/>
+  </g>
+
+  <!-- ══════════ 05 · SEGMENT INDEX ══════════ -->
+  <g>
+    <path class="side" d="M760 790 L600 870 L600 886 L760 806 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 750 L600 870 L600 886 L360 766 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 670 L760 790 L600 870 L360 750 Z" fill="#F2ECE1"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 670)">
+      <g>
+        <rect x="14" y="20" width="72" height="13" fill="#FBF8F3"/>
+        <rect x="18" y="24" width="40" height="5" fill="#B3A897"/>
+        <rect x="66" y="23" width="16" height="7" fill="#D6C9B4"/>
+
+        <rect x="14" y="38" width="72" height="13" fill="#FBF8F3"/>
+        <rect x="18" y="42" width="48" height="5" fill="#B3A897"/>
+        <rect x="66" y="41" width="16" height="7" fill="#D6C9B4"/>
+
+        <rect x="14" y="56" width="72" height="13" fill="#FFFFFF"/>
+        <rect x="18" y="60" width="44" height="5" fill="#4A443C"/>
+        <rect x="66" y="59" width="16" height="7" fill="#A85324"/>
+
+        <rect x="14" y="74" width="72" height="13" fill="#FBF8F3"/>
+        <rect x="18" y="78" width="34" height="5" fill="#B3A897"/>
+        <rect x="66" y="77" width="16" height="7" fill="#D6C9B4"/>
+      </g>
+    </g>
+    <path class="lead" d="M700 824 H852"/>
+    <circle class="pin" cx="700" cy="824" r="4"/>
+  </g>
+
+  <!-- ══════════ 06 · SEARCH RESULT ══════════ -->
+  <g>
+    <path class="side" d="M760 940 L600 1020 L600 1036 L760 956 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 900 L600 1020 L600 1036 L360 916 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 820 L760 940 L600 1020 L360 900 Z" fill="#FBF8F3"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 820)">
+      <rect x="14" y="30" width="72" height="34" fill="#FFFFFF"/>
+      <rect x="14" y="30" width="72" height="34" fill="#A85324" opacity="0.1"/>
+      <rect x="20" y="38" width="46" height="5" fill="#4A443C"/>
+      <rect x="20" y="48" width="58" height="5" fill="#A85324"/>
+      <rect x="20" y="56" width="30" height="4" fill="#B3A897"/>
+    </g>
+    <path class="lead" d="M700 974 H852"/>
+    <circle class="pin" cx="700" cy="974" r="4"/>
+  </g>
+
+  <!-- ══════════ THE EVIDENCE PATH ══════════ -->
+  <!-- Every result can be walked back up the stack to the object it came from.
+       Ticks meet each plate at its left corner. -->
+  <g>
+    <path d="M300 900 V136" stroke="#A85324" stroke-width="2.5" fill="none" stroke-dasharray="9 7"/>
+    <path d="M290 152 L300 128 L310 152" stroke="#A85324" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#A85324" stroke-width="2" opacity="0.75">
+      <path d="M300 150 H360"/><path d="M300 300 H360"/><path d="M300 450 H360"/>
+      <path d="M300 600 H360"/><path d="M300 750 H360"/><path d="M300 900 H360"/>
+    </g>
+    <text class="cap" x="300" y="962" fill="#A85324" text-anchor="middle">EVIDENCE PATH</text>
+  </g>
+
+  <!-- ══════════ PIPELINE STAGE BRACKETS ══════════ -->
+  <!-- Bracketed against the tick rows, which do not overlap the way the
+       projected plates do. -->
+  <g>
+    <path class="brace" d="M262 130 H244 V170 H262"/>
+    <text class="stage" x="228" y="157" text-anchor="end">01 ACQUIRE</text>
+
+    <path class="brace" d="M262 280 H244 V470 H262"/>
+    <text class="stage" x="228" y="382" text-anchor="end">02 DIGITISE</text>
+
+    <path class="brace" d="M262 580 H244 V620 H262"/>
+    <text class="stage" x="228" y="607" text-anchor="end">03 TRANSCRIBE</text>
+
+    <path class="brace" d="M262 730 H244 V920 H262"/>
+    <text class="stage" x="228" y="832" text-anchor="end">04 INDEX</text>
+  </g>
+
+  <!-- ══════════ LABELS ══════════ -->
+  <g>
+    <text class="name" x="868" y="216">SOURCE OBJECT</text>
+    <text class="note" x="868" y="248">The physical item, logged with its origin</text>
+    <rect x="868" y="266" width="66" height="24" fill="#C9A184" opacity="0.3"/>
+    <text class="tag" x="880" y="283" fill="#8A5B33">HELD</text>
+
+    <text class="name" x="868" y="366">PRESERVATION MASTER</text>
+    <text class="note" x="868" y="398">Captured once, never corrected</text>
+    <rect x="868" y="416" width="66" height="24" fill="#C9A184" opacity="0.3"/>
+    <text class="tag" x="880" y="433" fill="#8A5B33">HELD</text>
+
+    <text class="name" x="868" y="516">READING COPY</text>
+    <text class="note" x="868" y="548">Deskewed, cropped, contrast lifted</text>
+    <rect x="868" y="566" width="92" height="24" fill="#B3A897" opacity="0.28"/>
+    <text class="tag" x="880" y="583" fill="#6E6459">DERIVED</text>
+
+    <text class="name" x="868" y="666">TRANSCRIPT</text>
+    <text class="note" x="868" y="698">Method recorded and shown to the reader</text>
+    <rect x="868" y="716" width="92" height="24" fill="#B3A897" opacity="0.28"/>
+    <text class="tag" x="880" y="733" fill="#6E6459">DERIVED</text>
+
+    <text class="name" x="868" y="816">SEGMENT INDEX</text>
+    <text class="note" x="868" y="848">Each passage bound to a page or timestamp</text>
+    <rect x="868" y="866" width="92" height="24" fill="#B3A897" opacity="0.28"/>
+    <text class="tag" x="880" y="883" fill="#6E6459">DERIVED</text>
+
+    <text class="name" x="868" y="966">SEARCH RESULT</text>
+    <text class="note" x="868" y="998">What the reader is shown, and can verify</text>
+    <rect x="868" y="1016" width="92" height="24" fill="#C9A184" opacity="0.3"/>
+    <text class="tag" x="880" y="1033" fill="#8A5B33">SERVED</text>
+  </g>
+
+  <text class="cap" x="60" y="62">ONE ITEM, SIX RETAINED ARTEFACTS</text>
+</svg>
+            </button>
+            <figcaption class="editorial-caption">One item, six retained artefacts, and the path back from a result to the object it came from.</figcaption>
+          </figure>
+
+          <div class="editorial-lead">
+            <p>An archive is only as trustworthy as the account it can give of itself. A scanned page with no history is a picture of a page; the same scan with a recorded source, a capture date, and a stated transcription method is evidence. This editorial describes the four stages every item in Submission Archives passes through, and the rules that decide what is published and what is held back.</p>
+          </div>
+
+          <p>The material preserved here was produced between 1974 and 1990 by Masjid Tucson: books, monographs, newsletters, cassette recordings, and video. None of it was created with digital preservation in mind. Much of it survives in a single copy. The pipeline below exists to get that material into a durable, searchable form without quietly improving it along the way.</p>
+
+          <hr>
+
+          <h2 id="acquisition">Acquisition</h2>
+
+          <p>Nothing enters the archive without a recorded origin. Each item is logged with the physical or digital source it came from, the condition it arrived in, and the date it was received.</p>
+
+          <p>Two categories are kept strictly apart:</p>
+
+          <ul>
+            <li><strong>Primary sources.</strong> Original printings, original recordings, and first-generation copies.</li>
+            <li><strong>Derived copies.</strong> Later reprints, re-encodes, and transfers whose lineage runs through an intermediate.</li>
+          </ul>
+
+          <p>Where both exist, the primary source is what gets digitised. The derived copy is retained anyway, because a later reprint sometimes carries corrections, or introduces errors, that are themselves part of the record.<a class="editorial-ref" id="ref-1" href="#note-1" aria-label="Footnote 1">1</a></p>
+
+          <blockquote class="editorial-pullquote editorial-breakout">
+            If the origin of an item cannot be stated, the item is not published as evidence.
+            <cite class="editorial-pullquote-attribution">Provenance rule</cite>
+          </blockquote>
+
+          <h2 id="digitisation">Digitisation</h2>
+
+          <p>Capture settings are chosen to preserve the artefact rather than to flatter it. Pages are scanned at a resolution that holds the grain of the paper and the bleed of the ink, because both carry information about the printing and about the copy's history. Audio is transferred at the highest fidelity the source medium supports, with no noise reduction, no normalisation, and no equalisation applied to the preservation master.</p>
+
+          <div class="editorial-breakout">
+            <div class="editorial-figure-group">
+              <figure class="editorial-figure">
+                <button type="button" class="editorial-figure-frame" data-editorial-figure>
+                  <svg id="fig-master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="master-title master-desc">
+  <title id="master-title">Preservation master</title>
+  <desc id="master-desc">A page scan retained exactly as the original survives: the sheet sits skewed on the platen, its uneven paper edge, age spotting and binding-gutter shadow all left in place, and the ink is captured at its faded density.</desc>
+
+  <defs>
+    <style>
+      #fig-master .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #6E6459; }
+      #fig-master .val { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #A85324; }
+      #fig-master .plate { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 4px; fill: #8C8175; }
+      #fig-master .leader { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
+      #fig-master .pin { fill: #A85324; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="#E5DDD0"/>
+
+  <!-- Platen reference edge: the page is measurably off-square against it. -->
+  <path d="M150 128 H760" stroke="#A79B8B" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M232 128 A 84 84 0 0 1 236 108" stroke="#A85324" stroke-width="2" fill="none"/>
+  <text class="val" x="252" y="118">2.6°</text>
+
+  <!-- THE SHEET, left exactly as it sits: skewed, uneven edge, aged. -->
+  <g transform="rotate(-2.6 430 470)">
+    <!-- Uneven deckle edge down the right side. -->
+    <path d="M170 140 H690 L694 200 L688 262 L696 324 L690 386 L694 448 L687 510 L695 572 L689 634 L693 696 L690 758 V812 H170 Z"
+          fill="#E8DFCF" stroke="#C6B9A5" stroke-width="2"/>
+
+    <!-- Binding gutter: the shadow a bound spine throws across the page. -->
+    <rect x="170" y="140" width="26" height="672" fill="#C9BCA6" opacity="0.55"/>
+    <rect x="196" y="140" width="20" height="672" fill="#D3C7B3" opacity="0.45"/>
+    <rect x="216" y="140" width="16" height="672" fill="#DDD2C0" opacity="0.35"/>
+
+    <!-- Ink at its surviving density, not lifted. -->
+    <g fill="#9A8F7E">
+      <rect x="268" y="212" width="372" height="11"/>
+      <rect x="268" y="248" width="340" height="11"/>
+      <rect x="268" y="284" width="386" height="11"/>
+      <rect x="268" y="320" width="228" height="11"/>
+      <rect x="268" y="392" width="372" height="11"/>
+      <rect x="268" y="428" width="356" height="11"/>
+      <rect x="268" y="464" width="378" height="11"/>
+      <rect x="268" y="500" width="196" height="11"/>
+      <rect x="268" y="572" width="372" height="11"/>
+      <rect x="268" y="608" width="310" height="11"/>
+      <rect x="268" y="644" width="366" height="11"/>
+      <rect x="268" y="680" width="150" height="11"/>
+    </g>
+
+    <!-- Foxing and handling marks. -->
+    <g fill="#B08A5E" opacity="0.4">
+      <ellipse cx="602" cy="188" rx="17" ry="12"/>
+      <ellipse cx="628" cy="206" rx="9" ry="7"/>
+      <ellipse cx="318" cy="536" rx="13" ry="9"/>
+      <ellipse cx="560" cy="726" rx="21" ry="14"/>
+      <ellipse cx="590" cy="742" rx="10" ry="8"/>
+      <ellipse cx="252" cy="358" rx="8" ry="11"/>
+    </g>
+
+    <!-- A short tear at the foot of the fore-edge. -->
+    <path d="M690 758 L668 774 L690 786" fill="none" stroke="#C6B9A5" stroke-width="2"/>
+  </g>
+
+  <!-- CALLOUTS -->
+  <g>
+    <path class="leader" d="M700 196 H812"/>
+    <circle class="pin" cx="700" cy="196" r="4"/>
+    <text class="lbl" x="828" y="203">DECKLE EDGE KEPT</text>
+
+    <path class="leader" d="M622 214 L760 300 H812"/>
+    <circle class="pin" cx="622" cy="214" r="4"/>
+    <text class="lbl" x="828" y="307">FOXING NOT REMOVED</text>
+
+    <path class="leader" d="M212 452 L400 862"/>
+    <circle class="pin" cx="212" cy="452" r="4"/>
+    <text class="lbl" x="416" y="869">GUTTER SHADOW</text>
+
+    <path class="leader" d="M640 470 H812"/>
+    <circle class="pin" cx="640" cy="470" r="4"/>
+    <text class="lbl" x="828" y="477">INK AT SURVIVING</text>
+    <text class="lbl" x="828" y="507">DENSITY</text>
+  </g>
+
+  <text class="plate" x="60" y="862">PRESERVATION MASTER</text>
+</svg>
+                </button>
+              <figcaption class="editorial-caption">Preservation master</figcaption>
+              </figure>
+              <figure class="editorial-figure">
+                <button type="button" class="editorial-figure-frame" data-editorial-figure>
+                  <svg id="fig-reading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="reading-title reading-desc">
+  <title id="reading-title">Reading copy</title>
+  <desc id="reading-desc">The same page derived for reading: squared to the platen, cropped to the text block, and the ink lifted to a legible density. A ghosted outline marks the extent of the master it was derived from, which is kept unchanged alongside it.</desc>
+
+  <defs>
+    <style>
+      #fig-reading .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #6E6459; }
+      #fig-reading .val { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #A85324; }
+      #fig-reading .plate { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 4px; fill: #8C8175; }
+      #fig-reading .leader { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
+      #fig-reading .pin { fill: #A85324; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="#E5DDD0"/>
+
+  <!-- Now square to the platen: the angle has gone to zero. -->
+  <path d="M150 128 H760" stroke="#A79B8B" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text class="val" x="252" y="118">0.0°</text>
+
+  <!-- Ghost of the master this copy was derived from, kept to scale. -->
+  <g transform="rotate(-2.6 430 470)" opacity="0.34">
+    <path d="M170 140 H690 L694 200 L688 262 L696 324 L690 386 L694 448 L687 510 L695 572 L689 634 L693 696 L690 758 V812 H170 Z"
+          fill="none" stroke="#A79B8B" stroke-width="2" stroke-dasharray="7 6"/>
+  </g>
+
+  <!-- Crop marks: what the reading copy trims away. -->
+  <g stroke="#A85324" stroke-width="2" fill="none">
+    <path d="M244 190 V162 H272"/>
+    <path d="M660 190 V162 H632"/>
+    <path d="M244 748 V776 H272"/>
+    <path d="M660 748 V776 H632"/>
+  </g>
+
+  <!-- THE DERIVED SHEET: squared, cropped to the text block, ink lifted. -->
+  <rect x="252" y="170" width="400" height="598" fill="#FBF8F3" stroke="#CFC4B2" stroke-width="2"/>
+
+  <g fill="#4A443C">
+    <rect x="292" y="222" width="320" height="11"/>
+    <rect x="292" y="258" width="292" height="11"/>
+    <rect x="292" y="294" width="332" height="11"/>
+    <rect x="292" y="330" width="196" height="11"/>
+    <rect x="292" y="396" width="320" height="11"/>
+    <rect x="292" y="432" width="306" height="11"/>
+    <rect x="292" y="468" width="326" height="11"/>
+    <rect x="292" y="504" width="168" height="11"/>
+    <rect x="292" y="570" width="320" height="11"/>
+    <rect x="292" y="606" width="266" height="11"/>
+    <rect x="292" y="642" width="314" height="11"/>
+    <rect x="292" y="678" width="128" height="11"/>
+  </g>
+
+  <!-- Density scale: the same ink, read off two different copies. -->
+  <g transform="translate(828 560)">
+    <text class="lbl" x="0" y="0">DENSITY</text>
+    <rect x="0" y="22" width="52" height="26" fill="#9A8F7E" stroke="#C6B9A5" stroke-width="1.5"/>
+    <rect x="52" y="22" width="52" height="26" fill="#4A443C" stroke="#C6B9A5" stroke-width="1.5"/>
+    <text class="lbl" x="0" y="76" font-size="17" letter-spacing="1.6">MASTER</text>
+    <text class="lbl" x="112" y="76" font-size="17" letter-spacing="1.6">READING</text>
+  </g>
+
+  <!-- CALLOUTS -->
+  <g>
+    <path class="leader" d="M652 200 H812"/>
+    <circle class="pin" cx="652" cy="200" r="4"/>
+    <text class="lbl" x="828" y="207">CROPPED TO THE</text>
+    <text class="lbl" x="828" y="237">TEXT BLOCK</text>
+
+    <path class="leader" d="M612 300 H812"/>
+    <circle class="pin" cx="612" cy="300" r="4"/>
+    <text class="lbl" x="828" y="307">DESKEWED, SQUARE</text>
+    <text class="lbl" x="828" y="337">TO THE PLATEN</text>
+
+    <path class="leader" d="M624 468 H812"/>
+    <circle class="pin" cx="624" cy="468" r="4"/>
+    <text class="lbl" x="828" y="475">CONTRAST LIFTED</text>
+
+    <path class="leader" d="M196 372 L120 372 V846 H236"/>
+    <circle class="pin" cx="196" cy="372" r="4"/>
+    <text class="lbl" x="252" y="853">MASTER RETAINED, UNCHANGED</text>
+  </g>
+
+  <text class="plate" x="60" y="122">READING COPY</text>
+</svg>
+                </button>
+              <figcaption class="editorial-caption">Reading copy</figcaption>
+              </figure>
+            </div>
+            <p class="editorial-caption">Left: the preservation master retains the page as it survives. Right: the reading copy is deskewed and contrast-corrected for legibility only.</p>
+          </div>
+
+          <p>The preservation master is never the file served to a reader. A second, derived file, deskewed and cropped and contrast-corrected, is generated for reading, and the two are stored separately. Any correction applied to the reading copy is a transformation that can be described, repeated, and reversed by returning to the master.</p>
+
+          <h3 id="why-the-untouched-master-matters">Why the untouched master matters</h3>
+
+          <p>Restoration is interpretation. Deciding that a mark is dust rather than a printer's error, or that a hiss is tape noise rather than room tone, is a judgement, and judgements made during capture become invisible once the original is shelved again. Keeping an unmodified master means those judgements stay auditable instead of becoming the record.</p>
+
+          <h2 id="transcription">Transcription</h2>
+
+          <p>Transcription is where an archive is most likely to drift, so the method used on each item is recorded alongside it and shown to the reader. Three methods are in use:</p>
+
+          <ol>
+            <li><strong>Manual transcription.</strong> A person types from the source and a second person checks the result against it.</li>
+            <li><strong>Assisted transcription.</strong> Optical character recognition or speech recognition produces a draft, which is then corrected against the source.</li>
+            <li><strong>Unreviewed machine output.</strong> A machine draft that has not yet been checked.</li>
+          </ol>
+
+          <p>The third category is published, but always labelled. An unreviewed transcript is useful for finding a passage and unsuitable for quoting; conflating it with a checked transcript would make the whole corpus unciteable.</p>
+
+          <p>Original spelling, punctuation, and paragraphing are retained, including obvious typographical errors. Corrections are never made silently in the body text. Where a reading is genuinely uncertain, the uncertainty is marked rather than resolved by guesswork.</p>
+
+          <div class="editorial-verse">
+            <div class="editorial-verse-text">You shall not accept any information, unless you verify it for yourself. I have given you the hearing, the eyesight, and the brain, and you are responsible for using them.</div>
+            <a class="editorial-verse-reference" href="#">Quran 17:36</a>
+          </div>
+
+          <h2 id="indexing">Indexing</h2>
+
+          <p>The final stage makes the material findable. Transcripts are segmented by page for print and by timestamp for audio and video, and each segment is indexed against its position in the source. A search result therefore resolves to a specific page or a specific moment in a recording, not to a document as a whole.</p>
+
+          <p>This is the point of the preceding three stages. A search that returns "this idea appears somewhere in a 300-page book" asks the reader to take the archive's word for it. A search that returns a page number and the scan of that page does not.<a class="editorial-ref" id="ref-2" href="#note-2" aria-label="Footnote 2">2</a></p>
+
+          <figure class="editorial-figure editorial-breakout">
+            <button type="button" class="editorial-figure-frame" data-editorial-figure>
+              <svg id="fig-index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 780" role="img" aria-labelledby="index-title index-desc">
+  <title id="index-title">The indexing path</title>
+  <desc id="index-desc">A query resolves to a ranked list of segments; the chosen segment carries a locator, a page and paragraph for print or a timestamp for a recording; and that locator resolves to the scan or the moment in the recording that the result was drawn from.</desc>
+
+  <defs>
+    <style>
+      #fig-index .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 500; letter-spacing: 2.6px; fill: #8C8175; }
+      #fig-index .stage { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 3.4px; fill: #6E6459; }
+      #fig-index .mono { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 1.2px; fill: #4A443C; }
+      #fig-index .accent { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; letter-spacing: 1.6px; fill: #A85324; }
+      #fig-index .card { fill: #FBF8F3; stroke: #CFC4B2; stroke-width: 2; }
+      #fig-index .flow { stroke: #A79B8B; stroke-width: 2; fill: none; marker-end: url(#tip); }
+      #fig-index .flowA { stroke: #A85324; stroke-width: 2.5; fill: none; marker-end: url(#tipA); }
+    </style>
+    <marker id="tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#A79B8B"/>
+    </marker>
+    <marker id="tipA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#A85324"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="780" fill="#E5DDD0"/>
+
+  <!-- ===== 1. QUERY ===== -->
+  <g>
+    <rect class="card" x="56" y="322" width="286" height="80" rx="4"/>
+    <circle cx="96" cy="362" r="12" fill="none" stroke="#8C8175" stroke-width="2.5"/>
+    <path d="M105 371 L118 384" stroke="#8C8175" stroke-width="2.5" stroke-linecap="round"/>
+    <text class="mono" x="136" y="370">preservation master</text>
+    <rect x="318" y="346" width="2" height="32" fill="#A85324"/>
+  </g>
+  <text class="stage" x="56" y="452">QUERY</text>
+
+  <path class="flow" d="M352 362 H418"/>
+
+  <!-- ===== 2. RANKED SEGMENTS ===== -->
+  <g>
+    <!-- Rank 1 -->
+    <rect class="card" x="436" y="272" width="360" height="54" rx="3"/>
+    <rect x="460" y="294" width="196" height="9" fill="#B3A897"/>
+    <rect x="700" y="292" width="72" height="12" fill="#D6C9B4"/>
+    <rect x="700" y="292" width="66" height="12" fill="#B3A897"/>
+
+    <!-- Rank 2: the segment the reader opens -->
+    <rect x="436" y="336" width="360" height="54" rx="3" fill="#FBF8F3" stroke="#A85324" stroke-width="2.5"/>
+    <rect x="460" y="358" width="214" height="9" fill="#4A443C"/>
+    <rect x="700" y="356" width="72" height="12" fill="#E6D5C2"/>
+    <rect x="700" y="356" width="58" height="12" fill="#A85324"/>
+
+    <!-- Rank 3 -->
+    <rect class="card" x="436" y="400" width="360" height="54" rx="3"/>
+    <rect x="460" y="422" width="158" height="9" fill="#B3A897"/>
+    <rect x="700" y="420" width="72" height="12" fill="#D6C9B4"/>
+    <rect x="700" y="420" width="34" height="12" fill="#B3A897"/>
+  </g>
+  <text class="stage" x="436" y="512">RANKED SEGMENTS</text>
+  <text class="lbl" x="700" y="252" font-size="16" letter-spacing="2">RELEVANCE</text>
+
+  <!-- Branch: the same segment resolves by page or by timestamp. -->
+  <path class="flowA" d="M806 363 H846 Q866 363 866 343 V236 Q866 216 886 216 H926"/>
+  <path class="flowA" d="M806 363 H846 Q866 363 866 383 V490 Q866 510 886 510 H926"/>
+
+  <!-- ===== 3. SEGMENT LOCATOR ===== -->
+  <g>
+    <!-- Print -->
+    <rect class="card" x="944" y="168" width="268" height="96" rx="4"/>
+    <text class="lbl" x="968" y="204" font-size="16" letter-spacing="2.4">PRINT</text>
+    <text class="accent" x="968" y="240">PAGE 214 · ¶ 3</text>
+
+    <!-- Recording -->
+    <rect class="card" x="944" y="462" width="268" height="96" rx="4"/>
+    <text class="lbl" x="968" y="498" font-size="16" letter-spacing="2.4">AUDIO / VIDEO</text>
+    <text class="accent" x="968" y="534">00:14:32 — 00:14:51</text>
+  </g>
+  <text class="stage" x="944" y="622">SEGMENT</text>
+
+  <path class="flow" d="M1222 216 H1288"/>
+  <path class="flow" d="M1222 510 H1288"/>
+
+  <!-- ===== 4. EVIDENCE ===== -->
+  <g>
+    <!-- The scan itself, with the matched line struck in accent. -->
+    <rect class="card" x="1306" y="96" width="236" height="240" rx="3"/>
+    <g fill="#B3A897">
+      <rect x="1334" y="130" width="180" height="8"/>
+      <rect x="1334" y="156" width="160" height="8"/>
+      <rect x="1334" y="208" width="180" height="8"/>
+      <rect x="1334" y="234" width="140" height="8"/>
+      <rect x="1334" y="260" width="176" height="8"/>
+    </g>
+    <rect x="1326" y="174" width="196" height="22" fill="#A85324" opacity="0.16"/>
+    <rect x="1334" y="182" width="172" height="8" fill="#A85324"/>
+    <text class="lbl" x="1334" y="312" font-size="16" letter-spacing="2">P. 214</text>
+
+    <!-- The waveform, with the segment marked out. -->
+    <rect class="card" x="1306" y="428" width="236" height="164" rx="3"/>
+    <rect x="1380" y="440" width="64" height="140" fill="#A85324" opacity="0.14"/>
+    <g fill="#B3A897">
+      <rect x="1330" y="498" width="5" height="24"/><rect x="1341" y="486" width="5" height="48"/>
+      <rect x="1352" y="492" width="5" height="36"/><rect x="1363" y="478" width="5" height="64"/>
+      <rect x="1374" y="496" width="5" height="28"/>
+    </g>
+    <g fill="#A85324">
+      <rect x="1385" y="470" width="5" height="80"/><rect x="1396" y="452" width="5" height="116"/>
+      <rect x="1407" y="482" width="5" height="56"/><rect x="1418" y="462" width="5" height="96"/>
+      <rect x="1429" y="490" width="5" height="40"/>
+    </g>
+    <g fill="#B3A897">
+      <rect x="1445" y="484" width="5" height="52"/><rect x="1456" y="494" width="5" height="32"/>
+      <rect x="1467" y="474" width="5" height="72"/><rect x="1478" y="490" width="5" height="40"/>
+      <rect x="1489" y="500" width="5" height="20"/><rect x="1500" y="488" width="5" height="44"/>
+      <rect x="1511" y="496" width="5" height="28"/>
+    </g>
+    <text class="lbl" x="1334" y="572" font-size="16" letter-spacing="2">00:14:32</text>
+  </g>
+  <text class="stage" x="1306" y="668">EVIDENCE</text>
+</svg>
+            </button>
+            <figcaption class="editorial-caption">A query resolves to a segment, and a segment resolves to the evidence behind it.</figcaption>
+          </figure>
+
+          <h2 id="what-is-deliberately-not-done">What is deliberately not done</h2>
+
+          <p>Several things an archive could do are not done here, and it is worth saying which:</p>
+
+          <ul>
+            <li><strong>No reconstruction.</strong> Missing pages stay missing. Gaps are recorded as gaps.</li>
+            <li><strong>No dating by inference.</strong> If a document is undated, it is published as undated.</li>
+            <li><strong>No attribution by style.</strong> Authorship is recorded only where the source states it.</li>
+            <li><strong>No summarising in place of the source.</strong> Descriptions are labelled as descriptions.</li>
+          </ul>
+
+          <p>Each of these would make the archive tidier and less reliable. The record is uneven because the surviving material is uneven, and flattening that unevenness would hide it rather than fix it.</p>
+
+          <section class="editorial-notes" aria-labelledby="editorial-notes-title">
+            <h2 class="editorial-notes-title" id="editorial-notes-title">Notes</h2>
+            <div class="editorial-note" id="note-1">
+              <a class="editorial-note-index" href="#ref-1" aria-label="Back to reference 1">1</a>
+              <div>Where a later reprint differs materially from an earlier one, both editions are published rather than the archive choosing between them.</div>
+            </div>
+            <div class="editorial-note" id="note-2">
+              <a class="editorial-note-index" href="#ref-2" aria-label="Back to reference 2">2</a>
+              <div>Search coverage tracks transcription status: material held only as unreviewed machine output is searchable, and is marked as such in the results.</div>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </div>
+
+    <!-- ---------- PROVENANCE RAIL ---------- -->
+    <aside class="editorial-rail">
+      <div class="reading-progress" aria-hidden="true">
+        <span class="reading-progress-value" id="progress-value">0.00</span>
+        <span class="reading-progress-track"><span class="reading-progress-bar" id="progress-bar"></span></span>
+      </div>
+
+      <dl class="rail-meta">
+        <dt>Published</dt>
+        <dd>August 25, 2026</dd>
+        <dt>Reading time</dt>
+        <dd>4 min</dd>
+        <dt>Topics</dt>
+        <dd>Preservation, Methodology</dd>
+      </dl>
+    </aside>
+
+  </div>
+</main>
+
+<div class="editorial-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure" hidden>
+  <button type="button" class="editorial-lightbox-exit" id="lightbox-exit">Exit</button>
+  <figure class="editorial-lightbox-figure">
+    <div class="editorial-lightbox-plate" id="lightbox-plate"></div>
+    <figcaption class="editorial-lightbox-caption" id="lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<footer class="editorial-footer">
+  Dedicated to preserving and sharing the message of God alone.
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- Theme toggle ---------------------------------------------------- */
+  var root = document.documentElement;
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  });
+
+  /* ---- Reading settings ------------------------------------------------ */
+  var article = document.getElementById('editorial');
+  var trigger = document.getElementById('settings-trigger');
+  var panel = document.getElementById('settings-panel');
+
+  trigger.addEventListener('click', function () {
+    var open = panel.hidden;
+    panel.hidden = !open;
+    trigger.setAttribute('aria-expanded', String(open));
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape' || panel.hidden) return;
+    panel.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.focus();
+  });
+
+  document.addEventListener('pointerdown', function (event) {
+    if (panel.hidden) return;
+    if (panel.contains(event.target) || trigger.contains(event.target)) return;
+    panel.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.settings-options'), function (group) {
+    var setting = group.dataset.setting;
+    group.addEventListener('click', function (event) {
+      var button = event.target.closest('button[data-value]');
+      if (!button) return;
+      article.dataset[setting] = button.dataset.value;
+      Array.prototype.forEach.call(group.querySelectorAll('button'), function (other) {
+        other.setAttribute('aria-pressed', String(other === button));
+      });
+    });
+  });
+
+  /* ---- Enlarged figure view --------------------------------------------- */
+  var lightbox = document.getElementById('lightbox');
+  var lightboxPlate = document.getElementById('lightbox-plate');
+  var lightboxCaption = document.getElementById('lightbox-caption');
+  var lightboxExit = document.getElementById('lightbox-exit');
+  var frames = Array.prototype.slice.call(document.querySelectorAll('[data-editorial-figure]'));
+  var lastTrigger = null;
+
+  function openFigure(frame) {
+    var figure = frame.closest('figure, .editorial-breakout');
+    var caption = figure ? figure.querySelector('.editorial-caption') : null;
+    var svg = frame.querySelector('svg');
+
+    lightboxPlate.innerHTML = '';
+    if (svg) lightboxPlate.appendChild(svg.cloneNode(true));
+
+    /* The number comes from document order; figures are authored independently. */
+    var number = frames.indexOf(frame) + 1;
+    lightboxCaption.innerHTML = '';
+    var tag = document.createElement('em');
+    tag.textContent = 'fig. ' + number + ' — ';
+    lightboxCaption.appendChild(tag);
+    lightboxCaption.appendChild(document.createTextNode(caption ? caption.textContent.trim() : ''));
+
+    lastTrigger = frame;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightboxExit.focus();
+  }
+
+  function closeFigure() {
+    lightbox.hidden = true;
+    lightboxPlate.innerHTML = '';
+    document.body.style.overflow = '';
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  frames.forEach(function (frame) {
+    frame.addEventListener('click', function () { openFigure(frame); });
+  });
+
+  lightboxExit.addEventListener('click', closeFigure);
+  lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) closeFigure();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !lightbox.hidden) closeFigure();
+  });
+
+  /* ---- Sidebar section tracking ---------------------------------------- */
+  var ACTIVE_OFFSET = 120;
+  var links = Array.prototype.slice.call(document.querySelectorAll('.editorial-toc-link'));
+  var headings = links.map(function (link) {
+    return document.getElementById(link.getAttribute('href').slice(1));
+  });
+
+  function paintActive() {
+    var current = 0;
+    for (var i = 0; i < headings.length; i += 1) {
+      if (!headings[i]) continue;
+      if (headings[i].getBoundingClientRect().top > ACTIVE_OFFSET) break;
+      current = i;
+    }
+    links.forEach(function (link, i) {
+      link.dataset.active = String(i === current);
+    });
+  }
+
+  /* ---- Reading progress ------------------------------------------------- */
+  var progressValue = document.getElementById('progress-value');
+  var progressBar = document.getElementById('progress-bar');
+
+  function paintProgress() {
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    var ratio = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+    progressValue.textContent = ratio.toFixed(2);
+    progressBar.style.transform = 'scaleY(' + ratio + ')';
+  }
+
+  /* One rAF-batched pass per frame, so scrolling stays cheap. */
+  var frame = 0;
+  function onScroll() {
+    if (frame) return;
+    frame = window.requestAnimationFrame(function () {
+      frame = 0;
+      paintActive();
+      paintProgress();
+    });
+  }
+
+  paintActive();
+  paintProgress();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+})();
+</script>
+
+</body>
+</html>

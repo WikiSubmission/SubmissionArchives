@@ -31,6 +31,9 @@ const dmSans = DM_Sans({
 const newsreader = Newsreader({
     variable: '--font-newsreader',
     subsets: ['latin'],
+    // Editorial standfirsts are set in italic, so the true italic is loaded
+    // instead of relying on a synthesised slant.
+    style: ['normal', 'italic'],
     display: 'swap',
     preload: false,
 });

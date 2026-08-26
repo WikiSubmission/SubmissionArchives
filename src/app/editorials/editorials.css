@@ -1,0 +1,517 @@
+/* ============================================================
+   Archive Editorials reading surface.
+
+   A narrow justified measure inside a wider frame, so figures can
+   break the column without breaking the text block. Reading
+   preferences are data attributes on the <article>, so changing one
+   costs a single attribute write rather than a React re-render.
+   ============================================================ */
+
+.editorial-prose {
+    /* The measure body copy is set to; break-out elements opt past it. */
+    --editorial-measure: 36rem;
+    --editorial-body-size: 16.5px;
+    --editorial-body-leading: 1.78;
+    --editorial-align: justify;
+
+    color: var(--ed-fg-secondary);
+    font-family: var(--font-newsreader), Georgia, serif;
+    font-size: var(--editorial-body-size);
+    line-height: var(--editorial-body-leading);
+}
+
+.editorial-prose[data-measure='wide'] {
+    --editorial-measure: 44rem;
+}
+
+.editorial-prose[data-size='s'] {
+    --editorial-body-size: 15px;
+}
+
+.editorial-prose[data-size='l'] {
+    --editorial-body-size: 18.5px;
+    --editorial-body-leading: 1.72;
+}
+
+.editorial-prose[data-align='start'] {
+    --editorial-align: start;
+}
+
+/* Every direct child sits at the measure and is centred. Break-out
+   elements widen themselves below. */
+.editorial-prose > * {
+    max-width: var(--editorial-measure);
+    margin-inline: auto;
+}
+
+.editorial-prose > p {
+    margin-block: 1.15em;
+    text-align: var(--editorial-align);
+    /* Never break a word across lines; justification stretches the spaces
+       instead, as the reference reading surfaces do. */
+    hyphens: manual;
+    text-wrap: pretty;
+}
+
+.editorial-prose > p:first-child {
+    margin-block-start: 0;
+}
+
+/* The standfirst paragraph, set one step larger than the body. */
+.editorial-prose > .editorial-lead > p {
+    margin-block: 1.15em;
+    font-size: 1.08em;
+    color: var(--ed-fg);
+    text-align: var(--editorial-align);
+    hyphens: manual;
+    text-wrap: pretty;
+}
+
+.editorial-prose > h2,
+.editorial-prose > h3 {
+    font-family: var(--font-source-serif), Georgia, serif;
+    color: var(--ed-fg);
+    scroll-margin-top: 6rem;
+    text-wrap: balance;
+}
+
+.editorial-prose > h2 {
+    margin-block: 2.6em 0.9em;
+    font-size: 1.42em;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    line-height: 1.25;
+}
+
+.editorial-prose > h3 {
+    margin-block: 2em 0.7em;
+    font-size: 1.12em;
+    font-weight: 600;
+    letter-spacing: -0.006em;
+    line-height: 1.35;
+}
+
+.editorial-prose > ul,
+.editorial-prose > ol {
+    margin-block: 1.15em;
+    padding-inline-start: 1.35em;
+}
+
+.editorial-prose > ul {
+    list-style: none;
+}
+
+.editorial-prose > ul > li {
+    position: relative;
+}
+
+.editorial-prose > ul > li::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: -1.05em;
+    inset-block-start: 0.72em;
+    width: 4px;
+    height: 4px;
+    background: var(--ed-accent);
+    opacity: 0.7;
+}
+
+.editorial-prose > ol {
+    list-style: decimal;
+}
+
+.editorial-prose li {
+    margin-block: 0.4em;
+}
+
+.editorial-prose > ol > li::marker {
+    color: var(--ed-fg-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.editorial-prose strong {
+    color: var(--ed-fg);
+    font-weight: 600;
+}
+
+.editorial-prose > blockquote {
+    margin-block: 1.7em;
+    padding-inline-start: 1.15em;
+    border-inline-start: 2px solid var(--ed-rule-strong);
+    color: var(--ed-fg-muted);
+    font-style: italic;
+}
+
+.editorial-prose a {
+    color: var(--ed-accent);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--ed-accent) 45%, transparent);
+    text-underline-offset: 2px;
+    transition: color 150ms ease;
+}
+
+.editorial-prose a:hover {
+    color: var(--ed-accent-strong);
+    text-decoration-color: currentColor;
+}
+
+.editorial-prose code {
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 0.86em;
+    background: var(--ed-surface-strong);
+    border: 1px solid var(--ed-rule);
+    border-radius: 3px;
+    padding: 0.1em 0.34em;
+}
+
+/* A short centred rule, not a full-width divider. */
+.editorial-prose > hr {
+    max-width: 2.5rem;
+    margin-block: 2.6em;
+    border: 0;
+    border-top: 1px solid var(--ed-rule-strong);
+}
+
+/* The standfirst sits in a centred masthead but takes the body's measure and
+   alignment, so it lines up with the prose beneath it and the reading-settings
+   toggle governs both. */
+.editorial-standfirst {
+    max-width: var(--editorial-measure);
+    font-style: italic;
+    text-align: var(--editorial-align);
+    hyphens: manual;
+    text-wrap: pretty;
+}
+
+/* --- Break-out elements ------------------------------------- */
+
+.editorial-breakout {
+    max-width: min(100%, 44rem);
+    width: 100%;
+}
+
+.editorial-figure {
+    margin-block: 2.4em;
+}
+
+.editorial-figure-frame {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 1px solid transparent;
+    background: var(--ed-viewer-bg);
+    cursor: zoom-in;
+    transition: border-color 250ms ease;
+}
+
+.editorial-figure-frame:hover {
+    border-color: var(--ed-rule-strong);
+}
+
+.editorial-figure-frame:focus-visible {
+    outline: 2px solid var(--ed-accent);
+    outline-offset: 3px;
+}
+
+/* --- Enlarged view ------------------------------------------ */
+
+.editorial-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5rem 1.5rem 2.5rem;
+    /* The page stays legible behind the plate, but recedes. */
+    background: color-mix(in srgb, var(--ed-bg) 82%, transparent);
+    backdrop-filter: blur(7px);
+    cursor: zoom-out;
+    animation: editorial-lightbox-in 180ms ease-out;
+}
+
+@keyframes editorial-lightbox-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.editorial-lightbox-exit {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    min-height: 44px;
+    padding: 0 0.75rem;
+    border: 0;
+    background: transparent;
+    color: var(--ed-fg-muted);
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 150ms ease;
+}
+
+.editorial-lightbox-exit:hover {
+    color: var(--ed-accent);
+}
+
+.editorial-lightbox-figure {
+    margin: 0;
+    max-width: min(96rem, 100%);
+    cursor: default;
+}
+
+.editorial-lightbox-plate {
+    background: var(--ed-viewer-bg);
+    border: 1px solid var(--ed-rule);
+}
+
+.editorial-lightbox-plate img,
+.editorial-lightbox-plate svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100dvh - 12rem);
+    object-fit: contain;
+}
+
+/* The reference caption style: a figure number, then the description. */
+.editorial-lightbox-caption {
+    margin-block-start: 1.1em;
+    font-family: var(--font-newsreader), Georgia, serif;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--ed-fg-secondary);
+}
+
+.editorial-lightbox-caption em {
+    font-style: italic;
+    color: var(--ed-fg-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .editorial-lightbox { animation: none; }
+}
+
+.editorial-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.editorial-caption {
+    margin-block-start: 0.85em;
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--ed-fg-muted);
+    line-height: 1.6;
+}
+
+.editorial-figure-group {
+    display: grid;
+    gap: 0.75rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .editorial-figure-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* A lone figure spans the full width rather than sitting half-empty. */
+    .editorial-figure-group > .editorial-figure:only-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .editorial-figure-group {
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+    }
+
+    .editorial-figure-group::-webkit-scrollbar {
+        display: none;
+    }
+
+    .editorial-figure-group > .editorial-figure {
+        scroll-snap-align: start;
+        margin-block: 0;
+    }
+}
+
+.editorial-pullquote {
+    max-width: 44rem;
+    margin-block: 2.8em;
+    padding-block: 1.4em;
+    border-block: 1px solid var(--ed-rule);
+    font-family: var(--font-source-serif), Georgia, serif;
+    font-size: 1.32em;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    text-align: center;
+    text-wrap: balance;
+    color: var(--ed-fg);
+}
+
+.editorial-pullquote-attribution {
+    display: block;
+    margin-block-start: 0.9em;
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ed-fg-muted);
+}
+
+/* --- Scripture citations ------------------------------------ */
+
+.editorial-verse {
+    margin-block: 2em;
+    padding: 1.15em 1.35em;
+    border: 1px solid var(--ed-rule);
+    border-inline-start: 2px solid var(--ed-accent);
+    background: var(--ed-surface);
+    border-radius: 4px;
+}
+
+.editorial-verse-text {
+    font-family: var(--font-newsreader), Georgia, serif;
+    font-size: 1.02em;
+    line-height: 1.7;
+    color: var(--ed-fg);
+}
+
+.editorial-verse-reference {
+    display: inline-flex;
+    margin-block-start: 0.7em;
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ed-accent);
+    text-decoration: none;
+}
+
+.editorial-verse-reference:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* --- Footnotes ---------------------------------------------- */
+
+.editorial-ref {
+    font-family: var(--font-source-serif), Georgia, serif;
+    font-size: 0.62em;
+    vertical-align: super;
+    line-height: 0;
+    margin-inline-start: 0.12em;
+    text-decoration: none;
+    color: var(--ed-accent);
+}
+
+.editorial-notes {
+    max-width: var(--editorial-measure);
+    margin-block-start: 3.5em;
+    padding-block-start: 1.6em;
+    border-block-start: 1px solid var(--ed-rule);
+}
+
+.editorial-notes-title {
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ed-fg-muted);
+    margin-block-end: 1em;
+}
+
+.editorial-note {
+    display: grid;
+    grid-template-columns: 1.9rem 1fr;
+    gap: 0.5rem;
+    margin-block: 0.75em;
+    margin-inline: -0.35em;
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+    font-size: 0.86em;
+    line-height: 1.65;
+    color: var(--ed-fg-muted);
+    scroll-margin-top: 6rem;
+    transition: background-color 400ms ease;
+}
+
+.editorial-note-index {
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 10.5px;
+    color: var(--ed-accent);
+    padding-block-start: 0.35em;
+}
+
+/* Jumping to a note flashes it, so the reader lands on the right line. */
+.editorial-note:target {
+    background: var(--ed-accent-soft);
+}
+
+/* --- Sidebar table of contents ------------------------------- */
+
+.editorial-toc-link {
+    display: block;
+    position: relative;
+    padding: 0.34rem 0 0.34rem 0.85rem;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--ed-fg-muted);
+    text-decoration: none;
+    border-inline-start: 1px solid var(--ed-rule);
+    transition: color 150ms ease, border-color 150ms ease;
+}
+
+.editorial-toc-link:hover {
+    color: var(--ed-fg);
+    border-inline-start-color: var(--ed-rule-strong);
+}
+
+.editorial-toc-link[data-level='2'] {
+    font-family: var(--font-dm-sans), var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 10.5px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.editorial-toc-link[data-level='3'] {
+    font-family: var(--font-newsreader), Georgia, serif;
+    padding-inline-start: 1.6rem;
+}
+
+.editorial-toc-link[data-active='true'] {
+    color: var(--ed-accent);
+    border-inline-start-color: var(--ed-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .editorial-note,
+    .editorial-figure-frame,
+    .editorial-toc-link,
+    .editorial-prose a {
+        transition: none;
+    }
+}

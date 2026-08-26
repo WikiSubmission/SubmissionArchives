@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -34,6 +35,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  // Editorials are authored as MDX under src/content and imported by the
+  // [slug] route, so .mdx must be a recognised module extension.
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   // Don't advertise the framework via the X-Powered-By response header.
   poweredByHeader: false,
   turbopack: {
@@ -124,4 +128,13 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Turbopack cannot receive JavaScript functions, so plugins are named as
+// strings and resolved on the Rust side.
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-frontmatter", "remark-gfm"],
+    rehypePlugins: ["rehype-slug"],
+  },
+});
+
+export default withMDX(nextConfig);

@@ -7,6 +7,8 @@ import { getNewsletterIssues } from '@/lib/newsletterCatalog';
 import { getPublicAssetUrl } from '@/lib/mediaAssets';
 import SubmittersPerspectiveGrid from '@/components/written/SubmittersPerspectiveGrid';
 import BooksGrid from '@/components/written/BooksGrid';
+import EditorialsSection from '@/components/editorials/EditorialsSection';
+import { getEditorials } from '@/lib/editorials';
 import { getBookPreviews, type BookSummaryItem } from '@/lib/bookPreviews';
 
 export const revalidate = 86400;
@@ -41,6 +43,7 @@ export default function WrittenArchivePage() {
 
     const newsletterIssues = getNewsletterIssues();
     const bookPreviews = getBookPreviews();
+    const editorials = getEditorials();
     // Only the fields the modal renders cross to the client; the full records carry
     // transcript segments that would bloat the payload for no benefit.
     const bookSummaries: BookSummaryItem[] = books.map((book) => ({
@@ -166,6 +169,9 @@ export default function WrittenArchivePage() {
 
                         <SubmittersPerspectiveGrid issues={newsletterIssues} />
                     </section>
+
+                    {/* Section 3: Archive Editorials */}
+                    <EditorialsSection editorials={editorials} />
 
                     {/* Page Footer */}
                     <footer className="mt-16 border-t border-ed-rule py-9 text-center text-[12px] font-medium tracking-[0.04em] text-ed-fg-muted">

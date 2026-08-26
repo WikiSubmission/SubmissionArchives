@@ -1,0 +1,84 @@
+<svg id="fig-reading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="reading-title reading-desc">
+  <title id="reading-title">Reading copy</title>
+  <desc id="reading-desc">The same page derived for reading: squared to the platen, cropped to the text block, and the ink lifted to a legible density. A ghosted outline marks the extent of the master it was derived from, which is kept unchanged alongside it.</desc>
+
+  <defs>
+    <style>
+      #fig-reading .lbl { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #6E6459; }
+      #fig-reading .val { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: 2.4px; fill: #A85324; }
+      #fig-reading .plate { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 4px; fill: #8C8175; }
+      #fig-reading .leader { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
+      #fig-reading .pin { fill: #A85324; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="#E5DDD0"/>
+
+  <!-- Now square to the platen: the angle has gone to zero. -->
+  <path d="M150 128 H760" stroke="#A79B8B" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text class="val" x="252" y="118">0.0°</text>
+
+  <!-- Ghost of the master this copy was derived from, kept to scale. -->
+  <g transform="rotate(-2.6 430 470)" opacity="0.34">
+    <path d="M170 140 H690 L694 200 L688 262 L696 324 L690 386 L694 448 L687 510 L695 572 L689 634 L693 696 L690 758 V812 H170 Z"
+          fill="none" stroke="#A79B8B" stroke-width="2" stroke-dasharray="7 6"/>
+  </g>
+
+  <!-- Crop marks: what the reading copy trims away. -->
+  <g stroke="#A85324" stroke-width="2" fill="none">
+    <path d="M244 190 V162 H272"/>
+    <path d="M660 190 V162 H632"/>
+    <path d="M244 748 V776 H272"/>
+    <path d="M660 748 V776 H632"/>
+  </g>
+
+  <!-- THE DERIVED SHEET: squared, cropped to the text block, ink lifted. -->
+  <rect x="252" y="170" width="400" height="598" fill="#FBF8F3" stroke="#CFC4B2" stroke-width="2"/>
+
+  <g fill="#4A443C">
+    <rect x="292" y="222" width="320" height="11"/>
+    <rect x="292" y="258" width="292" height="11"/>
+    <rect x="292" y="294" width="332" height="11"/>
+    <rect x="292" y="330" width="196" height="11"/>
+    <rect x="292" y="396" width="320" height="11"/>
+    <rect x="292" y="432" width="306" height="11"/>
+    <rect x="292" y="468" width="326" height="11"/>
+    <rect x="292" y="504" width="168" height="11"/>
+    <rect x="292" y="570" width="320" height="11"/>
+    <rect x="292" y="606" width="266" height="11"/>
+    <rect x="292" y="642" width="314" height="11"/>
+    <rect x="292" y="678" width="128" height="11"/>
+  </g>
+
+  <!-- Density scale: the same ink, read off two different copies. -->
+  <g transform="translate(828 560)">
+    <text class="lbl" x="0" y="0">DENSITY</text>
+    <rect x="0" y="22" width="52" height="26" fill="#9A8F7E" stroke="#C6B9A5" stroke-width="1.5"/>
+    <rect x="52" y="22" width="52" height="26" fill="#4A443C" stroke="#C6B9A5" stroke-width="1.5"/>
+    <text class="lbl" x="0" y="76" font-size="17" letter-spacing="1.6">MASTER</text>
+    <text class="lbl" x="112" y="76" font-size="17" letter-spacing="1.6">READING</text>
+  </g>
+
+  <!-- CALLOUTS -->
+  <g>
+    <path class="leader" d="M652 200 H812"/>
+    <circle class="pin" cx="652" cy="200" r="4"/>
+    <text class="lbl" x="828" y="207">CROPPED TO THE</text>
+    <text class="lbl" x="828" y="237">TEXT BLOCK</text>
+
+    <path class="leader" d="M612 300 H812"/>
+    <circle class="pin" cx="612" cy="300" r="4"/>
+    <text class="lbl" x="828" y="307">DESKEWED, SQUARE</text>
+    <text class="lbl" x="828" y="337">TO THE PLATEN</text>
+
+    <path class="leader" d="M624 468 H812"/>
+    <circle class="pin" cx="624" cy="468" r="4"/>
+    <text class="lbl" x="828" y="475">CONTRAST LIFTED</text>
+
+    <path class="leader" d="M196 372 L120 372 V846 H236"/>
+    <circle class="pin" cx="196" cy="372" r="4"/>
+    <text class="lbl" x="252" y="853">MASTER RETAINED, UNCHANGED</text>
+  </g>
+
+  <text class="plate" x="60" y="122">READING COPY</text>
+</svg>

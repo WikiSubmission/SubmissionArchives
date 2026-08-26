@@ -1,0 +1,126 @@
+---
+title: How the archive is assembled
+subtitle: Every recording, scan, and transcript in Submission Archives passes through the same four stages before it is published. This is what happens to a document between the shelf and the search index.
+author: Submission Archives
+publishedAt: 2026-08-25
+summary: A walkthrough of the preservation pipeline behind Submission Archives (acquisition, digitisation, transcription, and indexing) and the provenance rules that decide what gets published.
+topics:
+  - Preservation
+  - Methodology
+hero:
+  src: /editorials/how-the-archive-is-assembled/hero.svg
+  alt: 'The four stages of the pipeline shown as numbered plates: acquisition, digitisation, transcription and indexing'
+  width: 1200
+  height: 900
+---
+
+<Figure
+  src="/editorials/how-the-archive-is-assembled/record-strata.svg"
+  alt="An exploded view of the six artefacts one archived item leaves behind, from the source object down to the search result, with an evidence path running back up the stack"
+  width={1400}
+  height={1140}
+  caption="One item, six retained artefacts, and the path back from a result to the object it came from."
+  priority
+/>
+
+<Lead>
+An archive is only as trustworthy as the account it can give of itself. A scanned page with no history is a picture of a page; the same scan with a recorded source, a capture date, and a stated transcription method is evidence. This editorial describes the four stages every item in Submission Archives passes through, and the rules that decide what is published and what is held back.
+</Lead>
+
+The material preserved here was produced between 1974 and 1990 by Masjid Tucson: books, monographs, newsletters, cassette recordings, and video. None of it was created with digital preservation in mind. Much of it survives in a single copy. The pipeline below exists to get that material into a durable, searchable form without quietly improving it along the way.
+
+---
+
+## Acquisition
+
+Nothing enters the archive without a recorded origin. Each item is logged with the physical or digital source it came from, the condition it arrived in, and the date it was received.
+
+Two categories are kept strictly apart:
+
+- **Primary sources.** Original printings, original recordings, and first-generation copies.
+- **Derived copies.** Later reprints, re-encodes, and transfers whose lineage runs through an intermediate.
+
+Where both exist, the primary source is what gets digitised. The derived copy is retained anyway, because a later reprint sometimes carries corrections, or introduces errors, that are themselves part of the record.<Ref id="1" />
+
+<PullQuote attribution="Provenance rule">
+If the origin of an item cannot be stated, the item is not published as evidence.
+</PullQuote>
+
+## Digitisation
+
+Capture settings are chosen to preserve the artefact rather than to flatter it. Pages are scanned at a resolution that holds the grain of the paper and the bleed of the ink, because both carry information about the printing and about the copy's history. Audio is transferred at the highest fidelity the source medium supports, with no noise reduction, no normalisation, and no equalisation applied to the preservation master.
+
+<FigureGroup caption="Left: the preservation master retains the page as it survives. Right: the reading copy is deskewed and contrast-corrected for legibility only.">
+  <Figure
+    src="/editorials/how-the-archive-is-assembled/capture-master.svg"
+    alt="The page as it survives: sitting 2.6 degrees off square, its uneven deckle edge, foxing and binding-gutter shadow all retained, the ink at its faded density"
+    width={1200}
+    height={900}
+    span="column"
+    caption="Preservation master"
+  />
+  <Figure
+    src="/editorials/how-the-archive-is-assembled/capture-reading.svg"
+    alt="The same page derived for reading: squared to the platen, cropped to the text block with crop marks shown, contrast lifted, and the master's extent ghosted behind it"
+    width={1200}
+    height={900}
+    span="column"
+    caption="Reading copy"
+  />
+</FigureGroup>
+
+The preservation master is never the file served to a reader. A second, derived file, deskewed and cropped and contrast-corrected, is generated for reading, and the two are stored separately. Any correction applied to the reading copy is a transformation that can be described, repeated, and reversed by returning to the master.
+
+### Why the untouched master matters
+
+Restoration is interpretation. Deciding that a mark is dust rather than a printer's error, or that a hiss is tape noise rather than room tone, is a judgement, and judgements made during capture become invisible once the original is shelved again. Keeping an unmodified master means those judgements stay auditable instead of becoming the record.
+
+## Transcription
+
+Transcription is where an archive is most likely to drift, so the method used on each item is recorded alongside it and shown to the reader. Three methods are in use:
+
+1. **Manual transcription.** A person types from the source and a second person checks the result against it.
+2. **Assisted transcription.** Optical character recognition or speech recognition produces a draft, which is then corrected against the source.
+3. **Unreviewed machine output.** A machine draft that has not yet been checked.
+
+The third category is published, but always labelled. An unreviewed transcript is useful for finding a passage and unsuitable for quoting; conflating it with a checked transcript would make the whole corpus unciteable.
+
+Original spelling, punctuation, and paragraphing are retained, including obvious typographical errors. Corrections are never made silently in the body text. Where a reading is genuinely uncertain, the uncertainty is marked rather than resolved by guesswork.
+
+<Verse chapter={17} verses="36">
+You shall not accept any information, unless you verify it for yourself. I have given you the hearing, the eyesight, and the brain, and you are responsible for using them.
+</Verse>
+
+## Indexing
+
+The final stage makes the material findable. Transcripts are segmented by page for print and by timestamp for audio and video, and each segment is indexed against its position in the source. A search result therefore resolves to a specific page or a specific moment in a recording, not to a document as a whole.
+
+This is the point of the preceding three stages. A search that returns "this idea appears somewhere in a 300-page book" asks the reader to take the archive's word for it. A search that returns a page number and the scan of that page does not.<Ref id="2" />
+
+<Figure
+  src="/editorials/how-the-archive-is-assembled/index-path.svg"
+  alt="A query resolving to a ranked list of segments; the chosen segment carries a page and paragraph for print or a timestamp for a recording, and each resolves to the scan or the moment it was drawn from"
+  width={1600}
+  height={780}
+  caption="A query resolves to a segment, and a segment resolves to the evidence behind it."
+/>
+
+## What is deliberately not done
+
+Several things an archive could do are not done here, and it is worth saying which:
+
+- **No reconstruction.** Missing pages stay missing. Gaps are recorded as gaps.
+- **No dating by inference.** If a document is undated, it is published as undated.
+- **No attribution by style.** Authorship is recorded only where the source states it.
+- **No summarising in place of the source.** Descriptions are labelled as descriptions.
+
+Each of these would make the archive tidier and less reliable. The record is uneven because the surviving material is uneven, and flattening that unevenness would hide it rather than fix it.
+
+<Notes>
+  <Note id="1">
+    Where a later reprint differs materially from an earlier one, both editions are published rather than the archive choosing between them.
+  </Note>
+  <Note id="2">
+    Search coverage tracks transcription status: material held only as unreviewed machine output is searchable, and is marked as such in the results.
+  </Note>
+</Notes>

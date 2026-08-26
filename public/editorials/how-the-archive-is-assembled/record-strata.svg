@@ -1,0 +1,200 @@
+<svg id="fig-strata" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1140" width="1400" height="1140" role="img" aria-labelledby="strata-title strata-desc">
+  <title id="strata-title">The strata of one archived item</title>
+  <desc id="strata-desc">An exploded view of the six artefacts one item leaves behind: the source object, the preservation master captured from it, the reading copy derived from that master, the transcript set down from the reading copy with its method recorded, the segment index that binds each passage to a locator, and the search result a reader is finally shown. An evidence path runs back up the stack, because every result can be traced to the object it came from.</desc>
+
+  <defs>
+    <style>
+      #fig-strata .name  { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 25px; font-weight: 500; letter-spacing: 2.8px; fill: #4A443C; }
+      #fig-strata .note  { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; letter-spacing: 0.4px; fill: #8C8175; }
+      #fig-strata .tag   { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 500; letter-spacing: 2.4px; }
+      #fig-strata .stage { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 2.6px; fill: #A85324; }
+      #fig-strata .cap   { font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 500; letter-spacing: 3px; fill: #8C8175; }
+      #fig-strata .lead  { stroke: #A79B8B; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
+      #fig-strata .pin   { fill: #A85324; }
+      #fig-strata .face  { stroke: #A79B8B; stroke-width: 2; }
+      #fig-strata .side  { stroke: #A79B8B; stroke-width: 2; }
+      #fig-strata .brace { stroke: #C9A184; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1140" fill="#E5DDD0"/>
+
+  <!-- ══════════ 01 · SOURCE OBJECT ══════════ -->
+  <g>
+    <path class="side" d="M760 190 L600 270 L600 286 L760 206 Z" fill="#CFC2AC"/>
+    <path class="side" d="M360 150 L600 270 L600 286 L360 166 Z" fill="#DCD1BD"/>
+    <path class="face" d="M520 70 L760 190 L600 270 L360 150 Z" fill="#EFE9DE"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 70)">
+      <rect x="16" y="22" width="17" height="56" fill="#B3A897"/>
+      <rect x="35" y="18" width="14" height="60" fill="#C6B9A5"/>
+      <rect x="51" y="24" width="19" height="54" fill="#9A8F7E"/>
+      <rect x="72" y="20" width="13" height="58" fill="#C6B9A5"/>
+      <rect x="51" y="24" width="19" height="7" fill="#A85324"/>
+    </g>
+    <path class="lead" d="M700 224 H852"/>
+    <circle class="pin" cx="700" cy="224" r="4"/>
+  </g>
+
+  <!-- ══════════ 02 · PRESERVATION MASTER ══════════ -->
+  <g>
+    <path class="side" d="M760 340 L600 420 L600 436 L760 356 Z" fill="#CFC2AC"/>
+    <path class="side" d="M360 300 L600 420 L600 436 L360 316 Z" fill="#DCD1BD"/>
+    <path class="face" d="M520 220 L760 340 L600 420 L360 300 Z" fill="#E8DFCF"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 220)">
+      <rect x="16" y="16" width="68" height="68" fill="#DFD4C0"/>
+      <rect x="16" y="16" width="6" height="68" fill="#C4B6A0"/>
+      <g fill="#9A8F7E">
+        <rect x="28" y="26" width="46" height="4"/><rect x="28" y="36" width="40" height="4"/>
+        <rect x="28" y="46" width="48" height="4"/><rect x="28" y="56" width="26" height="4"/>
+        <rect x="28" y="66" width="44" height="4"/>
+      </g>
+      <ellipse cx="72" cy="24" rx="5" ry="4" fill="#B08A5E" opacity="0.5"/>
+      <ellipse cx="36" cy="74" rx="6" ry="4" fill="#B08A5E" opacity="0.45"/>
+    </g>
+    <path class="lead" d="M700 374 H852"/>
+    <circle class="pin" cx="700" cy="374" r="4"/>
+  </g>
+
+  <!-- ══════════ 03 · READING COPY ══════════ -->
+  <g>
+    <path class="side" d="M760 490 L600 570 L600 586 L760 506 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 450 L600 570 L600 586 L360 466 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 370 L760 490 L600 570 L360 450 Z" fill="#F7F3EB"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 370)">
+      <rect x="22" y="20" width="56" height="60" fill="#FBF8F3"/>
+      <g fill="#4A443C">
+        <rect x="30" y="30" width="40" height="4"/><rect x="30" y="40" width="34" height="4"/>
+        <rect x="30" y="50" width="42" height="4"/><rect x="30" y="60" width="22" height="4"/>
+        <rect x="30" y="70" width="38" height="4"/>
+      </g>
+    </g>
+    <path class="lead" d="M700 524 H852"/>
+    <circle class="pin" cx="700" cy="524" r="4"/>
+  </g>
+
+  <!-- ══════════ 04 · TRANSCRIPT ══════════ -->
+  <g>
+    <path class="side" d="M760 640 L600 720 L600 736 L760 656 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 600 L600 720 L600 736 L360 616 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 520 L760 640 L600 720 L360 600 Z" fill="#F7F3EB"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 520)">
+      <g fill="#4A443C">
+        <rect x="14" y="24" width="64" height="4"/><rect x="14" y="34" width="72" height="4"/>
+        <rect x="14" y="44" width="58" height="4"/><rect x="14" y="54" width="70" height="4"/>
+        <rect x="14" y="64" width="40" height="4"/>
+      </g>
+      <rect x="14" y="76" width="34" height="9" fill="#A85324"/>
+    </g>
+    <path class="lead" d="M700 674 H852"/>
+    <circle class="pin" cx="700" cy="674" r="4"/>
+  </g>
+
+  <!-- ══════════ 05 · SEGMENT INDEX ══════════ -->
+  <g>
+    <path class="side" d="M760 790 L600 870 L600 886 L760 806 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 750 L600 870 L600 886 L360 766 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 670 L760 790 L600 870 L360 750 Z" fill="#F2ECE1"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 670)">
+      <g>
+        <rect x="14" y="20" width="72" height="13" fill="#FBF8F3"/>
+        <rect x="18" y="24" width="40" height="5" fill="#B3A897"/>
+        <rect x="66" y="23" width="16" height="7" fill="#D6C9B4"/>
+
+        <rect x="14" y="38" width="72" height="13" fill="#FBF8F3"/>
+        <rect x="18" y="42" width="48" height="5" fill="#B3A897"/>
+        <rect x="66" y="41" width="16" height="7" fill="#D6C9B4"/>
+
+        <rect x="14" y="56" width="72" height="13" fill="#FFFFFF"/>
+        <rect x="18" y="60" width="44" height="5" fill="#4A443C"/>
+        <rect x="66" y="59" width="16" height="7" fill="#A85324"/>
+
+        <rect x="14" y="74" width="72" height="13" fill="#FBF8F3"/>
+        <rect x="18" y="78" width="34" height="5" fill="#B3A897"/>
+        <rect x="66" y="77" width="16" height="7" fill="#D6C9B4"/>
+      </g>
+    </g>
+    <path class="lead" d="M700 824 H852"/>
+    <circle class="pin" cx="700" cy="824" r="4"/>
+  </g>
+
+  <!-- ══════════ 06 · SEARCH RESULT ══════════ -->
+  <g>
+    <path class="side" d="M760 940 L600 1020 L600 1036 L760 956 Z" fill="#D8CBB6"/>
+    <path class="side" d="M360 900 L600 1020 L600 1036 L360 916 Z" fill="#E6DBC8"/>
+    <path class="face" d="M520 820 L760 940 L600 1020 L360 900 Z" fill="#FBF8F3"/>
+    <g transform="matrix(2.4 1.2 -1.6 0.8 520 820)">
+      <rect x="14" y="30" width="72" height="34" fill="#FFFFFF"/>
+      <rect x="14" y="30" width="72" height="34" fill="#A85324" opacity="0.1"/>
+      <rect x="20" y="38" width="46" height="5" fill="#4A443C"/>
+      <rect x="20" y="48" width="58" height="5" fill="#A85324"/>
+      <rect x="20" y="56" width="30" height="4" fill="#B3A897"/>
+    </g>
+    <path class="lead" d="M700 974 H852"/>
+    <circle class="pin" cx="700" cy="974" r="4"/>
+  </g>
+
+  <!-- ══════════ THE EVIDENCE PATH ══════════ -->
+  <!-- Every result can be walked back up the stack to the object it came from.
+       Ticks meet each plate at its left corner. -->
+  <g>
+    <path d="M300 900 V136" stroke="#A85324" stroke-width="2.5" fill="none" stroke-dasharray="9 7"/>
+    <path d="M290 152 L300 128 L310 152" stroke="#A85324" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#A85324" stroke-width="2" opacity="0.75">
+      <path d="M300 150 H360"/><path d="M300 300 H360"/><path d="M300 450 H360"/>
+      <path d="M300 600 H360"/><path d="M300 750 H360"/><path d="M300 900 H360"/>
+    </g>
+    <text class="cap" x="300" y="962" fill="#A85324" text-anchor="middle">EVIDENCE PATH</text>
+  </g>
+
+  <!-- ══════════ PIPELINE STAGE BRACKETS ══════════ -->
+  <!-- Bracketed against the tick rows, which do not overlap the way the
+       projected plates do. -->
+  <g>
+    <path class="brace" d="M262 130 H244 V170 H262"/>
+    <text class="stage" x="228" y="157" text-anchor="end">01 ACQUIRE</text>
+
+    <path class="brace" d="M262 280 H244 V470 H262"/>
+    <text class="stage" x="228" y="382" text-anchor="end">02 DIGITISE</text>
+
+    <path class="brace" d="M262 580 H244 V620 H262"/>
+    <text class="stage" x="228" y="607" text-anchor="end">03 TRANSCRIBE</text>
+
+    <path class="brace" d="M262 730 H244 V920 H262"/>
+    <text class="stage" x="228" y="832" text-anchor="end">04 INDEX</text>
+  </g>
+
+  <!-- ══════════ LABELS ══════════ -->
+  <g>
+    <text class="name" x="868" y="216">SOURCE OBJECT</text>
+    <text class="note" x="868" y="248">The physical item, logged with its origin</text>
+    <rect x="868" y="266" width="66" height="24" fill="#C9A184" opacity="0.3"/>
+    <text class="tag" x="880" y="283" fill="#8A5B33">HELD</text>
+
+    <text class="name" x="868" y="366">PRESERVATION MASTER</text>
+    <text class="note" x="868" y="398">Captured once, never corrected</text>
+    <rect x="868" y="416" width="66" height="24" fill="#C9A184" opacity="0.3"/>
+    <text class="tag" x="880" y="433" fill="#8A5B33">HELD</text>
+
+    <text class="name" x="868" y="516">READING COPY</text>
+    <text class="note" x="868" y="548">Deskewed, cropped, contrast lifted</text>
+    <rect x="868" y="566" width="92" height="24" fill="#B3A897" opacity="0.28"/>
+    <text class="tag" x="880" y="583" fill="#6E6459">DERIVED</text>
+
+    <text class="name" x="868" y="666">TRANSCRIPT</text>
+    <text class="note" x="868" y="698">Method recorded and shown to the reader</text>
+    <rect x="868" y="716" width="92" height="24" fill="#B3A897" opacity="0.28"/>
+    <text class="tag" x="880" y="733" fill="#6E6459">DERIVED</text>
+
+    <text class="name" x="868" y="816">SEGMENT INDEX</text>
+    <text class="note" x="868" y="848">Each passage bound to a page or timestamp</text>
+    <rect x="868" y="866" width="92" height="24" fill="#B3A897" opacity="0.28"/>
+    <text class="tag" x="880" y="883" fill="#6E6459">DERIVED</text>
+
+    <text class="name" x="868" y="966">SEARCH RESULT</text>
+    <text class="note" x="868" y="998">What the reader is shown, and can verify</text>
+    <rect x="868" y="1016" width="92" height="24" fill="#C9A184" opacity="0.3"/>
+    <text class="tag" x="880" y="1033" fill="#8A5B33">SERVED</text>
+  </g>
+
+  <text class="cap" x="60" y="62">ONE ITEM, SIX RETAINED ARTEFACTS</text>
+</svg>

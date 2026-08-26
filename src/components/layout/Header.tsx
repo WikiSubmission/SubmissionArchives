@@ -22,7 +22,11 @@ function isNavActive(itemHref: string, pathname: string): boolean {
         return pathname.startsWith('/scripture') || pathname.startsWith('/quran');
     }
     if (itemHref === '/written') {
-        return pathname.startsWith('/written') || pathname.startsWith('/library');
+        return (
+            pathname.startsWith('/written') ||
+            pathname.startsWith('/library') ||
+            pathname.startsWith('/editorials')
+        );
     }
     if (itemHref === '/videos') {
         return pathname.startsWith('/videos');

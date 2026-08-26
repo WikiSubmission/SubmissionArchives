@@ -36,6 +36,7 @@ export const FOOTER_NAV = [
         links: [
             { name: 'Submitters Perspective', href: '/written' },
             { name: 'Books & Publications', href: '/written#books' },
+            { name: 'Archive Editorials', href: '/editorials' },
             { name: 'Historical Editions', href: '/scripture/quran/appendices' },
             { name: 'Global Deep Search', href: '/search' },
         ],
