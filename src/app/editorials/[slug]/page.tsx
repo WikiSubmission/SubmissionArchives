@@ -65,7 +65,7 @@ export default async function EditorialPage({ params }: EditorialPageProps) {
                     <aside className="mb-8 lg:sticky lg:top-[84px] lg:mb-0 lg:max-h-[calc(100dvh-108px)] lg:self-start lg:overflow-y-auto lg:pb-6">
                         <Link
                             href="/editorials"
-                            className="mb-5 inline-flex items-center gap-1.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint transition-colors hover:text-ed-accent"
+                            className="mb-5 inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] uppercase tracking-[0.1em] text-ed-fg-faint transition-colors hover:text-ed-accent"
                         >
                             <ChevronLeft className="h-3.5 w-3.5" aria-hidden="true" />
                             Archive Editorials
@@ -75,8 +75,13 @@ export default async function EditorialPage({ params }: EditorialPageProps) {
 
                     {/* The reading sheet */}
                     <div className="min-w-0">
-                        <div className="mx-auto max-w-[64rem] rounded-[6px] border border-ed-rule bg-ed-surface-raised px-4 py-7 sm:px-10 sm:py-12 shadow-sm">
-                            <EditorialReader header={<EditorialHeader editorial={editorial} />}>
+                        <div className="mx-auto max-w-[64rem] px-2 sm:px-6">
+                            <EditorialReader
+                                header={<EditorialHeader editorial={editorial} />}
+                                title={editorial.title}
+                                prevSlug={neighbours.previous?.slug}
+                                nextSlug={neighbours.next?.slug}
+                            >
                                 <EditorialBody />
                             </EditorialReader>
                         </div>

@@ -35,18 +35,18 @@ export default function EditorialsIndexPage() {
                 {/* Hero Header */}
                 <header className="mb-10 flex flex-wrap items-end justify-between gap-8 border-b border-ed-rule pb-8">
                     <div className="max-w-[640px]">
-                        <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/15 bg-ed-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ed-accent">
+                        <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/20 bg-ed-accent-soft px-2.5 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-ed-accent" style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}>
                             Archive Research Editorials
                         </div>
                         <h1
-                            className="mb-3 text-[clamp(28px,3.8vw,38px)] font-semibold leading-[1.15] tracking-[-0.02em] text-ed-fg"
-                            style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
+                            className="mb-3 text-[clamp(2.5rem,4vw,3.5rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-ed-fg"
+                            style={{ fontFamily: 'var(--font-editorial-serif, var(--font-new-york, Georgia, serif))' }}
                         >
                             Archive Editorials
                         </h1>
                         <p
-                            className="text-[16px] leading-[1.62] text-ed-fg-secondary"
-                            style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                            className="text-[clamp(1.0625rem,1.2vw,1.1875rem)] leading-[1.6] text-ed-fg-secondary"
+                            style={{ fontFamily: 'var(--font-editorial-sans, var(--font-inter, sans-serif))' }}
                         >
                             Long-form research notes, preservation methodologies, and technical accounts of how the historical
                             record is acquired, digitized, transcribed, and indexed.
@@ -55,26 +55,26 @@ export default function EditorialsIndexPage() {
 
                     <div className="flex flex-shrink-0 gap-6 rounded-[8px] border border-ed-rule bg-ed-surface px-6 py-3.5 shadow-sm">
                         <div className="flex flex-col">
-                            <span className="text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
+                            <span className="font-mono text-[22px] font-medium leading-[1.1] text-ed-fg" style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}>
                                 {editorials.length}
                             </span>
-                            <span className="mt-0.5 font-sans text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
+                            <span className="mt-0.5 font-sans text-[10.5px] font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
                                 Published
                             </span>
                         </div>
                         <div className="flex flex-col border-l border-ed-rule pl-6">
-                            <span className="text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
+                            <span className="font-mono text-[22px] font-medium leading-[1.1] text-ed-fg" style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}>
                                 4 Stages
                             </span>
-                            <span className="mt-0.5 font-sans text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
+                            <span className="mt-0.5 font-sans text-[10.5px] font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
                                 Pipeline
                             </span>
                         </div>
                         <div className="flex flex-col border-l border-ed-rule pl-6">
-                            <span className="text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-ed-fg">
+                            <span className="font-mono text-[22px] font-medium leading-[1.1] text-ed-fg" style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}>
                                 100%
                             </span>
-                            <span className="mt-0.5 font-sans text-[10px] font-semibold uppercase tracking-[0.12em] text-ed-fg-muted">
+                            <span className="mt-0.5 font-sans text-[10.5px] font-semibold uppercase tracking-[0.1em] text-ed-fg-muted">
                                 Audited
                             </span>
                         </div>
@@ -84,13 +84,16 @@ export default function EditorialsIndexPage() {
                 {/* Section Header */}
                 <div className="mb-6 flex items-center gap-4 border-b border-ed-rule pb-3">
                     <h2
-                        className="whitespace-nowrap text-[18px] font-semibold tracking-[-0.01em] text-ed-fg"
-                        style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
+                        className="whitespace-nowrap text-[clamp(1.25rem,1.8vw,1.5rem)] font-semibold tracking-[-0.015em] text-ed-fg"
+                        style={{ fontFamily: 'var(--font-editorial-serif, var(--font-new-york, Georgia, serif))' }}
                     >
                         Published Editorials &amp; Monographs
                     </h2>
                     <div className="h-px flex-1 bg-ed-rule" />
-                    <span className="whitespace-nowrap font-sans text-[11px] font-medium uppercase tracking-[0.08em] text-ed-fg-muted">
+                    <span
+                        className="whitespace-nowrap font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-ed-fg-muted"
+                        style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}
+                    >
                         {editorials.length} Article{editorials.length === 1 ? '' : 's'}
                     </span>
                 </div>

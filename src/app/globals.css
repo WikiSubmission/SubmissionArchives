@@ -176,6 +176,11 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
   --font-source-serif: 'Source Serif 4', Georgia, serif;
   --font-newsreader: 'Newsreader', Georgia, serif;
+  --font-new-york: var(--font-new-york, 'New York'), -apple-system-ui-serif, ui-serif, Charter, 'Source Serif 4', Georgia, serif;
+  --font-departure-mono: var(--font-departure-mono, 'Departure Mono'), ui-monospace, monospace;
+  --font-editorial-serif: var(--font-new-york, 'New York'), -apple-system-ui-serif, ui-serif, Charter, 'Source Serif 4', Georgia, serif;
+  --font-editorial-sans: var(--font-inter, 'Inter'), system-ui, -apple-system, sans-serif;
+  --font-editorial-mono: var(--font-departure-mono, 'Departure Mono'), ui-monospace, monospace;
 }
 
 @theme {
@@ -214,18 +219,50 @@
   --font-serif: var(--font-source-serif-4, 'Source Serif 4'), Georgia, serif;
   --font-source-serif: var(--font-source-serif-4, 'Source Serif 4'), Georgia, serif;
   --font-newsreader: var(--font-newsreader, 'Newsreader'), Georgia, serif;
-  --font-display: var(--font-source-serif-4, 'Source Serif 4'), Georgia, serif;
+  --font-new-york: var(--font-new-york, 'New York'), -apple-system-ui-serif, ui-serif, Charter, 'Source Serif 4', Georgia, serif;
+  --font-departure: var(--font-departure-mono, 'Departure Mono'), ui-monospace, monospace;
+  --font-editorial-serif: var(--font-new-york, 'New York'), -apple-system-ui-serif, ui-serif, Charter, 'Source Serif 4', Georgia, serif;
+  --font-editorial-sans: var(--font-inter, 'Inter'), system-ui, -apple-system, sans-serif;
+  --font-editorial-mono: var(--font-departure-mono, 'Departure Mono'), ui-monospace, monospace;
+  --font-display: var(--font-new-york, 'New York'), var(--font-source-serif-4, 'Source Serif 4'), Georgia, serif;
   --font-arabic: var(--font-amiri, 'Amiri');
   --font-hebrew: var(--font-hebrew, 'Frank Ruhl Libre'), serif;
-  --font-body: var(--font-dm-sans, 'DM Sans'), var(--font-inter, 'Inter'), sans-serif;
-  --font-ui: var(--font-dm-sans, 'DM Sans'), var(--font-inter, 'Inter'), sans-serif;
+  --font-body: var(--font-inter, 'Inter'), var(--font-dm-sans, 'DM Sans'), sans-serif;
+  --font-ui: var(--font-inter, 'Inter'), var(--font-dm-sans, 'DM Sans'), sans-serif;
   --font-slab: var(--font-source-serif-4, 'Source Serif 4'), Georgia, serif;
   --ease-spring-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* Editorial type scale — fluid clamp() so mobile/desktop sizes from the
-     design spec both land exactly at their viewport bounds without a
-     separate breakpoint table. Pair with font-serif/font-sans per tier. */
+  /* Editorial type scale — Making Software hierarchy */
+  --text-ed-h1: clamp(2.625rem, 5vw, 4rem);
+  --text-ed-h1--line-height: 1.05;
+  --text-ed-h1--letter-spacing: -0.025em;
+
+  --text-ed-h2: clamp(1.875rem, 3.2vw, 2.5rem);
+  --text-ed-h2--line-height: 1.1;
+  --text-ed-h2--letter-spacing: -0.02em;
+
+  --text-ed-h3: clamp(1.4375rem, 2vw, 1.75rem);
+  --text-ed-h3--line-height: 1.2;
+  --text-ed-h3--letter-spacing: -0.015em;
+
+  --text-ed-lead: clamp(1.125rem, 1.4vw, 1.3125rem);
+  --text-ed-lead--line-height: 1.55;
+  --text-ed-lead--letter-spacing: -0.01em;
+
+  --text-ed-body: clamp(1.0625rem, 1.1vw, 1.125rem);
+  --text-ed-body--line-height: 1.7;
+  --text-ed-body--letter-spacing: normal;
+
+  --text-ed-meta: clamp(0.8125rem, 0.9vw, 0.875rem);
+  --text-ed-meta--line-height: 1.35;
+  --text-ed-meta--letter-spacing: normal;
+
+  --text-ed-mono: clamp(0.75rem, 0.8vw, 0.84rem);
+  --text-ed-mono--line-height: 1.4;
+  --text-ed-mono--letter-spacing: 0.02em;
+
+  /* Legacy general scale */
   --text-display: clamp(3rem, 2rem + 5vw, 6rem);
   --text-display--line-height: 0.9;
   --text-display--letter-spacing: -0.02em;

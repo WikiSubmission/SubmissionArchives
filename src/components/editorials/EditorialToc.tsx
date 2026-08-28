@@ -12,9 +12,8 @@ interface EditorialTocProps {
 const ACTIVE_OFFSET_PX = 120;
 
 /**
- * The in-article table of contents. It tracks the section the reader is in and
- * updates React state only when that section changes, so scrolling costs one
- * render per section rather than one per frame.
+ * In-article table of contents styled after Making Software:
+ * Clean monospace section headers with bulleted section links and illuminated active state.
  */
 export default function EditorialToc({ headings }: EditorialTocProps) {
     const [activeId, setActiveId] = useState<string>(headings[0]?.id ?? '');
@@ -59,22 +58,41 @@ export default function EditorialToc({ headings }: EditorialTocProps) {
     }
 
     return (
-        <nav aria-label="Sections in this editorial">
-            <p className="mb-3 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">In this editorial</p>
-            <ul className="list-none">
-                {headings.map((heading) => (
-                    <li key={heading.id}>
-                        <a
-                            className="editorial-toc-link"
-                            href={`#${heading.id}`}
-                            data-level={heading.level}
-                            data-active={activeId === heading.id}
-                            aria-current={activeId === heading.id ? 'location' : undefined}
-                        >
-                            {heading.text}
-                        </a>
-                    </li>
-                ))}
+        <nav aria-label="Sections in this editorial" className="space-y-4">
+            <p
+                className="font-mono text-[10.5px] uppercase tracking-[0.14em] text-ed-fg-faint"
+                style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}
+            >
+                SECTIONS &amp; CITATIONS
+            </p>
+            <ul className="list-none space-y-1.5 pl-0">
+                {headings.map((heading) => {
+                    const isActive = activeId === heading.id;
+                    const isSub = heading.level === 3;
+                    return (
+                        <li key={heading.id} className={isSub ? 'pl-3.5' : ''}>
+                            <a
+                                href={`#${heading.id}`}
+                                aria-current={isActive ? 'location' : undefined}
+                                className={`group flex items-start gap-2 py-0.5 font-sans text-[13px] leading-snug transition-colors ${
+                                    isActive
+                                        ? 'font-medium text-ed-accent'
+                                        : 'text-ed-fg-muted hover:text-ed-fg'
+                                }`}
+                            >
+                                <span
+                                    className={`select-none font-mono text-[12px] leading-none transition-colors ${
+                                        isActive ? 'text-ed-accent' : 'text-ed-fg-faint group-hover:text-ed-fg-muted'
+                                    }`}
+                                    aria-hidden="true"
+                                >
+                                    •
+                                </span>
+                                <span className="flex-1">{heading.text}</span>
+                            </a>
+                        </li>
+                    );
+                })}
             </ul>
         </nav>
     );

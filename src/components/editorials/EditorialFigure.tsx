@@ -9,8 +9,6 @@ export interface EditorialFigureProps {
     width: number;
     height: number;
     caption?: string;
-    /** `full` breaks past the text measure; `column` stays inside it. */
-    span?: 'full' | 'column';
     /** Set on the first figure of an editorial so it can carry the LCP. */
     priority?: boolean;
 }
@@ -26,11 +24,10 @@ export default function EditorialFigure({
     width,
     height,
     caption,
-    span = 'full',
     priority = false,
 }: EditorialFigureProps) {
     return (
-        <figure className={span === 'full' ? 'editorial-figure editorial-breakout' : 'editorial-figure'}>
+        <figure className="editorial-figure">
             <EditorialFigureFrame src={src} alt={alt} width={width} height={height} caption={caption ?? alt}>
                 <Image
                     src={src}
@@ -44,7 +41,9 @@ export default function EditorialFigure({
                     unoptimized={src.endsWith('.svg')}
                     priority={priority}
                     loading={priority ? undefined : 'lazy'}
-                    sizes={span === 'full' ? '(max-width: 768px) 100vw, 704px' : '(max-width: 768px) 100vw, 352px'}
+                    // Figures share the text measure, which tops out at 576px
+                    // on the default type size and 816px on the widest setting.
+                    sizes="(max-width: 768px) 100vw, 816px"
                 />
             </EditorialFigureFrame>
             {caption ? <figcaption className="editorial-caption">{caption}</figcaption> : null}
@@ -58,13 +57,12 @@ export interface EditorialFigureGroupProps {
 }
 
 /**
- * Two or more figures compared side by side. Below the medium breakpoint the
- * group becomes a snap-scrolling strip rather than shrinking each image past
- * legibility.
+ * Two or more figures compared side by side. The pair stacks once the measure
+ * can no longer seat two legible columns.
  */
 export function EditorialFigureGroup({ children, caption }: EditorialFigureGroupProps) {
     return (
-        <div className="editorial-breakout">
+        <div>
             <div className="editorial-figure-group">{children}</div>
             {caption ? <p className="editorial-caption">{caption}</p> : null}
         </div>

@@ -92,6 +92,13 @@ The December 1985 issue is also cited by the Deedat editorial for a different pa
 copy is held under that slug as well. The duplication is deliberate: the rule is that
 nothing is shared between articles.
 
+## Messenger Audio Recordings
+
+| File | What it is |
+|---|---|
+| `studio/public/media/transcripts/messenger-audio-64-friday-sermon-26-nov-1982-by-dr-rashad-khalifa.json` | Friday Sermon delivered 26 November 1982 in Tucson, Arizona. Cues 47:30–52:30 carry Dr. Khalifa's first-person account of being detained in the Libyan dungeon, stripped of clothes/books, reading the Quran from memory, prisoner tally marks on the walls, Musa al-Sadr's disappearance, submitting through Sura 2:156, and his retrieval by Gaddafi's bodyguard Ahmed. Cited in Section 3 and footnote 4. |
+| `studio/public/media/transcripts/messenger-audio-68-friday-sermon-17-dec-1982.json` | Friday Sermon delivered 17 December 1982. Cues 55:10–59:82 record Dr. Khalifa describing his two years as Gaddafi's science advisor and remarking that Gaddafi "turned Libya into a big prison." Cited in footnote 2. |
+
 ## Discord threads
 
 | File | What it is |

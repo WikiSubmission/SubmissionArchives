@@ -119,7 +119,10 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                     <div>
                         {/* Pinned Tag with Physical Thumbtack Icon */}
                         {isPinned ? (
-                            <div className="mb-2.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/30 bg-ed-accent/15 px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.14em] text-ed-accent">
+                            <div
+                                className="mb-2.5 inline-flex items-center gap-1.5 rounded-[4px] border border-ed-accent/30 bg-ed-accent/15 px-2.5 py-1 font-mono text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ed-accent"
+                                style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}
+                            >
                                 <Pin className="h-3.5 w-3.5 fill-ed-accent text-ed-accent rotate-45" aria-hidden="true" />
                                 Pinned Foundation Monograph · Site Architecture
                             </div>
@@ -128,8 +131,8 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                         <div className="flex items-start justify-between gap-4">
                             <Link href={`/editorials/${editorial.slug}`} className="group/link block">
                                 <Heading
-                                    className="text-[20px] sm:text-[22px] font-semibold leading-[1.25] tracking-[-0.015em] text-ed-fg transition-colors group-hover/link:text-ed-accent"
-                                    style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
+                                    className="text-[20px] sm:text-[23px] font-semibold leading-[1.2] tracking-[-0.015em] text-ed-fg transition-colors group-hover/link:text-ed-accent"
+                                    style={{ fontFamily: 'var(--font-editorial-serif, var(--font-new-york, Georgia, serif))' }}
                                 >
                                     {editorial.title}
                                 </Heading>
@@ -146,8 +149,8 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                         {editorial.subtitle ? (
                             <Link href={`/editorials/${editorial.slug}`} className="block">
                                 <p
-                                    className="mt-2 max-w-[68ch] text-[15px] leading-[1.62] text-ed-fg-muted transition-colors hover:text-ed-fg-secondary"
-                                    style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                                    className="mt-2.5 max-w-[68ch] text-[15px] leading-[1.55] text-ed-fg-secondary/90 transition-colors hover:text-ed-fg"
+                                    style={{ fontFamily: 'var(--font-editorial-sans, var(--font-inter, sans-serif))' }}
                                 >
                                     {editorial.subtitle}
                                 </p>
@@ -155,18 +158,20 @@ export default function EditorialCard({ editorial, index, headingLevel = 3, isPi
                         ) : null}
                     </div>
 
-                    {/* Monospace Metadata Line */}
+                    {/* Metadata Line */}
                     <div className="mt-5 flex flex-wrap items-center justify-between gap-y-2 pt-3 border-t border-ed-rule/60">
-                        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">
+                        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-[12.5px] font-medium text-ed-fg-muted">
                             <time dateTime={editorial.publishedAt}>{formatEditorialDate(editorial.publishedAt)}</time>
                             <Separator />
                             <span>{editorial.author}</span>
                             <Separator />
-                            <span>{editorial.readingMinutes} min read</span>
+                            <span className="font-mono text-[11.5px]" style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}>
+                                {editorial.readingMinutes} min read
+                            </span>
                             {editorial.topics.length > 0 ? (
                                 <>
                                     <Separator />
-                                    <span className="text-ed-fg-muted">{editorial.topics.join(' · ')}</span>
+                                    <span className="text-ed-fg-secondary">{editorial.topics.join(' · ')}</span>
                                 </>
                             ) : null}
                         </p>

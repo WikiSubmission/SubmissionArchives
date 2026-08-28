@@ -23,29 +23,36 @@ export default function EditorialAside({ editorial, neighbours }: EditorialAside
             {/* Archival Provenance Certificate Card */}
             <div className="rounded-[6px] border border-ed-rule bg-ed-surface p-4 shadow-sm">
                 <div className="mb-3 flex items-center justify-between border-b border-ed-rule pb-2.5">
-                    <span className="font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">
+                    <span className="font-sans font-semibold text-[11px] uppercase tracking-[0.1em] text-ed-fg-faint">
                         Archival Provenance
                     </span>
-                    <span className="rounded bg-ed-accent-soft px-1.5 py-0.5 font-sans text-[9px] font-semibold tracking-[0.06em] text-ed-accent">
+                    <span
+                        className="rounded bg-ed-accent-soft px-2 py-0.5 font-mono text-[10px] font-medium tracking-[0.08em] text-ed-accent"
+                        style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}
+                    >
                         AUDITED
                     </span>
                 </div>
 
-                <dl className="space-y-2.5 text-[11px]">
+                <dl className="space-y-3 text-[13px]">
                     <MetaRow label="Published" value={formatEditorialDate(editorial.publishedAt)} />
                     {editorial.updatedAt ? <MetaRow label="Revised" value={formatEditorialDate(editorial.updatedAt)} /> : null}
-                    <MetaRow label="Reading Time" value={`${editorial.readingMinutes} min (${editorial.wordCount.toLocaleString('en-US')} words)`} />
+                    <MetaRow
+                        label="Reading Time"
+                        value={`${editorial.readingMinutes} min (${editorial.wordCount.toLocaleString('en-US')} words)`}
+                        isMono
+                    />
                     <MetaRow label="Lineage" value="Primary Source Extraction" />
                 </dl>
 
                 {editorial.topics.length > 0 ? (
                     <div className="mt-3.5 border-t border-ed-rule pt-2.5">
-                        <dt className="mb-1.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">Research Topics</dt>
+                        <dt className="mb-2 font-sans font-semibold text-[11px] uppercase tracking-[0.1em] text-ed-fg-faint">Research Topics</dt>
                         <div className="flex flex-wrap gap-1.5">
                             {editorial.topics.map((topic) => (
                                 <span
                                     key={topic}
-                                    className="rounded-[3px] border border-ed-rule bg-ed-surface-raised px-2 py-0.5 font-sans text-[10px] font-medium text-ed-fg-secondary"
+                                    className="rounded-[3px] border border-ed-rule bg-ed-surface-raised px-2 py-0.5 font-sans text-[11px] font-medium text-ed-fg-secondary"
                                 >
                                     {topic}
                                 </span>
@@ -58,7 +65,7 @@ export default function EditorialAside({ editorial, neighbours }: EditorialAside
             {/* Quick Links / Related Editorials */}
             {neighbours.previous || neighbours.next ? (
                 <nav aria-label="Other editorials" className="rounded-[6px] border border-ed-rule bg-ed-surface p-4 shadow-sm">
-                    <span className="mb-3 flex items-center gap-1.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">
+                    <span className="mb-3 flex items-center gap-1.5 font-sans font-semibold text-[11px] uppercase tracking-[0.1em] text-ed-fg-faint">
                         <Layers className="h-3 w-3 text-ed-accent" />
                         Chronological Series
                     </span>
@@ -84,11 +91,16 @@ export default function EditorialAside({ editorial, neighbours }: EditorialAside
     );
 }
 
-function MetaRow({ label, value }: { label: string; value: string }) {
+function MetaRow({ label, value, isMono = false }: { label: string; value: string; isMono?: boolean }) {
     return (
         <div>
-            <dt className="font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">{label}</dt>
-            <dd className="mt-0.5 font-medium text-ed-fg-secondary">{value}</dd>
+            <dt className="font-sans font-semibold text-[10.5px] uppercase tracking-[0.1em] text-ed-fg-faint">{label}</dt>
+            <dd
+                className={`mt-0.5 text-ed-fg-secondary ${isMono ? 'font-mono text-[12px]' : 'font-medium text-[13px]'}`}
+                style={isMono ? { fontFamily: 'var(--font-editorial-mono, monospace)' } : undefined}
+            >
+                {value}
+            </dd>
         </div>
     );
 }
@@ -98,12 +110,15 @@ function NeighbourLink({ direction, href, title }: { direction: 'previous' | 'ne
 
     return (
         <Link href={href} className="group block rounded-[4px] border border-transparent p-1.5 transition-all hover:border-ed-rule hover:bg-ed-surface-raised">
-            <span className="flex items-center gap-1.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">
+            <span className="flex items-center gap-1.5 font-sans font-semibold text-[10px] uppercase tracking-[0.1em] text-ed-fg-faint">
                 {direction === 'previous' ? <Icon className="h-3 w-3" aria-hidden="true" /> : null}
                 {direction === 'next' ? 'Newer Chapter' : 'Older Chapter'}
                 {direction === 'next' ? <Icon className="h-3 w-3" aria-hidden="true" /> : null}
             </span>
-            <span className="mt-1 block text-[12.5px] font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent">
+            <span
+                className="mt-1 block text-[13.5px] font-medium leading-snug text-ed-fg transition-colors group-hover:text-ed-accent"
+                style={{ fontFamily: 'var(--font-editorial-serif, var(--font-new-york, Georgia, serif))' }}
+            >
                 {title}
             </span>
         </Link>

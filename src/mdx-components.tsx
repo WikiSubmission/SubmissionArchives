@@ -1,6 +1,16 @@
 import type { MDXComponents } from 'mdx/types';
 
-import { Lead, Note, Notes, PullQuote, Ref, Verse } from '@/components/editorials/EditorialBlocks';
+import {
+    Lead,
+    MuslimPerspectiveQuote,
+    NewsletterQuote,
+    Note,
+    Notes,
+    PullQuote,
+    Ref,
+    SubmitterPerspectiveQuote,
+    Verse,
+} from '@/components/editorials/EditorialBlocks';
 import EditorialFigure, { EditorialFigureGroup } from '@/components/editorials/EditorialFigure';
 
 /**
@@ -12,10 +22,13 @@ const components: MDXComponents = {
     Figure: EditorialFigure,
     FigureGroup: EditorialFigureGroup,
     Lead,
+    MuslimPerspectiveQuote,
+    NewsletterQuote,
     Note,
     Notes,
     PullQuote,
     Ref,
+    SubmitterPerspectiveQuote,
     Verse,
 };
 

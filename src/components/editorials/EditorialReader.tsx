@@ -1,6 +1,7 @@
 'use client';
 
-import { SlidersHorizontal } from 'lucide-react';
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight, SlidersHorizontal } from 'lucide-react';
 import { useCallback, useEffect, useId, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 
 import {
@@ -17,14 +18,23 @@ interface EditorialReaderProps {
     children: ReactNode;
     /** Rendered above the prose, inside the same sheet. */
     header: ReactNode;
+    /** Editorial title for breadcrumb */
+    title?: string;
+    prevSlug?: string;
+    nextSlug?: string;
 }
 
 /**
- * The reading sheet. It owns the reader's typographic preferences and applies
- * them as data attributes on the <article>, which the stylesheet reads. The
- * prose itself stays server-rendered.
+ * The reading sheet matching Making Software:
+ * Clean top toolbar with `< > SECTION / CHAPTER` in Departure Mono and settings trigger.
  */
-export default function EditorialReader({ children, header }: EditorialReaderProps) {
+export default function EditorialReader({
+    children,
+    header,
+    title,
+    prevSlug,
+    nextSlug,
+}: EditorialReaderProps) {
     const snapshot = useSyncExternalStore(
         readingSettingsStore.subscribe,
         readingSettingsStore.getSnapshot,
@@ -70,17 +80,66 @@ export default function EditorialReader({ children, header }: EditorialReaderPro
 
     return (
         <div className="relative">
-            <div className="mb-6 flex items-center justify-end border-b border-ed-rule pb-3">
-                <div className="relative">
+            {/* Top Toolbar matching Making Software */}
+            <div className="mb-8 flex items-center justify-between gap-3 border-b border-ed-rule/60 pb-3">
+                {/* Left Breadcrumb & Prev/Next Arrows */}
+                <div className="flex min-w-0 items-center gap-3">
+                    <div className="flex shrink-0 items-center gap-1 text-ed-fg-faint">
+                        {prevSlug ? (
+                            <Link
+                                href={`/editorials/${prevSlug}`}
+                                aria-label="Previous editorial"
+                                className="p-0.5 text-ed-fg-faint transition-colors hover:text-ed-fg"
+                            >
+                                <ChevronLeft className="h-3.5 w-3.5" />
+                            </Link>
+                        ) : (
+                            <span className="p-0.5 opacity-30">
+                                <ChevronLeft className="h-3.5 w-3.5" />
+                            </span>
+                        )}
+                        {nextSlug ? (
+                            <Link
+                                href={`/editorials/${nextSlug}`}
+                                aria-label="Next editorial"
+                                className="p-0.5 text-ed-fg-faint transition-colors hover:text-ed-fg"
+                            >
+                                <ChevronRight className="h-3.5 w-3.5" />
+                            </Link>
+                        ) : (
+                            <span className="p-0.5 opacity-30">
+                                <ChevronRight className="h-3.5 w-3.5" />
+                            </span>
+                        )}
+                    </div>
+
+                    <div
+                        className="min-w-0 truncate font-mono text-[11px] uppercase tracking-[0.14em] text-ed-fg-muted"
+                        style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}
+                    >
+                        <Link href="/editorials" className="transition-colors hover:text-ed-fg">
+                            MONOGRAPHS
+                        </Link>
+                        {title ? (
+                            <>
+                                <span className="mx-1.5 text-ed-fg-faint">/</span>
+                                <span className="text-ed-fg truncate">{title}</span>
+                            </>
+                        ) : null}
+                    </div>
+                </div>
+
+                {/* Right Reading Settings Trigger */}
+                <div className="relative shrink-0">
                     <button
                         ref={triggerRef}
                         type="button"
                         onClick={() => setPanelOpen((open) => !open)}
                         aria-expanded={panelOpen}
                         aria-controls={panelId}
-                        className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-transparent text-ed-fg-muted transition-colors hover:border-ed-rule hover:text-ed-fg"
+                        className="inline-flex h-8 w-8 items-center justify-center rounded text-ed-fg-muted transition-colors hover:bg-ed-surface hover:text-ed-fg"
                     >
-                        <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
+                        <SlidersHorizontal className="h-3.5 w-3.5" aria-hidden="true" />
                         <span className="sr-only">Reading settings</span>
                     </button>
 
@@ -90,7 +149,7 @@ export default function EditorialReader({ children, header }: EditorialReaderPro
                             id={panelId}
                             role="group"
                             aria-label="Reading settings"
-                            className="absolute right-0 top-12 z-20 w-60 rounded-[8px] border border-ed-rule bg-ed-surface-raised p-4 shadow-sm"
+                            className="absolute right-0 top-10 z-30 w-60 rounded-[6px] border border-ed-rule bg-ed-surface-raised p-4 shadow-lg"
                         >
                             <SettingRow
                                 label="Type size"
@@ -138,7 +197,9 @@ interface SettingRowProps<T extends string> {
 function SettingRow<T extends string>({ label, options, value, onChange }: SettingRowProps<T>) {
     return (
         <div className="mb-3 last:mb-0">
-            <p className="mb-1.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-ed-fg-faint">{label}</p>
+            <p className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-ed-fg-faint" style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}>
+                {label}
+            </p>
             <div className="flex gap-1">
                 {options.map((option) => (
                     <button
@@ -146,7 +207,7 @@ function SettingRow<T extends string>({ label, options, value, onChange }: Setti
                         type="button"
                         onClick={() => onChange(option.value)}
                         aria-pressed={value === option.value}
-                        className="flex-1 rounded-[4px] border border-ed-rule px-2 py-2 text-[11px] font-medium text-ed-fg-muted transition-colors hover:text-ed-fg aria-pressed:border-ed-accent aria-pressed:bg-ed-accent-soft aria-pressed:text-ed-accent"
+                        className="flex-1 rounded-[4px] border border-ed-rule px-2 py-1.5 font-sans text-[11px] font-medium text-ed-fg-muted transition-colors hover:text-ed-fg aria-pressed:border-ed-accent aria-pressed:bg-ed-accent-soft aria-pressed:text-ed-accent"
                     >
                         {option.label}
                     </button>

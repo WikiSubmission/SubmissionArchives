@@ -3,13 +3,13 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * Reading progress through the article, shown as a fraction. It writes to the
- * DOM directly rather than through state, so scrolling never re-renders the
- * page tree.
+ * Reading progress ruler matching Making Software:
+ * Monospace fractional indicator `0.00` at the top right,
+ * with a technical calibration tick-mark ruler track.
  */
 export default function ReadingProgress() {
     const valueRef = useRef<HTMLSpanElement>(null);
-    const barRef = useRef<HTMLSpanElement>(null);
+    const indicatorRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         let frame = 0;
@@ -23,8 +23,8 @@ export default function ReadingProgress() {
             if (valueRef.current) {
                 valueRef.current.textContent = ratio.toFixed(2);
             }
-            if (barRef.current) {
-                barRef.current.style.transform = `scaleY(${ratio})`;
+            if (indicatorRef.current) {
+                indicatorRef.current.style.transform = `scaleY(${ratio})`;
             }
         };
 
@@ -45,13 +45,35 @@ export default function ReadingProgress() {
     }, []);
 
     return (
-        <div className="flex items-start gap-2" aria-hidden="true">
-            <span className="font-sans font-medium text-[10px] tabular-nums tracking-[0.08em] text-ed-fg-faint" ref={valueRef}>
+        <div className="flex flex-col items-end gap-1.5" aria-hidden="true">
+            <span
+                className="font-mono text-[11px] font-medium tabular-nums text-ed-accent"
+                ref={valueRef}
+                style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}
+            >
                 0.00
             </span>
-            <span className="relative mt-1 block h-16 w-px bg-ed-rule">
-                <span className="absolute inset-0 block origin-top bg-ed-fg" ref={barRef} style={{ transform: 'scaleY(0)' }} />
-            </span>
+            {/* Calibration Ruler Track with Ticks */}
+            <div className="relative h-48 w-4">
+                {/* Background Ticks */}
+                <div className="absolute inset-y-0 right-0 flex flex-col justify-between py-1 opacity-40">
+                    {Array.from({ length: 9 }).map((_, i) => (
+                        <span
+                            key={i}
+                            className={`block bg-ed-rule-strong ${i % 2 === 0 ? 'w-3 h-[1px]' : 'w-1.5 h-[1px]'}`}
+                        />
+                    ))}
+                </div>
+                {/* Vertical Hairline */}
+                <div className="absolute inset-y-0 right-0 w-[1px] bg-ed-rule">
+                    {/* Active Fill Indicator */}
+                    <div
+                        ref={indicatorRef}
+                        className="absolute inset-0 origin-top bg-ed-accent"
+                        style={{ transform: 'scaleY(0)' }}
+                    />
+                </div>
+            </div>
         </div>
     );
 }

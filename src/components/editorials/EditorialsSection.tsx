@@ -27,13 +27,16 @@ export default function EditorialsSection({ editorials, limit = 4 }: EditorialsS
                 <div className="flex flex-1 items-center gap-4">
                     <h2
                         id="archive-editorials"
-                        className="whitespace-nowrap text-[20px] font-semibold tracking-[-0.015em] text-ed-fg"
-                        style={{ fontFamily: 'var(--font-source-serif-4), var(--font-source-serif), Georgia, serif' }}
+                        className="whitespace-nowrap text-[clamp(1.25rem,1.8vw,1.5rem)] font-semibold tracking-[-0.015em] text-ed-fg"
+                        style={{ fontFamily: 'var(--font-editorial-serif, var(--font-new-york, Georgia, serif))' }}
                     >
                         Archive Editorials
                     </h2>
                     <div className="h-px flex-1 bg-ed-rule" />
-                    <span className="whitespace-nowrap text-[12px] font-medium tabular-nums text-ed-fg-muted">
+                    <span
+                        className="whitespace-nowrap font-mono text-[12px] font-medium text-ed-fg-muted"
+                        style={{ fontFamily: 'var(--font-editorial-mono, monospace)' }}
+                    >
                         {editorials.length} {editorials.length === 1 ? 'piece' : 'pieces'}
                     </span>
                 </div>
@@ -41,7 +44,7 @@ export default function EditorialsSection({ editorials, limit = 4 }: EditorialsS
                 <Link
                     href="/editorials"
                     aria-label="Read all editorials"
-                    className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-ed-accent transition-colors hover:opacity-90"
+                    className="inline-flex items-center gap-1.5 font-sans text-[12px] font-semibold text-ed-accent transition-colors hover:opacity-90"
                 >
                     Read all editorials
                     <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -49,8 +52,8 @@ export default function EditorialsSection({ editorials, limit = 4 }: EditorialsS
             </div>
 
             <p
-                className="mb-7 max-w-[70ch] text-[15px] leading-[1.62] text-ed-fg-muted"
-                style={{ fontFamily: 'var(--font-newsreader), Georgia, serif' }}
+                className="mb-7 max-w-[70ch] text-[15px] leading-[1.6] text-ed-fg-secondary"
+                style={{ fontFamily: 'var(--font-editorial-sans, var(--font-inter, sans-serif))' }}
             >
                 Long-form readings of the preserved record: how the archive was assembled, what the sources say, and
                 the historical context around them.

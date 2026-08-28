@@ -85,6 +85,28 @@ const superiorSerif = localFont({
     ],
 });
 
+const newYork = localFont({
+    variable: '--font-new-york',
+    display: 'swap',
+    src: [
+        { path: '../../public/fonts/NewYorkLarge-Regular.otf', weight: '400', style: 'normal' },
+        { path: '../../public/fonts/NewYorkLarge-RegularItalic.otf', weight: '400', style: 'italic' },
+        { path: '../../public/fonts/NewYorkLarge-Medium.otf', weight: '500', style: 'normal' },
+        { path: '../../public/fonts/NewYorkLarge-Semibold.otf', weight: '600', style: 'normal' },
+        { path: '../../public/fonts/NewYorkLarge-Bold.otf', weight: '700', style: 'normal' },
+    ],
+    fallback: ['New York', '-apple-system-ui-serif', 'ui-serif', 'Charter', 'Source Serif 4', 'Newsreader', 'Georgia', 'serif'],
+});
+
+const departureMono = localFont({
+    variable: '--font-departure-mono',
+    display: 'swap',
+    src: [
+        { path: '../../public/fonts/DepartureMono-Regular.woff2', weight: '400', style: 'normal' },
+    ],
+    fallback: ['Departure Mono', 'JetBrains Mono', 'ui-monospace', 'monospace'],
+});
+
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
     title: {
@@ -140,7 +162,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
                     {themeBootstrapScript}
                 </Script>
             </head>
-            <body className={`${inter.variable} ${jetbrainsMono.variable} ${amiri.variable} ${frankRuhlLibre.variable} ${superiorSerif.variable} ${robotoSlab.variable} ${dmSans.variable} ${newsreader.variable} ${sourceSerif4.variable} antialiased`}>
+            <body className={`${inter.variable} ${jetbrainsMono.variable} ${newYork.variable} ${departureMono.variable} ${amiri.variable} ${frankRuhlLibre.variable} ${superiorSerif.variable} ${robotoSlab.variable} ${dmSans.variable} ${newsreader.variable} ${sourceSerif4.variable} antialiased`}>
                 <a
                     href="#main-content"
                     className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ed-fg focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-ed-bg"
